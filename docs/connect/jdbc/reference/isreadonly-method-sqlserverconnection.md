@@ -1,5 +1,5 @@
 ---
-title: Метод isReadOnly (SQLServerConnection) | Документация Майкрософт
+title: Метод IsReadOnly (SQLServerConnection) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 902fd2c1-05e0-436e-9779-c048cdb8475a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2faac8d83f79c60551c0d62f18e64ccd427f91bc
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 708060b6192e47a126c9c4c3ea47052c098bb1fd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66796380"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67977320"
 ---
 # <a name="isreadonly-method-sqlserverconnection"></a>Метод isReadOnly (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -45,7 +44,7 @@ public boolean isReadOnly()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод isReadOnly указывается с помощью метода isReadOnly в интерфейсе java.sql.Connection.  
+ Этот метод IsReadOnly задается методом IsReadOnly в интерфейсе Java. SQL. Connection.  
   
 ## <a name="see-also"></a>См. также:  
  [Элементы SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

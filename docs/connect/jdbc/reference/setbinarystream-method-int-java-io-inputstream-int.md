@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: fd6be063-08eb-40cf-9201-5a9f62387726
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 5b68714f1fe78a356556bc2a8f379eab60003c57
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 0265f06d589ea89b38f995f8a9616fd22bcf92ef
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66764819"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67975277"
 ---
 # <a name="setbinarystream-method-int-javaioinputstream-int"></a>Метод setBinaryStream (int, java.io.InputStream, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +43,7 @@ public final void setBinaryStream(int n,
   
  *x*  
   
- Объект, InputStream.  
+ Объект InputStream.  
   
  *length*  
   
@@ -54,7 +53,7 @@ public final void setBinaryStream(int n,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод setBinaryStream указывается с помощью метода setBinaryStream в интерфейсе java.sql.PreparedStatement.  
+ Этот метод setBinaryStream задается методом setBinaryStream в интерфейсе Java. SQL. PreparedStatement.  
   
  Если длина потока отличается от указанной в параметре *length*, драйвер JDBC выдаст исключение при обновлении или вставке строки.  
   

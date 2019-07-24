@@ -17,13 +17,12 @@ helpviewer_keywords:
 - data updates [SQL Server], OLE DB
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 3e6a03d5bc379b620db06e0f1308058d647397e1
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: e19128d6defa2c154cc8bddbcc4bcaa761b58a2b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66803783"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015345"
 ---
 # <a name="updating-data-in-rowsets"></a>Обновление данных в наборах строк
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +31,7 @@ ms.locfileid: "66803783"
 
   Драйвер OLE DB для SQL Server обновляет данные [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], если потребитель обновляет изменяемый набор строк, содержащий эти данные. Набор строк, который можно изменять, создается, если потребитель запрашивает поддержку либо для интерфейса **IRowsetChange**, либо для интерфейса **IRowsetUpdate**.  
   
- Все драйвер OLE DB для SQL Server изменяемые использования наборов строк [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] курсоры для поддержки набора строк. Свойство DBPROP_LOCKMODE набора строк изменяет поведение управления параллелизмом [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в курсорах, а также определяет поведение выборки строки из набора строк и создание ошибок целостности данных в наборах строк, которые можно обновлять.  
+ Все драйверы OLE DB для изменяемых SQL Server наборов строк используют [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] курсоры для поддержки набора строк. Свойство DBPROP_LOCKMODE набора строк изменяет поведение управления параллелизмом [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в курсорах, а также определяет поведение выборки строки из набора строк и создание ошибок целостности данных в наборах строк, которые можно обновлять.  
   
  Драйвер OLE DB для SQL Server поддерживает синхронизацию строк до или после обновления.  
   

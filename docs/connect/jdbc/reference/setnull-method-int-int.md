@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 7e7f08e9-278a-495a-8ce3-ca173d055021
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 977ca2ec68888bfc53ca1256da97f1bf427c33f6
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 3299dc2063cd63498af7f3e03aa9dafec4d9b972
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66800320"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67973546"
 ---
 # <a name="setnull-method-int-int"></a>Метод setNull (int, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +40,7 @@ public final void setNull(int index,
   
  Значение **int**, определяющее номер параметра.  
   
- *jdbcType*  
+ *ждбктипе*  
   
  Код типа JDBC, определенный в java.sql.Types.  
   

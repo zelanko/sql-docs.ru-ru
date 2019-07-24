@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 19aefa9a-fbc2-4b22-92cf-67b8bb01671c
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b4cca30125bd6b8fb69893332924d18fbb461cd9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 018866c81a84455bd3480a523dbdc2fffaa538c9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66706913"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68035856"
 ---
 # <a name="hierarchical-data-sql-server"></a>Иерархические данные (SQL Server)
 
@@ -510,7 +509,7 @@ WHERE OrgNode = dbo.CommonAncestor(@h1, @h2) ;
   
   
 ###  <a name="BKMK_MovingSubtrees"></a> Перемещение поддеревьев  
- Другой распространенной операцией является перемещение поддеревьев. Описанная ниже процедура берет поддерево узла **@oldMgr** и делает его (включая сам узел **@oldMgr**) поддеревом узла **@newMgr**.  
+ Другой распространенной операцией является перемещение поддеревьев. Описанная ниже процедура берет поддерево узла **@oldMgr** и делает его (включая сам узел **@oldMgr** ) поддеревом узла **@newMgr** .  
   
 ```sql
 CREATE PROCEDURE MoveOrg(@oldMgr nvarchar(256), @newMgr nvarchar(256) )  

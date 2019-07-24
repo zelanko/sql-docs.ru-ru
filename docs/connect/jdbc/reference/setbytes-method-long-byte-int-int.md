@@ -1,5 +1,5 @@
 ---
-title: Метод setBytes (long, byte, int, int) | Документация Майкрософт
+title: Метод setBytes (Long, Byte, int, int) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 7def226c-b211-459e-8c1a-08592d75d4a4
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 271669134e18d3c6040f1e2e10163b5d5e21daab
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: ee4ab641ede4d4ec614a306f9c0e08c9f16aa5ee
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797608"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67974942"
 ---
 # <a name="setbytes-method-long-byte-int-int"></a>Метод setBytes (long, byte, int, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +38,7 @@ public int setBytes(long pos,
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *Торговых терминалов*  
+ *POS*  
   
  Позиция (считая с 1) в большом двоичном объекте, с которой начинается запись данных.  
   
@@ -67,7 +66,7 @@ public int setBytes(long pos,
  Данные перезаписываются, начиная с указанной позиции, и могут превысить исходную длину большого двоичного объекта. Если указать значение позиции+1, будут добавлены байты. Если передается значение позиции+2 и более (либо нулевое или отрицательное значение), то создается ошибка позиции. Если передается массив **byte** нулевой длины, то будет возвращено нулевое значение, поскольку не записан ни один байт.  
   
 ## <a name="see-also"></a>См. также:  
- [Метод setBytes &#40;SQLServerBlob&#41;](../../../connect/jdbc/reference/setbytes-method-sqlserverblob.md)   
+ [Метод &#40;setBytes SQLServerBlob&#41;](../../../connect/jdbc/reference/setbytes-method-sqlserverblob.md)   
  [Методы SQLServerBlob](../../../connect/jdbc/reference/sqlserverblob-methods.md)   
  [Элементы SQLServerBlob](../../../connect/jdbc/reference/sqlserverblob-members.md)   
  [Класс SQLServerBlob](../../../connect/jdbc/reference/sqlserverblob-class.md)  

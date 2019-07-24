@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 16ff77f9-7928-415c-abf6-97ed59e3e396
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 34ad7079a11823343cfd8e8ae37adc9332a12a2b
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: b5137c4df92860822e715d70a1355b490026af40
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66800332"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67973559"
 ---
 # <a name="setnull-method-javalangstring-int-javalangstring"></a>Метод setNull (java.lang.String, int, java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,15 +37,15 @@ public void setNull(java.lang.String sCol,
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *sCol*  
+ *скол*  
   
  Значение **String**, содержащее имя параметра.  
   
- *nType*  
+ *Nуведомления*  
   
  Код типа JDBC, определенный в java.sql.Types.  
   
- *sTypeName*  
+ *стипенаме*  
   
  Значение **String**, которое указывает полное имя задаваемого параметра.  
   

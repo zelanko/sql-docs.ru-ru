@@ -10,13 +10,12 @@ ms.technology: connectivity
 ms.topic: reference
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: e85e7ef0410e90f6f2a750b6380230dccc172fa9
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: c4886ba812a18ea6571e10c8b1fe2060fa8fc5ec
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66786065"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015613"
 ---
 # <a name="display-column-and-catalog-metadata-for-sparse-columns-ole-db"></a>Отображение метаданных столбца и каталога для разреженных столбцов (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -25,7 +24,7 @@ ms.locfileid: "66786065"
 
   В этом примере создается таблица, состоящая из трех столбцов: разреженного столбца, столбца, не являющегося разреженным, и столбца, представляющего собой набор столбцов. Затем образец отображает флаги OLE DB, показывающие метаданные столбца и каталога для неразреженного столбца и столбца, представляющего собой набор столбцов.  
   
- Данный образец работает с [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] или более поздней версией. Дополнительные сведения о разреженных столбцах см. в разделе [Поддержка разреженных столбцов в драйвер OLE DB для SQL Server](../../oledb/features/sparse-columns-support-in-oledb-driver-for-sql-server.md).  
+ Данный образец работает с [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] или более поздней версией. Дополнительные сведения о разреженных столбцах см. [в разделе Поддержка разреженных столбцов в драйвере OLE DB для SQL Server](../../oledb/features/sparse-columns-support-in-oledb-driver-for-sql-server.md).  
   
 ## <a name="example"></a>Пример  
  Убедитесь в том, что переменная среды INCLUDE включает каталог, содержащий файл msoledbsql.h.  

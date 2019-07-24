@@ -15,18 +15,17 @@ apitype: Assembly
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 773b5bc08affdc513e7ee5897fbd4b0f3c24993e
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: ea65ca1cbf69db3628c7664fb3b481b6ffaa91ee
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66773892"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67979519"
 ---
 # <a name="getstatementpoolingcachesize-method-sqlserverconnection"></a>Метод getStatementPoolingCacheSize (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
- Возвращает размер кэша подготовленных инструкций для этого подключения. "0" означает, что не включено кэширование.
+ Возвращает размер подготовленного кэша инструкций для этого соединения. "0" означает, что кэширование не включено.
 
 ## <a name="syntax"></a>Синтаксис  
   
@@ -36,13 +35,13 @@ public int getStatementPoolingCacheSize()
 ```  
 
 ## <a name="return-value"></a>Возвращаемое значение
- **Int** , содержащий значение **значение параметра statementPoolingCacheSize** свойство соединения.
+ Целое **число, содержащее** значение свойства соединения **статементпулингкачесизе** .
 
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
  
 ## <a name="remarks"></a>Remarks  
- Этот метод, доступные в версии драйвера JDBC 6.4 и далее.
+ Этот метод доступен из драйвера JDBC версии 6,4 и далее.
  
 ## <a name="see-also"></a>См. также:  
  [Элементы SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

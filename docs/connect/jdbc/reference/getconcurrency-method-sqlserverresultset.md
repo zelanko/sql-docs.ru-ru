@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 207e25f4-769c-4ff3-913c-3517b06208e4
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 7386a03b56b319f6299d6d52d0f1736b74a75565
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 5d0d59186e15dc07d1d4e91ac673c456ec592d01
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66763298"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67952826"
 ---
 # <a name="getconcurrency-method-sqlserverresultset"></a>Метод getConcurrency (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -46,7 +45,7 @@ public int getConcurrency()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод getConcurrency указывается с помощью метода getConcurrency в интерфейсе java.sql.ResultSet.  
+ Этот метод getConcurrency задается методом getConcurrency в интерфейсе Java. SQL. Result.  
   
  Используемый тип параллелизма определяется объектом [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md), который создал результирующий набор.  
   

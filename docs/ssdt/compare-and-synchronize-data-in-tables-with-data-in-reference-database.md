@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 96d743b0-b69a-45bb-ae0e-62103dca76e2
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 567855c53848a354ec03c8de7fea1bb37c1c2a21
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 055731473f94003440f4a78c6446ec965f1d0a2f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65105810"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67984665"
 ---
 # <a name="compare-and-synchronize-data-in-one-or-more-tables-with-data-in-a-reference-database"></a>Сравнение и синхронизация данных из одной или нескольких таблиц с данными из эталонной базы данных
 Вы можете сравнивать данные в *исходной* и *целевой* базах данных и указывать, какие таблицы подлежат сравнению. Можно просматривать данные и решать, какие изменения должны быть синхронизированы. Затем можно обновить целевую базу данных для синхронизации баз данных или экспортировать скрипт обновления в редактор Transact\-SQL или в файл.  

@@ -1,5 +1,5 @@
 ---
-title: Члены SQLServerCallableStatement | Документация Майкрософт
+title: Элементы SQLServerCallableStatement | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,13 +11,12 @@ apitype: Assembly
 ms.assetid: 5ebdc186-e50f-4d14-bbf4-95af5051e4a4
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 9c6f0ab616be75d9ccd71bd5b191fde3c76098d1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 69a12437e3b1e611cf9e48d60c9fd77cd02f63bc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66772968"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67971875"
 ---
 # <a name="sqlservercallablestatement-members"></a>Члены SQLServerCallableStatement
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -51,7 +50,7 @@ ms.locfileid: "66772968"
 |[executeQuery](../../../connect/jdbc/reference/executequery-method-sqlserverpreparedstatement.md)|(Наследуется от [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md).) Выполняет SQL-запрос в этом объекте CallableStatement и возвращает созданный запросом объект [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).|  
 |[executeUpdate](../../../connect/jdbc/reference/executeupdate-method-sqlserverpreparedstatement.md)|(Наследуется от [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md).) Выполняет инструкцию SQL в этом объекте CallableStatement. Это должна быть инструкция SQL INSERT, UPDATE, MERGE или DELETE либо инструкция SQL, не возвращающая значения, например инструкция DDL.|  
 |[getConnection](../../../connect/jdbc/reference/getconnection-method-sqlserverstatement.md)|(Наследуется от [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Извлекает объект [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md), создавший данный объект CallableStatement.|  
-|[getDateTimeOffset](../../../connect/jdbc/reference/getdatetimeoffset-method-sqlservercallablestatement.md)|Получает значение указанного столбца в виде [класс DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md) объекта.|  
+|[getDateTimeOffset](../../../connect/jdbc/reference/getdatetimeoffset-method-sqlservercallablestatement.md)|Получает значение указанного столбца в виде объекта [класса DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md) .|  
 |[getFetchDirection](../../../connect/jdbc/reference/getfetchdirection-method-sqlserverstatement.md)|(Наследуется от [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Извлекает направление выборки строк из таблиц базы данных, заданное по умолчанию для результирующих наборов, созданных на основе этого объекта CallableStatement.|  
 |[getFetchSize](../../../connect/jdbc/reference/getfetchsize-method-sqlserverstatement.md)|(Наследуется от [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Извлекает число строк результирующего набора, равное размеру выборки по умолчанию для объектов результирующих наборов, созданных на основе этого объекта CallableStatement.|  
 |[getGeneratedKeys](../../../connect/jdbc/reference/getgeneratedkeys-method-sqlserverstatement.md)|(Наследуется от [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Извлекает все автоматически сформированные ключи, созданные в результате выполнения этого объекта CallableStatement.|  
@@ -71,14 +70,14 @@ ms.locfileid: "66772968"
 |[getCharacterStream](../../../connect/jdbc/reference/getcharacterstream-method-sqlservercallablestatement.md)|Возвращает значение указанного параметра в виде объекта java.io.Reader.|  
 |[getClob](../../../connect/jdbc/reference/getclob-method-sqlservercallablestatement.md)|Извлекает значение указанного параметра большого двоичного объекта JDBC в виде объекта Clob на языке программирования Java.|  
 |[getDate](../../../connect/jdbc/reference/getdate-method-sqlservercallablestatement.md)|Возвращает значение указанного параметра в виде объекта java.sql.Date на языке программирования Java.|  
-|[getDateTimeOffset](../../../connect/jdbc/reference/getdatetimeoffset-method-sqlservercallablestatement.md)|Получает значение указанного столбца в виде[класс DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md) объекта.|  
+|[getDateTimeOffset](../../../connect/jdbc/reference/getdatetimeoffset-method-sqlservercallablestatement.md)|Получает значение указанного столбца в виде объекта[класса DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md) .|  
 |[getDouble](../../../connect/jdbc/reference/getdouble-method-sqlservercallablestatement.md)|Извлекает значение указанного параметра в виде **double** на языке программирования Java.|  
 |[getFloat](../../../connect/jdbc/reference/getfloat-method-sqlservercallablestatement.md)|Извлекает значение указанного параметра в виде значения **float** на языке программирования Java.|  
 |[getInt](../../../connect/jdbc/reference/getint-method-sqlservercallablestatement.md)|Извлекает значение указанного параметра в виде значения **int** на языке программирования Java.|  
 |[getLong](../../../connect/jdbc/reference/getlong-method-sqlservercallablestatement.md)|Извлекает значение указанного параметра в виде значения типа **long** на языке программирования Java.|  
 |[getNCharacterStream](../../../connect/jdbc/reference/getncharacterstream-method-sqlservercallablestatement.md)|Извлекает значение указанного параметра в виде объекта Reader.|  
 |[getNClob](../../../connect/jdbc/reference/getnclob-method-sqlservercallablestatement.md)|Извлекает значение указанного параметра JDBC **NCLOB** в виде объекта **NClob** на языке программирования Java.|  
-|[getNString](../../../connect/jdbc/reference/getnstring-method-sqlservercallablestatement.md)|Получает значение заданного **NCHAR**, **NVARCHAR** или **LONGNVARCHAR** параметра в виде строки на Java языка программирования.|  
+|[getNString](../../../connect/jdbc/reference/getnstring-method-sqlservercallablestatement.md)|Извлекает значение заданного параметра **nchar**, **nvarchar** или **лонгнварчар** в виде строки в языке программирования Java.|  
 |[getObject](../../../connect/jdbc/reference/getobject-method-sqlservercallablestatement.md)|Возвращает значение указанного параметра в виде объекта на языке программирования Java.|  
 |[getQueryTimeout](../../../connect/jdbc/reference/getquerytimeout-method-sqlserverstatement.md)|(Наследуется от [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Извлекает время в секундах, в течение которого [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] будет ожидать выполнения этого объекта CallableStatement.|  
 |[getRef](../../../connect/jdbc/reference/getref-method-sqlservercallablestatement.md)|Извлекает значение указанного параметра в виде объекта Ref на языке программирования Java.|  
@@ -111,7 +110,7 @@ ms.locfileid: "66772968"
 |[setClob](../../../connect/jdbc/reference/setclob-method-sqlservercallablestatement.md)|(Наследуется от [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md).) Присваивает указанному параметру значение заданного объекта.|  
 |[setCursorName](../../../connect/jdbc/reference/setcursorname-method-sqlserverstatement.md)|(Наследуется от [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Присваивает имени курсора SQL значение заданной строки. Это значение будет использоваться при дальнейших вызовах метода execute.|  
 |[SetDate](../../../connect/jdbc/reference/setdate-method-sqlservercallablestatement.md)|Присваивает указанному параметру заданное значение даты.|  
-|[setDateTimeOffset](../../../connect/jdbc/reference/setdatetimeoffset-method-sqlservercallablestatement.md)|Задает значение указанного столбца [класс DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md) значение.|  
+|[setDateTimeOffset](../../../connect/jdbc/reference/setdatetimeoffset-method-sqlservercallablestatement.md)|Задает значение столбца, указанного в качестве значения [класса DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md) .|  
 |[setDouble](../../../connect/jdbc/reference/setdouble-method-sqlservercallablestatement.md)|Задает указанному параметру заданное значение **double**.|  
 |[setEscapeProcessing](../../../connect/jdbc/reference/setescapeprocessing-method-sqlserverstatement.md)|(Наследуется от [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Задается режим обработки escape-последовательностей.|  
 |[setFetchDirection](../../../connect/jdbc/reference/setfetchdirection-method-sqlserverstatement.md)|(Наследуется от [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Определяет указание для драйвера JDBC относительно направления, в котором будут обрабатываться строки результирующего набора.|  
@@ -126,7 +125,7 @@ ms.locfileid: "66772968"
 |[setNString](../../../connect/jdbc/reference/setnstring-method-sqlservercallablestatement.md)|Задает назначенному параметру значение указанного объекта String.|  
 |[setNull](../../../connect/jdbc/reference/setnull-method-sqlservercallablestatement.md)|Устанавливает значение NULL для параметра, определяемого по заданному типу.|  
 |[setObject](../../../connect/jdbc/reference/setobject-method-sqlservercallablestatement.md)|Устанавливает значение указанного параметра с помощью заданного объекта.|  
-|[setPoolable](../../../connect/jdbc/reference/setpoolable-method-sqlserverstatement.md)|(Наследуется от [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Запрашивает поддержку пулов или запрет пулов в инструкции. По умолчанию объект SQLServerCallableStatement поддерживают.|  
+|[setPoolable](../../../connect/jdbc/reference/setpoolable-method-sqlserverstatement.md)|(Наследуется от [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Запрашивает поддержку пулов или запрет пулов в инструкции. По умолчанию объект SQLServerCallableStatement поддается пулу при создании.|  
 |[setQueryTimeout](../../../connect/jdbc/reference/setquerytimeout-method-sqlserverstatement.md)|(Наследуется от [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Задает указанное количество секунд, в течение которых драйвер будет ожидать выполнения объекта CallableStatement.|  
 |[setRef](../../../connect/jdbc/reference/setref-method-sqlserverpreparedstatement.md)|(Наследуется от [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md).) Задает назначенному параметру значение указанного объекта Ref.|  
 |[setResponseBuffering](../../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md)|(Наследуется от [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Задает режиму буферизации ответов для этого объекта [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) значение **String full** или **adaptive** без учета регистра.|  

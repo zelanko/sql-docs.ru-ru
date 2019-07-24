@@ -10,21 +10,20 @@ ms.topic: conceptual
 ms.assetid: 1504a348-1774-47ab-8967-288ec3985ae4
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: af6fc51c3aba34e8118d5519b5acf2fc9583738f
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: a801afabe78625f7914d5fc5accfb6a97084c183
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66798319"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68004287"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-java"></a>Шаг 3. Подтверждение концепции: подключение к SQL с помощью Java
   
-В этом примере следует рассматривать подтверждение концепции только. Пример кода упрощен для ясности и не обязательно представляет рекомендации, рекомендуемые корпорацией Майкрософт.  
+Этот пример следует рассматривать только для подтверждения концепции. Пример кода упрощен для ясности и не обязательно представляет лучшие методики, рекомендованные корпорацией Майкрософт.  
   
-## <a name="step-1--connect"></a>Шаг 1: подключение  
+## <a name="step-1--connect"></a>Шаг 1. подключение  
   
-Используйте класс подключения для подключения к базе данных SQL.   
+Используйте класс Connection для подключения к базе данных SQL.   
   
 ```java  
 import java.sql.Connection;
@@ -56,7 +55,7 @@ public class SQLDatabaseConnection {
 ```  
   
 ## <a name="step-2-execute-a-query"></a>Шаг 2. Выполнение запроса  
-В этом примере для базы данных SQL Azure, выполнить инструкцию SELECT и вернуть выбранные строки.   
+В этом примере подключитесь к базе данных SQL Azure, выполните инструкцию SELECT и возвратите выбранные строки.   
   
 ```java  
 import java.sql.Connection;
@@ -100,8 +99,8 @@ public class SQLDatabaseConnection {
 }
 ```  
   
-## <a name="step-3-insert-a-row"></a>Шаг 3: Вставка строки  
-В этом примере выполнить инструкцию INSERT, передать параметры и извлечь значение первичного ключа автоматически созданный.   
+## <a name="step-3-insert-a-row"></a>Шаг 3. Вставка строки  
+В этом примере выполните инструкцию INSERT, передайте параметры и получите автоматически созданное значение первичного ключа.   
   
 ```java  
 import java.sql.Connection;

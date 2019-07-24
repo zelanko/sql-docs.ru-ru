@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 10c93cbf-f831-4e00-8e37-ea728bf34b1e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ea5c5001c3fe3bd73d464a0dbc41cc8decd022b3
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: fa968eaf8b34a1959f17474ae79f65f1a2fd0ebc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66767022"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67972442"
 ---
 # <a name="settimestamp-method-int-javasqltimestamp-javautilcalendar"></a>Метод setTimestamp (int, java.sql.Timestamp, java.util.Calendar)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,11 +43,11 @@ public final void setTimestamp(int n,
   
  *x*  
   
- Объект метки времени.  
+ Объект timestamp.  
   
- *Клиентская лицензия*  
+ *Cal*  
   
- Объект календаря.  
+ Объект Calendar.  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

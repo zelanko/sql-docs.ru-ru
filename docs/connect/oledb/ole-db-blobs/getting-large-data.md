@@ -1,6 +1,6 @@
 ---
-title: Возврат больших данных | Документация Майкрософт
-description: Возврат больших данных с помощью драйвера OLE DB для SQL Server
+title: Получение больших данных | Документация Майкрософт
+description: Получение больших объемов данных с помощью драйвера OLE DB для SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -15,13 +15,12 @@ helpviewer_keywords:
 - large data, OLE objects
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 968ab9c3d586a9a1b49d356a6e55ff35336c28cd
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: fc9b1ccc24a31083e2a6ef111ad2e79781eef6d6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66803925"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936536"
 ---
 # <a name="getting-large-data"></a>Возврат больших данных
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,9 +37,9 @@ ms.locfileid: "66803925"
   
 -   ICommand::Execute  
   
- Если свойство DBPROP_ACCESSORDER в группе свойств набора строк имеет значение DBPROPVAL_AO_SEQUENTIAL или DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS, потребитель должен получать только одну строку данных в вызове метода **GetNextRows**. Это обусловлено тем, не поддерживает буферизацию данных больших двоичных ОБЪЕКТОВ. Если свойство DBPROP_ACCESSORDER имеет значение DBPROPVAL_AO_RANDOM, потребитель может получать несколько строк данных в одном вызове метода **GetNextRows**.  
+ Если свойство DBPROP_ACCESSORDER в группе свойств набора строк имеет значение DBPROPVAL_AO_SEQUENTIAL или DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS, потребитель должен получать только одну строку данных в вызове метода **GetNextRows**. Это связано с тем, что данные больших двоичных объектов не буферизуются. Если свойство DBPROP_ACCESSORDER имеет значение DBPROPVAL_AO_RANDOM, потребитель может получать несколько строк данных в одном вызове метода **GetNextRows**.  
   
- Драйвер OLE DB для SQL Server не сможет извлечь большие объемы данных из [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] до запроса для этого объектом-получателем. Потребитель должен связывать все короткие типы данных в методе доступа, а затем, если потребуется, использовать один или несколько временных методов доступа для получения значений больших типов данных.  
+ Драйвер OLE DB для SQL Server не получает больших данных от [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , пока не запрашивается потребителем. Потребитель должен связывать все короткие типы данных в методе доступа, а затем, если потребуется, использовать один или несколько временных методов доступа для получения значений больших типов данных.  
   
 ## <a name="example"></a>Пример  
  В этом примере значение большого типа данных получается из одного столбца.  

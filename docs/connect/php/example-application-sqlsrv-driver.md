@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c0225395-3a2e-4561-a2f2-8050ad11c8e2
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 0b34c2398fceb8ea59744234d3bbd889a749804b
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 1276097ce011560471e8d25b10d70a240a2dce3e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66796192"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015079"
 ---
 # <a name="example-application-sqlsrv-driver"></a>Пример приложения (драйвер SQLSRV)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -27,15 +26,15 @@ ms.locfileid: "66796192"
   
 ### <a name="running-the-example-application"></a>Выполнение примера приложения  
   
-1.  Установите [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. Подробные сведения см. в разделе [Приступая к работе с драйверами Майкрософт для PHP для SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md).
+1.  Установите [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. Дополнительные сведения см. в [статье Начало работы с драйверами Майкрософт для PHP для SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md).
 2.  Скопируйте код, приведенный ниже в этом документе, в два файла: adventureworks_demo.php и photo.php.  
 3.  Поместите файлы adventureworks_demo.php и photo.php в корневой каталог веб-сервера.  
-4.  Запустите приложение, запустив `https://localhost/adventureworks_demo.php` из браузера.  
+4.  Запустите приложение, запустив `https://localhost/adventureworks_demo.php` его из браузера.  
   
 ## <a name="requirements"></a>Требования  
 Для запуска примера приложения обзоров продуктов AdventureWorks на компьютере должны выполняться следующие условия:  
   
--   система удовлетворяет требованиям для [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. Подробные сведения см. в разделе [требования к системе для драйверов Майкрософт для PHP для SQL Server](../../connect/php/system-requirements-for-the-php-sql-driver.md).  
+-   система удовлетворяет требованиям для [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. Подробные сведения см. [в разделе Требования к системе для драйверов Майкрософт для PHP для SQL Server](../../connect/php/system-requirements-for-the-php-sql-driver.md).  
 -   Файлы adventureworks_demo.php и photo.php находятся в корневом каталоге веб-сервера. Эти файлы должны содержать код, приведенный ниже в этом документе.  
 -   На локальном компьютере установлен SQL Server 2005 или SQL Server 2008 с подключенной базой данных [AdventureWorks2008](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) .  
 -   Установлен веб-браузер.  

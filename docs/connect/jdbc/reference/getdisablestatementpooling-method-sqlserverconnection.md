@@ -15,18 +15,17 @@ apitype: Assembly
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 9f475d3d02f671cc9c6d277cc50589c4e6980070
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: a2da0a2f04fa90b2d25dbd68baf7b769d5afdcf8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66776936"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67983634"
 ---
 # <a name="getdisablestatementpooling-method-sqlserverconnection"></a>Метод getDisableStatementPooling (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
- Возвращает значение **disableStatementPooling** свойство соединения. Этот параметр определяет, включен пул инструкции или не для этого подключения.
+ Возвращает значение свойства соединения **disableStatementPooling** . Этот параметр определяет, включено ли объединение инструкций в пул для данного соединения.
 
 ## <a name="syntax"></a>Синтаксис  
   
@@ -36,13 +35,13 @@ public boolean getDisableStatementPooling()
 ```  
 
 ## <a name="return-value"></a>Возвращаемое значение
- Объект **логическое** , содержащий значение **disableStatementPooling** свойство соединения.
+ **Логическое** значение, содержащее свойство соединения **disableStatementPooling** .
 
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
  
 ## <a name="remarks"></a>Remarks  
- Этот метод, доступные в версии драйвера JDBC 6.4 и далее.
+ Этот метод доступен из драйвера JDBC версии 6,4 и далее.
  
 ## <a name="see-also"></a>См. также:  
  [Элементы SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

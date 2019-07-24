@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: db0a96a8-248f-4664-9c13-f480f309ab91
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 7285f091a933ebbcfa4796da338e34c6795105fc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ee869c9d9bdcc707456f1cb04b5dcacdacee89a0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66798470"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67998688"
 ---
 # <a name="updatencharacterstream-method-javalangstring-javaioreader-long"></a>Метод updateNCharacterStream (java.lang.String, java.io.Reader, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -33,13 +32,13 @@ public void updateNCharacterStream(java.lang.String columnLabel,
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *ColumnLabel состоит из*  
+ *колумнлабел*  
   
  Значение типа **String**, содержащее метку столбца.  
   
  *reader*  
   
- Объект средства чтения.  
+ Объект модуля чтения.  
   
  *length*  
   
@@ -49,9 +48,9 @@ public void updateNCharacterStream(java.lang.String columnLabel,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод updateNCharacterStream указывается с помощью метода updateNCharacterStream в интерфейсе java.sql.ResultSet.  
+ Этот метод updateNCharacterStream задается методом updateNCharacterStream в интерфейсе Java. SQL. Result.  
   
- Этот метод передает символы в Юникоде из объекта чтения в выбранные **nchar**, **nvarchar(max)** , **ntext**, и **xml** столбцов. Использование этого метода при работе со столбцами других типов данных приведет к возникновению исключения.  
+ Этот метод передает символы Юникода из объекта чтения в выбранные столбцы типа **nchar**, **nvarchar (max)** , **ntext**и **XML** . Использование этого метода при работе со столбцами других типов данных приведет к возникновению исключения.  
   
  Если длина потока отличается от указанной в параметре *length*, драйвер JDBC выдаст исключение при обновлении или вставке строки.  
   

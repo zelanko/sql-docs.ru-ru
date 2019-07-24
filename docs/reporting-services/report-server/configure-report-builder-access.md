@@ -6,14 +6,13 @@ ms.technology: report-server
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
 ms.date: 06/06/2019
-ms.openlocfilehash: a6383eb6bf9c00f6158e0e7adc77605cfc226d9f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 724fac17abf7f5da45101a6ff22d3185a7ade93b
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66826907"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68255172"
 ---
 # <a name="configure-report-builder-access"></a>настроить доступ к построителю отчетов
 Построитель отчетов — средство автоматизированной системы отчетности, устанавливаемое с сервером отчетов служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , настроенным для собственного режима или режима интеграции SharePoint.  
@@ -30,7 +29,7 @@ ms.locfileid: "66826907"
 
 Построитель отчетов доступен не в каждом выпуске [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Сведения о функциях, поддерживаемых различными выпусками [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в статье [Возможности, поддерживаемые выпусками SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).  
 
-Клиентский компьютер должен иметь [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6 или 4.6.1, установленная для SSRS 2016 и 2017, соответственно. Платформа [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] предоставляет инфраструктуру для работы приложений [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] .  
+На клиентском компьютере должен быть [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] установлен 4,6 или 4.6.1 для SSRS 2016 и 2017 соответственно. Платформа [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] предоставляет инфраструктуру для работы приложений [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] .  
 
 Необходимо использовать [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Explorer 11 или более поздней версии или другой современный браузер.  
 
@@ -38,7 +37,7 @@ ms.locfileid: "66826907"
 
 ## <a name="enabling-and-disabling-report-builder"></a>Включение и отключение построителя отчетов  
 
-По умолчанию построитель отчетов включен. Администраторы сервера отчетов могут отключить построитель отчетов, присвоив системному свойству **ShowDownloadMenu** сервера отчетов значение **false**. Задание этого свойства приведет к отключению построитель отчетов, издатель мобильных отчетов и Power BI Mobile загрузки для этого сервера отчетов.  
+По умолчанию построитель отчетов включен. Администраторы сервера отчетов могут отключить построитель отчетов, присвоив системному свойству **ShowDownloadMenu** сервера отчетов значение **false**. При задании этого свойства будут отключены построитель отчетов, издатель мобильных отчетов и Power BI Mobile загрузки для этого сервера отчетов.  
 
  Системные свойства сервера отчетов можно задать с помощью среды Management Studio или скрипта.   
 
@@ -110,8 +109,8 @@ ms.locfileid: "66826907"
 
 1. Откройте веб-портал.  
 
-2. Щелкните значок шестеренки в правом верхнем углу веб-портала домашней страницы и выберите **параметры сайта** из раскрывающегося меню.  
-![Щелкните значок шестеренки портала web и меню](../../reporting-services/report-builder/media/configure-report-builder-access/ssrswebportal-site-settings-gear-icon-and-menu.png)
+2. Щелкните значок шестеренки в правом верхнем углу домашней страницы веб-портала и выберите в раскрывающемся меню пункт **Параметры сайта** .  
+![значок шестеренки веб-портала и меню](../../reporting-services/report-builder/media/configure-report-builder-access/ssrswebportal-site-settings-gear-icon-and-menu.png)
 
 3. Перейдите на вкладку **Безопасность**.  
 

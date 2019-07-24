@@ -10,13 +10,12 @@ ms.technology: connectivity
 ms.topic: reference
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: c17cfbb6ba82b94c3f00aff9034c31b332df0e0d
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 18dc87158bc1a6086cf8406423c123b0789b0f08
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66791174"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015539"
 ---
 # <a name="send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db"></a>Отправка данных BLOB на SQL Server через интерфейсы IRowsetFastLoad и ISequentialStream (OLE DВ)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +34,7 @@ ms.locfileid: "66791174"
   
  Поскольку DBTYPE_IUNKNOWN указан как тип данных в привязке, он должен соответствовать типу столбца или целевого параметра. Преобразования невозможны при передаче данных через интерфейс ISequentialStream из интерфейсов набора строк. Для параметров следует избегать использования типа ICommandWithParameters::SetParameterInfo и указать другой тип для принудительного преобразования. Это потребует от поставщика кэшировать все данные большого двоичного объекта локально, чтобы преобразовать их перед передачей на SQL Server. Кэширование крупного большого двоичного объекта и его локальное преобразование не обеспечивают хорошей производительности.  
   
- Дополнительные сведения см. в разделе [большие двоичные объекты и объекты OLE](../../oledb/ole-db-blobs/blobs-and-ole-objects.md).  
+ Дополнительные сведения см. в разделе объекты [BLOB и OLE](../../oledb/ole-db-blobs/blobs-and-ole-objects.md).  
   
 > [!IMPORTANT]  
 >  По возможности используйте аутентификацию Windows. Если проверка подлинности Windows недоступна, запросите у пользователя ввод учетных данных во время выполнения. Избегайте хранения учетных данных в файле. Если необходимо сохранить учетные данные, зашифруйте их с помощью [API-интерфейса шифрования Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  

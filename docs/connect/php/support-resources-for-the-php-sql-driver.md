@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6f35a38f-b260-44cb-a8ac-0a979aa2c218
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: dc3a6edb0d1108123b5ea22ca717a06409582cbc
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: e0b7054a390f8318b3c4c2db39eda3d2bd2fb842
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66803953"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68014867"
 ---
 # <a name="support-resources-for-the-microsoft-drivers-for-php-for-sql-server"></a>Ресурсы поддержки по драйверам Майкрософт для PHP для SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -47,12 +46,12 @@ ms.locfileid: "66803953"
 ## <a name="php-support-resources"></a>Ресурсы поддержки PHP  
 [Документация по PHP для Windows](https://windows.php.net/)  
   
-Последние сведения о PHP см. в статье [ http://www.php.net/ ](http://www.php.net).  
+Последние сведения о PHP см. на сайте [http://www.php.net/](http://www.php.net).  
   
-Документация по PHP, см. в статье [ http://www.php.net/docs.php ](http://www.php.net/docs.php).  
+Документацию по PHP можно [http://www.php.net/docs.php](http://www.php.net/docs.php)найти по адресу.  
   
 ## <a name="microsoft-customer-support"></a>Служба поддержки клиентов Майкрософт  
-Вопросы, относящиеся к [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], вы можете обратиться к [поддержки Майкрософт](https://support.microsoft.com/contactus/), или обратитесь за помощью на [странице проекта Github](https://github.com/Microsoft/msphpsql/issues).  
+Для получения вопросов о поддержке [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], связанных с, можно обратиться в [Служба поддержки Майкрософт](https://support.microsoft.com/contactus/)или запросить на [странице проекта GitHub](https://github.com/Microsoft/msphpsql/issues).  
   
 ## <a name="see-also"></a>См. также:  
 [Обзор драйверов Майкрософт для PHP для SQL Server](../../connect/php/overview-of-the-php-sql-driver.md)

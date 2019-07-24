@@ -21,13 +21,12 @@ helpviewer_keywords:
 - ISSCommandWithParameters interface
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: efc2c82f047beca82f1daeda6318f16803499f86
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 731e00fdf4c9f073348389f537fa812e10bcbab5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66802859"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67988806"
 ---
 # <a name="using-user-defined-types"></a>Использование определяемых пользователем типов данных
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -45,18 +44,18 @@ ms.locfileid: "66802859"
 >  Метод **IRowsetFind::FindNextRow** не работает с пользовательским типом данных. Если определяемый пользователем тип используется в качестве типа столбца поиска, возвращается значение DB_E_BADCOMPAREOP.  
   
 ### <a name="data-bindings-and-coercions"></a>Привязки данных и приведение типов  
- В следующей таблице описаны привязка и приведение типа данных, которые возникают при использовании перечисленных определенных пользователем типов данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Столбцы определяемого пользователем ТИПА представляются посредством драйвера OLE DB для SQL Server как DBTYPE_UDT. Метаданные можно получать через соответствующие наборы строк схемы, так что можно управлять собственными определенными типами как объектами.  
+ В следующей таблице описаны привязка и приведение типа данных, которые возникают при использовании перечисленных определенных пользователем типов данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Столбцы определяемого пользователем типа предоставляются через драйвер OLE DB для SQL Server как DBTYPE_UDT. Метаданные можно получать через соответствующие наборы строк схемы, так что можно управлять собственными определенными типами как объектами.  
   
 |Тип данных|На сервер<br /><br /> **UDT**|На сервер<br /><br /> **Не пользовательский тип**|С сервера<br /><br /> **UDT**|С сервера<br /><br /> **Не пользовательский тип**|  
 |---------------|---------------------------|--------------------------------|-----------------------------|----------------------------------|  
 |DBTYPE_UDT|Поддерживается<sup>6</sup>|Ошибка<sup>1</sup>|Поддерживается<sup>6</sup>|Ошибка<sup>5</sup>|  
 |DBTYPE_BYTES|Поддерживается<sup>6</sup>|Н/Д<sup>2</sup>|Поддерживается<sup>6</sup>|Н/Д<sup>2</sup>|  
-|DBTYPE_WSTR|Поддерживается<sup>3,6</sup>|Н/Д<sup>2</sup>|Поддерживается<sup>4,6</sup>|Н/Д<sup>2</sup>|  
-|DBTYPE_BSTR|Поддерживается<sup>3,6</sup>|Н/Д<sup>2</sup>|Поддерживается<sup>4</sup>|Н/Д<sup>2</sup>|  
-|DBTYPE_STR|Поддерживается<sup>3,6</sup>|Н/Д<sup>2</sup>|Поддерживается<sup>4,6</sup>|Н/Д<sup>2</sup>|  
+|DBTYPE_WSTR|Поддерживаемые<sup>3, 6</sup>|Н/Д<sup>2</sup>|Поддерживаемые<sup>4, 6</sup>|Н/Д<sup>2</sup>|  
+|DBTYPE_BSTR|Поддерживаемые<sup>3, 6</sup>|Н/Д<sup>2</sup>|Поддерживается<sup>4</sup>|Н/Д<sup>2</sup>|  
+|DBTYPE_STR|Поддерживаемые<sup>3, 6</sup>|Н/Д<sup>2</sup>|Поддерживаемые<sup>4, 6</sup>|Н/Д<sup>2</sup>|  
 |DBTYPE_IUNKNOWN|Не поддерживается|Н/Д<sup>2</sup>|Не поддерживается|Н/Д<sup>2</sup>|  
 |DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|Поддерживается<sup>6</sup>|Н/Д<sup>2</sup>|Поддерживается<sup>4</sup>|Н/Д<sup>2</sup>|  
-|DBTYPE_VARIANT (VT_BSTR)|Поддерживается<sup>3,6</sup>|Н/Д<sup>2</sup>|Недоступно|Н/Д<sup>2</sup>|  
+|DBTYPE_VARIANT (VT_BSTR)|Поддерживаемые<sup>3, 6</sup>|Н/Д<sup>2</sup>|Недоступно|Н/Д<sup>2</sup>|  
   
  <sup>1</sup>Если тип сервера, отличный от DBTYPE_UDT, указывается с помощью метода **ICommandWithParameters::SetParameterInfo** и типом метода доступа является DBTYPE_UDT, то при выполнении инструкции возникает ошибка (DB_E_ERRORSOCCURRED; состояние параметра — DBSTATUS_E_BADACCESSOR). В остальных случаях данные отсылаются на сервер, но сервер возвращает ошибку, указывающую на то, что нет неявного преобразования определяемого пользовательского типа в тип данных параметра.  
   
@@ -82,7 +81,7 @@ ms.locfileid: "66802859"
  Преобразования данных, выполняемые основными службами OLE DB (**IDataConvert**), неприменимы к типу DBTYPE_UDT. Другие привязки не поддерживаются.  
   
 ### <a name="ole-db-rowset-additions-and-changes"></a>Добавления и изменения для наборов строк OLE DB  
- Драйвер OLE DB для SQL Server добавляет новые значения или изменяет многие из основных наборов строк схемы OLE DB.  
+ Драйвер OLE DB для SQL Server добавляет новые значения или изменения во многие основные OLE DB наборы строк схемы.  
   
 #### <a name="the-procedureparameters-schema-rowset"></a>Набор строк схемы PROCEDURE_PARAMETERS  
  В набор строк схемы PROCEDURE_PARAMETERS были сделаны следующие добавления.  
@@ -137,7 +136,7 @@ ms.locfileid: "66802859"
 |SS_UDT_ASSEMBLY_TYPENAME|DBTYPE_WSTR|Полное имя типа (AQN) включает имя типа и префикс пространства имен (если оно задано).|  
   
 ### <a name="ole-db-property-set-additions-and-changes"></a>Добавления и изменения для наборов свойств OLE DB  
- Драйвер OLE DB для SQL Server добавляет новые значения или изменяет многие из основных свойств OLE DB наборов.  
+ Драйвер OLE DB для SQL Server добавляет новые значения или изменения во многие из основных наборов свойств OLE DB.  
   
 #### <a name="the-dbpropsetsqlserverparameter-property-set"></a>Набор свойств DBPROPSET_SQLSERVERPARAMETER  
  Для поддержки пользовательских типов через OLE DB в драйвере OLE DB для SQL Server реализован новый набор свойств DBPROPSET_SQLSERVERPARAMETER, который содержит указанные ниже значения.  
@@ -173,7 +172,7 @@ ms.locfileid: "66802859"
  Если определение определяемого пользователем типа находится в другой базе данных, то должны быть указаны свойства SSPROP_COL_UDT_CATALOGNAME и SSPROP_COL_UDT_CATALOGNAME.  
   
 ### <a name="ole-db-interface-additions-and-changes"></a>Добавления и изменения для интерфейсов OLE DB  
- Драйвер OLE DB для SQL Server добавляет новые значения или изменяет многие из основных интерфейсов OLE DB.  
+ Драйвер OLE DB для SQL Server добавляет новые значения или изменения во многие основные OLE DB интерфейсы.  
   
 #### <a name="the-isscommandwithparameters-interface"></a>Интерфейс ISSCommandWithParameters  
  Для поддержки пользовательских типов посредством OLE DB в драйвере OLE DB для SQL Server реализовано несколько изменений, включая добавление интерфейса **ISSCommandWithParameters**. Этот новый интерфейс наследует основной интерфейс OLE DB — **ICommandWithParameters**. Помимо трех методов, наследуемых от интерфейса **ICommandWithParameters** — **GetParameterInfo**, **MapParameterNames** и **SetParameterInfo**, — интерфейс **ISSCommandWithParameters** содержит методы **GetParameterProperties** и **SetParameterProperties**, которые используются для обработки серверных типов данных.  

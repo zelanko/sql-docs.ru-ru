@@ -1,5 +1,5 @@
 ---
-title: Использование инструкций в SQL | Документация Майкрософт
+title: Использование инструкций с SQL | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: fe28f48a-e1bc-48ff-a5e7-c24cd6e5ecc7
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: faac11590e21ec6bc4ef27f73c50bf61a66b61a5
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 082671d3acf2873bb822e6b836599c00f42d6323
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66798558"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67916165"
 ---
 # <a name="using-statements-with-sql"></a>Использование инструкций в SQL
 
@@ -27,7 +26,7 @@ ms.locfileid: "66798558"
 Если инструкция SQL не содержит параметров IN, используется класс [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md), в противном случае используется класс [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md).  
   
 > [!NOTE]  
-> Если необходимо использовать инструкцию SQL, которая содержит параметр IN и параметр OUT, необходимо реализовать ее в виде хранимой процедуры и вызвать ее с использованием класса [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md). Дополнительные сведения об использовании хранимых процедур см. в разделе [с помощью инструкций, с помощью хранимых процедур](../../connect/jdbc/using-statements-with-stored-procedures.md).  
+> Если необходимо использовать инструкцию SQL, которая содержит параметр IN и параметр OUT, необходимо реализовать ее в виде хранимой процедуры и вызвать ее с использованием класса [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md). Дополнительные сведения об использовании хранимых процедур см. в разделе [Использование инструкций с хранимыми процедурами](../../connect/jdbc/using-statements-with-stored-procedures.md).  
   
 В следующих разделах описаны различные сценарии для работы с данными в базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью инструкций SQL.  
 

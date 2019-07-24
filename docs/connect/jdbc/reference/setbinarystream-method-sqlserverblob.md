@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: abcec31f-1a60-4765-9725-8cf7e9f1f8ab
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 3ca2b8afe197c2509f0a2633266ea21c619bdeb1
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 4555dfb9256f3ffe2ba61e82fe90307991a5a580
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66764691"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67975092"
 ---
 # <a name="setbinarystream-method-sqlserverblob"></a>Метод setBinaryStream (SQLServerBlob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,7 +35,7 @@ public java.io.OutputStream setBinaryStream(long pos)
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *Торговых терминалов*  
+ *POS*  
   
  Позиция, с которой начинается запись значения большого двоичного объекта.  
   
@@ -47,7 +46,7 @@ public java.io.OutputStream setBinaryStream(long pos)
  java.sql.SQLException  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод setBinaryStream указывается с помощью метода setBinaryStream в интерфейсе java.sql.Blob.  
+ Этот метод setBinaryStream задается методом setBinaryStream в интерфейсе Java. SQL. BLOB.  
   
  Данные в большом двоичном объекте перезаписываются выходным потоком, начиная с указанной позиции, и могут превысить начальную длину большого двоичного объекта. Если указать значение позиции+1, будут добавлены байты. Если передается значение позиции+2 и более (либо нулевое или отрицательное значение), то создается ошибка позиции.  
   

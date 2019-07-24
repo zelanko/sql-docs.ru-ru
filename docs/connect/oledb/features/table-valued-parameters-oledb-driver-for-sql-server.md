@@ -13,13 +13,12 @@ helpviewer_keywords:
 - table-valued parameters (OLE DB Driver for SQL Server)
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: d520d07940acaefeb67d38c1e4da9547c8fea344
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: af89c2e803be83143351db85b48173b15fad04d1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66802906"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67988886"
 ---
 # <a name="table-valued-parameters-ole-db-driver-for-sql-server"></a>Возвращающие табличное значение параметры (драйвер OLE DB для SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,7 +28,7 @@ ms.locfileid: "66802906"
   Возвращающие табличное значение параметры появились в [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], и обеспечивают эффективный способ передачи нескольких строк данных на сервер. Возвращающие табличное значение параметры предоставляют функциональные возможности, схожие с массивами параметров, но предлагают большую гибкость и более тесную интеграцию с [!INCLUDE[tsql](../../../includes/tsql-md.md)], и могут значительно улучшить производительность. Возвращающие табличное значение параметры также могут участвовать в операциях на основе набора, а массивы параметров не могут.  
   
   
- Сведения о возвращающих табличные значения параметрах и OLE DB, см. в разделе [возвращающего табличное значение параметров &#40;OLE DB&#41;](../../oledb/ole-db-table-valued-parameters/table-valued-parameters-ole-db.md).  
+ Сведения о возвращающих табличные значения параметрах и OLE DB см. в разделе возвращающие табличное значение [параметры &#40;OLE DB&#41;](../../oledb/ole-db-table-valued-parameters/table-valued-parameters-ole-db.md).  
   
 ## <a name="see-also"></a>См. также:  
  [Возможности драйвера OLE DB для SQL Server](../../oledb/features/oledb-driver-for-sql-server-features.md) 

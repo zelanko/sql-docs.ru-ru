@@ -14,20 +14,19 @@ helpviewer_keywords:
 - data access [OLE DB Driver for SQL Server], about OLE DB Driver for SQL Server
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 210a15d827cb8f0a828c11c1c8fe87586cd79028
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 74bd79c24b913cd3c3d2f782b77cf2bb4c23e397
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66795874"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015190"
 ---
 # <a name="when-to-use-ole-db-driver-for-sql-server"></a>Когда использовать драйвер OLE DB для SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../includes/driver_oledb_download.md)]
 
-  Драйвер OLE DB для SQL Server — одна из технологий, который можно использовать для доступа к данным в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базы данных.  Обсуждение других технологий доступа к данным см. в разделе [Схема технологий доступа к данным](https://go.microsoft.com/fwlink/?LinkID=179186).  
+  Драйвер OLE DB для SQL Server — это одна из технологий, которую можно использовать для доступа к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] данным в базе данных.  Обсуждение других технологий доступа к данным см. в разделе [Схема технологий доступа к данным](https://go.microsoft.com/fwlink/?LinkID=179186).  
   
  В принятии решения о необходимости использования в качестве технологии доступа к данным драйвера OLE DB для SQL Server необходимо принимать во внимание ряд факторов.  
   
@@ -37,9 +36,9 @@ ms.locfileid: "66795874"
   
  Для существующих приложений OLE DB самый важный вопрос — необходим ли доступ к новым функциям [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Если имеется отлаженное приложение, не требующее новых возможностей [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], то можно продолжать использование компонентов WDAC. Но если требуется доступ к новым возможностям, например к новому [типу данных xml](../../t-sql/xml/xml-transact-sql.md), то необходимо использовать драйвер OLE DB для SQL Server.  
   
- Оба драйвер OLE DB для SQL Server и MDAC поддерживают изоляции транзакций read committed с использованием управления версиями строк, но только драйвер OLE DB для изоляции транзакции моментальных снимков поддерживает SQL Server. С точки зрения программирования уровень изоляции транзакции READ COMMITTED с управлением версиями строк — то же самое, что и транзакция READ COMMITTED.  
+ Оба OLE DB драйвера для SQL Server и MDAC поддерживают изоляцию транзакций READ COMMITTED с помощью управления версиями строк, но только драйвер OLE DB для SQL Server поддерживает изоляцию транзакций моментальных снимков. С точки зрения программирования уровень изоляции транзакции READ COMMITTED с управлением версиями строк — то же самое, что и транзакция READ COMMITTED.  
   
- Сведения о различиях между драйвер OLE DB для SQL Server и MDAC см. в разделе [обновление приложения для драйвера OLE DB для SQL Server с компонентами MDAC](../oledb/applications/updating-an-application-to-oledb-driver-for-sql-server-from-mdac.md).  
+ Сведения о различиях между драйвером OLE DB для SQL Server и MDAC см. в статье [Обновление приложения до OLE DB драйвера для SQL Server из MDAC](../oledb/applications/updating-an-application-to-oledb-driver-for-sql-server-from-mdac.md).  
   
 ## <a name="see-also"></a>См. также:  
  [Драйвер OLE DB для SQL Server](../oledb/oledb-driver-for-sql-server.md)     
