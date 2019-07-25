@@ -10,13 +10,12 @@ ms.topic: language-reference
 ms.assetid: c73d7452-31c5-4f4e-afcc-e9eca760c826
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 42d83c5adf9afa268bb7ec6e069731d6f8a05219
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2db5b171f0f853383c2bae99202c511151c38d8d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65716000"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68007230"
 ---
 # <a name="catalogrenameenvironment-ssisdb-database"></a>catalog.rename_environment (база данных SSISDB)
 
@@ -37,13 +36,13 @@ catalog.rename_environment [ @folder_name = ] folder_name
   
 ## <a name="arguments"></a>Аргументы  
  [ @folder_name = ] *folder_name*  
- Имя папки, которая содержит среду. Параметр *folder_name* имеет тип **nvarchar(128)**.  
+ Имя папки, которая содержит среду. Параметр *folder_name* имеет тип **nvarchar(128)** .  
   
  [ @environment_name = ] *environment_name*  
- Исходное имя среды. Параметр *environment_name* имеет тип **nvarchar(128)**.  
+ Исходное имя среды. Параметр *environment_name* имеет тип **nvarchar(128)** .  
   
  [ @new_environment_name = ] *new_environment_name*  
- Новое имя среды. Параметр *new_environment_name* имеет тип **nvarchar(128)**.  
+ Новое имя среды. Параметр *new_environment_name* имеет тип **nvarchar(128)** .  
   
 ## <a name="return-code-value"></a>Значения кодов возврата  
  0 (успешное завершение)  

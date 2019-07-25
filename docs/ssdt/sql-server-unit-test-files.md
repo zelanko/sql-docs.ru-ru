@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: cee093c9-b97d-4fb0-b80f-806d071259dc
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 9c595bd6d7cce21b9bf3428fadf772c4db4cdc07
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3dcefdc7b229f0d36f3c14349cc4af73c9f8eb2e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65101920"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68110664"
 ---
 # <a name="sql-server-unit-test-files"></a>Файлы модульного теста SQL Server
 Как и модульные тесты для управляемого кода, модульные тесты SQL Server размещаются в тестовых проектах. Элементы, входящие в модульный тест для SQL Server, отображаются в иерархии тестового проекта в **обозревателе решений**.  

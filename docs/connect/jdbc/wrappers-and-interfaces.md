@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 27fc9b72-9f21-4728-abcb-5c015f28a6ab
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 398a8f072fd264307c1da08af5a187490813e8ac
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 7be51a27364107afe6b79ebcce5de109909b1836
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66780825"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67916063"
 ---
 # <a name="wrappers-and-interfaces"></a>Оболочки и интерфейсы
 
@@ -28,9 +27,9 @@ ms.locfileid: "66780825"
 
 Драйвер [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] поддерживает интерфейс java.sql.Wrapper. Этот интерфейс обеспечивает механизм доступа к расширениям API JDBC, определяемым драйвером [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], через интерфейс-посредник.
 
-Интерфейс java.sql.Wrapper определяет два метода: **isWrapperFor** и **unwrap**. Метод **isWrapperFor** проверяет, реализует ли указанный объект ввода данный интерфейс. Метод **unwrap** возвращает объект, в котором реализован указанный интерфейс, для обеспечения доступа к методам, определяемым драйвером [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)].
+Интерфейс Java. SQL. оберток определяет два метода: **isWrapperFor** и **Unwrap**. Метод **isWrapperFor** проверяет, реализует ли указанный объект ввода данный интерфейс. Метод **unwrap** возвращает объект, в котором реализован указанный интерфейс, для обеспечения доступа к методам, определяемым драйвером [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)].
 
-**isWrapperFor** и **unwrap** методы предоставляются следующим образом:
+методы **isWrapperFor** и **unwrap** предоставляются следующим образом:
 
 - [Метод isWrapperFor &#40;SQLServerCallableStatement&#41;](../../connect/jdbc/reference/iswrapperfor-method-sqlservercallablestatement.md)
 
@@ -42,7 +41,7 @@ ms.locfileid: "66780825"
 
 - [Метод isWrapperFor &#40;SQLServerDataSource&#41;](../../connect/jdbc/reference/iswrapperfor-method-sqlserverdatasource.md)
 
-- [Метод unwrap &#40;SQLServerDataSource&#41;](../../connect/jdbc/reference/unwrap-method-sqlserverdatasource.md)
+- [Распаковка метода &#40;SQLServerDataSource&#41;](../../connect/jdbc/reference/unwrap-method-sqlserverdatasource.md)
 
 - [Метод isWrapperFor &#40;SQLServerPreparedStatement&#41;](../../connect/jdbc/reference/iswrapperfor-method-sqlserverpreparedstatement.md)
 
@@ -50,11 +49,11 @@ ms.locfileid: "66780825"
 
 - [Метод isWrapperFor &#40;SQLServerStatement&#41;](../../connect/jdbc/reference/iswrapperfor-method-sqlserverstatement.md)
 
-- [Метод unwrap &#40;SQLServerStatement&#41;](../../connect/jdbc/reference/unwrap-method-sqlserverstatement.md)
+- [Распаковка метода &#40;SQLServerStatement&#41;](../../connect/jdbc/reference/unwrap-method-sqlserverstatement.md)
 
 - [Метод isWrapperFor &#40;SQLServerXADataSource&#41;](../../connect/jdbc/reference/iswrapperfor-method-sqlserverxadatasource.md)
 
-- [Метод unwrap &#40;SQLServerXADataSource&#41;](../../connect/jdbc/reference/unwrap-method-sqlserverxadatasource.md)
+- [Распаковка метода &#40;SQLServerXADataSource&#41;](../../connect/jdbc/reference/unwrap-method-sqlserverxadatasource.md)
 
 ## <a name="interfaces"></a>Интерфейсы
 

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 74eee587-d5f5-4d1a-bbae-7f4e3f27e23b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 787e3c18581339de78a5f4fcd653967566f85ece
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: da88119ea55f758d6c56a72a2acd8ac5807bf714
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124664"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68051849"
 ---
 # <a name="security-architecture-for-web-synchronization"></a>Архитектура безопасности для веб-синхронизации
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "54124664"
 |Тип учетной записи|Где задана учетная запись|  
 |---------------------|------------------------------------|  
 |Пользователь Windows|[!INCLUDE[tsql](../../../includes/tsql-md.md)]: параметры **@job_login** и **@job_password** процедуры [sp_addmergepullsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md).<br /><br /> Объекты RMO: свойства <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> и <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> для <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A>.|  
-|Учетная запись службы Windows для агента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|Диспетчер конфигурации[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] |  
+|Учетная запись службы Windows для агента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|Диспетчер конфигурации[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|  
 |Изолированное приложение|Агент слияния выполняется в контексте пользователя Windows, который выполняет это приложение|  
   
 ## <a name="b-connection-to-the-subscriber"></a>Б. Соединение с подписчиком  
