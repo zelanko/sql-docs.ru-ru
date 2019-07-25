@@ -20,12 +20,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2d071c934e5ebf6cb08b649bc33735cf39f4f0cb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3201e13c967906c624bee5be28b157a887155c7f
+ms.sourcegitcommit: d667fa9d6f1c8035f15fdb861882bd514be020d9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68048949"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68388343"
 ---
 # <a name="configure-and-manage-word-breakers-and-stemmers-for-search"></a>Настройка и управление средством разбиения на слова и парадигматические модули для поиска
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -84,7 +84,7 @@ GO
 Чтобы просмотреть язык средства разбиения по словам для определенных столбцов, выполните следующую инструкцию.
    
 ```sql 
-SELECT 'language_id' AS "LCID" FROM sys.fulltext_index_columns;
+SELECT language_id AS 'LCID' FROM sys.fulltext_index_columns;
 ```  
 
 Сведения о дополнительных параметрах см. в статье [sys.fulltext_index_columns (Transact-SQL)](../../relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql.md).
@@ -133,11 +133,9 @@ SELECT 'language_id' AS "LCID" FROM sys.fulltext_index_columns;
  Обычно каждая версия [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] включает новые средства разбиения по словам, которые имеют лучшие лингвистические правила и более точны, чем прежние. Новые средства разбиения по словам могут вести себя немного не так, как средства разбиения по словам в полнотекстовых индексах, импортированных из предыдущих версий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
  
 Это важно, если полнотекстовый каталог был импортирован при обновлении базы данных до текущей версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Один или несколько языков, используемых полнотекстовыми индексами в полнотекстовом каталоге, могут быть связаны с новыми средствами разбиения по словам. Дополнительные сведения см. в разделе [Обновление полнотекстового поиска](../../relational-databases/search/upgrade-full-text-search.md).  
-  
-
+ 
 ## <a name="see-also"></a>См. также:  
  [CREATE FULLTEXT INDEX (Transact-SQL)](../../t-sql/statements/create-fulltext-index-transact-sql.md)    
  [ALTER FULLTEXT INDEX (Transact-SQL)](../../t-sql/statements/alter-fulltext-index-transact-sql.md)   
  [Настройка и управление стоп-словами и списками стоп-слов для полнотекстового поиска](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)   
- 
-  
+
