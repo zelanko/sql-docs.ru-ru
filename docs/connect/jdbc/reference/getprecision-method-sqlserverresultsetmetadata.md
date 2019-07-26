@@ -1,5 +1,5 @@
 ---
-title: Метод getPrecision (SQLServerResultSetMetaData) | Документация Майкрософт
+title: Метод Precision (SQLServerResultSetMetaData) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: de46c96e-6ad6-4946-883e-807123658500
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 32b428f217fa15c5dba7304b4d2aabfd16b52553
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 332b230730d9f9bb53a8e06856d1f2d7308401fe
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66771277"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67980770"
 ---
 # <a name="getprecision-method-sqlserverresultsetmetadata"></a>Метод getPrecision (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +46,7 @@ public int getPrecision(int column)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод getPrecision указывается с помощью метода getPrecision в интерфейсе java.sql.ResultSetMetaData.  
+ Этот метод метода Precision задается методом ResultSetMetaData в интерфейсе Java. SQL.  
   
 ## <a name="see-also"></a>См. также:  
  [Методы SQLServerResultSetMetaData](../../../connect/jdbc/reference/sqlserverresultsetmetadata-methods.md)   

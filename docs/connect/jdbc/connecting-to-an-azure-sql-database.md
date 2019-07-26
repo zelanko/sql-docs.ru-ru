@@ -1,5 +1,5 @@
 ---
-title: Подключение к базе данных Azure SQL | Документация Майкрософт
+title: Подключение к базе данных SQL Azure | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/21/2019
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 49645b1f-39b1-4757-bda1-c51ebc375c34
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2eef48c472ee9b23d941be88ae76cb0349067739
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: f62ca071f091fb812550315a81accff723422f09
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66789328"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67956853"
 ---
 # <a name="connecting-to-an-azure-sql-database"></a>Подключение к базе данных SQL Azure
 
@@ -32,8 +31,8 @@ ms.locfileid: "66789328"
   
 ## <a name="details"></a>Сведения
 
-При подключении к [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], следует подключиться к базе данных master для вызова **SQLServerDatabaseMetaData.getCatalogs**.  
-[!INCLUDE[ssAzure](../../includes/ssazure_md.md)] не поддерживает возврат всего набора каталогов из пользовательских баз данных. **SQLServerDatabaseMetaData.getCatalogs** использовать для получения каталогов представление sys.databases. См. обсуждение разрешений в [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) для понимания **SQLServerDatabaseMetaData.getCatalogs** поведение на [!INCLUDE[ssAzure](../../includes/ssazure_md.md)].  
+При подключении к [!INCLUDE[ssAzure](../../includes/ssazure_md.md)]необходимо подключиться к базе данных master для вызова **SQLServerDatabaseMetaData. catalog**.  
+[!INCLUDE[ssAzure](../../includes/ssazure_md.md)] не поддерживает возврат всего набора каталогов из пользовательских баз данных. **SQLServerDatabaseMetaData. catalog** использует представление sys. databases для получения каталогов. Сведения о разрешениях в [представлении sys. databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) см [!INCLUDE[ssAzure](../../includes/ssazure_md.md)]. в статье о поведении **SQLServerDatabaseMetaData. catalog** в.  
   
 ## <a name="connections-dropped"></a>Прерванные соединения
 
@@ -47,9 +46,9 @@ ms.locfileid: "66789328"
   
 |Параметр реестра|Рекомендуемое значение|  
 |----------------------|-----------------------|  
-|HKEY_LOCAL_MACHINE \ SYSTEM \ CurrentControlSet \ служб \ Tcpip \ параметры \ KeepAliveTime|30 000|  
-|HKEY_LOCAL_MACHINE \ SYSTEM \ CurrentControlSet \ служб \ Tcpip \ параметры \ KeepAliveInterval|1000|  
-|HKEY_LOCAL_MACHINE \ SYSTEM \ CurrentControlSet \ служб \ Tcpip \ параметры \ TcpMaxDataRetransmissions|10|  
+|HKEY_LOCAL_MACHINE \ SYSTEM \ CurrentControlSet \ службы \ tcpip \ параметры \ KeepAliveTime|30 000|  
+|HKEY_LOCAL_MACHINE \ SYSTEM \ CurrentControlSet \ службы \ tcpip \ параметры \ KeepAliveInterval|1000|  
+|HKEY_LOCAL_MACHINE \ SYSTEM \ CurrentControlSet \ службы \ tcpip \ параметры \ TcpMaxDataRetransmissions|10|  
   
 Перезагрузите компьютер, чтобы новые параметры вступили в силу.  
 
@@ -81,7 +80,7 @@ shutdown /r /t 1
 
 ## <a name="using-encryption-requires-setting-hostnameincertificate"></a>Для использования шифрования необходимо задать hostNameInCertificate
 
-До версии 7.2 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], при подключении к [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], следует указать **hostNameInCertificate** при указании **шифрования = true** (если имя сервера в соединении Строка является *shortName*. *domainName*, задайте **hostNameInCertificate** свойства \*. *domainName*.). Это свойство является необязательным, начиная с версии 7.2 драйвера.
+До версии [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] [!INCLUDE[ssAzure](../../includes/ssazure_md.md)]7,2 при подключении к необходимо указать **hostNameInCertificate** , если указать **Encrypt = true** (если имя сервера в строке подключения имеет значение " *shortName*"). *имя_домена*, присвойте \*свойству **hostNameInCertificate** значение. *имя_домена*.). Это свойство является необязательным в версии драйвера 7,2.
 
 Пример:
 

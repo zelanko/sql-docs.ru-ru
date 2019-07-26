@@ -14,14 +14,13 @@ helpviewer_keywords:
 ms.assetid: 75c8c1f8-60bc-44a8-944b-d18d1f6bda11
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 03931adbcd8de462f9562cc35083f080aabd7e05
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fe907a62279c819c227772d70008ee96d172e229
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47719942"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68127890"
 ---
 # <a name="initialize-a-transactional-subscription-without-a-snapshot"></a>Initialize a Transactional Subscription Without a Snapshot
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ ms.locfileid: "47719942"
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Включение инициализации из резервной копии для публикаций транзакций (SQL Server Management Studio)](../../relational-databases/replication/enable-initialization-with-backup-for-transactional-publications.md)  
   
--   Программирование репликации на Transact-SQL: [Инициализация транзакционной подписки из резервной копии (программирование репликации на языке Transact-SQL)](../../relational-databases/replication/initialize-a-transactional-subscription-from-a-backup.md)  
+-   Программирование репликации на Transact-SQL: [Инициализация транзакционной подписки из резервной копии](../../relational-databases/replication/initialize-a-transactional-subscription-from-a-backup.md)  
   
 > [!NOTE]  
 >  Если подписка инициализируется без использования моментального снимка, то учетной записи, под которой выполняется служба SQL Server на издателе, должны быть предоставлены разрешения на запись в папку моментальных снимков на распространителе. Дополнительные сведения о разрешениях см. в разделе [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md).  

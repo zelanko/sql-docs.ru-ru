@@ -1,5 +1,5 @@
 ---
-title: Конструктор SQLServerException (java.lang.String, java.lang.Throwable) | Документация Майкрософт
+title: Конструктор SQLServerException (Java. lang. String, Java. lang. Throw) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2018
 ms.prod: sql
@@ -13,18 +13,17 @@ apitype: Assembly
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ea105ebb0d0fb2d6bf5e8cec0fadacd369abadc7
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 14984450507b5eea63d2fbe88bb2e7f957f61868
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66802042"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67971077"
 ---
-# <a name="sqlserverexception-constructor-javalangstring-javalangthrowable"></a>Конструктор SQLServerException (java.lang.String, java.lang.Throwable)
+# <a name="sqlserverexception-constructor-javalangstring-javalangthrowable"></a>Конструктор SQLServerException (Java. lang. String, Java. lang. Throw)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Инициализирует новый экземпляр класса [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) Получив **строка** объекта и **объект** объекта.
+  Инициализирует новый экземпляр класса [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) при наличии **строкового** объекта и создаваемого **объекта.**
 
 ## <a name="syntax"></a>Синтаксис  
   
@@ -41,7 +40,7 @@ public SQLServerException(java.lang.String errText,
  
  *cause*  
   
- Объект, содержащий причину исключения.
+ Создаваемый объект, содержащий причину исключения.
   
 ## <a name="see-also"></a>См. также:  
  [Конструкторы SQLServerException](../../../connect/jdbc/reference/sqlserverexception-constructors.md)   

@@ -1,5 +1,5 @@
 ---
-title: Метод isCurrency (SQLServerResultSetMetaData) | Документация Майкрософт
+title: Метод Currency (SQLServerResultSetMetaData) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 7fe25d90-693c-4d3b-9dd2-0f8351c5a9ed
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: cf38e568d723f72c673a85d31093ffe7e1bae26f
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 33d21e8bfe8a774d8b5b21584ba9fd3f02246f4e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66796544"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67977683"
 ---
 # <a name="iscurrency-method-sqlserverresultsetmetadata"></a>Метод isCurrency (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +46,7 @@ public boolean isCurrency(int column)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод isCurrency указывается с помощью метода isCurrency в интерфейсе java.sql.ResultSetMetaData.  
+ Этот метод ResultSetMetaData задается методом «Currency» в интерфейсе Java. SQL.  
   
  Этот метод возвращает значение **true** только для типов данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] money и smallmoney.  
   

@@ -25,13 +25,12 @@ helpviewer_keywords:
 ms.assetid: 35a8e100-3ff2-4844-a5da-dd088c43cba4
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 41c6710fc126dc39f5a4333c08fa4e61c3d4265c
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 5a44b8b9c4ae4c70ec41a7c699572ecf4adcc224
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67582804"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68103783"
 ---
 # <a name="backup-devices-sql-server"></a>Устройства резервного копирования (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +66,7 @@ ms.locfileid: "67582804"
   
  BACKUP DATABASE *database_name*  
   
- TO DISK **=** { **'**_physical_backup_device_name_**'** | **@**_physical_backup_device_name_var_ }  
+ TO DISK **=** { **'** _physical_backup_device_name_ **'**  |  **@** _physical_backup_device_name_var_ }  
   
  Пример:  
   
@@ -81,7 +80,7 @@ GO
   
  RESTORE { DATABASE | LOG } *database_name*  
   
- FROM DISK **=** { **'**_physical_backup_device_name_**'** | **@**_physical_backup_device_name_var_ }  
+ FROM DISK **=** { **'** _physical_backup_device_name_ **'**  |  **@** _physical_backup_device_name_var_ }  
   
  Например,  
   
@@ -117,7 +116,7 @@ GO
     > **ВАЖНО!** Резервное копирование данных через сеть может быть причиной сетевых ошибок. Поэтому при использовании удаленного диска рекомендуется проверять операцию резервного копирования после ее завершения. Дополнительные сведения см. в разделе [RESTORE VERIFYONLY (Transact-SQL)](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
   
 ## <a name="specify-a-universal-naming-convention-unc-name"></a>Указание имени в формате UNC  
- Чтобы указать сетевой ресурс в команде резервного копирования или восстановления, для файла, расположенного на устройстве резервного копирования, следует использовать полностью заданное имя в формате UNC. Имя в формате UNC имеет форму **\\\\**_Имя_системы_**\\**_Имя_общего_ресурса_**\\**_Путь_**\\**_Имя_файла_.  
+ Чтобы указать сетевой ресурс в команде резервного копирования или восстановления, для файла, расположенного на устройстве резервного копирования, следует использовать полностью заданное имя в формате UNC. Имя в формате UNC имеет форму **\\\\** _Имя_системы_ **\\** _Имя_общего_ресурса_ **\\** _Путь_ **\\** _Имя_файла_.  
   
  Пример:  
   
@@ -147,7 +146,7 @@ GO
   
  BACKUP { DATABASE | LOG } *database_name*  
   
- TO TAPE **=** { **'**_physical_backup_device_name_**'** | **@**_physical_backup_device_name_var_ }  
+ TO TAPE **=** { **'** _physical_backup_device_name_ **'**  |  **@** _physical_backup_device_name_var_ }  
   
  Пример:  
   
@@ -161,7 +160,7 @@ GO
   
  RESTORE { DATABASE | LOG } *database_name*  
   
- FROM TAPE **=** { **'**_physical_backup_device_name_**'** | **@**_physical_backup_device_name_var_ }  
+ FROM TAPE **=** { **'** _physical_backup_device_name_ **'**  |  **@** _physical_backup_device_name_var_ }  
   
 ###  <a name="TapeOptions"></a> Параметры BACKUP и RESTORE для ленточных устройств (Transact-SQL)  
  Чтобы упростить управление лентой, инструкция BACKUP предоставляет следующие параметры для ленточных устройств.  
@@ -179,7 +178,7 @@ GO
 ###  <a name="OpenTapes"></a> Управление открытыми магнитными лентами  
  Для просмотра списка открытых ленточных устройств и состояния запросов на подключение запросите динамическое представление управления [sys.dm_io_backup_tapes](../../relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql.md) . Данное представление показывает все открытые ленты. Сюда относятся все используемые ленты, которые временно простаивают в ожидании следующей операции BACKUP или RESTORE.  
   
- Если лента была неумышленно оставлена открытой, то самый быстрый способ освободить ленту — использовать следующую команду: RESTORE REWINDONLY FROM TAPE **=**_backup_device_name_. Дополнительные сведения см. в разделе [RESTORE REWINDONLY (Transact-SQL)](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md).  
+ Если лента была неумышленно оставлена открытой, то самый быстрый способ освободить ленту — использовать следующую команду: RESTORE REWINDONLY FROM TAPE **=** _backup_device_name_. Дополнительные сведения см. в разделе [RESTORE REWINDONLY (Transact-SQL)](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md).  
   
   
 ## <a name="using-the-windows-azure-blob-storage-service"></a>Использование службы хранилища BLOB-объектов Microsoft Azure  

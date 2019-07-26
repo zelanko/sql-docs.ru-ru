@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 51f8a08c-51d0-41d8-8bc5-1cb4d42622fb
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 727186e4c32291a02140c50780986c8b2f60e08a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1c435ef5ee077d569d0b071f351a3b55400f9a72
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "67140788"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68136368"
 ---
 # <a name="sql-server-offline-help-and-help-viewer"></a>Автономная справка SQL Server и окно справки
 
@@ -172,7 +171,7 @@ ms.locfileid: "67140788"
 
 **Просмотр справки SQL Server в Интернете с помощью SQL Server Management Studio 17.x**
 
-- В меню **Справка** выберите пункт **Просмотр справки**. В окне браузера отобразится последняя версия документации по SQL Server 2016 и SQL Server 2017 ( [https://docs.microsoft.com/sql/ https://docs.microsoft.com/sql/sql-server/sql-server-technical-documentation](https://docs.microsoft.com/sql/sql-server/sql-server-technical-documentation) ). 
+- В меню **Справка** выберите пункт **Просмотр справки**. В окне браузера отобразится последняя версия документации по SQL Server 2016 и SQL Server 2017 ( [https://docs.microsoft.com/sql/https://docs.microsoft.com/sql/sql-server/sql-server-technical-documentation](https://docs.microsoft.com/sql/sql-server/sql-server-technical-documentation) ). 
 
    ![Просмотр справки](../sql-server/media/sql-server-help-installation/viewhelp.png)
 

@@ -10,28 +10,27 @@ ms.topic: conceptual
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c004bc40ed0c85b82612be9069e1a53041c8095c
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 662362a692742d206902a0cf23aff63a3ba89df9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66798592"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67916174"
 ---
 # <a name="using-sqlvariant-data-type"></a>Использование данных типа sql_variant
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-Начиная с версии 6.3.0 драйвер JDBC поддерживает тип данных sql_variant. Sql_variant поддерживается также в том случае, если с помощью функции, такие как параметры с табличным значением и BulkCopy с некоторыми ограничениями упоминалось эту страницу позже. Не все типы данных могут храниться в тип данных sql_variant. Список поддерживаемых типов данных с sql_variant, см. в SQL Server [документация](https://docs.microsoft.com/sql/t-sql/data-types/sql-variant-transact-sql).
+Начиная с версии 6.3.0 Драйвер JDBC поддерживает тип данных sql_variant. Sql_variant также поддерживается при использовании таких функций, как возвращающие табличные значения параметры, и BulkCopy с некоторыми ограничениями, упомянутыми далее на этой странице. Не все типы данных могут храниться в типе данных sql_variant. Чтобы получить список поддерживаемых типов данных с типом sql_variant, проверьте [документацию](https://docs.microsoft.com/sql/t-sql/data-types/sql-variant-transact-sql) по SQL Server.
 
 ##  <a name="populating-and-retrieving-a-table"></a>Заполнение и получение таблицы:
-При условии, что одно содержит таблицу со столбцом типа sql_variant как:
+Предположим, что у одного столбца есть таблица со столбцом sql_variant:
 
 ```sql
 CREATE TABLE sampleTable (col1 sql_variant)  
 ```
 
-Пример сценария для вставки значений, с помощью инструкции:
+Пример скрипта для вставки значений с помощью инструкции:
 
 ```java
 try (Statement stmt = connection.createStatement()){
@@ -48,7 +47,7 @@ try (PreparedStatement preparedStatement = con.prepareStatement("insert into sam
 }
 ```      
 
-Если известен базовый тип передаваемых данных, можно использовать соответствующие задания. Например `preparedStatement.setInt()` может использоваться при вставке целочисленное значение.
+Если известен базовый тип передаваемых данных, можно использовать соответствующий метод задания. Например, `preparedStatement.setInt()` может использоваться при вставке целочисленного значения.
 
 ```java
 try (PreparedStatement preparedStatement = con.prepareStatement("insert into table values (?)")) {
@@ -57,7 +56,7 @@ try (PreparedStatement preparedStatement = con.prepareStatement("insert into tab
 }
 ```
 
-Для чтения значений из таблицы, можно использовать соответствующие методы Get. Например `getInt()` или `getString()` методы можно использовать, если известными значениями, приходящие с сервера:    
+Для чтения значений из таблицы можно использовать соответствующие методы получения. Например, можно `getInt()` использовать `getString()` методы или, если значения, поступающие от сервера, известны:    
 
 ```java
 try (SQLServerResultSet resultSet = (SQLServerResultSet) stmt.executeQuery("select * from sampleTable ")) {
@@ -67,7 +66,7 @@ try (SQLServerResultSet resultSet = (SQLServerResultSet) stmt.executeQuery("sele
 ```
 
 ## <a name="using-stored-procedures-with-sqlvariant"></a>Использование хранимых процедур с sql_variant:   
-Например, наличие хранимой процедуры:     
+Наличие хранимой процедуры, например:     
 
 ```java
 String sql = "CREATE PROCEDURE " + inputProc + " @p0 sql_variant OUTPUT AS SELECT TOP 1 @p0=col1 FROM sampleTable ";
@@ -82,14 +81,14 @@ try (CallableStatement callableStatement = con.prepareCall(" {call " + inputProc
 }
 ```
 
-## <a name="limitations-of-sqlvariant"></a>Ограничения sql_variant:
-- При использовании возвращающего табличное значение Параметра для заполнения таблицы с `datetime` / `smalldatetime` / `date` значение, хранящееся в sql_variant, вызвав `getDateTime()` / `getSmallDateTime()` / `getDate()` на Результирующий набор не работает и вызывает следующее исключение:
+## <a name="limitations-of-sqlvariant"></a>Ограничения типа sql_variant:
+- При использовании `datetime` TVP для заполнения таблицы / `getSmallDateTime()` / `getDateTime()` `smalldatetime` значением, хранящимся в sql_variant, вызов`getDate()` метода / / `date` ResultSet не работает и вызывает следующее исключение:
     
     `Java.lang.String cannot be cast to java.sql.Timestamp`
    
-    Решение: используйте `getString()` или `getObject()` вместо этого. 
+    Обходное решение `getString()` . `getObject()` используйте или. 
     
-- Использование возвращающего табличное значение Параметра для заполнения таблицы и отправка значение null в sql_variant не поддерживается и создает исключение:
+- Использование TVP для заполнения таблицы и отправки значения NULL в sql_variant не поддерживается и вызывает исключение:
     
     `Inserting null value with column type sql_variant in TVP is not supported.`
 

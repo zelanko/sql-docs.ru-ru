@@ -13,18 +13,17 @@ apitype: Assembly
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 868e14c72fbb7c32d394df2fbbdf5cd3a7c36738
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 72ae0e8ed3c65a795723326d7ca49e2f5a909f18
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66766993"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67971145"
 ---
 # <a name="sqlserverexception-constructor-javalangobject-javalangstring-javalangstring-int-boolean"></a>Конструктор SQLServerException (java.lang.Object, java.lang.String, java.lang.String, int, boolean)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Инициализирует новый экземпляр класса [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) Получив **объект**, **строка** объекта, **строка** объект, **int**и **логическое**.
+  Инициализирует новый экземпляр класса [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) при наличии **объекта**, **строкового** объекта, **строкового** объекта, типа **int**и **логического значения**.
 
 ## <a name="syntax"></a>Синтаксис  
   
@@ -42,7 +41,7 @@ public SQLServerException(java.lang.Object obj,
 #### <a name="parameters"></a>Параметры  
  *obj*  
   
- Буфер ввода-ВЫВОДА, сформировавшего исключение.
+ Буфер ввода-вывода, создавший исключение.
 
  *errText*  
   
@@ -50,15 +49,15 @@ public SQLServerException(java.lang.Object obj,
   
  *sqlState*  
   
- Объект перечисления, содержащий сведения о состоянии SQL.
+ Объект Enum, содержащий состояние SQL.
  
  *errNum*  
   
- Int, содержат код ошибки для исключения.
+ Целое число, содержащее код ошибки для исключения.
  
- *bStack*  
+ *бстакк*  
   
- Логическое значение, указывающее следует ли формировать трассировку стека.
+ Логическое значение, указывающее, следует ли создавать трассировку стека.
   
 ## <a name="see-also"></a>См. также:  
  [Конструкторы SQLServerException](../../../connect/jdbc/reference/sqlserverexception-constructors.md)   

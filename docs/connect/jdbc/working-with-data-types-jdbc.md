@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: b39f44d0-3710-4bc6-880c-35bd8c10a734
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 76af99170edeaca8f600d12955a6de2b09897548
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 6af72a4e9157de72a46ecbb7443c0f58d3b400d7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66783271"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68003850"
 ---
 # <a name="working-with-data-types-jdbc"></a>Работа с типами данных (JDBC)
 
@@ -37,7 +36,7 @@ ms.locfileid: "66783271"
 |-----------|-----------------|  
 |[Пример базовых типов данных](../../connect/jdbc/basic-data-types-sample.md)|Описывает использование методов получения результирующих наборов для извлечения значений с базовыми типами данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], а также применение методов обновления результирующего набора для изменения этих значений.|  
 |[Пример типа данных SQLXML](../../connect/jdbc/sqlxml-data-type-sample.md)|Описывает сохранение данных XML в реляционной базе данных, их извлечение из базы и выполнение их анализа с помощью типа данных Java **SQLXML**.|  
-|[Пример пространственных типов данных](../../connect/jdbc/spatial-data-types-sample.md)|Описывает способ хранения и извлечения данных с помощью пространственных типов данных «Геометрия» и «География» [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базы данных с помощью **Geometry** и **Geography** Java типов, определяемых драйвером Microsoft JDBC.|
+|[Пример пространственных типов данных](../../connect/jdbc/spatial-data-types-sample.md)|Описывает, как хранить и загружать данные с пространственными типами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] данных **geometry** и **geography** в базе с геометрией и  географией языка Java, определяемыми драйвером Microsoft JDBC.|
 
 ## <a name="see-also"></a>См. также:
 
