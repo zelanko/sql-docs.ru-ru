@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: adfbbc61-58d1-4330-9ad6-b14ab1142e2b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 419f8c12e3716d295440dae887591b547af54f32
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 4ab4102c477a8904dd99eb2717f2c5e31c38b9bd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53208252"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67903041"
 ---
 # <a name="create-a-push-subscription"></a>Создание принудительной подписки
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -91,19 +90,19 @@ ms.locfileid: "53208252"
   
     -   Если значение **allow_push** равно **1**, то принудительная подписка поддерживается.  
   
-    -   Если значение **allow_push** равно **0**, то необходимо выполнить процедуру [sp_changepublication](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md), указав **allow_push** в **@property** и значение **true** в **@value**.  
+    -   Если значение **allow_push** равно **0**, то необходимо выполнить процедуру [sp_changepublication](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md), указав **allow_push** в **@property** и значение **true** в **@value** .  
   
-2.  На издателе в базе данных публикации выполните хранимую процедуру [sp_addsubscription](../system-stored-procedures/sp-addsubscription-transact-sql.md). Укажите **@publication**, **@subscriber** и значение **@destination_db**. Укажите значение **push** в **@subscription_type**. Сведения об обновлении подписок см. в разделе [Создание обновляемых подписок для публикаций транзакций](publish/create-an-updatable-subscription-to-a-transactional-publication.md).  
+2.  На издателе в базе данных публикации выполните хранимую процедуру [sp_addsubscription](../system-stored-procedures/sp-addsubscription-transact-sql.md). Укажите **@publication** , **@subscriber** и значение **@destination_db** . Укажите значение **push** в **@subscription_type** . Сведения об обновлении подписок см. в разделе [Создание обновляемых подписок для публикаций транзакций](publish/create-an-updatable-subscription-to-a-transactional-publication.md).  
   
 3.  На издателе в базе данных публикации выполните хранимую процедуру [sp_addpushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md). Укажите следующее.  
   
-    -   Учетные данные **@subscriber**, **@subscriber_db**и **@publication** .  
+    -   Учетные данные **@subscriber** , **@subscriber_db** и **@publication** .  
   
-    -   параметры [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, с которыми будет запускаться агент распространителя на распространителе в параметре **@job_login** и **@job_password**.  
+    -   параметры [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, с которыми будет запускаться агент распространителя на распространителе в параметре **@job_login** и **@job_password** .  
   
-        > **Примечание.** Для соединений, производимых с использованием встроенной проверки подлинности Windows, в параметрах **@job_login** и **@job_password**. Агент распространителя всегда создает локальные соединения с распространителем через встроенную систему проверки подлинности Windows. По умолчанию агент подключается к подписчику через встроенную систему проверки подлинности Windows;  
+        > **Примечание.** Для соединений, производимых с использованием встроенной проверки подлинности Windows, в параметрах **@job_login** и **@job_password** . Агент распространителя всегда создает локальные соединения с распространителем через встроенную систему проверки подлинности Windows. По умолчанию агент подключается к подписчику через встроенную систему проверки подлинности Windows;  
   
-    -   (необязательно) Значение **0** в **@subscriber_security_mode** и сведения об имени входа [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в параметрах **@subscriber_login** и значение **@subscriber_password**. Эти параметры указываются в том случае, если при соединении с подписчиком необходимо использовать проверку подлинности SQL Server.  
+    -   (необязательно) Значение **0** в **@subscriber_security_mode** и сведения об имени входа [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в параметрах **@subscriber_login** и значение **@subscriber_password** . Эти параметры указываются в том случае, если при соединении с подписчиком необходимо использовать проверку подлинности SQL Server.  
   
     -   Расписание задания агента распространителя для этой подписки. Дополнительные сведения см. в статье [Specify Synchronization Schedules](../../relational-databases/replication/specify-synchronization-schedules.md).  
   
@@ -115,29 +114,29 @@ ms.locfileid: "53208252"
   
     -   Если значение **allow_push** равно **1**, то публикацией принудительные подписки поддерживаются.  
   
-    -   Если значение **allow_push** не равно **1**, то необходимо выполнить процедуру [sp_changemergepublication](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md), указав **allow_push** в **@property** и значение **true** в **@value**.  
+    -   Если значение **allow_push** не равно **1**, то необходимо выполнить процедуру [sp_changemergepublication](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md), указав **allow_push** в **@property** и значение **true** в **@value** .  
   
 2.  На издателе в базе данных публикации выполните хранимую процедуру [sp_addmergesubscription](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md), указав следующие параметры.  
   
-    -   **@publication**. Имя публикации.  
+    -   **@publication** . Имя публикации.  
   
-    -   **@subscriber_type**. Для клиентской подписки укажите **local** , а для серверной — **global**.  
+    -   **@subscriber_type** . Для клиентской подписки укажите **local** , а для серверной — **global**.  
   
-    -   **@subscription_priority**. Для серверной подписки укажите приоритет подписки (в диапазоне от**0.00** до **99.99**).  
+    -   **@subscription_priority** . Для серверной подписки укажите приоритет подписки (в диапазоне от**0.00** до **99.99**).  
   
          Дополнительные сведения см. в статье [Advanced Merge Replication Conflict Detection and Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
   
 3.  На издателе в базе данных публикации выполните хранимую процедуру [sp_addmergepushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md). Укажите следующее.  
   
-    -   Значения параметров **@subscriber**, **@subscriber_db**и **@publication** .  
+    -   Значения параметров **@subscriber** , **@subscriber_db** и **@publication** .  
   
-    -   Учетные данные Windows, с которыми будет запускаться агент слияния на распространителе в параметрах **@job_login** и значение **@job_password**.  
+    -   Учетные данные Windows, с которыми будет запускаться агент слияния на распространителе в параметрах **@job_login** и значение **@job_password** .  
   
-        > **Примечание.**  Для соединений, производимых с использованием встроенной проверки подлинности Windows, в параметрах **@job_login** и **@job_password**. Агент слияния всегда создает локальные соединения с распространителем через встроенную систему проверки подлинности Windows. По умолчанию агент подключается к подписчику через встроенную систему проверки подлинности Windows;  
+        > **Примечание.**  Для соединений, производимых с использованием встроенной проверки подлинности Windows, в параметрах **@job_login** и **@job_password** . Агент слияния всегда создает локальные соединения с распространителем через встроенную систему проверки подлинности Windows. По умолчанию агент подключается к подписчику через встроенную систему проверки подлинности Windows;  
   
-    -   (необязательно) Значение **0** в **@subscriber_security_mode** и сведения об имени входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в параметрах **@subscriber_login** и значение **@subscriber_password**. Эти параметры указываются в том случае, если при соединении с подписчиком необходимо использовать проверку подлинности SQL Server.  
+    -   (необязательно) Значение **0** в **@subscriber_security_mode** и сведения об имени входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в параметрах **@subscriber_login** и значение **@subscriber_password** . Эти параметры указываются в том случае, если при соединении с подписчиком необходимо использовать проверку подлинности SQL Server.  
   
-    -   (необязательно) Значение **0** в **@publisher_security_mode** и сведения об имени входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в параметрах **@publisher_login** и значение **@publisher_password**. Эти параметры указываются в том случае, если при соединении с издателем необходимо использовать проверку подлинности SQL Server.  
+    -   (необязательно) Значение **0** в **@publisher_security_mode** и сведения об имени входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в параметрах **@publisher_login** и значение **@publisher_password** . Эти параметры указываются в том случае, если при соединении с издателем необходимо использовать проверку подлинности SQL Server.  
   
     -   Расписание агента слияния для данной подписки. Дополнительные сведения см. в статье [Specify Synchronization Schedules](../../relational-databases/replication/specify-synchronization-schedules.md).  
   
@@ -165,7 +164,7 @@ ms.locfileid: "53208252"
   
 3.  Вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> . Если этот метод возвращает значение **false**, то на шаге 2 свойствам были присвоены неверные значения, или публикация на сервере не существует.  
   
-4.  Выполните операцию «поразрядное логическое И» (**&** в Visual C# и **And** в Visual Basic) над свойством <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> и флагом <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush>. Если результат равен <xref:Microsoft.SqlServer.Replication.PublicationAttributes.None>, присвойте свойству <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> результат операции «поразрядное логическое ИЛИ» (**|** в Visual C# и **Or** в Visual Basic) над свойством <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> и значение <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush>. Затем вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> , чтобы включить принудительные подписки.  
+4.  Выполните операцию «поразрядное логическое И» ( **&** в Visual C# и **And** в Visual Basic) над свойством <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> и флагом <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush>. Если результат равен <xref:Microsoft.SqlServer.Replication.PublicationAttributes.None>, присвойте свойству <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> результат операции «поразрядное логическое ИЛИ» ( **|** в Visual C# и **Or** в Visual Basic) над свойством <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> и значение <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush>. Затем вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> , чтобы включить принудительные подписки.  
   
 5.  Если база данных подписки не существует, создайте ее с помощью класса <xref:Microsoft.SqlServer.Management.Smo.Database> . Дополнительные сведения см. в статье [Creating, Altering, and Removing Databases](../../relational-databases/server-management-objects-smo/tasks/creating-altering-and-removing-databases.md) (Создание, изменение и удаление баз данных).  
   
@@ -203,7 +202,7 @@ ms.locfileid: "53208252"
   
 3.  Вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> . Если этот метод возвращает значение **false**, то на шаге 2 свойствам были присвоены неверные значения, или публикация на сервере не существует.  
   
-4.  Выполните операцию «поразрядное логическое И» (**&** в Visual C# и **And** в Visual Basic) над свойством <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> и флагом <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush>. Если результат равен <xref:Microsoft.SqlServer.Replication.PublicationAttributes.None>, присвойте свойству <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> результат операции «поразрядное логическое ИЛИ» (**|** в Visual C# и **Or** в Visual Basic) над свойством <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> и значение <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush>. Затем вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> , чтобы включить принудительные подписки.  
+4.  Выполните операцию «поразрядное логическое И» ( **&** в Visual C# и **And** в Visual Basic) над свойством <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> и флагом <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush>. Если результат равен <xref:Microsoft.SqlServer.Replication.PublicationAttributes.None>, присвойте свойству <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> результат операции «поразрядное логическое ИЛИ» ( **|** в Visual C# и **Or** в Visual Basic) над свойством <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> и значение <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush>. Затем вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> , чтобы включить принудительные подписки.  
   
 5.  Если база данных подписки не существует, создайте ее с помощью класса <xref:Microsoft.SqlServer.Management.Smo.Database> . Дополнительные сведения см. в статье [Creating, Altering, and Removing Databases](../../relational-databases/server-management-objects-smo/tasks/creating-altering-and-removing-databases.md) (Создание, изменение и удаление баз данных).  
   
