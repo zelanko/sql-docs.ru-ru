@@ -1,5 +1,5 @@
-- name: Изучение служб машины SQL Server
-  href: ../advanced-analytics/sql-server-machine-learning-services.md
+- name: Документация по Службе машинного обучения в SQL Server
+  href: ../advanced-analytics/index.yml
 - name: Вас приветствует SQL Server >>
   href: ../sql-server/sql-server-technical-documentation.md?toc=../toc.json
 - name: Обзор
