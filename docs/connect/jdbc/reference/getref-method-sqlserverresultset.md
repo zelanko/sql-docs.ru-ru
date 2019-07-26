@@ -1,5 +1,5 @@
 ---
-title: Метод getRef (SQLServerResultSet) | Документация Майкрософт
+title: Метод getRef (SQLServerResultSet) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 7c176547-daae-405e-8fbe-3cdab87ab5e7
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 9c45d2b560feaed56e15444e5583d2fa19215ce8
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: df48c23fb4bab06bba93d96931ebd7d520d3054f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66769755"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67980513"
 ---
 # <a name="getref-method-sqlserverresultset"></a>Метод getRef (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

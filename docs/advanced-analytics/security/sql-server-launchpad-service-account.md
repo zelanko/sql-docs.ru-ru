@@ -7,15 +7,15 @@ ms.date: 10/17/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 9146020fb35d729575c8441e71b711e287399a75
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 5d01004fb54c0410acc372c5c66930f33bbd8856
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345527"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470000"
 ---
 # <a name="sql-server-launchpad-service-configuration"></a>Конфигурация службы панель запуска SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] — Это служба, которая управляет внешними скриптами и выполняет их, аналогично тому, как служба полнотекстового индексирования и запросов запускает отдельный узел для обработки полнотекстовых запросов.
 

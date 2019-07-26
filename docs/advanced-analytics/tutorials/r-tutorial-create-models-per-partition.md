@@ -9,15 +9,15 @@ ms.topic: tutorial
 ms.author: davidph
 author: dphansen
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8ceba61f4bdc22b4049453ed27245f09efe080b1
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 024ddc72ae2b0a2c443546148a66d0fa85060cb6
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345956"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68469201"
 ---
 # <a name="tutorial-create-partition-based-models-in-r-on-sql-server"></a>Учебник. Создание моделей на основе секций в R на SQL Server
-[!INCLUDE[appliesto-ssvnex-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 В SQL Server 2019 моделирование на основе секций — это возможность создания и обучения моделей по секционированным данным. Для данных стратифицированной, которые естественным образом направлены в определенную схему классификации, такие как географические регионы, Дата и время, возраст или пол, можно выполнить сценарий для всего набора данных, с возможностью моделировать, обучать и оценивать секции, которые остаются без изменений. над всеми этими операциями. 
 
@@ -33,7 +33,7 @@ ms.locfileid: "68345956"
 > * Создание и обучение моделей в каждой секции и сохранение объектов в базе данных.
 > * Прогноз вероятности результатов TIP для каждой модели секционирования с использованием образцов данных, зарезервированных для этой цели.
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>предварительные требования
  
 Для работы с этим руководством необходимо следующее:
 

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 2edf9b51-63e1-4c28-afdf-2d4af593d5f7
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 7dbb398a1b280b413739b4464d859e85cc7d6811
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: cee317d725b730f50eeef0502f63d7fca6d2c4b1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66787262"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67997116"
 ---
 # <a name="updateblob-method-int-javaioinputstream-long"></a>Метод updateBlob (int, java.io.InputStream, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +38,7 @@ public void updateBlob(int columnIndex,
   
  *inputStream*  
   
- Объект, InputStream.  
+ Объект InputStream.  
   
  *length*  
   
@@ -49,7 +48,7 @@ public void updateBlob(int columnIndex,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод updateBlob указывается с помощью метода updateBlob в интерфейсе java.sql.ResultSet.  
+ Этот метод updateBlob определен с помощью метода updateBlob в интерфейсе java.sql.ResultSet.  
   
 ## <a name="see-also"></a>См. также:  
  [Метод updateBlob (SQLServerResultSet)](../../../connect/jdbc/reference/updateblob-method-sqlserverresultset.md)   

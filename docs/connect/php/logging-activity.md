@@ -1,5 +1,5 @@
 ---
-title: Ведение журнала | Документация Майкрософт
+title: Действие ведения журнала | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: a777b3d9-2262-4e82-bc82-b62ad60d0e55
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 8612874b351af1cfd9370b8ef29dae4a0c4235e2
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 29c7c1e3b536e237e2c61a8e3303313ec53fe679
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66800257"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67993326"
 ---
 # <a name="logging-activity"></a>Ведение журнала
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -41,9 +40,9 @@ pdo_sqlsrv.log_severity = <number>
 |---------|---------------|  
 |0|Ведение журнала отключено (значение по умолчанию, если не указано иное).|  
 |-1|Указывает на регистрацию ошибок, предупреждений и уведомлений.|  
-|1|В журнал заносятся ошибки.|  
-|2|В журнал заносятся предупреждения.|  
-|4|Указывает, что уведомления будут регистрироваться.|  
+|1|Указывает, что ошибки записываются в журнал.|  
+|2|Указывает, что предупреждения записываются в журнал.|  
+|4|Указывает, что уведомления записываются в журнал.|  
   
 Сведения о ведении журнала записываются в файл phperrors.log.  
   
@@ -96,9 +95,9 @@ PHP считывает файл конфигурации при инициали
 |Значение (целочисленный эквивалент в скобках)|Описание|  
 |-----------------------------------------------|---------------|  
 |SQLSRV_LOG_SEVERITY_ALL (-1)|Указывает на регистрацию ошибок, предупреждений и уведомлений.|  
-|SQLSRV_LOG_SEVERITY_ERROR (1)|В журнал заносятся ошибки. Это значение по умолчанию.|  
-|SQLSRV_LOG_SEVERITY_WARNING (2)|В журнал заносятся предупреждения.|  
-|SQLSRV_LOG_SEVERITY_NOTICE (4)|Указывает, что уведомления будут регистрироваться.|  
+|SQLSRV_LOG_SEVERITY_ERROR (1)|Указывает, что ошибки записываются в журнал. Это значение по умолчанию.|  
+|SQLSRV_LOG_SEVERITY_WARNING (2)|Указывает, что предупреждения записываются в журнал.|  
+|SQLSRV_LOG_SEVERITY_NOTICE (4)|Указывает, что уведомления записываются в журнал.|  
   
 Для параметра **LogSeverity** можно задать сразу несколько значений, воспользовавшись оператором логического ИЛИ (|). Например, следующая строка кода задает регистрацию ошибок и предупреждений:  
   
@@ -116,7 +115,7 @@ PHP считывает файл конфигурации при инициали
 `sqlsrv.LogSeverity = 3`  
   
 ## <a name="see-also"></a>См. также:  
-[Руководство по программированию для драйвера Microsoft для PHP для SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
+[Руководство по программированию драйверов Microsoft для PHP для SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
 
 [Константы (драйверы Майкрософт для PHP для SQL Server)](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)
 

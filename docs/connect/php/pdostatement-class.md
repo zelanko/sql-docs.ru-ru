@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: ef2db0b3-b10e-4898-8bfc-d5e4baca18ef
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f2db1c408693b02812db0cd431d139014c2244b1
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 160d28aae240179173949ccd67639746225b7c15
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66780780"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936089"
 ---
 # <a name="pdostatement-class"></a>Класс PDOStatement
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -79,7 +78,7 @@ PDOStatement {}
 
 [Константы (драйверы Майкрософт для PHP для SQL Server)](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)
 
-[Руководство по программированию для драйвера Microsoft для PHP для SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
+[Руководство по программированию драйверов Microsoft для PHP для SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
 
 [Getting Started with the Microsoft Drivers for PHP for SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md) (Начало работы с драйверами Майкрософт для PHP для SQL Server)
 

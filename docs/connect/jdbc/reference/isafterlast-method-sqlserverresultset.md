@@ -1,5 +1,5 @@
 ---
-title: Метод isAfterLast (SQLServerResultSet) | Документация Майкрософт
+title: Метод isAfterLast (SQLServerResultSet) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 19f9d124-3184-4985-8b97-503a8ab8b4f9
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 505b96129c6d37bbadc464cf45a9ebec8d48f1f2
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 233599694c4fb4f7764bbb48d5c77e0fcd273340
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66801219"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67977845"
 ---
 # <a name="isafterlast-method-sqlserverresultset"></a>Метод isAfterLast (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public boolean isAfterLast()
 ```  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- **значение true,** Если курсор находится после последней строки. **false** Если курсор находится в любой другой позиции, или если результирующий набор не содержит строк.  
+ **значение true** , если курсор находится после последней строки. **значение false** , если курсор находится в любой другой позиции или если результирующий набор не содержит строк.  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод isAfterLast указывается с помощью метода isAfterLast в интерфейсе java.sql.ResultSet.  
+ Этот метод isAfterLast определен с помощью метода isAfterLast в интерфейсе java.sql.ResultSet.  
   
  Если этот метод используется с динамическими курсорами, включая однопроходные курсоры только для чтения, а свойство соединения selectMethod имеет значение cursor, то вызывается исключение.  
   

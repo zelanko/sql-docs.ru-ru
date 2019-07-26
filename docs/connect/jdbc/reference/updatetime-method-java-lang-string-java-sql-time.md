@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: fbbcef68-b903-4cfd-911c-a7e239d17c74
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 7f0c83ba68ee231db0f5122dbe16842f50b490b5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2d0c97f49c4d865b5f0aa99b602e5524a0a97b1e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66802700"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67998187"
 ---
 # <a name="updatetime-method-javalangstring-javasqltime"></a>Метод updateTime (java.lang.String, java.sql.Time)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -52,7 +51,7 @@ public void updateTime(java.lang.String columnName,
  Этот метод updateTime определен с помощью метода updateTime в интерфейсе java.sql.ResultSet.  
   
 ## <a name="see-also"></a>См. также:  
- [Метод updateTime &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatetime-method-sqlserverresultset.md)   
+ [Метод updateTime (SQLServerResultSet)](../../../connect/jdbc/reference/updatetime-method-sqlserverresultset.md)   
  [Элементы SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [Класс SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

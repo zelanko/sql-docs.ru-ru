@@ -6,15 +6,15 @@ ms.date: 05/31/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 83029a9727a26c647d78c49501fde08f72d7694d
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 268b3df72d468170fbefae2557892c49fd15515c
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68343401"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470296"
 ---
 # <a name="r-scripting-errors-in-sql-server"></a>Ошибки скрипта R в SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 В этой статье описывается несколько сценариев жеррорс при выполнении кода R в SQL Server. Список не является исчерпывающим. Существует множество пакетов, и ошибки могут различаться в разных версиях одного пакета. Рекомендуется опубликовать ошибки сценария на [форуме Machine Learning Server](https://social.msdn.microsoft.com/Forums/en-US/home?category=MicrosoftR), который поддерживает компоненты машинного обучения, используемые в службах R (в базе данных), Microsoft R Client и Microsoft R Server.
 

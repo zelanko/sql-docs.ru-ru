@@ -7,15 +7,15 @@ ms.date: 01/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: e81731683fb71b074ed754ab6ab4eaab40d08c20
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: aa3a65020f2900bc4d9e0b5c5fd5a200f3334435
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345405"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68469340"
 ---
 # <a name="quickstart-predict-from-model-using-r-in-sql-server"></a>Краткое руководство. Прогнозирование модели с помощью R в SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 В этом кратком руководстве для оценки прогнозов по актуальным данным используется модель, созданная в предыдущем кратком руководстве. Чтобы выполнить _оценку_ с помощью новых данных, получите одну из обученных моделей из таблицы, а затем вызовите новый набор данных, на основе которого должны основываться прогнозы. Оценка — это термин, который иногда используется в обработке данных, что означает создание прогнозов, вероятностей или других значений на основе новых данных, поступающих в обученную модель.
 

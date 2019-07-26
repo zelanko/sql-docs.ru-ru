@@ -1,5 +1,5 @@
 ---
-title: Метод getBoolean (java.lang.String) | Документация Майкрософт
+title: Метод getBoolean (java.lang.String) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: c9ee851f-1827-42f5-a50a-bdef3e323a5e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 55174bc7e7a5b91910a9f76239cd0ed85ee78548
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: d9358eeed2c5947285d7b0290942f67a59f52f47
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66771603"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67953527"
 ---
 # <a name="getboolean-method-javalangstring"></a>Метод getBoolean (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,7 +35,7 @@ public boolean getBoolean(java.lang.String sCol)
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *sCol*  
+ *скол*  
   
  Значение типа **String**, содержащее имя параметра.  
   

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 40f75549-5d5a-4de3-a271-4b8f0dd7b124
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 1512bb2d20c62e30a1b35abde333abf14e595bdc
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: c5a75910ee54db4e764d63755e3d7c8c174c16a1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66787197"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67997095"
 ---
 # <a name="updateblob-method-javalangstring-javaioinputstream-long"></a>Метод updateBlob (java.lang.String, java.io.InputStream, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -33,13 +32,13 @@ public void updateBlob(java.lang.String columnLabel,
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *ColumnLabel состоит из*  
+ *колумнлабел*  
   
  Значение типа **String**, содержащее метку столбца.  
   
  *inputStream*  
   
- Объект, InputStream.  
+ Объект InputStream.  
   
  *length*  
   
@@ -49,7 +48,7 @@ public void updateBlob(java.lang.String columnLabel,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод updateBlob указывается с помощью метода updateBlob в интерфейсе java.sql.ResultSet.  
+ Этот метод updateBlob определен с помощью метода updateBlob в интерфейсе java.sql.ResultSet.  
   
 ## <a name="see-also"></a>См. также:  
  [Метод updateBlob (SQLServerResultSet)](../../../connect/jdbc/reference/updateblob-method-sqlserverresultset.md)   

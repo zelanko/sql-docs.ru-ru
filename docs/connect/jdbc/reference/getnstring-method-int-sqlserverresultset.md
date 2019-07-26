@@ -1,5 +1,5 @@
 ---
-title: Метод getNString (int) (SQLServerResultSet) | Документация Майкрософт
+title: Метод getNString (int) (SQLServerResultSet) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: c8cc4636-01e9-4dc8-a40c-728337ca08f5
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 0b52d434f3add9cfe2590519e90267bbfb93e160
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 336192ffefd750ba3e817ba1b961fd3726d9a6e6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66784377"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67981411"
 ---
 # <a name="getnstring-method-int-sqlserverresultset"></a>Метод getNString (int) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,7 +35,7 @@ public java.lang.String getNString(int columnIndex)
  Значение типа **int**, указывающее индекс столбца.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Объект типа String.  
+ Строковый объект.  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
@@ -44,7 +43,7 @@ public java.lang.String getNString(int columnIndex)
 ## <a name="remarks"></a>Remarks  
  Этот метод getNString определен с помощью метода getNString в интерфейсе java.sql.ResultSet.  
   
- Этот метод можно использовать для извлечения значения **nvarchar**, **nchar**, **nvarchar(max)** , **ntext**, или **xml** столбца в текущей строке этого [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) объекта. При попытке использования этого метода для получения значений других типов данных возникнет исключение.  
+ Этот метод можно использовать для получения значения столбца **nvarchar**, **nchar**, **nvarchar (max)** , **ntext**или **XML** в текущей строке этого объекта [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) . При попытке использования этого метода для получения значений других типов данных возникнет исключение.  
   
 ## <a name="see-also"></a>См. также:  
  [Метод getNString (SQLServerResultSet)](../../../connect/jdbc/reference/getnstring-method-sqlserverresultset.md)   

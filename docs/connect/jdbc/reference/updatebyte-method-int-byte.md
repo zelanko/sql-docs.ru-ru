@@ -1,5 +1,5 @@
 ---
-title: Метод updateByte (int, byte) | Документация Майкрософт
+title: Метод updateByte (int, Byte) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: e635d789-9218-488e-a213-2e3e09635acc
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: cdfa8cab28d526cc14400f982cf62289d94d888e
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: da7c1c07537ebd9cb258bbd2eba9c2e8718bfe40
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66786991"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67996942"
 ---
 # <a name="updatebyte-method-int-byte"></a>Метод updateByte (int, byte)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -49,7 +48,7 @@ public void updateByte(int index,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод updateByte указывается с помощью метода updateByte в интерфейсе java.sql.ResultSet.  
+ Этот метод updateByte определен с помощью метода updateByte в интерфейсе java.sql.ResultSet.  
   
 ## <a name="see-also"></a>См. также:  
  [Метод updateByte (SQLServerResultSet)](../../../connect/jdbc/reference/updatebyte-method-sqlserverresultset.md)   

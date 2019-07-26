@@ -1,5 +1,5 @@
 ---
-title: Метод getTime (java.lang.String) | Документация Майкрософт
+title: Метод getTime (java.lang.String) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: ca0a3b29-30d1-4d20-bc8d-d3d9ed19ff50
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6fe0152d23bcf71e371ad778a961dedb9c6ee739
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: fba716696627f29127d64c07843e6d9dcf2b3ce0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66778806"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67978973"
 ---
 # <a name="gettime-method-javalangstring"></a>Метод getTime (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,7 +35,7 @@ public java.sql.Time getTime(java.lang.String sCol)
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *sCol*  
+ *скол*  
   
  Значение типа **String**, содержащее имя параметра.  
   
@@ -49,7 +48,7 @@ public java.sql.Time getTime(java.lang.String sCol)
 ## <a name="remarks"></a>Remarks  
  Этот метод getTime указывается методом getTime в интерфейсе java.sql.CallableStatement.  
   
- См. в разделе диаграмму с названием «Преобразования метода считывания» в [Общие сведения о преобразованиях типов данных](../../../connect/jdbc/understanding-data-type-conversions.md) также просмотреть, какие [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] типы данных можно получить с помощью этого метода.  
+ Дополнительные [сведения о](../../../connect/jdbc/understanding-data-type-conversions.md) том, какие [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] типы данных можно получить с помощью этого метода, см. в диаграмме "преобразования методов считывания".  
   
 ## <a name="see-also"></a>См. также:  
  [Метод getTime (SQLServerCallableStatement)](../../../connect/jdbc/reference/gettime-method-sqlservercallablestatement.md)   

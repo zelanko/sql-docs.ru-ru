@@ -7,15 +7,15 @@ ms.date: 10/17/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 58a10c36eff06cd4e36f3e326407564b2657fec1
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 754e243f45965801b9295d2b40a920d52bd2c95c
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345594"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68469857"
 ---
 # <a name="firewall-configuration-for-sql-server-machine-learning-services"></a>Настройка брандмауэра для SQL Server Службы машинного обучения
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 В этой статье приведены рекомендации по настройке брандмауэра, которые следует учитывать при использовании служб машинного обучения.
 

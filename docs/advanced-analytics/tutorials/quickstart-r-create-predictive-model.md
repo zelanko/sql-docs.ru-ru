@@ -7,15 +7,15 @@ ms.date: 01/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 39310d935ddefe463b81af495f63304822035818
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 7de37b16c04cf2f972e36c11ba5dfb53721e6094
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345474"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68469433"
 ---
 # <a name="quickstart-create-a-predictive-model-using-r-in-sql-server"></a>Краткое руководство. Создание прогнозной модели с помощью R в SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 В этом кратком руководстве вы узнаете, как обучить модель с помощью R, а затем сохранить модель в таблице в SQL Server. Модель — это простая обобщенная линейная модель (GLM), которая прогнозирует вероятность того, что транспортный автомобиль передается вручную. Вы будете использовать набор `mtcars` данных, входящий в состав R.
 

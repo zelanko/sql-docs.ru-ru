@@ -7,15 +7,15 @@ ms.date: 10/25/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 3fe398a6210936553fc40b10cc9a42f395a98785
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 11a155a9c679a18fefc7b3c91434a0ca241c23f7
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345805"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68468505"
 ---
 # <a name="use-python-with-revoscalepy-to-create-a-model-that-runs-remotely-on-sql-server"></a>Использование Python с revoscalepy для создания модели, которая выполняется удаленно на SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Библиотека [revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) Python от корпорации Майкрософт предоставляет алгоритмы обработки и анализа данных для изучения, визуализации, преобразования и аналитики. Эта библиотека имеет стратегическую важность в сценариях интеграции Python в SQL Server. На многоядерном сервере функции **revoscalepy** могут выполняться параллельно. В распределенной архитектуре с центральным сервером и клиентскими рабочими станциями (на разных физических компьютерах, у которых есть одна и та же библиотека **revoscalepy** ), можно написать код Python, который начинается локально, но затем перемещает выполнение на удаленный экземпляр SQL Server где находятся данные.
 

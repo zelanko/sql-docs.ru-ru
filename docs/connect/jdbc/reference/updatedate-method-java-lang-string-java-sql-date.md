@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 4fbe9123-7365-4a8f-bbd5-dc2b16f1b231
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b1ba26a22d3ee06041b6a6db051ad6363fa393b7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2eee4ccb8230ee32398cb75445297950ff89aa94
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66804245"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67999150"
 ---
 # <a name="updatedate-method-javalangstring-javasqldate"></a>Метод updateDate (java.lang.String, java.sql.Date)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -52,7 +51,7 @@ public void updateDate(java.lang.String columnName,
  Этот метод updateDate определен с помощью метода updateDate в интерфейсе java.sql.ResultSet.  
   
 ## <a name="see-also"></a>См. также:  
- [Метод updateDate &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatedate-method-sqlserverresultset.md)   
+ [Метод updateDate (SQLServerResultSet)](../../../connect/jdbc/reference/updatedate-method-sqlserverresultset.md)   
  [Элементы SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [Класс SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

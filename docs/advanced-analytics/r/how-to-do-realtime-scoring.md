@@ -7,15 +7,15 @@ ms.date: 08/30/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 7aee673eb548531798f98a5a49266a2cd7211b63
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 39edb40da1ebbddfff805aca321b99ea766f085c
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345555"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470117"
 ---
 # <a name="how-to-generate-forecasts-and-predictions-using-machine-learning-models-in-sql-server"></a>Как создавать прогнозы и прогнозы с помощью моделей машинного обучения в SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Использование существующей модели для прогнозирования или прогнозирования результатов новых входных данных — это основная задача в машинном обучении. В этой статье перечислены подходы к формированию прогнозов в SQL Server. Между подходами используются внутренние методологии обработки для высокоскоростных прогнозов, скорость которых основана на инкрементном сокращении зависимостей времени выполнения. Меньшее число зависимостей означает более быстрые прогнозы.
 

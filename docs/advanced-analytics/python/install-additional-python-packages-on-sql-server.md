@@ -7,15 +7,15 @@ ms.date: 06/16/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 0e305f778ee132c06e9a2b08c8cec64f0535846a
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: fc8c7148369ec1a501106e573e195a8f0b7f060a
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345517"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470257"
 ---
 # <a name="install-new-python-packages-on-sql-server"></a>Установить новые пакеты Python на SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 В этой статье описывается, как установить новые пакеты Python на экземпляре SQL Server 2017 Службы машинного обучения. Как правило, процесс установки новых пакетов аналогичен процессу в стандартной среде Python. Однако некоторые дополнительные действия необходимы, если сервер не подключен к Интернету.
 

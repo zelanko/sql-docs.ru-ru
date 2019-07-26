@@ -1,5 +1,5 @@
 ---
-title: Метод getRow (SQLServerResultSet) | Документация Майкрософт
+title: Метод getRow (SQLServerResultSet) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: a266e3bc-05c2-44e2-9346-125ae6780216
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 034378c7e5f8624fa945bcf696ee521606963063
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4c9d83bbdb3f724c7d28d3881e7f27c1c0f70584
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66762583"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67980283"
 ---
 # <a name="getrow-method-sqlserverresultset"></a>Метод getRow (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

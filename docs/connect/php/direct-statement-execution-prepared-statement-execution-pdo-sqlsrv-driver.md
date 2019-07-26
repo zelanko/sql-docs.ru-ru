@@ -1,5 +1,5 @@
 ---
-title: Прямой - подготовленной драйвер PDO_SQLSRV для выполнения инструкции инструкции | Документация Майкрософт
+title: Direct — подготовленная инструкция для выполнения инструкции PDO_SQLSRV Driver | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -10,34 +10,33 @@ ms.topic: conceptual
 ms.assetid: 05544ca6-1e07-486c-bf03-e8c2c25b3024
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 96a03a678152c523cdb16b77834863ff920586c8
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: fa9e544fb7b79009d86a5742946a722d5adc18f2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66801451"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67993617"
 ---
 # <a name="direct-statement-execution-and-prepared-statement-execution-in-the-pdosqlsrv-driver"></a>Выполнение прямых и подготовленных инструкций в драйвере PDO_SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-В этой статье описывается использование атрибута PDO::SQLSRV_ATTR_DIRECT_QUERY для указания прямого выполнения инструкции вместо используемого по умолчанию, которое заключается в выполнении подготовленной инструкции. С помощью подготовленной инструкции может привести к более высокую производительность, если инструкция выполняется более одного раза при помощи привязки параметра.  
+В этой статье описывается использование атрибута PDO::SQLSRV_ATTR_DIRECT_QUERY для указания прямого выполнения инструкции вместо используемого по умолчанию, которое заключается в выполнении подготовленной инструкции. Использование подготовленной инструкции может привести к лучшей производительности, если инструкция выполняется более одного раза с помощью привязки параметров.  
   
 ## <a name="remarks"></a>Remarks  
-Если вы хотите отправить [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкции непосредственно на сервер без Подготовка инструкции с помощью драйвера, можно задать с помощью атрибута PDO::SQLSRV_ATTR_DIRECT_QUERY [PDO::setAttribute](../../connect/php/pdo-setattribute.md) (или при передаче driver-параметр [PDO::__construct](../../connect/php/pdo-construct.md)) или при вызове [PDO::prepare](../../connect/php/pdo-prepare.md). По умолчанию, PDO::SQLSRV_ATTR_DIRECT_QUERY значение False (в выполнении подготовленной инструкции use).  
+Если требуется отправить [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкцию непосредственно на сервер без подготовки инструкции драйвером, можно задать атрибут PDO:: SQLSRV_ATTR_DIRECT_QUERY с [PDO:: setAttribute](../../connect/php/pdo-setattribute.md) (или в качестве параметра драйвера, переданного [PDO:: __construct ](../../connect/php/pdo-construct.md)) или при вызове [PDO::p готовка](../../connect/php/pdo-prepare.md). По умолчанию параметр PDO:: SQLSRV_ATTR_DIRECT_QUERY имеет значение false (используется выполнение подготовленной инструкции).  
   
-Если вы используете [PDO::query](../../connect/php/pdo-query.md), может потребоваться прямое выполнение. Перед вызовом [PDO::query](../../connect/php/pdo-query.md), вызовите [PDO::setAttribute](../../connect/php/pdo-setattribute.md) и присвоено значение True, PDO::SQLSRV_ATTR_DIRECT_QUERY.  Каждый вызов [PDO::query](../../connect/php/pdo-query.md) могут выполняться с другими параметрами для PDO::SQLSRV_ATTR_DIRECT_QUERY.  
+При использовании [PDO:: Query](../../connect/php/pdo-query.md)может потребоваться прямое выполнение. Перед вызовом [PDO:: Query](../../connect/php/pdo-query.md)вызовите [PDO:: SETATTRIBUTE](../../connect/php/pdo-setattribute.md) и задайте PDO:: SQLSRV_ATTR_DIRECT_QUERY в true.  Каждый вызов [PDO:: Query](../../connect/php/pdo-query.md) можно выполнить с другим параметром PDO:: SQLSRV_ATTR_DIRECT_QUERY.  
   
-Если вы используете [PDO::prepare](../../connect/php/pdo-prepare.md) и [PDOStatement::execute](../../connect/php/pdostatement-execute.md) для выполнения запроса несколько раз с помощью связанных параметров, на выполнение подготовленной инструкции оптимизирует выполнение повторяющихся запросов.  В этом случае вызов [PDO::prepare](../../connect/php/pdo-prepare.md) с PDO::SQLSRV_ATTR_DIRECT_QUERY, значение False в параметре массива параметров драйвера. При необходимости вы можете выполнить подготовленные инструкции с PDO::SQLSRV_ATTR_DIRECT_QUERY равным False.  
+При использовании [PDO::p готовка](../../connect/php/pdo-prepare.md) и [PDOStatement:: Execute](../../connect/php/pdostatement-execute.md) для многократного выполнения запроса с использованием привязанных параметров выполнение подготовленной инструкции оптимизирует выполнение повторяющегося запроса.  В этом случае вызовите [PDO::p готовка](../../connect/php/pdo-prepare.md) с PDO:: SQLSRV_ATTR_DIRECT_QUERY, указав значение false в параметре массива параметров драйвера. При необходимости можно выполнять подготовленные инструкции с параметром PDO:: SQLSRV_ATTR_DIRECT_QUERY, имеющим значение false.  
   
-После вызова метода [PDO::prepare](../../connect/php/pdo-prepare.md), PDO::SQLSRV_ATTR_DIRECT_QUERY значение нельзя изменить при выполнении подготовленного запроса.  
+После вызова [PDO::p готовка](../../connect/php/pdo-prepare.md)значение PDO:: SQLSRV_ATTR_DIRECT_QUERY не может измениться при выполнении подготовленного запроса.  
   
-Если запрос требует контекста, который был задан в предыдущем запросе, затем выполните запросы PDO::SQLSRV_ATTR_DIRECT_QUERY задается значение True. Например при использовании временных таблиц в запросы, PDO::SQLSRV_ATTR_DIRECT_QUERY должно быть присвоено значение True.  
+Если запросу требуется контекст, заданный в предыдущем запросе, выполните запросы с параметром PDO:: SQLSRV_ATTR_DIRECT_QUERY, имеющим значение true. Например, если в запросах используются временные таблицы, PDO:: SQLSRV_ATTR_DIRECT_QUERY должно иметь значение true.  
   
-В следующем примере показано, что если требуется контекст от предыдущей инструкции, необходимо задать PDO::SQLSRV_ATTR_DIRECT_QUERY значение True. В этом примере используется временные таблицы, которые доступны только на последующие инструкции в программе, если запросы выполняются непосредственно.  
+В следующем примере показано, что если требуется контекст из предыдущей инструкции, необходимо установить PDO:: SQLSRV_ATTR_DIRECT_QUERY в значение true. В этом образце используются временные таблицы, которые доступны только в последующих инструкциях в программе при выполнении запросов напрямую.  
   
 > [!NOTE]
-> Если запрос для вызова хранимой процедуры и временные таблицы, используемые в этой хранимой процедуре, воспользуйтесь [PDO::exec](../../connect/php/pdo-exec.md) вместо этого.
+> Если запрос вызывает хранимую процедуру, а в этой хранимой процедуре используются временные таблицы, используйте [PDO:: Exec](../../connect/php/pdo-exec.md) .
 
 ```  
 <?php  
@@ -70,5 +69,5 @@ ms.locfileid: "66801451"
 ```  
   
 ## <a name="see-also"></a>См. также:  
-[Руководство по программированию для драйвера Microsoft для PHP для SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
+[Руководство по программированию драйверов Microsoft для PHP для SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
   

@@ -1,5 +1,5 @@
 ---
-title: Вопросы безопасности для драйверов Майкрософт для PHP для SQL Server | Документация Майкрософт
+title: Рекомендации по безопасности для драйверов Майкрософт для PHP для SQL Server | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -12,18 +12,17 @@ helpviewer_keywords:
 ms.assetid: a8c1a570-9204-454f-b94c-ba34f54d487c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 50c0d6bf2b9c413e6085451383f2ae4a6791442a
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 1fecf1add70a7b3bd96484cbd3634db2cfda01cb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797063"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67992888"
 ---
 # <a name="security-considerations-for-the-microsoft-drivers-for-php-for-sql-server"></a>Вопросы безопасности для драйверов Майкрософт для PHP для SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-В этом разделе рассматриваются вопросы безопасности, связанные с разработкой, развертыванием и выполнением приложений, использующих [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. Более подробные сведения о безопасности SQL Server, см. в разделе [Обзор of SQL Server Security](https://docs.microsoft.com/dotnet/framework/data/adonet/sql/overview-of-sql-server-security).  
+В этом разделе рассматриваются вопросы безопасности, связанные с разработкой, развертыванием и выполнением приложений, использующих [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. Более подробные сведения о SQL Server безопасности см. в статье [Обзор безопасности SQL Server](https://docs.microsoft.com/dotnet/framework/data/adonet/sql/overview-of-sql-server-security).  
   
 ## <a name="connect-using-windows-authentication"></a>Подключение с помощью проверки подлинности Windows  
 Для подключения к SQL Server следует по возможности использовать проверку подлинности Windows по следующим причинам.  
@@ -54,5 +53,5 @@ ms.locfileid: "66797063"
 Для развернутых приложений убедитесь, что журналы записываются в безопасное расположение либо что ведение журналов отключено. Это помогает предотвратить доступ конечных пользователей к данным, записанным в файл журнала. Дополнительные сведения см. в статье [Logging Activity](../../connect/php/logging-activity.md).  
   
 ## <a name="see-also"></a>См. также:  
-[Руководство по программированию для драйвера Microsoft для PHP для SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
+[Руководство по программированию драйверов Microsoft для PHP для SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
   

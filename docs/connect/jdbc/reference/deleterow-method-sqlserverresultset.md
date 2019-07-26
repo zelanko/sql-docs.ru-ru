@@ -1,5 +1,5 @@
 ---
-title: Метод deleteRow (SQLServerResultSet) | Документация Майкрософт
+title: Метод deleteRow (SQLServerResultSet) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/20/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: aa04a644-c7c2-4738-8b6e-7fea566d2c16
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 987be5ee9fd49385acf02e52108e1e657fbc08a4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bc02d31a1d13a3d32f581da6fb3367473cb88bbb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66786523"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67955136"
 ---
 # <a name="deleterow-method-sqlserverresultset"></a>Метод deleteRow (SQLServerResultSet)
 
@@ -39,7 +38,7 @@ public void deleteRow()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод deleteRow указывается с помощью метода deleteRow в интерфейсе java.sql.ResultSet.  
+ Этот метод deleteRow задается методом deleteRow в интерфейсе Java. SQL. Result.  
   
  Этот метод не может быть вызван при нахождении курсора в строке вставки.  
   

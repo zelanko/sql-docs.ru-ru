@@ -7,15 +7,15 @@ ms.date: 10/19/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 5050fc0d0fcbb6c70b7aabea1b67d75cc686b96b
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 9e5fb470e9045060e6cf2423470c2e4e1ee14f30
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345232"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68469647"
 ---
 #  <a name="iris-demo-data-for-python-and-r-tutorials-in-sql-server"></a>Демонстрационные данные IRI для учебников по Python и R в SQL Server 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 В этом упражнении вы создадите базу данных SQL Server для хранения данных из [набора данных IRI цветок](https://en.wikipedia.org/wiki/Iris_flower_data_set) и моделей на основе одних и тех же данных. Данные IRI включены в дистрибутивы R и Python, установленные SQL Server, и используются в руководствах по машинному обучению для SQL Server. 
 

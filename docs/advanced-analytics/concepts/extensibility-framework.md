@@ -7,15 +7,15 @@ ms.date: 10/17/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 4ee27fd68563be336f5bc98bb5b51b200f1dff71
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: a5c49172ed23867f95e383878f792092bd762177
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345129"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470460"
 ---
 # <a name="extensibility-architecture-in-sql-server-machine-learning-services"></a>Архитектура расширяемости в SQL Server Службы машинного обучения 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 SQL Server имеет платформу расширяемости для выполнения внешних сценариев, таких как R или Python на сервере. Сценарий выполняется в среде языковой среды в качестве расширения ядра СУБД. 
 

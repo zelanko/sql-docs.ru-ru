@@ -7,15 +7,15 @@ ms.date: 11/26/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: a7d62004745f8b77bbc26b4d924e2e3948cf2f9e
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: e799b1ccba38d7716f2987112573a1d2d07203cd
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345833"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68468469"
 ---
 # <a name="create-data-features-using-r-and-sql-server-walkthrough"></a>Создание функций данных с помощью R и SQL Server (пошаговое руководство)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Проектирование данных — это важная составляющая машинного обучения. Данные часто требуют преобразования, прежде чем их можно будет использовать для прогнозного моделирования. Если данные не имеют требуемых характеристик, их необходимо создать на основе существующих значений.
 
@@ -29,7 +29,7 @@ ms.locfileid: "68345833"
 
 Целью является создание нового [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] набора данных, включающего в себя исходные столбцы и новую числовую функцию *direct_distance*.
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 Этот шаг предполагает выполнение текущего сеанса R на основе предыдущих шагов этого пошагового руководства. В нем используются строки подключения и объекты источников данных, созданные в этих шагах. Для запуска скрипта используются следующие средства и пакеты.
 

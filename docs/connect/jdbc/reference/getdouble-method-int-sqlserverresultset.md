@@ -1,5 +1,5 @@
 ---
-title: Метод getDouble (int) (SQLServerResultSet) | Документация Майкрософт
+title: Метод getDouble (int) (SQLServerResultSet) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 128df26a-9063-4bdf-a4fb-a077cbe7cfe1
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 648a36846cda855848713b9662f8a743a5d7ebd5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3d9a02c6bf2fa6c9afa48c2192bfc9103c519174
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66769035"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67983651"
 ---
 # <a name="getdouble-method-int-sqlserverresultset"></a>Метод getDouble (int) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +40,7 @@ public double getDouble(int columnIndex)
  Значение типа **int**, указывающее индекс столбца.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Объект **двойные** значение.  
+ Значение **типа Double** .  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

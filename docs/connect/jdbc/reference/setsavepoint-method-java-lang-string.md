@@ -1,5 +1,5 @@
 ---
-title: Метод setSavepoint (java.lang.String) | Документация Майкрософт
+title: Метод setSavepoint (java.lang.String) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 1cf15ec4-d9d9-4ab3-bfee-2ea43ff609a6
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 41d9cf40028efb2fac732ec7f6da4a3be39095af
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: cae36f62cba9f7c8b97ae13c06d1f01960f616e8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66796807"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67973092"
 ---
 # <a name="setsavepoint-method-javalangstring"></a>Метод setSavepoint (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +46,7 @@ public java.sql.Savepoint setSavepoint(java.lang.String sName)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод setSavePoint указывается с помощью метода setSavePoint в интерфейсе java.sql.Connection.  
+ Этот метод setSavePoint задается методом setSavePoint в интерфейсе Java. SQL. Connection.  
   
  Аргумент *sName* автоматически экранируется драйвером [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)].  
   

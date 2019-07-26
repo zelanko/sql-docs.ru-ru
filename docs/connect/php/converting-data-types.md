@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 508542ec-cc28-4a17-80f4-52325d6a48db
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e29fd659e2119682325b3df6725aefc37953b452
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: ca79a13146df59b0c7159de112feee3ec478249d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66796253"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015106"
 ---
 # <a name="converting-data-types"></a>Преобразование типов данных
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -32,10 +31,10 @@ ms.locfileid: "66796253"
 |[Практическое руководство. Указание типов данных SQL Server](../../connect/php/how-to-specify-sql-server-data-types-when-using-the-sqlsrv-driver.md)|Демонстрирует, как указать типы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] при отправке данных на сервер.|  
 |[Практическое руководство. Указание типов данных PHP](../../connect/php/how-to-specify-php-data-types.md)|Демонстрирует, как указать типы данных PHP при извлечении данных с сервера.|  
 |[Практическое руководство. Отправка и извлечение данных UTF-8 с помощью встроенной поддержки UTF-8](../../connect/php/how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md)|Демонстрирует, как использовать встроенную в [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] поддержку данных UTF-8.<br /><br />Поддержка символов UTF-8 была добавлена в [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] версии 1.1.|  
-|[Практическое руководство. Отправка и получение ASCII-данных в Linux и macOS](../../connect/php/how-to-send-and-retrieve-ascii-data-in-linux-mac.md)|Демонстрирует использование [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]поддержка ASCII-данных в Linux или macOS.<br /><br />Поддержка символов ASCII в средах, отличных от Windows была добавлена в версии 5.2 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].|
+|[Практическое руководство. Отправка и получение ASCII-данных в Linux и macOS](../../connect/php/how-to-send-and-retrieve-ascii-data-in-linux-mac.md)|Демонстрирует использование [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]поддержки данных ASCII в Linux или macOS.<br /><br />Поддержка символов ASCII в средах, отличных от Windows, [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]была добавлена в версии 5,2.|
   
 ## <a name="see-also"></a>См. также:  
-[Руководство по программированию для драйвера Microsoft для PHP для SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
+[Руководство по программированию драйверов Microsoft для PHP для SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
 
 [Справочник по API для драйвера SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)
 

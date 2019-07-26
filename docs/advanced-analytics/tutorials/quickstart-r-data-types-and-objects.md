@@ -7,15 +7,15 @@ ms.date: 01/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: e8c8ccd60417d4c1d492d53041280ab0c8e318af
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 686ba69425dc9bc6554b369be3d5fadd24b5a234
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345423"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68469400"
 ---
 # <a name="quickstart-handle-data-types-and-objects-using-r-in-sql-server"></a>Краткое руководство. Работа с типами данных и объектами с помощью R в SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 В этом кратком руководстве вы получите практические сведения о распространенных проблемах, возникающих при перемещении данных между R и SQL Server. Опыт, который вы получаете в этом упражнении, предоставляет вам фундаментальные навыки при работе с данными в собственном сценарии.
 
@@ -26,7 +26,7 @@ ms.locfileid: "68345423"
 + Иногда требуются операции приведения и преобразования.
 + R и SQL используют разные объекты данных.
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>предварительные требования
 
 Предыдущее краткое руководство, [Проверка наличия R в SQL Server](quickstart-r-verify.md), содержит сведения и ссылки для настройки среды R, необходимой для этого краткого руководства.
 

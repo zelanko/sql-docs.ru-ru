@@ -6,15 +6,15 @@ ms.date: 04/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 3063758e1186dc81e5ce9e70891403e7afd3a89f
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: c8ac0827ba6bfbb2c35e594967925d16d4730915
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345110"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68469866"
 ---
 # <a name="using-data-from-olap-cubes-in-r"></a>Использование данных из кубов OLAP в R
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Пакет для **OLAP** — это пакет R, предоставляемый корпорацией Майкрософт для использования с Machine Learning Server и SQL Server, который позволяет выполнять запросы многомерных выражений для получения данных из кубов OLAP. В этом пакете нет необходимости создавать связанные серверы или очищать плоские наборы строк. данные OLAP можно получить непосредственно из R.
 

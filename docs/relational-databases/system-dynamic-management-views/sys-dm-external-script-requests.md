@@ -1,5 +1,5 @@
 ---
-title: sys.dm_external_script_requests | Документация Майкрософт
+title: sys. DM _external_script_requests | Документация Майкрософт
 ms.custom: ''
 ms.date: 10/28/2018
 ms.prod: sql
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e7e7c50f-b8b2-403c-b8c8-1955da5636c3
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 7cc6b6b42f7e9fa743724a414aa5b53435d7b0ed
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 33a7b546b9479add67a05f9bb7537f953fa2e9f9
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68086835"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68476277"
 ---
 # <a name="sysdmexternalscriptrequests"></a>sys.dm_external_script_requests
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -32,11 +32,11 @@ ms.locfileid: "68086835"
   
 > [!NOTE] 
 >  
-> Это динамическое административное представление (DMV) доступна только в том случае, если вы установили и включили функцию, которая поддерживает выполнение внешнего скрипта. Дополнительные сведения см. в разделе [служб R в SQL Server 2016](../../advanced-analytics/r/sql-server-r-services.md) и [служб машинного обучения (R, Python) в SQL Server 2017](../../advanced-analytics/what-is-sql-server-machine-learning.md).  
+> Это динамическое административное представление доступно только в том случае, если вы установили и включили функцию, поддерживающую выполнение внешних скриптов. Дополнительные сведения см. в статье [службы R в SQL Server 2016](../../advanced-analytics/r/sql-server-r-services.md) и [службы машинного обучения (R, Python) в SQL Server 2017 и более поздних версиях](../../advanced-analytics/what-is-sql-server-machine-learning.md).  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|external_script_request_id|**Уникальный идентификатор**|Идентификатор процесса, который отправил запрос на внешний скрипт. Это соответствует идентификатору процесса, получаемому [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]|  
+|external_script_request_id|**уникальный идентификатор**|Идентификатор процесса, который отправил запрос на внешний скрипт. Соответствует ИДЕНТИФИКАТОРу процесса, полученному[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]|  
 |language|**nvarchar**|Ключевое слово, которое представляет поддерживаемый язык скриптов. |  
 |degree_of_parallelism|**int**|Число, указывающее количество созданных параллельных процессов. Это значение может отличаться от количества запрошенных параллельных процессов.|  
 |external_user_name|**nvarchar**|Рабочая учетная запись Windows, под которой был выполнен скрипт.|  
@@ -52,7 +52,7 @@ ms.locfileid: "68086835"
 
 Это представление можно отфильтровать с помощью идентификатора языка скриптов.
 
-Кроме того, оно возвращает рабочую учетную запись, под которой выполняется скрипт. Сведения о рабочих учетных записей, используемых внешних скриптов, см. в разделе удостоверений, используемых при обработке (SQLRUserGroup) статьи [Общие сведения о безопасности для инфраструктуры расширяемости в службах машинного обучения SQL Server](../../advanced-analytics/concepts/security.md#sqlrusergroup).
+Кроме того, оно возвращает рабочую учетную запись, под которой выполняется скрипт. Сведения о рабочих учетных записях, используемых внешними скриптами, см. в разделе удостоверения, используемые при обработке (SQLRUserGroup) в статье [Общие сведения о безопасности для платформы расширяемости в SQL Server службы машинного обучения](../../advanced-analytics/concepts/security.md#sqlrusergroup).
 
 Идентификатор GUID, который возвращается в поле **external_script_request_id** , также представляет имя файла защищенного каталога, где хранятся временные файлы. Каждая рабочая учетная запись, например MSSQLSERVER01, представляет отдельное имя входа SQL или пользователя Windows, а также может использоваться для выполнения нескольких запросов скриптов. По умолчанию эти временные файлы удаляются после завершения запрошенного скрипта.
  

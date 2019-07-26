@@ -1,5 +1,5 @@
 ---
-title: Метод updateDate (int, java.sql.Date) | Документация Майкрософт
+title: Метод updateDate (int, Java. SQL. Date) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: c5fb1292-a5cf-4cdd-8c4a-d1679944a6d0
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 13a8ed675e63d19d3c21dddf54751073593ae156
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3318bc5ebd8eb6496262cc9992a4e516aeebf9fe
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66804260"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67999157"
 ---
 # <a name="updatedate-method-int-javasqldate"></a>Метод updateDate (int, java.sql.Date)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -52,7 +51,7 @@ public void updateDate(int index,
  Этот метод updateDate определен с помощью метода updateDate в интерфейсе java.sql.ResultSet.  
   
 ## <a name="see-also"></a>См. также:  
- [Метод updateDate &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatedate-method-sqlserverresultset.md)   
+ [Метод updateDate (SQLServerResultSet)](../../../connect/jdbc/reference/updatedate-method-sqlserverresultset.md)   
  [Элементы SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [Класс SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

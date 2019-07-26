@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 130fc0fd-87dd-46b2-918f-de9dc572c769
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 82a5b96d25ed608ad9e44dec6a937527055c65e3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f2b4d6c85c399589aae4eedbaade4bbdc4f70609
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66795828"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67993740"
 ---
 # <a name="comparing-execution-functions"></a>Сравнение функций выполнения
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -42,5 +41,5 @@ ms.locfileid: "66795828"
 
 [Справочник по драйверу PDO_SQLSRV](../../connect/php/pdo-sqlsrv-driver-reference.md)
 
-[Руководство по программированию для драйвера Microsoft для PHP для SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
+[Руководство по программированию драйверов Microsoft для PHP для SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
   

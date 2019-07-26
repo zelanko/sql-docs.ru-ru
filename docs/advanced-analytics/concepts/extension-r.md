@@ -7,15 +7,15 @@ ms.date: 09/05/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 3bf8e77cec92cde0e5a8adf4d3e1e36f1689b917
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 300b5d25d62be24c1e5590f5cd9795d08da7f2c1
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68343411"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470498"
 ---
 # <a name="r-language-extension-in-sql-server"></a>Расширение языка R в SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Расширение R является частью SQL Server Службы машинного обучения надстройку для ядра реляционной базы данных. Она добавляет среду выполнения R, базовое распределение R с стандартными библиотеками и инструментами, а также библиотеки Microsoft R. [RevoScaleR](../r/ref-r-revoscaler.md) для аналитики в масштабе, [MicrosoftML](../r/ref-r-microsoftml.md) для алгоритмов машинного обучения и других библиотек для доступа к данным или коду R в SQL Server.
 

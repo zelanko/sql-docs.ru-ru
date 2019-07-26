@@ -1,44 +1,44 @@
 ---
-title: Краткое руководство по проверке Python существует в SQL Server
-description: Краткое руководство по проверке существование Python и служб машинного обучения в SQL Server.
+title: Краткое руководство по проверке наличия Python в SQL Server
+description: Краткое руководство по проверке существования Python и Службы машинного обучения в SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 01/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 0a2c525c89a70f4a36749d7b9c6fb769362d517b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0dd5714f47c90c0091daacbd792b80c05ec68675
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962047"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68469700"
 ---
 # <a name="quickstart-verify-python-exists-in-sql-server"></a>Краткое руководство. Проверка наличия Python в SQL Server 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-SQL Server включает поддержку языка Python для обработки и анализа аналитики данных в резидентных данных SQL Server. Выполнение скрипта является посредством хранимых процедур, используя один из следующих методов:
+SQL Server включает поддержку языка Python для анализа данных на резидентных SQL Server данных. Выполнение скрипта осуществляется с помощью хранимых процедур с использованием любого из следующих подходов:
 
-+ Встроенные [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) хранимую процедуру, передавая скрипт Python в качестве входного параметра.
-+ Wrap скрипт Python в [пользовательская хранимая процедура](sqldev-in-database-r-for-sql-developers.md) , созданный.
++ Встроенная хранимая процедура [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) , передающая скрипт Python в качестве входного параметра.
++ Заключите скрипт Python в создаваемую [пользовательскую хранимую процедуру](sqldev-in-database-r-for-sql-developers.md) .
 
-В этом кратком руководстве вы проверите, [службы машинного обучения SQL Server 2017](../what-is-sql-server-machine-learning.md) установлен и настроен.
+В этом кратком руководстве вы убедитесь, что [SQL Server 2017 службы машинного обучения](../what-is-sql-server-machine-learning.md) установлен и настроен.
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>предварительные требования
 
-В этом упражнении требуется доступ к экземпляру SQL Server с [службы машинного обучения SQL Server 2017](../install/sql-machine-learning-services-windows-install.md) установлен.
+Для этого упражнения требуется доступ к экземпляру SQL Server с установленным [SQL Server 2017 службы машинного обучения](../install/sql-machine-learning-services-windows-install.md) .
 
-Экземпляр SQL Server может быть в виртуальной машине Azure или локально. Только Имейте в виду, что внешние средства написания сценариев отключен по умолчанию, поэтому может потребоваться [включить внешние сценарии](../install/sql-machine-learning-services-windows-install.md#bkmk_enableFeature) и убедитесь, что **службы панели запуска SQL Server** запущен перед запуском.
+Ваш экземпляр SQL Server может находиться на виртуальной машине Azure или в локальной среде. Просто имейте в виду, что функция внешних скриптов по умолчанию отключена, поэтому может потребоваться [включить внешние сценарии](../install/sql-machine-learning-services-windows-install.md#bkmk_enableFeature) и убедиться, что **Служба панель запуска SQL Server** запущена перед началом работы.
 
-Вам также необходимо средство для выполнения запросов SQL. Можно выполнить скрипты Python, с помощью любой базы данных управления или запроса средство, поскольку он может подключиться к экземпляру SQL Server и выполняется запрос T-SQL или хранимой процедуры. В этом кратком руководстве [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms).
+Вам также понадобится средство для выполнения SQL-запросов. Скрипты Python можно запускать с помощью любого средства управления базами данных или запросов, если оно может подключаться к SQL Server экземпляру и выполнять запрос T-SQL или хранимую процедуру. В этом кратком руководстве используется [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms).
 
-## <a name="verify-python-exists"></a>Убедитесь, что существует Python
+## <a name="verify-python-exists"></a>Проверка существования Python
 
-Можно проверить, службы машинного обучения (включен для экземпляра SQL Server и установленной версии Python. Выполните следующие действия.
+Вы можете убедиться, что Службы машинного обучения (включено для экземпляра SQL Server и какая версия Python установлена. Выполните следующие действия.
 
 1. Откройте SQL Server Management Studio и подключитесь к экземпляру SQL Server.
 
-2. Запустите приведенный ниже код. 
+2. Выполните приведенный ниже код. 
 
     ```SQL
     EXECUTE sp_execute_external_script
@@ -48,7 +48,7 @@ SQL Server включает поддержку языка Python для обра
     GO
     ```
 
-3. Python `print` функция возвращает версию для **сообщений** окна. В приведенном ниже примере, вы увидите SQL Server в этом случае у версия Python 3.5.2 установлен.
+3. Функция Python `print` Возвращает версию в окно **сообщений** . В приведенном ниже примере выходных данных можно увидеть, что в SQL Server в этом случае установлен Python версии 3.5.2.
 
     **Результаты**
 
@@ -57,19 +57,19 @@ SQL Server включает поддержку языка Python для обра
     3.5.2 |Continuum Analytics, Inc.| (default, Jul  5 2016, 11:41:13) [MSC v.1900 64 bit (AMD64)]
     ```
 
-Если возникают ошибки, существует ряд вещей, которые можно сделать, чтобы убедиться, что экземпляр и Python может взаимодействовать.
+При возникновении ошибок существует множество вещей, которые можно выполнить, чтобы убедиться, что экземпляр и Python могут обмениваться данными.
 
-Во-первых исключить любые проблемы установки. После установки настроек не требуется, чтобы включить использование библиотек внешнего кода. См. в разделе [установить SQL Server 2017 службы машинного обучения](../install/sql-machine-learning-services-windows-install.md). Аналогичным образом Убедитесь, что запущена служба панели запуска.
+Прежде всего, устраните все проблемы установки. Настройка после установки необходима для включения использования библиотек внешних кодов. См. раздел [Install SQL Server 2017 службы машинного обучения](../install/sql-machine-learning-services-windows-install.md). Аналогичным образом убедитесь, что служба панели запуска запущена.
 
-Также необходимо добавить группу пользователей Windows `SQLRUserGroup` как имя для входа на экземпляре, чтобы убедиться, что панель запуска могут обеспечивать взаимодействие между кодом Python и SQL Server. (Той же группе используется для обоих R и выполнение кода Python). Дополнительные сведения см. в разделе [создать имя входа для SQLRUserGroup](../security/create-a-login-for-sqlrusergroup.md).
+Кроме того, необходимо добавить группу `SQLRUserGroup` пользователей Windows в качестве имени входа для экземпляра, чтобы панель запуска могла обеспечить взаимодействие между Python и SQL Server. (Для выполнения кода R и Python используется одна и та же группа.) Дополнительные сведения см. [в статье Создание имени входа для SQLRUserGroup](../security/create-a-login-for-sqlrusergroup.md).
 
-Кроме того может потребоваться включить сетевые протоколы, которые были отключены, или открыть брандмауэр SQL Server мог обмениваться данными с внешними клиентами. Дополнительные сведения см. в разделе [Устранение неполадок при установке](../common-issues-external-script-execution.md).
+Кроме того, может потребоваться включить отключенные сетевые протоколы или открыть брандмауэр, чтобы SQL Server могли взаимодействовать с внешними клиентами. Дополнительные сведения см. в разделе [Устранение неполадок в программе установки](../common-issues-external-script-execution.md).
 
 ## <a name="call-revoscalepy-functions"></a>Вызов функций revoscalepy
 
-Чтобы убедиться, что **revoscalepy** нет, выполните пример скрипта, включает в себя [rx_summary](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-summary) , формирующий статистические сводных данных. Приведенный ниже сценарий демонстрируется извлечение данных xdf-пример в файл из встроенных примеры, включенные в revoscalepy. Предоставляет функцию RxOptions **sampleDataDir** параметр, который возвращает расположение файлов образца.
+Чтобы убедиться, что **revoscalepy** доступен, запустите пример скрипта, включающий [rx_summary](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-summary) , который создает статистические сводные данные. В приведенном ниже сценарии показано, как извлечь файл данных sample. Xdf-из встроенных примеров, входящих в revoscalepy. Функция Рксоптионс предоставляет параметр **сампледатадир** , возвращающий Расположение образцов файлов.
 
-Поскольку rx_summary возвращает объект типа `class revoscalepy.functions.RxSummary.RxSummaryResults`, который содержит несколько элементов, можно использовать для извлечения только кадр данных в табличном формате pandas.
+Поскольку rx_summary возвращает объект типа `class revoscalepy.functions.RxSummary.RxSummaryResults`, который содержит несколько элементов, можно использовать Pandas для извлечения только фрейма данных в табличном формате.
 
 ```sql
 EXEC sp_execute_external_script @language = N'Python', 
@@ -92,11 +92,11 @@ OutputDataSet = dfsummary
 WITH RESULT SETS  ((ColName nvarchar(25) , ColMean float, ColStdDev  float, ColMin  float,   ColMax  float, Col_ValidObs  float, Col_MissingObs int))
 ```
 
-## <a name="list-python-packages"></a>Перечисление пакетов Python
+## <a name="list-python-packages"></a>Вывод списка пакетов Python
 
-Корпорация Майкрософт предоставляет ряд пакетов Python, предварительно установленные с помощью служб машинного обучения в вашем экземпляре SQL Server. Для просмотра списка Python, какие пакеты устанавливаются, включая версию, выполните следующие действия.
+Корпорация Майкрософт предоставляет ряд пакетов Python, предварительно устанавливаемых с Службы машинного обучения в экземпляре SQL Server. Чтобы просмотреть список установленных пакетов Python, включая версию, выполните следующие действия.
 
-1. Запустите приведенный ниже сценарий в экземпляре SQL Server.
+1. Выполните приведенный ниже скрипт на экземпляре SQL Server.
 
     ```SQL
     EXECUTE sp_execute_external_script
@@ -107,7 +107,7 @@ WITH RESULT SETS  ((ColName nvarchar(25) , ColMean float, ColStdDev  float, ColM
     GO
     ```
 
-2. Выходные данные — от `pip.get_installed_distributions()` в Python и возвращаются в виде `STDOUT` сообщений.
+2. Выходные данные выводятся `pip.get_installed_distributions()` в Python и возвращаются `STDOUT` в виде сообщений.
 
     **Результаты**
 
@@ -142,7 +142,7 @@ WITH RESULT SETS  ((ColName nvarchar(25) , ColMean float, ColStdDev  float, ColM
 
 ## <a name="next-steps"></a>Следующие шаги
 
-Теперь, когда вы убедитесь, что экземпляр готов для работы с Python, внимательно ознакомьтесь собой базовый взаимодействие Python.
+Теперь, когда ваш экземпляр готов к работе с Python, внимательно ознакомьтесь с простым взаимодействием Python.
 
 > [!div class="nextstepaction"]
-> [Краткое руководство. Скрипт Python «Hello world» в SQL Server](quickstart-python-run-using-t-sql.md)
+> [QuickStart Сценарий Python "Hello World" в SQL Server](quickstart-python-run-using-t-sql.md)

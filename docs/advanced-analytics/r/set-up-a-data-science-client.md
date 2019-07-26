@@ -7,15 +7,15 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 225fe78a84da986120ce23f2a1f16fae244e26e4
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 0f8cc5aaa10beeb5b91b27111e15013cc705ed20
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345058"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68469961"
 ---
 # <a name="set-up-a-data-science-client-for-r-development-on-sql-server"></a>Настройка клиента обработки и анализа данных для разработки R на SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Интеграция r доступна в SQL Server 2016 или более поздней версии, если включить параметр языка R в [SQL Server 2016 служб R](../install/sql-r-services-windows-install.md) или [SQL Server 2017 службы машинного обучения (в базе данных)](../install/sql-machine-learning-services-windows-install.md) . 
 

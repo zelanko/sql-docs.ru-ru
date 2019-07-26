@@ -1,5 +1,5 @@
 ---
-title: Метод refreshRow (SQLServerResultSet) | Документация Майкрософт
+title: Метод refreshRow (SQLServerResultSet) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 048fe245-157f-4fd8-be75-ce54b83e02b3
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b13711007627872af8076f40ccbe94c521c68583
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 570a9185a83ecf1af0e47ee25cce5445dca1b958
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66802127"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67975987"
 ---
 # <a name="refreshrow-method-sqlserverresultset"></a>Метод refreshRow (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +38,7 @@ public void refreshRow()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод refreshRow указывается с помощью метода refreshRow в интерфейсе java.sql.ResultSet.  
+ Этот метод refreshRow задается методом refreshRow в интерфейсе Java. SQL. Result.  
   
  Этот метод не может быть вызван при нахождении курсора в строке вставки.  
   

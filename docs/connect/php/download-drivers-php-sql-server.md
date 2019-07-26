@@ -9,13 +9,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 5442e564d7b085c144ffe98a4b67eb74499bf975
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 13da9b638f117bc84700b044c6c2e8e70ada8518
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66796209"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015101"
 ---
 # <a name="download-the-microsoft-drivers-for-php-for-sql-server"></a>Загрузка драйверов Майкрософт для PHP для SQL Server
 
@@ -23,7 +22,7 @@ ms.locfileid: "66796209"
 
 ## <a name="windows"></a>Windows
 
-В следующих версиях драйверов для PHP в Windows доступны для загрузки:
+Следующие версии драйверов для PHP в Windows доступны для загрузки:
 
 - [Драйверы Майкрософт версии 5.6 для PHP для SQL Server](https://www.microsoft.com/download/details.aspx?id=57916)
 - [Драйверы Майкрософт версии 5.3 для PHP для SQL Server](https://www.microsoft.com/download/details.aspx?id=57163)
@@ -33,7 +32,7 @@ ms.locfileid: "66796209"
 
 ## <a name="linux-and-macos"></a>Linux и macOS
 
-Драйверы для PHP легко загружаются и установить с помощью PECL в Linux и macOS. См. в разделе [учебник по установке Linux и macOS](installation-tutorial-linux-mac.md) подробные сведения. Если вам нужно вручную установить драйверы для PHP в Linux и macOS, следующие версии доступны для загрузки:
+Драйверы для PHP легко загружаются и устанавливаются с помощью PECL в Linux и macOS. Дополнительные сведения см. в [руководстве по установке Linux и macOS](installation-tutorial-linux-mac.md) . Если вам нужно установить драйверы для PHP в Linux и macOS вручную, можно скачать следующие версии:
 
 - [Драйверы Майкрософт версии 5.6 для PHP для SQL Server](https://github.com/Microsoft/msphpsql/releases/tag/v5.6.0)
 - [Драйверы Майкрософт версии 5.3 для PHP для SQL Server](https://github.com/Microsoft/msphpsql/releases/tag/v5.3.0)
@@ -46,7 +45,7 @@ ms.locfileid: "66796209"
 
 [Системные требования драйверов Майкрософт для PHP для SQL Server](system-requirements-for-the-php-sql-driver.md)
 
-[Руководство по программированию для драйвера Microsoft для PHP для SQL Server](programming-guide-for-php-sql-driver.md)
+[Руководство по программированию драйверов Microsoft для PHP для SQL Server](programming-guide-for-php-sql-driver.md)
 
 [Справочник по API для драйвера SQLSRV](sqlsrv-driver-api-reference.md)
 

@@ -7,15 +7,15 @@ ms.date: 10/10/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: fab91e142fad3bcb1ce23816d6705f7a7d208851
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 705df9d06a7dbf4563df3670894351d15c0962a5
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345317"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470100"
 ---
 # <a name="manage-and-integrate-machine-learning-workloads-on-sql-server"></a>Управление рабочими нагрузками машинного обучения и их интеграция на SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Эта статья предназначена для SQL Server администраторов баз данных, ответственных за развертывание эффективной инфраструктуры обработки и анализа данных в ресурсе сервера, поддерживающем несколько рабочих нагрузок. ИТ-подкадровое пространство с административными проблемами, относящееся к управлению выполнением кода R и Python на SQL Server. 
 

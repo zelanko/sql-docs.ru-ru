@@ -1,5 +1,5 @@
 ---
-title: Метод getClob (java.lang.String) | Документация Майкрософт
+title: Метод getClob (java.lang.String) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: ad871d09-ec43-4885-9067-20854b439b0c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c070bb12da865d1a5a43d2cb5ddf9a7f6a28fc5c
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 9ba397d39378e6e45bf63dffa4eb2efbca3b432c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66763680"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67953027"
 ---
 # <a name="getclob-method-javalangstring"></a>Метод getClob (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,12 +35,12 @@ public java.sql.Clob getClob(java.lang.String sCol)
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *sCol*  
+ *скол*  
   
  Значение типа **String**, содержащее имя параметра.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Объект Clob.  
+ Объект CLOB.  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

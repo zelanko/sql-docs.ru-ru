@@ -1,5 +1,5 @@
 ---
-title: Метод updateNull (java.lang.String) | Документация Майкрософт
+title: Метод updateNull (java.lang.String) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: fb3e5cde-30e1-4c95-adf0-d5b6c1f0da95
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 0546eb03b89512bbd7b52ef33ca44ac60fb426a9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 98ae88f84e31f6120767520046d442f998024732
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66798808"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67998509"
 ---
 # <a name="updatenull-method-javalangstring"></a>Метод updateNull (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +46,7 @@ public void updateNull(java.lang.String columnName)
  Этот метод updateNull определен с помощью метода updateNull в интерфейсе java.sql.ResultSet.  
   
 ## <a name="see-also"></a>См. также:  
- [Метод updateNull &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatenull-method-sqlserverresultset.md)   
+ [Метод &#40;updateNull SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatenull-method-sqlserverresultset.md)   
  [Элементы SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [Класс SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

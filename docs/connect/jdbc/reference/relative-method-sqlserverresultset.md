@@ -1,5 +1,5 @@
 ---
-title: Метод Relative (SQLServerResultSet) | Документация Майкрософт
+title: Метод relative (SQLServerResultSet) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 2bcdbb69-95fd-4ae8-8488-1a75a91fe2e0
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b8907a5e2eb2ead5202e8aec9fd5320a6047a5f4
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 5b2e644feff3cd2787cc6bd80bce54562ad20794
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797707"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67975781"
 ---
 # <a name="relative-method-sqlserverresultset"></a>Метод relative (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +46,7 @@ public boolean relative(int nRows)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод relative указывается относительный методом в интерфейсе java.sql.ResultSet.  
+ Этот относительный метод задается относительным методом в интерфейсе Java. SQL. Result.  
   
  Если попытаться переместить курсор до первой позиции в результирующем наборе и после последней позиции, то курсор будет располагаться перед первой строкой или после последней строки соответственно. Вызов `relative(0)` допускается, однако не изменяет положение курсора.  
   

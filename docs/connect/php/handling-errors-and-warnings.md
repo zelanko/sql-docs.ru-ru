@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 0afea5d5-8797-4a85-b1b4-8cde1f3888a3
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 50b431ed5b3f02f1032d4176c129d3b6599b4b9e
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 2765df415cd4e45469f48c30dc2c0937361ce3aa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66796177"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015069"
 ---
 # <a name="handling-errors-and-warnings"></a>Обработка ошибок и предупреждений
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -40,5 +39,5 @@ ms.locfileid: "66796177"
 [sqlsrv_get_config](../../connect/php/sqlsrv-get-config.md)  
   
 ## <a name="see-also"></a>См. также:  
-[Руководство по программированию для драйвера Microsoft для PHP для SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
+[Руководство по программированию драйверов Microsoft для PHP для SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
   

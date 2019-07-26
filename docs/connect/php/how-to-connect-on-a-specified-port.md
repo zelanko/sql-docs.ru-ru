@@ -1,5 +1,5 @@
 ---
-title: 'Практическое: подключение к заданному порту | Документация Майкрософт'
+title: Как подключиться к указанному порту | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 65a154d1-375c-439b-a653-7815c9d70ff3
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 340cedae8ee5c205e3bc6ea8942151dd4beca168
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: af055a73904bb8feec92fb2afe93df064a09ab23
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66796132"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015048"
 ---
 # <a name="how-to-connect-on-a-specified-port"></a>Практическое руководство. Подключение к заданному порту
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -47,7 +46,7 @@ ms.locfileid: "66796132"
 ## <a name="see-also"></a>См. также:  
 [Подключение к серверу](../../connect/php/connecting-to-the-server.md)
 
-[Руководство по программированию для драйвера Microsoft для PHP для SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
+[Руководство по программированию драйверов Microsoft для PHP для SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
 
 [Getting Started with the Microsoft Drivers for PHP for SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md) (Начало работы с драйверами Майкрософт для PHP для SQL Server)
 

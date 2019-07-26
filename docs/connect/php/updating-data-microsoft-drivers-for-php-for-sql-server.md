@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: dd323f83-f415-4fa4-8457-89dad6d321d0
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f8128167db6ce60789a93698e775228659fff255
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 93bad991b56928db0d7b872b13904385d79ae788
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66803891"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68014838"
 ---
 # <a name="updating-data-microsoft-drivers-for-php-for-sql-server"></a>Обновление данных (драйверы Майкрософт для PHP для SQL Server)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -42,5 +41,5 @@ ms.locfileid: "66803891"
 ## <a name="see-also"></a>См. также:  
 [Пример приложения (драйвер SQLSRV)](../../connect/php/example-application-sqlsrv-driver.md)
 
-[Руководство по программированию для драйвера Microsoft для PHP для SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
+[Руководство по программированию драйверов Microsoft для PHP для SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
   

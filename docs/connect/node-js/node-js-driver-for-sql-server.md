@@ -1,5 +1,5 @@
 ---
-title: Драйвер node.js для SQL Server | Документация Майкрософт
+title: Драйвер Node. js для SQL Server | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/08/2017
 ms.prod: sql
@@ -10,21 +10,20 @@ ms.topic: conceptual
 ms.assetid: c4cdbfa6-9b73-4b72-a1a6-e1b45d8a773d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: a11104fa44b4a40d849193bd229b7186ef5b9dc5
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 6fa534b756084f74606e9d40a8c1c69934b240d1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66799366"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67916055"
 ---
 # <a name="nodejs-driver-for-sql-server"></a>Драйвер Node.js для SQL Server
 
-![Загрузки стрелка вниз обведены](../../ssdt/media/download.png)[загрузить драйвер Node.js SQL](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+![Скачать-стрелка вниз-с кругом](../../ssdt/media/download.png)[, чтобы скачать драйвер SQL Node. js](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-Модуль tedious — это реализация протокола TDS на языке Java, который поддерживают все современные версии SQL Server. Драйвер — проект с открытым исходным кодом, доступных на сайте Github.  
+Модуль tedious — это реализация протокола TDS на языке Java, который поддерживают все современные версии SQL Server. Драйвер является проектом с открытым исходным кодом, доступным на сайте GitHub.  
   
-Можно подключиться к базе данных SQL с помощью Node.js в Windows, Linux или Mac.  
+Подключиться к базе данных SQL можно с помощью Node. js в Windows, Linux или Mac.  
   
 ## <a name="getting-started"></a>Начало работы  
 * [Шаг 1. Настройка среды разработки для разработки на Node.js](step-1-configure-development-environment-for-node-js-development.md)  
@@ -33,15 +32,15 @@ ms.locfileid: "66799366"
   
 ## <a name="documentation"></a>Документация  
   
-[Утомительно модуля документации на сайте Github](https://tediousjs.github.io/tedious/)  
+[Документация по трудоемкому модулю на GitHub](https://tediousjs.github.io/tedious/)  
   
 ## <a name="community"></a>Сообщество  
-* [Центр разработчиков для Node.js](https://azure.microsoft.com/develop/nodejs/)  
-* [Примите участие в nodejs.org](https://nodejs.org/en/get-involved/)
+* [Центр разработчиков Azure Node. js](https://azure.microsoft.com/develop/nodejs/)  
+* [Участие в nodejs.org](https://nodejs.org/en/get-involved/)
 
 ## <a name="code-examples"></a>Примеры кода
-* [Приступая к работе с Node.js в Windows](https://www.microsoft.com/sql-server/developer-get-started/node/windows/)
-* [Начало работы с Node.js в macOS](https://www.microsoft.com/sql-server/developer-get-started/node/mac/)
-* [Начало работы с Node.js в Ubuntu](https://www.microsoft.com/sql-server/developer-get-started/node/ubuntu/)
-* [Приступая к работе с Node.js в Red Hat Enterprise Linux (RHEL)](https://www.microsoft.com/sql-server/developer-get-started/node/rhel/)
-* [Приступая к работе с Node.js в SUSE Linux Enterprise Server (SLES)](https://www.microsoft.com/sql-server/developer-get-started/node/sles/)
+* [Начало работы с Node. js в Windows](https://www.microsoft.com/sql-server/developer-get-started/node/windows/)
+* [Начало работы с Node. js в macOS](https://www.microsoft.com/sql-server/developer-get-started/node/mac/)
+* [Начало работы с Node. js в Ubuntu](https://www.microsoft.com/sql-server/developer-get-started/node/ubuntu/)
+* [Начало работы с Node. js на Red Hat Enterprise Linux (RHEL)](https://www.microsoft.com/sql-server/developer-get-started/node/rhel/)
+* [Начало работы с Node. js на SUSE Linux Enterprise Server (SLES)](https://www.microsoft.com/sql-server/developer-get-started/node/sles/)

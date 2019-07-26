@@ -7,15 +7,15 @@ ms.date: 12/18/2018
 ms.topic: overview
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: f50049b1b93068748da84342d68ab6cb319c5d98
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 84ef5d684e767016491baa6e47e37d1402fc6879
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68344887"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470048"
 ---
 # <a name="r-server-standalone-and-machine-learning-server-standalone-in-sql-server"></a>R Server (изолированный) и Machine Learning Server (автономный) в SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 SQL Server предоставляет поддержку установки для автономного сервера R или Machine Learning Server, который работает независимо от SQL Server. В зависимости от версии SQL Server изолированный сервер имеет основу R с открытым кодом и, возможно, Python, которая перекрываются с высокопроизводительными библиотеками Майкрософт, которые добавляют статистические и прогнозные аналитические средства в масштабе. Библиотеки также включают задачи машинного обучения, внесенные в скрипты R или Python. 
 

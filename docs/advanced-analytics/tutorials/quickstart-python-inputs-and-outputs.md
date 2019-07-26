@@ -7,15 +7,15 @@ ms.date: 01/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: a23896f5242e0f1182b2864e426bbb20aeda763f
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 0259a4695ab1ee6f42b92e12b47f81e9aa851469
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68344805"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68469606"
 ---
 # <a name="quickstart-handle-inputs-and-outputs-using-python-in-sql-server"></a>Краткое руководство. Обработку входных и выходных данных с помощью Python в SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 В этом кратком руководстве показано, как выполнять обработку входных и выходных данных при использовании Python в SQL Server Службы машинного обучения.
 
@@ -25,7 +25,7 @@ ms.locfileid: "68344805"
 
 Хранимая процедура возвращает один кадр данных Python [Pandas](https://pandas.pydata.org/pandas-docs/stable/index.html) в качестве выходных данных, но можно также выводить скаляры и модели в виде переменных. Например, можно вывести обученную модель как двоичную переменную и передать ее в инструкцию T-SQL INSERT, чтобы записать эту модель в таблицу. Можно также создавать графики (в двоичном формате) или скаляры (отдельные значения, такие как Дата и время, время, затраченное на обучение модели, и т. д.).
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 Предыдущее краткое руководство. [Проверка наличия Python в SQL Server](quickstart-python-verify.md)содержит сведения и ссылки для настройки среды Python, необходимой для этого краткого руководства.
 

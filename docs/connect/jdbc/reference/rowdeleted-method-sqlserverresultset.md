@@ -1,5 +1,5 @@
 ---
-title: Метод rowDeleted (SQLServerResultSet) | Документация Майкрософт
+title: Метод rowDeleted (SQLServerResultSet) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 9c6db315-e614-4604-b020-41af6a214cc1
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 656672ad8ae1c852da2e1242f85cc6c0d5f90df3
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 37221f0f9c7cf87576f0014b855ed28740e4818e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66765421"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67975712"
 ---
 # <a name="rowdeleted-method-sqlserverresultset"></a>Метод rowDeleted (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public boolean rowDeleted()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод rowDeleted указывается с помощью метода rowDeleted в интерфейсе java.sql.ResultSet.  
+ Этот метод rowDeleted задается методом rowDeleted в интерфейсе Java. SQL. Result.  
   
  Удаленная строка может оставить заметный пробел в результирующем наборе. Этот метод позволяет обнаруживать пробелы в результирующем наборе. Возвращаемое значение зависит от возможности обнаружения операций удаления этим объектом [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).  
   

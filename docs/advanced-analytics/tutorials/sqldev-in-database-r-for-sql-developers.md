@@ -7,15 +7,15 @@ ms.date: 06/13/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 64995cc5de7bb3609f1923b7755be9b33b55e764
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 1257cc3f3d0b3ed07bc879f5bc3337d62bc1b3a0
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345904"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470575"
 ---
 # <a name="tutorial-r-data-analytics-for-sql-developers"></a>Учебник. Аналитика данных R для разработчиков SQL
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 В этом руководстве для программистов SQL вы узнаете о интеграции R, создав и развернув решение для машинного обучения на базе R, используя базу данных [NYCTaxi_sample](demo-data-nyctaxi-in-sql.md) на SQL Server. Вы будете использовать T-SQL, SQL Server Management Studio и экземпляр ядра СУБД с [Службы машинного обучения] ([службы машинного обучения](../install/sql-machine-learning-services-windows-install.md) и поддержкой языка R
 
@@ -46,7 +46,7 @@ ms.locfileid: "68345904"
 
 После сохранения модели в базе данных вызовите модель для прогнозов из [!INCLUDE[tsql](../../includes/tsql-md.md)] с помощью хранимых процедур.
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>предварительные требования
 
 Все задачи можно выполнять с помощью [!INCLUDE[tsql](../../includes/tsql-md.md)] хранимых процедур [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]в.
 

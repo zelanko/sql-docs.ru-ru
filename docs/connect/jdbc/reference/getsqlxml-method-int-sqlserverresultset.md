@@ -1,5 +1,5 @@
 ---
-title: Метод getSQLXML (int) (SQLServerResultSet) | Документация Майкрософт
+title: Метод getSQLXML (int) (SQLServerResultSet) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: faa35676-573d-48d5-afd9-850134735728
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6222dddd0b563400506d6728062f031bd48a1c50
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5bed4b5c0b25566527654111c03808e421eea895
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66774168"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67979723"
 ---
 # <a name="getsqlxml-method-int-sqlserverresultset"></a>Метод getSQLXML (int) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,7 +35,7 @@ public final java.sql.SQLXML getSQLXML(int columnIndex)
  Значение типа **int**, указывающее индекс столбца.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- ASQLXMLobject.  
+ Асклксмлобжект.  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

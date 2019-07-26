@@ -1,7 +1,7 @@
 ---
-title: sys.dm_resource_governor_external_resource_pools (Transact-SQL) | Документация Майкрософт
+title: sys. DM _resource_governor_external_resource_pools (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
-ms.date: 05/02/2018
+ms.date: 07/24/2019
 ms.prod: sql
 ms.technology: machine-learning
 ms.reviewer: ''
@@ -16,20 +16,21 @@ dev_langs:
 helpviewer_keywords:
 - dm_resource_governor_external_resource_pools
 - sys.dm_resource_governor_external_resource_pools
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 2bf0be37313816ef4238df89d9157a2fc771e6e7
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
+ms.openlocfilehash: cf77a073a1432df839bfd13046c66018496e79f1
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68262711"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68468513"
 ---
-# <a name="sysdmresourcegovernorexternalresourcepools-transact-sql"></a>sys.dm_resource_governor_external_resource_pools (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+# <a name="sysdmresourcegovernorexternalresourcepools-transact-sql"></a>sys. DM _resource_governor_external_resource_pools (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Возвращает сведения о текущее состояние пула внешних ресурсов, текущую конфигурацию пулов ресурсов и статистики пула ресурсов. 
+Возвращает сведения о текущем состоянии внешнего пула ресурсов, текущую конфигурацию пулов ресурсов и статистику пула ресурсов. 
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -39,15 +40,15 @@ ms.locfileid: "68262711"
 | name|**sysname**|Имя пула ресурсов. Не допускает значение NULL. 
 | pool_version|**int**|Внутренний номер версии.|
 | max_cpu_percent|**int**|Текущая конфигурация максимальной средней пропускной способности ЦП, разрешенной для всех запросов в пуле ресурсов при возникновении состязания использования ЦП. Не допускает значение NULL. |
-| max_processes|**int**|Максимальное количество параллельных внешних процессов. Значение по умолчанию равно 0 и означает отсутствие ограничений. Не допускает значение NULL.|
+| max_processes|**int**|Максимальное количество одновременных внешних процессов. Значение по умолчанию равно 0 и означает отсутствие ограничений. Не допускает значение NULL.|
 | max_memory_percent|**int**|Текущая конфигурация процентной доли от общего объема памяти сервера, которая может использоваться для запросов в данном пуле ресурсов. Не допускает значение NULL. |
 | statistics_start_time|**datetime**|Время, когда была очищена статистика для данного пула. Не допускает значение NULL. 
-| peak_memory_kb|**bigint**|Максимальный объем используемой памяти, в килобайтах, для пула ресурсов. Не допускает значение NULL. |
+| peak_memory_kb|**bigint**|Максимальный объем используемой памяти (в килобайтах) для пула ресурсов. Не допускает значение NULL. |
 | write_io_count|**int**|Общая сумма выполненных операций ввода-вывода записи с момента сброса регулятора ресурсов. Не допускает значение NULL. |
 | read_io_count|**int**|Общая сумма выполненных операций ввода-вывода с момента сброса регулятора ресурсов. Не допускает значение NULL. |
-| total_cpu_kernel_ms|**bigint**|Совокупное пользователя ядра время ЦП в миллисекундах с момента сброса статистики регулятора ресурсов. Не допускает значение NULL. |
-| total_cpu_user_ms|**bigint**|Совокупное время пользователя ЦП в миллисекундах с момента сброса статистики регулятора ресурсов. Не допускает значение NULL. |
-| active_processes_count|**int**|Количество внешних процессов, запущенных в данный момент запроса. Не допускает значение NULL. |
+| total_cpu_kernel_ms|**bigint**|Общее время ядра пользователя ЦП (в миллисекундах), прошедшее с момента сброса статистики сброса регулятора ресурсов. Не допускает значение NULL. |
+| total_cpu_user_ms|**bigint**|Совокупное время пользователя ЦП в миллисекундах, прошедшее с момента сброса статистики сброса регулятора ресурсов. Не допускает значение NULL. |
+| active_processes_count|**int**|Количество внешних процессов, выполняемых в момент запроса. Не допускает значение NULL. |
 
  
 ## <a name="permissions"></a>Разрешения

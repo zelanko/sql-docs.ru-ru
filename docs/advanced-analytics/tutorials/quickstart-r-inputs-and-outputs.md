@@ -7,15 +7,15 @@ ms.date: 01/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 1ccdf5206f2564ead2ca66f40143aee1b4ab1fad
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 4e9e7efe6143d35e627abef4272281aad4b5b184
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68344624"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68469160"
 ---
 # <a name="quickstart-handle-inputs-and-outputs-using-r-in-sql-server"></a>Краткое руководство. Обработку входных и выходных данных с помощью R в SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 В этом кратком руководстве показано, как выполнять обработку входных и выходных данных при использовании R в SQL Server Службы машинного обучения или службах R.
 
@@ -25,7 +25,7 @@ ms.locfileid: "68344624"
 
 Хранимая процедура возвращает один кадр данных R в качестве выходных данных, но вы также можете выводить скаляры и модели в виде переменных. Например, можно вывести обученную модель как двоичную переменную и передать ее в инструкцию T-SQL INSERT, чтобы записать эту модель в таблицу. Можно также создавать графики (в двоичном формате) или скаляры (отдельные значения, такие как Дата и время, время, затраченное на обучение модели, и т. д.).
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 Предыдущее краткое руководство, [Проверка наличия R в SQL Server](quickstart-r-verify.md), содержит сведения и ссылки для настройки среды R, необходимой для этого краткого руководства.
 

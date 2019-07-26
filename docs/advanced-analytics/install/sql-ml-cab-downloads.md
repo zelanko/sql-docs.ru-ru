@@ -7,14 +7,16 @@ ms.date: 05/30/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 0fd6b624b024c51965420dd438b8eb9ec04fbafc
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: ab87112d20d2571936fa7d61c34c5910859f2642
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68344947"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470319"
 ---
 # <a name="cab-downloads-for-cumulative-updates-of-sql-server-in-database-analytics-instances"></a>Загружаемые файлы CAB для накопительных обновлений SQL Server экземпляров аналитики в базе данных
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 SQL Server экземпляры, настроенные для аналитики в базе данных, включают функции R и Python. Эти функции поставляются в CAB-файлах, устанавливаются и обслуживаются с помощью программы установки SQL Server. На устройствах, подключенных к Интернету, обновления CAB обычно применяются с помощью Центр обновления Windows. На отключенных серверах файлы CAB должны быть скачаны и применены вручную. 
 

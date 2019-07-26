@@ -1,5 +1,5 @@
 ---
-title: Метод updateRef (SQLServerResultSet) | Документация Майкрософт
+title: Метод updateRef (SQLServerResultSet) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 1d80d9e1-4f58-4cc2-9ed6-786fdf3e2660
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f5ea3148097d8cc37d309a4e596c9e21b43342e1
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 6146fb97d700cd7908bcd56648cf00593a824f69
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66778419"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67998376"
 ---
 # <a name="updateref-method-sqlserverresultset"></a>Метод updateRef (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

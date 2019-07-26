@@ -7,15 +7,15 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 8de02f679af1bbeed8f65f4e4dc5456cd414e75e
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 1a6459d45d36ff69bdafb62a712e18937bf8eb30
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345547"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470103"
 ---
 # <a name="install-new-r-packages-on-sql-server"></a>Установить новые пакеты R на SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 В этой статье описывается, как установить новые пакеты R в экземпляре SQL Server, где включено машинное обучение. Существует несколько способов установки новых пакетов R в зависимости от используемой версии SQL Server и наличия у сервера подключения к Интернету. Возможны следующие подходы к установке нового пакета.
 

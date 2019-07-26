@@ -1,5 +1,5 @@
 ---
-title: Метод getLong (SQLServerResultSet) | Документация Майкрософт
+title: Метод getLong (SQLServerResultSet) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 86745aeb-ea0d-42d1-b7d2-141b7b067af9
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 61cdcc387570d2989011be3f2d156c4b456b6bef
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 9a00a79466bb4f53fcef10edb1dd6804542b3eae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66792994"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67982391"
 ---
 # <a name="getlong-method-sqlserverresultset"></a>Метод getLong (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

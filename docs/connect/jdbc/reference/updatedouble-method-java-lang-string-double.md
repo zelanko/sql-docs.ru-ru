@@ -1,5 +1,5 @@
 ---
-title: Метод updateDouble (java.lang.String, double) | Документация Майкрософт
+title: Метод updateDouble (Java. lang. String, Double) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: f70971d5-34cc-4f70-8a91-5d46356b24ae
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 73d8e5d933d723a26ad435a7e81276646fd50d1f
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 15617e1d5dda6315547228e07853c373f9eb1a37
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66804202"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67999040"
 ---
 # <a name="updatedouble-method-javalangstring-double"></a>Метод updateDouble (java.lang.String, double)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,13 +42,13 @@ public void updateDouble(java.lang.String columnName,
   
  *x*  
   
- Объект **двойные** значение.  
+ Значение **типа Double** .  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод updateDouble указывается с помощью метода updateDouble в интерфейсе java.sql.ResultSet.  
+ Этот метод updateDouble определен с помощью метода updateDouble в интерфейсе java.sql.ResultSet.  
   
 ## <a name="see-also"></a>См. также:  
  [Метод updateDouble &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatedouble-method-sqlserverresultset.md)   

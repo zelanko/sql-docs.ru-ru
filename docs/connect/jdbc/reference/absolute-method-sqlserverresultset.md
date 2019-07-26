@@ -1,5 +1,5 @@
 ---
-title: Метод Absolute (SQLServerResultSet) | Документация Майкрософт
+title: Метод absolute (SQLServerResultSet) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 638e8148-8ca0-4e1f-9ec2-04a11bc9809b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b0572ed756bd8b347c01e05168873ac543a0ea7e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 66bdbfa417077e70be7969b28ae851a0244e54ca
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66783554"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67956068"
 ---
 # <a name="absolute-method-sqlserverresultset"></a>Метод absolute (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +40,7 @@ public boolean absolute(int row)
  Значение **int**, которое указывает номер строки для перехода. Может быть положительным, отрицательным или равняться 0.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- **значение true,** при перемещении курсора в данную позицию. **false** если он находится перед первой строкой или после последней строки.  
+ **значение true** , если курсор перемещается в заданную позицию. **значение false** , если оно находится перед первой строкой или после последней строки.  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

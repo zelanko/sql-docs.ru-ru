@@ -1,5 +1,5 @@
 ---
-title: Метод getLong (java.lang.String) | Документация Майкрософт
+title: Метод getLong (java.lang.String) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 92e30537-5fd9-4b67-8b0f-486c6e840e03
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 9b3de4aa91f3b3d115d57a3e88c58c7e1acc6220
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: dd7081c6ece290be866b395388ae28ee8b56b312
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66793007"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67982442"
 ---
 # <a name="getlong-method-javalangstring"></a>Метод getLong (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,12 +35,12 @@ public long getLong(java.lang.String sCol)
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *sCol*  
+ *скол*  
   
  Значение типа **String**, содержащее имя параметра.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Объект **long** значение.  
+ Значение **типа Long** .  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

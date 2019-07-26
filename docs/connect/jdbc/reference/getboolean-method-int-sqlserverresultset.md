@@ -1,5 +1,5 @@
 ---
-title: Метод getBoolean (int) (SQLServerResultSet) | Документация Майкрософт
+title: Метод getBoolean (int) (SQLServerResultSet) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 50fcc0c3-36a1-47b2-b18c-7aa2ac9b27d3
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 3380b26cb0401e35c59b50b349c279566612c50f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9cd1d57581a92df0423de09dfe672f29c2cabf81
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66771644"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67953572"
 ---
 # <a name="getboolean-method-int-sqlserverresultset"></a>Метод getBoolean (int) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -49,7 +48,7 @@ public boolean getBoolean(int columnIndex)
 ## <a name="remarks"></a>Remarks  
  Этот метод getBoolean определен с помощью метода getBoolean в интерфейсе java.sql.ResultSet.  
   
- Этот метод поддерживается только для числовых и символьных типов данных. Он преобразует значения «1», 1, и "**true**" для **true**и значения «0», 0, и "**false**" для **false**. Для всех остальных значений поведение не определено.  
+ Этот метод поддерживается только для числовых и символьных типов данных. Он преобразует значения "1", 1 и "**true**" в **true**, а значения "0", 0 и "**false**" — в **значение false**. Для всех остальных значений поведение не определено.  
   
 ## <a name="see-also"></a>См. также:  
  [Метод getBoolean (SQLServerResultSet)](../../../connect/jdbc/reference/getboolean-method-sqlserverresultset.md)   

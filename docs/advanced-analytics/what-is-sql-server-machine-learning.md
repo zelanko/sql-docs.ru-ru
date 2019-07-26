@@ -7,15 +7,16 @@ ms.date: 06/13/2019
 ms.topic: overview
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: f2bea677d6b87d7baa78fed28be82252c52a74c9
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
+ms.openlocfilehash: ead0dd3d9ba69a4bf0079fe8065a2d5aa7a11d3e
+ms.sourcegitcommit: 63c6f3758aaacb8b72462c2002282d3582460e0b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345816"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68495399"
 ---
 # <a name="sql-server-machine-learning-services-r-python"></a>Службы машинного обучения SQL Server (R, Python)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Службы машинного обучения — это функция SQL Server, используемая для выполнения скриптов R и Python в базе данных. Эта функция включает [пакеты Microsoft R и Python](#components) для высокопроизводительной прогнозной аналитики и машинного обучения. Реляционные данные могут использоваться в скриптах R и Python с помощью хранимых процедур, скрипта T-SQL, содержащего инструкции R и Python, или кода R и Python, содержащего T-SQL.
 

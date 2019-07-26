@@ -1,5 +1,5 @@
 ---
-title: Метод executeUpdate (java.lang.String, int[]) | Документация Майкрософт
+title: Метод executeUpdate (java.lang.String, int[]) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 7b3d5b60-4285-4047-b13e-106754ca0d98
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: a2d0bea512c6cbfda5c283af793365e8aeec590c
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 059f463c6a448c6ae2ab302542a50cde1f533db8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66786591"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67954705"
 ---
 # <a name="executeupdate-method-javalangstring-int"></a>Метод executeUpdate (java.lang.String, int[])
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +40,7 @@ public final int executeUpdate(java.lang.String sql,
   
  Значение типа **String**, содержащее инструкцию SQL.  
   
- *columnIndexes*  
+ *колумниндексес*  
   
  Массив значений int, указывающих индексы столбцов автоматически сформированных ключей, которые должны быть доступными.  
   
@@ -52,7 +51,7 @@ public final int executeUpdate(java.lang.String sql,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод executeUpdate указывается с помощью метода executeUpdate в интерфейсе java.sql.Statement.  
+ Этот метод executeUpdate определен с помощью метода executeUpdate в интерфейсе java.sql.Statement.  
   
  Если в результате выполнения хранимой процедуры счетчик обновлений больше единицы либо сформировано больше одного результирующего набора, используйте для выполнения хранимой процедуры метод [execute](../../../connect/jdbc/reference/execute-method-sqlserverstatement.md).  
   

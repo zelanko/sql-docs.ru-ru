@@ -7,15 +7,15 @@ ms.date: 11/01/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 1d421d4fc3ed28276b950f797529f089f94aaf6a
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: f1e07ffa4423ccfc2cc0082910a2ca8aff8fd087
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345915"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68468673"
 ---
 # <a name="create-data-features-using-t-sql"></a>Создание функций данных с помощью T-SQL
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 После исследования данных вы собрали некоторые аналитические данные из данных и готовы перейти к *проектированию функций*. Этот процесс создания функций из необработанных данных может быть важным шагом в расширенном моделировании аналитики.
 

@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 2f44a689-65c8-4c94-9574-e9c08ea7918e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 11cbfbbe9e703867c2030c902ace6eedab38d77d
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: a5c905c11d76f6f9928cb621ce5a35caa4dd1419
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66786671"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67954741"
 ---
 # <a name="executeupdate-method-javalangstring-javalangstring"></a>Метод executeUpdate (java.lang.String, java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -52,7 +51,7 @@ public final int executeUpdate(java.lang.String sql,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод executeUpdate указывается с помощью метода executeUpdate в интерфейсе java.sql.Statement.  
+ Этот метод executeUpdate определен с помощью метода executeUpdate в интерфейсе java.sql.Statement.  
   
  Если в результате выполнения хранимой процедуры счетчик обновлений больше единицы либо сформировано больше одного результирующего набора, используйте для выполнения хранимой процедуры метод [execute](../../../connect/jdbc/reference/execute-method-sqlserverstatement.md).  
   

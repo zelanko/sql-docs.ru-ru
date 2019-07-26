@@ -1,5 +1,5 @@
 ---
-title: Метод clearWarnings (SQLServerResultSet) | Документация Майкрософт
+title: Метод clearWarnings (SQLServerResultSet) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: f55af4b6-ae5c-41c9-8aa3-8313773f5443
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 5bbf82fea8c226b081df64dce7f2fc9815240764
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 60194ee2eaae5d209df2579b4351c58e4c3c3fd0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66803601"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67955723"
 ---
 # <a name="clearwarnings-method-sqlserverresultset"></a>Метод clearWarnings (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public void clearWarnings()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод clearWarnings указывается с помощью метода clearWarnings в интерфейсе java.sql.ResultSet.  
+ Этот метод clearWarnings задается методом clearWarnings в интерфейсе Java. SQL. Result.  
   
 ## <a name="see-also"></a>См. также:  
  [Элементы SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

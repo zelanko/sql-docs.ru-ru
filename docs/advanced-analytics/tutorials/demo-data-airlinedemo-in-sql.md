@@ -7,15 +7,15 @@ ms.date: 10/22/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 82afddf861ecda2d25260f69e532c63a1203030b
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 38e61bcbf3a5ff5ed44f85d5ad28406550e5a726
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68344626"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68469675"
 ---
 #  <a name="airline-flight-arrival-demo-data-for-sql-server-python-and-r-tutorials"></a>Демонстрационные данные о прибытии авиабилетов для SQL Server Python и R
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 В этом упражнении вы создадите базу данных SQL Server для хранения импортированных данных из встроенных демонстрационных наборов данных авиакомпании на языке R или Python. Дистрибутивы R и Python предоставляют эквивалентные данные, которые можно импортировать в SQL Server базу данных с помощью Management Studio.
 

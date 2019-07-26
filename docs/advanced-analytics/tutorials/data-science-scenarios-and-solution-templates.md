@@ -6,15 +6,15 @@ ms.date: 03/29/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: e50344bc94f25e6efd8303f93506401448f94fd1
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: cb144eb5c766b417884f6f1adb67dc0ac48504a5
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68344730"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68469781"
 ---
 # <a name="data-science-scenarios-and-solution-templates"></a>Сценарии обработки и анализа данных и шаблоны решений
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Шаблоны — это образцы решений, которые демонстрируют практические приемы и предоставляют стандартные блоки для быстрой реализации собственного решения. Каждый шаблон предназначен для решения определенной проблемы для определенной вертикальной или отрасли. Каждый шаблон охватывает различные задачи: от подготовки данных и формирования характеристик до обучения модели и оценки. Используйте эти шаблоны, чтобы узнать [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] , как работает. Затем вы можете настроить шаблон в соответствии с собственными сценариями и создать собственное решение. 
 

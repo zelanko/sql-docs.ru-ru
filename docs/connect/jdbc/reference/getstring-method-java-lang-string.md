@@ -1,5 +1,5 @@
 ---
-title: Метод getString (java.lang.String) | Документация Майкрософт
+title: Метод getString (java.lang.String) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: f67371e0-e879-4188-85fc-ecb85f0be2a9
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 114eaa8b3300f5e0785a3bac389eb00d4d5ee7ec
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: a4ff58d1a2f58e044b49767f8fb2982b669a7b78
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66773724"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67979435"
 ---
 # <a name="getstring-method-javalangstring"></a>Метод getString (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,7 +35,7 @@ public java.lang.String getString(java.lang.String sCol)
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *sCol*  
+ *скол*  
   
  Значение типа **String**, содержащее имя параметра.  
   

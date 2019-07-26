@@ -7,15 +7,15 @@ ms.date: 03/29/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 2e9c9353acdc0a2641203788c8e4883a9accb021
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: b4284d77464597857eca500b4a8ad29e1f4d06ee
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345676"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68469969"
 ---
 # <a name="real-time-scoring-with-sprxpredict-in-sql-server-machine-learning"></a>Оценка в реальном времени с помощью sp_rxPredict в машинном обучении SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Оценка в режиме реального времени использует системную хранимую процедуру [sp_rxPredict](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-rxpredict-transact-sql) и возможности расширения среды CLR в SQL Server для высокопроизводительных прогнозов или оценки рабочих нагрузок прогнозирования. Оценка в реальном времени не зависит от языка и выполняется без зависимостей от времени выполнения R или Python. Предполагая, что модель создана и обучена с помощью функций Майкрософт, а затем сериализована в двоичный формат в SQL Server, вы можете использовать оценку в реальном времени для создания прогнозируемых результатов для новых входных данных в экземплярах SQL Server, у которых нет надстройки R или Python. Установка.
 
@@ -32,7 +32,7 @@ ms.locfileid: "68345676"
 3. Вы предоставляете в качестве входных данных новые входные данные для оценки, табличные или отдельные строки.
 4. Чтобы создать оценки, вызовите хранимую процедуру [sp_rxPredict](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-rxpredict-transact-sql) .
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 + [Включите интеграцию со средой CLR SQL Server](https://docs.microsoft.com/dotnet/framework/data/adonet/sql/introduction-to-sql-server-clr-integration).
 

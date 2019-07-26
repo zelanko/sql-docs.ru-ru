@@ -7,15 +7,15 @@ ms.date: 01/04/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: c2c36c5aa81da098064885fd5b006d78494cd962
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 47ee23d945ded9fac97fe3eddc2137eeead00ae1
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345763"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68469503"
 ---
 # <a name="quickstart-create-train-and-use-a-python-model-with-stored-procedures-in-sql-server"></a>Краткое руководство. Создание, обучение и использование модели Python с хранимыми процедурами в SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 В этом кратком руководстве по Python вы создадите и выполните две хранимые процедуры. В первой из них используется набор данных классической модели диафрагмы и создается модель упрощенного алгоритма Байеса для прогнозирования виды Цветова диафрагмы на основе характеристик цветов. Вторая процедура предназначена для оценки. Он вызывает модель, созданную в первой процедуре, для вывода набора прогнозов. Поместив код в хранимую процедуру, операции хранятся, повторно используются и вызываемые другими хранимыми процедурами и клиентскими приложениями. 
 

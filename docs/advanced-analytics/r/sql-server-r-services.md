@@ -8,15 +8,15 @@ ms.topic: overview
 author: dphansen
 ms.author: davidph
 monikerRange: =sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: e849140125ba39c7c1d8601c5ef32880a9d633ac
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 32487d8c1a6c87c9ad916e4cfd517f9ba4cba6e2
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68344844"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68469909"
 ---
 # <a name="r-services-in-sql-server-2016"></a>Службы R в SQL Server 2016
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Службы R — это надстройка для экземпляра ядра СУБД SQL Server 2016, используемая для исполнения кода R и функций в SQL Server. Код выполняется в инфраструктуре расширяемости, изолированной от процессов ядра, но полностью доступной для реляционных данных в виде хранимых процедур, как скрипт T-SQL, содержащий инструкции R, или как код R, содержащий T-SQL. 
 

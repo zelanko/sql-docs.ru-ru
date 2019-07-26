@@ -1,5 +1,5 @@
 ---
-title: Метод getIndexInfo (SQLServerDatabaseMetaData) | Документация Майкрософт
+title: Метод Жетиндексинфо (SQLServerDatabaseMetaData) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 8a677cc6-8e33-4e57-8678-0849345aa8d0
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 22414058b0763f32c2b991487e006b8de8e50611
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 8dd512236aa3070ce299756d4e4294c79ac2e94a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66774347"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67982789"
 ---
 # <a name="getindexinfo-method-sqlserverdatabasemetadata"></a>Метод getIndexInfo (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -54,11 +53,11 @@ public java.sql.ResultSet getIndexInfo(java.lang.String cat,
   
  *unique*  
   
- **значение true,** Если возвращаются только индексы для уникальных значений. **false** Если возвращаются все индексы.  
+ **значение true** , если возвращаются только индексы для уникальных значений. **значение false** , если возвращаются все индексы.  
   
  *approximate*  
   
- **значение true,** Если результаты отражают приблизительные или устаревшие значения. **false** Если результаты точны.  
+ **значение true** , если результаты отображают приблизительные или неактуальные значения. **значение false** , если результаты являются точными.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Объект [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).  
@@ -67,7 +66,7 @@ public java.sql.ResultSet getIndexInfo(java.lang.String cat,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод getIndexInfo указывается с помощью метода getIndexInfo в интерфейсе java.sql.DatabaseMetaData.  
+ Этот метод getIndexInfo определен с помощью метода getIndexInfo в интерфейсе java.sql.DatabaseMetaData.  
   
  Результирующий набор, возвращаемый методом getIndexInfo, включает следующие данные.  
   
