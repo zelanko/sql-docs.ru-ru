@@ -27,7 +27,7 @@ ms.locfileid: "66100940"
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Собственный режим | Режим интеграции с SharePoint|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Собственный режим &#124; Режим интеграции с SharePoint|  
   
  **В этом разделе:**  
   

@@ -1,7 +1,7 @@
 ---
-title: Создание и экспорт машинного обучения моделей с MLeap Spark
+title: Создание и экспорт моделей машинного обучения Spark с помощью Млеап
 titleSuffix: SQL Server big data clusters
-description: Используйте PySpark для обучения и создания моделей машинного обучения с помощью Spark в кластерах больших данных SQL Server (Предварительная версия). Экспорт с MLeap, а затем в SQL Server для создания модели с помощью Java.
+description: Используйте PySpark для обучения и создания моделей машинного обучения с помощью Spark на SQL Server кластерах больших данных (Предварительная версия). Экспортируйте с помощью Млеап, а затем оцените модель с помощью Java в SQL Server.
 author: lgongmsft
 ms.author: lgong
 ms.reviewer: mikeray
@@ -10,62 +10,62 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: aa4c31eca725e8e662937259f078cf00a3441915
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67727375"
 ---
-# <a name="create-export-and-score-spark-machine-learning-models-on-sql-server-big-data-clusters"></a>Создание, экспорт и оценка моделей машинного обучения Spark в кластерах больших данных в SQL Server
+# <a name="create-export-and-score-spark-machine-learning-models-on-sql-server-big-data-clusters"></a>Создание, экспорт и оценка моделей машинного обучения Spark на SQL Server кластерах больших данных
 
-Ниже приведен пример, как создать модель с [Spark ML](https://spark.apache.org/docs/latest/ml-guide.html), экспортировать модель для [MLeap](http://mleap-docs.combust.ml/)и оценка модели в SQL Server с его [расширение языка Java](../language-extensions/language-extensions-overview.md). Это делается в контексте кластера SQL Server 2019 больших данных.
+В следующем примере показано, как создать модель с помощью [Spark ML](https://spark.apache.org/docs/latest/ml-guide.html), экспортировать модель в [млеап](http://mleap-docs.combust.ml/)и оценить модель в SQL Server с [расширением языка Java](../language-extensions/language-extensions-overview.md). Это делается в контексте кластера больших данных SQL Server 2019.
 
-На следующей схеме показана работа, выполняемая в этом примере:
+На следующей схеме показана работа, выполненная в этом примере:
 
-![Экспорт оценки обучение с помощью spark](./media/spark-create-machine-learning-model/train-score-export-with-spark.png)
+![Экспорт результатов обучения с помощью Spark](./media/spark-create-machine-learning-model/train-score-export-with-spark.png)
 
 ## <a name="prerequisites"></a>предварительные требования
 
-Все файлы для этого образца приведены в [ https://github.com/microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/spark/sparkml ](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/spark/sparkml).
+Все файлы для этого примера находятся в [https://github.com/microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/spark/sparkml](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/spark/sparkml)папке.
 
-Чтобы запустить пример, необходимо также иметь следующие предварительные требования:
+Чтобы запустить пример, необходимо также выполнить следующие предварительные требования.
 
-- Объект [кластера больших данных в SQL Server](deploy-get-started.md)
+- [SQL Server кластер больших данных](deploy-get-started.md)
 
-- [Средства работы с большими данными](deploy-big-data-tools.md)
+- [Инструменты для обработки больших данных](deploy-big-data-tools.md)
    - **kubectl**
-   - **curl**
+   - **листывания**
    - **Azure Data Studio**
 
-## <a name="model-training-with-spark-ml"></a>Обучение модели с помощью машинного Обучения Spark
+## <a name="model-training-with-spark-ml"></a>Обучение модели с помощью Spark ML
 
-Для этого примера данных переписи населения (**AdultCensusIncome.csv**) используется для создания модели машинного Обучения Spark конвейера.
+В этом примере для построения модели конвейера Spark машинного обучения используется перепись данных (**адултценсусинкоме. csv**).
 
-1. Используйте [mleap_sql_test/setup.sh](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/sql-big-data-cluster/spark/sparklm/mleap_sql_test/setup.sh) файл, чтобы скачать набор данных из Интернета и поместите ее в HDFS в кластере SQL Server больших данных. Это позволяет получать доступ к ней с помощью Spark.
+1. Используйте файл [mleap_sql_test/Setup. sh](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/sql-big-data-cluster/spark/sparklm/mleap_sql_test/setup.sh) , чтобы скачать набор данных из Интернета и разместить его в HDFS в SQL Server кластере больших данных. Это обеспечивает доступ к нему с помощью Spark.
 
-1. Загрузите образец notebook [train_score_export_ml_models_with_spark.ipynb](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/sql-big-data-cluster/spark/sparkml/train_score_export_ml_models_with_spark.ipynb). Из командной строки PowerShell или bash выполните следующую команду, чтобы загрузить записную книжку:
+1. Затем скачайте пример записной книжки [train_score_export_ml_models_with_spark. ipynb](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/sql-big-data-cluster/spark/sparkml/train_score_export_ml_models_with_spark.ipynb). В командной строке PowerShell или bash выполните следующую команду, чтобы скачать записную книжку:
 
    ```PowerShell
    curl -o mssql_spark_connector.ipynb "https://raw.githubusercontent.com/microsoft/sql-server-samples/master/samples/features/sql-big-data-cluster/spark/sparkml/train_score_export_ml_models_with_spark.ipynb"
    ```
 
-   Эта записная книжка содержит ячейки с необходимые команды для этого раздела примера.
+   Эта записная книжка содержит ячейки с необходимыми командами для этого раздела примера.
 
-1. Откройте записную книжку в Azure Data Studio и выполните каждый блок кода. Дополнительные сведения о работе с записными книжками, см. в разделе [использованию записных книжек в предварительной версии SQL Server 2019](notebooks-guidance.md).
+1. Откройте записную книжку в Azure Data Studio и выполните каждый блок кода. Дополнительные сведения о работе с записными книжками см. [в статье использование записных книжек в предварительной версии SQL Server 2019](notebooks-guidance.md).
 
-Сначала данные считываются в Spark и разбить на обучающий и проверочный наборы данных. Затем код обучает модель конвейера с обучающими данными. Наконец он экспортирует комплект MLeap модели.
+Данные сначала считываются в Spark и разбиваются на обучающие и проверочные наборы данных. Затем код обучает модель конвейера с обучающими данными. Наконец, она экспортирует модель в пакет Млеап.
 
 > [!TIP]
-> Можно также просмотреть и выполнять код Python, связанных с этими шагами за пределами записную книжку в [mleap_sql_test/mleap_pyspark.py](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/sql-big-data-cluster/spark/sparklm/mleap_sql_test/mleap_pyspark.py) файла.
+> Вы также можете проверить или выполнить код Python, связанный с этими шагами, за пределами записной книжки в файле [mleap_sql_test/mleap_pyspark. корректировки](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/sql-big-data-cluster/spark/sparklm/mleap_sql_test/mleap_pyspark.py) .
 
-## <a name="model-scoring-with-sql-server"></a>Модель оценки при помощи SQL Server
+## <a name="model-scoring-with-sql-server"></a>Оценка модели с помощью SQL Server
 
-Теперь, когда модель конвейера машинного Обучения Spark находится в распространенных сериализации [MLeap пакета](http://mleap-docs.combust.ml/core-concepts/mleap-bundles.html) формате, вы можете оценить модели на языке Java в отсутствие Spark. 
+Теперь, когда модель конвейера Spark машинного обучения находится в стандартном формате [пакета сериализации млеап](http://mleap-docs.combust.ml/core-concepts/mleap-bundles.html) , можно оценить модель в Java без наличия Spark. 
 
-В этом примере используется [расширение языка Java](../language-extensions/language-extensions-overview.md) в SQL Server. С целью оценки модели в SQL Server, необходимо сначала создать приложение Java, которое можно загрузить модель в Java и оценить ее. Можно найти в примере кода для этого приложения Java в [папка mssql-mleap-app](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/sql-big-data-cluster/spark/sparklm/mssql-mleap-app).
+В этом примере используется [расширение языка Java](../language-extensions/language-extensions-overview.md) в SQL Server. Чтобы оценить модель в SQL Server, сначала необходимо создать приложение Java, которое может загрузить модель в Java и оценить ее. Пример кода для этого приложения Java можно найти в [папке MSSQL-млеап-App](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/sql-big-data-cluster/spark/sparklm/mssql-mleap-app).
 
-После построения образца можно использовать Transact-SQL для вызова приложения Java и оценка модели с таблицей базы данных. Это можно увидеть в тебя [mleap_sql_test/mleap_sql_tests.py](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/sql-big-data-cluster/spark/sparklm/mleap_sql_test/mleap_sql_tests.py) исходный файл.
+После создания примера можно использовать Transact-SQL для вызова приложения Java и оценки модели с таблицей базы данных. Это можно увидеть в исходном файле три [mleap_sql_test/mleap_sql_tests. корректировки](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/sql-big-data-cluster/spark/sparklm/mleap_sql_test/mleap_sql_tests.py) .
 
 ## <a name="next-steps"></a>Следующие шаги
 
-Дополнительные сведения о кластерах большие данные см. в разделе [кластеров развертывание больших данных в SQL Server в Kubernetes](deployment-guidance.md)
+Дополнительные сведения о кластерах больших данных см. в статье [развертывание SQL Server кластеров больших данных в Kubernetes](deployment-guidance.md) .
