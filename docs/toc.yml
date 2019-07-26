@@ -75,7 +75,7 @@
               href: big-data-cluster/concept-data-persistence.md
             - name: Автономное развертывание
               href: big-data-cluster/deploy-offline.md
-            - name: Цели развертывания
+            - name: Кластеры Kubernetes
               items:
                 - name: Служба Azure Kubernetes
                   href: big-data-cluster/deploy-on-aks.md
@@ -85,9 +85,11 @@
                   href: big-data-cluster/deploy-on-minikube.md
             - name: Скрипты развертывания
               items:
-                - name: Служба Azure Kubernetes
+                - name: Скрипт AKS на Python
                   href: big-data-cluster/quickstart-big-data-cluster-deploy.md
-                - name: Развертывание с помощью записных книжек Azure Data Studio
+                - name: Скрипт для kubeadm с одним узлом
+                  href: big-data-cluster/deployment-script-single-node-kubeadm.md
+                - name: Развертывание с помощью записных книжек
                   href: big-data-cluster/deploy-notebooks.md
     - name: Основные понятия
       items:
@@ -728,7 +730,7 @@
               href: database-engine/availability-groups/windows/overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md
             - name: T-SQL
               href: database-engine/availability-groups/windows/transact-sql-statements-for-always-on-availability-groups.md
-            - name: Диалоговые окна и мастера
+            - name: Диалоговые окна и мастеры
               items:
                 - name: Добавление IP-адреса
                   href: database-engine/availability-groups/windows/add-ip-address-dialog-box-sql-server-management-studio.md
@@ -6670,6 +6672,8 @@
                   href: relational-databases/logs/change-the-target-recovery-time-of-a-database-sql-server.md
         - name: "Служебная программа SQL\_Server"
           href: relational-databases/manage/sql-server-utility-features-and-tasks.md
+        - name: "API Оценки\_SQL"
+          href: sql-assessment-api/sql-assessment-api-overview.md
           items:
             - name: "Замечания по одновременному выполнению наборов элементов сбора, относящихся и не относящихся к служебной программе, в одном экземпляре SQL\_Server"
               href: relational-databases/manage/run-utility-and-non-utility-collection-sets-on-same-sql-instance.md
@@ -7500,7 +7504,7 @@
 - name: Отчеты и аналитика
   items:
     - name: "Расширенная аналитика и машинное обучение\_>"
-      href: advanced-analytics/index.md
+      href: advanced-analytics/
     - name: "Система платформы аналитики\_>>"
       displayName: 'APS, PDW, Parallel Data Warehouse'
       href: analytics-platform-system/index.md

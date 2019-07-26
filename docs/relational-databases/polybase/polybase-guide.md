@@ -18,12 +18,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: aboke
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions||>=aps-pdw-2016||=azure-sqldw-latest'
-ms.openlocfilehash: 1e4818e153e9fe632d4341afb8845aceb7fd6142
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b414cf8eb783a64deb65010ab549c9791e82580c
+ms.sourcegitcommit: 63c6f3758aaacb8b72462c2002282d3582460e0b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68062221"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68495381"
 ---
 # <a name="what-is-polybase"></a>Что такое PolyBase?
 
@@ -119,6 +119,6 @@ PolyBase поддерживает перечисленные ниже сцена
 - [Oracle;](polybase-configure-oracle.md)
 - [Teradata](polybase-configure-teradata.md)
 - [MongoDB](polybase-configure-mongodb.md)
-- [Универсальные типы ODBC](../../relational-databases/polybase/polybase-installation.md)
+- [Универсальные типы ODBC](polybase-configure-odbc-generic.md)
 
 ::: moniker-end
