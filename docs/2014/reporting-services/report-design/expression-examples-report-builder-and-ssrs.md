@@ -9,16 +9,16 @@ manager: kfile
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 03/08/2017
-ms.openlocfilehash: 456dd8e4e232f77e7cc7709a997fdd8ae5ef0e5b
-ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
+ms.openlocfilehash: 77aca108aa3acae73dfb3fa226aa0530b6a9b8b5
+ms.sourcegitcommit: 97e94b76f9f48d161798afcf89a8c2ac0f09c584
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67413006"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68661284"
 ---
 # <a name="expression-examples-report-builder-and-ssrs"></a>Примеры выражений (построитель отчетов и службы SSRS)
 
-Выражения часто используются в отчетах для управления содержимым и внешним видом отчета. Выражения записываются на [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]и можно использовать встроенные функции пользовательского кода, отчет и групповые переменные и определяемые пользователем переменные. Выражения начинаются со знака равенства (=). Дополнительные сведения о редакторе выражений и типах ссылок, которые могут быть включены, см. в разделах [Использование выражений в отчетах (построитель отчетов и службы SSRS)](expression-uses-in-reports-report-builder-and-ssrs.md) и [Добавление выражения (построитель отчетов и службы SSRS)](add-an-expression-report-builder-and-ssrs.md).  
+Выражения часто используются в отчетах для управления содержимым и внешним видом отчета. Выражения записываются [!INCLUDE[msCoName](../../includes/msconame-md.md)] в [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]и могут использовать встроенные функции пользовательский код, переменные отчета и группы, а также пользовательские переменные. Выражения начинаются со знака равенства (=). Дополнительные сведения о редакторе выражений и типах ссылок, которые могут быть включены, см. в разделах [Использование выражений в отчетах (построитель отчетов и службы SSRS)](expression-uses-in-reports-report-builder-and-ssrs.md) и [Добавление выражения (построитель отчетов и службы SSRS)](add-an-expression-report-builder-and-ssrs.md).  
 
 > [!IMPORTANT]  
 >  При включении функции «песочницы» для языка определения отчетов только определенные типы и элементы смогут использовать в тексте выражения во время публикации отчета. Дополнительные сведения см. в статье [Enable and Disable RDL Sandboxing](../enable-and-disable-rdl-sandboxing.md).  
@@ -51,7 +51,7 @@ ms.locfileid: "67413006"
 
 Сведения о написании выражений, в которых используются многие функции и операторы, применяемые в примерах выражений в этом разделе в контексте создания отчета, см. в статье [ Учебник. Общие сведения о выражениях](../tutorial-introducing-expressions.md).  
 
-Редактор выражений поддерживает иерархическое представление встроенных функций. Если выбрать функцию, на панели значений появится пример программного кода. Дополнительные сведения см. в разделе [Expression Dialog Box](../expression-dialog-box.md) или [Expression Dialog Box &#40;построитель отчетов&#41;](../expression-dialog-box-report-builder.md).  
+Редактор выражений поддерживает иерархическое представление встроенных функций. Если выбрать функцию, на панели значений появится пример программного кода. Дополнительные сведения см. в разделе Диалоговое окно [выражения](../expression-dialog-box.md) или [диалоговое &#40;окно&#41;выражения построитель отчетов](../expression-dialog-box-report-builder.md).  
 
 ## <a name="functions"></a>Функции  
 
@@ -176,9 +176,9 @@ Month(Fields!MyDate.Value),1), Fields!FullDateAlternateKey.Value)/7)+1).ToString
 =Format(Parameters!StartDate.Value, "D") & " through " &  Format(Parameters!EndDate.Value, "D")    
 ```  
 
-Если текстовое поле содержит только дату или число, следует использовать свойство форматирования текстового поля для форматирования вместо `Format` функции внутри текстового поля.  
+Если текстовое поле содержит только дату или число, следует использовать свойство формат текстового поля, чтобы применить форматирование вместо `Format` функции в текстовом поле.  
 
--   `Right`, `Len`, И `InStr` функции полезны для извлечения подстроки, например, сокращение *домена*\\*username* для имени пользователя. Следующее выражение возвращает часть строки параметра\\User *, расположенную справа от символа обратной косой черты (* ).  
+-   Функции `Right`, `Len`и `InStr` полезны для извлечения подстроки, например имени пользователя из строк вида *ДОМЕН*\\*имя пользователя*. Следующее выражение возвращает часть строки параметра\\User *, расположенную справа от символа обратной косой черты (* ).  
 
 ```  
 =Right(Parameters!User.Value, Len(Parameters!User.Value) - InStr(Parameters!User.Value, "\"))  
@@ -190,7 +190,7 @@ Month(Fields!MyDate.Value),1), Fields!FullDateAlternateKey.Value)/7)+1).ToString
 =Parameters!User.Value.Substring(Parameters!User.Value.IndexOf("\")+1, Parameters!User.Value.Length-Parameters!User.Value.IndexOf("\")-1)  
 ```  
 
--   Отображает выбранные значения из многозначного параметра. В следующем примере используется `Join` функцию для объединения выбранных значений параметра *MySelection* в одну строку, можно задать в качестве выражения для значения текстового поля в элементе отчета:  
+-   Отображает выбранные значения из многозначного параметра. В следующем примере `Join` функция используется для сцепления выбранных значений параметра *MySelection* с одной строкой, которая может быть задана как выражение для значения текстового поля в элементе отчета:  
 
 ```  
 = Join(Parameters!MySelection.Value)  
@@ -203,7 +203,7 @@ Month(Fields!MyDate.Value),1), Fields!FullDateAlternateKey.Value)/7)+1).ToString
 
 ```  
 
--   `Regex` Функции [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.Text.RegularExpressions> полезны при изменении формата существующих строк, например при форматировании телефонного номера. В следующем выражении используются `Replace` функции для изменения формата десятизначного номера телефона в поле "*nnn*-*nnn*-*nnnn* "к «(*nnn*) *nnn*-*nnnn*«:  
+-   `Regex` Функции [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] из используются для изменения формата существующих строк, например для форматирования телефонного номера. <xref:System.Text.RegularExpressions> Следующее выражение использует `Replace` функцию для изменения формата 10-значного телефонного номера в поле с "*nnn*-*nnn*-*nnnn*" на "(*nnn*) *nnn* - *nnnn*":  
 
 ```  
 =System.Text.RegularExpressions.Regex.Replace(Fields!Phone.Value, "(\d{3})[ -.]*(\d{3})[ -.]*(\d{4})", "($1) $2-$3")  
@@ -217,7 +217,7 @@ Month(Fields!MyDate.Value),1), Fields!FullDateAlternateKey.Value)/7)+1).ToString
 -   При указании ключевого поля можно использовать функцию `Lookup` для извлечения значения из набора данных со связью «один к одному», например для пары «ключ-значение». Следующее выражение отображает из набора данных (Product) название продукта по его идентификатору:  
 
 ```  
-=Lookup(Fields!PID.Value, Fields!ProductID.Value, Fields.ProductName.Value, "Product")  
+=Lookup(Fields!PID.Value, Fields!ProductID.Value, Fields!ProductName.Value, "Product")  
 ```  
 
 #### <a name="lookupset"></a>LookupSet  
@@ -433,7 +433,7 @@ IIF(Fields!Month.Value=0,"NA",MonthName(IIF(Fields!Month.Value=0,1,Fields!Month.
 =IIF(CountRows()>12,false,true)  
 ```  
 
--   Следующее выражение, заданное `Hidden` свойство столбца, показывает столбец только в том, существует ли поле в наборе данных отчета после получения данных из источника данных:  
+-   Следующее выражение, установленное в `Hidden` свойстве столбца, показывает столбец только в том случае, если поле существует в наборе данных отчета после извлечения данных из источника данных:  
 
 ```  
 =IIF(Fields!Column_1.IsMissing, true, false)  
