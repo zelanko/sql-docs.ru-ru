@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 79d2ea5a-edd8-4b3b-9502-96202057b01a
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 87bd6d36f7a17f3a5d8e1f9ff26de645353b3fdc
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 1b602c83e87c10a1f7ceca9bd874adbfd441370b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699654"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67904913"
 ---
 # <a name="windows-server-failover-clustering-with-sql-server"></a>Отказоустойчивая кластеризация Windows Server с SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -73,7 +72,7 @@ ms.locfileid: "51699654"
   
 -   **Координация отработки отказа.** Каждый ресурс настроен для размещения на основном узле, и каждый можно автоматически или вручную переносить на один или несколько второстепенных узлов. Политика отработки отказа в зависимости от исправности управляет автоматическим переносом владения ресурсами между узлами. Узлы и размещенные приложения получают уведомления об отработке отказа, что позволяет им выполнить соответствующие действия.  
   
- Дополнительные сведения см. в статье [Failover Clustering Overview — Windows Server](https://technet.microsoft.com/library/hh831579(v=ws.11).aspx)(Обзор отказоустойчивой кластеризации — Windows Server).  
+ Дополнительные сведения см. в разделе: [Общие сведения об отказоустойчивой кластеризации — Windows Server](https://technet.microsoft.com/library/hh831579(v=ws.11).aspx)  
   
 ##  <a name="AlwaysOnWsfcTech"></a> Технологии SQL Server AlwaysOn и WSFC  
  [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] *AlwaysOn* — это новое решение высокого уровня доступности и аварийного восстановления с использованием WSFC. Компоненты AlwaysOn представляют собой интегрированные, гибкие решения, повышающие доступность приложений, окупаемость вложений в оборудование и упрощающее развертывание систем высокого уровня доступности и управление ими.  
@@ -82,16 +81,16 @@ ms.locfileid: "51699654"
   
 > **ВАЖНО!** Чтобы воспользоваться всеми возможностями технологий [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] AlwaysOn, вам следует выполнить несколько связанных с WSFC предварительных требований.  
 >   
->  Дополнительные сведения см. в разделе [Предварительные требования, ограничения и рекомендации для групп доступности AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)  
+>  Дополнительные сведения см. в разделе: [Предварительные требования, ограничения и рекомендации для групп доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)  
   
 ### <a name="instance-level-high-availability-with-always-on-failover-cluster-instances"></a>Высокий уровень доступности на уровне экземпляра с помощью экземпляров отказоустойчивого кластера AlwaysOn  
  *Экземпляр отказоустойчивого кластера* AlwaysOn представляет собой экземпляр [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], установленный на нескольких узлах в кластере WSFC. Этот тип экземпляра зависит от ресурсов для хранения и имени виртуальной сети. Хранилище может использовать общее дисковое пространство на базе Fibre Channel, iSCSI, FCoE или SAS либо локально подключенное хранилище на основе [локальных дисковых пространств (S2D)](https://technet.microsoft.com/windows-server-docs/storage/storage-spaces/storage-spaces-direct-overview). Ресурс имени виртуальной сети зависит от одного или нескольких виртуальных IP-адресов, которые расположены в разных подсетях. Служба SQL Server и служба агента SQL Server также являются ресурсами, и обе они зависят от ресурсов хранилища и имени виртуальной сети.  
   
  В случае отработки отказа служба WSFC переносит владение ресурсов экземпляра на указанный узел отработки отказа. Затем экземпляр [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] перезапускается на узле отработки отказа и выполняется обычное восстановление баз данных. В любой момент времени FCI и базовые ресурсы могут размещаться только на одном узле в кластере.  
   
-> **ПРИМЕЧАНИЕ.**  Экземпляру отказоустойчивого кластера AlwaysOn требуется симметричное общее дисковое хранилище, например сеть хранения данных (SAN) или общая папка SMB.  Тома общего дискового хранилища должны быть доступны всем потенциальным узлам отработки отказа в кластере WSFC.  
+> **ПРИМЕЧАНИЕ.**  Экземпляру отказоустойчивого кластера Always On требуется симметричное общее дисковое хранилище, например сеть хранения данных (SAN) или общая папка SMB.  Тома общего дискового хранилища должны быть доступны всем потенциальным узлам отработки отказа в кластере WSFC.  
   
- Дополнительные сведения см. в разделе [Экземпляры отказоустойчивого кластера (режим AlwaysOn) &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)  
+ Дополнительные сведения см. в разделе: [Экземпляры отказоустойчивого кластера (режим AlwaysOn) (SQL Server)](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)  
   
 ### <a name="database-level-high-availability-with-includesshadrincludessshadr-mdmd"></a>Высокий уровень доступности на уровне баз данных с [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]  
  *Группа доступности* AlwaysOn — это одна или несколько пользовательских баз данных, для которых отработка отказа выполняется одновременно. Группа доступности состоит из первичной *реплики доступности* и от одной до четырех вторичных реплик, которые поддерживаются за счет перемещения данных на основании журнала SQL Server для обеспечения защиты данных, не требующей общего хранилища. Каждая реплика размещается в экземпляре [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в отдельном узле кластера WSFC. Группа доступности и соответствующее имя виртуальной сети регистрируются как ресурсы в кластере WSFC.  
@@ -106,7 +105,7 @@ ms.locfileid: "51699654"
 >   
 >  Экземпляр отказоустойчивого кластера (FCI) может использоваться совместно с группой доступности для повышения доступности реплики доступности. Однако во избежание соперничества в кластере WSFC автоматический переход на другой ресурс группы доступности не поддерживается для реплики доступности, размещенной в FCI.  
   
- Дополнительные сведения см. в статье [Обзор групп доступности AlwaysOn SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
+ Дополнительные сведения см. в разделе: [Обзор групп доступности Always On (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
 ##  <a name="AlwaysOnWsfcHealth"></a> Мониторинг исправности WSFC и отработка отказа  
  Высокий уровень доступности для решения AlwaysOn достигается за счет упреждающего мониторинга работоспособности физических и логических ресурсов кластера WSFC, а также за счет автоматического перехода на другой ресурс с переходом на дублирующее оборудование и его перенастройкой.  Системный администратор также может запустить *переход на другой ресурс вручную* для группы доступности или экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] для перехода с одного узла на другой.  
@@ -116,7 +115,7 @@ ms.locfileid: "51699654"
   
  Отработка отказа реплики группы доступности не влияет на базовый экземпляр [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  При отработке отказа экземпляра отказоустойчивого кластера вместе с этим экземпляром перемещаются размещенные реплики группы доступности.  
   
- Дополнительные сведения см. в разделе [Политика отработки отказа для экземпляров откзоустойчивого кластера](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md).  
+ Дополнительные сведения см. в разделе: [Failover Policy for Failover Cluster Instances](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)  
   
 ### <a name="wsfc-resource-health-detection"></a>Определение исправности ресурсов WSFC  
  Все ресурсы в кластере WSFC могут сообщать о своем состоянии и работоспособности периодически или по запросу. Об отказе ресурса могут говорить различные обстоятельства, например неисправность электропитания, ошибки дисков или памяти, ошибки в сети, неотвечающие службы.  
@@ -132,7 +131,7 @@ ms.locfileid: "51699654"
   
 > **СОВЕТ.** Рекомендуется, чтобы число голосов кворума в кластере WSFC всегда было нечетным.  По соображениям голосования кворума нет необходимости устанавливать [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] на всех узлах в кластере. Дополнительный сервер может выступать в качестве члена кворума, либо модель кворума WSFC можно настроить для использования удаленной общей папки в качестве решающего голоса.  
 >   
->  Дополнительные сведения см. в разделе [Режим кворума и участвующая в голосовании конфигурация WSFC (SQL Server)](../../../sql-server/failover-clusters/windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md).  
+>  Дополнительные сведения см. в разделе: [Режимы кворума WSFC и участвующая в голосовании конфигурация (SQL Server)](../../../sql-server/failover-clusters/windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md)  
   
 ### <a name="disaster-recovery-through-forcing-quorum"></a>Аварийное восстановление через принудительный кворум  
  В зависимости от принятых методов работы и конфигурации кластера WSFC можно использовать как автоматический, так и ручной переход на другой ресурс. При этом решение [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] AlwaysOn остается всегда надежным и отказоустойчивым. Однако если кворуму узлов с правом голоса в кластере WSFC не удается связаться друг с другом либо если кластеру WSFC по другим причинам не удается проверить работоспособность, то кластер WSFC может перейти в автономный режим.  
@@ -141,7 +140,7 @@ ms.locfileid: "51699654"
   
  После этого будет необходимо также предпринять ряд действий по перенастройке кластера WSFC, восстановлению затронутых реплик баз данных и повторному созданию кворума.  
   
- Дополнительные сведения см. в статье [Аварийное восстановление WSFC через принудительный кворум (SQL Server)](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md).  
+ Дополнительные сведения см. в разделе: [Аварийное восстановление WSFC через принудительный кворум (SQL Server)](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md)  
   
 ##  <a name="AlwaysOnWsfcRelationship"></a> Связь компонентов SQL Server AlwaysOn с WSFC  
  Между функциями и компонентами [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] AlwaysOn и WSFC существуют связи нескольких уровней.  
@@ -173,7 +172,7 @@ ms.locfileid: "51699654"
   
 ##  <a name="RelatedContent"></a> См. также  
   
--   [Технологии Windows Server: отказоустойчивые кластеры](https://technet.microsoft.com/library/cc732488\(v=WS.10\).aspx)  
+-   [Технологии Windows Server.  Отказоустойчивые кластеры](https://technet.microsoft.com/library/cc732488\(v=WS.10\).aspx)  
 
 -   [Обзор локальных дисковых пространств \(S2D\)](https://technet.microsoft.com/windows-server-docs/storage/storage-spaces/storage-spaces-direct-overview)
 

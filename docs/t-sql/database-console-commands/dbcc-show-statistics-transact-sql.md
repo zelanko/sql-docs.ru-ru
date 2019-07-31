@@ -32,14 +32,13 @@ helpviewer_keywords:
 ms.assetid: 12be2923-7289-4150-b497-f17e76a50b2e
 author: pmasl
 ms.author: umajay
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3bf37beac7838f3dcb1e111e3632952864b8d7bd
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 327b084471155c9e7d8451fc8dceec8e4c00496f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685781"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68116481"
 ---
 # <a name="dbcc-showstatistics-transact-sql"></a>Инструкция DBCC SHOW_STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -87,7 +86,7 @@ DBCC SHOW_STATISTICS ( table_name , target )
  NO_INFOMSGS  
  Подавляет все информационные сообщения со степенями серьезности от 0 до 10.  
   
- STAT_HEADER | DENSITY_VECTOR | HISTOGRAM | STATS_STREAM [ **,**_n_ ]  
+ STAT_HEADER | DENSITY_VECTOR | HISTOGRAM | STATS_STREAM [ **,** _n_ ]  
  Указание одного или более из этих параметров ограничивает результирующие наборы. Если параметры не указаны, то возвращаются все статистические данные.  
   
  Аргумент STATS_STREAM имеет тип [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
@@ -104,7 +103,7 @@ DBCC SHOW_STATISTICS ( table_name , target )
 |Шаги|Число шагов в гистограмме. Каждый шаг охватывает диапазон значений столбцов, за которым следует значение столбца, представляющее собой верхнюю границу. Шаги гистограммы определяются в первом ключевом столбце статистики. Максимальное число шагов — 200.|  
 |Плотность|Рассчитывается как 1 / *различающиеся значения* для всех значений в первом ключевом столбце объекта статистики, исключая возможные значения гистограммы. Это значение плотности не используется оптимизатором запросов и отображается для обратной совместимости с версиями, выпущенными до [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].|  
 |Средняя длина ключа|Среднее число байтов на значение для всех ключевых столбцов в объекте статистики.|  
-|String Index|Значение «Да» указывает, что объект статистики содержит сводную строковую статистику, позволяющую уточнить оценку количества элементов для предикатов запроса, использующих оператор LIKE, например `WHERE ProductName LIKE '%Bike'`. Сводная строковая статистика хранится отдельно от гистограммы и создается в первом ключевом столбце объекта статистики, если он имеет тип **char**, **varchar**, **nchar**, **nvarchar**, **varchar(max)**, **nvarchar(max)**, **text** или **ntext**.|  
+|String Index|Значение «Да» указывает, что объект статистики содержит сводную строковую статистику, позволяющую уточнить оценку количества элементов для предикатов запроса, использующих оператор LIKE, например `WHERE ProductName LIKE '%Bike'`. Сводная строковая статистика хранится отдельно от гистограммы и создается в первом ключевом столбце объекта статистики, если он имеет тип **char**, **varchar**, **nchar**, **nvarchar**, **varchar(max)** , **nvarchar(max)** , **text** или **ntext**.|  
 |Критерий фильтра|Предикат для подмножества строк таблицы, включенных в объект статистики. NULL — неотфильтрованная статистика. Дополнительные сведения об отфильтрованных предикатах см. в статье [Создание отфильтрованных индексов](../../relational-databases/indexes/create-filtered-indexes.md). Дополнительные сведения об отфильтрованной статистике см. в разделе [Статистика](../../relational-databases/statistics/statistics.md).|  
 |Unfiltered Rows|Общее количество строк в таблице перед применением критерия фильтра. Если Filter Expression имеет значение NULL, то столбец Unfiltered Rows совпадает со столбцом Rows.|  
 |Процент материализованной выборки|Процент материализованной выборки используется для обновлений статистики, где явно не указан процент выборки. Если значение равно нулю, процент материализованной выборки не устанавливается для этой статистики.<br /><br /> **Применимо к:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] с пакетом обновления 1 (SP1) и накопительным обновлением 4| 
@@ -171,7 +170,7 @@ DBCC SHOW_STATISTICS ( table_name , target )
   
 ## <a name="permissions-for-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Разрешения для [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 Для DBCC SHOW_STATISTICS необходимо разрешение SELECT на таблицу или членство в одной из следующих ролей:
--   предопределенная роль сервера sysadmin   
+-   предопределенная роль сервера sysadmin  
 -   предопределенная роль базы данных db_owner  
 -   предопределенная роль базы данных db_ddladmin  
   

@@ -32,17 +32,16 @@ helpviewer_keywords:
 ms.assetid: 03f6e4c0-04ff-490a-bd91-637806215bd1
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f91b618e98fa9036b27a398731ecfaca51925611
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 5082c3ab595cc11ff9ab3f5dbc869c11105ce70a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558961"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68134433"
 ---
 # <a name="database-mail-configuration-objects"></a>Объекты конфигурации компонента Database Mail
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Компонент Database Mail имеет два объекта конфигурации: объекты конфигурации баз данных позволяют настраивать параметры компонента Database Mail, используемые при отправке писем приложением базы данных или агентом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+  Компонент Database Mail имеет два объекта конфигурации. Объекты конфигурации баз данных позволяют настраивать параметры компонента Database Mail, используемые при отправке писем приложениями базы данных или агентом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 -   Учетные записи компонента Database Mail  
   
@@ -62,9 +61,9 @@ ms.locfileid: "51558961"
   
 -   Проверка подлинности Windows: компонент Database Mail использует для проверки подлинности на SMTP-сервере учетные данные учетной записи службы [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] Windows.  
   
--   Обычная проверка подлинности: компонент Database Mail использует указанные имя пользователя и пароль, чтобы проверить подлинность на SMTP-сервере.  
+-   Обычная проверка подлинности:  компонент Database Mail использует указанные имя пользователя и пароль, чтобы проверить подлинность на SMTP-сервере.  
   
--   Анонимный доступ: SMTP-серверу не требуется проверка подлинности.  Компонент Database Mail не будет использовать никаких учетных данных для проверки подлинности на SMTP-сервере.  
+-   Анонимная проверка подлинности:  SMTP-серверу не требуется проверка подлинности.  Компонент Database Mail не будет использовать никаких учетных данных для проверки подлинности на SMTP-сервере.  
   
  Сведения об учетных записях хранятся в базе данных **msdb** . Каждая учетная запись содержит следующие сведения:  
   

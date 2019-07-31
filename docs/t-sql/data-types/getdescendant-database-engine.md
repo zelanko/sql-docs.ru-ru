@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: f5f39596-033e-4243-acbc-caa188b45b03
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 28face7dd893a43b9167ff162a3c741b99c65eab
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 3d015602e944416435c95aba6aaea1ead84b834a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56018875"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077976"
 ---
 # <a name="getdescendant-database-engine"></a>GetDescendant (компонент Database Engine)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -63,7 +62,7 @@ SqlHierarchyId GetDescendant ( SqlHierarchyId child1 , SqlHierarchyId child2 )
 -   Если родитель и дочерние узлы child1 и child2 не равны NULL, метод возвращает дочерний узел родителя, который больше child1 и меньше child2.  
 -   Если child1 не равен NULL и не является дочерним узлом родителя, то возникает исключение.  
 -   Если child2 не равен NULL и не является дочерним узлом родителя, то возникает исключение.  
--   Если child1 >= child2, то возникает исключение.  
+-   Если child1 >= child2, то возникает исключение.  
   
 Метод GetDescendant является детерминированным. Поэтому, если метод GetDescendant вызывается с одинаковыми входными данными, результат будет таким же. Однако точный идентификатор полученного дочернего элемента может быть различным в зависимости от связей с другими узлами, как показано в примере В.
   

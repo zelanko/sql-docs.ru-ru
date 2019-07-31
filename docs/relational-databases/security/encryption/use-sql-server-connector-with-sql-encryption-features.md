@@ -1,7 +1,7 @@
 ---
 title: Использование Соединителя SQL Server с компонентами шифрования SQL | Документация Майкрософт
 ms.custom: ''
-ms.date: 04/04/2017
+ms.date: 07/18/2019
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -12,17 +12,15 @@ helpviewer_keywords:
 ms.assetid: 58fc869e-00f1-4d7c-a49b-c0136c9add89
 author: aliceku
 ms.author: aliceku
-manager: craigg
-monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: b6f47c0b1139e78119a345cfbb7565500dc346a1
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 965980bcfe765f291b232a48af946db5f8f4f230
+ms.sourcegitcommit: 73dc08bd16f433dfb2e8406883763aabed8d8727
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52401087"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68329264"
 ---
 # <a name="use-sql-server-connector-with-sql-encryption-features"></a>Использование Соединителя SQL Server с компонентами шифрования SQL
-[!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Типичные операции шифрования [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] с использованием асимметричного ключа, защищенного хранилищем ключей Azure, включают в себя три следующих области.  
   
 -   Прозрачное шифрование данных с помощью асимметричного ключа из хранилища ключей Azure  
@@ -49,8 +47,8 @@ ms.locfileid: "52401087"
      Измените приведенный ниже скрипт [!INCLUDE[tsql](../../../includes/tsql-md.md)] следующим образом.  
   
     -   Измените аргумент `IDENTITY` (`ContosoDevKeyVault`), чтобы он указывал на хранилище ключей Azure.
-        - Если вы используете **общедоступную службу Azure**, замените аргумент `IDENTITY` на имя вашего хранилища ключей Azure из части II.
-        - Если вы используете **частное облако Azure** (например, Azure для государственных организаций, китайскую или немецкую версию Azure), замените аргумент `IDENTITY` на URI хранилища, возвращенный на шаге 3 в части II. Не включайте https:// в URI хранилища.   
+        - Если вы используете **глобальную службу Azure**, замените аргумент `IDENTITY` на имя вашего хранилища Azure Key Vault из части II.
+        - Если вы используете **частное облако Azure** (например, Azure для государственных организаций, китайскую версию Azure 21Vianet или немецкую версию), замените аргумент `IDENTITY` на URI хранилища, возвращенный в шаге 3 в части II. Не включайте https:// в URI хранилища.   
   
     -   Замените первую часть аргумента `SECRET` на **идентификатор клиента** Azure Active Directory из части I. В этом примере **идентификатор клиента** имеет значение `EF5C8E094D2A4A769998D93440D8115D`.  
   
@@ -62,9 +60,9 @@ ms.locfileid: "52401087"
     ```sql  
     USE master;  
     CREATE CREDENTIAL Azure_EKM_TDE_cred   
-        WITH IDENTITY = 'ContosoDevKeyVault', -- for public Azure
+        WITH IDENTITY = 'ContosoDevKeyVault', -- for global Azure
         -- WITH IDENTITY = 'ContosoDevKeyVault.vault.usgovcloudapi.net', -- for Azure Government
-        -- WITH IDENTITY = 'ContosoDevKeyVault.vault.azure.cn', -- for Azure China
+        -- WITH IDENTITY = 'ContosoDevKeyVault.vault.azure.cn', -- for Azure China 21Vianet
         -- WITH IDENTITY = 'ContosoDevKeyVault.vault.microsoftazure.de', -- for Azure Germany   
         SECRET = 'EF5C8E094D2A4A769998D93440D8115DReplace-With-AAD-Client-Secret'   
     FOR CRYPTOGRAPHIC PROVIDER AzureKeyVault_EKM_Prov;  
@@ -146,8 +144,8 @@ ms.locfileid: "52401087"
      Измените приведенный ниже скрипт [!INCLUDE[tsql](../../../includes/tsql-md.md)] следующим образом.  
   
     -   Измените аргумент `IDENTITY` (`ContosoDevKeyVault`), чтобы он указывал на хранилище ключей Azure.
-        - Если вы используете **общедоступную службу Azure**, замените аргумент `IDENTITY` на имя вашего хранилища ключей Azure из части II.
-        - Если вы используете **частное облако Azure** (например, Azure для государственных организаций, китайскую или немецкую версию Azure), замените аргумент `IDENTITY` на URI хранилища, возвращенный на шаге 3 в части II. Не включайте https:// в URI хранилища.    
+        - Если вы используете **глобальную службу Azure**, замените аргумент `IDENTITY` на имя вашего хранилища Azure Key Vault из части II.
+        - Если вы используете **частное облако Azure** (например, Azure для государственных организаций, китайскую версию Azure 21Vianet или немецкую версию), замените аргумент `IDENTITY` на URI хранилища, возвращенный в шаге 3 в части II. Не включайте https:// в URI хранилища.    
   
     -   Замените первую часть аргумента `SECRET` на **идентификатор клиента** Azure Active Directory из части I. В этом примере **идентификатор клиента** имеет значение `EF5C8E094D2A4A769998D93440D8115D`.  
   
@@ -160,9 +158,9 @@ ms.locfileid: "52401087"
         USE master;  
   
         CREATE CREDENTIAL Azure_EKM_Backup_cred   
-            WITH IDENTITY = 'ContosoDevKeyVault', -- for public Azure
+            WITH IDENTITY = 'ContosoDevKeyVault', -- for global Azure
             -- WITH IDENTITY = 'ContosoDevKeyVault.vault.usgovcloudapi.net', -- for Azure Government
-            -- WITH IDENTITY = 'ContosoDevKeyVault.vault.azure.cn', -- for Azure China
+            -- WITH IDENTITY = 'ContosoDevKeyVault.vault.azure.cn', -- for Azure China 21Vianet
             -- WITH IDENTITY = 'ContosoDevKeyVault.vault.microsoftazure.de', -- for Azure Germany   
             SECRET = 'EF5C8E094D2A4A769998D93440D8115DReplace-With-AAD-Client-Secret'   
         FOR CRYPTOGRAPHIC PROVIDER AzureKeyVault_EKM_Prov;    
@@ -214,7 +212,7 @@ ms.locfileid: "52401087"
     
     Чтобы восстановить резервную копию базы данных, зашифрованную методом TDE, целевой экземпляр [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] должен иметь копию асимметричного ключа Key Vault, используемого для шифрования. Это можно сделать так:  
     
-    - Если исходный асимметричный ключ, используемый для TDE, больше не находится в Key Vault, восстановите резервную копию ключа Key Vault или повторно импортируйте ключ из локального модуля HSM. **Важно!** Чтобы отпечаток ключа совпал с записанным в резервной копии базы данных, ключ должен иметь **исходное имя ключа Key Vault**.
+    - Если исходный асимметричный ключ, используемый для TDE, больше не находится в Key Vault, восстановите резервную копию ключа Key Vault или повторно импортируйте ключ из локального модуля HSM. **Внимание!** Чтобы отпечаток ключа совпал с записанным в резервной копии базы данных, ключ должен иметь **исходное имя ключа Key Vault**.
     
     - Выполните шаги 1 и 2 на целевом экземпляре [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].
     

@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 13e95046-0e76-4604-b561-d1a74dd824d7
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b92410945bd9d123b103272943a663b87b8adec8
-ms.sourcegitcommit: d92ad400799d8b74d5c601170167b86221f68afb
+ms.openlocfilehash: 0d8baf8700afde2b6534a173a5d81912dbe61a13
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57973813"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68045642"
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>Спецификации максимально допустимых параметров SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ ms.locfileid: "57973813"
 |Байтов на строку||8060|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] поддерживает хранение при переполнении строк, что позволяет столбцам переменной длины превышать максимальную длину строки. Для столбцов переменной длины, выходящих за границу строки, в главной записи хранится только корень длиной 24-байта. Поэтому фактический предел длины выше, чем в предыдущих версиях [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Дополнительные сведения о поддержке см. в разделе [Поддержка больших строк](../relational-databases/pages-and-extents-architecture-guide.md#large-row-support).|  
 |Байтов на строку в оптимизированных для памяти таблицах||8060|Начиная с [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] , таблицы, оптимизированные для памяти, поддерживают хранение данных вне строки. Столбцы переменной длины вытесняются за пределы строки, если максимальные размеры всех столбцов в таблице превышают 8060 байт; это решение используется во время компиляции. Для столбцов, которые хранятся вне строки, в строке сохраняются только 8-байтовые ссылки. Дополнительные сведения см. в статье [Размер строк и таблицы для таблиц, оптимизированных для памяти](../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md).|  
 |Байтов в исходном тексте хранимой процедуры||Меньше размера пакета или 250 МБ||  
-|Байт на столбец **varchar(max)**, **varbinary(max)**, **xml**, **text**или **image**||2^31-1||  
+|Байт на столбец **varchar(max)** , **varbinary(max)** , **xml**, **text**или **image**||2^31-1||  
 |Символов на столбец **ntext** или **nvarchar(max)**||2^30-1||  
 |Количество кластеризованных индексов в таблице||1||  
 |Столбцов на GROUP BY, ORDER BY||Ограничивается только числом байтов||  
@@ -119,7 +118,7 @@ ms.locfileid: "57973813"
 |Файлов журналов на одну базу данных||1|  
 |Томов на компьютер||3|  
   
- * Максимальное число управляемых экземпляров [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , поддерживаемых служебной программой [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , может меняться в зависимости от конфигурации оборудования сервера. Дополнительные сведения о начале работы см. в разделе [Функции и задачи служебной программы SQL Server](../relational-databases/manage/sql-server-utility-features-and-tasks.md). [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] доступна не во всех выпусках [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Сведения о функциях, поддерживаемых различными выпусками [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], см. в статье [Возможности, поддерживаемые выпусками SQL Server 2016](https://msdn.microsoft.com/library/cc645993.aspx).    
+ \* Максимальное число управляемых экземпляров [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , поддерживаемых служебной программой [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , может меняться в зависимости от конфигурации оборудования сервера. Дополнительные сведения о начале работы см. в разделе [Функции и задачи служебной программы SQL Server](../relational-databases/manage/sql-server-utility-features-and-tasks.md). [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] доступна не во всех выпусках [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Сведения о функциях, поддерживаемых различными выпусками [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], см. в статье [Возможности, поддерживаемые выпусками SQL Server 2016](https://msdn.microsoft.com/library/cc645993.aspx).    
   
 ##  <a name="DAC"></a> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Объекты приложений уровня данных  
  Максимальные размеры и количество различных объектов, которые были протестированы в приложениях уровня данных [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  

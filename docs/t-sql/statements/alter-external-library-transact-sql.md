@@ -1,10 +1,10 @@
 ---
 title: ALTER EXTERNAL LIBRARY (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 03/27/2019
+ms.date: 07/24/2019
 ms.prod: sql
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: machine-learning
 ms.topic: language-reference
 f1_keywords:
 - ALTER EXTERNAL LIBRARY
@@ -16,22 +16,29 @@ helpviewer_keywords:
 author: dphansen
 ms.author: davidph
 manager: cgronlund
-monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 33270c8ccc490a400db45b6525d8c6002d974f3a
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-current||=sqlallproducts-allversions'
+ms.openlocfilehash: 461a9c27b456f3f3955d5bcb7229e0c4448a0996
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59583177"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68471147"
 ---
 # <a name="alter-external-library-transact-sql"></a>ALTER EXTERNAL LIBRARY (Transact-SQL)  
 
-[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 Изменяет содержимое существующей внешней библиотеки пакетов.
 
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||sqlallproducts-allversions"
 > [!NOTE]
-> В SQL Server 2017 поддерживаются язык R и платформа Windows. R, Python и Java на платформах Windows и Linux поддерживаются в SQL Server 2019 CTP 2.4. 
+> В SQL Server 2017 поддерживаются язык R и платформа Windows. R, Python и внешние языки на платформах Windows и Linux поддерживаются в SQL Server 2019 CTP 2.4 и более поздних версиях.
+::: moniker-end
+
+::: moniker range="=azuresqldb-current"
+> [!NOTE]
+> В базе данных SQL Azure библиотеку можно изменить, удалив ее, а затем установив измененную версию с помощью пакета **sqlmlutils**. Дополнительные сведения о пакете **sqlmlutils** см. в разделе [Добавление пакета с помощью sqlmlutils](/azure/sql-database/sql-database-machine-learning-services-add-r-packages#add-a-package-with-sqlmlutils).
+::: moniker-end
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ## <a name="syntax-for-sql-server-2019"></a>Синтаксис для SQL Server 2019
@@ -72,7 +79,7 @@ WITH ( LANGUAGE = <language> )
 {
       'R'
     | 'Python'
-    | 'Java'
+    | <external_language>
 }
 ```
 ::: moniker-end
@@ -107,6 +114,29 @@ WITH ( LANGUAGE = 'R' )
 ```
 ::: moniker-end
 
+::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
+## <a name="syntax-for-azure-sql-database"></a>Синтаксис для базы данных SQL Azure
+
+```text
+CREATE EXTERNAL LIBRARY library_name  
+[ AUTHORIZATION owner_name ]  
+FROM <file_spec> [ ,...2 ]  
+WITH ( LANGUAGE = 'R' )  
+[ ; ]  
+
+<file_spec> ::=  
+{  
+    (CONTENT = <library_bits>)  
+}  
+
+<library_bits> :: =  
+{ 
+      varbinary_literal 
+    | varbinary_expression 
+}
+```
+::: moniker-end
+
 ### <a name="arguments"></a>Аргументы
 
 **library_name**
@@ -119,6 +149,7 @@ WITH ( LANGUAGE = 'R' )
 
 Указывает имя пользователя или роли, которой принадлежит внешняя библиотека.
 
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 **file_spec**
 
 Указывает содержимое пакета для конкретной платформы. Поддерживается только один файл артефакта на платформу.
@@ -127,9 +158,11 @@ WITH ( LANGUAGE = 'R' )
 
 При необходимости можно указать платформу операционной системы для файла. Для каждой платформы операционной системы для конкретного языка или среды выполнения разрешен только один артефакт файла или содержимое.
 
+::: moniker-end
+
 **library_bits**
 
-Задает содержимое пакета как шестнадцатеричный литерал, аналогично сборкам. 
+Задает содержимое пакета как шестнадцатеричный литерал, аналогично сборкам.
 
 Этот параметр можно использовать, если у вас есть необходимое разрешение на изменение библиотеки, но доступ к файлам на сервере ограничен и не удается сохранить содержимое в пути, к которому у сервера есть доступ.
 
@@ -138,17 +171,33 @@ WITH ( LANGUAGE = 'R' )
 ::: moniker range=">=sql-server-2017 <=sql-server-2017||=sqlallproducts-allversions"
 **PLATFORM = WINDOWS**
 
-Указывает платформу для содержимого библиотеки. Это значение является обязательным при изменении существующей библиотеки для добавления другой платформы. В SQL Server 2017 поддерживается только платформа Windows.
-
+Указывает платформу для содержимого библиотеки. Это значение является обязательным при изменении существующей библиотеки для добавления другой платформы.
+В SQL Server 2017 поддерживается только платформа Windows.
 ::: moniker-end
+
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 **PLATFORM**
 
-Указывает платформу для содержимого библиотеки. Это значение является обязательным при изменении существующей библиотеки для добавления другой платформы. В SQL Server 2019 поддерживаются платформы Windows и Linux.
+Указывает платформу для содержимого библиотеки. Это значение является обязательным при изменении существующей библиотеки для добавления другой платформы. 
+В SQL Server 2019 поддерживаются платформы Windows и Linux.
+::: moniker-end
 
+::: moniker range=">=sql-server-2017 <=sql-server-2017||=sqlallproducts-allversions"
+**LANGUAGE = 'R'**
+
+Задает язык пакета. Язык R поддерживается в SQL Server 2017.
+::: moniker-end
+
+::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
+**LANGUAGE = 'R'**
+
+Задает язык пакета. Язык R поддерживается в Базе данных SQL Azure.
+::: moniker-end
+
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 **language**
 
-Задает язык пакета. Может иметь значение **R**, **Python** или **Java**.
+Задает язык пакета. Значением может быть **R**, **Python** или название внешнего языка (см. раздел [CREATE EXTERNAL LANGUAGE](create-external-language-transact-sql.md)).
 ::: moniker-end
 
 ## <a name="remarks"></a>Remarks
@@ -173,7 +222,8 @@ WITH ( LANGUAGE = 'R' )
 
 В следующем примере изменяется внешняя библиотека `customPackage`.
 
-### <a name="a-replace-the-contents-of-a-library-using-a-file"></a>A. Замена содержимого библиотеки с помощью файла
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||sqlallproducts-allversions"
+### <a name="replace-the-contents-of-a-library-using-a-file"></a>Замена содержимого библиотеки с помощью файла
 
 В следующем примере изменяется внешняя библиотека `customPackage` с помощью сжатого ZIP-файла, содержащего обновленные биты.
 
@@ -192,17 +242,19 @@ EXEC sp_execute_external_script
 @script=N'library(customPackage)'
 ;
 ```
+::: moniker-end
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 В языке Python в SQL Server 2019 пример также выполняется при замене `'R'` на `'Python'`.
 ::: moniker-end
-### <a name="b-alter-an-existing-library-using-a-byte-stream"></a>Б. Изменение существующей библиотеки с помощью байтового потока
+
+### <a name="alter-an-existing-library-using-a-byte-stream"></a>Изменение существующей библиотеки с помощью байтового потока
 
 В следующем примере существующая библиотека изменяется путем передачи новых битов в виде шестнадцатеричного литерала.
 
 ```SQL
 ALTER EXTERNAL LIBRARY customLibrary 
-SET (CONTENT = 0xabc123) WITH (LANGUAGE = 'R');
+SET (CONTENT = 0xABC123...) WITH (LANGUAGE = 'R');
 ```
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
@@ -214,7 +266,7 @@ SET (CONTENT = 0xabc123) WITH (LANGUAGE = 'R');
 
 ## <a name="see-also"></a>См. также раздел
 
-[CREATE EXTERNAL LIBRARY (Transact-SQL)](create-external-library-transact-sql.md)
+[CREATE EXTERNAL LIBRARY (Transact-SQL)](create-external-library-transact-sql.md)  
 [DROP EXTERNAL LIBRARY (Transact-SQL)](drop-external-library-transact-sql.md)  
 [sys.external_library_files](../../relational-databases/system-catalog-views/sys-external-library-files-transact-sql.md)  
 [sys.external_libraries](../../relational-databases/system-catalog-views/sys-external-libraries-transact-sql.md) 

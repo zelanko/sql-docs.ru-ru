@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: dbbff0e8-9e25-4f12-a1ba-e12221d16ac2
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 2c9c2cbb9799447ad3e12cab311a5153d6341045
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 98e784be4bbe4e939ed4413a33d6a3ed36872558
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51695566"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67902812"
 ---
 # <a name="create-event-notification-transact-sql"></a>CREATE EVENT NOTIFICATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ TO SERVICE 'broker_service' , { 'broker_instance_specifier' | 'current database'
   
 ## <a name="arguments"></a>Аргументы  
  *event_notification_name*  
- Имя уведомления о событии. Имя уведомления о событии должно соответствовать правилам для [идентификаторов](../../relational-databases/databases/database-identifiers.md), и оно должно быть уникальным в той области, где они были созданы: SERVER, DATABASE или *object_name*.  
+ Имя уведомления о событии. Имя уведомления о событии должно соответствовать правилам для [идентификаторов](../../relational-databases/databases/database-identifiers.md) и быть уникальным в той области, где они создаются: SERVER, DATABASE или *object_name*.  
   
  SERVER  
  Применяет область уведомления о событии к текущему экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Если задано это значение, уведомление срабатывает при каждом возникновении события, указанного в предложении FOR, на экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -95,8 +94,8 @@ TO SERVICE 'broker_service' , { 'broker_instance_specifier' | 'current database'
   
  Диалог остается открытым до удаления уведомления о событии. Некоторые ошибки могут привести к досрочному завершению диалогов. Явное завершение всех или некоторых диалогов может помешать конечной службе получать новые сообщения.  
   
- { **'**_broker\_instance\_specifier_**'** | **'current database'** }  
- Указывает экземпляр компонента Service Broker, на котором выполняется *broker_service*. Значение для определенного компонента Service Broker может быть получено путем запроса столбца **service_broker_guid** представления каталога **sys.databases**. Чтобы указать экземпляр компонента Service Broker в текущей базе данных, используйте **'current database'**. **'current database'** — это нечувствительный к регистру строковый литерал.  
+ { **'** _broker\_instance\_specifier_ **'**  |  **'current database'** }  
+ Указывает экземпляр компонента Service Broker, на котором выполняется *broker_service*. Значение для определенного компонента Service Broker может быть получено путем запроса столбца **service_broker_guid** представления каталога **sys.databases**. Чтобы указать экземпляр компонента Service Broker в текущей базе данных, используйте **'current database'** . **'current database'** — это нечувствительный к регистру строковый литерал.  
   
 > [!NOTE]  
 >  Этот параметр недоступен в автономной базе данных.  
@@ -131,7 +130,7 @@ TO SERVICE 'broker_service' , { 'broker_instance_specifier' | 'current database'
 > [!NOTE]  
 >  В примерах A и B, идентификатор GUID, указанный в предложении `TO SERVICE 'NotifyService'` («8140a771-3c4b-4479-8ac0-81008ab17984») специфичен для компьютера, на котором установлен пример. Для этого экземпляра использовался идентификатор GUID для базы данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
 >   
->  Чтобы копировать и запустить эти примеры, необходимо заменить этот идентификатор GUID на идентификатор из вашего компьютера и экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Как объясняется выше в разделе "Аргументы", **'**_broker\_instance\_specifier_**'** можно получить с помощью запроса к столбцу service_broker_guid представления каталога sys.databases.  
+>  Чтобы копировать и запустить эти примеры, необходимо заменить этот идентификатор GUID на идентификатор из вашего компьютера и экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Как объясняется выше в разделе "Аргументы", **'** _broker\_instance\_specifier_ **'** можно получить с помощью запроса к столбцу service_broker_guid представления каталога sys.databases.  
   
 ### <a name="a-creating-an-event-notification-that-is-server-scoped"></a>A. Создание уведомления о событии уровня сервера  
  В следующем примере создаются объекты, необходимые для установки целевой службы при помощи компонента [!INCLUDE[ssSB](../../includes/sssb-md.md)]. Конечная служба ссылается на тип сообщения и контракт вызывающей стороны исключительно для уведомлений о событиях. Затем уведомление о событии создается в конечной службе, которая начинает рассылку уведомлений в ответ на событие трассировки `Object_Created` на экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

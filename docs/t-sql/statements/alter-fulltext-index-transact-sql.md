@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: b6fbe9e6-3033-4d1b-b6bf-1437baeefec3
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 2db3b6241096501190e2d1c8e3978bd349fed7a3
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 4729caa9c90ae2ebc90ab3254b4222e0fb47ae46
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52526199"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68067536"
 ---
 # <a name="alter-fulltext-index-transact-sql"></a>ALTER FULLTEXT INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -91,7 +90,7 @@ ALTER FULLTEXT INDEX ON table_name
  Указывает, что [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не будет вести списка изменений в индексированных данных.  
   
  ADD | DROP *column_name*  
- Указывает столбцы, добавляемые или удаляемые из полнотекстового индекса. Столбец или столбцы должны иметь тип **char**, **varchar**, **nchar**, **nvarchar**, **text**, **ntext**, **image**, **xml**, **varbinary** или **varbinary(max)**.  
+ Указывает столбцы, добавляемые или удаляемые из полнотекстового индекса. Столбец или столбцы должны иметь тип **char**, **varchar**, **nchar**, **nvarchar**, **text**, **ntext**, **image**, **xml**, **varbinary** или **varbinary(max)** .  
   
  Предложение DROP используется только для столбцов, ранее включенных для полнотекстового индексирования.  
   
@@ -128,7 +127,7 @@ ALTER FULLTEXT INDEX ON table_name
   
  Создает дополнительные индексы ключевых фраз и подобия документов, которые являются частью статистического семантического индексирования. Дополнительные сведения см. в разделе [Семантический поиск (SQL Server)](../../relational-databases/search/semantic-search-sql-server.md).  
   
- [ **,**_...n_]  
+ [ **,** _...n_]  
  Указывает, что для предложений ADD, ALTER и DROP можно задать несколько столбцов. Если указано несколько столбцов, то эти столбцы следует разделить запятыми.  
   
  WITH NO POPULATION  

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: f222b1d5-d2fa-4269-8294-4575a0e78636
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: e176906e41e815733ac50f2e1b9e0db90a8d3a5a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: a0a0eec6d8a700fe35df358b35ce756dc700a2f3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52513155"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67951144"
 ---
 # <a name="bind-a-database-with-memory-optimized-tables-to-a-resource-pool"></a>Привязка базы данных с таблицами, оптимизированными для памяти, к пулу ресурсов
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -87,7 +86,7 @@ GO
 ###  <a name="bkmk_CreateResourcePool"></a> Создайте новый пул ресурсов и настройте память.  
  При настройке памяти для таблиц, оптимизированных для памяти, планирование загрузки следует выполнять на основе MIN_MEMORY_PERCENT, но не MAX_MEMORY_PERCENT.  Сведения о MIN_MEMORY_PERCENT и MAX_MEMORY_PERCENT см. в разделе [ALTER RESOURCE POOL (Transact-SQL)](../../t-sql/statements/alter-resource-pool-transact-sql.md). Это повышает прогнозируемую доступность памяти для таблиц, оптимизированных для памяти, так как использование MIN_MEMORY_PERCENT повышает нагрузку на другие пулы ресурсов, чтобы добиться выделения памяти. Чтобы обеспечить доступность памяти и избежать ее нехватки, значения MIN_MEMORY_PERCENT и MAX_MEMORY_PERCENT должны быть одинаковыми. В разделе [Процент доступной памяти для оптимизированных для памяти таблиц и индексов](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#bkmk_PercentAvailable) ниже процент доступной памяти для таблиц, оптимизированных для памяти, основан на объеме выделенной памяти.  
   
- Дополнительные сведения см. в разделе [Использование In-Memory OLTP в среде ВМ](https://msdn.microsoft.com/library/27ec7eb3-3a24-41db-aa65-2f206514c6f9) .  
+ Дополнительные сведения о работе в среде виртуальных машин см. в статье [Рекомендации по использованию выполняющейся в памяти OLTP в среде виртуальных машин](https://msdn.microsoft.com/library/27ec7eb3-3a24-41db-aa65-2f206514c6f9).  
   
  Следующий код [!INCLUDE[tsql](../../includes/tsql-md.md)] создает пул ресурсов с именем Pool_IMOLTP, в котором для использования будет доступно 50 % памяти.  После создания пула регулятор ресурсов настраивается для включения Pool_IMOLTP.  
   
@@ -143,7 +142,7 @@ GO
  Теперь база данных будет привязана к пулу ресурсов.  
   
 ##  <a name="bkmk_ChangeAllocation"></a> Измените параметры MIN_MEMORY_PERCENT и MAX_MEMORY_PERCENT для существующего пула  
- Если на сервере увеличилась дополнительная память либо если изменился объем памяти, необходимый оптимизированным для памяти таблицам, может потребоваться изменить значения MIN_MEMORY_PERCENT и MAX_MEMORY_PERCENT. Следующие шаги показывают, как изменить значение MIN_MEMORY_PERCENT и MAX_MEMORY_PERCENT в пуле ресурсов. Инструкции по использованию значений для MIN_MEMORY_PERCENT и MAX_MEMORY_PERCENT см. ниже.  Дополнительные сведения см. в статье [Использование In-Memory OLTP в среде ВМ](https://msdn.microsoft.com/library/27ec7eb3-3a24-41db-aa65-2f206514c6f9) .  
+ Если на сервере увеличилась дополнительная память либо если изменился объем памяти, необходимый оптимизированным для памяти таблицам, может потребоваться изменить значения MIN_MEMORY_PERCENT и MAX_MEMORY_PERCENT. Следующие шаги показывают, как изменить значение MIN_MEMORY_PERCENT и MAX_MEMORY_PERCENT в пуле ресурсов. Инструкции по использованию значений для MIN_MEMORY_PERCENT и MAX_MEMORY_PERCENT см. ниже.  Дополнительные сведения см. в разделе [Рекомендации по использованию выполняющейся в памяти OLTP в среде виртуальных машин](https://msdn.microsoft.com/library/27ec7eb3-3a24-41db-aa65-2f206514c6f9).  
   
 1.  Используйте `ALTER RESOURCE POOL` , чтобы изменить значение как MIN_MEMORY_PERCENT, так и MAX_MEMORY_PERCENT.  
   

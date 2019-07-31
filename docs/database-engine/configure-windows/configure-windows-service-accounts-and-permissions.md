@@ -50,13 +50,12 @@ helpviewer_keywords:
 ms.assetid: 309b9dac-0b3a-4617-85ef-c4519ce9d014
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jroth
-ms.openlocfilehash: deac964cb20d64d7a1dc2d1cc1e76f5004d80033
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2c91c4e9a432992475daef8a987dea2dc9adf913
+ms.sourcegitcommit: 40f3b1f2340098496d8428f50616095a190ae94b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66803293"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "68290378"
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>Настройка учетных записей службы Windows и разрешений
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -97,7 +96,7 @@ ms.locfileid: "66803293"
   
 -   **Клиент распределенного воспроизведения [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**  — один или несколько клиентских компьютеров распределенного воспроизведения, работающих вместе с контроллером распределенного воспроизведения для имитации параллельных рабочих нагрузок на экземпляре [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
   
--   **[!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]** — доверенная служба, в которой находятся внешние исполняемые файлы, предоставляемые корпорацией Майкрософт, такие как среда выполнения R, установленная как часть служб [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]. Вспомогательные процессы могут запускаться при работе панели запуска, однако они регулируются ресурсами в зависимости от конфигурации отдельного экземпляра. Служба панели запуска выполняется с использованием собственной учетной записи, и каждому вспомогательному процессу для конкретной зарегистрированной среды выполнения присваивается учетная запись пользователя панели запуска. Вспомогательные процессы создаются и удаляются по запросу во время выполнения.
+-   **[!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]**  — доверенная служба, в которой находятся внешние исполняемые файлы, предоставляемые корпорацией Майкрософт, такие как среда выполнения R или Python, установленная как часть служб R Services или служб машинного обучения. Вспомогательные процессы могут запускаться при работе панели запуска, однако они регулируются ресурсами в зависимости от конфигурации отдельного экземпляра. Служба панели запуска выполняется с использованием собственной учетной записи, и каждому вспомогательному процессу для конкретной зарегистрированной среды выполнения присваивается учетная запись пользователя панели запуска. Вспомогательные процессы создаются и удаляются по запросу во время выполнения.
 
     Панель запуска не может создавать используемые ею учетные записи, если вы установили SQL Server на компьютере, который используется в качестве контроллера домена. Таким образом, программа установки служб R Services (в базе данных) или служб машинного обучения (в базе данных) завершается сбоем на контроллере домена.
 
@@ -232,7 +231,7 @@ ms.locfileid: "66803293"
 |[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|ISSVCACCOUNT, ISSVCPASSWORD, ISSVCSTARTUPTYPE|  
 |Контроллер распределенного воспроизведения[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|DRU_CTLR, CTLRSVCACCOUNT, CTLRSVCPASSWORD, CTLRSTARTUPTYPE, CTLRUSERS|  
 |Клиент распределенного воспроизведения[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|DRU_CLT, CLTSVCACCOUNT, CLTSVCPASSWORD, CLTSTARTUPTYPE, CLTCTLRNAME, CLTWORKINGDIR, CLTRESULTDIR|  
-|[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]|EXTSVCACCOUNT, EXTSVCPASSWORD, ADVANCEDANALYTICS\*\*\*|
+|R Services или службы машинного обучения (Майкрософт)|EXTSVCACCOUNT, EXTSVCPASSWORD, ADVANCEDANALYTICS\*\*\*|
 |Ядро PolyBase| PBENGSVCACCOUNT, PBENGSVCPASSWORD, PBENGSVCSTARTUPTYPE, PBDMSSVCACCOUNT,PBDMSSVCPASSWORD, PBDMSSVCSTARTUPTYPE, PBSCALEOUT, PBPORTRANGE
   
  \* Дополнительные сведения и примеры синтаксиса для автоматической установки см. в руководстве по [установке SQL Server 2016 из командной строки](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md).  
@@ -301,8 +300,8 @@ ms.locfileid: "66803293"
 |**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :**|**Вход в систему в качестве службы** (SeServiceLogonRight)|  
 |**Ядро PolyBase и DMS**| **Вход в систему в качестве службы** (SeServiceLogonRight)  |   
 |**Панель запуска:**|**Вход в систему в качестве службы** (SeServiceLogonRight) <br /><br /> **Замена токена уровня процесса** (SeAssignPrimaryTokenPrivilege)<br /><br />**Обход проходной проверки** (SeChangeNotifyPrivilege)<br /><br />**Назначение квот памяти процессам** (SeIncreaseQuotaPrivilege)|     
-|**Службы R Services**: **SQLRUserGroup** (SQL 2016 и 2017)  |**Локальный вход в систему** |   
-|**Машинное обучение**: **все пакеты приложений [AppContainer]** (SQL 2019)  |**Разрешения READ и EXECUTE** для каталогов Binn, R_Services и PYTHON_Services SQL Server |   
+|**R Services или службы машинного обучения (Майкрософт):** **SQLRUserGroup** (SQL 2016 и 2017)  |Не имеют разрешения **Локальный вход в систему** по умолчанию. |   
+|**Службы машинного обучения**: **все пакеты приложений [AppContainer]** (SQL 2019)  |**Разрешения READ и EXECUTE** для каталогов Binn, R_Services и PYTHON_Services SQL Server |   
 
  \* Служба агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] отключена на экземплярах [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)].  
   

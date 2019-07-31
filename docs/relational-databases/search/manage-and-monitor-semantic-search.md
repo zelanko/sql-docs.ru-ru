@@ -12,13 +12,12 @@ ms.assetid: eb5c3b29-da70-42aa-aa97-7d35a3f1eb98
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-manager: craigg
-ms.openlocfilehash: c16c6118879839b6bff189e5d72eef3470520730
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: c5e5c8256c117ebd3fbb57b5a7c291b539c5a428
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57972929"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68132246"
 ---
 # <a name="manage-and-monitor-semantic-search"></a>Управление и наблюдение за семантическим поиском
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -134,7 +133,7 @@ GO
 2.  **Этап 2**. Затем заполняется семантический индекс подобия документов. Этот индекс зависит от обоих индексов, заполненных на предыдущем этапе.  
   
 ##  <a name="BestPracticeUnderstand"></a>   
-##  <a name="ProblemNotPopulated"></a> Проблема. семантические индексы не заполнены  
+##  <a name="ProblemNotPopulated"></a> Проблема. Семантические индексы не заполнены  
 ### <a name="are-the-associated-full-text-indexes-populated"></a>Заполнены ли связанные полнотекстовые индексы?  
  Поскольку семантическое индексирование зависит от полнотекстового индексирования, семантические индексы заполняются только после заполнения связанных полнотекстовых индексов.  
   

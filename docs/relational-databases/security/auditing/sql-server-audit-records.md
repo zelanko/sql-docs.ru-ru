@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7a291015-df15-44fe-8d53-c6d90a157118
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 7a11a699a9bba7f04459bbcc39ef6fcf085cbed1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3019dc90789ccf8cf43b07a15d5ff0ccc7fb50a2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52539687"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68095126"
 ---
 # <a name="sql-server-audit-records"></a>Записи подсистемы аудита SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +29,7 @@ ms.locfileid: "52539687"
 |-----------------|-----------------|----------|----------------------|  
 |**event_time**|Дата-время срабатывания действия, доступного для аудита.|**datetime2**|Да|  
 |**sequence_no**|Отслеживает последовательность записей в одной записи аудита, слишком большой, чтобы уместиться в буфере записи для аудитов.|**int**|Да|  
-|**action_id**|Идентификатор действия.<br /><br /> Совет. Для использования значения **action_id** в качестве предиката его следует преобразовать из строки символов в числовое значение. Дополнительные сведения см. в статье [Фильтрация подсистемы аудита SQL Server по предикату action_id / class_type](https://blogs.msdn.com/b/sqlsecurity/archive/2012/10/03/filter-sql-server-audit-on-action-id-class-type-predicate.aspx).|**varchar(4)**|Да|  
+|**action_id**|Идентификатор действия.<br /><br /> Совет. Для использования значения **action_id** в качестве предиката его необходимо преобразовать из строки символов в числовое значение. Дополнительные сведения см. в статье [Фильтрация подсистемы аудита SQL Server по предикату action_id / class_type](https://blogs.msdn.com/b/sqlsecurity/archive/2012/10/03/filter-sql-server-audit-on-action-id-class-type-predicate.aspx).|**varchar(4)**|Да|  
 |**succeeded**|Указывает, была ли проверка разрешений для действия, инициировавшего событие аудита, пройдена успешно. |**bit**<br /> –1 = успешное завершение. <br />0 = неуспешное завершение.|Да|  
 |**permission_bitmask**|Когда применимо, отображаются предоставленные, запрещенные или отмененные разрешения.|**bigint**|нет|  
 |**is_column_permission**|Флаг, обозначающий разрешение уровня столбца.|**bit** <br />–1 = True. <br />0 = False.|нет|  

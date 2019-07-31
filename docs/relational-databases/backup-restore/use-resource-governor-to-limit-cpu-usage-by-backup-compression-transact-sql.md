@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 01796551-578d-4425-9b9e-d87210f7ba72
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d3094df3f5fff3a0dbeb70573236432202420224
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: be8d6f23c880d96f46aecc433d46b0971995278d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53210543"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68041300"
 ---
 # <a name="use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql"></a>Использование регулятора ресурсов для ограничения загрузки ЦП при сжатии резервной копии (компонент Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ ms.locfileid: "53210543"
 ##  <a name="setup_login_and_user"></a> Создание учетной записи и пользователя для операций с низким приоритетом  
  Для сценария в этом разделе требуется низкоприоритетное имя входа в систему [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и пользователь. Имя пользователя будет использоваться для классификации сеансов, запущенных в процессе входа, и для направления их в группу рабочей нагрузки регулятора ресурсов, которая ограничивает загрузку ЦП.  
   
- Следующая процедура описывает этапы настройки имени входа и пользователя для этой цели, за которыми следует пример на языке [!INCLUDE[tsql](../../includes/tsql-md.md)] — «Пример А. Настройка имени входа и пользователя (Transact-SQL)».  
+ Ниже описываются этапы настройки имени входа и пользователя для этой цели, за которыми следует пример на языке [!INCLUDE[tsql](../../includes/tsql-md.md)]: "Пример А. Настройка имени входа и пользователя (Transact-SQL)".  
   
 ### <a name="to-set-up-a-login-and-database-user-for-classifying-sessions"></a>Настройка имени входа и пользователя базы данных для классификации сеансов  
   
@@ -186,7 +185,7 @@ GO
     ALTER RESOURCE GOVERNOR RECONFIGURE;  
     ```  
   
-### <a name="example-b-configuring-resource-governor-transact-sql"></a>Пример Б. Настройка регулятора ресурсов (Transact-SQL)  
+### <a name="example-b-configuring-resource-governor-transact-sql"></a>Пример Б. Настройка Resource Governor (Transact-SQL)  
  В нижеприведенном примере в одной транзакции выполняются следующие шаги.  
   
 1.  Создание пула ресурсов `pMAX_CPU_PERCENT_20` .  
@@ -200,7 +199,7 @@ GO
  После того как транзакция зафиксирована, применяются изменения в конфигурации, запрошенные в инструкциях ALTER WORKLOAD GROUP или ALTER RESOURCE POOL.  
   
 > [!IMPORTANT]  
->  В следующем примере используется образец имени пользователя [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], созданный в «Примере А. Настройка имени входа и пользователя (Transact-SQL)", — *domain_name*`\MAX_CPU`. Замените его именем пользователя, соответствующего имени входа, которое планируется использовать для создания низкоприоритетных сжатых резервных копий.  
+>  В следующем примере используется образец имени пользователя [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], созданный в разделе "Пример А. Настройка имени входа и пользователя (Transact-SQL)", — *domain_name*`\MAX_CPU`. Замените его именем пользователя, соответствующего имени входа, которое планируется использовать для создания низкоприоритетных сжатых резервных копий.  
   
 ```sql  
 -- Configure Resource Governor.  

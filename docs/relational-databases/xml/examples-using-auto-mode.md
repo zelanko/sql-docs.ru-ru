@@ -12,19 +12,18 @@ helpviewer_keywords:
 ms.assetid: 11e8d0e4-df8a-46f8-aa21-9602d4f26cad
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 91a2e3a44ba68d280f52b35c3d62026455d4e615
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 1a280477dbc8a41292ff3ee3519ec74df4d5c7ea
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510621"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67943413"
 ---
 # <a name="examples-using-auto-mode"></a>Примеры: Использование режима AUTO
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   В следующем примере иллюстрируется применение режима AUTO. Многие из этих запросов являются запросами к XML-документам с инструкциями по производству велосипедов, хранящимся в столбце Instructions таблицы ProductModel образца базы данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] .  
   
-## <a name="example-retrieving-customer-order-and-order-detail-information"></a>Пример Извлечение данных о заказчике, заказе и подробных сведений о заказе  
+## <a name="example-retrieving-customer-order-and-order-detail-information"></a>Пример Извлечение сведений о заказчике, заказе и подробных сведений о заказе  
  Следующий запрос получает данные о заказчике, заказе и подробные данные о заказе определенного заказчика.  
   
 ```  

@@ -1,5 +1,5 @@
 ---
-title: 'Класс событий Progress Report: Online Index Operation | Документация Майкрософт'
+title: 'Класс событий Progress Report: Online Index Operation | Документация Майкрософт'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,18 +11,17 @@ helpviewer_keywords:
 ms.assetid: 491616c1-f666-4b16-a5ea-1192bf156692
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1dc6541ec2d4a1efe4227ffc96f5d50ab19edf7b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a9388483151326222dd8fa5e085467b15600eca9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47790872"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67940642"
 ---
-# <a name="progress-report-online-index-operation-event-class"></a>Класс событий Progress Report: Online Index Operation
+# <a name="progress-report-online-index-operation-event-class"></a>Progress Report: класс события Online Index Operation
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Класс событий Progress Report: класс событий Online Index Operation указывает ход операции оперативного построения индекса.  
+  Класс событий Progress Report: Online Index Operation указывает ход операции оперативного построения индекса.  
   
 ## <a name="progress-report-online-index-operation-event-class-data-columns"></a>Столбцы данных класса событий Progress Report: Online Index Operation  
   

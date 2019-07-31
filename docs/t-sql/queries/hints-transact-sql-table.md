@@ -36,13 +36,12 @@ helpviewer_keywords:
 ms.assetid: 8bf1316f-c0ef-49d0-90a7-3946bc8e7a89
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: be67801f6f386bd4d63a5edc3459820075628864
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.openlocfilehash: 9c09ce1ef34e7355651be0aab473ca39bd2dae1b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334781"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67901966"
 ---
 # <a name="hints-transact-sql---table"></a>Табличные указания (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -177,7 +176,7 @@ KEEPDEFAULTS
   
 Указывает на вставку установленного по умолчанию значения столбца таблицы, если таковое имеется, вместо значения NULL, применяемого в случае, когда запись данных не содержит значения для этого столбца.  
   
-Пример использования данного указания в инструкции INSERT… Дополнительные сведения об инструкции SELECT * FROM OPENROWSET(BULK...) см. в разделе [Сохранение значений NULL или использование значений по умолчанию при массовом импорте данных (SQL Server)](../../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md).  
+Пример использования этого указания в инструкции INSERT… Дополнительные сведения об инструкции SELECT * FROM OPENROWSET(BULK...) см. в разделе [Сохранение значений NULL или использование значений по умолчанию при массовом импорте данных (SQL Server)](../../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md).  
   
 FORCESEEK [ **(** _index\_value_ **(** _index\_column\_name_ [ **,** ... _n_ ] **))** ]  
 Указывает, что в качестве пути доступа к данным таблиц или представлений оптимизатор запросов использует только операцию поиска в индексе. 
@@ -365,7 +364,7 @@ XLOCK
 Если таблица содержит вычисляемые столбцы, которые вычисляются выражениями или функциями, получающими доступ к столбцам других таблиц, то в таких таблицах табличные подсказки не используются и не распространяются. Например, в запросе указана табличная подсказка NOLOCK для таблицы. В этой таблице есть столбцы, вычисляемые с помощью сочетания выражений и функций, получающих доступ к столбцам другой таблицы. При доступе к таблицам, на которые ссылаются выражения и функции, табличное указание NOLOCK не используется.  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не разрешает более одного табличного указания из каждой из следующих групп в каждой из таблиц в предложении FROM.  
--   Указания степени гранулярности: PAGLOCK, NOLOCK, READCOMMITTEDLOCK, ROWLOCK, TABLOCK или TABLOCKX.  
+-   Указания степени детализации: PAGLOCK, NOLOCK, READCOMMITTEDLOCK, ROWLOCK, TABLOCK или TABLOCKX.  
 -   Указания уровня изоляции: HOLDLOCK, NOLOCK, READCOMMITTED, REPEATABLEREAD, SERIALIZABLE.  
   
 ## <a name="filtered-index-hints"></a>Подсказки отфильтрованного индекса  

@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: 68bd1d04-d20f-4357-a34e-7c9c76457062
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 03acf5db82c21a66e2fbd8337713b6989ce36a31
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8a115dafb386323bc1f4738720e7576657d22543
+ms.sourcegitcommit: 2efb0fa21ff8093384c1df21f0e8910db15ef931
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66403062"
+ms.lasthandoff: 07/18/2019
+ms.locfileid: "68316691"
 ---
 # <a name="azure-storage-connection-manager"></a>Диспетчер подключений службы хранилища Azure
 
@@ -38,6 +37,6 @@ ms.locfileid: "66403062"
 - **Проверка подлинности**. Указывает используемый метод проверки подлинности. Поддерживаются методы проверки подлинности **AccessKey** и **ServicePrincipal**.
     - **AccessKey**. Для этого метода проверки подлинности укажите **ключ учетной записи**.
     - **ServicePrincipal**. Для этого метода проверки подлинности укажите **Идентификатор приложения**, **Ключ приложения** и **Идентификатор клиента** субъекта-службы.
-      Следует назначить субъекту-службе роль **участник для данных хранилища BLOB-объектов** в учетной записи хранения.
+      Для работы **тестового подключения** субъекту-службе следует назначить по крайней мере роль **Читатель данных в хранилище BLOB-объектов** в учетной записи хранения.
       Подробности см. [здесь](https://docs.microsoft.com/azure/storage/common/storage-auth-aad-rbac-portal#assign-rbac-roles-using-the-azure-portal).
 - **Среда**. Указывает облачную среду, где размещается учетная запись хранения.

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 598ecdcd-084b-4032-81b2-eed6ae9f5d44
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3858371c92965db9c84ec70d7d86969b0d9311ba
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: f176ba79cc42610d706bb56896a8ca073ea8185a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58513350"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68000707"
 ---
 # <a name="selective-xml-indexes-sxi"></a>Выборочный XML-индекс (SXI)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -121,7 +120,7 @@ FOR
   
 -   Индексирование узлов с двоичными типами XS: например, base64Binary и hexBinary.  
   
--   Указание узлов для индексирования с выражениями Xpath, которые содержат символ-шаблон `*` в конце. Например, `/a/b/c/*`, `/a//b/*` или `/a/b/*:c`.  
+-   Указание узлов для индексирования с выражениями XPath, которые содержат подстановочный знак `*` в конце. Например, `/a/b/c/*`, `/a//b/*` или `/a/b/*:c`.  
   
 -   Индексирование любых осей, отличных от осей дочерних элементов, атрибутов или объектов-потомков. Вариант `//<step>` допускается как исключение.  
   

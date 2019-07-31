@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 15fda1b2-e4dd-4f9d-935a-2e38926075b2
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: cff00447a3a3bb76c5766fc8799a9f85c3d23144
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 06ab8c327709fa6bfb504217bdd083aaed98f870
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47689772"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68066000"
 ---
 # <a name="alter-broker-priority-transact-sql"></a>Инструкция ALTER BROKER PRIORITY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ FOR CONVERSATION
  Имя изменяемого приоритета диалога. Это имя должно ссылаться на приоритет диалога в текущей базе данных.  
   
  SET  
- Задает критерий для определения применимости приоритета к заданному диалогу. Аргумент SET обязателен и должен содержать хотя бы один критерий: CONTRACT_NAME, LOCAL_SERVICE_NAME, REMOTE_SERVICE_NAME или PRIORITY_LEVEL.  
+ Задает критерий для определения применимости приоритета к заданному диалогу. Аргумент SET является обязательным и должен содержать, по крайней мере, один из следующих критериев: CONTRACT_NAME, LOCAL_SERVICE_NAME, REMOTE_SERVICE_NAME или PRIORITY_LEVEL.  
   
  CONTRACT_NAME = {*ContractName* | **ANY**}  
  Указывает имя контракта, который будет использоваться в качестве критерия, определяющего применимость приоритета к диалогу. Аргумент *ContractName* — это идентификатор компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)], который должен указывать имя контракта в текущей базе данных.  
@@ -89,7 +88,7 @@ FOR CONVERSATION
  REMOTE_SERVICE_NAME = {'*RemoteServiceName*' | **ANY**}  
  Указывает имя службы, которая будет использоваться в качестве критерия для определения применимости приоритета к конечной точке диалога.  
   
- *RemoteServiceName* — это литерал типа **nvarchar(256)**. Компонент [!INCLUDE[ssSB](../../includes/sssb-md.md)] производит побайтовое сравнение при поиске соответствия строке *RemoteServiceName*. При сравнении учитывается регистр и не применяются текущие параметры сортировки. Целевая служба может располагаться в текущем экземпляре компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] или в удаленном экземпляре компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+ *RemoteServiceName* — это литерал типа **nvarchar(256)** . Компонент [!INCLUDE[ssSB](../../includes/sssb-md.md)] производит побайтовое сравнение при поиске соответствия строке *RemoteServiceName*. При сравнении учитывается регистр и не применяются текущие параметры сортировки. Целевая служба может располагаться в текущем экземпляре компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] или в удаленном экземпляре компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
  '*RemoteServiceName*'  
  Задает приоритет диалога, который будет иметь:  

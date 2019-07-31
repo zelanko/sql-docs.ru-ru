@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 04b35145-1cca-45f4-9eb7-990abf2e647d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 386540c5f11561a8d576de045fd151531877b063
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: a0902765a96f68acf811bd3583a41a8e8198d5ca
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58512441"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67943151"
 ---
 # <a name="generate-an-inline-xsd-schema"></a>Создание встроенных схем XSD
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -393,7 +392,7 @@ FOR XML RAW, ELEMENTS, XMLSCHEMA
   
  Обратите внимание, что во встроенной XSD-схеме элемент <`Col`> соответствует столбцу Col2 с параметром minOccurs, равным 0.  
   
-### <a name="case-3-both-elements-of-different-types-and-corresponding-columns-can-be-null"></a>Случай 3. Оба элемента различных типов и соответствующие столбцы могут иметь значение NULL  
+### <a name="case-3-both-elements-of-different-types-and-corresponding-columns-can-be-null"></a>Случай 3. Оба элемента разных типов и соответствующие столбцы могут иметь значение NULL  
  Для случая 2 показан следующий запрос, заданный относительно таблицы-образца:  
   
 ```  

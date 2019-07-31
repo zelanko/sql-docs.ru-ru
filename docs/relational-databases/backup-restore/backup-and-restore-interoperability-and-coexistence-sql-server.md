@@ -1,5 +1,5 @@
 ---
-title: 'Резервное копирование и восстановление: взаимодействие и сосуществование (SQL Server) | Документация Майкрософт'
+title: Резервное копирование и восстановление. Взаимодействие и сосуществование (SQL Server) | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/05/2016
 ms.prod: sql
@@ -16,15 +16,14 @@ helpviewer_keywords:
 ms.assetid: 69f212b8-edcd-4c5d-8a8a-679ced33c128
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 0ba345be62ae0efdcb13fe35103c472a17bef952
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d22aaa5ec3eba14931c5af22f68152bf7b19ad84
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47723792"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67940870"
 ---
-# <a name="backup-and-restore-interoperability-and-coexistence-sql-server"></a>Резервное копирование и восстановление: взаимодействие и сосуществование
+# <a name="backup-and-restore-interoperability-and-coexistence-sql-server"></a>Резервное копирование и восстановление. Взаимодействие и сосуществование (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   В этом разделе описываются вопросы резервного копирования и восстановления для нескольких функций [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Это восстановление файлов и запуск базы данных, оперативное восстановление и отключенные индексы, зеркальное отображение базы данных, поэтапное восстановление и полнотекстовые индексы.  
@@ -51,7 +50,7 @@ ms.locfileid: "47723792"
   
  Если во время запуска базы данных возникает проблема, восстановление завершается ошибкой, а база данных помечается как подозрительная (SUSPECT). Если проблема касается только отдельных файлов, администратор базы данных может перевести их в режим «вне сети»и попытаться перезапустить базу данных. Для перевода файла в режим «вне сети» можно выполнить следующую инструкцию [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) :  
   
- ALTER DATABASE *имя_базы_данных* MODIFY FILE (NAME **='***имя_файла***'**, OFFLINE)  
+ ALTER DATABASE *имя_базы_данных* MODIFY FILE (NAME **='***имя_файла***'** , OFFLINE)  
   
  Если запуск пройдет успешно, то любая файловая группа, содержащая файлы в режиме «вне сети», также будет находиться в режиме «вне сети».  
   
@@ -134,7 +133,7 @@ ms.locfileid: "47723792"
   
 ## <a name="see-also"></a>См. также:  
  [Резервное копирование и восстановление баз данных SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
- [Создание резервных копий реплицируемых баз данных и восстановление из них](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)   
-[Активные вторичные реплики: резервное копирование во вторичных репликах \(группы доступности AlwaysOn\)](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)  
+ [Создание резервной копии и восстановление из копий реплицируемых баз данных](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)   
+[Активные вторичные реплики: резервное копирование во вторичных репликах \(группы доступности Always On\)](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)  
   
   

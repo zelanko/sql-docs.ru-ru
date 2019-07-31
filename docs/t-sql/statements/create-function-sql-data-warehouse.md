@@ -12,14 +12,13 @@ dev_langs:
 ms.assetid: 8cad1b2c-5ea0-4001-9060-2f6832ccd057
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 90437ce089bba33e5282ca01e907dfac7afe77ab
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 23949aec32acce44cd139ab8505cd1ffc743e64d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699712"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67912707"
 ---
 # <a name="create-function-sql-data-warehouse"></a>CREATE FUNCTION (хранилище данных SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -83,7 +82,7 @@ RETURNS return_data_type
  Определяет имя параметра, используя знак @ как первый символ. Имя параметра должно соответствовать правилам для идентификаторов. Параметры являются локальными в пределах функции, в разных функциях могут быть использованы одинаковые имена параметров. Аргументы могут использоваться только вместо констант. Они не могут использоваться вместо имен таблиц, имен столбцов или имен других объектов базы данных.  
   
 > [!NOTE]  
->  Параметры ANSI_WARNINGS не годятся для передачи в хранимые процедуры, пользовательские функции и при объявлении и установке переменных в пакетных инструкциях. Например, если объявить переменную как **char(3)**, а затем присвоить ей значение длиннее трех символов, данные будут усечены до размера переменной, а инструкция INSERT или UPDATE завершится без ошибок.  
+>  Параметры ANSI_WARNINGS не годятся для передачи в хранимые процедуры, пользовательские функции и при объявлении и установке переменных в пакетных инструкциях. Например, если объявить переменную как **char(3)** , а затем присвоить ей значение длиннее трех символов, данные будут усечены до размера переменной, а инструкция INSERT или UPDATE завершится без ошибок.  
   
  *parameter_data_type*  
  Тип данных параметра. Для функций [!INCLUDE[tsql](../../includes/tsql-md.md)] допускаются все скалярные типы данных, которые поддерживаются в [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. Тип данных timestamp (rowversion) не поддерживается.  
@@ -176,7 +175,7 @@ GO
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="a-using-a-scalar-valued-user-defined-function-to-change-a-data-type"></a>A. Применение скалярной определяемой пользователем функции для изменения типа данных  
- Эта скалярная функция принимает тип данных **int** и возвращает тип данных **decimal(10,2)**.  
+ Эта скалярная функция принимает тип данных **int** и возвращает тип данных **decimal(10,2)** .  
   
 ```  
 CREATE FUNCTION dbo.ConvertInput (@MyValueIn int)  

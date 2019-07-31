@@ -1,5 +1,5 @@
 ---
-title: Учебник. Начало работы с ядром СУБД | Документация Майкрософт
+title: Руководство. Начало работы с ядром СУБД | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/21/2017
 ms.prod: sql
@@ -16,16 +16,15 @@ helpviewer_keywords:
 ms.assetid: 655e709b-346b-469c-bddc-a5a0238d07e0
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9ed7e9e5831d4a3e17d29395279b9c680afaea8b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 535854f49dc1271d24af5718edb4258bc76566ef
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47834542"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68075495"
 ---
-# <a name="tutorial-getting-started-with-the-database-engine"></a>Учебник. Приступая к работе с компонентом Database Engine
+# <a name="tutorial-getting-started-with-the-database-engine"></a>Руководство. Начало работы с ядром СУБД
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 Добро пожаловать в учебник «Приступая к работе с компонентом [!INCLUDE[ssDE](../includes/ssde-md.md)] ». Этот учебник предназначен для пользователей, незнакомых с [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , установивших выпуск [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] или [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]. Этот краткий курс поможет приступить к работе с компонентом [!INCLUDE[ssDE](../includes/ssde-md.md)].  
@@ -35,10 +34,10 @@ ms.locfileid: "47834542"
   
 Учебник разделен на два занятия.  
   
-[Урок 1. Соединение с компонентом Database Engine](../relational-databases/lesson-1-connecting-to-the-database-engine.md)  
+[Занятие 1. Подключение к ядру СУБД](../relational-databases/lesson-1-connecting-to-the-database-engine.md)  
 Это занятие учит соединяться с компонентом [!INCLUDE[ssDE](../includes/ssde-md.md)] и позволять соединяться другим пользователям.  
   
-[Занятие 2. Соединение с другого компьютера](../relational-databases/lesson-2-connecting-from-another-computer.md)  
+[Занятие 2. Подключение с другого компьютера](../relational-databases/lesson-2-connecting-from-another-computer.md)  
 Это занятие учит соединяться с компонентом [!INCLUDE[ssDE](../includes/ssde-md.md)] с другого компьютера, включая активацию протоколов, настройку портов и настроек брандмауэра.  
   
 ## <a name="requirements"></a>Требования  
@@ -49,7 +48,7 @@ ms.locfileid: "47834542"
 -   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Чтобы установить [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], см. статью [Скачивание SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md).  
   
 ## <a name="see-also"></a>См. также:  
-[Руководство: SQL Server Management Studio](../ssms/tutorials/tutorial-sql-server-management-studio.md)  
+[Учебник. SQL Server Management Studio](../ssms/tutorials/tutorial-sql-server-management-studio.md)  
   
   
   

@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: 9e8ac097-84b7-46c7-85e3-c1e79f94d747
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bd5438c72028e46578b699584a5affcd1bfba7c7
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: dc1e6d1021e1e7cf30a683d8c81c625a56b9766c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51560031"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68127059"
 ---
 # <a name="view-or-change-the-properties-of-a-database"></a>Просмотр или изменение свойств базы данных
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -65,7 +64,7 @@ ms.locfileid: "51560031"
 3.  В диалоговом окне **Свойства базы данных** выберите страницу, чтобы просмотреть соответствующие сведения. Например, выберите страницу **Файлы** , чтобы просмотреть сведения о файлах данных и журнала.  
   
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
- Transact-SQL предоставляет ряд различных методов для просмотра и изменения свойств базы данных. Чтобы просмотреть свойства базы данных, можно использовать функцию [DATABASEPROPERTYEX (Transact-SQL)](../../t-sql/functions/databasepropertyex-transact-sql.md) и представление каталога [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) . Чтобы изменить свойства базы данных, можно воспользоваться версией инструкции ALTER DATABASE для вашей среды: [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md) или [ALTER DATABASE (база данных SQL Azure)](../../t-sql/statements/alter-database-azure-sql-database.md). Для просмотра свойств уровня базы данных воспользуйтесь представлением каталога [sys.database_scoped_configurations (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) , а для изменения свойств уровня базы данных — инструкцией [ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) .  
+ Transact-SQL предоставляет ряд различных методов для просмотра и изменения свойств базы данных. Чтобы просмотреть свойства базы данных, можно использовать функцию [DATABASEPROPERTYEX (Transact-SQL)](../../t-sql/functions/databasepropertyex-transact-sql.md) и представление каталога [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) . Чтобы изменить свойства базы данных, можно использовать версию инструкции ALTER DATABASE для вашей среды:  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md) или [ALTER DATABASE (база данных Microsoft Azure)](../../t-sql/statements/alter-database-azure-sql-database.md). Для просмотра свойств уровня базы данных воспользуйтесь представлением каталога [sys.database_scoped_configurations (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) , а для изменения свойств уровня базы данных — инструкцией [ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) .  
   
 #### <a name="to-view-a-property-of-a-database-by-using-the-databasepropertyex-function"></a>Просмотр свойств базы данных с использованием функции DATABASEPROPERTYEX  
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: daac41fe-7d0b-4f14-84c2-62952ad8cbfa
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 54863db300d7a63404161e438bede2ecc2ec8928
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 681e944da0a49c6a1b485606e5ed1ed0bd8ffd0f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47783732"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67904986"
 ---
 # <a name="upgrade-a-sql-server-failover-cluster-instance"></a>Обновление экземпляра отказоустойчивого кластера SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,13 +45,13 @@ ms.locfileid: "47783732"
 ## <a name="prerequisites"></a>предварительные требования  
  Перед установкой ознакомьтесь со следующими важными сведениями.  
   
--   [Обновления поддерживаемых версий и выпусков](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md). Убедитесь, что текущая версия операционной системы Windows позволяет обновить текущую версию [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] до версии [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Например, невозможно напрямую обновить экземпляр отказоустойчивого кластера SQL Server 2005 до версии [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] или обновить отказоустойчивый кластер, запущенный в [!INCLUDE[winxpsvr-md](../../../includes/winxpsvr-md.md)].  
+-   [Поддерживаемые обновления версий и выпусков](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md). Убедитесь в том, что текущая версия операционной системы Windows позволяет обновить текущую версию [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] до версии [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Например, невозможно напрямую обновить экземпляр отказоустойчивого кластера SQL Server 2005 до версии [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] или обновить отказоустойчивый кластер, запущенный в [!INCLUDE[winxpsvr-md](../../../includes/winxpsvr-md.md)].  
   
--   [Choose a Database Engine Upgrade Method](../../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md). Выберите подходящий метод обновления с учетом сведений о поддерживаемых версиях и обновлениях выпуска, а также компонентах, установленных в среде и требующих обновления (это нужно, чтобы обеспечить правильный порядок обновления этих компонентов).  
+-   [Выбор метода обновления ядра СУБД](../../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md). Выберите подходящий метод обновления с учетом сведений о поддерживаемых версиях и обновлениях выпуска, а также компонентах, установленных в среде и требующих обновления (это нужно, чтобы обеспечить правильный порядок обновления этих компонентов).  
   
--   [Составление и тестирование плана обновления Database Engine](../../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md). Просмотрите заметки о выпуске и известные проблемы, связанные с обновлением, изучите контрольный список предварительных требований, а затем разработайте и протестируйте план обновления.  
+-   [Составление и тестирование плана обновления ядра СУБД](../../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md). Просмотрите заметки о выпуске и известные проблемы, связанные с обновлением, изучите контрольный список предварительных требований, а затем разработайте и протестируйте план обновления.  
   
--   [Требования к оборудованию и программному обеспечению для установки SQL Server](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md). Ознакомьтесь с требованиями к оборудованию и ПО для установки [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Если требуется дополнительное программное обеспечение, установите его на каждом узле перед запуском обновления, чтобы минимизировать время простоя.  
+-   [Требования к оборудованию и программному обеспечению для установки SQL Server](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md):  Изучите требования к программному обеспечению для установки [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Если требуется дополнительное программное обеспечение, установите его на каждом узле перед запуском обновления, чтобы минимизировать время простоя.  
   
 ## <a name="perform-a-rolling-upgrade-or-update"></a>Выполнение последовательного обновления  
  Чтобы обновить отказоустойчивый кластер [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] до версии [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], необходимо поочередно запустить программу установки [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] на каждом узле отказоустойчивого кластера, начиная с пассивных. В процессе обновления каждого узла связи последнего с возможными владельцами соответствующего отказоустойчивого кластера прерываются. В случае непредвиденной отработки отказа обновленные узлы не участвуют в этом процессе до тех пор, пока программа установки [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] не передаст группу ресурсов кластера во владение одному из обновленных узлов.  

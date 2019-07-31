@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: e67d1bab-47b6-441d-ab9c-251a2ca499e1
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 57d421893f8113b4657290fe6aa8ed4b6da37bf0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 03b231b1a1f90703a26268e97401d39e3f685262
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47827612"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68128128"
 ---
 # <a name="errors-and-events-reference-replication"></a>Справочник по ошибкам и событиям (репликация)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

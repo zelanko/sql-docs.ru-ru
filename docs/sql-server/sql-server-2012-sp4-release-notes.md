@@ -9,14 +9,13 @@ ms.topic: conceptual
 ms.assetid: 67cb8b3e-3d82-47f4-840d-0f12a3bff565
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: cc09ccfbf23e200f8771b84d40fb5a1dd3d1dc9c
-ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+ms.openlocfilehash: 1198933f5dd996b2cf050ea0fbb7960410095869
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58306112"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68136515"
 ---
 # <a name="sql-server-2012-service-pack-release-notes"></a>Заметки о выпуске пакетов обновления к SQL Server 2012
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -77,17 +76,17 @@ ms.locfileid: "58306112"
 |Если текущей установленной версией является...|И необходимо выполнить следующее...|Загрузите и установите...|  
 |---|---|---|   
 |32-разрядные установки:|||  
-|32-разрядная версия любого выпуска SQL Server 2012|Обновление до 32-разрядной версии SQL Server 2012 SP2|**SQLServer2012SP2-KB2958429-**<arch>**-**<lang id>**.exe** со [страницы для скачивания SQL Server 2012 с пакетом обновления 2 (SP2)](https://go.microsoft.com/fwlink/?LinkID=401006)|  
-|32-разрядная версия SQL Server 2012 RTM Express|Обновление до 32-разрядной версии SQL Server 2012 Express SP2|**SQLEXPR_**<arch>**_**<lang>**.msi** со [страницы для скачивания файлов SQL Server 2012 SP2 Express](https://go.microsoft.com/fwlink/?LinkID=401007)|  
-|32-разрядная версия только клиента и средств управления для SQL Server 2012 (включая SQL Server 2012 Management Studio)|Обновление клиента и средств управления до 32-разрядной версии SQL Server 2012 SP2|**SQLEXPRWT_**<arch>**_**<lang>**.msi** со [страницы для скачивания файлов SQL Server 2012 SP2 Express](https://go.microsoft.com/fwlink/?LinkID=401007)|  
-|32-разрядная версия SQL Server 2012 Management Studio Express|Обновление до 32-разрядной версии SQL Server 2012 SP2 Management Studio Express|**SQLManagementStudio_**<arch>**_**<lang>**.msi** со [страницы для скачивания файлов SQL Server 2012 SP2 Express](https://go.microsoft.com/fwlink/?LinkID=401007)|  
-|32-разрядная версия любого выпуска SQL Server 2012 и 32-разрядная версия клиента и средств управления (включая SQL Server 2012 RTM Management Studio)|Обновление всех продуктов до 32-разрядной версии SQL Server 2012 SP2|**SQLEXPRADV_**<arch>**_**<lang>**.msi** со [страницы для скачивания файлов SQL Server 2012 SP2 Express](https://go.microsoft.com/fwlink/?LinkID=401007)|  
+|32-разрядная версия любого выпуска SQL Server 2012|Обновление до 32-разрядной версии SQL Server 2012 SP2|**SQLServer2012SP2-KB2958429-** <arch> **-** <lang id> **.exe** со [страницы для скачивания SQL Server 2012 с пакетом обновления 2 (SP2)](https://go.microsoft.com/fwlink/?LinkID=401006)|  
+|32-разрядная версия SQL Server 2012 RTM Express|Обновление до 32-разрядной версии SQL Server 2012 Express SP2|**SQLEXPR_** <arch> **_** <lang> **.msi** со [страницы для скачивания файлов SQL Server 2012 SP2 Express](https://go.microsoft.com/fwlink/?LinkID=401007)|  
+|32-разрядная версия только клиента и средств управления для SQL Server 2012 (включая SQL Server 2012 Management Studio)|Обновление клиента и средств управления до 32-разрядной версии SQL Server 2012 SP2|**SQLEXPRWT_** <arch> **_** <lang> **.msi** со [страницы для скачивания файлов SQL Server 2012 SP2 Express](https://go.microsoft.com/fwlink/?LinkID=401007)|  
+|32-разрядная версия SQL Server 2012 Management Studio Express|Обновление до 32-разрядной версии SQL Server 2012 SP2 Management Studio Express|**SQLManagementStudio_** <arch> **_** <lang> **.msi** со [страницы для скачивания файлов SQL Server 2012 SP2 Express](https://go.microsoft.com/fwlink/?LinkID=401007)|  
+|32-разрядная версия любого выпуска SQL Server 2012 и 32-разрядная версия клиента и средств управления (включая SQL Server 2012 RTM Management Studio)|Обновление всех продуктов до 32-разрядной версии SQL Server 2012 SP2|**SQLEXPRADV_** <arch> **_** <lang> **.msi** со [страницы для скачивания файлов SQL Server 2012 SP2 Express](https://go.microsoft.com/fwlink/?LinkID=401007)|  
 |32-разрядная версия одного или нескольких средств со страницы [Пакет дополнительных компонентов Microsoft SQL Server 2012 RTM](https://www.microsoft.com/download/details.aspx?id=29065) или [Пакет дополнительных компонентов Microsoft SQL Server 2012 с пакетом обновления 1 (SP1)](https://go.microsoft.com/fwlink/p/?LinkID=268266)|Обновление средств до 32-разрядной версии пакета дополнительных компонентов Microsoft SQL Server 2012 SP2|Одно ли несколько средств со страницы загрузки [Пакет дополнительных компонентов Microsoft SQL Server 2012 SP2](https://go.microsoft.com/fwlink/?LinkID=401008)|  
 |Установки 64-разрядной версии:|||  
 |64-разрядная версия любого выпуска SQL Server 2012|Обновление до 64-разрядной версии SQL Server 2012 SP2|SQLServer2012SP2-KB2958429-<arch>-<langid>.exe со [страницы для скачивания SQL Server 2012 с пакетом обновления 2 (SP2)](https://go.microsoft.com/fwlink/?LinkID=401006)|  
-|64-разрядная версия SQL Server 2012 RTM Express|Обновление до 64-разрядной версии SQL Server 2012 SP2|**SQLEXPR_**<arch>**_**<lang>**.msi** со [страницы для скачивания файлов SQL Server 2012 SP2 Express](https://go.microsoft.com/fwlink/?LinkID=401007)|  
-|64-разрядная версия только клиента и средств управляемости для SQL Server 2012 (включая SQL Server 2012 Management Studio)|Обновление клиента и средств управления до 64-разрядной версии SQL Server 2012 SP2|**SQLEXPRWT_**<arch>**_**<lang>**.msi** со [страницы для скачивания файлов SQL Server 2012 SP2 Express](https://go.microsoft.com/fwlink/?LinkID=401007)|  
-|64-разрядная версия SQL Server 2012 Management Studio Express|Обновление до 64-разрядной версии SQL Server 2012 SP2 Management Studio Express|**SQLManagementStudio_**<arch>**_**<lang>**.msi** со [страницы для скачивания файлов SQL Server 2012 SP2 Express](https://go.microsoft.com/fwlink/?LinkID=401007)|  
+|64-разрядная версия SQL Server 2012 RTM Express|Обновление до 64-разрядной версии SQL Server 2012 SP2|**SQLEXPR_** <arch> **_** <lang> **.msi** со [страницы для скачивания файлов SQL Server 2012 SP2 Express](https://go.microsoft.com/fwlink/?LinkID=401007)|  
+|64-разрядная версия только клиента и средств управляемости для SQL Server 2012 (включая SQL Server 2012 Management Studio)|Обновление клиента и средств управления до 64-разрядной версии SQL Server 2012 SP2|**SQLEXPRWT_** <arch> **_** <lang> **.msi** со [страницы для скачивания файлов SQL Server 2012 SP2 Express](https://go.microsoft.com/fwlink/?LinkID=401007)|  
+|64-разрядная версия SQL Server 2012 Management Studio Express|Обновление до 64-разрядной версии SQL Server 2012 SP2 Management Studio Express|**SQLManagementStudio_** <arch> **_** <lang> **.msi** со [страницы для скачивания файлов SQL Server 2012 SP2 Express](https://go.microsoft.com/fwlink/?LinkID=401007)|  
 |64-разрядная версия одного или нескольких средств со страницы [Пакет дополнительных компонентов Microsoft SQL Server 2012 RTM](https://www.microsoft.com/download/details.aspx?id=29065) или [Пакет дополнительных компонентов Microsoft SQL Server 2012 с пакетом обновления 1 (SP1)](https://go.microsoft.com/fwlink/p/?LinkID=268266)|Обновите средства до 64-разрядной версии Пакета дополнительных компонентов Microsoft SQL Server 2012 SP2|Одно ли несколько средств со страницы загрузки [Пакет дополнительных компонентов Microsoft SQL Server 2012 SP2](https://go.microsoft.com/fwlink/?LinkID=401008)|   
 
 
@@ -129,16 +128,16 @@ ms.locfileid: "58306112"
 Полный список ошибок и известных проблем, исправленных в этом пакете обновления, см. в [статье базы знаний](https://support.microsoft.com/kb/2674319).   
 
 ### <a name="reinstalling--instances-of-sql-server-failover-cluster-fails-if-you-use-the-same-ip-address"></a>Переустановка экземпляров отказоустойчивого кластера SQL Server завершается ошибкой, если используется один и тот же IP-адрес  
-**Проблема:** При указании неверного IP-адреса во время установки экземпляра отказоустойчивого кластера SQL Server установка завершается сбоем. После удаления сбойного экземпляра при попытке повторной установки экземпляра отказоустойчивого кластера SQL Server с тем же именем экземпляра и правильным IP-адресом установка также завершается сбоем. Сбой возникает в связи с повторяющейся группой ресурсов, которая остается после предыдущей попытки установки.  
+**Проблема:** при указании неверного IP-адреса во время установки экземпляра отказоустойчивого кластера SQL Server установка завершается сбоем. После удаления сбойного экземпляра при попытке повторной установки экземпляра отказоустойчивого кластера SQL Server с тем же именем экземпляра и правильным IP-адресом установка также завершается сбоем. Сбой возникает в связи с повторяющейся группой ресурсов, которая остается после предыдущей попытки установки.  
   
-**Решение:** Для решения этой проблемы используйте другое имя экземпляра во время повторной установки или вручную удалите группу ресурсов перед повторной установкой. Дополнительные сведения см. на странице [Добавление и удаление узлов в отказоустойчивом кластере SQL Server](failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md). 
+**Решение:** для решения этой проблемы используйте другое имя экземпляра во время повторной установки или вручную удалите группу ресурсов перед повторной установкой. Дополнительные сведения см. на странице [Добавление и удаление узлов в отказоустойчивом кластере SQL Server](failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md). 
   
 ### <a name="analysis-services-and-powerpivot"></a>Службы Analysis Services и PowerPivot  
   
 ##### <a name="powerpivot-configuration-tool-does-not-create-the-powerpivot-gallery"></a>Средство настройки PowerPivot не создает коллекцию PowerPivot  
 **Проблема:** Средство настройки PowerPivot предоставляет сайт группы, поэтому не создается коллекция PowerPivot.  
   
-**Решение:** Создайте новое приложение (библиотеку).  
+**Решение:** Создайте приложение (библиотеку).  
   
 1.  Убедитесь в том, что активна **Функция интеграции с PowerPivot для семейств веб-сайтов** .  
   
@@ -147,9 +146,9 @@ ms.locfileid: "58306112"
 3.  Щелкните **Коллекция PowerPivot**.  
   
 #### <a name="to-use-powerpivot-for-excel-with-excel-2013-you-must-use-the-add-in-that-is-installed-with-excel"></a>Для использования PowerPivot для Excel с Excel 2013 необходимо использовать надстройку, установленную с Excel  
-**Проблема:** Начиная с Office 2010, PowerPivot для Excel представляет собой отдельную надстройку, которую можно скачать по адресу [https://www.microsoft.com/bi/powerpivot.aspx](https://www.microsoft.com/bi/powerpivot.aspx). Ее можно также загрузить из [центра загрузки Майкрософт](https://www.microsoft.com/download/details.aspx?id=29074). Обратите внимание, что для загрузки доступны две версии надстройки PowerPivot. Одна из них поставляется с SQL Server 2008 R2, а вторая — с SQL Server 2012. Но для Оffice 2013 PowerPivot для Excel поставляется с Оffice и устанавливается при установке Excel. Версии PowerPivot для Excel 2010 в SQL Server 2008 R2 и SQL Server 2012 несовместимы с Excel 2013, но все равно можно установить PowerPivot для Excel 2010 на клиентском компьютере, если есть необходимость эксплуатировать Excel 2010 параллельно с Excel 2013. Другими словами, могут сосуществовать 2 версии Excel, а вместе с ними соответствующие надстройки PowerPivot.  
+**Проблема:** Начиная с Office 2010, PowerPivot для Excel представляет собой отдельную надстройку, которую можно скачать по адресу [https://www.microsoft.com/bi/powerpivot.aspx](https://www.microsoft.com/bi/powerpivot.aspx). Ее можно также загрузить из [центра загрузки Майкрософт](https://www.microsoft.com/download/details.aspx?id=29074). Обратите внимание, что для скачивания доступны две версии надстройки PowerPivot. Одна из них поставляется с SQL Server 2008 R2, а вторая — с SQL Server 2012. Но для Оffice 2013 PowerPivot для Excel поставляется с Оffice и устанавливается при установке Excel. Версии PowerPivot для Excel 2010 в SQL Server 2008 R2 и SQL Server 2012 несовместимы с Excel 2013, но все равно можно установить PowerPivot для Excel 2010 на клиентском компьютере, если есть необходимость эксплуатировать Excel 2010 параллельно с Excel 2013. Другими словами, могут сосуществовать 2 версии Excel, а вместе с ними соответствующие надстройки PowerPivot.  
   
-**Решение:** Чтобы использовать PowerPivot для Excel 2013, необходимо включить надстройки COM. В Excel 2013 выберите **Файл** | **Параметры** | **Надстройки**. В раскрывающемся списке выберите **Управление** , а затем щелкните **Надстройки COM** и нажмите кнопку **Перейти**. В окне **Надстройки COM**выберите **Microsoft Office PowerPivot для Microsoft Excel 2013** и нажмите кнопку **ОК**.  
+**Решение:** Чтобы использовать PowerPivot для Excel 2013, необходимо включить надстройку COM. В Excel 2013 выберите **Файл** | **Параметры** | **Надстройки**. В раскрывающемся списке выберите **Управление** , а затем щелкните **Надстройки COM** и нажмите кнопку **Перейти**. В окне **Надстройки COM**выберите **Microsoft Office PowerPivot для Microsoft Excel 2013** и нажмите кнопку **ОК**.  
   
 ### <a name="reporting-services"></a>Службы Reporting Services  
   
@@ -167,7 +166,7 @@ ms.locfileid: "58306112"
 #### <a name="power-view-in-sharepoint-server-2013-requires-microsoftanalysisservicesspclientdll"></a>Для Power View в SharePoint Server 2013 требуется библиотека Microsoft.AnalysisServices.SPClient.dll  
 **Проблема.** [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] не устанавливает требуемый компонент, библиотеку **Microsoft.AnalysisServices.SPClient.dll**. При установке предварительной версии SharePoint Server 2013 Preview и [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] в режиме интеграции с SharePoint, если пакет установщика PowerPivot для SharePoint 2013, файл **spPowerPivot.msi**, не скачан и не запущен, Power View не будет работать. Нарушения будут проявляться следующим образом.  
   
-**Симптомы.** При попытке создания отчета Power View отображается подобное следующему сообщение об ошибке:  
+**Симптомы.** При попытке создать отчет Power View отображается сообщение об ошибке наподобие следующего:  
   
 -   «Не удалось установить соединение с источником данных...»  
   
@@ -185,7 +184,7 @@ ms.locfileid: "58306112"
 ### <a name="data-quality-services"></a>Data Quality Services  
   
 #### <a name="dqs-available-in-the-incorrect-edition-of-sql-server-2012"></a>Доступ к DQS в неверном выпуске SQL Server 2012  
-**Проблема:** В версии RTM [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] компонент служб Data Quality Services (DQS) поддерживается в выпусках SQL Server, отличных от Enterprise, Business Intelligence и Developer. После установки SQL Server 2012 с пакетом обновления 1 (SP1) службы DQS будут недоступны во всех выпусках, за исключением Enterprise, Business Intelligence и Developer.  
+**Проблема:** В версии RTM [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] компонент служб Data Quality Services (DQS) поддерживается в выпусках SQL Server, отличных от Enterprise, Business Intelligence и Developer. После установки SQL Server 2012 с пакетом обновления 1 (SP1) службы DQS будут недоступны во всех выпусках, за исключением Enterprise, Business Intelligence и Developer.  
   
 **Обходной путь**: Если службы DQS используются в неподдерживаемом выпуске, выполните обновление до поддерживаемого выпуска или удалите зависимость от этой функции в своих приложениях.  
   
@@ -197,7 +196,7 @@ ms.locfileid: "58306112"
 ### <a name="change-data-capture-service-and-designer-for-oracle-by-attunity"></a>Служба системы отслеживания измененных данных и конструктор для Oracle компании Attunity  
   
 #### <a name="upgrading-the-cdc-service-and-designer"></a>Обновление службы и конструктора CDC  
-**Проблема:** Если конструктор системы отслеживания измененных данных для Oracle и служба системы отслеживания измененных данных для Oracle от Attunity установлены на компьютере одновременно с установкой SQL Server 2012 с пакетом обновления 1 (SP1), эти компоненты не обновляются при обновлении пакета обновления 1 (SP1).  
+**Проблема:** Если Change Data Capture Designer для Oracle и Change Data Capture Service для Oracle от Attunity установлены на компьютере одновременно с установкой SQL Server 2012 с пакетом обновления 1 (SP1), эти компоненты не обновляются при установке пакета обновления 1 (SP1).  
   
 **Решение:** Обновление компонентов CDC до последней версии.  
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6ecac598-355d-4408-baf7-1b2e8d4cf7c1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: bd769a496bd5f9057c6cedfefcf3db371f829760
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 8115350b3ead26a28c03fce975d058f393e0411b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511191"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67984780"
 ---
 # <a name="create-xml-indexes"></a>Создание XML-индексов
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -101,7 +100,7 @@ FROM    sys.xml_indexes;
   
  Столбец **secondary_type_desc** может возвращать значения NULL, PATH, VALUE или PROPERTY. Для первичного XML-индекса всегда возвращается значение NULL.  
   
-### <a name="example-creating-secondary-xml-indexes"></a>Пример Создание вторичных XML-индексов  
+### <a name="example-creating-secondary-xml-indexes"></a>Пример создание вторичных XML-индексов  
  В следующем примере иллюстрируется создание вторичных XML-индексов. Здесь также выводятся сведения о созданных XML-индексах.  
   
 ```  

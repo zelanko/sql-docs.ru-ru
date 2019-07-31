@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: d5335124-1625-47ce-b4ac-36078967158c
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 398820f012e60181ec6327a67fd5e1abb7adc407
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b342e77c542cd9f3357bccd4b97f3a876d1f5f1d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52503592"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68115688"
 ---
 # <a name="create-a-sql-server-utility-control-point-sql-server-utility"></a>создать точку управления служебной программы SQL Server (служебная программа SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -78,7 +77,7 @@ ms.locfileid: "52503592"
   
 -   Эта процедура должна выполняться пользователем, имеющим разрешения sysadmin, необходимые для создания точки управления служебной программой.  
   
--   Из точки управления служебной программой необходимо удалить все управляемые экземпляры SQL Server. Заметьте, что сама точка управления также является управляемым экземпляром SQL Server. Дополнительные сведения см. в разделах [Как удалить экземпляр SQL Server с помощью служебной программы SQL Server](https://go.microsoft.com/fwlink/?LinkId=169392).  
+-   Из точки управления служебной программой необходимо удалить все управляемые экземпляры SQL Server. Заметьте, что сама точка управления также является управляемым экземпляром SQL Server. Дополнительные сведения см. в разделе [Как Удаление экземпляра SQL Server с помощью служебной программы SQL Server](https://go.microsoft.com/fwlink/?LinkId=169392).  
   
  Эта процедура предназначена для удаления точки управления служебной программой SQL Server из служебной программы SQL Server. После завершения операции в экземпляре SQL Server можно снова создать точку управления служебной программой.  
   
@@ -133,7 +132,7 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
 ##  <a name="Instance_name"></a> Укажите экземпляр  
  Укажите следующие сведения для создаваемого UCP.  
   
--   **Имя экземпляра**. Чтобы выбрать экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] из диалогового окна соединения, щелкните **Подключить…**. Введите имя компьютера и имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в формате "имя_компьютера\имя_экземпляра".  
+-   **Имя экземпляра**. Чтобы выбрать экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] из диалогового окна соединения, щелкните **Подключить…** . Введите имя компьютера и имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в формате "имя_компьютера\имя_экземпляра".  
   
 -   **Имя программы.** Укажите имя, которое будет использоваться для обозначения служебной программы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в сети.  
   
@@ -145,7 +144,7 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
 > [!NOTE]  
 >  Если соединение является зашифрованных, то будет использоваться это соединение. Если же соединение не зашифровано, программа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] установит новое зашифрованное соединение.  
   
- Для продолжения нажмите кнопку **Подключить...**.  
+ Для продолжения нажмите кнопку **Подключить...** .  
   
 ##  <a name="Agent_configuration"></a> Учетная запись набора элементов сбора служебной программы  
  Укажите учетную запись домена Windows для выполнения набора элементов сбора служебной программы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Эта учетная запись используется как учетная запись-посредник агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для набора элементов сбора служебной программы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Можно также использовать имеющуюся служебную учетную запись службы агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Чтобы требования проверки были удовлетворены, следуйте приведенным ниже рекомендациям по настройке учетной записи.  

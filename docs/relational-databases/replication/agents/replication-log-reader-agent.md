@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5487b645-d99b-454c-8bd2-aff470709a0e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 773d7d8b513d0f93d00782d130c796d2b04cea83
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: f7e07e59c7ebf85ff3af03f7c30dfa56670148a6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54130865"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085961"
 ---
 # <a name="replication-log-reader-agent"></a>Агент чтения журнала репликации
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -70,8 +69,8 @@ logread [-?]
  **-?**  
  Отображает сведения об использовании.  
   
- **-Publisher** _server_name_[**\\**_instance_name_]  
- Имя издателя. Укажите *server_name* , чтобы использовать экземпляр сервера [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] по умолчанию. Укажите _имя_сервера_**\\**_имя_экземпляра_ для именованного экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] на этом сервере.  
+ **-Publisher** _server_name_[ **\\** _instance_name_]  
+ Имя издателя. Укажите *server_name* , чтобы использовать экземпляр сервера [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] по умолчанию. Укажите _имя_сервера_ **\\** _имя_экземпляра_ для именованного экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] на этом сервере.  
   
  **-PublisherDB** _publisher_database_  
  Имя базы данных издателя.  
@@ -82,8 +81,8 @@ logread [-?]
  **-DefinitionFile** _путь_и_имя_файла_определения_  
  Путь к файлу определения агента. Файл определения агента содержит параметры командной строки для агента. Содержимое файла анализируется как для исполняемого файла. Значения аргумента, содержащие произвольные символы, следует заключать в двойные кавычки (").  
   
- **-Distributor** _server_name_[**\\**_instance_name_]  
- Имя распространителя. Укажите *server_name* , чтобы использовать экземпляр сервера [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] по умолчанию. Укажите _server_name_**\\**_instance_name_ , чтобы обратиться к именованному экземпляру [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] по умолчанию.  
+ **-Distributor** _server_name_[ **\\** _instance_name_]  
+ Имя распространителя. Укажите *server_name* , чтобы использовать экземпляр сервера [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] по умолчанию. Укажите _server_name_ **\\** _instance_name_ , чтобы обратиться к именованному экземпляру [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] по умолчанию.  
   
  **-DistributorLogin** _distributor_login_  
  Имя входа распространителя.  
@@ -165,7 +164,7 @@ logread [-?]
  **-ProfileName** _profile_name_  
  Указывает профиль агента, из которого берутся параметры агента. Если **ProfileName** имеет значение NULL, профиль агента отключен. Если значение **ProfileName** не указано, используется профиль по умолчанию для агентов этого типа. Дополнительные сведения см. в статье [Профили агента репликации](../../../relational-databases/replication/agents/replication-agent-profiles.md).  
   
- **-PublisherFailoverPartner** _server_name_[**\\**_instance_name_]  
+ **-PublisherFailoverPartner** _server_name_[ **\\** _instance_name_]  
  Указывает партнера по обеспечению отработки отказа служб [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , участвующего в сеансе зеркального отображения базы данных с базой данных публикации. Дополнительные сведения см. в статье [Зеркальное отображение и репликация баз данных (SQL Server)](../../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md).  
   
  **-PublisherSecurityMode** [ **0**| **1**]  
@@ -181,7 +180,7 @@ logread [-?]
  Время ожидания запроса в секундах. Значение по умолчанию — 1800 секунд.  
   
  **-ReadBatchSize** _number_of_transactions_  
- Определяет максимальное число транзакций, которые считываются из журнала транзакций публикуемой базы данных за один цикл обработки (значение по умолчанию — 500). Агент будет продолжать считывать транзакции пакетами, пока все они не будут считаны из журнала. Этот параметр не поддерживается для издателей Oracle.  
+ Определяет максимальное число транзакций, которые считываются из журнала транзакций публикуемой базы данных за один цикл обработки (значение по умолчанию — 500, максимальное значение — 10 000). Агент будет продолжать считывать транзакции пакетами, пока все они не будут считаны из журнала. Этот параметр не поддерживается для издателей Oracle.  
   
  **-ReadBatchThreshold** _number_of_commands_  
  Определяет число команд репликации, которые считываются из журнала транзакций перед отправкой подписчику агентом распространителя. Значение по умолчанию равно 0. Если этот параметр не указан, то агент чтения журнала произведет считывание до конца журнала или до числа транзакций, указанного в параметре **-ReadBatchSize** .  

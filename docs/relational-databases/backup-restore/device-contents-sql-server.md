@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 95e1902e-8c7a-4830-bdf9-1a6aca414a24
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 7b18f044dbeb09e70b017afa6f78efb84b527336
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ecddec60e1a0fd30d28bfae52a5fef29a6425fbf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686532"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68068491"
 ---
 # <a name="device-contents-sql-server"></a>Содержимое устройства (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -58,8 +57,8 @@ ms.locfileid: "47686532"
 |Заголовок|Значения|  
 |------------|------------|  
 |**Название**|Имя резервного набора данных.|  
-|**Тип**|Тип выполненного резервного копирования: «Полное», «Разностное» или «Журнал транзакций».|  
-|**Компонент**|Компонент, сохраненный в резервной копии: "База данных", "Файл" или *\<пусто>* (для журналов транзакций).|  
+|**Тип**|Тип выполняемого резервного копирования: полное, разностное или резервное копирование журнала транзакций.|  
+|**Компонент**|Компонент, сохраненный в резервной копии: база данных, файл или *\<blank>* (для журналов транзакций).|  
 |**Server**|Имя экземпляра компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] , выполнившего операцию резервного копирования.|  
 |**База данных**|Имя базы данных, резервная копия которой была сделана.|  
 |**Положение**|Расположение резервного набора данных в томе.|  

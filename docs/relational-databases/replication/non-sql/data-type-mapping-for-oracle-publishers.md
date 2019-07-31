@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6da0e4f4-f252-4b7e-ba60-d2e912aa278e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8744c1ff2980db897606dfc11ab6ba7085da93f6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2b9d63f55ec7baacb4e387f6ee2f4a063ffa645b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47739192"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67901123"
 ---
 # <a name="data-type-mapping-for-oracle-publishers"></a>Сопоставление типов данных для издателей Oracle
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ ms.locfileid: "47739192"
 |RAW([1-2000])|VARBINARY([1-2000])|нет|  
 |real|FLOAT|нет|  
 |ROWID|CHAR(18)|нет|  
-|TIMESTAMP|DATETIME|Да|  
+|timestamp|DATETIME|Да|  
 |TIMESTAMP(0-7)|DATETIME|Да|  
 |TIMESTAMP(8-9)|DATETIME|Да|  
 |TIMESTAMP(0-7) WITH TIME ZONE|VARCHAR(37)|Да|  
@@ -83,7 +82,7 @@ ms.locfileid: "47739192"
 ### <a name="float-and-number-types"></a>Типы FLOAT и NUMBER  
  Масштаб и точность, задаваемые при сопоставлении типов данных FLOAT и NUMBER, зависят от масштаба и точности, указанных для столбца, использующего этот тип данных в базе данных Oracle. Точность представляет собой количество цифр в числе. Масштаб представляет собой количество цифр справа от десятичной запятой в числе. Например, у числа 123,45 точность равна 5, а масштаб равен 2.  
   
- Oracle позволяет определять числа, имеющие масштаб больший, чем точность, например NUMBER(4,5), в то время как [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] требует, чтобы точность была не меньше масштаба. Чтобы исключить усечение данных, когда в данных издателя Oracle масштаб больше, чем точность, при преобразовании данных точность приравнивается к масштабу: тип данных NUMBER(4,5) был бы преобразован в NUMERIC(5,5).  
+ Oracle позволяет определять числа, имеющие масштаб больший, чем точность, например NUMBER(4,5), в то время как [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] требует, чтобы точность была не меньше масштаба. Чтобы исключить усечение данных, когда в данных издателя Oracle масштаб больше, чем точность, при преобразовании данных точность приравнивается к масштабу: тип данных NUMBER(4,5) преобразуется в NUMERIC(5,5).  
   
 > [!NOTE]  
 >  Если для типа NUMBER не указать масштаб и точность, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] будет использовать по умолчанию максимальные масштаб (8) и точность (38). Для оптимизации хранения данных и производительности при репликации данных рекомендуется установить специальные значения масштаба и точности в Oracle.  

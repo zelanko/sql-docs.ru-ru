@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 29ac8f68-a28a-4a77-b67b-a8663001308c
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 0cc1e8e4405c6900860d8323d31d52e4a320639d
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: acdbd90268b1282bd6011ac7816157c70f66bb71
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662243"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68048831"
 ---
 # <a name="implement-event-notifications"></a>Реализация уведомлений о событиях
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -88,7 +87,7 @@ TO SERVICE 'NotifyService', '8140a771-3c4b-4479-8ac0-81008ab17984' ;
 >   
 >  `CREATE TABLE t1 (col1 int)`  
 >   
->  В этом случае уведомление о событиях направляется дважды: в первый раз при возникновении события CREATE_SCHEMA, а во второй — при возникновении события CREATE_TABLE. Рекомендуется либо избегать создания уведомлений о событиях одновременно для событий CREATE_SCHEMA и текстов <schema_element> в любых соответствующих определениях CREATE SCHEMA, либо встраивать в приложение логику, позволяющую избежать регистрации ненужных данных о событиях.  
+>  В этом случае уведомление о событиях направляется дважды: в первый раз при возникновении события CREATE_SCHEMA, а во второй — при возникновении события CREATE_TABLE. Рекомендуется либо избегать создания уведомлений о событиях одновременно для событий CREATE_SCHEMA и текстов <schema_element> в любых соответствующих определениях CREATE SCHEMA, либо встраивать в приложение логику, позволяющую избежать регистрации ненужных данных о событиях.  
   
  **Создание уведомления о событии**  
   

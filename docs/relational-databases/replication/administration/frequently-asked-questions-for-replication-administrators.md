@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5a9e4ddf-3cb1-4baf-94d6-b80acca24f64
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5f6d488b46f576ed5c5d97358ec8674a64be46bd
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 0da7b4425a5ca5c27e6f4ec745880bbcdfb6d09c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135364"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67939146"
 ---
 # <a name="frequently-asked-questions-for-replication-administrators"></a>Вопросы, часто задаваемые администраторам репликации
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -123,7 +122,7 @@ ms.locfileid: "54135364"
   
 -   Определение объекта, например инструкция CREATE TABLE. По умолчанию репликация копирует определения всех реплицируемых объектов на подписчик.  
   
--   Пространство имен, в пределах которого создается объект: \<база_данных>.\<схема>.\<объект>. Схемы определяются с использованием инструкции CREATE SCHEMA.  
+-   Пространство имен, в котором создается объект: \<база_данных>.\<схема>.\<объект>. Схемы определяются с использованием инструкции CREATE SCHEMA.  
   
 -   Репликации свойственно следующее поведение по умолчанию в мастере создания публикаций, касающееся схем и принадлежности объектов:  
   
@@ -154,7 +153,7 @@ ms.locfileid: "54135364"
   
 -   Задание того, что при повторной инициализации подписки объекты не должны удаляться. Перед повторной инициализацией либо:  
   
-    -   Выполните хранимую процедуру [sp_changearticle](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md) или [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Задайте значение «pre_creation_command» (хранимая процедура**sp_changearticle**) или значение «pre_creation_command» (хранимая процедура**sp_changemergearticle**) для параметра **@property** и значение «none», «delete» или «truncate» для параметра **@value**.  
+    -   Выполните хранимую процедуру [sp_changearticle](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md) или [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Задайте значение «pre_creation_command» (хранимая процедура**sp_changearticle**) или значение «pre_creation_command» (хранимая процедура**sp_changemergearticle**) для параметра **@property** и значение «none», «delete» или «truncate» для параметра **@value** .  
   
     -   В диалоговом окне **Свойства статьи — \<статья>** в разделе **Целевой объект** выберите значение **Не изменять существующий объект**, **Удалить данные. Если статья имеет фильтр строк, удалить только данные, соответствующие критерию фильтра.** либо **Выполнить усечение всех данных в существующем объекте** для параметра **Действие, если имя уже используется**. Дополнительные сведения о доступе к этому диалоговому окну см. в статье [Просмотр и изменение свойств публикации](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
   
@@ -184,7 +183,7 @@ ms.locfileid: "54135364"
  В предыдущих версиях [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , предшествующих [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], перемещение или переименование файлов баз данных требовало отсоединения и повторного присоединения базы данных. Поскольку реплицируемую базу данных отсоединить нельзя, необходимо было вначале удалить репликацию из этих баз данных. Начиная с версии [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], можно перемещать или переименовывать файлы без отсоединения и повторного присоединения базы данных, не влияя при этом на репликацию. Дополнительные сведения о перемещении и переименовании файлов см. в статье [ALTER DATABASE (Transact-SQL)](../../../t-sql/statements/alter-database-transact-sql.md).  
   
 ### <a name="how-do-i-drop-a-table-that-is-being-replicated"></a>Как удалить реплицируемую таблицу?  
- Вначале удалите статью из публикации с помощью хранимых процедур [sp_droparticle](../../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md), [sp_dropmergearticle](../../../relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql.md) или диалогового окна **Свойства публикации — \<публикация>**, а затем удалите ее из базы данных с помощью инструкции `DROP <Object>`. После добавления подписок невозможно удалить статьи из моментального снимка или публикаций транзакций; вначале следует удалить подписки. Дополнительные сведения см. в статье [Добавление и удаление статей в существующих публикациях](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md).  
+ Вначале удалите статью из публикации с помощью хранимых процедур [sp_droparticle](../../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md), [sp_dropmergearticle](../../../relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql.md) или диалогового окна **Свойства публикации — \<публикация>** , а затем удалите ее из базы данных с помощью инструкции `DROP <Object>`. После добавления подписок невозможно удалить статьи из моментального снимка или публикаций транзакций; вначале следует удалить подписки. Дополнительные сведения см. в статье [Добавление и удаление статей в существующих публикациях](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md).  
   
 ### <a name="how-do-i-add-or-drop-columns-on-a-published-table"></a>Как добавить или удалить столбцы в публикуемой таблице?  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддерживает разнообразные изменения схем для публикуемых объектов, включая добавление и удаление столбцов. Например, при выполнении инструкции ALTER TABLE … DROP COLUMN на издателе эта инструкция будет реплицирована на подписчиках, а затем выполнена для удаления столбца. Подписчики, использующие версии [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , предшествующие [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] , поддерживают добавление и удаление столбцов с помощью хранимых процедур [sp_repladdcolumn](../../../relational-databases/system-stored-procedures/sp-repladdcolumn-transact-sql.md) и [sp_repldropcolumn](../../../relational-databases/system-stored-procedures/sp-repldropcolumn-transact-sql.md). Дополнительные сведения см. в статье [Внесение изменений в схемы баз данных публикации](../../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md).  
@@ -198,7 +197,7 @@ ms.locfileid: "54135364"
  Для добавления таблицы (или другого объекта) к базе данных публикации или подписки не обязательно останавливать операции в ней. Добавьте таблицу в публикацию в диалоговом окне **Свойства публикации — \<публикация>** или с помощью хранимых процедур [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) и [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md). Дополнительные сведения см. в статье [Добавление и удаление статей в существующих публикациях](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md).  
   
 ### <a name="how-do-i-remove-a-table-from-a-publication"></a>Как удалить таблицу из публикации?  
- Удалите статью из публикации с помощью хранимых процедур [sp_droparticle](../../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md), [sp_dropmergearticle](../../../relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql.md) или диалогового окна **Свойства публикации — \<публикация>**. После добавления подписок невозможно удалить статьи из моментального снимка или публикаций транзакций; вначале следует удалить подписки. Дополнительные сведения см. в статье [Добавление и удаление статей в существующих публикациях](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md).  
+ Удалите статью из публикации с помощью хранимых процедур [sp_droparticle](../../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md), [sp_dropmergearticle](../../../relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql.md) или диалогового окна **Свойства публикации — \<публикация>** . После добавления подписок невозможно удалить статьи из моментального снимка или публикаций транзакций; вначале следует удалить подписки. Дополнительные сведения см. в статье [Добавление и удаление статей в существующих публикациях](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md).  
   
 ### <a name="what-actions-require-subscriptions-to-be-reinitialized"></a>Какие действия требуют повторной инициализации подписок?  
  Существует несколько видов изменений статей и публикаций, которые требуют повторной инициализации подписок. Дополнительные сведения см. в статье [Изменение свойств публикации и статьи](../../../relational-databases/replication/publish/change-publication-and-article-properties.md).  

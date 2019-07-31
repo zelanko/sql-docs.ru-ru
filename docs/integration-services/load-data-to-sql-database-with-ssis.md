@@ -10,13 +10,12 @@ ms.custom: loading
 ms.date: 08/20/2018
 ms.author: janinez
 author: janinezhang
-manager: craigg
-ms.openlocfilehash: 73b77182cc8ed447f8540aed5010aeee704c0e97
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d57c9f725ec8f7c2a26a110a6d317bd5ec1de118
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65720573"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68054508"
 ---
 # <a name="load-data-into-sql-server-or-azure-sql-database-with-sql-server-integration-services-ssis"></a>Загрузка данных в SQL Server или базу данных SQL Azure с помощью SQL Server Integration Services (SSIS)
 
@@ -64,7 +63,7 @@ ms.locfileid: "65720573"
       или диспетчер конфигурации служб
    - **Экземпляр SQL Server**. SQL Server запускается на локальном компьютере или в виртуальной машине Azure. Чтобы скачать бесплатный выпуск SQL Server Evaluation или Developer, см. раздел [Скачиваемые файлы SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads).
 
-5. **Образец данных**. В качестве исходных данных руководство использует образцы, хранимые в SQL Server в примере базы данных AdventureWorks. [Скачать образцы баз данных AdventureWorks][AdventureWorks 2014 Sample Databases].
+5. **Образец данных**. В качестве исходных данных руководство использует образцы, хранимые в SQL Server в примере базы данных AdventureWorks. Чтобы получить образец базы данных AdventureWorks, см. раздел [Образцы баз данных AdventureWorks][AdventureWorks 2014 Sample Databases].
 6. **Правило брандмауэра** в случае загрузки данных в базу данных SQL. Перед загрузкой в Базу данных SQL вам нужно создать для нее правило брандмауэра с IP-адресом локального компьютера.
 
 ## <a name="create-a-new-integration-services-project"></a>Создание нового проекта служб Integration Services

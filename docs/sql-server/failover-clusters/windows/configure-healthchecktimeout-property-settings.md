@@ -9,21 +9,20 @@ ms.topic: conceptual
 ms.assetid: 3bbeb979-e6fc-4184-ad6e-cca62108de74
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: bdb182e2861675cd42d295bd9004cd62198f7687
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: cfcb5d25b207af35e9a26b95b86997c803828f3f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51702382"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68002471"
 ---
 # <a name="configure-healthchecktimeout-property-settings"></a>Настройка параметров свойства HealthCheckTimeout
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Параметр HealthCheckTimeout используется для задания временного интервала (в миллисекундах) ожидания библиотекой ресурсов SQL Server данных, возвращаемых хранимой процедурой [sp_server_diagnostics](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) , до появления сообщения о том, что экземпляр отказоустойчивого кластера AlwaysOn SQL Server (FCI) не отвечает. Изменения, внесенные в параметры времени ожидания, вступают в силу немедленно и не требуют перезапуска ресурса SQL Server.  
   
--   **Перед началом:**  [Ограничения](#Limits), [Безопасность](#Security)  
+-   **Перед началом работы**  [Ограничения](#Limits), [Безопасность](#Security)  
   
--   **Настройка параметра HealthCheckTimeout с помощью следующих средств:**  [PowerShell](#PowerShellProcedure), [диспетчер отказоустойчивого кластера](#WSFC), [Transact-SQL](#TsqlProcedure)  
+-   **Настройка параметра HealthCheckTimeout с помощью:**  [PowerShell](#PowerShellProcedure), [диспетчера отказоустойчивости кластеров](#WSFC), [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
   

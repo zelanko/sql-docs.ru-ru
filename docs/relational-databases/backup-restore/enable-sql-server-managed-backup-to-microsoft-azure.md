@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 68ebb53e-d5ad-4622-af68-1e150b94516e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 870d1b5d1a7bedb0d758be7eef4cb3f7b2e0106c
-ms.sourcegitcommit: d7ed341b2c635dcdd6b0f5f4751bb919a75a6dfe
+ms.openlocfilehash: 281f1144fc9698fcb39d974167d02ce36602b4fd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57527087"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68089813"
 ---
 # <a name="enable-sql-server-managed-backup-to-microsoft-azure"></a>Включение управляемого резервного копирования SQL Server в Microsoft Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +47,7 @@ ms.locfileid: "57527087"
     New-AzureStorageContainer -Name backupcontainer -Context $context  
     ```  
   
-4.  **Создайте подписанный URL-адрес (SAS)**. Для доступа к контейнеру необходимо создать SAS. Это можно сделать с помощью кода и Azure PowerShell. Следующая команда `New-AzureStorageContainerSASToken` создает маркер SAS для контейнера BLOB-объектов `backupcontainer` , срок действия которого истекает через год.  
+4.  **Создайте подписанный URL-адрес (SAS)** . Для доступа к контейнеру необходимо создать SAS. Это можно сделать с помощью кода и Azure PowerShell. Следующая команда `New-AzureStorageContainerSASToken` создает маркер SAS для контейнера BLOB-объектов `backupcontainer` , срок действия которого истекает через год.  
   
   ```powershell  
   $context = New-AzureStorageContext -StorageAccountName managedbackupstorage -StorageAccountKey (Get-AzureStorageKey -StorageAccountName managedbackupstorage).Primary   
@@ -88,9 +87,9 @@ ms.locfileid: "57527087"
     SECRET = 'sv=2014-02-14&sr=c&sig=xM2LXVo1Erqp7LxQ%9BxqK9QC6%5Qabcd%9LKjHGnnmQWEsDf%5Q%se=2015-05-14T14%3B93%4V20X&sp=rwdl'  
     ```  
   
-2.  **Убедитесь в том, что служба агента SQL Server запущена и работает.** Запустите агент SQL Server, если он не запущен.  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] требует, чтобы агент SQL Server был запущен на экземпляре.  Можно установить автоматический запуск агента SQL Server, чтобы обеспечить регулярное выполнение операций резервного копирования.  
+2.  **Убедитесь в том, что служба агента SQL Server запущена и работает.** Запустите агент SQL Server, если он не запущен.  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] требует, чтобы агент SQL Server был запущен на экземпляре.  Можно установить автоматический запуск агента SQL Server, чтобы обеспечить регулярное выполнение операций резервного копирования.  
   
-3.  **Определение срока хранения.** Определите срок хранения файлов резервной копии. Срок хранения указывается в днях и может принимать значение от 1 до 30.  
+3.  **Определение срока хранения.** Определите период хранения файлов резервной копии. Срок хранения указывается в днях и может принимать значение от 1 до 30.  
   
 4.  **Включение и настройка [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].** Запустите SQL Server Management Studio и подключитесь к целевому экземпляру SQL Server. В окне запроса выполните приведенную ниже инструкцию, предварительно изменив значения имени базы данных, URL-адреса контейнера и срока хранения в соответствии с вашими требованиями.  
   
@@ -110,7 +109,7 @@ ms.locfileid: "57527087"
   
      [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] включено на указанной базе данных. Может потребоваться до 15 минут, прежде чем начнут выполняться операции резервного копирования для базы данных.  
   
-5.  **Просмотр конфигурации расширенных событий по умолчанию.** Просмотрите параметры расширенных событий, для этого запустите приведенную ниже инструкцию Transact-SQL.  
+5.  **Просмотр конфигурации расширенных событий по умолчанию.** Просмотрите параметры расширенных событий, выполнив приведенную ниже инструкцию Transact-SQL.  
   
     ```  
     SELECT * FROM msdb.managed_backup.fn_get_current_xevent_settings()  
@@ -133,7 +132,7 @@ ms.locfileid: "57527087"
   
         ```  
   
-7.  **Просмотр файлов резервных копий в учетной записи хранения Microsoft Azure**. Подключитесь к учетной записи хранения из SQL Server Management Studio либо с помощью портала управления Azure. Все файлы резервных копий отобразятся в указанном контейнере. Обратите внимание, что база данных и резервная копия журнала могут отобразиться в течение 5 минут после включения [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] для базы данных.  
+7.  **Просмотр файлов резервных копий в учетной записи хранения Microsoft Azure**. Подключитесь к учетной записи хранения из SQL Server Management Studio либо с помощью портала управления Azure. Все файлы резервных копий отобразятся в указанном контейнере. Обратите внимание, что база данных и резервная копия журнала могут отобразиться в течение 5 минут после включения [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] для базы данных.  
   
 8.  **Мониторинг состояния работоспособности**.  Можно вести мониторинг с помощью настроенных ранее уведомлений по электронной почте либо активно просматривать события в журнале. Ниже приведены примеры инструкций Transact-SQL, которые используются для просмотра событий.  
   

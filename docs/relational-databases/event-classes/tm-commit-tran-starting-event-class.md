@@ -1,5 +1,5 @@
 ---
-title: 'Класс событий TM: Commit Tran Starting | Документация Майкрософт'
+title: 'Класс событий TM: Commit Tran Starting | Документация Майкрософт'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,20 +11,19 @@ helpviewer_keywords:
 ms.assetid: 3e1ac37e-6093-4dc9-9e5d-4270db18b547
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: de0bbd146084598e289f4a79afc545283fd6fb68
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 715eb611d1228eb5ab08ead6fc84da076bd8bb30
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47732082"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68125143"
 ---
-# <a name="tm-commit-tran-starting-event-class"></a>Класс событий TM: Commit Tran Starting
+# <a name="tm-commit-tran-starting-event-class"></a>TM. Класс события Commit Tran Starting
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  События класса TM: класс события Commit Tran Starting указывает на начало выполнения запроса COMMIT TRANSACTION. Запрос отправляется клиентом через интерфейс управления транзакциями. Столбец EventSubClass указывает, будет ли начата новая транзакция после фиксации текущей транзакции.  
+  События класса TM: Commit Tran Starting указывают на начало выполнения запроса COMMIT TRANSACTION. Запрос отправляется клиентом через интерфейс управления транзакциями. Столбец EventSubClass указывает, будет ли начата новая транзакция после фиксации текущей транзакции.  
   
-## <a name="tm-commit-tran-starting-event-class-data-columns"></a>Столбцы данных класса событий TM: Commit Tran Starting  
+## <a name="tm-commit-tran-starting-event-class-data-columns"></a>Столбцы данных класса событий TM: Commit Tran Starting Event  
   
 |Имя столбца данных|Тип данных|Описание|Идентификатор столбца|Фильтруемый|  
 |----------------------|---------------|-----------------|---------------|----------------|  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: ed1ef012-fa14-4ba5-bafe-d1527ba065b3
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d861c45f8f91a9026285552f30434250bb89d515
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: 60183a9777098728ee258274a19aca4d65885b87
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51216532"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68115830"
 ---
 # <a name="options-in-the-back-up-database-task-for-maintenance-plan"></a>Возможности для плана обслуживания в задаче "Создание резервной копии базы данных"
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +38,7 @@ ms.locfileid: "51216532"
  Создать новое соединение с сервером для его использования при выполнении этой задачи. Диалоговое окно **Создание соединения** описано ниже.  
   
  **Базы данных**  
- Укажите базы данных, для которых должна выполняться эта задача. При выборе этот раскрывающийся список содержит следующие параметры: **Все базы данных**, **Все системные базы данных**, **Все пользовательские базы данных**, **Определенные базы данных**.  
+ Укажите базы данных, для которых должна выполняться эта задача. При выборе этот раскрывающийся список содержит следующие пункты: **Все базы данных**, **Все системные базы данных**, **Все пользовательские базы данных**, **Определенные базы данных**.  
   
  **Все базы данных**  
  Создается план обслуживания, по которому задачи обслуживания выполняются для всех баз данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

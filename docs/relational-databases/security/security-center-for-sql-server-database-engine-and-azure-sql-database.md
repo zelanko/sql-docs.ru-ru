@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: dfb39d16-722a-4734-94bb-98e61e014ee7
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cbc60aae1b1b9fb02675c1f87dcc088f3bfa69ab
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: ed88293239d29533b4374541ab4af8e12fb55900
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51668413"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68126873"
 ---
 # <a name="security-center-for-sql-server-database-engine-and-azure-sql-database"></a>Центр обеспечения безопасности для базы данных Azure SQL и SQL Server Database Engine
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,7 +42,7 @@ ms.locfileid: "51668413"
 |**Где выполняется проверка подлинности?**<br /><br /> ![security-center-both](../performance/media/security-center-both.png "security-center-both") В базе данных master: имена для входа и пользователи базы данных<br /><br /> ![security-center-both](../performance/media/security-center-both.png "security-center-both") В пользовательской базе данных: включенные пользователи базы данных|Аутентификация в базе данных master (имена для входа и пользователи базы данных)<br /><br /> [создать имя входа SQL Server](../../relational-databases/security/authentication-access/create-a-login.md)<br /><br /> [Управление базами данных и именами входа в базе данных SQL Azure](https://msdn.microsoft.com/library/ee336235.aspx)<br /><br /> [Создание пользователя базы данных](../../relational-databases/security/authentication-access/create-a-database-user.md)<br /><br /> <br /><br /> Проверка подлинности в пользовательской базе данных<br /><br /> [Пользователи автономной базы данных — создание переносимой базы данных](../../relational-databases/security/contained-database-users-making-your-database-portable.md)|  
 |**Использование других идентификаторов**<br /><br /> ![security-center-both](../performance/media/security-center-both.png "security-center-both") Учетные данные<br /><br /> ![security-center-sqlserver](../performance/media/security-center-sqlserver.png "security center-sqlserver") Выполнение от другого имени для входа<br /><br /> ![security-center-both](../performance/media/security-center-both.png "security-center-both") Выполнение от имени другого пользователя базы данных|[Учетные данные (компонент Database Engine)](../../relational-databases/security/authentication-access/credentials-database-engine.md)<br /><br /> [Выполнение в контексте другого имени входа](../../t-sql/statements/execute-as-transact-sql.md)<br /><br /> [Выполнение от имени другого пользователя базы данных](../../t-sql/statements/execute-as-transact-sql.md)|  
   
-##  <a name="What"></a> Авторизация: что вам можно делать?  
+##  <a name="What"></a> Авторизация: что можно делать?  
   
 |||  
 |-|-|  
@@ -71,8 +70,8 @@ ms.locfileid: "51668413"
 |||  
 |-|-|  
 |**Автоматизированный аудит**<br /><br /> ![security-center-sqlserver](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Аудит (уровень сервера и базы данных)<br /><br /> ![security-center-sqldb](../../relational-databases/security/media/security-center-sqldb.png "security-center-sqldb") [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Аудит (уровень базы данных)<br /><br /> ![security-center-sqldb](../../relational-databases/security/media/security-center-sqldb.png "security-center-sqldb") Обнаружение угроз| <br /><br /> [Подсистема аудита SQL Server (компонент Database Engine)](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)<br /><br /> [Аудит базы данных SQL](https://azure.microsoft.com/documentation/articles/sql-database-auditing-get-started/)<br /><br /> [Приступая к работе с обнаружением угроз для базы данных SQL](https://azure.microsoft.com/documentation/articles/sql-database-threat-detection-get-started/) <br /><br /> [Оценка уязвимостей базы данных SQL](https://docs.microsoft.com/azure/sql-database/sql-vulnerability-assessment) |  
-|**Пользовательский аудит**<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") Триггеры|Реализация пользовательского аудита: создание [DDL Triggers](../../relational-databases/triggers/ddl-triggers.md) и [DML Triggers](../../relational-databases/triggers/dml-triggers.md)|  
-|**Соответствие**<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") Соответствие|SQL Server: стандарт<br />                        [Common Criteria](https://go.microsoft.com/fwlink/?LinkId=616319)<br /><br /> База данных SQL:<br />                        [Центр управления безопасностью Microsoft Azure: соответствие функций требованиям регулирования](https://azure.microsoft.com/support/trust-center/services/)|  
+|**Пользовательский аудит**<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") Триггеры|Реализация пользовательского аудита: Создание [DDL Triggers](../../relational-databases/triggers/ddl-triggers.md) и [DML Triggers](../../relational-databases/triggers/dml-triggers.md)|  
+|**Соответствие**<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") Соответствие|SQL Server: стандарт<br />                        [Common Criteria](https://go.microsoft.com/fwlink/?LinkId=616319)<br /><br /> База данных SQL:<br />                        [Центр управления безопасностью Microsoft Azure: соответствие функций нормативным требованиям](https://azure.microsoft.com/support/trust-center/services/)|  
   
 ##  <a name="SQLInjection"></a> Атака путем внедрения кода SQL  
  Внедрение кода SQL — это атака, при которой производится вставка вредоносного кода в строки, передающиеся затем в [!INCLUDE[ssDE](../../includes/ssde-md.md)] для анализа и выполнения. Любая процедура, создающая инструкции SQL, должна рассматриваться на предмет уязвимости к вставке небезопасного кода, поскольку [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняет все получаемые синтаксически правильные запросы. Все системы базы данных подвержены риску атак путем внедрения кода SQL, и многие уязвимости представлены в приложении, которое запрашивает [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Можно предотвратить атаки путем внедрения кода SQL, используя хранимые процедуры и параметризованные команды, избегая использования динамического кода SQL и ограничив разрешения для всех пользователей.  Дополнительные сведения см. в разделе [SQL Injection](../../relational-databases/security/sql-injection.md).  
@@ -83,7 +82,7 @@ ms.locfileid: "51668413"
   
 -   [Написание безопасного динамического кода SQL в SQL Server](/dotnet/framework/data/adonet/sql/writing-secure-dynamic-sql-in-sql-server)  
   
--   [Практическое руководство. Защита от внедрения кода SQL в ASP.NET](https://msdn.microsoft.com/library/ff648339.aspx)  
+-   [Руководство. Предотвращение внедрения SQL в ASP.NET](https://msdn.microsoft.com/library/ff648339.aspx)  
   
 ## <a name="see-also"></a>См. также:  
  [Приступая к работе с разрешениями Database Engine](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)   

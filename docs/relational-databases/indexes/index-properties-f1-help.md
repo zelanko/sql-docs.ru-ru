@@ -18,14 +18,13 @@ f1_keywords:
 ms.assetid: 45efd81a-3796-4b04-b0cc-f3deec94c733
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 089a97d4a2f6476719a3570d4d59bea664b71690
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 40fff511c9ff69ce6da9de9cf7bcaf21cb4d9ef3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846378"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67909716"
 ---
 # <a name="index-properties-f1-help"></a>Справка F1 свойств индекса
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ ms.locfileid: "47846378"
  Отображает имя индекса. Для существующего индекса это поле доступно только для чтения. При создании нового индекса введите его имя.  
   
  **Тип индекса**  
- Указывает тип индекса. Для новых индексов указывается тип индекса, выбранного при открытии диалогового окна. Доступные типы индексов: **кластеризованный**, **некластеризованный**, **первичный XML**, **вторичный XML**, **пространственный**, **кластеризованный Columnstore**или **некластеризованный Columnstore**.  
+ Указывает тип индекса. Для новых индексов указывается тип индекса, выбранного при открытии диалогового окна. Возможные индексы: **кластеризованный**, **некластеризованный**, **первичный XML**, **вторичный XML**, **пространственный**, **кластеризованный columnstore** или **некластеризованный columnstore**.  
   
  **Примечание.** Для таблицы можно использовать только один кластеризованный индекс. Для каждой таблицы можно использовать только один индекс Columnstore, оптимизированный для памяти xVelocity.  
   
@@ -102,7 +101,7 @@ ms.locfileid: "47846378"
  **Удалить**  
  Удаляет выбранный столбец из ключа индекса.  
   
- **вверх**  
+ **Вверх**  
  Перемещает выбранный столбец вверх в сетке ключа индекса.  
   
  **Переместить вниз**  

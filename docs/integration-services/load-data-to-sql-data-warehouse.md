@@ -10,13 +10,12 @@ ms.custom: loading
 ms.date: 08/09/2018
 ms.author: janinez
 author: janinezhang
-manager: craigg
-ms.openlocfilehash: 8a2d8444e0b19ed4672e9582ef9802d0cd6f6fe7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 29668550dc64d4c782101f2690058bb465764c90
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65720736"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67908634"
 ---
 # <a name="load-data-into-azure-sql-data-warehouse-with-sql-server-integration-services-ssis"></a>Загрузка данных в Хранилище данных SQL Azure с помощью SQL Server Integration Services (SSIS)
 
@@ -97,7 +96,7 @@ Visual Studio открывает и создает проект служб Integ
 
 Для более полного контроля вы можете вручную создать пакет, который эмулирует работу задачи отправки информации в хранилище данных SQL. 
 
-1. Используйте задачу передачи BLOB-объектов Azure для размещения данных в хранилище BLOB-объектов Azure. Чтобы получить задачу отправки BLOB-объектов Azure, скачайте [Пакет дополнительных компонентов Microsoft SQL Server Integration Services для Azure][Microsoft SQL Server 2017 Integration Services Feature Pack for Azure].
+1. Используйте задачу передачи BLOB-объектов Azure для размещения данных в хранилище BLOB-объектов Azure. Чтобы получить задачу отправки больших двоичных объектов Azure, скачайте [Пакет дополнительных компонентов Microsoft SQL Server Integration Services для Azure][Microsoft SQL Server 2017 Integration Services Feature Pack for Azure].
 
 2. После этого используйте задачу "Выполнить SQL" служб SSIS, чтобы запустить скрипт PolyBase, который загружает данные в хранилище данных SQL. Пример, который загружает данные из хранилища BLOB-объектов Azure в хранилище данных SQL (но без использования SSIS), см. в разделе [Учебник. Загрузка данных в хранилище данных SQL Azure](/azure/sql-data-wAREHOUSE/load-data-wideworldimportersdw).
 
@@ -115,7 +114,7 @@ Visual Studio открывает и создает проект служб Integ
 
 Чтобы продолжить проходить руководство с этим вариантом, потребуется следующее:
 
-1. **Образец данных**. В этом учебнике в качестве исходных данных для загрузки в хранилище данных SQL используется образец данных, сохраненный в SQL Server в образце базы данных AdventureWorks. [Скачать образцы баз данных AdventureWorks][AdventureWorks 2014 Sample Databases].
+1. **Образец данных**. В этом учебнике в качестве исходных данных для загрузки в хранилище данных SQL используется образец данных, сохраненный в SQL Server в образце базы данных AdventureWorks. Чтобы получить образец базы данных AdventureWorks, см. раздел [Образцы баз данных AdventureWorks][AdventureWorks 2014 Sample Databases].
 
 2. **Правило брандмауэра**. Перед загрузкой данных в хранилище данных SQL вам нужно создать в нем правило брандмауэра с IP-адресом локального компьютера.
 
@@ -190,7 +189,7 @@ Visual Studio открывает и создает проект служб Integ
    
    1. Измените имя целевой таблицы на **SalesOrderDetail**.
    2. Удалите столбец **rowguid**. Тип данных **Uniqueidentifier** в хранилище данных SQL не поддерживается.
-   3. Измените тип данных столбца **LineTotal** на **money**. Тип данных **decimal** в хранилище данных SQL не поддерживается. Сведения о поддерживаемых типах данных см. в разделе [CREATE TABLE (хранилище данных SQL Azure или Parallel Data Warehouse)][CREATE TABLE (Azure SQL Data Warehouse, Parallel Data Warehouse)].
+   3. Измените тип данных столбца **LineTotal** на **money**. Тип данных **decimal** в хранилище данных SQL не поддерживается. Сведения о поддерживаемых типах данных см. в разделе [CREATE TABLE (Хранилище данных SQL Azure или Parallel Data Warehouse)][CREATE TABLE (Azure SQL Data Warehouse, Parallel Data Warehouse)].
       
        ![][12b]
    4. Нажмите кнопку **ОК**, чтобы создать таблицу и вернуться в **Редактор назначения ADO.NET**.

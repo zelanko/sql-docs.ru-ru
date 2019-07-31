@@ -28,19 +28,18 @@ helpviewer_keywords:
 ms.assetid: 3f7adbf7-6e40-4396-a8ca-71cbb843b5c2
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9bf4ae1f391a982294a14cb38bcdce879d0b2253
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: efc249be2368973bcd1f3a4692ed280c1a131ec6
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47632705"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68344595"
 ---
 # <a name="principals-database-engine"></a>Субъекты (компонент Database Engine)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  *Субъекты* — это сущности, которые могут запрашивать ресурсы [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Как и другие компоненты модели авторизации [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , участников можно иерархически упорядочить. Область влияния субъекта зависит от его области определения (Windows, сервер, база данных) и того, неделимый это субъект или коллективный. Имя входа Windows является примером индивидуального (неделимого) субъекта, а группа Windows — коллективного. Каждый субъект имеет идентификатор безопасности (SID). Эта статья относится ко всем версиям SQL Server, однако в базе данных SQL или хранилище данных SQL существуют некоторые ограничения на уровне сервера. 
+  *Субъекты* — это сущности, которые могут запрашивать ресурсы [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Как и другие компоненты модели авторизации [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , участников можно иерархически упорядочить. Область влияния субъекта зависит от области его определения: Windows, сервер, база данных, — а также от того, неделимый это субъект или коллекция. Имя входа Windows является примером индивидуального (неделимого) субъекта, а группа Windows — коллективного. Каждый субъект имеет идентификатор безопасности (SID). Эта статья относится ко всем версиям SQL Server, однако в базе данных SQL или хранилище данных SQL существуют некоторые ограничения на уровне сервера. 
   
 ## <a name="sql-server-level-principals"></a>Субъекты уровня SQL Server:  
   
@@ -53,12 +52,12 @@ ms.locfileid: "47632705"
   
 ## <a name="database-level-principals"></a>Субъекты уровня базы данных
   
-- пользователь базы данных (существует 11 типов пользователей; сведения см. в статье об инструкции [CREATE USER (Transact-SQL)](../../../t-sql/statements/create-user-transact-sql.md));
+- Пользователь базы данных (существует 12 типов пользователей; сведения см. в статье об инструкции [CREATE USER (Transact-SQL)](../../../t-sql/statements/create-user-transact-sql.md));
 - Роль базы данных
 - Роль приложения
   
 ## <a name="sa-login"></a>Имя входа SA  
- Имя входа [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `sa` является субъектом уровня сервера. По умолчанию оно создается при установке экземпляра. Начиная с версии [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]базой данных для имени входа sa по умолчанию является master. Это поведение было изменено по сравнению с предыдущими версиями [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Имя входа `sa` является участником предопределенной роли базы данных `sysadmin`. `sa` имеет все разрешения на сервере и не может быть ограничено. Имя входа `sa` нельзя удалить, но его можно отключить, чтобы никто не смог его использовать.
+ Имя входа [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `sa` является субъектом уровня сервера. По умолчанию оно создается при установке экземпляра. Начиная с версии [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]базой данных для имени входа sa по умолчанию является master. Это поведение было изменено по сравнению с предыдущими версиями [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Имя входа `sa` является участником предопределенной роли сервера `sysadmin`. `sa` имеет все разрешения на сервере и не может быть ограничено. Имя входа `sa` нельзя удалить, но его можно отключить, чтобы никто не смог его использовать.
 
 ## <a name="dbo-user-and-dbo-schema"></a>Пользователь и схема dbo
 

@@ -1,7 +1,7 @@
 ---
 title: CREATE EXTERNAL LIBRARY (Transact-SQL) — SQL Server | Документация Майкрософт
 ms.custom: ''
-ms.date: 05/22/2019
+ms.date: 07/09/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: t-sql
@@ -18,22 +18,29 @@ helpviewer_keywords:
 author: dphansen
 ms.author: davidph
 manager: cgronlund
-monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 852b98c1ee0eecba21b426c74397985208fd2178
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-current||=sqlallproducts-allversions'
+ms.openlocfilehash: 6939836ca547027f605049f7a26e8d0901f23d51
+ms.sourcegitcommit: 73dc08bd16f433dfb2e8406883763aabed8d8727
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "67140798"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68329300"
 ---
 # <a name="create-external-library-transact-sql"></a>CREATE EXTERNAL LIBRARY (Transact-SQL)  
 
-[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 Отправляет файлы пакетов R, Python или Java в базу данных из указанного байтового потока или пути к файлу. Эта инструкция служит универсальным механизмом для администратора базы данных, с помощью которого он может отправлять артефакты, необходимые для любой новой внешней языковой среды выполнения и платформы операционной системы, поддерживаемой [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. 
 
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||sqlallproducts-allversions"
 > [!NOTE]
-> В SQL Server 2017 поддерживаются язык R и платформа Windows. R, Python и внешние языки на платформах Windows и Linux поддерживаются в SQL Server 2019 CTP 3.0.
+> В SQL Server 2017 поддерживаются язык R и платформа Windows. R, Python и внешние языки на платформах Windows и Linux поддерживаются в SQL Server 2019 CTP 2.4 и более поздних версиях.
+::: moniker-end
+
+::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
+> [!NOTE]
+> В базе данных SQL Azure для установки библиотеки можно использовать **sqlmlutils**. Подробные сведения см. в статье [Добавление пакета с помощью sqlmlutils](/azure/sql-database/sql-database-machine-learning-services-add-r-packages#add-a-package-with-sqlmlutils).
+::: moniker-end
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ## <a name="syntax-for-sql-server-2019"></a>Синтаксис для SQL Server 2019
@@ -106,6 +113,29 @@ WITH ( LANGUAGE = 'R' )
 ```
 ::: moniker-end
 
+::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
+## <a name="syntax-for-azure-sql-database"></a>Синтаксис для базы данных SQL Azure
+
+```text
+CREATE EXTERNAL LIBRARY library_name  
+[ AUTHORIZATION owner_name ]  
+FROM <file_spec> [ ,...2 ]  
+WITH ( LANGUAGE = 'R' )  
+[ ; ]  
+
+<file_spec> ::=  
+{  
+    (CONTENT = <library_bits>)  
+}  
+
+<library_bits> :: =  
+{ 
+      varbinary_literal 
+    | varbinary_expression 
+}
+```
+::: moniker-end
+
 ### <a name="arguments"></a>Аргументы
 
 **library_name**
@@ -122,6 +152,7 @@ WITH ( LANGUAGE = 'R' )
 
 Когда пользователь **RUser1** выполняет внешний сценарий, значение `libPath` может содержать несколько путей. Первый путь всегда является путем к общей библиотеке, созданной владельцем базы данных. Во второй части `libPath` указывается путь, содержащий пакеты, загруженные отдельно пользователем **RUser1**.
 
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 **file_spec**
 
 Указывает содержимое пакета для конкретной платформы. Поддерживается только один файл артефакта на платформу.
@@ -131,6 +162,7 @@ WITH ( LANGUAGE = 'R' )
 При попытке доступа к файлу, указанному в **<client_library_specifier>** , SQL Server олицетворяет разрешения контекста безопасности текущего имени входа Windows. Если **<client_library_specifier>** задает расположение в сети (UNC-путь), олицетворение текущего имени входа не распространяется на это расположение в сети из-за ограничений передачи прав. В этом случае доступ осуществляется при помощи контекста безопасности учетной записи службы SQL Server. Дополнительные сведения см. в статье [Учетные данные (компонент Database Engine)](../../relational-databases/security/authentication-access/credentials-database-engine.md).
 
 При необходимости можно указать платформу операционной системы для файла. Для каждой платформы операционной системы для конкретного языка или среды выполнения разрешен только один артефакт файла или содержимое.
+::: moniker-end
 
 **library_bits**
 
@@ -141,26 +173,42 @@ WITH ( LANGUAGE = 'R' )
 ::: moniker range=">=sql-server-2017 <=sql-server-2017||=sqlallproducts-allversions"
 **PLATFORM = WINDOWS**
 
-Указывает платформу для содержимого библиотеки. Является значением по умолчанию для платформы узла, на которой выполняется SQL Server. Поэтому пользователю не нужно указывать это значение. Оно необходимо в случае, когда поддерживается несколько платформ или пользователь хочет указать другую платформу. 
-
+Указывает платформу для содержимого библиотеки. Является значением по умолчанию для платформы узла, на которой выполняется SQL Server. Поэтому пользователю не нужно указывать это значение. Оно необходимо в случае, когда поддерживается несколько платформ или пользователь хочет указать другую платформу.
 В SQL Server 2017 поддерживается только платформа Windows.
 ::: moniker-end
+
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 **PLATFORM**
 
 Указывает платформу для содержимого библиотеки. Является значением по умолчанию для платформы узла, на которой выполняется SQL Server. Поэтому пользователю не нужно указывать это значение. Оно необходимо в случае, когда поддерживается несколько платформ или пользователь хочет указать другую платформу.
-
 В SQL Server 2019 поддерживаются платформы Windows и Linux.
+::: moniker-end
 
+::: moniker range=">=sql-server-2017 <=sql-server-2017||=sqlallproducts-allversions"
+**LANGUAGE = 'R'**
+
+Задает язык пакета.
+Язык R поддерживается в SQL Server 2017.
+::: moniker-end
+
+::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
+**LANGUAGE = 'R'**
+
+Задает язык пакета.
+Язык R поддерживается в Базе данных SQL Azure.
+::: moniker-end
+
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 **language**
 
-Задает язык пакета. Значением может быть `R`, `Python` или имя [ созданного внешнего языка](create-external-language-transact-sql.md).
+Задает язык пакета. Значением может быть `R`, `Python` или название внешнего языка (см. раздел [CREATE EXTERNAL LANGUAGE](create-external-language-transact-sql.md)).
 ::: moniker-end
 
 ## <a name="remarks"></a>Remarks
 
 ::: moniker range=">=sql-server-2017 <=sql-server-2017||=sqlallproducts-allversions"
-При использовании файла в языке R пакеты должны быть подготовлены в виде сжатых архивных файлов с расширением ZIP для Windows. В SQL Server 2017 поддерживается только платформа Windows.
+При использовании файла в языке R пакеты должны быть подготовлены в виде сжатых архивных файлов с расширением ZIP для Windows. 
+В SQL Server 2017 поддерживается только платформа Windows.
 ::: moniker-end
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
@@ -193,7 +241,8 @@ GRANT CREATE EXTERNAL LIBRARY to user
 
 ## <a name="examples"></a>Примеры
 
-### <a name="a-add-an-external-library-to-a-database"></a>A. Добавление внешней библиотеки в базу данных  
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||sqlallproducts-allversions"
+### <a name="add-an-external-library-to-a-database"></a>Добавление внешней библиотеки в базу данных  
 
 В следующем примере внешняя библиотека `customPackage` добавляется в базу данных.
 
@@ -209,12 +258,13 @@ EXEC sp_execute_external_script
 @language =N'R', 
 @script=N'library(customPackage)'
 ```
+::: moniker-end
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 В языке Python в SQL Server 2019 пример также выполняется при замене `'R'` на `'Python'`.
 ::: moniker-end
 
-### <a name="b-installing-packages-with-dependencies"></a>Б. Установка пакетов с зависимостями
+### <a name="installing-packages-with-dependencies"></a>Установка пакетов с зависимостями
 
 Если вы хотите установить пакет с зависимостями, нужно обязательно проанализировать зависимости первого и второго уровней и убедиться, что все необходимые пакеты доступны, _до_ установки целевого пакета.
 
@@ -228,6 +278,8 @@ EXEC sp_execute_external_script
 На практике зависимости популярных пакетов обычно гораздо сложнее, чем в этом простом примере. Например, **ggplot2** может требовать более 30 пакетов, а эти пакеты могут требовать дополнительные пакеты, которые недоступны на сервере. Отсутствие пакета или наличие пакета неправильной версии могут привести к сбою установки.
 
 Так как может быть трудно определить все зависимости при просмотре манифеста пакета, рекомендуем использовать такой пакет, как [miniCRAN](https://cran.r-project.org/web/packages/miniCRAN/index.html), для поиска всех пакетов, необходимых для успешного завершения установки.
+
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 
 + Загрузите целевой пакет и его зависимости. Все файлы должны находиться в папке, доступной на сервере.
 
@@ -262,17 +314,18 @@ EXEC sp_execute_external_script
     library(packageA)
     '
     ```
+::: moniker-end
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 В языке Python в SQL Server 2019 пример также выполняется при замене `'R'` на `'Python'`.
 ::: moniker-end
 
-### <a name="c-create-a-library-from-a-byte-stream"></a>В. Создание библиотеки из потока байтов
+### <a name="create-a-library-from-a-byte-stream"></a>Создание библиотеки из потока байтов
 
 Если у вас нет возможности сохранить файлы пакета на сервере, вы можете передать содержимое пакетов в переменной. В следующем примере библиотека создается путем передачи битов в виде шестнадцатеричного литерала.
 
 ```SQL
-CREATE EXTERNAL LIBRARY customLibrary FROM (CONTENT = 0xabc123) WITH (LANGUAGE = 'R');
+CREATE EXTERNAL LIBRARY customLibrary FROM (CONTENT = 0xABC123...) WITH (LANGUAGE = 'R');
 ```
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
@@ -282,14 +335,14 @@ CREATE EXTERNAL LIBRARY customLibrary FROM (CONTENT = 0xabc123) WITH (LANGUAGE =
 > [!NOTE]
 > В этом примере кода показан только синтаксис. Двоичное значение в `CONTENT =` было усечено для удобства чтения и не создает рабочую библиотеку. Фактическое содержимое двоичной переменной будет гораздо длиннее.
 
-### <a name="d-change-an-existing-package-library"></a>Г. Изменение существующей библиотеки пакета
+### <a name="change-an-existing-package-library"></a>Изменение существующей библиотеки пакета
 
 Можно использовать инструкцию DDL `ALTER EXTERNAL LIBRARY` для добавления нового содержимого библиотеки или изменения существующего содержимого библиотеки. Для изменения существующей библиотеки требуется разрешение `ALTER ANY EXTERNAL LIBRARY`.
 
 Дополнительные сведения см. в разделе [ALTER EXTERNAL LIBRARY](alter-external-library-transact-sql.md).
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-### <a name="e-add-a-java-jar-file-to-a-database"></a>Д. Добавьте JAR-файл Java к базе данных  
+### <a name="add-a-java-jar-file-to-a-database"></a>Добавьте JAR-файл Java к базе данных  
 
 В следующем примере внешний JAR-файл `customJar` добавляется в базу данных.
 
@@ -309,7 +362,7 @@ EXEC sp_execute_external_script
 WITH RESULT SETS ((column1 int))
 ```
 
-### <a name="f-add-an-external-package-for-both-windows-and-linux"></a>Е. Добавление внешнего пакета одновременно для Windows и Linux
+### <a name="add-an-external-package-for-both-windows-and-linux"></a>Добавление внешнего пакета одновременно для Windows и Linux
 
 Вы можете указать два параметра `<file_spec>`: один для Windows, а другой для Linux.
 

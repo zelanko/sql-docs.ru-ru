@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: 4b5c460b-e4ad-404a-b4ca-d65aba38ebbb
 author: pmasl
 ms.author: umajay
-manager: craigg
-ms.openlocfilehash: 00b6ddce8d5c69e16913290b0300fc6828352147
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 451743ebafe719b554384edd2d9abadb60e070f3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685681"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039128"
 ---
 # <a name="dbcc-freesystemcache-transact-sql"></a>DBCC FREESYSTEMCACHE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +62,7 @@ NO_INFOMSGS
 При выполнении инструкции DBCC FREESYSTEMCACHE очищается кэш планов для экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Очистка кэша планов становится причиной перекомпиляции всех предстоящих планов выполнения и приводит к непредвиденному временному снижению производительности обработки запросов. Для каждого удаленного хранилища кэша в кэше планов журнал ошибок [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] содержит сообщение, информирующее о том, что [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обнаружено %d экземпляров, сброшенных на диск хранилищ кэша для хранилища кэша "%s" (части кэша планов) в результате операций DBCC FREEPROCCACHE или DBCC FREESYSTEMCACHE. Это сообщение добавляется в журнал каждые пять минут при сбросе кэша в течение этого интервала времени.
 
 ## <a name="result-sets"></a>Результирующие наборы  
-Инструкция DBCC FREESYSTEMCACHE возвращает: «Выполнение инструкции DBCC завершено. Если инструкция DBCC выдает сообщения об ошибках, обратитесь к системному администратору».
+Инструкция DBCC FREESYSTEMCACHE возвращает: "Выполнение DBCC завершено. Если инструкция DBCC выдает сообщения об ошибках, обратитесь к системному администратору».
   
 ## <a name="permissions"></a>Разрешения  
 Требует разрешения ALTER SERVER STATE на сервере.

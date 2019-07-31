@@ -36,13 +36,12 @@ helpviewer_keywords:
 ms.assetid: c6da8c04-5b6b-459a-9f76-110c92ca8b29
 author: pmasl
 ms.author: umajay
-manager: craigg
-ms.openlocfilehash: e746569eb629eb41c96cc7738e9529949307532e
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 22b7963d17039e029ac88ae6f9bc4c2bd9005275
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685721"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68040517"
 ---
 # <a name="dbcc-transact-sql"></a>DBCC (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -105,8 +104,8 @@ ms.locfileid: "57685721"
 |DBCC ALLOC REPAIR|Во время этого этапа выполняются исправления базы данных, если указывается параметр REPAIR_FAST, REPAIR_REBUILD или REPAIR_ALLOW_DATA_LOSS и имеются ошибки на уровне распределения пространства.|О состоянии не сообщается.|  
 |DBCC SYS CHECK|Во время этого этапа проверяются системные таблицы базы данных.|Отчет о состоянии сформирован на уровне страниц базы данных.<br /><br /> Значение отчета о состоянии обновляется через каждую 1 000 проверенных страниц базы данных.|  
 |DBCC SYS REPAIR|Во время этого этапа выполняются исправления базы данных, если указывается параметр REPAIR_FAST, REPAIR_REBUILD или REPAIR_ALLOW_DATA_LOSS и имеются ошибки на уровне системных таблиц.|Отчет о состоянии сформирован на уровне отдельных исправлений.<br /><br /> Счетчик обновляется для каждой завершенной операции исправления.|  
-|DBCC SSB CHECK|Во время этого этапа проверяются объекты компонента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Broker.<br /><br /> Примечание. Эта фаза не выполняется при выполнении инструкции DBCC CHECKTABLE.|О состоянии не сообщается.|  
-|DBCC CHECKCATALOG|Во время этого этапа проверяется согласованность каталогов базы данных.<br /><br /> Примечание. Эта фаза не выполняется при выполнении инструкции DBCC CHECKTABLE.|О состоянии не сообщается.|  
+|DBCC SSB CHECK|Во время этого этапа проверяются объекты компонента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Broker.<br /><br /> Примечание. Этот этап не выполняется при выполнении инструкции DBCC CHECKTABLE.|О состоянии не сообщается.|  
+|DBCC CHECKCATALOG|Во время этого этапа проверяется согласованность каталогов базы данных.<br /><br /> Примечание. Этот этап не выполняется при выполнении инструкции DBCC CHECKTABLE.|О состоянии не сообщается.|  
 |DBCC IVIEW CHECK|Во время этого этапа проверяется логическая согласованность всех индексированных представлений базы данных.|Отчет о состоянии сформирован на уровне отдельных представлений баз данных.|  
   
 ## <a name="informational-statements"></a>Информационные инструкции  

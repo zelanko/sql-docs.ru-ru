@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: 1df2123a-1197-4fff-91a3-25e3d8848aaa
 author: pmasl
 ms.author: umajay
-manager: craigg
-ms.openlocfilehash: 0cc3055f6d6d6f293500cdd6aabca5c0e51df11a
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 0e1fff3c60dab7e8fe055753c125fddf70abb1df
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685791"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039060"
 ---
 # <a name="dbcc-showcontig-transact-sql"></a>DBCC SHOWCONTIG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -151,7 +150,7 @@ DBCC SHOWCONTIG
   
 Кроме того, инструкция DBCC SHOWCONTIG не поддерживает некоторые новые возможности. Пример:
 -   Если заданная таблица или индекс секционированы, инструкция DBCC SHOWCONTIG отображает только первую секцию заданной таблицы или индекса.  
--   Инструкция DBCC SHOWCONTIG не отображает сведения о хранении переполнения строки и других новых внестроковых типов данных, таких как **nvarchar(max)**, **varchar(max)**, **varbinary(max)** и **xml**.  
+-   Инструкция DBCC SHOWCONTIG не отображает сведения о хранении переполнения строки и других новых внестроковых типов данных, таких как **nvarchar(max)** , **varchar(max)** , **varbinary(max)** и **xml**.  
 -   Пространственные индексы не поддерживаются инструкцией DBCC SHOWCONTIG.  
   
 Полностью поддерживает все новые возможности динамического административного представления [sys.dm_db_index_physical_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md).

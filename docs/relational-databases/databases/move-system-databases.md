@@ -27,13 +27,12 @@ helpviewer_keywords:
 ms.assetid: 72bb62ee-9602-4f71-be51-c466c1670878
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0995346ac3c740efb6779f69e29003abf625a81e
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 652e8448eb5e4de9b39f9e399d1f2a709ef8cf47
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54136124"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68100465"
 ---
 # <a name="move-system-databases"></a>Перемещение системных баз данных
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -147,9 +146,9 @@ ms.locfileid: "54136124"
   
 1.  В меню **Пуск** выберите **Все программы**, укажите **Microsoft SQL Server**, затем **Средства настройки**и выберите пункт **Диспетчер конфигурации SQL Server**.  
   
-2.  Находясь в узле **Службы SQL Server** , щелкните правой кнопкой мыши экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , например **SQL Server (MSSQLSERVER)**, и выберите пункт **Свойства**.  
+2.  Находясь в узле **Службы SQL Server** , щелкните правой кнопкой мыши экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , например **SQL Server (MSSQLSERVER)** , и выберите пункт **Свойства**.  
   
-3.  В диалоговом окне **Свойства SQL Server (**_имя_экземпляра_**)** перейдите на вкладку **Параметры запуска** .  
+3.  В диалоговом окне **Свойства SQL Server (** _имя_экземпляра_ **)** перейдите на вкладку **Параметры запуска** .  
   
 4.  В поле **Существующие параметры** выберите параметр -d, чтобы переместить файл данных master. Нажмите **Обновить** для сохранения изменений.  
   

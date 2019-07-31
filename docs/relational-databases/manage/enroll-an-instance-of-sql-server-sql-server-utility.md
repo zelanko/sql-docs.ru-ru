@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: a801c619-611b-4e82-a8d8-d1e01691b7a1
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: f928fcfc873e1a5e6209338b075a9df0ff543691
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: dda51dd5449719aedd7697310c1f7befe3ee1390
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509794"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68115420"
 ---
 # <a name="enroll-an-instance-of-sql-server-sql-server-utility"></a>Регистрация экземпляра SQL Server (служебная программа SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -94,7 +93,7 @@ ms.locfileid: "52509794"
  Чтобы продолжить, нажмите кнопку **Далее**.  
   
 ##  <a name="Instance_name"></a> Укажите экземпляр SQL Server  
- Чтобы выбрать экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в диалоговом окне соединения, нажмите кнопку **Подключить...**. Введите имя компьютера и имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в формате "имя_компьютера\имя_экземпляра". Дополнительные сведения см. в статье [Соединение с сервером (компонент Database Engine)](https://msdn.microsoft.com/library/ee9017b4-8a19-4360-9003-9e6484082d41).  
+ Чтобы выбрать экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в диалоговом окне соединения, нажмите кнопку **Подключить...** . Введите имя компьютера и имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в формате "имя_компьютера\имя_экземпляра". Дополнительные сведения см. в статье [Соединение с сервером (компонент Database Engine)](https://msdn.microsoft.com/library/ee9017b4-8a19-4360-9003-9e6484082d41).  
   
  Чтобы продолжить, нажмите кнопку **Далее**.  
   
@@ -104,7 +103,7 @@ ms.locfileid: "52509794"
 > [!NOTE]  
 >  Если соединение зашифровано, используется зашифрованное соединение. Если соединение не зашифровано, то программа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] установит соединение повторно с использованием зашифрованного соединения.  
   
- Для продолжения нажмите кнопку **Подключить...**.  
+ Для продолжения нажмите кнопку **Подключить...** .  
   
 ##  <a name="Proxy_configuration"></a> Учетная запись набора элементов сбора служебной программы  
  Укажите учетную запись домена Windows для выполнения набора элементов сбора служебной программы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Эта учетная запись используется как учетная запись-посредник агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для набора элементов сбора служебной программы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Можно также использовать имеющуюся служебную учетную запись службы агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Чтобы требования проверки были удовлетворены, следуйте приведенным ниже рекомендациям по настройке учетной записи.  
@@ -147,9 +146,9 @@ ms.locfileid: "52509794"
   
  Параметры управляемого экземпляра:  
   
--   Имя экземпляра SQL Server: имя_компьютера\имя_экземпляра  
+-   Имя экземпляра SQL Server: Имя_компьютера\Имя_экземпляра  
   
--   Набор элементов сбора служебной программы: имя_домена\имя_пользователя  
+-   Учетная запись набора элементов сбора служебной программы: Доменное_имя\Имя_пользователя  
   
  Чтобы продолжить, нажмите кнопку **Далее**.  
   
@@ -171,7 +170,7 @@ ms.locfileid: "52509794"
 >   
 >  Возникло исключение при выполнении пакета или инструкции Transact-SQL. (Microsoft.SqlServer.ConnectionInfo)  
 >   
->  Дополнительные сведения. Не удалось получить сведения о пользователе или группе Windows NT "\<имя_домена\имя_учетной_записи>", код ошибки 0x5. (Microsoft SQL Server, ошибка: 15404)  
+>  Дополнительные сведения:  Не удалось получить сведения о пользователе или группе Windows NT "\<ДоменноеИмя\ИмяУчетнойЗаписи>", код ошибки 0x5. (Microsoft SQL Server, ошибка: 15404)  
 >   
 >  Дополнительные сведения об устранении этой неполадки см. в статье [Устранение неполадок служебной программы SQL Server](https://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453).  
   

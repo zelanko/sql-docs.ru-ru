@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3228065d-de8f-4ece-a9b1-e06d3dca9310
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 68ffba6177eb86944ad62cc4876effdd7a63af8c
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 3112a23426054740a0c716648c94d83d4c39925a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52391248"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68073672"
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>Создание связанных серверов (компонент SQL Server Database Engine)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -223,7 +222,7 @@ ms.locfileid: "52391248"
   
     ```  
   
-##  <a name="FollowUp"></a> Дальнейшие действия после создания связанного сервера  
+##  <a name="FollowUp"></a> Дальнейшие действия. Действия, выполняемые после создания связанного сервера  
   
 #### <a name="to-test-the-linked-server"></a>Проверка связанного сервера  
   

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: e95de9d6-c950-41cd-8aaa-be529c6de198
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: 0f0dec8faf609eeef7d82e2d746a0f84aec6a6de
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: 2dd802097e083adb633549174dbc420b5967fb10
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658448"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68093594"
 ---
 # <a name="sql-server-deprecated-features-object"></a>SQL Server, объект Deprecated Features
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +45,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |Экземпляры счетчика SQL Server Deprecated Features|Описание|  
 |------------------------------------------------------|-----------------|  
 |Символы «#» и «##» в качестве имен временных таблиц и хранимых процедур|Обнаружен идентификатор, не содержащий других символов, кроме #. Используйте по крайней мере один дополнительный символ. Происходит один раз на каждую компиляцию.|  
-|синтаксис вызова функции «::»|Синтаксис вызова функции :: был использован для функции с табличным значением. Замените на `SELECT column_list FROM` *<имя_функции>*`()`. Например, замените `SELECT * FROM ::fn_virtualfilestats(2,1)` на `SELECT * FROM sys.fn_virtualfilestats(2,1)`. Происходит один раз на каждую компиляцию.|  
+|синтаксис вызова функции «::»|Синтаксис вызова функции :: был использован для функции с табличным значением. Замените на `SELECT column_list FROM` *<имя_функции>* `()`. Например, замените `SELECT * FROM ::fn_virtualfilestats(2,1)` на `SELECT * FROM sys.fn_virtualfilestats(2,1)`. Происходит один раз на каждую компиляцию.|  
 |"\@" и имена, начинающиеся с "\@\@", в качестве идентификаторов [!INCLUDE[tsql](../../includes/tsql-md.md)]|Обнаружен идентификатор, начинающийся с символов \@ или \@\@. Не используйте в качестве идентификаторов \@ или \@v@ или имена, начинающиеся с \@\@. Происходит один раз на каждую компиляцию.|  
 |ADDING TAPE DEVICE|Обнаружена нерекомендуемая функция sp_addumpdevice'**лента**'. Вместо нее используйте процедуру sp_addumpdevice'**диск**'. Происходит один раз на каждое выполнение.|  
 |Разрешение ALL.|Число раз, когда был обнаружен синтаксис GRANT ALL, DENY ALL или REVOKE ALL. Измените синтаксис, чтобы запретить конкретные разрешения. Происходит один раз для каждого запроса.|  
@@ -129,7 +128,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |numbered_stored_procedures||  
 |numbered_procedure_parameters|Обнаружены ссылки на устаревшее представление sys.numbered_procedure_parameters. Не используйте. Происходит один раз на каждую компиляцию.|  
 |numbered_procedures|Обнаружены ссылки на устаревшее представление sys.numbered_procedures. Не используйте. Происходит один раз на каждую компиляцию.|  
-|Устаревший формат RAISEERROR|Устаревший синтаксис RAISERROR (формат: RAISERROR integer string). Перепишите инструкции для использования текущего синтаксиса RAISERROR. Происходит один раз на каждую компиляцию.|  
+|Устаревший формат RAISEERROR|Обнаружен устаревший синтаксис RAISERROR (формат: RAISERROR integer string). Перепишите инструкции для использования текущего синтаксиса RAISERROR. Происходит один раз на каждую компиляцию.|  
 |OLEDB для нерегламентированных соединений|Поставщик SQLOLEDB не поддерживается. Используйте собственный клиент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для нерегламентированных соединений.|  
 |PERMISSIONS|Обнаружены ссылки на встроенную функцию PERMISSIONS. Запросите sys.fn_my_permissions. Происходит один раз для каждого запроса.|  
 |ProcNums|Обнаружен устаревший синтаксис ProcNums. Перепишите инструкции, чтобы удалить эти ссылки. Происходит один раз на каждую компиляцию.|  

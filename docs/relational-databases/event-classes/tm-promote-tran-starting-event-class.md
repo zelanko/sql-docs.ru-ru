@@ -1,5 +1,5 @@
 ---
-title: 'Класс событий TM: Promote Tran Starting | Документация Майкрософт'
+title: 'Класс событий TM: Promote Tran Starting | Документация Майкрософт'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,18 +11,17 @@ helpviewer_keywords:
 ms.assetid: 32da85bb-d980-4044-8572-31372867649b
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6c8ac6783b68f3f252a48a355baf0ae12057cd11
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4770898f39e7aff4cb424eafaae52b1678a2857a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626372"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68125106"
 ---
-# <a name="tm-promote-tran-starting-event-class"></a>Класс событий TM: Promote Tran Starting
+# <a name="tm-promote-tran-starting-event-class"></a>TM. Класс события Promote Tran Starting
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Класс событий "TM: Promote Tran Starting" указывает на начало выполнения запроса PROMOTE TRANSACTION. Запрос отправляется клиентом через интерфейс управления транзакциями.  
+  События класса TM: Promote Tran Starting указывают на начало выполнения запроса PROMOTE TRANSACTION. Запрос отправляется клиентом через интерфейс управления транзакциями.  
   
 ## <a name="tm-promote-tran-starting-event-class-data-columns"></a>Столбцы данных класса событий TM: Promote Tran Starting  
   

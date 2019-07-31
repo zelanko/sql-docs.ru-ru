@@ -11,14 +11,13 @@ helpviewer_keywords:
 ms.assetid: 9f752040-5901-42e1-8fdc-105528d9960a
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dff8b285622872569072e67a0e9932ac12c30159
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: bdc25063da64321b0be4cbcbd078e8cf5792c932
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51656723"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68100256"
 ---
 # <a name="qntemplate-event-class"></a>Класс событий QN: Template
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -34,7 +33,7 @@ ms.locfileid: "51656723"
 |DatabaseName|**nvarchar**|Имя базы данных, в которой выполняется инструкция пользователя.|35|Да|  
 |EventClass|**int**|Тип события = 201.|27|нет|  
 |EventSequence|**int**|Порядковый номер этого события.|51|нет|  
-|EventSubClass|**nvarchar**|Тип подкласса событий, предоставляющий дополнительные сведения о каждом классе события. Данный столбец может содержать следующие значения.<br /><br /> Template created: указывает, что в базе данных создан шаблон уведомления запроса.<br /><br /> Template matched: указывает, когда шаблон уведомления запроса используется повторно.<br /><br /> Template dropped: указывает, когда шаблон уведомления запроса удаляется из базы данных.|21|Да|  
+|EventSubClass|**nvarchar**|Тип подкласса событий, предоставляющий дополнительные сведения о каждом классе события. Данный столбец может содержать следующие значения.<br /><br /> Template created: указывает, что в базе данных создан шаблон уведомления запроса.<br /><br /> Template matched: указывает, что шаблон уведомления запроса используется повторно.<br /><br /> Template dropped: указывает, что шаблон уведомления запроса удаляется из базы данных.|21|Да|  
 |GroupID|**int**|Идентификатор группы рабочей нагрузки, в которой запускается событие трассировки SQL.|66|Да|  
 |HostName|**nvarchar**|Имя компьютера, на котором выполняется клиентская программа. Заполнение этого столбца данных производится в том случае, если клиент предоставляет имя узла. Чтобы определить имя узла, используйте функцию HOST_NAME.|8|Да|  
 |IsSystem|**int**|Указывает, произошло событие в системном или в пользовательском процессе.<br /><br /> 0 = пользовательский процесс<br /><br /> 1 = системный процесс|60|нет|  

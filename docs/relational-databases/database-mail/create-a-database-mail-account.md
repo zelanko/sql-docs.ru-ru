@@ -13,23 +13,22 @@ helpviewer_keywords:
 ms.assetid: c07abbc6-fc6a-470b-8fa3-532f2e06b16a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a682f0d3c8373ea7fc96dd82796108d5d71f26ef
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: a31f23d4de02bd4554d997364a3a5aa26b3d4ef3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558291"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68134490"
 ---
 # <a name="create-a-database-mail-account"></a>Создание учетной записи компонента Database Mail
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Для создания учетной записи компонента Database Mail применяется **мастер настройки компонента Database Mail** или [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
--   **Перед началом работы:**  [необходимые компоненты](#Prerequisites)  
+-   **Перед началом работы**  [Предварительные требования](#Prerequisites)  
   
--   **Создание учетной записи компонента Database Mail с использованием следующих средств:**  [мастер настройки компонента Database Mail](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
+-   **Создание учетной записи компонента Database Mail с использованием:**  [мастера настройки компонента Database Mail](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
   
--   **Дальнейшие действия.**  [Следующие шаги настройки компонента Database Mail](#FollowUp)  
+-   **Дальнейшие действия.**  [Следующие действия по настройке компонента Database Mail](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
   
@@ -86,7 +85,7 @@ EXECUTE msdb.dbo.sysmail_add_account_sp
     @mailserver_name = 'smtp.Adventure-Works.com' ;  
 ```  
   
-##  <a name="FollowUp"></a> Дальнейшие действия. Следующие шаги настройки компонента Database Mail  
+##  <a name="FollowUp"></a> Дальнейшие действия. Следующие действия по настройке компонента Database Mail  
   
 -   [Создание профиля компонента Database Mail](../../relational-databases/database-mail/create-a-database-mail-profile.md)  
   

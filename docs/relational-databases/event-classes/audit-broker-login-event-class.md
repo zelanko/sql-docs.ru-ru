@@ -11,14 +11,13 @@ helpviewer_keywords:
 ms.assetid: af9b1153-2791-40ef-a95c-50923cd0cc97
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 409e35e1f3f331eac121fea0588814a62bac6144
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: babd96ee665a589456d3fda7ed7e2a5a13366d36
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47802312"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67903519"
 ---
 # <a name="audit-broker-login-event-class"></a>Audit Broker Login, класс событий
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -48,12 +47,12 @@ ms.locfileid: "47802312"
 |**SPID**|**int**|Идентификатор процесса сервера, который SQL Server присвоил процессу, связанному с клиентом.|12|Да|  
 |**StartTime**|**datetime**|Время начала события, если доступно.|14|Да|  
 |**Состояние**|**int**|Указывает место в исходном коде SQL Server, которое вызвало это событие. Каждое место, которое может вызвать это событие, обозначается отдельным кодом состояния. Сотрудник службы технической поддержки Microsoft может использовать этот код состояния для обнаружения участка, выполнение которого привело к событию.|30|нет|  
-|**TargetUserName**|**nvarchar**|Состояние входа. Может принимать одно из следующих значений.<br /><br /> INITIAL<br /><br /> WAIT LOGIN NEGOTIATE<br /><br /> ONE ISC<br /><br /> ONE ASC<br /><br /> TWO ISC<br /><br /> TWO ASC<br /><br /> WAIT ISC Confirm<br /><br /> WAIT ASC Confirm<br /><br /> WAIT REJECT<br /><br /> WAIT PRE-MASTER SECRET<br /><br /> WAIT VALIDATION<br /><br /> WAIT ARBITRATION<br /><br /> ONLINE<br /><br /> Ошибка<br /><br /> <br /><br /> **Примечание**. ISC = Initiate Security Context (инициировать контекст безопасности). ASC = Accept Security Context (принять контекст безопасности).|39|нет|  
+|**TargetUserName**|**nvarchar**|Состояние входа. Может принимать одно из следующих значений.<br /><br /> INITIAL<br /><br /> WAIT LOGIN NEGOTIATE<br /><br /> ONE ISC<br /><br /> ONE ASC<br /><br /> TWO ISC<br /><br /> TWO ASC<br /><br /> WAIT ISC Confirm<br /><br /> WAIT ASC Confirm<br /><br /> WAIT REJECT<br /><br /> WAIT PRE-MASTER SECRET<br /><br /> WAIT VALIDATION<br /><br /> WAIT ARBITRATION<br /><br /> ONLINE<br /><br /> ошибка<br /><br /> <br /><br /> **Примечание.** ISC = Initiate Security Context (инициирование контекста безопасности). ASC = Accept Security Context (принять контекст безопасности).|39|нет|  
 |**TransactionID**|**bigint**|Назначенный системой идентификатор транзакции.|4|нет|  
   
  Следующая таблица содержит список значений подклассов события для этого класса событий.  
   
-|Идентификатор|Подкласс|Описание|  
+|ID|Подкласс|Описание|  
 |--------|--------------|-----------------|  
 |1|Успешный вход|Событие Login Success (успешный вход) извещает об успешном завершении соответствующего процесса регистрации брокера.|  
 |2|Ошибка входного протокола|Событие Login Protocol Error (ошибка протокола входа) извещает о том, что брокер получил синтаксически правильное, но неправильное при текущем состоянии процесса регистрации сообщение. Сообщение могло быть потеряно или отослано вне очереди.|  

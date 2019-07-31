@@ -24,14 +24,13 @@ helpviewer_keywords:
 ms.assetid: 0e09d210-6f23-4129-aedb-3d56b2980683
 author: pmasl
 ms.author: umajay
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c3302577e705bf563ad54037437213a4088407f0
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 48eaf7f49976ed8784973c950887dc92252b08e5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685628"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68101905"
 ---
 # <a name="dbcc-freeproccache-transact-sql"></a>DBCC FREEPROCCACHE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -60,13 +59,13 @@ DBCC FREEPROCCACHE [ ( COMPUTE | ALL ) ]
   
 ## <a name="arguments"></a>Аргументы  
  ( { *plan_handle* | *sql_handle* | *pool_name* } )  
-*plan_handle* уникально идентифицирует план запроса для запущенного пакета, план которого хранится в кэше планов. Аргумент *plan_handle* имеет тип **varbinary(64)**, и его можно получить из следующих объектов DMO:  
+*plan_handle* уникально идентифицирует план запроса для запущенного пакета, план которого хранится в кэше планов. Аргумент *plan_handle* имеет тип **varbinary(64)** , и его можно получить из следующих объектов DMO:  
  -   [sys.dm_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)  
  -   [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
  -   [sys.dm_exec_query_memory_grants](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)  
  -   [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)  
 
-*sql_handle* представляет дескриптор SQL очищаемого пакета. Аргумент *sql_handle* имеет тип **varbinary(64)**, и его можно получить из следующих объектов DMO:  
+*sql_handle* представляет дескриптор SQL очищаемого пакета. Аргумент *sql_handle* имеет тип **varbinary(64)** , и его можно получить из следующих объектов DMO:  
  -   [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)  
  -   [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
  -   [sys.dm_exec_cursors](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cursors-transact-sql.md)  
@@ -94,7 +93,7 @@ DBCC FREEPROCCACHE [ ( COMPUTE | ALL ) ]
 
 Это может стать причиной внезапного временного снижения производительности обработки запросов из-за увеличения числа компиляций. Для каждого удаленного хранилища кэша в кэше планов журнал ошибок [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] содержит следующее информационное сообщение: "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обнаружил %d экземпляров, сброшенных на диск хранилищ кэша для хранилища кэша "%s" (части кэша планов) в результате операций DBCC FREEPROCCACHE или DBCC FREESYSTEMCACHE". Это сообщение добавляется в журнал каждые пять минут при сбросе кэша в течение этого интервала времени.
 
-Следующие операции по перенастройке также очищают кэш процедур:  
+Следующие операции по перенастройке также очищают кэш процедур:
 -   доступ к счетчику контейнеров проверки кэша  
 -   доступ к квоте кэша проверки  
 -   clr enabled  
@@ -113,7 +112,7 @@ DBCC FREEPROCCACHE [ ( COMPUTE | ALL ) ]
 -   user options  
   
 ## <a name="result-sets"></a>Результирующие наборы  
-Если предложение WITH NO_INFOMSGS не указано, инструкция DBCC FREEPROCCACHE возвращает: «Выполнение инструкции DBCC завершено. Если инструкция DBCC выдает сообщения об ошибках, обратитесь к системному администратору».
+Если предложение WITH NO_INFOMSGS не указано, инструкция DBCC FREEPROCCACHE возвращает: "Выполнение DBCC завершено. Если инструкция DBCC выдает сообщения об ошибках, обратитесь к системному администратору».
   
 ## <a name="permissions"></a>Разрешения  
 Применимо к: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 

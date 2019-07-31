@@ -10,14 +10,13 @@ ms.topic: conceptual
 ms.assetid: b071f8b8-c8e5-44e0-bbb6-04804dd1863a
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: ef3cd72348cc93eee37716007c7975731b2da333
-ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
+ms.openlocfilehash: 4676b4d17dc2de9118623037e6725c2b3c637c7e
+ms.sourcegitcommit: 40f3b1f2340098496d8428f50616095a190ae94b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67400085"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "68290365"
 ---
 # <a name="release-notes-for-sql-server-data-tools-ssdt"></a>Заметки о выпуске SQL Server Data Tools (SSDT)
 
@@ -44,6 +43,37 @@ GeneMi , 2019/03/22.
 
 P.S.  There is no need to keep this large HTML comment indefinitely.
 -->
+## <a name="1592nbsp-ssdt-for-vs-2017"></a>15.9.2,&nbsp; SSDT для Visual Studio 2017
+
+_Выпущено_: &nbsp; 17 июля 2019 г.  
+_Номер сборки_: &nbsp; 14.0.16194.0  
+_SSDT для Visual Studio 2017_.
+
+### <a name="whats-new"></a>Новые возможности
+
+#### <a name="ssis"></a>Службы SSIS
+
+| Изменения | Сведения |
+| :------- | :------ |
+| Добавлена функция AzureEnabled. Пакеты проекта могут выполняться на основе решения "платформа как услуга" (PaaS) SSIS в фабрике данных Azure. | &nbsp; |
+| Устранена проблема, которая заключалась в невозможности задать свойства соединителя Oracle из переменного выражения. | &nbsp; |
+| Устранена проблема, которая заключалась в возникновении ошибки VS_NEEDSNEWMETATDATA в соединителе Oracle при отладке пакетов, предназначенных для более ранних версий, чем SQL Server 2019. | &nbsp; |
+| Устранена проблема, которая заключалась в том, что соединителю Oracle не удавалось перевести пакет или проект на более позднюю или более раннюю версию, если в этом пакете или проекте для свойств диспетчера подключений применялись выражения. | &nbsp; |
+| Устранена проблема, которая заключалась в том, что кнопка "Загрузить WSDL" в редакторе задачи " Веб-служба" не поддерживала протокол TLS 1.1 и 1.2 (для SQL Server 2019). | &nbsp; |
+| Устранена проблема, которая заключалась в невозможности загрузить пакеты, содержащие диспетчер подключений DQS, после сохранения. | &nbsp; |
+
+### <a name="known-issues"></a>Известные проблемы
+
+| Известная проблема | Сведения |
+| :---------- | :------ |
+| Задача запуска пакетов в службах SSIS не поддерживает отладку, если параметр ExecuteOutOfProcess имеет значение True. | Эта проблема относится только к отладке. Она не влияет на сохранение, развертывание и запуск с использованием DTExec.exe или каталога SSIS. |
+| SSDT для Visual Studio 2017 версии позднее 15.8 не поддерживает разработку пакетов, содержащих источники или назначения Teradata. | Использование SSDT для Visual Studio 2017 (15.8). |
+| Не удается создать или изменить источники данных в модели развертывания пакета. | Не удается открыть мастер источников данных. |
+| Источник Power Query может не поддерживать протокол OData версии 4, если службы SQL Server Integration Services и SQL Server Analysis Services установлены в одном экземпляре Visual Studio. | &nbsp; |
+| Источник Power Query может не поддерживать подключение к Oracle с помощью ODBC, если службы SQL Server Integration Services и SQL Server Analysis Services установлены в одном экземпляре Visual Studio. | &nbsp; |
+| Источник Power Query Source не локализован | &nbsp; |
+| &nbsp; | &nbsp; |
+
 ## <a name="1591nbsp-ssdt-for-vs-2017"></a>15.9.1,&nbsp;SSDT для Visual Studio 2017
 
 _Выпущено_: &nbsp; 27 апреля 2019 г.  

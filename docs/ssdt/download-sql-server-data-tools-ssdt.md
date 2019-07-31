@@ -12,14 +12,13 @@ keywords:
 ms.assetid: b0fc4987-d260-4d0a-9dd1-98099835b361
 author: markingmyname
 ms.author: maghan
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 3790d0f71b130ff1b73ae9af94fabcefed1cedd1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 62b3db01792005afa7c124f4f31b78cdc350b2dd
+ms.sourcegitcommit: 40f3b1f2340098496d8428f50616095a190ae94b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65368342"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "68290349"
 ---
 # <a name="download-and-install-sql-server-data-tools-ssdt-for-visual-studio"></a>Скачивание и установка SQL Server Data Tools (SSDT) для Visual Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -66,18 +65,18 @@ ms.locfileid: "65368342"
 
 ## <a name="ssdt-for-vs-2017-standalone-installer"></a>SSDT для VS 2017 (автономный установщик)
 
-[![Скачать](../ssdt/media/download.png) Скачайте SSDT для Visual Studio 2017 (15.9.1)](https://go.microsoft.com/fwlink/?linkid=2086373) 
+[![Скачать](../ssdt/media/download.png) Скачайте SSDT для Visual Studio 2017 (15.9.2)](https://go.microsoft.com/fwlink/?linkid=2095463) 
 
 > [!IMPORTANT]
-> - Перед установкой SSDT для Visual Studio 2017 (15.9.1) удалите расширения *Проекты Analysis Services* и *Проекты Reporting Services*, если они установлены, а затем закройте все экземпляры Visual Studio.
+> - Перед установкой SSDT для Visual Studio 2017 (15.9.2) удалите расширения *Проекты Analysis Services* и *Проекты Reporting Services*, если они установлены, а затем закройте все экземпляры Visual Studio.
 > - Используйте SSDT для Visual Studio 2017 вплоть до версии 15.8.0, чтобы создавать пакеты служб Integration Services, содержащие источники или назначения Teradata. С помощью SSDT для Visual Studio 2017 версий после15.8.0 нельзя создавать пакеты служб Integration Services, содержащие источники или назначения Teradata.
 
 
 **Сведения о версии**  
   
-Номер выпуска: 15.9.1  
-Номер сборки: 14.0.16191.0  
-Дата выпуска: 27 апреля 2019 г.  
+Номер выпуска: 15.9.2  
+Номер сборки: 14.0.16194.0  
+Дата выпуска: 17 июля 2019 г.  
 
 Полный список изменений см. в [заметках о выпуске для SQL Server Data Tools (SSDT)](release-notes-ssdt.md).
 
@@ -87,17 +86,17 @@ SSDT для Visual Studio 2017 имеет те же [требования к с
 
 Этот выпуск **SSDT для Visual Studio 2017** можно установить на следующих языках:
 
-- [Китайский (упрощенный)]( https://go.microsoft.com/fwlink/?linkid=2086373&clcid=0x804)
-- [Китайский (традиционный)]( https://go.microsoft.com/fwlink/?linkid=2086373&clcid=0x404)
-- [Английский (США)]( https://go.microsoft.com/fwlink/?linkid=2086373&clcid=0x409)
-- [Французский]( https://go.microsoft.com/fwlink/?linkid=2086373&clcid=0x40c)
-- [Немецкий]( https://go.microsoft.com/fwlink/?linkid=2086373&clcid=0x407)
-- [Итальянский]( https://go.microsoft.com/fwlink/?linkid=2086373&clcid=0x410)
-- [Японский]( https://go.microsoft.com/fwlink/?linkid=2086373&clcid=0x411)
-- [Корейский]( https://go.microsoft.com/fwlink/?linkid=2086373&clcid=0x412)
-- [Португальский (Бразилия)]( https://go.microsoft.com/fwlink/?linkid=2086373&clcid=0x416)
-- [Русский]( https://go.microsoft.com/fwlink/?linkid=2086373&clcid=0x419)
-- [Испанский]( https://go.microsoft.com/fwlink/?linkid=2086373&clcid=0x40a)
+- [Китайский (упрощенный)]( https://go.microsoft.com/fwlink/?linkid=2095463&clcid=0x804)
+- [Китайский (традиционный)]( https://go.microsoft.com/fwlink/?linkid=2095463&clcid=0x404)
+- [Английский (США)]( https://go.microsoft.com/fwlink/?linkid=2095463&clcid=0x409)
+- [Французский]( https://go.microsoft.com/fwlink/?linkid=2095463&clcid=0x40c)
+- [Немецкий]( https://go.microsoft.com/fwlink/?linkid=2095463&clcid=0x407)
+- [Итальянский]( https://go.microsoft.com/fwlink/?linkid=2095463&clcid=0x410)
+- [Японский]( https://go.microsoft.com/fwlink/?linkid=2095463&clcid=0x411)
+- [Корейский]( https://go.microsoft.com/fwlink/?linkid=2095463&clcid=0x412)
+- [Португальский (Бразилия)]( https://go.microsoft.com/fwlink/?linkid=2095463&clcid=0x416)
+- [Русский]( https://go.microsoft.com/fwlink/?linkid=2095463&clcid=0x419)
+- [Испанский]( https://go.microsoft.com/fwlink/?linkid=2095463&clcid=0x40a)
 
 ## <a name="offline-install"></a>Автономная установка
 

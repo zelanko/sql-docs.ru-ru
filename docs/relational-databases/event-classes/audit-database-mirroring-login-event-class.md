@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: d0bd436d-aade-4208-a7e5-75cf3b5d0ce9
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 66da3f496c244a63055020d02a41560279712099
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bb9c8b9774be0daa74b30bfd51ee97bf1e2271c7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47679862"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67903461"
 ---
 # <a name="audit-database-mirroring-login-event-class"></a>Audit Database Mirroring Login, класс событий
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -50,12 +49,12 @@ ms.locfileid: "47679862"
 |**SPID**|**int**|Идентификатор процесса сервера, который [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] присвоил процессу, связанному с клиентом.|12|Да|  
 |**StartTime**|**datetime**|Время начала события, если доступно.|14|Да|  
 |**Состояние**|**int**|Указывает место в исходном коде [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , которое вызвало это событие. Каждое место, которое может вызвать это событие, обозначается отдельным кодом состояния. Сотрудник службы технической поддержки Microsoft может использовать этот код состояния для обнаружения участка, выполнение которого привело к событию.|30|нет|  
-|**TargetUserName**|**nvarchar**|Состояние входа. Может принимать одно из следующих значений.<br /><br /> **INITIAL**<br /><br /> **WAIT LOGIN NEGOTIATE**<br /><br /> **ONE ISC**<br /><br /> **ONE ASC**<br /><br /> **TWO ISC**<br /><br /> **TWO ASC**<br /><br /> **WAIT ISC Confirm**<br /><br /> **WAIT ASC Confirm**<br /><br /> **WAIT REJECT**<br /><br /> **WAIT PRE-MASTER SECRET**<br /><br /> **WAIT VALIDATION**<br /><br /> **WAIT ARBITRATION**<br /><br /> **ONLINE**<br /><br /> **ERROR**<br /><br /> <br /><br /> Примечание. ISC = Initiate Security Context (инициировать контекст безопасности). ASC = Accept Security Context (принятие контекста безопасности).|39|нет|  
+|**TargetUserName**|**nvarchar**|Состояние входа. Может принимать одно из следующих значений.<br /><br /> **INITIAL**<br /><br /> **WAIT LOGIN NEGOTIATE**<br /><br /> **ONE ISC**<br /><br /> **ONE ASC**<br /><br /> **TWO ISC**<br /><br /> **TWO ASC**<br /><br /> **WAIT ISC Confirm**<br /><br /> **WAIT ASC Confirm**<br /><br /> **WAIT REJECT**<br /><br /> **WAIT PRE-MASTER SECRET**<br /><br /> **WAIT VALIDATION**<br /><br /> **WAIT ARBITRATION**<br /><br /> **ONLINE**<br /><br /> **ERROR**<br /><br /> <br /><br /> Примечание. ISC = Initiate Security Context (инициирование контекста безопасности). ASC = Accept Security Context (принятие контекста безопасности).|39|нет|  
 |**TransactionID**|**bigint**|Назначенный системой идентификатор транзакции.|4|нет|  
   
  Следующая таблица содержит список значений подклассов события для этого класса событий.  
   
-|Идентификатор|Подкласс|Описание|  
+|ID|Подкласс|Описание|  
 |--------|--------------|-----------------|  
 |1|Успешный вход|Событие «Успешный вход» указывает, что обработка процесса входа в систему для зеркального отображения смежной базы данных завершилась успешно.|  
 |2|Ошибка входного протокола|Событие «Ошибка входного протокола» указывает, что имя входа для зеркального отображения базы данных получает корректное сообщение, но не соответствующее текущему состоянию процесса входа. Сообщение могло быть потеряно или отослано вне очереди.|  

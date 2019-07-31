@@ -30,13 +30,12 @@ helpviewer_keywords:
 ms.assetid: 41b9962c-0c71-4227-80a0-08fdc19f5fe4
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: b9058fcb7ffff72620c6560fbe81df6f33fa327d
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.openlocfilehash: 13afbab4c154b39fe7762d39c0d431ce17848213
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334741"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67901875"
 ---
 # <a name="output-clause-transact-sql"></a>Предложение OUTPUT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -134,13 +133,13 @@ DELETE Sales.ShoppingCartItem
 ```  
   
  *column_name*  
- Явное указание столбца. Любое указание столбцов в изменяемой таблице должно предваряться соответствующим префиксом INSERTED или DELETED, например: INSERTED **.**_столбец\_имя_.  
+ Явное указание столбца. Любая ссылка на изменяемую таблицу должна предваряться соответствующим префиксом INSERTED или DELETED, например: INSERTED **.** _столбец\_имя_.  
   
  $action  
- Доступен только для инструкции MERGE. Указывает столбец типа **nvarchar(10)** в предложении OUTPUT инструкции MERGE, которая возвращает одно из трех значений для каждой строки: INSERT, UPDATE или DELETE — согласно действию, которое было выполнено с этой строкой.  
+ Доступен только для инструкции MERGE. Указывает столбец типа **nvarchar(10)** в предложении OUTPUT инструкции MERGE, которая возвращает одно из трех значений для каждой строки: INSERT, UPDATE или DELETE — согласно действию, которое было выполнено с этой строкой.  
   
 ## <a name="remarks"></a>Remarks  
- Предложения OUTPUT \<dml_select_list> clause and the OUTPUT \<dml_select_list> INTO { **\@**_table\_variable_ | _output\_table_ } можно определить в одной инструкции INSERT, UPDATE, DELETE или MERGE.  
+ Предложения OUTPUT \<dml_select_list> clause and the OUTPUT \<dml_select_list> INTO { **\@** _table\_variable_ | _output\_table_ } можно определить в одной инструкции INSERT, UPDATE, DELETE или MERGE.  
   
 > [!NOTE]  
 >  Если не указано иное, ссылки на предложение OUTPUT относятся как к предложению OUTPUT, так и к предложению OUTPUT INTO.  
@@ -227,7 +226,7 @@ DELETE Sales.ShoppingCartItem
  Если установлен параметр disallow results from triggers процедуры sp_configure, инструкция с предложением OUTPUT без INTO при вызове из триггера приводит к ошибке.  
   
 ## <a name="data-types"></a>Типы данных  
- Предложение OUTPUT поддерживает типы данных больших объектов: **nvarchar(max)**, **varchar(max)**, **varbinary(max)**, **text**, **ntext**, **image** и **xml**. Если в инструкции UPDATE указано предложение .WRITE для изменения столбца **nvarchar(max)**, **varchar(max)** или **varbinary(max)**, то возвращаются полные образы значений до и после изменения, если на них есть ссылки. Функция TEXTPTR( ) не может входить в выражение, определенное в предложении OUTPUT для столбца, имеющего тип **text**, **ntext** или **image**.  
+ Предложение OUTPUT поддерживает типы данных больших объектов: **nvarchar(max)** , **varchar(max)** , **varbinary(max)** , **text**, **ntext**, **image** и **xml**. Если в инструкции UPDATE указано предложение .WRITE для изменения столбца **nvarchar(max)** , **varchar(max)** или **varbinary(max)** , то возвращаются полные образы значений до и после изменения, если на них есть ссылки. Функция TEXTPTR( ) не может входить в выражение, определенное в предложении OUTPUT для столбца, имеющего тип **text**, **ntext** или **image**.  
   
 ## <a name="queues"></a>Очереди;  
  Предложение OUTPUT может применяться в приложениях, которые применяют таблицы в качестве очередей или для хранения промежуточных результирующих наборов, то есть в приложениях, которые постоянно добавляют и удаляют строки из таблиц. В следующем примере предложение OUTPUT указано в инструкции DELETE и возвращает удаленную строку вызывающему приложению.  

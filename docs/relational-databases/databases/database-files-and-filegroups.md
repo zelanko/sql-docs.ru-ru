@@ -32,13 +32,12 @@ helpviewer_keywords:
 ms.assetid: 9ca11918-480d-4838-9198-cec221ef6ad0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a2f78e8fbff4a5fdc896810067ad2552b59336a8
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 6ccf21bcc3e0657123aa4f0fdcfe9b2d3cb0861a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558941"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68037594"
 ---
 # <a name="database-files-and-filegroups"></a>Файлы и файловые группы базы данных
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -60,9 +59,9 @@ ms.locfileid: "51558941"
 ### <a name="logical-and-physical-file-names"></a>Логические и физические имена файлов
 Файлы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имеют два типа имен файлов. 
 
-**логическое_имя_файла**  — имя, используемое для ссылки на физический файл во всех инструкциях Transact-SQL. Логическое имя файла должно соответствовать правилам для идентификаторов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и быть уникальным среди логических имен файлов в соответствующей базе данных. Оно задается с помощью аргумента `NAME` в `ALTER DATABASE`. Дополнительные сведения см. в разделе [Параметры инструкции ALTER DATABASE (Transact-SQL) для файлов и файловых групп](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).
+**logical_file_name:**  имя, используемое для ссылки на физический файл во всех инструкциях Transact-SQL. Логическое имя файла должно соответствовать правилам для идентификаторов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и быть уникальным среди логических имен файлов в соответствующей базе данных. Оно задается с помощью аргумента `NAME` в `ALTER DATABASE`. Дополнительные сведения см. в разделе [Параметры инструкции ALTER DATABASE (Transact-SQL) для файлов и файловых групп](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).
 
-**имя_файла_ОС** — это имя физического файла, включающее путь к каталогу. Оно должно соответствовать правилам для имен файлов операционной системы. Оно задается с помощью аргумента `FILENAME` в `ALTER DATABASE`. Дополнительные сведения см. в разделе [Параметры инструкции ALTER DATABASE (Transact-SQL) для файлов и файловых групп](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).
+**os_file_name:** имя физического файла, включающее путь к каталогу. Оно должно соответствовать правилам для имен файлов операционной системы. Оно задается с помощью аргумента `FILENAME` в `ALTER DATABASE`. Дополнительные сведения см. в разделе [Параметры инструкции ALTER DATABASE (Transact-SQL) для файлов и файловых групп](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).
 
 > [!IMPORTANT]
 > Файлы данных и файлы журналов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] могут использоваться как в файловой системе FAT, так и в системе NTFS. В системах Windows рекомендуется использовать файловую систему NTFS по причинам ее большей безопасности. 

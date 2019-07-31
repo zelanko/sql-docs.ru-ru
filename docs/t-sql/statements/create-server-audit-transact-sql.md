@@ -21,14 +21,13 @@ helpviewer_keywords:
 ms.assetid: 1c321680-562e-41f1-8eb1-e7fa5ae45cc5
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: e48239d521ed82c5bcfe2920c36b89e82cc1e193
-ms.sourcegitcommit: 2663063e29f2868ee6b6d596df4b2af2d22ade6f
+ms.openlocfilehash: aea91d8ed791809296a924d10aab176f16ebe82f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57305382"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68117136"
 ---
 # <a name="create-server-audit-transact-sql"></a>CREATE SERVER AUDIT (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -86,7 +85,7 @@ CREATE SERVER AUDIT audit_name
  MAXSIZE = { *max_size }*  
  Задает максимальный размер, до которого может увеличиваться файл аудита. Значение *max_size* должно быть целым числом, за которым следует MB, GB, TB или UNLIMITED. Минимальный размер для *max_size* составляет 2 МБ, а максимальный — 2 147 483 647 ТБ. Если указано значение UNLIMITED, увеличение размера файла будет происходить до заполнения диска. (0 также указывает на отсутствие ограничения.) Если указано значение менее 2 МБ, возникает ошибка MSG_MAXSIZE_TOO_SMALL. Значение по умолчанию — UNLIMITED.  
   
- MAX_ROLLOVER_FILES =*{ integer* | UNLIMITED }  
+ MAX_ROLLOVER_FILES = *{ integer* | UNLIMITED }  
  Указывает максимальное количество файлов, хранимых в файловой системе помимо текущего. Значением *MAX_ROLLOVER_FILES* должно быть целое число или UNLIMITED. Значение по умолчанию — UNLIMITED. Этот параметр проверяется при каждом перезапуске аудита (это может происходить во время перезапуска экземпляра компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] или после выключения и повторного включения аудита) или когда становится необходим новый файл, поскольку достигается предел MAXSIZE. Если при вычислении параметра *MAX_ROLLOVER_FILES* количество файлов превышает значение *MAX_ROLLOVER_FILES*, удаляется самый старый файл. Поэтому если параметр *MAX_ROLLOVER_FILES* имеет значение 0, то каждый раз, когда проверяется значение *MAX_ROLLOVER_FILES*, создается новый файл. При проверке значения *MAX_ROLLOVER_FILES* автоматически удаляется только один файл, поэтому если значение параметра *MAX_ROLLOVER_FILES* уменьшается, то количество файлов не будет сокращаться, если старые файлы не удалить вручную. Максимальное число файлов, которое можно указать, составляет 2 147 483 647.  
   
  MAX_FILES =*integer*  

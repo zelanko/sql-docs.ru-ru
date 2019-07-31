@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 03d013a9-b53f-46c3-9628-da77f099c74a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 44eba48983d2dd9e3610b5534997ca6a4a3849b5
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: f9a2253165045d74f669c52d0247b716e5576e8b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56019075"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68051330"
 ---
 # <a name="binding-relational-data-inside-xml-data"></a>Привязка реляционных данных внутри XML-данных
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ ms.locfileid: "56019075"
  Однако данная привязка доступна только для чтения, то есть нельзя записывать данные в столбцы, использующие эти функции. Например, запись sql:переменная("\@x")="*некоторое выражение*" недопустима.  
   
 ## <a name="example-cross-domain-query-using-sqlvariable"></a>Пример запрос между доменами с использованием функции sql:variable()  
- В этом примере показано, как **sql:variable()** позволяет приложению подготовить параметризованный запрос. ISBN-номер передается с помощью переменной SQL @isbn. Заменив константу функцией **sql:variable()**, можно использовать этот запрос для поиска любого ISBN-номера, а не только 0-7356-1588-2.  
+ В этом примере показано, как **sql:variable()** позволяет приложению подготовить параметризованный запрос. ISBN-номер передается с помощью переменной SQL @isbn. Заменив константу функцией **sql:variable()** , можно использовать этот запрос для поиска любого ISBN-номера, а не только 0-7356-1588-2.  
   
 ```  
 DECLARE @isbn varchar(20)  

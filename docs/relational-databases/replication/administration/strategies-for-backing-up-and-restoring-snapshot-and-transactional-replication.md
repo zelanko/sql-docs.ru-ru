@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: a8afcdbc-55db-4916-a219-19454f561f9e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 148fdfd642c18a2cc4e583edab73778cffa5c71e
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 695839b7687fb649ffd529ecb3fde7b78d65f3ae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125274"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67948685"
 ---
 # <a name="strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication"></a>Стратегии резервного копирования и восстановления из копии репликации моментальных снимков и репликации транзакций
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -73,7 +72,7 @@ ms.locfileid: "54125274"
   
  **Установка параметра «sync with backup»**  
   
--   Программирование репликации на языке [!INCLUDE[tsql](../../../includes/tsql-md.md)]. [Enable Coordinated Backups for Transactional Replication](../../../relational-databases/replication/administration/enable-coordinated-backups-for-transactional-replication.md) (Включение скоординированной архивации для репликации транзакций)  
+-   Программирование репликации на языке [!INCLUDE[tsql](../../../includes/tsql-md.md)]: [Enable Coordinated Backups for Transactional Replication](../../../relational-databases/replication/administration/enable-coordinated-backups-for-transactional-replication.md) (Включение скоординированной архивации для репликации транзакций)  
   
 ## <a name="restoring-databases-involved-in-replication"></a>Восстановление баз данных, участвующих в репликации  
  Если имеются последние резервные копии и выполнены соответствующие шаги, можно восстановить все базы данных в топологии репликации. Действия по восстановлению базы данных публикации зависят от типа репликации и от используемых параметров, однако действия по восстановлению всех других баз данных не зависят от типа репликации и параметров.  
@@ -215,7 +214,7 @@ ms.locfileid: "54125274"
   
 9. После восстановления диапазон идентификаторов, присвоенный каждой таблице в базе данных **A**, будет также использоваться в базе данных **B**. Убедитесь, что восстановленная база данных **B** получила все изменения из поврежденной базы данных **B**, которые были переданы в базы данных **A** и **C**, затем обновите начальные значения диапазона идентификаторов для каждой таблицы.  
   
-    1.  Выполните процедуру [sp_requestpeerresponse](../../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md) в базе данных **B** и получите выходной параметр **@request_id**. Перейдите к шагу b.  
+    1.  Выполните процедуру [sp_requestpeerresponse](../../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md) в базе данных **B** и получите выходной параметр **@request_id** . Перейдите к шагу b.  
   
     2.  По умолчанию агент распространителя работает непрерывно, поэтому токены отправляются на все узлы автоматически. Если агент распространителя не выполняется в непрерывном режиме, запустите его. Дополнительные сведения см. в разделах [Основные понятия исполняемых файлов агента репликации](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md) и [Запуск и остановка агента репликации (среда SQL Server Management Studio)](../../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md). Перейдите к шагу c.  
   
@@ -231,7 +230,7 @@ ms.locfileid: "54125274"
   
     1.  Остановите все действия в опубликованных таблицах в одноранговой топологии. Перейдите к шагу b.  
   
-    2.  Выполните процедуру [sp_requestpeerresponse](../../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md) в базе данных **B** и получите выходной параметр **@request_id**. Перейдите к шагу c.  
+    2.  Выполните процедуру [sp_requestpeerresponse](../../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md) в базе данных **B** и получите выходной параметр **@request_id** . Перейдите к шагу c.  
   
     3.  По умолчанию агент распространителя работает непрерывно, поэтому токены отправляются на все узлы автоматически. Если агент распространителя не выполняется в непрерывном режиме, запустите его. Перейдите к шагу d.  
   
@@ -323,7 +322,7 @@ ms.locfileid: "54125274"
   
 2.  Восстановите последнюю резервную копию базы данных подписки. Перейдите к шагу 3.  
   
-3.  Если база данных подписки содержит только принудительные подписки, перейдите к шагу 4. Если база данных подписки содержит любые подписки по запросу, задайте следующие вопросы. Являются ли сведения о подписке текущими? Включает ли база данных все таблицы и параметры, которые были установлены на момент сбоя. Если да, перейдите к шагу 4. Если нет, выполните повторную инициализацию подписки. Восстановление завершено.  
+3.  Если база данных подписки содержит только принудительные подписки, перейдите к шагу 4. Если база данных подписки содержит любые подписки по запросу, задайте указанные ниже вопросы. Являются ли сведения о подписке актуальными? Включает ли база данных все таблицы и параметры, которые были установлены на момент сбоя. Если да, перейдите к шагу 4. Если нет, выполните повторную инициализацию подписки. Восстановление завершено.  
   
 4.  Для синхронизации подписчика запустите агент распространителя. Восстановление завершено.  
   

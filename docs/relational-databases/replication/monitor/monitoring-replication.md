@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: f182f43a-6af8-45bc-a708-08d5f7a6984a
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c65f93054125090f92eb4924e1007d5b9075c0f4
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: f58fb09416bb6cc800c31dffa47e359d361ccaf7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54128194"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68082974"
 ---
 # <a name="monitoring-replication"></a>Наблюдение (репликация)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ ms.locfileid: "54128194"
 Для наблюдения за репликацией можно использовать следующие средства:  
   
 -   **Монитор репликации SQL Server** является самым важным средством для мониторинга репликации, представляющим ориентированное на издателя представление всех действий, связанных с репликацией. Дополнительные сведения см. в разделе [Monitoring Replication](../../../relational-databases/replication/monitor/monitor-performance-with-replication-monitor.md). 
--   **SQL Server Management Studio** предоставляет доступ к монитору репликации Здесь же существует возможность просмотра текущего состояния и последнего сообщения, записанного в журнал следующими агентами, а так же здесь можно запускать и останавливать все агенты: агент чтения журнала, агент моментальных снимков и агент распространителя. Дополнительные сведения см. в статье [Monitor Replication Agents](../../../relational-databases/replication/monitor/monitor-replication-agents.md).  
+-   **SQL Server Management Studio** предоставляет доступ к монитору репликации Здесь же существует возможность просмотра текущего состояния и последнего сообщения, записанного в журнал следующими агентами, а также здесь можно запускать и останавливать все агенты: агент чтения журнала, агент моментальных снимков, агент слияния и агент распространения. Дополнительные сведения см. в статье [Monitor Replication Agents](../../../relational-databases/replication/monitor/monitor-replication-agents.md).  
   
 -   **Transact-SQL (T-SQL) и объекты Replication Management Objects (RMO)** — оба интерфейса позволяют наблюдать с распространителя за репликациями всех типов. Репликация слиянием также предоставляет возможность наблюдения за репликацией с подписчика.  
   

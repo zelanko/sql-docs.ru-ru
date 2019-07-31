@@ -10,14 +10,13 @@ ms.topic: conceptual
 ms.assetid: 62c964c5-eae4-4cf1-9024-d5a19adbd652
 author: jodebrui
 ms.author: jodebrui
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1ca7cb161bb4b3bebf2d7c65018b5221fd5bf1cf
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e16f646a963d22a2fe3a6a67428970d11ee5cb43
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52533405"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68100265"
 ---
 # <a name="overview-and-usage-scenarios"></a>Общие сведения и сценарии использования
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -66,8 +65,8 @@ ms.locfileid: "52533405"
 
 #### <a name="customer-case-studies"></a>Клиентские сценарии
 
-- Компания CMC Markets использует выполняющуюся в памяти OLTP в [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], чтобы обеспечить постоянно низкую задержку: [Because a second is too long to wait, this financial services firm is updating its trading software now](https://customers.microsoft.com/story/because-a-second-is-too-long-to-wait-this-financial-services-firm-is-updating-its-trading-software) (Секунда — это слишком долго. Финансовая организация обновила программное обеспечение для торговли).
-- Компания Derivco использует выполняющуюся в памяти OLTP в [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] для поддержки возросшего показателя пропускной способности и обработки пиков рабочей нагрузки: [When an online gaming company doesn’t want to risk its future, it bets on [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]](https://customers.microsoft.com/story/when-an-online-gaming-company-doesnt-want-to-risk-its-future-it-bets-on-sql-server-2016) (Компания по разработке сетевых игр сделала ставку на SQL Server 2016, чтобы не рисковать собственным будущим).
+- Компания CMC Markets использует выполняющуюся в памяти OLTP в [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], чтобы обеспечить постоянно низкую задержку: [Секунда — это слишком долго. Финансовая организация обновила программное обеспечение для торговли.](https://customers.microsoft.com/story/because-a-second-is-too-long-to-wait-this-financial-services-firm-is-updating-its-trading-software)
+- Компания Derivco использует выполняющуюся в памяти OLTP в [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] для поддержки возросшего показателя пропускной способности и обработки пиков рабочей нагрузки: [Компания по разработке сетевых игр сделала ставку на [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], чтобы не рисковать собственным будущим.](https://customers.microsoft.com/story/when-an-online-gaming-company-doesnt-want-to-risk-its-future-it-bets-on-sql-server-2016)
 
 
 ### <a name="data-ingestion-including-iot-internet-of-things"></a>Прием данных из разных источников, включая Интернет вещей
@@ -93,14 +92,14 @@ ms.locfileid: "52533405"
 #### <a name="customer-case-studies"></a>Клиентские сценарии
 
 - [Quorum doubles key database’s workload while lowering utilization by 70% by leveraging In-Memory OLTP in Azure SQL Database](https://customers.microsoft.com/story/quorum-doubles-key-databases-workload-while-lowering-dtu-with-sql-database) (Благодаря использованию выполняющейся в памяти OLTP в базе данных SQL Azure компания Quorum удваивает количество основных рабочих нагрузок базы данных и сокращает использование DTU на 70 %)
-- Компания EdgeNet повысила производительность загрузки пакетных данных и избавилась от необходимости поддержки кэша среднего уровня благодаря использованию выполняющейся в памяти OLTP в [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]: [Data Services Firm Gains Real-Time Access to Product Data with In-Memory Technology](https://customers.microsoft.com/story/data-services-firm-gains-real-time-access-to-product-d) (Компания по разработке служб данных получила доступ к данным о продуктах в реальном времени, используя технологию в памяти).
-- Больнице Beth Israel Deaconess Medical Center удалось значительно повысить скорость приема данных из контроллеров домена и обрабатывать пики рабочей нагрузки, используя выполняющуюся в памяти OLTP в [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]: [https://customers.microsoft.com/story/strengthening-data-security-and-creating-more-time-for]
+- Компания EdgeNet повысила производительность загрузки пакетных данных и избавилась от необходимости поддержки кэша среднего уровня благодаря использованию выполняющейся в памяти OLTP в [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]: [Компания по разработке служб данных получила доступ к данным о продуктах в реальном времени, используя технологию в памяти](https://customers.microsoft.com/story/data-services-firm-gains-real-time-access-to-product-d)
+- Больнице Beth Israel Deaconess Medical Center удалось значительно повысить скорость приема данных из контроллеров домена и обрабатывать пики рабочей нагрузки, используя выполняющуюся в памяти OLTP в [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]: [https://customers.microsoft.com/story/strengthening-data-security-and-creating-more-time-for ]
 
 ### <a name="caching-and-session-state"></a>Кэширование и состояние сеанса
 
 Благодаря технологии выполняющейся в памяти OLTP среда SQL весьма привлекательна для поддержки состояния сеанса (например, для приложения ASP.NET) и кэширования.
 
-Один из эффективных сценариев — использование выполняющейся в памяти OLTP для поддержки состояния сеанса ASP.NET. Работая с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], одним клиентам почти удалось добиться выполнения 1,2 млн запросов в секунду. В то же время они начали использовать выполняющуюся в памяти OLTP для кэширования всех приложений среднего уровня на предприятии. Подробные сведения: [How bwin is using [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] In-Memory OLTP to achieve unprecedented performance and scale](https://blogs.msdn.microsoft.com/sqlcat/2016/10/26/how-bwin-is-using-sql-server-2016-in-memory-oltp-to-achieve-unprecedented-performance-and-scale/) (Как компания bwin добилась небывалой производительности и масштаба, используя выполняющуюся в памяти OLTP в SQL Server 2016)
+Один из эффективных сценариев — использование выполняющейся в памяти OLTP для поддержки состояния сеанса ASP.NET. Работая с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], одним клиентам почти удалось добиться выполнения 1,2 млн запросов в секунду. В то же время они начали использовать выполняющуюся в памяти OLTP для кэширования всех приложений среднего уровня на предприятии. Сведения. [Как компания bwin добилась небывалой производительности и масштаба, используя выполняющуюся в памяти OLTP в [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]](https://blogs.msdn.microsoft.com/sqlcat/2016/10/26/how-bwin-is-using-sql-server-2016-in-memory-oltp-to-achieve-unprecedented-performance-and-scale/)
 
 #### <a name="implementation-considerations"></a>Рекомендации по реализации
 
@@ -112,8 +111,8 @@ ms.locfileid: "52533405"
 
 #### <a name="customer-case-studies"></a>Клиентские сценарии
 
-- Компании bwin удалось значительно увеличить пропускную способность и сократить площадь, занимаемую оборудованием, для состояния сеанса ASP.NET, используя выполняющуюся в памяти OLTP в [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]: [Gaming Site Can Scale to 250 000 Requests Per Second and Improve Player Experience](https://customers.microsoft.com/story/gaming-site-can-scale-to-250000-requests-per-second-an) (Игорный сайт смог повысить масштаб до 250 000 запросов в секунду и улучшить условия игры для игроков).
-- Благодаря состоянию сеанса ASP.NET компании bwin удалось еще больше повысить пропускную способность и внедрить корпоративную систему кэширования среднего уровня, используя выполняющуюся в памяти OLTP в [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]: [How bwin is using [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] In-Memory OLTP to achieve unprecedented performance and scale](https://blogs.msdn.microsoft.com/sqlcat/2016/10/26/how-bwin-is-using-sql-server-2016-in-memory-oltp-to-achieve-unprecedented-performance-and-scale/) (Как компания bwin добилась небывалой производительности и масштаба, используя выполняющуюся в памяти OLTP в SQL Server 2016).
+- Компании bwin удалось значительно увеличить пропускную способность и сократить площадь, занимаемую оборудованием, для состояния сеанса ASP.NET, используя выполняющуюся в памяти OLTP в [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]: [Игорный сайт смог повысить масштаб до 250 000 запросов в секунду и улучшить условия игры для игроков](https://customers.microsoft.com/story/gaming-site-can-scale-to-250000-requests-per-second-an)
+- Благодаря состоянию сеанса ASP.NET компании bwin удалось еще больше повысить пропускную способность и внедрить корпоративную систему кэширования среднего уровня, используя выполняющуюся в памяти OLTP в [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]: [Как компания bwin добилась небывалой производительности и масштаба, используя выполняющуюся в памяти OLTP в [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]](https://blogs.msdn.microsoft.com/sqlcat/2016/10/26/how-bwin-is-using-sql-server-2016-in-memory-oltp-to-achieve-unprecedented-performance-and-scale/)
 
 ### <a name="tempdb-object-replacement"></a>Замена объекта tempdb
 
@@ -123,12 +122,12 @@ ms.locfileid: "52533405"
 
 #### <a name="implementation-considerations"></a>Рекомендации по реализации
 
-Чтобы начать работу, см. запись блога [Improving temp table and table variable performance using memory optimization](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/21/improving-temp-table-and-table-variable-performance-using-memory-optimization/)(Повышение производительности временной таблицы и табличной переменной с помощью оптимизации памяти).
+Чтобы приступить к работе, изучите следующую статью: [Улучшение производительности временной таблицы и табличной переменной с помощью оптимизации памяти](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/21/improving-temp-table-and-table-variable-performance-using-memory-optimization/).
 
 #### <a name="customer-case-studies"></a>Клиентские сценарии
 
-- Одним нашим клиентам удалось повысить производительность на 40 %, просто заменив традиционные возвращающие табличное значение параметры на возвращающие табличное значение параметры, оптимизированные для памяти: [High Speed IoT Data Ingestion Using In-Memory OLTP in Azure](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/04/07/a-technical-case-study-high-speed-iot-data-ingestion-using-in-memory-oltp-in-azure/)(Скоростной прием данных Интернета вещей с помощью выполняющейся в памяти OLTP в Azure).
-- В ходе масштабирования инфраструктуры компания SentryOne значительно усовершенствовала прием данных, снизив задержку практически до нуля в решении мониторинга и заменив таблицы в tempdb на выполняющиеся в памяти таблицы OLTP: [Solution provider breaks through performance ceiling with data monitoring innovation](https://customers.microsoft.com/story/sentryone-partner-professional-services-sql-server-azure) (Инновационный мониторинг данных позволил поставщику решений преодолеть потолок производительности).
+- Одному из наших клиентов удалось повысить производительность на 40 %, просто заменив традиционные возвращающие табличное значение параметры на возвращающие табличное значение параметры, оптимизированные для памяти: [Скоростной прием данных Интернета вещей с помощью выполняющейся в памяти OLTP в Azure.](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/04/07/a-technical-case-study-high-speed-iot-data-ingestion-using-in-memory-oltp-in-azure/)
+- В ходе масштабирования инфраструктуры компания SentryOne значительно усовершенствовала прием данных, снизив задержку практически до нуля в решении мониторинга и заменив таблицы в tempdb на выполняющиеся в памяти таблицы OLTP: [Инновационный мониторинг данных позволил поставщику решений преодолеть потолок производительности.](https://customers.microsoft.com/story/sentryone-partner-professional-services-sql-server-azure)
 
 ### <a name="etl-extract-transform-load"></a>Извлечение, преобразование и загрузка
 

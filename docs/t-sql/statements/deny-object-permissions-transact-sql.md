@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0b8d3ddc-38c0-4241-b7bb-ee654a5081aa
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: f3d5bea06c12da29eb38c3190682d2fcfe344fe4
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 05f0d6d99ca4e5274882ec5d4e751ba658b62a1e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326775"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68114799"
 ---
 # <a name="deny-object-permissions-transact-sql"></a>DENY, запрет разрешений на объект (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -77,7 +76,7 @@ PRIVILEGES
 >  Запрет (DENY) уровня таблицы имеет меньший приоритет, чем разрешение (GRANT) уровня столбца. Такая несогласованность в иерархии разрешений сохранена в целях обратной совместимости.  
   
  ON [ OBJECT **::** ] [ *schema_name* ] **.** *object_name*  
- Указывает объект, для которого запрещается разрешение. Фраза OBJECT необязательна, если указан аргумент *schema_name*. Если же она указана, указание квалификатора области (**::**) обязательно. Если не указан аргумент *schema_name*, подразумевается схема по умолчанию. Если указан аргумент *schema_name*, обязательно указание квалификатора области схемы (**.**).  
+ Указывает объект, для которого запрещается разрешение. Фраза OBJECT необязательна, если указан аргумент *schema_name*. Если же она указана, указание квалификатора области ( **::** ) обязательно. Если не указан аргумент *schema_name*, подразумевается схема по умолчанию. Если указан аргумент *schema_name*, обязательно указание квалификатора области схемы ( **.** ).  
   
  TO \<database_principal>  
  Задает участника, для которого запрещается разрешение.  

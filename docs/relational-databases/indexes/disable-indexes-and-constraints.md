@@ -23,14 +23,13 @@ helpviewer_keywords:
 ms.assetid: 2198f1af-fa44-47e9-92df-f4fde322ba18
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ffc25fcdd81c647dcff73c047924f3fbec13b6c6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8e3fbbeed1224c6cd67c4292a6e263fb079d3ad5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47740102"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68107138"
 ---
 # <a name="disable-indexes-and-constraints"></a>Отключение индексов и ограничений
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -131,7 +130,7 @@ ms.locfileid: "47740102"
  Отображает имя таблицы или представления, для которых был создан индекс.  
   
  **Тип индекса**  
- Отображает тип индекса: **кластеризованный**, **некластеризованный**, **пространственный**или **XML**.  
+ Отображает тип индекса: **кластеризованный**, **некластеризованный**, **пространственный** или **XML**.  
   
  **Состояние**  
  Отображает состояние операции отключения. Возможные значения после выполнения.  
@@ -167,7 +166,7 @@ ms.locfileid: "47740102"
   
 #### <a name="to-disable-an-index"></a>Отключение индекса  
   
-1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  На стандартной панели выберите пункт **Создать запрос**.  
   
@@ -184,7 +183,7 @@ ms.locfileid: "47740102"
   
 #### <a name="to-disable-all-indexes-on-a-table"></a>Отключение всех индексов таблицы  
   
-1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  На стандартной панели выберите пункт **Создать запрос**.  
   

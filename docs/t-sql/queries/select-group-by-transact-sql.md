@@ -31,14 +31,13 @@ helpviewer_keywords:
 ms.assetid: 40075914-6385-4692-b4a5-62fe44ae6cb6
 author: shkale-msft
 ms.author: shkale
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 536283eb15d0b2f40e896520ab5d73327320bf56
-ms.sourcegitcommit: 56fb7b648adae2c7b81bd969de067af1a2b54180
+ms.openlocfilehash: c2ca8bd62bc1f05e655875c528efa8ea32b20ff5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57227196"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67948421"
 ---
 # <a name="select---group-by--transact-sql"></a>SELECT — GROUP BY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -345,7 +344,7 @@ GROUP BY ALL
 |Компонент|Службы SQL Server Integration Services|Уровень совместимости SQL Server — 100 или более|Уровень совместимости SQL Server 2008 или более поздней версии — 90.|  
 |-------------|-------------------------------------|--------------------------------------------------|-----------------------------------------------------------|  
 |Статистические функции DISTINCT|Не поддерживаются для конструкций WITH CUBE или WITH ROLLUP.|Поддерживаются для конструкций WITH CUBE, WITH ROLLUP, GROUPING SETS, CUBE или ROLLUP.|Аналогично уровню совместимости 100.|  
-|Определяемая пользователем функция с именем CUBE или ROLLUP в предложении GROUP BY|Определяемая пользователем функция **dbo.cube(**_arg1_**,**_...argN_**)** or **dbo.rollup(**_arg1_**,**..._argN_**)** в предложении GROUP BY недопустима.<br /><br /> Например: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|Определяемая пользователем функция **dbo.cube (**_arg1_**,**...argN **)** or **dbo.rollup(** arg1 **,**_...argN_**)** в предложении GROUP BY недопустима.<br /><br /> Например: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`<br /><br /> Выдается следующее сообщение об ошибке: "Применение неверного синтаксиса недалеко от ключевого слова 'cube'&#124;'rollup'".<br /><br /> Чтобы избежать этой проблемы, замените конструкцию `dbo.cube` на `[dbo].[cube]` или конструкцию `dbo.rollup` на `[dbo].[rollup]`.<br /><br /> Следующий пример является допустимым: `SELECT SUM (x) FROM T  GROUP BY [dbo].[cube](y);`.|Определяемая пользователем функция **dbo.cube (**_arg1_**,**_...argN_) or **dbo.rollup(**_arg1_**,**_...argN_**)** в предложении GROUP BY недопустима.<br /><br /> Например: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|  
+|Определяемая пользователем функция с именем CUBE или ROLLUP в предложении GROUP BY|Определяемая пользователем функция **dbo.cube(** _arg1_ **,** _...argN_ **)** or **dbo.rollup(** _arg1_ **,** ..._argN_ **)** в предложении GROUP BY недопустима.<br /><br /> Например: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|Определяемая пользователем функция **dbo.cube (** _arg1_ **,** ...argN **)** or **dbo.rollup(** arg1 **,** _...argN_ **)** в предложении GROUP BY недопустима.<br /><br /> Например: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`<br /><br /> Выдается следующее сообщение об ошибке: "Применение неверного синтаксиса недалеко от ключевого слова 'cube'&#124;'rollup'".<br /><br /> Чтобы избежать этой проблемы, замените конструкцию `dbo.cube` на `[dbo].[cube]` или конструкцию `dbo.rollup` на `[dbo].[rollup]`.<br /><br /> Следующий пример является допустимым: `SELECT SUM (x) FROM T  GROUP BY [dbo].[cube](y);`.|Определяемая пользователем функция **dbo.cube (** _arg1_ **,** _...argN_) or **dbo.rollup(** _arg1_ **,** _...argN_ **)** в предложении GROUP BY недопустима.<br /><br /> Например: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|  
 |GROUPING SETS|Не поддерживается|Поддерживается|Поддерживается|  
 |CUBE|Не поддерживается|Поддерживается|Не поддерживается|  
 |ROLLUP|Не поддерживается|Поддерживается|Не поддерживается|  

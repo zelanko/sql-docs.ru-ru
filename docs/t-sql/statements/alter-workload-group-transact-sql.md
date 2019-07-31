@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 957addce-feb0-4e54-893e-5faca3cd184c
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: bac81675ce0469fe39d11745462f2a3376aed73f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6563abe72382cb912e3d71851398e5d778b47a19
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724654"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68091755"
 ---
 # <a name="alter-workload-group-transact-sql"></a>ALTER WORKLOAD GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -116,7 +115,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
  Указывает максимальную степень параллелизма (DOP) для параллельных запросов. Значение *value* должно быть равно 0 или положительному целому числу в диапазоне от 1 до 255. Если значение *value* равно 0, то сервер выбирает максимальную степень параллелизма. Это значение по умолчанию, которое рекомендуется использовать.  
   
 > [!NOTE]  
-> Фактическое значение, задаваемое компонентом [!INCLUDE[ssDE](../../includes/ssde-md.md)] для MAX_DOP может быть меньше указанного значения. Конечное значение определяется по формуле min(255, *количество ЦП)*.  
+> Фактическое значение, задаваемое компонентом [!INCLUDE[ssDE](../../includes/ssde-md.md)] для MAX_DOP может быть меньше указанного значения. Конечное значение определяется по формуле min(255, *количество ЦП)* .  
   
 > [!CAUTION]  
 > Изменение MAX_DOP может неблагоприятно сказаться на производительности сервера. Если необходимо изменить MAX_DOP, то рекомендуется задать для него значение, меньшее или равное максимальному количеству планировщиков оборудования, имеющихся на одном узле NUMA. Рекомендуется не устанавливать для MAX_DOP значение больше 8.  
@@ -158,7 +157,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
   
  При выполнении инструкций DDL рекомендуется иметь представление о состояниях регулятора ресурсов. Дополнительные сведения см. в разделе [Resource Governor](../../relational-databases/resource-governor/resource-governor.md) (Регулятор ресурсов).  
   
- REQUEST_MEMORY_GRANT_PERCENT: в [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] разрешено создание индексов для использования большего объема памяти рабочей области, чем было предоставлено изначально, в целях повышения быстродействия. Эта специальная обработка поддерживается регулятором ресурсов в более поздних версиях, однако изначально предоставленная память и любая дополнительная выделенная память ограничены настройками группы рабочей нагрузки и пула ресурсов.  
+ REQUEST_MEMORY_GRANT_PERCENT: в [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] при создании индексов разрешено использовать больший объем памяти рабочего пространства, чем было предоставлено изначально, в целях повышения быстродействия. Эта специальная обработка поддерживается регулятором ресурсов в более поздних версиях, однако изначально предоставленная память и любая дополнительная выделенная память ограничены настройками группы рабочей нагрузки и пула ресурсов.  
   
  **Создание индексов для секционированной таблицы**  
   
@@ -189,7 +188,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [Регулятор ресурсов](../../relational-databases/resource-governor/resource-governor.md)   
+ [регулятор ресурсов](../../relational-databases/resource-governor/resource-governor.md)   
  [CREATE WORKLOAD GROUP (Transact-SQL)](../../t-sql/statements/create-workload-group-transact-sql.md)   
  [DROP WORKLOAD GROUP (Transact-SQL)](../../t-sql/statements/drop-workload-group-transact-sql.md)   
  [CREATE RESOURCE POOL (Transact-SQL)](../../t-sql/statements/create-resource-pool-transact-sql.md)   

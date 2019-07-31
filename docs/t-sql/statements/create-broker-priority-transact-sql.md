@@ -25,13 +25,12 @@ helpviewer_keywords:
 ms.assetid: e0bbebfa-b7c3-4825-8169-7281f7e6de98
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 6029f21d65c3732f7aa1aec2ec6a330c8642c991
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3e9ff3121d9a961981b1a6933f3e1433999c72ba
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47715682"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061155"
 ---
 # <a name="create-broker-priority-transact-sql"></a>CREATE BROKER PRIORITY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +60,7 @@ FOR CONVERSATION
  Задает имя данного приоритета диалога. Имя должно быть уникальным внутри текущей базы данных и должно соответствовать правилам для [идентификаторов ](../../relational-databases/databases/database-identifiers.md) компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
  SET  
- Задает критерий для определения применимости приоритета к заданному диалогу. Если указано, SET должен содержать хотя бы один критерий: CONTRACT_NAME, LOCAL_SERVICE_NAME, REMOTE_SERVICE_NAME или PRIORITY_LEVEL. Если аргумент SET не указан, устанавливаются значения по умолчанию для всех трех критериев.  
+ Задает критерий для определения применимости приоритета к заданному диалогу. Если указан, аргумент SET должен содержать хотя бы один критерий: CONTRACT_NAME, LOCAL_SERVICE_NAME, REMOTE_SERVICE_NAME или PRIORITY_LEVEL. Если аргумент SET не указан, устанавливаются значения по умолчанию для всех трех критериев.  
   
  CONTRACT_NAME = {*ContractName* | **ANY**}  
  Указывает имя контракта, который будет использоваться в качестве критерия, определяющего применимость приоритета к диалогу. Аргумент *ContractName* — это идентификатор компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)], который должен указывать имя контракта в текущей базе данных.  
@@ -94,7 +93,7 @@ FOR CONVERSATION
  REMOTE_SERVICE_NAME = {'*RemoteServiceName*' | **ANY**}  
  Указывает имя службы, которая будет использоваться в качестве критерия для определения применимости приоритета к конечной точке диалога.  
   
- *RemoteServiceName* — это литерал типа **nvarchar(256)**. Компонент [!INCLUDE[ssSB](../../includes/sssb-md.md)] производит побайтовое сравнение при поиске соответствия строке *RemoteServiceName*. При сравнении учитывается регистр и не применяются текущие параметры сортировки. Целевая служба может располагаться в текущем экземпляре компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] или в удаленном экземпляре компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+ *RemoteServiceName* — это литерал типа **nvarchar(256)** . Компонент [!INCLUDE[ssSB](../../includes/sssb-md.md)] производит побайтовое сравнение при поиске соответствия строке *RemoteServiceName*. При сравнении учитывается регистр и не применяются текущие параметры сортировки. Целевая служба может располагаться в текущем экземпляре компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] или в удаленном экземпляре компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
  '*RemoteServiceName*'  
  Указывает, что объектом применения приоритета диалога может быть:  

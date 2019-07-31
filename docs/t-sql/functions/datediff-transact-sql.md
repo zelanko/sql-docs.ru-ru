@@ -1,7 +1,7 @@
 ---
 title: DATEDIFF (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 12/13/2018
+ms.date: 07/18/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -30,14 +30,13 @@ helpviewer_keywords:
 ms.assetid: eba979f2-1a8d-4cce-9d75-b74f9b519b37
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 837cf72fd303259a4fb2a9fd23c6cac925f054ca
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 83e515054db5d9727733de6cfc2426ee9ac3aa01
+ms.sourcegitcommit: 73dc08bd16f433dfb2e8406883763aabed8d8727
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67793642"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68329283"
 ---
 # <a name="datediff-transact-sql"></a>DATEDIFF (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -50,16 +49,21 @@ ms.locfileid: "67793642"
   
 ## <a name="syntax"></a>Синтаксис  
   
-```sql
+```
 DATEDIFF ( datepart , startdate , enddate )  
 ```  
   
 ## <a name="arguments"></a>Аргументы  
 *datepart*  
-Часть аргументов *startdate* и *enddate*, которая задает тип пересекаемых границ. `DATEDIFF` не будет принимать эквивалентные переменные, определяемые пользователем. В приведенной ниже таблице перечислены все допустимые аргументы *datepart*.
-  
-|*datepart*|Сокращения|  
-|---|---|
+Часть аргументов *startdate* и *enddate*, которая задает тип пересекаемых границ.
+
+> [!NOTE]
+> `DATEDIFF` не принимает значения *datepart* из переменных, определяемых пользователем, или как строки в кавычках. 
+
+В приведенной ниже таблице перечислены все допустимые имена аргументов *datepart* и их сокращения.
+
+|Имя *datepart*|Сокращение *datepart*|  
+|-----------|------------|
 |**year**|**yy, yyyy**|  
 |**quarter**|**qq, q**|  
 |**month**|**mm, m**|  
@@ -72,7 +76,10 @@ DATEDIFF ( datepart , startdate , enddate )
 |**millisecond**|**ms**|  
 |**microsecond**|**mcs**|  
 |**nanosecond**|**ns**|  
-  
+
+> [!NOTE]
+> Каждое конкретное имя аргумента *datepart* и сокращение этого имени *datepart* будут возвращать одно и то же значение.
+
 *startdate*  
 Выражение, которое может быть разрешено в одно из следующих значений.
 
@@ -92,8 +99,7 @@ DATEDIFF ( datepart , startdate , enddate )
  **int**  
   
 ## <a name="return-value"></a>Возвращаемое значение  
-  
-Каждый конкретный аргумент *datepart* и сокращения для этого аргумента *datepart* будут возвращать одно и то же значение.  
+Значение типа **int**, представляющее разницу между аргументами *startdate* и *enddate* в границах, определяемых аргументом *datepart*.
   
 В качестве возвращаемого значения вне диапазона для **int** (от –2 147 483 648 до 2 147 483 647) `DATEDIFF` возвращает сообщение об ошибке.  Для **миллисекунды** максимальная разница между *startdate* и *enddate* составляет 24 дня 20 часов 31 минута и 23 647 секунд. Для **секунды** максимальная разница составляет 68 лет, 19 дней, 3 часа, 14 минут и 7 секунд.
   
@@ -108,7 +114,7 @@ DATEDIFF ( datepart , startdate , enddate )
 Если аргументы *startdate* и *enddate* имеют разные типы данных даты, но при этом один из них имеет больше частей времени или обладает более высокой точностью, `DATEDIFF` присваивает значения 0 недостающим частям другого аргумента.
   
 ## <a name="datepart-boundaries"></a>Границы, задаваемые аргументом datepart  
-Приведенные ниже инструкции имеют одинаковые значения аргументов *startdate* и *enddate*. Указанные даты являются соседними, а временная разница между ними составляет 100 наносекунд (0,0000001 секунды). Разница между аргументами *startdate* и *enddate* в каждой инструкции пересекает одну календарную или временную границу аргумента *datepart*. Каждое выражение возвращает значение 1. Если аргументы *startdate* и *enddate* имеют разные значения года, но одинаковые значения календарной недели, `DATEDIFF` вернет 0 для части **week** аргумента *datepart*.
+Приведенные ниже инструкции имеют одинаковые значения аргументов *startdate* и *enddate*. Указанные даты являются соседними, а временная разница между ними составляет 100 наносекунд (0,0000001 секунды). Разница между аргументами *startdate* и *enddate* в каждой инструкции пересекает одну календарную или временную границу аргумента *datepart*. Каждое выражение возвращает значение 1. 
   
 ```sql
 SELECT DATEDIFF(year,        '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
@@ -123,7 +129,9 @@ SELECT DATEDIFF(second,      '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00
 SELECT DATEDIFF(millisecond, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
 SELECT DATEDIFF(microsecond, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
 ```
-  
+
+Если аргументы *startdate* и *enddate* имеют разные значения года, но одинаковые значения календарной недели, `DATEDIFF` вернет 0 для части **week** аргумента *datepart*.
+
 ## <a name="remarks"></a>Remarks  
 Используйте `DATEDIFF` в предложениях `SELECT <list>`, `WHERE`, `HAVING`, `GROUP BY` и `ORDER BY`.
   
@@ -241,6 +249,7 @@ GO
 ### <a name="i-finding-difference-between-startdate-and-enddate-as-date-parts-strings"></a>И. Определение разницы между startdate и enddate в виде строковых компонентов даты
 
 ```sql
+-- DOES NOT ACCOUNT FOR LEAP YEARS
 DECLARE @date1 DATETIME, @date2 DATETIME, @result VARCHAR(100)
 DECLARE @years INT, @months INT, @days INT, @hours INT, @minutes INT, @seconds INT, @milliseconds INT
 

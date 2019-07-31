@@ -1,7 +1,7 @@
 ---
 title: DATEDIFF_BIG (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 07/29/2017
+ms.date: 07/18/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 19ac1693-3cfa-400d-bf83-20a9cb46599a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 2acd0d75b28f3a0d6a155f681a5b8011473f91a8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3724c25854bd98a98b077fb59897ba4da250aee1
+ms.sourcegitcommit: 73dc08bd16f433dfb2e8406883763aabed8d8727
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65943675"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68329289"
 ---
 # <a name="datediffbig-transact-sql"></a>DATEDIFF_BIG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -39,19 +38,20 @@ ms.locfileid: "65943675"
   
 ## <a name="syntax"></a>Синтаксис  
   
-```sql
-  
+```
 DATEDIFF_BIG ( datepart , startdate , enddate )  
 ```  
   
 ## <a name="arguments"></a>Аргументы  
 *datepart*  
-Часть аргументов *startdate* и *enddate*, которая задает тип пересекаемых границ. `DATEDIFF_BIG` не будет принимать эквивалентные переменные, определяемые пользователем. В приведенной ниже таблице перечислены все допустимые аргументы *datepart*.
+Часть аргументов *startdate* и *enddate*, которая задает тип пересекаемых границ.
 
 > [!NOTE]
-> `DATEDIFF_BIG` не принимает эквивалентные переменные, определяемые пользователем, для аргументов *datepart*.
+> `DATEDIFF_BIG` не принимает значения *datepart* из переменных, определяемых пользователем, или как строки в кавычках.
+
+В приведенной ниже таблице перечислены все допустимые имена аргументов *datepart* и их сокращения.
   
-|*datepart*|Сокращения|  
+|Имя *datepart*| Сокращение *datepart*|  
 |---|---|
 |**year**|**yy, yyyy**|  
 |**quarter**|**qq, q**|  
@@ -65,7 +65,10 @@ DATEDIFF_BIG ( datepart , startdate , enddate )
 |**millisecond**|**ms**|  
 |**microsecond**|**mcs**|  
 |**nanosecond**|**ns**|  
-  
+
+> [!NOTE]
+> Каждое конкретное имя аргумента *datepart* и сокращение этого имени *datepart* будут возвращать одно и то же значение.
+
 *startdate*  
 Выражение, которое может быть разрешено в одно из следующих значений.
 
@@ -82,12 +85,10 @@ DATEDIFF_BIG ( datepart , startdate , enddate )
 См. описание аргумента *startdate*.
   
 ## <a name="return-type"></a>Тип возвращаемых данных  
-
 **bigint** со знаком  
   
 ## <a name="return-value"></a>Возвращаемое значение  
-Возвращает количество пересеченных границ (целое число со знаком), указанных в аргументе datepart, за период времени, указанный в аргументах startdate и enddate.
--   Каждый конкретный аргумент *datepart* и сокращения для этого аргумента *datepart* будут возвращать одно и то же значение.  
+Значение типа **bigint**, представляющее разницу между аргументами *startdate* и *enddate* в границах, определяемых аргументом *datepart*.
   
 В качестве возвращаемого значения вне диапазона для **bigint** (от –9 223 372 036 854 775 808 до 9 223 372 036 854 775 807) `DATEDIFF_BIG` возвращает сообщение об ошибке. В отличие от функции `DATEDIFF`, которая возвращает значение типа **int** и поэтому может переполняться с точностью до **минуты** или более высокой точностью, `DATEDIFF_BIG` может переполняться только при использовании точности до **наносекунды**, если разница между *enddate* и *startdate* больше 292 лет, 3 месяцев, 10 дней, 23 часов, 47 минут и 16,8547758 секунд.
   

@@ -10,14 +10,13 @@ ms.topic: conceptual
 ms.assetid: 05515013-28b5-4ccf-9a54-ae861448945b
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 88a7eb6303509766cbd7ae703135d6a33a4e54fc
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: a1cf5b6242f5c76abf8dca638a2596eb2cae9641
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518242"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68025082"
 ---
 # <a name="supported-features-for-natively-compiled-t-sql-modules"></a>Поддерживаемые функции для модулей, скомпилированных в собственном коде T-SQL
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -49,8 +48,8 @@ ms.locfileid: "52518242"
 
 Здесь приведены поддерживаемые конструкции запросов.  
 
-Выражение CASE: выражение CASE можно включать в любую инструкцию или предложение, которые позволяют использовать допустимые выражения.
-   - **Область применения:** [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)].  
+CASE, выражение: Выражение CASE может использоваться в любой инструкции или предложении, которые допускают допустимые выражения.
+   - **Применимо к:** [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)].  
     Начиная с версии [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)], для модулей, скомпилированных в собственном коде T-SQL, поддерживаются выражения CASE.
 
 Предложение SELECT:  
@@ -204,11 +203,11 @@ SELECT TOP (@v) ... FROM ... ORDER BY ...
 
 -   Строковые функции: LEN, LTRIM, RTRIM и SUBSTRING.  
     - **Применимо к:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].  
-      Начиная с версии [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)], также поддерживаются следующие встроенные функции: TRIM, TRANSLATE и CONCAT_WS.  
+      Начиная с версии [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] также поддерживаются следующие встроенные функции: TRIM, TRANSLATE и CONCAT_WS.  
 
--   Функции идентификации: SCOPE_IDENTITY.  
+-   Функции идентификации: SCOPE_IDENTITY  
 
--   NULL-функции: ISNULL  
+-   Функции для работы со значением NULL: ISNULL  
 
 -   Функции уникальных идентификаторов: NEWID и NEWSEQUENTIALID  
 
@@ -216,7 +215,7 @@ SELECT TOP (@v) ... FROM ... ORDER BY ...
     - **Применимо к:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].  
       Начиная с версии [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)], функции JSON поддерживаются в модулях, скомпилированных в машинном коде.
 
--   Функции обработки ошибок: ERROR_LINE, ERROR_MESSAGE, ERROR_NUMBER, ERROR_PROCEDURE, ERROR_SEVERITY и ERROR_STATE.  
+-   Функции ошибок: ERROR_LINE, ERROR_MESSAGE, ERROR_NUMBER, ERROR_PROCEDURE, ERROR_SEVERITY и ERROR_STATE  
 
 -   Системные функции: @@rowcount. Инструкции в хранимых процедурах, скомпилированных в собственном коде, обновляют @@rowcount, и вы можете использовать @@rowcount в таких процедурах для определения числа строк, затронутых последней инструкцией, выполненной в пределах этой хранимой процедуры. Но @@rowcount сбрасывается до 0 в начале и в конце выполнения каждой хранимой процедуры, скомпилированной в собственном коде.  
 
@@ -245,7 +244,7 @@ SELECT TOP (@v) ... FROM ... ORDER BY ...
 ##  <a name="los"></a> Ограничения на сортировку  
  В запросе с использованием [TOP (Transact-SQL)](../../t-sql/queries/top-transact-sql.md) и [предложения ORDER BY (Transact-SQL)](../../t-sql/queries/select-order-by-clause-transact-sql.md) можно сортировать более 8 000 строк. Без [предложения ORDER BY (Transact-SQL)](../../t-sql/queries/select-order-by-clause-transact-sql.md) [TOP (Transact-SQL)](../../t-sql/queries/top-transact-sql.md) позволяет сортировать не более 8 000 строк (меньше, если есть соединения).  
 
- Если в запросе используется как оператор [TOP (Transact-SQL)](../../t-sql/queries/top-transact-sql.md), так и [предложение ORDER BY (Transact-SQL)](../../t-sql/queries/select-order-by-clause-transact-sql.md), для оператора TOP можно указать не более 8192 строк. Если строк будет больше, чем 8192, вы получите такое сообщение об ошибке: **сообщение 41398, уровень 16, состояние 1, процедура *\<имя_процедуры>*, строка *\<номер_строки>*. Оператор TOP может возвратить не более 8192 строк; запрошенное число: *\<число>*.**  
+ Если в запросе используется как оператор [TOP (Transact-SQL)](../../t-sql/queries/top-transact-sql.md), так и [предложение ORDER BY (Transact-SQL)](../../t-sql/queries/select-order-by-clause-transact-sql.md), для оператора TOP можно указать не более 8192 строк. Если указано больше 8192 строк, возникает следующее сообщение об ошибке: **Сообщение 41398, уровень 16, состояние 1, процедура *\<имя_процедуры>* , строка *\<номер_строки>* . Оператор TOP может возвратить не более 8192 строк; запрошенное число: *\<число>* .**  
 
  Если отсутствует предложение TOP, то можно отсортировать любое количество строк с помощью предложения ORDER BY.  
 
@@ -264,7 +263,7 @@ WITH EXECUTE AS OWNER, SCHEMABINDING, NATIVE_COMPILATION
 GO  
 ```
 
- Пример для оператора TOP с числом значений > 8192: сбой компиляции.  
+ Пример для оператора TOP с числом значений > 8192: сбой компиляции.  
 
 ```sql  
 CREATE PROCEDURE testTop  
@@ -293,7 +292,7 @@ WITH EXECUTE AS OWNER, SCHEMABINDING, NATIVE_COMPILATION
 GO  
 ```
 
- **Ограничения возвращаемых строк:** существует два варианта, когда возможно уменьшение числа строк, возвращаемых оператором TOP:  
+ **Ограничения возвращаемых строк:** Существует два варианта, когда возможно уменьшение числа строк, возвращаемых оператором TOP.  
 
 -   Использование соединений в запросе.  Влияние соединений на ограничения зависит от плана запроса.  
 

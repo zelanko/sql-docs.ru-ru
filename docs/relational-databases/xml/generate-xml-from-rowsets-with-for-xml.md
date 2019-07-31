@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d061c0f1-3de9-4ad1-bbca-ce45d064b6c8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cf50f9a813067f88e2e34ec8e834cef9072de39f
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: b89a9efa3a034b9310384cc63a9b4c0c93ab8717
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510401"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67986447"
 ---
 # <a name="generate-xml-from-rowsets-with-for-xml"></a>Использование предложения XML FOR для создания XML на основе набора строк
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +27,7 @@ ms.locfileid: "58510401"
   
  Новая директива **FOR XML TYPE** позволяет определять для реляционных данных XML-представления, поддерживающие только чтение, используя синтаксис SQL. Как показано в следующих примерах, представление можно запрашивать при помощи инструкций SQL и встроенного механизма XQuery. К этим SQL-представлениям можно также обращаться в хранимых процедурах.  
   
-## <a name="example-sql-view-returning-generated-xml-data-type"></a>Пример SQL-представление, возвращающее сформированный тип xml-данных  
+## <a name="example-sql-view-returning-generated-xml-data-type"></a>Пример SQL-представление, возвращающее сформированный тип данных XML  
  Следующий код создает XML-представление для реляционного столбца pk и заносит в него информацию об авторах, извлекаемую из XML-столбца:  
   
 ```  

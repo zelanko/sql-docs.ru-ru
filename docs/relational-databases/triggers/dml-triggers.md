@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: 298eafca-e01f-4707-8c29-c75546fcd6b0
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 979866917514cb10689f60bf5114d02dbe889fd9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 543b28f5980c8126a9475a54557a05964718c707
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826712"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68056133"
 ---
 # <a name="dml-triggers"></a>Триггеры DML
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -61,10 +60,10 @@ ms.locfileid: "47826712"
 |Сущности, к которым применяется триггер|Таблицы|Таблицы и представления|  
 |Количество триггеров на таблицу или представление|Несколько триггеров на одно запускающее триггеры действие (UPDATE, DELETE или INSERT).|Один триггер на одно запускающее триггеры действие (UPDATE, DELETE или INSERT).|  
 |Каскадные ссылки|Нет ограничений.|Триггеры INSTEAD OF UPDATE и DELETE нельзя определять для таблиц, на которые распространяются каскадные ограничения ссылочной целостности.|  
-|Выполнение|После следующих операций.<br /><br /> Обработка ограничений.<br /><br /> Декларативные ссылочные действия.<br /><br /> Создание таблиц**inserted** и **deleted** .<br /><br /> Действие, запускающее триггер.|До: обработка ограничений<br /><br /> Вместо: действие, запускающее триггер<br /><br /> После: создание таблиц  **inserted** и **deleted**|  
+|Выполнение|После следующих операций.<br /><br /> Обработка ограничений.<br /><br /> Декларативные ссылочные действия.<br /><br /> Создание таблиц**inserted** и **deleted** .<br /><br /> Действие, запускающее триггер.|Перед следующей операцией. Обработка ограничений.<br /><br /> Вместо следующей операции:  Действие, запускающее триггер.<br /><br /> После: создание таблиц  **inserted** и **deleted**|  
 |Порядок выполнения|Можно задать выполнение в первую и в последнюю очередь.|Неприменимо|  
-|Ссылки на столбцы**varchar(max)**, **nvarchar(max)** и **varbinary(max)** в таблицах **inserted** и **deleted** |Разрешено|Разрешено|  
-|Ссылки на столбцы**text**, **ntext**и **image** в таблицах **inserted** и **deleted** |Не допускается|Разрешено|  
+|Ссылки на столбцы**varchar(max)** , **nvarchar(max)** и **varbinary(max)** в таблицах **inserted** и **deleted**|Разрешено|Разрешено|  
+|Ссылки на столбцы**text**, **ntext**и **image** в таблицах **inserted** и **deleted**|Не допускается|Разрешено|  
   
  Триггеры CLR  
  Триггер CLR может быть либо триггером AFTER, либо триггером INSTEAD OF. Триггер CLR может также являться триггером DDL. Вместо вызова хранимой процедуры на языке [!INCLUDE[tsql](../../includes/tsql-md.md)] триггер CLR вызывает один или несколько методов управляемого кода, являющихся членами сборки, созданной с помощью среды .NET Framework и загружены в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

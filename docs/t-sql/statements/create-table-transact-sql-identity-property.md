@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: 8429134f-c821-4033-a07c-f782a48d501c
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: af536ef3867d3f74ce04a8a8fef8b93e224f09c0
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 8cf672f9aefc4b9fa0444c73596d2fac67089474
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326645"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67938933"
 ---
 # <a name="create-table-transact-sql-identity-property"></a>CREATE TABLE (Transact-SQL) IDENTITY (Свойство)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -78,7 +77,7 @@ IDENTITY [ (seed , increment) ]
   
  Для каждой таблицы можно создать только один столбец идентификаторов.  
   
- В таблицах, оптимизированных для памяти, в качестве начального значения и значения приращения должно быть задано 1,1. Указание для начального значения или значения приращения числа, отличного от 1, приведет к следующей ошибке. Использование начального значения и значения приращения, отличного от 1, не поддерживается в оптимизированных для памяти таблицах.  
+ В таблицах, оптимизированных для памяти, в качестве начального значения и значения приращения должно быть задано 1,1. Указание для начального значения или значения приращения числа, отличного от 1, приведет к следующей ошибке: "Использование начального или добавочного значения, отличного от 1, не поддерживается в оптимизированных для памяти таблицах".  
   
 ## <a name="examples"></a>Примеры  
   

@@ -12,23 +12,22 @@ helpviewer_keywords:
 ms.assetid: 4a121375-7424-4444-b876-baefa8fe9015
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 068d92c4913a59e9c18c601d2c21b8b3c80a0a19
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: ac6464cb5bab7e16cb6ee0282f402c1416ec47cf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52520223"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68044739"
 ---
 # <a name="force-a-wsfc-cluster-to-start-without-a-quorum"></a>Принудительный запуск кластера WSFC без кворума
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   В этом разделе описан порядок принудительного запуска узла отказоустойчивого кластера Windows Server (WSFC) без кворума.  Это может потребоваться в случае аварийного восстановления, в сценариях с несколькими подсетями и восстановлением данных и высокой доступности экземпляров отказоустойчивого кластера [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] и [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
--   **Перед началом:**  [Рекомендации](#Recommendations), [Безопасность](#Security)  
+-   **Перед началом работы:**  [Рекомендации](#Recommendations), [Безопасность](#Security)  
   
--   **Принудительный запуск кластера без кворума с использованием**  [Использование диспетчера отказоустойчивого кластера.](#FailoverClusterManagerProcedure), [Использование Powershell](#PowerShellProcedure), [Использование Net.exe](#CommandPromptProcedure)  
+-   **Принудительный запуск кластера без кворума с использованием:**  [диспетчер отказоустойчивости кластеров](#FailoverClusterManagerProcedure), [Powershell](#PowerShellProcedure), [Net.exe](#CommandPromptProcedure)  
   
--   **Дальнейшие действия:**  [исполнению: после перезапуска кластера для запуска без кворума](#FollowUp)  
+-   **Дальнейшие действия.**  [Дальнейшие действия: после принудительного запуска кластера без кворума](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Перед началом работы  
   
@@ -48,7 +47,7 @@ ms.locfileid: "52520223"
   
 3.  На левой панели в дереве **Диспетчер отказоустойчивого кластера** щелкните имя кластера.  
   
-4.  На сводной панели подтвердите, что текущим значением **Настройка кворума** является  **Предупреждение: кластер находится в состоянии принудительного кворума**.  
+4.  В сводной панели подтвердите, что текущим значением параметра **Конфигурация кворума** является:  **Внимание: Кластер работает в состоянии ForceQuorum**.  
   
 ##  <a name="PowerShellProcedure"></a> Использование Powershell  
   
@@ -103,7 +102,7 @@ net.exe stop clussvc
 net.exe start clussvc /forcequorum  
 ```  
   
-##  <a name="FollowUp"></a> Дальнейшие действия после принудительного запуска кластера без кворума  
+##  <a name="FollowUp"></a> Дальнейшие действия. После принудительного запуска кластера без кворума  
   
 -   Необходимо повторно оценить и настроить значения параметров NodeWeight для правильного построения нового кворума, прежде чем переключать другие узлы обратно в режим «в сети». В противном случае кластер может снова вернуться в режим «вне сети».  
   

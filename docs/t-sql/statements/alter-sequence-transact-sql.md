@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: decc0760-029e-4baf-96c9-4a64073df1c2
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: a482767c416e1adf4de30d6493c4c79ca07d2398
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 337b2ee6d7edffeb49c2cee6291d30100b4c1df0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52420381"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070335"
 ---
 # <a name="alter-sequence-transact-sql"></a>ALTER SEQUENCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -104,7 +103,7 @@ GRANT ALTER ON OBJECT::Test.TinySeq TO [AdventureWorks\Larry]
  Примеры создания последовательностей и использования функции **NEXT VALUE FOR** для формирования порядковых номеров см. в разделе [Порядковые номера](../../relational-databases/sequence-numbers/sequence-numbers.md).  
   
 ### <a name="a-altering-a-sequence"></a>A. Изменение последовательности  
- В следующем примере создается схема Test и последовательность TestSeq с типом данных **int**, имеющим диапазон от 0 до 255. Последовательность начинается со 125 и увеличивается на 25 при каждом создании номера. Поскольку последовательность зациклена, то при превышении максимального значения 200 она перезапускается с минимального значения 100.  
+ В приведенном ниже примере создается схема Test и последовательность TestSeq с типом данных **int**, имеющим диапазон от 100 до 200. Последовательность начинается со 125 и увеличивается на 25 при каждом создании номера. Поскольку последовательность зациклена, то при превышении максимального значения 200 она перезапускается с минимального значения 100.  
   
 ```  
 CREATE SCHEMA Test ;  
@@ -122,7 +121,7 @@ CREATE SEQUENCE Test.TestSeq
 GO  
 ```  
   
- В следующем примере последовательность TestSeq изменяется для работы в диапазоне от 0 до 255. Последовательность перезапускает нумерацию рядов со 100 с увеличением на 50 при каждом формировании номера.  
+ В приведенном ниже примере последовательность TestSeq изменяется для работы в диапазоне от 50 до 200. Последовательность перезапускает нумерацию рядов со 100 с увеличением на 50 при каждом формировании номера.  
   
 ```  
 ALTER SEQUENCE Test. TestSeq  

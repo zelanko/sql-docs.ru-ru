@@ -1,7 +1,7 @@
 ---
-title: Требования к оборудованию и программному обеспечению для установки SQL Server 2016 | Документация Майкрософт
+title: Требования к оборудованию и программному обеспечению для установки SQL Server | Документация Майкрософт
 ms.custom: sqlfreshmay19
-ms.date: 05/15/2019
+ms.date: 07/24/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -44,27 +44,26 @@ helpviewer_keywords:
 ms.assetid: 09bcf20b-0a40-4131-907f-b61479d5e4d8
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 6c578a0b022e484c24c1ea035ce5e8561dce79d9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 54f2bdb3d844a8e5aab947f19f7905173b2cb04f
+ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68019875"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68419570"
 ---
 # <a name="hardware-and-software-requirements-for-installing-sql-server"></a>Требования к оборудованию и программному обеспечению для установки SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 В этой статье приведены минимальные требования к оборудованию и программному обеспечению, необходимым для установки и запуска [!INCLUDE[ssNoVer](../../includes/ssnoversion-md.md)] в операционной системе Windows. 
 
-В [!INCLUDE[sscurrent](../../includes/sssqlv14-md.md)] введена поддержка [!INCLUDE[ssNoVer](../../includes/ssnoversion-md.md)] в Linux. Дополнительные сведения см. в разделе [Требования к оборудованию и программному обеспечению для установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в Linux](../../linux/sql-server-linux-setup.md#system). 
+[!INCLUDE[sscurrent](../../includes/sssqlv14-md.md)] впервые реализует поддержку [!INCLUDE[ssNoVer](../../includes/ssnoversion-md.md)] в Linux. Дополнительные сведения см. в разделе [Требования к оборудованию и программному обеспечению для установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в Linux](../../linux/sql-server-linux-setup.md#system). 
 
-> Эта статья относится к [!INCLUDE[ss2016](../../includes/sssql15-md.md)] и более поздним версиям. 
   
 **Попробуйте продукт:**  
   
 -   Скачайте SQL Server в [**Центре Evaluation Center**.](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) 
   
--   Запустите виртуальную машину с уже установленным [**SQL Server 2016**](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) .  
+-   Запустите виртуальную машину с уже установленным [**SQL Server 2017**](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm).  
   
 **Следующие аспекты применяются ко всем выпускам.**  
   
@@ -89,7 +88,7 @@ ms.locfileid: "68019875"
   
 |Компонент|Требование|  
 |---------------|-----------------|  
-|.NET Framework|Для установки[!INCLUDE[sql2016](../../includes/sssql15-md.md)] RC1 и более поздних версий требуется [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6 для следующих компонентов: ядро СУБД, Master Data Services и репликация. Во время установки[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] автоматически устанавливается [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Также вы можете вручную установить [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] со страницы [Microsoft .NET Framework 4.6 (веб-установщик) для Windows](https://support.microsoft.com/kb/3045560).<br/><br/>[!INCLUDE[sql2019](../../includes/sssqlv15-md.md)] требуется .NET Framework 4.6.2. Доступно в [Центре загрузки](https://www.microsoft.com/download/details.aspx?id=53344)<br/><br/> Дополнительные сведения, рекомендации и руководство для платформы [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6 см. в статье [Руководство по развертыванию .NET Framework для разработчиков](https://msdn.microsoft.com/library/ee942965\(v=vs.110\).aspx).<br/><br/>В[!INCLUDE[winblue_client_2](../../includes/winblue-client-2-md.md)]и [!INCLUDE[winblue_server_2](../../includes/winblue-server-2-md.md)] нужно установить обновление [KB2919355](https://support.microsoft.com/kb/2919355) перед установкой [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6.|  
+|.NET Framework|Для установки[!INCLUDE[sql2016](../../includes/sssql15-md.md)] RC1 и более поздних версий требуется [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6 для следующих компонентов: ядро СУБД, Master Data Services и репликация. Во время установки SQL Server автоматически устанавливается [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Также вы можете вручную установить [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] со страницы [Microsoft .NET Framework 4.6 (веб-установщик) для Windows](https://support.microsoft.com/kb/3045560).<br/><br/>[!INCLUDE[sql2019](../../includes/sssqlv15-md.md)] требуется .NET Framework 4.6.2. Доступно в [Центре загрузки](https://www.microsoft.com/download/details.aspx?id=53344)<br/><br/> Дополнительные сведения, рекомендации и руководство для платформы [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6 см. в статье [Руководство по развертыванию .NET Framework для разработчиков](https://msdn.microsoft.com/library/ee942965\(v=vs.110\).aspx).<br/><br/>В[!INCLUDE[winblue_client_2](../../includes/winblue-client-2-md.md)]и [!INCLUDE[winblue_server_2](../../includes/winblue-server-2-md.md)] нужно установить обновление [KB2919355](https://support.microsoft.com/kb/2919355) перед установкой [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6.|  
 |Сетевое программное обеспечение|Поддерживаемые операционные системы для [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] содержат встроенное сетевое программное обеспечение. Именованные экземпляры и экземпляры по умолчанию изолированной установки поддерживают следующие сетевые протоколы: общая память, именованные каналы, TCP/IP и VIA.<br/><br/> **Примечание.** Протокол VIA не поддерживается в отказоустойчивых кластерах. Клиенты или приложения, работающие на одном узле в отказоустойчивом кластере как экземпляр SQL Server, могут использовать протокол общей памяти для подключения к SQL Server с помощью адреса локального канала. Но этот тип подключения не привязан к кластеру. Подключение завершится ошибкой после отработки отказа экземпляра. Таким образом, его рекомендуется использовать только в определенных случаях.<br/><br/> **Важно!** Протокол VIA является устаревшим. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]<br/><br/> Дополнительные сведения о сетевых протоколах и сетевых библиотеках см. в разделе [Network Protocols and Network Libraries](../../sql-server/install/network-protocols-and-network-libraries.md).|  
 |Жесткий диск|Для[!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] требуется как минимум 6 ГБ свободного места на диске.<br/><br/> Требования к месту на диске определяются набором устанавливаемых компонентов [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] . Дополнительные сведения см. в разделе [Требования к месту на диске](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md#HardDiskSpace) далее в этой статье. Сведения о поддерживаемых типах хранилищ для файлов данных см. в разделе [Storage Types for Data Files](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md#StorageTypes).|  
 |Диск|Для установки с DVD-диска необходим соответствующий дисковод.|  
@@ -120,13 +119,24 @@ ms.locfileid: "68019875"
   
  WOW64 (32-разрядная Windows в 64-разрядной Windows) — это компонент 64-разрядных выпусков Windows, который позволяет выполнять 32-разрядные приложения в собственном 32-разрядном режиме. Приложения работают в 32-разрядном режиме даже в случае, если базовая операционная система является 64-разрядной. Режим WOW64 не поддерживается для установок [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] . Тем не менее в режиме WOW64 могут работать средства управления.  
 
- 
 
 **Поддержка Server Core.**
 
- Теперь [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] поддерживается в установке основных серверных компонентов систем Windows Server 2008 R2, Windows Server 2012, Windows Server 2012 R2, Windows Server 2016 и Windows Server 2019. 
+::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions" 
 
-Установка [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] в режиме основных серверных компонентов поддерживается в следующих выпусках Windows Server:
+Установка SQL Server 2019 в режиме основных серверных компонентов поддерживается в следующих выпусках Windows Server:
+
+|                              |                                |
+| :------------------------    | :------------------------------|
+| Windows Server 2019 Standard | Windows Server 2019 Datacenter |
+| Windows Server 2016 Standard | Windows Server 2016 Datacenter |
+   | &nbsp; | &nbsp; |
+
+::: moniker-end
+
+::: moniker range=">=sql-server-2016 <=sql-server-2017||=sqlallproducts-allversions"
+
+Установка SQL Server 2016 и 2017 в режиме основных серверных компонентов поддерживается в следующих выпусках Windows Server:
 
 |                              |                                |
 | :------------------------    | :------------------------------|
@@ -137,40 +147,48 @@ ms.locfileid: "68019875"
 | Windows Server 2008 R2 Standard с пакетом обновления 1 (SP1) | Windows Server 2008 R2 Datacenter с пакетом обновления 1 (SP1) |
 | Windows Server 2008 R2 Enterprise с пакетом обновления 1 (SP1) | Windows Server 2008 R2 Web с пакетом обновления 1 (SP1)|
    | &nbsp; | &nbsp; |
+::: moniker-end
 
-Дополнительные сведения об установке [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] в режиме основных серверных компонентов см. в статье [Установка SQL Server в Server Core](../../database-engine/install-windows/install-sql-server-on-server-core.md).  
+Дополнительные сведения об установке SQL Server на Server Core см. в разделе [Установка SQL Server на Server Core](../../database-engine/install-windows/install-sql-server-on-server-core.md).  
 
   
 ### <a name="features-supported-on-32-bit-client-operating-systems"></a>Функции, поддерживаемые в 32-разрядных клиентских операционных системах  
  Клиентские операционные системы Windows, такие как Windows 10 и Windows 8.1, могут иметь 32-разрядную или 64-разрядную архитектуру.   Полная поддержка всех функций SQL Server доступна только в 64-разрядных операционных системах. В поддерживаемых 32-разрядных операционных системах Microsoft поддерживаются следующие функции:  
   
--   Клиент Data Quality  
-  
--   Средства связи клиентских средств  
-  
--   Службы Integration Services  
-  
--   Обратная совместимость клиентских средств  
-  
--   Пакет SDK клиентских средств  
-  
--   Компоненты документации  
-  
--   Компоненты распределенного воспроизведения  
-  
--   Контроллер распределенного воспроизведения  
-  
--   Клиент распределенного воспроизведения  
-  
--   Пакет SDK для подключения клиентов SQL  
+-   Клиент Data Quality
+-   Средства связи клиентских средств
+-   Службы Integration Services
+-   Обратная совместимость клиентских средств
+-   Пакет SDK клиентских средств
+-   Компоненты документации
+-   Компоненты распределенного воспроизведения
+-   Контроллер распределенного воспроизведения
+-   Клиент распределенного воспроизведения
+-   Пакет SDK для подключения клиентов SQL
   
  [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] и серверные операционные системы более поздней версии не поддерживают 32-разрядную архитектуру. Все поддерживаемые серверные операционные системы доступны только с 64-разрядной архитектурой. Полная поддержка всех функций доступна только в 64-разрядных серверных операционных системах.  
   
 ###  <a name="TOP_Principal"></a> Совместимость с ОС   
 
- В следующей таблице показано, какие версии SQL Server совместимы с различными версиями Windows:  
+::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions" 
+В следующей таблице показано, какие версии SQL Server 2019 совместимы с различными версиями Windows:  
   
 
+| Выпуск SQL Server:               | Enterprise | Разработчик | Standard | Web Edition | Express |  
+| :------------------------         | :--------- | :-------- | :------- | :-- | :------ | 
+| Windows Server 2019 Datacenter    |    Да     |    Да    |    Да   | Да |   Да   |
+| Windows Server 2019 Standard      |    Да     |    Да    |    Да   | Да |   Да   |
+| Windows Server 2019 Essentials    |    Да     |    Да    |    Да   | Да |   Да   |
+| Windows Server 2016 Datacenter    |    Да     |    Да    |    Да   | Да |   Да   |
+| Windows Server 2016 Standard      |    Да     |    Да    |    Да   | Да |   Да   |
+| Windows Server 2016 Essentials    |    Да     |    Да    |    Да   | Да |   Да   |
+| &nbsp; | &nbsp; |
+::: moniker-end
+
+::: moniker range=">=sql-server-2016 <=sql-server-2017||=sqlallproducts-allversions"
+
+В следующей таблице показано, какие версии SQL Server 2016 и 2017 совместимы с различными версиями Windows:  
+  
 | Выпуск SQL Server:               | Enterprise | Разработчик | Standard | Web Edition | Express |  
 | :------------------------         | :--------- | :-------- | :------- | :-- | :------ | 
 | Windows Server 2019 Datacenter    |    Да     |    Да    |    Да   | Да |   Да   |
@@ -196,14 +214,14 @@ ms.locfileid: "68019875"
 | Windows 8.1 Корпоративная            |    нет      |    Да    |    Да   | нет  |   Да   |
 | Windows 8 Профессиональная                     |    нет      |    Да    |    Да   | нет  |   Да   |
 | Windows 8                         |    нет      |    Да    |    Да   | нет  |   Да   | 
-| &nbsp; | &nbsp; |
-
 
 > [!NOTE]  
 > Поддержка операционных систем, указанных в этом разделе, не распространяется на следующие компоненты бизнес-аналитики для [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и более ранних версий. Эти компоненты можно установить на Windows Server 2008 R2 с пакетом обновления 1 (SP1) или более поздней версии:  
 >  
 >-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] — SharePoint  
 >-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Надстройка для продуктов SharePoint  
+::: moniker-end
+
 
   
 ##  <a name="CrossLanguageSupport"></a> Поддержка версий на разных языках  

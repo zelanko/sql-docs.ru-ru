@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: 9e6c7684-3dd3-46bb-b7be-523b33fae4d5
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 57da60f74ed24de6b1ef48eaa12053112a91a39f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1020bb9dff821471f33ba3af9285249a93980133
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47747792"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68055990"
 ---
 # <a name="specify-first-and-last-triggers"></a>Указание первого и последнего триггеров
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -53,7 +52,7 @@ sp_settriggerorder @triggername = 'MyTrigger', @order = 'first', @stmttype = 'UP
   
  Если инструкция ALTER TRIGGER изменяет первый или последний триггер, атрибут **First** или **Last** удаляется и в качестве значения порядка указывается **None**. Порядок должен быть изменен с использованием свойства **sp_settriggerorder**.  
   
- Функция OBJECTPROPERTY сообщает, является ли триггер первым или последним, используя следующие свойства: **ExecIsFirstInsertTrigger**, **ExecIsFirstUpdateTrigger**, **ExecIsFirstDeleteTrigger**, **ExecIsLastInsertTrigger**, **ExecIsLastUpdateTrigger** и **ExecIsLastDeleteTrigger**.  
+ Функция OBJECTPROPERTY сообщает, является ли триггер первым или последним триггером, используя следующие свойства: **ExecIsFirstInsertTrigger**, **ExecIsFirstUpdateTrigger**, **ExecIsFirstDeleteTrigger**, **ExecIsLastInsertTrigger**, **ExecIsLastUpdateTrigger** и **ExecIsLastDeleteTrigger**.  
   
  Репликация автоматически создает первый триггер для любой таблицы, включенной в подписку немедленным обновлением или обновлением с постановкой в очередь. Репликация требует, чтобы ее триггер был первым. При попытке вставить таблицу с указанным первым триггером в немедленно обновляемую подписку или подписку, обновляемую посредством очередей, репликация инициирует ошибку. При попытке сделать триггер первым триггером после включения таблицы в подписку **sp_settriggerorder** возвращает ошибку. В случае использования ALTER для триггера репликации или использования **sp_settriggerorder** , чтобы сделать триггер репликации последним или триггером вне порядка, подписка не будет функционировать должным образом.  
   
