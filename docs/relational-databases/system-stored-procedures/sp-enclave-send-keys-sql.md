@@ -19,17 +19,17 @@ helpviewer_keywords:
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: b3d5ed50ac407beebfb54370cf91f0f3b8ba3101
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b4ced2feee2227ba1db492f721f57907069c5d99
+ms.sourcegitcommit: 97e94b76f9f48d161798afcf89a8c2ac0f09c584
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68124686"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68661350"
 ---
 # <a name="spenclavesendkeys----transact-sql"></a>sp_enclave_send_keys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Отправляет все поддержкой анклава столбца ключей шифрования в базе данных анклава, используемые [всегда зашифрованы с помощью безопасного enclaves &#40;СУБД&#41;](../../relational-databases/security/encryption/always-encrypted-enclaves.md).
+Отправляет все ключи шифрования столбцов с поддержкой анклава в базе данных в анклава, используемый [Always encrypted с безопасными енклавес &#40;ядро СУБД&#41;](../../relational-databases/security/encryption/always-encrypted-enclaves.md).
 
 ## <a name="syntax"></a>Синтаксис  
   
@@ -44,22 +44,22 @@ sp_enclave_send_keys
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Эта хранимая процедура не возвращает никакого значения.
+Эта хранимая процедура не имеет возвращаемого значения.
   
 ## <a name="result-sets"></a>Результирующие наборы
 
-Эта хранимая процедура имеет не результирующих наборов.
+Эта хранимая процедура не имеет результирующих наборов.
   
 ## <a name="remarks"></a>Примечания
 
-**sp_enclave_send_keys** отправляет ключей шифрования столбцов с поддержкой анклава анклава, если выполняются все следующие условия:
+**sp_enclave_send_keys** отправляет ключи шифрования столбца с включенным анклава в анклава, если выполняются все перечисленные ниже условия.
 
-- Анклава включена в экземпляре SQL Server.
-- **sp_enclave_send_keys** был вызван из приложения с помощью [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] драйвер клиента, поддерживая Always Encrypted с безопасной enclaves, с помощью подключения к базе данных с Always Encrypted и анклава вычислений включен.
+- Анклава включается в экземпляре SQL Server.
+- **sp_enclave_send_keys** был вызван из приложения с помощью [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] клиентского драйвера, поддерживающего Always encrypted с безопасным енклавес с помощью подключения к базе данных, в котором включены вычисления Always encrypted и анклава.
 
 ## <a name="permissions"></a>Разрешения
 
- Требовать **VIEW ANY COLUMN ENCRYPTION KEY DEFINITION** и **VIEW ANY COLUMN MASTER KEY DEFINITION** разрешения в базе данных.  
+ Запрашивать определение **ключа шифрования столбцов** и **просматривать любые разрешения для определения главного ключа столбца** в базе данных.  
   
 ## <a name="examples"></a>Примеры  
   
@@ -69,8 +69,8 @@ EXEC sp_enclave_send_keys;
 
 ## <a name="see-also"></a>См. также
 
- [Всегда зашифрованы с помощью безопасного enclaves &#40;компонент Database Engine&#41;](../../relational-databases/security/encryption/always-encrypted-enclaves.md)   
- [Учебник. Создание и использование индексов для столбцов с поддержкой анклава, с помощью случайного шифрования](../security/tutorial-creating-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md#step-3-create-an-index-with-role-separation)   
- [Вызвать с помощью ключей шифрования столбцов кэшированных операций индексирования](../security/encryption/configure-always-encrypted-enclaves.md#invoke-indexing-operations-using-cached-column-encryption-keys)   
- [Индексы для столбцов с поддержкой Анклава, с помощью случайного шифрования](../security/encryption/always-encrypted-enclaves.md#indexes-on-enclave-enabled-columns-using-randomized-encryption)   
- [Рекомендации по AlwaysOn и перенос базы данных](../security/encryption/always-encrypted-enclaves.md#considerations-for-alwayson-and-database-migration)
+ [Always Encrypted с защищенным &#40;енклавес ядро СУБД&#41;](../../relational-databases/security/encryption/always-encrypted-enclaves.md)   
+ [Учебник. Создание и использование индексов в столбцах с поддержкой анклава с использованием случайного шифрования](../security/tutorial-creating-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md#step-3-create-an-index-with-role-separation)   
+ [Вызов операций индексации с использованием кэшированных ключей шифрования столбцов](../security/encryption/configure-always-encrypted-enclaves.md#invoke-indexing-operations-using-cached-column-encryption-keys)   
+ [Индексы в столбцах с поддержкой анклава с использованием случайного шифрования](../security/encryption/always-encrypted-enclaves.md#indexes-on-enclave-enabled-columns-using-randomized-encryption)   
+ [Рекомендации по миграции AlwaysOn и базы данных](../security/encryption/always-encrypted-enclaves.md#anchorname-1-considerations-availability-groups-db-migration)

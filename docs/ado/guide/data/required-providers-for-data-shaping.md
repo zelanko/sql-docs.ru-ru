@@ -13,21 +13,21 @@ helpviewer_keywords:
 ms.assetid: d49d48d2-ac2d-4c11-895c-5a149b444620
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 98b34b985650f92fb840b14daba8d5bf16d8454a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 732563fc2c4e1cc93beac8712d845b960ae56aaf
+ms.sourcegitcommit: 97e94b76f9f48d161798afcf89a8c2ac0f09c584
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67924360"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68661276"
 ---
 # <a name="required-providers-for-data-shaping"></a>Обязательные поставщики для формирования данных
-Обычно для формирования данных требуется два поставщика. Поставщик услуг [службы Data Shaping Service для OLE DB](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md), предоставляет формирования функции и поставщика данных, таких как поставщик OLE DB для SQL Server данных, передает строки данных, чтобы заполнить форму [набора записей ](../../../ado/reference/ado-api/recordset-object-ado.md).  
+Для формирования данных обычно требуется два поставщика. Поставщик услуг, [Служба формирования данных для OLE DB](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md), предоставляет функциональные возможности формирования данных и поставщик данных, например поставщик OLE DB для SQL Server, предоставляет строки данных для заполнения [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md)в форме.  
   
- В качестве значения можно указать имя поставщика услуг (MSDataShape) [подключения](../../../ado/reference/ado-api/connection-object-ado.md) объект [поставщика](../../../ado/reference/ado-api/provider-property-ado.md) свойство или ключевое слово строки подключения «поставщик = MSDataShape;».  
+ Имя поставщика услуг (Мсдаташапе) может быть указано в качестве значения свойства [поставщика](../../../ado/reference/ado-api/provider-property-ado.md) объектов [соединения](../../../ado/reference/ado-api/connection-object-ado.md) или ключевого слова строки подключения "Provider = мсдаташапе;".  
   
- Можно указать имя поставщика данных для параметра **поставщик данных** динамическое свойство, добавляемое к **подключения** объект [свойства](../../../ado/reference/ado-api/properties-collection-ado.md) коллекции с помощью службы Data Shaping Service для OLE DB или ключевое слово строки подключения "**поставщик данных =** _поставщика_«.  
+ Имя поставщика данных может быть указано в качестве значения динамического свойства **поставщика данных** , которое добавляется в коллекцию [свойств](../../../ado/reference/ado-api/properties-collection-ado.md) объекта **соединения** службой формирования данных для OLE DB или ключевое слово строки подключения " **Поставщик данных =** _поставщик_".  
   
- Поставщик данных не является обязательным, если **записей** не заполняется (например, в которое **записей** где столбцы создаются с помощью ключевого слова NEW). В этом случае указывается "**поставщик данных =** none;».  
+ Поставщик данных не требуется, если **набор записей** не заполняется (например, как в созданном **наборе записей** , где столбцы создаются с помощью ключевого слова New). В этом случае укажите "**Data Provider =** None;".  
   
 ## <a name="example"></a>Пример  
   
@@ -39,5 +39,5 @@ cnn.Open "Data Provider=SQLOLEDB;Integrated Security=SSPI;Database=Northwind"
   
 ## <a name="see-also"></a>См. также  
  [Пример формирования данных](../../../ado/guide/data/data-shaping-example.md)   
- [Грамматика формального формирования данных](../../../ado/guide/data/formal-shape-grammar.md)   
+ [Грамматика формальной фигуры](../../../ado/guide/data/formal-shape-grammar.md)   
  [Общие сведения о командах формирования данных](../../../ado/guide/data/shape-commands-in-general.md)

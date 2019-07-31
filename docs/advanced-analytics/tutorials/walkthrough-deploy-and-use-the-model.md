@@ -7,12 +7,12 @@ ms.date: 11/26/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 96744b15bef03b7d8badc803b1fa5f5de382e64f
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+ms.openlocfilehash: b79d0bdc57ed49790874b571ccde875f45e35714
+ms.sourcegitcommit: 97e94b76f9f48d161798afcf89a8c2ac0f09c584
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470548"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68661299"
 ---
 # <a name="deploy-the-r-model-and-use-it-in-sql-server-walkthrough"></a>Развертывание модели R и ее использование в SQL Server (пошаговое руководство)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -103,7 +103,7 @@ ms.locfileid: "68470548"
 
     ```R
     input <- "N'SELECT TOP 10 a.passenger_count AS passenger_count, a.trip_time_in_secs AS trip_time_in_secs, a.trip_distance AS trip_distance, a.dropoff_datetime AS dropoff_datetime, dbo.fnCalculateDistance(pickup_latitude, pickup_longitude, dropoff_latitude, dropoff_longitude) AS direct_distance FROM (SELECT medallion, hack_license, pickup_datetime, passenger_count,trip_time_in_secs,trip_distance, dropoff_datetime, pickup_latitude, pickup_longitude, dropoff_latitude, dropoff_longitude FROM nyctaxi_sample)a LEFT OUTER JOIN ( SELECT medallion, hack_license, pickup_datetime FROM nyctaxi_sample  tablesample (1 percent) repeatable (98052)  )b ON a.medallion=b.medallion AND a.hack_license=b.hack_license AND  a.pickup_datetime=b.pickup_datetime WHERE b.medallion is null'";
-    q <- paste("EXEC PredictTipBatchMode @inquery = ", input, sep="");
+    q <- paste("EXEC PredictTipBatchMode @input = ", input, sep="");
     ```
 
 4. Чтобы запустить хранимую процедуру из R, вызовите метод **sqlQuery** пакета **RODBC** и используйте ранее определенное подключение `conn` SQL.

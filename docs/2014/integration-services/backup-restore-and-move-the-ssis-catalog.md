@@ -10,12 +10,12 @@ ms.assetid: bf806aef-8556-48ab-aed5-e95de9a2204e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 625e090ab65eff7a912785e3ddef2de3e7d83b0a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 66cbc5b8b54ec2507bb4fbe96443afa25386de96
+ms.sourcegitcommit: c70a0e2c053c2583311fcfede6ab5f25df364de0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66061264"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68670499"
 ---
 # <a name="backup-restore-and-move-the-ssis-catalog"></a>Резервное копирование, восстановление и перемещение каталога служб SSIS
   [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] включена база данных SSISDB. Создайте запрос представления в базе данных SSISDB для просмотра объектов, настроек и рабочих данных, которые хранятся в каталоге **SSISDB** . Этот раздел содержит инструкции для выполнения резервного копирования и восстановления базы данных.  
@@ -48,7 +48,7 @@ ms.locfileid: "66061264"
   
 5.  Если планируется восстановление базы данных SSISDB из копии на экземпляре [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], где каталог SSISDB еще не создан, создайте скрипт CREATE PROCEDURE для sp_ssis_startup следующим образом. Дополнительные сведения см. в статье [CREATE PROCEDURE (Transact-SQL)](/sql/t-sql/statements/create-procedure-transact-sql).  
   
-    1.  В обозревателе объектов разверните узел **Базы данных**, а затем узел **master** > **Программирование** > **Хранимые процедуры**.  
+    1.  В обозревателе объектов разверните узел **базы данных** , а затем узел **системные базы данных** > **главные** > **Программируемые** > **хранимые процедуры** .  
   
     2.  Щелкните правой кнопкой мыши **dbo.sp_ssis_startup**и выберите **Внести в скрипт хранимые процедуры как** > **СОЗДАТЬ в** > **В новом окне редактора запросов**.  
   
