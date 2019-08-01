@@ -24,17 +24,20 @@ helpviewer_keywords:
 - SQL Server collations
 - UTF-8
 - UTF-16
+- UTF8
+- UTF16
+- UCS2
 - server-level collations [SQL Server]
 ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: af749bdb7050d9e71fdfe698fe295255a4603add
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5807b8ae9c3b074068d0422a91b1dc1711c4067a
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68118489"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68471048"
 ---
 # <a name="collation-and-unicode-support"></a>Collation and Unicode Support
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -272,7 +275,7 @@ UTF-8 доступна только для параметров сортиров
 
 > [!TIP]   
 > Часто считают, что в типах данных [CHAR(*n*) и VARCHAR(*n*)](../../t-sql/data-types/char-and-varchar-transact-sql.md) или [NCHAR(*n*) и NVARCHAR(*n*)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md) число *n* указывает на количество символов. Причина в том, что, например, в столбце CHAR(10) могут храниться 10 символов ASCII в диапазоне 0–127 при использовании таких параметров сортировки, как Latin1_General_100_CI_AI, так как каждый символ в этом диапазоне занимает 1 байт.    
-> Однако число *n* в [CHAR(*n*) и VARCHAR(*n*)](../../t-sql/data-types/char-and-varchar-transact-sql.md) — это длина строки в **байтах** (0–8000), а в [NCHAR(*n*) и NVARCHAR(*n*)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md) число *n* — это длина строки в **парах байтов** (0–4000). *n* никогда не определяет количество хранимых символов.
+> Но число *n* в [CHAR(*n*) и VARCHAR(*n*)](../../t-sql/data-types/char-and-varchar-transact-sql.md) — это размер строки в **байтах** (0–8000), а в [NCHAR(*n*) и NVARCHAR(*n*)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md) число *n* — это размер строки в **парах байтов** (0–4000). *n* никогда не определяет количество хранимых символов.
 
 Как следует из таблицы, правильный выбор кодировки Юникода и типа данных может существенно сократить объем хранимых данных, а неправильный — увеличить занимаемый объем хранилища в зависимости от используемого набора символов. Например, при использовании параметров сортировки Latin с поддержкой UTF-8, например Latin1_General_100_CI_AI_SC_UTF8, в столбце `CHAR(10)` могут храниться 10 байтов и помещаются 10 символов ASCII в диапазоне 0–127, но только 5 символов в диапазоне 128–2047 или 3 символа в диапазоне 2048–65 535. Для сравнения, так как в столбце `NCHAR(10)` хранятся 10 пар байтов (20 байтов), в нем помещаются 10 символов в диапазоне 0–65 535.  
 
@@ -301,7 +304,9 @@ UTF-8 доступна только для параметров сортиров
 [Написание инструкций Transact-SQL, адаптированных к международному использованию](../../relational-databases/collations/write-international-transact-sql-statements.md)     
 [Рекомендации по миграции SQL Server на Юникод](https://go.microsoft.com/fwlink/?LinkId=113890) — больше не поддерживаются   
 [Веб-сайт консорциума Юникод](https://go.microsoft.com/fwlink/?LinkId=48619)   
-[Стандарт Юникод](http://www.unicode.org/standard/standard.html)      
+[Стандарт Юникод](http://www.unicode.org/standard/standard.html)     
+[Поддержка UTF-8 в драйвере OLE DB для SQL Server](../../connect/oledb/features/utf-8-support-in-oledb-driver-for-sql-server.md)  
+Блог с [общими сведениями о поддержке UTF-8 для SQL Server](https://techcommunity.microsoft.com/t5/SQL-Server/Introducing-UTF-8-support-for-SQL-Server/ba-p/734928)       
     
 ## <a name="see-also"></a>См. также:    
 [Параметры сортировки автономной базы данных](../../relational-databases/databases/contained-database-collations.md)     
