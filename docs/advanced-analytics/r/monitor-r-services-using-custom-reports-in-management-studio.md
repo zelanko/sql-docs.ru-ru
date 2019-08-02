@@ -6,12 +6,13 @@ ms.date: 04/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: effcfe458fc004fd8fb44bb58095e91a2fb56b8d
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: a7ab7a4ccd4956bd1752be398b25a6ff9fd92ce5
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470071"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715082"
 ---
 # <a name="monitor-machine-learning-services-using-custom-reports-in-management-studio"></a>Мониторинг служб машинного обучения с помощью настраиваемых отчетов в Management Studio
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -24,7 +25,7 @@ ms.locfileid: "68470071"
 - Расширенные события для служб R
 - Пакеты R или Python, установленные на текущем экземпляре
 
-В этой статье объясняется, как установить и использовать пользовательские отчеты, предоставляемые специально для Machine леаернинг. 
+В этой статье объясняется, как установить и использовать пользовательские отчеты, предоставляемые специально для машинного обучения. 
 
 Общие сведения об отчетах в Management Studio см. [в разделе Пользовательские отчеты в Management Studio](../../ssms/object/custom-reports-in-management-studio.md).
 
