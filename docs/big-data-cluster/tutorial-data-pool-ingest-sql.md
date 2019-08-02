@@ -1,7 +1,7 @@
 ---
 title: Прием данных в пул данных SQL Server
 titleSuffix: SQL Server big data clusters
-description: Этом руководстве показано, как прием данных в пуле данных кластера SQL Server 2019 больших данных (Предварительная версия).
+description: В этом руководстве описывается, каким образом выполняется прием данных в пул данных в кластере больших данных SQL Server 2019 (предварительная версия).
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -10,54 +10,54 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 626b5442596c5a0f9beedef779937cf875efff00
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67957792"
 ---
-# <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-transact-sql"></a>Учебник. Прием данных в пул данных SQL Server с помощью Transact-SQL
+# <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-transact-sql"></a>Руководство. Прием данных в пул данных SQL Server с помощью Transact-SQL
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Этот учебник демонстрирует использование Transact-SQL для загрузки данных в [пула данных](concept-data-pool.md) кластера SQL Server 2019 больших данных (Предварительная версия). С кластерами больших данных в SQL Server данные из различных источников можно принимаются и распределения между экземплярами пула данных.
+В этом руководстве описывается, каким образом выполняется загрузка данных в [пул данных](concept-data-pool.md) с помощью Transact-SQL в кластере больших данных SQL Server 2019 (предварительная версия). В кластерах больших данных SQL Server данные из самых разных источников могут приниматься и распределяться между экземплярами пула данных.
 
-В этом руководстве вы узнаете, как:
+В этом руководстве описано следующее:
 
 > [!div class="checklist"]
-> * Создайте внешнюю таблицу в пуле данных.
-> * Вставьте образец веб-маршрута перемещения данных в таблице пула данных.
-> * Объединить данные в таблице пула данных с локальными таблицами.
+> * Создание внешней таблицы в пуле данных.
+> * Вставка примера с данными о посещениях веб-страниц в таблицу пула данных.
+> * Объединение данных в таблице пула данных с локальными таблицами.
 
 > [!TIP]
-> При желании можно загрузить и запустить сценарий для команды в этом руководстве. Инструкции см. в разделе [данных пулов примеры](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/data-pool) на сайте GitHub.
+> При необходимости вы можете скачать и выполнить скрипт, содержащий команды из этого руководства. См. инструкции в разделе [Примеры пулов данных](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/data-pool) на сайте GitHub.
 
 ## <a id="prereqs"></a> Предварительные требования
 
 - [Средства работы с большими данными](deploy-big-data-tools.md)
    - **kubectl**
    - **Azure Data Studio**
-   - **Расширение SQL Server 2019**
-- [Загрузка образца данных в кластере больших данных](tutorial-load-sample-data.md)
+   - **Расширение SQL Server 2019**
+- [Загрузка примера данных в кластер больших данных](tutorial-load-sample-data.md)
 
-## <a name="create-an-external-table-in-the-data-pool"></a>Создайте внешнюю таблицу в пул данных
+## <a name="create-an-external-table-in-the-data-pool"></a>Создание внешней таблицы в пуле данных
 
-Следующие шаги создания внешней таблицы в пуле данных с именем **web_clickstream_clicks_data_pool**. Эта таблица можно затем использовать как расположение для приема данных к кластеру больших данных.
+Выполните следующие действия, чтобы создать внешнюю таблицу с именем **web_clickstream_clicks_data_pool** в пуле данных. В дальнейшем эта таблица может использоваться для приема данных в кластер больших данных.
 
-1. В Azure Data Studio подключитесь к основной экземпляр SQL Server кластера больших данных. Дополнительные сведения см. в разделе [подключение к экземпляру SQL Server master](connect-to-big-data-cluster.md#master).
+1. В Azure Data Studio установите подключение к главному экземпляру SQL Server в кластере больших данных. Дополнительные сведения см. в разделе [Подключение к главному экземпляру SQL Server](connect-to-big-data-cluster.md#master).
 
-1. Дважды щелкните подключение в **серверы** окно для отображения панели мониторинга сервера для главного экземпляра SQL Server. Выберите **новый запрос**.
+1. Дважды щелкните подключение в окне **Серверы**, чтобы открыть панель мониторинга сервера для главного экземпляра SQL Server. Выберите **Создать запрос**.
 
    ![Запрос главного экземпляра SQL Server](./media/tutorial-data-pool-ingest-sql/sql-server-master-instance-query.png)
 
-1. Выполните следующую команду Transact-SQL, чтобы изменить контекст, чтобы **Sales** базы данных master экземпляра.
+1. Выполните следующую команду Transact-SQL, чтобы изменить контекст на базу данных **Sales** в главном экземпляре.
 
    ```sql
    USE Sales
    GO
    ```
 
-1. Создание внешнего источника данных в пул данных, если он еще не существует.
+1. Создайте внешний источник данных для пула данных, если это не было сделано ранее.
 
    ```sql
    IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
@@ -65,7 +65,7 @@ ms.locfileid: "67957792"
      WITH (LOCATION = 'sqldatapool://controller-svc/default');
    ```
 
-1. Создайте внешнюю таблицу с именем **web_clickstream_clicks_data_pool** пула данных.
+1. Создайте внешнюю таблицу с именем **web_clickstream_clicks_data_pool** в пуле данных.
 
    ```sql
    IF NOT EXISTS(SELECT * FROM sys.external_tables WHERE name = 'web_clickstream_clicks_data_pool')
@@ -78,13 +78,13 @@ ms.locfileid: "67957792"
       );
    ```
   
-1. В версиях CTP 3.1 Создание данных пула является асинхронным, но нет способа определить, когда сеть будет еще. Подождите 2 минуты, чтобы убедиться в том, что при создании пула данных, прежде чем продолжить.
+1. В CTP 3.1 создание пула данных выполняется асинхронно, однако на данный момент не реализованы способы определить момент завершения этого процесса. Прежде чем продолжать, подождите примерно две минуты, чтобы удостовериться в создании пула данных.
 
 ## <a name="load-data"></a>Загрузка данных
 
-Следующие действия приема пример веб-маршрута перемещения данных в пул данных с помощью внешней таблицы, созданной на предыдущих шагах.
+Выполните следующие действия, чтобы принять данные о посещениях веб-страниц в пул данных с использованием внешней таблицы, созданной на предыдущих шагах.
 
-1. Используйте `INSERT INTO` инструкцию, чтобы вставлять результаты запроса в пуле данных ( **web_clickstream_clicks_data_pool** внешней таблицы).
+1. Используйте инструкцию `INSERT INTO` для вставки результатов запроса в пул данных (внешняя таблица **web_clickstream_clicks_data_pool**).
 
    ```sql
    INSERT INTO web_clickstream_clicks_data_pool
@@ -96,7 +96,7 @@ ms.locfileid: "67957792"
    HAVING COUNT_BIG(*) > 100;
    ```
 
-1. Проверьте данные, вставленные с два запроса SELECT.
+1. Проверьте вставленные данные с помощью двух запросов SELECT.
 
    ```sql
    SELECT count(*) FROM [dbo].[web_clickstream_clicks_data_pool]
@@ -105,7 +105,7 @@ ms.locfileid: "67957792"
 
 ## <a name="query-the-data"></a>Запрос данных
 
-Присоединяйтесь к сохраненные результаты запроса в пуле данных с локальными данными в **Sales** таблицы.
+Объедините сохраненные результаты запроса в пуле данных с локальными данными в таблице **Sales**.
 
 ```sql
 SELECT TOP (100)
@@ -126,9 +126,9 @@ INNER JOIN (SELECT DISTINCT i_category_id, i_category FROM item) as i
 GROUP BY w.wcs_user_sk;
 ```
 
-## <a name="clean-up"></a>Очистить
+## <a name="clean-up"></a>Очистка
 
-Используйте следующую команду для удаления объектов базы данных, созданной в этом учебнике.
+Выполните следующую команду, чтобы удалить объекты базы данных, созданные в рамках этого руководства.
 
 ```sql
 DROP EXTERNAL TABLE [dbo].[web_clickstream_clicks_data_pool];
@@ -136,6 +136,6 @@ DROP EXTERNAL TABLE [dbo].[web_clickstream_clicks_data_pool];
 
 ## <a name="next-steps"></a>Следующие шаги
 
-Дополнительные сведения о том, как прием данных в пуле данных с помощью заданий Spark:
+Сведения о приеме данных в пул данных с помощью заданий Spark:
 > [!div class="nextstepaction"]
 > [Прием данных с помощью заданий Spark](tutorial-data-pool-ingest-spark.md)
