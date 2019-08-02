@@ -5,16 +5,16 @@ description: В этой статье описывается настройка 
 author: nelgson
 ms.author: negust
 ms.reviewer: mikeray
-ms.date: 07/24/2019
+ms.date: 07/31/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 28c80d6076f07c8a4f1605149f4b5c730c8349a1
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
-ms.translationtype: HT
+ms.openlocfilehash: 10e7d0e30135622fedfcbe8f8dba67bfaf1908cd
+ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68419340"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68702868"
 ---
 # <a name="how-to-mount-s3-for-hdfs-tiering-in-a-big-data-cluster"></a>Подключение S3 для распределения по уровням HDFS в кластере больших данных
 
@@ -33,7 +33,7 @@ ms.locfileid: "68419340"
 
 ### <a name="set-environment-variable-for-access-key-credentials"></a>Установка переменной среды для учетных данных ключей доступа
 
-Откройте командную строку на клиентском компьютере, который может получать доступ к кластеру больших данных. Задайте переменную среды в следующем формате. Обратите внимание, что учетные данные должны задаваться в списке с разделителями-запятыми. В Windows используется команда "set". В Linux следует использовать команду "export".
+Откройте командную строку на клиентском компьютере, который может получать доступ к кластеру больших данных. Задайте переменную среды в следующем формате. Обратите внимание, что учетные данные нужно задавать в виде списка с разделителями-запятыми. В Windows используется команда "set". В Linux следует использовать команду "export".
 
    ```text
     set MOUNT_CREDENTIALS=fs.s3a.access.key=<Access Key ID of the key>,
@@ -68,22 +68,22 @@ ms.locfileid: "68419340"
    ```
 
    > [!NOTE]
-   > Команда mount create выполняется асинхронно. В настоящее время сообщения об успешном подключении не реализованы. Чтобы проверить состояние подключений, ознакомьтесь с разделом [status](#status).
+   > Команда mount create выполняется асинхронной. Сейчас сообщения об успешном подключении не реализованы. Чтобы проверить состояние подключений, обратитесь к разделу [status](#status).
 
-Если подключение выполнено успешно, вы сможете запрашивать данные HDFS и выполнять задания Spark для их обработки. Данные вашего кластера больших данных будут отображаться в HDFS в месте, которое задается атрибутом `--mount-path`.
+Если подключение выполнено успешно, вы сможете запрашивать данные HDFS и выполнять задания Spark для их обработки. Данные для вашего кластера больших данных будут отображаться в HDFS в месте, которое задается атрибутом `--mount-path`.
 
 ## <a id="status"></a> Получение информации о состоянии подключений
 
 Чтобы просмотреть состояние всех подключений в вашем кластере больших данных, выполните следующую команду:
 
 ```bash
-azdata bdc storage-pool mount status
+azdata bdc hdfs mount status
 ```
 
 Чтобы просмотреть состояние подключения с заданным путем в HDFS, выполните следующую команду:
 
 ```bash
-azdata bdc storage-pool mount status --mount-path <mount-path-in-hdfs>
+azdata bdc hdfs mount status --mount-path <mount-path-in-hdfs>
 ```
 
 ## <a name="refresh-a-mount"></a>Обновление подключения
@@ -99,9 +99,9 @@ azdata bdc hdfs mount refresh --mount-path <mount-path-in-hdfs>
 Чтобы удалить подключение, выполните команду **azdata bdc storage-pool mount delete** и укажите путь к подключению в HDFS:
 
 ```bash
-azdata bdc storage-pool mount delete --mount-path <mount-path-in-hdfs>
+azdata bdc hdfs mount delete --mount-path <mount-path-in-hdfs>
 ```
 
 ## <a name="next-steps"></a>Следующие шаги
 
-Дополнительные сведения о кластерах больших данных SQL Server 2019 см. в [этой статье](big-data-cluster-overview.md).
+Дополнительные сведения о кластерах больших данных SQL Server 2019 см. в статье [Что такое кластеры больших данных SQL Server 2019?](big-data-cluster-overview.md).

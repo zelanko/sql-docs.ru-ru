@@ -9,12 +9,12 @@ ms.date: 07/24/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: d7d8a6dd53452700853dca9774ed0196ed7546fe
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
-ms.translationtype: HT
+ms.openlocfilehash: 2b3a4bff6250c4184fe939fdadcaacbe9adb950f
+ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68419344"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68702884"
 ---
 # <a name="how-to-mount-adls-gen2-for-hdfs-tiering-in-a-big-data-cluster"></a>Подключение ADLS 2-го поколения для распределения по уровням HDFS в кластере больших данных
 
@@ -113,7 +113,7 @@ ms.locfileid: "68419344"
 1. Подключите удаленное хранилище HDFS к Azure с помощью команды **azdata bdc storage-pool mount create**. Замените значения заполнителей, после чего выполните следующую команду:
 
    ```bash
-   azdata bdc storage-pool mount create --remote-uri abfs://<blob-container-name>@<storage-account-name>.dfs.core.windows.net/ --mount-path /mounts/<mount-name>
+   azdata bdc hdfs mount create --remote-uri abfs://<blob-container-name>@<storage-account-name>.dfs.core.windows.net/ --mount-path /mounts/<mount-name>
    ```
 
    > [!NOTE]
@@ -126,13 +126,13 @@ ms.locfileid: "68419344"
 Чтобы просмотреть состояние всех подключений в вашем кластере больших данных, выполните следующую команду:
 
 ```bash
-azdata bdc storage-pool mount status
+azdata bdc hdfs mount status
 ```
 
 Чтобы просмотреть состояние подключения с заданным путем в HDFS, выполните следующую команду:
 
 ```bash
-azdata bdc storage-pool mount status --mount-path <mount-path-in-hdfs>
+azdata bdc hdfs mount status --mount-path <mount-path-in-hdfs>
 ```
 
 ## <a name="refresh-a-mount"></a>Обновление подключения
@@ -148,7 +148,7 @@ azdata bdc hdfs mount refresh --mount-path <mount-path-in-hdfs>
 Чтобы удалить подключение, выполните команду **azdata bdc storage-pool mount delete** и укажите путь к подключению в HDFS:
 
 ```bash
-azdata bdc storage-pool mount delete --mount-path <mount-path-in-hdfs>
+azdata bdc hdfs mount delete --mount-path <mount-path-in-hdfs>
 ```
 
 ## <a name="next-steps"></a>Следующие шаги
