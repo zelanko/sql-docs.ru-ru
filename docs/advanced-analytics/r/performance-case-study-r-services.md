@@ -6,12 +6,13 @@ ms.date: 03/29/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 8d7f046e961efb6129f807a7626e498062c415b6
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: aa56a9367271df2172236b133d85b5771089b1ac
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470160"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715047"
 ---
 # <a name="performance-for-r-services-results-and-resources"></a>Производительность служб R: результаты и ресурсы
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -165,7 +166,7 @@ metric time pct
 
 **Выводы**
 
-При использовании высокопроизводительной схемы управления питанием Windows время выполнения  является более последовательным и быстрым.
+При использовании высокопроизводительной схемы управления питанием Windows время выполнения является более последовательным и быстрым.
 
 #### <a name="using-integer-vs-strings-in-formulas"></a>Использование целых чисел и строк в формулах
 

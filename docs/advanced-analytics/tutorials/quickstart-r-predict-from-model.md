@@ -7,19 +7,20 @@ ms.date: 01/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: aa3a65020f2900bc4d9e0b5c5fd5a200f3334435
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 4058725227deea1f6755c8e6272265ecdf91e59c
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68469340"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68714780"
 ---
 # <a name="quickstart-predict-from-model-using-r-in-sql-server"></a>Краткое руководство. Прогнозирование модели с помощью R в SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 В этом кратком руководстве для оценки прогнозов по актуальным данным используется модель, созданная в предыдущем кратком руководстве. Чтобы выполнить _оценку_ с помощью новых данных, получите одну из обученных моделей из таблицы, а затем вызовите новый набор данных, на основе которого должны основываться прогнозы. Оценка — это термин, который иногда используется в обработке данных, что означает создание прогнозов, вероятностей или других значений на основе новых данных, поступающих в обученную модель.
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 Это расширение [создает прогнозную модель](quickstart-r-create-predictive-model.md).
 

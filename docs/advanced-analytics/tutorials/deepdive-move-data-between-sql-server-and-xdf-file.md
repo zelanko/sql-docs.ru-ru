@@ -7,12 +7,13 @@ ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 4109399386f119123591bb917f81290eebe7476e
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 7eb32a6ba915328a7f6a6baccdc948f534da1a09
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68469713"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715552"
 ---
 # <a name="move-data-between-sql-server-and-xdf-file-sql-server-and-revoscaler-tutorial"></a>Перемещение данных между SQL Server и файлом Xdf-(учебник по SQL Server и RevoScaleR)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -82,7 +83,7 @@ ms.locfileid: "68469713"
         overwrite = TRUE)
     ```
   
-    Объект, возвращаемый функцией **rxImport** , представляет собой облегченный объект источника `ccFraud.xdf` данных RxXdfData, представляющий файл данных, хранящийся локально на диске.  `localDs`
+    Объект, возвращаемый функцией **rxImport** , представляет собой облегченный объект источника `ccFraud.xdf` данных RxXdfData, представляющий файл данных, хранящийся локально на диске. `localDs`
   
 7. Вызовите функцию [rxGetVarInfo](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxgetvarinfoxdf) , указав в качестве цели XDF-файл, чтобы убедиться, что схема данных такая же.
   

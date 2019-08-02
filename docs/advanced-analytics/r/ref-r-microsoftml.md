@@ -1,18 +1,19 @@
 ---
 title: Библиотека функций R MicrosoftML
-description: Введение в библиотеку функций MicrosoftML в службах SQL Server 2016 R и SQL Server 2017 Службы машинного обучения с R.
+description: Введение в библиотеку функций MicrosoftML в службах SQL Server 2016 R и SQL Server Службы машинного обучения с R.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 6808fa01bd4b62a67b220cec86d025820958298d
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: af9e85586a2aad69a87072caa820fff4026d1feb
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470013"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715666"
 ---
 # <a name="microsoftml-r-library-in-sql-server"></a>MicrosoftML (библиотека R в SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +31,7 @@ API-интерфейсы машинного обучения разрабаты�
 Библиотека **MicrosoftML** основана на R 3.4.3 и доступна только при установке одного из следующих продуктов или загрузок Майкрософт:
 
 + [Службы SQL Server 2016 R](../install/sql-r-services-windows-install.md)
-+ [SQL Server 2017 Службы машинного обучения](../install/sql-machine-learning-services-windows-install.md)
++ [Изучение служб машины SQL Server](../install/sql-machine-learning-services-windows-install.md)
 + [Microsoft Machine Learning Server 9.2.0 или более поздней версии](https://docs.microsoft.com/machine-learning-server/)
 + [Клиент Microsoft R](set-up-a-data-science-client.md)
 

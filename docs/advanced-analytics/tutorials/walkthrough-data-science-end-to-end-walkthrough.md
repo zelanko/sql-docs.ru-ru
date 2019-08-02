@@ -7,12 +7,13 @@ ms.date: 11/26/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 072d2c2e8843b17b3a4ccfeed16bd0916ce501e7
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 7d494329a52f73d489350792b6f43e138f3618a8
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68468636"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68714666"
 ---
 # <a name="tutorial-sql-development-for-r-data-scientists"></a>Учебник. Разработка SQL для специалистов по анализу данных R
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,7 +28,7 @@ ms.locfileid: "68468636"
 
 ## <a name="prerequisites"></a>предварительные требования
 
-+ [SQL Server 2017 службы машинного обучения с интеграцией r](../install/sql-machine-learning-services-windows-install.md#verify-installation) или [службами SQL Server 2016 r](../install/sql-r-services-windows-install.md)
++ [SQL Server службы машинного обучения с интеграцией r](../install/sql-machine-learning-services-windows-install.md#verify-installation) или [службами SQL Server 2016 r](../install/sql-r-services-windows-install.md)
 
 + [Разрешения базы данных](../security/user-permission.md) и имя входа пользователя базы данных SQL Server
 

@@ -1,20 +1,21 @@
 ---
 title: Создание пула ресурсов для R и Python
-description: Определите SQL Server пул ресурсов для процессов R или Python на экземпляре ядра СУБД SQL Server 2016 или SQL Server 2017.
+description: Определите SQL Server пул ресурсов для процессов R или Python на SQL Server экземпляре ядра СУБД.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 07/30/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 5b58c2a42334352d64aa2cea61a75585f29996c3
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 882b9b15fbba567f30172d625af3867b27ae387e
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68344070"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715906"
 ---
-# <a name="how-to-create-a-resource-pool-for-machine-learning-in-sql-server"></a>Создание пула ресурсов для машинного обучения в SQL Server
+# <a name="how-to-create-a-resource-pool-for-sql-server-machine-learning-services"></a>Создание пула ресурсов для SQL Server Службы машинного обучения
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 В этой статье описывается, как создать и использовать пул ресурсов специально для управления рабочими нагрузками машинного обучения R и Python в SQL Server. Предполагается, что вы уже установили и включили функции машинного обучения и хотите перенастроить экземпляр для поддержки более точного управления ресурсами, используемыми внешними процессами, такими как R или Python.
@@ -188,7 +189,7 @@ ms.locfileid: "68344070"
   
      Так как пулы были созданы со сходством AUTO, сведения не будут отображаться. Дополнительные сведения см. в статье о [представлении sys.dm_resource_governor_resource_pool_affinity (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pool-affinity-transact-sql.md).
 
-## <a name="see-also"></a>См. также
+## <a name="next-steps"></a>Следующие шаги
 
 Дополнительные сведения об управлении ресурсами сервера см. в следующих статьях:
 

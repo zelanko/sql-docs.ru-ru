@@ -7,19 +7,20 @@ ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 65d5d999df39909a5419883736686c5bc22e0062
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 00c1c1ed13f1257267111c3bdf71277fa41d0bdc
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68469807"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68714873"
 ---
 # <a name="create-r-models-sql-server-and-revoscaler-tutorial"></a>Создание моделей R (учебник по SQL Server и RevoScaleR)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Это занятие является частью [учебника RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) по использованию [функций RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) с SQL Server.
 
-Теперь, когда обучающие данные были расширены, пришло время анализировать данные с помощью регрессионного моделирования. Линейные модели являются важным инструментом в сфере прогнозной аналитики, а пакет **RevoScaleR** включает алгоритмы регрессии, которые могут разделить рабочую нагрузку и параллельно запускать ее.
+Вы выполнили углубленные обучающие данные. Теперь пришло время анализировать данные с помощью регрессионного моделирования. Линейные модели — это важный инструмент в мире прогнозной аналитики. Пакет **RevoScaleR** включает алгоритмы регрессии, которые могут разделить рабочую нагрузку и выполнять ее параллельно.
 
 > [!div class="checklist"]
 > * создание модели линейной регрессии;

@@ -1,30 +1,29 @@
 ---
 title: Установка Службы машинного обучения SQL Server (в базе данных) в Windows
-description: R в SQL Server или Python на шагах установки SQL Server SQL Server Службы машинного обучения 2017 в Windows.
+description: R в SQL Server или Python на шагах установки SQL Server для SQL Server Службы машинного обучения в Windows.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/22/2019
+ms.date: 07/30/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 2bc932a16155472f7dfa5cfa22eba6a4a5c59cd0
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 0b9161d2093c7a32d027da987fdcd3316d1cbbaa
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470447"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715218"
 ---
 # <a name="install-sql-server-machine-learning-services-on-windows"></a>Установка Службы машинного обучения SQL Server в Windows
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Начиная с SQL Server 2017, поддержка R и Python для аналитики в базе данных предоставляется в **SQL Server службы машинного обучения**, в [SQL Server R Services](../r/sql-server-r-services.md) , введенном в SQL Server 2016. Библиотеки функций доступны в R и Python и запускаются как внешний скрипт в экземпляре ядра СУБД. 
-
 В этой статье объясняется, как установить компонент машинного обучения, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] запустив мастер установки и следуя инструкциям на экране.
 
 ## <a name="bkmk_prereqs"></a> Контрольный список перед установкой
 
-+ Если требуется установить Службы машинного обучения с поддержкой языка R или Python, требуется установка SQL Server 2017 (или более поздней версии). Если вместо этого у вас есть установочный носитель SQL Server 2016, можно установить [SQL Server 2016 служб R (в базе данных)](sql-r-services-windows-install.md) , чтобы получить поддержку языка R.
++ Если требуется установить Службы машинного обучения с поддержкой языка R или Python, требуется установка SQL Server 2017 (или более поздней версии). Если вместо этого у вас есть установочный носитель SQL Server 2016, можно установить [SQL Server R Services (в базе данных)](sql-r-services-windows-install.md) , чтобы получить поддержку языка R.
 
 + Требуется экземпляр ядра СУБД. Вы не можете установить только функции R или Python, хотя их можно добавить в существующий экземпляр постепенно.
 
@@ -283,8 +282,7 @@ ms.locfileid: "68470447"
 
 Пакеты, которыми вы хотите пользоваться из SQL Server, должны быть установлены в библиотеке по умолчанию, используемой экземпляром. Если на компьютере установлена отдельная установка R или если вы установили пакеты в пользовательские библиотеки, вы не сможете использовать эти пакеты из T-SQL.
 
-Процесс установки пакетов R и управления ими отличается в SQL Server 2016 и SQL Server 2017. В SQL Server 2016 администратор базы данных должен установить пакеты R, необходимые пользователям. В SQL Server 2017 можно настроить группы пользователей для совместного использования пакетов на уровне базы данных или настроить роли базы данных, чтобы позволить пользователям устанавливать свои пакеты. Дополнительные сведения см. [в разделе Установка новых пакетов R в SQL Server](../r/install-additional-r-packages-on-sql-server.md).
-
+Для установки пакетов R и управления ими можно настроить группы пользователей для совместного использования пакетов на уровне базы данных или настроить роли базы данных, чтобы пользователи могли устанавливать свои пакеты. Дополнительные сведения см. [в разделе Установка новых пакетов R в SQL Server](../r/install-additional-r-packages-on-sql-server.md).
 
 ## <a name="next-steps"></a>Следующие шаги
 

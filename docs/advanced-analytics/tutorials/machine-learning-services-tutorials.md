@@ -7,17 +7,18 @@ ms.date: 03/29/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: d901d11b11019a19d5e26e12956e9ba520e33e8f
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 5e05a62be604b9d1a3feeaea1ed4f05dc3538493
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68469628"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715477"
 ---
 # <a name="sql-server-machine-learning-tutorials-in-r-and-python"></a>Учебники по SQL Server Машинное обучение в R и Python
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-В этой статье представлен полный список руководств и примеров кода, демонстрирующих функции машинного обучения [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md) или [SQL Server 2017 службы машинного обучения](../install/sql-machine-learning-services-windows-install.md). 
+В этой статье представлен полный список руководств и примеров кода, демонстрирующих функции машинного обучения [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md) или [SQL Server службы машинного обучения](../install/sql-machine-learning-services-windows-install.md). 
 
 + В кратком руководстве используются встроенные данные или нет данных для быстрого исследования с минимальными усилиями.
 + В учебниках более подробно рассматриваются дополнительные задачи, большие наборы данных и более длинные объяснения.

@@ -7,12 +7,13 @@ ms.date: 06/13/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 1257cc3f3d0b3ed07bc879f5bc3337d62bc1b3a0
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: e15e56dfb4a27f0a99262ff1f105ceb0a1fbc294
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470575"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715379"
 ---
 # <a name="tutorial-r-data-analytics-for-sql-developers"></a>Учебник. Аналитика данных R для разработчиков SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +53,7 @@ ms.locfileid: "68470575"
 
 В этом учебнике предполагается, что вы знакомы с основными операциями с базой данных, такими как создание баз данных и таблиц, импорт данных и написание запросов SQL. Это не предполагает знание R. Таким образом, предоставляется весь код R. 
 
-+ [SQL Server 2016 служб r](../install/sql-r-services-windows-install.md#verify-installation) или [SQL Server 2017 службы машинного обучения с поддержкой R](../install/sql-machine-learning-services-windows-install.md#verify-installation)
++ [SQL Server 2016 служб r](../install/sql-r-services-windows-install.md#verify-installation) или [SQL Server службы машинного обучения с поддержкой r](../install/sql-machine-learning-services-windows-install.md#verify-installation)
 
 + [Библиотеки R](../package-management/installed-package-information.md)
 

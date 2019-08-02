@@ -7,12 +7,13 @@ ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: c326d51e9b3ac4edac61f97bf5f7fa3143d8d350
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 4db5debf4ba71f29a8870c8674a5422e9ffd334a
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470622"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68714886"
 ---
 # <a name="tutorial-use-revoscaler-r-functions-with-sql-server-data"></a>Учебник. Использование функций R RevoScaleR с данными SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -21,9 +22,9 @@ ms.locfileid: "68470622"
 
 В этом учебнике из нескольких частей вы предоставили ряд функций **RevoScaleR** для задач, связанных с обработкой и анализом данных. В процессе вы узнаете, как создавать удаленный контекст вычислений, перемещать данные между локальными и удаленными контекстами вычислений и выполнять код на языке R на удаленном SQL Server. Кроме того, вы узнаете, как анализировать и отображать данные как локально, так и на удаленном сервере, а также как создавать и развертывать модели.
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>предварительные требования
 
-+ [SQL Server 2017 службы машинного обучения](../install/sql-machine-learning-services-windows-install.md) с функцией R или [SQL Server 2016 R Services (в базе данных)](../install/sql-r-services-windows-install.md)
++ [SQL Server службы машинного обучения](../install/sql-machine-learning-services-windows-install.md) с помощью функции R или [SQL Server R Services (в базе данных)](../install/sql-r-services-windows-install.md)
   
 + [Разрешения базы данных](../security/user-permission.md) и имя входа пользователя базы данных SQL Server
 
@@ -31,7 +32,7 @@ ms.locfileid: "68470622"
 
 + Интегрированная среда разработки, например RStudio или встроенное средство RGUI, входящее в R
 
-Для переключения между локальными и удаленными контекстами вычислений требуются две системы. Локальная — это обычно Рабочая станция разработки с суффицент мощностью для рабочих нагрузок обработки и анализа данных. В этом случае в удаленном доступе используется SQL Server 2017 или SQL Server 2016 с включенной функцией R. 
+Для переключения между локальными и удаленными контекстами вычислений требуются две системы. Локальная — это обычно Рабочая станция разработки с суффицент мощностью для рабочих нагрузок обработки и анализа данных. В этом случае в качестве удаленного используется SQL Server с включенным компонентом R. 
 
 Переключение контекстов вычислений производится в соответствии с одинаковой версией **RevoScaleR** в локальных и удаленных системах. На локальной рабочей станции можно получить пакеты **RevoScaleR** и связанные с ними поставщики, установив Microsoft R Client.
 

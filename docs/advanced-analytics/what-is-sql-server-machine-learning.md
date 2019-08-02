@@ -3,24 +3,22 @@ title: Обзор SQL Server Службы машинного обучения (R
 description: Общие сведения о функции Службы машинного обучения в SQL Server, где можно интегрировать Python и R с реляционными данными для обработки и анализа данных и статистического моделирования, моделей машинного обучения, прогнозной аналитики, визуализации данных и т. д.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 06/13/2019
+ms.date: 07/24/2019
 ms.topic: overview
 author: dphansen
 ms.author: davidph
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ead0dd3d9ba69a4bf0079fe8065a2d5aa7a11d3e
-ms.sourcegitcommit: 63c6f3758aaacb8b72462c2002282d3582460e0b
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 4ab4cd7c93cfd1a98a819a849e643d590450cd28
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68495399"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68714673"
 ---
 # <a name="sql-server-machine-learning-services-r-python"></a>Службы машинного обучения SQL Server (R, Python)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Службы машинного обучения — это функция SQL Server, используемая для выполнения скриптов R и Python в базе данных. Эта функция включает [пакеты Microsoft R и Python](#components) для высокопроизводительной прогнозной аналитики и машинного обучения. Реляционные данные могут использоваться в скриптах R и Python с помощью хранимых процедур, скрипта T-SQL, содержащего инструкции R и Python, или кода R и Python, содержащего T-SQL.
-
-Если ранее вы использовали [SQL Server 2016 R Services](r/sql-server-r-services.md), Службы машинного обучения в SQL Server 2017 и более поздних версий — это поддержка r следующего поколения, с обновленными версиями базовых r, RevoScaleR, MicrosoftML и другими библиотеками, представленными в 2016.
 
 В базе данных SQL Azure [службы машинного обучения (с R)](https://docs.microsoft.com/azure/sql-database/sql-database-machine-learning-services-overview) сейчас находится в общедоступной предварительной версии.
 
@@ -39,7 +37,7 @@ ms.locfileid: "68495399"
 
 ## <a name="components"></a>Компоненты
 
-SQL Server 2017 поддерживает R и Python. В следующей таблице описаны компоненты.
+SQL Server поддерживает R и Python. В следующей таблице описаны компоненты.
 
 | Компонент | Описание |
 |-----------|-------------|
@@ -128,19 +126,6 @@ SQL Server 2017 поддерживает R и Python. В следующей т
 + Включение управления ресурсами (требуется выпуск Enterprise)
 
 Дополнительные сведения см. в статье [Управление ресурсами для r](r/resource-governance-for-r-services.md) и [r Управление пакетами для SQL Server](r/install-additional-r-packages-on-sql-server.md).
-
-## <a name="version-history"></a>Журнал версий
-
-SQL Server 2017 Службы машинного обучения — это новое поколение служб SQL Server 2016 R, дополненное к включению Python. В следующей таблице приведен полный список всех версий продукта от момента появления до текущего выпуска. 
-
-| Название продукта | Версия подсистемы | Дата выпуска |
-|--------------|---------|--------------|
-| Службы машинного обучения SQL Server 2017 (в базе данных) | R Server 9.2.1 <br/> Python Server 9.2 | Октябрь 2017 г. |
-| Machine Learning Server SQL Server 2017 (автономная) | R Server 9.2.1 <br/> Python Server 9.2 | Октябрь 2017 г. |
-| Службы R SQL Server 2016 (в базе данных) | R Server 9,1  | 2017 июля  |
-| SQL Server 2016 R Server (изолированный)  |  R Server 9,1 | 2017 июля |
-
-Сведения о версиях пакетов по выпуску см. в карте версий в разделе [Обновление компонентов R и Python](install/upgrade-r-and-python.md#version-map).
 
 ## <a name="portability-and-related-products"></a>Переносимость и связанные продукты
 

@@ -6,12 +6,13 @@ ms.date: 04/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 1c534681200abf056c8bc7dd3745d8098d59c146
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 283e128285fc50b9109d7950b171e30224fb9692
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345655"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68714646"
 ---
 # <a name="extended-events-for-monitoring-predict-statements"></a>Расширенные события для наблюдения за инструкциями PREDICT
 
@@ -19,7 +20,7 @@ ms.locfileid: "68345655"
 
 Оценка в реальном времени создает баллы из модели машинного обучения, хранящейся в SQL Server. Функция PREDICT не требует внешнего времени выполнения, такого как R или Python, только модели, созданной с помощью определенного двоичного формата. Дополнительные сведения см. в разделе Оценка в режиме [реального времени](https://docs.microsoft.com/sql/advanced-analytics/real-time-scoring).
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>предварительные требования
 
 Общие сведения о расширенных событиях (иногда называемых XEvents) и о том, как отслеживаниь событий в сеансе, см. в следующих статьях:
 

@@ -1,18 +1,19 @@
 ---
 title: Использование диспетчеров пакетов R
-description: Используйте стандартные команды R, такие как install. Packages, для добавления новых пакетов R в SQL Server 2016 служб R или SQL Server 2017 Службы машинного обучения (в базе данных).
+description: Используйте стандартные команды R, такие как install. Packages, для добавления новых пакетов R в SQL Server 2016 служб R или SQL Server Службы машинного обучения (в базе данных).
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 1977e616b8f5ac41f533d49fab684db146cdb204
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 75ef22eb7e06fa1f8d4d2a0d9c754959f1bb1ae4
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68469879"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715024"
 ---
 # <a name="use-r-package-managers-to-install-r-packages-on-sql-server"></a>Используйте диспетчеры пакетов R для установки пакетов R на SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +37,7 @@ ms.locfileid: "68469879"
 
 Если целевой пакет зависит от дополнительных пакетов, установщик R автоматически скачивает зависимости и устанавливает их.
 
-При наличии нескольких экземпляров SQL Server, таких как параллельные экземпляры служб SQL Server 2016 R и SQL Server 2017 Службы машинного обучения, запустите установку отдельно для каждого экземпляра, если хотите использовать пакет в обоих контекстах. Пакеты нельзя совместно использовать в экземплярах.
+Если имеется несколько экземпляров SQL Server, таких как параллельные экземпляры служб SQL Server 2016 R и SQL Server Службы машинного обучения, выполните установку отдельно для каждого экземпляра, если вы хотите использовать пакет в обоих контекстах. Пакеты нельзя совместно использовать в экземплярах.
 
 ## <a name = "bkmk_offlineInstall"></a>Автономная установка с помощью средств R
 

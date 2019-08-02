@@ -8,12 +8,13 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: cec029f4ffb047a49ff9902c430c4bd98aa03850
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: ff4d0839cfdf24b1b43fe9d5a371092713bc63cf
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470289"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715796"
 ---
 #  <a name="get-r-and-python-package-information"></a>Получение сведений о пакете R и Python
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +35,7 @@ WITH RESULT SETS (([DefaultLibraryName] VARCHAR(MAX) NOT NULL));
 GO
 ```
 
-При необходимости можно использовать [рксскллибпасс](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqllibpaths) в более новых версиях RevoScaleR в SQL Server 2017 службы машинного обучения или службах [r, обновленных r, по меньшей мере RevoScaleR 9.0.1](../install/upgrade-r-and-python.md). Эта хранимая процедура возвращает путь к библиотеке экземпляров и версию RevoScaleR, используемую SQL Server:
+При необходимости можно использовать [рксскллибпасс](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqllibpaths) в более новых версиях RevoScaleR в SQL Server службы машинного обучения или службах [r, обновленных r, по меньшей мере RevoScaleR 9.0.1](../install/upgrade-r-and-python.md). Эта хранимая процедура возвращает путь к библиотеке экземпляров и версию RevoScaleR, используемую SQL Server:
 
 ```sql
 EXECUTE sp_execute_external_script
@@ -59,7 +60,7 @@ STDOUT message(s) from external script:
 
 ## <a name="get-the-python-library-location"></a>Получение расположения библиотеки Python
 
-Для **Python** в SQL Server 2017 выполните следующую инструкцию, чтобы проверить библиотеку по умолчанию для текущего экземпляра. Этот пример возвращает список папок, включаемых в переменную `sys.path` Python. Список включает текущий каталог и путь к стандартной библиотеке.
+Для **Python**выполните следующую инструкцию, чтобы проверить библиотеку по умолчанию для текущего экземпляра. Этот пример возвращает список папок, включаемых в переменную `sys.path` Python. Список включает текущий каталог и путь к стандартной библиотеке.
 
 ```sql
 EXECUTE sp_execute_external_script

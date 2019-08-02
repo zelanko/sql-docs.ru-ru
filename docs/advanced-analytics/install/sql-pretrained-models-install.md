@@ -1,18 +1,19 @@
 ---
 title: Установка предварительно обученных моделей машинного обучения
-description: Добавьте предварительно обученные модели для анализа тональности и Image Добавление признаков в SQL Server 2017 Службы машинного обучения (R или Python) или SQL Server 2016 R Services.
+description: Добавьте предварительно обученные модели для анализа тональности и Image Добавление признаков в SQL Server Службы машинного обучения (R или Python) или SQL Server R Services.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 06/13/2019
+ms.date: 07/30/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: f89e638b6b9486b17974a04af6076e6c7154fa88
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 87f75b8ef8f9f151eb548787da4c9791eb1437b9
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470348"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715163"
 ---
 # <a name="install-pre-trained-machine-learning-models-on-sql-server"></a>Установка предварительно обученных моделей машинного обучения на SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +29,7 @@ ms.locfileid: "68470348"
 | [жетсентимент](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/getsentiment) | [get_sentiment](https://docs.microsoft.com//machine-learning-server/python-reference/microsoftml/get-sentiment) | Создает положительную отрицательную оценку тональности для входных данных текста. |
 | [феатуризеимаже](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/featurizeimage) | [featurize_image](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/featurize-image) | Извлекает текстовые данные из входных данных файла изображения. |
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 Алгоритмы машинного обучения — это ресурсоемкие вычисления. Рекомендуется 16 ГБ ОЗУ для рабочих нагрузок с низкой или средней интенсивностью, включая выполнение пошаговых руководств, использующих все примеры данных.
 
@@ -36,12 +37,17 @@ ms.locfileid: "68470348"
 
 Внешние скрипты должны быть включены, а SQL Server должна быть запущена служба панели запуска. Инструкции по установке содержат инструкции по включению и проверке этих возможностей. 
 
+::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
 [Пакет MicrosoftML R](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package) или [пакет MicrosoftML Python](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) содержат предварительно обученные модели.
 
-+ [SQL Server 2017 службы машинного обучения](sql-machine-learning-services-windows-install.md) включает в себя языковые версии библиотеки машинного обучения, поэтому это условие выполняется без каких-либо дополнительных действий с вашей стороны. Так как библиотеки существуют, можно использовать скрипт PowerShell, описанный в этой статье, чтобы добавить предварительно обученные модели в эти библиотеки.
+[SQL Server службы машинного обучения](sql-machine-learning-services-windows-install.md) включает в себя языковые версии библиотеки машинного обучения, поэтому это условие выполняется без каких-либо дополнительных действий с вашей стороны. Так как библиотеки существуют, можно использовать скрипт PowerShell, описанный в этой статье, чтобы добавить предварительно обученные модели в эти библиотеки.
+::: moniker-end
 
-+ [SQL Server 2016 служб r](sql-r-services-windows-install.md), которые относятся только к R, не включают [пакет MicrosoftML из упаковки](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package) . Чтобы добавить MicrosoftML, необходимо выполнить [обновление компонента](../install/upgrade-r-and-python.md). Одним из преимуществ обновления компонентов является возможность одновременного добавления предварительно обученных моделей, что делает ненужным выполнение сценария PowerShell. Однако если вы уже обновляли, но не добавили предварительно обученные модели в первый раз, можно запустить сценарий PowerShell, как описано в этой статье. Он работает для обеих версий SQL Server. Прежде чем делать это, убедитесь, что библиотека MicrosoftML существует в папке C:\Program Files\Microsoft SQL Server\MSSQL13. MSSQLSERVER\R_SERVICES\library.
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+[Пакет MicrosoftML R](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package) содержит предварительно обученные модели.
 
+[SQL Server R Services](sql-r-services-windows-install.md), т. е. только R, не включает [пакет MicrosoftML из упаковки](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package) . Чтобы добавить MicrosoftML, необходимо выполнить [обновление компонента](../install/upgrade-r-and-python.md). Одним из преимуществ обновления компонентов является возможность одновременного добавления предварительно обученных моделей, что делает ненужным выполнение сценария PowerShell. Однако если вы уже обновляли, но не добавили предварительно обученные модели в первый раз, можно запустить сценарий PowerShell, как описано в этой статье. Он работает для обеих версий SQL Server. Прежде чем делать это, убедитесь, что библиотека MicrosoftML существует `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\library`по адресу.
+::: moniker-end
 
 <a name="file-location"></a>
 
@@ -79,7 +85,7 @@ ms.locfileid: "68470348"
 
 **Проверки**
 
-В подключении к Интернету SQL Server 2017 Машинное обучение экземпляре по умолчанию с R и Python, вы должны увидеть сообщения, аналогичные приведенным ниже.
+В SQL Server, подключенном к Интернету, Службы машинного обучения экземпляре по умолчанию с R и Python, вы должны увидеть сообщения, аналогичные приведенным ниже.
 
    ```powershell
    MSSQL14.MSSQLSERVER
@@ -206,8 +212,7 @@ ms.locfileid: "68470348"
 
 ## <a name="see-also"></a>См. также
 
-+ [Службы SQL Server 2016 R](sql-r-services-windows-install.md)
-+ [SQL Server 2017 Службы машинного обучения](sql-machine-learning-services-windows-install.md)
++ [Изучение служб машины SQL Server](sql-machine-learning-services-windows-install.md)
 + [Обновление компонентов R и Python в экземплярах SQL Server](../install/upgrade-r-and-python.md)
 + [Пакет MicrosoftML для R](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)
 + [пакет microsoftml для Python](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package)

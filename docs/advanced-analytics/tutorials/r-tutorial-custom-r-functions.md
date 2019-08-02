@@ -7,12 +7,13 @@ ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: d90e2d4887154d3545884a77d0290e632f04a569
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 439b21bce4e081025db1db53ab44498415ca44af
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470598"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715412"
 ---
 # <a name="run-custom-r-functions-on-sql-server-using-rxexec"></a>Выполнение пользовательских функций R на SQL Server с помощью rxExec
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -25,7 +26,7 @@ ms.locfileid: "68470598"
 
 ## <a name="prerequisites"></a>предварительные требования
 
-+ [SQL Server 2017 службы машинного обучения (с R)](../install/sql-machine-learning-services-windows-install.md) или [SQL Server 2016 r Services (в базе данных)](../install/sql-r-services-windows-install.md)
++ Службы [SQL Server службы машинного обучения (с R)](../install/sql-machine-learning-services-windows-install.md) или [SQL Server 2016 R (в базе данных)](../install/sql-r-services-windows-install.md)
   
 + [Разрешения базы данных](../security/user-permission.md) и имя входа пользователя базы данных SQL Server
 
@@ -145,7 +146,7 @@ ms.locfileid: "68470598"
 
 Хотя это упражнение является упрощенным, оно демонстрирует важный механизм интеграции произвольных функций R в скрипт R, выполняемый на SQL Server. Чтобы обобщить основные моменты, которые делают этот прием возможным:
 
-+ SQL Server должны быть настроены для машинного обучения и интеграции с R: [SQL Server 2017 службы машинного обучения](../install/sql-machine-learning-services-windows-install.md) с компонентом R или [SQL Server 2016 R Services (в базе данных)](../install/sql-r-services-windows-install.md).
++ SQL Server должны быть настроены для машинного обучения и интеграции с R: [SQL Server службы машинного обучения](../install/sql-machine-learning-services-windows-install.md) с компонентом r или [SQL Server служб r 2016 (в базе данных)](../install/sql-r-services-windows-install.md).
 
 + На SQL Server должны быть установлены библиотеки с открытым исходным кодом или сторонними библиотеками, которые используются в вашей функции, включая зависимости. Дополнительные сведения см. в разделе [Установка новых пакетов R](../r/install-additional-r-packages-on-sql-server.md).
 

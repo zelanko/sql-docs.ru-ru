@@ -7,12 +7,13 @@ ms.date: 11/16/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: a3bd6671ee1f48c67f58e9b1ee17772b18184bc0
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: abacf3c384430417dbf0630f2f8dcd8adff68259
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68469051"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68714729"
 ---
 # <a name="lesson-4-run-predictions-using-r-embedded-in-a-stored-procedure"></a>Занятие 4: Выполнение прогнозов с помощью R Embedded в хранимой процедуре
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -92,7 +93,7 @@ GO
     1  214 0.7 2013-06-26 13:28:10.000   0.6970098661
     ```
 
-2. Создайте хранимую процедуру с  именем ркспредиктбатчаутпут [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]в.
+2. Создайте хранимую процедуру с именем ркспредиктбатчаутпут [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]в.
 
     ```sql
     CREATE PROCEDURE [dbo].[RxPredictBatchOutput] (@model varchar(250), @inquery nvarchar(max))

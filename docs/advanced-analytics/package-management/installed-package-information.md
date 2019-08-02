@@ -7,12 +7,13 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 2a149b4a98ec6c3a1d35cb499dcd391d87216752
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: e49b843b0b32969bd440177cf445916487ad2670
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470262"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715205"
 ---
 # <a name="default-r-and-python-packages-in-sql-server"></a>Пакеты R и Python по умолчанию в SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -21,7 +22,7 @@ ms.locfileid: "68470262"
 
 ## <a name="r-package-list-for-sql-server"></a>Список пакетов R для SQL Server
 
-Пакеты r устанавливаются со [службами SQL Server 2016 R](../install/sql-r-services-windows-install.md) и [SQL Server 2017 службы машинного обучения](../install/sql-machine-learning-services-windows-install.md) при выборе компонента R во время установки. 
+Пакеты r устанавливаются со [службами SQL Server 2016 R](../install/sql-r-services-windows-install.md) и [SQL Server службы машинного обучения](../install/sql-machine-learning-services-windows-install.md) при выборе компонента R во время установки. 
 
 |Пакеты         | 2016 | 2017 | Описание |
 |----------------|--------------|--------------|-------------|
@@ -30,11 +31,11 @@ ms.locfileid: "68470262"
 | [MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package)| н.а. | 9,2 | Добавляет алгоритмы машинного обучения в R. | 
 | [olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) | н.а.  | 9,2 | Используется для написания инструкций многомерных выражений в R. |
 
-MicrosoftML и OLAP доступны по умолчанию в SQL Server 2017 Службы машинного обучения. В экземпляре служб R SQL Server 2016 эти пакеты можно добавить с помощью [обновления компонента](../install/upgrade-r-and-python.md). Обновление компонента также получает более новые версии пакетов (например, более новые версии RevoScaleR включают функции для управления пакетами в SQL Server).
+MicrosoftML и OLAP доступны по умолчанию в SQL Server Службы машинного обучения. В экземпляре служб R SQL Server 2016 эти пакеты можно добавить с помощью [обновления компонента](../install/upgrade-r-and-python.md). Обновление компонента также получает более новые версии пакетов (например, более новые версии RevoScaleR включают функции для управления пакетами в SQL Server).
 
 ## <a name="python-package-list-for-sql-server"></a>Список пакетов Python для SQL Server
 
-Пакеты Python доступны только в SQL Server 2017 при установке [SQL Server 2017 службы машинного обучения](../install/sql-machine-learning-services-windows-install.md) и выборе компонента Python.
+Пакеты Python доступны только в SQL Server 2017 при установке [SQL Server службы машинного обучения](../install/sql-machine-learning-services-windows-install.md) и выборе компонента Python.
 
 | Пакеты         | 2017    |  Описание |
 | -----------------|-------------|------------|
@@ -52,7 +53,7 @@ MicrosoftML и OLAP доступны по умолчанию в SQL Server 2017 
 |Выпуск             | Версия R       |
 |--------------------|-----------------|
 | [Службы SQL Server 2016 R](../install/sql-r-services-windows-install.md) | 3.2.2   | 
-| [SQL Server 2017 Службы машинного обучения](../install/sql-machine-learning-services-windows-install.md) | 3.3.3 |
+| [Изучение служб машины SQL Server](../install/sql-machine-learning-services-windows-install.md) | 3.3.3 |
 
 Никогда не следует вручную перезаписывать версию R, установленную SQL Server установки, с более новыми версиями в Интернете. Пакеты Microsoft R основаны на конкретных версиях R. изменение установки может привести к его дестабилизации.
 
@@ -64,7 +65,7 @@ SQL Server 2017 Машинное обучение — это первый вып
 
 |Выпуск             | Версия Anaconda| Пакеты Майкрософт    |
 |--------------------|-----------------|-----------------------|
-| Службы машинного обучения SQL Server 2017  | 4,2 по Python 3,5 | revoscalepy, microsoftml |
+| Изучение служб машины SQL Server  | 4,2 по Python 3,5 | revoscalepy, microsoftml |
 
 Никогда не следует вручную перезаписывать версию Python, установленную SQL Server установки с более поздними версиями в Интернете. Пакеты Microsoft Python основаны на конкретных версиях Anaconda. Изменение установки может привести к его дестабилизации.
 

@@ -7,12 +7,13 @@ ms.date: 01/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 0259a4695ab1ee6f42b92e12b47f81e9aa851469
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 10c62f78ff2ac23e33ad251a07ed8f3689f79843
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68469606"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715464"
 ---
 # <a name="quickstart-handle-inputs-and-outputs-using-python-in-sql-server"></a>Краткое руководство. Обработку входных и выходных данных с помощью Python в SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -25,7 +26,7 @@ ms.locfileid: "68469606"
 
 Хранимая процедура возвращает один кадр данных Python [Pandas](https://pandas.pydata.org/pandas-docs/stable/index.html) в качестве выходных данных, но можно также выводить скаляры и модели в виде переменных. Например, можно вывести обученную модель как двоичную переменную и передать ее в инструкцию T-SQL INSERT, чтобы записать эту модель в таблицу. Можно также создавать графики (в двоичном формате) или скаляры (отдельные значения, такие как Дата и время, время, затраченное на обучение модели, и т. д.).
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>предварительные требования
 
 Предыдущее краткое руководство. [Проверка наличия Python в SQL Server](quickstart-python-verify.md)содержит сведения и ссылки для настройки среды Python, необходимой для этого краткого руководства.
 

@@ -6,19 +6,20 @@ ms.date: 04/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: e0e685543fe1e99f7adbfeb69567c366b0714ef7
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 8dc99a6f5ac1ff660f34f2248c844e5386bea5f0
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470168"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715135"
 ---
 # <a name="extended-events-for-sql-server-machine-learning-services"></a>Расширенные события для SQL Server Службы машинного обучения
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 SQL Server предоставляет набор расширенных событий для использования в операциях по [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]устранению неполадок, связанных с, а также с заданиями Python или R, отправленными в. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
-**Применимо к:**  SQL Server 2016 служб R SQL Server 2017 Службы машинного обучения
+**Применимо к:**  SQL Server 2016 служб R SQL Server Службы машинного обучения
 
 ## <a name="sql-server-events-for-machine-learning"></a>События SQL Server для машинного обучения
 

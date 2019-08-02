@@ -6,12 +6,13 @@ ms.date: 03/29/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 88d9a5098752b0c5f0935b400c400c2ae2ff97af
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: dda5d84aca714530bbc2bef79344db889e113d4f
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68469916"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68714995"
 ---
 # <a name="sql-server-configuration-for-use-with-r"></a>Конфигурация SQL Server для использования с R
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -148,7 +149,7 @@ FROM sys.dm_os_memory_clerks
 
 Если на компьютере установлено несколько процессоров, но на нем нет аппаратного NUMA, можно также использовать [Soft-NUMA](https://docs.microsoft.com/sql/database-engine/configure-windows/soft-numa-sql-server) , чтобы разделить ЦП на небольшие группы.  В SQL Server 2016 и SQL Server 2017 функция Soft-NUMA автоматически включается при запуске службы SQL Server.
 
-При включении программной архитектуры NUMA SQL Server автоматически управляет узлами. Однако для оптимизации конкретных рабочих нагрузок можно отключить мягкое сходство  и вручную настроить сходство ЦП для узлов с мягкими NUMA. Это обеспечивает более полный контроль над тем, какие рабочие нагрузки назначаются узлам, особенно если используется выпуск SQL Server, поддерживающий управление ресурсами. Указав сходство ЦП и выровняйте пулы ресурсов с группами ЦП, можно сократить задержку и убедиться, что связанные процессы выполняются в пределах одного узла NUMA.
+При включении программной архитектуры NUMA SQL Server автоматически управляет узлами. Однако для оптимизации конкретных рабочих нагрузок можно отключить мягкое сходство и вручную настроить сходство ЦП для узлов с мягкими NUMA. Это обеспечивает более полный контроль над тем, какие рабочие нагрузки назначаются узлам, особенно если используется выпуск SQL Server, поддерживающий управление ресурсами. Указав сходство ЦП и выровняйте пулы ресурсов с группами ЦП, можно сократить задержку и убедиться, что связанные процессы выполняются в пределах одного узла NUMA.
 
 Общий процесс настройки архитектуры Soft-NUMA и привязки ЦП для поддержки рабочих нагрузок R выглядит следующим образом:
 

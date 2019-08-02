@@ -1,18 +1,19 @@
 ---
 title: Включение или отключение управления удаленными пакетами R
-description: Включение удаленного управления пакетами R в службах SQL Server 2016 R или SQL Server 2017 Службы машинного обучения (в базе данных)
+description: Включение удаленного управления пакетами R в службах SQL Server 2016 R или SQL Server Службы машинного обучения (в базе данных)
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 9cc08b1227751559ea509838fe8fc3a446296770
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 260109e978c8997622f24c41341e11f1e2efa7cc
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470023"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715634"
 ---
 # <a name="enable-or-disable-remote-package-management-for-sql-server"></a>Включение или отключение управления удаленными пакетами для SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

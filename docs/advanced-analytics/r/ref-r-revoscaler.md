@@ -1,18 +1,19 @@
 ---
 title: Библиотека функций R RevoScaleR
-description: Введение в библиотеку функций RevoScaleR в службах SQL Server 2016 R и SQL Server 2017 Службы машинного обучения с R.
+description: Введение в библиотеку функций RevoScaleR в службах SQL Server 2016 R и SQL Server Службы машинного обучения с R.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 12/04/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: d73399522966a132b025244a1739afa01a194116
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: b5dcd2f14d1a1d8e23a62be299b1ff6f41814041
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470008"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715064"
 ---
 # <a name="revoscaler-r-library-in-sql-server"></a>RevoScaleR (библиотека R в SQL Server)
 
@@ -35,7 +36,7 @@ RevoScaleR выступает в качестве платформы для ра
 Библиотека **RevoScaleR** основана на R 3.4.3 и доступна только при установке одного из следующих продуктов или загрузок Майкрософт:
 
 + [Службы SQL Server 2016 R](../install/sql-r-services-windows-install.md)
-+ [SQL Server 2017 Службы машинного обучения](../install/sql-machine-learning-services-windows-install.md)
++ [Изучение служб машины SQL Server](../install/sql-machine-learning-services-windows-install.md)
 + [Microsoft Machine Learning Server 9.2.0 или более поздней версии](https://docs.microsoft.com/machine-learning-server/)
 + [Клиент Microsoft R](set-up-a-data-science-client.md)
 

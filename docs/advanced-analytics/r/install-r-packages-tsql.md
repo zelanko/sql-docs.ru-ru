@@ -1,18 +1,19 @@
 ---
 title: Использование T-SQL (создание внешней библиотеки) для установки пакетов R
-description: Добавьте новые пакеты R в службы SQL Server 2016 R или SQL Server 2017 Службы машинного обучения (в базе данных).
+description: Добавьте новые пакеты R в службы SQL Server 2016 R или SQL Server Службы машинного обучения (в базе данных).
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 06/12/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 80af3f93eb84c7b78c5cb1e5395175501931e24c
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 1acaae39d71abd1cbd68781c0edec76308b85760
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470087"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715730"
 ---
 # <a name="use-t-sql-create-external-library-to-install-r-packages-on-sql-server"></a>Использование T-SQL (создание внешней библиотеки) для установки пакетов R на SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

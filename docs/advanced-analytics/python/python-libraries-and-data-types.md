@@ -1,18 +1,19 @@
 ---
 title: Преобразование типов данных Python в SQL
-description: Изучите неявные и явные типы данных конверстионс между Python и SQL Server в решениях для обработки и анализа данных и машинного обучения.
+description: Проверьте явные и неявные преобразования типов данных между Python и SQL Server в решениях для обработки и анализа данных и машинного обучения.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 12/10/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 8aea7e67f6560aa750e67601b5b6a41f7d68b47d
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 690126098bbbd3ab26add51a0484f735120351de
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470339"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715786"
 ---
 # <a name="data-type-mappings-between-python-and-sql-server"></a>Сопоставления типов данных между Python и SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -20,8 +21,6 @@ ms.locfileid: "68470339"
 Для решений Python, которые выполняются в средстве интеграции Python в SQL Server Службы машинного обучения, проверьте список неподдерживаемых типов данных и преобразования типов данных, которые могут быть выполнены неявно при передаче данных между Python и SQL Server.
 
 ## <a name="python-version"></a>Версия Python
-
-SQL Server 2017 Anaconda 4,2 и Python 3,6.
 
 Подмножество функций RevoScaleR (rxLinMod, rxLogit, rxPredict, Рксдтрис, Рксбтрис, возможно, несколько других) предоставляется с помощью API Python с помощью нового пакета Python **revoscalepy**. Этот пакет можно использовать для работы с данными с помощью кадров данных Pandas, файлов Xdf-или запросов данных SQL.
 
@@ -51,6 +50,3 @@ Python поддерживает ограниченное число типов �
 |**varbinary(max)**|`bytes`|
 |**varchar(n)**|`str`|
 |**varchar(max)**|`str`|
-
-## <a name="see-also"></a>См. также
-

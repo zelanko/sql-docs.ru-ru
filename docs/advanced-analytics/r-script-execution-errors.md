@@ -6,20 +6,18 @@ ms.date: 05/31/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 268b3df72d468170fbefae2557892c49fd15515c
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 10ec78bf8627bfef3232dfc72d7ef7f638604b15
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470296"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715754"
 ---
 # <a name="r-scripting-errors-in-sql-server"></a>Ошибки скрипта R в SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-В этой статье описывается несколько сценариев жеррорс при выполнении кода R в SQL Server. Список не является исчерпывающим. Существует множество пакетов, и ошибки могут различаться в разных версиях одного пакета. Рекомендуется опубликовать ошибки сценария на [форуме Machine Learning Server](https://social.msdn.microsoft.com/Forums/en-US/home?category=MicrosoftR), который поддерживает компоненты машинного обучения, используемые в службах R (в базе данных), Microsoft R Client и Microsoft R Server.
-
-**Применимо к:** SQL Server 2016 служб R SQL Server 2017 Службы машинного обучения
-
+В этой статье описываются некоторые ошибки, возникающие при выполнении кода R в SQL Server. Список не является исчерпывающим. Существует множество пакетов, и ошибки могут различаться в разных версиях одного пакета. Рекомендуется опубликовать ошибки сценария на [форуме Machine Learning Server](https://social.msdn.microsoft.com/Forums/en-US/home?category=MicrosoftR), который поддерживает компоненты машинного обучения, используемые в службах R (в базе данных), Microsoft R Client и Microsoft R Server.
 
 ## <a name="valid-script-fails-in-t-sql-or-in-stored-procedures"></a>Сбой допустимого скрипта в T-SQL или хранимых процедурах
 

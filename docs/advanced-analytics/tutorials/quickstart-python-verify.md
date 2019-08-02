@@ -7,12 +7,13 @@ ms.date: 01/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 0dd5714f47c90c0091daacbd792b80c05ec68675
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 98e89cf61e5c53793108a455873382da00a8ea35
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68469700"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715453"
 ---
 # <a name="quickstart-verify-python-exists-in-sql-server"></a>Краткое руководство. Проверка наличия Python в SQL Server 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -22,11 +23,11 @@ SQL Server включает поддержку языка Python для анал
 + Встроенная хранимая процедура [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) , передающая скрипт Python в качестве входного параметра.
 + Заключите скрипт Python в создаваемую [пользовательскую хранимую процедуру](sqldev-in-database-r-for-sql-developers.md) .
 
-В этом кратком руководстве вы убедитесь, что [SQL Server 2017 службы машинного обучения](../what-is-sql-server-machine-learning.md) установлен и настроен.
+В этом кратком руководстве вы убедитесь, что [SQL Server службы машинного обучения](../what-is-sql-server-machine-learning.md) установлен и настроен.
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
-Для этого упражнения требуется доступ к экземпляру SQL Server с установленным [SQL Server 2017 службы машинного обучения](../install/sql-machine-learning-services-windows-install.md) .
+Для этого упражнения требуется доступ к экземпляру SQL Server с установленными [SQL Server службы машинного обучения](../install/sql-machine-learning-services-windows-install.md) .
 
 Ваш экземпляр SQL Server может находиться на виртуальной машине Azure или в локальной среде. Просто имейте в виду, что функция внешних скриптов по умолчанию отключена, поэтому может потребоваться [включить внешние сценарии](../install/sql-machine-learning-services-windows-install.md#bkmk_enableFeature) и убедиться, что **Служба панель запуска SQL Server** запущена перед началом работы.
 
@@ -59,7 +60,7 @@ SQL Server включает поддержку языка Python для анал
 
 При возникновении ошибок существует множество вещей, которые можно выполнить, чтобы убедиться, что экземпляр и Python могут обмениваться данными.
 
-Прежде всего, устраните все проблемы установки. Настройка после установки необходима для включения использования библиотек внешних кодов. См. раздел [Install SQL Server 2017 службы машинного обучения](../install/sql-machine-learning-services-windows-install.md). Аналогичным образом убедитесь, что служба панели запуска запущена.
+Прежде всего, устраните все проблемы установки. Настройка после установки необходима для включения использования библиотек внешних кодов. См. раздел [Install SQL Server службы машинного обучения](../install/sql-machine-learning-services-windows-install.md). Аналогичным образом убедитесь, что служба панели запуска запущена.
 
 Кроме того, необходимо добавить группу `SQLRUserGroup` пользователей Windows в качестве имени входа для экземпляра, чтобы панель запуска могла обеспечить взаимодействие между Python и SQL Server. (Для выполнения кода R и Python используется одна и та же группа.) Дополнительные сведения см. [в статье Создание имени входа для SQLRUserGroup](../security/create-a-login-for-sqlrusergroup.md).
 

@@ -7,18 +7,23 @@ ms.date: 08/28/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 0abf14fa61d9408f8403a493b7559148f0f5a775
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 94ca7b3646b9005e11b3ee4968cbfaaa65d42264
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68344979"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715840"
 ---
 # <a name="install-machine-learning-server-standalone-or-r-server-standalone-using-sql-server-setup"></a>Установка Machine Learning Server (изолированной) или сервера R Server (автономная версия) с помощью программы установки SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-SQL Server программа установки включает параметр **общего компонента** для установки автономного сервера машинного обучения, не поддерживающего экземпляры, который работает вне SQL Server. В SQL Server 2016 эта функция называется **R Server (изолированная)** . В SQL Server 2017 он называется **Machine Learning Server (автономный)** и включает R и Python. 
+::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+SQL Server программа установки включает параметр **общего компонента** для установки автономного сервера машинного обучения, не поддерживающего экземпляры, который работает вне SQL Server. Он называется **Machine Learning Server (автономный)** и включает R и Python. 
+::: moniker-end
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+SQL Server программа установки включает параметр **общего компонента** для установки автономного сервера машинного обучения, не поддерживающего экземпляры, который работает вне SQL Server. В SQL Server 2016 эта функция называется **R Server (изолированная)** .  
+::: moniker-end
 
 Изолированный сервер, установленный SQL Server установки, функционально эквивалентен версиям [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server), не относящимся к SQL, с поддержкой тех же сценариев использования и скриптов, в том числе:
 
@@ -39,7 +44,7 @@ SQL Server программа установки включает парамет
 
 В качестве общего правила рекомендуется рассматривать изолированные установки сервера и ядра СУБД как взаимоисключающие, чтобы избежать конфликтов ресурсов, но если у вас достаточно ресурсов, нет запрета на установку этих экземпляров в тот же физический компьютер.
 
-На компьютере может быть только один изолированный сервер: SQL Server 2017 Machine Learning Server или SQL Server 2016 R Server (изолированный). Перед добавлением новой версии обязательно удалите одну из них.
+На компьютере может быть только один изолированный сервер: либо SQL Server Machine Learning Server (автономный), либо SQL Server R Server (изолированный). Перед добавлением новой версии обязательно удалите одну из них.
 
 ::: moniker range="=sql-server-2016"
 <a name="bkmk_ga_instalpatch"></a> 
@@ -152,7 +157,7 @@ SQL Server программа установки включает парамет
 |----|----|----|
 |Machine Learning Server SQL Server 2017 (автономная) |  Мастер установки SQL Server 2017 |`C:\Program Files\Microsoft SQL Server\140\R_SERVER` <br/>`C:\Program Files\Microsoft SQL Server\140\PYTHON_SERVER`|
 |Microsoft Machine Learning Server (изолированный) |  Автономный установщик Windows |`C:\Program Files\Microsoft\ML Server\R_SERVER`<br/>`C:\Program Files\Microsoft\ML Server\PYTHON_SERVER`|
-|Службы машинного обучения SQL Server 2017 (в базе данных) |Мастер установки SQL Server 2017 с параметром языка R|`C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\R_SERVICES`  <br/>`C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\PYTHON_SERVICES` |
+|Службы машинного обучения SQL Server (в базе данных) |Мастер установки SQL Server 2017 с параметром языка R|`C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\R_SERVICES`  <br/>`C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\PYTHON_SERVICES` |
 |SQL Server 2016 R Server (изолированный) |  Мастер установки SQL Server 2016 |`C:\Program Files\Microsoft SQL Server\130\R_SERVER`|
 |Службы R SQL Server 2016 (в базе данных) |Мастер установки SQL Server 2016|`C:\Program Files\Microsoft SQL Server\MSSQL13.<instance_name>\R_SERVICES`|
 

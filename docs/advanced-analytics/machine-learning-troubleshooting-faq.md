@@ -6,19 +6,18 @@ ms.date: 05/31/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 86c698420a64832e49cd6cbff5e6727896ec45f4
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 1573c260c3d34ba3f733316fbae2672b2f9adfb1
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470281"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715149"
 ---
 # <a name="troubleshoot-machine-learning-in-sql-server"></a>Устранение неполадок машинного обучения в SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Используйте эту страницу в качестве отправной точки для работы с известными проблемами.
-
-**Применимо к:** SQL Server 2016 служб R SQL Server 2017 Службы машинного обучения (R и Python)
 
 ## <a name="known-issues"></a>Известные проблемы
 
@@ -38,10 +37,8 @@ ms.locfileid: "68470281"
 
 Начните здесь, если вы не настроили машинное обучение с помощью SQL Server или хотите добавить эту функцию:
 
-+ [Установка SQL Server 2017 Службы машинного обучения (в базе данных)](install/sql-machine-learning-services-windows-install.md)
-+ [Установка SQL Server Machine Learning Server 2017 (автономная версия)](install/sql-machine-learning-standalone-windows-install.md)
-+ [Установка служб R SQL Server 2016 (в базе данных)](install/sql-r-services-windows-install.md)
-+ [Установка SQL Server R Server 2016 (изолированная версия)](install/sql-r-standalone-windows-install.md)
++ [Установка Службы машинного обучения SQL Server (в базе данных)](install/sql-machine-learning-services-windows-install.md)
++ [Установка Machine Learning Server SQL Server (автономная версия)](install/sql-machine-learning-standalone-windows-install.md)
 + [Установка командной строки](install/sql-ml-component-commandline-install.md)
 + [Автономная установка (без Интернета)](install/sql-ml-component-install-without-internet-access.md)
 

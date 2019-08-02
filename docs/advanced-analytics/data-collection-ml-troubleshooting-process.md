@@ -2,16 +2,17 @@
 title: Устранение неполадок сбора данных для машинного обучения
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 02/28/2019
+ms.date: 07/30/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 3dbca20d974570d04d65fba30110049efad4e90d
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: c7566d9b25b15a334e48380daca6cb81e92f6a2b
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470437"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715233"
 ---
 # <a name="troubleshoot-data-collection-for-machine-learning"></a>Устранение неполадок сбора данных для машинного обучения
 
@@ -19,13 +20,11 @@ ms.locfileid: "68470437"
 
 В этой статье описываются методы сбора данных, которые следует использовать при попытке самостоятельно разрешать проблемы или с помощью службы поддержки пользователей Майкрософт.
 
-**Применимо к:** SQL Server 2016 служб R SQL Server 2017 Службы машинного обучения (R и Python)
-
 ## <a name="sql-server-version-and-edition"></a>SQL Server версии и выпуска
 
-SQL Server 2016 R Services — это первый выпуск SQL Server, включающий интегрированную поддержку R. SQL Server 2016 с пакетом обновления 1 (SP1) включает несколько основных усовершенствований, включая возможность запуска внешних сценариев. Если вы являетесь клиентом SQL Server 2016, рекомендуется установить пакет обновления 1 (SP1) или более поздней версии.
+SQL Server 2016 R Services — это первый выпуск SQL Server, включающий интегрированную поддержку R. SQL Server 2016 с пакетом обновления 1 (SP1) включает несколько основных усовершенствований, включая возможность запуска внешних сценариев. При использовании SQL Server 2016 рекомендуется установить пакет обновления 1 (SP1) или более поздней версии.
 
-SQL Server 2017 добавлена интеграция языка Python. В более ранних выпусках невозможно получить интеграцию возможностей Python.
+В SQL Server 2017 и более поздних версий установлена интеграция с языком Python. В более ранних выпусках невозможно получить интеграцию возможностей Python.
 
 Сведения о получении выпуска и версий см. в этой статье, где перечислены номера сборок для каждой из [SQL Server версий](https://social.technet.microsoft.com/wiki/contents/articles/783.sql-server-versions.aspx#Service_Pack_editions).
 

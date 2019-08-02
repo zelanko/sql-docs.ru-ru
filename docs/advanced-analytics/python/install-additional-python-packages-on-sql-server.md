@@ -1,29 +1,30 @@
 ---
 title: Установить новые языковые пакеты Python
-description: Добавьте новые пакеты Python в SQL Server 2017 Службы машинного обучения (в базе данных) и Machine Learning Server (автономный).
+description: Добавьте новые пакеты Python в SQL Server Службы машинного обучения (в базе данных) и Machine Learning Server (автономные).
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 06/16/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: fc8c7148369ec1a501106e573e195a8f0b7f060a
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: e107622655d5f00d27de6abcea46a92526f47ada
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470257"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715807"
 ---
 # <a name="install-new-python-packages-on-sql-server"></a>Установить новые пакеты Python на SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-В этой статье описывается, как установить новые пакеты Python на экземпляре SQL Server 2017 Службы машинного обучения. Как правило, процесс установки новых пакетов аналогичен процессу в стандартной среде Python. Однако некоторые дополнительные действия необходимы, если сервер не подключен к Интернету.
+В этой статье описывается, как установить новые пакеты Python на экземпляре SQL Server Службы машинного обучения. Как правило, процесс установки новых пакетов аналогичен процессу в стандартной среде Python. Однако некоторые дополнительные действия необходимы, если сервер не подключен к Интернету.
 
 Дополнительные сведения о расположении пакетов и путях установки см. в разделе [Получение сведений о пакете R или Python](../package-management/installed-package-information.md).
 
 ## <a name="prerequisites"></a>Предварительные требования
 
-+ [SQL Server 2017 службы машинного обучения (в базе данных)](../install/sql-machine-learning-services-windows-install.md) с параметром языка Python. 
++ [SQL Server службы машинного обучения (в базе данных)](../install/sql-machine-learning-services-windows-install.md) с параметром языка Python. 
 
 + Пакеты должны быть совместимыми с Python 3,5 и запускаться в Windows. 
 

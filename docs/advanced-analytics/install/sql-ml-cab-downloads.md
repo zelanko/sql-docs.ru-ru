@@ -1,18 +1,19 @@
 ---
 title: Скачивания CAB-файлов для SQL Server накопительных обновлений
-description: Загрузка CAB-файлов r и Python и пакетов для служб SQL Server 2017 Службы машинного обучения и SQL Server 2016 R.
+description: Загрузка CAB-файлов r и Python и пакетов для служб SQL Server Службы машинного обучения и SQL Server 2016 R.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/30/2019
+ms.date: 07/30/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: ab87112d20d2571936fa7d61c34c5910859f2642
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 7b77a1fd3a0d2575f0add7badb1c5bf632d29d70
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470319"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715834"
 ---
 # <a name="cab-downloads-for-cumulative-updates-of-sql-server-in-database-analytics-instances"></a>Загружаемые файлы CAB для накопительных обновлений SQL Server экземпляров аналитики в базе данных
 
@@ -20,16 +21,18 @@ ms.locfileid: "68470319"
 
 SQL Server экземпляры, настроенные для аналитики в базе данных, включают функции R и Python. Эти функции поставляются в CAB-файлах, устанавливаются и обслуживаются с помощью программы установки SQL Server. На устройствах, подключенных к Интернету, обновления CAB обычно применяются с помощью Центр обновления Windows. На отключенных серверах файлы CAB должны быть скачаны и применены вручную. 
 
-В этой статье содержатся ссылки для загрузки файлов CAB для каждого накопительного пакета обновления. Ссылки предоставляются как для SQL Server 2017 Службы машинного обучения (R и Python), так и для SQL Server 2016 служб R. Дополнительные сведения об автономных установках см. в [статье установка SQL Server компонентов машинного обучения без доступа к Интернету](sql-ml-component-install-without-internet-access.md#apply-cu).
+В этой статье содержатся ссылки для загрузки файлов CAB для каждого накопительного пакета обновления. Дополнительные сведения об автономных установках см. в [статье установка SQL Server компонентов машинного обучения без доступа к Интернету](sql-ml-component-install-without-internet-access.md#apply-cu).
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 Начните с базовой установки.
 
-+ В SQL Server 2017 Службы машинного обучения первоначальным выпуском является базовая установка. 
++ В SQL Server Службы машинного обучения первоначальной версией является базовая установка. 
 + В службах SQL Server 2016 R можно начать с первого выпуска, с пакетом обновления 1 (SP1) или с пакетом обновления 2 (SP2). 
 
 Можно также применить накопительные обновления к отдельному серверу.
+
+::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
 
 ## <a name="sql-server-2017-cabs"></a>SQL Server 2017 CAB
 
@@ -88,6 +91,9 @@ CAB-файлы перечислены в обратном хронологиче
 | | Открытие Microsoft Python     |[SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502) |
 | | Сервер Python    |[SPS_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851508) |
 
+::: moniker-end
+
+::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
 
 <a name="bkmk_2016Installers"></a>
 
@@ -134,7 +140,9 @@ CAB-файлы перечислены в обратном хронологиче
 
 Если вы хотите просмотреть исходный код Microsoft R, он доступен для загрузки в виде архива в формате tar: [Скачать установщики R Server](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows#download)
 
-## <a name="see-also"></a>См. также
+::: moniker-end
+
+## <a name="next-steps"></a>Следующие шаги
 
 [Применение накопительных обновлений на компьютерах без доступа к Интернету](sql-ml-component-install-without-internet-access.md#apply-cu)
 

@@ -7,14 +7,15 @@ ms.date: 04/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: a224bed65cd7d3fd1b6dda4ed10d56f79ecc12ee
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 22faeb2ea9f3e2104c2c1921b91a26ec5068079e
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470150"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715707"
 ---
-# <a name="create-a-stored-pprocedure-using-sqlrutils"></a>Создание хранимой Ппроцедуре с помощью sqlrutils
+# <a name="create-a-stored-procedure-using-sqlrutils"></a>Создание хранимой процедуры с помощью sqlrutils
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 В этой статье описываются действия по преобразованию кода R для выполнения в качестве хранимой процедуры T-SQL. Для достижения наилучших результатов может потребоваться немного изменить код, чтобы обеспечить возможность параметризации всех входных данных.
@@ -29,7 +30,7 @@ ms.locfileid: "68470150"
 
 ### <a name="inputs"></a>Входные данные
 
-Среди входных параметров может быть не более одного кадра данных.
+Между входными параметрами может быть не более одного кадра данных.
 
 Объекты внутри кадра данных, а также все другие входные параметры функции должны относиться к следующим типам данных R:
 - POSIXct

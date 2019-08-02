@@ -1,18 +1,19 @@
 ---
 title: пакет Python для revoscalepy
-description: Введение в модуль revoscalepy в SQL Server 2017 Службы машинного обучения с Python.
+description: Общие сведения о модуле revoscalepy в SQL Server Службы машинного обучения с помощью Python.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 12/12/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 297e58fe089b0f68670a9d2a994f05d9c8bf4344
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 76c68d0753c4ba29387b3378c1086ce9bce4f53b
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470330"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715774"
 ---
 # <a name="revoscalepy-python-module-in-sql-server"></a>revoscalepy (модуль Python в SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "68470330"
 
 Модуль **revoscalepy** основан на Python 3,5 и доступен только при установке одного из следующих продуктов или файлов загрузки Майкрософт:
 
-+ [SQL Server 2017 Службы машинного обучения](../install/sql-machine-learning-services-windows-install.md)
++ [Изучение служб машины SQL Server](../install/sql-machine-learning-services-windows-install.md)
 + [Microsoft Machine Learning Server 9.2.0 или более поздней версии](https://docs.microsoft.com/machine-learning-server/)
 + [Клиентские библиотеки Python для клиента обработки и анализа данных](setup-python-client-tools-sql.md)
 

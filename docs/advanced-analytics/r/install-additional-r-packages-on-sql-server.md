@@ -1,18 +1,19 @@
 ---
 title: Установка новых языковых пакетов R
-description: Добавление новых пакетов R в службы SQL Server 2016 R или SQL Server 2017 Службы машинного обучения (в базе данных)
+description: Добавление новых пакетов R в службы SQL Server 2016 R или SQL Server Службы машинного обучения (в базе данных)
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 1a6459d45d36ff69bdafb62a712e18937bf8eb30
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 1048dc6ef0a43c5fa41dd5398a5b3dced4a5ebe8
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470103"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715103"
 ---
 # <a name="install-new-r-packages-on-sql-server"></a>Установить новые пакеты R на SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -85,7 +86,7 @@ ms.locfileid: "68470103"
 
 Функции R и Python включены в несколько продуктов Майкрософт, все из которых могут сосуществовать на одном компьютере.
 
-Если вы установили SQL Server 2017 Microsoft Machine Learning Server (автономный) или SQL Server 2016 R Server (изолированный) в дополнение к аналитической аналитике (SQL Server 2017 Службы машинного обучения и SQL Server 2016 R Services), компьютер имеет отдельный установки R для каждой версии с дубликатами всех средств и библиотек R.
+Если вы установили SQL Server 2017 Microsoft Machine Learning Server (автономный) или SQL Server 2016 R Server (изолированный) в дополнение к аналитической аналитике (SQL Server Службы машинного обучения и SQL Server 2016 Services R), компьютер имеет отдельные установки R для каждой версии с дубликатами всех средств и библиотек R.
 
 Пакеты, устанавливаемые в библиотеку R_SERVER, используются только отдельным сервером и не могут быть доступны в экземпляре SQL Server (в базе данных). Всегда используйте `R_SERVICES` библиотеку при установке пакетов, которые будут использоваться в базе данных на SQL Server. Дополнительные сведения о путях см. в разделе [расположение библиотеки пакетов](../package-management/default-packages.md).
 

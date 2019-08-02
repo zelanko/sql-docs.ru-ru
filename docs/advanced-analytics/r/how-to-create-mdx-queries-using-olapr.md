@@ -7,12 +7,13 @@ ms.date: 05/22/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 09f2f1dcca3fd8d0828a87e8c781d05c4ad8e5f5
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: db9afc06a02825b8db449492d8cec6ee6d67801d
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470122"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715125"
 ---
 # <a name="how-to-create-mdx-queries-in-r-using-olapr"></a>Создание запросов многомерных выражений в R с помощью средства OLAP
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +48,7 @@ ms.locfileid: "68470122"
      
      + `axis()` Укажите имя дополнительной оси для использования в запросе. 
      
-         Куб OLAP может содержать до 128 осей запроса. Как правило, первые четыре оси называются столбцами , **строками**, **страницами**и **главами**. 
+         Куб OLAP может содержать до 128 осей запроса. Как правило, первые четыре оси называются столбцами, **строками**, **страницами**и **главами**. 
          
          Если запрос относительно прост, для его создания можно использовать функции `columns`, `rows`и т. п. Однако можно также использовать функцию `axis()` с ненулевым значением индекса для создания запроса многомерных выражений с несколькими квалификаторами или для добавления дополнительных измерений в качестве квалификаторов.
 

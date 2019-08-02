@@ -2,21 +2,22 @@
 title: Распространенные проблемы с выполнением службы панели запуска и внешним скриптом
 ms.prod: sql
 ms.technology: ''
-ms.date: 06/13/2019
+ms.date: 07/30/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 84c7c8f10c6a5b0da69d24389e12633df3774ffb
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: c90c59f3b59850bb0e2d1cf4cf40eb569e965eba
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470484"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715284"
 ---
 # <a name="common-issues-with-launchpad-service-and-external-script-execution-in-sql-server"></a>Распространенные проблемы с выполнением службы панели запуска и внешним скриптом в SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
- SQL Server Доверенная служба панели запуска поддерживает выполнение внешних скриптов для R и Python. В службах SQL Server 2016 R Services пакет обновления 1 (SP1) предоставляет службу. SQL Server 2017 включает службу панели запуска в ходе первоначальной установки.
+SQL Server Доверенная служба панели запуска поддерживает выполнение внешних скриптов для R и Python. 
 
 Несколько проблем могут препятствовать запуску панели запуска, включая проблемы конфигурации, изменения или отсутствие сетевых протоколов. В этой статье содержатся рекомендации по устранению неполадок для многих проблем. Для всех пропущенных вопросов можно отправить вопросы на [Machine Learning Server форуме](https://social.msdn.microsoft.com/Forums/en-US/home?category=MicrosoftR).
 
@@ -76,6 +77,7 @@ GRANT EXECUTE ANY EXTERNAL SCRIPT TO <username>
 
 В этом разделе перечислены наиболее распространенные сообщения об ошибках, возвращаемые панелью запуска.
 
+::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
 ## <a name="unable-to-launch-runtime-for-r-script"></a>"Не удается запустить среду выполнения для скрипта R"
 
 Если группа Windows для пользователей R (также используемая для Python) не может войти в экземпляр, на котором выполняются службы R, могут отобразиться следующие ошибки:
@@ -94,10 +96,11 @@ GRANT EXECUTE ANY EXTERNAL SCRIPT TO <username>
 
     * *Журналы безопасности указывают на то, что службе NT учетной записи не удалось выполнить вход*
 
-Сведения о том, как предоставить этой группе пользователей необходимые разрешения, см. в разделе [Install SQL Server 2016 R Services](install/sql-r-services-windows-install.md).
+Сведения о том, как предоставить этой группе пользователей необходимые разрешения, см. в разделе [Install SQL Server R Services](install/sql-r-services-windows-install.md).
 
 > [!NOTE]
 > Это ограничение не распространяется на тот случай, если вы используете имена входа SQL для выполнения скриптов R с удаленной рабочей станции.
+::: moniker-end
 
 ## <a name="logon-failure-the-user-has-not-been-granted-the-requested-logon-type"></a>"Сбой входа: пользователь не предоставил запрошенный тип входа"
 
@@ -183,9 +186,12 @@ EXEC sp_execute_external_script @language = N'R',
 
 Чтобы устранить эту проблему, необходимо переустановить пакет в библиотеку экземпляров SQL Server.
 
+::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
 >[!NOTE]
 >Если вы обновили экземпляр SQL Server 2016 для использования последней версии Microsoft R, расположение библиотеки по умолчанию отличается. Дополнительные сведения см. [в статье Использование SqlBindR для обновления экземпляра служб R](install/upgrade-r-and-python.md).
+::: moniker-end
 
+::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
 ## <a name="launchpad-shuts-down-due-to-mismatched-dlls"></a>Панель запуска завершает работу из-за несовпадений библиотек DLL
 
 Если установить ядро СУБД с другими компонентами, исправить сервер, а затем добавить Машинное обучение компонент с помощью исходного носителя, может быть установлена неправильная версия компонентов Машинное обучение. Когда панель запуска обнаруживает несовпадение версий, она завершает работу и создает файл дампа.
@@ -224,7 +230,7 @@ EXEC sp_execute_external_script @language = N'R',
 3. Используйте служебную программу fsutil с аргументом *File* , чтобы указать короткий путь к файлу для папки, указанной в WORKING_DIRECTORY.
 
 4. Измените файл конфигурации, указав тот же рабочий каталог, который вы указали в свойстве WORKING_DIRECTORY. Кроме того, можно указать другой рабочий каталог и выбрать существующий путь, который уже совместим с нотацией 8dot3.
-
+::: moniker-end
 
 ## <a name="next-steps"></a>Следующие шаги
 

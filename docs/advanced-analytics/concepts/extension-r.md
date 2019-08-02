@@ -1,25 +1,26 @@
 ---
 title: Расширение языка программирования R
-description: Сведения о выполнении кода R и встроенных библиотеках R в SQL Server 2016 R Services или SQL Server 2017 Службы машинного обучения.
+description: Сведения о выполнении кода R и встроенных библиотеках R в SQL Server R Services или SQL Server Службы машинного обучения.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/05/2018
+ms.date: 07/30/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 300b5d25d62be24c1e5590f5cd9795d08da7f2c1
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: fa39240da51d0b7a9269777f751944104d703d59
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470498"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715246"
 ---
 # <a name="r-language-extension-in-sql-server"></a>Расширение языка R в SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Расширение R является частью SQL Server Службы машинного обучения надстройку для ядра реляционной базы данных. Она добавляет среду выполнения R, базовое распределение R с стандартными библиотеками и инструментами, а также библиотеки Microsoft R. [RevoScaleR](../r/ref-r-revoscaler.md) для аналитики в масштабе, [MicrosoftML](../r/ref-r-microsoftml.md) для алгоритмов машинного обучения и других библиотек для доступа к данным или коду R в SQL Server.
 
-Интеграция R доступна в SQL Server, начиная с SQL Server 2016, со [службами R](../r/sql-server-r-services.md)и продолжая пересылаться в рамках [SQL Server службы машинного обучения](../what-is-sql-server-machine-learning.md).
+Интеграция R доступна в [SQL Server R Services](../r/sql-server-r-services.md) и [SQL Server службы машинного обучения](../what-is-sql-server-machine-learning.md).
 
 ## <a name="r-components"></a>Компоненты R
 
@@ -27,7 +28,7 @@ SQL Server содержит пакеты с открытым исходным к
 
 SQL Server не изменяет базовые исполняемые файлы R, но необходимо использовать версию R, установленную программой установки, так как эта версия является той, на которой создаются и тестируются частные пакеты. Дополнительные сведения о том, как MRO отличается от базового распределения R, который вы можете получить из CRAN, см. в статье [взаимодействие с языком r и продуктами и компонентами Microsoft r](https://docs.microsoft.com/r-server/what-is-r-server-interoperability).
 
-Дистрибутив базового пакета R, установленный программой установки, можно найти в папке, связанной с экземпляром. Например, если вы установили службы R на экземпляре SQL Server 2016 по умолчанию, библиотеки R по умолчанию расположены в этой папке `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\library`:. Аналогичным образом инструменты R, связанные с экземпляром по умолчанию, по умолчанию будут находиться `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\bin`в этой папке:.
+Дистрибутив базового пакета R, установленный программой установки, можно найти в папке, связанной с экземпляром. Например, если службы R установлены на экземпляре SQL Server по умолчанию, библиотеки R по умолчанию расположены в этой папке: `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\library`. Аналогичным образом инструменты R, связанные с экземпляром по умолчанию, по умолчанию будут находиться `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\bin`в этой папке:.
 
 Пакеты R, добавленные корпорацией Майкрософт для параллельных и распределенных рабочих нагрузок, включают следующие библиотеки.
 
