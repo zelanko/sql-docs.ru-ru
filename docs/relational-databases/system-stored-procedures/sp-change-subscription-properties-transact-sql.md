@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: cf8137f9-f346-4aa1-ae35-91a2d3c16f17
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 6152e7f1c1b64cfdeafffe7d5d9eb021bfd4c4a7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cfc42dbf08b6718e72970a703f56fb0bfff850f4
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68045779"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771410"
 ---
 # <a name="spchangesubscriptionproperties-transact-sql"></a>sp_change_subscription_properties (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Обновляет данные для подписок по запросу. Эта хранимая процедура выполняется на подписчике в базе данных подписки.  
   
@@ -42,17 +42,17 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publisher = ] 'publisher'` — Имя издателя. *издатель* — **sysname**, не имеет значения по умолчанию.  
+`[ @publisher = ] 'publisher'`Имя издателя. параметр *Publisher* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @publisher_db = ] 'publisher_db'` — Имя базы данных издателя. *publisher_db* — **sysname**, не имеет значения по умолчанию.  
+`[ @publisher_db = ] 'publisher_db'`Имя базы данных издателя. *publisher_db* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @publication = ] 'publication'` — Имя публикации. *Публикация* — **sysname**, не имеет значения по умолчанию.  
+`[ @publication = ] 'publication'`Имя публикации. Аргумент *publication* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @property = ] 'property'` — Это свойства, которое можно изменить. *Свойство* — **sysname**.  
+`[ @property = ] 'property'`Изменяемое свойство. *свойство* имеет тип **sysname**.  
   
-`[ @value = ] 'value'` — Это новое значение свойства. *значение* — **nvarchar(1000)** , не имеет значения по умолчанию.  
+`[ @value = ] 'value'`Новое значение свойства. *value* имеет тип **nvarchar (1000)** и не имеет значения по умолчанию.  
   
-`[ @publication_type = ] publication_type` Указывает тип репликации публикации. *publication_type* — **int**, и может принимать одно из следующих значений.  
+`[ @publication_type = ] publication_type`Указывает тип репликации публикации. *publication_type* имеет **тип int**и может принимать одно из следующих значений.  
   
 |Значение|Тип публикации|  
 |-----------|----------------------|  
@@ -73,18 +73,18 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
 |**distributor_security_mode**|**1**|При подключении к подписчику используется проверка подлинности Windows.|  
 ||**0**|При подключении к подписчику используется проверка подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**dts_package_name**||Указывает имя пакета служб SQL Server 2000 Data Transformation Services (DTS). Это значение может задаваться, если только публикация является транзакционной или публикацией моментальных снимков.|  
-|**dts_package_password**||Указывает пароль на пакет. *dts_package_password* — **sysname** значение по умолчанию NULL, который указывает, что свойство пароля должно быть оставлено без изменений.<br /><br /> Примечание. У пакета служб DTS должен быть пароль.<br /><br /> Это значение может задаваться, если только публикация является транзакционной или публикацией моментальных снимков.|  
+|**dts_package_password**||Указывает пароль на пакет. *dts_package_password* имеет тип **sysname** и значение по умолчанию NULL, которое указывает, что свойство Password должно остаться без изменений.<br /><br /> Примечание. У пакета служб DTS должен быть пароль.<br /><br /> Это значение может задаваться, если только публикация является транзакционной или публикацией моментальных снимков.|  
 |**dts_package_location**||Местоположение, где хранится пакет служб DTS. Это значение может задаваться, если только публикация является транзакционной или публикацией моментальных снимков.|  
 |**dynamic_snapshot_location**||Указывает путь к папке, в которой сохраняются файлы моментальных снимков. Это значение может задаваться, если только публикация является публикацией слиянием.|  
 |**ftp_address**||Только для обратной совместимости.|  
 |**ftp_login**||Только для обратной совместимости.|  
 |**ftp_password**||Только для обратной совместимости.|  
 |**ftp_port**||Только для обратной совместимости.|  
-|**Имя узла**||Имя узла, используемое при соединении с издателем.|  
+|**имя узла**||Имя узла, используемое при соединении с издателем.|  
 |**internet_login**||Имя входа, используемое агентом слияния для подключения к веб-серверу, на котором доступна веб-синхронизация с обычной проверкой подлинности.|  
 |**internet_password**||Пароль, используемый агентом слияния для подключения к веб-серверу, на котором доступна веб-синхронизация с обычной проверкой подлинности.|  
 |**internet_security_mode**|**1**|Для веб-синхронизации используется встроенная проверка подлинности Windows. При веб-синхронизации рекомендуется использовать обычную проверку подлинности. Дополнительные сведения см. в разделе [Configure Web Synchronization](../../relational-databases/replication/configure-web-synchronization.md).|  
-||**0**|Для веб-синхронизации используется обычная проверка подлинности.<br /><br /> Примечание. Веб-синхронизации требуется подключение SSL на веб-сервер.|  
+||**0**|Для веб-синхронизации используется обычная проверка подлинности.<br /><br /> Примечание. Для веб-синхронизации требуется подключение SSL к веб-серверу.|  
 |**internet_timeout**||Время (в секундах) перед отменой запроса на веб-синхронизацию.|  
 |**internet_url**||UR-адрес, который представляет собой адрес средства прослушивания репликации для веб-синхронизации.|  
 |**merge_job_login**||Имя входа учетной записи Windows, от имени которой выполняется агент.|  
@@ -100,24 +100,24 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
 |**working_directory**||Имя рабочего каталога, используемого для временного хранения файлов данных и схем для публикации, если для передачи файлов моментальных снимков используется протокол передачи файлов (FTP).|  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- **0** (успешное завершение) или **1** (неуспешное завершение)  
+ **0** (успешное завершение) или **1** (сбой)  
   
 ## <a name="remarks"></a>Примечания  
  **sp_change_subscription_properties** используется во всех типах репликации.  
   
  **sp_change_subscription_properties** используется для подписок по запросу.  
   
- Для издателей Oracle значение *publisher_db* учитывается, поскольку Oracle допускает только одной базы данных на экземпляре сервера.  
+ Для издателей Oracle значение *publisher_db* игнорируется, так как Oracle допускает только одну базу данных на экземпляр сервера.  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **sysadmin** предопределенной роли сервера или **db_owner** предопределенной роли базы данных могут выполнять процедуру **sp_change_subscription_properties**.  
+ Только члены предопределенной роли сервера **sysadmin** или предопределенной роли базы данных **db_owner** могут выполнять **sp_change_subscription_properties**.  
   
 ## <a name="see-also"></a>См. также  
  [Просмотр и изменение свойств подписки по запросу](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)   
- [sp_addmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)   
- [sp_addmergepullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md)   
- [sp_addpullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)   
- [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)   
+ [sp_addmergepullsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)   
+ [sp_addmergepullsubscription_agent &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md)   
+ [sp_addpullsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)   
+ [sp_addpullsubscription_agent &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

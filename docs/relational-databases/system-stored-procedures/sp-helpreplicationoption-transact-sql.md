@@ -1,5 +1,5 @@
 ---
-title: Хранимая процедура sp_helpreplicationoption (Transact-SQL) | Документация Майкрософт
+title: sp_helpreplicationoption (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: ef988dbc-dd0b-4132-80ab-81eebec1cffe
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 9852aaaf0b719bfa03736997959d76110dff4d6e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1003a1a33565da9b48135123d83c4ea6551debeb
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67997504"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771485"
 ---
 # <a name="sphelpreplicationoption-transact-sql"></a>Хранимая процедура sp_helpreplicationoption (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Показывает типы параметров репликации, включенных на сервере. Эта хранимая процедура выполняется на любом сервере в любой базе данных.  
   
@@ -37,30 +37,30 @@ sp_helpreplicationoption [ [ @optname =] 'option_name' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @optname = ] 'option_name'` — Имя параметра репликации для запроса. *option_name* — **sysname**, значение по умолчанию NULL.  
+`[ @optname = ] 'option_name'`Имя параметра репликации, для которого необходимо выполнить запрос. *option_name* имеет тип **sysname**и значение по умолчанию NULL.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
-|**Транзакций**|Результирующий набор возвращается, если включена репликация транзакций.|  
-|**Слияние**|Результирующий набор возвращается, если включена репликация слиянием.|  
+|**транзакций**|Результирующий набор возвращается, если включена репликация транзакций.|  
+|**AutoMerge**|Результирующий набор возвращается, если включена репликация слиянием.|  
 |NULL (по умолчанию)|Результирующий набор не возвращается.|  
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**optname**|**sysname**|Имя параметра репликации, может быть одним из следующих:<br /><br /> **Транзакций**<br /><br /> **Слияние**|  
+|**optname**|**sysname**|Имя параметра репликации, может быть одним из следующих:<br /><br /> **транзакций**<br /><br /> **AutoMerge**|  
 |**value**|**bit**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**основная_версия**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**вспомогательная_версия**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**редакция**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**major_version**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**minor_version**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**редакции**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**install_failures**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- **0** (успешное завершение) или **1** (неуспешное завершение)  
+ **0** (успешное завершение) или **1** (сбой)  
   
 ## <a name="remarks"></a>Примечания  
- **Хранимая процедура sp_helpreplicationoption** используется для получения сведений о параметрах репликации, включенных на конкретном сервере. Чтобы получить сведения о конкретной базы данных, используйте **sp_helpreplicationdboption**.  
+ **sp_helpreplicationoption** используется для получения сведений о параметрах репликации, включенных на определенном сервере. Чтобы получить сведения о конкретной базе данных, используйте **sp_helpreplicationdboption**.  
   
 ## <a name="permissions"></a>Разрешения  
  Разрешения на выполнение по умолчанию принадлежат роли **public** .  

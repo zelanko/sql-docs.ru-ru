@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d2c0ed66-07d1-4adc-82e5-a654376879bc
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 66ee4819e8830fd718334d4a094ec22c01bf069d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f6b2c736087b2f860bf8419264904e8669ba8951
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67927806"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771551"
 ---
 # <a name="spvupgradereplication-transact-sql"></a>sp_vupgrade_replication (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Активируется программой установки при обновлении сервера репликации. Производит необходимое обновление схемы и системных данных для поддержки репликации на текущем уровне продукта. Создает новые системные объекты репликации в системных и пользовательских базах данных. Эта хранимая процедура выполняется на машине, на которой должно производиться обновление репликации.  
   
@@ -41,12 +41,12 @@ sp_vupgrade_replication [ [@login=] 'login' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @login = ] 'login'` — Это имя входа администратора системы, используемый при создании новых системных объектов в базе данных распространителя. Аргумент *login* имеет тип **sysname** и значение по умолчанию NULL. Этот параметр не является обязательным, если *security_mode* присваивается **1**, что означает проверку подлинности Windows.  
+`[ @login = ] 'login'`— Это имя входа системного администратора, используемое при создании новых системных объектов в базе данных распространителя. Аргумент *login* имеет тип **sysname** и значение по умолчанию NULL. Этот параметр не требуется, если *security_mode* имеет значение **1**, которое является проверкой подлинности Windows.  
   
 > [!NOTE]  
 >  При обновлении до [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] и поздних версий этот аргумент не используется.  
   
-`[ @password = ] 'password'` — Пароль администратора системы, используемый при создании новых системных объектов в базе данных распространителя. *пароль* — **sysname**, значение по умолчанию **''** (пустая строка). Этот параметр не является обязательным, если *security_mode* присваивается **1**, что означает проверку подлинности Windows.  
+`[ @password = ] 'password'`Пароль системного администратора, используемый при создании новых системных объектов в базе данных распространителя. Аргумент *Password* имеет тип **sysname**и значение по умолчанию **""** (пустая строка). Этот параметр не требуется, если *security_mode* имеет значение **1**, которое является проверкой подлинности Windows.  
   
 > [!NOTE]  
 >  При обновлении до [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] и более поздних версий этот параметр не обрабатывается.  
@@ -57,19 +57,19 @@ sp_vupgrade_replication [ [@login=] 'login' ]
   
 `[ @force_remove = ] 'force_removal'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
-`[ @security_mode = ] 'security_mode'` — Это режим безопасности имени входа, используемый при создании новых системных объектов в базе данных распространителя. *security_mode* — **бит** со значением по умолчанию **0**. Если **0**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] будет использоваться проверка подлинности. Если **1**, будет использоваться проверка подлинности Windows.  
+`[ @security_mode = ] 'security_mode'`Режим безопасности входа, используемый при создании новых системных объектов в базе данных распространителя. *security_mode* имеет **бит** со значением по умолчанию **0**. Если значение **равно 0**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] будет использоваться проверка подлинности. Если значение равно **1**, будет использоваться проверка подлинности Windows.  
   
 > [!NOTE]  
 >  При обновлении до [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] и поздних версий этот аргумент не используется.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- **0** (успешное завершение) или **1** (неуспешное завершение)  
+ **0** (успешное завершение) или **1** (сбой)  
   
 ## <a name="remarks"></a>Примечания  
  **sp_vupgrade_replication** используется при обновлении всех типов репликации.  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **sysadmin** предопределенной роли сервера могут выполнять процедуру **sp_vupgrade_replication**.  
+ Только члены предопределенной роли сервера **sysadmin** могут выполнять **sp_vupgrade_replication**.  
   
 ## <a name="see-also"></a>См. также  
  [Хранимые процедуры репликации (Transact-SQL)](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   

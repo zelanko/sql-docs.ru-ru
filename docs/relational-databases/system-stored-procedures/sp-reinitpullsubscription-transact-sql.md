@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7d9abe49-ce92-47f3-82c9-aea749518c91
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 1389e76d4e679a3ee16c548bf752d5668dfa48b7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 078cb7f1607e6af94756d43efc2e6d21fbada52c
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68075675"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68762337"
 ---
 # <a name="spreinitpullsubscription-transact-sql"></a>sp_reinitpullsubscription (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Помечает анонимную или транзакционную подписку по запросу для повторной инициализации при следующем запуске агента распространителя. Эта хранимая процедура выполняется на подписчике в базе данных подписки по запросу.  
   
@@ -39,31 +39,31 @@ sp_reinitpullsubscription [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publisher = ] 'publisher'` — Имя издателя. *издатель* — **sysname**, не имеет значения по умолчанию.  
+`[ @publisher = ] 'publisher'`Имя издателя. параметр *Publisher* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @publisher_db = ] 'publisher_db'` — Имя базы данных издателя. *publisher_db* — **sysname**, не имеет значения по умолчанию.  
+`[ @publisher_db = ] 'publisher_db'`Имя базы данных издателя. *publisher_db* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @publication = ] 'publication'` — Имя публикации. *Публикация* — **sysname**, по умолчанию все, что означает пометку всех подписок для повторной инициализации.  
+`[ @publication = ] 'publication'`Имя публикации. Аргумент *publication* имеет тип **sysname**и значение по умолчанию All, что помечает все подписки для повторной инициализации.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- **0** (успешное завершение) или **1** (неуспешное завершение)  
+ **0** (успешное завершение) или **1** (сбой)  
   
 ## <a name="remarks"></a>Примечания  
  **sp_reinitpullsubscription** используется в репликации транзакций.  
   
- **sp_reinitpullsubscription** не поддерживается для репликации транзакций peer-to-peer.  
+ **sp_reinitpullsubscription** не поддерживается для одноранговой репликации транзакций.  
   
- **sp_reinitpullsubscription** могут вызываться из подписчика повторной инициализации подписки, во время следующего запуска агента распространителя.  
+ **sp_reinitpullsubscription** можно вызвать с подписчика для повторной инициализации подписки во время следующего выполнения агент распространения.  
   
- Подписки к публикациям, созданным со значением **false** для **@immediate_sync** не могут повторно инициализироваться из подписчика.  
+ Подписки на публикации, созданные со значением **false** для **@immediate_sync** , не могут быть повторно инициализированы с подписчика.  
   
- Повторная инициализация подписки по запросу, либо выполнив **sp_reinitpullsubscription** на подписчике или **sp_reinitsubscription** на издателе.  
+ Можно повторно инициализировать подписку по запросу, либо выполнив **sp_reinitpullsubscription** на подписчике, либо **sp_reinitsubscription** на издателе.  
   
 ## <a name="example"></a>Пример  
  [!code-sql[HowTo#sp_reinitpullsub](../../relational-databases/replication/codesnippet/tsql/sp-reinitpullsubscriptio_1.sql)]  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **sysadmin** предопределенной роли сервера или **db_owner** предопределенной роли базы данных могут выполнять процедуру **sp_reinitpullsubscription**.  
+ Только члены предопределенной роли сервера **sysadmin** или предопределенной роли базы данных **db_owner** могут выполнять **sp_reinitpullsubscription**.  
   
 ## <a name="see-also"></a>См. также  
  [Повторная инициализация подписки](../../relational-databases/replication/reinitialize-a-subscription.md)   

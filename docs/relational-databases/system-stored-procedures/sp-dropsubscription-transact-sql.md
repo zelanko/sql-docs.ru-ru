@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7551f345-5510-4684-ab53-f9057249d13a
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 923f3cd5d94bbae8cc9c0eac9361eada0cd73194
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c752adc6ea3c97900956b64a026a5acd13899a98
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68124768"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771382"
 ---
 # <a name="spdropsubscription-transact-sql"></a>sp_dropsubscription (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Удаляет подписки на некоторую статью, публикацию или набор подписок на издателе. Эта хранимая процедура выполняется на издателе в базе данных публикации.  
   
@@ -42,23 +42,23 @@ sp_dropsubscription [ [ @publication= ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publication = ] 'publication'` — Имя связанной публикации. *Публикация* — **sysname**, значение по умолчанию NULL. Если **все**, все подписки для всех публикаций для указанного подписчика будут отменены. *Публикация* является обязательным параметром.  
+`[ @publication = ] 'publication'`Имя связанной публикации. Аргумент *publication* имеет тип **sysname**и значение по умолчанию NULL. Если задано значение **ALL**, то все подписки для всех публикаций указанного подписчика отменяются. параметр *publication* является обязательным.  
   
-`[ @article = ] 'article'` — Имя статьи. *статья* — **sysname**, со значением по умолчанию NULL. Если **все**, указанные подписки на все статьи для каждой публикации и подписчика будут удалены. Используйте **все** для публикаций, которые разрешено немедленное обновление.  
+`[ @article = ] 'article'`Имя статьи. Аргумент *article* имеет тип **sysname**и значение по умолчанию NULL. Если **все**, то подписки на все статьи для каждой указанной публикации и подписчика удаляются. Используйте **все** для публикаций, которые допускают немедленное обновление.  
   
-`[ @subscriber = ] 'subscribe_r'` Это имя подписчика, которого будут удалены все его подписки. *подписчик* — **sysname**, не имеет значения по умолчанию. Если **все**, удаляются все подписки для всех подписчиков.  
+`[ @subscriber = ] 'subscribe_r'`Имя подписчика, для которого будут удалены подписки. Аргумент *Subscriber* имеет тип **sysname**и не имеет значения по умолчанию. Если **все**, то все подписки для всех подписчиков удаляются.  
   
-`[ @destination_db = ] 'destination_db'` — Имя целевой базы данных. *destination_db* — **sysname**, значение по умолчанию NULL. Если имеет значение NULL, то все подписки от этого подписчика удаляются.  
+`[ @destination_db = ] 'destination_db'`Имя целевой базы данных. *destination_db* имеет тип **sysname**и значение по умолчанию NULL. Если имеет значение NULL, то все подписки от этого подписчика удаляются.  
   
 `[ @ignore_distributor = ] ignore_distributor` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 `[ @reserved = ] 'reserved'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- **0** (успешное завершение) или **1** (неуспешное завершение)  
+ **0** (успешное завершение) или **1** (сбой)  
   
 ## <a name="remarks"></a>Примечания  
- **sp_dropsubscription** используется в репликации моментальных снимков и репликации транзакций.  
+ **sp_dropsubscription** используется в моментальных снимках и репликации транзакций.  
   
  Если удаляется подписка на статью в публикации с немедленной синхронизацией, то нельзя добавить ее обратно до тех пор, пока не будут удалены подписки на все статьи в публикации и, затем, не добавлены все одновременно обратно.  
   
@@ -66,12 +66,12 @@ sp_dropsubscription [ [ @publication= ] 'publication' ]
  [!code-sql[HowTo#sp_droptransubscription](../../relational-databases/replication/codesnippet/tsql/sp-dropsubscription-tran_1.sql)]  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **sysadmin** предопределенной роли сервера, **db_owner** предопределенной роли базы данных, или пользователь, создавший подписку могут выполнять процедуру **sp_dropsubscription**.  
+ Только члены предопределенной роли сервера **sysadmin** , предопределенной роли базы данных **db_owner** или пользователь, создавший подписку, могут выполнять **sp_dropsubscription**.  
   
 ## <a name="see-also"></a>См. также  
  [Удаление принудительной подписки](../../relational-databases/replication/delete-a-push-subscription.md)   
- [sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   
- [sp_changesubstatus &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changesubstatus-transact-sql.md)   
- [sp_helpsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)  
+ [sp_addsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   
+ [sp_changesubstatus &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changesubstatus-transact-sql.md)   
+ [sp_helpsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)  
   
   

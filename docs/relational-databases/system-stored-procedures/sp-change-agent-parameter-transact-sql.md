@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: f1fbecc7-e64f-405c-8067-6b38c1f3c0a0
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 610d63df2bf3496abaed8682ac83a72883e184b7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cd737be5a1e71e46750f6c80fd68ad254cb6436f
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68045903"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768941"
 ---
 # <a name="spchangeagentparameter-transact-sql"></a>Хранимая процедура sp_change_agent_parameter (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  Изменения параметра профиля агента репликации хранятся в [MSagent_parameters](../../relational-databases/system-tables/msagent-parameters-transact-sql.md) системная таблица. Эта хранимая процедура выполняется на распространителе в любой базе данных с запущенным агентом.  
+  Изменяет параметр профиля агента репликации, хранящегося в системной таблице [MSagent_parameters](../../relational-databases/system-tables/msagent-parameters-transact-sql.md) . Эта хранимая процедура выполняется на распространителе в любой базе данных с запущенным агентом.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -37,14 +37,14 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @profile_id = ] profile_id,` — Идентификатор профиля. *profile_id* — **int**, не имеет значения по умолчанию.  
+`[ @profile_id = ] profile_id,`Идентификатор профиля. *profile_id* имеет **тип int**и не имеет значения по умолчанию.  
   
-`[ @parameter_name = ] 'parameter_name'` — Имя параметра. *имя_параметра* — **sysname**, не имеет значения по умолчанию. Для системных профилей параметры, которые могут быть изменены, зависят от типа агента. Чтобы узнать, какой тип агента, это *profile_id* представляет, найдите *profile_id* столбца в **Msagent_profiles** таблицы и запишите *agent_type*  значение.  
+`[ @parameter_name = ] 'parameter_name'`Имя параметра. *parameter_name* имеет тип **sysname**и не имеет значения по умолчанию. Для системных профилей параметры, которые могут быть изменены, зависят от типа агента. Чтобы узнать, какой тип агента представляет этот *profile_id* , найдите столбец *Profile_id* в таблице **Msagent_profiles** и запишите значение *agent_type* .  
   
 > [!NOTE]  
->  Если параметр поддерживается для данного *agent_type*, но не был определен в профиле агента, будет возвращена ошибка. Чтобы добавить параметр к профилю агента, необходимо выполнить [sp_add_agent_parameter](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md).  
+>  Если параметр поддерживается для данного *agent_type*, но он не был определен в профиле агента, возвращается ошибка. Чтобы добавить параметр в профиль агента, необходимо выполнить [sp_add_agent_parameter](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md).  
   
- Об агенте моментальных снимков (*agent_type*=**1**), если они определены в профиле, можно изменить следующие свойства:  
+ Для агент моментальных снимков (*agent_type*=**1**), если он определен в профиле, можно изменить следующие свойства:  
   
 -   **70Subscribers**  
   
@@ -56,9 +56,9 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **MaxBcpThreads**  
   
--   **MaxNetworkOptimization**  
+-   **MaxNetworkOptimization значение**  
   
--   **Выходные данные**  
+-   **Проверки**  
   
 -   **OutputVerboseLevel**  
   
@@ -68,9 +68,9 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **StartQueueTimeout**  
   
--   **UsePerArticleContentsView**  
+-   **усеперартиклеконтентсвиев**  
   
- Для агента чтения журнала (*agent_type*=**2**), если они определены в профиле, можно изменить следующие свойства:  
+ Для агент чтения журнала (*agent_type*=**2**), если он определен в профиле, можно изменить следующие свойства:  
   
 -   **HistoryVerboseLevel**  
   
@@ -78,7 +78,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **MessageInterval**  
   
--   **Выходные данные**  
+-   **Проверки**  
   
 -   **OutputVerboseLevel**  
   
@@ -90,21 +90,21 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **ReadBatchSize**  
   
--   **ReadBatchThreshold**  
+-   **реадбатчсрешолд**  
   
- Для агента распространителя (*agent_type*=**3**), если они определены в профиле, можно изменить следующие свойства:  
+ Для агент распространения (*agent_type*=**3**), если он определен в профиле, можно изменить следующие свойства:  
   
 -   **BcpBatchSize**  
   
 -   **CommitBatchSize**  
   
--   **CommitBatchThreshold**  
+-   **коммитбатчсрешолд**  
   
--   **FileTransferType**  
+-   **филетрансфертипе**  
   
 -   **HistoryVerboseLevel**  
   
--   **KeepAliveMessageInterval**  
+-   **кипаливемессажеинтервал**  
   
 -   **LoginTimeout**  
   
@@ -114,7 +114,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **MessageInterval**  
   
--   **Выходные данные**  
+-   **Проверки**  
   
 -   **OutputVerboseLevel**  
   
@@ -130,57 +130,57 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **TransactionsPerHistory**  
   
- Для агента слияния (*agent_type*=**4**), если они определены в профиле, можно изменить следующие свойства:  
+ Для агент слияния (*agent_type*=**4**), если он определен в профиле, можно изменить следующие свойства:  
   
 -   **AltSnapshotFolder**  
   
 -   **BcpBatchSize**  
   
--   **ChangesPerHistory**  
+-   **чанжесперхистори**  
   
--   **DestThreads**  
+-   **дестсреадс**  
   
 -   **DownloadGenerationsPerBatch**  
   
--   **DownloadReadChangesPerBatch**  
+-   **довнлоадреадчанжеспербатч**  
   
--   **DownloadWriteChangesPerBatch**  
+-   **довнлоадвритечанжеспербатч**  
   
 -   **DynamicSnapshotLocation**  
   
 -   **ExchangeType**  
   
--   **FastRowCount**  
+-   **фастровкаунт**  
   
--   **FileTransferType**  
+-   **филетрансфертипе**  
   
--   **GenerationChangeThreshold**  
+-   **женератиончанжесрешолд**  
   
 -   **HistoryVerboseLevel**  
   
--   **InputMessageFile**  
+-   **инпутмессажефиле**  
   
--   **InteractiveResolution**  
+-   **интерактивересолутион**  
   
 -   **InterruptOnMessagePattern**  
   
--   **KeepAliveMessageInterval**  
+-   **кипаливемессажеинтервал**  
   
 -   **LoginTimeout**  
   
 -   **MaxBcpThreads**  
   
--   **MaxDownloadChanges**  
+-   **максдовнлоадчанжес**  
   
--   **MaxUploadChanges**  
+-   **максуплоадчанжес**  
   
--   **MetadataRetentionCleanup**  
+-   **метадатаретентионклеануп**  
   
--   **NumDeadlockRetries**  
+-   **нумдеадлоккретриес**  
   
--   **Выходные данные**  
+-   **Проверки**  
   
--   **OutputMessageFile**  
+-   **аутпутмессажефиле**  
   
 -   **OutputVerboseLevel**  
   
@@ -188,9 +188,9 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **ParallelUploadDownload**  
   
--   **PauseOnMessagePattern**  
+-   **паусеонмессажепаттерн**  
   
--   **PauseTime**  
+-   **паусетиме**  
   
 -   **PollingInterval**  
   
@@ -200,33 +200,33 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **QueryTimeout**  
   
--   **QueueSizeMultiplier**  
+-   **куеуесиземултиплиер**  
   
--   **SrcThreads**  
+-   **срксреадс**  
   
 -   **StartQueueTimeout**  
   
--   **SyncToAlternate**  
+-   **синктоалтернате**  
   
 -   **UploadGenerationsPerBatch**  
   
 -   **UploadReadChangesPerBatch**  
   
--   **UploadWriteChangesPerBatch**  
+-   **уплоадвритечанжеспербатч**  
   
 -   **UseInprocLoader**  
   
 -   **Проверить**  
   
--   **ValidateInterval**  
+-   **валидатеинтервал**  
   
- Для агента чтения очереди (*agent_type*=**9**), если они определены в профиле, можно изменить следующие свойства:  
+ Для агент чтения очереди (*agent_type*=**9**), если он определен в профиле, можно изменить следующие свойства:  
   
 -   **HistoryVerboseLevel**  
   
 -   **LoginTimeout**  
   
--   **Выходные данные**  
+-   **Проверки**  
   
 -   **OutputVerboseLevel**  
   
@@ -234,22 +234,22 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **QueryTimeout**  
   
--   **ResolverState**  
+-   **ресолверстате**  
   
--   **SQLQueueMode**  
+-   **склкуеуемоде**  
   
- Чтобы узнать, какие параметры определены для данного профиля, выполните **sp_help_agent_profile** и обратите внимание, *profile_name* связанные с *profile_id*. С соответствующим *profile_id*, следующий запуск **sp_help_agent_parameters** , используя *profile_id* для просмотра параметров, связанных с профилем. Параметры могут добавляться к профилю, выполнив [sp_add_agent_parameter](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md).  
+ Чтобы узнать, какие параметры были определены для данного профиля, выполните **sp_help_agent_profile** и обратите внимание на *profile_name* , связанный с *profile_id*. Используя соответствующий *profile_id*, выполните следующую команду, **sp_help_agent_parameters** с помощью *profile_id* , чтобы просмотреть параметры, связанные с профилем. Параметры можно добавить в профиль, выполнив [sp_add_agent_parameter](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md).  
   
-`[ @parameter_value = ] 'parameter_value'` — Это новое значение параметра. *parameter_value* — **nvarchar(255)** , не имеет значения по умолчанию.  
+`[ @parameter_value = ] 'parameter_value'`Новое значение параметра. *parameter_value* имеет тип **nvarchar (255)** и не имеет значения по умолчанию.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- **0** (успешное завершение) или **1** (неуспешное завершение)  
+ **0** (успешное завершение) или **1** (сбой)  
   
 ## <a name="remarks"></a>Примечания  
  **sp_change_agent_parameter** используется во всех типах репликации.  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **sysadmin** предопределенной роли сервера могут выполнять процедуру **sp_change_agent_parameter**.  
+ Только члены предопределенной роли сервера **sysadmin** могут выполнять **sp_change_agent_parameter**.  
   
 ## <a name="see-also"></a>См. также  
  [Профили агента репликации](../../relational-databases/replication/agents/replication-agent-profiles.md)   
@@ -258,9 +258,9 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
  [Агент слияния репликации](../../relational-databases/replication/agents/replication-merge-agent.md)   
  [Агент чтения очереди репликации](../../relational-databases/replication/agents/replication-queue-reader-agent.md)   
  [Replication Snapshot Agent](../../relational-databases/replication/agents/replication-snapshot-agent.md)   
- [sp_add_agent_parameter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md)   
- [sp_drop_agent_parameter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-drop-agent-parameter-transact-sql.md)   
- [sp_help_agent_parameter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-agent-parameter-transact-sql.md)   
+ [sp_add_agent_parameter &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md)   
+ [sp_drop_agent_parameter &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-drop-agent-parameter-transact-sql.md)   
+ [sp_help_agent_parameter &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-agent-parameter-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

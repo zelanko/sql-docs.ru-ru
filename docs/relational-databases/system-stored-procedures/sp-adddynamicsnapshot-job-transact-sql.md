@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: ef50ccf6-e360-4e4b-91b9-6706b8fabefa
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: d725b9cbec3d00bf8536954caf423edeae628764
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 48f94f7fcf823a9ed9acc519e393369e44b45302
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68072744"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771345"
 ---
 # <a name="spadddynamicsnapshotjob-transact-sql"></a>Хранимая процедура sp_adddynamicsnapshot_job (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Создает задание агента, которое формирует моментальный снимок отфильтрованных данных для публикации с параметризированными фильтрами строк. Эта хранимая процедура выполняется на издателе в базе данных публикации. Эта хранимая процедура используется администратором, чтобы вручную создавать задания моментальных снимков отфильтрованных данных для подписчиков.  
   
@@ -56,13 +56,13 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publication = ] 'publication'` — Имя публикации, к которой требуется добавить задание моментального снимка отфильтрованных данных. *Публикация* — **sysname**, не имеет значения по умолчанию.  
+`[ @publication = ] 'publication'`Имя публикации, в которую добавляется задание моментального снимка отфильтрованных данных. Аргумент *publication* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @suser_sname = ] 'suser_sname'` Значение, используемое во время создания моментального снимка отфильтрованных данных для подписки, отсортированной по значению [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md) на стороне подписчика. *SUSER_SNAME* — **sysname**, не имеет значения по умолчанию. *SUSER_SNAME* должен иметь значение NULL, если эта функция не используется для динамической фильтрации публикации.  
+`[ @suser_sname = ] 'suser_sname'`Значение, используемое при создании моментального снимка отфильтрованных данных для подписки, которая фильтруется по значению функции [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md) на подписчике. *SUSER_SNAME* имеет тип **sysname**и не имеет значения по умолчанию. значение *SUSER_SNAME* должно быть равно null, если эта функция не используется для динамической фильтрации публикации.  
   
-`[ @host_name = ] 'host_name'` Значение, используемое во время создания моментального снимка отфильтрованных данных для подписки, отсортированной по значению [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) на стороне подписчика. *HOST_NAME* — **sysname**, не имеет значения по умолчанию. *HOST_NAME* должен иметь значение NULL, если эта функция не используется для динамической фильтрации публикации.  
+`[ @host_name = ] 'host_name'`Значение, используемое при создании моментального снимка отфильтрованных данных для подписки, которая фильтруется по значению функции [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) на подписчике. *HOST_NAME* имеет тип **sysname**и не имеет значения по умолчанию. *HOST_NAME* должен иметь значение null, если эта функция не используется для динамической фильтрации публикации.  
   
-`[ @dynamic_snapshot_jobname = ] 'dynamic_snapshot_jobname'` — Имя созданного задания моментального снимка отфильтрованных данных. *dynamic_snapshot_jobname* — **sysname**, по умолчанию NULL, и является необязательным ВЫХОДНЫМ параметром. Если указано, *dynamic_snapshot_jobname* должно разрешаться к созданию уникального задания на распространителе. Если аргумент не указан, имя задания будет автоматически сформировано и возвращено в результирующем наборе, причем имя создается следующим образом:  
+`[ @dynamic_snapshot_jobname = ] 'dynamic_snapshot_jobname'`Имя созданного задания моментального снимка отфильтрованных данных. *dynamic_snapshot_jobname* имеет тип **sysname**, значение по умолчанию NULL и является необязательным выходным параметром. Если указано, *dynamic_snapshot_jobname* должен разрешаться в уникальное задание на распространителе. Если аргумент не указан, имя задания будет автоматически сформировано и возвращено в результирующем наборе, причем имя создается следующим образом:  
   
 ```  
 'dyn_' + <name of the standard snapshot job> + <GUID>  
@@ -71,9 +71,9 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
 > [!NOTE]  
 >  При формировании имени для задания динамического моментального снимка можно усекать имя стандартного задания моментальных снимков.  
   
-`[ @dynamic_snapshot_jobid = ] 'dynamic_snapshot_jobid'` — Это идентификатор созданного задания моментального снимка отфильтрованных данных. *dynamic_snapshot_jobid* — **uniqueidentifier**, по умолчанию NULL, и является необязательным ВЫХОДНЫМ параметром.  
+`[ @dynamic_snapshot_jobid = ] 'dynamic_snapshot_jobid'`Идентификатор созданного задания моментального снимка отфильтрованных данных. *dynamic_snapshot_jobid* имеет тип **uniqueidentifier**, значение по умолчанию NULL и является необязательным выходным параметром.  
   
-`[ @frequency_type = ] frequency_type` Это частота, с которой необходимо планировать задания моментального снимка отфильтрованных данных. *frequency_type* — **int**, и может принимать одно из следующих значений.  
+`[ @frequency_type = ] frequency_type`Частота, с которой следует запланировать задание моментального снимка отфильтрованных данных. Аргумент *frequency_type* имеет **тип int**и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -86,19 +86,19 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
 |**64**|Автозапуск|  
 |**128**|Повторяющееся задание|  
   
-`[ @frequency_interval = ] frequency_interval` — Это период (в днях), когда выполняется задание моментального снимка отфильтрованных данных. *frequency_interval* — **int**, со значением по умолчанию 1 и зависит от значения *frequency_type*.  
+`[ @frequency_interval = ] frequency_interval`Период (измеряется в днях) при выполнении задания моментального снимка отфильтрованных данных. *frequency_interval* имеет **тип int**, значение по умолчанию 1 и зависит от значения *frequency_type*.  
   
-|Значение атрибута *frequency_type*|Воздействие на *frequency_interval*|  
+|Значение *frequency_type*|Воздействие на *frequency_interval*|  
 |--------------------------------|-------------------------------------|  
 |**1**|*frequency_interval* не используется.|  
-|**4** (по умолчанию)|Каждый *frequency_interval* дней, по умолчанию ежедневно.|  
-|**8**|*frequency_interval* равно одному или нескольким из следующих (в сочетании с [ &#124; &#40;побитовое или&#41; &#40;Transact-SQL&#41; ](../../t-sql/language-elements/bitwise-or-transact-sql.md) логический оператор):<br /><br /> **1** = воскресенье &#124; **2** = понедельник &#124; **4** = вторник &#124; **8** = среда &#124; **16** = Четверг &#124; **32** = пятница &#124; **64** = суббота|  
-|**16**|На *frequency_interval* день месяца.|  
-|**32**|*frequency_interval* является одним из следующих:<br /><br /> **1** = воскресенье &#124; **2** = понедельник &#124; **3** = вторник &#124; **4** = среда &#124; **5** = Четверг &#124; **6** = пятница &#124; **7** = суббота &#124; **8** = день &#124; **9** = рабочий день &#124; **10** = выходной день|  
+|**4** (по умолчанию)|Каждые *frequency_interval* дней и по умолчанию ежедневно.|  
+|**8**|*frequency_interval* является одним или несколькими следующими (в сочетании с [ &#124; &#40;логическим оператором OR&#41; &#40;логического оператора Transact&#41; -SQL](../../t-sql/language-elements/bitwise-or-transact-sql.md) ):<br /><br /> **1** = воскресенье &#124; **2** = понедельник &#124; **4** = вторник &#124; **8** = среда &#124; **16** = четверг &#124; **32** = Пятница &#124; **64** = Суббота|  
+|**16**|В *frequency_interval* день месяца.|  
+|**32**|*frequency_interval* является одним из следующих:<br /><br /> **1** = воскресенье &#124; **2** = понедельник &#124; **3** = вторник &#124; **4** = среда &#124; **5** = четверг &#124; **6** = Пятница &#124; **7** = Суббота &#124; **8** = день &#124; **9** = день &#124; недели **10** = выходной день|  
 |**64**|*frequency_interval* не используется.|  
 |**128**|*frequency_interval* не используется.|  
   
-`[ @frequency_subday = ] frequency_subday` Указывает единицы измерения для *frequency_subday_interval*. *frequency_subday* — **int**, и может принимать одно из следующих значений.  
+`[ @frequency_subday = ] frequency_subday`Указывает единицы измерения для *frequency_subday_interval*. *frequency_subday* имеет **тип int**и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -107,9 +107,9 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
 |**4** (по умолчанию)|Минута|  
 |**8**|Час|  
   
-`[ @frequency_subday_interval = ] frequency_subday_interval` Число *frequency_subday* периодов, которые пройти между выполнениями задания. *frequency_subday_interval* — **int**, значение по умолчанию 5.  
+`[ @frequency_subday_interval = ] frequency_subday_interval`Число *frequency_subday* периодов между выполнением задания. *frequency_subday_interval* имеет **тип int**и значение по умолчанию 5.  
   
-`[ @frequency_relative_interval = ] frequency_relative_interval` — Дело задания моментального снимка отфильтрованных данных в каждом месяце. Этот параметр используется при *frequency_type* присваивается **32** (относительно ежемесячно). *frequency_relative_interval* — **int**, и может принимать одно из следующих значений.  
+`[ @frequency_relative_interval = ] frequency_relative_interval`— Это вхождение задания моментального снимка отфильтрованных данных в каждый месяц. Этот параметр используется, если аргумент *frequency_type* имеет значение **32** (ежемесячное относительное). *frequency_relative_interval* имеет **тип int**и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -119,21 +119,21 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
 |**8**|Четвертая|  
 |**16**|Последняя|  
   
-`[ @frequency_recurrence_factor = ] frequency_recurrence_factor` Коэффициент повторения, используемый аргументом *frequency_type*. *frequency_recurrence_factor* — **int**, значение по умолчанию 0.  
+`[ @frequency_recurrence_factor = ] frequency_recurrence_factor`Коэффициент повторения, используемый в *frequency_type*. *frequency_recurrence_factor* имеет **тип int**и значение по умолчанию 0.  
   
-`[ @active_start_date = ] active_start_date` Дата первого запуска задания моментального снимка отфильтрованных данных запланировано, в формате ГГГГММДД. *active_start_date* — **int**, значение по умолчанию NULL.  
+`[ @active_start_date = ] active_start_date`Дата первого запланированного задания моментального снимка отфильтрованных данных в формате ГГГГММДД. *active_start_date* имеет **тип int**и значение по умолчанию NULL.  
   
-`[ @active_end_date = ] active_end_date` Дата, когда выполнение задачи моментальных снимков отфильтрованных данных запланировано, в формате ГГГГММДД. *active_end_date* — **int**, значение по умолчанию NULL.  
+`[ @active_end_date = ] active_end_date`Дата окончания запланированного задания моментального снимка отфильтрованных данных в формате ГГГГММДД. *active_end_date* имеет **тип int**и значение по умолчанию NULL.  
   
-`[ @active_start_time_of_day = ] active_start_time_of_day` — Время суток, когда задания моментальных снимков отфильтрованных данных запланирован первый запуск, в формате ЧЧММСС. *active_start_time_of_day* — **int**, значение по умолчанию NULL.  
+`[ @active_start_time_of_day = ] active_start_time_of_day`Время суток, на которое запланировано первое выполнение задания моментального снимка отфильтрованных данных, в формате ЧЧММСС. *active_start_time_of_day* имеет **тип int**и значение по умолчанию NULL.  
   
-`[ @active_end_time_of_day = ] active_end_time_of_day` Время суток, когда выполнение задачи моментальных снимков отфильтрованных данных запланировано, в формате ЧЧММСС. *active_end_time_of_day* — **int**, значение по умолчанию NULL.  
+`[ @active_end_time_of_day = ] active_end_time_of_day`Время суток, когда запланировано выполнение задания моментальных снимков отфильтрованных данных в формате ЧЧММСС. *active_end_time_of_day* имеет **тип int**и значение по умолчанию NULL.  
   
 ## <a name="result-set"></a>Результирующий набор  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**идентификатор**|**int**|Определяет задание моментального снимка отфильтрованных данных в [MSdynamicsnapshotjobs](../../relational-databases/system-tables/msdynamicsnapshotjobs-transact-sql.md) системная таблица.|  
+|**идентификатор**|**int**|Определяет задание моментального снимка отфильтрованных данных в системной таблице [мсдинамикснапшотжобс](../../relational-databases/system-tables/msdynamicsnapshotjobs-transact-sql.md) .|  
 |**dynamic_snapshot_jobname**|**sysname**|Имя задания моментального снимка фильтрованных данных.|  
 |**dynamic_snapshot_jobid**|**uniqueidentifier**|Уникально идентифицирует [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] задание агента на распространителе.|  
   
@@ -147,12 +147,12 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
  [!code-sql[HowTo#sp_MergeDynamicPubPlusPartition](../../relational-databases/replication/codesnippet/tsql/sp-adddynamicsnapshot-jo_1.sql)]  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **sysadmin** предопределенной роли сервера или **db_owner** предопределенной роли базы данных могут выполнять процедуру **sp_adddynamicsnapshot_job**.  
+ Только члены предопределенной роли сервера **sysadmin** или предопределенной роли базы данных **db_owner** могут выполнять **sp_adddynamicsnapshot_job**.  
   
 ## <a name="see-also"></a>См. также  
- [Создать моментальный снимок для публикации слиянием с параметризованными фильтрами](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)   
+ [Создание моментального снимка для публикации слиянием с параметризованными фильтрами](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)   
  [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)   
- [sp_dropdynamicsnapshot_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdynamicsnapshot-job-transact-sql.md)   
- [sp_helpdynamicsnapshot_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdynamicsnapshot-job-transact-sql.md)  
+ [sp_dropdynamicsnapshot_job &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdynamicsnapshot-job-transact-sql.md)   
+ [sp_helpdynamicsnapshot_job &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdynamicsnapshot-job-transact-sql.md)  
   
   

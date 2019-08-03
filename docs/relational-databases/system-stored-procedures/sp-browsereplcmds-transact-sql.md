@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 30abcb41-1d18-4f43-a692-4c80914c0450
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: b29ee604f1b584fcbdcd0ef91e32c84d89cc5f96
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d049a5e96d9c7212467595aa70cd44db727bdf6e
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68045989"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769000"
 ---
 # <a name="spbrowsereplcmds-transact-sql"></a>sp_browsereplcmds (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Возвращает в пригодной для чтения версии результирующий набор реплицируемых команд, хранящихся в базе данных распространителя, и используется как инструмент диагностики. Эта хранимая процедура выполняется на распространителе в базе данных распространителя.  
   
@@ -44,39 +44,39 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @xact_seqno_start = ] 'xact_seqno_start'` Указывает минимально значениями точный порядковый номер для возврата. *xact_seqno_start* — **nchar(22)** , значение по умолчанию 0x00000000000000000000.  
+`[ @xact_seqno_start = ] 'xact_seqno_start'`Указывает самый точный порядковый номер, который необходимо вернуть. *xact_seqno_start* имеет тип **nchar (22)** и значение по умолчанию 0x00000000000000000000.  
   
-`[ @xact_seqno_end = ] 'xact_seqno_end'` Указывает наибольший точный порядковый номер для возврата. *xact_seqno_end* — **nchar(22)** , значение по умолчанию 0xFFFFFFFFFFFFFFFFFFFF.  
+`[ @xact_seqno_end = ] 'xact_seqno_end'`Задает наибольший точный порядковый номер для возврата. *xact_seqno_end* имеет тип **nchar (22)** и значение по умолчанию 0xFFFFFFFFFFFFFFFFFFFF.  
   
-`[ @originator_id = ] 'originator_id'` Указывает, если команды с указанным *originator_id* возвращаются. *originator_id* — **int**, значение по умолчанию NULL.  
+`[ @originator_id = ] 'originator_id'`Указывает, возвращаются ли команды с указанным *originator_id* . *originator_id* имеет **тип int**и значение по умолчанию NULL.  
   
-`[ @publisher_database_id = ] 'publisher_database_id'` Указывает, если команды с указанным *publisher_database_id* возвращаются. *publisher_database_id* — **int**, значение по умолчанию NULL.  
+`[ @publisher_database_id = ] 'publisher_database_id'`Указывает, возвращаются ли команды с указанным *publisher_database_id* . *publisher_database_id* имеет **тип int**и значение по умолчанию NULL.  
   
-`[ @article_id = ] 'article_id'` Указывает, если команды с указанным *article_id* возвращаются. *article_id* — **int**, значение по умолчанию NULL.  
+`[ @article_id = ] 'article_id'`Указывает, возвращаются ли команды с указанным *article_id* . *article_id* имеет **тип int**и значение по умолчанию NULL.  
   
-`[ @command_id = ] command_id` — Это расположение команды в [MSrepl_commands &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/msrepl-commands-transact-sql.md) для декодирования. *command_id* — **int**, значение по умолчанию NULL. Если указан, все остальные параметры должны быть указаны также и *xact_seqno_start*должен быть идентичен *xact_seqno_end*.  
+`[ @command_id = ] command_id`— Это расположение команды в [MSrepl_commands &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/msrepl-commands-transact-sql.md) для декодирования. *command_id* имеет **тип int**и значение по умолчанию NULL. Если указано, необходимо также указать все остальные параметры, а *xact_seqno_start*должен быть идентичен *xact_seqno_end*.  
   
-`[ @agent_id = ] agent_id` Указывает, что возвращены только команды для конкретного агента репликации. *agent_id* — **int**, со значением по умолчанию NULL.  
+`[ @agent_id = ] agent_id`Указывает, что возвращаются только команды для конкретного агента репликации. *agent_id* имеет **тип int**и значение по умолчанию NULL.  
   
-`[ @compatibility_level = ] compatibility_level` — Это версия [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на котором *compatibility_level* — **int**, со значением по умолчанию 9000000.  
+`[ @compatibility_level = ] compatibility_level`Версия [!INCLUDE[msCoName](../../includes/msconame-md.md)] , для которой COMPATIBILITY_LEVEL имеет **тип int**и значение по умолчанию 9000000. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- **0** (успешное завершение) или **1** (неуспешное завершение)  
+ **0** (успешное завершение) или **1** (сбой)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**xact_seqno**|**varbinary(16)**|Последовательный номер команды.|  
+|**xact_seqno**|**varbinary (16)**|Последовательный номер команды.|  
 |**originator_srvname**|**sysname**|Сервер, на котором была начата транзакция.|  
 |**originator_db**|**sysname**|База данных, в которой была начата транзакция.|  
 |**article_id**|**int**|Идентификатор статьи.|  
 |**type**|**int**|Тип команды.|  
 |**partial_command**|**bit**|Обозначает, является ли эта команда частичной.|  
-|**hashKey**|**int**|Только для внутреннего применения.|  
+|**хашкэй**|**int**|Только для внутреннего применения.|  
 |**originator_publication_id**|**int**|Идентификатор публикации, в которой началась транзакция.|  
 |**originator_db_version**|**int**|Версия базы данных, в которой началась транзакция.|  
-|**originator_lsn**|**varbinary(16)**|Указывает регистрационный номер транзакции в журнале (номер LSN) для команды в порождающей публикации. Используется для одноранговой репликации транзакций.|  
+|**originator_lsn**|**varbinary (16)**|Указывает регистрационный номер транзакции в журнале (номер LSN) для команды в порождающей публикации. Используется для одноранговой репликации транзакций.|  
 |**команда**|**nvarchar(1024)**|Команда языка [!INCLUDE[tsql](../../includes/tsql-md.md)].|  
 |**command_id**|**int**|Идентификатор команды в [MSrepl_commands](../../relational-databases/system-tables/msrepl-commands-transact-sql.md).|  
   
@@ -86,11 +86,11 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
  **sp_browsereplcmds** используется в репликации транзакций.  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **sysadmin** предопределенной роли сервера или членами **db_owner** или **replmonitor** предопределенных ролей базы данных в базе данных распространителя могут выполнять процедуру **sp_browsereplcmds**.  
+ Только члены предопределенной роли сервера **sysadmin** или члены предопределенных ролей **db_owner** или **replmonitor** базы данных в базе данных распространителя могут выполнять **sp_browsereplcmds**.  
   
 ## <a name="see-also"></a>См. также  
  [sp_replcmds (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)   
- [sp_replshowcmds &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replshowcmds-transact-sql.md)   
+ [sp_replshowcmds &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replshowcmds-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

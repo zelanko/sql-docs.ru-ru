@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: e73acf8d-0be8-4197-ba11-fe798d0e2820
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 46aeaafce338d3ffdb9b6d4cb3d827fbbefde82d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c49a710b25bad0cf36115afadc439cbe793981c3
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68045842"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768922"
 ---
 # <a name="spchangeagentprofile-transact-sql"></a>sp_change_agent_profile (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  Изменения параметра профиля агента репликации хранятся в [MSagent_profiles &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/msagent-profiles-transact-sql.md) таблицы. Эта хранимая процедура выполняется на распространителе в любой базе данных.  
+  Изменяет параметр профиля агента репликации, хранящегося в таблице [Transact- &#40;SQL&#41; MSagent_profiles](../../relational-databases/system-tables/msagent-profiles-transact-sql.md) . Эта хранимая процедура выполняется на распространителе в любой базе данных.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -39,11 +39,11 @@ sp_change_agent_profile [ @profile_id = ] profile_id
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @profile_id = ] profile_id` — Идентификатор профиля. *profile_id* — **int**, не имеет значения по умолчанию.  
+`[ @profile_id = ] profile_id`Идентификатор профиля. *profile_id* имеет **тип int**и не имеет значения по умолчанию.  
   
-`[ @property = ] 'property'` — Имя свойства. *Свойство* — **sysname**, не имеет значения по умолчанию.  
+`[ @property = ] 'property'`Имя свойства. Аргумент *Property* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @value = ] 'value'` — Это новое значение свойства. *значение* — **nvarchar(3000)** , не имеет значения по умолчанию.  
+`[ @value = ] 'value'`Новое значение свойства. *value* имеет тип **nvarchar (3000)** и не имеет значения по умолчанию.  
   
  В приведенной ниже таблице описаны изменяемые свойства.  
   
@@ -52,18 +52,18 @@ sp_change_agent_profile [ @profile_id = ] profile_id
 |**description**|Описание профиля.|  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- **0** (успешное завершение) или **1** (неуспешное завершение)  
+ **0** (успешное завершение) или **1** (сбой)  
   
 ## <a name="remarks"></a>Примечания  
  **sp_change_agent_profile** используется во всех типах репликации.  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **sysadmin** предопределенной роли сервера могут выполнять процедуру **sp_change_agent_profile**.  
+ Только члены предопределенной роли сервера **sysadmin** могут выполнять **sp_change_agent_profile**.  
   
 ## <a name="see-also"></a>См. также  
- [sp_add_agent_profile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-agent-profile-transact-sql.md)   
- [sp_drop_agent_profile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-drop-agent-profile-transact-sql.md)   
- [sp_help_agent_profile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql.md)   
+ [sp_add_agent_profile &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-agent-profile-transact-sql.md)   
+ [sp_drop_agent_profile &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-drop-agent-profile-transact-sql.md)   
+ [sp_help_agent_profile &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

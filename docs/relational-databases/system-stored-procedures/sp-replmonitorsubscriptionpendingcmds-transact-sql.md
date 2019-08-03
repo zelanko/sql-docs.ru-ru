@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: df5b955a-feb0-4863-9b3b-7f71e9653b3d
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 7e6def32ab27560f68902470d0b7add715de665d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6059c4834c37c3c61227fdaf3c9ea3c94e1b5b9a
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68090013"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68770898"
 ---
 # <a name="spreplmonitorsubscriptionpendingcmds-transact-sql"></a>sp_replmonitorsubscriptionpendingcmds (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Возвращает сведения о количестве ожидающих выполнения команд для подписки на публикацию транзакциями и грубую оценку времени, требуемого для их выполнения. Эта хранимая процедура возвращает одну строку для каждой возвращенной подписки. Эта хранимая процедура, используемая для наблюдения за репликацией, выполняется на распространителе в базе данных распространителя.  
   
@@ -42,17 +42,17 @@ sp_replmonitorsubscriptionpendingcmds [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publisher = ] 'publisher'` — Имя издателя. *издатель* — **sysname**, не имеет значения по умолчанию.  
+`[ @publisher = ] 'publisher'`Имя издателя. параметр *Publisher* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @publisher_db = ] 'publisher_db'` — Имя опубликованной базы данных. *publisher_db* — **sysname**, не имеет значения по умолчанию.  
+`[ @publisher_db = ] 'publisher_db'`Имя опубликованной базы данных. *publisher_db* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @publication = ] 'publication'` — Имя публикации. *Публикация* — **sysname**, не имеет значения по умолчанию.  
+`[ @publication = ] 'publication'`Имя публикации. Аргумент *publication* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @subscriber = ] 'subscriber'` — Имя подписчика. *подписчик* — **sysname**, не имеет значения по умолчанию.  
+`[ @subscriber = ] 'subscriber'`Имя подписчика. Аргумент *Subscriber* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @subscriber_db = ] 'subscriber_db'` — Имя базы данных подписки. *subscriber_db* — **sysname**, не имеет значения по умолчанию.  
+`[ @subscriber_db = ] 'subscriber_db'`Имя базы данных подписки. *subscriber_db* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @subscription_type = ] subscription_type` Если тип подписки. *publication_type* — **int**, по умолчанию и может принимать одно из следующих значений.  
+`[ @subscription_type = ] subscription_type`Тип подписки. *publication_type* имеет **тип int**, не имеет значения по умолчанию и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -63,17 +63,17 @@ sp_replmonitorsubscriptionpendingcmds [ @publisher = ] 'publisher'
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**pendingcmdcount**|**int**|Число команд для подписки, ожидающих завершения|  
-|**estimatedprocesstime**|**int**|Примерное количество секунд, необходимых для доставки всех ожидающих команд подписчику.|  
+|**пендингкмдкаунт**|**int**|Число команд для подписки, ожидающих завершения|  
+|**естиматедпроцесстиме**|**int**|Примерное количество секунд, необходимых для доставки всех ожидающих команд подписчику.|  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- **0** (успешное завершение) или **1** (неуспешное завершение)  
+ **0** (успешное завершение) или **1** (сбой)  
   
 ## <a name="remarks"></a>Примечания  
  **sp_replmonitorsubscriptionpendingcmds** используется с репликацией транзакций.  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **sysadmin** предопределенной роли сервера на распространителе или члены **db_owner** предопределенной роли базы данных в базе данных распространителя могут выполнять процедуру **sp_ replmonitorsubscriptionpendingcmds**. Список членов, доступа к публикации, для публикации, использующей базу данных распространителя могут выполнять процедуру **sp_replmonitorsubscriptionpendingcmds** чтобы вернуть ожидающие выполнения команды для данной публикации.  
+ Только члены предопределенной роли сервера **sysadmin** на распространителе или члены предопределенной роли базы данных **db_owner** в базе данных распространителя могут выполнять **sp_replmonitorsubscriptionpendingcmds**. Члены списка доступа к публикации для публикации, использующей базу данных распространителя, могут выполнять **sp_replmonitorsubscriptionpendingcmds** для возврата ожидающих команд для этой публикации.  
   
 ## <a name="see-also"></a>См. также  
  [Наблюдение за репликацией программным образом](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  

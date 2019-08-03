@@ -26,15 +26,15 @@ helpviewer_keywords:
 ms.assetid: dd7760db-a3a5-460f-bd97-b8d436015e19
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 59011e56766d46f768e579a21207dde2ecf84be5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 82b333095adfaf50220e5d2392114e3ab74bf822
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67905281"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771290"
 ---
 # <a name="spcheckdynamicfilters-transact-sql"></a>sp_check_dynamic_filters (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Отображает сведения о свойствах параметризованного фильтра строк для публикации, в частности о функциях, использованных для формирования отфильтрованной секции данных публикации, а также о том, предоставлено ли публикации право на использование предварительно вычисляемых секций. Эта хранимая процедура выполняется на издателе в базе данных публикации.  
   
@@ -48,35 +48,35 @@ sp_check_dynamic_filters [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publication = ] 'publication'` — Имя публикации. *Публикация* — **sysname**, не имеет значения по умолчанию.  
+`[ @publication = ] 'publication'`Имя публикации. Аргумент *publication* имеет тип **sysname**и не имеет значения по умолчанию.  
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**can_use_partition_groups**|**bit**|— Если публикации предоставлено право использования предварительно вычисляемых секций; где **1** означает, что предварительно вычисляемые секции могут быть использованы, и **0** означает, что они не могут использоваться.|  
-|**has_dynamic_filters**|**bit**|— Если хотя бы один параметризованный фильтр строк был определен в публикации; где **1** означает, что существует один или несколько параметризованных фильтров строк, и **0** означает, что существует нет динамических фильтров.|  
-|**dynamic_filters_function_list**|**nvarchar(500)**|Список разделенных точкой с запятой функций, которые использованы для фильтрации статей в публикации.|  
-|**validate_subscriber_info**|**nvarchar(500)**|Список функций, разделенных знаком «плюс» (+), которые использованы для фильтрации статей в публикации.|  
-|**uses_host_name**|**bit**|Если [HOST_NAME()](../../t-sql/functions/host-name-transact-sql.md) функция используется в параметризованном фильтре строк, где **1** означает, что эта функция используется для динамической фильтрации.|  
-|**uses_suser_sname**|**bit**|Если [SUSER_SNAME()](../../t-sql/functions/suser-sname-transact-sql.md) функция используется в параметризованном фильтре строк, где **1** означает, что эта функция используется для динамической фильтрации.|  
+|**can_use_partition_groups**|**bit**|Имеет значение, если публикация предназначена для использования предварительно вычисленных секций; значение **1** означает, что можно использовать предварительно вычисленные секции, а **0** означает, что их нельзя использовать.|  
+|**has_dynamic_filters**|**bit**|Имеет значение, если в публикации определен хотя бы один параметризованный фильтр строк; где **1** означает, что один или несколько фильтров параметризованных строк существуют, а значение **0** означает, что динамические фильтры не существуют.|  
+|**dynamic_filters_function_list**|**nvarchar (500)**|Список разделенных точкой с запятой функций, которые использованы для фильтрации статей в публикации.|  
+|**validate_subscriber_info**|**nvarchar (500)**|Список функций, разделенных знаком «плюс» (+), которые использованы для фильтрации статей в публикации.|  
+|**uses_host_name**|**bit**|Если функция [HOST_NAME ()](../../t-sql/functions/host-name-transact-sql.md) используется в параметризованных фильтрах строк, где **1** означает, что эта функция используется для динамической фильтрации.|  
+|**uses_suser_sname**|**bit**|Если функция [SUSER_SNAME ()](../../t-sql/functions/suser-sname-transact-sql.md) используется в параметризованных фильтрах строк, где **1** означает, что эта функция используется для динамической фильтрации.|  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- **0** (успешное завершение) или **1** (неуспешное завершение)  
+ **0** (успешное завершение) или **1** (сбой)  
   
 ## <a name="remarks"></a>Примечания  
  **sp_check_dynamic_filters** используется в репликации слиянием.  
   
- Если публикации было предусмотрено использование предварительно вычисляемых секций **sp_check_dynamic_filters** выявляет нарушения ограничений для предварительно вычисляемых секций. При обнаружении нарушений возвращается ошибка. Дополнительные сведения см. в статье [Оптимизация производительности параметризованного фильтра с помощью предварительно вычисляемых секций](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md).  
+ Если публикация была определена для использования предварительно вычисленных секций, **sp_check_dynamic_filters** проверяет наличие нарушений ограничений предварительно вычисленных секций. При обнаружении нарушений возвращается ошибка. Дополнительные сведения см. в статье [Оптимизация производительности параметризованного фильтра с помощью предварительно вычисляемых секций](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md).  
   
  Если в определении публикации было предусмотрено использование параметризованных фильтров строк, но ни одного фильтра не обнаружено, возвращается ошибка.  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **sysadmin** предопределенной роли сервера или **db_owner** предопределенной роли базы данных могут выполнять процедуру **sp_check_dynamic_filters**.  
+ Только члены предопределенной роли сервера **sysadmin** или предопределенной роли базы данных **db_owner** могут выполнять **sp_check_dynamic_filters**.  
   
 ## <a name="see-also"></a>См. также  
  [Управление секциями для публикации слиянием с параметризованными фильтрами](../../relational-databases/replication/publish/manage-partitions-for-a-merge-publication-with-parameterized-filters.md)   
- [sp_check_join_filter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-check-join-filter-transact-sql.md)   
- [sp_check_subset_filter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-check-subset-filter-transact-sql.md)  
+ [sp_check_join_filter &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-check-join-filter-transact-sql.md)   
+ [sp_check_subset_filter &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-check-subset-filter-transact-sql.md)  
   
   

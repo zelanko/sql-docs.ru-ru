@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 06be2363-00c0-4936-97c1-7347f294a936
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: c7e6323c8a20aec7d464f7aa6f11a27fc24728d3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4b1522a64d43256660966341ebe43f8d4ac4e0be
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67896622"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771165"
 ---
 # <a name="sppublicationvalidation-transact-sql"></a>sp_publication_validation (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Запускает запрос на проверку правильности всех статей в указанной публикации. Эта хранимая процедура выполняется на издателе в базе данных публикации.  
   
@@ -41,51 +41,51 @@ sp_publication_validation [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ **@publication=** ] **"** _публикации"_  
- Имя публикации. *Публикация* — **sysname**, не имеет значения по умолчанию.  
+ **[@publication=** ] **"** _Публикация"_  
+ Имя публикации. Аргумент *publication* имеет тип **sysname**и не имеет значения по умолчанию.  
   
- [ **@rowcount_only=** ] *rowcount_only*  
- Указывает, возвращать ли только количество строк таблицы. *rowcount_only* — **smallint** и может принимать одно из следующих значений.  
+ **[@rowcount_only=** ] *rowcount_only*  
+ Указывает, возвращать ли только количество строк таблицы. *rowcount_only* имеет значение **smallint** и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
-|**0**|Рассчитать контрольную сумму в формате [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0.<br /><br /> Примечание. Если статья отфильтрована горизонтально, вместо операцию вычисления контрольной суммы выполняется операция подсчета строк.|  
+|**0**|Рассчитать контрольную сумму в формате [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0.<br /><br /> Примечание. Когда статья фильтруется по горизонтали, вместо операции контрольной суммы выполняется операция ROWCOUNT.|  
 |**1** (по умолчанию)|Выполнить проверку только количества строк.|  
-|**2**|Выполнить проверку количества строк и двоичной контрольной суммы.<br /><br /> Примечание. Для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняется подписчиков версии 7.0, только проверка количества строк.|  
+|**2**|Выполнить проверку количества строк и двоичной контрольной суммы.<br /><br /> Примечание. Для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] подписчиков версии 7,0 выполняется только проверка количества строк.|  
   
- [ **@full_or_fast=** ] *full_or_fast*  
- Метод, применяемый для подсчета числа строк. *full_or_fast* — **tinyint** и может принимать одно из следующих значений.  
+ **[@full_or_fast=** ] *full_or_fast*  
+ Метод, применяемый для подсчета числа строк. *full_or_fast* имеет тип **tinyint** и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
 |**0**|Выполняет полный подсчет с помощью функции COUNT(*).|  
-|**1**|Выполняет быстрый подсчет из **sysindexes.rows**. Подсчет строк в [sys.sysindexes](../../relational-databases/system-compatibility-views/sys-sysindexes-transact-sql.md) выполняется гораздо быстрее, чем подсчет строк в фактической таблице. Тем не менее так как [sys.sysindexes](../../relational-databases/system-compatibility-views/sys-sysindexes-transact-sql.md) задержкой обновлены, количество строк может оказаться неточным.|  
-|**2** (по умолчанию)|Выполняет быстрый подсчет по условию, при котором сначала используется быстрый метод. Если быстрый метод дает неточные результаты, переключается на полный подсчет. Если *expected_rowcount* имеет значение NULL и хранимая процедура используется для получения значения, полная функция COUNT(*) всегда используется.|  
+|**1**|Выполняет быстрое подсчет из **sysindexes. Rows**. Подсчет строк в [sys. sysindexes](../../relational-databases/system-compatibility-views/sys-sysindexes-transact-sql.md) выполняется гораздо быстрее, чем подсчет строк в реальной таблице. Однако, поскольку представление [sys. sysindexes](../../relational-databases/system-compatibility-views/sys-sysindexes-transact-sql.md) отложено обновляется, количество строк может быть неточным.|  
+|**2** (по умолчанию)|Выполняет быстрый подсчет по условию, при котором сначала используется быстрый метод. Если быстрый метод дает неточные результаты, переключается на полный подсчет. Если *expected_rowcount* имеет значение NULL и хранимая процедура используется для получения значения, всегда используется полный счетчик (*).|  
   
-`[ @shutdown_agent = ] shutdown_agent` Является ли агент распространителя завершен немедленно после завершения проверки. *shutdown_agent* — **бит**, значение по умолчанию **0**. Если **0**, агент репликации не завершает работу. Если **1**, агент репликации завершает работу после проверки последней статье.  
+`[ @shutdown_agent = ] shutdown_agent`Указывает, следует ли завершать работу агент распространения сразу после завершения проверки. *shutdown_agent* имеет **бит**и значение по умолчанию **0**. Если значение **равно 0**, агент репликации не завершает работу. Если значение равно **1**, агент репликации завершает работу после проверки последней статьи.  
   
-`[ @publisher = ] 'publisher'` Указывает, отличный от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателя. *издатель* — **sysname**, значение по умолчанию NULL.  
+`[ @publisher = ] 'publisher'`Указывает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателя, отличного от. Аргумент *Publisher* имеет тип **sysname**и значение по умолчанию NULL.  
   
 > [!NOTE]  
->  *издатель* не следует использовать при запросе проверки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателя.  
+>  *Издатель* не должен использоваться при запросе проверки на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателе.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- **0** (успешное завершение) или **1** (неуспешное завершение)  
+ **0** (успешное завершение) или **1** (сбой)  
   
 ## <a name="remarks"></a>Примечания  
  **sp_publication_validation** используется в репликации транзакций.  
   
  **sp_publication_validation** можно вызвать в любое время после активации статей, связанных с публикацией. Данная процедура может запускаться вручную (единовременно) либо в составе регулярных планируемых заданий по проверке данных.  
   
- Если приложения с немедленно обновляемыми, **sp_publication_validation** могут быть обнаружены случайные ошибки. **sp_publication_validation** сначала вычисляет количество строк или контрольной суммы на издателе, а затем на подписчике. Значения контрольных сумм и количества строк для издателя и подписчика могут различаться, так как после подсчета на издателе, но до подсчета на подписчике может сработать триггер немедленного обновления. Чтобы исключить возможность изменения значений для подписчика и издателя во время проверки публикации, остановите службу координатора распределенных транзакций Microsoft (MS DTC) на издателе во время проверки.  
+ Если у приложения есть немедленно обновляемые подписчики, **sp_publication_validation** может обнаружить ложные ошибки. **sp_publication_validation** сначала вычисляет количество строк или контрольную сумму на издателе, а затем на подписчике. Значения контрольных сумм и количества строк для издателя и подписчика могут различаться, так как после подсчета на издателе, но до подсчета на подписчике может сработать триггер немедленного обновления. Чтобы исключить возможность изменения значений для подписчика и издателя во время проверки публикации, остановите службу координатора распределенных транзакций Microsoft (MS DTC) на издателе во время проверки.  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **sysadmin** предопределенной роли сервера или **db_owner** предопределенной роли базы данных могут выполнять процедуру **sp_publication_validation**.  
+ Только члены предопределенной роли сервера **sysadmin** или предопределенной роли базы данных **db_owner** могут выполнять **sp_publication_validation**.  
   
 ## <a name="see-also"></a>См. также  
  [Проверка данных на подписчике](../../relational-databases/replication/validate-data-at-the-subscriber.md)   
- [sp_article_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md)   
- [sp_table_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-table-validation-transact-sql.md)   
+ [sp_article_validation &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md)   
+ [sp_table_validation &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-table-validation-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

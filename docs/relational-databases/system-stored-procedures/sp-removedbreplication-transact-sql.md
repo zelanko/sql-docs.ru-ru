@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: cb98d571-d1eb-467b-91f7-a6e091009672
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 7d3931ff867ef1475165eb6cbac97f4ba4564bf9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fdae843c3918013ec850c5d807853c10a8f3f190
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006954"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771040"
 ---
 # <a name="spremovedbreplication-transact-sql"></a>sp_removedbreplication (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Эта хранимая процедура удаляет все объекты репликации в базе данных публикации в экземпляре издателя SQL Server или в базе данных подписки в экземпляре подписчика SQL Server. Выполняйте в соответствующей базе данных или укажите базу данных, где необходимо удалить объекты репликации, при выполнении в контексте другой базы данных в том же экземпляре. Эта процедура не удаляет объекты из других баз данных, например базы данных распространителя.  
   
@@ -41,31 +41,31 @@ sp_removedbreplication [ [ @dbname = ] 'dbname' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @dbname = ] 'dbname'` — Имя базы данных. Аргумент*dbname* имеет тип **sysname**и значение по умолчанию NULL. Если значение NULL, используется текущая база данных.  
+`[ @dbname = ] 'dbname'`Имя базы данных. Аргумент*dbname* имеет тип **sysname**и значение по умолчанию NULL. Если значение NULL, используется текущая база данных.  
   
-`[ @type = ] type` Является типом, для какой базы данных удаляются объекты репликации. *Тип* — **nvarchar(5)** и может принимать одно из следующих значений.  
+`[ @type = ] type`Тип репликации, для которого удаляются объекты базы данных. *Type имеет тип* **nvarchar (5)** и может принимать одно из следующих значений.  
   
 |||  
 |-|-|  
-|**TRAN**|Удаляет публикуемые объекты репликации транзакций.|  
-|**Слияние**|Удаляет публикуемые объекты репликации слиянием.|  
-|**оба** (по умолчанию)|Удаляет все публикуемые объекты репликации.|  
+|**Tran**|Удаляет публикуемые объекты репликации транзакций.|  
+|**AutoMerge**|Удаляет публикуемые объекты репликации слиянием.|  
+|**оба варианта** параметры|Удаляет все публикуемые объекты репликации.|  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- **0** (успешное завершение) или **1** (неуспешное завершение)  
+ **0** (успешное завершение) или **1** (сбой)  
   
 ## <a name="remarks"></a>Примечания  
  **sp_removedbreplication** используется во всех типах репликации.  
   
- **sp_removedbreplication** полезна при восстановлении реплицированной базы данных, не имеющей объектов репликации нужно восстановить.  
+ **sp_removedbreplication** полезен при восстановлении реплицированной базы данных, не требующей восстановления объектов репликации.  
   
- **sp_removedbreplication** не может использоваться в базе данных, который помечен как доступный только для чтения.  
+ **sp_removedbreplication** нельзя использовать для базы данных, которая помечена как доступная только для чтения.  
   
 ## <a name="example"></a>Пример  
  [!code-sql[HowTo#sp_removedbreplication](../../relational-databases/replication/codesnippet/tsql/sp-removedbreplication-t_1.sql)]  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **sysadmin** предопределенной роли сервера могут выполнять процедуру **sp_removedbreplication**.  
+ Только члены предопределенной роли сервера **sysadmin** могут выполнять **sp_removedbreplication**.  
   
 ## <a name="example"></a>Пример  
   

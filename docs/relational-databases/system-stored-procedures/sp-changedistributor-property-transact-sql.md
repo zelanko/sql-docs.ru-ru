@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 04f503a1-307c-4de0-bac6-e6e97d5b6940
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 2ea4590e129812dd0acc68b6353fc4f379bb0b8c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 18921fa57cfa203b0d8e5274caeb1e17c385405c
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68110879"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771304"
 ---
 # <a name="spchangedistributorproperty-transact-sql"></a>sp_changedistributor_property (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Изменяет свойства распространителя. Эта хранимая процедура выполняется на распространителе в любой базе данных.  
   
@@ -38,17 +38,17 @@ sp_changedistributor_property [ [ @property= ] 'property' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @property = ] 'property'` Является свойство конкретного распространителя. *Свойство* — **sysname**, и может принимать одно из следующих значений.  
+`[ @property = ] 'property'`Свойство для заданного распространителя. Аргумент *Property* имеет тип **sysname**и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
 |**heartbeat_interval**|Максимальное время работы агента (в минутах) без регистрации сообщения о ходе выполнения.|  
-|NULL (по умолчанию)|Все доступные *свойство* выводятся значения.|  
+|NULL (по умолчанию)|Выводятся все доступные значения *свойств* .|  
   
-`[ @value = ] 'value'` Значение для конкретного свойства распространителя. *значение* — **varchar(255)** , значение по умолчанию NULL.  
+`[ @value = ] 'value'`Значение для заданного свойства распространителя. *значение* имеет тип **varchar (255)** и значение по умолчанию NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- **0** (успешное завершение) или **1** (неуспешное завершение)  
+ **0** (успешное завершение) или **1** (сбой)  
   
 ## <a name="remarks"></a>Примечания  
  **sp_changedistributor_property** используется во всех типах репликации.  
@@ -57,12 +57,12 @@ sp_changedistributor_property [ [ @property= ] 'property' ]
  [!code-sql[HowTo#sp_changedistributor_property](../../relational-databases/replication/codesnippet/tsql/sp-changedistributor-pro_1.sql)]  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **sysadmin** предопределенной роли сервера могут выполнять процедуру **sp_changedistributor_property**.  
+ Только члены предопределенной роли сервера **sysadmin** могут выполнять **sp_changedistributor_property**.  
   
 ## <a name="see-also"></a>См. также  
  [Просмотр и изменение свойств издателя и распространителя](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
- [sp_adddistributor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md)   
- [sp_dropdistributor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql.md)   
+ [sp_adddistributor &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md)   
+ [sp_dropdistributor &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql.md)   
  [sp_helpdistributor (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpdistributor-transact-sql.md)   
  [Хранимые процедуры репликации (Transact-SQL)](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   

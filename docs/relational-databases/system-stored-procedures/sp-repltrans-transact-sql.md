@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 738e2322-335b-44fa-820e-f31c02743978
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 5b1bdcdcd0f2128a08546e8b322449ec0b28cc29
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 40477973efebac9a484e89e7627f0996285b430b
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68129783"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68770865"
 ---
 # <a name="sprepltrans-transact-sql"></a>sp_repltrans (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Возвращает результирующий набор всех транзакций из журнала транзакций базы данных публикации, которые помечены для репликации, но не были помечены как распространенные. Эта хранимая процедура выполняется в базе данных публикаций на сервере издателя.  
   
@@ -37,19 +37,19 @@ sp_repltrans
 ```  
   
 ## <a name="result-sets"></a>Результирующие наборы  
- **sp_repltrans** возвращает сведения о базе данных публикации, из которой она выполняется, что позволяет просматривать нераспределенные в настоящее время транзакции (транзакции, остающиеся в журнале транзакций, которое не было отправлено в Распространитель). Результирующий набор отображает регистрационный номер транзакций в журнале для первой и последней записи по каждой транзакции. **sp_repltrans** аналогичен [sp_replcmds &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md) , но не возвращает команды транзакций.  
+ **sp_repltrans** возвращает сведения о базе данных публикации, из которой она выполняется, позволяя просматривать транзакции, которые в настоящее время не распределены (транзакции, оставшиеся в журнале транзакций, которые не были отправлены распространителю). Результирующий набор отображает регистрационный номер транзакций в журнале для первой и последней записи по каждой транзакции. **sp_repltrans** похож на [инструкцию &#40;sp_replcmds Transact-&#41; SQL](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md) , но не возвращает команды для транзакций.  
   
 ## <a name="remarks"></a>Примечания  
  **sp_repltrans** используется в репликации транзакций.  
   
- **sp_repltrans** не поддерживается для отличных [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателей.  
+ **sp_repltrans** не поддерживается для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателей, [!INCLUDE[msCoName](../../includes/msconame-md.md)] отличных от.  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **sysadmin** предопределенной роли сервера или **db_owner** предопределенной роли базы данных могут выполнять процедуру **sp_repltrans**.  
+ Только члены предопределенной роли сервера **sysadmin** или предопределенной роли базы данных **db_owner** могут выполнять **sp_repltrans**.  
   
 ## <a name="see-also"></a>См. также  
- [sp_repldone &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-repldone-transact-sql.md)   
- [sp_replflush &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replflush-transact-sql.md)   
+ [хранимая процедура sp_repldone &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-repldone-transact-sql.md)   
+ [sp_replflush &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replflush-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9ea55df3-2e99-4683-88ad-bde718288bc7
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: fd7a493a3126aecbf816d364e5b7497f2bf494d5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e87e542395c00797ce50b220ad8a6c981f43605a
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68084964"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771093"
 ---
 # <a name="sphelparticlecolumns-transact-sql"></a>sp_helparticlecolumns (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Возвращает все столбцы базовой таблицы. Эта хранимая процедура выполняется на издателе в базе данных публикации. Для издателей Oracle данная хранимая процедура выполняется распространителем для любой базы данных.  
   
@@ -39,17 +39,17 @@ sp_helparticlecolumns [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publication = ] 'publication'` — Имя публикации, которая содержит статью. *Публикация* — **sysname**, не имеет значения по умолчанию.  
+`[ @publication = ] 'publication'`Имя публикации, содержащей статью. Аргумент *publication* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @article = ] 'article'` — Имя статьи, столбцы которой необходимо возвратить. *статья* — **sysname**, не имеет значения по умолчанию.  
+`[ @article = ] 'article'`Имя статьи, для которой возвращены столбцы. Аргумент *article* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @publisher = ] 'publisher'` Указывает, отличный от [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателя. *издатель* — **sysname**, значение по умолчанию NULL.  
+`[ @publisher = ] 'publisher'`Указывает [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателя, отличного от. Аргумент *Publisher* имеет тип **sysname**и значение по умолчанию NULL.  
   
 > [!NOTE]  
->  *издатель* не следует указывать при статья была опубликована с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателя.  
+>  не следует указывать *Издатель* , [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] если запрошенная статья опубликована издателем.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- **0** (столбцы не были опубликованы) или **1** (столбцы, которые публикуются)  
+ **0** (неопубликованные столбцы) или **1** (опубликованные столбцы)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
@@ -57,25 +57,25 @@ sp_helparticlecolumns [ @publication = ] 'publication'
 |-----------------|---------------|-----------------|  
 |**Идентификатор столбца**|**int**|Идентификатор столбца.|  
 |**column**|**sysname**|Имя столбца.|  
-|**Опубликованные**|**bit**|Опубликован ли столбец:<br /><br /> **0** = Нет<br /><br /> **1** = Да|  
-|**Тип издателя**|**sysname**|Тип данных столбца на издателе.|  
+|**выпущен**|**bit**|Опубликован ли столбец:<br /><br /> **0** = Нет<br /><br /> **1** = Да|  
+|**тип издателя**|**sysname**|Тип данных столбца на издателе.|  
 |**Тип подписчика**|**sysname**|Тип данных столбца на подписчике.|  
   
 ## <a name="remarks"></a>Примечания  
- **sp_helparticlecolumns** используется в репликации моментальных снимков и репликации транзакций.  
+ **sp_helparticlecolumns** используется в моментальных снимках и репликации транзакций.  
   
- **sp_helparticlecolumns** является полезной при проверке в вертикальную секцию.  
+ **sp_helparticlecolumns** полезен при проверке вертикальной секции.  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **sysadmin** предопределенной роли сервера, **db_owner** предопределенной роли базы данных или для текущей публикации список доступа публикации могут выполнять процедуру **sp_helparticlecolumns**.  
+ Только члены предопределенной роли сервера **sysadmin** , предопределенной роли базы данных **db_owner** или списка доступа к публикации для текущей публикации могут выполнять **sp_helparticlecolumns**.  
   
 ## <a name="see-also"></a>См. также  
  [Определение и изменение фильтра столбцов](../../relational-databases/replication/publish/define-and-modify-a-column-filter.md)   
- [sp_addarticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
+ [хранимая процедуры sp_addarticle &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
  [sp_articlecolumn (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)   
  [sp_changearticle (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)   
  [sp_droparticle (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md)   
- [sp_droppublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droppublication-transact-sql.md)   
+ [sp_droppublication &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droppublication-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

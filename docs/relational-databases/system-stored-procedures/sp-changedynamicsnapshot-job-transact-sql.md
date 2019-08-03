@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: ea0dacd2-a5fd-42f4-88dd-7d289b0ae017
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 7fc3b5e8fb8b6bc8d5d98d14ede475b8f5a3f75c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4db6a29d92fe093e9704f88fcc528c9fa687ccff
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68110852"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768951"
 ---
 # <a name="spchangedynamicsnapshotjob-transact-sql"></a>sp_changedynamicsnapshot_job (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Модифицирует задание агента, формирующее моментальный снимок для подписки на публикацию с параметризованным фильтром строк. Эта хранимая процедура выполняется на издателе в базе данных публикации.  
   
@@ -51,13 +51,13 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publication = ] 'publication'` — Имя публикации. *Публикация* — **sysname**, не имеет значения по умолчанию.  
+`[ @publication = ] 'publication'`Имя публикации. Аргумент *publication* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @dynamic_snapshot_jobname = ] 'dynamic_snapshot_jobname'` Имя задания моментального снимка, изменяется. *dynamic_snapshot_jobname*— **sysname**, значение по умолчанию N '%'. Если *dynamic_snapshot_jobid* указано, необходимо использовать значение по умолчанию для *dynamic_snapshot_jobname*.  
+`[ @dynamic_snapshot_jobname = ] 'dynamic_snapshot_jobname'`Имя изменяемого задания моментального снимка. *dynamic_snapshot_jobname*имеет тип **sysname**и значение по умолчанию N "%". Если указан параметр *dynamic_snapshot_jobid* , необходимо использовать значение по умолчанию для *dynamic_snapshot_jobname*.  
   
-`[ @dynamic_snapshot_jobid = ] 'dynamic_snapshot_jobid'` Идентификатор задания моментального снимка, изменяется. *dynamic_snapshot_jobid* — **uniqueidentifier**, значение по умолчанию NULL. Если *dynamic_snapshot_jobname*указано, необходимо использовать значение по умолчанию для *dynamic_snapshot_jobid*.  
+`[ @dynamic_snapshot_jobid = ] 'dynamic_snapshot_jobid'`Идентификатор изменяемого задания моментального снимка. *dynamic_snapshot_jobid* имеет тип **uniqueidentifier**и значение по умолчанию NULL. Если указан параметр *dynamic_snapshot_jobname*, необходимо использовать значение по умолчанию для *dynamic_snapshot_jobid*.  
   
-`[ @frequency_type = ] frequency_type` — Это частота запуска агента по расписанию. *frequency_type* — **int**, и может принимать одно из следующих значений.  
+`[ @frequency_type = ] frequency_type`Частота, с которой будет планироваться агент. Аргумент *frequency_type* имеет **тип int**и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -71,7 +71,7 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
 |**128**|Повторяющееся задание|  
 |NULL (по умолчанию)||  
   
-`[ @frequency_interval = ] frequency_interval` Дни запуска агента. *frequency_interval* — **int**, и может принимать одно из следующих значений.  
+`[ @frequency_interval = ] frequency_interval`Дни, в которые запускается агент. *frequency_interval* имеет **тип int**и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -87,7 +87,7 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
 |**10**|По выходным дням|  
 |NULL (по умолчанию)||  
   
-`[ @frequency_subday = ] frequency_subday` Том, как часто следует запланировать повторное выполнение в течение определенного периода. *frequency_subday* — **int**, и может принимать одно из следующих значений.  
+`[ @frequency_subday = ] frequency_subday`Частота повторного планирования в течение заданного периода. *frequency_subday* имеет **тип int**и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -97,9 +97,9 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
 |**8**|Час|  
 |NULL (по умолчанию)||  
   
-`[ @frequency_subday_interval = ] frequency_subday_interval` Интервал для *frequency_subday*. *frequency_subday_interval* — **int**, значение по умолчанию NULL.  
+`[ @frequency_subday_interval = ] frequency_subday_interval`Интервал для *frequency_subday*. *frequency_subday_interval* имеет **тип int**и значение по умолчанию NULL.  
   
-`[ @frequency_relative_interval = ] frequency_relative_interval` — Это дата, который будет запущен агент слияния. Этот параметр используется при *frequency_type* присваивается **32** (относительно ежемесячно). *frequency_relative_interval* — **int**, и может принимать одно из следующих значений.  
+`[ @frequency_relative_interval = ] frequency_relative_interval`Дата выполнения агент слияния. Этот параметр используется, если аргумент *frequency_type* имеет значение **32** (ежемесячное относительное). *frequency_relative_interval* имеет **тип int**и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -110,25 +110,25 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
 |**16**|Последняя|  
 |NULL (по умолчанию)||  
   
-`[ @frequency_recurrence_factor = ] frequency_recurrence_factor` Коэффициент повторения, используемый аргументом *frequency_type*. *frequency_recurrence_factor* — **int**, значение по умолчанию NULL.  
+`[ @frequency_recurrence_factor = ] frequency_recurrence_factor`Коэффициент повторения, используемый в *frequency_type*. *frequency_recurrence_factor* имеет **тип int**и значение по умолчанию NULL.  
   
-`[ @active_start_date = ] active_start_date` Дата первого запуска агента слияния запланирована, в формате ГГГГММДД. *active_start_date* — **int**, значение по умолчанию NULL.  
+`[ @active_start_date = ] active_start_date`Дата первого запланированного запуска агент слияния в формате ГГГГММДД. *active_start_date* имеет **тип int**и значение по умолчанию NULL.  
   
-`[ @active_end_date = ] active_end_date` Дата плановой остановки агента слияния, в формате ГГГГММДД. *active_end_date* — **int**, значение по умолчанию NULL.  
+`[ @active_end_date = ] active_end_date`Дата прекращения расписания агент слияния в формате ГГГГММДД. *active_end_date* имеет **тип int**и значение по умолчанию NULL.  
   
-`[ @active_start_time_of_day = ] active_start_time_of_day` Время суток, когда агент слияния впервые запланировано, в формате ЧЧММСС. *active_start_time_of_day* — **int**, значение по умолчанию NULL.  
+`[ @active_start_time_of_day = ] active_start_time_of_day`Время первого запланированного агент слияния в формате ЧЧММСС. *active_start_time_of_day* имеет **тип int**и значение по умолчанию NULL.  
   
-`[ @active_end_time_of_day = ] active_end_time_of_day` Время остановки агента слияния, в формате ЧЧММСС. *active_end_time_of_day* — **int**, значение по умолчанию NULL.  
+`[ @active_end_time_of_day = ] active_end_time_of_day`Время суток, когда запланировать агент слияния прекращается в формате ЧЧММСС. *active_end_time_of_day* имеет **тип int**и значение по умолчанию NULL.  
   
-`[ @job_login = ] 'job_login'` Является [!INCLUDE[msCoName](../../includes/msconame-md.md)] учетной записи Windows, под которой работает агент моментальных снимков при формировании снимка для подписки с помощью параметризованного фильтра строк. *job_login* — **nvarchar(257)** , со значением по умолчанию NULL.  
+`[ @job_login = ] 'job_login'`Учетная [!INCLUDE[msCoName](../../includes/msconame-md.md)] запись Windows, под которой агент моментальных снимков выполняется при создании моментального снимка для подписки с помощью параметризованного фильтра строк. *job_login* имеет тип **nvarchar (257)** и значение по умолчанию NULL.  
   
-`[ @job_password = ] 'job_password'` Пароль для учетной записи Windows, под которой работает агент моментальных снимков при формировании снимка для подписки с помощью параметризованного фильтра строк. *job_password* — **nvarchar(257)** , со значением по умолчанию NULL.  
+`[ @job_password = ] 'job_password'`Пароль для учетной записи Windows, от имени которой выполняется агент моментальных снимков при создании моментального снимка для подписки с помощью параметризованного фильтра строк. *job_password* имеет тип **nvarchar (257)** и значение по умолчанию NULL.  
   
 > [!IMPORTANT]  
 >  По возможности предлагайте пользователям вводить учетные данные системы безопасности во время выполнения приложения. В случае необходимости хранения учетных данных в файле скрипта этот файл следует защищать во избежание несанкционированного доступа.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- **0** (успешное завершение) или **1** (неуспешное завершение)  
+ **0** (успешное завершение) или **1** (сбой)  
   
 ## <a name="remarks"></a>Примечания  
  **sp_changedynamicsnapshot_job** используется в репликации слиянием для публикаций с параметризованными фильтрами строк.  
@@ -136,7 +136,7 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
  После изменения имени входа и пароля агента необходимо остановить и повторно запустить агент, чтобы изменения вступили в силу.  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **sysadmin** предопределенной роли сервера или **db_owner** предопределенной роли базы данных могут выполнять процедуру **sp_changedynamicsnapshot_job**.  
+ Только члены предопределенной роли сервера **sysadmin** или предопределенной роли базы данных **db_owner** могут выполнять **sp_changedynamicsnapshot_job**.  
   
 ## <a name="see-also"></a>См. также  
  [Просмотр и изменение параметров безопасности репликации](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   

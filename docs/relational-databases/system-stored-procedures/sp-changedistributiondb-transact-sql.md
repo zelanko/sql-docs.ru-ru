@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 66f73185-ea9e-43f9-86ed-9dd933cee2f6
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 7b2f098fab2856b51b389e2161fdbe3281e1e3cd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9db4f3a40311e94d94d8910f4d1625f89f29926a
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68120172"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768958"
 ---
 # <a name="spchangedistributiondb-transact-sql"></a>sp_changedistributiondb (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Изменяет свойства базы данных распространителя. Эта хранимая процедура выполняется на распространителе в любой базе данных.  
   
@@ -39,21 +39,21 @@ sp_changedistributiondb [ @database= ] 'database'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @database = ] 'database'` — Имя базы данных распространителя. *База данных* — **sysname**, не имеет значения по умолчанию.  
+`[ @database = ] 'database'`Имя базы данных распространителя. Аргумент *Database* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @property = ] 'property'` — Это свойство, изменяемое для данной базе данных. *Свойство* — **sysname**, и может принимать одно из следующих значений.  
+`[ @property = ] 'property'`Свойство, которое необходимо изменить для данной базы данных. Аргумент *Property* имеет тип **sysname**и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
 |**history_retention**|Срок хранения таблицы журнала.|  
 |**max_distretention**|Максимальный срок хранения распространения.|  
 |**min_distretention**|Минимальный срок хранения распространения.|  
-|NULL (по умолчанию)|Все доступные *свойство* выводятся значения.|  
+|NULL (по умолчанию)|Выводятся все доступные значения *свойств* .|  
   
-`[ @value = ] 'value'` — Это новое значение для указанного свойства. *значение* — **nvarchar(255)** , значение по умолчанию NULL.  
+`[ @value = ] 'value'`Новое значение для указанного свойства. *value* имеет тип **nvarchar (255)** и значение по умолчанию NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- **0** (успешное завершение) или **1** (неуспешное завершение)  
+ **0** (успешное завершение) или **1** (сбой)  
   
 ## <a name="remarks"></a>Примечания  
  **sp_changedistributiondb** используется во всех типах репликации.  
@@ -62,12 +62,12 @@ sp_changedistributiondb [ @database= ] 'database'
  [!code-sql[HowTo#sp_changedistributiondb](../../relational-databases/replication/codesnippet/tsql/sp-changedistributiondb-_1.sql)]  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **sysadmin** предопределенной роли сервера могут выполнять процедуру **sp_changedistributiondb**.  
+ Только члены предопределенной роли сервера **sysadmin** могут выполнять **sp_changedistributiondb**.  
   
 ## <a name="see-also"></a>См. также  
  [Просмотр и изменение свойств издателя и распространителя](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
- [sp_adddistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md)   
- [sp_dropdistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdistributiondb-transact-sql.md)   
+ [sp_adddistributiondb &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md)   
+ [sp_dropdistributiondb &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdistributiondb-transact-sql.md)   
  [sp_helpdistributiondb (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpdistributiondb-transact-sql.md)   
  [Хранимые процедуры репликации (Transact-SQL)](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   

@@ -1,18 +1,18 @@
 ### YamlMime:YamlDocument
 documentType: LandingData
-title: Документация по SQL Server Службы машинного обучения (R и Python)
+title: Документация по SQL Server Службы машинного обучения (Python и R)
 metadata:
-  title: 'Документация по SQL Server Службы машинного обучения (R, Python) — руководства, краткие руководства и руководство по установке | Документация Майкрософт'
+  title: 'Документация по SQL Server Службы машинного обучения (Python, R) — руководства, краткие руководства и руководство по установке | Документация Майкрософт'
   titleSuffix: ''
-  description: 'Узнайте, как использовать SQL Server Службы машинного обучения для выполнения скриптов R и Python в реляционных данных. В руководствах, примерах кода, руководствах по установке и другой документации показано, как это делать.'
+  description: 'Узнайте, как использовать SQL Server Службы машинного обучения для выполнения скриптов Python и R в реляционных данных. В руководствах, примерах кода, руководствах по установке и другой документации показано, как это делать.'
   ms.prod: sql
   ms.technology: machine-learning
   ms.topic: landing-page
   author: dphansen
   ms.author: davidph
-  ms.date: 06/22/2019
+  ms.date: 08/01/2019
 abstract:
-  description: 'Узнайте, как использовать SQL Server Службы машинного обучения для выполнения скриптов R и Python в реляционных данных. В руководствах, примерах кода, руководствах по установке и другой документации показано, как это делать.'
+  description: 'Узнайте, как использовать SQL Server Службы машинного обучения для запуска скриптов Python и R в реляционных данных. В руководствах, примерах кода, руководствах по установке и другой документации показано, как это делать.'
   aside:
     image:
       alt: null
@@ -30,8 +30,8 @@ sections:
       - type: list
         style: unordered
         items:
-          - html: Выполнение скрипта "Hello World" <a href="tutorials/quickstart-r-run-using-tsql">в R</a> или <a href="tutorials/quickstart-python-run-using-t-sql">Python</a>
-          - html: Создание прогнозной модели <a href="tutorials/quickstart-r-create-predictive-model">на языке R</a> или <a href="tutorials/quickstart-python-train-score-in-tsql">Python</a>
+          - html: Выполнение скрипта "Hello World" <a href="tutorials/quickstart-python-run-using-t-sql">в Python</a> или <a href="tutorials/quickstart-r-run-using-tsql">в R</a>
+          - html: Создание прогнозной модели <a href="tutorials/quickstart-python-train-score-in-tsql">на языке Python</a> или <a href="tutorials/quickstart-r-create-predictive-model">в R</a>
   - title: Пошаговые руководства
     items:
       - type: paragraph
@@ -39,9 +39,9 @@ sections:
       - type: list
         style: unordered
         items:
+          - html: '<a href="tutorials/sqldev-in-database-python-for-sql-developers">Использование Python в T-SQL</a>: Просмотр данных</a>, разработка признаков, обучение и развертывание моделей, создание прогнозов (серии из 5 частей)'
           - html: '<a href="tutorials/sqldev-in-database-r-for-sql-developers">Использование R в T-SQL</a>: Просмотр данных, разработка признаков, обучение и развертывание моделей, создание прогнозов (серии из 5 частей)'
           - html: '<a href="tutorials/walkthrough-data-science-end-to-end-walkthrough">Использование службы машинного обучения в инструментах R</a>: Просмотр данных, создание графиков и графиков, выполнение технических характеристик, обучение и развертывание моделей, создание прогнозов (серии из шести частей)'
-          - html: '<a href="tutorials/sqldev-in-database-python-for-sql-developers">Использование Python в T-SQL</a>: Просмотр данных</a>, разработка признаков, обучение и развертывание моделей, создание прогнозов (серии из 5 частей)'
   - title: Решения
     items:
       - type: paragraph
@@ -49,16 +49,16 @@ sections:
   - title: Ссылка
     items:
       - type: paragraph
-        text: В SQL Server Службы машинного обучения есть несколько пакетов для R и Python.
+        text: В SQL Server Службы машинного обучения используйте пакеты и платформы с открытым исходным кодом и пакеты Microsoft Python и R.
       - type: list
         style: unordered
         items:
-          - html: '<a href="r/ref-r-revoscaler">RevoScaleR в R</a>: Распределенная и параллельная обработка для задач R: преобразование данных, исследование, визуализация, статистическая и прогнозная аналитика.'
-          - html: '<a href="r/ref-r-microsoftml">MicrosoftML в r</a>: функции на основе алгоритмов искусственного интеллекта (Майкрософт), адаптированные для R'
+          - html: '<a href="python/ref-py-revoscalepy">revoscalepy в Python</a>: Распределенная и параллельная обработка для задач Python: Преобразование данных, исследование, визуализация, статистическая и Прогнозная аналитика'
+          - html: '<a href="python/ref-py-microsoftml">microsoftml в Python</a>: Функции, основанные на алгоритмах искусственного интеллекта Microsoft для Python'
+          - html: '<a href="r/ref-r-revoscaler">RevoScaleR в R</a>: Распределенная и параллельная обработка для задач R: Преобразование данных, исследование, визуализация, статистическая и Прогнозная аналитика'
+          - html: '<a href="r/ref-r-microsoftml">MicrosoftML в R</a>: Функции, основанные на алгоритмах искусственного интеллекта Microsoft для R'
           - html: '<a href="r/ref-r-olapr">OLAP в R</a>: Импорт данных из кубов OLAP'
           - html: '<a href="r/ref-r-sqlrutils">sqlRUtils в R</a>: Вспомогательные функции для инкапсуляции R и T-SQL'
-          - html: '<a href="python/ref-py-revoscalepy">revoscalepy в Python</a>: Распределенная и параллельная обработка для задач Python: Преобразование данных, исследование, визуализация, статистическая и Прогнозная аналитика'
-          - html: '<a href="python/ref-py-microsoftml">microsoftml в Python</a>: Функции, основанные на алгоритмах искусственного интеллекта Майкрософт, адаптированные для Python'
   - title: Другие технологии Машинное обучение
     items:
       - type: list

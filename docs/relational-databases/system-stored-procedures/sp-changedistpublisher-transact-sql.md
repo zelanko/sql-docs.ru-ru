@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7ef5c89d-faaa-4f8e-aef7-00649ebc8bc9
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 302d807b70e4cceb7cf25bffd0af637df7c4ad8c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 80eb30fc6b6b2cea9fc058780831af3915fd9007
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68120157"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771365"
 ---
 # <a name="spchangedistpublisher-transact-sql"></a>sp_changedistpublisher (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Изменяет свойства распространяющего издателя. Эта хранимая процедура выполняется на распространителе в любой базе данных.  
   
@@ -40,13 +40,13 @@ sp_changedistpublisher [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publisher = ] 'publisher'` — Имя издателя. *издатель* — **sysname**, не имеет значения по умолчанию.  
+`[ @publisher = ] 'publisher'`Имя издателя. параметр *Publisher* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @property = ] 'property'` — Это свойство, изменяемое для данного издателя. *Свойство* — **sysname** и может принимать одно из следующих значений.  
+`[ @property = ] 'property'`Свойство, которое необходимо изменить для данного издателя. *свойство* имеет тип **sysname** и может принимать одно из следующих значений.  
   
-`[ @value = ] 'value'` Значение для данного свойства. *значение* — **nvarchar(255)** , значение по умолчанию NULL.  
+`[ @value = ] 'value'`Значение для данного свойства. *value* имеет тип **nvarchar (255)** и значение по умолчанию NULL.  
   
-`[ @storage_connection_string = ] 'storage_connection_string'` Является обязательным для базы данных SQL управляемого экземпляра, должно соответствовать ключу доступа для объема хранилища базы данных SQL Azure. 
+`[ @storage_connection_string = ] 'storage_connection_string'`Требуется для управляемого экземпляра базы данных SQL. он должен соответствовать ключу доступа для тома хранилища базы данных SQL Azure. 
 
 
  > [!INCLUDE[Azure SQL Database link](../../includes/azure-sql-db-repl-for-more-information.md)]
@@ -58,27 +58,27 @@ sp_changedistpublisher [ @publisher = ] 'publisher'
 |**Active**|**true**|Активирует издатель.|  
 ||**false**|Отключает издатель.|  
 |**distribution_db**||Имя базы данных распространителя.|  
-|**Имя входа**||Имя входа.|  
+|**пользователей**||Имя входа.|  
 |**password**||Надежный пароль для указанного имени входа.|  
-|**security_mode**|**1**|При подключении к подписчику используется проверка подлинности Windows. *Это единственно возможный отличается от* [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *издателя.*|  
-||**0**|При подключении к издателю используется проверка подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *Это единственно возможный отличается от* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *издателя.*|  
+|**security_mode**|**1**|При подключении к подписчику используется проверка подлинности Windows. *Его нельзя изменить для издателя, отличного от* [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *.*|  
+||**0**|При подключении к издателю используется проверка подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *Его нельзя изменить для издателя, отличного от* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *.*|  
 |**working_directory**||Рабочий каталог, в котором хранятся данные и файлы схемы для публикации.|  
-|NULL (по умолчанию)||Все доступные *свойство* параметры печати.| 
-|**storage_connection_string**| Ключ доступа | Ключ доступа для рабочего каталога при работе Azure базы данных SQL управляемого экземпляра базы данных. 
+|NULL (по умолчанию)||Выводятся все доступные параметры *свойств* .| 
+|**storage_connection_string**| Ключ доступа | Ключ доступа для рабочего каталога при Управляемый экземпляр Базы данных SQL Azure базы данных. 
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- **0** (успешное завершение) или **1** (неуспешное завершение)  
+ **0** (успешное завершение) или **1** (сбой)  
   
 ## <a name="remarks"></a>Примечания  
  **sp_changedistpublisher** используется во всех типах репликации.  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **sysadmin** предопределенной роли сервера могут выполнять процедуру **sp_changedistpublisher**.  
+ Только члены предопределенной роли сервера **sysadmin** могут выполнять **sp_changedistpublisher**.  
   
 ## <a name="see-also"></a>См. также  
  [Просмотр и изменение свойств издателя и распространителя](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
- [sp_adddistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
- [sp_dropdistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md)   
+ [sp_adddistpublisher &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
+ [sp_dropdistpublisher &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md)   
  [sp_helpdistpublisher (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpdistpublisher-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

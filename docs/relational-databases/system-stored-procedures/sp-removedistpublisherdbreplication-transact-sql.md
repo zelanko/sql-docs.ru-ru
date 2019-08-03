@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9bfe002a-25b5-4226-bcfb-feb2060d6b4a
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: c92355cf5113960d92229157c86346135daad19e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 49c06ac45a91014199caa75c5893971f6f3de715
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006945"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771035"
 ---
 # <a name="spremovedistpublisherdbreplication-transact-sql"></a>sp_removedistpublisherdbreplication (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Удаляет метаданные публикации, относящиеся к определенной публикации на распространителе. Эта хранимая процедура выполняется на распространителе в базе данных распространителя.  
   
@@ -38,17 +38,17 @@ sp_removedistpublisherdbreplication [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publisher = ] 'publisher'` — Имя сервера издателя. *издатель* — **sysname**, не имеет значения по умолчанию.  
+`[ @publisher = ] 'publisher'`Имя сервера издателя. параметр *Publisher* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @publisher_db = ] 'publisher_db'` — Имя базы данных публикации. *publisher_db* — **sysname** не имеет значения по умолчанию.  
+`[ @publisher_db = ] 'publisher_db'`Имя базы данных публикации. *publisher_db* имеет тип **sysname** и не имеет значения по умолчанию.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- **0** (успешное завершение) или **1** (неуспешное завершение)  
+ **0** (успешное завершение) или **1** (сбой)  
   
 ## <a name="remarks"></a>Примечания  
- **sp_removedistpublisherdbreplication** используется в репликации транзакций и моментальных снимков.  
+ **sp_removedistpublisherdbreplication** используется репликацией транзакций и репликации моментальных снимков.  
   
- **sp_removedistpublisherdbreplication** используется, когда опубликованной базы данных необходимо создать заново, не удаляя базы данных распространителя. Следующие метаданные будут удалены:  
+ **sp_removedistpublisherdbreplication** используется, когда опубликованная база данных должна быть создана повторно, не удаляя базу данных распространителя. Следующие метаданные будут удалены:  
   
 -   все метаданные публикаций;  
   
@@ -59,7 +59,7 @@ sp_removedistpublisherdbreplication [ @publisher = ] 'publisher'
 -   метаданные всех заданий агента репликации, относящихся к публикации.  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **sysadmin** предопределенной роли сервера на распространителе или члены **db_owner** предопределенной роли базы данных в базе данных распространителя могут выполнять процедуру **sp_ removedistpublisherdbreplication**.  
+ Только члены предопределенной роли сервера **sysadmin** на распространителе или члены предопределенной роли базы данных **db_owner** в базе данных распространителя могут выполнять **sp_removedistpublisherdbreplication**.  
   
 ## <a name="see-also"></a>См. также  
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

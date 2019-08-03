@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 44e7abcd-778c-4728-a03e-7e7e78d3ce22
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 4c9d0a82422675c9698d7216b92e1c9401392a79
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6f5ee076163ff3cf0f69daab7ceff115bf5876a6
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68004824"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769024"
 ---
 # <a name="sparticlevalidation-transact-sql"></a>sp_article_validation (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Инициирует запрос проверки данных для указанной статьи. Эта хранимая процедура выполняется на издателе в базе данных публикации и на подписчике в базе данных подписки.  
   
@@ -44,53 +44,53 @@ sp_article_validation [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publication = ] 'publication'` — Имя публикации, в которой находится статья. *Публикация* — **sysname**, не имеет значения по умолчанию.  
+`[ @publication = ] 'publication'`Имя публикации, в которой находится статья. Аргумент *publication* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @article = ] 'article'` — Имя статьи для проверки. *статья* — **sysname**, не имеет значения по умолчанию.  
+`[ @article = ] 'article'`Имя статьи для проверки. Аргумент *article* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @rowcount_only = ] type_of_check_requested` Указывает, если возвращается только число строк для таблицы. *type_of_check_requested* — **smallint**, значение по умолчанию **1**.  
+`[ @rowcount_only = ] type_of_check_requested`Указывает, возвращается ли только количество строк для таблицы. *type_of_check_requested* имеет значение **smallint**и значение по умолчанию **1**.  
   
- Если **0**, выполнить вычисление количества строк и [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 контрольной суммы, совместимой.  
+ Если значение **равно 0**, то необходимо выполнить [!INCLUDE[msCoName](../../includes/msconame-md.md)] контрольную сумму количества строк и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7,0.  
   
- Если **1**, выполните проверку только количества строк.  
+ Если значение равно **1**, выполняется только проверка количества строк.  
   
- Если **2**, количество строк и двоичной контрольной суммы.  
+ Если значение равно **2**, то выполняется проверка количества строк и двоичной контрольной суммы.  
   
-`[ @full_or_fast = ] full_or_fast` Метод, используемый для вычисления количества строк. *full_or_fast* — **tinyint**, и может принимать одно из следующих значений.  
+`[ @full_or_fast = ] full_or_fast`Метод, используемый для вычисления количества строк. *full_or_fast* имеет тип **tinyint**и может принимать одно из следующих значений.  
   
 |**Значение**|**Описание**|  
 |---------------|---------------------|  
 |**0**|Выполняет полный подсчет при помощи функции COUNT(*).|  
-|**1**|Выполняет быстрый подсчет из **sysindexes.rows**. Подсчет строк в **sysindexes** выполняется быстрее, чем подсчет строк в фактической таблице. Тем не менее **sysindexes** обновляется в фоновом режиме, и количество строк может оказаться неточным.|  
-|**2** (по умолчанию)|Выполняет условный быстрый подсчет, при котором сначала применяется быстрый метод, Если быстрый метод дает неточные результаты, переключается на полный подсчет. Если *expected_rowcount* имеет значение NULL и хранимая процедура используется для получения значения, полная функция COUNT(*) всегда используется.|  
+|**1**|Выполняет быстрое подсчет из **sysindexes. Rows**. Подсчет строк в **sysindexes** выполняется быстрее, чем подсчет строк в реальной таблице. Однако **sysindexes** обновляется с отложенным обновлением, и количество строк может быть неточным.|  
+|**2** (по умолчанию)|Выполняет условный быстрый подсчет, при котором сначала применяется быстрый метод, Если быстрый метод дает неточные результаты, переключается на полный подсчет. Если *expected_rowcount* имеет значение NULL и хранимая процедура используется для получения значения, всегда используется полный счетчик (*).|  
   
-`[ @shutdown_agent = ] shutdown_agent` Указывает, если агент распространителя завершен немедленно после завершения проверки. *shutdown_agent* — **бит**, значение по умолчанию **0**. Если **0**, агент распространителя не завершает работу. Если **1**, агент распространителя завершает работу после проверки статьи.  
+`[ @shutdown_agent = ] shutdown_agent`Указывает, должен ли агент распространителя немедленно завершить работу после завершения проверки. *shutdown_agent* имеет **бит**и значение по умолчанию **0**. Если значение **равно 0**, агент распространения не завершает работу. Если значение равно **1**, агент распространения завершает работу после проверки статьи.  
   
-`[ @subscription_level = ] subscription_level` Указывает, выбирается ли проверка с помощью набора подписчиков. *уровень_подписки* — **бит**, значение по умолчанию **0**. Если **0**, проверка применяется для всех подписчиков. Если **1**, проверка применяется только к части подписчиков, определяемой вызовами **sp_marksubscriptionvalidation** в текущую открытую транзакцию.  
+`[ @subscription_level = ] subscription_level`Указывает, выбрана ли проверка набором подписчиков. *subscription_level* имеет **бит**и значение по умолчанию **0**. Если значение **равно 0**, то проверка применяется ко всем подписчикам. Если значение равно **1**, проверка применяется только к подмножеству подписчиков, указанных в вызовах **sp_marksubscriptionvalidation** в текущей открытой транзакции.  
   
 `[ @reserved = ] reserved` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
-`[ @publisher = ] 'publisher'` Указывает, отличный от [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателя. *издатель* — **sysname**, значение по умолчанию NULL.  
+`[ @publisher = ] 'publisher'`Указывает [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателя, отличного от. Аргумент *Publisher* имеет тип **sysname**и значение по умолчанию NULL.  
   
 > [!NOTE]  
->  *издатель* не следует использовать при запросе проверки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателя.  
+>  *Издатель* не должен использоваться при запросе проверки на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателе.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- **0** (успешное завершение) или **1** (неуспешное завершение)  
+ **0** (успешное завершение) или **1** (сбой)  
   
 ## <a name="remarks"></a>Примечания  
  **sp_article_validation** используется в репликации транзакций.  
   
- **sp_article_validation** приводит сведения о проверке собрать указанной статьи и отправляет запрос на проверку в журнал транзакций. Когда агент распространителя получает этот запрос, он сравнивает сведения для проверки, указанные в запросе, с таблицей подписчика. Результаты проверки отображаются в мониторе репликации и в виде предупреждений агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ **sp_article_validation** вызывает сбор сведений о проверке в указанной статье и отправляет запрос проверки в журнал транзакций. Когда агент распространителя получает этот запрос, он сравнивает сведения для проверки, указанные в запросе, с таблицей подписчика. Результаты проверки отображаются в мониторе репликации и в виде предупреждений агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="permissions"></a>Разрешения  
- Только пользователи с ВЫБЕРИТЕ все разрешения на исходную таблицу для проверяемой статьи, можно выполнить **sp_article_validation**.  
+ Только пользователи с разрешением SELECT все разрешения на исходную таблицу для проверяемой статьи могут выполнять **sp_article_validation**.  
   
 ## <a name="see-also"></a>См. также  
  [Проверка реплицированных данных](../../relational-databases/replication/validate-data-at-the-subscriber.md)   
- [sp_marksubscriptionvalidation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-marksubscriptionvalidation-transact-sql.md)   
- [sp_publication_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-publication-validation-transact-sql.md)   
- [sp_table_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-table-validation-transact-sql.md)   
+ [sp_marksubscriptionvalidation &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-marksubscriptionvalidation-transact-sql.md)   
+ [sp_publication_validation &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-publication-validation-transact-sql.md)   
+ [sp_table_validation &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-table-validation-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

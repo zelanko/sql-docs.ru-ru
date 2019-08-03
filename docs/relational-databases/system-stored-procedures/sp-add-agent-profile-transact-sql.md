@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5c246a33-2c21-4a77-9c2a-a2c9f0c5dda1
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: b6cd4013d3126442b02c660c54215c0b0b17e157
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 24a900409ae5979c13bdbff0d67d9d2670059208
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67941797"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68770847"
 ---
 # <a name="spaddagentprofile-transact-sql"></a>sp_add_agent_profile (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Создает новый профиль для агента репликации. Эта хранимая процедура выполняется на распространителе в любой базе данных.  
   
@@ -42,11 +42,11 @@ sp_add_agent_profile [ [ @profile_id= ] profile_id OUTPUT ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @profile_id = ] profile_id` Идентификатор, связанный с вновь вставленным профилем. *profile_id* — **int** и является необязательным ВЫХОДНЫМ параметром. Если он указан, в качестве его значения устанавливается новый идентификатор профиля.  
+`[ @profile_id = ] profile_id`Идентификатор, связанный с вновь вставленным профилем. *profile_id* имеет **тип int** и является необязательным выходным параметром. Если он указан, в качестве его значения устанавливается новый идентификатор профиля.  
   
-`[ @profile_name = ] 'profile_name'` — Имя профиля. *profile_name* — **sysname**, не имеет значения по умолчанию.  
+`[ @profile_name = ] 'profile_name'`Имя профиля. *profile_name* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @agent_type = ] 'agent_type'` — Тип агента репликации. *agent_type* — **int**, по умолчанию и может принимать одно из следующих значений.  
+`[ @agent_type = ] 'agent_type'`Тип агента репликации. *agent_type* имеет **тип int**, не имеет значения по умолчанию и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -56,36 +56,36 @@ sp_add_agent_profile [ [ @profile_id= ] profile_id OUTPUT ]
 |**4**|Агент слияния.|  
 |**9**|Агент чтения очереди.|  
   
-`[ @profile_type = ] profile_type` — Это тип профиля. *profile_type* — **int**, значение по умолчанию **1**.  
+`[ @profile_type = ] profile_type`Тип профиля. *profile_type* имеет **тип int**и значение по умолчанию **1**.  
   
- **0** обозначает системный профиль. **1** обозначает пользовательский профиль. Только пользовательские профили могут создаваться с помощью этой хранимой процедуры; поэтому единственным допустимым значением является **1**. Только [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] создает системные профили.  
+ значение **0** указывает на системный профиль. **1** указывает на пользовательский профиль. С помощью этой хранимой процедуры можно создавать только пользовательские профили. Поэтому единственным допустимым значением является **1**. Создает [!INCLUDE[msCoName](../../includes/msconame-md.md)] только[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] системные профили.  
   
-`[ @description = ] 'description'` — Описание профиля. *Описание* — **nvarchar(3000)** , не имеет значения по умолчанию.  
+`[ @description = ] 'description'`Описание профиля. *Description* имеет тип **nvarchar (3000)** и не имеет значения по умолчанию.  
   
-`[ @default = ] default` Указывает, является ли профиль по умолчанию для *agent_type **.* *по умолчанию* — **бит**, значение по умолчанию **0**. **1** указывает, что при добавлении профиля станет профилем по умолчанию для агента, задаваемого аргументом *agent_type*.  
+`[ @default = ] default`Указывает, является ли профиль используемым по умолчанию для *agent_type * *.* *значение по умолчанию* — **bit**и значение по умолчанию **0**. значение **1** указывает, что добавляемый профиль станет новым профилем по умолчанию для агента, указанного в *agent_type*.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- **0** (успешное завершение) или **1** (неуспешное завершение)  
+ **0** (успешное завершение) или **1** (сбой)  
   
 ## <a name="remarks"></a>Примечания  
  **sp_add_agent_profile** используется в репликации моментальных снимков, репликации транзакций и репликации слиянием.  
   
- Пользовательские профили агента добавляются со значениями параметров агента по умолчанию. Используйте [sp_change_agent_parameter &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-change-agent-parameter-transact-sql.md) для изменения значения по умолчанию или [sp_add_agent_parameter &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md) для добавления дополнительных параметров.  
+ Пользовательские профили агента добавляются со значениями параметров агента по умолчанию. Используйте [sp_change_agent_parameter &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-change-agent-parameter-transact-sql.md) для изменения этих значений по умолчанию или [sp_add_agent_parameter &#40;Transact&#41; -SQL](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md) для добавления дополнительных параметров.  
   
- При **sp_add_agent_profile** будет выполнен, добавляется отдельная строка для нового пользовательского профиля в [MSagent_profiles &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/msagent-profiles-transact-sql.md) таблицы и соответствующие параметры по умолчанию для этого добавляются в профиль [MSagent_parameters &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/msagent-parameters-transact-sql.md) таблицы.  
+ При выполнении **sp_add_agent_profile** добавляется строка для нового пользовательского профиля в таблице [Transact- &#40;SQL&#41; MSagent_profiles](../../relational-databases/system-tables/msagent-profiles-transact-sql.md) , а связанные параметры по умолчанию для этого профиля добавляются в [MSagent_parameters Таблица Transact-SQL&#41; &#40;](../../relational-databases/system-tables/msagent-parameters-transact-sql.md)  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **sysadmin** предопределенной роли сервера могут выполнять процедуру **sp_add_agent_profile**.  
+ Только члены предопределенной роли сервера **sysadmin** могут выполнять **sp_add_agent_profile**.  
   
 ## <a name="see-also"></a>См. также  
  [Работа с профилями агента репликации](../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)   
  [Профили агента репликации](../../relational-databases/replication/agents/replication-agent-profiles.md)   
- [sp_add_agent_parameter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md)   
- [sp_change_agent_parameter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-change-agent-parameter-transact-sql.md)   
- [sp_change_agent_profile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-change-agent-profile-transact-sql.md)   
- [sp_drop_agent_parameter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-drop-agent-parameter-transact-sql.md)   
- [sp_drop_agent_profile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-drop-agent-profile-transact-sql.md)   
- [sp_help_agent_parameter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-agent-parameter-transact-sql.md)   
- [sp_help_agent_profile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql.md)  
+ [sp_add_agent_parameter &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md)   
+ [sp_change_agent_parameter &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-change-agent-parameter-transact-sql.md)   
+ [sp_change_agent_profile &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-change-agent-profile-transact-sql.md)   
+ [sp_drop_agent_parameter &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-drop-agent-parameter-transact-sql.md)   
+ [sp_drop_agent_profile &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-drop-agent-profile-transact-sql.md)   
+ [sp_help_agent_parameter &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-agent-parameter-transact-sql.md)   
+ [sp_help_agent_profile &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql.md)  
   
   

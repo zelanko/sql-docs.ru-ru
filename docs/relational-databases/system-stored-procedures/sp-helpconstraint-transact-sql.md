@@ -18,15 +18,15 @@ ms.assetid: 29d6cd36-535d-4765-bca8-62f9d9886ff5
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bd443a8e03663eb3fb46e75e09d852c797f6d427
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d722d3b54c2f0b6d73660e2195aed4039e1eda2c
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68101386"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771076"
 ---
 # <a name="sphelpconstraint-transact-sql"></a>sp_helpconstraint (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Возвращает список всех типов ограничений, их пользовательские или предоставляемые системой имена, столбцы, на которых они определены, и выражения, определяющие ограничения (только для ограничений DEFAULT и CHECK).  
   
@@ -41,18 +41,18 @@ sp_helpconstraint [ @objname = ] 'table'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @objname = ] 'table'` Является таблицей, о которых ограничение возвращаются сведения. Указанная таблица должна находиться в текущей базе данных. *Таблица* — **nvarchar(776)** , не имеет значения по умолчанию.  
+`[ @objname = ] 'table'`Таблица, в которой возвращаются сведения об ограничениях. Указанная таблица должна находиться в текущей базе данных. *Table* имеет тип **nvarchar (776)** и не имеет значения по умолчанию.  
   
-`[ @nomsg = ] 'no_message'` — Необязательный параметр, который выводит имя таблицы. *no_message* — **varchar(5)** , значение по умолчанию **msg**. **nomsg** подавляет печать.  
+`[ @nomsg = ] 'no_message'`Является необязательным параметром, который выводит имя таблицы. *no_message* имеет тип **varchar (5)** и значение по умолчанию **MSG**. **номсг** подавляет печать.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
- **sp_helpconstraint** отображает нисходящем порядке индексированный столбец, если он входит в первичные ключи. Нисходящий индексированный столбец представляется в результирующем наборе со знаком минуса (-), стоящим за именем столбца. По умолчанию восходящий индексированный столбец представляется только по своему имени.  
+ **sp_helpconstraint** отображает нисходящий индексированный столбец, если он участвовал в первичных ключах. Нисходящий индексированный столбец представляется в результирующем наборе со знаком минуса (-), стоящим за именем столбца. По умолчанию восходящий индексированный столбец представляется только по своему имени.  
   
 ## <a name="remarks"></a>Примечания  
- Выполнение **sp_help**_таблицы_ выводятся все сведения об указанной таблице. Для просмотра только данных ограничений используйте **sp_helpconstraint**.  
+ При исполнении_таблицы_ **sp_help**сообщаются все сведения о указанной таблице. Чтобы просмотреть только сведения об ограничениях, используйте **sp_helpconstraint**.  
   
 ## <a name="permissions"></a>Разрешения  
  Необходимо быть членом роли **public**.  
@@ -67,13 +67,13 @@ EXEC sp_helpconstraint 'Production.Product';
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Хранимым процедурам ядра СУБД &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Ядро СУБД хранимых &#40;процедур TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)   
  [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)   
  [sp_help (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [sys.key_constraints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-key-constraints-transact-sql.md)   
- [sys.CHECK_CONSTRAINTS &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-check-constraints-transact-sql.md)   
- [sys.default_constraints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-default-constraints-transact-sql.md)  
+ [sys. key _constraints &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-key-constraints-transact-sql.md)   
+ [sys. CHECK_CONSTRAINTS &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-check-constraints-transact-sql.md)   
+ [sys. default_constraints &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-default-constraints-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Хранимая процедура sp_helpdistributor_properties (Transact-SQL) | Документация Майкрософт
+title: sp_helpdistributor_properties (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: ee267724-3244-49eb-84c9-f38dbefdd639
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 61d11dd443e68d743b30cee890d33e4852c99b39
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e4cacb78e797583dbd45954f09c89a774c381966
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67902912"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68770918"
 ---
 # <a name="sphelpdistributorproperties-transact-sql"></a>Хранимая процедура sp_helpdistributor_properties (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Возвращает свойства распространителя. Эта хранимая процедура выполняется на распространителе в базе данных распространителя.  
   
@@ -43,15 +43,15 @@ sp_helpdistributor_properties
 |**heartbeat_interval**|**int**|Максимальное количество минут, в течение которых агент может выполняться без ведения журнала сообщений о процессе работы.|  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- **0** (успешное завершение) или **1** (неуспешное завершение)  
+ **0** (успешное завершение) или **1** (сбой)  
   
 ## <a name="remarks"></a>Примечания  
- **хранимую процедуру** используется со всеми типами репликации.  
+ **sp_helpdistributor_properties** используется со всеми типами репликации.  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **sysadmin** предопределенной роли сервера, члены **db_owner** или **replmonitor** предопределенной роли базы данных в базу данных распространителя и пользователей в список доступа к публикации (PAL) для публикации, использующей этот распространитель может выполнять **хранимую процедуру**.  
+ Только члены предопределенной роли сервера **sysadmin** , члены предопределенной роли **db_owner** или **replmonitor** базы данных в базе данных распространителя и пользователи из списка доступа к публикации (PAL) для публикации, использующей этот распространитель, могут выполните **sp_helpdistributor_properties**.  
   
 ## <a name="see-also"></a>См. также  
- [sp_changedistributor_property &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedistributor-property-transact-sql.md)  
+ [sp_changedistributor_property &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedistributor-property-transact-sql.md)  
   
   

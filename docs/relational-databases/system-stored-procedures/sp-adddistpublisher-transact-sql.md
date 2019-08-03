@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 04e15011-a902-4074-b38c-3ec2fc73b838
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 5c9cab9530a67b01274bf5d1bafa579199f0a4d8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2190e31245cde19eca4c5a47f21ac48e12f57f53
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68072786"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771391"
 ---
 # <a name="spadddistpublisher-transact-sql"></a>sp_adddistpublisher (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  Настраивает издатель для использования указанной базы данных распространителя. Эта хранимая процедура выполняется на распространителе в любой базе данных. Обратите внимание, что хранимые процедуры [sp_adddistributor &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md) и [sp_adddistributiondb &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md) должны были быть выполнены перед использованием Эта хранимая процедура.  
+  Настраивает издатель для использования указанной базы данных распространителя. Эта хранимая процедура выполняется на распространителе в любой базе данных. Обратите внимание, что хранимые процедуры [ &#40;sp_adddistributor&#41; Transact-SQL](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md) и [ &#40;sp_adddistributiondb&#41; Transact-SQL](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md) должны быть выполнены перед использованием этой хранимой процедуры.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,69 +47,69 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publisher = ] 'publisher'` — Имя издателя. *издатель* — **sysname**, не имеет значения по умолчанию.  
+`[ @publisher = ] 'publisher'`Имя издателя. параметр *Publisher* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @distribution_db = ] 'distribution_db'` — Имя базы данных распространителя. *distributor_db* — **sysname**, не имеет значения по умолчанию. Он используется агентами репликации для подключения к издателю.  
+`[ @distribution_db = ] 'distribution_db'`Имя базы данных распространителя. *distributor_db* имеет тип **sysname**и не имеет значения по умолчанию. Он используется агентами репликации для подключения к издателю.  
   
-`[ @security_mode = ] security_mode` — Это Реализованный режим безопасности. Этот параметр используется только агентами репликации для подключения к издателю для очереди обновляемых подписок или с не поддерживающими [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателя. *security_mode* — **int**, и может принимать одно из следующих значений.  
+`[ @security_mode = ] security_mode`Реализованный режим безопасности. Этот параметр используется только агентами репликации для соединения с издателем подписок, обновляемых посредством очередей, или с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателем, отличным от. *security_mode* имеет **тип int**и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
 |**0**|Агенты репликации на распространителе используют для подключения к издателю проверку подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**1** (по умолчанию)|Агенты репликации на распространителе используют для подключения к издателю проверку подлинности Windows.|  
   
-`[ @login = ] 'login'` — Это имя. Этот параметр является обязательным, если *security_mode* — **0**. Аргумент *login* имеет тип **sysname** и значение по умолчанию NULL. Он используется агентами репликации для подключения к издателю.  
+`[ @login = ] 'login'`Имя входа. Этот параметр является обязательным, если *security_mode* имеет значение **0**. Аргумент *login* имеет тип **sysname** и значение по умолчанию NULL. Он используется агентами репликации для подключения к издателю.  
   
-`[ @password = ] 'password']` — Пароль. *пароль* — **sysname**, значение по умолчанию NULL. Он используется агентами репликации для подключения к издателю.  
+`[ @password = ] 'password']`Пароль. Аргумент *Password* имеет тип **sysname**и значение по умолчанию NULL. Он используется агентами репликации для подключения к издателю.  
   
 > [!IMPORTANT]  
 >  Не используйте пустые пароли. Выбирайте надежные пароли.  
   
-`[ @working_directory = ] 'working_directory'` Это имя рабочего каталога, используемого для хранения файлов данных и схем для публикации. *working_directory* — **nvarchar(255)** и значения по умолчанию папке ReplData текущего для данного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], например `C:\Program Files\Microsoft SQL Server\MSSQL\MSSQ.1\ReplData`. Имя должно быть задано в формате UNC.  
+`[ @working_directory = ] 'working_directory'`Имя рабочего каталога, используемого для хранения файлов данных и схемы для публикации. *working_directory* имеет тип **nvarchar (255)** и по умолчанию используется папка ReplData для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]данного экземпляра, `C:\Program Files\Microsoft SQL Server\MSSQL\MSSQ.1\ReplData`например. Имя должно быть задано в формате UNC.  
 
- Для базы данных SQL Azure, используйте `\\<storage_account>.file.core.windows.net\<share>`.
+ Для базы данных SQL Azure используйте `\\<storage_account>.file.core.windows.net\<share>`.
 
-`[ @storage_connection_string = ] 'storage_connection_string'` Является обязательным для базы данных SQL. Используйте ключ доступа из портала Azure в группе хранения > Параметры.
+`[ @storage_connection_string = ] 'storage_connection_string'`Требуется для базы данных SQL. Используйте ключ доступа на портале Azure в разделе Параметры > хранилища.
 
  > [!INCLUDE[Azure SQL Database link](../../includes/azure-sql-db-repl-for-more-information.md)]
 
-`[ @trusted = ] 'trusted'` Этот параметр является устаревшим и предоставляется только для обратной совместимости. *доверенный* — **nvarchar(5)** и получает только значение **false** приведет к ошибке.  
+`[ @trusted = ] 'trusted'`Этот параметр является устаревшим и предоставляется только для обратной совместимости. *Trusted* имеет тип **nvarchar (5)** и задает для него любое значение, но **false** приведет к ошибке.  
   
-`[ @encrypted_password = ] encrypted_password` Установка *encrypted_password* больше не поддерживается. Попытка присвоить этому **бит** параметр **1** приведет к ошибке.  
+`[ @encrypted_password = ] encrypted_password`Параметр *encrypted_password* больше не поддерживается. Попытка присвоить этому параметру **bit** значение **1** приведет к ошибке.  
   
-`[ @thirdparty_flag = ] thirdparty_flag` Если издатель является [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *thirdparty_flag* — **бит**, и может принимать одно из следующих значений.  
+`[ @thirdparty_flag = ] thirdparty_flag`Имеет значение, когда издатель [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]имеет значение. *thirdparty_flag* имеет **бит**и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
 |**0** (по умолчанию)|База данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**1**|База данных, отличная от базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
   
-`[ @publisher_type = ] 'publisher_type'` Указывает тип издателя, если издатель не является [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *publisher_type* имеет тип sysname и может принимать одно из следующих значений.  
+`[ @publisher_type = ] 'publisher_type'`Указывает тип издателя, если не [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]является издателем. *publisher_type* имеет тип sysname и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
 |**MSSQLSERVER**<br /><br /> (по умолчанию).|Используется издатель [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**ORACLE**|Задает стандартного издателя Oracle.|  
-|**ORACLE GATEWAY**|Используется издатель Oracle Gateway.|  
+|**СУБД**|Задает стандартного издателя Oracle.|  
+|**ШЛЮЗ ORACLE**|Используется издатель Oracle Gateway.|  
   
- Дополнительные сведения о различиях между издателями Oracle и издатель Oracle Gateway см. в разделе [настройка издателя Oracle](../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md).  
+ Дополнительные сведения о различиях между издателем Oracle и издателем шлюза Oracle см. в разделе [Настройка издателя Oracle](../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md).  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
 ## <a name="remarks"></a>Примечания  
- **sp_adddistpublisher** используется в репликации моментальных снимков, репликации транзакций и репликации слиянием.  
+ **sp_adddistpublisher** используется репликацией моментальных снимков, репликацией транзакций и репликацией слиянием.  
   
 ## <a name="example"></a>Пример  
  [!code-sql[HowTo#AddDistPub](../../relational-databases/replication/codesnippet/tsql/sp-adddistpublisher-tran_1.sql)]  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **sysadmin** предопределенной роли сервера могут выполнять процедуру **sp_adddistpublisher**.  
+ Только члены предопределенной роли сервера **sysadmin** могут выполнять **sp_adddistpublisher**.  
   
 ## <a name="see-also"></a>См. также  
  [Настройка публикации и распространения](../../relational-databases/replication/configure-publishing-and-distribution.md)   
  [sp_changedistpublisher (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changedistpublisher-transact-sql.md)   
- [sp_dropdistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md)   
+ [sp_dropdistpublisher &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md)   
  [sp_helpdistpublisher (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpdistpublisher-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Настройка распространения](../../relational-databases/replication/configure-distribution.md)  

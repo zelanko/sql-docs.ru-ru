@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 055f4765-0574-47c3-bf7d-6ef6e9bd8b34
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: a61b85090dc88dddbb28c923f4acdc6e8fa07cb7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c1aafa1736ff626f7b0bea9bea8753ae2c509ac4
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67941801"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68770964"
 ---
 # <a name="spaddagentparameter-transact-sql"></a>sp_add_agent_parameter (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Добавляет в профиль агента новый параметр и его значение. Эта хранимая процедура выполняется на распространителе в любой базе данных.  
   
@@ -39,9 +39,9 @@ sp_add_agent_parameter [ @profile_id = ] profile_id
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @profile_id = ] profile_id` Идентификатор профиля из **MSagent_profiles** в таблицу **msdb** базы данных. *profile_id* — **int**, не имеет значения по умолчанию.  
+`[ @profile_id = ] profile_id`Идентификатор профиля из таблицы **MSagent_profiles** в базе данных **msdb** . *profile_id* имеет **тип int**и не имеет значения по умолчанию.  
   
- Чтобы узнать тип агента, это *profile_id* представляет, найти *profile_id* в [MSagent_profiles &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/msagent-profiles-transact-sql.md) таблицы и обратите внимание, *agent_type* значение поля. Возможны следующие значения.  
+ Чтобы узнать, какой тип агента представляет этот *profile_id* , найдите *profile_id* в таблице [Transact- &#40;&#41; SQL MSagent_profiles](../../relational-databases/system-tables/msagent-profiles-transact-sql.md) и обратите внимание на значение поля *agent_type* . Возможны следующие значения.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -51,7 +51,7 @@ sp_add_agent_parameter [ @profile_id = ] profile_id
 |**4**|Агент слияния.|  
 |**9**|Агент чтения очереди.|  
   
-`[ @parameter_name = ] 'parameter_name'` — Имя параметра. *имя_параметра* — **sysname**, не имеет значения по умолчанию. Список аргументов, уже определенных в системных профилях, см. в разделе [профили агента репликации](../../relational-databases/replication/agents/replication-agent-profiles.md). Полные списки допустимых аргументов каждого агента см. в следующих разделах.  
+`[ @parameter_name = ] 'parameter_name'`Имя параметра. *parameter_name* имеет тип **sysname**и не имеет значения по умолчанию. Список параметров, уже определенных в системных профилях, см. в разделе [Профили агента репликации](../../relational-databases/replication/agents/replication-agent-profiles.md). Полные списки допустимых аргументов каждого агента см. в следующих разделах.  
   
 -   [Replication Snapshot Agent](../../relational-databases/replication/agents/replication-snapshot-agent.md)  
   
@@ -63,24 +63,24 @@ sp_add_agent_parameter [ @profile_id = ] profile_id
   
 -   [Replication Queue Reader Agent](../../relational-databases/replication/agents/replication-queue-reader-agent.md)  
   
-`[ @parameter_value = ] 'parameter_value'` Значение, присваиваемое параметру. *parameter_value* — **nvarchar(255)** , не имеет значения по умолчанию.  
+`[ @parameter_value = ] 'parameter_value'`Значение, присваиваемое параметру. *parameter_value* имеет тип **nvarchar (255)** и не имеет значения по умолчанию.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- **0** (успешное завершение) или **1** (неуспешное завершение)  
+ **0** (успешное завершение) или **1** (сбой)  
   
 ## <a name="remarks"></a>Примечания  
  **sp_add_agent_parameter** используется в репликации моментальных снимков, репликации транзакций и репликации слиянием.  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **sysadmin** предопределенной роли сервера могут выполнять процедуру **sp_add_agent_parameter**.  
+ Только члены предопределенной роли сервера **sysadmin** могут выполнять **sp_add_agent_parameter**.  
   
 ## <a name="see-also"></a>См. также  
  [Работа с профилями агента репликации](../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)   
  [Профили агента репликации](../../relational-databases/replication/agents/replication-agent-profiles.md)   
- [sp_add_agent_profile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-agent-profile-transact-sql.md)   
- [sp_change_agent_profile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-change-agent-profile-transact-sql.md)   
- [sp_change_agent_parameter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-change-agent-parameter-transact-sql.md)   
- [sp_drop_agent_parameter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-drop-agent-parameter-transact-sql.md)   
- [sp_help_agent_parameter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-agent-parameter-transact-sql.md)  
+ [sp_add_agent_profile &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-agent-profile-transact-sql.md)   
+ [sp_change_agent_profile &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-change-agent-profile-transact-sql.md)   
+ [sp_change_agent_parameter &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-change-agent-parameter-transact-sql.md)   
+ [sp_drop_agent_parameter &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-drop-agent-parameter-transact-sql.md)   
+ [sp_help_agent_parameter &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-agent-parameter-transact-sql.md)  
   
   

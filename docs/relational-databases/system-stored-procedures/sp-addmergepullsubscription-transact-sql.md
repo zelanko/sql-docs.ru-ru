@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d63909a0-8ea7-4734-9ce8-8204d936a3e4
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: ef860a30ba5994e25a9d532445af0ec2c39f9e1c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1b0a20e2bc7a167698353db31e7c0411fb1a6961
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68042729"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769143"
 ---
 # <a name="spaddmergepullsubscription-transact-sql"></a>sp_addmergepullsubscription (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Добавляет подписку по запросу к публикации слиянием. Эта хранимая процедура выполняется на подписчике в базе данных подписки.  
   
@@ -43,30 +43,30 @@ sp_addmergepullsubscription [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publication = ] 'publication'` — Имя публикации. *Публикация* — **sysname**, не имеет значения по умолчанию.  
+`[ @publication = ] 'publication'`Имя публикации. Аргумент *publication* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @publisher = ] 'publisher'` — Имя издателя. *Издатель* — **sysname**, значение по умолчанию имя локального сервера. Издатель должен быть действительным сервером.  
+`[ @publisher = ] 'publisher'`Имя издателя. Параметр *Publisher* имеет тип **sysname**и имя локального сервера по умолчанию. Издатель должен быть действительным сервером.  
   
-`[ @publisher_db = ] 'publisher_db'` — Имя базы данных издателя. *publisher_db* — **sysname**, значение по умолчанию NULL.  
+`[ @publisher_db = ] 'publisher_db'`Имя базы данных издателя. *publisher_db* имеет тип **sysname**и значение по умолчанию NULL.  
   
-`[ @subscriber_type = ] 'subscriber_type'` — Это тип подписчика. *subscriber_type* — **nvarchar(15)** и может быть **глобального**, **локального** или **анонимный**. В [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] и более поздних версиях локальные подписки называются клиентскими подписками, а глобальные подписки — серверными подписками.  
+`[ @subscriber_type = ] 'subscriber_type'`Тип подписчика. *subscriber_type* имеет тип **nvarchar (15)** и может быть **глобальным**, **локальным** или **анонимным**. В [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] и более поздних версиях локальные подписки называются клиентскими подписками, а глобальные подписки — серверными подписками.  
   
-`[ @subscription_priority = ] subscription_priority` — Это приоритет подписки. *subscription_priority*— **реальных**, значение по умолчанию NULL. Для локальных и анонимных подписок приоритет равен **0,0**. При обнаружении конфликтов применяемый по умолчанию сопоставитель выбирает победителя исходя из приоритетов. Для глобальных подписчиков приоритет подписки должен быть меньше 100, который является приоритетом издателя.  
+`[ @subscription_priority = ] subscription_priority`Приоритет подписки. *subscription_priority*является **реальным**и имеет значение по умолчанию NULL. Для локальных и анонимных подписок приоритет равен **0,0**. При обнаружении конфликтов применяемый по умолчанию сопоставитель выбирает победителя исходя из приоритетов. Для глобальных подписчиков приоритет подписки должен быть меньше 100, который является приоритетом издателя.  
   
-`[ @sync_type = ] 'sync_type'` — Это тип синхронизации подписки. *sync_type*— **nvarchar(15)** , значение по умолчанию **автоматического**. Может быть **автоматического** или **none**. Если **автоматического**, схема и начальные данные для опубликованных таблиц передаются подписчику сначала. Если **none**, он считается подписчик уже имеет схему и начальные данные для опубликованных таблиц. Системные таблицы и данные переносятся всегда.  
+`[ @sync_type = ] 'sync_type'`Тип синхронизации подписки. *sync_type*имеет тип **nvarchar (15)** и значение по умолчанию **Automatic**. Может быть **автоматическим** или **нет**. При **автоматическом**создании схемы и начальные данные для опубликованных таблиц сначала передаются подписчику. Если **нет**, предполагается, что подписчик уже имеет схему и начальные данные для опубликованных таблиц. Системные таблицы и данные переносятся всегда.  
   
 > [!NOTE]  
->  Мы не рекомендуем значение **none**.  
+>  Не рекомендуется указывать значение **None**.  
   
-`[ @description = ] 'description'` Представляет собой краткое описание этой подписки по запросу. *Описание*— **nvarchar(255)** , значение по умолчанию NULL. Это значение отображается в мониторе репликации в **понятное имя** столбец, который может использоваться для сортировки подписок для контролируемой публикации.  
+`[ @description = ] 'description'`Краткое описание этой подписки по запросу. *Description*имеет тип **nvarchar (255)** и значение по умолчанию NULL. Это значение отображается монитором репликации в столбце Понятное **имя** , который можно использовать для сортировки подписок для отслеживаемой публикации.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- **0** (успешное завершение) или **1** (неуспешное завершение)  
+ **0** (успешное завершение) или **1** (сбой)  
   
 ## <a name="remarks"></a>Примечания  
  **sp_addmergepullsubscription** используется для репликации слиянием.  
   
- При использовании [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] агента для синхронизации подписки, [sp_addmergepullsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md) хранимая процедура должна выполняться на подписчике для создания агента и задания для синхронизации с публикацией.  
+ Если для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] синхронизации подписки используется агент, хранимая процедура [sp_addmergepullsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md) должна выполняться на подписчике, чтобы создать агент и задание для синхронизации с публикацией.  
   
 ## <a name="example"></a>Пример  
  [!code-sql[HowTo#sp_addmergepullsubscriptionagent](../../relational-databases/replication/codesnippet/tsql/sp-addmergepullsubscript_0_1.sql)]  
@@ -74,15 +74,15 @@ sp_addmergepullsubscription [ @publication= ] 'publication'
  [!code-sql[HowTo#sp_addmergepullsub_websync_anon](../../relational-databases/replication/codesnippet/tsql/sp-addmergepullsubscript_0_2.sql)]  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **sysadmin** предопределенной роли сервера или **db_owner** предопределенной роли базы данных могут выполнять процедуру **sp_addmergepullsubscription**.  
+ Только члены предопределенной роли сервера **sysadmin** или предопределенной роли базы данных **db_owner** могут выполнять **sp_addmergepullsubscription**.  
   
 ## <a name="see-also"></a>См. также  
  [Создание подписки по запросу](../../relational-databases/replication/create-a-pull-subscription.md)   
  [Подписка на публикации](../../relational-databases/replication/subscribe-to-publications.md)   
- [sp_addmergepullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md)   
- [sp_changemergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepullsubscription-transact-sql.md)   
- [sp_dropmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepullsubscription-transact-sql.md)   
- [sp_helpmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepullsubscription-transact-sql.md)   
+ [sp_addmergepullsubscription_agent &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md)   
+ [sp_changemergepullsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepullsubscription-transact-sql.md)   
+ [sp_dropmergepullsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepullsubscription-transact-sql.md)   
+ [sp_helpmergepullsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepullsubscription-transact-sql.md)   
  [sp_helpsubscription_properties (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)  
   
   

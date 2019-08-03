@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 61f27234-531d-4b37-8fa3-fe4c32e6f521
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 83d5789fed1ee9ff8d92d549feeb1ae47a8ed38c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9b4df50d1cf43ba1b0f4eb8b8f313634b4d11d18
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68048232"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771541"
 ---
 # <a name="sphelptracertokens-transact-sql"></a>sp_helptracertokens (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Возвращает строку для каждого трассировочного токена, вставленного в публикацию для определения задержки. Эта хранимая процедура выполняется на издателе в базе данных публикации или на распространителе в базе данных распространителя.  
   
@@ -39,14 +39,14 @@ sp_helptracertokens [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publication = ] 'publication'` — Имя публикации, в которую маркеры были вставлены трассировочные. *Публикация* — **sysname**, не имеет значения по умолчанию.  
+`[ @publication = ] 'publication'`Имя публикации, в которой вставляются трассировочные токены. Аргумент *publication* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @publisher = ] 'publisher'` Имя издателя. *издатель* — **sysname**, значение по умолчанию NULL.  
+`[ @publisher = ] 'publisher'`Имя издателя. Аргумент *Publisher* имеет тип **sysname**и значение по умолчанию NULL.  
   
 > [!NOTE]
->  Этот параметр должен быть указан только для не - [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателей.  
+>  Этот параметр следует указывать только для [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателей, не являющихся.  
   
-`[ @publisher_db = ] 'publisher_db'` Имя базы данных публикации. *publisher_db* — **sysname**, со значением по умолчанию NULL. Этот параметр не учитывается, если хранимая процедура выполняется на издателе.  
+`[ @publisher_db = ] 'publisher_db'`Имя базы данных публикации. *publisher_db* имеет тип **sysname**и значение по умолчанию NULL. Этот параметр не учитывается, если хранимая процедура выполняется на издателе.  
   
 ## <a name="result-set"></a>Результирующий набор  
   
@@ -56,21 +56,21 @@ sp_helptracertokens [ @publication = ] 'publication'
 |**publisher_commit**|**datetime**|Дата и время, когда была зафиксирована запись токена у издателя в базе данных публикации.|  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- **0** (успешное завершение) или **1** (неуспешное завершение)  
+ **0** (успешное завершение) или **1** (сбой)  
   
 ## <a name="remarks"></a>Примечания  
  **sp_helptracertokens** используется в репликации транзакций.  
   
- **sp_helptracertokens** используется для получения идентификаторов трассировочных токенов при выполнении [sp_helptracertokenhistory &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptracertokenhistory-transact-sql.md).  
+ **sp_helptracertokens** используется для получения идентификаторов трассировочных маркеров при [выполнении &#40;sp_helptracertokenhistory Transact-&#41;SQL](../../relational-databases/system-stored-procedures/sp-helptracertokenhistory-transact-sql.md).  
   
 ## <a name="example"></a>Пример  
  [!code-sql[HowTo#sp_tracertokens](../../relational-databases/replication/codesnippet/tsql/sp-helptracertokens-tran_1.sql)]  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **sysadmin** предопределенной роли сервера, **db_owner** предопределенной роли базы данных в базе данных публикации или **db_owner** базы данных или  **replmonitor** ролей в базе данных распространителя могут выполнять процедуру **sp_helptracertokenhistory**.  
+ Только члены предопределенной роли сервера **sysadmin** , предопределенной роли базы данных **db_owner** в базе данных публикации или роли предопределенной базы данных **db_owner** или **replmonitor** в базе данных распространителя могут выполнять **sp_ хелптрацертокенхистори**.  
   
 ## <a name="see-also"></a>См. также  
  [Измерение задержки и проверка правильности соединений для репликации транзакций](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)   
- [sp_deletetracertokenhistory &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql.md)  
+ [sp_deletetracertokenhistory &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql.md)  
   
   
