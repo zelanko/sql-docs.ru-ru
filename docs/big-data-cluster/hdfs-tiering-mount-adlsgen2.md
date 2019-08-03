@@ -9,12 +9,12 @@ ms.date: 07/24/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 2b3a4bff6250c4184fe939fdadcaacbe9adb950f
-ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
+ms.openlocfilehash: 83922206503b690a7b49c27d4686333bf7b966a1
+ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68702884"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68742735"
 ---
 # <a name="how-to-mount-adls-gen2-for-hdfs-tiering-in-a-big-data-cluster"></a>Подключение ADLS 2-го поколения для распределения по уровням HDFS в кластере больших данных
 
@@ -110,7 +110,7 @@ ms.locfileid: "68702884"
    ```
 1. Задайте переменную среды MOUNT_CREDENTIALS (для получения инструкций прокрутите вверх).
 
-1. Подключите удаленное хранилище HDFS к Azure с помощью команды **azdata bdc storage-pool mount create**. Замените значения заполнителей, после чего выполните следующую команду:
+1. Подключите удаленное хранилище HDFS в Azure с помощью **аздата BDC с подключением HDFS Create**. Замените значения заполнителей, после чего выполните следующую команду:
 
    ```bash
    azdata bdc hdfs mount create --remote-uri abfs://<blob-container-name>@<storage-account-name>.dfs.core.windows.net/ --mount-path /mounts/<mount-name>
@@ -145,7 +145,7 @@ azdata bdc hdfs mount refresh --mount-path <mount-path-in-hdfs>
 
 ## <a id="delete"></a> Удаление подключения
 
-Чтобы удалить подключение, выполните команду **azdata bdc storage-pool mount delete** и укажите путь к подключению в HDFS:
+Чтобы удалить подключение, используйте команду **аздата BDC подключить Delete** и укажите путь подключения в HDFS:
 
 ```bash
 azdata bdc hdfs mount delete --mount-path <mount-path-in-hdfs>
