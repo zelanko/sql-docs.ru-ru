@@ -18,15 +18,16 @@ helpviewer_keywords:
 ms.assetid: f182f43a-6af8-45bc-a708-08d5f7a6984a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f58fb09416bb6cc800c31dffa47e359d361ccaf7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: b35b7ecc21497e7b8c458b6d0e46c410f96d5d21
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68082974"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68767126"
 ---
 # <a name="monitoring-replication"></a>Наблюдение (репликация)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   Наблюдение за топологией репликации является важным аспектом развертывания репликации. Так как активность репликации является распределенной, важно отслеживать активность и состояние всех компьютеров, участвующих в репликации. С помощью различных средств мониторинга можно ответить на такие распространенные вопросы, как: 
 
 -   Исправна ли система репликации?

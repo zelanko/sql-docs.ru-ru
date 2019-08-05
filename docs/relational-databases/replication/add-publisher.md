@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: 4b57e298-655f-42c2-82bc-25cdad94a194
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9587741432c827f3a83cf8c64158c70c068d5300
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: ac60bbbed5a14c0ec891b2794620c1492cdb0fb5
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67939481"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768846"
 ---
 # <a name="add-publisher"></a>Добавление издателя
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   Диалоговое окно **Добавление издателя** позволяет добавить одного или несколько издателей в левую панель монитора репликации. После добавления издателя в правой панели отображаются сведения об издателе, выбранном в левой панели.  
   
 ## <a name="options"></a>Параметры  

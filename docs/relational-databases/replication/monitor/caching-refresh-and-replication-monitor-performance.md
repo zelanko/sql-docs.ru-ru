@@ -16,15 +16,16 @@ helpviewer_keywords:
 ms.assetid: a2d8b666-ed41-4f86-b2b8-c8e118416ab7
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 56d42d7539a58d631c1776d54caee09072d22a0a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 137378b741e59a3b1c2cc4758213dc2acff0e6e7
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68018552"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68770575"
 ---
 # <a name="caching-refresh-and-replication-monitor-performance"></a>Кэширование, обновление и производительность монитора репликации
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   Монитор репликации[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] предназначен для эффективного наблюдения за большим количеством компьютеров в производственной системе. Запросы, которые монитор репликации использует для выполнения вычислений и сбора данных, периодически кэшируются и обновляются. Кэширование уменьшает количество запросов и вычислений, необходимых для просмотра разных страниц в мониторе репликации и позволяет вести наблюдение за несколькими пользователями.  
   
  Обновление кэша обрабатывается заданием агента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] — **Обновитель монитора репликации для распространения**. Задание выполняется постоянно, однако расписание обновления кэша основано на определенном времени ожидания после предыдущего обновления:  

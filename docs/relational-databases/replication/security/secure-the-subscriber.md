@@ -14,16 +14,19 @@ helpviewer_keywords:
 ms.assetid: c8f0d62a-8b5d-4a21-9aec-223da52bb708
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a9914246135350540b0155e61905d1e548a033fa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: f07a80d5667a91376c9e5936be2474c826d6569a
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68051876"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769615"
 ---
 # <a name="secure-the-subscriber"></a>Организация безопасности подписчика
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Агенты слияния и распространителей подключаются к подписчику. Эти подключения могут выполняться в контексте имени входа [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] или имени входа Windows. Важно предоставить для этих агентов соответствующее имя входа, придерживаясь принципа предоставления минимально необходимых прав и обеспечивая защиту хранилища всех паролей. Сведения о разрешениях, необходимых для каждого агента, см. в разделе [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md).  
+
+[!INCLUDE[azure-sql-db-replication-supportability-note](../../../includes/azure-sql-db-replication-supportability-note.md)]
   
 ## <a name="distribution-agent"></a>Агент распространителя  
  Может использоваться либо один агент распространителя на подписку (независимый агент, установленный по умолчанию для публикаций, созданных в мастере создания публикаций), либо один агент распространителя на пару баз данных публикации и подписки (общий агент). T  

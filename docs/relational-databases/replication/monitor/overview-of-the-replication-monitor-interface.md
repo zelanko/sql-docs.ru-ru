@@ -13,15 +13,16 @@ helpviewer_keywords:
 ms.assetid: 078f0e34-7153-45c4-8725-778b5bef88da
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e3681d88f0cd91ce955919ad24f0e95b0600c5e3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: e293625ab72ba1b94b32a1e6c1ada853b88509f4
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68061448"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68770598"
 ---
 # <a name="overview-of-the-replication-monitor-interface"></a>Обзор интерфейса монитора репликации
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   Монитор репликации[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] обеспечивает представление всех операций репликации в окне, состоящем из двух панелей, со стороны издателя и со стороны распространителя. При добавлении издателя в монитор на левую панель, на правой панели монитора отображается информация об этом издателе, его публикациях, подписках на эти публикации и различных агентах репликации. Помимо представления информации о топологии репликации, монитор репликации позволяет выполнять некоторые задачи, например пуск и остановку агентов, а также проверку данных.  
   
 ## <a name="viewing-information-for-the-entire-topology"></a>Просмотр информации обо всей топологии  

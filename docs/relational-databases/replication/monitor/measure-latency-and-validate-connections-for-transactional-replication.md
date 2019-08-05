@@ -16,15 +16,16 @@ helpviewer_keywords:
 ms.assetid: 4addd426-7523-4067-8d7d-ca6bae4c9e34
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e8593dc13115815792bb7912a220e2ad88c15fa3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 31e5f5e89a6421c72ecb381685f9450ac9ba9331
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68083047"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68770560"
 ---
 # <a name="measure-latency-and-validate-connections-for-transactional-replication"></a>Измерение задержки и проверка правильности соединений для репликации транзакций
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   В данном разделе описывается измерение задержки и проверка соединений для репликации транзакций в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] с помощью монитора репликации, [!INCLUDE[tsql](../../../includes/tsql-md.md)]или объектов RMO. Репликация транзакций предоставляет функцию трассировочных токенов, которая обеспечивает удобный способ измерения длительности задержки в топологиях репликации транзакций и помогает проверять соединения между издателем, распространителем и подписчиками. Токен (небольшой объем данных) записывается в журнал транзакций базы данных публикации и помечается так, как если бы он был обычной реплицируемой транзакцией, а затем проходит по системе, позволяя вычислить следующие характеристики:  
   
 -   Время, прошедшее между фиксацией транзакции на издателе и вставкой соответствующей команды в базу данных распространителя на распространителе.  

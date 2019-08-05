@@ -20,15 +20,16 @@ helpviewer_keywords:
 ms.assetid: 8a914947-72dc-4119-b631-b39c8070c71b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 92011867835b3b42d6d15576eeb5bafb305e9f39
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 55eb271c7eb5dff661b37cfb18b029e57bbeb0ba
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67904607"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769876"
 ---
 # <a name="filter-published-data"></a>Фильтрация опубликованных данных
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   Фильтрация статей таблиц позволяет создавать секции публикуемых данных. С помощью фильтрации опубликованных данных можно достичь следующих целей:  
   
 -   Минимизировать объем данных, передаваемых по сети.  

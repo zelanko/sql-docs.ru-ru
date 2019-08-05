@@ -16,15 +16,16 @@ helpviewer_keywords:
 ms.assetid: 67d79532-1482-4de1-ac9f-4a23d162c85e
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 55b838b7fb324cf15b3bf4967d1de68706a337d8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 904ca2ccc3992ae6c4f03f03da8c70761ec5e907
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68051739"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768402"
 ---
 # <a name="view-and-modify-replication-security-settings"></a>Просмотр и изменение параметров безопасности репликации
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   В данном разделе описывается процесс просмотра и изменения параметров безопасности репликации в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] при помощи среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]или объектов RMO. Например, может потребоваться изменение подключения агента чтения журнала к издателю для использования проверки подлинности SQL Server вместо встроенной проверки подлинности Windows, или может потребоваться изменение учетных данных для запуска задания агента при изменении пароля учетной записи Windows. Дополнительные сведения о разрешениях, необходимых каждому агенту, см. в статье [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md) (Модель безопасности агента репликации).  
   
  **В этом разделе**  

@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: e1122018-9f74-43e3-8489-7eae33ff23d9
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 014f8f62d29c149474e68c70efcc4c3c2a80355c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 622aa1feaf1b3cd926fafea970d2dc50ab43034e
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68021246"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769712"
 ---
 # <a name="reinitialize-subscriptions---all-subscriptions"></a>Повторная инициализация подписок — все подписки
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   Диалоговое окно **Повторная инициализация подписок** позволяет пометить все подписки публикации для повторной инициализации. Повторная инициализация заключается в том, что к каждому подписчику применяется моментальный снимок; эта задача выполняется агентом распространителя для подписок на публикации транзакций и агентом слияния для подписок на публикации слиянием.  
   
 ## <a name="options"></a>Параметры  

@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: f4686f6f-c224-4f07-a7cb-92f4dd483158
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: fbe9c2805a6e8b5354207534b5758c28081011e7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 25aa20472daec1e20113627b4cbd778dfa142002
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68121275"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769333"
 ---
 # <a name="publishing-stored-procedure-execution-in-transactional-replication"></a>Публикация выполнения хранимых процедур в репликации транзакций
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   Если существует одна или несколько хранимых процедур, выполняемых на издателе и влияющих на опубликованные таблицы, рассмотрите возможность включения в публикацию этих хранимых процедур в виде статей выполнения хранимых процедур. Определение процедуры (инструкция CREATE PROCEDURE) реплицируется на подписчик при инициализации подписки. Когда процедура выполняется на издателе, репликация выполняет соответствующую процедуру на подписчике. Это может обеспечить значительное повышение производительности в случаях, когда выполняются крупные пакетные операции, поскольку реплицируется только выполнение процедуры и исключается необходимость репликации отдельных изменений для каждой строки. Например, предположим, что создана следующая хранимая процедура в базе данных публикации:  
   
 ```  

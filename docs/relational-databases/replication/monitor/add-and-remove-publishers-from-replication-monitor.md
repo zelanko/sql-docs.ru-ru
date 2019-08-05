@@ -12,15 +12,16 @@ helpviewer_keywords:
 ms.assetid: fa36c4b4-bfa5-494e-92e3-07a02d7332c3
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 24cc3942c0b4df2f49ec4f40a394f07e60b1efd7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 28d0a979e6cf4d76dd338f139f5c48887aed988e
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68018635"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68770690"
 ---
 # <a name="add-and-remove-publishers-from-replication-monitor"></a>Добавление и удаление издателей в мониторе репликации
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   Сервер, с которого запускается монитор репликации, автоматически добавляется в монитор, если это издатель. Дополнительные издатели могут быть добавлены в диалоговом окне **Добавление издателя** . После добавления издателя он отображается в группе на левой панели монитора. Группа **Мои издатели** включена в состав по умолчанию, но можно создать новые группы для управления одной или несколькими топологиями репликации. Сведения о запуске монитора репликации см. в [этой статье](../../../relational-databases/replication/monitor/start-the-replication-monitor.md).  
   
 ### <a name="to-add-a-sql-server-publisher"></a>Добавление издателя SQL Server  

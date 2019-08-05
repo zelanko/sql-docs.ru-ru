@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1fa71d22-ce5a-4aae-ba05-4d755842aeac
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4ae37ea5fd27ae6309eaa5cf879b562e254c1786
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1837e3b57548ec0d4324a408f8f43201ccc3ca6b
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68063070"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768173"
 ---
 # <a name="define-filters"></a>Определение фильтров
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "68063070"
   
 ## <a name="options"></a>Параметры  
  **Оператор**  
- Выберите оператор для фильтра, например **Меньше**или Равно.  
+ Выберите оператор для фильтра, например **Меньше**или Равно.
   
  **Значение**  
  Введите значение для фильтра. Для большинства операторов нужно только значение в первом столбце **Значение** , но для операторов **Между** и **Вне** необходимы значения в обоих столбцах **Значение** .  

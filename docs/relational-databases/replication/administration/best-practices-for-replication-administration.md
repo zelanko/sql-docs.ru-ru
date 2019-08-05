@@ -13,15 +13,16 @@ helpviewer_keywords:
 ms.assetid: 850e8a87-b34c-4934-afb5-a1104f118ba8
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 32e8e55d24ebd1ff27ef5e87e1da46a69feadb02
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 04cfff3e2772f945d01093bab15246924a104b2b
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67939435"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768840"
 ---
 # <a name="best-practices-for-replication-administration"></a>Рекомендации по администрированию репликации
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   После настройки репликации важно разобраться, как следует управлять топологией репликации. В этом разделе предоставляются основные рекомендации по ряду вопросов со ссылками на дополнительные источники информации по рассматриваемым темам. Помимо рекомендаций, описываемых в этом разделе, ознакомьтесь с часто встречающимися вопросами и проблемами, описанными в следующем источнике информации: [Вопросы, часто задаваемые администраторам репликации](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md).  
   
  Рекомендации удобно разбить на две группы:  

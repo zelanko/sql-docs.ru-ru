@@ -13,15 +13,16 @@ helpviewer_keywords:
 ms.assetid: 77a9ade2-cdc0-4ae9-a02d-6e29d7c2ada0
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 06e0c90fef7c030a9ab67998a8f74ae8c0430fbe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 68be2c5a44777bb62a594cf2ab612e46a078d0eb
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68127856"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68767846"
 ---
 # <a name="initialize-a-subscription-with-a-snapshot"></a>Инициализация подписки с помощью моментального снимка
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   После того как публикация создана, обычно создается и копируется в папку моментальных снимков исходный моментальный снимок (это происходит по умолчанию для публикаций слиянием, созданных с помощью мастера создания публикаций). Затем, при начальной синхронизации подписки, снимок применяется к подписчику агентом распространителя (для публикаций транзакций и публикаций моментальных снимков) или агентом слияния (для публикаций слиянием). Процесс создания моментального снимка зависит от типа публикации:  
   
 -   Если моментальный снимок предназначен для публикации моментальных снимков, публикации транзакций или публикации слиянием, не использующей параметризованных фильтров, снимок содержит схему и данные в файлах программы массового копирования (bcp), а также ограничения, расширенные свойства, индексы, триггеры и системные таблицы, необходимые для репликации. Дополнительные сведения о создании и применении моментального снимка см. в [этой статье](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md).  

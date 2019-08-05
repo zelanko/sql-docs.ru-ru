@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: 8276a521-bdd1-4783-bdb6-7ab43499c0ca
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8930ba9b50f4b388389c32abce2eacc2ba0080b9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: a3d96db530d62f4105e36f2be68887ee67c942cf
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68128277"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68770636"
 ---
 # <a name="distributor-settings"></a>Параметры распространителя
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   В диалоговом окне **Настройки распространителя** можно изменить настройки распространителей, добавленных на левую панель монитора репликации.  
   
 ## <a name="options"></a>Параметры  

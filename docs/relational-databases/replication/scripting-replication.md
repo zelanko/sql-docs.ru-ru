@@ -17,15 +17,16 @@ helpviewer_keywords:
 ms.assetid: e50fac44-54c0-470c-a4ea-9c111fa4322b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9de11f0fcb73eda1b00d7b956e55995d13cd40f1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 62816ac084a565f75d50f5f1f8b2b23467158242
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68104622"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768432"
 ---
 # <a name="scripting-replication"></a>Создание сценариев репликации
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   Все компоненты репликации в топологии должны использоваться в скриптах как часть плана аварийного восстановления, а скрипты могут также использоваться для автоматизации повторяющихся задач. Скрипт содержит системные хранимые процедуры Transact-SQL, необходимые для выполнения элементов скрипта репликации, таких как публикация или подписка. Скрипты могут быть созданы с помощью мастера (например, мастера создания публикаций) или в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] после создания компонента. Скрипт можно просмотреть, изменить и запустить с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или **sqlcmd**. Скрипты могут сохраняться с файлами резервных копий для использования в случае, если необходимо перенастроить топологию репликации.  
   
  Компонент должен быть заново включен в сценарий при внесении изменений любого из его свойств. Если с репликацией транзакций используются специальные хранимые процедуры, копия каждой процедуры должна сохраняться со скриптами. Если процедура изменяется, ее копия должна обновляться (процедуры обычно обновляются в связи с изменениями схемы или изменениями требований приложения). Дополнительные сведения о хранимых процедурах см. в статье [Указание способа распространения изменений для статей транзакций](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md).  

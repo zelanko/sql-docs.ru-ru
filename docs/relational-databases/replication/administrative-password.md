@@ -12,15 +12,16 @@ f1_keywords:
 ms.assetid: d43bebc8-e83a-457a-b7f4-a61a735f1904
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b4964789fb69af676a84f049183a88df183d6e82
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: f428510cbc2ddaed72567cd26a42a48556a72639
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67948649"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768252"
 ---
 # <a name="administrative-password"></a>Административный пароль
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   Если на странице **Распространители** мастера был выбран удаленный распространитель для этого издателя, необходимо ввести пароль для соединения репликации, создаваемого между издателем и распространителем с помощью имени входа **distributor_admin** . Пароль должен совпадать с паролем, указанным на странице **Пароль распространителя** мастера настройки распространителя или на странице **Издатели** диалогового окна **Свойства распространителя** .  
   
 ## <a name="options"></a>Параметры  

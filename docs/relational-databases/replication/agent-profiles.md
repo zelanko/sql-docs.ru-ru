@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: 0422e99c-e688-419b-bb4c-c7bebeef1d8d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 519cf5845956aa52094f9fff7ba1640d09b0aed7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: bea15bd12af6675bd0567e2f607d865c50453717
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68027856"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68770773"
 ---
 # <a name="agent-profiles"></a>Профили агентов
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   Диалоговое окно **Профили агентов** управляет профилями агентов. Профили агентов предоставляют удобный способ управления параметрами среды выполнения для каждого агента. Каждый агент имеет профиль по умолчанию, а некоторые агенты имеют и дополнительные предопределенные профили. Например, агент слияния имеет профиль «медленной связи», предназначенный для соединений с низкой пропускной способностью. Предопределенных профилей достаточно для создания большинства приложений, однако существует возможность создания пользовательских профилей, позволяющих настроить поведение агента.  
   
 ## <a name="options"></a>Параметры  

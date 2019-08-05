@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: 19fbd10e-5b59-4cd0-a988-52d5d9206242
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 078d965fbf3963039bb54b70fd63f54aadb9eb95
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 6a99d15ba812edac0408262ba1ae26d7ea8b8dbc
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68005371"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768440"
 ---
 # <a name="replication-tutorials"></a>Учебники по репликации
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 Технология репликации обеспечивает эффективный перенос данных или подмножеств данных между серверами. Репликация транзакций применяется для репликации данных между полностью подключенными серверами. Также можно использовать репликацию для данных между серверами и клиентами, между которыми отсутствует постоянное подключение, посредством репликации слиянием. В этой статье приводятся учебники, которые помогут вам подготовить сервер к репликации, а также сведения о настройке репликации транзакций и репликации слиянием. 
   
 В учебниках по репликации "Издатель" — это сервер, который содержит реплицируемые данные источника. "Подписчик" — это целевой сервер. Издатель и подписчик могут совместно использовать один и тот же экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], но это необязательно. Дополнительные сведения см. в разделе [Обзор модели публикации репликации](../../relational-databases/replication/publish/replication-publishing-model-overview.md).  

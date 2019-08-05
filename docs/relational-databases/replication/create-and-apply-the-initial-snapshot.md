@@ -13,15 +13,16 @@ helpviewer_keywords:
 ms.assetid: 742727a1-5189-44ec-b3ae-6fd7aa1f5347
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d8b343055ca8c307299ba375b276036c0b1954c6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 65d0b89dfc2862c63d9fbb8f81d4145aba9d391f
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68037431"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768640"
 ---
 # <a name="create-and-apply-the-initial-snapshot"></a>Создание и применение исходного моментального снимка
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 В данном разделе описывается процесс создания и применения исходного моментального снимка в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] при помощи среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]или объектов RMO. Публикации слиянием, использующие параметризованные фильтры, требуют моментальных снимков, состоящих из двух частей. Дополнительные сведения см. в статье [Создание моментального снимка для публикации слиянием с параметризованными фильтрами](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
   Моментальные снимки создаются агентом моментальных снимков после создания публикации. Моментальные снимки могут создаваться:  
   

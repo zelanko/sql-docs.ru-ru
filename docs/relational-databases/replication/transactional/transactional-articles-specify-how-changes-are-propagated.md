@@ -12,15 +12,16 @@ helpviewer_keywords:
 ms.assetid: a10c5001-22cc-4667-8f0b-3d0818dca2e9
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 5a53c0ac886185e2d6723a5a01c055c1c828fe51
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: c7f499c813f31717e5932cf0b78b4699b72b2a85
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68121259"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769340"
 ---
 # <a name="transactional-articles---specify-how-changes-are-propagated"></a>Определение способа распространения изменений для статей транзакций
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   Репликация транзакций позволяет указывать, как изменения данных распространяются от издателя к подписчикам. Для каждой опубликованной таблицы можно указать один из четырех способов, которым каждая операция (INSERT, UPDATE или DELETE) должна распространяться на подписчик:  
   
 -   Укажите, что репликации транзакций следует создать скрипт и затем вызвать хранимую процедуру для распространения изменений на подписчики (по умолчанию).  

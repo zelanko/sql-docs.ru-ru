@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: 215b4c9a-0ce9-4c00-ac0b-43b54151dfa3
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6e750743eb98307433d8ad6878cec12ea4e43ca5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 2e3abb6dfb8556f4e598e55e8ae3d645e117a8b5
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67895230"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769292"
 ---
 # <a name="validate-replicated-data"></a>Проверка реплицированных данных
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   В данном разделе описывается процесс проверки данных на подписчике в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]или объектов RMO.  
   
 Репликация транзакций, а также репликация слиянием позволяет проверять соответствие данных подписчика данным издателя. Проверку можно выполнять как для определенных подписок, так и для всех подписок в публикации. Задайте один из следующих типов проверки и агент распространителя или агент слияния проверят данные при следующем запуске.  
@@ -34,6 +34,8 @@ ms.locfileid: "67895230"
 -   **Подсчет количества строк и двоичной контрольной суммы**. Кроме подсчета количества строк на подписчике и на издателе, вычисляется контрольная сумма всех данных с помощью алгоритма подсчета контрольной суммы. Если количество строк не совпадает, то контрольная сумма не проверяется.  
   
  Кроме проверки совпадения данных на подписчике и издателе, репликация слиянием предоставляет возможность удостовериться, правильно ли данные секционированы для каждого подписчика. Дополнительные сведения см. в статье [Проверка сведений о секции для подписчика на публикацию слиянием](../../relational-databases/replication/validate-partition-information-for-a-merge-subscriber.md).  
+
+[!INCLUDE[azure-sql-db-replication-supportability-note](../../includes/azure-sql-db-replication-supportability-note.md)]
    
 ## <a name="how-data-validation-works"></a>Как работает проверка данных  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверяет данные путем подсчета числа строк или контрольной суммы на издателе и последующего сравнения этих значений с соответствующими значениями числа строк и контрольной суммы, вычисленными на подписчике. Одно значение вычисляется для всей таблицы публикации, одно — для всей таблицы подписки, но данные в столбцах типа **text**, **ntext**и **image** в вычислении не участвуют.  

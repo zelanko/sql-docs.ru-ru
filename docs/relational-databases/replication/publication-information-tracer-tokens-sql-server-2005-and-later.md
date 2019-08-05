@@ -12,15 +12,16 @@ f1_keywords:
 ms.assetid: a115ba95-17ae-45df-91bd-5a1a35f3745f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 34e0bc66497d789e13005b1bdaa85e50bb062234
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: e4ec223179bf7fdb2e2fae250f95ab241ed1acf7
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68120275"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68770011"
 ---
 # <a name="publication-information-tracer-tokens-sql-server-2005-and-later"></a>Сведения о публикации, вкладка "Трассировочные токены" (SQL Server 2005 и более поздние версии)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   На вкладке **Трассировочные токены** можно проверить соединения и измерить задержку той системы, где используется репликация транзакций. Токен (небольшой объем данных) записывается в журнал транзакций базы данных публикации и помечается так, как если бы он был обычной реплицируемой транзакцией, а затем проходит по системе, позволяя вычислить следующие характеристики:  
   
 -   Время, прошедшее между фиксацией транзакции на издателе и вставкой соответствующей команды в базу данных распространителя на распространителе.  

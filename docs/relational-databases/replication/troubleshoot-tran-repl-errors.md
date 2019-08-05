@@ -10,14 +10,17 @@ helpviewer_keywords:
 - replication [SQL Server], tutorials
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 03ffb9e8259e463c261838ffc79cf0b9c5908b39
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 705bf95c2bcff4062962166249055ec940f00d5b
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67895541"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769351"
 ---
 # <a name="troubleshooter-find-errors-with-sql-server-transactional-replication"></a>Средство устранения неполадок: поиск ошибок, связанных с репликацией транзакций SQL Server 
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+
 Без понимания того, как работает репликация транзакций, устранение ее ошибок может быть затруднительным. Первым шагом при создании публикации является создание моментального снимка агентом моментальных снимков и его сохранение в папке моментальных снимков. Затем агент распространения применяет моментальный снимок к подписчику. 
 
 В результате этой процедуры публикация создается и переводится в состояние *синхронизации*. Синхронизация осуществляется в три этапа.

@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: a5975bf4-183e-42e3-b7d1-ad02f89d2e1d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d9989b048522b9ad387b5fb8efd1588de55281e7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 6d90be401f00ebf8e84d4d54e6deb86baa4c3bb4
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67939327"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768804"
 ---
 # <a name="common-actions-requiring-an-updated-backup"></a>Общие действия, для которых необходима обновленная резервная копия
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   Если резервное копирование журналов выполняется регулярно, любые изменения, касающиеся репликации, будут заноситься в резервные копии журнала. Если резервные копии журналов не создаются, выполняйте резервное копирование базы данных публикации, базы данных распространителя, базы данных подписки, баз данных **msdb**и **master** после внесения изменений в схему или топологию репликации.  
   
 ## <a name="publication-database"></a>База данных публикации  

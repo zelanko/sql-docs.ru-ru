@@ -20,16 +20,16 @@ helpviewer_keywords:
 ms.assetid: 4d03f5ab-e721-4f56-aebc-60f6a56c1e07
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 90163caba595936f5c9ef9854b8e1f0af2890673
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: b3d561e331cae739514b2e38c5c885653c44ce46
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68129844"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768351"
 ---
 # <a name="subscription-expiration-and-deactivation"></a>Окончание срока действия и отключение подписки
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   Подписки могут быть деактивированы или могут закончиться сроки их действия, если они не будут синхронизированы в течение определенного *срока хранения*. Выполняемое действие зависит от типа репликации и от превышенного срока хранения.  
   
  Чтобы задать сроки хранения, выполните действия из статей [Установка срока действия подписок](../../relational-databases/replication/publish/set-the-expiration-period-for-subscriptions.md), [Настройка срока хранения распространения для публикаций транзакций (SQL Server Management Studio)](../../relational-databases/replication/set-distribution-retention-period-for-transactional-publications.md) и [Настройки публикации и распространения](../../relational-databases/replication/configure-publishing-and-distribution.md).  

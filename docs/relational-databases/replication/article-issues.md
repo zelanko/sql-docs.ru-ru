@@ -12,15 +12,16 @@ f1_keywords:
 ms.assetid: bde57da2-dd47-412f-9df7-9224968b2448
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: edcd8f68fbd35867a1c733304e67d0b0d7992bd4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 69d0337fe66af61e66290117d94043cc01547524
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085886"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68770712"
 ---
 # <a name="article-issues"></a>Проблемы в статьях
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   На странице **Проблемы в статьях** перечисляются условия, определенные для статей, а также изменения, проведение которых необходимо при этих условиях. В следующей таблице перечисляются возможные проблемы и действия, необходимые для гарантированного корректного выполнения репликации и существующих приложений.  
   
 |Проблемы, связанные со статьями|Сведения|Необходимые действия|  

@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 5dae1d59-c377-4c6e-adc9-b68c5b328f79
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 5d654627a3e35aacfebe4b3c69573eff83beaa39
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: a2d9e5b04164b3e8aab8c8d0a2fa50d154b10345
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68115233"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769261"
 ---
 # <a name="view-and-modify-distributor-and-publisher-properties"></a>Просмотр и изменение свойств издателя и распространителя
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   В данном разделе описывается просмотр и изменение свойств распространителя и издателя в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] при помощи среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]или объектов RMO.  
   
  **В этом разделе**  

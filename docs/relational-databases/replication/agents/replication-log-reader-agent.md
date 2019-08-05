@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 5487b645-d99b-454c-8bd2-aff470709a0e
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f7e07e59c7ebf85ff3af03f7c30dfa56670148a6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 6c71ce5c804a25123ce18e010585e038f41a2ebf
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085961"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68770719"
 ---
 # <a name="replication-log-reader-agent"></a>Агент чтения журнала репликации
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   Агент чтения журнала производит мониторинг журналов транзакций всех баз данных, включенных в репликацию транзакций, и копирует помеченные для репликации транзакции из журнала транзакций в базу данных распространителя.  
   
 > [!NOTE]  

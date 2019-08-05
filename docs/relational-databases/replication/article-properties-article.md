@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: 6dd601a4-1233-43d9-a9f0-bc8d84e5d188
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 77aa27a444437a9d1fb887fe01e4cff64051f524
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 081802afb9f66380da93f46bf75011b0f4ddb811
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085870"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768202"
 ---
 # <a name="article-properties---ltarticlegt"></a>Свойства статьи — &lt;Статья&gt;
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   Диалоговое окно **Свойства статьи** доступно из мастера создания публикаций и диалогового окна **Свойства публикации** . Оно позволяет просматривать и устанавливать свойства для всех типов статей. Некоторые свойства могут быть установлены только при создании публикации, а другие могут устанавливаться только в случае, если у публикации нет активных подписок. Свойства, которые не могут быть установлены, отображаются как доступные только для чтения.  
   
 > [!NOTE]  

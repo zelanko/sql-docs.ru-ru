@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: a1485cf4-b1c4-49e9-ab06-8ccfaad998f3
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 29333256b0818db6d794d75448eb8678d9070bd4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: c96a881443c03362f58fdfa857d6244789a7fe7e
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68046711"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769635"
 ---
 # <a name="republish-data"></a>Повторная публикация данных
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   В модели переиздания издатель посылает данные подписчику, который затем переиздает данные для других подписчиков. Эта модель полезна в ситуациях, когда издатель должен отослать данные подписчикам через медленный или дорогостоящий канал передачи данных. Если на другом конце такого канала существует несколько подписчиков, использование переиздающего подписчика позволяет сместить большую часть нагрузки распространения на сторону канала, где находятся подписчики.  
   
  Переиздание данных включает следующие шаги:  

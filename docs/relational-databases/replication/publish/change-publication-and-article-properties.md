@@ -16,15 +16,16 @@ helpviewer_keywords:
 ms.assetid: f7df51ef-c088-4efc-b247-f91fb2c6ff32
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 362861dcc90222d32ccd816fb419fa99fc4de65a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: c9e96d5ebbe71273204b39ed5d387ecab598654a
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67907941"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68764362"
 ---
 # <a name="change-publication-and-article-properties"></a>Изменение свойств публикации и статьи
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   После того как публикация создана, большинство свойств публикаций и статей можно изменить, но для некоторых изменений требуется, повторное создание моментального снимка и/или повторная инициализация подписок. В этом разделе содержатся сведения обо всех свойствах, требуемых для одного или обоих этих действий (если они изменяются).  
   
 ## <a name="publication-properties-for-snapshot-and-transactional-replication"></a>Свойства публикации для репликации моментальных снимков и репликации транзакций.  

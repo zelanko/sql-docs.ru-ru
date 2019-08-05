@@ -12,15 +12,16 @@ f1_keywords:
 ms.assetid: 7c743dc6-6c6d-4c92-b711-842e1b0b273e
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 24bb3bc28929921c7a6aae5c19b990a8d931fc5d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: b70f8c24ed54a6f36a2c224a0fb3ea5182bf3c30
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085866"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68770656"
 ---
 # <a name="articles"></a>Статьи
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   На странице **Статьи** указываются объекты базы данных, которые нужно включить в качестве статей в публикацию. При публикации объекта базы данных, зависящего от одного или нескольких других объектов базы данных, необходимо опубликовать и все связанные с ним объекты. Например, при публикации представления, зависящего от таблицы, необходимо также опубликовать и таблицу.  
   
  Красный значок рядом с объектом указывает на то, что объект не может быть опубликован; объяснение приводится в справочной панели внизу страницы мастера. Не могут быть опубликованы следующие объекты:  

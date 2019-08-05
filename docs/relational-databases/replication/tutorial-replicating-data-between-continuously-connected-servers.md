@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7b18a04a-2c3d-4efe-a0bc-c3f92be72fd0
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9c0a47062d50f4306af3ffb92e9e575317a014f5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 379a7fe83694307c9f4d981d000dc8b9457fa6c9
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67895389"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769415"
 ---
 # <a name="tutorial-configure-replication-between-two-fully-connected-servers-transactional"></a>Руководство. Настройка репликации между двумя полностью подключенными серверами (репликация транзакций)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "67895389"
 В этом руководстве описано, как настроить топологию для репликации транзакций для постоянно подключенных серверов. См. дополнительные сведения о [репликации транзакций](https://docs.microsoft.com/sql/relational-databases/replication/transactional/transactional-replication). 
   
 ## <a name="what-you-will-learn"></a>Новые знания  
-Из этого руководства вы узнаете, как публиковать данные из одной базы данных в другую, используя репликацию транзакций. 
+Из этого руководства вы узнаете, как публиковать данные из одной базы данных в другую, используя репликацию транзакций.  
 
 В этом учебнике рассматривается следующее.
 > [!div class="checklist"]

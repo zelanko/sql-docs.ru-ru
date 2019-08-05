@@ -12,15 +12,16 @@ f1_keywords:
 ms.assetid: 1b401d7d-db8a-4ba1-acb1-b8dec14e3311
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 6d9ceca85c8f0f09137d0ed82730a4f409114369
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: fbf94f1ef3926c43f44e293f783ba0f1ac57fac9
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68128123"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68767696"
 ---
 # <a name="filter-settings"></a>Настройки фильтра
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   Диалоговое окно **Настройки фильтра** позволяет определить фильтры для сеток монитора репликации. Например, чтобы показать на вкладке **Все подписки** только активные подписки, выберите **Состояние** в столбце **Имя столбца** , **Равен** в столбце **Оператор** и **Активна** в столбце **Значение1** . После определения фильтра, основанного на одном или нескольких столбцах, этот фильтр применяется так, чтобы в сетке отображалось только подмножество строк, удовлетворяющих критериям фильтрации.  
   
 ## <a name="options"></a>Параметры  

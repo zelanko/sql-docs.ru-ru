@@ -21,15 +21,16 @@ helpviewer_keywords:
 ms.assetid: 8c42e523-7020-471d-8977-a0bd044b9471
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 84b1656e15f37dd0c1491d9eb8e385813f579fca
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: f0aa79ac22011a480ae60fe3002e0ac5bf896525
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085904"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768240"
 ---
 # <a name="use-alerts-for-replication-agent-events"></a>Используйте предупреждения для событий агента репликации
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   Среда[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] и агент [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] предоставляют способ наблюдения за событиями (например, событиями агента репликации) с использованием предупреждений. Агент[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] отслеживает в журнале приложений Windows события, связанные с предупреждениями. При наступлении события агент [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] автоматически реагирует на него, выполняя определенную пользователем задачу или отправляя сообщения на электронную почту или на пейджер указанного оператора. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] содержит набор стандартных предупреждений для агентов репликации, которые можно настроить для выполнения задачи или уведомления оператора. Дополнительные сведения об определении выполняемых задач см. в подразделе «Автоматизация отклика на предупреждение» этого раздела.  
   
  При настройке компьютера в качестве распространителя производится установка следующих предупреждений.  

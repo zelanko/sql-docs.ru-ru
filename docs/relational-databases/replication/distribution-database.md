@@ -12,15 +12,16 @@ f1_keywords:
 ms.assetid: 5b42a083-7a11-41d8-9e3f-320c7c907237
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4f8809b5fad7f9f5a31615bdbe92d6f949b52106
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 8c07f5b46b1f09f54ce152eeaccabd695b0f32ed
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68128324"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68770683"
 ---
 # <a name="distribution-database"></a>База данных распространителя
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   В базе данных распространителя хранятся метаданные и данные журнала для всех типов репликации, а также транзакции для репликации транзакций.  
   
  В большинстве случаев достаточно одной базы данных распространителя. Однако если несколько издателей используют один распространитель, то имеет смысл для каждого издателя создать базу данных распространителя. Это гарантирует то, что данные, проходящие через каждую базу данных распространителя, будут различаться. Для каждого распространителя можно указать базу данных с помощью мастера настройки распространителя. При необходимости в окне **Свойства распространителя** можно указать дополнительные базы данных распространителя.  

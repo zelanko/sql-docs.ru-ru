@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: b7ccc34e-1c22-44b8-8eb5-f6423af3164e
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ecfda7e29dc749733f950e111f6b650ee61ac38f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 7fbe5d78e911f526f9006acee3c9f9842ec2d5e2
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68128070"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768556"
 ---
 # <a name="generate-sql-script-replication-objects"></a>Диалоговое окно «Формирование скрипта SQL» (объекты репликации)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   Скрипт репликации содержит системные хранимые процедуры [!INCLUDE[tsql](../../includes/tsql-md.md)] , необходимые для реализации используемых в скрипте компонентов репликации, например публикации или подписки. Все компоненты репликации в топологии должны использоваться в скриптах как часть плана аварийного восстановления, а скрипты могут также использоваться для автоматизации повторяющихся задач. Для использования в сценарии объектов репликации она предоставляет два диалоговых окна.  
   
 -   **Формирование скрипта SQL**, доступ к которому осуществляется из контекстного меню папки **Репликация** и всех ее вложенных папок в среде [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. С помощью этого диалогового окна в скрипт можно помещать все объекты репликации экземпляра [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

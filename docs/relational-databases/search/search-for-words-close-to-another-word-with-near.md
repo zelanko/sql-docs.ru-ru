@@ -20,12 +20,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0bc8f21427d5b104ef663d266b4a6b7eb281b8b3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0e94bdcf4770190d3d84986b511996213fac17f9
+ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67912966"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68702835"
 ---
 # <a name="search-for-words-close-to-another-word-with-near"></a>Поиск слов близких к другим с использованием оператора NEAR
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -136,7 +136,7 @@ CONTAINS(column_name, 'NEAR((term1, term2), 5, TRUE) AND term3')
      В запросе с учетом расположения всегда ищутся только неперекрывающиеся экземпляры. Перекрывающиеся экземпляры слов поиска никогда не включаются в результаты. Например, рассмотрим следующие выражение с учетом расположения, которое ищет слова`A`и`AA`в заданном порядке на расстоянии не более двух слов:  
   
     ```  
-    CONTAINS(column_name, 'NEAR((A,AA),2, TRUE')  
+    CONTAINS(column_name, 'NEAR((A,AA), 2, TRUE)')
     ```  
   
      Возможные результаты:`AAA`,`A.AA`и`A..AA`. Строки, содержащие только`AA`, не будут результатом.  

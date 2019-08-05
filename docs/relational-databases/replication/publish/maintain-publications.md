@@ -14,13 +14,14 @@ helpviewer_keywords:
 ms.assetid: d5bf7340-2b0b-4593-965c-de04ae628344
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b81e4bb78ff017b12eb68f9aaf694f799678658b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: d05dfb3e00dfdd473cc120496825c246fda75428
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68002714"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769838"
 ---
 # <a name="maintain-publications"></a>Обслуживание публикаций
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   После создания публикации может возникнуть необходимость в добавлении или исключении статей либо в изменении свойств публикации или статьи. После создания публикации разрешается большинство изменений, но в некоторых случаях необходимо создать для публикации новый моментальный снимок и/или повторно инициализировать подписки на эту публикацию.

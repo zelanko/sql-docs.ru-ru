@@ -14,28 +14,20 @@ helpviewer_keywords:
 ms.assetid: 0cfa7ae5-91d3-4a4f-9edf-a852d45783b5
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 30af8f6d0a5ba1e96d86fc3dae5ad9460e30b677
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 791864168d216a3cb498b89c2e45ec4384fcdd27
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67927903"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769385"
 ---
 # <a name="synchronize-a-push-subscription"></a>Синхронизация принудительной подписки
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   В данном разделе описывается синхронизация принудительной подписки в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [агентов репликации](../../relational-databases/replication/agents/replication-agents-overview.md)или объектов RMO.  
   
- **В этом разделе**  
-  
--   **Для синхронизации принудительной подписки используется:**  
-  
-     [Среда SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Replication Agents](#ReplProg)  
-  
-     [объекты RMO;](#RMOProcedure)  
-  
+[!INCLUDE[azure-sql-db-replication-supportability-note](../../includes/azure-sql-db-replication-supportability-note.md)]
+
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
  Подписки синхронизируются агентом распространителя (для репликации моментальных снимков и репликации транзакций) или агентом слияния (для репликации слиянием). Агенты могут работать непрерывно, запускаться по запросу или по расписанию. Дополнительные сведения о настройке расписаний синхронизации см. в статье, в которой объясняется, как [указать расписание синхронизации](../../relational-databases/replication/specify-synchronization-schedules.md).  
   
