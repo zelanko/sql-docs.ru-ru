@@ -13,16 +13,28 @@ ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
 author: v-makouz
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: 096c11c018294cbc92b2be13801d6cd953548fff
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 9aba2495e5f4661c7c042125608f34d577cddfe3
+ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264013"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68702813"
 ---
 # <a name="list-of-bugs-fixed"></a>Список исправленных ошибок
 
 На этой странице содержится список ошибок, исправленных в каждом выпуске [!INCLUDE[msCoName](../../includes/msconame_md.md)] , начиная с ODBC Driver 17 для[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+
+### <a name="bug-fixes-in-the-includemsconameincludesmsconamemdmd-odbc-driver-174-for-includessnoversionincludesssnoversion-mdmd"></a>Исправления ошибок в [!INCLUDE[msCoName](../../includes/msconame_md.md)] драйвере ODBC 17,4 для[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+
+- Исправление для периодического зависания при включенном режиме MARS
+- Устранение проблемы с устойчивостью подключения при включении асинхронного уведомления
+- Устранение сбоев при получении диагностических записей для многопотоковых попыток подключения
+- Исправление "шифрование не поддерживается" при повторном подключении после вызова SQLGetInfo () с SQL_USER_NAME и SQL_DATA_SOURCE_READ_ONLY
+- Устранение ошибки инициализации COM во время Azure Active Directory интерактивной проверки подлинности
+- Исправление SQLGetData () для данных в формате UTF8 с несколькими байтами
+- Исправить извлечение длины столбцов sql_variant с помощью SQLGetData ()
+- Исправление импорта столбцов sql_variant, содержащих более 7992 байт, с помощью программы bcp
+- Исправление неправильной кодировки на сервер для узких символьных данных
 
 ### <a name="bug-fixes-in-the-includemsconameincludesmsconamemdmd-odbc-driver-173-for-includessnoversionincludesssnoversion-mdmd"></a>Исправления ошибок в [!INCLUDE[msCoName](../../includes/msconame_md.md)] драйвере ODBC 17,3 для[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 

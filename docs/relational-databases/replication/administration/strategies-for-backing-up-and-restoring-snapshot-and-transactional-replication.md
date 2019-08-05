@@ -20,24 +20,25 @@ helpviewer_keywords:
 ms.assetid: a8afcdbc-55db-4916-a219-19454f561f9e
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 695839b7687fb649ffd529ecb3fde7b78d65f3ae
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: ddfc9d657334e6aa971ff57b2febdff175ce3911
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67948685"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768730"
 ---
 # <a name="strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication"></a>Стратегии резервного копирования и восстановления из копии репликации моментальных снимков и репликации транзакций
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   При разработке стратегии резервного копирования и восстановления для репликации моментальных снимков и репликации транзакций необходимо учитывать три аспекта.  
   
--   Какие базы данных будут подвергаться резервному копированию.  
-  
--   Настройки резервного копирования для репликации транзакций.  
-  
+-   Какие базы данных будут подвергаться резервному копированию.
+-   Настройки резервного копирования для репликации транзакций.
 -   Шаги, необходимые для восстановления базы данных. Они зависят от типа репликации и выбранных параметров.  
   
  Эта тема охватывает данные группы вопросов в следующих трех разделах. Сведения о резервном копировании и восстановлении для публикации Oracle см. в статье [Резервное копирование и восстановление для издателей Oracle](../../../relational-databases/replication/non-sql/backup-and-restore-for-oracle-publishers.md).  
+
+[!INCLUDE[azure-sql-db-replication-supportability-note](../../../includes/azure-sql-db-replication-supportability-note.md)]
   
 ## <a name="backing-up-databases"></a>Резервное копирование баз данных  
  Для репликации моментальных снимков и репликации транзакций необходимо регулярно выполнять резервное копирование следующих баз данных:  

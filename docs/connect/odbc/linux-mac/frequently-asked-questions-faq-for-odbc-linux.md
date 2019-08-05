@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 65bfd6d2-c83d-4528-a5e1-a85b125a4f4a
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: d3de76486a44d8c107d0ee35f6069f6854758477
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cc31a8ae385f2dbb28db30b299377ab5b38058f9
+ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68008808"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68702770"
 ---
 # <a name="frequently-asked-questions-faq-for-odbc-linux-and-macos"></a>Часто задаваемые вопросы об ODBC в Linux и macOS
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "68008808"
 Да. При наличии существующей настройки среды Kerberos вы сможете подключиться к серверам с помощью `Trusted_Connection=Yes` имени DSN или строки подключения. Дополнительные сведения см. в статье [Использование встроенной проверки подлинности](../../../connect/odbc/linux-mac/using-integrated-authentication.md).  
   
 **Какую кодировку Юникода должно использовать приложение?**  
-UTF-8 для данных SQL_CHAR и UTF-16 для данных SQL_WCHAR.  
+UTF-8 для данных SQL_CHAR и UTF-16 для данных SQL_WCHAR. В зависимости от языковых стандартов и версии драйвера, данные не в кодировке UTF-8 в одной из нескольких кодировок могут также поддерживаться. Дополнительные сведения см. в разделе [рекомендации по программированию](../../../connect/odbc/linux-mac/programming-guidelines.md).
 
 **Существуют ли примеры ODBC, которые я могу скачать и запустить с помощью драйвера, чтобы поэкспериментировать с ним или оценить его?**
 
