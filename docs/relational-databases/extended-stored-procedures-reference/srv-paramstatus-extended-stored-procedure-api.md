@@ -26,7 +26,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68005571"
 ---
-# <a name="srvparamstatus-extended-stored-procedure-api"></a>srv_paramstatus (API-интерфейс расширенных хранимых процедур)
+# <a name="srv_paramstatus-extended-stored-procedure-api"></a>srv_paramstatus (API-интерфейс расширенных хранимых процедур)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
