@@ -35,16 +35,28 @@
           href: ../advanced-analytics/install/sql-ml-cab-downloads.md
     - name: Настройка командной строки
       href: ../advanced-analytics/install/sql-ml-component-commandline-install.md
-    - name: Обновление R и Python
+    - name: Обновление Python и R
       href: ../advanced-analytics/install/upgrade-r-and-python.md
-    - name: Настройка клиента R
-      href: ../advanced-analytics/r/set-up-a-data-science-client.md
     - name: Настройка клиента Python
       href: ../advanced-analytics/python/setup-python-client-tools-sql.md
+    - name: Настройка клиента R
+      href: ../advanced-analytics/r/set-up-a-data-science-client.md
     - name: Установка на виртуальной машине Azure
       href: ../advanced-analytics/install/sql-machine-learning-azure-virtual-machine.md
 - name: Краткие руководства
   items:
+    - name: Python
+      items:
+        - name: "Проверка наличия\_Python в SQL\_Server"
+          href: ../advanced-analytics/tutorials/quickstart-python-verify.md
+        - name: "Hello\_World на Python и\_SQL"
+          href: ../advanced-analytics/tutorials/quickstart-python-run-using-t-sql.md
+        - name: Работа с входными и выходными данными
+          href: ../advanced-analytics/tutorials/quickstart-python-inputs-and-outputs.md
+        - name: Структуры данных Python и SQL
+          href: ../advanced-analytics/tutorials/quickstart-python-data-structures.md
+        - name: Обучение и использование первой модели
+          href: ../advanced-analytics/tutorials/quickstart-python-train-score-in-tsql.md
     - name: Чтение
       items:
         - name: "Проверка наличия\_R в SQL\_Server"
@@ -61,18 +73,6 @@
           href: ../advanced-analytics/tutorials/quickstart-r-create-predictive-model.md
         - name: Прогнозирование по модели
           href: ../advanced-analytics/tutorials/quickstart-r-predict-from-model.md
-    - name: Python
-      items:
-        - name: "Проверка наличия\_Python в SQL\_Server"
-          href: ../advanced-analytics/tutorials/quickstart-python-verify.md
-        - name: "Hello\_World на Python и\_SQL"
-          href: ../advanced-analytics/tutorials/quickstart-python-run-using-t-sql.md
-        - name: Работа с входными и выходными данными
-          href: ../advanced-analytics/tutorials/quickstart-python-inputs-and-outputs.md
-        - name: Структуры данных Python и SQL
-          href: ../advanced-analytics/tutorials/quickstart-python-data-structures.md
-        - name: Обучение и использование первой модели
-          href: ../advanced-analytics/tutorials/quickstart-python-train-score-in-tsql.md
 - name: Учебники
   items:
     - name: Обзор учебников
@@ -85,6 +85,24 @@
           href: ../advanced-analytics/tutorials/demo-data-iris-in-sql.md
         - name: Набор данных о работе такси в Нью-Йорке
           href: ../advanced-analytics/tutorials/demo-data-nyctaxi-in-sql.md
+    - name: Python
+      items:
+        - name: Учебники по Python
+          href: ../advanced-analytics/tutorials/sql-server-python-tutorials.md
+        - name: Создание модели Python с помощью revoscalepy
+          href: ../advanced-analytics/tutorials/use-python-revoscalepy-to-create-model.md
+        - name: Python для разработчиков SQL
+          items:
+            - name: 1. Введение
+              href: ../advanced-analytics/tutorials/sqldev-in-database-python-for-sql-developers.md
+            - name: 2. Исследование данных
+              href: ../advanced-analytics/tutorials/sqldev-py3-explore-and-visualize-the-data.md
+            - name: 3. Проектирование функций
+              href: ../advanced-analytics/tutorials/sqldev-py4-create-data-features-using-t-sql.md
+            - name: 4. Обучение и развертывание
+              href: ../advanced-analytics/tutorials/sqldev-py5-train-and-save-a-model-using-t-sql.md
+            - name: 5. Прогнозирование
+              href: ../advanced-analytics/tutorials/sqldev-py6-operationalize-the-model.md
     - name: Чтение
       items:
         - name: Учебники по R
@@ -149,24 +167,6 @@
               href: ../advanced-analytics/tutorials/deepdive-move-data-between-sql-server-and-xdf-file.md
             - name: 15. Отправка пользовательского кода R с помощью rxExec
               href: ../advanced-analytics/tutorials/r-tutorial-custom-r-functions.md
-    - name: Python
-      items:
-        - name: Учебники по Python
-          href: ../advanced-analytics/tutorials/sql-server-python-tutorials.md
-        - name: Создание модели Python с помощью revoscalepy
-          href: ../advanced-analytics/tutorials/use-python-revoscalepy-to-create-model.md
-        - name: Python для разработчиков SQL
-          items:
-            - name: 1. Введение
-              href: ../advanced-analytics/tutorials/sqldev-in-database-python-for-sql-developers.md
-            - name: 2. Исследование данных
-              href: ../advanced-analytics/tutorials/sqldev-py3-explore-and-visualize-the-data.md
-            - name: 3. Проектирование функций
-              href: ../advanced-analytics/tutorials/sqldev-py4-create-data-features-using-t-sql.md
-            - name: 4. Обучение и развертывание
-              href: ../advanced-analytics/tutorials/sqldev-py5-train-and-save-a-model-using-t-sql.md
-            - name: 5. Прогнозирование
-              href: ../advanced-analytics/tutorials/sqldev-py6-operationalize-the-model.md
 - name: Примеры >
   href: 'https://github.com/Microsoft/sql-server-samples'
 - name: Решения
@@ -175,10 +175,10 @@
   items:
     - name: Платформа расширяемости
       href: ../advanced-analytics/concepts/extensibility-framework.md
-    - name: Расширение R
-      href: ../advanced-analytics/concepts/extension-r.md
     - name: Расширение Python
       href: ../advanced-analytics/concepts/extension-python.md
+    - name: Расширение R
+      href: ../advanced-analytics/concepts/extension-r.md
     - name: безопасность
       href: ../advanced-analytics/concepts/security.md
 - name: Практические руководства
@@ -203,10 +203,10 @@
               href: ../advanced-analytics/r/creating-multiple-models-using-rxexecby.md
     - name: Преобразования типов данных
       items:
-        - name: R в SQL
-          href: ../advanced-analytics/r/r-libraries-and-data-types.md
         - name: Python в SQL
           href: ../advanced-analytics/python/python-libraries-and-data-types.md
+        - name: R в SQL
+          href: ../advanced-analytics/r/r-libraries-and-data-types.md
     - name: Развертывание
       items:
         - name: Внедрение с помощью хранимых процедур
@@ -305,6 +305,12 @@
               href: ../advanced-analytics/r/using-r-code-profiling-functions.md
 - name: Справочник
   items:
+    - name: Пакеты Python
+      items:
+        - name: revoscalepy
+          href: ../advanced-analytics/python/ref-py-revoscalepy.md
+        - name: microsoftml
+          href: ../advanced-analytics/python/ref-py-microsoftml.md
     - name: Пакеты R
       items:
         - name: RevoScaleR
@@ -315,12 +321,6 @@
           href: ../advanced-analytics/r/ref-r-olapr.md
         - name: sqlrutils
           href: ../advanced-analytics/r/ref-r-sqlrutils.md
-    - name: Пакеты Python
-      items:
-        - name: revoscalepy
-          href: ../advanced-analytics/python/ref-py-revoscalepy.md
-        - name: microsoftml
-          href: ../advanced-analytics/python/ref-py-microsoftml.md
 - name: Ресурсы
   items:
     - name: Заметки о выпуске >>
