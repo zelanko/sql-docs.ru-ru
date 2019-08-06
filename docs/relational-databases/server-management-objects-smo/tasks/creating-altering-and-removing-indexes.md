@@ -13,12 +13,12 @@ ms.assetid: ad1befa5-46e0-4895-b9d3-42852e07607b
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 22af830a8dda47bfe4533668d90f1cac473d4bfa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 404bd1d31a910f0fd2d181ab4198ffab065ffd4f
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68002702"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811510"
 ---
 # <a name="creating-altering-and-removing-indexes"></a>Создание, изменение и удаление индексов
 
@@ -29,10 +29,10 @@ ms.locfileid: "68002702"
  Создать индекс для XML-столбца можно путем указания свойства <xref:Microsoft.SqlServer.Management.Smo.Index.IsXmlIndex%2A> объекта <xref:Microsoft.SqlServer.Management.Smo.Index>.  
   
 ## <a name="examples"></a>Примеры  
- Чтобы использовать какой-либо из представленных примеров кода, нужно выбрать среду, шаблон и язык программирования, с помощью которых будет создаваться приложение. Дополнительные сведения см. в разделе [Visual C создайте&#35; проекта SMO в Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Чтобы использовать какой-либо из представленных примеров кода, нужно выбрать среду, шаблон и язык программирования, с помощью которых будет создаваться приложение. Дополнительные сведения см. [в разделе Создание проекта Visual&#35; C SMO в Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="creating-a-non-clustered-composite-index-in-visual-basic"></a>Создание некластеризованного составного индекса на языке Visual Basic  
- Этот пример кода демонстрирует, как создать составной некластеризованный индекс. Для составного индекса необходимо добавить в индекс более чем один столбец. Задайте <xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A> свойства **False** для некластеризованного индекса.  
+ В этом примере кода показано, как создать составной некластеризованный индекс. Для составного индекса необходимо добавить в индекс более чем один столбец. Задайте для свойства значение false для некластеризованного индекса. <xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A>  
   
 ```  
 ' /r:Microsoft.SqlServer.Smo.dll  
@@ -89,7 +89,7 @@ End Class
 ```  
   
 ## <a name="creating-a-non-clustered-composite-index-in-visual-c"></a>Создание некластеризованного составного индекса на языке Visual C#  
- Этот пример кода демонстрирует, как создать составной некластеризованный индекс. Для составного индекса необходимо добавить в индекс более чем один столбец. Задайте <xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A> свойства **False** для некластеризованного индекса.  
+ В этом примере кода показано, как создать составной некластеризованный индекс. Для составного индекса необходимо добавить в индекс более чем один столбец. Задайте для свойства значение false для некластеризованного индекса. <xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A>  
   
 ```  
 // /r:Microsoft.SqlServer.Smo.dll  
@@ -147,7 +147,7 @@ public class A {
 ```  
   
 ## <a name="creating-a-non-clustered-composite-index-in-powershell"></a>Создание некластеризованного составного индекса в PowerShell  
- Этот пример кода демонстрирует, как создать составной некластеризованный индекс. Для составного индекса необходимо добавить в индекс более чем один столбец. Задайте <xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A> свойства **False** для некластеризованного индекса.  
+ В этом примере кода показано, как создать составной некластеризованный индекс. Для составного индекса необходимо добавить в индекс более чем один столбец. Задайте для свойства значение false для некластеризованного индекса. <xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A>  
   
 ```  
 # Set the path context to the local, default instance of SQL Server and to the  

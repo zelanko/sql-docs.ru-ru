@@ -21,12 +21,12 @@ ms.assetid: fe658e32-9e6b-4147-a189-7adc3bd28fe7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 204d312e1350e7284b335806a0286baf9603c9a9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9b2fd7a22c202b1210b17f86903fce32ec8d4b5b
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62666801"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811081"
 ---
 # <a name="select-an-account-for-the-sql-server-agent-service"></a>Выбор учетной записи для службы агента SQL Server
   Стартовая учетная запись службы определяет учетную запись [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, с которой запускается агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , а также его сетевые разрешения. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняется как заданная учетная запись пользователя. Диспетчер конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] позволяет выбрать учетную запись службы агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] из следующих вариантов:  
@@ -78,18 +78,18 @@ ms.locfileid: "62666801"
 |--------------------------|---------------------------|----------------------|------------------------------------------|  
 |[!INCLUDE[msCoName](../../includes/msconame-md.md)] Учетная запись Windows (член группы "Администраторы" Windows)|Поддерживается|Поддерживается|Поддерживается|  
 |Неадминистративная учетная запись домена Windows|Поддерживается<sup>1</sup>|Поддерживается<sup>1</sup>|Поддерживается<sup>1</sup>|  
-|Учетная запись сетевой службы (NT AUTHORITY\NetworkService)|Поддерживается<sup>1, 3, 4</sup>|Не поддерживается|Не поддерживается|  
+|Учетная запись сетевой службы (NT AUTHORITY\NetworkService)|Поддерживаемые<sup>1, 3, 4</sup>|Не поддерживается|Не поддерживается|  
 |Неадминистративная учетная запись локального пользователя|Поддерживается<sup>1</sup>|Не поддерживается|Неприменимо|  
 |Учетная запись Local System (NT AUTHORITY\System)|Поддерживается<sup>2</sup>|Не поддерживается|Поддерживается<sup>2</sup>|  
 |Учетная запись локальной службы (NT AUTHORITY\NetworkService)|Не поддерживается|Не поддерживается|Не поддерживается|  
   
- <sup>1</sup> см. ограничение № 1 ниже.  
+ <sup>1</sup> см. ограничение 1 ниже.  
   
- <sup>2</sup> см. ограничение № 2 ниже.  
+ <sup>2</sup> см. Ограничение 2 ниже.  
   
- <sup>3</sup> см. ограничение № 3 ниже.  
+ <sup>3</sup> см. ограничение 3 ниже.  
   
- <sup>4</sup> см. следующее ограничение № 4.  
+ <sup>4</sup> см. ограничение 4 ниже.  
   
 ### <a name="limitation-1-using-non-administrative-accounts-for-multiserver-administration"></a>Ограничение 1. Использование неадминистративных учетных записей для администрирования нескольких серверов  
  Прикрепление целевого сервера к главному серверу может завершиться ошибкой, после чего появляется следующее сообщение: "Не удалось выполнить операцию прикрепления".  

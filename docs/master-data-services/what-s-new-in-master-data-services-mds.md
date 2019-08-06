@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ad530f60-d480-4457-ba7a-93a10c8a1695
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 4fdb279d47fd182d3196e760e19723715debbb7b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c6b68e5643686d71e24726d44ece35e284f40c3a
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68017226"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68810501"
 ---
 # <a name="what39s-new-in-master-data-services-mds"></a>Новые возможности служб Master Data Services (MDS)
 
@@ -177,7 +177,7 @@ ms.locfileid: "68017226"
     
  **Пользовательские индексы**  
   
- Для улучшения производительности запросов в сущности можно создать некластеризованный индекс для одного атрибута (одиночный индекс) или для списка атрибутов (составной индекс). Дополнительные сведения см. в разделе [Пользовательский индекс (Master Data Services)](../master-data-services/custom-index-master-data-services.md).  
+ Некластеризованный индекс можно создать в одном атрибуте (один индекс) или в списке атрибутов (составной индекс) в сущности, чтобы повысить производительность запросов. Дополнительные сведения см. в разделе [Пользовательский индекс (Master Data Services)](../master-data-services/custom-index-master-data-services.md).  
  
   **Фильтры атрибутов**  
   

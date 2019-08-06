@@ -10,18 +10,18 @@ ms.topic: conceptual
 ms.assetid: c57bf8b8-55a6-4b6c-9adb-91b5f4f1ee3c
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 546e04385490e725adfa0bb2f256109da7a0d55d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 88b94a0c476921d501bd4f456fa2d7e9077dee36
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68094433"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68810953"
 ---
 # <a name="custom-index-master-data-services"></a>Пользовательский индекс (Master Data Services)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  Пользовательские индексы создают в сущности некластеризованный индекс из одного атрибута (одиночный индекс) или из списка атрибутов (составной индекс). Как правило, индексы улучшают производительность обработки запросов. Дополнительные сведения об индексах SQL Server см. в разделе [Индексы](../relational-databases/indexes/indexes.md).  
+  Пользовательские индексы создают некластеризованный индекс для одного атрибута (одного индекса) или для списка атрибутов (составной индекс) в сущности. Как правило, индексы улучшают производительность обработки запросов. Дополнительные сведения об индексах SQL Server см. в разделе [Индексы](../relational-databases/indexes/indexes.md).  
   
 ## <a name="type-of-indexes"></a>Типы индексов  
  Можно создать следующие типы пользовательских индексов для каждой сущности:  

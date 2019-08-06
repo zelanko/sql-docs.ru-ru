@@ -12,12 +12,12 @@ ms.assetid: ad1befa5-46e0-4895-b9d3-42852e07607b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7e2bf2f470c7605f5535f66d19531e6a8e34cd39
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 55e6f1788b5187d64f929070e93ab15b6fd7a8c9
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63223487"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68810964"
 ---
 # <a name="creating-altering-and-removing-indexes"></a>Создание, изменение и удаление индексов
   В иерархии управляющих объектов [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (SMO) индексы представлены объектом <xref:Microsoft.SqlServer.Management.Smo.Index>. Индексированные столбцы представлены коллекцией объектов <xref:Microsoft.SqlServer.Management.Smo.IndexedColumn>, соответствующих свойству <xref:Microsoft.SqlServer.Management.Smo.Index.IndexedColumns%2A>.  
@@ -25,10 +25,10 @@ ms.locfileid: "63223487"
  Создать индекс для XML-столбца можно путем указания свойства <xref:Microsoft.SqlServer.Management.Smo.Index.IsXmlIndex%2A> объекта <xref:Microsoft.SqlServer.Management.Smo.Index>.  
   
 ## <a name="examples"></a>Примеры  
- Чтобы использовать какой-либо из представленных примеров кода, нужно выбрать среду, шаблон и язык программирования, с помощью которых будет создаваться приложение. Дополнительные сведения см. в разделе [Создание проекта SMO на Visual Basic в Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) или [Visual C создайте&#35; проекта SMO в Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Чтобы использовать какой-либо из представленных примеров кода, нужно выбрать среду, шаблон и язык программирования, с помощью которых будет создаваться приложение. Дополнительные сведения см. в статьях [Создание проекта Visual Basic SMO в Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) или [Создание проекта Visual&#35; C SMO в Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="creating-a-non-clustered-composite-index-in-visual-basic"></a>Создание некластеризованного составного индекса на языке Visual Basic  
- Этот пример кода демонстрирует, как создать составной некластеризованный индекс. Для составного индекса необходимо добавить в индекс более чем один столбец. Для некластеризованного индекса установите свойство <xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A> в значение `False`.  
+ В этом примере кода показано, как создать составной некластеризованный индекс. Для составного индекса необходимо добавить в индекс более чем один столбец. Для некластеризованного индекса установите свойство <xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A> в значение `False`.  
   
 ```  
 ' /r:Microsoft.SqlServer.Smo.dll  
@@ -85,7 +85,7 @@ End Class
 ```  
   
 ## <a name="creating-a-non-clustered-composite-index-in-visual-c"></a>Создание некластеризованного составного индекса на языке Visual C#  
- Этот пример кода демонстрирует, как создать составной некластеризованный индекс. Для составного индекса необходимо добавить в индекс более чем один столбец. Для некластеризованного индекса установите свойство <xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A> в значение `False`.  
+ В этом примере кода показано, как создать составной некластеризованный индекс. Для составного индекса необходимо добавить в индекс более чем один столбец. Для некластеризованного индекса установите свойство <xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A> в значение `False`.  
   
 ```  
 // /r:Microsoft.SqlServer.Smo.dll  
@@ -143,7 +143,7 @@ public class A {
 ```  
   
 ## <a name="creating-a-non-clustered-composite-index-in-powershell"></a>Создание некластеризованного составного индекса в PowerShell  
- Этот пример кода демонстрирует, как создать составной некластеризованный индекс. Для составного индекса необходимо добавить в индекс более чем один столбец. Для некластеризованного индекса установите свойство <xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A> в значение `False`.  
+ В этом примере кода показано, как создать составной некластеризованный индекс. Для составного индекса необходимо добавить в индекс более чем один столбец. Для некластеризованного индекса установите свойство <xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A> в значение `False`.  
   
 ```  
 # Set the path context to the local, default instance of SQL Server and to the  

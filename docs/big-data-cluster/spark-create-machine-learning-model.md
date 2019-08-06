@@ -2,19 +2,19 @@
 title: Создание и экспорт моделей машинного обучения Spark с помощью Млеап
 titleSuffix: SQL Server big data clusters
 description: Используйте PySpark для обучения и создания моделей машинного обучения с помощью Spark на SQL Server кластерах больших данных (Предварительная версия). Экспортируйте с помощью Млеап, а затем оцените модель с помощью Java в SQL Server.
-author: lgongmsft
-ms.author: lgong
+author: RogPodge
+ms.author: roliu
 ms.reviewer: mikeray
 ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: aa4c31eca725e8e662937259f078cf00a3441915
-ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
+ms.openlocfilehash: 9e139e76e5f5f756b57a9366cc896716cda58959
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "67727375"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811210"
 ---
 # <a name="create-export-and-score-spark-machine-learning-models-on-sql-server-big-data-clusters"></a>Создание, экспорт и оценка моделей машинного обучения Spark на SQL Server кластерах больших данных
 
@@ -32,7 +32,7 @@ ms.locfileid: "67727375"
 
 - [SQL Server кластер больших данных](deploy-get-started.md)
 
-- [Инструменты для обработки больших данных](deploy-big-data-tools.md)
+- [Средства работы с большими данными](deploy-big-data-tools.md)
    - **kubectl**
    - **листывания**
    - **Azure Data Studio**

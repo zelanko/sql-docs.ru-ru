@@ -1,5 +1,5 @@
 ---
-title: sys.pdw_materialized_view_mappings (Transact-SQL) | Документация Майкрософт
+title: sys. PDW _materialized_view_mappings (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 07/03/2019
 ms.prod: sql
@@ -9,28 +9,28 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: d62b0e25-3226-4f87-a10a-b3a0d9555e19
-author: XiaoyuL-Preview
+author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: f4e286a335ca6668c81e6b959bd61605c0ea398a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 919b55fe869a77bf27acd8a14820c63dd82eb968
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68059394"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811501"
 ---
-# <a name="syspdwmaterializedviewmappings-transact-sql-preview"></a>sys.pdw_materialized_view_mappings (Transact-SQL) (Предварительная версия)
+# <a name="syspdw_materialized_view_mappings-transact-sql-preview"></a>sys. PDW _materialized_view_mappings (Transact-SQL) (Предварительная версия)
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
-Связывает материализованное представление для имен внутренних объектов с object_id.
+Привязывает материализованный представление к внутренним именам объектов по object_id.
 
-Столбцы physical_name и object_id формируют ключ для этого представления каталога.
+Столбцы physical_name и OBJECT_ID образуют ключ для этого представления каталога.
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|physical_name |**nvarchar(36)**|Физическое имя для материализованного представления.|  
-|object_id  |**int**|Идентификатор объекта для материализованного представления. См. в разделе [sys.objects (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-objects-transact-sql?view=azure-sqldw-latest).| 
+|physical_name |**nvarchar (36)**|Физическое имя материализованных представлений.|  
+|object_id  |**int**|Идентификатор объекта для материализованных представлений. См. раздел [sys. Objects (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-objects-transact-sql?view=azure-sqldw-latest).| 
 
 ## <a name="permissions"></a>Разрешения
 
