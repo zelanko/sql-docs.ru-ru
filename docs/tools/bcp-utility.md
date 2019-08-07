@@ -28,12 +28,12 @@ ms.assetid: c0af54f5-ca4a-4995-a3a4-0ce39c30ec38
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 504e0978e37e5c550985e40b7f68e0323a9dc187
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 5267b5b02ce84d70feb4245fe75f62591409f39f
+ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68476319"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68743005"
 ---
 # <a name="bcp-utility"></a>Программа bcp
 
@@ -57,7 +57,7 @@ ms.locfileid: "68476319"
 
 Программы командной строки — общедоступная версия, однако они выпускаются вместе с пакетом установщика для [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
 
-**Сведения о версии**
+### <a name="version-information"></a>Сведения о версии
 
 Номер выпуска: 15.0 <br>
 Номер сборки: 15.0.1000.34<br>
@@ -66,7 +66,11 @@ ms.locfileid: "68476319"
 Новая версия SQLCMD поддерживает аутентификацию Azure AD, включая поддержку многофакторной проверки подлинности (MFA) для базы данных SQL, хранилища данных SQL и Always Encrypted компонентов.
 Новый BCP поддерживает аутентификацию Azure AD, включая поддержку многофакторной проверки подлинности (MFA) для базы данных SQL и хранилища данных SQL.
 
-**Требования к системе** Windows 10, Windows 7, Windows 8, Windows 8.1, Windows Server 2008, Windows Server 2008 R2, Windows Server 2008 R2 с пакетом обновления 1 (SP1), Windows Server 2012, Windows Server 2012 R2 этот компонент требует как [установщик Windows 4,5](https://www.microsoft.com/download/details.aspx?id=8483) , так и [Microsoft ODBC Driver 17,3 для SQL Server](https://www.microsoft.com/download/details.aspx?id=56567).
+### <a name="system-requirements"></a>Требования к системе
+
+Windows 10, Windows 7, Windows 8, Windows 8.1, Windows Server 2008, Windows Server 2008 R2, Windows Server 2008 R2 с пакетом обновления 1 (SP1), Windows Server 2012, Windows Server 2012 R2
+
+Этот компонент требует наличия [установщика Windows версии 4.5](https://www.microsoft.com/download/details.aspx?id=8483) и [драйвера Microsoft ODBC 17.3 для SQL Server](https://www.microsoft.com/download/details.aspx?id=56567).
 
 Чтобы проверить выполнение `bcp /v` команды bcp Version и убедиться, что используется 15.0.1000.34 или более поздняя версия.
 
@@ -210,7 +214,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 > Интегрированная и интерактивная проверка подлинности AAD в настоящее время не поддерживается в Linux или macOS.
 
 > [!TIP]
->  Чтобы проверить, поддерживает ли ваша версия программы **bcp тип Azure Active Directory** Authentication (AAD), (BCP\<Space >\<тире >\<тире >) и убедитесь, что в списке доступных аргументов отображается-G.
+>  Чтобы проверить, поддерживает ли ваша версия программы **bcp тип** Azure Active Directory Authentication (AAD), (BCP\<Space >\<тире >\<тире >) и убедитесь, что вы видите-G в списке доступные аргументы.
 
 - **Имя пользователя и пароль Azure Active Directory** 
 

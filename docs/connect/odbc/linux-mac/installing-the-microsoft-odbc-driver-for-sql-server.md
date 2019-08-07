@@ -13,12 +13,12 @@ ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
 author: MightyPen
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: 3550e17c8f4d6384ceafabb77aa9ca70cd80c44b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a1cffb5050a548acfd1bbd9ec9d38a8c9b48d63f
+ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63190670"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68702728"
 ---
 # <a name="installing-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>Установка Microsoft ODBC Driver for SQL Server на Linux и macOS
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "63190670"
 > [!IMPORTANT]
 > Если вы установили пакет `msodbcsql` версии 17, который был доступен непродолжительное время, его следует удалить перед установкой пакета `msodbcsql17`. Это позволит избежать конфликтов. Пакет `msodbcsql17` можно установить параллельно с пакетом `msodbcsql` версии 13.
 
-### <a name="debian-8-and-9"></a>Debian 8 и 9
+### <a name="debian"></a>Debian
 ```
 sudo su 
 curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
@@ -44,6 +44,9 @@ curl https://packages.microsoft.com/config/debian/8/prod.list > /etc/apt/sources
 #Debian 9
 curl https://packages.microsoft.com/config/debian/9/prod.list > /etc/apt/sources.list.d/mssql-release.list
 
+#Debian 10
+curl https://packages.microsoft.com/config/debian/10/prod.list > /etc/apt/sources.list.d/mssql-release.list
+
 exit
 sudo apt-get update
 sudo ACCEPT_EULA=Y apt-get install msodbcsql17
@@ -56,7 +59,7 @@ source ~/.bashrc
 sudo apt-get install unixodbc-dev
 ```
 
-### <a name="redhat-enterprise-server-6-and-7"></a>RedHat Enterprise Server 6 и 7
+### <a name="redhat-enterprise-server"></a>RedHat Enterprise Server
 ```
 sudo su
 
@@ -68,6 +71,9 @@ curl https://packages.microsoft.com/config/rhel/6/prod.repo > /etc/yum.repos.d/m
 
 #RedHat Enterprise Server 7
 curl https://packages.microsoft.com/config/rhel/7/prod.repo > /etc/yum.repos.d/mssql-release.repo
+
+#RedHat Enterprise Server 8
+curl https://packages.microsoft.com/config/rhel/8/prod.repo > /etc/yum.repos.d/mssql-release.repo
 
 exit
 sudo yum remove unixODBC-utf16 unixODBC-utf16-devel #to avoid conflicts
@@ -81,7 +87,7 @@ source ~/.bashrc
 sudo yum install unixODBC-devel
 ```
 
-### <a name="suse-linux-enterprise-server-11sp4-12-and-15"></a>SUSE Linux Enterprise Server 11SP4, 12 и 15
+### <a name="suse-linux-enterprise-server"></a>SUSE Linux Enterprise Server
 
 ```
 sudo su
@@ -110,7 +116,7 @@ source ~/.bashrc
 sudo zypper install unixODBC-devel
 ``` 
 
-### <a name="ubuntu-1404-1604-1710-and-1804"></a>Ubuntu 14.04, 16.04, 17.10 и 18.04
+### <a name="ubuntu"></a>Ubuntu
 ```
 sudo su 
 curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
@@ -130,6 +136,9 @@ curl https://packages.microsoft.com/config/ubuntu/18.04/prod.list > /etc/apt/sou
 #Ubuntu 18.10
 curl https://packages.microsoft.com/config/ubuntu/18.10/prod.list > /etc/apt/sources.list.d/mssql-release.list
 
+#Ubuntu 19.04
+curl https://packages.microsoft.com/config/ubuntu/19.04/prod.list > /etc/apt/sources.list.d/mssql-release.list
+
 exit
 sudo apt-get update
 sudo ACCEPT_EULA=Y apt-get install msodbcsql17
@@ -145,7 +154,7 @@ sudo apt-get install unixodbc-dev
 > - Для поддержки Ubuntu 18.04 требуется драйвер версии 17.2 или более поздней.
 > - Для поддержки Ubuntu 18.10 требуется драйвер версии 17.3 или более поздней.   
 
-### <a name="os-x-1011-el-capitan-macos-1012-sierra-macos-1013-high-sierra-and-macos-1014-mojave"></a>OS X 10.11 (El Capitan), macOS 10.12 (Sierra), macOS 10.13 (High Sierra) и macOS 10.14 (Mojave)
+### <a name="macos"></a>MacOS
 
 ```
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"

@@ -1,12 +1,12 @@
 ---
 ms.openlocfilehash: a3016d22680ed051a16f80e6f5ff768689d654b6
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 08/06/2019
 ms.locfileid: "68212338"
 ---
-## <a name="infotipmediainfo-tippng-get-help"></a>![info_tip](../media/info-tip.png) Справка
+## <a name="info_tipmediainfo-tippng-get-help"></a>![info_tip](../media/info-tip.png) Справка
 
 - [UserVoice — предложения по улучшению SQL Server](https://feedback.azure.com/forums/908035-sql-server)
 - [Установка и обновление — форум MSDN](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlsetupandupgrade&filter=alltypes&sort=lastpostdesc)
