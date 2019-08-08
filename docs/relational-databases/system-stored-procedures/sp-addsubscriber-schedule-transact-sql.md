@@ -1,5 +1,5 @@
 ---
-title: Хранимая процедура sp_addsubscriber_schedule (Transact-SQL) | Документация Майкрософт
+title: sp_addsubscriber_schedule (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: a6225033-5c3b-452f-ae52-79890a3590ed
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 49bf433969d72e253afed2a87837ad2ca03fb94a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7baa7419620fd25be06a731894432862bfba2b96
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68022409"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769046"
 ---
-# <a name="spaddsubscriberschedule-transact-sql"></a>Хранимая процедура sp_addsubscriber_schedule (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_addsubscriber_schedule-transact-sql"></a>Хранимая процедура sp_addsubscriber_schedule (Transact-SQL)
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Добавляет расписание агента распространителя и агента слияния. Эта хранимая процедура выполняется на подписчике в любой базе данных.  
   
@@ -49,16 +49,16 @@ sp_addsubscriber_schedule [ @subscriber = ] 'subscriber'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @subscriber = ] 'subscriber'` — Имя подписчика. *подписчик* — **sysname**. Имя подписчика должно быть уникальным в базе данных, не должно использоваться до этого и не может иметь значения NULL.  
+`[ @subscriber = ] 'subscriber'`Имя подписчика. тип подписчика — **sysname**. Имя подписчика должно быть уникальным в базе данных, не должно использоваться до этого и не может иметь значения NULL.  
   
-`[ @agent_type = ] agent_type` — Тип агента. *agent_type* — **smallint**, и может принимать одно из следующих значений.  
+`[ @agent_type = ] agent_type`Тип агента. *agent_type* имеет значение **smallint**и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
 |**0** (по умолчанию)|Агент распространителя|  
 |**1**|Агент слияния.|  
   
-`[ @frequency_type = ] frequency_type` Это частота запуска агента распространителя. *frequency_type* — **int**, и может принимать одно из следующих значений.  
+`[ @frequency_type = ] frequency_type`Частота, с которой следует запланировать агент распространения. Аргумент *frequency_type* имеет **тип int**и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -71,9 +71,9 @@ sp_addsubscriber_schedule [ @subscriber = ] 'subscriber'
 |**64** (по умолчанию)|Автозапуск|  
 |**128**|Повторяющееся задание|  
   
-`[ @frequency_interval = ] frequency_interval` — Это значение, которое применяется к частоте, задаваемой аргументом *frequency_type*. *frequency_interval* — **int**, значение по умолчанию **1**.  
+`[ @frequency_interval = ] frequency_interval`Значение, применяемое к частоте, заданной аргументом *frequency_type*. *frequency_interval* имеет **тип int**и значение по умолчанию **1**.  
   
-`[ @frequency_relative_interval = ] frequency_relative_interval` — Дата агента распространителя. Этот параметр используется при *frequency_type* присваивается **32** (относительно ежемесячно). *frequency_relative_interval* — **int**, и может принимать одно из следующих значений.  
+`[ @frequency_relative_interval = ] frequency_relative_interval`Дата агент распространения. Этот параметр используется, если аргумент *frequency_type* имеет значение **32** (ежемесячное относительное). *frequency_relative_interval* имеет **тип int**и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -83,9 +83,9 @@ sp_addsubscriber_schedule [ @subscriber = ] 'subscriber'
 |**8**|Четвертая|  
 |**16**|Последняя|  
   
-`[ @frequency_recurrence_factor = ] frequency_recurrence_factor` Коэффициент повторения, используемый аргументом *frequency_type*. *frequency_recurrence_factor* — **int**, значение по умолчанию **0**.  
+`[ @frequency_recurrence_factor = ] frequency_recurrence_factor`Коэффициент повторения, используемый в *frequency_type*. *frequency_recurrence_factor* имеет **тип int**и значение по умолчанию **0**.  
   
-`[ @frequency_subday = ] frequency_subday` Том, как часто следует запланировать повторное выполнение в течение определенного периода. *frequency_subday* — **int**, и может принимать одно из следующих значений.  
+`[ @frequency_subday = ] frequency_subday`Частота повторного планирования в течение заданного периода. *frequency_subday* имеет **тип int**и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -94,32 +94,32 @@ sp_addsubscriber_schedule [ @subscriber = ] 'subscriber'
 |**4** (по умолчанию)|Минута|  
 |**8**|Час|  
   
-`[ @frequency_subday_interval = ] frequency_subday_interval` Интервал для *frequency_subday*. *frequency_subday_interval* — **int**, значение по умолчанию **5**.  
+`[ @frequency_subday_interval = ] frequency_subday_interval`Интервал для *frequency_subday*. *frequency_subday_interval* имеет **тип int**и значение по умолчанию **5**.  
   
-`[ @active_start_time_of_day = ] active_start_time_of_day` Время суток, когда агент распространителя впервые запланировано, в формате ЧЧММСС. *active_start_time_of_day* — **int**, значение по умолчанию **0**.  
+`[ @active_start_time_of_day = ] active_start_time_of_day`Время первого запланированного агент распространения в формате ЧЧММСС. *active_start_time_of_day* имеет **тип int**и значение по умолчанию **0**.  
   
-`[ @active_end_time_of_day = ] active_end_time_of_day` Время суток, когда прекращается выполнение агента распространителя, в формате ЧЧММСС. *active_end_time_of_day*— **int**, значение по умолчанию 235959, означающее 23:59:59. в 24-часовом формате.  
+`[ @active_end_time_of_day = ] active_end_time_of_day`Время суток, когда запланировать агент распространения прекращается в формате ЧЧММСС. *active_end_time_of_day*имеет **тип int**и значение по умолчанию 235959, то есть 11:59:59 P.M. в 24-часовом формате.  
   
-`[ @active_start_date = ] active_start_date` Дата первого запуска агента распространителя запланирована, в формате ГГГГММДД. *active_start_date* — **int**, значение по умолчанию **0**.  
+`[ @active_start_date = ] active_start_date`Дата первого запланированного запуска агент распространения в формате ГГГГММДД. *active_start_date* имеет **тип int**и значение по умолчанию **0**.  
   
-`[ @active_end_date = ] active_end_date` Дата плановой остановки агента распространителя, в формате ГГГГММДД. *active_end_date* — **int**, значение по умолчанию 99991231, что соответствует 31 декабря 9999 года.  
+`[ @active_end_date = ] active_end_date`Дата прекращения расписания агент распространения в формате ГГГГММДД. *active_end_date* имеет **тип int**и значение по умолчанию 99991231, что означает 31 декабря 9999 г.  
   
-`[ @publisher = ] 'publisher'` Указывает, отличный от [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателя. *издатель* — **sysname**, значение по умолчанию NULL.  
+`[ @publisher = ] 'publisher'`Указывает [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателя, отличного от. Аргумент *Publisher* имеет тип **sysname**и значение по умолчанию NULL.  
   
 > [!NOTE]  
->  *издатель* не следует указывать для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателя.  
+>  для[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателя не следует указывать издателя.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- **0** (успешное завершение) или **1** (неуспешное завершение)  
+ **0** (успешное завершение) или **1** (сбой)  
   
 ## <a name="remarks"></a>Примечания  
- **Хранимая процедура sp_addsubscriber_schedule** используется в репликации моментальных снимков, репликации транзакций и репликации слиянием.  
+ **sp_addsubscriber_schedule** используется в репликации моментальных снимков, репликации транзакций и репликации слиянием.  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **sysadmin** предопределенной роли сервера могут выполнять процедуру **sp_addsubscriber_schedule**.  
+ Только члены предопределенной роли сервера **sysadmin** могут выполнять **sp_addsubscriber_schedule**.  
   
 ## <a name="see-also"></a>См. также  
- [sp_changesubscriber_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changesubscriber-schedule-transact-sql.md)   
+ [sp_changesubscriber_schedule &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changesubscriber-schedule-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

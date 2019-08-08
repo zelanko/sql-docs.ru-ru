@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: 35415502-68d0-40f6-993c-180e50004f1e
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: d4a4105496fff9cf9fa9674495ec44f62b16adba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 45088122cfb6824598aaf40486264d41216d3c39
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68072765"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771323"
 ---
-# <a name="spadddistributor-transact-sql"></a>sp_adddistributor (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_adddistributor-transact-sql"></a>sp_adddistributor (Transact-SQL)
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  Создает запись в [sys.sysservers](../../relational-databases/system-compatibility-views/sys-sysservers-transact-sql.md) таблицы (если еще не существует), отмечает запись сервера как распространитель и сохраняет сведения о свойстве. Данная хранимая процедура выполняется на распространителе в базе данных master, чтобы зарегистрировать и пометить сервер как распространитель. В случае с удаленным распространителем хранимая процедура выполняется также и на издателе от базы данных master, чтобы зарегистрировать удаленный распространитель.  
+  Создает запись в таблице [sys. sysservers](../../relational-databases/system-compatibility-views/sys-sysservers-transact-sql.md) (если ее нет), помечает запись сервера как распространитель и сохраняет сведения о свойствах. Данная хранимая процедура выполняется на распространителе в базе данных master, чтобы зарегистрировать и пометить сервер как распространитель. В случае с удаленным распространителем хранимая процедура выполняется также и на издателе от базы данных master, чтобы зарегистрировать удаленный распространитель.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,11 +42,11 @@ sp_adddistributor [ @distributor= ] 'distributor'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @distributor = ] 'distributor'` Это имя сервера распространителя. *распространитель* — **sysname**, не имеет значения по умолчанию. Этот аргумент используется только при настройке удаленного распространителя. Он добавляет записи к свойствам распространителя в **msdb.. MSdistributor** таблицы.  
+`[ @distributor = ] 'distributor'`Имя сервера распространения. аргумент распространитель имеет тип **sysname**и не имеет значения по умолчанию. Этот аргумент используется только при настройке удаленного распространителя. Он добавляет записи для свойств распространителя в **базе данных msdb. Таблица Мсдистрибутор** .  
   
-`[ @heartbeat_interval = ] heartbeat_interval` — Максимальное количество минут, в которых агент может выполняться без ведения журнала сообщений о ходе выполнения. *heartbeat_interval* — **int**, значение по умолчанию 10 минут. Для проверки состояния запущенных агентов репликации создается задание агента SQL Server, выполняемое с заданным интервалом.  
+`[ @heartbeat_interval = ] heartbeat_interval`Максимальное количество минут, в течение которых агент может пройти без записи сообщения о ходе выполнения. *heartbeat_interval* имеет **тип int**и значение по умолчанию — 10 минут. Для проверки состояния запущенных агентов репликации создается задание агента SQL Server, выполняемое с заданным интервалом.  
   
-`[ @password = ] 'password']` — Это пароль **distributor_admin** имени входа. *пароль* — **sysname**, значение по умолчанию NULL. Если аргумент имеет значение NULL или для него используется пустая строка, то для пароля выбирается случайное значение. Пароль должен быть настроен при добавлении первого удаленного распространителя. **distributor_admin** входа и *пароль* хранятся для записи связанного сервера, используемого для *распространителя* RPC-подключения, включая локальные соединения. Если *распространителя* является локальным, пароль для **distributor_admin** присваивается новое значение. Для издателей с удаленным распространителем, то же значение для *пароль* должен быть указан при выполнении **sp_adddistributor** на издателе и распространителе. [sp_changedistributor_password](../../relational-databases/system-stored-procedures/sp-changedistributor-password-transact-sql.md) можно использовать для изменения пароля распространителя.  
+`[ @password = ] 'password']`Пароль для имени входа в **distributor_admin** . Аргумент *Password* имеет тип **sysname**и значение по умолчанию NULL. Если аргумент имеет значение NULL или для него используется пустая строка, то для пароля выбирается случайное значение. Пароль должен быть настроен при добавлении первого удаленного распространителя. имя входа и *пароль* **distributor_admin** хранятся для записи связанного сервера, используемой для подключения RPC *распространителя* , включая локальные соединения. Если *распространитель* является локальным, в качестве пароля для **distributor_admin** задается новое значение. Для издателей с удаленным распространителем необходимо указать то же значение *пароля* при выполнении **sp_adddistributor** на издателе и на распространителе. [sp_changedistributor_password](../../relational-databases/system-stored-procedures/sp-changedistributor-password-transact-sql.md) можно использовать для изменения пароля распространителя.  
   
 > [!IMPORTANT]  
 >  По возможности предлагайте пользователям вводить учетные данные системы безопасности во время выполнения приложения. В случае необходимости хранения учетных данных в файле скрипта этот файл следует защищать во избежание несанкционированного доступа.  
@@ -63,12 +63,12 @@ sp_adddistributor [ @distributor= ] 'distributor'
  [!code-sql[HowTo#AddDistPub](../../relational-databases/replication/codesnippet/tsql/sp-adddistributor-transa_1.sql)]  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **sysadmin** предопределенной роли сервера могут выполнять процедуру **sp_adddistributor**.  
+ Только члены предопределенной роли сервера **sysadmin** могут выполнять **sp_adddistributor**.  
   
 ## <a name="see-also"></a>См. также  
  [Настройка публикации и распространения](../../relational-databases/replication/configure-publishing-and-distribution.md)   
- [sp_changedistributor_property &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedistributor-property-transact-sql.md)   
- [sp_dropdistributor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql.md)   
+ [sp_changedistributor_property &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedistributor-property-transact-sql.md)   
+ [sp_dropdistributor &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql.md)   
  [sp_helpdistributor (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpdistributor-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Настройка распространения](../../relational-databases/replication/configure-distribution.md)  

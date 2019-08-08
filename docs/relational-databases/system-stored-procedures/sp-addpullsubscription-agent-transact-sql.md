@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: b9c2eaed-6d2d-4b78-ae9b-73633133180b
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 220e21713935409d7d85ecd156524883dbbace08
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 01f076673491978739ff96d791a41d0927c4ddb6
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68022463"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769120"
 ---
-# <a name="spaddpullsubscriptionagent-transact-sql"></a>sp_addpullsubscription_agent (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_addpullsubscription_agent-transact-sql"></a>sp_addpullsubscription_agent (Transact-SQL)
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
  
   Добавляет новое запланированное задание агента, используемое для синхронизации подписки по запросу с публикацией транзакций. Эта хранимая процедура выполняется на подписчике в базе данных подписки.  
   
@@ -79,56 +79,56 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publisher = ] 'publisher'` — Имя издателя. *издатель* — **sysname**, не имеет значения по умолчанию.  
+`[ @publisher = ] 'publisher'`Имя издателя. параметр *Publisher* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @publisher_db = ] 'publisher_db'_` — Имя базы данных издателя. *publisher_db* — **sysname**, со значением по умолчанию NULL. *publisher_db* обрабатывается издателями Oracle.  
+`[ @publisher_db = ] 'publisher_db'_`Имя базы данных издателя. *publisher_db* имеет тип **sysname**и значение по умолчанию NULL. *publisher_db* игнорируется издателями Oracle.  
   
-`[ @publication = ] 'publication'` — Имя публикации. *Публикация* — **sysname**, не имеет значения по умолчанию.  
+`[ @publication = ] 'publication'`Имя публикации. Аргумент *publication* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @subscriber = ] 'subscriber'` — Имя подписчика. *подписчик* — **sysname**, значение по умолчанию NULL.  
-  
-> [!NOTE]  
->  Данный аргумент является устаревшим и сохранен только для поддержки обратной совместимости скриптов.  
-  
-`[ @subscriber_db = ] 'subscriber_db'` — Имя базы данных подписки. *subscriber_db* — **sysname**, значение по умолчанию NULL.  
+`[ @subscriber = ] 'subscriber'`Имя подписчика. Аргумент *Subscriber* имеет тип **sysname**и значение по умолчанию NULL.  
   
 > [!NOTE]  
 >  Данный аргумент является устаревшим и сохранен только для поддержки обратной совместимости скриптов.  
   
-`[ @subscriber_security_mode = ] subscriber_security_mode` — Режим безопасности для использования при подключении к подписчику при синхронизации. *subscriber_security_mode* — **int,** значение по умолчанию NULL. **0** указывает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверки подлинности. **1** задает проверку подлинности Windows.  
+`[ @subscriber_db = ] 'subscriber_db'`Имя базы данных подписки. *subscriber_db* имеет тип **sysname**и значение по умолчанию NULL.  
   
 > [!NOTE]  
->  Данный аргумент является устаревшим и сохранен только для поддержки обратной совместимости скриптов. Агент распространителя всегда подключается к локальному подписчику с использованием проверки подлинности Windows. Если значение, отличное от NULL или **1** указан для данного параметра, выдается предупреждающее сообщение.  
+>  Данный аргумент является устаревшим и сохранен только для поддержки обратной совместимости скриптов.  
   
-`[ @subscriber_login = ] 'subscriber_login'` — Это имя входа подписчика, используемое при подключении к подписчику при синхронизации. *subscriber_login* — **sysname**, значение по умолчанию NULL.  
+`[ @subscriber_security_mode = ] subscriber_security_mode`Режим безопасности, используемый при соединении с подписчиком при синхронизации. *subscriber_security_mode* имеет **тип int и** значение по умолчанию NULL. **0** — [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверка подлинности. **1** указывает проверку подлинности Windows.  
+  
+> [!NOTE]  
+>  Данный аргумент является устаревшим и сохранен только для поддержки обратной совместимости скриптов. Агент распространителя всегда подключается к локальному подписчику с использованием проверки подлинности Windows. Если для этого параметра указано значение, отличное от NULL или **1** , то возвращается предупреждающее сообщение.  
+  
+`[ @subscriber_login = ] 'subscriber_login'`Имя входа подписчика, используемое при соединении с подписчиком при синхронизации. *subscriber_login* имеет тип **sysname**и значение по умолчанию NULL.  
   
 > [!NOTE]  
 >  Данный аргумент является устаревшим и сохранен только для поддержки обратной совместимости скриптов. Если для этого аргумента указывается значение, то выдается предупреждающее сообщение, а значение не обрабатывается.  
   
-`[ @subscriber_password = ] 'subscriber_password'` — Пароль подписчика. *subscriber_password* является обязательным, если *subscriber_security_mode* присваивается **0**. *subscriber_password* — **sysname**, значение по умолчанию NULL. Если пароль подписчика используется, он автоматически шифруется.  
+`[ @subscriber_password = ] 'subscriber_password'`Пароль подписчика. *subscriber_password* является обязательным, если *subscriber_security_mode* имеет значение **0**. *subscriber_password* имеет тип **sysname**и значение по умолчанию NULL. Если пароль подписчика используется, он автоматически шифруется.  
   
 > [!NOTE]  
 >  Данный аргумент является устаревшим и сохранен только для поддержки обратной совместимости скриптов. Если для этого аргумента указывается значение, то выдается предупреждающее сообщение, а значение не обрабатывается.  
   
-`[ @distributor = ] 'distributor'` — Имя распространителя. *распространитель* — **sysname**, значение по умолчанию значение, заданное параметром *издателя*.  
+`[ @distributor = ] 'distributor'`Имя распространителя. аргумент распространитель имеет тип **sysname**и значение по умолчанию, заданное в параметре *Publisher*.  
   
-`[ @distribution_db = ] 'distribution_db'` — Имя базы данных распространителя. *distribution_db* — **sysname**, со значением по умолчанию NULL.  
+`[ @distribution_db = ] 'distribution_db'`Имя базы данных распространителя. *distribution_db* имеет тип **sysname**и значение по умолчанию NULL.  
   
-`[ @distributor_security_mode = ] distributor_security_mode` — Режим безопасности для использования при подключении к распространителю при синхронизации. *distributor_security_mode* — **int**, значение по умолчанию **1**. **0** указывает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверки подлинности. **1** задает проверку подлинности Windows.  
+`[ @distributor_security_mode = ] distributor_security_mode`Режим безопасности, используемый при соединении с распространителем при синхронизации. *distributor_security_mode* имеет **тип int**и значение по умолчанию **1**. **0** — [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверка подлинности. **1** указывает проверку подлинности Windows.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
-`[ @distributor_login = ] 'distributor_login'` — Это имя входа распространителя для использования при подключении к распространителю при синхронизации. *distributor_login* является обязательным, если *distributor_security_mode* присваивается **0**. *distributor_login* — **sysname**, значение по умолчанию NULL.  
+`[ @distributor_login = ] 'distributor_login'`Имя входа распространителя, используемое при соединении с распространителем при синхронизации. *distributor_login* является обязательным, если *distributor_security_mode* имеет значение **0**. *distributor_login* имеет тип **sysname**и значение по умолчанию NULL.  
   
-`[ @distributor_password = ] 'distributor_password'` — Пароль распространителя. *distributor_password* является обязательным, если *distributor_security_mode* присваивается **0**. *distributor_password* — **sysname**, значение по умолчанию NULL.  
+`[ @distributor_password = ] 'distributor_password'`Пароль распространителя. *distributor_password* является обязательным, если *distributor_security_mode* имеет значение **0**. *distributor_password* имеет тип **sysname**и значение по умолчанию NULL.  
   
 > [!IMPORTANT]  
 >  Не используйте пустые пароли. Выбирайте надежные пароли. По возможности предлагайте пользователям вводить учетные данные системы безопасности во время выполнения приложения. В случае необходимости хранения учетных данных в файле скрипта этот файл следует защищать во избежание несанкционированного доступа.  
   
-`[ @optional_command_line = ] 'optional_command_line'` Предоставляется ли дополнительная Командная строка агента распространителя. Например **- DefinitionFile** C:\Distdef.txt или **- CommitBatchSize** 10. *optional_command_line* — **nvarchar(4000)** , значение по умолчанию пустая строка.  
+`[ @optional_command_line = ] 'optional_command_line'`— Необязательная Командная строка, предоставляемая агент распространения. Например, **-DefinitionFile** к:\дистдеф.ткст или **-CommitBatchSize** 10. *optional_command_line* имеет тип **nvarchar (4000)** и значение по умолчанию, равное пустой строке.  
   
-`[ @frequency_type = ] frequency_type` Это частота запуска агента распространителя. *frequency_type* — **int**, и может принимать одно из следующих значений.  
+`[ @frequency_type = ] frequency_type`Частота, с которой следует запланировать агент распространения. Аргумент *frequency_type* имеет **тип int**и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -142,11 +142,11 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
 |**128**|Повторяющееся задание|  
   
 > [!NOTE]  
->  Указав значение **64** агент распространителя запускается в непрерывном режиме. Это соответствует вводу параметра **-непрерывной** параметром для агента. Дополнительные сведения см. в статье [Replication Distribution Agent](../../relational-databases/replication/agents/replication-distribution-agent.md).  
+>  Указание значения **64** приводит к запуску агент распространения в непрерывном режиме. Это соответствует установке параметра **-Continuous** для агента. Дополнительные сведения см. в статье [Replication Distribution Agent](../../relational-databases/replication/agents/replication-distribution-agent.md).  
   
-`[ @frequency_interval = ] frequency_interval` — Это значение, которое применяется к частоте, задаваемой аргументом *frequency_type*. *frequency_interval* — **int**, значение по умолчанию 1.  
+`[ @frequency_interval = ] frequency_interval`Значение, применяемое к частоте, заданной аргументом *frequency_type*. *frequency_interval* имеет **тип int**и значение по умолчанию 1.  
   
-`[ @frequency_relative_interval = ] frequency_relative_interval` — Дата агента распространителя. Этот параметр используется при *frequency_type* присваивается **32** (относительно ежемесячно). *frequency_relative_interval* — **int**, и может принимать одно из следующих значений.  
+`[ @frequency_relative_interval = ] frequency_relative_interval`Дата агент распространения. Этот параметр используется, если аргумент *frequency_type* имеет значение **32** (ежемесячное относительное). *frequency_relative_interval* имеет **тип int**и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -156,9 +156,9 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
 |**8**|Четвертая|  
 |**16**|Последняя|  
   
-`[ @frequency_recurrence_factor = ] frequency_recurrence_factor` Коэффициент повторения, используемый аргументом *frequency_type*. *frequency_recurrence_factor* — **int**, значение по умолчанию **1**.  
+`[ @frequency_recurrence_factor = ] frequency_recurrence_factor`Коэффициент повторения, используемый в *frequency_type*. *frequency_recurrence_factor* имеет **тип int**и значение по умолчанию **1**.  
   
-`[ @frequency_subday = ] frequency_subday` Том, как часто следует запланировать повторное выполнение в течение определенного периода. *frequency_subday* — **int**, и может принимать одно из следующих значений.  
+`[ @frequency_subday = ] frequency_subday`Частота повторного планирования в течение заданного периода. *frequency_subday* имеет **тип int**и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -167,68 +167,68 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
 |**4**|Минута|  
 |**8**|Час|  
   
-`[ @frequency_subday_interval = ] frequency_subday_interval` Интервал для *frequency_subday*. *frequency_subday_interval* — **int**, значение по умолчанию **1**.  
+`[ @frequency_subday_interval = ] frequency_subday_interval`Интервал для *frequency_subday*. *frequency_subday_interval* имеет **тип int**и значение по умолчанию **1**.  
   
-`[ @active_start_time_of_day = ] active_start_time_of_day` Время суток, когда агент распространителя впервые запланировано, в формате ЧЧММСС. *active_start_time_of_day* — **int**, значение по умолчанию **0**.  
+`[ @active_start_time_of_day = ] active_start_time_of_day`Время первого запланированного агент распространения в формате ЧЧММСС. *active_start_time_of_day* имеет **тип int**и значение по умолчанию **0**.  
   
-`[ @active_end_time_of_day = ] active_end_time_of_day` Время суток, когда прекращается выполнение агента распространителя, в формате ЧЧММСС. *active_end_time_of_day* — **int**, значение по умолчанию **0**.  
+`[ @active_end_time_of_day = ] active_end_time_of_day`Время суток, когда запланировать агент распространения прекращается в формате ЧЧММСС. *active_end_time_of_day* имеет **тип int**и значение по умолчанию **0**.  
   
-`[ @active_start_date = ] active_start_date` Дата первого запуска агента распространителя запланирована, в формате ГГГГММДД. *active_start_date* — **int**, значение по умолчанию **0**.  
+`[ @active_start_date = ] active_start_date`Дата первого запланированного запуска агент распространения в формате ГГГГММДД. *active_start_date* имеет **тип int**и значение по умолчанию **0**.  
   
-`[ @active_end_date = ] active_end_date` Дата плановой остановки агента распространителя, в формате ГГГГММДД. *active_end_date* — **int**, значение по умолчанию **0**.  
+`[ @active_end_date = ] active_end_date`Дата прекращения расписания агент распространения в формате ГГГГММДД. *active_end_date* имеет **тип int**и значение по умолчанию **0**.  
   
-`[ @distribution_jobid = ] _distribution_jobidOUTPUT` — Идентификатор агента распространителя для этого задания. *distribution_jobid* — **binary(16)** , значение по умолчанию NULL и является ВЫХОДНЫМ параметром.  
+`[ @distribution_jobid = ] _distribution_jobidOUTPUT`Идентификатор агент распространения для этого задания. *distribution_jobid* является **двоичным (16)** , имеет значение по умолчанию NULL и является выходным параметром.  
   
-`[ @encrypted_distributor_password = ] encrypted_distributor_password` Установка *encrypted_distributor_password* больше не поддерживается. Попытка присвоить этому **бит** параметр **1** приведет к ошибке.  
+`[ @encrypted_distributor_password = ] encrypted_distributor_password`Параметр *encrypted_distributor_password* больше не поддерживается. Попытка присвоить этому параметру **bit** значение **1** приведет к ошибке.  
   
-`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'` Является ли подписку можно синхронизировать через [!INCLUDE[msCoName](../../includes/msconame-md.md)] диспетчер синхронизации. *enabled_for_syncmgr* — **nvarchar(5)** , значение по умолчанию FALSE. Если **false**, подписка не зарегистрирована диспетчером синхронизации. Если **true**, подписка регистрируется диспетчером синхронизации и может быть синхронизирована без запуска [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'`Указывает, можно ли синхронизировать подписку с [!INCLUDE[msCoName](../../includes/msconame-md.md)] помощью диспетчера синхронизации. *enabled_for_syncmgr* имеет тип **nvarchar (5)** и значение по умолчанию false. Если **значение равно false**, подписка не зарегистрирована в диспетчере синхронизации. Если **значение — true**, подписка регистрируется в диспетчере синхронизации и может быть синхронизирована [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]без запуска.  
   
-`[ @ftp_address = ] 'ftp_address'` Только для обратной совместимости.  
+`[ @ftp_address = ] 'ftp_address'`Только для обратной совместимости.  
   
-`[ @ftp_port = ] ftp_port` Только для обратной совместимости.  
+`[ @ftp_port = ] ftp_port`Только для обратной совместимости.  
   
-`[ @ftp_login = ] 'ftp_login'` Только для обратной совместимости.  
+`[ @ftp_login = ] 'ftp_login'`Только для обратной совместимости.  
   
-`[ @ftp_password = ] 'ftp_password'` Только для обратной совместимости.  
+`[ @ftp_password = ] 'ftp_password'`Только для обратной совместимости.  
   
-`[ @alt_snapshot_folder = ] 'alternate_snapshot_folder'_` Указывает расположение альтернативной папки для моментального снимка. *alternate_snapshot_folder* — **nvarchar(255)** , значение по умолчанию NULL.  
+`[ @alt_snapshot_folder = ] 'alternate_snapshot_folder'_`Указывает расположение альтернативной папки для моментального снимка. *alternate_snapshot_folder* имеет тип **nvarchar (255)** и значение по умолчанию NULL.  
   
-`[ @working_directory = ] 'working_director'` Это имя рабочего каталога, используемого для хранения файлов данных и схем для публикации. *working_directory* — **nvarchar(255)** , значение по умолчанию NULL. Имя должно быть задано в формате UNC.  
+`[ @working_directory = ] 'working_director'`Имя рабочего каталога, используемого для хранения файлов данных и схемы для публикации. *working_directory* имеет тип **nvarchar (255)** и значение по умолчанию NULL. Имя должно быть задано в формате UNC.  
   
-`[ @use_ftp = ] 'use_ftp'` Указывает использование протокола FTP вместо обычного протокола для получения моментальных снимков. *use_ftp* — **nvarchar(5)** , значение по умолчанию FALSE.  
+`[ @use_ftp = ] 'use_ftp'`Задает использование FTP вместо обычного протокола для получения моментальных снимков. *use_ftp* имеет тип **nvarchar (5)** и значение по умолчанию false.  
   
-`[ @publication_type = ] publication_type` Указывает тип репликации публикации. *publication_type* — **tinyint** значение по умолчанию **0**. Если **0**, публикация является публикацией транзакций. Если **1**, публикация является публикацией моментальных снимков. Если **2**, публикация является публикацией слиянием.  
+`[ @publication_type = ] publication_type`Указывает тип репликации публикации. *publication_type* имеет тип **tinyint** и значение по умолчанию **0**. Если значение **равно 0**, то публикация является типом транзакции. Если значение равно **1**, то публикация является типом моментального снимка. Если значение равно **2**, то публикация является типом слияния.  
   
-`[ @dts_package_name = ] 'dts_package_name'` Указывает имя пакета служб DTS. *dts_package_name* — **sysname** значение по умолчанию NULL. Например, для задания пакета `DTSPub_Package` параметр должен быть равен `@dts_package_name = N'DTSPub_Package'`.  
+`[ @dts_package_name = ] 'dts_package_name'`Указывает имя пакета служб DTS. *dts_package_name* имеет тип **sysname** и значение по умолчанию NULL. Например, для задания пакета `DTSPub_Package` параметр должен быть равен `@dts_package_name = N'DTSPub_Package'`.  
   
-`[ @dts_package_password = ] 'dts_package_password'` Указывает пароль для пакета, если таковой имеется. *dts_package_password* — **sysname** значение по умолчанию NULL, означающее пароль не входит в пакет.  
+`[ @dts_package_password = ] 'dts_package_password'`Указывает пароль для пакета при его наличии. *dts_package_password* имеет тип **sysname** и значение по умолчанию NULL, что означает, что пароль отсутствует в пакете.  
   
 > [!NOTE]  
->  Необходимо указать пароль, если *dts_package_name* указан.  
+>  Если указан параметр *dts_package_name* , необходимо указать пароль.  
   
-`[ @dts_package_location = ] 'dts_package_location'` Указывает местоположение пакета. *dts_package_location* — **nvarchar(12)** , значение по умолчанию **подписчика**. Расположение пакета может быть **распространителя** или **подписчика**.  
+`[ @dts_package_location = ] 'dts_package_location'`Указывает расположение пакета. *dts_package_location* имеет тип **nvarchar (12)** и значение по умолчанию **подписчика**. Расположение пакета может быть распространителем или подписчиком.  
   
 `[ @reserved = ] 'reserved'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 `[ @offloadagent = ] 'remote_agent_activation'`
  > [!NOTE]  
->  Удаленная активация агента является устаревшей и больше не поддерживается. Этот аргумент поддерживается только для обратной совместимости скриптов. Установка *remote_agent_activation* на значение, отличное от **false** приведет к ошибке.  
+>  Удаленная активация агента является устаревшей и больше не поддерживается. Этот аргумент поддерживается только для обратной совместимости скриптов. Если для параметра *remote_agent_activation* задать значение, отличное от **false** , будет выдаваться ошибка.  
   
 `[ @offloadserver = ] 'remote_agent_server_name'`
  > [!NOTE]  
->  Удаленная активация агента является устаревшей и больше не поддерживается. Этот аргумент поддерживается только для обратной совместимости скриптов. Установка *remote_agent_server_name* любое значение, отличное от NULL, будут вызывать ошибку.  
+>  Удаленная активация агента является устаревшей и больше не поддерживается. Этот аргумент поддерживается только для обратной совместимости скриптов. При установке *remote_agent_server_name* в любое значение, отличное от NULL, будет выдаваться ошибка.  
   
-`[ @job_name = ] 'job_name'` — Имя существующего задания агента. *имя_задания* — **sysname**, со значением по умолчанию NULL. Этот аргумент указывается только тогда, когда подписка будет синхронизироваться с использованием существующего задания, а не вновь создаваемого задания (выбор по умолчанию). Если вы не являетесь членом **sysadmin** предопределенной роли сервера, необходимо указать *job_login* и *job_password* при указании *имя_задания*.  
+`[ @job_name = ] 'job_name'`Имя существующего задания агента. Аргумент *имя_задания* имеет тип **sysname**и значение по умолчанию NULL. Этот аргумент указывается только тогда, когда подписка будет синхронизироваться с использованием существующего задания, а не вновь создаваемого задания (выбор по умолчанию). Если вы не являетесь членом предопределенной роли сервера **sysadmin** , то при указании параметра *имя_задания*необходимо указать *job_login* и *job_password* .  
   
-`[ @job_login = ] 'job_login'` — Это имя для учетной записи Windows, под которой запускается агент. *job_login* — **nvarchar(257)** , не имеет значения по умолчанию. Для соединений агента с подписчиком всегда используется эта учетная запись Windows.  
+`[ @job_login = ] 'job_login'`Имя входа для учетной записи Windows, под которой запускается агент. *job_login* имеет тип **nvarchar (257)** и не имеет значения по умолчанию. Для соединений агента с подписчиком всегда используется эта учетная запись Windows.  
   
-`[ @job_password = ] 'job_password'` — Пароль для учетной записи Windows, под которой запускается агент. *job_password* — **sysname**, не имеет значения по умолчанию.  
+`[ @job_password = ] 'job_password'`Пароль для учетной записи Windows, под которой запускается агент. *job_password* имеет тип **sysname**и не имеет значения по умолчанию.  
   
 > [!IMPORTANT]  
 >  По возможности предлагайте пользователям вводить учетные данные системы безопасности во время выполнения приложения. В случае необходимости хранения учетных данных в файле скрипта этот файл следует защищать во избежание несанкционированного доступа.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- **0** (успешное завершение) или **1** (неуспешное завершение)  
+ **0** (успешное завершение) или **1** (сбой)  
   
 ## <a name="remarks"></a>Примечания  
  **sp_addpullsubscription_agent** используется в репликации моментальных снимков и репликации транзакций.  
@@ -237,15 +237,15 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
  [!code-sql[HowTo#sp_addtranpullsubscriptionagent](../../relational-databases/replication/codesnippet/tsql/sp-addpullsubscription-a_1.sql)]  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **sysadmin** предопределенной роли сервера или **db_owner** предопределенной роли базы данных могут выполнять процедуру **sp_addpullsubscription_agent**.  
+ Только члены предопределенной роли сервера **sysadmin** или предопределенной роли базы данных **db_owner** могут выполнять **sp_addpullsubscription_agent**.  
   
 ## <a name="see-also"></a>См. также  
  [Создание подписки по запросу](../../relational-databases/replication/create-a-pull-subscription.md)   
  [Подписка на публикации](../../relational-databases/replication/subscribe-to-publications.md)   
- [sp_addpullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)   
- [sp_change_subscription_properties &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md)   
- [sp_droppullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md)   
- [sp_helppullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql.md)   
+ [sp_addpullsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)   
+ [sp_change_subscription_properties &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md)   
+ [sp_droppullsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md)   
+ [sp_helppullsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql.md)   
  [sp_helpsubscription_properties (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)  
   
   
