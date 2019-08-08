@@ -64,7 +64,7 @@ DATEADD (datepart , number , date )
 |**day**|**dd**, **d**|  
 |**week**|**wk**, **ww**|  
 |**weekday**|**dw**, **w**|  
-|**hour**|**чч**|  
+|**hour**|**hh**|  
 |**minute**|**mi**, **n**|  
 |**second**|**ss**, **s**|  
 |**millisecond**|**ms**|  
