@@ -7532,7 +7532,7 @@
       displayName: 'APS, PDW, Parallel Data Warehouse'
       href: analytics-platform-system/index.md
     - name: "Службы SQL\_Server Analysis\_Services\_(SSAS)\_>>"
-      href: analysis-services/index.md
+      href: 'https://docs.microsoft.com/en-us/analysis-services/analysis-services-overview'
     - name: "Службы SQL\_Server Reporting\_Services\_(SSRS)\_>>"
       href: reporting-services/index.md
     - name: Службы Master Data Services
