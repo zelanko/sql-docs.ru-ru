@@ -311,7 +311,7 @@ Execute a character string
   
 |Термин|Определение|  
 |----------|----------------|  
-|{<br /><br /> column_name<br /><br /> Тип данных<br /><br /> [ COLLATE collation_name]<br /><br /> [NULL | NOT NULL]<br /><br /> }|См. таблицу ниже.|  
+|{<br /><br /> column_name<br /><br /> Тип данных<br /><br /> [ COLLATE collation_name]<br /><br /> [NULL &#124; NOT NULL]<br /><br /> }|См. таблицу ниже.|  
 |db_name|Имя базы данных, содержащей таблицу, представление или возвращающую табличное значение функцию.|  
 |schema_name|Имя схемы, являющейся владельцем таблицы, представления или возвращающей табличное значение функции.|  
 |table_name | view_name | table_valued_function_name|Указывает, что будут возвращены столбцы, указанные в таблице, представлении или возвращающей табличное значение функции. Табличные переменные, временные таблицы и синонимы не поддерживаются синтаксисом объектов AS.|  
@@ -426,7 +426,7 @@ EXEC dbo.uspGetWhereUsedProductID 819, @CheckDate;
 GO  
 ```  
   
-### <a name="c-using-execute-tsqlstring-with-a-variable"></a>В. Использование EXECUTE tsql_string с переменной  
+### <a name="c-using-execute-tsql_string-with-a-variable"></a>В. Использование EXECUTE tsql_string с переменной  
  Следующий пример показывает, как инструкция `EXECUTE` обрабатывает динамически построенные строки, содержащие переменные. В примере производится создание курсора `tables_cursor`, в который помещается список всех пользовательских таблиц в базе данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)], а затем на основе этого списка перестраиваются индексы всех таблиц.  
   
 ```  
@@ -511,7 +511,7 @@ EXECUTE dbo.ProcTestDefaults DEFAULT, 'I', @p3 = DEFAULT;
   
 ```  
   
-### <a name="g-using-execute-with-at-linkedservername"></a>Ж. Указание AT имя_связанного_сервера в инструкции EXECUTE  
+### <a name="g-using-execute-with-at-linked_server_name"></a>Ж. Указание AT имя_связанного_сервера в инструкции EXECUTE  
  В следующем примере командная строка передается удаленному серверу. Создается связанный сервер `SeattleSales`, который указывает на другой экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], а затем на нем выполняется инструкция DDL (`CREATE TABLE`).  
   
 **Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
@@ -586,7 +586,7 @@ AS USER = 'User1';
 GO  
 ```  
   
-### <a name="l-using-a-parameter-with-execute-and-at-linkedservername"></a>М. Использование параметра с командами AT имя_связанного_сервера и EXECUTE  
+### <a name="l-using-a-parameter-with-execute-and-at-linked_server_name"></a>М. Использование параметра с командами AT имя_связанного_сервера и EXECUTE  
  В следующем примере командная строка передается удаленному серверу со знаком вопроса (`?`) в качестве заполнителя для параметра. Пример создает связанный сервер `SeattleSales`, который указывает на другой экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], а затем выполняется инструкция `SELECT` по отношению к этому связанному серверу. Инструкция `SELECT` использует знак вопроса в качестве заполнителя для параметра `ProductID` (`952`), предоставляемого после инструкции.  
   
 **Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
