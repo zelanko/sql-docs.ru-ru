@@ -2373,12 +2373,16 @@
       items:
         - name: Скачивание драйвера Microsoft JDBC Driver for SQL Server
           href: ../connect/jdbc/download-microsoft-jdbc-driver-for-sql-server.md
+        - name: Анализ результатов
+          href: ../connect/jdbc/parsing-the-results.md
         - name: Заметки о выпуске для драйвера JDBC
           href: ../connect/jdbc/release-notes-for-the-jdbc-driver.md
         - name: Требования к системе для драйвера JDBC
           href: ../connect/jdbc/system-requirements-for-the-jdbc-driver.md
         - name: Использование драйвера JDBC
           href: ../connect/jdbc/using-the-jdbc-driver.md
+        - name: Использование useFMTOnly
+          href: ../connect/jdbc/using-usefmtonly.md
         - name: Основные сведения о поддержке Java EE
           href: ../connect/jdbc/understanding-java-ee-support.md
         - name: Развертывание драйвера JDBC
@@ -2538,6 +2542,8 @@
               href: ../connect/jdbc/understanding-data-type-differences.md
             - name: Использование нескольких результирующих наборов
               href: ../connect/jdbc/using-multiple-result-sets.md
+            - name: Использование аутентификации NTLM
+              href: ../connect/jdbc/using-ntlm-authentication-to-connect-to-sql-server.md
             - name: Использование удержания
               href: ../connect/jdbc/using-holdability.md
             - name: Соединение с использованием проверки подлинности Azure Active Directory

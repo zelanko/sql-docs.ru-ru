@@ -10,15 +10,16 @@ ms.topic: conceptual
 ms.assetid: 1a8e6bc7-433e-471d-b646-092dc80a2d1a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: df3f1e188593e3e193faed98b7932a3dffa1adde
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: b6ead290451c17499825f051158020b2b88b37b9
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68005364"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769661"
 ---
 # <a name="replication-to-memory-optimized-table-subscribers"></a>Репликация на подписчиков оптимизированных для памяти таблиц
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Таблицы, выступающие в качестве подписчиков моментальных снимков и репликации транзакций, за исключением одноранговой репликации транзакций, можно настроить как оптимизированные для памяти таблицы. Другие конфигурации репликации несовместимы с таблицами, оптимизированными для памяти. Эта функция доступна в [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].  
   
@@ -26,7 +27,7 @@ ms.locfileid: "68005364"
   
 -   **Настройте базу данных подписчика для поддержки репликации в оптимизированные для памяти таблицы.**  
   
-     Задайте для свойства **@memory_optimized** значение **true** с помощью процедуры [sp_addsubscription (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) или [sp_changesubscription (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changesubscription-transact-sql.md).  
+     Задайте для свойства **\@memory_optimized** значение **true** с помощью процедуры [sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) или [sp_changesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changesubscription-transact-sql.md).  
   
 -   **Настройте статью для поддержки репликации в оптимизированные для памяти таблицы.**  
   
@@ -36,9 +37,9 @@ ms.locfileid: "68005364"
   
 1.  Создайте публикацию транзакций. Дополнительные сведения см. в разделе [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md).  
   
-2.  Добавьте статьи к публикации. Дополнительные сведения см. в разделе [Define an Article](../../relational-databases/replication/publish/define-an-article.md).  
+2.  Добавьте статьи к публикации. Дополнительные сведения см. в статье [определить статью](../../relational-databases/replication/publish/define-an-article.md).  
   
-     Если для настройки используется [!INCLUDE[tsql](../../includes/tsql-md.md)] set the **@schema_option** хранимой процедуры **sp_addarticle** значение   
+     Если для настройки используется [!INCLUDE[tsql](../../includes/tsql-md.md)], установите для параметра **\@schema_option** хранимой процедуры **sp_addarticle** значение   
     **0x40000000000**.  
   
 3.  В окне свойств статьи задайте для параметра **Enable Memory optimization** (Включить оптимизацию памяти) значение **true**.  
@@ -55,16 +56,16 @@ ms.locfileid: "68005364"
   
 1.  Перейдите к свойствам подписки в [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] и задайте для параметра **Memory Optimized Subscription** (Оптимизированная для памяти подписка) значение **true**. Изменения будут применены после повторной инициализации подписки.  
   
-     Если для настройки используется [!INCLUDE[tsql](../../includes/tsql-md.md)] , задайте для нового параметра **@memory_optimized** хранимой процедуры **sp_addsubscription** значение true.  
+     Если для настройки используется [!INCLUDE[tsql](../../includes/tsql-md.md)], задайте для нового параметра **\@memory_optimized** хранимой процедуры **sp_addsubscription** значение true.  
   
 2.  Перейдите к свойствам статьи для публикации в [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] и задайте для параметра **Enable Memory optimization** (Включить оптимизацию памяти) значение true.  
   
-     Если для настройки используется [!INCLUDE[tsql](../../includes/tsql-md.md)] set the **@schema_option** хранимой процедуры **sp_addarticle** значение   
+     Если для настройки используется [!INCLUDE[tsql](../../includes/tsql-md.md)], установите для параметра **\@schema_option** хранимой процедуры **sp_addarticle** значение   
     **0x40000000000**.  
   
 3.  Оптимизированные для памяти таблицы не поддерживают кластеризованные индексы. Чтобы операция репликации обрабатывала их путем преобразования в некластеризованные индексы в целевом расположении, задайте для параметра **Convert clustered index to nonclustered for memory optimized article** (Преобразовывать кластеризованный индекс в некластеризованный для статьи, оптимизированной для памяти) значение true.  
   
-     Если для настройки используется [!INCLUDE[tsql](../../includes/tsql-md.md)] set the **@schema_option** хранимой процедуры **sp_addarticle** значение  **0x0000080000000000**.  
+     Если для настройки используется [!INCLUDE[tsql](../../includes/tsql-md.md)], задайте для параметра **\@schema_option** хранимой процедуры **sp_addarticle** значение **0x0000080000000000**.  
   
 4.  Повторно создайте моментальный снимок.  
   

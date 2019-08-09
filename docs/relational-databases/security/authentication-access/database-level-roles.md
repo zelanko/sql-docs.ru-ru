@@ -38,12 +38,12 @@ ms.assetid: 7f3fa5f6-6b50-43bb-9047-1544ade55e39
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b345e8084b491adeadb5a814655284e9699f5550
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6e91fcd2281082bbef88f0a8387d3ed6cef603d9
+ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68094916"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68742846"
 ---
 # <a name="database-level-roles"></a>Роли уровня базы данных
 
@@ -73,7 +73,7 @@ ms.locfileid: "68094916"
 |Имя предопределенной роли базы данных|Описание|  
 |-------------------------------|-----------------|  
 |**db_owner**|Члены предопределенной роли базы данных **db_owner** могут выполнять все действия по настройке и обслуживанию базы данных, а также удалять базу данных в [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)]. (В [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] и [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)]некоторые операции по обслуживанию требуют наличие разрешений на уровне сервера и не может быть выполнены членами **db_owner**.)|  
-|**db_securityadmin**|Элементы предопределенной роли базы данных **db_securityadmin** могут изменять членство в роли (только для настраиваемых ролей), создавать пользователей без имен для входа и управлять разрешениями. Добавление участников к этой роли может привести к непреднамеренному повышению прав доступа.|  
+|**db_securityadmin**|Элементы предопределенной роли базы данных **db_securityadmin** могут изменять членство в роли (только для настраиваемых ролей) и управлять разрешениями. Элементы этой роли потенциально могут повышать свои права доступа, поэтому необходимо отслеживать их действия.|  
 |**db_accessadmin**|Члены предопределенной роли базы данных **db_accessadmin** могут добавлять или удалять права удаленного доступа к базе данных для имен входа и групп Windows, а также имен входа [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|  
 |**db_backupoperator**|Члены предопределенной роли базы данных **db_backupoperator** могут создавать резервные копии базы данных.|  
 |**db_ddladmin**|Члены предопределенной роли базы данных **db_ddladmin** могут выполнять любые команды языка определения данных (DDL) в базе данных.|  
@@ -86,7 +86,7 @@ ms.locfileid: "68094916"
 
 ![fixed_database_role_permissions](../../../relational-databases/security/authentication-access/media/permissions-of-database-roles.png)
 
-## <a name="special-roles-for-includesssdsmdincludessssds-mdmd-and-includesssdwmdincludessssdw-mdmd"></a>Специальные роли для [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] и [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)]
+## <a name="special-roles-for-includesssds_mdincludessssds-mdmd-and-includesssdw_mdincludessssdw-mdmd"></a>Специальные роли для [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] и [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)]
 
 Эти роли базы данных существуют только в виртуальной базе данных master. Их разрешения ограничены действиями, выполняемыми в базе данных master. В эти роли можно добавить только пользователей из базы данных master. Для этих ролей нельзя добавить имена входа, однако можно создать пользователей на основе имен входа, а затем добавить этих пользователей в роли. Кроме того, в эти роли можно добавить пользователей автономной базы данных из базы данных master. При этом пользователи автономной базы данных, добавленные в роль **dbmanager** в базе данных master, не могут использоваться для создания новых баз данных.
 

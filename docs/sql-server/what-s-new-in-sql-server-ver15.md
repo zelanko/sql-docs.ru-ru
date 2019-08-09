@@ -8,12 +8,12 @@ ms.topic: article
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: d988fc9dfc126bef79d94ca0867128085069456e
-ms.sourcegitcommit: 63c6f3758aaacb8b72462c2002282d3582460e0b
+ms.openlocfilehash: caf8b23b823d7863e1bd7c8abd01ef43b0b8ec20
+ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68495449"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68702895"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>Новые возможности [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]
 
@@ -125,7 +125,10 @@ ms.locfileid: "68495449"
 
 ### <a name="polybase"></a>PolyBase
 
-|Новая функция или обновление | Сведения | |PolyBase |Имена столбцов внешней таблицы теперь используются для запроса источников данных SQL Server, Oracle, Teradata, MongoDB и ODBC. | | &nbsp; | &nbsp; |
+|Новые функции или обновления | Сведения |
+|:---|:---|
+|PolyBase |Имена столбцов внешней таблицы теперь используются для запроса источников данных SQL Server, Oracle, Teradata, MongoDB и ODBC. |
+| &nbsp; | &nbsp; |
 
 ### <a name="collation"></a>Параметры сортировки
 

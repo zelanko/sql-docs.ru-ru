@@ -31,14 +31,15 @@ ms.assetid: eba979f2-1a8d-4cce-9d75-b74f9b519b37
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 83e515054db5d9727733de6cfc2426ee9ac3aa01
-ms.sourcegitcommit: 73dc08bd16f433dfb2e8406883763aabed8d8727
+ms.openlocfilehash: 7d6ab92ef6c9f10aea46d375633ae539122299e8
+ms.sourcegitcommit: 0d89bcaebdf87db3bd26db2ca263be9c671b0220
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68329283"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68731133"
 ---
 # <a name="datediff-transact-sql"></a>DATEDIFF (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Эта функция возвращает количество пересеченных границ (целое число со знаком), указанных в аргументе datepart, за период времени, указанный в аргументах *startdate* и *enddate*.
@@ -54,13 +55,13 @@ DATEDIFF ( datepart , startdate , enddate )
 ```  
   
 ## <a name="arguments"></a>Аргументы  
+
 *datepart*  
-Часть аргументов *startdate* и *enddate*, которая задает тип пересекаемых границ.
+Единицы, в которых функция **DATEDIFF** сообщает о разнице между _startdate_ и _enddate_. К часто используемым единицам _datepart_ относятся `month` или `second`.
 
-> [!NOTE]
-> `DATEDIFF` не принимает значения *datepart* из переменных, определяемых пользователем, или как строки в кавычках. 
+Значение _datepart_ не может быть указано в переменной или в виде строки в кавычках, например `'month'`.
 
-В приведенной ниже таблице перечислены все допустимые имена аргументов *datepart* и их сокращения.
+В приведенной ниже таблице перечислены все допустимые значения _datepart_. Функция **DATEDIFF** принимает либо полное имя _datepart_, либо любое приведенное сокращение полного имени.
 
 |Имя *datepart*|Сокращение *datepart*|  
 |-----------|------------|
@@ -76,6 +77,7 @@ DATEDIFF ( datepart , startdate , enddate )
 |**millisecond**|**ms**|  
 |**microsecond**|**mcs**|  
 |**nanosecond**|**ns**|  
+| &nbsp; | &nbsp; |
 
 > [!NOTE]
 > Каждое конкретное имя аргумента *datepart* и сокращение этого имени *datepart* будут возвращать одно и то же значение.
@@ -99,7 +101,10 @@ DATEDIFF ( datepart , startdate , enddate )
  **int**  
   
 ## <a name="return-value"></a>Возвращаемое значение  
+
 Значение типа **int**, представляющее разницу между аргументами *startdate* и *enddate* в границах, определяемых аргументом *datepart*.
+  
+Например, `SELECT DATEDIFF(day, '2036-03-01', '2036-02-28');` возвращает значение -2, указывая на то, что 2036 – високосный год. Это означает, что, если начать со _startdDate_ "2036-03-01" и отсчитать -2 дня, будет достигнуто значение _enddate_ "2036-02-28".
   
 В качестве возвращаемого значения вне диапазона для **int** (от –2 147 483 648 до 2 147 483 647) `DATEDIFF` возвращает сообщение об ошибке.  Для **миллисекунды** максимальная разница между *startdate* и *enddate* составляет 24 дня 20 часов 31 минута и 23 647 секунд. Для **секунды** максимальная разница составляет 68 лет, 19 дней, 3 часа, 14 минут и 7 секунд.
   
@@ -113,8 +118,9 @@ DATEDIFF ( datepart , startdate , enddate )
   
 Если аргументы *startdate* и *enddate* имеют разные типы данных даты, но при этом один из них имеет больше частей времени или обладает более высокой точностью, `DATEDIFF` присваивает значения 0 недостающим частям другого аргумента.
   
-## <a name="datepart-boundaries"></a>Границы, задаваемые аргументом datepart  
-Приведенные ниже инструкции имеют одинаковые значения аргументов *startdate* и *enddate*. Указанные даты являются соседними, а временная разница между ними составляет 100 наносекунд (0,0000001 секунды). Разница между аргументами *startdate* и *enddate* в каждой инструкции пересекает одну календарную или временную границу аргумента *datepart*. Каждое выражение возвращает значение 1. 
+## <a name="_datepart_-boundaries"></a>Границы, задаваемые аргументом _datepart_
+
+Приведенные ниже инструкции имеют одинаковые значения аргументов *startdate* и *enddate*. Указанные даты являются соседними, а временная разница между ними составляет 100 наносекунд (0,0000001 секунды). Разница между аргументами *startdate* и *enddate* в каждой инструкции пересекает одну календарную или временную границу аргумента *datepart*. Каждое выражение возвращает значение 1.
   
 ```sql
 SELECT DATEDIFF(year,        '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
@@ -201,13 +207,18 @@ SELECT DATEDIFF(day,
 ```sql
 USE AdventureWorks2012;  
 GO  
-SELECT DATEDIFF(day, '2007-05-07 09:53:01.0376635', GETDATE() + 1)   
+SELECT DATEDIFF(day, '2007-05-07 09:53:01.0376635', GETDATE() + 1)
     AS NumberOfDays  
     FROM Sales.SalesOrderHeader;  
 GO  
 USE AdventureWorks2012;  
 GO  
-SELECT DATEDIFF(day, '2007-05-07 09:53:01.0376635', DATEADD(day, 1, SYSDATETIME())) AS NumberOfDays  
+SELECT
+    DATEDIFF(
+            day,
+            '2007-05-07 09:53:01.0376635',
+            DATEADD(day, 1, SYSDATETIME())
+        ) AS NumberOfDays  
     FROM Sales.SalesOrderHeader;  
 GO  
 ```  
@@ -250,8 +261,9 @@ GO
 
 ```sql
 -- DOES NOT ACCOUNT FOR LEAP YEARS
-DECLARE @date1 DATETIME, @date2 DATETIME, @result VARCHAR(100)
-DECLARE @years INT, @months INT, @days INT, @hours INT, @minutes INT, @seconds INT, @milliseconds INT
+DECLARE @date1 DATETIME, @date2 DATETIME, @result VARCHAR(100);
+DECLARE @years INT, @months INT, @days INT,
+    @hours INT, @minutes INT, @seconds INT, @milliseconds INT;
 
 SET @date1 = '1900-01-01 00:00:00.000'
 SET @date2 = '2018-12-12 07:08:01.123'
@@ -294,9 +306,12 @@ SELECT @result= ISNULL(CAST(NULLIF(@years,0) AS VARCHAR(10)) + ' years,','')
      + ISNULL(' ' + CAST(NULLIF(@hours,0) AS VARCHAR(10)) + ' hours,','')
      + ISNULL(' ' + CAST(@minutes AS VARCHAR(10)) + ' minutes and','')
      + ISNULL(' ' + CAST(@seconds AS VARCHAR(10)) 
-          + CASE WHEN @milliseconds > 0 THEN '.' + CAST(@milliseconds AS VARCHAR(10)) 
-               ELSE '' END 
-          + ' seconds','')
+     + CASE
+            WHEN @milliseconds > 0
+                THEN '.' + CAST(@milliseconds AS VARCHAR(10)) 
+            ELSE ''
+       END 
+     + ' seconds','')
 
 SELECT @result
 ```

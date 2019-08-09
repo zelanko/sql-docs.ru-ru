@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 76bd8524-ebc1-4d80-b5a2-4169944d6ac0
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 5cc205c8e35a275cb043de89d06557cc975518e4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: feee489d990bfce813c0bb16aafaf9e7e3a673cf
+ms.sourcegitcommit: 97e94b76f9f48d161798afcf89a8c2ac0f09c584
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68127953"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68661396"
 ---
 # <a name="implement-a-custom-conflict-resolver-for-a-merge-article"></a>Реализация пользовательского арбитра конфликтов для статьи публикации слиянием
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,14 +47,14 @@ ms.locfileid: "68127953"
   
     |Параметр|Тип данных|Описание|  
     |---------------|---------------|-----------------|  
-    |**@tableowner**|**sysname**|Имя владельца таблицы, в которой разрешается конфликт. Это владелец таблицы в базе данных публикации.|  
-    |**@tablename**|**sysname**|Имя таблицы, в которой разрешается конфликт.|  
-    |**@rowguid**|**uniqueidentifier**|Уникальный идентификатор строки конфликта.|  
-    |**@subscriber**|**sysname**|Имя сервера, с которого распространяется вызвавшее конфликт изменение.|  
-    |**@subscriber_db**|**sysname**|Имя базы данных, из которой распространяется вызвавшее конфликт изменение.|  
-    |**@log_conflictВывод**|**int**|Определяет, должен ли процесс слияния зарегистрировать конфликт для последующего разрешения.<br /><br /> **0** = не регистрировать конфликт.<br /><br /> **1** = разрешение конфликта в пользу издателя.<br /><br /> **2** = разрешение конфликта в пользу подписчика.|  
-    |**@conflict_messageВывод**|**nvarchar(512)**|Сообщения, которые должны быть выданы о разрешении конфликта, если конфликт был зарегистрирован.|  
-    |**@destowner**|**sysname**|Владелец опубликованной таблицы на подписчике.|  
+    |**\@tableowner**|**sysname**|Имя владельца таблицы, в которой разрешается конфликт. Это владелец таблицы в базе данных публикации.|  
+    |**\@tablename**|**sysname**|Имя таблицы, в которой разрешается конфликт.|  
+    |**\@rowguid**|**uniqueidentifier**|Уникальный идентификатор строки конфликта.|  
+    |**\@subscriber**|**sysname**|Имя сервера, с которого распространяется вызвавшее конфликт изменение.|  
+    |**\@subscriber_db**|**sysname**|Имя базы данных, из которой распространяется вызвавшее конфликт изменение.|  
+    |**\@log_conflict OUTPUT**|**int**|Определяет, должен ли процесс слияния зарегистрировать конфликт для последующего разрешения.<br /><br /> **0** = не регистрировать конфликт.<br /><br /> **1** = разрешение конфликта в пользу издателя.<br /><br /> **2** = разрешение конфликта в пользу подписчика.|  
+    |**\@conflict_message OUTPUT**|**nvarchar(512)**|Сообщения, которые должны быть выданы о разрешении конфликта, если конфликт был зарегистрирован.|  
+    |**\@destowner**|**sysname**|Владелец опубликованной таблицы на подписчике.|  
   
      Эта хранимая процедура использует значения, переданные агентом слияния этим параметрам для применения пользовательской логики устранения конфликтов. Она должна вернуть результирующий набор, содержащий одну строку, соответствующий структуре базовой таблицы и содержащий значения данных для приоритетной версии строки.  
   
@@ -64,13 +64,13 @@ ms.locfileid: "68127953"
 
 #### <a name="to-use-a-custom-conflict-resolver-with-a-new-table-article"></a>Использование нестандартного сопоставителя конфликтов с новой статьей таблицы  
   
-1.  Выполните хранимую процедуру [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) , чтобы определить статью. При этом укажите значение **MicrosoftSQL** **Server Stored Procedure Resolver** в параметре **@article_resolver** и имя хранимой процедуры, реализующей логику сопоставителя конфликтов в параметре **@resolver_info** . Дополнительные сведения см. в статье [Define an Article](../../relational-databases/replication/publish/define-an-article.md).  
+1.  Выполните хранимую процедуру [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md), чтобы определить статью. При этом укажите значение **MicrosoftSQL** **Server Stored Procedure Resolver** в параметре **\@article_resolver** и имя хранимой процедуры, реализующей логику арбитра конфликтов в параметре **\@resolver_info**. Дополнительные сведения см. в статье [определить статью](../../relational-databases/replication/publish/define-an-article.md).  
   
 #### <a name="to-use-a-custom-conflict-resolver-with-an-existing-table-article"></a>Использование нестандартного сопоставителя конфликтов с существующей статьей таблицы  
   
-1.  Выполните хранимую процедуру [sp_changemergearticle](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md), указав параметры **@publication** , **@article** , значение **article_resolver** в параметре **@property** и значение **MicrosoftSQL** **Server Stored ProcedureResolver** для параметра **@value** .  
+1.  Выполните процедуру [sp_changemergearticle](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). При этом укажите параметры **\@publication**, **\@article**, значение **article_resolver** в параметре **\@property** и значение **MicrosoftSQL** **Server Stored ProcedureResolver** в параметре **\@value**.  
   
-2.  Выполните хранимую процедуру [sp_changemergearticle](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md), указав параметры **@publication** , **@article** , значение **resolver_info** в параметре **@property** и имя хранимой процедуры, реализующей логику арбитра конфликтов, в параметре **@value** .  
+2.  Выполните хранимую процедуру [sp_changemergearticle](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md), указав параметры **\@publication**, **\@article**, значение **resolver_info** в параметре **\@property** и имя хранимой процедуры, реализующей логику арбитра конфликтов, в параметре **\@value**.  
   
 ##  <a name="COM"></a> При помощи пользовательского арбитра конфликтов на основе COM  
  Пространство имен <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport> реализует интерфейс, позволяющий писать сложную бизнес-логику для обработки событий и разрешения конфликтов, происходящих во время синхронизации репликации слиянием. Дополнительные сведения см. в статье [Реализация обработчика бизнес-логики для статьи публикации слиянием](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md). Для разрешения конфликтов можно записать в машинном коде собственную бизнес-логику. Эта логика построена как COM-компонент и компилируется в динамические библиотеки (DLL) с помощью таких продуктов, как [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C++. Сопоставитель конфликтов на основе COM должен реализовывать интерфейс **ICustomResolver** , спроектированный специально для разрешения конфликтов.  
@@ -100,7 +100,7 @@ ms.locfileid: "68127953"
   
 8.  На издателе выполните хранимую процедуру [sp_enumcustomresolvers (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql.md), чтобы проверить, не зарегистрирована ли уже эта библиотека в качестве пользовательского арбитра конфликтов.  
   
-9. Чтобы зарегистрировать библиотеку в качестве пользовательского арбитра конфликтов, выполните хранимую процедуру [sp_registercustomresolver (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql.md) на распространителе. Укажите понятное имя COM-объекта в параметре **@article_resolver** , идентификатор библиотеки (CLSID) в параметре **@resolver_clsid** и значение **false** в параметре **@is_dotnet_assembly** .  
+9. Чтобы зарегистрировать библиотеку в качестве пользовательского арбитра конфликтов, выполните хранимую процедуру [sp_registercustomresolver (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql.md) на распространителе. Укажите понятное имя COM-объекта в параметре **\@article_resolver**, идентификатор библиотеки (CLSID) в параметре **\@resolver_clsid** и значение **false** в параметре **\@is_dotnet_assembly**.  
   
     > [!NOTE]  
     >  Если пользовательский арбитр конфликтов больше не нужен, вы можете отменить его регистрацию с помощью хранимой процедуры [sp_unregistercustomresolver (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-unregistercustomresolver-transact-sql.md).  
@@ -111,13 +111,13 @@ ms.locfileid: "68127953"
   
 1.  Выполните процедуру [sp_enumcustomresolvers (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql.md) на издателе и запомните понятное имя требуемого арбитра.  
   
-2.  Чтобы определить статью, в базе данных публикации издателя выполните процедуру [sp_addmergearticle (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md). Укажите понятное имя сопоставителя статей из шага 1 в параметре **@article_resolver** . Дополнительные сведения см. в статье [определить статью](../../relational-databases/replication/publish/define-an-article.md).  
+2.  Чтобы определить статью, в базе данных публикации издателя выполните процедуру [sp_addmergearticle (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md). Укажите понятное имя сопоставителя статей из шага 1 в параметре **\@article_resolver**. Дополнительные сведения см. в статье [определить статью](../../relational-databases/replication/publish/define-an-article.md).  
   
 #### <a name="to-use-a-custom-conflict-resolver-with-an-existing-table-article"></a>Использование нестандартного сопоставителя конфликтов с существующей статьей таблицы  
   
 1.  Выполните процедуру [sp_enumcustomresolvers (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql.md) на издателе и запомните понятное имя требуемого арбитра.  
   
-2.  Выполните хранимую процедуру [sp_changemergearticle (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md), указав параметры **@publication** , **@article** , значение **article_resolver** в параметре **@property** и понятное имя сопоставителя статей из шага 1 в параметре **@value** .  
+2.  Выполните хранимую процедуру [sp_changemergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md), указав параметры **\@publication**, **\@article**, значение **article_resolver** в параметре **\@property** и понятное имя сопоставителя статей из шага 1 в параметре **\@value**.  
   
 
 ## <a name="see-also"></a>См. также:  

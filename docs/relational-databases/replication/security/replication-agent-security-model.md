@@ -20,16 +20,18 @@ helpviewer_keywords:
 ms.assetid: 6d09fc8d-843a-4a7a-9812-f093d99d8192
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 84050cd000ae53b8b913a9652a4ddb323743c8da
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bd0cafe74b558dc86f6709b23e2f1195ecada520
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68046584"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768468"
 ---
 # <a name="replication-agent-security-model"></a>Модель безопасности агента репликации
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Модель безопасности агента репликации предоставляет возможность точного управления учетными записями, с которыми агенты репликации выполняются и устанавливают соединения: для каждого агента может быть задана своя учетная запись. Дополнительные сведения об указании учетных записей см. в статье [Идентификатор и управление доступом для репликации](../../../relational-databases/replication/security/identity-and-access-control-replication.md).  
+
+Модель безопасности агента репликации для управляемых экземпляров базы данных SQL Microsoft Azure немного отличается, так как отсутствуют учетные записи Windows для запуска агентов. Вместо этого все выполняется через проверку подлинности SQL Server. 
   
 > [!IMPORTANT]  
 >  Если репликацию настраивает член предопределенной роли сервера **sysadmin** , агенты репликации можно настроить для олицетворения учетной записи агента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Это можно сделать, если не задавать имя входа и пароль для агента репликации, однако такой подход не рекомендуется. Вместо этого для обеспечения надежной защиты рекомендуется задать учетную запись для каждого агента с минимальными разрешениями, описанными в подразделе «Разрешения, необходимые для агентов» ниже в этом разделе.  

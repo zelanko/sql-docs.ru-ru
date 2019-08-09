@@ -20,10 +20,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 621a122ae3464f207797b6e51a21674192e2a758
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/30/2019
 ms.locfileid: "67902719"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE (Transact-SQL)
@@ -73,7 +73,7 @@ WITH
 
 ## <a name="arguments"></a>Аргументы
 
-### <a name="datasourcename"></a>data_source_name
+### <a name="data_source_name"></a>data_source_name
 
 Задает определенное пользователем имя для источника данных. В базе данных SQL Server это имя должно быть уникальным.
 
@@ -110,7 +110,7 @@ WITH
 - `wasb` — протокол по умолчанию для хранилища больших двоичных объектов Azure. `wasbs` является необязательным, но рекомендуется, так как тогда данные будут передаваться по защищенному каналу SSL.
 - Чтобы обеспечить успешное выполнение запросов PolyBase в случае отработки отказа Hadoop `Namenode`, целесообразно использовать для `Namenode` кластера Hadoop виртуальный IP-адрес. Если этого не сделать, следует выполнить команду [ALTER EXTERNAL DATA SOURCE][alter_eds], чтобы указать новое расположение.
 
-### <a name="connectionoptions--keyvaluepair"></a>CONNECTION_OPTIONS = *пара "ключ-значение"*
+### <a name="connection_options--key_value_pair"></a>CONNECTION_OPTIONS = *пара "ключ-значение"*
 
 Указывает дополнительные параметры при подключении через `ODBC` к внешнему источнику данных.
 
@@ -126,7 +126,7 @@ WITH
 
 Включение или отключение параметра на уровне запроса достигается за счет [указаний][hint_pb].
 
-### <a name="credential--credentialname"></a>CREDENTIAL = *credential_name*
+### <a name="credential--credential_name"></a>CREDENTIAL = *credential_name*
 
 Задает учетные данные уровня базы данных для аутентификации во внешнем источнике данных.
 
@@ -142,19 +142,19 @@ WITH
 
 Сведения о создании учетных данных уровня базы данных см. в разделе [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)][create_dsc].
 
-### <a name="type---hadoop--blobstorage-"></a>TYPE = *[ HADOOP | BLOB_STORAGE ]*
+### <a name="type---hadoop--blob_storage-"></a>TYPE = *[ HADOOP | BLOB_STORAGE ]*
 
 Указывает тип настраиваемого внешнего источника данных. Этот параметр требуется не всегда.
 
 - Используйте HADOOP, если внешний источник данных — Cloudera, Hortonworks или хранилище BLOB-объектов Azure.
-- Используйте BLOB_STORAGE при выполнении массовых операций [BULK INSERT][bulk_insert], or [OPENROWSET][openrowset] с [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].
+- Используйте BLOB_STORAGE при выполнении пакетных операций с использованием инструкций [BULK INSERT][bulk_insert] или [OPENROWSET][openrowset] с [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].
 
 > [!IMPORTANT]
 > Не устанавливайте `TYPE` при использовании любого другого источника внешних данных.
 
 Пример использования `TYPE` = `HADOOP` для загрузки данных из хранилища BLOB-объектов Azure см. в разделе [Создание внешнего источника данных для ссылки на хранилище больших двоичных объектов](#e-create-external-data-source-to-reference-azure-blob-storage).
 
-### <a name="resourcemanagerlocation--resourcemanageruriport"></a>RESOURCE_MANAGER_LOCATION = *'ResourceManager_URI[:порт]'*
+### <a name="resource_manager_location--resourcemanager_uriport"></a>RESOURCE_MANAGER_LOCATION = *'ResourceManager_URI[:порт]'*
 
 Настройте это необязательное значение при подключении к Hortonworks или Cloudera.
 
@@ -317,7 +317,7 @@ WITH
 ### <a name="f-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage"></a>Е. Создание внешнего источника данных для массовых операций, извлекающих данные из хранилища BLOB-объектов Azure
 
 **Применимо к:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].
-Используйте следующий источник данных для массовых операций, выполняемых с использованием инструкций [BULK INSERT][bulk_insert] or [OPENROWSET][openrowset]. Используемые учетные данные должны задавать `SHARED ACCESS SIGNATURE` в качестве идентификатора, не должны иметь `?` в начале маркера SAS, должны иметь по крайней мере разрешение на чтение загружаемого файла (например, `srt=o&sp=r`), и иметь допустимый срок действия (все даты должны быть указаны в формате UTC). Дополнительные сведения о подписанных URL-адресах см. в статье [Использование подписанных URL-адресов][sas_token].
+Используйте следующий источник данных для массовых операций, выполняемых с использованием инструкций [BULK INSERT][bulk_insert] или [OPENROWSET][openrowset]. Используемые учетные данные должны задавать `SHARED ACCESS SIGNATURE` в качестве идентификатора, не должны иметь `?` в начале маркера SAS, должны иметь по крайней мере разрешение на чтение загружаемого файла (например, `srt=o&sp=r`), и иметь допустимый срок действия (все даты должны быть указаны в формате UTC). Дополнительные сведения о подписанных URL-адресах см. в статье [Использование подписанных URL-адресов][sas_token].
 
 ```sql
 CREATE DATABASE SCOPED CREDENTIAL AccessAzureInvoices
@@ -406,7 +406,7 @@ WITH
 
 ## <a name="arguments"></a>Аргументы
 
-### <a name="datasourcename"></a>data_source_name
+### <a name="data_source_name"></a>data_source_name
 
 Задает определенное пользователем имя для источника данных. В базе данных SQL Server (SQL DB) это имя должно быть уникальным.
 
@@ -429,7 +429,7 @@ WITH
 
 - Ядро базы данных SQL не проверяет существование внешнего источника данных, когда создает объект. Для проверки при создании внешней таблицы используйте внешний источник данных.
 
-### <a name="credential--credentialname"></a>CREDENTIAL = *credential_name*
+### <a name="credential--credential_name"></a>CREDENTIAL = *credential_name*
 
 Задает учетные данные уровня базы данных для аутентификации во внешнем источнике данных.
 
@@ -446,18 +446,18 @@ WITH
 
 Сведения о создании учетных данных уровня базы данных см. в разделе [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)][create_dsc].
 
-### <a name="type---blobstorage--rdbms--shardmapmanager"></a>TYPE = *[ BLOB_STORAGE | RDBMS | SHARD_MAP_MANAGER]*
+### <a name="type---blob_storage--rdbms--shard_map_manager"></a>TYPE = *[ BLOB_STORAGE | RDBMS | SHARD_MAP_MANAGER]*
 
 Указывает тип настраиваемого внешнего источника данных. Этот параметр требуется не всегда.
 
 - Используйте RDBMS для запросов между базами данных при использовании эластичных запросов из базы данных SQL.  
 - Используйте SHARD_MAP_MANAGER при создании внешнего источника данных при подключении к сегментированной базе данных SQL.
-- Используйте BLOB_STORAGE при выполнении массовых операций [BULK INSERT][bulk_insert], or [OPENROWSET][openrowset].
+- Используйте BLOB_STORAGE при выполнении пакетных операций с использованием инструкций [BULK INSERT][bulk_insert] или [OPENROWSET][openrowset].
 
 > [!IMPORTANT]
 > Не устанавливайте `TYPE` при использовании любого другого источника внешних данных.
 
-### <a name="databasename--databasename"></a>DATABASE_NAME = *имя базы данных*
+### <a name="database_name--database_name"></a>DATABASE_NAME = *имя базы данных*
 
 Настройте этот аргумент, если `TYPE` задан как `RDBMS` или `SHARD_MAP_MANAGER`.
 
@@ -468,7 +468,7 @@ WITH
 
 Пример, демонстрирующий создание внешнего источника данных с `TYPE` = `RDBMS`, см. в разделе [Создание внешнего источника данных в реляционной СУБД](#b-create-an-rdbms-external-data-source).
 
-### <a name="shardmapname--shardmapname"></a>SHARD_MAP_NAME = *имя карты сегментов*
+### <a name="shard_map_name--shard_map_name"></a>SHARD_MAP_NAME = *имя карты сегментов*
 
 Используется, только когда аргумент `TYPE` имеет значение `SHARD_MAP_MANAGER`, для того, чтобы задать имя карты сегментов.
 
@@ -544,7 +544,7 @@ WITH
 
 ### <a name="c-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage"></a>В. Создание внешнего источника данных для массовых операций, извлекающих данные из хранилища BLOB-объектов Azure
 
-Используйте следующий источник данных для массовых операций, выполняемых с использованием инструкций [BULK INSERT][bulk_insert] or [OPENROWSET][openrowset]. Используемые учетные данные должны задавать `SHARED ACCESS SIGNATURE` в качестве идентификатора, не должны иметь `?` в начале маркера SAS, должны иметь по крайней мере разрешение на чтение загружаемого файла (например, `srt=o&sp=r`), и иметь допустимый срок действия (все даты должны быть указаны в формате UTC). Дополнительные сведения о подписанных URL-адресах см. в статье [Использование подписанных URL-адресов][sas_token].
+Используйте следующий источник данных для массовых операций, выполняемых с использованием инструкций [BULK INSERT][bulk_insert] или [OPENROWSET][openrowset]. Используемые учетные данные должны задавать `SHARED ACCESS SIGNATURE` в качестве идентификатора, не должны иметь `?` в начале маркера SAS, должны иметь по крайней мере разрешение на чтение загружаемого файла (например, `srt=o&sp=r`), и иметь допустимый срок действия (все даты должны быть указаны в формате UTC). Дополнительные сведения о подписанных URL-адресах см. в статье [Использование подписанных URL-адресов][sas_token].
 
 ```sql
 CREATE DATABASE SCOPED CREDENTIAL AccessAzureInvoices
@@ -630,7 +630,7 @@ WITH
 
 ## <a name="arguments"></a>Аргументы
 
-### <a name="datasourcename"></a>data_source_name
+### <a name="data_source_name"></a>data_source_name
 
 Задает определенное пользователем имя для источника данных. В базе данных хранилища данных SQL (SQL DW) это имя должно быть уникальным.
 
@@ -655,7 +655,7 @@ WITH
 - Используйте один и тот же внешний источник данных для всех таблиц при запросе Hadoop, чтобы обеспечить согласованность семантики запросов.
 - `wasb` — протокол по умолчанию для хранилища больших двоичных объектов Azure. `wasbs` является необязательным, но рекомендуется, так как тогда данные будут передаваться по защищенному каналу SSL.
 
-### <a name="credential--credentialname"></a>CREDENTIAL = *credential_name*
+### <a name="credential--credential_name"></a>CREDENTIAL = *credential_name*
 
 Задает учетные данные уровня базы данных для аутентификации во внешнем источнике данных.
 
@@ -666,7 +666,7 @@ WITH
 
 Сведения о создании учетных данных уровня базы данных см. в разделе [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)][create_dsc].
 
-### <a name="type---hadoop--blobstorage-"></a>TYPE = *[ HADOOP | BLOB_STORAGE ]*
+### <a name="type---hadoop--blob_storage-"></a>TYPE = *[ HADOOP | BLOB_STORAGE ]*
 
 Указывает тип настраиваемого внешнего источника данных. Этот параметр требуется не всегда.
 
@@ -849,7 +849,7 @@ WITH
 
 ## <a name="arguments"></a>Аргументы
 
-### <a name="datasourcename"></a>data_source_name
+### <a name="data_source_name"></a>data_source_name
 
 Задает определенное пользователем имя для источника данных. Имя должно быть уникальным в пределах сервера в Системе платформы аналитики (Parallel Data Warehouse, PDW).
 
@@ -876,7 +876,7 @@ WITH
 - `wasb` — протокол по умолчанию для хранилища больших двоичных объектов Azure. `wasbs` является необязательным, но рекомендуется, так как тогда данные будут передаваться по защищенному каналу SSL.
 - Чтобы обеспечить успешное выполнение запросов PolyBase в случае отработки отказа Hadoop `Namenode`, целесообразно использовать для `Namenode` кластера Hadoop виртуальный IP-адрес. Если этого не сделать, следует выполнить команду [ALTER EXTERNAL DATA SOURCE][alter_eds], чтобы указать новое расположение.
 
-### <a name="credential--credentialname"></a>CREDENTIAL = *credential_name*
+### <a name="credential--credential_name"></a>CREDENTIAL = *credential_name*
 
 Задает учетные данные уровня базы данных для аутентификации во внешнем источнике данных.
 
@@ -896,7 +896,7 @@ WITH
 
 Пример использования `TYPE` = `HADOOP` для загрузки данных из хранилища BLOB-объектов Azure см. в разделе [Создание внешнего источника данных для ссылки на хранилище больших двоичных объектов](#d-create-external-data-source-to-reference-azure-blob-storage).
 
-### <a name="resourcemanagerlocation--resourcemanageruriport"></a>RESOURCE_MANAGER_LOCATION = *'ResourceManager_URI[:порт]'*
+### <a name="resource_manager_location--resourcemanager_uriport"></a>RESOURCE_MANAGER_LOCATION = *'ResourceManager_URI[:порт]'*
 
 Настройте это необязательное значение при подключении к Hortonworks или Cloudera.
 

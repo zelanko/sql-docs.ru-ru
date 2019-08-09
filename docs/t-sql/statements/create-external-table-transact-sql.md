@@ -1,7 +1,7 @@
 ---
 title: CREATE EXTERNAL TABLE (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 05/29/2019
+ms.date: 07/29/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -21,12 +21,12 @@ ms.assetid: 6a6fd8fe-73f5-4639-9908-2279031abdec
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cfdbf22c09dcc57025fd0b3820b7e12bd9097bc6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4c2aa732a98079fd88ebfcafa476f20566e6dc5a
+ms.sourcegitcommit: 182ed49fa5a463147273b58ab99dc228413975b6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67940094"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68698299"
 ---
 # <a name="create-external-table-transact-sql"></a>CREATE EXTERNAL TABLE (Transact-SQL)
 
@@ -615,6 +615,9 @@ column_name <data_type>
 
 \<column_definition > [,... *n* ] CREATE EXTERNAL TABLE поддерживает возможность настроить имя столбца, тип данных, допустимость значений NULL и параметры сортировки. Параметр DEFAULT CONSTRAINT нельзя использовать с внешними таблицами.
 
+> [!NOTE]
+> Типы данных `Text`, `nText` и `XML` не поддерживаются для столбцов во внешних таблицах базы данных SQL Microsoft Azure.
+
 Определения столбцов, включая типы данных и количество столбцов, должны соответствовать данным во внешних файлах. В случае несоответствия при запросе данных строки файла будут отклонены.
 
 Параметры сегментированных внешних таблиц
@@ -746,6 +749,9 @@ column_name <data_type>
 *{им_базы.имя_схемы.имя_таблицы | имя_схемы.имя_таблицы | имя_таблицы}*  Одно-, двух- или трехсоставное имя для создаваемой таблицы. Если речь идет о внешней таблице, в хранилище данных SQL хранятся только метаданные таблицы, а также базовая статистика о файле или папке, на которые ссылается Azure Data Lake, Hadoop и хранилище больших двоичных объектов Azure. Никакие данные не перемещаются и не хранятся в хранилище данных SQL.
 
 \<column_definition > [,... *n* ] CREATE EXTERNAL TABLE поддерживает возможность настроить имя столбца, тип данных, допустимость значений NULL и параметры сортировки. Параметр DEFAULT CONSTRAINT нельзя использовать с внешними таблицами.
+
+> [!NOTE]
+> Типы данных `Text`, `nText` и `XML` не поддерживаются для столбцов во внешних таблицах хранилища данных SQL Microsoft Azure.
 
 Определения столбцов, включая типы данных и количество столбцов, должны соответствовать данным во внешних файлах. В случае несоответствия при запросе данных строки файла будут отклонены.
 
@@ -885,10 +891,10 @@ CREATE EXTERNAL FILE FORMAT TextFileFormat
 WITH
 (
     FORMAT_TYPE = DELIMITEDTEXT 
-    , FORMAT_OPTIONS ( FIELDTERMINATOR = '|'
-       , STRINGDELIMITER = ''
-      , DATEFORMAT = 'yyyy-MM-dd HH:mm:ss.fff'
-      , USETYPE_DEFAULT = FALSE
+    , FORMAT_OPTIONS ( FIELD_TERMINATOR = '|'
+       , STRING_DELIMITER = ''
+      , DATE_FORMAT = 'yyyy-MM-dd HH:mm:ss.fff'
+      , USE_TYPE_DEFAULT = FALSE
       )
 )
 

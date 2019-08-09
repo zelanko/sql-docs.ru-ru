@@ -17,23 +17,22 @@ helpviewer_keywords:
 ms.assetid: 4513a18d-dd6e-407a-b009-49dc9432ec7e
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 3784135455a29d3d1662793d743d9d788e64b5f0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: d2d1746a9ace097c8d915bb1cb5425170883250d
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68095637"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769640"
 ---
 # <a name="secure-the-publisher"></a>Организация безопасности издателя
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  К издателю подключаются следующие агенты репликации:  
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   
--   Агент чтения журнала.  
+К издателю подключаются следующие агенты репликации:  
   
--   агент моментальных снимков  
-  
+-   Агенты чтения журнала
+-   агент моментальных снимков
 -   Агент чтения очереди.  
-  
 -   Агент слияния.  
   
  Рекомендуется выделить для этих агентов соответствующе имена входа, придерживаясь принципа предоставления минимально необходимых прав, и обеспечить надежное хранение их паролей. Сведения о разрешениях, необходимых для каждого из перечисленных агентов, см. в разделе [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md).  

@@ -1,7 +1,7 @@
 ---
 title: Выполняющаяся в памяти OLTP (оптимизация в памяти) | Документация Майкрософт
 ms.custom: ''
-ms.date: 06/24/2019
+ms.date: 08/01/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -14,27 +14,21 @@ ms.assetid: e1d03d74-2572-4a55-afd6-7edf0bc28bdb
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4908caa8c45b4c4f4cd1cdbbc539fe4da3265677
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9ab822203fa55e32a3b310f6c5a3ecfe3269d8ed
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68050223"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715911"
 ---
-# <a name="in-memory-oltp-in-memory-optimization"></a>In-Memory OLTP (оптимизация в памяти)
+# <a name="in-memory-oltp-and-memory-optimization"></a>Выполняющаяся в памяти OLTP (оптимизация в памяти)
 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
  [!INCLUDE[hek_2](../../includes/hek-2-md.md)] может значительно улучшить производительность обработки транзакций, приема и загрузки данных, а также оптимизировать сценарии с использованием временных данных.  Базовый код и сведения, необходимые для быстрого тестирования вашей собственной оптимизированной для памяти таблицы и скомпилированной в собственном коде хранимой процедуры, см. в статье:
  -  [Краткое руководство 1. Технологии выполнения OLTP в памяти для повышения производительности службы Transact-SQL](../../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md).  
  
-Видеоролик, длительностью 17 минут, поясняющий выполняющуюся в памяти OLTP и демонстрирующий преимущества с точки зрения производительности:
-
--  [In-Memory OLTP in SQL Server 2016](https://www.youtube.com/watch?v=l5l5eophmK4)(Выполняющаяся в памяти OLTP в SQL Server 2016)
-
-Чтобы скачать демонстрацию производительности для выполняющейся в памяти OLTP, используемую в этом видео: 
-
-- [In-Memory OLTP Performance Demo v1.0](https://github.com/Microsoft/sql-server-samples/releases/tag/in-memory-oltp-demo-v1.0)
+На YouTube доступен [**17-минутный видеоролик**](#anchorname-17minute-video), поясняющий выполняемую в памяти OLTP в SQL Server и демонстрирующий преимущества с точки зрения производительности.
 
 Дополнительные сведения о выполняющейся в памяти OLTP и обзор сценариев, в которых эта технология может значительно улучшать производительность:
 
@@ -70,10 +64,13 @@ ms.locfileid: "68050223"
 |[Поддержка высокого уровня доступности в базах данных OLTP в памяти](../../relational-databases/in-memory-oltp/high-availability-support-for-in-memory-oltp-databases.md)|Описывает группы доступности и отказоустойчивые кластеры в службе [!INCLUDE[hek_2](../../includes/hek-2-md.md)].|  
 |[Поддержка SQL Server для In-Memory OLTP](../../relational-databases/in-memory-oltp/sql-server-support-for-in-memory-oltp.md)|Описание нового и обновленного синтаксиса и функций, поддерживающих оптимизированные для памяти таблицы.|  
 |[Миграция в выполняющуюся в памяти OLTP](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)|Рассматриваются способы миграции дисковых таблиц в оптимизированные для памяти таблицы.|  
-  
- Больше информации о службе [!INCLUDE[hek_2](../../includes/hek-2-md.md)] доступно в:  
+| &nbsp; | &nbsp; |
 
-- [Видеоролик, поясняющий выполняемую в памяти OLTP и демонстрирующий преимущества с точки зрения производительности](https://www.youtube.com/watch?v=l5l5eophmK4).
+## <a name="links-to-other-websites"></a>Ссылки на другие веб-сайты
+
+В этом разделе приводятся ссылки на другие веб-сайты, содержащие сведения о выполняющейся в памяти OLTP в SQL Server.
+
+- [**Видеоролик**, поясняющий выполняемую в памяти OLTP и демонстрирующий преимущества с точки зрения производительности](#anchorname-17minute-video)
 
 - [In-Memory OLTP Performance Demo v1.0](https://github.com/Microsoft/sql-server-samples/releases/tag/in-memory-oltp-demo-v1.0)
 
@@ -86,8 +83,57 @@ ms.locfileid: "68050223"
 -   [Выполняемая в памяти OLTP — общие замечания по шаблонам рабочей нагрузки и миграции](https://msdn.microsoft.com/library/dn673538.aspx)  
   
 -   [Блог о выполняющейся в памяти OLTP](https://go.microsoft.com/fwlink/?LinkId=311696)  
-  
-## <a name="see-also"></a>См. также:  
+
+## <a name="anchorname-17minute-video"></a>17-минутное видео, с указателем
+
+- _Название видео:_ **Выполняющаяся в памяти OLTP в SQL Server 2016**
+- _Дата публикации:_ 2019-03-10
+- _Продолжительность:_ 17:32
+- _Размещено:_ Хос де Бруижн, старший руководитель программы по SQL Server
+
+### <a name="demo-can-be-downloaded"></a>Демонстрацию можно скачать
+
+На отметке времени 08:09 демонстрация в видео выполняется дважды. Вы можете скачать готовую к запуску демонстрацию производительности, которая используется в видео, по следующей ссылке:
+
+- [In-Memory OLTP Performance Demo v1.0](https://github.com/Microsoft/sql-server-samples/releases/tag/in-memory-oltp-demo-v1.0)
+
+Ниже приведена общая последовательность действий, которые показаны в видео.
+
+1. Сначала демонстрация запускается с обычной таблицей.
+2. Далее показана оптимизированная для памяти версия таблицы, которая создается и заполняется несколькими щелчками мыши в SQL Server Management Studio (SSMS.exe).
+3. После этого демонстрация выполняется повторно с использованием таблицы, оптимизированной для памяти. Фиксируется существенное улучшение скорости.
+
+### <a name="index-to-each-section-in-the-video"></a>Указатель разделов видео
+
+| Ссылка на временную метку | Заголовок раздела |
+| :------------- | :------------ |
+| A.&nbsp; [00:00](https://www.youtube.com/watch?v=l5l5eophmK4&t=0) | Начало. |
+| <br/>B.&nbsp; [00:56](https://www.youtube.com/watch?v=l5l5eophmK4&t=56) | <br/>Почему выполняющаяся в памяти OLTP имеет значение для клиентов. |
+| &nbsp; &nbsp; [01:03](https://www.youtube.com/watch?v=l5l5eophmK4&t=63) | Современное оборудование требует современной архитектуры системы баз данных. |
+| &nbsp; &nbsp; [02:10](https://www.youtube.com/watch?v=l5l5eophmK4&t=130) | Взрывной рост объема создаваемых данных. Операции должны выполняться мгновенно (с низкой задержкой). |
+| &nbsp; &nbsp; [03:19](https://www.youtube.com/watch?v=l5l5eophmK4&t=199) | Сокращение совокупной стоимости владения: больше возможностей при использовании существующих ресурсов. |
+| <br/>C.&nbsp; [03:33](https://www.youtube.com/watch?v=l5l5eophmK4&t=213) | <br/>Что такое выполняющаяся в памяти OLTP.<br/>Оптимизация производительности с использованием оптимизированной для памяти технологии. |
+| &nbsp; &nbsp; [05:03](https://www.youtube.com/watch?v=l5l5eophmK4&t=303) | Повышение скорости обработки транзакций до 30 раз. |
+| &nbsp; &nbsp; [05:22](https://www.youtube.com/watch?v=l5l5eophmK4&t=322) | Полная надежность: данные сохраняются в случае сбоев сервера. |
+| &nbsp; &nbsp; [06:15](https://www.youtube.com/watch?v=l5l5eophmK4&t=375) | Полная интеграция в SQL Server. Не требуется изучать новые языки и инструменты. |
+| &nbsp; &nbsp; [07:22](https://www.youtube.com/watch?v=l5l5eophmK4&t=442) | Впервые выпущена в SQL Server 2014, существенно улучшена в 2016. |
+| &nbsp; &nbsp; [07:58](https://www.youtube.com/watch?v=l5l5eophmK4&t=558) | Доступна также в базе данных SQL Microsoft Azure (в облаке). |
+| <br/>D.&nbsp; [08:09](https://www.youtube.com/watch?v=l5l5eophmK4&t=489) | <br/>Демонстрация производительности.<br/> Запуск демонстрации с обычной таблицей. |
+| &nbsp; &nbsp; [09:11](https://www.youtube.com/watch?v=l5l5eophmK4&t=551) | Контекстное меню SSMS: **Отчеты** &gt; **об анализе производительности транзакции** |
+| &nbsp; &nbsp; [10:38](https://www.youtube.com/watch?v=l5l5eophmK4&t=638) | Контекстное меню SSMS: **Помощник по оптимизации памяти**<br/> &nbsp; &nbsp; Фактическое создание оптимизированной для памяти таблицы из обычной таблицы и перенос данных. |
+| &nbsp; &nbsp; [11:28](https://www.youtube.com/watch?v=l5l5eophmK4&t=688) | Повторный запуск демонстрации, улучшение скорости в 45 раз. |
+| <br/>E.&nbsp; [12:17](https://www.youtube.com/watch?v=l5l5eophmK4&t=737) | <br/>Более простая в использовании выполняющаяся в памяти OLTP в SQL Server 2016 (по сравнению с 2014). |
+| &nbsp; &nbsp; [12:43](https://www.youtube.com/watch?v=l5l5eophmK4&t=763) | Упрощенный анализ для обеспечения миграции приложений. |
+| &nbsp; &nbsp; [13:03](https://www.youtube.com/watch?v=l5l5eophmK4&t=783) | Упрощение миграции приложений с помощью расширенной поддержки языка Transact-SQL (например, с использованием внешних ключей и триггеров). |
+| &nbsp; &nbsp; [13:56](https://www.youtube.com/watch?v=l5l5eophmK4&t=836) | Улучшение управляемости.<br/> &nbsp; &nbsp; Например, изменение схемы и индексов, автоматическое обновление статистики. |
+| <br/>F.&nbsp; [14:46](https://www.youtube.com/watch?v=l5l5eophmK4&t=886) | <br/>Улучшенная масштабируемость. |
+| &nbsp; &nbsp; [15:12](https://www.youtube.com/watch?v=l5l5eophmK4&t=912) | Большие оптимизированные для памяти таблицы (до 2 ТБ на базу данных). |
+| &nbsp; &nbsp; [15:34](https://www.youtube.com/watch?v=l5l5eophmK4&t=934) | Еще более эффективное масштабирование. |
+| &nbsp; &nbsp; [16:41](https://www.youtube.com/watch?v=l5l5eophmK4&t=1001) | Больше возможностей при использовании существующих ресурсов. |
+| <br/>G.&nbsp; [16:53](https://www.youtube.com/watch?v=l5l5eophmK4&t=1013) | <br/>Заключительные комментарии. (Заканчивается на 17:32.) |
+| &nbsp; | &nbsp; |
+
+## <a name="see-also"></a>См. также раздел  
  [Функции базы данных](../../relational-databases/database-features.md)  
   
   

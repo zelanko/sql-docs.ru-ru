@@ -22,12 +22,12 @@ ms.assetid: 27569888-f8b5-4cec-a79f-6ea6d692b4ae
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 176a5d39efc5e0501d425100e458235a971d87da
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8865d5c4331fc9414d4621f98d6b21f85561f15f
+ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67914799"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68702764"
 ---
 # <a name="objectproperty-transact-sql"></a>OBJECTPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -115,6 +115,7 @@ OBJECTPROPERTY ( id , property )
 |IsUserTable|Таблица|Пользовательская таблица.<br /><br /> 1 = True<br /><br /> 0 = False.|  
 |IsView|Представление|Представление.<br /><br /> 1 = True<br /><br /> 0 = False.|  
 |OwnerId|Любой объект области схемы|Владелец объекта.<br /><br /> **Примечание.**  Владелец схемы необязательно является владельцем объекта. Например, дочерние объекты (такие, у которых аргумент *parent_object_id* не равен NULL) всегда возвращают в качестве родителя один и тот же идентификатор владельца.<br /><br /> Nonnull = идентификатор пользователя базы данных владельца объекта.|  
+|SchemaId|Любой объект области схемы| Идентификатор схемы, которой принадлежит объект.| 
 |TableDeleteTrigger|Таблица|У таблицы есть триггер DELETE.<br /><br /> >1 = идентификатор первого триггера указанного типа.|  
 |TableDeleteTriggerCount|Таблица|В таблице имеется указанное число триггеров DELETE.<br /><br /> > 0 = количество триггеров DELETE.|  
 |TableFullTextMergeStatus|Таблица|**Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Определяет, участвует ли в настоящий момент полнотекстовый индекс для таблицы в процессе слияния.<br /><br /> 0 = для таблицы отсутствует полнотекстовый индекс, либо индекс не находится в процессе слияния.<br /><br /> 1 = полнотекстовый индекс находится в процессе слияния.|  

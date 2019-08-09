@@ -11,12 +11,12 @@ ms.assetid: 62c964c5-eae4-4cf1-9024-d5a19adbd652
 author: jodebrui
 ms.author: jodebrui
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e16f646a963d22a2fe3a6a67428970d11ee5cb43
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f1f8f4937efa5db9de76d6e111d5a0abf0223d23
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68100265"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715296"
 ---
 # <a name="overview-and-usage-scenarios"></a>Общие сведения и сценарии использования
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -224,7 +224,7 @@ GO
 
 [Технологии выполнения OLTP в памяти для повышения производительности службы Transact-SQL](https://msdn.microsoft.com/library/mt694156.aspx)   
 Демонстрацию производительности с использованием выполняющейся в памяти OLTP см. по адресу [in-memory-oltp-perf-demo-v1.0](https://github.com/Microsoft/sql-server-samples/releases/tag/in-memory-oltp-demo-v1.0)   
-[17-минутный видеоролик, в котором объясняется, что такое выполняющаяся в памяти OLTP, а также показывается демонстрация](https://www.youtube.com/watch?v=l5l5eophmK4) (демонстрация начинается с 8:25)   
+[17-минутный видеоролик, в котором объясняется, что такое выполняющаяся в памяти OLTP, а также показывается демонстрация](in-memory-oltp-in-memory-optimization.md#anchorname-17minute-video)  
 [Скрипт, позволяющий включить выполняющуюся в памяти OLTP и задать рекомендуемые параметры](https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/in-memory/t-sql-scripts/enable-in-memory-oltp.sql)   
 [Основная документация по выполняющейся в памяти OLTP](in-memory-oltp-in-memory-optimization.md)   
 [Повышение производительности и использования ресурсов благодаря выполняющейся в памяти OLTP в базе данных SQL Azure](https://azure.microsoft.com/blog/in-memory-oltp-in-azure-sql-database/)  

@@ -1,6 +1,6 @@
 ---
 title: Документация по SQL Server | Документы Майкрософт
-ms.date: 08/12/2018
+ms.date: 08/02/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.custom: ''
@@ -20,12 +20,12 @@ ms.assetid: 674933a8-e423-4d44-a39b-2a997e2c2333
 author: craigg-msft
 ms.author: jroth
 monikerRange: '>=sql-server-linux-2017||>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 7d925fcbdb80ada3426b42d4dcb413937f4d3953
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 824036a79897302411ec1a7026351832269511b3
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68136342"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771600"
 ---
 # <a name="sql-server-documentation"></a>Документация по SQL Server
 
@@ -109,7 +109,7 @@ SQL Server является центральной частью платформ
 |||
 |-|-|
 |![Ядро СУБД SQL](../sql-server/media/sql-database-engine.png "Ядро СУБД SQL")|**[Ядро СУБД](../database-engine/sql-server-database-engine-overview.md)**<br /><br /> Компонент ядра СУБД представляет собой основную службу для хранения, обработки и обеспечения безопасности данных. Этот компонент обеспечивает управляемый доступ к ресурсам и быструю обработку транзакций, что позволяет использовать его даже в самых требовательных корпоративных приложениях обработки данных. Кроме того, ядро СУБД предоставляет разносторонние средства поддержания высокого уровня доступности.|
-|![Сервер R](../sql-server/media/r-server.png "Сервер R")|**[Службы машинного обучения](../advanced-analytics/r-services/r-services.md)**<br /><br /> Службы машинного обучения Майкрософт поддерживают интеграцию машинного обучения с рабочими процессами предприятия с помощью популярных языков R и Python.<br /><br /> Службы машинного обучения (в базе данных) интегрируют R и Python с SQL Server, что позволяет легко создавать, повторно обучать и оценивать модели, вызывая хранимые процедуры.  Сервер машинного обучения Майкрософт обеспечивает поддержку корпоративного уровня для R и Python без необходимости использовать SQL Server.|
+|![Службы машинного обучения](../sql-server/media/r-server.png "Microsoft R Server")|**[Службы машинного обучения](../advanced-analytics/index.yml)**<br /><br /> Службы машинного обучения дают возможность выполнять скрипты Python и R с реляционными данными. Вы можете использовать пакеты с открытым исходным кодом и пакеты Майкрософт для прогнозной аналитики и машинного обучения. Скрипты выполняются в базе данных без перемещения данных за пределы SQL Server или по сети.|
 |![Службы Integration Services](../sql-server/media/integration-services.png "Службы Integration Services")|**[Службы Integration Services](../integration-services/sql-server-integration-services.md)**<br /><br /> [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] — это платформа для создания таких высокопроизводительных решений по интеграции данных, как пакеты для хранения данных, которые обеспечивают извлечение, преобразование и загрузку данных.|
 |![Службы Analysis Services](../sql-server/media/analysis-services.png "Службы Analysis Services")|**[Службы Analysis Services](../analysis-services/analysis-services.md)**<br /><br /> Службы[!INCLUDE[ssASnoversion_md](../includes/ssasnoversion-md.md)] — это платформа аналитических данных и набор средств для бизнес-аналитики на личном уровне, уровне рабочей группы и организации. Серверы и клиентские конструкторы поддерживают стандартные решения OLAP, новые решения для создания табличных моделей, а также самостоятельную аналитику и совместную работу с помощью [!INCLUDE[ssGemini](../includes/ssgemini-md.md)], Excel и среды SharePoint Server. Службы[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] также включают интеллектуальный анализ данных, который позволяет выявлять закономерности и связи на основе больших объемов данных.|    
 |![Службы Reporting Services](../sql-server/media/reporting-services.png "Службы Reporting Services")|**[Службы Reporting Services](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)**<br /><br /> Службы Reporting Services предлагают средства создания корпоративных отчетов с поддержкой веб-интерфейса.  С их помощью можно включать в отчеты данные из различных источников, публиковать отчеты в разнообразных форматах, а также централизованно управлять безопасностью и подписками.|

@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 97f2535b-ec19-4973-823d-bcf3d5aa0216
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 970e982ccc5e2d7f7af7643f08e90b2dc791f7e1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 43b5d4f59ae68f52968fc4aaa10a400e0d8f8ff3
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67907587"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769541"
 ---
 # <a name="specify-synchronization-schedules"></a>Указание расписаний синхронизации
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   В данном разделе описывается процесс задания расписаний синхронизации в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]или объектов RMO. При создании подписки можно определить расписание синхронизации, управляющее запуском агента репликации для подписки. Если не указать параметры расписания, подписка использует расписание по умолчанию.  
   
  Подписки синхронизируются агентом распространителя (для репликации моментальных снимков и репликации транзакций) или агентом слияния (для репликации слиянием). Агенты могут работать непрерывно, запускаться по запросу или по расписанию.  
@@ -146,49 +147,49 @@ ms.locfileid: "67907587"
   
  Расписание определяется следующими параметрами, поведение которых наследуется из процедуры [sp_add_schedule (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md):  
   
--   **@frequency_type** — тип частоты, которая используется при создании расписания для агента.  
+-   **\@frequency_type** — тип частоты, которая используется при создании расписания для агента.  
   
--   **@frequency_interval** — день недели, в который запускается агент.  
+-   **\@frequency_interval** — день недели, в который запускается агент.  
   
--   **@frequency_relative_interval** — номер недели в месяце, если агент запускается ежемесячно;  
+-   **\@frequency_relative_interval** — неделя конкретного месяца, если в расписании предусмотрен ежемесячный запуск агента.  
   
--   **@frequency_recurrence_factor** — число частотных единиц, проходящих между последовательными синхронизациями;  
+-   **\@frequency_recurrence_factor** — число зависящих от типа частоты единиц, происходящих между синхронизациями.  
   
--   **@frequency_subday** — частотная единица, используемая, если агент запускается чаще одного раза в день;  
+-   **\@frequency_subday** — единица частоты, если агент выполняется несколько раз в день.  
   
--   **@frequency_subday_interval** — число частотных единиц, проходящих между запусками агента, если он запускается чаще одного раза в день;  
+-   **\@frequency_subday_interval** — число единиц частоты между запусками агента, если он выполняется несколько раз в день.  
   
--   **@active_start_time_of_day** — время первого запуска агента в конкретный день.  
+-   **\@active_start_time_of_day** — время первого запуска агента в конкретный день.  
   
--   **@active_end_time_of_day** — время последнего запуска агента в конкретный день.  
+-   **\@active_end_time_of_day** — время последнего запуска агента в конкретный день.  
   
--   **@active_start_date** — первый день вступления в силу расписания агента.  
+-   **\@active_start_date** — первый день вступления в силу расписания агента.  
   
--   **@active_end_date** — последний день, когда расписание агента имеет силу.  
+-   **\@active_end_date** — последний день, когда расписание агента имеет силу.  
   
 #### <a name="to-define-the-synchronization-schedule-for-a-pull-subscription-to-a-transactional-publication"></a>Определение расписания синхронизации для подписки по запросу на публикацию транзакций  
   
 1.  Создайте подписку по запросу на публикацию транзакций. Дополнительные сведения см. в статье [Создание подписки по запросу](../../relational-databases/replication/create-a-pull-subscription.md).  
   
-2.  На подписчике выполните процедуру [sp_addpullsubscription_agent (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md). Укажите параметры **@publisher** , **@publisher_db** , **@publication** и учетные данные [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, с которыми выполняется агент распространителя на подписчике, для параметров **@job_name** и **@password** . Укажите описанные выше параметры синхронизации, определяющие расписание для задания агента распространителя, синхронизирующего подписку.  
+2.  На подписчике выполните процедуру [sp_addpullsubscription_agent (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md). Укажите параметры **\@publisher**, **\@publisher_db**, **\@publication** и учетные данные [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, с которыми выполняется агент распространения на подписчике, для параметров **\@job_name** и **\@password**. Укажите описанные выше параметры синхронизации, определяющие расписание для задания агента распространителя, синхронизирующего подписку.  
   
 #### <a name="to-define-the-synchronization-schedule-for-a-push-subscription-to-a-transactional-publication"></a>Определение расписания синхронизации для принудительной подписки на публикацию транзакций  
   
 1.  Создайте принудительную подписку на публикацию транзакций. Дополнительные сведения см. в статье [Создание принудительной подписки](../../relational-databases/replication/create-a-push-subscription.md).  
   
-2.  На подписчике выполните процедуру [sp_addpushsubscription_agent (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md). Укажите параметры **@subscriber** , **@subscriber_db** , **@publication** и учетные данные Windows, с которыми выполняется агент распространителя на подписчике, для параметров **@job_name** и **@password** . Укажите описанные выше параметры синхронизации, определяющие расписание для задания агента распространителя, синхронизирующего подписку.  
+2.  На подписчике выполните процедуру [sp_addpushsubscription_agent (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md). Укажите параметры **\@subscriber**, **\@subscriber_db**, **\@publication** и учетные данные Windows, с которыми выполняется агент распространения на подписчике, для параметров **\@job_name** и **\@password**. Укажите описанные выше параметры синхронизации, определяющие расписание для задания агента распространителя, синхронизирующего подписку.  
   
 #### <a name="to-define-the-synchronization-schedule-for-a-pull-subscription-to-a-merge-publication"></a>Определение расписания синхронизации для подписки по запросу для публикации слиянием  
   
 1.  Создайте подписку по запросу на публикацию слиянием. Дополнительные сведения см. в статье [Создание подписки по запросу](../../relational-databases/replication/create-a-pull-subscription.md).  
   
-2.  Выполните процедуру [sp_addmergepullsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)на подписчике. Укажите параметры **@publisher** , **@publisher_db** , **@publication** и учетные данные Windows, с которыми выполняется агент слияния на подписчике, для параметров **@job_name** и **@password** . Укажите описанные выше параметры синхронизации, определяющие расписание для задания агента слияния, синхронизирующего подписку.  
+2.  Выполните процедуру [sp_addmergepullsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)на подписчике. Укажите параметры **\@publisher**, **\@publisher_db**, **\@publication** и учетные данные Windows, с которыми выполняется агент слияния на подписчике, для параметров **\@job_name** и **\@password**. Укажите описанные выше параметры синхронизации, определяющие расписание для задания агента слияния, синхронизирующего подписку.  
   
 #### <a name="to-define-the-synchronization-schedule-for-a-push-subscription-to-a-merge-publication"></a>Определение расписания синхронизации для принудительной подписки на публикацию слиянием  
   
 1.  Создайте принудительную подписку на публикацию слиянием. Дополнительные сведения см. в статье [Создание принудительной подписки](../../relational-databases/replication/create-a-push-subscription.md).  
   
-2.  Выполните на подписчике хранимую процедуру [sp_addmergepushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md). Укажите параметры **@subscriber** , **@subscriber_db** , **@publication** и учетные данные Windows, с которыми выполняется агент слияния на подписчике, для параметров **@job_name** и **@password** . Укажите описанные выше параметры синхронизации, определяющие расписание для задания агента слияния, синхронизирующего подписку.  
+2.  Выполните на подписчике хранимую процедуру [sp_addmergepushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md). Укажите параметры **\@subscriber**, **\@subscriber_db**, **\@publication** и учетные данные Windows, с которыми выполняется агент слияния на подписчике, для параметров **\@job_name** и **\@password**. Укажите описанные выше параметры синхронизации, определяющие расписание для задания агента слияния, синхронизирующего подписку.  
   
 ##  <a name="RMOProcedure"></a> При помощи объектов RMO  
  При выполнении репликации агент SQL Server производит планирование заданий для создания моментальных снимков и синхронизации подписок. Расписание заданий агента репликации может быть задано программным путем с помощью объектов RMO.  

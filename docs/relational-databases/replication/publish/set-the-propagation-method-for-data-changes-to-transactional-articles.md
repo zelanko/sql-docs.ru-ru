@@ -13,15 +13,16 @@ helpviewer_keywords:
 ms.assetid: 0a291582-f034-42da-a1a3-29535b607b74
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 969012ebc2cb804fe67cfb04810d653eb8041f52
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: db0ec64180e5bb27cc69643c9847812574ccf8fd
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68073494"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769776"
 ---
 # <a name="set-the-propagation-method-for-data-changes-to-transactional-articles"></a>Задание метода распространения изменений данных в транзакционные статьи
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   В этом разделе описывается задание метода распространения изменений данных в транзакционных статьях в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
  По умолчанию репликация транзакций передает изменения подписчикам при помощи набора хранимых процедур для каждой статьи. Эти процедуры можно заменить на пользовательские процедуры. Дополнительные сведения см. в статье [Указание способа распространения изменений для статей транзакций](../../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md).  
@@ -87,13 +88,13 @@ ms.locfileid: "68073494"
   
 #### <a name="to-create-an-article-that-uses-transact-sql-commands-to-propagate-data-changes"></a>Создание статьи, использующей команды Transact-SQL для распространения изменений данных  
   
-1.  Выполните процедуру [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)на издателе в базе данных публикации. В параметре **@publication** задайте имя публикации, которой принадлежит статья, в параметре **@article** — имя статьи, в параметре **@source_object** — базу данных, на которой опубликован объект, а для одного из следующих параметров задайте значение **SQL** .  
+1.  Выполните процедуру [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)на издателе в базе данных публикации. В параметре **\@publication** задайте имя публикации, которой принадлежит статья, в параметре **\@article** — имя статьи, в параметре **\@source_object** — базу данных, на которой опубликован объект, а для одного из следующих параметров задайте значение **SQL**.  
   
-    -   **@ins_cmd** — управляет репликацией команд [INSERT](../../../t-sql/statements/insert-transact-sql.md) .  
+    -   **\@ins_cmd** — управляет репликацией команд [INSERT](../../../t-sql/statements/insert-transact-sql.md).  
   
-    -   **@upd_cmd** — управляет репликацией команд [UPDATE](../../../t-sql/queries/update-transact-sql.md) .  
+    -   **\@upd_cmd** — управляет репликацией команд [UPDATE](../../../t-sql/queries/update-transact-sql.md).  
   
-    -   **@del_cmd** — управляет репликацией команд [DELETE](../../../t-sql/statements/delete-transact-sql.md) .  
+    -   **\@del_cmd** — управляет репликацией команд [DELETE](../../../t-sql/statements/delete-transact-sql.md).  
   
     > [!NOTE]  
     >  При указании значения **SQL** для одного из перечисленных выше параметров репликация этого типа на подписчик будет производиться соответствующими командами [!INCLUDE[tsql](../../../includes/tsql-md.md)] .  
@@ -102,13 +103,13 @@ ms.locfileid: "68073494"
   
 #### <a name="to-create-an-article-that-does-not-propagate-data-changes"></a>Создание статьи, не распространяющей изменения данных  
   
-1.  Выполните процедуру [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)на издателе в базе данных публикации. В параметре **@publication** задайте имя публикации, которой принадлежит статья, в параметре **@article** — имя статьи, в параметре **@source_object** — базу данных, на которой опубликован объект, а для одного из следующих параметров задайте значение **NONE** .  
+1.  Выполните процедуру [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)на издателе в базе данных публикации. В параметре **\@publication** укажите имя публикации, которой принадлежит статья, в параметре **\@article** — имя статьи, в параметре **\@source_object** — базу данных, на которой опубликован объект, а для одного из следующих параметров задайте значение **NONE**.  
   
-    -   **@ins_cmd** — управляет репликацией команд [INSERT](../../../t-sql/statements/insert-transact-sql.md) .  
+    -   **\@ins_cmd** — управляет репликацией команд [INSERT](../../../t-sql/statements/insert-transact-sql.md).  
   
-    -   **@upd_cmd** — управляет репликацией команд [UPDATE](../../../t-sql/queries/update-transact-sql.md) .  
+    -   **\@upd_cmd** — управляет репликацией команд [UPDATE](../../../t-sql/queries/update-transact-sql.md).  
   
-    -   **@del_cmd** — управляет репликацией команд [DELETE](../../../t-sql/statements/delete-transact-sql.md) .  
+    -   **\@del_cmd** — управляет репликацией команд [DELETE](../../../t-sql/statements/delete-transact-sql.md).  
   
     > [!NOTE]  
     >  При указании значения **NONE** для одного из перечисленных выше параметров репликация команд указанного на подписчик производиться не будет.  
@@ -117,13 +118,13 @@ ms.locfileid: "68073494"
   
 #### <a name="to-create-an-article-with-user-modified-custom-stored-procedures"></a>Создание статьи с изменяемыми пользовательскими хранимыми процедурами  
   
-1.  Выполните процедуру [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)на издателе в базе данных публикации. В параметре **@publication** задайте имя публикации, которой принадлежит статья, в параметре **@article** — имя статьи, в параметре **@source_object** — базу данных, на которой опубликован объект, а в параметре **@schema_option** задайте битовую маску, содержащую значение **0x02** (для включения автоматического режима создания пользовательской хранимой процедуры), и хотя бы один из следующих параметров.  
+1.  Выполните процедуру [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)на издателе в базе данных публикации. В параметре **\@publication** задайте имя публикации, которой принадлежит статья, в параметре **\@article** — имя статьи, в параметре **\@source_object** — базу данных, на которой опубликован объект, а в параметре **\@schema_option** задайте битовую маску, содержащую значение **0x02** (для включения автоматического режима создания пользовательской хранимой процедуры), и хотя бы один из следующих параметров.  
   
-    -   **@ins_cmd** — укажите значение **CALL sp_MSins_* имя_статьи***, где ***имя_статьи*** — значение, заданное для **@article** .  
+    -   **\@ins_cmd** — укажите значение **CALL sp_MSins_* имя_статьи***, где ***имя_статьи*** — значение, заданное в параметре **\@article**.  
   
-    -   **@del_cmd** — укажите значение **CALL sp_MSdel_*имя_статьи*** или **XCALL sp_MSdel_* имя_статьи***, где ***имя_статьи*** — значение, заданное для **@article** .  
+    -   **\@del_cmd** — укажите значение **CALL sp_MSdel_*имя_статьи*** или **XCALL sp_MSdel_* имя_статьи***, где ***имя_статьи*** — значение, заданное в параметре **\@article**.  
   
-    -   **@upd_cmd** — укажите значение **SCALL sp_MSupd_* имя_статьи***, **CALL sp_MSupd_* имя_статьи***, **XCALL sp_MSupd_* имя_статьи*** или **MCALL sp_MSupd_* имя_статьи***, где ***имя_статьи*** — значение, заданное для **@article** .  
+    -   **\@upd_cmd** — укажите значение **SCALL sp_MSupd_* имя_статьи***, **CALL sp_MSupd_* имя_статьи***, **XCALL sp_MSupd_* имя_статьи*** или **MCALL sp_MSupd_* имя_статьи***, где ***имя_статьи*** — значение, заданное в параметре **\@article**.  
   
     > [!NOTE]  
     >  Для каждой из приведенных выше команд в качестве параметров можно указать собственное имя хранимых процедур, создаваемых репликацией.  
@@ -137,13 +138,13 @@ ms.locfileid: "68073494"
   
 #### <a name="to-create-an-article-with-custom-scripting-in-the-custom-stored-procedures-to-propagate-data-changes"></a>Создание статьи, использующей пользовательские скрипты в пользовательских хранимых процедурах для распространения изменений данных  
   
-1.  Выполните процедуру [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)на издателе в базе данных публикации. В параметре **@publication** задайте имя публикации, которой принадлежит статья, в параметре **@article** — имя статьи, в параметре **@source_object** — базу данных, на которой опубликован объект, а в параметре **@schema_option** задайте битовую маску, содержащую значение **0x02** (для включения автоматического режима создания пользовательской хранимой процедуры), и хотя бы один из следующих параметров.  
+1.  Выполните процедуру [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)на издателе в базе данных публикации. В параметре **\@publication** задайте имя публикации, которой принадлежит статья, в параметре **\@article** — имя статьи, в параметре **\@source_object** — базу данных, на которой опубликован объект, а в параметре **\@schema_option** задайте битовую маску, содержащую значение **0x02** (для включения автоматического режима создания пользовательской хранимой процедуры), и хотя бы один из следующих параметров.  
   
-    -   **@ins_cmd** — укажите значение **CALL sp_MSins_* имя_статьи***, где ***имя_статьи*** — значение, заданное для **@article** .  
+    -   **\@ins_cmd** — укажите значение **CALL sp_MSins_* имя_статьи***, где ***имя_статьи*** — значение, заданное в параметре **\@article**.  
   
-    -   **@del_cmd** — укажите значение **CALL sp_MSdel_*имя_статьи*** или **XCALL sp_MSdel_* имя_статьи***, где ***имя_статьи*** — значение, заданное для **@article** .  
+    -   **\@del_cmd** — укажите значение **CALL sp_MSdel_*имя_статьи*** или **XCALL sp_MSdel_* имя_статьи***, где ***имя_статьи*** — значение, заданное в параметре **\@article**.  
   
-    -   **@upd_cmd** — укажите значение **SCALL sp_MSupd_* имя_статьи***, **CALL sp_MSupd_* имя_статьи***, **XCALL sp_MSupd_* имя_статьи***, **MCALL sp_MSupd_* имя_статьи***, где ***имя_статьи*** — значение, заданное для **@article** .  
+    -   **\@upd_cmd** — задайте значения параметров **SCALL sp_MSupd_* имя_статьи***, **CALL sp_MSupd_* имя_статьи***, **XCALL sp_MSupd_* имя_статьи*** или **MCALL sp_MSupd_* имя_статьи***, где ***имя_статьи*** — значение параметра **\@article**.  
   
     > [!NOTE]  
     >  Для каждой из приведенных выше команд в качестве параметров можно указать собственное имя хранимых процедур, создаваемых репликацией.  
@@ -157,7 +158,7 @@ ms.locfileid: "68073494"
   
 #### <a name="to-change-the-method-of-propagating-changes-for-an-existing-article"></a>Изменение метода распространения изменений для существующей статьи  
   
-1.  Выполните процедуру [sp_changearticle](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)на издателе в базе данных публикации. Задайте значения параметров **@publication** , **@article** , укажите в параметре **@property**, **ins_cmd**или **upd_cmd** или **@property** , а в параметре **@value** .  
+1.  Выполните процедуру [sp_changearticle](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)на издателе в базе данных публикации. Задайте значения параметров **\@publication** и **\@article**, укажите значение **ins_cmd**, **upd_cmd** или **del_cmd** в параметре **\@property**, а в параметре **\@value** — необходимый метод распространения.  
   
 2.  Повторите шаг 1 для каждого изменяемого метода распространения.  
   

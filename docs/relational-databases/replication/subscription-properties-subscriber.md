@@ -13,16 +13,16 @@ f1_keywords:
 ms.assetid: db2be511-c76e-4f21-8be4-6a8c60a50d30
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bc85c55e86ee026a59c20539eb5c761d0cf66fd4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 7793c64a6c7d5dc404c24f502a45067d2e95fcca
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68129828"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769463"
 ---
 # <a name="sql-server-replication-subscription-properties-dialog-box"></a>Репликация SQL Server: диалоговое окно "Свойства подписки" 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 ### <a name="publisher-properties"></a>Свойства издателя
 С помощью диалогового окна **Свойства подписки** на издателе можно просмотреть и установить свойства принудительных подписок. Можно также просматривать некоторые свойства подписок по запросу, но в диалоговом окне **Свойства подписки** на подписчике отображаются дополнительные свойства и их можно изменять.  
@@ -46,7 +46,8 @@ ms.locfileid: "68129828"
  Если параметр отображается в режиме только для чтения, он может быть установлен только при создании подписки. Если необходимо установить параметры, недоступные в мастере создания подписок, создайте подписку с хранимыми процедурами. Дополнительные сведения см. в разделах [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md) и [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md).  
   
 > [!NOTE]  
->  Если для подписки еще не было создано задание агента распространителя или агента слияния, то некоторые свойства подписки не будут отображены. Чтобы создать задание агента для подписки по запросу, выполните процедуру [sp_addpullsubscription_agent (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md) (для подписки на публикацию транзакций или моментальных снимков) или хранимую процедуру [sp_addmergepullsubscription_agent (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md) (для подписки на публикацию слиянием).  
+>  - Если для подписки еще не было создано задание агента распространителя или агента слияния, то некоторые свойства подписки не будут отображены. Чтобы создать задание агента для подписки по запросу, выполните процедуру [sp_addpullsubscription_agent (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md) (для подписки на публикацию транзакций или моментальных снимков) или хранимую процедуру [sp_addmergepullsubscription_agent (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md) (для подписки на публикацию слиянием).  
+> - Управляемый экземпляр базы данных SQL Microsoft Azure может быть издателем, распространителем и подписчиком для репликации моментальных снимков и транзакций. Одна база данных SQL Microsoft Azure и базы данных в составе пула могут быть только принудительными подписчиками для репликации моментальных снимков и транзакций. Дополнительные сведения см. в разделе [Transactional replication with Azure SQL Database](/azure/sql-database/sql-database-managed-instance-transactional-replication). 
   
 ## <a name="publisher-options-for-all-subscriptions"></a>Параметры издателя для всех подписок  
  **безопасность**  

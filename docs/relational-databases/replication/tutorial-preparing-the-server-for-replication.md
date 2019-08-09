@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ce30a095-2975-4387-9377-94a461ac78ee
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1900d3d447dd7974fb9afbbd83f17ca375bfbe81
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 212782574ffa5cc603a8b7c28a9ced3d34d89a50
+ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67895435"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68742945"
 ---
 # <a name="tutorial-prepare-sql-server-for-replication-publisher-distributor-subscriber"></a>Руководство. Подготовка SQL Server к репликации (издатель, распространитель, подписчик)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -212,7 +212,7 @@ ms.locfileid: "67895435"
 >[!NOTE]
 > Если признаков запуска агента SQL не наблюдается, щелкните правой кнопкой мыши агент SQL Server в среде SSMS и выберите пункт **Обновить**. Если агент по-прежнему остановлен, запустите его вручную с помощью диспетчера конфигурации SQL Server.    
   
-### <a name="set-database-permissions-at-the-publisher"></a>Установка разрешений базы данных на издателе  
+## <a name="set-database-permissions"></a>Установка разрешений базы данных  
   
 1. В среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] разверните узел **Безопасность**, щелкните правой кнопкой мыши **Имена входа**, а затем выберите пункт **Создать имя входа**:  
 
@@ -233,6 +233,8 @@ ms.locfileid: "67895435"
 5. Повторите шаги с 1 по 4, чтобы создать имена входа для других локальных учетных записей (repl_distribution, repl_logreader и repl_merge). Эти имена входа должны быть сопоставлены с пользователями, которые являются членами предопределенной роли базы данных **db_owner** в базах данных **распространителя** и **AdventureWorks**.  
 
    ![Просмотр всех четырех учетных записей в обозревателе объектов](media/tutorial-preparing-the-server-for-replication/usersinssms.png)
+   
+ 6. Повторите шаги 1–4 на подписчике для агента распространения и агента слияния, изменив имя компьютера на имя подписчика. 
   
   
 Дополнительные сведения см. в разделе:

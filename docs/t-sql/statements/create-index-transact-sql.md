@@ -54,12 +54,12 @@ ms.assetid: d2297805-412b-47b5-aeeb-53388349a5b9
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c7808af6be2759b618ec0c57fb9ebb6e97f3b3a7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ae776b53016995fdcfd0ccfdb0c242b19f88addc
+ms.sourcegitcommit: 97e94b76f9f48d161798afcf89a8c2ac0f09c584
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68048172"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68661455"
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX (Transact-SQL)
 
@@ -702,7 +702,7 @@ INSERT INTO t1 VALUES (1, 0);
 - Нельзя задавать параметры с помощью нового синтаксиса и совместимого старого в одной и той же инструкции. Например, инструкция с WITH (**DROP_EXISTING, ONLINE = ON**) вызовет ошибку.
 - При создании XML-индекса параметры должны указываться с помощью аргумента WITH ( **_option_name_= ON | OFF**).
 
-## <a name="dropexisting-clause"></a>Предложение DROP_EXISTING
+## <a name="drop_existing-clause"></a>Предложение DROP_EXISTING
 Предложение DROP_EXISTING может использоваться для перестроения индекса, добавления или удаления столбцов, изменения параметров, изменения порядка сортировки столбцов, а также изменения схемы секционирования или файловой группы.
 
 Если индекс принудительно налагает ограничение PRIMARY KEY или UNIQUE и его определение никак не меняется, он удаляется и создается вновь с сохранением существующих ограничений. Но если изменить определение индекса, инструкция вызовет ошибку. Чтобы изменить ограничение PRIMARY KEY или UNIQUE, удалите ограничение и добавьте ограничение вместе с новым определением.
@@ -829,7 +829,7 @@ CREATE NONCLUSTERED INDEX IX_SalesPerson_SalesQuota_SalesYTD ON Sales.SalesPerso
 ```
 
 ### <a name="c-create-an-index-on-a-table-in-another-database"></a>В. Создание индекса в таблице из другой базы данных
-В следующем примере создается некластеризованный индекс для столбца `VendorID` таблицы `ProductVendor` в базе данных `Purchasing`.
+В следующем примере создается кластеризованный индекс для столбца `VendorID` таблицы `ProductVendor` в базе данных `Purchasing`.
 
 ```sql
 CREATE CLUSTERED INDEX IX_ProductVendor_VendorID ON Purchasing..ProductVendor (VendorID);
@@ -873,7 +873,7 @@ Server: Msg 2601, Level 14, State 1, Line 1
 Cannot insert duplicate key row in object 'UnitMeasure' with unique index 'AK_UnitMeasure_Name'. The statement has been terminated.
 ```
 
-### <a name="f-use-the-ignoredupkey-option"></a>Е. Использование параметра IGNORE_DUP_KEY
+### <a name="f-use-the-ignore_dup_key-option"></a>Е. Использование параметра IGNORE_DUP_KEY
 В следующем примере демонстрируется влияние параметра `IGNORE_DUP_KEY` со значениями `ON` и `OFF` на операцию вставки нескольких строк во временную таблицу. В таблицу `#Test` вставляется одна строка, которая намеренно приведет к появлению повторяющихся значений при выполнении второй многострочной операции вставки `INSERT`. Счетчик строк таблицы возвращает количество вставленных строк.
 
 ```sql
@@ -934,7 +934,7 @@ Number of rows
 
 Обратите внимание, что ни одна из строк таблицы `Production.UnitMeasure` не была вставлена, хотя ограничение индекса `UNIQUE` было нарушено только одной строкой.
 
-### <a name="g-using-dropexisting-to-drop-and-re-create-an-index"></a>Ж. Использование предложения DROP_EXISTING для удаления и повторного создания индекса
+### <a name="g-using-drop_existing-to-drop-and-re-create-an-index"></a>Ж. Использование предложения DROP_EXISTING для удаления и повторного создания индекса
 В следующем примере удаляется и создается повторно существующий индекс для столбца `ProductID` таблицы `Production.WorkOrder` в базе данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] с использованием параметра `DROP_EXISTING`. Указываются также параметры `FILLFACTOR` и `PAD_INDEX`.
 
 ```sql

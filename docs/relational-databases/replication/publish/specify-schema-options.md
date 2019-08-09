@@ -1,5 +1,5 @@
 ---
-title: Указание параметров схемы | Документация Майкрософт
+title: Настройка параметров схемы для репликации SQL Server | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 1f85a479-bd6e-4023-abf7-7435a7e5b567
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f3151d611a67fb6b3c46e49492a49152a1e08bf6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 516434ca2bb44701b432cb095d252f16278134a0
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68113900"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68764096"
 ---
-# <a name="specify-schema-options"></a>Указание параметров схемы
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="specify-schema-options-for-sql-server-replication"></a>Настройка параметров схемы для репликации SQL Server
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   В этом разделе описывается указание параметров схемы в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../../includes/tsql-md.md)]. При публикации таблицы или представления можно управлять параметрами создания объектов, применяемых к опубликованному объекту. Эти параметры можно задать при создании статьи, а также изменить их позднее. Если эти параметры не заданы в явном виде, то применяется набор параметров по умолчанию.  
   
 > [!NOTE]  

@@ -1,7 +1,7 @@
 ---
 title: Параметры запуска службы ядра СУБД | Документы Майкрософт
 ms.custom: ''
-ms.date: 05/31/2019
+ms.date: 08/01/2019
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: d373298b-f6cf-458a-849d-7083ecb54ef5
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 53c7ea706f9e886f147532bfbd3dd148a6ca7d1b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 91f6f88255fb45e101484637f1db823660796475
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68011969"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68763230"
 ---
 # <a name="database-engine-service-startup-options"></a>Параметры запуска службы Database Engine
 
@@ -82,8 +82,9 @@ ms.locfileid: "68011969"
  Возможно, некоторые параметры потребуется использовать при каждом запуске [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Если, например, требуется запуск с флагом трассировки, лучше всего задать параметры запуска с помощью диспетчера конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Это средство сохраняет параметры запуска в разделе реестра, после чего [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] всегда запускается с этими параметрами.  
   
 ## <a name="compatibility-support"></a>Поддержка совместимости  
- Параметр **-h**  не поддерживается в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Этот параметр использовался в более ранних версиях 32-битных экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для резервирования виртуального адресного пространства для метаданных памяти с «горячей» заменой при включенных расширениях AWE. Дополнительные сведения см. в разделе [Неподдерживаемые функции SQL Server 2016](https://msdn.microsoft.com/library/0678bfbc-5d3f-44f4-89c0-13e8e52404da).  
-  
+
+Параметры, которые были удалены из предыдущих выпусков, см. в разделе [sqlservr Application](../../tools/sqlservr-application.md#compatibility-support).
+
 ## <a name="related-tasks"></a>Связанные задачи  
 [Настройка параметра конфигураци и сервера scan for startup procs](../../database-engine/configure-windows/configure-the-scan-for-startup-procs-server-configuration-option.md)  
 [Запуск, остановка, приостановка, возобновление и перезапуск ядра СУБД, агента SQL Server или службы обозревателя SQL Server](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)

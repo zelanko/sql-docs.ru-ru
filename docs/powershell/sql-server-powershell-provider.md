@@ -1,7 +1,5 @@
 ---
 title: Поставщик SQL Server PowerShell | Документация Майкрософт
-ms.custom: ''
-ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: scripting
@@ -16,14 +14,17 @@ helpviewer_keywords:
 ms.assetid: b97acc43-fcd2-4ae5-b218-e183bab916f9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b6358cc9bce9048dfd0554b595ba7c871fbffdd8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: ''
+ms.date: 07/31/2019
+ms.openlocfilehash: 1017620181ac127576f02fc792e3c4b85213a6d9
+ms.sourcegitcommit: 0d89bcaebdf87db3bd26db2ca263be9c671b0220
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67912223"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68731118"
 ---
 # <a name="sql-server-powershell-provider"></a>SQL Server PowerShell, поставщик
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 Поставщик [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] для Windows PowerShell отображает иерархию объектов [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] в виде путей, аналогичных путям файловой системы. Можно определить расположение объекта с помощью путей, а затем использовать методы, доступные в моделях объектов [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] SMO, для выполнения действия с объектами.  
@@ -33,12 +34,13 @@ ms.locfileid: "67912223"
 > Предыдущие версии модуля **SqlServer** *входили* в состав среды SQL Server Management Studio (SSMS), но только с SSMS версий 16.x. Для работы PowerShell с SSMS 17.0 и более поздних версий необходимо установить модуль **SqlServer** из коллекции PowerShell.
 > Сведения об установке модуля **SqlServer** см. в статье [Установка компонентов SQL Server PowerShell](download-sql-server-ps-module.md).
 
+## <a name="benefits-of-the-sql-server-powershell-provider"></a>Преимущества поставщика SQL Server PowerShell
 
-## <a name="benefits-of-the-sql-server-powershell-provider"></a>Преимущества поставщика SQL Server PowerShell  
- Пути, реализуемые поставщиком [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , позволяют легко просматривать все объекты в экземпляре SQL Server в интерактивном режиме. Предусмотрена возможность переходить по этим путям с использованием псевдонимов Windows PowerShell по аналогии с переходом по путям файловой системы с помощью команд.  
+Пути, реализуемые поставщиком [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , позволяют легко просматривать все объекты в экземпляре SQL Server в интерактивном режиме. Предусмотрена возможность переходить по этим путям с использованием псевдонимов Windows PowerShell по аналогии с переходом по путям файловой системы с помощью команд.  
   
-## <a name="the-sql-server-powershell-hierarchy"></a>Иерархия SQL Server в PowerShell  
- Продукты, в которых модели данных или модели объектов можно представить в иерархическом виде, используют для представления таких иерархий поставщики Windows PowerShell. Иерархия отображается при помощи диска и структуры пути, похожей на ту, которая используется в файловой системе Windows.  
+## <a name="the-sql-server-powershell-hierarchy"></a>Иерархия SQL Server в PowerShell
+
+Продукты, в которых модели данных или модели объектов можно представить в иерархическом виде, используют для представления таких иерархий поставщики Windows PowerShell. Иерархия отображается при помощи диска и структуры пути, похожей на ту, которая используется в файловой системе Windows.  
   
  Каждый поставщик Windows PowerShell реализует один или несколько дисков. Каждый диск является корневым узлом в иерархии связанных объектов. В поставщике [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell реализован диск «SQLSERVER:». Поставщик также определяет набор основных папок для диска SQLSERVER:. Каждая папка и вложенные в нее папки представляют набор объектов, к которым можно получить доступ с помощью модели управляющих объектов [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Если выделена вложенная папка в пути, начинающемся с одной из этих папок, можно использовать методы из связанной объектной модели для выполнения действий с объектом, который представлен вложенной папкой. Папки Windows PowerShell, реализуемые поставщиком [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], перечислены в следующей таблице.  
   
@@ -51,6 +53,8 @@ ms.locfileid: "67912223"
 |`SQLSERVER:\DAC`|<xref:Microsoft.SqlServer.Management.DAC>|Объекты приложения уровня данных, такие как пакеты DAC, и операции, такие как развертывание DAC.|  
 |`SQLSERVER:\DataCollection`|<xref:Microsoft.SqlServer.Management.Collector>|Объекты сборщика данных, такие как наборы элементов сбора и хранилища конфигураций.|  
 |`SQLSERVER:\SSIS`|<xref:Microsoft.SqlServer.Management.IntegrationServices>|[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , как проекты, пакеты и среды.|  
+|`SQLSERVER:\XEvent`|<xref:Microsoft.SqlServer.Management.XEvent>|Расширенные события SQL Server|
+|`SQLSERVER:\DatabaseXEvent`|[Microsoft.SqlServer.Management.XEventDbScoped](https://docs.microsoft.com/dotnet/api/microsoft.sqlserver.management.xeventdbscoped)|Расширенные события SQL Server|
 |`SQLSERVER:\SQLAS`|<xref:Microsoft.AnalysisServices>|[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , такие как кубы, агрегаты и измерения.|  
   
  Например, папку SQLSERVER:\SQL можно использовать, чтобы начинать пути, которые могут представлять любой объект, поддерживаемый объектной моделью SMO. Начальная область пути SQLSERVER:\SQL — SQLSERVER:\SQL\\*ComputerName*\\*InstanceName*. Узлы после имени экземпляра поочередно указывают коллекции объектов (такие как *Базы данных* или *Представления*) и имена объектов (наподобие AdventureWorks2012). Схемы не представляются в качестве классов объектов. Если указывается узел для объекта верхнего уровня в схеме, такого как таблица или представление, необходимо указать имя объекта в формате *ИмяСхемы.ИмяОбъекта*.  
@@ -77,9 +81,8 @@ SQLSERVER:\SQL\localhost\DEFAULT\Databases\AdventureWorks2012\Tables\Purchasing.
 |Описано, как использовать командлеты Windows PowerShell для перехода по узлам пути и получения в каждом узле списка объектов этого узла.|[Перемещение путей SQL Server PowerShell](navigate-sql-server-powershell-paths.md)|  
 |Описано, как использовать методы и свойства объектов SMO для получения отчета и выполнения работы над объектом, представленным узлом пути. Кроме того, описано, как получить список методов и свойств объектов SMO для этого узла.|[Работа с  путями SQL Server PowerShell](work-with-sql-server-powershell-paths.md)|  
 |Описывает, как преобразовать универсальное имя ресурса объекта SMO в путь поставщика SQL Server.|[Преобразование универсальных имен ресурса в пути поставщика SQL Server](https://docs.microsoft.com/powershell/module/sqlserver/Convert-UrnToPath)|  
-|Описано, как открывать соединения проверки подлинности SQL Server с использованием поставщика [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . По умолчанию поставщик использует соединения проверки подлинности Windows, установленные с помощью учетных данных той учетной записи Windows, которая используется в сеансе Windows PowerShell.|[Управление проверкой подлинности в компонент Database Engine PowerShell](manage-authentication-in-database-engine-powershell.md)|  
+|Описано, как открывать соединения проверки подлинности SQL Server с использованием поставщика [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . По умолчанию поставщик использует соединения проверки подлинности Windows, установленные с помощью учетных данных той учетной записи Windows, которая используется в сеансе Windows PowerShell.|[Управление проверкой подлинности в PowerShell ядра СУБД ](manage-authentication-in-database-engine-powershell.md)|  
   
-## <a name="see-also"></a>См. также:  
- [SQL Server PowerShell](sql-server-powershell.md)  
-  
-  
+## <a name="next-steps"></a>Следующие шаги
+
+[SQL Server PowerShell](sql-server-powershell.md)

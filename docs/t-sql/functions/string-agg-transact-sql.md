@@ -16,14 +16,14 @@ ms.assetid: 8860ef3f-142f-4cca-aa64-87a123e91206
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3af59410ed151e54a5cc7ea7a546f8979a318693
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1d7ef8b52e3ee31e688e51454a72c0f359bcb68b
+ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67906874"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68632126"
 ---
-# <a name="stringagg-transact-sql"></a>STRING_AGG (Transact-SQL)
+# <a name="string_agg-transact-sql"></a>STRING_AGG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-asdw-xxx-md.md)]
 
 Сцепляет значения строковых выражений, помещая между ними значения-разделители. В конце строки разделитель не добавляется.
@@ -95,6 +95,7 @@ FROM Person.Person;
 |Syed <br />Catherine <br />Kim <br />Kim <br />Kim <br />Hazem <br />... | 
 
 Значения `NULL`, найденные в ячейках `name`, не возвращаются в результатах.   
+
 > [!NOTE]  
 >  Если в редакторе запросов Management Studio используется режим **В виде сетки**, символы возврата каретки не применяются. Чтобы результирующий набор отображался правильно, перейдите в режим **В виде текста**.   
 
@@ -127,16 +128,17 @@ FROM Person.Person;
 |Ken Sánchez (Feb 8 2003 12:00AM) <br />Terri Duffy (Feb 24 2002 12:00AM) <br />Roberto Tamburello (Dec 5 2001 12:00AM) <br />Rob Walters (Dec 29 2001 12:00AM) <br />... |
 
 > [!NOTE]  
->  Если в редакторе запросов Management Studio используется режим **В виде сетки**, символы возврата каретки не применяются. Чтобы результирующий набор отображался правильно, перейдите в режим **В виде текста**.   
+> Если в редакторе запросов Management Studio используется режим **В виде сетки**, символы возврата каретки не применяются. Чтобы результирующий набор отображался правильно, перейдите в режим **В виде текста**.
 
-### <a name="d-return-news-articles-with-related-tags"></a>Г. Получение новых статей со связанными тегами 
+### <a name="d-return-news-articles-with-related-tags"></a>Г. Получение новых статей со связанными тегами
+
 Статьи и их теги разнесены по разным таблицам. Разработчику необходимо получить одну строку для каждой статьи со всеми связанными тегами. Используется следующий запрос:
 
 ```sql
-SELECT a.articleId, title, STRING_AGG (tag, ',') as tags 
-FROM dbo.Article AS a       
-LEFT JOIN dbo.ArticleTag AS t 
-    ON a.ArticleId = t.ArticleId 
+SELECT a.articleId, title, STRING_AGG (tag, ',') as tags
+FROM dbo.Article AS a
+LEFT JOIN dbo.ArticleTag AS t
+    ON a.ArticleId = t.ArticleId
 GROUP BY a.articleId, title;
 ```
 
@@ -144,9 +146,12 @@ GROUP BY a.articleId, title;
 
 |articleId |title |tags |
 |--- |--- |--- |
-|172 |Опросы предвещают напряженную борьбу на выборах |политика,опросы,муниципалитет | 
+|172 |Опросы предвещают напряженную борьбу на выборах |политика,опросы,муниципалитет |
 |176 |Новая автострада разгрузит транспортные потоки |NULL |
-|177 |Собаки по-прежнему популярнее кошек |опросы,животные| 
+|177 |Собаки по-прежнему популярнее кошек |опросы,животные|
+
+> [!NOTE]
+> Предложение `GROUP BY` является обязательным, если функция `STRING_AGG` не является единственным элементом в списке `SELECT`.
 
 ### <a name="e-generate-list-of-emails-per-towns"></a>Д. Формирование списка адресов электронной почты по городам
 

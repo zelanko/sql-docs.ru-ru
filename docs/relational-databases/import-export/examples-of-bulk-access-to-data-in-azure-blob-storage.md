@@ -16,15 +16,15 @@ ms.assetid: f7d85db3-7a93-400e-87af-f56247319ecd
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7bbf0e39b5187f91495f36624ca133d02b87f764
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c8ae6afaf55bbd146fc2fbd0984d5b430b1653f3
+ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68035785"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68742868"
 ---
 # <a name="examples-of-bulk-access-to-data-in-azure-blob-storage"></a>Примеры массового доступа к данным в хранилище BLOB-объектов Azure
-[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
 С помощью инструкции `BULK INSERT` и `OPENROWSET` можно непосредственно получить доступ к файлу в хранилище BLOB-объектов Azure. В следующих примерах используются данные из CSV-файла (файл данных с разделителями-запятыми) `inv-2017-01-19.csv`, который хранится в контейнере `Week3` в учетной записи хранения `newinvoices`. Вы можете использовать путь к формату файла, но он не указан в этих примерах. 
 
@@ -32,7 +32,6 @@ ms.locfileid: "68035785"
 
 > [!IMPORTANT]
 >  Все пути к контейнеру и к файлам в большом двоичном объекте являются `CASE SENSITIVE`. Если они не верны, может быть возвращена такая ошибка: "Массовая загрузка невозможна. Файл "file.csv" не существует или у вас нет прав на доступ к нему".
-> "
 
 
 ## <a name="create-the-credential"></a>Создание учетных данных   
@@ -42,23 +41,26 @@ ms.locfileid: "68035785"
 > [!IMPORTANT]
 >  Внешний источник данных нужно создать с учетными данными области базы данных, использующими удостоверение `SHARED ACCESS SIGNATURE`. Для создания подписанного URL-адреса для учетной записи смотрите свойство **Подписанный URL-адрес** на странице свойств учетной записи хранения на портале Azure. Дополнительные сведения о подписанных URL-адресах см. в [этой статье](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1). Дополнительные сведения см. в статье [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)](../../t-sql/statements/create-database-scoped-credential-transact-sql.md).  
  
-Создайте учетные данные области базы данных, используя параметр `IDENTITY` со значением `SHARED ACCESS SIGNATURE`. Используйте секрет с вашего портала Azure. Пример:  
+Создайте учетные данные области базы данных, используя параметр `IDENTITY` со значением `SHARED ACCESS SIGNATURE`. Используйте маркер SAS, созданный для учетной записи хранения больших двоичных объектов. Убедитесь, что маркер SAS не начинается с `?`, у вас есть по крайней мере разрешение на чтение для объекта, который необходимо загрузить, и срок действия не истек (все даты указаны в формате UTC). 
+
+Пример:  
 
 ```sql
 CREATE DATABASE SCOPED CREDENTIAL UploadInvoices  
 WITH IDENTITY = 'SHARED ACCESS SIGNATURE',
-SECRET = 'QLYMgmSXMklt%2FI1U6DcVrQixnlU5Sgbtk1qDRakUBGs%3D';
+SECRET = 'sv=2018-03-28&ss=b&srt=sco&sp=rwdlac&se=2019-08-31T02:25:19Z&st=2019-07-30T18:25:19Z&spr=https&sig=KS51p%2BVnfUtLjMZtUTW1siyuyd2nlx294tL0mnmFsOk%3D';
 ```
 
 
 ## <a name="accessing-data-in-a-csv-file-referencing-an-azure-blob-storage-location"></a>Получение доступа к данным в CSV-файле, ссылающегося на расположение хранилища BLOB-объектов Azure   
-В следующем примере используется внешний источник данных, указывающий на учетную запись Azure `newinvoices`.   
+В следующем примере используется внешний источник данных, указывающий на учетную запись Azure `newinvoices`.  
+
 ```sql
 CREATE EXTERNAL DATA SOURCE MyAzureInvoices
     WITH  (
         TYPE = BLOB_STORAGE,
         LOCATION = 'https://newinvoices.blob.core.windows.net', 
-        CREDENTIAL = UploadInvoices  
+        CREDENTIAL = 'UploadInvoices';
     );
 ```   
 
@@ -67,7 +69,7 @@ CREATE EXTERNAL DATA SOURCE MyAzureInvoices
 SELECT * FROM OPENROWSET(
    BULK  'week3/inv-2017-01-19.csv',
    DATA_SOURCE = 'MyAzureInvoices',
-   SINGLE_CLOB) AS DataFile;
+   FORMAT = 'CSV') AS DataFile;
 ```
 
 Выполнив инструкцию `BULK INSERT`, используйте контейнер и описание файла:
@@ -96,7 +98,7 @@ CREATE EXTERNAL DATA SOURCE MyAzureInvoicesContainer
 SELECT * FROM OPENROWSET(
    BULK  'inv-2017-01-19.csv',
    DATA_SOURCE = 'MyAzureInvoicesContainer',
-   SINGLE_CLOB) AS DataFile;
+   FORMAT = 'CSV') AS DataFile;
 ```   
 
 Не используйте имя контейнера в описании, если применяется `BULK INSERT`: 

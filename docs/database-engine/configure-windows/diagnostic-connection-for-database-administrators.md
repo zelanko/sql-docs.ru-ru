@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 993e0820-17f2-4c43-880c-d38290bf7abc
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: c912c17ce6914a2de2425ad61e27f49ef7cab86c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ee6c63623cc5b88e0cbb9c4a3edd7a78e6137d77
+ms.sourcegitcommit: c70a0e2c053c2583311fcfede6ab5f25df364de0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68011876"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68670473"
 ---
 # <a name="diagnostic-connection-for-database-administrators"></a>Диагностическое соединение для администраторов баз данных
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -84,7 +84,7 @@ ms.locfileid: "68011876"
     -   Если в sys.dm_os_tasks нет задач, связанных с данным сеансом, но сеанс остается в sys.dm_exec_sessions после выполнения команды KILL, это означает, что отсутствует доступный рабочий процессор. Чтобы освободить рабочий поток, выберите одну из текущих задач (задача в представлении sys.dm_os_tasks со значением `sessions_id <> NULL`) и остановите связанный с ней сеанс. Заметьте, что остановка одного сеанса может оказаться недостаточной: может потребоваться остановить несколько сеансов.  
   
 ## <a name="dac-port"></a>Порт выделенного административного соединения  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для выделенных административных соединений прослушивает TCP-порт 1434, если он доступен, или TCP-порт, динамически назначаемый при запуске компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Журнал ошибок содержит номер порта, на котором ожидается выделенное административное соединение. По умолчанию, выделенное административное соединение ожидается только на местном порте. Образец кода, активирующего удаленные административные соединения, см. в разделе [Параметр конфигурации сервера "remote admin connections"](../../database-engine/configure-windows/remote-admin-connections-server-configuration-option.md).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для выделенных административных соединений прослушивает TCP-порт 1434, если он доступен, или TCP-порт, динамически назначаемый при запуске компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] . [Журнал ошибок](../../relational-databases/performance/view-the-sql-server-error-log-sql-server-management-studio.md) содержит номер порта, на котором ожидается выделенное административное соединение. По умолчанию, выделенное административное соединение ожидается только на местном порте. Образец кода, активирующего удаленные административные соединения, см. в разделе [Параметр конфигурации сервера "remote admin connections"](../../database-engine/configure-windows/remote-admin-connections-server-configuration-option.md).  
   
  После настройки административного соединения средство прослушивания выделенных административных соединений включается без необходимости перезапуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , и клиент может удаленно подключиться к DAC. Средству прослушивания соединений DAC можно разрешить прием удаленных соединений, даже если [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не отвечает. Для этого можно сначала подключиться к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] локально посредством выделенного административного соединения, а затем выполнить хранимую процедуру sp_configure для приема удаленных соединений.  
   

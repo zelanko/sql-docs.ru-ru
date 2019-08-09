@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 04fd9d95-4624-420f-a3be-1794309b3a47
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: adef2650015edadfe61d331c6358fa85c0099c99
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bfc88ea17f78aaad42d585490a4776db65824d92
+ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014649"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68742930"
 ---
 # <a name="overview-of-always-on-availability-groups-sql-server"></a>Обзор групп доступности AlwaysOn (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -128,7 +128,7 @@ ms.locfileid: "68014649"
   
 -   **Доступ только для чтения к одной или нескольким вторичным репликам (доступные для чтения вторичные реплики)**  
   
-     Любая реплика доступности может быть настроена на получение доступа только для чтения ко своим локальным базам данных (при выполнении вторичной роли), хотя некоторые операции поддерживаются не полностью. Кроме того, если требуется предотвратить выполнение на первичной реплике рабочих нагрузок в режиме только чтения, то при выполнении реплик в первичной роли для них можно настроить доступ только на чтение и запись. Дополнительные сведения см. в статье [Активные вторичные реплики: вторичные реплики для чтения (группы доступности Always On)](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
+     Любая вторичная реплика доступности может быть настроена на получение доступа только для чтения ко своим локальным базам данных, хотя некоторые операции поддерживаются не полностью. Это предотвратит попытки подключения для чтения и записи к вторичной реплике. Кроме того, можно запретить рабочие нагрузки только для чтения на _первичной_ реплике, разрешив доступ только для чтения и записи. Это предотвратит подключение только для чтения к первичной реплике. Дополнительные сведения см. в статье [Активные вторичные реплики: вторичные реплики для чтения (группы доступности Always On)](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
   
      Если в группе доступности имеется прослушиватель группы доступности и одна или несколько доступных для чтения вторичных реплик, то [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] может направлять запросы на установку соединения (с целью считывания данных) к одной из них (*маршрутизация только для чтения*). Дополнительные сведения см. в разделе [Прослушиватели групп доступности, возможность подключения клиентов и отработка отказа приложений (SQL Server)](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md).  
   

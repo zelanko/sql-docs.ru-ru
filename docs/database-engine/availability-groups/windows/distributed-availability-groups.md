@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e7fadeded7c979631cabc763d1be8d037b5913d9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2670a5967c5bb3921cb23d79670eeefe859cb5a0
+ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67968298"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68702742"
 ---
 # <a name="distributed-availability-groups"></a>Распределенные группы доступности
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -235,7 +235,7 @@ GO
 
 ![Пример выходных данных для предыдущего запроса](./media/distributed-availability-group/dag-11-example-output-of-query-above.png)
 
-### <a name="dmv-to-list-distribtued-ag-health"></a>Динамическое административное представление для просмотра работоспособности распределенных групп доступности
+### <a name="dmv-to-list-distributed-ag-health"></a>Динамическое административное представление для просмотра работоспособности распределенных групп доступности
 
 Любое состояние, отображаемое на панели мониторинга и в других областях SQL Server Management Studio, относится только к локальной синхронизации в этой группе доступности. Для отображения сведений о работоспособности распределенной группы доступности отправьте запрос в динамических административных представлениях. В следующем примере предыдущий запрос расширяется и уточняется.
 

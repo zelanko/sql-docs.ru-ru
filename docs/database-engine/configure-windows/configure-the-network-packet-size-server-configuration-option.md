@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 236985bf-fc4a-4a57-98f7-a71ef977fd7b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: eb0cde5c787e721e99bfa41caa37c7b793141385
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: be854d2002692611289d401b4ad98cb63cf4a27b
+ms.sourcegitcommit: 0d89bcaebdf87db3bd26db2ca263be9c671b0220
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68012488"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68731112"
 ---
 # <a name="configure-the-network-packet-size-server-configuration-option"></a>Настройка параметра конфигурации сервера network packet size
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,6 +54,9 @@ ms.locfileid: "68012488"
   
 -   Максимальный размер сетевого пакета для шифрованных соединений составляет 16 383 байта.  
   
+> [!NOTE]  
+> Если функция MARS включена, поставщик SMUX добавляет в пакет 16-байтовый заголовок перед шифрованием SSL, уменьшая максимальный размер сетевого пакета до 16368 байт.
+   
 ###  <a name="Recommendations"></a> Рекомендации  
   
 -   Это расширенный параметр, и изменять его следует только опытным администраторам баз данных или сертифицированным по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] специалистам.  

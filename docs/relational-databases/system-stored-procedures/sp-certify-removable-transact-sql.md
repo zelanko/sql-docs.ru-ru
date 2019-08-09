@@ -24,12 +24,12 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68045929"
 ---
-# <a name="spcertifyremovable-transact-sql"></a>sp_certify_removable (Transact-SQL)
+# <a name="sp_certify_removable-transact-sql"></a>sp_certify_removable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Проверяет, правильно ли настроена база данных для установочного или съемного носителя, и сообщает обо всех проблемах пользователю.  
   
-> **ВАЖНО!** [! ВКЛЮЧИТЬ[ssNoteDepFutureAvoid](../../t-sql/statements/create-database-sql-server-transact-sql.md) вместо этого.  
+> **ВАЖНО!** [!INCLUDE[ssNoteDepFutureAvoid](../../t-sql/statements/create-database-sql-server-transact-sql.md) instead.  
   
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
