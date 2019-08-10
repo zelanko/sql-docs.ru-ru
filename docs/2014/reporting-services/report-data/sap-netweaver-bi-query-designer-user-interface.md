@@ -17,15 +17,15 @@ ms.assetid: 102da66e-ca31-41aa-ab4b-c9b5ab752a72
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 8058052fa1d38485ec3d2f31f53aae8886f077f5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4fe5b3123776a97de8a460d829c7bd38b60f8617
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66107094"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68891891"
 ---
 # <a name="sap-netweaver-bi-query-designer-user-interface"></a>Пользовательский интерфейс конструктора запросов BI SAP NetWeaver
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] предоставляют графический конструктор запросов, предназначенный для построения запросов многомерных выражений к источнику данных SAP NetWeaver® Business Intelligence. Конструктор графический конструктор запросов многомерных Выражений имеет два режима: Режим конструктора и режим запросов. В каждом режиме имеется панель «Метаданные», из которой можно перетащить элементы из InfoCube, MultiProvider или запроса с поддержкой веб-доступа, определенного на источнике данных, для построения запроса многомерных выражений, получающего данные при обработке отчета.  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] предоставляют графический конструктор запросов, предназначенный для построения запросов многомерных выражений к источнику данных SAP NetWeaver® Business Intelligence. Графический конструктор запросов многомерных выражений имеет два режима: Режим конструктора и режим запросов. В каждом режиме имеется панель «Метаданные», из которой можно перетащить элементы из InfoCube, MultiProvider или запроса с поддержкой веб-доступа, определенного на источнике данных, для построения запроса многомерных выражений, получающего данные при обработке отчета.  
   
 > [!IMPORTANT]  
 >  При создании и выполнении запросов пользователи получают доступ к источникам данных. Следует предоставить минимальные разрешения на источники данных, например разрешение только на чтение.  
@@ -58,14 +58,14 @@ ms.locfileid: "66107094"
 |**Редактировать как текст**|Переключиться из текстового конструктора запросов в графический и обратно. Недоступен для этого типа источника данных.|  
 |**Импорт**|Импортировать существующий запрос из файла определения отчета (RDL), расположенного в файловой системе. Дополнительные сведения см. в разделе [Внедренные и общие наборы данных отчета (построитель отчетов и службы SSRS)](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).|  
 |![Обновление полей набора данных](../media/rsqdicon-refreshfields.gif "Обновление полей набора данных")|Обновление метаданных из источника данных.|  
-|![Add calculated member](../../analysis-services/media/rsqdicon-addcalculatedmember.gif "Add calculated member")|Отображение диалогового окна **Построитель вычисляемых элементов** .|  
-|![Переключатель для просмотра пустых ячеек](../../analysis-services/media/rsqdicon-showemptycells.gif "Переключатель для просмотра пустых ячеек")|Переключение между режимами отображения и скрытия пустых ячеек в панели «Данные». (Это эквивалентно использованию предложения NON EMPTY в многомерном выражении).|  
-|![Автоматическое выполнение запроса](../../analysis-services/media/rsqdicon-autoexecute.gif "Автоматическое выполнение запроса")|Автоматическое выполнение запроса и вывод результатов после каждого изменения, например после удаления столбца на панели «Данные». Результаты отображаются в панели «Данные».|  
-|![Удалить](../../analysis-services/media/rsqdicon-delete.gif "Удалить")|Удалить выбранный на панель «Данные» столбец из запроса.|  
-|![Значок диалогового окна "Параметры запроса"](../../analysis-services/media/iconqueryparameter.gif "Значок диалогового окна \"Параметры запроса\"")|Отобразить диалоговое окно **Переменные** . Эта кнопка включена, только если выбранный куб является кубом запроса (так как переменные поддерживаются только в кубах запросов). При присвоении переменной значения по умолчанию создается соответствующий параметр в отчете.|  
-|![Выполнить запрос](../../analysis-services/media/rsqdicon-run.gif "Выполнить запрос")|Выполнить запрос и показать результаты на панели «Данные».|  
-|![Отмена запроса](../../analysis-services/media/rsqdicon-cancel.gif "Отмена запроса")|Отмена запроса.|  
-|![Переключение в режим конструктора](../../analysis-services/media/rsqdicon-designmode.gif "Переключение в режим конструктора")|Переключение между режимом конструктора и режимом запросов.|  
+|![Add calculated member](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-addcalculatedmember.gif "Add calculated member")|Отображение диалогового окна **Построитель вычисляемых элементов** .|  
+|![Переключатель для просмотра пустых ячеек](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-showemptycells.gif "Переключатель для просмотра пустых ячеек")|Переключение между режимами отображения и скрытия пустых ячеек в панели «Данные». (Это эквивалентно использованию предложения NON EMPTY в многомерном выражении).|  
+|![Автоматическое выполнение запроса](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-autoexecute.gif "Автоматическое выполнение запроса")|Автоматическое выполнение запроса и вывод результатов после каждого изменения, например после удаления столбца на панели «Данные». Результаты отображаются в панели «Данные».|  
+|![Удалить](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-delete.gif "Удалить")|Удалить выбранный на панель «Данные» столбец из запроса.|  
+|![Значок диалогового окна "Параметры запроса"](https://docs.microsoft.com/analysis-services/analysis-services/media/iconqueryparameter.gif "Значок диалогового окна \"Параметры запроса\"")|Отобразить диалоговое окно **Переменные** . Эта кнопка включена, только если выбранный куб является кубом запроса (так как переменные поддерживаются только в кубах запросов). При присвоении переменной значения по умолчанию создается соответствующий параметр в отчете.|  
+|![Выполнить запрос](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-run.gif "Выполнить запрос")|Выполнить запрос и показать результаты на панели «Данные».|  
+|![Отмена запроса](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-cancel.gif "Отмена запроса")|Отмена запроса.|  
+|![Переключение в режим конструктора](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-designmode.gif "Переключение в режим конструктора")|Переключение между режимом конструктора и режимом запросов.|  
   
 ## <a name="graphical-query-designer-in-query-mode"></a>Графический конструктор запросов в режиме запросов  
  Для переключения графического конструктора запросов в режим запросов щелкните переключатель **Режим конструктора** на панели инструментов.  
@@ -95,13 +95,13 @@ ms.locfileid: "66107094"
   
 -   **Редактировать как текст**  
   
--   **Добавить вычисляемый элемент** (![Add calculated member](../../analysis-services/media/rsqdicon-addcalculatedmember.gif "Add calculated member"))  
+-   **Добавить вычисляемый элемент** (![Add calculated member](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-addcalculatedmember.gif "Add calculated member"))  
   
--   **Показывать пустые ячейки** (![Переключатель для просмотра пустых ячеек](../../analysis-services/media/rsqdicon-showemptycells.gif "Переключатель для просмотра пустых ячеек"))  
+-   **Показывать пустые ячейки** (![Переключатель для просмотра пустых ячеек](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-showemptycells.gif "Переключатель для просмотра пустых ячеек"))  
   
--   **Автоматическое выполнение** (![Автоматическое выполнение запроса](../../analysis-services/media/rsqdicon-autoexecute.gif "Автоматическое выполнение запроса"))  
+-   **Автоматическое выполнение** (![Автоматическое выполнение запроса](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-autoexecute.gif "Автоматическое выполнение запроса"))  
   
--   **Удалить** (![Удалить](../../analysis-services/media/rsqdicon-delete.gif "Удалить"))  
+-   **Удалить** (![Удалить](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-delete.gif "Удалить"))  
   
 ## <a name="see-also"></a>См. также  
  [Создание общего или внедренного набора данных (построитель отчетов и службы SSRS)](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   

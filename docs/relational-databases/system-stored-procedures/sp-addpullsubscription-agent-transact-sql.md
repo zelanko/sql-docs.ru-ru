@@ -1,7 +1,7 @@
 ---
 title: sp_addpullsubscription_agent (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 08/08/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b9c2eaed-6d2d-4b78-ae9b-73633133180b
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 01f076673491978739ff96d791a41d0927c4ddb6
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 9ab0624abf7a0479ac12f1ab51efd00c7e45a82a
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769120"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893808"
 ---
 # <a name="sp_addpullsubscription_agent-transact-sql"></a>sp_addpullsubscription_agent (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -85,7 +85,7 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
   
 `[ @publication = ] 'publication'`Имя публикации. Аргумент *publication* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @subscriber = ] 'subscriber'`Имя подписчика. Аргумент *Subscriber* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @subscriber = ] 'subscriber'`Имя экземпляра подписчика или имя прослушивателя AG, если база данных подписчика является группой доступности. Аргумент *Subscriber* имеет тип **sysname**и значение по умолчанию NULL.  
   
 > [!NOTE]  
 >  Данный аргумент является устаревшим и сохранен только для поддержки обратной совместимости скриптов.  

@@ -39,7 +39,7 @@ sections:
       - type: list
         style: unordered
         items:
-          - html: '<a href="tutorials/sqldev-in-database-python-for-sql-developers">Использование Python в T-SQL</a>: Просмотр данных</a>, разработка признаков, обучение и развертывание моделей, создание прогнозов (серии из 5 частей)'
+          - html: '<a href="tutorials/sqldev-in-database-python-for-sql-developers">Использование Python в T-SQL</a>: Просмотр данных, разработка признаков, обучение и развертывание моделей, создание прогнозов (серии из 5 частей)'
           - html: '<a href="tutorials/sqldev-in-database-r-for-sql-developers">Использование R в T-SQL</a>: Просмотр данных, разработка признаков, обучение и развертывание моделей, создание прогнозов (серии из 5 частей)'
           - html: '<a href="tutorials/walkthrough-data-science-end-to-end-walkthrough">Использование службы машинного обучения в инструментах R</a>: Просмотр данных, создание графиков и графиков, выполнение технических характеристик, обучение и развертывание моделей, создание прогнозов (серии из шести частей)'
   - title: Решения
@@ -67,3 +67,4 @@ sections:
           - html: <a href="/azure/sql-database/sql-database-machine-learning-services-overview">Службы машинного обучения базы данных SQL Azure<a>
           - html: <a href="/azure/machine-learning/">Машинное обучение Azure</a>
           - html: <a href="/dotnet/machine-learning/">ML.NET</a>
+          - html: <a href="/azure/architecture/data-guide/technology-choices/data-science-and-machine-learning">Что такое Продукты машинного обучения в корпорации Майкрософт?</a>

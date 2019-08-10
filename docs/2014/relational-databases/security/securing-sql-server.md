@@ -18,12 +18,12 @@ ms.assetid: 4d93489e-e9bb-45b3-8354-21f58209965d
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 2195c4efcec60b5a350475ab2600b42ef5c93b36
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c1a701f1e63877c807964a8d81a829afdc9f7b81
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62992354"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68891612"
 ---
 # <a name="securing-sql-server"></a>Обеспечение безопасности SQL Server
   Защиту [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно рассматривать как последовательность шагов, затрагивающих четыре области: платформу, проверку подлинности, объекты (включая данные) и приложения, получающие доступ к системе. В приведенных ниже разделах описано создание и реализация эффективного плана обеспечения безопасности.  
@@ -51,7 +51,7 @@ ms.locfileid: "62992354"
 |---------------------------|---------|  
 |Настройка брандмауэра для работы со службами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[Настройка брандмауэра Windows для доступа к компоненту Database Engine](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)|  
 |Настройка брандмауэра для работы со службами [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|[Настройка параметров брандмауэра Windows для доступа к службам SSIS](../../integration-services/configure-a-windows-firewall-for-access-to-the-ssis-service.md)|  
-|Настройка брандмауэра для работы со службами [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|[Настройка брандмауэра Windows на разрешение доступа к службам Analysis Services](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)|  
+|Настройка брандмауэра для работы со службами [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|[Настройка брандмауэра Windows на разрешение доступа к службам Analysis Services](https://docs.microsoft.com/analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access)|  
 |Открытие конкретных портов брандмауэра, чтобы предоставить доступ к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[Настройка брандмауэра Windows для разрешения доступа к SQL Server](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)|  
 |Настройка поддержки расширенной защиты для проверки подлинности с помощью привязки каналов и привязки служб|[Соединение с компонентом Database Engine с использованием расширенной защиты](../../database-engine/configure-windows/connect-to-the-database-engine-using-extended-protection.md)|  
   

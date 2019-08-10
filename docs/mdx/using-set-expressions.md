@@ -1,5 +1,5 @@
 ---
-title: Использование выражений наборов | Документация Майкрософт
+title: Использование выражений набора | Документация Майкрософт
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 622458f3ea3f8baf74b3aaa4aa9c46f94972f490
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1588d955e728830da4417160591a5c2b6c231473
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68038019"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893507"
 ---
 # <a name="using-set-expressions"></a>Выражения наборов
 
@@ -22,7 +22,7 @@ ms.locfileid: "68038019"
   
  Полное выражение набора состоит из нуля или нескольких явно заданных кортежей, заключенных в фигурные скобки.  
   
- {[{ *Tuple_expression* | *Member_expression* } [, { *Tuple_expression* | *Member_expression* } ] ... ] }  
+ {[{ *Tuple_expression* | *Member_Expression* } [, { *Tuple_expression* | *Member_Expression* }]...]}  
   
  Выражения элементов, указанные в выражении набора, преобразуются в выражения одноэлементных кортежей.  
   
@@ -49,17 +49,17 @@ ms.locfileid: "68038019"
   
  состоит из двух элементов из измерения Measures. По оси строк набор  
   
- {([Product]. [Категории продукта]. [Категория]. & [4], [дата]. [Календарь]. [Calendar Year]. & [2004]),  
+ {([Продукт]. [Категории продуктов]. [Категория]. & [4], [DATE]. [Календарь]. [Календарный год]. & [2004]),  
   
- ([Product]. [Категории продукта]. [Категория]. & [1], [дата]. [Календарь]. [Calendar Year]. & [2003]),  
+ ([Продукт]. [Категории продуктов]. [Category]. & [1], [Дата]. [Календарь]. [Календарный год]. & [2003]),  
   
- ([Product]. [Категории продукта]. [Категория]. & [3], [дата]. [Календарь]. [Calendar Year]. & [2004])}  
+ ([Продукт]. [Категории продуктов]. [Категория]. & [3], [DATE]. [Календарь]. [Календарный год]. & [2004])}  
   
  состоит из трех кортежей, каждый из которых содержит две явные ссылки на элементы в иерархии «Категории продуктов» измерения «Продукт» и иерархии «Календарь» измерения «Дата».  
   
- Примеры функций, возвращающих наборы, см. в разделе [работа с элементами, кортежами и наборами &#40;многомерных Выражений&#41;](../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md).  
+ Примеры функций, которые возвращают наборы, см. [в разделе Работа с элементами, кортежи &#40;и&#41;установка многомерных выражений](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx).  
   
 ## <a name="see-also"></a>См. также  
- [Выражения &#40;многомерных Выражений&#41;](../mdx/expressions-mdx.md)  
+ [Выражения &#40;многомерных выражений&#41;](../mdx/expressions-mdx.md)  
   
   

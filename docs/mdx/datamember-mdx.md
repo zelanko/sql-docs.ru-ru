@@ -1,5 +1,5 @@
 ---
-title: DataMember (многомерные Выражения) | Документация Майкрософт
+title: DataMember (многомерные выражения) | Документация Майкрософт
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 6be7de10c10c39e5e53cbe43ca7be46219e7d4cd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4395f0ff113c8549ec2250d5fa87d37090627b3c
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68023405"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892917"
 ---
 # <a name="datamember-mdx"></a>DataMember (многомерные выражения)
 
@@ -32,13 +32,13 @@ Member_Expression.DataMember
  Допустимое многомерное выражение, возвращающее элемент.  
   
 ## <a name="remarks"></a>Примечания  
- Эта функция работает с неконечными элементами любой иерархии и может использоваться [UPDATE CUBE Statement (MDX)](../mdx/mdx-data-manipulation-update-cube.md) для обратной записи данных непосредственно в неконечные элементы, а не в потомки конечных элементов.  
+ Эта функция работает с неконечными элементами в любой иерархии и может использоваться командой [инструкции UPDATE CUBE (многомерные выражения)](../mdx/mdx-data-manipulation-update-cube.md) для обратной записи данных непосредственно в неконечный элемент, а не на потомков конечного элемента.  
   
 > [!NOTE]  
 >  Возвращает указанный элемент, если он является конечным или если с неконечным элементом не связан элемент данных.  
   
 ## <a name="example"></a>Пример  
- В следующем примере используется **DataMember** функции в вычисляемой мере для отображения квоты продаж для каждого отдельного работника:  
+ В следующем примере функция **DataMember** в вычисляемой мере используется для отображения квоты продаж для каждого отдельного сотрудника:  
   
 ```  
 WITH MEMBER measures.InvidualQuota AS   
@@ -51,6 +51,6 @@ FROM [Adventure Works]
   
 ## <a name="see-also"></a>См. также  
  [Справочник по функциям многомерных выражений (многомерные выражения)](../mdx/mdx-function-reference-mdx.md)   
- [Основные понятия многомерных выражений (службы Analysis Services)](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)  
+ [Основные понятия многомерных выражений (службы Analysis Services)](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services)  
   
   

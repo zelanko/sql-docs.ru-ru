@@ -10,12 +10,12 @@ ms.assetid: 849c6109-1453-4fe4-a892-c49a982cfadb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9c4b80f65b894ebe81ab440e4e7a8f2a7080d2e6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9273f35ccca51d92461783f1110890b161a85059
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66078909"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68888464"
 ---
 # <a name="browsing-the-deployed-cube"></a>Просмотр развернутого куба
   В этой задаче будет проводиться просмотр куба [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial. Так как при проведении анализа сравниваются несколько измерений, для просмотра данных воспользуемся сводной таблицей Excel. Разместим в сводной таблице информацию о клиенте, дате и продукте на разных осях, чтобы было видно, как изменяются продажи через Интернет в различные периоды времени, для различных групп клиентов и продуктовых линий.  
@@ -42,9 +42,9 @@ ms.locfileid: "66078909"
   
      На экран будут выведены продажи через Интернет по регионам и линейкам продуктов в феврале 2006 г., как показано на следующем рисунке.  
   
-     ![Продажи через Интернет по регионам и сериям продуктов](../../2014/tutorials/media/l3-cube-browser-finish.gif "продажи через Интернет по регионам и сериям продуктов")  
+     ![Продажи через Интернет по регионам и линиям продуктов](../../2014/tutorials/media/l3-cube-browser-finish.gif "Продажи через Интернет по регионам и линиям продуктов")  
   
 ## <a name="next-lesson"></a>Следующее занятие  
- [Занятие 4. Определение расширенных атрибутов и свойств измерений](../analysis-services/lesson-4-defining-advanced-attribute-and-dimension-properties.md)  
+ [Занятие 4. Определение дополнительных свойств атрибутов и измерений](https://docs.microsoft.com/analysis-services/lesson-4-defining-advanced-attribute-and-dimension-properties)  
   
   

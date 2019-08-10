@@ -1,5 +1,5 @@
 ---
-title: Установка служб Analysis Services в многомерном и модели интеллектуального анализа данных | Документация Майкрософт
+title: Установка Analysis Services в многомерном режиме и модели интеллектуального анализа данных | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,19 +16,19 @@ ms.assetid: 8a1f33e8-2bd6-4fb8-bd46-c86f2a067f60
 author: heidisteen
 ms.author: heidist
 manager: craigg
-ms.openlocfilehash: 8843131bfefd3d11e1f3b5509c2375235f8bf2f8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2353d2f623a5aa0e0f1f5c25710724f836093998
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66094615"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68890376"
 ---
 # <a name="install-analysis-services-in-multidimensional-and-data-mining-mode"></a>Установка служб Analysis Services в многомерном режиме и режиме интеллектуального анализа данных
-  Службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] предоставляют средства оперативной аналитической обработки (OLAP) и средства интеллектуального анализа данных для приложений бизнес-аналитики. В этом выпуске поддержка баз данных OLAP и моделями интеллектуального анализа данных доступна при установке [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] в *многомерном режиме*. Многомерный режим — один из трех серверных режимов, в котором работают службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Это режим по умолчанию. При установке служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] со значениями по умолчанию получится экземпляр, работающий с многомерными базами данных и моделями интеллектуального анализа данных.  
+  Службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] предоставляют средства оперативной аналитической обработки (OLAP) и средства интеллектуального анализа данных для приложений бизнес-аналитики. В этом выпуске поддержка баз данных OLAP и моделей интеллектуального анализа данных доступна при [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] установке в *многомерном режиме*. Многомерный режим — один из трех серверных режимов, в котором работают службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Это режим по умолчанию. При установке служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] со значениями по умолчанию получится экземпляр, работающий с многомерными базами данных и моделями интеллектуального анализа данных.  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] — Это функция несколькими экземплярами, это означает, что вы можете установить несколько экземпляров [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] на одном компьютере, или запустить новый экземпляр класса [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] side-by-side более ранней версии. Серверный режим выбирается на уровне конкретного экземпляра. Использование других режимов требует установки дополнительных экземпляров сервера.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]— Это функция с несколькими экземплярами, которая означает, что можно установить несколько экземпляров [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] на одном компьютере или запустить новый [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] экземпляр параллельно с более ранней версией. Серверный режим выбирается на уровне конкретного экземпляра. Использование других режимов требует установки дополнительных экземпляров сервера.  
   
- Можно установить службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] отдельно или с другими компонентами. Если просто установить [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], будут установлены следующие компоненты, при выборе **служб Analysis Services** на странице выбора компонентов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] мастер установки:  
+ Можно установить службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] отдельно или с другими компонентами. При установке только [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]следующие компоненты устанавливаются при выборе **Analysis Services** на странице [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выбор компонентов мастера установки.  
   
 -   Сервер служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] для запуска баз данных и моделей интеллектуального анализа данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]  
   
@@ -41,7 +41,7 @@ ms.locfileid: "66094615"
   
 -   Среда [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] используется для создания и просмотра структур данных и моделей интеллектуального анализа данных в службах Analysis Services.  
   
--   Компоненты связи клиентских средств, используемый для обмена данными между клиентами и серверами, включая сетевые библиотеки для DB-Library, ODBC и OLE DB.  
+-   Компоненты подключения клиентских средств, используемые для обмена данными между клиентами и серверами, включая сетевые библиотеки для DB-Library, ODBC и OLE DB.  
   
 -   Службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], набор графических и программируемых объектов для перемещения, копирования и преобразования данных.  
   
@@ -52,26 +52,26 @@ ms.locfileid: "66094615"
   
 |Ссылки|Задания|  
 |-----------|-----------|  
-|[Оборудованию и программному обеспечению для установки SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md) и [Настройка учетных записей служб Windows и разрешений](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).|Перед запуском программы установки проверьте предварительные условия для установки служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] и определите учетную запись, которая будет использоваться для сервера.|  
-|[Установка SQL Server 2014 с помощью мастера установки &#40;установки&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md).|Запустите программу установки SQL Server, чтобы установить программное обеспечение.|  
-|[Настройка брандмауэра Windows на разрешение доступа к службам Analysis Services](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)|После завершения установки следует настроить параметры брандмауэра, чтобы разрешить удаленные соединения с сервером.|  
-|[Предоставление доступа к объектам и операциям (службы Analysis Services)](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)|Пользователи, которым требуется доступ к базам данных служб Analysis Services, должны иметь разрешение на чтение по крайней мере для одной базы данных на сервере.|  
+|[Требования к оборудованию и программному обеспечению для установки SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md) и [настройки учетных записей службы Windows и разрешений](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).|Перед запуском программы установки проверьте предварительные условия для установки служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] и определите учетную запись, которая будет использоваться для сервера.|  
+|[Установите SQL Server 2014 с помощью мастера &#40;&#41;установки](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md).|Запустите программу установки SQL Server, чтобы установить программное обеспечение.|  
+|[Настройка брандмауэра Windows на разрешение доступа к службам Analysis Services](https://docs.microsoft.com/analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access)|После завершения установки следует настроить параметры брандмауэра, чтобы разрешить удаленные соединения с сервером.|  
+|[Предоставление доступа к объектам и операциям (службы Analysis Services)](https://docs.microsoft.com/analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services)|Пользователи, которым требуется доступ к базам данных служб Analysis Services, должны иметь разрешение на чтение по крайней мере для одной базы данных на сервере.|  
   
 ## <a name="related-content"></a>См. также  
  Дополнительное содержимое по настройке можно найти в следующих разделах:  
   
- [Установка служб Analysis Services в табличном режиме](../../analysis-services/instances/install-windows/install-analysis-services.md)  
+ [Установка служб Analysis Services в табличном режиме](https://docs.microsoft.com/analysis-services/instances/install-windows/install-analysis-services)  
   
  [Установка PowerPivot для SharePoint 2010](../../../2014/sql-server/install/powerpivot-for-sharepoint-2010-installation.md)  
   
- [Определение режима работы сервера экземпляра служб Analysis Services](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
+ [Определение режима работы сервера экземпляра служб Analysis Services](https://docs.microsoft.com/analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance)  
   
- [Надстройки интеллектуального анализа данных SQL Server](https://go.microsoft.com/fwlink/?LinkId=197091)  
+ [SQL Server надстройки интеллектуального анализа данных](https://go.microsoft.com/fwlink/?LinkId=197091)  
   
  По умолчанию при установке [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] образцы баз данных, образцы кода и надстройки клиентских приложений не устанавливаются. Дополнительные сведения об установке образцов баз данных и образцов кода см. на [веб-сайте CodePlex](https://go.microsoft.com/fwlink/?LinkId=87843).  
   
 ## <a name="see-also"></a>См. также  
- [Возможности, поддерживаемые различными выпусками SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473)   
+ [Функции, поддерживаемые различными выпусками SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473)   
  [Языки и параметры сортировки (службы Analysis Services)](../../../2014/analysis-services/languages-and-collations-analysis-services.md)   
  [Обновление служб Analysis Services](../../database-engine/install-windows/upgrade-analysis-services.md)  
   

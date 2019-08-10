@@ -1,5 +1,5 @@
 ---
-title: Разработчик&#39;руководство (ядро СУБД) | Документация Майкрософт
+title: Руководством&#39;для разработчиков (ядро СУБД) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ ms.assetid: 7638f46c-9e66-48e6-9a9b-425e0b788311
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ba11f16b14520ac5340724597a6e5b9aa3dedbcb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: df0b873936d6738e79e656fa0ac5e69e799efe3e
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62872620"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68890807"
 ---
-# <a name="developer39s-guide-database-engine"></a>Разработчик&#39;руководство (компонент Database Engine)
+# <a name="developer39s-guide-database-engine"></a>Руководством&#39;для разработчиков (ядро СУБД)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] содержит богатый набор средств разработки, администрирования и управления приложениями баз данных.  
   
 ## <a name="in-this-section"></a>в этом разделе  
@@ -52,10 +52,10 @@ ms.locfileid: "62872620"
  Объясняет, как использовать программный интерфейс окна сообщений об исключениях, чтобы обеспечить приложениям более полное управление сообщениями и дать пользователям возможность сохранять содержимое сообщения об ошибке для последующего просмотра сообщений и получения помощи при работе с ними.  
   
 ## <a name="see-also"></a>См. также  
- [Программирование интеллектуального анализа данных](../analysis-services/dev-guide/data-mining-programming.md)   
- [Руководство разработчика &#40;служб Analysis Services&#41;](../analysis-services/analysis-services-developer-documentation.md)   
- [Руководство разработчика &#40;служб Integration Services&#41;](../integration-services/integration-services-developer-documentation.md)   
- [Руководство разработчика &#40;репликации&#41;](replication/concepts/replication-developer-documentation.md)   
- [Руководство разработчика &#40;службы Reporting Services&#41;](../reporting-services/reporting-services-developer-documentation.md)  
+ [Программирование интеллектуального анализа данных](https://docs.microsoft.com/analysis-services/dev-guide/data-mining-programming)   
+ [Analysis Services руководством &#40;разработчика&#41;](https://docs.microsoft.com/analysis-services/analysis-services-developer-documentation)   
+ [Integration Services руководством &#40;разработчика&#41;](../integration-services/integration-services-developer-documentation.md)   
+ [Репликация руководств &#40;разработчика&#41;](replication/concepts/replication-developer-documentation.md)   
+ [Reporting Services руководством &#40;разработчика&#41;](../reporting-services/reporting-services-developer-documentation.md)  
   
   

@@ -25,12 +25,12 @@ ms.assetid: 062051e4-4b77-4969-98ae-d2547c24ce3e
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 39476a5bc6c1f115595c529e56090f7dda31aba2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: db986748530a11057bf55e18c6404160504fdb89
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66063881"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68891761"
 ---
 # <a name="query-and-text-editors-sql-server-management-studio"></a>Редакторы запросов и текста (среда SQL Server Management Studio)
   Для интерактивного изменения и проверки скриптов [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , многомерных выражений, расширений интеллектуального анализа данных или XML/A либо изменения простого текстового файла или XML-файла можно использовать один из редакторов среды [!INCLUDE[tsql](../../includes/tsql-md.md)]. В каждом редакторе поддерживается выделение цветом ключевых слов и проверка ошибок синтаксиса и применения для конкретного языка. В редакторе запросов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] есть отладчик [!INCLUDE[tsql](../../includes/tsql-md.md)] , с помощью которого можно находить и исправлять ошибки в коде [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
@@ -108,8 +108,8 @@ ms.locfileid: "66063881"
 |Описание задачи|Раздел|  
 |----------------------|-----------|  
 |Описывает способы просмотра и использования базовых функций редактора запросов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] .|[Редактор запросов компонента Database Engine (среда SQL Server Management Studio)](database-engine-query-editor-sql-server-management-studio.md)|  
-|Описывает способы просмотра и использования базовых функций редактора запросов многомерных выражений.|[Редактор запросов многомерных выражений (службы Analysis Services — многомерные данные)](../../analysis-services/mdx-query-editor-analysis-services-multidimensional-data.md)|  
-|Описывает способы просмотра и использования базовых функций редактора DMX-запросов.|[Редактор DMX-запросов (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/dmx-query-editor-analysis-services-data-mining.md)|  
+|Описывает способы просмотра и использования базовых функций редактора запросов многомерных выражений.|[Редактор запросов многомерных выражений (службы Analysis Services — многомерные данные)](https://docs.microsoft.com/analysis-services/mdx-query-editor-analysis-services-multidimensional-data)|  
+|Описывает способы просмотра и использования базовых функций редактора DMX-запросов.|[Редактор DMX-запросов (службы Analysis Services — интеллектуальный анализ данных)](https://docs.microsoft.com/analysis-services/dmx-query-editor-analysis-services-data-mining)|  
 |Описывает способы просмотра и использования базовых функций редактора запросов XML/A.|[Редактор XML (среда SQL Server Management Studio)](xml-editor-sql-server-management-studio.md)|  
 |Описывает настройку параметров для различных редакторов, например нумерацию линий или параметры IntelliSense.|[Настройка редакторов (среда SQL Server Management Studio)](configure-editors-sql-server-management-studio.md)|  
 |Описывает различные способы открытия редакторов в среде [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].|[Открытие редактора (среда SQL Server Management Studio)](open-an-editor-sql-server-management-studio.md)|  

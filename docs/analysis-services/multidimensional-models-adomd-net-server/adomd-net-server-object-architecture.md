@@ -1,5 +1,5 @@
 ---
-title: Архитектура серверных объектов ADOMD.NET | Документация Майкрософт
+title: Серверная архитектура объектов ADOMD.NET | Документация Майкрософт
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,20 +9,20 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 9a527f9fd3a1d41b0b41190952705a4066b402ac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6f5ad515251a783705e3f8e04c73674a8e978348
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63059445"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68889989"
 ---
 # <a name="adomdnet-server-object-architecture"></a>Архитектура серверных объектов ADOMD.NET
-  Серверные объекты ADOMD.NET являются вспомогательными, которые могут использоваться для создания определяемых пользователем функций (UDF) или хранимых процедур в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+  Объекты сервера ADOMD.NET являются вспомогательными объектами, которые можно использовать для создания определяемых пользователем функций (UDF) или хранимых [!INCLUDE[msCoName](../../includes/msconame-md.md)] процедур в. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]  
   
 > [!NOTE]  
->  Чтобы использовать **Microsoft.AnalysisServices.AdomdServer** пространства имен (и эти объекты), необходимо добавить ссылку на библиотеку msmgdsrv.dll проект определяемой пользователем функции или хранимой процедуры.  
+>  Чтобы использовать пространство имен **Microsoft. AnalysisServices. того объектная AdomdServer** (и эти объекты), необходимо добавить ссылку на msmgdsrv. dll в проект UDF или хранимую процедуру.  
   
- ![Показывает отношения между объектами на сервере ADOMD.NET](../../analysis-services/multidimensional-models-adomd-net-server/media/adomdnetserverobjectmodel.gif "показаны отношения между объектами на сервере ADOMD.NET")  
+ ![Показывает связи объектов в ADOMD.NET Server](https://docs.microsoft.com/analysis-services/analysis-services/multidimensional-models-adomd-net-server/media/adomdnetserverobjectmodel.gif "Показывает связи объектов в ADOMD.NET Server")  
 Модель объектов ADOMD.NET  
   
  Взаимодействие с иерархией объектов ADOMD.NET обычно начинается с одного или нескольких объектов верхнего уровня, как описано в следующей таблице.  

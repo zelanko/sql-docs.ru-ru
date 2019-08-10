@@ -16,28 +16,28 @@ ms.assetid: a1c61496-36ee-4bce-98d9-d13440d349aa
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 56c4313ea77fc342c2d7ac4fb142d922038948ca
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 71279981c5fd3879d633e0fdd8cdec74bed6deac
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62702037"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68887706"
 ---
 # <a name="updating-cells-xmla"></a>Обновление ячеек (XML для аналитики)
-  Можно использовать [UpdateCells](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/updatecells-element-xmla) команду, чтобы изменить значение одной или нескольких ячеек в кубе включена для обратной записи куба. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] хранит обновленную информацию в отдельной таблице обратной записи для каждой секции, содержащей обновляемые ячейки.  
+  Команду [UpdateCells](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/updatecells-element-xmla) можно использовать для изменения значения одной или нескольких ячеек куба, включенных для обратной записи куба. [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] хранит обновленныесведениявотдельнойтаблицеобратнойзаписидлякаждойсекции,содержащей[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] обновляемые ячейки.  
   
 > [!NOTE]  
->  Команда `UpdateCells` не поддерживает операции выделения памяти во время обратной записи куба. Чтобы использовать выделенный обратной записи, следует использовать [инструкции](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/statement-element-xmla) команду, чтобы отправить инструкцию UPDATE многомерных выражений (MDX). Дополнительные сведения см. в разделе [инструкция UPDATE CUBE &#40;многомерных Выражений&#41;](/sql/mdx/mdx-data-manipulation-update-cube).  
+>  Команда `UpdateCells` не поддерживает операции выделения памяти во время обратной записи куба. Чтобы использовать выделенную обратную запись, необходимо использовать команду [инструкции](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/statement-element-xmla) для отправки инструкции UPDATE многомерных выражений (MDX). Дополнительные сведения см. в [статье обновление &#40;многомерных&#41;выражений для инструкций Куба](/sql/mdx/mdx-data-manipulation-update-cube).  
   
 ## <a name="specifying-cells"></a>Указание ячеек  
- [Ячейки](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/cell-element-xmla) свойство `UpdateCells` команда содержит ячейки, которые необходимо обновить. Каждая ячейка в свойстве `Cell` указывается при помощи ее порядкового номера. По существу [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] нумеруют ячейки в кубе, как если бы куб представлял *p*-мерный массив, где *p* — это число осей. Адресация ячеек осуществляется по строкам. На следующем рисунке показана формула для вычисления порядкового номера ячейки.  
+ Свойство`UpdateCells` [Cell](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/cell-element-xmla) команды содержит обновляемые ячейки. Каждая ячейка в свойстве `Cell` указывается при помощи ее порядкового номера. Концептуально, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ячейки в Кубе нумеруются так, как если бы куб былмногомерным массивом, где *p* — это число осей. Адресация ячеек осуществляется по строкам. На следующем рисунке показана формула для вычисления порядкового номера ячейки.  
   
- ![Формула для вычисления порядкового номера ячейки](../../../2014/analysis-services/dev-guide/media/cellordinalformula.gif "формулу для вычисления порядкового номера ячейки")  
+ ![Формула для вычисления порядкового номера ячейки](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/cellordinalformula.gif "Формула для вычисления порядкового номера ячейки")  
   
- Определив порядковый номер ячейки, можно указать требуемое значение ячейки в [значение](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/value-element-xmla) свойство [ячейки](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/cell-element-xmla) свойство.  
+ Когда вы узнаете порядковый номер ячейки, можно указать предполагаемое значение ячейки в свойстве [значение](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/value-element-xmla) свойства [ячейки](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/cell-element-xmla) .  
   
 ## <a name="see-also"></a>См. также  
- [Элемент Update &#40;XML для Аналитики&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/update-element-xmla)   
+ [Обновление элемента &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/update-element-xmla)   
  [Разработка с использованием XMLA в службах Analysis Services](../multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Урок 10. Определение ролей администрирования | Документация Майкрософт
+title: Урок 10. Определение административных ролей | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: a74239f4-0f38-43ed-82d3-bf742dbf8a54
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 28697c46e2e72ae4bfff95155f6646d1a5d076c4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f835defb27410c0c812ac5acf5793cf15accbe60
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66079158"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68888457"
 ---
 # <a name="lesson-10-defining-administrative-roles"></a>Урок 10. Определение административных ролей
   На данном занятии предстоит определить роли безопасности для задач администрирования.  
@@ -25,11 +25,11 @@ ms.locfileid: "66079158"
   
  Это занятие содержит следующую задачу:  
   
- [Предоставление разрешений на обработку базы данных](../analysis-services/lesson-10-granting-process-database-permissions.md)  
+ [Предоставление разрешений на обработку базы данных](https://docs.microsoft.com/analysis-services/lesson-10-granting-process-database-permissions)  
  В этой задаче будет задана роль безопасности с разрешениями на обработку базы данных служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , после чего будет выполнена проверка созданной роли безопасности.  
   
 ## <a name="see-also"></a>См. также  
- [Сценарий учебника по службам Analysis Services](../analysis-services/analysis-services-tutorial-scenario.md)   
+ [Analysis Services сценарий учебника](https://docs.microsoft.com/analysis-services/analysis-services-tutorial-scenario)   
  [Многомерное моделирование (учебник по Adventure Works)](multidimensional-modeling-adventure-works-tutorial.md)  
   
   

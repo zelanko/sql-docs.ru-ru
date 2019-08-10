@@ -3,17 +3,17 @@ title: Преобразование типов данных R в SQL
 description: Проверьте явные и неявные преобразования типов данных между R и SQL Server в решениях для обработки и анализа данных и машинного обучения.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 12/10/2019
+ms.date: 08/08/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 7c829f39ee9c80d1bad3a4fb33c10635897cfb98
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: ef35a704023ab6c8eb0bd735b2feba3b6475b506
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715092"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893007"
 ---
 # <a name="data-type-mappings-between-r-and-sql-server"></a>Сопоставления типов данных между R и SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

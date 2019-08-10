@@ -1,5 +1,5 @@
 ---
-title: Определение связей атрибутов в пользовательской иерархии | Документация Майкрософт
+title: Указание связей между атрибутами в пользовательской иерархии | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: 456c2a47-d395-45f9-9efa-89f3fa2ac621
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 490d9f6e1cdaeab274290649d2bb7f5c691595ae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fe6b022300a873ab7e7e747265c96a3abf43ea59
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66063033"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68887464"
 ---
 # <a name="specifying-attribute-relationships-between-attributes-in-a-user-defined-hierarchy"></a>Определение связей атрибутов в определенной пользователем иерархии
   Как уже было рассмотрено в этом учебнике, иерархии атрибутов внутри пользовательских иерархий можно упорядочивать по уровням, чтобы предоставлять пользователям пути перемещения в кубе. Пользовательская иерархия может отражать естественную иерархию, такую как города, область и страна, или просто путь перемещения,например фамилию сотрудника, его должность и название отдела. Для пользователя, перемещающегося по иерархии, нет разницы между этими двумя типами пользовательских иерархий.  
@@ -181,7 +181,7 @@ ms.locfileid: "66063033"
 14. В меню **Построение** среды [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]выберите команду **Развернуть Analysis Services Tutorial**.  
   
 ## <a name="next-task-in-lesson"></a>Следующая задача занятия  
- [Определение свойств Unknown Member и Null Processing](../analysis-services/lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md)  
+ [Определение свойств Unknown Member и Null Processing](https://docs.microsoft.com/analysis-services/lesson-4-7-defining-the-unknown-member-and-null-processing-properties)  
   
 ## <a name="see-also"></a>См. также  
  [Определение связей атрибутов](multidimensional-models/attribute-relationships-define.md)   

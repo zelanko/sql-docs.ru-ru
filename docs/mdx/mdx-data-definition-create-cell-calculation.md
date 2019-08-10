@@ -1,5 +1,5 @@
 ---
-title: Инструкция CREATE CELL CALCULATION (многомерные Выражения) | Документация Майкрософт
+title: Инструкция CREATE для вычисления ЯЧЕЙКИ (многомерные выражения) | Документация Майкрософт
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 411ae301c2f0ce858b7273c6bb721269f709b5c2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7ba563c848179e8cf3dc12f64d2b3c4233955159
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68098479"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892166"
 ---
 # <a name="mdx-data-definition---create-cell-calculation"></a>Определение данных многомерных выражений — CREATE CELL CALCULATION
 
@@ -74,12 +74,12 @@ CREATE CELL CALCULATION CURRENTCUBE | Cube_Name.Calculation_Name
 >  Форма Бэкуса-Наура (BNF) `{*(<comment> | <whitespace> | <newline>)}` будет проанализирована как `{*}` для обратной совместимости.  
   
 ## <a name="see-also"></a>См. также  
- [Создание вычисляемых ячеек с областью действия сеанса](../analysis-services/multidimensional-models/mdx/mdx-cell-calculations-session-scoped-calculated-cells.md)   
- [Создание вычислений ячеек с областью действия запроса (многомерные выражения)](../analysis-services/multidimensional-models/mdx/mdx-cell-calculations-query-scoped-cell-calculations.md)   
- [Построение вычислений значений ячеек в многомерном Выражении &#40;многомерных Выражений&#41;](../analysis-services/multidimensional-models/mdx/mdx-cell-calculations-build-cell-calculations.md)   
- [Использование свойств ячеек (многомерные выражения)](../analysis-services/multidimensional-models/mdx/mdx-cell-properties-using-cell-properties.md)   
- [Содержание строки FORMAT_STRING (многомерные выражения)](../analysis-services/multidimensional-models/mdx/mdx-cell-properties-format-string-contents.md)   
- [Свойства ячеек FORE_COLOR и Back_color &#40;многомерных Выражений&#41;](../analysis-services/multidimensional-models/mdx/mdx-cell-properties-fore-color-and-back-color-contents.md)   
- [Инструкции определения данных многомерных Выражений &#40;многомерных Выражений&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
+ [Создание вычисляемых ячеек с областью действия сеанса](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-cell-calculations-session-scoped-calculated-cells)   
+ [Создание вычислений ячеек с областью действия запроса (многомерные выражения)](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-cell-calculations-query-scoped-cell-calculations)   
+ [Создание вычислений ячеек в многомерных выражениях многомерных выражений &#40;&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-cell-calculations-build-cell-calculations)   
+ [Использование свойств ячеек (многомерные выражения)](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-cell-properties-using-cell-properties)   
+ [Содержание строки FORMAT_STRING (многомерные выражения)](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-cell-properties-format-string-contents)   
+ [Многомерное выражение содержимого &#40;FORE_COLOR и BACK_COLOR&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-cell-properties-fore-color-and-back-color-contents)   
+ [Многомерные выражения инструкций &#40;определения данных многомерных выражений&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
   
   

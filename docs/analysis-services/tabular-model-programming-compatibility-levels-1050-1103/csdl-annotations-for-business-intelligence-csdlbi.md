@@ -1,5 +1,5 @@
 ---
-title: Заметки языка CSDL для бизнес-аналитики (CSDLBI) | Документация Майкрософт
+title: Аннотации языка CSDL для бизнес-аналитики (CSDLBI) | Документация Майкрософт
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 3eac4057f8a4db818a02068f33cbc7b295353f0c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 23a7433ffb0f06330c948de0955193a885eec768
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68207904"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68890186"
 ---
 # <a name="csdl-annotations-for-business-intelligence-csdlbi"></a>Заметки языка CSDL для бизнес-аналитики (CSDLBI)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -27,19 +27,19 @@ ms.locfileid: "68207904"
   
  Схема CSDLBI создается сервером служб Analysis Services в ответ на запрос определения модели от клиентских средств, таких как [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]. Клиентское приложение отправляет XML-запрос серверу служб Analysis Services, на котором размещены данные модели. В ответ сервер отправляет XML-сообщение, содержащее определение сущностей в модели с использованием заметок CSDLBI. С помощью этих сведений клиентское средство создания отчетов представляет поля, статистические выражения и меры, доступные в модели. Заметки CSDLBI также содержат сведения о том, как группировать, сортировать и форматировать данные.  
   
- Общие сведения о CSDLBI см. в разделе [основные понятия CSDLBI](https://docs.microsoft.com/bi-reference/csdl/csdlbi-concepts).  
+ Общие сведения о CSDLBI см. в разделе [Основные понятия CSDLBI](https://docs.microsoft.com/bi-reference/csdl/csdlbi-concepts).  
   
 ### <a name="working-with-csdl"></a>Работа с языком CSDL  
  Набор заметок CSDLBI, представляющий любую конкретную табличную модель, — это XML-документ, содержащий коллекцию сущностей, как простых, так и сложных. Сущности определяют таблицы (или измерения), столбцы (атрибуты), ассоциации (связи) и формулы, включенные в вычисляемые столбцы, меры и ключевые показатели эффективности.  
   
  Эти объекты нельзя изменять непосредственно, для их изменения следует использовать клиентские средства и API-интерфейсы для работы с табличными моделями.  
   
- CSDL-код для модели можно получить, отправив запрос DISCOVER на сервер, на котором размещается модель. Запрос следует уточнить, указав сервер и модель, а также при необходимости представление или перспективу. Возвращаемое сообщение является XML-строкой. Некоторые элементы зависят от языка и могут возвращать разные значения в зависимости от языка текущего соединения. Дополнительные сведения см. в разделе [строк DISCOVER_CSDL_METADATA](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-csdl-metadata-rowset).  
+ CSDL-код для модели можно получить, отправив запрос DISCOVER на сервер, на котором размещается модель. Запрос следует уточнить, указав сервер и модель, а также при необходимости представление или перспективу. Возвращаемое сообщение является XML-строкой. Некоторые элементы зависят от языка и могут возвращать разные значения в зависимости от языка текущего соединения. Дополнительные сведения см. в разделе [набор строк DISCOVER_CSDL_METADATA](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-csdl-metadata-rowset).  
   
 ### <a name="csdlbi-versions"></a>Версии CSDLBI  
  Изначальная спецификация языка CSDL (для платформы Entity Data Framework) предоставляет большинство сущностей и свойств, необходимых для моделирования. Заметки бизнес-аналитики поддерживают особые требования табличных моделей, необходимые для клиентов (таких как [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]) свойства отчетов и дополнительные метаданные, необходимые для многомерных моделей. В этом разделе описаны изменения в каждой версии.  
   
- **CSDLBI 1.0**  
+ **CSDLBI 1,0**  
   
  Начальный набор добавлений в схему CSDL для поддержки табличных моделей [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] содержал заметки для поддержки моделирования данных, пользовательских вычислений и расширенного представления.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "68207904"
   
 -   Свойства визуализации и навигации. Например, добавлены свойства для поддержки пользовательских полей сортировки, изображений по умолчанию и  
   
- **CSDLBI 1.1**  
+ **CSDLBI 1,1**  
   
  Эта версия схемы CSDLBI включает расширения для поддержки многомерных баз данных (таких как кубы OLAP). Новые элементы и свойства имеют следующий вид:  
   
@@ -63,11 +63,11 @@ ms.locfileid: "68207904"
   
 -   Поддержка перспектив.  
   
- Подробные сведения об отдельных элементах в заметках csdlbi см. в разделе [Технический справочник по аннотациям бизнес-Аналитики для языка CSDL](https://docs.microsoft.com/bi-reference/csdl/technical-reference-for-bi-annotations-to-csdl). Сведения о базовой спецификации языка CSDL, см. в разделе [спецификация языка CSDL](http://go.microsoft.com/fwlink/?LinkId=205855) на сайте MSDN.  
+ Подробные сведения об отдельных элементах в заметках CSDLBI см. [в статье Технический справочник по аннотациям бизнес-аналитики на языке CSDL](https://docs.microsoft.com/bi-reference/csdl/technical-reference-for-bi-annotations-to-csdl). Сведения о базовой спецификации языка CSDL см. в [спецификации языка CSDL](http://go.microsoft.com/fwlink/?LinkId=205855) на сайте MSDN.  
   
 ## <a name="see-also"></a>См. также  
- [Общие сведения о модели табличного объекта на совместимость уровни 1050 по 1103](../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/understanding-tabular-object-model-at-levels-1050-through-1103.md)   
+ [Основные сведения об табличной модели объектов с уровнями совместимости 1050 – 1103](https://docs.microsoft.com/analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/understanding-tabular-object-model-at-levels-1050-through-1103)   
  [Основные понятия CSDLBI](https://docs.microsoft.com/bi-reference/csdl/csdlbi-concepts)   
- [Общие сведения о модели табличного объекта на совместимость уровни 1050 по 1103](../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/understanding-tabular-object-model-at-levels-1050-through-1103.md)  
+ [Основные сведения об табличной модели объектов с уровнями совместимости 1050 – 1103](https://docs.microsoft.com/analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/understanding-tabular-object-model-at-levels-1050-through-1103)  
   
   

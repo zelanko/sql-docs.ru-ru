@@ -10,12 +10,12 @@ ms.assetid: 80ba9e43-f3f0-4730-9fb1-2afd2dd3e6fc
 author: Minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: de63ecc80b175385846845f5901fde5eb37ec97c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d95ab3293a32bef22b2ffeeeef76ad0990892cf7
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62775662"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68889068"
 ---
 # <a name="upgrade-powerpivot-for-sharepoint"></a>Обновление PowerPivot для SharePoint
   В этом разделе описаны шаги, необходимые для обновления развертывания [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] до [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)]. Конкретная последовательность действий зависит от версии SharePoint вашей среды и включает надстройку PowerPivot для SharePoint (**spPowerPivot.msi**).  
@@ -32,7 +32,7 @@ ms.locfileid: "62775662"
   
 -   Все экземпляры служб PowerPivot System Service и Analysis Services в ферме SharePoint 2010 должны иметь одинаковые версии. Сведения о том, как проверить версию, см. в разделе [Проверка версий компонентов и служб PowerPivot](#bkmk_verify_versions) в этой статье.  
   
--   Средства настройки PowerPivot — это одни из общих компонентов SQL Server. Все общие компоненты обновляются одновременно. Если во время обновления будут выбраны другие экземпляры SQL Server или функции, для которых требуется обновление общих компонентов, то средство настройки PowerPivot также будет обновлено. Если средство настройки PowerPivot было обновлено, а экземпляр PowerPivot не был, могут возникнуть проблемы. Дополнительные сведения об общих функциях SQL Server см. в разделе [обновление до SQL Server 2014 с помощью мастера установки &#40;установки&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md).  
+-   Средства настройки PowerPivot — это одни из общих компонентов SQL Server. Все общие компоненты обновляются одновременно. Если во время обновления будут выбраны другие экземпляры SQL Server или функции, для которых требуется обновление общих компонентов, то средство настройки PowerPivot также будет обновлено. Если средство настройки PowerPivot было обновлено, а экземпляр PowerPivot не был, могут возникнуть проблемы. Дополнительные сведения о SQL Server общих компонентах см. в статье [обновление до SQL Server 2014 с помощью &#40;мастера&#41;установки](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md).  
   
 -   Надстройка PowerPivot для SharePoint (**spPowerPivot.msi**) устанавливается параллельно с предыдущими версиями. Например, надстройка [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] устанавливается в папку `c:\Program Files\Microsoft SQL Server\120\Tools\PowerPivotTools`.  
   
@@ -70,23 +70,23 @@ ms.locfileid: "62775662"
   
     3.  На странице **Выбор экземпляра** выберите экземпляр с именем **POWERPIVOT** и нажмите кнопку **Далее**.  
   
-    4.  Дополнительные сведения см. в разделе [обновление до SQL Server 2014 с помощью мастера установки &#40;установки&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)  
+    4.  Дополнительные сведения см. в статье [обновление до SQL Server 2014 с помощью мастера &#40;&#41; установки](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md) .  
   
 2.  Перезапустите сервер.  
   
-3.  Запустите надстройку [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint (**spPowerPivot.msi**) на каждом сервере в ферме SharePoint 2013, чтобы установить поставщики данных. Исключением будут серверы, где вы запустили мастер установки SQL Server, который также обновляет поставщики данных. Дополнительные сведения см. в разделе [установки или удаления PowerPivot для SharePoint надстройка &#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md).  
+3.  Запустите надстройку [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint (**spPowerPivot.msi**) на каждом сервере в ферме SharePoint 2013, чтобы установить поставщики данных. Исключением будут серверы, где вы запустили мастер установки SQL Server, который также обновляет поставщики данных. Дополнительные сведения см. [в разделе Установка или удаление надстройки PowerPivot для SharePoint &#40;SharePoint 2013&#41;](https://docs.microsoft.com/analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013).  
   
 4.  **Запустите средство настройки PowerPivot для SharePoint 2013** на одном из серверов приложений SharePoint для настройки фермы SharePoint на работу с обновленными файлами решения, которые установила надстройка. На этом шаге нельзя использовать центр администрирования SharePoint. Дополнительные сведения см. в следующих разделах:  
   
     1.  На начальной странице в Windows введите **PowerPivot** и в результатах поиска щелкните **Настройка PowerPivot для SharePoint 2013**. Обратите внимание, что в результатах поиска могут быть возвращены обе версии средства настройки.  
   
-         ![два средства настройки powerpivot](../../../2014/analysis-services/media/as-powerpivot-configtools-bothicons.gif "два средства настройки powerpivot")  
+         ![два средства настройки powerpivot](https://docs.microsoft.com/analysis-services/analysis-services/media/as-powerpivot-configtools-bothicons.gif "два средства настройки powerpivot")  
   
          либо  
   
          В меню **Пуск** последовательно выберите пункты **Все программы**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], **Средства настройки**, **Средство настройки PowerPivot для SharePoint 2013**. Обратите внимание, что это средство присутствует в списке вариантов, только если на локальном сервере установлен компонент [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)].  
   
-    2.  Во время запуска средство настройки проверяет состояние обновления решения фермы и решений веб-приложений PowerPivot. При обнаружении более старых версий решений появится сообщение "**обнаружены более новые версии файлов решений PowerPivot. Выберите параметр обновления для обновления фермы**". Нажмите кнопку **ОК** , чтобы закрыть сообщение проверки системы.  
+    2.  Во время запуска средство настройки проверяет состояние обновления решения фермы и решений веб-приложений PowerPivot. Если обнаружены более старые версии этих решений, вы увидите сообщение "**обнаружены более новые версии файлов решения PowerPivot. Выберите параметр обновления для обновления фермы**". Нажмите кнопку **ОК** , чтобы закрыть сообщение проверки системы.  
   
     3.  Выберите **Удаление компонентов, служб, приложений и решений**и нажмите кнопку **ОК**.  
   
@@ -107,15 +107,15 @@ ms.locfileid: "62775662"
   
     8.  Чтобы продолжить, нажмите кнопку **Да** .  
   
-    9. Обновление решений и компонентов в ферме может занять несколько минут. В это время запросы соединения для данных PowerPivot **не удастся** с сообщением об ошибке "**не удалось обновить данные**«или»**произошла ошибка при попытке выполнить запрошенное действие. Повторите попытку**". После завершения обновления сервер станет доступным, и эти ошибки больше не будут возникать.  
+    9. Обновление решений и компонентов в ферме может занять несколько минут. В течение этого времени запросы на подключение к данным PowerPivot **будут завершаться** с ошибками, похожими на "**не удается обновить данные**" или "**при попытке выполнить запрошенное действие произошла ошибка. Повторите попытку**". После завершения обновления сервер станет доступным, и эти ошибки больше не будут возникать.  
   
      Дополнительные сведения см. в следующих разделах:  
   
-    -   [Средства настройки PowerPivot](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md)  
+    -   [Средства настройки PowerPivot](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools)  
   
-    -   [Настройка или восстановление PowerPivot для SharePoint 2013 &#40;средство настройки PowerPivot&#41;](../../analysis-services/power-pivot-sharepoint/configure-or-repair-power-pivot-for-sharepoint-2013.md)  
+    -   [Настройка или восстановление PowerPivot для SharePoint 2013 &#40;средства настройки PowerPivot&#41;](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/configure-or-repair-power-pivot-for-sharepoint-2013)  
   
-    -   [Настройка PowerPivot с помощью Windows PowerShell](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-using-windows-powershell.md)  
+    -   [Настройка PowerPivot с помощью Windows PowerShell](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-configuration-using-windows-powershell)  
   
     -   [Справочник по PowerShell для PowerPivot для SharePoint](/sql/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint)  
   
@@ -148,19 +148,19 @@ ms.locfileid: "62775662"
     Get-Service | where {$_.displayname -like "*powerpivot*"}  
     ```  
   
-5.  **Запустите программу установки [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Установку** на первом сервере приложений SharePoint, где запущена служба Windows **Службы SQL Server Analysis Services (PowerPivot)** , чтобы обновить экземпляр POWERPIVOT. На странице «Установка» мастера установки SQL Server выберите вариант обновления. Дополнительные сведения см. в разделе [обновление до SQL Server 2014 с помощью мастера установки &#40;установки&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md).  
+5.  **Запустите программу установки [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Установку** на первом сервере приложений SharePoint, где запущена служба Windows **Службы SQL Server Analysis Services (PowerPivot)** , чтобы обновить экземпляр POWERPIVOT. На странице «Установка» мастера установки SQL Server выберите вариант обновления. Дополнительные сведения см. в статье [Upgrade to SQL Server 2014 с помощью мастера &#40;&#41;установки](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md).  
   
 6.  **Перезапустите сервер** перед запуском средства настройки. В этом случае любые обновления или необходимые компоненты, установленные программой установки SQL Server, будут полностью настроены в системе.  
   
-7.  **Запустите средство настройки PowerPivot** на первом сервере приложений SharePoint, где выполняется служба SQL Server Analysis Services (PowerPivot) для обновления решений и веб-служб в SharePoint. На этом шаге нельзя использовать центр администрирования.  
+7.  **Запустите средство настройки PowerPivot** на первом сервере приложений SharePoint, на котором запущена служба SQL Server Analysis Services (PowerPivot), чтобы обновить решения и веб-службы в SharePoint. На этом шаге нельзя использовать центр администрирования.  
   
     1.  В меню **Пуск** последовательно укажите пункты **Все программы**, щелкните [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], щелкните **Средства настройки**и выберите пункт **Средство настройки PowerPivot**. Обратите внимание, что это средство присутствует в списке вариантов, только если на локальном сервере установлен компонент [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)].  
   
-    2.  Во время запуска средство настройки проверяет состояние обновления решения фермы и решений веб-приложений PowerPivot. При обнаружении более старых версий решений появится сообщение «обнаружены более новые версии файлов решений PowerPivot. Выберите параметр обновления для обновления фермы". Нажмите кнопку **OК** , чтобы закрыть окно сообщения.  
+    2.  Во время запуска средство настройки проверяет состояние обновления решения фермы и решений веб-приложений PowerPivot. Если обнаружены более старые версии этих решений, вы увидите сообщение "обнаружены более новые версии файлов решения PowerPivot. Выберите параметр обновления для обновления фермы". Нажмите кнопку **OК** , чтобы закрыть окно сообщения.  
   
     3.  Для продолжения выберите **Обновление компонентов, служб, приложений и решений**и нажмите кнопку **ОК** .  
   
-    4.  Появится следующее предупреждение: «На панели управления PowerPivot не будут обновлены до последней версии. Все настройки, внесенные в существующие книги, будут утеряны. Продолжить?".  
+    4.  Появится следующее предупреждение: "Книги на панели управления PowerPivot будут обновлены до последней версии. Все настройки, внесенные в существующие книги, будут утеряны. Продолжить?".  
   
          Это предупреждение относится к книгам на панели управления PowerPivot, связанным с обновлением данных. Если эти книги были настроены, изменения, внесенные в книги, будут утеряны при замене существующих файлов файлами новой версии.  
   
@@ -185,9 +185,9 @@ ms.locfileid: "62775662"
   
     9. Чтобы продолжить, нажмите кнопку **Да** .  
   
-    10. Обновление решений и компонентов в ферме может занять несколько минут. В это время запросы на подключение к данным PowerPivot будут завершаться с ошибками «Не удалось обновить данные» или «ошибка при попытке выполнить запрошенное действие. Повторите попытку". После завершения обновления сервер станет доступным, и эти ошибки больше не будут возникать.  
+    10. Обновление решений и компонентов в ферме может занять несколько минут. В течение этого времени запросы на соединение с данными PowerPivot завершатся ошибкой, например "не удалось обновить данные" или "произошла ошибка при попытке выполнить запрошенное действие. Повторите попытку". После завершения обновления сервер станет доступным, и эти ошибки больше не будут возникать.  
   
-8.  **Повторите процесс** для каждой службы SQL Server Analysis Services (PowerPivot) в ферме: Программа установки SQL Server 1) запустите 2) запустите средство настройки PowerPivot.  
+8.  **Повторите эту процедуру** для каждой службы SQL Server Analysis Services (PowerPivot) в ферме. 1) запустите программу установки SQL Server 2). Запустите средство настройки PowerPivot.  
   
 9. Убедитесь, что обновление выполнено успешно, выполнив шаги после завершения обновления и проверив версию серверов PowerPivot в ферме. Подробные сведения см. в разделе [Post-upgrade verification tasks](#verify) и следующем разделе.  
   
@@ -203,9 +203,9 @@ ms.locfileid: "62775662"
         Stsadm -o enumdeployments  
         ```  
   
-    2.  Просмотрите существующие развертывания для следующие сведения: **Тип** — откат или развертывание, **Файл** — powerpivotwebapp.wsp или powerpivotfarm.wsp.  
+    2.  Просмотрите существующие развертывания для уточнения следующих сведений: **Тип** — откат или развертывание, **Файл** — powerpivotwebapp.wsp или powerpivotfarm.wsp.  
   
-    3.  Для развертываний или откатов, связанных с решениями PowerPivot, скопируйте значение GUID для **JobId** и вставьте его в следующую команду (используйте команды выделения, копирования и вставки в меню правки консоли для копирования значения GUID):  
+    3.  Для развертываний или реотзывов, связанных с решениями PowerPivot, скопируйте значение GUID для **JOBID** и вставьте его в следующую команду (используйте команды "отметить", "Копировать" и "вставить" в меню "Правка" оболочки, чтобы скопировать GUID):  
   
         ```  
         Stsadm -o canceldeployment -id "<GUID>"  
@@ -213,7 +213,7 @@ ms.locfileid: "62775662"
   
     4.  Повторите задачу в средстве настройки, нажав кнопку **Проверка** , а затем кнопку **Запуск**.  
   
-     Сведения о других ошибках см. в журналах ULS. Дополнительные сведения см. в разделе [Настройка и просмотр файлов журнала SharePoint и журнала диагностики &#40;PowerPivot для SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/configure-and-view-sharepoint-and-diagnostic-logging.md).  
+     Сведения о других ошибках см. в журналах ULS. Дополнительные сведения см. в разделе [Настройка и просмотр файлов журнала SharePoint и журнала &#40;диагностики&#41;PowerPivot для SharePoint](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/configure-and-view-sharepoint-and-diagnostic-logging).  
   
 
   
@@ -227,7 +227,7 @@ ms.locfileid: "62775662"
   
 
   
-##  <a name="bkmk_verify_versions"></a> Проверка версий компонентов и служб PowerPivot  
+##  <a name="bkmk_verify_versions"></a>Проверка версий компонентов и служб PowerPivot  
  Все экземпляры служб [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] PowerPivot System Service и Analysis Services должны иметь одну и ту же версию. Чтобы убедиться, что все компоненты сервера имеют одну и ту же версию, проверьте сведения о версии следующих объектов.  
   
 ### <a name="verify-the-version-of-powerpivot-solutions-and-the-powerpivot-system-service"></a>Проверьте версии решений PowerPivot и службы PowerPivot System Service  
@@ -237,10 +237,10 @@ ms.locfileid: "62775662"
 Get-PowerPivotSystemService  
 ```  
   
- Проверьте **CurrentSolutionVersion**. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] : версия 12.0. \<основная сборка >. \<вспомогательная сборка >  
+ Проверьте **CurrentSolutionVersion**. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]версия 12,0. \<основной > сборки. \<дополнительный > сборки  
   
 ### <a name="verify-the-version-of-the-analysis-services-windows-service"></a>Проверьте версию службы Windows Analysis Services  
- Если обновлены лишь некоторые серверы [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] в ферме SharePoint 2010, экземпляр [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] на необновленных серверах будет более старым, чем версия, ожидаемая в ферме. Чтобы использовать все серверы, потребуется обновить их до одной и той же версии. Используйте один из следующих методов для проверки версии службы Windows SQL Server Analysis Services (PowerPivot) на каждом компьютере.  
+ Если обновлены лишь некоторые серверы [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] в ферме SharePoint 2010, экземпляр [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] на необновленных серверах будет более старым, чем версия, ожидаемая в ферме. Чтобы использовать все серверы, потребуется обновить их до одной и той же версии. Чтобы проверить версию службы Windows SQL Server Analysis Services (PowerPivot) на каждом компьютере, используйте один из следующих методов.  
   
  **Обозреватель файлов Windows**:  
   
@@ -250,7 +250,7 @@ Get-PowerPivotSystemService
   
 3.  Щелкните **Сведения**.  
   
-4.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Версия файла должна быть следующей: 12.00. \<основная сборка >. \<вспомогательная сборка >.  
+4.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]Версия файла должна быть 12,00. \<основной > сборки. \<дополнительный > сборки.  
   
 5.  Проверьте, что этот номер такой же, как у версии решения PowerPivot и версии системной службы.  
   
@@ -289,7 +289,7 @@ Get-PowerPivotSystemService
   
 3.  Щелкните **Надежные поставщики данных**. Должна отобразиться MSOLAP.5 (поставщик Microsoft OLE DB для служб OLAP 11.0). Если вы обновили установку [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] , также будет показано MSOLAP.4 из предыдущей версии.  
   
-4.  Дополнительные сведения см. в разделе [Добавление MSOLAP.5 в качестве надежного поставщика данных в службах Excel Services](../../analysis-services/power-pivot-sharepoint/add-msolap-5-as-a-trusted-data-provider-in-excel-services.md).  
+4.  Дополнительные сведения см. в разделе [Добавление MSOLAP.5 в качестве надежного поставщика данных в службах Excel Services](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/add-msolap-5-as-a-trusted-data-provider-in-excel-services).  
   
  MSOLAP.4 описывается как поставщик OLE DB (Майкрософт) для служб OLAP 10.0. Эта версия может являться версией по умолчанию для [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] , которая устанавливается со службами Excel, или это может быть версия [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] . Версия по умолчанию, устанавливаемая SharePoint, не поддерживает доступ к данным PowerPivot. Чтобы подключиться к книгам PowerPivot на сервере SharePoint, требуется версия [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] или более поздняя. Чтобы убедиться в наличии версии [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] , используйте инструкции в предыдущем разделе, в котором описывается проверка версий путем просмотра свойств файлов.  
   
@@ -300,11 +300,11 @@ Get-PowerPivotSystemService
   
 2.  Отсортируйте результаты по имени сборки и найдите **Microsoft.Analysis Services.Adomd.Client**.  
   
-3.  Убедитесь, что у вас установлена версия 12.0. \<номер сборки >.  
+3.  Убедитесь, что у вас установлена версия 12,0. \<номер сборки >.  
   
   
   
-##  <a name="geminifarm"></a> Обновление нескольких PowerPivot для серверов SharePoint в ферме SharePoint  
+##  <a name="geminifarm"></a>Обновление нескольких серверов PowerPivot для SharePoint в ферме SharePoint  
  В многосерверной топологии, включающей более одного сервера [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] , все экземпляры серверов и компонентов должны иметь одинаковую версию. Сервер, на котором работает более высокая версия ПО, задает уровень поддержки для всех серверов фермы. Если обновить лишь некоторые из серверов, то все оставшиеся, на которых работают предыдущие версии ПО, станут недоступными до тех пор, пока тоже не будут обновлены.  
   
  После обновления первого сервера дополнительные серверы, которые еще не обновлены, **станут недоступными**. Доступность восстанавливается после того, как все серверы начнут работать на одном и том же уровне.  
@@ -313,7 +313,7 @@ Get-PowerPivotSystemService
   
  
   
-##  <a name="qfe"></a> Применение QFE к экземпляру PowerPivot в ферме  
+##  <a name="qfe"></a>Применение QFE к экземпляру PowerPivot в ферме  
  При обновлении сервера PowerPivot для SharePoint существующие программные файлы будут обновлены до новых версий, включая исправления некоторых проблем. При применении QFE к многосерверной топологии отсутствует основной сервер, с которого нужно начинать. Поэтому обновление можно начать с любого сервера, при условии, что к остальным серверам PowerPivot в ферме будет применяться тот же QFE.  
   
  При применении QFE также необходимо выполнить шаг настройки, в котором информация о версии сервера обновляется в базе данных конфигурации фермы. Версия обновленного сервера становится новой ожидаемой версией фермы. До применения и настройки QFE на всех компьютерах экземпляры PowerPivot для SharePoint, к которым не применен QFE, будут недоступны для обработки запросов данных PowerPivot.  
@@ -342,15 +342,15 @@ Get-PowerPivotSystemService
   
 |Задача|Ссылка|  
 |----------|----------|  
-|Проверьте, запущена ли служба на всех компьютерах, где работает PowerPivot для SharePoint.|[Запуск и остановка PowerPivot для сервера SharePoint](../../analysis-services/power-pivot-sharepoint/start-or-stop-a-power-pivot-for-sharepoint-server.md)|  
-|Проверьте активацию компонентов на уровне семейства веб-сайтов.|[Включение интеграции функций PowerPivot для семейств веб-сайтов в центре администрирования](../../analysis-services/power-pivot-sharepoint/activate-power-pivot-integration-for-site-collections-in-ca.md)|  
+|Проверьте, запущена ли служба на всех компьютерах, где работает PowerPivot для SharePoint.|[Запуск и остановка PowerPivot для сервера SharePoint](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/start-or-stop-a-power-pivot-for-sharepoint-server)|  
+|Проверьте активацию компонентов на уровне семейства веб-сайтов.|[Активация интеграции функций PowerPivot для семейств веб-сайтов в центре администрирования](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/activate-power-pivot-integration-for-site-collections-in-ca)|  
 |Проверьте, правильно ли загружаются книги PowerPivot, открыв книгу и выбрав фильтры и срезы, чтобы выполнить запрос.|Проверьте наличие кэшированных файлов на жестком диске. Если файл присутствует в кэше, значит этот файл данных загрузился на данном физическом сервере. Ищите кэшированные файлы в папке c:\Program Files\Microsoft SQL Server\MSAS12.POWERPIVOT\OLAP\Backup.|  
-|Проверьте функцию обновления данных в выбранных книгах, настроенных для поддержки обновления данных.|Самый простой способ проверки обновления данных заключается в изменении расписания обновления данных с помощью установки флажка **Обновлять при первой возможности** , чтобы операции обновления данных выполнялись немедленно. При помощи этого шага удастся определить успешность обновления данных для текущей книги. Повторите эти шаги для других часто используемых книг, чтобы убедиться, что обновление данных работает. Дополнительные сведения о планировании данных обновления, см. в разделе [Планирование обновления данных &#40;PowerPivot для SharePoint&#41;](../../../2014/analysis-services/schedule-a-data-refresh-powerpivot-for-sharepoint.md).|  
-|Следите за отчетами об обновлении данных на панели мониторинга PowerPivot, чтобы убедиться в отсутствии ошибок.|[Панель мониторинга управления PowerPivot и данные об использовании](../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md)|  
+|Проверьте функцию обновления данных в выбранных книгах, настроенных для поддержки обновления данных.|Самый простой способ проверки обновления данных заключается в изменении расписания обновления данных с помощью установки флажка **Обновлять при первой возможности** , чтобы операции обновления данных выполнялись немедленно. При помощи этого шага удастся определить успешность обновления данных для текущей книги. Повторите эти шаги для других часто используемых книг, чтобы убедиться, что обновление данных работает. Дополнительные сведения о планировании обновления данных см. [в разделе планирование PowerPivot для SharePoint &#40;&#41;обновления данных](../../../2014/analysis-services/schedule-a-data-refresh-powerpivot-for-sharepoint.md).|  
+|Следите за отчетами об обновлении данных на панели мониторинга PowerPivot, чтобы убедиться в отсутствии ошибок.|[Панель мониторинга управления PowerPivot и данные об использовании](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data)|  
   
- Дополнительные сведения о настройке параметров и компонентов PowerPivot см. в разделе [Настройка и администрирование сервера PowerPivot в центре администрирования](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md).  
+ Дополнительные сведения о настройке параметров и компонентов PowerPivot см. [в разделе Администрирование сервера PowerPivot и настройка в центре администрирования](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration).  
   
- Пошаговые инструкции по выполнению всех задач настройки после установки, см. в разделе [начальной настройки &#40;PowerPivot для SharePoint&#41;](../../../2014/sql-server/install/initial-configuration-powerpivot-for-sharepoint.md).  
+ Пошаговые инструкции по выполнению всех задач настройки после установки см. в разделе [Начальная настройка &#40;PowerPivot для SharePoint&#41;](../../../2014/sql-server/install/initial-configuration-powerpivot-for-sharepoint.md).  
   
 
   

@@ -1,5 +1,5 @@
 ---
-title: Создание источника данных (учебник интеллектуального анализа данных) | Документация Майкрософт
+title: Создание источника данных (учебник по интеллектуальному анализу данных — базовый) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -10,59 +10,59 @@ ms.assetid: d7107c32-69ed-49a8-9b6e-32753eebf42c
 author: minewiskan
 ms.author: owend
 manager: kfile
-ms.openlocfilehash: eb18bc37f63b74981fcccbcb889bd80dcb816d12
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7fc2d6eebc342de7126ebd3c8c41c12e07107089
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63273155"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68888743"
 ---
 # <a name="creating-a-data-source-basic-data-mining-tutorial"></a>Создание источника данных (учебник по интеллектуальному анализу данных — начальный уровень)
-  Объект *источника данных* является подключение к данным, которая сохраняется и управляется из проекта и развернуть ваш [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] базы данных. Источник данных содержит, кроме обязательных свойств соединения, имя сервера и базы данных, где находится этот источник.  
+  *Источник данных* — это подключение к данным, которое сохраняется и управляется в проекте и развертывается в [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] базе данных. Источник данных содержит, кроме обязательных свойств соединения, имя сервера и базы данных, где находится этот источник.  
   
 > [!IMPORTANT]  
->  Имя базы данных [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]. Если вы еще не установили эту базу данных, см. в разделе [образцы баз данных SQL Microsoft](https://go.microsoft.com/fwlink/?LinkId=88417) страницы.  
+>  Имя базы данных [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]. Если вы еще не установили эту базу данных, см. страницу [образцов баз данных Microsoft SQL](https://go.microsoft.com/fwlink/?LinkId=88417) .  
   
 ### <a name="to-create-a-data-source"></a>Создание источника данных  
   
-1.  В **обозревателе решений**, щелкните правой кнопкой мыши **источников данных** папку и выберите **новый источник данных**.  
+1.  В **Обозреватель решений**щелкните правой кнопкой мыши папку **Источники данных** и выберите пункт **создать источник данных**.  
   
-2.  На **Добро пожаловать в мастер источников данных** щелкните **Далее**.  
+2.  На странице **Добро пожаловать на страницу мастера источников данных** нажмите кнопку **Далее**.  
   
-3.  На **Выбор метода определения соединения** щелкните **New** для добавления подключения к [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] базы данных.  
+3.  На странице **Выбор способа определения соединения** нажмите кнопку **создать** , чтобы добавить [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] соединение с базой данных.  
   
-4.  В **поставщика** в списке **диспетчер соединений**выберите **Native OLE DB\Собственный Server клиент SQL 11.0**.  
+4.  В списке **поставщик** в **диспетчере соединений**выберите **собственный OLE DB \ Server Native Client 11,0**.  
   
-5.  В **имя_сервера** введите или выберите имя сервера, на котором установлен [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)].  
+5.  В поле **имя сервера** введите или выберите имя сервера, на котором установлен [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)].  
   
-     Например, введите **localhost** Если база данных размещается на локальном сервере.  
+     Например, введите **localhost** , если база данных размещена на локальном сервере.  
   
-6.  В **Войдите на сервер** группы выберите **использовать проверку подлинности Windows**.  
+6.  В поле **Вход** в группу серверов выберите **использовать проверку подлинности Windows**.  
   
     > [!IMPORTANT]  
-    >  Во всех случаях, где возможно, следует использовать проверку подлинности Windows, которая обеспечивает более защищенный метод проверки подлинности, чем проверка подлинности SQL Server. Однако проверка подлинности SQL Server обеспечивается для поддержки обратной совместимости. Дополнительные сведения о методах проверки подлинности см. в разделе [Настройка компонента Database Engine - Провизионирование учетных записей](../../2014/sql-server/install/database-engine-configuration-account-provisioning.md).  
+    >  Во всех случаях, где возможно, следует использовать проверку подлинности Windows, которая обеспечивает более защищенный метод проверки подлинности, чем проверка подлинности SQL Server. Однако проверка подлинности SQL Server обеспечивается для поддержки обратной совместимости. Дополнительные сведения о методах проверки подлинности см. в статье [Подготовка учетных записей в конфигурации ядро СУБД](../../2014/sql-server/install/database-engine-configuration-account-provisioning.md).  
   
-7.  В **выберите или введите имя базы данных** выберите [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] и нажмите кнопку **ОК**.  
+7.  В списке **выберите или введите имя базы данных** выберите [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] и нажмите кнопку **ОК**.  
   
 8.  Нажмите кнопку **Далее**.  
   
-9. На **сведения об олицетворении** щелкните **учетной записи службы,** , а затем нажмите кнопку **Далее**.  
+9. На странице **сведения об олицетворении** щелкните **использовать учетную запись службы**, а затем нажмите кнопку **Далее**.  
   
-     На **завершение работы мастера** странице, обратите внимание, что, по умолчанию источник данных называется Adventure Works DW 2012.  
+     На странице **Завершение работы мастера** Обратите внимание, что по умолчанию источник данных называется Adventure Works DW 2012.  
   
 10. Нажмите кнопку **Готово**.  
   
-     Новый источник данных Adventure Works DW 2012 появится в **источников данных** папку в обозревателе решений.  
+     Новый источник данных, Adventure Works DW 2012, появится в папке **Источники данных** в Обозреватель решений.  
   
 ## <a name="next-task-in-lesson"></a>Следующая задача занятия  
- [Создание данных представление источника &#40;учебник интеллектуального анализа данных&#41;](../../2014/tutorials/creating-a-data-source-view-basic-data-mining-tutorial.md)  
+ [Учебник по созданию базового интеллектуального анализа данных в представлении &#40;источника данных&#41;](../../2014/tutorials/creating-a-data-source-view-basic-data-mining-tutorial.md)  
   
 ## <a name="previous-task-in-lesson"></a>Предыдущая задача занятия  
- [Создание анализа служб проекта &#40;учебник интеллектуального анализа данных&#41;](../../2014/tutorials/creating-an-analysis-services-project-basic-data-mining-tutorial.md)  
+ [Учебник по созданию базового &#40;интеллектуального анализа данных в проекте Analysis Services&#41;](../../2014/tutorials/creating-an-analysis-services-project-basic-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>См. также  
- [Создание источника данных (многомерные службы SSAS)](../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)   
- [Определение источника данных](../analysis-services/lesson-1-2-defining-a-data-source.md)   
- [Задание параметров олицетворения (службы SSAS — многомерные)](../analysis-services/multidimensional-models/set-impersonation-options-ssas-multidimensional.md)  
+ [Создание источника данных (многомерные службы SSAS)](https://docs.microsoft.com/analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional)   
+ [Определение источника данных](https://docs.microsoft.com/analysis-services/lesson-1-2-defining-a-data-source)   
+ [Задание параметров олицетворения (службы SSAS — многомерные)](https://docs.microsoft.com/analysis-services/multidimensional-models/set-impersonation-options-ssas-multidimensional)  
   
   

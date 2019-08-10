@@ -1,5 +1,5 @@
 ---
-title: Value (многомерные Выражения) | Документация Майкрософт
+title: Value (многомерные выражения) | Документация Майкрософт
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 299004e869aeab826e5f1207a0ecc4d31639e2c1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f373f626d778c4d77ec5843dca5bb11da728451d
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68037938"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68887445"
 ---
 # <a name="value-mdx"></a>Value (многомерные выражения)
 
@@ -32,7 +32,7 @@ Member_Expression[.Value]
  Допустимое многомерное выражение, возвращающее элемент.  
   
 ## <a name="remarks"></a>Примечания  
- **Значение** функция возвращает значение указанного элемента в виде строки. **Значение** аргумент является необязательным, так как значение элемента — стандартное свойство элемента и значение, возвращаемое для элемента в том случае, если другое значение не указано. Дополнительные сведения о свойствах элементов см. в разделе [внутренние свойства элементов &#40;многомерных Выражений&#41; ](../analysis-services/multidimensional-models/mdx/mdx-member-properties-intrinsic-member-properties.md) и [пользовательские свойства элементов &#40;многомерных Выражений&#41;](../analysis-services/multidimensional-models/mdx/mdx-member-properties-user-defined-member-properties.md).  
+ Функция **value** возвращает значение указанного элемента в виде строки. Аргумент **value** является необязательным, так как значение элемента является свойством по умолчанию элемента и является значением, возвращаемым для элемента, если другое значение не указано. Дополнительные сведения о свойствах элементов см. в разделе [внутренние свойства &#40;элементов&#41; многомерные](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-member-properties-intrinsic-member-properties) выражения и [определяемые &#40;пользователем&#41;свойства элементов многомерные выражения](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-member-properties-user-defined-member-properties).  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере явно возвращается имя элемента и его значение.  
@@ -53,10 +53,10 @@ from [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>См. также  
- [MemberValue &#40;многомерных Выражений&#41;](../mdx/membervalue-mdx.md)   
+ [MemberValue &#40;многомерные выражения&#41;](../mdx/membervalue-mdx.md)   
  [Properties (многомерные выражения)](../mdx/properties-mdx.md)   
- [Имя &#40;многомерных Выражений&#41;](../mdx/name-mdx.md)   
- [UniqueName &#40;многомерных Выражений&#41;](../mdx/uniquename-mdx.md)   
+ [Имя &#40;многомерного выражения&#41;](../mdx/name-mdx.md)   
+ [Уникальное &#40;многомерное выражение&#41;](../mdx/uniquename-mdx.md)   
  [Справочник по функциям многомерных выражений (многомерные выражения)](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Службы Analysis Services редактор задач обработки (страница Analysis Services) | Документация Майкрософт
+title: Редактор задачи "обработка Analysis Services" (страница "Analysis Services") | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,12 +14,12 @@ ms.assetid: 5612be78-57cf-4e4e-92cf-6bfa9f971040
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a6a114cba7caa1fa223f21de2aa8cc4a85979fe1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 59220dd32388eed75ed725e7a8b5956394ae575d
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66061470"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68890369"
 ---
 # <a name="analysis-services-processing-task-editor-analysis-services-page"></a>Редактор задачи «Обработка средствами Analysis Services» (страница «Средства Analysis Services»)
   Используйте страницу **Службы Analysis Services** диалогового окна **Редактор задачи «Обработка средствами Analysis Services»** для задания диспетчера соединений служб Analysis Services, выбора аналитических объектов для обработки, установки параметров обработки и действий при ошибках.  
@@ -50,7 +50,7 @@ ms.locfileid: "66061470"
 |--------------|-----------------|  
 |**Имя объекта**|Позволяет отобразить список имен заданных объектов.|  
 |**Тип**|Позволяет отобразить список типов заданных объектов.|  
-|**Параметры обработки**|Выберите из списка параметр обработки.<br /><br /> **См. также**: [Обработка объектов многомерной модели](../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)|  
+|**Параметры обработки**|Выберите из списка параметр обработки.<br /><br /> **См. также**: [Обработка объектов многомерной модели](https://docs.microsoft.com/analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services)|  
 |**Настройки**|Позволяет отобразить список настроек обработки для заданных объектов.|  
   
  **Добавить**  

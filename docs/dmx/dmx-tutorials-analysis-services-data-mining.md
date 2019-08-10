@@ -1,5 +1,5 @@
 ---
-title: Учебники расширений интеллектуального анализа данных (службы Analysis Services — Интеллектуальный анализ данных) | Документация Майкрософт
+title: Учебники по DMX (Analysis Services — интеллектуальный анализ данных) | Документация Майкрософт
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 28f7788b0dc11c8c06e98b385d6814cb7fe81142
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 553ae5c425b08dc0b53f101d028fdea1557bf63c
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68061735"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892778"
 ---
 # <a name="dmx-tutorials-analysis-services---data-mining"></a>Учебники по расширениям интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -30,16 +30,16 @@ ms.locfileid: "68061735"
  Этот учебник поможет научиться создавать модель интеллектуального анализа данных для прогнозирования того, какие продукты обычно приобретаются вместе с другими. Кроме того, учебник демонстрирует использование вложенных таблиц в интеллектуальном анализе данных.  
   
 ## <a name="reference"></a>Ссылка  
- [Расширения интеллектуального анализа данных &#40;расширений интеллектуального анализа данных&#41; элементы синтаксиса](../dmx/data-mining-extensions-dmx-syntax-elements.md)  
+ [Элементы&#41; синтаксиса &#40;расширений интеллектуального анализа данных](../dmx/data-mining-extensions-dmx-syntax-elements.md)  
   
  [Инструкции определения расширений интеллектуального анализа данных](../dmx/dmx-statements-data-definition.md)  
   
- [Расширения интеллектуального анализа данных &#40;расширений интеллектуального анализа данных&#41; инструкций по обработке данных](../dmx/dmx-statements-data-manipulation.md)  
+ [Расширения &#40;интеллектуального анализа&#41; данных инструкции DMX-операций с данными](../dmx/dmx-statements-data-manipulation.md)  
   
  [Общие сведения об инструкции SELECT в расширении интеллектуального анализа данных](../dmx/understanding-the-dmx-select-statement.md)  
   
 ## <a name="related-sections"></a>Связанные разделы  
- [Доступ к данным многомерной модели &#40;службы Analysis Services — многомерные данные&#41;](../analysis-services/multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md)  
+ [Доступ к &#40;данным многомерной модели Analysis Services — многомерные данные&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data)  
   
 ## <a name="see-also"></a>См. также  
  [Структура и методы использования прогнозирующих запросов расширений интеллектуального анализа данных](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   

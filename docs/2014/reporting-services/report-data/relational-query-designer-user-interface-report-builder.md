@@ -16,15 +16,15 @@ ms.assetid: cd5fa70c-5218-40d5-9ae6-02d798b5c485
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 1a8be3c24a5d13c1a1b3733ab7cbf755c732a612
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c273e453d4eec6d754f38d6be03385957ad50fec
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66107138"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68890950"
 ---
 # <a name="relational-query-designer-user-interface-report-builder"></a>Пользовательский интерфейс конструктора реляционных запросов (построитель отчетов)
-  Построитель отчетов предоставляет графический конструктор запросов и конструктор запросов на основе текста, которые помогают создавать запрос, указывающий данные для извлечения из [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssSDS](../../includes/sssds-md.md)] реляционных баз данных и [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../../includes/ssdwcurrentfull-md.md)] для набора данных отчета. Графический конструктор запросов используется для просмотра метаданных, интерактивного создания запроса, а также для просмотра его результатов. Текстовый конструктор запросов используется для просмотра запроса, созданного графическим конструктором запросов, или для его изменения. Также можно импортировать существующий запрос из файла или отчета.  
+  Построитель отчетов предоставляет как графический, так и текстовый конструктор запросов [!INCLUDE[msCoName](../../../includes/msconame-md.md)] , помогающий создать запрос, указывающий данные, которые необходимо получить из [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssSDS](../../includes/sssds-md.md)] реляционных баз данных [!INCLUDE[msCoName](../../../includes/msconame-md.md)] и [!INCLUDE[ssDWCurrentFull](../../../includes/ssdwcurrentfull-md.md)] для набора данных отчета. Графический конструктор запросов используется для просмотра метаданных, интерактивного создания запроса, а также для просмотра его результатов. Текстовый конструктор запросов используется для просмотра запроса, созданного графическим конструктором запросов, или для его изменения. Также можно импортировать существующий запрос из файла или отчета.  
   
 > [!NOTE]  
 >  Чтобы создать запрос к типам источников данных Oracle, OLE DB, ODBC и Teradata в построителе отчетов, необходимо использовать текстовый конструктор запросов. Дополнительные сведения см. в разделе [Пользовательский интерфейс текстового конструктора запросов (построитель отчетов)](text-based-query-designer-user-interface-report-builder.md).  
@@ -42,11 +42,11 @@ ms.locfileid: "66107138"
   
  На следующем рисунке показан графический конструктор запросов при использовании таблиц и представлений.  
   
- ![Графический конструктор запросов](../../analysis-services/media/rsqd-relational-graphical.gif "Графический конструктор запросов")  
+ ![Графический конструктор запросов](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqd-relational-graphical.gif "Графический конструктор запросов")  
   
  На следующем рисунке показан графический конструктор запросов при использовании хранимых процедур или возвращающих табличное значение функций.  
   
- ![Хранимая процедура в графическом конструкторе запросов](../../analysis-services/media/rs-relational-graphical-sp.gif "Хранимая процедура в графическом конструкторе запросов")  
+ ![Хранимая процедура в графическом конструкторе запросов](https://docs.microsoft.com/analysis-services/analysis-services/media/rs-relational-graphical-sp.gif "Хранимая процедура в графическом конструкторе запросов")  
   
  В следующей таблице описываются функции каждой панели.  
   

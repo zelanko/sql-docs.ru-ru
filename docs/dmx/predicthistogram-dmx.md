@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 61a90dc7fa034fc8983246aa4eb7119832a2d47d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fdc63d1c93d1290c701233cb94f71f157c771182
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68008014"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893852"
 ---
 # <a name="predicthistogram-dmx"></a>PredictHistogram (расширения интеллектуального анализа данных)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -34,10 +34,10 @@ PredictHistogram(<scalar column reference> | <cluster column reference>)
  Таблица.  
   
 ## <a name="remarks"></a>Примечания  
- Гистограмма формирует статистические столбцы. Структура столбца возвращенной гистограммы зависит от типа ссылки столбца, который используется с **PredictHistogram** функции.  
+ Гистограмма формирует статистические столбцы. Структура столбца возвращаемой гистограммы зависит от типа ссылки на столбец, который используется с функцией **PredictHistogram** .  
   
 ## <a name="scalar-columns"></a>Скалярные столбцы  
- Для \<ссылка на скалярный столбец >, гистограмма, **PredictHistogram** функция возвращает состоит из следующих столбцов:  
+ Для > ссылки на скалярныйстолбецгистограмма,возвращаемаяфункциейPredictHistogram,состоитизследующих\<столбцов:  
   
 -   Прогнозируемое значение  
   
@@ -47,18 +47,18 @@ PredictHistogram(<scalar column reference> | <cluster column reference>)
   
 -   **$ProbabilityVariance**  
   
-     [!INCLUDE[msCoName](../includes/msconame-md.md)] алгоритмы интеллектуального анализа данных не поддерживают **$ProbabilityVariance**. Этот столбец всегда содержит значение 0 для алгоритмов [!INCLUDE[msCoName](../includes/msconame-md.md)].  
+     [!INCLUDE[msCoName](../includes/msconame-md.md)]алгоритмы интеллектуального анализа данных не поддерживают **$ProbabilityVariance**. Этот столбец всегда содержит значение 0 для алгоритмов [!INCLUDE[msCoName](../includes/msconame-md.md)].  
   
 -   **$ProbabilityStdev**  
   
-     [!INCLUDE[msCoName](../includes/msconame-md.md)] алгоритмы интеллектуального анализа данных не поддерживают **$ProbabilityStdev**. Этот столбец всегда содержит значение 0 для алгоритмов [!INCLUDE[msCoName](../includes/msconame-md.md)].  
+     [!INCLUDE[msCoName](../includes/msconame-md.md)]алгоритмы интеллектуального анализа данных не поддерживают **$ProbabilityStdev**. Этот столбец всегда содержит значение 0 для алгоритмов [!INCLUDE[msCoName](../includes/msconame-md.md)].  
   
 -   **$AdjustedProbability**  
   
-     **$AdjustedProbability** столбец [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] расширение [!INCLUDE[msCoName](../includes/msconame-md.md)] OLE DB для интеллектуального анализа данных.  
+     Столбец **$AdjustedProbability** является [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] расширением [!INCLUDE[msCoName](../includes/msconame-md.md)] OLE DB для спецификации интеллектуального анализа данных.  
   
 ## <a name="cluster-columns"></a>Кластерные столбцы  
- Гистограмма, **PredictHistogram** функция возвращает для \<ссылка на столбец кластера > состоит из следующих столбцов:  
+ Гистограмма, возвращаемая функцией **PredictHistogram** для \<ссылки на столбец кластера > состоит из следующих столбцов:  
   
 -   **$Cluster** (представляет имя кластера)  
   
@@ -67,7 +67,7 @@ PredictHistogram(<scalar column reference> | <cluster column reference>)
 -   **$Probability**  
   
 ## <a name="examples"></a>Примеры  
- Следующий пример возвращает спрогнозированное состояние столбца Bike Buyer в одноэлементном запросе. Этот запрос также возвращает два верхних наиболее вероятных состояния атрибута «Покупатель велосипеда», в зависимости от настроенной вероятности, полученной с помощью **PredictHistogram** функции.  
+ Следующий пример возвращает спрогнозированное состояние столбца Bike Buyer в одноэлементном запросе. Запрос также возвращает первые два наиболее вероятных состояния атрибута Bike Buyer на основе скорректированной вероятности, полученной с помощью функции **PredictHistogram** .  
   
 ```  
 SELECT  
@@ -84,16 +84,16 @@ NATURAL PREDICTION JOIN
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Кластер &#40;расширений интеллектуального анализа данных&#41;](../dmx/cluster-dmx.md)   
- [ClusterProbability &#40;расширений интеллектуального анализа данных&#41;](../dmx/clusterprobability-dmx.md)   
- [PredictAdjustedProbability &#40;расширений интеллектуального анализа данных&#41;](../dmx/predictadjustedprobability-dmx.md)   
- [PredictProbability &#40;расширений интеллектуального анализа данных&#41;](../dmx/predictprobability-dmx.md)   
- [PredictStdev &#40;расширений интеллектуального анализа данных&#41;](../dmx/predictstdev-dmx.md)   
- [PredictSupport &#40;расширений интеллектуального анализа данных&#41;](../dmx/predictsupport-dmx.md)   
- [PredictVariance &#40;расширений интеллектуального анализа данных&#41;](../dmx/predictvariance-dmx.md)   
- [Алгоритмы интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Расширения интеллектуального анализа данных &#40;расширений интеллектуального анализа данных&#41; справочнике по функциям](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Функции &#40;расширений интеллектуального анализа данных&#41;](../dmx/functions-dmx.md)   
- [Общие функции прогнозирования &#40;расширений интеллектуального анализа данных&#41;](../dmx/general-prediction-functions-dmx.md)  
+ [Расширения &#40;интеллектуального анализа данных кластера&#41;](../dmx/cluster-dmx.md)   
+ [Расширения &#40;интеллектуального анализа данных ClusterProbability&#41;](../dmx/clusterprobability-dmx.md)   
+ [Расширения &#40;интеллектуального анализа данных PredictAdjustedProbability&#41;](../dmx/predictadjustedprobability-dmx.md)   
+ [Расширения &#40;интеллектуального анализа данных PredictProbability&#41;](../dmx/predictprobability-dmx.md)   
+ [Расширения &#40;интеллектуального анализа данных PredictStdev&#41;](../dmx/predictstdev-dmx.md)   
+ [Расширения &#40;интеллектуального анализа данных PredictSupport&#41;](../dmx/predictsupport-dmx.md)   
+ [Расширения &#40;интеллектуального анализа данных PredictVariance&#41;](../dmx/predictvariance-dmx.md)   
+ [Алгоритмы интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)   
+ [Справочник по &#40;функциям&#41; DMX расширений интеллектуального анализа данных](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [DMX &#40;-функции&#41;](../dmx/functions-dmx.md)   
+ [DMX-функции &#40;общих прогнозирующих функций&#41;](../dmx/general-prediction-functions-dmx.md)  
   
   

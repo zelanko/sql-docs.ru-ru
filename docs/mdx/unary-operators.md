@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 1bb0dcbd16fc96cb587718504de8fa43babd0db6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9ec9ac3eef28c4deae08d577487599575852c132
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68097357"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893552"
 ---
 # <a name="unary-operators"></a>Унарные операторы
 
@@ -22,7 +22,7 @@ ms.locfileid: "68097357"
   
  В языке многомерных выражений поддерживаются унарные операторы, перечисленные в следующей таблице.  
   
-|Оператор|Описание|  
+|Operator|Описание|  
 |--------------|-----------------|  
 |[- (отрицательное значение)](../mdx/negative-mdx.md)|Возвращает отрицательное значение числового выражения.|  
 |[+ (положительное значение)](../mdx/positive-mdx.md)|Возвращает положительное значение числового выражения.|  
@@ -40,9 +40,9 @@ FROM [Adventure Works]
 WHERE [Product].[Category].[Bikes]  
 ```  
   
- Кроме того, используемые специальные унарные операторы для определения статистической операции, выполняемой по [RollupChildren](../mdx/rollupchildren-mdx.md) функции. Дополнительные сведения о специальных унарных операторах см. в разделе [Добавление нестандартного статистического выражения к измерению](../analysis-services/multidimensional-models/bi-wizard-add-a-custom-aggregation-to-a-dimension.md).  
+ Кроме того, многомерные выражения используют специальные унарные операторы для определения статистической операции, выполняемой функцией [RollupChildren](../mdx/rollupchildren-mdx.md) . Дополнительные сведения об этих специальных унарных операторах см. в разделе [Добавление настраиваемого статистического выражения в измерение](https://docs.microsoft.com/analysis-services/multidimensional-models/bi-wizard-add-a-custom-aggregation-to-a-dimension).  
   
 ## <a name="see-also"></a>См. также  
- [Операторы &#40;синтаксис многомерных Выражений&#41;](../mdx/operators-mdx-syntax.md)  
+ [Синтаксис &#40;операторов многомерных выражений&#41;](../mdx/operators-mdx-syntax.md)  
   
   

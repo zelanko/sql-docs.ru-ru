@@ -1,5 +1,5 @@
 ---
-title: Редактор задачи запроса интеллектуального анализа данных (вкладка «запрос») | Документация Майкрософт
+title: Редактор задачи «Запрос интеллектуального анализа данных» (вкладка «запрос») | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,17 +14,17 @@ ms.assetid: 72b1755d-d226-46c5-b862-0c9333196a10
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ec0c3e2187bc0fb97af733021e39b405470fc373
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0354c73a14b249065b69f41d5f7534fd97de5081
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66059849"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68890714"
 ---
 # <a name="data-mining-query-task-editor-query-tab"></a>Редактор задачи «Запрос интеллектуального анализа данных» (вкладка «Запрос»)
   Используйте вкладку **Запрос** диалогового окна **Задача «Запрос интеллектуального анализа данных»** , чтобы создать запросы прогноза, основанные на модели интеллектуального анализа данных. В этом диалоговом окне также можно привязать параметры и результирующие наборы к переменным.  
   
- Сведения об интеллектуальном анализе данных в пакетах см. в разделах [Задача "Запрос интеллектуального анализа данных"](control-flow/data-mining-query-task.md) и [Решения для интеллектуального анализа данных](../analysis-services/data-mining/data-mining-solutions.md).  
+ Сведения об интеллектуальном анализе данных в пакетах см. в разделах [Задача "Запрос интеллектуального анализа данных"](control-flow/data-mining-query-task.md) и [Решения для интеллектуального анализа данных](https://docs.microsoft.com/analysis-services/data-mining/data-mining-solutions).  
   
 ## <a name="general-options"></a>Общие параметры  
  **Name**  
@@ -82,6 +82,6 @@ ms.locfileid: "66059849"
  [Справочник по сообщениям об ошибках служб Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Редактор задачи "Запрос интеллектуального анализа данных" (вкладка "Модель интеллектуального анализа данных")](../../2014/integration-services/data-mining-query-task-editor-mining-model-tab.md)   
  [Редактор задачи "Запрос интеллектуального анализа данных" (вкладка "Вывод")](../../2014/integration-services/data-mining-query-task-editor-output-tab.md)   
- [конструктор интеллектуального анализа данных](../analysis-services/data-mining/data-mining-designer.md)  
+ [конструктор интеллектуального анализа данных](https://docs.microsoft.com/analysis-services/data-mining/data-mining-designer)  
   
   

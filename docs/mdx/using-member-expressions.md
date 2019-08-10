@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 41ff63d47a62b9b83fb583c55ff2405638de22cf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8d40d6a3b6cacb65cf1463b0eeb8b29e59e079e4
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68097115"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893514"
 ---
 # <a name="using-member-expressions"></a>Выражения элементов
 
@@ -56,12 +56,12 @@ Dimension_Name
   
 ```  
   
- Существует много функций многомерных выражений, которые возвращают элементы. Полный список см. в разделе [Справочник по функциям многомерных Выражений &#40;многомерных Выражений&#41;](../mdx/mdx-function-reference-mdx.md)  
+ Существует много функций многомерных выражений, которые возвращают элементы. Полный список см. в разделе [многомерное выражение &#40;&#41; справочника по функциям многомерных выражений](../mdx/mdx-function-reference-mdx.md) .  
   
 > [!NOTE]  
->  Дополнительные сведения об именах и ключей элементов, см. в разделе [работа с элементами, кортежами и наборами &#40;многомерных Выражений&#41;](../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md).  
+>  Дополнительные сведения об именах элементов и ключах элементов см. в разделах [Работа с элементами, кортежи &#40;и&#41;установка многомерных выражений](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx).  
   
 ## <a name="see-also"></a>См. также  
- [Выражения &#40;многомерных Выражений&#41;](../mdx/expressions-mdx.md)  
+ [Выражения &#40;многомерных выражений&#41;](../mdx/expressions-mdx.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Средства проектирования в отчете, конструктора SQL Server Data Tools (SSRS) запросов | Документация Майкрософт
+title: Средства проектирования запросов в SQL Server Data Toolsах конструктор отчетов (SSRS) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,12 +20,12 @@ ms.assetid: a8139a9d-4aeb-4e64-96f3-564edf60479f
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a7b952414a86a647655a7a0c0dbc2754b352e671
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 65294483b65b0df44e7a4b01899319697e441fa1
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66107176"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68891007"
 ---
 # <a name="query-design-tools-in-report-designer-sql-server-data-tools-ssrs"></a>Средства проектирования запросов в конструкторе отчетов SQL Server Data Tools (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] содержат различные средства проектирования запросов, которые можно использовать для создания запросов набора данных в конструкторе отчетов. Доступность конкретного конструктора запросов зависит от типа источника данных, с которым вы работаете. Кроме того, некоторые конструкторы запросов поддерживают альтернативные режимы работы, что позволяет выбирать между работой в визуальном режиме или непосредственно на языке запросов. В этом разделе представлено каждое из этих средств и описаны типы источников данных, поддерживаемых каждым средством. В этом разделе описаны следующие средства.  
@@ -49,7 +49,7 @@ ms.locfileid: "66107176"
 ##  <a name="Textbased"></a> Текстовый конструктор запросов  
  Текстовый конструктор запросов — это используемое по умолчанию средство построения запросов для большинства поддерживаемых реляционных источников данных, таких как [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], Oracle, Teradata, OLE DB, XML и ODBC. В отличие от графического конструктора запросов это средство не осуществляет проверку синтаксиса запросов в процессе проектирования. Ниже приведена иллюстрация текстового конструктора запросов.  
   
- ![Конструктор универсальных запросов с запросом реляционных данных](../../analysis-services/media/rsqd-dsaw-sql-generic.gif "Конструктор универсальных запросов с запросом реляционных данных")  
+ ![Конструктор универсальных запросов с запросом реляционных данных](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqd-dsaw-sql-generic.gif "Конструктор универсальных запросов с запросом реляционных данных")  
   
  Текстовый конструктор запросов рекомендуется использовать для создания сложных запросов, применения хранимых процедур, запросов XML-данных, а также для написания динамических запросов. В зависимости от источника данных можно переключаться между графическим конструктором запросов и текстовым конструктором запросов с помощью кнопки **Изменить как текст** на панели инструментов. Дополнительные сведения см. в разделе [Пользовательский интерфейс текстового конструктора запросов](../text-based-query-designer-user-interface.md).  
   
@@ -70,7 +70,7 @@ ms.locfileid: "66107176"
 ##  <a name="MDX"></a> Конструктор запросов многомерных выражений  
  Конструктор запросов многомерных выражений (MDX) используется для создания или изменения запросов, выполняемых к источнику данных служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] с многомерными кубами. Ниже приведена иллюстрация конструктора запросов многомерных выражений после определения запроса и фильтра.  
   
- ![Конструктор запросов многомерных выражений служб Analysis Services, режим конструктора](../../analysis-services/media/rsqd-dsawas-mdx-designmode.gif "Конструктор запросов многомерных выражений служб Analysis Services, режим конструктора")  
+ ![Конструктор запросов многомерных выражений служб Analysis Services, режим конструктора](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqd-dsawas-mdx-designmode.gif "Конструктор запросов многомерных выражений служб Analysis Services, режим конструктора")  
   
  Для использования конструктора запросов многомерных выражений необходимо определить источник данных, для которого доступен допустимый и обработанный куб служб Analysis Services. При определении набора данных для источника данных можно открыть запрос в конструкторе запросов многомерных выражений. При необходимости используйте кнопки «MDX» и «DMX» на панели инструментов для переключения между режимами многомерных выражений (MDX) и расширения интеллектуального анализа данных (DMX). Дополнительные сведения см. в статье [Analysis Services MDX Query Designer User Interface](analysis-services-mdx-query-designer-user-interface.md).  
   
@@ -95,8 +95,8 @@ ms.locfileid: "66107176"
   
 ## <a name="see-also"></a>См. также  
  [Инструментальные средства служб Reporting Services](../tools/reporting-services-tools.md)   
- [Добавление данных в отчет &#40;построитель отчетов и службы SSRS&#41;](report-datasets-ssrs.md)   
- [Подключения к данным, источники данных и строки подключения в службах Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
+ [Добавление данных в построитель отчетов отчетов &#40;и службы SSRS&#41;](report-datasets-ssrs.md)   
+ [Подключения к данным, источники данных и строки подключения в Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
  [Учебники по службам Reporting Services &#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md)   
  [Источники данных, поддерживаемые службами Reporting Services (SSRS)](../create-deploy-and-manage-mobile-and-paginated-reports.md)   
  [Создание внедренного или общего источника данных (службы SSRS)](../create-an-embedded-or-shared-data-source-ssrs.md)  

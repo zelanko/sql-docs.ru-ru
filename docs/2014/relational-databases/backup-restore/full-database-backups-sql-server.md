@@ -19,12 +19,12 @@ ms.assetid: 4d933d19-8d21-4aa1-8153-d230cb3a3f99
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: bad28d9b10d09cbf08e3568d9f994c7d5b84dfda
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 713e2e507fd98f6d3d87fe60e075e587725ddaf2
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62922060"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68890346"
 ---
 # <a name="full-database-backups-sql-server"></a>Полные резервные копии баз данных (SQL Server)
   При полном резервном копировании создается резервная копия всей базы данных целиком. В нее входит часть журнала транзакций, что позволяет восстановить полную базу данных из полной резервной копии базы данных. Полные резервные копии базы данных отображают состояние базы данных на момент завершения резервного копирования.  
@@ -104,6 +104,6 @@ GO
 ## <a name="see-also"></a>См. также  
  [Резервное копирование и восстановление баз данных SQL Server](back-up-and-restore-of-sql-server-databases.md)   
  [Общие сведения о резервном копировании (SQL Server)](backup-overview-sql-server.md)   
- [Создание и восстановление резервных копий баз данных служб Analysis Services](../../analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases.md)  
+ [Создание и восстановление резервных копий баз данных служб Analysis Services](https://docs.microsoft.com/analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases)  
   
   

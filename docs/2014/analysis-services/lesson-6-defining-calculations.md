@@ -10,12 +10,12 @@ ms.assetid: e0a1e354-e879-4eb8-bb2b-6c3809e32cb6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0d8312019c5deeebb93185609433ae7e4925e3da
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fcfa51678379ecf7f54a956db17089544b22f6be
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66078393"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68888049"
 ---
 # <a name="lesson-6-defining-calculations"></a>Занятие 6: Определение вычислений
   На этом занятии будет показано, как определять вычисления, являющиеся многомерными выражениями или сценариями многомерных выражений. Вычисления позволяют определять вычисляемые элементы, именованные наборы и другие команды скриптов, расширяющие возможности куба служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Например, с помощью команды скрипта можно определить вложенный куб и присвоить вычисление его ячейкам.  
@@ -45,19 +45,19 @@ ms.locfileid: "66078393"
   
  Это занятие содержит следующие задачи.  
   
- [Определение вычисляемых элементов](../analysis-services/lesson-6-1-defining-calculated-members.md)  
+ [Определение вычисляемых элементов](https://docs.microsoft.com/analysis-services/lesson-6-1-defining-calculated-members)  
  В этой задаче предстоит определить вычисляемые элементы.  
   
- [Определение именованных наборов](../analysis-services/lesson-6-2-defining-named-sets.md)  
+ [Определение именованных наборов](https://docs.microsoft.com/analysis-services/lesson-6-2-defining-named-sets)  
  В этой задаче предстоит определить именованные наборы.  
   
 ## <a name="next-lesson"></a>Следующее занятие  
- [Занятие 7. Определение ключевых показателей эффективности &#40;ключевые показатели эффективности&#41;](../analysis-services/lesson-7-defining-key-performance-indicators-kpis.md)  
+ [Занятие 7. &#40;Определение ключевых показателей эффективности&#41;](https://docs.microsoft.com/analysis-services/lesson-7-defining-key-performance-indicators-kpis)  
   
 ## <a name="see-also"></a>См. также  
- [Сценарий учебника по службам Analysis Services](../analysis-services/analysis-services-tutorial-scenario.md)   
- [Многомерное моделирование &#40;руководством по Adventure Works&#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)   
- [Для создания именованных наборов](multidimensional-models/create-named-sets.md)   
+ [Analysis Services сценарий учебника](https://docs.microsoft.com/analysis-services/analysis-services-tutorial-scenario)   
+ [Руководство по работе с &#40;многомерным моделированием Adventure Works&#41;](https://docs.microsoft.com/analysis-services/multidimensional-modeling-adventure-works-tutorial)   
+ [Создание именованных наборов](multidimensional-models/create-named-sets.md)   
  [Создание вычисляемых элементов](multidimensional-models/create-calculated-members.md)  
   
   

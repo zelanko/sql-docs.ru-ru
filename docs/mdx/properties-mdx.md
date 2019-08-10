@@ -1,5 +1,5 @@
 ---
-title: Свойства (многомерные Выражения) | Документация Майкрософт
+title: Свойства (многомерные выражения) | Документация Майкрософт
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: e7d6e072cd47233b6cb76c09fb3bc0e9b9b42604
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9a9aa2ab3fbfdbe10246e0dcf8758cfcf7732375
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68020649"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893675"
 ---
 # <a name="properties-mdx"></a>Properties (многомерные выражения)
 
@@ -31,20 +31,20 @@ Member_Expression.Properties(Property_Name [, TYPED])
  *Member_Expression*  
  Допустимое многомерное выражение, возвращающее элемент.  
   
- *Property_name*  
+ *Property_Name*  
  Допустимое строковое выражение, обозначающее имя свойства элемента.  
   
 ## <a name="remarks"></a>Примечания  
- **Свойства** функция возвращает значение указанного элемента для указанного свойства элемента. Свойство элемента может быть любой из внутренние свойства элементов, таких как **имя**, **идентификатор**, **ключ**, или **заголовок**, или он может быть определяемый пользователем элемент свойства. Дополнительные сведения см. в разделе [внутренние свойства элементов &#40;многомерных Выражений&#41; ](../analysis-services/multidimensional-models/mdx/mdx-member-properties-intrinsic-member-properties.md) и [пользовательские свойства элементов &#40;многомерных Выражений&#41;](../analysis-services/multidimensional-models/mdx/mdx-member-properties-user-defined-member-properties.md).  
+ Функция **Properties** возвращает значение указанного элемента для указанного свойства элемента. Свойством элемента может быть любое из внутренних свойств элемента, например **имя**, **идентификатор**, **ключ**или **заголовок**, либо может быть определяемым пользователем свойством элемента. Дополнительные сведения см. в разделе [внутренние свойства &#40;элементов&#41; многомерные](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-member-properties-intrinsic-member-properties) выражения и [определяемые &#40;пользователем&#41;свойства элементов многомерные выражения](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-member-properties-user-defined-member-properties).  
   
- По умолчанию значение приводится к строке. Если **ТИПИЗИРОВАННОГО** указан, возвращаемое значение является строго типизированным.  
+ По умолчанию значение приводится к строке. Если указан параметр **Type** , возвращаемое значение является строго типизированным.  
   
 -   Для свойства встроенного типа тип возвращаемого значения совпадает с типом свойства элемента.  
   
--   Если тип свойства является определяемой пользователем, тип возвращаемого значения совпадает тип возвращаемого значения **MemberValue** функции.  
+-   Если тип свойства определяется пользователем, тип возвращаемого значения совпадает с типом возвращаемого значения функции **MemberValue** .  
   
 > [!NOTE]  
->  Функция Properties ('Key') возвращает тот же результат, что и Key0, за исключением составных ключей. Функция Properties ('Key') возвращает значение NULL для составных ключей. Используйте ключ*x* синтаксис для составных ключей, как показано в данном примере. Функции Properties ('Key0'), Properties ('Key1'), Properties ('Key2') и т. д. совместно формируют составной ключ.  
+>  Функция Properties ('Key') возвращает тот же результат, что и Key0, за исключением составных ключей. Функция Properties ('Key') возвращает значение NULL для составных ключей. Используйте синтаксис ключа*x* для составных ключей, как показано в примере. Функции Properties ('Key0'), Properties ('Key1'), Properties ('Key2') и т. д. совместно формируют составной ключ.  
   
 ## <a name="example"></a>Пример  
  В следующем примере возвращаются и внутренние, и пользовательские свойства элемента, аргумент TYPED используется, чтобы вернуть строго типизированное значение свойства элемента Day Name.  
@@ -85,7 +85,7 @@ SELECT {Measures.MemberName
 FROM [Adventure Works]  
 ```  
   
- В следующем примере показано использование свойства KEY*x* свойство.  
+ В следующем примере показано использование свойства*x* ключа.  
   
 ```  
 WITH   
@@ -105,7 +105,7 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Использование свойств элементов (многомерные выражения)](../analysis-services/multidimensional-models/mdx/mdx-member-properties.md)   
+ [Использование свойств элементов (многомерные выражения)](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-member-properties)   
  [Справочник по функциям многомерных выражений (многомерные выражения)](../mdx/mdx-function-reference-mdx.md)  
   
   

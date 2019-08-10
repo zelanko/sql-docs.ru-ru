@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 74b718515fc03d0babbda36851f61d96f07e854a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2141a4f8ccc6e34ec3010ad3ce8e8e3789d09132
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68074776"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892756"
 ---
 # <a name="import-dmx"></a>IMPORT (расширения интеллектуального анализа данных)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -28,7 +28,7 @@ IMPORT FROM <filename>
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *Имя файла*  
+ *файлов*  
  Строка с именем и расположением файла для импорта.  
   
 ## <a name="remarks"></a>Примечания  
@@ -44,10 +44,10 @@ IMPORT FROM 'C:\TEMP\Association_NEW.dmb'
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Расширения интеллектуального анализа данных &#40;расширений интеллектуального анализа данных&#41; инструкции определения данных](../dmx/dmx-statements-data-definition.md)   
- [Расширения интеллектуального анализа данных &#40;расширений интеллектуального анализа данных&#41; инструкций по обработке данных](../dmx/dmx-statements-data-manipulation.md)   
- [Расширения интеллектуального анализа данных &#40;расширений интеллектуального анализа данных&#41; Справка по инструкции](../dmx/data-mining-extensions-dmx-statements.md)   
+ [Расширения &#40;интеллектуального анализа&#41; данных инструкции расширений интеллектуального анализа данных](../dmx/dmx-statements-data-definition.md)   
+ [Расширения &#40;интеллектуального анализа&#41; данных инструкции DMX-операций с данными](../dmx/dmx-statements-data-manipulation.md)   
+ [Справочник по DMX &#40;&#41; -инструкциям расширений интеллектуального анализа данных](../dmx/data-mining-extensions-dmx-statements.md)   
  [ЭКСПОРТ &#40;РАСШИРЕНИЙ ИНТЕЛЛЕКТУАЛЬНОГО АНАЛИЗА ДАННЫХ&#41;](../dmx/export-dmx.md)   
- [Экспорт и импорт объектов интеллектуального анализа данных](../analysis-services/data-mining/export-and-import-data-mining-objects.md)  
+ [Экспорт и импорт объектов интеллектуального анализа данных](https://docs.microsoft.com/analysis-services/data-mining/export-and-import-data-mining-objects)  
   
   

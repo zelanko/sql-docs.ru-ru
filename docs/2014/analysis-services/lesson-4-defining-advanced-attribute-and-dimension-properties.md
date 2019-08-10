@@ -10,12 +10,12 @@ ms.assetid: 0e86b9be-e47d-4bb4-87eb-136ff3a61aef
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a8b81a5d2e8bfe57c1ae8d8464b5af9140dd9dbb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1da73bb522aa3fbf825841e637f01b0c455f09c2
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66078642"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68888258"
 ---
 # <a name="lesson-4-defining-advanced-attribute-and-dimension-properties"></a>Занятие 4: Определение расширенных свойств атрибутов и измерений
   На этом занятии изучается использование расширенных свойств атрибутов, иерархий атрибутов и свойств измерений.  
@@ -29,12 +29,12 @@ ms.locfileid: "66078642"
  В этой задаче вы откроете, просмотрите и выполните развертывание измененной версии проекта «Учебник по службам [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] », содержащей несколько групп мер и дополнительных измерений.  
   
  [Определение свойств родительского атрибута в иерархии "родители-потомки"](lesson-4-2-defining-parent-attribute-properties-in-a-parent-child-hierarchy.md)  
- В этой задаче вы зададите имена уровней в измерении типа «родители-потомки» и укажите, следует ли отображать данные, связанные с элементами-родителями. Дополнительные сведения см. в разделе [«родители-потомки»](multidimensional-models/parent-child-dimension.md) и [атрибуты в иерархиях родителей-потомков](multidimensional-models/parent-child-dimension-attributes.md).  
+ В этой задаче вы зададите имена уровней в измерении типа «родители-потомки» и укажите, следует ли отображать данные, связанные с элементами-родителями. Дополнительные сведения см. в разделе Иерархия и атрибуты « [родители-потомки](multidimensional-models/parent-child-dimension.md) » [в иерархиях «родители-потомки](multidimensional-models/parent-child-dimension-attributes.md)».  
   
  [Автоматическое группирование элементов атрибута](lesson-4-3-automatically-grouping-attribute-members.md)  
  В этой задаче автоматически создаются группирования элементов атрибутов на основе распределения членов в иерархии атрибутов. Дополнительные сведения см. в разделе [Группирование элементов атрибутов (дискретизация)](multidimensional-models/attribute-properties-group-attribute-members.md).  
   
- [Скрытие и отключение иерархий атрибутов](../analysis-services/lesson-4-4-hiding-and-disabling-attribute-hierarchies.md)  
+ [Скрытие и отключение иерархий атрибутов](https://docs.microsoft.com/analysis-services/lesson-4-4-hiding-and-disabling-attribute-hierarchies)  
  В этой задаче предстоит изучить, в каких случаях и как отключить или скрыть иерархии атрибутов.  
   
  [Сортировка элементов атрибута по вторичному атрибуту](lesson-4-5-sorting-attribute-members-based-on-a-secondary-attribute.md)  
@@ -50,8 +50,8 @@ ms.locfileid: "66078642"
  [Занятие 5. Определение связей между измерениями и группами мер](lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)  
   
 ## <a name="see-also"></a>См. также  
- [Сценарий учебника по службам Analysis Services](analysis-services-tutorial-scenario.md)   
- [Многомерное моделирование &#40;руководством по Adventure Works&#41;](multidimensional-modeling-adventure-works-tutorial.md)   
+ [Analysis Services сценарий учебника](analysis-services-tutorial-scenario.md)   
+ [Руководство по работе с &#40;многомерным моделированием Adventure Works&#41;](multidimensional-modeling-adventure-works-tutorial.md)   
  [Измерения в многомерных моделях](multidimensional-models/dimensions-in-multidimensional-models.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: DefaultMember (многомерные Выражения) | Документация Майкрософт
+title: DefaultMember (многомерные выражения) | Документация Майкрософт
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: c5843ec42cf4ba712a2e55c9cc96dd6f482c0760
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a0b5039ae62eac25d698442d4aeb92ad3c4ebc3a
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047091"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892902"
 ---
 # <a name="defaultmember-mdx"></a>DefaultMember (многомерные выражения)
 
@@ -35,7 +35,7 @@ Hierarchy_Expression.DefaultMember
  Элемент по умолчанию атрибута используется для оценки выражений, когда атрибут не включен в запрос.  
   
 ## <a name="example"></a>Пример  
- В следующем примере используется **DefaultMember** функция в сочетании с **имя** для возвращения элемента по умолчанию для измерения Destination Currency в кубе Adventure Works. В примере возвращается **доллар США**. **Имя** функция используется для возвращения имени меры, а не свойство по умолчанию измерения, который является **значение**.  
+ В следующем примере функция **DefaultMember** используется вместе с функцией **Name** для возврата элемента по умолчанию для измерения целевой валюты в кубе Adventure Works. Пример возвращает **доллар США**. Функция **Name** используется для возвращения имени меры, а не свойства по умолчанию меры, которое является **значением**.  
   
 ```  
 WITH MEMBER Measures.x AS   
@@ -46,6 +46,6 @@ FROM [Adventure Works]
   
 ## <a name="see-also"></a>См. также  
  [Справочник по функциям многомерных выражений (многомерные выражения)](../mdx/mdx-function-reference-mdx.md)   
- [Определение элемента по умолчанию](../analysis-services/multidimensional-models/attribute-properties-define-a-default-member.md)  
+ [Определение элемента по умолчанию](https://docs.microsoft.com/analysis-services/multidimensional-models/attribute-properties-define-a-default-member)  
   
   

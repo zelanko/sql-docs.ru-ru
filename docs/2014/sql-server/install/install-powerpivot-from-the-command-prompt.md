@@ -10,12 +10,12 @@ ms.assetid: 7f1f2b28-c9f5-49ad-934b-02f2fa6b9328
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: e6da1b23bd23634e3edb8d92093cab6ce71a2783
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4677413e517812bf18bc41f59374367b6e27276a
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66094560"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68890172"
 ---
 # <a name="install-powerpivot-from-the-command-prompt"></a>Установка PowerPivot из командной строки
   Программу установки SQL Server PowerPivot для SharePoint можно запустить из командной строки. В команду необходимо включить параметр `/ROLE` и исключить из нее параметр `/FEATURES`.  
@@ -27,7 +27,7 @@ ms.locfileid: "66094560"
   
  Компьютер должен быть присоединен к тому же домену, что и ферма SharePoint.  
   
-##  <a name="Commands"></a> / Параметры установки на основе ROLE  
+##  <a name="Commands"></a>Параметры установки на основе/ROLE  
  При развертывании PowerPivot для SharePoint используется параметр `/ROLE` вместо параметра `/FEATURES`. Допустимы следующие значения.  
   
 -   `SPI_AS_ExistingFarm`  
@@ -36,12 +36,12 @@ ms.locfileid: "66094560"
   
  При использовании обеих ролей устанавливаются файлы приложения, конфигурации и развертывания, позволяющие PowerPivot для SharePoint работать в ферме SharePoint. При выборе любой роли программа установки проверит соответствие требованиям к программному и аппаратному обеспечению, которые должны быть удовлетворены для интеграции с SharePoint.  
   
- Параметр «Существующая ферма» предполагает, что ферма SharePoint уже сконфигурирована. Параметр новой фермы предполагается, что вы создадите новую ферму; он поддерживает добавление экземпляр компонента Database Engine в синтаксисе командной строки, можно использовать экземпляр компонента Database Engine как сервера базы данных фермы.  
+ Параметр «Существующая ферма» предполагает, что ферма SharePoint уже сконфигурирована. При выборе варианта Новая ферма предполагается, что вы создадите новую ферму. Он поддерживает добавление ядро СУБД экземпляра в синтаксисе командной строки, чтобы можно было использовать экземпляр ядро СУБД в качестве сервера базы данных фермы.  
   
- В отличие от предыдущих выпусков, все задачи настройки сервера выполняются как задачи после установки. В целях автоматизации шагов по установке и настройке для настройки сервера можно использовать PowerShell. Дополнительные сведения см. в разделе [Настройка PowerPivot с помощью Windows PowerShell](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-using-windows-powershell.md).  
+ В отличие от предыдущих выпусков, все задачи настройки сервера выполняются как задачи после установки. В целях автоматизации шагов по установке и настройке для настройки сервера можно использовать PowerShell. Дополнительные сведения см. в статье [Настройка PowerPivot с помощью Windows PowerShell](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-configuration-using-windows-powershell).  
   
 ## <a name="example-commands"></a>Примеры команд  
- В следующих примерах демонстрируется применение каждого из вариантов. В примере 1 `SPI_AS_ExistingFarm`.  
+ В следующих примерах демонстрируется применение каждого из вариантов. В примере 1 `SPI_AS_ExistingFarm`показано.  
   
 ```  
 Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /ROLE=SPI_AS_ExistingFarm /INSTANCENAME=PowerPivot /INDICATEPROGRESS/ASSVCACCOUNT=<DomainName\UserName> /ASSVCPASSWORD=<StrongPassword> /ASSYSADMINACCOUNTS=<DomainName\UserName>   
@@ -53,7 +53,7 @@ Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /ROLE=SPI_AS_Existing
 Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /ROLE=SPI_AS_NewFarm /INSTANCENAME=PowerPivot /INDICATEPROGRESS/SQLSVCACCOUNT=<DomainName\UserName> /SQLSVCPASSWORD=<StrongPassword> /SQLSYSADMINACCOUNTS=<DomainName\UserName> /AGTSVCACCOUNT=<DomainName\UserName> /AGTSVCPASSWORD=<StrongPassword> /ASSVCACCOUNT=<DomainName\UserName> /ASSVCPASSWORD=<StrongPassword> /ASSYSADMINACCOUNTS=<DomainName\UserName>   
 ```  
   
-##  <a name="Join"></a> Изменение синтаксиса команды  
+##  <a name="Join"></a>Изменение синтаксиса команды  
  Используйте следующие шаги для изменения примера синтаксиса команды.  
   
 1.  Скопируйте следующую команду в Блокнот:  
@@ -82,30 +82,30 @@ Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /ROLE=SPI_AS_NewFarm 
   
     ```  
   
-3.  Замените заполнители для \<domain\username > и \<StrongPassword > используя действительные учетные записи пользователей и пароли.  
+3.  Замените заполнители для \<домен \ имя_пользователя > \<и StrongPassword > действительными учетными записями пользователей и паролями.  
   
-     `/assvaccount` И **/assvcpassword** параметры используются для настройки [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] экземпляра на сервере приложений. Замените эти заполнители на допустимые сведения учетной записи.  
+     Параметры и **/ассвкпассворд** используются для настройки экземпляранасервереприложений.[!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] `/assvaccount` Замените эти заполнители на допустимые сведения учетной записи.  
   
-     **/Assysadminaccounts** параметру должно быть присвоено удостоверение пользователя, запустившего программу установки SQL Server. Для служб необходимо указать хотя бы одного системного администратора. Следует отметить, что программа установки SQL Server больше не предоставляет автоматически разрешения sysadmin членам встроенной группы «Администраторы».  
+     Для параметра **/ассисадминаккаунтс** необходимо задать идентификатор пользователя, выполняющего программу установки SQL Server. Для служб необходимо указать хотя бы одного системного администратора. Следует отметить, что программа установки SQL Server больше не предоставляет автоматически разрешения sysadmin членам встроенной группы «Администраторы».  
   
 4.  Удалите разрывы строк.  
   
-5.  Выделите всю команду и нажмите кнопку **копирования** в меню "Правка".  
+5.  Выделите всю команду и выберите команду **Копировать** в меню Правка.  
   
-6.  Откройте командную строку администратора. Чтобы сделать это, нажмите кнопку **запустить**, щелкните правой кнопкой мыши командную строку и выберите **Запуск от имени администратора**.  
+6.  Откройте командную строку администратора. Для этого нажмите кнопку **Пуск**, щелкните правой кнопкой мыши командную строку и выберите **Запуск от имени администратора**.  
   
 7.  Перейдите в папку на диске или общую папку, которая содержит установочный носитель SQL Server.  
   
-8.  Вставьте измененную команду в командную строку. Чтобы сделать это, щелкните значок в верхнем левом углу окна командной строки, укажите **изменить**, а затем нажмите кнопку **вставить**.  
+8.  Вставьте измененную команду в командную строку. Для этого щелкните значок в левом верхнем углу окна командной строки, наведите указатель мыши на пункт **изменить**и выберите команду **Вставить**.  
   
-9. Нажмите клавишу **ввод** для выполнения команды. Подождите завершения работы программы установки. В окне командной строки можно наблюдать за ходом выполнения.  
+9. Нажмите клавишу **Ввод** , чтобы выполнить команду. Подождите завершения работы программы установки. В окне командной строки можно наблюдать за ходом выполнения.  
   
 10. Чтобы проверить установку, в папке \Program Files\SQL Server\120\Setup Bootstrap\Log откройте файл summary.txt. Если сервер был установлен без ошибок, то окончательный результат должен содержать текст «Выполнено».  
   
-11. Настройте сервер. Как минимум необходимо развернуть решения, создать приложение службы и включить этот компонент для каждого семейства веб-сайтов. Дополнительные сведения см. в разделе [Настройка или восстановление PowerPivot для SharePoint 2010 &#40;средство настройки PowerPivot&#41; ](../../../2014/analysis-services/configure-repair-powerpivot-sharepoint-2010.md) или [Настройка и администрирование сервера PowerPivot в центре администрирования ](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md).  
+11. Настройте сервер. Как минимум необходимо развернуть решения, создать приложение службы и включить этот компонент для каждого семейства веб-сайтов. Дополнительные сведения см. в разделе [Настройка или восстановление PowerPivot для SharePoint &#40;2010 средства&#41; настройки PowerPivot](../../../2014/analysis-services/configure-repair-powerpivot-sharepoint-2010.md) или [Администрирование и настройка сервера PowerPivot в центре администрирования](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration).  
   
 ## <a name="see-also"></a>См. также  
- [Настройка учетных записей служб PowerPivot](../../analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts.md)   
+ [Настройка учетных записей служб PowerPivot](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts)   
  [Установка PowerPivot для SharePoint 2010](../../../2014/sql-server/install/powerpivot-for-sharepoint-2010-installation.md)  
   
   

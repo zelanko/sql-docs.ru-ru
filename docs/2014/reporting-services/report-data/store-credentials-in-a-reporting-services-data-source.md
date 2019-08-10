@@ -15,12 +15,12 @@ ms.assetid: dc700922-97fa-4b30-9547-05bbbec4f09c
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 990e5b3c13ced56e78170cb9530f35277174b4cb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9e2c29e97a360b9e595b972643645e2e8d549c67
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66107009"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892016"
 ---
 # <a name="store-credentials-in-a-reporting-services-data-source"></a>Сохраненные учетные данные в источнике данных Reporting Services
   Сохраненные учетные данные, используемые сервером отчетов [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] , можно настроить для получения доступа к внешним данным отчета. Сохраненные учетные данные используются, если отчет запускается автоматически, например, подписка [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] , которая публикует отчет как электронное письмо. Сервер отчетов возвращает и использует учетные данные при планировании или запуске обработки отчета. В этом разделе описывается настройка сохраненных учетных данных для серверов отчетов как в собственном режиме, так и в режиме интеграции с SharePoint.  
@@ -40,7 +40,7 @@ ms.locfileid: "66107009"
 -   [Настройка сохраненных учетных данных для общедоступного источника данных (режим интеграции с SharePoint)](#bkmk_stored_credentials_shared_data_source_sharepoint)  
   
 ##  <a name="bkmk_top"></a> Требования политики безопасности для сохраненных учетных данных  
- ![as_powerpivot_refresh_sss_set_key](../../analysis-services/media/as-powerpivot-refresh-sss-set-key.gif "as_powerpivot_refresh_sss_set_key") Учетная запись, которая используется для сохраненных учетных данных, должна быть настроена в соответствии с одной из указанных ниже политик безопасности на сервере отчетов. Рекомендуется выбирать политику с минимальным уровнем разрешений, необходимых для используемой среды.  
+ ![as_powerpivot_refresh_sss_set_key](https://docs.microsoft.com/analysis-services/analysis-services/media/as-powerpivot-refresh-sss-set-key.gif "as_powerpivot_refresh_sss_set_key") Учетная запись, которая используется для сохраненных учетных данных, должна быть настроена в соответствии с одной из указанных ниже политик безопасности на сервере отчетов. Рекомендуется выбирать политику с минимальным уровнем разрешений, необходимых для используемой среды.  
   
 1.  **Локальный вход в систему**. Дополнительные сведения см. в разделе [Разрешение локального входа](https://technet.microsoft.com/library/cc756809\(v=WS.10\).aspx).  
   

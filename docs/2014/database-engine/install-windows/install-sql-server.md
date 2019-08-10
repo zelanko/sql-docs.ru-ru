@@ -13,19 +13,19 @@ ms.assetid: 0300e777-d56b-4d10-9c33-c9ebd2489ee5
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7b9fb6be3970ea12ce3252e70f7773f1687dbe83
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5ed522c64e0f9652e3ffb310f98348c402193ef8
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62775363"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68889243"
 ---
 # <a name="install-sql-server-2014"></a>Установка SQL Server 2014
-## <a name="download-sql-server-2014-expresshttpwwwhanselmancomblogdownloadsqlserverexpressaspx"></a>[Скачивание SQL Server 2014 Express](http://www.hanselman.com/blog/DownloadSQLServerExpress.aspx)
-  **Выражаем благодарность [(Scott hanselman)](http://www.hanselman.com/) для сбора всех ссылок пакета установщика в одном месте.**
+## <a name="download-sql-server-2014-expresshttpwwwhanselmancomblogdownloadsqlserverexpressaspx"></a>[Загрузка SQL Server 2014 Express](http://www.hanselman.com/blog/DownloadSQLServerExpress.aspx)
+  **Благодарим вас на [Скотт Hanselman](http://www.hanselman.com/) по сбору всех ссылок на пакеты установщика в одном месте!**
   
- В этом разделе представлены общие сведения о разных параметрах установки [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Дополнительные сведения о различных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] компоненты, которые могут быть установлены и процесс установки, см. в разделе [установки для SQL Server 2014](installation-for-sql-server.md).  
-> **Примечание:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] доступен в 32-разрядных и 64-разрядных выпусках. Установка 64-разрядной и 32-разрядной версий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может производиться либо с помощью мастера установки, либо из командной строки. Дополнительные сведения о [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] компоненты, см. в разделе [выпуски и компоненты SQL Server 2014](../../sql-server/editions-and-components-of-sql-server-2016.md) и [функции, поддерживаемые различными выпусками SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
+ В этом разделе представлены общие сведения о разных параметрах установки [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Дополнительные сведения о различных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] компонентах, которые можно установить, а также о процессе установки, см. в разделе [Установка SQL Server 2014](installation-for-sql-server.md).  
+> **Примечание.** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] доступна в 32-разрядных и 64-разрядных выпусках. Установка 64-разрядной и 32-разрядной версий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может производиться либо с помощью мастера установки, либо из командной строки. Дополнительные сведения о [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] компонентах см. в разделе выпуски [и компоненты SQL Server 2014](../../sql-server/editions-and-components-of-sql-server-2016.md) и функции, поддерживаемые различными выпусками [SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
  По умолчанию при установке [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] образцы баз данных и образцы кода не устанавливаются. Чтобы установить образцы баз данных и образцы кода для выпусков [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], кроме выпуска Express, посетите [веб-сайт CodePlex](https://go.microsoft.com/fwlink/?LinkId=87843). Сведения о поддержке образцов баз данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и образцы кода для [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]см. в разделе [Обзор баз данных и образцов](https://go.microsoft.com/fwlink/?LinkId=110391).  
   
@@ -42,7 +42,7 @@ ms.locfileid: "62775363"
 |[Установка базовой версии средств управления SQL Server](../../sql-server/install/install-sql-server-management-tools.md)|Описывает, как установить и настроить средства управления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |[Установка компонентов SQL Server PowerShell](install-sql-server-powershell.md)|Описывает соображения относительно установки компонентов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell.|  
   
-## <a name="how-to-install-includesscurrentincludessscurrent-mdmd"></a>Как установить [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+## <a name="how-to-install-includesscurrentincludessscurrent-mdmd"></a>Как установить[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
 |Заголовок|Описание|  
 |-----------|-----------------|  
@@ -57,10 +57,10 @@ ms.locfileid: "62775363"
 |-----------|-----------------|  
 |[Настройка брандмауэра Windows для разрешения доступа к SQL Server](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)|В этом разделе приведены общие сведения о конфигурации брандмауэра и описан процесс настройки брандмауэра Windows.|  
 |[Настройка многосетевого компьютера для доступа к SQL Server](../../sql-server/install/configure-a-multi-homed-computer-for-sql-server-access.md)|В этом разделе описываются настройки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и брандмауэра Windows в режиме повышенной безопасности для предоставления сетевого подключения экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в многосетевой среде.|  
-|[Настройка брандмауэра Windows на разрешение доступа к службам Analysis Services](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)|Выполнив действия, описанные в этом разделе, можно настроить порт и брандмауэр, разрешив доступ к службам [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] или PowerPivot для SharePoint.|  
+|[Настройка брандмауэра Windows на разрешение доступа к службам Analysis Services](https://docs.microsoft.com/analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access)|Выполнив действия, описанные в этом разделе, можно настроить порт и брандмауэр, разрешив доступ к службам [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] или PowerPivot для SharePoint.|  
   
-## <a name="related-sections"></a>См. также  
- [Установка компонентов бизнес-Аналитики SQL Server 2014](../../sql-server/install/install-sql-server-business-intelligence-features.md)  
+## <a name="related-sections"></a>Связанные разделы  
+ [Установка компонентов бизнес-аналитики SQL Server 2014](../../sql-server/install/install-sql-server-business-intelligence-features.md)  
  Функции [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], которые являются частью платформы бизнес-аналитики [!INCLUDE[msCoName](../../includes/msconame-md.md)], включающей [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] и несколько клиентских приложений, используемых для создания аналитических данных или работы с ними. В этом разделе документации по программе установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] рассказывается, как установить [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)], [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] и [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
  [Установка отказоустойчивого кластера SQL Server](../../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)  

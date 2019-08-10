@@ -24,12 +24,12 @@ ms.assetid: 51352afc-a0a4-428b-8985-f9e58bb57c31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9a844f429409210b1b7ba6de9784714b5af336eb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 395b2ea5647560b141d93ef2ba4e1a26b81b042a
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68189159"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893134"
 ---
 # <a name="manage-job-steps"></a>Управление шагами задания
   Шаг задания — это действие, производимое заданием над базой данных или сервером. Каждое задание должно иметь, по крайней мере, один шаг. Шагами задания могут быть:  
@@ -50,7 +50,7 @@ ms.locfileid: "68189159"
   
  Каждый шаг задания выполняется в определенном контексте безопасности. Если шаг задания указывает учетную запись-посредник, он выполняется в контексте безопасности учетных данных для учетной записи-посредника. Если шаг задания не указывает учетную запись-посредник, этот шаг выполняется в контексте учетной записи службы агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Только члены предопределенной роли сервера "sysadmin" могут создавать задания, которые не указывают учетную запись-посредник явным образом.  
   
- Так как шаги задания выполняются в контексте определенного пользователя [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, этот пользователь должен иметь разрешения и конфигурацию, необходимые для выполнения шага. Например, если создается задание, в котором требуется буква диска или путь в формате UNC, шаги задания могут выполняться под учетной записью пользователя Windows во время проверки задач. Однако для шага задания пользователь Windows должен иметь необходимые разрешения, конфигурации буквы диска или доступ к требуемому диску. В противном случае шаг задания завершится ошибкой. Во избежание этой проблемы нужно, чтобы учетная запись-посредник для каждого шага задания имела необходимые разрешения для задачи, которую выполняет шаг задания. Дополнительные сведения см. в разделе [центр обеспечения безопасности для ядра СУБД SQL Server и базы данных SQL Azure](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md).  
+ Так как шаги задания выполняются в контексте определенного пользователя [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, этот пользователь должен иметь разрешения и конфигурацию, необходимые для выполнения шага. Например, если создается задание, в котором требуется буква диска или путь в формате UNC, шаги задания могут выполняться под учетной записью пользователя Windows во время проверки задач. Однако для шага задания пользователь Windows должен иметь необходимые разрешения, конфигурации буквы диска или доступ к требуемому диску. В противном случае шаг задания завершится ошибкой. Во избежание этой проблемы нужно, чтобы учетная запись-посредник для каждого шага задания имела необходимые разрешения для задачи, которую выполняет шаг задания. Дополнительные сведения см. в статье [Центр безопасности для SQL Server ядро СУБД и базы данных SQL Azure](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md).  
   
 ## <a name="job-step-logs"></a>Журналы шагов задания  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Агент может записывать выходные данные из определенных шагов задания в файл операционной системы или в таблицу "sysjobstepslogs" базы данных "msdb". Следующие шаги задания могут записывать выходные данные в оба адресата:  
@@ -89,7 +89,7 @@ ms.locfileid: "68189159"
   
  При необходимости можно открыть существующий файл [!INCLUDE[tsql](../../includes/tsql-md.md)] в качестве команды для шага задания.  
   
- [!INCLUDE[tsql](../../includes/tsql-md.md)] в шагах задания не используются учетные записи-посредники агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Вместо этого шаг задания выполняется как владелец шага задания или как учетная запись службы агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , если владелец шага задания является членом предопределенной роли сервера "sysadmin". Члены предопределенной роли сервера "sysadmin" также могут указывать, что шаги задания [!INCLUDE[tsql](../../includes/tsql-md.md)] выполняются в контексте другого пользователя, с помощью параметра *database_user_name* хранимой процедуры "sp_add_jobstep stored". Дополнительные сведения см. в разделе [sp_add_jobstep &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql).  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] в шагах задания не используются учетные записи-посредники агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Вместо этого шаг задания выполняется как владелец шага задания или как учетная запись службы агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , если владелец шага задания является членом предопределенной роли сервера "sysadmin". Члены предопределенной роли сервера "sysadmin" также могут указывать, что шаги задания [!INCLUDE[tsql](../../includes/tsql-md.md)] выполняются в контексте другого пользователя, с помощью параметра *database_user_name* хранимой процедуры "sp_add_jobstep stored". Дополнительные сведения см. в [разделе &#40;SP_ADD_JOBSTEP Transact-&#41;SQL](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql).  
   
 > [!NOTE]  
 >  Один шаг задания [!INCLUDE[tsql](../../includes/tsql-md.md)] может содержать несколько пакетов. [!INCLUDE[tsql](../../includes/tsql-md.md)] шаги задания могут содержать внедренные команды GO.  
@@ -166,7 +166,7 @@ Set oServer = nothing
   
 -   Ввести инструкцию, которую необходимо выполнить. Эта инструкция должна быть запросом многомерных выражений (MDX).  
   
- Дополнительные сведения о многомерных Выражениях см. в разделе [основные принципы запросов многомерных Выражений &#40;служб Analysis Services&#41;](../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md).  
+ Дополнительные сведения о многомерных выражениях см. в разделе [основные принципы запросов многомерных &#40;выражений Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services).  
   
 ## <a name="integration-services-packages"></a>Пакеты служб Integration Services  
  При создании шага задания с пакетом служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] необходимо выполнить следующее.  
@@ -211,7 +211,7 @@ Set oServer = nothing
 |Описывает, как удалить журнал шага задания агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|[Delete a Job Step Log](delete-a-job-step-log.md)|  
   
 ## <a name="see-also"></a>См. также  
- [dbo.sysjobstepslogs &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/dbo-sysjobstepslogs-transact-sql)   
+ [dbo. таблицу sysjobstepslogs &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-tables/dbo-sysjobstepslogs-transact-sql)   
  [Создание заданий](create-jobs.md)   
  [sp_add_job (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-add-job-transact-sql)  
   

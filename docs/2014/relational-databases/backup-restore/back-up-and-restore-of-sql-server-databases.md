@@ -22,12 +22,12 @@ ms.assetid: 570a21b3-ad29-44a9-aa70-deb2fbd34f27
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 96eab9a3b388c8cb68203dce22e8bd1abc013e4d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 586a1315c2d8e73d5010964864560db0fc0012fd
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62922945"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68890819"
 ---
 # <a name="back-up-and-restore-of-sql-server-databases"></a>Резервное копирование и восстановление баз данных SQL Server
   В этом разделе описываются преимущества резервного копирования баз данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , основные условия резервного копирования и восстановления, а также приводятся стратегии резервного копирования и восстановления для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и рассматриваются вопросы безопасности, связанные с резервным копированием и восстановлением в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -101,7 +101,7 @@ ms.locfileid: "62922945"
   
 
   
-##  <a name="BnrStrategies"></a> Введение в резервного копирования и восстановления  
+##  <a name="BnrStrategies"></a>Общие сведения о стратегиях резервного копирования и восстановления  
  Операции резервирования и восстановления данных следует адаптировать под конкретную среду с учетом доступных ресурсов. Таким образом, для надежной работы операций резервирования и восстановления необходима стратегия резервирования и восстановления. Правильно созданная стратегия резервирования и восстановления увеличивает доступность данных и уменьшает их потери, учитывая требования пользователей.  
   
 > [!IMPORTANT]  
@@ -150,7 +150,7 @@ ms.locfileid: "62922945"
   
      Дополнительные сведения см. в разделе [Оценка размера полной резервной копии базы данных](#EstimateDbBuSize)ниже в этом подразделе.  
   
-####  <a name="EstimateDbBuSize"></a> Оценка размера полной резервной копии  
+####  <a name="EstimateDbBuSize"></a>Оценка размера полной резервной копии базы данных  
  Перед тем как выбрать стратегию резервного копирования и восстановления, необходимо рассчитать, какой объем места на диске необходим для полной резервной копии базы данных. При выполнении операции резервного копирования данные, содержащиеся в базе данных, копируются в файл резервной копии. Резервная копия содержит только фактические данные в базе данных, а не любое неиспользованное пространство. Поэтому резервная копия обычно меньше, чем база данных. Размер полной резервной копии базы данных вы можете вычислить с помощью системной хранимой процедуры **sp_spaceused**. Дополнительные сведения см. в разделе [sp_spaceused (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql).  
   
 ### <a name="schedule-backups"></a>Создание расписания резервного копирования  
@@ -226,7 +226,7 @@ ms.locfileid: "62922945"
 ### <a name="restoring-data-backups"></a>Восстановление резервных копий данных  
  **Использование среды SQL Server Management Studio**  
   
--   [Восстановление резервной копии базы данных &#40;SQL Server Management Studio&#41;](restore-a-database-backup-using-ssms.md)  
+-   [Восстановление резервной копии &#40;базы данных SQL Server Management Studio&#41;](restore-a-database-backup-using-ssms.md)  
   
 -   [Восстановление базы данных в новом расположении (SQL Server)](restore-a-database-to-a-new-location-sql-server.md)  
   
@@ -277,7 +277,7 @@ ms.locfileid: "62922945"
  [Обзор процессов восстановления (SQL Server)](restore-and-recovery-overview-sql-server.md)   
  [BACKUP (Transact-SQL)](/sql/t-sql/statements/backup-transact-sql)   
  [RESTORE (Transact-SQL)](/sql/t-sql/statements/restore-statements-transact-sql)   
- [Создание и восстановление резервных копий баз данных служб Analysis Services](../../analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases.md)   
+ [Создание и восстановление резервных копий баз данных служб Analysis Services](https://docs.microsoft.com/analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases)   
  [Создание резервных копий и восстановление полнотекстовых каталогов и индексов](../search/back-up-and-restore-full-text-catalogs-and-indexes.md)   
  [Создание резервных копий реплицируемых баз данных и восстановление из них](../replication/administration/back-up-and-restore-replicated-databases.md)   
  [Журнал транзакций (SQL Server)](../logs/the-transaction-log-sql-server.md)   

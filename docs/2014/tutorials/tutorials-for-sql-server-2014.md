@@ -1,5 +1,5 @@
 ---
-title: Учебные материалы по SQL Server 2014 | Документация Майкрософт
+title: Руководства для SQL Server 2014 | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: a93667ad-e856-405a-9328-065331b7ab7b
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 05505b1b53605865bae6856acde8319745688376
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 21c94cbc7b5adc1e65cb21aa14d4ab2cec9122ce
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62956319"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892932"
 ---
 # <a name="tutorials-for-sql-server-2014"></a>Учебные материалы по SQL Server 2014
   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] добавлено много новых технологий и возможностей.  
@@ -29,7 +29,7 @@ ms.locfileid: "62956319"
 -   Чтобы скачать книгу [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] и отчеты [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] для использования с учебниками [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] , перейдите на страницу [Файлы изображений для образца модели HelloWorldPicnic в PowerPivot и Power View](https://www.microsoft.com/download/details.aspx?id=26719).  
   
     > [!NOTE]  
-    >  [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] входит в состав [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] для [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[SPS2010](../includes/sps2010-md.md)] Enterprise Edition.  
+    >  [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)]— [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] это функция [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] надстройки для [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[SPS2010](../includes/sps2010-md.md)] выпуска Enterprise Edition.  
   
 -   Чтобы скачать базы данных [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] версии [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] , перейдите на страницу [образцов баз данных Adventure Works 2014](http://msftdbprodsamples.codeplex.com/releases/view/125550) на сайте CodePlex.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "62956319"
   
 |Технология|Описание|  
 |----------------|-----------------|  
-|[Учебники по службам Analysis Services (SSAS)](../analysis-services/analysis-services-tutorials-ssas.md)|Сведения о разработке и развертывании табличных и многомерных моделей служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Также рассказывается об использовании таких средств, как PowerPivot для анализа данных в моделях.|  
+|[Учебники по службам Analysis Services (SSAS)](https://docs.microsoft.com/analysis-services/analysis-services-tutorials-ssas)|Сведения о разработке и развертывании табличных и многомерных моделей служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Также рассказывается об использовании таких средств, как PowerPivot для анализа данных в моделях.|  
 |[Учебники по службам Reporting Services (SSRS)](../reporting-services/reporting-services-tutorials-ssrs.md)|Научитесь создавать основные отчеты и подписки.|  
 |[Учебники по службам Integration Services](../integration-services/integration-services-tutorials.md)|Узнайте, как создавать и развертывать пакеты [!INCLUDE[ssIS](../includes/ssis-md.md)] .|  
 |[Учебники по компоненту ядра СУБД](../relational-databases/database-engine-tutorials.md)|Узнайте, как подключаться к экземпляру ядра СУБД, а затем создавать и выполнять инструкции Transact-SQL.|  

@@ -1,5 +1,5 @@
 ---
-title: Установите ADOMD.NET на серверы веб-интерфейса под управлением центра администрирования | Документация Майкрософт
+title: Установка ADOMD.NET на серверах клиентского веб-интерфейса под управлением центра администрирования | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -10,41 +10,41 @@ ms.assetid: c2372180-e847-4cdb-b267-4befac3faf7e
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 2d8a3c6a47a9f353f44a9ec9c4a0cbb2c3cd3505
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b77948b3ae5b27d7ecb82c277424057fe39ff7a0
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66094698"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68891041"
 ---
 # <a name="install-adomdnet-on-web-front-end-servers-running-central-administration"></a>Установка ADOMD.NET на веб-серверах, обслуживающих клиентские запросы, под управлением центра администрирования
   При установке PowerPivot для SharePoint в ферму с топологией центра администрирования без служб Excel или PowerPivot для SharePoint загрузите и установите клиентскую библиотеку Microsoft ADOMD.NET, если желаете иметь полный доступ к встроенным на панели управления PowerPivot отчетам. Некоторые отчеты с панели мониторинга используют ADOMD.NET для доступа к внутренним данным, предоставляющим сведения об обработке запросов PowerPivot и исправности сервера в ферме.  
   
  **[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2010  
   
- Для SharePoint 2013 поставщик включен в пакет дополнительных компонентов SQL Server. Сведения о загрузке spPowerPivot.msi см. в разделе [пакет дополнительных компонентов Microsoft SQL Server 2014](https://www.microsoft.com/download/details.aspx?id=35577)  
+ Для SharePoint 2013 поставщик включен в пакет дополнительных компонентов SQL Server. Сведения о том, как скачать средство PowerPivot. msi, см. в статье [пакет дополнительных компонентов Microsoft SQL Server 2014](https://www.microsoft.com/download/details.aspx?id=35577) .  
   
 ### <a name="download-and-install-the-client-library"></a>Загрузка и установка клиентской библиотеки  
   
-1.  На [страницы пакета дополнительных компонентов SQL Server 2014](https://go.microsoft.com/fwlink/?LinkID=296473), найдите Microsoft ADOMD.NET.  
+1.  На [странице пакета дополнительных компонентов SQL Server 2014](https://go.microsoft.com/fwlink/?LinkID=296473)найдите Microsoft ADOMD.NET.  
   
 2.  Загрузите пакет x64 программы установки `SQL_AS_ADOMD.msi`.  
   
 3.  Запустите MSI-файл, чтобы установить библиотеку.  
   
-4.  По завершении установки сбросьте IIS. Откройте командную строку администратора и введите **IISRESET**.  
+4.  По завершении установки сбросьте IIS. Откройте административную командную строку и введите команду **iisreset**.  
   
 ### <a name="verify-installation"></a>Проверка установки  
   
 1.  Перейдите к папке Windows\Assembly.  
   
-2.  Щелкните правой кнопкой мыши файл Microsoft.AnalysisServices.AdomdClient и выберите **свойства**.  
+2.  Щелкните правой кнопкой мыши Microsoft. AnalysisServices. AdomdClient и выберите пункт **Свойства**.  
   
 3.  Нажмите **Версия**.  
   
-4.  Убедитесь, что версия содержит 12.00. \<номер сборки > и описание задано как Microsoft.AnalysisService.AdomdClient.  
+4.  Убедитесь, что версия включает 12,00. \<номер сборки > и описание — Microsoft. AnalysisService. AdomdClient.  
   
 ## <a name="see-also"></a>См. также  
- [Панель мониторинга управления PowerPivot и данные об использовании](../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md)  
+ [Панель мониторинга управления PowerPivot и данные об использовании](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Добавление типов содержимого сервера отчетов в библиотеку (службы Reporting Services в режиме интеграции с SharePoint) | Документация Майкрософт
+title: Добавление типов содержимого сервера отчетов в библиотеку (Reporting Services в режиме интеграции с SharePoint) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: ac9136c8-9ef4-484c-8e9d-05008a186db5
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 6ef4049f10363eca45615db234e3ed63687caf8a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 78c9080f1ea9ac0d733a45718886e31ab52171c8
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66110010"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68891624"
 ---
 # <a name="add-report-server-content-types-to-a-library-reporting-services-in-sharepoint-integrated-mode"></a>добавить в библиотеку типы содержимого сервера отчетов (службы Reporting Services в режиме интеграции с SharePoint)
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] обеспечивают стандартные типы содержимого SharePoint, предназначенные для управления файлами общих источников данных (RSDS), моделей отчетов (SMDL) и определений отчетов (RDL) построителя отчетов. После добавления в библиотеку типов содержимого **Отчет построителя отчетов**, **Модель отчета**и **Источник данных отчета** становится доступной команда **Создать** , позволяющая создавать новые документы этих типов.  
@@ -31,7 +31,7 @@ ms.locfileid: "66110010"
 > [!TIP]  
 >  Если вы еще **не** настроили типы содержимого для библиотеки, то сначала включите управление типами содержимого, а затем включите типы содержимого [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Процедуры включения управления типами содержимого приведены в библиотеке одного документа.  
   
- **Короткое видео:** [(SSRS) Включение типов содержимого в SharePoint2010.wmv](http://www.youtube.com/watch?v=yqhm3DrtT1w) (http://www.youtube.com/watch?v=yqhm3DrtT1w).  
+ **Короткое видео:** [(SSRS) Включение типов содержимого в SharePoint2010. wmv](http://www.youtube.com/watch?v=yqhm3DrtT1w) (http://www.youtube.com/watch?v=yqhm3DrtT1w).  
   
  **В этом разделе:**  
   
@@ -53,7 +53,7 @@ ms.locfileid: "66110010"
   
 2.  Перейдите в раздел **Параметры сайта**.  
   
-    -   В SharePoint 2013 щелкните значок **Параметры** . ![Параметры SharePoint](../analysis-services/media/as-sharepoint2013-settings-gear.gif "Параметры SharePoint")  
+    -   В SharePoint 2013 щелкните значок **Параметры** . ![Параметры SharePoint](https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "Параметры SharePoint")  
   
     -   В SharePoint 2010 щелкните **Действия сайта**и выберите **Параметры сайта**.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "66110010"
   
 5.  Обновите браузер, а затем щелкните **Активировать** для пункта **Компонент интеграции с сервером отчетов**.  
   
-    ![Деактивировать](media/rs-reportserver-integration-deactivate.gif "rs_reportserver_integration_deactive")  
+    ![Отключить](media/rs-reportserver-integration-deactivate.gif "rs_reportserver_integration_deactive")  
   
 ##  <a name="bkmk_enable_content_management"></a> Активация управления типами содержимого для одной библиотеки документов (SharePoint 2013)  
   
@@ -108,7 +108,7 @@ ms.locfileid: "66110010"
 9. > [!NOTE]  
     >  Если группа типов содержимого [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] **Типы содержимого служб SQL Server Reporting Services** не отображается на странице **Добавление типов содержимого** , одно из нижеследующего будет верно:  
   
-    -   Надстройка служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] для продуктов SharePoint еще не установлена. Дополнительные сведения см. в разделе [Установка или удаление надстройки служб Reporting Services для SharePoint &#40;SharePoint 2010 и SharePoint 2013&#41;](install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md). Раздел включает сведения об установке надстройки и пошаговом выполнении установки файлов надстройки для обхода проблем.  
+    -   Надстройка служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] для продуктов SharePoint еще не установлена. Дополнительные сведения см. [в разделе Установка или удаление надстройки Reporting Services для SharePoint &#40;SharePoint 2010 и SharePoint 2013&#41;](install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md). Раздел включает сведения об установке надстройки и пошаговом выполнении установки файлов надстройки для обхода проблем.  
   
     -   Надстройка установлена, но компонент коллекции сайтов **Компонент интеграции сервера отчетов** неактивен. Проверьте компонент коллекции сайтов в разделе **Параметр сайта**.  
   
@@ -116,7 +116,7 @@ ms.locfileid: "66110010"
   
 ##  <a name="bkmk_enable_content_management_2010"></a> Активация управления типами содержимого для одной библиотеки документов (SharePoint 2010)  
   
-1.  Откройте библиотеку, для которой нужно активировать несколько типов содержимого. На панели меню библиотеки должны увидеть следующие меню: **Новый**, **отправить**, **действия**, и **параметры**. Если меню **Параметры**отсутствует, то пользователь не имеет разрешения на добавление типа содержимого.  
+1.  Откройте библиотеку, для которой нужно активировать несколько типов содержимого. В строке меню Библиотека должны отобразиться следующие меню: **Новые**, **upload**, **Actions**и **Settings**. Если меню **Параметры**отсутствует, то пользователь не имеет разрешения на добавление типа содержимого.  
   
 2.  На ленте **Средства работы с библиотекой** щелкните **Библиотека**.  
   
@@ -164,6 +164,6 @@ ms.locfileid: "66110010"
   
 ## <a name="see-also"></a>См. также  
  [Справочная таблица по разрешениям на сайты SharePoint и списки для элементов сервера отчетов](security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)   
- [Запуск построителя отчетов &#40;построитель отчетов&#41;](report-builder/start-report-builder.md)  
+ [Запуск построитель отчетов &#40;построитель отчетов&#41;](report-builder/start-report-builder.md)  
   
   

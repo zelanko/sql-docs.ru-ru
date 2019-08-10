@@ -1,5 +1,5 @@
 ---
-title: Создание анализа служб проекта (учебник интеллектуального анализа данных) | Документация Майкрософт
+title: Создание проекта Analysis Services (учебник по интеллектуальному анализу данных — базовый) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: 784c0401-0358-4117-9c85-4e8220ce71d9
 author: minewiskan
 ms.author: owend
 manager: kfile
-ms.openlocfilehash: ee6c1a8b765843304d25f1e2ad485ede2badcba4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bec038ece2971c82315aca9965f0d897e6de1034
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62855194"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893345"
 ---
 # <a name="creating-an-analysis-services-project-basic-data-mining-tutorial"></a>Создание проекта служб Analysis Services (учебник по интеллектуальному анализу данных — начальный уровень)
   Каждый проект служб [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] определяет объекты в одной базе данных служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . База данных [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] может содержать множество различных типов объектов  
@@ -32,7 +32,7 @@ ms.locfileid: "62855194"
   
  По умолчанию службы [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] используют для новых проектов экземпляр **localhost** . Если необходимо использовать именованный экземпляр или другой сервер, то сначала создайте и откройте проект, а затем измените имя экземпляра.  
   
- Дополнительные сведения о службах [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] см. в разделе [Creating an Analysis Services Project](../analysis-services/lesson-1-1-creating-an-analysis-services-project.md).  
+ Дополнительные сведения о службах [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] см. в разделе [Creating an Analysis Services Project](https://docs.microsoft.com/analysis-services/lesson-1-1-creating-an-analysis-services-project).  
   
 ### <a name="to-create-an-analysis-services-project"></a>Создание проекта служб Analysis Services  
   
@@ -44,7 +44,7 @@ ms.locfileid: "62855194"
   
 4.  На панели **Шаблоны** выберите **Проект многомерных данных и интеллектуального анализа данных служб Analysis Services**.  
   
-5.  В **имя** окне нового проекта имя `BasicDataMining`.  
+5.  В поле **имя** введите имя нового проекта `BasicDataMining`.  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -57,10 +57,10 @@ ms.locfileid: "62855194"
 3.  В правой части панели **Страницы свойств** на панели **Целевой объект**, убедитесь в том, что именем **сервера** является **localhost**. Если используется другой экземпляр, введите имя этого экземпляра. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ## <a name="next-task-in-lesson"></a>Следующая задача занятия  
- [Создание источника данных &#40;учебник интеллектуального анализа данных&#41;](../../2014/tutorials/creating-a-data-source-basic-data-mining-tutorial.md)  
+ [Учебник по созданию базового &#40;интеллектуального анализа данных в источнике данных&#41;](../../2014/tutorials/creating-a-data-source-basic-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>См. также  
- [Построение проектов служб Analysis Services (среда SSDT)](../analysis-services/multidimensional-models/build-analysis-services-projects-ssdt.md)   
- [Создание проекта служб Analysis Services (среда SSDT)](../analysis-services/multidimensional-models/create-an-analysis-services-project-ssdt.md)  
+ [Построение проектов служб Analysis Services (среда SSDT)](https://docs.microsoft.com/analysis-services/multidimensional-models/build-analysis-services-projects-ssdt)   
+ [Создание проекта служб Analysis Services (среда SSDT)](https://docs.microsoft.com/analysis-services/multidimensional-models/create-an-analysis-services-project-ssdt)  
   
   

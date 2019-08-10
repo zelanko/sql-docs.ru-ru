@@ -10,12 +10,12 @@ ms.assetid: 4f8aa192-e6fc-4b4e-b107-5a5372ac31d9
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b39d9d685b158b32dc504229221e6089e6b3e41f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 45f4b0b09c5f99a1dc561fdba40a659b7f0012d6
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66107990"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68891138"
 ---
 # <a name="relational-query-designer-user-interface"></a>Пользовательский интерфейс конструктора реляционных запросов
   Конструктор отчетов в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] предоставляет как графический конструктор запросов, так и текстовый конструктор запросов, которые используются для создания запросов, указывающих данные для получения из [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] и [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] для набора данных отчета. Графический конструктор запросов используется для просмотра метаданных, интерактивного создания запроса, а также для просмотра его результатов. Текстовый конструктор запросов используется для просмотра запроса, созданного графическим конструктором запросов, или для его изменения. Также можно импортировать существующий запрос из файла или отчета.  
@@ -36,11 +36,11 @@ ms.locfileid: "66107990"
   
  На следующем рисунке показан графический конструктор запросов при использовании таблиц и представлений.  
   
- ![Графический конструктор запросов](../analysis-services/media/rsqd-relational-graphical.gif "Графический конструктор запросов")  
+ ![Графический конструктор запросов](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqd-relational-graphical.gif "Графический конструктор запросов")  
   
  На следующем рисунке показан графический конструктор запросов при использовании хранимых процедур или возвращающих табличное значение функций.  
   
- ![Хранимая процедура в графическом конструкторе запросов](../analysis-services/media/rs-relational-graphical-sp.gif "Хранимая процедура в графическом конструкторе запросов")  
+ ![Хранимая процедура в графическом конструкторе запросов](https://docs.microsoft.com/analysis-services/analysis-services/media/rs-relational-graphical-sp.gif "Хранимая процедура в графическом конструкторе запросов")  
   
  В следующей таблице описываются функции каждой панели.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "66107990"
   
  Агрегаты предоставляют сводки данных, а сами данные группируются, чтобы поддерживать агрегаты, предоставляющие сводные данные. При использовании статистического выражения в запросе другие поля, возвращаемые запросом, автоматически группируются и запрос включает предложение SQL GROUP BY. Можно создавать сводку данных без добавления статистического выражения, используя только параметр **Группировка по** в списке **Группировка и статистическое выражение** . Многие статистические выражения содержат версию, использующую ключевое слово DISTINCT. Включение DISTINCT позволяет избежать повторяющихся значений.  
   
- [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] использует [!INCLUDE[tsql](../includes/tsql-md.md)] и [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] использует [!INCLUDE[DWsql](../includes/dwsql-md.md)]. Оба диалекта языка SQL поддерживают предложение, ключевое слово и статистические выражения, предоставляемые конструктором запросов.  
+ [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)]использует [!INCLUDE[tsql](../includes/tsql-md.md)] и [!INCLUDE[msCoName](../includes/msconame-md.md)] использует.[!INCLUDE[DWsql](../includes/dwsql-md.md)] [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] Оба диалекта языка SQL поддерживают предложение, ключевое слово и статистические выражения, предоставляемые конструктором запросов.  
   
  Дополнительные сведения о [!INCLUDE[tsql](../includes/tsql-md.md)] см. в разделе [Справочник по Transact-SQL (компонент Database Engine)](/sql/t-sql/language-reference) [электронной документации](https://go.microsoft.com/fwlink/?LinkId=141687) по [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] на сайте msdn.microsoft.com.  
   

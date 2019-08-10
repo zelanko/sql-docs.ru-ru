@@ -10,12 +10,12 @@ ms.assetid: eec38696-5e26-46fa-bc83-aa776f470ce8
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 8e1aa9411fbc11becf8e7b159c27ef609e38083b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: baf802929aa4bf0becc5eece41a445f180580daf
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66094554"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68890768"
 ---
 # <a name="install-powerpivot-for-sharepoint-2010"></a>Установка PowerPivot для SharePoint 2010
   [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] представляет собой набор служб среднего уровня и серверных служб, которые обеспечивают доступ к данным PowerPivot в ферме SharePoint 2010. Если для создания книг с аналитическими данными в компании используется клиентское приложение [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для Excel 2010, то для доступа к этим данным в серверной среде потребуется [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] . В этой теме пошагово рассматривается процесс установки и приводятся ссылки на другие темы, которые помогут при настройке PowerPivot.  
@@ -26,7 +26,7 @@ ms.locfileid: "66094554"
   
  
   
- Инструкции по установке [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] и [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] на одном сервере, см. в разделе [контрольный список развертывания: Службы Reporting Services, Power View и PowerPivot для SharePoint](deployment-checklist-reporting-services-power-view-power-pivot-for-sharepoint.md).  
+ Инструкции по установке [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] и [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] размещению на том же сервере см. в [разделе Контрольный список развертывания. Reporting Services, Power View и PowerPivot для SharePoint](deployment-checklist-reporting-services-power-view-power-pivot-for-sharepoint.md).  
   
 ## <a name="prerequisites"></a>предварительные требования  
   
@@ -42,9 +42,9 @@ ms.locfileid: "66094554"
   
 6.  Должно быть доступно имя экземпляра [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Не допускается, чтобы на компьютере, где устанавливается PowerPivot для SharePoint, уже имелся именованный экземпляр [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   
-7.  Экземпляр [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] не может входить в состав отказоустойчивого кластера SQL Server. Используйте функции высокого уровня доступности продукта SharePoint. Например, службы Excel управляют распределением нагрузки серверов PowerPivot для SharePoint. Дополнительные сведения см. в разделе [управление данных служб Excel параметрами модели (SharePoint Server 2013)](https://technet.microsoft.com/library/jj219780.aspx) (https://technet.microsoft.com/library/jj219780.aspx).  
+7.  Экземпляр [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] не может входить в состав отказоустойчивого кластера SQL Server. Используйте функции высокого уровня доступности продукта SharePoint. Например, службы Excel управляют распределением нагрузки серверов PowerPivot для SharePoint. Дополнительные сведения см. в разделе [Управление параметрами модели данных служб Excel (SharePoint Server 2013)](https://technet.microsoft.com/library/jj219780.aspx) (https://technet.microsoft.com/library/jj219780.aspx).  
   
-8.  Если [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] устанавливается в существующей ферме, необходимо наличие одного или нескольких веб-приложений SharePoint, в которых настроен классический режим проверки подлинности. Доступ к данным [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] поддерживается только в веб-приложениях, использующих классическую проверку подлинности Windows. Дополнительные сведения о требованиях к классическому режиму см. в разделе [PowerPivot Authentication and Authorization](../../analysis-services/power-pivot-sharepoint/power-pivot-authentication-and-authorization.md).  
+8.  Если [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] устанавливается в существующей ферме, необходимо наличие одного или нескольких веб-приложений SharePoint, в которых настроен классический режим проверки подлинности. Доступ к данным [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] поддерживается только в веб-приложениях, использующих классическую проверку подлинности Windows. Дополнительные сведения о требованиях к классическому режиму см. в разделе [PowerPivot Authentication and Authorization](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-authentication-and-authorization).  
   
 9. Изучите следующие дополнительные разделы, чтобы ознакомиться с требованиями к системе и версиям:  
   
@@ -76,7 +76,7 @@ ms.locfileid: "66094554"
   
 8.  На странице **Роль установки** выберите **SQL Server PowerPivot для SharePoint**.  
   
-9. В установку при необходимости можно добавить экземпляр компонента Database Engine. Это делается при настройке новой фермы и нужен сервер для выполнения конфигурации и содержимого баз данных фермы. Если добавить компонент Database Engine, он будет установлен как именованный экземпляр PowerPivot. При любой необходимости задать подключение к этому экземпляру (например, в мастере настройки фермы при использовании мастера для настройки фермы), введите имя базы данных в следующем формате: <`servername`> \PowerPivot.  
+9. В установку при необходимости можно добавить экземпляр компонента Database Engine. Это можно сделать, если вы настраиваете новую ферму и вам нужен сервер базы данных для запуска конфигурации и баз данных содержимого фермы. Если добавить компонент Database Engine, он будет установлен как именованный экземпляр PowerPivot. Если необходимо указать соединение с этим экземпляром (например, в мастере настройки фермы, если для настройки фермы используется этот мастер), введите имя базы данных в следующем формате: <`servername`> \PowerPivot.  
   
      ![GMNI_SetupUI_FeatureRole](../../../2014/sql-server/install/media/gmni-setupui-featurerole.gif "GMNI_SetupUI_FeatureRole")  
   
@@ -92,7 +92,7 @@ ms.locfileid: "66094554"
   
      Для служб SQL Server Analysis Services необходимо указать учетную запись пользователя домена. Не указывайте встроенную учетную запись. Учетная запись домена требуется для управления учетной записью службы Analysis Services как *управляемой учетной записью* в центре администрирования SharePoint Central.  
   
-     ![Настройка SSAS Server](../../../2014/sql-server/install/media/ssas-powerpivotsetupsql2012sp1-serverconfiguration.gif "Настройка SSAS Server")  
+     ![Конфигурация сервера SSAS](../../../2014/sql-server/install/media/ssas-powerpivotsetupsql2012sp1-serverconfiguration.gif "Конфигурация сервера SSAS")  
   
      Если был добавлен компонент SQL Server Database Engine и агент SQL Server, можно настроить запуск служб под учетной записью пользователя домена или виртуальной учетной записью по умолчанию.  
   
@@ -120,35 +120,35 @@ ms.locfileid: "66094554"
 > [!IMPORTANT]  
 >  Перед настройкой [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] или фермы SharePoint, в которой используется сервер баз данных [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , необходимо установить пакет обновления SharePoint 2010 SP2. Если пакет обновления еще не установлен, установите его перед тем, как начать настройку сервера.  
   
- Установка не будет завершена до настройки сервера. В этом выпуске Настройка сервера всегда выполняется как задача после установки, с помощью одного из следующих подходов: [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Средство настройки, центра администрирования или PowerShell. Для продолжения выберите один из следующих вариантов.  
+ Установка не будет завершена до настройки сервера. В этом выпуске Конфигурация сервера всегда выполняется как задача после установки с помощью одного из следующих подходов: [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]Средство настройки, центр администрирования или PowerShell. Для продолжения выберите один из следующих вариантов.  
   
--   [Настройка или восстановление PowerPivot для SharePoint 2010 &#40;средство настройки PowerPivot&#41;](../../../2014/analysis-services/configure-repair-powerpivot-sharepoint-2010.md)  
+-   [Настройка или восстановление PowerPivot для SharePoint 2010 &#40;средства настройки PowerPivot&#41;](../../../2014/analysis-services/configure-repair-powerpivot-sharepoint-2010.md)  
   
--   [Настройка и администрирование сервера PowerPivot в центре администрирования](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)  
+-   [Настройка и администрирование сервера PowerPivot в центре администрирования](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration)  
   
--   [Настройка PowerPivot с помощью Windows PowerShell](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-using-windows-powershell.md)  
+-   [Настройка PowerPivot с помощью Windows PowerShell](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-configuration-using-windows-powershell)  
   
- **Соединение с экземпляром компонента Database Engine.** После установки [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]программа установки SQL Server предлагает возможность добавить к установке экземпляр компонента Database Engine. Вы может добавили экземпляр компонента Database Engine для установки при настройке новой фермы и нужен сервер для выполнения конфигурации фермы и базы данных содержимого. Если вы добавили компонент Database Engine, то он был установлен как именованный экземпляр [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . При любой необходимости задать подключение к этому экземпляру (например, в мастере настройки фермы при использовании мастера для настройки фермы), не забудьте ввести имя базы данных в следующем формате: <`servername`> \PowerPivot.  
+ **Соединение с экземпляром ядро СУБД.** После установки [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]программа установки SQL Server предлагает возможность добавить к установке экземпляр компонента Database Engine. Возможно, вы добавили в установку экземпляр ядро СУБД, если вы настраиваете новую ферму и вам нужен сервер базы данных для запуска конфигурации и баз данных содержимого фермы. Если вы добавили компонент Database Engine, то он был установлен как именованный экземпляр [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Всякий раз, когда необходимо указать соединение с этим экземпляром (например, в мастере настройки фермы, если для настройки фермы используется этот мастер), не забудьте ввести имя базы данных в следующем формате: <`servername`> \PowerPivot.  
   
-##  <a name="bkmk_redist"></a> Шаг 3. Установка поставщиков OLE DB служб Analysis Services на серверах приложений служб Excel  
+##  <a name="bkmk_redist"></a> Шаг 3. Установка поставщиков OLE DB Analysis Services на серверах приложений служб Excel  
  Потребуются дополнительные шаги установки, если службы вычислений Excel и [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] запускаются на разных серверах приложений. На серверах приложений, использующих службы вычислений Excel, установите соответствующую версию поставщика OLE DB для служб Analysis Services (MSOLAP).  
   
 -   Версия [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] MSOLAP включена в программу установки SQL Server, поэтому установка версии [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] MSOLAP требуется только в том случае, если сервер приложений не является сервером приложений PowerPivot.  
   
     > [!NOTE]  
-    >  Серверу приложений служб вычислений Excel также требуется экземпляр файла **Microsoft.AnalysisServices.Xmla.dll** в глобальной сборке. Чтобы установить библиотеку DLL на сервере приложений, установите [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Выберите «Средства управления — полный» на **Выбор компонентов** странице мастера установки SQL Server.  
+    >  Серверу приложений служб вычислений Excel также требуется экземпляр файла **Microsoft.AnalysisServices.Xmla.dll** в глобальной сборке. Чтобы установить библиотеку DLL на сервере приложений, установите [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. На странице **Выбор компонентов** мастера установки SQL Server выберите "средства управления — Готово".  
   
 -   Если сервер приложений должен поддерживать старые книги [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , необходимо установить версию MSOLAP для SQL Server 2008 R2.  
   
  Дополнительные сведения об установке поставщика, включая шаги для проверки, см. в разделе [Install the Analysis Services OLE DB Provider on SharePoint Servers](../../../2014/sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md).  
   
-##  <a name="bkmk_verify"></a> Шаг 4. Проверка установки  
- На этом последнем шаге убедитесь в полной работоспособности SharePoint 2010 и [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] . Инструкции см. в разделе [Verify a PowerPivot for SharePoint Installation](../../analysis-services/instances/install-windows/verify-a-power-pivot-for-sharepoint-installation.md).  
+##  <a name="bkmk_verify"></a> Шаг 4. Проверка установки  
+ На этом последнем шаге убедитесь в полной работоспособности SharePoint 2010 и [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] . Инструкции см. в разделе [Verify a PowerPivot for SharePoint Installation](https://docs.microsoft.com/analysis-services/instances/install-windows/verify-a-power-pivot-for-sharepoint-installation).  
   
 ## <a name="see-also"></a>См. также  
  [Установка PowerPivot для SharePoint 2010](../../../2014/sql-server/install/powerpivot-for-sharepoint-2010-installation.md)   
- [Контрольный список развертывания: Службы Reporting Services, Power View и PowerPivot для SharePoint](deployment-checklist-reporting-services-power-view-power-pivot-for-sharepoint.md)   
- [Контрольный список развертывания: Масштабное развертывание путем добавления серверов PowerPivot в ферме SharePoint 2010](../../../2014/sql-server/install/deployment-checklist-scale-out-adding-powerpivot-servers-sharepoint-2010-farm.md)   
- [Контрольный список развертывания: Установка нескольких серверов PowerPivot для SharePoint 2010](../../../2014/sql-server/install/deployment-checklist-multiserver-installation-powerpivot-sharepoint-2010.md)  
+ [Контрольный список развертывания: Reporting Services, Power View и PowerPivot для SharePoint](deployment-checklist-reporting-services-power-view-power-pivot-for-sharepoint.md)   
+ [Контрольный список развертывания: Горизонтальное масштабирование путем добавления серверов PowerPivot в ферму SharePoint 2010](../../../2014/sql-server/install/deployment-checklist-scale-out-adding-powerpivot-servers-sharepoint-2010-farm.md)   
+ [Контрольный список развертывания: Многосерверная установка PowerPivot для SharePoint 2010](../../../2014/sql-server/install/deployment-checklist-multiserver-installation-powerpivot-sharepoint-2010.md)  
   
   

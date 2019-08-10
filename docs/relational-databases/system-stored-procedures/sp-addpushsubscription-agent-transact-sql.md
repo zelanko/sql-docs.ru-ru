@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: 1fdd2052-50d8-4318-8aa7-fc635d5cad18
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 754180cfa1ff907e9590b70ba074cd28eaaa804e
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 8073d51fb4376acbdc19724422f6ef7543e3c403
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769092"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68894044"
 ---
-# <a name="spaddpushsubscriptionagent-transact-sql"></a>sp_addpushsubscription_agent (Transact-SQL)
+# <a name="sp_addpushsubscription_agent-transact-sql"></a>sp_addpushsubscription_agent (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Добавляет новое запланированное задание агента, используемое для синхронизации принудительной подписки на публикацию транзакций. Эта хранимая процедура выполняется на издателе в базе данных публикации.  
@@ -71,7 +71,7 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
 ## <a name="arguments"></a>Аргументы  
 `[ @publication = ] 'publication'`Имя публикации. Аргумент *publication* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @subscriber = ] 'subscriber'`Имя подписчика. Аргумент *Subscriber* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @subscriber = ] 'subscriber'`Имя экземпляра подписчика или имя прослушивателя AG, если база данных подписчика является группой доступности. Аргумент *Subscriber* имеет тип **sysname**и значение по умолчанию NULL. 
   
 `[ @subscriber_db = ] 'subscriber_db'`Имя базы данных подписки. *subscriber_db* имеет тип **sysname**и значение по умолчанию NULL. Для подписчика, не являющегося SQL Server, укажите значение **(назначение по умолчанию)** для *subscriber_db*.  
   
