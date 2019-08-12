@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: dae57067-0275-4ac3-8f34-1b9d169f1112
 author: janinezhang
 ms.author: janinez
-ms.openlocfilehash: 9ef5288ea0ffef804aeb9c11aff51b0db6ef4093
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3b7a527770e41870729c194bd9c7651b77cffd2d
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68057870"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68890846"
 ---
 # <a name="wmi-data-reader-task"></a>Задача «Модуль чтения данных WMI»
 
@@ -104,7 +104,7 @@ Select * FROM Win32_QuickFixEngineering
 ## <a name="wmi-data-reader-task-editor-general-page"></a>Редактор задачи «Модуль чтения данных WMI» (страница «Общие»)
   Страница **Общие** диалогового окна **Редактор задачи «Модуль чтения данных WMI»** позволяет дать имя и описание задаче «Модуль чтения данных WMI».  
   
-  Дополнительные сведения о языке запросов WQL см. в разделе документации по инструментарию управления Windows [Запросы с использованием языка запросов WQL](https://go.microsoft.com/fwlink/?LinkId=79045)в библиотеке MSDN.  
+  Дополнительные сведения о языке запросов WQL см. в разделе документации по инструментарию управления Windows [Запросы с использованием языка запросов WQL](/windows/win32/wmisdk/querying-with-wql)в библиотеке MSDN.  
   
 ### <a name="options"></a>Параметры  
  **Название**  
@@ -119,7 +119,7 @@ Select * FROM Win32_QuickFixEngineering
 ## <a name="wmi-data-reader-task-editor-wmi-options-page"></a>Редактор задачи «Модуль чтения данных WMI» (страница «Параметры инструментария WMI»)
   Страница **Параметры инструментария WMI** в диалоговом окне **Редактор задачи "Модуль чтения данных WMI"** используется для указания источника запроса WQL (Windows Management Instrumentation Query Language) и назначения результатов запроса.  
   
- Дополнительные сведения о языке запросов WQL см. в разделе документации по инструментарию управления Windows [Запросы с использованием языка запросов WQL](https://go.microsoft.com/fwlink/?LinkId=79045)в библиотеке MSDN.  
+ Дополнительные сведения о языке запросов WQL см. в разделе документации по инструментарию управления Windows [Запросы с использованием языка запросов WQL](/windows/win32/wmisdk/querying-with-wql)в библиотеке MSDN.  
   
 ### <a name="static-options"></a>Статические параметры  
  **WMIConnectionName**  

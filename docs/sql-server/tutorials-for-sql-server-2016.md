@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: a93667ad-e856-405a-9328-065331b7ab7b
 author: craigg-msft
 ms.author: craigg
-ms.openlocfilehash: edd6d1ddb936571861260e7fafe6a3903e72b29e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6b6870e6b958b2ce7a7c5d050000bd190ef345df
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68091818"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893083"
 ---
 # <a name="tutorials-for-sql-server"></a>Руководства по SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "68091818"
   
 |Технология|Описание|  
 |--------------|---------------|  
-|[Учебники по службам Analysis Services (SSAS)](../analysis-services/analysis-services-tutorials-ssas.md)|Сведения о разработке и развертывании табличных и многомерных моделей служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Также рассказывается об использовании таких средств, как PowerPivot для анализа данных в моделях.|  
+|[Учебники по службам Analysis Services (SSAS)](https://docs.microsoft.com/analysis-services/analysis-services-tutorials-ssas)|Сведения о разработке и развертывании табличных и многомерных моделей служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Также рассказывается об использовании таких средств, как PowerPivot для анализа данных в моделях.|  
 |[Учебники по компоненту ядра СУБД](../relational-databases/database-engine-tutorials.md)|Узнайте, как подключаться к экземпляру ядра СУБД, а затем создавать и выполнять инструкции Transact-SQL.|  
 |[Учебники по информационному менеджменту предприятия](https://msdn.microsoft.com/library/8745dc80-193d-4de0-9f17-ba648ab1e81c)|Сведения о том, как осуществляется управление данными на предприятии с использованием технологии Microsoft EIM.|  
 |[Учебники по службам Integration Services](../integration-services/integration-services-tutorials.md)|Узнайте, как создавать и развертывать пакеты [!INCLUDE[ssIS](../includes/ssis-md.md)] .|  

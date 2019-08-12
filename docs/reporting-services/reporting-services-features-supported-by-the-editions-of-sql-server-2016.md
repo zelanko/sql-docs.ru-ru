@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 06/20/2019
-ms.openlocfilehash: eca8f43d358ca3869c3812a457b710d64dadeaf5
-ms.sourcegitcommit: 630f7cacdc16368735ec1d955b76d6d030091097
+ms.openlocfilehash: 3e61381c2298a197be698ed82c247023ad708789
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/24/2019
-ms.locfileid: "67343881"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893287"
 ---
 # <a name="sql-server-reporting-services-features-supported-by-its-editions"></a>Возможности служб SQL Server Reporting Services, поддерживаемые различными выпусками
 
@@ -24,9 +24,9 @@ ms.locfileid: "67343881"
 
  ## <a name="try-sql-server-2017"></a>Оцените SQL Server 2017
 
-> [![Скачать SQL Server 2017](../analysis-services/media/download.png)](https://go.microsoft.com/fwlink/?LinkID=829477) **[Скачать SQL Server 2017 на странице центра оценки](https://go.microsoft.com/fwlink/?LinkID=829477)**    
+> [![Скачать SQL Server 2017](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png)](https://go.microsoft.com/fwlink/?LinkID=829477) **[Скачать SQL Server 2017 на странице центра оценки](https://go.microsoft.com/fwlink/?LinkID=829477)**    
 >
-> ![Значок виртуальной машины Azure](../analysis-services/media/azure-virtual-machine-small.png) **[Разверните виртуальную машину с уже установленным SQL Server 2017](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)**    
+> ![Значок виртуальной машины Azure](https://docs.microsoft.com/analysis-services/analysis-services/media/azure-virtual-machine-small.png) **[Разверните виртуальную машину с уже установленным SQL Server 2017](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)**    
 
 Функции, поддерживаемые выпусками Evaluation и Developer, перечислены в столбце SQL Server Enterprise Edition в приведенной ниже таблице.
 

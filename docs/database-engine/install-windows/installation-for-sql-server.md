@@ -16,12 +16,12 @@ ms.assetid: edd75f68-dc62-4479-a596-57ce8ad632e5
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 372bdfd2bdb749a624f5b68ff69380825d86b3ee
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a05419d31d7b3c8579afc824b9bb27f15aa9481d
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67990920"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892698"
 ---
 # <a name="sql-server-installation"></a>Установка SQL Server
 
@@ -77,7 +77,7 @@ ms.locfileid: "67990920"
 [Установка компонентов бизнес-аналитики SQL Server с SharePoint (Power Pivot и службы Reporting Services)](https://msdn.microsoft.com/library/3166107c-30c2-468e-bb1b-bb42b79b37c3)  
  В этом разделе описывается установка компонентов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в среде SharePoint. В нем указано, какие компоненты [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно установить при использовании той или иной версии и выпуска SharePoint. В нем также описаны процедуры установки [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint и служб Reporting Services в режиме интеграции с SharePoint.  
   
-![ssrs_fyi_note](../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png) Установите новый образец базы данных [Wide World Importers](../../sample/world-wide-importers/wide-world-importers-documentation.md). 
+![ssrs_fyi_note](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png) Установите новый образец базы данных [Wide World Importers](../../sample/world-wide-importers/wide-world-importers-documentation.md). 
   
 [Дополнительные образцы кода и баз данных SQL Server](https://sqlserversamples.codeplex.com/)  
  Описывает установку и настройку образцов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , а также образцов баз данных.  

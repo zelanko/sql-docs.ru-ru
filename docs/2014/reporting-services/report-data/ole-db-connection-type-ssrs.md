@@ -10,12 +10,12 @@ ms.assetid: d00cb13b-e1c2-4300-a195-3da1430a2df1
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 9d79ef7ae57894470f58701fd51a1d9ddd1b7126
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0361e58bac4468fd41d62547c8b93adb849d39ac
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66107214"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68891991"
 ---
 # <a name="ole-db-connection-type-ssrs"></a>Тип соединения OLE DB (службы SSRS)
   Для включения данных из источника данных OLE DB необходим набор данных на основе источника данных отчета типа OLE DB. Этот встроенный тип источника данных основан на модуле обработки данных OLE DB служб [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
@@ -42,7 +42,7 @@ Provider=SQLNCLI10.1;Data Source=server; Initial Catalog=AdventureWorks
   
  После публикации отчета может понадобиться изменить учетные данные источника данных, чтобы разрешения, необходимые для получения данных при запуске отчета на сервере отчетов, были допустимыми.  
   
- Дополнительные сведения см. в разделе [подключения к данным, источники данных и строки подключения в службах Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md) или [указание учетных данных в построителе отчетов](../specify-credentials-in-report-builder.md).  
+ Дополнительные сведения см. в разделе [подключения к данным, источники данных и строки подключения в Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md) или [укажите учетные данные в построитель отчетов](../specify-credentials-in-report-builder.md).  
   
 ###### <a name="special-characters-in-a-password"></a>Специальные символы в пароле  
  Если источник данных OLE DB настроен таким образом, что предлагается ввести пароль, либо пароль включен в строку подключения и пользователь вводит пароль, содержащий специальные символы (например, знаки препинания), драйверы некоторых базовых источников данных не смогут проверить специальные символы. При обработке отчета сообщение «Неверный пароль» может быть признаком этой ошибки.  
@@ -62,7 +62,7 @@ Provider=SQLNCLI10.1;Data Source=server; Initial Catalog=AdventureWorks
   
  Для успешного получения требуемых данных необходимо, чтобы синтаксис запроса поддерживался поставщиком данных. Поддержка параметров различается в зависимости от поставщика данных. Дополнительные сведения см. в разделах по выбранным поставщикам данных. Пример:  
   
--   [Поставщик OLE DB служб Analysis Services (службы Analysis Services — многомерные данные)](../../analysis-services/dev-guide/analysis-services-ole-db-provider-analysis-services-multidimensional-data.md)  
+-   [Поставщик OLE DB служб Analysis Services (службы Analysis Services — многомерные данные)](https://docs.microsoft.com/analysis-services/dev-guide/analysis-services-ole-db-provider-analysis-services-multidimensional-data)  
   
 -   [Использование поставщика данных платформы .NET Framework для Oracle](https://go.microsoft.com/fwlink/?LinkId=112314)  
   
@@ -75,7 +75,7 @@ Provider=SQLNCLI10.1;Data Source=server; Initial Catalog=AdventureWorks
 ##  <a name="HowTo"></a> Инструкции  
  В этом разделе содержатся пошаговые инструкции по работе с подключениями к данным, источниками данных и наборами данных.  
   
- [Добавление и проверка подключения к данным или источнику данных &#40;построитель отчетов и службы SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
+ [Добавление и проверка подключения к данным или построитель отчетов источника &#40;данных и служб SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
   
  [Создание общего или внедренного набора данных (построитель отчетов и службы SSRS)](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)  
   
@@ -86,7 +86,7 @@ Provider=SQLNCLI10.1;Data Source=server; Initial Catalog=AdventureWorks
 ##  <a name="Related"></a> См. также  
  В этих разделах документации содержатся подробные сведения о данных отчетов, а также методические сведения об определении, настройке и использовании элементов отчетов, связанных с данными.  
   
- [Добавление данных в отчет &#40;построитель отчетов и службы SSRS&#41;](report-datasets-ssrs.md)  
+ [Добавление данных в построитель отчетов отчетов &#40;и службы SSRS&#41;](report-datasets-ssrs.md)  
  Предоставляет общие сведения о доступе к данным отчета.  
   
  [Подключения к данным, источники данных и строки подключения в построителе отчетов](../data-connections-data-sources-and-connection-strings-in-report-builder.md)  

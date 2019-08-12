@@ -16,12 +16,12 @@ ms.assetid: c642fc4f-8734-4626-a194-42ac9cd8e2ef
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: d5d9c379aaa2b8b0b92e064ed6dc21a4eb968b95
-ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
+ms.openlocfilehash: f8dbafaede198c82b3e41625d3e670afd980c57a
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67412596"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893451"
 ---
 # <a name="performance-counters-msrs-2011-web-service-performance-objects"></a>Счетчики производительности для веб-службы MSRS 2011, объекты производительности
   В этом разделе рассматриваются счетчики производительности для объектов производительности **MSRS 2011 Web Service** и **MSRS 2011 Windows Service** . Эти объекты являются частью развертывания служб [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] в собственном режиме.  
@@ -111,7 +111,7 @@ ms.locfileid: "67412596"
 |**Всего обновлений моментальных снимков**|Общее число обновлений моментальных снимков состояния выполнения отчета.|  
   
 ##  <a name="bkmk_powershell"></a> Использование командлетов PowerShell для возврата списков  
- ![Содержимое, связанное с PowerShell](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Содержимое, связанное с PowerShell")Следующий скрипт Windows PowerShell возвращает наборы счетчиков, в которых CounterSetName начинается с "msr":  
+ ![Содержимое, связанное с PowerShell](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Содержимое, связанное с PowerShell")Следующий скрипт Windows PowerShell возвращает наборы счетчиков, в которых CounterSetName начинается с "msr":  
   
 ```  
 get-counter -listset msr*  

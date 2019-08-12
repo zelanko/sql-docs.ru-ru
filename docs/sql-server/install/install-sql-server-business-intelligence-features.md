@@ -10,12 +10,12 @@ ms.assetid: 67399b24-e48a-49f3-9dd4-32d78c6a2ece
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: afef865ed2440f278d61e8b0f4d3304867803853
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 418852430170e40308d1d37446b9868281960f49
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68126192"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68894053"
 ---
 # <a name="install-sql-server-business-intelligence-features"></a>Установка компонентов бизнес-аналитики SQL Server 2016
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -27,9 +27,9 @@ ms.locfileid: "68126192"
 ## <a name="sql-server-bi-features"></a>Компоненты бизнес-аналитики SQL Server  
  Все компоненты SQL Server, включая компоненты бизнес-аналитики, устанавливаются с помощью программы установки SQL Server. Приведенные ниже ссылки предоставляют дополнительные сведения о каждой из функций бизнес-аналитики.  
   
--   [Установка служб Analysis Services](../../analysis-services/instances/install-windows/install-analysis-services.md)  
+-   [Установка служб Analysis Services](https://docs.microsoft.com/analysis-services/instances/install-windows/install-analysis-services)  
   
--   [Установка служб Analysis Services в режиме Power Pivot](../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md)  
+-   [Установка служб Analysis Services в режиме Power Pivot](https://docs.microsoft.com/analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode)  
   
 -   [Установка служб Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md)  
   
@@ -46,7 +46,7 @@ ms.locfileid: "68126192"
   
 ## <a name="see-also"></a>См. также:  
  [Новые возможности служб Reporting Services (SSRS)](https://msdn.microsoft.com/bc909063-6b84-4b3a-80d2-e93fc04b4b9d)   
- [Новые возможности в службах Analysis Services](../../analysis-services/what-s-new-in-analysis-services.md)   
+ [Новые возможности в службах Analysis Services](https://docs.microsoft.com/analysis-services/what-s-new-in-analysis-services)   
  [Новые возможности в службах Integration Services](../../integration-services/what-s-new-in-integration-services-in-sql-server-2016.md)   
  [Новые возможности Master Data Services (MDS)](../../master-data-services/what-s-new-in-master-data-services-mds.md)   
  [Установка SQL Server 2016](../../database-engine/install-windows/install-sql-server.md)   

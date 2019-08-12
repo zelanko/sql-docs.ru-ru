@@ -8,12 +8,12 @@ ms.assetid: c2804a9a-08ea-4f4a-805d-a2c19c68733d
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 855991a52d2f531f559620427d4a3fc29fd79f35
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 41a93cfdac331830477171dfdfc4f306c073bda3
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64775975"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893372"
 ---
 # <a name="install-or-uninstall-the-reporting-services-add-in-for-sharepoint"></a>Установка или удаление надстройки служб Reporting Services для SharePoint
 
@@ -51,7 +51,7 @@ ms.locfileid: "64775975"
 ##  <a name="bkmk_3ways_to_install"></a> Общие сведения о методах установки  
  Надстройку служб SQL Server 2016 Reporting Services для продуктов SharePoint можно установить одним из двух способов.  
   
--   **Мастер установки**. ![примечание](../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "примечание") Эту надстройку в SQL Server 2016 можно установить с помощью мастера установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Выберите **надстройку служб Reporting Services для продуктов SharePoint** на странице мастера **Выбор компонентов** .  
+-   **Мастер установки**. ![примечание](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png "примечание") Эту надстройку в SQL Server 2016 можно установить с помощью мастера установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Выберите **надстройку служб Reporting Services для продуктов SharePoint** на странице мастера **Выбор компонентов** .  
   
 -   **rsSharepoint.msi** . Надстройку можно установить напрямую с установочного носителя или скачать и установить. Файл rsSharepoint.msi поддерживает как графический пользовательский интерфейс, так и установку из командной строки. Файл MSI необходимо запустить с правами администратора, сначала открыв окно командной строки с повышенными разрешениями, затем запустить файл rsSharepoint.msi из командной строки. Дополнительные сведения о скачивании надстройки см. в разделе [Где найти надстройку службы Reporting Services для продуктов SharePoint](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).  
   

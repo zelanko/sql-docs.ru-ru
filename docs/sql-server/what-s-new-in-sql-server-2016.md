@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6a428023-e3cc-4626-a88a-4c13ccbd7db0
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a5cbc96390799219347415719ddf6754e3c33bbb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 103f74b4a1be1ee2111f8ed3e983f8a468f8db2c
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67984752"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893036"
 ---
 # <a name="whats-new-in-sql-server-2016"></a>Что нового в SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]  
@@ -62,7 +62,7 @@ ms.locfileid: "67984752"
 - Новое пространство имен **[Microsoft.AnalysisServices.Tabular](https://msdn.microsoft.com/library/microsoft.analysisservices.tabular.aspx)** управляет экземплярами и моделями в табличном режиме. 
 - [Управляющие объекты службы Analysis Services (AMO)](https://msdn.microsoft.com/library/mt436122.aspx) переработаны и теперь содержат вторую сборку — **Microsoft.AnalysisServices.Core.dll**.
 
-См. раздел о [подсистеме служб Analysis Services (SSAS)](../analysis-services/what-s-new-in-analysis-services.md). 
+См. раздел о [подсистеме служб Analysis Services (SSAS)](https://docs.microsoft.com/analysis-services/what-s-new-in-analysis-services). 
 
 ## <a name="sql-server-2016-integration-services-ssis"></a>SQL Server 2016 Integration Services (SSIS)
 - Поддержка **групп доступности AlwaysOn**

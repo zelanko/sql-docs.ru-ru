@@ -11,12 +11,12 @@ ms.assetid: b071f8b8-c8e5-44e0-bbb6-04804dd1863a
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 4676b4d17dc2de9118623037e6725c2b3c637c7e
-ms.sourcegitcommit: 40f3b1f2340098496d8428f50616095a190ae94b
+ms.openlocfilehash: 9efb156c64d0e8daf7dcae8849a2e4687773602c
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68290365"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892476"
 ---
 # <a name="release-notes-for-sql-server-data-tools-ssdt"></a>Заметки о выпуске SQL Server Data Tools (SSDT)
 
@@ -45,9 +45,9 @@ P.S.  There is no need to keep this large HTML comment indefinitely.
 -->
 ## <a name="1592nbsp-ssdt-for-vs-2017"></a>15.9.2,&nbsp; SSDT для Visual Studio 2017
 
-_Выпущено_: &nbsp; 17 июля 2019 г.  
-_Номер сборки_: &nbsp; 14.0.16194.0  
-_SSDT для Visual Studio 2017_.
+_Выпущено_ : &nbsp; 17 июля 2019 г.  
+_Номер сборки_ : &nbsp; 14.0.16194.0  
+_SSDT для Visual Studio 2017_ .
 
 ### <a name="whats-new"></a>Новые возможности
 
@@ -76,9 +76,9 @@ _SSDT для Visual Studio 2017_.
 
 ## <a name="1591nbsp-ssdt-for-vs-2017"></a>15.9.1,&nbsp;SSDT для Visual Studio 2017
 
-_Выпущено_: &nbsp; 27 апреля 2019 г.  
-_Номер сборки_: &nbsp; 14.0.16191.0  
-_SSDT для Visual Studio 2017_.
+_Выпущено_ : &nbsp; 27 апреля 2019 г.  
+_Номер сборки_ : &nbsp; 14.0.16191.0  
+_SSDT для Visual Studio 2017_ .
 
 ### <a name="whats-new"></a>Новые возможности
 
@@ -108,9 +108,9 @@ _SSDT для Visual Studio 2017_.
 
 ## <a name="1590nbsp-ssdt-for-vs-2017"></a>15.9.0,&nbsp;SSDT для Visual Studio 2017
 
-_Выпущено_: &nbsp;28 января 2019 г.  
-_Номер сборки_: &nbsp;14.0.16186.0  
-_SSDT для Visual Studio 2017_.
+_Выпущено_ : &nbsp;28 января 2019 г.  
+_Номер сборки_ : &nbsp;14.0.16186.0  
+_SSDT для Visual Studio 2017_ .
 
 ### <a name="whats-new"></a>Новые возможности
 
@@ -142,9 +142,9 @@ _SSDT для Visual Studio 2017_.
 
 ## <a name="1582nbsp-ssdt-for-vs-2017"></a>15.8.2,&nbsp;SSDT для Visual Studio 2017
 
-_Выпущено_: &nbsp;5 ноября 2018 г.  
-_Номер сборки_: &nbsp;14.0.16182.0  
-_SSDT для Visual Studio 2017_.
+_Выпущено_ : &nbsp;5 ноября 2018 г.  
+_Номер сборки_ : &nbsp;14.0.16182.0  
+_SSDT для Visual Studio 2017_ .
 
 ### <a name="whats-new"></a>Новые возможности
 **SSIS**
@@ -158,9 +158,9 @@ _SSDT для Visual Studio 2017_.
 
 ## <a name="1581nbsp-ssdt-for-vs-2017"></a>15.8.1,&nbsp;SSDT для Visual Studio 2017
 
-_Выпущено_: &nbsp;27 сентября 2018 г.  
-_Номер сборки_: &nbsp;14.0.16179.0  
-_SSDT для Visual Studio 2017_.
+_Выпущено_ : &nbsp;27 сентября 2018 г.  
+_Номер сборки_ : &nbsp;14.0.16179.0  
+_SSDT для Visual Studio 2017_ .
 
 ### <a name="whats-new"></a>Новые возможности
 
@@ -178,9 +178,9 @@ _SSDT для Visual Studio 2017_.
 
 ## <a name="158nbsp-ssdt-for-vs-2017"></a>15.8,&nbsp;SSDT для Visual Studio 2017
 
-_Выпущено_: &nbsp;5 сентября 2018 г.  
-_Номер сборки_: &nbsp;14.0.16174.0  
-_SSDT для Visual Studio 2017_.
+_Выпущено_ : &nbsp;5 сентября 2018 г.  
+_Номер сборки_ : &nbsp;14.0.16174.0  
+_SSDT для Visual Studio 2017_ .
 
 ### <a name="whats-new"></a>Новые возможности
 
@@ -201,9 +201,9 @@ _SSDT для Visual Studio 2017_.
 
 ## <a name="1571nbsp-ssdt-for-vs-2017"></a>15.7.1,&nbsp;SSDT для Visual Studio 2017
 
-_Выпущено_: &nbsp;2 июля 2018 г.  
-_Номер сборки_: &nbsp; 14.0.16167.0  
-_SSDT для Visual Studio 2017_.
+_Выпущено_ : &nbsp;2 июля 2018 г.  
+_Номер сборки_ : &nbsp; 14.0.16167.0  
+_SSDT для Visual Studio 2017_ .
 
 ### <a name="whats-new"></a>Новые возможности
 
@@ -224,9 +224,9 @@ _SSDT для Visual Studio 2017_.
 
 ## <a name="1570nbsp-ssdt-for-vs-2017"></a>15.7.0,&nbsp;SSDT для Visual Studio 2017
 
-_Выпущено_: &nbsp;4 июня 2018 г.  
-_Номер сборки_: &nbsp;14.0.16165.0  
-_SSDT для Visual Studio 2017_.
+_Выпущено_ : &nbsp;4 июня 2018 г.  
+_Номер сборки_ : &nbsp;14.0.16165.0  
+_SSDT для Visual Studio 2017_ .
 
 ### <a name="whats-new"></a>Новые возможности
 
@@ -249,9 +249,9 @@ _SSDT для Visual Studio 2017_.
 
 ## <a name="1560nbsp-ssdt-for-vs-2017"></a>15.6.0,&nbsp;SSDT для Visual Studio 2017
 
-_Выпущено_: &nbsp; 10 апреля 2018 г.  
-_Номер сборки_: &nbsp;14.0.16162.0  
-_SSDT для Visual Studio 2017_.
+_Выпущено_ : &nbsp; 10 апреля 2018 г.  
+_Номер сборки_ : &nbsp;14.0.16162.0  
+_SSDT для Visual Studio 2017_ .
 
 ### <a name="whats-new"></a>Новые возможности
 
@@ -278,8 +278,8 @@ _SSDT для Visual Studio 2017_.
 
 ## <a name="1552nbsp-ssdt-for-vs-2017"></a>15.5.2,&nbsp; SSDT для Visual Studio 2017
 
-_Номер сборки_: &nbsp;14.0.16156.0  
-_SSDT для Visual Studio 2017_.
+_Номер сборки_ : &nbsp;14.0.16156.0  
+_SSDT для Visual Studio 2017_ .
 
 ### <a name="whats-new"></a>Новые возможности
 
@@ -301,8 +301,8 @@ _SSDT для Visual Studio 2017_.
 
 ## <a name="1551nbsp-ssdt-for-vs-2017"></a>15.5.1,&nbsp;SSDT для Visual Studio 2017
 
-_Номер сборки_: &nbsp;14.0.16148.0  
-_SSDT для Visual Studio 2017_.
+_Номер сборки_ : &nbsp;14.0.16148.0  
+_SSDT для Visual Studio 2017_ .
 
 ### <a name="whats-new"></a>Новые возможности
 
@@ -315,8 +315,8 @@ _SSDT для Visual Studio 2017_.
 
 ## <a name="1550nbsp-ssdt-for-vs-2017"></a>15.5.0,&nbsp;SSDT для Visual Studio 2017
 
-_Номер сборки_: &nbsp;14.0.16146.0  
-_SSDT для Visual Studio 2017_.
+_Номер сборки_ : &nbsp;14.0.16146.0  
+_SSDT для Visual Studio 2017_ .
 
 ### <a name="whats-new"></a>Новые возможности
 
@@ -342,8 +342,8 @@ _SSDT для Visual Studio 2017_.
 
 ## <a name="173nbsp-ssdt-for-vs-2015"></a>17.3,&nbsp;SSDT для Visual Studio 2015
 
-_Номер сборки_: &nbsp;14.0.61712.050  
-_SSDT для Visual Studio 2015_.
+_Номер сборки_ : &nbsp;14.0.61712.050  
+_SSDT для Visual Studio 2015_ .
 
 ### <a name="whats-new"></a>Новые возможности
 
@@ -391,8 +391,8 @@ _SSDT для Visual Studio 2015_.
 
 ## <a name="1540-previewnbsp-ssdt-for-vs-2017"></a>15.4.0 (предварительная версия),&nbsp;SSDT для Visual Studio 2017
 
-_Номер сборки_: &nbsp;14.0.16134.0  
-_SSDT для Visual Studio 2017_.
+_Номер сборки_ : &nbsp;14.0.16134.0  
+_SSDT для Visual Studio 2017_ .
   
 ### <a name="whats-new"></a>Новые возможности
 
@@ -424,8 +424,8 @@ _SSDT для Visual Studio 2017_.
 
 ## <a name="1730nbsp-ssdt-for-vs-2015"></a>17.30,&nbsp;SSDT для Visual Studio 2015
 
-_Номер сборки_: &nbsp;14.0.61709.290  
-_SSDT для Visual Studio 2015_.
+_Номер сборки_ : &nbsp;14.0.61709.290  
+_SSDT для Visual Studio 2015_ .
 
 ### <a name="whats-new"></a>Новые возможности
 
@@ -517,8 +517,8 @@ _SSDT для Visual Studio 2015_.
 
 ## <a name="1530-previewnbsp-ssdt-for-vs-2017"></a>15.3.0 (предварительная версия),&nbsp;SSDT для Visual Studio 2017
 
-_Номер сборки_: &nbsp;14.0.16121.0  
-_SSDT для Visual Studio 2017_.
+_Номер сборки_ : &nbsp;14.0.16121.0  
+_SSDT для Visual Studio 2017_ .
   
 ### <a name="whats-new"></a>Новые возможности
 
@@ -535,8 +535,8 @@ _SSDT для Visual Studio 2017_.
 
 ## <a name="172nbsp-ssdt-for-vs-2015"></a>17.2,&nbsp; SSDT для Visual Studio 2015
 
-_Номер сборки_: &nbsp;14.0.61707.300  
-_SSDT для Visual Studio 2015_.
+_Номер сборки_ : &nbsp;14.0.61707.300  
+_SSDT для Visual Studio 2015_ .
 
 ### <a name="whats-new"></a>Новые возможности
 
@@ -584,8 +584,8 @@ _SSDT для Visual Studio 2015_.
 
 ## <a name="1710nbsp-ssdt-for-vs-2015"></a>17.10,&nbsp;SSDT для Visual Studio 2015
 
-_Номер сборки_: &nbsp;14.0.61705.170  
-_SSDT для Visual Studio 2015_.
+_Номер сборки_ : &nbsp;14.0.61705.170  
+_SSDT для Visual Studio 2015_ .
 
 ### <a name="whats-new"></a>Новые возможности
 **Проекты Analysis Services:**
@@ -618,9 +618,9 @@ _SSDT для Visual Studio 2015_.
 
 ## <a name="170nbsp-ssdt-for-vs-2015"></a>17.0,&nbsp;SSDT для Visual Studio 2015
 
-_Номер сборки_: &nbsp;14.0.61704.140  
-_SSDT для Visual Studio 2015_.  
-_Поддержка SQL Server вплоть до версии 2017_.
+_Номер сборки_ : &nbsp;14.0.61704.140  
+_SSDT для Visual Studio 2015_ .  
+_Поддержка SQL Server вплоть до версии 2017_ .
 
 ### <a name="whats-new"></a>Новые возможности
 **Проекты базы данных:**
@@ -722,10 +722,10 @@ _Поддержка SQL Server вплоть до версии 2017_.
 
 ## <a name="165nbsp-ssdt-for-vs-2015"></a>16.5,&nbsp;SSDT для Visual Studio 2015
 
-_Выпущено_: &nbsp;20 октября 2016 г.  
-_Номер сборки_: &nbsp;14.0.61021.0  
-_SSDT для Visual Studio 2015_.  
-_Поддержка SQL Server вплоть до версии 2016_.
+_Выпущено_ : &nbsp;20 октября 2016 г.  
+_Номер сборки_ : &nbsp;14.0.61021.0  
+_SSDT для Visual Studio 2015_ .  
+_Поддержка SQL Server вплоть до версии 2016_ .
 
 **Новые возможности**
 
@@ -815,9 +815,9 @@ Console.WriteLine(result.DeploymentReport);
 
 ## <a name="164-ssdt-for-vs-2015"></a>16.4, SSDT для Visual Studio 2015
 
-_Выпущено_: &nbsp;20 сентября 2016 г.  
-_Номер сборки_: &nbsp;14.0.60918  
-_Для SQL Server 2016_.
+_Выпущено_ : &nbsp;20 сентября 2016 г.  
+_Номер сборки_ : &nbsp;14.0.60918  
+_Для SQL Server 2016_ .
 
 **Новые возможности**
 
@@ -854,9 +854,9 @@ _Для SQL Server 2016_.
 
 ## <a name="163nbsp-ssdt-for-vs-2015"></a>16.3,&nbsp;SSDT для Visual Studio 2015
 
-_Выпущено_: &nbsp;15 августа 2016 г.  
-_Номер сборки_: &nbsp;14.0.60812.0  
-_Для SQL Server 2016_.
+_Выпущено_ : &nbsp;15 августа 2016 г.  
+_Номер сборки_ : &nbsp;14.0.60812.0  
+_Для SQL Server 2016_ .
 
 **Новые возможности**
 
@@ -892,9 +892,9 @@ _Для SQL Server 2016_.
 
 ## <a name="july-2016nbsp-ssdt-for-vs-2015"></a>Июль 2016,&nbsp;SSDT для Visual Studio 2015
 
-_Выпущено_: &nbsp;30 июня 2016 г.  
-_Номер сборки_: &nbsp;14.0.60629.0  
-_Для SQL Server 2016_.
+_Выпущено_ : &nbsp;30 июня 2016 г.  
+_Номер сборки_ : &nbsp;14.0.60629.0  
+_Для SQL Server 2016_ .
 
 **Новые возможности**  
 - **Поддержка постоянного шифрования**. Для баз данных со столбцами постоянного шифрования в этом выпуске реализована полная поддержка постоянного шифрования в основных API и программе командной строки (SqlPackage.exe). Вы можете создавать и публиковать проекты базы данных, полностью поддерживающие все функции постоянного шифрования.  
@@ -936,9 +936,9 @@ _Для SQL Server 2016_.
 
 ## <a name="june-2016nbsp-ssdt-for-vs-2015"></a>Июнь 2016,&nbsp;SSDT для Visual Studio 2015
 
-_Выпущено_: &nbsp;1 июня 2016 г.  
-_Номер сборки_: &nbsp;14.0.60525.0  
-_Для SQL Server 2016_.
+_Выпущено_ : &nbsp;1 июня 2016 г.  
+_Номер сборки_ : &nbsp;14.0.60525.0  
+_Для SQL Server 2016_ .
 
 Выпущена общедоступная версия SSDT. В обновлении общедоступной версии SSDT за июнь 2016 г. добавлена поддержка последних обновлений SQL Server 2016 RTM, а также исправлены различные ошибки. Дополнительные сведения см. в статье [SQL Server Data Tools GA update for June 2016](https://blogs.msdn.microsoft.com/ssdt/2016/06/01/sql-server-data-tools-ga-update-for-june-2016/) (Обновление общедоступной версии SQL Server Data Tools за июнь 2016 г.).
 
@@ -947,6 +947,6 @@ _Для SQL Server 2016_.
 [Скачать SQL Server Data Tools &#40;SSDT&#41;](../ssdt/download-sql-server-data-tools-ssdt.md)  
 [Previous releases of SQL Server Data Tools (SSDT and SSDT-BI)](../ssdt/previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi.md) (Предыдущие выпуски SQL Server Data Tools (SSDT и SSDT-BI))  
 [Новые возможности в SQL Server 2016 (ядро СУБД)](https://msdn.microsoft.com/library/bb510411.aspx)  
-[Новые возможности в службах Analysis Services](../analysis-services/what-s-new-in-analysis-services.md)  
+[Новые возможности в службах Analysis Services](https://docs.microsoft.com/analysis-services/what-s-new-in-analysis-services)  
 [Новые возможности служб Integration Services в SQL Server 2016](../integration-services/what-s-new-in-integration-services-in-sql-server-2016.md)  
   

@@ -13,12 +13,12 @@ ms.assetid: b0fc4987-d260-4d0a-9dd1-98099835b361
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 62b3db01792005afa7c124f4f31b78cdc350b2dd
-ms.sourcegitcommit: 40f3b1f2340098496d8428f50616095a190ae94b
+ms.openlocfilehash: 06b2d138ce3d12fdf2a115343d922368accbeda7
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68290349"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892425"
 ---
 # <a name="download-and-install-sql-server-data-tools-ssdt-for-visual-studio"></a>Скачивание и установка SQL Server Data Tools (SSDT) для Visual Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -148,7 +148,7 @@ SSDT для Visual Studio 2015 и SSDT для Visual Studio 2017 использ�
 
 - [Разработка базы данных вне сети с учетом проекта](project-oriented-offline-database-development.md)  
 - [Учебник по службам SSIS. Создание простого ETL-пакета](../integration-services/ssis-how-to-create-an-etl-package.md)  
-- [Руководства по службам Analysis Services](../analysis-services/analysis-services-tutorials-ssas.md)  
+- [Руководства по службам Analysis Services](https://docs.microsoft.com/analysis-services/analysis-services-tutorials-ssas)  
 - [Создание простого табличного отчета (учебник по службам SSRS)](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)  
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

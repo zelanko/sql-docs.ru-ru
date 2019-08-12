@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 30e06a7d-75e9-44e2-bca3-b3b0c4a33f61
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2581a2a6c91640ce00b8bc804d8b52183de533ea
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 02cb0eb53ee8561884799c3a5e4f4f44eb5ff752
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68063976"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893187"
 ---
 # <a name="create-a-new-sql-server-failover-cluster-setup"></a>Создание нового отказоустойчивого кластера SQL Server (программа установки)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -100,7 +100,7 @@ ms.locfileid: "68063976"
   
 8.  На странице «Условия лицензии» прочтите лицензионное соглашение, а затем установите флажок, подтверждая принятие условий соглашения. Чтобы помочь в улучшении [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], можно также включить параметр наблюдения за использованием компонентов и отправлять отчеты в [!INCLUDE[msCoName](../../../includes/msconame-md.md)]. Чтобы продолжить, нажмите кнопку **Далее** . Чтобы выйти из программы установки, нажмите кнопку **Отмена**.  
   
-9. Выберите компоненты для установки на странице «Выбор компонентов». После выбора компонента описание его группы отображается в правой панели окна. Можно выбрать любое сочетание флажков, но только компонент [!INCLUDE[ssDE](../../../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] в табличном режиме и [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] в многомерном режиме поддерживают отказоустойчивую кластеризацию. Другие выбранные компоненты будут работать в качестве изолированных компонентов без возможности отработки отказа на текущем узле, на котором выполняется программа установки. Дополнительные сведения о режимах [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] см. в разделе [Определение режима работы сервера экземпляра служб Analysis Services](../../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md).  
+9. Выберите компоненты для установки на странице «Выбор компонентов». После выбора компонента описание его группы отображается в правой панели окна. Можно выбрать любое сочетание флажков, но только компонент [!INCLUDE[ssDE](../../../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] в табличном режиме и [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] в многомерном режиме поддерживают отказоустойчивую кластеризацию. Другие выбранные компоненты будут работать в качестве изолированных компонентов без возможности отработки отказа на текущем узле, на котором выполняется программа установки. Дополнительные сведения о режимах [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] см. в разделе [Определение режима работы сервера экземпляра служб Analysis Services](https://docs.microsoft.com/analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance).  
   
      Требования для выбранных компонентов показаны на правой панели. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] установит обязательный компонент, который еще не был установлен, в шаге установки, описанном ниже в данной процедуре.  
   
@@ -254,7 +254,7 @@ ms.locfileid: "68063976"
   
 9. На странице «Условия лицензии» прочтите лицензионное соглашение, а затем установите флажок, подтверждая принятие условий соглашения. Чтобы помочь в улучшении [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], можно также включить параметр наблюдения за использованием компонентов и отправлять отчеты в [!INCLUDE[msCoName](../../../includes/msconame-md.md)]. Чтобы продолжить, нажмите кнопку **Далее** . Чтобы выйти из программы установки, нажмите кнопку **Отмена**.  
   
-10. Выберите компоненты для установки на странице «Выбор компонентов». После выбора компонента описание его группы отображается в правой панели окна. Можно выбрать любое сочетание флажков, но только компонент [!INCLUDE[ssDE](../../../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] в табличном режиме и [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] в многомерном режиме поддерживают отказоустойчивую кластеризацию. Другие выбранные компоненты будут работать в качестве изолированных компонентов без возможности отработки отказа на текущем узле, на котором выполняется программа установки. Дополнительные сведения о режимах [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] см. в разделе [Определение режима работы сервера экземпляра служб Analysis Services](../../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md).  
+10. Выберите компоненты для установки на странице «Выбор компонентов». После выбора компонента описание его группы отображается в правой панели окна. Можно выбрать любое сочетание флажков, но только компонент [!INCLUDE[ssDE](../../../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] в табличном режиме и [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] в многомерном режиме поддерживают отказоустойчивую кластеризацию. Другие выбранные компоненты будут работать в качестве изолированных компонентов без возможности отработки отказа на текущем узле, на котором выполняется программа установки. Дополнительные сведения о режимах [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] см. в разделе [Определение режима работы сервера экземпляра служб Analysis Services](https://docs.microsoft.com/analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance).  
   
      Требования для выбранных компонентов показаны на правой панели. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] установит обязательный компонент, который еще не был установлен, в шаге установки, описанном ниже в данной процедуре.  
   

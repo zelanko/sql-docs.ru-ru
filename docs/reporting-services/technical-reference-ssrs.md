@@ -14,21 +14,21 @@ helpviewer_keywords:
 ms.assetid: 4876bee2-071f-4a8d-ab8a-b03337625b74
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bd0f8310fa0b11b8816f15194da19c856230991b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5cefdef6a787b522f7d185a67f329054ed868eb5
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63301533"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892811"
 ---
 # <a name="technical-reference-ssrs"></a>Технический справочник (службы SSRS)
 
   Найдите средства и справочную документацию по PowerShell для использования или администрирования служб SQL Server Reporting Services.  
   
- ![Маленький значок папки](../analysis-services/media/filefolder-small.png "Маленький значок папки") **Ошибки и события**  
+ ![Маленький значок папки](https://docs.microsoft.com/analysis-services/analysis-services/media/filefolder-small.png "Маленький значок папки") **Ошибки и события**  
  [Причины ошибок служб Reporting Services и способы их устранения](../reporting-services/troubleshooting/cause-and-resolution-of-reporting-services-errors.md)  
   
- ![Маленький значок папки](../analysis-services/media/filefolder-small.png "Маленький значок папки") **Справочник по функциям**  
+ ![Маленький значок папки](https://docs.microsoft.com/analysis-services/analysis-services/media/filefolder-small.png "Маленький значок папки") **Справочник по функциям**  
  [Справка F1 по использованию конструктора отчетов](../reporting-services/tools/report-designer-f1-help.md)  
   
  [Справка F1 диспетчера отчетов](https://msdn.microsoft.com/library/e0137273-85b8-45f0-83e5-38a50481768f)  
@@ -41,14 +41,14 @@ ms.locfileid: "63301533"
   
  [Параметры сведений об устройстве для модулей подготовки отчетов к просмотру (службы Reporting Services)](../reporting-services/device-information-settings-for-rendering-extensions-reporting-services.md)  
   
- ![Маленький значок папки](../analysis-services/media/filefolder-small.png "Маленький значок папки") **Программы командной строки сервера отчетов**  
+ ![Маленький значок папки](https://docs.microsoft.com/analysis-services/analysis-services/media/filefolder-small.png "Маленький значок папки") **Программы командной строки сервера отчетов**  
  [Служебная программа RS.exe (SSRS)](../reporting-services/tools/rs-exe-utility-ssrs.md)  
   
  [Программа rsconfig (SSRS)](../reporting-services/tools/rsconfig-utility-ssrs.md)  
   
  [Программа rskeymgmt (SSRS)](../reporting-services/tools/rskeymgmt-utility-ssrs.md)  
   
- ![Маленький значок папки](../analysis-services/media/filefolder-small.png "Маленький значок папки") **Библиотека классов поставщика WMI служб Reporting Services**  
+ ![Маленький значок папки](https://docs.microsoft.com/analysis-services/analysis-services/media/filefolder-small.png "Маленький значок папки") **Библиотека классов поставщика WMI служб Reporting Services**  
  [Справочник по библиотеке поставщика WMI служб Reporting Services (SSRS)](../reporting-services/wmi-provider-library-reference/reporting-services-wmi-provider-library-reference-ssrs.md)  
 
 Остались вопросы? [Посетите форум служб Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).

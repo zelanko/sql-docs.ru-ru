@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: f55c6a0e-b6bd-4803-b51a-f3a419803024
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ba7459c97a64422023bed0cffd292c418933ce43
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 64637e048277db5ad082b2b6a9ffad4b4b0d3ea7
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68126204"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892295"
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "68126204"
  Пользователи, знакомые с управлением **брандмауэром Windows** и знающие, какие параметры брандмауэра они хотят настроить, могут перейти напрямую к более сложным статьям:  
   
 -   [Настройка брандмауэра Windows для доступа к компоненту Database Engine](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)    
--   [Настройка брандмауэра Windows на разрешение доступа к службам Analysis Services](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)    
+-   [Настройка брандмауэра Windows на разрешение доступа к службам Analysis Services](https://docs.microsoft.com/analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access)    
 -   [настроить брандмауэр для доступа к серверу отчетов](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)  
   
 ##  <a name="BKMK_basic"></a> Основные сведения о брандмауэрах  
@@ -159,7 +159,7 @@ ms.locfileid: "68126204"
   
  Если пользователи производят доступ к службам [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] через Интернет и службы IIS, необходимо открыть порт, который прослушивают службы IIS, и указать этот порт в строке соединения клиента. В этом случае необязательно иметь открытые порты для прямого доступа к службам [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Необходимо ограничить доступ к порту по умолчанию 2389, порту 2382 и другим портам, которые не нужны для осуществления доступа.  
   
- Пошаговые инструкции по настройке брандмауэра Windows для компонента [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]см. в разделе [Настройка брандмауэра Windows на разрешение доступа к службам Analysis Services](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
+ Пошаговые инструкции по настройке брандмауэра Windows для компонента [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]см. в разделе [Настройка брандмауэра Windows на разрешение доступа к службам Analysis Services](https://docs.microsoft.com/analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access).  
   
 ###  <a name="BKMK_ssrs"></a> Порты, используемые службами Reporting Services  
 

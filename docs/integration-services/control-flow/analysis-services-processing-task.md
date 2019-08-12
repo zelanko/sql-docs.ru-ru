@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: e5748836-b4ce-4e17-ab6b-617a336f02f4
 author: janinezhang
 ms.author: janinez
-ms.openlocfilehash: 617676bf00f5f91652719ca93ef614152523367a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3bc0ae0b7a64f7f3d75d9ff67da0142682093da0
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67947939"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893055"
 ---
 # <a name="analysis-services-processing-task"></a>задача «Обработка средствами Analysis Services»
 
@@ -123,7 +123,7 @@ ms.locfileid: "67947939"
 |--------------|-----------------|  
 |**Имя объекта**|Позволяет отобразить список имен заданных объектов.|  
 |**Тип**|Позволяет отобразить список типов заданных объектов.|  
-|**Параметры обработки**|Выберите из списка параметр обработки.<br /><br /> **См. также**: [Обработка многомерной модели (службы Analysis Services)](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)|  
+|**Параметры обработки**|Выберите из списка параметр обработки.<br /><br /> **См. также**: [Обработка многомерной модели (службы Analysis Services)](https://docs.microsoft.com/analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services)|  
 |**Настройки**|Позволяет отобразить список настроек обработки для заданных объектов.|  
   
  **Добавить**  

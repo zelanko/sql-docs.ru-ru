@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4d933d19-8d21-4aa1-8153-d230cb3a3f99
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 754fd1c09319f6be1a11b4eff94be42679ac9058
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b447bec3817dbaa173c544dcb31200a702b8661d
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67939641"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68890068"
 ---
 # <a name="full-database-backups-sql-server"></a>Полные резервные копии баз данных (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -105,6 +105,6 @@ GO
 ## <a name="see-also"></a>См. также:  
  [Резервное копирование и восстановление баз данных SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [Общие сведения о резервном копировании (SQL Server)](../../relational-databases/backup-restore/backup-overview-sql-server.md)   
- [Создание и восстановление резервных копий баз данных служб Analysis Services](../../analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases.md)  
+ [Создание и восстановление резервных копий баз данных служб Analysis Services](https://docs.microsoft.com/analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases)  
   
   

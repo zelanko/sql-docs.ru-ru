@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: b1b78ded-16c0-4d69-8657-ec57925e68fd
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 3e2b32c6804de71d9af074de15b8506c493dfa99
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c0e0f85e21898ccf61d7c205305fc9179edc2af4
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68030482"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68810588"
 ---
 # <a name="dac-support-for-sql-server-objects-and-versions"></a>Поддержка приложений уровня данных для объектов и версий SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "68030482"
 |-|-|  
 |DATABASE ROLE|ФУНКЦИЯ: встроенная, возвращающая табличное значение|  
 |ФУНКЦИЯ: многооператорная, возвращающая табличное значение|ФУНКЦИЯ: скалярная|  
-|ИНДЕКС: Кластеризованный|ИНДЕКС: некластеризованный|  
+|ИНДЕКС: Кластеризованный|ИНДЕКС: Некластеризованный|  
 |ИНДЕКС: пространственный|ИНДЕКС: Уникальный|  
 |Имя_для_входа|Разрешения|  
 |Данные членства в роли|SCHEMA|  

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: b5bb52e9-a77e-41e1-93f9-d4c3bc6b2c9a
 author: janinezhang
 ms.author: janinez
-ms.openlocfilehash: 87be157406b169a0978fd282c9ee40e4808c2599
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d519d0c298e3a92506902bc42d3fdb4e8b1d2cc7
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68057845"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893751"
 ---
 # <a name="wmi-event-watcher-task"></a>Задача «Отслеживание событий WMI»
 
@@ -111,7 +111,7 @@ SELECT * FROM __InstanceCreationEvent WITHIN 10 WHERE TargetInstance ISA "CIM_Di
 ## <a name="wmi-event-watcher-task-editor-general-page"></a>Редактор задачи «Отслеживание событий WMI» (страница «Общие»)
   Используйте страницу **Общие** диалогового окна **Редактор задачи «Отслеживание событий WMI»** для ввода имени и описания задачи «Отслеживание событий WMI».  
   
- Дополнительные сведения о языке запросов WQL см. в разделе документации по инструментарию управления Windows [Запросы с использованием языка запросов WQL](https://go.microsoft.com/fwlink/?LinkId=79045)в библиотеке MSDN.  
+ Дополнительные сведения о языке запросов WQL см. в разделе документации по инструментарию управления Windows [Запросы с использованием языка запросов WQL](/windows/win32/wmisdk/querying-with-wql)в библиотеке MSDN.  
   
 ### <a name="options"></a>Параметры  
  **Название**  
@@ -126,7 +126,7 @@ SELECT * FROM __InstanceCreationEvent WITHIN 10 WHERE TargetInstance ISA "CIM_Di
 ## <a name="wmi-event-watcher-task-editor-wmi-options-page"></a>Редактор задачи «Отслеживание событий WMI» (страница «Параметры WMI»)
   Страница **Параметры инструментария WMI** диалогового окна **Редактор задачи "Отслеживание событий WMI"** используется для указания источника запроса на языке запросов инструментария управления Windows (WQL) и вариантов реакции задачи "Отслеживание событий WMI" на события инструментария Microsoft Windows (WMI).  
   
- Дополнительные сведения о языке запросов WQL см. в разделе документации по инструментарию управления Windows [Запросы с использованием языка запросов WQL](https://go.microsoft.com/fwlink/?LinkId=79045)в библиотеке MSDN.  
+ Дополнительные сведения о языке запросов WQL см. в разделе документации по инструментарию управления Windows [Запросы с использованием языка запросов WQL](/windows/win32/wmisdk/querying-with-wql)в библиотеке MSDN.  
   
 ### <a name="static-options"></a>Статические параметры  
  **WMIConnectionName**  

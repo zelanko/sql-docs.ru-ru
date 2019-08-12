@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 94fdf921-270c-4c12-87b3-46b1cc98fae5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8167b9066b0549332a6bb30030d339b79c3c45ac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 998757029ae5e3a8239a937897f176d5994c5880
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65580868"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892994"
 ---
 # <a name="data-types-in-expressions-report-builder-and-ssrs"></a>Типы данных в выражениях (построитель отчетов и службы SSRS)
   Типы данных представляют разные виды данных, чтобы их можно было эффективно хранить и обрабатывать. Стандартные типы данных включают текст (строки), числа с десятичными разрядами или без них, даты и время, а также изображения. Значения в отчете должны быть представлены с помощью типов данных языка определения отчетов. При отображении значения в отчете его можно отформатировать в соответствии с конкретными предпочтениями. Например, поле, представляющее валюту, может храниться в определении отчета как число с плавающей запятой, но отображаться в различных форматах в зависимости от выбранного свойства формата.  
@@ -138,7 +138,7 @@ ms.locfileid: "65580868"
   
  Дополнительные сведения о типах данных баз данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] см. в разделах [Типы данных &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md) и [Типы данных и функции даты и времени &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).  
   
- Дополнительные сведения о типах данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] см. в разделе [Типы данных в службах Analysis Services](../../analysis-services/multidimensional-models/olap-physical/data-types-in-analysis-services.md).  
+ Дополнительные сведения о типах данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] см. в разделе [Типы данных в службах Analysis Services](https://docs.microsoft.com/analysis-services/multidimensional-models/olap-physical/data-types-in-analysis-services).  
   
 ## <a name="see-also"></a>См. также:  
  [Форматирование элементов отчета (построитель отчетов и службы SSRS)](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)  

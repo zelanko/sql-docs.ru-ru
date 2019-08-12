@@ -7,12 +7,12 @@ ms.topic: conceptual
 ms.assetid: e2536f7f-d90c-4571-9ffd-6bbfe69018d6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6a36d9acd795bfbcc226d7ffe601fd2b15ee7406
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 281eeffa237a24e6da8794e99ff6d4fd3a716181
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65502669"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68889699"
 ---
 # <a name="troubleshoot-a-reporting-services-installation"></a>Устранение неполадок при установке служб Reporting Services
 
@@ -74,7 +74,7 @@ ms.locfileid: "65502669"
   
  **Обходное решение.** Для настройки сервера отчетов в режиме Sharepoint используйте центр администрирования SharePoint. Дополнительные сведения см. в статье [Управление служебным приложением SharePoint службы Reporting Services](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md).  
   
- ![Значок стрелки, используемый со ссылкой "В начало"](../../analysis-services/instances/media/uparrow16x16.gif "Значок стрелки, используемый со ссылкой \"В начало\"") [Устранение неполадок установки в режиме интеграции с SharePoint](#bkmk_tshoot_sharepoint)  
+ ![Значок стрелки, используемый со ссылкой "В начало"](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Значок стрелки, используемый со ссылкой \"В начало\"") [Устранение неполадок установки в режиме интеграции с SharePoint](#bkmk_tshoot_sharepoint)  
   
 ###  <a name="bkmk_no_ssrs_service"></a> После установки служб SQL Server Reporting Services в режиме интеграции с SharePoint службы SQL Server Reporting Services 2016 не отображаются в центре администрирования SharePoint.  
  **Описание**. Если после успешной установки служб SQL Server 2016 Reporting Services в режиме интеграции с SharePoint и надстроек служб SQL Server 2016 Reporting Services для SharePoint 2013/2016 вы не видите пункт SQL Server Reporting Service в двух следующих меню, то служба [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] не зарегистрирована:  
@@ -103,7 +103,7 @@ ms.locfileid: "65502669"
   
 2.  Убедитесь, что состояние службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] на этой странице отображается с меткой **Запущена**: Центр администрирования SharePoint 2013/2016 -> **Управление приложениями** -> **Управление службами на сервере**.  
   
- ![Значок стрелки, используемый со ссылкой "В начало"](../../analysis-services/instances/media/uparrow16x16.gif "Значок стрелки, используемый со ссылкой \"В начало\"") [Устранение неполадок установки в режиме интеграции с SharePoint](#bkmk_tshoot_sharepoint)  
+ ![Значок стрелки, используемый со ссылкой "В начало"](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Значок стрелки, используемый со ссылкой \"В начало\"") [Устранение неполадок установки в режиме интеграции с SharePoint](#bkmk_tshoot_sharepoint)  
   
 ###  <a name="bkmk_cmdlets_not_recognized"></a> Командлеты PowerShell для служб Reporting Services недоступны, и команды не распознаются.  
  **Описание**. При попытке запуска командлета PowerShell [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] выводится сообщение об ошибке следующего содержания:  
@@ -124,7 +124,7 @@ ms.locfileid: "65502669"
   
 -   [Установка первого сервера отчетов в режиме интеграции с SharePoint](install-the-first-report-server-in-sharepoint-mode.md)  
   
- ![Значок стрелки, используемый со ссылкой "В начало"](../../analysis-services/instances/media/uparrow16x16.gif "Значок стрелки, используемый со ссылкой \"В начало\"") [Устранение неполадок установки в режиме интеграции с SharePoint](#bkmk_tshoot_sharepoint)  
+ ![Значок стрелки, используемый со ссылкой "В начало"](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Значок стрелки, используемый со ссылкой \"В начало\"") [Устранение неполадок установки в режиме интеграции с SharePoint](#bkmk_tshoot_sharepoint)  
   
 ###  <a name="bkmk_URL_not_configured"></a> Будет выдано сообщение об ошибке, указывающее на то, что не настроен URL-адрес  
  **Описание**. Будет выдано приблизительно такое сообщение об ошибке:  
@@ -147,7 +147,7 @@ ms.locfileid: "65502669"
   
 -   Управление приложением службы.  
   
- ![Значок стрелки, используемый со ссылкой "В начало"](../../analysis-services/instances/media/uparrow16x16.gif "Значок стрелки, используемый со ссылкой \"В начало\"") [Устранение неполадок установки в режиме интеграции с SharePoint](#bkmk_tshoot_sharepoint)  
+ ![Значок стрелки, используемый со ссылкой "В начало"](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Значок стрелки, используемый со ссылкой \"В начало\"") [Устранение неполадок установки в режиме интеграции с SharePoint](#bkmk_tshoot_sharepoint)  
   
 ###  <a name="bkmk_sharepoint_not_confiugred"></a> Программа установки завершает работу с ошибками на компьютере с установленным, но не настроенным компонентом SharePoint  
  **Описание.** Если выбрать установку служб Reporting Services в режиме интеграции с SharePoint на компьютере, где SharePoint установлен, но не настроен, появится сообщение, аналогичное приведенному ниже, а программа установки завершит работу.  
@@ -158,7 +158,7 @@ ms.locfileid: "65502669"
   
  **Дополнительные сведения.** При установке служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в существующей установке SharePoint программа установки попытается установить и запустить службу [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint. Если SharePoint не настроен, установка службы завершится сбоем, в результате чего программа установки также завершится сбоем.  
   
- ![Значок стрелки, используемый со ссылкой "В начало"](../../analysis-services/instances/media/uparrow16x16.gif "Значок стрелки, используемый со ссылкой \"В начало\"") [Устранение неполадок установки в режиме интеграции с SharePoint](#bkmk_tshoot_sharepoint)  
+ ![Значок стрелки, используемый со ссылкой "В начало"](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Значок стрелки, используемый со ссылкой \"В начало\"") [Устранение неполадок установки в режиме интеграции с SharePoint](#bkmk_tshoot_sharepoint)  
   
 ###  <a name="bkmk_central_admin_blank"></a> Страница центра администрирования SharePoint пуста.  
  **Описание.** Установка SharePoint 2013/2016 прошла успешно, без ошибок. Однако при просмотре центра администрирования отображается только пустая страница.  
@@ -171,7 +171,7 @@ ms.locfileid: "65502669"
   
 -   Учетная запись службы, используемая для служб SharePoint, например службы центра администрирования SharePoint 2013/2016, должна обладать правами администратора в локальной операционной системе.  
   
- ![Значок стрелки, используемый со ссылкой "В начало"](../../analysis-services/instances/media/uparrow16x16.gif "Значок стрелки, используемый со ссылкой \"В начало\"") [Устранение неполадок установки в режиме интеграции с SharePoint](#bkmk_tshoot_sharepoint)  
+ ![Значок стрелки, используемый со ссылкой "В начало"](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Значок стрелки, используемый со ссылкой \"В начало\"") [Устранение неполадок установки в режиме интеграции с SharePoint](#bkmk_tshoot_sharepoint)  
   
 ###  <a name="bkmk_reportbuilder_newreport_error"></a> При попытке создать отчет построителя отчетов отображается сообщение об ошибке  
  **Описание.** При попытке создать отчет построителя отчетов внутри библиотеки документов отображается сообщение об ошибке, похожее на приведенное ниже:  
@@ -180,7 +180,7 @@ ms.locfileid: "65502669"
   
  **Обходное решение.** Проверьте наличие и правильность настройки приложения служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . См. дополнительные сведения об [установке сервера отчетов в режиме интеграции с SharePoint](install-the-first-report-server-in-sharepoint-mode.md).
   
- ![Значок стрелки, используемый со ссылкой "В начало"](../../analysis-services/instances/media/uparrow16x16.gif "Значок стрелки, используемый со ссылкой \"В начало\"") [Устранение неполадок установки в режиме интеграции с SharePoint](#bkmk_tshoot_sharepoint)  
+ ![Значок стрелки, используемый со ссылкой "В начало"](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Значок стрелки, используемый со ссылкой \"В начало\"") [Устранение неполадок установки в режиме интеграции с SharePoint](#bkmk_tshoot_sharepoint)  
   
 ###  <a name="bkmk_RS_SHP_notsupported"></a> Отображается сообщение об ошибке: RS_SHP не поддерживается для действия PREPAREIMAGE  
  **Описание**. При попытке запуска PREPAREIMAGE для служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] выдается сообщение об ошибке приблизительно такого содержания:  
@@ -189,7 +189,7 @@ ms.locfileid: "65502669"
   
  **Обходное решение**. Решение отсутствует. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] не поддерживают SYSPREP (PREPAREIMAGE). [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] поддерживает SYSPREP.  
   
- ![Значок стрелки, используемый со ссылкой "В начало"](../../analysis-services/instances/media/uparrow16x16.gif "Значок стрелки, используемый со ссылкой \"В начало\"") [Устранение неполадок установки в режиме интеграции с SharePoint](#bkmk_tshoot_sharepoint)  
+ ![Значок стрелки, используемый со ссылкой "В начало"](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Значок стрелки, используемый со ссылкой \"В начало\"") [Устранение неполадок установки в режиме интеграции с SharePoint](#bkmk_tshoot_sharepoint)  
 
 ::: moniker-end
   

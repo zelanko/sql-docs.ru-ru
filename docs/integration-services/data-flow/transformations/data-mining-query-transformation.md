@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7960133b-a3e1-48af-ba43-55ed78c38e71
 author: janinezhang
 ms.author: janinez
-ms.openlocfilehash: a162e816186c0bae2ff9da2d1aef62f169491b5c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0ebcbe8d0263a31f772f711dd40853267dcd238a
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68112608"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893140"
 ---
 # <a name="data-mining-query-transformation"></a>преобразование «Запрос интеллектуального анализа данных»
 
@@ -31,7 +31,7 @@ ms.locfileid: "68112608"
 
   Преобразование «Запрос интеллектуального анализа данных» выполняет прогнозирующие запросы на основе моделей интеллектуального анализа данных. Это преобразование содержит построитель запросов для создания запросов расширений интеллектуального анализа данных (DMX). С помощью построителя запросов можно создавать пользовательские инструкции на языке расширения интеллектуального анализа данных (DMX) для оценки входа преобразования в соответствии с текущей моделью интеллектуального анализа данных. Дополнительные сведения см. в разделе [Справочник по расширениям интеллектуального анализа данных](../../../dmx/data-mining-extensions-dmx-reference.md).  
   
- Одно преобразование может выполнять несколько прогнозирующих запросов, если их модели созданы на основе одной и той же структуры интеллектуального анализа данных. Дополнительные сведения см. в статье [Средства запросов интеллектуального анализа данных](../../../analysis-services/data-mining/data-mining-query-tools.md).  
+ Одно преобразование может выполнять несколько прогнозирующих запросов, если их модели созданы на основе одной и той же структуры интеллектуального анализа данных. Дополнительные сведения см. в статье [Средства запросов интеллектуального анализа данных](https://docs.microsoft.com/analysis-services/data-mining/data-mining-query-tools).  
   
 ## <a name="configuration-of-the-data-mining-query-transformation"></a>Настройка преобразования «Запрос интеллектуального анализа данных»  
  Преобразование «Запрос интеллектуального анализа данных» использует диспетчер соединений служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] , чтобы подключить проект служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] или экземпляр служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] , содержащие структуры и модели интеллектуального анализа данных. Дополнительные сведения см. в статье [Analysis Services Connection Manager](../../../integration-services/connection-manager/analysis-services-connection-manager.md).  

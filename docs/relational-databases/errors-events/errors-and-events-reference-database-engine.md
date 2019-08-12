@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ea928535-6fd1-4738-a8ed-ffb602f3825e
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 7fc505731f0d0434ea4d8478b3569781b5173ce8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4835e110d0feace4abaec408351351d863da7588
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68068338"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893152"
 ---
 # <a name="errors-and-events-reference-database-engine"></a>Справочник по ошибкам и событиям (компонент Database Engine)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "68068338"
 |Ресурс|Описание|  
 |--------------|-----------------|  
 |[Сообщество SQL Server](https://go.microsoft.com/fwlink/?LinkId=42455)|Этот сайт содержит ссылки на группы новостей и форумы, контролируемые сообществом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Кроме того, здесь перечислены источники данных сообщества, такие как блоги и сайты. Сообщество [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] оказывает значительную помощь, отвечая на вопросы, однако ответ не может быть гарантирован.|  
-|[Сообщество центра разработчиков SQL Server](https://go.microsoft.com/fwlink/?LinkId=42456)|На этом сайте находятся группы новостей, форумы и другие источники сообщества, которые полезны для разработчиков [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
+|[Сообщество центра разработчиков SQL Server](/sql/sql-server/sql-server-technical-documentation)|На этом сайте находятся группы новостей, форумы и другие источники сообщества, которые полезны для разработчиков [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |[Справка и поддержка Майкрософт](https://go.microsoft.com/fwlink/?linkid=16419)|Этот сайт можно использовать для обращения к специалисту службы поддержки [!INCLUDE[msCoName](../../includes/msconame-md.md)] .|  
   
   

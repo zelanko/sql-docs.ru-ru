@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 0903c7b2-ac59-45f1-b7d0-922ecd9d76f8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f9e9884a8875d63ba9defcee5fa20dc121d595ca
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c1f327b42dd3cdc18be769ef4b4b6fac571578e0
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65581349"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68889833"
 ---
 # <a name="reporting-services-in-sql-server-data-tools-ssdt"></a>Службы Reporting Services в SQL Server Data Tools (SSDT)
 
@@ -39,7 +39,7 @@ ms.locfileid: "65581349"
   
 -   **Мастер проекта сервера отчетов.** При выборе проекта мастера сервера отчетов автоматически создается проект сервера отчетов и открывается мастер отчетов. Отчеты можно создавать с помощью мастера. Для этого необходимо выполнять инструкции на каждой странице: создается строка подключения с источником данных, указываются учетные данные для соединения с ним, создается запрос, добавляются области данных таблицы или матрицы, задаются данные отчета и групп, выбирается цвет шрифта и стиля, отчет публикуется на сервере отчетов и просматривается в локальном режиме. После создания отчета с помощью мастера можно изменить данные и структуру отчета с помощью конструктора отчетов в проекте сервера отчетов.  
   
- ![Новые шаблоны проекта в SSDT](../../analysis-services/media/ssdt-biprojects.png "Новые шаблоны проекта в SSDT")  
+ ![Новые шаблоны проекта в SSDT](https://docs.microsoft.com/analysis-services/analysis-services/media/ssdt-biprojects.png "Новые шаблоны проекта в SSDT")  
   
   
 ##  <a name="bkmk_ReportDesignerWindowsandPanes"></a> Окна и панели конструктора отчетов  

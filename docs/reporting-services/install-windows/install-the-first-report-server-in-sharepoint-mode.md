@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 1fb9daa74abd547f23bc78e76b8c0840e9c54af5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: af1ceea86c3e91cb11c393f585c2906f50f039c1
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64775774"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892282"
 ---
 # <a name="install-the-first-report-server-in-sharepoint-mode"></a>Установка первого сервера отчетов в режиме интеграции с SharePoint
 
@@ -142,7 +142,7 @@ ms.locfileid: "64775774"
   
 9. Если выбрана установка служб Database Engine, примите экземпляр **MSSQLSERVER** по умолчанию на странице **Настройка экземпляра** и нажмите кнопку **Далее**.  
   
-     ![примечание](../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "примечание")Архитектура службы Reporting Services SharePoint не основывается на "экземпляре" SQL Server, как в прежних версиях архитектуры служб Reporting Services.  
+     ![примечание](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png "примечание")Архитектура службы Reporting Services SharePoint не основывается на "экземпляре" SQL Server, как в прежних версиях архитектуры служб Reporting Services.  
   
 10. Если отображается страница **Настройка сервера** , введите соответствующие учетные данные. Если необходимо использовать функции предупреждения об изменении данных или подписки на данные служб Reporting Services, необходимо изменить **тип запуска** для агента SQL Server на **автоматический**. Страница **Конфигурация сервера** может не отображаться в зависимости от продуктов, уже установленных на компьютере.  
   
@@ -164,7 +164,7 @@ ms.locfileid: "64775774"
 15. Для выполнения программы установки требуется несколько минут. Появится страница **Готово** с перечислением функций и состояния каждого компонента. Возможно, откроется диалоговое окно с уведомлением о необходимости перезагрузки компьютера.  
   
 ##  <a name="bkmk_install_SSRS_sharedservice"></a> Этап 2. Регистрация и запуск служб Reporting Services в SharePoint  
- ![Содержимое, связанное с PowerShell](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Содержимое, связанное с PowerShell")  
+ ![Содержимое, связанное с PowerShell](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Содержимое, связанное с PowerShell")  
   
 > [!NOTE]
 > Если производится установка в существующую ферму SharePoint, шаги, описанные в этом подразделе, выполнять не нужно. Службы Reporting Services в SharePoint были установлены и запущены в результате выполнения мастера установки SQL Server при изучении предыдущего раздела этого документа.  
@@ -254,7 +254,7 @@ ms.locfileid: "64775774"
   
 11. Создание приложения службы может занять несколько минут. По завершении этого процесса отобразятся подтверждение и ссылка на страницу **Подготовка подписок и предупреждений** . Выполните шаг подготовки, если нужно использовать функции подписки или предупреждений об изменении данных служб Reporting Services. Дополнительные сведения см. в разделе [Подготовка подписок и предупреждений для приложений служб SSRS](../../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md).  
   
- ![Содержимое, связанное с PowerShell](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Содержимое, связанное с PowerShell") Сведения о создании приложения служб Reporting Services с помощью PowerShell см. в следующих статьях:  
+ ![Содержимое, связанное с PowerShell](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Содержимое, связанное с PowerShell") Сведения о создании приложения служб Reporting Services с помощью PowerShell см. в следующих статьях:  
   
 -   Обратитесь к следующему разделу [Скрипт Windows PowerShell для шагов 1–4](#bkmk_full_script).  
   
@@ -272,7 +272,7 @@ ms.locfileid: "64775774"
   
      Откройте в браузере требуемый сайт SharePoint. Например, https://\<имя_сервера>/sites/bi  
   
-2.  Выберите **Параметры**![Параметры SharePoint](../../analysis-services/media/as-sharepoint2013-settings-gear.gif "Параметры SharePoint").  
+2.  Выберите **Параметры**![Параметры SharePoint](https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "Параметры SharePoint").  
   
 3.  Выберите **Настройки сайта**.  
   
@@ -391,13 +391,13 @@ Enable-SPfeature -identity "reportserver" -Url https://server/sites/bi
  
  Для SharePoint 2016 [Office Online Server](https://technet.microsoft.com/library/jj219456\(v=office.16\).aspx) должен быть настроен для использования служб Excel. Подробные сведения см. в следующих документах.
  
- - [Развертывание SQL Server 2016 PowerPivot и Power View в SharePoint 2016](../../analysis-services/instances/install-windows/deploying-sql-server-2016-powerpivot-and-power-view-in-sharepoint-2016.md)
+ - [Развертывание SQL Server 2016 PowerPivot и Power View в SharePoint 2016](https://docs.microsoft.com/analysis-services/instances/install-windows/deploying-sql-server-2016-powerpivot-and-power-view-in-sharepoint-2016)
  
- - [Deploying SQL Server 2016 PowerPivot and Power View in a Multi-Tier SharePoint 2016 Farm (Развертывание SQL Server 2016 PowerPivot и Power View в многоуровневой ферме SharePoint 2016)](../../analysis-services/instances/install-windows/deploy-powerpivot-and-power-view-multi-tier-sharepoint-2016-farm.md)
+ - [Deploying SQL Server 2016 PowerPivot and Power View in a Multi-Tier SharePoint 2016 Farm (Развертывание SQL Server 2016 PowerPivot и Power View в многоуровневой ферме SharePoint 2016)](https://docs.microsoft.com/analysis-services/instances/install-windows/deploy-powerpivot-and-power-view-multi-tier-sharepoint-2016-farm)
  
  Для SharePoint 2016 необходимо будет создать и настроить приложение служб Excel. Дополнительные сведения см. в следующих разделах:  
   
--   Раздел "Настройка служб Excel для интеграции служб Analysis Services" в статье [Установка служб Analysis Services в режиме Power Pivot](../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md).  
+-   Раздел "Настройка служб Excel для интеграции служб Analysis Services" в статье [Установка служб Analysis Services в режиме Power Pivot](https://docs.microsoft.com/analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode).  
   
 -   [Управление параметрами модели данных служб Excel (SharePoint Server 2013)](https://technet.microsoft.com/library/jj219780.aspx).  
 

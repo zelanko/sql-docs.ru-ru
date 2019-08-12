@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 249e3794-e3fa-41cb-ad9c-f46e19e6805c
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: cfd79f0cd7470ea94be1c77e5bc27016531909ad
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 8d94f07f12269bb2d4690ae01a5c51dd91d051f7
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265387"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893912"
 ---
 # <a name="sql-data-developer"></a>Разработчик данных SQL
 Используйте платформу данных SQL Майкрософт для создания ориентированных на данные решений на мобильных устройствах и настольных системах для веб-серверов, корпоративных серверов и облака.  
@@ -40,7 +40,7 @@ ms.locfileid: "68265387"
 * [Sqlxml 4,0](../relational-databases/sqlxml/sqlxml-4-0-programming-concepts.md): использование SQLXML 4,0 для экспорта реляционных данных в XML.
 
 ## <a name="data-collection-processing-and-visualization"></a>Сбор, обработка и визуализация данных
-* [Службы Analysis Services](../analysis-services/analysis-services-developer-documentation.md)
+* [Службы Analysis Services](https://docs.microsoft.com/analysis-services/analysis-services-developer-documentation)
 * [Службы интеграции](../integration-services/integration-services-developer-documentation.md)  
 * [Службы Master Data Services](../master-data-services/develop/master-data-services-developer-documentation.md)
 * [Службы Replication Services](../relational-databases/replication/concepts/replication-developer-documentation.md)

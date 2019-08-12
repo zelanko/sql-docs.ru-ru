@@ -9,12 +9,12 @@ ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 05/24/2018
-ms.openlocfilehash: c2ce0a9f30232f1d5c5c25fc92068be1e40bd2f5
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 09fcacbd2f1c5c197517f962073dce6294aed2e2
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264390"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68891856"
 ---
 # <a name="store-credentials-in-a-reporting-services-data-source"></a>Сохраненные учетные данные в источнике данных Reporting Services
 
@@ -33,7 +33,7 @@ ms.locfileid: "68264390"
 Сохраненные учетные данные, используемые сервером отчетов [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , можно настроить для получения доступа к внешним данным отчета. Сохраненные учетные данные используются, если отчет запускается автоматически, например, подписка [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , которая публикует отчет как электронное письмо. Сервер отчетов возвращает и использует учетные данные при планировании или запуске обработки отчета. В этом разделе описывается настройка сохраненных учетных данных для серверов отчетов как в собственном режиме, так и в режиме интеграции с SharePoint.  
   
 ##  <a name="bkmk_top"></a> Требования политики безопасности для сохраненных учетных данных  
- ![as_powerpivot_refresh_sss_set_key](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-refresh-sss-set-key.gif "as_powerpivot_refresh_sss_set_key") Учетная запись, которая используется для сохраненных учетных данных, должна быть настроена в соответствии с одной из указанных ниже политик безопасности на сервере отчетов. Рекомендуется выбирать политику с минимальным уровнем разрешений, необходимых для используемой среды.  
+ ![as_powerpivot_refresh_sss_set_key](https://docs.microsoft.com/analysis-services/analysis-services/power-pivot-sharepoint/media/as-powerpivot-refresh-sss-set-key.gif "as_powerpivot_refresh_sss_set_key") Учетная запись, которая используется для сохраненных учетных данных, должна быть настроена в соответствии с одной из указанных ниже политик безопасности на сервере отчетов. Рекомендуется выбирать политику с минимальным уровнем разрешений, необходимых для используемой среды.  
   
 1.  **Локальный вход в систему**. Дополнительные сведения см. в разделе [Разрешение локального входа](https://technet.microsoft.com/library/cc756809\(v=WS.10\).aspx).  
   
@@ -67,7 +67,7 @@ ms.locfileid: "68264390"
   
 8.  Нажмите кнопку **Применить**.  
   
-     ![Значок стрелки, используемый со ссылкой "В начало"](../../analysis-services/instances/media/uparrow16x16.gif "Значок стрелки, используемый со ссылкой \"В начало\"") [Требования политики безопасности для хранимых учетных данных](#bkmk_top)  
+     ![Значок стрелки, используемый со ссылкой "В начало"](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Значок стрелки, используемый со ссылкой \"В начало\"") [Требования политики безопасности для хранимых учетных данных](#bkmk_top)  
   
 ##  <a name="bkmk_stored_credentials_data_source_sharepoint"></a> Настройка сохраненных учетных данных для источника данных, связанного с отчетами (режим интеграции с SharePoint)  
   
@@ -95,7 +95,7 @@ ms.locfileid: "68264390"
   
 8.  Нажмите кнопку **ОК**.  
   
-     ![Значок стрелки, используемый со ссылкой "В начало"](../../analysis-services/instances/media/uparrow16x16.gif "Значок стрелки, используемый со ссылкой \"В начало\"") [Требования политики безопасности для хранимых учетных данных](#bkmk_top)  
+     ![Значок стрелки, используемый со ссылкой "В начало"](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Значок стрелки, используемый со ссылкой \"В начало\"") [Требования политики безопасности для хранимых учетных данных](#bkmk_top)  
   
 ##  <a name="bkmk_stored_credentials_shared_data_source_native"></a> Настройка сохраненных учетных данных для общедоступного источника данных (собственный режим)  
   
@@ -121,7 +121,7 @@ ms.locfileid: "68264390"
   
 6.  Нажмите кнопку **Применить**.  
   
-     ![Значок стрелки, используемый со ссылкой "В начало"](../../analysis-services/instances/media/uparrow16x16.gif "Значок стрелки, используемый со ссылкой \"В начало\"") [Требования политики безопасности для хранимых учетных данных](#bkmk_top)  
+     ![Значок стрелки, используемый со ссылкой "В начало"](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Значок стрелки, используемый со ссылкой \"В начало\"") [Требования политики безопасности для хранимых учетных данных](#bkmk_top)  
   
 ##  <a name="bkmk_stored_credentials_shared_data_source_sharepoint"></a> Настройка сохраненных учетных данных для общедоступного источника данных (режим интеграции с SharePoint)  
   
@@ -149,7 +149,7 @@ ms.locfileid: "68264390"
   
 7.  Нажмите кнопку **ОК**.  
   
-     ![Значок стрелки, используемый со ссылкой "В начало"](../../analysis-services/instances/media/uparrow16x16.gif "Значок стрелки, используемый со ссылкой \"В начало\"") [Требования политики безопасности для хранимых учетных данных](#bkmk_top)  
+     ![Значок стрелки, используемый со ссылкой "В начало"](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Значок стрелки, используемый со ссылкой \"В начало\"") [Требования политики безопасности для хранимых учетных данных](#bkmk_top)  
   
 ## <a name="see-also"></a>См. также:  
  [Задание учетных данных и сведениях о соединении для источников данных отчета](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   

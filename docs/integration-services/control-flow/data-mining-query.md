@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 948e358a-6245-429f-82c7-4cedc5e048fd
 author: janinezhang
 ms.author: janinez
-ms.openlocfilehash: c326237456d7c4a427f2077dce8d148be3501902
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fdff711249e7fd356ad74f37faf5bb98482672d2
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68106331"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893094"
 ---
 # <a name="data-mining-query"></a>Запрос интеллектуального анализа данных
 
@@ -67,7 +67,7 @@ ms.locfileid: "68106331"
  Задайте условие или пользовательское выражение, применимое к столбцу. В ячейку можно перетаскивать столбцы из таблиц, содержащих модели интеллектуального анализа данных, а также входные столбцы.  
   
 ## <a name="see-also"></a>См. также:  
- [Средства запросов интеллектуального анализа данных](../../analysis-services/data-mining/data-mining-query-tools.md)   
+ [Средства запросов интеллектуального анализа данных](https://docs.microsoft.com/analysis-services/data-mining/data-mining-query-tools)   
  [Справочник по расширениям интеллектуального анализа данных (расширения интеллектуального анализа данных)](../../dmx/data-mining-extensions-dmx-statements.md)  
   
   

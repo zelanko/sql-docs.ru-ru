@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a1a10c67-7462-4562-9b07-a8822188a161
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 04dacff6d9a7feed350c6f8e4417bbbd81b80b30
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4516effe7308386def1aa7cca885f9fa48547ec5
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65502623"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68889739"
 ---
 # <a name="upgrade-reports-ssrs"></a>Обновление отчетов (службы SSRS)
 
@@ -136,8 +136,8 @@ RDL-файлы определения отчетов автоматически 
 ## <a name="next-steps"></a>Следующие шаги
 
 [Обновление и перенос служб Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
-[Критические изменения в службах SQL Server Reporting Services в выпуске SQL Server 2016](../../analysis-services/behavior-changes-to-analysis-services-features-in-sql-server-2016.md)   
-[Изменения в работе служб SQL Server Reporting Services в выпуске SQL Server 2016](../../analysis-services/behavior-changes-to-analysis-services-features-in-sql-server-2016.md)   
+[Критические изменения в службах SQL Server Reporting Services в выпуске SQL Server 2016](https://docs.microsoft.com/analysis-services/behavior-changes-to-analysis-services-features-in-sql-server-2016)   
+[Изменения в работе служб SQL Server Reporting Services в выпуске SQL Server 2016](https://docs.microsoft.com/analysis-services/behavior-changes-to-analysis-services-features-in-sql-server-2016)   
 [Неподдерживаемые возможности в службах SQL Server Reporting Services в версии SQL Server 2016](../../reporting-services/behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)   
 [Пользовательские элементы отчета](../../reporting-services/custom-report-items/custom-report-items.md)   
 [Обновление базы данных сервера отчетов](../../reporting-services/install-windows/upgrade-a-report-server-database.md)  

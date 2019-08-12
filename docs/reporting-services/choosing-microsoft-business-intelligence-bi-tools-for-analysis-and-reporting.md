@@ -9,12 +9,12 @@ ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
-ms.openlocfilehash: 9f09757c009c9690c4348b722e498a8772033657
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: c6294e6313178c17edce2b85aab947a52aaa3fbc
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264625"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892572"
 ---
 # <a name="analysis-and-reporting-with-microsoft-business-intelligence-bi-tools"></a>Средства Microsoft Business Intelligence (BI) для анализа и отчетности
 
@@ -39,14 +39,14 @@ ms.locfileid: "68264625"
 |Доступ к отчетам с помощью мобильных устройств||||[HTML 5 (поддерживает просмотр файлов размером до 10 МБ)](create-deploy-and-manage-mobile-and-paginated-reports.md)<br /><br /> | [HTML 5 (поддерживает просмотр файлов размером до 250 МБ)](http://go.microsoft.com/fwlink/p/?LinkId=391854)<br /><br /> [Мобильное приложение Power BI на устройствах с iOS](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-iphone-app-get-started)<br /><br /> [Мобильное приложение Power BI на устройствах с Android](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-android-app-get-started) <br /><br /> [Мобильное приложение Power BI для Windows](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-windows-10-phone-app-get-started)|  
 |Совместная работа и общий доступ|||[Веб-сайты SharePoint](https://docs.microsoft.com/sharepoint/getting-started)|[Сайтов групп SharePoint](https://go.microsoft.com/fwlink/?LinkId=391850)|[Веб-сайты Power BI](https://docs.microsoft.com/power-bi/service-how-to-collaborate-distribute-dashboards-reports)||  
 |**Корпоративная бизнес-аналитика**|IT Pro||||||  
-|Создавайте многомерные или табличные корпоративные модели||||||[Службы Analysis Services](../analysis-services/analysis-services.md)|  
+|Создавайте многомерные или табличные корпоративные модели||||||[Службы Analysis Services](https://docs.microsoft.com/analysis-services/analysis-services-overview)|  
 |Создавайте специальные визуализации данных|||[Power View для SharePoint](https://go.microsoft.com/fwlink/?LinkId=391858)||||  
 |Создавайте панели мониторинга|||[Панели мониторинга SharePoint](https://go.microsoft.com/fwlink/?LinkId=391859)<br /><br /> [Службы PerformancePoint Services](https://technet.microsoft.com/library/ee424392.aspx)||[Панели мониторинга в Power BI](https://powerbi.microsoft.com/documentation/powerbi-service-dashboards/)||  
 |Создавайте рабочие отчеты||||||*[Службы Reporting Services](create-deploy-and-manage-mobile-and-paginated-reports.md)|  
 |Создавайте пользовательские и внедренные отчеты|||||[Power BI Embedded](create-deploy-and-manage-mobile-and-paginated-reports.md)|  
 |**Дополнительные аналитические функции**|Data Scientist||||||  
 |Самостоятельное выполнение прогнозной аналитики||||||[Надстройки интеллектуального анализа данных для Excel](https://docs.microsoft.com/sql/analysis-services/data-mining-client-for-excel-sql-server-data-mining-add-ins?view=sql-server-2014&viewFallbackFrom=sql-server-ver15) |  
-|Используйте алгоритмы интеллектуального анализа данных||||||[Интеллектуальный анализ данных в службах Analysis Services](../analysis-services/data-mining/data-mining-ssas.md)<br/><br/>[Службы R SQL Server](https://msdn.microsoft.com/library/mt604845.aspx)|  
+|Используйте алгоритмы интеллектуального анализа данных||||||[Интеллектуальный анализ данных в службах Analysis Services](https://docs.microsoft.com/analysis-services/data-mining/data-mining-ssas)<br/><br/>[Службы R SQL Server](https://msdn.microsoft.com/library/mt604845.aspx)|  
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
   
  * Службы Reporting Services имеют несколько функций, которые поддерживают доставку рабочих и нестандартных отчетов, например доставки современных отчетов с разбивкой на страницы.

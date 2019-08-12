@@ -8,12 +8,12 @@ ms.topic: article
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: caf8b23b823d7863e1bd7c8abd01ef43b0b8ec20
-ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
+ms.openlocfilehash: bfe22edbc76805fb821ddda42a07a3b74395bdb6
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68702895"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893991"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>Новые возможности [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]
 
@@ -46,7 +46,7 @@ ms.locfileid: "68702895"
 
 | Новые функции или обновления | Сведения |
 |:---|:---| 
-| Параметр управления для обновлений кэша Power BI.  | Служба Power BI кэширует данные плиток панелей мониторинга и отчетов для начальной загрузки отчетов Live Connect, что приводит к чрезмерному увеличению числа запросов кэша к службам SSAS, и в экстремальных случаях сервер оказывается перегружен. В этом выпуске вводится свойство **ClientCacheRefreshPolicy**. Оно позволяет переопределить это поведение на уровне сервера. Дополнительные сведения см. в разделе [Общие свойства](../analysis-services/server-properties/general-properties.md). |
+| Параметр управления для обновлений кэша Power BI.  | Служба Power BI кэширует данные плиток панелей мониторинга и отчетов для начальной загрузки отчетов Live Connect, что приводит к чрезмерному увеличению числа запросов кэша к службам SSAS, и в экстремальных случаях сервер оказывается перегружен. В этом выпуске вводится свойство **ClientCacheRefreshPolicy**. Оно позволяет переопределить это поведение на уровне сервера. Дополнительные сведения см. в разделе [Общие свойства](https://docs.microsoft.com/analysis-services/server-properties/general-properties). |
 | Интерактивное подключение  | Эта функция предоставляет возможность присоединить табличную модель в интерактивном режиме. Такое подключение можно использовать для синхронизации реплик только для чтения в локальных средах масштабирования запросов. Дополнительные сведения см. в разделе [Интерактивное подключение](what-s-new-in-sql-server-ver15-prerelease.md#online-attach-ctp32). |
 | &nbsp; | &nbsp; |
 

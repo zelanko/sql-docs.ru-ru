@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7f25c8c6-b601-41f2-9553-be0a2ee0751a
 author: janinezhang
 ms.author: janinez
-ms.openlocfilehash: 760a15ce22421ac1e98c6b14ea661de28bf299a9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fdee1ff2ec3ddb825dd4030c3ff1c29d78570254
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67904168"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893383"
 ---
 # <a name="analysis-services-execute-ddl-task"></a>Задача «Выполнение инструкции DDL служб Analysis Services»
 
@@ -44,9 +44,9 @@ ms.locfileid: "67904168"
 ## <a name="ddl-statements"></a>Инструкции DDL  
  Инструкции DDL представлены как инструкции в службах [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Scripting Language (ASSL) и встроены в команду XML для аналитики (XMLA).  
   
--   ASSL используется для определения и описания экземпляра служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , базы данных и объектов базы данных, которые он содержит. Дополнительные сведения см. в разделе [Справочник по языку ASSL](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md).  
+-   ASSL используется для определения и описания экземпляра служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , базы данных и объектов базы данных, которые он содержит. Дополнительные сведения см. в разделе [Справочник по языку ASSL](https://docs.microsoft.com/analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla).  
   
--   XML для аналитики — это язык команд, используемый для отправки команд-действий, таких как «Создать», «Изменить» или «Обработать», экземпляру служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Дополнительные сведения см. в разделе [Справочник по XML для аналитики (XMLA)](../../analysis-services/xmla/xml-for-analysis-xmla-reference.md).  
+-   XML для аналитики — это язык команд, используемый для отправки команд-действий, таких как «Создать», «Изменить» или «Обработать», экземпляру служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Дополнительные сведения см. в разделе [Справочник по XML для аналитики (XMLA)](https://docs.microsoft.com/analysis-services/xmla/xml-for-analysis-xmla-reference).  
   
  Если DDL-код хранится в отдельном файле, задача «Выполнение инструкции DDL служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] » использует диспетчер подключения файлов для указания пути файла. Дополнительные сведения см. в статье [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md).  
   

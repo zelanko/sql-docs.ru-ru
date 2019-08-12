@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 81110ef6-4289-405c-a931-e7e9f49e69ba
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f25397d69f297c3cbd754de0cf19a8cb90cf872f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 07f8cd00781717511bbcaba6e76553cc17d0c5bf
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65580950"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893244"
 ---
 # <a name="turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls"></a>Включение событий служб Reporting Services для журнала трассировки SharePoint (ULS)
 
@@ -138,7 +138,7 @@ Get-SPDiagnosticConfig
 |Общая служба|Образцы записей:<br /><br /> MediumUpdating ReportingWebServiceApplication<br /><br /> Доступ MediumGranting к базам данных содержимого.<br /><br /> Экземпляры MediumProvisioning для ReportingWebServiceApplication<br /><br /> Изменение учетной записи службы MediumProcessing для ReportingWebServiceApplication<br /><br /> Разрешения базы данных MediumSetting.|  
   
 ##  <a name="bkmk_powershell"></a> Просмотр файла журнала с помощью PowerShell  
- ![Связанное содержимое PowerShell](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Связанное содержимое PowerShell")PowerShell можно использовать для возвращения списка связанных событий служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] из файла журнала ULS. Введите следующую команду в консоли управления SharePoint 2010, чтобы получить из файла журнала ULS UESQL11SPOINT-20110606-1530.log отфильтрованный список строк, содержащих подстроку **sql server reporting services**:  
+ ![Связанное содержимое PowerShell](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Связанное содержимое PowerShell")PowerShell можно использовать для возвращения списка связанных событий служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] из файла журнала ULS. Введите следующую команду в консоли управления SharePoint 2010, чтобы получить из файла журнала ULS UESQL11SPOINT-20110606-1530.log отфильтрованный список строк, содержащих подстроку **sql server reporting services**:  
   
 ```  
 Get-content -path "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\LOGS\UESQL11SPOINT-20110606-1530.log" | select-string "sql server reporting services"  

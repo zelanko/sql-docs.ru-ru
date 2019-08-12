@@ -12,12 +12,12 @@ ms.assetid: 1338b4ea-7142-44bc-a3b9-44e54431405f
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e4cd1164b5845f6237a1381fa706fc067cf311a8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bedae7661398ed4281f2da460ad7ce16b5dd82de
+ms.sourcegitcommit: 9702dd51410dd610842d3576b24c0ff78cdf65dc
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140830"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68841625"
 ---
 # <a name="view-collation-information"></a>Просмотр сведений о параметрах сортировки
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ ms.locfileid: "68140830"
 2.  В окне запроса введите следующую инструкцию, которая использует системную функцию SERVERPROPERTY.  
   
     ```sql  
-    SELECT CONVERT (varchar, SERVERPROPERTY('collation'));  
+    SELECT CONVERT (varchar(256), SERVERPROPERTY('collation'));  
     ```  
   
 3.  Кроме того, можно использовать системную хранимую процедуру sp_helpsort.  
@@ -94,7 +94,7 @@ ms.locfileid: "68140830"
 3.  Кроме того, можно использовать системную функцию DATABASEPROPERTYEX.  
   
     ```sql  
-    SELECT CONVERT (varchar, DATABASEPROPERTYEX('database_name','collation'));  
+    SELECT CONVERT (varchar(256), DATABASEPROPERTYEX('database_name','collation'));  
     ```  
   
  **Просмотр параметров сортировки для столбца**  
