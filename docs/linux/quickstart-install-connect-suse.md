@@ -1,7 +1,7 @@
 ---
 title: Начало работы с SQL Server в SUSE Linux Enterprise Server
 titleSuffix: SQL Server
-description: В этом кратком руководстве показано, как установить SQL Server 2017 или SQL Server 2019 в SUSE Linux Enterprise Server, а затем создать и запрос к базе данных с помощью sqlcmd.
+description: В этом кратком руководстве рассказывается, как установить SQL Server 2017 или SQL Server 2019 в SUSE Linux Enterprise Server, а затем создать и запросить базу данных с помощью средства sqlcmd.
 author: VanMSFT
 ms.author: vanto
 ms.date: 07/16/2018
@@ -10,102 +10,102 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 31ddfb80-f75c-4f51-8540-de6213cb68b8
 ms.openlocfilehash: b878e76546642ee9b9792ece31029c0640eb8864
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67910497"
 ---
-# <a name="quickstart-install-sql-server-and-create-a-database-on-suse-linux-enterprise-server"></a>Краткое руководство. Установка SQL Server и создать базу данных на базе SUSE Linux Enterprise Server
+# <a name="quickstart-install-sql-server-and-create-a-database-on-suse-linux-enterprise-server"></a>Краткое руководство. Установка SQL Server и создание базы данных в SUSE Linux Enterprise Server
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-В этом кратком руководстве вы устанавливаете SQL Server 2017 или предварительной версии SQL Server 2019 на SUSE Linux Enterprise Server (SLES) версии 12 с пакетом обновления 2. После этого следует подключиться с помощью **sqlcmd** создать свою первую базу данных и выполнения запросов.
+В этом кратком руководстве вы установите SQL Server 2017 или предварительную версию SQL Server 2019 в SUSE Linux Enterprise Server (SLES) версии 12 с пакетом обновления 2 (SP2). Затем вы подключитесь с помощью **sqlcmd** для создания первой базы данных и выполнения запросов.
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-В этом кратком руководстве установкой предварительной версии SQL Server 2019 на SUSE Linux Enterprise Server (SLES) версии 12 с пакетом обновления 2. После этого следует подключиться с помощью **sqlcmd** создать свою первую базу данных и выполнения запросов.
+В этом кратком руководстве вы установите предварительную версию SQL Server 2019 в SUSE Linux Enterprise Server (SLES) версии 12 с пакетом обновления 2 (SP2). Затем вы подключитесь с помощью **sqlcmd** для создания первой базы данных и выполнения запросов.
 
 ::: moniker-end
 
 > [!TIP]
-> Этого учебника требуется ввод данных пользователем и подключение к Интернету. Если вы заинтересованы в [автоматической](sql-server-linux-setup.md#unattended) или [автономной](sql-server-linux-setup.md#offline) процедуры установки см. в разделе [руководство по установке для SQL Server в Linux](sql-server-linux-setup.md).
+> Для выполнения этого руководства требуется ввод данных пользователем и подключение к Интернету. Если вас интересуют процедуры [автоматической](sql-server-linux-setup.md#unattended) или [автономной](sql-server-linux-setup.md#offline) установки, см. [руководство по установке SQL Server на Linux](sql-server-linux-setup.md).
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>предварительные требования
 
-Необходимо иметь компьютер SLES версии 12 с пакетом обновления 2 с **по крайней мере 2 ГБ** памяти. Файловая система должна быть **XFS** или **EXT4**. Другие файловые системы, такие как **BTRFS**, не поддерживаются.
+Требуется компьютер, на котором установлена ОС SLES версии 12 с пакетом обновления 2 (SP2) и имеется **по крайней мере 2 ГБ** памяти. Должна использоваться файловая система **XFS** или **EXT4**. Другие файловые системы, например **BTRFS**, не поддерживаются.
 
-Чтобы установить SUSE Linux Enterprise Server на своем локальном компьютере, перейдите к [ https://www.suse.com/products/server ](https://www.suse.com/products/server). Кроме того, можно создать виртуальные машины SLES в Azure. См. в разделе [Создание и управление виртуальными машинами Linux с помощью Azure CLI](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm)и использовать `--image SLES` в вызове `az vm create`.
+Чтобы установить SUSE Linux Enterprise Server на собственном компьютере, перейдите на страницу [https://www.suse.com/products/server](https://www.suse.com/products/server). Можно также создать виртуальные машины SLES в Azure. См. статью [Создание виртуальных машин Linux и управление ими с помощью Azure CLI](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm) и используйте параметр `--image SLES` в вызове `az vm create`.
 
-Если вы ранее установили CTP-версии или версии-кандидате SQL Server 2017, необходимо сначала удалить старое хранилище, затем выполните следующие действия. Дополнительные сведения см. в разделе [репозиториев Настройка виртуальных машин Linux для SQL Server 2017 и 2019](sql-server-linux-change-repo.md).
+Если вы ранее установили выпуск CTP или RC сервера SQL Server 2017, необходимо удалить старый репозиторий, прежде чем выполнять эти действия. Дополнительные сведения см. в статье [Настройка репозиториев Linux для SQL Server 2017 и 2019](sql-server-linux-change-repo.md).
 
 > [!NOTE]
-> В настоящее время [подсистема Windows для Linux](https://msdn.microsoft.com/commandline/wsl/about) для Windows 10 не поддерживается в качестве целевого объекта установки.
+> В настоящее время [подсистема Windows для Linux](https://msdn.microsoft.com/commandline/wsl/about) для Windows 10 не поддерживается в качестве цели установки.
 
-Другие требования к системе см. в разделе [требования к системе для SQL Server в Linux](sql-server-linux-setup.md#system).
+Сведения о других требованиях к системе см. в статье [Требования к системе для SQL Server на Linux](sql-server-linux-setup.md#system).
 
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
 ## <a id="install"></a>Установка SQL Server
 
-Чтобы настроить SQL Server в SLES, выполните следующие команды в окне терминала, чтобы установить **mssql-server** пакета:
+Чтобы настроить SQL Server в SLES, выполните следующие команды в терминале для установки пакета **mssql-server**:
 
-1. Загрузите файл конфигурации репозитория Microsoft SQL Server 2017 SLES:
+1. Скачайте файл конфигурации репозитория Microsoft SQL Server 2017 SLES:
 
    ```bash
    sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017.repo
    ```
 
    > [!TIP]
-   > Если вы хотите попробовать SQL Server 2019, вместо этого необходимо зарегистрировать **предварительной версии (2019)** репозитория. Используйте следующую команду для установки SQL Server 2019:
+   > Если вы хотите опробовать SQL Server 2019, необходимо зарегистрировать вместо этого репозиторий **предварительной версии (2019)** . Используйте следующую команду для установки SQL Server 2019:
    >
    > ```bash
    > sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-preview.repo
    > ```
 
-2. Обновите свои хранилища.
+2. Обновите репозитории.
 
    ```bash
    sudo zypper --gpg-auto-import-keys refresh 
    ```
    
-3. Выполните следующие команды для установки SQL Server:
+3. Выполните следующие команды для установки SQL Server:
 
    ```bash
    sudo zypper install -y mssql-server
    ```
 
-4. После завершения установки пакета запустите **установки mssql-conf** и следуйте инструкциям на экране, чтобы задать пароль системного Администратора и выберите ваш выпуск.
+4. Когда установка пакета завершится, выполните команду **mssql-conf setup** и следуйте указаниям, чтобы задать пароль системного администратора и выбрать выпуск.
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf setup
    ```
 
    > [!TIP]
-   > Свободно лицензируются следующих выпусков SQL Server 2017: Evaluation, Developer и Express.
+   > Следующие выпуски SQL Server 2017 имеют бесплатные лицензии: Evaluation, Developer и Express.
 
    > [!NOTE]
-   > Не забудьте указать надежный пароль для учетной записи SA (минимум длина 8 символов, заглавные и строчные буквы, десятичные цифры и не буквенно-цифровых символов).
+   > Для учетной записи системного администратора необходимо установить надежный пароль (минимальная длина — 8 символов; должен содержать строчные и прописные буквы, десятичные цифры и (или) символы, отличные от букв и цифр).
 
-5. После завершения конфигурации, убедитесь, что служба запущена:
+5. По завершении настройки убедитесь в том, что служба работает:
 
    ```bash
    systemctl status mssql-server
    ```
 
-6. Если вы планируете удаленное подключение, также может потребоваться открыть порт SQL Server TCP (по умолчанию 1433) в брандмауэре. Если вы используете брандмауэр SuSE, необходимо изменить **/etc/sysconfig/SuSEfirewall2** файла конфигурации. Изменить **FW_SERVICES_EXT_TCP** запись, чтобы добавлять номер порта SQL Server.
+6. Если вы планируете подключаться удаленно, может потребоваться открыть в брандмауэре TCP-порт SQL Server (по умолчанию 1433). Если вы используете брандмауэр SuSE, необходимо изменить файл конфигурации **/etc/sysconfig/SuSEfirewall2**. Измените запись **FW_SERVICES_EXT_TCP**, добавив номер порта SQL Server.
 
    ```
    FW_SERVICES_EXT_TCP="1433"
    ```
 
-На этом этапе SQL Server работает на вашем компьютере SLES и готов к использованию!
+В результате сервер SQL Server будет запущен на компьютере SLES и готов к использованию!
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
@@ -113,70 +113,70 @@ ms.locfileid: "67910497"
 
 ## <a id="install"></a>Установка SQL Server
 
-Чтобы настроить SQL Server в SLES, выполните следующие команды в окне терминала, чтобы установить **mssql-server** пакета:
+Чтобы настроить SQL Server в SLES, выполните следующие команды в терминале для установки пакета **mssql-server**:
 
-1. Загрузите файл конфигурации репозитория SLES предварительной версии Microsoft SQL Server 2019:
+1. Скачайте файл конфигурации репозитория SLES для предварительной версии Microsoft SQL Server 2019:
 
    ```bash
    sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-preview.repo
    ```
 
-2. Обновите свои хранилища.
+2. Обновите репозитории.
 
    ```bash
    sudo zypper --gpg-auto-import-keys refresh 
    ```
    
-3. Выполните следующие команды для установки SQL Server:
+3. Выполните следующие команды для установки SQL Server:
 
    ```bash
    sudo zypper install -y mssql-server
    ```
 
-4. После завершения установки пакета запустите **установки mssql-conf** и следуйте инструкциям на экране, чтобы задать пароль системного Администратора и выберите ваш выпуск.
+4. Когда установка пакета завершится, выполните команду **mssql-conf setup** и следуйте указаниям, чтобы задать пароль системного администратора и выбрать выпуск.
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf setup
    ```
 
    > [!NOTE]
-   > Не забудьте указать надежный пароль для учетной записи SA (минимум длина 8 символов, заглавные и строчные буквы, десятичные цифры и не буквенно-цифровых символов).
+   > Для учетной записи системного администратора необходимо установить надежный пароль (минимальная длина — 8 символов; должен содержать строчные и прописные буквы, десятичные цифры и (или) символы, отличные от букв и цифр).
 
-5. После завершения конфигурации, убедитесь, что служба запущена:
+5. По завершении настройки убедитесь в том, что служба работает:
 
    ```bash
    systemctl status mssql-server
    ```
 
-6. Если вы планируете удаленное подключение, также может потребоваться открыть порт SQL Server TCP (по умолчанию 1433) в брандмауэре. Если вы используете брандмауэр SuSE, необходимо изменить **/etc/sysconfig/SuSEfirewall2** файла конфигурации. Изменить **FW_SERVICES_EXT_TCP** запись, чтобы добавлять номер порта SQL Server.
+6. Если вы планируете подключаться удаленно, может потребоваться открыть в брандмауэре TCP-порт SQL Server (по умолчанию 1433). Если вы используете брандмауэр SuSE, необходимо изменить файл конфигурации **/etc/sysconfig/SuSEfirewall2**. Измените запись **FW_SERVICES_EXT_TCP**, добавив номер порта SQL Server.
 
    ```
    FW_SERVICES_EXT_TCP="1433"
    ```
 
-На этом этапе предварительной версии SQL Server 2019 работает на вашем компьютере SLES и готов к использованию!
+В результате предварительная версия сервера SQL Server 2019 будет запущена на компьютере SLES и готова к использованию!
 
 ::: moniker-end
 
 
-## <a id="tools"></a>Установка программ командной строки SQL Server
+## <a id="tools"></a>Установка программ командной строки SQL Server
 
-Чтобы создать базу данных, необходимо подключиться с инструментом, который можно запустить инструкции Transact-SQL в SQL Server. Следующие шаги, чтобы установить средства командной строки SQL Server: [sqlcmd](../tools/sqlcmd-utility.md) и [bcp](../tools/bcp-utility.md).
+Чтобы создать базу данных, необходимо подключиться с помощью средства, которое позволяет выполнять инструкции Transact-SQL в SQL Server. Ниже приведены инструкции по установке программ командной строки SQL Server: [sqlcmd](../tools/sqlcmd-utility.md) и [bcp](../tools/bcp-utility.md).
 
-1. Добавьте репозиторий Microsoft SQL Server Zypper.
+1. Добавьте репозиторий Microsoft SQL Server в Zypper.
 
    ```bash
    sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/prod.repo 
    sudo zypper --gpg-auto-import-keys refresh
    ```
 
-1. Установка **mssql-tools** с пакетом разработчика unixODBC.
+1. Установите **mssql-tools** с помощью пакета разработчика unixODBC.
 
    ```bash
    sudo zypper install -y mssql-tools unixODBC-devel
    ```
 
-1. Для удобства добавьте `/opt/mssql-tools/bin/` для вашей **путь** переменной среды. Это позволяет запустить средства без указания полного пути. Выполните следующие команды для изменения **путь** для обоих сеансов входа и интерактивных/сеансов без входа:
+1. Для удобства добавьте путь `/opt/mssql-tools/bin/` в переменную среды **PATH**. Это позволит запускать программы, не указывая полный путь. Выполните следующие команды, чтобы изменить переменную среды **PATH** как для сеансов входа в систему, так и для интерактивных сеансов и сеансов без входа в систему:
 
    ```bash
    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile

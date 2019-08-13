@@ -9,12 +9,12 @@ ms.date: 07/24/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 7bdb1eb59fd36d065df9dba0f6d6879c1a294914
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
-ms.translationtype: HT
+ms.openlocfilehash: 29bdd3996112154b222ffb7d43390050c9af2d02
+ms.sourcegitcommit: 0d89bcaebdf87db3bd26db2ca263be9c671b0220
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68419392"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68731092"
 ---
 # <a name="how-to-upgrade-sql-server-big-data-clusters"></a>Обновление кластеров больших данных SQL Server
 
@@ -42,7 +42,7 @@ ms.locfileid: "68419392"
    Для CTP 2.3 или более поздней версии выполните приведенную ниже команду. Замените `ctp3.1` в команде на удаляемую версию **mssqlctl**. Если используется версия младше CTP 3.1, добавьте тире перед номером версии (например, `ctp-2.5`).
 
    ```powershell
-   pip3 uninstall -r https://mcr.microsoft.com/python/ctp3.1/mssqlctl/requirements.txt
+   pip3 uninstall -r https://private-repo.microsoft.com/python/ctp3.1/mssqlctl/requirements.txt
    ```
 
 1. Установите последнюю версию **azdata**. Следующие команды устанавливают **azdata** для CTP 3.2.
@@ -76,4 +76,4 @@ azdata --version
 
 ## <a name="next-steps"></a>Следующие шаги
 
-Дополнительные сведения о кластерах больших данных см. в статье [Что такое кластеры больших данных SQL Server?](big-data-cluster-overview.md)
+Дополнительные сведения о кластерах больших данных см. в статье [Что такое кластеры больших данных SQL Server?](big-data-cluster-overview.md)

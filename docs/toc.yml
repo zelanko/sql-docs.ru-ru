@@ -1,5 +1,7 @@
 - name: Вас приветствует SQL Server
   href: sql-server/sql-server-technical-documentation.md?toc=../toc.json
+- name: "Управление версиями в документации по\_SQL"
+  href: toc/versioning-system-monikers-ui-sql-server.md
 - name: Предыдущие версии (2005–2014)
   href: toc/previous-versions-sql-server.md
 - name: Обзор

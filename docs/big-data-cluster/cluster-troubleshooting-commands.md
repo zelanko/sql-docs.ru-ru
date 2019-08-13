@@ -9,12 +9,12 @@ ms.date: 07/24/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 272249b7bd6c22895b7d10e7fbce4a20cb647a49
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
-ms.translationtype: HT
+ms.openlocfilehash: ccdfe31f7873c44ea09e273d5d9afb2361f9b36b
+ms.sourcegitcommit: 9702dd51410dd610842d3576b24c0ff78cdf65dc
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68419479"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68841558"
 ---
 # <a name="monitoring-and-troubleshoot-sql-server-big-data-clusters"></a>Мониторинг и устранение неполадок кластеров больших данных SQL Server
 
@@ -92,7 +92,7 @@ kubectl describe pod  master-0 -n mssql-cluster
 Вы можете получить журналы контейнеров, работающих в Pod. Следующая команда извлекает журналы для всех контейнеров, работающих в Pod `master-0`, и выводит их в файл `master-0-pod-logs.txt`:
 
 ```bash
-kubectl logs master-0 --all-containers=true -n mssql-cluser > master-0-pod-logs.txt
+kubectl logs master-0 --all-containers=true -n mssql-cluster > master-0-pod-logs.txt
 ```
 
 ## <a id="services"></a> Получение состояния служб
@@ -133,36 +133,6 @@ kubectl describe service <service_name> -n <namespace_name>
 
 ```bash
 kubectl describe service master-svc-external -n mssql-cluster
-```
-
-## <a name="run-commands-in-a-container"></a>Выполнение команд в контейнере
-
-Если существующие средства или инфраструктура не позволяют выполнять определенную задачу без фактического включения в контекст контейнера, можно войти в контейнер с помощью команды `kubectl exec`. Например, может потребоваться проверить, существует ли конкретный файл, или же перезапустить службы в контейнере. 
-
-Чтобы использовать команду `kubectl exec`, используйте следующий синтаксис:
-
-```bash
-kubectl exec -it <pod_name>  -c <container_name> -n <namespace_name> -- /bin/bash <command name> 
-```
-
-Следующие два раздела содержат два примера выполнения команды в определенном контейнере.
-
-### <a id="restartsql"></a> Вход в конкретный контейнер и перезапуск процесса SQL Server
-
-В следующем примере показано, как перезапустить процесс SQL Server в контейнере `mssql-server` в модуле Pod `master-0`:
-
-```bash
-kubectl exec -it master-0  -c mssql-server -n mssql-cluster -- /bin/bash 
-supervisorctl restart mssql
-```
-
-### <a id="restartservices"></a> — войти в конкретный контейнер и перезапустить службы в контейнере.
- 
-В следующем примере показано, как перезапустить все службы, управляемые программой **supervisord**: 
-
-```bash
-kubectl exec -it master-0  -c mssql-server -n mssql-cluster -- /bin/bash 
-supervisorctl -c /opt/supervisor/supervisord.conf reload
 ```
 
 ## <a id="copy"></a> Копирование файлов

@@ -9,12 +9,12 @@ ms.date: 07/24/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: a8136c85f8c32e08423f3d199a021d4f60353b39
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
-ms.translationtype: HT
+ms.openlocfilehash: 24a72683c423661a2981e5a16941bcbc180ac6d1
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68425994"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68894006"
 ---
 # <a name="azdata"></a>azdata
 
@@ -27,12 +27,11 @@ ms.locfileid: "68425994"
 | --- | --- |
 |[azdata app](reference-azdata-app.md) | Создание, удаление и запуск приложений, а также управление ими. |
 |[azdata bdc](reference-azdata-bdc.md) | Создание кластеров больших данных SQL, а также управление ими и обеспечение работы. |
-|[azdata notebook](reference-azdata-notebook.md) | Команды для просмотра, запуска записных книжек и управления ими из терминала. |
-[azdata login](#azdata-login) | Вход в конечную точку контроллера кластера.
-[azdata logout](#azdata-logout) | Выход из кластера.
-|[azdata sql](reference-azdata-sql.md) | Интерфейс командной строки (CLI) баз данных SQL позволяет пользователю взаимодействовать с SQL Server с помощью T-SQL. |
+|[azdata login](#azdata-login) | Вход в конечную точку контроллера кластера.
+|[azdata logout](#azdata-logout) | Выход из кластера.
+
 ## <a name="azdata-login"></a>azdata login
-Если кластер развернут, выводит список конечных точек контроллера в процессе развертывания, которые следует использовать для входа.  Если вам не известна конечная точка контроллера, вы можете выполнить вход с использованием конфигурации KUBE кластера в системе, которая по умолчанию располагается в каталоге <user home>/.kube/config, или переменной среды KUBECONFIG, то есть экспортировать KUBECONFIG=path/to/.kube/config.
+При развертывании кластера в ходе развертывания будет отображаться конечная точка контроллера, которую следует использовать для входа в систему.  Если вы не знакомы с конечной точкой контроллера, вы можете войти в систему, указав конфигурацию KUBE кластера в вашей системе в расположении <user home>по умолчанию/.KUBE/config. или использовать KUBECONFIG env var, то есть Export KUBECONFIG = path/to/. KUBE/config.
 ```bash
 azdata login [--cluster-name -n] 
              [--controller-username -u]  
@@ -44,7 +43,7 @@ azdata login [--cluster-name -n]
 ```bash
 azdata login
 ```
-Вход не в интерактивном режиме. Выполните вход, указав в качестве аргументов имя кластера, имя пользователя контроллера, конечную точку контроллера, а также информацию о принятии условий лицензионного соглашения. Должна быть задана переменная среды CONTROLLER_PASSWORD.  Если вы не хотите указывать конечную точку контроллера, вы можете использовать конфигурацию KUBE в системе, которая по умолчанию располагается в каталоге <user home>/.kube/config, или переменную среды KUBECONFIG, то есть экспортировать KUBECONFIG=path/to/.kube/config.
+Вход не в интерактивном режиме. Выполните вход, указав в качестве аргументов имя кластера, имя пользователя контроллера, конечную точку контроллера, а также информацию о принятии условий лицензионного соглашения. Должна быть задана переменная среды CONTROLLER_PASSWORD.  Если вы не хотите указывать конечную точку контроллера, попросите файл конфигурации KUBE на компьютере в расположении <user home>по умолчанию/.KUBE/config. или используйте KUBECONFIG env var, то есть Export KUBECONFIG = path/to/. KUBE/config.
 ```bash
 azdata login --cluster-name ClusterName --controller-user johndoe@contoso.com  --controller-endpoint https://<ip>:30080 --accept-eula yes
 ```
@@ -58,9 +57,9 @@ azdata login -n ClusterName
 #### `--controller-username -u`
 Имя пользователя учетной записи. Если вы не хотите использовать этот аргумент, можно задать переменную среды CONTROLLER_USERNAME.
 #### `--controller-endpoint -e`
-Конечная точка контроллера кластера "https://host:port". Если вы не хотите использовать этот аргумент, можно использовать конфигурацию KUBE на компьютере. Убедитесь, что конфигурация располагается в заданном по умолчанию месте (<user home>/.kube/config) или используйте переменную среды KUBECONFIG.
+Конечная точка контроллера кластера "https://host:port". Если вы не хотите использовать этот аргумент, можно использовать конфигурацию KUBE на компьютере. Убедитесь, что файл конфигурации расположен в расположении <user home>по умолчанию/.KUBE/config. или используйте KUBECONFIG env.
 #### `--accept-eula -a`
-Вы принимаете условия лицензии? [да/нет]. Если вы не хотите использовать этот аргумент, можно присвоить переменной среды ACCEPT_EULA значение "yes". Условия лицензии для этого продукта можно просмотреть по адресу https://aka.ms/azdata-eula.
+Вы принимаете условия лицензии? [да/нет]. Если вы не хотите использовать этот аргумент, можно присвоить переменной среды ACCEPT_EULA значение "yes". 
 ### <a name="global-arguments"></a>Глобальные аргументы
 #### `--debug`
 Повышение уровня детализации журнала для включения всех журналов отладки.
@@ -69,7 +68,7 @@ azdata login -n ClusterName
 #### `--output -o`
 Формат вывода.  Допустимые значения: json, jsonc, table, tsv.  Значение по умолчанию: json.
 #### `--query -q`
-Строка запроса JMESPath. Дополнительные сведения и примеры см. в разделе [http://jmespath.org/](http://jmespath.org/]).
+Строка запроса JMESPath. Дополнительные сведения и примеры см [http://jmespath.org/](http://jmespath.org/]) . в разделе.
 #### `--verbose`
 Повышение уровня детализации журнала. Чтобы включить полные журналы отладки, используйте параметр --debug.
 ## <a name="azdata-logout"></a>azdata logout
@@ -90,7 +89,7 @@ azdata logout
 #### `--output -o`
 Формат вывода.  Допустимые значения: json, jsonc, table, tsv.  Значение по умолчанию: json.
 #### `--query -q`
-Строка запроса JMESPath. Дополнительные сведения и примеры см. в разделе [http://jmespath.org/](http://jmespath.org/]).
+Строка запроса JMESPath. Дополнительные сведения и примеры см [http://jmespath.org/](http://jmespath.org/]) . в разделе.
 #### `--verbose`
 Повышение уровня детализации журнала. Чтобы включить полные журналы отладки, используйте параметр --debug.
 

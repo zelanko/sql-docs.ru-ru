@@ -5,9 +5,9 @@
 - name: Обзор
   expanded: true
   items:
-    - name: "Службы машинного обучения\_— (R, Python)"
+    - name: Что такое Службы машинного обучения (Python и R)?
       href: ../advanced-analytics/what-is-sql-server-machine-learning.md
-    - name: Службы R
+    - name: "Что такое службы\_R?"
       href: ../advanced-analytics/r/sql-server-r-services.md
     - name: Отдельный сервер
       href: ../advanced-analytics/r/r-server-standalone.md
@@ -23,7 +23,7 @@
       href: ../linux/sql-server-linux-setup-machine-learning.md?toc=/sql/advanced-analytics/toc.json
     - name: Установка служб R
       href: ../advanced-analytics/install/sql-r-services-windows-install.md
-    - name: 'Установка отдельного сервера (R, Python)'
+    - name: 'Установка отдельного сервера (Python, R)'
       href: ../advanced-analytics/install/sql-machine-learning-standalone-windows-install.md
     - name: Установка предварительно обученных моделей
       href: ../advanced-analytics/install/sql-pretrained-models-install.md

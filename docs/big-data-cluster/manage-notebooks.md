@@ -1,7 +1,7 @@
 ---
-title: Управление SQL Server кластером больших данных с помощью Azure Data Studio записных книжек
+title: Управление кластером больших данных SQL Server с помощью записных книжек Azure Data Studio
 titleSuffix: Manage SQL Server big data cluster cluster with Azure Data Studio notebooks
-description: Используйте записную книжку из Azure Data Studio для управления кластером больших данных и устранения неполадок.
+description: Используйте записную книжку из Azure Data Studio для управления кластером больших данных и устранения его неполадок.
 author: yualan
 ms.author: alanyu
 ms.reviewer: mikeray
@@ -9,32 +9,49 @@ ms.date: 07/24/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 8d87b09878539cccd40191d870bf97487579dca2
-ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
+ms.openlocfilehash: 1a6156dad127ea2a86e8a6f4dfbdd6f692fd8f6e
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68426404"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893653"
 ---
-# <a name="manage-big-data-clusters-for-sql-server-with-azure-data-studio-notebooks"></a>Управление кластерами больших данных для SQL Server с помощью Azure Data Studio записных книжек
+# <a name="manage-big-data-clusters-for-sql-server-with-azure-data-studio-notebooks"></a>Управление кластерами больших данных SQL Server с помощью записных книжек Azure Data Studio
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]предоставляет расширение для Azure Data Studio, включающее записные книжки развертывания. Записная книжка развертывания содержит документацию и код, которые можно использовать в Azure Data Studio для управления кластерами больших данных для SQL Server.
+[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] предоставляет расширение для Azure Data Studio, включающее в себя записные книжки. Записная книжка содержит документацию и код, которые можно использовать в Azure Data Studio для управления кластерами больших данных SQL Server.
 
-Изначально реализована как проект с открытым исходным кодом, в [Azure Data Studio](http://docs.microsoft.com/sql/azure-data-studio/download)реализованы [записные книжки](notebooks-guidance.md) . Markdown можно использовать для текста в текстовых ячейках и в одном из доступных ядер для написания кода в ячейках кода.
+[Записные книжки](notebooks-guidance.md), которые изначально были реализованы как проект с открытым кодом, теперь интегрированы в [Azure Data Studio](http://docs.microsoft.com/sql/azure-data-studio/download). Вы можете использовать разметку Markdown для текста в текстовых ячейках и одно из доступных ядер для написания кода в ячейках кода.
 
-Для развертывания кластеров [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]больших данных можно использовать записные книжки.
+С помощью записных книжках можно развертывать кластеры больших данных для [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
 
-## <a name="prerequisites"></a>Предварительные требования
+Помимо записных книжек, пользователи могут просматривать набор записных книжек, которые называются книгами Jupyter. Книга Jupyter содержит оглавление для навигации по коллекции записных книжек, что позволяет пользователю легко найти требуемую записную книжку для устранения неполадок SQL Server или просмотра состояния кластера.
 
-Для запуска записной книжки требуются следующие необходимые компоненты:
+## <a name="prerequisites"></a>предварительные требования
 
-* Последняя версия [сборки Azure Data Studio для участников программы предварительной оценки](https://github.com/microsoft/azuredatastudio#try-out-the-latest-insiders-build-from-master)
-* [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]расширение, установленное в Azure Data Studio
+Для запуска записной книжки требуются следующие компоненты:
 
-Кроме того, для развертывания кластера больших данных SQL Server 2019 требуется:
+* последняя [сборка Azure Data Studio для участников программы предварительной оценки](https://github.com/microsoft/azuredatastudio#try-out-the-latest-insiders-build-from-master);
+* расширение [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)], установленное в Azure Data Studio.
 
-* [аздата](deploy-install-azdata.md)
+Помимо перечисленных выше компонентов, для развертывания кластера больших данных SQL Server 2019 требуется следующее:
+
+* [azdata](deploy-install-azdata.md)
 * [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-binary-using-native-package-management)
 * [Azure CLI](/cli/azure/install-azure-cli)
+
+## <a name="accessing-troubleshooting-notebooks"></a>Доступ к записным книжкам для устранения неполадок
+
+1. После установки Azure Data Studio для участников программы предварительной оценки подключитесь к экземпляру кластера больших данных SQL Server.
+2. После успешного подключения щелкните правой кнопкой мыши имя сервера в мини-приложении "Подключения" и выберите пункт **Управление**.
+3. На панели мониторинга щелкните **Кластер больших данных SQL Server**. Щелкните **руководство по SQL Server 2019**, чтобы открыть книгу Jupyter с нужными записными книжками.
+    ![кнопка](media/manage-notebooks/jupyter-book-button.png)
+
+1. В окне выбора папки выберите расположение, в котором нужно сохранить книгу Jupyter.
+2. Щелкните **Перезагрузить**, чтобы перезагрузить Azure Data Studio и увидеть книгу Jupyter. Щелкните **Открыть новый экземпляр**, чтобы открыть новый экземпляр Azure Data Studio с книгой Jupyter.
+3. В окне проводника должен быть раздел **Книги**. Если он не развернут, щелкните его, чтобы просмотреть записные книжки.
+4. Щелкните записную книжку, соответствующую нужной задаче.
+
+## <a name="next-steps"></a>Следующие шаги
+Дополнительные сведения о записных книжках в Azure Data Studio см. в статье [Использование записных книжек в предварительной версии SQL Server 2019](notebooks-guidance.md).
