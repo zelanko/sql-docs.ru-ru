@@ -9,12 +9,12 @@ ms.date: 07/24/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ed777391af3695da69e04c0e2693cff912c76771
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
-ms.translationtype: HT
+ms.openlocfilehash: 1962fd25416ab3546c15f9b894375e0f3ed740c6
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68426294"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68894034"
 ---
 # <a name="azdata-bdc-config"></a>azdata bdc config
 
@@ -57,7 +57,7 @@ azdata bdc config init --source aks-dev-test --target custom
 #### `--force -f`
 Принудительная перезапись целевого файла.
 #### `--accept-eula -a`
-Вы принимаете условия лицензии? [да/нет]. Если вы не хотите использовать этот аргумент, можно присвоить переменной среды ACCEPT_EULA значение "yes". Условия лицензии для этого продукта можно просмотреть по адресу https://aka.ms/azdata-eula.
+Вы принимаете условия лицензии? [да/нет]. Если вы не хотите использовать этот аргумент, можно присвоить переменной среды ACCEPT_EULA значение "yes". 
 ### <a name="global-arguments"></a>Глобальные аргументы
 #### `--debug`
 Повышение уровня детализации журнала для включения всех журналов отладки.
@@ -92,7 +92,7 @@ azdata bdc config list --config-profile aks-dev-test
 Тип конфигурации, который следует просмотреть.
 `cluster`
 #### `--accept-eula -a`
-Вы принимаете условия лицензии? [да/нет]. Если вы не хотите использовать этот аргумент, можно присвоить переменной среды ACCEPT_EULA значение "yes". Условия лицензии для этого продукта можно просмотреть по адресу https://aka.ms/azdata-eula.
+Вы принимаете условия лицензии? [да/нет]. Если вы не хотите использовать этот аргумент, можно присвоить переменной среды ACCEPT_EULA значение "yes". 
 ### <a name="global-arguments"></a>Глобальные аргументы
 #### `--debug`
 Повышение уровня детализации журнала для включения всех журналов отладки.
@@ -131,7 +131,7 @@ azdata bdc config show --config-file custom-config/cluster.json  --json-path '$.
 #### `--target -t`
 Выходной файл, в котором следует сохранить результат. По умолчанию: направляется в stdout.
 #### `--json-path -j`
-Путь к ключу JSON, который указывает на требуемый раздел или значение из конфигурации, например key1.key2.key3. Используется язык запросов jsonpath (https://jsonpath.com/ ), например: -j '$.spec.pools[?(@.spec.type == "Master")]..endpoints'
+Путь к ключу JSON, который указывает на требуемый раздел или значение из конфигурации, например key1.key2.key3. Используется язык запросов jsonpath (https://jsonpath.com/), например: -j '$.spec.pools[?(@.spec.type == "Master")]..endpoints'
 #### `--force -f`
 Принудительная перезапись целевого файла.
 ### <a name="global-arguments"></a>Глобальные аргументы
