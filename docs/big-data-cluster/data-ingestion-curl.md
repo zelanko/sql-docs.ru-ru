@@ -1,7 +1,7 @@
 ---
-title: Используйте curl для загрузки данных в HDFS | Документация Майкрософт
+title: Загрузка данных в HDFS с помощью curl | Документация Майкрософт
 titleSuffix: SQL Server big data clusters
-description: Используйте curl для загрузки данных в HDFS в кластерах SQL Server 2019 больших данных.
+description: Использование curl для загрузки данных в HDFS в кластерах больших данных SQL Server 2019.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -10,30 +10,30 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: aae991c6dfdade4145f1e5578273e3b6aeb83299
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67958635"
 ---
-# <a name="use-curl-to-load-data-into-hdfs-on-sql-server-big-data-clusters"></a>Используйте curl для загрузки данных в HDFS в кластерах больших данных в SQL Server
+# <a name="use-curl-to-load-data-into-hdfs-on-sql-server-big-data-clusters"></a>Использование curl для загрузки данных в HDFS в кластерах больших данных SQL Server 2019
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-В этой статье описываются способы использования **curl** для загрузки данных в HDFS в кластерах SQL Server 2019 больших данных (Предварительная версия).
+В этой статье описывается использование **curl** для загрузки данных в HDFS в кластерах больших данных SQL Server 2019 (предварительная версия).
 
-## <a name="obtain-the-service-external-ip"></a>Получить внешний IP-адрес службы
+## <a name="obtain-the-service-external-ip"></a>Получение внешнего IP-адреса службы
 
-WebHDFS запускается после завершения развертывания, и доступ к нему осуществляется через Knox. Конечная точка Knox предоставляется через службу Kubernetes, именуемую **шлюз svc-external**.  Чтобы создать необходимые WebHDFS URL-адрес для отправки или скачивания файлов, вам понадобится **шлюз svc-external** службы внешний IP-адрес и имя кластера больших данных. Вы можете получить **шлюз svc-external** службы внешний IP-адрес, выполнив следующую команду:
+WebHDFS запускается после завершения развертывания. Доступ к этой службе осуществляется через Knox. Конечная точка Knox предоставляется через службу Kubernetes **gateway-svc-external**.  Для создания необходимого URL-адреса WebHDFS для отправки или скачивания файлов потребуется внешний IP-адрес службы **gateway-svc-external** и имя кластера больших данных. Внешний IP-адрес службы **gateway-svc-external** можно получить, выполнив следующую команду:
 
 ```bash
 kubectl get service gateway-svc-external -n <big data cluster name> -o json | jq -r .status.loadBalancer.ingress[0].ip
 ```
 
 > [!NOTE]
-> `<big data cluster name>` Здесь — имя кластера, который указан в файле конфигурации развертывания. Имя по умолчанию — `mssql-cluster`.
+> `<big data cluster name>` — это имя кластера, указанное в файле конфигурации развертывания. Имя по умолчанию — `mssql-cluster`.
 
-## <a name="construct-the-url-to-access-webhdfs"></a>Создать URL-адрес для доступа к WebHDFS
+## <a name="construct-the-url-to-access-webhdfs"></a>Создание URL-адреса для доступа к WebHDFS
 
 Теперь можно создать URL-адрес для доступа к WebHDFS следующим образом:
 
@@ -43,25 +43,25 @@ kubectl get service gateway-svc-external -n <big data cluster name> -o json | jq
 
 `https://13.66.190.205:30443/gateway/default/webhdfs/v1/`
 
-## <a name="list-a-file"></a>Список файлов
+## <a name="list-a-file"></a>Указание файла
 
-Файл списка в разделе **hdfs: / / / airlinedata**, используйте следующую команду curl:
+Чтобы указать файл в **hdfs:///airlinedata**, выполните следующую команду:
 
 ```bash
 curl -i -k -u root:root-password -X GET 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/airlinedata/?op=liststatus'
 ```
 
-## <a name="put-a-local-file-into-hdfs"></a>Локальный файл помещается в HDFS
+## <a name="put-a-local-file-into-hdfs"></a>Размещение локального файла в HDFS
 
-Чтобы поместить новый файл **test.csv** из локального каталога в каталог airlinedata, используйте следующую команду curl ( **Content-Type** параметр является обязательным):
+Чтобы разместить новый файл **test.csv** из локального каталога в каталоге airlinedata, выполните следующую команду curl (параметр **Content-Type** является обязательным):
 
 ```bash
 curl -i -L -k -u root:root-password -X PUT 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/airlinedata/test.csv?op=create' -H 'Content-Type: application/octet-stream' -T 'test.csv'
 ```
 
-## <a name="create-a-directory"></a>Создайте каталог
+## <a name="create-a-directory"></a>Создание каталога
 
-Чтобы создать каталог **тестирования** под `hdfs:///`, используйте следующую команду:
+Чтобы создать каталог **test** в `hdfs:///`, выполните следующую команду:
 
 ```bash
 curl -i -L -k -u root:root-password -X PUT 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/test?op=MKDIRS'
@@ -69,4 +69,4 @@ curl -i -L -k -u root:root-password -X PUT 'https://<gateway-svc-external IP ext
 
 ## <a name="next-steps"></a>Следующие шаги
 
-Дополнительные сведения о больших данных кластера SQL Server, см. в разделе [что такое большие данные кластера SQL Server?](big-data-cluster-overview.md).
+Дополнительные сведения о кластерах больших данных SQL Server см. в [этой статье](big-data-cluster-overview.md).

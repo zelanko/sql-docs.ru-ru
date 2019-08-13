@@ -1,5 +1,5 @@
 ---
-title: Присоединяйтесь к SQL Server в Linux в Active Directory
+title: Присоединение SQL Server на базе Linux к Active Directory
 titleSuffix: SQL Server
 description: ''
 author: Dylan-MSFT
@@ -10,28 +10,28 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: d5cd6356f4bc691518f11e1e6fb00add527cc595
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68027340"
 ---
-# <a name="join-sql-server-on-a-linux-host-to-an-active-directory-domain"></a>Присоединяйтесь к SQL Server на узле Linux к домену Active Directory
+# <a name="join-sql-server-on-a-linux-host-to-an-active-directory-domain"></a>Присоединение SQL Server на узле Linux к домену Active Directory
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-В этой статье содержит общие рекомендации о том, как присоединить хост-компьютере SQL Server Linux к домену Active Directory (AD). Двумя способами: использовать встроенный пакет SSSD или использовать сторонние поставщики Active Directory. Примеры продуктов независимых производителей домена соединения [PowerBroker удостоверения службы (PBI)](https://www.beyondtrust.com/), [одно удостоверение](https://www.oneidentity.com/products/authentication-services/), и [Centrify](https://www.centrify.com/). Это руководство содержит инструкции по проверке конфигурации Active Directory. Тем не менее он не предназначен для предоставления инструкций о том, как присоединить машину к домену, при использовании сторонних программ.
+В этой статье приводятся общие рекомендации по присоединению хост-компьютера SQL Server на базе Linux к домену Active Directory (AD). Доступно два метода: использование встроенного пакета SSSD или сторонних поставщиков Active Directory. Примерами сторонних продуктов для присоединения к домену являются [PowerBroker Identity Services (PBIS)](https://www.beyondtrust.com/), [One Identity](https://www.oneidentity.com/products/authentication-services/) и [Centrify](https://www.centrify.com/). Это руководство содержит инструкции по проверке конфигурации Active Directory. Однако оно не описывает, как присоединить компьютер к домену при использовании сторонних служебных программ.
 
 ## <a name="prerequisites"></a>предварительные требования
 
-Прежде чем настраивать проверку подлинности Active Directory, необходимо настроить контроллер домена Active Directory, Windows, в сети. Затем Присоединяйтесь к серверу SQL Server на узле Linux к домену Active Directory.
+Перед настройкой проверки подлинности Active Directory необходимо настроить контроллер домена Active Directory в сети Windows. Затем присоедините SQL Server на узле Linux к домену Active Directory.
 
 > [!IMPORTANT]
-> Пример действия, описанные в этой статье, только в качестве рекомендации. Фактические действия может немного отличаться в вашей среде, в зависимости от настройки всей среды. Обратитесь в службу системное и доменное администраторов для вашей среды для конкретной конфигурации, настройки, а также все необходимые устранения неполадок.
+> Примеры шагов, приведенные в этой статье, предназначены только для справки. Фактические шаги могут немного отличаться в вашей среде в зависимости от ее общей настройки. Привлекайте своего системного администратора и администратора домена в своей среде к настройке и устранению неполадок.
 
-## <a name="check-the-connection-to-a-domain-controller"></a>Проверьте подключение к контроллеру домена
+## <a name="check-the-connection-to-a-domain-controller"></a>Проверка подключения к контроллеру домена
 
-Проверьте, что могут обращаться к контроллеру домена с краткое и полное именами домена:
+Убедитесь, что вы можете связаться с контроллером домена как по короткому, так и по полному имени домена.
 
 ```bash
 ping contoso
@@ -39,13 +39,13 @@ ping contoso.com
 ```
 
 > [!TIP]
-> В этом руководстве используется **contoso.com** и **CONTOSO.COM** как примеры доменом и областью имен, соответственно. Он также использует **DC1. CONTOSO.COM** как примере полное доменное имя контроллера домена. Необходимо заменить эти имена собственными значениями.
+> В этом руководстве в качестве примеров имен домена и области используются **contoso.com** и **CONTOSO.COM** соответственно. Также используется **DC1.CONTOSO.COM** в качестве примера полного доменного имени для контроллера домена. Эти имена нужно заменить собственными значениями.
 
-Если любой из этих проверок имя, нужно обновите список поиска домена. Следующие разделы содержат инструкции по Ubuntu, Red Hat Enterprise Linux (RHEL) и SUSE Linux Enterprise Server (SLES) соответственно.
+Если любая из этих проверок имен завершается ошибкой, обновите список поиска доменов. В следующих разделах приведены инструкции для Ubuntu, Red Hat Enterprise Linux (RHEL) и SUSE Linux Enterprise Server (SLES) соответственно.
 
 ### <a name="ubuntu"></a>Ubuntu
 
-1. Изменить **/etc/network/interfaces** файл таким образом, доменом Active Directory в списке доменов поиска:
+1. Измените файл **/etc/network/interfaces**, чтобы ваш домен Active Directory находился в списке поиска доменов.
 
    ```/etc/network/interfaces
    # The primary network interface
@@ -56,15 +56,15 @@ ping contoso.com
    ```
 
    > [!NOTE]
-   > Сетевой интерфейс, `eth0`, могут отличаться для разных компьютерах. Чтобы узнать, какой из них, вы используете, выполните **ifconfig**. Затем скопируйте интерфейсе с IP-адресом и отправленных и полученных байтов.
+   > Сетевой интерфейс (`eth0`) может отличаться для разных компьютеров. Чтобы узнать, какой из них вы используете, выполните команду **ifconfig**. Затем скопируйте интерфейс, имеющий IP-адрес и переданные и полученные байты.
 
-1. Изменив этот файл, перезапустите сетевую службу:
+1. После изменения этого файла перезапустите сетевую службу.
 
    ```bash
    sudo ifdown eth0 && sudo ifup eth0
    ```
 
-1. Затем убедитесь, что ваш **/etc/resolv.conf** файл содержит строку, как в следующем примере:
+1. Далее убедитесь, что файл **/etc/resolv.conf** содержит строку, аналогичную следующей.
 
    ```/etc/resolv.conf
    search contoso.com com  
@@ -73,7 +73,7 @@ ping contoso.com
 
 ### <a name="rhel"></a>RHEL
 
-1. Изменить **/etc/sysconfig/network-scripts/ifcfg-eth0** файл таким образом, доменом Active Directory в списке доменов поиска. Или измените другой файл конфигурации интерфейса соответствующим образом:
+1. Измените файл **/etc/sysconfig/network-scripts/ifcfg-eth0**, чтобы ваш домен Active Directory находился в списке поиска доменов. Или измените другой файл конфигурации интерфейса соответствующим образом.
 
    ```/etc/sysconfig/network-scripts/ifcfg-eth0
    PEERDNS=no
@@ -81,20 +81,20 @@ ping contoso.com
    DOMAIN="contoso.com com"
    ```
 
-1. Изменив этот файл, перезапустите сетевую службу:
+1. После изменения этого файла перезапустите сетевую службу.
 
    ```bash
    sudo systemctl restart network
    ```
 
-1. Теперь убедитесь, что ваш **/etc/resolv.conf** файл содержит строку, как в следующем примере:
+1. Теперь убедитесь, что файл **/etc/resolv.conf** содержит строку, аналогичную следующей.
 
    ```/etc/resolv.conf
    search contoso.com com  
    nameserver **<AD domain controller IP address>**
    ```
 
-1. Если вы по-прежнему не удается проверить связь с контроллера домена, найти полное доменное имя и IP-адрес контроллера домена. С именем домена в примере является **DC1. CONTOSO.COM**. Добавьте следующую запись **/etc/hosts**:
+1. Если проверить связь с контроллером домена по-прежнему не удается, найдите полное доменное имя и IP-адрес контроллера домена. Пример доменного имени: **DC1.CONTOSO.COM**. Добавьте следующую запись в **/etc/hosts**:
 
    ```/etc/hosts
    **<IP address>** DC1.CONTOSO.COM CONTOSO.COM CONTOSO
@@ -102,20 +102,20 @@ ping contoso.com
 
 ### <a name="sles"></a>SLES
 
-1. Изменить **/etc/sysconfig/network/config** файл, чтобы ваш IP-адрес контроллера домена для Active Directory используется для запросов DNS и доменом Active Directory находится в списке доменов поиска:
+1. Измените файл **/etc/sysconfig/network/config**, чтобы IP-адрес контроллера домена Active Directory использовался для запросов DNS, а домен Active Directory находился в списке поиска доменов.
 
    ```/etc/sysconfig/network/config
    NETCONFIG_DNS_STATIC_SEARCHLIST=""
    NETCONFIG_DNS_STATIC_SERVERS="**<AD domain controller IP address>**"
    ```
 
-1. Изменив этот файл, перезапустите сетевую службу:
+1. После изменения этого файла перезапустите сетевую службу.
 
    ```bash
    sudo systemctl restart network
    ```
 
-1. Затем убедитесь, что ваш **/etc/resolv.conf** файл содержит строку, как в следующем примере:
+1. Далее убедитесь, что файл **/etc/resolv.conf** содержит строку, аналогичную следующей.
 
    ```/etc/resolv.conf
    search contoso.com com
@@ -124,21 +124,21 @@ ping contoso.com
 
 ## <a name="join-to-the-ad-domain"></a>Присоединение к домену AD
 
-После проверки базовой конфигурации и подключения с контроллером домена, существует два варианта для присоединения к SQL Server Linux хост-компьютере с контроллером домена Active Directory:
+После проверки базовой конфигурации и связи с контроллером домена хост-компьютер SQL Server на базе Linux можно присоединить к контроллеру домена Active Directory двумя способами.
 
-- [Вариант 1. Использовать пакет SSSD](#option1)
-- [Вариант 2. Использовать служебные программы openldap стороннего поставщика](#option2)
+- [Вариант 1. Использование пакета SSSD](#option1)
+- [Вариант 2. Использование служебных программ сторонних поставщиков openldap](#option2)
 
-### <a id="option1"></a> Вариант 1. Пакет sssd будет использовать для присоединения к домену AD
+### <a id="option1"></a> Вариант 1. Использование пакета SSSD для присоединения к домену AD
 
-Этот метод объединяет узла SQL Server к домену AD с помощью **realmd** и **sssd** пакетов.
+Этот метод присоединяет узел SQL Server к домену AD с помощью пакетов **realmd** и **sssd**.
 
 > [!NOTE]
-> Это предпочтительный метод объединения на узле Linux к контроллеру домена AD.
+> Это предпочтительный способ присоединения узла Linux к контроллеру домена AD.
 
-Для присоединения узла SQL Server к домену Active Directory, следуйте инструкциям ниже:
+Для присоединение узла SQL Server к домену Active Directory сделайте следующее.
 
-1. Используйте [realmd](https://www.freedesktop.org/software/realmd/docs/guide-active-directory-join) для присоединения к домену AD хост-компьютере. Сначала необходимо установить оба **realmd** и пакеты клиента Kerberos на хост-компьютере SQL Server, с помощью диспетчера пакетов дистрибутива Linux:
+1. Используйте [realmd](https://www.freedesktop.org/software/realmd/docs/guide-active-directory-join), чтобы присоединить хост-компьютер к домену AD. Сначала нужно установить пакеты **realmd** и клиента Kerberos на хост-компьютере SQL Server с помощью диспетчера пакетов дистрибутива Linux.
 
    **RHEL:**
 
@@ -158,29 +158,29 @@ ping contoso.com
    sudo apt-get install realmd krb5-user software-properties-common python-software-properties packagekit
    ```
 
-1. Если пакет установки клиента Kerberos запросит имя области, введите имя домена прописными буквами.
+1. Если при установке пакета клиента Kerberos запрашивается имя области, введите имя домена прописными буквами.
 
-1. Убедившись, что ваша служба DNS настроена правильно, присоединение к домену, выполнив следующую команду. Вы должны пройти аутентификацию с помощью учетной записи AD, имеет достаточные права в AD, чтобы присоединить машину к домену. Эта команда создает новую учетную запись компьютера в AD, создает **/etc/krb5.keytab** размещения файла keytab, настраивает домен в **/etc/sssd/sssd.conf**и обновления **/etc/krb5.conf**.
+1. Убедившись, что DNS настроена правильно, присоединитесь к домену с помощью указанной ниже команды. Нужно выполнить проверку подлинности с помощью учетной записи AD, имеющей достаточные права в AD для присоединения нового компьютера к домену. Эта команда создает учетную запись компьютера в AD, создает KEYTAB-файл узла **/etc/krb5.keytab**, настраивает домен в **/etc/sssd/sssd.conf** и обновляет **/etc/krb5.conf**.
 
    ```bash
    sudo realm join contoso.com -U 'user@CONTOSO.COM' -v
    ```
 
-   Вы увидите сообщение, `Successfully enrolled machine in realm`.
+   Должно появиться сообщение `Successfully enrolled machine in realm`.
 
-   В следующей таблице перечислены некоторые сообщения об ошибках, которые могли получать и предложения по их устранению.
+   В следующей таблице перечислены некоторые сообщения об ошибках, которые вы можете получить, и рекомендации по их устранению.
 
    | Сообщение об ошибке | Рекомендация |
    |---|---|
-   | `Necessary packages are not installed` | Установите эти пакеты, с помощью диспетчера пакетов дистрибутива Linux перед повторным запуском команда присоединения сферы. |
-   | `Insufficient permissions to join the domain` | Проверьте наличие достаточных разрешений на присоединение компьютеров Linux к домену с администратором домена. |
-   | `KDC reply did not match expectations` | Возможно, не указали правильные имя пользователя. Имена областей чувствительны к регистру, обычно верхний регистр и можно идентифицировать с помощью команды область обнаружения contoso.com. |
+   | `Necessary packages are not installed` | Установите эти пакеты с помощью диспетчера пакетов дистрибутива Linux, прежде чем снова выполнять команду realm join. |
+   | `Insufficient permissions to join the domain` | Выясните у администратора домена, достаточно ли у вас разрешений для присоединения компьютеров Linux к домену. |
+   | `KDC reply did not match expectations` | Возможно, вы не указали правильное имя области для пользователя. В именах областей учитывается регистр, обычно используются прописные буквы, и их можно определить с помощью команды realm discover contoso.com. |
 
-   SQL Server использует SSSD и NSS для сопоставления учетных записей пользователей и групп идентификаторы безопасности (SID). SSSD должна быть настроена и запущена для SQL Server для создания имен входа AD успешно. **realmd** обычно делает это автоматически в процессе присоединения к домену, но в некоторых случаях, необходимо сделать это отдельно.
+   SQL Server использует SSSD и NSS для сопоставления учетных записей пользователей и групп с идентификаторами безопасности (SID). Для успешного создания имен входа в Active Directory нужно настроить и запустить SSSD для SQL Server. **realmd** обычно выполняет это автоматически при присоединении к домену, но в некоторых случаях это нужно делать отдельно.
 
-   Дополнительные сведения см. в разделе Практическое [вручную настроить SSSD](https://access.redhat.com/articles/3023951), и [Настройка NSS для работы с SSSD](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/system-level_authentication_guide/configuring_services#Configuration_Options-NSS_Configuration_Options).
+   Дополнительные сведения см. в статьях о [настройке SSSD вручную](https://access.redhat.com/articles/3023951) и [настройке NSS для работы с SSSD](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/system-level_authentication_guide/configuring_services#Configuration_Options-NSS_Configuration_Options).
 
-1. Убедитесь, что теперь можно собрать сведения о пользователе из домена и что вы можете получить билет Kerberos от имени этого пользователя. В следующем примере используется **идентификатор**, [kinit](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html), и [klist](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/klist.html) команд для этого.
+1. Убедитесь, что теперь вы можете собирать сведения о пользователе из домена и получить билет Kerberos от имени этого пользователя. В следующем примере для этого используются команды **id**, [kinit](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html) и [klist](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/klist.html).
 
    ```bash
    id user@contoso.com
@@ -197,22 +197,22 @@ ping contoso.com
    ```
 
    > [!NOTE]
-   > - Если **идентификатор user@contoso.com**  возвращении `No such user`, убедитесь, что служба SSSD успешно запущена с помощью команды `sudo systemctl status sssd`. Если служба запущена, и по-прежнему отображается ошибка, попробуйте включить подробное ведение журнала для SSSD. Дополнительные сведения см. в документации Red Hat для [Устранение неполадок SSSD](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/System-Level_Authentication_Guide/trouble.html#SSSD-Troubleshooting).
+   > - Если **id user@contoso.com** возвращает `No such user`, убедитесь, что служба SSSD успешно запущена, выполнив команду `sudo systemctl status sssd`. Если служба запущена и вы по-прежнему видите ошибку, попробуйте включить подробное ведение журнала для SSSD. Дополнительные сведения см. в разделе об [устранении неполадок SSSD](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/System-Level_Authentication_Guide/trouble.html#SSSD-Troubleshooting) в документации по Red Hat.
    >
-   > - Если **kinit user@CONTOSO.COM**  возвращении `KDC reply did not match expectations while getting initial credentials`, убедитесь, что вы указали область в верхнем регистре.
+   > - Если **kinit user@CONTOSO.COM** возвращает `KDC reply did not match expectations while getting initial credentials`, убедитесь, что вы указали область прописными буквами.
 
-Дополнительные сведения см. в документации Red Hat для [Discovering и присоединение доменов удостоверений](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/Windows_Integration_Guide/realmd-domain.html).
+Дополнительные сведения см. в разделе об [обнаружении доменов удостоверений и присоединении к ним](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/Windows_Integration_Guide/realmd-domain.html) в документации по Red Hat.
 
-### <a id="option2"></a> Вариант 2. Использовать служебные программы openldap стороннего поставщика
+### <a id="option2"></a> Вариант 2. Использование служебных программ сторонних поставщиков openldap
 
-Можно использовать сторонние программы, такие как [элементы PBI](https://www.beyondtrust.com/), [VAS](https://www.oneidentity.com/products/authentication-services/), или [Centrify](https://www.centrify.com/). В этой статье рассматриваются шаги для каждого отдельного служебной программы. Сначала необходимо использовать один из этих служебных программ для присоединения узла Linux для SQL Server к домену перед продолжением вперед.  
+Вы можете использовать сторонние служебные программы, такие как [PBIS](https://www.beyondtrust.com/), [VAS](https://www.oneidentity.com/products/authentication-services/) или [Centrify](https://www.centrify.com/). В этой статье не рассматриваются действия для каждой отдельной служебной программы. Прежде чем продолжить, нужно воспользоваться одной из этих служебных программ, чтобы присоединить узел Linux для SQL Server к домену.  
 
-SQL Server не использует интегратор стороннего кода или библиотеки для любых запросов, связанных с AD. SQL Server всегда запрашивает AD, используя вызовы openldap библиотеки непосредственно в этой программе установки. Интеграторы сторонних используются только для присоединения узла Linux к домену AD и SQL Server не поддерживает любой прямой обмен данными с помощью этих программ.
+SQL Server не использует код или библиотеку стороннего интегратора для запросов, связанных с AD. SQL Server всегда запрашивает AD с помощью вызовов библиотеки openldap напрямую в этой установке. Сторонние интеграторы используются только для присоединения узла Linux к домену AD, при этом SQL Server не взаимодействует с такими служебными программами напрямую.
 
 > [!IMPORTANT]
-> См. рекомендации по использованию **mssql-conf** `network.disablesssd` параметр конфигурации в **Дополнительные параметры конфигурации** статьи [используйте Active Аутентификация с помощью SQL Server в Linux](sql-server-linux-active-directory-authentication.md#additionalconfig).
+> См. рекомендации по использованию параметра конфигурации **mssql-conf** `network.disablesssd` в разделе **Дополнительные параметры конфигурации** статьи [Использование проверки подлинности Active Directory с помощью SQL Server на базе Linux](sql-server-linux-active-directory-authentication.md#additionalconfig).
 
-Убедитесь, что ваш **/etc/krb5.conf** настроен правильно. Для большинства поставщиков сторонних Active Directory эта настройка выполняется автоматически. Тем не менее, проверьте **/etc/krb5.conf** следующие значения для предотвращения проблем в будущем:
+Убедитесь, что **/etc/krb5.conf** настроен правильно. Для большинства сторонних поставщиков Active Directory эта конфигурация выполняется автоматически. Однако проверьте **/etc/krb5.conf** на наличие следующих значений, чтобы избежать появления проблем в будущем.
 
 ```/etc/krb5.conf
 [libdefaults]
@@ -227,16 +227,16 @@ contoso.com = CONTOSO.COM
 .contoso.com = CONTOSO.COM
 ```
 
-## <a name="check-that-the-reverse-dns-is-properly-configured"></a>Убедитесь, что правильно настроен обратной зоны DNS
+## <a name="check-that-the-reverse-dns-is-properly-configured"></a>Проверка правильности настройки обратной DNS
 
-Следующая команда вернет полное доменное имя (FQDN) узла, на котором выполняется SQL Server. Например, **SqlHost.contoso.com**.
+Следующая команда должна возвращать полное доменное имя узла, на котором выполняется SQL Server. Пример: **SqlHost.contoso.com**.
 
 ```bash
 host **<IP address of SQL Server host>**
 ```
 
-Выходные данные этой команды должен быть аналогичен `**<reversed IP address>**.in-addr.arpa domain name pointer SqlHost.contoso.com`. Если эта команда не возвращает полное доменное имя вашего узла или полное доменное имя неверное, добавьте обратный DNS-запись для SQL Server на узле Linux на DNS-сервер.
+Выходные данные этой команды должны быть похожи на `**<reversed IP address>**.in-addr.arpa domain name pointer SqlHost.contoso.com`. Если эта команда не возвращает полное доменное имя узла или это имя неправильное, добавьте запись обратной записи DNS для узла SQL Server на базе Linux на DNS-сервер.
 
 ## <a name="next-steps"></a>Следующие шаги
 
-В этой статье рассматриваются предварительные требования Настройка SQL Server на хост-компьютере Linux с помощью проверки подлинности Active Directory. Чтобы завершить настройку SQL Server в Linux для поддержки учетных записей Active Directory, следуйте инструкциям в [проверки подлинности Active Directory для использования с SQL Server в Linux](sql-server-linux-active-directory-authentication.md).
+Эта статья описывает необходимые условия для настройки SQL Server на хост-компьютере Linux с проверкой подлинности Active Directory. Чтобы завершить настройку SQL Server на Linux для поддержки учетных записей Active Directory, следуйте инструкциям в статье [Использование проверки подлинности Active Directory с SQL Server на Linux](sql-server-linux-active-directory-authentication.md).

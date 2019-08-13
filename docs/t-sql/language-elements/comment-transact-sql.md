@@ -1,7 +1,7 @@
 ---
 title: -- (комментарий) (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 03/15/2017
+ms.date: 07/25/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -22,12 +22,12 @@ ms.assetid: 676ea8c2-52c1-4ef6-9354-320f1a091153
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 26bf88d13dd69ea6ac113713175d3ccfea5e1351
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3177a33d8560e9e66a610a39e555bf1dbf3cc44a
+ms.sourcegitcommit: 63c6f3758aaacb8b72462c2002282d3582460e0b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67950235"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68495475"
 ---
 # <a name="---comment-transact-sql"></a>-- (комментарий) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "67950235"
  Строка, содержащая текст комментария.  
   
 ## <a name="remarks"></a>Remarks  
- Используйте два дефиса (--) для однострочных или вложенных комментариев. Комментарии, вставленные с использованием --, заканчиваются символом новой строки. Длина комментариев не ограничена. В следующей таблице перечислены сочетания клавиш, используемые для комментирования и раскомментирования текста.  
+Используйте два дефиса ( **--** ) для однострочных или вложенных комментариев. Комментарии, вставляемые с использованием символов **--** , завершаются новой строкой, которая задается символом возврата каретки (U+000A), символом перевода строки (U+000D) или сочетанием этих двух символов. Длина комментариев не ограничена. В следующей таблице перечислены сочетания клавиш, используемые для комментирования и раскомментирования текста.
   
 |Действие|Standard|  
 |------------|--------------|  

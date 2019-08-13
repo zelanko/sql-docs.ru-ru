@@ -9,15 +9,15 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 73f598cf-b02a-4dba-8d89-9fc0b55a12b8
-author: XiaoyuL-Preview
+author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 59946e45bbb14fb68e2fc28bcc81c2cf2d534758
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ffd0ad4ddcdae91071811e57cdb8c5f6aaaea656
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67930649"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68476309"
 ---
 # <a name="dbcc-showresultcachespaceused-transact-sql"></a>DBCC SHOWRESULTCACHESPACEUSED (Transact-SQL)
 
@@ -33,7 +33,6 @@ ms.locfileid: "67930649"
 DBCC SHOWRESULTCACHESPACEUSED  
 [;]  
 ```  
-
 ## <a name="remarks"></a>Remarks
 
 Команда `DBCC SHOWRESULTCACHESPACEUSED` не требует указания никаких параметров и возвращает пространство, используемое базой данных, в которой она выполняется.
@@ -49,6 +48,16 @@ DBCC SHOWRESULTCACHESPACEUSED
 
 Необходимо разрешение VIEW SERVER STATE.
   
+## <a name="result-sets"></a>Результирующие наборы  
+  
+|Столбец|Тип данных|Описание|  
+|------------|---------------|-----------------|  
+|reserved_space|BIGINT|Общий размер пространства, используемого для базы данных, в КБ. Это число будет меняться по мере увеличения кэшированного результирующего набора.|  
+|data_space|BIGINT|Пространство, используемое для данных, в КБ.|  
+|index_space|BIGINT|Пространство, используемое для индексов, в КБ.|  
+|unused_space|BIGINT|Пространство, которое является частью зарезервированного пространства и не используется, в КБ.|  
+
+
 ## <a name="see-also"></a>См. также раздел
 
 [Параметры ALTER DATABASE SET &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options?view=azure-sqldw-latest)</br>

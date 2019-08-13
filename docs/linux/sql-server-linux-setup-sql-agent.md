@@ -1,6 +1,6 @@
 ---
 title: Установка агента SQL Server в Linux
-description: В этой статье описывается установка агента SQL Server в Linux.
+description: В этой статье описывается установка агента SQL Server в Linux.
 author: VanMSFT
 ms.author: vanto
 ms.date: 02/20/2018
@@ -9,26 +9,26 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 77f16adc-e6cb-4a57-82f3-7b9780369868
 ms.openlocfilehash: c27a31a5e6b9ed771df82e942087d7be88270038
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68032471"
 ---
 # <a name="install-sql-server-agent-on-linux"></a>Установка агента SQL Server в Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
- [Агента SQL Server](https://docs.microsoft.com/sql/ssms/agent/sql-server-agent) выполняет запланированные задания SQL Server. Начиная с накопительным пакетом обновления 4 для SQL Server 2017, агента SQL Server входит в состав **mssql-server** упаковки и отключен по умолчанию. Сведения о функциях, поддерживаемых для этого выпуска агента SQL Server, а также сведения о версии, см. в разделе [заметки о выпуске](sql-server-linux-release-notes.md).
+ [Агент SQL Server](https://docs.microsoft.com/sql/ssms/agent/sql-server-agent) выполняет запланированные задания SQL Server. Начиная с версии SQL Server 2017 с накопительным пакетом обновления 4 агент SQL Server включается в пакет **mssql-server** и по умолчанию отключен. Сведения о функциях, поддерживаемых в этом выпуске агента SQL Server, а также сведения о версии см. в [заметках о выпуске](sql-server-linux-release-notes.md).
 
- Установка и включение агента SQL Server:
-- [Для версии 2017 CU4 и более поздних версий включите агент SQL Server](#EnableAgentAfterCU4)
-- [Для версии 2017 CU3 и ниже Установка агента SQL Server](#InstallAgentBelowCU4)
+ Установите или включите агент SQL Server:
+- [Включение агента SQL Server в версии 2017 с накопительным пакетом обновления 4 и более поздних](#EnableAgentAfterCU4)
+- [Установка агента SQL Server в версии 2017 с накопительным пакетом обновления 3 и более ранних](#InstallAgentBelowCU4)
 
 
-## <a name="EnableAgentAfterCU4">Для версии 2017 CU4 и более поздних версий включите агент SQL Server</a>
+## <a name="EnableAgentAfterCU4">Включение агента SQL Server в версии 2017 с накопительным пакетом обновления 4 и более поздних</a>
 
- Чтобы включить агент SQL Server, выполните следующие действия.
+ Чтобы включить агент SQL Server, выполните указанные ниже действия.
 
 ```bash
 sudo /opt/mssql/bin/mssql-conf set sqlagent.enabled true 
@@ -36,28 +36,28 @@ sudo systemctl restart mssql-server
 ```
 
 > [!NOTE]
-> Если вы обновляете 2017 с накопительным пакетом обновления 3 или ниже агент установлен, агент SQL Server будет автоматически включена и предыдущих пакетов агента будет удален.  
+> Если вы производите обновление с версии 2017 с накопительным пакетом обновления 3 или более ранней с установленным агентом, агент SQL Server включается автоматически, а предыдущие версии пакета агента удаляются.  
 
-## <a name="InstallAgentBelowCU4">Для версии 2017 CU3 и ниже Установка агента SQL Server</a>
+## <a name="InstallAgentBelowCU4">Установка агента SQL Server в версии 2017 с накопительным пакетом обновления 3 и более ранних</a>
 
 > [!NOTE]
-> Приведенные ниже инструкции установки применяются к SQL Server версии 2017 CU3 и ниже. Перед установкой агента SQL Server, сначала [Установка SQL Server](sql-server-linux-setup.md#platforms). Это позволит настроить ключи и репозитории, которые можно использовать при установке **mssql-server-agent** пакета.
+> Приведенные ниже инструкции относятся к версии SQL Server 2017 с накопительным пакетом обновления 3 и более ранним. Перед установкой агента SQL Server сначала [установите SQL Server](sql-server-linux-setup.md#platforms). Это позволит настроить ключи и репозитории, которые следует использовать при установке пакета **mssql-server-agent**.
 
-Установка агента SQL Server для вашей платформы:
+Установите агент SQL Server для своей платформы:
 - [Red Hat Enterprise Linux](#RHEL)
 - [Ubuntu](#ubuntu)
 - [SUSE Linux Enterprise Server](#SLES)
 
 ### <a name="RHEL">Установка в RHEL</a>
 
-Выполните следующие действия для установки **mssql-server-agent** в Red Hat Enterprise Linux. 
+Чтобы установить **mssql-server-agent** в Red Hat Enterprise Linux, выполните указанные ниже действия. 
 
 ```bash
 sudo yum install mssql-server-agent
 sudo systemctl restart mssql-server
 ```
 
-Если у вас уже есть **mssql-server-agent** установлен, можно обновить до последней версии, выполнив следующие команды:
+Если пакет **mssql-server-agent** уже установлен, можно обновить его до последней версии, выполнив следующие команды:
 
 ```bash
 sudo yum check-update
@@ -65,11 +65,11 @@ sudo yum update mssql-server-agent
 sudo systemctl restart mssql-server
 ```
 
-Если вам нужна автономной установки, найдите то загрузка пакета агента SQL Server в [заметки о выпуске](sql-server-linux-release-notes.md). Затем выполните действия по автономной установке, описанные в статье [Установка SQL Server](sql-server-linux-setup.md#offline).
+Если вам нужна автономная установка, найдите скачиваемый пакет агента SQL Server в разделе [Заметки о выпуске](sql-server-linux-release-notes.md). Затем выполните действия по автономной установке, описанные в статье [Установка SQL Server](sql-server-linux-setup.md#offline).
 
 ### <a name="ubuntu">Установка в Ubuntu</a>
 
-Выполните следующие действия для установки **mssql-server-agent** в Ubuntu. 
+Чтобы установить **mssql-server-agent** в Ubuntu, выполните указанные ниже действия. 
 
 ```bash
 sudo apt-get update 
@@ -77,7 +77,7 @@ sudo apt-get install mssql-server-agent
 sudo systemctl restart mssql-server
 ```
 
-Если у вас уже есть **mssql-server-agent** установлен, можно обновить до последней версии, выполнив следующие команды:
+Если пакет **mssql-server-agent** уже установлен, можно обновить его до последней версии, выполнив следующие команды:
 
 ```bash
 sudo apt-get update 
@@ -85,11 +85,11 @@ sudo apt-get install mssql-server-agent
 sudo systemctl restart mssql-server
 ```
 
-Если вам нужна автономной установки, найдите то загрузка пакета агента SQL Server в [заметки о выпуске](sql-server-linux-release-notes.md). Затем выполните действия по автономной установке, описанные в статье [Установка SQL Server](sql-server-linux-setup.md#offline).
+Если вам нужна автономная установка, найдите скачиваемый пакет агента SQL Server в разделе [Заметки о выпуске](sql-server-linux-release-notes.md). Затем выполните действия по автономной установке, описанные в статье [Установка SQL Server](sql-server-linux-setup.md#offline).
 
 ### <a name="SLES">Установка в SLES</a>
 
-Выполните следующие действия для установки **mssql-server-agent** в SUSE Linux Enterprise Server. 
+Чтобы установить **mssql-server-agent** в SUSE Linux Enterprise Server, выполните указанные ниже действия. 
 
 Установка **mssql-server-agent** 
 
@@ -98,7 +98,7 @@ sudo zypper install mssql-server-agent
 sudo systemctl restart mssql-server
 ```
 
-Если у вас уже есть **mssql-server-agent** установлен, можно обновить до последней версии, выполнив следующие команды:
+Если пакет **mssql-server-agent** уже установлен, можно обновить его до последней версии, выполнив следующие команды:
 
 ```bash
 sudo zypper refresh
@@ -106,7 +106,7 @@ sudo zypper update mssql-server-agent
 sudo systemctl restart mssql-server
 ```
 
-Если вам нужна автономной установки, найдите то загрузка пакета агента SQL Server в [заметки о выпуске](sql-server-linux-release-notes.md). Затем выполните действия по автономной установке, описанные в статье [Установка SQL Server](sql-server-linux-setup.md#offline).
+Если вам нужна автономная установка, найдите скачиваемый пакет агента SQL Server в разделе [Заметки о выпуске](sql-server-linux-release-notes.md). Затем выполните действия по автономной установке, описанные в статье [Установка SQL Server](sql-server-linux-setup.md#offline).
 
 ## <a name="next-steps"></a>Следующие шаги
-Дополнительные сведения о том, как использовать для создания, планирования и запуска заданий агента SQL Server см. в разделе [выполнение задания агента SQL Server в Linux](sql-server-linux-run-sql-server-agent-job.md).
+Дополнительные сведения об использовании агента SQL Server для создания, планирования и выполнения заданий см. в статье [Создание и запуск задания агента SQL Server в Linux](sql-server-linux-run-sql-server-agent-job.md).

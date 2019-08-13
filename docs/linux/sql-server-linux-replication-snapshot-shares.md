@@ -1,6 +1,6 @@
 ---
-title: Настройка общих папок моментального снимка репликации SQL Server в Linux
-description: В этой статье описывается, как настроить репликацию моментальных снимков папки общих ресурсов SQL Server в Linux.
+title: Настройка репликации общих папок моментальных снимков в SQL Server на Linux
+description: В этой статье описывается настройка репликации общих папок моментальных снимков в SQL Server на Linux.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -10,40 +10,40 @@ ms.prod: sql
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 2513511889c4bc22757f0970269fa9ee7b51857d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68093118"
 ---
-# <a name="configure-replication-snapshot-folder-with-shares"></a>Настройка папки моментальных снимков репликации с помощью общих папок
+# <a name="configure-replication-snapshot-folder-with-shares"></a>Настройка папки моментальных снимков репликации с общими папками
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Папка моментальных снимков является каталогом, назначенный для совместного использования; агенты, чтение и запись к этой папке должен иметь достаточных разрешений на доступ к нему.
+Папка моментальных снимков — это каталог, назначенный для совместного использования; агенты, считывающие и записывающие данные в этой папке, должны иметь достаточные разрешения для доступа к ней.
 
 ![схема репликации][1]
 
-### <a name="replication-snapshot-folder-share-explained"></a>Общего ресурса папки моментальных снимков репликации описано
+### <a name="replication-snapshot-folder-share-explained"></a>Описание общей папки для моментальных снимков репликации
 
-Прежде чем примеры давайте подробно рассмотрим как SQL Server использует общие ресурсы samba в репликации. Ниже приведен простой пример того, как это работает.
+Прежде чем обратиться к примерам, давайте рассмотрим, как SQL Server использует общие папки Samba при репликации. Ниже приведен простой пример того, как это работает.
 
-1. Общие ресурсы Samba настроены, файлы в записываемый `/local/path1` репликации можно увидеть агентов на издателе, подписчике
-2. SQL Server настроен для использования путей общей папки, при настройке издателя на сервере распространения таким образом, чтобы рассмотреть все экземпляры `//share/path`
-3. SQL Server находит локальный путь из `//share/path` знать, где искать файлы
-4. SQL Server операций чтения и записи к локальным путям, поддерживаемый общую папку samba
+1. Общие папки Samba настроены так, чтобы файлы, записываемые в `/local/path1` агентами репликации на издателе, были видны подписчику.
+2. SQL Server настроен для использования путей к общим папкам при настройке издателя на сервере распространения, чтобы все экземпляры обращались к `//share/path`.
+3. SQL Server находит локальный путь из `//share/path`, чтобы узнать, где искать файлы.
+4. SQL Server осуществляет чтение и запись по локальным путям, поддерживаемым общей папкой Samba.
 
 
-## <a name="configure-a-samba-share-for-the-snapshot-folder"></a>Настройте общий ресурс samba для папки моментальных снимков 
+## <a name="configure-a-samba-share-for-the-snapshot-folder"></a>Настройка общей папки Samba для папки моментальных снимков 
 
-Агенты репликации, потребуется общий каталог между узлами репликации для доступа к папкам моментальных снимков на других компьютерах. Например в репликации транзакций по запросу, агент распространителя находится на подписчике, что требует доступа к распространителю для статей. В этом разделе мы разберем пример того, как настроить общую папку samba на двух узлах репликации.
+Для доступа к папкам моментальных снимков на других компьютерах агентам репликации потребуется общий каталог между узлами репликации. Например, в репликации транзакций по запросу агент распространения находится на подписчике, в связи с чем требуется доступ к распространителю для получения статей. В этом разделе мы рассмотрим пример настройки общей папки Samba на двух узлах репликации.
 
 
 ## <a name="steps"></a>Шаги
 
-В качестве примера мы настроим папку моментальных снимков на узле 1 (распространитель) совместно с узлом 2 (подписчик) с помощью Samba. 
+В качестве примера мы настроим папку моментальных снимков на узле 1 (распространителе) для совместного использования с узлом 2 (подписчиком) с помощью Samba. 
 
-### <a name="install-and-start-samba-on-both-machines"></a>Установите и запустите Samba на обоих компьютерах 
+### <a name="install-and-start-samba-on-both-machines"></a>Установка и запуск Samba на обоих компьютерах 
 
 В Ubuntu:
 
@@ -52,7 +52,7 @@ sudo apt-get -y install samba
 sudo service smbd restart
 ```
 
-На RHEL:
+В RHEL:
 
 ```bash
 sudo yum install samba
@@ -60,15 +60,15 @@ sudo service smb start
 sudo service smb status
 ```
 
-### <a name="on-host-1-distributor-set-up-the-samba-share"></a>На узле 1 (распространитель) настройка Samba общую папку 
+### <a name="on-host-1-distributor-set-up-the-samba-share"></a>На узле 1 (распространитель) — настройка общей папки Samba 
 
-1. Настройки пользователя и пароль для samba:
+1. Задайте пользователя и пароль для Samba:
 
   ```bash
   sudo smbpasswd -a mssql 
   ```
 
-1. Изменить `/etc/samba/smb.conf` следующую запись и заполнить *имя_общего_ресурса* и *путь* поля
+1. Измените, `/etc/samba/smb.conf` чтобы включить следующую запись и заполнить поля *share_name* и *path*.
  ```bash
   <[share_name]>
   path = </local/path/on/host/1>
@@ -89,9 +89,9 @@ sudo service smb status
   valid users = mssql   <- list of users who can login to this share
   ```
 
-### <a name="on-host-2-subscriber--mount-the-samba-share"></a>На узле 2 (подписчик) подключите общий ресурс Samba
+### <a name="on-host-2-subscriber--mount-the-samba-share"></a>На узле 2 (подписчик) — подключение общей папки Samba
 
-Изменить команду с правильные пути и выполните следующую команду на компьютере 2:
+Измените команду, указав правильные пути, и выполните следующую команду на компьютере 2.
 
   ```bash
   sudo mount //<name_of_host_1>/<share_name> </local/path/on/host/2> -o user=mssql,uid=mssql,gid=mssql
@@ -107,9 +107,9 @@ sudo service smb status
   gid=mssql   <- sets the mssql group as the owner of the mounted directory
   ```
 
-### <a name="on-both-hosts--configure-sql-server-on-linux-instances-to-use-snapshot-share"></a>Как узлы настроить SQL Server на Linux экземпляров для использования моментальных снимков
+### <a name="on-both-hosts--configure-sql-server-on-linux-instances-to-use-snapshot-share"></a>На обоих узлах — настройка экземпляров SQL Server в Linux для использования общей папки моментальных снимков
 
-Добавьте следующий раздел, чтобы `mssql.conf` на обоих компьютерах. Использовать везде, где samba общего ресурса для / / / путь к общей папке. В этом примере будет `//host1/mssql_data`
+Добавьте следующий раздел в `mssql.conf` на обоих компьютерах. Используйте общую папку samba для //share/path. В данном примере это будет `//host1/mssql_data`
 
   ```bash
   [uncmapping]
@@ -118,29 +118,29 @@ sudo service smb status
 
   **Пример**
 
-  На узле1:
+  На узле 1:
 
   ```bash
   [uncmapping]
   //host1/mssql_data = /local/path/on/hosts/1
   ```
 
-  На узле2:
+  На узле 2:
   
   ```bash
   [uncmapping]
   //host1/mssql_data = /local/path/on/hosts/2
   ```
 
-### <a name="configuring-publisher-with-shared-paths"></a>Настройка издателя с путями Shared
+### <a name="configuring-publisher-with-shared-paths"></a>Настройка издателя с использованием общих путей
 
-* При настройке репликации, используйте путь (например, общие папки `//host1/mssql_data`
-* Карта `//host1/mssql_data` локальный каталог и добавить сопоставление `mssql.conf`.
+* При настройке репликации используйте путь к общим папкам (например, `//host1/mssql_data`).
+* Сопоставьте `//host1/mssql_data` с локальным каталогом и сопоставлением, добавленным в `mssql.conf`.
 
 ## <a name="next-steps"></a>Следующие шаги
 
-[Основные понятия: Репликация SQL Server в Linux](sql-server-linux-replication.md)
+[Основные понятия. Репликация SQL Server в Linux](sql-server-linux-replication.md)
 
-[Хранимые процедуры репликации](../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md).
+[Хранимые процедуры репликации](../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)
 
 [1]: ./media/sql-server-linux-replication-snapshot-shares/image1.png

@@ -1,7 +1,7 @@
 ---
-title: Создание фрагментов кода для повторного использования
+title: Создание многократно используемых фрагментов кода
 titleSuffix: Azure Data Studio
-description: Узнайте, как создать и использовать фрагменты кода SQL в Azure Data Studio
+description: Узнайте, как создать и использовать фрагменты кода SQL в Azure Data Studio.
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.topic: conceptual
@@ -11,58 +11,58 @@ ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
 ms.openlocfilehash: 09a8432d10a70bb8530654d76bce874f735788a6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67959703"
 ---
-# <a name="create-and-use-code-snippets-to-quickly-create-transact-sql-t-sql-scripts-in-includename-sosincludesname-sos-shortmd"></a>Создание и использование фрагментов кода для быстрого создания скриптов Transact-SQL (T-SQL) в [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="create-and-use-code-snippets-to-quickly-create-transact-sql-t-sql-scripts-in-includename-sosincludesname-sos-shortmd"></a>создание и использование фрагментов кода для быстрого создания скриптов Transact-SQL (T-SQL) в [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
-Фрагменты кода в [!INCLUDE[name-sos](../includes/name-sos-short.md)] , шаблоны, которые упрощают создание баз данных и объектов базы данных. 
+Фрагменты кода в [!INCLUDE[name-sos](../includes/name-sos-short.md)] — это шаблоны, которые упрощают создание баз данных и объектов базы данных. 
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] предоставляет несколько фрагментов кода T-SQL для упрощения быстрого создания правильного синтаксиса. 
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] предоставляет несколько фрагментов T-SQL, которые помогают быстро создавать правильные синтаксические конструкции. 
 
-Также можно создать фрагменты кода, определяемые пользователем.
+Кроме того, можно создавать пользовательские фрагменты кода.
 
-## <a name="using-built-in-t-sql-code-snippets"></a>С помощью встроенных фрагментов кода T-SQL
+## <a name="using-built-in-t-sql-code-snippets"></a>Использование встроенных фрагментов кода T-SQL
 
-1. Чтобы получить доступ к доступные фрагменты кода, введите *sql* в редакторе запросов, чтобы открыть список:
+1. Для доступа к имеющимся фрагментам введите *sql* в редакторе запросов, чтобы открыть список:
 
    ![фрагменты кода](media/code-snippets/sql-snippets.png)
 
-1. Выберите фрагмент, который вы хотите использовать, и оно формирует сценарий T-SQL. Например, выберите *sqlCreateTable*:
+1. Выберите нужный фрагмент, и на его основе будет создан скрипт T-SQL. Например, выберите *sqlCreateTable*:
 
-   ![Создание таблицы фрагментов](media/code-snippets/create-table.png)
+   ![фрагменты для создания таблиц](media/code-snippets/create-table.png)
 
-1. Обновите выделенными полями с соответствующими значениями. Например, замените *TableName* и *схемы* со значениями для своей базы данных:
+1. Замените значения выделенных полей на собственные. Например, замените значения *TableName* и *Schema* на значения для вашей базы данных:
 
-   ![Поменяйте местами поля шаблона](media/code-snippets/table-from-snippet.png)
+   ![замена поля шаблона](media/code-snippets/table-from-snippet.png)
 
-   Если вы хотите изменить поле больше не будет выделен (это происходит при перемещении курсора вокруг редакторе), щелкните правой кнопкой мыши слово, вы хотите изменить и выберите пункт **замените все вхождения**:
+   Если поле, которое нужно изменить, больше не выделено (это происходит при перемещении курсора по редактору), щелкните правой кнопкой мыши слово, которое нужно заменить, и выберите команду **Изменить все вхождения**:
 
-   ![Поменяйте местами поля шаблона](media/code-snippets/change-all.png)
+   ![замена поля шаблона](media/code-snippets/change-all.png)
 
-1. Обновить или добавить любые дополнительные T-SQL, необходимые для выбранного фрагмента. Например, обновить *Column1*, *Column2*и добавить дополнительные столбцы.
+1. Измените или добавьте дополнительные элементы T-SQL для выбранного фрагмента. Например, измените столбцы *Column1* и *Column2* и добавьте дополнительные столбцы.
 
 
  
 ## <a name="creating-sql-code-snippets"></a>Создание фрагментов кода SQL 
 
-Вы можете определить собственные фрагменты кода. Чтобы открыть файл фрагмент кода SQL для редактирования:
+Вы можете определять собственные фрагменты. Чтобы открыть файл фрагмента SQL для редактирования, выполните указанные ниже действия.
 
-1. Откройте *палитру команд* (**Shift + Ctrl + P**) и тип *фрагмент*и выберите **предпочтения: Фрагменты пользователя Open**:
+1. Откройте *палитру команд* (**SHIFT+CTRL+P**), введите *snip* и выберите **Настройки: открыть пользовательские фрагменты**:
 
-   ![Поменяйте местами поля шаблона](media/code-snippets/user-snippets.png)
+   ![замена поля шаблона](media/code-snippets/user-snippets.png)
 
 1. Выберите **SQL**:
 
    > [!NOTE]
-   > [!INCLUDE[name-sos](../includes/name-sos-short.md)] наследует его функциональность фрагмента кода из Visual Studio Code, поэтому в этой статье специально рассматривается использование фрагментов кода SQL. Дополнительные сведения см. в разделе [Создание собственных фрагментов](https://code.visualstudio.com/docs/editor/userdefinedsnippets) в документации по Visual Studio Code. 
+   > [!INCLUDE[name-sos](../includes/name-sos-short.md)] наследует функциональные возможности фрагментов кода от Visual Studio Code, поэтому в этой статье рассматривается использование фрагментов SQL. Более подробные сведения см. в статье [Создание собственных фрагментов](https://code.visualstudio.com/docs/editor/userdefinedsnippets) в документации по Visual Studio Code. 
 
-   ![Поменяйте местами поля шаблона](media/code-snippets/select-sql.png)
+   ![замена поля шаблона](media/code-snippets/select-sql.png)
 
-1. Вставьте следующий код в *sql.json*:
+1. Вставьте следующий код в файл *sql.json*:
 
    ```sql
    {
@@ -95,12 +95,12 @@ ms.locfileid: "67959703"
    ```
 
 1. Сохраните файл sql.json.
-1. Откройте новое окно редактора запросов, щелкнув **Ctrl + N**.
-2. Тип **sql**, и вы увидите два пользователя фрагменты, вы только что добавили; *sqlCreateTable2* и *sqlSelectTop5*.
+1. Откройте новое окно редактора запросов, нажав клавиши **CTRL+N**.
+2. Введите **sql**, и вы увидите два только что добавленных пользовательских фрагмента: *sqlCreateTable2* и *sqlSelectTop5*.
 
-Выберите один из новых фрагментов и присвойте ему тестового запуска.
+Выберите один из новых фрагментов и выполните его тестовый запуск.
 
 
 ## <a name="additional-resources"></a>Дополнительные ресурсы
 
-Сведения о редакторе SQL, см. в разделе [учебник редактора кода](tutorial-sql-editor.md).
+Сведения о редакторе SQL см. в [учебнике по редактору кода](tutorial-sql-editor.md).

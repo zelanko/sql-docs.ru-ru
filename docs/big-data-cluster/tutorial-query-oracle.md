@@ -1,7 +1,7 @@
 ---
-title: Запрос внешних данных Oracle
+title: Запрос внешних данных в Oracle
 titleSuffix: SQL Server big data clusters
-description: Этом руководстве показано, как запрашивать данные Oracle из кластера SQL Server 2019 больших данных (Предварительная версия). Создайте внешнюю таблицу данных в Oracle и выполняют запрос.
+description: В этом руководстве описывается, каким образом выполняется запрос данных Oracle из кластера больших данных SQL Server 2019 (предварительная версия). Для этого создается внешняя таблица на основе данных в Oracle, после чего выполняется запрос.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: aboke
@@ -10,42 +10,42 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: bf0efdc3a9be44a0ffad4efcaaeb351bbdbdf626
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67957713"
 ---
-# <a name="tutorial-query-oracle-from-a-sql-server-big-data-cluster"></a>Учебник. Запрос Oracle из больших данных кластера SQL Server
+# <a name="tutorial-query-oracle-from-a-sql-server-big-data-cluster"></a>Руководство. Запрос данных Oracle из кластера больших данных SQL Server
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Этом руководстве показано, как запрашивать данные Oracle из кластера SQL Server 2019 больших данных. Для использования этого учебника, необходимо иметь доступ к серверу Oracle. Если у вас нет доступа, этот учебник поможет вам понять, как работает виртуализация данных для внешних источников данных в кластере SQL Server больших данных.
+В этом руководстве описывается, каким образом выполняется запрос данных Oracle из кластера больших данных SQL Server 2019. Для работы с этим руководством требуется доступ к серверу Oracle. Если у вас нет доступа к серверу, из этого руководства вы можете узнать о принципах виртуализации данных для внешних источников в кластере больших данных SQL Server.
 
-В этом руководстве вы узнаете, как:
+В этом руководстве описано следующее:
 
 > [!div class="checklist"]
-> * Создайте внешнюю таблицу для данных во внешней базе данных Oracle.
-> * Объединение этих данных с помощью данных высокой ценности, в основной экземпляр.
+> * Создание внешней таблицы для данных во внешней базе данных Oracle.
+> * Объединение этих данных с важными данными в главном экземпляре.
 
 > [!TIP]
-> При желании можно загрузить и запустить сценарий для команды в этом руководстве. Инструкции см. в разделе [образцы данных виртуализации](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/data-virtualization) на сайте GitHub.
+> При необходимости вы можете скачать и выполнить скрипт, содержащий команды из этого руководства. См. инструкции в разделе [Примеры виртуализации данных](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/data-virtualization) на сайте GitHub.
 
 ## <a id="prereqs"></a> Предварительные требования
 
 - [Средства работы с большими данными](deploy-big-data-tools.md)
    - **kubectl**
    - **Azure Data Studio**
-   - **Расширение SQL Server 2019**
-- [Загрузка образца данных в кластере больших данных](tutorial-load-sample-data.md)
+   - **Расширение SQL Server 2019**
+- [Загрузка примера данных в кластер больших данных](tutorial-load-sample-data.md)
 
-## <a name="create-an-oracle-table"></a>Создайте таблицу Oracle
+## <a name="create-an-oracle-table"></a>Создание таблицы Oracle
 
-Далее создайте образец таблицы с именем `INVENTORY` в Oracle.
+Далее описывается создание примера таблицы с именем `INVENTORY` в Oracle.
 
-1. Подключение к Oracle экземпляра и базы данных, которая будет использоваться в этом руководстве.
+1. Подключитесь к базе данных и экземпляру Oracle, которые вы хотите использовать для этого руководства.
 
-1. Выполните следующую инструкцию для создания `INVENTORY` таблицы:
+1. Чтобы создать эту таблицу `INVENTORY`, используйте следующую инструкцию:
 
    ```sql
     CREATE TABLE "INVENTORY"
@@ -59,42 +59,42 @@ ms.locfileid: "67957713"
     CREATE INDEX INV_ITEM ON HR.INVENTORY(INV_ITEM);
     ```
 
-1. Импортируйте содержимое файла **inventory.csv** файл в эту таблицу. Этот файл был создан с помощью сценариев создания образца в [предварительные требования](#prereqs) раздел.
+1. Импортируйте содержимое файла **inventory.csv** в эту таблицу. Этот файл был создан с помощью примеров скриптов создания в разделе [Предварительные требования](#prereqs).
 
 ## <a name="create-an-external-data-source"></a>Создание внешнего источника данных
 
-Первым шагом является создание внешнего источника данных с доступом к серверу Oracle.
+Для начала необходимо создать внешний источник данных, который может обращаться к вашему серверу Oracle.
 
-1. В Azure Data Studio подключитесь к основной экземпляр SQL Server кластера больших данных. Дополнительные сведения см. в разделе [подключение к экземпляру SQL Server master](connect-to-big-data-cluster.md#master).
+1. В Azure Data Studio установите подключение к главному экземпляру SQL Server в кластере больших данных. Дополнительные сведения см. в разделе [Подключение к главному экземпляру SQL Server](connect-to-big-data-cluster.md#master).
 
-1. Дважды щелкните подключение в **серверы** окно для отображения панели мониторинга сервера для главного экземпляра SQL Server. Выберите **новый запрос**.
+1. Дважды щелкните подключение в окне **Серверы**, чтобы открыть панель мониторинга сервера для главного экземпляра SQL Server. Выберите **Создать запрос**.
 
    ![Запрос главного экземпляра SQL Server](./media/tutorial-query-oracle/sql-server-master-instance-query.png)
 
-1. Выполните следующую команду Transact-SQL, чтобы изменить контекст, чтобы **Sales** базы данных master экземпляра.
+1. Выполните следующую команду Transact-SQL, чтобы изменить контекст на базу данных **Sales** в главном экземпляре.
 
    ```sql
    USE Sales
    GO
    ```
 
-1. Создайте учетные данные уровня базы данных для подключения к серверу Oracle. Укажите соответствующие учетные данные к серверу Oracle, в следующей инструкции.
+1. Создайте учетные данные в области базы данных для подключения к серверу Oracle. Предоставьте соответствующие учетные данные серверу Oracle в следующей инструкции.
 
    ```sql
    CREATE DATABASE SCOPED CREDENTIAL [OracleCredential]
    WITH IDENTITY = '<oracle_user,nvarchar(100),SYSTEM>', SECRET = '<oracle_user_password,nvarchar(100),manager>';
    ```
 
-1. Создание внешнего источника данных, указывающий на сервере Oracle.
+1. Создайте внешний источник данных, который указывает на сервер Oracle.
 
    ```sql
    CREATE EXTERNAL DATA SOURCE [OracleSalesSrvr]
    WITH (LOCATION = 'oracle://<oracle_server,nvarchar(100)>',CREDENTIAL = [OracleCredential]);
    ```
 
-## <a name="create-an-external-table"></a>Создайте внешнюю таблицу, выполните следующие действия.
+## <a name="create-an-external-table"></a>Создание внешней таблицы
 
-Затем создайте внешнюю таблицу с именем **iventory_ora** через `INVENTORY` таблицы на сервере Oracle.
+Далее создайте внешнюю таблицу с именем **iventory_ora** на основе таблицы `INVENTORY` на сервере Oracle.
 
 ```sql
 CREATE EXTERNAL TABLE [inventory_ora]
@@ -105,11 +105,11 @@ WITH (DATA_SOURCE=[OracleSalesSrvr],
 ```
 
 > [!NOTE]
-> Имена таблиц и имена столбцов, будут использовать ANSI SQL, заключенный в кавычки идентификатор при выполнении запроса к Oracle. Таким образом именах учитывается регистр. Важно указать имя в определении внешней таблицы, который соответствует точный регистр имен таблицы и столбца в метаданных Oracle.
+> При выполнении запросов к Oracle в именах таблиц и столбцов будет использоваться идентификатор SQL ANSI в кавычках. В связи с этим в таких именах учитывается регистр букв. В определении внешней таблицы важно указывать имена, которые в точности соответствуют именам таблиц и столбцов в метаданных Oracle.
 
 ## <a name="query-the-data"></a>Запрос данных
 
-Выполните следующий запрос, чтобы объединить данные `iventory_ora` внешнюю таблицу с таблицами в локальной `Sales` базы данных.
+Выполните следующий запрос, чтобы объединить данные во внешней таблице `iventory_ora` с таблицами в локальной базе данных `Sales`.
 
 ```sql
 SELECT TOP(100) w.w_warehouse_name, i.inv_item, SUM(i.inv_quantity_on_hand) as total_quantity
@@ -122,9 +122,9 @@ SELECT TOP(100) w.w_warehouse_name, i.inv_item, SUM(i.inv_quantity_on_hand) as t
  GROUP BY w.w_warehouse_name, i.inv_item;
 ```
 
-## <a name="clean-up"></a>Очистить
+## <a name="clean-up"></a>Очистка
 
-Используйте следующую команду для удаления объектов базы данных, созданной в этом учебнике.
+Выполните следующую команду, чтобы удалить объекты базы данных, созданные в рамках этого руководства.
 
 ```sql
 DROP EXTERNAL TABLE [inventory_ora];
@@ -134,6 +134,6 @@ DROP DATABASE SCOPED CREDENTIAL [OracleCredential];
 
 ## <a name="next-steps"></a>Следующие шаги
 
-Узнайте, как прием данных в пуле данных:
+Сведения о приеме данных в пул данных:
 > [!div class="nextstepaction"]
 > [Загрузка данных в пул данных](tutorial-data-pool-ingest-sql.md)

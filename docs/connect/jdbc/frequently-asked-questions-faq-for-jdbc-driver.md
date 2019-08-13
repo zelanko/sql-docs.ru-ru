@@ -1,7 +1,7 @@
 ---
 title: Часто задаваемые вопросы (FAQ) о драйвере JDBC | Документация Майкрософт
 ms.custom: ''
-ms.date: 04/16/2019
+ms.date: 07/31/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: cbc0e397-ecf2-4494-87b2-a492609bceae
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 566dfa3fec53878ac565d33af07d405f6f751521
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 17032e4d1bd6487edc0b0b41b7f808c27ab995ee
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956574"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892376"
 ---
-# <a name="frequently-asked-questions-faq-for-jdbc-driver"></a>Вопросы и ответы по драйверу JDBC
+# <a name="frequently-asked-questions-faq-for-jdbc-driver"></a>Часто задаваемые вопросы о драйвере JDBC
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -35,7 +35,15 @@ ms.locfileid: "67956574"
 Файлы драйвера JDBC, доступные в репозитории GitHub для Microsoft JDBC Driver, являются основой для драйвера JDBC и подпадают под действие лицензии на программное обеспечение с открытым исходным кодом, которая указана в репозитории. Пакеты драйвера Центра загрузки Майкрософт включают в себя дополнительные библиотеки для встроенной проверки подлинности Windows и добавления транзакций XA с помощью драйвера JDBC. Эти дополнительные библиотеки подпадают под действие лицензии, которая включена в скачиваемый пакет.
 
 **Что нужно учитывать при обновлении драйвера?**
-Microsoft JDBC Driver 7.2 поддерживает спецификации JDBC 4.2 и JDBC 4.3 (частично) и содержит две библиотеки классов JAR в пакете установки, как показано ниже.
+Microsoft JDBC Driver 7.4 поддерживает спецификации JDBC 4.2 и JDBC 4.3 (частично), а также содержит три библиотеки классов JAR в пакете установки, как показано ниже.
+
+| JAR                        | Спецификация JDBC            | Версия JDK |
+| -------------------------- | ----------------------------- | ----------- |
+| MSSQL-JDBC-7.4.1. jre12. jar | JDBC 4.3 (частично) и JDBC 4.2 | JDK 12.0    |
+| MSSQL-JDBC-7.4.1. jre11. jar | JDBC 4.3 (частично) и JDBC 4.2 | JDK 11.0    |
+| MSSQL-JDBC-7.4.1. jre8. jar  | JDBC 4.2                      | JDK 8.0     |
+
+ Microsoft JDBC Driver 7.2 поддерживает спецификации JDBC 4.2 и JDBC 4.3 (частично) и содержит две библиотеки классов JAR в пакете установки, как показано ниже.
 
 | JAR                        | Спецификация JDBC            | Версия JDK |
 | -------------------------- | ----------------------------- | ----------- |
@@ -134,6 +142,6 @@ Microsoft JDBC Driver 4.1 для SQL Server поддерживает специ
 **Может ли драйвер обмениваться данными с помощью проверенных алгоритмов FIPS?**  
 Драйвер Microsoft JDBC не содержит алгоритмы шифрования. Если клиент использует операционную систему, приложение и алгоритмы JVM, которые считаются приемлемыми согласно Федеральному стандарту обработки информации (FIPS), и настраивает драйвер на использование этих алгоритмов, для обмена данными драйвер использует только назначенные алгоритмы.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 [Общие сведения о драйвере JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)

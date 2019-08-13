@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: a0b210ce-9b58-4709-80cb-9363b68a1f5a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ca26b36501052323553eb2c5a2a25557492eec85
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9df5dab8f3ce74efeb9ba4c1d849e9f633c85004
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68132769"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68809711"
 ---
 # <a name="dta-utility"></a>dta
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -177,7 +177,7 @@ dta -d AdventureWorks2012 ...
  Указывает, что необходимо рассмотреть новые рекомендации для отфильтрованных индексах. Дополнительные сведения см. в разделе [Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md).  
   
 **-fc**  
- Указывает, что индексы columnstore следует учитывать для новых рекомендаций. DTA будет рассматривать как кластеризованные, так и некластеризованные индексы columnstore. Дополнительные сведения см. в разделе    
+ Указывает, что индексы columnstore следует учитывать для новых рекомендаций. DTA поддерживает как кластеризованные, так и некластеризованные индексы columnstore. Дополнительные сведения см. в разделе    
 [Рекомендации по индексам сolumnstore в помощнике по настройке ядра СУБД (DTA)](../../relational-databases/performance/columnstore-index-recommendations-in-database-engine-tuning-advisor-dta.md).
  ||  
 |-|  
@@ -265,7 +265,7 @@ dta -n number_of_events -A 0
   
  В этом случае важно указать неограниченное время настройки (`-A 0`). В противном случае помощник по настройке ядра СУБД примет для времени настройки значение по умолчанию, равное 8 часам.
  
- **-I** _time_window_in_hours_   
+ **-I** _time_window_in_hours_    
    Указывает временной интервал (в часах), в течение которого запрос должен быть выполнен, чтобы он рассматривался программой DTA для настройки при использовании параметра **-IQ** (Рабочая нагрузка из хранилища запросов). 
 ```  
 dta -iq -I 48  

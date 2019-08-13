@@ -1,7 +1,7 @@
 ---
-title: Добавляет дополнительные функции по расширяемости
+title: Добавление функциональных возможностей с помощью расширяемости
 titleSuffix: Azure Data Studio
-description: Дополнительные сведения о модели расширяемости и областях ключа расширяемости для расширения функциональных возможностей студии данных Azure
+description: Сведения о модели расширяемости и основных областях расширяемости для добавления функциональных возможностей в Azure Data Studio
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.topic: conceptual
@@ -11,53 +11,53 @@ ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
 ms.openlocfilehash: 20158894567c1452a8d605f5cec84354654c5e96
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67959591"
 ---
-# <a name="getting-started-with-includename-sosincludesname-sos-shortmd-extensibility"></a>Приступая к работе с [!INCLUDE[name-sos](../includes/name-sos-short.md)] расширяемости
+# <a name="getting-started-with-includename-sosincludesname-sos-shortmd-extensibility"></a>Начало работы с расширяемостью [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
-[!INCLUDE[name-sos](../includes/name-sos.md)] есть несколько механизмов расширения для настройки пользовательского интерфейса и сделать эти настройки доступными сообществу пользователей всего. Ядро [!INCLUDE[name-sos](../includes/name-sos.md)] платформы построен на основе Visual Studio Code, поэтому большинство интерфейсов API расширяемости Visual Studio Code доступно. Кроме того мы предоставляем дополнительные возможности расширения для действий управления данных.
+В [!INCLUDE[name-sos](../includes/name-sos.md)] есть несколько механизмов расширяемости для настройки пользовательского интерфейса и предоставления доступа к этим настройкам всему сообществу пользователей. Так как базовая платформа [!INCLUDE[name-sos](../includes/name-sos.md)] построена на основе Visual Studio Code, доступны большинство интерфейсов API расширяемости Visual Studio Code. Кроме того, мы предоставляем дополнительные точки расширяемости для действий, связанных с управлением данными.
 
-Ниже приведены некоторые из ключевых точек расширения.
+Вот некоторые из основных точек расширяемости:
 
-- API расширяемости Visual Studio Code
-- Расширение Azure Data Studio, средства разработки
-- Управление публикации панели вкладок панели мониторинга
-- Insights с функциями и действия
-- Azure Data Studio расширяемости API-интерфейсов
-- Интерфейсы API поставщика пользовательских данных
+- интерфейсы API расширяемости Visual Studio Code;
+- средства разработки расширений Azure Data Studio;
+- управление вкладом на панели вкладок панели мониторинга;
+- аналитика с действиями;
+- интерфейсы API расширяемости Azure Data Studio;
+- пользовательские интерфейсы API поставщиков данных.
 
-## <a name="visual-studio-code-extensibility-apis"></a>API расширяемости Visual Studio Code
+## <a name="visual-studio-code-extensibility-apis"></a>Интерфейсы API расширяемости Visual Studio Code
 
-Так как ядро [!INCLUDE[name-sos](../includes/name-sos.md)] платформы построен на основе Visual Studio Code, находятся сведения об API расширяемости Visual Studio Code [создания расширений](https://code.visualstudio.com/docs/extensions/overview) и [расширения API](https://code.visualstudio.com/docs/extensionAPI/overview) Документация по веб-сайта Visual Studio Code.
+Так как базовая платформа [!INCLUDE[name-sos](../includes/name-sos.md)] построена на основе Visual Studio Code, сведения об интерфейсах API расширяемости Visual Studio Code можно найти в документации по [разработке расширений](https://code.visualstudio.com/docs/extensions/overview) и [API расширений](https://code.visualstudio.com/docs/extensionAPI/overview) на веб-сайте Visual Studio Code.
 
-## <a name="manage-dashboard-tab-panel-contributions"></a>Управление публикации панели вкладок панели мониторинга
+## <a name="manage-dashboard-tab-panel-contributions"></a>Управление вкладом на панели вкладок панели мониторинга
 
-Дополнительные сведения см. в разделе [вклада точек](#contribution-points) и [переменные контекста](#context-variables).
+Подробные сведения см. в разделах [Точки вклада](#contribution-points) и [Переменные контекста](#context-variables).
 
-## <a name="azure-data-studio-extensibility-apis"></a>Azure Data Studio расширяемости API-интерфейсов
+## <a name="azure-data-studio-extensibility-apis"></a>Интерфейсы API расширяемости Azure Data Studio
 
-Дополнительные сведения см. в разделе [API расширяемости](extensibility-apis.md).
+Подробные сведения см. в статье [API расширяемости](extensibility-apis.md).
 
 
 ## <a name="contribution-points"></a>Точки вклада
 
-В этом разделе рассматриваются различные точки публикации, которые определены в манифесте расширения package.json.
+В этом разделе рассматриваются различные точки вклада, определенные в манифесте расширения package.json.
 
-Технология IntelliSense поддерживается внутри azuredatastudio.
+В azuredatastudio поддерживается технология IntelliSense.
 
-## <a name="contributes-dashboard"></a>Предоставляет панели мониторинга
+## <a name="contributes-dashboard"></a>Панель мониторинга вклада
 
-Contribute вкладку, контейнер, анализ мини-приложения на панель мониторинга.
+Добавляйте на панель мониторинга вкладки, контейнеры и аналитические мини-приложения.
 
 ![Панель мониторинга](media/extensibility/dashboard-page.png)
 
 `dashboard.tabs`
 
-Dashboard.Tabs создает разделы вкладку в панели мониторинга. Ожидается, что объект или массив объектов.  
+Элемент dashboard.tabs создает разделы вкладок на странице панели мониторинга. Он принимает объект или массив объектов.  
 
 ```json
 "dashboard.tabs": [
@@ -76,7 +76,7 @@ Dashboard.Tabs создает разделы вкладку в панели мо
 
 `dashboard.containers`
 
-Вместо указания встроенного контейнера панели мониторинга (внутри dashboard.tab). Вы можете зарегистрировать контейнеров с помощью dashboard.containers. Он принимает объект или массив объекта.
+Вместо указания контейнера панели мониторинга в коде (внутри dashboard.tab) можно регистрировать контейнеры с помощью элемента dashboard.containers. Он принимает объект или массив объектов.
 
 ```json
 "dashboard.containers": [
@@ -95,7 +95,7 @@ Dashboard.Tabs создает разделы вкладку в панели мо
 ]
 ```
 
-Для ссылки на зарегистрированный контейнер, укажите идентификатор контейнера
+Обращение к зарегистрированному контейнеру производится по его идентификатору.
 
 ```json
 "dashboard.tabs": [
@@ -112,7 +112,7 @@ Dashboard.Tabs создает разделы вкладку в панели мо
 
 `dashboard.insights`
 
-Вы можете зарегистрировать аналитические данные, используя dashboard.insights. Это похоже на [руководства: Создание настраиваемых аналитических сведений мини-приложения](https://docs.microsoft.com/sql/sql-operations-studio/tutorial-build-custom-insight-sql-server)
+Вы можете регистрировать аналитические мини-приложения с помощью элемента dashboard.insights. Это аналогично процедуре, описываемой в статье [Руководство. Создание настраиваемого аналитического мини-приложения](https://docs.microsoft.com/sql/sql-operations-studio/tutorial-build-custom-insight-sql-server).
 
 ```json
 "dashboard.insights": {
@@ -133,11 +133,11 @@ Dashboard.Tabs создает разделы вкладку в панели мо
 
 ### <a name="dashboard-container-types"></a>Типы контейнеров панели мониторинга
 
-В настоящее время существует четыре типа поддерживаемых контейнера:
+В настоящее время поддерживаются четыре типа контейнеров:
 
 1. `widgets-container`
 
-    ![Мини-приложения контейнера](media/extensibility/widgets-container.png)
+    ![Контейнер мини-приложений](media/extensibility/widgets-container.png)
 
     Список мини-приложений, которые будут отображаться в контейнере. Это потоковый макет. Он принимает список мини-приложений.
 
@@ -162,9 +162,9 @@ Dashboard.Tabs создает разделы вкладку в панели мо
 
 2. `webview-container`
 
-    ![контейнер веб-представления](media/extensibility/webview-container.png)
+    ![Контейнер веб-представления](media/extensibility/webview-container.png)
 
-    Веб-представления будут отображаться в весь контейнер. Ожидается, что идентификатор веб-представления, следует убедиться, что то же самое идентификатор вкладки
+    Веб-представление будет занимать весь контейнер. Идентификатор веб-представления должен совпадать с идентификатором вкладки.
 
     ```json
     "container": {
@@ -174,9 +174,9 @@ Dashboard.Tabs создает разделы вкладку в панели мо
 
 3. `grid-container`
 
-   ![контейнер сетки](media/extensibility/grid-container.png)
+   ![Контейнер сетки](media/extensibility/grid-container.png)
 
-   Список мини-приложения или любимую, которое будет отображаться в сетке размещения
+   Список мини-приложений или веб-представлений, которые будут отображаться в макете сетки.
 
     ```json
     "container": {
@@ -226,9 +226,9 @@ Dashboard.Tabs создает разделы вкладку в панели мо
 
 4.  `nav-section`
 
-    ![разделу](media/extensibility/nav-section.png)
+    ![Раздел навигации](media/extensibility/nav-section.png)
 
-    В разделе навигации отображается в контейнере
+    Раздел навигации будет отображаться в контейнере.
 
     ```json
     "container": {
@@ -263,18 +263,18 @@ Dashboard.Tabs создает разделы вкладку в панели мо
 
 ## <a name="context-variables"></a>Переменные контекста
 
-Общие сведения о контексте, в Visual Studio Code и впоследствии Studio данных Azure см. в разделе [расширяемости](https://code.visualstudio.com/docs/extensionAPI/extension-points#_example).
+Общие сведения о контексте в Visual Studio Code и, соответственно, в Azure Data Studio см. в статье, посвященной [расширяемости](https://code.visualstudio.com/docs/extensionAPI/extension-points#_example).
 
-В студии данных Azure у нас есть определенном контексте вокруг подключения базы данных, доступные для расширений.
+В Azure Data Studio для расширений доступен особый контекст, связанный с подключениями к базам данных.
 
 ### <a name="dashboard"></a>Панель мониторинга
 
-На панели мониторинга мы предоставляем приведенные ниже переменные контекста:
+Для панели мониторинга предоставляются следующие переменные контекста:
 
 |переменная контекста| description|
 |:---|:---|
-|`connectionProvider` | Строка, содержащая идентификатор для поставщика текущего соединения. Например: `connectionProvider == 'MSSQL'`.|
-|`serverName`|Строка, содержащая имя сервера для текущего соединения. Например: `serverName == 'localhost'`.|
-|`databaseName` | Строка, содержащая имя базы данных текущего соединения. Например: `databaseName == 'master'`.|
-|`connection` | Объект подключения полностью профиля для текущего соединения (IConnectionProfile)|
-|`dashboardContext` | Строка контекста страницы панели мониторинга включен в данный момент. «Базы данных» или «сервер». Например: `dashboardContext == 'database'`|
+|`connectionProvider` | Строка с идентификатором поставщика текущего подключения. Например: `connectionProvider == 'MSSQL'`.|
+|`serverName`|Строка с именем сервера для текущего подключения. Например: `serverName == 'localhost'`.|
+|`databaseName` | Строка с именем базы данных для текущего подключения. Например: `databaseName == 'master'`.|
+|`connection` | Полный объект профиля подключения для текущего подключения (IConnectionProfile)|
+|`dashboardContext` | Строка с контекстом текущей страницы панели мониторинга. Возможное значение — "database" или "server". Например: `dashboardContext == 'database'`|

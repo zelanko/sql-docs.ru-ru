@@ -1,6 +1,6 @@
 ---
-title: Управление SQL Server в Linux с помощью PowerShell
-description: В этой статье описывается с помощью PowerShell в Windows с помощью SQL Server в Linux.
+title: Управление SQL Server на Linux с помощью PowerShell
+description: В этой статье приводятся общие сведения об использовании PowerShell в Windows для работы с SQL Server на Linux.
 author: VanMSFT
 ms.author: vanto
 ms.date: 10/02/2017
@@ -9,49 +9,49 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: a3492ce1-5d55-4505-983c-d6da8d1a94ad
 ms.openlocfilehash: 52db0986bb6af34e1dc034d95146a96d3fdcf246
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68000129"
 ---
-# <a name="use-powershell-on-windows-to-manage-sql-server-on-linux"></a>Управление SQL Server в Linux с помощью PowerShell в Windows
+# <a name="use-powershell-on-windows-to-manage-sql-server-on-linux"></a>Использование PowerShell в Windows для управления SQL Server на Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-В этой статье рассматриваются [SQL Server PowerShell](../powershell/sql-server-powershell.md) и о том, как использовать его в SQL Server в Linux описывается несколько примеров. Поддержка PowerShell для SQL Server в настоящее время доступна в Windows, MacOS и Linux. В этой статье описывается с помощью компьютера Windows для подключения к удаленному экземпляру SQL Server в Linux.
+В этой статье рассматривается модуль [SQL Server PowerShell](../powershell/sql-server-powershell.md) и приводится несколько примеров того, как можно использовать его для работы с SQL Server на Linux. На данный момент поддержка PowerShell для SQL Server реализована в Windows, MacOS и Linux. В этой статье описывается использование компьютера под управлением Windows для подключения к удаленному экземпляру SQL Server на Linux.
 
-## <a name="install-the-newest-version-of-sql-powershell-on-windows"></a>Установите последнюю версию SQL PowerShell на Windows
+## <a name="install-the-newest-version-of-sql-powershell-on-windows"></a>Установка последней версии SQL PowerShell в Windows
 
-[SQL PowerShell](../powershell/download-sql-server-ps-module.md) в Windows сохраняется в коллекции PowerShell. При работе с SQL Server, следует всегда использовать последнюю версию модуля SqlServer PowerShell.
+[SQL PowerShell](../powershell/download-sql-server-ps-module.md) в Windows находится в коллекции PowerShell. При работе с SQL Server следует всегда использовать последнюю версию модуля SqlServer PowerShell.
 
 ## <a name="before-you-begin"></a>Перед началом
 
-Чтение [известные проблемы](sql-server-linux-release-notes.md) для SQL Server в Linux.
+Ознакомьтесь с [известными проблемами](sql-server-linux-release-notes.md), связанными с работой с SQL Server на Linux.
 
-## <a name="launch-powershell-and-import-the-sqlserver-module"></a>Запустите PowerShell и импортируйте *sqlserver* модуля
+## <a name="launch-powershell-and-import-the-sqlserver-module"></a>Запуск PowerShell и импорт модуля *sqlserver*
 
-Давайте сперва запустите PowerShell на Windows. Используйте <kbd>выиграть</kbd>+<kbd>R</kbd>, на компьютере Windows и тип **PowerShell** запустить новый сеанс Windows PowerShell.
+Для начала запустим PowerShell в Windows. Нажмите клавиши <kbd>Win</kbd>+<kbd>R</kbd> на компьютере под управлением Windows и введите **PowerShell**, чтобы запустить новый сеанс Windows PowerShell.
 
 ```
 PowerShell
 ```
 
-SQL Server предоставляет модуль PowerShell, называемый **SqlServer**. Можно использовать **SqlServer** модуль для импорта компонентов SQL Server (SQL Server поставщика и командлетов) в среде PowerShell или скрипт.
+В SQL Server представлен модуль PowerShell под названием **SqlServer**. Вы можете использовать модуль **SqlServer** для импорта компонентов SQL Server (поставщик и командлеты SQL Server) в скрипт или среду PowerShell.
 
-Скопируйте и вставьте следующую команду в командной строке PowerShell для импорта **SqlServer** модуля в текущем сеансе PowerShell:
+Скопируйте следующую команду и вставьте ее в командную строку PowerShell, чтобы импортировать модуль **SqlServer** в текущий сеанс PowerShell:
 
 ```powershell
 Import-Module SqlServer
 ```
 
-Введите следующую команду в командной строке PowerShell, чтобы убедиться, что **SqlServer** модуль был импортирован правильно:
+Введите следующую команду в командной строке PowerShell, чтобы убедиться в том, что модуль **SqlServer** был импортирован правильно:
 
 ```powershell
 Get-Module -Name SqlServer
 ```
 
-PowerShell должна отображать сведения, аналогичные приведенным ниже:
+В PowerShell должны отображаться данные примерно следующего вида:
 
 ```
 ModuleType Version    Name          ExportedCommands
@@ -59,16 +59,16 @@ ModuleType Version    Name          ExportedCommands
 Script     21.1.18102 SqlServer     {Add-SqlAvailabilityDatabase, Add-SqlAvailabilityGroupList...
 ```
 
-## <a name="connect-to-sql-server-and-get-server-information"></a>Подключиться к SQL Server и получить сведения о сервере
+## <a name="connect-to-sql-server-and-get-server-information"></a>Подключение к SQL Server и получение сведений о сервере
 
-Давайте использовать PowerShell в Windows для подключения к экземпляру SQL Server в Linux и отобразить несколько свойств сервера.
+Теперь мы используем PowerShell в Windows для подключения к вашему экземпляру SQL Server на Linux и просмотра некоторых свойств сервера.
 
-Скопируйте и вставьте следующие команды в командной строке PowerShell. При выполнении этих команд PowerShell выполняются следующие действия:
-- Отображает диалоговое окно с приглашением для имени узла или IP-адрес экземпляра
-- Отображение *запрос учетных данных Windows PowerShell* диалоговое окно, в котором будет предложено ввести учетные данные. Можно использовать ваши *имя пользователя SQL* и *пароль SQL* для подключения к экземпляру SQL Server в Linux
-- Используйте **Get-SqlInstance** для подключения к **Server** и отобразить несколько свойств
+Скопируйте следующие команды и вставьте их в командную строку PowerShell. При запуске этих команд в PowerShell будут выполнены следующие действия:
+- Отображение диалогового окна с запросом на ввод имени узла и IP-адреса экземпляра
+- Откройте диалоговое окно *Запрос учетных данных Windows PowerShell*, в котором необходимо ввести соответствующие сведения. Для подключения к экземпляру SQL Server на Linux вы можете использовать свои *имя пользователя SQL* и *пароль SQL*
+- Использование командлета **Get-SqlInstance** для подключения к **серверу** и просмотра некоторых свойств
 
-При необходимости вы можете просто подставить `$serverInstance` переменной с IP-адрес или имя узла экземпляра SQL Server.
+При необходимости можно заменить переменную `$serverInstance` IP-адресом или именем узла вашего экземпляра SQL Server.
 
 ```powershell
 # Prompt for instance & credentials to login into SQL Server
@@ -80,7 +80,7 @@ Get-SqlInstance -ServerInstance $serverInstance -Credential $credential
 # done
 ```
 
-PowerShell должна отображать сведения, аналогичные приведенным ниже:
+В PowerShell должны отображаться данные примерно следующего вида:
 
 ```
 Instance Name                   Version    ProductLevel UpdateLevel  HostPlatform HostDistribution                
@@ -88,34 +88,34 @@ Instance Name                   Version    ProductLevel UpdateLevel  HostPlatfor
 your_server_instance            14.0.3048  RTM          CU13         Linux        Ubuntu 
 ```
 > [!NOTE]
-> Если ничего не отображается для этих значений, скорее всего сбой подключения к целевому экземпляру SQL Server. Убедитесь, что можно использовать одни сведения о подключении для подключения из SQL Server Management Studio. Затем ознакомьтесь с [рекомендациями по устранению неполадок с подключением](sql-server-linux-troubleshooting-guide.md#connection).
+> Если эти значения не отображаются, скорее всего, подключение к целевому экземпляру SQL Server установить не удалось. Убедитесь в том, что эти же данные можно использовать для подключения из SQL Server Management Studio. Затем ознакомьтесь с [рекомендациями по устранению неполадок с подключением](sql-server-linux-troubleshooting-guide.md#connection).
 
-## <a name="using-the-sql-server-powershell-provider"></a>Использование поставщика SQL Server PowerShell
+## <a name="using-the-sql-server-powershell-provider"></a>Использование поставщика SQL Server для PowerShell
 
-Другой вариант для подключения к экземпляру SQL Server является использование [поставщик SQL Server PowerShell](https://docs.microsoft.com/sql/powershell/sql-server-powershell-provider).  Этот поставщик позволяет переходить экземпляр SQL Server, аналогичную так, как если бы вы Навигация по структуре дерева в обозревателе объектов, но в командную строку.  По умолчанию этот поставщик будет представлено как с именем PSDrive `SQLSERVER:\` которого можно использовать для подключения & ведет экземпляров SQL Server, к которым имеет доступ учетная запись домена.  См. в разделе [действия по настройке](https://docs.microsoft.com/sql/linux/sql-server-linux-active-directory-auth-overview#configuration-steps) сведения о способах настройки проверки подлинности Active Directory для SQL Server в Linux.
+В качестве альтернативы для подключения к экземпляру SQL Server можно использовать [поставщик SQL Server PowerShell](https://docs.microsoft.com/sql/powershell/sql-server-powershell-provider).  Этот поставщик позволяет работать с экземпляром SQL Server из командной строки так же, как с древовидной структурой в обозревателе объектов.  По умолчанию этот поставщик представлен в виде диска PSDrive с именем `SQLSERVER:\`, который может использоваться для подключения к экземплярам SQL Server, доступным вашей учетной записи домена, и работы с ними.  Дополнительные сведения о настройке проверки подлинности Active Directory для SQL Server на Linux см. в разделе [Шаги настройки](https://docs.microsoft.com/sql/linux/sql-server-linux-active-directory-auth-overview#configuration-steps).
 
-Можно также использовать проверку подлинности SQL с помощью поставщика SQL Server PowerShell. Чтобы сделать это, используйте `New-PSDrive` командлет, чтобы создать новый PSDrive и задать соответствующие учетные данные для подключения.
+Также вы можете использовать проверку подлинности SQL в поставщике SQL Server PowerShell. Для этого с помощью командлета `New-PSDrive` создайте новый диск PSDrive и укажите учетные данные для подключения.
 
-В этом примере вы увидите один пример того, как создать новый PSDrive, используя проверку подлинности SQL.
+В приведенном ниже примере демонстрируется создание нового диска PSDrive с использованием проверки подлинности SQL.
 
 ```powershell
 # NOTE: We are reusing the values saved in the $credential variable from the above example.
 New-PSDrive -Name SQLonDocker -PSProvider SqlServer -Root 'SQLSERVER:\SQL\localhost,10002\Default\' -Credential $credential
 ```
 
-Убедитесь, что диск был создан путем запуска `Get-PSDrive` командлета.
+Чтобы убедиться в том, что диск был создан, выполните командлет `Get-PSDrive`.
 
 ```powershell
 Get-PSDrive
 ```
 
-После создания ваш новый PSDrive, можно запустить их.
+После создания нового диска PSDrive вы можете начать работу с ним.
 
 ```powershell
 dir SQLonDocker:\Databases
 ```
 
-Вот, как может выглядеть выходные данные.  Можно заметить, что результат аналогичен приведенному SSMS будет отображаться в узле базы данных.  Он отображает пользовательские базы данных, но не системных баз данных.
+Выходные данные могут выглядеть следующим образом.  Обратите внимание, что эти данные аналогичны тем, которые SSMS отображает в узле "Базы данных".  В нем представлены пользовательские, а не системные базы данных.
 
 ```powershell
 Name                 Status           Size     Space  Recovery Compat. Owner
@@ -128,19 +128,19 @@ AdventureWorksDW2016 Normal      172.00 MB   74.76 MB Simple       130 sa
 AdventureWorksDW2017 Normal      208.00 MB   40.57 MB Simple       140 sa
 ```
 
-Если вам нужно увидеть все базы данных в экземпляре, один из вариантов является использование [Get-SqlDatabase](https://docs.microsoft.com/powershell/module/sqlserver/Get-SqlDatabase) командлета.
+Чтобы просмотреть все базы данных в вашем экземпляре, можно использовать командлет [Get-SqlDatabase](https://docs.microsoft.com/powershell/module/sqlserver/Get-SqlDatabase).
 
-## <a name="examine-sql-server-error-logs"></a>Проверьте журналы ошибок SQL Server
+## <a name="examine-sql-server-error-logs"></a>Проверка журналов ошибок SQL Server
 
-Далее используется PowerShell на Windows для проверки ошибок, к которым подключаются журналы в экземпляре SQL Server в Linux. Мы также будем использовать **Out-GridView** регистрирует для отображения сведений из-за ошибки в окне представления сетки.
+Далее описывается использование PowerShell в Windows для проверки журналов ошибок подключения в вашем экземпляре SQL Server на Linux. Кроме того, мы будем использовать командлет **Out-GridView** для просмотра журналов ошибок в представлении сетки.
 
-Скопируйте и вставьте следующие команды в командной строке PowerShell. Они может занять несколько минут. Эти команды выполняют следующее:
-- Отображает диалоговое окно с приглашением для имени узла или IP-адрес экземпляра
-- Отображение *запрос учетных данных Windows PowerShell* диалоговое окно, в котором будет предложено ввести учетные данные. Можно использовать ваши *имя пользователя SQL* и *пароль SQL* для подключения к экземпляру SQL Server в Linux
-- Используйте **Get-SqlErrorLog** командлет для подключения к экземпляру SQL Server в Linux и получения ошибки журналы с момента **вчера**
-- Выходные данные для **Out-GridView** командлета
+Скопируйте следующие команды и вставьте их в командную строку PowerShell. Это может занять несколько минут. Эти команды выполняют следующие действия:
+- Отображение диалогового окна с запросом на ввод имени узла и IP-адреса экземпляра
+- Откройте диалоговое окно *Запрос учетных данных Windows PowerShell*, в котором необходимо ввести соответствующие сведения. Для подключения к экземпляру SQL Server на Linux вы можете использовать свои *имя пользователя SQL* и *пароль SQL*
+- Использование командлета **Get-SqlErrorLog** для подключения к экземпляру SQL Server на Linux и извлечения журналов ошибок, обнаруженных со **вчерашнего дня**
+- Передача выходных данных в командлет **Out-GridView**
 
-При необходимости можно заменить `$serverInstance` переменной с IP-адрес или имя узла экземпляра SQL Server.
+При необходимости можно заменить переменную `$serverInstance` IP-адресом или именем узла вашего экземпляра SQL Server.
 
 ```powershell
 # Prompt for instance & credentials to login into SQL Server
@@ -151,6 +151,6 @@ $credential = Get-Credential
 Get-SqlErrorLog -ServerInstance $serverInstance -Credential $credential -Since Yesterday | Out-GridView
 # done
 ```
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 - [SQL Server PowerShell](../relational-databases/scripting/sql-server-powershell.md)
 - [Командлеты SqlServer](https://docs.microsoft.com/powershell/module/sqlserver)

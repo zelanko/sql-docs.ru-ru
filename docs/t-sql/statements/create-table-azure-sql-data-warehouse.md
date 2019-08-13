@@ -11,12 +11,12 @@ ms.assetid: ea21c73c-40e8-4c54-83d4-46ca36b2cf73
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 080037ec68169c08f7e543504c84118d0d01e4fd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1e913f7c09327be46ab7e4b67ec903fc60e30975
+ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68116996"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68419608"
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>CREATE TABLE (хранилище данных SQL Azure)
 
@@ -167,18 +167,7 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
 
 Кластеризованный индекс columnstore включен по умолчанию для создания таблиц в Хранилище данных SQL Azure.  Спецификация ORDER связана с ключами COMPOUND по умолчанию.  Сортировка будет всегда выполняться по возрастанию. Если предложение ORDER не указано, индекс columnstore не будет отсортирован. Из-за упорядочения в таблице, содержащей упорядоченный кластеризованный индекс columnstore, время загрузки данных может быть увеличено по сравнению с неупорядоченными кластеризованными индексами columnstore. Если вам необходимо больше места в базе данных tempdb при загрузке данных, можно уменьшить объем данных в одной инструкции insert.
 
-На этапе предварительной версии можно выполнить следующий запрос для проверки столбцов с включенной спецификацией ORDER.
-
-```sql
-SELECT i.name AS index_name  
-    ,COL_NAME(ic.object_id,ic.column_id) AS column_name  
-    ,ic.index_column_id  
-    ,ic.key_ordinal  
-,ic.is_included_column  
-FROM sys.indexes AS i  
-INNER JOIN sys.index_columns AS ic
-    ON i.object_id = ic.object_id AND i.index_id = ic.index_id  
-```
+Пользователи могут запрашивать столбец column_store_order_ordinal в sys.index_columns для получения списка столбцов, по которым упорядочена таблица, и последовательности упорядочения.  
 
 ### <a name="DataTypes"></a> Тип данных
 

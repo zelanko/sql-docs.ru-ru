@@ -1,5 +1,5 @@
 ---
-title: Разработка и развертывание SQL Server, базы данных для Linux | Документация Майкрософт
+title: Разработка и развертывание баз данных SQL Server для Linux  | Документация Майкрософт
 description: ''
 author: VanMSFT
 ms.author: vanto
@@ -9,108 +9,108 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 1e924704-e07c-4a8b-b243-8c1dd8cff0d3
 ms.openlocfilehash: b98980837f6dce2ebd9f39be142b816f37f16cd8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68077402"
 ---
-# <a name="use-visual-studio-to-create-databases-for-sql-server-on-linux"></a>Использовать Visual Studio для создания баз данных для SQL Server в Linux
+# <a name="use-visual-studio-to-create-databases-for-sql-server-on-linux"></a>Создание баз данных для SQL Server на Linux с помощью Visual Studio
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-SQL Server Data Tools (SSDT) превращает Visual Studio в это мощная среда разработки и базы данных жизненного цикла management (DLM) для SQL Server в Linux. Можно разрабатывать, создания, тестирования и публикации базы данных из проекта, контролируемого системой управления версиями, так же, как разрабатывать код приложения.
+Набор средств SQL Server Data Tools (SSDT) превращает Visual Studio в эффективную среду разработки и управления жизненным циклом баз данных (DLM) для SQL Server на Linux. Вы можете спроектировать, собрать, протестировать и опубликовать базу данных из проекта, находящегося в системе управления версиями, точно так же, как и при разработке кода приложения.
 
 ## <a name="install-visual-studio-and-sql-server-data-tools"></a>Установка Visual Studio и SQL Server Data Tools
 
-1. Если вы еще не установили Visual Studio на компьютере Windows, [Скачайте и установите Visual Studio]. Если у вас нет лицензии на Visual Studio, Visual Studio Community edition — это бесплатная полнофункциональная интегрированная среда разработки для учащихся, разработчиков открытого по и отдельных.
+1. Если вы еще не установили Visual Studio на компьютере Windows, [Скачивание и установка Visual Studio]. Если у вас нет лицензии Visual Studio, используйте выпуск Visual Studio Community — бесплатную полнофункциональную интегрированную среду разработки для учащихся, проектов с открытым исходным кодом и индивидуальных разработчиков.
 
-2. Во время установки Visual Studio, выберите **Custom** для **выберите тип установки** параметр. Нажмите кнопку **Далее**
+2. Во время установки Visual Studio выберите **Выборочная** для параметра **Выберите тип установки**. Нажмите кнопку **Далее**
 
-3. Выберите **Microsoft SQL Server Data Tools**, **Git для Windows**, и **расширение GitHub для Visual Studio** из списка выбора компонентов.
+3. Выберите **Microsoft SQL Server Data Tools**, **Git для Windows** и **Расширение GitHub для Visual Studio** в списке выбора функций.
 
     <img src="./media/sql-server-linux-develop-use-ssdt/ssdt-setup.png" alt="ssdt setup" style="width: 400px;"/>
 
-4. Продолжить и завершите установку Visual Studio. Может занять несколько минут.
+4. Продолжите и завершите установку Visual Studio. Это может занять несколько минут.
 
-## <a name="upgrade-sql-server-data-tools-to-ssdt-170-rc-release"></a>Обновление SQL Server Data Tools до выпуска версии-Кандидата SSDT 17.0
+## <a name="upgrade-sql-server-data-tools-to-ssdt-170-rc-release"></a>Обновление SQL Server Data Tools до выпуска SSDT 17.0 RC
 
-SQL Server в Linux поддерживается SSDT 17.0, версия-КАНДИДАТ или более поздней версии.
+SQL Server на Linux поддерживается SSDT 17.0 RC или более поздней версии.
 
-* [Скачать и установить SSDT 17.0 RC2](https://go.microsoft.com/fwlink/?linkid=837939).
+* [Скачайте и установите SSDT 17.0 RC2](https://go.microsoft.com/fwlink/?linkid=837939).
 
-## <a name="create-a-new-database-project-in-source-control"></a>Создайте новый проект базы данных в системе управления версиями
+## <a name="create-a-new-database-project-in-source-control"></a>Создание проекта базы данных в системе управления версиями
 
 1. Запустите Visual Studio.
 
-2. Выберите **Team Explorer** на **представление** меню. 
+2. Выберите **Team Explorer** в меню **Вид**. 
 
-3. Нажмите кнопку **New** в **локального репозитория Git** разделе **Connect** страницы.
+3. Щелкните **Создать** в разделе **Локальный репозиторий Git** страницы **Подключение**.
 
     <img src="./media/sql-server-linux-develop-use-ssdt/git-repository.png" alt="local repository" style="width: 300px;"/>
 
-3. Нажмите кнопку **Создать**. После создания локального репозитория Git, дважды щелкните **SSDTRepo**.
+3. Нажмите кнопку **Создать**. После создания локального репозитория Git дважды щелкните **SSDTRepo**.
 
-4. Нажмите кнопку **New** в **решения** раздел. Выберите **SQL Server** под **другие языки** узел в **новый проект** диалоговое окно.
+4. Щелкните **Создать** в разделе **Решения**. Выберите **SQL Server** в узле **Другие языки** диалогового окна **Создание проекта**.
 
     <img src="./media/sql-server-linux-develop-use-ssdt/new-project.png" alt="local repository" style="width: 480px;"/>
 
-5. Введите в **TutorialDB** имя и нажмите кнопку **ОК** для создания нового проекта базы данных.
+5. Введите **TutorialDB** в качестве имени и нажмите кнопку **ОК**, чтобы создать проект базы данных.
 
-## <a name="create-a-new-table-in-the-database-project"></a>Создать новую таблицу в проект базы данных
+## <a name="create-a-new-table-in-the-database-project"></a>Создание таблицы в проекте базы данных
 
-1. Выберите **обозревателе решений** на **представление** меню.
+1. Выберите **Обозреватель решений** в меню **Вид**.
 
-2. Откройте меню "проект базы данных", щелкнув правой кнопкой мыши **TutorialDB** в обозревателе решений.
+2. Откройте меню проекта базы данных, щелкнув правой кнопкой мыши **TutorialDB** в обозревателе решений.
 
-3. Выберите **таблицы** под **добавить**.
+3. Выберите **Таблица** в области **Добавить**.
 
     <img src="./media/sql-server-linux-develop-use-ssdt/create-table.png" alt="create table" style="width: 480px;"/>
 
-4. С помощью конструктора таблиц, добавьте два столбца, имя `nvarchar(50)` и расположение `nvarchar(50)`, как показано на рисунке. Создает SSDT `CREATE TABLE` скрипт по мере добавления столбцов в конструкторе.
+4. С помощью конструктора таблиц добавьте два столбца — "Имя" `nvarchar(50)` и "Расположение" `nvarchar(50)`, как показано на рисунке. SSDT создает скрипт `CREATE TABLE` при добавлении столбцов в конструкторе.
 
     <img src="./media/sql-server-linux-develop-use-ssdt/add-columns.png" alt="add columns" style="width: 480px;"/>
 
-5. Сохранить **Table1.sql** файла.
+5. Сохраните файл **Table1.sql**.
 
-## <a name="build-and-validate-the-database"></a>Создание и проверка базы данных
+## <a name="build-and-validate-the-database"></a>Сборка и проверка базы данных
 
-1. Откройте меню "проект базы данных" на **TutorialDB** и выберите **построения**. SSDT компиляция файлов исходного кода .sql в проекте и создает файл пакета (dacpac) приложения уровня данных. Это можно публиковать базу данных к экземпляру SQL Server в Linux. 
+1. Откройте меню проекта базы данных для **TutorialDB** и выберите **Сборка**. SSDT компилирует SQL-файлы исходного кода в проекте и создает файл пакета приложения уровня данных (DACPAC). Это можно использовать для публикации базы данных в экземпляре SQL Server на Linux. 
 
     <img src="./media/sql-server-linux-develop-use-ssdt/build.png" alt="add columns" style="width: 400px;"/>
 
-2. Проверьте сообщение об успешном выполнении сборки **вывода** окно в Visual Studio. 
+2. Проверьте сообщение об успешном завершении сборки в окне **Вывод** в Visual Studio. 
 
-## <a name="publish-the-database-to-sql-server-instance-on-linux"></a>Опубликовать базу данных к экземпляру SQL Server в Linux
+## <a name="publish-the-database-to-sql-server-instance-on-linux"></a>Публикация базы данных в экземпляре SQL Server на Linux.
 
-1. Откройте меню "проект базы данных" на **TutorialDB** и выберите **публикации**.
+1. Откройте меню проекта базы данных для **TutorialDB** и выберите **Опубликовать**.
 
-2. Нажмите кнопку **изменить** чтобы выбрать экземпляр SQL Server в Linux.
+2. Щелкните **Изменить**, чтобы выбрать экземпляр SQL Server на Linux.
 
     <img src="./media/sql-server-linux-develop-use-ssdt/publish-dialog.png" alt="publish dialog" style="width: 480px;"/>
 
-3. В диалоговом окне соединения введите IP-адрес или имя экземпляра SQL Server в Linux, имя пользователя и пароль.
+3. В диалоговом окне подключения введите IP-адрес или имя узла своего экземпляра SQL Server в Linux, имя пользователя и пароль.
 
     <img src="./media/sql-server-linux-develop-use-ssdt/connection-dialog.png" alt="connection dialog" style="width: 400px;"/>
 
-4. Нажмите кнопку **публикации** кнопку в диалоговом окне публикации.
+4. Нажмите кнопку **Опубликовать** в диалоговом окне публикации.
 
-5. Проверить состояние публикации **операции Data Tools** окна.
+5. Проверьте состояние публикации в окне **Операции инструментальных средств для обработки данных**.
 
-6. Нажмите кнопку **Просмотр результатов** или **просмотреть сценарий** для просмотра сведений базы данных публикации результат в SQL Server в Linux.
+6. Щелкните **Просмотреть результаты** или **Просмотреть скрипт**, чтобы просмотреть сведения о результатах публикации базы данных в SQL Server на Linux.
 
     <img src="./media/sql-server-linux-develop-use-ssdt/publish-result.png" alt="publish result" style="width: 480px;"/>
 
-Вы успешно создать новую базу данных на экземпляре SQL Server в Linux и ознакомились с основами разработки базы данных с проектом базы данных, контролируемых системой управления версиями.
+Вы успешно создали базу данных в экземпляре SQL Server на Linux и познакомились с основами разработки базы данных с помощью проекта базы данных, находящегося в системе управления версиями.
 
 ## <a name="next-steps"></a>Следующие шаги
 
-Если вы не знакомы с T-SQL, см. в разделе [Учебник. Составление инструкций Transact-SQL] и [Справочник по Transact-SQL (ядро СУБД)].
+Если вы не знакомы с T-SQL, изучите статьи [Учебник. Составление инструкций Transact-SQL] и [Справочник по Transact-SQL (ядро СУБД)].
 
-Дополнительные сведения о разработке базы данных с помощью SQL Data Tools, см. в разделе [документы MSDN по SSDT]
+Дополнительные сведения о разработке базы данных с помощью SQL Data Tools см. в [Документация MSDN по SSDT].
 
-[Скачайте и установите Visual Studio]: https://www.visualstudio.com/downloads/
+[Скачивание и установка Visual Studio]:https://www.visualstudio.com/downloads/
 [Download and Install SSDT]:https://aka.ms/ssdt-download
-[Документы MSDN по SSDT]: https://msdn.microsoft.com/library/hh272686(v=vs.103).aspx
-[Учебник. Составление инструкций Transact-SQL]: https://msdn.microsoft.com/library/ms365303.aspx
-[Справочник по Transact-SQL (ядро СУБД)]: https://msdn.microsoft.com/library/bb510741.aspx
+[Документация MSDN по SSDT]:https://msdn.microsoft.com/library/hh272686(v=vs.103).aspx
+[Учебник. Составление инструкций Transact-SQL]:https://msdn.microsoft.com/library/ms365303.aspx
+[Справочник по Transact-SQL (ядро СУБД)]:https://msdn.microsoft.com/library/bb510741.aspx

@@ -1,7 +1,7 @@
 ---
-title: Ссылка на файл конфигурации развертывания
+title: Справочник по файлу конфигурации развертывания
 titleSuffix: SQL Server big data clusters
-description: Ссылка для файла конфигурации развертывания кластера больших данных.
+description: Справочник по файлу конфигурации развертывания кластера больших данных.
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
@@ -10,24 +10,24 @@ ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: f26d25637ec0739edc31e0d5fa8794f7a887019b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67958249"
 ---
-# <a name="deployment-configuration-file-reference-for-big-data-clusters"></a>Ссылка на файл конфигурации развертывания для больших данных кластеров
+# <a name="deployment-configuration-file-reference-for-big-data-clusters"></a>Справочник по файлу конфигурации развертывания для кластеров больших данных
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Эта статья содержит файл JSON, описывающий структуру файла конфигурации развертывания SQL Server 2019 больших данных кластера.
+В этой статье представлен файл JSON, описывающий структуру файла конфигурации развертывания кластера больших данных SQL Server 2019.
 
 > [!TIP]
-> Не используйте это как файл конфигурации развертывания. Вместо этого следуйте инструкциям в [руководство по развертыванию](deployment-guidance.md#configfile) по работе с файлами конфигурации.
+> Не используйте его в качестве реального файла конфигурации развертывания. Вместо этого следуйте инструкциям в [руководстве по развертыванию](deployment-guidance.md#configfile), описывающем работу с файлами конфигурации.
 
 ## <a name="deployment-configuration-file"></a>Файл конфигурации развертывания
 
-Используйте следующий файл JSON как ссылку на структуру и параметры в файле конфигурации развертывания кластера больших данных.
+Представленный ниже файл JSON следует использовать в качестве примера структуры и параметров для файла конфигурации развертывания кластера больших данных.
 
 ```json
 {
@@ -453,4 +453,4 @@ ms.locfileid: "67958249"
 
 ## <a name="next-steps"></a>Следующие шаги
 
-Дополнительные сведения о том, как использовать и настраивать файлы конфигурации развертывания см. в разделе [развертывание больших данных в SQL Server кластеров Kubernetes](deployment-guidance.md#configfile).
+Дополнительные сведения об использовании и настройке файлов конфигурации развертывания см. в статье [Развертывание кластеров больших данных SQL Server в Kubernetes](deployment-guidance.md#configfile).

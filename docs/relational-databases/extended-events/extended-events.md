@@ -1,7 +1,7 @@
 ---
 title: Общие сведения о расширенных событиях в SQL Server | Документация Майкрософт
 ms.custom: ''
-ms.date: 05/28/2019
+ms.date: 07/23/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -10,46 +10,52 @@ ms.topic: overview
 helpviewer_keywords:
 - extended events [SQL Server]
 - xe
+- XEvents
 ms.assetid: bf3b98a6-51ed-4f2d-9c26-92f07f1fa947
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: abdb5eae1bb24bcedd2095a607895ffa671b7d53
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 01a823e288ade074b4e9ccd432c40c15e9f96f07
+ms.sourcegitcommit: 63c6f3758aaacb8b72462c2002282d3582460e0b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68021846"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68495412"
 ---
 # <a name="extended-events-overview"></a>Общие сведения о расширенных событиях
 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-Расширенная подсистема событий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имеет чрезвычайно масштабируемую и легко настраиваемую архитектуру, которая позволяет пользователям собирать именно такое количество информации, которое необходимо для устранения нарушения в работе или выявления проблемы производительности.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Благодаря архитектуре расширенных событий пользователи могут собирать необходимый объем данных для устранения неполадок или проблем с производительностью. Подсистема расширенных событий допускает настройку и масштабирование в широком диапазоне.
 
-Дополнительные сведения о расширенных событиях см. в следующих источниках: [Быстрое начало. Расширенные события в SQL Server](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md).
-
+Дополнительные сведения о расширенных событиях см. в разделе [Краткое руководство. Расширенные события в SQL Server](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md).
 
 ## <a name="benefits-of-includessnoversionincludesssnoversion-mdmd-extended-events"></a>Преимущества системы расширенных событий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
- Расширенные события — это упрощенная система мониторинга производительности, в которой применяется очень небольшой объем ресурсов. Система расширенных событий имеет два графических пользовательских интерфейса (**Мастер новых сеансов** или **Создание сеанса**), которые позволяют создавать, изменять, выводить и анализировать данные сеанса.  
-  
+
+Расширенные события — это упрощенная система мониторинга производительности, в которой применяется минимальный объем ресурсов. Система расширенных событий имеет два графических пользовательских интерфейса, которые позволяют создавать, изменять, выводить и анализировать данные сеанса. Эти интерфейсы имеют следующие имена:
+
+- Мастер создания нового сеанса
+- Создание сеанса
+
 ## <a name="extended-events-concepts"></a>Общие сведения о расширенных событиях  
- Подсистема расширенных событий (Extended Events) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] основана на таких основных понятиях, как событие и объект-получатель событий, а также использует понятия трассировки событий для Windows (ETW) и вводит несколько новых понятий.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Подсистема расширенных событий основана на таких основных понятиях, как событие и объект-получатель событий, а также использует понятия трассировки событий Windows (ETW) и вводит несколько новых понятий.  
   
  В следующей таблице даны определения понятий, применяемых в расширенной подсистеме событий.  
   
 |Раздел|Описание|  
 |-----------|-----------------|  
-|[Пакеты обработки расширенных событий SQL Server](../../relational-databases/extended-events/sql-server-extended-events-packages.md)|Описывает пакеты расширенных событий, содержащих объекты, которые используются для получения и обработки данных при работе сеанса расширенных событий.|  
+|[Пакеты обработки расширенных событий SQL Server](../../relational-databases/extended-events/sql-server-extended-events-packages.md)|Описывает пакеты расширенных событий, которые содержат объекты. Эти объекты используются для получения и обработки данных во время сеанса расширенных событий.|  
 |[Цели расширенных событий SQL Server](https://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)|Описывает объекты-получатели событий, получающие данные во время сеанса событий.|  
 |[Подсистема расширенных событий SQL Server](../../relational-databases/extended-events/sql-server-extended-events-engine.md)|Описывает подсистему, которая реализует сеанс расширенных событий, а также управляет им.|  
 |[Сеансы расширенных событий SQL Server](../../relational-databases/extended-events/sql-server-extended-events-sessions.md)|Описывает сеанс расширенных событий.|  
+| &nbsp; | &nbsp; |
   
 ## <a name="extended-events-architecture"></a>Архитектура расширенной подсистемы событий  
- Расширенные события (Extended Events) представляют собой общую систему обработки событий для серверных систем. Инфраструктура расширенных событий поддерживает корреляцию данных из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], а при определенных условиях — корреляцию данных из операционной системы и приложений баз данных. В последнем случае выходные данные расширенных событий должны быть направлены в средство отслеживания событий для Windows (ETW) для корреляции данных событий с данными операционной системы или приложений баз данных.  
-  
- Все приложения имеют точки выполнения, которые с успехом используются как внутри приложения, так и вне его. Внутри приложения можно поставить асинхронную обработку в очередь, используя сведения, собранные во время начального выполнения задачи. Вне приложения точки выполнения обеспечивают программы наблюдения сведениями о характеристиках поведения и производительности отслеживаемого приложения.  
-  
+
+Расширенные события представляют собой нашу общую систему обработки событий для серверных систем. Инфраструктура расширенных событий поддерживает корреляцию данных из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], а при определенных условиях — корреляцию данных из операционной системы и приложений баз данных. В случае с операционной системой выходные данные расширенных событий могут направляться в службу трассировки событий Windows (ETW). Служба ETW может обеспечивать сопоставление данных событий с данными событий операционной системы или приложений.  
+
+Все приложения имеют точки выполнения, которые с успехом используются как внутри приложения, так и вне его. Внутри приложения можно поставить асинхронную обработку в очередь, используя сведения, собранные во время начального выполнения задачи. Вне приложения средства мониторинга получают данные из точек выполнения. Это информация о характеристиках поведения и производительности отслеживаемого приложения.  
+
  Расширенные события поддерживают использование данных событий вне процесса. Эти данные используются, как правило, следующими средствами.  
   
 -   Средствами трассировки, например приложением SQL Trace и системным монитором.  
@@ -66,7 +72,7 @@ ms.locfileid: "68021846"
   
 -   События отделены от действий, предпринимаемых при возникновении события. Следовательно, любое действие можно связать с любым событием.  
   
--   Предикаты могут применять динамические фильтры, когда необходимо получить данные события. Это делает инфраструктуру расширенных событий более гибкой. Дополнительные сведения см. в разделе [SQL Server Extended Events Packages](../../relational-databases/extended-events/sql-server-extended-events-packages.md).  
+-   Предикаты могут применять динамические фильтры, когда необходимо получить данные события. Динамическая фильтрация делает инфраструктуру расширенных событий более гибкой. Дополнительные сведения см. в разделе [SQL Server Extended Events Packages](../../relational-databases/extended-events/sql-server-extended-events-packages.md).  
   
  Расширенные события могут синхронно создавать данные событий (и асинхронно обрабатывать эти данные), чем обеспечивается гибкое решение для обработки событий. Кроме того, расширенные события предоставляют следующие возможности.  
   
@@ -100,18 +106,23 @@ ms.locfileid: "68021846"
 |Описывает, как определить, какие запросы удерживают данную блокировку и каковы план запроса и стек [!INCLUDE[tsql](../../includes/tsql-md.md)] во время получения блокировки.|[Определение запросов, содержащих блокировки](../../relational-databases/extended-events/determine-which-queries-are-holding-locks.md)|  
 |Описывает, как определить источник блокировок, приводящих к ухудшению производительности базы данных.|[найти объекты, на которые наложено наибольшее число блокировок](../../relational-databases/extended-events/find-the-objects-that-have-the-most-locks-taken-on-them.md)|  
 |Описывает, как использовать расширенные события совместно со средством трассировки событий для Windows (ETW) для наблюдения за активностью системы.|[Мониторинг активности системы с помощью расширенных событий](../../relational-databases/extended-events/monitor-system-activity-using-extended-events.md)|  
-| Использование представлений каталога и динамических административных представлений для расширенных событий | [Использование SELECT и JOIN в системных представлениях для расширенных событий в SQL Server](../../relational-databases/extended-events/selects-and-joins-from-system-views-for-extended-events-in-sql-server.md) |
+|Использование представлений каталога и динамических административных представлений для расширенных событий | [Использование SELECT и JOIN в системных представлениях для расширенных событий в SQL Server](../../relational-databases/extended-events/selects-and-joins-from-system-views-for-extended-events-in-sql-server.md) |
+| &nbsp; | &nbsp; |
 
 ## <a name="code-examples-can-differ-for-azure-sql-database"></a>Примеры кода для базы данных SQL Azure могут отличаться
 
 [!INCLUDE[sql-on-premises-vs-azure-similar-sys-views-include.](../../includes/paragraph-content/sql-on-premises-vs-azure-similar-sys-views-include.md)]
 
-## <a name="see-also"></a>См. также:  
- [Приложения уровня данных](../../relational-databases/data-tier-applications/data-tier-applications.md)   
- [Поддержка приложений уровня данных для объектов и версий SQL Server](../../relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md)   
- [Развертывание приложения уровня данных](../../relational-databases/data-tier-applications/deploy-a-data-tier-application.md)   
- [Наблюдение за приложениями уровня данных](../../relational-databases/data-tier-applications/monitor-data-tier-applications.md)   
- [Динамические административные представления расширенных событий](../../relational-databases/system-dynamic-management-views/extended-events-dynamic-management-views.md)   
- [Представления каталога расширенных событий (Transact-SQL)](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md)  
- [XELite: кроссплатформенная библиотека для чтения событий XEvent из XEL-файлов или обновляющихся потоков SQL](https://www.nuget.org/packages/Microsoft.SqlServer.XEvent.XELite/), выпущена в мае 2019 г.   
- Командлет [Read-SQLXEvent PowerShell](https://www.powershellgallery.com/packages/SqlServer.XEvent), выпущен в июне 2019 г.
+## <a name="see-also"></a>См. также:
+
+[Приложения уровня данных](../../relational-databases/data-tier-applications/data-tier-applications.md)  
+[Поддержка приложений уровня данных для объектов и версий SQL Server](../../relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md)  
+[Развертывание приложения уровня данных](../../relational-databases/data-tier-applications/deploy-a-data-tier-application.md)  
+[Наблюдение за приложениями уровня данных](../../relational-databases/data-tier-applications/monitor-data-tier-applications.md)  
+&nbsp;  
+[Динамические административные представления расширенных событий](../../relational-databases/system-dynamic-management-views/extended-events-dynamic-management-views.md)  
+[Представления каталога расширенных событий (Transact-SQL)](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md)  
+&nbsp;  
+[XELite: кроссплатформенная библиотека для чтения событий XEvent из XEL-файлов или обновляющихся потоков SQL](https://www.nuget.org/packages/Microsoft.SqlServer.XEvent.XELite/), выпущена в мае 2019 г.  
+Командлет [Read-SQLXEvent PowerShell](https://www.powershellgallery.com/packages/SqlServer.XEvent), выпущен в июне 2019 г.  
+[Скрытые возможности SQL. Сравнение отслеживания причинных связей и последовательностей событий для сеансов XEvent (запись блога опубликована 1 апреля 2019 г.)](https://bobsql.com/sql-mysteries-causality-tracking-vs-event-sequence-for-xevent-sessions/)  

@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: e985c9a6-4230-4087-9fdb-de8571ba5a5f
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 3df2d5cd644fdff3371c2814705a18dbd2dfdfb7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: eeea69e39184744a25890b1dae85390e00934090
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68111176"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68471049"
 ---
 # <a name="restore-and-recovery-overview-sql-server"></a>Обзор процессов восстановления (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -157,7 +157,7 @@ ms.locfileid: "68111176"
 
 ## <a name="adr"></a> Ускоренное восстановление баз данных.
 
-Предварительная версия SQL Server 2019 CTP 2.3 предоставляет [ускорение восстановления баз данных](/azure/sql-database/sql-database-accelerated-database-recovery/) для SQL Server на локальном компьютере. Ускорение восстановления баз данных значительно повышает доступность баз данных, особенно при наличии продолжительных транзакций, за счет перепроектирования процесса восстановления ядра базы данных SQL Server. [Восстановление базы данных](../../relational-databases/logs/the-transaction-log-sql-server.md?#recovery-of-all-incomplete-transactions-when--is-started) — это процесс, который SQL Server использует в каждой базе данных для ее запуска в транзакционно-согласованном (чистом) состоянии. Базы данных при включении ускоренного восстановления значительно быстрее восстанавливаются после отработки отказа или других вариантов завершения работы в "грязном" состоянии. 
+Предварительная версия SQL Server 2019 CTP 2.3 предоставляет [ускорение восстановления баз данных](/azure/sql-database/sql-database-accelerated-database-recovery/) для SQL Server на локальном компьютере. Ускорение восстановления баз данных значительно повышает доступность баз данных, особенно при наличии продолжительных транзакций, за счет перепроектирования процесса восстановления ядра базы данных SQL Server. [Восстановление базы данных](../../relational-databases/logs/the-transaction-log-sql-server.md?#recovery-of-all-incomplete-transactions-when--is-started) — это процесс, который SQL Server использует в каждой базе данных для ее запуска в транзакционно-согласованном (чистом) состоянии. Базы данных при включении ускоренного восстановления значительно быстрее восстанавливаются после отработки отказа или других вариантов завершения работы в "грязном" состоянии. 
 
 С [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP-версии 2.3 можно включить ускоренное восстановление для каждой базы данных отдельно с помощью следующего синтаксиса:
 

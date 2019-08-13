@@ -4,17 +4,17 @@ description: Эта страница описывает шаги по испол
 author: Abiola
 ms.author: aboke
 ms.reviewer: mikeray
-ms.date: 03/27/2019
+ms.date: 07/24/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: polybase
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: f0e0c5ec609670e6ce1483a9bdbdf81f223b3481
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e58b90073baed1698ad6a047a025c327ee91bdb1
+ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68041113"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68418768"
 ---
 # <a name="use-the-external-table-wizard-with-relational-data-sources"></a>Используйте мастер создания внешней таблицы с реляционными источниками данных
 
@@ -22,7 +22,7 @@ ms.locfileid: "68041113"
 
 ## <a name="start-the-external-table-wizard"></a>Запуск мастера внешних таблиц
 
-Подключитесь к основному экземпляру по IP-адресу и номеру порта конечной точки **sql-server-master**, получив их с помощью команды [**mssqlctl cluster endpoints list**](../../big-data-cluster/deployment-guidance.md#endpoints). Разверните узел **Базы данных** в обозревателе объектов. Затем выберите одну из баз данных, где необходимо виртуализировать данные из существующего экземпляра SQL Server. Щелкните правой кнопкой мыши базу данных и выберите **Создать внешнюю таблицу**, чтобы запустить мастер виртуализации данных. Вы можете также запустить его в палитре команд. Нажмите клавиши CTRL+SHIFT+P в Windows или CMD+SHIFT+P на Mac.
+Подключитесь к основному экземпляру по IP-адресу и номеру порта конечной точки **sql-server-master**, получив их с помощью команды [**azdata cluster endpoints list**](../../big-data-cluster/deployment-guidance.md#endpoints). Разверните узел **Базы данных** в обозревателе объектов. Затем выберите одну из баз данных, где необходимо виртуализировать данные из существующего экземпляра SQL Server. Щелкните правой кнопкой мыши базу данных и выберите **Создать внешнюю таблицу**, чтобы запустить мастер виртуализации данных. Вы можете также запустить его в палитре команд. Нажмите клавиши CTRL+SHIFT+P в Windows или CMD+SHIFT+P на Mac.
 
 ![Мастер виртуализации данных](media/data-virtualization/virtualize-data-wizard.png)
 ## <a name="select-a-data-source"></a>Выбор источника данных

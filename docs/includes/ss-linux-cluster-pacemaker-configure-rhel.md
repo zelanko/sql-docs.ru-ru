@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 6cf3dd279f33ea0c157743d4b4c11248267a0a62
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68215620"
 ---
 3. В брандмауэрах на всех узлах кластера откройте порты для Pacemaker. Чтобы открыть эти порты с помощью `firewalld`, выполните следующую команду:
@@ -13,10 +13,10 @@ ms.locfileid: "68215620"
    sudo firewall-cmd --reload
    ```
 
-   > Если в брандмауэре нет встроенной конфигурации высокого уровня доступности, откройте следующие порты для Pacemaker.
+   > Если в брандмауэре нет встроенной конфигурации с высоким уровнем доступности, откройте для Pacemaker следующие порты.
    >
-   > * TCP: Порты с кодом 2224, 3121, 21064.
-   > * UDP: Порт 5405.
+   > * TCP: порты 2224, 3121, 21064
+   > * UDP: порт 5405
 
 1. Установите пакеты Pacemaker на всех узлах.
 

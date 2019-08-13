@@ -1,20 +1,19 @@
 ---
-title: Установка PolyBase на компьютере под управлением Linux | Документация Майкрософт
-description: В этой статье описывается установка SQL Server Full-Text Search в Linux.
+title: Установка PolyBase на компьютере под управлением Linux
+titlesuffix: SQL Server
+description: В этой статье описывается установка SQL Server PolyBase в Linux.
 author: aboke
 ms.author: aboke
 ms.date: 4/12/2019
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
-ms.assetid: bb42076f-e823-4cee-9281-cd3f83ae42f5
-ms.openlocfilehash: 33a6a4415b5ced4bb2a5ca4448ccca8618f96832
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3c53eb5db9238f1da32cb207dafb9e36b7748914
+ms.sourcegitcommit: 63c6f3758aaacb8b72462c2002282d3582460e0b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68062143"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68495356"
 ---
 # <a name="install-polybase-on-linux"></a>Установка PolyBase на компьютере под управлением Linux
 
@@ -154,8 +153,6 @@ sudo systemctl restart mssql-server
 >После установки необходимо [включить компонент PolyBase](#enable).
 
 ## <a name="next-steps"></a>Следующие шаги
-
-### <a name="supported-external-data-sources-on-linux"></a>Поддерживаемые в Linux внешние источники данных
 
 Для PolyBase в Linux доступны следующие источники данных. Следуйте указанным ссылкам, чтобы получить дополнительные сведения о создании внешних таблиц из этих источников в PolyBase. 
 

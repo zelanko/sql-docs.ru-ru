@@ -24,12 +24,12 @@ ms.assetid: ca5fd220-d5ea-4182-8950-55d4101a86f6
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5bfc0e6a64c9895b4b118ec5c6c27a66657b0829
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 750679a41b3178dd587ddbdee2fb33ee491a41b5
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68065806"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68471163"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>Уровень совместимости инструкции ALTER DATABASE (Transact-SQL)
 
@@ -76,7 +76,7 @@ COMPATIBILITY_LEVEL { 150 | 140 | 130 | 120 | 110 | 100 | 90 | 80 }
 
 - Если уровень совместимости пользовательской базы данных до обновления был 100 или выше, после обновления он останется таким же.
 - Если уровень совместимости пользовательской базы данных до обновления был равен 90, в обновленной базе данных он получает значение 100, что соответствует минимальному поддерживаемому уровню совместимости в [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)].
-- После обновления уровням совместимости баз данных tempdb, model, msdb и Resource задается значение текущего уровня.
+- Уровням совместимости баз данных tempdb, model, msdb и Resource задается значение уровня по умолчанию для заданной версии [!INCLUDE[ssDE](../../includes/ssde-md.md)]. 
 - Системная база данных master сохраняет уровень совместимости, который она имела до обновления.
 
 Измените уровень совместимости базы данных с помощью инструкции `ALTER DATABASE`. Новый параметр уровня совместимости для базы данных вступит в силу после выдачи `USE <database>` или обработки нового имени входа в этой базе данных в качестве контекста базы данных по умолчанию.

@@ -1,7 +1,7 @@
 ---
 title: Восстановление базы данных
 titleSuffix: SQL Server big data clusters
-description: В этой статье показано, как восстановить базу данных на основной экземпляр кластера SQL Server 2019 больших данных (Предварительная версия).
+description: В этой статье показано, как восстановить базу данных на главном экземпляре кластера больших данных SQL Server 2019 (предварительная версия).
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -10,30 +10,30 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 1ad5ca749f3862f0d7df3411efd78104052dba91
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67958628"
 ---
-# <a name="restore-a-database-into-the-sql-server-big-data-cluster-master-instance"></a>Восстановление базы данных в основной экземпляр кластера SQL Server больших данных
+# <a name="restore-a-database-into-the-sql-server-big-data-cluster-master-instance"></a>Восстановление базы данных на главном экземпляре кластера больших данных SQL Server
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-В этой статье описывается, как восстановить существующую базу данных на основной экземпляр кластера SQL Server 2019 больших данных (Предварительная версия). Рекомендуется использовать резервное копирование, копирование и восстановление подход.
+В этой статье описано, как восстановить существующую базу данных на главном экземпляре кластера больших данных SQL Server 2019 (предварительная версия). Рекомендуется использовать метод резервного копирования, копирования и восстановления.
 
-## <a name="backup-your-existing-database"></a>Создать резервную копию существующей базы данных
+## <a name="backup-your-existing-database"></a>Создайте резервную копию существующей базы данных.
 
-Во-первых создайте резервную копию существующей базы данных SQL Server из SQL Server на Windows или Linux. Используйте стандартные методики резервного копирования, с помощью Transact-SQL или с помощью средства, такие как SQL Server Management Studio (SSMS).
+Сначала создайте резервную копию существующей базы данных SQL Server на Windows или Linux. Используйте стандартные методы резервного копирования с помощью Transact-SQL или с помощью такого средства, как SQL Server Management Studio (SSMS).
 
-В этой статье показано, как восстановить базу данных AdventureWorks, но можно использовать любой резервной копии базы данных. 
+В этой статье показано, как восстановить базу данных AdventureWorks, но можно использовать резервную копию любой базы данных. 
 
 > [!TIP]
-> Резервное копирование AdventureWorks можно загрузить [здесь](https://www.microsoft.com/download/details.aspx?id=49502).
+> Вы можете скачать резервную копию AdventureWorks [здесь](https://www.microsoft.com/download/details.aspx?id=49502).
 
-## <a name="copy-the-backup-file"></a>Скопируйте файл резервной копии
+## <a name="copy-the-backup-file"></a>Копирование файла резервной копии
 
-Скопируйте файл резервной копии в контейнер SQL Server в pod главного экземпляра кластера Kubernetes.
+Скопируйте файл резервной копии в контейнер SQL Server в модуле Pod главного экземпляра кластера Kubernetes.
 
 ```bash
 kubectl cp <path to .bak file> mssql-master-pool-0:/tmp -c mssql-server -n <name of your big data cluster>
@@ -45,7 +45,7 @@ kubectl cp <path to .bak file> mssql-master-pool-0:/tmp -c mssql-server -n <name
 kubectl cp ~/Downloads/AdventureWorks2016CTP3.bak mssql-master-pool-0:/tmp -c mssql-server -n clustertest
 ```
 
-Затем убедитесь, что файл резервной копии был скопирован в контейнер pod.
+Затем убедитесь, что файл резервной копии скопирован в контейнер Pod.
 
 ```bash
 kubectl exec -it mssql-master-pool-0 -n <name of your big data cluster> -c mssql-server -- bin/bash
@@ -62,9 +62,9 @@ ls /tmp
 exit
 ```
 
-## <a name="restore-the-backup-file"></a>Восстановить файл резервной копии
+## <a name="restore-the-backup-file"></a>Восстановление файла резервной копии
 
-Затем восстановите резервную копию базы данных master экземпляра SQL Server.  При восстановлении резервной копии базы данных, который был создан в Windows, необходимо будет получить имена файлов.  В Azure Data Studio подключитесь к основной экземпляр и запустите этот скрипт SQL:
+Затем восстановите резервную копию базы данных в главном экземпляре SQL Server.  При восстановлении резервной копии базы данных, созданной в Windows, необходимо будет получить имена файлов.  В Azure Data Studio установите подключение к главному экземпляру и запустите следующий скрипт SQL:
 
 ```sql
 RESTORE FILELISTONLY FROM DISK='/tmp/<db file name>.bak'
@@ -76,9 +76,9 @@ RESTORE FILELISTONLY FROM DISK='/tmp/<db file name>.bak'
 RESTORE FILELISTONLY FROM DISK='/tmp/AdventureWorks2016CTP3.bak'
 ```
 
-![Список резервных копий файлов](media/restore-database/database-restore-file-list.png)
+![Список файлов резервной копии](media/restore-database/database-restore-file-list.png)
 
-Теперь восстановите базу данных. Следующий сценарий является примером. Замените имена и пути при необходимости в зависимости от вашей резервной копии базы данных.
+Теперь проведите восстановление базы данных. Следующий скрипт — это пример. При необходимости замените имена и пути в зависимости от вашей резервной копии базы данных.
 
 ```sql
 RESTORE DATABASE AdventureWorks2016CTP3
@@ -88,9 +88,9 @@ WITH MOVE 'AdventureWorks2016CTP3_Data' TO '/var/opt/mssql/data/AdventureWorks20
         MOVE 'AdventureWorks2016CTP3_mod' TO '/var/opt/mssql/data/AdventureWorks2016CTP3_mod'
 ```
 
-## <a name="configure-data-pool-and-hdfs-access"></a>Настроить пул данных и доступа к HDFS
+## <a name="configure-data-pool-and-hdfs-access"></a>Настройка пула данных и доступа HDFS
 
-Теперь для экземпляра SQL Server master пулы данных access и HDFS, выполните данных пул и дисковое пула хранимой процедуры. Выполните следующие скрипты Transact-SQL в только что восстановленной базе данных:
+Теперь, чтобы главный экземпляр SQL Server обращался к пулам данных и HDFS, запустите хранимые процедуры пула данных и пула носителей. Выполните следующие скрипты Transact-SQL во вновь восстановленной базе данных:
 
 ```sql
 USE AdventureWorks2016CTP3
@@ -108,10 +108,10 @@ GO
 ```
 
 > [!NOTE]
-> Необходимо будет выполнить эти сценарии установки только для базы данных, восстановленные из более ранних версиях SQL Server. При создании новой базы данных master экземпляра SQL Server, данные пула хранилища пула хранилища процедуры и уже настроены для вас.
+> Эти скрипты установки требуется выполнять только для баз данных, восстановленных из более старых версий SQL Server. Если вы создаете новую базу данных в главном экземпляре SQL Server, то для вас уже настроены хранимые процедуры пула данных и пула носителей.
 
 ## <a name="next-steps"></a>Следующие шаги
 
-Дополнительные сведения о кластерах больших данных SQL Server, см. в разделе приведены общие:
+Дополнительные сведения о кластерах больших данных SQL Server см. в следующем обзоре:
 
-- [Что такое кластеры SQL Server 2019 больших данных?](big-data-cluster-overview.md)
+- [Что такое кластеры больших данных SQL Server 2019?](big-data-cluster-overview.md)

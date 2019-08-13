@@ -30,12 +30,12 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: 30cab7ddfe6c0c6b88f1fb6e619cb84866c3efbf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ecd914603883f83d5434327c5528688936aee420
+ms.sourcegitcommit: 63c6f3758aaacb8b72462c2002282d3582460e0b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68065724"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68495459"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>Параметры ALTER DATABASE SET (Transact-SQL)
 
@@ -769,7 +769,10 @@ OFF
 SIZE_BASED_CLEANUP_MODE имеет тип **nvarchar**.
 
 QUERY_CAPTURE_MODE { ALL | AUTO | NONE | CUSTOM }         
-Определяет режим записи текущего активного запроса.
+Определяет режим записи текущего активного запроса. В каждом режиме определяются собственные политики записи.
+
+> [!NOTE]
+> Курсоры, запросы в хранимых процедурах и скомпилированные в собственном коде запросы всегда записываются, если задан режим записи запроса ALL, AUTO или CUSTOM.
 
 ALL         
 Записывает все запросы. ALL — значение по умолчанию. Это значение конфигурации по умолчанию, начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].
@@ -1232,7 +1235,7 @@ GO
 
 ```
 
-### <a name="b-setting-the-database-to-readonly"></a>Б. Перевод базы данных в состояние READ_ONLY
+### <a name="b-setting-the-database-to-read_only"></a>Б. Перевод базы данных в состояние READ_ONLY
 
 Для изменения состояния базы данных или файловой группы в READ_ONLY или READ_WRITE требуется монопольный доступ к базе данных. В следующем примере база данных устанавливается в режим `SINGLE_USER` для получения монопольного доступа. Затем состояние базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] устанавливается в `READ_ONLY`, а также возвращается доступ к базе данных всем пользователям.
 
@@ -2083,7 +2086,7 @@ NO_WAIT
 
 ## <a name="examples"></a>Примеры
 
-### <a name="a-setting-the-database-to-readonly"></a>A. Перевод базы данных в состояние READ_ONLY
+### <a name="a-setting-the-database-to-read_only"></a>A. Перевод базы данных в состояние READ_ONLY
 Для изменения состояния базы данных или файловой группы в READ_ONLY или READ_WRITE требуется монопольный доступ к базе данных. В следующем примере для базы данных устанавливается режим `RESTRICTED_USER`, ограничивающий доступ к ней. Затем состояние базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] устанавливается в `READ_ONLY`, а также возвращается доступ к базе данных всем пользователям.
 
 ```sql
@@ -2789,7 +2792,7 @@ NO_WAIT
 
 ## <a name="examples"></a>Примеры
 
-### <a name="a-setting-the-database-to-readonly"></a>A. Перевод базы данных в состояние READ_ONLY
+### <a name="a-setting-the-database-to-read_only"></a>A. Перевод базы данных в состояние READ_ONLY
 Для изменения состояния базы данных или файловой группы в READ_ONLY или READ_WRITE требуется монопольный доступ к базе данных. В следующем примере для базы данных устанавливается режим `RESTRICTED_USER` для ограничения доступа. Затем состояние базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] устанавливается в `READ_ONLY`, а также возвращается доступ к базе данных всем пользователям.
 
 ```sql

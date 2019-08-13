@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 549224ae30b710292324a178aa48432bde7d34ca
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68215638"
 ---
 ## <a name="connect-locally"></a>Локальное подключение
@@ -52,7 +52,7 @@ ms.locfileid: "68215638"
    ```
 
 > [!TIP]
-> Дополнительные сведения о написании инструкций Transact-SQL и запросов, см. в разделе [руководства: Составление инструкций Transact-SQL](../t-sql/tutorial-writing-transact-sql-statements.md).
+> Дополнительные сведения о написании инструкций и запросов на языке Transact-SQL см. в разделе [Руководство. Составление инструкций Transact-SQL](../t-sql/tutorial-writing-transact-sql-statements.md).
 
 ### <a name="insert-data"></a>Вставка данных
 
@@ -106,20 +106,20 @@ ms.locfileid: "68215638"
 QUIT
 ```
 
-## <a name="performance-best-practices"></a>Рекомендации по повышению производительности
+## <a name="performance-best-practices"></a>Оптимальные методы повышения производительности
 
-После установки SQL Server в Linux, советы и рекомендации по настройке, Linux и SQL Server для повышения производительности для рабочих сценариев. Дополнительные сведения см. в разделе [рекомендации по производительности и рекомендации по конфигурации для SQL Server в Linux](../linux/sql-server-linux-performance-best-practices.md).
+После установки SQL Server на Linux ознакомьтесь с рекомендациями по настройке Linux и SQL Server для обеспечения оптимальной производительности в рабочих сценариях. Дополнительные сведения см. в статье [Рекомендации по производительности и конфигурации для SQL Server на Linux](../linux/sql-server-linux-performance-best-practices.md).
 
-## <a name="cross-platform-data-tools"></a>Данные кросс платформенные средства
+## <a name="cross-platform-data-tools"></a>Кроссплатформенные средства работы с данными
 
-В дополнение к **sqlcmd**, можно использовать следующие кросс платформенные средства для управления SQL Server:
+Помимо **sqlcmd** вы можете использовать следующие кроссплатформенные средства для управления SQL Server:
 
 |||
 |---|---|
-| [Azure Data Studio](../azure-data-studio/index.md) | Кросс платформенных графического интерфейса пользователя базы данных управления служебной программы. |
-| [Visual Studio Code](../linux/sql-server-linux-develop-use-vscode.md); | Редактор кода графического пользовательского интерфейса между различными платформами, выполните инструкции Transact-SQL с помощью расширения mssql. |
-| [PowerShell Core](../linux/sql-server-linux-manage-powershell-core.md) | Кросс платформенные службы автоматизации и настройки tool на основе командлетов. |
-| [mssql-cli](https://github.com/dbcli/mssql-cli/tree/master/doc) | Кросс платформенного интерфейса командной строки для выполнения команд Transact-SQL. |
+| [Azure Data Studio](../azure-data-studio/index.md) | Кроссплатформенная служебная программа управления базами данных с графическим пользовательским интерфейсом. |
+| [Visual Studio Code](../linux/sql-server-linux-develop-use-vscode.md); | Кроссплатформенный редактор кода с графическим пользовательским интерфейсом, позволяющий выполнять инструкции Transact-SQL в выражениях mssql. |
+| [PowerShell Core](../linux/sql-server-linux-manage-powershell-core.md) | Кроссплатформенное средство для автоматизации и настройки на основе командлетов. |
+| [mssql-cli](https://github.com/dbcli/mssql-cli/tree/master/doc) | Кроссплатформенный интерфейс командной строки для выполнения команд Transact-SQL. |
 
 ## <a name="connecting-from-windows"></a>Подключение из Windows
 
@@ -145,9 +145,9 @@ QUIT
 | [Автономная установка](../linux/sql-server-linux-setup.md#offline) | Узнайте, как вручную загрузить пакеты для установки в автономном режиме |
 
 > [!TIP]
-> Ответы на часто задаваемые вопросы см. в разделе [SQL Server на Linux часто задаваемые вопросы о](../linux/sql-server-linux-faq.md).
+> Ответы на часто задаваемые вопросы об SQL Server на Linux см. в [этой статье](../linux/sql-server-linux-faq.md).
 
 ## <a name="next-steps"></a>Следующие шаги
 
 > [!div class="nextstepaction"]
-> [Ознакомьтесь с учебниками для SQL Server в Linux](../linux/sql-server-linux-migrate-restore-database.md)
+> [Руководства по SQL Server на Linux](../linux/sql-server-linux-migrate-restore-database.md)

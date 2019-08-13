@@ -1,6 +1,6 @@
 ---
-title: Планирование пакетов служб SSIS в Linux с помощью cron
-description: В этой статье описывается планирование пакетов служб SQL Server Integration Services (SSIS) на платформе Linux с помощью службы cron.
+title: Планирование пакетов SSIS в Linux с помощью cron
+description: В этой статье приводятся инструкции по планированию пакетов служб SQL Server Integration Services (SSIS) в Linux с помощью службы cron.
 author: lrtoyou1223
 ms.author: lle
 ms.reviewer: maghan
@@ -9,35 +9,35 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: ac7648287b4e4b609f4dd4f25b1b07a512065364
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68065160"
 ---
-# <a name="schedule-sql-server-integration-services-package-execution-on-linux-with-cron"></a>Расписание SQL Server Integration Services выполнения пакета в Linux с помощью cron
+# <a name="schedule-sql-server-integration-services-package-execution-on-linux-with-cron"></a>Планирование выполнения пакетов SQL Server Integration Services в Linux с помощью cron
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-При запуске службы SQL Server Integration Services (SSIS) и SQL Server на Windows, можно автоматизировать выполнение пакетов служб SSIS с помощью агента SQL Server. Тем не менее, при запуске SQL Server и служб SSIS в Linux, служебную программу агента SQL Server недоступна планировать задания в Linux. Вместо этого использовать службы cron, которое широко используется на платформах Linux для автоматизации выполнения пакета.
+При запуске SQL Server Integration Services (SSIS) и SQL Server в Windows можно автоматизировать выполнение пакетов SSIS с помощью агента SQL Server. Однако при запуске SQL Server и служб SSIS в Linux служебная программа агента SQL Server недоступна для планирования заданий в Linux. Вместо этого для автоматизации выполнения пакетов используется служба cron, которая получила широкое распространение на платформах Linux.
 
-В этой статье приведены примеры, показано, как автоматизировать выполнение пакетов служб SSIS. Примеры написаны под управлением Red Hat Enterprise. Код аналогичен и для других дистрибутивов Linux, таких как Ubuntu.
+В этой статье приведены примеры, демонстрирующие автоматизацию выполнения пакетов SSIS. Эти примеры написаны для запуска в Red Hat Enterprise. Аналогичный код используется для других дистрибутивов Linux, таких как Ubuntu.
 
 ## <a name="prerequisites"></a>предварительные требования
 
-Прежде чем использовать службы cron для выполнения заданий, проверьте, выполняется ли он на компьютере.
+Прежде чем использовать службу cron для запуска заданий, проверьте, запущена ли она на компьютере.
 
 Чтобы проверить состояние службы cron, используйте следующую команду: `systemctl status crond.service`.
 
-Если служба не активна (то есть он не работает), обратитесь к администратору, чтобы установить и настроить службы cron должным образом.
+Если служба неактивна (т. е. не запущена), обратитесь к администратору, чтобы правильно настроить и настроить службу cron.
 
 ## <a name="create-jobs"></a>Создание заданий
 
-Задания cron — это задача, можно настроить для регулярного выполнения с заданным интервалом. Задание может быть сложнее, чем команды, которая бы обычно введите непосредственно в консоли и выполнять как сценарий оболочки.
+Задание cron — это задача, которую можно настроить для регулярного запуска с заданным интервалом. Это задание может быть простым, как команда, которая обычно вводится непосредственно в консоли или запускается как скрипт оболочки.
 
-Для упрощения управления и обслуживания рекомендуется размещать ваши команды выполнения пакета в скрипт, содержащий описательное имя.
+Для простоты управления и обслуживания рекомендуется поместить команды выполнения пакета в скрипт, имеющий описательное имя.
 
-Ниже приведен пример простой сценарий запуска пакета. Он содержит только одну команду, но при необходимости можно добавить дополнительные команды.
+Ниже приведен пример простого скрипта оболочки для запуска пакета. Он содержит только одну команду, но при необходимости можно добавить дополнительные команды.
 
 ```bash
 # A simple shell script that contains a simple package execution command
@@ -48,11 +48,11 @@ ms.locfileid: "68065160"
 
 ## <a name="schedule-jobs-with-the-cron-service"></a>Планирование заданий с помощью службы cron
 
-После определения заданий, можно запланировать их автоматический запуск с помощью службы cron.
+После определения заданий можно запланировать их автоматический запуск с помощью службы cron.
 
-Чтобы добавить задание для cron для запуска, добавьте задание в файле crontab. Чтобы открыть файл crontab в редакторе, где можно добавить или обновить задание, используйте следующую команду: `crontab -e`.
+Чтобы добавить задание для выполнения cron, добавьте его в файл crontab. Чтобы открыть файл crontab в редакторе, где можно добавить или обновить задание, используйте следующую команду: `crontab -e`.
 
-Для задания ранее описанных ежедневно в 2:10, добавьте следующую строку в файл crontab:
+Чтобы запланировать выполнение ранее описанного задания ежедневно в 2:10, добавьте в файл crontab следующую строку.
 
 ```
 # run <SSIS package name> at 2:10 AM every day
@@ -61,22 +61,22 @@ ms.locfileid: "68065160"
 
 Сохраните файл crontab и закройте редактор.
 
-Чтобы понять формат пример команды, просмотрите сведения в следующем разделе.
+Чтобы понять формат примера команды, ознакомьтесь со сведениями в следующем разделе.
  
 ## <a name="format-of-a-crontab-file"></a>Формат файла crontab
 
-Ниже приведен формат Описание строки задания, который добавляется в файл crontab.
+На следующем изображении показано описание формата для строки задания, добавленной в файл crontab.
 
-![Описание формата для записи в файле crontab](media/sql-server-linux-schedule-ssis-packages/ssis-linux-cron-job-definition.png)
+![Описание формата записи в файле crontab](media/sql-server-linux-schedule-ssis-packages/ssis-linux-cron-job-definition.png)
 
 Чтобы получить более подробное описание формата файла crontab, используйте следующую команду: `man 5 crontab`.
 
-Ниже приведен неполный пример выходных данных, которые помогут объяснить, в примере в этой статье:
+Ниже приведен частичный пример выходных данных, которые помогут объяснить пример в этой статье.
 
-![Подробное описание частичного crontab формата](media/sql-server-linux-schedule-ssis-packages/ssis-linux-cron-crontab-format.png)
+![Подробное частичное описание формата crontab](media/sql-server-linux-schedule-ssis-packages/ssis-linux-cron-crontab-format.png)
 
-## <a name="related-content-about-ssis-on-linux"></a>См. также сведения о службах SSIS на платформе Linux
--   [Извлечения, преобразования и загрузки данных в Linux с помощью служб SSIS](sql-server-linux-migrate-ssis.md)
--   [Установка SQL Server Integration Services (SSIS) в Linux](sql-server-linux-setup-ssis.md)
--   [Настройка SQL Server Integration Services в Linux с помощью служб ssis-conf](sql-server-linux-configure-ssis.md)
+## <a name="related-content-about-ssis-on-linux"></a>Связанные материалы о службах SSIS в Linux
+-   [Извлечение, преобразование и загрузка данных в Linux с помощью служб SSIS](sql-server-linux-migrate-ssis.md)
+-   [Установка служб SQL Server Integration Services (SSIS) в Linux](sql-server-linux-setup-ssis.md)
+-   [Настройка SQL Server Integration Services в Linux с помощью ssis-conf](sql-server-linux-configure-ssis.md)
 -   [Ограничения и известные проблемы для служб SSIS в Linux](sql-server-linux-ssis-known-issues.md)

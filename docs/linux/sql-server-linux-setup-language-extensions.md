@@ -1,6 +1,6 @@
 ---
-title: Установка расширения языка (Java) для SQL Server в Linux
-description: Сведения об установке расширения языка (Java) для SQL Server в Red Hat, Ubuntu и SUSE.
+title: Установка расширений языка (Java) для SQL Server на Linux
+description: Узнайте, как установить расширения языка (Java) для SQL Server в Red Hat, Ubuntu и SUSE.
 author: dphansen
 ms.author: davidph
 ms.reviewer: vanto
@@ -10,56 +10,58 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 25aa15f66827aeee7e86e7052febde9c31c7e15a
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
-ms.translationtype: MT
+ms.openlocfilehash: de5ca4f46513999c1473eed77503b59cc94c3a22
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67834702"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68476022"
 ---
-# <a name="install-sql-server-2019-language-extensions-java-on-linux"></a>Установка расширения языка SQL Server 2019 г. (Java) в Linux
+# <a name="install-sql-server-2019-language-extensions-java-on-linux"></a>Установка расширений языка (Java) для SQL Server 2019 на Linux
 
-Расширения языка являются надстройку к компоненту database engine. Несмотря на то, что вы можете [одновременно установить компонент database engine и расширения языка](#install-all), это лучший способ сначала установите и настройте компонент SQL Server database engine, устранить все проблемы перед добавлением дополнительные компоненты. 
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Выполните действия, описанные в этой статье, чтобы установить расширение языка Java.
+Расширения языка — это надстройка ядра СУБД. Хотя [ядро СУБД и расширения языка можно установить одновременно](#install-all), рекомендуется сначала установить и настроить ядро СУБД SQL Server, чтобы устранить все неполадки, прежде чем добавлять дополнительные компоненты. 
 
-Пакет расширений Java находится в репозитории исходного SQL Server Linux. Если вы уже настроили репозиториях для установки ядра базы данных, вы можете запустить **mssql-server расширяемости java** упаковать команды установки, используя регистрацию репозитория.
+Чтобы установить расширение языка Java, следуйте инструкциям в этой статье.
 
-Расширения языка также поддерживается в контейнерах Linux. Мы не предоставляем готовые контейнеры с помощью расширений языка, но можно создать один из контейнеров SQL Server, с помощью [пример шаблона доступен на сайте GitHub](https://github.com/Microsoft/mssql-docker/tree/master/linux/preview/examples/mssql-mlservices).
+Пакет расширений Java находится в репозиториях исходного кода SQL Server для Linux. Если вы уже настроили репозитории исходного кода для ядра СУБД, команды установки пакета **mssql-server-extensibility-java** можно выполнить, используя ту же регистрацию репозиториев.
 
-## <a name="uninstall-previous-ctp"></a>Удаление предыдущей CTP-версии
+Расширения языка также поддерживаются в контейнерах Linux. Мы не предоставляем готовые контейнеры с расширениями языка, однако вы можете создать такой контейнер для SQL Server, используя [шаблон, доступный в GitHub](https://github.com/Microsoft/mssql-docker/tree/master/linux/preview/examples/mssql-mlservices).
 
-Список пакетов изменилось за последние несколько выпусков CTP, приводит к меньшим числом пакетов. Мы рекомендуем удалить CTP-версии 2.x, чтобы удалить все предыдущие пакеты перед установкой CTP-версии 3.1. Side-by-side установку нескольких версий не поддерживается.
+## <a name="uninstall-previous-ctp"></a>Удаление предыдущей версии CTP
+
+За последние несколько выпусков CTP список пакетов изменился, и их стало меньше. Мы рекомендуем удалить версию CTP 2.x, чтобы удалить все предыдущие пакеты, прежде чем устанавливать версию CTP 3.2. Параллельная установка нескольких версий не поддерживается.
 
 ### <a name="1-confirm-package-installation"></a>1. Подтверждение установки пакета
 
-Можно проверить существование из предыдущей установки в качестве первого шага. Указать существующую установку, следующие файлы: checkinstallextensibility.sh, exthost, панели запуска.
+В качестве первого шага вам может потребоваться проверить наличие предыдущей установки. Следующие файлы указывают на существующую установку: checkinstallextensibility.sh, exthost, launchpad.
 
 ```bash
 ls /opt/microsoft/mssql/bin
 ```
 
-### <a name="2-uninstall-previous-ctp-2x-packages"></a>2. Удаление предыдущих CTP-версии 2.x пакетов
+### <a name="2-uninstall-previous-ctp-2x-packages"></a>2. Удаление пакетов предыдущей версии CTP 2.x
 
-Удалите на самом низком уровне пакета. Любой прием пакетов вышестоящего источника зависимый от более низкого уровня пакета, автоматически удаляется.
+Выполняйте удаление на самом низком уровне пакета. Любой вышестоящий пакет, зависящий от пакета более низкого уровня, удаляется автоматически.
 
-  + Для интеграции Java, удалите **mssql-server расширяемости java**
+  + Для интеграции с Java удалите **mssql-server-extensibility-java**.
 
-В следующей таблице, появятся команды для удаления пакетов.
+Команды для удаления пакетов приведены в таблице ниже.
 
-| Платформа  | Выполнение команд удаления пакета | 
+| Платформа  | Команды для удаления пакетов | 
 |-----------|----------------------------|
 | RHEL  | `sudo yum remove msssql-server-extensibility-java` |
 | SLES  | `sudo zypper remove msssql-server-extensibility-java` |
 | Ubuntu    | `sudo apt-get remove msssql-server-extensibility-java`|
 
-### <a name="3-proceed-with-ctp-31-install"></a>3. Продолжить установку CTP 3.1
+### <a name="3-proceed-with-ctp-32-install"></a>3. Начало установки CTP 3.2
 
-Установите на самом высоком уровне пакета, с помощью инструкций в этой статье для вашей операционной системы.
+Выполните установку на самом верхнем уровне пакета, следуя инструкциям из этой статьи для вашей операционной системы.
 
-Для каждого набора определенных Операционных систем инструкции по установке *наивысший уровень пакета* либо **пример 1 — Полная установка** для полного набора пакетов, или **пример 2 - минимальную установку**  содержащий наименьшее число пакеты, необходимые для установки соединения.
+Для каждого набора инструкций по установке, относящихся к определенной ОС, *наивысшим уровнем пакета* является **Пример 1. Полная установка** для полного набора пакетов либо **Пример 2. Минимальная установка** для минимального количества пакетов, необходимого для выполнения установки.
 
-1. Выполните команды установки с помощью диспетчеров пакетов и синтаксис для дистрибутива Linux. 
+1. Выполните команды установки, используя диспетчеры пакетов и синтаксис для вашего дистрибутива Linux: 
 
    + [RedHat](#RHEL)
    + [Ubuntu](#ubuntu)
@@ -67,7 +69,7 @@ ls /opt/microsoft/mssql/bin
 
 ## <a name="prerequisites"></a>предварительные требования
 
-+ Версии Linux должны быть [поддерживается в SQL Server](sql-server-linux-release-notes-2019.md#supported-platforms), но не включает подсистему Docker. Поддерживаемые версии:
++ Версия Linux должна [поддерживаться SQL Server](sql-server-linux-release-notes-2019.md#supported-platforms), но не включает в себя подсистему Docker. Поддерживаемые версии:
 
    + [Red Hat Enterprise Linux (RHEL)](quickstart-install-connect-red-hat.md)
 
@@ -75,32 +77,32 @@ ls /opt/microsoft/mssql/bin
 
    + [Ubuntu](quickstart-install-connect-ubuntu.md)
 
-+ Следует получить средство для выполнения команд T-SQL. Редактор запросов необходим для настройки после установки и проверки. Мы рекомендуем [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download?view=sql-server-2017#get-azure-data-studio-for-linux), бесплатно и под управлением Linux.
++ У вас должно быть средство для выполнения команд T-SQL. Редактор запросов необходим для настройки и проверки после установки. Рекомендуется использовать бесплатное решение [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download?view=sql-server-2017#get-azure-data-studio-for-linux), работающее в Linux.
 
 ## <a name="package-list"></a>Список пакетов
 
-На устройстве, подключенном к Интернету пакеты загружаются и устанавливаются независимо от ядра базы данных, с помощью пакета установщика для каждой операционной системы. В следующей таблице описаны все доступные пакеты.
+На устройстве, подключенном к Интернету, пакеты скачиваются и устанавливаются независимо от ядра СУБД с помощью установщика пакетов для каждой операционной системы. В таблице ниже содержится описание доступных пакетов.
 
-| Имя пакета | Применяется к | Описание |
+| Имя пакета | Область действия | Описание |
 |--------------|----------|-------------|
-|mssql-server-extensibility  | Все языки | Инфраструктура расширяемости, используемый для выполнения кода Java. |
-|MSSQL-server расширяемости java | Java | Расширение Java для загрузки среда выполнения Java. Отсутствуют дополнительные библиотеки или пакеты для Java. |
+|mssql-server-extensibility  | Все языки | Платформа расширяемости, используемая для выполнения кода Java. |
+|mssql-server-extensibility-java | Java | Расширение Java для загрузки среды выполнения Java. Дополнительные библиотеки или пакеты для Java отсутствуют. |
 
 <a name="RHEL"></a>
 
-## <a name="install-language-extensions"></a>Установка расширения языка
+## <a name="install-language-extensions"></a>Установка расширений языка
 
-Можно установить расширения языка и Java в Linux, установив **mssql-server расширяемости java**. При установке **mssql-server расширяемости java**, пакет автоматически устанавливает JRE 8, если они еще не установлены. Он также добавляется путь виртуальной машины Java для переменной среды с именем переменная.
+Расширения языка и Java можно установить в Linux путем установки пакета **mssql-server-extensibility-java**. При установке пакета **mssql-server-extensibility-java** автоматически устанавливается среда JRE 8, если она еще не установлена. Кроме того, путь к JVM добавляется в переменную среды JRE_HOME.
 
 > [!Note]
-> На сервере, подключенном к Интернету зависимости пакетов загружаются и устанавливаются как часть установки главного пакета. Если сервер не подключен к Интернету, см. в разделе более подробно в [установки в автономном режиме](#offline-install).
+> На сервере, подключенном к Интернету, зависимости пакета скачиваются и устанавливаются в рамках установки основного пакета. Если сервер не подключен к Интернету, см. дополнительные сведения в разделе об [автономной установке](#offline-install).
 
-### <a name="redhat-install-command"></a>Команда установки RedHat
+### <a name="redhat-install-command"></a>Команда установки для RedHat
 
-Можно установить расширения языка для Java в RedHat, используя приведенную ниже команду.
+Расширения языка для Java можно установить в RedHat с помощью приведенной ниже команды.
 
 > [!Tip]
-> По возможности запустите `yum clean all` обновление пакетов в системе до установки.
+> По возможности запустите `yum clean all`, чтобы обновить пакеты в системе перед установкой.
 
 ```bash
 # Install as root or sudo
@@ -109,12 +111,12 @@ sudo yum install mssql-server-extensibility-java
 
 <a name="ubuntu"></a>
 
-### <a name="ubuntu-install-command"></a>Команда установки Ubuntu
+### <a name="ubuntu-install-command"></a>Команда установки для Ubuntu
 
-Расширения языка для Java можно установить на базе Ubuntu с помощью следующей команды.
+Расширения языка для Java можно установить в Ubuntu с помощью приведенной ниже команды.
 
 > [!Tip]
-> По возможности запустите `apt-get update` обновление пакетов в системе до установки. Кроме того некоторые образы docker в Ubuntu. не может быть возможность apt транспорта https. Чтобы установить его, используйте `apt-get install apt-transport-https`.
+> По возможности запустите `apt-get update`, чтобы обновить пакеты в системе перед установкой. Кроме того, некоторые образы Docker в Ubuntu могут не иметь варианта транспорта apt https. Чтобы установить его, используйте `apt-get install apt-transport-https`.
 
 ```bash
 # Install as root or sudo
@@ -123,44 +125,44 @@ sudo apt-get install mssql-server-extensibility-java
 
 <a name="suse"></a>
 
-### <a name="suse-install-command"></a>Команда установки SUSE
+### <a name="suse-install-command"></a>Команда установки для SUSE
 
-Расширения языка для Java можно установить на SUSE с помощью следующей команды.
+Расширения языка для Java можно установить в SUSE с помощью приведенной ниже команды.
 
 ```bash
 # Install as root or sudo
 sudo zypper install mssql-server-extensibility-java
 ```
 
-## <a name="post-install-config-required"></a>После установки конфигурации (обязательно)
+## <a name="post-install-config-required"></a>Настройка после установки (обязательно)
 
-1. GRANT, предоставление разрешений на платформе Linux
+1. Предоставление разрешений в Linux
 
-    Не нужно выполнять этот шаг, если вы используете внешние библиотеки. Рекомендуемый способ работы использует внешние библиотеки. Дополнительные сведения о создании внешней библиотеки из JAR-файл, см. в разделе [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql)
+    Если используются внешние библиотеки, этот шаг выполнять не нужно. Рекомендуемый способ работы — использование внешних библиотек. Сведения о создании внешней библиотеки из JAR-файла см. в описании команды [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql).
 
-    Если вы не используете внешние библиотеки, необходимо предоставить разрешения на выполнение классов Java в JAR-файлу SQL Server.
+    Если вы не используете внешние библиотеки, необходимо предоставить SQL Server разрешения на выполнение классов Java в JAR-файле.
 
-    Чтобы предоставляют права чтения и выполнения доступ к JAR-файл, выполните следующую **chmod** команду JAR-файл. Мы рекомендуем всегда помещения файлов класса в JAR-файл, при работе с SQL Server. Дополнительные сведения о создании JAR-файл, см. в разделе [Создание JAR-файл](https://docs.microsoft.com/sql/language-extensions/how-to/create-a-java-jar-file-from-class-files).
+    Чтобы предоставить доступ для чтения и выполнения к JAR-файлу, выполните приведенную ниже команду **chmod** для JAR-файла. При работе с SQL Server рекомендуется всегда помещать файлы классов в JAR-файл. Сведения о создании JAR-файла см. в статье [Создание JAR-файла](https://docs.microsoft.com/sql/language-extensions/how-to/create-a-java-jar-file-from-class-files).
 
     ```cmd
     chmod ug+rx <MyJarFile.jar>
     ```
 
-    Необходимо также предоставить разрешения mssql_satellite JAR-файл для чтения и выполнения.
+    Кроме того, необходимо предоставить разрешения mssql_satellite на чтение и выполнение JAR-файла.
 
     ```cmd
     chown mssql_satellite:mssql_satellite <MyJarFile.jar>
     ```
 
-    Дополнительная настройка не главным образом посредством [средство mssql-conf](sql-server-linux-configure-mssql-conf.md).
+    Дополнительная настройка осуществляется в основном с помощью [средства mssql-conf](sql-server-linux-configure-mssql-conf.md).
 
-2. Добавьте учетную запись пользователя mssql, используемой для запуска службы SQL Server. Это необходимо, если настройка еще не запущен ранее.
+2. Добавьте учетную запись пользователя mssql, использованную для запуска службы SQL Server. Это необходимо, если вы не выполняли установку ранее.
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf setup
    ```
 
-3. Разрешите исходящий сетевой доступ. Исходящий сетевой доступ отключен по умолчанию. Чтобы включить исходящие запросы, задайте «outboundnetworkaccess» логическое свойство, используя средство mssql-conf. Дополнительные сведения см. в разделе [Настройка SQL Server в Linux с помощью mssql-conf](sql-server-linux-configure-mssql-conf.md#mlservices-outbound-access).
+3. Включите исходящий сетевой доступ. По умолчанию исходящий сетевой доступ отключен. Чтобы включить исходящие запросы, задайте логическое свойство "outboundnetworkaccess" с помощью средства mssql-conf. Дополнительные сведения см. в статье [Настройка SQL Server на Linux с помощью средства mssql-conf](sql-server-linux-configure-mssql-conf.md#mlservices-outbound-access).
 
    ```bash
    # Run as SUDO or root
@@ -168,7 +170,7 @@ sudo zypper install mssql-server-extensibility-java
    sudo /opt/mssql/bin/mssql-conf set extensibility outboundnetworkaccess 1
    ```
 
-4. Перезапустите службу панели запуска SQL Server и экземпляра компонента database engine для чтения обновленные значения из INI-файл. Сообщение перезапуска, напоминающее каждый раз, когда изменяется параметр относящиеся к расширяемости.  
+4. Перезапустите службу панели запуска SQL Server и экземпляр ядра СУБД, чтобы считать обновленные значения из INI-файла. При изменении любого свойства, связанного с расширяемостью, появляется сообщение с напоминанием о необходимости перезапуска.  
 
    ```bash
    systemctl restart mssql-launchpadd
@@ -176,22 +178,22 @@ sudo zypper install mssql-server-extensibility-java
    systemctl restart mssql-server.service
    ```
 
-5. Включить выполнение внешних скриптов, с помощью Azure Data Studio или другого средства, например SQL Server Management Studio (только Windows), которое будет выполняться Transact-SQL.
+5. Включите выполнение внешнего скрипта с помощью Azure Data Studio или другого средства, например SQL Server Management Studio (только для Windows), выполняющего скрипты Transact-SQL.
 
    ```bash
    EXEC sp_configure 'external scripts enabled', 1
    RECONFIGURE WITH OVERRIDE
    ```
 
-6. Перезапустите `mssql-launchpadd` службы снова.
+6. Снова перезапустите службу `mssql-launchpadd`.
 
-7. Для каждой базы данных, необходимо использовать расширения языка в, необходимо зарегистрировать внешний язык [создать внешний язык](https://docs.microsoft.com/sql/t-sql/statements/create-external-language-transact-sql).
+7. Для каждой базы данных, в которой необходимо использовать расширения языка, зарегистрируйте внешний язык с помощью команды [CREATE EXTERNAL LANGUAGE](https://docs.microsoft.com/sql/t-sql/statements/create-external-language-transact-sql).
 
-## <a name="register-external-language"></a>Регистрация внешней языка
+## <a name="register-external-language"></a>Регистрация внешнего языка
 
-Для каждой базы данных, необходимо использовать расширения языка в, необходимо зарегистрировать внешний язык [создать внешний язык](https://docs.microsoft.com/sql/t-sql/statements/create-external-language-transact-sql).
+Для каждой базы данных, в которой необходимо использовать расширения языка, зарегистрируйте внешний язык с помощью команды [CREATE EXTERNAL LANGUAGE](https://docs.microsoft.com/sql/t-sql/statements/create-external-language-transact-sql).
 
-В следующем примере добавляется внешний язык, называемый Java к базе данных на сервере SQL Server в Linux.
+Следующий пример добавляет внешний язык Java в базу данных на сервере SQL Server на Linux.
 
 ```SQL
 CREATE EXTERNAL LANGUAGE Java
@@ -199,37 +201,37 @@ FROM (CONTENT = N'<path-to-tar.gz>', FILE_NAME = 'javaextension.so');
 GO
 ```
 
-Дополнительные сведения см. в разделе [создать внешний язык](https://docs.microsoft.com/sql/t-sql/statements/create-external-language-transact-sql).
+Дополнительные сведения см. в разделе [CREATE EXTERNAL LANGUAGE](https://docs.microsoft.com/sql/t-sql/statements/create-external-language-transact-sql).
 
 ## <a name="verify-installation"></a>Проверка установки
 
-Функция интеграции Java не поддерживает библиотеки, но можно запускать `grep -r JRE_HOME /etc` чтобы подтвердить создание переменной среды JAVA_HOME.
+Интеграция функций Java не включает в себя библиотеки, но можно выполнить команду `grep -r JRE_HOME /etc`, чтобы подтвердить создание переменной среды JAVA_HOME.
 
-Проверка установки, запустите сценарий T-SQL, выполняющий систему хранимую процедуру, вызове Java. Вам потребуется средство запроса для выполнения этой задачи. Azure Data Studio является хорошим выбором. Другие часто используемые средства, такие как SQL Server Management Studio или PowerShell, доступные только для Windows. Если у вас есть компьютер Windows с помощью этих средств, используйте его для подключения к Linux установке компонента database engine.
+Чтобы проверить установку, запустите скрипт T-SQL, который выполняет системную хранимую процедуру, вызывающую Java. Для выполнения этой задачи потребуется средство обработки запросов. Хорошим выбором станет Azure Data Studio. Другие распространенные средства, такие как SQL Server Management Studio или PowerShell, подходят только для Windows. Если у вас есть компьютер под управлением Windows с этими средствами, используйте его для подключения к установке ядра СУБД Linux.
 
 <a name="install-all"></a>
 
-## <a name="full-install-of-sql-server-and-language-extensions"></a>Полная установка SQL Server и расширения языка
+## <a name="full-install-of-sql-server-and-language-extensions"></a>Полная установка SQL Server и расширений языка
 
-Можно установить и настроить компонент database engine и расширения языка в одну процедуру путем добавления пакетов Java и параметров в команду, которая устанавливает ядро СУБД.
+Вы можете установить и настроить ядро СУБД и расширения языка в одной процедуре, добавив параметры и пакеты Java в команду, устанавливающую ядро СУБД.
 
-1. Укажите командную строку, которая включает в себя компонент database engine, а также возможности расширения языка.
+1. Укажите командную строку, включающую ядро СУБД, а также функции расширения языка.
 
-  Вы можете добавить расширения к ядру СУБД установить Java.
+  В установку ядра СУБД можно добавить расширяемость Java.
 
   ```bash
   sudo yum install -y mssql-server mssql-server-extensibility-java 
   ```
 
-3. Принятие условий лицензионного соглашения и выполнить настройку после установки. Используйте **mssql-conf** средство для выполнения этой задачи.
+3. Примите условия лицензионных соглашений и завершите настройку после установки. Для этой задачи используйте средство **mssql-conf**.
 
   ```bash
   sudo /opt/mssql/bin/mssql-conf setup
   ```
 
-  Вам будет предложено принять лицензионное соглашение для компонента database engine, выберите выпуск и задание пароля администратора. 
+  Вам будет предложено принять условия лицензионного соглашения для ядра СУБД, выбрать выпуск и задать пароль администратора. 
 
-4. Перезапустите службу, если будет предложено сделать это.
+4. При появлении соответствующего запроса перезапустите службу.
 
   ```bash
   sudo systemctl restart mssql-server.service
@@ -237,43 +239,43 @@ GO
 
 ## <a name="unattended-installation"></a>Автоматическая установка
 
-С помощью [автоматическая установка](https://docs.microsoft.com/sql/linux/sql-server-linux-setup#unattended) для компонента Database Engine, добавьте пакеты для mssql-server расширяемости java.
+С помощью [автоматической установки](https://docs.microsoft.com/sql/linux/sql-server-linux-setup#unattended) для ядра СУБД вы можете добавить пакеты для mssql-server-extensibility-java.
 
 <a name="offline-install"></a>
 
 
 ## <a name="offline-installation"></a>Автономная установка
 
-Выполните [автономной установки](sql-server-linux-setup.md#offline) инструкции пошаговые инструкции по установке пакетов. Найти сайт загрузки и загрузите определенных пакетов, с помощью списка пакетов.
+Описание шагов по установке пакетов см. в инструкциях по [автономной установке](sql-server-linux-setup.md#offline). Найдите сайт скачивания, а затем скачайте конкретные пакеты с помощью приведенного ниже списка.
 
 > [!Tip]
-> Некоторые средства управления, пакет предоставляет команды, которые помогут вам определить зависимости пакетов. Yum, используйте `sudo yum deplist [package]`. Для Ubuntu используйте `sudo apt-get install --reinstall --download-only [package name]` следуют `dpkg -I [package name].deb`.
+> Некоторые средства управления пакетами предоставляют команды, помогающие определить зависимости пакетов. Для yum используйте `sudo yum deplist [package]`. Для Ubuntu используйте `sudo apt-get install --reinstall --download-only [package name]`, а затем `dpkg -I [package name].deb`.
 
 #### <a name="download-site"></a>Сайт загрузки
 
-Вы можете скачать пакеты из [ https://packages.microsoft.com/ ](https://packages.microsoft.com/). Все пакеты для Java, являющийся пакет ядра СУБД. 
+Пакеты можно скачать по адресу [https://packages.microsoft.com/](https://packages.microsoft.com/). Все пакеты для Java размещены вместе с пакетом ядра СУБД. 
 
 #### <a name="redhat7-paths"></a>Пути RedHat/7
 
 |||
 |--|----|
-| mssql/extensibility-java packages | [https://packages.microsoft.com/rhel/7/mssql-server-preview/](https://packages.microsoft.com/rhel/7/mssql-server-preview/) |
+| Пакеты mssql/extensibility-java | [https://packages.microsoft.com/rhel/7/mssql-server-preview/](https://packages.microsoft.com/rhel/7/mssql-server-preview/) |
 
-#### <a name="ubuntu1604-paths"></a>Ubuntu-16.04 пути
-
-|||
-|--|----|
-| mssql/extensibility-java packages | [https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/) |
-
-#### <a name="suse12-paths"></a>SUSE/12 путей
+#### <a name="ubuntu1604-paths"></a>Пути Ubuntu/16.04
 
 |||
 |--|----|
-| mssql/extensibility-java packages | [https://packages.microsoft.com/sles/12/mssql-server-preview/](https://packages.microsoft.com/sles/12/mssql-server-preview/) |
+| Пакеты mssql/extensibility-java | [https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/) |
+
+#### <a name="suse12-paths"></a>Пути SUSE/12
+
+|||
+|--|----|
+| Пакеты mssql/extensibility-java | [https://packages.microsoft.com/sles/12/mssql-server-preview/](https://packages.microsoft.com/sles/12/mssql-server-preview/) |
 
 #### <a name="package-list"></a>Список пакетов
 
-В зависимости от того, какие расширения, вы хотите использовать, загружать пакеты, необходимые для конкретного языка. Точные имена файлов включают сведения о платформе в суффиксе, но ниже имена файлов должно быть достаточно близко для того, можно определить, какие файлы следует получить.
+В зависимости от того, какие расширения вы хотите использовать, скачайте пакеты, необходимые для конкретного языка. Точные имена файлов содержат сведения о платформе в суффиксе, но приведенные ниже имена должны быть достаточно понятными, чтобы вы могли определить, какие файлы нужно получить.
 
 ```
 # Core packages 
@@ -286,26 +288,26 @@ mssql-server-extensibility-java-15.0.1000
 
 ## <a name="limitations-in-ctp-releases"></a>Ограничения в выпусках CTP
 
-Расширяемость расширений языка и Java в Linux сейчас по-прежнему активно разрабатывается. Следующие функции еще не включены в предварительной версии.
+Расширения языка и интеграция Java по-прежнему находятся на этапе активной разработки. Перечисленные ниже функции пока не работают в предварительной версии.
 
-+ Неявная проверка подлинности в данный момент доступна не на платформе Linux в настоящее время, это означает, что не удается подключиться к серверу из выполняющихся Java для доступа к данным или другим ресурсам.
++ Неявная проверка подлинности в настоящее время недоступна в Linux, поэтому вы не можете подключиться обратно к серверу из выполняемого скрипта Java для доступа к данным или другим ресурсам.
 
 
 ### <a name="resource-governance"></a>Управление ресурсами
 
-Имеется соответствие между Linux и Windows для [ресурсами](../t-sql/statements/create-external-resource-pool-transact-sql.md) для внешних пулов ресурсов, но статистику для [sys.dm_resource_governor_external_resource_pools](../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md) установлена единиц в Linux. В следующей CTP-версии единиц выравнивания.
+С точки зрения [управления ресурсами](../t-sql/statements/create-external-resource-pool-transact-sql.md) для внешних пулов ресурсов между Linux и Windows наблюдается паритет, однако статистика для [sys.dm_resource_governor_external_resource_pools](../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md) сейчас содержит другие единицы измерения для Linux. Единицы измерения будут согласованы в предстоящей версии CTP.
  
 | Имя столбца   | Описание | Значение в Linux | 
 |---------------|--------------|---------------|
-|peak_memory_kb | Максимальный объем памяти, используемой для пула ресурсов. | В Linux этот статистический показатель происходит из CGroups подсистемы памяти, где значение — memory.max_usage_in_bytes |
-|write_io_count | Общая сумма записи операций с момента сброса статистики регулятора ресурсов ввода. | В Linux этот статистический показатель происходит из подсистемы blkio CGroups, где значение в строке записи — blkio.throttle.io_serviced | 
-|read_io_count | Общее чтение операций с момента сброса статистики регулятора ресурсов ввода. | В Linux этот статистический показатель происходит из подсистемы blkio CGroups, в которых в строке чтения является blkio.throttle.io_serviced | 
-|total_cpu_kernel_ms | Совокупное пользователя ядра время ЦП в миллисекундах с момента сброса статистики регулятора ресурсов. | В Linux этот статистический показатель происходит из подсистемы cpuacct CGroups, в которых в строке пользователя является cpuacct.stat |  
-|total_cpu_user_ms | Совокупное время пользователя ЦП в миллисекундах с момента сброса статистики регулятора ресурсов.| В Linux этот статистический показатель происходит из подсистемы cpuacct CGroups, где значение на системное значение строки равно cpuacct.stat | 
-|active_processes_count | Количество внешних процессов, запущенных в данный момент запроса.| В Linux этот статистический показатель происходит из подсистемы идентификаторов процесса GGroups, где значение — pids.current | 
+|peak_memory_kb | Максимальный объем используемой памяти для пула ресурсов. | В Linux эта статистика извлекается из подсистемы memory CGroups, где используется значение memory.max_usage_in_bytes |
+|write_io_count | Общее число выполненных операций ввода-вывода записи с момента сброса статистики Resource Governor. | В Linux эта статистика извлекается из подсистемы blkio CGroups, где для строки write используется значение blkio.throttle.io_serviced | 
+|read_io_count | Общее число выполненных операций ввода-вывода чтения с момента сброса статистики Resource Governor. | В Linux эта статистика извлекается из подсистемы blkio CGroups, где для строки read используется значение blkio.throttle.io_serviced | 
+|total_cpu_kernel_ms | Совокупное время ядра использования ЦП, в миллисекундах, с момента сброса статистики Resource Governor. | В Linux эта статистика извлекается из подсистемы cpuacct CGroups, где для строки user используется значение cpuacct.stat |  
+|total_cpu_user_ms | Совокупное время использования ЦП, в миллисекундах, с момента сброса статистики Resource Governor.| В Linux эта статистика извлекается из подсистемы cpuacct CGroups, где для строки system используется значение cpuacct.stat | 
+|active_processes_count | Количество внешних процессов, выполняемых в момент запроса.| В Linux эта статистика извлекается из подсистемы pids CGroups, где используется значение pids.current | 
 
 ## <a name="next-steps"></a>Следующие шаги
 
-Разработчики Java можно приступить к работе с простыми примерами и ознакомиться с основами как Java работает с SQL Server. Следующий шаг см. следующие ссылки:
+Разработчики на языке Java могут ознакомиться с простыми примерами, а также узнать, как код Java работает с SQL Server. Дополнительные сведения см. в следующих статьях:
 
-+ [Учебник. Регулярные выражения с помощью Java](../language-extensions/tutorials/search-for-string-using-regular-expressions-in-java.md)
++ [Учебник. Регулярные выражения с Java](../language-extensions/tutorials/search-for-string-using-regular-expressions-in-java.md)

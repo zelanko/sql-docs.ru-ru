@@ -1,6 +1,6 @@
 ---
-title: Начало работы с безопасности SQL Server в Linux
-description: В этой статье описаны действия стандартных параметров безопасности.
+title: Приступая к работе с безопасностью SQL Server в Linux
+description: В этой статье описаны типичные действия по обеспечению безопасности.
 author: VanMSFT
 ms.author: vanto
 ms.date: 10/02/2017
@@ -9,34 +9,34 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: ecc72850-8b01-492e-9a27-ec817648f0e0
 ms.openlocfilehash: 1e64ce76ef2528c96ecc0206b7a56b31d4c95ef7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68019500"
 ---
-# <a name="walkthrough-for-the-security-features-of-sql-server-on-linux"></a>Пошаговое руководство для реализации функций безопасности SQL Server в Linux
+# <a name="walkthrough-for-the-security-features-of-sql-server-on-linux"></a>Пошаговое руководство по функциям обеспечения безопасности в SQL Server на Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Если вы являетесь пользователем Linux даже новичок в SQL Server, перечисленные ниже объясняется, как задачи безопасности. Они не являются уникальными или для Linux, а также дать вам представление о областей для ее дальнейшего изучения. В каждом примере ссылка подробная документация для этой области.
+Если вы работаете с Linux и еще не знакомы с SQL Server, ознакомьтесь со следующими задачами, которые демонстрируют некоторые функции обеспечения безопасности. Они не являются уникальными для Linux и лишь задают общие направления для дальнейшего изучения. В каждом примере приводится ссылка на подробную документацию по соответствующей теме.
 
 > [!NOTE]
->  В следующих примерах используется **AdventureWorks2014** образца базы данных. Инструкции о том, как получить и установить этот образец базы данных, см. в разделе [восстановить базу данных SQL Server из Windows и Linux](sql-server-linux-migrate-restore-database.md).
+>  В следующих примерах используется образец базы данных **AdventureWorks2014**. Инструкции по получению и установке этого образца базы данных см. в статье [Восстановление базы данных SQL Server из Windows в Linux](sql-server-linux-migrate-restore-database.md).
 
 
-## <a name="create-a-login-and-a-database-user"></a>Создайте имя входа и пользователя базы данных 
+## <a name="create-a-login-and-a-database-user"></a>Создание имени входа и пользователя базы данных 
 
-Предоставлять другим пользователям доступ к SQL Server путем создания имени входа в базе данных master с помощью [CREATE LOGIN](../t-sql/statements/create-login-transact-sql.md) инструкции. Пример:
+Предоставьте другим пользователям доступ к SQL Server, создав имя входа в базе данных master с помощью инструкции [CREATE LOGIN](../t-sql/statements/create-login-transact-sql.md). Пример:
 
 ```
 CREATE LOGIN Larry WITH PASSWORD = '************';  
 ```
 
 > [!NOTE]
->  Всегда используйте надежный пароль, вместо звездочки в предыдущей команде.
+>  Всегда используйте надежный пароль вместо звездочек в предыдущей команде.
 
-Имена входа можно подключиться к SQL Server и иметь доступ (с ограниченными разрешениями) к базе данных master. Чтобы подключиться к базе данных пользователя, имени входа необходимо соответствующее удостоверение на уровне базы данных, именем пользователя базы данных. Пользователи, относящихся к каждой базе данных и должны создаваться отдельно в каждой базе данных, чтобы предоставить им доступ. Переход в базу данных AdventureWorks2014 в следующем примере и затем использует [CREATE USER](../t-sql/statements/create-user-transact-sql.md) инструкцию, чтобы создать пользователя с именем Ларри, который связан с именем для входа с именем Ларри. На то, что имя входа и пользователя связаны (сопоставляются друг с другом), они представляют собой разные объекты. Имя входа — это принцип уровня сервера. Пользователь является участником уровня базы данных.
+Имена входа могут подключаться к SQL Server и обращаться (с ограниченными разрешениями) к базе данных master. Для подключения к пользовательской базе данных имя входа должно иметь соответствующее удостоверение на уровне базы данных, называемое пользователем базы данных. Пользователи относятся к конкретной базе данных, и их нужно создавать отдельно в каждой базе данных для предоставления им доступа. Следующий пример переносит вас в базу данных AdventureWorks2014, а затем с помощью инструкции [CREATE USER](../t-sql/statements/create-user-transact-sql.md) создает пользователя Larry, сопоставленного с именем входа Larry. Хотя имя входа и пользователь связаны (сопоставлены друг с другом), это разные объекты. Имя входа является субъектом уровня сервера. Пользователь является субъектом уровня базы данных.
 
 ```
 USE AdventureWorks2014;
@@ -45,10 +45,10 @@ CREATE USER Larry;
 GO
 ```
 
-- Учетной записью администратора SQL Server можно подключиться к любой базе данных и можно создать дополнительные имена входа и пользователи в любой базе данных.  
-- Когда пользователь создает базу данных они становятся владельцем базы данных, что можно подключиться к этой базе данных. Владельцы базы данных можно создать дополнительных пользователей.
+- Учетная запись администратора SQL Server может подключаться к любой базе данных и создавать дополнительные имена входа и пользователей в любой базе данных.  
+- Когда пользователь создает базу данных, он становится ее владельцем, который может подключаться к этой базе данных. Владельцы базы данных могут создавать дополнительных пользователей.
 
-Позже вы можете проверять подлинность других имен входа, чтобы создать дополнительные имена входа, предоставив этому пользователю `ALTER ANY LOGIN` разрешение. В базе данных, можно обеспечить возможность создания большего числа пользователей, предоставив этому пользователю других пользователей `ALTER ANY USER` разрешение. Пример:   
+Позже вы сможете авторизовать другие имена входа, чтобы создать дополнительные имена входа, предоставив им разрешение `ALTER ANY LOGIN`. Внутри базы данных вы можете авторизовать других пользователей, чтобы создать дополнительных пользователей, предоставив им разрешение `ALTER ANY USER`. Пример:   
 
 ```
 GRANT ALTER ANY LOGIN TO Larry;   
@@ -60,14 +60,14 @@ GRANT ALTER ANY USER TO Jerry;
 GO   
 ```
 
-Теперь Ларри имени входа можно создать дополнительные имена входа и пользователь Джерри может создать больше пользователей.
+Теперь имя входа Larry может создать дополнительные имена входа, а пользователь Jerry может создать дополнительных пользователей.
 
 
-## <a name="granting-access-with-least-privileges"></a>Предоставление доступа с минимальным числом привилегий
+## <a name="granting-access-with-least-privileges"></a>Предоставление доступа с минимальными правами
 
-Первых регистрируетесь для подключения к базе данных пользователя будет «администратор» и «учетные записи владельца базы данных. Тем не менее эти пользователи имеют все разрешения, доступные в базе данных. Это больше разрешений, чем у большинства пользователей. 
+Первыми пользователями, подключающимися к пользовательской базе данных, будут учетные записи администратора и владельца базы данных. Однако у этих пользователей есть все разрешения, доступные в базе данных. Это гораздо больше, чем нужно большинству пользователей. 
 
-Если вы только начинаете, можно назначить некоторые общие категории разрешения с помощью встроенной *предопределенных ролей базы данных*. Например `db_datareader` предопределенной роли базы данных на чтение всех таблиц в базе данных, но не вносить изменения. Предоставить членство в предопределенной роли базы данных с помощью [ALTER ROLE](../t-sql/statements/alter-role-transact-sql.md) инструкции. Добавить пользователя в следующем примере `Jerry` для `db_datareader` предопределенной роли базы данных.   
+Когда вы только приступаете к работе, можно назначить некоторые общие категории разрешений с помощью встроенных *предопределенных ролей базы данных*. Например, предопределенная роль базы данных `db_datareader` может считывать все таблицы в базе данных, но не вносить изменения. Предоставьте членство в предопределенной роли базы данных с помощью инструкции [ALTER ROLE](../t-sql/statements/alter-role-transact-sql.md). В следующем примере пользователь `Jerry` добавляется в предопределенную роль базы данных `db_datareader`.   
    
 ```   
 USE AdventureWorks2014;   
@@ -76,11 +76,11 @@ GO
 ALTER ROLE db_datareader ADD MEMBER Jerry;   
 ```   
 
-Список предопределенных ролей базы данных, см. в разделе [роли уровня базы данных](../relational-databases/security/authentication-access/database-level-roles.md).
+Список предопределенных ролей базы данных см. в разделе [Роли уровня базы данных](../relational-databases/security/authentication-access/database-level-roles.md).
 
-Позже, когда будете готовы настроить более точно управлять доступом к данным (настоятельно рекомендуется), создать свои собственные роли пользовательскую базу данных с помощью [CREATE ROLE](../t-sql/statements/create-role-transact-sql.md) инструкции. Затем можно назначьте определенные детализированные разрешения вам пользовательские роли.
+Позже, когда вы будете готовы более точно настроить доступ к данным (настоятельно рекомендуется), создайте собственные пользовательские роли базы данных с помощью инструкции [CREATE ROLE](../t-sql/statements/create-role-transact-sql.md). Затем назначьте определенные детализированные разрешения своим настраиваемым ролям.
 
-Например, следующие инструкции создают роли базы данных с именем `Sales`, предоставляет `Sales` группе возможность см. в разделе, обновление и удаление строк из `Orders` таблицы, а затем добавляет пользователя `Jerry` для `Sales` роли.   
+Например, следующие инструкции создают роль базы данных `Sales`, предоставляют группе `Sales` возможность видеть, обновлять и удалять строки из таблицы `Orders`, а затем добавляют пользователя `Jerry` в роль `Sales`.   
    
 ```   
 CREATE ROLE Sales;   
@@ -135,31 +135,31 @@ WHERE ('SalesPerson' + CAST(@SalesPersonId as VARCHAR(16)) = USER_NAME())
 Create a security policy adding the function as both a filter and a block predicate on the table:  
 
 ```
-Создание SalesFilter ПОЛИТИКИ безопасности   
-ДОБАВЛЕНИЕ Security.fn_securitypredicate(SalesPersonID) ПРЕДИКАТА ФИЛЬТРА    
-  НА Sales.SalesOrderHeader,   
-ДОБАВЛЕНИЕ ПРЕДИКАТА Security.fn_securitypredicate(SalesPersonID) блока    
-  НА Sales.SalesOrderHeader   
+CREATE SECURITY POLICY SalesFilter   
+ADD FILTER PREDICATE Security.fn_securitypredicate(SalesPersonID)    
+  ON Sales.SalesOrderHeader,   
+ADD BLOCK PREDICATE Security.fn_securitypredicate(SalesPersonID)    
+  ON Sales.SalesOrderHeader   
 WITH (STATE = ON);   
 ```
 
 Execute the following to query the `SalesOrderHeader` table as each user. Verify that `SalesPerson280` only sees the 95 rows from their own sales and that the `Manager` can see all the rows in the table.  
 
 ```    
-ВЫПОЛНЕНИЕ от ИМЕНИ пользователя = «SalesPerson280»;   
-ВЫБЕРИТЕ * из Sales.SalesOrderHeader;    
-ОТМЕНИТЬ; 
+EXECUTE AS USER = 'SalesPerson280';   
+SELECT * FROM Sales.SalesOrderHeader;    
+REVERT; 
  
-ВЫПОЛНЕНИЕ от ИМЕНИ пользователя = «Manager»;   
-ВЫБЕРИТЕ * из Sales.SalesOrderHeader;   
-ОТМЕНИТЬ;   
+EXECUTE AS USER = 'Manager';   
+SELECT * FROM Sales.SalesOrderHeader;   
+REVERT;   
 ```
  
 Alter the security policy to disable the policy.  Now both users can access all rows. 
 
 ```
-ALTER SalesFilter ПОЛИТИКИ безопасности   
-С (STATE = OFF);    
+ALTER SECURITY POLICY SalesFilter   
+WITH (STATE = OFF);    
 ``` 
 
 
@@ -170,19 +170,19 @@ ALTER SalesFilter ПОЛИТИКИ безопасности
 Use an `ALTER TABLE` statement to add a masking function to the `EmailAddress` column in the `Person.EmailAddress` table: 
  
 ```
-ИСПОЛЬЗОВАТЬ AdventureWorks2014; Таблица Person.EmailAddress ПЕРЕЙДИТЕ ALTER     EmailAddress столбец ALTER    
-Добавить СКРЫТЫЙ с (ФУНКЦИЯ = "email()');
+USE AdventureWorks2014; GO ALTER TABLE Person.EmailAddress     ALTER COLUMN EmailAddress    
+ADD MASKED WITH (FUNCTION = 'email()');
 ``` 
  
 Create a new user `TestUser` with `SELECT` permission on the table, then execute a query as `TestUser` to view the masked data:   
 
 ```  
-Создание пользователя TestUser без входа в СИСТЕМУ;   
-GRANT SELECT ON Person.EmailAddress для TestUser;    
+CREATE USER TestUser WITHOUT LOGIN;   
+GRANT SELECT ON Person.EmailAddress TO TestUser;    
  
-ВЫПОЛНЕНИЕ от ИМЕНИ пользователя = «TestUser»;   
-ВЫБЕРИТЕ EmailAddressID, EmailAddress из Person.EmailAddress;       
-ОТМЕНИТЬ;    
+EXECUTE AS USER = 'TestUser';   
+SELECT EmailAddressID, EmailAddress FROM Person.EmailAddress;       
+REVERT;    
 ```
  
 Verify that the masking function changes the email address in the first record from:
@@ -222,21 +222,21 @@ The following example illustrates encrypting and decrypting the `AdventureWorks2
 USE master;  
 GO  
 
-СОЗДАНИЕ ГЛАВНОГО КЛЮЧА ENCRYPTION BY PASSWORD = "***";  
+CREATE MASTER KEY ENCRYPTION BY PASSWORD = '**********';  
 GO  
 
-Создание сертификата MyServerCert с ТЕМОЙ = 'Мои базы данных сертификат ключа шифрования';  
+CREATE CERTIFICATE MyServerCert WITH SUBJECT = 'My Database Encryption Key Certificate';  
 GO  
 
-ИСПОЛЬЗОВАТЬ AdventureWorks2014;   GO
+USE AdventureWorks2014;   GO
   
 CREATE DATABASE ENCRYPTION KEY  
-С ПОМОЩЬЮ АЛГОРИТМА = AES_256  
-ENCRYPTION BY SERVER MyServerCert сертификата;  
+WITH ALGORITHM = AES_256  
+ENCRYPTION BY SERVER CERTIFICATE MyServerCert;  
 GO
   
-ALTER базы данных AdventureWorks2014  
-ЗАДАТЬ ШИФРОВАНИЕ   
+ALTER DATABASE AdventureWorks2014  
+SET ENCRYPTION ON;   
 ```
 
 To remove TDE, execute `ALTER DATABASE AdventureWorks2014 SET ENCRYPTION OFF;`   
@@ -258,13 +258,13 @@ SQL Server has the ability to encrypt the data while creating a backup. By speci
  
 The following example creates a certificate, and then creates a backup protected by the certificate.
 ```
-Используйте master;   GO   создать СЕРТИФИКАТ BackupEncryptCert   с ТЕМОЙ = «Резервные копии базы данных»;   GO резервное копирование базы данных [AdventureWorks2014]   на ДИСК = N'/var/opt/mssql/backups/AdventureWorks2014.bak "  
+USE master;   GO   CREATE CERTIFICATE BackupEncryptCert   WITH SUBJECT = 'Database backups';   GO BACKUP DATABASE [AdventureWorks2014]   TO DISK = N'/var/opt/mssql/backups/AdventureWorks2014.bak'  
 на  
-  СЖАТИЕ,  
+  COMPRESSION,  
   ENCRYPTION   
    (  
-   АЛГОРИТМ = AES_256,  
-   СЕРТИФИКАТ сервера = BackupEncryptCert  
+   ALGORITHM = AES_256,  
+   SERVER CERTIFICATE = BackupEncryptCert  
    ),  
   STATS = 10  
 GO  

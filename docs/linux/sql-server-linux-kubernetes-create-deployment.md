@@ -1,6 +1,6 @@
 ---
-title: Создание скриптов развертывания для SQL Server группы доступности AlwaysOn в Kubernetes
-description: В этой статье объясняется, как создать скрипты развертывания для SQL Server всегда группу доступности в Kubernetes
+title: Создание скриптов развертывания для группы доступности Always On SQL Server в Kubernetes
+description: Эта статья описывает создание скриптов развертывания для группы доступности Always On SQL Server в Kubernetes.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -10,45 +10,45 @@ ms.prod: sql
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 181773a19e87c34a1931cae05f5a329aedbc1239
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68000140"
 ---
-# <a name="create-deployment-script-for-sql-server-always-on-availability-group"></a>Создать скрипт развертывания для SQL Server группы доступности AlwaysOn
+# <a name="create-deployment-script-for-sql-server-always-on-availability-group"></a>Создание скриптов развертывания для группы доступности Always On SQL Server
 
-В этой статье описывается развертывание группы доступности в кластере Kubernetes в рамках одной команды с пример сценария развертывания. `deploy-ag.py` — Это сценарий Python, который создает `.yaml` файлов для кластера и их можно применить к кластеру Kubernetes.
+Эта статья описывает, как развернуть группу доступности в кластере Kubernetes с помощью одной команды с использованием примера скрипта развертывания. `deploy-ag.py` — это скрипт Python, который создает файлы `.yaml` для кластера и может применить их к кластеру Kubernetes.
 
-Загрузка файлов из [sql-server-samples](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Kubernetes/sample-deployment-script).
+Скачайте файл с файлами из [sql-server-samples](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Kubernetes/sample-deployment-script).
 
 ## <a name="before-you-start"></a>Перед началом
 
-Установите следующие средства на рабочей станции.
+Установите на рабочую станцию следующие средства.
 
 * [Python](https://www.python.org/downloads/) (3.5 или 3.6)
-* [PyYAML](https://pyyaml.org/) -пакетов Python
+* [PyYAML](https://pyyaml.org/) — пакеты Python
 * [Клиент Kubernetes](https://github.com/kubernetes-client/python) — пакет Python
 
-Добавьте пути python к переменным среды (для Windows).
+Добавьте пути Python в переменные среды (для Windows).
 
 ### <a name="install-the-required-components"></a>Установка необходимых компонентов
 
-В следующем примере, указанных выше устанавливаются пакеты PyYAML и клиент Kubernetes для Python.
+Следующий пример устанавливает для Python пакеты с PyYAML и клиентом Kubernetes.
 
-После установки Python, загрузите и извлеките папки образца. 
+Установив Python, скачайте и извлеките пример папки. 
 
-Чтобы настроить необходимые файлы, выполните следующую команду. Замените `<path>` с расположением файлов извлеченном образце.
+Чтобы настроить необходимые файлы, выполните приведенную ниже команду. Замените `<path>` на расположение с извлеченными примерами файлов.
 
 ```cmd
 pip install --user -r "C:\<path>\requirements.txt"
 ```
 
-## <a name="create-cluster-and-download-config-file"></a>Создание кластера и загрузить файл конфигурации
+## <a name="create-cluster-and-download-config-file"></a>Создание кластера и скачивание файла конфигурации
 
-В следующем примере создается кластер в службе Azure Kubernetes (AKS).
+Следующий пример создает кластер в службе Azure Kubernetes (AKS).
 
-Прежде чем выполнять скрипт, обновите значения в угловых скобках - `<>`.
+Перед выполнением скрипта обновите значения в угловых скобках — `<>`.
 
 ```azcli
 az aks create  --resource-group <GroupName> --name <ClusterName> --generate-ssh-keys --node-count 4 --kubernetes-version 1.11.1
@@ -57,23 +57,23 @@ az aks get-credentials --resource-group=<GroupName> --name=<ClusterName>
 ```
 
 >[!NOTE]
->Группы доступности требуется Kubernetes версии 1.11.0 или более поздней версии. В примере указывается 1.11.1.
+>Для групп доступности требуется Kubernetes версии 1.11.0 или более поздней. Для примера указана версия 1.11.1.
 
-## <a name="run-the-deployment-script"></a>Запуск скрипта развертывания
+## <a name="run-the-deployment-script"></a>Выполнение скрипта развертывания
 
-Следующие примеры демонстрируют, как выполнять `deploy-ag.py`.
+Выполнение `deploy-ag.py` продемонстрировано в следующих примерах.
 
-### <a name="help"></a>Help
+### <a name="help"></a>Справка
 
 ```cmd
 python ./deploy-ag.py --help
 ```
 
 * **Использование**: `deploy-ag.py [-h] {deploy | failover} ...`
-* **необязательные аргументы**:
-  * `-h, --help` Отображение этого справочного сообщения и выход
-* **подкоманды**:
-  * Действия на агенте k8s {развертывание | отработки отказа}
+* **Дополнительные аргументы**:
+  * `-h, --help` — отображение этого справочного сообщения и выход
+* **Подкоманды**
+  * Действия на агенте k8s {deploy | failover}
 
   `deploy`
 
@@ -81,9 +81,9 @@ python ./deploy-ag.py --help
 
   `failover`
 
-   Отработка отказа на целевой реплике.
+   Отработка отказа в целевую реплику
 
-### <a name="deploy-help"></a>Развертывание справки
+### <a name="deploy-help"></a>Справка по deploy
 
 ```cmd
 python ./deploy-ag.py deploy --help
@@ -98,13 +98,13 @@ python ./deploy-ag.py deploy --help
     [--skip-create-namespace]
   ```
 
-  Развертывание SQL Server и k8s агентов в namespace(AG name)
+  развертывание SQL Server и агентов k8s в пространстве имен (имя группы доступности)
 
-* **необязательные аргументы**:
+* **Дополнительные аргументы**:
   
   `-h, --help`
   
-  Отображение этого справочного сообщения и выход
+  отображение этого справочного сообщения и выход
   
   `--verbose, -v`
   
@@ -112,31 +112,31 @@ python ./deploy-ag.py deploy --help
   
   `--ag AG`
   
-  Имя группы доступности. По умолчанию = ag1
+  Имя группы доступности. По умолчанию: ag1.
   
   `-n NAMESPACE, --namespace NAMESPACE`
   
-  Имя пространства имен k8s. По умолчанию используется имя группы Доступности, если не указано.
+  Имя пространства имен k8s. Если не указано, по умолчанию используется имя группы доступности.
 
   `--dry-run`
   
-  Создание манифестов, но не применяются.
+  Создание манифестов без их применения.
   
   `-s SQL_SERVERS [SQL_SERVERS ...], --sql-servers SQL_SERVERS [SQL_SERVERS ...]`
 
-  имена экземпляров SQL Server (до 5, разделяя их пробелами) по умолчанию = [«mssql1», «mssql2», «mssql3»]
+  Имена экземпляров SQL Server (до 5, разделенные пробелами). По умолчанию: ['mssql1', 'mssql2', 'mssql3']
   
   `-p SA_PASSWORD, --sa-password SA_PASSWORD`
   
-  Пароль системного Администратора. По умолчанию = «SAPassword2018»
+  Пароль системного администратора. По умолчанию: "SAPassword2018"
   
   `-e {ON_PREM,AKS}, --env {ON_PREM,AKS}`
   
   `--skip-create-namespace`
   
-  Пропустить создание пространства имен.
+  Пропуск создания пространства имен.
 
-### <a name="failover-help"></a>Справка отработки отказа
+### <a name="failover-help"></a>Справка по failover
 
 ```cmd
 python ./deploy-ag.py failover --help
@@ -149,17 +149,17 @@ python ./deploy-ag.py failover --help
     target_replica
   ```
 
-  Вручную выполните отработку отказа
+  отработка отказа вручную
 
-* **позиционные аргументы**: `target_replica`
+* **Позиционные аргументы**: `target_replica`
 
-  Имя целевого SQL Server реплики для отработки отказа
+  имя целевой реплики SQL Server для отработки отказа
 
-* **необязательные аргументы**:
+* **Дополнительные аргументы**:
 
   `-h, --help`
   
-  Отображение этого справочного сообщения и выход
+  отображение этого справочного сообщения и выход
 
   `--verbose, -v`
   
@@ -167,61 +167,61 @@ python ./deploy-ag.py failover --help
 
   `--ag AG`
   
-  Имя группы доступности. По умолчанию = ag1
+  Имя группы доступности. По умолчанию: ag1.
 
   `--namespace NAMESPACE`
 
-  Имя пространства имен k8s. Значение по умолчанию — имя группы Доступности, если не указан
+  Имя пространства имен k8s. Если не указано, по умолчанию используется имя группы доступности.
 
   `--dry-run`
   
-  Создать, но не применяются манифестов.
+  Создание манифестов без их применения.
 
-### <a name="create-the-manifests---dont-apply"></a>Создание манифестов - неприменимы
+### <a name="create-the-manifests---dont-apply"></a>Создание манифестов без их применения
 
-Следующий скрипт создает файлы манифеста, но не применяются.
+Следующий скрипт создает файлы манифеста, но не применяет их.
 
 ```cmd
 python ./deploy-ag.py deploy --dry-run
 ```
 
-В следующем примере создается манифесты для группы доступности в пространстве имен `AG1` с тремя репликами. Перед выполнением скрипта замените `<MyC0m91exP@55w0r!>` сложный пароль.
+Следующий пример создает манифесты для группы доступности в пространстве имен `AG1` с тремя репликами. Перед запуском скрипта замените `<MyC0m91exP@55w0r!>` сложным паролем.
 
 ```cmd
 python ./deploy-ag.py deploy --ag ag1 --namespace AG1 --sa-password '<MyC0m91exP@55w0r!>' --env AKS --dry-run
 ```
 
-Предыдущая команда создает файлы yaml-файл в каталоге.
+Предыдущая команда создает каталог для примеров YAML-файлов.
 
-В этом случае выходных данных команды показано, где создаются файлы манифеста.
+В этом случае выходные данные команды показывают, где создаются файлы манифеста.
 
-![выходные данные сценария](./media/sql-server-linux-kubernetes-create-deployment/scriptbuild-out.png)
+![выходные данные скрипта](./media/sql-server-linux-kubernetes-create-deployment/scriptbuild-out.png)
     
-### <a name="create-the-manifests-and-apply"></a>Создание манифестов и применение
+### <a name="create-the-manifests-and-apply"></a>Создание и применение манифестов
 
-В следующем примере создается манифесты для группы доступности в пространстве имен `ag1` с тремя репликами и применяет его к кластеру Kubernetes. Кластер автоматически создаст группу доступности. Перед выполнением скрипта замените `<MyC0m91exP@55w0r!>` сложный пароль.
+Следующий пример создает манифесты для группы доступности в пространстве имен `ag1` с тремя репликами и применяет их к кластеру Kubernetes. Затем кластер создает группу доступности. Перед запуском скрипта замените `<MyC0m91exP@55w0r!>` сложным паролем.
 
 ```
 python ./deploy-ag.py deploy --ag ag1 --namespace ag1 --sa-password '<MyC0m91exP@55w0r!>' --env AKS --verbose
 ```
 
-После завершения сценария, оператор Kubernetes создает хранилище, экземпляры SQL Server, службы подсистемы балансировки нагрузки. Вы можете отслеживать развертывание с помощью [панели мониторинга Kubernetes](https://docs.microsoft.com/azure/aks/kubernetes-dashboard).
+После завершения скрипта оператор Kubernetes создает хранилище, экземпляры SQL Server, службы балансировки нагрузки. Вы можете отслеживать развертывание с помощью [панели мониторинга Kubernetes](https://docs.microsoft.com/azure/aks/kubernetes-dashboard).
 
-После того как Kubernetes создаст контейнеры SQL Server:
+После того как Kubernetes создает контейнеры SQL Server, выполните следующее.
 
-1. [Подключение](sql-server-linux-kubernetes-connect.md) к экземпляру SQL Server в кластере.
+1. [Подключитесь](sql-server-linux-kubernetes-connect.md) к экземпляру SQL Server в кластере.
 
 1. Создание базы данных.
 
-1. Создание полной резервной копии базы данных, чтобы начать цепочку журналов.
+1. Создайте полную резервную копию базы данных, чтобы начать цепочку журналов.
 
-1. Добавьте базу данных к группе доступности.
+1. Добавьте базу данных в группу доступности.
 
-Группы доступности создается с помощью автоматического заполнения, поэтому SQL Server автоматически создаст соответствующие репликах базы данных-получатели.
+Группа доступности создается с автоматическим заполнением, поэтому SQL Server будет автоматически создавать базы данных-получатели в соответствующих репликах.
 
-### <a name="manually-failover"></a>Вручную выполните отработку отказа
+### <a name="manually-failover"></a>отработка отказа вручную
 
-В следующем примере отработка отказа первичной реплики.
+В следующем примере выполняется отработка отказа первичной реплики.
 
 ```cmd
 python ./deploy-ag.py failover --ag ag1 --namespace ag1 --verbose mssql1-0
@@ -229,4 +229,4 @@ python ./deploy-ag.py failover --ag ag1 --namespace ag1 --verbose mssql1-0
 
 ## <a name="next-steps"></a>Следующие шаги
 
-[Группы доступности SQL Server в кластере Kubernetes](sql-server-ag-kubernetes.md)
+[Группа доступности SQL Server в кластере Kubernetes](sql-server-ag-kubernetes.md)

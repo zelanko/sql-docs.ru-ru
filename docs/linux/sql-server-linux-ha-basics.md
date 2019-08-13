@@ -1,5 +1,5 @@
 ---
-title: Основные сведения о доступности SQL Server для Linux развертываний
+title: Основные сведения о доступности SQL Server для развертываний Linux
 description: ''
 author: MikeRayMSFT
 ms.author: mikeray
@@ -9,240 +9,240 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: d7d7d7eeacca4e18fe5b5fdc97331e24a6ca212d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67952611"
 ---
-# <a name="sql-server-availability-basics-for-linux-deployments"></a>Основные сведения о доступности SQL Server для Linux развертываний
+# <a name="sql-server-availability-basics-for-linux-deployments"></a>Основные сведения о доступности SQL Server для развертываний Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Начиная с [!INCLUDE[sssql17-md](../includes/sssql17-md.md)], [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] поддерживается в Windows и Linux. На базе Windows, такие как [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] развертываний, [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] баз данных и экземпляров должны быть высокодоступной под Linux. В этой статье рассматриваются технические аспекты планирование и развертывание высокой доступности на платформе Linux [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] баз данных и экземпляров, а также некоторые отличия от установок на основе Windows. Так как [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] могут быть новыми для специалистов по Linux и Linux могут быть новыми для [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] -специалистов, в этой статье, в некоторых случаях представлены основные понятия, которые могут быть знакомы некоторые и не знакомы с другими.
+Начиная с [!INCLUDE[sssql17-md](../includes/sssql17-md.md)] [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] поддерживается и в Linux, и в Windows. Как и развертывания [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] на основе Windows, базы данных и экземпляры [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] должны иметь высокий уровень доступности в Linux. В этой статье рассматриваются технические аспекты планирования и развертывания баз данных и экземпляров [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] с высоким уровнем доступности на основе Linux, а также приводятся некоторые отличия от установок на основе Windows. Поскольку специалисты Linux могут быть плохо знакомы с [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)], а пользователи [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] могут не иметь опыта работы с Linux, в этой статье иногда встречаются понятия, знакомые одним и незнакомые другим.
 
-## <a name="includessnoversion-mdincludesssnoversion-mdmd-availability-options-for-linux-deployments"></a>[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Параметры доступности для развертывания Linux
-Помимо резервного копирования и восстановления те же три функции доступности доступны в Linux для развертывания на основе Windows.
--   Группах доступности AlwaysOn (группами доступности)
--   Экземпляры отказоустойчивого кластера (FCI) AlwaysOn
+## <a name="includessnoversion-mdincludesssnoversion-mdmd-availability-options-for-linux-deployments"></a>Варианты доступности [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] для развертываний Linux
+Помимо резервного копирования и восстановления, в Linux поддерживаются те же три компонента доступности, что и в развертываниях на основе Windows.
+-   Группы доступности Always On (AG)
+-   Экземпляры отказоустойчивого кластера Always On (FCI)
 -   [Доставка журналов](sql-server-linux-use-log-shipping.md)
 
-В Windows экземпляры отказоустойчивого кластера всегда требуется базовый кластер отработки отказа Windows Server (WSFC). В зависимости от сценария развертывания, группе Доступности обычно требуется базовый кластер WSFC, за исключением, что новый None variant в [!INCLUDE[sssql17-md](../includes/sssql17-md.md)]. WSFC не существует в Linux. Кластеризация реализации в Linux см. в разделе [экземпляров Pacemaker для групп доступности AlwaysOn и отказоустойчивые кластеры в Linux](#pacemaker-for-always-on-availability-groups-and-failover-cluster-instances-on-linux).
+В Windows экземпляр FCI всегда должен находиться в отказоустойчивом кластере Windows Server (WSFC). В зависимости от сценария развертывания группа доступности обычно должна располагаться в кластере WSFC. Исключением является новый вариант None в [!INCLUDE[sssql17-md](../includes/sssql17-md.md)]. В Linux нет кластера WSFC. Реализация кластеризации в Linux рассматривается в разделе [Pacemaker для групп доступности Always On и экземпляров отказоустойчивых кластеров в Linux](#pacemaker-for-always-on-availability-groups-and-failover-cluster-instances-on-linux).
 
-## <a name="a-quick-linux-primer"></a>Краткое руководство Linux
-Хотя в некоторых установках Linux могут устанавливаться с интерфейсом, большинство не, это означает, что почти все, что на уровне операционной системы выполняется с помощью командной строки. Общий термин для этой командной строки в мире Linux *оболочку bash*.
+## <a name="a-quick-linux-primer"></a>Краткое руководство по Linux
+Хотя некоторые установки Linux могут быть установлены с интерфейсом, в большинстве из них интерфейс отсутствует, то есть практически все действия на уровне операционной системы выполняются через командную строку. Эта командная строка в среде Linux называется *оболочкой bash*.
 
-В Linux многие команды необходимо выполнить с повышенными привилегиями, примерно так же, что многие задачи необходимо выполнить в Windows Server с правами администратора. Существует два основных метода для выполнения с повышенными привилегиями:
-1. Выполняются в контексте пользователя, правильное. Чтобы изменить на другого пользователя, используйте команду `su`. Если `su` выполняться сама по себе без имени пользователя, до тех пор, пока вы знаете пароль, теперь можно в оболочку *корневой*.
+В Linux многие команды должны запускаться с повышенными привилегиями, что соответствует выполнению многих задач в Windows Server с правами администратора. Существует два основных метода выполнения задач с повышенными привилегиями.
+1. Выполнение в контексте соответствующего пользователя. Чтобы сменить пользователя, используйте команду `su`. Если `su` выполняется в собственном контексте без имени пользователя, при условии, что вам известен пароль, вы будете находиться в оболочке с правами *root*.
    
-2. Дополнительные общие и безопасности понимали, каким способом запуска действия является использование `sudo` перед выполнением ничего. Во многих примерах в этой статье используется `sudo`.
+2. Наиболее распространенным и безопасным способом является предварительное использование `sudo`. Вы увидите `sudo` во многих примерах в этой статье.
 
-Некоторые распространенные команды, каждый из которых имеют различные параметры и параметры, которые могут быть изучены через Интернет:
--   `cd` -Перейдите в каталог
--   `chmod` -Измените разрешения файла или каталога
--   `chown` -сменить владельца файла или каталога
--   `ls` -Показать содержимое каталога
--   `mkdir` -Создайте папку (каталог) на диске
--   `mv` -Перемещение файла из одного расположения в другое
--   `ps` -Показать все процессы работы
--   `rm` — удалить файл локально на сервере
--   `rmdir` -удалить папку (каталог)
--   `systemctl` — Запуск, остановка или включить службы
--   Текст команд редактора. В Linux существуют различные параметры текстового редактора, например vi, emacs.
+Ниже приводятся некоторые распространенные команды, у каждой из которых есть различные параметры, доступные для поиска в Интернете.
+-   `cd` — изменение каталога
+-   `chmod` — изменение разрешений для файла или каталога
+-   `chown` — изменение владельца файла или каталога
+-   `ls` — отображение содержимого каталога
+-   `mkdir` — создание папки (каталога) на диске
+-   `mv` — перемещение файла из одного места в другое
+-   `ps` — отображение всех рабочих процессов
+-   `rm` — удаление файла локально на сервере
+-   `rmdir` — удаление папки (каталога)
+-   `systemctl` — запуск, остановка или включение служб
+-   Команды текстового редактора. В Linux существуют различные параметры текстового редактора, например vi и emacs.
 
-## <a name="common-tasks-for-availability-configurations-of-includessnoversion-mdincludesssnoversion-mdmd-on-linux"></a>Распространенные задачи по конфигурации доступности [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] на платформе Linux
-В этом разделе рассматриваются задачи, которые являются общими для всех под управлением Linux [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] развертываний.
+## <a name="common-tasks-for-availability-configurations-of-includessnoversion-mdincludesssnoversion-mdmd-on-linux"></a>Типичные задачи для конфигураций доступности [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] на Linux
+В этом разделе рассматриваются задачи, общие для всех развертываний [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] на основе Linux.
 
-### <a name="ensure-that-files-can-be-copied"></a>Убедитесь, что можно скопировать файлы
-Копирование файлов с одного сервера на другой — это задача, необходимая любому пользователю с помощью [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] в Linux должен иметь возможность сделать. Эта задача очень важно для конфигураций группы Доступности.
+### <a name="ensure-that-files-can-be-copied"></a>Возможность копирования файлов
+Копирование файлов с одного сервера на другой — это задача, которая должна быть доступна любому пользователю [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] на Linux. Она очень важна для конфигураций группы доступности.
 
-Например проблем с разрешениями могут существовать в Linux, а также на установок на основе Windows. Тем не менее если вы знакомы с тем, как копировать с одного сервера на Windows может не быть знакомы с как это делается в Linux. Распространенный способ — использовать программу командной строки `scp`, который обозначает безопасного копирования. На самом деле `scp` использует OpenSSH. SSH — это безопасное оболочки. В зависимости от дистрибутива Linux OpenSSH, сам не могут быть установлены. Если это не так, необходимо сначала установить OpenSSH. Дополнительные сведения о настройке OpenSSH см. сведения в статье приведены ссылки на каждое распределение:
+И в Linux, и в установках на основе Windows не исключены проблемы с разрешениями. Однако пользователи, которые легко справляются с копированием с сервера на сервер в Windows, могут не знать, как это делается в Linux. Распространенным способом является использование служебной программы командной строки `scp`, которая расшифровывается как "secure copy" (безопасное копирование). В фоновом режиме `scp` использует OpenSSH. SSH означает "secure shell" (безопасная оболочка). В зависимости от дистрибутива Linux сам пакет OpenSSH может не устанавливаться. В этой ситуации необходимо сначала установить OpenSSH. Дополнительные сведения о настройке OpenSSH см. по следующим ссылкам для каждого дистрибутива:
 -   [Red Hat Enterprise Linux (RHEL)](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/deployment_guide/ch-openssh)
 -   [SUSE Linux Enterprise Server (SLES)](https://en.opensuse.org/SDB:Configure_openSSH)
 -   [Ubuntu](https://help.ubuntu.com/community/SSH/OpenSSH/Configuring)
 
-При использовании `scp`, необходимо указать учетные данные сервера, если это не источник или назначение. Например с помощью
+При использовании `scp` необходимо указать учетные данные сервера, если он не является исходным или целевым. Например, следующая команда
 
 ```bash
 scp MyAGCert.cer username@servername:/folder/subfolder
 ```
 
-копирует файл MyAGCert.cer папка, указанная на другом сервере. Обратите внимание, что необходимо иметь разрешения — и, возможно, владение - файл, чтобы скопировать его, поэтому `chown` может также необходимо применять перед копированием. Аналогичным образом на принимающей стороне нужному пользователю требуется доступ к работы файлом. Например, чтобы восстановить этот файл сертификата `mssql` пользователь должен быть получить к ним доступ.
+копирует файл MyAGCert.cer в папку, указанную на другом сервере. Обратите внимание, что для копирования файла необходимо иметь соответствующие разрешения и, возможно, быть владельцем файла. Поэтому перед копированием также может потребоваться `chown`. Кроме того, на принимающей стороне работать с файлом должен пользователь с надлежащими правами. Например, чтобы восстановить этот файл сертификата, пользователь `mssql` должен иметь к нему доступ.
 
-Samba, которая является вариант блок сообщений сервера (SMB) для Linux, можно также использовать для создания общих ресурсов, таких как доступ к UNC-пути `\\SERVERNAME\SHARE`. Дополнительные сведения о настройке Samba см. сведения в статье приведены ссылки на каждое распределение:
+Создавать общие ресурсы, доступ к которым осуществляется по UNC-путям, таким как `\\SERVERNAME\SHARE`, можно с помощью Samba, который является разновидностью протокола SMB в Linux. Дополнительные сведения о настройке Samba см. по следующим ссылкам для каждого дистрибутива:
 -   [RHEL](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/html/Managing_Confined_Services/chap-Managing_Confined_Services-Samba.html)
 -   [SLES](https://www.suse.com/documentation/sles11/book_sle_admin/data/cha_samba.html)
 -   [Ubuntu](https://help.ubuntu.com/community/Samba)
 
-Также можно использовать общие папки SMB на базе Windows; Общие ресурсы SMB не обязательно должны быть под управлением Linux, до тех пор, пока клиентская часть Samba правильно настроены на сервере Linux, где размещен [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] и общей папки имеет права доступа. Для тех, в смешанной среде, это будет один из способов использовать существующую инфраструктуру для под управлением Linux [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] развертываний.
+Также можно использовать общие ресурсы SMB на основе Windows. Общие ресурсы SMB не должны быть основаны на Linux, если клиентская часть Samba правильно настроена на сервере Linux, где размещается [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)], и общему ресурсу заданы соответствующие права доступа. Пользователи, работающие в смешанной среде, для развертываний [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] на основе Linux могут использовать существующую инфраструктуру.
 
-Одну вещь, важно — что версию Samba развертывания должно быть совместимым SMB 3.0. При добавлении поддержки SMB в [!INCLUDE[sssql11-md](../includes/sssql11-md.md)], требовалось, чтобы все общие папки для поддержки SMB 3.0. Если с помощью Samba для общего ресурса и не Windows Server, под управлением Samba общей папки следует использовать Samba 4.0 или более поздней версии и в идеале 4.3 или более поздней версии, который поддерживает SMB 3.1.1. Хорошим источником информации о SMB и Linux будет [SMB3 в Samba](https://events.linuxfoundation.org/sites/events/files/slides/smb3-in-samba.pr__0.pdf).
+Важно отметить, что версия развернутого пакета Samba должна быть совместима с SMB 3.0. После добавления поддержки SMB в [!INCLUDE[sssql11-md](../includes/sssql11-md.md)] все общие ресурсы должны поддерживать SMB 3.0. Если в качестве общего ресурса используется Samba, а не Windows Server, то общий ресурс на основе Samba должен поддерживать Samba 4.0 или более позднюю версию, а в идеале — 4.3 или более позднюю версию, которая поддерживает SMB 3.1.1. Сведения об SMB и Linux см. в документе об [SMB3 в Samba](https://events.linuxfoundation.org/sites/events/files/slides/smb3-in-samba.pr__0.pdf).
 
-Наконец с помощью общей сетевой папки системы (NFS) — это вариант. С помощью NFS не подходит для развертываний на основе Windows из [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]и может использоваться только для развертываний на основе Linux.
+Кроме того, можно использовать общий ресурс сетевой файловой системы (NFS). NFS не подходит для развертываний [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] на основе Windows и может применяться только для развертываний на основе Linux.
 
 ### <a name="configure-the-firewall"></a>Настройка брандмауэра
-Как и в Windows, дистрибутивы Linux имеет встроенный брандмауэр. Если ваша организация использует внешнего брандмауэра на серверах, отключение брандмауэры в Linux может быть приемлемым. Тем не менее независимо от того, где включен брандмауэр, порты необходимо открыть. В следующей таблице приведены общие порты, необходимые для высокой доступности [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] развертываний на платформе Linux.
+Как и в Windows, дистрибутивы Linux имеют встроенный брандмауэр. Если ваша организация использует для серверов внешний брандмауэр, в Linux допускается отключение брандмауэров. Однако независимо от того, на какой платформе включен брандмауэр, необходимо открыть порты. В следующей таблице приводятся стандартные порты, необходимые для высокодоступных развертываний [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] на Linux.
 
-| Номер порта | Type     | Описание                                                                                                                 |
+| Номер порта | Тип     | Описание                                                                                                                 |
 |-------------|----------|-----------------------------------------------------------------------------------------------------------------------------|
-| 111         | TCP/UDP  | NFS- `rpcbind/sunrpc`                                                                                                    |
-| 135         | TCP      | Samba (если используется) - конечных точек                                                                                          |
-| 137         | UDP      | Samba (если используется) - службы NetBIOS-имя                                                                                      |
-| 138         | UDP      | Samba (если используется) - датаграмм NetBIOS                                                                                          |
-| 139         | TCP      | Samba (если используется) - сеанса NetBIOS                                                                                           |
-| 445         | TCP      | Samba (если используется) - SMB через TCP                                                                                              |
-| 1433        | TCP      | [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] — порт; по умолчанию При необходимости можно изменить с помощью `mssql-conf set network.tcpport <portnumber>`                       |
+| 111         | TCP/UDP  | NFS — `rpcbind/sunrpc`                                                                                                    |
+| 135         | TCP      | Samba (если используется) — сопоставитель конечных точек                                                                                          |
+| 137         | UDP      | Samba (если используется) — служба имен NetBIOS                                                                                      |
+| 138         | UDP      | Samba (если используется) — датаграмма NetBIOS                                                                                          |
+| 139         | TCP      | Samba (если используется) — сеанс NetBIOS                                                                                           |
+| 445         | TCP      | Samba (если используется) — SMB по TCP                                                                                              |
+| 1433        | TCP      | [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] — порт по умолчанию. При необходимости можно изменить на `mssql-conf set network.tcpport <portnumber>`.                       |
 | 2049        | TCP, UDP | NFS (если используется)                                                                                                               |
-| 2224        | TCP      | Pacemaker — используемый `pcsd`                                                                                                |
-| 3121        | TCP      | Pacemaker — требуется, если есть Pacemaker удаленным узлам                                                                    |
-| 3260        | TCP      | Инициатор (если используется) - iSCSI может быть изменен в `/etc/iscsi/iscsid.config` (RHEL), но должен совпадать с портом цели iSCSI |
-| 5022        | TCP      | [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] -по умолчанию порт, используемый для конечной точки группы Доступности; можно изменить при создании конечной точки                                |
+| 2224        | TCP      | Pacemaker — используется `pcsd`                                                                                                |
+| 3121        | TCP      | Pacemaker — требуется при наличии удаленных узлов Pacemaker                                                                    |
+| 3260        | TCP      | Инициатор iSCSI (если используется) — может быть изменен в `/etc/iscsi/iscsid.config` (RHEL), но должен соответствовать порту целевого объекта iSCSI. |
+| 5022        | TCP      | [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] — порт по умолчанию, используемый для конечной точки группы доступности. Можно изменить при создании конечной точки.                                |
 | 5403        | TCP      | Pacemaker                                                                                                                   |
-| 5404        | UDP      | Pacemaker — необходимые Corosync при использовании многоадресной рассылки UDP                                                                     |
-| 5405        | UDP      | Pacemaker — необходимый Corosync                                                                                            |
-| 21064       | TCP      | Pacemaker — необходимые ресурсы, используя диспетчер загрузки                                                                                 |
-| Переменная    | TCP      | Порт конечной точки группы Доступности; значение по умолчанию — 5022                                                                                           |
-| Переменная    | TCP      | NFS - порт для `LOCKD_TCPPORT` (в `/etc/sysconfig/nfs` на RHEL)                                              |
-| Переменная    | UDP      | NFS - порт для `LOCKD_UDPPORT` (в `/etc/sysconfig/nfs` на RHEL)                                              |
-| Переменная    | TCP/UDP  | NFS - порт для `MOUNTD_PORT` (в `/etc/sysconfig/nfs` на RHEL)                                                |
-| Переменная    | TCP/UDP  | NFS - порт для `STATD_PORT` (в `/etc/sysconfig/nfs` на RHEL)                                                 |
+| 5404        | UDP      | Pacemaker — требуется для Corosync при использовании многоадресного протокола UDP                                                                     |
+| 5405        | UDP      | Pacemaker — требуется для Corosync                                                                                            |
+| 21064       | TCP      | Pacemaker — требуется для ресурсов, использующих DLM                                                                                 |
+| Переменная    | TCP      | Порт конечной точки группы доступности, значение по умолчанию — 5022                                                                                           |
+| Переменная    | TCP      | NFS — порт для `LOCKD_TCPPORT` (находится в `/etc/sysconfig/nfs` в RHEL)                                              |
+| Переменная    | UDP      | NFS — порт для `LOCKD_UDPPORT` (находится в `/etc/sysconfig/nfs` в RHEL)                                              |
+| Переменная    | TCP/UDP  | NFS — порт для `MOUNTD_PORT` (находится в `/etc/sysconfig/nfs` в RHEL)                                                |
+| Переменная    | TCP/UDP  | NFS — порт для `STATD_PORT` (находится в `/etc/sysconfig/nfs` в RHEL)                                                 |
 
-Дополнительные порты, которые могут использоваться Samba, см. в разделе [использование порта Samba](https://wiki.samba.org/index.php/Samba_Port_Usage).
+Перечень дополнительных портов, поддерживаемых Samba, см. на странице [Использование портов Samba](https://wiki.samba.org/index.php/Samba_Port_Usage).
 
-И наоборот имя службы в соответствии с Linux можно также добавить исключение, а не порта; например `high-availability` для Pacemaker. Ссылаться на распределение для имен, если это направление, в которую вы хотите продолжить. Например является команда, добавляемая в Pacemaker на RHEL
+И наоборот, как исключение, вместо порта можно добавить имя службы в Linux. Например, `high-availability` для Pacemaker. Если вы хотите выбрать этот вариант, см. соответствующий дистрибутив. Например, в RHEL используется следующая команда для добавления в Pacemaker:
 
 ```bash
 sudo firewall-cmd --permanent --add-service=high-availability
 ```
 
-**Документации по брандмауэру:**
+**Документация по брандмауэру:**
 -   [RHEL](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/high_availability_add-on_reference/s1-firewalls-haar)
 -   [SLES](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html)
 
-### <a name="install-includessnoversion-mdincludesssnoversion-mdmd-packages-for-availability"></a>Установка [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] пакетов для обеспечения доступности
-На основе Windows [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] установки, некоторые компоненты установлены даже при установке базовый механизм, а другие нет. Под Linux, только [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] engine устанавливается как часть процесса установки. Все остальное не является обязательным. Для высокой доступности [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] экземпляры под Linux должен устанавливаться два пакета с [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]: [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Агент (*mssql-server-agent*) и высокий уровень доступности (HA) пакет (*mssql-server-ha*). Хотя [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] агента — это технически необязательно, это [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]в планировщик заданий и необходим при доставке журналов, поэтому рекомендуется выбирать установку. Для установок на основе Windows [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] агента не является необязательным.
+### <a name="install-includessnoversion-mdincludesssnoversion-mdmd-packages-for-availability"></a>Установка пакетов [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] для обеспечения доступности
+В установке [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] на основе Windows некоторые компоненты устанавливаются даже при базовой установке ядра, а другие — нет. В Linux в ходе установки устанавливается только ядро [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]. Все остальные компоненты являются необязательными. Для высокодоступных экземпляров [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] в Linux вместе с [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]должны быть установлены два пакета: агент [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] (*mssql-server-agent*) и пакет высокого уровня доступности (*mssql-server-ha*). Хотя агент [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] является необязательным в техническом плане, он служит планировщиком [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] для заданий и требуется для доставки журналов, поэтому он рекомендуется к установке. В установках [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] на основе Windows агент необязателен.
 
 >[!NOTE]
->Для тех, Кому [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)], [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] агент [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]встроенные задания планировщика. Он является стандартным способом для администраторов баз данных запланировать резервное копирование и другие [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] обслуживания. В отличие от установки на основе Windows из [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] где [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] — это совершенно разные служба на платформе Linux, [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] агент выполняется в контексте [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] сам.
+>Для пользователей, не знакомых с [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]: агент [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] является встроенным планировщиком заданий [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]. Это распространенное средство, применяемое администраторами баз данных для планирования резервного копирования и других действий по обслуживанию [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]. В отличие от установки [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] на основе Windows, где агент [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] представляет собой совершенно другую службу, в Linux агент [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]работает в контексте самого [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)].
 
-При настройке групп доступности или экземпляры отказоустойчивого кластера в конфигурации на основе Windows, они являются кластеры. Поддержка кластеров означает, что [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] имеет конкретный ресурс библиотеки DLL, которые известны кластере WSFC (файл sqagtres.dll и sqsrvres.dll для экземпляров отказоустойчивого кластера, hadrres.dll для групп доступности) и используемых WSFC, чтобы убедиться, что [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] кластеризованный функциональные возможности, запущена, и работает ли надлежащим образом. Так как кластеризация внешних не только к [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] , но сам Linux, Майкрософт требовалось закодировать эквивалент библиотеку DLL ресурсов для развертывания на платформе Linux группы Доступности и экземпляра отказоустойчивого Кластера. Это *mssql-server-ha* пакет, также известный как [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] агент ресурсов для Pacemaker. Чтобы установить *mssql-server-ha* пакета, см. в разделе [установить пакеты высокий уровень ДОСТУПНОСТИ и агента SQL Server](sql-server-linux-deploy-pacemaker-cluster.md#install-the-sql-server-ha-and-sql-server-agent-packages).
+Группы доступности или экземпляры FCI, настраиваемые в конфигурации на основе Windows, поддерживают кластер. Поддержка кластера означает, что [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] имеет определенные DLL-библиотеки ресурсов (sqagtres.dll и sqsrvres.dll для экземпляров FCI, hadrres.dll для групп доступности), о которых известно WSFC и которые WSFC использует для обеспечения надлежащей работоспособности кластеризованных функций [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]. Поскольку кластеризация является внешней не только для [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)], но и для самой платформы Linux, корпорации Майкрософт пришлось создать эквивалент DLL-библиотеки ресурсов для развертываний групп доступности и экземпляров FCI на основе Linux. Это пакет *mssql-server-ha*, также известный как агент ресурсов [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] для Pacemaker. Сведения об установке пакета *mssql-server-ha* см. в разделе [Установка пакетов HA и агента SQL Server](sql-server-linux-deploy-pacemaker-cluster.md#install-the-sql-server-ha-and-sql-server-agent-packages).
 
-Дополнительные пакеты для [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] в Linux, [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Full-Text Search (*mssql-server-fts*) и [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] служб Integration Services (*mssql-server находится*), не являются требуется для обеспечения высокой доступности, для экземпляра отказоустойчивого Кластера или группе Доступности.
+Другие необязательные пакеты для [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] в Linux — пакет полнотекстового поиска (*mssql-server-fts*) [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] и пакет [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Integration Services (*mssql-server-is*) — не требуются для обеспечения высокой доступности и экземпляра FCI, и группы доступности.
 
-## <a name="pacemaker-for-always-on-availability-groups-and-failover-cluster-instances-on-linux"></a>Pacemaker для групп доступности AlwaysOn и экземпляров отказоустойчивых кластеров в Linux
-Как в предыдущих отмечалось, Pacemaker с использованием Corosync — это единственный механизм кластеризации, в настоящее время поддерживается корпорацией Майкрософт для групп доступности и экземпляров отказоустойчивого кластера. В этом разделе рассматриваются основные сведения, чтобы понять решения, а также о планировании и развернуть его для [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] конфигураций.
+## <a name="pacemaker-for-always-on-availability-groups-and-failover-cluster-instances-on-linux"></a>Pacemaker для групп доступности Always On и экземпляров отказоустойчивого кластера в Linux
+Как отмечалось выше, Pacemaker с Corosync является единственным механизмом кластеризации, поддерживаемым в настоящее время корпорацией Майкрософт для групп доступности и экземпляров FCI. В этом разделе содержатся основные сведения о решении, а также о его планировании и развертывании для конфигураций [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)].
 
-### <a name="ha-add-onextension-basics"></a>Основы add on/расширение высокого уровня ДОСТУПНОСТИ
-Все поддерживаемые в настоящее время дистрибутивы поставлять высокого уровня доступности add-on/расширение, основанное на Pacemaker, кластеризация стека. Этот стек включает два ключевых компонента: Pacemaker и Corosync. Ниже перечислены все компоненты стека.
--   Pacemaker - core, кластеризация компонент, который выполняет действия, например координат кластеризованных компьютеров.
--   Corosync - инфраструктуру и набор API, которые предоставляет такие объекты, например кворума, возможность Сбой перезапуска процессов и т. д.
--   libQB - предоставляет такие объекты, такие как ведение журнала.
--   Агент ресурсов — конкретные функции, обеспечиваемые таким образом, чтобы приложение можно интегрировать с Pacemaker.
--   Забора агента - сценариев и функций, которые дали узлов и работать с ними, если они возникают проблемы.
+### <a name="ha-add-onextension-basics"></a>Основные сведения о расширении и надстройке для обеспечения высокого уровня доступности
+Все поддерживаемые в настоящее время дистрибутивы содержат надстройку или расширение для обеспечения высокого уровня доступности, основанные на стеке кластеризации Pacemaker. Этот стек состоит из двух ключевых компонентов: Pacemaker и Corosync. Все компоненты, входящие в стек:
+-   Pacemaker — основной компонент кластеризации, который выполняет такие действия, как координация на кластеризованных компьютерах.
+-   Corosync — платформа и набор API-интерфейсов, которые предоставляют такие возможности, как кворум, возможность перезапуска процессов со сбоями и т. д.
+-   libQB — предоставляет возможности ведения журналов.
+-   Агент ресурсов — предоставляет специальные функциональные возможности для интеграции приложений с Pacemaker.
+-   Агент ограждения — предоставляет сценарии и функции для изоляции узлов и работы с ними при возникновении проблем.
     
 > [!NOTE]
-> Стек кластера часто называют Pacemaker в Linux мире.
+> В среде Linux стек кластера обычно называют Pacemaker.
 
-Это решение является в некотором роде сходно, но во многих отношениях отличается от процесса развертывания кластеризованных конфигураций, с помощью Windows. В Windows форма доступности — кластеризация, вызывается отказоустойчивый кластер Windows Server (WSFC), встроены в операционную систему и функцию, которая позволяет создавать WSFC, отказоустойчивой кластеризацией, по умолчанию отключена. В Windows, устанавливаются поверх WSFC групп доступности и экземпляров отказоустойчивого кластера и совместно использовать тесную интеграцию из-за определенного ресурса библиотеки DLL, которая обеспечивается [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]. Это решение тесно связанные возможна в общем и целом, так как это все, от одного поставщика.
+Это решение в некоторой степени аналогично развертыванию кластеризованных конфигураций с помощью Windows, однако оно во многом от него отличается. В Windows форма доступности кластеризации, называемая отказоустойчивым кластером Windows Server (WSFC), встроена в операционную систему, а функция, позволяющая создавать кластер WSFC (отказоустойчивая кластеризация), по умолчанию отключена. В Windows группы доступности и экземпляры FCI основаны на WSFC и поддерживают тесную интеграцию благодаря особой DLL-библиотеке ресурсов, предоставляемой [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]. Такое решение в целом возможно, так как все компоненты в нем от одного поставщика.
 
 ![](./media/sql-server-linux-ha-basics/image1.png)
 
-В Linux хотя каждый поддерживаемый дистрибутив имеет доступные, Pacemaker каждого распределения можно настраивать и вариантов реализации и версий. Некоторые различия будут отражены в инструкциях в этой статье. Кластеризации слой имеет открытый исходный код, поэтому несмотря на то, что она поставляется с распределениями, оно не интегрировано тесно таким же образом WSFC в Windows. Именно поэтому корпорация Майкрософт предоставляет *mssql-server-ha*, так что [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] и Pacemaker стека может предоставить близко к, но не совсем так же, взаимодействие с группами доступности и экземпляров отказоустойчивого кластера в группе Windows.
+Хотя Pacemaker доступен во всех поддерживаемых дистрибутивах Linux, каждое из них может настраиваться и иметь незначительно отличающиеся реализации и версии. Некоторые отличия будут показаны в инструкциях, приведенных в этой статье. Уровень кластеризации основан на открытом исходном коде, поэтому, несмотря на то, что он поставляется вместе с дистрибутивами, глубокая интеграция, такая как у WSFC в Windows, отсутствует. Именно поэтому корпорация Майкрософт предоставляет *mssql-server-ha*, чтобы [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] и стек Pacemaker могли обеспечивать для групп доступности и экземпляров FCI степень взаимодействия, практически аналогичную Windows.
 
-Полную документацию по Pacemaker в том числе более подробное объяснение того, что все, что с Полные справочные сведения для RHEL и SLES:
+Полную документацию по Pacemaker, включая более подробные и полные справочные сведения по RHEL и SLES, см. на следующих ресурсах:
 -   [RHEL](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/ch-overview-HAAR.html)
 -   [SLES](https://www.suse.com/documentation/sle_ha/book_sleha/data/book_sleha.html)
 
-Ubuntu имеет структуру для доступности.
+Руководство по обеспечению доступности в Ubuntu отсутствует.
 
-Дополнительные сведения о стеке целиком, также доступны на официальном [страницы документации Pacemaker](https://clusterlabs.org/doc/) на сайте Clusterlabs.
+Дополнительные сведения о полном стеке см. на странице [официальной документации по Pacemaker](https://clusterlabs.org/doc/) на сайте Clusterlabs:
 
-### <a name="pacemaker-concepts-and-terminology"></a>Pacemaker основные понятия и терминология
+### <a name="pacemaker-concepts-and-terminology"></a>Основные понятия и терминология Pacemaker
 В этом разделе описываются общие понятия и терминология для реализации Pacemaker.
 
 #### <a name="node"></a>Узел
-Узел — это сервер, участвующих в кластере. Кластер Pacemaker изначально поддерживает до 16 узлов. Это число может быть превышено, если Corosync не запущена на дополнительных узлах, но требуется для Corosync [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]. Таким образом, максимальное количество узлов, кластер может иметь для любого [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]-на основе конфигурации — 16; это ограничение Pacemaker и не имеет ничего общего с максимальные ограничения для групп доступности или экземпляры отказоустойчивого кластера, накладываемые [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]. 
+Узел — это сервер, входящий в кластер. Кластер Pacemaker изначально поддерживает до 16 узлов. Это число может быть выше, если Corosync не работает на дополнительных узлах, но требуется для [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]. Таким образом, в любой конфигурации кластера на основе [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] может быть не более 16 узлов. Это ограничение Pacemaker, которое не связано с максимальными ограничениями для групп доступности или экземпляров FCI, действующим в [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]. 
 
-#### <a name="resource"></a>Resource
-WSFC и Pacemaker кластера существует понятие ресурса. Ресурс — определенные функции, который выполняется в контексте кластера, например диск или IP-адресом. Например в разделе Pacemaker можно создаются ресурсы отказоустойчивого Кластера и группы Доступности. Это не аспектах что происходит в кластере WSFC, где встречается [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] ресурсов либо экземпляра отказоустойчивого кластера или ресурс группы Доступности, при настройке группы Доступности, но будет отличаться из-за базовых различий в том, как [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] интегрируется с Pacemaker.
+#### <a name="resource"></a>Ресурс
+Кластеры WSFC и Pacemaker поддерживают понятие ресурса. Ресурс — это специальная функциональная возможность, выполняемая в контексте кластера, например диск или IP-адрес. Например, в Pacemaker можно создать и ресурсы FCI, и ресурсы группы доступности. Понятие ресурса в Pacemaker практически аналогично определению ресурса в WSFC, когда при настройке группы доступности вы видите ресурс [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] для экземпляра FCI или группы доступности. Однако это совсем не одно и то же, так как существуют базовые различия в способе интеграции [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] с Pacemaker.
 
-Pacemaker имеет ресурсы "стандартный" и клона. Ресурсы клон — это приложения, выполняемых одновременно на всех узлах. Примером может служить IP-адресом, который выполняется на нескольких узлах для балансировки нагрузки. Любой ресурс, который создается для FCI использует стандартный ресурс, так, как только один узел может содержать экземпляр отказоустойчивого Кластера в любой момент времени.
+Pacemaker имеет стандартные и клонированные ресурсы. Клонированные ресурсы — это объекты, которые выполняются одновременно на всех узлах. Примером может быть IP-адрес, доступный на нескольких узлах в целях балансировки нагрузки. Любой ресурс, создаваемый для экземпляра FCI, использует стандартный ресурс, так как в определенный момент времени экземпляр FCI может размещаться только на одном узле.
 
-При создании группы Доступности, требуется специализированной разновидностью клонирования ресурсу с именем ресурса несколькими состояниями. Хотя группа Доступности имеет только одну первичную реплику, группы Доступности, сама выполняется на всех узлах, на котором он настроен для работы на и позволяет такие вещи, такие как доступ только для чтения. Так как это «live» use узла, ресурсы имеют концепцию два состояния: главный и подчиненный. Дополнительные сведения см. в разделе [несколькими состояниями ресурсы: Ресурсы, которые имеют несколько режимов](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/html/Configuring_the_Red_Hat_High_Availability_Add-On_with_Pacemaker/s1-multistateresource-HAAR.html).
+Созданной группе доступности требуется особая форма клонированного ресурса, называемая ресурсом с несколькими состояниями. Хотя группа доступности имеет только одну первичную реплику, сама она выполняется на всех узлах, для работы на которых она настроена, и может разрешать, к примеру, доступ только для чтения. Так как это динамическое использование узла, для ресурсов действует принцип двух состояний: главный и подчиненный. Дополнительные сведения см. в статье о [ресурсах, имеющих несколько состояний и режимов](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/html/Configuring_the_Red_Hat_High_Availability_Add-On_with_Pacemaker/s1-multistateresource-HAAR.html).
 
-#### <a name="resource-groupssets"></a>Наборы групп ресурсов
-Как и ролей в кластере WSFC, кластер Pacemaker использует концепцию группу ресурсов. Группа ресурсов (называется набором в SLES) — это коллекция ресурсов, которые работать вместе и выполнить отработку отказа с одного узла на другой как единое целое. Группы ресурсов не может содержать ресурсы, которые настроены как ведущий/ведомый; Таким образом они не может использоваться для групп доступности. Хотя можно использовать группу ресурсов для экземпляров отказоустойчивого кластера, это не обычно рекомендуемой конфигурацией.
+#### <a name="resource-groupssets"></a>Группы и наборы ресурсов
+Подобно ролям в WSFC, кластер Pacemaker поддерживает концепцию группы ресурсов. Группа ресурсов (называемая набором в SLES) представляет собой коллекцию ресурсов, которые работают вместе и могут выполнять отработку отказа с одного узла на другой как единое целое. Группы ресурсов не могут содержать ресурсы, настроенные как главные или подчиненные, поэтому они не используются для групп доступности. Хотя группу ресурсов можно использовать для экземпляра FCI, делать это не рекомендуется.
 
 #### <a name="constraints"></a>Ограничения
-Кластеров Wsfc имеют различные параметры для ресурсов, а также такие зависимости, которые настраивают WSFC иерархическое отношение между двумя ресурсами на разных. Зависимость — просто это правило, о том WSFC, какой ресурс должен сначала быть в сети.
+Помимо различных параметров для ресурсов, в кластерах WSFC существуют зависимости, которые сообщают WSFC о связи "родители-потомки" между двумя разными ресурсами. Зависимость — это просто правило, указывающее WSFC, какой ресурс должен быть переведен в сетевой режим первым.
 
-Кластер Pacemaker не поддерживает концепцию зависимостей, но существуют ограничения. Существует три типа ограничений: совместное размещение, расположение и порядок.
--   Совместное размещение ограничение обеспечивает ли два ресурса должен выполняться на одном узле.
--   Ограничение расположения сообщает кластера Pacemaker, где ресурс может (или не может) выполняться.
--   Ограничения упорядочивания сообщает кластера Pacemaker порядок, в котором следует начать ресурсы.
+В кластере Pacemaker концепция зависимостей отсутствует, но в нем применяются ограничения. Существует три типа ограничений: совместное размещение, расположение и упорядочение.
+-   Ограничение на совместное размещение определяет, могут ли два ресурса выполняться на одном узле.
+-   Ограничение на расположение указывает кластеру Pacemaker место, где может (или не может) выполняться ресурс.
+-   Ограничение на упорядочение указывает кластеру Pacemaker порядок запуска ресурсов.
 
 > [!NOTE]
-> Ограничения совместного размещения не являются обязательными для ресурсов в группе ресурсов, так как все они рассматриваются как единое целое.
+> Ограничения на совместное размещение не налагаются на ресурсы в группе ресурсов, так как все они считаются единым целым.
 
-#### <a name="quorum-fence-agents-and-stonith"></a>Кворум, граница агенты и STONITH
-Кворум в Pacemaker подобны WSFC концепцией. Механизм кворума кластера специально чтобы убедиться, что кластер остается приступить к работе. WSFC и надстройки высокого уровня ДОСТУПНОСТИ для дистрибутивов Linux существует понятие голосования, где каждый узел учитывается при подсчете кворума. Необходимо большинство голосов, в противном случае в худшем случае, кластера будет завершена.
+#### <a name="quorum-fence-agents-and-stonith"></a>Кворум, агенты ограждения и STONITH
+Теоретически кворум в Pacemaker похож на WSFC. Цель механизма кворума кластера заключается в том, чтобы обеспечить работоспособность кластера. В надстройках WSFC и высокого уровня доступности для дистрибутивов Linux реализован принцип голосования, где для определения кворума учитывается каждый узел. Вполне очевидно, что для работы кластера требуется большая часть голосов, в противном случае кластер будет остановлен.
 
-В отличие от кластера WSFC отсутствует ресурс следящий сервер для работы с кворумом. Как и в кластере WSFC целью является свести число нечетное избиратели. Конфигурация кворума имеет различные рекомендации для групп доступности, чем экземпляры отказоустойчивого кластера.
+В отличие от WSFC, здесь нет ресурса-свидетеля. Как и в WSFC, требуется получить нечетное число голосов. Для групп доступности и экземпляров FCI используются разные конфигурации кворума.
 
-Наблюдение за состоянием узлов, участвующих кластеров Wsfc и их обработки при возникновении проблемы. Более поздних версиях кластеров Wsfc обеспечивают такие функции, как помещение в карантин узла, который является неправильным поведением или недоступен (отсутствует на узле, сетевого взаимодействия — вниз и т. д.). На стороне Linux агент разграничения предоставляется функции этого типа. Принцип, иногда называется ограждения. Тем не менее эти агенты граница относятся к развертыванию и часто предоставленный поставщикам оборудования и некоторые поставщики программного обеспечения, например тех, кто предоставляют низкоуровневые оболочки. Например VMware предоставляет агент ограждения, который может использоваться для виртуальных машин Linux, виртуализованных с помощью vSphere.
+WSFC отслеживает состояние узлов и обрабатывает их при возникновении проблемы. В более поздних версиях WSFC предлагаются такие функции, как помещение неправильно работающего или недоступного (узел не включен, сеть не работает и т. д.) узла в карантин. На стороне Linux этот тип функционала предоставляется агентом ограждения. Иногда это называется ограждением. Однако агенты ограждений обычно зависят от развертывания, и часто их можно получить у поставщиков оборудования и некоторых поставщиков программного обеспечения, например у тех, кто предлагает гипервизоры. Например, VMware предоставляет агент ограждения, который можно использовать для виртуальных машин Linux, виртуализованных с помощью vSphere.
 
-Кворума ограждения связями в еще одно понятие вызывается STONITH и устранение неисправностей Other Node в заголовке. STONITH необходим для поддерживаемых кластера Pacemaker на всех дистрибутивов Linux. Дополнительные сведения см. в разделе [ограждения в кластере высокой доступности Red Hat](https://access.redhat.com/solutions/15575) (RHEL).
+Кворум и ограждение связаны с другим понятием — STONITH (Shoot the Other Node in the Head). STONITH должен иметь поддерживаемый кластер Pacemaker во всех дистрибутивах Linux. Дополнительные сведения см. в статье об [ограждении в кластере высокой доступности Red Hat](https://access.redhat.com/solutions/15575) (RHEL).
 
-#### <a name="corosyncconf"></a>corosync.conf
-`corosync.conf` Файл содержит конфигурацию кластера. Он расположен в `/etc/corosync`. Во время Рутинная эксплуатация этот файл никогда не должны редактироваться, если кластер настроен правильно.
+#### <a name="corosyncconf"></a>corosync. conf
+Файл `corosync.conf` содержит конфигурацию кластера. Он находится в папке `/etc/corosync`. В ходе обычных повседневных операций этот файл должен всегда оставаться без изменений, если кластер настроен правильно.
 
 #### <a name="cluster-log-location"></a>Расположение журнала кластера
-Расположение журнала для кластеров Pacemaker, зависят от распределения.
--   RHEL и SLES- `/var/log/cluster/corosync.log`
--   Ubuntu: `/var/log/corosync/corosync.log`
+Расположения журналов кластеров Pacemaker зависят от дистрибутива.
+-   RHEL и SLES — `/var/log/cluster/corosync.log`
+-   Ubuntu — `/var/log/corosync/corosync.log`
 
-Чтобы изменить расположение по умолчанию для ведения журнала, измените `corosync.conf`.
+Чтобы изменить расположение журнала по умолчанию, измените `corosync.conf`.
 
 ## <a name="plan-pacemaker-clusters-for-includessnoversion-mdincludesssnoversion-mdmd"></a>Планирование кластеров Pacemaker для [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]
-В этом разделе рассматриваются важные моменты планирования для кластера Pacemaker.
+В этом разделе рассматриваются важные вопросы планирования для кластера Pacemaker.
 
-### <a name="virtualizing-linux-based-pacemaker-clusters-for-includessnoversion-mdincludesssnoversion-mdmd"></a>Кластеры виртуализации под управлением Linux Pacemaker для [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]
-С помощью виртуальных машин для развертывания на платформе Linux [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] развертываний для групп доступности и экземпляров отказоустойчивого кластера, связанная с тем же правилам, что и для их аналоги на базе Windows. Имеется базовый набор правил для поддержки виртуализованной [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] развертываний, предоставленных корпорацией Майкрософт в [956893 базы Знаний Майкрософт поддержка](https://support.microsoft.com/help/956893/support-policy-for-microsoft-sql-server-products-that-are-running-in-a-hardware-virtualization-environment). Различные низкоуровневых оболочек, таких как Microsoft Hyper-V и VMware ESXi могут иметь различные дисперсии поверх всего этого, из-за различий в платформах, сами.
+### <a name="virtualizing-linux-based-pacemaker-clusters-for-includessnoversion-mdincludesssnoversion-mdmd"></a>Виртуализация кластеров Pacemaker на основе Linux для [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]
+На использование виртуальных машин для развертываний [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] на основе Linux для групп доступности и экземпляров FCI распространяются те же правила, что и для их аналогов на основе Windows. Существует базовый набор правил для поддержки виртуализованных развертываний [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)], предоставляемых корпорацией Майкрософт и приведенных в [статье базы знаний KB 956893](https://support.microsoft.com/help/956893/support-policy-for-microsoft-sql-server-products-that-are-running-in-a-hardware-virtualization-environment). Различные гипервизоры, такие как Microsoft Hyper-V и VMware ESXi, могут иметь ряд отличий, что связано с отличиями самих платформ.
 
-Что касается групп доступности и экземпляров отказоустойчивого кластера в условиях виртуализации, убедитесь, что для узлов данного кластера Pacemaker близости. При настройке для обеспечения высокой доступности в конфигурации группы Доступности или экземпляра отказоустойчивого Кластера виртуальных машин, содержащих [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] никогда не должен выполняться на одном узле низкоуровневой оболочки. Например, при развертывании двух узлов отказоустойчивого Кластера, то потребуется *по крайней мере* три узлы низкоуровневой оболочки, поэтому, где-то одной из виртуальных машин, содержащих узел, чтобы перейти в случае сбоя узла, особенно в том случае, если используете функции, такие как Live Миграция или vMotion.
+При виртуализации групп доступности и экземпляров FCI необходимо, чтобы в узлах кластера Pacemaker было настроено удаление сходства. Если конфигурация группы доступности или экземпляра FCI настроена для обеспечения высокого уровня доступности, виртуальные машины, на которых размещается [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)], не должны выполняться на одном узле гипервизора. Например, в развертывании экземпляра FCI с двумя узлами потребуется *по крайней мере* три узла гипервизора, на которые в случае сбоя можно будет перевести одну из виртуальных машин с размещенным узлом (особенно при использовании таких функций, как динамическая миграция или vMotion).
 
-Дополнительные сведения см.:
--   Документация по Hyper-V — [использование гостевой кластеризации для высокой доступности](https://technet.microsoft.com/library/dn440540(v=ws.11).aspx)
--   Технический документ (написанного для развертывания на основе Windows, но большинство концепций будет по-прежнему применяются) - [планирования высокой доступности, критически важных развертываний SQL Server с VMware vSphere](https://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/solutions/vmware-vsphere-highly-available-mission-critical-sql-server-deployments.pdf)
+Дополнительные сведения см. в следующих статьях:
+-   Документация по Hyper-V — [Использование гостевой кластеризации для обеспечения высокой доступности](https://technet.microsoft.com/library/dn440540(v=ws.11).aspx)
+-   Технический документ (написан для развертываний на основе Windows, но большинство понятий можно применять и в этом случае) — [Planning Highly Available, Mission Critical SQL Server Deployments with VMware vSphere](https://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/solutions/vmware-vsphere-highly-available-mission-critical-sql-server-deployments.pdf) (Планирование высокодоступных критически важных развертываний SQL Server с помощью VMware vSphere)
 
 >[!NOTE]
->RHEL с кластер Pacemaker с помощью STONITH еще не поддерживается Hyper-V. Пока не поддерживаются, Дополнительные сведения и обновления, обратитесь к [политики поддержки для высокой доступности кластеров RHEL](https://access.redhat.com/articles/29440#3physical_host_mixing).
+>Hyper-V пока не поддерживает RHEL с кластером Pacemaker с STONITH. Дополнительные сведения и обновления см. в статье о [политиках поддержки для кластеров высокой доступности RHEL](https://access.redhat.com/articles/29440#3physical_host_mixing).
 
 ### <a name="networking"></a>Работа с сетью
-В отличие от кластера WSFC Pacemaker не требует выделенного имени или по крайней мере один выделенный IP-адрес для самого кластера Pacemaker. Группы доступности и экземпляров отказоустойчивого кластера потребуют IP-адресов (см. документацию по каждому Дополнительные сведения), но не имена, так как нет ресурса сетевого имени. SLES разрешить конфигурацию IP-адреса для целей администрирования, но он не является обязательным, как можно увидеть в [создание кластера Pacemaker](sql-server-linux-deploy-pacemaker-cluster.md#create).
+В отличие от WSFC, Pacemaker не требует выделенного имени или хотя бы одного выделенного IP-адреса для самого кластера Pacemaker. Для групп доступности и FCI будут нужны IP-адреса (дополнительные сведения см. в документации), но не имена, так как ресурс сетевого имени отсутствует. SLES позволяет настраивать IP-адреса для административных целей, но, как следует из раздела [Создание кластера Pacemaker](sql-server-linux-deploy-pacemaker-cluster.md#create), делать это не обязательно.
 
-Как WSFC, Pacemaker предпочли бы реализована избыточность сетевого трафика, то есть различные сетевые карты (сетевых адаптеров или pNICs физический компьютер) с отдельных IP-адресов. С точки зрения конфигурации кластера каждый IP-адрес будет иметь как свой собственный кольцо. Тем не менее как с помощью кластеров Wsfc в настоящее время во многих реализациях являются виртуальными или в общедоступном облаке виртуализированные там, где на самом деле существует только один сетевой Адаптер (vNIC) для сервера. Если все pNICs и виртуальных сетевых адаптеров подключены к одному коммутатору физическим или виртуальным, отсутствует значение true, избыточность на уровне сети, поэтому Настройка нескольких сетевых карт — немного иллюзия к виртуальной машине. Избыточность сети обычно встроен в низкоуровневой оболочки для виртуализированных развертываний и определенно встроена в общедоступном облаке.
+Как и для WSFC, для Pacemaker будет предпочтительной избыточная сеть, в которой разные сетевые карты (NIC или pNIC) имеют разные IP-адреса. С точки зрения конфигурации кластера у каждого IP-адреса будет так называемый собственный круг. Однако, как и в случае с WSFC, многие реализации виртуализованы или находятся в общедоступном облаке, где на самом деле есть только одна виртуализованная сетевая карта (vNIC), доступная на сервере. Если все карты pNIC и vNIC подключены к одному физическому или виртуальному коммутатору, реальная избыточность на уровне сети отсутствует, поэтому настраивать несколько сетевых карт для виртуальной машины нет необходимости. Как правило, избыточность сети является неотъемлемой частью гипервизора для виртуализованных развертываний и, конечно же, общедоступного облака.
 
-Одно различие с несколькими сетевыми картами и Pacemaker и WSFC том, что Pacemaker позволяет несколько IP-адресов в одной и той же подсети, а WSFC не поддерживает. Дополнительные сведения на несколько подсетей и кластеры под управлением Linux см. в статье [Настройка нескольких подсетей](sql-server-linux-configure-multiple-subnet.md).
+Единственное отличие Pacemaker с несколькими сетевыми картами от WSFC заключается в том, что Pacemaker разрешает использовать несколько IP-адресов в одной подсети, а WSFC — нет. Дополнительные сведения о нескольких подсетях и кластерах Linux см. в статье о [настройке нескольких подсетей](sql-server-linux-configure-multiple-subnet.md).
 
 ### <a name="quorum-and-stonith"></a>Кворум и STONITH
-Требования к конфигурации кворума и относятся к группе Доступности или экземпляра отказоустойчивого Кластера с определенным развертываниям [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)].
+Конфигурация и требования кворума связаны с развертываниями группы доступности или экземпляра FCI [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)].
 
-STONITH является обязательным для поддерживаемых кластера Pacemaker. Используйте в документации от распространителя для настройки STONITH. Например, в [ограждения на основе хранилища](https://www.suse.com/documentation/sle_ha/book_sleha/data/sec_ha_storage_protect_fencing.html) для SLES. Имеется ли для сервера VMware vCenter для решений на основе ESXI агент STONITH. Дополнительные сведения см. в разделе [Stonith подключаемый модуль агента для VMWare виртуальных Машин VCenter SOAP ограждения (Unofficial)](https://github.com/olafrv/fence_vmware_soap).
+STONITH требуется для поддерживаемого кластера Pacemaker. Сведения о настройке STONITH см. в документации по дистрибутиву. Пример для SLES см. в статье об [ограждении на основе хранилища](https://www.suse.com/documentation/sle_ha/book_sleha/data/sec_ha_storage_protect_fencing.html). Для решений на основе ESXI доступен агент STONITH для VMware vCenter. Дополнительные сведения см. в статье [Stonith Plugin Agent for VMWare VM VCenter SOAP Fencing (Unofficial)](https://github.com/olafrv/fence_vmware_soap) (Агент подключаемого модуля Stonith для виртуальной машины VMWare в протоколе SOAP VCenter (неофициально)).
 
 > [!NOTE]
-> На момент написания этой статьи, Hyper-V не имеет решения для STONITH. Это верно для локальных развертываниях, а также влияет на развертываний Pacemaker на основе Azure, с помощью определенных дистрибутивов, таких как RHEL.
+> На момент написания этой статьи у Hyper-V не было решения для STONITH. Это также относится к локальным развертываниям и развертываниям Pacemaker на основе Azure, использующим конкретные дистрибутивы, например RHEL.
 
 ### <a name="interoperability"></a>Совместимость
-В данном разделе описываются способы взаимодействия с WSFC или другие дистрибутивы Linux кластер под управлением Linux.
+В этом разделе содержатся сведения о взаимодействии кластера на основе Linux с WSFC или другими дистрибутивами Linux.
 
 #### <a name="wsfc"></a>WSFC
-В настоящее время нет прямого способа для WSFC, а кластер Pacemaker для совместной работы. Это означает, что нет способа для создания группы Доступности или экземпляра отказоустойчивого Кластера, который поддерживается WSFC и Pacemaker. Тем не менее существует два решения взаимодействия, которые предназначены для групп доступности. Это единственный способ FCI может участвовать в конфигурации платформ — если оно участвует в качестве экземпляра в одном из этих двух сценариев:
--   Группа Доступности с типом кластера нет. Дополнительные сведения см. в разделе Windows [документации для групп доступности](../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).
--   Распределенные группы Доступности, которая — это специальный тип группы доступности, которая позволяет двух разных групп доступности, должен быть настроен как отдельную группу доступности. Дополнительные сведения о распределенных групп доступности, см. в документации [распределенные группы доступности](../database-engine/availability-groups/windows/distributed-availability-groups.md).
+Сейчас WSFC и кластер Pacemaker не могут взаимодействовать напрямую. Это означает, что невозможно создать группу доступности или экземпляр FCI, которые работают в WSFC и Pacemaker. Однако есть два решения для взаимодействия, оба из которых предназначены для групп доступности. Экземпляр FCI может быть задействован в кроссплатформенной конфигурации только в том случае, если он используется в качестве экземпляра в одном из следующих двух сценариев.
+-   Группа доступности с типом кластера None. Дополнительные сведения см. в [документации по группам доступности Windows](../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).
+-   Распределенная группа доступности, которая представляет собой особый тип группы, позволяющий настраивать две разные группы доступности в качестве собственной группы доступности. Дополнительные сведения о распределенных группах доступности см. в разделе [Распределенные группы доступности](../database-engine/availability-groups/windows/distributed-availability-groups.md).
 
 #### <a name="other-linux-distributions"></a>Другие дистрибутивы Linux
-В Linux все узлы кластера Pacemaker должны находиться в то же распределение. Например это означает, что узел RHEL не могут входить в кластер Pacemaker с узлом SLES. Основной причиной этого было отмечено ранее,: распределения может иметь различных версий и функциональные возможности, поэтому вещей может работать неправильно. Сочетание дистрибутивов имеет той же статье, что смешивание кластеров Wsfc и Linux: используйте параметр Нет или распределенных групп доступности.
+В Linux все узлы кластера Pacemaker должны находиться в одном дистрибутиве. Это значит, что узел RHEL не может входить в состав кластера Pacemaker, содержащего узел SLES. Основная причина была приведена ранее: дистрибутивы могут иметь разные версии и функциональные возможности, поэтому компоненты и процессы могут работать неправильно. Смешение дистрибутивов, как и сочетание WSFC и Linux, позволяет сделать вывод о необходимости использования групп доступности с типом None или распределенных групп доступности.
 
 ## <a name="next-steps"></a>Следующие шаги
-[Развертывание кластера Pacemaker для SQL Server в Linux](sql-server-linux-deploy-pacemaker-cluster.md)
+[Развертывание кластера Pacemaker для SQL Server на Linux](sql-server-linux-deploy-pacemaker-cluster.md)

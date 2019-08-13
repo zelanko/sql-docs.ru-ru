@@ -1,7 +1,7 @@
 ---
 title: Обратная косая черта (продолжение строки) (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 11/09/2017
+ms.date: 07/25/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -28,14 +28,15 @@ helpviewer_keywords:
 ms.assetid: c97fbb20-3d12-4d0b-9b52-62a229bc83c0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4cc949553b66e1bd8e8d501a40a367d23559bb96
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 54e1dcd9735610f7cc8f109f00aa56fa7728ce04
+ms.sourcegitcommit: 63c6f3758aaacb8b72462c2002282d3582460e0b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68121670"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68495434"
 ---
 # <a name="backslash-line-continuation-transact-sql"></a>Обратная косая черта (продолжение строки) (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 `\` разбивает длинную строковую константу, символ или двоичные данные на две или более строк для удобства чтения.  
@@ -57,7 +58,7 @@ ms.locfileid: "68121670"
  Продолжение строки.  
   
 ## <a name="remarks"></a>Примечания  
- Эта команда возвращает первую и последующие секции строки как одну строку без символов обратной косой черты.  
+Эта команда возвращает первую и последующие секции строки как одну строку без символов обратной косой черты. Новая строка после символа обратной косой черты должна представлять собой символ перевода строки (U+000A) или сочетание символов возврата каретки (U+000D) и перевода строки (U+000A) в указанном порядке. 
 
 ## <a name="examples"></a>Примеры  
 
@@ -84,7 +85,7 @@ def' AS [ColumnResult];
 В следующем примере использованы обратная косая черта и возврат каретки для разбиения двоичной строки на две строчки.  
 
 ```  
-SELECT 0xabc\  
+SELECT 0xabc\
 def AS [ColumnResult];  
   
 ```  

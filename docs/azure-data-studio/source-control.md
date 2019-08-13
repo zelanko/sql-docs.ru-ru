@@ -1,7 +1,7 @@
 ---
 title: Система управления версиями
 titleSuffix: Azure Data Studio
-description: Узнайте, как настроить систему управления версиями в студии данных Azure
+description: Сведения о настройке системы управления версиями в Azure Data Studio
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.topic: conceptual
@@ -11,42 +11,42 @@ ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
 ms.openlocfilehash: c278bcf6cff451396b3d677b203f207b68fd6dc5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67959281"
 ---
-#  <a name="using-source-control-in-includename-sosincludesname-sos-shortmd"></a>С помощью системы управления версиями в [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+#  <a name="using-source-control-in-includename-sosincludesname-sos-shortmd"></a>Использование системы управления версиями в [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] поддерживает Git для версии или системы управления версиями.
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] поддерживает Git для управления версиями/исходным кодом.
 
 
 ## <a name="git-support-in-includename-sosincludesname-sos-shortmd"></a>Поддержка Git в [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] поставляется с диспетчера системы управления версиями (SCM) Git, но вы по-прежнему нужно [установите Git (версии 2.0.0 или более поздней версии)](https://git-scm.com/download) прежде, чем эти функции доступны. 
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] поставляется вместе с диспетчером системы управления версиями (SCM) Git, но вам все равно нужно [установить Git (версии 2.0.0 или более поздней)](https://git-scm.com/download), чтобы получить доступ к этим функциям. 
 
 
 
-## <a name="open-an-existing-git-repository"></a>Откройте существующий репозиторий Git
+## <a name="open-an-existing-git-repository"></a>Открытие существующего репозитория Git
 
-1. В разделе **файл** меню, выберите **открыть папку...**
-2. Перейдите к папке, содержащей файлы, отслеживанием в git и нажмите кнопку **Выбор папки**. Вложенные папки в локальном репозитории, подходит для выбора здесь.
+1. В меню **Файл** выберите **Открыть папку...**
+2. Перейдите в папку с файлами, отслеживаемыми Git, и щелкните элемент **Выбрать папку**. Здесь можно выбрать вложенные папки в локальном репозитории.
 
 
-## <a name="initialize-a-new-git-repository"></a>Инициализируйте новый репозиторий git
+## <a name="initialize-a-new-git-repository"></a>Инициализация нового репозитория Git
 
-1. Выберите **системы управления версиями**, затем щелкните значок git.
+1. Выберите **Система управления версиями**, а затем щелкните значок Git.
 
-   ![Значок git системы управления версиями](media/source-control/source-control.png)
+   ![Значок Git для системы управления версиями](media/source-control/source-control.png)
 
-1. Введите путь к папке, необходимо инициализировать репозиторий Git и нажмите клавишу **ввод**.
+1. Введите путь к папке, которую нужно инициализировать в качестве репозитория Git, и нажмите клавишу **ВВОД**.
 
-   ![Инициализируйте репозиторий Git](media/source-control/initialize-git-repository.png)
+   ![инициализировать репозиторий Git](media/source-control/initialize-git-repository.png)
 
 ## <a name="working-with-git-repositories"></a>Работа с репозиториями Git
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] наследует его реализация Git из VS Code, но в настоящее время не поддерживает дополнительные поставщики SCM. Дополнительные сведения о работе с Git, после открытия или инициализируйте репозиторий, см. в разделе [поддержку Git в Visual STUDIO Code](https://code.visualstudio.com/docs/editor/versioncontrol#_git-support).
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] наследует свою реализацию Git от VS Code, но сейчас не поддерживает дополнительные поставщики SCM. Дополнительные сведения о работе с Git после открытия или инициализации репозитория см. в разделе [Поддержка Git в VS Code](https://code.visualstudio.com/docs/editor/versioncontrol#_git-support).
 
 
 ## <a name="additional-resources"></a>Дополнительные ресурсы

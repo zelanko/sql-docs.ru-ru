@@ -1,7 +1,7 @@
 ---
 title: API расширяемости
 titleSuffix: Azure Data Studio
-description: Дополнительные сведения о расширяемости API-интерфейсы для Azure Data Studio
+description: Сведения об интерфейсах API расширяемости для Azure Data Studio
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.topic: conceptual
@@ -11,31 +11,31 @@ ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
 ms.openlocfilehash: 10ebcf94c673df4e8016ae2d0c84d7a5bd89824f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67959629"
 ---
-# <a name="azure-data-studio-extensibility-apis"></a>Azure Data Studio расширяемости API-интерфейсов
+# <a name="azure-data-studio-extensibility-apis"></a>Интерфейсы API расширяемости Azure Data Studio
 
-[!INCLUDE[name-sos](../includes/name-sos.md)] предоставляет интерфейс API, расширения можно использовать для взаимодействия с другими частями Studio данных Azure, такие как обозреватель объектов. Эти API доступны из [ `src/sql/sqlops.d.ts` ](https://github.com/Microsoft/azuredatastudio/blob/master/src/sql/sqlops.d.ts) файлов, которые описаны ниже.
+[!INCLUDE[name-sos](../includes/name-sos.md)] предоставляет интерфейсы API, с помощью которых расширения могут взаимодействовать с другими компонентами Azure Data Studio, такими как обозреватель объектов. Эти интерфейсы API доступны в файле [`src/sql/sqlops.d.ts`](https://github.com/Microsoft/azuredatastudio/blob/master/src/sql/sqlops.d.ts) и описываются ниже.
 
 ## <a name="connection-management"></a>Управление подключениями
 `sqlops.connection`
 
-### <a name="top-level-functions"></a>Функции верхнего уровня
+### <a name="top-level-functions"></a>Общие функции
 
-- `getCurrentConnection(): Thenable<sqlops.connection.Connection>` Получает текущее подключение, исходя из активного редактора или выбранного в обозревателе объектов.
+- `getCurrentConnection(): Thenable<sqlops.connection.Connection>` — возвращает текущее подключение в соответствии с активным выбором в редакторе или обозревателе объектов.
 
-- `getActiveConnections(): Thenable<sqlops.connection.Connection[]>` Получает список всех пользовательских подключений, которые активны. Возвращает пустой список, если подключения отсутствуют.
+- `getActiveConnections(): Thenable<sqlops.connection.Connection[]>` — возвращает список всех активных подключений пользователя. Если таких подключений нет, возвращается пустой список.
 
-- `getCredentials(connectionId: string): Thenable<{ [name: string]: string }>` Возвращает словарь, содержащий учетные данные, связанные с подключением. Они в противном случае возвращаются в виде части в словарь параметров `sqlops.connection.Connection` объекта, но получить удаляются из этого объекта. 
+- `getCredentials(connectionId: string): Thenable<{ [name: string]: string }>` — возвращает словарь, который содержит учетные данные, связанные с подключением. Они также возвращаются в словаре параметров в объекте `sqlops.connection.Connection`, но при использовании данной функции они удаляются из этого объекта. 
 
 ### `Connection`
-- `options: { [name: string]: string }` Словарь параметров соединения
-- `providerName: string` Имя поставщика подключения (например) «MSSQL»)
-- `connectionId: string` Уникальный идентификатор для подключения
+- `options: { [name: string]: string }` — словарь параметров подключения.
+- `providerName: string` — имя поставщика подключений (например, "MSSQL").
+- `connectionId: string` — уникальный идентификатор подключения.
 
 ### <a name="example-code"></a>Пример кода
 ```
@@ -63,41 +63,41 @@ credentials: {
 `sqlops.objectexplorer`
 
 
-### <a name="top-level-functions"></a>Функции верхнего уровня
-- `getNode(connectionId: string, nodePath?: string): Thenable<sqlops.objectexplorer.ObjectExplorerNode>` Получите соответствующий данного соединения и путь узла в обозревателе. Если путь не указан, он возвращает узел верхнего уровня для данного соединения. Если ни один узел по указанному пути, он возвращает `undefined`. Примечание. `nodePath` Для объекта создается служба средств SQL серверной частью и трудно создавать вручную. Улучшения в будущих обновлениях API, позволит вам получить узлы на основе метаданных, указанные вами сведения об узле, например имя, тип и схемы.
+### <a name="top-level-functions"></a>Общие функции
+- `getNode(connectionId: string, nodePath?: string): Thenable<sqlops.objectexplorer.ObjectExplorerNode>` — возвращает узел обозревателя объектов, соответствующий данному подключению и пути. Если путь не указан, возвращается узел верхнего уровня для данного подключения. Если по указанному пути нет узла, возвращается значение `undefined`. Примечание. Значение `nodePath` для объекта создается сервером службы средств SQL; составить его вручную сложно. В будущем с помощью API можно будет получать узлы на основе предоставленных метаданных, таких как имя, тип и схема узла.
 
-- `getActiveConnectionNodes(): Thenable<sqlops.objectexplorer.ObjectExplorerNode>` Получение всех активных узлах обозревателя объектов подключения.
+- `getActiveConnectionNodes(): Thenable<sqlops.objectexplorer.ObjectExplorerNode>` — возвращает все активные узлы подключений в обозревателе объектов.
 
-- `findNodes(connectionId: string, type: string, schema: string, name: string, database: string, parentObjectNames: string[]): Thenable<sqlops.objectexplorer.ObjectExplorerNode[]>` Поиск всех узлов обозревателя объектов, соответствующих указанных метаданных. `schema`, `database`, И `parentObjectNames` аргументы должны быть `undefined` когда они не применяются. `parentObjectNames` Представляет список, не принадлежащего базе данных родительских объектов, от самого высокого до нижнего уровня в обозревателе объектов, в которой находится нужный объект в разделе. Например, при поиске столбец «column1», к которой принадлежит таблице «schema1.table1» и базы данных «database1» с Идентификатором соединения `connectionId`, вызовите `findNodes(connectionId, 'Column', undefined, 'column1', 'database1', ['schema1.table1'])`. Также см. в разделе [список типов, которые по умолчанию поддерживает Azure Data Studio](https://github.com/Microsoft/azuredatastudio/wiki/Object-Explorer-types-supported-by-FindNodes-API) для этого вызова API.
+- `findNodes(connectionId: string, type: string, schema: string, name: string, database: string, parentObjectNames: string[]): Thenable<sqlops.objectexplorer.ObjectExplorerNode[]>` — поиск всех узлов обозревателя объектов, соответствующих указанным метаданным. Аргументы `schema`, `database` и `parentObjectNames` должны иметь значение `undefined`, если они не применимы. `parentObjectNames` — это список родительских объектов, отличных от баз данных, для нужного объекта от самого высокого до самого низкого уровня в обозревателе объектов. Например, для поиска столбца "column1", относящегося к таблице "schema1.table1" и базе данных "database1" с идентификатором подключения `connectionId`, выполните вызов `findNodes(connectionId, 'Column', undefined, 'column1', 'database1', ['schema1.table1'])`. Кроме того, см. [список типов, поддерживаемых по умолчанию в Azure Data Studio](https://github.com/Microsoft/azuredatastudio/wiki/Object-Explorer-types-supported-by-FindNodes-API) для этого вызова API.
 
 ### <a name="objectexplorernode"></a>ObjectExplorerNode
-- `connectionId: string` Идентификатор подключения, которое узел находится в
+- `connectionId: string` — идентификатор подключения, к которому относится узел.
 
-- `nodePath: string` Путь к узлу, как использовать для вызова `getNode` функции.
+- `nodePath: string` — путь к узлу, используемый для вызова функции `getNode`.
 
-- `nodeType: string` Строка, представляющая тип узла
+- `nodeType: string` — строка, представляющая тип узла.
 
-- `nodeSubType: string` Строка, представляющая подтип узла
+- `nodeSubType: string` — строка, представляющая подтип узла.
 
-- `nodeStatus: string` Строка, представляющая состояние узла
+- `nodeStatus: string` — строка, представляющая состояние узла.
 
-- `label: string` Метка для узла, так как он отображается в обозревателе объектов
+- `label: string` — метка узла, отображаемая в обозревателе объектов.
 
-- `isLeaf: boolean` Ли является конечным узлом узла и поэтому не имеет дочерних элементов
+- `isLeaf: boolean` — является ли узел листовым, то есть не имеет дочерних узлов.
 
-- `metadata: sqlops.ObjectMetadata` Метаданные, описывающие объект, представленный этим узлом
+- `metadata: sqlops.ObjectMetadata` — метаданные, которые описывают объект, представленный этим узлом.
 
-- `errorMessage: string` Сообщение отображается, если узел находится в состоянии ошибки
+- `errorMessage: string` — сообщение, которое выводится, если узел находится в состоянии ошибки.
 
-- `isExpanded(): Thenable<boolean>` Находится ли узел, раскрыв в обозревателе объектов
+- `isExpanded(): Thenable<boolean>` — развернут ли узел в обозревателе объектов в настоящее время.
 
-- `setExpandedState(expandedState: vscode.TreeItemCollapsibleState): Thenable<void>` Задается ли развернут или свернут узел. Если состояние имеет значение None, узел не изменится.
+- `setExpandedState(expandedState: vscode.TreeItemCollapsibleState): Thenable<void>` — развертывание или свертывание узла. Если задается значение None, состояние узла не меняется.
 
-- `setSelected(selected: boolean, clearOtherSelections?: boolean): Thenable<void>` Задается ли узел выбран. Если `clearOtherSelections` имеет значение true, снимите все остальные флажки, при создании нового выделения. Если он имеет значение false, оставьте существующие параметры. `clearOtherSelections` по умолчанию имеет значение true, если `selected` имеет значение true и false, когда `selected` имеет значение false.
+- `setSelected(selected: boolean, clearOtherSelections?: boolean): Thenable<void>` — задает состояние выбора узла. Если `clearOtherSelections` имеет значение true, при новом выборе текущий выбор отменяется. Если задано значение false, текущий выбор сохраняется. `clearOtherSelections` по умолчанию имеет значение true, если `selected` имеет значение true, и false, если `selected` имеет значение false.
 
-- `getChildren(): Thenable<sqlops.objectexplorer.ObjectExplorerNode[]>` Получите все дочерние узлы данного узла. Возвращает пустой список, если нет дочерних элементов.
+- `getChildren(): Thenable<sqlops.objectexplorer.ObjectExplorerNode[]>` — возвращает все дочерние узлы этого узла. Если дочерних узлов нет, возвращается пустой список.
 
-- `getParent(): Thenable<sqlops.objectexplorer.ObjectExplorerNode>` Получает родительский узел данного узла. Возвращает не определено, если родительский элемент отсутствует.
+- `getParent(): Thenable<sqlops.objectexplorer.ObjectExplorerNode>` — возвращает родительский узел этого узла. При отсутствии родительского узла возвращается значение undefined.
 
 ### <a name="example-code"></a>Пример кода
 
@@ -157,8 +157,8 @@ vscode.commands.registerCommand('mssql.objectexplorer.interact', () => {
 });
 ```
 
-## <a name="proposed-apis"></a>Предложенный API-интерфейсов
+## <a name="proposed-apis"></a>Предлагаемые интерфейсы API
 
-Мы добавили предлагаемых API-интерфейсы для допускают использование расширений для отображения пользовательского интерфейса в диалоговые окна, мастера и вкладок документов, предоставляет другие возможности. См. в разделе [предложенное файл типы API](https://github.com/Microsoft/azuredatastudio/blob/master/src/sql/sqlops.proposed.d.ts) дополнительную документацию, однако учтите, что эти интерфейсы API не может быть изменена в любое время. Примеры того, как использовать некоторые из этих интерфейсов API можно найти в [«sqlservices» пример расширения](https://github.com/Microsoft/azuredatastudio/tree/master/samples/sqlservices).
+Мы добавили предлагаемые интерфейсы API, которые, помимо прочего, позволяют расширениям отображать настраиваемый пользовательский интерфейс в диалоговых окнах, мастерах и на вкладках документов. Дополнительные сведения см. в [файле с типами предлагаемых интерфейсов API](https://github.com/Microsoft/azuredatastudio/blob/master/src/sql/sqlops.proposed.d.ts), однако имейте в виду, что эти API могут быть изменены в любое время. Примеры использования некоторых из этих API можно найти в [примере расширения sqlservices](https://github.com/Microsoft/azuredatastudio/tree/master/samples/sqlservices).
 
 

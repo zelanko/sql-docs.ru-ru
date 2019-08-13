@@ -1,6 +1,6 @@
 ---
 title: Работа экземпляра отказоустойчивого кластера — SQL Server на Linux
-description: В этой статье объясняется, как для работы SQL Server экземпляра отказоустойчивого кластера (FCI) в Linux.
+description: В этой статье описывается работа экземпляра отказоустойчивого кластера (FCI) SQL Server на Linux.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -10,62 +10,62 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
 ms.openlocfilehash: a29d1d61b628126d03458fced964bde7c92b6d68
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68032296"
 ---
 # <a name="operate-failover-cluster-instance---sql-server-on-linux"></a>Работа экземпляра отказоустойчивого кластера — SQL Server на Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-В этой статье объясняется, как для работы SQL Server экземпляра отказоустойчивого кластера (FCI) в Linux. Если вы не создали экземпляр отказоустойчивого Кластера SQL Server в Linux, см. в разделе [экземпляр Настройка отказоустойчивого кластера — SQL Server в Linux](sql-server-linux-shared-disk-cluster-configure.md). 
+В этой статье описывается работа экземпляра отказоустойчивого кластера (FCI) SQL Server на Linux. Если вы еще не создали экземпляр FCI SQL Server на Linux, см. статью [Настройка экземпляра отказоустойчивого кластера — SQL Server на Linux](sql-server-linux-shared-disk-cluster-configure.md). 
 
 ## <a name="failover"></a>Отработка отказа
 
-Отработка отказа для FCI похоже на отказоустойчивый кластер Windows Server (WSFC). Если узел кластера, размещение FCI испытывает определенные ошибки, FCI должен автоматически выполнить отработку отказа на другой узел. В отличие от кластера WSFC нет способа для задания предпочтительных владельцев, чтобы Pacemaker выбирает узел, который будет новым узлом для FCI.
+Отработка отказа для FCI аналогична работе отказоустойчивого кластера Windows Server (WSFC). Если на узле кластера, где размещен экземпляр FCI, возникают какие-либо сбои, экземпляр FCI должен автоматически выполнить отработку отказа на другой узел. В отличие от WSFC здесь невозможно задать предпочтительных владельцев, поэтому Pacemaker выбирает узел, который будет новым узлом для экземпляра FCI.
 
-Бывают случаи, может потребоваться вручную выполнить отказоустойчивого Кластера на другой узел. Процесс не таким же, как экземпляры отказоустойчивого кластера в кластере WSFC. В кластере WSFC выполняется отработка отказа ресурсов на уровне роли. В Pacemaker выберите ресурс для перемещения и при условии, что все ограничения заданы правильно, все остальное будет переместить также. 
+Иногда может потребоваться вручную перевести экземпляр FCI на другой узел. Этот процесс отличается от действий с экземплярами FCI в кластере WSFC. В кластере WSFC отработка отказа ресурсов выполняется на уровне роли. В Pacemaker вы выбираете ресурс для перемещения и, поскольку предполагается, что все ограничения верны, будут перемещены и все остальные компоненты. 
 
-Способ отработки отказа зависит от дистрибутива Linux. Следуйте инструкциям для дистрибутива linux.
+Способ отработки отказа зависит от дистрибутива Linux. Следуйте инструкциям для дистрибутива Linux.
 
 - [RHEL или Ubuntu](#-manual-failover-rhel-or-ubuntu)
 - [SLES](#-manual-failover-sles)
 
-## <a name = "#-manual-failover-rhel-or-ubuntu"></a> На другой ресурс вручную (RHEL или Ubuntu)
+## <a name = "#-manual-failover-rhel-or-ubuntu"></a> Отработка отказа вручную (RHEL или Ubuntu)
 
-Чтобы выполнить отработку отказа вручную, обновите Red Hat Enterprise Linux (RHEL) или на серверах Ubuntu выполните следующие действия.
+Чтобы выполнить отработку отказа вручную, на серверах Red Hat Enterprise Linux (RHEL) или Ubuntu выполните приведенные далее действия.
 1.  Выполните следующую команду: 
 
    ```bash
    sudo pcs resource move <FCIResourceName> <NewHostNode> 
    ```
 
-   \<FCIResourceName > — имя ресурса Pacemaker для экземпляра отказоустойчивого Кластера SQL Server.
+   \<FCIResourceName> — имя ресурса Pacemaker для экземпляра FCI SQL Server.
 
-   \<NewHostNode > — имя узла кластера, который будет размещаться FCI. 
+   \<NewHostNode> — имя узла кластера, на котором будет размещен экземпляр FCI. 
 
-   Любое подтверждение не будет.
+   Подтверждения выводиться не будут.
 
-2.  Во время перехода на другой ресурс вручную Pacemaker создает ограничение расположения для ресурсов, которая была выбрана для перемещения вручную. Чтобы просмотреть это ограничение, выполните `sudo pcs constraint`.
+2.  Во время отработки отказа вручную Pacemaker создает ограничение расположения для ресурса, выбранного для перемещения. Чтобы просмотреть это ограничение, выполните команду `sudo pcs constraint`.
 
-3.  После завершения отработки отказа, необходимо удалить ограничение, выполнив `sudo pcs resource clear <FCIResourceName>`. 
+3.  После завершения отработки отказа удалите ограничение, выполнив команду `sudo pcs resource clear <FCIResourceName>`. 
 
-\<FCIResourceName > — имя ресурса для экземпляра отказоустойчивого Кластера Pacemaker. 
+\<FCIResourceName> — имя ресурса Pacemaker для экземпляра FCI. 
 
-## <a name = "#-manual-failover-sles"></a> На другой ресурс вручную (SLES)
+## <a name = "#-manual-failover-sles"></a> Отработка отказа вручную (SLES)
 
 
-В Suse Linux Enterprise Server (SLES), используйте `migrate` команду, чтобы вручную выполните отработку отказа экземпляра отказоустойчивого Кластера SQL Server. Пример:
+Чтобы выполнить отработку отказа экземпляра FCI SQL Server вручную, в Suse Linux Enterprise Server (SLES) запустите команду `migrate`. Пример:
 
 ```bash
 crm resource migrate <FCIResourceName> <NewHostNode>
 ```
 
-\<FCIResourceName > — это имя reource для экземпляра отказоустойчивого кластера. 
+\<FCIResourceName> — имя ресурса для экземпляра отказоустойчивого кластера. 
 
-\<NewHostNode > — имя нового узла назначения. 
+\<NewHostNode> — имя нового узла назначения. 
 
 
 <!---
@@ -77,8 +77,8 @@ crm resource migrate <FCIResourceName> <NewHostNode>
 
 --->
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Next Steps
 
-- [Настроить экземпляр отказоустойчивого кластера — SQL Server в Linux](sql-server-linux-shared-disk-cluster-configure.md)
+- [Настройка экземпляра отказоустойчивого кластера — SQL Server на Linux](sql-server-linux-shared-disk-cluster-configure.md)
 
 <!--Image references-->

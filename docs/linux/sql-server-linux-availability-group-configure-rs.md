@@ -1,7 +1,7 @@
 ---
-title: Настройка группы доступности SQL Server для чтения и масштабирования в Linux
+title: Настройка группы доступности SQL Server для чтения и масштабирования в Linux
 titleSuffix: SQL Server
-description: Сведения о настройке SQL Server всегда в группе доступности (AG) для рабочих нагрузок чтения и масштабирования в Linux.
+description: Сведения о настройке группы доступности Always On SQL Server для рабочих нагрузок для чтения и масштабирования в Linux.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -10,17 +10,17 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: fcfa4510c9f33ee3aa6fc33cafb43cb627b0f53c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68027259"
 ---
-# <a name="configure-a-sql-server-availability-group-for-read-scale-on-linux"></a>Настройка группы доступности SQL Server для чтения и масштабирования в Linux
+# <a name="configure-a-sql-server-availability-group-for-read-scale-on-linux"></a>Настройка группы доступности SQL Server для чтения и масштабирования в Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Вы можете настроить SQL Server всегда в группе доступности (AG) для рабочих нагрузок чтения и масштабирования в Linux. Существует два типа архитектур для групп доступности. Архитектура для обеспечения высокой доступности диспетчер кластеров использует для предоставления Улучшенная непрерывность работы. Эта архитектура также могут включать реплик для чтения и масштабирования. Чтобы создать архитектура высокого уровня доступности, см. в разделе [настроить SQL Server группы доступности AlwaysOn для обеспечения высокой доступности в Linux](sql-server-linux-availability-group-configure-ha.md). Другая архитектура поддерживает только рабочие нагрузки для чтения и масштабирования. В этой статье описывается создание группы доступности для рабочих нагрузок чтения и масштабирования без диспетчера кластеров. Эта архитектура обеспечивает только чтение и масштабирование. Она не поддерживает высокий уровень доступности.
+Группу доступности Always On SQL Server для рабочих нагрузок для чтения и масштабирования можно настроить в Linux. Существует два типа архитектур для групп доступности. Архитектура для высокого уровня доступности использует диспетчер кластера для улучшенного обеспечения непрерывности бизнес-процессов. Она может также содержать реплики для чтения и масштабирования. Сведения о создании архитектуры с высоким уровнем доступности см. в статье [Настройка группы доступности Always On SQL Server для обеспечения высокой доступности в Linux](sql-server-linux-availability-group-configure-ha.md). Другая архитектура поддерживает только рабочие нагрузки для чтения и масштабирования. В этой статье описывается создание группы доступности для рабочих нагрузок чтения и масштабирования без диспетчера кластеров. Эта архитектура обеспечивает только чтение и масштабирование. Она не поддерживает высокий уровень доступности.
 
 > [!NOTE]
 > В группу доступности с `CLUSTER_TYPE = NONE` могут входить реплики, размещенные на различных платформах операционных систем. Она не поддерживает высокий уровень доступности. 
@@ -67,7 +67,7 @@ ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE;
 
 [!INCLUDE [Create post](../includes/ss-linux-cluster-availability-group-create-post.md)]
 
-У этой группы доступности нет конфигурации высокого уровня доступности. Если требуется высокий уровень доступности, следуйте инструкциям в [Настройка группы доступности AlwaysOn для SQL Server в Linux](sql-server-linux-availability-group-configure-ha.md). В частности, для создания группы Доступности с `CLUSTER_TYPE=WSFC` (в Windows) или `CLUSTER_TYPE=EXTERNAL` (в Linux). Затем интеграция с диспетчером кластера с помощью либо отказоустойчивому кластеру Windows на Windows или Pacemaker в Linux.
+У этой группы доступности нет конфигурации высокого уровня доступности. Если вам требуется высокий уровень доступности, следуйте инструкциям в статье [Настройка группы доступности Always On для SQL Server в Linux](sql-server-linux-availability-group-configure-ha.md). В частности, создайте группу доступности с параметром `CLUSTER_TYPE=WSFC` (в Windows) или `CLUSTER_TYPE=EXTERNAL` (в Linux). Затем выполните интеграцию с диспетчером кластеров с помощью отказоустойчивой кластеризации Windows Server в Windows или Pacemaker в Linux.
 
 ## <a name="connect-to-read-only-secondary-replicas"></a>Подключение к вторичным репликам только для чтения
 

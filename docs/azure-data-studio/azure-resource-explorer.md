@@ -1,7 +1,7 @@
 ---
-title: Изучите ресурсы Azure SQL с помощью обозревателя ресурсов Azure
+title: Просмотр ресурсов SQL Azure с помощью обозреватель ресурсов Azure
 titleSuffix: Azure Data Studio
-description: Узнайте, как для обзора и управления Azure SQL Server, базы данных SQL Azure и управляемый экземпляр SQL Azure через обозреватель ресурсов Azure.
+description: Сведения о том, как просматривать Azure SQL Server, базу данных SQL Azure и Управляемый экземпляр Azure SQL и управлять ими с помощью обозревателя ресурсов Azure.
 ms.custom: seodec18
 author: yanancai
 ms.author: yanacai
@@ -10,96 +10,96 @@ ms.topic: quickstart
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.openlocfilehash: 87a0364555b9da22c89470965c281b3d939b6f4f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67959719"
 ---
-# <a name="explore-and-manage-azure-sql-resources-with-azure-resource-explorer"></a>Просмотр и управление ресурсами Azure SQL с помощью обозревателя ресурсов Azure
+# <a name="explore-and-manage-azure-sql-resources-with-azure-resource-explorer"></a>Просмотр ресурсов SQL Azure и управление ими с помощью обозревателя ресурсов Azure
 
-В этом документе вы узнаете, как могут просматривать и управлять Azure SQL Server, базы данных Azure SQL и ресурсы управляемый экземпляр SQL Azure с помощью обозревателя ресурсов Azure в [!INCLUDE [Azure Data Studio](../includes/name-sos-short.md)].
+Этот документ описывает, как просматривать ресурсы Azure SQL Server, базы данных SQL Azure и Управляемого экземпляра Azure SQL и управлять ими с помощью обозревателя ресурсов Azure в [!INCLUDE [Azure Data Studio](../includes/name-sos-short.md)].
 
 >[!NOTE]
->Обозреватель ресурсов Azure будут поддерживаться в предварительной версии SQL Server 2019 в октябре. После этого можно установить расширения предварительной версии через [Диспетчер расширений](extensions.md) или с помощью **файл** > **установить пакет из пакета VSIX**.
+>Обозреватель ресурсов Azure будет поддерживаться в предварительной версии SQL Server 2019 за октябрь. После этого вы сможете установить расширение предварительной версии с помощью [диспетчера расширений](extensions.md) или элемента **Файл**  >  **Установить пакет из пакета VSIX**.
 
 
 ## <a name="connect-to-azure"></a>Подключение к Azure
 
-После установки подключаемый модуль предварительной версии SQL Azure отобразится в строке меню слева. Щелкните значок, чтобы открыть обозреватель ресурсов Azure. Если вы не видите значок Azure, в строке меню слева щелкните правой кнопкой мыши и выберите **обозревателя ресурсов Azure**.
+После установки подключаемого модуля предварительной версии SQL в левой строке меню появится значок Azure. Щелкните его, чтобы открыть обозреватель ресурсов Azure. Если вы не видите значок Azure, щелкните правой кнопкой мыши в левой строке меню и выберите **Обозреватель ресурсов Azure**.
 
-### <a name="add-an-azure-account"></a>Добавить учетную запись Azure
+### <a name="add-an-azure-account"></a>Добавление учетной записи Azure
 
-Чтобы просмотреть ресурсы SQL, связанные с учетной записью Azure, необходимо сначала добавить учетную запись для [!INCLUDE [Azure Data Studio](../includes/name-sos-short.md)].
+Чтобы просмотреть ресурсы SQL, связанные с учетной записью Azure, нужно сначала добавить учетную запись в [!INCLUDE [Azure Data Studio](../includes/name-sos-short.md)].
 
-1. Откройте **связанные учетные записи** диалогового окна через значок управления учетной записью, в левом нижнем или через **вход в Azure...**  ссылку в обозревателе ресурсов Azure.
+1. Откройте диалоговое окно **Связанные учетные записи** с помощью значка управления учетной записью в левом нижнем углу или ссылки **Войти в Azure...** в обозревателе ресурсов Azure.
 
-    ![Войдите в Azure](media/azure-resource-explorer/sign-in-to-azure.png)
+    ![Войти в Azure](media/azure-resource-explorer/sign-in-to-azure.png)
 
-2. В **связанные учетные записи** диалоговое окно, нажмите кнопку **добавить учетную запись**.
+2. В диалоговом окне **Связанные учетные записи** щелкните **Добавить учетную запись**.
 
-    ![Добавить учетную запись Azure](media/azure-resource-explorer/add-an-azure-account.png)
+    ![Добавление учетной записи Azure](media/azure-resource-explorer/add-an-azure-account.png)
 
-3. Нажмите кнопку **копирование и открытие** чтобы открыть в браузере для проверки подлинности.
+3. Щелкните **Копировать и открыть**, чтобы открыть браузер для проверки подлинности.
 
-    ![Проверки подлинности откройте страницу в браузере](media/azure-resource-explorer/open-authentication-in-browser.png)
+    ![Открытие страницы проверки подлинности в браузере](media/azure-resource-explorer/open-authentication-in-browser.png)
 
-4. Вставить **пользовательский код** в веб-страницы и нажмите кнопку **Продолжить** для проверки подлинности.
+4. Вставьте **Пользовательский код** на веб-страницу и нажмите кнопку **Продолжить** для проверки подлинности.
 
     ![Проверка подлинности в браузере](media/azure-resource-explorer/authenticate-in-browser.png)
 
-5. В [!INCLUDE [Azure Data Studio](../includes/name-sos-short.md)] должны теперь появиться вошедшего в учетной записи Azure в **связанные учетные записи** диалоговое окно.
+5. В [!INCLUDE [Azure Data Studio](../includes/name-sos-short.md)] учетная запись Azure, с помощью которой был выполнен вход, теперь должна отображаться в диалоговом окне **Связанные учетные записи**.
 
-    ![Учетная запись Azure в вошедшего в систему](media/azure-resource-explorer/signed-in-azure-account.png)
+    ![Учетная запись Azure вошедшего пользователя](media/azure-resource-explorer/signed-in-azure-account.png)
 
-### <a name="add-more-azure-accounts"></a>Добавление учетных записей Azure
+### <a name="add-more-azure-accounts"></a>Добавление дополнительных учетных записей Azure
 
-Несколько учетных записей Azure, поддерживаются в [!INCLUDE [Azure Data Studio](../includes/name-sos-short.md)]. Чтобы добавить учетные записи Azure, нажмите кнопку в правой верхней части **связанные учетные записи** диалогового окна и выполните те же действия с к добавлению раздела учетной записи Azure для добавления учетных записей Azure.
+В [!INCLUDE [Azure Data Studio](../includes/name-sos-short.md)] поддерживается несколько учетных записей Azure. Чтобы добавить дополнительные учетные записи Azure, нажмите кнопку в правой верхней части диалогового окна **Связанные учетные записи** и выполните те же действия, которые описаны в разделе "Добавление учетной записи Azure".
 
-![Добавьте учетную запись Azure](media/azure-resource-explorer/add-more-azure-account.png)
+![Добавление дополнительной учетной записи Azure](media/azure-resource-explorer/add-more-azure-account.png)
 
 ### <a name="remove-an-azure-account"></a>Удаление учетной записи Azure
 
-Чтобы удалить существующую регистрируются в учетной записи Azure:
+Чтобы удалить существующую учетную запись Azure пользователя, выполнившего вход, сделайте следующее.
 
-1. Откройте **связанные учетные записи** диалогового окна через значок управления учетной записью в левом нижнем.
-2. Нажмите кнопку **X** кнопку справа от учетной записи Azure, чтобы удалить его.
+1. Откройте диалоговое окно **Связанные учетные записи** с помощью значка управления учетной записью в левом нижнем углу.
+2. Нажмите кнопку **X** справа от учетной записи Azure, чтобы удалить ее.
 
-    ![Удалить учетную запись Azure](media/azure-resource-explorer/remove-azure-account.png)
+    ![Удаление учетной записи Azure](media/azure-resource-explorer/remove-azure-account.png)
 
-## <a name="filter-subscription"></a>Фильтровать подписки
+## <a name="filter-subscription"></a>Фильтрация подписок
 
-После входа в учетную запись Azure, все подписки, связанный с, которые отображают учетной записи Azure в обозревателе ресурсов Azure. Вы можете отфильтровать подписок для каждой учетной записи Azure.
+После входа в учетную запись Azure в обозревателе ресурсов Azure отображаются все связанные с ней подписки. Вы можете отфильтровать их для каждой учетной записи Azure.
 
-1. Нажмите кнопку **подписки выберите** кнопку в правой части учетной записи Azure.
+1. Нажмите кнопку **Выбрать подписку** справа от учетной записи Azure.
 
-   ![Фильтровать подписки](media/azure-resource-explorer/filter-subscription.png)
+   ![Фильтрация подписок](media/azure-resource-explorer/filter-subscription.png)
 
-2. Установите флажки для тех подписок учетной записи, вы хотите просмотреть, а затем нажмите кнопку **ОК**.
+2. Установите флажки для подписок учетной записи, которые требуется просмотреть, и нажмите кнопку **ОК**.
 
-   ![Выберите подписку](media/azure-resource-explorer/select-subscription.png)
+   ![Выбор подписки](media/azure-resource-explorer/select-subscription.png)
 
-## <a name="explore-azure-sql-resources"></a>Изучите ресурсы Azure SQL
+## <a name="explore-azure-sql-resources"></a>Просмотр ресурсов SQL Azure
 
-Чтобы перейти на ресурс Azure SQL в обозревателе ресурсов Azure, разверните учетные записи Azure и тип группы ресурсов.
+Для перемещения по ресурсам SQL Azure в обозревателе ресурсов Azure разверните группу учетных записей Azure и типов ресурсов.
 
-Обозреватель ресурсов Azure в настоящее время поддерживает Azure SQL Server, базы данных SQL Azure и управляемый экземпляр SQL Azure.
+Сейчас обозреватель ресурсов Azure поддерживает Azure SQL Server, базу данных SQL Azure и Управляемый экземпляр SQL Azure.
 
-## <a name="connect-to-azure-sql-resources"></a>Подключение к ресурсам Azure SQL
+## <a name="connect-to-azure-sql-resources"></a>Подключение к ресурсам SQL Azure
 
-Обозреватель ресурсов Azure обеспечивают быстрый доступ, который позволяет подключаться к серверам SQL и базы данных для запроса и управления. 
+Обозреватель ресурсов Azure обеспечивают быстрый доступ, позволяя подключаться к серверам и базам данных SQL для выполнения запросов и управления. 
 
-1. Изучите данный ресурс SQL, которые вы хотите подключиться к с представлении в виде дерева.
-2. Щелкните ресурс правой кнопкой мыши и выберите **Connect**, также можно найти кнопку «Подключить» в правой части ресурса.
+1. Изучите ресурс SQL, к которому вы хотите подключиться, из представления в виде дерева.
+2. Щелкните ресурс правой кнопкой мыши и выберите пункт **Подключить**. Кроме того, можно использовать кнопку подключения справа от ресурса.
 
-   ![Подключение к ресурсу Azure SQL](media/azure-resource-explorer/connect-to-azure-sql-resource.png)
+   ![Подключение к ресурсу SQL Azure](media/azure-resource-explorer/connect-to-azure-sql-resource.png)
 
-3. В открытой **подключения** диалоговое окно, введите пароль и нажмите кнопку **Connect**.
+3. В открывшемся диалоговом окне **Подключение** введите свой пароль и нажмите кнопку **Подключить**.
 
    ![Диалоговое окно подключения SQL](media/azure-resource-explorer/sql-connection-dialog.png)
-4. **Серверы** автоматически откроется окно с помощью новой подключенной базе SQL server/после успешного подключения.
+4. После установки подключения автоматически открывается окно **Серверы** с новым подключенным сервером или базой данных SQL.
 
 ## <a name="next-steps"></a>Следующие шаги
 
-- [Используйте [!INCLUDE[Azure Data Studio](../includes/name-sos-short.md)] подключение и запрос базы данных Azure SQL](quickstart-sql-database.md)
-- [Используйте [!INCLUDE[Azure Data Studio](../includes/name-sos-short.md)] подключение и запрос данных в хранилище данных SQL Azure](quickstart-sql-dw.md)
+- [Использование [!INCLUDE[Azure Data Studio](../includes/name-sos-short.md)] для подключения и отправки запроса к базе данных SQL Azure](quickstart-sql-database.md)
+- [Подключение к Хранилищу данных SQL Azure и запрос данных с помощью [!INCLUDE[Azure Data Studio](../includes/name-sos-short.md)]](quickstart-sql-dw.md)

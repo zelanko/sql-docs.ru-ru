@@ -1,7 +1,7 @@
 ---
-title: Справочник по аздата BDC Spark
+title: Справочник по azdata bdc spark
 titleSuffix: SQL Server big data clusters
-description: Справочная статья по командам аздата BDC Spark.
+description: Справочная статья по командам azdata bdc spark.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -10,25 +10,25 @@ ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: cdc07f6feed29606eb24dc98790d7c8ffa4754c9
-ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68426064"
 ---
-# <a name="azdata-bdc-spark"></a>аздата BDC Spark
+# <a name="azdata-bdc-spark"></a>azdata bdc spark
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-В следующей статье содержится справочник по командам **BDC Spark** в средстве **аздата** . Дополнительные сведения о других командах **аздата** см. в разделе [Справочник по аздата](reference-azdata.md) .
+В следующей статье приводятся справочные сведения по командам **bdc spark** в средстве **azdata**. Дополнительные сведения о других командах **azdata** см. в [справочнике по azdata](reference-azdata.md).
 
 ## <a name="commands"></a>Команды
 |     |     |
 | --- | --- |
-[пакет аздата BDC Spark](reference-azdata-bdc-spark-batch.md) | Управляет пакетными операциями в системе Spark.
-[сеанс аздата BDC Spark](reference-azdata-bdc-spark-session.md) | Управляет операциями активации сеанса в системе Spark.
-[аздата BDC, инструкция Spark](reference-azdata-bdc-spark-statement.md) | Управляет инструкциями Spark.
+[Пакет azdata bdc spark](reference-azdata-bdc-spark-batch.md) | Управляет пакетными операциями в системе Spark.
+[Сеанс azdata bdc spark](reference-azdata-bdc-spark-session.md) | Управляет активными операциями сеанса в системе Spark.
+[Инструкция azdata bdc spark](reference-azdata-bdc-spark-statement.md) | Управляет инструкциями Spark.
 
 ## <a name="next-steps"></a>Следующие шаги
 
-Дополнительные сведения о других командах **аздата** см. в разделе [Справочник по аздата](reference-azdata.md). Дополнительные сведения об установке средства **аздата** см. в [статье Установка аздата для управления кластерами больших данных SQL Server 2019](deploy-install-azdata.md).
+Дополнительные сведения о других командах **azdata** см. в [справочнике по azdata](reference-azdata.md). Дополнительные сведения об установке средства **azdata** см. в статье [Установка azdata для управления кластерами больших данных SQL Server 2019](deploy-install-azdata.md).

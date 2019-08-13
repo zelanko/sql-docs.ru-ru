@@ -20,25 +20,34 @@ ms.assetid: 607c296f-8a6a-49bc-975a-b8d0c0914df7
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0480cb7b3692a5101271ea69cc8700c4ff09ada0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 52f66f1922814f77f93dfdec8725c024c0a129ff
+ms.sourcegitcommit: 63c6f3758aaacb8b72462c2002282d3582460e0b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68072273"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68495472"
 ---
 # <a name="set-operators---union-transact-sql"></a>Операторы работы с наборами — UNION (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Объединяет результаты нескольких запросов в один результирующий набор. Этот набор включает все строки, относящиеся ко всем запросам в объединении. Операция UNION отличается от соединений столбцов из двух таблиц.  
+Сцепляет результаты двух запросов в один результирующий набор. Вы указываете, будет ли результирующий набор включать повторяющиеся строки:
+
+- **UNION ALL** — повторяющиеся строки включаются.
+- **UNION** — повторяющиеся строки исключаются.
+
+Операция **UNION** отличается от операции **[JOIN](../queries/from-transact-sql.md)** :
+
+- В результате операции **UNION** сцепляются результирующие наборы двух запросов. При этом операция **UNION** не создает отдельные строки для столбцов, полученных из двух таблиц.
+- Операция **JOIN** сравнивает столбцы из двух таблиц и создает результирующие строки, которые состоят из столбцов из двух таблиц.
   
-Ниже приведены основные правила объединения результирующих наборов двух запросов с помощью операции UNION:  
+Ниже приведены основные правила объединения результирующих наборов двух запросов с помощью операции **UNION**:  
   
 -   количество и порядок столбцов должны быть одинаковыми во всех запросах;  
   
 -   типы данных должны быть совместимыми.  
   
-![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -65,7 +74,7 @@ ALL
 ### <a name="a-using-a-simple-union"></a>A. Использование простого UNION  
 При выполнении следующего примера в результирующий набор включается содержимое столбцов `ProductModelID` и `Name` таблиц `ProductModel` и `Gloves`.  
  
-```  
+```sql
 -- Uses AdventureWorks  
   
 IF OBJECT_ID ('dbo.Gloves', 'U') IS NOT NULL  
@@ -94,7 +103,7 @@ GO
 ### <a name="b-using-select-into-with-union"></a>Б. Использование SELECT INTO с UNION  
 При выполнении следующего примера предложение `INTO` во второй инструкции `SELECT` указывает, что в таблице с именем `ProductResults` содержится итоговый результирующий набор объединения выбранных столбцов таблиц `ProductModel` и `Gloves`. Таблица `Gloves` была создана в результате выполнения первой инструкции `SELECT`.  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 IF OBJECT_ID ('dbo.ProductResults', 'U') IS NOT NULL  
@@ -123,13 +132,12 @@ GO
   
 SELECT ProductModelID, Name   
 FROM dbo.ProductResults;  
-  
 ```  
   
 ### <a name="c-using-union-of-two-select-statements-with-order-by"></a>В. Использование UNION двух инструкций SELECT с ORDER BY  
 При использовании предложения UNION необходимо соблюдать порядок следования определенных параметров. В следующем примере показаны случаи правильного и неверного использования `UNION` в двух инструкциях `SELECT`, в которых необходимо переименовать столбцы на выходе.  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 IF OBJECT_ID ('dbo.Gloves', 'U') IS NOT NULL  
@@ -165,7 +173,6 @@ SELECT ProductModelID, Name
 FROM dbo.Gloves  
 ORDER BY Name;  
 GO  
-  
 ```  
   
 ### <a name="d-using-union-of-three-select-statements-to-show-the-effects-of-all-and-parentheses"></a>Г. Использование UNION трех инструкций SELECT для демонстрации эффекта от использования скобок и ALL  
@@ -173,7 +180,7 @@ GO
   
 В третьем примере с первым предложением `ALL` используется ключевое слово `UNION`, а во втором предложении `UNION` вместо ключевого слова `ALL` используются скобки. Сначала выполняется второе предложение `UNION`, которое заключено в скобки. В результате возвращаются 5 строк, так как параметр `ALL` не используется и все повторяющиеся строки удаляются. Полученные 5 строк совмещаются с результатами выполнения первой инструкции `SELECT` с помощью ключевого слова `UNION ALL`. В данном случае повторяющиеся строки двух множеств, состоящих из пяти строк, не удаляются. Окончательный результат состоит из 10 строк.  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 IF OBJECT_ID ('dbo.EmployeeOne', 'U') IS NOT NULL  
@@ -244,7 +251,7 @@ GO
 ### <a name="e-using-a-simple-union"></a>Д. Использование простого UNION  
 При выполнении приведенного ниже примера в результирующий набор включается содержимое столбцов `CustomerKey` таблиц `FactInternetSales` и `DimCustomer`. Так как ключевое слово ALL не используется, повторяющиеся значения не включаются в результаты.  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 SELECT CustomerKey   
@@ -258,7 +265,7 @@ ORDER BY CustomerKey;
 ### <a name="f-using-union-of-two-select-statements-with-order-by"></a>Е. Использование UNION двух инструкций SELECT с ORDER BY  
  Если какая-либо инструкция SELECT в инструкции UNION содержит предложение ORDER BY, это предложение должно находиться после всех инструкций SELECT. В приведенном ниже примере показаны случаи правильного и неправильного использования `UNION` в двух инструкциях `SELECT`, в которых столбец сортируется с помощью предложения ORDER BY.  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 -- INCORRECT  
@@ -284,7 +291,7 @@ ORDER BY CustomerKey;
 ### <a name="g-using-union-of-two-select-statements-with-where-and-order-by"></a>Ж. Использование UNION двух инструкций SELECT с WHERE и ORDER BY  
 В приведенном ниже примере показаны случаи правильного и неправильного использования `UNION` в двух инструкциях `SELECT`, в которых требуются предложения WHERE и ORDER BY.  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 -- INCORRECT   
@@ -316,7 +323,7 @@ ORDER BY CustomerKey;
   
 В третьем примере с первым оператором `UNION` используется ключевое слово `ALL`, а во втором предложении `UNION` вместо ключевого слова `ALL` используются скобки. Второе предложение `UNION` обрабатывается первым, так как оно заключено в скобки. Оно возвращает только неповторяющиеся строки из таблицы, так как параметр `ALL` не используется и повторяющиеся строки исключаются. Полученные строки объединяются с результатами выполнения первой инструкции `SELECT` с помощью ключевого слова `UNION ALL`. В данном случае повторяющиеся строки двух множеств не удаляются.  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 SELECT CustomerKey, FirstName, LastName  
@@ -352,6 +359,3 @@ FROM DimCustomer
 ## <a name="see-also"></a>См. также:  
 [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)   
 [Примеры использования инструкции SELECT (Transact-SQL)](../../t-sql/queries/select-examples-transact-sql.md)  
-  
-  
-

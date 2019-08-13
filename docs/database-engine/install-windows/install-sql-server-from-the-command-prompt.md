@@ -1,7 +1,7 @@
 ---
 title: Установка SQL Server из командной строки | Документы Майкрософт
 ms.custom: ''
-ms.date: 06/26/2019
+ms.date: 07/24/2019
 ms.prod: sql
 ms.technology: install
 ms.reviewer: ''
@@ -84,12 +84,12 @@ ms.assetid: df40c888-691c-4962-a420-78a57852364d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 0ed047f78c316cc5bb6308e2bfe425884a649876
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: db2bb1f0a4c36b84ac4d4200c0651b407fdf144a
+ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67991090"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68419333"
 ---
 # <a name="install-sql-server-from-the-command-prompt"></a>Установка SQL Server из командной строки
 
@@ -277,8 +277,9 @@ ms.locfileid: "67991090"
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCACCOUNT<br /><br /> **Обязательно**|Указывает стартовую учетную запись для служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCPASSWORD<br /><br /> [Обязательно](#Accounts)|Указывает пароль стартовой учетной записи для службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCStartupType<br /><br /> **Необязательно**|Указывает режим [запуска](#Accounts) для службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|  
-|Python или службы машинного обучения (в базе данных)|MPYCACHEDIRECTORY|Зарезервировано для последующего использования. Используйте %TEMP% для сохранения CAB-файлов Python для установки на компьютере, где нет подключения к Интернету. |  
-|R или службы машинного обучения (в базе данных)|MRCACHEDIRECTORY|Используйте этот параметр, чтобы указать каталог кэша для поддержки Microsoft R Open, служб R в SQL Server 2016, SQL Server 2016 R Server (изолированного) или для компонентов R в службах машинного обучения и на сервере Machine Learning Server (изолированном) SQL Server 2017. Этот параметр обычно используется при установке компонентов R из [командной строки на компьютере без доступа к Интернету](https://docs.microsoft.com/sql/advanced-analytics/install/sql-ml-component-install-without-internet-access).|  
+|Python или службы машинного обучения (в базе данных)|/MPYCACHEDIRECTORY|Зарезервировано для последующего использования. Используйте %TEMP% для сохранения CAB-файлов Python для установки на компьютере, где нет подключения к Интернету. |  
+|R или службы машинного обучения (в базе данных)|/MRCACHEDIRECTORY|Используйте этот параметр, чтобы указать каталог кэша для поддержки Microsoft R Open, служб R в SQL Server 2016, SQL Server 2016 R Server (изолированного) или для компонентов R в службах машинного обучения и на сервере Machine Learning Server (изолированном) SQL Server 2017. Этот параметр обычно используется при установке компонентов R из [командной строки на компьютере без доступа к Интернету](https://docs.microsoft.com/sql/advanced-analytics/install/sql-ml-component-install-without-internet-access).|  
+|Java/Службы машинного обучения (в базе данных)| /SQL_INST_JAVA,<br /> /SQLJAVADIR = "путь"<br /><br /> **Необязательно** | Начиная с SQL Server 2019, указывает установку Java со Службами машинного обучения. Если /SQL_INST_JAVA указывается без параметра /SQLJAVADIR, предполагается, что вы хотите установить Zulu JRE, предоставляемый на установочном носителе. <br /><br /> Если для /SQLJAVADIR указан путь, значит, вы хотите использовать уже установленный JRE или JDK. |
   
 ###### <a name="sample-syntax"></a>Образец синтаксиса  
  Установка нового изолированного экземпляра с компонентами [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], Full-Text Search и поддержкой репликации и включение мгновенной инициализации файлов для [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. 
@@ -549,7 +550,7 @@ setup.exe /Action=Uninstall /FEATURES=SQL,AS,RS,IS,Tools /INSTANCENAME=MSSQLSERV
 |Управление программой установки [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/FAILOVERCLUSTERDISKS<br /><br /> **Необязательно**|Указывает список общих дисков, которые должны быть включены в группу ресурсов отказоустойчивого кластера [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] .<br /><br /> Значение по умолчанию: Первый диск используется в качестве диска по умолчанию для всех баз данных.|  
 |Управление программой установки [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/FAILOVERCLUSTERIPADDRESSES<br /><br /> **Обязательно**|Указывает зашифрованный IP-адрес. Шифры разделяются точкой с запятой (;) и имеют формат: \<тип IP>;\<адрес>;\<сетевое имя>;\<маска подсети>. Поддерживаемые типы IP: DHCP, IPv4 и IPv6.<br />Можно указать IP-адреса нескольких отказоустойчивых кластеров, разделив их пробелами. См. следующие примеры.<br /><br /> `FAILOVERCLUSTERIPADDRESSES=DEFAULT`<br /><br /> `FAILOVERCLUSTERIPADDRESSES=IPv4;DHCP;ClusterNetwork1`<br /><br /> `FAILOVERCLUSTERIPADDRESSES=IPv4;172.16.0.0;ClusterNetwork1;172.31.255.255`<br /><br /> `FAILOVERCLUSTERIPADDRESSES=IPv6;DHCP;ClusterNetwork1`<br /><br /> `FAILOVERCLUSTERIPADDRESSES=IPv6;2001:db8:23:1002:20f:1fff:feff:b3a3;ClusterNetwork1`|  
 |Управление программой установки [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/FAILOVERCLUSTERNETWORKNAME<br /><br /> **Обязательно**|Указывает сетевое имя для нового отказоустойчивого кластера [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] . Это имя используется для идентификации нового экземпляра отказоустойчивого кластера [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] в сети.|  
-|Агент SQL Server|/AGTSVCACCOUNT<br /><br /> **Обязательно**|Задает учетную запись для службы агента SQL Server.|  
+|Агент SQL Server|/AGTSVCACCOUNT<br /><br /> **Обязательно**|Задает учетную запись для службы агента SQL Server.|  
 |Агент SQL Server|/AGTSVCPASSWORD<br /><br /> [Обязательно](#Accounts)|Задает пароль для учетной записи службы агента SQL Server.|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASBACKUPDIR<br /><br /> **Необязательно**|Указывает каталог для файлов резервных копий служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Значения по умолчанию:<br /><br /> Для режима WOW в 64-разрядной системе: `%Program Files(x86)%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Backup`.<br /><br /> Для всех других вариантов установки: `%Program Files%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Backup`.|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASCOLLATION<br /><br /> **Необязательно**|Задает параметры сортировки для служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].<br /><br /> Значение по умолчанию: **Latin1_General_CI_AS**|  

@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 31de555f-ae62-4f2f-a6a6-77fea1fa8189
 author: janinezhang
 ms.author: janinez
-ms.openlocfilehash: a5513c6f1f326984c93a760afdd88f949dc18b02
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0d789ded4aefe7d39d1298777ebd851a6c87e6d9
+ms.sourcegitcommit: d667fa9d6f1c8035f15fdb861882bd514be020d9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68007985"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68388402"
 ---
 # <a name="azure-feature-pack-for-integration-services-ssis"></a>Пакет дополнительных компонентов Azure для служб Integration Services (SSIS)
 
@@ -88,6 +88,14 @@ ms.locfileid: "68007985"
     -   [Назначение "Гибкая работа с файлами"](../integration-services/data-flow/flexible-file-destination.md)
 
 -   BLOB-объект Azure, Azure Data Lake Store и перечислитель файлов Data Lake Storage 2-го поколения. См. раздел [Контейнер "цикл по каждому элементу"](../integration-services/control-flow/foreach-loop-container.md).
+
+## <a name="use-tls-12"></a>Использование TLS 1.2
+
+Версия TLS, используемая пакетом дополнительных компонентов Azure, соответствует параметрам системы .NET Framework.
+Чтобы использовать TLS 1.2, добавьте значение `REG_DWORD` с именем `SchUseStrongCrypto` и данными `1` в следующих двух разделах реестра.
+
+1. `HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\.NETFramework\v4.0.30319`
+2. `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319`
 
 ## <a name="scenario-processing-big-data"></a>Сценарий: обработка больших данных
  Используйте соединитель Azure для выполнения следующих задач по обработке больших данных:

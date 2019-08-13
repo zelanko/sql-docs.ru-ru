@@ -1,7 +1,7 @@
 ---
 title: Требования к системе для драйвера JDBC | Документация Майкрософт
 ms.custom: ''
-ms.date: 04/16/2019
+ms.date: 08/01/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 447792bb-f39b-49b4-9fd0-1ef4154c74ab
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 9acd6eeec40421a778c1ab829b9633e1e93a80b7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e5b317b3483d24087df203eb14fdabe7b12f2539
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68004265"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893975"
 ---
 # <a name="system-requirements-for-the-jdbc-driver"></a>Требования к системе для драйвера JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -26,6 +26,8 @@ ms.locfileid: "68004265"
 - Среда выполнения Java
 
 ## <a name="java-runtime-environment-requirements"></a>Требования к среде выполнения Java  
+
+ Начиная с версии Microsoft JDBC Driver 7.4 для SQL Server реализована поддержка пакета SDK для Java (JDK) 12.0 и среды выполнения Java (JRE) 12.0.
 
  Начиная с версии Microsoft JDBC Driver 7.2 для SQL Server реализована поддержка пакета SDK для Java (JDK) 11.0 и среды выполнения Java (JRE) 11.0.
  
@@ -40,6 +42,31 @@ ms.locfileid: "68004265"
  Начиная с [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] поддержка спецификации API Java Database Connectivity (JDBC) была расширена до API JDBC 4.0. Версия API JDBC 4.0 впервые появилась в составе пакета SDK для Java (JDK) 6.0 и среды выполнения Java (JRE) 6.0. JDBC 4.0 является супермножеством API JDBC 3.0.
   
  При развертывании [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] в операционных системах Windows и UNIX необходимо использовать пакеты установки *sqljdbc_\<версия>_enu.exe* и *sqljdbc_\<версия>_enu.tar.gz* соответственно. Дополнительные сведения о развертывании драйвера JDBC см. в разделе [Развертывание драйвера JDBC](../../connect/jdbc/deploying-the-jdbc-driver.md).  
+
+**Microsoft JDBC Driver 7.4 для SQL Server**  
+
+  Драйвер JDBC 7.4 содержит три библиотеки классов JAR в каждом пакете установки: **mssql-jdbc-7.4.1.jre8.jar**, **mssql-jdbc-7.4.1.jre11.jar** и **mssql-jdbc-7.4.1.jre12.jar**.
+
+  Драйвер JDBC Driver 7.4 рассчитан на совместимость и корректную работу со всеми основными виртуальными машинами Java, но протестирован только в OpenJDK 1.8, OpenJDK 11.0, OpenJDK 12.0, Azul Zulu JRE 1.8, Azul Zulu JRE 11.0, и Azul Zulu JRE 12.0.
+  
+  В следующей таблице приведены сводные данные о поддержке, которую обеспечивают два JAR-файла в составе Microsoft JDBC Driver 7.4 для SQL Server:  
+  
+  |JAR|Соответствие версии JDBC|Рекомендуемая версия Java|Описание|  
+|---------|-----------------------------|----------------------|-----------------|   
+|MSSQL-JDBC-7.4.1. jre8. jar|4.2|8|Требуется среда выполнения Java (JRE) версии 1.8. При использовании JRE 1.7 или более ранней версии возникает исключение.<br /><br /> Новые функции 7,4 включают поддержку JDK 12, NTLM для проверки подлинности и Усефмтонли. |    
+|MSSQL-JDBC-7.4.1. jre11. jar|4.3|11|Требуется среда выполнения Java (JRE) 11.0. В случае использования JRE 10.0 или более ранней версии возникает исключение.<br /><br /> Новые функции 7,4 включают поддержку JDK 12, NTLM для проверки подлинности и Усефмтонли. |  
+|MSSQL-JDBC-7.4.1. jre12. jar|4.3|12|Требуется среда выполнения Java (JRE) версии 12.0. При использовании JRE 11.0 или более ранней версии возникает исключение.<br /><br /> Новые функции 7,4 включают поддержку JDK 12, NTLM для проверки подлинности и Усефмтонли. |   
+
+
+  Драйвер JDBC 7.4 также доступен в Maven Central Repository и может быть добавлен в проект Maven путем включения в POM.XML следующего кода:  
+  
+ ```xml
+<dependency>
+    <groupId>com.microsoft.sqlserver</groupId>
+    <artifactId>mssql-jdbc</artifactId>
+    <version>7.4.1.jre11</version>
+</dependency>
+```
 
 **Microsoft JDBC Driver 7.2 для SQL Server**  
 
