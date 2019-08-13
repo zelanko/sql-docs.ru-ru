@@ -9,12 +9,12 @@ ms.topic: overview
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 59e005e0075c9bb26210c6be9be5f52a3aa9a164
-ms.sourcegitcommit: 3ec48823bee1c092ce2aba6011b95174de03fb65
+ms.openlocfilehash: 4a1a9a3b0f712458466051ce2c67c0a725ef0a76
+ms.sourcegitcommit: 12b7e3447ca2154ec2782fddcf207b903f82c2c0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68926923"
+ms.lasthandoff: 08/12/2019
+ms.locfileid: "68957440"
 ---
 # <a name="what-is-sql-server-machine-learning-services-python-and-r"></a>Что такое Службы машинного обучения SQL Server (Python и R)?
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "68926923"
 
 SQL Server Службы машинного обучения позволяет выполнять скрипты Python и R в базе данных. С его помощью можно подготавливать и очищать данные, выполнять проектирование признаков, а также обучать, оценивать и развертывать модели машинного обучения в базе данных. Эта функция выполняет сценарии, в которых хранятся данные, и устраняет перемещение данных по сети на другой сервер.
 
-Базовые распределения Python и R включены в Службы машинного обучения. Вы можете использовать пакеты и платформы с открытым исходным кодом, такие как PyTorch, TensorFlow и scikit-учиться, в дополнение к пакетам Microsoft [revoscalepy](python/ref-py-revoscalepy.md) и [microsoftml](python/ref-py-microsoftml.md) для Python, а также [RevoScaleR](r/ref-r-revoscaler.md), [microsoftml](r/ref-r-microsoftml.md), [OLAP](r/ref-r-olapr.md), и [sqlrutils](r/ref-r-sqlrutils.md) для R.
+Базовые распределения Python и R включены в Службы машинного обучения. Вы можете использовать пакеты и платформы с открытым исходным кодом, такие как PyTorch, TensorFlow и scikit-учиться, в дополнение к пакетам Microsoft [revoscalepy](python/ref-py-revoscalepy.md) и [microsoftml](python/ref-py-microsoftml.md) для Python, а также [RevoScaleR](r/ref-r-revoscaler.md), [microsoftml](r/ref-r-microsoftml.md), [OLAP ](r/ref-r-olapr.md)и [Sqlrutils](r/ref-r-sqlrutils.md) для R.
 
 Службы машинного обучения использует платформу расширяемости для выполнения скриптов Python и R в SQL Server. Дополнительные сведения о том, как это работает:
 
