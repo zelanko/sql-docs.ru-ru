@@ -9,12 +9,12 @@ ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1ad5ca749f3862f0d7df3411efd78104052dba91
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
-ms.translationtype: HT
+ms.openlocfilehash: 49cc2cbb4ede2326bf774b5f39968ad4b00ed991
+ms.sourcegitcommit: 316c25fe7465b35884f72928e91c11eea69984d5
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67958628"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68969488"
 ---
 # <a name="restore-a-database-into-the-sql-server-big-data-cluster-master-instance"></a>Восстановление базы данных на главном экземпляре кластера больших данных SQL Server
 
@@ -36,19 +36,19 @@ ms.locfileid: "67958628"
 Скопируйте файл резервной копии в контейнер SQL Server в модуле Pod главного экземпляра кластера Kubernetes.
 
 ```bash
-kubectl cp <path to .bak file> mssql-master-pool-0:/tmp -c mssql-server -n <name of your big data cluster>
+kubectl cp <path to .bak file> master-0:/tmp -c mssql-server -n <name of your big data cluster>
 ```
 
 Пример
 
 ```bash
-kubectl cp ~/Downloads/AdventureWorks2016CTP3.bak mssql-master-pool-0:/tmp -c mssql-server -n clustertest
+kubectl cp ~/Downloads/AdventureWorks2016CTP3.bak master-0:/tmp -c mssql-server -n clustertest
 ```
 
 Затем убедитесь, что файл резервной копии скопирован в контейнер Pod.
 
 ```bash
-kubectl exec -it mssql-master-pool-0 -n <name of your big data cluster> -c mssql-server -- bin/bash
+kubectl exec -it master-0 -n <name of your big data cluster> -c mssql-server -- bin/bash
 cd /var/
 ls /tmp
 exit
@@ -57,7 +57,7 @@ exit
 Пример
 
 ```bash
-kubectl exec -it mssql-master-pool-0 -n clustertest -c mssql-server -- bin/bash
+kubectl exec -it master-0 -n clustertest -c mssql-server -- bin/bash
 ls /tmp
 exit
 ```
