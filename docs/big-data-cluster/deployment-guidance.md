@@ -9,12 +9,12 @@ ms.date: 07/24/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: d9696cf89d4177d8b78d9a0fe08cd27da5112650
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: b7439fdc93f04ad137b0bb65269b9767d8281798
+ms.sourcegitcommit: 58f1d5498c87bfe0f6ec4fd9d7bbe723be47896b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68470768"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68995836"
 ---
 # <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>Развертывание кластеров больших данных SQL Server в Kubernetes
 
@@ -87,10 +87,10 @@ kubectl config view
 
 Кластер больших данных можно развернуть, выполнив **azdata bdc create**. Вам будет предложено выбрать одну из конфигураций по умолчанию, а затем выполнить развертывание, следуя указаниям.
 
-При первом запуске `azdata` нужно включить `--accept-eula`, чтобы принять условия лицензионного соглашения (EULA).
+При первом запуске `azdata` нужно включить `--accept-eula=yes`, чтобы принять условия лицензионного соглашения (EULA).
 
 ```bash
-azdata bdc create --accept-eula
+azdata bdc create --accept-eula=yes
 ```
 
 В этом сценарии вам будет предложено ввести параметры, не входящие в конфигурацию по умолчанию, например пароли. 
@@ -314,4 +314,4 @@ Storage  default        Ready
 
 - [Настройка параметров развертывания для кластеров больших данных](deployment-custom-configuration.md)
 - [Выполнение автономного развертывания кластера больших данных SQL Server](deploy-offline.md)
-- [Семинар. Архитектура кластеров больших данных Microsoft SQL Server](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)
+- [Семинар. Архитектура кластеров больших данных Microsoft SQL Server](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)
