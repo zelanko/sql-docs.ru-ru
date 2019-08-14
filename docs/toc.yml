@@ -1,7 +1,7 @@
 - name: Вас приветствует SQL Server
-  href: sql-server/sql-server-technical-documentation.md?toc=../toc.json
-- name: "Управление версиями в документации по\_SQL"
-  href: toc/versioning-system-monikers-ui-sql-server.md
+  href: sql-server/sql-server-technical-documentation.md
+- name: "Советы по работе с документацией\_SQL"
+  href: sql-server/sql-docs-navigation-guide.md
 - name: Предыдущие версии (2005–2014)
   href: toc/previous-versions-sql-server.md
 - name: Обзор
@@ -10459,8 +10459,8 @@
       items:
         - name: Получить справку
           href: sql-server/sql-server-get-help.md
-        - name: "Советы по работе с документацией\_SQL"
-          href: sql-server/sql-docs-navigation-guide.md
+        - name: "Управление версиями в документации\_SQL"
+          href: sql-server/versioning-system-monikers-ui-sql-server.md
         - name: "Stack\_Exchange\_DBA\_>"
           href: 'https://dba.stackexchange.com/questions/tagged/sql-server'
         - name: Stack Overflow >

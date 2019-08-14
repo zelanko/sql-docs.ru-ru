@@ -1,7 +1,7 @@
 ---
-title: Краткое руководство. Подключение и запрос SQL Server
+title: Краткое руководство. Подключение и отправка запроса к SQL Server
 titleSuffix: Azure Data Studio
-description: В этом кратком руководстве показано, как использовать Studio данных Azure для подключения к SQL Server и выполнить запрос
+description: В этом кратком руководстве показано, как использовать Azure Data Studio для подключения к SQL Server и выполнения запроса.
 ms.custom: seodec18, sqlfreshmay19
 ms.date: 05/14/2019
 ms.prod: sql
@@ -11,54 +11,54 @@ ms.topic: quickstart
 author: yualan
 ms.author: alayu
 ms.openlocfilehash: 4117d8c16e96252f792e14d282d285527008874f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67959394"
 ---
-# <a name="quickstart-connect-and-query-sql-server-using-includename-sosincludesname-sos-shortmd"></a>Краткое руководство. Подключение и запрос SQL Server с помощью [!INCLUDE[name-sos](../includes/name-sos-short.md)]
-В этом кратком руководстве показано, как использовать [!INCLUDE[name-sos](../includes/name-sos-short.md)] для подключения к SQL Server, а затем с помощью инструкций Transact-SQL (T-SQL) для создания *TutorialDB* используется в [!INCLUDE[name-sos](../includes/name-sos-short.md)] учебники.
+# <a name="quickstart-connect-and-query-sql-server-using-includename-sosincludesname-sos-shortmd"></a>Краткое руководство. Подключение и отправка запроса к SQL Server с помощью [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+В этом кратком руководстве показано, как использовать [!INCLUDE[name-sos](../includes/name-sos-short.md)] для подключения к SQL Server, а затем с помощью инструкций Transact-SQL (T-SQL) создать базу данных *TutorialDB*, применяемую в руководствах [!INCLUDE[name-sos](../includes/name-sos-short.md)].
 
 ## <a name="prerequisites"></a>предварительные требования
 
-Для работы в этом кратком руководстве, требуется [!INCLUDE[name-sos](../includes/name-sos-short.md)]и доступ к SQL Server.
+Для работы с этим кратким руководством потребуется [!INCLUDE[name-sos](../includes/name-sos-short.md)] и доступ к SQL Server.
 
-- [Установка [!INCLUDE[name-sos](../includes/name-sos-short.md)] ](download.md).
+- [Установите [!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md).
 
-Если у вас нет доступа к SQL Server, выберите платформу по следующим ссылкам (Убедитесь, что вы помните, имя входа SQL и пароль!):
+Если у вас нет доступа к SQL Server, выберите платформу по следующим ссылкам (обязательно запомните имя для входа и пароль SQL):
 - [Windows — скачать выпуск SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads)
 - [macOS — скачать SQL Server 2017 с Docker](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker)
-- [Linux — загрузки SQL Server 2017 Developer Edition](https://docs.microsoft.com/sql/linux/sql-server-linux-overview#install) -необходимо выполните действия до *Создание и запрос данных*.
+- [Linux — скачать выпуск SQL Server 2017 Developer Edition](https://docs.microsoft.com/sql/linux/sql-server-linux-overview#install). Необходимо выполнить действия только до этапа *создания и отправки запроса к данным*.
 
 
 ## <a name="connect-to-a-sql-server"></a>Подключение к SQL Server
 
    
-1. Запуск **[!INCLUDE[name-sos](../includes/name-sos-short.md)]** .
-1. При первом запуске [!INCLUDE[name-sos](../includes/name-sos-short.md)] **приветствия** должна открыться страница. Если вы не видите **приветствия** выберите **помочь** > **приветствия**. Выберите **новое подключение** открыть **подключения** области:
+1. Запустите **[!INCLUDE[name-sos](../includes/name-sos-short.md)]** .
+1. При первом запуске [!INCLUDE[name-sos](../includes/name-sos-short.md)] должна открыться страница **приветствия**. Если она не отображается, выберите **Справка** > **Приветствие**. Выберите **Создать подключение**, чтобы открыть панель **Подключение**.
    
-   ![Значок "Создать подключение"](media/quickstart-sql-server/new-connection-icon.png)
+   ![Значок нового подключения](media/quickstart-sql-server/new-connection-icon.png)
 
-1. В этой статье используется *имя входа SQL*, но *проверки подлинности Windows* поддерживается. Заполните поля следующим образом:
+1. В этой статье используется *имя входа SQL*, но поддерживается *проверка подлинности Windows*. Заполните поля следующим образом:
  
     - **Имя сервера:** localhost
     - **Тип проверки подлинности:** Имя входа SQL  
-    - **Имя пользователя:** Имя пользователя для SQL Server  
-    - **Пароль:** Пароль для SQL Server  
+    - **Имя пользователя:** имя пользователя SQL Server  
+    - **Пароль:** пароль для SQL Server  
     - **Имя базы данных:** оставьте это поле пустым 
-    - **Группа сервера:** \<Default\>  
+    - **Группа серверов:** \<по умолчанию\>  
 
-   ![Новый экран подключения](media/quickstart-sql-server/new-connection-screen.png)
+   ![Экран нового подключения](media/quickstart-sql-server/new-connection-screen.png)
 
 
 
 ## <a name="create-a-database"></a>Создание базы данных
 
-Ниже приведены инструкции по созданию базы данных с именем **TutorialDB**:
+Ниже приведены инструкции по созданию базы данных с именем **TutorialDB**.
 
-1. Щелкните правой кнопкой мыши на своем сервере **localhost**и выберите **новый запрос.**
-1. Вставьте следующий фрагмент в окно запроса: 
+1. Щелкните правой кнопкой мыши сервер **localhost** и выберите **Создать запрос**.
+1. Вставьте в окно запроса следующий фрагмент: 
 
    ```sql
    USE master
@@ -74,25 +74,25 @@ ms.locfileid: "67959394"
        ALTER DATABASE [TutorialDB] SET QUERY_STORE=ON;
    GO
    ```
-1. Чтобы выполнить запрос, нажмите **запуска** .
+1. Чтобы выполнить запрос, нажмите кнопку **Выполнить**.
 
-После завершения выполнения запроса, новый **TutorialDB** появится в списке баз данных. Если вы не видите его, щелкните правой кнопкой мыши **баз данных** узел и выберите **обновить**.
+После выполнения запроса новая база данных **TutorialDB** появится в списке баз данных. Если она не отображается, щелкните правой кнопкой мыши узел **Базы данных** и выберите пункт **Обновить**.
 
 
 ## <a name="create-a-table"></a>Создание таблицы
 
-Редактор запросов подключен *master* базы данных, но нам нужно создать таблицу в *TutorialDB* базы данных. 
+Редактор запросов все еще подключен к базе данных *master*, но нам нужно создать таблицу в базе данных *TutorialDB*. 
 
-1. Изменить контекст подключения к **TutorialDB**:
+1. Измените контекст подключения на **TutorialDB**.
 
    ![Изменение контекста](media/quickstart-sql-server/change-context.png)
 
 
 
-1. Вставьте следующий фрагмент в окно запроса и нажмите кнопку **запуска**:
+1. Вставьте в окно запроса следующий фрагмент и нажмите кнопку **Выполнить**.
 
    > [!NOTE]
-   > Можно добавить ее, или перезаписать предыдущий запрос в редакторе. Обратите внимание, что нажатие кнопки **запуска** выполняет запрос, который выбран. Если ничего не выбрано, после нажатия кнопки **запуска** выполняет все запросы в редакторе.
+   > Этот фрагмент можно добавить в предыдущий запрос либо можно перезаписать предыдущий запрос в редакторе. Обратите внимание, что при нажатии кнопки **Выполнить** выполняется только выбранный запрос. Если ничего не выбрано, при нажатии кнопки **Выполнить** выполняются все запросы в редакторе.
 
    ```sql
    -- Create a new table called 'Customers' in schema 'dbo'
@@ -111,11 +111,11 @@ ms.locfileid: "67959394"
    GO
    ```
 
-После завершения выполнения запроса, новый **клиентов** таблица появится в списке таблиц. Щелкните правой кнопкой мыши может потребоваться **TutorialDB > таблицы** узел и выберите **обновить**.
+После выполнения запроса новая таблица **Customers** появится в списке таблиц. Может потребоваться щелкнуть **правой кнопкой мыши узел TutorialDB > Таблицы** и выбрать пункт **Обновить**.
 
 ## <a name="insert-rows"></a>Вставка строк
 
-- Вставьте следующий фрагмент в окно запроса и нажмите кнопку **запуска**:
+- Вставьте в окно запроса следующий фрагмент и нажмите кнопку **Выполнить**.
 
    ```sql
    -- Insert rows into table 'Customers'
@@ -131,20 +131,20 @@ ms.locfileid: "67959394"
 
 
 
-## <a name="view-the-data-returned-by-a-query"></a>Просмотр данных, возвращаемых запросом
-1. Вставьте следующий фрагмент в окно запроса и нажмите кнопку **запуска**:
+## <a name="view-the-data-returned-by-a-query"></a>Просмотр данных, возвращенных запросом
+1. Вставьте в окно запроса следующий фрагмент и нажмите кнопку **Выполнить**.
 
    ```sql
    -- Select rows from table 'Customers'
    SELECT * FROM dbo.Customers;
    ```
 
-1. Результаты запроса отображаются:
+1. Будут отображены результаты запроса:
 
-   ![Результаты SELECT](media/quickstart-sql-server/select-results.png)
+   ![Выбор результатов](media/quickstart-sql-server/select-results.png)
 
 
 ## <a name="next-steps"></a>Следующие шаги
-Теперь, когда вы успешно подключились к SQL Server и выполнения запроса, попробуйте [учебник редактора кода](tutorial-sql-editor.md).
+После успешного подключения к SQL Server и выполнения запроса можно перейти к [руководству по редактору кода](tutorial-sql-editor.md).
 
 
