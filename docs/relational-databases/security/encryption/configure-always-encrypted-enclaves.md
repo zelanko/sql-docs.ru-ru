@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 4ab035890dad4e51b6bc3a8d3f1c463e64143ac1
-ms.sourcegitcommit: c70a0e2c053c2583311fcfede6ab5f25df364de0
+ms.openlocfilehash: 83a13dc043687096a2d2909e4573ebbc3ac4a1ce
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68670608"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892709"
 ---
 # <a name="configure-always-encrypted-with-secure-enclaves"></a>Настройка Always Encrypted с безопасными анклавами
 
@@ -373,7 +373,7 @@ CREATE TABLE [dbo].[Employees]
         ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NOT NULL,
     [FirstName] [nvarchar](50) NOT NULL,
     [LastName] [nvarchar](50) NOT NULL,
-    [Salary] [int] ENCRYPTED WITH (
+    [Salary] [money] ENCRYPTED WITH (
         COLUMN_ENCRYPTION_KEY = [CEK1],
         ENCRYPTION_TYPE = Randomized,
         ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NOT NULL,
@@ -777,7 +777,7 @@ CREATE TABLE [dbo].[Employees]
         ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NOT NULL,
     [FirstName] [nvarchar](50) NOT NULL,
     [LastName] [nvarchar](50) NOT NULL,
-    [Salary] [int] ENCRYPTED WITH (
+    [Salary] [money] ENCRYPTED WITH (
         COLUMN_ENCRYPTION_KEY = [CEK1],
         ENCRYPTION_TYPE = Randomized,
         ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NOT NULL,
@@ -793,8 +793,8 @@ CEK1 — это ключ шифрования столбцов с поддерж
 Вот пример запроса к таблице, который соответствует рекомендациям для параметризации:
 
 ```sql
-DECLARE @SSNPattern CHAR(11) = '%1111%'
-DECLARE @MinSalary INT = 1000
+DECLARE @SSNPattern [char](11) = '%1111%'
+DECLARE @MinSalary [money] = 1000
 SELECT *
 FROM [dbo].[Employees]
 WHERE SSN LIKE @SSNPattern
@@ -857,7 +857,7 @@ GO;
 
 ### <a name="set-up-your-visual-studio-project"></a>Настройка проекта в Visual Studio
 
-Чтобы использовать функцию Always Encrypted с безопасными анклавами в приложении .NET Framework, вам нужно убедиться, что приложение создано на основе .NET Framework 4.7.2 и интегрировано с пакетом NuGet Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders. Кроме того, если вы храните главный ключ столбца в Azure Key Vault, необходимо также интегрировать приложение с пакетом NuGet Microsoft.SqlServer.Management.AlwaysEncrypted.AzureKeyVaultProvider версии 2.2.0 или более поздней. 
+Чтобы использовать функцию Always Encrypted с безопасными анклавами в приложении .NET Framework, вам нужно убедиться в том, что приложение создано на основе .NET Framework 4.7.2 и интегрировано с [пакетом NuGet Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders](https://www.nuget.org/packages/Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders). Кроме того, если вы храните главный ключ столбца в Azure Key Vault, необходимо также интегрировать приложение с [пакетом NuGet Microsoft.SqlServer.Management.AlwaysEncrypted.AzureKeyVaultProvider](https://www.nuget.org/packages/Microsoft.SqlServer.Management.AlwaysEncrypted.AzureKeyVaultProvider) версии 2.2.0 или более поздней. 
 
 1. Запустите Visual Studio.
 2. Создайте новый проект Visual C\# или откройте существующий.
@@ -878,13 +878,22 @@ GO;
 
 6. Выберите проект и нажмите кнопку "Установить".
 7. Откройте файл конфигурации из проекта (например, App.config или Web.config).
-8. Найдите раздел \<configuration\>. В разделе \<configuration\> найдите раздел \<configSections\>. Добавьте следующий раздел в \<configSections\>:
+8. В разделе \<configuration\> добавьте или обновите разделы \<configSections\>.
+
+   A. Если в разделе \<configuration\> **нет** раздела \<configSections\>, добавьте приведенное ниже содержимое сразу после раздела \<configuration\>.
+   
+      ```xml
+      <configSections>
+         <section name="SqlColumnEncryptionEnclaveProviders" type="System.Data.SqlClient.SqlColumnEncryptionEnclaveProviderConfigurationSection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+      </configSections>
+      ```
+   Б. Если в разделе \<configuration\> уже есть раздел \<configSections\>, добавьте следующую строку в раздел \<configSections\>:
 
    ```xml
    <section name="SqlColumnEncryptionEnclaveProviders"  type="System.Data.SqlClient.SqlColumnEncryptionEnclaveProviderConfigurationSection, System.Data,  Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" /\>
    ```
 
-9. В разделе конфигурации под \<configSections\> добавьте следующий раздел, где указан конкретный поставщик анклава, который будет использоваться для подтверждения и взаимодействия с анклавами Intel SGX:
+9. В разделе конфигурации под \<configSections\> добавьте следующий раздел, где указан поставщик анклава, который будет использоваться для подтверждения и взаимодействия с анклавами VBS:
 
    ```xml
    <SqlColumnEncryptionEnclaveProviders>
@@ -894,6 +903,24 @@ GO;
    </SqlColumnEncryptionEnclaveProviders>
    ```
 
+Ниже представлен полный пример файла app.config для простого консольного приложения.
+```xml
+<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+  <configSections>
+    <section name="SqlColumnEncryptionEnclaveProviders" type="System.Data.SqlClient.SqlColumnEncryptionEnclaveProviderConfigurationSection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  </configSections>
+  <startup> 
+        <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.7.2" />
+    </startup>
+
+  <SqlColumnEncryptionEnclaveProviders>
+    <providers>
+      <add name="VBS" type="Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders.HostGuardianServiceEnclaveProvider, Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    </providers>
+  </SqlColumnEncryptionEnclaveProviders>
+</configuration>
+```
 ### <a name="develop-and-test-your-app"></a>Разработка и тестирование приложения
 
 Чтобы использовать Always Encrypted и вычисления в анклаве, приложение должно подключаться к базе данных с помощью следующих двух ключевых слов в строке подключения: `Column Encryption Setting = Enabled; Enclave Attestation Url=https://x.x.x.x/Attestation` (где xxxx может быть IP-адресом, доменом и т. д).
@@ -919,7 +946,7 @@ CREATE TABLE [dbo].[Employees]
         ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NOT NULL,
     [FirstName] [nvarchar](50) NOT NULL,
     [LastName] [nvarchar](50) NOT NULL,
-    [Salary] [int] ENCRYPTED WITH (
+    [Salary] [money] ENCRYPTED WITH (
         COLUMN_ENCRYPTION_KEY = [CEK1],
         ENCRYPTION_TYPE = Randomized,
         ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NOT NULL,
@@ -969,7 +996,7 @@ using (SqlConnection connection = new SqlConnection(connectionString))
    SqlParameter MinSalary = cmd.CreateParameter();
    
    MinSalary.ParameterName = @"@MinSalary";
-   MinSalary.DbType = DbType.Int32;
+   MinSalary.DbType = DbType.Currency;
    MinSalary.Direction = ParameterDirection.Input;
    MinSalary.Value = 900;
    

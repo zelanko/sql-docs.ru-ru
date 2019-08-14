@@ -46,12 +46,12 @@ ms.assetid: b796c829-ef3a-405c-a784-48286d4fb2b9
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 382fd4ab40c574fd1a3d9ce2e972e2c6ea07cc31
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a9228530dcf0204987feda98083ba3a16c946093
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68071355"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68809803"
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -754,7 +754,7 @@ ABORT
 
  Дополнительные сведения см. в статье [Выполнение операции с индексами в сети](../../relational-databases/indexes/perform-index-operations-online.md).  
   
- ### <a name="waitatlowpriority-with-online-index-operations"></a>WAIT_AT_LOW_PRIORITY с операциями с индексами в режиме "в сети"  
+ ### <a name="wait_at_low_priority-with-online-index-operations"></a>WAIT_AT_LOW_PRIORITY с операциями с индексами в режиме "в сети"  
   
  Для выполнения инструкции DDL для перестроения индекса в режиме «в сети» все активные блокирующие транзакции, выполняемые для конкретной таблицы, должны быть завершены. Если выполняется перестроение индекса в режиме «в сети», то все новые транзакции, готовые к выполнению на данной таблице, блокируются. Хотя продолжительность блокировки для перестроения индекса в режиме «в сети» очень коротка, ожидание завершения всех открытых транзакций на данной таблице и блокировка новых запускаемых транзакций может значительно отразиться на пропускной способности и времени выполнения операции, а также значительно ограничить доступ к базовой таблице. Параметр **WAIT_AT_LOW_PRIORITY** позволяет администратору базы данных управлять S и Sch-M блокировками, необходимыми для перестроения индекса в режиме "в сети". Доступны 3 варианта. Во всех 3 случаях, если во время ожидания ( (MAX_DURATION = n [minutes]) ) нет блокирующих действий, перестроение индекса с подключением выполняется немедленно и без ожидания завершения инструкции DDL.  
   

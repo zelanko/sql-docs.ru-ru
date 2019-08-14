@@ -34,15 +34,15 @@ helpviewer_keywords:
 - views [SQL Server], indexed views
 - maximum number of columns per view
 ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
-author: XiaoyuL-Preview
+author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: 076bf71586baa61e8bb77c093cd274eca898bf00
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f2b58102644c596fde248861bb504bf06b932d6e
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67912625"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893774"
 ---
 # <a name="create-materialized-view-as-select-transact-sql-preview"></a>CREATE MATERIALIZED VIEW AS SELECT (Transact-SQL) (предварительная версия)
 
@@ -120,11 +120,10 @@ CREATE MATERIALIZED VIEW [ schema_name. ] materialized_view_name
 
 |Сценарий|Новые столбцы, добавляемые к материализованному представлению|Комментарий|  
 |-----------------|---------------|-----------------|
-|COUNT_BIG() | Отсутствует в списке SELECT определения материализованного представления |COUNT_BIG (*) |Автоматически добавляется во время создания материализованного представления.  Вмешательство пользователя не требуется.|
+|COUNT_BIG() отсутствует в списке SELECT определения материализованного представления| COUNT_BIG (*) |Автоматически добавляется во время создания материализованного представления.  Вмешательство пользователя не требуется.|
 |Пользователь указал функцию SUM(a) в списке SELECT определения материализованного представления, где a — это выражение, допускающее значение NULL |COUNT_BIG (a) |Пользователям необходимо добавить выражение a вручную в определении материализованного представления.|
 |Пользователь указал функцию AVG(a) в списке SELECT определения материализованного представления, где a — это выражение.|SUM(a), COUNT_BIG(a)|Автоматически добавляется во время создания материализованного представления.  Вмешательство пользователя не требуется.|
-|Пользователь указал функцию STDEV(a) в списке SELECT определения материализованного представления, где a — это выражение.|SUM(a)  
-COUNT_BIG(a) SUM(square(a))|Автоматически добавляется во время создания материализованного представления.  Вмешательство пользователя не требуется. |
+|Пользователь указал функцию STDEV(a) в списке SELECT определения материализованного представления, где a — это выражение.|SUM(a), COUNT_BIG(a), SUM(square(a))|Автоматически добавляется во время создания материализованного представления.  Вмешательство пользователя не требуется. |
 | | | |
 
 После создания материализованные представления отображаются в SQL Server Management Studio в папке представлений экземпляра службы "Хранилище данных SQL Azure".

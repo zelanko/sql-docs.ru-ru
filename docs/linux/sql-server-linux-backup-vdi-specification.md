@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 0250ba2b-8cdd-450e-9109-bf74f70e1247
-ms.openlocfilehash: 483173f18bc4a71a482a0e8bc490e7e6684affdb
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: c2dafa8f1c0811771cbbc684b24d2c92e989dff5
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67996448"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68810968"
 ---
 # <a name="sql-server-on-linux-vdi-client-sdk-specification"></a>Спецификация клиентского пакета SDK для VDI SQL Server на Linux
 
@@ -29,7 +29,7 @@ ms.locfileid: "67996448"
 - SQL Server на Linux не поддерживает именованные экземпляры, поэтому ссылки на имена экземпляров были удалены; 
 - общая библиотека реализована в файле libsqlvdi.so, установленном по пути /opt/mssql/lib/libsqlvdi.so.
 
-Этот документ является дополнением к файлу **vbackup.chm**, в котором подробно описана спецификация Windows VDI. Скачайте [спецификацию VDI Windows](https://www.microsoft.com/download/details.aspx?id=17282).
+Этот документ является дополнением к файлу **vbackup.chm**, в котором подробно описана спецификация Microsoft SQL Server VDI в Windows. Скачайте [спецификацию SQL VDI в Windows](https://www.microsoft.com/download/details.aspx?id=17282).
 
 Также ознакомьтесь с примером решения для резервного копирования VDI в [репозитории GitHub с образцами для SQL Server](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sqlvdi-linux).
 

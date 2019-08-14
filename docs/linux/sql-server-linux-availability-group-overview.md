@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: e37742d4-541c-4d43-9ec7-a5f9b2c0e5d1
-ms.openlocfilehash: 1d6a68ea3bc9954cbab62cee7579db6905a4632f
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 4da9f5118b77fc389e08ddb3c2b351aaaa0fb3b2
+ms.sourcegitcommit: bcc3b2c7474297aba17b7a63b17c103febdd0af9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67967515"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68794989"
 ---
 # <a name="always-on-availability-groups-on-linux"></a>Группы доступности Always On на Linux
 
@@ -24,8 +24,8 @@ ms.locfileid: "67967515"
 
 С высокоуровневой точки зрения группы доступности с [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] в Linux аналогичны реализациям на основе WSFC. Это означает, что все ограничения и функции одинаковы, за некоторыми исключениями. Ниже приведены основные отличия.
 
--   В [!INCLUDE[sssql17-md](../includes/sssql17-md.md)] на Linux отсутствует поддержка координатора распределенных транзакций Майкрософт (DTC). Если вашим приложениям требуется использование распределенных транзакций и группа доступности, разверните [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] в Windows.
--   В развертываниях на основе Linux вместо WSFC используется Pacemaker.
+-   Координатор распределенных транзакций Майкрософт (DTC) поддерживается в Linux начиная с версии SQL Server 2017 с накопительным пакетом обновления 16. Однако координатор распределенных транзакций пока не поддерживается в группах доступности в Linux. Если вашим приложениям требуется использование распределенных транзакций и группа доступности, разверните [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] в Windows.
+-   В развертываниях на основе Linux, которым требуется высокий уровень доступности, для кластеризации вместо WSFC используется Pacemaker.
 -   В отличие от большинства конфигураций групп доступности в Windows, за исключением сценария работы с кластером рабочей группы, для Pacemaker не требуется домен Active Directory Services (AD DS).
 -   Переход с одного узла на другой в Linux и Windows различается.
 -   Некоторые параметры, такие как `required_synchronized_secondaries_to_commit`, могут быть изменены только через Pacemaker в Linux, в то время как установка на основе WSFC использует Transact-SQL.

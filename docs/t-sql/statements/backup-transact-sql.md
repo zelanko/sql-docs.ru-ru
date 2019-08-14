@@ -46,12 +46,12 @@ ms.assetid: 89a4658a-62f1-4289-8982-f072229720a1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 84bc446438a5b8938ee84b1e741c2768636d45b2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8d3a49210575efac6f7d8b4190f96670d06c8824
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68141221"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68809735"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 
@@ -178,7 +178,7 @@ FILEGROUP = { logical_filegroup_name | @logical_filegroup_name_var }
 
 --Encryption Options
  ENCRYPTION (ALGORITHM = { AES_128 | AES_192 | AES_256 | TRIPLE_DES_3KEY } , encryptor_options ) <encryptor_options> ::=
-   SERVER CERTIFICATE = Encryptor_Name | SERVER ASYMMETRIC KEY = Encryptor_Name
+   `SERVER CERTIFICATE` = Encryptor_Name | SERVER ASYMMETRIC KEY = Encryptor_Name
 ```
 
 ## <a name="arguments"></a>Аргументы
@@ -305,8 +305,10 @@ ENCRYPTION — используется для указания шифрова�
 
 Если вы решили использовать шифрование, также необходимо указать параметры шифратора.
 
-- SERVER CERTIFICATE = имя_шифратора
-- SERVER ASYMMETRIC KEY = имя_шифратора
+- `SERVER CERTIFICATE` = Encryptor_Name
+- `SERVER ASYMMETRIC KEY` = Encryptor_Name
+
+`SERVER CERTIFICATE` и `SERVER ASYMMETRIC KEY` — это сертификат и асимметричный ключ, созданные в базе данных `master`. Дополнительные сведения см. в разделах [`CREATE CERTIFICATE`](../../t-sql/statements/create-certificate-transact-sql.md) и [`CREATE ASYMMETRIC KEY`](../../t-sql/statements/create-asymmetric-key-transact-sql.md) соответственно.
 
 > [!WARNING]
 > При использовании шифрования вместе с аргументом `FILE_SNAPSHOT` файл метаданных шифруется с использованием заданного алгоритма шифрования. Система проверяет, что для базы данных было выполнено [прозрачное шифрование данных (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md). Дополнительное шифрование самих данных не выполняется. Резервное копирование завершается сбоем, если база данных не была зашифрована или если шифрование не было завершено до того, как была издана инструкция о резервном копировании.
@@ -1008,8 +1010,8 @@ ENCRYPTION — используется для указания шифрова�
 
 Если вы решили использовать шифрование, также необходимо указать параметры шифратора.
 
-- SERVER CERTIFICATE = имя_шифратора
-- SERVER ASYMMETRIC KEY = имя_шифратора
+- `SERVER CERTIFICATE = <Encryptor_Name>`
+- `SERVER ASYMMETRIC KEY = <Encryptor_Name>`
 
 **Параметры резервного набора данных**
 

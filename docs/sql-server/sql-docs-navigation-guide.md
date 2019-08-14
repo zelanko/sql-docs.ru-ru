@@ -10,12 +10,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3cdcac17ddc09223d63e7dd923fd561e0a334fc2
-ms.sourcegitcommit: 182ed49fa5a463147273b58ab99dc228413975b6
+ms.openlocfilehash: e5a3e33d48b70146b439790e6439ef4f9cac08b5
+ms.sourcegitcommit: c2052b2bf7261b3294a3a40e8fed8b9e9c588c37
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68700057"
+ms.lasthandoff: 08/10/2019
+ms.locfileid: "68941163"
 ---
 # <a name="sql-server-docs-navigation-guide"></a>Руководство по навигации в документации по SQL Server 
 
@@ -65,7 +65,7 @@ ms.locfileid: "68700057"
 
 ![Фильтр версий в документации к SQL](media/sql-server-docs-navigation-guide/sql-docs-version-filter.gif)
 
-При выборе **SQL Server** > **Ничего не скрывать** будет отображаться все содержимое и ничто не будет скрыто фильтром версий. 
+При выборе **Весь SQL** > **Ничего не скрывать** будет отображаться все содержимое и ничто не будет скрыто фильтром версий. 
 
 ## <a name="breadcrumbs"></a>Строки навигации
 

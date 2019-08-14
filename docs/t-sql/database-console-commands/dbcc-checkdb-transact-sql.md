@@ -34,12 +34,12 @@ helpviewer_keywords:
 ms.assetid: 2c506167-0b69-49f7-9282-241e411910df
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 18fdd8cb0062f2f3adcd5979fb5c9203d93f393d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 15c1fc0789ff665569ed17be9415bdbdd8047714
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68102111"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68809888"
 ---
 # <a name="dbcc-checkdb-transact-sql"></a>DBCC CHECKDB (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -258,7 +258,7 @@ DATA_PURITY
 Если инструкция DBCC CHECKDB выполнена успешно, значит, база данных находится в физически согласованном состоянии и переведена в режим ONLINE. Однако база данных может содержать одну или больше противоречивых транзакций. Рекомендуется выполнить инструкцию [DBCC CHECKCONSTRAINTS](../../t-sql/database-console-commands/dbcc-checkconstraints-transact-sql.md), чтобы обнаружить дефекты бизнес-логики и незамедлительно создать резервную копию базы данных.
 Если выполнение инструкции DBCC CHECKDB завершилось неудачей, база данных не может быть восстановлена.
     
-## <a name="running-dbcc-checkdb-with-repairallowdataloss-in-replicated-databases"></a>Выполнение инструкции DBCC CHECKDB с параметром REPAIR_ALLOW_DATA_LOSS для реплицируемых баз данных    
+## <a name="running-dbcc-checkdb-with-repair_allow_data_loss-in-replicated-databases"></a>Выполнение инструкции DBCC CHECKDB с параметром REPAIR_ALLOW_DATA_LOSS для реплицируемых баз данных    
 Выполнение инструкции DBCC CHECKDB с параметром REPAIR_ALLOW_DATA_LOSS может затронуть используемые репликацией пользовательские базы данных (базы данных подписок и публикаций) и базу данных распространителя. Базы данных подписки и публикации включают опубликованные таблицы и таблицы метаданных репликации. Учитывайте следующие возможные проблемы при работе с этими базами данных.
 -   Опубликованные таблицы. Действия, выполненные процессом CHECKDB по восстановлению пользовательских данных, могут быть не реплицированы.    
 -   При репликации слиянием используются триггеры, чтобы отследить изменения в опубликованных таблицах. Если процессом CHECKDB были вставлены, обновлены или удалены строки, триггеры не сработают; поэтому изменения не будут реплицированы.

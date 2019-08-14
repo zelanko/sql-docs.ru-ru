@@ -9,18 +9,18 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: d30090fb-889f-466e-b793-5f284fccc4e6
-ms.openlocfilehash: f3e27b283156bb23754a93161fc796e15baec7ea
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 88ef620a24bc2ce623ea6fb072871dadeffbcf6d
+ms.sourcegitcommit: 2604e13627fbc9f3bda3926b67045fceb7b04e37
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68077695"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68823111"
 ---
 # <a name="backup-and-restore-sql-server-databases-on-linux"></a>Резервное копирование и восстановление баз данных SQL Server в Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Вы можете создавать резервные копии баз данных из SQL Server 2017 в Linux с помощью тех же средств, что и на других платформах. На сервере Linux можно использовать **sqlcmd** для подключения к SQL Server и создания резервных копий. Из Windows можно подключиться к SQL Server в Linux и создать резервные копии с помощью пользовательского интерфейса. Функция резервного копирования одинакова для разных платформ. Например, можно выполнять резервное копирование баз данных локально, на удаленные диски или в [службу хранилища BLOB-объектов Microsoft Azure](../relational-databases/backup-restore/sql-server-backup-to-url.md).
+Вы можете создавать резервные копии баз данных из SQL Server 2017 в Linux различными способами. На сервере Linux можно использовать **sqlcmd** для подключения к SQL Server и создания резервных копий. Из Windows можно подключиться к SQL Server в Linux и создать резервные копии с помощью пользовательского интерфейса. Функция резервного копирования одинакова для разных платформ. Например, можно выполнять резервное копирование баз данных локально, на удаленные диски или в [службу хранилища BLOB-объектов Microsoft Azure](../relational-databases/backup-restore/sql-server-backup-to-url.md).
 
 ## <a name="backup-a-database"></a>Резервное копирование базы данных
 

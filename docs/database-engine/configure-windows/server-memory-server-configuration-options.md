@@ -1,7 +1,7 @@
 ---
-title: Параметры конфигурации сервера "Server Memory" | Документы Майкрософт
+title: Параметры конфигурации памяти сервера | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/27/2017
+ms.date: 08/01/2019
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -21,14 +21,14 @@ helpviewer_keywords:
 ms.assetid: 29ce373e-18f8-46ff-aea6-15bbb10fb9c2
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 1f631c7c0d4e1674e5982f0650989583910388e6
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 180ef3114513f62f7ea5cded856ec61e06fc64b6
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68476268"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68763172"
 ---
-# <a name="server-memory-server-configuration-options"></a>Параметры конфигурации сервера «Server Memory»
+# <a name="server-memory-configuration-options"></a>Параметры конфигурации памяти сервера
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Два параметра памяти сервера, **min server memory** и **max server memory**, используются для изменения в конфигурации объема памяти (в мегабайтах), управляемой диспетчером памяти SQL Server для процесса SQL Server, применяемого экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -49,19 +49,18 @@ ms.locfileid: "68476268"
 > Параметры **min server memory** и **max server memory** являются расширенными. При использовании системной хранимой процедуры **sp_configure** для изменения этих настроек изменить их можно, только если параметр **show advanced options** установлен в значение 1. Эти параметры вступают в силу сразу же без перезагрузки сервера.  
   
 <a name="min_server_memory"></a>Параметр **min_server_memory** используется для гарантированного предоставления минимального объема памяти, доступного диспетчеру памяти [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не выделяет немедленно объем памяти, указанный в параметре **min server memory** , после запуска. Тем не менее, когда это значение достигается с ростом рабочей нагрузки, экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не может освободить память, выделенную буферному пулу, если не уменьшить значение параметра **min server memory** . Например, если на одном узле может находиться сразу несколько экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], задайте параметр min_server_memory вместо max_server_memory, чтобы зарезервировать память для экземпляра. Кроме того, необходимо задать значение min_server_memory в виртуализированной среде, чтобы гарантировать, что при дефиците памяти на базовом узле не будет попыток выделить больше памяти из буферного пула в гостевой виртуальной машине [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], чем это необходимо для приемлемой производительности.
- 
-> [!NOTE]  
-> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не гарантирует, что объем памяти, заданный параметром **min server memory**, будет выделен. Если нагрузка на сервер никогда не требует выделения всего объема памяти, заданного параметром **min server memory**, сервер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] будет использовать меньше памяти.  
-  
-<a name="max_server_memory"></a> Параметр **max_server_memory** гарантирует, что в ОС не возникнет дефицит памяти. Чтобы задать конфигурацию "Макс. памяти сервера", отследите общее использование памяти процессом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и определите требования к памяти. Более точные вычисления для одного экземпляра
- -  Зарезервируйте 1–4 ГБ от общего объема памяти для ОС.
- -  Затем вычтите эквивалент потенциального выделения памяти ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]), которое не входят в диапазон **max server memory**, состоящий из **_стека <sup>1</sup> \* вычисляемое максимальное число рабочих потоков <sup>2</sup> + параметр загрузки -g <sup>3</sup>_** (или 256 МБ по умолчанию, если значение *-g* не задано). Остаток и даст значение параметра max_server_memory в случае установки одного экземпляра.
- 
+
+>[!NOTE]
+>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не гарантирует, что объем памяти, заданный параметром **min server memory**, будет выделен. Если нагрузка на сервер никогда не требует выделения всего объема памяти, заданного параметром **min server memory**, сервер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] будет использовать меньше памяти.
+
+<a name="max_server_memory"></a> Параметр **max_server_memory** гарантирует, что в ОС не возникнет дефицит памяти. Чтобы задать конфигурацию "Макс. памяти сервера", отследите общее использование памяти процессом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и определите требования к памяти.
+
+- Зарезервируйте достаточную долю от общего объема памяти для ОС.
+- Затем вычтите эквивалент потенциального выделения памяти ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]), которое не входит в диапазон **max server memory**, состоящий из **стека** <sup>1</sup> **\*вычисляемое максимальное число рабочих потоков**<sup>2</sup>. Остаток и даст значение параметра max_server_memory в случае установки одного экземпляра.
+
 <sup>1</sup> Сведения о размерах стеков потока для различных архитектур см. в разделе [Руководство по архитектуре управления памятью](../../relational-databases/memory-management-architecture-guide.md#stacksizes).
 
 <sup>2</sup> Сведения о вычислении рабочих потоков по умолчанию для заданного числа сходных ЦП на текущем узле см. в разделе [Настройка параметра конфигурации сервера "Максимальное число рабочих потоков"](../../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md).
-
-<sup>3</sup> Сведения о параметре запуска *-g* см. на странице документации [Параметры запуска службы ядра СУБД](../../database-engine/configure-windows/database-engine-service-startup-options.md). Применимо только для 32-разрядной версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] по [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]).
 
 ## <a name="how-to-configure-memory-options-using-includessmanstudiofullincludesssmanstudiofull-mdmd"></a>Настройка параметров памяти с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
 Используйте два параметра памяти сервера, **Мин. памяти сервера** и **Макс. памяти сервера**, для настройки объема памяти (в мегабайтах), находящейся в управлении диспетчера памяти [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. По умолчанию [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может динамически изменять требования к памяти в зависимости от доступных системных ресурсов.  

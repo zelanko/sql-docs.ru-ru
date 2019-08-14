@@ -1,7 +1,7 @@
 ---
 title: Установка SQL Server из командной строки | Документы Майкрософт
 ms.custom: ''
-ms.date: 07/24/2019
+ms.date: 07/26/2019
 ms.prod: sql
 ms.technology: install
 ms.reviewer: ''
@@ -84,12 +84,12 @@ ms.assetid: df40c888-691c-4962-a420-78a57852364d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: db2bb1f0a4c36b84ac4d4200c0651b407fdf144a
-ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
+ms.openlocfilehash: 94169ec75f542c27c47bc9f050b2ac36736d13de
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68419333"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893009"
 ---
 # <a name="install-sql-server-from-the-command-prompt"></a>Установка SQL Server из командной строки
 
@@ -227,7 +227,7 @@ ms.locfileid: "68419333"
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASCONFIGDIR<br /><br /> **Необязательно**|Указывает каталог для файлов конфигурации служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Значения по умолчанию:<br /><br /> Для режима WOW в 64-разрядной системе: `%Program Files(x86)%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Config`.<br /><br /> Для всех других вариантов установки: `%Program Files%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Config`.|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASDATADIR<br /><br /> **Необязательно**|Указывает каталог для файлов данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Значения по умолчанию:<br /><br /> Для режима WOW в 64-разрядной системе: `%Program Files(x86)%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Data`.<br /><br /> Для всех других вариантов установки: `%Program Files%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Data`.|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASLOGDIR<br /><br /> **Необязательно**|Указывает каталог для файлов журналов служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Значения по умолчанию:<br /><br /> Для режима WOW в 64-разрядной системе: `%Program Files(x86)%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Log`.<br /><br /> Для всех других вариантов установки: `%Program Files%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Log`.|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASSERVERMODE<br /><br /> **Необязательно**|Указывает режим сервера экземпляра служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Допустимые значения: MULTIDIMENSIONAL, POWERPIVOT или TABULAR. Параметр**ASSERVERMODE** учитывает регистр. Все значения должны задаваться в верхнем регистре. Дополнительные сведения о допустимых значениях см. в разделе [Установка служб Analysis Services](../../analysis-services/instances/install-windows/install-analysis-services.md).|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASSERVERMODE<br /><br /> **Необязательно**|Указывает режим сервера экземпляра служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Допустимые значения: MULTIDIMENSIONAL, POWERPIVOT или TABULAR. Параметр**ASSERVERMODE** учитывает регистр. Все значения должны задаваться в верхнем регистре. Дополнительные сведения о допустимых значениях см. в разделе [Установка служб Analysis Services](https://docs.microsoft.com/analysis-services/instances/install-windows/install-analysis-services).|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASSVCACCOUNT<br /><br /> **Обязательно**|Задает учетную запись для службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASSVCPASSWORD<br /><br /> [Обязательно](#Accounts)|Указывает пароль для службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASSVCSTARTUPTYPE<br /><br /> **Необязательно**|Указывает режим [запуска](#Accounts) для службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Поддерживаемые значения:<br /><br /> **Автоматически**<br /><br /> **Отключено**<br /><br /> **Вручную**|  
@@ -279,7 +279,7 @@ ms.locfileid: "68419333"
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCStartupType<br /><br /> **Необязательно**|Указывает режим [запуска](#Accounts) для службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|  
 |Python или службы машинного обучения (в базе данных)|/MPYCACHEDIRECTORY|Зарезервировано для последующего использования. Используйте %TEMP% для сохранения CAB-файлов Python для установки на компьютере, где нет подключения к Интернету. |  
 |R или службы машинного обучения (в базе данных)|/MRCACHEDIRECTORY|Используйте этот параметр, чтобы указать каталог кэша для поддержки Microsoft R Open, служб R в SQL Server 2016, SQL Server 2016 R Server (изолированного) или для компонентов R в службах машинного обучения и на сервере Machine Learning Server (изолированном) SQL Server 2017. Этот параметр обычно используется при установке компонентов R из [командной строки на компьютере без доступа к Интернету](https://docs.microsoft.com/sql/advanced-analytics/install/sql-ml-component-install-without-internet-access).|  
-|Java/Службы машинного обучения (в базе данных)| /SQL_INST_JAVA,<br /> /SQLJAVADIR = "путь"<br /><br /> **Необязательно** | Начиная с SQL Server 2019, указывает установку Java со Службами машинного обучения. Если /SQL_INST_JAVA указывается без параметра /SQLJAVADIR, предполагается, что вы хотите установить Zulu JRE, предоставляемый на установочном носителе. <br /><br /> Если для /SQLJAVADIR указан путь, значит, вы хотите использовать уже установленный JRE или JDK. |
+|Java и расширения языка| /SQL_INST_JAVA,<br /> /SQLJAVADIR = "путь"<br /><br /> **Необязательно** | Начиная с SQL Server 2019 указывает установку Java с расширениями языка. Если /SQL_INST_JAVA указывается без параметра /SQLJAVADIR, предполагается, что вы хотите установить Zulu OpenJRE с установочного носителя. <br /><br /> Если для /SQLJAVADIR указан путь, значит, вы хотите использовать уже установленный JRE или JDK. |
   
 ###### <a name="sample-syntax"></a>Образец синтаксиса  
  Установка нового изолированного экземпляра с компонентами [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], Full-Text Search и поддержкой репликации и включение мгновенной инициализации файлов для [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. 

@@ -23,12 +23,12 @@ author: dnethi
 ms.author: dinethi
 ms.custom: ''
 ms.date: 07/26/2019
-ms.openlocfilehash: d227cbd5910a33f940313fa2e82039240077c280
-ms.sourcegitcommit: 63c6f3758aaacb8b72462c2002282d3582460e0b
+ms.openlocfilehash: cb379078fe5d8c2436b220871d84d352a8619155
+ms.sourcegitcommit: 2604e13627fbc9f3bda3926b67045fceb7b04e37
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68495432"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68823119"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>Скачивание SQL Server Management Studio (SSMS)
 
@@ -46,7 +46,7 @@ SSMS распространяется бесплатно!
 
 **[![скачать](../ssdt/media/download.png) Скачать SQL Server Management Studio 18.2](https://go.microsoft.com/fwlink/?linkid=2099720)**
 
-SSMS 18.2 является последней общедоступной версией SSMS. Если у вас установлена версия SSMS 18.2 (GA), установка SSMS 18.2 обновляет ее до 18.2. Если у вас установлена предыдущая *предварительная версия* SSMS 18.x, перед установкой SSMS 18.2 ее необходимо удалить.
+SSMS 18.2 является последней общедоступной версией SSMS. Если у вас установлена предыдущая общедоступная версия SSMS 18, при установке SSMS 18.2 она обновляется до версии 18.2. Если у вас установлена предыдущая *предварительная версия* SSMS 18.x, перед установкой SSMS 18.2 ее необходимо удалить.
 
 **Сведения о версии**
 
@@ -81,8 +81,7 @@ SQL Server Management Studio 18.2:
 | Выполнение запроса или результаты | Добавлено "Время завершения" в сообщениях для отслеживания завершения запросов. |
 | Выполнение запроса или результаты  | Разрешено отображение дополнительных данных (результат в тексте) и их сохранение в ячейках (результат в сетке). Теперь SSMS допускает до 2 млн символов для обоих вариантов (начиная с 256 и 64 тыс. соответственно). Это также устраняет проблему, из-за которой пользователи не могут получить более 43 680 символов из ячеек сетки. |
 | Инструкция ShowPlan | Добавлен новый атрибут в QueryPlan, когда включена встроенная скалярная функция UDF (ContainsInlineScalarTsqlUdfs). |
-| SMO | Добавлена поддержка ограничений для функций. Дополнительные сведения о самой функции см. в разделе [Ограничения функций](https://docs.microsoft.com/sql/relational-databases/security/feature-restrictions). |
-| SMO  | Расширения оценки. См. раздел <we need a link to something> |
+| SMO | Добавлена поддержка ограничений для функций. Дополнительные сведения о самой функции см. в разделе [Ограничения функций](https://docs.microsoft.com/sql/relational-databases/security/feature-restrictions). Дополнительные сведения о расширениях оценки см. в статье [Знакомство с API Оценки SQL](https://techcommunity.microsoft.com/t5/SQL-Server/Introducing-SQL-Assessment-API-Public-Preview/ba-p/778570). |
 | Службы Integration Services (SSIS) | Оптимизация производительности для планировщика пакетов служб SSIS в Azure |
 |  |  |
 

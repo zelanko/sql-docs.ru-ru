@@ -3,46 +3,48 @@ title: Настройка MSDTC в Linux
 description: В этой статье представлено пошаговое руководство по настройке MSDTC в Linux.
 author: VanMSFT
 ms.author: vanto
-ms.date: 03/21/2019
+ms.date: 08/01/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: c44458e1a68c842b6433d7a137865ae8451c136c
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: c753e12b17047f397aeb619c758e2160e5d38e09
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68077609"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892519"
 ---
 # <a name="how-to-configure-the-microsoft-distributed-transaction-coordinator-msdtc-on-linux"></a>Сведения о настройке координатора распределенных транзакций (Майкрософт) (MSDTC) в Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Эта статья описывает настройку координатора распределенных транзакций (Майкрософт) (MSDTC) в Linux. Поддержка MSDTC в Linux появилась в предварительной версии SQL Server 2019.
+В этой статье описывается настройка координатора распределенных транзакций Майкрософт (MSDTC) в Linux.
+
+> [!NOTE]
+> MSDTC в Linux поддерживается в предварительной версии SQL Server 2019 и в SQL Server 2017 начиная с накопительного пакета обновления 16.
 
 ## <a name="overview"></a>Обзор
 
 Чтобы включить распределенные транзакции в SQL Server на Linux, в SQL Server вводится MSDTC и функция сопоставителя конечных точек RPC. По умолчанию процесс сопоставления конечных точек RPC прослушивает порт 135 на предмет входящих запросов RPC и предоставляет удаленным запросам сведения о зарегистрированных компонентах. Удаленные запросы могут использовать сведения, возвращенные сопоставителем конечных точек, для взаимодействия с зарегистрированными компонентами RPC, такими как службы MSDTC. Процессу требуются права суперпользователя для привязки к известным портам (номера портов меньше 1024) в Linux. Чтобы не запускать SQL Server с правами root для процесса сопоставителя конечных точек RPC, системные администраторы должны использовать iptables для создания преобразования сетевых адресов (NAT) для маршрутизации трафика через порт 135 в процесс сопоставления конечных точек RPC SQL Server.
 
-В SQL Server 2019 введены два параметра конфигурации для служебной программы mssql-conf.
+Координатор распределенных транзакций использует два параметра конфигурации для служебной программы mssql-conf.
 
 | Параметр mssql-conf | Описание |
 |---|---|
 | **network.rpcport** | TCP-порт, к которому привязан процесс сопоставителя конечных точек RPC. |
 | **distributedtransaction.servertcpport** | Порт, который прослушивает сервер MSDTC. Если параметр не задан, служба MSDTC использует случайный временный порт при перезапуске службы и потребуется перенастроить исключения брандмауэра, чтобы служба MSDTC могла продолжить взаимодействие. |
 
-Дополнительные сведения об этих параметрах и других параметрах, связанных с MSDTC, см. в статье [Настройка SQL Server на Linux с помощью средства mssql-conf](sql-server-linux-configure-mssql-conf.md#msdtc).
+Дополнительные сведения об этих параметрах и других параметрах, связанных с MSDTC, см. в статье [Настройка SQL Server на Linux с помощью средства mssql-conf](sql-server-linux-configure-mssql-conf.md).
 
 ## <a name="supported-msdtc-configurations"></a>Поддерживаемые конфигурации MSDTC
 
 Поддерживаются следующие конфигурации MSDTC.
 
 - Распределенные транзакции OLE-TX относительно SQL Server на базе Linux для поставщиков ODBC.
-- Распределенные транзакции XA относительно SQL Server на базе Linux с использованием поставщиков ODBC и JDBC. Для транзакций XA, выполняемых с помощью поставщика ODBC, нужно использовать Microsoft ODBC Driver for SQL Server версии 17.3 или более поздней.
-- Распределенные транзакции на связанном сервере.
 
-Ограничения и известные проблемы для MSDTC на этапе предварительной версии см. в статье [Заметки о выпуске для предварительной версии SQL Server 2019 в Linux](sql-server-linux-release-notes-2019.md#msdtc).
+- Распределенные транзакции XA относительно SQL Server на базе Linux с использованием поставщиков ODBC и JDBC. Для транзакций XA, выполняемых с помощью поставщика ODBC, нужно использовать Microsoft ODBC Driver for SQL Server версии 17.3 или более поздней. Дополнительные сведения см. в статье [Основные сведения о транзакциях XA](../connect/jdbc/understanding-xa-transactions.md#configuration-instructions).
+
+- Распределенные транзакции на связанном сервере.
 
 ## <a name="msdtc-configuration-steps"></a>Шаги настройки MSDTC
 
@@ -184,9 +186,24 @@ tcp6 0 0 :::51999 :::* LISTEN 13911/sqlservr
 
 | Настройка | Описание |
 |---|---|
-| **distributedtransaction.allowonlysecurerpccalls**          | Настройка только безопасных удаленных вызовов процедур (RPC) для распределенных транзакций. |
-| **distributedtransaction.fallbacktounsecurerpcifnecessary** | Настройка только безопасных удаленных вызовов процедур (RPC) для распределенных транзакций. |
-| **distributedtransaction.turnoffrpcsecurity**               | Включение или отключение безопасности RPC для распределенных транзакций. |
+| **distributedtransaction.allowonlysecurerpccalls**          | Настройка только безопасных удаленных вызовов процедур (RPC) для распределенных транзакций. Значение по умолчанию — 0. |
+| **distributedtransaction.fallbacktounsecurerpcifnecessary** | Настройка только безопасных удаленных вызовов процедур (RPC) для распределенных транзакций. Значение по умолчанию — 0. |
+| **distributedtransaction.turnoffrpcsecurity**               | Включение или отключение безопасности RPC для распределенных транзакций. Значение по умолчанию — 0. |
+
+## <a name="additional-guidance"></a>Дополнительные рекомендации
+
+### <a name="active-directory"></a>Active Directory
+
+Корпорация Майкрософт рекомендует использовать координатор распределенных транзакций с включенным RPC, если сервер SQL Server зарегистрирован в конфигурации Active Directory (AD). Если в SQL Server настроено использование проверки подлинности Active Directory, координатор распределенных транзакций по умолчанию использует защиту RPC с помощью взаимной проверки подлинности.
+
+### <a name="windows-and-linux"></a>Windows и Linux
+
+Если клиент с операционной системой Windows необходимо включить в распределенную транзакцию с SQL Server на Linux, он должен иметь следующую минимальную версию операционной системы Windows.
+
+| Операционная система | Минимальная версия | Сборка ОС |
+|---|---|---|
+| [Windows Server](https://docs.microsoft.com/windows-server/get-started/windows-server-release-info) | 1903 | 18362.30.190401-1528 |
+| [Windows 10](https://docs.microsoft.com/windows/release-information/) | 1903 | 18362.267 |
 
 ## <a name="next-steps"></a>Следующие шаги
 

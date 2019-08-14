@@ -12,14 +12,14 @@ dev_langs:
 author: pmasl
 ms.author: umajay
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: d0dd253eb161c842a2edbdcad73edd41114d73cc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7fd267efe05da089cf72b1b9d1e4a04e6c18b83b
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68039069"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68809840"
 ---
-# <a name="dbcc-pdwshowexecutionplan-transact-sql"></a>DBCC PDW_SHOWEXECUTIONPLAN (Transact-SQL)
+# <a name="dbcc-pdw_showexecutionplan-transact-sql"></a>DBCC PDW_SHOWEXECUTIONPLAN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
 Отображает план выполнения [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для запроса, выполняющегося в определенном вычислительном либо управляющем узле [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] или [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]. Позволяет устранять проблемы с производительностью запросов, выполняющихся в вычислительных узлах или управляющем узле.
@@ -59,7 +59,7 @@ DBCC PDW_SHOWEXECUTIONPLAN ( pdw_node_id, spid )
   
 ## <a name="examples-includesssdwincludessssdw-mdmd"></a>Примеры: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]  
   
-### <a name="a-dbcc-pdwshowexecutionplan-basic-syntax"></a>A. Базовый синтаксис DBCC PDW_SHOWEXECUTIONPLAN  
+### <a name="a-dbcc-pdw_showexecutionplan-basic-syntax"></a>A. Базовый синтаксис DBCC PDW_SHOWEXECUTIONPLAN  
  При выполнении в экземпляре [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] измените приведенный выше запрос так, чтобы также выбирался идентификатор distribution_id.  
   
 ```sql
@@ -76,7 +76,7 @@ DBCC PDW_SHOWEXECUTIONPLAN ( 1, 375 );
 ```  
 
 ## <a name="examples-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-### <a name="b-dbcc-pdwshowexecutionplan-basic-syntax"></a>Б. Базовый синтаксис DBCC PDW_SHOWEXECUTIONPLAN  
+### <a name="b-dbcc-pdw_showexecutionplan-basic-syntax"></a>Б. Базовый синтаксис DBCC PDW_SHOWEXECUTIONPLAN  
  Если запрос выполняется слишком долго, значит, он производит операцию плана запроса DMS или операцию плана запроса SQL.  
   
 Если запрос выполняет операцию плана запроса DMS, с помощью приведенного ниже запроса можно получить список идентификаторов узлов и сеансов для незавершенных этапов.

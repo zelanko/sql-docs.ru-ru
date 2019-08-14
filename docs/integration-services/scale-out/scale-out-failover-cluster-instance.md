@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
-ms.openlocfilehash: 1206d81fb146c851f11ececdcc7ae38fe20eb79d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5c4d5cc303d297a21b730abc30e10b85c65cc3d2
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68064606"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811197"
 ---
 # <a name="scale-out-support-for-high-availability-via-sql-server-failover-cluster-instance"></a>Поддержка Scale Out для обеспечения высокой доступности с помощью экземпляра отказоустойчивого кластера SQL Server
 
@@ -36,7 +36,7 @@ ms.locfileid: "68064606"
 Добавьте вторичный узел в отказоустойчивый кластер SQL Server.
 
 ## <a name="3-install-scale-out-master-on-the-primary-node"></a>3. Установка мастера Scale Out в основном узле
-Установите службы Integration Services и мастера Scale Out на основной узел с помощью мастера некластеризованной установки. 
+Установите службы Integration Services и мастер Scale Out в основном узле с помощью мастера некластеризованной установки. 
 
 Во время установки включите сетевое имя SQL Server в общие имена сертификата мастера Scale Out.
 
