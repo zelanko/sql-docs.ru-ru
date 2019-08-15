@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: e360ba3a-e96b-4f85-b588-ed1f767fa973
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: cbec8d77386985e7f33863793b86eb2db0b8d6bd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 30b1f8addacb1c4502a50ab5d00e507aa4ca63cc
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67944895"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028805"
 ---
 # <a name="secure-a-master-data-manager-web-application"></a>Обеспечение безопасности веб-приложения диспетчера основных данных
 
@@ -61,7 +61,7 @@ ms.locfileid: "67944895"
 
 12. Измените `<serviceMetadata httpGetEnable="true" httpsGetEnabled="false">` на `<serviceMetadata httpGetEnable="false" httpsGetEnabled="true">`, чтобы предотвратить проблемы, которые могут появиться в клиенте Silverlight.
 
-13. Сохраните файл и закройте его. Если возникает ошибка, это происходит из-за включенного контроля учетных записей. Дополнительные сведения см. в разделе [Отключение контроля учетных записей](http://technet.microsoft.com/library/cc709691\(WS.10\).aspx). Теперь пользователи могут использовать для доступа к сайту протокол HTTPS.  
+13. Сохраните файл и закройте его. Если возникает ошибка, это происходит из-за включенного контроля учетных записей. Теперь пользователи могут использовать для доступа к сайту протокол HTTPS.  
 
   
 ## <a name="see-also"></a>См. также:  

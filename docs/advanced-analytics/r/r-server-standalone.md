@@ -1,21 +1,21 @@
 ---
-title: Изолированный сервер R Server или установка Machine Learning Server
+title: Что такое автономный Machine Learning Server или R Server в SQL Server?
 description: Общие сведения о автономном сервере R Server и Machine Learning Server в программе установки SQL Server
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 12/18/2018
+ms.date: 08/13/2019
 ms.topic: overview
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: d4843aaf14a944e7beef73ef1330985666007498
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: cb7aef4502f42bc91067cdcbd598b9b2ea7477cf
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715114"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028612"
 ---
-# <a name="r-server-standalone-and-machine-learning-server-standalone-in-sql-server"></a>R Server (изолированный) и Machine Learning Server (автономный) в SQL Server
+# <a name="what-are-standalone-machine-learning-server-or-r-server-in-sql-server"></a>Что такое автономный Machine Learning Server или R Server в SQL Server?
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 SQL Server предоставляет поддержку установки для автономного сервера R или Machine Learning Server, который работает независимо от SQL Server. В зависимости от версии SQL Server изолированный сервер имеет основу R с открытым кодом и, возможно, Python, которая перекрываются с высокопроизводительными библиотеками Майкрософт, которые добавляют статистические и прогнозные аналитические средства в масштабе. Библиотеки также включают задачи машинного обучения, внесенные в скрипты R или Python. 
@@ -73,7 +73,7 @@ SQL Server 2016 — только R. SQL Server 2017 поддерживает R 
   
   + [Изучите R и RevoScaleR в 25 функциях](https://docs.microsoft.com/machine-learning-server/r/tutorial-r-to-revoscaler): Начните с основных команд R, а затем приступайте к RevoScaleRным аналитическим функциям, которые обеспечивают высокую производительность и масштабирование для решений R. Она содержит параллелизуемые версии многих популярных пакетов моделирования для R, например кластеризацию методом К-средних, деревья и леса принятия решений, а также средства для работы с данными.
 
-  + [QuickStart Пример двоичной классификации с помощью пакета](https://docs.microsoft.com/machine-learning-server/python/quickstart-binary-classification-with-microsoftml)Python для microsoftml: Создайте модель двоичной классификации с помощью функций из microsoftml и хорошо известного набора данных молочной железы рака.
+  + [Краткое руководство. Пример двоичной классификации с помощью пакета](https://docs.microsoft.com/machine-learning-server/python/quickstart-binary-classification-with-microsoftml)Python для microsoftml: Создайте модель двоичной классификации с помощью функций из microsoftml и хорошо известного набора данных молочной железы рака.
 
 Выберите оптимальный язык для задачи. R лучше подходит для статистических вычислений, которые трудно реализовать с помощью SQL. Для операций на основе наборов данных используйте возможности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для достижения максимальной производительности. Используйте ядро СУБД в памяти для очень быстрых вычислений над столбцами.
 

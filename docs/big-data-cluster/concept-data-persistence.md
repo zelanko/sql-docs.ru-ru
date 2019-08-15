@@ -9,12 +9,12 @@ ms.date: 07/24/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: dcc30e8d86a1a767291b410df7cfd3aa42edf27f
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: ad5efd9c6d7a3750dcf3e35ae4d651e646060ed5
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68470995"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028594"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-on-kubernetes"></a>Сохраняемость данных при использовании кластера больших данных SQL Server в Kubernetes
 
@@ -60,7 +60,7 @@ ms.locfileid: "68470995"
 В AKS есть [два встроенных класса хранения](https://docs.microsoft.com/azure/aks/azure-disks-dynamic-pv): **по умолчанию** и **управляемый категории "Премиум"** , а также средство их динамической подготовки. Вы можете выбрать любой из них или создать собственный класс хранения для развертывания кластера больших данных с включенным постоянным хранилищем. По умолчанию встроенный файл конфигурации кластера для AKS *aks-dev-test* содержит конфигурации постоянного хранилища, предусматривающие использование класса хранения **по умолчанию**.
 
 > [!WARNING]
-> Постоянные тома, созданные с помощью встроенных классов хранения **по умолчанию** и **managed -premium**, имеют политику освобождения *Удаление*. Поэтому при удалении кластера больших данных SQL Server утверждения постоянных томов удаляются, а затем удаляются и сами тома. Вы можете создавать пользовательские классы хранения с помощью средства подготовки **azure-disk** с политикой освобождения *Сохранение*, как показано в [этой статье](https://docs.microsoft.com/en-us/azure/aks/concepts-storage#storage-classes).
+> Постоянные тома, созданные с помощью встроенных классов хранения **по умолчанию** и **managed -premium**, имеют политику освобождения *Удаление*. Поэтому при удалении кластера больших данных SQL Server утверждения постоянных томов удаляются, а затем удаляются и сами тома. Вы можете создавать пользовательские классы хранения с помощью средства подготовки **azure-disk** с политикой освобождения *Сохранение*, как показано в [этой статье](https://docs.microsoft.com/azure/aks/concepts-storage#storage-classes).
 
 
 ## <a name="minikube-storage-class"></a>Класс хранения Minikube

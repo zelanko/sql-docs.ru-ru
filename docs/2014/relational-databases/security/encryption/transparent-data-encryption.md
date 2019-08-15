@@ -18,12 +18,12 @@ ms.assetid: c75d0d4b-4008-4e71-9a9d-cee2a566bd3b
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 40bf5851663840dac27252aa5cdfdadb0e76da93
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ee4581d91b9f57b48f22e66dc15ff03e6f7320d7
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63188042"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028543"
 ---
 # <a name="transparent-data-encryption-tde"></a>Прозрачное шифрование данных (TDE)
   *Прозрачное шифрование данных* (TDE) позволяет шифровать файлы данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] ; это называется шифрованием неактивных данных. Чтобы защитить базу данных, можно принять ряд мер предосторожности, например спроектировать систему безопасности, проводить шифрование конфиденциальных ресурсов и поместить серверы базы данных под защиту брандмауэра. Однако если будет похищен физический носитель (например, диск или ленты резервной копии), злоумышленник может легко восстановить или подключить базу данных и получить доступ к данным. Одним из решений может стать шифрование конфиденциальных данных в базе данных и защита ключей, используемых при шифровании, с помощью сертификата. Это не позволит использовать данные ни одному человеку, не имеющему ключей, но такой тип защиты следует планировать заранее.  
@@ -44,9 +44,9 @@ ms.locfileid: "63188042"
   
  **Сведения, применимые к [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]**  
   
- При использовании прозрачного шифрования данных с [!INCLUDE[sqldbesa](../../../includes/sqldbesa-md.md)] V12  ([Предварительная версия в некоторых регионах](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)) [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]автоматически создает для вас сертификат на уровне сервера, хранящийся в базе данных master. Чтобы переместить базу данных TDE в [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] , вам необходимо расшифровать ее, переместить, а затем повторно включить TDE в целевой [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]. Пошаговые инструкции по прозрачному шифрованию данных в [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]можно найти в разделе [Transparent Data Encryption with Azure SQL Database](../../../database-engine/transparent-data-encryption-with-azure-sql-database.md).  
+ При использовании прозрачного шифрования данных с [!INCLUDE[sqldbesa](../../../includes/sqldbesa-md.md)] V12  ([Предварительная версия в некоторых регионах](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)) [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]автоматически создает для вас сертификат на уровне сервера, хранящийся в базе данных master. Чтобы переместить базу данных TDE в [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] , вам необходимо расшифровать ее, переместить, а затем повторно включить TDE в целевой [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]. Пошаговые инструкции по прозрачному шифрованию данных в [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]можно найти в разделе [Transparent Data Encryption with Azure SQL Database](../../../database-engine/transparent-data-encryption-with-azure-sql-database.md).  
   
- Просмотр состояния TDE применяется даже в подмножестве географических регионов, в которых сообщается, что версия семейства V12 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] теперь общедоступна. Прозрачное шифрование данных для [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] не используется в рабочих базах данных до тех пор, пока [!INCLUDE[msCoName](../../../includes/msconame-md.md)] не объявит, что функция TDE становится общедоступной. Дополнительные сведения о [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] V12 можно найти в разделе [Новые возможности версии 12 базы данных SQL](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/).  
+ Просмотр состояния TDE применяется даже в подмножестве географических регионов, в которых сообщается, что версия семейства V12 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] теперь общедоступна. Прозрачное шифрование данных для [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] не используется в рабочих базах данных до тех пор, пока [!INCLUDE[msCoName](../../../includes/msconame-md.md)] не объявит, что функция TDE становится общедоступной. Дополнительные сведения о [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] V12 можно найти в разделе [Новые возможности версии 12 базы данных SQL](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/).  
   
  **Сведения, применимые к [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]**  
   
@@ -230,9 +230,9 @@ GO
  Прозрачное шифрование данных можно включить в базе данных, которая содержит объекты OLTP в памяти. Записи журнала OLTP в памяти шифруются, если TDE включено. Данные в файловой группе MEMORY_OPTIMIZED_DATA не шифруются при включенном TDE.  
   
 ## <a name="see-also"></a>См. также  
- [Перемещение базы данных на другой экземпляр SQL Server, защищаемой прозрачным Шифрованием](move-a-tde-protected-database-to-another-sql-server.md)   
- [Включение прозрачного шифрования данных с помощью расширенного управления Ключами](enable-tde-on-sql-server-using-ekm.md)   
- [Прозрачное шифрование данных с базой данных Azure SQL](../../../database-engine/transparent-data-encryption-with-azure-sql-database.md)   
+ [Перемещение базы данных, защищенной TDE, в другую SQL Server](move-a-tde-protected-database-to-another-sql-server.md)   
+ [Включение TDE с помощью расширенного управления ключами](enable-tde-on-sql-server-using-ekm.md)   
+ [прозрачное шифрование данных с базой данных SQL Azure](../../../database-engine/transparent-data-encryption-with-azure-sql-database.md)   
  [Шифрование SQL Server](sql-server-encryption.md)   
  [Ключи шифрования базы данных и SQL Server (ядро СУБД)](sql-server-and-database-encryption-keys-database-engine.md)   
  [Центр обеспечения безопасности для базы данных Azure SQL и SQL Server Database Engine](../security-center-for-sql-server-database-engine-and-azure-sql-database.md)   

@@ -1,5 +1,5 @@
 ---
-title: Параметры конфигурации сервера "Server Memory" | Документы Майкрософт
+title: Параметры конфигурации памяти сервера | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -21,20 +21,20 @@ ms.assetid: 29ce373e-18f8-46ff-aea6-15bbb10fb9c2
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c366a239ca3459bc8fe4517736a4c0bcc64301cb
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: d4f7302da7be80038478c887a01bb32037503fc0
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68475965"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028691"
 ---
-# <a name="server-memory-server-configuration-options"></a>Параметры конфигурации сервера «Server Memory»
+# <a name="server-memory-configuration-options"></a>Параметры конфигурации памяти сервера
   Два параметра памяти сервера, **min server memory** и **max server memory**, используются для изменения в конфигурации объема памяти (в мегабайтах), управляемой диспетчером памяти SQL Server для процесса SQL Server, применяемого экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  По умолчанию параметр **min server memory** имеет значение 0, а параметр **max server memory** — 2147483647 МБ. По умолчанию [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может динамически изменять требования к памяти в зависимости от доступных системных ресурсов.  
   
 > [!NOTE]  
->  Если присвоить параметру **max server memory** минимальное значение, производительность [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может значительно ухудшиться, иногда сервер даже не будет запускаться. Если не удается запустить [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] после изменения этого параметра, запустите его с использованием параметра запуска **-f** и верните параметр **max server memory** к предыдущему значению. Дополнительные сведения см. в разделе [Параметры запуска службы Database Engine](database-engine-service-startup-options.md).  
+> Если присвоить параметру **max server memory** минимальное значение, производительность [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может значительно ухудшиться, иногда сервер даже не будет запускаться. Если не удается запустить [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] после изменения этого параметра, запустите его с использованием параметра запуска **-f** и верните параметр **max server memory** к предыдущему значению. Дополнительные сведения см. в разделе [Параметры запуска службы Database Engine](database-engine-service-startup-options.md).  
   
  Когда [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использует память динамически, он периодически опрашивает систему, чтобы определить объем свободной памяти. Поддержание достаточного объема свободной памяти позволяет избежать подкачки в операционной системе (ОС). Если свободно меньше памяти, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] высвобождает память для ОС. Если свободно больше памяти, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может выделить дополнительный объем памяти. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] добавляет память, только если она требуется для рабочей нагрузки; во время простоя сервера размер виртуального адресного пространства не увеличивается.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "68475965"
 
 <sup>2</sup> Сведения о вычислении рабочих потоков по умолчанию для заданного числа сходных ЦП на текущем узле см. в разделе [Настройка параметра конфигурации сервера "Максимальное число рабочих потоков"](../../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md).
 
-<sup>3</sup> Сведения о параметре запуска *-g* см. на странице документации [Параметры запуска службы ядра СУБД](../../database-engine/configure-windows/database-engine-service-startup-options.md). Апликабле только до 32-бит [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]до).
+<sup>3</sup> Сведения о параметре запуска *-g* см. на странице документации [Параметры запуска службы ядра СУБД](https://docs.microsoft.com/sql/database-engine/configure-windows/database-engine-service-startup-options?view=sql-server-2014). Применимо только для 32-разрядной версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] по [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]).
 
 |Тип ОС|Минимальный объем памяти, допустимый для параметра **max server memory**|  
 |-------------|----------------------------------------------------------------|  

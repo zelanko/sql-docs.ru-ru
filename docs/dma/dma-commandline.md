@@ -1,6 +1,6 @@
 ---
-title: Запустите помощник по миграции данных из командной строки (SQL Server) | Документация Майкрософт
-description: Узнайте, как запустить помощник по миграции данных из командной строки для оценки базы данных SQL Server для миграции
+title: Запуск Помощник по миграции данных из командной строки (SQL Server) | Документация Майкрософт
+description: Сведения о запуске Помощник по миграции данных из командной строки для оценки SQL Server баз данных для миграции
 ms.custom: ''
 ms.date: 05/06/2019
 ms.prod: sql
@@ -14,21 +14,21 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
-ms.openlocfilehash: ed669adc19dddc96ba953ba73f73805925968d19
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f98d96547a367dcf7853a5b0d7c14b2d79b7df63
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68058910"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028714"
 ---
-# <a name="run-data-migration-assistant-from-the-command-line"></a>Запустите помощник по миграции данных из командной строки
+# <a name="run-data-migration-assistant-from-the-command-line"></a>Запуск Помощник по миграции данных из командной строки
 
-В версии 2.1 и выше, когда установки помощника по миграции данных, также устанавливается dmacmd.exe в *% ProgramFiles %\\Microsoft Data Migration Assistant\\* . Используйте dmacmd.exe для оценки баз данных в автоматическом режиме и вывода результата JSON или CSV-файл. Этот метод особенно полезен при оценке в нескольких базах данных или огромных баз данных. 
+В версии 2,1 и выше при установке помощник по миграции данных также будет установлен дмакмд. exe в *% ProgramFiles%\\\\помощник по миграции данных (Майкрософт)* . Используйте дмакмд. exe для оценки баз данных в автоматическом режиме и вывода результата в JSON-или CSV-файл. Этот метод особенно полезен при оценке нескольких баз данных или огромных баз данных. 
 
 > [!NOTE]
-> Dmacmd.exe поддерживает только оценки. В настоящее время не поддерживается миграция.
+> Дмакмд. exe поддерживает только выполнение оценок. В настоящее время миграция не поддерживается.
 
-## <a name="assessments-using-the-command-line-interface-cli"></a>Оценки, с помощью интерфейса командной строки (CLI)
+## <a name="assessments-using-the-command-line-interface-cli"></a>Оценки с помощью интерфейса командной строки (CLI)
 
 ```
 DmaCmd.exe /AssessmentName="string"
@@ -40,32 +40,32 @@ DmaCmd.exe /AssessmentName="string"
 /AssessmentResultJson="file"|/AssessmentResultCsv="file"
 ```
 
-|Аргумент  |Описание  | Требуется (Y/N)
+|Аргумент  |Описание  | Обязательный (Y/N)
 |---------|---------|---------------|
-| `/help or /?`     | Как использовать dmacmd.exe текст справки        | в
+| `/help or /?`     | Использование текста справки дмакмд. exe        | в
 |`/AssessmentName`     |   Имя проекта оценки   | Y
-|`/AssessmentDatabases`     | Разделенный пробелами список строк подключения. Имя базы данных (начальный каталог) учитывается регистр. | Y
-|`/AssessmentSourcePlatform`     | Платформа источника для оценки: <br>Поддерживаемые значения для оценки: SqlOnPrem RdsSqlServer (по умолчанию) <br>Поддерживаемые значения для оценки готовности целевой объект: SqlOnPrem RdsSqlServer (по умолчанию), Cassandra (Предварительная версия)   | в
-|`/AssessmentTargetPlatform`     | Целевая платформа для оценки:  <br> Поддерживаемые значения для оценки: AzureSqlDatabase, ManagedSqlServer, SqlServer2012, SqlServer2014, SqlServer2016, SqlServerLinux2017 и SqlServerWindows2017 (по умолчанию)  <br> Поддерживаемые значения для оценки готовности целевой объект: ManagedSqlServer (по умолчанию), CosmosDB (Предварительная версия)   | в
-|`/AssessmentEvaluateFeatureParity`  | Запустите правила равенства. Если платформа источника RdsSqlServer, вычисление четности компонентов не поддерживается для целевой платформы AzureSqlDatabase  | в
-|`/AssessmentEvaluateCompatibilityIssues`     | Выполнение правил совместимости  | Y <br> (AssessmentEvaluateCompatibilityIssues или AssessmentEvaluateRecommendations является обязательным.)
-|`/AssessmentEvaluateRecommendations`     | Выполните рекомендуемые возможности        | Y <br> (AssessmentEvaluateCompatibilityIssues или AssessmentEvaluateRecommendations является обязательным)
+|`/AssessmentDatabases`     | Разделенный пробелами список строк подключения. Имя базы данных (начальный каталог) учитывает регистр. | Y
+|`/AssessmentSourcePlatform`     | Исходная платформа для оценки: <br>Поддерживаемые значения для оценки: Склонпрем, Рдссклсервер (по умолчанию) <br>Поддерживаемые значения для оценки готовности к работе: Склонпрем, Рдссклсервер (по умолчанию), Cassandra (Предварительная версия)   | в
+|`/AssessmentTargetPlatform`     | Целевая платформа для оценки:  <br> Поддерживаемые значения для оценки: AzureSqlDatabase, Манажедсклсервер, SqlServer2012, SqlServer2014, SqlServer2016, SqlServerLinux2017 и SqlServerWindows2017 (по умолчанию)  <br> Поддерживаемые значения для оценки готовности к работе: Манажедсклсервер (по умолчанию), CosmosDB (Предварительная версия)   | в
+|`/AssessmentEvaluateFeatureParity`  | Выполнение правил четности для компонентов. Если исходная платформа — Рдссклсервер, оценка четности для компонентов не поддерживается для целевой платформы AzureSqlDatabase  | в
+|`/AssessmentEvaluateCompatibilityIssues`     | Запуск правил совместимости  | Y <br> (Требуется либо Ассессментевалуатекомпатибилитиссуес, либо Ассессментевалуатерекоммендатионс.)
+|`/AssessmentEvaluateRecommendations`     | Запуск рекомендаций по функциям        | Y <br> (Требуется либо Ассессментевалуатекомпатибилитиссуес, либо Ассессментевалуатерекоммендатионс)
 |`/AssessmentOverwriteResult`     | Перезаписать файл результатов    | в
-|`/AssessmentResultJson`     | Полный путь к файлу результатов JSON     | Y <br> (AssessmentResultJson или AssessmentResultCsv является обязательным)
-|`/AssessmentResultCsv`    | Полный путь к CSV-файл результатов   | Y <br> (AssessmentResultJson или AssessmentResultCsv является обязательным)
-|`/Action`    | Используйте SkuRecommendation, чтобы получить рекомендации SKU, используйте AssessTargetReadiness провести оценку готовности целевой объект.   | в
-|`/SourceConnections`    | Пробелами списком строк подключения. Имя базы данных (начальный каталог) является необязательным. Если имя базы данных не указан, проверяются все базы данных в источнике.   | Y <br> (Требуется действие «AssessTargetReadiness»)
-|`/TargetReadinessConfiguration`    | Полный путь к XML-файл, описывающий значения для имени, соединения с источниками и файл результатов.   | Y <br> (TargetReadinessConfiguration или SourceConnections является обязательным)
-|`/FeatureDiscoveryReportJson`    | Путь к функции обнаружения JSON отчетов. Если этот файл будет создан, его можно использовать для повторного запуска оценки готовности целевой без подключения к источнику. | в
-|`/ImportFeatureDiscoveryReportJson`    | Путь к функции обнаружения JSON отчет, созданный ранее. Вместо соединения с источниками этот файл будет использоваться.   | в
+|`/AssessmentResultJson`     | Полный путь к файлу результатов JSON     | Y <br> (Требуется либо Ассессментресултжсон, либо Ассессментресултксв)
+|`/AssessmentResultCsv`    | Полный путь к файлу результатов CSV   | Y <br> (Требуется либо Ассессментресултжсон, либо Ассессментресултксв)
+|`/Action`    | Используйте Скурекоммендатион для получения рекомендаций по SKU, используйте Ассесстаржетреадинесс для оценки готовности к целевой службе.   | в
+|`/SourceConnections`    | Список строк подключения, разделенных пробелами. Имя базы данных (начальный каталог) является необязательным. Если имя базы данных не указано, оцениваются все базы данных в источнике.   | Y <br> (Обязательно, если Action-"Ассесстаржетреадинесс")
+|`/TargetReadinessConfiguration`    | Полный путь к XML-файлу, описывающему значения имени, исходных соединений и файла результатов.   | Y <br> (Требуется либо Таржетреадинессконфигуратион, либо Саурцеконнектионс)
+|`/FeatureDiscoveryReportJson`    | Путь к отчету JSON обнаружения компонентов. Если этот файл создан, его можно использовать для повторного выполнения целевой оценки готовности без подключения к источнику. | в
+|`/ImportFeatureDiscoveryReportJson`    | Путь к созданному ранее отчету JSON обнаружения компонентов. Этот файл будет использоваться вместо исходных соединений.   | в
 
-## <a name="examples-of-assessments-using-the-cli"></a>Примеры оценки, с помощью интерфейса командной строки
+## <a name="examples-of-assessments-using-the-cli"></a>Примеры оценок с помощью интерфейса командной строки
 
-**Dmacmd.exe**
+**Дмакмд. exe**
 
   `Dmacmd.exe /? or DmaCmd.exe /help`
 
-**Оценки одного-базы данных, с помощью правил совместимости проверки подлинности и выполнения Windows**
+**Оценка одной базы данных с использованием проверки подлинности Windows и выполнение правил совместимости**
 
 ```
 DmaCmd.exe /AssessmentName="TestAssessment"
@@ -75,7 +75,7 @@ Catalog=DatabaseName;Integrated Security=true"
 /AssessmentResultJson="C:\\temp\\Results\\AssessmentReport.json"
 ```
 
-**Оценки одного-базы данных, с помощью рекомендаций функции проверки подлинности и запуска SQL Server**
+**Оценка одной базы данных с помощью SQL Server проверки подлинности и выполнения рекомендаций**
 
 ```
 DmaCmd.exe /AssessmentName="TestAssessment"
@@ -85,7 +85,7 @@ Catalog=DatabaseName;User Id=myUsername;Password=myPassword;"
 /AssessmentResultCsv="C:\\temp\\Results\\AssessmentReport.csv"
 ```
 
-**Оценки одного-базы данных для целевой платформы SQL Server 2012, сохранить результаты в файл, файл JSON и CSV-файл**
+**Оценка одной базы данных для целевой платформы SQL Server 2012, сохранение результатов в JSON-и CSV-файл**
 
 ```
 DmaCmd.exe /AssessmentName="TestAssessment"
@@ -97,7 +97,7 @@ Catalog=DatabaseName;Integrated Security=true"
 /AssessmentResultCsv="C:\\temp\\Results\\AssessmentReport.csv"
 ```
 
-**Оценки одного-базы данных для целевой платформы базы данных SQL Azure, сохранить результаты в файл, файл JSON и CSV-файл**
+**Оценка одной базы данных для целевой платформы SQL Azure база данных, сохранение результатов в JSON-и CSV-файл**
 
 ```
 DmaCmd.exe /AssessmentName="TestAssessment" 
@@ -110,7 +110,7 @@ Catalog=DatabaseName;Integrated Security=true"
 /AssessmentResultJson="C:\\temp\\AssessmentReport.json"
 ```
 
-**Оценка нескольких-базы данных**
+**Оценка нескольких баз данных**
 
 ```
 DmaCmd.exe /AssessmentName="TestAssessment"
@@ -125,7 +125,7 @@ Catalog=DatabaseName3;Integrated Security=true"
 /AssessmentResultJson="C:\\Results\\test2016.json"
 ```
 
-**Оценка готовности целевой базы данных одного, с использованием проверки подлинности Windows**
+**Оценка готовности целевого объекта базы данных с использованием проверки подлинности Windows**
 
 ```
 DmaCmd.exe /Action=AssessTargetReadiness 
@@ -135,7 +135,7 @@ DmaCmd.exe /Action=AssessTargetReadiness
 /AssessmentResultJson="C:\temp\Results\AssessmentReport.json"
 ```
 
-**Оценка готовности целевой базы данных одного, с использованием проверки подлинности SQL Server**
+**Оценка готовности целевого объекта базы данных с использованием проверки подлинности SQL Server**
 
 ```
 DmaCmd.exe /Action=AssessTargetReadiness 
@@ -146,7 +146,7 @@ DmaCmd.exe /Action=AssessTargetReadiness
 
 ```
 
-**Оценки одного-базы данных для целевой платформы базы данных SQL Azure, сохранить результаты в файл, файл JSON и CSV-файл**
+**Оценка одной базы данных для целевой платформы SQL Azure база данных, сохранение результатов в JSON-и CSV-файл**
 
 ```
 DmaCmd.exe /AssessmentName="TestAssessment" 
@@ -161,7 +161,7 @@ Catalog=DatabaseName;Integrated Security=true"
 
 ```
 
-**Оценка готовности целевой базы данных нескольких**
+**Оценка готовности к работе с несколькими базами данных**
 
 ```
 DmaCmd.exe /Action=AssessTargetReadiness
@@ -175,7 +175,7 @@ DmaCmd.exe /Action=AssessTargetReadiness
 (/AssessmentSourcePlatform and /AssessmentTargetPlatform are optional.)
 ```
 
-**Оценка готовности целевой объект для всех баз данных на сервере с использованием проверки подлинности Windows**
+**Оценка готовности к оценке для всех баз данных на сервере с проверкой подлинности Windows**
 
 ```
 DmaCmd.exe /Action=AssessTargetReadiness
@@ -186,7 +186,7 @@ DmaCmd.exe /Action=AssessTargetReadiness
 
 ```
 
-**Оценка готовности целевой, импортировав созданную ранее отчет об обнаружении компонентов**
+**Оценка целевой готовности путем импорта отчета об обнаружении компонентов, созданного ранее**
 
 ```
 DmaCmd.exe /Action=AssessTargetReadiness
@@ -197,18 +197,18 @@ DmaCmd.exe /Action=AssessTargetReadiness
 
 ```
 
-**Оценка готовности целевой путем предоставления файла конфигурации**
+**Оценка целевой готовности путем предоставления файла конфигурации**
 
 ```
 DmaCmd.exe /Action=AssessTargetReadiness 
 /TargetReadinessConfiguration=.\Config.xml
 ```
 
-Содержимое файла конфигурации, при использовании соединения с источниками:
+Содержимое файла конфигурации при использовании исходных соединений:
 
 ```
 <?xml version="1.0" encoding="utf-8" ?>
-<TargetReadinessConfiguration xmlns="http://microsoft.com/schemas/SqlServer/Advisor/TargetReadinessConfiguration">
+<TargetReadinessConfiguration xmlns="https://microsoft.com/schemas/SqlServer/Advisor/TargetReadinessConfiguration">
   <AssessmentName>name</AssessmentName>
   <SourcePlatform>Source Platform</SourcePlatform> <!-- Optional. The default is SqlOnPrem -->
   <TargetPlatform>TargetPlatform</TargetPlatform> <!-- Optional. The default is ManagedSqlServer -->
@@ -224,10 +224,10 @@ DmaCmd.exe /Action=AssessTargetReadiness
 </TargetReadinessConfiguration>
 ```
 
-Содержимое файла конфигурации при импорте отчет об обнаружении компонентов:
+Содержимое файла конфигурации при импорте отчета об обнаружении компонентов:
 
 ```
-<TargetReadinessConfiguration xmlns="http://microsoft.com/schemas/SqlServer/Advisor/TargetReadinessConfiguration">
+<TargetReadinessConfiguration xmlns="https://microsoft.com/schemas/SqlServer/Advisor/TargetReadinessConfiguration">
   <AssessmentName>name</AssessmentName>
   <ImportFeatureDiscoveryReportJson>path\to\featurediscoveryfile.json</ImportFeatureDiscoveryReportJson>
   <AssessmentResultJson>path\to\resultfile.json</AssessmentResultJson>
@@ -235,9 +235,9 @@ DmaCmd.exe /Action=AssessTargetReadiness
 </TargetReadinessConfiguration>
 ```
 
-## <a name="azure-sql-databasemanaged-instance-sku-recommendations-using-the-cli"></a>Azure SQL базы данных управляемого экземпляра SKU рекомендаций с помощью интерфейса командной строки
+## <a name="azure-sql-databasemanaged-instance-sku-recommendations-using-the-cli"></a>Рекомендации по использованию базы данных SQL Azure/SKU управляемого экземпляра с помощью интерфейса командной строки
 
-Эти команды поддерживают рекомендации для отдельной базы данных для базы данных SQL Azure и варианты развертывания управляемого экземпляра.
+Эти команды поддерживают рекомендации для развертывания одиночной базы данных SQL Azure и управляемого экземпляра.
 
 ```
 .\DmaCmd.exe /Action=SkuRecommendation
@@ -248,33 +248,33 @@ DmaCmd.exe /Action=AssessTargetReadiness
 /SkuRecommendationPreventPriceRefresh=true 
 ```
 
-|Аргумент  |Описание  | Требуется (Y/N)
+|Аргумент  |Описание  | Обязательный (Y/N)
 |---------|---------|---------------|
-|`/Action=SkuRecommendation` | Выполнение оценки SKU, с помощью DMA командной строки | Y
-|`/SkuRecommendationInputDataFilePath` | Полный путь к файлу счетчика производительности, собранные с компьютера, на котором размещены ваши базы данных | Y
-|`/SkuRecommendationTsvOutputResultsFilePath` | Полный путь к файлу результата TSV | Y <br> (Требуется путь к файлу TSV или JSON или HTML)
-|`/SkuRecommendationJsonOutputResultsFilePath` | Полный путь к файлу результатов JSON | Y <br> (Требуется путь к файлу TSV или JSON или HTML)
-|`/SkuRecommendationHtmlResultsFilePath` | Полный путь к файлу результата HTML | Y <br> (Требуется путь к файлу TSV или JSON или HTML)
-|`/SkuRecommendationPreventPriceRefresh` | Запрещает обновление цены. Используйте, если выполняется в автономном режиме (например, true). | Y <br> (Выберите этот аргумент для статических цены или все аргументы ниже нужно выбрать для получения последними ценами)
-|`/SkuRecommendationCurrencyCode` | Валюта, в которой отображаются цены (например) «ДОЛЛ. США)» | Y <br> (Для последними ценами)
-|`/SkuRecommendationOfferName` | Предложение name (например) "MS-AZR - 0003 P»). Дополнительные сведения см. в разделе [сведения о предложении Microsoft Azure](https://azure.microsoft.com/support/legal/offer-details/) страницы. | Y <br> (Для последними ценами)
-|`/SkuRecommendationRegionName` | Области имя (например) «WestUS») | Y <br> (Для последними ценами)
-|`/SkuRecommendationSubscriptionId` | Идентификатор подписки. | Y <br> (Для последними ценами)
-|`/SkuRecommendationDatabasesToRecommend` | Разделенный пробелами список баз данных для рекомендации (например) «Database1» «Database2» «Database3»). Имена с учетом регистра и должны быть заключены в двойные кавычки. Если не указано, рекомендации предоставляются для всех баз данных. | в
-|`/AzureAuthenticationTenantId` | Клиент проверки подлинности. | Y <br> (Для последними ценами)
-|`/AzureAuthenticationClientId` | Идентификатор клиента приложения AAD, используемый для проверки подлинности. | Y <br> (Для последними ценами)
-|`/AzureAuthenticationInteractiveAuthentication` | Значение true для всплывающие окна. | Y <br> (Для последними ценами) <br>(Выберите один из вариантов проверки подлинности 3 — вариант 1)
-|`/AzureAuthenticationCertificateStoreLocation` | Значение в расположении хранилища сертификатов (например) «CurrentUser»). | Y <br>(Для последними ценами) <br> (Выберите один из вариантов проверки подлинности 3 — вариант 2)
-|`/AzureAuthenticationCertificateThumbprint` | Задается для отпечатка сертификата. | Y <br> (Для последними ценами) <br>(Выберите один из вариантов проверки подлинности 3 — вариант 2)
-|`/AzureAuthenticationToken` | Значение маркера сертификата. | Y <br> (Для последними ценами) <br>(Выберите один из вариантов проверки подлинности 3 — вариант 3)
+|`/Action=SkuRecommendation` | Выполнение оценки номера SKU с помощью командной строки DMA | Y
+|`/SkuRecommendationInputDataFilePath` | Полный путь к файлу счетчика производительности, полученному с компьютера, на котором размещены базы данных | Y
+|`/SkuRecommendationTsvOutputResultsFilePath` | Полный путь к файлу в формате TSV | Y <br> (Требуется путь к файлу в формате TSV или JSON или HTML)
+|`/SkuRecommendationJsonOutputResultsFilePath` | Полный путь к файлу результатов JSON | Y <br> (Требуется путь к файлу в формате TSV или JSON или HTML)
+|`/SkuRecommendationHtmlResultsFilePath` | Полный путь к файлу результатов в формате HTML | Y <br> (Требуется путь к файлу в формате TSV или JSON или HTML)
+|`/SkuRecommendationPreventPriceRefresh` | Предотвращает обновление цены. Используйте, если выполняется в автономном режиме (например, true). | Y <br> (Выберите либо этот аргумент для статических цен, либо для получения последних цен необходимо выбрать все аргументы ниже)
+|`/SkuRecommendationCurrencyCode` | Валюта, в которой отображаются цены (например, "USD") | Y <br> (Для последних цен)
+|`/SkuRecommendationOfferName` | Название предложения (например, "MS-AZR-0003P"). Дополнительные сведения см. на странице [сведений о предложении Microsoft Azure](https://azure.microsoft.com/support/legal/offer-details/) . | Y <br> (Для последних цен)
+|`/SkuRecommendationRegionName` | Имя региона (например, "WestUS") | Y <br> (Для последних цен)
+|`/SkuRecommendationSubscriptionId` | Идентификатор подписки. | Y <br> (Для последних цен)
+|`/SkuRecommendationDatabasesToRecommend` | Список баз данных с разделителями-пробелами (например, "Database1" "Database2" "Database3"). В именах учитывается регистр, и их необходимо заключить в двойные кавычки. Если этот параметр опущен, для всех баз данных предоставляются рекомендации. | в
+|`/AzureAuthenticationTenantId` | Клиент проверки подлинности. | Y <br> (Для последних цен)
+|`/AzureAuthenticationClientId` | Идентификатор клиента приложения AAD, используемого для проверки подлинности. | Y <br> (Для последних цен)
+|`/AzureAuthenticationInteractiveAuthentication` | Задайте значение true для всплывающего окна. | Y <br> (Для последних цен) <br>(Выберите один из трех параметров проверки подлинности — вариант 1)
+|`/AzureAuthenticationCertificateStoreLocation` | Задайте расположение хранилища сертификатов (например, "CurrentUser"). | Y <br>(Для последних цен) <br> (Выберите один из трех параметров проверки подлинности — вариант 2)
+|`/AzureAuthenticationCertificateThumbprint` | Задайте для параметра значение отпечаток сертификата. | Y <br> (Для последних цен) <br>(Выберите один из трех параметров проверки подлинности — вариант 2)
+|`/AzureAuthenticationToken` | Задайте для маркера сертификата. | Y <br> (Для последних цен) <br>(Выберите один из трех параметров проверки подлинности — вариант 3)
 
-## <a name="examples-of-sku-assessments-using-the-cli"></a>Примеры Конфигураций тестов, с помощью интерфейса командной строки
+## <a name="examples-of-sku-assessments-using-the-cli"></a>Примеры оценки SKU с помощью интерфейса командной строки
 
-**Dmacmd.exe**
+**Дмакмд. exe**
 
 `Dmacmd.exe /? or DmaCmd.exe /help`
 
-**Рекомендации Azure SQL DB/MI SKU с стоимость обновления (get последними ценами) - интерактивной проверки подлинности** 
+**Рекомендации по SKU базы данных SQL Azure/MI с обновлением цен (получение последних цен) — интерактивная проверка подлинности** 
 
 ```
 .\DmaCmd.exe /Action=SkuRecommendation
@@ -291,7 +291,7 @@ DmaCmd.exe /Action=AssessTargetReadiness
 /AzureAuthenticationInteractiveAuthentication=true 
 ```
 
-**Рекомендации Azure SQL DB/MI SKU с стоимость обновления (get последними ценами) — проверка подлинности сертификата**
+**Рекомендации по SKU базы данных SQL Azure/MI с обновлением цен (получение последних цен) — проверка подлинности сертификата**
 
 ```
 .\DmaCmd.exe /Action=SkuRecommendation
@@ -309,7 +309,7 @@ DmaCmd.exe /Action=AssessTargetReadiness
 /AzureAuthenticationCertificateThumbprint=<Your Certificate Thumbprint>  
 ```
 
-**Рекомендации Azure SQL DB SKU/MI с стоимость обновления (get последними ценами) - маркеров проверки подлинности и укажите базы данных, чтобы рекомендовать**
+**Рекомендации по SKU и MI базы данных SQL Azure с обновлением цен (получение последних цен) — проверка подлинности маркеров и указание баз данных для получения рекомендаций**
   
 ```
 .\DmaCmd.exe /Action=SkuRecommendation
@@ -327,7 +327,7 @@ DmaCmd.exe /Action=AssessTargetReadiness
 /AzureAuthenticationToken=<Your Authentication Token> 
 ```
 
-**Рекомендации Azure SQL DB/MI SKU без обновления цены (используйте статические цены)** 
+**Рекомендация по SKU базы данных SQL Azure (MI) без обновления цены (используйте статические цены)** 
 ```
 .\DmaCmd.exe /Action=SkuRecommendation
 /SkuRecommendationInputDataFilePath="C:\TestOut\out.csv"
@@ -338,5 +338,5 @@ DmaCmd.exe /Action=AssessTargetReadiness
 ```
 
 ## <a name="see-also"></a>См. также
-- [Помощник по миграции данных](https://aka.ms/get-dma) загрузки.
-- Статья [определить нужный номер SKU базы данных Azure SQL для базы данных в локальной](https://aka.ms/dma-sku-recommend-sqldb).
+- [Помощник по миграции данных](https://aka.ms/get-dma) загрузить.
+- В этой статье [указывается правильный номер SKU базы данных SQL Azure для локальной базы данных](https://aka.ms/dma-sku-recommend-sqldb).
