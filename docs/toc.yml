@@ -10012,12 +10012,12 @@
           items:
             - name: Политика поддержки SSMS
               href: ssms/support-policy.md
-            - name: Отзывы и справка
-              href: 'https://docs.microsoft.com/sql/sql-server/sql-server-get-help'
             - name: Справка и поддержка пользователей в SSMS
               href: ssms/user-assistance-in-sql-server-management-studio.md
             - name: Анонимные данные об использовании
               href: ssms/sql-server-management-studio-telemetry-ssms.md
+            - name: Отзывы >
+              href: 'https://aka.ms/sqlfeedback'
     - name: SqlPackage.exe
       items:
         - name: Установка sqlpackage
