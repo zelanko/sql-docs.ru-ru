@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 0b9161d2093c7a32d027da987fdcd3316d1cbbaa
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: fba13ea5d6d91ab83cb2560727ed75c79bc4c48b
+ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715218"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69531053"
 ---
 # <a name="install-sql-server-machine-learning-services-on-windows"></a>Установка Службы машинного обучения SQL Server в Windows
 
@@ -244,6 +244,10 @@ ms.locfileid: "68715218"
 * [Создание имени входа для SQLRUserGroup](../../advanced-analytics/security/create-a-login-for-sqlrusergroup.md)
 * [Управление квотами диска](https://docs.microsoft.com/windows/desktop/fileio/managing-disk-quotas) во избежание выполнения внешних скриптов задач, которые исчерпали место на диске
 
+::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+В SQL Server 2019 в Windows механизм изоляции изменился. Это влияет на **SQLRUserGroup**, правила брандмауэра, разрешения файла и подразумеваемую проверку подлинности. Дополнительные сведения см. в разделе [изменения изоляции для службы машинного обучения](sql-server-machine-learning-services-2019.md).
+::: moniker-end
+
 <a name="bkmk_configureAccounts"></a> 
 <a name="permissions-external-script"></a> 
 
@@ -258,9 +262,11 @@ ms.locfileid: "68715218"
 
 Теперь, когда все работает, также может потребоваться оптимизировать сервер для поддержки машинного обучения или установить предварительно обученные модели.
 
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 ### <a name="add-more-worker-accounts"></a>Добавить рабочие учетные записи
 
 Если предполагается, что многие пользователи одновременно запускают сценарии, можно увеличить число рабочих учетных записей, назначенных службе панели запуска. Дополнительные сведения см. [в разделе Изменение пула учетных записей пользователей для SQL Server службы машинного обучения](../administration/modify-user-account-pool.md).
+::: moniker-end
 
 ### <a name="optimize-the-server-for-script-execution"></a>Оптимизация сервера для выполнения скрипта
 
@@ -286,14 +292,14 @@ ms.locfileid: "68715218"
 
 ## <a name="next-steps"></a>Следующие шаги
 
-Разработчики r могут приступить к работе с некоторыми простыми примерами и ознакомиться с основами работы R с SQL Server. Следующий шаг см. по следующим ссылкам:
+Разработчики на языке R могут ознакомиться с простыми примерами, а также узнать, как код R работает с SQL Server. Дополнительные сведения см. в следующих статьях.
 
 + [Учебник. Запуск R в T-SQL](../tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
-+ [Учебник. Аналитика в базе данных для разработчиков R](../tutorials/sqldev-in-database-r-for-sql-developers.md)
++ [Учебник. Аналитические функции в базе данных для разработчиков R](../tutorials/sqldev-in-database-r-for-sql-developers.md)
 
-Разработчики Python могут узнать, как использовать Python с SQL Server, следуя этим учебникам:
+Разработчики на языке Python могут узнать, как использовать Python с SQL Server, изучив следующие руководства.
 
 + [Учебник. Запуск Python в T-SQL](../tutorials/run-python-using-t-sql.md)
-+ [Учебник. Аналитика в базе данных для разработчиков Python](../tutorials/sqldev-in-database-python-for-sql-developers.md)
++ [Учебник. Аналитические функции в базе данных для разработчиков Python](../tutorials/sqldev-in-database-python-for-sql-developers.md)
 
-Примеры машинного обучения, основанные на реальных сценариях, см. в разделе [учебники](../tutorials/machine-learning-services-tutorials.md)по машинному обучению.
+Примеры машинного обучения, основанные на реальных сценариях, см. в разделе [руководствах по машинному обучению](../tutorials/machine-learning-services-tutorials.md).

@@ -10,12 +10,12 @@ ms.assetid: a74239f4-0f38-43ed-82d3-bf742dbf8a54
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 266833abbfa959e39a171eb498701c75c7eb66c8
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.openlocfilehash: 98c6db6e3c7af6f66f4d7a1496bf955a65dd5bb1
+ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69493966"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69530870"
 ---
 # <a name="lesson-10-defining-administrative-roles"></a>Урок 10. Определение административных ролей
   На данном занятии предстоит определить роли безопасности для задач администрирования.  
@@ -29,7 +29,7 @@ ms.locfileid: "69493966"
  В этой задаче будет задана роль безопасности с разрешениями на обработку базы данных служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , после чего будет выполнена проверка созданной роли безопасности.  
   
 ## <a name="see-also"></a>См. также  
- [Analysis Services сценарий учебника](https://docs.microsoft.com/analysis-services/analysis-services-tutorial-scenario)   
+ [Analysis Services сценарий учебника](analysis-services-tutorial-scenario.md)   
  [Многомерное моделирование (учебник по Adventure Works)](multidimensional-modeling-adventure-works-tutorial.md)  
   
   

@@ -10,12 +10,12 @@ ms.assetid: 3a0ec2eb-017a-40db-b8d4-8aa8f4cdc146
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 6ba51a979572bb91b840f41483081464e8cd044e
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: e331f25811255569261fb30c2869b428843ebfc5
+ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68891088"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69530909"
 ---
 # <a name="initial-configuration-powerpivot-for-sharepoint"></a>Первоначальная конфигурация (PowerPivot для SharePoint)
   В этом разделе описаны действия, которые следует выполнить для настройки первоначальной установки PowerPivot для SharePoint. Наиболее простым способом настройки первоначальной установки является применение средства настройки служб PowerPivot. Он выполняет все описанные далее действия по настройке автоматически.  
@@ -24,7 +24,7 @@ ms.locfileid: "68891088"
   
  
   
-## <a name="prerequisites"></a>предварительные требования  
+## <a name="prerequisites"></a>Предварительные требования  
  Сервер SharePoint необходимо установить с параметром «Ферма серверов» в программе установки SharePoint. Автономный сервер SharePoint, который использует встроенную базу данных, не поддерживается. Дополнительные сведения см. [в руководстве по использованию SQL Server функций бизнес-аналитики в ферме SharePoint 2010](../../../2014/sql-server/install/guidance-for-using-sql-server-bi-features-in-a-sharepoint-2010-farm.md).  
   
 > [!IMPORTANT]  
@@ -195,7 +195,7 @@ ms.locfileid: "68891088"
 ##### <a name="part-3-configure-the-unattended-powerpivot-data-refresh-account"></a>Часть 3. Настройка учетной записи автоматического обновления данных PowerPivot  
  Создание учетной записи автоматического обновления данных для доступа к данным PowerPivot часто требуется для внешнего источника данных во время обновления данных. Например, если Kerberos не включен, необходимо создать учетную запись автоматического выполнения, которую служба PowerPivot может использовать для подключения к внешним источникам данных.  
   
- Инструкции по созданию учетной записи автоматического обновления данных PowerPivot или других сохраненных учетных данных, используемых при обновлении данных, см. в статье [Настройка учетной записи &#40;автоматического обновления данных PowerPivot PowerPivot для SharePoint&#41; ](https://docs.microsoft.com/analysis-services/configure-unattended-data-refresh-account-powerpivot-sharepoint) и [Настройте сохраненные учетные данные для PowerPivot для SharePoint &#40;&#41;обновления данных PowerPivot](../../../2014/analysis-services/configure-stored-credentials-data-refresh-powerpivot-sharepoint.md).  
+ Инструкции по созданию учетной записи автоматического обновления данных PowerPivot или других сохраненных учетных данных, используемых при обновлении данных, см. в статье [Настройка учетной записи &#40;автоматического обновления данных PowerPivot PowerPivot для SharePoint&#41; ](../../analysis-services/configure-unattended-data-refresh-account-powerpivot-sharepoint.md) и [Настройте сохраненные учетные данные для PowerPivot для SharePoint &#40;&#41;обновления данных PowerPivot](../../../2014/analysis-services/configure-stored-credentials-data-refresh-powerpivot-sharepoint.md).  
   
 ##  <a name="Usage"></a> Шаг 6. Включить сбор данных об использовании  
  С помощью инфраструктуры сбора данных об использовании SharePoint средство PowerPivot для SharePoint собирает сведения об использовании PowerPivot во всей ферме. Несмотря на то что данные об использовании являются частью любой установки SharePoint, может понадобиться включить их перед использованием. Инструкции см. в разделе [Настройка сбора данных об &#40;использовании для PowerPivot для SharePoint](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint).  

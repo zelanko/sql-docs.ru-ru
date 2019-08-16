@@ -10,12 +10,12 @@ ms.assetid: e0a1e354-e879-4eb8-bb2b-6c3809e32cb6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1d9b41a37a48e5ff8456eb353e45b894d3bb0757
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.openlocfilehash: 8f61e0e04c5ca96da69098b58c38b1ef73eba206
+ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69493838"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69530836"
 ---
 # <a name="lesson-6-defining-calculations"></a>Занятие 6: Определение вычислений
   На этом занятии будет показано, как определять вычисления, являющиеся многомерными выражениями или сценариями многомерных выражений. Вычисления позволяют определять вычисляемые элементы, именованные наборы и другие команды скриптов, расширяющие возможности куба служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Например, с помощью команды скрипта можно определить вложенный куб и присвоить вычисление его ячейкам.  
@@ -55,8 +55,8 @@ ms.locfileid: "69493838"
  [Занятие 7. &#40;Определение ключевых показателей эффективности&#41;](lesson-7-defining-key-performance-indicators-kpis.md)  
   
 ## <a name="see-also"></a>См. также  
- [Analysis Services сценарий учебника](https://docs.microsoft.com/analysis-services/analysis-services-tutorial-scenario)   
- [Руководство по работе с &#40;многомерным моделированием Adventure Works&#41;](https://docs.microsoft.com/analysis-services/multidimensional-modeling-adventure-works-tutorial)   
+ [Analysis Services сценарий учебника](analysis-services-tutorial-scenario.md)   
+ [Руководство по работе с &#40;многомерным моделированием Adventure Works&#41;](multidimensional-modeling-adventure-works-tutorial.md)   
  [Создание именованных наборов](multidimensional-models/create-named-sets.md)   
  [Создание вычисляемых элементов](multidimensional-models/create-calculated-members.md)  
   

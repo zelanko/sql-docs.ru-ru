@@ -12,12 +12,12 @@ ms.assetid: b338a60d-4802-4b68-862a-6dc6a3f75e48
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ba1b1b3b8d8fa3f26af84ef12f95858ac32cdeee
-ms.sourcegitcommit: 12b7e3447ca2154ec2782fddcf207b903f82c2c0
+ms.openlocfilehash: f45ccaa0caab2e1dcc7e96e80e217d82d4f1f805
+ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "68957321"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69530895"
 ---
 # <a name="object-naming-rules-analysis-services"></a>Правила именования объектов (службы Analysis Services)
   В этом разделе описаны соглашения об именах объектов, а также зарезервированные слова и символы, которые нельзя использовать в именах объектов, в коде или в скриптах служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
@@ -89,7 +89,7 @@ ms.locfileid: "68957321"
   
 ## <a name="see-also"></a>См. также  
  [Зарезервированные слова многомерных выражений](/sql/mdx/mdx-reserved-words)   
- [Переводы &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/translations-analysis-services)   
+ [Переводы &#40;Analysis Services&#41;](/analysis-services/translation-support-in-analysis-services)   
  [XMLA XML для аналитики &#40;соответствия&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-compliance-xmla)  
   
   

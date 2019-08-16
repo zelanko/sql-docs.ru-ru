@@ -1,5 +1,5 @@
 ---
-title: sys.dm_server_audit_status (Transact-SQL) | Документация Майкрософт
+title: sys. DM _server_audit_status (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 04/19/2016
 ms.prod: sql
@@ -18,31 +18,31 @@ helpviewer_keywords:
 ms.assetid: 4aa32d54-2ae1-437e-bbaa-7f1df1404b44
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 3291edb34087e46739cf984d2412821fa66b7a07
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ff565f46b5329515b1ab4424657c45a12720c28b
+ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68053218"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69530860"
 ---
-# <a name="sysdmserverauditstatus-transact-sql"></a>sys.dm_server_audit_status (Transact-SQL)
+# <a name="sysdm_server_audit_status-transact-sql"></a>sys.dm_server_audit_status (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Возвращает строку для каждого аудита сервера, отображая текущее состояние аудита. Дополнительные сведения см. в статье [Подсистема аудита SQL Server (ядро СУБД)](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**audit_id**|**int**|Идентификатор аудита. Сопоставляется **audit_id** в **sys.audits** представления каталога.|  
-|**name**|**sysname**|Имя аудита. Совпадение с кодом **имя** в **sys.server_audits** представления каталога.|  
-|**status**|**smallint**|Числовое обозначение состояния аудита сервера:<br /><br /> 0 = не запущен<br /><br /> 1 =<br />        Запущено<br /><br /> 2 =<br />      Сбой среды выполнения<br /><br /> 3 = target создать сбой<br /><br /> 4 = завершение работы|  
+|**audit_id**|**int**|Идентификатор аудита. Сопоставляется с полем **audit_id** в представлении каталога **sys. audits** .|  
+|**name**|**sysname**|Имя аудита. То же, что и поле **Name** в представлении каталога **sys. server_audits** .|  
+|**status**|**smallint**|Числовое обозначение состояния аудита сервера:<br /><br /> 0 = не запущено<br /><br /> 1 =<br />        Запущено<br /><br /> 2 =<br />      Сбой среды выполнения<br /><br /> 3 = сбой при создании целевого объекта<br /><br /> 4 = Завершение работы|  
 |**status_desc**|**nvarchar(256)**|Строка, которая показывает состояние аудита сервера:<br /><br /> NOT_STARTED<br /><br /> STARTED<br /><br /> RUNTIME_FAIL<br /><br /> TARGET_CREATION_FAILED<br /><br /> SHUTTING_DOWN|  
 |**status_time**|**datetime2**|Отметка времени в формате UTC последнего изменения состояния аудита.|  
-|**event_session_address**|**varbinary(8)**|Адрес сеанса расширенных событий, связанного с аудитом. Связанные с **sys.db_xe_sessions.address** представления каталога.|  
+|**event_session_address**|**varbinary (8)**|Адрес сеанса расширенных событий, связанного с аудитом. Относится к представлению каталога **sys. DM _xe_sessions. Address** .|  
 |**audit_file_path**|**nvarchar(256)**|Полный путь и имя целевого файла аудита, который используется в настоящее время. Заполняется только для аудитов файлов.|  
 |**audit_file_size**|**bigint**|Приблизительный размер файла аудита, в байтах. Заполняется только для аудитов файлов.|  
   
 ## <a name="permissions"></a>Разрешения  
- Участники должны иметь **VIEW SERVER STATE** и **ВЫБЕРИТЕ** разрешения.  
+ Субъекты должны иметь **состояние просмотра сервера** и разрешения **SELECT** .  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   

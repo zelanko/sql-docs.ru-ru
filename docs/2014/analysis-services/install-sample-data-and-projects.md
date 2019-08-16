@@ -10,12 +10,12 @@ ms.assetid: fc475b25-cbb2-408a-901f-9299299538c5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f5fed7f199f80f59c1983ec5f17a4f922c836333
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 0be986ee50599c6e95222bca2eae217b088e2de3
+ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888626"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69530816"
 ---
 # <a name="install-sample-data-and-projects-for-the-analysis-services-multidimensional-modeling-tutorial"></a>Установка образцов данных и проектов для учебника по многомерному моделированию в службах Analysis Services
   Используйте указания и ссылки, приведенные в этом разделе, для установки всех файлов данных и проектов, используемых в учебниках по службам Analysis Services.  
@@ -46,7 +46,7 @@ ms.locfileid: "68888626"
   
      Перезагрузите компьютер, чтобы завершить установку.  
   
-## <a name="step-3-install-databases"></a>Шаг 3. Установка баз данных  
+## <a name="step-3-install-databases"></a>Шаг 3. Установка баз данных  
  В многомерной модели служб Analysis Services используются транзакционные данные, импортируемые из системы управления реляционными базами данных. Для целей этого учебника в качестве источников данных будет использоваться следующая реляционная база данных.  
   
 -   **AdventureWorksDW2012** — это реляционное хранилище данных, которое выполняется на экземпляре ядро СУБД. Оно содержит исходные данные, используемые в базах данных и проектах служб Analysis Services, которые вы создадите и развернете в этом учебнике.  
@@ -145,7 +145,7 @@ ms.locfileid: "68888626"
 8.  Запустите среду SQL Server Management Studio. В среде SQL Server Management Studio подключитесь к службам Analysis Services. Убедитесь в том, что на сервере выполняется база данных **Analysis Services Tutorial** (Учебник по службам Analysis Services).  
   
 ## <a name="next-step"></a>Следующий шаг  
- Теперь вы готовы к работе с учебником. Дополнительные сведения о том, как приступить к работе, см. в разделе [Многомерное моделирование (учебник по Adventure Works)](https://docs.microsoft.com/analysis-services/multidimensional-modeling-adventure-works-tutorial).  
+ Теперь вы готовы к работе с учебником. Дополнительные сведения о том, как приступить к работе, см. в разделе [Многомерное моделирование (учебник по Adventure Works)](multidimensional-modeling-adventure-works-tutorial.md).  
   
 ## <a name="see-also"></a>См. также  
  [Установка SQL Server 2014 с помощью мастера &#40;установки&#41;](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)   

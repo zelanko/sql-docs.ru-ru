@@ -1,26 +1,26 @@
 ---
-title: Краткое руководство по выполнению базового кода Python "Hello World" в T-SQL
-description: Краткое руководство по скрипту Python в SQL Server. Изучите основные сведения о вызове сценария Python с помощью системной хранимой процедуры sp_execute_external_script в упражнении Hello-World.
+title: Краткое руководство. Python "Hello World"
+description: В этом кратком руководстве вы узнаете основные понятия, выполняя сценарий Python "Hello World" в SQL Server Службы машинного обучения. Будет использоваться системная хранимая процедура T-SQL sp_execute_external_script.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/10/2019
+ms.date: 08/15/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a170bd2ee3e893a83ebb9d3201ee117321e7562b
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: 1149c7888bc783c9d4f658eed5e8405214d6ffc4
+ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68714826"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69530967"
 ---
-# <a name="quickstart-hello-world-python-script-in-sql-server"></a>Краткое руководство. Сценарий Python "Hello World" в SQL Server 
+# <a name="quickstart-run-a-hello-world-python-script-on-sql-server-machine-learning-services"></a>Краткое руководство. Запуск скрипта Python "Hello World" на SQL Server Службы машинного обучения
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-В этом кратком руководстве вы узнаете основные понятия, выполняя сценарий Python "Hello World" inT-SQL с введением в системную хранимую процедуру **sp_execute_external_script** . 
+В этом кратком руководстве вы узнаете основные понятия, выполняя сценарий Python "Hello World" в SQL Server Службы машинного обучения. Вы будете использовать системную хранимую процедуру T-SQL **sp_execute_external_script** .
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 Предыдущее краткое руководство. [Проверка наличия Python в SQL Server](quickstart-python-verify.md)содержит сведения и ссылки для настройки среды Python, необходимой для этого краткого руководства.
 
@@ -89,7 +89,7 @@ GO
 
 **Результаты**
 
-| Всем привет |
+| Hello World |
 |-------------|
 | 1 |
 
@@ -98,4 +98,4 @@ GO
 Теперь, когда вы выполнили пару простых скриптов Python, внимательно рассмотрим структурирование входов и выходов.
 
 > [!div class="nextstepaction"]
-> [QuickStart Обработку входных и выходных данных](quickstart-python-inputs-and-outputs.md)
+> [Краткое руководство Обработку входных и выходных данных](quickstart-python-inputs-and-outputs.md)

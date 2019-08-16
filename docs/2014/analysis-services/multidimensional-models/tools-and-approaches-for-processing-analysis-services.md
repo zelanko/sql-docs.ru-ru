@@ -1,5 +1,5 @@
 ---
-title: Средства и способы обработки (службы Analysis Services) | Документация Майкрософт
+title: Средства и подходы для обработки (Analysis Services) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,12 +13,12 @@ ms.assetid: 82347a16-4145-4655-8adf-2a300f1fdf99
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 66696d32b62f29df7a4a1866978d72f5d4a173ff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a6bcc8e830c682c800f7dbdd586b25b88ca8577f
+ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66072820"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69530943"
 ---
 # <a name="tools-and-approaches-for-processing-analysis-services"></a>Средства и способы обработки (службы Analysis Services)
   Обработка — это операция, при которой службы Analysis Services запрашивают реляционный источник данных и заполняют этими данными объекты служб Analysis Services.  
@@ -46,7 +46,7 @@ ms.locfileid: "66072820"
  Обработка имеет широкие возможности настройки, управляемые набором параметров обработки, которые определяют тип обработки (полная или добавочная), выполняемой на уровне объектов. Дополнительные сведения об обработке параметров и объектов см. в разделах [Параметры обработки (службы Analysis Services)](processing-options-and-settings-analysis-services.md) и [Обработка объектов служб Analysis Services](processing-analysis-services-objects.md).  
   
 > [!NOTE]  
->  В этом разделе описываются средства и подходы для обработки многомерных моделей. Дополнительные сведения об обработке табличных моделей см. в разделе [Обработка базы данных, таблицы или секции](../tabular-models/process-database-table-or-partition-analysis-services.md) и [обработки данных &#40;табличные службы SSAS&#41;](../process-data-ssas-tabular.md).  
+>  В этом разделе описываются средства и подходы для обработки многомерных моделей. Дополнительные сведения об обработке табличных моделей см. в разделе [Обработка базы данных, таблицы или секции](../tabular-models/process-database-table-or-partition-analysis-services.md) и [Обработка табличных &#40;&#41;данных SSAS](../process-data-ssas-tabular.md).  
   
 ### <a name="processing-objects-in-sql-server-management-studio"></a>Обработка объектов в среде SQL Server Management Studio  
   
@@ -122,13 +122,13 @@ ms.locfileid: "66072820"
   
 1.  Начиная с этого выпуска SQL Server, командлеты служб Analysis Services PowerShell можно использовать для обработки объектов. Следующие командлеты можно запускать интерактивно или из скрипта:  
   
-    -   [Командлет Invoke-ProcessCube](/sql/analysis-services/powershell/invoke-processcube-cmdlet)  
+    -   [Командлет Invoke-ProcessCube](/powershell/module/sqlserver/invoke-processcube)  
   
-    -   [Командлет Invoke-ProcessDimension](/sql/analysis-services/powershell/invoke-processdimension-cmdlet)  
+    -   [Командлет Invoke-ProcessDimension](/powershell/module/sqlserver/invoke-processdimension)  
   
-    -   [Командлет Invoke-ProcessPartition](/sql/analysis-services/powershell/invoke-processpartition-cmdlet)  
+    -   [Командлет Invoke-ProcessPartition](/powershell/module/sqlserver/invoke-processpartition)  
   
-    -   [Командлет Invoke-ASCmd](/sql/analysis-services/powershell/invoke-ascmd-cmdlet), который может использоваться для выполнения скриптов XMLA, MDX или DMX, содержащих команды обработки.  
+    -   [Командлет Invoke-ASCmd](/powershell/module/sqlserver/invoke-ascmd), который может использоваться для выполнения скриптов XMLA, MDX или DMX, содержащих команды обработки.  
   
 ### <a name="monitoring-object-processing-using-sql-server-profiler"></a>Наблюдение за обработкой объектов в приложении SQL Server Profiler  
   
