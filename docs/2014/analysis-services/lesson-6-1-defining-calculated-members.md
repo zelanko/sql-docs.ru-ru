@@ -10,12 +10,12 @@ ms.assetid: 07f13e1c-0b20-4f9e-ad62-c438983f2785
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b4d2fddf1707ec4e1521b99d9d526f173464cd8e
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: ede0a23a6e37c47a1af242748233ca49b0cdfab7
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888185"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493885"
 ---
 # <a name="defining-calculated-members"></a>Определение вычисляемых элементов
   Вычисляемые элементы — это элементы измерения или группы мер, которые определяются на основе сочетания данных куба, арифметических операторов, чисел и функций. Например, можно создать вычисляемый элемент для расчета суммы двух физических мер в кубе. Определения вычисляемых элементов хранятся в кубах, а их значения рассчитываются при выполнении запроса.  
@@ -287,7 +287,7 @@ ms.locfileid: "68888185"
      Обратите внимание, что продажа аксессуаров увеличивается с течением времени, но они составляют лишь небольшую часть общей суммы продаж. Кроме того, обратите внимание, что коэффициент валовой прибыли для продаж аксессуаров выше, чем для велосипедов.  
   
 ## <a name="next-task-in-lesson"></a>Следующая задача занятия  
- [Определение именованных наборов](https://docs.microsoft.com/analysis-services/lesson-6-2-defining-named-sets)  
+ [Определение именованных наборов](lesson-6-2-defining-named-sets.md)  
   
 ## <a name="see-also"></a>См. также  
  [Времен](multidimensional-models-olap-logical-cube-objects/calculations.md)   

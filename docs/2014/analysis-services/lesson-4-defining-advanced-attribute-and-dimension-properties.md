@@ -10,12 +10,12 @@ ms.assetid: 0e86b9be-e47d-4bb4-87eb-136ff3a61aef
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1da73bb522aa3fbf825841e637f01b0c455f09c2
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 11d566c029491378a5e0e091e0803cdf5616e637
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888258"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493993"
 ---
 # <a name="lesson-4-defining-advanced-attribute-and-dimension-properties"></a>Занятие 4: Определение расширенных свойств атрибутов и измерений
   На этом занятии изучается использование расширенных свойств атрибутов, иерархий атрибутов и свойств измерений.  
@@ -34,7 +34,7 @@ ms.locfileid: "68888258"
  [Автоматическое группирование элементов атрибута](lesson-4-3-automatically-grouping-attribute-members.md)  
  В этой задаче автоматически создаются группирования элементов атрибутов на основе распределения членов в иерархии атрибутов. Дополнительные сведения см. в разделе [Группирование элементов атрибутов (дискретизация)](multidimensional-models/attribute-properties-group-attribute-members.md).  
   
- [Скрытие и отключение иерархий атрибутов](https://docs.microsoft.com/analysis-services/lesson-4-4-hiding-and-disabling-attribute-hierarchies)  
+ [Скрытие и отключение иерархий атрибутов](lesson-4-4-hiding-and-disabling-attribute-hierarchies.md)  
  В этой задаче предстоит изучить, в каких случаях и как отключить или скрыть иерархии атрибутов.  
   
  [Сортировка элементов атрибута по вторичному атрибуту](lesson-4-5-sorting-attribute-members-based-on-a-secondary-attribute.md)  

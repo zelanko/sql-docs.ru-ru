@@ -10,12 +10,12 @@ ms.assetid: 4a34ba52-e3b3-4e8a-8e55-73e0cd5a97bd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c1d5afebb0f0bf69990a0e93bca49d95f7a4c6b5
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 9d436ab68f2c0045d1cfa127c251575495f831cd
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888284"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493934"
 ---
 # <a name="defining-a-referenced-relationship"></a>Определение ссылочной связи
   До сих пор в этом учебнике каждое определенное измерение куба основывалось на таблице, непосредственно связанной с таблицей фактов для группы мер через связь «внешний ключ — первичный ключ». В задачах этого раздела измерение **География** будет связано с таблицей фактов через измерение **Торговый посредник** , которое называется *ссылочным измерением*. Это позволяет пользователям распределить товарооборот посредников по географии. Дополнительные сведения см. в разделе [Определение ссылочной связи и свойств ссылочной связи](multidimensional-models/define-a-referenced-relationship-and-referenced-relationship-properties.md).  
@@ -121,7 +121,7 @@ ms.locfileid: "68888284"
      ![Диалоговое окно «Задание связи»](../../2014/tutorials/media/l5-referencedrelationship-5.gif "Диалоговое окно «Задание связи»")  
   
 ## <a name="next-task-in-lesson"></a>Следующая задача занятия  
- [Определение связи фактов](https://docs.microsoft.com/analysis-services/lesson-5-2-defining-a-fact-relationship)  
+ [Определение связи фактов](lesson-5-2-defining-a-fact-relationship.md)  
   
 ## <a name="see-also"></a>См. также  
  [можно изменить расположение фигур на вкладке](multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)   

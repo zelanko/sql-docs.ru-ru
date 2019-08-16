@@ -10,12 +10,12 @@ ms.assetid: 2a796977-6568-4705-9d27-86a9b36658c2
 author: minewiskan
 ms.author: owend
 manager: kfile
-ms.openlocfilehash: 15cd000f0bcf61743301d130709be29b327efcdc
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 47613c905c492c87215b2759b1ed4fab46694f83
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68892541"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69494006"
 ---
 # <a name="lesson-1-preparing-the-analysis-services-database-basic-data-mining-tutorial"></a>Урок 1. Подготовка базы данных Analysis Services (учебник по интеллектуальному анализу данных — базовый)
   Вы являетесь новым сотрудником [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] , который выполнил задачу разработки приложения бизнес-аналитики в. [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]надеется использовать [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] возможности интеллектуального анализа данных для обнаружения интересных и практичных сведений о людях, приобретенных в велосипеды. Необходимо также спрогнозировать, какие потенциальные клиенты с наибольшей вероятностью купят велосипед в будущем.  
@@ -40,6 +40,6 @@ ms.locfileid: "68892541"
  [Представления источников данных в многомерных моделях](https://docs.microsoft.com/analysis-services/multidimensional-models/data-source-views-in-multidimensional-models)   
  [Поддерживаемые &#40;источники данных многомерные службы SSAS&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional)   
  [Построение проектов служб Analysis Services (среда SSDT)](https://docs.microsoft.com/analysis-services/multidimensional-models/build-analysis-services-projects-ssdt)   
- [Создание проекта служб Analysis Services](https://docs.microsoft.com/analysis-services/lesson-1-1-creating-an-analysis-services-project)  
+ [Создание проекта служб Analysis Services](../analysis-services/lesson-1-1-creating-an-analysis-services-project.md)  
   
   

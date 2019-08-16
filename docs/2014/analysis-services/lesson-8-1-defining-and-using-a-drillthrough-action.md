@@ -10,12 +10,12 @@ ms.assetid: 3765f865-2b93-44be-b290-28e3815d5ecb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a6cf8b025530cbeee236e519564cc5c25861824c
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: cbc9ad315792fc4198988a53713f978ff119d2ee
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888107"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493824"
 ---
 # <a name="defining-and-using-a-drillthrough-action"></a>Определение и использование действия детализации
   Распределение данных фактов по измерениям фактов без верной фильтрации данных, возвращаемых запросом, может привести к снижению его производительности. Чтобы избежать этого, можно определить действие детализации, которое ограничит общее число возвращаемых строк. Это позволит значительно повысить производительность выполнения запросов.  
@@ -143,13 +143,13 @@ ms.locfileid: "68888107"
      ![Заказы, отправленные в Адам Пауэл](../../2014/tutorials/media/l8-action8.gif "Заказы, отправленные в Адам Пауэл")  
   
 ## <a name="next-lesson"></a>Следующее занятие  
- [Занятие 9. Определение перспектив и переводов](https://docs.microsoft.com/analysis-services/lesson-9-defining-perspectives-and-translations)  
+ [Занятие 9. Определение перспектив и переводов](lesson-9-defining-perspectives-and-translations.md)  
   
 ## <a name="see-also"></a>См. также  
  [Действия &#40;Analysis Services — многомерные данные&#41;](multidimensional-models/actions-analysis-services-multidimensional-data.md)   
  [Действия в многомерных моделях](multidimensional-models/actions-in-multidimensional-models.md)   
  [Связи измерений](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
- [Определение связи фактов](https://docs.microsoft.com/analysis-services/lesson-5-2-defining-a-fact-relationship)   
+ [Определение связи фактов](lesson-5-2-defining-a-fact-relationship.md)   
  [Определение связей фактов и свойств связей фактов](multidimensional-models/define-a-fact-relationship-and-fact-relationship-properties.md)  
   
   

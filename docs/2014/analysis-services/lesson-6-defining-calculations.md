@@ -10,12 +10,12 @@ ms.assetid: e0a1e354-e879-4eb8-bb2b-6c3809e32cb6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fcfa51678379ecf7f54a956db17089544b22f6be
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 1d9b41a37a48e5ff8456eb353e45b894d3bb0757
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888049"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493838"
 ---
 # <a name="lesson-6-defining-calculations"></a>Занятие 6: Определение вычислений
   На этом занятии будет показано, как определять вычисления, являющиеся многомерными выражениями или сценариями многомерных выражений. Вычисления позволяют определять вычисляемые элементы, именованные наборы и другие команды скриптов, расширяющие возможности куба служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Например, с помощью команды скрипта можно определить вложенный куб и присвоить вычисление его ячейкам.  
@@ -45,14 +45,14 @@ ms.locfileid: "68888049"
   
  Это занятие содержит следующие задачи.  
   
- [Определение вычисляемых элементов](https://docs.microsoft.com/analysis-services/lesson-6-1-defining-calculated-members)  
+ [Определение вычисляемых элементов](lesson-6-1-defining-calculated-members.md)  
  В этой задаче предстоит определить вычисляемые элементы.  
   
- [Определение именованных наборов](https://docs.microsoft.com/analysis-services/lesson-6-2-defining-named-sets)  
+ [Определение именованных наборов](lesson-6-2-defining-named-sets.md)  
  В этой задаче предстоит определить именованные наборы.  
   
 ## <a name="next-lesson"></a>Следующее занятие  
- [Занятие 7. &#40;Определение ключевых показателей эффективности&#41;](https://docs.microsoft.com/analysis-services/lesson-7-defining-key-performance-indicators-kpis)  
+ [Занятие 7. &#40;Определение ключевых показателей эффективности&#41;](lesson-7-defining-key-performance-indicators-kpis.md)  
   
 ## <a name="see-also"></a>См. также  
  [Analysis Services сценарий учебника](https://docs.microsoft.com/analysis-services/analysis-services-tutorial-scenario)   

@@ -10,12 +10,12 @@ ms.assetid: 6401fd92-f43b-450e-8298-12db644c25bc
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 48d96a731724717a398c2170d642c419a1f3e9da
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 6d835269f77e563b94c89c3a68c5c82844edc773
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888596"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493972"
 ---
 # <a name="configure-powerpivot-and-deploy-solutions-sharepoint-2013"></a>Настройка PowerPivot и развертывание решений (SharePoint 2013)
   В этом разделе описаны развертывание и настройка расширений среднего уровня компонентов PowerPivot в [!INCLUDE[SPS2013](../../../includes/sps2013-md.md)], в том числе коллекции PowerPivot, расписания обновления данных, панели мониторинга управления и поставщиков данных. Запустите средство **Настройка PowerPivot для SharePoint 2013** , чтобы выполнить следующее.  
@@ -28,7 +28,7 @@ ms.locfileid: "68888596"
   
  Сведения об установке средства настройки PowerPivot для SharePoint 2013 см. в разделе [Установка и удаление надстройки &#40;PowerPivot для SharePoint SharePoint 2013&#41; ](https://docs.microsoft.com/analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013) .  
   
- Этот раздел состоит из следующих подразделов.  
+ В этом разделе содержатся следующие подразделы.  
   
  [Запуск PowerPivot для SharePoint конфигурации 2013](#bkmk_run_configuration_tool)  
   
@@ -68,7 +68,7 @@ ms.locfileid: "68888596"
   
     5.  В левом окне выберите **Создание семейства веб-сайтов** . Запишите **URL-адрес сайта** для ссылок на него на следующих шагах. Если сервер SharePoint еще не настроен, мастер настройки по умолчанию выбирает веб-приложение, а для URL-адресов семейства веб-сайтов назначается корень `http://[ServerName]`. Чтобы изменить значения по умолчанию, проверьте следующие страницы в левом окне: **Создание веб-приложения по умолчанию** и **развертывание решения веб-приложения**  
   
-5.  При необходимости просмотрите остальные входные значения, которые использовались для завершения каждого действия. Для просмотра подробных сведений о действии выберите его в левом окне. Дополнительные сведения о каждом из них см. в разделе «входные значения, используемые для настройки сервера в разделе [Настройка или восстановление &#40;PowerPivot для SharePoint 2010 PowerPivot&#41; »](https://docs.microsoft.com/analysis-services/configure-repair-powerpivot-sharepoint-2010) этого раздела.  
+5.  При необходимости просмотрите остальные входные значения, которые использовались для завершения каждого действия. Для просмотра подробных сведений о действии выберите его в левом окне. Дополнительные сведения о каждом из них см. в разделе «входные значения, используемые для настройки сервера в разделе [Настройка или восстановление &#40;PowerPivot для SharePoint 2010 PowerPivot&#41; »](../../configure-repair-powerpivot-sharepoint-2010.md) этого раздела.  
   
 6.  При необходимости удалите действия, которые не нужно выполнять на данном этапе. Например, при дальнейшей необходимости настройки службы Secure Store щелкните **Настроить службу Secure Store**и снимите флажок **Включить данное действие в список задач**.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "68888596"
   
 8.  Нажмите кнопку **Выполнить** для выполнения всех действий из списка задач. Обратите внимание, что кнопка **Выполнить** становится доступной только после проверки действий. Если кнопка **Выполнить** недоступна, сначала нажмите кнопку **Проверить** .  
   
- Дополнительные сведения см. в статье [Configure and Repair PowerPivot для SharePoint &#40;2010 PowerPivot Configuration&#41; Tool](https://docs.microsoft.com/analysis-services/configure-repair-powerpivot-sharepoint-2010)  
+ Дополнительные сведения см. в статье [Configure and Repair PowerPivot для SharePoint &#40;2010 PowerPivot Configuration&#41; Tool](../../configure-repair-powerpivot-sharepoint-2010.md)  
   
 ##  <a name="bkmk_verify_powerpivot"></a>Проверка конфигурации PowerPivot  
  **Службы.**  

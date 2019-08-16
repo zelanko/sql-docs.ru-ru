@@ -10,12 +10,12 @@ ms.assetid: 2d78fa73-a13b-4e12-bbd0-43e5307f760c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8688e40fc0075bded60069bea24e8114dd51fa0f
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: ddae9c199f1827d733d0e12f7ff834768aeae937
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888388"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69494012"
 ---
 # <a name="defining-parent-attribute-properties-in-a-parent-child-hierarchy"></a>Определение свойств родительского атрибута в иерархии «родители-потомки»
   Иерархия типа «родители-потомки» представляет собой иерархию в измерении, которая основана на двух столбцах таблицы. Вместе эти столбцы определяют иерархическую связь между элементами измерения. Первый столбец, называемый *ключевым столбцом элемента*, идентифицирует каждый элемент измерения. Второй столбец, называемый *родительским столбцом*, идентифицирует родителя для каждого из элементов измерения. Свойство **NamingTemplate** родительского атрибута определяет имя каждого уровня в иерархии типа "родители-потомки", а свойство **MembersWithData** — будут ли отображаться данные для родительских элементов.  
@@ -104,7 +104,7 @@ ms.locfileid: "68888388"
      ![Измененная иерархия сотрудников](../../2014/tutorials/media/l4-employee-2.png "Измененная иерархия сотрудников")  
   
 ## <a name="next-task-in-lesson"></a>Следующая задача занятия  
- [Автоматическое группирование элементов атрибута](https://docs.microsoft.com/analysis-services/lesson-4-3-automatically-grouping-attribute-members)  
+ [Автоматическое группирование элементов атрибута](lesson-4-3-automatically-grouping-attribute-members.md)  
   
 ## <a name="see-also"></a>См. также  
  [Иерархия "родители-потомки"](multidimensional-models/parent-child-dimension.md)   

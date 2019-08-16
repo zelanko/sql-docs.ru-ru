@@ -10,12 +10,12 @@ ms.assetid: 685aa217-de1b-4df2-bf22-095228c40775
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 42116af318d6549b5b70b190aaf5f24b551c2069
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 3f8a31fd2e6659f4d971ebb30bad7b2876dafa6f
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888397"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493942"
 ---
 # <a name="using-a-modified-version-of-the-analysis-services-tutorial-project"></a>Использование измененной версии проекта Analysis Services Tutorial
   Оставшиеся занятия этого учебника основаны на улучшенной версии проекта служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial, с которым велась работа на первых трех занятиях. В представление источника данных **Adventure Works DW 2012** были добавлены некоторые таблицы и именованные вычисления, в проект были добавлены дополнительные измерения, которые также были добавлены в куб учебника по службам [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Кроме того, была добавлена вторая группа мер, которая содержит меры из второй таблицы фактов. Улучшенная версия проекта позволит продолжить изучение добавления новых функций в приложение бизнес-аналитики без необходимости повторного применения полученных навыков.  
@@ -117,6 +117,6 @@ ms.locfileid: "68888397"
  [Определение свойств родительского атрибута в иерархии «родители-потомки»](lesson-4-2-defining-parent-attribute-properties-in-a-parent-child-hierarchy.md) 
   
 ## <a name="see-also"></a>См. также  
- [Развертывание проекта служб Analysis Services](https://docs.microsoft.com/analysis-services/lesson-2-5-deploying-an-analysis-services-project)  
+ [Развертывание проекта служб Analysis Services](lesson-2-5-deploying-an-analysis-services-project.md)  
   
   

@@ -10,12 +10,12 @@ ms.assetid: 766004b9-6578-4914-a445-6f44843a5fb0
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3d7f0f0964c2602ef4203c0f14ee71af73f65d46
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 7889bb81d9bb1f1e3fefa229c0a6a0ee0dc1f1dd
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888069"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493774"
 ---
 # <a name="defining-and-browsing-perspectives"></a>Определение и поиск перспектив
   Перспектива может упростить вид куба для определенных целей. По умолчанию пользователям доступны для просмотра все элементы куба, на которые они имеют разрешения. Все элементы, которые видит пользователь при просмотре всего куба служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , называются перспективой по умолчанию для куба. Представление полного куба может оказаться слишком сложным для перемещений, особенно для тех пользователей, которым для решения задач, связанных с бизнес-аналитикой и отчетностью, достаточно доступа лишь к малой его части.  
@@ -191,7 +191,7 @@ ms.locfileid: "68888069"
      ![Меры продаж через Интернет и Товарооборот посредников](../../2014/tutorials/media/l9-perspectives-4.gif "Меры продаж через Интернет и Товарооборот посредников")  
   
 ## <a name="next-task-in-lesson"></a>Следующая задача занятия  
- [Определение и просмотр переводов](https://docs.microsoft.com/analysis-services/lesson-9-2-defining-and-browsing-translations)  
+ [Определение и просмотр переводов](lesson-9-2-defining-and-browsing-translations.md)  
   
 ## <a name="see-also"></a>См. также  
  [Перспективы](multidimensional-models-olap-logical-cube-objects/perspectives.md)   

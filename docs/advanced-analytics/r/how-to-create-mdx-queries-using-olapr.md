@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: fb2918e5fb89d85d7f6fa1cc12622481e585d848
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 0b98e2bafd53eaabd606d09b3e0b51dd3d53aceb
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68887667"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69494065"
 ---
 # <a name="how-to-create-mdx-queries-in-r-using-olapr"></a>Создание запросов многомерных выражений в R с помощью средства OLAP
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -76,7 +76,7 @@ ms.locfileid: "68887667"
 
 + Создайте куб, используемый в этих примерах, следуя Analysis Services учебнике до занятия 4. [Создание куба OLAP](https://docs.microsoft.com/analysis-services/multidimensional-tutorial/multidimensional-modeling-adventure-works-tutorial)
 
-+ Скачайте существующий куб в качестве резервной копии и восстановите его в экземпляре Analysis Services. Например, этот сайт предоставляет полностью обработанный куб в формате ZIP: [Многомерная модель Adventure Works SQL 2014](https://msftdbprodsamples.codeplex.com/downloads/get/882334). Извлеките файл и восстановите его в экземпляре SSAS. Дополнительные сведения см. в статье командлет [Backup and Restore](https://docs.microsoft.com/analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases)или RESTORE [-ASDatabase](https://docs.microsoft.com/analysis-services/powershell/restore-asdatabase-cmdlet).
++ Скачайте существующий куб в качестве резервной копии и восстановите его в экземпляре Analysis Services. Например, этот сайт предоставляет полностью обработанный куб в формате ZIP: [Многомерная модель Adventure Works SQL 2014](https://msftdbprodsamples.codeplex.com/downloads/get/882334). Извлеките файл и восстановите его в экземпляре SSAS. Дополнительные сведения см. в статье командлет [Backup and Restore](https://docs.microsoft.com/analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases)или RESTORE [-ASDatabase](/powershell/module/sqlserver/restore-asdatabase).
 
 ### <a name="1-basic-mdx-with-slicer"></a>1. Базовое многомерное выражение со срезом
 
@@ -92,7 +92,7 @@ WHERE [Sales Territory].[Sales Territory Country].[Australia]
 + В столбцах можно указать несколько мер в виде элементов строки с разделителями-запятыми.
 + Ось строк использует все возможные значения (все элементы) измерения Product Line. 
 + Этот запрос возвращает таблицу с тремя столбцами, содержащей сводку по продажам через Интернет из всех стран.
-+ Предложение WHERE задает _ось среза_ . В этом примере срез использует элемент измерения **SalesTerritory** для фильтрации запроса таким образом, чтобы в вычислениях использовались только продажи из Австралии.
++ Предложение WHERE задает _ось среза_. В этом примере срез использует элемент измерения **SalesTerritory** для фильтрации запроса таким образом, чтобы в вычислениях использовались только продажи из Австралии.
 
 #### <a name="to-build-this-query-using-the-functions-provided-in-olapr"></a>Создание этого запроса с помощью функций, предоставленных в olapR
 

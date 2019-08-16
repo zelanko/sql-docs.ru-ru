@@ -10,12 +10,12 @@ ms.assetid: 0e60be99-3768-499c-a22c-a4ec37e61887
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9b6212bc112768af510bdb4a9dcff25150aa9f5e
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: f9a254f685f83e97b14c78c7d6c4c21e2737b636
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888025"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493781"
 ---
 # <a name="defining-and-browsing-translations"></a>Определение и просмотр переводов
   Перевод — это представление на некотором языке названий следующих объектов служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]: Объекты включают в себя группы мер, меры, измерения, атрибуты, иерархии, ключевые показатели эффективности, действия и вычисляемые элементы. Переводы обеспечивают серверную поддержку клиентских приложений, которые поддерживают несколько языков. Такой клиент передает идентификатор локали экземпляру служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], который на его основе подбирает набор переводов, которые будут использоваться при выдаче метаданных для объектов служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Если объект служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] не содержит перевода для указанного языка или не содержит перевода для конкретного объекта, метаданные будут возвращены клиенту на языке по умолчанию. Например, если пользователь из Франции обращается к кубу с рабочей станции, работающей с французскими настройками локали, ему будут доступны заголовки и значения свойств элементов на французском языке при условии наличия перевода для французского языка. Однако если к тому же кубу обращается пользователь из Германии с рабочей станции, работающий с немецкими настройками локали, то ему будут доступны заголовки и значения свойств элементов на немецком языке. Дополнительные сведения см. в разделе [переводы измерений](multidimensional-models-olap-logical-dimension-objects/dimension-translations.md), [переводы кубов](multidimensional-models-olap-logical-cube-objects/cube-translations.md), [ &#40;переводы&#41;Analysis Services](translations-analysis-services.md).  
@@ -123,7 +123,7 @@ ms.locfileid: "68888025"
      Обратите внимание, что имена месяцев и имя меры теперь также отображаются на французском языке.  
   
 ## <a name="next-lesson"></a>Следующее занятие  
- [Занятие 10. Определение административных ролей](https://docs.microsoft.com/analysis-services/lesson-10-defining-administrative-roles)  
+ [Занятие 10. Определение административных ролей](lesson-10-defining-administrative-roles.md)  
   
 ## <a name="see-also"></a>См. также  
  [Переводы измерений](multidimensional-models-olap-logical-dimension-objects/dimension-translations.md)   
