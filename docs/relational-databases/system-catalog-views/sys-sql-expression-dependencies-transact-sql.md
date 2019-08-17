@@ -20,12 +20,12 @@ ms.assetid: 78a218e4-bf99-4a6a-acbf-ff82425a5946
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 29bf4991ce5dd52e9c66c31abade833e4fe319b2
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: ade6ffc213d570fcb7da965cf73f43e2db335d17
+ms.sourcegitcommit: 3d189b68c0965909d167de61546b574af1ef7a96
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893545"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69561134"
 ---
 # <a name="syssql_expression_dependencies-transact-sql"></a>Представление каталога sys.sql_expression_dependencies (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "68893545"
 |referencing_class_desc|**nvarchar(60)**|Описание класса ссылающейся сущности.<br /><br /> OBJECT_OR_COLUMN<br /><br /> DATABASE_DDL_TRIGGER<br /><br /> SERVER_DDL_TRIGGER<br /><br /> Не допускает значение NULL.|  
 |is_schema_bound_reference|**bit**|1 = упоминаемая сущность привязана к схеме.<br /><br /> 0 = упоминаемая сущность не привязана к схеме.<br /><br /> Не допускает значение NULL.|  
 |referenced_class|**tinyint**|Класс упоминаемой сущности.<br /><br /> 1 = Объект или столбец<br /><br /> 6 = Тип<br /><br /> 10 = коллекция схем XML<br /><br /> 21 = функция секционирования<br /><br /> Не допускает значение NULL.|  
-|referenced_class_desc|**nvarchar(60)**|Описание класса упоминаемой сущности.<br /><br /> OBJECT_OR_COLUMN<br /><br /> TYPE<br /><br /> XML_SCHEMA_COLLECTION<br /><br /> PARTITION_FUNCTION<br /><br /> Не допускает значение NULL.|  
+|referenced_class_desc|**nvarchar(60)**|Описание класса упоминаемой сущности.<br /><br /> OBJECT_OR_COLUMN<br /><br /> ТИП<br /><br /> XML_SCHEMA_COLLECTION<br /><br /> PARTITION_FUNCTION<br /><br /> Не допускает значение NULL.|  
 |referenced_server_name|**sysname**|Имя сервера упоминаемой сущности.<br /><br /> Этот столбец заполняется для межсерверных зависимостей, которые создаются путем задания допустимого четырехкомпонентного имени. Сведения о составных именах см. в разделе [соглашения &#40;о синтаксисе Transact&#41;-SQL Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).<br /><br /> Значение NULL для не привязанных к схеме сущностей, ссылка на которые осуществляется без указания четырехкомпонентного имени.<br /><br /> Значение NULL для сущностей, привязанных к схеме, так как они должны находиться в одной базе данных и поэтому могут быть определены только с помощью имени из двух частей (*Schema. Object*).|  
 |referenced_database_name|**sysname**|Имя базы данных упоминаемой сущности.<br /><br /> Этот столбец заполняется для межбазовых и межсерверных ссылок, которые задаются путем указания допустимого трехкомпонентного или четырехкомпонентного имени.<br /><br /> Имеет значение NULL для не привязанных к схеме ссылок, задаваемых с помощью однокомпонентного или двухкомпонентного имени.<br /><br /> Значение NULL для сущностей, привязанных к схеме, так как они должны находиться в одной базе данных и поэтому могут быть определены только с помощью имени из двух частей (*Schema. Object*).|  
 |referenced_schema_name|**sysname**|Схема, которой принадлежит упоминаемая сущность.<br /><br /> Имеет значение NULL для не привязанных к схеме ссылок, в которых сущность упоминается без указания имени схемы.<br /><br /> Никогда не имеет значение NULL для привязанных к схеме ссылок, поскольку привязанные к схеме сущности должны определяться двухкомпонентным именем и ссылаться с помощью двухкомпонентных ссылок.|  
@@ -73,7 +73,7 @@ ms.locfileid: "68893545"
 |Тип сущности|Ссылающаяся сущность|Упоминаемая сущность|  
 |-----------------|------------------------|-----------------------|  
 |Таблица|Да*|Да|  
-|Представление|Да|Да|  
+|Вид|Да|Да|  
 |Фильтруемый индекс|Да**|Нет|  
 |Статистика фильтрации|Да**|Нет|  
 |Хранимая процедура [!INCLUDE[tsql](../../includes/tsql-md.md)]***|Да|Да|  
