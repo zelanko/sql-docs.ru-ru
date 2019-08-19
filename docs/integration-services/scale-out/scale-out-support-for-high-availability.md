@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
-ms.openlocfilehash: a7c0e9b1d3315edb314cc95980fec8e18d544d0d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 36f4dce1559df59a61ee25d26b76d0ddd4dda3c1
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68064564"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028751"
 ---
 # <a name="scale-out-support-for-high-availability"></a>Поддержка высокого уровня доступности в Scale Out
 
@@ -73,7 +73,7 @@ ms.locfileid: "68064564"
 
 Ведение журналов в SSISDB реализуется посредством имени входа **##MS_SSISLogDBWorkerAgentLogin##** , пароль для которого формируется автоматически. Чтобы настроить ведение журналов для всех реплик SSISDB, выполните указанные ниже действия.
 
-### <a name="61-change-the-password-of-msssislogdbworkeragentlogin-on-the-primary-sql-server"></a>6.1. Смените пароль для **##MS_SSISLogDBWorkerAgentLogin##** в основном экземпляре SQL Server.
+### <a name="61-change-the-password-of-ms_ssislogdbworkeragentlogin-on-the-primary-sql-server"></a>6.1. Смените пароль для **##MS_SSISLogDBWorkerAgentLogin##** в основном экземпляре SQL Server.
 
 ### <a name="62-add-the-login-to-the-secondary-sql-server"></a>6.2. Добавьте имя входа для вторичного экземпляра SQL Server.
 
@@ -98,7 +98,7 @@ ms.locfileid: "68064564"
 
 Для этого шага на виртуальных машинах Azure нужны дополнительные действия. Полное описание этих основных понятий и шагов выходит за рамки данной статьи.
 
-1.  Необходимо настроить домен Azure. Для работы отказоустойчивой кластеризации Windows Server нужно, чтобы все компьютеры в кластере входили в состав одного домена. Дополнительные сведения см. в статье [Включение доменных служб Azure Active Directory с помощью портала Azure](https://docs.microsoft.com/en-us/azure/active-directory-domain-services/create-instance).
+1.  Необходимо настроить домен Azure. Для работы отказоустойчивой кластеризации Windows Server нужно, чтобы все компьютеры в кластере входили в состав одного домена. Дополнительные сведения см. в статье [Включение доменных служб Azure Active Directory с помощью портала Azure](https://docs.microsoft.com/azure/active-directory-domain-services/create-instance).
 
 2. Необходимо настроить балансировщик нагрузки Azure. Это требование для прослушивателя группы доступности. Дополнительные сведения см. в статье [Руководство по балансировке нагрузки внутреннего трафика на виртуальных машинах с помощью балансировщика нагрузки уровня "Базовый" на портале Azure](https://docs.microsoft.com/azure/load-balancer/tutorial-load-balancer-basic-internal-portal).
 

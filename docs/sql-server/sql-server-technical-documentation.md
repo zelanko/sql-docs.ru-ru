@@ -20,12 +20,12 @@ ms.assetid: 674933a8-e423-4d44-a39b-2a997e2c2333
 author: craigg-msft
 ms.author: jroth
 monikerRange: '>=sql-server-linux-2017||>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 311e4819751fe9a398643e2005bd8480c781ee9f
-ms.sourcegitcommit: c2052b2bf7261b3294a3a40e8fed8b9e9c588c37
+ms.openlocfilehash: 0f4fdc5f81ff01b77f0bb27e5782db6ecd41b004
+ms.sourcegitcommit: 316c25fe7465b35884f72928e91c11eea69984d5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/10/2019
-ms.locfileid: "68941157"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68969457"
 ---
 # <a name="sql-server-documentation"></a>Документация по SQL Server
 
@@ -155,7 +155,7 @@ SQL Server является центральной частью платформ
 
 Сведения об _управлении версиями_ на этой веб-странице :::no-loc text="Docs"::: приводятся над оглавлением. Сведения о том, как использовать управление версиями и для чего оно нужно, см. в следующей статье:
 
-- [Система управления версиями в документации по SQL](../toc/versioning-system-monikers-ui-sql-server.md)
+- [Система управления версиями в документации по SQL](versioning-system-monikers-ui-sql-server.md)
 
 <!--
 The following includes/ files contain their own H2 headers.

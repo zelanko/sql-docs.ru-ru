@@ -9,12 +9,12 @@ ms.topic: article
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a4811c1f41c4c8b9a566dc13b3de713576b4980d
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 1e8825336edd4e55812f6037bbb4479a3b225e3f
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67952629"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028727"
 ---
 # <a name="deploy-a-sql-server-always-on-availability-group-on-a-kubernetes-cluster"></a>Развертывание группы доступности Always On SQL Server в кластере Kubernetes
 
@@ -36,7 +36,7 @@ ms.locfileid: "67952629"
 > [!NOTE]
 > Вы можете использовать любой тип кластера Kubernetes. Сведения о создании кластера Kubernetes в службе Azure Kubernetes (AKS) см. в статье [Создание кластера AKS](https://docs.microsoft.com/azure/aks/create-cluster).
 >
-> Используйте самую последнюю версию Kubernetes. Конкретная версия зависит от вашей подписки и региона. См. раздел [Поддерживаемые версии Kubernetes в AKS](https://docs.microsoft.com/en-us/azure/aks/supported-kubernetes-versions).  
+> Используйте самую последнюю версию Kubernetes. Конкретная версия зависит от вашей подписки и региона. См. раздел [Поддерживаемые версии Kubernetes в AKS](https://docs.microsoft.com/azure/aks/supported-kubernetes-versions).  
 >
 > Следующий скрипт создает кластер Kubernetes с четырьмя узлами в Azure. Перед его выполнением замените `<latest version>` на последнюю доступную версию. Например, `1.12.5`.
 >

@@ -12,12 +12,12 @@ ms.topic: tutorial
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: e70dc6ddf897b34f5ffd0cf3c573ea973a1a36ad
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: de030c3982fb3e3ed64603707b7e6915779fb4d8
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888887"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028807"
 ---
 # <a name="tutorial-getting-started-with-always-encrypted-with-secure-enclaves-using-ssms"></a>Руководство. Начало работы с Always Encrypted с безопасными анклавами с использованием SSMS
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -37,15 +37,15 @@ ms.locfileid: "68888887"
 
 - [!INCLUDE [sssqlv15-md](../../includes/sssqlv15-md.md)] или последующей версии.
 - Windows 10 Корпоративная (версия 1809) или Windows Server 2019 Datacenter.
-- Если SQL Server работает на физическом компьютере, он должен соответствовать [требованиям Hyper-V к оборудованию](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/reference/hyper-v-requirements#hardware-requirements):
+- Если SQL Server работает на физическом компьютере, он должен соответствовать [требованиям Hyper-V к оборудованию](https://docs.microsoft.com/virtualization/hyper-v-on-windows/reference/hyper-v-requirements#hardware-requirements):
    - 64-разрядный процессор с преобразованием адресов второго уровня (SLAT).
    - Поддержка ЦП для расширения режима мониторинга виртуальной машины (технология VT-c на процессорах Intel).
    - Включенная поддержка виртуализации (Intel VT-x или AMD-V).
 - Если SQL Server работает в виртуальной машине, она должна быть настроена для поддержки безопасности на основе виртуализации.
-   - В Hyper-V 2016 или более поздней версии используйте виртуальную машину 1-го поколения и [включите расширения вложенной виртуализации](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/user-guide/nested-virtualization#configure-nested-virtualization) в процессоре виртуальной машины либо используйте виртуальную машину 2-го поколения. Дополнительные сведения о поколениях виртуальных машин см. в статье [Следует ли создавать виртуальные машины поколения 1 или 2 в Hyper-V?](https://docs.microsoft.com/en-us/windows-server/virtualization/hyper-v/plan/should-i-create-a-generation-1-or-2-virtual-machine-in-hyper-v) 
+   - В Hyper-V 2016 или более поздней версии используйте виртуальную машину 1-го поколения и [включите расширения вложенной виртуализации](https://docs.microsoft.com/virtualization/hyper-v-on-windows/user-guide/nested-virtualization#configure-nested-virtualization) в процессоре виртуальной машины либо используйте виртуальную машину 2-го поколения. Дополнительные сведения о поколениях виртуальных машин см. в статье [Следует ли создавать виртуальные машины поколения 1 или 2 в Hyper-V?](https://docs.microsoft.com/windows-server/virtualization/hyper-v/plan/should-i-create-a-generation-1-or-2-virtual-machine-in-hyper-v) 
    - В Azure необходимо выбрать виртуальную машину нужного размера для поддержки одной из следующих технологий:
-      - вложенная виртуализации, например виртуальные машины серий Dv3 и Ev3; См. раздел [Create a nesting capable Azure VM](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/nested-virtualization#create-a-nesting-capable-azure-vm) (Создание виртуальной машины Azure с поддержкой вложения).
-      - виртуальные машины 2-го поколения, например серий Dsv3 или Esv3. См. статью о [поддержке виртуальных машин 2-го поколения в Azure](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/generation-2).
+      - вложенная виртуализации, например виртуальные машины серий Dv3 и Ev3; См. раздел [Create a nesting capable Azure VM](https://docs.microsoft.com/azure/virtual-machines/windows/nested-virtualization#create-a-nesting-capable-azure-vm) (Создание виртуальной машины Azure с поддержкой вложения).
+      - виртуальные машины 2-го поколения, например серий Dsv3 или Esv3. См. статью о [поддержке виртуальных машин 2-го поколения в Azure](https://docs.microsoft.com/azure/virtual-machines/windows/generation-2).
    - В VMWare vSphere 6.7 или более поздней версии включите для виртуальной машины поддержку технологии Virtualization Based Security (VBS), как описано в [документации VMware](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vm_admin.doc/GUID-C2E78F3E-9DE2-44DB-9B0A-11440800AADD.html).
    - Другие гипервизоры и общедоступные облака могут поддерживать использование Always Encrypted с безопасными анклавами на виртуальной машине, если ей предоставлены расширения виртуализации (иногда также называются встроенной виртуализацией). Просмотрите сведения о совместимости и инструкции по настройке в документации по своему решению для виртуализации.
 - [SQL Server Management Studio (SSMS) версии не ниже 18.0](../../ssms/download-sql-server-management-studio-ssms.md)

@@ -9,12 +9,12 @@ f1_keywords: ''
 helpviewer_keywords: ''
 author: aliceku
 ms.author: aliceku
-ms.openlocfilehash: 40057200c5b8241849f4030e6c418cf080d149f2
-ms.sourcegitcommit: 73dc08bd16f433dfb2e8406883763aabed8d8727
+ms.openlocfilehash: c92eead00b10c4a26a93234c3bbfeebf254f6aff
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68329339"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028842"
 ---
 # <a name="sql-server-privacy-supplement"></a>Приложение к конфиденциальности в SQL Server
 
@@ -23,7 +23,7 @@ ms.locfileid: "68329339"
 В этой статье перечислены функции, работающие через Интернет, с помощью которых можно собирать и отправлять в корпорацию Майкрософт анонимные данные по использованию компонентов или данные диагностики. SQL Server может собирать стандартные сведения о компьютере, а также сведения об использовании и производительности. Эти данные могут отправляться в корпорацию Майкрософт и анализироваться в целях улучшения качества, безопасности и надежности продукта. Эта статья служит приложением к общему [заявлению о конфиденциальности Майкрософт](https://go.microsoft.com/fwlink/?LinkId=521839). Классификация данных в этой статье относится только к локальным версиям SQL Server. Она не относится к следующим продуктам.
 
 - База данных SQL Azure
-- [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/en-us/sql/ssms/sql-server-management-studio-telemetry-ssms?view=sql-server-2017)
+- [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-telemetry-ssms?view=sql-server-2017)
 - SQL Server Data Tools (SSDT)
 - Azure Data Studio.
 - Помощник по миграции баз данных

@@ -1,7 +1,5 @@
 ---
 title: Агент SQL Server | Документация Майкрософт
-ms.custom: ''
-ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -13,31 +11,27 @@ helpviewer_keywords:
 ms.assetid: 8d1dc600-aabb-416f-b3af-fbc9fccfd0ec
 author: markingmyname
 ms.author: maghan
+ms.custom: ''
+ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 5a131153b269d68091e0b76cda4bda5f14e62fd9
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: af9045220d860efdf60a4df37c138ac81bf3c05d
+ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265242"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69552666"
 ---
 # <a name="sql-server-agent"></a>Агент SQL Server
+
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
 > Сейчас в [управляемом экземпляре базы данных SQL Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) поддерживается большинство функций агента SQL Server (но не все). Подробные сведения см. в статье [Различия T-SQL между управляемым экземпляром базы данных SQL Azure и SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] — это служба Microsoft Windows, выполняющая запланированные административные задачи, которые называются *заданиями* в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
-  
-**В этом разделе**  
-  
--   [Преимущества агента SQL Server](#Benefits)  
-  
--   [Компоненты агента SQL Server](#Components)  
-  
--   [Безопасность при администрировании агента SQL Server](#Security)  
-  
-## <a name="Benefits"></a>Преимущества агента SQL Server  
+
+## <a name="Benefits"></a>Преимущества агента SQL Server 
+
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использует [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для хранения сведений о заданиях. Задание состоит из одного или нескольких шагов. Каждый шаг содержит собственную задачу, например создание резервной копии базы данных.  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может выполнять задания по расписанию в ответ на определенное событие или по требованию. Например, можно автоматизировать задачу создания резервной копии всех серверов компании, чтобы она выполнялась ежедневно по окончании рабочего дня. Запланируйте запуск резервного копирования после 22:00 с понедельника по пятницу; если во время создания резервной копии возникает проблема, агент SQL Server регистрирует соответствующее событие и выдает уведомление.  
