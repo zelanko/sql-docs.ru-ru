@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 60e8ef0a-0851-41cf-a6d8-cca1e04cbcdb
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1778f9b3f6b4662de36e33e3ae7974f4eef4dd82
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 1feb0cfe509f4dec4e77076021757045628e2e7a
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68771016"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028974"
 ---
 # <a name="sqlservr-application"></a>Приложение sqlservr
 
@@ -84,8 +84,8 @@ sqlservr [-s instance_name] [-c] [-d master_path] [-f]
 
 |Параметр | Дополнительные сведения|
 |:-----|:-----|
-|**-h** | В более ранних версиях 32-битных экземпляров [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] использовался для резервирования виртуального адресного пространства для метаданных памяти с «горячей» заменой при включенных расширениях AWE. Поддерживается в [!INCLUDE[sssql14](../includes/sssql14-md.md)]. Дополнительные сведения см. в разделе [Неподдерживаемые функции SQL Server 2016](https://msdn.microsoft.com/library/0678bfbc-5d3f-44f4-89c0-13e8e52404da).|
-|**-g** | *memory_to_reserve*<br/><br>Применяется к более ранним версиям 32-разрядных экземпляров [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Поддерживается в [!INCLUDE[sssql14](../includes/sssql14-md.md)]. Определяет целое число мегабайтов (МБ) памяти, которую [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] оставляет доступной для распределения памяти в пределах процесса [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , но за пределами пула памяти [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .|
+|**-h** | В более ранних версиях 32-битных экземпляров [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] использовался для резервирования виртуального адресного пространства для метаданных памяти с «горячей» заменой при включенных расширениях AWE. Поддерживается в [!INCLUDE[sssql14](../includes/sssql14-md.md)]. Дополнительные сведения см. в разделе [Неподдерживаемые функции SQL Server 2016](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md).|
+|**-g** | *memory_to_reserve*<br/><br>Применяется к более ранним версиям 32-разрядных экземпляров [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Поддерживается в [!INCLUDE[sssql14](../includes/sssql14-md.md)]. Определяет целое число мегабайтов (МБ) памяти, которую [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] оставляет доступной для распределения памяти в пределах процесса [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , но за пределами пула памяти [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Дополнительные сведения см. [в документации по SQL Server 2014 на странице Параметры конфигурации памяти сервера](https://docs.microsoft.com/sql/database-engine/configure-windows/server-memory-server-configuration-options?view=sql-server-2014).|
 | &nbsp; | &nbsp; |
 
 ## <a name="see-also"></a>См. также:

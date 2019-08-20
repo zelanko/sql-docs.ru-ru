@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a1a10c67-7462-4562-9b07-a8822188a161
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4516effe7308386def1aa7cca885f9fa48547ec5
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: c4d5684850dff9157a56435547e48b5446dd929c
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68889739"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69494555"
 ---
 # <a name="upgrade-reports-ssrs"></a>Обновление отчетов (службы SSRS)
 
@@ -136,8 +136,8 @@ RDL-файлы определения отчетов автоматически 
 ## <a name="next-steps"></a>Следующие шаги
 
 [Обновление и перенос служб Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
-[Критические изменения в службах SQL Server Reporting Services в выпуске SQL Server 2016](https://docs.microsoft.com/analysis-services/behavior-changes-to-analysis-services-features-in-sql-server-2016)   
-[Изменения в работе служб SQL Server Reporting Services в выпуске SQL Server 2016](https://docs.microsoft.com/analysis-services/behavior-changes-to-analysis-services-features-in-sql-server-2016)   
+[Критические изменения в службах SQL Server Reporting Services в выпуске SQL Server 2016](../breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md)   
+[Изменения в работе служб SQL Server Reporting Services в выпуске SQL Server 2016](../behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)   
 [Неподдерживаемые возможности в службах SQL Server Reporting Services в версии SQL Server 2016](../../reporting-services/behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)   
 [Пользовательские элементы отчета](../../reporting-services/custom-report-items/custom-report-items.md)   
 [Обновление базы данных сервера отчетов](../../reporting-services/install-windows/upgrade-a-report-server-database.md)  
