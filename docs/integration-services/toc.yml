@@ -1438,6 +1438,17 @@
   href: ../integration-services/azure-feature-pack-for-integration-services-ssis.md
 - name: Поддержка Hadoop и HDFS в службах Integration Services (SSIS)
   href: ../integration-services/hadoop-and-hdfs-support-in-integration-services-ssis.md
+- name: Соединитель Microsoft Connector для Oracle
+  href: ../integration-services/data-flow/oracle-connector.md
+  items:
+    - name: Диспетчер подключений Oracle
+      href: ../integration-services/data-flow/oracle-connection-manager.md
+    - name: Источник Oracle
+      ref: ../integration-services/data-flow/oracle-source.md
+    - name: Назначение Oracle
+      href: ../integration-services/data-flow/oracle-destination.md
+    - name: Поддержка типов данных
+      href: ../integration-services/data-flow/oracle-data-type-support.md
 - name: Соединители Microsoft для Oracle и Teradata компании Attunity
   href: ../integration-services/attunity-connectors.md
 - name: мастер импорта и экспорта SQL Server
