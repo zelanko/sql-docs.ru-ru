@@ -1,5 +1,5 @@
 ---
-title: sys.dm_exec_requests (Transact-SQL) | Документация Майкрософт
+title: sys. DM _exec_requests (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/03/2019
 ms.prod: sql
@@ -17,17 +17,17 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_requests dynamic management view
 ms.assetid: 4161dc57-f3e7-4492-8972-8cfb77b29643
-author: stevestein
+author: pmasl
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c4e12ee4d40cb200124748c07bcc3e78a5076a07
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f0180d8087b556ea32728ef8924681bb65ec7ea2
+ms.sourcegitcommit: 8d01698e779a536093dd637e84c52f3ff0066a2c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67936956"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69611434"
 ---
-# <a name="sysdmexecrequests-transact-sql"></a>sys.dm_exec_requests (Transact-SQL)
+# <a name="sysdm_exec_requests-transact-sql"></a>sys.dm_exec_requests (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
@@ -38,17 +38,17 @@ ms.locfileid: "67936956"
 |session_id|**smallint**|Идентификатор сеанса, к которому относится данный запрос. Не допускает значение NULL.|  
 |request_id|**int**|Идентификатор запроса. Уникален в контексте сеанса. Не допускает значение NULL.|  
 |start_time|**datetime**|Метка времени поступления запроса. Не допускает значение NULL.|  
-|status|**nvarchar(30)**|Состояние запроса. Может иметь одно из следующих значений.<br /><br /> Историческая справка<br />Запущен<br />Готово к запуску<br />В режиме ожидания<br />Приостановлена<br /><br /> Не допускает значение NULL.|  
+|status|**nvarchar(30)**|Состояние запроса. Может иметь одно из следующих значений.<br /><br /> Фоновый<br />Запущен<br />Готово к запуску<br />В режиме ожидания<br />Приостановлена<br /><br /> Не допускает значение NULL.|  
 |command|**nvarchar(32)**|Тип выполняемой в данный момент команды. Основные типы команд:<br /><br /> SELECT<br />INSERT<br />UPDATE<br />DELETE<br />BACKUP LOG<br />BACKUP DATABASE<br />DBCC<br />FOR<br /><br /> Текст запроса можно получить при помощи функции sys.dm_exec_sql_text, передав ей значение столбца sql_handle. Внутренние системные процессы устанавливают команду в соответствии с выполняемой задачей. Например:<br /><br /> LOCK MONITOR;<br />CHECKPOINTLAZY;<br />WRITER.<br /><br /> Не допускает значение NULL.|  
-|sql_handle|**varbinary(64)**|— Это маркер, уникально определяющий пакета или хранимой процедуры, частью которого является запрос. Допускает значение NULL.|  
+|sql_handle|**varbinary (64)**|Токен, однозначно определяющий пакет или хранимую процедуру, частью которой является запрос. Допускает значение NULL.|  
 |statement_start_offset|**int**|Количество символов в выполняемом в настоящий момент пакете или хранимой процедуре, в которой запущена текущая инструкция. Может применяться вместе с функциями динамического управления sql_handle, statement_end_offset и sys.dm_exec_sql_text для извлечения исполняемой в настоящий момент инструкции по запросу. Допускает значение NULL.|  
 |statement_end_offset|**int**|Количество символов в выполняемом в настоящий момент пакете или хранимой процедуре, в которой завершилась текущая инструкция. Может применяться вместе с функциями динамического управления sql_handle, statement_end_offset и sys.dm_exec_sql_text для извлечения исполняемой в настоящий момент инструкции по запросу. Допускает значение NULL.|  
-|plan_handle|**varbinary(64)**|— Это маркер, который уникально идентифицирует план выполнения запроса для пакета, который в данный момент. Допускает значение NULL.|  
+|plan_handle|**varbinary (64)**|Токен, однозначно определяющий план выполнения запроса для выполняемого в данный момент пакета. Допускает значение NULL.|  
 |database_id|**smallint**|Идентификатор базы данных, к которой выполняется запрос. Не допускает значение NULL.|  
 |user_id|**int**|Идентификатор пользователя, отправившего данный запрос. Не допускает значение NULL.|  
 |connection_id|**uniqueidentifier**|Идентификатор соединения, по которому поступил запрос. Допускает значение NULL.|  
 |blocking_session_id|**smallint**|Идентификатор сеанса, блокирующего данный запрос. Если этот столбец содержит значение NULL, то запрос не блокирован или сведения о сеансе блокировки недоступны (или не могут быть идентифицированы).<br /><br /> -2 = Блокирующий ресурс принадлежит потерянной распределенной транзакции.<br /><br /> -3 = Блокирующий ресурс принадлежит отложенной транзакции восстановления.<br /><br /> -4 = Идентификатор сеанса владельца кратковременной блокировки определить на данный момент не удалось из-за переходов между внутренними состояниями кратковременной блокировки.|  
-|wait_type|**nvarchar(60)**|Если запрос в настоящий момент блокирован, в столбце содержится тип ожидания. Допускает значение NULL.<br /><br /> Сведения о типах ожиданий см. в разделе [sys.dm_os_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md).|  
+|wait_type|**nvarchar(60)**|Если запрос в настоящий момент блокирован, в столбце содержится тип ожидания. Допускает значение NULL.<br /><br /> Дополнительные сведения о типах ожиданий см. в разделе [sys. DM &#40;_OS_WAIT_STATS Transact-&#41;SQL](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md).|  
 |wait_time|**int**|Если запрос в настоящий момент блокирован, в столбце содержится продолжительность текущего ожидания (в миллисекундах). Не допускает значение NULL.|  
 |last_wait_type|**nvarchar(60)**|Если запрос был блокирован ранее, в столбце содержится тип последнего ожидания. Не допускает значение NULL.|  
 |wait_resource|**nvarchar(256)**|Если запрос в настоящий момент блокирован, в столбце указан ресурс, освобождения которого ожидает запрос. Не допускает значение NULL.|  
@@ -61,13 +61,13 @@ ms.locfileid: "67936956"
 |cpu_time|**int**|Время ЦП (в миллисекундах), затраченное на выполнение запроса. Не допускает значение NULL.|  
 |total_elapsed_time|**int**|Общее время, истекшее с момента поступления запроса (в миллисекундах). Не допускает значение NULL.|  
 |scheduler_id|**int**|Идентификатор планировщика, который планирует данный запрос. Не допускает значение NULL.|  
-|task_address|**varbinary(8)**|Адрес блока памяти, выделенного для задачи, связанной с этим запросом. Допускает значение NULL.|  
+|task_address|**varbinary (8)**|Адрес блока памяти, выделенного для задачи, связанной с этим запросом. Допускает значение NULL.|  
 |reads|**bigint**|Число операций чтения, выполненных данным запросом. Не допускает значение NULL.|  
 |writes|**bigint**|Число операций записи, выполненных данным запросом. Не допускает значение NULL.|  
 |logical_reads|**bigint**|Число логических операций чтения, выполненных данным запросом. Не допускает значение NULL.|  
 |text_size|**int**|Установка параметра TEXTSIZE для данного запроса. Не допускает значение NULL.|  
 |language|**nvarchar(128)**|Установка языка для данного запроса. Допускает значение NULL.|  
-|date_format|**nvarchar(3)**|Установка параметра DATEFORMAT для данного запроса. Допускает значение NULL.|  
+|date_format|**nvarchar (3)**|Установка параметра DATEFORMAT для данного запроса. Допускает значение NULL.|  
 |date_first|**smallint**|Установка параметра DATEFIRST для данного запроса. Не допускает значение NULL.|  
 |quoted_identifier|**bit**|1 = Параметр QUOTED_IDENTIFIER для запроса включен (ON). В противном случае — 0.<br /><br /> Не допускает значение NULL.|  
 |arithabort|**bit**|1 = Параметр ARITHABORT для запроса включен (ON). В противном случае — 0.<br /><br /> Не допускает значение NULL.|  
@@ -86,24 +86,24 @@ ms.locfileid: "67936956"
 |granted_query_memory|**int**|Число страниц, выделенных для выполнения поступившего запроса. Не допускает значение NULL.|  
 |executing_managed_code|**bit**|Указывает, выполняет ли данный запрос в настоящее время код объекта среды CLR (например, процедуры, типа или триггера). Этот флаг установлен в течение всего времени, когда объект среды CLR находится в стеке, даже когда из среды вызывается код [!INCLUDE[tsql](../../includes/tsql-md.md)]. Не допускает значение NULL.|  
 |group_id|**int**|Идентификатор группы рабочей нагрузки, которой принадлежит этот запрос. Не допускает значение NULL.|  
-|query_hash|**binary(8)**|Двоичное хэш-значение рассчитывается для запроса и используется для идентификации запросов с аналогичной логикой. Можно использовать хэш запроса для определения использования статистических ресурсов для запросов, которые отличаются только своими литеральными значениями.|  
-|query_plan_hash|**binary(8)**|Двоичное хэш-значение рассчитывается для плана выполнения запроса и используется для идентификации аналогичных планов выполнения запросов. Можно использовать хэш плана запроса для нахождения совокупной стоимости запросов со схожими планами выполнения.|  
-|statement_sql_handle|**varbinary(64)**|**Применимо к**: с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Дескриптор SQL отдельный запрос.<br /><br />Этот столбец равен NULL, если запрос Store не включена для базы данных. |  
-|statement_context_id|**bigint**|**Применимо к**: с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Необязательный внешний ключ к sys.query_context_settings.<br /><br />Этот столбец равен NULL, если запрос Store не включена для базы данных. |  
+|query_hash|**Binary (8)**|Двоичное хэш-значение рассчитывается для запроса и используется для идентификации запросов с аналогичной логикой. Можно использовать хэш запроса для определения использования статистических ресурсов для запросов, которые отличаются только своими литеральными значениями.|  
+|query_plan_hash|**Binary (8)**|Двоичное хэш-значение рассчитывается для плана выполнения запроса и используется для идентификации аналогичных планов выполнения запросов. Можно использовать хэш плана запроса для нахождения совокупной стоимости запросов со схожими планами выполнения.|  
+|statement_sql_handle|**varbinary (64)**|**Применимо к**: с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Описатель SQL отдельного запроса.<br /><br />Этот столбец имеет значение NULL, если хранилище запросов не включено для базы данных. |  
+|statement_context_id|**bigint**|**Применимо к**: с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Необязательный внешний ключ к sys. query_context_settings.<br /><br />Этот столбец имеет значение NULL, если хранилище запросов не включено для базы данных. |  
 |dop |**int** |**Применимо к**: с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Степень параллелизма запроса. |  
-|parallel_worker_count |**int** |**Применимо к**: с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Количество зарезервированных параллельных рабочих процессов в случае параллельных запросов.  |  
-|external_script_request_id |**uniqueidentifier** |**Применимо к**: с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Идентификатор запроса внешнего скрипта, связанного с текущим запросом. |  
-|is_resumable |**bit** |**Применимо к**: с [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Указывает, является ли запрос возобновляемой операции с индексами. |  
-|page_resource |**binary(8)** |**Область применения**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]<br /><br /> 8-байтное шестнадцатеричное представление ресурса страницы Если `wait_resource` столбец содержит страницу отчета. |  
-|page_server_reads|**bigint**|**Область применения**: Гипермасштабируемый базы данных Azure SQL<br /><br /> Число операций чтения страниц сервера, выполненных данным запросом. Не допускает значение NULL.|  
+|parallel_worker_count |**int** |**Применимо к**: с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Количество зарезервированных параллельных рабочих ролей, если это параллельный запрос.  |  
+|external_script_request_id |**uniqueidentifier** |**Применимо к**: с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Идентификатор запроса внешнего скрипта, связанный с текущим запросом. |  
+|is_resumable |**bit** |**Применимо к**: с [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Указывает, является ли запрос возобновляемой операцией с индексом. |  
+|page_resource |**Binary (8)** |**Область применения**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]<br /><br /> 8-байтовое шестнадцатеричное представление ресурса страницы, если `wait_resource` столбец содержит страницу. Дополнительные сведения см. в разделе [sys. fn_PageResCracker](../../relational-databases/system-functions/sys-fn-pagerescracker-transact-sql.md). |  
+|page_server_reads|**bigint**|**Область применения**: Масштабирование базы данных SQL Azure<br /><br /> Число операций чтения сервера страниц, выполненных этим запросом. Не допускает значение NULL.|  
 
 ## <a name="remarks"></a>Примечания 
 Чтобы выполнить код, внешний по отношению к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (например, расширенную хранимую процедуру или распределенный запрос), поток должен выйти из-под управления планировщика, работающего в режиме без вытеснения. Для этого исполнитель переходит в режим с вытеснением. Значения времени, возвращаемые этим динамическим административным представлением, не включают время, затраченное в режиме с вытеснением.
 
-При выполнении параллельных запросов в [режима строки](../../relational-databases/query-processing-architecture-guide.md#row-mode-execution), [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] назначает рабочий поток для координации по выполнению задач, назначенные им рабочие потоки. В данном DMV координирующий поток является видимым для запроса. Столбцы **считывает**, **записывает**, **logical_reads**, и **row_count** являются **не обновляется** для Координирующий поток. Столбцы **wait_type**, **wait_time**, **last_wait_type**, **wait_resource**, и **granted_query_memory** являются **обновляется только** координатора потока. Дополнительные сведения см. в разделе [поток и руководство по архитектуре задач](../../relational-databases/thread-and-task-architecture-guide.md).
+При выполнении параллельных запросов в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [режиме строки](../../relational-databases/query-processing-architecture-guide.md#row-mode-execution)назначает рабочий поток для координации рабочих потоков, ответственных за выполнение назначенных им задач. В этом динамическом административном отображении для запроса отображается только поток координатора. Столбцы **READS**, **writes**, **logical_reads**и **row_count** **не обновляются** для потока координатора. Столбцы **wait_type**, **wait_time**, **last_wait_type**, **wait_resource**и **granted_query_memory** **обновляются только** для потока координатора. Дополнительные сведения см. в разделе [руководств по архитектуре потоков и задач](../../relational-databases/thread-and-task-architecture-guide.md).
 
 ## <a name="permissions"></a>Разрешения
-Если пользователь имеет `VIEW SERVER STATE` разрешение на сервере, пользователь увидит все выполняющиеся сеансы на экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; в противном случае пользователь будет видеть только текущий сеанс. `VIEW SERVER STATE` не может быть предоставлена в [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] , `sys.dm_exec_requests` только текущему соединению.
+Если пользователь имеет `VIEW SERVER STATE` разрешение на сервере, он увидит все выполняющиеся сеансы на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]экземпляре; в противном случае пользователь увидит только текущий сеанс. `VIEW SERVER STATE`невозможно предоставить в [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] , так `sys.dm_exec_requests` как всегда ограничено текущим соединением.
   
 ## <a name="examples"></a>Примеры  
   
@@ -125,14 +125,14 @@ GO
 
 ### <a name="b-finding-all-locks-that-a-running-batch-is-holding"></a>Б. Поиск всех блокировок, которые содержит выполняемый пакет
 
-В следующем примере запрос **sys.dm_exec_requests** для поиска необходимого пакета и скопируйте его `transaction_id` из выходных данных.
+В следующем примере производится запрос к **sys. DM _exec_requests** для поиска интересного пакета и `transaction_id` его копирования из выходных данных.
 
 ```sql
 SELECT * FROM sys.dm_exec_requests;  
 GO
 ```
 
-Затем, чтобы найти сведения о блокировке, используйте скопированный `transaction_id` с помощью системной функции **sys.dm_tran_locks**.  
+Затем, чтобы найти сведения о блокировке, используйте скопированную `transaction_id` функцию с системной функцией **sys. DM _tran_locks**.  
 
 ```sql
 SELECT * FROM sys.dm_tran_locks
@@ -143,7 +143,7 @@ GO
 
 ### <a name="c-finding-all-currently-blocked-requests"></a>В. Поиск всех запросов, заблокированных в настоящий момент
 
-В следующем примере запрос **sys.dm_exec_requests** для поиска сведений о заблокированных запросах.  
+В следующем примере производится запрос к **sys. DM _exec_requests** для поиска сведений о заблокированных запросах.  
 
 ```sql
 SELECT session_id ,status ,blocking_session_id  
@@ -154,7 +154,7 @@ WHERE status = N'suspended';
 GO  
 ```  
 
-### <a name="d-ordering-existing-requests-by-cpu"></a>Г. Упорядочение существующие запросы по ЦП
+### <a name="d-ordering-existing-requests-by-cpu"></a>Г. Упорядочивание существующих запросов по ЦП
 
 ```sql
 SELECT 

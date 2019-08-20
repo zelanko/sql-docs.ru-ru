@@ -9,14 +9,14 @@ ms.date: 07/24/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 5b35eccece4df47cb483932386cf6a38e45d2dc8
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: a705e93cd4fce09abb7f8f3615c1ab638f332d60
+ms.sourcegitcommit: cdbb0ee5ee5259119ad21695f549207457990f71
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68419277"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69621668"
 ---
-# <a name="tutorial-load-sample-data-into-a-sql-server-big-data-cluster"></a>Руководство. Загрузка примера данных в кластер больших данных SQL Server
+# <a name="tutorial-load-sample-data-into-a-sql-server-big-data-cluster"></a>Учебник. Загрузка примера данных в кластер больших данных SQL Server
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -25,7 +25,7 @@ ms.locfileid: "68419277"
 > [!TIP]
 > Дополнительные примеры для кластера больших данных SQL Server 2019 (предварительная версия) можно найти в репозитории [sql-server-samples](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster) GitHub. Путь к ним: **sql-server-samples/samples/features/sql-big-data-cluster/** .
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 - [Развернутый кластер больших данных](deployment-guidance.md)
 - [Средства работы с большими данными](deploy-big-data-tools.md)
@@ -33,7 +33,7 @@ ms.locfileid: "68419277"
    - **kubectl**
    - **sqlcmd**
    - **curl**
-
+ 
 ## <a id="sampledata"></a> Загрузка примера данных
 
 В следующих шагах используется скрипт начальной загрузки для скачивания резервной копии базы данных SQL Server и загрузки этих данных в ваш кластер больших данных. Чтобы упростить работу, эти действия были разнесены по разделам для [Windows](#windows) и [Linux](#linux).

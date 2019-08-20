@@ -9,18 +9,18 @@ ms.date: 07/31/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 10e7d0e30135622fedfcbe8f8dba67bfaf1908cd
-ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
+ms.openlocfilehash: aa95fc656a0adb7d88c3728d15cfcb3720266d07
+ms.sourcegitcommit: 8d01698e779a536093dd637e84c52f3ff0066a2c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68702868"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69611417"
 ---
 # <a name="how-to-mount-s3-for-hdfs-tiering-in-a-big-data-cluster"></a>Подключение S3 для распределения по уровням HDFS в кластере больших данных
 
 В следующих разделах приводится пример настройки распределения по уровням HDFS для источника данных хранилища S3.
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 - [Развернутый кластер больших данных](deployment-guidance.md)
 - [Средства работы с большими данными](deploy-big-data-tools.md)
@@ -61,7 +61,7 @@ ms.locfileid: "68702868"
    
 1. Задайте переменную среды MOUNT_CREDENTIALS в соответствии с приведенными выше инструкциями.
 
-1. Подключите удаленное хранилище HDFS к Azure с помощью команды **azdata bdc storage-pool mount create**. Замените значения заполнителей, после чего выполните следующую команду:
+1. Подключение удаленного хранилища HDFS в S3 с помощью **хранилища BDC аздата. Создание пула**. Замените значения заполнителей, после чего выполните следующую команду:
 
    ```bash
    azdata bdc storage-pool mount create --remote-uri s3a://<S3 bucket name> --mount-path /mounts/<mount-name>
@@ -104,4 +104,4 @@ azdata bdc hdfs mount delete --mount-path <mount-path-in-hdfs>
 
 ## <a name="next-steps"></a>Следующие шаги
 
-Дополнительные сведения о кластерах больших данных SQL Server 2019 см. в статье [Что такое кластеры больших данных SQL Server 2019?](big-data-cluster-overview.md).
+Дополнительные сведения о кластерах больших данных SQL Server 2019 см. в статье [Что такое кластеры больших данных SQL Server 2019?](big-data-cluster-overview.md).
