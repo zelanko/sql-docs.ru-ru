@@ -1,22 +1,22 @@
 ---
 title: Запрос внешних данных в Oracle
 titleSuffix: SQL Server big data clusters
-description: В этом руководстве описывается, каким образом выполняется запрос данных Oracle из кластера больших данных SQL Server 2019 (предварительная версия). Для этого создается внешняя таблица на основе данных в Oracle, после чего выполняется запрос.
+description: В этом руководстве показано, как запрашивать данные Oracle [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]из. Для этого создается внешняя таблица на основе данных в Oracle, после чего выполняется запрос.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: aboke
-ms.date: 12/12/2018
+ms.date: 08/21/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: bf0efdc3a9be44a0ffad4efcaaeb351bbdbdf626
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: ebad25ed0532ed6ba96dc803fa8e6dc2538977ae
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67957713"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653259"
 ---
-# <a name="tutorial-query-oracle-from-a-sql-server-big-data-cluster"></a>Руководство. Запрос данных Oracle из кластера больших данных SQL Server
+# <a name="tutorial-query-oracle-from-a-sql-server-big-data-cluster"></a>Учебник. Запрос данных Oracle из кластера больших данных SQL Server
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -65,9 +65,9 @@ ms.locfileid: "67957713"
 
 Для начала необходимо создать внешний источник данных, который может обращаться к вашему серверу Oracle.
 
-1. В Azure Data Studio установите подключение к главному экземпляру SQL Server в кластере больших данных. Дополнительные сведения см. в разделе [Подключение к главному экземпляру SQL Server](connect-to-big-data-cluster.md#master).
+1. В Azure Data Studio установите подключение к главному экземпляру SQL Server в кластере больших данных. Дополнительные сведения см. в разделе [Подключение к главному экземпляру SQL Server](connect-to-big-data-cluster.md#master).
 
-1. Дважды щелкните подключение в окне **Серверы**, чтобы открыть панель мониторинга сервера для главного экземпляра SQL Server. Выберите **Создать запрос**.
+1. Дважды щелкните подключение в окне **Серверы**, чтобы открыть панель мониторинга сервера для главного экземпляра SQL Server. Выберите **Создать запрос**.
 
    ![Запрос главного экземпляра SQL Server](./media/tutorial-query-oracle/sql-server-master-instance-query.png)
 
