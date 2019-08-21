@@ -1,28 +1,28 @@
 ---
 title: Прием данных в пул данных SQL Server
 titleSuffix: SQL Server big data clusters
-description: В этом руководстве описывается, каким образом выполняется прием данных в пул данных в кластере больших данных SQL Server 2019 (предварительная версия).
+description: В этом руководстве показано, как принимать данные в пул [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]данных.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 06/26/2019
+ms.date: 08/21/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 178eceaf99d1f8c2b51f7079d0bdd406c2cb5eef
-ms.sourcegitcommit: c70a0e2c053c2583311fcfede6ab5f25df364de0
+ms.openlocfilehash: f2ae96a04da69835b4b13886637cf87e62996b57
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68670522"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653314"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-transact-sql"></a>Учебник. Прием данных в пул данных SQL Server с помощью Transact-SQL
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-В этом руководстве описывается, каким образом выполняется загрузка данных в [пул данных](concept-data-pool.md) с помощью Transact-SQL в кластере больших данных SQL Server 2019 (предварительная версия). В кластерах больших данных SQL Server данные из самых разных источников могут приниматься и распределяться между экземплярами пула данных.
+В этом руководстве показано, как использовать Transact-SQL для загрузки данных [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]в [пул данных](concept-data-pool.md) . С [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]помощью данные из различных источников можно принимать и распределять по экземплярам пула данных.
 
-В этом руководстве описано следующее:
+В этом руководстве описано следующее.
 
 > [!div class="checklist"]
 > * Создание внешней таблицы в пуле данных.

@@ -1,33 +1,32 @@
 ---
-title: Подключение к главному экземпляру и HDFS
-titleSuffix: SQL Server big data clusters
-description: Сведения о том, как подключиться к главному экземпляру SQL Server и шлюзу HDFS/Spark для кластера больших данных SQL Server 2019 (предварительная версия).
+title: Подключение к кластерам больших данных в главном и HDFS
+description: Узнайте, как подключиться к экземпляру SQL Server master и шлюзу HDFS/Spark для [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 05/22/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1f09763b210427c84efe75d693fee302d7048db7
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: fb6e1f684a277740c06fbd0a2fdc23dbd77f8e5c
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67958643"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69652421"
 ---
 # <a name="connect-to-a-sql-server-big-data-cluster-with-azure-data-studio"></a>Подключение к кластеру больших данных SQL Server с помощью Azure Data Studio
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-В этой статье описывается, как подключиться к кластеру больших данных SQL Server 2019 (предварительная версия) из Azure Data Studio.
+В этой статье описывается подключение к [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] из Azure Data Studio.
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 - Развернутый [кластер больших данных SQL Server 2019](deployment-guidance.md).
 - [Средства для работы с большими данными SQL Server 2019](deploy-big-data-tools.md):
    - **Azure Data Studio**
-   - **Расширение SQL Server 2019**
+   - **Расширение SQL Server 2019**
    - **kubectl**
 
 ## <a id="master"></a> Подключение к кластеру
@@ -70,4 +69,4 @@ ms.locfileid: "67958643"
 
 ## <a name="next-steps"></a>Следующие шаги
 
-Дополнительные сведения о кластерах больших данных SQL Server 2019 см. в статье [Что такое кластеры больших данных SQL Server 2019?](big-data-cluster-overview.md).
+Дополнительные сведения о [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]см. в разделе [что [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]такое ](big-data-cluster-overview.md).

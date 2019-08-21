@@ -1,35 +1,35 @@
 ---
 title: Развертывание с помощью скрипта Python
 titleSuffix: SQL Server big data clusters
-description: Узнайте, как развертывать кластеры больших данных SQL Server 2019 (предварительная версия) в Службе Azure Kubernetes (AKS) с помощью скрипта развертывания.
+description: Узнайте, как использовать скрипт развертывания для развертывания [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (предварительной версии) в службе Azure Kubernetes (AKS).
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: dee1c8669e6496553c367b4d1078d1e6a7f26497
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 1bd3af32448bfce7dc584ac630d503e4cf63b286
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68470719"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653230"
 ---
 # <a name="use-a-python-script-to-deploy-a-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>Развертывание кластера больших данных SQL Server в Службе Azure Kubernetes (AKS) с помощью скрипта Python
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-В этом руководстве используется пример скрипта Python для развертывания кластера больших данных SQL Server 2019 (предварительная версия) в Службе Azure Kubernetes (AKS).
+В этом руководстве вы используете пример скрипта развертывания Python для развертывания [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] в службе Azure Kubernetes Service (AKS).
 
 > [!TIP]
-> AKS — это единственный вариант размещения Kubernetes для кластера больших данных. Сведения о других вариантах развертывания и настройке параметров развертывания см. в статье [Развертывание кластеров больших данных SQL Server в Kubernetes](deployment-guidance.md).
+> AKS — это единственный вариант размещения Kubernetes для кластера больших данных. Дополнительные сведения о других вариантах развертывания, а также о настройке параметров развертывания см. в разделе [развертывание [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] в Kubernetes](deployment-guidance.md).
 
 Используемое здесь развертывание кластера больших данных по умолчанию состоит из главного экземпляра SQL, одного экземпляра пула вычислительных ресурсов, двух экземпляров пула данных и двух экземпляров пула носителей. Данные сохраняются с помощью постоянных томов Kubernetes, использующих классы хранения AKS по умолчанию. Конфигурация по умолчанию, применяемая в этом руководстве, подходит для сред разработки и тестирования.
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 - Подписка Azure.
 - [Средства работы с большими данными](deploy-big-data-tools.md):
@@ -113,7 +113,7 @@ curl -o deploy-sql-big-data-aks.py "https://raw.githubusercontent.com/Microsoft/
 ```
 
 > [!IMPORTANT]
-> Полное развертывание может занять много времени из-за временных затрат на скачивание образов контейнеров для компонентов кластера больших данных. Однако это не должно занять несколько часов. При возникновении проблем с развертыванием см. статью [Мониторинг и устранение неполадок кластеров больших данных SQL Server](cluster-troubleshooting-commands.md).
+> Полное развертывание может занять много времени из-за временных затрат на скачивание образов контейнеров для компонентов кластера больших данных. Однако это не должно занять несколько часов. При возникновении проблем с развертыванием см. раздел [мониторинг и устранение неполадок [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] ](cluster-troubleshooting-commands.md).
 
 ## <a name="inspect-the-cluster"></a>Проверка кластера
 
@@ -151,7 +151,7 @@ curl -o deploy-sql-big-data-aks.py "https://raw.githubusercontent.com/Microsoft/
    ```
 
 > [!TIP]
-> Дополнительные сведения об отслеживании и устранении неполадок развертывания см. в статье [Мониторинг и устранение неполадок кластеров больших данных SQL Server](cluster-troubleshooting-commands.md).
+> Дополнительные сведения о мониторинге и устранении неполадок развертывания см. в разделе [мониторинг и [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]устранение неполадок ](cluster-troubleshooting-commands.md).
 
 ## <a name="connect-to-the-cluster"></a>Подключение к кластеру
 
@@ -166,7 +166,7 @@ curl -o deploy-sql-big-data-aks.py "https://raw.githubusercontent.com/Microsoft/
 
 ## <a name="clean-up"></a>Очистка
 
-Если вы тестируете кластеры больших данных SQL Server в Azure, по завершении следует удалить кластер AKS, чтобы избежать непредвиденных расходов. Не удаляйте кластер, если планируете продолжать использовать его.
+При тестировании [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] в Azure следует удалить кластер AKS по завершении, чтобы избежать непредвиденных расходов. Не удаляйте кластер, если планируете продолжать использовать его.
 
 > [!WARNING]
 > Приведенные ниже инструкции служат для удаления кластера AKS, что также приводит к удалению кластера больших данных SQL Server. Если вы хотите сохранить какие-либо базы данных или данные HDFS, перед удалением кластера следует выполнить их резервное копирование.
@@ -179,7 +179,7 @@ az group delete -n <resource group name>
 
 ## <a name="next-steps"></a>Следующие шаги
 
-Скрипт развертывания настроил Службу Azure Kubernetes, а также развернул кластер больших данных SQL Server 2019. Вы также можете настраивать будущие развертывания путем установки вручную. Дополнительные сведения о развертывании кластеров больших данных и настройке развертывания см. в статье [Развертывание кластеров больших данных SQL Server в Kubernetes](deployment-guidance.md).
+Скрипт развертывания настроил Службу Azure Kubernetes, а также развернул кластер больших данных SQL Server 2019. Вы также можете настраивать будущие развертывания путем установки вручную. Дополнительные сведения о развертывании кластеров больших данных, а также о настройке развертываний см. в разделе [ [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] развертывание в Kubernetes](deployment-guidance.md).
 
 Теперь, когда кластер больших данных SQL Server развернут, вы можете загрузить демонстрационные данные и изучить другие руководства:
 

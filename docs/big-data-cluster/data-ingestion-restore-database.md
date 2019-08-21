@@ -1,26 +1,26 @@
 ---
 title: Восстановление базы данных
 titleSuffix: SQL Server big data clusters
-description: В этой статье показано, как восстановить базу данных на главном экземпляре кластера больших данных SQL Server 2019 (предварительная версия).
+description: В этой статье показано, как восстановить базу данных в экземпляре главного экземпляра [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 06/26/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 49cc2cbb4ede2326bf774b5f39968ad4b00ed991
-ms.sourcegitcommit: 316c25fe7465b35884f72928e91c11eea69984d5
+ms.openlocfilehash: bad1a62752dd75e181d30c28485e1c9b707aa888
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68969488"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69652238"
 ---
 # <a name="restore-a-database-into-the-sql-server-big-data-cluster-master-instance"></a>Восстановление базы данных на главном экземпляре кластера больших данных SQL Server
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-В этой статье описано, как восстановить существующую базу данных на главном экземпляре кластера больших данных SQL Server 2019 (предварительная версия). Рекомендуется использовать метод резервного копирования, копирования и восстановления.
+В этой статье описывается, как восстановить существующую базу данных в главном экземпляре [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. Рекомендуется использовать метод резервного копирования, копирования и восстановления.
 
 ## <a name="backup-your-existing-database"></a>Создайте резервную копию существующей базы данных.
 
@@ -112,6 +112,6 @@ GO
 
 ## <a name="next-steps"></a>Следующие шаги
 
-Дополнительные сведения о кластерах больших данных SQL Server см. в следующем обзоре:
+Дополнительные [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]сведения см. в следующих обзорах:
 
-- [Что такое кластеры больших данных SQL Server 2019?](big-data-cluster-overview.md)
+- [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]Что?](big-data-cluster-overview.md)

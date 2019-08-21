@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 75ef22eb7e06fa1f8d4d2a0d9c754959f1bb1ae4
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: 1f6d828a7267ab2b4b1def17f9d1c6bf4a6018dc
+ms.sourcegitcommit: 632ff55084339f054d5934a81c63c77a93ede4ce
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715024"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69633615"
 ---
 # <a name="use-r-package-managers-to-install-r-packages-on-sql-server"></a>Используйте диспетчеры пакетов R для установки пакетов R на SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "68715024"
 
 ## <a name="install-a-package-using-rgui"></a>Установка пакета с помощью RGui
 
-1. [Определите расположение библиотеки экземпляров](../package-management/default-packages.md). Перейдите в папку, где установлены инструменты R. Например, путь по умолчанию для экземпляра SQL Server 2017 по умолчанию выглядит следующим образом:`C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64`
+1. [Определите расположение библиотеки экземпляров](../package-management/r-package-information.md). Перейдите в папку, где установлены инструменты R. Например, путь по умолчанию для экземпляра SQL Server 2017 по умолчанию выглядит следующим образом:`C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64`
 
 1. Щелкните правой кнопкой мыши файл RGui. exe и выберите команду **Запуск от имени администратора**. Если у вас нет необходимых разрешений, обратитесь к администратору базы данных и предоставьте список необходимых пакетов.
 

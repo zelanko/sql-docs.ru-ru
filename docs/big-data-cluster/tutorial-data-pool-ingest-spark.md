@@ -1,26 +1,26 @@
 ---
 title: Прием данных с помощью заданий Spark
 titleSuffix: SQL Server big data clusters
-description: В этом руководстве описано, каким образом выполняется прием данных в пул данных кластера больших данных SQL Server 2019 (предварительная версия) с помощью заданий Spark в Azure Data Studio.
+description: В этом руководстве показано, как принимать данные в пул [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] данных с помощью заданий Spark в Azure Data Studio.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: shivsood
-ms.date: 06/26/2019
+ms.date: 08/21/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 6d0ea6d4fb7a3aea9788c089ad68cb3bf523837f
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 5325b44512d2dc1522d4bc49478e65ae4c0999e0
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67957818"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653296"
 ---
-# <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-spark-jobs"></a>Руководство. Прием данных в пул данных SQL Server с помощью заданий Spark
+# <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-spark-jobs"></a>Учебник. Прием данных в пул данных SQL Server с помощью заданий Spark
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-В этом руководстве описано, каким образом выполняется загрузка данных в [пул данных](concept-data-pool.md) с помощью заданий Spark в кластере больших данных SQL Server 2019 (предварительная версия). 
+В этом руководстве показано, как использовать задания Spark для загрузки данных [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]в [пул данных](concept-data-pool.md) . 
 
 В этом руководстве описано следующее.
 

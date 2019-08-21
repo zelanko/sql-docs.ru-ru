@@ -1,32 +1,32 @@
 ---
 title: Настройка Kubernetes с использованием kubeadm
 titleSuffix: SQL Server big data clusters
-description: Сведения о том, как настроить Kubernetes на нескольких компьютерах с Ubuntu 16.04 или 18.04 (физических или виртуальных) для развертываний кластера больших данных SQL Server 2019 (предварительная версия).
+description: Узнайте, как настроить Kubernetes на нескольких компьютерах Ubuntu 16,04 или 18,04 (физических или виртуальных) для [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] развертываний.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: d55a51ac388cfb4af197ce409434a0dc9847bd2d
-ms.sourcegitcommit: 97e94b76f9f48d161798afcf89a8c2ac0f09c584
+ms.openlocfilehash: 63a3529755267137cb7a1094060499e5db008ec8
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68661367"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69652377"
 ---
 # <a name="configure-kubernetes-on-multiple-machines-for-sql-server-big-data-cluster-deployments"></a>Настройка Kubernetes на нескольких компьютерах для развертываний кластера больших данных SQL Server
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Эта статья содержит пример использования **kubeadm** для настройки Kubernetes на нескольких компьютерах для развертываний кластера больших данных SQL Server 2019 (предварительная версия). В этом примере целевым объектом являются несколько компьютеров с Ubuntu 16.04 или 18.04 LTS (физических или виртуальных). При развертывании на другой платформе Linux нужно изменить некоторые команды в соответствии с вашей системой.  
+В этой статье приведен пример использования **кубеадм** для настройки Kubernetes на нескольких компьютерах для [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] развертывания. В этом примере целевым объектом являются несколько компьютеров с Ubuntu 16.04 или 18.04 LTS (физических или виртуальных). При развертывании на другой платформе Linux нужно изменить некоторые команды в соответствии с вашей системой.  
 
 > [!TIP] 
 > Примеры сценариев, которые настраивают Kubernetes, см. в статье [ Создание кластера Kubernetes с использованием Kubeadm в Ubuntu 16.04 LTS или 18.04 LTS](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/kubeadm).
 Кроме того, в [этом](deployment-script-single-node-kubeadm.md) разделе приведен пример скрипта, который автоматизирует развертывание kubeadm из одного узла на виртуальной машине, а затем поверх него развертывает конфигурацию по умолчанию кластера больших данных.
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 - Не меньше 3 физических компьютеров или виртуальных машин с Linux
 - Рекомендуемая конфигурация отдельного компьютера:

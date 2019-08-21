@@ -1,20 +1,20 @@
 ---
 title: Что такое контроллер
 titleSuffix: SQL Server big data clusters
-description: В этой статье описывается контроллер в кластере больших данных SQL Server 2019 (предварительная версия).
+description: В этой статье описывается контроллер [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: e984c3dced4bde713ac98d67c22481e54491cd68
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 643cb2b4e252e1818940bda2be54917c23cefe06
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68419534"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69652287"
 ---
 # <a name="what-is-the-controller-on-a-sql-server-big-data-cluster"></a>Что такое контроллер в кластере больших данных SQL Server
 
@@ -36,13 +36,13 @@ ms.locfileid: "68419534"
 
 ## <a name="deploying-the-controller-service"></a>Развертывание службы контроллера
 
-Контроллер разворачивается и размещается в том же пространстве имен Kubernetes, в котором клиент создает кластер больших данных. Эта служба устанавливается администратором Kubernetes во время начальной загрузки кластера с помощью программы командной строки **azdata**. Дополнительные сведения см. в статье [Начало работы с кластерами больших данных SQL Server](deploy-get-started.md).
+Контроллер разворачивается и размещается в том же пространстве имен Kubernetes, в котором клиент создает кластер больших данных. Эта служба устанавливается администратором Kubernetes во время начальной загрузки кластера с помощью программы командной строки **azdata**. Дополнительные сведения см. в статье [Приступая [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]к работе с ](deploy-get-started.md).
 
 В результате рабочего процесса создания на основе Kubernetes развертывается полнофункциональный кластер больших данных SQL Server, который включает в себя все компоненты, описанные в [обзорной статье](big-data-cluster-overview.md). Рабочий процесс начальной загрузки сначала создает службу контроллера, которая после развертывания будет координировать установку и настройку остальных служб, входящих в состав главного пула, пулов вычислительных ресурсов, данных и носителей.
 
 ## <a name="managing-the-cluster-through-the-controller-service"></a>Управление кластером с помощью службы контроллера
 
-Вы можете управлять кластером посредством службы контроллера с помощью команд **azdata**. Если в том же пространстве имен развертываются дополнительные объекты Kubernetes, например pod, служба контроллера не управляет ими и не отслеживает их. Для управления кластером на уровне Kubernetes можно также использовать команды **kubectl**. Дополнительные сведения см. в статье [Мониторинг и устранение неполадок кластеров больших данных SQL Server](cluster-troubleshooting-commands.md).
+Вы можете управлять кластером посредством службы контроллера с помощью команд **azdata**. Если в том же пространстве имен развертываются дополнительные объекты Kubernetes, например pod, служба контроллера не управляет ими и не отслеживает их. Для управления кластером на уровне Kubernetes можно также использовать команды **kubectl**. Дополнительные сведения см. в разделе [мониторинг и [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]устранение неполадок ](cluster-troubleshooting-commands.md).
 
 Контроллер и объекты Kubernetes (наборы с отслеживанием состояния, объекты pod, секреты и т. д.), создаваемые для кластера больших данных, размещаются в выделенном пространстве имен Kubernetes. Администратор кластера Kubernetes предоставляет службе контроллера разрешение на управление всеми ресурсами в этом пространстве имен.  Политика RBAC для этого сценария настраивается автоматически в процессе начального развертывания кластера с помощью **azdata**.
 
@@ -61,7 +61,7 @@ ms.locfileid: "68419534"
 
 ## <a name="next-steps"></a>Следующие шаги
 
-Дополнительные сведения о кластерах больших данных SQL Server см. в следующих статьях:
+Дополнительные сведения о [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]см. в следующих ресурсах:
 
-- [Что такое кластеры больших данных SQL Server 2019?](big-data-cluster-overview.md)
-- [Семинар. Архитектура кластеров больших данных Microsoft SQL Server](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)
+- [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]Что?](big-data-cluster-overview.md)
+- [Семинар. Архитектура [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] Майкрософт](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)

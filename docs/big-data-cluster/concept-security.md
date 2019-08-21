@@ -1,22 +1,22 @@
 ---
 title: Основные понятия безопасности
 titleSuffix: SQL Server big data clusters
-description: В этой статье рассматриваются основные понятия безопасности для работы с кластером больших данных SQL Server 2019 (предварительная версия). Здесь описываются конечные точки кластера и процесс проверки подлинности кластера.
+description: В этой статье описываются основные понятия [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]безопасности для. Здесь описываются конечные точки кластера и процесс проверки подлинности кластера.
 author: nelgson
 ms.author: negust
 ms.reviewer: mikeray
-ms.date: 06/26/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 54ae86785590eb26fb8ac402f3ae8ab6c7f29a98
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 4e4441f0cc4f19d4784019408bfc5309a5734285
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67958667"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69652256"
 ---
-# <a name="security-concepts-for-sql-server-big-data-clusters"></a>Основные понятия безопасности для работы с кластерами больших данных SQL Server
+# <a name="security-concepts-for-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Основные понятия безопасности для[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -82,7 +82,7 @@ ms.locfileid: "67958667"
 
 ## <a name="next-steps"></a>Следующие шаги
 
-Дополнительные сведения о кластерах больших данных SQL Server см. в следующих статьях:
+Дополнительные сведения о [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]см. в следующих ресурсах:
 
-- [Что такое кластеры больших данных SQL Server 2019?](big-data-cluster-overview.md)
-- [Семинар. Архитектура кластеров больших данных Microsoft SQL Server](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)
+- [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]Что?](big-data-cluster-overview.md)
+- [Семинар. Архитектура [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] Майкрософт](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)

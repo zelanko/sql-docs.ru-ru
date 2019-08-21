@@ -1,36 +1,36 @@
 ---
-title: Использование приложений в кластерах больших данных
+title: Использование приложений на SQL Server кластерах больших данных
 titleSuffix: SQL Server big data clusters
-description: Использование приложения, развернутого в кластере больших данных SQL Server 2019, с помощью веб-службы на базе REST (предварительная версия).
+description: Использование приложения, развернутого на [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] веб-службе RESTful (Предварительная версия).
 author: jeroenterheerdt
 ms.author: jterh
 ms.reviewer: mikeray
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: a2135ef64fb17eba62eab75b81739eda047167ab
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
-ms.translationtype: HT
+ms.openlocfilehash: 5d65cb2577749a45bccf1383bdf880ce8c5a7a46
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68419506"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653063"
 ---
-# <a name="consume-an-app-deployed-on-sql-server-big-data-cluster-using-a-restful-web-service"></a>Использование приложения, развернутого в кластере больших данных SQL Server, с помощью веб-службы на базе REST
+# <a name="consume-an-app-deployed-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-using-a-restful-web-service"></a>Использование приложения, развернутого на [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] веб-службе RESTful
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 Эта статья описывает использование приложения, развернутого в кластере больших данных SQL Server 2019, с помощью веб-службы на базе REST (предварительная версия).
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 - [Кластер больших данных SQL Server 2019](deployment-guidance.md)
-- [Служебная программа командной строки mssqlctl](deploy-install-azdata.md)
+- [Служебная программа командной строки azdata](deploy-install-azdata.md)
 - Приложение, развернутое с помощью [azdata](big-data-cluster-create-apps.md) или [расширения развертывания приложения](app-deployment-extension.md)
 
 ## <a name="capabilities"></a>Возможности
 
-После развертывания приложения в кластере больших данных SQL Server 2019 (предварительная версия) вы можете обращаться к этому приложению и использовать его с помощью веб-службы на основе REST. Это обеспечивает интеграцию этого приложения с другими приложениями или службами (например, мобильным приложением или веб-сайтом). В следующей таблице описаны команды развертывания приложения, которые можно использовать с **azdata**, чтобы получить сведения о веб-службе на основе REST для приложения.
+После развертывания приложения на [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]можно получить доступ к этому приложению и использовать его с помощью веб-службы RESTful. Это обеспечивает интеграцию этого приложения с другими приложениями или службами (например, мобильным приложением или веб-сайтом). В следующей таблице описаны команды развертывания приложения, которые можно использовать с **azdata**, чтобы получить сведения о веб-службе на основе REST для приложения.
 
 |Command |Описание |
 |:---|:---|
@@ -48,7 +48,7 @@ azdata app describe --help
 
 Команда **azdata app describe** предоставляет подробные сведения о приложении, включая конечную точку в кластере. Обычно она используется разработчиком приложения, чтобы создать приложение с помощью клиента Swagger и использовать веб-службу для взаимодействия с приложением на основе REST.
 
-Опишите приложение, выполнив команду, аналогичную следующей.
+Опишите приложение, выполнив команду, как показано в следующем примере:
 
 ```bash
 azdata app describe --name addpy --version v1
@@ -67,8 +67,8 @@ azdata app describe --name addpy --version v1
     }
   ],
   "links": {
-    "app": "https://10.1.1.3:30777/api/app/addpy/v1",
-    "swagger": "https://10.1.1.3:30777/api/app/addpy/v1/swagger.json"
+    "app": "https://10.1.1.3:30080/app/addpy/v1",
+    "swagger": "https://10.1.1.3:30080/app/addpy/v1/swagger.json"
   },
   "name": "add-app",
   "output_param_defs": [
@@ -82,28 +82,32 @@ azdata app describe --name addpy --version v1
 }
 ```
 
-Запишите IP-адрес (в этом примере — `10.1.1.3`) и номер порта (`30777`) в выходных данных.
+Запишите IP-адрес (в этом примере — `10.1.1.3`) и номер порта (`30080`) в выходных данных.
+
+Одним из других способов получения этой информации является выполнение щелчка правой кнопкой мыши на сервере в Azure Data Studio где находятся конечные точки перечисленных служб.
+
+![Конечная точка ADS](media/big-data-cluster-consume-apps/ads_end_point.png)
 
 ## <a name="generate-a-jwt-access-token"></a>Создание маркера доступа JWT
 
-Чтобы обратиться к веб-службе на основе REST для развернутого приложения, сначала нужно создать маркер доступа JWT. Откройте следующий URL-адрес в браузере: `https://[IP]:[PORT]/api/docs/swagger.json`, используя IP-адрес и порт, которые вы получили при выполнении указанной выше команды `describe`. Вам потребуется войти в систему с теми же учетными данными, которые использовались для `azdata login`.
+Чтобы обратиться к веб-службе на основе REST для развернутого приложения, сначала нужно создать маркер доступа JWT. Откройте следующий URL-адрес в браузере: `https://[IP]:[PORT]/docs/swagger.json`, используя IP-адрес и порт, которые вы получили при выполнении указанной выше команды `describe`. Вам потребуется выполнить вход с теми же учетными данными, которые использовались для `azdata login`.
 
 Вставьте содержимое `swagger.json` в [редактор Swagger](https://editor.swagger.io), чтобы понять, какие методы доступны.
 
 ![Swagger API](media/big-data-cluster-consume-apps/api_swagger.png)
 
-Обратите внимание на метод GET `app`, а также на метод POST `token`. Так как проверка подлинности для приложений использует маркеры JWT, вам потребуется получить маркер с помощью привычного вам средства, чтобы выполнить запрос POST к методу `token`. Ниже приведен пример того, как именно это можно сделать в [Postman](https://www.getpostman.com/).
+Обратите внимание на метод GET `app`, а также на метод POST `token`. Так как проверка подлинности для приложений использует токены JWT, необходимо получить маркер My с помощью вашего любимого средства для выполнения запроса POST к `token` методу. Ниже приведен пример того, как именно это можно сделать в [Postman](https://www.getpostman.com/).
 
 ![Маркер Postman](media/big-data-cluster-consume-apps/postman_token.png)
 
-Результат этого запроса предоставит вам `access_token` JWT, который потребуется при вызове URL-адреса для запуска приложения.
+В результате выполнения этого запроса будет выдаваться JWT `access_token`, который должен вызвать URL-адрес для запуска приложения.
 
 ## <a name="execute-the-app-using-the-restful-web-service"></a>Выполнение приложения с помощью веб-службы на основе REST
 
 > [!NOTE]
-> При необходимости вы можете открыть URL-адрес для `swagger`, возвращенный при выполнении `azdata app describe --name [appname] --version [version]` в браузере, который должен быть похож на `https://[IP]:[PORT]/api/app/[appname]/[version]/swagger.json`. Вам потребуется войти в систему с теми же учетными данными, которые использовались для `azdata login`. Содержимое `swagger.json` можно вставить в [редактор Swagger](https://editor.swagger.io). Вы увидите, что веб-служба предоставляет метод `run`. Также обратите внимание на базовый URL-адрес, отображаемый сверху.
+> При необходимости вы можете открыть URL-адрес для `swagger`, возвращенный при выполнении `azdata app describe --name [appname] --version [version]` в браузере, который должен быть похож на `https://[IP]:[PORT]/app/[appname]/[version]/swagger.json`. Вам потребуется войти в систему с теми же учетными данными, которые использовались для `azdata login`. Содержимое `swagger.json` можно вставить в [редактор Swagger](https://editor.swagger.io). Вы увидите, что веб-служба предоставляет метод `run`. Также обратите внимание на базовый URL-адрес, отображаемый сверху.
 
-Вы можете использовать привычное средство для вызова метода `run` (`https://[IP]:30778/api/app/[appname]/[version]/run`), передав параметры в текст запроса POST в виде JSON. В этом примере мы будем использовать [Postman](https://www.getpostman.com/). Перед вызовом нужно задать для `Authorization` значение `Bearer Token` и вставить полученный ранее маркер. Этим вы зададите заголовок своего запроса. См. снимок экрана ниже.
+Вы можете использовать привычное средство для вызова метода `run` (`https://[IP]:30778/api/app/[appname]/[version]/run`), передав параметры в текст запроса POST в виде JSON. В этом примере мы будем использовать [POST](https://www.getpostman.com/). Перед вызовом нужно задать для `Authorization` значение `Bearer Token` и вставить полученный ранее маркер. Этим вы зададите заголовок своего запроса. См. снимок экрана ниже.
 
 ![Заголовки выполнения Postman](media/big-data-cluster-consume-apps/postman_run_1.png)
 
@@ -121,4 +125,4 @@ azdata app describe --name addpy --version v1
 
 Дополнительные примеры можно просмотреть в наборе [примеров развертывания приложений](https://aka.ms/sql-app-deploy).
 
-Дополнительные сведения о кластерах больших данных SQL Server см. в статье [Что такое кластеры больших данных SQL Server 2019?](big-data-cluster-overview.md)
+Дополнительные сведения о [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]см. в разделе [что [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]такое?](big-data-cluster-overview.md).

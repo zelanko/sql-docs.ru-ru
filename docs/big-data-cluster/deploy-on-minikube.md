@@ -1,28 +1,28 @@
 ---
 title: Настройка minikube
 titleSuffix: SQL Server big data clusters
-description: Сведения о том, как настроить средство minikube для развертываний кластера больших данных SQL Server 2019 (предварительная версия) на отдельном компьютере.
+description: Узнайте, как настроить minikube для [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] развертываний на одном компьютере.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 04/23/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1991176de132062c46f36f30f4f384e483c069f9
-ms.sourcegitcommit: 316c25fe7465b35884f72928e91c11eea69984d5
+ms.openlocfilehash: b2022fe6ad8a0aa23c4dd7d917e925ae1daba572
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68969412"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69652406"
 ---
 # <a name="configure-minikube-for-sql-server-big-data-cluster-deployments"></a>Настройка minikube для развертываний кластера больших данных SQL Server
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Эта статья описывает, как настроить на отдельном компьютере средство **minikube** для развертываний кластера больших данных SQL Server 2019 (предварительная версия). Средство Minikube упрощает запуск Kubernetes на отдельном компьютере, например на ноутбуке или на настольной системе. Minikube запускает кластер Kubernetes с одним узлом в виртуальной машине на ноутбуке для пользователей, которые хотят опробовать Kubernetes или работать с ней каждый день. 
+В этой статье описывается, как настроить **minikube** на одном компьютере для [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] развертываний. Средство Minikube упрощает запуск Kubernetes на отдельном компьютере, например на ноутбуке или на настольной системе. Minikube запускает кластер Kubernetes с одним узлом в виртуальной машине на ноутбуке для пользователей, которые хотят опробовать Kubernetes или работать с ней каждый день. 
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 - 64 ГБ памяти.
 
@@ -41,7 +41,7 @@ ms.locfileid: "68969412"
 
 ## <a name="install-minikube"></a>Установка minikube
 
-Установите выпуск minikube в соответствии с инструкциями для [выпуска версии 1.3.0](https://github.com/kubernetes/minikube/releases/tag/v1.3.0). Кластер больших данных SQL Server 2019 (Предварительная версия) работает только с версиями 1.0.0 и выше.
+Установите выпуск minikube в соответствии с инструкциями для [выпуска версии 1.3.0](https://github.com/kubernetes/minikube/releases/tag/v1.3.0). Работает [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] только с версиями 1.0.0 и выше.
 
 ## <a name="create-a-minikube-cluster"></a>Создание кластера minikube
 
@@ -71,4 +71,4 @@ Set-VM -Name minikube -CheckpointType Disabled -AutomaticCheckpointsEnabled $fal
 
 Действия, описанные в этой статье, обеспечивают настройку кластера minikube. Следующим шагом является развертывание кластера больших данных SQL Server 2019. Инструкции см. в следующей статье:
 
-[Развертывание кластеров больших данных SQL Server 2019 в Kubernetes](deployment-guidance.md#deploy).
+[Развертывание [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] на Kubernetes](deployment-guidance.md#deploy)

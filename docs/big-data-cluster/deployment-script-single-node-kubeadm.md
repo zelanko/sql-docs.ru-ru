@@ -1,20 +1,20 @@
 ---
 title: Развертывание в кластере kubeadm с одним узлом с помощью скрипта bash
 titleSuffix: SQL Server big data clusters
-description: Используйте скрипт развертывания bash для развертывания кластера больших данных SQL Server 2019 (предварительная версия) в кластере kubeadm с одним узлом.
+description: Используйте скрипт развертывания bash для развертывания [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] в кластере кубеадм с одним узлом.
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 09f1d487e82f1e57762a0949f20bf9d43e40abfc
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: f6b6581eacad2fa9a65f64fdc29d6dfcde53852a
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715896"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69652344"
 ---
 # <a name="deploy-with-a-bash-script-to-a-single-node-kubeadm-cluster"></a>Развертывание в кластере kubeadm с одним узлом с помощью скрипта bash
 
@@ -22,7 +22,7 @@ ms.locfileid: "68715896"
 
 В этом руководстве вы используете образец скрипта bash для развертывания кластера Kubernetes с одним узлом с помощью kubeadm и последующего развертывания в нем кластера больших данных SQL Server.  
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 - Виртуальный или физический компьютер обычный Ubuntu 18,04 или 16,04. Все зависимости настраиваются скриптом, который запускается из виртуальной машины.
 

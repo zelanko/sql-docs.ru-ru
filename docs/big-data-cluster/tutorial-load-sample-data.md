@@ -5,25 +5,25 @@ description: В этом руководстве показано, как заг�
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: a705e93cd4fce09abb7f8f3615c1ab638f332d60
-ms.sourcegitcommit: cdbb0ee5ee5259119ad21695f549207457990f71
+ms.openlocfilehash: 405df2c66917dc5e5b350aaaa0769bede6ccf6c9
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69621668"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653284"
 ---
 # <a name="tutorial-load-sample-data-into-a-sql-server-big-data-cluster"></a>Учебник. Загрузка примера данных в кластер больших данных SQL Server
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Это руководство описывает, как использовать скрипт для загрузки примера данных в кластер больших данных SQL Server 2019 (предварительная версия). Этот пример данных используется во многих других руководствах в этой документации.
+В этом учебнике объясняется, как использовать скрипт для загрузки демонстрационных [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]данных в. Этот пример данных используется во многих других руководствах в этой документации.
 
 > [!TIP]
-> Дополнительные примеры для кластера больших данных SQL Server 2019 (предварительная версия) можно найти в репозитории [sql-server-samples](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster) GitHub. Путь к ним: **sql-server-samples/samples/features/sql-big-data-cluster/** .
+> Дополнительные примеры [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] можно найти в репозитории GitHub [SQL-Server-Samples](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster) . Путь к ним: **sql-server-samples/samples/features/sql-big-data-cluster/** .
 
 ## <a name="prerequisites"></a>Предварительные требования
 

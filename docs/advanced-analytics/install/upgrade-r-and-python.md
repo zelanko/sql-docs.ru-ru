@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 948ce20bf32aaa2051c4a805a3ca2f131a7c0c8f
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: abc14f78a969abd4adbbb2dcf12b4ee316614d23
+ms.sourcegitcommit: 632ff55084339f054d5934a81c63c77a93ede4ce
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715216"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69634551"
 ---
 # <a name="upgrade-machine-learning-r-and-python-components-in-sql-server-instances"></a>Обновление компонентов машинного обучения (R и Python) в SQL Server экземплярах
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -272,9 +272,9 @@ WITH RESULT SETS ((PackageName nvarchar(250), PackageVersion nvarchar(max) ))
 
 <a name="step-3-reinstall-packages"></a> 
 
-### <a name="step-3-add-any-third-party-packages"></a>Шаг 3. Добавление пакетов сторонних разработчиков
+### <a name="step-3-add-any-third-party-packages"></a>Шаг 3. Добавление пакетов сторонних разработчиков
 
-Возможно, вы добавили в библиотеку пакетов другие пакеты с открытым кодом или сторонними разработчиками. Так как обратная привязка переключается на расположение библиотеки пакетов по умолчанию, необходимо переустановить пакеты в библиотеку, которую теперь используют R и Python. Дополнительные сведения см. в статьях [пакеты по умолчанию](../package-management/default-packages.md), [Установка новых пакетов R](../r/install-additional-r-packages-on-sql-server.md)и [Установка новых пакетов Python](../python/install-additional-python-packages-on-sql-server.md).
+Возможно, вы добавили в библиотеку пакетов другие пакеты с открытым кодом или сторонними разработчиками. Так как обратная привязка переключается на расположение библиотеки пакетов по умолчанию, необходимо переустановить пакеты в библиотеку, которую теперь используют R и Python. Дополнительные сведения см. в статьях [сведения о пакете R](../package-management/r-package-information.md) , [Установка](../package-management/install-additional-r-packages-on-sql-server.md)и [сведения о пакете Python](../package-management/python-package-information.md) и его [Установка](../package-management/install-additional-python-packages-on-sql-server.md).
 
 ## <a name="sqlbindrexe-command-syntax"></a>Синтаксис команды SqlBindR. exe
 
@@ -284,7 +284,7 @@ WITH RESULT SETS ((PackageName nvarchar(250), PackageVersion nvarchar(max) ))
 
 ### <a name="parameters"></a>Параметры
 
-|Имя|Описание|
+|Name|Описание|
 |------|------|
 |*list*| Выводит список идентификаторов всех экземпляров баз данных SQL на текущем компьютере.|
 |*bind*| Обновляет указанный экземпляр базы данных SQL до последней версии R Server и обеспечивает автоматическое получение экземпляром будущих обновлений для R Server.|

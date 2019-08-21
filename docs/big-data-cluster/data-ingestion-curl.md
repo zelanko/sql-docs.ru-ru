@@ -1,26 +1,26 @@
 ---
 title: Загрузка данных в HDFS с помощью curl | Документация Майкрософт
 titleSuffix: SQL Server big data clusters
-description: Использование curl для загрузки данных в HDFS в кластерах больших данных SQL Server 2019.
+description: Используйте фигурные скобки для загрузки данных [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]в HDFS в.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 04/23/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: aae991c6dfdade4145f1e5578273e3b6aeb83299
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 729c3af97f98bafced482f7ead8ce85f93b55af3
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67958635"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69652210"
 ---
-# <a name="use-curl-to-load-data-into-hdfs-on-sql-server-big-data-clusters"></a>Использование curl для загрузки данных в HDFS в кластерах больших данных SQL Server 2019
+# <a name="use-curl-to-load-data-into-hdfs-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Используйте фигурные скобки для загрузки данных в HDFS[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-В этой статье описывается использование **curl** для загрузки данных в HDFS в кластерах больших данных SQL Server 2019 (предварительная версия).
+В этой статье объясняется, как использовать фигуру для загрузки данных [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] в HDFS (Предварительная версия).
 
 ## <a name="obtain-the-service-external-ip"></a>Получение внешнего IP-адреса службы
 

@@ -1,26 +1,26 @@
 ---
 title: Запуск примера записной книжки | Документация Майкрософт
 titleSuffix: SQL Server big data clusters
-description: В этом руководстве демонстрируется загрузка и запуск примера записной книжки в кластере больших данных SQL Server 2019 (предварительная версия).
+description: В этом руководстве показано, как загрузить пример запуска записной книжки Spark на [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 12/06/2018
+ms.date: 08/21/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ab558194a67118719c144ea20f9e97496d2cb478
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 18e182a251e0f93127ffc376648a29c3e2d9cd02
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67957735"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653266"
 ---
-# <a name="tutorial-run-a-sample-notebook-on-a-sql-server-big-data-cluster"></a>Руководство. Запуск примера записной книжки в кластере больших данных SQL Server
+# <a name="tutorial-run-a-sample-notebook-on-a-sql-server-big-data-cluster"></a>Учебник. Запуск примера записной книжки в кластере больших данных SQL Server
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-В этом руководстве демонстрируется загрузка и запуск записной книжки Azure Data Studio в кластере больших данных SQL Server 2019 (предварительная версия). Такой подход позволяет специалистам по обработке и анализу данных выполнять код Python, R или Scala в кластере.
+В этом руководстве показано, как загрузить и запустить записную книжку в [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]Azure Data Studio. Такой подход позволяет специалистам по обработке и анализу данных выполнять код Python, R или Scala в кластере.
 
 > [!TIP]
 > При необходимости вы можете скачать и выполнить скрипт, содержащий команды из этого руководства. См. инструкции в [примерах Spark](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/spark) на сайте GitHub.
@@ -67,7 +67,7 @@ ms.locfileid: "67957735"
 
 ![Запуск ячейки записной книжки](media/tutorial-notebook-spark/run-notebook-cell.png)
 
-Последовательно запустите все ячейки в примере записной книжки. Дополнительные сведения об использовании записных книжек в кластерах больших данных SQL Server см. в следующих ресурсах:
+Последовательно запустите все ячейки в примере записной книжки. Дополнительные сведения об использовании записных книжек с [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]см. в следующих ресурсах:
 
 - [Использование записных книжек в предварительной версии SQL Server 2019](notebooks-guidance.md)
 - [Как управлять записными книжками в Azure Data Studio](notebooks-how-to-manage.md)

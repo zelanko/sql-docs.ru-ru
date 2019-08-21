@@ -1,32 +1,32 @@
 ---
 title: Настройка распределения по уровням HDFS
 titleSuffix: SQL Server big data clusters
-description: Эта статья описывает настройку распределения по уровням HDFS для подключения внешней файловой системы Azure Data Lake Storage к HDFS в кластере больших данных SQL Server 2019 (предварительная версия).
+description: В этой статье объясняется, как настроить уровни HDFS для подключения внешней Azure Data Lake Storage файловой системы к HDFS в [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
 author: nelgson
 ms.author: negust
 ms.reviewer: mikeray
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 17eedf9f0797a0adb5eda6ca8ee090fc762e1491
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: c7b24af0b0c6a22cbab1a9c280a0ba868ca2cd21
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68419375"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69652328"
 ---
-# <a name="configure-hdfs-tiering-on-sql-server-big-data-clusters"></a>Настройка распределения по уровням HDFS в кластерах больших данных SQL Server
+# <a name="configure-hdfs-tiering-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Настройка уровней HDFS на[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Распределение по уровням HDFS дает возможность подключить внешнюю файловую систему, совместимую с HDFS, к HDFS. В этой статье описывается настройка распределения по уровням HDFS для кластеров больших данных SQL Server 2019 (предварительная версия). В настоящее время мы поддерживаем подключение к Azure Data Lake Storage 2-го поколения и Amazon S3. 
+Распределение по уровням HDFS дает возможность подключить внешнюю файловую систему, совместимую с HDFS, к HDFS. В этой статье описывается настройка уровней HDFS для [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (Предварительная версия). В настоящее время мы поддерживаем подключение к Azure Data Lake Storage 2-го поколения и Amazon S3. 
 
 ## <a name="hdfs-tiering-overview"></a>Общие сведения о распределении по уровням HDFS
 
 Благодаря распределению по уровням приложения могут легко получать доступ к данным в различных внешних хранилищах так, как будто данные находятся в локальной системе HDFS. Подключение — это операция с метаданными, предполагающая копирование метаданных, описывающих пространство имен во внешней файловой системе, в локальную систему HDFS. Метаданные включают в себя сведения о внешних каталогах и файлах, а также их разрешения и списки управления доступом. Соответствующие данные копируются по требованию, когда к ним осуществляется доступ, например с помощью запроса. К данным во внешней файловой системе теперь можно обращаться из кластера больших данных SQL Server. Вы можете выполнять задания Spark и запросы SQL к этим данным так же, как к любым локальным данным, хранящимся в системе HDFS в кластере.
 
-### <a name="caching"></a>Caching
+### <a name="caching"></a>Кэширование
 В настоящее время 1 % общего объема хранилища HDFS по умолчанию резервируется для кэширования подключенных данных. Кэширование настраивается глобально для всех подключенных ресурсов.
 
 > [!NOTE]
@@ -38,7 +38,7 @@ ms.locfileid: "68419375"
 
 Распределение по уровням HDFS поддерживает обновление. Обновите существующий подключенный ресурс, чтобы получить последний моментальный снимок удаленных данных.
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 - [Развернутый кластер больших данных](deployment-guidance.md)
 - [Средства работы с большими данными](deploy-big-data-tools.md)
@@ -54,7 +54,7 @@ ms.locfileid: "68419375"
 
 ## <a id="issues"></a> Известные проблемы и ограничения
 
-Ниже перечислены известные проблемы и текущие ограничения при использовании распределения по уровням HDFS в кластерах больших данных SQL Server.
+В следующем списке приведены известные проблемы и текущие ограничения при использовании уровней HDFS в [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)].
 
 - Если подключенный ресурс долго остается в состоянии `CREATING`, скорее всего, произошел сбой. В этом случае отмените команду и при необходимости удалите подключенный ресурс. Перед повторной попыткой проверьте правильность параметров и учетных данных.
 
@@ -76,4 +76,4 @@ ms.locfileid: "68419375"
 
 ## <a name="next-steps"></a>Следующие шаги
 
-Дополнительные сведения о кластерах больших данных SQL Server 2019 см. в статье [Что такое кластеры больших данных SQL Server 2019?](big-data-cluster-overview.md).
+Дополнительные сведения о [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]см. в разделе [что [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]такое?](big-data-cluster-overview.md).

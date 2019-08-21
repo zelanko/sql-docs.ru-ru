@@ -1,26 +1,26 @@
 ---
 title: Установка инструментов для больших данных
 titleSuffix: SQL Server big data clusters
-description: Узнайте, как устанавливать средства, используемые с кластерами больших данных SQL Server 2019 (предварительная версия).
+description: Узнайте, как устанавливать средства, используемые [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] с (Предварительная версия).
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 757209ff89fd40dcc737b65d3b19f2a7d4ef247b
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: f30b3b2e3c8503d2ac74ede8c1a45114a6b1d555
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68419456"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653400"
 ---
 # <a name="install-sql-server-2019-big-data-tools"></a>Установка средств для работы с большими данными SQL Server 2019
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-В этой статье описываются клиентские средства, которые должны быть установлены для создания, контроля и использования кластеров больших данных SQL Server 2019 (предварительная версия). В следующем разделе приведен список средств и ссылки на инструкции по установке. Перед развертыванием кластера больших данных настройте средства, отмеченные как обязательные в Windows или Linux.
+В этой статье описываются клиентские средства, которые должны быть установлены для создания, управления и [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] использования (Предварительная версия). В следующем разделе приведен список средств и ссылки на инструкции по установке. Перед развертыванием кластера больших данных настройте средства, отмеченные как обязательные в Windows или Linux.
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
@@ -28,7 +28,7 @@ ms.locfileid: "68419456"
 
 В следующей таблице перечислены общие инструменты кластера больших данных и способы их установки.
 
-| Инструмент | Обязательно | Описание | Установка |
+| Tool | Обязательно | Описание | Установка |
 |---|---|---|---|
 | **python** | Да | Python — это интерпретируемый объектно-ориентированный высокоуровневый язык программирования с динамической семантикой. Многие части кластеров больших данных для SQL Server используют Python. | [Установка Python](#python)|
 | **azdata** | Да | Программа командной строки для установки кластера больших данных и управления им. | [Установка](deploy-install-azdata.md) |
@@ -87,6 +87,6 @@ ms.locfileid: "68419456"
 После настройки всех средств разверните кластер больших данных SQL Server 2019 в Kubernetes в облаке или в локальной среде. Дополнительные сведения см. в следующих статьях по развертыванию:
 
 - [Краткое руководство. Развертывание кластера больших данных SQL Server в службе Azure Kubernetes (AKS)](quickstart-big-data-cluster-deploy.md)
-- [Развертывание кластеров больших данных SQL Server в Kubernetes](deployment-guidance.md)
+- [Развертывание [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] на Kubernetes](deployment-guidance.md)
 
-Дополнительные сведения о кластерах больших данных см. в статье [Что такое кластеры больших данных SQL Server 2019?](big-data-cluster-overview.md)
+Дополнительные сведения о кластерах больших данных см. в разделе [ [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]что такое?](big-data-cluster-overview.md).

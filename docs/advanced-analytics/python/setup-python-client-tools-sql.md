@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a37f0eb62ec0483b8c73bd5cc4d6d29221e8082f
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: 6f40f04d677d5dcfa758a13321009da3e535c5d4
+ms.sourcegitcommit: 632ff55084339f054d5934a81c63c77a93ede4ce
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715187"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69634541"
 ---
 # <a name="set-up-a-data-science-client-for-python-development-on-sql-server-machine-learning-services"></a>Настройка клиента обработки и анализа данных для разработки на Python на SQL Server Службы машинного обучения
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -107,7 +107,7 @@ Anaconda включает записные книжки Jupyter. В качест
 
 3. Введите `import revoscalepy` и выполните команду, чтобы загрузить одну из библиотек, характерных для Microsoft.
 
-4. Введите и выполните `print(revoscalepy.__version__)` , чтобы вернуть сведения о версии. Вы должны увидеть 9.2.1 или 9.3.0. [На сервере](../package-management/installed-package-information.md)можно использовать любую из этих версий с revoscalepy. 
+4. Введите и выполните `print(revoscalepy.__version__)` , чтобы вернуть сведения о версии. Вы должны увидеть 9.2.1 или 9.3.0. [На сервере](../package-management/r-package-information.md)можно использовать любую из этих версий с revoscalepy.
 
 4. Введите более сложную последовательность инструкций. В этом примере формируется сводная статистика с использованием [rx_summary](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-summary) через локальный набор данных. Другие функции получают расположение демонстрационных данных и создают объект источника данных для локального файла Xdf-.
 
@@ -305,4 +305,4 @@ display.Image(data=image)
 Теперь, когда у вас есть инструменты и работающее подключение к SQL Server, расширьте свои навыки, запустив краткие руководства по Python с помощью [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 
 > [!div class="nextstepaction"]
-> [QuickStart Проверка наличия Python в SQL Server](../tutorials/quickstart-python-verify.md)
+> [Краткое руководство Проверка наличия Python в SQL Server](../tutorials/quickstart-python-verify.md)

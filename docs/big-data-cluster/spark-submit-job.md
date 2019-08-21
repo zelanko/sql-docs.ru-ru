@@ -1,28 +1,28 @@
 ---
 title: Отправка заданий Spark в кластерах больших данных SQL Server в Azure Data Studio
 titleSuffix: SQL Server big data clusters
-description: Отправка заданий Spark в кластерах больших данных SQL Server в Azure Data Studio.
+description: Отправка заданий [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] Spark в Azure Data Studio.
 author: jejiang
 ms.author: jejiang
 ms.reviewer: mikeray
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 6731a753c643512cd05dbc9d7b7de2c9a064576f
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: ccaa9fbb10359791eb1d07ef8392a11977ae31db
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68470669"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653336"
 ---
-# <a name="submit-spark-jobs-on-sql-server-big-data-clusters-in-azure-data-studio"></a>Отправка заданий Spark в кластерах больших данных SQL Server в Azure Data Studio
+# <a name="submit-spark-jobs-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-in-azure-data-studio"></a>Отправка заданий [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] Spark в Azure Data Studio
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 Одним из основных сценариев для кластеров больших данных является возможность отправки заданий Spark для предварительной версии SQL Server 2019. Функция отправки заданий Spark позволяет отправлять локальные файлы JAR или PY со ссылками на кластер больших данных SQL Server 2019. Она также позволяет выполнять файлы JAR или PY, которые уже находятся в файловой системе HDFS. 
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 - [Средства для работы с большими данными SQL Server 2019](deploy-big-data-tools.md)
    - **Azure Data Studio**

@@ -1,20 +1,20 @@
 ---
 title: Подключение S3 для распределения по уровням HDFS
 titleSuffix: SQL Server big data clusters
-description: В этой статье описывается настройка распределения по уровням HDFS для подключения внешней файловой системы S3 к HDFS в кластере больших данных SQL Server 2019 (предварительная версия).
+description: В этой статье объясняется, как настроить распределение по уровням HDFS для подключения внешней файловой системы S3 к [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]HDFS в.
 author: nelgson
 ms.author: negust
 ms.reviewer: mikeray
-ms.date: 07/31/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: aa95fc656a0adb7d88c3728d15cfcb3720266d07
-ms.sourcegitcommit: 8d01698e779a536093dd637e84c52f3ff0066a2c
+ms.openlocfilehash: 653f9a48c03df18fc0591f7bd8060d951567c779
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69611417"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69652306"
 ---
 # <a name="how-to-mount-s3-for-hdfs-tiering-in-a-big-data-cluster"></a>Подключение S3 для распределения по уровням HDFS в кластере больших данных
 
@@ -61,10 +61,10 @@ ms.locfileid: "69611417"
    
 1. Задайте переменную среды MOUNT_CREDENTIALS в соответствии с приведенными выше инструкциями.
 
-1. Подключение удаленного хранилища HDFS в S3 с помощью **хранилища BDC аздата. Создание пула**. Замените значения заполнителей, после чего выполните следующую команду:
+1. Подключите удаленное хранилище HDFS в Azure с помощью **аздата BDC с подключением HDFS Create**. Замените значения заполнителей, после чего выполните следующую команду:
 
    ```bash
-   azdata bdc storage-pool mount create --remote-uri s3a://<S3 bucket name> --mount-path /mounts/<mount-name>
+   azdata bdc hdfs mount create --remote-uri s3a://<S3 bucket name> --mount-path /mounts/<mount-name>
    ```
 
    > [!NOTE]
@@ -96,7 +96,7 @@ azdata bdc hdfs mount refresh --mount-path <mount-path-in-hdfs>
 
 ## <a id="delete"></a> Удаление подключения
 
-Чтобы удалить подключение, выполните команду **azdata bdc storage-pool mount delete** и укажите путь к подключению в HDFS:
+Чтобы удалить подключение, используйте команду **аздата BDC подключить Delete** и укажите путь подключения в HDFS:
 
 ```bash
 azdata bdc hdfs mount delete --mount-path <mount-path-in-hdfs>
@@ -104,4 +104,4 @@ azdata bdc hdfs mount delete --mount-path <mount-path-in-hdfs>
 
 ## <a name="next-steps"></a>Следующие шаги
 
-Дополнительные сведения о кластерах больших данных SQL Server 2019 см. в статье [Что такое кластеры больших данных SQL Server 2019?](big-data-cluster-overview.md).
+Дополнительные сведения о [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]см. в разделе [что [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]такое?](big-data-cluster-overview.md).

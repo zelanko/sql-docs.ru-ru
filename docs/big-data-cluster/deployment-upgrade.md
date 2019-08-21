@@ -1,22 +1,22 @@
 ---
 title: Обновление до нового выпуска
 titleSuffix: SQL Server big data clusters
-description: Сведения об обновлении кластеров больших данных SQL Server 2019 (предварительная версия) до нового выпуска.
+description: Узнайте, как обновить [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (предварительную версию) до нового выпуска.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 29bdd3996112154b222ffb7d43390050c9af2d02
-ms.sourcegitcommit: 0d89bcaebdf87db3bd26db2ca263be9c671b0220
+ms.openlocfilehash: 867729b7d638960a2dbf2cb5f7544fecf698c94d
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68731092"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69652335"
 ---
-# <a name="how-to-upgrade-sql-server-big-data-clusters"></a>Обновление кластеров больших данных SQL Server
+# <a name="how-to-upgrade-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Обновление[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -72,8 +72,8 @@ azdata --version
 
 ## <a name="install-the-new-release"></a>Установка нового выпуска
 
-После удаления предыдущего кластера больших данных и установки последней версии **azdata** разверните новый кластер больших данных с помощью актуальных инструкций по развертыванию. Дополнительные сведения см. в статье [Развертывание кластеров больших данных SQL Server в Kubernetes](deployment-guidance.md). Затем восстановите все необходимые базы данных или файлы.
+После удаления предыдущего кластера больших данных и установки последней версии **azdata** разверните новый кластер больших данных с помощью актуальных инструкций по развертыванию. Дополнительные сведения см. в статье [ [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] развертывание в Kubernetes](deployment-guidance.md). Затем восстановите все необходимые базы данных или файлы.
 
 ## <a name="next-steps"></a>Следующие шаги
 
-Дополнительные сведения о кластерах больших данных см. в статье [Что такое кластеры больших данных SQL Server?](big-data-cluster-overview.md)
+Дополнительные сведения о кластерах больших данных см. в разделе [что такое [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] ](big-data-cluster-overview.md).

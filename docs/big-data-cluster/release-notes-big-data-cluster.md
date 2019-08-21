@@ -1,28 +1,31 @@
 ---
 title: Заметки о выпуске
 titleSuffix: SQL Server big data clusters
-description: В этой статье описаны последние обновления и известные проблемы для кластеров больших данных SQL Server 2019 (предварительная версия).
+description: В этой статье описаны последние обновления и известные проблемы для [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (Предварительная версия).
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 7951c79fa457ffa47a2c2a7089c71256d870628b
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 66a317fb68dff2dc4914b80f2e70655e1bba2773
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68476245"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653434"
 ---
 # <a name="release-notes-for-big-data-clusters-on-sql-server"></a>Заметки о выпуске для кластеров больших данных в SQL Server
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-В этой статье перечислены обновления и известные проблемы для последних выпусков кластеров больших данных SQL Server.
+В этой статье перечислены обновления и известные проблемы для последних выпусков [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)].
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
+
+>[!NOTE]
+>[!INCLUDE[ssbdc-rcnote](../includes/ssbigdataclusters-ver15-rcnote.md)]
 
 ## <a id="ctp32"></a> CTP 3.2 (июль)
 
@@ -32,7 +35,7 @@ ms.locfileid: "68476245"
 
 |Новые функции или обновления | Сведения |
 |:---|:---|
-|Общедоступная предварительная версия |До CTP-версии 3.2 кластер больших данных SQL Server был доступен для зарегистрированных ранних последователей. Этот выпуск позволяет любому пользователю работать с кластерами больших данных SQL Server. <br/><br/> См. статью [Начало работы с кластерами больших данных SQL Server](deploy-get-started.md).|
+|Общедоступная предварительная версия |До CTP-версии 3.2 кластер больших данных SQL Server был доступен для зарегистрированных ранних последователей. Этот выпуск позволяет любому пользователю работать с кластерами больших данных SQL Server. <br/><br/> См. раздел Начало [работы с [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] ](deploy-get-started.md).|
 |`azdata` |В CTP 3.2 представлена `azdata` — служебная программа командной строки на языке Python, которая позволяет администраторам кластера провести начальную загрузку и управлять кластером больших данных с помощью интерфейсов API. `azdata` заменяет собой `mssqlctl`. См. раздел [Установка `azdata`](deploy-install-azdata.md). |
 |PolyBase |Имена столбцов внешней таблицы теперь используются для запроса источников данных SQL Server, Oracle, Teradata, MongoDB и ODBC. В предыдущих выпусках CTP столбцы во внешнем источнике данных были привязаны только по порядковому номеру, а имена, указанные во определении внешней таблицы EXTERNAL TABLE, не использовались. |
 |Обновление распределения по уровням HDFS |Представлена функция обновления для распределения по уровням HDFS, чтобы можно было обновить существующее подключение на основе последнего моментального снимка удаленных данных. См. раздел [Распределение по уровням HDFS](hdfs-tiering.md). |
@@ -144,7 +147,7 @@ ms.locfileid: "68476245"
 
 - Если в записной книжке щелкнуть команду **Добавить текст**, текстовая ячейка добавляется в режиме предварительного просмотра, а не в режиме редактирования. Вы можете щелкнуть значок предварительного просмотра, чтобы переключиться в режим редактирования и изменить ячейку.
 
-#### <a name="security"></a>безопасность
+#### <a name="security"></a>Безопасность
 
 - SA_PASSWORD является частью среды и обнаруживается (например, в файле дампа cord). После развертывания нужно сбросить SA_PASSWORD в главном экземпляре. Это не ошибка, а мера безопасности. Дополнительные сведения об изменении SA_PASSWORD в контейнере Linux см. в разделе [Смена пароля администратора](../linux/quickstart-install-connect-docker.md#sapassword).
 
@@ -248,7 +251,7 @@ ms.locfileid: "68476245"
 
 - Если в записной книжке щелкнуть команду **Добавить текст**, текстовая ячейка добавляется в режиме предварительного просмотра, а не в режиме редактирования. Вы можете щелкнуть значок предварительного просмотра, чтобы переключиться в режим редактирования и изменить ячейку.
 
-#### <a name="security"></a>безопасность
+#### <a name="security"></a>Безопасность
 
 - SA_PASSWORD является частью среды и обнаруживается (например, в файле дампа cord). После развертывания нужно сбросить SA_PASSWORD в главном экземпляре. Это не ошибка, а мера безопасности. Дополнительные сведения об изменении SA_PASSWORD в контейнере Linux см. в разделе [Смена пароля администратора](../linux/quickstart-install-connect-docker.md#sapassword).
 
@@ -336,7 +339,7 @@ ms.locfileid: "68476245"
 
 - Изменения конфигурации в HDFS, затрагивающие изменения в hdfs-site.xml, не поддерживаются.
 
-#### <a name="security"></a>безопасность
+#### <a name="security"></a>Безопасность
 
 - SA_PASSWORD является частью среды и обнаруживается (например, в файле дампа cord). После развертывания нужно сбросить SA_PASSWORD в главном экземпляре. Это не ошибка, а мера безопасности. Дополнительные сведения об изменении SA_PASSWORD в контейнере Linux см. в разделе [Смена пароля администратора](../linux/quickstart-install-connect-docker.md#sapassword).
 
@@ -467,7 +470,7 @@ make: *** [deploy-clean] Error 2
 
 - Изменения конфигурации в HDFS, затрагивающие изменения в hdfs-site.xml, не поддерживаются.
 
-#### <a name="security"></a>безопасность
+#### <a name="security"></a>Безопасность
 
 - SA_PASSWORD является частью среды и обнаруживается (например, в файле дампа cord). После развертывания нужно сбросить SA_PASSWORD в главном экземпляре. Это не ошибка, а мера безопасности. Дополнительные сведения об изменении SA_PASSWORD в контейнере Linux см. в разделе [Смена пароля администратора](../linux/quickstart-install-connect-docker.md#sapassword).
 
@@ -481,9 +484,9 @@ make: *** [deploy-clean] Error 2
 
 | Новые функции или обновления | Сведения |
 | :---------- | :------ |
-| Отправка заданий Spark в кластерах больших данных в IntelliJ. | [Отправка заданий Spark в кластерах больших данных SQL Server 2019 в IntelliJ](spark-submit-job-intellij-tool-plugin.md) |
-| Общий интерфейс командной строки для развертывания приложений и управления кластерами. | [Развертывание приложения в кластере больших данных SQL Server 2019 (предварительная версия)](big-data-cluster-create-apps.md) |
-| Расширение VS Code для развертывания приложений в кластере больших данных. | [Как использовать VS Code для развертывания приложений в кластерах больших данных SQL Server](app-deployment-extension.md) |
+| Отправка заданий Spark в кластерах больших данных в IntelliJ. | [Отправка заданий [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] Spark в IntelliJ](spark-submit-job-intellij-tool-plugin.md) |
+| Общий интерфейс командной строки для развертывания приложений и управления кластерами. | [Развертывание приложения в[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](big-data-cluster-create-apps.md) |
+| Расширение VS Code для развертывания приложений в кластере больших данных. | [Использование VS Code для развертывания приложений в[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](app-deployment-extension.md) |
 | Изменения в использовании команд средства **azdata**. | Дополнительные сведения см. в разделе [Известные проблемы azdata](#azdatactp23). |
 | Использование Sparklyr в кластере больших данных | [Использование Sparklyr в кластерах больших данных SQL Server 2019](sparklyr-from-RStudio.md) |
 | Подключение внешнего HDFS-совместимого хранилища к кластеру больших данных с **распределением HDFS по уровням**. | См. раздел [Распределение по уровням HDFS](hdfs-tiering.md). |
@@ -589,7 +592,7 @@ make: *** [deploy-clean] Error 2
 
 - Изменения конфигурации в HDFS, затрагивающие изменения в hdfs-site.xml, не поддерживаются.
 
-#### <a name="security"></a>безопасность
+#### <a name="security"></a>Безопасность
 
 - SA_PASSWORD является частью среды и обнаруживается (например, в файле дампа cord). После развертывания нужно сбросить SA_PASSWORD в главном экземпляре. Это не ошибка, а мера безопасности. Дополнительные сведения об изменении SA_PASSWORD в контейнере Linux см. в разделе [Смена пароля администратора](../linux/quickstart-install-connect-docker.md#sapassword).
 
@@ -599,7 +602,7 @@ make: *** [deploy-clean] Error 2
 
 В следующих разделах описаны новые функции и известные проблемы для кластеров больших данных в SQL Server 2019 CTP 2.2.
 
-### <a name="new-features"></a>Новые возможности
+### <a name="new-features"></a>Новые функции
 
 - Доступ к порталу администрирования кластера с помощью `/portal` (**https://\<ip-адрес\>:30777/portal**).
 - Имя службы главного пула изменилось с `service-master-pool-lb` и `service-master-pool-nodeport` на `endpoint-master-pool`.
@@ -658,7 +661,7 @@ kubectl get svc endpoint-master-pool -n <your-big-data-cluster-name>
 
 - Изменения конфигурации в HDFS, затрагивающие изменения в hdfs-site.xml, не поддерживаются.
 
-#### <a name="security"></a>безопасность
+#### <a name="security"></a>Безопасность
 
 - SA_PASSWORD является частью среды и обнаруживается (например, в файле дампа cord). После развертывания нужно сбросить SA_PASSWORD в главном экземпляре. Это не ошибка, а мера безопасности. Дополнительные сведения об изменении SA_PASSWORD в контейнере Linux см. в разделе [Смена пароля администратора](../linux/quickstart-install-connect-docker.md#sapassword).
 
@@ -668,7 +671,7 @@ kubectl get svc endpoint-master-pool -n <your-big-data-cluster-name>
 
 В следующих разделах описаны новые функции и известные проблемы для кластеров больших данных в SQL Server 2019 CTP 2.1.
 
-### <a name="new-features"></a>Новые возможности
+### <a name="new-features"></a>Новые функции
 
 - [Развертывание приложений Python и R](big-data-cluster-create-apps.md) в кластере больших данных.
 - Новая версия **azdata** и обновленные образы. 
@@ -676,7 +679,7 @@ kubectl get svc endpoint-master-pool -n <your-big-data-cluster-name>
 
 ### <a name="known-issues"></a>Известные проблемы
 
-В следующих разделах описаны известные проблемы для кластеров больших данных SQL Server в CTP 2.1.
+[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] В следующих разделах приведены известные проблемы, связанные с выпуском CTP 2,1.
 
 #### <a name="deployment"></a>Развертывание
 
@@ -722,7 +725,7 @@ kubectl get svc endpoint-master-pool -n <your-big-data-cluster-name>
 
 - Изменения конфигурации в HDFS, затрагивающие изменения в hdfs-site.xml, не поддерживаются.
 
-#### <a name="security"></a>безопасность
+#### <a name="security"></a>Безопасность
 
 - SA_PASSWORD является частью среды и обнаруживается (например, в файле дампа cord). После развертывания нужно сбросить SA_PASSWORD в главном экземпляре. Это не ошибка, а мера безопасности. Дополнительные сведения об изменении SA_PASSWORD в контейнере Linux см. в разделе [Смена пароля администратора](../linux/quickstart-install-connect-docker.md#sapassword).
 
@@ -732,7 +735,7 @@ kubectl get svc endpoint-master-pool -n <your-big-data-cluster-name>
 
 В следующих разделах описаны новые функции и известные проблемы для кластеров больших данных в SQL Server 2019 CTP 2.0.
 
-### <a name="new-features"></a>Новые возможности
+### <a name="new-features"></a>Новые функции
 
 - Простой интерфейс развертывания с использованием средства управления azdata
 - Собственный интерфейс записных книжек в Azure Data Studio
@@ -751,7 +754,7 @@ kubectl get svc endpoint-master-pool -n <your-big-data-cluster-name>
 
 ### <a name="known-issues"></a>Известные проблемы
 
-В следующих разделах описаны известные проблемы для кластеров больших данных SQL Server в CTP 2.0.
+[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] В следующих разделах приведены известные проблемы, связанные с выпуском CTP 2,0.
 
 #### <a name="deployment"></a>Развертывание
 
@@ -793,7 +796,7 @@ kubectl get svc endpoint-master-pool -n <your-big-data-cluster-name>
 
 - Изменения конфигурации в HDFS, затрагивающие изменения в hdfs-site.xml, не поддерживаются.
 
-#### <a name="security"></a>безопасность
+#### <a name="security"></a>Безопасность
 
 - SA_PASSWORD является частью среды и обнаруживается (например, в файле дампа cord). После развертывания нужно сбросить SA_PASSWORD в главном экземпляре. Это не ошибка, а мера безопасности. Дополнительные сведения об изменении SA_PASSWORD в контейнере Linux см. в разделе [Смена пароля администратора](../linux/quickstart-install-connect-docker.md#sapassword).
 
@@ -801,4 +804,4 @@ kubectl get svc endpoint-master-pool -n <your-big-data-cluster-name>
 
 ## <a name="next-steps"></a>Следующие шаги
 
-Дополнительные сведения о кластерах больших данных SQL Server см. в статье [Что такое кластеры больших данных SQL Server 2019?](big-data-cluster-overview.md)
+Дополнительные сведения о [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]см. в разделе [что [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]такое?](big-data-cluster-overview.md).

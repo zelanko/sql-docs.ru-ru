@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e87770447c371f46ad384daffa3c7bc40b836904
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: 7c81a69181d1bc723e622bac9ffeb5ff67fd0280
+ms.sourcegitcommit: 632ff55084339f054d5934a81c63c77a93ede4ce
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715607"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69633635"
 ---
 # <a name="set-up-a-data-science-client-for-r-development-on-sql-server"></a>Настройка клиента обработки и анализа данных для разработки R на SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -199,7 +199,7 @@ SSMS — это отдельная загрузка, которая полезн
 
 При использовании [RStudio](https://www.rstudio.com/)можно настроить среду для использования библиотек R и исполняемых файлов, которые соответствуют удаленным SQL Server.
 
-1. Проверьте версии пакетов R, установленные на SQL Server. Дополнительные сведения см. в разделе [Получение сведений о пакете R](../package-management/installed-package-information.md).
+1. Проверьте версии пакетов R, установленные на SQL Server. Дополнительные сведения см. в разделе [Получение сведений о пакете R](../package-management/r-package-information.md).
 
 1. Установите Microsoft R Client или один из отдельных параметров сервера, чтобы добавить RevoScaleR и другие пакеты R, включая базовое распределение R, используемое экземпляром SQL Server. Выберите версию на том же уровне или ниже (пакеты имеют обратную совместимость), которая предоставляет те же версии пакетов, что и на сервере. Сведения о версии см. в схеме версии в этой статье: [Обновление компонентов R и Python](../install/upgrade-r-and-python.md).
 

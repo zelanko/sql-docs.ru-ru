@@ -1,22 +1,22 @@
 ---
 title: Руководства по развертыванию
 titleSuffix: SQL Server big data clusters
-description: Сведения о развертывании кластеров больших данных SQL Server 2019 (предварительная версия) в Kubernetes.
+description: Узнайте, как развернуть [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (Предварительная версия) на Kubernetes.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: b7439fdc93f04ad137b0bb65269b9767d8281798
-ms.sourcegitcommit: 58f1d5498c87bfe0f6ec4fd9d7bbe723be47896b
+ms.openlocfilehash: 1520254a8a7817db612bf5e42706113495a832de
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68995836"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69652358"
 ---
-# <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>Развертывание кластеров больших данных SQL Server в Kubernetes
+# <a name="how-to-deploy-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-on-kubernetes"></a>Развертывание [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] на Kubernetes
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -39,7 +39,7 @@ ms.locfileid: "68995836"
 
 ## <a id="prereqs"></a> Предварительные требования для Kubernetes
 
-Кластерам больших данных SQL Server требуется минимальная версия Kubernetes не ниже 1.10 для сервера и клиента (kubectl).
+[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]требовать минимальную Kubernetes версию не менее версии 1.10 для сервера и клиента (kubectl).
 
 > [!NOTE]
 > Обратите внимание, что версии клиента и сервера Kubernetes должны находиться в пределах +/– 1 от дополнительного номера версии. Дополнительные сведения см. в [заметках о выпуске Kubernetes и описании политики в отношении отклонения версий SKU](https://github.com/kubernetes/community/blob/master/contributors/design-proposals/release/versioning.md#supported-releases-and-component-skew).
@@ -67,7 +67,7 @@ ms.locfileid: "68995836"
 kubectl config view
 ```
 
-После настройки кластера Kubernetes можно перейти к развертыванию нового кластера больших данных SQL Server. Если вы обновляете предыдущий выпуск, см. статью [Обновление кластеров больших данных SQL Server](deployment-upgrade.md).
+После настройки кластера Kubernetes можно перейти к развертыванию нового кластера больших данных SQL Server. Если вы обновляете предыдущую версию, см. статью [Обновление [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] ](deployment-upgrade.md).
 
 ## <a id="deploy"></a> Общие сведения о развертывании
 
@@ -201,7 +201,7 @@ Cluster control plane is ready.
 ```
 
 > [!IMPORTANT]
-> Полное развертывание может занять много времени из-за временных затрат на скачивание образов контейнеров для компонентов кластера больших данных. Однако это не должно занять несколько часов. При возникновении проблем с развертыванием см. статью [Мониторинг и устранение неполадок кластеров больших данных SQL Server](cluster-troubleshooting-commands.md).
+> Полное развертывание может занять много времени из-за временных затрат на скачивание образов контейнеров для компонентов кластера больших данных. Однако это не должно занять несколько часов. При возникновении проблем с развертыванием см. раздел [мониторинг и устранение неполадок [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] ](cluster-troubleshooting-commands.md).
 
 После завершения развертывания выходные данные указывают на успешное выполнение.
 
@@ -314,4 +314,4 @@ Storage  default        Ready
 
 - [Настройка параметров развертывания для кластеров больших данных](deployment-custom-configuration.md)
 - [Выполнение автономного развертывания кластера больших данных SQL Server](deploy-offline.md)
-- [Семинар. Архитектура кластеров больших данных Microsoft SQL Server](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)
+- [Семинар. Архитектура [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] Майкрософт](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)

@@ -1,25 +1,26 @@
 ---
-title: Установка Службы машинного обучения SQL Server (в базе данных) в Windows
-description: R в SQL Server или Python на шагах установки SQL Server для SQL Server Службы машинного обучения в Windows.
+title: Установка Службы машинного обучения SQL Server (Python, R) в Windows
+titleSuffix: ''
+description: В этой статье объясняется, как установить SQL Server Службы машинного обучения в Windows. Службы машинного обучения можно использовать для выполнения скриптов Python и R в базе данных.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 07/30/2019
+ms.date: 08/20/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: fba13ea5d6d91ab83cb2560727ed75c79bc4c48b
-ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
+ms.openlocfilehash: 28e4681808348df97e61709745e9b59e0a44d3be
+ms.sourcegitcommit: 632ff55084339f054d5934a81c63c77a93ede4ce
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69531053"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69634558"
 ---
 # <a name="install-sql-server-machine-learning-services-on-windows"></a>Установка Службы машинного обучения SQL Server в Windows
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-В этой статье объясняется, как установить компонент машинного обучения, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] запустив мастер установки и следуя инструкциям на экране.
+В этой статье объясняется, как установить SQL Server Службы машинного обучения в Windows. Службы машинного обучения можно использовать для выполнения скриптов Python и R в базе данных.
 
 ## <a name="bkmk_prereqs"></a> Контрольный список перед установкой
 

@@ -1,26 +1,26 @@
 ---
 title: Настройка Службы Azure Kubernetes
 titleSuffix: SQL Server big data clusters
-description: Сведения о том, как настроить Службу Kubernetes Azure (AKS) для развертываний кластера больших данных SQL Server 2019 (предварительная версия).
+description: Узнайте, как настроить службу Kubernetes Azure (AKS) для [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] развертываний.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 07/10/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1ba5b4b06d31f391733603ce146a7d05e05aebaf
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: b33ef15bd6a47bcd2a475f608197a1566bb030b0
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68470817"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69652387"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-big-data-cluster-deployments"></a>Настройка Службы Kubernetes Azure для развертываний кластера больших данных SQL Server
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Эта статья описывает, как настроить Службу Kubernetes Azure (AKS) для развертываний кластера больших данных SQL Server 2019 (предварительная версия).
+В этой статье описывается, как настроить службу Azure Kubernetes Service (AKS [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] ) для развертываний.
 
 AKS упрощает создание, настройку и кластера виртуальных машин, которые предварительно настроены с кластером Kubernetes для запуска контейнерных приложений, и управление им. Это позволяет использовать имеющиеся навыки или пользоваться опытом обширного и постоянно растущего сообщества, а также развертывать приложения на основе контейнеров и управлять ими в Microsoft Azure.
 
@@ -29,12 +29,12 @@ AKS упрощает создание, настройку и кластера в
 > [!TIP]
 > Вы также можете создать скрипт для развертывания AKS и кластера больших данных за один шаг. Дополнительные сведения о том, как это сделать, см. в [скрипте Python](quickstart-big-data-cluster-deploy.md) или в [записной книжке](deploy-notebooks.md) Azure Data Studio.
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 - [Развертывание средств для работы с большими данными SQL Server 2019](deploy-big-data-tools.md)
    - **Kubectl**
    - **Azure Data Studio**
-   - **Расширение SQL Server 2019**
+   - **Расширение SQL Server 2019**
    - **Azure CLI**
 
 - Минимальная версия 1.10 для сервера Kubernetes. Для AKS нужно использовать параметр `--kubernetes-version`, чтобы указать версию, отличную от используемой по умолчанию.
@@ -165,4 +165,4 @@ AKS упрощает создание, настройку и кластера в
 
 Действия, описанные в этой статье, обеспечивают настройку кластера Kubernetes в AKS. Следующим шагом является развертывание кластера больших данных SQL Server 2019 в кластере AKS. Дополнительные сведения о развертывании кластеров больших данных см. в следующей статье:
 
-[Развертывание кластеров больших данных SQL Server в Kubernetes](deployment-guidance.md).
+[Развертывание [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] на Kubernetes](deployment-guidance.md)

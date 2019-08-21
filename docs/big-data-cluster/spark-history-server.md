@@ -1,22 +1,22 @@
 ---
 title: Отладка и диагностика приложений Spark
 titleSuffix: SQL Server big data clusters
-description: Используйте сервер журнала Spark для отладки и диагностики приложений Spark, работающих в кластерах больших данных SQL Server 2019.
+description: Используйте сервер журнала Spark для отладки и диагностики приложений Spark, работающих [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]на.
 author: jejiang
 ms.author: jejiang
 ms.reviewer: mikeray
-ms.date: 12/06/2018
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: abf6b2b3383377a0647f873a8c4a1f6aa9508455
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.openlocfilehash: 9df4f83d319c7d37dd438bcc6a787b4939757e47
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69028547"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653677"
 ---
-# <a name="debug-and-diagnose-spark-applications-on-sql-server-big-data-clusters-in-spark-history-server"></a>Отладка и диагностика приложений Spark в кластерах больших данных SQL Server на сервере журнала Spark
+# <a name="debug-and-diagnose-spark-applications-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-in-spark-history-server"></a>Отладка и диагностика приложений Spark [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] на сервере журнала Spark
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -203,5 +203,5 @@ https://<Ipaddress>:<Port>/gateway/default/sparkhistory
 
 ## <a name="next-steps"></a>Следующие шаги
 
-* [Начало работы с кластерами больших данных SQL Server](https://docs.microsoft.com/sql/big-data-cluster/deploy-get-started?view=sqlallproducts-allversions)
+* [Начало работы с[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](https://docs.microsoft.com/en-us/sql/big-data-cluster/deploy-get-started?view=sqlallproducts-allversions)
 * [Настройка параметров Spark](https://docs.microsoft.com/azure/hdinsight/spark/apache-spark-settings)

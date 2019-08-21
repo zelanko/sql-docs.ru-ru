@@ -5,16 +5,16 @@ description: Справочная статья по командам azdata bdc.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1962fd25416ab3546c15f9b894375e0f3ed740c6
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 73db63c485b7a6cd2e9355be935ff574ef827a5d
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68894034"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653518"
 ---
 # <a name="azdata-bdc-config"></a>azdata bdc config
 
@@ -131,7 +131,7 @@ azdata bdc config show --config-file custom-config/cluster.json  --json-path '$.
 #### `--target -t`
 Выходной файл, в котором следует сохранить результат. По умолчанию: направляется в stdout.
 #### `--json-path -j`
-Путь к ключу JSON, который указывает на требуемый раздел или значение из конфигурации, например key1.key2.key3. Используется язык запросов jsonpath (https://jsonpath.com/), например: -j '$.spec.pools[?(@.spec.type == "Master")]..endpoints'
+Путь к ключу JSON, который указывает на требуемый раздел или значение из конфигурации, например key1.key2.key3. Используется язык запросов jsonpath (https://jsonpath.com/ ), например: -j '$.spec.pools[?(@.spec.type == "Master")]..endpoints'
 #### `--force -f`
 Принудительная перезапись целевого файла.
 ### <a name="global-arguments"></a>Глобальные аргументы
@@ -281,4 +281,4 @@ azdata bdc config patch --config-file custom/cluster.json --patch ./patch.json
 
 ## <a name="next-steps"></a>Следующие шаги
 
-Дополнительные сведения о других командах **azdata** см. в [справочнике по azdata](reference-azdata.md). Дополнительные сведения об установке средства **azdata** см. в статье [Установка azdata для управления кластерами больших данных SQL Server 2019](deploy-install-azdata.md).
+Дополнительные сведения о других командах **azdata** см. в [справочнике по azdata](reference-azdata.md). Дополнительные сведения об установке средства **аздата** см. в разделе [Установка [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]аздата для управления ](deploy-install-azdata.md).

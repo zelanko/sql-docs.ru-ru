@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e15e56dfb4a27f0a99262ff1f105ceb0a1fbc294
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: 5b2629a50a73208181cc14fd843cd9ab9c0b05df
+ms.sourcegitcommit: 632ff55084339f054d5934a81c63c77a93ede4ce
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715379"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69633610"
 ---
 # <a name="tutorial-r-data-analytics-for-sql-developers"></a>Учебник. Аналитика данных R для разработчиков SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "68715379"
 
 После сохранения модели в базе данных вызовите модель для прогнозов из [!INCLUDE[tsql](../../includes/tsql-md.md)] с помощью хранимых процедур.
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 Все задачи можно выполнять с помощью [!INCLUDE[tsql](../../includes/tsql-md.md)] хранимых процедур [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]в.
 
@@ -55,7 +55,7 @@ ms.locfileid: "68715379"
 
 + [SQL Server 2016 служб r](../install/sql-r-services-windows-install.md#verify-installation) или [SQL Server службы машинного обучения с поддержкой r](../install/sql-machine-learning-services-windows-install.md#verify-installation)
 
-+ [Библиотеки R](../package-management/installed-package-information.md)
++ [Библиотеки R](../package-management/r-package-information.md)
 
 + [Разрешения](../security/user-permission.md)
 
