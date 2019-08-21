@@ -1,6 +1,6 @@
 - name: Службы SQL Server Integration Services (SSIS)
   href: ../integration-services/sql-server-integration-services.md
-- name: Вас приветствует SQL Server >>
+- name: Вас приветствует SQL Server >
   href: ../sql-server/sql-server-technical-documentation.md?toc=../toc.json
 - name: Обзор
   items:
@@ -1801,11 +1801,11 @@
               href: ../integration-services/lesson-3-3-testing-the-deployed-packages.md
 - name: Ресурсы
   items:
-    - name: "Получить справку на форуме SSIS\_>"
+    - name: Форум по службам SSIS >>
       href: 'https://social.msdn.microsoft.com/Forums/en-US/home'
-    - name: "Получить справку на сайте Stack Overflow\_>"
+    - name: Stack Overflow >>
       href: 'https://stackoverflow.com/questions/tagged/ssis'
-    - name: "Читать блог группы разработки служб SSIS\_>"
+    - name: Блог по службам SSIS >>
       href: 'https://blogs.msdn.microsoft.com/ssis/'
-    - name: "Сообщить о проблемах или запросить новые функции\_>"
+    - name: Отзывы о продуктах >>
       href: 'https://feedback.azure.com/forums/908035-sql-server'

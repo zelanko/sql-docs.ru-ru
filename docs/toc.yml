@@ -1982,7 +1982,7 @@
               href: relational-databases/xml/use-the-value-and-nodes-methods-with-openxml.md
 - name: Разработка
   items:
-    - name: Кодирование клиентской программы >>
+    - name: Кодирование клиентской программы >
       displayName: 'ADO, ADO.NET, connect, C#, C++, Java, Node.js, ODBC, OLE DB, PHP, Python, Ruby'
       href: connect/index.md
     - name: Приложения уровня данных
@@ -4500,7 +4500,7 @@
               href: database-engine/configure-windows/server-properties-advanced-page.md
 - name: Перенос и загрузка данных
   items:
-    - name: Службы SQL Server Integration Services (SSIS) >>
+    - name: Службы SQL Server Integration Services (SSIS) >
       href: integration-services/index.md
     - name: Программа массового копирования (bcp)
       href: tools/bcp-utility.md
@@ -5692,13 +5692,13 @@
                   href: sql-server/stretch-database/extended-events-for-stretch-database.md
         - name: Ресурсы
           items:
-            - name: "Цены\_>"
+            - name: "Цены\_>>"
               href: 'https://azure.microsoft.com/pricing/details/sql-server-stretch-database/'
-            - name: Блог >
+            - name: Блог >>
               href: 'https://blogs.technet.microsoft.com/dataplatforminsider/tag/stretch-database/'
-            - name: "Обновления служб\_>"
+            - name: "Обновления служб\_>>"
               href: 'https://azure.microsoft.com/updates/?product=sql-server-stretch-database'
-            - name: Видео >
+            - name: Видео >>
               href: 'https://azure.microsoft.com/documentation/videos/index/?services=sql-server-stretch-database'
     - name: Database Experimentation Assistant
       href: dea/database-experimentation-assistant-overview.md
@@ -7422,15 +7422,15 @@
               href: relational-databases/polybase/polybase-type-mapping.md
         - name: Ресурсы
           items:
-            - name: "Stack\_Exchange\_DBA\_>"
+            - name: "Stack\_Exchange\_DBA\_>>"
               href: 'https://dba.stackexchange.com/questions/tagged/sql-server'
-            - name: Stack Overflow >
+            - name: Stack Overflow >>
               href: 'https://stackoverflow.com/questions/tagged/sql-server'
-            - name: "Форумы MSDN\_>"
+            - name: "Форумы MSDN\_>>"
               href: 'https://social.msdn.microsoft.com/Forums/home?category=sqlserver'
-            - name: "Отправить отзыв\_>"
+            - name: "Отправить отзыв\_>>"
               href: 'https://feedback.azure.com/forums/908035-sql-server'
-            - name: "Reddit\_>"
+            - name: "Reddit\_>>"
               href: 'https://www.reddit.com/r/SQLServer'
     - name: Связанные серверы
       href: relational-databases/linked-servers/linked-servers-database-engine.md
@@ -7528,14 +7528,14 @@
           href: relational-databases/synonyms/create-synonyms.md
 - name: Отчеты и аналитика
   items:
-    - name: "Расширенная аналитика и машинное обучение\_>"
+    - name: "Расширенная аналитика и машинное обучение\_>>"
       href: advanced-analytics/
-    - name: "Система платформы аналитики\_>>"
+    - name: "Система платформы аналитики\_>"
       displayName: 'APS, PDW, Parallel Data Warehouse'
       href: analytics-platform-system/index.md
-    - name: "Службы SQL\_Server Analysis\_Services\_(SSAS)\_>>"
+    - name: "Службы SQL\_Server Analysis\_Services\_(SSAS)\_>"
       href: 'https://docs.microsoft.com/en-us/analysis-services/analysis-services-overview'
-    - name: "Службы SQL\_Server Reporting\_Services\_(SSRS)\_>>"
+    - name: "Службы SQL\_Server Reporting\_Services\_(SSRS)\_>"
       href: reporting-services/index.md
     - name: Службы Master Data Services
       displayName: MDS
@@ -8282,11 +8282,11 @@
           items:
             - name: ВОПРОСЫ И ОТВЕТЫ
               href: azure-data-studio/faq.md
-            - name: "Репозиторий GitHub Azure\_Data\_Studio\_>"
+            - name: "Репозиторий GitHub Azure\_Data\_Studio\_>>"
               href: 'https://www.github.com/Microsoft/azuredatastudio'
-            - name: "Блог по SQL\_Server\_>"
+            - name: "Блог по SQL\_Server\_>>"
               href: 'https://blogs.technet.microsoft.com/dataplatforminsider/'
-            - name: "Сообщить о проблемах и внести предложения\_>"
+            - name: "Сообщить о проблемах и внести предложения\_>>"
               href: 'https://github.com/microsoft/azuredatastudio/issues'
     - name: Программы командной строки
       href: tools/command-prompt-utility-reference-database-engine.md
@@ -10016,7 +10016,7 @@
               href: ssms/user-assistance-in-sql-server-management-studio.md
             - name: Анонимные данные об использовании
               href: ssms/sql-server-management-studio-telemetry-ssms.md
-            - name: Отзывы >
+            - name: Отзывы >>
               href: 'https://aka.ms/sqlfeedback'
     - name: SqlPackage.exe
       items:
@@ -10427,17 +10427,17 @@
       items:
         - name: Диагностика
           href: linux/sql-server-linux-troubleshooting-guide.md
-        - name: Как лицензировать продукт >
+        - name: Как лицензировать продукт >>
           href: 'https://www.microsoft.com/sql-server/sql-server-2017-pricing'
-        - name: "Stack\_Exchange\_DBA\_>"
+        - name: "Stack\_Exchange\_DBA\_>>"
           href: 'https://dba.stackexchange.com/questions/tagged/sql-server'
-        - name: Stack Overflow >
+        - name: Stack Overflow >>
           href: 'https://stackoverflow.com/questions/tagged/sql-server'
-        - name: "Форумы MSDN\_>"
+        - name: "Форумы MSDN\_>>"
           href: 'https://social.msdn.microsoft.com/Forums/home'
-        - name: "Отправить отзыв\_>"
+        - name: "Отправить отзыв\_>>"
           href: 'https://feedback.azure.com/forums/908035-sql-server'
-        - name: "Reddit\_>"
+        - name: "Reddit\_>>"
           href: 'https://www.reddit.com/r/SQLServer'
 - name: SQL в Azure
   items:
@@ -10451,9 +10451,9 @@
   items:
     - name: Обучение
       items:
-        - name: "Microsoft Virtual\_Academy\_>"
+        - name: "Microsoft Virtual\_Academy\_>>"
           href: 'https://mva.microsoft.com/product-training/sql-server'
-        - name: "SQL на Channel\_9 >"
+        - name: "SQL на Channel\_9 >>"
           href: 'https://channel9.msdn.com/Search'
     - name: Справка
       items:
@@ -10461,29 +10461,29 @@
           href: sql-server/sql-server-get-help.md
         - name: "Управление версиями в документации\_SQL"
           href: sql-server/versioning-system-monikers-ui-sql-server.md
-        - name: "Stack\_Exchange\_DBA\_>"
+        - name: "Stack\_Exchange\_DBA\_>>"
           href: 'https://dba.stackexchange.com/questions/tagged/sql-server'
-        - name: Stack Overflow >
+        - name: Stack Overflow >>
           href: 'https://stackoverflow.com/questions/tagged/sql-server'
-        - name: "Форумы MSDN\_>"
+        - name: "Форумы MSDN\_>>"
           href: 'https://social.msdn.microsoft.com/Forums/home'
-        - name: "Reddit\_>"
+        - name: "Reddit\_>>"
           href: 'https://www.reddit.com/r/SQLServer'
     - name: Блоги
       items:
-        - name: SQL Server >
+        - name: SQL Server >>
           href: 'https://blogs.technet.microsoft.com/dataplatforminsider/'
-        - name: "Ядро СУБД\_>"
+        - name: Ядро СУБД >>
           href: 'https://blogs.msdn.microsoft.com/sqlserverstorageengine/'
-        - name: "Безопасность\_>"
+        - name: Безопасность >>
           href: 'https://blogs.msdn.microsoft.com/sqlsecurity/'
-        - name: "Data Tools\_>"
+        - name: Data Tools >>
           href: 'https://blogs.msdn.microsoft.com/ssdt/'
     - name: Отзывы
       items:
-        - name: "Документация по SQL\_>"
+        - name: "Документация по SQL\_>>"
           href: 'https://aka.ms/sqldocsfeedback'
-        - name: SQL Server >
+        - name: SQL Server >>
           href: 'https://feedback.azure.com/forums/908035-sql-server'
         - name: "Редактируйте документацию по\_SQL!"
           href: sql-server/sql-server-docs-contribute.md
@@ -10508,7 +10508,7 @@
       items:
         - name: Обзор примеров
           href: samples/sql-samples-where-are.md
-        - name: Все примеры с Github >
+        - name: Все примеры с Github >>
           href: 'https://github.com/Microsoft/sql-server-samples/tree/master/samples'
         - name: AdventureWorks
           items:

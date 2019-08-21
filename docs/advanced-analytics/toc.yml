@@ -1,6 +1,6 @@
 - name: Документация по Службе машинного обучения в SQL Server
   href: ../advanced-analytics/index.yml
-- name: Вас приветствует SQL Server >>
+- name: Вас приветствует SQL Server >
   href: ../sql-server/sql-server-technical-documentation.md?toc=../toc.json
 - name: Обзор
   expanded: true
@@ -165,7 +165,7 @@
           href: ../advanced-analytics/tutorials/demo-data-iris-in-sql.md
         - name: Набор данных о работе такси в Нью-Йорке
           href: ../advanced-analytics/tutorials/demo-data-nyctaxi-in-sql.md
-- name: Примеры >
+- name: Примеры >>
   href: 'https://github.com/Microsoft/sql-server-samples'
 - name: Решения
   href: ../advanced-analytics/tutorials/data-science-scenarios-and-solution-templates.md

@@ -1,6 +1,6 @@
 - name: Программирование для взаимодействия с SQL Server
   href: ../connect/homepage-sql-connection-programming.md
-- name: Вас приветствует SQL Server >>
+- name: Вас приветствует SQL Server >
   href: ../sql-server/sql-server-technical-documentation.md?toc=../toc.json
 - name: Драйверы для SQL Server
   href: ../connect/sql-connection-libraries.md

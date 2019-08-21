@@ -1,6 +1,6 @@
 - name: Что такое службы SQL Server Reporting Services (SSRS)?
   href: ../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md
-- name: Вас приветствует SQL Server >>
+- name: Вас приветствует SQL Server >
   href: ../sql-server/sql-server-technical-documentation.md?toc=../toc.json
 - name: Обзор
   items:
@@ -1676,7 +1676,7 @@
   items:
     - name: REST API
       href: ../reporting-services/developer/rest-api.md
-    - name: "Примеры REST\_API\_>"
+    - name: "Примеры REST\_API\_>>"
       href: 'https://github.com/Microsoft/Reporting-Services'
     - name: Интеграция служб Reporting Services в приложения
       href: ../reporting-services/application-integration/integrating-reporting-services-into-applications.md

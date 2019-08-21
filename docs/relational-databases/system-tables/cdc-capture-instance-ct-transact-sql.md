@@ -24,10 +24,10 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68119314"
 ---
-# <a name="cdcltcaptureinstancegtct-transact-sql"></a>CDC. &lt;capture_instance&gt;_CT (Transact-SQL)
+# <a name="cdcltcapture_instancegt_ct-transact-sql"></a>CDC. &lt;capture_instance&gt;_CT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Таблица изменений, созданная при включении системы отслеживания измененных данных в исходной таблице. Эта таблица содержит по одной строке для каждой операции вставки и удаления в исходной таблице и по две строки для каждой операции обновления в исходной таблице. Если имя таблицы изменений не задано при включении исходной таблицы, создается производное имя. Формат имени — cdc. *capture_instance*_CT где *capture_instance* является именем схемы исходной таблицы и имени исходной таблицы в формате *схема_таблица*. Например если таблицы **Person.Address** в **AdventureWorks** образца базы данных включен для измененных данных, производным именем таблицы изменений будет **cdc. Person_Address_CT**.  
+  Таблица изменений, созданная при включении системы отслеживания измененных данных в исходной таблице. Эта таблица содержит по одной строке для каждой операции вставки и удаления в исходной таблице и по две строки для каждой операции обновления в исходной таблице. Если имя таблицы изменений не задано при включении исходной таблицы, создается производное имя. Формат имени — cdc. *capture\_instance*\_CT где *capture\_instance* является именем схемы исходной таблицы и имени исходной таблицы в формате *схема\_таблица*. Например если таблицы **Person.Address** в **AdventureWorks** образца базы данных включен для измененных данных, производным именем таблицы изменений будет **cdc. Person_Address_CT**.  
   
  Мы рекомендуем вам **не запрашивать системные таблицы непосредственно**. Вместо этого выполните [cdc.fn_cdc_get_all_changes_ < экземпляр_отслеживания >](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md) и [cdc.fn_cdc_get_net_changes_ < экземпляр_отслеживания >](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md) функции.  
   
