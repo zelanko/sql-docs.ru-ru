@@ -1,7 +1,7 @@
 ---
 title: Использование расширенных типов данных | Документация Майкрософт
 ms.custom: ''
-ms.date: 01/28/2019
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: b39461d3-48d6-4048-8300-1a886c00756d
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 5faf330b80f0d8ece7ee4482e881de9c7dd8ead9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a50bc3e4fae8fe45004374d3dd019a0f65fe544f
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68004065"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027011"
 ---
 # <a name="using-advanced-data-types"></a>Использование расширенных типов данных
 
@@ -87,7 +87,7 @@ byte [] b = rs.getBytes(2);
 > [!NOTE]  
 > Также можно считать данные в виде BLOB. Однако это менее эффективно, чем два предыдущих способа.  
 
-### <a name="adding-large-value-types-to-a-database"></a>Добавление типов данных большого объема в базу данных.
+### <a name="adding-large-value-types-to-a-database"></a>Добавление типов данных большого объема в базу данных
 
 Драйвер JDBC хорошо справляется с загрузкой больших объемов данных при наличии достаточного объема памяти. В противном случае рекомендуется использовать потоковую передачу. Тем не менее, эффективнее всего загружать большие объемы данных с помощью потоковых интерфейсов.  
 
@@ -120,7 +120,7 @@ try (PreparedStatement pstmt = con.prepareStatement("INSERT INTO test1 (Col1, Co
 > [!NOTE]  
 > Методы CLOB и BLOB для загрузки больших объемов данных неэффективны.  
 
-### <a name="modifying-large-value-types-in-a-database"></a>Изменение типов данных большого объема в базе данных.
+### <a name="modifying-large-value-types-in-a-database"></a>Изменение типов данных большого объема в базе данных
 
 В большинстве случаев для обновления или изменения больших значений в базе данных рекомендуется передавать параметры через классы [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) и [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) с помощью таких команд [!INCLUDE[tsql](../../includes/tsql-md.md)], как `UPDATE`, `WRITE` и `SUBSTRING`.  
 
@@ -148,7 +148,7 @@ try (Statement stmt = con.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, Resul
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] содержит тип данных **xml**, который позволяет хранить XML-документы и фрагменты в базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Тип данных **xml** — это встроенный в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] тип данных, несколько напоминающий другие встроенные типы данных, такие как **int** и **varchar**. Аналогично другим встроенным типам, типы данных **xml** можно использовать следующим образом: как тип переменной, тип параметра, тип возвращаемой функции или тип столбца при создании таблицы, а также в функциях CAST и CONVERT [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
-В драйвере JDBC тип данных **xml** может быть сопоставлен со строкой, байтовым массивом, потоком или объектом CLOB, BLOB или SQLXML. По умолчанию задана строка. Для драйвера JDBC, начиная с версии 2.0, обеспечивается поддержка API-интерфейса JDBC 4.0, что позволяет использовать интерфейс SQLXML. Интерфейс SQLXML определяет методы для обмена данными XML и их обработки. Тип данных **SQLXML** сопоставляется с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]типом данных **XML** . Дополнительные сведения о считывании XML-данных из реляционной базы данных и записи их в нее с типом данных Java **SQLXML** см. в разделе [Поддержка данных XML](../../connect/jdbc/supporting-xml-data.md).  
+В драйвере JDBC тип данных **xml** может быть сопоставлен со строкой, байтовым массивом, потоком или объектом CLOB, BLOB или SQLXML. По умолчанию задана строка. Для драйвера JDBC, начиная с версии 2.0, обеспечивается поддержка API-интерфейса JDBC 4.0, что позволяет использовать интерфейс SQLXML. Интерфейс SQLXML определяет методы для обмена данными XML и их обработки. Тип данных **SQLXML** сопоставляется с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]типом данных **XML** . Дополнительные сведения о считывании XML-данных из реляционной базы данных и их записи в нее с типом данных Java **SQLXML** см. в руководстве по [использованию данных XML](../../connect/jdbc/supporting-xml-data.md).  
   
 Благодаря реализации типа данных **xml** в драйвере JDBC обеспечена поддержка следующих возможностей:  
   
@@ -162,7 +162,7 @@ try (Statement stmt = con.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, Resul
   
 Дополнительные сведения о типе данных **xml** можно найти в разделе "Тип данных XML" электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="user-defined-data-type"></a>Пользовательский тип данных  
+## <a name="user-defined-data-type"></a>Определяемый пользователем тип данных  
 
 Введение пользовательских типов (UDT) в [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] совершенствует систему типов SQL, позволяя пользователю сохранять объекты и настраиваемые структуры данных в базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Определяемые пользователем типы могут содержать несколько типов данных, и их поведение может отличаться от традиционных псевдонимов типов данных, которые состоят из одного системного типа данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Определяемые пользователем типы данных определяются с помощью любого из языков, которые поддерживаются средой Microsoft .NET CLR и формируют проверяемый код. Это языки Microsoft Visual C# и Visual Basic .NET. Данные предоставляются в виде полей и свойств класса или структуры на базе платформы .NET Framework, а особенности работы определяются методами класса или структуры.  
   
@@ -170,7 +170,7 @@ try (Statement stmt = con.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, Resul
   
 Дополнительные сведения о применении пользовательских типов данных см. в разделе "Использование и изменение экземпляров пользовательских типов" в электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="sqlvariant-data-type"></a>Sql_variant Data Type
+## <a name="sql_variant-data-type"></a>Тип данных sql_variant
 
 Сведения о типе данных sql_variant см. [в разделе Использование типа данных sql_variant](../../connect/jdbc/using-sql-variant-datatype.md).  
 
@@ -178,6 +178,6 @@ try (Statement stmt = con.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, Resul
 
 Дополнительные сведения о типах пространственных данных см. [в разделе использование пространственных типов](../../connect/jdbc/use-spatial-datatypes.md).  
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
-[Основные сведения о типах данных драйвера JDBC](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  
+[Основные сведения о типах данных JDBC Driver](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  

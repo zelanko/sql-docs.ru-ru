@@ -1,7 +1,7 @@
 ---
 title: Использование адаптивной буферизации | Документация Майкрософт
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 92d4e3be-c3e9-4732-9a60-b57f4d0f7cb7
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 07a7a67addb10d91b011f821f5b85ed03981d055
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 28b2750d96e1fbe5b5a1cfc3021a22415128b7df
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916465"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69026802"
 ---
 # <a name="using-adaptive-buffering"></a>Использование адаптивной буферизации
 
@@ -50,7 +50,7 @@ ms.locfileid: "67916465"
 
 Однако начиная с драйвера JDBC версии 2.0 приложения могут использовать методы [isWrapperFor](../../connect/jdbc/reference/iswrapperfor-method-sqlserverstatement.md) и [unwrap](../../connect/jdbc/reference/unwrap-method-sqlserverstatement.md) для получения доступа к функциям, предоставляемым поставщиками, без необходимости реализации иерархии класса. Пример кода см. в разделе [Пример обновления больших данных](../../connect/jdbc/updating-large-data-sample.md) .
 
-## <a name="retrieving-large-data-with-adaptive-buffering"></a>Извлечение данных большого объема при помощи адаптивной буферизации
+## <a name="retrieving-large-data-with-adaptive-buffering"></a>Извлечение большого объема данных с помощью адаптивной буферизации
 
 Когда большие значения считываются в первый раз с помощью методов get\<Type>Stream и выполняется доступ к столбцам ResultSet и параметрам OUT CallableStatement в порядке возвращения из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], адаптивная буферизация минимизирует использование памяти приложения при обработке результатов. При использовании адаптивной буферизации происходит следующее.
 
@@ -91,6 +91,6 @@ ms.locfileid: "67916465"
 
 - Для однопроходных обновляемых результирующих наборов при возвращении блока строк драйвер обычно считывает в память число строк, указанное методом [getFetchSize](../../connect/jdbc/reference/getfetchsize-method-sqlserverresultset.md) объекта [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md), даже если для подключения включена адаптивная буферизация. Если вызов метода [next](../../connect/jdbc/reference/next-method-sqlserverresultset.md) объекта [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) приводит к ошибке OutOfMemoryError, можно уменьшить число возвращаемых строк, вызвав метод [setFetchSize](../../connect/jdbc/reference/setfetchsize-method-sqlserverresultset.md) объекта [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md), чтобы задать в качестве размера выборки меньшее число строк. При необходимости можно даже задать 1 строку. Можно также запретить драйверу помещать в буфер строки, вызвав метод [setResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) объекта [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) с параметром "**adaptive**", прежде чем выполнять инструкцию. Так как результирующий набор не является прокручиваемым, если приложение получает доступ к значению столбца большого объема при помощи одного из методов get\<Type>Stream, драйвер отбрасывает значение, как только приложение его считывает, так же как это происходит в случае с однопроходными результирующими наборами только для чтения.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
-[Повышение производительности и надежности с помощью драйвера JDBC](../../connect/jdbc/improving-performance-and-reliability-with-the-jdbc-driver.md)
+[Повышение производительности и надежности с помощью JDBC Driver](../../connect/jdbc/improving-performance-and-reliability-with-the-jdbc-driver.md)

@@ -1,7 +1,7 @@
 ---
 title: Скачивание Microsoft JDBC Driver для SQL Server | Документация Майкрософт
 ms.custom: ''
-ms.date: 08/01/2019
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,18 +10,18 @@ ms.topic: conceptual
 ms.assetid: 451181b8-11e6-4d01-b547-9ac5aada8238
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 7b2c516ee03b7f3369d5775a01f9472503e2ee85
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 700a687a4d4c6b1c6e3e823655e8dd5c4c887244
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893938"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028083"
 ---
 # <a name="download-microsoft-jdbc-driver-for-sql-server"></a>Скачивание драйвера Microsoft JDBC Driver for SQL Server
 
 
-## <a name="using-the-jdbc-driver-with-maven-central"></a>Использование драйвера JDBC с Maven Central
-Драйвер JDBC можно добавить в проект Maven, добавив его в качестве зависимости в файл POM.xml с помощью приведенного ниже кода.
+## <a name="using-the-jdbc-driver-with-maven-central"></a>Использование JDBC Driver с Maven Central
+JDBC Driver можно включить в проект Maven, добавив его в качестве зависимости в файл POM.xml с помощью следующего кода:
 
 ```xml
 <dependency>

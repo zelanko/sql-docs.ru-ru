@@ -1,7 +1,7 @@
 ---
 title: Пример основных типов данных | Документация Майкрософт
 ms.custom: ''
-ms.date: 07/31/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 59ac80cf-fc66-4493-933d-38e479c5f54d
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: d995dc6fb4b58249abd4fc2d3fc879adc66b5b0e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9374c76a76aa12f60fc3fa5f911916f39000d8b4
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67957396"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028461"
 ---
-# <a name="basic-data-types-sample"></a>Образец базовых типов данных
+# <a name="basic-data-types-sample"></a>Пример базовых типов данных
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -157,6 +157,6 @@ public class BasicDataTypes {
 
 ```
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 [Работа с типами данных (JDBC)](../../connect/jdbc/working-with-data-types-jdbc.md)

@@ -1,7 +1,7 @@
 ---
-title: Использование хранимой процедуры с параметрами вывода | Документы Майкрософт
+title: Использование хранимой процедуры с параметрами вывода | Документация Майкрософт
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 1c006f27-7e99-43d5-974c-7b782659290c
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 9ee3a8d6b0a4c6514864a5990a87de9d732684d8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: efafaa709666620e7237f2481c392aba25dfd5f8
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916495"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69026836"
 ---
 # <a name="using-a-stored-procedure-with-output-parameters"></a>Использование хранимых процедур с выходными параметрами
 
@@ -86,6 +86,6 @@ public static void executeStoredProcedure(Connection con) throws SQLException {
 
 Хранимые процедуры могут возвращать счетчики обновлений и несколько результирующих наборов. Драйвер [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] соответствует спецификации JDBC 3.0, которая определяет, что множественные результирующие наборы и счетчики обновления должны быть получены до получения параметров OUT. То есть приложение должно извлечь все объекты ResultSet и счетчики обновления перед извлечением параметров OUT с помощью методов CallableStatement. Getter. В противном случае объекты ResultSet и счетчики обновления, которые не были извлечены, будут потеряны при извлечении параметров OUT. Дополнительные сведения о количестве обновлений и нескольких результирующих наборах см. в разделе [использование хранимой процедуры с числом обновлений](../../connect/jdbc/using-a-stored-procedure-with-an-update-count.md) и [Использование нескольких результирующих наборов](../../connect/jdbc/using-multiple-result-sets.md).
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 [Использование инструкций с хранимыми процедурами](../../connect/jdbc/using-statements-with-stored-procedures.md)

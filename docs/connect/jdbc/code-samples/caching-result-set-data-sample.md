@@ -1,7 +1,7 @@
 ---
 title: Пример кэширования данных результирующего набора | Документация Майкрософт
 ms.custom: ''
-ms.date: 07/31/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 13a95ebb-996c-4713-a1bd-5834fe22a334
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 7a9a0affa46cb8ca12b8c1f777709bdea84bc617
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 33998300281a274067a0879775dc33c9d7635471
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67957266"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028414"
 ---
-# <a name="caching-result-set-data-sample"></a>Образец кэширования данных результирующего набора
+# <a name="caching-result-set-data-sample"></a>Пример кэширования данных результирующего набора
 
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
@@ -124,6 +124,6 @@ public class CacheResultSet {
 }
 ```
 
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также раздел  
 
 [Работа с результирующими наборами](../../../connect/jdbc/code-samples/working-with-result-sets.md)  

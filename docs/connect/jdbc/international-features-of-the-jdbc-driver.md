@@ -1,7 +1,7 @@
 ---
 title: Международные функции драйвера JDBC | Документация Майкрософт
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: bbb74a1d-9278-401f-9530-7b5f45aa79de
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: f5e9d6902733ea8a9cca91b4bd33adcb66708672
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 64c046ade18bfdf8789ce9fec221f3d33517fcbb
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956476"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028005"
 ---
-# <a name="international-features-of-the-jdbc-driver"></a>Функции поддержки различных языков драйвера JDBC
+# <a name="international-features-of-the-jdbc-driver"></a>Функции поддержки разных языков JDBC Driver
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
   Функции интернационализации [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] включают в себя следующее:  
@@ -48,7 +48,7 @@ ms.locfileid: "67956476"
 ## <a name="non-unicode-parameters"></a>Параметры для кодировок, отличных от Юникода  
  Для оптимальной производительности с типом **char**, **varchar** или **LONGVARCHAR** для параметров, отличных от Юникода, задайте для свойства строки подключения **sendStringParametersAsUnicode** значение "false" и используйте методы, не являющиеся национальными символами.  
   
-## <a name="formatting-issues"></a>Особенности форматирования  
+## <a name="formatting-issues"></a>Проблемы с форматированием  
  Все форматирование локализованных данных для дат, времени и валют выполняется на уровне языка Java с помощью объекта Locale и различных методов форматирования для типов данных **Date**, **Calendar** и **Number**. В редких случаях, когда драйвер JDBC должен передать зависящие от локали конфиденциальные данные в локализованном формате, нужный инструмент форматирования используется с локалем JVM, заданным по умолчанию.  
   
 ## <a name="collation-support"></a>Поддержка параметров сортировки  
@@ -62,7 +62,7 @@ ms.locfileid: "67956476"
 > [!NOTE]  
 >  Большинство программ сопоставителя, написанных для платформ, отличных от Windows, основано на интернет-стандартах DSN, поэтому для международных доменных имен чаще всего используется формат Punycode, хотя DNS-сервер под управлением Windows в частной сети можно в индивидуальном порядке настроить на использование символов UTF-8.  Дополнительные сведения см. в разделе [Поддержка символов Юникода](https://technet.microsoft.com/library/cc738403(v=ws.10).aspx).  
   
-## <a name="see-also"></a>См. также:  
- [Общие сведения о драйвере JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
+## <a name="see-also"></a>См. также раздел  
+ [Общие сведения о JDBC Driver](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   

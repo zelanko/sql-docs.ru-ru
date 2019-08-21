@@ -1,7 +1,7 @@
 ---
 title: Использование API-интерфейса копирования для операции пакетной вставки для драйвера MSSQL JDBC | Документация Майкрософт
 ms.custom: ''
-ms.date: 01/21/2019
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 028caf1bf69c7e361ea7e4445c192c1fc1adf437
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3050cdf87775a67618902dfbb88b656003020769
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68004135"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027098"
 ---
 # <a name="using-bulk-copy-api-for-batch-insert-operation"></a>Использование API массового копирования для операции пакетной вставки
 
@@ -25,7 +25,7 @@ ms.locfileid: "68004135"
 
 Эта функция применима только к `executeBatch()` `executeLargeBatch()` API-интерфейсам PreparedStatement и CallableStatement  &  .
 
-## <a name="pre-requisites"></a>Предварительные требования
+## <a name="prerequisites"></a>предварительные требования
 
 Существует два предварительных требования для включения API-интерфейса для пакетной вставки.
 
@@ -139,6 +139,6 @@ Starting batch operation using Bulk Copy API.
 Finished. Time taken : 1058 milliseconds.
 ```
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
-[Повышение производительности и надежности с помощью драйвера JDBC](../../connect/jdbc/improving-performance-and-reliability-with-the-jdbc-driver.md)
+[Повышение производительности и надежности с помощью JDBC Driver](../../connect/jdbc/improving-performance-and-reliability-with-the-jdbc-driver.md)

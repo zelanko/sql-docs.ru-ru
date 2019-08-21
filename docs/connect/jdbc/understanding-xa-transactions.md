@@ -1,7 +1,7 @@
 ---
 title: Общие сведения о транзакциях XA | Документация Майкрософт
 ms.custom: ''
-ms.date: 01/21/2019
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 574e326f-0520-4003-bdf1-62d92c3db457
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 7caa67e019ce60f955abf60d215b6c049f3dc708
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6e7f602107e828ee0bd985345ed5e641d6870558
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68004154"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027217"
 ---
 # <a name="understanding-xa-transactions"></a>Основные сведения о транзакциях XA
 
@@ -38,7 +38,7 @@ ms.locfileid: "68004154"
 > [!NOTE]  
 > Для соединений распределенных транзакций XA по умолчанию устанавливается уровень изоляции Read Committed.  
   
-## <a name="guidelines-and-limitations-when-using-xa-transactions"></a>Правила и ограничения на использование транзакций XA  
+## <a name="guidelines-and-limitations-when-using-xa-transactions"></a>Правила и ограничения, связанные с использованием транзакций XA  
 
 К сильно связанным транзакциям относятся следующие дополнительные рекомендации.  
 
@@ -152,7 +152,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL<version>.<insta
   
      Время ожидания всех транзакций будет равно 30 секундам (максимальное значение), если клиент не указывает время ожидания. Если клиент указывает время ожидания, будет использоваться время ожидания клиента, если оно менее 30 секунд (максимальное значение).  
   
-### <a name="upgrading-sqljdbcxadll"></a>Обновление файла sqljdbc_xa.dll
+### <a name="upgrading-sqljdbc_xadll"></a>Обновление файла sqljdbc_xa.dll
 
 При установке новой версии драйвера JDBC также следует обновить файл sqljdbc_xa.dll, расположенный на сервере, с помощью файла sqljdbc_xa.dll из этой новой версии.  
   
@@ -347,6 +347,6 @@ class XidImpl implements Xid {
 
 ```
 
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также раздел  
 
-[Выполнение транзакций с помощью драйвера JDBC](../../connect/jdbc/performing-transactions-with-the-jdbc-driver.md)  
+[Выполнение транзакций с помощью JDBC Driver](../../connect/jdbc/performing-transactions-with-the-jdbc-driver.md)  

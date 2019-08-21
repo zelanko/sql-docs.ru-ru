@@ -1,7 +1,7 @@
 ---
 title: Безопасность приложений | Документация Майкрософт
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 940879b4-aa0f-41ce-a369-6cfc0e78e01d
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: aa7681890b09647cb554ef6c80e8646fb69c9f42
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 81c57e5ab7ca88267693690992106b5f39e2af82
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67957465"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028514"
 ---
-# <a name="application-security"></a>Безопасность приложений
+# <a name="application-security"></a>Защита приложений
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
   При использовании драйвера [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] важно обеспечить безопасность приложения. В следующих разделах приводится информация о том, как можно обезопасить работу приложения.  
@@ -58,12 +58,12 @@ permission java.net.SocketPermission "*", "listen, connect, accept";
 > [!NOTE]  
 >  Код «file:/install_dir/lib/-« ссылается на каталог установки драйвера JDBC.  
   
-## <a name="protecting-server-communication"></a>Защита связи сервера  
+## <a name="protecting-server-communication"></a>Защита обмена данными с сервером  
  При использовании драйвера JDBC для связи с базой данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно обезопасить канал связи за счет использования либо протокола IPSEC, либо SSL-шифрования. Можно использовать оба метода.  
   
  Поддержка SSL обеспечивает дополнительный уровень защиты помимо IPSEC. Дополнительные сведения об использовании SSL см. в разделе [использование SSL-шифрования](../../connect/jdbc/using-ssl-encryption.md).  
   
-## <a name="see-also"></a>См. также:  
- [Защита приложений драйвера JDBC](../../connect/jdbc/securing-jdbc-driver-applications.md)  
+## <a name="see-also"></a>См. также раздел  
+ [Защита приложений JDBC Driver](../../connect/jdbc/securing-jdbc-driver-applications.md)  
   
   

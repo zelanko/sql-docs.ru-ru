@@ -1,7 +1,7 @@
 ---
 title: Общие сведения об управлении параллелизмом | Документация Майкрософт
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 98b7dabe-9b12-4e1d-adeb-e5b5cb0c96f3
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: b178b0c38b5891d4a3dc13ef620a217bf3ddb186
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3cbc805ece4cc28a646d93d6607bcc45d65cd563
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68004195"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027638"
 ---
-# <a name="understanding-concurrency-control"></a>Общие сведения об управлении параллелизмом
+# <a name="understanding-concurrency-control"></a>Основные сведения об управлении параллелизмом
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
   Под управлением параллелизмом подразумевают различные техники, которые используются для сохранения целостности базы данных, когда несколько пользователей обновляют строки одновременно. Неверный параллелизм может привести к проблемам, таким как чтение фантомных данных, чтение недействительных данных и неповторяемые чтения. Драйвер [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] реализует интерфейсы всех механизмов параллелизма, используемых [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для разрешения этих проблем.  
@@ -45,7 +45,7 @@ ms.locfileid: "68004195"
 |Инструкция создается при помощи TYPE_SCROLL_INSENSITIVE|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] создает статический курсор моментального снимка. Курсор отключается от строк базовой таблицы, чтобы защитить курсор от обновления строк другими пользователями.|Используйте TYPE_SCROLL_SENSITIVE, TYPE_SS_SCROLL_KEYSET, TYPE_SS_SCROLL_DYNAMIC или TYPE_FORWARD_ONLY с CONCUR_UPDATABLE, чтобы не создавать статического курсора.|  
 |Конструкция таблицы исключает курсор KEYSET или DYNAMIC|Базовая таблица не содержит уникальных ключей, позволяющих [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] уникально идентифицировать строки.|Добавьте уникальные ключи к таблице, чтобы обеспечить уникальную идентификацию каждой строки.|  
   
-## <a name="see-also"></a>См. также:  
- [Управление результирующими наборами с помощью драйвера JDBC](../../connect/jdbc/managing-result-sets-with-the-jdbc-driver.md)  
+## <a name="see-also"></a>См. также раздел  
+ [Управление результирующими наборами с помощью JDBC Driver](../../connect/jdbc/managing-result-sets-with-the-jdbc-driver.md)  
   
   

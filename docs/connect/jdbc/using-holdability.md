@@ -1,7 +1,7 @@
 ---
 title: Использование удержания | Документация Майкрософт
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: aa48306c-e7a0-4dcb-af21-9ebb6898e45a
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: e447b5b9e1e24e716122622cc5cff873a452b1f7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1c126385955ce6e9fa9098ec5a09ba115b94ffb0
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916240"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69026202"
 ---
-# <a name="using-holdability"></a>Использование удержания
+# <a name="using-holdability"></a>Использование возможности ожидания
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -35,6 +35,6 @@ ms.locfileid: "67916240"
 
 [!code[JDBC#UsingHoldability1](../../connect/jdbc/codesnippet/Java/using-holdability_1.java)]
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
-[Выполнение транзакций с помощью драйвера JDBC](../../connect/jdbc/performing-transactions-with-the-jdbc-driver.md)
+[Выполнение транзакций с помощью JDBC Driver](../../connect/jdbc/performing-transactions-with-the-jdbc-driver.md)

@@ -1,7 +1,7 @@
 ---
 title: Драйвер Microsoft JDBC для SQL Server | Документация Майкрософт
 ms.custom: ''
-ms.date: 08/09/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: baf420ab-c058-4cec-a673-d7cb6397210e
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: a12209cc5782c0134c4e14723d7ce73049db1ddd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bc81bae599bcd9e401aad7e610a7c43ed1a0dcec
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956325"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027878"
 ---
 # <a name="microsoft-jdbc-driver-for-sql-server"></a>Драйвер Microsoft JDBC для SQL Server
 
@@ -25,7 +25,7 @@ ms.locfileid: "67956325"
 
 Драйвер Microsoft JDBC Driver for SQL Server протестирован с основными серверами приложений, такими как IBM WebSphere и SAP NetWeaver.
   
-## <a name="getting-started"></a>Приступая к работе  
+## <a name="getting-started"></a>Начало работы  
 
 * [Шаг 1. Настройка среды разработки для разработки на Java](step-1-configure-development-environment-for-java-development.md)  
 * [Шаг 2. Создание базы данных для разработки на Java](step-2-create-a-sql-database-for-java-development.md)  
@@ -52,9 +52,9 @@ ms.locfileid: "67956325"
   
 ## <a name="samples"></a>Примеры  
 
-* [Пример приложений драйвера JDBC](sample-jdbc-driver-applications.md)  
-* [начало работы с Java в Windows](https://www.microsoft.com/sql-server/developer-get-started/java/windows/)
-* [начало работы с Java в macOS](https://www.microsoft.com/sql-server/developer-get-started/java/mac/)
-* [начало работы с Java в Ubuntu](https://www.microsoft.com/sql-server/developer-get-started/java/ubuntu/)
+* [Пример приложений JDBC Driver](sample-jdbc-driver-applications.md)  
+* [Начало работы с Java в Windows](https://www.microsoft.com/sql-server/developer-get-started/java/windows/)
+* [Начало работы с Java в macOS](https://www.microsoft.com/sql-server/developer-get-started/java/mac/)
+* [Начало работы с Java в Ubuntu](https://www.microsoft.com/sql-server/developer-get-started/java/ubuntu/)
 * [Начало работы с Java на Red Hat Enterprise Linux (RHEL)](https://www.microsoft.com/sql-server/developer-get-started/java/rhel/)
 * [Начало работы с Java на SUSE Linux Enterprise Server (SLES)](https://www.microsoft.com/sql-server/developer-get-started/java/sles/)

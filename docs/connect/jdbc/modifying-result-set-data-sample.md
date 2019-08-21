@@ -1,7 +1,7 @@
 ---
 title: Изменение образца данных результирующего набора | Документация Майкрософт
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: b5ae54dc-2a79-4664-bb21-cacdb7d745e1
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: b253118c8f61a35774a024be3e17704de946d5d1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 51e13941945a1be2d3ad1f02ce61fda98696f275
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956294"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027962"
 ---
-# <a name="modifying-result-set-data-sample"></a>Изменение образца данных результирующего набора
+# <a name="modifying-result-set-data-sample"></a>Изменение примера данных результирующего набора
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -110,6 +110,6 @@ public class UpdateResultSet {
 }
 ```
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 [Работа с результирующими наборами](../../connect/jdbc/working-with-result-sets.md)

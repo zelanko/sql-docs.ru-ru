@@ -1,7 +1,7 @@
 ---
 title: Использование escape-последовательностей SQL | Документация Майкрософт
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 00f9e25a-088e-4ac6-aa75-43eacace8f03
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 8cd32d41c1ebacc13004a0a5130567b7df9a09a9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: da2ae6b5353448d5281910d94aeef05ee0999c6a
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68005933"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69025894"
 ---
 # <a name="using-sql-escape-sequences"></a>Использование escape-последовательностей SQL
 
@@ -159,6 +159,6 @@ LIMIT <rows> [OFFSET <row offset>]
 
 Escape-синтаксис состоит из двух частей: \<*строки*> — это обязательная часть, которая указывает число возвращаемых строк. OFFSET и \<*смещение строки*> — это необязательные компоненты, указывающие число строк, которые необходимо пропустить перед началом получения строк. Драйвер JDBC поддерживает только обязательную часть, преобразуя запрос для использования TOP вместо LIMIT. SQL Server не поддерживает предложение LIMIT. **Драйвер JDBC не поддерживает необязательную часть \<смещение строки>. При ее использовании драйвер вызовет исключение**.  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
-[Использование инструкций с драйвером JDBC](../../connect/jdbc/using-statements-with-the-jdbc-driver.md)  
+[Использование инструкций с JDBC Driver](../../connect/jdbc/using-statements-with-the-jdbc-driver.md)  

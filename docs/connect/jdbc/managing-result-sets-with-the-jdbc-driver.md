@@ -1,7 +1,7 @@
 ---
 title: Управление результирующими наборами с помощью драйвера JDBC | Документация Майкрософт
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 9ed5ad41-22e0-4e4a-8a79-10512db60d50
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: e2f6b7dac1be8309ff5ece21dbb863b410edbf61
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 273a03e088036057f6d7b31c98074391138de07e
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956349"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027912"
 ---
-# <a name="managing-result-sets-with-the-jdbc-driver"></a>Управление результирующими наборами с помощью драйвера JDBC
+# <a name="managing-result-sets-with-the-jdbc-driver"></a>Управление результирующими наборами с помощью JDBC Driver
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
   Результирующий набор — это объект, представляющий набор данных, которые возвращаются из источника данных, как правило в результате запроса. Результирующий набор содержит строки и столбцы, которые хранят запрошенные элементы данных, переход осуществляется при помощи курсора. Результирующий набор может быть обновлен, то есть его можно изменить, а изменения передать исходному источнику данных. Результирующий набор также может иметь несколько уровней чувствительности к переменам в базовом источнике данных.  
@@ -30,15 +30,15 @@ ms.locfileid: "67956349"
   
  В подразделах данного раздела приводится описание различных аспектов использования результирующего набора, включая типы курсора, параллелизм и блокировку строк.  
   
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
   
 |Раздел|Описание|  
 |-----------|-----------------|  
 |[Основные сведения о типах курсоров](../../connect/jdbc/understanding-cursor-types.md)|Описывает различные типы курсоров, которые поддерживает драйвер [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)].|  
-|[Общие сведения об управлении параллелизмом](../../connect/jdbc/understanding-concurrency-control.md)|Описывает, как драйвер JDBC поддерживает управление параллелизмом.|  
+|[Основные сведения об управлении параллелизмом](../../connect/jdbc/understanding-concurrency-control.md)|Описывает, как драйвер JDBC поддерживает управление параллелизмом.|  
 |[Основные сведения о блокировке строк](../../connect/jdbc/understanding-row-locking.md)|Описывает, как драйвер JDBC поддерживает блокировку строк.|  
   
-## <a name="see-also"></a>См. также:  
- [Общие сведения о драйвере JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
+## <a name="see-also"></a>См. также раздел  
+ [Общие сведения о JDBC Driver](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   

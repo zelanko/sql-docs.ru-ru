@@ -1,7 +1,7 @@
 ---
 title: Работа с подключением | Документация Майкрософт
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: cf8ee392-8a10-40a3-ae32-31c7b1efdd04
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: fa216c6fb20ab5881865e2baf283d233b4abbfca
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 267605b6a89f323570cfacfc66517b028ef716a2
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916084"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69025473"
 ---
-# <a name="working-with-a-connection"></a>Работа с соединением
+# <a name="working-with-a-connection"></a>Работа с подключением
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -26,7 +26,7 @@ ms.locfileid: "67916084"
 > [!NOTE]  
 > При возникновении неполадок с соединением с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью драйвера JDBC см. раздел [Профилактика подключений](../../connect/jdbc/troubleshooting-connectivity.md), где можно найти сведения по их устранению.
 
-## <a name="creating-a-connection-by-using-the-drivermanager-class"></a>Создание соединения с помощью класса DriverManager
+## <a name="creating-a-connection-by-using-the-drivermanager-class"></a>Установка подключения с использованием класса DriverManager
 
 Простейший способ соединения с базой данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] — загрузка драйвера JDBC и вызов метода getConnection класса DriverManager:
 
@@ -41,7 +41,7 @@ Connection con = DriverManager.getConnection(connectionUrl);
 > [!NOTE]  
 > При использовании библиотеки классов sqljdbc4.jar приложениям не обязательно явно регистрировать или загружать драйвер с помощью метода Class.forName. При вызове метода getConnection класса DriverManager подходящий драйвер выбирается из набора зарегистрированных драйверов JDBC. Дополнительные сведения об использовании JDBC см. в разделе "Использование драйвера JDBC".
 
-## <a name="creating-a-connection-by-using-the-sqlserverdriver-class"></a>Создание соединения с помощью класса SQLServerDriver
+## <a name="creating-a-connection-by-using-the-sqlserverdriver-class"></a>Установка подключения с использованием класса SQLServerDriver
 
 Если нужно указать конкретный драйвер из списка драйверов для DriverManager, то можно создать подключение к базе данных с помощью метода [connect](../../connect/jdbc/reference/connect-method-sqlserverdriver.md) класса [SQLServerDriver](../../connect/jdbc/reference/sqlserverdriver-class.md):
 
@@ -51,7 +51,7 @@ String connectionUrl = "jdbc:sqlserver://localhost;database=AdventureWorks;integ
 Connection con = d.connect(connectionUrl, new Properties());  
 ```
 
-## <a name="creating-a-connection-by-using-the-sqlserverdatasource-class"></a>Создание соединения с помощью класса SQLServerDataSource
+## <a name="creating-a-connection-by-using-the-sqlserverdatasource-class"></a>Установка подключения с использованием класса SQLServerDataSource
 
 При необходимости создать соединение с помощью класса [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md) можно использовать различные методы задания класса, после чего вызывается метод [getConnection](../../connect/jdbc/reference/getconnection-method.md):
 
@@ -65,7 +65,7 @@ ds.setDatabaseName("AdventureWorks");
 Connection con = ds.getConnection();  
 ```
 
-## <a name="creating-a-connection-that-targets-a-very-specific-data-source"></a>Создание соединения, целью которого является конкретный источник данных
+## <a name="creating-a-connection-that-targets-a-very-specific-data-source"></a>Установка подключения, предназначенного для конкретного источника данных
 
 Создать подключение к базе данных, целью которого является конкретный источник данных, можно несколькими способами. Каждый способ зависит от свойств, задаваемых с помощью URL-адреса соединения.
 
@@ -95,7 +95,7 @@ String url = "jdbc:sqlserver://172.31.255.255;database=AdventureWorks;integrated
 
 Дополнительные примеры URL-адресов подключений см. [в разделе Создание URL-адреса подключения](../../connect/jdbc/building-the-connection-url.md).
 
-## <a name="creating-a-connection-with-a-custom-login-time-out"></a>Создание соединения с настраиваемым временем сохранения учетных данных
+## <a name="creating-a-connection-with-a-custom-login-time-out"></a>Установка подключения с настраиваемым временем сохранения учетных данных
 
 Если приходится подстраиваться под нагрузку сервера или сети, можно создать соединение с заданным временем сохранения учетных данных в секундах:
 
@@ -103,7 +103,7 @@ String url = "jdbc:sqlserver://172.31.255.255;database=AdventureWorks;integrated
 String url = "jdbc:sqlserver://MyServer;loginTimeout=90;integratedSecurity=true;"
 ```
 
-## <a name="create-a-connection-with-application-level-identity"></a>Создание соединения с идентификацией на уровне приложения
+## <a name="create-a-connection-with-application-level-identity"></a>Установка подключения с идентификацией на уровне приложения
 
 Если для работы требуется ведение журнала и профилирование, то необходимо идентифицировать соединение по инициировавшему его приложению:
 
@@ -111,7 +111,7 @@ String url = "jdbc:sqlserver://MyServer;loginTimeout=90;integratedSecurity=true;
 String url = "jdbc:sqlserver://MyServer;applicationName=MYAPP.EXE;integratedSecurity=true;"
 ```
 
-## <a name="closing-a-connection"></a>Закрытие соединения
+## <a name="closing-a-connection"></a>Закрытие подключения
 
 Подключение к базе данных можно явно закрыть путем вызова метода [close](../../connect/jdbc/reference/close-method-sqlserverconnection.md) класса SQLServerConnection:
 
@@ -124,6 +124,6 @@ con.close();
 > [!NOTE]  
 > Вызов метода close также приведет к откату любой ожидающей выполнения транзакции.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
-[Соединение с SQL Server с помощью драйвера JDBC](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)
+[Подключение к SQL Server с помощью JDBC Driver](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)

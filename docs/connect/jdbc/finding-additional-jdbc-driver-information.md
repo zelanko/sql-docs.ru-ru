@@ -1,7 +1,7 @@
 ---
 title: Поиск дополнительных сведений о драйвере JDBC | Документация Майкрософт
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: e0329385-c3ab-481d-81b5-6703955a91a9
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: c6137b51e1bb06e3797b0562cdbb0f9236834aa6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 75047e8c2ea7589247e0c32c7a4710eb6a6e7dbc
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956589"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028188"
 ---
-# <a name="finding-additional-jdbc-driver-information"></a>Поиск дополнительных сведений о драйвере JDBC
+# <a name="finding-additional-jdbc-driver-information"></a>Поиск дополнительных сведений о JDBC Driver
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -32,6 +32,6 @@ ms.locfileid: "67956589"
 |[Форум по доступу к данным SQL Server](https://go.microsoft.com/fwlink/?LinkId=70651)|Этот сайт представляет собой форум сообщества, посвященный доступу к данным [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, OLE DB, ODBC, ADO, MDAC, JDBC, SOAP/HTTP.|  
 |[Блог JDBC](https://go.microsoft.com/fwlink/?LinkId=124746)|Этот блог используется для предоставления сведений о [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)].|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также раздел  
 
- [Общие сведения о драйвере JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
+ [Общие сведения о JDBC Driver](../../connect/jdbc/overview-of-the-jdbc-driver.md)  

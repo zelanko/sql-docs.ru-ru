@@ -1,7 +1,7 @@
 ---
 title: Примеры приложений драйвера JDBC | Документация Майкрософт
 ms.custom: ''
-ms.date: 07/31/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: e136b87c-a138-45d6-8c3e-bcef94b7e483
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 3227aa1fc886c72b1655fc8ef9770be2c914af3a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0e6a8ac2279446e70c6d31467eacbe54ad50386d
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67945838"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027803"
 ---
-# <a name="sample-jdbc-driver-applications"></a>Образец приложений драйвера JDBC
+# <a name="sample-jdbc-driver-applications"></a>Примеры приложений JDBC Driver
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -31,7 +31,7 @@ ms.locfileid: "67945838"
 
 В подразделах данного раздела описан порядок настройки и выполнения образцов приложений, приводится обсуждение результатов работы образцов приложений.  
   
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
   
 | Раздел                                                                                                        | Описание                                                                                                                                                                                                                                                             |
 | ------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -39,9 +39,9 @@ ms.locfileid: "67945838"
 | [Работа с типами данных (JDBC)](../../connect/jdbc/working-with-data-types-jdbc.md)                 | Эти примеры приложений показывают, как использовать методы драйвера JDPC для работы с различными типами данных в базе [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].                                                                                           |
 | [Работа с результирующими наборами](../../connect/jdbc/working-with-result-sets.md)                                   | Эти примеры приложений показывают, как использовать результирующие наборы для обработки данных, содержащихся в базе [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].                                                                                                         |
 | [Работа с большими объемами данных](../../connect/jdbc/working-with-large-data.md)                                     | Эти примеры приложений показывают, как использовать адаптивную буферизацию для извлечения данных большого размера из базы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и при этом избежать излишней нагрузки, связанной с использованием серверных курсоров.                                                      |
-| [Обнаружение и классификация данных SQL](../../connect/jdbc/data-discovery-classification-sample.md) | В этом примере приложения показано, как получить сведения об обнаружении данных и классификации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , содержащиеся в базе данных, из объекта ResultSet с помощью драйвера JDBC.                                      |
+| [Обнаружение и классификация данных SQL](../../connect/jdbc/data-discovery-classification-sample.md) | В этом примере приложения показано, как получить сведения об обнаружении данных и классификации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , содержащиеся в базе данных, из объекта ResultSet с помощью драйвера JDBC.                                      |
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
-[Общие сведения о драйвере JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
+[Общие сведения о JDBC Driver](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   

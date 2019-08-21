@@ -1,7 +1,7 @@
 ---
-title: Требования к системе для драйвера JDBC | Документация Майкрософт
+title: Требования к системе для JDBC Driver | Документация Майкрософт
 ms.custom: ''
-ms.date: 08/01/2019
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 447792bb-f39b-49b4-9fd0-1ef4154c74ab
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: e5b317b3483d24087df203eb14fdabe7b12f2539
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 5759a1f9936fdb8a6df4de422ae2ff0542dc63a8
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893975"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027674"
 ---
-# <a name="system-requirements-for-the-jdbc-driver"></a>Требования к системе для драйвера JDBC
+# <a name="system-requirements-for-the-jdbc-driver"></a>Требования к системе для JDBC Driver
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
   Чтобы получить доступ к данным из базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] с помощью драйвера [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], на компьютере должны быть установлены следующие компоненты:
@@ -41,7 +41,7 @@ ms.locfileid: "68893975"
   
  Начиная с [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] поддержка спецификации API Java Database Connectivity (JDBC) была расширена до API JDBC 4.0. Версия API JDBC 4.0 впервые появилась в составе пакета SDK для Java (JDK) 6.0 и среды выполнения Java (JRE) 6.0. JDBC 4.0 является супермножеством API JDBC 3.0.
   
- При развертывании [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] в операционных системах Windows и UNIX необходимо использовать пакеты установки *sqljdbc_\<версия>_enu.exe* и *sqljdbc_\<версия>_enu.tar.gz* соответственно. Дополнительные сведения о развертывании драйвера JDBC см. в разделе [Развертывание драйвера JDBC](../../connect/jdbc/deploying-the-jdbc-driver.md).  
+ При развертывании [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] в операционных системах Windows и UNIX необходимо использовать пакеты установки *sqljdbc_\<версия>_enu.exe* и *sqljdbc_\<версия>_enu.tar.gz* соответственно. Дополнительные сведения см. в статье о [развертывании JDBC Driver](../../connect/jdbc/deploying-the-jdbc-driver.md).  
 
 **Microsoft JDBC Driver 7.4 для SQL Server**  
 
@@ -192,18 +192,18 @@ ms.locfileid: "68893975"
 |---------|------------------|---------------------|-------------------------|   
 |sqljdbc41.jar|4|7|7 6 5|  
   
-## <a name="sql-server-requirements"></a>Требования к SQL Server  
+## <a name="sql-server-requirements"></a>требования SQL Server  
  Драйвер JDBC поддерживает подключения к базе данных Azure SQL и SQL Server. Для драйвера Microsoft JDBC 4.2 и 4.1 для SQL Server поддержка начинается с SQL Server 2008.
   
 ## <a name="operating-system-requirements"></a>Требования к операционной системе  
  Драйвер JDBC разработан для использования с любой операционной системой, поддерживающей использование виртуальной машины Java (JVM). Однако официально протестированы только системы Sun Solaris, SUSE Linux и Windows.  
   
 ## <a name="supported-languages"></a>Поддерживаемые языки  
- Драйвер JDBC поддерживает все параметры сортировки столбцов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения о параметрах сортировки, поддерживаемых драйвером JDBC, см. в статье [Функции поддержки различных языков драйвера JDBC](../../connect/jdbc/international-features-of-the-jdbc-driver.md).  
+ Драйвер JDBC поддерживает все параметры сортировки столбцов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения о параметрах сортировки, поддерживаемых JDBC Driver, см. в описании [функций поддержки разных языков JDBC Driver](../../connect/jdbc/international-features-of-the-jdbc-driver.md).  
   
  Дополнительные сведения о параметрах сортировки см. в разделе "Использование параметров сортировки" электронной документации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="see-also"></a>См. также:  
- [Общие сведения о драйвере JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
+## <a name="see-also"></a>См. также раздел  
+ [Общие сведения о JDBC Driver](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   

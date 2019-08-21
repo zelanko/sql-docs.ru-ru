@@ -1,7 +1,7 @@
 ---
 title: Работа с результирующими наборами | Документация Майкрософт
 ms.custom: ''
-ms.date: 07/31/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 4fc4b1c6-3075-4ad7-9244-865d9ede7ae6
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 9d33dbebaad162feb77a4cbea8de33993fc79f14
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 44eac2fbcc156b3591bdf02fd00ff0d6bd19366b
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956954"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028246"
 ---
 # <a name="working-with-result-sets"></a>Работа с результирующими наборами
 
@@ -30,15 +30,15 @@ ms.locfileid: "67956954"
   
 Здесь представлены разделы, где описываются различные способы использования результирующего набора для обработки данных, содержащихся в базе данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
   
 | Раздел                                                                                           | Описание                                                                                                                                                                                             |
 | ----------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [Получение примера данных результирующего набора](../../../connect/jdbc/code-samples/retrieving-result-set-data-sample.md) | Описывает использование результирующего набора для получения данных из базы данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и их отображения.                                                         |
+| [Пример получения данных результирующего набора](../../../connect/jdbc/code-samples/retrieving-result-set-data-sample.md) | Описывает использование результирующего набора для получения данных из базы данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и их отображения.                                                         |
 | [Изменение примера данных результирующего набора](../../../connect/jdbc/code-samples/modifying-result-set-data-sample.md)   | Описывается использование результирующего набора для вставки, получения и изменения данных в базе данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].                                                      |
 | [Пример кэширования данных результирующего набора](../../../connect/jdbc/code-samples/caching-result-set-data-sample.md)       | Описывается использование результирующего набора для получения данных большого объема из базы данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и управления кэшированием этих данных в клиенте. |
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также раздел  
 
-[Пример приложений драйвера JDBC](../../../connect/jdbc/code-samples/sample-jdbc-driver-applications.md)  
+[Примеры приложений JDBC Driver](../../../connect/jdbc/code-samples/sample-jdbc-driver-applications.md)  
   

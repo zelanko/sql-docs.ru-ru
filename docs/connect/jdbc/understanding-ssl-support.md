@@ -1,7 +1,7 @@
 ---
 title: Общие сведения о поддержке SSL | Документация Майкрософт
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 073f3b9e-8edd-4815-88ea-de0655d0325e
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 32820e38a8292068aa95c505a04292fbac2c69af
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5da6c0f567e86a5d9ba979f01cb82ec382834651
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916613"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027303"
 ---
 # <a name="understanding-ssl-support"></a>Основные сведения о поддержке SSL
 
@@ -80,8 +80,8 @@ ms.locfileid: "67916613"
   
 - DNS-имя может содержать символы шаблонов. Однако [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] не поддерживает сопоставление с подстановочными знаками. Это значит, что abc.com не будет соответствовать \*.com, но \*.com будет соответствовать \*.com.  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 [Использование SSL-шифрования](../../connect/jdbc/using-ssl-encryption.md)
 
-[Защита приложений драйвера JDBC](../../connect/jdbc/securing-jdbc-driver-applications.md)  
+[Защита приложений JDBC Driver](../../connect/jdbc/securing-jdbc-driver-applications.md)  

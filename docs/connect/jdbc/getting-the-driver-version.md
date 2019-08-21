@@ -1,7 +1,7 @@
 ---
 title: Получение версии драйвера | Документация Майкрософт
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 5e241d72-16da-4ada-ac67-e6308394108f
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: c75f14ca3f24a97240d7430210ab79c70e0bac85
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: db44a391c16a63d28057c99755018179d6c2c0b5
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956555"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028044"
 ---
 # <a name="getting-the-driver-version"></a>Получение версии драйвера
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "67956555"
   
  Здесь «xxx.x» представляет номер окончательной версии.  
   
-## <a name="see-also"></a>См. также:  
- [Диагностика проблем с драйвером JDBC](../../connect/jdbc/diagnosing-problems-with-the-jdbc-driver.md)  
+## <a name="see-also"></a>См. также раздел  
+ [Диагностика проблем с JDBC Driver](../../connect/jdbc/diagnosing-problems-with-the-jdbc-driver.md)  
   
   

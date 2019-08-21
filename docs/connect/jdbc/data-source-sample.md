@@ -1,7 +1,7 @@
 ---
 title: Образец источника данных | Документация Майкрософт
 ms.custom: ''
-ms.date: 07/31/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: b4a933ee-f2c6-4e0d-a96d-6dd061abf759
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 42bb5fc11fb2ec3c90b130e03cc3b48ac3bc401f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5f7abb06d02485524a6bd9e19977ba430b32a18f
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956739"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028173"
 ---
-# <a name="data-source-sample"></a>Образец источника данных
+# <a name="data-source-sample"></a>Пример источника данных
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -85,6 +85,6 @@ public class ConnectDataSource {
 }
 ```
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 [Подключение к данным и их извлечение](../../connect/jdbc/connecting-and-retrieving-data.md)

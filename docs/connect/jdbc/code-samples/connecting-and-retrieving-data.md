@@ -1,7 +1,7 @@
 ---
 title: Подключение и извлечение данных | Документация Майкрософт
 ms.custom: ''
-ms.date: 07/31/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: ce43cc20-46a3-42ff-a3fb-75ad1ed10e08
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 310c66f6951a467b368fc44e1933bc6c8b6b36b0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 11378d51cb6d88858ebba069dba161dbbb494f27
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67957276"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028405"
 ---
-# <a name="connecting-and-retrieving-data"></a>Соединение и извлечение данных
+# <a name="connecting-and-retrieving-data"></a>Подключение к данным и их извлечение
 
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
@@ -30,14 +30,14 @@ ms.locfileid: "67957276"
   
 В разделах этой статьи описаны различные способы подключения к базе данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и показаны приемы для извлечения данных.  
   
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
   
 |Раздел|Описание|  
 |-----------|-----------------|  
 |[Пример URL-адреса подключения](../../../connect/jdbc/code-samples/connection-url-sample.md)|Описывает подключение к [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] по URL-адресу и последующее использование инструкции SQL для извлечения данных.|  
 |[Пример источника данных](../../../connect/jdbc/code-samples/data-source-sample.md)|Описывается порядок использования источника данных для соединения с SQL Server и последующего использования хранимой процедуры для извлечения данных.|  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
-[Пример приложений драйвера JDBC](../../jdbc/code-samples/sample-jdbc-driver-applications.md)
+[Примеры приложений JDBC Driver](../../jdbc/code-samples/sample-jdbc-driver-applications.md)
   

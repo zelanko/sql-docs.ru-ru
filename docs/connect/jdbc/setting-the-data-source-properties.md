@@ -1,7 +1,7 @@
 ---
 title: Задание свойств источника данных | Документация Майкрософт
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: f3363d05-07fc-4bf8-ae5e-2a7a968808ad
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 97e285f5f2680e028a9d8fd00901e3e977ffdd80
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0b3093b87557917655fcbfd6cf7c2ec37151ca44
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68004430"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027727"
 ---
-# <a name="setting-the-data-source-properties"></a>Задание свойств источника данных
+# <a name="setting-the-data-source-properties"></a>Настройка свойств источника данных
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -27,6 +27,6 @@ ms.locfileid: "68004430"
 
 Дополнительные сведения об источниках данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] см. в описании класса [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md). Пример использования класса SQLServerDataSource для создания соединения с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базой данных см. в разделе [образец источника данных](../../connect/jdbc/data-source-sample.md).
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
-[Соединение с SQL Server с помощью драйвера JDBC](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)
+[Подключение к SQL Server с помощью JDBC Driver](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)

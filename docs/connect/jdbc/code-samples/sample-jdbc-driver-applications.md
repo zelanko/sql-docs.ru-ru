@@ -1,7 +1,7 @@
 ---
 title: Примеры приложений драйвера JDBC | Документация Майкрософт
 ms.custom: ''
-ms.date: 07/31/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: e136b87c-a138-45d6-8c3e-bcef94b7e483
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 7e99e122f1e18c320c6ea6e5b18409ca39780d03
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6ef5c2d71d398be52ebed2b69020e87d54818176
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67957070"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028307"
 ---
-# <a name="sample-jdbc-driver-applications"></a>Образец приложений драйвера JDBC
+# <a name="sample-jdbc-driver-applications"></a>Примеры приложений JDBC Driver
 
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
@@ -31,7 +31,7 @@ ms.locfileid: "67957070"
 
  В подразделах данного раздела описан порядок настройки и выполнения образцов приложений, приводится обсуждение результатов работы образцов приложений.  
   
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
   
 | Раздел                                                                                                                  | Описание                                                                                                                                                                                                                                                                   |
 | ---------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -41,6 +41,6 @@ ms.locfileid: "67957070"
 | [Работа с большими объемами данных](../../../connect/jdbc/code-samples/working-with-large-data.md)                                            | Эти примеры приложений показывают, как использовать адаптивную буферизацию для извлечения данных большого размера из базы [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и при этом избежать излишней нагрузки, связанной с использованием серверных курсоров.                                                         |
 | [Обнаружение и классификация данных SQL](../../jdbc/code-samples/data-discovery-and-classification-sample.md) | В этом примере приложения показано, как получить сведения об обнаружении данных и классификации [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , содержащиеся в базе данных, из объекта ResultSet с помощью драйвера JDBC.                                            |
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
-[Общие сведения о драйвере JDBC](../../../connect/jdbc/overview-of-the-jdbc-driver.md)
+[Общие сведения о JDBC Driver](../../../connect/jdbc/overview-of-the-jdbc-driver.md)

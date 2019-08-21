@@ -1,7 +1,7 @@
 ---
-title: Часто задаваемые вопросы (FAQ) о драйвере JDBC | Документация Майкрософт
+title: Вопросы и ответы о JDBC Driver | Документация Майкрософт
 ms.custom: ''
-ms.date: 07/31/2019
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: cbc0e397-ecf2-4494-87b2-a492609bceae
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 17032e4d1bd6487edc0b0b41b7f808c27ab995ee
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 2860034ae67fc7cc376e84251dbeebc5a123fade
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68892376"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028074"
 ---
-# <a name="frequently-asked-questions-faq-for-jdbc-driver"></a>Часто задаваемые вопросы о драйвере JDBC
+# <a name="frequently-asked-questions-faq-for-jdbc-driver"></a>Вопросы и ответы о JDBC Driver
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -29,7 +29,7 @@ ms.locfileid: "68892376"
 Драйвер JDBC является драйвером с открытым кодом, который можно найти на [GitHub](https://github.com/microsoft/mssql-jdbc). Драйвер можно улучшить путем регистрации проблем и добавления кода в базу.
 
 **Какие версии SQL Server и Java поддерживает драйвер?**  
-Подробные сведения см. в статье [Матрица поддержки драйвера Microsoft JDBC Driver для SQL Server](../../connect/jdbc/microsoft-jdbc-driver-for-sql-server-support-matrix.md).
+См. о [матрице поддержки Microsoft JDBC Driver для SQL Server](../../connect/jdbc/microsoft-jdbc-driver-for-sql-server-support-matrix.md).
 
 **Чем отличаются пакеты драйверов JDBC, доступные в Центре загрузки Майкрософт и на GitHub?**  
 Файлы драйвера JDBC, доступные в репозитории GitHub для Microsoft JDBC Driver, являются основой для драйвера JDBC и подпадают под действие лицензии на программное обеспечение с открытым исходным кодом, которая указана в репозитории. Пакеты драйвера Центра загрузки Майкрософт включают в себя дополнительные библиотеки для встроенной проверки подлинности Windows и добавления транзакций XA с помощью драйвера JDBC. Эти дополнительные библиотеки подпадают под действие лицензии, которая включена в скачиваемый пакет.
@@ -144,4 +144,4 @@ Microsoft JDBC Driver 4.1 для SQL Server поддерживает специ
 
 ## <a name="see-also"></a>См. также раздел
 
-[Общие сведения о драйвере JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)
+[Общие сведения о JDBC Driver](../../connect/jdbc/overview-of-the-jdbc-driver.md)

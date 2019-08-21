@@ -1,7 +1,7 @@
 ---
 title: Обнаружение и классификация данных SQL | Документация Майкрософт
 ms.custom: ''
-ms.date: 07/31/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -9,14 +9,14 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: b6f9962be0fa138786af425ab24bf9608bf3264f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 206bd656c1300a6436298c426697f6c1d47a9e86
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67957234"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028383"
 ---
-# <a name="sql-data-discovery-and-classification"></a>Обнаружение и классификация данных SQL
+# <a name="sql-data-discovery-and-classification"></a>Обнаружение и классификация данных SQL
 
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
@@ -182,6 +182,6 @@ public class DataDiscoveryAndClassification {
 }
 ```
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
-[Пример приложений драйвера JDBC](../../jdbc/code-samples/sample-jdbc-driver-applications.md)  
+[Примеры приложений JDBC Driver](../../jdbc/code-samples/sample-jdbc-driver-applications.md)  

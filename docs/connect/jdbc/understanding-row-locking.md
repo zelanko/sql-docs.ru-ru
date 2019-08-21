@@ -1,7 +1,7 @@
 ---
 title: Основные сведения о блокировке строк | Документация Майкрософт
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 63c76a2f-f2b9-461f-8904-acbda0169ac3
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 3a2d4faf6f66942cb8f1053bd7323a77795229d5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bcd18baf401378605abf0d53e203d0a3745ee887
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916625"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027330"
 ---
 # <a name="understanding-row-locking"></a>Основные сведения о блокировке строк
 
@@ -31,6 +31,6 @@ ms.locfileid: "67916625"
 > [!NOTE]  
 > Дополнительные сведения о блокировке строк в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] см. в разделе "Блокировки в компоненте [!INCLUDE[ssDE](../../includes/ssde_md.md)]" электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
-[Управление результирующими наборами с помощью драйвера JDBC](../../connect/jdbc/managing-result-sets-with-the-jdbc-driver.md)
+[Управление результирующими наборами с помощью JDBC Driver](../../connect/jdbc/managing-result-sets-with-the-jdbc-driver.md)

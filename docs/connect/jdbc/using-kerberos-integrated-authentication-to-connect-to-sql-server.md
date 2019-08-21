@@ -1,7 +1,7 @@
 ---
-title: Использование встроенной проверки подлинности Kerberos для соединения с SQL Server | Документы Майкрософт
+title: Использование встроенной проверки подлинности Kerberos для подключения к SQL Server | Документация Майкрософт
 ms.custom: ''
-ms.date: 01/21/2019
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 687802dc-042a-4363-89aa-741685d165b3
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 894da21c079b776524c07cab8b8f223bae769aee
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2215e9f6b6c8cd0e19c220d16ebc7a1520550a42
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916236"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69026196"
 ---
 # <a name="using-kerberos-integrated-authentication-to-connect-to-sql-server"></a>Использование встроенной проверки подлинности Kerberos для подключения к SQL Server
 
@@ -49,7 +49,7 @@ ms.locfileid: "67916236"
 
 Если создание соединения выполняется из источника данных, то можно программно задать схему проверки подлинности с помощью метода **setAuthenticationScheme** и (при необходимости) имя субъекта-службы для подключений Kerberos с помощью метода **setServerSpn**.
 
-Для поддержки проверки подлинности по протоколу Kerberos добавлено новое средство ведения журнала — com.microsoft.sqlserver.jdbc.internals.KerbAuthentication. Дополнительные сведения см. в статье [Трассировка операций драйвера](../../connect/jdbc/tracing-driver-operation.md).
+Для поддержки проверки подлинности по протоколу Kerberos добавлено новое средство ведения журнала — com.microsoft.sqlserver.jdbc.internals.KerbAuthentication. Дополнительные сведения см. в статье о [трассировке операций драйвера](../../connect/jdbc/tracing-driver-operation.md).
 
 Следующие рекомендации помогут настроить протокол Kerberos.
 
@@ -219,6 +219,6 @@ try (Connection c = ds.getConnection(); Statement s = c.createStatement();
 5. Проверьте учетные данные в билете `klist` с помощью и подтвердите учетные данные, которые вы хотите использовать для проверки подлинности.
 6. Запустите приведенный выше пример кода и убедитесь, что проверка подлинности Kerberos прошла успешно.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
-[Соединение с SQL Server с помощью драйвера JDBC](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)
+[Подключение к SQL Server с помощью JDBC Driver](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)

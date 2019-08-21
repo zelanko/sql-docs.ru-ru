@@ -1,7 +1,7 @@
 ---
 title: Обработка сложных инструкций | Документация Майкрософт
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 6b807a45-a8b5-4b1c-8b7b-d8175c710ce0
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 7adee47147a8aad153bc323470f1711426d92350
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6ebd2aee0990b744df1420e88f8cc79870b350f2
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956546"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027992"
 ---
 # <a name="handling-complex-statements"></a>Обработка сложных инструкций
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "67956546"
   
  [!code[JDBC#HandlingComplexStatements1](../../connect/jdbc/codesnippet/Java/handling-complex-statements_1.java)]  
   
-## <a name="see-also"></a>См. также:  
- [Использование инструкций с драйвером JDBC](../../connect/jdbc/using-statements-with-the-jdbc-driver.md)  
+## <a name="see-also"></a>См. также раздел  
+ [Использование инструкций с JDBC Driver](../../connect/jdbc/using-statements-with-the-jdbc-driver.md)  
   
   

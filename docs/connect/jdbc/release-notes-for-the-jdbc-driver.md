@@ -1,7 +1,7 @@
 ---
 title: Заметки о выпуске для драйвера JDBC | Документация Майкрософт
 ms.custom: ''
-ms.date: 08/01/2019
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 074f211e-984a-4b76-bb15-ee36f5946f12
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: a4ddc58c624e9177e670e8dcf4fc5bf54ef08e57
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 04a179492b151e664dfe31f4fe4e51c5440fcef5
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68891289"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027790"
 ---
 # <a name="release-notes-for-the-microsoft-jdbc-driver"></a>Заметки о выпуске для драйвера Microsoft JDBC Driver
 
@@ -158,11 +158,11 @@ Microsoft JDBC Driver версии 7.0 для SQL Server теперь подд�
 
 Microsoft JDBC Driver версии 7.0 для SQL Server теперь реализует API `beginRequest()` и `endRequest()` из класса `java.sql.Connection`. Эти API-интерфейсы были представлены в спецификации JDBC 4.3 и JDK 9. Дополнительные сведения о возможности драйвера реализовать эти API-интерфейсы см. в статье[Соответствие требованиям JDBC 4.3 для JDBC Driver](../../connect/jdbc/jdbc-4-3-compliance-for-the-jdbc-driver.md).
 
-### <a name="support-for-sql-data-discovery-and-classification"></a>Поддержка обнаружения и классификации данных SQL
+### <a name="support-for-sql-data-discovery-and-classification"></a>Включение обнаружения и классификации данных SQL
 
-Microsoft JDBC Driver версии 7.0 для SQL Server обеспечивает поддержку для обнаружения и классификации данных SQL в любой целевой базе данных, поддерживающей эту функцию. Драйвер теперь предоставляет API-интерфейсы `SQLServerResultSet.getSensitivityClassification()` для извлечения этой информации из полученного `ResultSet`.
+Microsoft JDBC Driver версии 7.0 для SQL Server позволяет включить обнаружение и классификацию данных SQL в любой целевой базе данных, поддерживающей эту функцию. Драйвер теперь предоставляет API-интерфейсы `SQLServerResultSet.getSensitivityClassification()` для извлечения этой информации из полученного `ResultSet`.
 
-Дополнительные сведения об использовании этой функции с помощью драйвера JDBC см. в примере в статье [Обнаружение и классификация данных SQL](../../connect/jdbc/data-discovery-classification-sample.md).
+Дополнительные сведения см. в статье об [обнаружении и классификации данных SQL с помощью JDBC Driver](../../connect/jdbc/data-discovery-classification-sample.md).
 
 ### <a name="added-connection-property-usebulkcopyforbatchinsert"></a>Добавлено свойство подключения: useBulkCopyForBatchInsert
 

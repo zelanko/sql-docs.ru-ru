@@ -1,7 +1,7 @@
 ---
 title: Операция драйвера трассировки | Документация Майкрософт
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 723aeae7-6504-4585-ba8b-3525115bea8b
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: a8e04fe67605c97e12c688e0b05b8c437b6aa182
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 18bfd63a8cf3255a62b6aef5c4c31573c60e76b0
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916686"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027596"
 ---
 # <a name="tracing-driver-operation"></a>Трассировка операций драйвера
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -131,7 +131,7 @@ Logger logger = Logger.getLogger("com.microsoft.sqlserver.jdbc.Statement");
 logger.setLevel(Level.OFF);  
 ```  
   
-## <a name="enabling-tracing-by-using-the-loggingproperties-file"></a>Включение трассировки при помощи файла Logging.Properties  
+## <a name="enabling-tracing-by-using-the-loggingproperties-file"></a>Включение трассировки с помощью файла logging.properties  
  Можно также включить трассировку с помощью файла `logging.properties`, который находится в каталоге `lib` установки среды выполнения Java (JRE). Файл может быть использован для установки значений по умолчанию для журналов и обработчиков, которые будут использованы, если трассировка включена.  
   
  Далее приводится пример настроек, которые можно задать в файлах `logging.properties`:  
@@ -158,7 +158,7 @@ com.microsoft.sqlserver.jdbc.level=FINEST
 > [!NOTE]  
 >  Свойства можно задать в файле`logging.properties` с помощью объекта LogManager, который является частью java.util.logging.  
   
-## <a name="see-also"></a>См. также:  
- [Диагностика проблем с драйвером JDBC](../../connect/jdbc/diagnosing-problems-with-the-jdbc-driver.md)  
+## <a name="see-also"></a>См. также раздел  
+ [Диагностика проблем с JDBC Driver](../../connect/jdbc/diagnosing-problems-with-the-jdbc-driver.md)  
   
   

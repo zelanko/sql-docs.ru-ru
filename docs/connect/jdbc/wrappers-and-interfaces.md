@@ -1,7 +1,7 @@
 ---
 title: Оболочки и интерфейсы | Документация Майкрософт
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 27fc9b72-9f21-4728-abcb-5c015f28a6ab
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 7be51a27364107afe6b79ebcce5de109909b1836
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3a74f5ccd8a36527dd7c37fc02150d11be632ba9
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916063"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69025584"
 ---
 # <a name="wrappers-and-interfaces"></a>Оболочки и интерфейсы
 
@@ -29,7 +29,7 @@ ms.locfileid: "67916063"
 
 Интерфейс Java. SQL. оберток определяет два метода: **isWrapperFor** и **Unwrap**. Метод **isWrapperFor** проверяет, реализует ли указанный объект ввода данный интерфейс. Метод **unwrap** возвращает объект, в котором реализован указанный интерфейс, для обеспечения доступа к методам, определяемым драйвером [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)].
 
-методы **isWrapperFor** и **unwrap** предоставляются следующим образом:
+Методы **isWrapperFor** и **unwrap** предоставляются следующим образом:
 
 - [Метод isWrapperFor &#40;SQLServerCallableStatement&#41;](../../connect/jdbc/reference/iswrapperfor-method-sqlservercallablestatement.md)
 
@@ -111,6 +111,6 @@ public class UnWrapTest {
 }  
 ```
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
-[Основные сведения о типах данных драйвера JDBC](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)
+[Основные сведения о типах данных JDBC Driver](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)

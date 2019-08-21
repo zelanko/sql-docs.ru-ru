@@ -1,7 +1,7 @@
 ---
 title: Основные сведения об уровнях изоляции | Документация Майкрософт
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 2c41e23a-da6c-4650-b5fc-b5fe53ba65c3
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 6cfbc099d88a96574439fa8c178b12629d92782c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b4886b1bd0f4ff62df06334af469a76b64600839
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916644"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027390"
 ---
 # <a name="understanding-isolation-levels"></a>Основные сведения об уровнях изоляции
 
@@ -75,6 +75,6 @@ con.setTransactionIsolation(Connection.TRANSACTION_READ_COMMITTED + 4094);
 
 Дополнительные сведения об уровнях изоляции [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] см. в разделе "Уровни изоляции в компоненте [!INCLUDE[ssDE](../../includes/ssde_md.md)]" электронной документации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
-[Выполнение транзакций с помощью драйвера JDBC](../../connect/jdbc/performing-transactions-with-the-jdbc-driver.md)  
+[Выполнение транзакций с помощью JDBC Driver](../../connect/jdbc/performing-transactions-with-the-jdbc-driver.md)  

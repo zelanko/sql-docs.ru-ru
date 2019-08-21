@@ -1,7 +1,7 @@
 ---
-title: Развертывание драйвера JDBC | Документация Майкрософт
+title: Развертывание JDBC Driver | Документация Майкрософт
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 3ad3508d-d9b1-47fb-a63b-21cdc3ed44e0
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 3e7898f66631fd9ca9d75573d5025bb732db8208
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7e8b4655695d37db10d18fbaa6215587036017bf
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956728"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028110"
 ---
-# <a name="deploying-the-jdbc-driver"></a>Развертывание драйвера JDBC
+# <a name="deploying-the-jdbc-driver"></a>Развертывание JDBC Driver
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
   При развертывании приложения, зависящего от драйвера [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], необходимо вместе с приложением распространять драйвер JDBC. В отличие от компонентов доступа к данным Windows DAC, которые являются компонентами операционной системы Windows, драйвер JDBC считается компонентом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -29,7 +29,7 @@ ms.locfileid: "67956728"
 > [!NOTE]  
 >  Дополнительные общие сведения о развертывании приложений Java см. на веб-сайте Java.  
   
-## <a name="deploying-the-jdbc-driver-on-windows-systems"></a>Развертывание драйвера JDBC в системах Windows  
+## <a name="deploying-the-jdbc-driver-on-windows-systems"></a>Развертывание JDBC Driver в системах Windows  
  При развертывании драйвера JDBC в операционных системах Windows необходимо использовать исполняемый вариант ZIP-файла пакета установки, который обычно называется `sqljdbc_<version>_<language>.exe`.  
   
  Для автоматического запуска исполняемого файла в формате ZIP необходимо использовать параметр командной строки `/auto` в командной строке или пакетном файле, как описано ниже.  
@@ -39,7 +39,7 @@ ms.locfileid: "67956728"
 > [!NOTE]  
 >  При использовании параметра `/auto` установка не будет полностью автоматической, так как на экране пользователя все же будет отображаться диалоговое окно WinZip. Однако оно не требует выполнения каких-либо действий пользователя и закрывается после выполнения операции распаковки.  
   
-## <a name="deploying-the-driver-on-unix-systems"></a>Развертывание драйвера в системах UNIX  
+## <a name="deploying-the-driver-on-unix-systems"></a>Развертывание JDBC Driver в системах UNIX 
  При развертывании драйвера JDBC в операционных системах UNIX необходимо использовать исполняемый файл в формате GZIP пакета установки, который обычно называется `sqljdbc_<version>_<language>.tar.gz`.  
   
  До установки драйвера JDBC необходимо убедиться в том, что в системе пользователя установлены программы gzip и tar, и что папки, содержащие исполняемые файлы обеих программ, добавлены к переменной среды PATH.  
@@ -52,7 +52,7 @@ ms.locfileid: "67956728"
   
  `tar -xf sqljdbc_<version>_<language>.tar`  
   
-## <a name="see-also"></a>См. также:  
- [Общие сведения о драйвере JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
+## <a name="see-also"></a>См. также раздел  
+ [Общие сведения о JDBC Driver](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 212f2042-456a-4c0a-8d76-480b18f02431
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7ceab8f9d74aed85f51c91650d0efa1cb32f421e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b90383fb387f8593db7aa4ee4760181a7322a475
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66175654"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028922"
 ---
 # <a name="configure-ssl-connections-on-a-native-mode-report-server"></a>Настройка безопасных соединений на сервере отчетов, работающем в собственном режиме
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] В собственном режиме используется HTTP-служба протокола SSL для установления зашифрованного соединения с сервером отчетов. Если в локальном хранилище сертификатов на компьютере сервера отчетов установлен CER-файл сертификата, можно связать его с резервированием URL-адресов служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] для поддержки соединений сервера отчетов через зашифрованный канал.  
@@ -82,7 +82,7 @@ ms.locfileid: "66175654"
   
  Привязки SSL являются общими ресурсами в Microsoft Windows. Изменения, проведенные в диспетчере конфигурации служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] или других программах наподобие диспетчера IIS, могут отразиться на работе других приложений, работающих на этом же компьютере. Рекомендуется пользоваться для изменения привязок тем же средством, которое использовалось для их создания.  Например, если привязки SSL создавались с помощью Configuration Manager, рекомендуется работать с ними в той же программе в течение всего срока их службы. Если же для создания привязок использовался диспетчер IIS, рекомендуется выполнять все дальнейшие операции с этими привязками с помощью диспетчера IIS. Если службы IIS установлены на компьютере до установки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , рекомендуется проверить конфигурацию SSL в IIS перед настройкой служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
- Если удаление привязок SSL для служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] выполняется с помощью диспетчера конфигурации служб Reporting Services, то может перестать работать SSL для веб-сайтов на сервере, где работают службы IIS, или на другом сервере HTTP.SYS. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Диспетчер конфигурации удаляет следующий раздел реестра. Если этот раздел реестра удаляется, привязка SSL для IIS также удаляется. Без этой привязки SSL для протокола HTTPS не поддерживается. Чтобы определить проблему, используйте диспетчер IIS или программу командной строки HTTPCFG.exe. Чтобы устранить проблему, восстановите привязку SSL для веб-сайтов с помощью диспетчера IIS. Чтобы предотвратить возникновение этой проблемы в будущем, с помощью диспетчера IIS удалите привязки SSL, а затем восстановите привязку для нужных веб-сайтов. Дополнительные сведения см. в статье базы знаний [SSL перестает работать после удаления привязки SSL (https://support.microsoft.com/kb/956209/n)](https://support.microsoft.com/kb/956209/n).  
+ Если удаление привязок SSL для служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] выполняется с помощью диспетчера конфигурации служб Reporting Services, то может перестать работать SSL для веб-сайтов на сервере, где работают службы IIS, или на другом сервере HTTP.SYS. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Configuration Manager удаляет следующий раздел реестра: **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\HTTP\Parameters\SslBindingInfo\0.0.0.0:443** при удалении этого раздела реестра привязка SSL для IIS также удаляется. Без этой привязки SSL для протокола HTTPS не поддерживается. Чтобы определить проблему, используйте диспетчер IIS или программу командной строки HTTPCFG.exe. Чтобы устранить проблему, восстановите привязку SSL для веб-сайтов с помощью диспетчера IIS. Чтобы предотвратить возникновение этой проблемы в будущем, с помощью диспетчера IIS удалите привязки SSL, а затем восстановите привязку для нужных веб-сайтов. Дополнительные сведения см. в статье базы знаний [SSL перестает работать после удаления привязки SSL (https://support.microsoft.com/kb/956209/n)](https://support.microsoft.com/kb/956209/n).  
   
 ## <a name="see-also"></a>См. также раздел  
  [Проверка подлинности с использованием сервера отчетов](../../reporting-services/security/authentication-with-the-report-server.md)   

@@ -1,7 +1,7 @@
 ---
-title: Использование хранимой процедуры с входными параметрами | Документы Майкрософт
+title: Использование хранимых процедур с входными параметрами | Документация Майкрософт
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 8f491b70-7d1b-42bd-964f-9a8b86af5eaa
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 954883c4c69e07493a15ef77eecfed606e9cf9a3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6c84e4081b9369d504d173387c6944b06d927c9c
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916524"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69026903"
 ---
 # <a name="using-a-stored-procedure-with-input-parameters"></a>Использование хранимых процедур с входными параметрами
 
@@ -54,6 +54,6 @@ public static void executeSprocInParams(Connection con) throws SQLException {
 }
 ```
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 [Использование инструкций с хранимыми процедурами](../../connect/jdbc/using-statements-with-stored-procedures.md)

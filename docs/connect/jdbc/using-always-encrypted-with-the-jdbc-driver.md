@@ -1,7 +1,7 @@
 ---
 title: Использование постоянного шифрования с драйвером JDBC | Документация Майкрософт
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 271c0438-8af1-45e5-b96a-4b1cabe32707
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: f19878f73397b9146765fecd879dad07ebb73dc3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e1f15e490a8d0e803bf0936c07d2e739009e1bf5
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916452"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69026645"
 ---
 # <a name="using-always-encrypted-with-the-jdbc-driver"></a>Использование функции Always Encrypted с драйвером JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -105,7 +105,7 @@ SQLServerConnection.registerColumnEncryptionKeyStoreProviders(keyStoreMap);
 > Пример включения этих зависимостей в проект Maven см. в статье [скачивание зависимостей ADAL4J и AKV с помощью Apache Maven](https://github.com/Microsoft/mssql-jdbc/wiki/Download-ADAL4J-And-AKV-Dependencies-with-Apache-Maven) .
 
 ### <a name="using-windows-certificate-store-provider"></a>Использование поставщика хранилища сертификатов Windows
-The SQLServerColumnEncryptionCertificateStoreProvider можно использовать для хранения главных ключей столбцов в хранилище сертификатов Windows. Используйте мастер Always Encrypted SQL Server Management Studio (SSMS) или другие поддерживаемые инструменты для создания определений главного ключа столбца и ключа шифрования столбцов в базе данных. Этот же мастер можно использовать для создания самозаверяющего сертификата в хранилище сертификатов Windows, который можно использовать в качестве главного ключа столбца для данных Always encrypted. Дополнительные сведения о синтаксисе T-SQL для главного ключа столбца и ключа шифрования столбцов см. в статьях [Создание главного ключа столбца](../../t-sql/statements/create-column-master-key-transact-sql.md) и [Создание ключа шифрования столбца](../../t-sql/statements/create-column-encryption-key-transact-sql.md) соответственно.
+The SQLServerColumnEncryptionCertificateStoreProvider можно использовать для хранения главных ключей столбцов в хранилище сертификатов Windows. Используйте мастер Always Encrypted SQL Server Management Studio (SSMS) или другие поддерживаемые инструменты для создания определений главного ключа столбца и ключа шифрования столбцов в базе данных. Этот же мастер можно использовать для создания самозаверяющего сертификата в хранилище сертификатов Windows, который можно использовать в качестве главного ключа столбца для Always Encrypted данных. Дополнительные сведения о синтаксисе T-SQL для главного ключа столбца и ключа шифрования столбцов см. в статьях [Создание главного ключа столбца](../../t-sql/statements/create-column-master-key-transact-sql.md) и [Создание ключа шифрования столбца](../../t-sql/statements/create-column-encryption-key-transact-sql.md) соответственно.
 
 Имя Склсерверколумненкриптионцертификатесторепровидер — MSSQL_CERTIFICATE_STORE, и его можно запрашивать через API-имя () объекта поставщика. Он автоматически регистрируется драйвером и может использоваться без каких бы то ни было изменений в приложении.
 
@@ -649,6 +649,6 @@ SQLServerConnection.setColumnEncryptionKeyCacheTtl (10, TimeUnit.MINUTES)
 > [!NOTE]
 > Будьте внимательны при указании параметра AllowEncryptedValueModifications, так как это может привести к повреждению базы данных, поскольку драйвер Microsoft JDBC Driver для SQL Server не проверяет необходимость шифрования данных или правильность их шифрования с помощью тех же типа шифрования, алгоритма и ключа, что и для конечного столбца.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 [Always Encrypted (ядро СУБД)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)

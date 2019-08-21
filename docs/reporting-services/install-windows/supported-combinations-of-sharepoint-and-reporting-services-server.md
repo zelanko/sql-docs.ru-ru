@@ -12,12 +12,12 @@ ms.assetid: dc6a3372-db26-43f0-b7aa-f725acc635c2
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ea2af6514d04d24ce77bb88f391350d7c33059eb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 59cd04ffa97005edc1e957ed4fcefb66685c2256
+ms.sourcegitcommit: 58f1d5498c87bfe0f6ec4fd9d7bbe723be47896b
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62513366"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68995864"
 ---
 # <a name="supported-combinations-of-sharepoint-and-reporting-services-server"></a>Поддерживаемые сочетания компонентов SharePoint и сервера служб Reporting Services
 
@@ -42,17 +42,18 @@ ms.locfileid: "62513366"
 |2|SQL Server 2016|SQL Server 2016|SharePoint 2013|
 |3|SQL Server 2014|SQL Server 2014|SharePoint 2013|
 |4|SQL Server 2014|SQL Server 2014|SharePoint 2010|
-|5|SQL Server 2012 с пакетом обновления 3 (SP3)|SQL Server 2014 и SQL Server 2012 с пакетом обновления 3 (SP3)|SharePoint 2013|
-|6|SQL Server 2012 с пакетом обновления 2 (SP2)|SQL Server 2014 и SQL Server 2012 с пакетом обновления 2 (SP2)|SharePoint 2013|
-|7|SQL Server 2012 SP1|SQL Server 2014 и SQL Server 2012 с пакетом обновления 1 (SP1)|SharePoint 2013|
-|8|SQL Server 2012 и SQL Server 2012 с пакетом обновления 1 (SP1)*|SQL Server 2014|SharePoint 2010|
-|9|SQL Server 2012|SQL Server 2012|SharePoint 2010|
-|10|SQL Server 2008 R2|SQL Server 2014|SharePoint 2010|
-|11|SQL Server 2008 R2|SQL Server 2012 и SQL Server 2012 с пакетом обновления 1 (SP1) или более поздние версии|SharePoint 2010|
-|12|SQL Server 2008 R2|SQL Server 2008 R2|SharePoint 2010|
-|13|SQL Server 2008 R2|SQL Server 2008 с пакетом обновления 2 (SP2)|SharePoint 2007|
-|14|SQL Server 2008 с пакетом обновления 2 (SP2)|SQL Server 2008 R2|SharePoint 2010|
-|15|SQL Server 2008 с пакетом обновления 2 (SP2)|SQL Server 2008 и SQL Server 2008 с пакетом обновления 2 (SP2)|SharePoint 2007|
+|5|SQL Server 2012 с пакетом обновления 4 (SP4)|SQL Server 2014 и SQL Server 2012 с пакетом обновления 4 (SP4)|SharePoint 2013|
+|6|SQL Server 2012 с пакетом обновления 3 (SP3)|SQL Server 2014 и SQL Server 2012 с пакетом обновления 3 (SP3)|SharePoint 2013|
+|7|SQL Server 2012 с пакетом обновления 2 (SP2)|SQL Server 2014 и SQL Server 2012 с пакетом обновления 2 (SP2)|SharePoint 2013|
+|8|SQL Server 2012 SP1|SQL Server 2014 и SQL Server 2012 с пакетом обновления 1 (SP1)|SharePoint 2013|
+|9|SQL Server 2012 и SQL Server 2012 с пакетом обновления 1 (SP1)*|SQL Server 2014|SharePoint 2010|
+|10|SQL Server 2012|SQL Server 2012|SharePoint 2010|
+|11|SQL Server 2008 R2|SQL Server 2014|SharePoint 2010|
+|12|SQL Server 2008 R2|SQL Server 2012 и SQL Server 2012 с пакетом обновления 1 (SP1) или более поздние версии|SharePoint 2010|
+|13|SQL Server 2008 R2|SQL Server 2008 R2|SharePoint 2010|
+|14|SQL Server 2008 R2|SQL Server 2008 с пакетом обновления 2 (SP2)|SharePoint 2007|
+|15|SQL Server 2008 с пакетом обновления 2 (SP2)|SQL Server 2008 R2|SharePoint 2010|
+|16|SQL Server 2008 с пакетом обновления 2 (SP2)|SQL Server 2008 и SQL Server 2008 с пакетом обновления 2 (SP2)|SharePoint 2007|
 
  *Исключение: интеграция с Power View не поддерживается.
 

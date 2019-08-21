@@ -1,7 +1,7 @@
 ---
 title: Создание URL-адреса подключения | Документация Майкрософт
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 44996746-d373-4f59-9863-a8a20bb8024a
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 8d26ab3b32f9830127c47b319cc0feddd532f1af
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 18ed8477e6fc7c276db1842dba4f8856629bd29a
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67957377"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028456"
 ---
 # <a name="building-the-connection-url"></a>Формирование URL-адреса соединения
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -37,12 +37,12 @@ ms.locfileid: "67957377"
     > [!NOTE]  
     >  Для оптимизации производительности соединения при соединении с именованным экземпляром необходимо указать portNumber. Это позволит избежать дополнительного обращения к серверу для определения номера порта. Если используются portNumber и instanceName, portNumber будет иметь более высокий приоритет, и instanceName будет пропущен.  
   
--   **property** (необязательно) представляет собой одно или несколько свойств соединений. Дополнительные сведения: [Задание свойств соединения](../../connect/jdbc/setting-the-connection-properties.md). Можно указать любое свойство из списка. В качестве разделителей в списке свойств можно использовать точку с запятой (';'), при этом свойства не могут повторяться.  
+-   **property** (необязательно) представляет собой одно или несколько свойств соединений. Дополнительные сведения см. в статье о [настройке свойств подключения](../../connect/jdbc/setting-the-connection-properties.md). Можно указать любое свойство из списка. В качестве разделителей в списке свойств можно использовать точку с запятой (';'), при этом свойства не могут повторяться.  
   
 > [!CAUTION]  
 >  В целях безопасности не рекомендуется составлять URL-адрес соединения на основе данных пользователей. В URL-адресе необходимо указывать только имя сервера и драйвер. Для указания значений имени пользователя и пароля следует использовать коллекции свойств соединения. Дополнительные сведения о безопасности в приложениях JDBC см. в статье [Защита приложений драйвера JDBC](../../connect/jdbc/securing-jdbc-driver-applications.md).  
   
-## <a name="connection-examples"></a>Примеры соединения  
+## <a name="connection-examples"></a>Примеры подключений  
  Подключитесь к базе данных по умолчанию на локальном компьютере с помощью имени пользователя и пароля:  
   
  `jdbc:sqlserver://localhost;user=MyUserName;password=*****;`  
@@ -83,7 +83,7 @@ jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationS
   
  `jdbc:sqlserver://localhost;instanceName=instance1;integratedSecurity=true;<more properties as required>;`  
   
-## <a name="escaping-values-in-the-connection-url"></a>Экранирование значений в URL-адресе соединения  
+## <a name="escaping-values-in-the-connection-url"></a>Экранирование значений в URL-адресе подключения  
  Может потребоваться преобразование определенных частей значений URL-адреса соединения из-за включения специальных символов, таких как пробелы, точек с запятой и кавычек. Драйвер JDBC поддерживает преобразование этих значений, если они заключены в скобки. Например, {;} указывает на преобразование точки с запятой.  
   
  Преобразованные значения могут содержать специальные символы (особенно '=', ';', '[]' и пробелы), но не могут содержать скобок. Значения, которые необходимо преобразовать, и значения, содержащие скобки, следует добавить к коллекции свойств.  
@@ -91,7 +91,7 @@ jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationS
 > [!NOTE]  
 >  Пустое пространство внутри скобок является литералом и не усекается.  
   
-##  <a name="Connectingintegrated"></a>Соединение с использованием встроенной проверки подлинности Windows  
+##  <a name="Connectingintegrated"></a> Подключение с использованием встроенной проверки подлинности Windows  
  Драйвер JDBC поддерживает использование встроенной проверки подлинности типа 2 в операционных системах Windows с использованием свойства строки соединения integratedSecurity. Чтобы использовать встроенную проверку подлинности, скопируйте файл sqljdbc_auth.dll в системный каталог Windows на компьютере, на котором установлен драйвер JDBC.  
   
  Файлы sqljdbc_auth.dll устанавливаются в следующем местоположении:  
@@ -107,7 +107,7 @@ jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationS
   
  `-Djava.library.path=C:\Microsoft JDBC Driver 6.4 for SQL Server\sqljdbc_<version>\enu\auth\x86`  
   
-## <a name="connecting-with-ipv6-addresses"></a>Соединение с помощью IPv6-адресов  
+## <a name="connecting-with-ipv6-addresses"></a>Подключение с помощью IPv6-адресов  
  Драйвер JDBC поддерживает использование IPv6-адресов с коллекцией свойств соединения и свойством строки соединения serverName. Исходное значение serverName, такое как jdbc:*sqlserver*://*serverName*, не поддерживается для IPv6-адресов в строках соединения. Использования имени для *serverName* вместо неизмененного IPv6-адреса будет достаточно для всех вариантов соединений. Следующие примеры можно использовать как дополнительные источники сведений.  
   
  **Использование свойства serverName**  
@@ -122,7 +122,7 @@ jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationS
   
  `Connection con = DriverManager.getConnection("jdbc:sqlserver://;integratedSecurity=true;", pro);`  
   
-## <a name="see-also"></a>См. также:  
- [Соединение с SQL Server с помощью драйвера JDBC](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)  
+## <a name="see-also"></a>См. также раздел  
+ [Подключение к SQL Server с помощью JDBC Driver](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)  
   
   

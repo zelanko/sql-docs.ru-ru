@@ -1,7 +1,7 @@
 ---
 title: Защита приложений драйвера JDBC | Документация Майкрософт
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 90724ec6-a9cb-43ef-903e-793f89410bc0
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: c539e94b9fdcd3d1cd281e1a0f1043eec55739bc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 61a17b302499f87d552ec61c90208effc688e164
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67945745"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027754"
 ---
-# <a name="securing-jdbc-driver-applications"></a>Защита приложений драйвера JDBC
+# <a name="securing-jdbc-driver-applications"></a>Защита приложений JDBC Driver
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -25,7 +25,7 @@ ms.locfileid: "67945745"
   
 В подразделах данного раздела приводится описание некоторых общих вопросов безопасности, включая строки соединения, проверку вводимых пользователем данных и общую безопасность приложения.  
   
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
   
 | Раздел                                                                            | Описание                                                                                                                                                           |
 | -------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -35,6 +35,6 @@ ms.locfileid: "67945745"
 | [Использование SSL-шифрования](../../connect/jdbc/using-ssl-encryption.md)               | Описывает установление безопасного соединения с базой данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с использованием SSL-шифрования. |
 | [Режим FIPS](../../connect/jdbc/fips-mode.md)                                     | Описывает, как использовать драйвер JDBC в режиме совместимости с FIPS.                                                                                                              |
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также раздел  
 
- [Общие сведения о драйвере JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
+ [Общие сведения о JDBC Driver](../../connect/jdbc/overview-of-the-jdbc-driver.md)  

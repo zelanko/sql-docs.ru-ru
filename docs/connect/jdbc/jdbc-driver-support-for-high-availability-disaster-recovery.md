@@ -1,7 +1,7 @@
 ---
-title: Поддержка высокой доступности и аварийного восстановления в JDBC Driver | Документы Майкрософт
+title: Поддержка высокой доступности и аварийного восстановления в JDBC Driver | Документация Майкрософт
 ms.custom: ''
-ms.date: 04/04/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 62de4be6-b027-427d-a7e5-352960e42877
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 322a22c2236898876ae2fd5e942a1ad3617c1959
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a959292b7adc2b5bb547d447f67f2a392de8af4c
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956385"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027955"
 ---
-# <a name="jdbc-driver-support-for-high-availability-disaster-recovery"></a>Поддержка высокой доступности и аварийного восстановления в драйвере JDBC
+# <a name="jdbc-driver-support-for-high-availability-disaster-recovery"></a>Поддержка высокой доступности и аварийного восстановления в JDBC Driver
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
   В этом разделе рассматривается поддержка [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] высокой доступности с аварийным восстановлением ― [!INCLUDE[ssHADR](../../includes/sshadr_md.md)]. Дополнительные сведения о среде [!INCLUDE[ssHADR](../../includes/sshadr_md.md)]см. в электронной документации по [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] .  
@@ -48,7 +48,7 @@ ms.locfileid: "67956385"
   
  
   
-## <a name="connecting-with-multisubnetfailover"></a>Соединение с помощью MultiSubnetFailover  
+## <a name="connecting-with-multisubnetfailover"></a>Подключение с помощью multiSubnetFailover  
  Всегда указывайте **MultiSubnetFailover=True** при соединении с прослушивателем группы доступности [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] или экземпляром отказоустойчивого кластера [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. **multiSubnetFailover** позволяет группам доступности и экземплярам отказоустойчивого кластера в [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] быстрее выполнить отработку отказа, а также значительно сократить время перехода на другой ресурс для топологий AlwaysOn с одной подсетью или несколькими. При отработке отказа с в нескольких подсетях клиент будет выполнять попытки соединения параллельно. При отработке отказа подсети [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] будет активно повторять попытки установить TCP-подключение.  
   
  Свойство подключения **multiSubnetFailover** указывает, что приложение развертывается в группе доступности или экземпляре отказоустойчивого кластера, а также что [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] попытается подключиться ко всем IP-адресам базы данных в первичном экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Когда для подключения установлено свойство **MultiSubnetFailover=true**, клиент будет пытаться повторно установить TCP-подключение с более частым интервалом, чем заданные в операционной системе интервалы повторной отправки TCP-пакетов по умолчанию. Это позволяет ускорить восстановление соединения после отработки отказа в группе доступности AlwaysOn или в экземпляре отказоустойчивого кластера AlwaysOn; метод может применяться к группам доступности и экземплярам отказоустойчивых кластеров как с одной, так и с несколькими подсетями.  
@@ -111,11 +111,11 @@ ms.locfileid: "67956385"
   
  Методы **getMultiSubnetFailover**, **setMultiSubnetFailover**, **getApplicationIntent**, **сетаппликатионинтент**, **жеттранспарентнетворкипресолутион** и **сеттранспарентнетворкипресолутион** также добавлен к классу [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md), классу [SQLServerConnectionPoolDataSource](../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md)и [классу SQLServerXADataSource](../../connect/jdbc/reference/sqlserverxadatasource-class.md).  
   
-## <a name="ssl-certificate-validation"></a>Проверка сертификатов SSL  
- Группа доступности состоит из нескольких физических серверов. В драйвер [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] добавлена поддержка **альтернативного имени субъекта** в SSL-сертификатах, что позволяет связать несколько узлов с одним сертификатом. Дополнительные сведения о SSL см. в разделе [Основные сведения о поддержке SSL](../../connect/jdbc/understanding-ssl-support.md).  
+## <a name="ssl-certificate-validation"></a>Проверка SSL-сертификатов  
+ Группа доступности состоит из нескольких физических серверов. В драйвер [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] добавлена поддержка **альтернативного имени субъекта** в SSL-сертификатах, что позволяет связать несколько узлов с одним сертификатом. См. [основные сведения о поддержке SSL](../../connect/jdbc/understanding-ssl-support.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также раздел  
  [Подключение к SQL Server с помощью JDBC Driver](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)   
- [Задание свойств соединения](../../connect/jdbc/setting-the-connection-properties.md)  
+ [Настройка свойств подключения](../../connect/jdbc/setting-the-connection-properties.md)  
   
   

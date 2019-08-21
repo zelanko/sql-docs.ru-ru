@@ -1,7 +1,7 @@
 ---
 title: Использование пространственных типов Документация Майкрософт
 ms.custom: ''
-ms.date: 01/21/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: f2290aa8d7ebad7a40b5aea9d37c5a9a53e0d333
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f133fa066ef2c486cf7bb40c5b653c99e077bc46
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916533"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69026944"
 ---
 # <a name="using-spatial-datatypes"></a>Использование пространственных типов данных
 
@@ -159,6 +159,6 @@ try(SQLServerResultSet rs = (SQLServerResultSet)stmt.executeQuery("select * from
 
 3. Операции хранимых процедур, TVP и BulkCopy в настоящее время не поддерживаются для пространственных типов.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 [Пример пространственных типов данных (JDBC)](../../connect/jdbc/spatial-data-types-sample.md)

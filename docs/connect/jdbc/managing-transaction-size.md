@@ -1,7 +1,7 @@
 ---
 title: Управление размером транзакции | Документация Майкрософт
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 82900342-bc80-445f-98a4-468a303aae1e
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 0e53ab6e5f2fc2cc12db37d81b1c8f687b503158
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3b443e3541dbf86fd0cfa947f057faaf62e08226
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956357"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027897"
 ---
-# <a name="managing-transaction-size"></a>Управление размером транзакции
+# <a name="managing-transaction-size"></a>Управление размером транзакций
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
   При работе с транзакциями важно, чтобы транзакции были как можно более короткими. Применяемый по умолчанию режим автофиксации, который можно включить или отключить с использованием метода [setAutoCommit](../../connect/jdbc/reference/setautocommit-method-sqlserverconnection.md), будет фиксировать каждое действие. Это самый легкий режим работы для большинства разработчиков.  
@@ -28,7 +28,7 @@ ms.locfileid: "67956357"
   
  Кроме того, убедитесь, что воспользовались параметром истечения времени блокировки, если в приложении ожидаются проблемы с блокировками и требуется ограничение времени ожидания выхода из них. Для этого можно использовать метод [setLockTimeout](../../connect/jdbc/reference/setlocktimeout-method-sqlserverdatasource.md). Установленное по умолчанию время ожидания для блокировки равно -1, это означает, что она заблокирует на неопределенно долгое время в ожидании блокировки. Можно установить время ожидания блокировки равным 30 сек., что вызовет истечение времени ожидания заблокированного соединения через 30 секунд в случае блокировки другим соединением.  
   
-## <a name="see-also"></a>См. также:  
- [Повышение производительности и надежности с помощью драйвера JDBC](../../connect/jdbc/improving-performance-and-reliability-with-the-jdbc-driver.md)  
+## <a name="see-also"></a>См. также раздел  
+ [Повышение производительности и надежности с помощью JDBC Driver](../../connect/jdbc/improving-performance-and-reliability-with-the-jdbc-driver.md)  
   
   

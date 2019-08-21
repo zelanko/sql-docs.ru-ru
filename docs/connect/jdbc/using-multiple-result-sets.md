@@ -1,7 +1,7 @@
 ---
 title: Использование нескольких результирующих наборов | Документация Майкрософт
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ab6a3cfa-073b-44e9-afca-a8675cfe5fd1
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: c471f74fc8e1029cfeaad06b564ea4a9b6641171
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 802ade7a34eb5c5174efc35032587f801ef12179
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68005961"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69026273"
 ---
 # <a name="using-multiple-result-sets"></a>Использование нескольких результирующих наборов
 
@@ -34,11 +34,11 @@ ms.locfileid: "68005961"
 
 [!code[JDBC#UsingMultipleResultSets1](../../connect/jdbc/codesnippet/Java/using-multiple-result-sets_1.java)]
 
-В этом случае известно, что количество результирующих наборов равно двум. Но этот код написан таким образом, что даже если количество возвращенных результирующих наборов было бы неизвестно, как при вызове хранимой процедуры, все они были бы обработаны. Пример вызова хранимой процедуры, которая возвращает несколько результирующих наборов наряду со значениями обновления, см. в разделе [Обработка сложных инструкций](../../connect/jdbc/handling-complex-statements.md).
+В этом случае известно, что количество результирующих наборов равно двум. Но этот код написан таким образом, что даже если количество возвращенных результирующих наборов было бы неизвестно, как при вызове хранимой процедуры, все они были бы обработаны. См. пример вызова хранимой процедуры, которая возвращает несколько результирующих наборов наряду со значениями обновления, в руководстве по [обработке сложных инструкций](../../connect/jdbc/handling-complex-statements.md).
 
 > [!NOTE]  
 > При выполнении вызова метода getMoreResults класса SQLServerStatement ранее возвращенный результирующий набор неявно закрывается.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
-[Использование инструкций с драйвером JDBC](../../connect/jdbc/using-statements-with-the-jdbc-driver.md)
+[Использование инструкций с JDBC Driver](../../connect/jdbc/using-statements-with-the-jdbc-driver.md)

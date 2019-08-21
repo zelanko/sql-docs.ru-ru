@@ -1,7 +1,7 @@
 ---
 title: Основные сведения о поддержке Java EE | Документация Майкрософт
 ms.custom: ''
-ms.date: 08/01/2019
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: a9448b80-b7a3-49cf-8bb4-322c73676005
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 318800db7335a47226e75a4e05a4493c366507f9
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 3eb2778f11aa83498bdfc47ece599aa07c403fe0
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68892312"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027262"
 ---
 # <a name="understanding-java-ee-support"></a>Основные сведения о поддержке Java EE
 
@@ -41,7 +41,7 @@ ms.locfileid: "68892312"
   
 Имя класса используется всякий раз, когда вы загружаете драйвер с помощью класса JDBC диспетчер драйверов и каждый раз при указании имени класса драйвера в любой конфигурации драйвера. Например, имя класса драйвера может потребоваться для настройки источника данных на сервере приложений Java EE.  
   
-## <a name="data-sources"></a>обозревателе решений
+## <a name="data-sources"></a>Источники данных
 
 Драйвер JDBC обеспечивает поддержку для источников данных Java EE/JDBC 3.0. Класс [SQLServerXADataSource](../../connect/jdbc/reference/sqlserverxadatasource-class.md) драйвера JDBC реализуется `com.microsoft.sqlserver.jdbc.SQLServerXADataSource`.  
   
@@ -74,8 +74,8 @@ DataSource ds = (DataSource) ctx.lookup("MyDataSource");
 Connection c = ds.getConnection("user", "pwd");  
 ```
 
-Дополнительные сведения см. в статье [Задание свойств источника данных](../../connect/jdbc/setting-the-data-source-properties.md).  
+См. о [настройке свойств источника данных](../../connect/jdbc/setting-the-data-source-properties.md).  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
-[Общие сведения о драйвере JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
+[Общие сведения о JDBC Driver](../../connect/jdbc/overview-of-the-jdbc-driver.md)  

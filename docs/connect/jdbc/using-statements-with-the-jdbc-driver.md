@@ -1,7 +1,7 @@
 ---
 title: Использование инструкций с драйвером JDBC | Документация Майкрософт
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 7f8f3e8f-841e-4449-9154-b5366870121f
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 7646903fc9efcbdb838b4a2d585735dc3a105639
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9ddd61d15e3c363766c7e49b8e9045b60a7be164
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68005921"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69025793"
 ---
-# <a name="using-statements-with-the-jdbc-driver"></a>Использование инструкций с драйвером JDBC
+# <a name="using-statements-with-the-jdbc-driver"></a>Использование инструкций с JDBC Driver
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -33,7 +33,7 @@ ms.locfileid: "68005921"
   
  В разделах этой статьи описано использование каждого из этих трех классов инструкций для работы с данными в базе [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
 
 | Раздел                                                                                                    | Описание                                                                                                                                            |
 | -------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -41,10 +41,10 @@ ms.locfileid: "68005921"
 | [Использование инструкций с хранимыми процедурами](../../connect/jdbc/using-statements-with-stored-procedures.md) | Описывает использование хранимых процедур с драйвером JDBC для работы с данными в базе [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. |
 | [Использование нескольких результирующих наборов](../../connect/jdbc/using-multiple-result-sets.md)                           | Описывает использование драйвера JDBC для извлечения данных из нескольких результирующих наборов.                                                                       |
 | [Использование escape-последовательностей SQL](../../connect/jdbc/using-sql-escape-sequences.md)                           | Описывает использование escape-последовательностей SQL, таких как литералы даты и времени и функции.                                                               |
-| [Использование автоматически сформированных ключей](../../connect/jdbc/using-auto-generated-keys.md)                             | Описывает использование автоматически формируемых ключей.                                                                                                     |
+| [Использование автоматически созданных ключей](../../connect/jdbc/using-auto-generated-keys.md)                             | Описывает использование автоматически формируемых ключей.                                                                                                     |
 | [Выполнение пакетных операций](../../connect/jdbc/performing-batch-operations.md)                         | Описывает использование драйвера JDBC для выполнения пакетных операций.                                                                                      |
 | [Обработка сложных инструкций](../../connect/jdbc/handling-complex-statements.md)                         | Описывает использование драйвера JDBC для выполнения сложных инструкций, выполняющих несколько заданий и могущих вернуть различные типы данных.               |
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
-[Общие сведения о драйвере JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
+[Общие сведения о JDBC Driver](../../connect/jdbc/overview-of-the-jdbc-driver.md)  

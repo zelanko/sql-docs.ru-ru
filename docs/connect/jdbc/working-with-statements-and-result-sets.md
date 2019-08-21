@@ -1,7 +1,7 @@
 ---
 title: Работа с инструкциями и результирующими наборами | Документация Майкрософт
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: cc917534-f5f8-4844-87c8-597c48b4e06d
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: fb6d545a3a7f8c3b29e5bc372aa4fdadf95edd52
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a57ffc5c9314f8e84c077b6c15ab88ed5411f028
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68003786"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69025358"
 ---
 # <a name="working-with-statements-and-result-sets"></a>Работа с инструкциями и результирующими наборами
 
@@ -31,7 +31,7 @@ ms.locfileid: "68003786"
 
 - Если вы не планируете выполнять инструкцию более одного раза или не используете параметры IN или OUT, не нужно использовать объект SQLServerCallableStatement или SQLServerPreparedStatement. Вместо этого используйте объект SQLServerStatement.
 
-## <a name="use-the-appropriate-concurrency-for-resultset-objects"></a>Используйте подходящий параллелизм для объектов ResultSet
+## <a name="use-the-appropriate-concurrency-for-resultset-objects"></a>Использование подходящего параллелизма для объектов ResultSet
 
 Обновляемый параллелизм при создании инструкций, выдающих результирующие наборы, требуется, только если планируется непременно обновлять результаты. Маленькие результирующие наборы быстрее всего считывает стандартная однопроходная неизменяемая модель курсора.
 
@@ -47,6 +47,6 @@ ms.locfileid: "68003786"
 
 Используйте потоки объектов BLOB и CLOB, постепенно материализуемые для управления обновляющимися большими значениями столбцов или отправления больших параметров IN. Драйвер JDBC дробит их и отправляет на сервер за несколько обращений, тем самым позволяя задавать и обновлять значения большие, чем помещаются в памяти.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
-[Повышение производительности и надежности с помощью драйвера JDBC](../../connect/jdbc/improving-performance-and-reliability-with-the-jdbc-driver.md)
+[Повышение производительности и надежности с помощью JDBC Driver](../../connect/jdbc/improving-performance-and-reliability-with-the-jdbc-driver.md)

@@ -1,7 +1,7 @@
 ---
 title: Azure Key Vault образца версии 6.2.2 | Документация Майкрософт
 ms.custom: ''
-ms.date: 08/01/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -9,12 +9,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: a61d24ed5f2c36a84560cbcd04cd409fd6a59a44
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 315d6cad8ee643cc64a3b331ee321372a70c7824
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67957453"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028428"
 ---
 # <a name="azure-key-vault-sample-version-622"></a>Пример Azure Key Vault версии 6.2.2
 
@@ -187,7 +187,7 @@ public class AKV_6_2_2 {
 }
 ```
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 [Пример использования Azure Key Vault для версии 7.0.0](../../connect/jdbc/azure-key-vault-sample-version-7.0.md)  
 [Пример Azure Key Vault версии 6.0.0](../../connect/jdbc/azure-key-vault-sample-version-6.0.0.md)

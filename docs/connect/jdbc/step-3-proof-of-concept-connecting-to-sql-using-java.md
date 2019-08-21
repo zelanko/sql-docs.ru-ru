@@ -1,7 +1,7 @@
 ---
 title: 'Шаг 3. Подтверждение концепции: подключение к SQL с помощью Java | Документы Майкрософт'
 ms.custom: ''
-ms.date: 01/21/2019
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,18 +10,18 @@ ms.topic: conceptual
 ms.assetid: 1504a348-1774-47ab-8967-288ec3985ae4
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: a801afabe78625f7914d5fc5accfb6a97084c183
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a0def25f7fc19344c3548353bbd15ffa27e65caa
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68004287"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027511"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-java"></a>Шаг 3. Подтверждение концепции: подключение к SQL с помощью Java
   
 Этот пример следует рассматривать только для подтверждения концепции. Пример кода упрощен для ясности и не обязательно представляет лучшие методики, рекомендованные корпорацией Майкрософт.  
   
-## <a name="step-1--connect"></a>Шаг 1. подключение  
+## <a name="step-1-connect"></a>Шаг 1. подключение  
   
 Используйте класс Connection для подключения к базе данных SQL.   
   
@@ -149,4 +149,4 @@ public class SQLDatabaseConnection {
 ```  
   
 ## <a name="additional-samples"></a>Дополнительные примеры  
-[Пример приложений драйвера JDBC](../../connect/jdbc/sample-jdbc-driver-applications.md)
+[Примеры приложений JDBC Driver](../../connect/jdbc/sample-jdbc-driver-applications.md)

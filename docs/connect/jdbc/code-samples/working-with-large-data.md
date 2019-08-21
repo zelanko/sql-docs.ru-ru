@@ -1,7 +1,7 @@
 ---
 title: Работа с большими данными | Документация Майкрософт
 ms.custom: ''
-ms.date: 07/31/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 5b93569f-eceb-4f05-b49c-067564cd3c85
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: f4c8cf36ca44e4de7bf3b49ac59285fedded6dd9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 425beac7bcae36170ff378b59d36da05838df645
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956987"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028255"
 ---
 # <a name="working-with-large-data"></a>Работа с большими объемами данных
 
@@ -29,15 +29,15 @@ ms.locfileid: "67956987"
   
 Здесь представлены разделы, в которых описаны различные способы получения данных большого размера из базы [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
   
 | Раздел                                                                                                                         | Описание                                                              |
 | ----------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
-| [Пример считывания данных большого объема](../../../connect/jdbc/code-samples/reading-large-data-sample.md)                                               | Описывает получение данных большого объема с помощью инструкции SQL.       |
-| [Пример считывания данных большого объема с помощью хранимых процедур](../../../connect/jdbc/code-samples/reading-large-data-with-stored-procedures-sample.md) | Описывает получение значений параметра CallableStatement OUT большого объема. |
-| [Пример обновления данных большого объема](../../../connect/jdbc/code-samples/updating-large-data-sample.md)                                             | Описывает обновление данных большого объема в базе данных.                |
+| [Пример считывания большого объема данных](../../../connect/jdbc/code-samples/reading-large-data-sample.md)                                               | Описывает получение данных большого объема с помощью инструкции SQL.       |
+| [Пример считывания большого объема данных с помощью хранимых процедур](../../../connect/jdbc/code-samples/reading-large-data-with-stored-procedures-sample.md) | Описывает получение значений параметра CallableStatement OUT большого объема. |
+| [Пример обновления большого объема данных](../../../connect/jdbc/code-samples/updating-large-data-sample.md)                                             | Описывает обновление данных большого объема в базе данных.                |
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
-[Пример приложений драйвера JDBC](../../../connect/jdbc/code-samples/sample-jdbc-driver-applications.md)  
+[Примеры приложений JDBC Driver](../../../connect/jdbc/code-samples/sample-jdbc-driver-applications.md)  
   

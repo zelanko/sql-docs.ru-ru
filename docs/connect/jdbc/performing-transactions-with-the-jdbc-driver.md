@@ -1,7 +1,7 @@
 ---
 title: Выполнение транзакций с помощью драйвера JDBC | Документация Майкрософт
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,21 +10,21 @@ ms.topic: conceptual
 ms.assetid: afbb776f-05dc-4e79-bb25-2c340483e401
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: afb7968f5173bf69fec3d4b0204798a430d49930
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 58c6282a11e3fcc0ca896a2e3e4075a4b51d928e
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956214"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027855"
 ---
-# <a name="performing-transactions-with-the-jdbc-driver"></a>Выполнение транзакций с помощью драйвера JDBC
+# <a name="performing-transactions-with-the-jdbc-driver"></a>Выполнение транзакций с помощью JDBC Driver
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
   Обработка транзакций обязательна для всех приложений, в которых должна гарантироваться согласованность сохраненных данных. С помощью [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] обработку транзакций можно вести в локальной или распределенной среде. Транзакции — это атомарные согласованные изолированные и устойчивые (ACID) модули исполнения.  
   
  Здесь представлены разделы, в которых описана поддержка транзакций драйвером JDBC, в том числе уровни изоляции, точки сохранения транзакции и удержание результирующего набора.  
   
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
   
 |Раздел|Описание|  
 |-----------|-----------------|  
@@ -34,7 +34,7 @@ ms.locfileid: "67956214"
 |[Использование точек сохранения](../../connect/jdbc/using-savepoints.md)|Использование драйвера JDBC с точками сохранения транзакций.|  
 |[Использование возможности ожидания](../../connect/jdbc/using-holdability.md)|Использование драйвера JDBC с удержанием результирующего набора.|  
   
-## <a name="see-also"></a>См. также:  
- [Общие сведения о драйвере JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
+## <a name="see-also"></a>См. также раздел  
+ [Общие сведения о JDBC Driver](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   

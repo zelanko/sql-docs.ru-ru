@@ -1,7 +1,7 @@
 ---
 title: Подключение с помощью SSL-шифрования | Документация Майкрософт
 ms.custom: ''
-ms.date: 01/21/2019
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: ec91fa8a-ab7e-4c1e-a05a-d7951ddf33b1
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 209ced9fbf6d1ceb21ed4e5b6d686dd87eec0de2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5ccbd9db2ae39113ca157651bdc6dc1486307419
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956806"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028148"
 ---
-# <a name="connecting-with-ssl-encryption"></a>Соединение с помощью SSL-шифрования
+# <a name="connecting-with-ssl-encryption"></a>Подключение с помощью SSL-шифрования
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
   В примерах из этой статьи описывается использование свойств строки соединения, которые разрешают приложениям использовать шифрование SSL в приложении Java. Дополнительные сведения об этих новых свойствах строки соединения, например **encrypt**, **trustServerCertificate**, **trustStore**, **trustStorePassword** и **hostNameInCertificate**, см. в разделе [Задание свойств соединения](../../connect/jdbc/setting-the-connection-properties.md).  
@@ -64,8 +64,8 @@ String connectionUrl =
 >  Кроме того, можно задать значение свойству подключения с помощью соответствующих методов **задания**, предоставляемых классом [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md).  
   
  Если свойство **Encrypt** имеет значение **true** , а свойству **trustServerCertificate** присвоено значение **false** и если имя сервера в строке подключения не совпадает с именем сервера в SSL-сертификате, будет выдаваться следующая ошибка: Дата выпуска `The driver couldn't establish a secure connection to SQL Server by using Secure Sockets Layer (SSL) encryption. Error: "java.security.cert.CertificateException: Failed to validate the server name in a certificate during Secure Sockets Layer (SSL) initialization."`:. Начиная с версии 7,2, драйвер поддерживает сопоставление шаблонов с подстановочными знаками в крайней левой части имени сервера в SSL-сертификате.
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также раздел  
  [Использование SSL-шифрования](../../connect/jdbc/using-ssl-encryption.md)   
- [Защита приложений драйвера JDBC](../../connect/jdbc/securing-jdbc-driver-applications.md)  
+ [Защита приложений JDBC Driver](../../connect/jdbc/securing-jdbc-driver-applications.md)  
   
   

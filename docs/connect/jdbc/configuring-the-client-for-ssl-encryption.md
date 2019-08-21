@@ -1,7 +1,7 @@
 ---
 title: Настройка клиента для SSL-шифрования | Документация Майкрософт
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ae34cd1f-3569-4759-80c7-7c9b33b3e9eb
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 7098df4d2a38c6a9415504bec6933afc4a4b310f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 50c1a24dfbfb925cbda961f8a566e0d1bcd26bdf
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956891"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028204"
 ---
 # <a name="configuring-the-client-for-ssl-encryption"></a>Настройка SSL-шифрования на клиенте
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -24,9 +24,9 @@ ms.locfileid: "67956891"
   
  В начале этого раздела описано, как задать материал доверия на клиентском компьютере. Далее в этом разделе приведено описание того, как импортировать сертификат сервера в хранилище доверия клиентского компьютера, если экземпляр сертификата SSL для SQL Server выдан закрытым центром сертификации.  
   
- Дополнительные сведения о проверке сертификата сервера см. в разделе "Проверка сертификата SSL сервера" в секции [Основные сведения о поддержке SSL](../../connect/jdbc/understanding-ssl-support.md).  
+ См. о проверке SSL-сертификата сервера в [общих сведениях о поддержке SSL](../../connect/jdbc/understanding-ssl-support.md).  
   
-## <a name="configuring-the-client-trust-store"></a>Настройка клиентского хранилища доверия  
+## <a name="configuring-the-client-trust-store"></a>Настройка клиентского хранилища доверия 
  Для проверки сертификата сервера требуется, чтобы материал доверия был предоставлен во время соединения либо с помощью явно заданных свойств соединения **trustStore** и **trustStorePassword**, либо с помощью неявно заданного хранилища доверия по умолчанию базовой виртуальной машины Java. Дополнительные сведения о том, как задавать свойства **trustStore** и **trustStorePassword** в строке соединения, см. в разделе [Соединение с помощью SSL-шифрования](../../connect/jdbc/connecting-with-ssl-encryption.md).  
   
  Если свойство **trustStore** не задано или имеет значение NULL, то [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] полагается на поставщик безопасности базовой виртуальной машины Java, то есть расширение защищенных сокетов Java (SunJSSE). Поставщик SunJSSE предоставляет по умолчанию TrustManager, который используется для проверки сертификатов X.509, возвращенных SQL Server, по материалу доверия, предоставленному в хранилище доверия.  
@@ -83,8 +83,8 @@ keytool -import -v -trustcacerts -alias myServer -file caCert.cer -keystore trus
   
 9. Нажмите кнопку «Далее», затем нажмите кнопку «Готово», чтобы экспортировать сертификат.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также раздел  
  [Использование SSL-шифрования](../../connect/jdbc/using-ssl-encryption.md)   
- [Защита приложений драйвера JDBC](../../connect/jdbc/securing-jdbc-driver-applications.md)  
+ [Защита приложений JDBC Driver](../../connect/jdbc/securing-jdbc-driver-applications.md)  
   
   
