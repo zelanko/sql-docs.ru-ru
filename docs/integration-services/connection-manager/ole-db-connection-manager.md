@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 91e3622e-4b1a-439a-80c7-a00b90d66979
 author: janinezhang
 ms.author: janinez
-ms.openlocfilehash: 70e439dd6ed176fbb9c2d2fe666b314bd48f2f9c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d3b1526d55321e5f32a243a48f64bde2f579caa6
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67904272"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028794"
 ---
 # <a name="ole-db-connection-manager"></a>диспетчер соединений OLE DB
 
@@ -93,6 +93,9 @@ ms.locfileid: "67904272"
 ### <a name="managed-identities-for-azure-resources-authentication"></a>Управляемые удостоверения для проверки подлинности ресурсов Azure
 При выполнении пакетов SSIS в [среде Azure-SSIS Integration Runtime фабрики данных Azure](https://docs.microsoft.com/azure/data-factory/concepts-integration-runtime#azure-ssis-integration-runtime) вы можете использовать [управляемое удостоверение](https://docs.microsoft.com/azure/data-factory/connector-azure-sql-database#managed-identity), связанное с вашей фабрикой данных, для проверки подлинности базы данных SQL Azure (или управляемого экземпляра). С помощью этого удостоверения назначенная фабрика может обращаться к данным и копировать их из вашей базы данных или в нее.
 
+> [!NOTE]
+>  При использовании проверки подлинности Azure AD (включая проверку подлинности с помощью управляемого удостоверения) для подключения к Базе данных SQL Azure (или к управляемому экземпляру) возникают известные проблемы, которые могут привести к сбою при выполнении пакета или непредвиденному изменению в поведении. Дополнительные сведения см. в разделе о [функциях и ограничениях Azure AD](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication#azure-ad-features-and-limitations).
+
 Чтобы использовать проверку подлинности управляемого удостоверения для базы данных SQL Azure, выполните следующие действия для настройки базы данных:
 
 1. **Создайте группу в Azure AD**. Сделайте управляемое удостоверение членом группы.
@@ -113,7 +116,7 @@ ms.locfileid: "67904272"
     CREATE USER [your AAD group name] FROM EXTERNAL PROVIDER;
     ```
 
-1. **Предоставьте группе Azure AD необходимые разрешения**, как обычно делаете это для пользователей SQL и других лиц. Например, выполните следующий код:
+1. **Предоставьте группе Azure AD необходимые разрешения**, как обычно делаете это для пользователей SQL и других лиц. Сведения о соответствующих ролях см. в статье [Роли уровня базы данных](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles).  Например, выполните следующий код:
 
     ```sql
     ALTER ROLE [role name] ADD MEMBER [your AAD group name];
@@ -138,11 +141,11 @@ ms.locfileid: "67904272"
     CREATE LOGIN [{a name for the managed identity}] FROM EXTERNAL PROVIDER with SID = {your managed identity application ID as binary}, TYPE = E
     ```
 
-1. **Предоставьте управляемому удостоверению фабрики данных необходимые разрешения**. Запустите следующий код T-SQL для базы данных, откуда или куда вы хотите скопировать данные:
+1. **Предоставьте управляемому удостоверению фабрики данных необходимые разрешения**. Сведения о соответствующих ролях см. в статье [Роли уровня базы данных](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles). Запустите следующий код T-SQL для базы данных, откуда или куда вы хотите скопировать данные:
 
     ```sql
     CREATE USER [{the managed identity name}] FOR LOGIN [{the managed identity name}] WITH DEFAULT_SCHEMA = dbo
-    ALTER ROLE db_owner ADD MEMBER [{the managed identity name}]
+    ALTER ROLE [role name] ADD MEMBER [{the managed identity name}]
     ```
 
 Затем **настройте поставщик OLE DB** для диспетчера подключений OLE DB. Это можно сделать двумя способами.
@@ -167,7 +170,7 @@ ms.locfileid: "67904272"
     >  В среде Azure-SSIS Integration Runtime все остальные методы проверки подлинности (например, встроенная система безопасности, пароль), предварительно настроенные в диспетчере подключений OLE DB, будут **переопределены**, когда для установки подключения к базе данных используется проверка подлинности управляемого удостоверения.
 
 > [!NOTE]
->  Чтобы настроить проверку подлинности управляемого удостоверения для существующих пакетов, нужно хотя бы раз перестроить проект SSIS использованием с [последнего конструктора SSIS](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt) и повторно развернуть этот проект в Azure-SSIS Integration Runtime, чтобы новое свойство диспетчера подключений **ConnectUsingManagedIdentity** автоматически добавлялось во все диспетчеры подключений OLE DB в проекте SSIS.
+>  Чтобы настроить проверку подлинности с помощью управляемого удостоверения для существующих пакетов, рекомендуется хотя бы раз перестроить проект SSIS с использованием [последнего конструктора SSIS](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt) и повторно развернуть этот проект в среде выполнения интеграции Azure-SSIS, чтобы новое свойство диспетчера подключений **ConnectUsingManagedIdentity** автоматически добавлялось во все диспетчеры подключений OLE DB в проекте SSIS. Альтернативный способ — напрямую использовать переопределение свойства, указав при выполнении путь к свойству **\Package.Connections[{имя_диспетчера_подключений}].Properties[ConnectUsingManagedIdentity]**
 
 ## <a name="see-also"></a>См. также:    
  [Источник OLE DB](../../integration-services/data-flow/ole-db-source.md)     

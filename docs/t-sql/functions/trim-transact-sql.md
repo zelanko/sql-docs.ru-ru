@@ -18,12 +18,12 @@ ms.assetid: a00245aa-32c7-4ad4-a0d1-64f3d6841153
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = azure-sqldw-latest||=azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8a25a41600aca4d350c7434662de4c25dd51888c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 77b8244efda0a1f06e16821d817339feebc9384f
+ms.sourcegitcommit: 3d189b68c0965909d167de61546b574af1ef7a96
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68098790"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69561149"
 ---
 # <a name="trim-transact-sql"></a>TRIM (Transact-SQL)
 
@@ -55,7 +55,7 @@ string — выражение любого символьного типа (`nva
 
 ## <a name="remarks"></a>Remarks
 
-По умолчанию функция `TRIM` удаляет символ пробела `char(32)` с обеих сторон. Такая реакция на событие эквивалентна `LTRIM(RTRIM(@string))`. Поведение функции `TRIM` с заданными символами идентично поведению функции `REPLACE`, которая заменяет символы в начале или конце строки пустыми строками.
+По умолчанию функция `TRIM` удаляет символ пробела как в начале, так и в конце строки. Такая реакция на событие эквивалентна `LTRIM(RTRIM(@string))`.
 
 ## <a name="examples"></a>Примеры
 
@@ -69,18 +69,22 @@ SELECT TRIM( '     test    ') AS Result;
 
 [!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]
 
-`test`
+```
+test
+```
 
 ### <a name="b--removes-specified-characters-from-both-sides-of-string"></a>Б.  Удаление указанных символов с обеих сторон строки
 
-В приведенном ниже примере удаляются конечная точка и конечные пробелы.
+В приведенном ниже примере удаляется конечная точка, а также пробелы перед символом `#` и после слова `test`.
 
 ```sql
-SELECT TRIM( '.,! ' FROM  '#     test    .') AS Result;
+SELECT TRIM( '.,! ' FROM  '     #     test    .') AS Result;
 ```
 
 [!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]
-`#     test`
+```
+#     test
+```
 
 ## <a name="see-also"></a>См. также:
 

@@ -1,7 +1,7 @@
 ---
 title: Параметры конфигурации памяти сервера | Документация Майкрософт
 ms.custom: ''
-ms.date: 08/01/2019
+ms.date: 08/14/2019
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -19,14 +19,14 @@ helpviewer_keywords:
 - manual memory options [SQL Server]
 - memory [SQL Server], servers
 ms.assetid: 29ce373e-18f8-46ff-aea6-15bbb10fb9c2
-author: MikeRayMSFT
+author: pmasl
 ms.author: mikeray
-ms.openlocfilehash: 180ef3114513f62f7ea5cded856ec61e06fc64b6
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: a9e617488ac0543dd7794cce37137518c1422c80
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68763172"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028741"
 ---
 # <a name="server-memory-configuration-options"></a>Параметры конфигурации памяти сервера
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,10 +53,9 @@ ms.locfileid: "68763172"
 >[!NOTE]
 >[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не гарантирует, что объем памяти, заданный параметром **min server memory**, будет выделен. Если нагрузка на сервер никогда не требует выделения всего объема памяти, заданного параметром **min server memory**, сервер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] будет использовать меньше памяти.
 
-<a name="max_server_memory"></a> Параметр **max_server_memory** гарантирует, что в ОС не возникнет дефицит памяти. Чтобы задать конфигурацию "Макс. памяти сервера", отследите общее использование памяти процессом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и определите требования к памяти.
-
-- Зарезервируйте достаточную долю от общего объема памяти для ОС.
-- Затем вычтите эквивалент потенциального выделения памяти ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]), которое не входит в диапазон **max server memory**, состоящий из **стека** <sup>1</sup> **\*вычисляемое максимальное число рабочих потоков**<sup>2</sup>. Остаток и даст значение параметра max_server_memory в случае установки одного экземпляра.
+<a name="max_server_memory"></a> Параметр **max_server_memory** гарантирует, что в ОС не возникнет дефицит памяти. Чтобы задать конфигурацию "Макс. памяти сервера", отследите общее использование памяти процессом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и определите требования к памяти. Более точные вычисления для одного экземпляра
+- Зарезервируйте 1–4 ГБ от общего объема памяти для ОС.
+- Затем вычтите эквивалент потенциального выделения памяти ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]), которое не входит в диапазон **max server memory**, который вычисляется так: **размер стека <sup>1</sup> \* вычисляемое максимальное число рабочих потоков<sup>2</sup>** . Остаток и даст значение параметра max_server_memory в случае установки одного экземпляра.
 
 <sup>1</sup> Сведения о размерах стеков потока для различных архитектур см. в разделе [Руководство по архитектуре управления памятью](../../relational-databases/memory-management-architecture-guide.md#stacksizes).
 

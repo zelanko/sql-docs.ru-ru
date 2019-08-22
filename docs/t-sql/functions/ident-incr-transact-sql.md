@@ -19,45 +19,44 @@ helpviewer_keywords:
 ms.assetid: e13b491f-4f1f-4cb6-8b63-5084120f98cf
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: c3d601df6b045347a46010b422308cabc43188c8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6edd1cb219f7250a6f9e5671efdb076c6e0a0349
+ms.sourcegitcommit: 316c25fe7465b35884f72928e91c11eea69984d5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68024380"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68969480"
 ---
-# <a name="identincr-transact-sql"></a>IDENT_INCR (Transact-SQL)
+# <a name="ident_incr-transact-sql"></a>IDENT_INCR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Возвращает значение приращения (вида **numeric** ( **@@** MAXPRECISION, 0)), указанное при создании столбца идентификаторов в таблице или представлении.  
+Возвращает значение приращения, указанное при создании столбца идентификаторов в таблице или представлении.  
   
- ![Значок ссылки на статью](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на статью") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Значок ссылки на статью](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на статью") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
 IDENT_INCR ( 'table_or_view' )  
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- **'** *table_or_view* **'**  
- [Выражение](../../t-sql/language-elements/expressions-transact-sql.md), указывающее таблицу или представление для проверки на наличие допустимого значения шага приращения идентификатора. Аргумент *table_or_view* может быть константой строки символов, заключенной в кавычки. Он также может быть переменной, функцией или именем столбца. Аргумент *table_or_view* имеет тип **char**, **nchar**, **varchar** или **nvarchar**.  
+**'** *table_or_view* **'**  
+[Выражение](../../t-sql/language-elements/expressions-transact-sql.md), указывающее таблицу или представление для проверки на наличие допустимого значения шага приращения идентификатора. Аргумент *table_or_view* может быть константой строки символов, заключенной в кавычки. Он также может быть переменной, функцией или именем столбца. Аргумент *table_or_view* имеет тип **char**, **nchar**, **varchar** или **nvarchar**.  
   
 ## <a name="return-types"></a>Типы возвращаемых данных  
- **numeric**  
+**numeric**([@@MAXPRECISION](../../t-sql/functions/max-precision-transact-sql.md),0))  
   
 ## <a name="exceptions"></a>Исключения  
- Возвращает значение NULL в случае ошибки или если вызывающий объект не имеет разрешений для просмотра текущего объекта.  
+Возвращает значение NULL в случае ошибки или если вызывающий объект не имеет разрешений для просмотра текущего объекта.  
   
- В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] пользователь может просматривать только метаданные защищаемых объектов, которыми он владеет или для которых у него есть разрешения. Если у пользователя нет разрешений на объект, встроенная функция, создающая метаданные, например IDENT_INCR, может вернуть значение NULL. Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] пользователь может просматривать только метаданные защищаемых объектов, которыми он владеет или для которых у него есть разрешения. Если у пользователя нет разрешений на объект, встроенная функция, создающая метаданные, например IDENT_INCR, может вернуть значение NULL. Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="examples"></a>Примеры  
   
 ### <a name="a-returning-the-increment-value-for-a-specified-table"></a>A. Возврат значения приращения для указанной таблицы  
  Следующий пример возвращает значение приращения для таблицы `Person.Address` в базе данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT IDENT_INCR('Person.Address') AS Identity_Increment;  
@@ -67,7 +66,7 @@ GO
 ### <a name="b-returning-the-increment-value-from-multiple-tables"></a>Б. Возврат значения приращения из нескольких таблиц  
  В следующем примере функция возвращает таблицы базы данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)], содержащей столбец идентификаторов со значением приращения.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT TABLE_SCHEMA, TABLE_NAME,   

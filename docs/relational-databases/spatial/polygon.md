@@ -13,12 +13,12 @@ ms.assetid: b6a21c3c-fdb8-4187-8229-1c488454fdfb
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 74e6c8cc19bac4c0428924effda87952642a37dc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a82789da3207fc42a820a18ff6d7da438f84cdd7
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68081666"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69026144"
 ---
 # <a name="polygon"></a>Polygon
 
@@ -49,9 +49,9 @@ ms.locfileid: "68081666"
  Правильные экземпляры **Polygon** — это экземпляры, которые можно сохранить в переменной **geometry** или **geography** , не вызывая исключения. Следующие экземпляры **Polygon** являются правильными:  
   
 -   Пустой экземпляр **Polygon**  
--   Экземпляр **Polygon** с правильным внешним кольцом и с нулем или большим количеством корректных внутренних колец  
+-   Экземпляр **Polygon** с допустимым внешним кольцом (**LineString**) и с нулем или большим количеством допустимых внутренних колец (**LineString**s).  
   
-Чтобы кольцо было правильным, должны выполняться следующие требования.  
+Чтобы кольцо (**LineString**) было допустимым, должны выполняться следующие требования.  
   
 -   Экземпляр **LineString** должен быть принят.  
 -   Экземпляр **LineString** должен иметь не менее четырех точек.  

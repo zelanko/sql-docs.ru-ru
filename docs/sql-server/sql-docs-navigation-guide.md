@@ -1,6 +1,6 @@
 ---
-title: Руководство по навигации в документации по SQL Server
-description: В руководстве по навигации в технической документации по SQL Server рассматриваются такие элементы, как главная страница, оглавление, заголовок, а также использование адресной строки и фильтра версий.
+title: Советі по навигации в документации SQL Server
+description: В руководстве и советах по навигации в технической документации SQL Server объясняются такие элементы, как главная страница, оглавление, заголовок, а также использование адресной строки и фильтра версий.
 ms.date: 07/11/2019
 ms.prod: sql
 ms.reviewer: ''
@@ -8,14 +8,13 @@ ms.custom: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: e5a3e33d48b70146b439790e6439ef4f9cac08b5
-ms.sourcegitcommit: c2052b2bf7261b3294a3a40e8fed8b9e9c588c37
+ms.openlocfilehash: 31bdddab8dce33d8bf0e59d3abf7384231a13e53
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/10/2019
-ms.locfileid: "68941163"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028828"
 ---
 # <a name="sql-server-docs-navigation-guide"></a>Руководство по навигации в документации по SQL Server 
 
@@ -61,11 +60,11 @@ ms.locfileid: "68941163"
 ## <a name="version-filter"></a>Фильтр версий
 В технической документации по SQL Server содержатся сведения о нескольких поддерживаемых версиях и разновидностях SQL Server. Возможности могут различаться в зависимости от версии и разновидности SQL Server, поэтому содержимое тоже может различаться. 
 
-Чтобы просматривать только содержимое, относящееся к интересующей вас версии и разновидности SQL Server, можно использовать фильтр версий: 
+Чтобы просматривать только содержимое, относящееся к интересующей вас версии и разновидности SQL Server, можно использовать [фильтр версий](versioning-system-monikers-ui-sql-server.md): 
 
 ![Фильтр версий в документации к SQL](media/sql-server-docs-navigation-guide/sql-docs-version-filter.gif)
 
-При выборе **Весь SQL** > **Ничего не скрывать** будет отображаться все содержимое и ничто не будет скрыто фильтром версий. 
+Если выбрать **All SQL** \> **Hide nothing** (Все по SQL > Ничего не скрывать) будет отображаться все содержимое и ничто не будет скрыто фильтром версий. Параметр [**Hide nothing** (Ничего не скрывать) не рекомендуется использовать постоянно](versioning-system-monikers-ui-sql-server.md#anchor-allsql-hidenothing).
 
 ## <a name="breadcrumbs"></a>Строки навигации
 

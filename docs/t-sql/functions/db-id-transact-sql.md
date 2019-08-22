@@ -1,7 +1,7 @@
 ---
 title: DB_ID (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 07/30/2017
+ms.date: 08/13/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -23,14 +23,14 @@ ms.assetid: 7b3aef89-a6fd-4144-b468-bf87ebf381b8
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d2dc84cd224b8ea1863fd67561fdcf20a37c4544
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d9908d99f81094b8b8d3c2afd5c82ad870c2de22
+ms.sourcegitcommit: 58f1d5498c87bfe0f6ec4fd9d7bbe723be47896b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68119016"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68995742"
 ---
-# <a name="dbid-transact-sql"></a>DB_ID (Transact-SQL)
+# <a name="db_id-transact-sql"></a>DB_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Эта функция возвращает идентификационный номер указанной базы данных.
@@ -52,6 +52,9 @@ DB_ID ( [ 'database_name' ] )
 
 ## <a name="remarks"></a>Remarks
 `DB_ID` может использоваться только для возврата идентификатора текущей базы данных в Базе данных SQL Azure. Если указанное имя базы данных отличается от текущей базы данных, возвращается значение NULL.
+
+> [!NOTE]
+> При использовании с Базой данных SQL Azure `DB_ID` может вернуть не такой результат, как при запросе `database_id` из представления **sys.databases**. Если объект, вызывающий `DB_ID`, сравнивает результат с другими представлениями **sys**, то вместо этого следует отправить запрос к представлению **sys. databases**.
   
 ## <a name="permissions"></a>Разрешения  
 Если участник, вызывающий `DB_ID`, не является владельцем конкретной базы данных, отличной от базы данных **master** или **tempdb**, то минимальными разрешениями, необходимыми для просмотра соответствующей строки `DB_ID`, являются разрешения уровня сервера `ALTER ANY DATABASE` или `VIEW ANY DATABASE`. Для базы данных **master** функция `DB_ID` требует по крайней мере разрешения `CREATE DATABASE`. База данных, к которой подключается вызывающий участник, всегда отображается в представлении **sys.databases**.
@@ -77,7 +80,7 @@ SELECT DB_ID(N'AdventureWorks2008R2') AS [Database ID];
 GO  
 ```  
   
-### <a name="c-using-dbid-to-specify-the-value-of-a-system-function-parameter"></a>В. Использование DB_ID для указания значения параметра системной функции  
+### <a name="c-using-db_id-to-specify-the-value-of-a-system-function-parameter"></a>В. Использование DB_ID для указания значения параметра системной функции  
 В приведенном ниже примере функция `DB_ID` используется для получения идентификатора базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] в системной функции `sys.dm_db_index_operational_stats`. Эта функция принимает идентификатор базы данных в качестве первого параметра.
   
 ```sql

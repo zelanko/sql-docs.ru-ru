@@ -10,12 +10,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: aboke
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 9538ad04a6e9e1e95a1fafc1080d132e218a196d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 770b7d3d9a16adf64134ba6896c7c3a1f46dcc9b
+ms.sourcegitcommit: 3d189b68c0965909d167de61546b574af1ef7a96
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68062201"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69561116"
 ---
 # <a name="install-polybase-on-windows"></a>Установка PolyBase на компьютере по управлением Windows
 
@@ -72,6 +72,9 @@ ms.locfileid: "68062201"
 3. На странице выбора компонентов выберите пункт **Служба запросов PolyBase для внешних данных**.  
 
    ![Службы PolyBase](../../relational-databases/polybase/media/install-wizard.png "Службы PolyBase")  
+   
+   >[!NOTE]
+   >PolyBase в SQL Server 2019 теперь содержит дополнительный параметр **Соединитель Java для источников данных HDFS**. Дополнительные сведения об этой функции см. в [блоге о функциях предварительной версии SQL Server](https://cloudblogs.microsoft.com/sqlserver/2019/04/24/sql-server-2019-community-technology-preview-2-5-is-now-available/).
    
 4. На странице конфигурации сервера настройте **службу SQL Server PolyBase Engine** и **службу перемещения данных SQL Server PolyBase** на запуск под одной и той же учетной записью домена.  
 
