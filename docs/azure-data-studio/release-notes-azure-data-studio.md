@@ -9,17 +9,33 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
-ms.date: 07/11/2019
-ms.openlocfilehash: 3e2b75282c9babf876d0daec033a435d75c2e2f1
-ms.sourcegitcommit: 0d89bcaebdf87db3bd26db2ca263be9c671b0220
+ms.date: 08/15/2019
+ms.openlocfilehash: cad91dc5b48a60746b4f8ef1f4831a1aa9dc2c40
+ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68731061"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69553107"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Заметки о выпуске для Azure Data Studio
 
 **[Скачайте и установите последний выпуск.](download.md)**
+
+## <a name="august-2019"></a>Август 2019 г.
+
+15 августа 2019 г. &nbsp; / &nbsp; версия: 1.10.0 
+
+&nbsp;
+
+| Изменить | Сведения |
+| :----- | :------ |
+| Выпуск расширения SandDance 1.3.1 | &bull; &nbsp; Обнаружение интеллектуальных диаграмм <br/>&bull; &nbsp; Трехмерные визуализации <br/> &bull; &nbsp; Фильтрация данных |
+| Усовершенствования записных книжек | &bull; &nbsp; Встраивание кода или текстовой ячейки <br/>&bull; &nbsp; Добавлена возможность сохранять , результаты в формате CSV, JSON и т. д., щелкнув правой кнопки мыши сетку результатов SQL. <br/> &bull; &nbsp; Повышение скорости загрузки записных книжек для ускорения загрузки JSON <br/> &bull; &nbsp; Полный список усовершенствований см. [здесь](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+label%3A%22Area%3A+Notebooks%22+milestone%3A%22August+2019+Release%22+is%3Aclosed) |
+| Поддержка SQL Server 2019 |  Этот выпуск содержит поддержку дополнительных функций кластера больших данных SQL Server 2019, включая следующие. <br/> &bull; &nbsp; Сокращено время, необходимое для загрузки сведений о таблицах и столбцах на странице сопоставления объектов. <br/> &bull; &nbsp; Исправлена ошибка с загрузкой существующих учетных данных области базы данных на странице сведений о подключении. <br/> &bull; &nbsp; Увеличен размер выборки по умолчанию, используемый для синтаксического анализа PROSE. | 
+| Расширение DACPAC теперь поддерживает AAD | 
+| Объединение выпусков Visual Studio Code за май версии 1.37 | Последние усовершенствования см. [здесь](https://code.visualstudio.com/updates/v1_37). |
+| Устраненные ошибки и проблемы | Полный список исправлений см. на странице [ошибок и проблем в GitHub](https://github.com/microsoft/azuredatastudio/milestone/39?closed=1). |
+| &nbsp; | &nbsp; |
 
 ## <a name="july-2019"></a>Июль 2019
 

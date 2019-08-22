@@ -25,12 +25,12 @@ ms.assetid: f47eda43-33aa-454d-840a-bb15a031ca17
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 413a77ecb0ad93e64d05f528217597184c03b9a7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a6290a9b8b8ff71c05d52051ffa02f097575484e
+ms.sourcegitcommit: 12b7e3447ca2154ec2782fddcf207b903f82c2c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67914717"
+ms.lasthandoff: 08/12/2019
+ms.locfileid: "68957467"
 ---
 # <a name="openrowset-transact-sql"></a>OPENROWSET (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -142,7 +142,7 @@ OPENROWSET
 |ACP|Столбцы типа **char**, **varchar** или **text** преобразуются из кодовой страницы ANSI или [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows (ISO 1252) в кодовую страницу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |OEM (по умолчанию)|Столбцы типа **char**, **varchar** или **text** преобразуются из системной кодовой страницы OEM в кодовую страницу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |RAW|Преобразование из одной кодовой страницы в другую не выполняется. Это наиболее быстрый параметр.|  
-|*code_page*|Показывает исходную кодовую страницу, в которой представлены символы в файле данных, например 850.<br /><br /> ****Важно! **** Версии до [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] не поддерживают кодовую страницу 65001 (кодировка UTF-8).|  
+|*code_page*|Показывает исходную кодовую страницу, в которой представлены символы в файле данных, например 850.<br /><br /> **Важно!** Версии до [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] не поддерживают кодовую страницу 65001 (кодировка UTF-8).|  
   
  ERRORFILE ='*file_name*'  
  Указывает файл, используемый для сбора строк, которые имеют ошибки форматирования и не могут быть преобразованы в набор строк OLE DB. Эти строки без изменений копируются из файла данных в файл ошибок.  

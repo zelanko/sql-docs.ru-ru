@@ -17,20 +17,19 @@ helpviewer_keywords:
 ms.assetid: dad6f24c-b8d9-4dbe-a561-9b167b8f20c8
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: = azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: 7b53865a753cb538ebeb42573e473281057d4201
-ms.sourcegitcommit: 3a64cac1e1fc353e5a30dd7742e6d6046e2728d9
+ms.openlocfilehash: 33f7c840b69e8101c3452d33884015b52a031212
+ms.sourcegitcommit: 316c25fe7465b35884f72928e91c11eea69984d5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67556906"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68969428"
 ---
 # <a name="format-transact-sql"></a>FORMAT (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-Возвращает значение, указанное в формате, языке и региональных параметрах (необязательно) в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Для выполнения форматирования значения даты, времени и чисел с учетом локали в виде строк используется функция FORMAT. Для общих преобразований типов данных продолжайте использовать CAST и CONVERT.  
+Возвращает значение, отформатированное с использованием указанного формата и (необязательно) языка и региональных параметров. Для выполнения форматирования значения даты, времени и чисел с учетом локали в виде строк используется функция FORMAT. Для общих преобразований типов данных продолжайте использовать CAST и CONVERT.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

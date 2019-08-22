@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 93085324-ebaa-4e38-aac8-5e57b4b0d36d
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 6e3a4a360f4a317139908b57421e420e8cd68402
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3831a9244b3e946dcba01b7d8c31825a75f7b39f
+ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68040606"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69553256"
 ---
 # <a name="dbcc-traceon-transact-sql"></a>DBCC TRACEON (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
 Активирует указанные флаги трассировки.
   
@@ -48,7 +48,7 @@ DBCC TRACEON ( trace# [ ,...n ][ , -1 ] ) [ WITH NO_INFOMSGS ]
 Заполнитель, показывающий, что можно задавать несколько флагов трассировки.  
   
 -1  
-Включает указанные флаги трассировки глобально.  
+Включает указанные флаги трассировки глобально. Этот аргумент является обязательным в Управляемом экземпляре Azure SQL. 
   
 WITH NO_INFOMSGS  
 Подавляет вывод всех информационных сообщений.  
@@ -61,7 +61,9 @@ WITH NO_INFOMSGS
 Флаги трассировки используются для пользовательской настройки определенных характеристик в целях управления работой [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. После активации флаги трассировки остаются включенными на сервере до отключения их посредством выполнения инструкции DBCC TRACEOFF. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] существуют два типа флагов трассировки: для сеанса и глобальные. Флаги трассировки сеанса действуют во время данного соединения и доступны только для этого соединения. Глобальные флаги трассировки устанавливаются на уровне сервера и доступны для каждого соединения с этим сервером. Чтобы определить состояние флага трассировки, используйте инструкцию DBCC TRACESTATUS. Чтобы отключить флаги трассировки, используйте инструкцию DBCC TRACEOFF.
   
 После включения флага трассировки, влияющего на планы запросов, выполните `DBCC FREEPROCCACHE;`, чтобы кэшированные планы были перекомпилированы с использованием нового поведения, определяющего влияние на планы.
-  
+
+Управляемый экземпляр Базы данных SQL Azure поддерживает следующие глобальные флаги трассировки: 460,2301,2389,2390,2453,2467,7471,8207,9389,10316 и 11024
+
 ## <a name="result-sets"></a>Результирующие наборы  
  Инструкция DBCC TRACEON возвращает следующий результирующий набор (сообщение):  
   

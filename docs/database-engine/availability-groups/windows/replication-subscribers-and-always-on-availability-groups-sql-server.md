@@ -1,7 +1,7 @@
 ---
 title: Подписчики репликации и группы доступности AlwaysOn (SQL Server) | Документы Майкрософт
 ms.custom: ''
-ms.date: 01/16/2019
+ms.date: 08/08/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0995f269-0580-43ed-b8bf-02b9ad2d7ee6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 07865ca96c72e9501382212d75a2223fa652572f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d5635d4ce579e01d88079e3a813cddaf3391addc
+ms.sourcegitcommit: 316c25fe7465b35884f72928e91c11eea69984d5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014282"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68969438"
 ---
 # <a name="replication-subscribers-and-always-on-availability-groups-sql-server"></a>Подписчики репликации и группы доступности AlwaysOn (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "68014282"
   Если в группе доступности AlwaysOn, содержащей базу данных, которая является подписчиком репликации, выполняется отработка отказа, то подписка на репликацию может завершиться ошибкой. Для владельцев принудительной подписки на репликацию транзакций агент распространителя сможет продолжить репликацию автоматически после отработки отказа, если подписка была создана с использованием имени прослушивателя группы доступности. Для владельцев подписки по запросу на репликацию транзакций агент распространителя сможет продолжить репликацию автоматически после отработки отказа, если подписка была создана с использованием имени прослушивателя группы доступности, а исходный сервер подписчика настроен и запущен. Это обусловлено тем, что задания агента распространения создаются только для исходного подписчика (первичная реплика группы доступности). Для подписчиков на публикацию слиянием администратор репликации должен вручную перенастроить подписчик путем повторного создания подписки.  
   
 ## <a name="what-is-supported"></a>Что поддерживается  
- Репликация [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддерживает автоматический переход на другой ресурс для издателя и подписчиков транзакций. Подписчики на публикацию слиянием могут входить в группу доступности, но после отработки отказа потребуется вручную настроить нового подписчика. Группы доступности нельзя объединять со сценариями Websync и SQL Server Compact.  
+ Репликация [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддерживает автоматический переход на другой ресурс для издателя и подписчиков транзакций. Подписчики на публикацию слиянием могут входить в группу доступности, но после отработки отказа потребуется вручную настроить нового подписчика. Группы доступности нельзя объединять со сценариями WebSync и SQL Server Compact.  
   
 ## <a name="how-to-create-transactional-subscription-in-an-always-on-environment"></a>Создание подписок транзакций в среде AlwaysOn  
  Для настройки и отработки отказа группы доступности подписчика в отношении репликации транзакций выполните следующие действия.  
@@ -42,15 +42,11 @@ ms.locfileid: "68014282"
   
 4.  Создание подписки по запросу.  
   
-    1.  В среде [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]на основном узле подписчика откройте дерево агента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
+    1.  Используя пример скрипта, приведенный ниже в разделе **Создание подписки по запросу для репликации транзакций**, создайте подписку, указав имя прослушивателя группы доступности подписчика. 
+   
+    2.  После отработки отказа создайте задание агента распространителя в новой первичной реплике с помощью хранимой процедуры **sp_addpullsubscription_agent**. 
   
-    2.  Найдите задание **агента распространителя по запросу** и измените его.  
-  
-    3.  На шаге задания **Запуск агента** выполните проверку параметров `-Publisher` и `-Distributor` . Эти параметры должны содержать правильные имена непосредственно применяемого сервера, экземпляра издателя и распространителя.  
-  
-    4.  В качестве значения параметра `-Subscriber` укажите имя прослушивателя группы доступности подписчика.  
-  
- Когда подписка создается с помощью этих действий, вам не придется больше ничего делать после отработки отказа.  
+ Создавая подписку по запросу с базой данных подписки в группе доступности, после каждой отработки отказа рекомендуется отключать задание агента распространителя в старой первичной реплике и включать его в новой первичной реплике.  
   
 ## <a name="creating-a-transactional-replication-push-subscription"></a>Создание Репликации Транзакции Принудительной Подписки  
   
@@ -69,6 +65,26 @@ EXEC sp_addpushsubscription_agent @publication = N'<publication name>',
        @subscriber_db = N'<subscriber database name>',   
        @job_login = null, @job_password = null, @subscriber_security_mode = 1;  
 GO  
+```  
+
+## <a name="creating-a-transactional-replication-pull-subscription"></a>Создание подписки по запросу для репликации транзакций  
+  
+```  
+-- commands to execute at the subscriber, in the subscriber database:  
+use [<subscriber database name>]  
+EXEC sp_addpullsubscription @publisher= N'<publisher name>',
+        @publisher_db= N'<publisher database name>',
+        @publication= N'<publication name>',
+        @subscription_type = N'pull';
+Go
+
+EXEC sp_addpullsubscription_agent 
+        @publisher =  N'<publisher name>', 
+        @subscriber = N'<availability group listener name>',
+        @publisher_db= N'<publisher database name>',
+        @publication= N'<publication name>' ;
+        @job_login = null, @job_password = null, @subscriber_security_mode = 1;  
+GO
 ```  
   
 ## <a name="to-resume-the-merge-agents-after-the-availability-group-of-the-subscriber-fails-over"></a>Возобновление работы агентов слияния после переноса группы доступности подписчика  

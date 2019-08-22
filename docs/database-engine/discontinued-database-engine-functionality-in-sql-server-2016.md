@@ -33,12 +33,12 @@ helpviewer_keywords:
 ms.assetid: d686cdf0-d11d-4dba-9ec8-de1a5f189f25
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 500171e9aeb9efc66c1e4ba6e5a65c2431306e5c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 99a7b94a45b1baf0ffbf1a491a0387ef11108ebd
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68050551"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69494085"
 ---
 # <a name="discontinued-database-engine-functionality-in-sql-server-2016"></a>Нерекомендуемые функции ядра СУБД в SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -52,10 +52,12 @@ ms.locfileid: "68050551"
 - Уровень совместимости 90 не поддерживается. Дополнительные сведения см. в разделе [Уровень совместимости инструкции ALTER DATABASE (Transact-SQL)](../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
 
 - Подсистема ActiveX не поддерживается. Используйте вместо нее командную строку или скрипты PowerShell.
+
+- Параметры запуска **-h** и **-g**. Дополнительные сведения см. в разделе [Параметры запуска службы Database Engine](https://docs.microsoft.com/sql/database-engine/configure-windows/database-engine-service-startup-options?view=sql-server-2014).
   
 ## <a name="previous-versions"></a>Предыдущие версии  
   
-- [Неподдерживаемые функции ядра СУБД в SQL Server 2014](http://docs.microsoft.com/sql/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014)
+- [Неподдерживаемые функции ядра СУБД в SQL Server 2014](https://docs.microsoft.com/sql/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014)
 
 ## <a name="see-also"></a>См. также:  
  [Нерекомендуемые функции ядра СУБД в SQL Server 2016](../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)   

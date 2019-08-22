@@ -19,24 +19,23 @@ helpviewer_keywords:
 ms.assetid: e4cb8eb8-affb-4810-a8a9-0110af3c247a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: c5c5e2ca321deb2b7e82774db1e91c0b0149deb5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d4f68dd33d2a6d7a91aad0ceb4b606efaaa39429
+ms.sourcegitcommit: 316c25fe7465b35884f72928e91c11eea69984d5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68024369"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68969446"
 ---
-# <a name="identseed-transact-sql"></a>IDENT_SEED (Transact-SQL)
+# <a name="ident_seed-transact-sql"></a>IDENT_SEED (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Возвращает исходное начальное значение (вида **numeric**( **@@** MAXPRECISION,0)), указанное при создании столбца идентификаторов в таблице или представлении. Изменение текущего значения столбца идентификаторов с помощью инструкции DBCC CHECKIDENT не изменяет значение, возвращаемое этой функцией.  
+  Возвращает исходное начальное значение, указанное при создании столбца идентификаторов в таблице или представлении. Изменение текущего значения столбца идентификаторов с помощью инструкции DBCC CHECKIDENT не изменяет значение, возвращаемое этой функцией.  
   
  ![Значок ссылки на статью](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на статью") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
 IDENT_SEED ( 'table_or_view' )  
 ```  
   
@@ -45,7 +44,7 @@ IDENT_SEED ( 'table_or_view' )
  [Выражение](../../t-sql/language-elements/expressions-transact-sql.md), указывающее таблицу или представление, в которых проверяется начальное значение идентификатора. Аргумент *table_or_view* может быть строковой константой, заключенной в кавычки, переменной, функцией или именем столбца. Аргумент *table_or_view* имеет тип **char**, **nchar**, **varchar** или **nvarchar**.  
   
 ## <a name="return-types"></a>Типы возвращаемых данных  
- **numeric**  
+**numeric**([@@MAXPRECISION](../../t-sql/functions/max-precision-transact-sql.md),0))  
   
 ## <a name="exceptions"></a>Исключения  
  Возвращает значение NULL в случае ошибки или если вызывающий объект не имеет разрешений для просмотра текущего объекта.  
@@ -57,7 +56,7 @@ IDENT_SEED ( 'table_or_view' )
 ### <a name="a-returning-the-seed-value-from-a-specified-table"></a>A. Возврат начального значения из указанной таблицы  
  Следующий пример возвращает начальное значение для таблицы `Person.Address` в базе данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT IDENT_SEED('Person.Address') AS Identity_Seed;  
@@ -67,7 +66,7 @@ GO
 ### <a name="b-returning-the-seed-value-from-multiple-tables"></a>Б. Возврат начального значения из нескольких таблиц  
  В следующем примере возвращаются таблицы базы данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] со столбцом идентификаторов, заполненным начальными значениями.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT TABLE_SCHEMA, TABLE_NAME,   

@@ -9,10 +9,10 @@ ms.technology: ''
 ms.author: mikeray
 author: MikeRayMSFT
 ms.openlocfilehash: 1e4d29fb73c11b727c21730a71eb8d97331296f6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: 12b7e3447ca2154ec2782fddcf207b903f82c2c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 08/12/2019
 ms.locfileid: "68049778"
 ---
 # <a name="sql-server-managing-partners"></a>Партнеры по управлению SQL Server
@@ -23,10 +23,10 @@ ms.locfileid: "68049778"
 
 | Партнер | Описание | Ссылки |
 | --- | --- | --- | --- |
-|![idera][1] |**IDERA**<br>SQL Compliance Manager — это комплексное решение аудита, показывающее, кто и когда выполнял конкретные действия на серверах SQL Server, что позволяет обеспечить соответствие нормативным требованиям и требованиям к безопасности данных.<br><br>[Требования к системе][idera_requirements]|<!--[Marketplace][idera_marketplace]<br>-->[Веб-сайт][idera_website]<br>[Twitter][idera_twitter]<br>[Видео][idera_youtube]<br>Следующие шаги | |
+|![idera][1] |**IDERA**<br>SQL Compliance Manager — это комплексное решение аудита, показывающее, кто и когда выполнял конкретные действия на серверах SQL Server, что позволяет обеспечить соответствие нормативным требованиям и требованиям к безопасности данных.<br><br>[Требования к системе][idera_requirements]|<!--[Marketplace][idera_marketplace]<br>-->[Веб-сайт][idera_website]<br>[Twitter][idera_twitter]<br>[Видео][idera_youtube] | |
 
-## <a name="next-steps"></a>Дополнительные сведения о некоторых других партнерах см. в разделах, посвященных [партнерам по решениям высокой доступности и аварийного восстановления][hadr_partners], [management partners][monitor_partners] и [партнерам по разработке][dev_partners].
-To learn more about some of our other partners, see <bpt id="p1">[</bpt>High availability, and disaster recovery partners<ept id="p1">][hadr_partners]</ept>, <bpt id="p2">[</bpt>management partners<ept id="p2">][monitor_partners]</ept>, and <bpt id="p3">[</bpt>development partners<ept id="p3">][dev_partners]</ept>.
+## <a name="next-steps"></a>Следующие шаги
+Дополнительные сведения о некоторых других наших партнерах см. в разделах, посвященных [партнерам по обеспечению высокой доступности и аварийного восстановления][hadr_partners], [партнерам по управлению][monitor_partners] и [партнерам по разработке][dev_partners].
 
 <!--Image references-->
 [1]: ./media/partner-hadr-sql-server/idera_logo.png

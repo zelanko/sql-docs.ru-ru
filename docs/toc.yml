@@ -10376,17 +10376,8 @@
             - name: Высокий уровень доступности для контейнеров
               href: linux/sql-server-linux-container-ha-overview.md
               items:
-                - name: Группы доступности AlwaysOn для контейнеров SQL Server
-                  href: linux/sql-server-ag-kubernetes.md
-                  items:
-                    - name: Развертывание
-                      href: linux/sql-server-linux-kubernetes-deploy.md
-                    - name: Управление
-                      href: linux/sql-server-linux-kubernetes-manage.md
-                    - name: Подключение
-                      href: linux/sql-server-linux-kubernetes-connect.md
-                    - name: Создание скриптов развертывания
-                      href: linux/sql-server-linux-kubernetes-create-deployment.md
+                - name: Настройка контейнера в Kubernetes
+                  href: linux/tutorial-sql-server-containers-kubernetes.md
         - name: безопасность
           href: linux/sql-server-linux-security-overview.md
           items:

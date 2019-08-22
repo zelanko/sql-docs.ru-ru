@@ -10,12 +10,12 @@ ms.assetid: 0b57f375-9242-4bb2-9d4b-c560d5a93524
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 76e5accd2894e05fd9a9b346ad9b4825ccd81bc7
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 8c2950e677537ee6a6bc35d930e124f285bc24df
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893018"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69494312"
 ---
 # <a name="whats-new-in-sql-server-2017"></a>Новые возможности в SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -90,7 +90,7 @@ SQL Server Analysis Services 2017 включает множество улуч
 - Новое действие **Строки детализации** для конечного пользователя, позволяющее **Показать подробности** по статистических данным. Функции [SELECTCOLUMNS](/dax/selectcolumns-function-dax) и **DETAILROWS** для создания выражений со строками детализации. (CTP 1.1)
 - DAX-оператор **IN** для указания множества значений. (CTP 1.1)
 
-Дополнительные сведения см. в разделе [What's new in SQL Server Analysis Services 2017](https://docs.microsoft.com/analysis-services/what-s-new-in-sql-server-analysis-services-2017) (Новые возможности SQL Server Analysis Services 2017).
+Дополнительные сведения см. в статье [What's New in SQL Server Analysis Services](/analysis-services/what-s-new-in-analysis-services) (Новые возможности SQL Server Analysis Services).
 
 ## <a name="sql-server-2017-reporting-services-ssrs"></a>Службы SQL Server 2017 Reporting Services (SSRS)
 Службы SQL Server Reporting Services больше не доступны для установки с помощью программы установки SQL Server. Перейдите в Центр загрузки Майкрософт, чтобы [загрузить службы Microsoft SQL Server 2017 Reporting Services](https://www.microsoft.com/download/details.aspx?id=55252). 

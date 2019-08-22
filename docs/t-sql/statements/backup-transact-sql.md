@@ -1,7 +1,7 @@
 ---
 title: BACKUP (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 06/27/2019
+ms.date: 08/13/2019
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -46,12 +46,12 @@ ms.assetid: 89a4658a-62f1-4289-8982-f072229720a1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 8d3a49210575efac6f7d8b4190f96670d06c8824
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 867ad139d591827a2159e77bbcdd33dbb85c6b6d
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68809735"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028963"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 
@@ -431,7 +431,7 @@ BLOCKSIZE **=** { *blocksize* |  **@** _blocksize\_variable_ } — указыв
 
 BUFFERCOUNT **=** { *buffercount* |  **@** _buffercount\_variable_ } — определяет общее число буферов ввода-вывода, которые будут использоваться для операции резервного копирования. Можно указать любое целое положительное значение, однако большое число буферов может вызвать ошибку нехватки памяти из-за чрезмерного виртуального адресного пространства в процессе Sqlservr.exe.
 
-Общее используемое буферами пространство определяется по следующей формуле: *buffercount/maxtransfersize*.
+Общий объем пространства, используемого буферами, определяется по следующей формуле: `BUFFERCOUNT * MAXTRANSFERSIZE`.
 
 > [!NOTE]
 > Важные сведения об использовании параметра `BUFFERCOUNT` см. в блоге [Неправильный параметр передачи данных BufferCount может привести к OOM](https://blogs.msdn.com/b/sqlserverfaq/archive/2010/05/06/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition.aspx).
@@ -1041,7 +1041,7 @@ BLOCKSIZE **=** { *blocksize* |  **@** _blocksize\_variable_ } — указыв
 
 BUFFERCOUNT **=** { *buffercount* |  **@** _buffercount\_variable_ } — определяет общее число буферов ввода-вывода, которые будут использоваться для операции резервного копирования. Можно указать любое целое положительное значение, однако большое число буферов может вызвать ошибку нехватки памяти из-за чрезмерного виртуального адресного пространства в процессе Sqlservr.exe.
 
-Общее используемое буферами пространство определяется по следующей формуле: *buffercount/maxtransfersize*.
+Общий объем пространства, используемого буферами, определяется по следующей формуле: `BUFFERCOUNT * MAXTRANSFERSIZE`.
 
 > [!NOTE]
 > Важные сведения об использовании параметра `BUFFERCOUNT` см. в блоге [Неправильный параметр передачи данных BufferCount может привести к OOM](https://blogs.msdn.com/b/sqlserverfaq/archive/2010/05/06/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition.aspx).

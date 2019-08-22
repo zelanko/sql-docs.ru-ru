@@ -183,6 +183,8 @@
   items:
     - name: Подключение
       items:
+        - name: Подключение с замыканием на себя
+          href: ../advanced-analytics/connect/loopback-connection.md
         - name: Подключение к OLAP из R
           items:
             - name: Использование данных из кубов OLAP в R
@@ -225,34 +227,22 @@
           href: ../advanced-analytics/sql-native-scoring.md
     - name: Управление пакетами
       items:
-        - name: Пакеты по умолчанию
-          href: ../advanced-analytics/package-management/default-packages.md
-        - name: Получение сведений о пакете
-          href: ../advanced-analytics/package-management/installed-package-information.md
+        - name: Установка новых пакетов Python
+          items:
+            - name: Получение сведений о пакете Python
+              href: ../advanced-analytics/package-management/python-package-information.md
+            - name: Установка пакетов Python
+              href: ../advanced-analytics/package-management/install-additional-python-packages-on-sql-server.md
         - name: Установка новых пакетов R
           items:
-            - name: Установка пакета R
-              href: ../advanced-analytics/r/install-additional-r-packages-on-sql-server.md
-            - name: Использование T-SQL
-              href: ../advanced-analytics/r/install-r-packages-tsql.md
-            - name: Использование диспетчеров пакетов
-              href: ../advanced-analytics/r/use-r-package-managers-on-sql-server.md
-            - name: Использование RevoScaleR
-              items:
-                - name: Установка с помощью RevoScaleR
-                  href: ../advanced-analytics/r/use-revoscaler-to-manage-r-packages.md
-                - name: Включение удаленного управления пакетами R
-                  href: ../advanced-analytics/r/r-package-how-to-enable-or-disable.md
-                - name: "Синхронизация пакетов\_R"
-                  href: ../advanced-analytics/r/package-install-uninstall-and-sync.md
+            - name: Получение сведений о пакете R
+              href: ../advanced-analytics/package-management/r-package-information.md
+            - name: Установка пакетов R
+              href: ../advanced-analytics/package-management/install-additional-r-packages-on-sql-server.md
             - name: Создание репозитория miniCRAN
               href: ../advanced-analytics/r/create-a-local-package-repository-using-minicran.md
             - name: Советы по использованию пакетов R
               href: ../advanced-analytics/r/packages-installed-in-user-libraries.md
-        - name: Установка новых пакетов Python
-          items:
-            - name: Использование диспетчеров пакетов
-              href: ../advanced-analytics/python/install-additional-python-packages-on-sql-server.md
     - name: Администрирование
       items:
         - name: Управление интеграцией

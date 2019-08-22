@@ -3,19 +3,19 @@ title: Расширение SQL Server 2019 (предварительная ве
 titleSuffix: Azure Data Studio
 description: Расширение предварительной версии SQL Server 2019 для Azure Data Studio
 ms.custom: seodec18
-ms.date: 06/25/2019
+ms.date: 08/15/2019
 ms.reviewer: alayu; sstein
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: 9b25fd044b94e21151b687d428c469a12d8c8a5d
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 5def1291480b4b2dbe1eca289f02e5c9cfd6b8d7
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67959219"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69494044"
 ---
 # <a name="sql-server-2019-extension-preview"></a>Расширение SQL Server 2019 (предварительная версия)
 
@@ -29,9 +29,9 @@ ms.locfileid: "67959219"
 
    |Платформа|Загрузить|Дата выпуска|Версия
    |:---|:---|:---|:---|
-   |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2097803)|25 июня 2019 г. |0.14.1
-   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2097802)|25 июня 2019 г. |0.14.1
-   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2097801)|25 июня 2019 г. |0.14.1
+   |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2101241)|15 августа 2019 г. |0.15.0
+   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2101240)|15 августа 2019 г. |0.15.0
+   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2101239)|15 августа 2019 г. |0.15.0
 
 1. В Azure Data Studio выберите **Установить расширение из пакета VSIX** в меню **Файл** и выберите скачанный VSIX-файл.
 
@@ -42,6 +42,13 @@ ms.locfileid: "67959219"
 1. После перезагрузки расширение установит зависимости. Ход выполнения отображается в окне вывода: это может занять несколько минут.
 
 1. После установки зависимостей закройте и снова откройте Azure Data Studio. Тип подключения **кластера больших данных SQL Server** будет недоступен, пока вы не перезапустите Azure Data Studio.
+
+## <a name="changes-in-release-015"></a>Изменения в выпуске 0.15
+* Мастер создания внешних таблиц:
+  * Сокращено время, необходимое для загрузки сведений о таблицах и столбцах на странице сопоставления объектов.
+  * Исправлена ошибка с загрузкой существующих учетных данных области базы данных на странице сведений о подключении.
+* Создание внешней таблицы с помощью мастера CSV-файлов:
+  * Увеличен размер выборки по умолчанию, используемый для синтаксического анализа PROSE.
 
 ## <a name="changes-in-release-0141"></a>Изменения в выпуске 0.14.1
 * Поддержка источников данных CTP-версии 3.1
