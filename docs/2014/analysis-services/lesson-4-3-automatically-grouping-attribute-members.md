@@ -10,12 +10,12 @@ ms.assetid: 9fb2cda3-a122-4a4c-82e0-3454865eef04
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 568cb46a17ac29cabe45b79212400fd020be84c3
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 6dc768188f25640a3685c8526bfceb3874154f40
+ms.sourcegitcommit: cbbb210c0315f9e2be2b9cd68db888ac53429814
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888419"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69890836"
 ---
 # <a name="automatically-grouping-attribute-members"></a>Автоматическое группирование элементов атрибута
   При просмотре куба обычно выполняется распределение по измерениям элементов одной иерархии атрибута на основе элементов другой иерархии атрибута. Например, можно сгруппировать продажи по таким признакам, как город, приобретенный товар или пол. Однако при работе с некоторыми типами атрибутов лучше группировать их элементы автоматически с использованием служб [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , основываясь на распределении элементов в рамках иерархии атрибута. Например, с помощью служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] можно объединить заказчиков в группы на основе их годового дохода. При этом пользователь, просматривающий иерархию атрибута, будет видеть названия и значения групп вместо самих элементов групп. Данный подход ограничивает количество отображаемых уровней, что упрощает анализ данных.  
@@ -123,7 +123,7 @@ ms.locfileid: "68888419"
      Обратите внимание, что созданы три группы элементов атрибута **Часы отпуска** , в которых содержатся значения по продажам товаров. В остальных 7 группах содержатся элементы без данных о продажах.  
   
 ## <a name="next-task-in-lesson"></a>Следующая задача занятия  
- [Скрытие и отключение иерархий атрибутов](https://docs.microsoft.com/analysis-services/lesson-4-4-hiding-and-disabling-attribute-hierarchies)  
+ [Скрытие и отключение иерархий атрибутов](lesson-4-4-hiding-and-disabling-attribute-hierarchies.md)  
   
 ## <a name="see-also"></a>См. также  
  [Группирование элементов атрибутов (дискретизация)](multidimensional-models/attribute-properties-group-attribute-members.md)  

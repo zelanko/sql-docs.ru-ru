@@ -1,5 +1,5 @@
 ---
-title: Хранимая процедура sp_update_alert (Transact-SQL) | Документация Майкрософт
+title: sp_update_alert (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,14 +17,14 @@ helpviewer_keywords:
 ms.assetid: 4bbaeaab-8aca-4c9e-abc1-82ce73090bd3
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: baecdca82d7edcb27196c7c43d9d071a82adf792
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2856f89264994b9f1812653450d94e2cb2e2b0c2
+ms.sourcegitcommit: cbbb210c0315f9e2be2b9cd68db888ac53429814
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68084951"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69890847"
 ---
-# <a name="spupdatealert-transact-sql"></a>Хранимая процедура sp_update_alert (Transact-SQL)
+# <a name="sp_update_alert-transact-sql"></a>Хранимая процедура sp_update_alert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Обновляет параметры существующего предупреждения.  
@@ -62,21 +62,21 @@ sp_update_alert
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @name = ] 'name'` Имя оповещения, которое требуется обновить. *имя* — **sysname**, не имеет значения по умолчанию.  
+`[ @name = ] 'name'`Имя обновляемого оповещения. Аргумент *Name* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @new_name = ] 'new_name'` Новое имя для оповещения. Имя должно быть уникальным. *новое_имя* — **sysname**, значение по умолчанию NULL.  
+`[ @new_name = ] 'new_name'`Новое имя предупреждения. Имя должно быть уникальным. *new_name* имеет тип **sysname**и значение по умолчанию NULL.  
   
-`[ @enabled = ] enabled` Указывает, включено ли предупреждение (**1**) или не включено (**0**). *включить* — **tinyint**, значение по умолчанию NULL. Сработать может только активированное предупреждение.  
+`[ @enabled = ] enabled`Указывает, включено ли оповещение (**1**) или не включено (**0**). *Enabled* имеет тип **tinyint**и значение по умолчанию NULL. Сработать может только активированное предупреждение.  
   
-`[ @message_id = ] message_id` Новый сообщение или номер ошибки для определения предупреждения. Как правило *message_id* соответствует номеру ошибки в **sysmessages** таблицы. *message_id* — **int**, значение по умолчанию NULL. Сообщение, идентификатор может использоваться только в том случае, если уровень серьезности для предупреждения является **0**.  
+`[ @message_id = ] message_id`Новое сообщение или номер ошибки для определения предупреждения. Как правило, *message_id* соответствует номеру ошибки в таблице **sysmessages** . *message_id* имеет **тип int**и значение по умолчанию NULL. Идентификатор сообщения можно использовать только в том случае, если для предупреждения задан уровень серьезности **0**.  
   
-`[ @severity = ] severity` Новый уровень серьезности (от **1** через **25**) для определения предупреждения. Любой [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сообщение, отправленное в журнал приложений Windows с заданным уровнем серьезности, будет активировать предупреждение. *уровень серьезности* — **int**, значение по умолчанию NULL. Уровень серьезности может использоваться только в том случае, если параметр идентификатор сообщения для предупреждения может быть **0**.  
+`[ @severity = ] severity`Новый уровень серьезности (от **1** до **25**) для определения предупреждения. Предупреждение [!INCLUDE[msCoName](../../includes/msconame-md.md)] будет активировано любым [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сообщением, отправленным в журнал приложений Windows с заданной степенью серьезности. *уровень серьезности* — **int**, значение по умолчанию NULL. Степень серьезности может использоваться, только если параметр идентификатора сообщения для предупреждения равен **0**.  
   
-`[ @delay_between_responses = ] delay_between_responses` Новый период ожидания между ответами на предупреждение в секундах. *delay_between_responses* — **int**, значение по умолчанию NULL.  
+`[ @delay_between_responses = ] delay_between_responses`Новый период ожидания (в секундах) между ответами на предупреждение. *delay_between_responses* имеет **тип int**и значение по умолчанию NULL.  
   
-`[ @notification_message = ] 'notification_message'` Измененный текст дополнительного сообщения, отправляемое оператору как часть сообщения электронной почты, **команды net send**, или уведомления на пейджер. *notification_message* — **nvarchar(512)** , значение по умолчанию NULL.  
+`[ @notification_message = ] 'notification_message'`Измененный текст дополнительного сообщения, отправленного оператору как часть уведомления электронной почты, **команды net send**или пейджера. *notification_message* имеет тип **nvarchar (512)** и значение по умолчанию NULL.  
   
-`[ @include_event_description_in = ] include_event_description_in` Указывает, является ли описание [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ошибки в журнале приложений Windows, которые должны быть включены в сообщение уведомления. *include_event_description_in* — **tinyint**, значение по умолчанию NULL, и может иметь одно или несколько из следующих значений.  
+`[ @include_event_description_in = ] include_event_description_in`Указывает, следует ли включать описание [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ошибки из журнала приложений Windows в сообщение уведомления. *include_event_description_in* имеет тип **tinyint**, значение по умолчанию NULL и может принимать одно или несколько из этих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -86,54 +86,54 @@ sp_update_alert
 |**4**|**команда net send.**|  
 |**7**|All|  
   
-`[ @database_name = ] 'database'` Имя базы данных, в которой должна произойти ошибка, для которой срабатывает предупреждение. *База данных* является **sysname.** Символы, заключенные в квадратные скобки ([ ]), являются недопустимыми. Значение по умолчанию — NULL.  
+`[ @database_name = ] 'database'`Имя базы данных, в которой должна произойти ошибка для срабатывания предупреждения. *база данных* имеет тип **sysname.** Символы, заключенные в квадратные скобки ([ ]), являются недопустимыми. Значение по умолчанию — NULL.  
   
-`[ @event_description_keyword = ] 'event_description_keyword'` Последовательность символов, которые необходимо найти в описании ошибки в журнале сообщений об ошибках. Могут использоваться символы-шаблоны выражений [!INCLUDE[tsql](../../includes/tsql-md.md)] LIKE. *event_description_keyword* — **nvarchar(100)** , значение по умолчанию NULL. Этот параметр полезен для фильтрации имен объектов (например, **% customer_table %** ).  
+`[ @event_description_keyword = ] 'event_description_keyword'`Последовательность символов, которая должна быть найдена в описании ошибки в журнале сообщений об ошибках. Могут использоваться символы-шаблоны выражений [!INCLUDE[tsql](../../includes/tsql-md.md)] LIKE. *event_description_keyword* имеет тип **nvarchar (100)** и значение по умолчанию NULL. Этот параметр полезен для фильтрации имен объектов (например, **% customer_table%** ).  
   
-`[ @job_id = ] job_id` Идентификационный номер задания. *job_id* — **uniqueidentifier**, значение по умолчанию NULL. Если *job_id* указано, *имя_задания* необходимо пропустить.  
+`[ @job_id = ] job_id`Идентификационный номер задания. *job_id* имеет тип **uniqueidentifier**и значение по умолчанию NULL. Если задан аргумент *job_id* , то аргумент *имя_задания* должен быть опущен.  
   
-`[ @job_name = ] 'job_name'` Имя задания, которое выполняется в ответ на это предупреждение. *имя_задания* — **sysname**, значение по умолчанию NULL. Если *имя_задания* указано, *job_id* необходимо пропустить.  
+`[ @job_name = ] 'job_name'`Имя задания, которое выполняется в ответ на это предупреждение. Аргумент *имя_задания* имеет тип **sysname**и значение по умолчанию NULL. Если указан аргумент *имя_задания* , то аргумент *job_id* должен быть опущен.  
   
-`[ @occurrence_count = ] occurrence_count` Сбрасывает количество появлений предупреждения. *occurrence_count* — **int**, значение по умолчанию NULL ему можно присвоить только значение **0**.  
+`[ @occurrence_count = ] occurrence_count`Сбрасывает число попыток возникновения предупреждения. *occurrence_count* имеет **тип int**, значение по умолчанию NULL и может быть задано только равным **0**.  
   
-`[ @count_reset_date = ] count_reset_date` Сбрасывает дату последнего сброса счетчика предупреждений. *count_reset_date* — **int**, значение по умолчанию NULL.  
+`[ @count_reset_date = ] count_reset_date`Сбрасывает дату последнего сброса счетчика вхождений. *count_reset_date* имеет **тип int**и значение по умолчанию NULL.  
   
-`[ @count_reset_time = ] count_reset_time` Сбрасывает время последнего сброса счетчика предупреждений. *count_reset_time* — **int**, значение по умолчанию NULL.  
+`[ @count_reset_time = ] count_reset_time`Сбрасывает время последнего сброса счетчика вхождений. *count_reset_time* имеет **тип int**и значение по умолчанию NULL.  
   
-`[ @last_occurrence_date = ] last_occurrence_date` Сбрасывает дату последнего возникновения предупреждения. *last_occurrence_date* — **int**, значение по умолчанию NULL ему можно присвоить только значение **0**.  
+`[ @last_occurrence_date = ] last_occurrence_date`Сбрасывает дату последнего возникновения предупреждения. *last_occurrence_date* имеет **тип int**, значение по умолчанию NULL и может быть задано только равным **0**.  
   
-`[ @last_occurrence_time = ] last_occurrence_time` Сбрасывает время последнего возникновения предупреждения. *last_occurrence_time* — **int**, значение по умолчанию NULL ему можно присвоить только значение **0**.  
+`[ @last_occurrence_time = ] last_occurrence_time`Сбрасывает время последнего возникновения предупреждения. *last_occurrence_time* имеет **тип int**, значение по умолчанию NULL и может быть задано только равным **0**.  
   
-`[ @last_response_date = ] last_response_date` Сбрасывает дату последнего ответа предупреждение службы SQLServerAgent. *last_response_date* — **int**, значение по умолчанию NULL ему можно присвоить только значение **0**.  
+`[ @last_response_date = ] last_response_date`Сбрасывает дату последнего ответа на предупреждение службой SQLServerAgent. *last_response_date* имеет **тип int**, значение по умолчанию NULL и может быть задано только равным **0**.  
   
-`[ @last_response_time = ] last_response_time` Сбрасывает время последнего ответа предупреждение службы SQLServerAgent. *last_response_time* — **int**, значение по умолчанию NULL ему можно присвоить только значение **0**.  
+`[ @last_response_time = ] last_response_time`Сбрасывает время последнего ответа на предупреждение службой SQLServerAgent. *last_response_time* имеет **тип int**, значение по умолчанию NULL и может быть задано только равным **0**.  
   
-`[ @raise_snmp_trap = ] raise_snmp_trap` Зарезервировано.  
+`[ @raise_snmp_trap = ] raise_snmp_trap`Процессу.  
   
-`[ @performance_condition = ] 'performance_condition'` Значение, выраженное в формате **"***itemcomparatorvalue***"** . *performance_condition* — **nvarchar(512)** , значение по умолчанию NULL и состоит из следующих элементов.  
+`[ @performance_condition = ] 'performance_condition'`Значение, выраженное в формате **"** _итемкомпараторвалуе_ **"** . *performance_condition* имеет тип **nvarchar (512)** , значение по умолчанию NULL и состоит из этих элементов.  
   
 |Элемент формата|Описание|  
 |--------------------|-----------------|  
 |*Элемент*|Объект производительности, счетчик производительности или именованный экземпляр счетчика.|  
-|*Оператор сравнения*|Один из этих операторов: **>** , **<** , **=**|  
+|*Сравнения*|Один из следующих операторов: **>** , **<** , **=**|  
 |*Значение*|Числовое значение счетчика|  
   
-`[ @category_name = ] 'category'` Имя категории предупреждения. *Категория* — **sysname** значение по умолчанию NULL.  
+`[ @category_name = ] 'category'`Имя категории оповещений. *Category* имеет тип **sysname** и значение по умолчанию NULL.  
   
-`[ @wmi_namespace = ] 'wmi_namespace'` Пространство имен WMI для запроса событий. *wmi_namespace* — **sysname**, значение по умолчанию NULL.  
+`[ @wmi_namespace = ] 'wmi_namespace'`Пространство имен WMI для запроса событий. *wmi_namespace* имеет тип **sysname**и значение по умолчанию NULL.  
   
-`[ @wmi_query = ] 'wmi_query'` Запрос, указывающий событие WMI для предупреждения. *wmi_query* — **nvarchar(512)** , значение по умолчанию NULL.  
+`[ @wmi_query = ] 'wmi_query'`Запрос, указывающий событие WMI для предупреждения. *wmi_query* имеет тип **nvarchar (512)** и значение по умолчанию NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- **0** (успешное завершение) или **1** (неуспешное завершение)  
+ **0** (успешное завершение) или **1** (сбой)  
   
 ## <a name="remarks"></a>Примечания  
- Только **sysmessages** записываемый [!INCLUDE[msCoName](../../includes/msconame-md.md)] журнал приложений Windows могут активировать предупреждения.  
+ Предупреждение может создаваться только [!INCLUDE[msCoName](../../includes/msconame-md.md)] в таблице sysmessages, записанной в журнал приложений Windows.  
   
- **Хранимая процедура sp_update_alert** изменяет только те оповещения установки, о параметрах которого предоставляются значения. Если параметр пропущен, сохраняется текущая настройка.  
+ **sp_update_alert** изменяет только те параметры оповещений, для которых указаны значения параметров. Если параметр пропущен, сохраняется текущая настройка.  
   
 ## <a name="permissions"></a>Разрешения  
- Для выполнения этой хранимой процедуры, пользователи должны входить в **sysadmin** предопределенной роли сервера.  
+ Для выполнения этой хранимой процедуры пользователи должны быть членами предопределенной роли сервера **sysadmin** .  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере значение параметра активирования предупреждения `Test Alert` меняется на `0`.  
@@ -150,7 +150,7 @@ GO
   
 ## <a name="see-also"></a>См. также  
  [sp_add_alert (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-add-alert-transact-sql.md)   
- [sp_help_alert &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-alert-transact-sql.md)   
+ [sp_help_alert &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-alert-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   
