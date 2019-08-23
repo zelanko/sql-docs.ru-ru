@@ -31,7 +31,7 @@ ms.locfileid: "68892444"
 ### <a name="powerpivot-gallery-thumbnail-images-show-as-a-red-x"></a>Миниатюрные изображения в галерее PowerPivot отображаются в виде красного x  
  Одной из возможных причин **Интеграция функций PowerPivot для семейства веб-сайтов** не активна. Выполните следующие действия.  
   
-1.  В библиотеке PowerPivot Gallery щелкните **Параметры сайта** в значке шестеренки Параметры SharePoint ![]параметры(https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint") или в списке " **домашний** ".  
+1.  В библиотеке PowerPivot Gallery щелкните **Параметры сайта** в значке шестеренки![Параметры SharePoint](https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "параметры SharePoint") или в списке " **домашний** ".  
   
 2.  Щелкните **Компоненты семейства веб-сайтов** в разделе **Администрирование семейства веб-сайтов**.  
   
