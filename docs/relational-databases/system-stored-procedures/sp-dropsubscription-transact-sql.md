@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: 7551f345-5510-4684-ab53-f9057249d13a
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: c752adc6ea3c97900956b64a026a5acd13899a98
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 21d90c94c73eb6e49fcfedf997fffe2881146a22
+ms.sourcegitcommit: 676458a9535198bff4c483d67c7995d727ca4a55
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68771382"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69903628"
 ---
-# <a name="spdropsubscription-transact-sql"></a>sp_dropsubscription (Transact-SQL)
+# <a name="sp_dropsubscription-transact-sql"></a>sp_dropsubscription (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Удаляет подписки на некоторую статью, публикацию или набор подписок на издателе. Эта хранимая процедура выполняется на издателе в базе данных публикации.  
@@ -46,7 +46,7 @@ sp_dropsubscription [ [ @publication= ] 'publication' ]
   
 `[ @article = ] 'article'`Имя статьи. Аргумент *article* имеет тип **sysname**и значение по умолчанию NULL. Если **все**, то подписки на все статьи для каждой указанной публикации и подписчика удаляются. Используйте **все** для публикаций, которые допускают немедленное обновление.  
   
-`[ @subscriber = ] 'subscribe_r'`Имя подписчика, для которого будут удалены подписки. Аргумент *Subscriber* имеет тип **sysname**и не имеет значения по умолчанию. Если **все**, то все подписки для всех подписчиков удаляются.  
+`[ @subscriber = ] 'subscriber'`Имя подписчика, для которого будут удалены подписки. Аргумент *Subscriber* имеет тип **sysname**и не имеет значения по умолчанию. Если **все**, то все подписки для всех подписчиков удаляются.  
   
 `[ @destination_db = ] 'destination_db'`Имя целевой базы данных. *destination_db* имеет тип **sysname**и значение по умолчанию NULL. Если имеет значение NULL, то все подписки от этого подписчика удаляются.  
   
