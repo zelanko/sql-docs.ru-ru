@@ -16,28 +16,24 @@ helpviewer_keywords:
 ms.assetid: c90aa8a4-6ece-48de-901c-17d23739a9ff
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 3e7adeb2649575b96fbd8dc7101db93ab3332e06
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cbee5187a7318e0953ea61d92f7478d83e5afaff
+ms.sourcegitcommit: 594cee116fa4ee321e1f5e5206f4a94d408f1576
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68093870"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "70009340"
 ---
 # <a name="registry-entries-for-odbc-components"></a>Записи реестра для компонентов ODBC
 > [!NOTE]  
->  Начиная с Windows XP и Windows Server 2003, ODBC включена в операционную систему Windows. ODBC следует только явным образом установить в более ранних версиях Windows.  
+>  Начиная с Windows XP и Windows Server 2003, ODBC входит в операционную систему Windows. Следует явно устанавливать ODBC только в более ранних версиях Windows.  
   
- Библиотека DLL установщика сохраняет сведения в реестре о каждого установленного компонента ODBC. На компьютерах под управлением Microsoft Windows NT и Microsoft Windows 95/98 эти сведения хранятся в подразделах в следующем разделе реестра:  
-  
- HKEY_LOCAL_MACHINE  
-  
- ПРОГРАММНОЕ ОБЕСПЕЧЕНИЕ  
-  
- интерфейс ODBC  
-  
- Odbcinst.ini  
-  
- Поскольку Odbcinst.ini подраздела дерева HKEY_LOCAL_MACHINE, сведения о компонентах ODBC доступен для всех пользователей компьютера.  
+ Библиотека DLL установщика хранит сведения о каждом установленном компоненте ODBC в реестре. На компьютерах под управлением Microsoft Windows NT и Microsoft Windows 95/98 эта информация хранится в подразделах в следующем разделе реестра:  
+
+ ```console
+ HKEY_LOCAL_MACHINE\SOFTWARE\ODBC\Odbcinst.ini
+ ```
+
+ Так как Odbcinst. ini является подразделом дерева HKEY_LOCAL_MACHINE, сведения о компонентах ODBC доступны для всех пользователей компьютера.  
   
  Этот раздел содержит следующие подразделы.  
   

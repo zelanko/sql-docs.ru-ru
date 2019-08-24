@@ -1,23 +1,23 @@
 ---
-title: Известные проблемы с интеграцией языка R и Python
+title: Известные проблемы для Python и R
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 06/13/2019
+ms.date: 08/23/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 93b2871fa60d6a7c7a41fae202e960440b53c11e
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: 9a8237887786066a8789cb319fc7de550fa7f535
+ms.sourcegitcommit: 01c8df19cdf0670c02c645ac7d8cc9720c5db084
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715196"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "70000451"
 ---
-# <a name="known-issues-in-machine-learning-services"></a>Известные проблемы в Службы машинного обучения
+# <a name="known-issues-in-sql-server-machine-learning-services"></a>Известные проблемы в SQL Server Службы машинного обучения
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-В этой статье описываются известные проблемы или ограничения, связанные с компонентами машинного обучения, которые предоставляются в качестве варианта в [SQL Server 2016 служб r](r/sql-server-r-services.md) и [SQL Server службы машинного обучения с R и Python](what-is-sql-server-machine-learning.md).
+В этой статье описываются известные проблемы или ограничения, связанные с компонентами машинного обучения, которые предоставляются в качестве варианта в [SQL Server службы машинного обучения](what-is-sql-server-machine-learning.md) и [SQL Server служб R 2016](r/sql-server-r-services.md).
 
 ## <a name="setup-and-configuration-issues"></a>Проблемы при установке и настройке
 
@@ -43,7 +43,7 @@ R_SERVER использует библиотеку Intel Math Kernel Library (MK
 3. Перезапустите R_SERVER. На SQL Server можно перезапустить службу панель запуска SQL Server.
 
 > [!NOTE]
-> Если вы используете предварительную версию SQL Server 2019 в Linux, измените или создайте *bash_profile* в домашнем каталоге пользователя, добавив строку `export MKL_CBWR="AUTO"`. Выполните этот файл, введя `source .bash_profile` команду в командной строке Bash. Перезапустите R_SERVER, `Sys.getenv()` введя в командной строке R.
+> Если вы используете предварительную версию SQL Server 2019 в Linux, измените или создайте *bash_profile* в домашнем каталоге пользователя, добавив строку `export MKL_CBWR="AUTO"`. Выполните этот файл, введя команду `source .bash_profile` в командной строке bash. Перезапустите R_SERVER, `Sys.getenv()` введя в командной строке R.
 
 ### <a name="2-r-script-runtime-error-sql-server-2017-cu5-cu7-regression"></a>2. Ошибка времени выполнения скрипта R (SQL Server 2017 CU5-И НАКОПИТЕЛЬНЫМ регрессия)
 
@@ -502,6 +502,33 @@ go
 
 Это исправлено в SQL Server 2017 накопительного обновления 14 (CU14).
 
+### <a name="6-bad-interpreter-error-when-installing-python-packages-with-pip-on-linux"></a>6. Неправильная ошибка интерпретатора при установке пакетов Python с PIP в Linux 
+
+В SQL Server 2019 при попытке использовать **PIP**. Пример:
+
+```bash
+/opt/mssql/mlservices/runtime/python/bin/pip -h
+```
+
+После этого будет выводится следующее сообщение об ошибке:
+
+> *Bash:/опт/мсскл/млсервицес/рунтиме/Писон/бин/Пип:/opt/Microsoft/mlserver/9.4.7/bin/Python/Python: неправильный интерпретатор: Нет такого файла или каталога*
+
+**Обходное решение**
+
+Установите **PIP** из [центра пакетов Python (Пипа)](https://www.pypa.io):
+
+```bash
+wget 'https://bootstrap.pypa.io/get-pip.py' 
+/opt/mssql/mlservices/bin/python/python ./get-pip.py 
+```
+
+**Рекомендация**
+
+Используйте [склмлутилс](https://github.com/microsoft/sqlmlutils/tree/master/Python) или [Создайте внешнюю библиотеку](../t-sql/statements/create-external-library-transact-sql.md) для установки пакетов Python.
+
+**Применимо к:** SQL Server 2019 в Linux
+
 ## <a name="revolution-r-enterprise-and-microsoft-r-open"></a>Revolution R Enterprise и Microsoft R Open
 
 В этом разделе перечислены проблемы, связанные с подключением, разработкой и инструментами производительности R, предоставляемыми функцией анализа революции. Эти средства были предоставлены в более ранних предварительных [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]версиях.
@@ -522,8 +549,6 @@ go
 
 Редакция 0,92 драйвера SQLite ODBC несовместима с RevoScaleR. Версии 0.88 –-0.91 и 0,93 и более поздних версий известны как совместимые.
 
-## <a name="see-also"></a>См. также
-
-[Что нового в SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)
+## <a name="next-steps"></a>Следующие шаги
 
 [Устранение неполадок машинного обучения в SQL Server](machine-learning-troubleshooting-faq.md)

@@ -9,12 +9,12 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ead6c2ceeecbdfb3466bd4475978b139a0d2ddde
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 114296d0bad77c3bbbb088feed13bd6a4bd5a074
+ms.sourcegitcommit: 594cee116fa4ee321e1f5e5206f4a94d408f1576
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69652244"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "70009330"
 ---
 # <a name="what-is-the-storage-pool-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Что такое пул носителей ([!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)])?
 
@@ -33,7 +33,7 @@ ms.locfileid: "69652244"
 Узлы хранилища предназначены для выполнения следующих задач:
 
 - прием данных через Spark;
-- хранение данных в HDFS (формат Parquet). HDFS также обеспечивает сохраняемость данных, так как данные HDFS распределены по всем узлам хранения в кластере больших данных SQL.
+- Хранение данных в HDFS (Parquet и текстовый формат с разделителями). HDFS также обеспечивает сохраняемость данных, так как данные HDFS распределены по всем узлам хранения в кластере больших данных SQL.
 - доступ к данным через конечные точки HDFS и SQL Server.
 
 ## <a name="next-steps"></a>Следующие шаги
