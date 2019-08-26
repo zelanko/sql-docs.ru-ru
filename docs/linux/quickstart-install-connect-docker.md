@@ -14,12 +14,12 @@ ms.prod_service: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
 zone_pivot_groups: cs1-command-shell
-ms.openlocfilehash: eac39b0cbc4cdb09b6f20f68517d258a34a38155
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: cc4eeb8c4e3d462d6df3aa76d972404ffe3120c1
+ms.sourcegitcommit: 8d01698e779a536093dd637e84c52f3ff0066a2c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893863"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69608391"
 ---
 # <a name="quickstart-run-sql-server-container-images-with-docker"></a>Краткое руководство. Запуск образов контейнеров SQL Server в Docker
 
@@ -295,7 +295,7 @@ SELECT @@SERVERNAME,
 
 <!-- This section was pasted in from includes/sql-server-linux-change-docker-password.md, to better support zone pivots. 2019/02/11 -->
 
-Учетная запись **SA** обладает правами администратора на экземпляре SQL Server, создаваемом во время установки. После создания контейнера SQL Server указанную вами переменную среды `MSSQL_SA_PASSWORD` можно обнаружить, запустив `echo $MSSQL_SA_PASSWORD` в контейнере. В целях безопасности смените пароль SA.
+Учетная запись **SA** обладает правами администратора на экземпляре SQL Server, создаваемом во время установки. После создания контейнера SQL Server указанную вами переменную среды `SA_PASSWORD` можно обнаружить, запустив `echo $SA_PASSWORD` в контейнере. В целях безопасности смените пароль SA.
 
 1. Назначьте для пользователя SA надежный пароль.
 

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ce30a095-2975-4387-9377-94a461ac78ee
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 212782574ffa5cc603a8b7c28a9ced3d34d89a50
-ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
+ms.openlocfilehash: beb0c68b86521ce9a5b3463e8c959970297519fe
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68742945"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653824"
 ---
 # <a name="tutorial-prepare-sql-server-for-replication-publisher-distributor-subscriber"></a>Руководство. Подготовка SQL Server к репликации (издатель, распространитель, подписчик)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -234,8 +234,6 @@ ms.locfileid: "68742945"
 
    ![Просмотр всех четырех учетных записей в обозревателе объектов](media/tutorial-preparing-the-server-for-replication/usersinssms.png)
    
- 6. Повторите шаги 1–4 на подписчике для агента распространения и агента слияния, изменив имя компьютера на имя подписчика. 
-  
   
 Дополнительные сведения см. в разделе:
 - [Настройка распространителя](../../relational-databases/replication/configure-distribution.md) 
