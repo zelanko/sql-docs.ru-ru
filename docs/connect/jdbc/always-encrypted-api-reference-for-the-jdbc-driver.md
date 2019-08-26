@@ -1,7 +1,7 @@
 ---
-title: Справочник по API Always Encrypted для драйвера JDBC | Документы Майкрософт
+title: Справочник по API Always Encrypted для JDBC Driver | Документация Майкрософт
 ms.custom: ''
-ms.date: 08/06/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 6962a2aa-9508-4d4f-a78c-905e2bc68615
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: a17dc46e2ee60832b51d606c2c7caaf497dfc7c3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 79cf8ce1b951621d58105d18b847306ff620d114
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67957475"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028478"
 ---
-# <a name="always-encrypted-api-reference-for-the-jdbc-driver"></a>Справочник по API Always Encrypted для драйвера JDBC
+# <a name="always-encrypted-api-reference-for-the-jdbc-driver"></a>Справочник по API Always Encrypted для JDBC Driver
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
   Функция Always Encrypted позволяет клиентам шифровать конфиденциальные данные в клиентских приложениях, не раскрывая ключи шифрования для SQL Server. Драйвер с поддержкой Always Encrypted, установленный на клиентском компьютере, реализует эту функцию за счет автоматического шифрования и расшифровки конфиденциальных данных в клиентском приложении SQL Server. Драйвер шифрует данные из конфиденциальных столбцов перед их передачей в SQL Server и автоматически переписывает запросы, чтобы сохранить семантику приложения. Аналогичным образом драйвер прозрачно расшифровывает данные, хранящиеся в столбцах зашифрованной базы данных, которые содержатся в результатах запроса. Дополнительные сведения см. в статьях [Always encrypted (ядро СУБД)](../../relational-databases/security/encryption/always-encrypted-database-engine.md) и [Использование Always encrypted с драйвером JDBC](../../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md).  
@@ -25,7 +25,7 @@ ms.locfileid: "67957475"
 > [!NOTE]  
 >  Always Encrypted поддерживается только Microsoft JDBC Driver 6.0 или более поздней версии для SQL Server с SQL Server 2016.  
   
- ## <a name="always-encrypted-api-references"></a>Справочник по API Always Encrypted
+ ## <a name="always-encrypted-api-references"></a>Справочники по API Always Encrypted
  
  Существует несколько дополнений и изменений для API драйвера JDBC для использования в клиентских приложениях, использующих функцию Always Encrypted.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "67957475"
 |`public void setSendTimeAsDatetime(boolean sendTimeAsDateTimeValue)` | Изменяет значение свойства соединения Сендтимеасдатетиме.|
      
   
- **Класс SQLServerDataSource**  
+ **Класс SQLServerDataSource Class**  
   
 |Имя|Описание|  
 |----------|-----------------|  
@@ -155,7 +155,7 @@ ms.locfileid: "67957475"
 
 |Имя|Описание|  
 |----------|-----------------|  
-|DATETIME, SMALLDATETIME, MONEY, SMALLMONEY, GUID|Используйте эти типы в качестве целевых типов SQL при отправке значений параметров  в **зашифрованные** столбцы datetime, smalldatetime, Money, smallmoney и `setObject()/updateObject()` uniqueidentifier с помощью методов API.|  
+|DATETIME, SMALLDATETIME, MONEY, SMALLMONEY, GUID|Используйте эти типы в качестве целевых типов SQL при отправке значений параметров в **зашифрованные** столбцы datetime, smalldatetime, Money, smallmoney и `setObject()/updateObject()` uniqueidentifier с помощью методов API.|  
   
   
  **Перечисление Склсерверстатементколумненкриптионсеттинг**  
@@ -193,7 +193,7 @@ Public enum  SQLServerStatementColumnEncryptionSetting
 >   
 >  Если Always Encrypted для запроса отключена и запрос возвращает результаты из зашифрованных столбцов, запрос возвратит зашифрованные значения. Зашифрованные значения будут иметь тип данных varbinary.  
   
- ## <a name="see-also"></a>См. также:  
- [Использование функции Always Encrypted с драйвером JDBC](../../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md)  
+ ## <a name="see-also"></a>См. также раздел  
+ [Использование функции Always Encrypted с JDBC Driver](../../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md)  
   
 

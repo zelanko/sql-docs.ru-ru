@@ -18,12 +18,12 @@ ms.assetid: f98af4a5-4523-43b1-be8d-1b03c3217839
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ae39d06d96232b27d58020d5f6e6184a57001e6f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d48ff63d5ea5ab7ed805eb7db092fa35682bbc9b
+ms.sourcegitcommit: 594cee116fa4ee321e1f5e5206f4a94d408f1576
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67912096"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "70009407"
 ---
 # <a name="columnstore-indexes-overview"></a>Индексы Columnstore. Обзор
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -152,7 +152,7 @@ Rowgroup — это группа строк, сжимаемых в формат�
 |Удаление строки из индекса columnstore.|[DELETE (Transact-SQL)](../../t-sql/statements/delete-transact-sql.md)|Используйте синтаксис [DELETE (Transact-SQL)](../../t-sql/statements/delete-transact-sql.md) для удаления строки.<br /><br /> **Строка columnstore**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] отмечает строку как логически удаленную, но не освобождает физическое хранилище для строки до тех пор, пока индекс не будет перестроен.<br /><br /> **Строка deltastore**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] логически и физически удаляет строку.|  
 |Обновление строки в индексе columnstore.|[UPDATE (Transact-SQL)](../../t-sql/queries/update-transact-sql.md)|Используйте синтаксис [UPDATE (Transact-SQL)](../../t-sql/queries/update-transact-sql.md) для обновления строки.<br /><br /> **Строка columnstore**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] отмечает строку как логически удаленную, а затем вставляет обновленную строку в deltastore.<br /><br /> **Строка deltastore**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обновляет строку в deltastore.|  
 |Загрузка данных в индекс columnstore.|[Индексы columnstore. Руководство по загрузке данных](~/relational-databases/indexes/columnstore-indexes-data-loading-guidance.md)||  
-|Принудительное перемещение всех строк из deltastore в columnstore|[ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md) … `REBUILD`<br /><br /> [Дефрагментация индексов columnstore](~/relational-databases/indexes/columnstore-indexes-defragmentation.md)|Инструкция `ALTER INDEX` с параметром `REBUILD` принудительно перемещает все строки в columnstore.|  
+|Принудительное перемещение всех строк из deltastore в columnstore|[ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md) … `REBUILD`<br /><br /> [Реорганизация и перестроение индексов](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)|Инструкция `ALTER INDEX` с параметром `REBUILD` принудительно перемещает все строки в columnstore.|  
 |Дефрагментация индекса columnstore.|[ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md)|Инструкция `ALTER INDEX ... REORGANIZE` дефрагментирует индексы columnstore в оперативном режиме.|  
 |Слияние таблиц с индексами columnstore.|[MERGE (Transact-SQL)](../../t-sql/statements/merge-transact-sql.md)||  
   
