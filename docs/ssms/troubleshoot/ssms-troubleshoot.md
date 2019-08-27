@@ -19,7 +19,7 @@ ms.locfileid: "68262775"
 ---
 # <a name="get-diagnostic-data-after-a-sql-server-management-studio-ssms-crash"></a>Получение диагностических данных после аварийного завершения работы SQL Server Management Studio (SSMS)
 
-[Добавить [Применяется к](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)
+[!INCLUDE[Применяется к](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)
 
 ## <a name="get-full-memory-dump-after-a-hang-or-crash"></a>Получение полного дампа памяти после зависания или аварийного завершения работы
 
