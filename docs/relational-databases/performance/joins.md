@@ -211,7 +211,7 @@ INNER JOIN [Dimension].[Stock Item] AS [si]
        ON [fo].[Stock Item Key] = [si].[Stock Item Key]
 WHERE [fo].[Quantity] = 361;
 ```
-Запрос возвращает одну строку. Если включить статистику активных запросов, отобразится следующий план:
+Запрос возвращает одну строку. Если включить функцию "Статистика активных запросов", отобразится следующий план:
 
 ![Результатом запроса является одна строка.](../../relational-databases/performance/media/5_AQPStatsOneRow.png)
 

@@ -1415,7 +1415,7 @@
             - name: хранилище данных
               href: relational-databases/indexes/columnstore-indexes-data-warehouse.md
             - name: Дефрагментация
-              href: relational-databases/indexes/columnstore-indexes-defragmentation.md
+              href: relational-databases/indexes/reorganize-and-rebuild-indexes.md
     - name: Граф SQL
       href: relational-databases/graphs/sql-graph-overview.md
       items:
@@ -5722,8 +5722,10 @@
       items:
         - name: Новые возможности
           href: dma/dma-whatsnew.md
-        - name: Оценка
+        - name: Оценка Базы данных SQL
           href: dma/dma-assesssqlonprem.md
+        - name: Оценка MSSQL Integration Services
+          href: dma/dma-assess-ssis.md
         - name: Определение нужного номера SKU базы данных SQL Azure
           href: dma/dma-sku-recommend-sql-db.md
         - name: Обновление SQL Server до более поздней версии
