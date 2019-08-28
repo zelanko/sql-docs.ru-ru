@@ -1,7 +1,7 @@
 ---
-title: Настройка способа отправки значений java.sql.Time на сервер | Документы Майкрософт
+title: Настройка способа отправки значений java.sql.Time на сервер | Документация Майкрософт
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 07eb00dd-621a-46f9-a5a5-8cab4d6058b5
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: f22382db2ab6cd9c6f055b8143500e2062721df1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8fe6969d51834d0798a530b9cc9926af1b27fec2
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956938"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028228"
 ---
 # <a name="configuring-how-javasqltime-values-are-sent-to-the-server"></a>Настройка способа отправки значений java.sql.Time на сервер
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "67956938"
   
  Значение свойства соединения **sendTimeAsDatetime** можно изменить программным образом с помощью [SQLServerDataSource.setSendTimeAsDatetime](../../connect/jdbc/reference/setsendtimeasdatetime-method-sqlserverdatasource.md).  
   
- Более ранние версии [!INCLUDE[ssKatmai](../../includes/sskatmai_md.md)] , чем, не поддерживают тип данных **time**, поэтому приложения, использующие Java. SQL. Time, обычно хранят значения Java. SQL. time как **DateTime** или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **типы** данных smalldatetime .[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+ [!INCLUDE[ssKatmai](../../includes/sskatmai_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Более ранние версии, чем, не поддерживают тип данных **time**, поэтому приложения, использующие Java.SQL.Time, обычно хранят значения Java.SQL.time как типы данных **DateTime** или **smalldatetime**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
  Если вы хотите использовать типы данных **DateTime** и **smalldatetime** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] при работе со значениями Java. SQL. Time, следует задать для свойства соединения **сендтимеасдатетиме** **значение true**. Если вы хотите использовать тип данных **time** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] при работе со значениями Java. SQL. Time, следует задать для свойства соединения **сендтимеасдатетиме** **значение false**.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "67956938"
   public void setSendTimeAsDatetime(boolean sendTimeAsDateTimeValue)
 ```
   
-## <a name="see-also"></a>См. также:  
- [Основные сведения о типах данных драйвера JDBC](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  
+## <a name="see-also"></a>См. также раздел
+ [Основные сведения о типах данных JDBC Driver](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  
   
   
