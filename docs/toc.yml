@@ -4153,6 +4153,8 @@
     - name: Обновление SQL Server
       href: database-engine/install-windows/upgrade-sql-server.md
       items:
+        - name: Сертификация на совместимость
+          href: database-engine/install-windows/compatibility-certification.md
         - name: "Поддерживаемые обновления версий и выпусков SQL Server\_2017"
           href: database-engine/install-windows/supported-version-and-edition-upgrades-2017.md
         - name: "Поддерживаемые обновления версий и выпусков SQL Server\_2016"
@@ -4190,6 +4192,8 @@
               href: database-engine/install-windows/complete-the-database-engine-upgrade.md
             - name: Изменение режима совместимости базы данных и использование хранилища запросов
               href: database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md
+            - name: Изменение режима совместимости базы данных с помощью Помощника по настройке запросов
+              href: relational-databases/performance/upgrade-dbcompat-using-qta.md
     - name: Конфигурация
       href: database-engine/configure-windows/database-engine-instances-sql-server.md
       items:
@@ -5700,7 +5704,7 @@
               href: 'https://azure.microsoft.com/updates/?product=sql-server-stretch-database'
             - name: Видео >>
               href: 'https://azure.microsoft.com/documentation/videos/index/?services=sql-server-stretch-database'
-    - name: Database Experimentation Assistant
+    - name: Database Experimentation Assistant (DEA)
       href: dea/database-experimentation-assistant-overview.md
       items:
         - name: Начало работы
@@ -6550,12 +6554,12 @@
                   href: relational-databases/policy-based-management/view-the-properties-of-a-policy-based-management-facet.md
                 - name: Копирование состояния аспекта в XML-файл
                   href: relational-databases/policy-based-management/copy-a-policy-based-management-facet-state-to-an-xml-file.md
-            - name: Наблюдение и принудительное применение рекомендаций с помощью управления на основе политик
+            - name: Мониторинг и применение рекомендаций с помощью управления на основе политик
               href: relational-databases/policy-based-management/monitor-and-enforce-best-practices-by-using-policy-based-management.md
               items:
                 - name: Стойкость шифрования асимметричных ключей
                   href: relational-databases/policy-based-management/asymmetric-keys-encryption-strength.md
-                - name: Проверка на наличие проблем задержки ввода-вывода в подсистеме дискового ввода-вывода
+                - name: Проверка на наличие проблем задержки в подсистеме дискового ввода-вывода
                   href: relational-databases/policy-based-management/check-disk-input-and-output-subsystem-for-io-delay-problems.md
                 - name: Проверка на наличие проблем повторного чтения в подсистеме дискового ввода-вывода
                   href: relational-databases/policy-based-management/check-disk-input-output-subsystem-for-read-retry-problems.md
@@ -7293,6 +7297,8 @@
               href: relational-databases/performance/use-sql-server-profiler-to-create-and-test-plan-guides.md
             - name: Проверка структур плана после обновления
               href: relational-databases/performance/validate-plan-guides-after-upgrade.md
+        - name: Помощник по настройке запросов
+          href: relational-databases/performance/upgrade-dbcompat-using-qta.md
         - name: Регулятор ресурсов
           href: relational-databases/resource-governor/resource-governor.md
           items:
