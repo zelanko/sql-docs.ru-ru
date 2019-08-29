@@ -1,0 +1,207 @@
+- name: Справочник по расширениям интеллектуального анализа данных
+  href: ../dmx/data-mining-extensions-dmx-reference.md
+  items:
+    - name: Инструкции расширений интеллектуального анализа данных
+      href: ../dmx/data-mining-extensions-dmx-statements.md
+      items:
+        - name: "Инструкции расширения интеллектуального анализа данных\_— определение данных"
+          href: ../dmx/dmx-statements-data-definition.md
+          items:
+            - name: CREATE MINING STRUCTURE
+              href: ../dmx/create-mining-structure-dmx.md
+            - name: ALTER MINING STRUCTURE
+              href: ../dmx/alter-mining-structure-dmx.md
+            - name: CREATE MINING MODEL
+              href: ../dmx/create-mining-model-dmx.md
+            - name: DROP MINING STRUCTURE
+              href: ../dmx/drop-mining-structure-dmx.md
+            - name: DROP MINING MODEL
+              href: ../dmx/drop-mining-model-dmx.md
+            - name: EXPORT
+              href: ../dmx/export-dmx.md
+            - name: IMPORT
+              href: ../dmx/import-dmx.md
+            - name: SELECT INTO
+              href: ../dmx/select-into-dmx.md
+        - name: "Инструкции расширения интеллектуального анализа данных\_— операции с данными"
+          href: ../dmx/dmx-statements-data-manipulation.md
+          items:
+            - name: "<source data query>\_— OPENQUERY"
+              href: ../dmx/source-data-query-openquery.md
+            - name: "<source data query>\_— OPENROWSET"
+              href: ../dmx/source-data-query-openrowset.md
+            - name: "<source data query>\_— SHAPE"
+              href: ../dmx/source-data-query-shape.md
+            - name: SELECT DISTINCT FROM <model >
+              href: ../dmx/select-distinct-from-model-dmx.md
+            - name: SELECT FROM <model>.CONTENT
+              href: ../dmx/select-from-model-content-dmx.md
+            - name: SELECT FROM <model>.CASES
+              href: ../dmx/select-from-model-cases-dmx.md
+            - name: SELECT FROM <model>.SAMPLE_CASES
+              href: ../dmx/select-from-model-sample-cases-dmx.md
+            - name: SELECT FROM <model>.DIMENSION_CONTENT
+              href: ../dmx/select-from-model-dimension-content-dmx.md
+            - name: SELECT FROM <model> PREDICTION JOIN
+              href: ../dmx/select-from-model-prediction-join-dmx.md
+            - name: SELECT FROM <model>
+              href: ../dmx/select-from-model-dmx.md
+            - name: SELECT FROM <structure>.CASES
+              href: ../dmx/select-from-structure-cases.md
+            - name: DELETE
+              href: ../dmx/delete-dmx.md
+            - name: INSERT INTO
+              href: ../dmx/insert-into-dmx.md
+            - name: SELECT
+              href: ../dmx/select-dmx.md
+            - name: <source data query>
+              href: ../dmx/source-data-query.md
+            - name: UPDATE
+              href: ../dmx/update-dmx.md
+    - name: Структура и методы использования прогнозирующих запросов расширений интеллектуального анализа данных
+      href: structure-and-usage-of-dmx-prediction-queries.md
+    - name: Общие сведения об инструкции расширения интеллектуального анализа данных SELECT
+      href: understanding-the-dmx-select-statement.md
+    - name: Общие функции прогнозирования (расширения интеллектуального анализа данных)
+      href: general-prediction-functions-dmx.md
+    - name: Элементы синтаксиса расширений интеллектуального анализа данных
+      href: data-mining-extensions-dmx-syntax-elements.md
+      items:
+        - name: "Операторы\_— арифметические"
+          href: ../dmx/operators-arithmetic.md
+        - name: "Операторы\_— сравнение"
+          href: ../dmx/operators-comparison.md
+        - name: "Операторы\_— логические"
+          href: ../dmx/operators-logical.md
+        - name: "Операторы\_— унарные"
+          href: ../dmx/operators-unary.md
+        - name: Идентификаторы (расширения интеллектуального анализа данных)
+          href: ../dmx/identifiers-dmx.md
+        - name: Типы данных (расширения интеллектуального анализа данных)
+          href: ../dmx/data-types-dmx.md
+        - name: Выражения (расширения интеллектуального анализа данных)
+          href: ../dmx/expressions-dmx.md
+        - name: Операторы (расширения интеллектуального анализа данных)
+          href: ../dmx/operators-dmx.md
+        - name: Функции (расширения интеллектуального анализа данных)
+          href: ../dmx/functions-dmx.md
+        - name: Комментарии (расширения интеллектуального анализа данных)
+          href: ../dmx/comments-dmx.md
+        - name: Зарезервированные ключевые слова (расширения интеллектуального анализа данных)
+          href: ../dmx/reserved-keywords-dmx.md
+        - name: Типы содержимого (расширения интеллектуального анализа данных)
+          href: ../dmx/content-types-dmx.md
+        - name: Распределения (расширения интеллектуального анализа данных)
+          href: ../dmx/distributions-dmx.md
+        - name: Использование (расширения интеллектуального анализа данных)
+          href: ../dmx/usage-dmx.md
+        - name: Флаги моделирования (расширения интеллектуального анализа данных)
+          href: ../dmx/modeling-flags-dmx.md
+    - name: Справочник по функциям расширений интеллектуального анализа данных
+      href: data-mining-extensions-dmx-function-reference.md
+      items:
+        - name: BottomCount
+          href: ../dmx/bottomcount-dmx.md
+        - name: BottomPercent
+          href: ../dmx/bottompercent-dmx.md
+        - name: BottomSum
+          href: ../dmx/bottomsum-dmx.md
+        - name: Кластер
+          href: ../dmx/cluster-dmx.md
+        - name: ClusterDistance
+          href: ../dmx/clusterdistance-dmx.md
+        - name: ClusterProbability
+          href: ../dmx/clusterprobability-dmx.md
+        - name: Exists
+          href: ../dmx/exists-dmx.md
+        - name: IsDescendant
+          href: ../dmx/isdescendant-dmx.md
+        - name: IsInNode
+          href: ../dmx/isinnode-dmx.md
+        - name: IsTestCase
+          href: ../dmx/istestcase-dmx.md
+        - name: IsTrainingCase
+          href: ../dmx/istrainingcase-dmx.md
+        - name: Функция Lag
+          href: ../dmx/lag-dmx.md
+        - name: Predict
+          href: ../dmx/predict-dmx.md
+        - name: PredictAdjustedProbability
+          href: ../dmx/predictadjustedprobability-dmx.md
+        - name: PredictAssociation
+          href: ../dmx/predictassociation-dmx.md
+        - name: PredictCaseLikelihood
+          href: ../dmx/predictcaselikelihood-dmx.md
+        - name: PredictHistogram
+          href: ../dmx/predicthistogram-dmx.md
+        - name: PredictNodeId
+          href: ../dmx/predictnodeid-dmx.md
+        - name: PredictProbability
+          href: ../dmx/predictprobability-dmx.md
+        - name: PredictSequence
+          href: ../dmx/predictsequence-dmx.md
+        - name: PredictStdev
+          href: ../dmx/predictstdev-dmx.md
+        - name: PredictSupport
+          href: ../dmx/predictsupport-dmx.md
+        - name: PredictTimeSeries
+          href: ../dmx/predicttimeseries-dmx.md
+        - name: PredictVariance
+          href: ../dmx/predictvariance-dmx.md
+        - name: RangeMax
+          href: ../dmx/rangemax-dmx.md
+        - name: RangeMid
+          href: ../dmx/rangemid-dmx.md
+        - name: RangeMin
+          href: ../dmx/rangemin-dmx.md
+        - name: StructureColumn
+          href: ../dmx/structurecolumn-dmx.md
+        - name: TopCount
+          href: ../dmx/topcount-dmx.md
+        - name: TopPercent
+          href: ../dmx/toppercent-dmx.md
+        - name: TopSum
+          href: ../dmx/topsum-dmx.md
+        - name: Ссылка оператора расширений интеллектуального анализа данных
+          href: ../dmx/data-mining-extensions-dmx-operator-reference.md
+          items:
+            - name: + (сложение)
+              href: ../dmx/add-dmx.md
+            - name: '- (вычитание)'
+              href: ../dmx/subtract-dmx.md
+            - name: '* (умножение)'
+              href: ../dmx/multiply-dmx.md
+            - name: (деление) (расширение интеллектуального анализа данных)
+              href: ../dmx/divide-dmx.md
+            - name: < (Меньше)
+              href: ../dmx/less-than-dmx.md
+            - name: '> (больше)'
+              href: ../dmx/greater-than-dmx.md
+            - name: = (Равно)
+              href: ../dmx/equal-to-dmx.md
+            - name: <> (не равно)
+              href: ../dmx/not-equal-to-dmx.md
+            - name: <= (меньше или равно)
+              href: ../dmx/less-than-or-equal-to-dmx.md
+            - name: '>= (больше или равно)'
+              href: ../dmx/greater-than-or-equal-to-dmx.md
+            - name: AND
+              href: ../dmx/and-dmx.md
+            - name: NOT
+              href: ../dmx/not-dmx.md
+            - name: OR
+              href: ../dmx/or-dmx.md
+            - name: + (положительное значение)
+              href: ../dmx/positive-dmx.md
+            - name: '- (отрицательное значение)'
+              href: ../dmx/negative-dmx.md
+            - name: // (комментарий)
+              href: ../dmx/double-slash-comment-dmx.md
+            - name: '-- (Комментарий)'
+              href: ../dmx/comment-dmx-summary.md
+            - name: /*…*/ (комментарий)
+              href: ../dmx/slash-star-comment-dmx.md
+    - name: Соглашения о синтаксисе расширений интеллектуального анализа данных
+      href: data-mining-extensions-dmx-syntax-conventions.md
+    - name: Учебники по расширениям интеллектуального анализа данных
+      href: dmx-tutorials-analysis-services-data-mining.md
