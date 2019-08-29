@@ -17,12 +17,12 @@ ms.assetid: 4addd426-7523-4067-8d7d-ca6bae4c9e34
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 31e5f5e89a6421c72ecb381685f9450ac9ba9331
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: c349569d2f0973a3085337eb171a17d9cee21c82
+ms.sourcegitcommit: 632ff55084339f054d5934a81c63c77a93ede4ce
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770560"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69633406"
 ---
 # <a name="measure-latency-and-validate-connections-for-transactional-replication"></a>Измерение задержки и проверка правильности соединений для репликации транзакций
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -113,23 +113,23 @@ ms.locfileid: "68770560"
   
 2.  На издателе в базе данных публикации выполните хранимую процедуру [sp_helpsubscription (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md) (необязательно). Удостоверьтесь в том, что подписка существует и находится в активном состоянии.  
   
-3.  На издателе в базе данных издателя выполните процедуру [sp_posttracertoken (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-posttracertoken-transact-sql.md), указав параметр **@publication** . Запомните значение выходного параметра **@tracer_token_id** .  
+3.  В издателе в базе данных публикации выполните процедуру [sp_posttracertoken (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-posttracertoken-transact-sql.md), указав параметр **\@publication**. Запомните значение выходного параметра **\@tracer_token_id**.  
   
 #### <a name="to-determine-latency-and-validate-connections-for-a-transactional-publication"></a>Измерение задержки и проверка соединений для публикации транзакций  
   
 1.  Передайте трассировочный токен в публикацию при помощи описанной выше процедуры.  
   
-2.  На издателе в базе данных издателя выполните процедуру [sp_helptracertokens (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md), указав параметр **@publication** . Будет возвращен список всех трассировочных токенов, опубликованных для публикации. Запомните нужное значение **tracer_id** в результирующем наборе.  
+2.  В издателе в базе данных публикации выполните процедуру [sp_helptracertokens (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md), указав параметр **\@publication**. Будет возвращен список всех трассировочных токенов, опубликованных для публикации. Запомните нужное значение **tracer_id** в результирующем наборе.  
   
-3.  На издателе в базе данных издателя выполните процедуру [sp_helptracertokenhistory (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-helptracertokenhistory-transact-sql.md), указав параметр **@publication** и идентификатор трассировочного маркера, полученного на шаге 2, в параметре **@tracer_id** . В результате этого будут возвращены сведения о задержке для выделенного трассировочного токена.  
+3.  В издателе в базе данных публикации выполните процедуру [sp_helptracertokenhistory (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-helptracertokenhistory-transact-sql.md), указав параметр **\@publication** и идентификатор трассировочного маркера, полученного на шаге 2, в параметре **\@tracer_id**. В результате этого будут возвращены сведения о задержке для выделенного трассировочного токена.  
   
 #### <a name="to-remove-tracer-tokens"></a>Удаление трассировочных токенов  
   
-1.  На издателе в базе данных издателя выполните процедуру [sp_helptracertokens (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md), указав параметр **@publication** . Будет возвращен список всех трассировочных токенов, опубликованных для публикации. Запомните нужное значение **tracer_id** в результирующем наборе для удаляемого трассировочного токена.  
+1.  В издателе в базе данных публикации выполните процедуру [sp_helptracertokens (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md), указав параметр **\@publication**. Будет возвращен список всех трассировочных токенов, опубликованных для публикации. Запомните нужное значение **tracer_id** в результирующем наборе для удаляемого трассировочного токена.  
   
-2.  На издателе в базе данных публикации выполните хранимую процедуру [sp_deletetracertokenhistory (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql.md), указав параметр **@publication** , а также идентификатор удаляемого трассировочного маркера, полученного на шаге 2, в параметре **@tracer_id** .  
+2.  В издателе в базе данных публикации выполните хранимую процедуру [sp_deletetracertokenhistory (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql.md), указав параметр **\@publication**, а также идентификатор удаляемого трассировочного маркера, полученного на шаге 2, в параметре **@tracer_id** .  
   
-###  <a name="TsqlExample"></a> Пример (Transact-SQL)  
+###  <a name="TsqlExample"></a> Примеры (Transact-SQL)  
  В этом примере продемонстрирована отправка трассировочного токена, и просмотр сведений о задержке по возвращенному идентификатору отправленного трассировочного токена.  
   
  [!code-sql[HowTo#sp_tracertokens](../../../relational-databases/replication/codesnippet/tsql/measure-latency-and-vali_1.sql)]  

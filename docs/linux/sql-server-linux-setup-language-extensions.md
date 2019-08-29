@@ -5,17 +5,17 @@ author: dphansen
 ms.author: davidph
 ms.reviewer: vanto
 manager: cgronlun
-ms.date: 06/26/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: de5ca4f46513999c1473eed77503b59cc94c3a22
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 3f4f4bad8bbe72681b699af25b87eb4a533b7002
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68476022"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653523"
 ---
 # <a name="install-sql-server-2019-language-extensions-java-on-linux"></a>Установка расширений языка (Java) для SQL Server 2019 на Linux
 
@@ -29,9 +29,9 @@ ms.locfileid: "68476022"
 
 Расширения языка также поддерживаются в контейнерах Linux. Мы не предоставляем готовые контейнеры с расширениями языка, однако вы можете создать такой контейнер для SQL Server, используя [шаблон, доступный в GitHub](https://github.com/Microsoft/mssql-docker/tree/master/linux/preview/examples/mssql-mlservices).
 
-## <a name="uninstall-previous-ctp"></a>Удаление предыдущей версии CTP
+## <a name="uninstall-previous-ctp-version"></a>Удаление предыдущей версии CTP
 
-За последние несколько выпусков CTP список пакетов изменился, и их стало меньше. Мы рекомендуем удалить версию CTP 2.x, чтобы удалить все предыдущие пакеты, прежде чем устанавливать версию CTP 3.2. Параллельная установка нескольких версий не поддерживается.
+За последние несколько выпусков CTP список пакетов изменился, и их стало меньше. Мы рекомендуем удалить версию CTP, чтобы удалить все предыдущие пакеты, прежде чем устанавливать версию RC 1. Параллельная установка нескольких версий не поддерживается.
 
 ### <a name="1-confirm-package-installation"></a>1. Подтверждение установки пакета
 
@@ -41,7 +41,7 @@ ms.locfileid: "68476022"
 ls /opt/microsoft/mssql/bin
 ```
 
-### <a name="2-uninstall-previous-ctp-2x-packages"></a>2. Удаление пакетов предыдущей версии CTP 2.x
+### <a name="2-uninstall-previous-ctp-packages"></a>2. Удаление пакетов предыдущей версии CTP
 
 Выполняйте удаление на самом низком уровне пакета. Любой вышестоящий пакет, зависящий от пакета более низкого уровня, удаляется автоматически.
 
@@ -55,7 +55,7 @@ ls /opt/microsoft/mssql/bin
 | SLES  | `sudo zypper remove msssql-server-extensibility-java` |
 | Ubuntu    | `sudo apt-get remove msssql-server-extensibility-java`|
 
-### <a name="3-proceed-with-ctp-32-install"></a>3. Начало установки CTP 3.2
+### <a name="3-install-release-candidate-1-rc-1"></a>3. Установка версии-кандидата 1
 
 Выполните установку на самом верхнем уровне пакета, следуя инструкциям из этой статьи для вашей операционной системы.
 
@@ -69,7 +69,7 @@ ls /opt/microsoft/mssql/bin
 
 ## <a name="prerequisites"></a>предварительные требования
 
-+ Версия Linux должна [поддерживаться SQL Server](sql-server-linux-release-notes-2019.md#supported-platforms), но не включает в себя подсистему Docker. Поддерживаемые версии:
++ Версия Linux должна [поддерживаться SQL Server](sql-server-linux-release-notes-2019.md#supported-platforms), но не включает в себя подсистему Docker. Поддерживаемые версии
 
    + [Red Hat Enterprise Linux (RHEL)](quickstart-install-connect-red-hat.md)
 
@@ -85,14 +85,14 @@ ls /opt/microsoft/mssql/bin
 
 | Имя пакета | Область действия | Описание |
 |--------------|----------|-------------|
-|mssql-server-extensibility  | Все языки | Платформа расширяемости, используемая для выполнения кода Java. |
-|mssql-server-extensibility-java | Java | Расширение Java для загрузки среды выполнения Java. Дополнительные библиотеки или пакеты для Java отсутствуют. |
+|mssql-server-extensibility  | Все языки | Платформа расширяемости, используемая для расширения языка Java. |
+|mssql-server-extensibility-java | Java | Платформа расширяемости, которая используется для расширения языка Java и включает среду выполнения Java. |
 
 <a name="RHEL"></a>
 
 ## <a name="install-language-extensions"></a>Установка расширений языка
 
-Расширения языка и Java можно установить в Linux путем установки пакета **mssql-server-extensibility-java**. При установке пакета **mssql-server-extensibility-java** автоматически устанавливается среда JRE 8, если она еще не установлена. Кроме того, путь к JVM добавляется в переменную среды JRE_HOME.
+Расширения языка и Java можно установить в Linux путем установки пакета **mssql-server-extensibility-java**. При установке пакета **mssql-server-extensibility-java** автоматически устанавливается среда JRE 11, если она еще не установлена. Кроме того, путь к JVM добавляется в переменную среды JRE_HOME.
 
 > [!Note]
 > На сервере, подключенном к Интернету, зависимости пакета скачиваются и устанавливаются в рамках установки основного пакета. Если сервер не подключен к Интернету, см. дополнительные сведения в разделе об [автономной установке](#offline-install).
@@ -162,7 +162,7 @@ sudo zypper install mssql-server-extensibility-java
    sudo /opt/mssql/bin/mssql-conf setup
    ```
 
-3. Включите исходящий сетевой доступ. По умолчанию исходящий сетевой доступ отключен. Чтобы включить исходящие запросы, задайте логическое свойство "outboundnetworkaccess" с помощью средства mssql-conf. Дополнительные сведения см. в статье [Настройка SQL Server на Linux с помощью средства mssql-conf](sql-server-linux-configure-mssql-conf.md#mlservices-outbound-access).
+3. Включите исходящий сетевой доступ. По умолчанию исходящий сетевой доступ отключен. Чтобы включить исходящие запросы, задайте логическое свойство outboundnetworkaccess с помощью средства mssql-conf. Дополнительные сведения см. в статье [Настройка SQL Server на Linux с помощью средства mssql-conf](sql-server-linux-configure-mssql-conf.md#mlservices-outbound-access).
 
    ```bash
    # Run as SUDO or root
@@ -286,7 +286,7 @@ mssql-server-extensibility-15.0.1000
 mssql-server-extensibility-java-15.0.1000
 ```
 
-## <a name="limitations-in-ctp-releases"></a>Ограничения в выпусках CTP
+## <a name="limitations-in-the-rc-1-release"></a>Ограничения в выпуске RC 1
 
 Расширения языка и интеграция Java по-прежнему находятся на этапе активной разработки. Перечисленные ниже функции пока не работают в предварительной версии.
 
@@ -295,16 +295,16 @@ mssql-server-extensibility-java-15.0.1000
 
 ### <a name="resource-governance"></a>Управление ресурсами
 
-С точки зрения [управления ресурсами](../t-sql/statements/create-external-resource-pool-transact-sql.md) для внешних пулов ресурсов между Linux и Windows наблюдается паритет, однако статистика для [sys.dm_resource_governor_external_resource_pools](../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md) сейчас содержит другие единицы измерения для Linux. Единицы измерения будут согласованы в предстоящей версии CTP.
+С точки зрения [управления ресурсами](../t-sql/statements/create-external-resource-pool-transact-sql.md) для внешних пулов ресурсов между Linux и Windows наблюдается паритет, однако статистика для [sys.dm_resource_governor_external_resource_pools](../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md) сейчас содержит другие единицы измерения для Linux. 
  
 | Имя столбца   | Описание | Значение в Linux | 
 |---------------|--------------|---------------|
-|peak_memory_kb | Максимальный объем используемой памяти для пула ресурсов. | В Linux эта статистика извлекается из подсистемы memory CGroups, где используется значение memory.max_usage_in_bytes |
-|write_io_count | Общее число выполненных операций ввода-вывода записи с момента сброса статистики Resource Governor. | В Linux эта статистика извлекается из подсистемы blkio CGroups, где для строки write используется значение blkio.throttle.io_serviced | 
-|read_io_count | Общее число выполненных операций ввода-вывода чтения с момента сброса статистики Resource Governor. | В Linux эта статистика извлекается из подсистемы blkio CGroups, где для строки read используется значение blkio.throttle.io_serviced | 
-|total_cpu_kernel_ms | Совокупное время ядра использования ЦП, в миллисекундах, с момента сброса статистики Resource Governor. | В Linux эта статистика извлекается из подсистемы cpuacct CGroups, где для строки user используется значение cpuacct.stat |  
-|total_cpu_user_ms | Совокупное время использования ЦП, в миллисекундах, с момента сброса статистики Resource Governor.| В Linux эта статистика извлекается из подсистемы cpuacct CGroups, где для строки system используется значение cpuacct.stat | 
-|active_processes_count | Количество внешних процессов, выполняемых в момент запроса.| В Linux эта статистика извлекается из подсистемы pids CGroups, где используется значение pids.current | 
+|peak_memory_kb | Максимальный объем используемой памяти для пула ресурсов. | В Linux эта статистика извлекается из подсистемы memory CGroups, где используется значение memory.max_usage_in_bytes. |
+|write_io_count | Общее число выполненных операций ввода-вывода записи с момента сброса статистики Resource Governor. | В Linux эта статистика извлекается из подсистемы blkio CGroups, где для строки write используется значение blkio.throttle.io_serviced. | 
+|read_io_count | Общее число выполненных операций ввода-вывода чтения с момента сброса статистики Resource Governor. | В Linux эта статистика извлекается из подсистемы blkio CGroups, где для строки read используется значение blkio.throttle.io_serviced. | 
+|total_cpu_kernel_ms | Совокупное время ядра использования ЦП, в миллисекундах, с момента сброса статистики Resource Governor. | В Linux эта статистика извлекается из подсистемы cpuacct CGroups, где для строки user используется значение cpuacct.stat. |  
+|total_cpu_user_ms | Совокупное время использования ЦП, в миллисекундах, с момента сброса статистики Resource Governor.| В Linux эта статистика извлекается из подсистемы cpuacct CGroups, где для строки system используется значение cpuacct.stat. | 
+|active_processes_count | Количество внешних процессов, выполняемых в момент запроса.| В Linux эта статистика извлекается из подсистемы pids CGroups, где используется значение pids.current. | 
 
 ## <a name="next-steps"></a>Следующие шаги
 

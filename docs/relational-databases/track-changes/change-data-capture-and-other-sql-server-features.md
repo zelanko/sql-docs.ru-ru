@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 7dfcb362-1904-4578-8274-da16681a960e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 558923684f88688a4b364157341957cbce7b6013
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2eb827cbb971195a89a2cd5bdd26dad1bd9f196b
+ms.sourcegitcommit: cdbb0ee5ee5259119ad21695f549207457990f71
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006112"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69621788"
 ---
 # <a name="change-data-capture-and-other-sql-server-features"></a>Система отслеживания измененных данных и другие функции SQL Server
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -69,7 +69,7 @@ ms.locfileid: "68006112"
   
 -   Если база данных отсоединяется и присоединяется к тому же или другому серверу, то система отслеживания измененных данных остается активированной.  
   
--   Если база данных присоединяется или восстанавливается с параметром **KEEP_CDC** в любом выпуске, отличном от выпуска Enterprise, то эта операция будет заблокирована, так как для системы отслеживания измененных данных требуется выпуск [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise. Отображается сообщение об ошибке 934.  
+-   Если база данных присоединяется или восстанавливается с параметром **KEEP_CDC** в любом выпуске, отличном от Standard или Enterprise, то эта операция будет заблокирована, так как для системы отслеживания измененных данных требуется выпуск [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard или Enterprise. Отображается сообщение об ошибке 934.  
   
      `SQL Server cannot load database '%.*ls' because Change Data Capture is enabled. The currently installed edition of SQL Server does not support Change Data Capture. Either restore database without KEEP_CDC option, or upgrade the instance to one that supports Change Data Capture.`  
   

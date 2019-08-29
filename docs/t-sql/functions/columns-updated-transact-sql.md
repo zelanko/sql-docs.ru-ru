@@ -21,13 +21,13 @@ ms.assetid: 765fde44-1f95-4015-80a4-45388f18a42c
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 4af840298c0e17b61dd073c982e6dec440ec67d7
-ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
+ms.sourcegitcommit: 594cee116fa4ee321e1f5e5206f4a94d408f1576
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2019
+ms.lasthandoff: 08/26/2019
 ms.locfileid: "68419601"
 ---
-# <a name="columnsupdated-transact-sql"></a>COLUMNS_UPDATED (Transact-SQL)
+# <a name="columns_updated-transact-sql"></a>COLUMNS_UPDATED (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Эта функция возвращает битовый шаблон **varbinary**, который показывает, какие столбцы таблицы или представления добавлялись или изменялись. `COLUMNS_UPDATED` используется в любом месте внутри тела триггера INSERT или UPDATE [!INCLUDE[tsql](../../includes/tsql-md.md)], чтобы проверить необходимость выполнения определенных действий.
@@ -74,7 +74,7 @@ WHERE TABLE_NAME = 'Person';
   
 ## <a name="examples"></a>Примеры  
   
-### <a name="a-using-columnsupdated-to-test-the-first-eight-columns-of-a-table"></a>A. Использование функции COLUMNS_UPDATED для проверки первых восьми столбцов таблицы  
+### <a name="a-using-columns_updated-to-test-the-first-eight-columns-of-a-table"></a>A. Использование функции COLUMNS_UPDATED для проверки первых восьми столбцов таблицы  
 В этом примере создается две таблицы: `employeeData` и `auditEmployeeData`. Таблица `employeeData` содержит сведения о заработной плате служащих и может быть изменена членами отдела кадров. Если номер социальной страховки (SSN), ежегодная заработная плата или номер банковского счета служащего изменяется, то создается запись аудита и вставляется в таблицу аудита `auditEmployeeData`.
   
 С помощью функции `COLUMNS_UPDATED()` можно быстро проверить все изменения, внесенные в столбцы, содержащие важные сведения о служащих. Такое использование функции `COLUMNS_UPDATED()` будет оправдано, только если пытаться выявить изменения в первых восьми столбцах таблицы.
@@ -183,7 +183,7 @@ SELECT * FROM dbo.auditEmployeeData;
 GO  
 ```  
   
-### <a name="b-using-columnsupdated-to-test-more-than-eight-columns"></a>Б. Использование функции COLUMNS_UPDATED для проверки более чем восьми столбцов  
+### <a name="b-using-columns_updated-to-test-more-than-eight-columns"></a>Б. Использование функции COLUMNS_UPDATED для проверки более чем восьми столбцов  
 Чтобы проверить обновления других столбцов таблицы, кроме первых восьми, используйте функцию `SUBSTRING` для проверки корректности бита, возвращенного функцией `COLUMNS_UPDATED`. В этом примере проверяется обновление столбцов `3`, `5` и `9` таблицы `AdventureWorks2012.Person.Person`.
   
 ```sql

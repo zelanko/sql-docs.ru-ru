@@ -11,12 +11,12 @@ ms.assetid: 21e6d74f-711f-40e6-a8b7-85f832c5d4b3
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a2daf65d8c080700767fc4c94c5e4e9e0aeafa9e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7031157b993fbe1605e7ee2aee7d479a848f21bd
+ms.sourcegitcommit: 676458a9535198bff4c483d67c7995d727ca4a55
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68058662"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69903589"
 ---
 # <a name="creating-a-system-versioned-temporal-table"></a>Создание темпоральной таблицы с системным управлением версиями
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -148,8 +148,8 @@ WITH (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.DepartmentHistory))
   
 -   минимальные затраты на обслуживание.  
   
- При преобразовании существующей таблицы рекомендуется использовать предложение **HIDDEN** для скрытия новых столбцов **PERIOD** , чтобы избежать влияния на существующие приложения, которые не предназначены для работы с новыми столбцами.  
-  
+ При преобразовании существующей таблицы рекомендуется использовать предложение **HIDDEN** для скрытия новых столбцов **PERIOD** (столбцы datetime2 **SysStartTime** и **SysEndTime**), чтобы избежать влияния на существующие приложения, которые не предназначены для работы с новыми столбцами.  
+
 ### <a name="adding-versioning-to-non-temporal-tables"></a>Добавление функции управления версиями в нетемпоральные таблицы  
  Если вы хотите начать отслеживать изменения для нетемпоральной таблицы, которая содержит данные, нужно добавить определение **PERIOD** и при необходимости указать имя для пустой таблицы журнала, которая будет создана SQL Server:  
   

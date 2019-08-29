@@ -24,12 +24,12 @@ ms.assetid: 282cd982-f4fb-4b22-b2df-9e8478f13f6a
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a7e625e1d532f42f2e72e57590943de7e5834dbf
-ms.sourcegitcommit: 67261229b93f54f9b3096890b200d1aa0cc884ac
+ms.openlocfilehash: 8162c14620143aa70ea2e87f582ec99e613f234c
+ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68354610"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "69653668"
 ---
 # <a name="char-and-varchar-transact-sql"></a>Типы char и varchar (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "68354610"
 ## <a name="arguments"></a>Аргументы  
 **char** [ ( *n* ) ] — строковые данные фиксированного размера. *n* определяет размер строки в байтах и должно иметь значение от 1 до 8000. Для однобайтовых кодировок, таких как *Latin*, размер при хранении равен *n* байт, а количество хранимых символов — тоже *n*. Для многобайтовых кодировок размер при хранения тоже равен *n* байт, но количество хранимых символов может быть меньше *n*. Синонимом по стандарту ISO для типа **char** является **character**. Дополнительные сведения о кодировках см. в статье [Однобайтовые и многобайтовые кодировки](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets).
 
-**varchar** [ ( *n* | **max** ) ] — строковые данные переменного размера. *n* определяет размер строки в байтах и может иметь значение от 1 до 8000. Значение **max** указывает, что максимальный размер при хранении составляет 2^31-1 байт (2 ГБ). Для однобайтовых кодировок, таких как *Latin*, размер при хранении равен *n* байт + 2 байта, а количество хранимых символов — *n*. Для многобайтовых кодировок размер при хранении тоже равен *n* байт + 2 байта, но количество хранимых символов может быть меньше *n*. Синонимами по стандарту ISO для типа **varchar** являются типы **charvarying** или **charactervarying**. Дополнительные сведения о кодировках см. в статье [Однобайтовые и многобайтовые кодировки](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets).
+**varchar** [ ( *n* | **max** ) ] — строковые данные переменного размера. Используйте значение *n* для определения размера строки в байтах (допускаются значения от 1 до 8000) или используйте **max** для указания предельного размера столбца вплоть до максимального размера хранилища, что составляет 2^31-1 байт (2 ГБ). Для однобайтовых кодировок, таких как *Latin*, размер при хранении равен *n* байт + 2 байта, а количество хранимых символов — *n*. Для многобайтовых кодировок размер при хранении тоже равен *n* байт + 2 байта, но количество хранимых символов может быть меньше *n*. Синонимами по стандарту ISO для типа **varchar** являются типы **charvarying** или **charactervarying**. Дополнительные сведения о кодировках см. в статье [Однобайтовые и многобайтовые кодировки](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets).
 
 ## <a name="remarks"></a>Remarks  
 Часто ошибочно считают, что в типах данных [CHAR(*n*) и VARCHAR(*n*)](../../t-sql/data-types/char-and-varchar-transact-sql.md) число *n* указывает на количество символов. Однако на самом деле число *n* в [CHAR(*n*) и VARCHAR(*n*)](../../t-sql/data-types/char-and-varchar-transact-sql.md) — это длина строки в **байтах** (0–8000). *n* никогда не определяет количество хранимых символов. То же самое верно и в отношении типов [NCHAR(*n*) и NVARCHAR(*n*)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md).    

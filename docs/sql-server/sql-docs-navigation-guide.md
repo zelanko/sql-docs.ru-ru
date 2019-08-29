@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 31bdddab8dce33d8bf0e59d3abf7384231a13e53
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.openlocfilehash: 42bf8211f8b5907d21f98e12bd058eedb658bbe2
+ms.sourcegitcommit: cdbb0ee5ee5259119ad21695f549207457990f71
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69028828"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69621721"
 ---
 # <a name="sql-server-docs-navigation-guide"></a>Руководство по навигации в документации по SQL Server 
 
@@ -39,16 +39,15 @@ ms.locfileid: "69028828"
 
 ## <a name="toc-navigation-hints"></a>Указания по навигации в оглавлении
 
-Если в конце пункта оглавления есть значок `>`, это означает, что при переходе вы покинете сайт docs.microsoft.com. 
+Если в конце пункта оглавления есть значок `>`, это означает, что вы перейдете к технической документации с другим оглавлением. 
 
 ![Одинарный значок в оглавлении](media/sql-server-docs-navigation-guide/single-carrots-in-sql-docs-toc.png)
 
-
-Если в конце пункта оглавления есть значок `>>`, это означает, что вы перейдете к технической документации с другим оглавлением. 
+Если в конце пункта оглавления есть значок `>>`, это означает, что при переходе вы покинете сайт docs.microsoft.com. 
 
 ![Маркеры навигации по оглавлению](media/sql-server-docs-navigation-guide/double-carrots-in-sql-docs-toc.png)
 
-Если вы перейдете на одну из этих страниц, то можете вернуться на главную страницу и в оглавление технической документации по SQL Server, выбрав пункт "Добро пожаловать в SQL Server >>", который находится вверху каждого оглавления. 
+Если вы перейдете на одну из этих страниц, то можете вернуться на главную страницу и в оглавление технической документации по SQL Server, выбрав пункт "Вас приветствует SQL Server >", который находится вверху каждого оглавления. 
 
 ![Возвращение в оглавление документации по SQL](media/sql-server-docs-navigation-guide/navigate-back-to-sql-toc.png)
 
@@ -64,7 +63,7 @@ ms.locfileid: "69028828"
 
 ![Фильтр версий в документации к SQL](media/sql-server-docs-navigation-guide/sql-docs-version-filter.gif)
 
-Если выбрать **All SQL** \> **Hide nothing** (Все по SQL > Ничего не скрывать) будет отображаться все содержимое и ничто не будет скрыто фильтром версий. Параметр [**Hide nothing** (Ничего не скрывать) не рекомендуется использовать постоянно](versioning-system-monikers-ui-sql-server.md#anchor-allsql-hidenothing).
+Если выбрать **All SQL** \> **Hide nothing** (Все по SQL > Ничего не скрывать) будет отображаться все содержимое и ничто не будет скрыто фильтром версий. Если используется параметр **Hide nothing** (Ничего не скрывать), может отображаться содержимое, относящееся к нескольким версиям SQL Server в одной статье, что может привести к противоречию, неоднозначным утверждениям или путанице. Поэтому параметр [**Hide nothing** (Ничего не скрывать) не рекомендуется использовать постоянно](versioning-system-monikers-ui-sql-server.md#anchor-allsql-hidenothing). 
 
 ## <a name="breadcrumbs"></a>Строки навигации
 

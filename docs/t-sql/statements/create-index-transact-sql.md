@@ -1,7 +1,7 @@
 ---
 title: CREATE INDEX (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 06/26/2019
+ms.date: 08/21/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -51,15 +51,15 @@ helpviewer_keywords:
 - secondary indexes [SQL Server]
 - XML indexes [SQL Server], creating
 ms.assetid: d2297805-412b-47b5-aeeb-53388349a5b9
-author: CarlRabeler
+author: pmasl
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9fdc5ee7428aec65c96755eb9a1c0e013de80d01
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: a2e6a20ac4fb319119692ce41eeef80b1912de33
+ms.sourcegitcommit: 594cee116fa4ee321e1f5e5206f4a94d408f1576
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68809771"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "70009327"
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX (Transact-SQL)
 
@@ -272,7 +272,8 @@ WHERE StartDate IN ('20000404', '20000905') AND EndDate IS NOT NULL
 
 Отфильтрованные индексы не применяются к XML-индексам и полнотекстовым индексам. Для индексов UNIQUE только выбранные строки должны иметь уникальные значения индексов. Отфильтрованные индексы не поддерживают параметр IGNORE_DUP_KEY.
 
-ON *partition_scheme_name* **( _column_name_ )**       
+ON *partition_scheme_name* **( _column_name_ )**      
+
 **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Задает схему секционирования, которая определяет файловые группы, соответствующие секциям секционированного индекса. Схема секционирования должна быть создана в базе данных путем выполнения инструкции [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md) или [ALTER PARTITION SCHEME](../../t-sql/statements/alter-partition-scheme-transact-sql.md). *column_name* указывает столбец, по которому будет секционирован индекс. Столбец должен соответствовать по типу данных, длине и точности аргументу функции секционирования, используемой аргументом *partition_scheme_name*. Аргумент *column_name* необязательно должен соответствовать столбцам из определения индекса. Можно указать любой столбец базовой таблицы, за исключением случая секционирования индекса UNIQUE, когда аргумент *column_name* должен быть выбран из используемых в качестве уникального ключа. Это ограничение дает возможность компоненту [!INCLUDE[ssDE](../../includes/ssde-md.md)] проверять уникальность значений ключа только в одной секции.
@@ -288,11 +289,13 @@ ON *partition_scheme_name* **( _column_name_ )**
 Дополнительные сведения об индексах секционирования см. в разделе [Секционированные таблицы и индексы](../../relational-databases/partitions/partitioned-tables-and-indexes.md).
 
 ON _filegroup_name_      
+
 **Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
 
 Создает заданный индекс в указанной файловой группе. Если местоположение не указано и таблица или представление не секционированы, индекс использует ту же файловую группу, что и базовая таблица или базовое представление. Файловая группа должна существовать.
 
-ON **"** default **"**       
+ON **"** default **"**      
+
 **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Создает указанный индекс для той же файловой группы или схемы секционирования, к которой относится таблица или представление.
@@ -303,6 +306,7 @@ ON **"** default **"**
 > "default" не указывает файловую группу по умолчанию для базы данных в контексте CREATE INDEX. В случае с инструкцией CREATE TABLE поведение иное: значение "default" указывает расположение таблицы в файловой группе по умолчанию для базы данных.
 
 [ FILESTREAM_ON { *filestream_filegroup_name* | *partition_scheme_name* | "NULL" } ]      
+
 **Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
 
 Указывает размещение данных FILESTREAM для таблицы при создании кластеризованного индекса. Предложение FILESTREAM_ON позволяет перемещать данные FILESTREAM в другую файловую группу FILESTREAM или схему секционирования.
@@ -340,6 +344,7 @@ _database_name_
 Указывает параметры, которые должны использоваться при создании индекса.
 
 PAD_INDEX = { ON | **OFF** }      
+
 **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Определяет разреженность индекса. Значение по умолчанию — OFF.
@@ -355,6 +360,7 @@ OFF или _fillfactor_ не указан
 Для обратной совместимости синтаксиса аргумент WITH PAD_INDEX эквивалентен аргументу WITH PAD_INDEX = ON.
 
 FILLFACTOR **=** _fillfactor_      
+
 **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Определяет величину в процентах, показывающую, насколько компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] должен заполнять конечный уровень каждой страницы индекса во время его создания или перестроения. Значение *fillfactor* должно быть целым числом от 1 до 100. Если параметр *fillfactor* равен 100, компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] создает индексы с полностью заполненными страницами конечного уровня.
@@ -367,6 +373,7 @@ FILLFACTOR **=** _fillfactor_
 Дополнительные сведения см. в статье [Указание коэффициента заполнения для индекса](../../relational-databases/indexes/specify-fill-factor-for-an-index.md).
 
 SORT_IN_TEMPDB = { ON | **OFF** }      
+
 **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Указывает, сохранять ли временные результаты сортировки в базе данных **tempdb**. Значение по умолчанию — OFF.
@@ -412,7 +419,10 @@ OFF
 
 Для обратной совместимости синтаксиса аргумент WITH STATISTICS_NORECOMPUTE эквивалентен аргументу WITH STATISTICS_NORECOMPUTE = ON.
 
-STATISTICS_INCREMENTAL = { ON | **OFF** }      
+STATISTICS_INCREMENTAL = { ON | **OFF** }     
+
+**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+
 При значении **ON** статистики создаются как статистики отдельно по секциям. При значении **OFF** дерево статистик удаляется и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] повторно вычисляет статистики. Значение по умолчанию — **OFF**.
 
 Если статистики по секциям не поддерживаются, параметр пропускается и выводится предупреждение. Добавочные статистики не поддерживаются для следующих типов статистических данных.
@@ -448,7 +458,7 @@ OFF
 ONLINE = { ON | **OFF** }      
 Определяет, будут ли базовые таблицы и связанные индексы доступны для запросов и изменения данных во время операций с индексами. Значение по умолчанию — OFF.
 
-> [!NOTE]
+> [!IMPORTANT]
 > Операции с индексами в режиме "в сети" доступны не во всех выпусках [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Сведения о функциях, поддерживаемых различными выпусками [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в статье [Возможности, поддерживаемые различными выпусками SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).
 
 ON      
@@ -456,6 +466,18 @@ ON
 
 OFF      
 Блокировки таблиц применяются во время выполнения операций с индексами. Блокировку изменения схемы (Sch-M) в таблице получает операция с индексами вне сети, которая создает, перестраивает или удаляет кластеризованный индекс либо перестраивает или удаляет некластеризованный индекс. Это предотвращает доступ к базовой таблице всех пользователей во время операции. Операция с индексами вне сети, создающая некластеризованный индекс, получает совмещаемую блокировку (S) в таблице. Это запрещает проводить обновления базовой таблицы, но разрешает проводить операции чтения, например инструкции SELECT.
+
+Дополнительные сведения см. в статье [Выполнение операции с индексами в сети](../../relational-databases/indexes/perform-index-operations-online.md).  
+
+Индексы, в том числе индексы глобальных временных таблиц, могут быть созданы при подключении к сети, за исключением следующего:
+
+- XML-индекс
+- Индекс локальной временной таблицы
+- Исходные уникальные кластеризованные индексы представлений.
+- Отключенные кластеризованные индексы.
+- Индексы columnstore
+- Кластеризованные индексы, если базовая таблица содержит типы данных LOB: **image**, **ntext**, **text** и пространственные типы данных.
+- Столбцы **varchar(max)** и **varbinary(max)** не могут быть частью индекса. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с версии [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], если таблица содержит столбец **varchar(max)** или **varbinary(max)** , кластеризованный индекс, содержащий другие столбцы, можно построить или перестроить с использованием параметра **ONLINE**. [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] не разрешает использовать параметр **ONLINE**, если базовая таблица содержит столбец **varchar(max)** или **varbinary(max)** .
 
 Дополнительные сведения см. в разделе [Об операциях с индексами в режиме "в сети"](../../relational-databases/indexes/how-online-index-operations-work.md).
 
@@ -471,25 +493,17 @@ RESUMABLE **=** { ON | **OFF**}
  OFF      
 Операция с индексами является невозобновляемой.
 
-MAX_DURATION **=** *time* [**MINUTES**] используется с **RESUMABLE = ON** (требуется **ONLINE = ON**)      
+MAX_DURATION **=** *time* [**MINUTES**] используется с **RESUMABLE = ON** (требуется **ONLINE = ON**)   
 
 **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (общедоступная предварительная версия)
 
 Указывает время (целочисленное значение минутах), в течение которого выполняется возобновляемая операция с индексами в сети до приостановки.
 
-> [!WARNING]
+> [!IMPORTANT]
 > Более подробные сведения об операциях с индексами, которые можно выполнить в сети, см. в разделе [Рекомендации по операциям с индексами в сети](../../relational-databases/indexes/guidelines-for-online-index-operations.md).
 
- Индексы, включая индексы глобальных временных таблиц, могут создаваться в режиме в сети со следующими исключениями:
-
-- XML-индекс
-- Индекс локальной временной таблицы.
-- Исходные уникальные кластеризованные индексы представлений.
-- Отключенные кластеризованные индексы.
-- Кластеризованные индексы, если базовая таблица содержит типы данных LOB: **image**, **ntext**, **text** и пространственные типы.
-- Столбцы **varchar(max)** и **varbinary(max)** не могут быть частью индекса. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с версии [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) и в [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)], если таблица содержит столбец **varchar(max)** или **varbinary(max)** , кластеризованный индекс, содержащий другие столбцы, можно построить или перестроить с использованием параметра **ONLINE**. [!INCLUDE[ssSDS](../../includes/sssds-md.md)] не разрешает использование параметра **ONLINE**, если базовая таблица содержит столбец **varchar(max)** или **varbinary(max)** .
-
-Дополнительные сведения см. в статье [Выполнение операции с индексами в сети](../../relational-databases/indexes/perform-index-operations-online.md).
+> [!NOTE] 
+> Возобновляемое перестроение индекса с подключением к сети не поддерживается для индексов columnstore.
 
 ALLOW_ROW_LOCKS = { **ON** | OFF }      
 **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
@@ -513,18 +527,17 @@ ON
 OFF      
 Блокировки страниц не используются.
 
-
 OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | **OFF** }      
 **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)])
 
 Определяет, следует ли выполнять оптимизацию, связанную с состязанием при операциях вставки на последнюю страницу. Значение по умолчанию — OFF. См. подробнее раздел о [последовательных ключах](#sequential-keys).
 
-MAXDOP = _max_degree_of_parallelism_      
+MAXDOP = *max_degree_of_parallelism*      
 **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Переопределяет параметр конфигурации **max degree of parallelism** на время выполнения операции с индексами. Дополнительные сведения см. в разделе [Настройка параметра конфигурации сервера max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). MAXDOP можно использовать для ограничения числа процессоров, используемых при параллельном выполнении планов. Максимальное число процессоров — 64.
 
-Параметр _max_degree_of_parallelism_ может иметь одно из следующих значений:
+Параметр *max_degree_of_parallelism* может иметь одно из следующих значений:
 
 1      
 Подавляет формирование параллельных планов.
@@ -1127,6 +1140,7 @@ CREATE CLUSTERED INDEX IX_ProductVendor_VendorID
 
 ## <a name="see-also"></a>См. также:
 [Руководство по архитектуре и разработке индексов SQL Server](../../relational-databases/sql-server-index-design-guide.md)     
+[Выполнение операции с индексами в сети](../../relational-databases/indexes/perform-index-operations-online.md)  
 [Индексы и инструкция ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md#indexes-and-alter-table)     
 [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md)     
 [CREATE PARTITION FUNCTION](../../t-sql/statements/create-partition-function-transact-sql.md)     

@@ -30,12 +30,12 @@ helpviewer_keywords:
 ms.assetid: dd6cc2ba-631f-4adf-89dc-29ef449c6933
 author: janinezhang
 ms.author: janinez
-ms.openlocfilehash: 62521d308c361b8ea6dc8abdabedd8386d07b933
-ms.sourcegitcommit: 2efb0fa21ff8093384c1df21f0e8910db15ef931
+ms.openlocfilehash: 6285426e0503433157632dddeb71b57a9452154f
+ms.sourcegitcommit: cdbb0ee5ee5259119ad21695f549207457990f71
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/18/2019
-ms.locfileid: "68316657"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69621691"
 ---
 # <a name="foreach-loop-container"></a>Контейнер «цикл по каждому элементу»
 
@@ -52,7 +52,7 @@ ms.locfileid: "68316657"
   
 -   Перечислитель набора строк схемы ADO.NET для перечисления сведений схемы об источнике данных. Например, можно перечислить таблицы базы данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и вывести их список.  
   
--   Перечислитель с циклом по каждому файлу для перечисления файлов в папке. Перечислитель может просматривать вложенные папки. Например, можно считать все файлы с расширением LOG, находящиеся в папке Windows и всех вложенных в нее папках.  
+-   Перечислитель с циклом по каждому файлу для перечисления файлов в папке. Перечислитель может просматривать вложенные папки. Например, можно считать все файлы с расширением LOG, находящиеся в папке Windows и всех вложенных в нее папках. Обратите внимание, что нельзя указать порядок извлечения файлов.  
   
 -   Перечислитель по объекту из переменной для перечисления объектов, содержащихся в заданной переменной. Перечисляемым объектом может быть массив, объект **DataTable**ADO.NET, перечислитель служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] и т. п. Например, можно перечислить значения массива, в которых содержатся имена серверов.  
   

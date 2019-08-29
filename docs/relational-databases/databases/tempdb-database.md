@@ -2,7 +2,7 @@
 title: База данных tempdb | Документация Майкрософт
 description: В этой статье приводятся подробные сведения о настройке и использовании базы данных tempdb в SQL Server и базе данных SQL Azure.
 ms.custom: P360
-ms.date: 05/22/2019
+ms.date: 08/21/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.technology: ''
@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 ms.reviewer: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3e921c5b95a3d7fd4eb1e8c5b0cb9010c7d2344c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8197b243bc0789da9acb0e94069585d8619d5fa0
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68127142"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653774"
 ---
 # <a name="tempdb-database"></a>База данных tempdb
 
@@ -217,7 +217,7 @@ GO
 
 ## <a name="memory-optimized-tempdb-metadata"></a>Оптимизированные для памяти метаданные TempDB
 
-Состязание метаданных TempDB всегда было узким местом для масштабируемости многих рабочих нагрузок, выполняющихся в SQL Server. В [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] появилась новая функция оптимизированных для памяти метаданных tempdb, входящая в семейство функций [выполняющейся в памяти базы данных](../in-memory-database.md). Она эффективно устраняет эту проблему и открывает новый уровень масштабируемости для рабочих нагрузок, активно использующих tempdb. В [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] системные таблицы, связанные с управлением метаданными временной таблицы, можно переместить в неустойчивые таблицы без кратковременной блокировки, оптимизированные для памяти. Чтобы согласиться на эту новую функцию, используйте следующий скрипт:
+Состязание метаданных TempDB всегда было узким местом для масштабируемости многих рабочих нагрузок, выполняющихся в SQL Server. В [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] появилась новая функция оптимизированных для памяти метаданных tempdb, входящая в семейство функций [выполняющейся в памяти базы данных](../in-memory-database.md). Она эффективно устраняет эту проблему и открывает новый уровень масштабируемости для рабочих нагрузок, активно использующих tempdb. В [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] системные таблицы, связанные с управлением метаданными временной таблицы, можно переместить в неустойчивые таблицы без кратковременной блокировки, оптимизированные для памяти.  В [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] появилась новая функция оптимизированных для памяти метаданных tempdb, входящая в семейство функций [выполняющейся в памяти базы данных](../in-memory-database.md). Она эффективно устраняет эту проблему и открывает новый уровень масштабируемости для рабочих нагрузок, активно использующих tempdb. В [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] системные таблицы, связанные с управлением метаданными временной таблицы, можно переместить в редко используемые таблицы без кратковременной блокировки, оптимизированные для памяти. Чтобы согласиться на эту новую функцию, используйте следующий скрипт:
 
 ```sql
 ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED TEMPDB_METADATA = ON 
@@ -319,7 +319,3 @@ GROUP BY R2.session_id, R1.internal_objects_alloc_page_count,
 - [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  
 - [Перемещение файлов базы данных](../../relational-databases/databases/move-database-files.md)  
   
-## <a name="see-also"></a>См. также:
-
-- [Работа с базой данных tempdb в SQL Server 2005](https://technet.microsoft.com/library/cc966545.aspx)  
-- [Устранение неполадок, связанных с нехваткой места на диске для базы данных tempdb](https://msdn.microsoft.com/library/ms176029.aspx)

@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: bd20fd3a-414b-4581-959d-ebba4ddf5a55
 author: janinezhang
 ms.author: janinez
-ms.openlocfilehash: 143bba36c1f85877fd3a0504dd8345c754ec055d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a9cbb85bafae51929676de93e4de285472bc5443
+ms.sourcegitcommit: cdbb0ee5ee5259119ad21695f549207457990f71
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68023588"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69621695"
 ---
 # <a name="install-integration-services"></a>Установка служб Integration Services
 
@@ -44,9 +44,9 @@ ms.locfileid: "68023588"
 -   [Вопросы безопасности при установке SQL Server](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)    
     
 ## <a name="install-standalone-or-side-by-side"></a>Автономная или параллельная установка    
-Установку служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] можно производить в следующих конфигурациях.    
+Установку служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] можно производить в следующих конфигурациях:    
     
--   Службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] можно установить на компьютере, не содержащем ранее установленных экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].    
+-   Службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] можно установить на компьютере, не содержащем ранее установленных экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].    
     
 -   Установить службы [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] можно параллельно с существующим экземпляром служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].    
     

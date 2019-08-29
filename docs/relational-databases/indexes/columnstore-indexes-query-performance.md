@@ -11,12 +11,12 @@ ms.assetid: 83acbcc4-c51e-439e-ac48-6d4048eba189
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c1e2d8f01370978074a07eaa0e5f784927bef511
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a2786ebcf87f5af0ed9abcb9adaf0a85253327fa
+ms.sourcegitcommit: 594cee116fa4ee321e1f5e5206f4a94d408f1576
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68024976"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "70009378"
 ---
 # <a name="columnstore-indexes---query-performance"></a>Производительность запросов по индексам columnstore
 
@@ -110,7 +110,7 @@ ms.locfileid: "68024976"
 |top sort||нет|нет|да||    
 |window aggregates||Н/Д|Н/Д|да|Новый оператор в [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].|    
     
-<sup>1</sup>Применяется к [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], уровням "Премиум", "Стандартный" (S3 и выше) [!INCLUDE[ssSDS](../../includes/sssds-md.md)], ко всем уровням виртуальных ядер и к [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].    
+<sup>1</sup>Применяется к [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], уровням [!INCLUDE[ssSDS](../../includes/sssds-md.md)] "Премиум", "Стандартный" — S3 и выше, всем уровням виртуальных ядер, а также [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].    
     
 ### <a name="aggregate-pushdown"></a>Включение статических вычислений    
  Обычно для выполнения статистических вычислений требуется извлечь соответствующие строки с узла SCAN и вычислить значения в пакетном режиме. Несмотря на то, что в этом случае обеспечивается высокая производительность, в [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] операцию статистического вычисления можно включить на узле SCAN, чтобы значительно повысить производительность статистических вычислений на основе пакетного режима. При этом должны соблюдаться указанные далее условия. 
@@ -166,7 +166,7 @@ FROM FactResellerSalesXL_CCI
  [Индексы columnstore. Руководство по загрузке данных](../../relational-databases/indexes/columnstore-indexes-data-loading-guidance.md)   
  [Начало работы с Columnstore для получения операционной аналитики в реальном времени](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)     
  [Индексы сolumnstore для хранилищ данных](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)   
- [Дефрагментация индексов columnstore](../../relational-databases/indexes/columnstore-indexes-defragmentation.md)    
+ [Реорганизация и перестроение индексов](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)    
  [Архитектура индексов columnstore](../../relational-databases/sql-server-index-design-guide.md#columnstore_index)   
  [CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md)    
  [ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md)     

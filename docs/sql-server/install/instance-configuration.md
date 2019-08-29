@@ -1,7 +1,7 @@
 ---
 title: Справка мастера установки | Документация Майкрософт
 ms.custom: ''
-ms.date: 05/22/2019
+ms.date: 08/16/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -15,12 +15,12 @@ ms.assetid: 5bf822fc-6dec-4806-a153-e200af28e9a5
 author: MashaMSFT
 ms.author: mathoma
 robots: noindex,nofollow
-ms.openlocfilehash: edd2c17b106e536f1a2694fe0cb25e34b10d1138
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: b32ad209651c30f810f239b0c14689be497c4378
+ms.sourcegitcommit: 8d01698e779a536093dd637e84c52f3ff0066a2c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68894067"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69609302"
 ---
 # <a name="installation-wizard-help"></a>Справка по мастеру установки
 
@@ -399,7 +399,7 @@ ms.locfileid: "68894067"
   
 * При использовании файлового сервера SMB учетная запись службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должна быть учетной записью домена.  
   
-* Учетная запись, используемая для установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], должна иметь разрешение полного контроля NTFS на общую папку файлов SMB, которая используется в качестве каталога данных.  
+* Учетная запись, используемая для установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], должна иметь разрешение **полного контроля** NTFS на общую папку файлов SMB, которая используется в качестве каталога данных.  
   
 * Учетная запись, используемая для установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , должна обладать правами SeSecurityPrivilege на файловом сервере SMB. Для предоставления этого права используйте консоль локальной политики безопасности на файловом сервере, чтобы добавить учетную запись установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в политику **Управления журналом аудита и безопасности** . Этот параметр находится в разделе **Назначение прав пользователя** в узле **Локальные политики** консоли "Локальная политика безопасности".  
   
@@ -417,11 +417,35 @@ The MaxDOP setting applies only to SQL Server 2019 and later.
 
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
 
-## <a name="database-engine-configuration---maxdop-page"></a>Настройка ядра СУБД — страница MaxDOP
+## <a name="a-namemaxdopa-database-engine-configuration---maxdop-page"></a><a name="maxdop"><a/> Настройка ядра СУБД — страница MaxDOP
 
-**Максимальная степень параллелизма (MaxDOP)** определяет максимальное число процессоров, которое может использовать отдельная инструкция. В SQL Server 2019 появилась возможность настроить этот параметр во время установки. SQL Server 2019 также автоматически вычисляет рекомендуемое для сервера значение MaxDOP в зависимости от числа ядер. Максимальное значение по умолчанию равно 8.  
+**Максимальная степень параллелизма (MaxDOP)** определяет максимальное число процессоров, которое может использовать отдельная инструкция. В [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] появилась возможность настроить этот параметр во время установки. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] также автоматически вычисляет рекомендуемое для сервера значение MaxDOP в зависимости от числа ядер.  
 
-Вы можете вручную настроить этот параметр на этой странице и (или) изменить его после установки. Дополнительные сведения см. в разделе [Максимальная степень параллелизма](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).
+Если эта страница пропускается во время установки, значением MaxDOP по умолчанию является рекомендуемое значение, отображаемое на этой странице вместо значения по умолчанию [!INCLUDE[ssde_md](../../includes/ssde_md.md)] для предыдущих версий (0). Вы можете также вручную настроить этот параметр на этой странице или изменить его после установки. 
+
+### <a name="uielement-list"></a>Список элементов пользовательского интерфейса (UIElement)
+
+* **Максимальная степень параллелизма (MaxDOP)** определяет максимальное число процессоров, используемых при параллельном выполнении одной инструкции. Значение по умолчанию будет соответствовать рекомендациям по максимальной степени параллелизма, приведенным в разделе [Рекомендации](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines).
+
+## <a name="a-namememorya-database-engine-configuration---memory-page"></a><a name="memory"><a/> Настройка ядра СУБД — страница ресурсов памяти
+
+**Min Server Memory** определяет минимальный объем памяти, который будет использоваться [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] для буферного пула и других кэшей. Значение по умолчанию равно 0, как и рекомендуемое значение. Дополнительные сведения о последствиях изменения **Min Server Memory** см. в [руководстве по архитектуре управления памятью](../../relational-databases/memory-management-architecture-guide.md#effects-of-min-and-max-server-memory).
+
+**Max Server Memory** определяет максимальный объем памяти, который будет использоваться [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] для буферного пула и других кэшей. Значение по умолчанию равно 2 147 483 647 мегабайт (МБ), а вычисляемые рекомендуемые значения будут соответствовать рекомендациям из статьи [Параметры конфигурации памяти сервера](../../database-engine/configure-windows/server-memory-server-configuration-options.md#setting-the-memory-options-manually) для изолированного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на основе имеющейся системной памяти. Дополнительные сведения о последствиях изменения **Max Server Memory** см. в [руководстве по архитектуре управления памятью](../../relational-databases/memory-management-architecture-guide.md#effects-of-min-and-max-server-memory).
+
+Если эта страница пропускается во время настройки, для параметра **Max Server Memory** используется значение [!INCLUDE[ssde_md](../../includes/ssde_md.md)] по умолчанию (2 147 483 647 мегабайт). Вы можете вручную настроить эти параметры на этой странице, выбрав переключатель **Рекомендуется**, или изменить эти настройки после установки. Дополнительные сведения см. в статье [Параметры конфигурации сервера Server Memory](../../database-engine/configure-windows/server-memory-server-configuration-options.md).
+
+### <a name="uielement-list"></a>Список элементов пользовательского интерфейса (UIElement)
+  
+**Default**: Этот переключатель выбран по умолчанию и задает значения [!INCLUDE[ssde_md](../../includes/ssde_md.md)] по умолчанию для параметров **Min Server Memory** и **Max Server Memory**. 
+
+**Рекомендуется**. Этот переключатель нужно выбрать, чтобы принять рекомендуемые вычисляемые значения или заменить вычисляемые значения на значения, задаваемые пользователем.  
+  
+**Min Server Memory (MБ)** . Чтобы заменить вычисляемые значения на значения, задаваемые пользователем, укажите требуемое значение для параметра **Min Server Memory**.  
+  
+**Max Server Memory (MБ)** . Чтобы заменить вычисляемые значения на значения, задаваемые пользователем, укажите требуемое значение для параметра **Max Server Memory**.  
+
+**Щелкните здесь, чтобы принять рекомендуемые конфигурации памяти для ядра СУБД SQL Server**. Установите этот флажок, чтобы принять вычисляемые рекомендуемые конфигурации памяти на этом сервере. Если выбран переключатель **Рекомендуется**, процесс установки нельзя продолжить, не установив этот флажок.
 
 ::: moniker-end
 

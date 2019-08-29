@@ -11,12 +11,12 @@ ms.assetid: 21fd153b-116d-47fc-a926-f1528299a391
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6d632934b3b350077606d93ca162e8f859f0a533
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7644e38995d7afb7493ed3bfec20f2049beb9055
+ms.sourcegitcommit: 594cee116fa4ee321e1f5e5206f4a94d408f1576
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67912153"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "70009455"
 ---
 # <a name="columnstore-indexes---data-warehouse"></a>Хранилище данных для индексов columnstore
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "67912153"
 -   Изоляция моментального снимка для уровня совместимости базы данных 130 или более высокого.  
   
 ## <a name="improve-performance-by-combining-nonclustered-and-columnstore-indexes"></a>Повышение производительности благодаря объединению некластеризованных индексов и индексов columnstore  
- Начиная с версии [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]можно определить некластеризованные индексы в кластеризованном индексе columnstore.   
+ Начиная с версии [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] можно определить некластеризованные индексы в кластеризованном индексе columnstore.   
   
 ### <a name="example-improve-efficiency-of-table-seeks-with-a-nonclustered-index"></a>Пример Повышение эффективности операций поиска в таблицах с помощью некластеризованного индекса  
  Для повышения эффективности операций поиска в таблицах хранилища данных можно создать некластеризованный индекс, предназначенный для запуска запросов, которые показывают максимальную производительность с операциями поиска в таблицах. Например, запросы, которые ищут совпадающие значения или возвращают небольшой диапазон значений, будут эффективнее выполняться с индексом сбалансированного дерева, а не с индексом columnstore. Они не требуют сканирования всей таблицы через индекс columnstore и вернут правильный результат быстрее, выполнив двоичный поиск по индексу сбалансированного дерева.  
@@ -131,6 +131,6 @@ END TRAN
  [Индексы columnstore. Руководство по загрузке данных](../../relational-databases/indexes/columnstore-indexes-data-loading-guidance.md)   
  [Производительность запросов индексов columnstore](../../relational-databases/indexes/columnstore-indexes-query-performance.md)   
  [Начало работы с Columnstore для получения операционной аналитики в реальном времени](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)   
- [Дефрагментация индексов columnstore](../../relational-databases/indexes/columnstore-indexes-defragmentation.md)  
+ [Реорганизация и перестроение индексов](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)    
  [Архитектура индексов columnstore](../../relational-databases/sql-server-index-design-guide.md#columnstore_index) 
   

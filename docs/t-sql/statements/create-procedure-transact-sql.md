@@ -46,12 +46,12 @@ ms.assetid: afe3d86d-c9ab-44e4-b74d-4e3dbd9cc58c
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 14597122e586aca0290a4823f07dbb17e5cccda2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4004ba36ffbcaf5cf96a6e4d9c95761b054e9abc
+ms.sourcegitcommit: 01c8df19cdf0670c02c645ac7d8cc9720c5db084
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006525"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "70000821"
 ---
 # <a name="create-procedure-transact-sql"></a>CREATE PROCEDURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -356,7 +356,7 @@ SELECT DB_NAME(@ID) AS ThatDB;
 ## <a name="best-practices"></a>Рекомендации  
  Это неполный список рекомендаций, однако данные советы помогут повысить производительность процедур.  
   
--   Начинайте текст процедуры с инструкции SET NOCOUNT ON (она должна следовать сразу за ключевым словом AS). В этом случае отключаются сообщения, отправляемые [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] клиенту после выполнения любых инструкций SELECT, INSERT, UPDATE, MERGE и DELETE. Устранение ненужной нагрузки на сеть повышает общую производительность базы данных и приложения. Дополнительные сведения см. в разделе [SET NOCOUNT (Transact-SQL)](../../t-sql/statements/set-nocount-transact-sql.md).  
+-   Начинайте текст процедуры с инструкции SET NOCOUNT ON (она должна следовать сразу за ключевым словом AS). В этом случае отключаются сообщения, отправляемые [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] клиенту после выполнения любых инструкций SELECT, INSERT, UPDATE, MERGE и DELETE. При этом для ясности создаются минимальные выходные данные. Но на доступном сегодня оборудовании не наблюдается ощутимого повышения производительности. Дополнительные сведения см. в разделе [SET NOCOUNT (Transact-SQL)](../../t-sql/statements/set-nocount-transact-sql.md).  
   
 -   При создании или упоминании объектов базы данных в процедуре используйте имена схем. Отсутствие необходимости поиска в нескольких схемах экономит время обработки, затрачиваемое компонентом [!INCLUDE[ssDE](../../includes/ssde-md.md)] на разрешение имен объектов. Кроме того, предотвращаются проблемы с разрешениями и доступом, вызываемые назначением схемы по умолчанию для пользователя, когда объекты создаются без указания схемы.  
   

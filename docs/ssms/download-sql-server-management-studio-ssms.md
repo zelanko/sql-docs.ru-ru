@@ -23,12 +23,12 @@ author: dnethi
 ms.author: dinethi
 ms.custom: ''
 ms.date: 07/26/2019
-ms.openlocfilehash: cb379078fe5d8c2436b220871d84d352a8619155
-ms.sourcegitcommit: 2604e13627fbc9f3bda3926b67045fceb7b04e37
+ms.openlocfilehash: 46174db6dc0008dbeb9490cc96cf41cdef1bc3ed
+ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68823119"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70123107"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>Скачивание SQL Server Management Studio (SSMS)
 
@@ -81,7 +81,6 @@ SQL Server Management Studio 18.2:
 | Выполнение запроса или результаты | Добавлено "Время завершения" в сообщениях для отслеживания завершения запросов. |
 | Выполнение запроса или результаты  | Разрешено отображение дополнительных данных (результат в тексте) и их сохранение в ячейках (результат в сетке). Теперь SSMS допускает до 2 млн символов для обоих вариантов (начиная с 256 и 64 тыс. соответственно). Это также устраняет проблему, из-за которой пользователи не могут получить более 43 680 символов из ячеек сетки. |
 | Инструкция ShowPlan | Добавлен новый атрибут в QueryPlan, когда включена встроенная скалярная функция UDF (ContainsInlineScalarTsqlUdfs). |
-| SMO | Добавлена поддержка ограничений для функций. Дополнительные сведения о самой функции см. в разделе [Ограничения функций](https://docs.microsoft.com/sql/relational-databases/security/feature-restrictions). Дополнительные сведения о расширениях оценки см. в статье [Знакомство с API Оценки SQL](https://techcommunity.microsoft.com/t5/SQL-Server/Introducing-SQL-Assessment-API-Public-Preview/ba-p/778570). |
 | Службы Integration Services (SSIS) | Оптимизация производительности для планировщика пакетов служб SSIS в Azure |
 |  |  |
 

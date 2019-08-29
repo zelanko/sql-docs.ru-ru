@@ -13,12 +13,12 @@ ms.assetid: f5309285-ce93-472c-944b-9014dc8f001d
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3a5a909e31d289b7b9739059fd2f870578a923a6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3a33a45be38ad49b2ecef68fe64be21b94c08f85
+ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68113441"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70123209"
 ---
 # <a name="query-store-usage-scenarios"></a>Сценарии использования хранилища запросов
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -134,7 +134,7 @@ ms.locfileid: "68113441"
     Б.  Если не удалось принудительно перейти к некоторым планам или если производительность по-прежнему на неприемлемом уровне, рекомендуем вернуться к предыдущему [уровню совместимости базы данных](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md), а затем обратиться в службу поддержки пользователей Майкрософт.  
     
 > [!TIP]
-> Обновите [уровень совместимости базы данных](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-sql-server-upgrades)с помощью задачи *обновления базы данных* [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Дополнительные сведения см. в статье [Обновление баз данных с помощью помощника по настройке запросов](../../relational-databases/performance/upgrade-dbcompat-using-qta.md).
+> Обновите [уровень совместимости базы данных](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-database-engine-upgrades)с помощью задачи *обновления базы данных* [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Дополнительные сведения см. в статье [Обновление баз данных с помощью помощника по настройке запросов](../../relational-databases/performance/upgrade-dbcompat-using-qta.md).
   
 ## <a name="identify-and-improve-ad-hoc-workloads"></a>Определение и улучшение нерегламентированных рабочих нагрузок  
 В некоторых случаях рабочие нагрузки не содержат доминантных запросов, которые можно настроить для повышения общей производительности приложений. Обычно такие рабочие нагрузки характеризует относительно большое количество различных запросов, каждый из которых задействует часть системных ресурсов. Поскольку эти запросы уникальны, они выполняются очень редко (обычно лишь один раз, в связи с чем называются нерегламентированными), поэтому не оказывают существенного влияния на ресурсы системы. С другой стороны, учитывая, что приложение постоянно формирует новые запросы, значительная часть системных ресурсов расходуется на компиляцию запросов, а это не оптимально. Это не идеальная ситуация для хранилища запросов еще и потому, что множество запросов и планов заполняют зарезервированное вами пространство, а значит, хранилище запросов быстрее переходит в режим доступности только для чтения. Если вы активировали **политику очистки на основе размера** ([настоятельно рекомендуется](best-practice-with-the-query-store.md) для поддержания работоспособности хранилища запросов), фоновый процесс будет очищать структуры хранилища запросов большую часть времени и, таким образом, также задействовать значительную часть системных ресурсов.  
@@ -223,5 +223,4 @@ ALTER DATABASE [QueryStoreTest] SET QUERY_STORE = ON
  [Мониторинг производительности с использованием хранилища запросов](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [Рекомендации по хранилищу запросов](../../relational-databases/performance/best-practice-with-the-query-store.md)         
  [Обновление баз данных с помощью помощника по настройке запросов](../../relational-databases/performance/upgrade-dbcompat-using-qta.md)           
-  
   

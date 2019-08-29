@@ -1,7 +1,7 @@
 ---
 title: MERGE (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 08/10/2017
+ms.date: 08/20/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -24,25 +24,25 @@ helpviewer_keywords:
 ms.assetid: c17996d6-56a6-482f-80d8-086a3423eecc
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d3a3f484bc05411f4d7b78c1734a4a3dba4330d2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e6585b6a50701ac4583bdbb02d9bd2529ee08f01
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68129454"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653357"
 ---
 # <a name="merge-transact-sql"></a>MERGE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Выполняет операции вставки, обновления или удаления для целевой таблицы на основе результатов соединения с исходной таблицей. Например, можно синхронизировать две таблицы путем вставки, обновления или удаления строк в одной таблице на основании отличий, найденных в другой таблице.  
   
 **Совет для повышения производительности**. Условное поведение, описанное для оператора MERGE, лучше использовать, если две таблицы содержат сложное сочетание сопоставленных характеристик. Например, для вставки строк, которых не существует, или обновления строки, с которыми есть совпадение. При простом обновлении одной таблицы на основе строк из другой таблицы производительность и масштабируемость будет выше для базовых инструкций INSERT, UPDATE и DELETE. Пример:  
   
-```  
+```sql
 INSERT tbl_A (col, col2)  
-SELECT col, col2   
-FROM tbl_B   
+SELECT col, col2
+FROM tbl_B
 WHERE NOT EXISTS (SELECT col FROM tbl_A A2 WHERE A2.col = tbl_B.col);  
 ```  
   
@@ -50,12 +50,12 @@ WHERE NOT EXISTS (SELECT col FROM tbl_A A2 WHERE A2.col = tbl_B.col);
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```
 [ WITH <common_table_expression> [,...n] ]  
-MERGE   
-    [ TOP ( expression ) [ PERCENT ] ]   
+MERGE
+    [ TOP ( expression ) [ PERCENT ] ]
     [ INTO ] <target_table> [ WITH ( <merge_hint> ) ] [ [ AS ] table_alias ]  
-    USING <table_source>   
+    USING <table_source>
     ON <merge_search_condition>  
     [ WHEN MATCHED [ AND <clause_search_condition> ]  
         THEN <merge_matched> ] [ ...n ]  
@@ -64,11 +64,11 @@ MERGE
     [ WHEN NOT MATCHED BY SOURCE [ AND <clause_search_condition> ]  
         THEN <merge_matched> ] [ ...n ]  
     [ <output_clause> ]  
-    [ OPTION ( <query_hint> [ ,...n ] ) ]      
+    [ OPTION ( <query_hint> [ ,...n ] ) ]
 ;  
   
 <target_table> ::=  
-{   
+{
     [ database_name . schema_name . | schema_name . ]  
   target_table  
 }  
@@ -79,18 +79,18 @@ MERGE
     [ [ , ] INDEX ( index_val [ ,...n ] ) ] }  
 }  
   
-<table_source> ::=   
+<table_source> ::=
 {  
-    table_or_view_name [ [ AS ] table_alias ] [ <tablesample_clause> ]   
-        [ WITH ( table_hint [ [ , ]...n ] ) ]   
-  | rowset_function [ [ AS ] table_alias ]   
-        [ ( bulk_column_alias [ ,...n ] ) ]   
+    table_or_view_name [ [ AS ] table_alias ] [ <tablesample_clause> ]
+        [ WITH ( table_hint [ [ , ]...n ] ) ]
+  | rowset_function [ [ AS ] table_alias ]
+        [ ( bulk_column_alias [ ,...n ] ) ]
   | user_defined_function [ [ AS ] table_alias ]  
-  | OPENXML <openxml_clause>   
-  | derived_table [ AS ] table_alias [ ( column_alias [ ,...n ] ) ]   
-  | <joined_table>   
-  | <pivoted_table>   
-  | <unpivoted_table>   
+  | OPENXML <openxml_clause>
+  | derived_table [ AS ] table_alias [ ( column_alias [ ,...n ] ) ]
+  | <joined_table>
+  | <pivoted_table>
+  | <unpivoted_table>
 }  
   
 <merge_search_condition> ::=  
@@ -112,11 +112,11 @@ SET
   | column_name { += | -= | *= | /= | %= | &= | ^= | |= } expression  
   | @variable { += | -= | *= | /= | %= | &= | ^= | |= } expression  
   | @variable = column { += | -= | *= | /= | %= | &= | ^= | |= } expression  
-  } [ ,...n ]   
+  } [ ,...n ]
   
 <merge_not_matched>::=  
 {  
-    INSERT [ ( column_list ) ]   
+    INSERT [ ( column_list ) ]
         { VALUES ( values_list )  
         | DEFAULT VALUES }  
 }  
@@ -126,36 +126,36 @@ SET
   
 <search condition> ::=  
     MATCH(<graph_search_pattern>) | <search_condition_without_match> | <search_condition> AND <search_condition>
-    
+
 <search_condition_without_match> ::=
-    { [ NOT ] <predicate> | ( <search_condition_without_match> ) 
-    [ { AND | OR } [ NOT ] { <predicate> | ( <search_condition_without_match> ) } ]   
+    { [ NOT ] <predicate> | ( <search_condition_without_match> )
+    [ { AND | OR } [ NOT ] { <predicate> | ( <search_condition_without_match> ) } ]
 [ ,...n ]  
 
-<predicate> ::=   
-    { expression { = | < > | ! = | > | > = | ! > | < | < = | ! < } expression   
-    | string_expression [ NOT ] LIKE string_expression   
-  [ ESCAPE 'escape_character' ]   
-    | expression [ NOT ] BETWEEN expression AND expression   
-    | expression IS [ NOT ] NULL   
-    | CONTAINS   
-  ( { column | * } , '< contains_search_condition >' )   
-    | FREETEXT ( { column | * } , 'freetext_string' )   
-    | expression [ NOT ] IN ( subquery | expression [ ,...n ] )   
-    | expression { = | < > | ! = | > | > = | ! > | < | < = | ! < }   
-  { ALL | SOME | ANY} ( subquery )   
-    | EXISTS ( subquery ) }   
+<predicate> ::=
+    { expression { = | < > | ! = | > | > = | ! > | < | < = | ! < } expression
+    | string_expression [ NOT ] LIKE string_expression
+  [ ESCAPE 'escape_character' ]
+    | expression [ NOT ] BETWEEN expression AND expression
+    | expression IS [ NOT ] NULL
+    | CONTAINS
+  ( { column | * } , '< contains_search_condition >' )
+    | FREETEXT ( { column | * } , 'freetext_string' )
+    | expression [ NOT ] IN ( subquery | expression [ ,...n ] )
+    | expression { = | < > | ! = | > | > = | ! > | < | < = | ! < }
+  { ALL | SOME | ANY} ( subquery )
+    | EXISTS ( subquery ) }
 
 <graph_search_pattern> ::=
-    { <node_alias> { 
-                      { <-( <edge_alias> )- } 
+    { <node_alias> {
+                      { <-( <edge_alias> )- }
                     | { -( <edge_alias> )-> }
-                    <node_alias> 
-                   } 
+                    <node_alias>
+                   }
     }
   
 <node_alias> ::=
-    node_table_name | node_table_alias 
+    node_table_name | node_table_alias
 
 <edge_alias> ::=
     edge_table_name | edge_table_alias
@@ -168,7 +168,7 @@ SET
 }  
   
 <dml_select_list>::=  
-    { <column_name> | scalar_expression }   
+    { <column_name> | scalar_expression }
         [ [AS] column_alias_identifier ] [ ,...n ]  
   
 <column_name> ::=  
@@ -176,7 +176,8 @@ SET
     | $action  
 ```  
   
-## <a name="arguments"></a>Аргументы  
+## <a name="arguments"></a>Аргументы
+
 WITH \<common_table_expression>  
 Указывает временный именованный результирующий набор или представление (которые также называются обобщенным табличным выражением), определенные в области инструкции MERGE. Результирующий набор, на который ссылается инструкция MERGE, является производным простого запроса. Дополнительные сведения см. в разделе [WITH common_table_expression (Transact-SQL)](../../t-sql/queries/with-common-table-expression-transact-sql.md).  
   
@@ -204,17 +205,17 @@ TOP ( *expression* ) [ PERCENT ]
 Альтернативное имя для ссылок на таблицу.  
   
 USING \<table_source>  
-Указывает источник данных, который сопоставляется со строками данных в таблице *target_table* на основе условия \<merge_search condition>. Результат этого совпадения обуславливает действия, которые выполняются предложениями WHEN инструкции MERGE. Аргумент \<table_source> может быть удаленной таблицей или производной таблицей, которая обращается к удаленным таблицам. 
+Указывает источник данных, который сопоставляется со строками данных в таблице *target_table* на основе условия \<merge_search condition>. Результат этого совпадения обуславливает действия, которые выполняются предложениями WHEN инструкции MERGE. Аргумент \<table_source> может быть удаленной таблицей или производной таблицей, которая обращается к удаленным таблицам.
   
 Аргументом \<table_source> может быть производная таблица, использующая [!INCLUDE[tsql](../../includes/tsql-md.md)] [конструктор табличных значений](../../t-sql/queries/table-value-constructor-transact-sql.md) для построения таблицы путем указания нескольких строк.  
   
 Дополнительные сведения о синтаксисе и аргументах этого предложения см. в разделе [FROM (Transact-SQL)](../../t-sql/queries/from-transact-sql.md).  
   
 ON \<merge_search_condition>  
-Указывает условия, по которым \<table_source> соединяется с таблицей *target_table* для сопоставления. 
+Указывает условия, по которым \<table_source> соединяется с таблицей *target_table* для сопоставления.
   
 > [!CAUTION]  
->  Важно указать только те столбцы из целевой таблицы, которые используются для поиска совпадений. Иными словами, необходимо указать столбцы целевой таблицы, которые сравниваются с соответствующим столбцом исходной таблицы. Не пытайтесь ускорить выполнение запроса за счет фильтрации строк в целевой таблице для предложения ON, например, указав `AND NOT target_table.column_x = value`. Это может привести к получению непредвиденных и неверных результатов.  
+> Важно указать только те столбцы из целевой таблицы, которые используются для поиска совпадений. Иными словами, необходимо указать столбцы целевой таблицы, которые сравниваются с соответствующим столбцом исходной таблицы. Не пытайтесь ускорить выполнение запроса за счет фильтрации строк в целевой таблице для предложения ON, например, указав `AND NOT target_table.column_x = value`. Это может привести к получению непредвиденных и неверных результатов.  
   
 WHEN MATCHED THEN \<merge_matched>  
 Указывает, что все строки *target_table, которые соответствуют строкам, возвращенным выражением \<table_source> ON \<merge_search_condition>, и удовлетворяют дополнительным условиям поиска, обновляются или удаляются в соответствии с предложением \<merge_matched>.  
@@ -242,7 +243,7 @@ AND \<clause_search_condition>
 Указание TABLOCK для таблицы, к которой применяется инструкция INSERT, действует так же, как и указание TABLOCKX. К таблице будет применена монопольная блокировка. Если есть указание FORCESEEK, оно применяется к неявному экземпляру целевой таблицы, соединенной с исходной таблицей.  
   
 > [!CAUTION]  
->  Указание READPAST с предложением WHEN NOT MATCHED [ BY TARGET ] THEN INSERT может привести к выполнению операций INSERT, которые нарушают ограничения UNIQUE.  
+> Указание READPAST с предложением WHEN NOT MATCHED [ BY TARGET ] THEN INSERT может привести к выполнению операций INSERT, которые нарушают ограничения UNIQUE.  
   
 INDEX ( index_val [ ,...n ] )  
 Указывает имя или идентификатор одного или нескольких индексов целевой таблицы для выполнения неявного соединения с исходной таблицей. Дополнительные сведения см. в разделе [Табличные указания (Transact-SQL)](../../t-sql/queries/hints-transact-sql-table.md).  
@@ -284,7 +285,8 @@ DEFAULT VALUES
 \<graph search pattern>  
 Определяет шаблон сопоставления графов. Дополнительные сведения об аргументах этого предложения см. в статье [MATCH &#40;Transact-SQL&#41;](../../t-sql/queries/match-sql-graph.md).
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Remarks
+
 Должно быть указано по крайней мере одно из трех предложений MATCHED, но они могут быть указаны в любом порядке. В одном предложении MATCHED переменная не может быть обновлена больше одного раза.  
   
 На все операции удаления, вставки или обновления, применяемые инструкцией MERGE к целевой таблице, распространяются все ограничения, определенные для этой таблицы, включая все каскадные ограничения целостности данных. Если IGNORE_DUP_KEY имеет значение ON для любого из уникальных индексов целевой таблицы, то инструкция MERGE игнорирует этот параметр.  
@@ -297,7 +299,8 @@ DEFAULT VALUES
   
 Не используйте инструкцию **MERGE** при репликации, обновляемой посредством очередей. Инструкция **MERGE** и обновляемый посредством очередей триггер несовместимы. Замените инструкцию **MERGE** на инструкцию вставки или обновления.  
   
-## <a name="trigger-implementation"></a>Реализация триггера  
+## <a name="trigger-implementation"></a>Реализация триггера
+
 Для каждой операции вставки, обновления или удаления, указанной в инструкции MERGE, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] запускает все соответствующие триггеры AFTER, определенные для целевой таблицы, но не гарантирует определенного порядка их запуска. Триггеры, которые определены для одного и того же действия, реализуются в порядке, указанном пользователем. Дополнительные сведения о настройке порядка выполнения триггеров см. в разделе [Указание первого и последнего триггеров](../../relational-databases/triggers/specify-first-and-last-triggers.md).  
   
 Если для целевой таблицы определен триггер INSTEAD OF для операций вставки, обновления или удаления, выполняемых инструкцией MERGE, то триггеры INSTEAD OF должны быть определены для всех операций, указанных в инструкции MERGE.  
@@ -306,22 +309,106 @@ DEFAULT VALUES
   
 Если для таблицы *target_table* определены триггеры INSTEAD OF INSERT, операции вставки не выполняются. Вместо этого заполняются соответствующие таблицы.  
   
-## <a name="permissions"></a>Разрешения  
+## <a name="permissions"></a>Разрешения
+
 Необходимо разрешение SELECT для исходной таблицы и разрешения INSERT, UPDATE или DELETE для целевой таблицы. Дополнительные сведения см. в разделе "Разрешения" статей об инструкциях [SELECT](../../t-sql/queries/select-transact-sql.md), [INSERT](../../t-sql/statements/insert-transact-sql.md), [UPDATE](../../t-sql/queries/update-transact-sql.md) и [DELETE](../../t-sql/statements/delete-transact-sql.md).  
   
+## <a name="optimizing-merge-statement-performance"></a>Оптимизация производительности инструкции MERGE
+
+При помощи инструкции MERGE можно заменять отдельные инструкции DML одной инструкцией. Это может улучшить производительность запросов, так как операции выполняются внутри одной инструкции. Соответственно, количество обработок данных в исходных и целевых таблицах снижается. Однако увеличение производительности зависит от наличия правильных индексов, соединений и других факторов.
+
+### <a name="index-best-practices"></a>Рекомендации по использованию индекса
+
+Для улучшения производительности инструкции MERGE приводятся следующие рекомендации по использованию индекса:
+
+- Создайте уникальный покрывающий индекс в столбцах соединения исходной таблицы.
+- Создайте уникальный кластеризованный индекс в столбцах соединения целевой таблицы.
+
+Эти индексы гарантируют уникальность ключей соединения и сортировку данных в таблицах. Производительность запросов увеличивается вследствие того, что оптимизатору запросов не требуется выполнять дополнительную проверку для обнаружения и обновления повторяющихся строк и нет необходимости выполнять дополнительные операции сортировки.
+
+### <a name="join-best-practices"></a>Рекомендации по использованию соединений
+
+Для улучшения производительности инструкции MERGE и гарантированного получения правильных результатов приводятся следующие рекомендации по использованию соединений:
+
+- Укажите в предложении ON <merge_search_condition> только те условия поиска, которые определяют критерий совпадения данных в исходных и целевых таблицах. То есть необходимо указать только те столбцы целевой таблицы, которые сравниваются с соответствующими столбцами исходной таблицы. 
+- Не включайте сравнения с другими значениями, такими как константа.
+
+Чтобы отфильтровать строки от исходных или целевых таблиц, используйте один из следующих методов.
+
+- Укажите условие поиска для фильтрации строк в соответствующем предложении WHEN. Например, WHEN NOT MATCHED AND S.EmployeeName LIKE 'S%' THEN INSERT...
+- Определите представление в источнике или цели, возвращающее отфильтрованные строки, и создайте на него ссылку как на исходную или целевую таблицу. Если представление определено в целевой таблице, то все действия, выполняемые с ним, должны удовлетворять условиям для обновления представлений. Дополнительные сведения см. в разделе об изменении данных с помощью представления.
+- Используйте предложение `WITH <common table expression>`, чтобы отфильтровать строки от исходных или целевых таблиц. Этот метод аналогичен использованию дополнительного критерия поиска в предложении ON и может сформировать неверные результаты. Рекомендуется либо не использовать этот метод, либо тщательно протестировать его перед реализацией.
+
+Операция соединения оптимизируется в инструкции MERGE тем же способом, что и в инструкции SELECT. То есть при обработке соединений в SQL Server оптимизатор запросов выбирает наиболее эффективный метод обработки из нескольких возможных. Когда источник и цель одного размера и рекомендации по использованию индекса, описанные ранее, применяются к исходным и целевым таблицам, оператор соединения слиянием является наиболее эффективным планом запроса. Это происходит потому, что обе таблицы просматриваются один раз и сортировка данных не требуется. Когда источник меньше целевой таблицы, предпочтительнее использовать оператор вложенных циклов.
+
+Использование определенного соединения можно задать принудительно с помощью предложения `OPTION (<query_hint>)` в инструкции MERGE. Не рекомендуется использовать хэш-соединение в качестве указаний запросов для инструкций MERGE, так как этот тип соединений не использует индексы.
+
+### <a name="parameterization-best-practices"></a>Рекомендации по использованию параметризации
+
+Если инструкция SELECT, INSERT, UPDATE или DELETE выполняется без параметров, то оптимизатор запросов SQL Server может произвести внутреннюю параметризацию инструкции. Это значит, что все литеральные значения, содержащиеся в запросе, заменяются параметрами. Например, инструкцию INSERT dbo.MyTable (Col1, Col2) VALUES (1, 10) можно реализовать внутренне как INSERT dbo.MyTable (Col1, Col2) VALUES (@p1, @p2). Этот процесс, называемый простой параметризацией, увеличивает возможности реляционного механизма по применению существующих скомпилированных планов выполнения для новых инструкций SQL. Производительность запросов может быть улучшена за счет снижения частоты компиляций и перекомпиляций запросов. Оптимизатор запросов не применяет процесс простой параметризации к инструкциям MERGE. Поэтому инструкции MERGE, содержащие литеральные значения, могут быть не настолько производительными, как отдельные инструкции INSERT, UPDATE или DELETE, так как при каждом выполнении инструкции MERGE компилируется новый план.
+
+Для увеличения производительности запросов рекомендуется применять следующие рекомендации по использованию параметризации:
+
+- Выполните параметризацию всех литеральных значений в предложении `ON <merge_search_condition>` и в предложениях `WHEN` инструкции MERGE. Например, можно включать инструкцию MERGE в хранимую процедуру, заменив литеральные значения соответствующими входными параметрами.
+- Если инструкцию нельзя параметризовать, создайте структуру плана типа `TEMPLATE` и укажите в нем указание запроса `PARAMETERIZATION FORCED`.
+- Если в базе данных часто выполняются инструкции MERGE, рекомендуется задать для параметра базы данных PARAMETERIZATION значение FORCED. При установке этого параметра проявляйте осторожность. Параметр `PARAMETERIZATION` является параметром уровня базы данных и влияет на обработку всех запросов к базе данных.
+
+### <a name="top-clause-best-practices"></a>Рекомендации по использованию предложения TOP
+
+В инструкции MERGE предложение TOP указывает количество строк (в абсолютном или процентном выражении), которые оказываются затронутыми при соединении исходной и целевой таблиц и после удаления строк, которые не соответствуют требованиям операций вставки, обновления и удаления. Предложение TOP дополнительно сокращает количество соединенных строк до указанного значения, а затем к оставшимся соединенным строкам применяются операции вставки, обновления или удаления без учета порядка. Иными словами, порядок, в котором строки подвергаются операциям, определенным в предложениях WHEN, не задан. Например, указание значения TOP (10) затрагивает 10 строк. Из них 7 можно обновить и 3 вставить или 1 можно удалить, 5 обновить и 4 вставить и т. д.
+
+Часто приходится использовать предложение TOP для выполнения операций языка обработки данных DML в большой таблице в пакетах. При использовании для этой цели предложения TOP в инструкции MERGE важно понимать следующие последствия.
+
+- Может быть затронута производительность операций ввода-вывода.
+
+  Инструкция MERGE выполняет полный просмотр обеих таблиц — исходной и целевой. Разделение операций на пакеты снижает количество операций записи на каждый пакет. Однако каждый пакет выполнит полное сканирование исходной и целевой таблиц. Итоговая операция чтения может затронуть производительность запроса.
+
+- Это может привести к неправильным результатам.
+
+  Важно гарантировать, что все успешные пакеты будут нацелены на новые строки или нежелательное поведение, например неверно вставленные повторяющиеся строки в целевой таблице. Это может произойти при включении в исходную таблицу строки, которая была не в целевом пакете, а в общей целевой таблице.
+
+- Чтобы гарантировать правильные результаты:
+
+  - Используйте предложение ON, чтобы определить, какие из исходных строк затрагивают существующие целевые строки, а какие — совершенно новые.
+  - Используйте дополнительное условие в предложении WHEN MATCHED, чтобы определить, не была ли целевая строка уже обновлена предыдущим пакетом.
+
+Так как предложение TOP применяется только после использования этих предложений, каждое выполнение либо вставляет одну совершенно новую строку, либо обновляет существующую.
+
+### <a name="bulk-load-best-practices"></a>Рекомендации по использованию массовой загрузки
+
+Инструкция MERGE может использоваться для осуществления эффективной массовой загрузки данных из исходного файла данных в целевую таблицу путем указания предложения `OPENROWSET(BULK…)` в качестве исходной таблицы. С помощью этого целый файл обрабатывается в одном пакете.
+
+Для улучшения производительности процесса массового слияния приводятся следующие рекомендации:
+
+- Создайте кластеризованный индекс в столбцах соединения целевой таблицы.
+- Чтобы указать способ сортировки файла исходных данных, в предложении `OPENROWSET(BULK…)` используйте указания ORDER и UNIQUE.
+
+  По умолчанию массовая операция считает, что файл данных не упорядочен. Таким образом, важно, чтобы сортировка исходных данных производилась соответственно кластеризованному индексу целевой таблицы и указание ORDER использовалось для определения порядка, чтобы оптимизатор запросов мог сформировать более эффективный план запроса. Указания проверяются во время выполнения. Если поток данных не соответствует заданным указаниям, возникает ошибка.
+
+Эти руководства гарантируют уникальность ключей соединения и совпадение порядка сортировки данных в исходном файле с целевой таблицей. Производительность запросов увеличивается, так как дополнительные операции сортировки не требуются и копирование данных не обязательно.
+
+### <a name="measuring-and-diagnosing-merge-performance"></a>Измерение и диагностика производительности инструкции MERGE
+
+Следующие доступные функции помогают производить измерение и диагностику производительности инструкций MERGE.
+
+- Используйте счетчик merge stmt в динамическом административном представлении [sys.dm_exec_query_optimizer_info](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-optimizer-info-transact-sql.md) для возвращения числа оптимизаций запросов, произведенных для инструкций MERGE.
+- Используйте атрибут merge_action_type в динамическом административном представлении [sys.dm_exec_plan_attributes](../../relational-databases/system-dynamic-management-views/sys-dm-exec-plan-attributes-transact-sql.md) для возвращения типа триггера плана выполнения, используемого в виде результата инструкции MERGE.
+- Используйте трассировку SQL для сбора данных диагностики инструкции MERGE тем же способом, что и для других инструкций языка обработки данных DML. Дополнительные сведения см. в статье [SQL Trace](../../relational-databases/sql-trace/sql-trace.md).
+
 ## <a name="examples"></a>Примеры  
-  
-### <a name="a-using-merge-to-do-insert-and-update-operations-on-a-table-in-a-single-statement"></a>A. Выполнение для таблицы операций INSERT и UPDATE с помощью одной инструкции MERGE  
+
+### <a name="a-using-merge-to-do-insert-and-update-operations-on-a-table-in-a-single-statement"></a>A. Выполнение для таблицы операций INSERT и UPDATE с помощью одной инструкции MERGE
+
 Распространен сценарий, при котором один или несколько столбцов в таблице обновляются, если есть строки, соответствующие условиям. Если же таких строк нет, данные вставляются в новую строку. Обычно в обоих случаях параметры передаются в хранимую процедуру с нужными инструкциями UPDATE и INSERT. Инструкция MERGE позволяет реализовать обе эти задачи в одной инструкции. В следующем примере показывается хранимая процедура в базе данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)], содержащая инструкции INSERT и UPDATE. Эта процедура затем изменяется для выполнения эквивалентных операций с помощью одной инструкции MERGE.  
   
 ```sql  
 CREATE PROCEDURE dbo.InsertUnitMeasure  
     @UnitMeasureCode nchar(3),  
     @Name nvarchar(25)  
-AS   
+AS
 BEGIN  
     SET NOCOUNT ON;  
--- Update the row if it exists.      
+-- Update the row if it exists.
     UPDATE Production.UnitMeasure  
 SET Name = @Name  
 WHERE UnitMeasureCode = @UnitMeasureCode  
@@ -339,9 +426,9 @@ SELECT UnitMeasureCode, Name FROM Production.UnitMeasure
 WHERE UnitMeasureCode = 'ABC';  
 GO  
   
--- Rewrite the procedure to perform the same operations using the 
+-- Rewrite the procedure to perform the same operations using the
 -- MERGE statement.  
--- Create a temporary table to hold the updated or inserted values 
+-- Create a temporary table to hold the updated or inserted values
 -- from the OUTPUT clause.  
 CREATE TABLE #MyTempTable  
     (ExistingCode nchar(3),  
@@ -356,14 +443,14 @@ GO
 ALTER PROCEDURE dbo.InsertUnitMeasure  
     @UnitMeasureCode nchar(3),  
     @Name nvarchar(25)  
-AS   
+AS
 BEGIN  
     SET NOCOUNT ON;  
   
     MERGE Production.UnitMeasure AS target  
     USING (SELECT @UnitMeasureCode, @Name) AS source (UnitMeasureCode, Name)  
     ON (target.UnitMeasureCode = source.UnitMeasureCode)  
-    WHEN MATCHED THEN   
+    WHEN MATCHED THEN
         UPDATE SET Name = source.Name  
     WHEN NOT MATCHED THEN  
         INSERT (UnitMeasureCode, Name)  
@@ -377,13 +464,14 @@ EXEC InsertUnitMeasure @UnitMeasureCode = 'XYZ', @Name = 'Test Value';
 EXEC InsertUnitMeasure @UnitMeasureCode = 'ABC', @Name = 'Another Test Value';  
   
 SELECT * FROM #MyTempTable;  
--- Cleanup   
+-- Cleanup
 DELETE FROM Production.UnitMeasure WHERE UnitMeasureCode IN ('ABC','XYZ');  
 DROP TABLE #MyTempTable;  
 GO  
 ```  
   
-### <a name="b-using-merge-to-do-update-and-delete-operations-on-a-table-in-a-single-statement"></a>Б. Выполнение для таблицы операций UPDATE и DELETE с помощью одной инструкции MERGE  
+### <a name="b-using-merge-to-do-update-and-delete-operations-on-a-table-in-a-single-statement"></a>Б. Выполнение для таблицы операций UPDATE и DELETE с помощью одной инструкции MERGE
+
 В следующем примере инструкция MERGE ежедневно обновляет таблицу `ProductInventory` в примере базы данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)], используя данные о заказах, которые обрабатываются в таблице `SalesOrderDetail`. Столбец `Quantity` таблицы `ProductInventory` обновляется путем вычитания количества заказов на каждый продукт, которые размещаются в течение дня в таблице `SalesOrderDetail`. Если количество заказов на продукт таково, что уровень запасов продукта опускается до нуля или становится еще ниже, то строка этого продукта удаляется из таблицы `ProductInventory`.  
   
 ```sql  
@@ -399,10 +487,10 @@ USING (SELECT ProductID, SUM(OrderQty) FROM Sales.SalesOrderDetail AS sod
 ON (target.ProductID = source.ProductID)  
 WHEN MATCHED AND target.Quantity - source.OrderQty <= 0  
     THEN DELETE  
-WHEN MATCHED   
-    THEN UPDATE SET target.Quantity = target.Quantity - source.OrderQty,   
+WHEN MATCHED
+    THEN UPDATE SET target.Quantity = target.Quantity - source.OrderQty,
                     target.ModifiedDate = GETDATE()  
-OUTPUT $action, Inserted.ProductID, Inserted.Quantity, 
+OUTPUT $action, Inserted.ProductID, Inserted.Quantity,
     Inserted.ModifiedDate, Deleted.ProductID,  
     Deleted.Quantity, Deleted.ModifiedDate;  
 GO  
@@ -410,7 +498,8 @@ GO
 EXECUTE Production.usp_UpdateInventory '20030501'  
 ```  
   
-### <a name="c-using-merge-to-do-update-and-insert-operations-on-a-target-table-by-using-a-derived-source-table"></a>В. Использование инструкции MERGE для выполнения операций UPDATE и INSERT в целевой таблице с помощью производной исходной таблицы  
+### <a name="c-using-merge-to-do-update-and-insert-operations-on-a-target-table-by-using-a-derived-source-table"></a>В. Использование инструкции MERGE для выполнения операций UPDATE и INSERT в целевой таблице с помощью производной исходной таблицы
+
 В следующем примере инструкция MERGE используется для изменения таблицы `SalesReason` в базе данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] путем обновления или вставки строк. Если значение `NewName` в исходной таблице соответствует значению в столбце `Name` целевой таблицы (`SalesReason`), то в целевой таблице обновляется столбец `ReasonType`. Если значение `NewName` не совпадает со значением в целевой таблице, исходная строка вставляется в целевую таблицу. Исходной таблицей является производная таблица, в которой используется конструктор табличных значений [!INCLUDE[tsql](../../includes/tsql-md.md)] для указания нескольких строк исходной таблицы. Дополнительные сведения об использовании конструктора табличных значений в производной таблице см. в разделе [Конструктор табличных значений (Transact-SQL)](../../t-sql/queries/table-value-constructor-transact-sql.md). Также в этом примере показано, как сохранить результаты предложения OUTPUT в табличной переменной. Это позволяет составить сводку результатов инструкции MERGE, выполнив простую операцию выбора, которая возвращает количество вставленных и обновленных строк.  
   
 ```sql  
@@ -418,7 +507,7 @@ EXECUTE Production.usp_UpdateInventory '20030501'
 DECLARE @SummaryOfChanges TABLE(Change VARCHAR(20));  
   
 MERGE INTO Sales.SalesReason AS Target  
-USING (VALUES ('Recommendation','Other'), ('Review', 'Marketing'), 
+USING (VALUES ('Recommendation','Other'), ('Review', 'Marketing'),
               ('Internet', 'Promotion'))  
        AS Source (NewName, NewReasonType)  
 ON Target.Name = Source.NewName  
@@ -434,7 +523,8 @@ FROM @SummaryOfChanges
 GROUP BY Change;  
 ```  
   
-### <a name="d-inserting-the-results-of-the-merge-statement-into-another-table"></a>Г. Вставка результатов инструкции MERGE в другую таблицу  
+### <a name="d-inserting-the-results-of-the-merge-statement-into-another-table"></a>Г. Вставка результатов инструкции MERGE в другую таблицу
+
 В следующем примере производится отслеживание данных, возвращаемых предложением OUTPUT инструкции MERGE, а затем осуществляется вставка этих данных в другую таблицу. В инструкции MERGE ежедневно обновляется столбец `Quantity` таблицы `ProductInventory` в базе данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] на основе заказов, обработанных в таблице `SalesOrderDetail`. Этот пример отслеживает обновленные строки и вставляет их в другую таблицу, в которой отслеживаются все изменения инвентарных запасов.  
   
 ```sql  
@@ -443,35 +533,36 @@ CREATE TABLE Production.UpdatedInventory
      CONSTRAINT PK_Inventory PRIMARY KEY CLUSTERED (ProductID, LocationID));  
 GO  
 INSERT INTO Production.UpdatedInventory  
-SELECT ProductID, LocationID, NewQty, PreviousQty   
+SELECT ProductID, LocationID, NewQty, PreviousQty
 FROM  
 (    MERGE Production.ProductInventory AS pi  
-     USING (SELECT ProductID, SUM(OrderQty)   
+     USING (SELECT ProductID, SUM(OrderQty)
             FROM Sales.SalesOrderDetail AS sod  
             JOIN Sales.SalesOrderHeader AS soh  
             ON sod.SalesOrderID = soh.SalesOrderID  
             AND soh.OrderDate BETWEEN '20030701' AND '20030731'  
             GROUP BY ProductID) AS src (ProductID, OrderQty)  
      ON pi.ProductID = src.ProductID  
-    WHEN MATCHED AND pi.Quantity - src.OrderQty >= 0   
+    WHEN MATCHED AND pi.Quantity - src.OrderQty >= 0
         THEN UPDATE SET pi.Quantity = pi.Quantity - src.OrderQty  
-    WHEN MATCHED AND pi.Quantity - src.OrderQty <= 0   
+    WHEN MATCHED AND pi.Quantity - src.OrderQty <= 0
         THEN DELETE  
-    OUTPUT $action, Inserted.ProductID, Inserted.LocationID, 
+    OUTPUT $action, Inserted.ProductID, Inserted.LocationID,
         Inserted.Quantity AS NewQty, Deleted.Quantity AS PreviousQty)  
- AS Changes (Action, ProductID, LocationID, NewQty, PreviousQty) 
+ AS Changes (Action, ProductID, LocationID, NewQty, PreviousQty)
  WHERE Action = 'UPDATE';  
 GO  
 ```  
 
 ### <a name="e-using-merge-to-do-insert-or-update-on-a-target-edge-table-in-a-graph-database"></a>Д. Выполнение инструкций INSERT или UPDATE в целевой таблице ребер в графовой базе данных с помощью MERGE
+
 В этом примере мы создадим таблицы узлов `Person` и `City`, а также таблицу ребер `livesIn`. Если ребро между таблицами `Person` и `City` не существует, мы добавляем новую строку в таблицу ребер `livesIn` с помощью инструкции MERGE. Если ребро уже существует, мы только обновим атрибут StreetAddress в таблице ребер `livesIn`.
 
 ```sql
 -- CREATE node and edge tables
 CREATE TABLE Person
     (
-        ID INTEGER PRIMARY KEY, 
+        ID INTEGER PRIMARY KEY,
         PersonName VARCHAR(100)
     )
 AS NODE
@@ -479,8 +570,8 @@ GO
 
 CREATE TABLE City
     (
-        ID INTEGER PRIMARY KEY, 
-        CityName VARCHAR(100), 
+        ID INTEGER PRIMARY KEY,
+        CityName VARCHAR(100),
         StateName VARCHAR(100)
     )
 AS NODE
@@ -535,20 +626,18 @@ GO
 
 -- Verify that all the address were added/updated correctly
 SELECT PersonName, CityName, StreetAddress
-FROM Person , City , livesIn 
+FROM Person , City , livesIn
 WHERE MATCH(Person-(livesIn)->city)
 GO
 ```
   
-## <a name="see-also"></a>См. также:  
-[SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)   
-[INSERT (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md)   
-[UPDATE (Transact-SQL)](../../t-sql/queries/update-transact-sql.md)   
-[DELETE (Transact-SQL)](../../t-sql/statements/delete-transact-sql.md)   
-[Предложение OUTPUT (Transact-SQL)](../../t-sql/queries/output-clause-transact-sql.md)   
-[Предложение MERGE в пакетах служб Integration Services](../../integration-services/control-flow/merge-in-integration-services-packages.md)   
-[FROM (Transact-SQL)](../../t-sql/queries/from-transact-sql.md)   
-[Конструктор табличных значений (Transact-SQL)](../../t-sql/queries/table-value-constructor-transact-sql.md)  
-  
-  
+## <a name="see-also"></a>См. также:
 
+- [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)
+- [INSERT (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md)
+- [UPDATE (Transact-SQL)](../../t-sql/queries/update-transact-sql.md)
+- [DELETE (Transact-SQL)](../../t-sql/statements/delete-transact-sql.md)
+- [Предложение OUTPUT (Transact-SQL)](../../t-sql/queries/output-clause-transact-sql.md)
+- [Предложение MERGE в пакетах служб Integration Services](../../integration-services/control-flow/merge-in-integration-services-packages.md)
+- [FROM (Transact-SQL)](../../t-sql/queries/from-transact-sql.md)
+- [Конструктор табличных значений (Transact-SQL)](../../t-sql/queries/table-value-constructor-transact-sql.md)  

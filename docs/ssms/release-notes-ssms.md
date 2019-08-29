@@ -10,12 +10,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: ''
 ms.date: 07/31/2019
-ms.openlocfilehash: e499f58eff6c09ac8d32d4cd630afc4c7855c299
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 3ed3f08232b3811ad57ae37d8be6ed93af3572de
+ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68809863"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70122995"
 ---
 # <a name="release-notes-for-sql-server-management-studio-ssms"></a>Заметки о выпуске SQL Server Management Studio (SSMS)
 
@@ -62,7 +62,6 @@ SSMS 18.2 является последним общедоступным вып
 | Выполнение запроса или результаты | Добавлено *Время завершения* в сообщениях для отслеживания завершения запросов. |
 | Выполнение запроса или результаты | Разрешено отображение дополнительных данных (результат в тексте) и их сохранение в ячейках (результат в сетке). Теперь SSMS допускает до 2 млн символов для обоих вариантов (начиная с 256 и 64 тыс. соответственно). Это также устраняет проблему, из-за которой пользователи не могут получить более 43 680 символов из ячеек сетки. |
 | Инструкция ShowPlan | Добавлен новый атрибут в QueryPlan, когда включена [встроенная скалярная функция UDF](../relational-databases/performance/intelligent-query-processing.md#scalar-udf-inlining) (ContainsInlineScalarTsqlUdfs). |
-| SMO | Добавлена поддержка *ограничений для функций*. Дополнительные сведения о самой функции см. в разделе [Ограничения функций](https://docs.microsoft.com/sql/relational-databases/security/feature-restrictions). |
 | SMO | Добавлена поддержка *API Оценки SQL*. Дополнительные сведения см. в разделе [SQL Assessment API](https://docs.microsoft.com/sql/sql-assessment-api/sql-assessment-api-overview). |
 |  |  |
 
@@ -239,7 +238,6 @@ SSMS 18.1 является последним общедоступным вып
 |Always Encrypted| Теперь флажок "Включить Always Encrypted" на новой вкладке "Always Encrypted" в диалоговом окне "Соединение с сервером" позволяет легко включить или отключить шифрование Always Encrypted для подключения к базе данных.|
 |Always Encrypted с безопасными анклавами.| Добавлено несколько улучшений поддержки Always Encrypted с безопасными анклавами в предварительной версии SQL Server 2019.  Текстовое поле для указания URL-адреса аттестации анклава в диалоговом окне подключения к серверу (новая вкладка Always Encrypted).  Новый флажок в диалоговом окне "Новый главный ключ столбца" для указания, будет ли новый главный ключ столбца разрешать вычисления анклава.  Другие диалоговые окна управления ключами Always Encrypted теперь предоставляют сведения, в каких главных ключах столбца разрешены вычисления анклава.|
 |Файлы аудита|Изменен метод проверки подлинности с ключа учетной записи хранения на проверку подлинности на основе Azure AD.|
-|Файлы аудита|Обновлен список известных действий аудита: добавлены действия FEATURE RESTRICTION ADD/CHANGE GROUP/DROP.|
 |Классификация данных| Переупорядочено меню задач классификации данных: добавлено подменю в меню задач базы данных, а также добавлена возможность открыть отчет из меню без предварительного открытия окна классификации данных.|
 |Классификация данных|Добавлен новый компонент "Классификация данных" в SMO. Объект столбца теперь предоставляет новые свойства: SensitivityLabelName, SensitivityLabelId, SensitivityInformationTypeName, SensitivityInformationTypeId и IsClassified (только для чтения). См. подробности в разделе [ADD SENSITIVITY CLASSIFICATION (Transact-SQL)](https://docs.microsoft.com/sql/t-sql/statements/add-sensitivity-classification-transact-sql)|
 |Классификация данных|Добавлен пункт "Классификационный отчет" в меню "Классификация данных".|

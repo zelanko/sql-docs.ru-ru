@@ -17,23 +17,23 @@ helpviewer_keywords:
 - characters [SQL Server], number of
 - number of characters
 ms.assetid: fa20fee4-884d-4301-891a-c03e901345ae
-author: MikeRayMSFT
+author: pmasl
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6194b035ae28a1c70dbba2f2b72050fb87a76328
-ms.sourcegitcommit: 73dc08bd16f433dfb2e8406883763aabed8d8727
+ms.openlocfilehash: 0b6f470a08c3605f9ea5afa5fff1f7b6cbd17f1b
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68329327"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653246"
 ---
 # <a name="len-transact-sql"></a>LEN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Возвращает количество символов указанного строкового выражения, исключая конечные пробелы.  
+Возвращает количество символов указанного строкового выражения, исключая конечные пробелы.  
   
 > [!NOTE]  
->  Получить число байтов, используемых для представления выражения, можно с помощью функции [DATALENGTH](../../t-sql/functions/datalength-transact-sql.md).  
+> Получить число байтов, используемых для представления выражения, можно с помощью функции [DATALENGTH](../../t-sql/functions/datalength-transact-sql.md).  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -53,9 +53,9 @@ LEN ( string_expression )
  Если используются параметры сортировки SC, то возвращаемое целое значение рассматривает суррогатные пары Юникода UTF-16 как один символ. Дополнительные сведения см. в статье [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).  
   
 ## <a name="remarks"></a>Remarks  
- Функция LEN исключает конечные пробелы. Если это может создать проблемы, рекомендуется использовать функцию [DATALENGTH (Transact-SQL)](../../t-sql/functions/datalength-transact-sql.md), которая не усекает строку. При обработке строки Юникода DATALENGTH возвращает удвоенное количество символов. В приведенном ниже примере демонстрируется работа функций LEN и DATALENGTH с конечным пробелом.  
+Функция LEN исключает конечные пробелы. Если это может создать проблемы, рекомендуется использовать функцию [DATALENGTH (Transact-SQL)](../../t-sql/functions/datalength-transact-sql.md), которая не усекает строку. При обработке строки Юникода DATALENGTH возвращает число, которое, возможно, не будет равно количеству символов. В приведенном ниже примере демонстрируется работа функций LEN и DATALENGTH с конечным пробелом.  
   
-```  
+```sql  
 DECLARE @v1 varchar(40),  
     @v2 nvarchar(40);  
 SELECT   
@@ -63,13 +63,15 @@ SELECT
 @v2 = 'Test of 22 characters ';  
 SELECT LEN(@v1) AS [varchar LEN] , DATALENGTH(@v1) AS [varchar DATALENGTH];  
 SELECT LEN(@v2) AS [nvarchar LEN], DATALENGTH(@v2) AS [nvarchar DATALENGTH];  
-  
 ```  
-  
+
+> [!NOTE]
+> Функция [LEN](../../t-sql/functions/len-transact-sql.md) возвращает количество символов, закодированных в определенное строковое выражение, а функция [DATALENGTH](../../t-sql/functions/datalength-transact-sql.md) — размер данных в байтах для определенного строкового выражения. Эти выходные данные могут быть разными в зависимости от типа данных и типа кодировки, используемой в столбце. Дополнительные сведения об отличиях типов кодировок, используемых для хранения данных, см. в статье [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md) (Поддержка параметров сортировки и Юникода).
+
 ## <a name="examples"></a>Примеры  
  Следующий пример выбирает число символов и данные по имени людей `FirstName`, живущих в `Australia`. В примере используется база данных AdventureWorks.  
   
-```  
+```sql  
 SELECT LEN(FirstName) AS Length, FirstName, LastName   
 FROM Sales.vIndividualCustomer  
 WHERE CountryRegionName = 'Australia';  
@@ -79,9 +81,9 @@ GO
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  В приведенном ниже примере возвращается число символов в столбце `FirstName`, а также первое и последнее имена сотрудников в `Australia`.  
   
-```  
--- Uses AdventureWorks  
-  
+```sql  
+USE AdventureWorks2016  
+GO  
 SELECT DISTINCT LEN(FirstName) AS FNameLength, FirstName, LastName   
 FROM dbo.DimEmployee AS e  
 INNER JOIN dbo.DimGeography AS g   
@@ -89,9 +91,9 @@ INNER JOIN dbo.DimGeography AS g
 WHERE EnglishCountryRegionName = 'Australia';  
 ```  
   
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- ```
+```
 FNameLength  FirstName  LastName  
 -----------  ---------  ---------------  
 4            Lynn       Tsoflias
@@ -107,5 +109,3 @@ FNameLength  FirstName  LastName
  [Строковые функции (Transact-SQL)](../../t-sql/functions/string-functions-transact-sql.md)   
   
   
-
-

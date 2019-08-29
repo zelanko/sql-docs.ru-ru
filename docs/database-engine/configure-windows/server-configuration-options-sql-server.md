@@ -29,12 +29,12 @@ helpviewer_keywords:
 ms.assetid: 9f38eba6-39b1-4f1d-ba24-ee4f7e2bc969
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 7d0e379cf9d3bc6391e6c2c921824c7162b88def
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 985f5fb80f9879470f0f9a1740bd7a4b7bee2b2a
+ms.sourcegitcommit: 8d01698e779a536093dd637e84c52f3ff0066a2c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68025622"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69609628"
 ---
 # <a name="server-configuration-options-sql-server"></a>Параметры конфигурации сервера (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "68025622"
   
 Для некоторых параметров требуется перезапуск сервера прежде, чем новое конфигурационное значение вступит в силу. Если задано новое значение и выполнена процедура sp_configure перед перезапуском сервера, то новое значение появится в столбце **value** , но не в столбце **value_in_use** параметров конфигурации. После перезапуска сервера новое значение отобразится в столбце **value_in_use** .  
   
-Самонастраивающиеся параметры — это те, которые [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] изменяет в соответствии с потребностями системы. В большинстве случаев это позволяет избавиться от необходимости устанавливать значения вручную. К примерам этого относятся параметры **min server memory** и **max server memory** , а также параметр user connections.  
+Самонастраивающиеся параметры — это те, которые [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] изменяет в соответствии с потребностями системы. В большинстве случаев это позволяет избавиться от необходимости устанавливать значения вручную. Например, к таким параметрам относятся **max worker threads** и user connections.  
   
 ## <a name="configuration-options-table"></a>Таблица параметров конфигурации  
  В нижеследующей таблице приведены все доступные параметры конфигурации, диапазон возможных значений и значения по умолчанию. Параметры конфигурации помечаются буквенными кодовыми обозначениями, как показано ниже:  

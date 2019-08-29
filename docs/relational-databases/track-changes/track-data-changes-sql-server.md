@@ -19,12 +19,12 @@ ms.assetid: 7a34be46-15b4-4b6b-8497-cfd8f9f14234
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3299d13c2ff371f0194c501f34d5615486decc84
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 88cfc841f3e8cdf2a04cccdc76eb3bbf7f5e2147
+ms.sourcegitcommit: cdbb0ee5ee5259119ad21695f549207457990f71
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006100"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69621780"
 ---
 # <a name="track-data-changes-sql-server"></a>Отслеживание измененных данных (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -132,7 +132,7 @@ ms.locfileid: "68006100"
   
 -   Если база данных отсоединяется и присоединяется к тому же или другому серверу, то система отслеживания измененных данных остается активированной.  
   
--   Если база данных присоединяется или восстанавливается с параметром **KEEP_CDC** в любом выпуске, отличном от Enterprise, то эта операция будет заблокирована, так как для системы отслеживания измененных данных требуется выпуск [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise. Отображается сообщение об ошибке 932.  
+-   Если база данных присоединяется или восстанавливается с параметром **KEEP_CDC** в любом выпуске, отличном от Standard или Enterprise, то эта операция будет заблокирована, так как для системы отслеживания измененных данных требуется выпуск [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard или Enterprise. Отображается сообщение об ошибке 932.  
   
      `SQL Server cannot load database '%.*ls' because change data capture is enabled. The currently installed edition of SQL Server does not support change data capture. Either disable change data capture in the database by using a supported edition of SQL Server, or upgrade the instance to one that supports change data capture.`  
   

@@ -1,7 +1,7 @@
 ---
 title: DATALENGTH (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 07/29/2017
+ms.date: 08/20/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -19,26 +19,29 @@ helpviewer_keywords:
 - expressions [SQL Server], length
 - lengths [SQL Server], data
 ms.assetid: 00f377f1-cc3e-4eac-be47-b3e3f80267c9
-author: MikeRayMSFT
+author: pmasl
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a62aa2b5249384405372afe662a84a73055f4a67
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cca069fe3bb0aa0f489c13c022aeeebbd08db053
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68026215"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653795"
 ---
 # <a name="datalength-transact-sql"></a>DATALENGTH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Эта функция возвращает число байтов, использованных для представления выражения.
+
+> [!NOTE]
+> Чтобы получить количество символов в строковом выражении, используйте функцию [LEN](../../t-sql/functions/len-transact-sql.md).
   
 ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Синтаксис  
   
-```sql
+```
 DATALENGTH ( expression )   
 ```  
   
@@ -50,28 +53,28 @@ DATALENGTH ( expression )
 **bigint**, если *expression* имеет тип данных **nvarchar(max)** , **varbinary(max)** или **varchar(max)** ; в противном случае **int**.
   
 ## <a name="remarks"></a>Remarks  
-Функция `DATALENGTH` особенно полезна при работе с данными типов
-
+Функция `DATALENGTH` особенно полезна при использовании с типами данных переменной длины, как показано ниже.
 - **image**
 - **ntext**
 - **nvarchar**
 - **text**
 - **varbinary**
 - **varchar**
-
-потому что они могут хранить данные переменной длины.
   
 Для значения NULL функция `DATALENGTH` возвращает NULL.
   
 > [!NOTE]  
->  Уровни совместимости могут повлиять на возвращаемые значения. Дополнительные сведения об уровнях совместимости см. в статье [Уровень совместимости ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
-  
+> Уровни совместимости могут повлиять на возвращаемые значения. Дополнительные сведения об уровнях совместимости см. в статье [Уровень совместимости ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
+
+> [!NOTE]
+> Функция [LEN](../../t-sql/functions/len-transact-sql.md) возвращает количество символов, закодированных в определенное строковое выражение, а функция [DATALENGTH](../../t-sql/functions/datalength-transact-sql.md) — размер данных в байтах для определенного строкового выражения. Эти выходные данные могут быть разными в зависимости от типа данных и типа кодировки, используемой в столбце. Дополнительные сведения об отличиях типов кодировок, используемых для хранения данных, см. в статье [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md) (Поддержка параметров сортировки и Юникода).
+
 ## <a name="examples"></a>Примеры  
 В следующем примере находится длина столбца `Name` в таблице `Product`:
   
 ```sql
--- Uses AdventureWorks  
-  
+USE AdventureWorks2016  
+GO
 SELECT length = DATALENGTH(EnglishProductName), EnglishProductName  
 FROM dbo.DimProduct  
 ORDER BY EnglishProductName;  
@@ -83,6 +86,3 @@ GO
 [Функции CAST и CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)  
 [Типы данных (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)  
 [Системные функции (Transact-SQL)](../../relational-databases/system-functions/system-functions-for-transact-sql.md)
-  
-  
-

@@ -46,12 +46,12 @@ helpviewer_keywords:
 ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5e7c6e170def3a51bc85c80e485370e3520d73d7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8be2e837ff71237cf6d39f8593e8b852cc08ed2e
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68089860"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653376"
 ---
 # <a name="create-table-transact-sql"></a>Инструкция CREATE TABLE (Transact-SQL)
 
@@ -1009,7 +1009,7 @@ Test1Col
 > Эта возможность доступна для [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 ### <a name="troubleshooting-global-temporary-tables-for-azure-sql-database"></a>Устранение неполадок с глобальными временными таблицами в Базе данных SQL Azure
-Сведения об устранении неполадок в базе данных tempdb см. в разделе [Устранение неполадок, связанных с нехваткой места на диске для базы данных tempdb](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms176029(v=sql.105)).
+Сведения об устранении неполадок с базой данных tempdb см. в разделе [Мониторинг использования базы данных tempdb](../../relational-databases/databases/tempdb-database.md#how-to-monitor-tempdb-use).
 
 > [!NOTE]
 > Только администратор сервера может получить доступ к динамическим административным представлениям для устранения неполадок в [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
@@ -1297,7 +1297,7 @@ CREATE TABLE UDTypeTable
     ( u utf8string, ustr AS u.ToString() PERSISTED ) ;
 ```
 
-### <a name="l-using-the-username-function-for-a-computed-column"></a>М. Использование функции USER_NAME для вычисляемого столбца
+### <a name="l-using-the-user_name-function-for-a-computed-column"></a>М. Использование функции USER_NAME для вычисляемого столбца
 В следующем примере используется функция `USER_NAME()` в столбце `myuser_name`.
 
 ```sql
