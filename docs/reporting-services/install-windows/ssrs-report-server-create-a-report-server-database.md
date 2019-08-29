@@ -6,13 +6,13 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.custom: seodec18
-ms.date: 12/15/2018
-ms.openlocfilehash: a05ef92709974b314ea5865362946c1f053c5343
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.date: 08/28/2019
+ms.openlocfilehash: d8bbc1436b3615259248598a9fa19346d4f2a43f
+ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68262801"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70123008"
 ---
 # <a name="create-a-report-server-database"></a>Создание базы данных сервера отчетов 
 
@@ -24,10 +24,9 @@ ms.locfileid: "68262801"
 
 Эти базы данных создаются одновременно и связываются по именам. В экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по умолчанию базы данных именуются **reportserver** и **reportservertempdb**. В совокупности эти две базы данных называются **базой данных сервера отчетов** или **каталогом сервера отчетов**.
 
-В режиме **интеграции с SharePoint** SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] добавляет третью базу данных для метаданных предупреждений об изменении данных. Эти три базы данных создаются отдельно для каждого приложения службы SSRS. Имена баз данных по умолчанию содержат идентификатор GUID, который соответствует приложению службы. 
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 
-> [!NOTE]
-> Интеграция служб Reporting Services с SharePoint больше не доступна после выхода SQL Server 2016.
+В режиме **интеграции с SharePoint** SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] добавляет третью базу данных для метаданных предупреждений об изменении данных. Эти три базы данных создаются отдельно для каждого приложения службы SSRS. Имена баз данных по умолчанию содержат идентификатор GUID, который соответствует приложению службы. 
 
 Далее приводятся примеры имен этих трех баз данных, используемых в режиме интеграции с SharePoint.
 
@@ -36,6 +35,8 @@ ms.locfileid: "68262801"
 - ReportingService_90a9f37075544f22953c4a62e4a9f370TempDB  
   
 - ReportingService_90a9f37075544f22953c4a62e4a9f370_Alerting  
+
+::: moniker-end
   
 > [!IMPORTANT]  
 > Не создавайте приложения, которые выполняют запросы к базе данных сервера отчетов. Схема базы данных сервера отчетов не предназначена для общего доступа. Структура таблиц в разных версиях может различаться. При создании приложений, которым необходим доступ к базе данных сервера отчетов, всегда используйте API-интерфейсы SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
@@ -65,7 +66,18 @@ ms.locfileid: "68262801"
 ## <a name="database-server-version-requirements"></a>Требования к версии сервера баз данных
 
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] используется для размещения баз данных сервера отчетов. Экземпляр компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] может быть локальным или удаленным. Далее перечислены поддерживаемые версии компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], на которых можно размещать базы данных сервера отчетов.  
-  
+::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+
+- Управляемый экземпляр SQL Azure
+
+- SQL Server 2019
+
+::: moniker-end
+::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+
+- SQL Server 2017  
+::: moniker-end
+
 - [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
   
 - [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
@@ -73,9 +85,7 @@ ms.locfileid: "68262801"
 - [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
   
 - [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]  
-  
-- [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]  
-  
+
 Если вы создаете базу данных сервера отчетов на удаленном компьютере, настройте подключение через учетную запись пользователя домена или учетную запись службы с сетевым доступом. Если вы используете удаленный экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], тщательно выберите правильные учетные данные для подключения сервера отчетов к этому экземпляру. Дополнительные сведения см. в разделе [Настройка соединения с базой данных сервера отчетов &#40;диспетчер конфигурации SSRS&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
   
 > [!IMPORTANT]  
