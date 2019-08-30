@@ -1,7 +1,7 @@
 ---
-title: Кэширование метаданных подготовленной инструкции для JDBC Driver | Документация Майкрософт
+title: Кэширование метаданных подготовленной инструкции для JDBC Driver | Документация Майкрософт
 ms.custom: ''
-ms.date: 01/19/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: a9abd72b366060da2fdffd58c17ace50f01246a1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 97224f53bb716abe3b79dd00df12d0eed4a63cec
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956207"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027844"
 ---
 # <a name="prepared-statement-metadata-caching-for-the-jdbc-driver"></a>Кэширование метаданных подготовленной инструкции для JDBC Driver
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "67956207"
 |void setServerPreparedStatementDiscardThreshold(int serverPreparedStatementDiscardThreshold)|Этот параметр определяет, сколько невыполненных операций отмены подготовленной инструкции (sp_unprepare) может быть недоступно для каждого соединения, прежде чем будет выполнен вызов очистки необработанных дескрипторов на сервере. Если параметр имеет значение < = 1, действия, выполняемые при закрытии инструкции, выполняются немедленно. Если задано значение {@literal >} 1, эти вызовы объединяются в пакеты, чтобы избежать чрезмерных затрат на вызов sp_unprepare слишком часто|
 |int getServerPreparedStatementDiscardThreshold()|Этот параметр определяет, сколько невыполненных операций отмены подготовленной инструкции (sp_unprepare) может быть недоступно для каждого соединения, прежде чем будет выполнен вызов очистки необработанных дескрипторов на сервере. Если параметр имеет значение < = 1, действия, выполняемые при закрытии инструкции, выполняются немедленно. Если задано значение {@literal >} 1, эти вызовы объединяются в пакеты, чтобы избежать чрезмерных затрат на вызов sp_unprepare слишком часто.|
 
-## <a name="prepared-statement-metatada-caching"></a>Подготовленная инструкция Метатада Caching
+## <a name="prepared-statement-metatada-caching"></a>Подготовленная инструкция метатада Caching
 Начиная с версии 6.3.0-Preview драйвер Microsoft JDBC для SQL Server поддерживает подготовленное кэширование инструкций. До версии 6.3.0-Preview, если один из них выполняет запрос, который уже подготовлен и сохранен в кэше, повторный вызов этого же запроса не приведет к его подготовке. Теперь драйвер ищет запрос в кэше и находит его и выполняет с помощью sp_execute.
 Кэширование метаданных подготовленной инструкции **отключено** по умолчанию. Чтобы включить его, необходимо вызвать следующий метод для объекта Connection:
 
@@ -87,7 +87,7 @@ ms.locfileid: "67956207"
 |void setStatementPoolingCacheSize (int Статементпулингкачесизе)|Указывает размер кэша подготовленной инструкции для этого соединения. Значение меньше 1 означает отсутствие кэша.|
 |int getStatementPoolingCacheSize()|Возвращает размер подготовленного кэша инструкций для этого соединения. Значение меньше 1 означает отсутствие кэша.|
 
-## <a name="see-also"></a>См. также:  
- [Повышение производительности и надежности с помощью драйвера JDBC](../../connect/jdbc/improving-performance-and-reliability-with-the-jdbc-driver.md)  
+## <a name="see-also"></a>См. также раздел  
+ [Повышение производительности и надежности с помощью JDBC Driver](../../connect/jdbc/improving-performance-and-reliability-with-the-jdbc-driver.md)  
   
   

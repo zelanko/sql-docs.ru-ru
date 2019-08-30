@@ -8,13 +8,13 @@ author: maggiesMSFT
 ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
-ms.date: 05/08/2019
-ms.openlocfilehash: be255547163bb37d1222e1c9b21e123f35d2888e
-ms.sourcegitcommit: 01c8df19cdf0670c02c645ac7d8cc9720c5db084
+ms.date: 08/27/2019
+ms.openlocfilehash: 81c9af6b8d4b711c8e8511b94364bbe498470007
+ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "70000286"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70123114"
 ---
 # <a name="whats-new-in-sql-server-reporting-services-ssrs"></a>Новые возможности служб SQL Server Reporting Services (SSRS)
 
@@ -32,9 +32,21 @@ ms.locfileid: "70000286"
 
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
 
-## <a name="sql-server-2019-preview-reporting-services"></a>Предварительная версия SQL Server 2019 Reporting Services
+## <a name="sql-server-2019-reporting-services-preview"></a>Предварительная версия SQL Server 2019 Reporting Services
 
-[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]Предварительная версия Reporting Services доступна и может быть загружена из **[центра загрузки Майкрософт](https://www.microsoft.com/download/details.aspx?id=100122)** .
+[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]Предварительный просмотр Reporting Services доступен для загрузки из [центра загрузки Майкрософт](https://www.microsoft.com/download/details.aspx?id=100122).
+
+### <a name="azure-sql-managed-instance-support"></a>Поддержка Управляемого экземпляра SQL Azure
+
+Теперь можно разместить каталог базы данных, используемый для SQL Server Reporting Services (SSRS), в Управляемый экземпляр SQL Azure (MI), размещенном либо на виртуальной машине, либо в центре обработки данных. Поддержка ограничена использованием учетных данных базы данных для подключения к SQL MI.
+
+### <a name="power-bi-premium-dataset-support"></a>Поддержка набора данных Power BI Premium
+
+Вы можете подключиться к Power BIным наборам данных с помощью Microsoft построитель отчетов или SQL Server Data Tools (SSDT). Затем можно опубликовать эти отчеты в службах SSRS 2019 с помощью SQL Server Analysis Services подключения. Чтобы включить сценарий, пользователям необходимо использовать хранимые имя пользователя Windows и пароль.
+
+### <a name="alttext-alternative-text-support-for-report-elements"></a>Поддержка Алттекст (альтернативный текст) для элементов отчета
+
+При создании отчетов можно использовать подсказки для указания текста для каждого элемента отчета. Технология чтения с экрана правильно определяет эти подсказки.
 
 ::: moniker-end
 
@@ -67,7 +79,8 @@ ms.locfileid: "70000286"
 * Скачайте [построитель отчетов SQL Server](https://go.microsoft.com/fwlink/?LinkId=734968).
 * Скачайте [SQL Server Data Tools — релиз-кандидат](https://docs.microsoft.com/sql/ssdt/sql-server-data-tools-ssdt-release-candidate).
 
-> **Примечание**. Конструктор запросов для DAX можно использовать только с табличными источниками данных SSAS, встроенными в SQL Server 2016 и более поздних версий.
+> [!NOTE]
+> Конструктор запросов для DAX можно использовать только с табличными источниками данных SSAS, встроенными в SQL Server 2016 и более поздних версий.
 ::: moniker-end
 
 ## <a name="ssrs-2016"></a>SSRS 2016

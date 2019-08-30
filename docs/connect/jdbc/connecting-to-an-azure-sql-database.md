@@ -1,7 +1,7 @@
 ---
 title: Подключение к базе данных SQL Azure | Документация Майкрософт
 ms.custom: ''
-ms.date: 01/21/2019
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 49645b1f-39b1-4757-bda1-c51ebc375c34
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: f62ca071f091fb812550315a81accff723422f09
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: 73c7713a013f03879b63ec2a073cc24fd9bdabe1
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956853"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028161"
 ---
 # <a name="connecting-to-an-azure-sql-database"></a>Подключение к базе данных SQL Azure
 
@@ -34,7 +34,7 @@ ms.locfileid: "67956853"
 При подключении к [!INCLUDE[ssAzure](../../includes/ssazure_md.md)]необходимо подключиться к базе данных master для вызова **SQLServerDatabaseMetaData. catalog**.  
 [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] не поддерживает возврат всего набора каталогов из пользовательских баз данных. **SQLServerDatabaseMetaData. catalog** использует представление sys. databases для получения каталогов. Сведения о разрешениях в [представлении sys. databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) см [!INCLUDE[ssAzure](../../includes/ssazure_md.md)]. в статье о поведении **SQLServerDatabaseMetaData. catalog** в.  
   
-## <a name="connections-dropped"></a>Прерванные соединения
+## <a name="connections-dropped"></a>Прерванные подключения
 
 При установлении соединения с [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] простаивающие соединения по истечении определенного времени бездействия могут быть разорваны сетевым компонентом (например, брандмауэром). В данном контексте существует два типа бездействующих соединений.  
 
@@ -80,7 +80,7 @@ shutdown /r /t 1
 
 ## <a name="using-encryption-requires-setting-hostnameincertificate"></a>Для использования шифрования необходимо задать hostNameInCertificate
 
-До версии [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] [!INCLUDE[ssAzure](../../includes/ssazure_md.md)]7,2 при подключении к необходимо указать **hostNameInCertificate** , если указать **Encrypt = true** (если имя сервера в строке подключения имеет значение " *shortName*"). *имя_домена*, присвойте \*свойству **hostNameInCertificate** значение. *имя_домена*.). Это свойство является необязательным в версии драйвера 7,2.
+До версии [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] [!INCLUDE[ssAzure](../../includes/ssazure_md.md)]7,2 при подключении к необходимо указать **hostNameInCertificate** , если указать **Encrypt = true** (если имя сервера в строке подключения имеет значение " *shortName*"). *имя_домена*, присвойте свойству **hostNameInCertificate** значение\*. *имя_домена*.). Это свойство является необязательным в версии драйвера 7,2.
 
 Пример:
 
@@ -88,6 +88,6 @@ shutdown /r /t 1
 jdbc:sqlserver://abcd.int.mscds.com;databaseName=myDatabase;user=myName;password=myPassword;encrypt=true;hostNameInCertificate=*.int.mscds.com;
 ```
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
-[Соединение с SQL Server с помощью драйвера JDBC](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)  
+[Подключение к SQL Server с помощью JDBC Driver](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)  

@@ -8,12 +8,12 @@ ms.topic: article
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 275ef0ef83c073726cebf80b63e1d8f9640eca81
-ms.sourcegitcommit: 676458a9535198bff4c483d67c7995d727ca4a55
+ms.openlocfilehash: 6464f83c8783c6fa82f397b7a30ed068f695e66b
+ms.sourcegitcommit: 8c1c6232a4f592f6bf81910a49375f7488f069c4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69903640"
+ms.lasthandoff: 08/26/2019
+ms.locfileid: "70026244"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>Новые возможности [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]
 
@@ -91,7 +91,7 @@ ms.locfileid: "69903640"
 
 |Новые функции или обновления | Сведения |
 |:---|:---|
-|Поддержка кодировки UTF-8 |Поддержка символов UTF-8 для импорта и экспорта кодировки, а также как параметров сортировки на уровне столбцов и базы данных для строковых данных. Это позволяет приложениям расширяться до глобального масштаба в тех случаях, когда для выполнения требований клиентов и определенных рыночных нормативов критически важно предоставлять глобальные многоязычные приложения баз данных и служб. См. статью о [поддержке параметров сортировки и Юникода](../relational-databases/collations/collation-and-unicode-support.md).<br/><br/>Релиз-кандидат [[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] предоставляет поддержку UTF-8 для внешних таблиц Polybase и для Always Encrypted.|
+|Поддержка кодировки UTF-8 |Поддержка символов UTF-8 для импорта и экспорта кодировки, а также как параметров сортировки на уровне столбцов и базы данных для строковых данных. Это позволяет приложениям расширяться до глобального масштаба в тех случаях, когда для выполнения требований клиентов и определенных рыночных нормативов критически важно предоставлять глобальные многоязычные приложения баз данных и служб. См. статью о [поддержке параметров сортировки и Юникода](../relational-databases/collations/collation-and-unicode-support.md).<br/><br/> Релиз-кандидат [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] включает поддержку UTF-8 для внешних таблиц Polybase и для Always Encrypted.|
 | &nbsp; | &nbsp; |
 
 ### <a name="polybase"></a>PolyBase
@@ -99,7 +99,7 @@ ms.locfileid: "69903640"
 |Новые функции или обновления | Сведения |
 |:---|:---|
 |Отправка запросов к внешним таблицам |Имена столбцов внешней таблицы теперь используются для запроса источников данных SQL Server, Oracle, Teradata, MongoDB и ODBC. См. [обзорную статью о PolyBase](../relational-databases/polybase/polybase-guide.md).|
-|Поддержка кодировки UTF-8|Поддержка символов UTF-8 с внешними таблицами. См. статью о [поддержке параметров сортировки и Юникода](../relational-databases/collations/collation-and-unicode-support.md).|
+|Поддержка кодировки UTF-8|Поддержка символов UTF-8 с внешними таблицами. См. раздел [Поддержка параметров сортировки и Юникода](../relational-databases/collations/collation-and-unicode-support.md).|
 | &nbsp; | &nbsp; |
 
 ### <a name="server-settings"></a>Параметры сервера
@@ -138,7 +138,7 @@ ms.locfileid: "69903640"
 
 |Новые функции или обновления | Сведения |
 |:---|:---|
-| Новые идентификаторы пространственных ссылок (SRID) |[Australian GDA2020](http://www.ga.gov.au/scientific-topics/positioning-navigation/geodesy/datums-projections/gda2020) предоставляет более надежный и точный элемент данных, который в большей степени подходит для глобальных навигационных систем. Новые идентификаторы SRID:<br/><br/> - 7843 — географические двухмерные;<br/> - 7844 — географические трехмерные. <br/><br/>Представление [sys.spatial_reference_systems](../relational-databases/system-catalog-views/sys-spatial-reference-systems-transact-sql.md) содержит определения новых SRID. |
+| Новые идентификаторы пространственных ссылок (SRID) |[Australian GDA2020](http://www.ga.gov.au/scientific-topics/positioning-navigation/geodesy/datums-projections/gda2020) предоставляет более надежный и точный элемент данных, который в большей степени подходит для глобальных навигационных систем. Ниже приведены новые идентификаторы SRID:<br/><br/> - 7843 — географические двухмерные;<br/> - 7844 — географические трехмерные. <br/><br/>Представление [sys.spatial_reference_systems](../relational-databases/system-catalog-views/sys-spatial-reference-systems-transact-sql.md) содержит определения новых SRID. |
 | &nbsp; | &nbsp; |
 
 ### <a name="performance"></a>Производительность
@@ -147,6 +147,7 @@ ms.locfileid: "69903640"
 |:---|:---|
 |Ускоренное восстановление баз данных. | Ускорение восстановления базы данных (ADR) для отдельных баз данных. См. раздел [Ускоренное восстановление баз данных](../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#adr).|
 |Форсированная поддержка быстрых однопроходных и статических курсоров | План Query Store форсирует поддержку для перемотки вперед и статических курсоров. См. раздел [План форсирует поддержку для быстрых однопроходных и статических курсоров](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md#ctp23).|
+|Управление ресурсами| Тип данных настраиваемого значения для параметра `REQUEST_MAX_MEMORY_GRANT_PERCENT` в `CREATE WORKLOAD GROUP` и `ALTER WORKLOAD GROUP` изменен с целого числа на число с плавающей точкой, что позволяет более точно контролировать ограничения памяти. Дополнительные сведения: [ALTER WORKLOAD GROUP](../t-sql/statements/alter-workload-group-transact-sql.md), [CREATE WORKLOAD GROUP](../t-sql/statements/create-workload-group-transact-sql.md).|
 |Сокращение повторных компиляций для рабочих нагрузок| Улучшает использование временных таблиц в нескольких областях. См. раздел [Сокращение повторных компиляций для рабочих нагрузок](../relational-databases/tables/tables.md#ctp23). |
 |Масштабируемость косвенных контрольных точек |См. раздел [Улучшена масштабируемость косвенных контрольных точек](../relational-databases/logs/database-checkpoints-sql-server.md#ctp23).|
 |Оптимизированные для памяти метаданные `tempdb`| В [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] появилась новая функция оптимизированных для памяти метаданных `tempdb`, входящая в семейство функций [выполняющейся в памяти базы данных](../relational-databases/in-memory-database.md). Она эффективно устраняет существующую проблему и открывает новый уровень масштабируемости для рабочих нагрузок, активно использующих `tempdb`. В [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] системные таблицы, связанные с управлением метаданными временной таблицы, можно переместить в неустойчивые таблицы без кратковременной блокировки, оптимизированные для памяти. См. раздел [Оптимизированные для памяти метаданные `tempdb`](../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata).|
@@ -154,8 +155,8 @@ ms.locfileid: "69903640"
 |Обратная связь по временно предоставляемому буферу памяти в строковом режиме |Расширяет функцию обратной связи с временно предоставляемым буфером памяти в пакетном режиме путем настройки размеров временно предоставляемого буфера памяти для операторов пакетного и строкового режимов. Позволяет автоматически отменять излишние предоставленные разрешения, которые занимают память и снижают уровень параллелизма, а также решать проблемы, возникшие из-за недостатка временных буферов памяти. Такие проблемы влекут за собой чрезмерный расход ресурсов при записи на диск. См. раздел [Обратная связь по временно предоставляемому буферу памяти в строковом режиме](../relational-databases/performance/intelligent-query-processing.md#row-mode-memory-grant-feedback). |
 |Отложенная компиляция табличных переменных|Оптимизирует план и повышает общую производительность запросов со ссылками на табличные переменные. Во время оптимизации и первичной компиляции эта функция распространяет оценки кратности, основанные на фактическом количестве строк табличной переменной. Эти точные сведения о количестве строк позволяют оптимизировать последующие операции плана. См. раздел [Отложенная компиляция табличных переменных](../relational-databases/performance/intelligent-query-processing.md#table-variable-deferred-compilation). |
 |`APPROX_COUNT_DISTINCT `|Если не требуется абсолютная точность, но есть строгие требования ко времени реагирования, `APPROX_COUNT_DISTINCT` выполняет статистическое вычисление для крупных наборов данных, используя меньше ресурсов, чем `COUNT(DISTINCT())`, и обеспечивая намного лучший параллелизм. См. раздел [Приблизительная обработка запросов](../relational-databases/performance/intelligent-query-processing.md#approximate-query-processing).|
-|Пакетный режим для данных rowstore|Пакетный режим для данных rowstore обеспечивает выполнение в пакетном режиме без необходимости использовать индексы columnstore. В пакетном режиме более эффективно используются ресурсы ЦП во время аналитических рабочих нагрузок. Но до версии [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] такая возможность использовалось, только если запрос включал операции с индексами columnstore. При этом некоторые приложения могут использовать функции, которые не поддерживают индексы columnstore и поэтому не работают в пакетном режиме. Начиная с версии [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] пакетный режим включен в соответствующих аналитических рабочих нагрузках, запросы которых включают операции с любым типом индекса (rowstore или columnstore). См. раздел [Пакетный режим для данных rowstore](../relational-databases/performance/intelligent-query-processing.md#batch-mode-on-rowstore). |
-|Встраивание скалярных пользовательских функций|Автоматически преобразует определяемые пользователем скалярные функции (UDF) в реляционные выражения и внедряет их в вызывающий SQL-запрос. Такое преобразование повышает производительность рабочих нагрузок, которые используют скалярные определяемые пользователем функции. [Встраивание скалярных пользовательских функций](../relational-databases/performance/intelligent-query-processing.md#scalar-udf-inlining).|
+|Пакетный режим для данных rowstore|Пакетный режим для данных rowstore обеспечивает выполнение в пакетном режиме без необходимости использовать индексы columnstore. В пакетном режиме более эффективно используются ресурсы ЦП во время аналитических рабочих нагрузок. Но до версии [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] такая возможность использовалось, только если запрос включал операции с индексами columnstore. При этом некоторые приложения могут использовать функции, которые не поддерживают индексы columnstore и поэтому не работают в пакетном режиме. Начиная с версии [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] пакетный режим доступен для поддерживаемых рабочих нагрузок аналитики, запросы которых включают операции с любым типом индекса (rowstore или columnstore). См. раздел [Пакетный режим для данных rowstore](../relational-databases/performance/intelligent-query-processing.md#batch-mode-on-rowstore). |
+|Встраивание скалярных пользовательских функций|Автоматически преобразует определяемые пользователем скалярные функции (UDF) в реляционные выражения и внедряет их в вызывающий SQL-запрос. Такое преобразование повышает производительность рабочих нагрузок, которые используют скалярные определяемые пользователем функции. См. раздел [Встраивание скалярных определяемых пользователем функций](../relational-databases/performance/intelligent-query-processing.md#scalar-udf-inlining).|
 | &nbsp; | &nbsp; |
 
 ### <a name="availability-groups"></a>Группы доступности
@@ -193,14 +194,6 @@ ms.locfileid: "69903640"
 |Улучшения `tempdb` | По умолчанию новая установка SQL Server на Linux создает несколько файлов данных `tempdb` на основе числа логических ядер (до 8 файлов данных). Это не применимо к обновлениям основной или дополнительной версии на месте. Размер каждого файла `tempdb` составляет 8 МБ с возможностью автоматического увеличения до 64 МБ. Это поведение аналогично поведению установки SQL Server по умолчанию в Windows. |
 | PolyBase на компьютерах под управлением Linux | [Установка PolyBase](../relational-databases/polybase/polybase-linux-setup.md) в Linux для соединителей вне Hadoop.<br/><br/>[Сопоставление типов PolyBase](../relational-databases/polybase/polybase-type-mapping.md). |
 | Поддержка системы отслеживания измененных данных (CDC) | Система отслеживания измененных данных (CDC) теперь поддерживается в Linux для SQL Server 2019. |
-| &nbsp; | &nbsp; |
-
-### <a name="setup"></a>Настройка
-
-|Новые функции или обновления | Сведения |
-|:---|:---|
-|Новые параметры настройки памяти | Задает конфигурации *минимальной памяти сервера (МБ)* и *максимальной памяти сервера (МБ)* во время установки. Дополнительные сведения см. в описании параметров `USESQLRECOMMENDEDMEMORYLIMITS`, `SQLMINMEMORY` и `SQLMAXMEMORY` в разделе [Параметры установки](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Install). Предложенное значение будет соответствовать рекомендациям по настройке памяти, приведенным в разделе [Настройка параметров памяти вручную](../database-engine/configure-windows/server-memory-server-configuration-options.md#setting-the-memory-options-manually).|
-|Новые параметры настройки параллелизма | Задает параметр *максимального уровня параллелизма* во время установки. Дополнительные сведения см. в описании параметра `SQLMAXDOP` в разделе [Параметры установки](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Install). Значение по умолчанию будет соответствовать рекомендациям по максимальной степени параллелизма, приведенным в разделе [Рекомендации](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines).|
 | &nbsp; | &nbsp; |
 
 ## <a id="ml"></a> Службы машинного обучения SQL Server
@@ -247,8 +240,8 @@ ms.locfileid: "69903640"
 
 ## <a name="next-steps"></a>Следующие шаги
 
-- [Заметки о выпуске [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]](sql-server-ver15-release-notes.md).
+- [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]: заметки о выпуске](sql-server-ver15-release-notes.md).
 
-- [Майкрософт [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]: Технический документ](http://info.microsoft.com/rs/157-GQE-382/images/EN-US-CNTNT-white-paper-DBMod-Microsoft-SQL-Server-2019-Technical-white-paper.pdf)<br />Опубликовано в сентябре 2018 г. Применяется к CTP-версии 2.0 Microsoft [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] для контейнеров Windows, Linux и Docker.
+- [Microsoft [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]: технический документ](http://info.microsoft.com/rs/157-GQE-382/images/EN-US-CNTNT-white-paper-DBMod-Microsoft-SQL-Server-2019-Technical-white-paper.pdf)<br />Опубликовано в сентябре 2018 г. Применяется к CTP-версии 2.0 Microsoft [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] для контейнеров Windows, Linux и Docker.
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

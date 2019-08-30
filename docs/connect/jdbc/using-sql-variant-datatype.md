@@ -1,7 +1,7 @@
 ---
 title: Использование типа данных Sql_variant | Документация Майкрософт
 ms.custom: ''
-ms.date: 01/28/2019
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 662362a692742d206902a0cf23aff63a3ba89df9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cdede5d41d5ad7fc22cfed3f1efa9f95612032ca
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916174"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69025839"
 ---
-# <a name="using-sqlvariant-data-type"></a>Использование данных типа sql_variant
+# <a name="using-sql_variant-data-type"></a>Использование данных типа sql_variant
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -65,7 +65,7 @@ try (SQLServerResultSet resultSet = (SQLServerResultSet) stmt.executeQuery("sele
 }
 ```
 
-## <a name="using-stored-procedures-with-sqlvariant"></a>Использование хранимых процедур с sql_variant:   
+## <a name="using-stored-procedures-with-sql_variant"></a>Использование хранимых процедур с sql_variant:   
 Наличие хранимой процедуры, например:     
 
 ```java
@@ -81,7 +81,7 @@ try (CallableStatement callableStatement = con.prepareCall(" {call " + inputProc
 }
 ```
 
-## <a name="limitations-of-sqlvariant"></a>Ограничения типа sql_variant:
+## <a name="limitations-of-sql_variant"></a>Ограничения типа sql_variant:
 - При использовании `datetime` TVP для заполнения таблицы / `getSmallDateTime()` / `getDateTime()` `smalldatetime` значением, хранящимся в sql_variant, вызов`getDate()` метода / / `date` ResultSet не работает и вызывает следующее исключение:
     
     `Java.lang.String cannot be cast to java.sql.Timestamp`
@@ -92,6 +92,6 @@ try (CallableStatement callableStatement = con.prepareCall(" {call " + inputProc
     
     `Inserting null value with column type sql_variant in TVP is not supported.`
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
-[Основные сведения о типах данных драйвера JDBC](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  
+[Основные сведения о типах данных JDBC Driver](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  
