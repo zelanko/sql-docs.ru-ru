@@ -249,7 +249,7 @@
       href: ../database-engine/connection-properties-dialog-box.md
     - name: Срок действия пароля истек
       href: ../database-engine/password-expired.md
-    - name: Соединение с хранилищем Windows Azure
+    - name: Подключение к службе хранилища Azure
       href: ../database-engine/connect-to-windows-azure-storage.md
 - name: Визуальные инструменты базы данных +
   href: visual-db-tools/visual-database-tools.md
