@@ -22,23 +22,23 @@ ms.assetid: 09a6e0c2-d8fd-453f-9aac-4ff24a97dc1f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 2b3b550ec7eb42597862c5b20e557aabdc909f13
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d159b6c0496d99956e17f1607f71cf7df86e4dea
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62922125"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155006"
 ---
 # <a name="backup-overview-sql-server"></a>Backup Overview (SQL Server)
   В этом разделе представлены сведения о компоненте резервного копирования [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Резервное копирование базы данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имеет важное значение для защиты данных. Здесь представлено описание типов резервных копий и ограничений резервного копирования. В рамках данной темы также рассмотрены устройства резервного копирования и носители данных резервных копий в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  **В этом разделе.**  
   
--   [Компоненты и основные понятия](#TermsAndDefinitions)  
+-   [Компоненты и понятия](#TermsAndDefinitions)  
   
 -   [Сжатие резервных копий](#BackupCompression)  
   
--   [Ограничения на операции резервного копирования в SQL Server](#Restrictions)  
+-   [Ограничения для операций резервного копирования в SQL Server](#Restrictions)  
   
 -   [Связанные задачи](#RelatedTasks)  
   
@@ -57,7 +57,7 @@ ms.locfileid: "62922125"
   
  **Типы резервных копий**  
   
- [резервное копирование только для копирования](copy-only-backups-sql-server.md)  
+ [резервная копия только для копирования](copy-only-backups-sql-server.md)  
  Специальная резервная копия, независимая от обычной последовательности резервных копий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  резервное копирование данных  
@@ -77,16 +77,16 @@ ms.locfileid: "62922125"
  [резервная копия журналов](transaction-log-backups-sql-server.md)  
  Резервная копия журналов транзакций, включающая все записи журнала, не входившие в предыдущую резервную копию журналов. (модель полного восстановления)  
   
- [файл резервной копии](full-file-backups-sql-server.md)  
+ [резервная копия файлов](full-file-backups-sql-server.md)  
  Резервная копия одного или нескольких файлов или файловых групп базы данных.  
   
- [Частичная резервная копия](partial-backups-sql-server.md)  
+ [Частичная Архивация](partial-backups-sql-server.md)  
  Содержит данные только из некоторых файловых групп базы данных, включая данные в первичной файловой группе, все файловые группы, доступные для чтения-записи, а также любые дополнительно указанные файлы, доступные только для чтения.  
   
- **Носитель резервной копии термины и определения**  
+ **Условия и определения носителей резервных копий**  
   
- [Устройство резервного копирования](backup-devices-sql-server.md)  
- Диск или ленточное устройство, на которые записываются резервные копии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для последующего восстановления. Резервные копии SQL Server можно также записать в службу хранилища больших двоичных объектов Windows Azure, а формат **URL** используется, чтобы указать назначение и имя файла резервной копии. Дополнительные сведения см. в разделе [Резервное копирование и восстановление SQL Server с помощью службы хранилищ больших двоичных объектов Windows Azure](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
+ [устройство резервного копирования](backup-devices-sql-server.md)  
+ Диск или ленточное устройство, на которые записываются резервные копии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для последующего восстановления. SQL Server резервные копии можно также записывать в службу хранилища BLOB-объектов Azure, а для указания места назначения и имени файла резервной копии используется формат **URL** . Дополнительные сведения см. в статье [SQL Server резервное копирование и восстановление с помощью службы хранилища BLOB-объектов Azure](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
   
  [носитель данных резервной копии](media-sets-media-families-and-backup-sets-sql-server.md)  
  Один или несколько наборов дисков или ленточных устройств, на которые записывается резервная копия.  
@@ -103,10 +103,10 @@ ms.locfileid: "62922125"
  [зеркальный набор носителей](mirrored-backup-media-sets-sql-server.md)  
  Составные копии (зеркала) набора носителей данных резервных копий.  
   
-##  <a name="BackupCompression"></a> Сжатие резервных копий  
+##  <a name="BackupCompression"></a>Сжатие резервных копий  
  [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] и более поздние версии поддерживают сжатие резервных копий, а [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздние версии позволяют восстановить сжатые резервные копии. Дополнительные сведения см. в разделе [Сжатие резервных копий (SQL Server)](backup-compression-sql-server.md).  
   
-##  <a name="Restrictions"></a> Ограничения на операции резервного копирования в SQL Server  
+##  <a name="Restrictions"></a>Ограничения для операций резервного копирования в SQL Server  
  Резервное копирование может выполняться, если база данных находится в режиме «в сети» и используется. Однако действуют следующие ограничения.  
   
 ### <a name="offline-data-cannot-be-backed-up"></a>Нельзя создать резервную копию данных, находящихся в режиме «вне сети»  
@@ -136,7 +136,7 @@ ms.locfileid: "62922125"
  Если операция резервного копирования перекрывается операцией сжатия или управления файлами, то возникает конфликт. Независимо от того, какая из конфликтующих операций начата первой, вторая операция ждет истечения времени ожидания первой (оно зависит от параметров сеанса). Если разблокировка происходит до истечения времени ожидания, работа второй операции продолжается. Если разблокировки за этот период не происходит, вторая операция заканчивается неудачно.  
   
 ##  <a name="RelatedTasks"></a> Связанные задачи  
- **Для работы с устройствами резервного копирования и носителями резервных копий**  
+ **Работа с устройствами резервного копирования и носителями резервных копий**  
   
 -   [Определение логического устройства резервного копирования для дискового файла (SQL Server)](define-a-logical-backup-device-for-a-disk-file-sql-server.md)  
   
@@ -156,7 +156,7 @@ ms.locfileid: "62922125"
   
 -   [Восстановление резервной копии с устройства (SQL Server)](restore-a-backup-from-a-device-sql-server.md)  
   
--   [Учебник. Резервное копирование и восстановление SQL Server с помощью службы хранилища BLOB-объектов Microsoft Azure](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+-   [Учебник. SQL Server резервного копирования и восстановления в службе хранилища BLOB-объектов Azure](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
  **Создание резервной копии**  
   
@@ -179,7 +179,7 @@ ms.locfileid: "62922125"
   
 -   [Использование регулятора ресурсов для ограничения загрузки ЦП при сжатии резервной копии (Transact-SQL)](use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)  
   
--   [Учебник. Резервное копирование и восстановление SQL Server с помощью службы хранилища BLOB-объектов Microsoft Azure](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+-   [Учебник. SQL Server резервного копирования и восстановления в службе хранилища BLOB-объектов Azure](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
 ## <a name="see-also"></a>См. также  
  [Резервное копирование и восстановление баз данных SQL Server](back-up-and-restore-of-sql-server-databases.md)   

@@ -5,16 +5,16 @@ description: Узнайте, как реализуется сохраняемо�
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 07/24/2019
+ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ad5efd9c6d7a3750dcf3e35ae4d651e646060ed5
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.openlocfilehash: 7a12afd88f0eb83de7d5c5bd4a3735e71e037138
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69028594"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155353"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-on-kubernetes"></a>Сохраняемость данных при использовании кластера больших данных SQL Server в Kubernetes
 
@@ -83,7 +83,7 @@ ms.locfileid: "69028594"
 azdata bdc config init --source aks-dev-test --target custom
 ```
 
-При этом создаются два файла: **cluster.json** и **control.json**, которые можно настроить путем изменения вручную или с помощью команды **azdata bdc config**. Для изменения файлов конфигурации можно использовать сочетание библиотек jsonpath и jsonpatch.
+При этом создаются два файла: **BDC. JSON** и **Control. JSON** , которые могут быть настроены вручную, либо можно использовать команду **аздата BDC config** . Для изменения файлов конфигурации можно использовать сочетание библиотек jsonpath и jsonpatch.
 
 
 ### <a id="config-samples"></a> Настройка имени класса хранения и размера утверждений
@@ -109,7 +109,7 @@ azdata bdc config replace --config-file custom/control.json --json-values "$.spe
   "patch": [
     {
       "op": "replace",
-      "path": "$.spec.pools[?(@.spec.type == 'Storage')].spec",
+      "path": "$.spec.resources.storage-0.spec",
       "value": {
         "type":"Storage",
         "replicas":2,
@@ -134,7 +134,7 @@ azdata bdc config replace --config-file custom/control.json --json-values "$.spe
 Примените файл исправления. Используйте команду **azdata bdc config patch**, чтобы применить изменения в файле исправления JSON. В приведенном ниже примере файл patch.json применяется к целевому файлу конфигурации развертывания custom.json.
 
 ```bash
-azdata bdc config patch --config-file custom/cluster.json --patch-file ./patch.json
+azdata bdc config patch --config-file custom/bdc.json --patch-file ./patch.json
 ```
 
 ## <a name="next-steps"></a>Следующие шаги

@@ -5,37 +5,51 @@ description: Справочная статья по командам azdata bdc 
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/21/2019
+ms.date: 08/28/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: c30fa0bdb9e74941387393a7dffeaadcae05b303
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 33a479f30617fae22ecfc46ddaf115d3a29eed6c
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653216"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155288"
 ---
 # <a name="azdata-bdc-control-status"></a>azdata bdc control status
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
 
-В следующей статье приводятся справочные сведения по командам **bdc control status** в средстве **azdata**. Дополнительные сведения о других командах **azdata** см. в [справочнике по azdata](reference-azdata.md).
+Эта статья содержит справочную статью по **аздата**. 
 
 ## <a name="commands"></a>Команды
 |     |     |
 | --- | --- |
-[azdata bdc control status show](#azdata-bdc-control-status-show) | Состояние элемента управления.
+[azdata bdc control status show](#azdata-bdc-control-status-show) | Управление состоянием службы.
 ## <a name="azdata-bdc-control-status-show"></a>azdata bdc control status show
-Состояние элемента управления.
+Управление состоянием службы.
 ```bash
-azdata bdc control status show 
+azdata bdc control status show [--resource -r] 
+                               [--all -a]
 ```
 ### <a name="examples"></a>Примеры
-Получение состояния элемента управления.
+Возвращает состояние службы.
 ```bash
 azdata bdc control status show
 ```
+Получение состояния службы управления со всеми экземплярами.
+```bash
+azdata bdc control status show --all
+```
+Получение состояния управляющего ресурса в службе управления.
+```bash
+azdata bdc control status show --resource control
+```
+### <a name="optional-parameters"></a>Необязательные параметры
+#### `--resource -r`
+Получить этот ресурс в этой службе.
+#### `--all -a`
+Отображение всех экземпляров каждого ресурса в службе.
 ### <a name="global-arguments"></a>Глобальные аргументы
 #### `--debug`
 Повышение уровня детализации журнала для включения всех журналов отладки.
@@ -50,4 +64,6 @@ azdata bdc control status show
 
 ## <a name="next-steps"></a>Следующие шаги
 
-Дополнительные сведения об установке средства **аздата** см. в разделе [Установка [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]аздата для управления ](deploy-install-azdata.md).
+- Дополнительные сведения о других командах **azdata** см. в [справочнике по azdata](reference-azdata.md). 
+
+- Дополнительные сведения об установке средства **azdata** см. в статье [Установка azdata для управления кластерами больших данных SQL Server 2019](deploy-install-azdata.md).

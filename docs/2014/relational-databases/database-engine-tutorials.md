@@ -10,12 +10,12 @@ ms.assetid: 32bd8af8-a832-4dc8-afff-01668e6b2b51
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b1a6158dca30d6419be59cf5eb68dff9892cc2dc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1b2f4b080287dd4481a121def388f327112f21ae
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62872670"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154614"
 ---
 # <a name="database-engine-tutorials"></a>Учебники по компоненту ядра СУБД
   В этом разделе приведены учебники по [!INCLUDE[ssDECurrent](../includes/ssdecurrent-md.md)].  
@@ -44,17 +44,17 @@ ms.locfileid: "62872670"
  [Учебник. Администрирование серверов с помощью управления на основе политик](policy-based-management/tutorial-administering-servers-by-using-policy-based-management.md)  
  Этот учебник учит создавать политики, которые обеспечивают принудительное выполнение стандартов по администрированию сайта.  
   
- [Учебник. Выполнение политик рекомендаций с помощью управления на основе политик](../tutorials/tutorial-evaluating-best-practices-by-using-policy-based-management.md)  
+ [Учебник. Оценка рекомендаций с помощью управления на основе политик](../tutorials/tutorial-evaluating-best-practices-by-using-policy-based-management.md)  
  В этом учебнике показано, как создавать политики, которые могут использоваться для анализа экземпляров компонента [!INCLUDE[ssDE](../includes/ssde-md.md)] в поисках известных проблем.  
   
- [Учебник. Резервное копирование и восстановление SQL Server с помощью службы хранилища BLOB-объектов Microsoft Azure](tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
- В этом учебнике показано, как выполнять резервное копирование и восстановление в SQL Server для службы хранения больших двоичных объектов в Windows Azure.  
+ [Учебник. SQL Server резервного копирования и восстановления в службе хранилища BLOB-объектов Azure](tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+ В этом учебнике показано, как SQL Server резервное копирование и восстановление в службе хранилища BLOB-объектов Azure.  
   
- [Учебник. SQL Server Data Files в службе хранилища Windows Azure](tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
- С помощью этого учебника вы научитесь напрямую сохранять файлы данных SQL Server в службе хранилища больших двоичных объектов Windows Azure.  
+ [Учебник. SQL Server файлы данных в службе хранилища Azure](tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
+ Этот учебник поможет вам понять, как хранить файлы данных SQL Server в службе хранилища BLOB-объектов Azure напрямую.  
   
 ## <a name="see-also"></a>См. также  
- [Учебные материалы по SQL Server 2014](../tutorials/tutorials-for-sql-server-2014.md)   
+ [Руководства для SQL Server 2014](../tutorials/tutorials-for-sql-server-2014.md)   
  [TechNet WIKI: образцы SQL Server 2012](https://go.microsoft.com/fwlink/?linkID=220734)  
   
   

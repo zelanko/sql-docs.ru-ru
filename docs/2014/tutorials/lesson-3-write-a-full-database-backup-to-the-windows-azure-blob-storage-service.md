@@ -1,5 +1,5 @@
 ---
-title: Урок 3. Запись полной резервной копии в Windows Azure Blob Storage Service | Документация Майкрософт
+title: Урок 3. Запись полной резервной копии базы данных в службу хранилища BLOB-объектов Azure | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,17 +10,17 @@ ms.assetid: 454c8296-64e9-46ed-b141-5ebfbc8a4fe2
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 242e32b08ec6346c39e149628e773b33554c95d4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1d5a749c61a3bc97de841e1149dd1539cbc990f2
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62653691"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70153464"
 ---
-# <a name="lesson-3-write-a-full-database-backup-to-the-windows-azure-blob-storage-service"></a>Урок 3. Запись полной резервной копии базы данных в службу хранилища BLOB-объектов Microsoft Azure
-  На этом занятии рассматривается использование инструкции T-SQL для выполнения полного резервного копирования базы данных в службе хранилищ больших двоичных объектов Windows Azure.  
+# <a name="lesson-3-write-a-full-database-backup-to-the-azure-blob-storage-service"></a>Урок 3. Запись полной резервной копии базы данных в службу хранилища BLOB-объектов Azure
+  На этом занятии показано использование инструкции TSQL для выполнения полной резервной копии базы данных в службе хранилища BLOB-объектов Azure.  
   
-## <a name="perform-a-full-database-backup-to-the-windows-azure-blob-storage-service"></a>Создание полной резервной копии базы данных в службе хранилища больших двоичных объектов Windows Azure  
+## <a name="perform-a-full-database-backup-to-the-azure-blob-storage-service"></a>Выполнение полной резервной копии базы данных в службе хранилища BLOB-объектов Azure  
  Для создания полной резервной копии базы данных выполните следующие действия:  
   
 1.  соединение с [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)];  
@@ -44,6 +44,6 @@ ms.locfileid: "62653691"
 5.  В обозревателе объектов подключитесь к хранилищу Windows Azure. Найдите папку с контейнером и только что созданными файлами резервной копии.  
   
 ## <a name="next-lesson"></a>Следующее занятие  
- [Занятие 4. Выполните восстановление из полной резервной копии](../../2014/tutorials/lesson-4-perform-a-restore-from-a-full-database-backup.md).  
+ [Занятие 4. Выполните восстановление из полной резервной копии](../../2014/tutorials/lesson-4-perform-a-restore-from-a-full-database-backup.md)базы данных.  
   
   

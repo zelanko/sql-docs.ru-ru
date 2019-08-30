@@ -13,12 +13,12 @@ author: v-redu
 ms.author: lle
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: b4ca791a1a0ce46929f4d409d234f8dbc7efdec3
-ms.sourcegitcommit: bcc3b2c7474297aba17b7a63b17c103febdd0af9
+ms.openlocfilehash: 0081ea193452e4e92938051bc7b4a40bc8631eaa
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68794960"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155381"
 ---
 # <a name="host-database-on-managed-instance"></a>База данных узла на управляемом экземпляре
 
@@ -36,7 +36,7 @@ ms.locfileid: "68794960"
 
 **Сторона базы данных:**
 
-1. Создание управляемого экземпляра базы данных SQL Azure включает в себя виртуальную сеть. [QuickStart Создание управляемого экземпляра базы данных SQL Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-get-started)
+1. Создание управляемого экземпляра базы данных SQL Azure включает в себя виртуальную сеть. [Краткое руководство Создание управляемого экземпляра базы данных SQL Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-get-started)
 2. Настройте подключение типа "точка — сеть". [Настройка подключения типа "точка — сеть" к виртуальной сети с помощью собственной проверки подлинности на основе сертификата Azure. портал Azure](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-howto-point-to-site-resource-manager-portal)
 3. Настройка проверки подлинности Azure Active Directory с помощью управляемого экземпляра базы данных SQL. [Настройка проверки подлинности Azure Active Directory и управление ею с помощью SQL](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure)
 
@@ -108,7 +108,7 @@ ms.locfileid: "68794960"
 
 **Настройка базы данных и веб-сайта**
 
-1. Подключите виртуальную сеть Windows Azure, чтобы убедиться, что вы можете подключиться к управляемому экземпляру.
+1. Подключите виртуальную сеть Azure, чтобы убедиться, что вы можете подключиться к управляемому экземпляру.
 
     ![MDS-SQLServer2019-config-MI-P2SVPNConnect](../master-data-services/media/mds-sqlserver2019-config-mi-p2svpnconnect.png "MDS-SQLServer2019-config-MI_P2SVPNConnect")  
 

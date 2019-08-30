@@ -1,5 +1,5 @@
 ---
-title: Занятие 5. (Необязательно) Шифрование базы данных с помощью прозрачного шифрования данных | Документация Майкрософт
+title: Занятие 5. Используемых Шифрование базы данных с помощью TDE | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,21 +10,21 @@ ms.assetid: ba793c8f-665a-4c46-b68d-f558a37906b2
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7e78a787a67c430ec82bea4788fd1c92c4c72c4a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4eda59ac47444eb589e17d6e1aab2428c77a991f
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090680"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154522"
 ---
 # <a name="lesson-5-optional-encrypt-your-database-using-tde"></a>Занятие 5. (Необязательно) Шифрование базы данных с помощью TDE
-  В качестве дополнительного шага вы можете зашифровать созданную базу данных. Функция прозрачного шифрования данных (TDE) выполняет в реальном времени шифрование и дешифрование файлов данных и журналов в операциях ввода-вывода. При таком типе шифрования используется ключ шифрования базы данных (DEK), который хранится в загрузочной записи базы данных, чтобы он был доступен при восстановлении. Дополнительные сведения см. в разделе [прозрачное шифрование данных &#40;TDE&#41; ](security/encryption/transparent-data-encryption.md) и [перемещение базы данных защищены прозрачное шифрование данных на другой сервер SQL](security/encryption/move-a-tde-protected-database-to-another-sql-server.md).  
+  В качестве дополнительного шага вы можете зашифровать созданную базу данных. Функция прозрачного шифрования данных (TDE) выполняет в реальном времени шифрование и дешифрование файлов данных и журналов в операциях ввода-вывода. При таком типе шифрования используется ключ шифрования базы данных (DEK), который хранится в загрузочной записи базы данных, чтобы он был доступен при восстановлении. Дополнительные сведения см. в [разделе &#40;прозрачное шифрование данных&#41; TDE](security/encryption/transparent-data-encryption.md) и [Перемещение базы данных, защищенной TDE, в другую SQL Server](security/encryption/move-a-tde-protected-database-to-another-sql-server.md).  
   
  Для этого занятия предполагается, что вы уже выполнили следующие шаги.  
   
--   Получили учетную запись хранения Windows Azure.  
+-   У вас есть учетная запись хранения Azure.  
   
--   Создали контейнер с использованием вашей учетной записи хранения Windows Azure.  
+-   Вы создали контейнер в учетной записи хранения Azure.  
   
 -   Создали политику в контейнере с правами на чтение, запись и перечисление. Создали ключ SAS.  
   
@@ -87,10 +87,10 @@ GO
   
 ```  
   
- Подробные сведения о Transact-SQL инструкции, которые использовались на этом занятии, см. в разделе [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql), [ALTER DATABASE &#40;Transact-SQL&#41; ](/sql/t-sql/statements/alter-database-transact-sql), [CREATE MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-master-key-transact-sql), [CREATE CERTIFICATE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-certificate-transact-sql), и [sys.dm_database_ encryption_keys &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql).  
+ Подробные сведения об инструкциях Transact-SQL, которые использовались в этом занятии, см. в статьях [Создание базы данных &#40;SQL Server Transact-&#41;SQL](/sql/t-sql/statements/create-database-sql-server-transact-sql), [инструкция ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql), [Создание главного ключа &#40; Transact-SQL&#41;](/sql/t-sql/statements/create-master-key-transact-sql), [CREATE CERTIFICATE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-certificate-transact-sql)и [sys. DM _database_encryption_keys &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql).  
   
  **Следующее занятие:**  
   
- [Занятие 6. Перенос базы данных из источника локального компьютера на целевой компьютер в Windows Azure](lesson-5-backup-database-using-file-snapshot-backup.md)  
+ [Занятие 6. Перенос базы данных с исходного компьютера на конечный компьютер в Azure](lesson-5-backup-database-using-file-snapshot-backup.md)  
   
   

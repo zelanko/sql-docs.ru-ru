@@ -10,22 +10,22 @@ ms.assetid: 64f8805c-1ddc-4c96-a47c-22917d12e1ab
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: fbea11b0500c075105bff885cdb1cd8264b320d6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: baa337d33173f292145d92b60d6192af2a716c5e
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62931633"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154331"
 ---
 # <a name="lesson-2-create-a-sql-server-credential"></a>Урок 2. Создание учетных данных SQL Server
-  **Учетные данные**. Учетные данные [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] являются объектом, который используется для хранения информации о проверке подлинности, которая необходима для подключения к источнику за пределами SQL Server.  В данном случае процессы резервного копирования и восстановления [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] используют учетные данные для проверки подлинности в службе хранилища больших двоичных объектов Windows Azure. Учетные данные хранят имя учетной записи хранилища и значения **ключа доступа** учетной записи хранилища. После создания учетных данных их необходимо указать в параметре WITH CREDENTIAL при выполнении инструкций BACKUP/RESTORE. Дополнительную информацию о просмотре, копировании или повторном создании учетной записи хранилища **access keys**см. в разделе [Ключи доступа к учетной записи](https://msdn.microsoft.com/library/windowsazure/hh531566.aspx).  
+  **Учетные данные**. Учетные данные [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] являются объектом, который используется для хранения информации о проверке подлинности, которая необходима для подключения к источнику за пределами SQL Server.  Здесь процессы [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] резервного копирования и восстановления используют учетные данные для проверки подлинности в службе хранилища BLOB-объектов Azure. Учетные данные хранят имя учетной записи хранилища и значения **ключа доступа** учетной записи хранилища. После создания учетных данных их необходимо указать в параметре WITH CREDENTIAL при выполнении инструкций BACKUP/RESTORE. Дополнительную информацию о просмотре, копировании или повторном создании учетной записи хранилища **access keys**см. в разделе [Ключи доступа к учетной записи](https://msdn.microsoft.com/library/windowsazure/hh531566.aspx).  
   
  Общие сведения об учетных данных см. в разделе [Учетные данные](../relational-databases/security/authentication-access/credentials-database-engine.md).  
   
  Сведения о других примерах использования учетных данных см. в разделе [Создание учетной записи-посредника агента SQL Server](../ssms/agent/create-a-sql-server-agent-proxy.md).  
   
 > [!IMPORTANT]  
->  Требования к созданию учетных данных SQL Server, описанные ниже, характерны для процессов резервного копирования SQL Server ([SQL Server Backup to URL](../relational-databases/backup-restore/sql-server-backup-to-url.md), и [SQL Server Managed  Backup to Windows Azure](../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)). SQL Server, при доступе к хранилищу Azure для записи или чтения резервных копий, использует информацию об имени и ключе доступа учетной записи хранилища.  Дополнительные сведения о создании учетных данных для хранения файлов базы данных в хранилище Azure, см. в разделе [занятия 3: Создание учетных данных SQL Server](../relational-databases/lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md)  
+>  Требования к созданию учетных данных SQL Server, описанных ниже, относятся к SQL Server процессам резервного копирования ([SQL Server резервное копирование на URL-адрес](../relational-databases/backup-restore/sql-server-backup-to-url.md)и [SQL Server управляемого резервного копирования в Azure](../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)). SQL Server, при доступе к хранилищу Azure для записи или чтения резервных копий, использует информацию об имени и ключе доступа учетной записи хранилища.  Дополнительные сведения о создании учетных данных для хранения файлов базы данных в службе хранилища [Azure см. на занятии 3. Создание учетных данных SQL Server](../relational-databases/lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md)  
   
 ## <a name="create-a-sql-server-credential"></a>Создание учетных данных SQL Server  
  Для создания учетных данных SQL Server выполните следующие действия.  
@@ -45,13 +45,13 @@ ms.locfileid: "62931633"
   
     ```  
   
-     ![Сопоставление учетной записи хранилища с учетными данными sql](../../2014/tutorials/media/backuptocloud-storage-credential-mapping.gif "сопоставление учетной записи хранилища с учетными данными sql")  
+     ![Сопоставление учетной записи хранения с учетными данными SQL](../../2014/tutorials/media/backuptocloud-storage-credential-mapping.gif "Сопоставление учетной записи хранения с учетными данными SQL")  
   
 5.  Проверьте инструкцию T-SQL и нажмите **Выполнить**.  
   
- Дополнительные сведения о службе хранилища больших двоичных объектов Windows Azure для резервного копирования основные понятия и требования, см. в разделе [Резервное копирование и восстановление SQL Server с помощью службы хранилищ больших двоичных объектов Windows Azure](../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
+ Дополнительные сведения о службе хранилища BLOB-объектов Azure для основных понятий и требований для резервного копирования см. [в статье SQL Server резервное копирование и восстановление с помощью службы хранилища BLOB-объектов Azure](../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
   
 ### <a name="next-lesson"></a>Следующее занятие  
- [Занятие 3. Запись полной резервной копии в Windows Azure Blob Storage Service](../../2014/tutorials/lesson-3-write-a-full-database-backup-to-the-windows-azure-blob-storage-service.md).  
+ [Занятие 3. Создайте полную резервную копию базы данных в службе](../../2014/tutorials/lesson-3-write-a-full-database-backup-to-the-windows-azure-blob-storage-service.md)хранилища BLOB-объектов Azure.  
   
   

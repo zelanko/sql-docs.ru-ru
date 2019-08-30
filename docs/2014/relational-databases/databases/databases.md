@@ -14,12 +14,12 @@ ms.assetid: 316eea58-81b8-4bf3-a1fc-801946740e94
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 366a09bce079023f59f38682b51a7a5858671fcc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7de13f529dc0aab0c897ebe3dc1cb19220b13fd7
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62917098"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154584"
 ---
 # <a name="databases"></a>Базы данных
   База данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] состоит из коллекции таблиц, в которой хранится особый набор структурированных данных. Таблица содержит коллекцию строк, также называемых записями или кортежами, и столбцов, также называемых атрибутами. Каждый столбец в таблице предназначен для хранения конкретного типа данных, например дат, имен, денежных сумм или чисел.  
@@ -42,7 +42,7 @@ ms.locfileid: "62917098"
 |-|-|  
 |[Системные базы данных](system-databases.md)|[Удаление файлов данных или журналов из базы данных](delete-data-or-log-files-from-a-database.md)|  
 |[Автономные базы данных](contained-databases.md)|[Отображение сведений о месте на диске, занимаемом данными и журналами базы данных](display-data-and-log-space-information-for-a-database.md)|  
-|[Файлы данных SQL Server в Windows Azure](sql-server-data-files-in-microsoft-azure.md)|[Увеличение размера базы данных](increase-the-size-of-a-database.md)|  
+|[SQL Server файлы данных в Azure](sql-server-data-files-in-microsoft-azure.md)|[Увеличение размера базы данных](increase-the-size-of-a-database.md)|  
 |[Файлы и файловые группы базы данных](database-files-and-filegroups.md)|[Переименование базы данных](rename-a-database.md)|  
 |[Состояния базы данных](database-states.md)|[Установка однопользовательского режима базы данных](set-a-database-to-single-user-mode.md)|  
 |[Состояния файлов](file-states.md)|[Сжатие базы данных](shrink-a-database.md)|  

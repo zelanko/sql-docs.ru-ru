@@ -14,25 +14,25 @@ helpviewer_keywords:
 - SMO [SQL Server], versions
 - versions [SMO]
 ms.assetid: 510907b6-e7a9-41bd-b892-d6d99a5118e1
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7936eaf327f9df3cb0f3d8545d7bf557ef1471ac
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7a7d7e7dd9bf7e6d5ad6dfa5776d76892f96ad05
+ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68098040"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "70148660"
 ---
 # <a name="files-and-version-numbers"></a>Файлы и номера версий
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  Все необходимые компоненты объектов управления SQL Server (SMO) помещаются в пакет Microsoft.SqlServer.SqlManagementObjects NuGet. Объекты SMO реализованы в нескольких управляемых сборках. Можно разрабатывать приложения объектов SMO либо на клиенте, либо на сервере.  
+  Все SQL Server необходимые компоненты объектов SMO включены в пакет NuGet Microsoft. SqlServer. Склманажементобжектс. Объекты SMO реализованы в нескольких управляемых сборках. Можно разрабатывать приложения объектов SMO либо на клиенте, либо на сервере.  
 
 > > [!Important]
-> > Версия файла сборки объектов SMO отображается как основной. **0**. Build.Revision. Но версия embedded сборки основной номер. **100**. Build.Revision. Это позволяет отделить версия объектов SMO, используемые в каждом приложении, чтобы обновления одного не влияют на любые другие.
+> > Версия файла сборок SMO отображается как основная. **0**. Сборка. Редакция. Однако версия внедренной сборки является основной. **100**. Сборка. Редакция. Это делается для того, чтобы версия объектов SMO, используемая в каждом приложении, была раздельной, поэтому обновления для одного из них не влияют на другие.
 > > 
-> > По этой причине следует **не** установить эти версии сборок в глобальный кэш сборок (GAC). Это может привести к другим приложениям, такие как [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Studio, чтобы прервать. 
+> > Поэтому **не** следует устанавливать эти версии сборок в глобальный кэш сборок (GAC). Это может привести к сбою других приложений, например [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Studio. 
   
 |Файл|Описание|  
 |-----------|-----------------|  

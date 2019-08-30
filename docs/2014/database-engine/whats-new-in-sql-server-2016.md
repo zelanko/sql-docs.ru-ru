@@ -1,5 +1,5 @@
 ---
-title: Что&#39;s (ядро СУБД) | Документация Майкрософт
+title: Новые&#39;возможности (ядро СУБД) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/22/2016
 ms.prod: sql-server-2014
@@ -13,78 +13,78 @@ ms.assetid: 8f625d5a-763c-4440-97b8-4b823a6e2439
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 0650d15ece36593139ae804f6535315eacbf9294
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7cb79e9f369366b4144cf79b072b80cad17dde77
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62843444"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154086"
 ---
-# <a name="what39s-new-database-engine"></a>Что&#39;s (ядро СУБД)
+# <a name="what39s-new-database-engine"></a>Новые&#39;возможности (ядро СУБД)
   В этом последнем выпуске [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] появились новые средства и усовершенствования, которые расширяют возможности и повышают производительность архитекторов, разработчиков и администраторов, занимающихся проектированием, созданием и обслуживанием систем хранения данных. Ниже перечислены улучшения, внесенные в компонент [!INCLUDE[ssDE](../includes/ssde-md.md)] .  
   
-##  <a name="Feature"></a> Усовершенствования функций ядра базы данных  
+##  <a name="Feature"></a>Усовершенствованные функции ядро СУБД  
   
-###  <a name="MemoryOpt"></a> Оптимизированные для памяти таблицы  
+###  <a name="MemoryOpt"></a>Оптимизированные для памяти таблицы  
  In-Memory OLTP — это оптимизированное для памяти ядро СУБД, встроенное в модуль [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Ядро In-Memory OLTP оптимизировано для OLTP. Дополнительные сведения см. в разделе [In-Memory OLTP (оптимизация в памяти)](../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
  
   
-###  <a name="DataFiles"></a> SQL Server Data Files в Windows Azure  
- [Файлы данных SQL Server в Windows Azure](../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md) включает собственную поддержку для файлов баз данных [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , хранимых в виде больших двоичных объектов Windows Azure. Эта функция позволяет создать базу данных в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , выполняемом локально, или на виртуальной машине в Windows Azure, с выделенным местом хранения для данных в службе хранилища больших двоичных объектов Windows Azure.  
+###  <a name="DataFiles"></a>SQL Server файлы данных в Azure  
+ [SQL Server файлы данных в Azure](../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md) обеспечивает встроенную поддержку [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] файлов базы данных, хранящихся в виде больших двоичных объектов Azure. Эта функция позволяет создать базу данных в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] локальной среде или на виртуальной машине в Azure с выделенным местом хранения для данных в хранилище BLOB-объектов Azure.  
   
   
-###  <a name="AzureVM"></a> Размещение базы данных SQL Server в Windows Azure виртуальной машины  
- Использование [мастера развертывания базы данных SQL Server на виртуальной машине Windows Azure](https://msdn.microsoft.com/library/dn195938\(v=sql.120\).aspx) для размещения базы данных из экземпляра [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] на виртуальной машине Windows Azure.  
+###  <a name="AzureVM"></a>Размещение базы данных SQL Server на виртуальной машине Azure  
+ Используйте мастер [развертывания SQL Server базы данных в виртуальной машине Azure](https://msdn.microsoft.com/library/dn195938\(v=sql.120\).aspx) для размещения базы данных из экземпляра [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] на виртуальной машине Azure.  
   
   
-###  <a name="Backup"></a> Резервное копирование и улучшения механизма восстановления  
+###  <a name="Backup"></a>Усовершенствования резервного копирования и восстановления  
  [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] содержит следующие усовершенствования для функций резервного копирования и восстановления [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 -   **Резервное копирование в SQL Server по URL-адресу**  
   
-     Возможность резервного копирования на URL-адрес для [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] была введена в версии [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] с пакетом обновления 1 (SP1) CU2, поддерживаемой только в [!INCLUDE[tsql](../includes/tsql-md.md)], PowerShell и SMO. В версии [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] среду [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] можно использовать для выполнения резервного копирования или восстановления из службы хранилища больших двоичных объектов Windows Azure. Новый параметр доступен как для задачи резервного копирования, так и для планов обслуживания. Дополнительные сведения см. в разделах [Using Backup Task in SQL Server Management Studio](../relational-databases/backup-restore/sql-server-backup-to-url.md#BackupTaskSSMS), [SQL Server Backup to URL Using Maintenance Plan Wizard](../relational-databases/backup-restore/sql-server-backup-to-url.md#MaintenanceWiz)и [Restoring from Windows Azure storage Using SQL Server Management Studio](../relational-databases/backup-restore/sql-server-backup-to-url.md#RestoreSSMS).  
+     Возможность резервного копирования на URL-адрес для [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] была введена в версии [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] с пакетом обновления 1 (SP1) CU2, поддерживаемой только в [!INCLUDE[tsql](../includes/tsql-md.md)], PowerShell и SMO. В [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] можно использовать [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] для резервного копирования или восстановления из службы хранилища BLOB-объектов Azure. Новый параметр доступен как для задачи резервного копирования, так и для планов обслуживания. Дополнительные сведения см. в статьях [Использование задачи резервного копирования в SQL Server Management Studio](../relational-databases/backup-restore/sql-server-backup-to-url.md#BackupTaskSSMS), [SQL Server резервное копирование на URL-адрес с помощью мастера планов обслуживания](../relational-databases/backup-restore/sql-server-backup-to-url.md#MaintenanceWiz)и [Восстановление из хранилища Azure с помощью SQL Server Management Studio](../relational-databases/backup-restore/sql-server-backup-to-url.md#RestoreSSMS).  
   
--   **Управляемое резервное копирование SQL Server в Microsoft Azure**  
+-   **SQL Server управляемого резервного копирования в Azure**  
   
-     Служба [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] построена на основе функции резервного копирования на URL-адрес для [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] . В [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] она применяется для управления и планирования операций резервного копирования баз данных и журналов. В этой версии в хранилище резервных только Windows Azure поддерживает. [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] можно настроить и в базе данных и на уровне экземпляра и что для детального элемента управления на уровне базы данных и автоматизируя на уровне экземпляра. Службу [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] можно настраивать как на экземплярах [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], работающих локально, так и на экземплярах [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], работающих на виртуальных машинах Windows Azure. Рекомендуется для экземпляров [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , работающих на виртуальных машинах Windows Azure. Дополнительные сведения см. в разделе [SQL Server Managed  Backup to Windows Azure](../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md).  
+     Служба [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] построена на основе функции резервного копирования на URL-адрес для [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] . В [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] она применяется для управления и планирования операций резервного копирования баз данных и журналов. В этом выпуске поддерживается только резервное копирование в хранилище Azure. [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] можно настроить и в базе данных и на уровне экземпляра и что для детального элемента управления на уровне базы данных и автоматизируя на уровне экземпляра. [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]можно настроить для [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] экземпляров, работающих локально, и экземпляров [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , работающих на виртуальных машинах Azure. Рекомендуется использовать [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] экземпляры, работающие на виртуальных машинах Azure. Дополнительные сведения см. [в статье SQL Server управляемое резервное копирование в Azure](../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md).  
   
--   **Шифрование для резервного копирования**  
+-   **Шифрование для резервных копий**  
   
      Теперь можно выбрать, чтобы зашифровать файл резервной копии во время операции резервного копирования.  Она поддерживает несколько алгоритмов шифрования AES, включая 128 192, алгоритм AES 256 и Triple DES. Необходимо использовать сертификат или асимметричный ключ для шифрования во время резервного копирования. Дополнительные сведения можно найти в статье [Шифрование резервной копии](../relational-databases/backup-restore/backup-encryption.md).  
   
   
-###  <a name="CE"></a> Новый дизайн для оценки количества элементов  
- Логика оценки количества элементов, называемая механизмом оценки количества элементов, переработана в [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] в целях улучшения качества планов запросов и тем самым повышения производительности запросов. Новый механизм оценки количества элементов состоит из предположений и алгоритмов, которые отлично подходят для современных рабочих нагрузок OLTP и хранилища данных. Он основан на глубоком исследовании оценки количества элементов для современных рабочих нагрузок и нашем опыте усовершенствования этого механизма, накопленном за последние 15 лет. Отзывы от клиентов свидетельствуют, что эти изменения положительно сказываются на большинстве запросов либо все остается по прежнему, хотя производительность небольшого числа запросов может снизиться по сравнению с использованием предыдущего механизма оценки количества элементов. Для повышения производительности, настройке и проверке рекомендации, см. в разделе [оценки количества элементов &#40;SQL Server&#41;](../relational-databases/performance/cardinality-estimation-sql-server.md).  
+###  <a name="CE"></a>Новый дизайн для оценки количества элементов  
+ Логика оценки количества элементов, называемая механизмом оценки количества элементов, переработана в [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] в целях улучшения качества планов запросов и тем самым повышения производительности запросов. Новый механизм оценки количества элементов состоит из предположений и алгоритмов, которые отлично подходят для современных рабочих нагрузок OLTP и хранилища данных. Он основан на глубоком исследовании оценки количества элементов для современных рабочих нагрузок и нашем опыте усовершенствования этого механизма, накопленном за последние 15 лет. Отзывы от клиентов свидетельствуют, что эти изменения положительно сказываются на большинстве запросов либо все остается по прежнему, хотя производительность небольшого числа запросов может снизиться по сравнению с использованием предыдущего механизма оценки количества элементов. Рекомендации по настройке и тестированию производительности см. в разделе [ &#40;оценка&#41;количества элементов SQL Server](../relational-databases/performance/cardinality-estimation-sql-server.md).  
    
   
-###  <a name="Durability"></a> Отложенная устойчивость  
+###  <a name="Durability"></a>Отложенная устойчивость  
  В [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] добавляется возможность сократить задержку путем назначения некоторых или всех транзакций отложенными устойчивыми. Отложенная долговечная транзакция передает управление клиенту перед фиксацией записи журнала транзакций на диск. Устойчивостью можно управлять на уровне базы данных, COMMIT или блоков ATOMIC.  
   
- Дополнительные сведения см. в разделе [управление устойчивостью транзакций](../relational-databases/logs/control-transaction-durability.md).  
+ Дополнительные сведения см. в разделе [Управление устойчивостью транзакций](../relational-databases/logs/control-transaction-durability.md).  
   
   
-###  <a name="AlwaysOn"></a> Расширения AlwaysOn  
+###  <a name="AlwaysOn"></a>Усовершенствования AlwaysOn  
  [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] содержит следующие усовершенствования для экземпляров отказоустойчивого кластера AlwaysOn и групп доступности AlwaysOn:  
   
--   Мастер добавления реплики Azure упрощает создание гибридных решений для групп доступности AlwaysOn. Дополнительные сведения см. в разделе [используйте мастер добавления реплики Azure &#40;SQL Server&#41;](availability-groups/windows/use-the-add-azure-replica-wizard-sql-server.md).  
+-   Мастер добавления реплики Azure упрощает создание гибридных решений для групп доступности AlwaysOn. Дополнительные сведения см. [в статье Использование мастера &#40;добавления реплики Azure&#41;SQL Server](availability-groups/windows/use-the-add-azure-replica-wizard-sql-server.md).  
   
 -   Максимальное число вторичных реплик увеличено с 4 до 8.  
   
 -   Теперь после разрыва соединения с первичной репликой или в период отсутствия кворума кластера предназначенные для чтения вторичные реплики остаются доступными для рабочих нагрузок операций чтения.  
   
--   Теперь в экземплярах отказоустойчивого кластера (FCI) могут использоваться общие тома кластера как общие диски кластера. Дополнительные сведения см. в разделе [всегда экземпляры отказоустойчивого кластера](../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md).  
+-   Теперь в экземплярах отказоустойчивого кластера (FCI) могут использоваться общие тома кластера как общие диски кластера. Дополнительные сведения см. в разделе [Always on экземпляры отказоустойчивого кластера](../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md).  
   
 -   Доступна новая системная функция [sys.fn_hadr_is_primary_replica](/sql/relational-databases/system-functions/sys-fn-hadr-is-primary-replica-transact-sql)и новое динамическое административное представление [sys.dm_io_cluster_valid_path_names](/sql/relational-databases/system-dynamic-management-views/sys-dm-io-cluster-valid-path-names-transact-sql).  
   
 -   Следующие динамические административные представления были улучшены и теперь возвращают данные FCI: [sys.dm_hadr_cluster](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-transact-sql), [sys.dm_hadr_cluster_members](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-members-transact-sql)и [sys.dm_hadr_cluster_networks](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-networks-transact-sql).  
   
   
-###  <a name="OIR"></a> Переключение секций и индексирование  
+###  <a name="OIR"></a>Переключение секций и индексирование  
  Теперь отдельные секции секционированных таблиц можно перестраивать. Дополнительные сведения см. в разделе [ALTER INDEX (Transact-SQL)](/sql/t-sql/statements/alter-index-transact-sql).  
    
   
-###  <a name="Lock"></a> Управление приоритетом блокировки операций в сети  
- Параметр `ONLINE = ON` теперь содержит параметр `WAIT_AT_LOW_PRIORITY`, который позволяет указывать, как долго в процессе перестроения должно происходить ожидание необходимых блокировок. Кроме того, параметр `WAIT_AT_LOW_PRIORITY` позволяет настраивать завершение процессов блокировки, связанных с инструкцией перестроения. Дополнительные сведения см. в разделах [ALTER TABLE (Transact-SQL)](/sql/t-sql/statements/alter-table-transact-sql) и [ALTER INDEX (Transact-SQL)](/sql/t-sql/statements/alter-index-transact-sql). Сведения о новых типах состояний блокировки об устранении неполадок можно найти в [sys.dm_tran_locks &#40;Transact-SQL&#41; ](/sql/relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql) и [sys.dm_os_wait_stats &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql).  
+###  <a name="Lock"></a>Управление приоритетом блокировки операций в сети  
+ Параметр `ONLINE = ON` теперь содержит параметр `WAIT_AT_LOW_PRIORITY`, который позволяет указывать, как долго в процессе перестроения должно происходить ожидание необходимых блокировок. Кроме того, параметр `WAIT_AT_LOW_PRIORITY` позволяет настраивать завершение процессов блокировки, связанных с инструкцией перестроения. Дополнительные сведения см. в разделах [ALTER TABLE (Transact-SQL)](/sql/t-sql/statements/alter-table-transact-sql) и [ALTER INDEX (Transact-SQL)](/sql/t-sql/statements/alter-index-transact-sql). Сведения об устранении новых типов состояний блокировки доступны в [представлении sys. DM _tran_locks &#40;Transact-SQL&#41; ](/sql/relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql) и [sys. DM _os_wait_stats &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql).  
  
   
 ###  <a name="CCI"></a> Индексы columnstore  
@@ -92,37 +92,37 @@ ms.locfileid: "62843444"
   
 -   **Кластеризованные индексы columnstore**  
   
-     Кластеризованный индекс columnstore позволяет повысить производительность запросов и сжатие данных для рабочих нагрузок хранилища данных, которые, в основном, выполняют массовую загрузку и запросы только для чтения. Поскольку кластеризованный индекс columnstore может обновляться, рабочая нагрузка может также выполнять несколько операций вставки, обновления и удаления. Дополнительные сведения см. в разделе [индексам ColumnStore](../relational-databases/indexes/columnstore-indexes-described.md) и [Using Clustered Columnstore Indexes](../relational-databases/indexes/indexes.md).  
+     Кластеризованный индекс columnstore позволяет повысить производительность запросов и сжатие данных для рабочих нагрузок хранилища данных, которые, в основном, выполняют массовую загрузку и запросы только для чтения. Поскольку кластеризованный индекс columnstore может обновляться, рабочая нагрузка может также выполнять несколько операций вставки, обновления и удаления. Дополнительные сведения см. в разделе [Описание индексов columnstore](../relational-databases/indexes/columnstore-indexes-described.md) и [Использование кластеризованных индексов columnstore](../relational-databases/indexes/indexes.md).  
   
--   **ИНСТРУКЦИИ SHOWPLAN**  
+-   **ВИЗУАЛИЗАЦИИ**  
   
-     Инструкция SHOWPLAN отображает сведения об индексах columnstore. **EstimatedExecutionMode** и **ActualExecutionMode** свойства имеют два возможных значения: **Пакет** или **строки**.  **Хранения** имеет два возможных значения: **RowStore** и **ColumnStore**.  
+     Инструкция SHOWPLAN отображает сведения об индексах columnstore. Свойства **Свойства estimatedexecutionmode** и **ActualExecutionMode** имеют два возможных значения: **Пакетная** или **строка**.  Свойство **Storage** может иметь два возможных значения: **RowStore** и **columnstore**.  
   
 -   **Сжатие архивных данных**  
   
      ALTER INDEX ... REBUILD имеет новый параметр сжатия данных COLUMNSTORE_ARCHIVE, который еще больше сжимает указанные секции индекса columnstore. Это может использоваться для архивации или в других ситуациях, где требуется уменьшение размера хранилища данных и допускается увеличение затрат времени на сохранение и выборку. Дополнительные сведения см. в разделе [ALTER INDEX (Transact-SQL)](/sql/t-sql/statements/alter-index-transact-sql).  
    
   
-###  <a name="Buffer"></a> Расширение буферного пула  
+###  <a name="Buffer"></a>Расширение буферного пула  
  Параметр [Расширение буферного пула](configure-windows/buffer-pool-extension.md) обеспечивает безукоризненную интеграцию твердотельных накопителей (SSD) в качестве расширения энергонезависимого ОЗУ (NvRAM) для буферного пула компонента [!INCLUDE[ssDE](../includes/ssde-md.md)] , что способствует значительному повышению пропускной способности ввода-вывода.  
    
   
-###  <a name="Stats"></a> Добавочные статистические данные  
+###  <a name="Stats"></a>Добавочная статистика  
  CREATE STATISTICS и связанные статистические инструкции теперь позволяют создавать статистики по отдельным секциям с параметром INCREMENTAL. Соответствующие инструкции позволяют использовать добавочные статистики или формируют отчет по ним. Соответствующий синтаксис включает инструкции UPDATE STATISTICS, sp_createstats, CREATE INDEX, ALTER INDEX, параметры ALTER DATABASE SET, DATABASEPROPERTYEX, sys.databases и sys.stats. Дополнительные сведения см. в статье [CREATE STATISTICS (Transact-SQL)](/sql/t-sql/statements/create-statistics-transact-sql).  
   
   
-###  <a name="RG"></a> Усовершенствования регулятора ресурсов для управления физическим вводом-ВЫВОДОМ  
- Регулятор ресурсов позволяет задать ограничения на загрузку ЦП, физических средств ввода-вывода и использование памяти, которые доступны для входящих запросов приложений в пуле ресурсов. В [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]можно использовать новый MIN_IOPS_PER_VOLUME и параметры MAX_IOPS_PER_VOLUME для управления физических операций ввода-вывода, выданные потоков для пользователя для данного пула ресурсов. Дополнительные сведения см. в разделе [пул ресурсов регулятора ресурсов](../relational-databases/resource-governor/resource-governor-resource-pool.md) и [CREATE RESOURCE POOL &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-resource-pool-transact-sql).  
+###  <a name="RG"></a>Resource Governor улучшений для управления физическими операциями ввода-вывода  
+ Регулятор ресурсов позволяет задать ограничения на загрузку ЦП, физических средств ввода-вывода и использование памяти, которые доступны для входящих запросов приложений в пуле ресурсов. В [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]можно использовать новый MIN_IOPS_PER_VOLUME и параметры MAX_IOPS_PER_VOLUME для управления физических операций ввода-вывода, выданные потоков для пользователя для данного пула ресурсов. Дополнительные сведения см. в статьях [Resource Governor пула ресурсов](../relational-databases/resource-governor/resource-governor-resource-pool.md) и [Создание &#40;пула ресурсов Transact&#41;-SQL](/sql/t-sql/statements/create-resource-pool-transact-sql).  
   
  Параметр MAX_OUTSTANDING_IO_PER_VOLUME ALTER RESOURCE GOVENOR устанавливает максимальное количество необработанных операций дискового ввода-вывода на том. С помощью этого параметра выполняется настройка управления ресурсами ввода-вывода в соответствии с характеристиками ввода-вывода тома диска. Он также может использоваться для ограничения количества операций ввода-вывода на границе экземпляра SQL Server. Дополнительные сведения см. в разделе [ALTER RESOURCE GOVERNOR (Transact-SQL)](/sql/t-sql/statements/alter-resource-governor-transact-sql).  
   
   
-###  <a name="OnlineEvent"></a> Класс событий Online Index Operation  
- Отчет о состоянии для класса событий операции с индексами в сети теперь содержит два новых столбца данных: **PartitionId** и **PartitionNumber**. Дополнительные сведения см. в разделе [Progress Report: Класс событий Online Index Operation](../relational-databases/event-classes/progress-report-online-index-operation-event-class.md).  
+###  <a name="OnlineEvent"></a>Класс событий Online Index Operation  
+ Отчет о состоянии для класса событий операция с индексами в сети теперь содержит два новых столбца данных: **PartitionId** и **PartitionNumber**. Дополнительные сведения см. в [разделе отчет о состоянии: Класс](../relational-databases/event-classes/progress-report-online-index-operation-event-class.md)событий Online Index Operation.  
   
   
-###  <a name="Compat"></a> Уровень совместимости базы данных  
- Уровень совместимости 90 не является допустимым в [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]. Дополнительные сведения см. в разделе [уровень совместимости ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level)  
+###  <a name="Compat"></a>Уровень совместимости базы данных  
+ Уровень совместимости 90 не является допустимым в [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]. Дополнительные сведения см. в разделе [уровень &#40;совместимости ALTER DATABASE Transact-&#41; SQL](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level) .  
   
 ##  <a name="TSQL"></a> Улучшения Transact-SQL  
   
@@ -138,26 +138,26 @@ ms.locfileid: "62843444"
   
 ##  <a name="SystemTable"></a> Улучшения системного представления  
   
-### <a name="sysxmlindexes"></a>sys.xml_indexes  
- [sys.xml_indexes &#40;Transact-SQL&#41; ](/sql/relational-databases/system-catalog-views/sys-xml-indexes-transact-sql) имеет 3 новых столбца: `xml_index_type`, `xml_index_type_description`, и `path_id`.  
+### <a name="sysxml_indexes"></a>sys.xml_indexes  
+ [sys. XML _indexes &#40;Transact-SQL&#41; ](/sql/relational-databases/system-catalog-views/sys-xml-indexes-transact-sql) содержит 3 новых столбца: `xml_index_type`, `xml_index_type_description`и `path_id`.  
   
-### <a name="sysdmexecqueryprofiles"></a>sys.dm_exec_query_profiles  
- [sys.dm_exec_query_profiles &#40;Transact-SQL&#41; ](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql) отслеживает ход выполнения запроса в режиме реального времени во время выполнения запроса.  
+### <a name="sysdm_exec_query_profiles"></a>sys.dm_exec_query_profiles  
+ [sys. DM _exec_query_profiles &#40;. Transact-&#41; SQL](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql) отслеживает ход выполнения запросов в режиме реального времени во время выполнения запроса.  
   
-### <a name="syscolumnstorerowgroups"></a>sys.column_store_row_groups  
- [sys.column_store_row_groups &#40;Transact-SQL&#41; ](/sql/relational-databases/system-catalog-views/sys-column-store-row-groups-transact-sql) предоставляет сведения об индексе кластеризованный индекс columnstore по отдельным сегментам, чтобы помочь администратору принимать решения о сопровождении системы.  
+### <a name="syscolumn_store_row_groups"></a>sys.column_store_row_groups  
+ [sys. column_store_row_groups &#40;Transact-SQL&#41; ](/sql/relational-databases/system-catalog-views/sys-column-store-row-groups-transact-sql) предоставляет сведения о кластеризованном индексе columnstore для каждого сегмента, чтобы помочь администратору принять решения по управлению системой.  
   
 ### <a name="sysdatabases"></a>sys.databases  
- [sys.databases &#40;Transact-SQL&#41; ](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) имеет 3 новых столбца: `is_auto_create_stats_incremental_on`, `is_query_store_on`, и `resource_pool_id`.  
+ [sys. databases &#40;Transact-&#41; SQL](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) содержит 3 новых столбца `is_auto_create_stats_incremental_on`: `is_query_store_on`, и `resource_pool_id`.  
   
 ### <a name="system-view-enhancements-for-in-memory-oltp"></a>Улучшения системного представления для In-Memory OLTP  
- Сведения об улучшениях системного представления для поддержки In-Memory OLTP см. в разделе [системные представления, хранимые процедуры, динамические административные представления и типы ожидания для In-Memory OLTP](../../2014/database-engine/system-views-stored-procedures-dmvs-and-wait-types-for-in-memory-oltp.md).  
+ Сведения об улучшениях системного представления для поддержки OLTP в памяти см. в разделе [системные представления, хранимые процедуры, динамические административные представления и типы ожидания для выполняющейся в памяти OLTP](../../2014/database-engine/system-views-stored-procedures-dmvs-and-wait-types-for-in-memory-oltp.md).  
    
   
 ##  <a name="Security"></a> Улучшения в системе безопасности  
   
 ### <a name="connect-any-database-permission"></a>Разрешение CONNECT ANY DATABASE  
- Новое разрешение на уровне сервера. Предоставьте разрешение **CONNECT ANY DATABASE** имени входа, которому нужно подключиться ко всем существующим базам данных и ко всем новым базам, которые могут быть созданы в будущем. Не предоставляет каких-либо разрешений в базах данных за пределами соединения. Объединение с **SELECT ALL USER SECURABLES** или `VIEW SERVER STATE` чтобы разрешить процессу аудита Просмотр всех данных или всех состояний базы данных на экземпляре [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+ Новое разрешение на уровне сервера. Предоставьте разрешение **CONNECT ANY DATABASE** имени входа, которому нужно подключиться ко всем существующим базам данных и ко всем новым базам, которые могут быть созданы в будущем. Не предоставляет каких-либо разрешений в базах данных за пределами соединения. Используйте сочетание с **любыми защищаемыми объектами пользователя** или `VIEW SERVER STATE` , чтобы разрешить процессу аудита просматривать все данные или все состояния базы данных [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]на экземпляре.  
   
 ### <a name="impersonate-any-login-permission"></a>Разрешение IMPERSONATE ANY LOGIN  
  Новое разрешение на уровне сервера. После предоставления разрешает процессу среднего уровня олицетворять учетную запись клиентов, подключающихся к ней, так как она подключается к базам данных. При запрещении имени входа с высоким уровнем прав может быть запрещено олицетворение других имен входа. Например, имени входа с разрешением **CONTROL SERVER** можно запретить олицетворение других имен входа.  
@@ -166,12 +166,12 @@ ms.locfileid: "62843444"
  Новое разрешение на уровне сервера. После предоставления имя входа, например аудитор, сможет просматривать данные во всех базах данных, к которым может подключаться пользователь.  
   
   
-##  <a name="Deployment"></a> Усовершенствования развертывания  
-### <a name="azure-vm"></a>Виртуальная машина Azure
-[Развертывание базы данных SQL Server на виртуальной машине Microsoft Azure](../relational-databases/databases/deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine.md) обеспечивает развертывание [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] базы данных на виртуальной машине Windows Azure.  
+##  <a name="Deployment"></a>Усовершенствования развертывания  
+### <a name="azure-vm"></a>Azure VM
+[Развертывание базы данных SQL Server на виртуальной машине Microsoft Azure](../relational-databases/databases/deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine.md) позволяет [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] развернуть базу данных на виртуальной машине Azure.  
 
 ### <a name="refs"></a>ReFS
-Развертывание баз данных на ReFS теперь поддерживается.   
+Теперь поддерживается развертывание баз данных в ReFS.   
   
 ## <a name="see-also"></a>См. также  
  [Возможности, поддерживаемые различными выпусками SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)  

@@ -10,15 +10,15 @@ ms.assetid: ae849f79-c581-42a5-a5cc-0a9ebea171b9
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a33585b216da10bd09a604905c50ce97b528de49
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f104f7a6395442484be15f1e72c849edbf11e74f
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63250543"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70152682"
 ---
-# <a name="sql-server-httpstorageobject"></a>SQL Server, HTTP_STORAGE_OBJECT
-  Объект производительности **SQLServer: HTTP_STORAGE_OBJECT** состоит из счетчиков производительности, которые контролируют учетную запись хранилища Windows Azure. С помощью [SQL Server Data Files в Windows Azure](../databases/sql-server-data-files-in-microsoft-azure.md) функцию, можно хранить файлы базы данных в хранилище BLOB-объектов Windows Azure. Этот объект производительности обрабатывает каждую учетную запись хранилища Windows Azure как отдельный диск.  
+# <a name="sql-server-http_storage_object"></a>SQL Server, HTTP_STORAGE_OBJECT
+  Объект производительности **SQLServer: HTTP_STORAGE_OBJECT** состоит из счетчиков производительности, которые отслеживают учетную запись хранения Azure. Используя [SQL Server файлы данных в Azure](../databases/sql-server-data-files-in-microsoft-azure.md) , вы можете хранить файлы базы данных в больших двоичных объектах службы хранилища Azure. Этот объект производительности обрабатывает каждую учетную запись хранения Azure как отдельный диск.  
   
 |Имя счетчика|Описание|  
 |------------------|-----------------|  

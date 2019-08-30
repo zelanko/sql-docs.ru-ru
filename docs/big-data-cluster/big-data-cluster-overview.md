@@ -1,27 +1,24 @@
 ---
-title: Что представляют собой кластеры больших данных?
-titleSuffix: SQL Server big data clusters
+title: Что такое кластеры больших данных?
+titleSuffix: SQL Server Big Data Clusters
 description: Дополнительные сведения [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] о (Предварительная версия), которые выполняются в Kubernetes и предоставляют варианты горизонтального масштабирования для реляционных данных и HDFS.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/21/2019
+ms.date: 08/28/2019
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 15002f9d5633336fb61474a834c913a0d7dbf1c5
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: c75005c35e743a87ff742352946c4fdde5fcf0b8
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653161"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70153652"
 ---
 # <a name="what-are-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]Что?
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
-
->[!NOTE]
->[!INCLUDE[ssbdc-rcnote](../includes/ssbigdataclusters-ver15-rcnote.md)]
 
 Начиная с [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]версии [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] , можно развертывать масштабируемые кластеры SQL Server, Spark и контейнеров HDFS, выполняющихся в Kubernetes. Эти компоненты работают параллельно, позволяя считывать, записывать и обрабатывать большие данные в Transact-SQL или Spark, благодаря чему вы можете с легкостью объединять и анализировать важные реляционные данные с объемными большими данными.
 

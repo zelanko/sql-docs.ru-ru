@@ -13,15 +13,15 @@ helpviewer_keywords:
 - SQL Server Management Objects, exceptions
 - inner exceptions [SMO]
 ms.assetid: 4c725ff2-6588-44ca-b86a-87979e164153
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b533291a9cc7a04efe0f3f2de0b39bc3fc544f83
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4fdf4e03eeb839aad74588f3fb338d10fc949220
+ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68098277"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "70148705"
 ---
 # <a name="handling-smo-exceptions"></a>Обработка исключений SMO
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -36,17 +36,17 @@ ms.locfileid: "68098277"
  Исключения могут быть общими и конкретными. Общие исключения содержат набор конкретных исключений. Несколько инструкций **Catch** можно использовать, чтобы обработать ожидаемые ошибки и позволить остальным ошибкам пройти через обработку общих исключений. Исключения часто происходят в каскадной последовательности. Часто исключение объекта SMO может быть вызвано исключением SQL. Чтобы это обнаружить, можно последовательно использовать свойство **InnerException** , чтобы определить исходное исключение, которое вызвало конечное исключение верхнего уровня.  
   
 > [!NOTE]  
->  **SQLException** исключение объявлено в **System.Data.SqlClient** пространства имен.  
+>  Исключение **SqlException** объявляется в пространстве имен **System. Data. SqlClient** .  
   
- ![Диаграмма, показывающая уровни, из которых могут вызываться исключения](../../../relational-databases/server-management-objects-smo/create-program/media/exception-flow.gif "диаграмма, показывающая уровни, из которых могут вызываться исключения")  
+ ![Диаграмма, показывающая уровни, на которых екскп](../../../relational-databases/server-management-objects-smo/create-program/media/exception-flow.gif "Диаграмма, показывающая уровни, на которых екскп")  
   
  Диаграмма показывает поток исключений по уровням приложения.  
   
 ## <a name="example"></a>Пример  
- Чтобы использовать какой-либо из представленных примеров кода, нужно выбрать среду, шаблон и язык программирования, с помощью которых будет создаваться приложение. Дополнительные сведения см. в разделе [Visual C создайте&#35; проекта SMO в Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).
+ Чтобы использовать какой-либо из представленных примеров кода, нужно выбрать среду, шаблон и язык программирования, с помощью которых будет создаваться приложение. Дополнительные сведения см. [в разделе Создание проекта Visual&#35; C SMO в Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).
   
 ## <a name="catching-an-exception-in-visual-basic"></a>Перехват исключения на языке Visual Basic  
- Данный пример кода показывает, как использовать **попробуйте... CATCH... Наконец** [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] инструкции для перехвата исключения объекта SMO. Все исключения объектов SMO имеют тип SmoException и перечислены в справке по объектам SMO. Последовательность внутренних исключений отображается, чтобы показать основание ошибки. Дополнительные сведения см. в документации по среде [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] .NET.  
+ В этом примере кода показано, как использовать метод **try... Перехватить... Оператор finally** [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] для перехвата исключения SMO. Все исключения объектов SMO имеют тип SmoException и перечислены в справке по объектам SMO. Последовательность внутренних исключений отображается, чтобы показать основание ошибки. Дополнительные сведения см. в документации по среде [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] .NET.  
   
 ```VBNET
 'This sample requires the Microsoft.SqlServer.Management.Smo.Agent namespace is included.
@@ -83,7 +83,7 @@ End Try
 ``` 
   
 ## <a name="catching-an-exception-in-visual-c"></a>Перехват исключения на языке Visual C#  
- Данный пример кода показывает, как использовать **попробуйте... CATCH... Наконец** Visual C# инструкции для перехвата исключения объекта SMO. Все исключения объектов SMO имеют тип SmoException и перечислены в справке по объектам SMO. Последовательность внутренних исключений отображается, чтобы показать основание ошибки. Дополнительные сведения см. в документации по языку Visual C#.  
+ В этом примере кода показано, как использовать метод **try... Перехватить... Наконец** , C# Визуальная инструкция для перехвата исключения SMO. Все исключения объектов SMO имеют тип SmoException и перечислены в справке по объектам SMO. Последовательность внутренних исключений отображается, чтобы показать основание ошибки. Дополнительные сведения см. в документации по языку Visual C#.  
   
 ```csharp  
 {   

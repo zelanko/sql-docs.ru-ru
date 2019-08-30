@@ -5,27 +5,39 @@ description: В этой статье описаны последние обно
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/21/2019
+ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 66a317fb68dff2dc4914b80f2e70655e1bba2773
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 63caee60bc96c5ff8579471ae0a98322e4fc99b7
+ms.sourcegitcommit: 71fac5fee00e0eca57e555f44274dd7e08d47e1e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653434"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70160696"
 ---
-# <a name="release-notes-for-big-data-clusters-on-sql-server"></a>Заметки о выпуске для кластеров больших данных в SQL Server
+# <a name="release-notes-for-sql-server-big-data-clusters"></a>Заметки о выпуске для SQL Server кластеров больших данных
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 В этой статье перечислены обновления и известные проблемы для последних выпусков [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)].
 
-[!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
+## <a id="rc"></a>Версия-кандидат (август)
 
->[!NOTE]
->[!INCLUDE[ssbdc-rcnote](../includes/ssbigdataclusters-ver15-rcnote.md)]
+В следующих разделах описаны новые функции и известные проблемы для кластеров больших данных в SQL Server 2019 версии-кандидата.
+
+### <a name="whats-new"></a>What's New
+
+|Новые функции или обновления | Сведения |
+|:---|:---|
+|Группа доступности Always On SQL Server |При развертывании SQL Server кластера больших данных можно настроить развертывание, чтобы создать группу доступности для предоставления следующих данных.<br/><br/>— Высокий уровень доступности <br/><br/>— Чтение и масштабирование <br/><br/>— Вставка данных с горизонтальным масштабированием в пул данных<br/><br>См. раздел [развертывание с высоким уровнем доступности](../big-data-cluster/deployment-high-availability.md). |
+|`azdata` |Упрощенная установка средства с помощью [диспетчера установки](./deploy-install-azdata-linux-package.md)<br/><br/>[`azdata notebook`кнопки](./reference-azdata-notebook.md)<br/><br/>[`azdata bdc status`кнопки](./reference-azdata-bdc-status.md) |
+|Azure Data Studio|[Скачайте сборку версии-кандидата Azure Data Studio](deploy-big-data-tools.md#download-and-install-azure-data-studio-sql-server-2019-release-candidate-rc).<br/><br/>Добавлены сведения об устранении неполадок в записных книжках по SQL Server 2019 Jupyter.<br/><br/>Добавлен интерфейс входа контроллера.<br/><br/>Добавлена панель мониторинга контроллера для просмотра конечных точек служб, просмотра состояния работоспособности кластера и записных книжек по устранению неполадок доступа.<br/><br/>Улучшена производительность вывода и редактирования ячеек записной книжки.|
+| &nbsp; | &nbsp; |
+
+### <a name="known-issues"></a>Известные проблемы
+
+SQL Server 2019 кластеры больших данных с номером сборки версии- `15.0.1900.47`кандидата обновления.
 
 ## <a id="ctp32"></a> CTP 3.2 (июль)
 
@@ -48,13 +60,13 @@ ms.locfileid: "69653434"
 
 #### <a name="polybase"></a>PolyBase
 
-- В этом выпуске не поддерживается принудительная передача предложения TOP, когда счетчик > 1000. В таких случаях все строки будут считываться из удаленного источника данных.
+- В этом выпуске не поддерживается принудительная передача предложения TOP, когда счетчик > 1000. В таких случаях все строки будут считываться из удаленного источника данных. (Исправлено в версии-кандидате)
 
 - В этом выпуске не поддерживается принудительная передача совместно размещенных соединений во внешние источники данных. Например, принудительная отправка двух таблиц пула данных с типом распределения ROUND_ROBIN приведет к передаче данных главному экземпляру SQL или экземпляру вычислительного пула для выполнения операции соединения.
 
 #### <a name="compute-pool"></a>Вычислительный пул
 
-- Развертывание кластера больших данных поддерживает только вычислительный пул с одним экземпляром.
+- Развертывание кластера больших данных поддерживает только вычислительный пул с одним экземпляром. (Исправлено в версии-кандидате)
 
 #### <a name="storage-pool"></a>Пул носителей
 

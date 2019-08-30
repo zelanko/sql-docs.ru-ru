@@ -9,12 +9,12 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: b33ef15bd6a47bcd2a475f608197a1566bb030b0
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: bc9879236fa50f19f443b2d6086980842ce0b3f1
+ms.sourcegitcommit: 71fac5fee00e0eca57e555f44274dd7e08d47e1e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69652387"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70160703"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-big-data-cluster-deployments"></a>Настройка Службы Kubernetes Azure для развертываний кластера больших данных SQL Server
 
@@ -35,9 +35,9 @@ AKS упрощает создание, настройку и кластера в
    - **Kubectl**
    - **Azure Data Studio**
    - **Расширение SQL Server 2019**
-   - **Azure CLI**
+   - **Интерфейс командной строки Azure**
 
-- Минимальная версия 1.10 для сервера Kubernetes. Для AKS нужно использовать параметр `--kubernetes-version`, чтобы указать версию, отличную от используемой по умолчанию.
+- Минимальная версия 1,13 для сервера Kubernetes. Для AKS нужно использовать параметр `--kubernetes-version`, чтобы указать версию, отличную от используемой по умолчанию.
 
 - Чтобы обеспечить оптимальную работу при проверке основных сценариев в AKS, используйте следующее.
    - 8 виртуальных ЦП для всех узлов

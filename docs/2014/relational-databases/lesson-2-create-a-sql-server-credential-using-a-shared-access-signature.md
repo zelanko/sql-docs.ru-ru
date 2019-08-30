@@ -10,22 +10,22 @@ ms.assetid: 29e57ebd-828f-4dff-b473-c10ab0b1c597
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 85e60c359df2a209742b5b10693fcb72ac9cb37a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 61a25d1f4e86204d05b3be6bf2a5dbc8cd0474b9
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090844"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70153833"
 ---
 # <a name="lesson-3-create-a-sql-server-credential"></a>Урок 3. Создание учетных данных SQL Server
-  На этом занятии вы создадите учетные данные для хранения сведений о безопасности, которые будут использоваться для доступа к учетной записи хранения Windows Azure.  
+  На этом занятии будут созданы учетные данные для хранения сведений о безопасности, используемых для доступа к учетной записи хранения Azure.  
   
  Учетные данные SQL Server — это объект, который используется для хранения сведений, необходимых для проверки подлинности при подключении к ресурсу вне SQL Server. Учетные данные хранят URI-путь к контейнеру хранилища и значениям ключа подписанного URL-адреса. Для каждого контейнера хранилища, используемого файлом данных или журнала, необходимо создать учетные данные SQL Server, имя которых соответствует пути контейнера.  
   
- Общие сведения об учетных данных см. в разделе [учетные данные &#40;СУБД&#41;](security/authentication-access/credentials-database-engine.md).  
+ Общие сведения об учетных данных см. в разделе [учетные данные &#40;ядро СУБД&#41;](security/authentication-access/credentials-database-engine.md).  
   
 > [!IMPORTANT]  
->  Требования для создания учетных данных SQL Server, описанные ниже, характерны для [SQL Server Data Files в Windows Azure](databases/sql-server-data-files-in-microsoft-azure.md) функции. Сведения о создании учетных данных для резервного копирования процессов в службе хранилища Azure, см. в разделе [занятии 2: Создание учетных данных SQL Server](../tutorials/lesson-2-create-a-sql-server-credential.md).  
+>  Требования к созданию учетных данных SQL Server, описанных ниже, относятся к [SQL Serverным файлам данных в Azure](databases/sql-server-data-files-in-microsoft-azure.md) . Сведения о создании учетных данных для процессов резервного копирования в службе [хранилища Azure см. в разделе занятие 2. Создайте SQL Server учетные](../tutorials/lesson-2-create-a-sql-server-credential.md)данные.  
   
  Для создания учетных данных SQL Server выполните следующие действия.  
   
@@ -35,7 +35,7 @@ ms.locfileid: "66090844"
   
 3.  На панели инструментов Стандартная выберите пункт Создать запрос.  
   
-4.  Скопируйте и вставьте следующий пример в окно запроса (при необходимости измените). Следующая инструкция создаст учетные данные SQL Server для хранения сертификата общего доступа контейнера хранилища.  
+4.  Скопируйте и вставьте следующий пример в окно запроса (при необходимости измените). Следующая инструкция создаст SQL Server учетные данные для хранения сертификата общего доступа контейнера хранилища.  
   
     ```sql  
   
@@ -47,7 +47,7 @@ ms.locfileid: "66090844"
   
     ```  
   
-     Подробные сведения см. в разделе [CREATE CREDENTIAL &#40;Transact-SQL&#41; ](/sql/t-sql/statements/create-credential-transact-sql) в электронной документации по SQL Server.  
+     Дополнительные сведения см. в разделе [Создание &#40;учетных данных&#41; Transact-SQL](/sql/t-sql/statements/create-credential-transact-sql) в Электронная документация на SQL Server.  
   
 5.  Чтобы увидеть все доступные учетные данные, можно выполнить следующую инструкцию в окне запроса:  
   
@@ -55,10 +55,10 @@ ms.locfileid: "66090844"
     SELECT * from sys.credentials  
     ```  
   
-     Дополнительные сведения о sys.credentials см. в разделе [sys.credentials &#40;Transact-SQL&#41; ](/sql/relational-databases/system-catalog-views/sys-credentials-transact-sql) в электронной документации по SQL Server.  
+     Дополнительные сведения о sys. Credentials см. в разделе [sys &#40;. Credentials&#41; Transact-SQL](/sql/relational-databases/system-catalog-views/sys-credentials-transact-sql) в Электронная документация на SQL Server.  
   
  **Следующее занятие:**  
   
- [Занятие 4. Создание базы данных в хранилище Windows Azure](lesson-3-database-backup-to-url.md)  
+ [Занятие 4. Создание базы данных в службе хранилища Azure](lesson-3-database-backup-to-url.md)  
   
   

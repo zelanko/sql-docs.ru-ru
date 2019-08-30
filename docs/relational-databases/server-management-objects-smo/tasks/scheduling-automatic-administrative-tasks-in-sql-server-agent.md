@@ -1,5 +1,5 @@
 ---
-title: Планирование автоматических административных задач в агенте SQL Server | Документация Майкрософт
+title: Планирование автоматических задач администрирования в агент SQL Server | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -12,15 +12,15 @@ helpviewer_keywords:
 - SQL Server Agent [SMO]
 - automatic administrative SMO tasks
 ms.assetid: 900242ad-d6a2-48e9-8a1b-f0eea4413c16
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 64de081adef73e1480fd0bc4ca6b9bf3aacded7f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b388074f569b5797eeac700bdd647477f56faeb2
+ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68030183"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "70148330"
 ---
 # <a name="scheduling-automatic-administrative-tasks-in-sql-server-agent"></a>Планирование автоматических административных задач в агенте SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -38,9 +38,9 @@ ms.locfileid: "68030183"
  Объекты агента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] находятся в пространстве имен <xref:Microsoft.SqlServer.Management.Smo.Agent>.  
   
 ## <a name="examples"></a>Примеры  
- Чтобы использовать какой-либо из представленных примеров кода, нужно выбрать среду, шаблон и язык программирования, с помощью которых будет создаваться приложение. Дополнительные сведения см. в разделе [Visual C создайте&#35; проекта SMO в Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Чтобы использовать какой-либо из представленных примеров кода, нужно выбрать среду, шаблон и язык программирования, с помощью которых будет создаваться приложение. Дополнительные сведения см. [в разделе Создание проекта Visual&#35; C SMO в Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
-Для программ, использующих [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] агента, необходимо включить **с помощью** инструкции для уточнения пространства имен Agent. Вставьте инструкцию после других **с помощью** инструкций перед любыми декларациями в приложении, такие как:
+Для программ, использующих [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] агент, необходимо включить инструкцию **using** для уточнения пространства имен агента. Вставьте оператор после других операторов using, прежде чем **использовать** объявления в приложении, например:
   
  ```
 using Microsoft.SqlServer.Management.Smo;
@@ -166,9 +166,9 @@ $jbsch.Create();
 ## <a name="creating-an-alert-in-visual-c"></a>Создание предупреждения на языке Visual C#  
  В этом примере кода создается предупреждение, которое выдается при определенном состоянии производительности. Состояние указывается в специальном формате:  
   
- **ObjectName | CounterName | Экземпляр | ComparisionOp | CompValue**  
+ **ObjectName | CounterName | Экземпляр | Компарисионоп | компвалуе**  
   
- Для предупреждающих уведомлений требуется оператор. <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> Типа требуется квадратные скобки, так как **оператор** является [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] ключевое слово.  
+ Для предупреждающих уведомлений требуется оператор. Для <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> типа требуется квадратные скобки , так как [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] оператор является ключевым.  
   
 ```csharp  
 {  
@@ -199,9 +199,9 @@ $jbsch.Create();
 ## <a name="creating-an-alert-in-powershell"></a>Создание предупреждения в PowerShell  
  В этом примере кода создается предупреждение, которое выдается при определенном состоянии производительности. Состояние указывается в специальном формате:  
   
- **ObjectName | CounterName | Экземпляр | ComparisionOp | CompValue**  
+ **ObjectName | CounterName | Экземпляр | Компарисионоп | компвалуе**  
   
- Для предупреждающих уведомлений требуется оператор. <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> Типа требуется квадратные скобки, так как **оператор** является [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] ключевое слово.  
+ Для предупреждающих уведомлений требуется оператор. Для <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> типа требуется квадратные скобки , так как [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] оператор является ключевым.  
   
 ```powershell  
 #Get a server object which corresponds to the default instance  
@@ -267,7 +267,7 @@ pa.AddSubSystem(AgentSubSystem.CmdExec);
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Агент SQL Server](../../../ssms/agent/sql-server-agent.md)   
+ [агент SQL Server](../../../ssms/agent/sql-server-agent.md)   
  [Реализация заданий](../../../ssms/agent/implement-jobs.md)  
   
   

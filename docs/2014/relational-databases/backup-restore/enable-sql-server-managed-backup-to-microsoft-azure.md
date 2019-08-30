@@ -1,5 +1,5 @@
 ---
-title: Настройка управляемого резервного копирования SQL Server в Windows Azure | Документация Майкрософт
+title: Настройка управляемого резервного копирования SQL Server в Azure | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/04/2016
 ms.prod: sql-server-2014
@@ -10,14 +10,14 @@ ms.assetid: 68ebb53e-d5ad-4622-af68-1e150b94516e
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4b72fcf0a067838651d9c41205c3604750fecc6d
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.openlocfilehash: b69439226b55965e37f24f2131c77340ae833590
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69028645"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154724"
 ---
-# <a name="setting-up-sql-server-managed-backup-to-windows-azure"></a>Настройка управляемого резервного копирования SQL Server в Windows Azure
+# <a name="setting-up-sql-server-managed-backup-to-azure"></a>Настройка управляемого резервного копирования SQL Server в Azure
   В этот раздел входят два учебника:  
   
  Настройка [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] на уровне базы данных, включение уведомлений по электронной почте и мониторинг резервного копирования.  

@@ -9,7 +9,7 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Data sync
 - SQL Database
-- Windows Azure Training Kit
+- Azure Training Kit
 - Database development
 - Database backup
 - Database connection management
@@ -17,7 +17,7 @@ helpviewer_keywords:
 - Backup and restore
 - Database import and export
 - SQL Data Sync
-- Windows Azure Service Dashboard
+- Azure Service Dashboard
 - SQL Server Management Studio
 - Database management
 - Database export
@@ -30,12 +30,12 @@ ms.assetid: 91da13a4-0eea-4e88-b608-dada881ff5f2
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 07710fbf649037843479de94057f2efcf2a8f558
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a1a82d94e1a2dbf3f2155a93c8a3e8c46383dbde
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62872174"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154554"
 ---
 # <a name="database-lifecycle-management"></a>Управление жизненным циклом базы данных
   Управление жизненным циклом базы данных — это принцип управления базами данных и информационными активами на основе политик. Управление жизненным циклом базы данных — это не продукт, а комплексный подход к управлению схемой базы данных, данными и метаданными для приложения базы данных. Внимательное и проактивное использование принципа управления жизненным циклом баз данных позволяет организации управлять информационными ресурсами в соответствии с актуальным уровнем производительности, защиты, доступности и затрат.  
@@ -45,10 +45,10 @@ ms.locfileid: "62872174"
  Полностью этот раздел можно прочитать по адресу: [Управление жизненным циклом баз данных](https://go.microsoft.com/fwlink/?LinkId=276949).  
   
 ## <a name="see-also"></a>См. также  
- [Домашняя страница Windows Azure](http://www.windowsazure.com/)   
- [Центр разработчиков Windows Azure](http://www.windowsazure.com/develop/overview/)   
- [Центр управления Windows Azure](http://www.windowsazure.com/manage/overview/)   
- [Блог рабочей группы по Windows Azure](http://www.windowsazure.com/community/blog/)   
- [Возможности поддержки Windows Azure](http://www.windowsazure.com/support/contact/)  
+ [Домашняя страница Azure](http://www.windowsazure.com/)   
+ [Центр разработчиков Azure](http://www.windowsazure.com/develop/overview/)   
+ [Центр управления Azure](http://www.windowsazure.com/manage/overview/)   
+ [Блог группы разработчиков Azure](http://www.windowsazure.com/community/blog/)   
+ [Варианты поддержки Azure](http://www.windowsazure.com/support/contact/)  
   
   

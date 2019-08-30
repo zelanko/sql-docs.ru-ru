@@ -5,16 +5,16 @@ description: Узнайте, как развернуть [!INCLUDE[big-data-clus
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/21/2019
+ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1520254a8a7817db612bf5e42706113495a832de
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 9a1953ecb17dba3894afe15e88690fbb150fb5a3
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69652358"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70153439"
 ---
 # <a name="how-to-deploy-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-on-kubernetes"></a>Развертывание [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] на Kubernetes
 
@@ -39,7 +39,7 @@ ms.locfileid: "69652358"
 
 ## <a id="prereqs"></a> Предварительные требования для Kubernetes
 
-[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]требовать минимальную Kubernetes версию не менее версии 1.10 для сервера и клиента (kubectl).
+[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]требовать минимальную Kubernetes версию как минимум v 1.13 для сервера и клиента (kubectl).
 
 > [!NOTE]
 > Обратите внимание, что версии клиента и сервера Kubernetes должны находиться в пределах +/– 1 от дополнительного номера версии. Дополнительные сведения см. в [заметках о выпуске Kubernetes и описании политики в отношении отклонения версий SKU](https://github.com/kubernetes/community/blob/master/contributors/design-proposals/release/versioning.md#supported-releases-and-component-skew).
@@ -77,7 +77,7 @@ kubectl config view
 
 ## <a id="configfile"></a> Конфигурации по умолчанию
 
-Параметры развертывания кластера больших данных определяются в файлах конфигурации JSON. Существует три стандартных профиля развертывания с параметрами по умолчанию для сред разработки и тестирования.
+Параметры развертывания кластера больших данных определяются в файлах конфигурации JSON. Вы можете начать настройку развертывания кластера из встроенных профилей развертывания с параметрами по умолчанию для сред разработки и тестирования:
 
 | Профиль развертывания | Среда Kubernetes |
 |---|---|
@@ -115,7 +115,7 @@ azdata bdc create --accept-eula=yes
    ```
 
    azdata
-   > `--target` указывает каталог, содержащий файлы конфигурации **cluster.json** и **control.json**, на основе параметра `--source`.
+   > Указывает каталог, содержащий файлы конфигурации, **BDC. JSON** и `--source` **Control. JSON**на основе параметра. `--target`
 
 1. Чтобы настроить параметры в профиле конфигурации развертывания, можно изменить этот файл в средстве, которое подходит для редактирования JSON-файлов, например VS Code. Для автоматизации на основе скриптов можно также изменить пользовательский профиль развертывания с помощью команды **azdata bdc config**. Например, следующая команда изменяет пользовательский профиль развертывания, чтобы изменить имя развернутого кластера с используемого по умолчанию (**mssql-cluster**) на **test-cluster**.  
 
@@ -123,8 +123,8 @@ azdata bdc create --accept-eula=yes
    azdata bdc config replace --config-file custom/cluster.json --json-values "metadata.name=test-cluster"
    ```
    
-> [!TIP]
-> Вы также можете передать имя кластера во время развертывания с помощью параметра *--name* для команды *azdata create bdc*. Параметры в команде имеют приоритет над значениями в файлах конфигурации.
+   > [!TIP]
+   > Вы также можете передать имя кластера во время развертывания с помощью параметра *--name* для команды *azdata create bdc*. Параметры в команде имеют приоритет над значениями в файлах конфигурации.
 
    > Полезным инструментом для поиска путей JSON является [JSONPath Online Evaluator](https://jsonpath.com/).
 
@@ -276,7 +276,7 @@ minikube ip
 После развертывания можно проверить состояние кластера с помощью команды [azdata bdc status show](reference-azdata-bdc-status.md).
 
 ```bash
-azdata bdc status show -o table
+azdata bdc status show
 ```
 
 > [!TIP]
@@ -285,22 +285,119 @@ azdata bdc status show -o table
 Ниже приведен пример выходных данных этой команды.
 
 ```output
-Kind     Name           State
--------  -------------  -------
-BDC      mssql-cluster  Ready
-Control  default        Ready
-Master   default        Ready
-Compute  default        Ready
-Data     default        Ready
-Storage  default        Ready
+Bdc: ready                                                                                                                                                                                                          Health Status:  healthy
+ ===========================================================================================================================================================================================================================================
+ Services: ready                                                                                                                                                                                                     Health Status:  healthy
+ -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Servicename    State    Healthstatus    Details
+
+ sql            ready    healthy         -
+ hdfs           ready    healthy         -
+ spark          ready    healthy         -
+ control        ready    healthy         -
+ gateway        ready    healthy         -
+ app            ready    healthy         -
+
+
+ Sql Services: ready                                                                                                                                                                                                 Health Status:  healthy
+ -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Resourcename    State    Healthstatus    Details
+
+ master          ready    healthy         StatefulSet master is healthy
+ compute-0       ready    healthy         StatefulSet compute-0 is healthy
+ data-0          ready    healthy         StatefulSet data-0 is healthy
+ storage-0       ready    healthy         StatefulSet storage-0 is healthy
+
+
+ Hdfs Services: ready                                                                                                                                                                                                Health Status:  healthy
+ -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Resourcename    State    Healthstatus    Details
+
+ nmnode-0        ready    healthy         StatefulSet nmnode-0 is healthy
+ storage-0       ready    healthy         StatefulSet storage-0 is healthy
+ sparkhead       ready    healthy         StatefulSet sparkhead is healthy
+
+
+ Spark Services: ready                                                                                                                                                                                               Health Status:  healthy
+ -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Resourcename    State    Healthstatus    Details
+
+ sparkhead       ready    healthy         StatefulSet sparkhead is healthy
+ storage-0       ready    healthy         StatefulSet storage-0 is healthy
+
+
+ Control Services: ready                                                                                                                                                                                             Health Status:  healthy
+ -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Resourcename    State    Healthstatus    Details
+
+ controldb       ready    healthy         -
+ control         ready    healthy         -
+ metricsdc       ready    healthy         DaemonSet metricsdc is healthy
+ metricsui       ready    healthy         ReplicaSet metricsui is healthy
+ metricsdb       ready    healthy         StatefulSet metricsdb is healthy
+ logsui          ready    healthy         ReplicaSet logsui is healthy
+ logsdb          ready    healthy         StatefulSet logsdb is healthy
+ mgmtproxy       ready    healthy         ReplicaSet mgmtproxy is healthy
+
+
+ Gateway Services: ready                                                                                                                                                                                             Health Status:  healthy
+ -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Resourcename    State    Healthstatus    Details
+
+ gateway         ready    healthy         StatefulSet gateway is healthy
+
+
+ App Services: ready                                                                                                                                                                                                 Health Status:  healthy
+ -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Resourcename    State    Healthstatus    Details
+
+ appproxy        ready    healthy         ReplicaSet appproxy is healthy
 ```
 
-В этом состоянии сводки можно также получить более подробные сведения о состоянии с помощью следующих команд.
+Вы также можете получить более подробное состояние с помощью следующих команд:
 
-- [azdata bdc control status](reference-azdata-bdc-control-status.md)
-- [azdata bdc pool status](reference-azdata-bdc-pool-status.md)
+- [состояние аздата для элемента управления BDC](reference-azdata-bdc-control-status.md) будет возвращать состояние работоспособности для всех компонентов, связанных с этой службой управления
+```
+azdata bdc control status show
+```
+Пример выходных данных:
+```output
+Control: ready                                                                                                                                                                                                      Health Status:  healthy
+ ===========================================================================================================================================================================================================================================
+ Resources: ready                                                                                                                                                                                                    Health Status:  healthy
+ -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Resourcename    State    Healthstatus    Details
 
-Выходные данные этих команд содержат URL-адреса панелей мониторинга Kibana и Grafana для более подробного анализа.
+ controldb       ready    healthy         -
+ control         ready    healthy         -
+ metricsdc       ready    healthy         DaemonSet metricsdc is healthy
+ metricsui       ready    healthy         ReplicaSet metricsui is healthy
+ metricsdb       ready    healthy         StatefulSet metricsdb is healthy
+ logsui          ready    healthy         ReplicaSet logsui is healthy
+ logsdb          ready    healthy         StatefulSet logsdb is healthy
+ mgmtproxy       ready    healthy         ReplicaSet mgmtproxy is healthy
+```
+
+- **аздата BDC SQL Status показывает** состояние работоспособности для всех ресурсов, у которых есть служба SQL Server
+```
+azdata bdc sql status show
+```
+Пример выходных данных:
+```output
+Sql: ready                                                                                                                                                                                                          Health Status:  healthy
+ ===========================================================================================================================================================================================================================================
+ Resources: ready                                                                                                                                                                                                    Health Status:  healthy
+ -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Resourcename    State    Healthstatus    Details
+
+ master          ready    healthy         StatefulSet master is healthy
+ compute-0       ready    healthy         StatefulSet compute-0 is healthy
+ data-0          ready    healthy         StatefulSet data-0 is healthy
+ storage-0       ready    healthy         StatefulSet storage-0 is healthy
+```
+
+> [!IMPORTANT]
+> При использовании параметра **--ALL** выходные данные этих команд содержат URL-адреса для Kibana и панелей мониторинга Grafana для более подробного анализа.
 
 В дополнение к использованию **azdata** можно также использовать Azure Data Studio для поиска конечных точек и сведений о состоянии. Дополнительные сведения о просмотре состояния кластера с помощью **azdata** и Azure Data Studio см. в статье [Просмотр состояния кластера больших данных](view-cluster-status.md).
 

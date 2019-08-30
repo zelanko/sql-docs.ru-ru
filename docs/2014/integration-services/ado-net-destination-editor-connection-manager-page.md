@@ -1,5 +1,5 @@
 ---
-title: Редактор назначения «ado.net» (страница «Диспетчер соединений») | Документация Майкрософт
+title: Редактор назначения «ADO.NET» (страница «Диспетчер соединений») | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,12 +12,12 @@ ms.assetid: a3b11286-32c8-40e1-8ae7-090e2590345a
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ae5cc8303fa09eae7a4af6ef9ae6d589f43bcb2b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: faeb72f875fd5427536ddd72db03ca71a25b293e
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66061742"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154023"
 ---
 # <a name="ado-net-destination-editor-connection-manager-page"></a>Редактор назначения «ADO.NET» (страница «Диспетчер соединений»)
   Используйте страницу **Диспетчер соединений** диалогового окна **Редактор назначения «ADO.NET»** , чтобы выбрать соединение [!INCLUDE[vstecado](../includes/vstecado-md.md)] для назначения. На этой странице также можно выбрать таблицу или представление базы данных.  
@@ -66,7 +66,7 @@ ms.locfileid: "66061742"
 >  Дополнительные сведения см. в разделе [SET IDENTITY_INSERT (Transact-SQL)](/sql/t-sql/statements/set-identity-insert-transact-sql) и [IDENTITY (свойство) (Transact-SQL)](/sql/t-sql/statements/create-table-transact-sql-identity-property).  
   
 ## <a name="external-resources"></a>Внешние ресурсы  
- Техническая статья [Быстрый способ загрузки данных в базу данных SQL Windows Azure](https://go.microsoft.com/fwlink/?LinkId=244333)на сайте sqlcat.com  
+ Техническая статья, [быстрый способ загрузки данных в базу данных SQL Azure](https://go.microsoft.com/fwlink/?LinkId=244333), на SQLCAT.com  
   
 ## <a name="see-also"></a>См. также  
  [Редактор назначения ADO.NET (страница "Сопоставления")](../../2014/integration-services/ado-net-destination-editor-mappings-page.md)   

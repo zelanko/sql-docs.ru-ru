@@ -1,5 +1,5 @@
 ---
-title: managed_backup.sp_backup_on_demand (Transact-SQL) | Документация Майкрософт
+title: managed_backup. sp_backup_on_demand (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,19 +20,19 @@ helpviewer_keywords:
 ms.assetid: 638f809f-27fa-4c44-a549-9cf37ecc920c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 980fb3006819e5727033376beae1f8156d26e0fc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e34cf20585ea7dcd3690d80ee415fc274bf852ca
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67942055"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155400"
 ---
-# <a name="managedbackupspbackupondemand-transact-sql"></a>managed_backup.sp_backup_on_demand (Transact-SQL)
+# <a name="managed_backupsp_backup_on_demand-transact-sql"></a>managed_backup. sp_backup_on_demand (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Запрашивает у компонента [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] выполнение резервного копирования указанной базы данных.  
   
- Эта хранимая процедура используется для выполнения нерегламентированного резервного копирования для базы данных, настроенной с помощью компонента [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Она предотвращает прерывание цепочки резервного копирования, учитывается процессами компонента [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] и сохраняет резервную копию в том же контейнере хранилища больших двоичных объектов Windows Azure.  
+ Эта хранимая процедура используется для выполнения нерегламентированного резервного копирования для базы данных, настроенной с помощью компонента [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Это предотвращает все перерывы в цепочке резервного копирования и [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] процессах, и резервная копия хранится в том же контейнере хранилища BLOB-объектов Azure.  
   
  При успешном завершении резервного копирования возвращается полный путь к файлу резервной копии. В него включено имя и местоположение нового файла резервной копии, созданного в операции резервного копирования.  
   
@@ -50,10 +50,10 @@ EXEC managed_backup.sp_backup_on_demand
   
 ##  <a name="Arguments"></a> Аргументы  
  @database_name  
- Имя базы данных, для которой будет выполняться резервное копирование. @database_name — **SYSNAME**.  
+ Имя базы данных, для которой будет выполняться резервное копирование. Аргумент имеет тип **sysname.** @database_name  
   
  @type  
- Тип выполняемой резервной копии:  База данных или журнала. @type Параметр **NVARCHAR(32)** .  
+ Тип выполняемой резервной копии:  База данных или журнал. Параметр имеет тип **nvarchar (32).** @type  
   
 ## <a name="return-code-value"></a>Значения кодов возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
@@ -61,10 +61,10 @@ EXEC managed_backup.sp_backup_on_demand
 ## <a name="security"></a>Безопасность  
   
 ### <a name="permissions"></a>Разрешения  
- Требуется членство в **db_backupoperator** роли базы данных с помощью **ALTER ANY CREDENTIAL** разрешения, и **EXECUTE** разрешения на **sp_delete_ backuphistory**хранимой процедуры.  
+ Требуется членство в роли базы данных **db_backupoperator** с разрешениями **ALTER ANY CREDENTIAL** и **EXECUTE** Permissions для хранимой процедуры **sp_delete_backuphistory**.  
   
 ## <a name="examples"></a>Примеры  
- Следующий пример выполняет запрос резервного копирования базы данных для базы данных «TestDB». В базе данных включен компонент [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].  
+ В следующем примере создается запрос на резервное копирование базы данных "TestDB". В базе данных включен компонент [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].  
   
 ```  
 Use MSDB  

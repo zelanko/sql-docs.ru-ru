@@ -1,5 +1,5 @@
 ---
-title: Занятие 9. Восстановление базы данных из хранилища Windows Azure | Документация Майкрософт
+title: Занятие 9. Восстановление базы данных из службы хранилища Azure | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -10,39 +10,39 @@ ms.assetid: ebba12c7-3d13-4c9d-8540-ad410a08356d
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 41fbe4cefb6a759befd8b96ded8487ff54b0a1c6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c1a58b7c233c3b49cf85ba34bedcd74121047564
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090649"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154974"
 ---
-# <a name="lesson-9-restore-a-database-from-windows-azure-storage"></a>Занятие 9. Восстановление базы данных из хранилища Windows Azure
-  На этом занятии вы узнаете, как восстановить файл резервной копии базы данных из хранилища Windows Azure в базу данных, которая находится на локальном компьютере или на виртуальной машине в Windows Azure. Для прохождения этого занятия не требуется завершать занятия 4, 5, 6, 7 и 8.  
+# <a name="lesson-9-restore-a-database-from-azure-storage"></a>Занятие 9. Восстановление базы данных из службы хранилища Azure
+  На этом занятии вы узнаете, как восстановить файл резервной копии базы данных из хранилища Azure в базу данных, которая находится локально или на виртуальной машине в Azure. Для прохождения этого занятия не требуется завершать занятия 4, 5, 6, 7 и 8.  
   
  Для этого занятия предполагается, что вы уже выполнили следующие шаги.  
   
 -   Создали базу данных на исходном компьютере.  
   
--   Вы создали резервную копию базы данных (BAK-файл) в хранилище Windows Azure с помощью [Резервное копирование и восстановление SQL Server с помощью службы хранения данных Windows Azure Blob](backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) функции. Обратите внимание, что на этом шаге потребуется создать еще одни учетные данные SQL Server. Эти учетные данные используют ключи учетной записи хранения.  
+-   Вы создали резервную копию базы данных (BAK-файла) в службе хранилища Azure с помощью [SQL Server резервное копирование и восстановление с помощью функции службы хранилища больших двоичных объектов Azure](backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) . Обратите внимание, что на этом шаге потребуется создать еще одни учетные данные SQL Server. Эти учетные данные используют ключи учетной записи хранения.  
   
--   Получили учетную запись хранения Windows Azure.  
+-   У вас есть учетная запись хранения Azure.  
   
--   Создали контейнер с использованием вашей учетной записи хранения Windows Azure.  
+-   Вы создали контейнер в учетной записи хранения Azure.  
   
 -   Создали политику в контейнере с правами на чтение, запись и перечисление. Создали ключ SAS.  
   
--   Создали учетные данные SQL Server на компьютере для функции интеграции хранилища Windows Azure. Обратите внимание, что для этих учетных данных требуется ключ подписанного URL-адреса.  
+-   Вы создали на своем компьютере учетные данные SQL Server для функции интеграции службы хранилища Azure. Обратите внимание, что для этих учетных данных требуется ключ подписанного URL-адреса.  
   
- Чтобы восстановить базу данных из хранилища Windows Azure, можно выполнить следующие действия.  
+ Для восстановления базы данных из службы хранилища Azure можно выполнить следующие действия.  
   
 1.  Запустите среду SQL Server Management Studio. Подключитесь к экземпляру по умолчанию.  
   
-2.  Нажмите кнопку **новый запрос** на стандартной панели инструментов.  
+2.  Нажмите кнопку **создать запрос** на панели инструментов Стандартная.  
   
-3.  Скопируйте и вставьте следующий полный скрипт в окно запроса. При необходимости измените скрипт.  
+3.  Скопируйте и вставьте следующий полный скрипт в окно запроса. При необходимости измените сценарий.  
   
-     **Примечание.** Запуском `RESTORE` инструкцию для восстановления резервной копии базы данных (BAK-файл) в хранилище Windows Azure в экземпляр базы данных на другом компьютере.  
+     **Примечание.** Выполните `RESTORE` инструкцию, чтобы восстановить резервную копию базы данных (BAK) в службе хранилища Azure на экземпляр базы данных на другом компьютере.  
   
     ```sql  
   
@@ -61,7 +61,7 @@ ms.locfileid: "66090649"
     GO   
     SELECT * from dbo.Table1;   
     GO   
-    -- Create a credential to be used by SQL Server Backup and Restore with Windows Azure -----Blob Storage Service.   
+    -- Create a credential to be used by SQL Server Backup and Restore with Azure -----Blob Storage Service.   
     USE master;   
     GO   
     CREATE CREDENTIAL BackupCredential    
@@ -70,7 +70,7 @@ ms.locfileid: "66090649"
     GO   
     -- Display the newly created credential   
     SELECT * from sys.credentials   
-    -- Create a backup in Windows Azure Storage.   
+    -- Create a backup in Azure Storage.   
     BACKUP DATABASE TestDBRestoreFrom    
     TO URL = 'https://teststorageaccnt.blob.core.windows.net/testrestorefrom/TestDBRestoreFrom.bak'    
           WITH CREDENTIAL = 'BackupCredential'    
@@ -95,6 +95,6 @@ ms.locfileid: "66090649"
   
     ```  
   
- **Конец учебника. SQL Server Data Files в службе хранилища Windows Azure**  
+ **Конец учебника: SQL Server файлы данных в службе хранилища Azure**  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Создать проект Visual C# SMO в Visual Studio .NET | Документация Майкрософт
+title: Создание проекта Visual C# SMO в Visual Studio .NET | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -10,40 +10,40 @@ ms.topic: reference
 helpviewer_keywords:
 - Visual C# [SMO]
 ms.assetid: 1e7abb16-23a0-4a18-91ad-253261e6bf84
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e2a5b158a33bf678cd285bcd408379a3f0abb907
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 11fb5e8aec7f61c83ec2b3edecdb3aa027cf2693
+ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68098007"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "70148648"
 ---
 # <a name="how-to-create-a-visual-c-smo-project-in-visual-studio-net"></a>Создание проекта SMO на языке Visual C# в среде Visual Studio .NET
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   В данном разделе описывается, как построить простое консольное приложение командной строки SMO.  
   
- В этом примере импортируются пространства имен, что позволяет программе ссылаться на типы объектов SMO. Импорт **агента** пространства имен является необязательным. Его следует выполнить при написании программы, в которой используется агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. **Распространенных** пространства имен, необходимые для безопасного подключения к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. **SqlClient** пространства имен используется для обработки ошибки исключения SQL.  
+ В этом примере импортируются пространства имен, что позволяет программе ссылаться на типы объектов SMO. Импорт пространства имен **агента** является необязательным. Его следует выполнить при написании программы, в которой используется агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Для установления безопасного соединения с экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]требуется общее пространство имен. Пространство имен **SqlClient** используется для обработки ошибок исключений SQL.  
   
 ### <a name="creating-a-visual-c-smo-project-in-visual-studionet"></a>Создание проекта SMO на языке Visual C# в среде Visual Studio.NET  
   
-1. Запустите Visual Studio
+1. Запуск Visual Studio
   
-2. На **файл** меню, щелкните **New** и затем **проекта**.  Откроется диалоговое окно **Создание проекта** .   
+2. В меню **файл** выберите пункт **создать** , а затем **проект**.  Откроется диалоговое окно **Создание проекта** .   
   
-3. В [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] **установленные** панели перейдите к **шаблоны**\\**Visual C#** \\**Windows** и выберите **консольное приложение**.  
+3. \\ \\ **C#** В области установленные перейдите в раздел шаблоны визуальные окна и выберите Консольное приложение. [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]  
   
-4. (Необязательно) В **имя** текстовое поле, введите имя нового приложения.  
+4. Используемых В текстовом поле **имя** введите имя нового приложения.  
 
-5. Нажмите кнопку **ОК** загрузить шаблон консольного приложения.  
+5. Нажмите кнопку **ОК** , чтобы загрузить шаблон консольного приложения.  
 
-6. Следуйте инструкциям на [Установка SMO](installing-smo.md) для установки пакета для проекта для ссылки.
+6. Следуйте инструкциям по [установке SMO](installing-smo.md) , чтобы установить пакет для ссылки на проект.
   
 7. В меню **Вид** выберите пункт **Код**.
     
-8. В коде перед инструкцией пространства имен, введите следующую команду **с помощью** инструкции, чтобы уточнить типы в пространстве имен объектов SMO:
+8. В коде перед оператором Namespace введите следующую инструкцию **using** , чтобы определить типы в пространстве имен SMO:
   
     ```  
     using Microsoft.SqlServer.Management.Smo;  
