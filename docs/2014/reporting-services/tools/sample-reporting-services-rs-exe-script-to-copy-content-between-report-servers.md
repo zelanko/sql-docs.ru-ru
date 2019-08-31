@@ -10,12 +10,12 @@ ms.assetid: d81bb03a-a89e-4fc1-a62b-886fb5338150
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: c8434c0db2ca394ec3fbfbab3613b2ea69ac042d
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 2f8ccf455e9b20c4b8dffc4cc433ce68319a8251
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70153813"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70176157"
 ---
 # <a name="sample-reporting-services-rsexe-script-to-migrate-content-between-report-servers"></a>Образец скрипта программы rs.exe служб Reporting Services для переноса содержимого между серверами отчетов
   Этот раздел содержит описание и сам скрипт для [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] RSS, который копирует элементы и параметры содержимого с одного сервера отчетов служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] на другой с помощью программы **RS.exe** . Программа RS.exe установлена с помощью [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]как в собственном режиме, так и в режиме SharePoint. Скрипт копирует элементы служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] , например отчеты и подписки, с одного сервера на другой. Скрипт поддерживает как режим интеграции с SharePoint, так и собственный режим сервера отчетов.  

@@ -24,12 +24,12 @@ ms.assetid: 88ed5b97-1d28-4980-80e4-b36761f3c03a
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 7650f579a42453486a1d8483b9537496d454a036
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 42ede73866c45662cf653d538f59be48684c5a45
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155023"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70176185"
 ---
 # <a name="reporting-services-report-server"></a>Сервер отчетов служб Reporting Services
   В этом разделе приведен обзор сервера отчетов [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] — центрального компонента установки [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Он состоит из пары модулей обработки, к которым прилагается коллекция модулей специального назначения, обеспечивающих выполнение операций проверки подлинности, обработки данных, подготовки отчетов и доставки. Сервер отчетов [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] может работать в одном из двух режимов развертывания: в собственном режиме или в режиме интеграции с SharePoint. В разделе [Сравнение функций режима интеграции с SharePoint и собственного режима](#bkmk_featuresupport) можно найти сравнительную таблицу функций.  
@@ -44,7 +44,7 @@ ms.locfileid: "70155023"
   
 -   [SQL Server бизнес-аналитику на виртуальных машинах Azure](https://msdn.microsoft.com//library/windowsazure/jj992719.aspx).  
   
--   [Используйте PowerShell для создания виртуальной машины Azure с сервером отчетов в собственном режиме](https://msdn.microsoft.com/library/windowsazure/dn449661.aspx).  
+-   [Использование PowerShell для создания виртуальной машины Windows Azure с помощью сервера отчетов, работающего в собственном режиме](https://msdn.microsoft.com/library/windowsazure/dn449661.aspx).  
   
 ##  <a name="bkmk_top"></a> В этом разделе  
   

@@ -14,12 +14,12 @@ ms.assetid: 2d90fc12-a67b-4bd0-b0ab-899b73017196
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 806c8ad1023c10c0176d1608841138a7380a8def
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 5ab74dc982416e3c18f2a0ad649e52de23770c5a
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70154462"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70176043"
 ---
 # <a name="specify-replicas-page-new-availability-group-wizard-add-replica-wizard"></a>Страница "Указание реплик" (мастер создания группы доступности: мастер добавления реплики)
   В этом разделе описываются параметры страницы **Выбор реплик** . Эта страница применяется к [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] и [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Страницу **Выбор реплик** можно использовать для настройки одной или нескольких реплик доступности и добавления ее в группу доступности. Эта страница содержит четыре вкладки, представленные в следующей таблице. Щелкните имя вкладки в таблице, чтобы перейти в соответствующий подраздел, далее в этом разделе.  

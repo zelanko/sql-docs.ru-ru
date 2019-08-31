@@ -10,12 +10,12 @@ ms.topic: quickstart
 ms.assetid: f6cd850f-b01b-491f-972c-f966b9fe4190
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: e3d9346d301357fff052566cf66b7ce133b5e4ef
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6c1fc5dd3dd59ccde2a1d95ab0940cfdadde7198
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67985282"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70176297"
 ---
 # <a name="master-data-services-installation-and-configuration"></a>Установка и настройка Master Data Services
 
@@ -45,8 +45,8 @@ ms.locfileid: "67985282"
 - При установке [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] на компьютер под управлением ОС Windows Server 2012 может понадобиться настроить улучшенную безопасность в Internet Explorer, чтобы разрешить использование скриптов на сайте веб-приложения. Без этого просмотр сайта на серверном компьютере работать не будет.
 - Для работы в веб-приложении на клиентском компьютере необходимо установить Silverlight 5. Если требуемая версия Silverlight отсутствует, то при переходе к той части веб-приложения, которая использует Silverlight, программа предложит установить Silverlight. Вы можете установить Silverlight 5 **[с этой веб-страницы](https://www.microsoft.com/silverlight/)** .
 
-## <a name="includessmdsshortmdincludesssmdsshort-mdmd-on-an-azure-virtual-machine"></a>[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] на виртуальной машине Azure
-По умолчанию при запуске виртуальной машины Azure с уже установленным [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] также устанавливаются [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]. 
+## <a name="includessmdsshort_mdincludesssmdsshort-mdmd-on-an-azure-virtual-machine"></a>[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] на виртуальной машине Azure
+По умолчанию при запуске [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] уже [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] установленной виртуальной машины Azure также устанавливается. 
 
 Далее следует установить службы IIS. См. раздел [Установка и настройка служб IIS](#InstallIIS). 
 
@@ -127,18 +127,18 @@ ms.locfileid: "67985282"
   
 2.  Щелкните **Создать базу данных**, а затем нажмите кнопку **Далее** в **мастере создания базы данных**.  
   
-3.  На **сервер базы данных** укажите экземпляр SQL Server. 
+3.  На странице **сервер базы данных** укажите экземпляр SQL Server. 
 
-    >  [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] Добавляет поддержку для управляемого экземпляра SQL Server. Установите для параметра **экземпляр SQL Server** для размещения базы данных SQL Azure, управляемый экземпляр. Например, `xxxxxx.xxxxxx.database.windows.net`.
+    >  [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)]добавляет поддержку Управляемый экземпляр SQL Server. Установите значение **SQL Server экземпляра** на узел управляемого экземпляра базы данных SQL Azure. Например, `xxxxxx.xxxxxx.database.windows.net`.
 
-4. Выберите **тип проверки подлинности** и нажмите кнопку **проверить подключение** для подтверждения того, что можно соединиться с базой данных, используя учетные данные для выбранного типа проверки подлинности. Нажмите кнопку **Далее**.
+4. Выберите **тип проверки** подлинности и нажмите кнопку **проверить подключение** , чтобы убедиться, что можно подключиться к базе данных, используя учетные данные для выбранного типа проверки подлинности. Нажмите кнопку **Далее**.
 
-    >Для [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)], для подключения к базе данных SQL управляемого экземпляра, используйте один из следующих типов проверки подлинности:
+    >Для [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)]подключения к управляемому экземпляру базы данных SQL Azure используйте один из следующих типов проверки подлинности:
     >
-    >- Встроенная проверка подлинности Azure Active Directory: **Текущий пользователь — встроенная проверка подлинности Active Directory**
-    >- Проверка подлинности SQL Server: **Учетная запись SQL Server**.
+    >- Встроенная проверка подлинности Azure Active Directory: **Текущий пользователь — встроенная Active Directory**
+    >- SQL Server проверка подлинности: **Учетная запись SQL Server**.
     >
-    >В управляемом экземпляре базы данных SQL Azure, он должен быть членом `sysadmin` предопределенной роли сервера.
+    >В управляемом экземпляре базы данных SQL Azure пользователь должен быть членом `sysadmin` предопределенной роли сервера.
 
     > [!NOTE]  
     >  Если выбран тип проверки подлинности **Текущий пользователь — встроенная безопасность**, поле **Имя пользователя** доступно только для чтения и содержит имя текущей учетной записи пользователя Windows. Если вы используете [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] на виртуальной машине Azure, в поле **Имя пользователя** отображается имя виртуальной машины и имя пользователя для учетной записи локального администратора виртуальной машины. 

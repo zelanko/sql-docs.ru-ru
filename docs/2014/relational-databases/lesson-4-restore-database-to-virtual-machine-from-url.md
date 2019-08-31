@@ -10,12 +10,12 @@ ms.assetid: ba793c8f-665a-4c46-b68d-f558a37906b2
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4eda59ac47444eb589e17d6e1aab2428c77a991f
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: fb9eaf62514b76e35b73ea87b7820751f670a90f
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70154522"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70175573"
 ---
 # <a name="lesson-5-optional-encrypt-your-database-using-tde"></a>Занятие 5. (Необязательно) Шифрование базы данных с помощью TDE
   В качестве дополнительного шага вы можете зашифровать созданную базу данных. Функция прозрачного шифрования данных (TDE) выполняет в реальном времени шифрование и дешифрование файлов данных и журналов в операциях ввода-вывода. При таком типе шифрования используется ключ шифрования базы данных (DEK), который хранится в загрузочной записи базы данных, чтобы он был доступен при восстановлении. Дополнительные сведения см. в [разделе &#40;прозрачное шифрование данных&#41; TDE](security/encryption/transparent-data-encryption.md) и [Перемещение базы данных, защищенной TDE, в другую SQL Server](security/encryption/move-a-tde-protected-database-to-another-sql-server.md).  

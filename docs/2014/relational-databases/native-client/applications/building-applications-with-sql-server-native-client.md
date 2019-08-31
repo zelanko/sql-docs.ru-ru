@@ -1,5 +1,5 @@
 ---
-title: Создание приложений с помощью собственного клиента SQL Server | Документация Майкрософт
+title: Создание приложений с помощью SQL Server Native Client | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,12 +15,12 @@ ms.assetid: 254a2b48-f0e3-43b5-a48d-3d666c2a779f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8c6f7333b9a0fea3ef0408ed1eea4c8c84287222
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a040993001a60c410cc1da83f8efae2a4d163162
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63213805"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70175413"
 ---
 # <a name="building-applications-with-sql-server-native-client"></a>Построение приложений с использованием собственного клиента SQL Server
   При разработке приложения, использующего библиотеку собственного клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], следует учитывать ряд проблем. В этом разделе обсуждаются многие из этих проблем, в том числе переход от компонентов MDAC к собственному клиенту [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и использование файлов заголовков и библиотек собственного клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], а также приведены общие сведения о различных строках соединения, которые можно использовать с собственным клиентом [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
@@ -54,8 +54,8 @@ ms.locfileid: "63213805"
  Содержит сведения о соединении с базой данных [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] через [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.  
   
 ## <a name="see-also"></a>См. также  
- [Программирование собственного клиента SQL Server](../sql-server-native-client-programming.md)   
- [Инструкции по ODBC](../../native-client-odbc-how-to/odbc-how-to-topics.md)   
+ [SQL Server Native Client программирование](../sql-server-native-client-programming.md)   
+ [Разделы руководства по ODBC](../../native-client-odbc-how-to/odbc-how-to-topics.md)   
  [Инструкции по OLE DB](../../native-client-ole-db-how-to/ole-db-how-to-topics.md)  
   
   

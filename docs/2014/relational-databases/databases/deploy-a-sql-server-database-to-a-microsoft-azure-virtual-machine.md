@@ -42,12 +42,12 @@ ms.assetid: 5e82e66a-262e-4d4f-aa89-39cb62696d06
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: dfea092757a708e0a83cefd581f8321f08d344e3
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: c7d84fbe56d36bd91f2b7f8b49a3df73fb383c6e
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70154565"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70175738"
 ---
 # <a name="deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine"></a>Развертывание базы данных SQL Server в виртуальной машине Microsoft Azure
   Используйте мастер **развертывания SQL Server базы данных в виртуальной машине Azure** , чтобы развернуть базу данных из экземпляра [!INCLUDE[ssDE](../../includes/ssde-md.md)] в на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] виртуальной машине Azure. Мастер использует операцию полного резервного копирования базы данных, поэтому он всегда копирует всю схему базы данных и данные из пользовательской базы данных SQL Server. Мастер также выполняет всю настройку ВМ Azure, поэтому дополнительные действия для задания параметров ВМ не требуются.  

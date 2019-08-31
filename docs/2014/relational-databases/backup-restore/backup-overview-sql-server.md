@@ -22,12 +22,12 @@ ms.assetid: 09a6e0c2-d8fd-453f-9aac-4ff24a97dc1f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d159b6c0496d99956e17f1607f71cf7df86e4dea
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: bf284ffce044e0efa1f855e0e504a1f92dc7e3da
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155006"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70175983"
 ---
 # <a name="backup-overview-sql-server"></a>Backup Overview (SQL Server)
   В этом разделе представлены сведения о компоненте резервного копирования [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Резервное копирование базы данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имеет важное значение для защиты данных. Здесь представлено описание типов резервных копий и ограничений резервного копирования. В рамках данной темы также рассмотрены устройства резервного копирования и носители данных резервных копий в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

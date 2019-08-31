@@ -13,12 +13,12 @@ ms.assetid: 82ed0d0f-952d-4d49-aa36-3855a3ca9877
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4c4e690d13f8cd12992c2b26db8e5d640a971712
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: bf57adb31330f5b0c0f18fbcccd4d71f47d3c933
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70154394"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70176015"
 ---
 # <a name="cloud-adapter-for-sql-server"></a>Адаптер для облака для SQL Server
   Служба адаптер для облака создается как часть [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] подготовки на виртуальной машине Azure. Служба адаптера для облака создает самозаверяющий SSL-сертификат в рамках своего первого запуска, а затем запускается от имени учетной записи **Local System** . Она создает файл конфигурации, который используется для ее настройки. Служба адаптера для облака также создает правило брандмауэра Windows для разрешения входящих TCP-подключений на стандартный порт 11435.  

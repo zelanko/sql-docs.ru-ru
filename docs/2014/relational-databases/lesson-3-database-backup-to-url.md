@@ -10,12 +10,12 @@ ms.assetid: a9ae1501-b614-49d3-b975-6569da8350b2
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 45cce2278e17fcb95f11920c2426caf580385518
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: ee331966984a12d309e71a7040edac6343e296c6
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70153766"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70175627"
 ---
 # <a name="lesson-4-create-a-database-in-azure-storage"></a>Занятие 4: Создание базы данных в службе хранилища Azure
   На этом занятии вы узнаете, как создать базу данных с помощью компонента SQL Server Data Files в Azure. Обратите внимание, что перед началом этого занятия необходимо завершить занятия 1, 2 и 3. Занятие 3 является очень важным шагом, так как необходимо сохранить сведения о контейнере хранилища Azure и связанном с ним имени политики и ключе SAS в SQL Server хранилище учетных данных перед занятием 4.  

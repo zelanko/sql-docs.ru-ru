@@ -10,12 +10,12 @@ ms.assetid: 74edd1fd-ab00-46f7-9e29-7ba3f1a446c5
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 6c43678851427d6498e57e8a2297449825adfb4f
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 53fcba3401a6798fb865613470ba78aa05e9b6dd
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70154353"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70176105"
 ---
 # <a name="lesson-1-create-azure-storage-objects"></a>Урок 1. Создание объектов службы хранилища Azure
   Перед созданием резервных копий [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] в облачном хранилище сначала необходимо создать учетную запись хранилища, а затем контейнер больших двоичных объектов. На занятии 1 описано, как войти в портал управления Azure, создать учетную запись хранения и контейнер больших двоичных объектов.  
