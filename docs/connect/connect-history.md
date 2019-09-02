@@ -8,12 +8,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 05936a9555cacfc88c9219e19bc57772109ed047
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c0fcc2172cca192c8c7580450ab50b4416f9ec2d
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67957511"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154187"
 ---
 # <a name="driver-history-for-microsoft-sql-server"></a>Журнал драйверов для Microsoft SQL Server
 
@@ -57,7 +57,7 @@ ADO.NET был впервые появился в составе платфор�
 
 ### <a name="microsoft-driver-for-nodejs-for-sql-server"></a>Драйвер Microsoft для Node. js для SQL Server
 
-Драйвер Майкрософт для Node. js для SQL Server позволяет приложениям Node. js в Microsoft Windows и Microsoft Windows Azure получать доступ к Microsoft SQL Server и базе данных SQL Microsoft Windows Azure. Процесс разработки больше не фокусируется на этом драйвере. Не рекомендуется создавать новые приложения с помощью драйвера Майкрософт для Node. js для SQL Server.
+Драйвер Майкрософт для Node. js для SQL Server позволяет приложениям Node. js в Microsoft Windows и Microsoft Azure получать доступ к Microsoft SQL Server и База данных SQL Microsoft Azure. Процесс разработки больше не фокусируется на этом драйвере. Не рекомендуется создавать новые приложения с помощью драйвера Майкрософт для Node. js для SQL Server.
 
 Дополнительные сведения о драйвере Microsoft для Node. js для SQL Server см. в разделе [WindowsAzure/node-SQLServer](https://github.com/Azure/node-sqlserver).
 

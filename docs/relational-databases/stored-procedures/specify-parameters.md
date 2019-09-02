@@ -15,12 +15,12 @@ ms.assetid: 902314fe-5f9c-4d0d-a0b7-27e67c9c70ec
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2997665339c2326b1fd99f8d2e09ba48089b9f2d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6b2ac27ecf2ca02acde1cefba87aaf828f8a3317
+ms.sourcegitcommit: 52d3902e7b34b14d70362e5bad1526a3ca614147
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68136654"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70110274"
 ---
 # <a name="specify-parameters"></a>Указание параметров
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -83,6 +83,9 @@ GO
   
 > [!NOTE]  
 >  Если значением по умолчанию является символьная строка, включающая в себя знаки пробела или пунктуации, либо содержащая первым элементом число, например 6ххх, то ее следует заключить в одинарные прямые кавычки.  
+
+> [!NOTE] 
+> Параметры по умолчанию не поддерживаются для хранилища данных SQL Azure или Parallel Data Warehouse. 
   
  Если значение по умолчанию указать нельзя, укажите NULL. Желательно, чтобы процедура возвращала сообщение, если она выполняется без значения для параметра.  
   

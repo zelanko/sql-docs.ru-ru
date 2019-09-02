@@ -19,12 +19,12 @@ helpviewer_keywords:
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5ec2100d50364ae0e85d2a28375bd454608af34a
-ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
+ms.openlocfilehash: 17fad67ff8eb050b191d22cf2638dd992ba2e6b3
+ms.sourcegitcommit: 00350f6ffb73c2c0d99beeded61c5b9baa63d171
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70123160"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70190404"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 
@@ -42,7 +42,7 @@ ms.locfileid: "70123160"
 
 ||||||
 |---|---|---|---|---|
-|**\*_SQL Server\*_**&nbsp;|[База данных SQL](create-external-data-source-transact-sql.md?view=azuresqldb-current)|[Хранилище данных<br />SQL](create-external-data-source-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-external-data-source-transact-sql.md?view=aps-pdw-2016-au7)|
+|**\*_SQL Server\*_** &nbsp;|[База данных SQL](create-external-data-source-transact-sql.md?view=azuresqldb-current)|[Хранилище данных<br />SQL](create-external-data-source-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-external-data-source-transact-sql.md?view=aps-pdw-2016-au7)|
 ||||||
 
 &nbsp;
@@ -95,7 +95,7 @@ WITH
 Путь к расположению:
 
 - `<`Namenode`>`: имя компьютера или IP-адрес `Namenode` в Hadoop Namenode. PolyBase необходимо разрешить любые DNS-имена, используемые в кластере Hadoop. <!-- For highly available Hadoop configurations, provide the Nameservice ID as the `LOCATION`. -->
-- `port`: порт, который прослушивает внешний источник данных. В Hadoop порт можно найти, используя параметр конфигурации `fs.default.name`. Значение по умолчанию — 8020.
+- `port`: порт, который прослушивает внешний источник данных. В Hadoop порт можно найти, используя параметр конфигурации `fs.defaultFS`. Значение по умолчанию — 8020.
 - `<container>`: контейнер учетной записи хранения, содержащей данные. Корневые контейнеры доступны только для чтения, записать данные в контейнер невозможно.
 - `<storage_account>`: имя учетной записи хранения Azure.
 - `<server_name>`: имя узла.
@@ -312,7 +312,7 @@ WITH
 ## <a name="examples-bulk-operations"></a>Примеры: массовые операции
 
 > [!NOTE]
-> Не следует помещать **/**, имя файла или параметры подписи общего доступа в конце URL-адреса `LOCATION` при настройке внешнего источника данных для массовых операций.
+> Не следует помещать **/** , имя файла или параметры подписи общего доступа в конце URL-адреса `LOCATION` при настройке внешнего источника данных для массовых операций.
 
 ### <a name="f-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage"></a>Е. Создание внешнего источника данных для массовых операций, извлекающих данные из хранилища BLOB-объектов Azure
 
@@ -540,7 +540,7 @@ WITH
 ## <a name="examples-bulk-operations"></a>Примеры: массовые операции
 
 > [!NOTE]
-> Не следует помещать **/**, имя файла или параметры подписи общего доступа в конце URL-адреса `LOCATION` при настройке внешнего источника данных для массовых операций.
+> Не следует помещать **/** , имя файла или параметры подписи общего доступа в конце URL-адреса `LOCATION` при настройке внешнего источника данных для массовых операций.
 
 ### <a name="c-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage"></a>В. Создание внешнего источника данных для массовых операций, извлекающих данные из хранилища BLOB-объектов Azure
 
@@ -899,7 +899,7 @@ WITH
 Путь к расположению:
 
 - `<`Namenode`>`: имя компьютера или IP-адрес `Namenode` в Hadoop Namenode. PolyBase необходимо разрешить любые DNS-имена, используемые в кластере Hadoop. <!-- For highly available Hadoop configurations, provide the Nameservice ID as the `LOCATION`. -->
-- `port`: порт, который прослушивает внешний источник данных. В Hadoop порт можно найти, используя параметр конфигурации `fs.default.name`. Значение по умолчанию — 8020.
+- `port`: порт, который прослушивает внешний источник данных. В Hadoop порт можно найти, используя параметр конфигурации `fs.defaultFS`. Значение по умолчанию — 8020.
 - `<container>`: контейнер учетной записи хранения, содержащей данные. Корневые контейнеры доступны только для чтения, записать данные в контейнер невозможно.
 - `<storage_account>`: имя учетной записи хранения Azure.
 

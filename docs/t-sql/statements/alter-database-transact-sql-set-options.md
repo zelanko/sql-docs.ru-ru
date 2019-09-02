@@ -30,12 +30,12 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: ecd914603883f83d5434327c5528688936aee420
-ms.sourcegitcommit: 63c6f3758aaacb8b72462c2002282d3582460e0b
+ms.openlocfilehash: 1a1e8fe19b952f2cc4a72f651dfea53c2177e6c1
+ms.sourcegitcommit: 52d3902e7b34b14d70362e5bad1526a3ca614147
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68495459"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70110283"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>Параметры ALTER DATABASE SET (Transact-SQL)
 
@@ -2912,6 +2912,7 @@ SET
 <option_spec>::=
 {
 <RESULT_SET_CACHING>
+|<snapshot_option>
 }
 ;
 
@@ -2919,6 +2920,12 @@ SET
 {
 RESULT_SET_CACHING {ON | OFF}
 }
+
+<snapshot_option>::=
+{
+READ_COMMITTED_SNAPSHOT {ON | OFF }
+}
+
 
 ```
 
@@ -2929,7 +2936,7 @@ RESULT_SET_CACHING {ON | OFF}
 Имя изменяемой базы данных.
 
 <a name="result_set_caching"></a> RESULT_SET_CACHING { ON | OFF }   
-Область применения этой статьи: хранилище данных SQL Azure (предварительная версия)
+**Область применения**: хранилище данных SQL Azure (предварительная версия)
 
 Эта команда должна выполняться при подключении к базе данных `master`.  Изменение данного параметра базы данных применяется немедленно.  Затраты на хранение связаны с кэшированием результирующих наборов запроса. После отключения кэширования результатов для базы данных ранее сохраненный кэш результатов немедленно удаляется из Хранилища данных SQL Azure. В `sys.databases` появился новый столбец с именем is_result_set_caching_on. В нем отображаются параметры кэширования результатов для базы данных.  
 
@@ -2947,6 +2954,21 @@ OFF
 command|Похоже|%DWResultCacheDb%|
 | | |
 
+
+<a name="snapshot_option"></a> READ_COMMITTED_SNAPSHOT  { ON | OFF }   
+**Область применения**: хранилище данных SQL Azure (предварительная версия)
+
+Значение ON включает параметр READ_COMMITTED_SNAPSHOT на уровне базы данных.
+
+Значение OFF отключает параметр READ_COMMITTED_SNAPSHOT на уровне базы данных.
+
+Включение или отключение параметра READ_COMMITTED_SNAPSHOT для базы данных приводит к уничтожению всех открытых соединений с этой базой данных.  Это изменение можно выполнить во время периода обслуживания базы данных или дождаться, пока не останется активных подключений к базе данных, кроме подключения, выполняющего команду ALTER DATABASE.  База данных не обязательно должна находиться в однопользовательском режиме.  Изменение параметра READ_COMMITTED_SNAPSHOT на уровне сеанса не поддерживается.  Чтобы проверить этот параметр для базы данных, проверьте столбец is_read_committed_snapshot_on в таблице sys.databases.
+
+В базе данных с включенным параметром READ_COMMITTED_SNAPSHOT запросы могут испытывать низкую производительность из-за проверки версий, если имеется несколько версий данных. Длительно открытые транзакции также могут привести к увеличению размера базы данных, если имеются внесенные ими изменения данных, блокирующие очистку версий.  
+
+
+
+
 ## <a name="remarks"></a>Remarks
 
 Для запроса повторно используется кэшированный результирующий набор при соблюдении всех следующих требований:
@@ -2959,12 +2981,9 @@ command|Похоже|%DWResultCacheDb%|
 
 ## <a name="permissions"></a>Разрешения
 
-Требуются следующие разрешения:
+Для задания параметра RESULT_SET_CACHING пользователю требуется имя входа участника на уровне сервера (созданное процессом подготовки) или членство в роли базы данных `dbmanager`.  
 
-- имя входа субъекта серверного уровня, созданное процессом подготовки, или
-- член роли базы данных `dbmanager`.
-
-Владелец базы данных не может изменять базу данных, если он не является членом роли dbmanager.
+Чтобы задать параметр READ_COMMITTED_SNAPSHOT, пользователю необходимо разрешение ALTER для базы данных.
 
 ## <a name="examples"></a>Примеры
 
@@ -3027,6 +3046,12 @@ SELECT 0 as is_cache_hit;
 SELECT *  
 FROM sys.dm_pdw_request_steps  
 WHERE command like '%DWResultCacheDb%' and step_index = 0;
+```
+
+### <a name="enable-read_committed_snapshot-option-for-a-database"></a>Включение параметра Read_Committed_Snapshot для базы данных
+```sql
+ALTER DATABASE MyDatabase  
+SET READ_COMMITTED_SNAPSHOT ON
 ```
 
 ## <a name="see-also"></a>См. также раздел

@@ -1,7 +1,7 @@
 ---
 title: Уровень совместимости инструкции ALTER DATABASE (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 07/11/2019
+ms.date: 08/27/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -24,12 +24,12 @@ ms.assetid: ca5fd220-d5ea-4182-8950-55d4101a86f6
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 750679a41b3178dd587ddbdee2fb33ee491a41b5
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+ms.openlocfilehash: 047dc16f8eeebe2547aef453a9a86e08be714ff6
+ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68471163"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70122985"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>Уровень совместимости инструкции ALTER DATABASE (Transact-SQL)
 
@@ -54,6 +54,8 @@ SET COMPATIBILITY_LEVEL = { 150 | 140 | 130 | 120 | 110 | 100 | 90 }
 COMPATIBILITY_LEVEL { 150 | 140 | 130 | 120 | 110 | 100 | 90 | 80 }       
 Версия [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], с которой необходимо обеспечить совместимость базы данных. Можно настроить следующие значения уровня совместимости (не все версии поддерживают все перечисленные в списке выше уровни совместимости):
 
+<a name="supported-dbcompats"></a>
+
 |Продукт|Версия ядра СУБД|Назначение уровня совместимости по умолчанию|Поддерживаемые значения уровня совместимости|
 |-------------|-----------------------------|-------------------------------------|------------------------------------------|
 |[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]|15|150|150, 140, 130, 120, 110, 100|
@@ -69,8 +71,7 @@ COMPATIBILITY_LEVEL { 150 | 140 | 130 | 120 | 110 | 100 | 90 | 80 }
 |SQL Server 2000|8|80|80|
 
 ## <a name="remarks"></a>Remarks
-
-Для всех установок [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] уровень совместимости по умолчанию установлен в зависимости от версии [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Для баз данных он устанавливается в это же значение, если для базы данных **model** не установлен более низкий уровень совместимости. При обновлении базы данных с более ранней версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] она сохраняет существующий уровень совместимости, если он не ниже минимального значения, допустимого в этом экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. При обновлении базы данных с уровнем совместимости ниже допустимого автоматически устанавливается минимальный допустимый уровень совместимости. Это относится и к системным, и к пользовательским базам данных.
+Для всех установок [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] уровень совместимости по умолчанию установлен в зависимости от версии [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Для новых баз данных он устанавливается в это же значение, если для базы данных **model** не установлен более низкий уровень совместимости. Для базы данных, присоединяемой или обновляемой с любой более ранней версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], сохраняется существующий уровень совместимости, если он не ниже минимального значения, допустимого в этом экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. При перемещении базы данных с уровнем совместимости ниже допустимого в [!INCLUDE[ssde_md](../../includes/ssde_md.md)] автоматически устанавливается минимальный допустимый уровень совместимости. Это относится и к системным, и к пользовательским базам данных.
 
 При подключении или восстановлении базы данных, а также после обновления на месте в [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] ожидается описанное ниже поведение.
 
@@ -85,10 +86,13 @@ COMPATIBILITY_LEVEL { 150 | 140 | 130 | 120 | 110 | 100 | 90 | 80 }
 > [!NOTE]
 > [База данных распространителя](../../relational-databases/replication/distribution-database.md), созданная в более ранней версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и обновленная до версии [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] RTM или версии с пакетом обновления 1, получает уровень совместимости 90, который не поддерживается для других баз данных. Это не влияет на функциональные возможности репликации. В результате обновления до последних пакетов обновления и версий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] уровень совместимости базы данных распространителя будет увеличен до уровня, соответствующего базе данных **master**.
 
-По состоянию на **январь 2018 г.** в [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] для создаваемых баз данных по умолчанию применяется уровень совместимости 140. Мы не обновляем уровень совместимости для существующих баз данных. Это осуществляют заказчики по собственному усмотрению. Мы настоятельно рекомендуем клиентам запланировать обновление до последнего уровня совместимости, чтобы они могли использовать самые новые улучшения, связанные с оптимизацией запросов.
+> [!NOTE]
+> По состоянию на **январь 2018 г.** в [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] для создаваемых баз данных по умолчанию применяется уровень совместимости 140. [!INCLUDE[msCoName](../../includes/msconame-md.md)] не обновляет уровень совместимости для существующих баз данных. Это осуществляют заказчики по собственному усмотрению.        
+> [!INCLUDE[msCoName](../../includes/msconame-md.md)] настоятельно рекомендует клиентам запланировать обновление до последнего уровня совместимости, чтобы они могли использовать самые новые улучшения, связанные с оптимизацией запросов.        
+
 Если в целом вам требуется уровень 140, но по определенной причине вы предпочитаете модель [**оценки кратности**](../../relational-databases/performance/cardinality-estimation-sql-server.md) [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], соответствующую уровню совместимости 110, см. подробнее об [ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) и ключевом слове `LEGACY_CARDINALITY_ESTIMATION = ON`.
 
-Дополнительные сведения о том, как оценить разницу в производительности наиболее важных запросов в двух уровнях совместимости в [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], см. в разделе [Улучшенная производительность запросов для уровня совместимости 130 базы данных SQL Azure](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/05/06/improved-query-performance-with-compatibility-level-130-in-azure-sql-database/). Обратите внимание, что в этой статье описывается уровень совместимости 130 и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], но при переходе на уровень 140 для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] применяется та же методология.
+Подробные сведения о том, как оценить разницу в производительности наиболее важных запросов на двух разных уровнях совместимости в [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], см. в статье [Улучшенная производительность запросов для уровня совместимости 130 базы данных SQL Azure](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/05/06/improved-query-performance-with-compatibility-level-130-in-azure-sql-database/). Обратите внимание, что в этой статье описывается уровень совместимости 130 и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], но при обновлении до уровня 140 в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] применяется та же методология.
 
 Чтобы определить версию [!INCLUDE[ssDE](../../includes/ssde-md.md)], к которой вы подключены, выполните указанный ниже запрос.
 
@@ -105,57 +109,34 @@ SELECT SERVERPROPERTY('ProductVersion');
 SELECT name, compatibility_level FROM sys.databases;
 ```
 
-## <a name="compatibility-levels-and-sql-server-upgrades"></a>Уровни совместимости и обновление SQL Server
+## <a name="compatibility-levels-and-database-engine-upgrades"></a>Уровни совместимости и обновления ядра СУБД
+Уровень совместимости базы данных — это полезное средство, помогающее модернизировать базу данных. Оно позволяет обновлять [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] с сохранением работоспособности подключенных приложений благодаря поддержанию уровню совместимости, который существовал до обновления. Это означает, что можно выполнить обновление с более старой версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (например, [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] или [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (включая Управляемый экземпляр) без изменения приложения (за исключением подключения к базе данных). Дополнительные сведения см. в статье [Сертификация на совместимость](../../database-engine/install-windows/compatibility-certification.md).
 
-Уровень совместимости базы данных — это полезное средство, помогающее модернизировать базу данных. Оно позволяет обновлять [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] с сохранением работоспособности подключенных приложений благодаря поддержанию уровню совместимости, который существовал до обновления.
-Если приложению не нужно использовать улучшения, доступные только на более высоком уровне совместимости, допускается обновлять [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] с сохранением прежнего уровня совместимости. Дополнительные сведения об использовании уровня совместимости для обеспечения обратной совместимости см. в разделе [Использование уровня совместимости для обеспечения обратной совместимости](#using-compatibility-level-for-backward-compatibility) далее в этой статье.
+Если приложению не нужно использовать улучшения, доступные только на более высоком уровне совместимости, допускается обновлять [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] с сохранением прежнего уровня совместимости. Дополнительные сведения об использовании уровня совместимости для обеспечения обратной совместимости см. в статье [Сертификация на совместимость](../../database-engine/install-windows/compatibility-certification.md).
 
-Если вы разрабатываете новое приложение или существующему приложению требуется использовать новые возможности, а также улучшения в плане производительности оптимизатора запросов, спланируйте повышение уровня совместимости до последнего доступного в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и подтвердите возможность работы приложения на этом уровне. Дополнительные сведения о повышении уровня совместимости базы данных см. в разделе [Рекомендации по обновлению уровня совместимости базы данных](#best-practices-for-upgrading-database-compatibility-level) далее в этой статье.
+## <a name="best-practices-for-upgrading-database-compatibility-level"></a>Рекомендации по обновлению уровня совместимости базы данных
+Рекомендуемый рабочий процесс для обновления уровня совместимости см. в статье [Изменение режима совместимости базы данных и использование хранилища запросов](../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md). Также см. подробнее об [обновлении уровня совместимости базы данных с помощью помощника по настройке запросов](../../relational-databases/performance/upgrade-dbcompat-using-qta.md).
 
-> [!TIP]
-> Если приложение было протестировано и сертифицировано в определенной версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], значит оно протестировано и сертифицировано для работы на собственном уровне совместимости этой версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
->
-> Таким образом, при использовании уровня совместимости базы данных, соответствующего тестируемой версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], обеспечивается простой путь сертификации существующего приложения.
->
-> Дополнительные сведения о различиях между уровнями совместимости см. в соответствующих разделах далее в этой статье.
-
-Чтобы обновить [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] до последней версии с сохранением уровня совместимости базы данных, существовавшего до обновления, и состояния поддержки, рекомендуется выполнить статическую функциональную проверку контактной зоны кода приложения в базе данных (объекты программирования, включая хранимые процедуры, функции, триггеры и пр.) и приложении (используя трассировку рабочей нагрузки для записи кода, отправляемого приложением) с использованием [Помощника по миграции данных (Майкрософт)](https://www.microsoft.com/download/details.aspx?id=53595) (DMA). Отсутствие в выходных данных DMA ошибок, связанных с отсутствием или несовместимостью функциональных возможностей, позволит избежать снижения функциональности приложения в новой конечной версии. Дополнительные сведения о средстве DMA см. [здесь](https://blogs.msdn.microsoft.com/datamigration/dma).
-
-> [!NOTE]
-> DMA поддерживает уровень совместимости базы данных 100 и выше. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] как исходная версия не поддерживается.   
-
-> [!IMPORTANT]
-> Корпорация Майкрософт рекомендует проводить минимальное необходимое тестирование для проверки успешности обновления с сохранением прежнего уровня совместимости базы данных. Вам следует определить, что является минимальным необходимым тестированием, с учетом особенностей вашего приложения и сценария.   
-
-> [!NOTE]
-> Корпорация Майкрософт обеспечивает защиту формы плана запроса в указанных ниже случаях.
->
-> - Новая (конечная) версия [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] работает на оборудовании, сопоставимом с оборудованием, на котором работала предыдущая (исходная) версия [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
-> - Один и тот же [поддерживаемый уровень совместимости базы данных](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#remarks) используется как в конечной версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], так и в исходной версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
->
-> Любая регрессия формы плана запроса (по сравнению с исходной версией [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) в описанных выше ситуациях требует принятия мер. Обратитесь в службу поддержки клиентов Майкрософт.
+## <a name="compatibility-levels-and-stored-procedures"></a>Уровни совместимости и хранимые процедуры
+При выполнении хранимой процедуры используется текущий уровень совместимости базы данных, в которой она была определена. Когда настройка совместимости базы данных подвергается изменению, все хранимые процедуры этой базы данных автоматически перекомпилируются соответствующим образом.
 
 ## <a name="using-compatibility-level-for-backward-compatibility"></a>Использование уровня совместимости для обеспечения обратной совместимости
-
-*Уровень совместимости базы данных* влияет на поведение только указанных баз данных, а не всего сервера. Уровень совместимости базы данных обеспечивает обратную совместимость с предыдущими версиями [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с учетом поведения оптимизации запросов и [!INCLUDE[tsql](../../includes/tsql-md.md)]. 
-
-> [!TIP]
-> Так как *уровень совместимости базы данных* — уровня базы данных параметр приложения, работающего на более новом [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] при использовании более старом уровне совместимости базы данных, по-прежнему могут использовать усовершенствования на уровне сервера без каких-либо требование для внесения изменений в приложения.
->
-> К ним относятся дополнительные улучшения возможностей мониторинга и устранения неполадок с помощью новых [системных динамических административных представлений](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md) и [расширенных событий](../../relational-databases/extended-events/extended-events.md). А также улучшение масштабируемости, например, с возможностью автоматического использования [архитектура Soft-NUMA](../../database-engine/configure-windows/soft-numa-sql-server.md#automatic-soft-numa).
+Параметр [уровня совместимости базы данных](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md) обеспечивает обратную совместимость с более ранними версиями [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в плане поведения [!INCLUDE[tsql](../../includes/tsql-md.md)] и оптимизации запросов только для указанной базы данных, а не всего сервера.  
 
 Начиная с режима совместимости 130, новые возможности, влияющие на план запроса, намеренно добавлены только к новому режиму совместимости. Это сделано для того, чтобы свести к минимуму риск во время обновления, связанный со снижением производительности из-за изменения плана определяемого новым поведением оптимизации запросов.      
-На стороне приложения целью по-прежнему должно являться обновление до последнего уровня совместимости в какой-то момент времени, позволяющее наследовать некоторые новые возможности, включая [интеллектуальную обработку запросов](../../relational-databases/performance/intelligent-query-processing.md). Но делать это нужно под контролем. Используйте более низкий уровень совместимости в качестве более безопасного варианта в процессе устранения проблем, возникших из-за различий в поведении между версиями, которые определяются соответствующей настройкой уровня совместимости.
-Дополнительные сведения, включая рекомендуемую процедуру для повышения уровня совместимости базы данных, см. в разделе [Рекомендации по обновлению уровня совместимости базы данных](#best-practices-for-upgrading-database-compatibility-level) далее в этой статье.
+
+На стороне приложения используйте более низкий уровень совместимости в качестве более безопасного варианта в процессе устранения проблем, возникших из-за различий в поведении между версиями, которые определяются соответствующей настройкой уровня совместимости. Целью по-прежнему должно являться обновление до последнего уровня совместимости в какой-то момент времени, позволяющее наследовать некоторые новые возможности, включая [интеллектуальную обработку запросов](../../relational-databases/performance/intelligent-query-processing.md). Однако делать это нужно контролируемо. 
+
+Дополнительные сведения, включая рекомендуемую процедуру для повышения уровня совместимости базы данных, см. в разделе [Рекомендации по обновлению уровня совместимости базы данных](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#best-practices-for-upgrading-database-compatibility-level).
 
 > [!IMPORTANT]
-> Нерекомендуемые функциональные возможности, представленные в определенной версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], не защищены уровнем совместимости. Это относится к возможностям, удаленным из [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].
+> **Нерекомендуемые** функциональные возможности, представленные в определенной версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], **не** защищены уровнем совместимости. Это относится к возможностям, удаленным из [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].
 > Например, указание `FASTFIRSTROW` больше не поддерживается в [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и заменено на указание `OPTION (FAST n )`. Если задать уровень совместимости базы данных 110, нерекомендуемое указание не будет восстановлено.  
 >  
 > См. подробнее о нерекомендуемых функциях в разделах [Нерекомендуемые функции ядра СУБД в SQL Server 2016](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md), [Нерекомендуемые функции ядра СУБД в SQL Server 2014](https://docs.microsoft.com/sql/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014), [Нерекомендуемые функции ядра СУБД в SQL Server 2012](https://docs.microsoft.com/sql/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014#Denali).    
 
 > [!IMPORTANT]
-> Критические изменения, введенные в определенной версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **могут** не защищаться уровнем совместимости. Это относится к изменениям в поведении между версиями [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Поведение [!INCLUDE[tsql](../../includes/tsql-md.md)] обычно защищено уровнем совместимости. Однако измененные или удаленные системные объекты **не** защищены уровнем совместимости.
+> **Критические изменения**, введенные в определенной версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], **могут не** защищаться уровнем совместимости. Это относится к изменениям в поведении между версиями [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Поведение [!INCLUDE[tsql](../../includes/tsql-md.md)] обычно защищено уровнем совместимости. Однако измененные или удаленные системные объекты **не** защищены уровнем совместимости.
 >
 > Пример критических изменений, **защищенных** уровнем совместимости — неявное преобразование данных из типа datetime в тип datetime2. При уровне совместимости базы данных 130 эти преобразования демонстрируют повышенную точность благодаря учету долей миллисекунд. В результате преобразования дают иные значения. Чтобы восстановить прежнее поведение преобразования, задайте уровень совместимости базы данных 120 или ниже.
 >
@@ -166,16 +147,7 @@ SELECT name, compatibility_level FROM sys.databases;
 >
 > Подробные сведения о критических изменениях см. в статьях [Критические изменения в функциях ядра СУБД в SQL Server 2017 (14.x)](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2017.md), [Критические изменения в функциях ядра СУБД в SQL Server 2016](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md), [Discontinued Database Engine Functionality in SQL Server 2014](https://docs.microsoft.com/sql/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014) (Неподдерживаемые функции ядра СУБД в SQL Server 2014) и в разделе [Discontinued Features in SQL Server 2012](https://docs.microsoft.com/sql/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014#Denali) (Неподдерживаемые функции в SQL Server 2012).
 
-## <a name="best-practices-for-upgrading-database-compatibility-level"></a>Рекомендации по обновлению уровня совместимости базы данных
-
-Рекомендуемый рабочий процесс для обновления уровня совместимости см. в разделе [Изменение режима совместимости базы данных и использование хранилища запросов](../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md). Также см. подробнее об [обновлении уровня совместимости базы данных с помощью помощника по настройке запросов](../../relational-databases/performance/upgrade-dbcompat-using-qta.md).
-
-## <a name="compatibility-levels-and-stored-procedures"></a>Уровни совместимости и хранимые процедуры
-
-При выполнении хранимой процедуры используется текущий уровень совместимости базы данных, в которой она была определена. Когда настройка совместимости базы данных подвергается изменению, все хранимые процедуры этой базы данных автоматически перекомпилируются соответствующим образом.
-
 ## <a name="differences-between-compatibility-level-140-and-level-150"></a>Различия между уровнями совместимости 140 и 150
-
 В этом разделе описываются новые возможности, обусловленные появлением уровня совместимости 150.
 
 Уровень совместимости базы данных 150 сейчас предоставляется для [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] и [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] в режиме общедоступной предварительной версии. Этот уровень совместимости базы данных будет связан с новым поколением улучшений обработки запросов наряду с улучшениями, реализованными в уровне совместимости 140.
@@ -305,7 +277,7 @@ SELECT name, compatibility_level FROM sys.databases;
 
 ## <a name="permissions"></a>Разрешения
 
-Необходимо разрешение ALTER на базу данных.
+Необходимо разрешение `ALTER` на базу данных.
 
 ## <a name="examples"></a>Примеры
 
@@ -410,11 +382,14 @@ SELECT @v = BusinessEntityID FROM
 SELECT @v;
 ```
 
-## <a name="see-also-alter-databaset-sqlstatementsalter-database-transact-sqlmd"></a>См. описание [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md).
-
-- [Зарезервированные ключевые слова](../../t-sql/language-elements/reserved-keywords-transact-sql.md)
-- [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?view=sql-server-2017)
-- [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)
-- [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)
-- [sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)
-- [Просмотр или изменение уровня совместимости базы данных](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)
+## <a name="see-also"></a>См. также: 
+[Сертификация на совместимость](../../database-engine/install-windows/compatibility-certification.md)       
+[ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md)       
+[Зарезервированные ключевые слова](../../t-sql/language-elements/reserved-keywords-transact-sql.md)       
+[CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md)       
+[DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)       
+[sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)       
+[sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)       
+[Просмотр или изменение уровня совместимости базы данных](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)       
+[Изменение режима совместимости базы данных и использование хранилища запросов](../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md)       
+[Обновление баз данных с помощью помощника по настройке запросов](../../relational-databases/performance/upgrade-dbcompat-using-qta.md)

@@ -23,12 +23,13 @@ ms.assetid: 613b8271-7f7d-4378-b7a2-5a7698551dbd
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 843b624e155df6aba6a0f2ccbd194f7b2f99bc09
-ms.sourcegitcommit: f517f1e2e7cac983fdb41229e60ca7ad019ecd48
+monikerRange: = azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions||=azure-sqldw-latest
+ms.openlocfilehash: d9ec87979d0f91653d5f287749ccfb5b7f806dc4
+ms.sourcegitcommit: 71fac5fee00e0eca57e555f44274dd7e08d47e1e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70064030"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70161341"
 ---
 # <a name="execute-as-transact-sql"></a>EXECUTE AS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -82,13 +83,13 @@ ms.locfileid: "70064030"
   
  Дополнительные сведения о переключении к предыдущему контексту см. в разделе [REVERT &(Transact-SQL)](../../t-sql/statements/revert-transact-sql.md).  
   
- COOKIE INTO **@***varbinary_variable*  
- Указывает, что контекст выполнения можно переключить к предыдущему контексту, если при вызове инструкция REVERT WITH COOKIE содержит правильное значение **@***varbinary_variable*. [!INCLUDE[ssDE](../../includes/ssde-md.md)] передает файл cookie для **@***varbinary_variable*. Параметр **COOKIE INTO** можно использовать только на нерегламентированном уровне.  
+ COOKIE INTO * *@***varbinary_variable*  
+ Указывает, что контекст выполнения можно переключить к предыдущему контексту, если при вызове инструкция REVERT WITH COOKIE содержит правильное значение * *@***varbinary_variable*. [!INCLUDE[ssDE](../../includes/ssde-md.md)] передает файл cookie для * *@***varbinary_variable*. Параметр **COOKIE INTO** можно использовать только на нерегламентированном уровне.  
   
- **@** *varbinary_variable* — это **varbinary(8000)**.  
+ **@** *varbinary_variable* — это **varbinary(8000)** .  
   
 > [!NOTE]  
->  Параметр **OUTPUT** файла cookie в настоящее время описан в документации как **varbinary(8000)**, что верно определяет его максимальную длину. Однако текущая реализация возвращает параметр **varbinary(100)**. Для продолжения правильной работы в случае увеличения размера файлов cookie в последующих версиях в приложении должен быть зарезервирован тип **varbinary(8000)**.  
+>  Параметр **OUTPUT** файла cookie в настоящее время описан в документации как **varbinary(8000)** , что верно определяет его максимальную длину. Однако текущая реализация возвращает параметр **varbinary(100)** . Для продолжения правильной работы в случае увеличения размера файлов cookie в последующих версиях в приложении должен быть зарезервирован тип **varbinary(8000)** .  
   
  CALLER  
  При использовании внутри модуля указывает, что инструкции модуля выполняются в контексте вызывающей стороны.
@@ -129,9 +130,9 @@ ms.locfileid: "70064030"
 ## <a name="using-with-no-revert"></a>Применение WITH NO REVERT  
  Если инструкция EXECUTE AS содержит необязательное предложение WITH NO REVERT, то контекст выполнения для сеанса нельзя сбросить с помощью инструкции REVERT или путем выполнения другой инструкции EXECUTE AS. Контекст, заданный инструкцией, остается до удаления сеанса.  
   
- Если указано предложение WITH NO REVERT COOKIE = @*varbinary_variable*, то [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] передает значение файла cookie в @*varbinary_variable*. Контекст выполнения, устанавливаемый данной инструкцией, можно возвратить только к предыдущему контексту, если вызов инструкции REVERT WITH COOKIE = @*varbinary_variable* содержит такое же значение *@varbinary_variable*.  
+ Если указано предложение WITH NO REVERT COOKIE = @*varbinary_variable*, то [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] передает значение файла cookie в @*varbinary_variable*. Контекст выполнения, устанавливаемый данной инструкцией, можно возвратить только к предыдущему контексту, если вызов инструкции REVERT WITH COOKIE = @*varbinary_variable* содержит такое же значение *@varbinary_variable* .  
   
- Этот параметр может пригодиться в среде с организацией пула соединений. Организация пула соединений — это поддержка группы подключений к базе данных для повторного использования приложениями или сервером приложений. Поскольку значение, передаваемое в *@varbinary_variable*, известно только инициатору инструкции EXECUTE AS, то инициатор может гарантировать, что установленный им контекст выполнения больше никто не сможет изменить.  
+ Этот параметр может пригодиться в среде с организацией пула соединений. Организация пула соединений — это поддержка группы подключений к базе данных для повторного использования приложениями или сервером приложений. Поскольку значение, передаваемое в *@varbinary_variable* , известно только инициатору инструкции EXECUTE AS, то инициатор может гарантировать, что установленный им контекст выполнения больше никто не сможет изменить.  
   
 ## <a name="determining-the-original-login"></a>Определение первоначального имени входа  
  Функция [ORIGINAL_LOGIN](../../t-sql/functions/original-login-transact-sql.md) возвращает имя входа, которое подключилось к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Можно использовать эту функцию для возврата идентификатора исходного имени входа в сеансах, содержащих множество явных и неявных переключений контекста.  

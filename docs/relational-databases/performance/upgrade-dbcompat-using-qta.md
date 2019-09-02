@@ -18,19 +18,19 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811e7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 4af50c6df7ef8ea451f38a038d19e39491604308
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 28390d824e04287264b328878f888dbcfac1cdb1
+ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68231754"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70123118"
 ---
 # <a name="upgrading-databases-by-using-the-query-tuning-assistant"></a>Обновление баз данных с помощью помощника по настройке запросов
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
 При миграции со старых версий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] или более новые версии и при [обновлении уровня совместимости базы данных](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) до последнего доступного выполнение рабочей нагрузки может замедляться. Такая ситуация наблюдается в меньшей степени при обновлении с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] на более новую версию.
 
-Начиная с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и с каждым выходом новой версии все изменения в оптимизаторе запросов привязаны к последнему уровню совместимости базы данных, поэтому планы выполнения изменяются не в момент обновления, а когда пользователь изменяет параметр базы данных `COMPATIBILITY_LEVEL` на последний доступный. Дополнительные сведения об изменениях в оптимизаторе запросов, представленных в [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], см. в статье об [оценке кратности](../../relational-databases/performance/cardinality-estimation-sql-server.md). Дополнительные сведения об уровнях совместимости и их влиянии на обновления см. в разделе [Уровни совместимости и обновление SQL Server](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-sql-server-upgrades).
+Начиная с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и с каждым выходом новой версии все изменения в оптимизаторе запросов привязаны к последнему уровню совместимости базы данных, поэтому планы выполнения изменяются не в момент обновления, а когда пользователь изменяет параметр базы данных `COMPATIBILITY_LEVEL` на последний доступный. Дополнительные сведения об изменениях в оптимизаторе запросов, представленных в [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], см. в статье об [оценке кратности](../../relational-databases/performance/cardinality-estimation-sql-server.md). Дополнительные сведения об уровнях совместимости и их влиянии на обновления см. в разделе [Уровни совместимости и обновления ядра СУБД](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-database-engine-upgrades).
 
 Эта возможность привязки, предоставляемая на уровне совместимости базы данных, в сочетании с хранилищем запросов обеспечивает высокий уровень контроля над производительностью запросов в процессе обновления, если обновление реализуется в рамках приведенного ниже рабочего процесса. Дополнительные сведения о рекомендуемом рабочем процессе для обновления уровня совместимости см. в статье [Изменение режима совместимости базы данных и использование хранилища запросов](../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md). 
 
@@ -210,7 +210,7 @@ QTA — это компонент на основе сеансов, которы
 Необходимо быть членом роли **db_owner**.
   
 ## <a name="see-also"></a>См. также:  
- [Уровни совместимости и обновление SQL Server](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-sql-server-upgrades)    
+ [Уровни совместимости и обновления ядра СУБД](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-database-engine-upgrades)    
  [Средства контроля и настройки производительности](../../relational-databases/performance/performance-monitoring-and-tuning-tools.md)     
  [Мониторинг производительности с использованием хранилища запросов](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)     
  [Изменение режима совместимости базы данных и использование хранилища запросов](../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md)       

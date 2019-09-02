@@ -14,27 +14,33 @@ ms.assetid: 3c036813-36cf-4415-a0c9-248d0a433859
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: facdfe832b9bd7889d699f8c17f6397ba5d3dd4e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cff2727815c5cd6cada3d2111e0aada4e722f800
+ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67934837"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70122964"
 ---
 # <a name="upgrade-database-engine"></a>Обновление [компонент ядра СУБД]
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
   Статьи в этом разделе помогут вам обновить ядро СУБД [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предыдущего выпуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-1.  [Выбор метода обновления компонента Database Engine](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md) . Прежде всего вам необходимо понять различные методы обновления. В этой статье рассматриваются различные методы обновления и действия, связанные с каждым из них.  
+1.  [Выбор метода обновления ядра СУБД](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md). Прежде всего вам необходимо понять различные методы обновления. В этой статье рассматриваются различные методы обновления и действия, связанные с каждым из них.  
   
-2.  [Составление и тестирование плана обновления Database Engine](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md) . Ознакомившись с методами обновления, вы будете готовы разработать соответствующий метод обновления для используемой среды разработки, а затем проверить его перед обновлением существующей среды. В этой статье рассматривается разработка плана обновления и его тестирование.  
+2.  [Составление и тестирование плана обновления ядра СУБД](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md). Ознакомившись с методами обновления, вы будете готовы разработать соответствующий метод обновления для используемой среды разработки, а затем проверить его перед обновлением существующей среды. В этой статье рассматривается разработка плана обновления и его тестирование.  
   
-3.  [Завершение обновления ядра СУБД](../../database-engine/install-windows/complete-the-database-engine-upgrade.md). После обновления баз данных до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] необходимо выполнить дополнительные действия, включая создание резервной копии, включение новых функций и повторное заполнение полнотекстовых каталогов. Эти действия рассматриваются в данной статье.  
+3.  [Завершение обновления ядра СУБД](../../database-engine/install-windows/complete-the-database-engine-upgrade.md). После обновления ядра СУБД до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] и перевода баз данных в режим "в сети" необходимо выполнить дополнительные действия, включая создание резервной копии, обновление баз данных для включения новых функций и повторное заполнение полнотекстовых каталогов. Эти действия рассматриваются в данной статье.  
   
-4.  [Изменение режима совместимости базы данных и использование хранилища запросов](../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md) . Одно из действий, выполняемых после обновления базы данных до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , — включение новых функций. Для этого следует изменить режим совместимости базы данных, а затем с помощью хранилища запросов наблюдать за производительностью. В этой статье рассматривается этот процесс и приводится рекомендуемый рабочий процесс.  
-  
-5.  [Использование преимуществ новых функций SQL Server](https://www.microsoft.com/sql-server/sql-server-2017). Наконец, завершив предыдущие действия, вы будете готовы к изучению преимуществ новых усовершенствований ядра СУБД. В этой статье предлагаются некоторые из этих усовершенствований, а также ссылки на дополнительные сведения.  
+4.  Обновите [уровень совместимости базы данных](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-database-engine-upgrades) (**применимо к** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]). Одним из действий, выполняемых после перевода баз данных в режим "в сети" в новой версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], может быть обновление функционального режима баз данных для включения новых функций путем изменения уровня совместимости базы данных. Это можно сделать вручную или посредством Помощника по настройке запросов. 
+
+    - [Изменение режима совместимости базы данных и использование хранилища запросов](../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md). После изменения уровня совместимости базы данных вручную используйте хранилище запросов, чтобы отслеживать производительность и обнаруживать ее снижение. В этой статье рассматривается этот процесс и приводятся рекомендации.  
+
+    - [Изменение режима совместимости базы данных с помощью Помощника по настройке запросов](../../relational-databases/performance/upgrade-dbcompat-using-qta.md). Помимо изменения уровня совместимости базы данных вручную, можно использовать рекомендованный процесс, предоставляемый **Помощником по настройке запросов (QTA)** . В этой статье рассматривается этот процесс и приводятся рекомендации по работе с Помощником по настройке запросов.  
+
+    Дополнительные сведения о новых возможностях и улучшениях, доступных после изменения уровня совместимости базы данных, см. в статье [Различия между уровнями совместимости](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-stored-procedures).
+
+5.  [Использование преимуществ новых функций SQL Server](https://www.microsoft.com/sql-server/sql-server-2017). Наконец, завершив предыдущие действия, вы будете готовы к изучению преимуществ новых усовершенствований ядра СУБД. В этой статье предлагаются некоторые из этих усовершенствований, а также ссылки на дополнительные сведения.  
   
   

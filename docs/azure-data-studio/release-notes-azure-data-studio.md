@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 08/15/2019
-ms.openlocfilehash: cad91dc5b48a60746b4f8ef1f4831a1aa9dc2c40
-ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
+ms.openlocfilehash: fd10408eb976dd40383c058489a971b557a2acd4
+ms.sourcegitcommit: 2bc15f81d7a238c6fc409440800f1d6c7943a4b5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69553107"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70059268"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Заметки о выпуске для Azure Data Studio
 
@@ -33,7 +33,7 @@ ms.locfileid: "69553107"
 | Усовершенствования записных книжек | &bull; &nbsp; Встраивание кода или текстовой ячейки <br/>&bull; &nbsp; Добавлена возможность сохранять , результаты в формате CSV, JSON и т. д., щелкнув правой кнопки мыши сетку результатов SQL. <br/> &bull; &nbsp; Повышение скорости загрузки записных книжек для ускорения загрузки JSON <br/> &bull; &nbsp; Полный список усовершенствований см. [здесь](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+label%3A%22Area%3A+Notebooks%22+milestone%3A%22August+2019+Release%22+is%3Aclosed) |
 | Поддержка SQL Server 2019 |  Этот выпуск содержит поддержку дополнительных функций кластера больших данных SQL Server 2019, включая следующие. <br/> &bull; &nbsp; Сокращено время, необходимое для загрузки сведений о таблицах и столбцах на странице сопоставления объектов. <br/> &bull; &nbsp; Исправлена ошибка с загрузкой существующих учетных данных области базы данных на странице сведений о подключении. <br/> &bull; &nbsp; Увеличен размер выборки по умолчанию, используемый для синтаксического анализа PROSE. | 
 | Расширение DACPAC теперь поддерживает AAD | 
-| Объединение выпусков Visual Studio Code за май версии 1.37 | Последние усовершенствования см. [здесь](https://code.visualstudio.com/updates/v1_37). |
+| Объединение выпусков Visual Studio Code за июль версии 1.37 | Последние усовершенствования см. [здесь](https://code.visualstudio.com/updates/v1_37). |
 | Устраненные ошибки и проблемы | Полный список исправлений см. на странице [ошибок и проблем в GitHub](https://github.com/microsoft/azuredatastudio/milestone/39?closed=1). |
 | &nbsp; | &nbsp; |
 
@@ -69,7 +69,7 @@ ms.locfileid: "69553107"
 | Улучшения сравнения схем | &bull; &nbsp; Добавлены параметры исключения и включения <br/>&bull; &nbsp; Функция "Сформировать скрипты" открывает скрипт после его создания <br/>&bull; &nbsp; Удалены двойные полосы прокрутки  <br/>&bull; &nbsp; Усовершенствования форматирования и макета <br/>&bull; &nbsp; Полный список изменений см. [здесь](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22June+2019+Release%22+label%3A%22Area%3A+Schema+Compare%22+is%3Aclosed)|
 | Раздел "Сообщения" перемещен на отдельную вкладку | Когда пользователи запускали SQL-запросы, результаты и сообщения находились на панелях, расположенных в столбик. Теперь они находятся на отдельных вкладках на одной панели, как в SSMS. |
 | Усовершенствования записных книжек SQL | &bull; &nbsp; Теперь пользователи могут использовать собственные установки Python 3 или Anaconda в записных книжках <br/>&bull; &nbsp; Несколько исправлений стабильности и доводочных/заключительных исправлений <br/> &bull; &nbsp; Полный список усовершенствований см. [здесь](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22June+2019+Release%22+is%3Aclosed+label%3A%22Area%3A+Notebooks%22)|
-| Объединение выпусков Visual Studio Code за май 1.34 | Последние усовершенствования см. [здесь](https://code.visualstudio.com/updates/v1_34) |
+| Объединение выпусков Visual Studio Code за апрель версии 1.34 | Последние усовершенствования см. [здесь](https://code.visualstudio.com/updates/v1_34) |
 | Устранены ошибки и проблемы | См. страницу [ошибок и проблем в GitHub](https://github.com/microsoft/azuredatastudio/milestone/32?closed=1). |
 | &nbsp; | &nbsp; |
 

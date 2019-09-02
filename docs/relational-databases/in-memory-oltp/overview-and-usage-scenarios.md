@@ -11,12 +11,12 @@ ms.assetid: 62c964c5-eae4-4cf1-9024-d5a19adbd652
 author: jodebrui
 ms.author: jodebrui
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f1f8f4937efa5db9de76d6e111d5a0abf0223d23
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: b6448718ce9e9cea380c352a57c3e824709de848
+ms.sourcegitcommit: 2bc15f81d7a238c6fc409440800f1d6c7943a4b5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715296"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70059288"
 ---
 # <a name="overview-and-usage-scenarios"></a>Общие сведения и сценарии использования
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -93,7 +93,7 @@ ms.locfileid: "68715296"
 
 - [Quorum doubles key database’s workload while lowering utilization by 70% by leveraging In-Memory OLTP in Azure SQL Database](https://customers.microsoft.com/story/quorum-doubles-key-databases-workload-while-lowering-dtu-with-sql-database) (Благодаря использованию выполняющейся в памяти OLTP в базе данных SQL Azure компания Quorum удваивает количество основных рабочих нагрузок базы данных и сокращает использование DTU на 70 %)
 - Компания EdgeNet повысила производительность загрузки пакетных данных и избавилась от необходимости поддержки кэша среднего уровня благодаря использованию выполняющейся в памяти OLTP в [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]: [Компания по разработке служб данных получила доступ к данным о продуктах в реальном времени, используя технологию в памяти](https://customers.microsoft.com/story/data-services-firm-gains-real-time-access-to-product-d)
-- Больнице Beth Israel Deaconess Medical Center удалось значительно повысить скорость приема данных из контроллеров домена и обрабатывать пики рабочей нагрузки, используя выполняющуюся в памяти OLTP в [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]: [https://customers.microsoft.com/story/strengthening-data-security-and-creating-more-time-for ]
+- Больнице Beth Israel Deaconess Medical Center удалось значительно повысить скорость приема данных из контроллеров домена и обрабатывать пики рабочей нагрузки, используя выполняющуюся в памяти OLTP в [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]: https://customers.microsoft.com/story/strengthening-data-security-and-creating-more-time-for
 
 ### <a name="caching-and-session-state"></a>Кэширование и состояние сеанса
 

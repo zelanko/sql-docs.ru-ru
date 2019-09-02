@@ -10,12 +10,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: aboke
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 770b7d3d9a16adf64134ba6896c7c3a1f46dcc9b
-ms.sourcegitcommit: 3d189b68c0965909d167de61546b574af1ef7a96
+ms.openlocfilehash: 6229d1df654aba2c83e10ee7b692464ed8e46897
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69561116"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70175550"
 ---
 # <a name="install-polybase-on-windows"></a>Установка PolyBase на компьютере по управлением Windows
 
@@ -28,8 +28,6 @@ ms.locfileid: "69561116"
 - 64-разрядный выпуск SQL Server Evaluation.  
    
 - Microsoft .NET Framework 4.5.  
-
-- Среда выполнения Oracle Java SE (JRE). Поддерживаются версии 7 (начиная с 7.51) и 8. Среды [JRE](https://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html) и [Server JRE](https://www.oracle.com/technetwork/java/javase/downloads/server-jre8-downloads-2133154.html) должны работать. Откройте страницу [Загрузка Java SE](https://www.oracle.com/technetwork/java/javase/downloads/index.html). Если JRE отсутствует, произойдет сбой установщика. JRE9 и JRE10 не поддерживаются.
 
 - Минимальный объем памяти: 4 ГБ. 
    
