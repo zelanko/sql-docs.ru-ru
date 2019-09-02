@@ -19,12 +19,12 @@ helpviewer_keywords:
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 05742e279d65d828fcbd9a7917033fcf8df2825d
-ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
+ms.openlocfilehash: 5ec2100d50364ae0e85d2a28375bd454608af34a
+ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68984584"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70123160"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 
@@ -42,7 +42,7 @@ ms.locfileid: "68984584"
 
 ||||||
 |---|---|---|---|---|
-|**\*_SQL Server\*_** &nbsp;|[База данных SQL](create-external-data-source-transact-sql.md?view=azuresqldb-current)|[Хранилище данных<br />SQL](create-external-data-source-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-external-data-source-transact-sql.md?view=aps-pdw-2016-au7)|
+|**\*_SQL Server\*_**&nbsp;|[База данных SQL](create-external-data-source-transact-sql.md?view=azuresqldb-current)|[Хранилище данных<br />SQL](create-external-data-source-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-external-data-source-transact-sql.md?view=aps-pdw-2016-au7)|
 ||||||
 
 &nbsp;
@@ -89,7 +89,7 @@ WITH
 | Oracle;                      | `oracle`        | `<server_name>[:port]`                                | SQL Server (2019+)                          |
 | Teradata                    | `teradata`      | `<server_name>[:port]`                                | SQL Server (2019+)                          |
 | MongoDB или CosmosDB         | `mongodb`       | `<server_name>[:port]`                                | SQL Server (2019+)                          |
-| интерфейс ODBC                        | `odbc`          | `<server_name>{:port]`                                | SQL Server (2019 +): только для Windows           |
+| интерфейс ODBC                        | `odbc`          | `<server_name>[:port]`                                | SQL Server (2019 +): только для Windows           |
 | массовые операции             | `https`         | `<storage_account>.blob.core.windows.net/<container>` | SQL Server (2017+)                  |
 
 Путь к расположению:
@@ -312,7 +312,7 @@ WITH
 ## <a name="examples-bulk-operations"></a>Примеры: массовые операции
 
 > [!NOTE]
-> Не следует помещать **/** , имя файла или параметры подписи общего доступа в конце URL-адреса `LOCATION` при настройке внешнего источника данных для массовых операций.
+> Не следует помещать **/**, имя файла или параметры подписи общего доступа в конце URL-адреса `LOCATION` при настройке внешнего источника данных для массовых операций.
 
 ### <a name="f-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage"></a>Е. Создание внешнего источника данных для массовых операций, извлекающих данные из хранилища BLOB-объектов Azure
 
@@ -540,7 +540,7 @@ WITH
 ## <a name="examples-bulk-operations"></a>Примеры: массовые операции
 
 > [!NOTE]
-> Не следует помещать **/** , имя файла или параметры подписи общего доступа в конце URL-адреса `LOCATION` при настройке внешнего источника данных для массовых операций.
+> Не следует помещать **/**, имя файла или параметры подписи общего доступа в конце URL-адреса `LOCATION` при настройке внешнего источника данных для массовых операций.
 
 ### <a name="c-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage"></a>В. Создание внешнего источника данных для массовых операций, извлекающих данные из хранилища BLOB-объектов Azure
 
@@ -792,6 +792,24 @@ WITH
 ,    TYPE       = HADOOP
 )
 [;]
+```
+
+### <a name="d-create-external-data-source-to-reference-polybase-connectivity-to-azure-data-lake-store-gen-2"></a>Г. Создание внешнего источника данных для ссылки на подключение Polybase к хранилищу Azure Data Lake Store 2-го поколения
+
+При подключении к учетной записи Azure Data Lake Store 2-го поколения с использованием [управляемого удостоверения](/azure/active-directory/managed-identities-azure-resources/overview
+) указывать секрет не нужно.
+
+```sql
+-- If you do not have a Master Key on your DW you will need to create one
+CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>'
+
+--Create database scoped credential with **IDENTITY = 'Managed Service Identity'**
+
+CREATE DATABASE SCOPED CREDENTIAL msi_cred WITH IDENTITY = 'Managed Service Identity';
+
+--Create external data source with abfss:// scheme for connecting to your Azure Data Lake Store Gen2 account
+
+CREATE EXTERNAL DATA SOURCE ext_datasource_with_abfss WITH (TYPE = hadoop, LOCATION = 'abfss://myfile@mystorageaccount.dfs.core.windows.net', CREDENTIAL = msi_cred);
 ```
 
 ## <a name="see-also"></a>См. также:
