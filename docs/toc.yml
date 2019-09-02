@@ -64,7 +64,11 @@
             - name: Установка инструментов для больших данных
               href: big-data-cluster/deploy-big-data-tools.md
             - name: Установка azdata
-              href: big-data-cluster/deploy-install-azdata.md
+              items:
+                - name: С помощью диспетчера пакетов Linux
+                  href: big-data-cluster/deploy-install-azdata-linux-package.md
+                - name: С помощью PIP
+                  href: big-data-cluster/deploy-install-azdata.md
         - name: Развертывание
           items:
             - name: Руководства по развертыванию
@@ -77,6 +81,8 @@
               href: big-data-cluster/concept-data-persistence.md
             - name: Автономное развертывание
               href: big-data-cluster/deploy-offline.md
+            - name: Развертывание с высоким уровнем доступности
+              href: big-data-cluster/deployment-high-availability.md
             - name: Кластеры Kubernetes
               items:
                 - name: Служба Azure Kubernetes
@@ -169,6 +175,8 @@
               href: big-data-cluster/cluster-troubleshooting-commands.md
             - name: Управление с помощью записной книжки
               href: big-data-cluster/manage-notebooks.md
+            - name: Управление с помощью панели мониторинга контроллера
+              href: big-data-cluster/manage-with-controller-dashboard.md
         - name: Записные книжки
           items:
             - name: Общие сведения о записных книжках
@@ -196,7 +204,15 @@
         - name: Справочник по azdata
           items:
             - name: azdata
-              href: big-data-cluster/reference-azdata.md
+              items:
+                - name: azdata
+                  href: big-data-cluster/reference-azdata.md
+                - name: элемент управления
+                  href: big-data-cluster/reference-azdata-control.md
+                - name: записная книжка
+                  href: big-data-cluster/reference-azdata-notebook.md
+                - name: sql
+                  href: big-data-cluster/reference-azdata-sql.md
             - name: Развертывание приложения
               items:
                 - name: app
@@ -207,6 +223,10 @@
               items:
                 - name: bdc
                   href: big-data-cluster/reference-azdata-bdc.md
+                - name: приложение bdc
+                  href: big-data-cluster/reference-azdata-bdc-app.md
+                - name: состояние приложения bdc
+                  href: big-data-cluster/reference-azdata-bdc-app-status.md
                 - name: bdc config
                   href: big-data-cluster/reference-azdata-bdc-config.md
                 - name: bdc control
@@ -217,10 +237,16 @@
                   href: big-data-cluster/reference-azdata-bdc-debug.md
                 - name: bdc endpoint
                   href: big-data-cluster/reference-azdata-bdc-endpoint.md
+                - name: шлюз bdc
+                  href: big-data-cluster/reference-azdata-bdc-gateway.md
+                - name: состояние шлюза bdc
+                  href: big-data-cluster/reference-azdata-bdc-gateway-status.md
                 - name: bdc hdfs
                   href: big-data-cluster/reference-azdata-bdc-hdfs.md
                 - name: bdc hdfs mount
                   href: big-data-cluster/reference-azdata-bdc-hdfs-mount.md
+                - name: состояние bdc hdfs
+                  href: big-data-cluster/reference-azdata-bdc-hdfs-status.md
                 - name: bdc pool
                   href: big-data-cluster/reference-azdata-bdc-pool.md
                 - name: bdc pool status
@@ -233,6 +259,10 @@
                   href: big-data-cluster/reference-azdata-bdc-spark-session.md
                 - name: bdc spark statement
                   href: big-data-cluster/reference-azdata-bdc-spark-statement.md
+                - name: состояние bdc spark
+                  href: big-data-cluster/reference-azdata-bdc-spark-status.md
+                - name: bdc sql
+                  href: big-data-cluster/reference-azdata-bdc-sql.md
                 - name: bdc status
                   href: big-data-cluster/reference-azdata-bdc-status.md
 - name: Непрерывность бизнес-процессов
@@ -2510,7 +2540,7 @@
           items:
             - name: Components
               href: relational-databases/native-client/applications/components-of-sql-server-native-client.md
-            - name: Соединение с Microsoft Azure
+            - name: Подключение к SQL Azure с помощью собственного клиента
               href: relational-databases/native-client/applications/connecting-to-a-windows-azure-sql-database-using-sql-server-native-client.md
             - name: Функция ConnectionValidSharedMemory в общей памяти dbmslpcn.dll
               href: relational-databases/native-client/applications/connectionvalidsharedmemory-function-in-dbmslpcn-dll-shared-memory.md

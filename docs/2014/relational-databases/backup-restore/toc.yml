@@ -1,10 +1,10 @@
 - name: Резервное копирование и восстановление баз данных SQL Server
   href: back-up-and-restore-of-sql-server-databases.md
   items:
-    - name: Резервное копирование и восстановление SQL Server с помощью службы хранилищ больших двоичных объектов Windows Azure
+    - name: Резервное копирование и восстановление SQL Server с помощью службы хранилища BLOB-объектов Azure
       href: sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md
       items:
-        - name: Использование PowerShell для резервного копирования нескольких баз данных в службе хранилища больших двоичных объектов Windows Azure
+        - name: Использование PowerShell для резервного копирования нескольких баз данных в службу хранилища BLOB-объектов Azure
           href: back-up-multiple-databases-to-azure-blob-storage-powershell.md
     - name: Резервное копирование в SQL Server по URL-адресу
       href: sql-server-backup-to-url.md
@@ -13,24 +13,24 @@
           href: sql-server-backup-to-url-best-practices-and-troubleshooting.md
     - name: Удаление резервных файлов больших двоичных объектов с активной арендой
       href: deleting-backup-blob-files-with-active-leases.md
-- name: Управляемое резервное копирование SQL Server в Windows Azure
+- name: "Управляемое резервное копирование SQL\_Server в Azure"
   href: sql-server-managed-backup-to-microsoft-azure.md
   items:
-    - name: Настройка управляемого резервного копирования SQL Server в Windows Azure
+    - name: Настройка управляемого резервного копирования SQL Server в Azure
       href: enable-sql-server-managed-backup-to-microsoft-azure.md
-    - name: "Управляемое резервное копирование SQL\_Server в Microsoft\_Azure. Возможности взаимодействия и совместной работы"
+    - name: "Управляемое резервное копирование SQL\_Server в Azure: Возможности взаимодействия и совместной работы"
       href: ../../database-engine/sql-server-managed-backup-to-windows-azure-interoperability-and-coexistence.md
-    - name: Управляемое резервное копирование SQL Server в Windows Azure — настройки периода хранения и хранилища
+    - name: "Управляемое резервное копирование SQL Server в Azure\_— настройки периода хранения и хранилища"
       href: ../../database-engine/sql-server-managed-backup-to-windows-azure-retention-and-storage-settings.md
-    - name: Настройка управляемого резервного копирования SQL Server в Windows Azure для групп доступности
+    - name: Настройка управляемого резервного копирования SQL Server в Azure для групп доступности
       href: ../../database-engine/setting-up-sql-server-managed-backup-to-windows-azure-for-availability-groups.md
-    - name: Отслеживание управляемого резервного копирования SQL Server в Windows Azure
+    - name: "Мониторинг управляемого резервного копирования SQL\_Server в Azure"
       href: ../../database-engine/monitor-sql-server-managed-backup-to-windows-azure.md
-    - name: Устранение неполадок управляемого резервного копирования SQL Server в Microsoft Azure
+    - name: Устранение неполадок с управляемым резервным копированием SQL Server в Azure
       href: ../../database-engine/troubleshooting-sql-server-managed-backup-to-windows-azure.md
     - name: Настройка управляемого резервного копирования (SQL Server Management Studio)
       href: ../../database-engine/configure-managed-backup-sql-server-management-studio.md
-    - name: Восстановление из резервных копий в Windows Azure
+    - name: 'Восстановление из резервных копий, хранящихся в Azure'
       href: restoring-from-backups-stored-in-microsoft-azure.md
 - name: Модели восстановления
   href: recovery-models-sql-server.md
@@ -160,7 +160,7 @@
       href: dbengine-continue-with-restore.md
     - name: Выбор устройства резервного копирования
       href: select-backup-device.md
-    - name: Соединение с хранилищем Windows Azure (восстановление)
+    - name: Подключение к службе хранилища Azure (восстановление)
       href: connect-to-microsoft-azure-storage-restore.md
     - name: Восстановление базы данных в новое место
       href: restore-a-database-to-a-new-location-sql-server.md
