@@ -1,5 +1,5 @@
 ---
-title: Распространенные языка среды CLR Integration основные понятия программирования | Документация Майкрософт
+title: Основные понятия программирования интеграции со средой CLR | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -15,34 +15,34 @@ helpviewer_keywords:
 ms.assetid: 951bf851-3e6e-4361-ae6a-2bcd5b837ebd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5caa2cc419943d3de3d5645b1cedfcfd8a18a3aa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b172399d5e7a04365cf8005b5dc52ebc9795c13a
+ms.sourcegitcommit: 734529a6f108e6ee6bfce939d8be562d405e1832
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68068474"
+ms.lasthandoff: 09/02/2019
+ms.locfileid: "70212391"
 ---
 # <a name="common-language-runtime-clr-integration-programming-concepts"></a>Основные понятия о программировании интеграции со средой CLR
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   Начиная с версии [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обеспечивает интеграцию с компонентами CLR платформы .NET Framework для [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. Это означает, что хранимые процедуры, триггеры, определяемые пользователем типы, определяемые пользователем функции, определяемые пользователем статистические функции и возвращающие табличные значение потоковые функции теперь могут разрабатываться с использованием любого языка .NET Framework, включая [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .NET и [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C#.  
   
  Пространство имен Microsoft.SqlServer.Server содержит основные возможности программирования CLR для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Однако пространство имен Microsoft.SqlServer.Server документировано в пакете .NET Framework SDK. Эта документация не включена в электронную документацию по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!IMPORTANT]  
->  По умолчанию платформа .NET Framework устанавливается вместе с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], но пакет .NET Framework SDK в эту установку не включен. Если пакет SDK установлен на рабочем компьютере и не добавлен к коллекции электронной документации, то ссылки на содержимое пакета SDK, имеющиеся в этом разделе, работать не будут. Установите пакет .NET Framework SDK. После установки включите пакет SDK в коллекцию электронной документации и в оглавление, следуя инструкциям в [установка .NET Framework SDK](https://technet.microsoft.com/library/bb686823\(v=SQL.105\).aspx).  
+>  По умолчанию платформа .NET Framework устанавливается вместе с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], но пакет .NET Framework SDK в эту установку не включен. Если пакет SDK установлен на рабочем компьютере и не добавлен к коллекции электронной документации, то ссылки на содержимое пакета SDK, имеющиеся в этом разделе, работать не будут. Установите пакет .NET Framework SDK. После установки добавьте пакет SDK в коллекцию электронной документации и оглавление, следуя инструкциям в разделе [Установка пакета SDK для .NET Framework](https://technet.microsoft.com/library/bb686823\(v=SQL.105\).aspx).  
   
 > [!NOTE]  
->  Функции CLR, такие как пользователем функции среды CLR, являются *не* поддерживается для базы данных SQL Azure.  
+>  Функции CLR, такие как пользовательские функции CLR, *не* поддерживаются для базы данных SQL Azure.  
   
  В следующей таблице приводится список подразделов данного раздела.  
   
- [Среда CLR &#40;CLR&#41; Общие сведения об интеграции](../../relational-databases/clr-integration/common-language-runtime-integration-overview.md)  
+ [Общие сведения об &#40;интеграции&#41; CLR](../../relational-databases/clr-integration/common-language-runtime-integration-overview.md)  
  Содержит общие сведения о среде CLR и описывает способы и преимущества использования технологии в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Описывает преимущества использования среды CLR для создания объектов базы данных.  
   
  [Сборки (компонент Database Engine)](../../relational-databases/clr-integration/assemblies-database-engine.md)  
  Описывает использование в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сборок для развертывания функций, хранимых процедур, триггеров, пользовательских статистических функций и определяемых пользователем типов данных, написанных на одном из языков управляемого кода, поддерживаемых средой CLR [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework, а не на языке [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
- [Построение объектов базы данных с помощью среды CLR &#40;CLR&#41; интеграции](../../relational-databases/clr-integration/database-objects/building-database-objects-with-common-language-runtime-clr-integration.md)  
+ [Создание объектов базы данных с &#40;&#41; интегрированной средой CLR](../../relational-databases/clr-integration/database-objects/building-database-objects-with-common-language-runtime-clr-integration.md)  
  Описывает виды объектов, которые можно строить с использованием среды CLR, и рассматривает требования к построению объектов баз данных CLR.  
   
  [Доступ к данным из объектов среды CLR для работы с базами данных](../../relational-databases/clr-integration/data-access/data-access-from-clr-database-objects.md)  
@@ -67,7 +67,7 @@ ms.locfileid: "68068474"
  Описывает сценарии использования и образцы кода, использующие объекты CLR.  
   
 ## <a name="see-also"></a>См. также  
- [Сборки &#40;компонент Database Engine&#41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   
+ [Сборки &#40;ядро СУБД&#41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   
  [Установка пакета SDK для .NET Framework](https://technet.microsoft.com/library/bb686823\(v=SQL.105\).aspx)  
   
   

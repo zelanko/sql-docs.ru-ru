@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: a828e55c-633a-41cf-9769-a0698b446e6c
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: f70661db4dbd34475a5708b8ae9ca3691c94e689
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a4bd7f90688d61f9ecee487d553393e38bed82e3
+ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68017800"
+ms.lasthandoff: 09/02/2019
+ms.locfileid: "70211279"
 ---
-# <a name="sysmailaddprofilesp-transact-sql"></a>sysmail_add_profile_sp (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sysmail_add_profile_sp-transact-sql"></a>sysmail_add_profile_sp (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   Создает новый профиль компонента Database Mail.  
   
@@ -41,29 +41,32 @@ sysmail_add_profile_sp [ @profile_name = ] 'profile_name'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @profile_name = ] 'profile\_name'` Имя нового профиля. *profile_name* — **sysname**, не имеет значения по умолчанию.  
+`[ @profile_name = ] 'profile\_name'`Имя нового профиля. *profile_name* имеет тип **sysname**и не имеет значения по умолчанию.  
+ 
+   > [!NOTE]
+   > Имя профиля, использующего SQL Управляемый экземпляр агента SQL Azure, должно называться **AzureManagedInstance_dbmail_profile**
   
-`[ @description = ] 'description'` Необязательное описание нового профиля. *Описание* — **nvarchar(256)** , не имеет значения по умолчанию.  
+`[ @description = ] 'description'`Необязательное описание нового профиля. *Description* имеет тип **nvarchar (256)** и не имеет значения по умолчанию.  
   
-`[ @profile_id = ] _new\_profile\_idOUTPUT` Возвращает идентификатор нового профиля. *new_profile_id* — **int**, значение по умолчанию NULL.  
+`[ @profile_id = ] _new\_profile\_id OUTPUT`Возвращает идентификатор нового профиля. *new_profile_id* имеет **тип int**и значение по умолчанию NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- **0** (успешное завершение) или **1** (неуспешное завершение)  
+ **0** (успешное завершение) или **1** (сбой)  
   
 ## <a name="remarks"></a>Примечания  
- Профиль компонента Database Mail может хранить любое число учетных записей Database Mail. Хранимые процедуры компонента Database Mail могут ссылаться на профиль или по имени, или по идентификатору, создаваемому данной процедурой. Дополнительные сведения о добавлении учетных записей в профиле, см. в разделе [sysmail_add_profileaccount_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-add-profileaccount-sp-transact-sql.md).  
+ Профиль компонента Database Mail может хранить любое число учетных записей Database Mail. Хранимые процедуры компонента Database Mail могут ссылаться на профиль или по имени, или по идентификатору, создаваемому данной процедурой. Дополнительные сведения о добавлении учетной записи в профиль см. в [разделе &#40;SYSMAIL_ADD_PROFILEACCOUNT_SP Transact-&#41;SQL](../../relational-databases/system-stored-procedures/sysmail-add-profileaccount-sp-transact-sql.md).  
   
- Имя профиля и описание можно изменить с помощью хранимой процедуры **sysmail_update_profile_sp**, тогда как идентификатор профиля остается неизменным в течение жизненного цикла профиля.  
+ Имя и описание профиля можно изменить с помощью хранимой процедуры **sysmail_update_profile_sp**, в то время как идентификатор профиля остается постоянным в течение срока жизни профиля.  
   
  Имя профиля должно быть уникальным для компонента Microsoft [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], иначе хранимая процедура вернет ошибку.  
   
- Хранимая процедура **sysmail_add_profile_sp** в **msdb** базы данных и принадлежит **dbo** схемы. Процедуру необходимо выполнять с трехкомпонентным именем, если текущая база данных не **msdb**.  
+ Хранимая процедура **sysmail_add_profile_sp** находится в базе данных **msdb** и принадлежит схеме **dbo** . Процедура должна быть выполнена с именем, сопоставленным с тремя частями, если текущей базой данных не является **msdb**.  
   
 ## <a name="permissions"></a>Разрешения  
- Разрешения для этой процедуры по умолчанию члены выполнение **sysadmin** предопределенной роли сервера.  
+ По умолчанию разрешения EXECUTE для этой процедуры имеют члены предопределенной роли сервера **sysadmin** .  
   
 ## <a name="examples"></a>Примеры  
- **А. Создание профиля**  
+ **А. Создание нового профиля**  
   
  В следующем примере показано создание профиля компонента Database Mail с именем `AdventureWorks Administrator`.  
   
@@ -73,7 +76,7 @@ EXECUTE msdb.dbo.sysmail_add_profile_sp
        @description = 'Profile used for administrative mail.' ;  
 ```  
   
- **Б. Создание профиля, сохранение идентификатора профиля в переменной**  
+ **Б. Создание нового профиля, сохранение идентификатора профиля в переменной**  
   
  В следующем примере показано создание профиля компонента Database Mail с именем `AdventureWorks Administrator`. В примере идентификатор нового профиля сохраняется в переменной `@profileId` и возвращается в результирующем наборе.  
   
@@ -90,8 +93,8 @@ SELECT @profileId ;
   
 ## <a name="see-also"></a>См. также  
  [Database Mail](../../relational-databases/database-mail/database-mail.md)   
- [Создайте учетную запись почты базы данных](../../relational-databases/database-mail/create-a-database-mail-account.md)   
- [Объекты конфигурации компонента Database Mail](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
- [Хранимые процедуры Database Mail &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [Создание учетной записи Database Mail](../../relational-databases/database-mail/create-a-database-mail-account.md)   
+ [Database Mail объекты конфигурации](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
+ [Database Mail хранимых &#40;процедур TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

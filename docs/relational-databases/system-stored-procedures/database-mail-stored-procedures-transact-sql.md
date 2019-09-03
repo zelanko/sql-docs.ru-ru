@@ -1,5 +1,5 @@
 ---
-title: Компонент Database Mail хранимые процедуры (Transact-SQL) | Документация Майкрософт
+title: Database Mail хранимых процедур (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: 3bdb0e6d-9d09-465e-9a3f-7a8ccd53aca8
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 326f1634c19939c1d6044a2842474c4c7dd1c547
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 13c8c9c7c14cdd4cd6a3c15d3c6216614b38a518
+ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67942376"
+ms.lasthandoff: 09/02/2019
+ms.locfileid: "70211318"
 ---
 # <a name="database-mail-stored-procedures-transact-sql"></a>Хранимые процедуры Database Mail (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает следующие системные хранимые процедуры, которые используются для работы с электронной почтой в пределах экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)]поддерживает следующие системные хранимые процедуры, используемые для выполнения операций электронной почты в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]экземпляре. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 ## <a name="database-mail-procedures"></a>Процедуры службы Database Mail  
   

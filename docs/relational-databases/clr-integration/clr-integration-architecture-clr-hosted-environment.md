@@ -26,15 +26,15 @@ helpviewer_keywords:
 ms.assetid: d280d359-08f0-47b5-a07e-67dd2a58ad73
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a2bbb7465b3d012d5aa786a0e8c614a9d4689074
-ms.sourcegitcommit: 73dc08bd16f433dfb2e8406883763aabed8d8727
+ms.openlocfilehash: 69d548d6d6682a1bdd999bf2b9a4fdba4cefd669
+ms.sourcegitcommit: 734529a6f108e6ee6bfce939d8be562d405e1832
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68329335"
+ms.lasthandoff: 09/02/2019
+ms.locfileid: "70212453"
 ---
 # <a name="clr-integration-architecture---clr-hosted-environment"></a>Архитектура интеграции со средой CLR — среда размещения CLR
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   Интеграция [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] со средой CLR платформы .NET Framework позволяет программистам работать с базами данных, используя такие языки, как Visual C#, Visual Basic .NET, Visual C++. С помощью этих языков программисты могут создавать различные объекты бизнес-логики, например: функции, хранимые процедуры, триггеры, типы данных и агрегаты.  
   
   Среда CLR включает в себя память для сбора мусора, вытеснение потоков, службы метаданных (отражение типов), проверку кода и управление доступом для кода. В среде CLR метаданные используются для обнаружения и загрузки классов, размещения экземпляров в памяти, разрешения вызовов методов, формирования машинного кода, обеспечения безопасности и определения границ контекста времени выполнения.  
@@ -156,7 +156,7 @@ Thread.EndThreadAffinity();
 |||||  
 |-|-|-|-|  
 |Набор разрешений|SAFE|EXTERNAL_ACCESS|UNSAFE|  
-|Управление доступом для кода|Только выполнение|Выполнение и доступ к внешним ресурсам|Неограниченный доступ|  
+|Управление доступом для кода|Только выполнение|Выполнение и доступ к внешним ресурсам|Без ограничений|  
 |Ограничения модели программирования|Да|Да|Без ограничений|  
 |Требование к проверяемости|Да|Да|Нет|  
 |Возможность вызова машинного кода|Нет|Нет|Да|  

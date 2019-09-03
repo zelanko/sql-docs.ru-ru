@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 2adcac78-4a4a-407e-9666-1d9c43c73cc2
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 365fc36d7933a8db31e2e7c608417e3621600c9c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4b6adc5f6c02eae49a5f5e2598c6b02e5b00534e
+ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68017712"
+ms.lasthandoff: 09/02/2019
+ms.locfileid: "70211272"
 ---
-# <a name="sysmaildeleteaccountsp-transact-sql"></a>sysmail_delete_account_sp (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sysmail_delete_account_sp-transact-sql"></a>sysmail_delete_account_sp (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   Удаляет почтовую учетную запись SMTP-сервера компонента Database Mail. Для удаления учетной записи также можно воспользоваться мастером настройки компонента Database Mail.  
   
@@ -39,12 +39,12 @@ sysmail_delete_account_sp { [ @account_id = ] account_id | [ @account_name = ] '
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @account_id = ] account_id` Идентификационный номер учетной записи, для удаления. *account_id* — **int**, не имеет значения по умолчанию. Либо *account_id* или *account_name* должен быть указан.  
+`[ @account_id = ] account_id`ИДЕНТИФИКАЦИОНный номер удаляемой учетной записи. *account_id* имеет **тип int**и не имеет значения по умолчанию. Необходимо указать либо *account_id* , либо *account_name* .  
   
-`[ @account_name = ] 'account_name'` Имя учетной записи для удаления. *account_name* — **sysname**, не имеет значения по умолчанию. Либо *account_id* или *account_name* должен быть указан.  
+`[ @account_name = ] 'account_name'`Имя удаляемой учетной записи. Аргумент *account_name* имеет тип **sysname**и не имеет значения по умолчанию. Необходимо указать либо *account_id* , либо *account_name* .  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- **0** (успешное завершение) или **1** (неуспешное завершение)  
+ **0** (успешное завершение) или **1** (сбой)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
  None  
@@ -52,10 +52,10 @@ sysmail_delete_account_sp { [ @account_id = ] account_id | [ @account_name = ] '
 ## <a name="remarks"></a>Примечания  
  Эта процедура удаляет указанную учетную запись вне зависимости от того, используется ли учетная запись профилем. Не содержащий учетных записей профиль не может отправлять сообщения по электронной почте.  
   
- Хранимая процедура **sysmail_delete_account_sp** в **msdb** базы данных и принадлежит **dbo** схемы. Процедуру необходимо выполнять с трехкомпонентным именем, если текущая база данных не **msdb**.  
+ Хранимая процедура **sysmail_delete_account_sp** находится в базе данных **msdb** и принадлежит схеме **dbo** . Процедура должна быть выполнена с именем, сопоставленным с тремя частями, если текущей базой данных не является **msdb**.  
   
 ## <a name="permissions"></a>Разрешения  
- Разрешения для этой процедуры по умолчанию члены выполнение **sysadmin** предопределенной роли сервера.  
+ По умолчанию разрешения EXECUTE для этой процедуры имеют члены предопределенной роли сервера **sysadmin** .  
   
 ## <a name="examples"></a>Примеры  
  Следующий пример показывает удаление учетной записи компонента Database Mail под названием `AdventureWorks Administrator`.  
@@ -67,14 +67,14 @@ EXECUTE msdb.dbo.sysmail_delete_account_sp
   
 ## <a name="see-also"></a>См. также  
  [Database Mail](../../relational-databases/database-mail/database-mail.md)   
- [Создайте учетную запись почты базы данных](../../relational-databases/database-mail/create-a-database-mail-account.md)   
- [Объекты конфигурации компонента Database Mail](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
- [sysmail_add_account_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-add-account-sp-transact-sql.md)   
- [sysmail_delete_profile_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-delete-profile-sp-transact-sql.md)   
- [sysmail_delete_profileaccount_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-delete-profileaccount-sp-transact-sql.md)   
- [sysmail_help_account_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-help-account-sp-transact-sql.md)   
- [sysmail_help_profile_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-help-profile-sp-transact-sql.md)   
- [sysmail_help_profileaccount_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-help-profileaccount-sp-transact-sql.md)   
- [sysmail_update_profileaccount_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-update-profileaccount-sp-transact-sql.md)  
+ [Создание учетной записи Database Mail](../../relational-databases/database-mail/create-a-database-mail-account.md)   
+ [Database Mail объекты конфигурации](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
+ [sysmail_add_account_sp &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-add-account-sp-transact-sql.md)   
+ [sysmail_delete_profile_sp &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-delete-profile-sp-transact-sql.md)   
+ [sysmail_delete_profileaccount_sp &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-delete-profileaccount-sp-transact-sql.md)   
+ [sysmail_help_account_sp &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-help-account-sp-transact-sql.md)   
+ [sysmail_help_profile_sp &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-help-profile-sp-transact-sql.md)   
+ [sysmail_help_profileaccount_sp &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-help-profileaccount-sp-transact-sql.md)   
+ [sysmail_update_profileaccount_sp &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-update-profileaccount-sp-transact-sql.md)  
   
   
