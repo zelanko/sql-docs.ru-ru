@@ -9,13 +9,13 @@ ms.topic: tutorial
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
-monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: abcd13b5db24f7ffd44a21b4690f14d97645cdd5
-ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 595652a2bfa7392d3b4f900082f33cc589631147
+ms.sourcegitcommit: ecb19d0be87c38a283014dbc330adc2f1819a697
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/02/2019
-ms.locfileid: "70211928"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70238667"
 ---
 # <a name="tutorial-perform-clustering-in-python-with-sql-server-machine-learning-services"></a>Учебник. Выполнение кластеризации в Python с помощью SQL Server Службы машинного обучения
 
@@ -41,7 +41,7 @@ ms.locfileid: "70211928"
 
 ## <a name="prerequisites"></a>Предварительные требования
 
-* [SQL Server службы машинного обучения](../what-is-sql-server-machine-learning.md) с помощью параметра язык Python. Следуйте инструкциям по установке в руководствах по установке [Windows](../install/sql-machine-learning-services-windows-install.md) или в разделе [руководства по установке Linux](https://docs.microsoft.com/sql/linux/sql-server-linux-setup-machine-learning?toc=%2fsql%2fadvanced-analytics%2ftoc.json&view=sql-server-linux-ver15).
+* [SQL Server службы машинного обучения](../what-is-sql-server-machine-learning.md) с помощью параметра язык Python. Следуйте инструкциям по установке в [руководствах](../install/sql-machine-learning-services-windows-install.md) по установке Windows или в разделе [руководства по установке Linux](https://docs.microsoft.com/sql/linux/sql-server-linux-setup-machine-learning?toc=%2fsql%2fadvanced-analytics%2ftoc.json&view=sql-server-linux-ver15).
 
 * Интегрированная среда разработки Python. в этом руководстве используется записная книжка Python в [Azure Data Studio](../../azure-data-studio/what-is.md). Дополнительные сведения см. [в статье использование записных книжек в Azure Data Studio](../../azure-data-studio/sql-notebooks.md). Вы также можете использовать собственную интегрированную среду разработки Python, например записную книжку Jupyter или [Visual Studio Code](https://code.visualstudio.com/docs) с [расширением Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python) и [расширением MSSQL](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql).
 
@@ -70,7 +70,7 @@ ms.locfileid: "70211928"
 
 ## <a name="import-the-sample-database"></a>Импорт образца базы данных
 
-Образец набора данных, используемый в этом руководстве, был сохранен в файл резервной копии **. bak** для загрузки и использования. Этот набор данных является производным от [тпккс — BB](http://www.tpc.org/tpcx-bb/default.asp) набора данных, предоставляемого Советом по [производительности обработки транзакций (TPC)](http://www.tpc.org/default.asp).
+Образец набора данных, используемый в этом руководстве, был сохранен в файл резервной копии **. bak** для загрузки и использования. Этот набор данных является производным от [тпккс — BB](http://www.tpc.org/tpcx-bb/default.asp) набора данных, предоставляемого [Советом по производительности обработки транзакций (TPC)](http://www.tpc.org/default.asp).
 
 1. Скачайте файл [tpcxbb_1gb. bak](https://sqlchoice.blob.core.windows.net/sqlchoice/static/tpcxbb_1gb.bak) в папку резервного копирования SQL Server. Для экземпляра базы данных по умолчанию используется папка:
 
