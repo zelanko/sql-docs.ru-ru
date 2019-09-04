@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 09a6e0c2-d8fd-453f-9aac-4ff24a97dc1f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 81df6387bf6744e436922c5b031d01fb86bc50dc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bfda79efac4e64fbb735e424cad4b8bb9ba93851
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68081442"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70176266"
 ---
 # <a name="backup-overview-sql-server"></a>Backup Overview (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -79,7 +79,7 @@ ms.locfileid: "68081442"
 ## <a name="backup-media-terms-and-definitions"></a>Носители резервных копий: термины и определения  
   
  **[устройство резервного копирования](../../relational-databases/backup-restore/backup-devices-sql-server.md)**  
- Диск или ленточное устройство, на которые записываются резервные копии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для последующего восстановления. Резервные копии SQL Server можно также записать в службу хранилища больших двоичных объектов Windows Azure, а формат **URL** используется, чтобы указать назначение и имя файла резервной копии. Дополнительные сведения см. в разделе [Резервное копирование и восстановление SQL Server с помощью службы хранилища BLOB-объектов Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
+ Диск или ленточное устройство, на которые записываются резервные копии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для последующего восстановления. Резервные копии SQL Server можно также записать в службу хранилища BLOB-объектов Azure, а формат **URL-адреса** используется, чтобы указать назначение и имя файла резервной копии. Дополнительные сведения см. в разделе [Резервное копирование и восстановление SQL Server с помощью службы хранилища BLOB-объектов Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
   
  **[носитель данных резервной копии](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)**  
  Один или несколько наборов дисков или ленточных устройств, на которые записывается резервная копия.  
@@ -149,7 +149,7 @@ ms.locfileid: "68081442"
   
 -   [Восстановление резервной копии с устройства (SQL Server)](../../relational-databases/backup-restore/restore-a-backup-from-a-device-sql-server.md)  
   
--   [Учебник. Резервное копирование и восстановление SQL Server с помощью службы хранилища BLOB-объектов Microsoft Azure](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+-   [Учебник. Резервное копирование и восстановление SQL Server с помощью службы хранилища BLOB-объектов Azure](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
  **Создание резервной копии**  
   
@@ -172,7 +172,7 @@ ms.locfileid: "68081442"
   
 -   [Использование регулятора ресурсов для ограничения загрузки ЦП при сжатии резервной копии (Transact-SQL)](../../relational-databases/backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)  
   
--   [Учебник. Резервное копирование и восстановление SQL Server с помощью службы хранилища BLOB-объектов Microsoft Azure](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+-   [Учебник. Резервное копирование и восстановление SQL Server с помощью службы хранилища BLOB-объектов Azure](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
 ## <a name="and-more"></a>См. также 
  [Резервное копирование и восстановление баз данных SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   

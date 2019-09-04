@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: cb883990-d875-4d8b-b868-45f9f15ebeae
 author: janinezhang
 ms.author: janinez
-ms.openlocfilehash: 987ce3d90159a83d141a241579e5cbfc727277c8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: eef20d5dce1d76d6870a39e34a3da1404838917f
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68045471"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155178"
 ---
 # <a name="ado-net-destination"></a>Назначение «ADO.NET»
 
@@ -32,7 +32,7 @@ ms.locfileid: "68045471"
 
   Назначение ADO NET загружает данные в различные базы данных, совместимые с [!INCLUDE[vstecado](../../includes/vstecado-md.md)], которые используют таблицу или представление базы данных. Можно загрузить эти данные в существующую таблицу или представление либо создать новую таблицу и загрузить в нее данные.  
   
- Вы можете использовать назначение "ADO.NET" для соединения с [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]. Соединение с базой данных [!INCLUDE[ssSDS](../../includes/sssds-md.md)] с помощью OLE DB не поддерживается. Дополнительные сведения о [!INCLUDE[ssSDS](../../includes/sssds-md.md)]см. в разделе [Общие рекомендации и ограничения (база данных SQL Windows Azure)](https://go.microsoft.com/fwlink/?LinkId=248228).  
+ Вы можете использовать назначение "ADO.NET" для соединения с [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]. Соединение с базой данных [!INCLUDE[ssSDS](../../includes/sssds-md.md)] с помощью OLE DB не поддерживается. Дополнительные сведения о [!INCLUDE[ssSDS](../../includes/sssds-md.md)] см. в статье об [общих рекомендациях и ограничениях Базы данных SQL Azure](https://go.microsoft.com/fwlink/?LinkId=248228).  
   
 ## <a name="troubleshooting-the-ado-net-destination"></a>Устранение неполадок, связанных с назначением «ADO.NET»  
  Вы можете протоколировать вызовы, сделанные назначением «ADO.NET» к внешним поставщикам данных. Эти функции ведения журналов можно использовать для устранения неполадок при сохранении данных во внешних источниках данных, выполняемых назначением ADO NET. Чтобы протоколировать вызовы, выполненные назначением ADO NET к внешнему поставщику данных, необходимо разрешить ведение журнала пакета и выбрать событие **Диагностика** на уровне пакета. Дополнительные сведения см. в разделе [Инструменты устранения неполадок при выполнении пакетов](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md).  
@@ -110,7 +110,7 @@ ms.locfileid: "68045471"
 >  Дополнительные сведения см. в разделе [SET IDENTITY_INSERT (Transact-SQL)](../../t-sql/statements/set-identity-insert-transact-sql.md) и [IDENTITY (свойство) (Transact-SQL)](../../t-sql/statements/create-table-transact-sql-identity-property.md).  
   
 ## <a name="external-resources"></a>Внешние ресурсы  
- Техническая статья [Быстрый способ загрузки данных в базу данных SQL Windows Azure](https://go.microsoft.com/fwlink/?LinkId=244333)на сайте sqlcat.com  
+ Техническая статья о [быстром способе загрузки данных в Базу данных SQL Azure](https://go.microsoft.com/fwlink/?LinkId=244333) на сайте sqlcat.com  
   
 ## <a name="ado-net-destination-editor-mappings-page"></a>Редактор назначения «ADO.NET» (страница «Сопоставления»)
   Страница **Сопоставления** диалогового окна **Редактор назначения «ADO.NET»** используется для сопоставления входных столбцов с целевыми.  

@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: eff36228-710c-4ed5-9af5-95859575dc0f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 4c515da38e0218d1026019b718411a0b56d61c07
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: efbd8b811b9dda44a4cc4609704291b9469edec3
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67940915"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155561"
 ---
 # <a name="back-up-database-media-options-page"></a>Резервное копирование базы данных (страница «Параметры носителя»)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "67940915"
 ## <a name="options"></a>Параметры  
   
 ### <a name="overwrite-media"></a>Перезаписать носитель  
- Параметры панели **Перезаписать носитель** управляют записью резервной копии на носитель. Если выбран URL-адрес (хранилище Windows Azure) в качестве назначения резервного копирования на странице «Общие» в диалоговом окне «Резервное копирование базы данных», то параметры в разделе «Перезаписать носитель» будут отключены. Можно перезаписать резервную копию с помощью инструкции Transact-SQL **BACKUP TO URL. WITH FORMAT**. Дополнительные сведения см. в разделе [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md).  
+ Параметры панели **Перезаписать носитель** управляют записью резервной копии на носитель. Если выбран URL-адрес (служба хранилища Azure) в качестве назначения резервного копирования на странице "Общие" в диалоговом окне "Резервное копирование базы данных", то параметры в разделе "Перезаписать носитель" будут отключены. Можно перезаписать резервную копию с помощью инструкции Transact-SQL **BACKUP TO URL. WITH FORMAT**. Дополнительные сведения см. в разделе [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md).  
 
  Параметр **Перезапись носителя** отключается, если в качества назначения резервного копирования на странице **Общее** выбран параметр **URL-адрес**.
   

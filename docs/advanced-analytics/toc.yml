@@ -79,9 +79,17 @@
       items:
         - name: Учебники по Python
           href: ../advanced-analytics/tutorials/sql-server-python-tutorials.md
-        - name: Создание модели Python с помощью revoscalepy
-          href: ../advanced-analytics/tutorials/use-python-revoscalepy-to-create-model.md
-        - name: Кластеризация клиентов (метод k-средних)
+        - name: Прокат лыж (линейная регрессия)
+          items:
+            - name: 1. Введение
+              href: ../advanced-analytics/tutorials/python-ski-rental-linear-regression.md
+            - name: 2. Подготовка данных
+              href: ../advanced-analytics/tutorials/python-ski-rental-linear-regression-prepare-data.md
+            - name: 3. Обучение модели
+              href: ../advanced-analytics/tutorials/python-ski-rental-linear-regression-train-model.md
+            - name: 4. Развертывание модели
+              href: ../advanced-analytics/tutorials/python-ski-rental-linear-regression-deploy-model.md
+        - name: Категоризация клиентов (кластеризация методом k-средних)
           items:
             - name: 1. Введение
               href: ../advanced-analytics/tutorials/tutorial-python-clustering-model.md
@@ -91,6 +99,8 @@
               href: ../advanced-analytics/tutorials/tutorial-python-clustering-model-build.md
             - name: 4. Развертывание модели
               href: ../advanced-analytics/tutorials/tutorial-python-clustering-model-deploy.md
+        - name: Создание модели Python с помощью revoscalepy
+          href: ../advanced-analytics/tutorials/use-python-revoscalepy-to-create-model.md
         - name: Python для разработчиков SQL
           items:
             - name: 1. Введение

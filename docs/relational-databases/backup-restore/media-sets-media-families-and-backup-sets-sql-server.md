@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 2b8f19a2-ee9d-4120-b194-fbcd2076a489
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a7abc9ffe6cdcc8f33c54ae8ce971330b9f9fee8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 13ae1c4ae17bca661289d044217f63c4bebb9a9c
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68033796"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155581"
 ---
 # <a name="media-sets-media-families-and-backup-sets-sql-server"></a>Наборы носителей, семейства носителей и резервные наборы данных (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "68033796"
   
   В этом разделе приведено описание формата, используемого в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для носителей резервных копий, соответствия между носителями резервных копий и устройствами резервного копирования, организации резервных копий на носителях резервных копий, а также даны некоторые соображения, касающиеся наборов носителей и семейств носителей. Кроме того, в этом разделе описаны шаги инициализации или форматирования носителей резервных копий перед их использованием впервые или использованием для замены старого набора носителей новым набором носителей, а также показано, как перезаписать старые резервные наборы в наборе носителей и как добавить новые резервные наборы к набору носителей.  
   
->**Примечание.** Дополнительные сведения о резервном копировании SQL Server в службу хранилища BLOB-объектов Windows Azure см. в разделе [Резервное копирование и восстановление SQL Server с помощью службы хранилища BLOB-объектов Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
+>**Примечание.** Дополнительные сведения о резервном копировании SQL Server в хранилище BLOB-объектов Azure см. в статье [Резервное копирование и восстановление SQL Server с помощью службы хранилища BLOB-объектов Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
    
 ##  <a name="TermsAndDefinitions"></a> Термины  
  **набор носителей**  

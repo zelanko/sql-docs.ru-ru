@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 2a2f1750-2cda-4dda-9dca-623a96a6b3c0
 author: janinezhang
 ms.author: janinez
-ms.openlocfilehash: 262d28de4c765a6bc6edaf89db52e57a79ff0c85
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e3881b16729a1999b3be47dafd2fec396d495c29
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67901837"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155163"
 ---
 # <a name="ado-net-source"></a>Источник ADO NET
 
@@ -35,7 +35,7 @@ ms.locfileid: "67901837"
 
   Источник ADO NET использует данные поставщика .NET и делает данные доступными для потока данных.  
   
- Вы можете использовать источник ADO NET для подключения к [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]. Соединение с базой данных [!INCLUDE[ssSDS](../../includes/sssds-md.md)] с помощью OLE DB не поддерживается. Дополнительные сведения о [!INCLUDE[ssSDS](../../includes/sssds-md.md)]см. в разделе [Общие рекомендации и ограничения (база данных SQL Windows Azure)](https://go.microsoft.com/fwlink/?LinkId=248228).  
+ Вы можете использовать источник ADO NET для подключения к [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]. Соединение с базой данных [!INCLUDE[ssSDS](../../includes/sssds-md.md)] с помощью OLE DB не поддерживается. Дополнительные сведения о [!INCLUDE[ssSDS](../../includes/sssds-md.md)] см. в статье об [общих рекомендациях и ограничениях Базы данных SQL Azure](https://go.microsoft.com/fwlink/?LinkId=248228).  
   
 ## <a name="data-type-support"></a>Поддержка типов данных  
  Источник преобразует все типы данных, которые не сопоставлены с конкретными типами данных служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , в тип данных служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] DT_NTEXT. Преобразованию подвергаются даже данные типа **System.Object**.  

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: e29061d3-c2ab-4d98-b9be-8e90a11d17fe
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 90dd03d9db824204bc4904e90af4e74055f6fa79
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 19556dc84e916598e63f6df7b101f4f495ac3855
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68076036"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155386"
 ---
 # <a name="create-an-encrypted-backup"></a>Создание зашифрованной резервной копии
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -74,12 +74,12 @@ ms.locfileid: "68076036"
   
  Пример шифрования резервной копии, защищенной с помощью EKM, см. в статье [Расширенное управление ключами с помощью хранилища ключей Azure (SQL Server)](../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md).  
   
-### <a name="backup-to-windows-azure-storage-with-encryption"></a>Резервное копирование в хранилище больших двоичных объектов Windows Azure с шифрованием  
- При создании резервной копии в хранилище Windows Azure с помощью опции **Резервное копирование SQL Server на URL-адрес** шаги шифрования остаются теми же, но в качестве места назначения необходимо использовать URL-адрес, а для проверки подлинности в хранилище Windows Azure — учетные данные SQL. Сведения о настройке [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] с параметрами шифрования см. в статье [Включение управляемого резервного копирования SQL Server в Microsoft Azure](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md).  
+### <a name="backup-to-azure-storage-with-encryption"></a>Резервное копирование в службу хранилища Azure с шифрованием  
+ При создании резервной копии в хранилище Azure с помощью параметра **Резервное копирование SQL Server на URL-адрес** шаги шифрования остаются теми же, но в качестве места назначения необходимо использовать URL-адрес, а для проверки подлинности в хранилище Azure — учетные данные SQL. Сведения о настройке [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] с параметрами шифрования см. в статье [Включение управляемого резервного копирования SQL Server в Microsoft Azure](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md).  
   
  **Предварительные условия.**  
   
--   Учетная запись хранения Windows и контейнер. Дополнительные сведения см. в разделе [Занятие 1. Создание объектов службы хранилища Microsoft Azure](https://msdn.microsoft.com/library/74edd1fd-ab00-46f7-9e29-7ba3f1a446c5).  
+-   Учетная запись хранения Windows и контейнер. Дополнительные сведения см. в разделе [Занятие 1. Создание объектов службы хранилища Azure](https://msdn.microsoft.com/library/74edd1fd-ab00-46f7-9e29-7ba3f1a446c5).  
   
 -   Главный ключ базы данных для базы данных master и сертификат или асимметричный ключ на экземпляре SQL Server. Требования и разрешения шифрования см. в разделе [Backup Encryption](../../relational-databases/backup-restore/backup-encryption.md).  
   

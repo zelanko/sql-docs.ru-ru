@@ -29,12 +29,12 @@ ms.assetid: 01de7476-4b25-4d58-85b7-1118fe64aa80
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: db74b6381962d200242f1db912a18404d67ef06a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5cc065dc6f7b8e5b3d7ac5e84867029c9bd50f0f
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67938899"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155839"
 ---
 # <a name="create-user-transact-sql"></a>CREATE USER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -178,7 +178,7 @@ CREATE USER user_name
  LOGIN *login_name*  
  Указывает имя входа, для которого создается пользователь базы данных. *login_name* должен быть допустимым именем входа на сервере. Может быть именем входа, соответствующим участнику Windows (пользователю или группе) или именем входа для проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Когда это имя входа SQL Server входит в базу данных, оно получает имя и идентификатор создаваемого пользователя базы данных. При создании имени входа, сопоставленного с субъектом Windows, используйте формат **[** _\<domainName\>_ **\\** _\<loginName\>_ **]** . Примеры см. в разделе [Сводка синтаксиса](#SyntaxSummary).  
   
- Если инструкция CREATE USER — единственная инструкция в пакете SQL, то база данных SQL Windows Azure поддерживает предложение WITH LOGIN. Если инструкция CREATE USER не единственная в пакете SQL или выполняется в динамическом коде SQL, предложение WITH LOGIN не поддерживается.  
+ Если CREATE USER является единственной инструкцией в пакете SQL, предложение WITH LOGIN поддерживается в Базе данных SQL Azure. Если инструкция CREATE USER не единственная в пакете SQL или выполняется в динамическом коде SQL, предложение WITH LOGIN не поддерживается.  
   
  WITH DEFAULT_SCHEMA = *schema_name*  
  Указывает первую схему, которую найдет сервер, после того, как он получит имена объектов для пользователя данной базы данных.  

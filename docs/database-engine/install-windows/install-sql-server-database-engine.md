@@ -1,7 +1,7 @@
 ---
 title: Установка ядра СУБД SQL Server | Документы Майкрософт
 ms.custom: ''
-ms.date: 07/24/2019
+ms.date: 07/26/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -12,12 +12,12 @@ ms.assetid: d0876e7f-aa52-4dd7-bd5c-029e2ffded5f
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 787c6b96d9f4bad7372a559a1282fa1252e5e97a
-ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
+ms.openlocfilehash: e50fd6037b10008029d5373348605d11726b6199
+ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68419358"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "70148041"
 ---
 # <a name="install-sql-server-database-engine"></a>Установка ядра СУБД SQL
 
@@ -39,11 +39,15 @@ ms.locfileid: "68419358"
 -   [Репликация SQL Server](../../relational-databases/replication/sql-server-replication.md) ― это необязательный компонент  
 
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions" 
--   [Службы машинного обучения (в базе данных) с использованием R, Python и Java](../../advanced-analytics/install/sql-machine-learning-services-windows-install.md) — это необязательный компонент
+-   [Службы машинного обучения](../../advanced-analytics/install/sql-machine-learning-services-windows-install.md) (R и Python) и [расширения языка](../..//language-extensions/install/install-sql-server-language-extensions-on-windows.md) (Java) — это необязательные компоненты.
 ::: moniker-end
 
-::: monikerRange=">=sql-server-2016 <=sql-server-2017||=sqlallproducts-allversions"
--   [Службы машинного обучения (в базе данных) с использованием R и Python](../../advanced-analytics/install/sql-machine-learning-services-windows-install.md) — это необязательный компонент
+::: monikerRange=">=sql-server-2017 <=sql-server-2017||=sqlallproducts-allversions"
+-   [Службы машинного обучения (в базе данных)](../../advanced-analytics/install/sql-machine-learning-services-windows-install.md) с использованием R и Python — это необязательный компонент.
+::: moniker-end
+
+::: monikerRange=">=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions"
+-   [Службы R (в базе данных)](../../advanced-analytics/install/sql-r-services-windows-install.md) — это необязательный компонент.
 ::: moniker-end
 
 -   Full-Text Search ― это необязательный компонент  

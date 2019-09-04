@@ -24,12 +24,12 @@ helpviewer_keywords:
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-ms.openlocfilehash: 249fb623945c1e086a677268d857f3bb16362a2e
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 110348981ad756b489afcbdb5c098a4c0f290c30
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68811187"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154647"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017-on-linux"></a>Выпуски и поддерживаемые функции SQL Server 2017 в Linux
 
@@ -110,7 +110,7 @@ SQL Server 2017 на Linux поддерживает ядро СУБД SQL Serv
 |Зеркальные резервные копии|Да|нет|нет|нет|
 |Поддержка памяти и ЦП с "горячей" заменой|Да|нет|нет|нет|
 |Зашифрованная резервная копия|Да|Да|нет|нет|
-|Гибридное резервное копирование в Microsoft Azure (резервное копирование на URL-адрес)|Да|Да|нет|нет|
+|Гибридное резервное копирование в Azure (резервное копирование по URL-адресу)|Да|Да|нет|нет|
   
 <sup>1</sup> В выпуске Enterprise количество узлов равно максимуму, поддерживаемому операционной системой. В выпуске Standard поддерживается два узла. 
 

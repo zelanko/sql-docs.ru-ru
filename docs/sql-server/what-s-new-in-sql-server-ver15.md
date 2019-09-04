@@ -1,6 +1,6 @@
 ---
 title: Новые возможности в SQL Server 2019 | Документация Майкрософт
-ms.date: 08/21/2019
+ms.date: 08/28/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: release-landing
@@ -8,12 +8,12 @@ ms.topic: article
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6464f83c8783c6fa82f397b7a30ed068f695e66b
-ms.sourcegitcommit: 8c1c6232a4f592f6bf81910a49375f7488f069c4
+ms.openlocfilehash: 718f0c6c5fa6b517f2b60bbca0f06f58310c6d22
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/26/2019
-ms.locfileid: "70026244"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155483"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>Новые возможности [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]
 
@@ -40,15 +40,12 @@ ms.locfileid: "70026244"
 
 | Новые функции или обновления | Сведения |
 |:---|:---|
-| Масштабируемое решение для больших данных | [Развертывание масштабируемых кластеров](../big-data-cluster/deploy-get-started.md) SQL Server, Spark и контейнеров HDFS, работающих в Kubernetes <br/><br/> Чтение, запись и обработка больших данных из Transact-SQL или Spark<br/><br/> Простое объединение и анализ ценных реляционных данных и больших данных крупного объема<br/><br/>Запрос внешних источников данных<br/><br/>Хранение больших данных в HDFS под управлением SQL Server<br/><br/>Запрос данных из нескольких внешних источников данных через кластер<br/><br/> Использование данных для искусственного интеллекта, машинного обучения и других задач анализа<br/><br/> Развертывание и запуск приложений в [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)] <br/>|
+| Масштабируемое решение для больших данных | [Развертывание масштабируемых кластеров](../big-data-cluster/deploy-get-started.md) SQL Server, Spark и контейнеров HDFS, работающих в Kubernetes <br/><br/> Чтение, запись и обработка больших данных из Transact-SQL или Spark<br/><br/> Простое объединение и анализ ценных реляционных данных и больших данных крупного объема<br/><br/>Запрос внешних источников данных<br/><br/>Хранение больших данных в HDFS под управлением SQL Server<br/><br/>Запрос данных из нескольких внешних источников данных через кластер<br/><br/> Использование данных для искусственного интеллекта, машинного обучения и других задач анализа<br/><br/> Развертывание и запуск приложений в [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)] <br/><br/> Базы данных главного экземпляра SQL Server используют группу доступности Always On.<br/>|
 | &nbsp; | &nbsp; |
 
 Дополнительные сведения см. в разделе [What are SQL Server Big Data Clusters?[!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)]](../big-data-cluster/big-data-cluster-overview.md) (Что собой представляют кластеры больших данных SQL Server).
 
 [[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] Архив объявлений CTP](what-s-new-in-sql-server-ver15-prerelease.md) содержит список функций, объявленных и измененных во всех предыдущих выпусках CTP этой функции.
-
->[!NOTE]
->[!INCLUDE[ssbdc-rcnote](../includes/ssbigdataclusters-ver15-rcnote.md)]
 
 ## <a name="database-engine"></a>Ядро СУБД
 
@@ -242,6 +239,6 @@ ms.locfileid: "70026244"
 
 - [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]: заметки о выпуске](sql-server-ver15-release-notes.md).
 
-- [Microsoft [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]: технический документ](http://info.microsoft.com/rs/157-GQE-382/images/EN-US-CNTNT-white-paper-DBMod-Microsoft-SQL-Server-2019-Technical-white-paper.pdf)<br />Опубликовано в сентябре 2018 г. Применяется к CTP-версии 2.0 Microsoft [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] для контейнеров Windows, Linux и Docker.
+- [Майкрософт [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]: Технический документ](http://info.microsoft.com/rs/157-GQE-382/images/EN-US-CNTNT-white-paper-DBMod-Microsoft-SQL-Server-2019-Technical-white-paper.pdf)<br />Опубликовано в сентябре 2018 г. Применяется к CTP-версии 2.0 Microsoft [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] для контейнеров Windows, Linux и Docker.
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

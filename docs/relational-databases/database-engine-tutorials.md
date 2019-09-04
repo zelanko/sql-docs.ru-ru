@@ -11,12 +11,12 @@ ms.assetid: 32bd8af8-a832-4dc8-afff-01668e6b2b51
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0bf9d15a7816f7e51691146fc0ba927e45b7250f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5e78b5e1efbcc082c49cd80737b35d76cd1aeddb
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68134610"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155502"
 ---
 # <a name="database-engine-tutorials"></a>Учебники по компоненту ядра СУБД
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -46,11 +46,11 @@ ms.locfileid: "68134610"
 [Учебник. Администрирование серверов с помощью управления на основе политик](../relational-databases/policy-based-management/tutorial-administering-servers-by-using-policy-based-management.md)  
 Этот учебник учит создавать политики, которые обеспечивают принудительное выполнение стандартов по администрированию сайта.  
   
-[Учебник. Резервное копирование и восстановление SQL Server с помощью службы хранилища BLOB-объектов Microsoft Azure](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
-В этом учебнике показано, как выполнять резервное копирование и восстановление в SQL Server для службы хранения больших двоичных объектов в Windows Azure.  
+[Учебник. Резервное копирование и восстановление SQL Server с помощью службы хранилища BLOB-объектов Azure](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+В этом руководстве показано, как выполнять резервное копирование и восстановление SQL Server в службу хранилища BLOB-объектов Azure.  
   
 [Учебник. Использование службы хранилища больших двоичных объектов Microsoft Azure с базами данных SQL Server 2016](tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
-С помощью этого учебника вы научитесь напрямую сохранять файлы данных SQL Server в службе хранилища больших двоичных объектов Windows Azure.  
+С помощью этого руководства вы научитесь напрямую сохранять файлы данных SQL Server в службе хранилища BLOB-объектов Azure.  
   
 ## <a name="see-also"></a>См. также:  
 [Учебные материалы по SQL Server 2016](../sql-server/tutorials-for-sql-server-2016.md)  

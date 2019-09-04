@@ -10,12 +10,12 @@ ms.assetid: bf4c4922-80b3-4be3-bf71-228247f97004
 author: craigg-msft
 ms.author: craigg
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: 1fb7e3e0a261c0cf518dda93610b721af14a3472
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 94175594fe2539320941b5a83c1a7aa4b127783f
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68136493"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155688"
 ---
 # <a name="sql-server-2014-release-notes"></a>SQL Server 2014 Release Notes
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -190,7 +190,7 @@ memory-optimized table DLLs.
   
 **Решение:** Если используются хэш-индексы, проверьте запросы и планы запросов, чтобы определить, следует ли выполнять операции поиска в индексе в подмножестве ключей индекса или операции поиска в индексе в предикатах неравенства. Если необходимо осуществлять поиск в подмножестве ключа индекса, то используйте либо индекс NONCLUSTERED, либо индекс HASH именно в тех столбцах, в которых требуется выполнять поиск. Если необходимо осуществлять поиск в предикате неравенства, то вместо индекса HASH используйте индекс NONCLUSTERED.  
   
-#### <a name="failure-when-using-a-memory-optimized-table-and-memory-optimized-table-variable-in-the-same-query-if-the-database-option-readcommittedsnapshot-is-set-to-on"></a>Ошибки при использовании оптимизированной для памяти таблицы и переменной оптимизированной для памяти таблицы в одном запросе, если параметру базы данных READ_COMMITTED_SNAPSHOT присвоено значение ON  
+#### <a name="failure-when-using-a-memory-optimized-table-and-memory-optimized-table-variable-in-the-same-query-if-the-database-option-read_committed_snapshot-is-set-to-on"></a>Ошибки при использовании оптимизированной для памяти таблицы и переменной оптимизированной для памяти таблицы в одном запросе, если параметру базы данных READ_COMMITTED_SNAPSHOT присвоено значение ON  
 **Проблема:** Если параметру базы данных READ_COMMITTED_SNAPSHOT присвоено значение ON и в одном запросе происходит обращение к оптимизированной для памяти таблице и переменной оптимизированной для памяти таблицы вне контекста транзакции пользователя, может возникнуть следующая ошибка:  
   
 ```  
@@ -213,7 +213,7 @@ SET MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT=ON
   
 **Решение:** Нет. Не следует считать верным значение worker_time, указанное в динамических административных представлениях статистики выполнения для краткосрочных запросов из скомпилированных в собственном коде хранимых процедур.  
   
-#### <a name="error-with-showplanxml-for-natively-compiled-stored-procedures-that-contain-long-expressions"></a>Ошибка с SHOWPLAN_XML для скомпилированных в собственном коде хранимых процедур, которые содержат длинные выражения  
+#### <a name="error-with-showplan_xml-for-natively-compiled-stored-procedures-that-contain-long-expressions"></a>Ошибка с SHOWPLAN_XML для скомпилированных в собственном коде хранимых процедур, которые содержат длинные выражения  
 **Проблема:** Если скомпилированная в машинном коде хранимая процедура содержит длинное выражение, получение SHOWPLAN_XML для процедуры с помощью параметра T-SQL SET SHOWPLAN_XML ON или параметра "Показать предполагаемый план выполнения" в Management Studio может привести к возникновению следующей ошибки:  
   
 ```  
@@ -334,10 +334,10 @@ Description:   Report Server (DENALI) cannot connect to the report server databa
   
 Дополнительные сведения см. в разделе [Рекомендации, советы и сведения по устранению неполадок со службами SQL Server 2014 Reporting Services](https://go.microsoft.com/fwlink/?LinkID=391254).  
   
-### <a name="AzureVM"></a>SQL Server 2014 RTM на виртуальных машинах Microsoft Azure  
+### <a name="AzureVM"></a>SQL Server 2014 RTM на виртуальных машинах Azure  
   
-#### <a name="the-add-azure-replica-wizard-returns-an-error-when-configuring-an-availability-group-listener-in-windows-azure"></a>Мастер добавления реплики Azure возвращает ошибку при настройке прослушивателя группы доступности в Microsoft Azure  
-**Проблема:** Если для группы доступности существует прослушиватель, при попытке настроить прослушиватель в Microsoft Azure мастер добавления реплики Azure вернет ошибку.  
+#### <a name="the-add-azure-replica-wizard-returns-an-error-when-configuring-an-availability-group-listener-in-azure"></a>Мастер добавления реплики Azure возвращает ошибку при настройке прослушивателя группы доступности в Azure  
+**Проблема:** Если для группы доступности существует прослушиватель, при попытке настроить его в Azure мастер добавления реплики Azure вернет ошибку.  
   
 Это происходит потому, что прослушиватели групп доступности требуют назначения одного IP-адреса в каждой подсети, в которой размещены реплики группы доступности, включая подсеть Azure.  
   
@@ -345,9 +345,9 @@ Description:   Report Server (DENALI) cannot connect to the report server databa
   
 1.  На странице прослушивателя назначьте свободный статический IP-адрес из подсети Azure, в которой будет размещаться реплика группы доступности, прослушивателю группы доступности.  
   
-    Это решение позволит мастеру завершить добавление реплики в Microsoft Azure.  
+    Это решение позволит мастеру завершить добавление реплики в Azure.  
   
-2.  Когда мастер завершит работу, необходимо будет закончить настройку прослушивателя в Windows Azure, как описано в разделе [Настройка прослушивателя для групп доступности AlwaysOn в Windows Azure](https://msdn.microsoft.com/library/dn376546.aspx)  
+2.  Когда мастер завершит работу, необходимо будет закончить настройку прослушивателя в Azure, как описано в статье [Настройка прослушивателя внутреннего балансировщика нагрузки для групп доступности AlwaysOn в Azure](https://msdn.microsoft.com/library/dn376546.aspx).  
   
 ### <a name="SSAS"></a>Службы Analysis Services (RTM)
   

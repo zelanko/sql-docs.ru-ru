@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9e1d94ce-2c93-45d1-ae2a-2a7d1fa094c4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d3ded19a91aba627a9d69d711a1d1640dc042a56
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: ae4d9cd9333e8dd42582f972a0d19260b2c9a3ee
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893632"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155713"
 ---
 # <a name="quickstart-sql-server-backup-and-restore-to-azure-blob-storage-service"></a>Краткое руководство. Резервное копирование и восстановление SQL Server с помощью службы хранилищ BLOB-объектов Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -90,7 +90,7 @@ GO
 
 
 ## <a name="create-a-sql-server-credential"></a>Создание учетных данных SQL Server
-Учетные данные SQL Server — это объект, который используется для хранения сведений, необходимых для проверки подлинности при подключении к ресурсу вне SQL Server. В данном случае процессы резервного копирования и восстановления SQL Server используют учетные данные для проверки подлинности в службе хранилища BLOB-объектов Windows Azure. Учетные данные хранят имя учетной записи хранилища и значения **ключа доступа** учетной записи хранилища. После создания учетных данных их необходимо указать в параметре WITH CREDENTIAL при выполнении инструкций BACKUP/RESTORE. Дополнительные сведения об учетных данных см. в статье [Учетные данные (ядро СУБД)](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/credentials-database-engine). 
+Учетные данные SQL Server — это объект, который используется для хранения сведений, необходимых для проверки подлинности при подключении к ресурсу вне SQL Server. В этом случае в процессах резервного копирования и восстановления SQL Server используются учетные данные для проверки подлинности в службе хранилища BLOB-объектов Azure. Учетные данные хранят имя учетной записи хранилища и значения **ключа доступа** учетной записи хранилища. После создания учетных данных их необходимо указать в параметре WITH CREDENTIAL при выполнении инструкций BACKUP/RESTORE. Дополнительные сведения об учетных данных см. в статье [Учетные данные (ядро СУБД)](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/credentials-database-engine). 
 
   > [!IMPORTANT]
   > Требования к созданию учетных данных SQL Server, описанные ниже, характерны для процессов резервного копирования SQL Server ([резервное копирование в SQL Server по URL-адресу](backup-restore/sql-server-backup-to-url.md) и [управляемое резервное копирование SQL Server в Microsoft Azure](backup-restore/sql-server-managed-backup-to-microsoft-azure.md)). При доступе к хранилищу Azure для записи или чтения резервных копий SQL Server использует информацию об имени и ключе доступа учетной записи хранения.
@@ -119,8 +119,8 @@ GO
 
 1. Выполните инструкцию для создания учетных данных. 
 
-## <a name="back-up-database-to-the-windows-azure-blob-storage-service"></a>Резервное копирование базы данных в службу хранилища BLOB-объектов Microsoft Azure
-В этом разделе мы выполним полное резервное копирование базы данных в службу хранилища BLOB-объектов Microsoft Azure, используя инструкцию T-SQL. 
+## <a name="back-up-database-to-the-azure-blob-storage-service"></a>Резервное копирование базы данных в службу хранилища BLOB-объектов Azure
+В этом разделе объясняется, как выполнить полное резервное копирование базы данных в службу хранилища BLOB-объектов Azure, используя инструкцию T-SQL. 
 
 1. Подключитесь к SQL Server, используя SQL Server Management Studio. 
 1. Выберите базу данных **SQLTestDB** и откройте окно **нового запроса**. 
@@ -138,7 +138,7 @@ GO
 1. Выполните инструкцию для резервного копирования вашей базы данных SQLTestDB на URL-адрес. 
 
  
-## <a name="restore-database-from-windows-azure-blob-storage-service"></a>Восстановление базы данных из службы хранилища BLOB-объектов Microsoft Azure
+## <a name="restore-database-from-azure-blob-storage-service"></a>Восстановление базы данных из службы хранилища BLOB-объектов Azure
 В этом разделе мы восстановим полную резервную копию базы данных, используя инструкцию T-SQL. 
 
 1. Подключитесь к SQL Server, используя SQL Server Management Studio. 

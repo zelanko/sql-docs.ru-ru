@@ -23,12 +23,12 @@ ms.assetid: 61915bc5-0f5f-45ac-8cfe-3452bc185558
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 367815ef719b9a44462afc41f62e69d3c1f6fb26
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f4fafacc6dc11415ed691fdf64b494daebc8cc64
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68134804"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70176343"
 ---
 # <a name="export-a-data-tier-application"></a>Экспорт приложения уровня данных
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -98,7 +98,7 @@ ms.locfileid: "68134804"
   
 -   **Сохранить на локальный диск** — создает BACPAC-файл в каталоге на локальном компьютере. Нажмите кнопку **Обзор…** для навигации по локальному компьютеру или укажите путь в соответствующем поле. Имя пути должно включать имя файла и расширение BACPAC.  
   
--   **Сохранить в Windows Azure** — создает BACPAC-файл в контейнере Windows Azure. Чтобы проверить этот параметр, необходимо подключиться к контейнеру Windows Azure. Обратите внимание, что для этого параметра также необходимо указать локальный каталог для временного файла. Примите к сведению, что временный файл будет создан в указанном месте и останется там после завершения операции.  
+-   **Сохранить в Azure** — создает BACPAC-файл в контейнере Azure. Чтобы проверить этот параметр, необходимо подключиться к контейнеру Azure. Обратите внимание, что для этого параметра также необходимо указать локальный каталог для временного файла. Примите к сведению, что временный файл будет создан в указанном месте и останется там после завершения операции.  
   
  Чтобы задать подмножество таблиц для экспорта, используйте параметр **Дополнительно** .  
   

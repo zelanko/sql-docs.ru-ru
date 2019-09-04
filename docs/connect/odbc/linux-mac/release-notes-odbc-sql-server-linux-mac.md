@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: v-makouz
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: 5d2587a6150807841edc9773478f1b798ee60d84
-ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
+ms.openlocfilehash: a22cf1c2da261805309c8ac223a8535afbcd34d1
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68742813"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70152740"
 ---
 # <a name="release-notes-for-the-microsoft-odbc-driver-to-sql-server-on-linux-and-macos"></a>Заметки о выпуске Microsoft ODBC Driver for SQL Server в Linux и macOS
 
@@ -35,7 +35,7 @@ NOW NEW FILE NAME:    linux-mac/release-notes-odbc-sql-server-linux-mac.md
 Thank you.
 GeneMi.  2019/04/03.
 -->
-## <a name="174-august-2019"></a>17,4, Август 2019
+## <a name="174-august-2019"></a>17.4, август 2019 г.
 
 | Добавленная возможность | Сведения |
 | :------------ | :------ |
@@ -133,6 +133,6 @@ GeneMi.  2019/04/03.
 
 Драйвер ODBC для Linux поддерживает [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]. Дополнительные сведения см. в статье [Поддержка высокой доступности и аварийного восстановления в драйвере ODBC для Linux](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md).  
 
-Драйвер ODBC для Linux поддерживает подключения к Базе данных SQL Microsoft Azure. Дополнительные сведения см. в статье [Практическое руководство. Подключение к Базе данных Azure SQL Windows с помощью ODBC](https://msdn.microsoft.com/library/hh974312.aspx).  
+Драйвер ODBC для Linux поддерживает подключения к Базе данных SQL Microsoft Azure. Дополнительные сведения см. в статье [Практическое руководство. Подключение к Базе данных Azure SQL с помощью ODBC](https://msdn.microsoft.com/library/hh974312.aspx).  
 
 В `bcp` добавлен параметр `-l` (время ожидания входа). Дополнительные сведения см. в статье [Подключение с помощью **bcp**](../../../connect/odbc/linux-mac/connecting-with-bcp.md).

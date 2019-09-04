@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 38ffd9c2-18a5-43d2-b674-e425addec4e4
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 2c423f3df3f2dce99caa8ec085ab12f5eac8060c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a658c990296de88ebdf8f9d3fb6373ea6a9a2c18
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68127163"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70153104"
 ---
 # <a name="sql-server-data-files-in-microsoft-azure"></a>Файлы данных SQL Server в Microsoft Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "68127163"
 ## <a name="concepts-and-requirements"></a>Основные понятия и требования  
   
 ### <a name="azure-storage-concepts"></a>Основные понятия хранения  
- При использовании компонента SQL Server Data Files в Windows Azure необходимо создать учетную запись хранилища и контейнер в Windows Azure. Затем необходимо создать учетные данные SQL Server, которые включают сведения о политике контейнера, а также подпись общего доступа, необходимую для доступа к контейнеру.  
+ При использовании компонента SQL Server Data Files в Azure необходимо создать учетную запись хранения и контейнер в Azure. Затем необходимо создать учетные данные SQL Server, которые включают сведения о политике контейнера, а также подпись общего доступа, необходимую для доступа к контейнеру.  
   
  В [Microsoft Azure](https://azure.microsoft.com)учетная запись [хранилища Azure](https://azure.microsoft.com/services/storage/) представляет наивысший уровень пространства имен для доступа к большим двоичным объектам. Учетная запись хранения может содержать сколько угодно контейнеров при условии, что их общий размер не превышает размер хранилища. Последнюю информацию относительно ограничений хранилища смотрите в [Подписка и Ограничения Хранилища Azure, Квоты и Ограничения](https://docs.microsoft.com/azure/azure-subscription-service-limits). Контейнер группирует набор [больших двоичных объектов](https://docs.microsoft.com/azure/storage/common/storage-introduction#blob-storage). Все большие двоичные объекты должны находиться в контейнере. Учетная запись может содержать неограниченное количество контейнеров. В контейнере также может храниться неограниченное количество больших двоичных объектов. Существует два типа больших двоичных объектов, которые можно хранить в хранилище Azure: блочные и страничные. Страничные BLOB-объекты более эффективны, когда в файле часто изменяются диапазоны байтов. К большим двоичным объектам можно обращаться по URL-адресам в следующем формате: `https://storageaccount.blob.core.windows.net/<container>/<blob>`.  
   
@@ -124,7 +124,7 @@ ON
  Используйте командлеты PowerShell для хранения файлов данных SQL Server в службе хранилища больших двоичных объектов Azure, указывая URL-адрес хранилища вместо пути к файлу. Обращайтесь к большим двоичным объектам по URL-адресам в следующем формате: `https://storageaccount.blob.core.windows.net/<container>/<blob>`.  
   
 ### <a name="sql-server-object-and-performance-counters-support"></a>Поддержка объектов SQL Server и счетчиков производительности  
- Начиная с SQL Server 2014, добавлен новый объект SQL Server для использования с компонентом SQL Server Data Files в службе хранилища Azure. Новый объект SQL Server вызывается как [SQL Server, HTTP_STORAGE_OBJECT](../../relational-databases/performance-monitor/sql-server-http-storage-object.md) и может использоваться системным монитором для отслеживания действий, выполняемых при работе SQL Server со службой хранилища Microsoft Azure.  
+ Начиная с SQL Server 2014, добавлен новый объект SQL Server для использования с компонентом SQL Server Data Files в службе хранилища Azure. Новый объект SQL Server вызывается как [SQL Server, HTTP_STORAGE_OBJECT](../../relational-databases/performance-monitor/sql-server-http-storage-object.md) и может использоваться системным монитором для отслеживания действий, выполняемых при работе SQL Server со службой хранилища Azure.  
   
 ### <a name="sql-server-management-studio-support"></a>Поддержка среды SQL Server Management Studio  
  Среда SQL Server Management Studio позволяет использовать этот компонент с помощью нескольких диалоговых окон. Можно ввести URL-адрес контейнера хранилища, например https://teststorageaccnt.blob.core.windows.net/testcontainer/:

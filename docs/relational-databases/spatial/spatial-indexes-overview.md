@@ -12,12 +12,12 @@ ms.assetid: b1ae7b78-182a-459e-ab28-f743e43f8293
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9094f5335fc3978ba2e5018873dc2cdd8b455347
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a19d934fcc8b6d190b762b170117722fe4e29b6e
+ms.sourcegitcommit: 00350f6ffb73c2c0d99beeded61c5b9baa63d171
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68048476"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70190421"
 ---
 # <a name="spatial-indexes-overview"></a>Общие сведения о пространственных индексах
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -123,10 +123,10 @@ ms.locfileid: "68048476"
 >  Параметр **tessellation_scheme** пространственного индекса можно найти в представлении каталога [sys.spatial_index_tessellations](../../relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql.md) .  
   
 #### <a name="geometry-grid-tessellation-scheme"></a>Схема тесселяции сетки геометрических объектов  
- Тесселяция GEOMETRY_AUTO_GRID используется по умолчанию для типа данных **geometry** в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и более поздних версиях.  Схема тесселяции GEOMETRY_GRID является единственной доступной для геометрических типов данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. В этом разделе рассматриваются аспекты тесселяции сетки геометрических объектов, релевантные для пространственных индексов: поддерживаемые методы и ограничивающие прямоугольники.  
+ Тесселяция GEOMETRY_AUTO_GRID используется по умолчанию для типа данных **geometry** в [!INCLUDE[ssNoVersion](../../includes/sssql11-md.md)] и более поздних версиях.  Схема тесселяции GEOMETRY_GRID является единственной доступной для геометрических типов данных в [!INCLUDE[ssNoVersion](../../includes/sskatmai-md.md)]. В этом разделе рассматриваются аспекты тесселяции сетки геометрических объектов, релевантные для пространственных индексов: поддерживаемые методы и ограничивающие прямоугольники.  
   
 > [!NOTE]  
->  Эту схему тесселяции можно задать явным образом с помощью предложения USING (GEOMETRY_AUTO_GRID/GEOMETRY_GRID) инструкции [CREATE SPATIAL INDEX](../../t-sql/statements/create-spatial-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] .  
+>  Эту схему тесселяции можно задать явным образом с помощью предложения USING (GEOMETRY_AUTO_GRID/GEOMETRY_GRID) инструкции [CREATE SPATIAL INDEX](../../t-sql/statements/create-spatial-index-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 ##### <a name="the-bounding-box"></a>Ограничивающий прямоугольник  
  Геометрические данные занимают плоскость, которая может быть бесконечной. Однако в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]для пространственного индекса требуется конечное пространство. Для определения конечного пространства для декомпозиции схеме тесселяции сетки геометрических объектов требуется *ограничивающий прямоугольник*. Ограничивающий прямоугольник определяется четырьмя координатами **(** _x-min_ **,** _y-min_ **)** и **(** _x-max_ **,** _y-max_ **)** , которые хранятся в виде свойств пространственного индекса. Эти координаты представляют следующее.  

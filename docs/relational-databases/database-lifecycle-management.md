@@ -10,7 +10,7 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Data sync
 - SQL Database
-- Windows Azure Training Kit
+- Azure Training Kit
 - Database development
 - Database backup
 - Database connection management
@@ -18,7 +18,7 @@ helpviewer_keywords:
 - Backup and restore
 - Database import and export
 - SQL Data Sync
-- Windows Azure Service Dashboard
+- Azure Service Dashboard
 - SQL Server Management Studio
 - Database management
 - Database export
@@ -31,12 +31,12 @@ ms.assetid: 91da13a4-0eea-4e88-b608-dada881ff5f2
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 39045b1fae3920c0c173d4e1d3419b0d0ad41fe1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9ed1f0716e3919e88ad7dfd1ae6c54f8e702761f
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68134601"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155485"
 ---
 # <a name="database-lifecycle-management"></a>Управление жизненным циклом базы данных
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -47,10 +47,10 @@ ms.locfileid: "68134601"
  Полностью этот раздел можно прочитать по адресу: [Управление жизненным циклом баз данных](https://go.microsoft.com/fwlink/?LinkId=276949).  
   
 ## <a name="see-also"></a>См. также:  
- [Домашняя страница Windows Azure](https://www.windowsazure.com/)   
- [Центр разработчиков Windows Azure](https://www.windowsazure.com/develop/overview/)   
- [Центр управления Windows Azure](https://www.windowsazure.com/manage/overview/)   
- [Блог рабочей группы по Windows Azure](https://www.windowsazure.com/community/blog/)   
- [Возможности поддержки Windows Azure](https://www.windowsazure.com/support/contact/)  
+ [Домашняя страница Azure](https://www.windowsazure.com/)   
+ [Центр разработчиков Azure](https://www.windowsazure.com/develop/overview/)   
+ [Центр управления Azure](https://www.windowsazure.com/manage/overview/)   
+ [Блог группы разработки Azure](https://www.windowsazure.com/community/blog/)   
+ [Варианты поддержки Azure](https://www.windowsazure.com/support/contact/)  
   
   

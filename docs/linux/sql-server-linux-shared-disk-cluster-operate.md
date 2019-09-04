@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: a29d1d61b628126d03458fced964bde7c92b6d68
-ms.sourcegitcommit: 71b9ebb511c68e0c9cb32a860a443803d2cb58f5
+ms.openlocfilehash: 0da3a3225e3ef47bd4a38d1ccbcc2d074d543a55
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "68032296"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154571"
 ---
 # <a name="operate-failover-cluster-instance---sql-server-on-linux"></a>Работа экземпляра отказоустойчивого кластера — SQL Server на Linux
 
@@ -30,10 +30,10 @@ ms.locfileid: "68032296"
 
 Способ отработки отказа зависит от дистрибутива Linux. Следуйте инструкциям для дистрибутива Linux.
 
-- [RHEL или Ubuntu](#-manual-failover-rhel-or-ubuntu)
-- [SLES](#-manual-failover-sles)
+- [RHEL или Ubuntu](#manual-failover-rhel-or-ubuntu)
+- [SLES](#manual-failover-sles)
 
-## <a name = "#-manual-failover-rhel-or-ubuntu"></a> Отработка отказа вручную (RHEL или Ubuntu)
+## <a name="manual-failover-rhel-or-ubuntu"></a>Отработка отказа вручную (RHEL или Ubuntu)
 
 Чтобы выполнить отработку отказа вручную, на серверах Red Hat Enterprise Linux (RHEL) или Ubuntu выполните приведенные далее действия.
 1.  Выполните следующую команду: 
@@ -54,7 +54,7 @@ ms.locfileid: "68032296"
 
 \<FCIResourceName> — имя ресурса Pacemaker для экземпляра FCI. 
 
-## <a name = "#-manual-failover-sles"></a> Отработка отказа вручную (SLES)
+## <a name="manual-failover-sles"></a>Отработка отказа вручную (SLES)
 
 
 Чтобы выполнить отработку отказа экземпляра FCI SQL Server вручную, в Suse Linux Enterprise Server (SLES) запустите команду `migrate`. Пример:

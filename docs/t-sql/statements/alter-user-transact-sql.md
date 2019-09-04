@@ -25,12 +25,12 @@ ms.assetid: 344fc6ce-a008-47c8-a02e-47fae66cc590
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f15ddbb8a8a58fad194750ad88f36b397aba1d22
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3ae71b89e4dff780e8d01aa137b020665a9c8602
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67911767"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155649"
 ---
 # <a name="alter-user-transact-sql"></a>ALTER USER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -114,7 +114,7 @@ ALTER USER userName
  LOGIN **=** _loginName_  
  Сопоставляет пользователя с другим именем входа, заменив идентификатор безопасности пользователя для соответствия идентификатору безопасности имени входа.  
   
- Если инструкция ALTER USER — единственная в пакете SQL, то база данных SQL Windows Azure поддерживает предложение WITH LOGIN. Если инструкция ALTER USER не единственная в пакете SQL или выполняется в динамическом коде SQL, предложение WITH LOGIN не поддерживается.  
+ Если ALTER USER является единственной инструкцией в пакете SQL, предложение WITH LOGIN поддерживается в Базе данных SQL Azure. Если инструкция ALTER USER не единственная в пакете SQL или выполняется в динамическом коде SQL, предложение WITH LOGIN не поддерживается.  
   
  NAME **=** _newUserName_  
  Задает новое имя для этого пользователя. Аргумент *newUserName* еще не должен существовать в текущей базе данных.  

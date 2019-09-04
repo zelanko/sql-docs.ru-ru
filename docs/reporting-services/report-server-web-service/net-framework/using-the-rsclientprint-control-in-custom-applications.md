@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8c0bdd18-8905-4e22-9774-a240fc81a8a7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b0da6d086754b63a2d796c4f7ff8e1b7fd2d2cad
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5304a540e3f1af6930e982ceaff01063a7c0f432
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63249812"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155724"
 ---
 # <a name="using-the-rsclientprint-control-in-custom-applications"></a>Использование элемента управления RSClientPrint в пользовательских приложениях
   Элемент управления [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ActiveX **RSPrintClient** обеспечивает работу функций печати отчетов в средстве просмотра HTML-страниц на стороне клиента. Он отображает диалоговое окно **Печать**, в котором просматривается отчет, указываются номера и изменяются поля печатаемых страниц, а также запускается задание на печать. При выполнении операции печати на стороне клиента сервер отчетов подготавливает отчет с помощью модуля подготовки отчетов в графическом формате (EMF), создает задание на печать и отправляет его на принтер с помощью средств операционной системы.  
@@ -91,7 +91,7 @@ ms.locfileid: "63249812"
   
 -   60677965-AB8B-464f-9B04-4BA871A2F17F  
   
- При выполнении отчета в Windows Azure SQL Reporting используются следующие значения CLSID.  
+ При выполнении отчета в Azure SQL Reporting используются следующие значения CLSID.  
   
 -   3DD32426-554D-48C0-A200-65D3BF880E38  
   

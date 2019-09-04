@@ -1,5 +1,6 @@
 ---
-title: Диспетчер подключений ADO.NET | Документы Майкрософт
+title: Диспетчер подключений ADO.NET | Документация Майкрософт
+description: Диспетчер подключений ADO.NET позволяет пакету обращаться к источникам данных с помощью поставщика .NET.
 ms.custom: ''
 ms.date: 05/24/2019
 ms.prod: sql
@@ -16,28 +17,28 @@ helpviewer_keywords:
 ms.assetid: fc5daa2f-0159-4bda-9402-c87f1035a96f
 author: janinezhang
 ms.author: janinez
-ms.openlocfilehash: b3856f1f651db485aa9e54758c2d2a92ebf2ea0a
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.openlocfilehash: 43348955140600ca174781beed4adc1089ee5add
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69028781"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155184"
 ---
 # <a name="adonet-connection-manager"></a>Диспетчер соединений ADO.NET
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  Диспетчер соединений [!INCLUDE[vstecado](../../includes/vstecado-md.md)] позволяет пакету обращаться к источникам данных с помощью поставщика .NET. Чаще всего этот диспетчер используется для доступа к таким источникам данных, как [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], а также к источникам данных, предоставляемым посредством OLE DB и XML в пользовательских задачах, написанных на управляемом коде, например коде языка C#.  
+Диспетчер соединений [!INCLUDE[vstecado](../../includes/vstecado-md.md)] позволяет пакету обращаться к источникам данных с помощью поставщика .NET. Как правило, этот диспетчер подключений используется для получения доступа к таким источникам данных, как [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Кроме того, он обеспечивает доступ к источникам данных, предоставляемым посредством OLE DB и XML в пользовательских задачах, которые реализованы с помощью управляемого кода с использованием таких языков, как C#.  
   
- Если добавить к пакету диспетчер соединений служб [!INCLUDE[vstecado](../../includes/vstecado-md.md)] , [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] creates a connection manager that is resolved as an [!INCLUDE[vstecado](../../includes/vstecado-md.md)] connection at run time, sets the connection manager properties, and adds the connection manager to the **Connections** collection on the package.  
+При добавлении диспетчера подключений [!INCLUDE[vstecado](../../includes/vstecado-md.md)] к пакету [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] создает диспетчер подключений, который разрешается как подключение [!INCLUDE[vstecado](../../includes/vstecado-md.md)] во время выполнения. При этом задается свойство диспетчера подключений и диспетчер подключений добавляется в коллекцию **подключений** пакета.  
   
- Свойству **ConnectionManagerType** диспетчера соединений присваивается значение **ADO.NET**. Значение **ConnectionManagerType** уточняется: в него включается имя поставщика .NET, используемого диспетчером соединений.  
+Свойству `ConnectionManagerType` диспетчера соединений присваивается значение `ADO.NET`. Значение `ConnectionManagerType` уточняется: в него включается имя поставщика .NET, используемого диспетчером соединений.  
   
-## <a name="adonet-connection-manager-troubleshooting"></a>Устранение неполадок, связанных с диспетчером соединений ADO.NET  
- В журнал можно записывать вызовы, сделанные диспетчером соединений [!INCLUDE[vstecado](../../includes/vstecado-md.md)] к внешним источникам данных. Эта возможность протоколирования может быть использована для устранения неполадок соединений, которые устанавливаются диспетчером соединений [!INCLUDE[vstecado](../../includes/vstecado-md.md)] с внешними источниками данных. Чтобы протоколировать вызовы, которые диспетчер соединений [!INCLUDE[vstecado](../../includes/vstecado-md.md)] совершает к внешним поставщикам данных, необходимо разрешить ведение журнала пакета и выбрать событие **Диагностика** на уровне пакета. Дополнительные сведения см. в разделе [Инструменты устранения неполадок при выполнении пакетов](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md).  
+## <a name="adonet-connection-manager-troubleshooting"></a>Устранение неполадок с диспетчером подключений ADO.NET  
+В журнал можно записывать вызовы, сделанные диспетчером соединений [!INCLUDE[vstecado](../../includes/vstecado-md.md)] к внешним источникам данных. Это позволяет устранять неполадки с подключением к внешним источникам данных, которые устанавливаются диспетчером подключений [!INCLUDE[vstecado](../../includes/vstecado-md.md)]. Чтобы протоколировать вызовы диспетчера подключений [!INCLUDE[vstecado](../../includes/vstecado-md.md)] к внешним поставщикам данных, необходимо разрешить ведение журнала пакета и выбрать событие **Диагностика** на уровне пакета. Дополнительные сведения см. в разделе [Инструменты устранения неполадок при выполнении пакетов](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md).  
   
- При чтении данных диспетчером соединений [!INCLUDE[vstecado](../../includes/vstecado-md.md)] данные определенных типов данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] формируют результаты, показанные в следующей таблице.  
+При чтении данных диспетчером подключений [!INCLUDE[vstecado](../../includes/vstecado-md.md)] определенные типы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] формируют результаты, показанные в приведенной ниже таблице.  
   
 |Тип данных SQL Server|Результат|  
 |--------------------------|------------|  
@@ -47,10 +48,9 @@ ms.locfileid: "69028781"
 > [!NOTE]  
 >  Дополнительные сведения о типах данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и их сопоставлении с типами данных [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] см. в разделе [Типы данных (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md) и [Типы данных службы Integration Services](../../integration-services/data-flow/integration-services-data-types.md).  
   
-## <a name="adonet-connection-manager-configuration"></a>Настройка диспетчера соединений ADO.NET  
- Диспетчер соединений [!INCLUDE[vstecado](../../includes/vstecado-md.md)] можно настроить следующими способами:  
+## <a name="adonet-connection-manager-configuration"></a>Настройка диспетчера подключений ADO.NET  
   
- Значения свойств можно задавать с помощью конструктора [!INCLUDE[ssIS](../../includes/ssis-md.md)] или программными средствами.  
+Значения свойств можно задавать с помощью конструктора [!INCLUDE[ssIS](../../includes/ssis-md.md)] или программными средствами.  
   
 -   Предоставьте специальную строку подключения, настроенную таким образом, чтобы удовлетворить требования выбранного поставщика .NET.  
   
@@ -58,43 +58,41 @@ ms.locfileid: "69028781"
   
 -   Предоставьте безопасные учетные данные, соответствующие выбранному поставщику.  
   
--   Обозначает, будет ли соединение, созданное из диспетчера соединений, сохранено во время выполнения.  
+-   Укажите, сохраняется ли в среде выполнения подключение, созданное диспетчером подключений.  
   
- Многие параметры конфигурации диспетчера соединений [!INCLUDE[vstecado](../../includes/vstecado-md.md)] зависят от используемого им поставщика .NET.  
+Многие параметры конфигурации диспетчера соединений [!INCLUDE[vstecado](../../includes/vstecado-md.md)] зависят от используемого им поставщика .NET.  
   
- Дополнительные сведения о свойствах, которые можно задать в конструкторе служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] , см. в следующих разделах:  
-  
--   [Настройка диспетчера подключений ADO.NET](../../integration-services/connection-manager/configure-ado-net-connection-manager.md)  
+Дополнительные сведения о свойствах, которые можно задавать в конструкторе [!INCLUDE[ssIS](../../includes/ssis-md.md)], см. в [следующем разделе](../../integration-services/connection-manager/configure-ado-net-connection-manager.md).  
   
  Дополнительные сведения о программной настройке диспетчера подключений см. в разделах <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> и [Добавление соединений программным образом](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md).  
   
-## <a name="configure-adonet-connection-manager"></a>настройка диспетчера соединений ADO.NET
-  Диалоговое окно **Настройка диспетчера соединений ADO.NET** используется для добавления соединения с источником данных, доступ к которому будет осуществляться с помощью поставщика данных .NET Framework, например поставщиком SqlClient. Диспетчер соединений использует существующее соединение, либо можно создать новое.  
+### <a name="configure-adonet-connection-manager"></a>Настройка диспетчера подключений ADO.NET
+С помощью диалогового окна **Настройка диспетчера соединений OLE DB** можно добавлять подключения к источнику данных, доступ к которому можно осуществлять с помощью поставщика данных .NET Framework. Например, с помощью поставщика SqlClient. Диспетчер соединений использует существующее соединение, либо можно создать новое.  
   
  Дополнительные сведения о диспетчере соединений ADO.NET см. в разделе [ADO.NET Connection Manager](../../integration-services/connection-manager/ado-net-connection-manager.md).  
   
-### <a name="options"></a>Параметры  
- **Подключения к данным**  
- Выберите из списка существующее подключение к данным ADO.NET.  
+#### <a name="options"></a>Параметры  
+**Подключения к данным**  
+Выберите из списка существующее подключение к данным ADO.NET.  
   
- **Свойства подключения к данным**  
- Просмотрите свойства и значения выбранного подключения к данным ADO.NET.  
+**Свойства подключения к данным**  
+Просмотрите свойства и значения выбранного подключения к данным ADO.NET.  
   
- **Создать**  
- Создание подключения к данным ADO.NET с помощью диалогового окна **Диспетчер соединений** .  
+**Создать**  
+Создание подключения к данным ADO.NET с помощью диалогового окна **Диспетчер соединений** .  
   
- **Удаление**  
- Выберите соединение и затем удалите его, используя кнопку **Удалить** .  
+**Удаление**  
+Выберите подключение и затем удалите его, щелкнув **Удалить**.  
   
-### <a name="managed-identities-for-azure-resources-authentication"></a>Управляемые удостоверения для проверки подлинности ресурсов Azure
-При выполнении пакетов SSIS в [среде Azure-SSIS Integration Runtime фабрики данных Azure](https://docs.microsoft.com/azure/data-factory/concepts-integration-runtime#azure-ssis-integration-runtime) вы можете использовать [управляемое удостоверение](https://docs.microsoft.com/azure/data-factory/connector-azure-sql-database#managed-identity), связанное с вашей фабрикой данных, для проверки подлинности базы данных SQL Azure (или управляемого экземпляра). С помощью этого удостоверения назначенная фабрика может обращаться к данным и копировать их из вашей базы данных или в нее.
+#### <a name="managed-identities-for-azure-resources-authentication"></a>Управляемые удостоверения для проверки подлинности ресурсов Azure
+При выполнении пакетов служб SSIS в [Azure-SSIS Integration Runtime в Фабрике данных Azure](https://docs.microsoft.com/azure/data-factory/concepts-integration-runtime#azure-ssis-integration-runtime) вы можете использовать [управляемое удостоверение](https://docs.microsoft.com/azure/data-factory/connector-azure-sql-database#managed-identity), связанное с вашей фабрикой данных, для проверки подлинности Базы данных SQL Azure (или управляемого экземпляра). С помощью этого удостоверения назначенная фабрика может обращаться к данным и копировать их из вашей базы данных или в нее.
 
 > [!NOTE]
->  При использовании проверки подлинности Azure AD (включая проверку подлинности с помощью управляемого удостоверения) для подключения к Базе данных SQL Azure (или к управляемому экземпляру) возникают известные проблемы, которые могут привести к сбою при выполнении пакета или непредвиденному изменению в поведении. Дополнительные сведения см. в разделе о [функциях и ограничениях Azure AD](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication#azure-ad-features-and-limitations).
+>  При использовании проверки подлинности Azure Active Directory (Azure AD), включая проверку подлинности с помощью управляемого удостоверения, для подключения к Базе данных SQL Azure (или к управляемому экземпляру) могут возникнуть проблемы, связанные со сбоем при выполнении пакета или непредвиденным изменением поведения. Дополнительные сведения см. в разделе о [функциях и ограничениях Azure AD](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication#azure-ad-features-and-limitations).
 
 Чтобы использовать проверку подлинности управляемого удостоверения для базы данных SQL Azure, выполните следующие действия для настройки базы данных:
 
-1. **Создайте группу в Azure AD**. Сделайте управляемое удостоверение членом группы.
+1. Создайте группу в Azure AD. Сделайте управляемое удостоверение членом группы.
     
    1. [Найдите управляемое удостоверение фабрики данных на портале Microsoft Azure](https://docs.microsoft.com/azure/data-factory/data-factory-service-identity). Перейдите к разделу **Свойства** своей фабрики данных. Скопируйте **идентификатор объекта управляемого удостоверения**.
     
@@ -104,60 +102,60 @@ ms.locfileid: "69028781"
       Add-AzureAdGroupMember -ObjectId $Group.ObjectId -RefObjectId "<your data factory managed identity object ID>"
       ```
     
-1. **[Подготовьте администратора Azure Active Directory](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure#provision-an-azure-active-directory-administrator-for-your-azure-sql-database-server)** для своего сервера SQL Azure на портале Microsoft Azure, если вы еще этого не сделали. Администратор Azure AD может быть пользователем Azure AD или группой Azure AD. Если вы предоставляете группе с управляемым удостоверением роль администратора, пропустите шаги 3 и 4. Администратор будет иметь полный доступ к базе данных.
+1. [Подготовьте администратора Azure Active Directory](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure#provision-an-azure-active-directory-administrator-for-your-azure-sql-database-server) для своего сервера SQL Azure на портале Azure, если вы еще этого не сделали. Администратор Azure AD может быть пользователем Azure AD или группой Azure AD. Если вы предоставляете группе с управляемым удостоверением роль администратора, пропустите шаги 3 и 4. Администратор будет иметь полный доступ к базе данных.
 
-1. **[Создайте пользователей автономной базы данных](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure#create-contained-database-users-in-your-database-mapped-to-azure-ad-identities)** для группы Azure AD. Подключитесь к базе данных, откуда или куда вы хотите скопировать данные с помощью таких средств, как SSMS, с используя удостоверение Azure AD, которое имеет по меньшей мере разрешение ALTER ANY USER. Выполните следующий код T-SQL: 
+1. [Создайте пользователей автономной базы данных](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure#create-contained-database-users-in-your-database-mapped-to-azure-ad-identities) для группы Azure AD. Подключитесь к базе данных, откуда или куда вы хотите скопировать данные с помощью таких средств, как SSMS, с используя удостоверение Azure AD, которое имеет по меньшей мере разрешение ALTER ANY USER. Выполните следующий код T-SQL: 
     
     ```sql
     CREATE USER [your AAD group name] FROM EXTERNAL PROVIDER;
     ```
 
-1. **Предоставьте группе Azure AD необходимые разрешения**, как обычно делаете это для пользователей SQL и других лиц. Сведения о соответствующих ролях см. в статье [Роли уровня базы данных](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles). Например, выполните следующий код:
+1. Предоставьте группе Azure AD необходимые разрешения, как это обычно делается для пользователей SQL и других служб. Сведения о соответствующих ролях см. в статье [Роли уровня базы данных](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles). Например, выполните следующий код:
 
     ```sql
     ALTER ROLE [role name] ADD MEMBER [your AAD group name];
     ```
 
-Чтобы использовать проверку подлинности управляемого удостоверения для Управляемого экземпляра базы данных SQL Azure, выполните следующие действия для настройки базы данных:
+Чтобы использовать проверку подлинности с помощью управляемого удостоверения для управляемого экземпляра Базы данных SQL Azure, выполните следующие действия по настройке базы данных:
     
-1. **[Подготовьте администратора Azure Active Directory](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure#provision-an-azure-active-directory-administrator-for-your-managed-instance)** для своего управляемого экземпляра на портале Microsoft Azure, если вы еще этого не сделали. Администратор Azure AD может быть пользователем Azure AD или группой Azure AD. Если вы предоставляете группе с управляемым удостоверением роль администратора, пропустите шаги 2–5. Администратор будет иметь полный доступ к базе данных.
+1. [Подготовьте администратора Azure Active Directory](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure#provision-an-azure-active-directory-administrator-for-your-managed-instance) для своего управляемого экземпляра на портале Azure, если вы еще этого не сделали. Администратор Azure AD может быть пользователем Azure AD или группой Azure AD. Если вы предоставляете группе с управляемым удостоверением роль администратора, пропустите шаги 2–5. Администратор будет иметь полный доступ к базе данных.
 
-1. **[Найдите управляемое удостоверение фабрики данных на портале Microsoft Azure](https://docs.microsoft.com/azure/data-factory/data-factory-service-identity)** . Перейдите к разделу **Свойства** своей фабрики данных. Скопируйте **идентификатор приложения управляемого удостоверения** (не **идентификатор объекта управляемого удостоверения**).
+1. [Найдите управляемое удостоверение фабрики данных на портале Microsoft Azure](https://docs.microsoft.com/azure/data-factory/data-factory-service-identity). Перейдите к разделу **Свойства** своей фабрики данных. Скопируйте **идентификатор приложения управляемого удостоверения** (не **идентификатор объекта управляемого удостоверения**).
 
-1. **Преобразуйте управляемое удостоверение фабрики данных в двоичный тип**. Подключитесь к базе данных **master** в своем управляемом экземпляре с помощью таких средств, как SSMS, используя свою учетную запись администратора SQL/Active Directory. Выполните следующий код T-SQL для базы данных **master**, чтобы получить идентификатор приложения управляемого удостоверения в двоичном формате:
+1. Преобразуйте управляемое удостоверение фабрики данных в двоичный тип. Подключитесь к базе данных **master** в своем управляемом экземпляре с помощью таких средств, как SSMS, используя свою учетную запись администратора SQL или Active Directory. Выполните следующий код T-SQL для базы данных **master**, чтобы получить идентификатор приложения управляемого удостоверения в двоичном формате:
     
     ```sql
     DECLARE @applicationId uniqueidentifier = '{your managed identity application ID}'
     select CAST(@applicationId AS varbinary)
     ```
 
-1. **Добавьте управляемое удостоверение фабрики данных в качестве пользователя** в Управляемый экземпляр базы данных SQL Azure. Запустите следующий код T-SQL для базы данных **master**:
+1. Добавьте управляемое удостоверение фабрики данных в качестве пользователя в управляемый экземпляр Базы данных SQL Azure. Запустите следующий код T-SQL для базы данных **master**:
     
     ```sql
     CREATE LOGIN [{a name for the managed identity}] FROM EXTERNAL PROVIDER with SID = {your managed identity application ID as binary}, TYPE = E
     ```
 
-1. **Предоставьте управляемому удостоверению фабрики данных необходимые разрешения**. Сведения о соответствующих ролях см. в статье [Роли уровня базы данных](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles). Запустите следующий код T-SQL для базы данных, откуда или куда вы хотите скопировать данные:
+1. Предоставьте управляемому удостоверению фабрики данных необходимые разрешения. Сведения о соответствующих ролях см. в статье [Роли уровня базы данных](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles). Запустите следующий код T-SQL для базы данных, откуда или куда вы хотите скопировать данные:
 
     ```sql
     CREATE USER [{the managed identity name}] FOR LOGIN [{the managed identity name}] WITH DEFAULT_SCHEMA = dbo
     ALTER ROLE [role name] ADD MEMBER [{the managed identity name}]
     ```
 
-Наконец, **настройте проверку подлинности управляемого удостоверения** для диспетчера подключений ADO.NET. Это можно сделать двумя способами.
+Наконец, настройте проверку подлинности с помощью управляемого удостоверения для диспетчера подключений ADO.NET. Это можно сделать такими способами:
     
-1. Настройка во время разработки. В конструкторе SSIS щелкните диспетчер подключений ADO.NET правой кнопкой мыши и выберите **Свойства**, чтобы открыть **окно свойств**. Измените значение свойства **ConnectUsingManagedIdentity** на **True**.
+- **Настройка во время разработки.** В конструкторе SSIS щелкните диспетчер подключений ADO.NET правой кнопкой мыши и выберите **Свойства**. Установите для свойства `ConnectUsingManagedIdentity` значение `True`.
     > [!NOTE]
-    >  Сейчас свойство **ConnectUsingManagedIdentity** диспетчера подключений не оказывает никакого влияния (то есть проверка подлинности управляемого удостоверения не работает) при выполнении пакета SSIS в конструкторе SSIS или [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQL Server.
+    >  Сейчас свойство `ConnectUsingManagedIdentity` диспетчера подключений не оказывает никакого влияния (то есть проверка подлинности с помощью управляемого удостоверения не работает) при выполнении пакета SSIS в конструкторе SSIS или [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQL Server.
     
-1. Настройка во время выполнения. При выполнении пакета с помощью [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/integration-services/ssis-quickstart-run-ssms) или [действия "Выполнить пакет SSIS" Фабрики данных Azure ](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-ssis-activity) найдите диспетчер подключений ADO.NET и измените значение его свойства **ConnectUsingManagedIdentity** на **True**.
+- **Настройка во время выполнения.** При выполнении пакета с помощью [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/integration-services/ssis-quickstart-run-ssms) или [действия "Выполнить пакет SSIS" Фабрики данных Azure](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-ssis-activity) найдите диспетчер подключений ADO.NET. Установите для его свойства `ConnectUsingManagedIdentity` значение `True`.
     > [!NOTE]
-    >  В среде Azure-SSIS Integration Runtime все остальные методы проверки подлинности (например, встроенная проверка подлинности, пароль), предварительно настроенные в диспетчере подключений ADO.NET, будут **переопределены**, когда для установки подключения к базе данных используется проверка подлинности управляемого удостоверения.
+    >  В Azure-SSIS Integration Runtime все остальные методы проверки подлинности (например, встроенная аутентификация и пароль), предварительно настроенные в диспетчере подключений ADO.NET, переопределяются, если для подключения к базе данных используется проверка подлинности с помощью управляемого удостоверения.
 
 > [!NOTE]
->  Чтобы настроить проверку подлинности с помощью управляемого удостоверения для существующих пакетов, рекомендуется хотя бы раз перестроить проект SSIS с использованием [последнего конструктора SSIS](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt) и повторно развернуть этот проект в среде выполнения интеграции Azure-SSIS, чтобы новое свойство диспетчера подключений **ConnectUsingManagedIdentity** автоматически добавлялось во все диспетчеры подключений ADO.NET в проекте SSIS. Альтернативный способ — напрямую использовать переопределение свойства, указав при выполнении путь к свойству **\Package.Connections[{имя_диспетчера_подключений}].Properties[ConnectUsingManagedIdentity]**
+>  Чтобы настроить проверку подлинности с помощью управляемого удостоверения для существующих пакетов, рекомендуем как минимум однократно перестроить проект SSIS с использованием [конструктора SSIS последней версии](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt). Повторно разверните этот проект служб SSIS в Azure-SSIS Integration Runtime, чтобы новое свойство `ConnectUsingManagedIdentity` диспетчера подключений автоматически добавилось во все диспетчеры подключений ADO.NET в проекте SSIS. Кроме того, можно непосредственно переопределить свойство, указав при выполнении путь **\Package.Connections[{имя_диспетчера_подключений}].Properties[ConnectUsingManagedIdentity]** .
 
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также раздел  
  [Соединения в службах Integration Services (SSIS)](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
   
   
