@@ -9,12 +9,12 @@ ms.date: 08/28/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 6fceea54c6ea7d5c904cc27c87033c4a40cff59f
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 2ce02ef0b212070b4a52944e055404137c78c98b
+ms.sourcegitcommit: 0c6c1555543daff23da9c395865dafd5bb996948
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70158219"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70304725"
 ---
 # <a name="azdata-control"></a>элемент управления аздата
 
@@ -47,7 +47,7 @@ azdata control create
 #### `--config-profile -c`
 Профиль конфигурации кластера, используемый для развертывания кластера: ["AKS-dev-test", "кубеадм-произв", "minikube-dev-test", "кубеадм-dev-test"]
 #### `--accept-eula -a`
-Вы принимаете условия лицензии? [да/нет]. Если вы не хотите использовать этот аргумент, можно присвоить переменной среды ACCEPT_EULA значение "yes". Условия лицензии для этого продукта можно просмотреть по адресу https://aka.ms/azdata-eula.
+Вы принимаете условия лицензии? [да/нет]. Если вы не хотите использовать этот аргумент, можно присвоить переменной среды ACCEPT_EULA значение "yes". 
 #### `--node-label -l`
 Метка узла, используемая для обозначения узлов, на которых следует выполнить развертывание.
 #### `--force -f`

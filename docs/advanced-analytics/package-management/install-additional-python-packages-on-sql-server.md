@@ -9,18 +9,18 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: dc5addca9c9bbf01408cea89f85676813b97506c
-ms.sourcegitcommit: 52d3902e7b34b14d70362e5bad1526a3ca614147
+ms.openlocfilehash: 90bc0d33b00f77f942dd736ff1e1904f5d2e7396
+ms.sourcegitcommit: 26715b4dbef95d99abf2ab7198a00e6e2c550243
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70109756"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70276463"
 ---
 # <a name="install-python-packages-with-sqlmlutils"></a>Установка пакетов Python с помощью склмлутилс
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-В этой статье описывается, как использовать функции в пакете [**склмлутилс**](https://github.com/Microsoft/sqlmlutils) для установки новых пакетов Python в экземпляр SQL Server службы машинного обучения. Устанавливаемые пакеты можно использовать в сценариях Python, работающих в базе данных, с помощью инструкции T-SQL [SP-Execute-External-Transact-SQL](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) .
+В этой статье описывается, как использовать функции в пакете [**склмлутилс**](https://github.com/Microsoft/sqlmlutils) для установки новых пакетов Python в экземпляр SQL Server службы машинного обучения. Устанавливаемые пакеты можно использовать в сценариях Python, выполняющихся в базе данных, с помощью инструкции T-SQL [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) .
 
 Дополнительные сведения о расположении пакетов и путях установки см. в разделе [Получение сведений о пакете Python](../package-management/python-package-information.md).
 
