@@ -77,7 +77,7 @@ ms.locfileid: "69530853"
   
      На рисунке ниже показано, что для свойства **AttributeHierarchyEnabled** выбранных атрибутов установлено значение False.  
   
-     ![Для свойства AttributeHierarchyEnabled задано значение false] . (../../2014/tutorials/media/l4-hierarchyenabled-1.gif "Для свойства AttributeHierarchyEnabled задано значение false") .  
+     ![Для свойства AttributeHierarchyEnabled задано значение false](../../2014/tutorials/media/l4-hierarchyenabled-1.gif "Для свойства AttributeHierarchyEnabled задано значение false") .  
   
 5.  В меню **Сборка** выберите команду **Развернуть Analysis Services Tutorial**.  
   
@@ -107,7 +107,7 @@ ms.locfileid: "69530853"
   
      На рисунке ниже показано свойство **AttributeHierarchyVisible** , для которого установлено значение False.  
   
-     ![Для свойства AttributeHierarchyVisible задано значение false] . (../../2014/tutorials/media/l4-hierarchyvisible-1.gif "Для свойства AttributeHierarchyVisible задано значение false") .  
+     ![Для свойства AttributeHierarchyVisible задано значение false](../../2014/tutorials/media/l4-hierarchyvisible-1.gif "Для свойства AttributeHierarchyVisible задано значение false") .  
   
 5.  Перетащите атрибут **Почтовый индекс** с панели **Атрибуты** в пользовательскую иерархию **География заказчика** панели **Иерархии и уровни** непосредственно под уровень **Город** .  
   
