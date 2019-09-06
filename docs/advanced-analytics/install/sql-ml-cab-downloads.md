@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 7b77a1fd3a0d2575f0add7badb1c5bf632d29d70
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: ebc5ccef3130a490a6563531dd61e66a0218083d
+ms.sourcegitcommit: 0c6c1555543daff23da9c395865dafd5bb996948
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715834"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70304815"
 ---
 # <a name="cab-downloads-for-cumulative-updates-of-sql-server-in-database-analytics-instances"></a>Загружаемые файлы CAB для накопительных обновлений SQL Server экземпляров аналитики в базе данных
 
@@ -40,16 +40,16 @@ CAB-файлы перечислены в обратном хронологиче
 
 |Выпуск  |Компонент | Ссылка на скачивание  | Устраненные проблемы | 
 |---------|----------|----------------|------------------|
-|**[SQL Server 2017 CU14](https://support.microsoft.com/help/4484710/)-[CU15](https://support.microsoft.com/help/4498951/)** |  |  |  |
+|**[SQL Server 2017 CU14](https://support.microsoft.com/help/4484710/)-[CU15](https://support.microsoft.com/help/4498951/)-[CU16](https://support.microsoft.com/help/4508218/)** |  |  |  |
 | | Microsoft R Open     | [SRO_ 3.3.3.1400 _1033. cab](https://go.microsoft.com/fwlink/?LinkId=2073898&clcid=1033)| Двоичные файлы в пакете теперь подписаны. |
 | | R Server      |[SRS_ 9.2.0.1400 _1033. cab](https://go.microsoft.com/fwlink/?LinkId=2069739&clcid=1033)| Двоичные файлы в пакете теперь подписаны. |
 | | Открытие Microsoft Python     | [SPO_ 9.2.0.1400 _1033. cab](https://go.microsoft.com/fwlink/?LinkId=2073897&clcid=1033)| Двоичные файлы в пакете теперь подписаны. |
 | | Сервер Python    |[SPS_ 9.2.0.1400 _1033. cab](https://go.microsoft.com/fwlink/?LinkId=2071421&clcid=1033)| Двоичные файлы в пакете теперь подписаны.  |
 |**[SQL Server 2017 CU13](https://support.microsoft.com/help/4466404)** |  |  |  |
 | | Microsoft R Open     | [SRO_ 3.3.3.1300 _1033. cab](https://go.microsoft.com/fwlink/?LinkId=863894)| Нет изменений из предыдущих версий. |
-| | R Server      |[SRS_ 9.2.0.1300 _1033. cab](https://go.microsoft.com/fwlink/?LinkId=2038263&clcid=1033)| Содержит исправление для обновления работающего [изолированного сервера R Server](https://docs.microsoft.com/machine-learning-server/what-is-operationalization), установленного с помощью программы установки SQL Server. Используйте файлы CAB CU13 и следуйте [этим инструкциям](sql-machine-learning-standalone-windows-install.md#apply-cu) , чтобы применить обновление. |
+| | R Server      |[SRS_ 9.2.0.1300 _1033. cab](https://go.microsoft.com/fwlink/?LinkId=2038263&clcid=1033)| Содержит исправление для обновления [работающего изолированного сервера R Server](https://docs.microsoft.com/machine-learning-server/what-is-operationalization), установленного с помощью программы установки SQL Server. Используйте файлы CAB CU13 и следуйте [этим инструкциям](sql-machine-learning-standalone-windows-install.md#apply-cu) , чтобы применить обновление. |
 | | Открытие Microsoft Python     | [SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502)| Нет изменений из предыдущих версий. |
-| | Сервер Python    |[SPS_ 9.2.0.1300 _1033. cab](https://go.microsoft.com/fwlink/?LinkId=2038197&clcid=1033)| Содержит исправление для обновления работающего [изолированного сервера Python](https://docs.microsoft.com/machine-learning-server/what-is-operationalization), установленного с помощью программы установки SQL Server. Используйте файлы CAB CU13 и следуйте [этим инструкциям](sql-machine-learning-standalone-windows-install.md#apply-cu) , чтобы применить обновление. |
+| | Сервер Python    |[SPS_ 9.2.0.1300 _1033. cab](https://go.microsoft.com/fwlink/?LinkId=2038197&clcid=1033)| Содержит исправление для обновления [работающего изолированного сервера Python](https://docs.microsoft.com/machine-learning-server/what-is-operationalization), установленного с помощью программы установки SQL Server. Используйте файлы CAB CU13 и следуйте [этим инструкциям](sql-machine-learning-standalone-windows-install.md#apply-cu) , чтобы применить обновление. |
 |**[SQL Server 2017 CU10](https://support.microsoft.com/help/4342123)-[CU11](https://support.microsoft.com/help/4462262)-[CU12](https://support.microsoft.com/help/4464082)** |  |  |  |
 | | Microsoft R Open     | [SRO_3.3.3.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863894)| Нет изменений из предыдущих версий. |
 | | R Server      |[SRS_ 9.2.0.1000 _1033. cab](https://go.microsoft.com/fwlink/?LinkId=2006287&clcid=1033)| Небольшие исправления.|
