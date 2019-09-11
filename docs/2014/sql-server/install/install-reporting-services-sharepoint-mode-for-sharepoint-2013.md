@@ -121,13 +121,13 @@ ms.locfileid: "68890280"
   
     -   **Надстройка служб Reporting Services для продуктов SharePoint**.  
   
-         ![Примечание] . (../../../2014/reporting-services/media/rs-fyinote.png "Примечание") . Параметр мастера установки для установки надстройки является новым [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] в выпуске.  
+         ![Примечание](../../../2014/reporting-services/media/rs-fyinote.png "Примечание") . Параметр мастера установки для установки надстройки является новым [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] в выпуске.  
   
     -   Если экземпляр компонента SQL Server [!INCLUDE[ssDE](../../includes/ssde-md.md)]еще не установлен, для завершения установки можно также выбрать **Службы ядра СУБД** и **Полный набор средств управления** .  
   
      Нажмите кнопку **Далее**.  
   
-     ![Выбор компонентов SSRS для режима] интеграции с SharePoint (../../../2014/sql-server/install/media/rs-setupfeatureselection-sharepoint-with-circles.gif "Выбор компонентов SSRS для режима") интеграции с SharePoint  
+     ![Выбор компонентов SSRS для режима интеграции с SharePoint ](../../../2014/sql-server/install/media/rs-setupfeatureselection-sharepoint-with-circles.gif "Выбор компонентов SSRS для режима интеграции с SharePoint")  
   
 11. Если открылась страница **Правила установки** . Просмотрите все предупреждения и определите критические препятствия. Затем нажмите кнопку **Далее**.  
   

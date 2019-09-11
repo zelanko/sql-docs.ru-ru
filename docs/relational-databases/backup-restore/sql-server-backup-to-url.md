@@ -160,7 +160,7 @@ ms.locfileid: "70176355"
 |BUFFERCOUNT|Да|||  
 |MAXTRANSFERSIZE|Да|Не поддерживается для страничных BLOB-объектов. Поддерживается для блочных BLOB-объектов.| Значение по умолчанию составляет 1 048 576 байт. Значение может изменяться в диапазоне до 4 МБ с шагом в 65 536 байт.</br> Для оптимизации использования 50 000 блоков, допустимых в блочном BLOB-объекте, рекомендуемый размер функции MAXTRANSFERSIZE составляет 4 194 304 байт. |  
 |NO_CHECKSUM &#124; CHECKSUM|Да|||  
-|STOP_ON_ERROR | CONTINUE_AFTER_ERROR|Да|||  
+|STOP_ON_ERROR &#124; CONTINUE_AFTER_ERROR|Да|||  
 |STATS|Да|||  
 |REWIND &#124; NOREWIND|-|||  
 |UNLOAD &#124; NOUNLOAD|-|||  
@@ -193,7 +193,7 @@ ms.locfileid: "70176355"
 |BUFFERCOUNT|-|||  
 |MAXTRANSFERSIZE|-|||  
 |CHECKSUM &#124; NO_CHECKSUM|Да|||  
-|STOP_ON_ERROR | CONTINUE_AFTER_ERROR|Да|||  
+|STOP_ON_ERROR &#124; CONTINUE_AFTER_ERROR|Да|||  
 |FILESTREAM|Да|Не поддерживается для резервного копирования моментальных снимков.||  
 |STATS|Да|||  
 |REWIND &#124; NOREWIND|-|||  

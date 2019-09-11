@@ -26,7 +26,7 @@ ms.locfileid: "68890145"
 |-|  
 |**[!INCLUDE[applies](../../includes/applies-md.md)]** SharePoint 2013 #124; SharePoint 2010|  
   
- ![Примечание] . (../../../2014/reporting-services/media/rs-fyinote.png "Примечание") . Заметки о текущем выпуске см. в разделе [заметки о выпуске SQL server 2014](https://go.microsoft.com/fwlink/?LinkID=296445).  
+ ![Примечание](../../../2014/reporting-services/media/rs-fyinote.png "Примечание") Заметки о текущем выпуске см. в разделе [заметки о выпуске SQL server 2014](https://go.microsoft.com/fwlink/?LinkID=296445).  
   
 ##  <a name="bkmk_top"></a> В этом разделе  
   

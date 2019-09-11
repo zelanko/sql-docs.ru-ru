@@ -129,7 +129,7 @@ ms.locfileid: "68888518"
   
 -   **Перенос расписаний, параметр1: Администратор фермы SharePoint**  
   
-    1.  В службе управления SharePoint 2013 выполните `Set-PowerPivotServiceApplication` командлет ![] `-StartMigratingRefreshSchedules` с параметром, чтобы включить автоматическое планирование по требованию содержимое, связанное с(../../../reporting-services/media/rs-powershellicon.jpg "PowerShell"). При использовании следующего скрипта Windows PowerShell предполагается наличие только одного приложения службы PowerPivot.  
+    1.  В службе управления SharePoint 2013 выполните `Set-PowerPivotServiceApplication` командлет `-StartMigratingRefreshSchedules` с параметром, чтобы включить автоматическое планирование по требованию содержимое, связанное с![PowerShell](../../../reporting-services/media/rs-powershellicon.jpg "PowerShell"). При использовании следующего скрипта Windows PowerShell предполагается наличие только одного приложения службы PowerPivot.  
   
         ```  
         $app=Get-PowerPivotServiceApplication  
