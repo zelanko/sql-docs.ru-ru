@@ -144,7 +144,7 @@ ms.locfileid: "68892889"
   
      Завершите создание источника данных и закройте мастер источников данных.  
   
-6.  Добавьте **MultiSubnetFailover=Yes** в строку подключения, для ускорения обнаружения и подключения к активному серверу. Дополнительные сведения об этом свойстве см. в разделе [SQL Server Native Client Support for High Availability, Disaster Recovery](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md).  
+6.  Добавьте **MultiSubnetFailover=Yes** в строку подключения, для ускорения обнаружения и подключения к активному серверу. Дополнительные сведения об этом свойстве см. в разделе [Поддержка высокого уровня доступности и аварийного восстановления собственного клиента SQL Server](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md).  
   
      Это свойство не отображается в сетке свойств. Чтобы добавить это свойство, щелкните источник данных правой кнопкой мыши и выберите **Просмотр кода**. Добавьте `MultiSubnetFailover=Yes` в строку подключения.  
   
