@@ -24,15 +24,15 @@ helpviewer_keywords:
 ms.assetid: 4da8a855-33c0-43b2-a49d-527487cb3b5c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: bec815372c77e8433fdfdaeedc2cc95a41901738
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c6cb2cf4bae18604d77c8644f18efd32702b8197
+ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68084408"
+ms.lasthandoff: 09/02/2019
+ms.locfileid: "70211293"
 ---
 # <a name="get-conversation-group-transact-sql"></a>GET CONVERSATION GROUP (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   Возвращает идентификатор группы сообщений для следующего получаемого сообщения и блокирует группу сообщений для диалога, содержащего сообщение. Идентификатор группы сообщений может использоваться для получения сведений о состоянии диалога до получения непосредственно самого сообщения.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "68084408"
 ## <a name="remarks"></a>Remarks  
   
 > [!IMPORTANT]  
->  Если инструкция GET CONVERSATION GROUP не является первой инструкцией в пакете или хранимой процедуре, предыдущая инструкция должна заканчиваться точкой с запятой ( **;** ) — разделителем инструкций языка [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+>  Если инструкция GET CONVERSATION GROUP не является первой инструкцией в пакете или хранимой процедуре, предыдущая инструкция должна заканчиваться точкой с запятой (**;**) — разделителем инструкций языка [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  Если очередь, указанная в инструкции GET CONVERSATION GROUP, недоступна, инструкция выдает ошибку языка [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   

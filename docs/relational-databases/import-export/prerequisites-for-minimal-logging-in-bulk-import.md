@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bd1dac6b-6ef8-4735-ad4e-67bb42dc4f66
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 022e1228a9796dadddc4d9adfd20b4faeda35515
-ms.sourcegitcommit: 3be14342afd792ff201166e6daccc529c767f02b
+ms.openlocfilehash: 99572edbc477999a1ccc8f6c1fff89b5e04521d6
+ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/18/2019
-ms.locfileid: "68307638"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "70910833"
 ---
 # <a name="prerequisites-for-minimal-logging-in-bulk-import"></a>Prerequisites for Minimal Logging in Bulk Import
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "68307638"
   
 -   В данный момент таблица не реплицируется.  
   
--   Задана блокировка таблицы (с помощью TABLOCK). Для таблицы с кластеризованным индексом columnstore при минимальном протоколировании не требуется TABLOCK.  Кроме того, только данные, загружаемые в сжатые группы строк, минимально протоколируются; для этого требуется размер пакета 102 400 или больше.  
+-   Задана блокировка таблицы (с помощью TABLOCK). 
   
     > [!NOTE]  
     >  Хотя операции вставки данных при минимальном ведении журнала операций массового импорта не регистрируются в журнале транзакций, компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] по-прежнему ведет журнал выделения всех экстентов для таблицы.  

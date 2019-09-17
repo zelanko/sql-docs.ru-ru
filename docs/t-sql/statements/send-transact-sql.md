@@ -24,15 +24,15 @@ helpviewer_keywords:
 ms.assetid: b6e66aeb-1714-4c2b-b7c2-d386d77b0d46
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: af65ac5257da6bc04a5a33649007ae849366e10c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9a6c6993252ccad0335b177c31c9d20b40f520a5
+ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67913899"
+ms.lasthandoff: 09/02/2019
+ms.locfileid: "70211425"
 ---
 # <a name="send-transact-sql"></a>SEND (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
 Отправляет сообщение с помощью одного или нескольких существующих диалогов.  
   
@@ -57,7 +57,7 @@ MESSAGE TYPE *message_type_name*
 Указывает тип отправляемого сообщения. Этот тип сообщений должен входить в контракты служб, используемых этими диалогами. Эти контракты должны позволять отправить сообщение данного типа с этой стороны диалога. Например, целевые службы диалогов могут отправлять только сообщения, отмеченные в контракте как SENT BY TARGET или SENT BY ANY. Если это предложение пропущено, то сообщение принадлежит к типу сообщений DEFAULT.  
   
 *message_body_expression*  
-Содержит выражение, представляющее тело сообщения. Выражение *message_body_expression* является необязательным. Однако если аргумент *message_body_expression* указан, то выражение должно иметь тип, преобразуемый в тип **varbinary(max)** . Выражение не может иметь значение NULL. Если это предложение не указано, то тело сообщения пустое.  
+Содержит выражение, представляющее тело сообщения. Выражение *message_body_expression* является необязательным. Однако если аргумент *message_body_expression* указан, то выражение должно иметь тип, преобразуемый в тип **varbinary(max)**. Выражение не может иметь значение NULL. Если это предложение не указано, то тело сообщения пустое.  
   
 ## <a name="remarks"></a>Remarks  
   
@@ -96,7 +96,7 @@ SEND — это атомарная инструкция. Если с помощ
 Для отправки сообщения у текущего пользователя должно быть разрешение RECEIVE для очереди в каждой из служб, которые отправляют сообщение.  
   
 ## <a name="examples"></a>Примеры  
-В этом примере инициируется диалог и отправляется XML-сообщение. Чтобы отправить сообщение, в примере выполняется преобразование XML-объекта в тип **varbinary(max)** .  
+В этом примере инициируется диалог и отправляется XML-сообщение. Чтобы отправить сообщение, в примере выполняется преобразование XML-объекта в тип **varbinary(max)**.  
   
 ```sql
 DECLARE @dialog_handle UNIQUEIDENTIFIER,  

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d721c796-0397-46a7-901b-1a9a3c3fb385
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: ecc222a9f2c57aa92535d6f2e0c85586a6714108
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2b0b681ffb0b045ab5ba59c1a9fd28b3b295431f
+ms.sourcegitcommit: 734529a6f108e6ee6bfce939d8be562d405e1832
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68024703"
+ms.lasthandoff: 09/02/2019
+ms.locfileid: "70212323"
 ---
 # <a name="scm-services---change-the-service-startup-account"></a>Службы SCM. Изменение стартовой учетной записи службы
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ ms.locfileid: "68024703"
   
 3.  В области сведений щелкните правой кнопкой мыши имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , для которого нужно изменить стартовую учетную запись службы, и пункт **Свойства**.  
   
-4.  В диалоговом окне **Свойства SQL Server \<***имя_экземпляра***>** перейдите на вкладку **Вход** и выберите один из типов учетных записей в поле **Использовать для входа**.  
+4.  В диалоговом окне **Свойства SQL Server \<**_имя_экземпляра_**>** перейдите на вкладку **Вход** и выберите один из типов учетных записей в поле **Использовать для входа**.  
   
 5.  Выбрав новую стартовую учетную запись службы, нажмите кнопку **ОК**.  
   

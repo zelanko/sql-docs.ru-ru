@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f578ae9dbc60b255959de406999feb8b68171389
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 91bacc4ab4c8876ac49a09b58d1821f1c2853a3c
+ms.sourcegitcommit: 3bd813ab2c56b415a952e5fbd5cfd96b361c72a2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68476203"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70913565"
 ---
-# <a name="install-sql-server-2019-machine-learning-services-r-python-on-linux"></a>Установка Служб машинного обучения SQL Server 2019 (R, Python) в Linux
+# <a name="install-sql-server-machine-learning-services-r-python-on-linux"></a>Установка Служб машинного обучения SQL Server (R, Python) в Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
@@ -41,7 +41,7 @@ ms.locfileid: "68476203"
 ls /opt/microsoft/mssql/bin
 ```
 
-### <a name="2-uninstall-previous-ctp-2x-packages"></a>2. Удаление пакетов предыдущей версии CTP 2.x
+### <a name="2-uninstall-previous-ctp-2x-packages"></a>2. Удаление пакетов предыдущей версии CTP 2.x
 
 Выполняйте удаление на самом низком уровне пакета. Любой вышестоящий пакет, зависящий от пакета более низкого уровня, удаляется автоматически.
 
@@ -64,7 +64,7 @@ ls /opt/microsoft/mssql/bin
 > microsoft-r-open-mro-3.4.4
 > ```
 
-### <a name="3-proceed-with-ctp-32-install"></a>3. Начало установки CTP 3.2
+### <a name="3-proceed-with-ctp-32-install"></a>3. Начало установки CTP 3.2
 
 Выполните установку на самом верхнем уровне пакета, следуя инструкциям из этой статьи для вашей операционной системы.
 
@@ -80,7 +80,7 @@ ls /opt/microsoft/mssql/bin
 
 ## <a name="prerequisites"></a>предварительные требования
 
-+ Версия Linux должна поддерживаться [SQL Server](sql-server-linux-release-notes-2019.md#supported-platforms), но не включает в себя подсистему Docker. Поддерживаемые версии
++ Версия Linux должна [поддерживаться SQL Server](sql-server-linux-release-notes-2019.md#supported-platforms), но не включает в себя подсистему Docker. Поддерживаемые версии
 
    + [Red Hat Enterprise Linux (RHEL)](quickstart-install-connect-red-hat.md)
 
@@ -214,7 +214,7 @@ sudo yum install mssql-mlservices-packages-r-9.4.7*
 Поддержку языков можно установить в любом требуемом сочетании (один или несколько языков). Для R и Python можно выбрать один из двух пакетов. Один предоставляет все доступные функции, что соответствует *полной установке*. Другой вариант исключает предварительно обученные модели машинного обучения и считается *минимальной установкой*.
 
 > [!Tip]
-> По возможности запустите `apt-get update`, чтобы обновить пакеты в системе перед установкой. Кроме того, некоторые образы Docker в Ubuntu могут не иметь вариант транспорта apt https. Чтобы установить его, используйте `apt-get install apt-transport-https`.
+> По возможности запустите `apt-get update`, чтобы обновить пакеты в системе перед установкой. Кроме того, некоторые образы Docker в Ubuntu могут не иметь варианта транспорта apt https. Чтобы установить его, используйте `apt-get install apt-transport-https`.
 
 ### <a name="example-1----full-installation"></a>Пример 1. Полная установка 
 
@@ -275,7 +275,7 @@ sudo zypper install mssql-mlservices-packages-r-9.4.7*
 Дополнительная настройка осуществляется в основном с помощью [средства mssql-conf](sql-server-linux-configure-mssql-conf.md).
 
 
-1. Добавьте учетную запись пользователя mssql, использованную для запуска службы SQL Server. Это необходимо, если вы не выполняли установку ранее.
+1. Добавьте учетную запись пользователя mssql, использованную для запуска службы SQL Server. Это необходимо, если вы не выполняли установку ранее.
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf setup
@@ -408,7 +408,7 @@ sudo /opt/mssql/bin/mssql-conf setup accept-eula-ml
 Описание шагов по установке пакетов см. в инструкциях по [автономной установке](sql-server-linux-setup.md#offline). Найдите сайт скачивания, а затем скачайте конкретные пакеты с помощью приведенного ниже списка.
 
 > [!Tip]
-> Некоторые средства управления пакетами предоставляют команды, помогающие определить зависимости пакетов. Для yum используйте `sudo yum deplist [package]`. Для Ubuntu используйте `sudo apt-get install --reinstall --download-only [package name]`, а затем — `dpkg -I [package name].deb`.
+> Некоторые средства управления пакетами предоставляют команды, помогающие определить зависимости пакетов. Для yum используйте `sudo yum deplist [package]`. Для Ubuntu используйте `sudo apt-get install --reinstall --download-only [package name]`, а затем `dpkg -I [package name].deb`.
 
 
 #### <a name="download-site"></a>Сайт загрузки

@@ -1,70 +1,109 @@
-### YamlMime:YamlDocument
-documentType: LandingData
+### YamlMime:Landing
 title: Документация по SQL Server Службы машинного обучения (Python и R)
+summary: Узнайте, как использовать SQL Server Службы машинного обучения для выполнения скриптов Python и R в реляционных данных. В руководствах, примерах кода, руководствах по установке и другой документации показано, как это делать.
 metadata:
-  title: 'Документация по SQL Server Службы машинного обучения (Python, R) — руководства, краткие руководства и руководство по установке | Документация Майкрософт'
-  titleSuffix: ''
-  description: 'Узнайте, как использовать SQL Server Службы машинного обучения для выполнения скриптов Python и R в реляционных данных. В руководствах, примерах кода, руководствах по установке и другой документации показано, как это делать.'
+  title: Документация по SQL Server Службы машинного обучения (Python, R) — руководства, краткие руководства и руководство по установке
+  description: Узнайте, как использовать SQL Server Службы машинного обучения для выполнения скриптов Python и R в реляционных данных. В руководствах, примерах кода, руководствах по установке и другой документации показано, как это делать.
   ms.prod: sql
   ms.technology: machine-learning
   ms.topic: landing-page
   author: dphansen
   ms.author: davidph
-  ms.date: 08/01/2019
-abstract:
-  description: 'Узнайте, как использовать SQL Server Службы машинного обучения для запуска скриптов Python и R в реляционных данных. В руководствах, примерах кода, руководствах по установке и другой документации показано, как это делать.'
-  aside:
-    image:
-      alt: null
-      height: 124
-      src: media/index/video.png
-      width: 250
-    title: 'Смотреть видео (3:00)'
-    href: 'https://www.youtube.com/watch?v=ACejZ9optCQ'
-    width: 250
-sections:
-  - title: Пятиминутные краткие руководства
-    items:
-      - type: paragraph
-        text: 'После <a href="install/sql-machine-learning-services-windows-install">установки SQL Server службы машинного обучения</a>можно приступить к работе с этими краткими руководствами:'
-      - type: list
-        style: unordered
-        items:
-          - html: Выполнение скрипта "Hello World" <a href="tutorials/quickstart-python-run-using-t-sql">в Python</a> или <a href="tutorials/quickstart-r-run-using-tsql">в R</a>
-          - html: Создание прогнозной модели <a href="tutorials/quickstart-python-train-score-in-tsql">на языке Python</a> или <a href="tutorials/quickstart-r-create-predictive-model">в R</a>
-  - title: Пошаговые руководства
-    items:
-      - type: paragraph
-        text: 'Сведения о просмотре данных, проектировании функций, обучении и развертывании моделей и выполнении прогнозов:'
-      - type: list
-        style: unordered
-        items:
-          - html: '<a href="tutorials/sqldev-in-database-python-for-sql-developers">Использование Python в T-SQL</a>: Просмотр данных, разработка признаков, обучение и развертывание моделей, создание прогнозов (серии из 5 частей)'
-          - html: '<a href="tutorials/sqldev-in-database-r-for-sql-developers">Использование R в T-SQL</a>: Просмотр данных, разработка признаков, обучение и развертывание моделей, создание прогнозов (серии из 5 частей)'
-          - html: '<a href="tutorials/walkthrough-data-science-end-to-end-walkthrough">Использование службы машинного обучения в инструментах R</a>: Просмотр данных, создание графиков и графиков, выполнение технических характеристик, обучение и развертывание моделей, создание прогнозов (серии из шести частей)'
-  - title: Решения
-    items:
-      - type: paragraph
-        text: 'Найдите <a href="tutorials/data-science-scenarios-and-solution-templates">шаблоны, помогающие создавать решения машинного обучения</a> на SQL Server.'
-  - title: Ссылка
-    items:
-      - type: paragraph
-        text: В SQL Server Службы машинного обучения используйте пакеты и платформы с открытым исходным кодом и пакеты Microsoft Python и R.
-      - type: list
-        style: unordered
-        items:
-          - html: '<a href="python/ref-py-revoscalepy">revoscalepy в Python</a>: Распределенная и параллельная обработка для задач Python: Преобразование данных, исследование, визуализация, статистическая и Прогнозная аналитика'
-          - html: '<a href="python/ref-py-microsoftml">microsoftml в Python</a>: Функции, основанные на алгоритмах искусственного интеллекта Microsoft для Python'
-          - html: '<a href="r/ref-r-revoscaler">RevoScaleR в R</a>: Распределенная и параллельная обработка для задач R: Преобразование данных, исследование, визуализация, статистическая и Прогнозная аналитика'
-          - html: '<a href="r/ref-r-microsoftml">MicrosoftML в R</a>: Функции, основанные на алгоритмах искусственного интеллекта Microsoft для R'
-          - html: '<a href="r/ref-r-olapr">OLAP в R</a>: Импорт данных из кубов OLAP'
-          - html: '<a href="r/ref-r-sqlrutils">sqlRUtils в R</a>: Вспомогательные функции для инкапсуляции R и T-SQL'
-  - title: Другие технологии Машинное обучение
-    items:
-      - type: list
-        style: unordered
-        items:
-          - html: <a href="/azure/sql-database/sql-database-machine-learning-services-overview">Службы машинного обучения базы данных SQL Azure<a>
-          - html: <a href="/azure/machine-learning/">Машинное обучение Azure</a>
-          - html: <a href="/dotnet/machine-learning/">ML.NET</a>
-          - html: <a href="/azure/architecture/data-guide/technology-choices/data-science-and-machine-learning">Что такое Продукты машинного обучения в корпорации Майкрософт?</a>
+  ms.date: 09/12/2019
+  ms.openlocfilehash: e1851799ee4c46c8b639a2f50bce129e672aecfa
+  ms.sourcegitcommit: 77293fb1f303ccfd236db9c9041d2fb2f64bce42
+  ms.translationtype: MT
+  ms.contentlocale: ru-RU
+  ms.lasthandoff: 09/12/2019
+  ms.locfileid: "70929547"
+landingContent:
+- title: О Службы машинного обучения
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Что такое Службы машинного обучения SQL Server (Python и R)?
+      url: what-is-sql-server-machine-learning.md
+  - linkListType: whats-new
+    links:
+    - text: Новые возможности Службы машинного обучения
+      url: what-s-new-in-sql-server-machine-learning-services.md
+  - linkListType: video
+    links:
+    - text: Как выполнить R/Python в SQL Server с Службы машинного обучения
+      url: https://www.youtube.com/watch?v=ACejZ9optCQ
+- title: Начало работы с Python
+  linkLists:
+  - linkListType: quickstart
+    links:
+    - text: Запуск скрипта Python "Hello World" на SQL Server
+      url: tutorials/quickstart-python-run-using-t-sql.md
+    - text: Работа с входными и выходными данными
+      url: tutorials/quickstart-python-inputs-and-outputs.md
+    - text: Структуры данных Python в SQL Server
+      url: tutorials/quickstart-python-data-structures.md
+    - text: Обучение и использование первой модели
+      url: tutorials/quickstart-python-train-score-in-tsql.md
+  - linkListType: tutorial
+    links:
+    - text: Прогнозирование Ski аренд с линейной регрессией
+      url: tutorials/python-ski-rental-linear-regression.md
+    - text: Классификация клиентов с помощью кластеризации с использованием k-средних
+      url: tutorials/python-clustering-model.md
+- title: Начало работы с R
+  linkLists:
+  - linkListType: quickstart
+    links:
+    - text: Запуск скрипта R "Hello World" на SQL Server
+      url: tutorials/quickstart-r-run-using-tsql.md
+    - text: Работа с входными и выходными данными
+      url: tutorials/quickstart-r-inputs-and-outputs.md
+    - text: Структуры данных R в SQL Server
+      url: tutorials/quickstart-r-data-types-and-objects.md
+    - text: Создание модели прогнозирования
+      url: tutorials/quickstart-r-create-predictive-model.md
+  - linkListType: tutorial
+    links:
+    - text: Использование R в T-SQL
+      url: tutorials/sqldev-in-database-r-for-sql-developers.md
+    - text: Использование Службы машинного обучения в инструментах R
+      url: tutorials/walkthrough-data-science-end-to-end-walkthrough.md
+- title: Установка Службы машинного обучения
+  linkLists:
+  - linkListType: get-started
+    links:
+    - text: Установка Службы машинного обучения в Windows
+      url: install/sql-machine-learning-services-windows-install.md
+    - text: Установка Службы машинного обучения в Linux
+      url: ../linux/sql-server-linux-setup-machine-learning.md?toc=/sql/advanced-analytics/toc.json
+  - linkListType: how-to-guide
+    links:
+    - text: Настройка клиента Python
+      url: python/setup-python-client-tools-sql.md
+    - text: Настройка клиента R
+      url: r/set-up-a-data-science-client.md
+- title: Архитектура и безопасность
+  linkLists:
+  - linkListType: architecture
+    links:
+    - text: Платформа расширяемости
+      url: concepts/extensibility-framework.md
+    - text: Расширение Python
+      url: concepts/extension-python.md
+    - text: Расширение R
+      url: concepts/extension-r.md
+  - linkListType: concept
+    links:
+    - text: Безопасность платформы екстернсибилити
+      url: /concepts/security.md
+- title: Управление пакетами Python и R
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Получение сведений о пакете Python
+      url: package-management/python-package-information.md
+    - text: Установка пакетов Python с помощью склмлутилс
+      url: package-management/install-additional-python-packages-on-sql-server.md
+    - text: Получение сведений о пакете R
+      url: package-management/r-package-information.md
+    - text: Установка новых пакетов R с помощью склмлутилс
+      url: package-management/install-additional-r-packages-on-sql-server.md

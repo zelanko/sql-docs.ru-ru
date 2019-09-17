@@ -8,12 +8,12 @@ ms.topic: article
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 718f0c6c5fa6b517f2b60bbca0f06f58310c6d22
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 8fe83d73c0c7413715122d849141ea5378c24c47
+ms.sourcegitcommit: 2da98f924ef34516f6ebf382aeb93dab9fee26c1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155483"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70228462"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>Новые возможности [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]
 
@@ -88,7 +88,7 @@ ms.locfileid: "70155483"
 
 |Новые функции или обновления | Сведения |
 |:---|:---|
-|Поддержка кодировки UTF-8 |Поддержка символов UTF-8 для импорта и экспорта кодировки, а также как параметров сортировки на уровне столбцов и базы данных для строковых данных. Это позволяет приложениям расширяться до глобального масштаба в тех случаях, когда для выполнения требований клиентов и определенных рыночных нормативов критически важно предоставлять глобальные многоязычные приложения баз данных и служб. См. статью о [поддержке параметров сортировки и Юникода](../relational-databases/collations/collation-and-unicode-support.md).<br/><br/> Релиз-кандидат [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] включает поддержку UTF-8 для внешних таблиц Polybase и для Always Encrypted.|
+|Поддержка кодировки UTF-8 |Поддержка символов UTF-8 для импорта и экспорта кодировки, а также как параметров сортировки на уровне столбцов и базы данных для строковых данных. Это позволяет приложениям расширяться до глобального масштаба в тех случаях, когда для выполнения требований клиентов и определенных рыночных нормативов критически важно предоставлять глобальные многоязычные приложения баз данных и служб. См. раздел [Поддержка параметров сортировки и Юникода](../relational-databases/collations/collation-and-unicode-support.md).<br/><br/> Релиз-кандидат [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] включает поддержку UTF-8 для внешних таблиц Polybase и для Always Encrypted.|
 | &nbsp; | &nbsp; |
 
 ### <a name="polybase"></a>PolyBase

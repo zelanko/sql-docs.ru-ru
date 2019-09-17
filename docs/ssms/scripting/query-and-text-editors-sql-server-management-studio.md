@@ -1,10 +1,7 @@
 ---
 title: Редакторы запросов и текста (среда SQL Server Management Studio) | Документация Майкрософт
-ms.custom: ''
-ms.date: 03/14/2017
 ms.prod: sql
 ms.technology: scripting
-ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Query Editor [SQL Server Management Studio]
@@ -24,23 +21,29 @@ helpviewer_keywords:
 ms.assetid: 062051e4-4b77-4969-98ae-d2547c24ce3e
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ''
+ms.custom: ''
+ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e83ad20b181e96320bc051db7b719ae4827dde9e
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 8d8958849239c730aa7f687cd12a559de158d5e1
+ms.sourcegitcommit: da8bb7abd256b2bebee7852dc0164171eeff11be
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68266034"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70988158"
 ---
 # <a name="query-and-text-editors-sql-server-management-studio"></a>Редакторы запросов и текста (среда SQL Server Management Studio)
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   Для интерактивного изменения и проверки скриптов [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , многомерных выражений, расширений интеллектуального анализа данных или XML/A либо изменения простого текстового файла или XML-файла можно использовать один из редакторов среды [!INCLUDE[tsql](../../includes/tsql-md.md)]. В каждом редакторе поддерживается выделение цветом ключевых слов и проверка ошибок синтаксиса и применения для конкретного языка. В редакторе запросов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] есть отладчик [!INCLUDE[tsql](../../includes/tsql-md.md)] , с помощью которого можно находить и исправлять ошибки в коде [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
-## <a name="sql-server-management-studio-editors"></a>Редакторы среды SQL Server Management Studio  
+## <a name="sql-server-management-studio-editors"></a>Редакторы среды SQL Server Management Studio
+
  Четыре редактора среды [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] имеют общую архитектуру. Текстовый редактор реализует базовые функциональные возможности и может быть использован в качестве базового редактора для текстовых файлов. Три других редактора (редакторы запросов) расширяют эти функциональные возможности, подключая языковую службу, определяющую синтаксис одного из языков, поддерживаемых в SQL Server. В редакторах запросов также присутствуют различные уровни поддержки таких функций редактора, как IntelliSense или отладка. В набор редакторов запросов входят редактор запросов компонента Database Engine, используемый для создания скриптов, содержащих инструкции Transact-SQL и XQuery, редактор многомерных выражений для работы с языком многомерных выражений, редактор расширений интеллектуального анализа данных для работы с языком расширений интеллектуального анализа данных и редактор XML/A для работы с языком XML для аналитики.  
   
-## <a name="common-components"></a>Общие компоненты  
+## <a name="common-components"></a>Общие компоненты
+
  Все редакторы в среде [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] совместно используют следующие компоненты.  
   
  **Панель кода**  
@@ -60,7 +63,8 @@ ms.locfileid: "68266034"
  **Перенос по словам**  
  Отображает длинные строки текста на нескольких строках, позволяя видеть весь текст, содержащийся в строке. Перенос по словам не влияет на внешний вид текста при выполнении или печати. Перенос по словам включается в диалоговом окне **Параметры**(меню **Сервис** ) на странице «Текстовый редактор», «Все языки», «Общие» или на конкретной странице редактора.  
   
-## <a name="code-editor-components"></a>Компоненты редактора кода  
+## <a name="code-editor-components"></a>Компоненты редактора кода
+
  В дополнение к функциям, доступным в текстовых и XML-редакторах, в редакторах кода содержатся следующие функции.  
   
  **Результаты**  
@@ -84,7 +88,8 @@ ms.locfileid: "68266034"
  **Строка состояния**  
  Отображает системные сведения, связанные с окном редактора запросов, например, к какому экземпляру подключен редактор запросов.  
   
-## <a name="database-engine-query-editor-components"></a>Компоненты редактора запросов компонента Database Engine  
+## <a name="database-engine-query-editor-components"></a>Компоненты редактора запросов компонента Database Engine
+
  Следующие компоненты доступны только в редакторе запросов компонента Database Engine.  
   
  **Отладчик**  
@@ -130,7 +135,6 @@ ms.locfileid: "68266034"
 |Описывает использование отладчика [!INCLUDE[tsql](../../includes/tsql-md.md)] для пошагового просмотра кода и просмотра отладочных данных, например значений переменных и параметров.|[Отладчик Transact-SQL](../../relational-databases/scripting/transact-sql-debugger.md)|  
 |Описывает настройку пользовательских цветов для различных экземпляров компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)]и задание этих цветов в качестве фонового цвета для строки состояния в окнах редактора запросов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] .|[Строка состояния (редактор запросов к ядру СУБД)](../../relational-databases/scripting/status-bar-database-engine-query-editor.md)|  
   
-## <a name="see-also"></a>См. также:  
- [Сочетания клавиш среды SQL Server Management Studio](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md)  
-  
-  
+## <a name="next-steps"></a>Следующие шаги
+
+ [Сочетания клавиш среды SQL Server Management Studio](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md)

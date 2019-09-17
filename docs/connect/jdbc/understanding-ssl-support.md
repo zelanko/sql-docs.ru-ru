@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 073f3b9e-8edd-4815-88ea-de0655d0325e
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 5da6c0f567e86a5d9ba979f01cb82ec382834651
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.openlocfilehash: dd5d5003970f87d39148a058ca02befaf006775c
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69027303"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874633"
 ---
 # <a name="understanding-ssl-support"></a>Основные сведения о поддержке SSL
 
@@ -28,7 +28,7 @@ ms.locfileid: "69027303"
 > [!NOTE]  
 > Для успешного установления SSL-подключения передаваемое в **serverName** значение должно в точности совпадать с общим именем (CN) или DNS-именем в альтернативном имени субъекта (SAN) сертификата сервера.  
 >
-> Дополнительные сведения о настройке SSL для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] см. в разделе по шифрованию подключений к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в электронной документации на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+> Дополнительные сведения о настройке SSL для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]см. в разделе [Enable encrypted connections to the ядро СУБД](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
 ## <a name="remarks"></a>Remarks
 

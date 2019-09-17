@@ -10,10 +10,10 @@ ms.reviewer: MightyPen
 ms.author: v-jizho2
 author: karinazhou
 ms.openlocfilehash: 7350fd7556040cded7f84db3ab9112ddfe7f816d
-ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
+ms.sourcegitcommit: 00350f6ffb73c2c0d99beeded61c5b9baa63d171
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/01/2019
+ms.lasthandoff: 09/02/2019
 ms.locfileid: "68702796"
 ---
 # <a name="dsn-and-connection-string-keywords-and-attributes"></a>Ключевые слова и атрибуты строки подключения и имени DSN
@@ -124,7 +124,7 @@ ms.locfileid: "68702796"
 
 Используется для описания источника данных.
 
-### <a name="sqlcoptssansioem"></a>SQL_COPT_SS_ANSI_OEM
+### <a name="sql_copt_ss_ansi_oem"></a>SQL_COPT_SS_ANSI_OEM
 
 Управляет преобразованием данных из ANSI в OEM. 
 
@@ -133,7 +133,7 @@ ms.locfileid: "68702796"
 | SQL_AO_OFF | (По умолчанию) Преобразование не выполняется. |
 | SQL_AO_ON | Преобразование выполняется. |
 
-### <a name="sqlcoptssfallbackconnect"></a>SQL_COPT_SS_FALLBACK_CONNECT
+### <a name="sql_copt_ss_fallback_connect"></a>SQL_COPT_SS_FALLBACK_CONNECT
 
 Управляет использованием резервных подключений SQL Server. Больше не поддерживается.
 
@@ -146,7 +146,7 @@ ms.locfileid: "68702796"
 
 ## <a name="new-connection-string-keywords-and-connection-attributes"></a>Новые ключевые слова для строк подключения и атрибуты подключения
 
-###  <a name="authentication---sqlcoptssauthentication"></a>Проверка подлинности — SQL_COPT_SS_AUTHENTICATION
+###  <a name="authentication---sql_copt_ss_authentication"></a>Проверка подлинности — SQL_COPT_SS_AUTHENTICATION
 
 Задает режим проверки подлинности для соединения с SQL Server. Дополнительные сведения см. в статье [Использование Azure Active Directory](using-azure-active-directory.md).
 
@@ -163,7 +163,7 @@ ms.locfileid: "68702796"
 > [!NOTE]
 > При использовании ключевого слова или атрибута `Authentication` явно присвойте параметру `Encrypt` нужное значение в строке подключения, имени DSN или атрибуте подключения. Подробные сведения см. в статье [Использование ключевых слов строки подключения с собственным клиентом SQL Server](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).
 
-### <a name="columnencryption---sqlcoptsscolumnencryption"></a>ColumnEncryption — SQL_COPT_SS_COLUMN_ENCRYPTION
+### <a name="columnencryption---sql_copt_ss_column_encryption"></a>ColumnEncryption — SQL_COPT_SS_COLUMN_ENCRYPTION
 
 Управляет прозрачным шифрованием столбцов (Always Encrypted). Дополнительные сведения см. в статье [Использование функции Always Encrypted с драйвером ODBC](using-always-encrypted-with-the-odbc-driver.md).
 
@@ -173,7 +173,7 @@ ms.locfileid: "68702796"
 |Выключено|SQL_CE_DISABLED|(По умолчанию) Отключает функцию Always Encrypted.|
 | |SQL_CE_RESULTSETONLY|Включает только расшифровку (результатов и возвращаемых значений).|
 
-### <a name="transparentnetworkipresolution---sqlcoptsstnir"></a>TransparentNetworkIPResolution — SQL_COPT_SS_TNIR
+### <a name="transparentnetworkipresolution---sql_copt_ss_tnir"></a>TransparentNetworkIPResolution — SQL_COPT_SS_TNIR
 
 Управляет функцией "Разрешение IP-адресов прозрачной сети", которая взаимодействует с MultiSubnetFailover для ускорения повторных попыток подключения. Дополнительные сведения см. в статье [Использование разрешения IP-адресов прозрачной сети](using-transparent-network-ip-resolution.md).
 
@@ -191,7 +191,7 @@ ms.locfileid: "68702796"
 |нет|(По умолчанию) Для метаданных (при их наличии) используется процедура sp_describe_first_result_set. |
 |Да| Для метаданных используется параметр SET FMTONLY. |
 
-### <a name="sqlcoptssaccesstoken"></a>SQL_COPT_SS_ACCESS_TOKEN
+### <a name="sql_copt_ss_access_token"></a>SQL_COPT_SS_ACCESS_TOKEN
 
 Разрешает использование маркера доступа Azure Active Directory для проверка подлинности. Дополнительные сведения см. в статье [Использование Azure Active Directory](using-azure-active-directory.md).
 
@@ -200,7 +200,7 @@ ms.locfileid: "68702796"
 | NULL | (По умолчанию) Маркер доступа не предоставлен. |
 | ACCESSTOKEN* | Указатель на маркер доступа. |
 
-### <a name="sqlcoptsscekeystoredata"></a>SQL_COPT_SS_CEKEYSTOREDATA
+### <a name="sql_copt_ss_cekeystoredata"></a>SQL_COPT_SS_CEKEYSTOREDATA
 
 Взаимодействует с загруженной библиотекой поставщика хранилища ключей. См. описание атрибута, управляющего прозрачным шифрованием столбцов (Always Encrypted). Этот атрибут не имеет значения по умолчанию. Дополнительные сведения см. в статье [Пользовательские поставщики хранилища ключей](custom-keystore-providers.md).
 
@@ -208,7 +208,7 @@ ms.locfileid: "68702796"
 |-|-|
 | CEKEYSTOREDATA * | Структура данных взаимодействия для библиотеки поставщика хранилища ключей. |
 
-### <a name="sqlcoptsscekeystoreprovider"></a>SQL_COPT_SS_CEKEYSTOREPROVIDER
+### <a name="sql_copt_ss_cekeystoreprovider"></a>SQL_COPT_SS_CEKEYSTOREPROVIDER
 
 Загружает библиотеку поставщика хранилища ключей для Always Encrypted или получает имена загруженных библиотек поставщиков хранилища ключей. Дополнительные сведения см. в статье [Пользовательские поставщики хранилища ключей](custom-keystore-providers.md). Этот атрибут не имеет значения по умолчанию.
 
@@ -216,7 +216,7 @@ ms.locfileid: "68702796"
 |-|-|
 | char * | Путь к библиотеке поставщика хранилища ключей |
 
-### <a name="sqlcoptssenlistinxa"></a>SQL_COPT_SS_ENLIST_IN_XA
+### <a name="sql_copt_ss_enlist_in_xa"></a>SQL_COPT_SS_ENLIST_IN_XA
 
 Чтобы включить транзакции XA с совместимым с XA обработчиком транзакций, приложение должно вызвать функцию **SQLSetConnectAttr** с атрибутом SQL_COPT_SS_ENLIST_IN_XA и указателем на объект `XACALLPARAM`. Этот параметр поддерживается в Windows (версии 17.3 и более поздних), Linux и Mac.
 ```

@@ -13,19 +13,19 @@ helpviewer_keywords:
 - Database Mail [SQL Server], components
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 6a8a5955d56d635a56899653b7cd2bd98b4924ec
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ee5e7fd6511a624b05b4d6c7d03c1f2dcd288054
+ms.sourcegitcommit: 2da98f924ef34516f6ebf382aeb93dab9fee26c1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68134443"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70228431"
 ---
 # <a name="common-errors-with-database-mail"></a>Распространенные ошибки при работе с компонентом Database Mail 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 В этой статье описаны некоторые распространенные ошибки в работе компонента Database Mail и их решения.
 
-## <a name="could-not-find-stored-procedure-spsenddbmail"></a>Хранимая процедура sp_send_dbmail не найдена
+## <a name="could-not-find-stored-procedure-sp_send_dbmail"></a>Хранимая процедура sp_send_dbmail не найдена
 Хранимая процедура [sp_send_dbmail](../system-stored-procedures/sp-send-dbmail-transact-sql.md) устанавливается в базе данных msdb. Необходимо выполнять процедуру **sp_send_dbmail** непосредственно из базы данных msdb или указывать трехчастное имя для этой хранимой процедуры.
 
 Пример
@@ -48,7 +48,7 @@ EXEC dbo.sp_send_dbmail ...
 
 Чтобы проверить разрешения для профиля, выполните хранимую процедуру [sysmail_help_principalprofile_sp (Transact-SQL)](../system-stored-procedures/sysmail-help-principalprofile-sp-transact-sql.md) с именем профиля. Используйте хранимую процедуру [sysmail_add_principalprofile_sp (Transact-SQL)](../system-stored-procedures/sysmail-help-principalprofile-sp-transact-sql.md) или [мастер настройки компонента Database Mail](configure-database-mail.md), чтобы дать пользователю или группе msdb доступ к профилю.
 
-## <a name="permission-denied-on-spsenddbmail"></a>Отказано в разрешении на sp_send_dbmail
+## <a name="permission-denied-on-sp_send_dbmail"></a>Отказано в разрешении на sp_send_dbmail
 
 В этом подразделе описывается, как устранить неполадки в случае получения сообщения об ошибке, указывающего на то, что пользователь, который пытается отправить сообщение Database Mail, не имеет разрешения на выполнение процедуры sp_send_dbmail.
 
@@ -68,7 +68,7 @@ GO
 ```
 Дополнительные сведения см. в статье [sp_addrolemember](../system-stored-procedures/sp-addrolemember-transact-sql.md) или [sp_droprolemember](../system-stored-procedures/sp-droprolemember-transact-sql.md).
 
-## <a name="database-mail-queued-no-entries-in-sysmaileventlog-or-windows-application-event-log"></a>Письмо поставлено в очередь, но нет записей в представлении sysmail_event_log или в журнале событий Windows 
+## <a name="database-mail-queued-no-entries-in-sysmail_event_log-or-windows-application-event-log"></a>Письмо поставлено в очередь, но нет записей в представлении sysmail_event_log или в журнале событий Windows 
 
 Для постановки сообщений электронной почты в очередь компонент Database Mail использует компонент Service Broker. Если компонент Database Mail остановлен или функция доставки сообщений компонента Service Broker не активирована в базе данных **msdb**, компонент Database Mail ведет базу данных очереди сообщений, но не имеет возможности отправлять их. В этом случае сообщения компонента Service Broker остаются в очереди Service Broker. Компонент Service Broker не активирует внешнюю программу, поэтому записи в журнале **sysmail_event_log** отсутствуют, а состояние элемента очереди в таблице **sysmail_allitems** и связанных представлениях не обновляется.
 

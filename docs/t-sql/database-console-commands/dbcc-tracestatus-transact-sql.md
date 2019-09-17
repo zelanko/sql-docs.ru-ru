@@ -24,15 +24,15 @@ helpviewer_keywords:
 ms.assetid: 9be51199-78b4-4b87-ae6e-557246b7e29a
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: e6bdd627d0ce40ca44ef42c263d04beb6104edd0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3d353a6c11d19f96f590e11aa5ebe48677c3cd84
+ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68040559"
+ms.lasthandoff: 09/02/2019
+ms.locfileid: "70211236"
 ---
 # <a name="dbcc-tracestatus-transact-sql"></a>DBCC TRACESTATUS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
 Отображает состояние флагов трассировки.
   
@@ -53,7 +53,7 @@ DBCC TRACESTATUS ( [ [ trace# [ ,...n ] ] [ , ] [ -1 ] ] )
 Заполнитель, показывающий, что можно задавать несколько флагов трассировки.
   
 -1  
-Отображает состояние глобально активированных флагов трассировки. Если значение –1 задано без аргумента *trace#* , то отображаются все активированные глобальные флаги трассировки.
+Отображает состояние глобально активированных флагов трассировки. Если значение –1 задано без аргумента *trace#*, то отображаются все активированные глобальные флаги трассировки.
   
 WITH NO_INFOMSGS  
 Подавляет все информационные сообщения со степенями серьезности от 0 до 10.

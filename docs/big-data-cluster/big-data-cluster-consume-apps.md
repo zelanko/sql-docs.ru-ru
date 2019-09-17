@@ -9,12 +9,12 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 5d65cb2577749a45bccf1383bdf880ce8c5a7a46
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: bd7d5e0093d3805679e59b542582c263dfd56c9c
+ms.sourcegitcommit: 5a61854ddcd2c61bb6da30ccad68f0ad90da0c96
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653063"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70978295"
 ---
 # <a name="consume-an-app-deployed-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-using-a-restful-web-service"></a>Использование приложения, развернутого на [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] веб-службе RESTful
 
@@ -51,7 +51,7 @@ azdata app describe --help
 Опишите приложение, выполнив команду, как показано в следующем примере:
 
 ```bash
-azdata app describe --name addpy --version v1
+azdata app describe --name add-app --version v1
 ```
 
 ```json

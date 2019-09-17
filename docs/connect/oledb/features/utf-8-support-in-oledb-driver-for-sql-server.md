@@ -10,12 +10,12 @@ ms.technology: connectivity
 ms.topic: reference
 author: v-kaywon
 ms.author: v-kaywon
-ms.openlocfilehash: d092a534d973de246d3e3c61e67bce9d87d45fe6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fb596365f284a141b5e57bfc8601427fe603d73d
+ms.sourcegitcommit: 49f3d12c0a46d98b82513697a77a461340f345e1
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64775168"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70392019"
 ---
 # <a name="utf-8-support-in-ole-db-driver-for-sql-server"></a>Поддержка UTF-8 в драйвере OLE DB для SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -25,6 +25,9 @@ ms.locfileid: "64775168"
 Microsoft OLE DB Driver для SQL Server (версия 18.2.1) обеспечивает поддержку серверного кодирования UTF-8. Сведения о поддержке UTF-8 в SQL Server см. в следующих статьях.
 - [Поддержка параметров сортировки и Юникода](../../../relational-databases/collations/collation-and-unicode-support.md)
 - [Поддержка UTF-8](#ctp23)
+
+> [!IMPORTANT]
+> Драйвер Microsoft OLE DB для SQL Server использует функцию [жетакп](https://docs.microsoft.com/windows/win32/api/winnls/nf-winnls-getacp) для определения кодировки входного буфера DBTYPE_STR. Сценарии, в которых Жетакп возвращает кодировку UTF-8, не поддерживаются. Если буфер должен хранить данные в Юникоде, для типа данных buffer следует задать значение DBTYPE_WSTR (в кодировке UTF-16).
 
 ## <a name="data-insertion-into-a-utf-8-encoded-char-or-varchar-column"></a>Вставка данных в столбец CHAR или VARCHAR в кодировке UTF-8
 При создании буфера входного параметра для вставки буфер описан с помощью массива [структур DBBINDING](https://go.microsoft.com/fwlink/?linkid=2071182). Каждая структура DBBINDING связывает отдельный параметр с буфером потребителя и содержит такие сведения, как длина и тип значения данных. Для буфера входного параметра типа CHAR параметру *wType* структуры DBBINDING должно быть присвоено значение DBTYPE_STR. Для буфера входного параметра типа WCHAR параметру *wType* структуры DBBINDING должно быть присвоено значение DBTYPE_WSTR.

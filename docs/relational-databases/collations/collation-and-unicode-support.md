@@ -32,12 +32,12 @@ ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5807b8ae9c3b074068d0422a91b1dc1711c4067a
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+ms.openlocfilehash: 1bda35d5c393eaa1e4503cb487ed19b281686364
+ms.sourcegitcommit: 75fe364317a518fcf31381ce6b7bb72ff6b2b93f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68471048"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70908407"
 ---
 # <a name="collation-and-unicode-support"></a>Collation and Unicode Support
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -105,7 +105,11 @@ ms.locfileid: "68471048"
 Невозможно изменить параметры сортировки системных баз данных с помощью изменения параметров сортировки сервера.    
     
 Параметры сортировки базы данных используются для всех метаданных в базе данных, а также по умолчанию для всех строковых столбцов, временных объектов, имен переменных и любых других строковых объектов в базе данных. Когда вы изменяете сортировку базы данных пользователя, могут возникнуть конфликты сортировки, кода запросы в базе данных получают доступ к временным таблицам. Временные таблицы всегда хранятся в системной базе данных **tempdb**, которая использует параметры сортировки экземпляра. Запросы, сравнивающие символьные данные в пользовательской базе данных и **tempdb** , могут завершиться ошибкой, если параметры сортировки вызовут конфликт при оценке таких данных. Можно решить эту проблему, указав в запросе предложение COLLATE. Дополнительные сведения см. в разделе [COLLATE (Transact-SQL)](~/t-sql/statements/collations.md).    
-    
+
+> [!NOTE]
+> После создания базы данных в [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] параметры сортировки невозможно изменить.
+
+
 #### <a name="column-level-collations"></a>Параметры сортировки уровня столбцов    
 При создании или изменении таблицы можно указать параметры сортировки для каждого столбца символьной строки с помощью предложения COLLATE. Если параметры сортировки не указаны, то столбцу присваиваются параметры сортировки по умолчанию для базы данных.    
     

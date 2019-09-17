@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: fb804fa2-48eb-4878-a12f-4e0d5f4bc9e3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 91ad9771c9133dc3194f25fa530bd3ba458f865a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 761a04baca38ee1301c8f51d8b69564f409fac1e
+ms.sourcegitcommit: a97d551b252b76a33606348082068ebd6f2c4c8c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68117123"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70745398"
 ---
 # <a name="create-service-transact-sql"></a>CREATE SERVICE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   Создает новую службу. Компонент [!INCLUDE[ssSB](../../includes/sssb-md.md)] — это имя конкретной задачи или набора бизнес-задач. Компонент [!INCLUDE[ssSB](../../includes/sssb-md.md)] использует имя службы для маршрутизации сообщений, доставки сообщений в нужную очередь в базе данных и принудительного соблюдения контракта для диалога.  
   
@@ -55,7 +55,7 @@ CREATE SERVICE service_name
  AUTHORIZATION *owner_name*  
  Определяет в качестве владельца службы указанного пользователя или роль базы данных. Если текущим пользователем является **dbo** или **sa**, то аргумент *owner_name* может быть именем любого допустимого пользователя или роли. В противном случае аргумент *owner_name* должен быть именем текущего пользователя, именем пользователя, для которого у текущего пользователя есть разрешение IMPERSONATE, или именем роли, которой принадлежит текущий пользователь.  
   
- ON QUEUE [ _schema_name_ **.** ] *queue_name*  
+ ON QUEUE [ _schema_name_**.** ] *queue_name*  
  Указывает очередь, в которую поступают сообщения для службы. Очередь должна существовать в той же самой базе данных, что и служба. Если имя схемы *schema_name* не указано, используется схема по умолчанию пользователя, выполняющего инструкцию.  
   
  *contract_name*  
@@ -76,7 +76,7 @@ CREATE SERVICE service_name
   
  По умолчанию разрешением `REFERENCES` на значения по умолчанию для службы обладает владелец службы, члены предопределенной роли базы данных `db_ddladmin` или `db_owner` и члены предопределенной роли сервера `sysadmin`. По умолчанию разрешением `SEND` на значения по умолчанию для службы обладает владелец службы, члены предопределенной роли базы данных `db_owner` и члены предопределенной роли сервера `sysadmin`.  
   
- Служба не может быть временным объектом. Имена служб, начинающиеся с **#** , допустимы, но являются постоянными объектами.  
+ Служба не может быть временным объектом. Имена служб, начинающиеся с **#**, допустимы, но являются постоянными объектами.  
   
 ## <a name="examples"></a>Примеры  
   

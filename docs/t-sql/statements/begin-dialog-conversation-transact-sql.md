@@ -30,15 +30,15 @@ helpviewer_keywords:
 ms.assetid: 8e814f9d-77c1-4906-b8e4-668a86fc94ba
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 96b2611bdbc7c13072f43b36d5e132b9713b3878
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c456b6e34dba77b7e35cc24e8af673662725a2bb
+ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68141189"
+ms.lasthandoff: 09/02/2019
+ms.locfileid: "70211382"
 ---
 # <a name="begin-dialog-conversation-transact-sql"></a>BEGIN DIALOG CONVERSATION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   Создает диалог между двумя службами. Диалог — это сеанс связи, который обеспечивает доставку сообщений строго по порядку между двумя службами.  
   
@@ -68,13 +68,13 @@ BEGIN DIALOG [ CONVERSATION ] @dialog_handle
  FROM SERVICE *initiator_service_name*  
  Указывает службу стороны, вызывающей диалог. Указанное имя должно быть именем службы в текущей базе данных. Очередь, указанная для вызывающей службы, получает сообщения, возвращенные целевой службой, и сообщения, созданные компонентом Service Broker для данного диалога.  
   
- TO SERVICE **'** _target_service_name_ **'**  
- Указывает целевую службу, с которой необходимо начать диалог. *target_service_name* имеет тип **nvarchar(256)** . Компонент [!INCLUDE[ssSB](../../includes/sssb-md.md)] производит побайтовое сравнение при поиске соответствия строке *target_service_name*. Другими словами, сравнение чувствительно к регистру и не использует текущие параметры сортировки.  
+ TO SERVICE **'**_target_service_name_**'**  
+ Указывает целевую службу, с которой необходимо начать диалог. *target_service_name* имеет тип **nvarchar(256)**. Компонент [!INCLUDE[ssSB](../../includes/sssb-md.md)] производит побайтовое сравнение при поиске соответствия строке *target_service_name*. Другими словами, сравнение чувствительно к регистру и не использует текущие параметры сортировки.  
   
  *service_broker_guid*  
  Указывает базу данных, в которой расположена целевая служба. Если несколько баз данных содержат экземпляр целевой службы, можно передавать данные определенной базе данных, задав аргумент *service_broker_guid*.  
   
- *service_broker_guid* имеет тип **nvarchar(128)** . Чтобы найти *service_broker_guid* для базы данных, выполните следующий запрос в базе данных:  
+ *service_broker_guid* имеет тип **nvarchar(128)**. Чтобы найти *service_broker_guid* для базы данных, выполните следующий запрос в базе данных:  
   
 ```  
 SELECT service_broker_guid  
@@ -91,13 +91,13 @@ WHERE database_id = DB_ID() ;
  ON CONTRACT *contract_name*  
  Указывает контракт, которого придерживается данный диалог. Контракт должен существовать в текущей базе данных. Если целевая служба не принимает новые диалоги по указанному контракту, компонент [!INCLUDE[ssSB](../../includes/sssb-md.md)] возвращает сообщение об ошибке диалога. Если это предложение опущено, диалог придерживается контракта с именем **DEFAULT**.  
   
- RELATED_CONVERSATION **=** _related_conversation_handle_  
+ RELATED_CONVERSATION **=**_related_conversation_handle_  
  Указывает существующую группу сообщений, к которой добавляется новый диалог. Если присутствует данное предложение, новый диалог принадлежит к той же группе сообщений, что и диалог, указанный аргументом *related_conversation_handle*. Аргумент *related_conversation_handle* должен иметь тип, способный неявно преобразовываться в тип **uniqueidentifier**. Инструкция завершается неудачно, если аргумент *related_conversation_handle* не ссылается на существующий диалог.  
   
- RELATED_CONVERSATION_GROUP **=** _related_conversation_group_id_  
+ RELATED_CONVERSATION_GROUP **=**_related_conversation_group_id_  
  Указывает существующую группу сообщений, к которой добавляется новый диалог. Если присутствует данное предложение, новый диалог будет добавлен к группе сообщений, указанной аргументом *related_conversation_group_id*. Аргумент *related_conversation_group_id* должен иметь тип, способный неявно преобразовываться в тип **uniqueidentifier**. Если аргумент *related_conversation_group_id* не ссылается на существующую группу сообщений, компонент Service Broker создает новую группу сообщений с заданным аргументом *related_conversation_group_id* и связывает новый диалог с полученной группой сообщений.  
   
- LIFETIME **=** _dialog_lifetime_  
+ LIFETIME **=**_dialog_lifetime_  
  Указывает максимальный период времени, в течение которого диалог будет оставаться открытым. Для успешного завершения диалога обе конечные точки должны явно завершить диалог до истечения его времени жизни. Значение аргумента *dialog_lifetime* должно быть выражено в секундах. Этот аргумент имеет тип **int**. Если предложение LIFETIME не указано, время жизни диалога принимает максимальное значение типа данных **int**.  
   
  ENCRYPTION  

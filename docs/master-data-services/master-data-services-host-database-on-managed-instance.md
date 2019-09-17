@@ -1,6 +1,6 @@
 ---
-title: Размещение базы данных на управляемом экземпляре | Документация Майкрософт
-description: Описывает настройку базы данных MDS на управляемом экземпляре.
+title: Размещение базы данных Master Data Services на управляемом экземпляре | Документация Майкрософт
+description: В этой статье описывается настройка базы данных служб Master Data Service (MDS) на управляемом экземпляре.
 ms.custom: ''
 ms.date: 07/01/2019
 ms.prod: sql
@@ -13,223 +13,225 @@ author: v-redu
 ms.author: lle
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 0081ea193452e4e92938051bc7b4a40bc8631eaa
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 747711159c92c7194c0ca622a8e734cff2e6fa2b
+ms.sourcegitcommit: d1bc0dd1ac626ee7034a36b81554258994d72c15
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155381"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70958389"
 ---
-# <a name="host-database-on-managed-instance"></a>База данных узла на управляемом экземпляре
+# <a name="host-an-mds-database-on-a-managed-instance"></a>Размещение базы данных MDS на управляемом экземпляре
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  В этой статье описывается настройка базы данных MDS на управляемом экземпляре.
+  В этой статье описано, как настроить базу данных Master Data Services (MDS) на управляемом экземпляре.
   
 ## <a name="preparation"></a>Подготовка
 
-В процессе подготовки необходимо выполнить следующие действия.
-- Завершение создания и настройки управляемого экземпляра. Включите виртуальную сеть и VPN-подключение типа "точка — сеть".
-- Завершите настройку компьютера веб-приложения.
-  - Включить установку VPN типа "точка — сеть".
-  - Установите роли и компоненты.
+Для подготовки необходимо создать и настроить управляемый экземпляр базы данных SQL Azure и настроить компьютер веб-приложения.
 
-**Сторона базы данных:**
+### <a name="create-and-configure-the-database"></a>Создание и настройка базы данных
 
-1. Создание управляемого экземпляра базы данных SQL Azure включает в себя виртуальную сеть. [Краткое руководство Создание управляемого экземпляра базы данных SQL Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-get-started)
-2. Настройте подключение типа "точка — сеть". [Настройка подключения типа "точка — сеть" к виртуальной сети с помощью собственной проверки подлинности на основе сертификата Azure. портал Azure](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-howto-point-to-site-resource-manager-portal)
-3. Настройка проверки подлинности Azure Active Directory с помощью управляемого экземпляра базы данных SQL. [Настройка проверки подлинности Azure Active Directory и управление ею с помощью SQL](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure)
+1. Создание управляемого экземпляра базы данных SQL Azure с помощью виртуальной сети. См [. Краткое руководство. Для получения дополнительных сведений создайте управляемый](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-get-started) экземпляр базы данных SQL Azure.
 
-**Сторона компьютера веб-приложения:**
+1. Настройте подключение типа "точка — сеть". См [. статью Настройка подключения типа "точка — сеть" к виртуальной сети с помощью собственной проверки подлинности на основе сертификата Azure. Портал Azure](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-howto-point-to-site-resource-manager-portal) инструкции.
 
-1. Установите сертификат подключения типа "точка — сеть" и VPN, чтобы убедиться, что компьютер может получить доступ к управляемому экземпляру базы данных SQL. [Настройка подключения типа "точка — сеть" к виртуальной сети с помощью собственной проверки подлинности на основе сертификата Azure. портал Azure](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-howto-point-to-site-resource-manager-portal)
-2. Установите роли и компоненты. Следующие функции являются обязательными.
+1. Настройка проверки подлинности Azure Active Directory с помощью управляемого экземпляра базы данных SQL. Дополнительные сведения см. [в разделе Настройка проверки подлинности Azure Active Directory и управление ею с помощью SQL](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure) .
 
-- Роли
+### <a name="configure-web-application-machine"></a>Настройка компьютера веб-приложения
 
-      Internet Information Services
-      Web Management Tools
-      IIS Management Console
-      World Wide Web Services
-      Application Development
-      .NET Extensibility 3.5
-      .NET Extensibility 4.5
-      ASP.NET 3.5
-      ASP.NET 4.5
-      ISAPI Extensions
-      ISAPI Filters
-      Common HTTP Features
-      Default Document
-      Directory Browsing
-      HTTP Errors
-      Static Content
-      [Note: Do not install WebDAV Publishing]
-      Health and Diagnostics
-      HTTP Logging
-      Request Monitor
-      Performance
-      Static Content Compression
-      Security
-      Request Filtering
-      Windows Authentication
+1. Установите сертификат подключения типа "точка — сеть" и VPN, чтобы убедиться, что компьютер может получить доступ к управляемому экземпляру базы данных SQL. См. статью Настройка подключения типа "точка — сеть" к виртуальной сети с помощью собственной проверки подлинности на основе сертификата Azure. [ Портал Azure](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-howto-point-to-site-resource-manager-portal) инструкции.
 
-- Функции:
+1. Установите следующие роли и компоненты:
+   - Роли
+     - Службы IIS
+     - Средства управления веб-сайтом
+     - Консоль управления (IIS)
+     - Веб-службы Интернета
+     - Разработка приложений
+     - Расширяемость платформы .NET версии 3.5
+     - Расширяемость платформы .NET версии 4.5
+     - ASP.NET 3.5
+     - ASP.NET 4.5
+     - Расширения ISAPI
+     - Фильтры ISAPI
+     - Общие функции HTTP
+     - Документ по умолчанию
+     - Обзор каталога
+     - Ошибки HTTP
+     - Статическое содержимое
+     - Исправность и диагностика
+     - Ведение журнала служб HTTP
+     - Монитор запросов
+     - Производительность
+     - Сжатие статического содержимого
+     - Безопасность
+     - Фильтрация запросов
+     - Проверка подлинности Windows
+       > [!NOTE]
+       > Не устанавливать публикацию WebDAV
 
-      .NET Framework 3.5 (includes .NET 2.0 and 3.0)
-      .NET Framework 4.5 Advanced Services
-      ASP.NET 4.5
-      WCF Services
-      HTTP Activation [Note: This is required.]
-      TCP Port Sharing
-      Windows Process Activation Service
-      Process Model
-      .NET Environment
-      Configuration APIs
-      Dynamic Content Compression
+   - Функции:
+     - .NET Framework 3.5 (включая .NET 2.0 и 3.0)
+     - Дополнительные службы .NET Framework 4.5 Advanced Services
+     - ASP.NET 4.5
+     - Службы WCF
+     - Активация HTTP (требуется)
+     - Совместное использование TCP-порта
+     - Служба активации Windows
+     - Модель процесса
+     - Среда .NET
+     - API-интерфейсы конфигурации
+     - Функция сжатия динамического содержимого
 
-## <a name="install-and-configure-includessmdsshort_mdincludesssmdsshort-mdmd-web-application"></a>Установка и настройка [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] веб-приложения
+## <a name="install-and-configure-an-mds-web-application"></a>Установка и Настройка веб-приложения MDS
 
-Для установки и настройки [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]необходимо завершить следующие шаги.
+Затем установите и настройте [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)].
 
-1. Установите компонент SQL Server 2019 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] include.
-2. [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] Создание базы данных на экземпляре управления.
-3. Создайте и настройте веб-приложение [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]для.
-  
-**Установка SQL Server 2019**
+### <a name="install-sql-server-2019"></a>Установка SQL Server 2019
 
-Для установки [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]используется мастер установки SQL Server установки или Командная строка.
+Используйте мастер установки SQL Server установки или командную строку для установки [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)].
 
-1. Дважды щелкните файл Setup.exe и следуйте инструкциям мастера установки.
+1. Откройте `Setup.exe`и выполните действия, описанные в мастере установки.
 
-2. На [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] странице Выбор компонентов выберите Общие компоненты.
-При этом устанавливается [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)], сборки, оснастка Windows PowerShell, папки и файлы для веб-приложений и служб.
+2. На странице [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] Выбор компонентов **в разделе** Общие компоненты **выберите**.
+Это действие устанавливает:
+   - [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]
+   - Сборки
+   - Оснастка Windows PowerShell
+   - Папки и файлы для веб-приложений и служб.
 
-    ![MDS-SQLServer2019-config-MI-склфеатуреселектион](../master-data-services/media/mds-sqlserver2019-config-mi-sqlfeatureselection.png "MDS-SQLServer2019-config-MI_SQLFeatureSelection")  
+   ![MDS-SQLServer2019-config-MI-склфеатуреселектион](../master-data-services/media/mds-sqlserver2019-config-mi-sqlfeatureselection.png "MDS-SQLServer2019-config-MI_SQLFeatureSelection")  
 
-**Настройка базы данных и веб-сайта**
+### <a name="set-up-the-database-and-website"></a>Настройка базы данных и веб-сайта
 
 1. Подключите виртуальную сеть Azure, чтобы убедиться, что вы можете подключиться к управляемому экземпляру.
 
-    ![MDS-SQLServer2019-config-MI-P2SVPNConnect](../master-data-services/media/mds-sqlserver2019-config-mi-p2svpnconnect.png "MDS-SQLServer2019-config-MI_P2SVPNConnect")  
+   ![MDS-SQLServer2019-config-MI-P2SVPNConnect](../master-data-services/media/mds-sqlserver2019-config-mi-p2svpnconnect.png "MDS-SQLServer2019-config-MI_P2SVPNConnect")
 
-2. [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]Запустите. И щелкните **Конфигурация базы данных** в левой области.
+1. Откройте, [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] а затем выберите **Конфигурация базы данных** в левой области.
 
-3. Щелкните **создать базу данных**, а затем нажмите кнопку Далее в мастере **создания базы данных** .
+1. Выберите **создать базу данных** , чтобы открыть **Мастер создания базы данных**. Щелкните **Далее**.
 
-4. На странице **сервер базы данных** заполните **экземпляр SQL Server** и выберите **тип проверки** подлинности, а затем нажмите кнопку **проверить подключение** , чтобы убедиться, что можно подключиться к базе данных, используя учетные данные для типа проверки подлинности, который вы выбрать. Нажмите кнопку Далее.
-
-   > [!NOTE]
-   > - Экземпляр SQL Server для управляемого экземпляра, например "xxxxxxx.xxxxxxx.database.windows.net"
-   > - Для управляемого экземпляра мы поддерживаем тип проверки подлинности **"учетная запись SQL Server"** и **"текущий пользователь — Active Directory интегрирован"** .
-   > - При выборе параметра **текущий пользователь — Active Directory** , интегрированный в качестве типа проверки подлинности, поле **имя пользователя** доступно только для чтения и отображает имя учетной записи пользователя Windows, выполнившего вход на компьютер. Если вы используете SQL Server 2019 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] на виртуальной машине Azure, в поле **имя пользователя** отображается имя виртуальной машины и имя пользователя для учетной записи локального администратора на виртуальной машине.
-
-    Убедитесь, что проверка подлинности содержит правило **"sysadmin"** для управляемого экземпляра.
-![MDS-SQLServer2019-config-MI-креатедбконнект](../master-data-services/media/mds-sqlserver2019-config-mi-createdbconnect.png "MDS-SQLServer2019-config-MI_CreateDBConnect")  
-
-5. Введите имя в поле **Имя базы данных** . Если необходимо выбрать параметры сортировки Windows, снимите флажок **Параметры сортировки SQL Server по умолчанию** и укажите один или несколько доступных параметров, например **С учетом регистра**. Нажмите кнопку **Далее**.
-
-    ![MDS-SQLServer2019-config-MI-креатеддбнаме](../master-data-services/media/mds-sqlserver2019-config-mi-createddbname.png "MDS-SQLServer2019-config-MI_CreatedDBName")  
-
-6. В поле **имя пользователя** укажите учетную запись пользователя Windows, которая будет являться суперпользователя по умолчанию для [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]. Суперпользователь имеет доступ ко всем функциональным областям и может добавлять, удалять и обновлять все модели.
-
-    ![MDS-SQLServer2019-config-MI-креатедбусернаме](../master-data-services/media/mds-sqlserver2019-config-mi-createdbusername.png "MDS-SQLServer2019-config-MI_createDBUserName")
-
-7. Нажмите кнопку **Далее** , чтобы просмотреть сводку параметров для базы данных [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] , а затем нажмите кнопку **Далее** еще раз, чтобы создать базу данных. Откроется страница **Ход выполнения и завершение**.
-
-8. После создания и настройки базы данных нажмите кнопку **Готово**.
-
-    Дополнительные сведения о параметрах **мастера создания базы данных**см. в разделе [Мастер &#40; [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] создания базы данных&#41;Configuration Manager](../master-data-services/create-database-wizard-master-data-services-configuration-manager.md).
-
-9. На странице **Конфигурация базы данных** в [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]выберите пункт **выбрать базу данных**.
-
-10. Нажмите кнопку **подключить**, выберите [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] базу данных, созданную на шаге 8, и нажмите кнопку **ОК**.
-
-    ![MDS-SQLServer2019-config-MI-коннектдбнаме](../master-data-services/media/mds-sqlserver2019-config-mi-connectdbname.png "MDS-SQLServer2019-config-MI_connectDBName")
-
-11. В [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]щелкните **Веб-конфигурация** в области слева.
-
-12. В поле со списком **Веб-сайт** выберите элемент **Веб-сайт по умолчанию**, а затем нажмите кнопку **Создать** , чтобы создать веб-приложение.
-![MDS-SQLServer2019-config-MI-Web Configuration](../master-data-services/media/mds-sqlserver2019-config-mi-webconfiguration.png "MDS-SQLServer2019-config-MI_WebConfiguration")
-
-   > [!NOTE] 
-   > Если выбран элемент **Веб-сайт по умолчанию**, необходимо создать веб-приложение. Если в списке выбран элемент **Создать новый веб-сайт** , приложение создается автоматически.
-
-    
-
-13. В разделе **пул приложений** введите другое имя пользователя, введите пароль и нажмите кнопку ОК.
-![MDS-SQLServer2019-config-MI-креатевебаппликатион](../master-data-services/media/mds-sqlserver2019-config-mi-createwebapplication.png "MDS-SQLServer2019-config-MI_CreateWebApplication")
+1. На странице **сервер базы данных** укажите поле **экземпляра SQL Server** , а затем выберите **тип проверки подлинности**. Выберите **проверить подключение** , чтобы подтвердить возможность использования учетных данных для подключения к базе данных с помощью выбранного типа проверки подлинности. Щелкните **Далее**.
 
    > [!NOTE]
-   > Необходимо убедиться, что пользователь может получить доступ к базе данных, используя только что созданную встроенную проверку подлинности Active Directory. Также необходимо изменить подключение в файле Web. config позже.
+   > - Экземпляр SQL Server выглядит следующим образом `xxxxxxx.xxxxxxx.database.windows.net`.
+   > - Для управляемого экземпляра выберите тип проверки подлинности **"SQL Server учетная запись"** и **"текущий пользователь — Active Directory встроенные"** .
+   > - Если выбран параметр **текущий пользователь — Active Directory, интегрированный** в качестве типа проверки подлинности, поле **имя пользователя** доступно только для чтения и отображает учетную запись пользователя Windows, выполнившего вход в систему. Если вы используете SQL Server 2019 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] на виртуальной машине Azure, в поле **имя пользователя** отображается имя виртуальной машины и имя пользователя для учетной записи локального администратора на виртуальной машине.
 
-    
+   Проверка подлинности должна содержать правило **"sysadmin"** для управляемых экземпляров.
 
-14. Дополнительные сведения о диалоговом окне " **Создание веб-приложения** " см. в разделе [диалоговое окно "Создание веб-приложения" &#40; [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] Configuration Manager&#41;](../master-data-services/create-web-application-dialog-box-master-data-services-configuration-manager.md).
+   ![MDS-SQLServer2019-config-MI-креатедбконнект](../master-data-services/media/mds-sqlserver2019-config-mi-createdbconnect.png "MDS-SQLServer2019-config-MI_CreateDBConnect")  
 
-15. На странице **веб-конфигурация** в поле **веб-приложение** выберите созданное приложение и нажмите кнопку **выбрать** в разделе **связать приложение с базой данных** .
+1. Введите имя в поле **Имя базы данных** . Кроме того, чтобы выбрать параметры сортировки Windows, снимите флажок **SQL Server параметры сортировки по умолчанию** и выберите один или несколько доступных параметров. Например, **с учетом регистра**. Щелкните **Далее**.
 
-16. Нажмите кнопку **Подключить**, выберите базу данных [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] , которую нужно связать в веб-приложением, а затем нажмите кнопку **ОК**.
+   ![MDS-SQLServer2019-config-MI-креатеддбнаме](../master-data-services/media/mds-sqlserver2019-config-mi-createddbname.png "MDS-SQLServer2019-config-MI_CreatedDBName")
 
-    Настройка веб-сайта завершена. Теперь на странице **веб-конфигурация** отображается выбранный веб-сайт, созданное веб-приложение и [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] база данных, связанная с приложением.
+1. В поле **имя пользователя** укажите учетную запись Windows суперпользователя по умолчанию для [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]. Супер-пользователь имеет доступ ко всем функциональным областям и может добавлять, удалять и обновлять все модели.
 
-    ![MDS-SQLServer2019-config-MI-вебконфигселектдб](../master-data-services/media/mds-sqlserver2019-config-mi-webconfigselectdb.png "MDS-SQLServer2019-config-MI_WebConfigSelectDB")
+   ![MDS-SQLServer2019-config-MI-креатедбусернаме](../master-data-services/media/mds-sqlserver2019-config-mi-createdbusername.png "MDS-SQLServer2019-config-MI_createDBUserName")
 
-17. Нажмите кнопку **Применить**. Появится сообщение о **завершении настройки**. Нажмите кнопку **ОК** в окне сообщения, чтобы запустить веб-приложение. Адрес веб-сайта — http://server имя/веб-приложение/.
+1. Нажмите кнопку **Далее** , чтобы просмотреть сводку параметров для [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] базы данных. Нажмите кнопку **Далее** еще раз, чтобы создать базу данных. Вы увидите страницу **ход выполнения и завершение** .
 
-## <a name="other-authentication-type-to-connect-managed-instance-database-on-web-application"></a>Другой тип проверки подлинности для подключения базы данных управляемого экземпляра к веб-приложению
+1. После создания и настройки базы данных нажмите кнопку **Готово**.
 
-Файл **Web. config** можно получить в папке C:\PROGRAM Files\Microsoft SQL Server\150\Master Data Services\WebApplication. Мы можем изменить connectionString, чтобы изменить другой тип проверки подлинности для подключения базы данных управляемого экземпляра.
+   Дополнительные сведения о параметрах **мастера создания базы данных**см. в разделе [Мастер &#40; [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] создания базы данных&#41;Configuration Manager](../master-data-services/create-database-wizard-master-data-services-configuration-manager.md).
 
-По умолчанию используется тип проверки подлинности "**Active Directory Integrated**", а ниже приведен пример строки подключения.
+1. На странице **Конфигурация базы данных** в [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]выберите **выбрать базу данных**.
 
-```xml
-<add name="MDS1" connectionString="Data Source=*****.*****.database.windows.net;Initial Catalog=MasterDataServices;Integrated Security=False;Connect Timeout=60;Authentication=&quot;Active Directory Integrated&quot;" />
-```
+1. Выберите **подключить**, выберите [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] базу данных и нажмите кнопку **ОК**.
 
-Мы также поддерживаем проверку подлинности Active Directory пароля и проверку подлинности SQL Server. пример строки подключения приведен ниже.
+   ![MDS-SQLServer2019-config-MI-коннектдбнаме](../master-data-services/media/mds-sqlserver2019-config-mi-connectdbname.png "MDS-SQLServer2019-config-MI_connectDBName")
 
-Проверка подлинности Active Directory пароля
+1. В [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]выберите **веб-конфигурация** в левой области.
 
-```xml
-<add name="MDS1" connectionString="Data Source=*****.*****.database.windows.net;Initial Catalog=MasterDataServices;Integrated Security=False;Connect Timeout=60;Authentication=&quot;Active Directory Password&quot; ; UID=bob@contoso.onmicrosoft.com; PWD=MyPassWord!" />
-```
+1. В списке веб **-сайт** выберите **веб-сайт по умолчанию**, а затем щелкните **создать** , чтобы создать веб-приложение.
 
-Проверка подлинности SQL Server
+   ![MDS-SQLServer2019-config-MI-Web Configuration](../master-data-services/media/mds-sqlserver2019-config-mi-webconfiguration.png "MDS-SQLServer2019-config-MI_WebConfiguration")
 
-```xml
-<add name="MDS1" connectionString="Data Source=*****.*****.database.windows.net;Initial Catalog=MasterDataServices;Integrated Security=False;Connect Timeout=60;User ID=UserName;Password=MyPassword!;" />
-```
+   > [!NOTE]
+   > При выборе **веб-сайта по умолчанию**необходимо отдельно создать веб-приложение. Если в списке выбран вариант **создать новый веб-сайт** , приложение будет создано автоматически.
 
-## <a name="upgrade-includessmdsshort_mdincludesssmdsshort-mdmd-and-database-version"></a>Обновление [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] и версия базы данных
+1. В разделе **пул приложений** введите другое имя пользователя, введите пароль и нажмите кнопку **ОК**.
 
-**Обновления[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]**
+   ![MDS-SQLServer2019-config-MI-креатевебаппликатион](../master-data-services/media/mds-sqlserver2019-config-mi-createwebapplication.png "MDS-SQLServer2019-config-MI_CreateWebApplication")
 
-Установите **накопительный пакет обновления**SQL Server 2019, [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] который будет обновлен автоматически.
+   > [!NOTE]
+   > Убедитесь, что пользователь имеет доступ к базе данных с помощью встроенной проверки подлинности Active Directory, которую вы недавно создали. Кроме того, вы можете изменить подключение в `web.config` дальнейшем.
 
-**Обновление версии базы данных**
+   Дополнительные сведения о диалоговом окне " **Создание веб-приложения** " см. в разделе [диалоговое&#41;окно "Создание веб-приложения" &#40; [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] Configuration Manager](../master-data-services/create-web-application-dialog-box-master-data-services-configuration-manager.md).
 
-Если вы получаете сообщение "версия клиента несовместима с версией базы данных" после установки **накопительного обновления**SQL Server 2019, необходимо обновить версию базы данных.
+1. В области **веб-конфигурация** в окне **веб-приложение** выберите созданное приложение и нажмите кнопку **выбрать** в разделе **связать приложение с базой данных** .
 
+1. Выберите **подключить** и выберите [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] базу данных, которую необходимо связать с веб-приложением. Нажмите кнопку **ОК**.
+
+   Настройка веб-сайта завершена. Теперь на странице **веб-конфигурация** отображается выбранный веб-сайт, созданное веб-приложение и [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] база данных, связанная с приложением.
+
+   ![MDS-SQLServer2019-config-MI-вебконфигселектдб](../master-data-services/media/mds-sqlserver2019-config-mi-webconfigselectdb.png "MDS-SQLServer2019-config-MI_WebConfigSelectDB")
+
+1. Нажмите кнопку **Применить**. Появится сообщение **Завершение настройки** . Нажмите кнопку **ОК** в окне сообщения, чтобы запустить веб-приложение. Адрес веб-сайта `http://server name/web application/`—.
+
+## <a name="configure-authentication"></a>Настройка проверки подлинности
+
+Чтобы подключить базу данных управляемого экземпляра к веб-приложению, необходимо изменить другой тип проверки подлинности.
+
+Найдите файл в разделе `C:\Program Files\Microsoft SQL Server\150\Master Data Services\WebApplication`. `web.config` Измените строку connectionString, чтобы изменить другой тип проверки подлинности для подключения к базе данных управляемого экземпляра.
+
+По умолчанию используется `Active Directory Integrated` тип проверки подлинности, как показано в следующем образце строки подключения:
+
+   ```xml
+   <add name="MDS1" connectionString="Data Source=*****.*****.database.windows.net;Initial Catalog=MasterDataServices;Integrated Security=False;Connect Timeout=60;Authentication=&quot;Active Directory Integrated&quot;" />
+   ```
+
+MDS также поддерживает проверку подлинности с помощью пароля Active Directory и проверку подлинности SQL Server, как показано в следующих примерах строк подключения:
+
+- Проверка подлинности Active Directory пароля
+
+   ```xml
+   <add name="MDS1" connectionString="Data Source=*****.*****.database.windows.net;Initial Catalog=MasterDataServices;Integrated Security=False;Connect Timeout=60;Authentication=&quot;Active Directory Password&quot; ; UID=bob@contoso.onmicrosoft.com; PWD=MyPassWord!" />
+   ```
+
+- Проверка подлинности SQL Server
+
+   ```xml
+   <add name="MDS1" connectionString="Data Source=*****.*****.database.windows.net;Initial Catalog=MasterDataServices;Integrated Security=False;Connect Timeout=60;User ID=UserName;Password=MyPassword!;" />
+   ```
+
+## <a name="upgrade-includessmdsshort_mdincludesssmdsshort-mdmd-and-sql-database-version"></a>Обновление [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] и версия базы данных SQL
+
+### <a name="upgrade-includessmdsshort_mdincludesssmdsshort-mdmd"></a>Обновления[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]
+
+Установите **накопительное обновление SQL Server 2019**. [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]будет обновлен автоматически.
+
+### <a name="upgrade-sql-server"></a>Обновление SQL Server
+
+При установке `The client version is incompatible with the database version` **накопительного пакета обновления SQL Server 2019**может появиться сообщение об ошибке.
 ![MDS-SQLServer2019-config-MI-упградедбпаже](../master-data-services/media/mds-sqlserver2019-config-mi-upgradedbpage.png "MDS-SQLServer2019-config-MI_UpgradeDBPage")
 
-1. [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]Запустите. И щелкните **Конфигурация базы данных** в левой области.
+Чтобы устранить эту проблему, необходимо обновить версию базы данных:
 
-2. На странице **Конфигурация базы данных** в [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]выберите пункт **выбрать базу данных**.
+1. Откройте, а затем выберите **Конфигурация базы данных** в левой области. [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]
 
-3. Нажмите кнопку **подключить**, выберите [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] базу данных, связанную с веб-приложением, и нажмите кнопку **ОК**.
+1. На странице **Конфигурация базы данных** в [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]выберите **выбрать базу данных**.
 
-    ![MDS-SQLServer2019-config-MI-коннектдбнаме](../master-data-services/media/mds-sqlserver2019-config-mi-connectdbname.png "MDS-SQLServer2019-config-MI_ConnectDBName")
+1. [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] Выберите базу данных, связанную с веб-приложением. Выберите **подключить**, а затем нажмите кнопку **ОК**.
 
-4. Нажмите кнопку **обновить базу данных...** переключатель
+   ![MDS-SQLServer2019-config-MI-коннектдбнаме](../master-data-services/media/mds-sqlserver2019-config-mi-connectdbname.png "MDS-SQLServer2019-config-MI_ConnectDBName")
 
-    ![MDS-SQLServer2019-config-MI-селектупградедб](../master-data-services/media/mds-sqlserver2019-config-mi-selectupgradedb.png "MDS-SQLServer2019-config-MI_SelectUpgradeDB")
+1. Выберите **обновить базу данных...** .
 
-5. В мастере обновления базы данных нажмите кнопку **Далее** на странице **Приветствие** и странице " **Проверка обновления** ".
+   ![MDS-SQLServer2019-config-MI-селектупградедб](../master-data-services/media/mds-sqlserver2019-config-mi-selectupgradedb.png "MDS-SQLServer2019-config-MI_SelectUpgradeDB")
 
-    ![MDS-SQLServer2019-config-MI-упградедбвизард](../master-data-services/media/mds-sqlserver2019-config-mi-upgradedbwizard.png "MDS-SQLServer2019-config-MI_UpgradeDBWizard")
+1. В мастере обновления базы данных нажмите кнопку **Далее** на странице **Приветствие** и на странице **Проверка обновления** .
 
-6. Нажмите кнопку **"Готово** ", когда завершится вся задача.
+   ![MDS-SQLServer2019-config-MI-упградедбвизард](../master-data-services/media/mds-sqlserver2019-config-mi-upgradedbwizard.png "MDS-SQLServer2019-config-MI_UpgradeDBWizard")
+
+1. По завершении всех задач нажмите кнопку **Готово** .
 
 ## <a name="see-also"></a>См. также
 
- [База данных Master Data Services](../master-data-services/master-data-services-database.md) [Веб-приложение Диспетчер основных данных](../master-data-services/master-data-manager-web-application.md) [ &#40;Диспетчер конфигурации Master Data Services&#41; страницы конфигурации базы данных](../master-data-services/database-configuration-page-master-data-services-configuration-manager.md) [Новые возможности Master Data Services &#40;MDS&#41; ](../master-data-services/what-s-new-in-master-data-services-mds.md)
+- [База данных служб Master Data Services](../master-data-services/master-data-services-database.md)
+- [Веб-приложение диспетчера основных данных](../master-data-services/master-data-manager-web-application.md)
+- [Страница "Конфигурация базы данных" (диспетчер конфигурации служб Master Data Services)](../master-data-services/database-configuration-page-master-data-services-configuration-manager.md)
+- [Новые возможности Master Data Services (MDS)](../master-data-services/what-s-new-in-master-data-services-mds.md)
