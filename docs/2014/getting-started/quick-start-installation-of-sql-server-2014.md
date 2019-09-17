@@ -15,10 +15,10 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0ec876262387ba4470bf225d53320ad62b4b2101
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: 75fe364317a518fcf31381ce6b7bb72ff6b2b93f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 09/11/2019
 ms.locfileid: "68890131"
 ---
 # <a name="quick-start-installation-of-sql-server-2014"></a>Быстрая установка SQL Server 2014
@@ -42,7 +42,7 @@ ms.locfileid: "68890131"
   
 -   Компоненты соединения  
   
- Каждый компонент можно установить отдельно или выбрать сочетания перечисленных выше компонентов. Чтобы сделать лучший вариант между выпусками и компонентами, доступными [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]в, см. статью выпуски [и компоненты SQL Server 2014](../sql-server/editions-and-components-of-sql-server-2016.md).  
+ Каждый компонент можно установить отдельно или выбрать сочетания перечисленных выше компонентов. Чтобы сделать лучший вариант между выпусками и компонентами, доступными [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]в, см. статью [выпуски и компоненты SQL Server 2014](../sql-server/editions-and-components-of-sql-server-2016.md).  
   
  Доступны 32-разрядный и 64-разрядный выпуски [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Программа установки [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] поддерживает следующие параметры установки.  
   

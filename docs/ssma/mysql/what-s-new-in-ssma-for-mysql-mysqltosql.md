@@ -2,23 +2,30 @@
 title: Новые возможности SSMA для MySQL (MySQLToSql) | Документация Майкрософт
 ms.prod: sql
 ms.custom: ''
-ms.date: 07/31/2019
+ms.date: 09/06/2019
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 1451a0b0-6713-4d0c-954f-ea3d8fce1d31
 author: HJToland3
 ms.author: Shamikg
-ms.openlocfilehash: d02b002dd5f974fa7fd989026172b70a049d0e5f
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 900ea1a83e8f06916bf48a003d99584113a8304b
+ms.sourcegitcommit: a97d551b252b76a33606348082068ebd6f2c4c8c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68811491"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70745509"
 ---
 # <a name="whats-new-in-ssma-for-mysql-mysqltosql"></a>Новые возможности в SSMA для MySQL (MySQLToSql)
 
 В этой статье перечислены Помощник по миграции SQL Server (SSMA) для изменений MySQL в каждом выпуске.
+
+## <a name="ssma-v84"></a>SSMA v 8.4
+
+Выпуск версии SSMA для MySQL усовершенствован с помощью целевых исправлений, предназначенных для устранения проблем с доступом и исправления ошибок, связанных с максимальным количеством индексных столбцов (чтобы разрешить 32 вместо 16) для SQL Server 2016 и более поздних версий.
+
+> [!IMPORTANT]
+> В SSMA v 7.4 и более поздних версиях .NET 4.5.2 является необходимым компонентом установки.
 
 ## <a name="ssma-v83"></a>SSMA v 8.3
 
@@ -26,9 +33,6 @@ ms.locfileid: "68811491"
 
 * Устранение проблем с доступностью
 * Добавьте базовую поддержку для типа hierarchyid в SQL Server
-
-> [!IMPORTANT]
-> В SSMA v 7.4 и более поздних версиях .NET 4.5.2 является необходимым компонентом установки.
 
 ## <a name="ssma-v82"></a>SSMA v 8.2
 
@@ -40,9 +44,6 @@ ms.locfileid: "68811491"
 
 > [!NOTE]
 > Известная проблема с автообновлением может привести к сбою обновления SSMA v 8.1 до версии 8.2. Если возникла эта ошибка, скачайте новую версию и установите ее вручную.
-
-> [!IMPORTANT]
-> В SSMA v 7.4 и более поздних версиях .NET 4.5.2 является необходимым компонентом установки.
 
 ## <a name="ssma-v81"></a>SSMA v8.1
 

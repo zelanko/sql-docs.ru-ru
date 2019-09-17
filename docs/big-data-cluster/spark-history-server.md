@@ -9,12 +9,12 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 9df4f83d319c7d37dd438bcc6a787b4939757e47
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: f5c237910c087131a10660c4793954c850b7791b
+ms.sourcegitcommit: dacf6c57f6a2e3cf2005f3268116f3c609639905
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653677"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70878702"
 ---
 # <a name="debug-and-diagnose-spark-applications-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-in-spark-history-server"></a>Отладка и диагностика приложений Spark [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] на сервере журнала Spark
 
@@ -27,7 +27,7 @@ ms.locfileid: "69653677"
 Интерфейс сервера журнала Spark в рамках проекта с открытым кодом дополняется такой информацией, как данные по заданиям и интерактивная визуализация графа заданий и потоков данных для кластера больших данных. 
 
 ### <a name="open-the-spark-history-server-web-ui-by-url"></a>Открытие пользовательского веб-интерфейса сервера журнала Spark по URL-адресу
-Чтобы открыть сервер журнала Spark, перейдите по приведенному ниже URL-адресу, заменив `<Ipaddress>` и `<Port>` на значения для кластера больших данных. Дополнительные сведения см. в статье [Развертывание кластера больших данных SQL Server](quickstart-big-data-cluster-deploy.md).
+Чтобы открыть сервер журнала Spark, перейдите по приведенному ниже URL-адресу, заменив `<Ipaddress>` и `<Port>` на значения для кластера больших данных. Обратите внимание, что при установке кластера больших данных с обычной проверкой подлинности (имя пользователя и пароль) необходимо указать **корневой** пользователь, когда будет предложено войти в конечные точки шлюза (Knox). Дополнительные сведения см. в статье [Развертывание кластера больших данных SQL Server](quickstart-big-data-cluster-deploy.md).
 
 ```
 https://<Ipaddress>:<Port>/gateway/default/sparkhistory

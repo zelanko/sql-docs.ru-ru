@@ -12,14 +12,14 @@ ms.assetid: ccf367eb-06b0-42b8-b4d6-2b88f4a502d3
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 840898cb41274a1871e5d087e2be1d2ab9e39e23
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6e25752cd1f12143f4d05b8b4b02f138784a72a1
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62913191"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874574"
 ---
-# <a name="mssqlserver846"></a>MSSQLSERVER_846
+# <a name="mssqlserver_846"></a>MSSQLSERVER_846
     
 ## <a name="details"></a>Сведения  
   
@@ -33,7 +33,7 @@ ms.locfileid: "62913191"
 |Текст сообщения|Истекло время ожидания кратковременной блокировки буфера — тип %d, базовая точка %p, страница %d:%d, stat %#x, идентификатор базы данных: %d, идентификатор единицы распределения: %I64d%ls, задача 0x%p: %d, время ожидания %d, флаги 0x%I64x, задача-владелец 0x%p. Ожидание прекращено.|  
   
 ## <a name="explanation"></a>Объяснение  
- Возможно, компьютер не отвечает ("завис"), истекло время ожидания, либо происходит какой-то сбой в тот момент, когда [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] записывает ошибок кратковременной блокировки буфера в журнал ошибок [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Компьютер может перестать отвечать на запросы, истечением времени ожидания или невозможности выполнения обычных операций в то же время, которое [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] записывает ошибки кратковременной блокировки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] буфера в журнал ошибок.  
   
  Если в сообщении в поле состояния указано значение 0x04, то [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ожидает операцию ввода-вывода. Кроме того, может быть получено сообщение [MSSQLSERVER_833](mssqlserver-833-database-engine-error.md) в журнале ошибок [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

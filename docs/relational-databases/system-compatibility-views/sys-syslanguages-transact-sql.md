@@ -1,5 +1,5 @@
 ---
-title: sys.syslanguages (Transact-SQL) | Документация Майкрософт
+title: sys. syslanguages (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,12 +21,12 @@ ms.assetid: f216d1cd-997c-42f0-a737-abbdfcd88383
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 131cabc90680a9d1069802f4549c7c3754a78dec
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bc152b8241b775f9fd686f8a31363cb4fca39de4
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68053389"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874871"
 ---
 # <a name="syssyslanguages-transact-sql"></a>sys.syslanguages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -36,14 +36,14 @@ ms.locfileid: "68053389"
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |langid|**smallint**|Уникальный идентификатор языка.|  
-|формат даты|**nchar(3)**|Формат представления даты, например DMY.|  
-|datefirst|**tinyint**|Первый день недели: 1 — понедельник, 2 — вторник и так далее до 7 — воскресенье.|  
+|формат даты|**nchar (3)**|Формат представления даты, например DMY.|  
+|datefirst|**tinyint**|Первый день недели: 1 для понедельника, 2 для вторника и так далее до 7 для воскресенья.|  
 |upgrade|**int**|Зарезервировано для системного использования.|  
-|name|**sysname**|Официальное название языка, например Francais.|  
+|name|**sysname**|Официальное название языка, например Franзais.|  
 |alias|**sysname**|Альтернативное название языка, например French.|  
-|months|**nvarchar(372)**|Список полных названий месяцев через запятую в порядке с января до декабря. Каждое название может содержать не более 20 символов.|  
-|shortmonths|**nvarchar(132)**|Список сокращенных названий месяцев через запятую в порядке с января до декабря. Название может содержать не более 9 символов.|  
-|days|**nvarchar(217)**|Список названий дней недели через запятую в порядке с понедельника до воскресенья. Каждое название может содержать не более 30 символов.|  
+|months|**nvarchar (372)**|Список полных названий месяцев через запятую в порядке с января до декабря. Каждое название может содержать не более 20 символов.|  
+|shortmonths|**nvarchar (132)**|Список сокращенных названий месяцев через запятую в порядке с января до декабря. Название может содержать не более 9 символов.|  
+|days|**nvarchar (217)**|Список названий дней недели через запятую в порядке с понедельника до воскресенья. Каждое название может содержать не более 30 символов.|  
 |lcid|**int**|Код локали языка в [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.|  
 |msglangid|**smallint**|Идентификатор группы сообщений компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].|  
   
@@ -55,15 +55,15 @@ ms.locfileid: "68053389"
 |Немецкий|1031|1031|  
 |Французский|1036|1036|  
 |Японский|1041|1041|  
-|Danish|1030|1030|  
+|Датский|1030|1030|  
 |Испанский|3082|3082|  
 |Итальянский|1040|1040|  
-|Нидерландский|1043|1043|  
+|Голландский|1043|1043|  
 |Норвежский|2068|2068|  
 |Португальский|2070|2070|  
 |Финский|1035|1035|  
 |Шведский|1053|1053|  
-|Czech|1029|1029|  
+|Чешский|1029|1029|  
 |Венгерский|1038|1038|  
 |Польский|1045|1045|  
 |Румынский|1048|1048|  
@@ -86,7 +86,7 @@ ms.locfileid: "68053389"
 |Тайский|1054|1054|  
   
 ## <a name="see-also"></a>См. также  
- [Представления совместимости &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)   
- [Сопоставление системных таблиц с системными представлениями &#40;Transact-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)  
+ [Представления &#40;совместимости TRANSACT-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)   
+ [Сопоставление системных таблиц с системными &#40;представлениями TRANSACT-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Записать свойства объекта, методы и события | Документация Майкрософт
+title: Свойства, методы и события объекта Record | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -12,42 +12,41 @@ helpviewer_keywords:
 ms.assetid: dadde268-bd0f-4ba0-8775-83a5cd3e258a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ecb09e15a0d54573cf921a5b2a7633c9d1e61704
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4868db07f3366163412021ac7f613c3cddf050da
+ms.sourcegitcommit: 49f3d12c0a46d98b82513697a77a461340f345e1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66712295"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70737659"
 ---
 # <a name="record-object-properties-methods-and-events"></a>Свойства, методы и события объекта Record
 ## <a name="propertiescollections"></a>Свойства и коллекции  
- [Свойство ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)  
+ [ActiveConnection, свойство](../../../ado/reference/ado-api/activeconnection-property-ado.md)  
   
- [Коллекция полей](../../../ado/reference/ado-api/fields-collection-ado.md)  
+ [Коллекция Fields](../../../ado/reference/ado-api/fields-collection-ado.md)  
   
- [Свойство Mode](../../../ado/reference/ado-api/mode-property-ado.md)  
+ [Режим, свойство](../../../ado/reference/ado-api/mode-property-ado.md)  
   
- [Свойство ParentURL](../../../ado/reference/ado-api/parenturl-property-ado.md)  
+ [Парентурл, свойство](../../../ado/reference/ado-api/parenturl-property-ado.md)  
   
- [Свойства коллекции](../../../ado/reference/ado-api/properties-collection-ado.md)  
+ [Коллекция свойств](../../../ado/reference/ado-api/properties-collection-ado.md)  
   
- [Свойство RecordType](../../../ado/reference/ado-api/recordtype-property-ado.md)  
+ [RecordType, свойство](../../../ado/reference/ado-api/recordtype-property-ado.md)  
   
  [Свойство Source (объект Record ADO)](../../../ado/reference/ado-api/source-property-ado-record.md)  
   
- [Свойство State](../../../ado/reference/ado-api/state-property-ado.md)  
+ [State, свойство](../../../ado/reference/ado-api/state-property-ado.md)  
   
 ## <a name="methods"></a>Методы  
- [Cancel-метод](../../../ado/reference/ado-api/cancel-method-ado.md)  
+ [Метод Cancel](../../../ado/reference/ado-api/cancel-method-ado.md)  
   
  [Метод Close](../../../ado/reference/ado-api/close-method-ado.md)  
   
- [Метод CopyRecord](../../../ado/reference/ado-api/copyrecord-method-ado.md)  
+ [Метод Копирекорд](../../../ado/reference/ado-api/copyrecord-method-ado.md)  
   
- [Метод DeleteRecord](../../../ado/reference/ado-api/deleterecord-method-ado.md)  
+ [Метод Делетерекорд](../../../ado/reference/ado-api/deleterecord-method-ado.md)  
   
- [Метод GetChildren](../../../ado/reference/ado-api/getchildren-method-ado.md)  
+ [Метод дочернего элемента](../../../ado/reference/ado-api/getchildren-method-ado.md)  
   
  [Метод MoveRecord](../../../ado/reference/ado-api/moverecord-method-ado.md)  
   

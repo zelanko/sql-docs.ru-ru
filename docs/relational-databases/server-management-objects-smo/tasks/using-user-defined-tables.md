@@ -1,5 +1,5 @@
 ---
-title: Использование определяемых пользователем таблиц | Документация Майкрософт
+title: Использование пользовательских таблиц | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -10,22 +10,22 @@ ms.topic: reference
 helpviewer_keywords:
 - user-defined tables [SQL Server]
 ms.assetid: 620a4e1f-9678-4711-ae09-bcf7c9cae724
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 26db752cffe88a06003f3255ea42c049d62af697
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0aa54692cf300a8d52d767092881ab30bc62d80f
+ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68048925"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "70911219"
 ---
 # <a name="using-user-defined-tables"></a>Использование определяемых пользователем таблиц
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   В определяемых пользователем таблицах представлены табличные данные. Они используются в качестве параметров при передаче табличных данных в хранимые процедуры или определяемые пользователем функции. Определяемые пользователем таблицы нельзя использовать для представления столбцов в таблице базы данных.  
   
- Объект <xref:Microsoft.SqlServer.Management.Smo.Database> содержит свойство <xref:Microsoft.SqlServer.Management.Smo.Database.UserDefinedTableTypes%2A>, которое ссылается на объект <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableTypeCollection>. Каждый <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType> объекта в этой коллекции есть **столбцы** свойство, которое ссылается на коллекцию <xref:Microsoft.SqlServer.Management.Smo.Column> объектов, в которых перечислены столбцы в определяемой пользователем таблицей. Для добавления столбцов в определяемую пользователем таблицу используется метод Add.  
+ Объект <xref:Microsoft.SqlServer.Management.Smo.Database> содержит свойство <xref:Microsoft.SqlServer.Management.Smo.Database.UserDefinedTableTypes%2A>, которое ссылается на объект <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableTypeCollection>. Каждый <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType> объект в этой коллекции имеет свойство **Columns** , ссылающееся <xref:Microsoft.SqlServer.Management.Smo.Column> на коллекцию объектов, в которой перечислены столбцы в определяемой пользователем таблице. Для добавления столбцов в определяемую пользователем таблицу используется метод Add.  
   
  При определении новой определяемой пользователем таблицы с помощью объекта <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType> необходимо предоставить столбцы и первичный ключ, основанный на одном из столбцов.  
   
@@ -34,11 +34,11 @@ ms.locfileid: "68048925"
  Для определения типа данных, связанного со столбцами и параметрами, используется класс <xref:Microsoft.SqlServer.Management.Smo.DataType>. Этот тип используется для задания определяемого пользователем табличного типа в качестве параметра для определяемых пользователем функций или хранимых процедур.  
   
 ## <a name="examples"></a>Примеры  
-Чтобы использовать какой-либо из представленных примеров кода, нужно выбрать среду, шаблон и язык программирования, с помощью которых будет создаваться приложение. Дополнительные сведения см. в разделе [Visual C создайте&#35; проекта SMO в Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+Чтобы использовать какой-либо из представленных примеров кода, нужно выбрать среду, шаблон и язык программирования, с помощью которых будет создаваться приложение. Дополнительные сведения см. [в разделе Создание проекта Visual&#35; C SMO в Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
 
   
 ## <a name="creating-a-user-defined-table-in-visual-basic"></a>Создание определяемой пользователем таблицы на языке Visual Basic  
- В этом примере необходимо включить инструкцию imports для библиотеки классов, содержащий **StringCollection** типа.  
+ В этом примере потребуется включить оператор Imports для библиотеки классов, содержащей тип **StringCollection** .  
   
  `Imports System.Collections.Specialized`  
   
@@ -102,7 +102,7 @@ ms.locfileid: "68048925"
 ```  
   
 ## <a name="creating-a-user-defined-table-in-visual-c"></a>Создание определяемой пользователем таблицы на языке Visual C#  
- В этом примере необходимо включить инструкцию imports для библиотеки классов, содержащий **StringCollection** типа.  
+ В этом примере потребуется включить оператор Imports для библиотеки классов, содержащей тип **StringCollection** .  
   
  `using System.Collections.Specialized;`  
   
@@ -172,7 +172,7 @@ ms.locfileid: "68048925"
 ```  
   
 ## <a name="creating-a-user-defined-table-in-powershell"></a>Создание определяемой пользователем таблицы в PowerShell  
- В этом примере необходимо включить инструкцию imports для библиотеки классов, содержащий **StringCollection** типа.  
+ В этом примере потребуется включить оператор Imports для библиотеки классов, содержащей тип **StringCollection** .  
   
  `using System.Collections.Specialized;`  
   

@@ -8,21 +8,21 @@ ms.topic: quickstart
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 0f81b4f755441a5129892ed321d74bb8c6427ee4
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: c8c8f69391db2e1028a0da33dbaf77fd60eafd8f
+ms.sourcegitcommit: 75fe364317a518fcf31381ce6b7bb72ff6b2b93f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68714844"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70909200"
 ---
-# <a name="quickstart-using-r-functions"></a>Краткое руководство. Использование функций R
+# <a name="quickstart-use-r-functions"></a>Краткое руководство. Использование функций R
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Если вы выполнили предыдущие примеры, вы знакомы с основными операциями и готовы к более сложной, например статистическим функциям. Расширенные статистические функции, которые сложно реализовать в T-SQL, можно выполнять в R с помощью одной строки кода.
 
 В этом кратком руководстве мы внедряем математические и служебные функции в SQL Server хранимую процедуру.
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 Предыдущее краткое руководство, [Проверка наличия R в SQL Server](quickstart-r-verify.md), содержит сведения и ссылки для настройки среды R, необходимой для этого краткого руководства.
 
@@ -104,4 +104,4 @@ WITH RESULT SETS (([Col1] int not null));
 Далее вы создадите модель прогнозирования с помощью R в SQL Server.
 
 > [!div class="nextstepaction"]
-> [QuickStart Создание прогнозной модели](quickstart-r-create-predictive-model.md)
+> [Краткое руководство Создание прогнозной модели](quickstart-r-create-predictive-model.md)

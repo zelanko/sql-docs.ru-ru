@@ -10,17 +10,17 @@ ms.assetid: 3b8ccad5-411d-4b79-b95e-ee524714f7d6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fa66d85d11c4c99094f554cb1be8c036329b8608
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3150dd7c37564429f5f31205bdf733fe134baf5d
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62655555"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874558"
 ---
 # <a name="display-column-and-catalog-metadata-for-sparse-columns-ole-db"></a>Отображение метаданных столбца и каталога для разреженных столбцов (OLE DB)
   В этом примере создается таблица, состоящая из трех столбцов: разреженного столбца, столбца, не являющегося разреженным, и столбца, представляющего собой набор столбцов. Затем образец отображает флаги OLE DB, показывающие метаданные столбца и каталога для неразреженного столбца и столбца, представляющего собой набор столбцов.  
   
- Данный образец работает с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] или более поздней версией. Дополнительные сведения о разреженных столбцах см. в разделе [Sparse Columns Support in SQL Server Native Client](../native-client/features/sparse-columns-support-in-sql-server-native-client.md).  
+ Данный образец работает с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] или более поздней версией. Дополнительные сведения о разреженных столбцах см. [в разделе Поддержка разреженных столбцов в SQL Server Native Client](../native-client/features/sparse-columns-support-in-sql-server-native-client.md).  
   
 ## <a name="example"></a>Пример  
  Убедитесь, что переменная среды INCLUDE включает каталог, содержащий файл sqlncli.h.  
@@ -112,7 +112,7 @@ void DumpErrorInfo ( IUnknown* pObjectWithError, REFIID IID_InterfaceWithError )
    SSERRORINFO * pSSErrorInfo = NULL;  
    OLECHAR * pSSErrorStrings = NULL;  
   
-   // Hard-code an American English locale for the example.  
+   // Hard-code an English (United States) locale for the example.  
    DWORD MYLOCALEID = 0x0409;  
   
    // Only ask for error information if the interface supports it.  
