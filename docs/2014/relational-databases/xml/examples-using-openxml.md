@@ -26,12 +26,12 @@ ms.assetid: 689297f3-adb0-4d8d-bf62-cfda26210164
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9887a9af6735b54a78dd72ed3a90aeff70c7990f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 61c5fc1cb0692d22f110958b894ac2eb7c2af4cf
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63205104"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874689"
 ---
 # <a name="examples-using-openxml"></a>Примеры: Использование OPENXML
   Примеры в этом подразделе иллюстрируют использование инструкции OPENXML для создания представления наборов строк XML-документа. Дополнительные сведения о синтаксисе инструкции OPENXML см. в разделе [OPENXML (Transact-SQL)](/sql/t-sql/functions/openxml-transact-sql). Примеры показывают все аспекты инструкции OPENXML, но не определяют метасвойства в ней. Дополнительные сведения о том, как использовать метасвойства в OPENXML, см. в статье [Определение метасвойств в инструкции OPENXML](specify-metaproperties-in-openxml.md).  
@@ -691,7 +691,7 @@ AS
 DECLARE @t varchar(500)  
 DECLARE @id varchar(5)  
   
-/* Temporary Edge table */  
+/* Temporary edge table */  
 SELECT *   
 INTO #TempEdge   
 FROM OPENXML(@xmldoc, @xpath)  

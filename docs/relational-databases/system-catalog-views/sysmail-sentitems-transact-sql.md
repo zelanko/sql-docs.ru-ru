@@ -17,46 +17,46 @@ helpviewer_keywords:
 ms.assetid: 16eb2a44-cebb-4cec-93ac-e2498c39989f
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: a0a2cf94ed3575a6da1ec072e9cf19df0b467741
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c935a83c3c3fdd9fa577a3232e46caed7865c1c3
+ms.sourcegitcommit: a97d551b252b76a33606348082068ebd6f2c4c8c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68086243"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70745369"
 ---
-# <a name="sysmailsentitems-transact-sql"></a>sysmail_sentitems (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sysmail_sentitems-transact-sql"></a>sysmail_sentitems (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
-  Содержит по одной строке на каждое сообщение, отправленное компонентом Database Mail. Используйте **sysmail_sentitems** Если вы хотите просмотреть, какие сообщения были успешно отправлены.  
+  Содержит по одной строке на каждое сообщение, отправленное компонентом Database Mail. Используйте **sysmail_sentitems** , если хотите узнать, какие сообщения были успешно отправлены.  
   
- Для просмотра всех сообщений, обработанных компонентом Database Mail, используйте [sysmail_allitems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md). Для просмотра только сообщений с состоянием ошибки, используйте [sysmail_faileditems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-faileditems-transact-sql.md). Чтобы просмотреть только неотправленные или ожидающие повторной отправки сообщения, используйте [sysmail_unsentitems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-unsentitems-transact-sql.md). Чтобы просмотреть вложения электронной почты, используйте [sysmail_mailattachments &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-mailattachments-transact-sql.md).  
+ Чтобы просмотреть все сообщения, обрабатываемые Database Mail, [Используйте &#40;SYSMAIL_ALLITEMS Transact-&#41;SQL](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md). Чтобы просмотреть только сообщения с состоянием Failed, [Используйте &#40;SYSMAIL_FAILEDITEMS Transact-&#41;SQL](../../relational-databases/system-catalog-views/sysmail-faileditems-transact-sql.md). Чтобы просмотреть только неотправленные или повторные сообщения, [Используйте &#40;SYSMAIL_UNSENTITEMS Transact-&#41;SQL](../../relational-databases/system-catalog-views/sysmail-unsentitems-transact-sql.md). Чтобы просмотреть вложения электронной почты, [Используйте &#40;SYSMAIL_MAILATTACHMENTS Transact-&#41;SQL](../../relational-databases/system-catalog-views/sysmail-mailattachments-transact-sql.md).  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**mailitem_id**|**int**|Идентификатор почтового отправления в очереди почты.|  
 |**profile_id**|**int**|Идентификатор профиля, используемого для отсылки этого сообщения.|  
-|**Получатели**|**varchar(max)**|Электронные адреса получателей сообщения.|  
+|**пользу**|**varchar(max)**|Электронные адреса получателей сообщения.|  
 |**copy_recipients**|**varchar(max)**|Электронные адреса получателей копий сообщения.|  
 |**blind_copy_recipients**|**varchar(max)**|Электронные адреса получателей копий сообщения, чьи имена не будут отображаться в заголовке сообщения.|  
-|**Тема**|**nvarchar(510)**|Строка темы сообщения.|  
-|**Текст**|**varchar(max)**|Тело сообщения.|  
-|**body_format**|**varchar(20)**|Формат тела сообщения. Возможные значения: **текст** и **HTML**.|  
-|**Важность**|**varchar(6)**|**Важности** параметр сообщения.|  
-|**Чувствительность**|**varchar(12)**|**Чувствительности** параметр сообщения.|  
+|**Тема**|**nvarchar (510)**|Строка темы сообщения.|  
+|**организм**|**varchar(max)**|Тело сообщения.|  
+|**body_format**|**varchar (20)**|Формат тела сообщения. Возможные значения: **Text** и **HTML**.|  
+|**важный**|**varchar (6)**|Параметр **важности** сообщения.|  
+|**чувствительности**|**varchar (12)**|Параметр **чувствительности** сообщения.|  
 |**file_attachments**|**varchar(max)**|Список имен файлов, разделенных точкой с запятой, который прикреплен к сообщению электронной почты.|  
-|**attachment_encoding**|**varchar(20)**|Тип вложения.|  
-|**Запрос**|**varchar(max)**|Запрос, выполненный почтовой программой.|  
+|**attachment_encoding**|**varchar (20)**|Тип вложения.|  
+|**Выбор**|**varchar(max)**|Запрос, выполненный почтовой программой.|  
 |**execute_query_database**|**sysname**|Контекст базы данных, в котором почтовая программа выполнила запрос.|  
 |**attach_query_result_as_file**|**bit**|Если значение равно 0, результаты запроса были включены в тело сообщения после его содержимого. Если значение равно 1, результаты были возвращены в виде вложения.|  
 |**query_result_header**|**bit**|Если значение равно 1, результаты запроса содержали заголовки столбцов. Если значение равно 0, результаты запроса не включали заголовков столбцов.|  
-|**query_result_width**|**int**|**Query_result_width** параметр сообщения.|  
+|**query_result_width**|**int**|Параметр **query_result_width** сообщения.|  
 |**query_result_separator**|**char(1)**|Символ, используемый для разделения столбцов в выходных данных запроса.|  
-|**exclude_query_output**|**bit**|**Exclude_query_output** параметр сообщения. Дополнительные сведения см. в разделе [sp_send_dbmail &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-send-dbmail-transact-sql.md).|  
-|**append_query_error**|**bit**|**Append_query_error** параметр сообщения. 0 означает, что компонент Database Mail не отсылает электронное сообщение, если в запросе содержится ошибка.|  
+|**exclude_query_output**|**bit**|Параметр **exclude_query_output** сообщения. Дополнительные сведения см. в [разделе &#40;SP_SEND_DBMAIL Transact-&#41;SQL](../../relational-databases/system-stored-procedures/sp-send-dbmail-transact-sql.md).|  
+|**append_query_error**|**bit**|Параметр **append_query_error** сообщения. 0 означает, что компонент Database Mail не отсылает электронное сообщение, если в запросе содержится ошибка.|  
 |**send_request_date**|**datetime**|Дата и время помещения сообщения в очередь почты.|  
 |**send_request_user**|**sysname**|Пользователь, передавший сообщение. Это пользовательский контекст процедуры компонента Database Mail, а не поле «От:» с именем отправителя сообщения.|  
 |**sent_account_id**|**int**|Идентификатор учетной записи компонента Database Mail, используемой для отсылки этого сообщения.|  
-|**sent_status**|**varchar(8)**|Состояние почты. Всегда **отправленных** для этого представления.|  
+|**sent_status**|**varchar (8)**|Состояние почты. Всегда **отправляется** для этого представления.|  
 |**sent_date**|**datetime**|Дата и время отсылки сообщения.|  
 |**last_mod_date**|**datetime**|Дата и время последнего изменения строки.|  
 |**last_mod_user**|**sysname**|Пользователь, внесший последнее изменение в строку.|  
@@ -65,7 +65,7 @@ ms.locfileid: "68086243"
  При устранении неполадок в работе компонента Database Mail в этом представлении будут отображаться атрибуты успешно отправленных сообщений, что может помочь в определении причин неполадки. Компонент Database Mail помечает сообщения как отправленные, если они успешно переданы на почтовый SMTP-сервер. Как правило, электронная почта доходит за несколько минут, однако она может задерживаться из-за неполадок на SMTP-сервере. Компонент Database Mail помечает сообщения как отправленные, когда их принимает SMTP-сервер. Неполадки, возникающие на SMTP-сервере, например электронные адреса получателей, доставка на которые невозможна, не возвращаются в компонент Database Mail. Эти электронные письма помечаются как отправленные, несмотря на то, что они не были доставлены. Этот тип неполадок следует устранять на SMTP-сервере. Кроме того, SMTP-сервер может отправить уведомление о невозможности доставить сообщение по соответствующему электронному адресу, указанному в учетной записи компонента Database Mail.  
   
 ## <a name="permissions"></a>Разрешения  
- Предоставленные **sysadmin** предопределенной роли сервера и **databasemailuserrole** роли базы данных. При выполнении членом **sysadmin** предопределенной роли сервера, в этом представлении отображаются все сообщения. Все остальные пользователи видят только собственные отправленные сообщения.  
+ Предоставлено предопределенной роли сервера **sysadmin** и роли базы данных **DatabaseMailUserRole** . При выполнении членом предопределенной роли сервера **sysadmin** в этом представлении отображаются все отправленные сообщения. Все остальные пользователи видят только собственные отправленные сообщения.  
   
 ## <a name="see-also"></a>См. также  
  [Объекты обмена сообщениями компонента Database Mail](../../relational-databases/database-mail/database-mail-messaging-objects.md)  

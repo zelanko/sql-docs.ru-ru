@@ -2,22 +2,32 @@
 title: Новые возможности в SSMA для Oracle (OracleToSQL) | Документация Майкрософт
 ms.prod: sql
 ms.custom: ''
-ms.date: 07/31/2019
+ms.date: 09/06/2019
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: f305ebb6-7393-4a43-abb3-6332b739d690
 author: HJToland3
 ms.author: Shamikg
-ms.openlocfilehash: da0a047b0ae20fbc191a61e1c9eb96660eac035e
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 95b2ebd450fe54a2e02e5eed77a5259a8437e7ef
+ms.sourcegitcommit: a97d551b252b76a33606348082068ebd6f2c4c8c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68811446"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70745485"
 ---
 # <a name="whats-new-in-ssma-for-oracle-oracletosql"></a>Новые возможности SSMA для Oracle (OracleToSQL)
+
 В этой статье перечислены Помощник по миграции SQL Server (SSMA) для изменений Oracle в каждом выпуске.
+
+## <a name="ssma-v84"></a>SSMA v 8.4
+
+Выпуск версии SSMA для Oracle усовершенствован с помощью целевых исправлений, предназначенных для устранения проблем с доступностью и исправления ошибок, связанных с максимальным количеством индексных столбцов (чтобы разрешить 32 вместо 16) для SQL Server 2016 и более поздних версий.
+
+Кроме того, в этом выпуске SSMA для Oracle добавляется преобразование для **SYS_REFCURSOR** в качестве параметров OUT хранимой процедуры.
+
+> [!IMPORTANT]
+> В SSMA v 7.4 и более поздних версиях .NET 4.5.2 является необходимым компонентом установки.
 
 ## <a name="ssma-v83"></a>SSMA v 8.3
 
@@ -27,9 +37,6 @@ ms.locfileid: "68811446"
 * Добавьте базовую поддержку для типа hierarchyid в SQL Server
 * Устранение проблемы с неизвестным типом возвращаемого значения для функции, вызываемой через синоним
 * Обновление ODP.NET до версии 19.3
-
-> [!IMPORTANT]
-> В SSMA v 7.4 и более поздних версиях .NET 4.5.2 является необходимым компонентом установки.
 
 ## <a name="ssma-v82"></a>SSMA v 8.2
 
@@ -49,9 +56,6 @@ ms.locfileid: "68811446"
 
 > [!NOTE]
 > Известная проблема с автообновлением может привести к сбою обновления SSMA v 8.1 до версии 8.2. Если возникла эта ошибка, скачайте новую версию и установите ее вручную.
-
-> [!IMPORTANT]
-> В SSMA v 7.4 и более поздних версиях .NET 4.5.2 является необходимым компонентом установки.
 
 ## <a name="ssma-v81"></a>SSMA v8.1
 
