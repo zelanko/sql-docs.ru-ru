@@ -7,12 +7,12 @@ ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
 ms.date: 01/15/2019
-ms.openlocfilehash: 2560c752dd55741e1718ba60f942288093d027bb
-ms.sourcegitcommit: 9d3ece500fa0e4a9f4fefc88df4af1db9431c619
+ms.openlocfilehash: 079565c813e0b66f09881039ea3d6509bdf6cf54
+ms.sourcegitcommit: 75fe364317a518fcf31381ce6b7bb72ff6b2b93f
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67463583"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70908255"
 ---
 # <a name="server-properties-advanced-page---reporting-services"></a>Свойства сервера (страница «Дополнительно») — службы Reporting Services
 
@@ -93,9 +93,9 @@ ms.locfileid: "67463583"
 
 **AccessControlMaxAge**. Задает время в секундах, в течение которого результаты запроса preflight могут кэшироваться. Значение по умолчанию — 600 (10 минут).
 
-**AllowedResourceExtensionsForUpload** набор расширений ресурсов, которые могут быть загружены на сервер отчетов. Расширения встроенных типов файлов, таких как &ast;.rdl и &ast;.pbix, включать не нужно. Значение по умолчанию — "&ast;, &ast;.xml, &ast;.xsd, &ast;.xsl, &ast;.png, &ast;.gif, &ast;.jpg, &ast;.tif, &ast;.jpeg, &ast;.tiff, &ast;.bmp, &ast;.pdf, &ast;.svg, &ast;.rtf, &ast;.txt, &ast;.doc, &ast;.docx, &ast;.pps, &ast;.ppt, &ast;.pptx".
+**AllowedResourceExtensionsForUpload (Сервер отчетов Power BI и Reporting Services 2017 или более поздней версии)** . Позволяет задать расширения ресурсов, которые можно отправлять на сервер отчетов. Расширения встроенных типов файлов, таких как &ast;.rdl и &ast;.pbix, включать не нужно. Значение по умолчанию — "&ast;, &ast;.xml, &ast;.xsd, &ast;.xsl, &ast;.png, &ast;.gif, &ast;.jpg, &ast;.tif, &ast;.jpeg, &ast;.tiff, &ast;.bmp, &ast;.pdf, &ast;.svg, &ast;.rtf, &ast;.txt, &ast;.doc, &ast;.docx, &ast;.pps, &ast;.ppt, &ast;.pptx".
 
-**RestrictedResourceMimeTypeForUpload** набор пользователей типы mime не права на отправку содержимого с помощью. Все ресурсы, которые уже хранятся с типом mime с ограниченным доступом может загружаться только как приложения/octet-stream не открыт и выполняется с помощью браузера.  По умолчанию нет ограниченных элементов в этом списке, но корпорация Майкрософт рекомендует организациям заполнить это, чтобы обеспечить наиболее безопасную работу.
+**Рестриктедресаурцемиметипефоруплоад** Набор типов MIME пользователи не могут отправлять содержимое с помощью. Все ресурсы, которые уже хранятся с ограниченным типом MIME, можно скачать только как приложение/октет-поток, а не открывать или выполнять в браузере.  По умолчанию в этом списке нет ограниченных элементов, но мы рекомендуем, чтобы организации заполнили это, чтобы обеспечить наиболее безопасный интерфейс.
 
 **EditSessionCacheLimit**  
 Указывает количество записей кэша данных, которые могут быть активны в сеансе изменения отчета. По умолчанию количество задается равным 5.  

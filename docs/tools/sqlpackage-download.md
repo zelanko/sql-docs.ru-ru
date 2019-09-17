@@ -9,12 +9,12 @@ ms.prod_service: sql-tools
 ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
-ms.openlocfilehash: 406fb50ceaba177d02bf8d79d0c37191dbe178f8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: 01654df047d2dc78014c6e8c41edbb370d15da60
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67986252"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874388"
 ---
 # <a name="download-and-install-sqlpackage"></a>Скачивание и установка sqlpackage
 
@@ -24,9 +24,10 @@ ms.locfileid: "67986252"
 
 |Платформа|Загрузить|Дата выпуска|Версия|Сборка
 |:---|:---|:---|:---|:---|
-|Windows|[Установщик MSI](https://go.microsoft.com/fwlink/?linkid=2087429)|15 апреля 2019 г.|18.2|15.0.4384.2|
-|macOS .NET Core (предварительная версия)|[ZIP-файл](https://go.microsoft.com/fwlink/?linkid=2087247)|15 апреля 2019 г. | 18.2 |15.0.4384.2|
-|Linux .NET Core (предварительная версия)|[ZIP-файл](https://go.microsoft.com/fwlink/?linkid=2087431)|15 апреля 2019 г. | 18.2 |15.0.4384.2|
+|Windows|[Установщик MSI](https://go.microsoft.com/fwlink/?linkid=2102893)|6 сентября 2019 г.|18,3|15.0.4532.1|
+|macOS .NET Core (предварительная версия)|[ZIP-файл](https://go.microsoft.com/fwlink/?linkid=2102894)|6 сентября 2019 г.| 18,3|15.0.4532.1|
+|Linux .NET Core (предварительная версия)|[ZIP-файл](https://go.microsoft.com/fwlink/?linkid=2102978)|6 сентября 2019 г.| 18,3|15.0.4532.1|
+|Windows .NET Core (Предварительная версия)|[ZIP-файл](https://go.microsoft.com/fwlink/?linkid=2102979)|6 сентября 2019 г.| 18,3|15.0.4532.1|
 
 Подробнее см. в [заметках о выпуске](release-notes-sqlpackage.md).
 
@@ -36,14 +37,26 @@ ms.locfileid: "67986252"
 
 Этот выпуск sqlpackage включает стандартные средства установщика Windows и ZIP-файл: 
 
-1. Скачайте и запустите [установщик DacFramework.msi для Windows](https://go.microsoft.com/fwlink/?linkid=2087429).
+1. Скачайте и запустите [установщик DacFramework.msi для Windows](https://go.microsoft.com/fwlink/?linkid=2102893).
 2. Откройте новое окно командной строки и запустите файл sqlpackage.exe.
     - Программа sqlpackage устанавливается в папку ```C:\Program Files\Microsoft SQL Server\150\DAC\bin```.
     - При установке версии x86 на x64-разрядном компьютере sqlpackage устанавливается в папку ```C:\Program Files (x86)\Microsoft SQL Server\150\DAC\bin```.
 
-## <a name="get-sqlpackage-preview-for-macos"></a>Получение sqlpackage (предварительная версия) для macOS
+## <a name="get-sqlpackage-net-core-preview-for-windows"></a>Получение SqlPackage .NET Core (Предварительная версия) для Windows
 
-1. Скачайте [sqlpackage для macOS](https://go.microsoft.com/fwlink/?linkid=2087247).
+1. Скачайте [sqlpackage для Windows](https://go.microsoft.com/fwlink/?linkid=2102979).
+2. Чтобы извлечь файл, щелкните правой кнопкой мыши файл в проводнике Windows и выберите пункт "извлечь все..." и укажите целевой каталог.
+3. Откройте новые окна терминала, а также компакт-диск в расположение, где SqlPackage был ексрактед:
+
+   **Установка ZIP:**
+
+   ```bash
+   sqlpackage
+   ```
+
+## <a name="get-sqlpackage-net-core-preview-for-macos"></a>Получение SqlPackage .NET Core (Предварительная версия) для macOS
+
+1. Скачайте [sqlpackage для macOS](https://go.microsoft.com/fwlink/?linkid=2102894).
 2. Чтобы извлечь файл и запустить sqlpackage, откройте новое окно терминала и введите следующие команды:
 
    **Установка ZIP:**
@@ -56,9 +69,9 @@ ms.locfileid: "67986252"
    sqlpackage
    ```
 
-## <a name="get-sqlpackage-preview-for-linux"></a>Получение sqlpackage (предварительная версия) для Linux
+## <a name="get-sqlpackage-net-core-preview-for-linux"></a>Получение SqlPackage .NET Core (Предварительная версия) для Linux
 
-1. Скачайте [sqlpackage для Linux](https://go.microsoft.com/fwlink/?linkid=2087431) с помощью одного из установщиков или архива tar.gz:
+1. Скачайте [sqlpackage для Linux](https://go.microsoft.com/fwlink/?linkid=2102978) с помощью одного из установщиков или архива tar.gz:
 2. Чтобы извлечь файл и запустить sqlpackage, откройте новое окно терминала и введите следующие команды:
 
    **Установка ZIP:**

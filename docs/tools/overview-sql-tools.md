@@ -1,7 +1,8 @@
 ---
-title: Средства и служебные программы SQL для SQL Server, базы данных SQL Azure и хранилища данных SQL Azure | Документация Майкрософт
+title: SQL Query and Management Tools for SQL Server, Azure SQL (базы данных SQL Azure, управляемые экземпляры SQL Azure, виртуальные машины, работающие SQL) и хранилище данных SQL Azure | Документация Майкрософт
+description: SQL Query and Management Tools for SQL Server, Azure SQL (база данных SQL Azure, управляемый экземпляр SQL Azure, виртуальные машины SQL) и хранилище данных SQL Azure
 ms.custom: ''
-ms.date: 11/19/2018
+ms.date: 09/11/2019
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,27 +12,29 @@ ms.assetid: ''
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: fe249e4df9c33fcbb292fc93f218e16ae111b0bb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: 56ed7a0cf53a026b470c90c36b37da95f02ac5bc
+ms.sourcegitcommit: 3bd813ab2c56b415a952e5fbd5cfd96b361c72a2
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68105663"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70913567"
 ---
-# <a name="sql-tools-and-utilities-for-sql-server-azure-sql-database-and-azure-sql-data-warehouse"></a>Средства и служебные программы SQL для SQL Server, базы данных SQL Azure и хранилища данных SQL Azure
+# <a name="sql-query-and-management-tools-for-sql-server-azure-sql-azure-sql-database-azure-sql-managed-instance-sql-virtual-machines-and-azure-sql-data-warehouse"></a>SQL Query and Management Tools for SQL Server, Azure SQL (база данных SQL Azure, управляемый экземпляр SQL Azure, виртуальные машины SQL) и хранилище данных SQL Azure
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 Для управления (запросов, мониторинга и т. д.) базы данных необходим инструмент. Хотя ваши базы данных могут работать в облаке, в Windows или в [Linux](../linux/sql-server-linux-overview.md), средство не нужно запускать на той же платформе, что и база данных. 
 
 Доступно множество инструментов для работы с базами данных, поэтому в этой статье приводятся описания и ссылки на некоторые из доступных инструментов по работе с базами данных SQL. Если вам нужна помощь в принятии решения об использовании нужного средства, см. раздел [какое средство использовать?](#which-tool-should-i-choose).
 
+Для получения дополнительных сведений и для загрузки средства выберите ссылки в столбце инструмент в следующих таблицах. Сведения о скачивании SQL Server см. в разделе [Install SQL Server](../database-engine/install-windows/install-sql-server.md). 
+
 ## <a name="gui-tools-to-manage-databases"></a>Средства графического пользовательского интерфейса для управления базами данных  
 
-Ниже приведены основные средства графического интерфейса пользователя.
+Следующие средства предоставляют графический пользовательский интерфейс (GUI):
 
 | Инструмент | Описание | Выполняется в |
 |:--|:--|:--|
-| [[!INCLUDE[name-sos](../includes/name-sos.md)]](../sql-operations-studio/download.md) | [!INCLUDE[name-sos](../includes/name-sos-short.md)]— Это бесплатное средство для управления базами данных в любом месте, где они выполняются. Этот предварительный выпуск предоставляет функции управления базами данных, в том числе Расширенный редактор Transact-SQL и настраиваемые аналитические сведения о рабочем состоянии баз данных. | **работает в Windows, macOS и Linux. [!INCLUDE[name-sos](../includes/name-sos-short.md)]**|
+| [[!INCLUDE[name-sos](../includes/name-sos.md)]](../sql-operations-studio/download.md) | [!INCLUDE[name-sos](../includes/name-sos-short.md)]— Это бесплатное средство для управления базами данных в любом месте, где они выполняются. Этот предварительный выпуск предоставляет функции управления базами данных, в том числе Расширенный редактор Transact-SQL и настраиваемые аналитические сведения о рабочем состоянии баз данных. | **[!INCLUDE[name-sos](../includes/name-sos-short.md)] выполняется в Windows, macOS и Linux.**|
 | [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) | Используйте SQL Server Management Studio (SSMS) для запроса, проектирования и управления SQL Server, базой данных SQL Azure и хранилищем данных SQL Azure. | **SSMS работает на ОС Windows**.|
 | [SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md) | Преобразуйте Visual Studio в мощную среду разработки для SQL Server, базы данных SQL Azure и хранилища данных SQL Azure.| **SSDT работает в Windows**.|
 | [Visual Studio Code](https://code.visualstudio.com/);| После установки Visual Studio Code установите [расширение MSSQL](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql) для разработки Microsoft SQL Server, базы данных SQL Azure и хранилища данных SQL.| **Visual Studio Code работает в Windows, macOS и Linux**.|
