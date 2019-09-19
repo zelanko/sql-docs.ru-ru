@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: d280d359-08f0-47b5-a07e-67dd2a58ad73
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 69d548d6d6682a1bdd999bf2b9a4fdba4cefd669
-ms.sourcegitcommit: 734529a6f108e6ee6bfce939d8be562d405e1832
+ms.openlocfilehash: 016d8af878a75a0a4e72b17fc9fa09f8791b242b
+ms.sourcegitcommit: c0fd28306a3b42895c2ab673734fbae2b56f9291
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/02/2019
-ms.locfileid: "70212453"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71096917"
 ---
 # <a name="clr-integration-architecture---clr-hosted-environment"></a>Архитектура интеграции со средой CLR — среда размещения CLR
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -174,7 +174,7 @@ Thread.EndThreadAffinity();
   
  С учетом этих факторов не рекомендуется использовать статические переменные и статические элементы данных классов, используемых в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Для сборок SAFE и EXTERNAL_ACCESS в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] анализируются метаданные сборки во время выполнения инструкции CREATE ASSEMBLY и отменяется создание таких сборок, если будет обнаружено использование статических элементов данных и переменных.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]также запрещает вызовы .NET Framework API, помеченные атрибутами защиты узла **шаредстате**, * * Synchronization и **екстерналпроцессмгмт** . Это не позволяет сборкам SAFE и EXTERNAL_ACCESS направлять вызовы к любым API, которые поддерживают общее состояние, выполнение синхронизации и влияют на целостность процесса [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в разделе [ограничения модели программирования интеграции со средой CLR](../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]также запрещает вызовы .NET Framework API, помеченные атрибутами защиты узла **шаредстате**, **Synchronization**и **екстерналпроцессмгмт** . Это не позволяет сборкам SAFE и EXTERNAL_ACCESS направлять вызовы к любым API, которые поддерживают общее состояние, выполнение синхронизации и влияют на целостность процесса [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в разделе [ограничения модели программирования интеграции со средой CLR](../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md).  
   
 ## <a name="see-also"></a>См. также  
  [Безопасность интеграции со средой CLR](../../relational-databases/clr-integration/security/clr-integration-security.md)   

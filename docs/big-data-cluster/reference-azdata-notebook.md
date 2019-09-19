@@ -9,12 +9,12 @@ ms.date: 08/28/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: f147e2b4ec785c3723d09cac6eb3548511946780
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 97b8cbae68e16dbdde6e9662b18e37f222a1af80
+ms.sourcegitcommit: b016c01c47bc08351d093a59448d895cc170f8c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70158239"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71118159"
 ---
 # <a name="azdata-notebook"></a>azdata notebook
 
@@ -61,6 +61,10 @@ azdata notebook view --path '/home/me/notebooks/demo_notebook.ipynb' --stop-on-e
 Повышение уровня детализации журнала. Чтобы включить полные журналы отладки, используйте параметр --debug.
 ## <a name="azdata-notebook-run"></a>azdata notebook run
 Эта команда создает временный каталог и выполняет заданную записную книжку в нем как в рабочем каталоге.
+
+>[!NOTE]
+>Проверено на соответствие аздата v 15.0.1900: команда Run, поддерживаемая только для записных книжек Python 3.
+
 ```bash
 azdata notebook run --path -p 
                     [--output-path]  
@@ -81,7 +85,7 @@ azdata notebook run --path '/home/me/notebooks/demo_notebook.ipynb'
 #### `--output-path`
 Путь к каталогу, используемый для выходных данных записной книжки.  Записная книжка с выходными данными и любые выводимые ею файлы создаются относительно этого каталога.
 #### `--output-html`
-Необязательный флаг, показывающий, следует ли дополнительно преобразовать выходную записную книжку в формат HTML.  Создает второй выходной файл.
+Необязательный флаг, указывающий, следует ли дополнительно преобразовать выходную записную книжку в формат HTML.  Создает второй выходной файл.
 #### `--arguments -a`
 Необязательный список аргументов записной книжки, которые необходимо ввести в выполнение записной книжки.  Кодируется как словарь JSON.  Пример: "{" Name ":" value "," имя2 ":" value2 "}"
 #### `--interactive -i`
@@ -96,7 +100,7 @@ azdata notebook run --path '/home/me/notebooks/demo_notebook.ipynb'
 #### `--output -o`
 Формат вывода.  Допустимые значения: json, jsonc, table, tsv.  Значение по умолчанию: json.
 #### `--query -q`
-Строка запроса JMESPath. Дополнительные сведения и примеры см. в разделе [http://jmespath.org/](http://jmespath.org/]).
+Строка запроса JMESPath. Дополнительные сведения и примеры см. в разделе [http://jmespath.org/](http://jmespath.org/).
 #### `--verbose`
 Повышение уровня детализации журнала. Чтобы включить полные журналы отладки, используйте параметр --debug.
 
