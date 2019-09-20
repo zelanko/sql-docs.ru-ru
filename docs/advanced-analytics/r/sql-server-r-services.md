@@ -9,12 +9,12 @@ ms.topic: overview
 author: dphansen
 ms.author: davidph
 monikerRange: =sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 973c09be9cff6e66043b056e1a772ab8974cebb4
-ms.sourcegitcommit: 12b7e3447ca2154ec2782fddcf207b903f82c2c0
+ms.openlocfilehash: 99aba9748e7ee6d53aabb18919324243740d996a
+ms.sourcegitcommit: 1661c3e1bb38ed12f8485c3860fc2d2b97dd2c9d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "68957484"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71149923"
 ---
 # <a name="what-is-sql-server-2016-r-services"></a>Что такое SQL Server 2016 R Services?
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "68957484"
 > [!Note]
 > Службы R были переименованы в [службы машинного обучения](../what-is-sql-server-machine-learning.md) в SQL Server 2017 и более поздних версий и поддерживают Python и R.
 
-## <a name="what-is-r-services"></a>Что такое службы R?
+## <a name="what-is-r-services"></a>Что такое службы R?
 
 SQL Server R Services позволяет выполнять скрипты R в базе данных. С его помощью можно подготавливать и очищать данные, выполнять проектирование признаков, а также обучать, оценивать и развертывать модели машинного обучения в базе данных. Эта функция выполняет сценарии, в которых хранятся данные, и устраняет перемещение данных по сети на другой сервер.
 
@@ -81,8 +81,8 @@ SQL Server R Services позволяет выполнять скрипты R в 
 
 1. Напишите первый скрипт R
 
-    + Краткое руководство. [Выполнение скрипта "Hello World" в R](../tutorials/quickstart-r-run-using-tsql.md)
-    + Краткое руководство. [Руководство по созданию модели прогнозирования на R](../tutorials/quickstart-r-create-predictive-model.md)
+    + Краткое руководство. [Создавайте и запускайте простые скрипты R в SQL Server](../tutorials/quickstart-r-create-script.md)
+    + Краткое руководство. [Создание и обучение прогнозной модели в R](../tutorials/quickstart-r-train-score-model.md)
     + Учебник. [Использование R в T-SQL](../tutorials/sqldev-in-database-r-for-sql-developers.md): Просмотр данных, разработка признаков, обучение и развертывание моделей, создание прогнозов (серии из 5 частей)
     + Учебник. [Использование служб r в инструментах r](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md): Просмотр данных, создание графиков и графиков, выполнение технических характеристик, обучение и развертывание моделей, создание прогнозов (серии из шести частей)
 

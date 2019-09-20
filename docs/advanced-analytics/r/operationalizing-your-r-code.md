@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: adcac48bc7d90aae5f05a9b671f05e34cc8cf554
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: 248a2e12199466cfaf686bcfcf10341a75981ef7
+ms.sourcegitcommit: 1661c3e1bb38ed12f8485c3860fc2d2b97dd2c9d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715684"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71149900"
 ---
 # <a name="operationalize-r-code-using-stored-procedures-in-sql-server-machine-learning-services"></a>Эксплуатацию код R с помощью хранимых процедур в SQL Server Службы машинного обучения
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "68715684"
 
 Традиционно интеграция решений обработки и анализа данных призвана значительно переписать код для поддержки производительности и интеграции. SQL Server Службы машинного обучения упрощает эту задачу, так как код R и Python можно выполнять в SQL Server и вызывать с помощью хранимых процедур. Дополнительные сведения о механизме внедрения кода в хранимых процедурах см. в следующих статьях:
 
-+ [QuickStart Скрипт R "Hello World" в SQL Server](../../advanced-analytics/tutorials//quickstart-r-run-using-tsql.md)
++ [Создавайте и запускайте простые скрипты R в SQL Server](../tutorials/quickstart-r-create-script.md)
 + [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)
 
 Более полный пример развертывания кода R в рабочей среде с помощью хранимых процедур можно найти в [учебнике: Аналитика данных R для разработчиков SQL](../../advanced-analytics/tutorials/sqldev-in-database-r-for-sql-developers.md)
