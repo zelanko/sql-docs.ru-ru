@@ -9,12 +9,12 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: bc9879236fa50f19f443b2d6086980842ce0b3f1
-ms.sourcegitcommit: 71fac5fee00e0eca57e555f44274dd7e08d47e1e
+ms.openlocfilehash: 9a3b52a87927eb85d638ed97c1e145efd50602bf
+ms.sourcegitcommit: 6413b7495313830ad1ae5aefe0c09e8e7a284b07
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70160703"
+ms.lasthandoff: 09/16/2019
+ms.locfileid: "71016891"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-big-data-cluster-deployments"></a>Настройка Службы Kubernetes Azure для развертываний кластера больших данных SQL Server
 
@@ -39,9 +39,9 @@ AKS упрощает создание, настройку и кластера в
 
 - Минимальная версия 1,13 для сервера Kubernetes. Для AKS нужно использовать параметр `--kubernetes-version`, чтобы указать версию, отличную от используемой по умолчанию.
 
-- Чтобы обеспечить оптимальную работу при проверке основных сценариев в AKS, используйте следующее.
+- Чтобы обеспечить успешное развертывание и оптимальное взаимодействие при проверке основных сценариев в AKS, можно использовать один узел или кластер AKS с несколькими узлами, где доступны следующие ресурсы:
    - 8 виртуальных ЦП для всех узлов
-   - 32 ГБ памяти на виртуальную машину
+   - 64 ГБ памяти на виртуальную машину
    - 24 или более подключенных диска для всех узлов
 
    > [!TIP]

@@ -18,24 +18,25 @@ ms.assetid: f0b10fee-27f7-45fe-aece-ccc3f63bdcdb
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4eb6cf7d397bc8fdc8ab37d17e830ad2b373882e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4cbc237ad0df16dbb854fb5bd062d7d37375294f
+ms.sourcegitcommit: 3bd813ab2c56b415a952e5fbd5cfd96b361c72a2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140818"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70913550"
 ---
 # <a name="write-international-transact-sql-statements"></a>Написание инструкций Transact-SQL, адаптированных к международному использованию
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   В базах данных и использующих их приложениях, в которых применяются инструкции языка [!INCLUDE[tsql](../../includes/tsql-md.md)] , можно обеспечить большую степень языковой переносимости или поддержку нескольких языков при условии соблюдения следующих требований.  
 
--   Начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] следует использовать:
-    -   типы данных **char**, **varchar** и **varchar(max)** с параметрами сортировки с поддержкой [символов UTF-8](../../relational-databases/collations/collation-and-unicode-support.md#utf8);
-    -   типы данных **nchar**, **nvarchar** и **nvarchar(max)** с параметрами сортировки с поддержкой [дополнительных символов](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters);      
+-   Начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] и в [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] следует использовать:
+    -   типы данных **char**, **varchar** и **varchar(max)** с параметрами сортировки с поддержкой [символов UTF-8](../../relational-databases/collations/collation-and-unicode-support.md#utf8); данные кодируются с помощью UTF-8;
+    -   типы данных **nchar**, **nvarchar** и **nvarchar(max)** с параметрами сортировки с поддержкой [дополнительных символов](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters); данные кодируются с помощью UTF-16. Использование параметров сортировки, не поддерживающих дополнительные символы, приводит к кодированию данных с использованием UCS-2.      
 
     Это позволяет избежать проблемы преобразования кодовых страниц. См. подробнее о [различиях в хранении для символов UTF-8 и UTF-16](../../relational-databases/collations/collation-and-unicode-support.md#storage_differences).  
 
--   Вплоть до [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] все элементы с типами данных **char**, **varchar** и **text** замените элементами с типами данных **nchar**, **nvarchar** и **nvarchar(max)** . Это позволяет избежать проблемы преобразования кодовых страниц. Дополнительные сведения см. в статье [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md). 
+-   Вплоть до [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] все элементы с типами данных **char**, **varchar** и **text** замените элементами с типами данных **nchar**, **nvarchar** и **nvarchar(max)** . При использовании параметров сортировки с поддержкой [дополнительных символов](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters) данные кодируются с помощью UTF-16. Использование параметров сортировки, не поддерживающих дополнительные символы, приводит к кодированию данных с использованием UCS-2. Это позволяет избежать проблемы преобразования кодовых страниц. Дополнительные сведения см. в статье [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md). 
+
     > [!IMPORTANT]
     > Тип данных **text** является устаревшим, и его не следует использовать в новых разработках. Запланируйте преобразование данных типа **text** в **varchar(max)** .
   

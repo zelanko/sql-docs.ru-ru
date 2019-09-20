@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 063d3d9c-ccb5-4fab-9d0c-c675997428b4
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ae61bdd59202db73b404bf2c639c2f1cee98e81f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 08379ce20bfc58c0d6c17256ff8810421334cf1c
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68058117"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874859"
 ---
 # <a name="advanced-merge-replication---conflict-detection-and-resolution"></a>Подробнее о репликации слиянием — обнаружение и разрешение конфликтов
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +63,8 @@ ms.locfileid: "68058117"
 ## <a name="conflict-resolution"></a>Устранение конфликтов  
  После обнаружения конфликта агент слияния запускает выбранный сопоставитель конфликтов и использует его для определения победителя в конфликте. Победившая строка применяется на издателе и подписчике, а данные из проигравшей строки записываются в таблицу конфликтов. Разрешение конфликтов осуществляется немедленно после выполнения сопоставления конфликтов, если не выбран интерактивный режим разрешения конфликтов.  
 
-Разрешение конфликтов репликации слиянием [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Разрешение конфликтов репликации слиянием  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]  
   Когда издатель и подписчик соединяются и происходит синхронизация, агент слияния проверяет наличие конфликтов. При обнаружении конфликтов агент слияния использует сопоставитель конфликтов для определения данных, которые будут приняты и распространены на другие сайты.  
   
 > [!NOTE]  

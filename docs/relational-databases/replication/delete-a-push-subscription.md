@@ -16,12 +16,12 @@ ms.assetid: 3c4847e2-aed9-4488-b45d-8164422bdb10
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: c55e8bbd7001fb28b7661d31ced79e9bcb919894
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: e5ece02e70639ce91aeec72827838c9ad8d7ab8d
+ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768192"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70846700"
 ---
 # <a name="delete-a-push-subscription"></a>Удаление принудительной подписки
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -69,15 +69,15 @@ ms.locfileid: "68768192"
   
 #### <a name="to-delete-a-push-subscription-to-a-snapshot-or-transactional-publication"></a>Удаление принудительной подписки на публикацию моментальных снимков или транзакций  
   
-1.  В издателе в базе данных публикации выполните процедуру [sp_dropsubscription (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md). Задайте значения для параметров **@publication** и **@subscriber** . Задайте значение **all** в параметре **@article** . Если распространитель недоступен, задайте значение **1** в параметре **@ignore_distributor** , чтобы удалить подписку без удаления связанных с ней объектов на распространителе (необязательно).  
+1.  В издателе в базе данных публикации выполните процедуру [sp_dropsubscription (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md). Укажите параметры **\@publication** и **\@subscriber**. Задайте значение **all** в параметре **\@article**. Если распространитель недоступен, задайте значение **1** в параметре **\@ignore_distributor**, чтобы удалить подписку без удаления связанных с ней объектов в распространителе (необязательно).  
   
 2.  Чтобы удалить все метаданные репликации, оставшиеся в базе данных подписки, выполните в подписчике хранимую процедуру [sp_subscription_cleanup (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-subscription-cleanup-transact-sql.md).  
   
 #### <a name="to-delete-a-push-subscription-to-a-merge-publication"></a>Удаление принудительной подписки на публикацию слиянием  
   
-1.  В подписчике выполните процедуру [sp_dropmergesubscription (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md), указав параметры **@publication** , **@subscriber** и **@subscriber_db** . Если распространитель недоступен, задайте значение **1** в параметре **@ignore_distributor** , чтобы удалить подписку без удаления связанных с ней объектов на распространителе (необязательно).  
+1.  В издателе выполните процедуру [sp_dropmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md), указав параметры **\@publication**, **\@subscriber** и **\@subscriber_db**. Если распространитель недоступен, задайте значение **1** в параметре **\@ignore_distributor**, чтобы удалить подписку без удаления связанных с ней объектов в распространителе (необязательно).  
   
-2.  В базе данных подписчика в подписчике выполните процедуру [sp_mergesubscription_cleanup (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-mergesubscription-cleanup-transact-sql.md). Задайте значения для параметров **@publisher** , **@publisher_db** и **@publication** . Тем самым из базы данных подписки удаляются метаданные слияния.  
+2.  В базе данных подписчика в подписчике выполните процедуру [sp_mergesubscription_cleanup (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-mergesubscription-cleanup-transact-sql.md). Задайте значения для параметров **\@publisher**, **\@publisher_db** и **\@publication**. Тем самым из базы данных подписки удаляются метаданные слияния.  
   
 ###  <a name="TsqlExample"></a> Примеры (Transact-SQL)  
  В этом примере удаляется принудительная подписка на публикацию транзакций.  

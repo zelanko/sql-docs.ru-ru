@@ -18,12 +18,12 @@ ms.assetid: acceef84-2c68-46e2-a021-be019b7ab14e
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 80c777fad7bbe9e6680b8baa826bc5acdf65730a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f3fb28ddb5e910c70c8f5e72f34703d18fc4c38c
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68051432"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874465"
 ---
 # <a name="windows-collation-name-transact-sql"></a>Имя параметров сортировки Windows (Transact-SQL)
 
@@ -139,9 +139,9 @@ SELECT * FROM sys.fn_helpcollations() WHERE [name] NOT LIKE N'SQL%';
 |Амхарик (Эфиопия)|Latin1_General_100_|Недоступно|
 |Армянский (Армения)|Cyrillic_General_100_|Недоступно|
 |Ассамский (Индия)|Assamese_100_ <sup>1</sup>|Недоступно|
+|Бенгальский (Бангладеш)|Bengali_100_<sup>1</sup>|Недоступно|
 |Башкирский (Россия)|Bashkir_100_|Недоступно|
 |Баскский|Latin1_General_100_|Недоступно|
-|Бенгальский (Бангладеш)|Bengali_100_<sup>1</sup>|Недоступно|
 |Bengali (India)|Bengali_100_<sup>1</sup>|Недоступно|
 |Боснийский (Босния и Герцеговина, кириллица)|Bosnian_Cyrillic_100_|Недоступно|
 |Боснийский (Босния и Герцеговина, латиница)|Bosnian_Latin_100_|Недоступно|
@@ -226,7 +226,7 @@ SELECT * FROM sys.fn_helpcollations() WHERE [name] NOT LIKE N'SQL%';
 |Валлийский (Соединенное Королевство)|Welsh_100_|Недоступно|
 |Волоф (Сенегал)|French_100_|Недоступно|
 |Коса/исиКоса (Южная Африка)|Latin1_General_100_|Недоступно|
-|Якутский (Россия)|Yakut_100_|Недоступно|
+|Саха (Россия)|Yakut_100_|Недоступно|
 |Носу (КНР)|Latin1_General_100_|Недоступно|
 |Йоруба (Нигерия)|Latin1_General_100_|Недоступно|
 |Зулу/исиЗулу (Южная Африка)|Latin1_General_100_|Недоступно|
@@ -235,9 +235,9 @@ SELECT * FROM sys.fn_helpcollations() WHERE [name] NOT LIKE N'SQL%';
 |Устарело. Отсутствует на уровне сервера в [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версиях|Lithuanian_Classic|Lithuanian_Classic|
 |Устарело. Отсутствует на уровне сервера в [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версиях|Macedonian|Macedonian|
 
-<sup>1</sup> Параметры сортировки Windows "Только для Юникода" можно применять только к данным на уровне столбца или уровне выражения. Они не могут использоваться в качестве параметров сортировки базы данных или сервера.
+<sup>1</sup> Параметры сортировки Windows "Только для Юникода" можно применять только к данным на уровне столбца или уровне выражения. Они не могут использоваться в качестве параметров сортировки базы данных или сервера.
 
-<sup>2</sup> Как и при параметрах сортировки в китайском (Тайвань), в китайском (Макао) используются правила упрощенного китайского языка, но в отличие от китайского (Тайвань) используется кодовая страница 950.
+<sup>2</sup> Как и при параметрах сортировки в китайском (Тайвань), в китайском (Макао) используются правила упрощенного китайского языка, но в отличие от китайского (Тайвань) используется кодовая страница 950.
 
 ## <a name="see-also"></a>См. также:
 

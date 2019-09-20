@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4b8b61bd-4bd1-43cd-b6e5-c6ed2e101dce
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 81dbaedcb67b7e641e00c37ebb27e35fb2fceca5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2e174785891c30b7a4c6df240f446fe630a21e0c
+ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68134565"
+ms.lasthandoff: 09/02/2019
+ms.locfileid: "70211262"
 ---
 # <a name="configure-sql-server-agent-mail-to-use-database-mail"></a>Настройка почты агента SQL Server на использование компонента Database Mail
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,13 +36,16 @@ ms.locfileid: "68134565"
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
   
+  > [!NOTE]
+  > Агент SQL в Управляемом экземпляре всегда настроен для использования компонента Database Mail, поэтому это содержимое неприменимо к Управляемому экземпляру. В Управляемом экземпляре должен быть профиль с именем **[AzureManagedInstance_dbmail_profile](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)** для привязки агента SQL Server к Database Mail. 
+  
 ###  <a name="Prerequisites"></a> Предварительные требования  
   
 -   [Включить компонент Database Mail](../../relational-databases/database-mail/configure-database-mail.md).  
   
 -    [Создать учетную запись компонента Database Mail](../../relational-databases/database-mail/create-a-database-mail-account.md) для агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
--   [Создать профиль компонента Database Mail](../../relational-databases/database-mail/create-a-database-mail-profile.md) для учетной записи агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , чтобы сделать пользователя членом роли **DatabaseMailUserRole** в базе данных **msdb** .  
+-   [Создать профиль компонента Database Mail](../../relational-databases/database-mail/create-a-database-mail-profile.md) для учетной записи агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , чтобы сделать пользователя членом роли **DatabaseMailUserRole** в базе данных **msdb** .
   
 -   Сделать профиль используемым по умолчанию в базе данных **msdb** .  
   
@@ -64,7 +67,7 @@ ms.locfileid: "68134565"
   
 -   В списке **Почтовая система** выберите **Компонент Database Mail**.  
   
--   В **Списке почтовых профилей**выберите почтовый профиль для компонента Database Mail.  
+-   В **Списке почтовых профилей**выберите почтовый профиль для компонента Database Mail. 
   
 -   Перезапустите агент SQL Server.  
   

@@ -8,12 +8,12 @@ author: Abiola
 ms.author: aboke
 ms.reviewer: mikeray
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions'
-ms.openlocfilehash: 79d089282cdf243768138ea972f7d817534bf386
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b07d97563406a464bfdb38dba7b3aa1d51e27c34
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68062315"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874778"
 ---
 # <a name="configure-polybase-to-access-external-data-in-sql-server"></a>Настройка PolyBase для доступа к внешним данным в SQL Server
 
@@ -81,7 +81,7 @@ PolyBase в SQL Server 2019 позволяет подключаться к со
 
 [!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
-    We recommend creating statistics on external table columns especially the ones used for joins, filters and aggregates,for optimal query performance.
+Чтобы обеспечить оптимальную производительность запросов, мы советуем создать статистику столбцов внешней таблицы, особенно тех, которые используются для объединения, применения фильтров и статистических выражений.
 
     ```sql
     CREATE STATISTICS statistics_name ON customer (C_CUSTKEY) WITH FULLSCAN; 

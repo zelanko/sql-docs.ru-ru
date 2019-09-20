@@ -1,7 +1,7 @@
 ---
 title: Использование Соединителя SQL Server с компонентами шифрования SQL | Документация Майкрософт
 ms.custom: ''
-ms.date: 07/18/2019
+ms.date: 09/12/2019
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 58fc869e-00f1-4d7c-a49b-c0136c9add89
 author: aliceku
 ms.author: aliceku
-ms.openlocfilehash: 965980bcfe765f291b232a48af946db5f8f4f230
-ms.sourcegitcommit: 73dc08bd16f433dfb2e8406883763aabed8d8727
+ms.openlocfilehash: 76b3d714f1522cfecd5c61eb028b59f3bbeaa09d
+ms.sourcegitcommit: 77293fb1f303ccfd236db9c9041d2fb2f64bce42
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68329264"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929748"
 ---
 # <a name="use-sql-server-connector-with-sql-encryption-features"></a>Использование Соединителя SQL Server с компонентами шифрования SQL
 [!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,8 +34,10 @@ ms.locfileid: "68329264"
 > [!NOTE]  
 >  Версии 1.0.0.440 и старше были заменены и больше не поддерживаются в рабочих средах. Выполните обновление до версии 1.0.1.0 или более поздней, посетив [Центр загрузки Майкрософт](https://www.microsoft.com/download/details.aspx?id=45344) и используя инструкции на странице [Соединитель SQL Server, приложение](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md) в разделе "Обновление соединителя SQL Server".  
   
-## <a name="transparent-data-encryption-by-using-an-asymmetric-key-from-azure-key-vault"></a>Прозрачное шифрование данных с помощью асимметричного ключа из хранилища ключей Azure  
- После выполнения частей с I по IV, описанных в статье "Этапы настройки расширенного управления ключами с использованием хранилища ключей Azure", используйте хранилище ключей Azure для шифрования ключа шифрования базы данных с помощью TDE.  
+## <a name="transparent-data-encryption-by-using-an-asymmetric-key-from-azure-key-vault"></a>Прозрачное шифрование данных с помощью асимметричного ключа из хранилища ключей Azure
+
+После выполнения частей с I по IV, описанных в статье "Этапы настройки расширенного управления ключами с использованием хранилища ключей Azure", используйте хранилище ключей Azure для шифрования ключа шифрования базы данных с помощью TDE. Дополнительные сведения о смене ключей с помощью PowerShell см. в статье [Смена средства защиты прозрачного шифрования данных (TDE) с помощью PowerShell](/azure/sql-database/transparent-data-encryption-byok-azure-sql-key-rotation).
+ 
 Вам потребуется создать учетные данные и имя входа, а также ключ шифрования базы данных, который шифрует данные и журналы в базе данных. Чтобы зашифровать базу данных, для нее требуется разрешение **CONTROL** . На приведенном ниже рисунке показана иерархия ключа шифрования при использовании хранилища ключей Azure.  
   
  ![ekm-key-hierarchy-with-akv](../../../relational-databases/security/encryption/media/ekm-key-hierarchy-with-akv.png "ekm-key-hierarchy-with-akv")  

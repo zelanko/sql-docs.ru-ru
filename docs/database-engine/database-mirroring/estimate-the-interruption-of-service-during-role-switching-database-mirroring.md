@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 586a6f25-672b-491b-bc2f-deab2ccda6e2
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: e90fcec386868a87ccca9faaf349dcb1a4064aff
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 44f6a8966ef2da55ffd43830677f52398b356399
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67997858"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874181"
 ---
 # <a name="estimate-the-interruption-of-service-during-role-switching-database-mirroring"></a>Оценка прерывания обслуживания во время переключения ролей (зеркальное отображение базы данных)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "67997858"
 -   При отработке отказа вручную имеет значение только время перехода на базу данных после выполнения команды отработки отказа.  
   
 ## <a name="error-detection"></a>Определение ошибки  
- Время, за которое система заметит ошибку, зависит от типа ошибки, например сетевая ошибка будет замечена практически сразу, так как определение потери соединения с сервером по умолчанию занимает 10 секунд — это время ожидания по умолчанию.  
+ Время, за которое система заметит ошибку, зависит от типа ошибки. Например, сетевая ошибка будет замечена практически сразу, а определение того, что сервер не отвечает на запросы, занимает 10 секунд (время ожидания по умолчанию).  
   
  Сведения об ошибках, которые могут вызвать сбой во время сеанса зеркального отображения базы данных, и о времени ожидания обнаружения в режиме высокой безопасности с автоматической отработкой отказа см. в статье [Возможные неполадки при зеркальном отображении базы данных](../../database-engine/database-mirroring/possible-failures-during-database-mirroring.md).  
   

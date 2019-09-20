@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: fe1e7f60-b0c8-45e9-a5e8-4fedfa73d7ea
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 27de402dfe659be7c6adc28504f4d17ddc1e4620
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 97b36ba7e90aeaa32a0d073b972f06a9fc336750
+ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085956"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70846744"
 ---
 # <a name="replication-merge-agent"></a>Replication Merge Agent
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -179,7 +179,7 @@ replmerg [-?]
   
  **-ExchangeType** [ **1**| **2**| **3**]  
 > [!WARNING]
->  [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)] Для ограничения передачи используйте **@subscriber_upload_options** вместо **sp_addmergearticle** .  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)] Для ограничения передачи используйте **\@subscriber_upload_options** вместо **sp_addmergearticle**.  
   
  Указывает тип обмена данными во время синхронизации, который может быть одним из следующих значений.  
   
@@ -320,7 +320,7 @@ replmerg [-?]
  Указывает число потоков на источнике, которые агент слияния использует для перечисления поступивших от него изменений. При передаче источником считается подписчик, а при загрузке — издатель. Значение по умолчанию — **3**.  
   
  **-StartQueueTimeout** _start_queue_timeout_seconds_  
- Максимальное время ожидания (в секундах) агента слияния в тех случаях, когда число параллельно выполняемых процессов слияния достигло предельного значения, указываемого свойством **@max_concurrent_merge** хранимой процедуры **sp_addmergepublication**. Если по истечении этого времени агент слияния все еще находится в процессе ожидания, то его работа будет завершена. Значение 0 означает, что агент ждет неопределенно долгое время, хотя его выполнение может быть отменено.  
+ Максимальное время ожидания (в секундах) агента слияния в тех случаях, когда число параллельно выполняемых процессов слияния достигло предельного значения, указываемого свойством **\@max_concurrent_merge** хранимой процедуры **sp_addmergepublication**. Если по истечении этого времени агент слияния все еще находится в процессе ожидания, то его работа будет завершена. Значение 0 означает, что агент ждет неопределенно долгое время, хотя его выполнение может быть отменено.  
   
  **-SubscriberDatabasePath** _subscriber_database_path_  
  Путь к базе данных Jet (MDB-файл) при значении **SubscriberType** равном **2** (позволяет соединиться с базой данных Jet без указания имени источника данных ODBC (DSN)).  

@@ -3,19 +3,19 @@ title: Расширение SQL Server 2019 (предварительная ве
 titleSuffix: Azure Data Studio
 description: Расширение предварительной версии SQL Server 2019 для Azure Data Studio
 ms.custom: seodec18
-ms.date: 08/15/2019
+ms.date: 09/11/2019
 ms.reviewer: alayu; sstein
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: 5def1291480b4b2dbe1eca289f02e5c9cfd6b8d7
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.openlocfilehash: 3d47ea0bc1c905516504c25e3a1f05ca5b74c28d
+ms.sourcegitcommit: dacf6c57f6a2e3cf2005f3268116f3c609639905
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69494044"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70878617"
 ---
 # <a name="sql-server-2019-extension-preview"></a>Расширение SQL Server 2019 (предварительная версия)
 
@@ -29,9 +29,9 @@ ms.locfileid: "69494044"
 
    |Платформа|Загрузить|Дата выпуска|Версия
    |:---|:---|:---|:---|
-   |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2101241)|15 августа 2019 г. |0.15.0
-   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2101240)|15 августа 2019 г. |0.15.0
-   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2101239)|15 августа 2019 г. |0.15.0
+   |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2103613)|11 сентября 2019 г. |0.16.0
+   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2103612)|11 сентября 2019 г. |0.16.0
+   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2103709)|11 сентября 2019 г. |0.16.0
 
 1. В Azure Data Studio выберите **Установить расширение из пакета VSIX** в меню **Файл** и выберите скачанный VSIX-файл.
 
@@ -42,6 +42,10 @@ ms.locfileid: "69494044"
 1. После перезагрузки расширение установит зависимости. Ход выполнения отображается в окне вывода: это может занять несколько минут.
 
 1. После установки зависимостей закройте и снова откройте Azure Data Studio. Тип подключения **кластера больших данных SQL Server** будет недоступен, пока вы не перезапустите Azure Data Studio.
+
+## <a name="changes-in-release-016"></a>Изменения в выпуске 0.16
+* Мастер создания внешних таблиц:
+  * Улучшена обработка ошибок при загрузке таблиц и представлений на странице сопоставления объектов.
 
 ## <a name="changes-in-release-015"></a>Изменения в выпуске 0.15
 * Мастер создания внешних таблиц:
@@ -96,7 +100,7 @@ ms.locfileid: "69494044"
 
 #### <a name="known-issues"></a>Известные проблемы
 * При открытии записной книжки появится диалоговое окно "Установка Python". Отмена этой установки приведет к тому, что раскрывающиеся списки ядер и "Присоединение к" не будут отображать ожидаемые значения. Для решения этой проблемы необходимо завершить установку Python.
-* При открытии записной книжки с неподдерживаемым ядром раскрывающиеся списки ядер и _Присоединение к_ приведут к зависанию Azure Data Studio. Необходимо закрыть Azure Data Studio и убедиться, что используется поддерживаемое ядро (Python3, Spark | R, Spark | Scala, PySpark, PySpark3).
+* При открытии записной книжки с неподдерживаемым ядром раскрывающиеся списки ядер и _Присоединение к_ приведут к тому, что Azure Data Studio перестанет отвечать на запросы. Необходимо закрыть Azure Data Studio и убедиться, что используется поддерживаемое ядро (Python3, Spark | R, Spark | Scala, PySpark, PySpark3).
 * Сбой ссылки пользовательского интерфейса Spark при использовании PySpark3 или других ядер Spark с конечной точкой SQL Server. В качестве обходного решения щелкните пользовательский интерфейс Spark на панели мониторинга или подключитесь с помощью типа подключения к кластеру больших данных SQL Server, так как это даст правильную гиперссылку для пользовательского интерфейса Spark.
 
 ### <a name="extensibility-improvements"></a>Улучшения расширяемости

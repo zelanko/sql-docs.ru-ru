@@ -14,12 +14,12 @@ ms.assetid: 44c69d35-abcb-4da3-9370-5e0bc9a28496
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1ade7deb2fd86f5dfd0f89aa1f13d5352e6e5fc9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1da717e212e03fce4550e7af1a8810980f1b8321
+ms.sourcegitcommit: df1f71231f8edbdfe76e8851acf653c25449075e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68127291"
+ms.lasthandoff: 09/09/2019
+ms.locfileid: "70810124"
 ---
 # <a name="rename-a-database"></a>Переименование базы данных
 
@@ -63,6 +63,7 @@ ms.locfileid: "68127291"
 ## <a name="rename-a-database-using-sql-server-management-studio"></a>Переименование базы данных с помощью SQL Server Management Studio
 
 Чтобы переименовать базу данных SQL Server или SQL Azure с помощью SQL Server Management Studio, выполните следующие действия.
+
   
 1. В **обозревателе объектов** установите соединение с экземпляром SQL.  
   
@@ -71,6 +72,8 @@ ms.locfileid: "68127291"
 3. В обозревателе объектов разверните узел **Базы данных**, щелкните правой кнопкой мыши базу данных, которую необходимо переименовать, а затем выберите пункт **Переименовать**.  
   
 4. Введите новое имя базы данных и нажмите кнопку **ОК**.  
+  
+5. Кроме того, если эта база данных была базой данных по умолчанию, см. раздел [Сброс базы данных по умолчанию после переименования](#reset-your-default-database-after-rename).
 
 [!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
@@ -95,6 +98,8 @@ ms.locfileid: "68127291"
    GO
    ```  
 
+4. Кроме того, если эта база данных была базой данных по умолчанию, см. раздел [Сброс базы данных по умолчанию после переименования](#reset-your-default-database-after-rename).
+
 ### <a name="to-rename-an-azure-sql-database-database"></a>Переименование базы данных SQL Azure
 
 Выполните следующие действия, чтобы переименовать базу данных SQL Azure с помощью T-SQL в SQL Server Management Studio.
@@ -112,6 +117,19 @@ ms.locfileid: "68127291"
 
 После переименования базы данных в SQL Server выполните резервное копирование базы данных `master`. В базе данных SQL Azure это не требуется, так как резервное копирование выполняется автоматически.  
   
+## <a name="reset-your-default-database-after-rename"></a>Сброс базы данных по умолчанию после переименования
+
+Если переименовываемая база данных была задана в качестве базы данных по умолчанию, используйте следующую команду, чтобы сделать переименованную базу данных базой данных по умолчанию:
+
+
+```sql
+USE [master]
+GO
+ALTER LOGIN [your-login] WITH DEFAULT_DATABASE=[new-database-name]
+GO
+```
+
+
 ## <a name="see-also"></a>См. также:
 
 - [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)

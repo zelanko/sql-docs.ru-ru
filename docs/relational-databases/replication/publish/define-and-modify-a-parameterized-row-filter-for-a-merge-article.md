@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: de0482a2-3cc8-4030-8a4a-14364549ac9f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 93d3946f712c3b4287e2589a69b94351dacca049
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d24b967821310876cfff00c257c1024dac512588
+ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67907767"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70846760"
 ---
 # <a name="define-and-modify-a-parameterized-row-filter-for-a-merge-article"></a>Определение и изменение параметризованного фильтра строк для статьи публикации слиянием
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -107,7 +107,7 @@ ms.locfileid: "67907767"
   
 #### <a name="to-define-a-parameterized-row-filter-for-an-article-in-a-merge-publication"></a>Определение параметризованного фильтра строк для статьи в публикации слиянием  
   
-1.  В издателе в базе данных публикации выполните процедуру [sp_addmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md). Укажите параметр **@publication** , имя статьи в параметре **@article** , публикуемую таблицу в параметре **@source_object** , предложение WHERE, определяющее параметризованный фильтр в параметре **@subset_filterclause** (исключая `WHERE`), и одно из следующих значений в параметре **@partition_options** , описывающее тип секционирования, которое будет получено в результате применения параметризованного фильтра строк.  
+1.  В базе данных публикации на издателе выполните процедуру [sp_addmergearticle (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md). Укажите параметр **\@publication**, имя статьи в параметре **\@article**, публикуемую таблицу в параметре **\@source_object**, предложение WHERE, определяющее параметризованный фильтр в параметре **\@subset_filterclause** (исключая `WHERE`), и одно из следующих значений в параметре **\@partition_options**, описывающее тип секционирования, которое будет получено в результате применения параметризованного фильтра строк.  
   
     -   **0** — фильтрация для данной статьи либо является статической, либо не возвращает уникального подмножества данных для каждой из секций (то есть имеются перекрывающиеся секции).  
   
@@ -119,9 +119,9 @@ ms.locfileid: "67907767"
   
 #### <a name="to-change-a-parameterized-row-filter-for-an-article-in-a-merge-publication"></a>Изменение параметризованного фильтра строк для статьи в публикации слиянием  
   
-1.  В базе данных публикации на издателе выполните процедуру [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Укажите параметр **@publication** , **@article** , значение **subset_filterclause** в параметре **@property** , выражение, определяющее параметризованный фильтр в параметре **@value** (исключая `WHERE`), и значение **1** как в параметре **@force_invalidate_snapshot** и **@force_reinit_subscription** .  
+1.  В базе данных публикации на издателе выполните процедуру [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Укажите параметр **\@publication**, **\@article**, значение **subset_filterclause** в параметре **\@property**, выражение, определяющее параметризованный фильтр в параметре **\@value** (исключая `WHERE`), и значение **1** в параметре как в параметре **\@force_invalidate_snapshot**, так и в параметре **\@force_reinit_subscription**.  
   
-2.  Если это изменение приведет к разному поведению секционирования, еще раз выполните хранимую процедуру [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) . Укажите параметр **@publication** , **@article** , значение **partition_options** в параметре **@property** и наиболее оптимальный параметр секционирования в параметре **@value** , например один из следующих.  
+2.  Если это изменение приведет к разному поведению секционирования, еще раз выполните хранимую процедуру [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) . Укажите параметры **\@publication**, **\@article**, значение **partition_options** в параметре **\@property** и наиболее оптимальный параметр секционирования в параметре **\@value**, например один из следующих:  
   
     -   **0** — фильтрация для данной статьи либо является статической, либо не возвращает уникального подмножества данных для каждой из секций (то есть имеются перекрывающиеся секции).  
   

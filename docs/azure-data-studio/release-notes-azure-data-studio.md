@@ -9,17 +9,37 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
-ms.date: 08/15/2019
-ms.openlocfilehash: fd10408eb976dd40383c058489a971b557a2acd4
-ms.sourcegitcommit: 2bc15f81d7a238c6fc409440800f1d6c7943a4b5
+ms.date: 09/11/2019
+ms.openlocfilehash: d505fcdbffe52245a64548d476cbee2193823fdb
+ms.sourcegitcommit: dacf6c57f6a2e3cf2005f3268116f3c609639905
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70059268"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70878628"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Заметки о выпуске для Azure Data Studio
 
 **[Скачайте и установите последний выпуск.](download.md)**
+
+## <a name="september-2019"></a>Сентябрь 2019 г.
+
+10 сентября 2019 г. &nbsp; / &nbsp;, версия: 1.11.0 
+
+&nbsp;
+
+| Изменить | Сведения |
+| :----- | :------ |
+| Включение режима SQLCMD | Редактор запросов теперь поддерживает включение и отключение режима SQLCMD для записи и редактирования запросов в виде скриптов SQLCMD. |
+| Расширение сообщества: Query Editor Boost | Query Editor Boost — это расширение с открытым кодом, позволяющее повысить удобство работы с редактором запросов Azure Data Studio для пользователей, которые часто пишут запросы. &bull; &nbsp; Сохранение текущего запроса как фрагмента кода <br/>&bull; &nbsp; Переключение баз данных с помощью сочетания клавиш CTRL+U <br/> &bull; &nbsp; Создание запроса по шаблону <br/> &bull; &nbsp; Полный список усовершенствований см. [здесь](https://github.com/dzsquared/query-editor-boost) |
+| Усовершенствования записных книжек | &bull; &nbsp; Улучшения производительности для поддержки файлов записных книжек большего размера <br/> &bull; &nbsp; Полный список усовершенствований см. [здесь](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22September+2019+Release%22+label%3A%22Area%3A+Notebooks%22+is%3Aclosed) |
+| Объединение выпусков Visual Studio Code за август версии 1.38 | Последние усовершенствования см. [здесь](https://code.visualstudio.com/updates/v1_38). |
+| Устраненные ошибки и проблемы | Полный список исправлений см. на странице [ошибок и проблем в GitHub](https://github.com/microsoft/azuredatastudio/milestone/39?closed=1). |
+| &nbsp; | &nbsp; |
+
+### <a name="known-issues"></a>Известные проблемы
+- Записные книжки
+    - [7080](https://github.com/microsoft/azuredatastudio/issues/7080) Неправильная сериализация записных книжек в редких случаях
+
 
 ## <a name="august-2019"></a>Август 2019 г.
 

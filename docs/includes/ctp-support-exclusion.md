@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: ffd608faf64818a7acd9e38d9c502f575be6716a
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: ccc96ecf7dccede236616e4680243116b8492d6b
+ms.sourcegitcommit: 0c6c1555543daff23da9c395865dafd5bb996948
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653031"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70309927"
 ---
 ## <a name="enabled-deployment-scenarios"></a>Поддерживаемые сценарии развертывания
 
@@ -13,7 +13,7 @@ ms.locfileid: "69653031"
 - Параллельная установка. Экземпляры SQL Server 2019 RC можно устанавливать с экземплярами SQL Server версий с 2012 по 2017 либо другими экземплярами SQL Server 2019 CTP 3.0 или более поздней версии.
    >[!NOTE]
    >Хотя параллельная установка вместе с версиями SQL Server 2008 и 2008 R2 не запрещена, нет таких версий операционной системы Windows, которые бы поддерживали как эти версии SQL Server, так и SQL Server 2019.
-- Обновление на месте. Вы можете обновить экземпляры SQL Server версий с 2012 по 2017, а также экземпляры SQL Server CTP 3.0 до экземпляров SQL Server 2019 RC. Обновление с версий CTP SQL Server 2019 ниже версии 3.0 не поддерживается. Необходимо выполнить новую установку.
+- Обновление на месте. Вы можете обновить экземпляры SQL Server версий с 2012 по 2017, а также экземпляры SQL Server CTP 3.0 до экземпляров SQL Server 2019 RC. Обновление с версий CTP SQL Server 2019 ниже версии 3.0 не поддерживается. Необходимо выполнить новую установку.
    >[!NOTE]
    >Хотя обновление на месте с версий SQL Server 2008 и 2008 R2 не запрещено, нет таких версий операционной системы Windows, которые бы поддерживали как эти версии SQL Server, так и SQL Server 2019.
 

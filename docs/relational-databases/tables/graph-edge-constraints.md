@@ -1,7 +1,7 @@
 ---
 title: Ограничения ребер графа | Документация Майкрософт
 ms.custom: ''
-ms.date: 06/21/2019
+ms.date: 09/09/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 author: shkale-msft
 ms.author: shkale
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azuresqldb-current'
-ms.openlocfilehash: 5c0f7ea57a36c4d264bec5c70e745b36a319bbc8
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: ae08d5baef685a0b338ad574357230f01d3814cf
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67731051"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70873882"
 ---
 # <a name="edge-constraints"></a>Ограничения границ
 
@@ -48,6 +48,14 @@ ms.locfileid: "67731051"
 ### <a name="indexes-on-edge-constraints"></a>Индексы для ограничений ребер
 
 Создание ограничения ребра автоматически не создает соответствующий индекс для столбцов `$from_id` и `$to_id` в таблице ребер. Рекомендуется создать индексы для пары `$from_id` и `$to_id` вручную, если имеются запросы на поиск точек или рабочая нагрузка OLTP.
+
+### <a name="on-delete-referential-actions-on-edge-constraints"></a>Ссылочные действия ON DELETE для ограничений ребер
+Каскадные действия для ограничений ребер позволяют пользователям определять действия, которые будет предпринимать ядро СУБД, когда пользователь удаляет узлы, соединяемые указанным ребром. Можно определить следующие ссылочные действия:  
+*NO ACTION*   
+Ядро СУБД выдает ошибку при попытке удалить узел, соединенный ребрами.  
+
+*CASCADE*   
+При удалении узла из базы данных соединяющие его ребра также удаляются.  
 
 ## <a name="working-with-edge-constraints"></a>Работа с ограничениями ребер
 
@@ -80,7 +88,35 @@ GO
 CREATE TABLE bought
    (
       PurchaseCount INT
-         ,CONSTRAINT EC_BOUGHT CONNECTION (Customer TO Product)
+         ,CONSTRAINT EC_BOUGHT CONNECTION (Customer TO Product) ON DELETE NO ACTION
+   )
+   AS EDGE;
+   ```
+
+#### <a name="defining-referential-actions-on-a-new-edge-table"></a>Определение ссылочных действий для новой граничной таблицы 
+
+В следующем примере создается ограничение ребра в граничной таблице **bought** и определяется ссылочное действие ON DELETE CASCADE. 
+
+```sql
+-- CREATE node and edge tables
+CREATE TABLE Customer
+   (
+      ID INTEGER PRIMARY KEY
+      ,CustomerName VARCHAR(100)
+   )
+AS NODE;
+GO
+CREATE TABLE Product
+   (
+      ID INTEGER PRIMARY KEY
+      ,ProductName VARCHAR(100)
+   )
+AS NODE;
+GO
+CREATE TABLE bought
+   (
+      PurchaseCount INT
+         ,CONSTRAINT EC_BOUGHT CONNECTION (Customer TO Product) ON DELETE CASCADE
    )
    AS EDGE;
    ```
@@ -248,6 +284,7 @@ DROP CONSTRAINT EC_BOUGHT;
 
 Чтобы изменить ограничение ребер с помощью Transact-SQL, необходимо сначала удалить имеющееся ограничение, а затем создать его повторно с помощью нового определения.
 
+
 ### <a name="view-edge-constraints"></a>Просмотр ограничений ребер
 
 [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).
@@ -302,4 +339,8 @@ WHERE EC.parent_object_id = object_id('bought');
 
 ## <a name="related-tasks"></a>Связанные задачи
 
+[CREATE TABLE (граф SQL)](../../t-sql/statements/create-table-sql-graph.md)  
+[ALTER TABLE table_constraint](../../t-sql/statements/alter-table-table-constraint-transact-sql.md)  
+
 Сведения о технологии графов в SQL Server см. в статье [Graph processing with SQL Server and Azure SQL Database](../graphs/sql-graph-overview.md?view=sql-server-2017) (Обработка графов с помощью SQL Server и Базы данных SQL Azure).
+

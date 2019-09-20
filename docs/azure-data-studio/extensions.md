@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: db2350b24addde1d263e7cb396f7b69818870b37
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: e114c4991d5f3df10537e459263b49152c466f99
+ms.sourcegitcommit: 26715b4dbef95d99abf2ab7198a00e6e2c550243
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67959581"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70274831"
 ---
 # <a name="extend-the-functionality-of-includename-sosincludesname-sos-shortmd"></a>Расширение функциональности [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
@@ -26,18 +26,18 @@ ms.locfileid: "67959581"
 
 ## <a name="add-azure-data-studio-extensions"></a>Добавление расширений Azure Data Studio
 
-1. Чтобы открыть диспетчер расширений и получить доступ к имеющимся расширениям, щелкните значок расширений или выберите пункт **Расширения** в меню **Вид**.
-2. Выберите доступное расширение и просмотрите сведения о нем.
+1. Чтобы открыть диспетчер расширений и получить доступ к имеющимся расширениям, щелкните значок расширений или выберите пункт **Расширения** в меню **Вид**.\
+    Чтобы быстро получить доступ к диспетчеру расширений, можно также нажать клавиши `Ctrl+Shift+X` (в Windows или Linux) или `Command+Shift+X` (в macOS).\
+    ![значок диспетчера расширений](media/extensions/extension-manager-icon.png)
 
-   ![Диспетчер расширений](media/extensions/extension-manager.png)
+2. Выберите доступное расширение и просмотрите сведения о нем.
+    ![сведения о расширении](media/extensions/extension-details.png)
 
 3. Выберите нужное расширение и **установите** его.
-4. Выберите **Перезагрузить**, чтобы включить расширение (требуется только при первой установке расширения).
-5. Перейдите на панель мониторинга управления, щелкнув сервер или базу данных правой кнопкой мыши и выбрав пункт **Управление**.
-6. Установленные расширения отображаются в виде вкладок на панели мониторинга управления:
 
-   ![Диспетчер расширений](media/extensions/dashboard-extensions.png)
+4. После установки выберите **Перезагрузить**, чтобы включить расширение в Azure Data Studio (требуется только при первой установке расширения).
 
 
+## <a name="access-installed-azure-data-studio-extensions"></a>Доступ к установленным расширениям Azure Data Studio
 
-
+Каждое расширение предоставляет особые дополнительные возможности в Azure Data Studio. Поэтому точки входа в расширения могут быть разными. Сведения о том, как получить доступ к возможностям установленного расширения, см. в документации по нему.

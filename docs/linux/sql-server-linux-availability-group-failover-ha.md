@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: a13f9f3da00889323f3d971ffd801f1fa7d09890
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: e887c718c76563a7fcd8388c46a3e9e684faf6d5
+ms.sourcegitcommit: 0c6c1555543daff23da9c395865dafd5bb996948
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68027220"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70304843"
 ---
 # <a name="always-on-availability-group-failover-on-linux"></a>Отработка отказа для группы доступности Always On на Linux
 
@@ -43,7 +43,7 @@ ms.locfileid: "68027220"
 
    Во-вторых, [удалите ограничение расположения](#removeLocConstraint).
 
-#### <a name="a-namemanualmovestep-1-manually-fail-over-by-moving-availability-group-resource"></a><a name="manualMove">Шаг 1. Выполнение отработки отказа вручную с перемещением ресурса группы доступности
+#### <a name="manualMove"></a> Шаг 1. Выполнение отработки отказа вручную с перемещением ресурса группы доступности
 
 Чтобы вручную выполнить отработку отказа для ресурса группы доступности с именем *ag_cluster* на узел кластера *nodeName2*, выполните соответствующую вашему дистрибутиву команду:
 
@@ -62,7 +62,7 @@ ms.locfileid: "68027220"
 >[!IMPORTANT]
 >После выполнения отработки отказа ресурса вручную вам необходимо удалить ограничение расположения, которое добавляется автоматически.
 
-#### <a name="a-nameremovelocconstraint-step-2-remove-the-location-constraint"></a><a name="removeLocConstraint"> Шаг 2. Удаление ограничения расположения
+#### <a name="removeLocConstraint"> </a> Шаг 2. Удаление ограничения расположения
 
 При отработке отказа вручную с помощью команды `pcs` `move` или `crm` `migrate` добавляется ограничение расположения для размещения ресурса на новом целевом узле. Чтобы увидеть новое ограничение, после перемещения ресурса вручную выполните следующую команду:
 

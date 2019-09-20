@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: f039d0de-ade7-4aaf-8b7b-d207deb3371a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: bcec50b2ddda2b8ddaef8135aee52cf54c1ae07b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1d3caeed2e7c57dfd4a3e993872034b066f56737
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68066032"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874521"
 ---
 # <a name="alter-availability-group-transact-sql"></a>ALTER AVAILABILITY GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -209,7 +209,7 @@ ALTER AVAILABILITY GROUP group_name
  Значения FAILURE_CONDITION_LEVEL и HEALTH_CHECK_TIMEOUT определяют *гибкую политику отработки отказа* для заданной группы. Данная гибкая политика отработки отказа предоставляет гранулярное управление условиями, которые могут вызвать автоматический переход на другой ресурс. Дополнительные сведения см. в разделе [Гибкая политика отработки отказа для автоматического перехода на другой ресурс группы доступности (SQL Server)](../../database-engine/availability-groups/windows/flexible-automatic-failover-policy-availability-group.md).  
   
  HEALTH_CHECK_TIMEOUT **=** *milliseconds*  
- Указывает время ожидания (в миллисекундах) возвращения сведений о состоянии сервера системной хранимой процедурой [sp_server_diagnostics](../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) перед тем, как кластер WSFC признает, что экземпляр сервера завис или его работа замедлена. Параметр HEALTH_CHECK_TIMEOUT задается на уровне группы, но применяется только в репликах доступности, настроенных для работы в режиме доступности синхронной фиксации с автоматическим переходом на другой ресурс (AVAILABILITY_MODE **=** SYNCHRONOUS_COMMIT).  Более того, время ожидания для проверки состояния системы может запустить автоматический переход на другой ресурс только в том случае, если первичная и вторичная реплики настроены на режим автоматического перехода на другой ресурс (FAILOVER_MODE **=** AUTOMATIC), при этом вторичная реплика должна быть в данный момент синхронизирована с первичной.  
+ Указывает время ожидания (в миллисекундах) возвращения сведений о состоянии сервера системной хранимой процедурой [sp_server_diagnostics](../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) перед тем, как кластер WSFC признает, что экземпляр сервера не отвечает на запросы или его работа замедлена. Параметр HEALTH_CHECK_TIMEOUT задается на уровне группы, но применяется только в репликах доступности, настроенных для работы в режиме доступности синхронной фиксации с автоматическим переходом на другой ресурс (AVAILABILITY_MODE **=** SYNCHRONOUS_COMMIT).  Более того, время ожидания для проверки состояния системы может запустить автоматический переход на другой ресурс только в том случае, если первичная и вторичная реплики настроены на режим автоматического перехода на другой ресурс (FAILOVER_MODE **=** AUTOMATIC), при этом вторичная реплика должна быть в данный момент синхронизирована с первичной.  
   
  Значение параметра HEALTH_CHECK_TIMEOUT по умолчанию — 30 000 миллисекунд (30 секунд). Минимальное значение — 15 000 миллисекунд (15 секунд), а максимальное значение — 4 294 967 295 миллисекунд.  
   

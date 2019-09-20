@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: pmasl
 ms.author: pelopes
 manager: rothj
-ms.openlocfilehash: 577de413c318f1f1e442ad86009a0237671e9104
-ms.sourcegitcommit: ef7834ed0f38c1712f45737018a0bfe892e894ee
+ms.openlocfilehash: 166b55c70cc9b7d1337128b12b78a8ec1f4a1032
+ms.sourcegitcommit: 77293fb1f303ccfd236db9c9041d2fb2f64bce42
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68301360"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929651"
 ---
 # <a name="microsoft-sql-server-distributed-queries-ole-db-connectivity"></a>Распределенные запросы Microsoft SQL Server: подключение OLE DB
 
@@ -479,7 +479,7 @@ SQL Server использует выполнение параметризиро�
 
 1. SQL Server создает объект `Command` на основе объекта `Session` с помощью `IDBCreateCommand::CreateCommand`.
 
-9. Если параметр конфигурации сервера `Remote Query Timeout` имеет значение >` 0, SQL Server sets the DBPROP_COMMANDTIMEOUT property on the `Command` object to the same value by using `ICommandProperties::SetProperties`; `ICommand::SetCommandText`, должен быть вызван Transact-SQL для созданной строки в качестве текста команды.
+9. Если параметр конфигурации сервера `Remote Query Timeout` имеет значение больше нуля, SQL Server присваивает свойству `DBPROP_COMMANDTIMEOUT` объекта `Command` то же значение с помощью `ICommandProperties::SetProperties`. Необходимо вызвать `ICommand::SetCommandText` для задания созданной строки Transact-SQL в качестве текста команды.
 
 10. SQL Server вызывает `ICommandPrepare::Prepare` для подготовки команды. Если поставщик не поддерживает этот интерфейс, SQL Server переходит к шагу 4.
 
@@ -744,7 +744,7 @@ comparison-operator ::= `< \| >` \| `<= \| >`= \| = \| `<>`
 
 `ORDER BY clause`
 
-order-by-clause ::= ORDER BY sort-specification \[, sort-specification\]\...
+order-by-clause ::= ORDER BY sort-specification \[, sort-specification\]\..
 
 sort-specification ::= { \| column-name } \[ASC \| DESC\]
 
@@ -786,7 +786,7 @@ base-table-identifier ::= user-defined-name
 
 column-identifier ::= user-defined-name
 
-user-defined-name ::= letter\[digit \| letter \| _\]\...
+user-defined-name ::= letter\[digit \| letter \| _\]\..
 
 unsigned-integer ::= {digit}...
 

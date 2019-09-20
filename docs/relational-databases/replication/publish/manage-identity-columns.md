@@ -17,12 +17,12 @@ ms.assetid: 98892836-cf63-494a-bd5d-6577d9810ddf
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 635cdf4b698659ca85c343331425500c88c74759
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: b7418f2f38bd853d462727c2fac65d08e0bd1e8d
+ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769851"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70846670"
 ---
 # <a name="manage-identity-columns"></a>Управление столбцами идентификаторов
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "68769851"
   
 -   При выборе других типов публикаций должен быть установлен ручной режим управления диапазонами идентификаторов.  
   
- Диапазоны идентификаторов и пороговые значения можно изменить на вкладке **Свойства** диалогового окна **Свойства статьи —\<статья>** , которая доступна в диалоговом окне **Свойства публикации — \<публикация>** . Дополнительные сведения о доступе к этому диалоговому окну см. в разделе [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
+ Диапазоны идентификаторов и пороговые значения можно изменить на вкладке **Свойства** диалогового окна **Свойства статьи —\<статья>**, которая доступна в диалоговом окне **Свойства публикации — \<публикация>**. Дополнительные сведения о доступе к этому диалоговому окну см. в разделе [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
   
 #### <a name="to-specify-an-identity-column-management-option"></a>Указание параметра управления столбцом идентификаторов  
   
@@ -65,7 +65,7 @@ ms.locfileid: "68769851"
   
 3.  Щелкните **Свойства статьи**, затем щелкните **Указать свойства выделенной статьи таблицы**.  
   
-4.  На вкладке **Свойства** диалогового окна **Свойства статьи — \<статья>** , в разделе **Управление диапазоном идентификаторов** установите для свойства **Автоматически управлять диапазонами идентификаторов** значение **Автоматически** или **Вручную** (для издателей, использующих [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] или более позднюю версию) либо **True** или **False** (для издателей, использующих версию [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], предшествующую [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]).  
+4.  На вкладке **Свойства** диалогового окна **Свойства статьи — \<статья>**, в разделе **Управление диапазоном идентификаторов** установите для свойства **Автоматически управлять диапазонами идентификаторов** значение **Автоматически** или **Вручную** (для издателей, использующих [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] или более позднюю версию) либо **True** или **False** (для издателей, использующих версию [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], предшествующую [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]).  
   
 5.  Если на шаге 4 выбрано **Автоматически** или **True** , введите значения для параметров в следующей таблице. Дополнительные сведения об использовании данных настроек см. в разделе "Назначение диапазонов идентификаторов" статьи [Replicate Identity Columns](../../../relational-databases/replication/publish/replicate-identity-columns.md) (Репликация столбцов идентификаторов).  
   
@@ -90,34 +90,34 @@ ms.locfileid: "68769851"
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-5.  Щелкните **ОК**, чтобы вернуться в диалоговое окно **Свойства публикации — \<публикация>** .  
+5.  Щелкните **ОК**, чтобы вернуться в диалоговое окно **Свойства публикации — \<публикация>**.  
   
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
  Чтобы указать параметры управления диапазонами идентификаторов, при создании статьи можно использовать хранимые процедуры репликации.  
   
 #### <a name="to-enable-automatic-identity-range-management-when-defining-articles-for-a-transactional-publication"></a>Включение автоматического управления диапазонами идентификаторов при определении статей для публикации транзакций  
   
-1.  Выполните процедуру [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)на издателе в базе данных публикации. Если в публикуемой исходной таблице имеется столбец идентификаторов, укажите значение **auto** в параметре **@identityrangemanagementoption** , диапазон значений идентификаторов, назначенный издателю, в параметре **@pub_identity_range** , диапазон значений идентификаторов, назначенный каждому подписчику, в параметре **@identity_range** и процент использованных значений идентификаторов, прежде чем назначить новый диапазон значений идентификаторов параметру **@threshold** . Дополнительные сведения об определении статей см. в [этой статье](../../../relational-databases/replication/publish/define-an-article.md).  
+1.  Выполните процедуру [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)на издателе в базе данных публикации. Если в публикуемой исходной таблице имеется столбец идентификаторов, укажите значение **auto** в параметре **\@identityrangemanagementoption**, диапазон значений идентификаторов, назначенный издателю, в параметре **\@pub_identity_range**, диапазон значений идентификаторов, назначенный каждому подписчику, в параметре **\@identity_range** и процент использованных значений идентификаторов, по достижении которого назначается новый диапазон идентификаторов, в параметре **\@threshold**. Дополнительные сведения об определении статей см. в [этой статье](../../../relational-databases/replication/publish/define-an-article.md).  
   
     > [!NOTE]  
     >  Убедитесь, что тип данных столбца идентификаторов достаточно большой, чтобы поддерживать полный диапазон идентификаторов, назначаемый всем подписчикам.  
   
 #### <a name="to-disable-automatic-identity-range-management-when-defining-articles-for-a-transactional-publication"></a>Отключение автоматического управления диапазонами идентификаторов при определении статей для публикации транзакций  
   
-1.  Выполните процедуру [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)на издателе в базе данных публикации. Укажите значение **manual** в параметре **@identityrangemanagementoption** . Дополнительные сведения об определении статей см. в [этой статье](../../../relational-databases/replication/publish/define-an-article.md).  
+1.  Выполните процедуру [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)на издателе в базе данных публикации. Укажите значение **manual** в параметре **\@identityrangemanagementoption**. Дополнительные сведения об определении статей см. в [этой статье](../../../relational-databases/replication/publish/define-an-article.md).  
   
 2.  Назначьте диапазоны для столбцов идентификаторов в статье на подписчике, чтобы избежать возникновения конфликтов при обновлении подписчиков. Дополнительные сведения см. в разделе Assigning ranges for manual identity range management (Назначение диапазонов для управления диапазонами идентификаторов вручную) статьи [Replicate Identity Columns](../../../relational-databases/replication/publish/replicate-identity-columns.md) (Репликация столбцов идентификаторов).  
   
 #### <a name="to-enable-automatic-identity-range-management-when-defining-articles-for-a-merge-publication"></a>Включение автоматического управления диапазонами идентификаторов при определении статей для публикации слиянием  
   
-1.  В базе данных публикации на издателе выполните процедуру [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md). Если в публикуемой исходной таблице имеется столбец идентификаторов, укажите значение **auto** в параметре **@identityrangemanagementoption** ; диапазон значений идентификаторов, назначенный серверной подписке, в параметре **@pub_identity_range** ; диапазон значений идентификаторов, назначенный издателю и каждой клиентской подписке, в параметре **@identity_range** и процент использованных значений идентификаторов, прежде чем назначить новый диапазон значений идентификаторов параметру **@threshold** . Дополнительные сведения о времени назначения диапазонов идентификаторов см. в разделе Assigning Identity Ranges (Назначение диапазонов идентификаторов) статьи [Replicate Identity Columns](../../../relational-databases/replication/publish/replicate-identity-columns.md) (Репликация столбцов идентификаторов). Дополнительные сведения об определении статей см. в [этой статье](../../../relational-databases/replication/publish/define-an-article.md).  
+1.  В базе данных публикации на издателе выполните процедуру [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md). Если в публикуемой исходной таблице имеется столбец идентификаторов, укажите значение **auto** в параметре **\@identityrangemanagementoption**, диапазон значений идентификаторов, назначенный серверной подписке, в параметре **\@pub_identity_range**, диапазон значений идентификаторов, назначенный издателю и каждой клиентской подписке, в параметре **\@identity_range**, и процент значений идентификаторов, который должен быть использован перед назначением нового диапазона идентификаторов, в параметре **\@threshold**. Дополнительные сведения о времени назначения диапазонов идентификаторов см. в разделе Assigning Identity Ranges (Назначение диапазонов идентификаторов) статьи [Replicate Identity Columns](../../../relational-databases/replication/publish/replicate-identity-columns.md) (Репликация столбцов идентификаторов). Дополнительные сведения об определении статей см. в [этой статье](../../../relational-databases/replication/publish/define-an-article.md).  
   
     > [!NOTE]  
     >  Убедитесь, что тип данных столбца идентификаторов достаточно большой, чтобы поддерживать полный диапазон идентификаторов, назначаемый всем подписчикам, особенно для подписчиков с серверными подписками.  
   
 #### <a name="to-disable-automatic-identity-range-management-when-defining-articles-for-a-merge-publication"></a>Отключение автоматического управления диапазонами идентификаторов при определении статей для публикации слиянием  
   
-1.  В базе данных публикации на издателе выполните процедуру [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md). Укажите одно из следующих значений в параметре **@identityrangemanagementoption** :  
+1.  В базе данных публикации на издателе выполните процедуру [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md). Укажите одно из следующих значений в параметре **\@identityrangemanagementoption**:  
   
     -   **manual** — диапазоны идентификаторов должны назначаться вручную для обновляемых подписчиков;  
   
@@ -133,9 +133,9 @@ ms.locfileid: "68769851"
   
 2.  Если значение **identityrangemanagementoption** в результирующем наборе равно **1**, измените настройки следующим образом.  
   
-    -   Чтобы изменить назначенные диапазоны идентификаторов, выполните на издателе в базе данных публикации хранимую процедуру [sp_changearticle](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md) . Укажите значение **identity_range** или **pub_identity_range** в параметре **@property** и задайте новое значение диапазона в параметре **@value** .  
+    -   Чтобы изменить назначенные диапазоны идентификаторов, выполните на издателе в базе данных публикации хранимую процедуру [sp_changearticle](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md) . Укажите значение **identity_range** или **pub_identity_range** в параметре **\@property** и задайте новое значение диапазона в параметре **\@value**.  
   
-    -   Чтобы изменить пороговое значение, с которого назначаются диапазоны идентификаторов, выполните на издателе в базе данных публикации хранимую процедуру [sp_changearticle](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md) . Укажите значение **threshold** в параметре **@property** и задайте новое значение порога в параметре **@value** .  
+    -   Чтобы изменить пороговое значение, с которого назначаются диапазоны идентификаторов, выполните на издателе в базе данных публикации хранимую процедуру [sp_changearticle](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md) . Укажите значение **threshold** в параметре **\@property** и задайте новое пороговое значение в параметре **\@value**.  
   
 #### <a name="to-change-automatic-identity-range-management-settings-for-an-existing-article-in-a-merge-publication"></a>Изменение настроек автоматического управления диапазонами идентификаторов для существующей статьи в публикации слиянием  
   
@@ -143,11 +143,11 @@ ms.locfileid: "68769851"
   
 2.  Если значение **identity_support** в результирующем наборе равно **1**, измените настройки следующим образом.  
   
-    -   Чтобы изменить назначенный диапазон идентификаторов, выполните на издателе в базе данных публикации хранимую процедуру [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) . Укажите значение **identity_range** или **pub_identity_range** в параметре **@property** и задайте новое значение диапазона в параметре **@value** .  
+    -   Чтобы изменить назначенный диапазон идентификаторов, выполните на издателе в базе данных публикации хранимую процедуру [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) . Укажите значение **identity_range** или **pub_identity_range** в параметре **\@property** и задайте новое значение диапазона в параметре **\@value**.  
   
-    -   Чтобы изменить пороговое значение, с которого назначаются диапазоны идентификаторов, выполните на издателе в базе данных публикации хранимую процедуру [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) . Укажите значение **threshold** в параметре **@property** и задайте новое значение порога в параметре **@value** . Дополнительные сведения о времени назначения диапазонов идентификаторов см. в разделе Assigning Identity Ranges (Назначение диапазонов идентификаторов) статьи [Replicate Identity Columns](../../../relational-databases/replication/publish/replicate-identity-columns.md) (Репликация столбцов идентификаторов).  
+    -   Чтобы изменить пороговое значение, с которого назначаются диапазоны идентификаторов, выполните на издателе в базе данных публикации хранимую процедуру [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) . Укажите значение **threshold** в параметре **\@property** и задайте новое пороговое значение в параметре **\@value**. Дополнительные сведения о времени назначения диапазонов идентификаторов см. в разделе Assigning Identity Ranges (Назначение диапазонов идентификаторов) статьи [Replicate Identity Columns](../../../relational-databases/replication/publish/replicate-identity-columns.md) (Репликация столбцов идентификаторов).  
   
-    -   Чтобы отключить автоматическое управление диапазонами идентификаторов, выполните на издателе в базе данных публикации хранимую процедуру [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) . Укажите значение **identityrangemanagementoption** в параметре **@property** и значение **manual** или **none** в параметре **@value** .  
+    -   Чтобы отключить автоматическое управление диапазонами идентификаторов, выполните на издателе в базе данных публикации хранимую процедуру [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) . Укажите значение **identityrangemanagementoption** в параметре **\@property** и значение **manual** или **none** в параметре **\@value**.  
   
 ## <a name="see-also"></a>См. также:  
  [Peer-to-Peer Transactional Replication](../../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)  (Одноранговая репликация транзакций)  

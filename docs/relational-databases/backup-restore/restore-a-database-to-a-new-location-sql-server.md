@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4da76d61-5e11-4bee-84f5-b305240d9f42
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: bef38ae0b93eb43d508192c6f748a36320143689
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 42cd70465f890e1da1f40076da5e41f0b4b40884
+ms.sourcegitcommit: 26715b4dbef95d99abf2ab7198a00e6e2c550243
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67937537"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70278915"
 ---
 # <a name="restore-a-database-to-a-new-location-sql-server"></a>Восстановление базы данных в новое место (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -107,64 +107,64 @@ ms.locfileid: "67937537"
   
 2.  Используйте инструкцию [RESTORE DATABASE](../../t-sql/statements/restore-statements-transact-sql.md) для восстановления полной резервной копии базы данных. По умолчанию файлы данных и журналов восстанавливаются в исходных местоположениях. При перемещении базы данных используйте параметр MOVE, чтобы переместить каждый файл базы данных и избежать конфликтов с существующими файлами.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-     The basic [!INCLUDE[tsql](../../includes/tsql-md.md)] syntax for restoring the database to a new location and a new name is:  
+  Базовый синтаксис [!INCLUDE[tsql](../../includes/tsql-md.md)] для восстановления базы данных в новом месте и с новым именем:  
   
-     RESTORE DATABASE *new_database_name*  
+  RESTORE DATABASE *новое_имя_базы_данных*  
   
-     FROM *backup_device* [ ,...*n* ]  
+  FROM *устройство_резервного_копирования* [ ,...*n* ]  
   
-     [ WITH  
+  [ WITH  
   
-     {  
+  {  
   
-     [ **RECOVERY** | NORECOVERY ]  
+  [ **RECOVERY** | NORECOVERY ]  
   
-     [ , ] [ FILE ={ *backup_set_file_number* | @*backup_set_file_number* } ]  
+  [ , ] [ FILE ={ *номер_файла_резервного_набора* | @*номер_файла_резервного_набора* } ]  
   
-     [ , ] MOVE '*logical_file_name_in_backup*' TO '*operating_system_file_name*' [ ,...*n* ]  
+  [ , ] MOVE '*логическое_имя_файла_в_резервной_копии*' TO '*имя_файла_в_операционной_системе*' [ ,...*n* ]  
   
-     }  
+  }  
   
-     ;  
+  ;  
   
-    > **NOTE!** When preparing to relocate a database on a different disk, you should verify that sufficient space is available and identify any potential collisions with existing files. This involves using a [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md) statement that specifies the same MOVE parameters that you plan to use in your RESTORE DATABASE statement.  
+  > [!NOTE] 
+  > При подготовке к перемещению базы данных на другой диск необходимо проверить наличие достаточного места и определить потенциальные конфликты с существующими файлами. Это включает использование инструкции [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md) , указывающей те же параметры MOVE, которые планируется использовать в инструкции RESTORE DATABASE.  
   
-     The following table describes arguments of this RESTORE statement in terms of restoring a database to a new location. For more information about these arguments, see [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md).  
+  В следующей таблице аргументы инструкции RESTORE описаны применительно к восстановлению базы данных в новом месте. Дополнительные сведения об этих аргументах см. в разделе [RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md).  
   
-     *new_database_name*  
-     The new name for the database.  
+  *новое_имя_базы_данных*  
+  Новое имя базы данных.  
   
-    >**NOTE:** If you are restoring the database to a different server instance, you can use the original database name instead of a new name.  
+  > [!NOTE]
+  > При восстановлении базы данных на другом экземпляре сервера можно указать исходное имя базы данных вместо нового.  
   
-     *backup_device* [ **,**...*n* ]  
-     Specifies a comma-separated list of from 1 to 64 backup devices from which the database backup is to be restored. You can specify a physical backup device, or you can specify a corresponding logical backup device, if defined. To specify a physical backup device, use the DISK or TAPE option:  
+  *устройство_резервного_копирования* [ **,** ...*n* ]  
+  Указывает список с разделителями-запятыми от 1 до 64 устройств резервного копирования, используемых для восстановления базы данных из резервной копии. Можно указать как физическое устройство резервного копирования, так и соответствующее логическое устройство, если оно определено. Для указания физического устройства резервного копирования используйте параметр DISK или TAPE.  
   
-     { DISK | TAPE } **=**_physical_backup_device_name_  
+  { DISK | TAPE } **=** _имя_физического_устройства_резервного_копирования_  
   
-     For more information, see [Backup Devices &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).  
+  Дополнительные сведения см. в разделе [Устройства резервного копирования (SQL Server)](../../relational-databases/backup-restore/backup-devices-sql-server.md).  
   
-     { **RECOVERY** | NORECOVERY }  
-     If the database uses the full recovery model, you might need to apply transaction log backups after you restore the database. In this case, specify the NORECOVERY option.  
+  { **RECOVERY** | NORECOVERY }  
+  Если в базе данных используется модель полного восстановления, может возникнуть необходимость применить резервные копии журналов транзакций после восстановления базы данных. В этом случае укажите параметр NORECOVERY.  
   
-     Otherwise, use the RECOVERY option, which is the default.  
+  В противном случае используйте параметр RECOVERY, который применяется по умолчанию.  
   
-     FILE = { *backup_set_file_number* | @*backup_set_file_number* }  
-     Identifies the backup set to be restored. For example, a *backup_set_file_number* of **1** indicates the first backup set on the backup medium and a *backup_set_file_number* of **2** indicates the second backup set. You can obtain the *backup_set_file_number* of a backup set by using the [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md) statement.  
+  FILE ={ *номер_файла_резервного_набора* | @*номер_файла_резервного_набора* }  
+  Идентифицирует резервный набор данных для восстановления. Например, аргумент *номер_файла_резервного_набора* , равный **1** , указывает первый резервный набор данных на носителе данных резервных копий, а аргумент *номер_файла_резервного_набора* , равный **2** , указывает второй резервный набор данных. Значение *номер_файла_резервного_набора* резервного набора данных можно получить с помощью инструкции [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md) .  
   
-     When this option is not specified, the default is to use the first backup set on the backup device.  
+  Если этот параметр не указан, по умолчанию используется первый резервный набор на устройстве резервного копирования.  
   
-     For more information, see "Specifying a Backup Set," in [RESTORE Arguments &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
+  Дополнительные сведения см. в подразделе "Указание резервного набора данных" раздела [Аргументы инструкции RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
   
-     MOVE **'**_logical_file_name_in_backup_**'** TO **'**_operating_system_file_name_**'** [ **,**...*n* ]  
-     Specifies that the data or log file specified by *logical_file_name_in_backup* is to be restored to the location specified by *operating_system_file_name*. Specify a MOVE statement for every logical file you want to restore from the backup set to a new location.  
+  MOVE **'** _логическое_имя_файла_в_резервной_копии_ **'** TO **'** _имя_файла_в_операционной_системе_ **'** [ **,** ...*n* ]  
+  Показывает, что файл данных или журнала, указанный параметром *логическое_имя_файла_в_резервной_копии* , следует восстановить из копии в месте, указанном параметром *имя_файла_в_операционной_системе*. Укажите инструкцию MOVE для каждого логического файла, который надо восстановить из резервного набора данных в новом месте.  
   
-    |Параметр|Описание|  
-    |------------|-----------------|  
-    |*логическое_имя_файла_в_резервной_копии*|Указывает логическое имя файла данных или журнала в резервном наборе данных. Логическое имя файла данных или журнала в резервном наборе данных соответствует его логическому имени в базе данных на момент создания резервного набора данных.<br /><br /> <br /><br /> Примечание. Для получения списка логических файлов из набора резервных данных следует использовать инструкцию [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md).|  
-    |*имя_файла_в_операционной_системе*|Задает новое место для файла, указанного параметром *логическое_имя_файла_в_резервной_копии*. Файл будет восстановлен в этом месте.<br /><br /> Параметр *имя_файла_в_операционной_системе* может также указать новое имя для восстановленного файла. Это необходимо, если создается копия существующей базы данных на том же экземпляре сервера.|  
-    |*n*|Заполнитель, который показывает, что можно указать дополнительные инструкции MOVE.|  
+  |Параметр|Описание|  
+  |------------|-----------------|  
+  |*логическое_имя_файла_в_резервной_копии*|Указывает логическое имя файла данных или журнала в резервном наборе данных. Логическое имя файла данных или журнала в резервном наборе данных соответствует его логическому имени в базе данных на момент создания резервного набора данных.<br /><br /> <br /><br /> Примечание. Для получения списка логических файлов из набора резервных данных следует использовать инструкцию [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md).|  
+  |*имя_файла_в_операционной_системе*|Задает новое место для файла, указанного параметром *логическое_имя_файла_в_резервной_копии*. Файл будет восстановлен в этом месте.<br /><br /> Параметр *имя_файла_в_операционной_системе* может также указать новое имя для восстановленного файла. Это необходимо, если создается копия существующей базы данных на том же экземпляре сервера.|  
+  |*n*|Заполнитель, который показывает, что можно указать дополнительные инструкции MOVE.|  
   
 ###  <a name="TsqlExample"></a> Примеры (Transact-SQL)  
  В приведенном ниже примере создается база данных `MyAdvWorks` посредством восстановления резервной копии образца базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] , в которой содержатся два файла: [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]_Data и [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]_Log. В этой базе данных используется простая модель восстановления. База данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] уже существует на экземпляре сервера, поэтому файлы в резервной копии должны быть восстановлены в новом месте. Количество и имена восстанавливаемых файлов базы данных можно определить с помощью инструкции RESTORE FILELISTONLY. Резервная копия базы данных является первым резервным набором данных на устройстве резервного копирования.  

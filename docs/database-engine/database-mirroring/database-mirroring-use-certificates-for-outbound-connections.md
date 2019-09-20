@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 464c9096-10d6-4c5e-8bb1-19acba27ad9e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a5e737f230ce7462aa59c0bfbcbfe19be55b66a5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b989d4958da67a0959c0d3686a1d207c4353e302
+ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68044572"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70846662"
 ---
 # <a name="database-mirroring---use-certificates-for-outbound-connections"></a>Использование сертификатов для исходящих соединений при зеркальном отображении базы данных
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "68044572"
   
 ## <a name="procedure"></a>Процедура  
   
-#### <a name="to-configure-server-instances-for-outbound-mirroring-connections-on-hosta"></a>Настройка экземпляров сервера на исходящие соединения зеркального отображения (на HOST_A)  
+#### <a name="to-configure-server-instances-for-outbound-mirroring-connections-on-host_a"></a>Настройка экземпляров сервера на исходящие соединения зеркального отображения (на HOST_A)  
   
 1.  В базе данных **master** создайте главный ключ базы данных, если он еще не создан. Для просмотра существующих ключей базы данных предназначено представление каталога [sys.symmetric_keys](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md) .  
   
@@ -64,7 +64,7 @@ ms.locfileid: "68044572"
      Например, чтобы создать сертификат для системы HOST_A.  
   
     > [!IMPORTANT]  
-    >  Если планируется использование сертификата в течение срока, превышающего один год, укажите дату истечения срока действия в формате UTC с помощью параметра EXPIRY_DATE инструкции CREATE CERTIFICATE. Кроме того, рекомендуется использовать среду SQL Server Management Studio для создания правила управления на основе политик, чтобы получать предупреждения при завершении срока действия сертификатов. В диалоговом окне **Создание нового условия** создайте это правило в поле **@ExpirationDate** аспекта **Certificate** . Дополнительные сведения см. в разделах [Администрирование серверов с помощью управления на основе политик](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md) и [Обеспечение безопасности SQL Server](../../relational-databases/security/securing-sql-server.md).  
+    >  Если планируется использование сертификата в течение срока, превышающего один год, укажите дату истечения срока действия в формате UTC с помощью параметра EXPIRY_DATE инструкции CREATE CERTIFICATE. Кроме того, рекомендуется использовать среду SQL Server Management Studio для создания правила управления на основе политик, чтобы получать предупреждения при завершении срока действия сертификатов. В диалоговом окне **Создание нового условия** создайте это правило в поле **\@ExpirationDate** аспекта **Certificate**. Дополнительные сведения см. в разделах [Администрирование серверов с помощью управления на основе политик](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md) и [Обеспечение безопасности SQL Server](../../relational-databases/security/securing-sql-server.md).  
   
     ```  
     USE master;  

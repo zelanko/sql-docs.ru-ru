@@ -1,7 +1,7 @@
 ---
 title: Расширенное управление ключами SQL Server TDE с помощью Azure Key Vault (SQL Server) | Документы Майкрософт
 ms.custom: ''
-ms.date: 08/24/2018
+ms.date: 09/12/2019
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: c1f29c27-5168-48cb-b649-7029e4816906
 author: aliceku
 ms.author: aliceku
-ms.openlocfilehash: 3d9b28b1723b5c984446be09336b24ff5e2d2bb0
-ms.sourcegitcommit: 2efb0fa21ff8093384c1df21f0e8910db15ef931
+ms.openlocfilehash: 5d767f8257395368cf3ceeba45b9b9d7cadcfa80
+ms.sourcegitcommit: 77293fb1f303ccfd236db9c9041d2fb2f64bce42
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/18/2019
-ms.locfileid: "68316649"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929713"
 ---
 # <a name="sql-server-tde-extensible-key-management-using-azure-key-vault---setup-steps"></a>Расширенное управление ключами SQL Server TDE с помощью Azure Key Vault (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -342,7 +342,7 @@ ms.locfileid: "68316649"
   
 5.  **Открытие хранилища ключей Azure [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]**  
   
-     Если вы импортировали асимметричный ключ, как описано в части II, откройте этот ключ, указав его имя в следующем скрипте [!INCLUDE[tsql](../../../includes/tsql-md.md)] .  
+     Независимо от того, создали ли вы новый ключ или импортировали асимметричный ключ, как описано в части II, необходимо открыть его. Для этого укажите имя ключа в приведенном ниже скрипте [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
     -   Замените `CONTOSO_KEY` на имя, которое вы хотите использовать для ключа в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   

@@ -10,12 +10,12 @@ ms.assetid: 0b57f375-9242-4bb2-9d4b-c560d5a93524
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 8c2950e677537ee6a6bc35d930e124f285bc24df
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.openlocfilehash: 87537979ab3459727f07aec460118a74e15561f9
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69494312"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874822"
 ---
 # <a name="whats-new-in-sql-server-2017"></a>Новые возможности в SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ SQL Server 2017 — это важный шаг к созданию униве�
 ## <a name="sql-server-2017-database-engine"></a>Ядро СУБД SQL Server 2017
 
 SQL Server 2017 включает множество новых функций, усовершенствований и улучшений работы для ядра СУБД. 
-- **Сборки CLR** теперь можно добавлять в список разрешенных в качестве обходного пути для функции `clr strict security`, описанной в CTP 2.0. Для поддержки списка разрешенных доверенных сборок (RC1) добавлены функции [sp_add_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-add-trusted-assembly-transact-sql.md), [sp_drop_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-drop-trusted-assembly-transact-sql.md) и [sys.trusted_assemblies](../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md).  
+- **Сборки CLR** теперь можно добавлять в список доверенных в качестве обходного пути для функции `clr strict security`, описанной в CTP 2.0. Для поддержки списка доверенных сборок (RC1) добавлены функции [sp_add_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-add-trusted-assembly-transact-sql.md), [sp_drop_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-drop-trusted-assembly-transact-sql.md) и [sys.trusted_assemblies](../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md).  
 - **Возобновляемая перестройка индексов в подключенном режиме**: позволяет возобновить эту операцию с момента остановки после сбоя (например, при отработке отказа в реплику или нехватке места на диске) либо приостановить и возобновить ее позже. В разделе [ALTER INDEX](../t-sql/statements/alter-index-transact-sql.md) и [руководящие принципы для операций с индексами в сети](../relational-databases/indexes/guidelines-for-online-index-operations.md). (CTP 2.0)
 - Параметр **IDENTITY_CACHE** для ALTER DATABASE SCOPED CONFIGURATION позволяет избежать пропусков в значениях столбцов удостоверений при непредвиденной перезагрузке или отработке отказа сервера на вторичный сервер. В разделе [ALTER DATABASE SCOPED CONFIGURATION](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md). (CTP 2.0)
 - Новое поколение функций обработки запросов, использующих стратегии оптимизации для адаптации к среде выполнения рабочих нагрузок ваших приложений. В первую версию семейства функций для **адаптивной обработки запросов** мы включили три улучшения: **адаптивные соединения в пакетном режиме**, **обратная связь по временно предоставляемому буферу памяти в пакетном режиме** и **выполнение с чередованием** для многооператорных функций с табличными значениями.  См. статью [Интеллектуальная обработка запросов в базах данных SQL](../relational-databases/performance/intelligent-query-processing.md).

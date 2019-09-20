@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
-ms.openlocfilehash: dd320079291199b512bb9d9e8334e7ec8c2803a7
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: b76797d6b6bc9b9d2c9f666039595446f975a3aa
+ms.sourcegitcommit: df1f71231f8edbdfe76e8851acf653c25449075e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68810979"
+ms.lasthandoff: 09/09/2019
+ms.locfileid: "70809787"
 ---
 # <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>Настройка общего кластера дисков Red Hat Enterprise Linux для SQL Server
 
@@ -108,7 +108,7 @@ ms.locfileid: "68810979"
 
 ## <a name="configure-shared-storage-and-move-database-files"></a>Настройка общего хранилища и перемещение файлов базы данных 
 
-Существует множество решений для предоставления общего хранилища. В этом пошаговом руководстве демонстрируется настройка общего хранилища с NFS. Мы рекомендуем следовать рекомендациям и использовать Kerberos для защиты NFS (пример можно найти здесь: https://www.certdepot.net/rhel7-use-kerberos-control-access-nfs-network-shares/) ). 
+Существует множество решений для предоставления общего хранилища. В этом пошаговом руководстве демонстрируется настройка общего хранилища с NFS. Мы рекомендуем следовать рекомендациям и использовать Kerberos для защиты NFS (пример можно найти здесь: https://www.certdepot.net/rhel7-use-kerberos-control-access-nfs-network-shares/)). 
 
 >[!Warning]
 >Если не защитить NFS, любой пользователь, который может получить доступ к вашей сети и подменить IP-адрес узла SQL, сможет получить и доступ к файлам данных. Как всегда, проведите моделирование угроз для вашей системы, прежде чем использовать ее в рабочей среде. Другой вариант хранения — использовать общую папку SMB.
@@ -308,6 +308,10 @@ ms.locfileid: "68810979"
    sudo yum install mssql-server-ha
    ```
 
+## <a name="configure-fencing-agent"></a>Настройка агента ограждения
+
+Устройство STONITH предоставляет агент ограждения. В статье [Настройка кластера Pacemaker в Red Hat Enterprise Linux в Azure](/azure/virtual-machines/workloads/sap/high-availability-guide-rhel-pacemaker/#1-create-the-stonith-devices) приводится пример создания устройства STONITH для этого кластера в Azure. Измените инструкции для своей среды.
+
 ## <a name="create-the-cluster"></a>Создайте кластер. 
 
 1. Создайте кластер в одном из узлов.
@@ -316,15 +320,6 @@ ms.locfileid: "68810979"
    sudo pcs cluster auth <nodeName1 nodeName2 ...> -u hacluster
    sudo pcs cluster setup --name <clusterName> <nodeName1 nodeName2 ...>
    sudo pcs cluster start --all
-   ```
-
-   > Надстройка HA для RHEL включает в себя агенты ограждения для VMWare и KVM. В других гипервизорах ограждение должно быть отключено. Отключать агенты ограждения в рабочих средах не рекомендуется. В настоящее время агенты ограждения для HyperV или облачных сред отсутствуют. Если вы используете одну из этих конфигураций, необходимо отключить ограждение. \**В рабочей системе делать это НЕ рекомендуется!* *
-
-   Приведенная ниже команда отключает агенты ограждения.
-
-   ```bash
-   sudo pcs property set stonith-enabled=false
-   sudo pcs property set start-failure-is-fatal=false
    ```
 
 2. Настройте кластерные ресурсы для SQL Server, файловой системы и виртуального IP-адреса, а затем отправьте конфигурацию в кластер. Потребуются следующие сведения:

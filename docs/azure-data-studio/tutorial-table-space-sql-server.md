@@ -9,13 +9,13 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
-ms.date: 09/24/2018
-ms.openlocfilehash: 6ec653eac10da8c28f727277fc130722c3badef7
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.date: 09/10/2019
+ms.openlocfilehash: 4b44fc9dbee773e7bc88daecf9142c1f826d65a0
+ms.sourcegitcommit: dacf6c57f6a2e3cf2005f3268116f3c609639905
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67958988"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70878655"
 ---
 # <a name="tutorial-enable-the-table-space-usage-sample-insight-widget-using-includename-sosincludesname-sos-shortmd"></a>Руководство. Запуск примера аналитического мини-приложения для отслеживания использования табличного пространства с помощью [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
@@ -30,20 +30,26 @@ ms.locfileid: "67958988"
 
 Для работы с этим руководством требуется SQL Server или база данных SQL Azure *TutorialDB*. Чтобы создать базу данных *TutorialDB*, выполните инструкции, приведенные в одном из следующих кратких руководств:
 
-- [Подключение и отправка запроса к SQL Server с помощью [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
-- [Подключение и отправка запроса к базе данных SQL Azure с помощью[!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-database.md)
-
+* [Подключение и отправка запроса к SQL Server с помощью [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
+* [Подключение и отправка запроса к базе данных SQL Azure с помощью[!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-database.md)
 
 ## <a name="turn-on-a-management-insight-on-includename-sosincludesname-sos-shortmds-database-dashboard"></a>Включение аналитики управления на панели мониторинга базы данных [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+
 [!INCLUDE[name-sos](../includes/name-sos-short.md)] содержит встроенный пример мини-приложения для отслеживания пространства, используемого таблицами в базе данных.
 
 1. Откройте *параметры пользователя* — нажмите сочетание клавиш **CTRL+SHIFT+P**, после чего появится *палитра команд*.
+
 2. Введите *settings* (параметры) в поле поиска и затем выберите вариант **Настройки: открыть пользовательские параметры**.
-2. Введите *dashboard* (панель мониторинга) в поле поиска параметров и найдите **dashboard.database.widgets**.
 
-3. Чтобы настроить параметры **dashboard.database.widgets**, необходимо изменить запись **dashboard.database.widgets** в разделе **Параметры пользователя** (столбец в правой части). Если запись **dashboard.database.widgets** отсутствует в разделе **Параметры пользователя**, наведите указатель мыши на текст **dashboard.database.widgets** в столбце "Параметры по умолчанию", щелкните значок карандаша, расположенный слева от текста, и выберите **Копировать в параметры**. Если во всплывающем окне отображается команда **Заменить в параметрах**, не выбирайте ее. В столбце **Параметры пользователя** в правой части найдите раздел **dashboard.database.widgets**, а затем перейдите к следующему шагу.
+3. Введите *dashboard* (панель мониторинга) в поле поиска параметров и найдите **dashboard.database.widgets**.
 
-4. В разделе **dashboard.database.widgets** добавьте следующее:
+4. Чтобы настроить параметры **dashboard.database.widgets**, необходимо изменить запись **dashboard.database.widgets** в разделе **Параметры пользователя**.
+
+   ![Поиск параметров](media/tutorial-table-space-sql-server/search-settings.png)
+
+   Если запись **dashboard.database.widgets** отсутствует в разделе **Параметры пользователя**, наведите указатель мыши на текст **dashboard.database.widgets** в столбце "Параметры по умолчанию", щелкните значок *шестеренки*, расположенный слева от текста, и выберите пункт **Копировать как параметр JSON**. Если во всплывающем окне отображается команда **Заменить в параметрах**, не выбирайте ее. В столбце **Параметры пользователя** в правой части найдите раздел **dashboard.database.widgets**, а затем перейдите к следующему шагу.
+
+5. В разделе **dashboard.database.widgets** добавьте следующие строки:
 
    ```json
         {
@@ -57,31 +63,31 @@ ms.locfileid: "67958988"
             }
         },
     ```
-Раздел **dashboard.database.widgets** должен выглядеть следующим образом:
 
-   ![Поиск параметров](./media/tutorial-table-space-sql-server/insight-table-space.png)
+   Раздел **dashboard.database.widgets** должен выглядеть следующим образом:
 
-5. Нажмите сочетание клавиш **CTRL+S**, чтобы сохранить параметры.
+    ![Поиск параметров](./media/tutorial-table-space-sql-server/insight-table-space.png)
 
-6. Откройте панель мониторинга базы данных, щелкнув правой кнопкой мыши **TutorialDB** и выбрав пункт **Управление**.
+6. Нажмите сочетание клавиш **CTRL+S**, чтобы сохранить параметры.
 
-7. Обратите внимание на мини-приложение аналитики *табличного пространства*, как показано на следующем рисунке: 
+7. Откройте панель мониторинга базы данных, щелкнув правой кнопкой мыши **TutorialDB** и выбрав пункт **Управление**.
+
+8. Обратите внимание на мини-приложение аналитики *табличного пространства*, как показано на следующем рисунке:
 
    ![Мини-приложение](./media/tutorial-table-space-sql-server/insight-table-space-result.png)
-
 
 ## <a name="working-with-the-insight-chart"></a>Работа с аналитической диаграммой
 
 Аналитическая диаграмма [!INCLUDE[name-sos](../includes/name-sos-short.md)]содержит сведения, отображаемые при фильтрации и наведении указателя мыши. Выполните следующие действия.
 
 1. Щелкните и переключите условные обозначения *row_count* на диаграмме. [!INCLUDE[name-sos](../includes/name-sos-short.md)] отображает и скрывает ряды данных при включении или отключении условных обозначений.
-    
+
 2. Наведите указатель мыши на диаграмму. [!INCLUDE[name-sos](../includes/name-sos-short.md)] отображает дополнительные сведения о метке рядов данных и ее значении, как показано на следующем снимке экрана.
 
    ![Переключатель и условные обозначения на диаграмме](./media/tutorial-table-space-sql-server/insight-table-space-toggle.png)
 
-
 ## <a name="next-steps"></a>Следующие шаги
+
 В этом руководстве вы узнали, как выполнять следующие задачи:
 > [!div class="checklist"]
 > * Быстрый запуск аналитического мини-приложения с помощью встроенного примера мини-приложения

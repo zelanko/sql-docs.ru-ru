@@ -21,12 +21,12 @@ ms.assetid: ee53c5c8-e36c-40f9-8cd1-d933791b98fa
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1c1a4e90dfaa5f513e3d197619afd26e8ec0898d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0563510242e38e817c7fb01e4185241062feedf3
+ms.sourcegitcommit: 5a61854ddcd2c61bb6da30ccad68f0ad90da0c96
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68075225"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70978599"
 ---
 # <a name="expressions-transact-sql"></a>Выражения (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -128,7 +128,27 @@ GO
 ```  
   
  Выражение `1+2` дает результат `3` в каждой строке результирующего набора. Несмотря на то, что выражение `ProductID` формирует уникальное значение для каждой строки в результирующем наборе, в каждой строке содержится только одно значение для `ProductID`.  
-  
+ 
+- Хранилище данных SQL Azure выделяет фиксированный максимальный объем памяти для каждого потока, чтобы ни один поток не мог использовать всю память.  Часть этой памяти используется для хранения выражений запросов.  Если запрос содержит слишком много выражений и требуемая память превышает внутреннее ограничение, подсистема не будет выполнять его.  Чтобы избежать этой проблемы, пользователь может разделить запрос на несколько запросов с меньшим количеством выражений в каждом. Например, имеется запрос с длинным списком выражений в предложении WHERE: 
+
+```sql
+DELETE FROM dbo.MyTable 
+WHERE
+(c1 = '0000001' AND c2 = 'A000001') or
+(c1 = '0000002' AND c2 = 'A000002') or
+(c1 = '0000003' AND c2 = 'A000003') or
+...
+
+```
+Измените этот запрос следующим образом:
+
+```sql
+DELETE FROM dbo.MyTable WHERE (c1 = '0000001' AND c2 = 'A000001');
+DELETE FROM dbo.MyTable WHERE (c1 = '0000002' AND c2 = 'A000002');
+DELETE FROM dbo.MyTable WHERE (c1 = '0000003' AND c2 = 'A000003');
+...
+```
+
 ## <a name="see-also"></a>См. также:  
  [AT TIME ZONE (Transact-SQL)](../../t-sql/queries/at-time-zone-transact-sql.md)   
  [CASE (Transact-SQL)](../../t-sql/language-elements/case-transact-sql.md)   

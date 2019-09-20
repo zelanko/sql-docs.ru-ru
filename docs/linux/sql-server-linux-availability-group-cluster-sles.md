@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 85180155-6726-4f42-ba57-200bf1e15f4d
-ms.openlocfilehash: 063adf4f1f180138150484e4ac9fc397ef886f5d
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: a14ad2d77b21dba2fd14ea7856aa7199bc081bbe
+ms.sourcegitcommit: df1f71231f8edbdfe76e8851acf653c25449075e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68003557"
+ms.lasthandoff: 09/09/2019
+ms.locfileid: "70809825"
 ---
 # <a name="configure-sles-cluster-for-sql-server-availability-group"></a>Настройка кластера SLES для группы доступности SQL Server
 
@@ -220,7 +220,11 @@ crm configure property cluster-recheck-interval=2min
 
 Ограждение на уровне узлов гарантирует, что в узле не выполняются никакие ресурсы. Это осуществляется путем сброса узла, а соответствующая реализация для Pacemaker называется STONITH (что дословно расшифровывается как "застрелить другой узел"). Pacemaker поддерживает множество разных устройств ограждения, таких как источник бесперебойного питания или карты интерфейса управления для серверов.
 
-Дополнительные сведения см. в статьях [Кластеры Pacemaker с нуля](https://clusterlabs.org/pacemaker/doc/en-US/Pacemaker/1.1/html/Clusters_from_Scratch/), [Ограждение и Stonith](https://clusterlabs.org/doc/crm_fencing.html) и [Документация по высокому уровню доступности SUSE: ограждение и STONITH](https://www.suse.com/documentation/sle_ha/book_sleha/data/cha_ha_fencing.html).
+Дополнительные сведения см. в разделе:
+
+- [Кластеры Pacemaker с нуля](https://clusterlabs.org/pacemaker/doc/en-US/Pacemaker/1.1/html/Clusters_from_Scratch/)
+- [Ограждение и STONITH](https://clusterlabs.org/doc/crm_fencing.html)
+- [Документация по высокому уровню доступности SUSE: ограждение и STONITH](https://www.suse.com/documentation/sle_ha/book_sleha/data/cha_ha_fencing.html)
 
 Во время инициализации кластера STONITH отключается, если конфигурация не обнаружена. Его можно включить позже, выполнив следующую команду:
 
@@ -230,7 +234,6 @@ sudo crm configure property stonith-enabled=true
   
 >[!IMPORTANT]
 >Отключение STONITH выполняется только в целях тестирования. Если вы планируете использовать Pacemaker в рабочей среде, следует спланировать реализацию STONITH с учетом особенностей среды и поддерживать ее в рабочем состоянии. SUSE не предоставляет агенты ограждения для каких-либо облачных сред (включая Azure) или Hyper-V. Следовательно, поставщик кластера не предоставляет поддержку для запуска рабочих кластеров в этих средах. Мы работаем над этой проблемой. Решение будет доступно в будущих выпусках.
-
 
 ## <a name="configure-the-cluster-resources-for-sql-server"></a>Настройка ресурсов кластера для SQL Server
 

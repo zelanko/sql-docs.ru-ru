@@ -19,12 +19,12 @@ helpviewer_keywords:
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 17fad67ff8eb050b191d22cf2638dd992ba2e6b3
-ms.sourcegitcommit: 00350f6ffb73c2c0d99beeded61c5b9baa63d171
+ms.openlocfilehash: 427aa6c21f108f9c488e8209e311d242d0a785df
+ms.sourcegitcommit: 26715b4dbef95d99abf2ab7198a00e6e2c550243
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70190404"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70274732"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 
@@ -40,10 +40,10 @@ ms.locfileid: "70190404"
 
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 
-||||||
-|---|---|---|---|---|
-|**\*_SQL Server\*_** &nbsp;|[База данных SQL](create-external-data-source-transact-sql.md?view=azuresqldb-current)|[Хранилище данных<br />SQL](create-external-data-source-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-external-data-source-transact-sql.md?view=aps-pdw-2016-au7)|
-||||||
+|                               |                                                              |                                                              |                                                              |      |
+| ----------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ---- |
+| **\*_SQL Server\*_** &nbsp; | [База данных SQL](create-external-data-source-transact-sql.md?view=azuresqldb-current) | [Хранилище данных<br />SQL](create-external-data-source-transact-sql.md?view=azure-sqldw-latest) | [Analytics Platform<br />System (PDW)](create-external-data-source-transact-sql.md?view=aps-pdw-2016-au7) |      |
+|                               |                                                              |                                                              |                                                              |      |
 
 &nbsp;
 
@@ -81,16 +81,16 @@ WITH
 
 Предоставляет протокол и путь подключения к внешнему источнику данных.
 
-| Внешний источник данных        | Префикс расположения | Путь к расположению                                         | Поддерживаемые расположения по продукту или службе    |
-| --------------------------- | --------------- | ----------------------------------------------------- | ------------------------------------------- |
-| Cloudera или Hortonworks     | `hdfs`          | `<Namenode>[:port]`                                   | SQL Server (2016+)                     |
-| хранилище BLOB-объектов Azure          | `wasb[s]`       | `<container>@<storage_account>.blob.core.windows.net` | SQL Server (2016+)        |
-| SQL Server                  | `sqlserver`     | `<server_name>[\<instance_name>][:port]`              | SQL Server (2019+)                          |
-| Oracle;                      | `oracle`        | `<server_name>[:port]`                                | SQL Server (2019+)                          |
-| Teradata                    | `teradata`      | `<server_name>[:port]`                                | SQL Server (2019+)                          |
-| MongoDB или CosmosDB         | `mongodb`       | `<server_name>[:port]`                                | SQL Server (2019+)                          |
-| интерфейс ODBC                        | `odbc`          | `<server_name>[:port]`                                | SQL Server (2019 +): только для Windows           |
-| массовые операции             | `https`         | `<storage_account>.blob.core.windows.net/<container>` | SQL Server (2017+)                  |
+| Внешний источник данных    | Префикс расположения | Путь к расположению                                         | Поддерживаемые расположения по продукту или службе |
+| ----------------------- | --------------- | ----------------------------------------------------- | ---------------------------------------- |
+| Cloudera или Hortonworks | `hdfs`          | `<Namenode>[:port]`                                   | SQL Server (2016+)                       |
+| хранилище BLOB-объектов Azure      | `wasb[s]`       | `<container>@<storage_account>.blob.core.windows.net` | SQL Server (2016+)                       |
+| SQL Server              | `sqlserver`     | `<server_name>[\<instance_name>][:port]`              | SQL Server (2019+)                       |
+| Oracle;                  | `oracle`        | `<server_name>[:port]`                                | SQL Server (2019+)                       |
+| Teradata                | `teradata`      | `<server_name>[:port]`                                | SQL Server (2019+)                       |
+| MongoDB или CosmosDB     | `mongodb`       | `<server_name>[:port]`                                | SQL Server (2019+)                       |
+| интерфейс ODBC                    | `odbc`          | `<server_name>[:port]`                                | SQL Server (2019 +): только для Windows        |
+| массовые операции         | `https`         | `<storage_account>.blob.core.windows.net/<container>` | SQL Server (2017+)                       |
 
 Путь к расположению:
 
@@ -375,10 +375,10 @@ WITH
 ::: moniker-end
 ::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
 
-||||||
-|---|---|---|---|---|
-|[SQL Server](create-external-data-source-transact-sql.md?view=sql-server-2017)|**_\* База данных SQL \*_** &nbsp;|[Хранилище данных<br />SQL](create-external-data-source-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-external-data-source-transact-sql.md?view=aps-pdw-2016-au7)|
-||||||
+|                                                              |                                 |                                                              |                                                              |      |
+| ------------------------------------------------------------ | ------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ---- |
+| [SQL Server](create-external-data-source-transact-sql.md?view=sql-server-2017) | **_\* База данных SQL \*_** &nbsp; | [Хранилище данных<br />SQL](create-external-data-source-transact-sql.md?view=azure-sqldw-latest) | [Analytics Platform<br />System (PDW)](create-external-data-source-transact-sql.md?view=aps-pdw-2016-au7) |      |
+|                                                              |                                 |                                                              |                                                              |      |
 
 &nbsp;
 
@@ -414,11 +414,11 @@ WITH
 
 Предоставляет протокол и путь подключения к внешнему источнику данных.
 
-| Внешний источник данных        | Префикс расположения | Путь к расположению                                         |
-| --------------------------- | --------------- | ----------------------------------------------------- |
-| массовые операции             | `https`         | `<storage_account>.blob.core.windows.net/<container>` |
-| Эластичный запрос (сегмент)       | Не требуется    | `<shard_map_server_name>.database.windows.net`        |                                 |
-| Эластичный запрос (удаленный)      | Не требуется    | `<remote_server_name>.database.windows.net`           |                                |
+| Внешний источник данных   | Префикс расположения | Путь к расположению                                         |
+| ---------------------- | --------------- | ----------------------------------------------------- |
+| массовые операции        | `https`         | `<storage_account>.blob.core.windows.net/<container>` |
+| Эластичный запрос (сегмент)  | Не требуется    | `<shard_map_server_name>.database.windows.net`        |
+| Эластичный запрос (удаленный) | Не требуется    | `<remote_server_name>.database.windows.net`           |
 
 Путь к расположению:
 
@@ -461,10 +461,10 @@ WITH
 
 Настройте этот аргумент, если `TYPE` задан как `RDBMS` или `SHARD_MAP_MANAGER`.
 
-| TYPE              | Значение DATABASE_NAME                                                  |
-| ----------------- | ----------------------------------------------------------------------- |
+| TYPE              | Значение DATABASE_NAME                                       |
+| ----------------- | ------------------------------------------------------------ |
 | СУРБД             | Имя удаленной базы данных на сервере, заданном с помощью `LOCATION` |
-| SHARD_MAP_MANAGER | Имя базы данных, работающей в качестве диспетчера карты сегментов                 |
+| SHARD_MAP_MANAGER | Имя базы данных, работающей в качестве диспетчера карты сегментов      |
 
 Пример, демонстрирующий создание внешнего источника данных с `TYPE` = `RDBMS`, см. в разделе [Создание внешнего источника данных в реляционной СУБД](#b-create-an-rdbms-external-data-source).
 
@@ -602,10 +602,10 @@ WITH
 ::: moniker-end
 ::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
 
-||||||
-|---|---|---|---|---|
-|[SQL Server](create-external-data-source-transact-sql.md?view=sql-server-2017)|[База данных SQL](create-external-data-source-transact-sql.md?view=azuresqldb-current)|**_\* Хранилище данных<br />SQL \*_** &nbsp;|[Analytics Platform<br />System (PDW)](create-external-data-source-transact-sql.md?view=aps-pdw-2016-au7)|
-||||||
+|                                                              |                                                              |                                            |                                                              |      |
+| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------ | ------------------------------------------------------------ | ---- |
+| [SQL Server](create-external-data-source-transact-sql.md?view=sql-server-2017) | [База данных SQL](create-external-data-source-transact-sql.md?view=azuresqldb-current) | **_\* Хранилище данных<br />SQL \*_** &nbsp; | [Analytics Platform<br />System (PDW)](create-external-data-source-transact-sql.md?view=aps-pdw-2016-au7) |      |
+|                                                              |                                                              |                                            |                                                              |      |
 
 &nbsp;
 
@@ -623,7 +623,7 @@ CREATE EXTERNAL DATA SOURCE <data_source_name>
 WITH
 (    LOCATION                  = '<prefix>://<path>[:<port>]'
 [,   CREDENTIAL                = <credential_name> ]
-[,   TYPE                      =  HADOOP | BLOB_STORAGE]
+[,   TYPE                      =  HADOOP
 )
 [;]
 ```
@@ -642,7 +642,7 @@ WITH
 | --------------------------- | --------------- | ----------------------------------------------------- |
 | хранилище BLOB-объектов Azure          | `wasb[s]`       | `<container>@<storage_account>.blob.core.windows.net` |
 | Azure Data Lake Store Gen 1 | `adl`           | `<storage_account>.azuredatalake.net`                 |
-| Azure Data Lake Store Gen 2 | `abfs[s]`         | `<container>@<storage_account>.dfs.core.windows.net`  |
+| Azure Data Lake Store Gen 2 | `abfs[s]`       | `<container>@<storage_account>.dfs.core.windows.net`  |
 
 Путь к расположению:
 
@@ -667,7 +667,7 @@ WITH
 
 Сведения о создании учетных данных уровня базы данных см. в разделе [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)][create_dsc].
 
-### <a name="type---hadoop--blob_storage-"></a>TYPE = *[ HADOOP | BLOB_STORAGE ]*
+### <a name="type--hadoop"></a>TYPE = *HADOOP*
 
 Указывает тип настраиваемого внешнего источника данных. Этот параметр требуется не всегда.
 
@@ -857,10 +857,10 @@ CREATE EXTERNAL DATA SOURCE ext_datasource_with_abfss WITH (TYPE = hadoop, LOCAT
 ::: moniker-end
 ::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
 
-||||||
-|---|---|---|---|---|
-|[SQL Server](create-external-data-source-transact-sql.md?view=sql-server-2017)|[База данных SQL](create-external-data-source-transact-sql.md?view=azuresqldb-current)|[Хранилище данных<br />SQL](create-external-data-source-transact-sql.md?view=azure-sqldw-latest)|**_\* Analytics<br />Platform System (PDW) \*_** &nbsp;|
-||||||
+|                                                              |                                                              |                                                              |                                                         |      |
+| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------- | ---- |
+| [SQL Server](create-external-data-source-transact-sql.md?view=sql-server-2017) | [База данных SQL](create-external-data-source-transact-sql.md?view=azuresqldb-current) | [Хранилище данных<br />SQL](create-external-data-source-transact-sql.md?view=azure-sqldw-latest) | **_\* Analytics<br />Platform System (PDW) \*_** &nbsp; |      |
+|                                                              |                                                              |                                                              |                                                         |      |
 
 &nbsp;
 
@@ -891,10 +891,10 @@ WITH
 
 Предоставляет протокол и путь подключения к внешнему источнику данных.
 
-| Внешний источник данных        | Префикс расположения | Путь к расположению                                |
-| --------------------------- | --------------- |  ------------------------------------------- |
-| Cloudera или Hortonworks     | `hdfs`          | `<Namenode>[:port]`                          |
-| хранилище BLOB-объектов Azure          | `wasb[s]`       | `<container>@<storage_account>.blob.core.windows.net` |
+| Внешний источник данных    | Префикс расположения | Путь к расположению                                         |
+| ----------------------- | --------------- | ----------------------------------------------------- |
+| Cloudera или Hortonworks | `hdfs`          | `<Namenode>[:port]`                                   |
+| хранилище BLOB-объектов Azure      | `wasb[s]`       | `<container>@<storage_account>.blob.core.windows.net` |
 
 Путь к расположению:
 

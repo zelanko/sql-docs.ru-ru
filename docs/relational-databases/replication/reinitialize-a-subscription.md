@@ -15,12 +15,12 @@ ms.assetid: ca3625c5-c62e-4ab7-9829-d511f838e385
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: e38cd74e9f916484c804890686e2a3b03d9ec64c
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 733e63f6dd01c09fd007a7176721533f7a1c57d3
+ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768575"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70846515"
 ---
 # <a name="reinitialize-a-subscription"></a>Повторная инициализация подписки
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -103,19 +103,19 @@ ms.locfileid: "68768575"
   
 #### <a name="to-reinitialize-a-pull-subscription-to-a-transactional-publication"></a>Повторная инициализация подписки по запросу на публикацию транзакций  
   
-1.  В базе данных подписчика на подписчике выполните процедуру [sp_reinitpullsubscription_agent (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-reinitpullsubscription-transact-sql.md). Задайте значения для параметров **@publisher** , **@publisher_db** и **@publication** . В результате подписка будет помечена к повторной инициализации при следующем запуске агента распространителя.  
+1.  В базе данных подписчика на подписчике выполните процедуру [sp_reinitpullsubscription_agent (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-reinitpullsubscription-transact-sql.md). Задайте значения для параметров **\@publisher**, **\@publisher_db** и **\@publication**. В результате подписка будет помечена к повторной инициализации при следующем запуске агента распространителя.  
   
 2.  (Необязательно) Чтобы синхронизировать подписку, запустите агент распространителя на подписчике. Дополнительные сведения см. в статье [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md).  
   
 #### <a name="to-reinitialize-a-push-subscription-to-a-transactional-publication"></a>Повторная инициализация принудительной подписки на публикацию транзакций  
   
-1.  Выполните процедуру [sp_reinitpullsubscription (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-reinitsubscription-transact-sql.md) на издателе. Задайте значения для параметров **@publication** , **@subscriber** и **@destination_db** . В результате подписка будет помечена к повторной инициализации при следующем запуске агента распространителя.  
+1.  Выполните процедуру [sp_reinitpullsubscription (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-reinitsubscription-transact-sql.md) на издателе. Укажите значения параметров **\@publication**, **\@subscriber** и **\@destination_db**. В результате подписка будет помечена к повторной инициализации при следующем запуске агента распространителя.  
   
 2.  (Необязательно) Чтобы синхронизировать подписку, запустите агент распространителя на распространителе. Дополнительные сведения см. в статье [Синхронизация принудительной подписки](../../relational-databases/replication/synchronize-a-push-subscription.md).  
   
 #### <a name="to-reinitialize-a-pull-subscription-to-a-merge-publication"></a>Повторная инициализация подписки по запросу на публикацию слиянием  
   
-1.  В базе данных подписчика на подписчике выполните процедуру [sp_reinitmergepullsubscription (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-reinitmergepullsubscription-transact-sql.md). Задайте значения для параметров **@publisher** , **@publisher_db** и **@publication** . Чтобы передать изменения с подписчика перед повторной инициализацией, задайте значение **true** в параметре **@upload_first** . Помечает подписку для повторной инициализации при следующем запуске агента слияния.  
+1.  В базе данных подписчика на подписчике выполните процедуру [sp_reinitmergepullsubscription (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-reinitmergepullsubscription-transact-sql.md). Задайте значения для параметров **\@publisher**, **\@publisher_db** и **\@publication**. Чтобы передать изменения с подписчика перед повторной инициализацией, задайте значение **true** в параметре **\@upload_first**. Помечает подписку для повторной инициализации при следующем запуске агента слияния.  
   
     > [!IMPORTANT]  
     >  Если добавить, удалить или изменить параметризованный фильтр, ожидающие обработки изменения подписчика нельзя будет передать издателю во время повторной инициализации. Если нужно передать изменения, ожидающие обработки, то перед изменением фильтра необходимо синхронизировать все подписки.  
@@ -124,7 +124,7 @@ ms.locfileid: "68768575"
   
 #### <a name="to-reinitialize-a-push-subscription-to-a-merge-publication"></a>Повторная инициализация принудительной подписки на публикацию слиянием  
   
-1.  Выполните процедуру [sp_reinitmergesubscription (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-reinitmergesubscription-transact-sql.md) на издателе. Задайте значения для параметров **@publication** , **@subscriber** и **@subscriber_db** . Чтобы передать изменения с подписчика перед повторной инициализацией, задайте значение **true** в параметре **@upload_first** . В результате подписка будет помечена к повторной инициализации при следующем запуске агента распространителя.  
+1.  Выполните процедуру [sp_reinitmergesubscription (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-reinitmergesubscription-transact-sql.md) на издателе. Задайте значения для параметров **\@publication**, **\@subscriber** и **\@subscriber_db**. Чтобы передать изменения с подписчика перед повторной инициализацией, задайте значение **true** в параметре **\@upload_first**. В результате подписка будет помечена к повторной инициализации при следующем запуске агента распространителя.  
   
     > [!IMPORTANT]  
     >  Если добавить, удалить или изменить параметризованный фильтр, ожидающие обработки изменения подписчика нельзя будет передать издателю во время повторной инициализации. Если нужно передать изменения, ожидающие обработки, то перед изменением фильтра необходимо синхронизировать все подписки.  
@@ -133,7 +133,7 @@ ms.locfileid: "68768575"
   
 #### <a name="to-set-the-reinitialization-policy-when-creating-a-new-merge-publication"></a>Установка политики повторной инициализации при создании публикации слиянием  
   
-1.  На издателе в базе данных публикации выполните хранимую процедуру [sp_addmergepublication](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md), указав одно из следующих значений в параметре **@automatic_reinitialization_policy** .  
+1.  В издателе в базе данных публикации выполните хранимую процедуру [sp_addmergepublication](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md), указав одно из следующих значений в параметре **\@automatic_reinitialization_policy**:  
   
     -   **1** — изменения передаются с подписчика до автоматической повторной инициализации подписки, выполняемой в результате изменения публикации.  
   
@@ -146,7 +146,7 @@ ms.locfileid: "68768575"
   
 #### <a name="to-change-the-reinitialization-policy-for-an-existing-merge-publication"></a>Изменение политики повторной инициализации для существующей публикации слиянием  
   
-1.  На издателе в базе данных публикации выполните хранимую процедуру [sp_changemergepublication](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md), указав значение **automatic_reinitialization_policy** в параметре **@property** и одно из следующих значений в параметре **@value** .  
+1.  В издателе в базе данных публикации выполните хранимую процедуру [sp_changemergepublication](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md), указав значение **automatic_reinitialization_policy** в параметре **\@property** и одно из следующих значений в параметре **\@value**:  
   
     -   **1** — изменения передаются с подписчика до автоматической повторной инициализации подписки, выполняемой в результате изменения публикации.  
   

@@ -30,12 +30,12 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: 1a1e8fe19b952f2cc4a72f651dfea53c2177e6c1
-ms.sourcegitcommit: 52d3902e7b34b14d70362e5bad1526a3ca614147
+ms.openlocfilehash: 6e1291537495f6c59295d607203ff4c8a450008b
+ms.sourcegitcommit: 0c6c1555543daff23da9c395865dafd5bb996948
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70110283"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70304810"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>Параметры ALTER DATABASE SET (Transact-SQL)
 
@@ -732,9 +732,6 @@ OFF
 
 CLEAR         
 Удаляет содержимое хранилища запросов.
-
-> [!NOTE]
-> Для [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] необходимо выполнить `ALTER DATABASE SET QUERY_STORE` из пользовательской базы данных. Выполнение этой инструкции из другого экземпляра хранилища данных не поддерживается.
 
 OPERATION_MODE { READ_ONLY | READ_WRITE }         
 Описывает режим работы хранилища запросов. 
@@ -2911,20 +2908,43 @@ SET
 
 <option_spec>::=
 {
-<RESULT_SET_CACHING>
-|<snapshot_option>
+    <auto_option>
+  | <db_encryption_option>
+  | <query_store_options>
+  | <result_set_caching>
+  | <snapshot_option>
 }
 ;
 
-<RESULT_SET_CACHING>::=
+<auto_option> ::=
 {
-RESULT_SET_CACHING {ON | OFF}
+    AUTO_CREATE_STATISTICS { OFF | ON }
 }
 
-<snapshot_option>::=
+<db_encryption_option> ::=
 {
-READ_COMMITTED_SNAPSHOT {ON | OFF }
+    ENCRYPTION { ON | OFF }
 }
+
+<query_store_option> ::=
+{
+    QUERY_STORE
+    {
+          = OFF
+        | = ON
+    }
+}
+
+<result_set_caching_option> ::=
+{
+    RESULT_SET_CACHING { ON | OFF }
+}
+
+<snapshot_option> ::=
+{
+    READ_COMMITTED_SNAPSHOT {ON | OFF }
+}
+
 
 
 ```
@@ -2935,8 +2955,47 @@ READ_COMMITTED_SNAPSHOT {ON | OFF }
 
 Имя изменяемой базы данных.
 
-<a name="result_set_caching"></a> RESULT_SET_CACHING { ON | OFF }   
-**Область применения**: хранилище данных SQL Azure (предварительная версия)
+**<auto_option> ::=**
+
+Управляет автоматическими параметрами.
+
+AUTO_CREATE_STATISTICS { ON | OFF } ON — оптимизатор запросов в случае необходимости создает статистику по отдельным столбцам в предикатах запросов, чтобы улучшить планы запросов и повысить производительность запросов. Такая статистика по отдельным столбцам создается, когда оптимизатор запросов компилирует запросы. Статистика по отдельным столбцам создается только для столбцов, ни один из которых не является первым столбцом в существующем объекте статистики.
+
+Значение по умолчанию — ON. Для большинства баз данных рекомендуется использовать значение по умолчанию.
+
+Если указано значение OFF, оптимизатор запросов не создает статистику по отдельным столбцам в предикатах запросов во время компиляции запросов. Отключение этого параметра может повлечь создание неоптимальных планов запросов и снижение производительности запросов.
+Вы можете определить состояние этого параметра с помощью проверки столбца is_auto_create_stats_on в представлении каталога sys.databases. Вы можете также определить состояние с помощью проверки свойства IsAutoCreateStatistics функции DATABASEPROPERTYEX.
+Дополнительные сведения см. в подразделе "Использование параметров статистики на уровне базы данных" раздела "Статистика".
+
+**<db_encryption_option> ::=**
+
+Определяет параметры шифрования базы данных.
+
+ENCRYPTION { ON | OFF } ON — шифрование базы данных включается.
+
+OFF — шифрование базы данных отключается.
+
+Дополнительные сведения см. в статьях о прозрачном шифровании данных и прозрачном шифровании данных для базы данных SQL Azure.
+
+Если включить шифрование на уровне базы данных, будут зашифрованы все файловые группы. Все новые файловые группы наследуют свойство шифрования. Если любая файловая группа базы данных установлена в состояние READ ONLY, операция шифрования базы завершится неуспешно.
+Состояние шифрования базы данных и состояние сканирования шифрования можно просмотреть с помощью динамического административного представления sys.dm_database_encryption_keys.
+
+**\<query_store_option> ::=**
+
+ON | OFF   
+Указывает, включено ли хранилище запросов в этом хранилище данных.     
+
+ON         
+Включает хранилище запросов.
+
+OFF         
+Отключает хранилище запросов. OFF — значение по умолчанию.
+
+> [!NOTE]
+> Для [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] необходимо выполнить `ALTER DATABASE SET QUERY_STORE` из пользовательской базы данных. Выполнение этой инструкции из другого экземпляра хранилища данных не поддерживается.
+
+**\<result_set_caching_option> ::=**    
+**Область применения**: Хранилище данных SQL Azure (предварительная версия)
 
 Эта команда должна выполняться при подключении к базе данных `master`.  Изменение данного параметра базы данных применяется немедленно.  Затраты на хранение связаны с кэшированием результирующих наборов запроса. После отключения кэширования результатов для базы данных ранее сохраненный кэш результатов немедленно удаляется из Хранилища данных SQL Azure. В `sys.databases` появился новый столбец с именем is_result_set_caching_on. В нем отображаются параметры кэширования результатов для базы данных.  
 
@@ -2954,22 +3013,7 @@ OFF
 command|Похоже|%DWResultCacheDb%|
 | | |
 
-
-<a name="snapshot_option"></a> READ_COMMITTED_SNAPSHOT  { ON | OFF }   
-**Область применения**: хранилище данных SQL Azure (предварительная версия)
-
-Значение ON включает параметр READ_COMMITTED_SNAPSHOT на уровне базы данных.
-
-Значение OFF отключает параметр READ_COMMITTED_SNAPSHOT на уровне базы данных.
-
-Включение или отключение параметра READ_COMMITTED_SNAPSHOT для базы данных приводит к уничтожению всех открытых соединений с этой базой данных.  Это изменение можно выполнить во время периода обслуживания базы данных или дождаться, пока не останется активных подключений к базе данных, кроме подключения, выполняющего команду ALTER DATABASE.  База данных не обязательно должна находиться в однопользовательском режиме.  Изменение параметра READ_COMMITTED_SNAPSHOT на уровне сеанса не поддерживается.  Чтобы проверить этот параметр для базы данных, проверьте столбец is_read_committed_snapshot_on в таблице sys.databases.
-
-В базе данных с включенным параметром READ_COMMITTED_SNAPSHOT запросы могут испытывать низкую производительность из-за проверки версий, если имеется несколько версий данных. Длительно открытые транзакции также могут привести к увеличению размера базы данных, если имеются внесенные ими изменения данных, блокирующие очистку версий.  
-
-
-
-
-## <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Remarks
 
 Для запроса повторно используется кэшированный результирующий набор при соблюдении всех следующих требований:
 
@@ -2979,6 +3023,21 @@ command|Похоже|%DWResultCacheDb%|
 
 После включения кэширования результирующих наборов для базы данных результаты сохраняются в кэше для всех запросов, за исключением запросов с недетерминированными функциями, такими как DateTime.Now(), пока кэш не заполнится.   Запросы с большими результирующими наборами (например, свыше 1 млн строк) могут вызывать снижение производительности во время первого запуска, так как результат кэшируется.
 
+**<snapshot_option> ::=**
+
+Вычисляет уровень изоляции транзакции.
+
+READ_COMMITTED_SNAPSHOT  { ON | OFF }   
+**Область применения**: Хранилище данных SQL Azure (предварительная версия)
+
+Значение ON включает параметр READ_COMMITTED_SNAPSHOT на уровне базы данных.
+
+Значение OFF отключает параметр READ_COMMITTED_SNAPSHOT на уровне базы данных.
+
+Включение или отключение параметра READ_COMMITTED_SNAPSHOT для базы данных приводит к уничтожению всех открытых соединений с этой базой данных.  Это изменение можно выполнить во время периода обслуживания базы данных или дождаться, пока не останется активных подключений к базе данных, кроме подключения, выполняющего команду ALTER DATABASE.  База данных не обязательно должна находиться в однопользовательском режиме.  Изменение параметра READ_COMMITTED_SNAPSHOT на уровне сеанса не поддерживается.  Чтобы проверить этот параметр для базы данных, проверьте столбец is_read_committed_snapshot_on в таблице sys.databases.
+
+В базе данных с включенным параметром READ_COMMITTED_SNAPSHOT запросы могут испытывать низкую производительность из-за проверки версий, если имеется несколько версий данных. Длительно открытые транзакции также могут привести к увеличению размера базы данных, если имеются внесенные ими изменения данных, блокирующие очистку версий.  
+
 ## <a name="permissions"></a>Разрешения
 
 Для задания параметра RESULT_SET_CACHING пользователю требуется имя входа участника на уровне сервера (созданное процессом подготовки) или членство в роли базы данных `dbmanager`.  
@@ -2987,28 +3046,90 @@ command|Похоже|%DWResultCacheDb%|
 
 ## <a name="examples"></a>Примеры
 
-### <a name="enable-result-set-caching-for-a-database"></a>Включение кэширования результирующих наборов для базы данных
+### <a name="a-enabling-the-query-store"></a>A. Включение хранилища запросов
+
+Следующий пример включает хранилище запросов и настраивает его параметры.
 
 ```sql
-ALTER DATABASE myTestDW  
+ALTER DATABASE AdventureWorksDW
+SET QUERY_STORE = ON
+    (
+      OPERATION_MODE = READ_WRITE,
+      CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 ),
+      DATA_FLUSH_INTERVAL_SECONDS = 900,
+      QUERY_CAPTURE_MODE = AUTO,
+      MAX_STORAGE_SIZE_MB = 1024,
+      INTERVAL_LENGTH_MINUTES = 60
+    );
+```
+
+### <a name="b-enabling-the-query-store-with-wait-statistics"></a>Б. Включение хранилища запросов с использованием статистики ожидания
+
+Следующий пример включает хранилище запросов и настраивает его параметры.
+
+```sql
+ALTER DATABASE AdventureWorksDW
+SET QUERY_STORE = ON
+    (
+      OPERATION_MODE = READ_WRITE, 
+      CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 ),
+      DATA_FLUSH_INTERVAL_SECONDS = 900,
+      MAX_STORAGE_SIZE_MB = 1024, 
+      INTERVAL_LENGTH_MINUTES = 60,
+      SIZE_BASED_CLEANUP_MODE = AUTO, 
+      MAX_PLANS_PER_QUERY = 200,
+      WAIT_STATS_CAPTURE_MODE = ON,
+    );
+```
+
+### <a name="c-enabling-the-query-store-with-custom-capture-policy-options"></a>В. Включение хранилища запросов с использованием параметров пользовательской политики записи
+
+Следующий пример включает хранилище запросов и настраивает его параметры.
+
+```sql
+ALTER DATABASE AdventureWorksDW 
+SET QUERY_STORE = ON 
+    (
+      OPERATION_MODE = READ_WRITE, 
+      CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 ),
+      DATA_FLUSH_INTERVAL_SECONDS = 900,
+      MAX_STORAGE_SIZE_MB = 1024, 
+      INTERVAL_LENGTH_MINUTES = 60,
+      SIZE_BASED_CLEANUP_MODE = AUTO, 
+      MAX_PLANS_PER_QUERY = 200,
+      WAIT_STATS_CAPTURE_MODE = ON,
+      QUERY_CAPTURE_MODE = CUSTOM,
+      QUERY_CAPTURE_POLICY = (
+        STALE_CAPTURE_POLICY_THRESHOLD = 24 HOURS,
+        EXECUTION_COUNT = 30,
+        TOTAL_COMPILE_CPU_TIME_MS = 1000,
+        TOTAL_EXECUTION_CPU_TIME_MS = 100 
+      )
+    );
+```
+
+### <a name="d-enable-result-set-caching-for-a-database"></a>Г. Включение кэширования результирующих наборов для базы данных
+
+```sql
+ALTER DATABASE AdventureWorksDW  
 SET RESULT_SET_CACHING ON;
 ```
 
-### <a name="disable-result-set-caching-for-a-database"></a>Выключение кэширования результирующих наборов для базы данных
+### <a name="d-disable-result-set-caching-for-a-database"></a>Г. Выключение кэширования результирующих наборов для базы данных
 
 ```sql
-ALTER DATABASE myTestDW  
+ALTER DATABASE AdventureWorksDW  
 SET RESULT_SET_CACHING OFF;
 ```
 
-### <a name="check-result-set-caching-setting-for-a-database"></a>Проверка кэширования результирующих наборов для базы данных
+### <a name="d-check-result-set-caching-setting-for-a-database"></a>Г. Проверка кэширования результирующих наборов для базы данных
 
 ```sql
 SELECT name, is_result_set_caching_on
 FROM sys.databases;
 ```
 
-### <a name="check-for-number-of-queries-with-result-set-cache-hit-and-cache-miss"></a>Проверка количества запросов результирующих наборов с попаданием в кэше и промахом кэша
+### <a name="d-check-for-number-of-queries-with-result-set-cache-hit-and-cache-miss"></a>Г. Проверка количества запросов результирующих наборов с попаданием в кэше и промахом кэша
 
 ```sql
 SELECT  
@@ -3028,7 +3149,7 @@ s.request_id else null end)
      ON s.request_id = r.request_id) A;
 ```
 
-### <a name="check-for-result-set-cache-hit-or-cache-miss-for-a-query"></a>Проверка попадания в кэше и промаха кэша результирующих наборов для запроса
+### <a name="d-check-for-result-set-cache-hit-or-cache-miss-for-a-query"></a>Г. Проверка попадания в кэше и промаха кэша результирующих наборов для запроса
 
 ```sql
 If
@@ -3040,7 +3161,7 @@ ELSE
 SELECT 0 as is_cache_hit;
 ```
 
-### <a name="check-for-all-queries-with-result-set-cache-hits"></a>Проверка всех запросов с попаданием в кэше результирующих наборов
+### <a name="d-check-for-all-queries-with-result-set-cache-hits"></a>Г. Проверка всех запросов с попаданием в кэше результирующих наборов
 
 ```sql
 SELECT *  
@@ -3049,6 +3170,7 @@ WHERE command like '%DWResultCacheDb%' and step_index = 0;
 ```
 
 ### <a name="enable-read_committed_snapshot-option-for-a-database"></a>Включение параметра Read_Committed_Snapshot для базы данных
+
 ```sql
 ALTER DATABASE MyDatabase  
 SET READ_COMMITTED_SNAPSHOT ON
@@ -3064,3 +3186,4 @@ SET READ_COMMITTED_SNAPSHOT ON
 - [Элементы языка для Хранилища данных SQL](/azure/sql-data-warehouse/sql-data-warehouse-reference-tsql-language-elements)
 
 ::: moniker-end
+

@@ -9,13 +9,13 @@ ms.assetid: 3dc76cc1-3b4c-4719-8296-f69ec1b476f9
 author: markingmyname
 ms.author: maghan
 ms.custom: ''
-ms.date: 07/31/2019
-ms.openlocfilehash: 3ed3f08232b3811ad57ae37d8be6ed93af3572de
-ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
+ms.date: 09/04/2019
+ms.openlocfilehash: 7f9195b2ec4cfd80d16f37884ce27e920580463c
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70122995"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874550"
 ---
 # <a name="release-notes-for-sql-server-management-studio-ssms"></a>Заметки о выпуске SQL Server Management Studio (SSMS)
 
@@ -109,7 +109,11 @@ SSMS 18.2 является последним общедоступным вып
 
 - Существует ограничение на размер данных, отображаемых из результатов SSMS в сетке, тексте или файле.
 
-Вы можете найти на [UserVoice](https://feedback.azure.com/forums/908035-sql-server) другие известные проблемы и отправить отзыв группе разработчиков. 
+- При удалении базы данных SQL Azure в обозревателе объектов выдается ошибка, хотя на самом деле удаление завершается успешно. Задача выводит неправильное сообщение об ошибке.
+
+- В качестве языка по умолчанию для имен входа SQL в диалоговом окне "Свойства имени входа" может отображаться арабский независимо от языка по умолчанию, на самом деле заданного для имени входа. Чтобы узнать фактический язык по умолчанию для данного имени входа, используйте T-SQL для получения значения **default_language_name** из представления **master.sys.server_principles**.
+
+Вы можете найти на [UserVoice](https://feedback.azure.com/forums/908035-sql-server) другие известные проблемы и отправить отзыв группе разработчиков.
 
 ## <a name="previous-ssms-releases"></a>Предыдущие выпуски SSMS
 

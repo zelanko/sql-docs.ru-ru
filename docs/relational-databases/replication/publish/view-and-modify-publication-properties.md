@@ -19,12 +19,12 @@ ms.assetid: 27d72ea4-bcb6-48f2-b4aa-eb1410da7efc
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: c636db57a13cc242fb152f8dd670eb247f962247
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 76f5014ec7a7c06496c3850354da528da89e67b2
+ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68764089"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70846587"
 ---
 # <a name="view-and-modify-publication-properties"></a>Просмотр и изменение свойств публикации
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -106,29 +106,29 @@ ms.locfileid: "68764089"
   
 #### <a name="to-view-the-properties-of-a-snapshot-or-transactional-publication"></a>Просмотр свойств публикации моментальных снимков или публикации транзакций  
   
-1.  Выполните хранимую процедуру [sp_helppublication](../../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md), указав имя публикации в параметре **@publication** . Если не указать этот параметр, будут возвращены сведения обо всех публикациях на издателе.  
+1.  Выполните хранимую процедуру [sp_helppublication](../../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md), указав имя публикации в параметре **\@publication**. Если не указать этот параметр, будут возвращены сведения обо всех публикациях на издателе.  
   
 #### <a name="to-change-the-properties-of-a-snapshot-or-transactional-publication"></a>Изменение свойств публикации моментальных снимков или публикации транзакций  
   
-1.  Выполните хранимую процедуру [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md), указав изменяемое свойство публикации в параметре **@property** , а новое значение этого свойства — в параметре **@value** .  
+1.  Выполните хранимую процедуру [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md), указав изменяемое свойство публикации в параметре **\@property**, а новое значение этого свойства — в параметре **\@value**.  
   
     > [!NOTE]  
-    >  Если изменение потребует создания нового моментального снимка, нужно также указать значение **1** в параметре **@force_invalidate_snapshot** , а если изменение потребует повторной инициализации подписчиков — значение **1** в параметре **@force_reinit_subscription** . Дополнительные сведения о свойствах публикации и статьи, при изменении которых требуется создание нового моментального снимка или повторная инициализация, см. в [этой статье](../../../relational-databases/replication/publish/change-publication-and-article-properties.md).  
+    >  Если изменение потребует создания нового моментального снимка, нужно также указать значение **1** в параметре **\@force_invalidate_snapshot**, а если изменение потребует повторной инициализации подписчиков — значение **1** в параметре **\@force_reinit_subscription**. Дополнительные сведения о свойствах публикации и статьи, при изменении которых требуется создание нового моментального снимка или повторная инициализация, см. в [этой статье](../../../relational-databases/replication/publish/change-publication-and-article-properties.md).  
   
 #### <a name="to-view-the-properties-of-a-merge-publication"></a>Просмотр свойств публикации слиянием  
   
-1.  Выполните хранимую процедуру [sp_helpmergepublication](../../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md), указав имя публикации в параметре **@publication** . Если не указать этот параметр, будут возвращены сведения обо всех публикациях на издателе.  
+1.  Выполните хранимую процедуру [sp_helpmergepublication](../../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md), указав имя публикации в параметре **\@publication**. Если не указать этот параметр, будут возвращены сведения обо всех публикациях на издателе.  
   
 #### <a name="to-change-the-properties-of-a-merge-publication"></a>Изменение свойств публикации слиянием  
   
-1.  Выполните хранимую процедуру [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md), указав свойство публикации, которое нужно изменить, в параметре **@property** , а новое значение этого свойства — в параметре **@value** .  
+1.  Выполните хранимую процедуру [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md), указав свойство публикации, которое нужно изменить, в параметре **\@property**, а новое значение этого свойства — в параметре **\@value**.  
   
     > [!NOTE]  
-    >  Если изменение потребует создания нового моментального снимка, нужно также указать значение **1** в параметре **@force_invalidate_snapshot** , а если изменение потребует повторной инициализации подписчиков — значение **1** в параметре **@force_reinit_subscription** . Дополнительные сведения о свойствах публикации и статьи, изменение которых требует нового мгновенного снимка или повторной инициализации, см. в [этой статье](../../../relational-databases/replication/publish/change-publication-and-article-properties.md).  
+    >  Если изменение потребует создания нового моментального снимка, нужно также указать значение **1** в параметре **\@force_invalidate_snapshot**, а если изменение потребует повторной инициализации подписчиков — значение **1** в параметре **\@force_reinit_subscription**. Дополнительные сведения о свойствах, изменение которых требует нового мгновенного снимка или повторной инициализации, см. в статье [Изменение свойств публикации и статьи](../../../relational-databases/replication/publish/change-publication-and-article-properties.md).  
   
 #### <a name="to-view-the-properties-of-a-snapshot"></a>Просмотр свойств моментального снимка  
   
-1.  Выполните хранимую процедуру [sp_helppublication_snapshot](../../../relational-databases/system-stored-procedures/sp-helppublication-snapshot-transact-sql.md), указав имя публикации в параметре **@publication** .  
+1.  Выполните хранимую процедуру [sp_helppublication_snapshot](../../../relational-databases/system-stored-procedures/sp-helppublication-snapshot-transact-sql.md), указав имя публикации в параметре **\@publication**.  
   
 #### <a name="to-change-the-properties-of-a-snapshot"></a>Изменение свойств моментального снимка  
   

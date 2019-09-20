@@ -16,12 +16,12 @@ ms.assetid: 52ee6de9-1d58-4cb9-8711-372bddbe7154
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 7e4676ec5360a235b1a5ec9f1bece8566f63625c
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: dc432ca82662d098b970b2dbeab6a43243e2ead6
+ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769941"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70846626"
 ---
 # <a name="create-a-publication"></a>Create a Publication
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -110,16 +110,16 @@ ms.locfileid: "68769941"
   
     -   Если неизвестно, существует ли задание агента чтения журнала для публикуемой базы данных, выполните процедуру [sp_helplogreader_agent (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-helplogreader-agent-transact-sql.md) на издателе в базе данных издателя.  
   
-    -   Если результирующий набор пуст, необходимо создать задание агента чтения журнала. На издателе выполните процедуру [sp_addlogreader_agent (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md). Укажите в параметрах [!INCLUDE[msCoName](../../../includes/msconame-md.md)] @job_name **@job_name** @password **@password** . Если агент будет использовать проверку подлинности SQL Server для подключения к издателю, также необходимо указать значение **0** в параметре **@publisher_security_mode** и данные входа [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в параметрах **@publisher_login** и **@publisher_password** . Перейдите к шагу 3.  
+    -   Если результирующий набор пуст, необходимо создать задание агента чтения журнала. На издателе выполните процедуру [sp_addlogreader_agent (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md). Укажите в параметрах **\@job_name** и **\@password** учетные данные [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows, с которыми работает агент. Если агент будет использовать проверку подлинности SQL Server для подключения к издателю, также необходимо указать значение **0** в параметре **\@publisher_security_mode** и данные входа [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в параметрах **\@publisher_login** и **\@publisher_password**. Перейдите к шагу 3.  
   
-3.  На издателе выполните процедуру [sp_addpublication (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md). Задайте имя публикации в параметре **@publication** , а в параметре **@repl_freq** задайте значение **snapshot** для публикации моментальных снимков или **continuous** для публикации транзакций. Укажите все остальные параметры публикации. Таким образом будет определена публикация.  
+3.  На издателе выполните процедуру [sp_addpublication (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md). Задайте имя публикации в параметре **\@publication**, а в параметре **\@repl_freq** задайте значение **snapshot** для публикации моментальных снимков или **continuous** для публикации транзакций. Укажите все остальные параметры публикации. Таким образом будет определена публикация.  
   
     > [!NOTE]  
     >  Имена публикаций не могут содержать следующие символы:  
     >   
     >  % * [ ] | : " ? \ / < >  
   
-4.  На издателе выполните процедуру [sp_addpublication_snapshot (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md). Укажите имя публикации, использовавшееся на шаге 3, в параметре **@publication** , а учетные данные Windows, с которыми работает агент моментальных снимков, — для параметров **@snapshot_job_name** @password **@password** . Если агент будет использовать проверку подлинности SQL Server для подключения к издателю, также необходимо указать значение **0** в параметре **@publisher_security_mode** и данные входа [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в параметрах **@publisher_login** @password **@publisher_password** . Будет создано задание агента моментальных снимков для публикации.  
+4.  На издателе выполните процедуру [sp_addpublication_snapshot (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md). Укажите имя публикации, использовавшееся в шаге 3, в параметре **\@publication**, а учетные данные Windows, с которыми работает агент моментальных снимков, — в параметрах **\@snapshot_job_name** и **\@password**. Если агент будет использовать проверку подлинности SQL Server для подключения к издателю, также необходимо указать значение **0** в параметре **\@publisher_security_mode** и данные входа [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в параметрах **\@publisher_login** и **\@publisher_password**. Будет создано задание агента моментальных снимков для публикации.  
   
     > [!IMPORTANT]  
     >  Если издатель настраивается с удаленным распространителем, то значения, передаваемые для всех аргументов, включая *job_login* и *job_password*, передаются распространителю в формате обычного (незашифрованного) текста. Прежде чем выполнять эту хранимую процедуру, необходимо зашифровать соединение между издателем и его удаленным распространителем. Дополнительные сведения см. в разделе [Включение шифрования соединений в компоненте Database Engine (диспетчер конфигураций SQL Server)](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
@@ -132,14 +132,14 @@ ms.locfileid: "68769941"
   
 1.  Чтобы активировать публикацию текущей базы в репликации слиянием, на издателе выполните хранимую процедуру [sp_replicationdboption (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md).  
   
-2.  На издателе в базе данных публикации выполните хранимую процедуру [sp_addmergepublication (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md). Укажите имя публикации в параметре **@publication** , а также все остальные параметры публикации. Таким образом будет определена публикация.  
+2.  На издателе в базе данных публикации выполните хранимую процедуру [sp_addmergepublication (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md). Укажите имя публикации в параметре **\@publication**, а также все остальные параметры публикации. Таким образом будет определена публикация.  
   
     > [!NOTE]  
     >  Имена публикаций не могут содержать следующие символы:  
     >   
     >  % * [ ] | : " ? \ / < >  
   
-3.  На издателе выполните процедуру [sp_addpublication_snapshot (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md). Укажите имя публикации, использовавшееся на шаге 2, в параметре **@publication** , а учетные данные Windows, с которыми работает агент моментальных снимков, — в параметрах **@snapshot_job_name** и **@password** . Если агент будет использовать проверку подлинности SQL Server для подключения к издателю, также необходимо указать значение **0** в параметре **@publisher_security_mode** и данные входа [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в параметрах **@publisher_login** @password **@publisher_password** . Будет создано задание агента моментальных снимков для публикации.  
+3.  На издателе выполните процедуру [sp_addpublication_snapshot (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md). Укажите имя публикации, использовавшееся в шаге 2, в параметре **\@publication**, а учетные данные Windows, с которыми работает агент моментальных снимков, — в параметрах **\@snapshot_job_name** и **\@password**. Если агент будет использовать проверку подлинности SQL Server для подключения к издателю, также необходимо указать значение **0** в параметре **\@publisher_security_mode** и данные входа [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в параметрах **\@publisher_login** и **\@publisher_password**. Будет создано задание агента моментальных снимков для публикации.  
   
     > [!IMPORTANT]  
     >  Если издатель настраивается с удаленным распространителем, то значения, передаваемые для всех аргументов, включая *job_login* и *job_password*, передаются распространителю в формате обычного (незашифрованного) текста. Прежде чем выполнять эту хранимую процедуру, необходимо зашифровать соединение между издателем и его удаленным распространителем. Дополнительные сведения см. в разделе [Включение шифрования соединений в компоненте Database Engine (диспетчер конфигураций SQL Server)](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  

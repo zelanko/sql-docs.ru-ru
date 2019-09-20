@@ -13,12 +13,12 @@ ms.assetid: 6b6c7673-d818-4fa9-8708-b4ed79cb1b41
 author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 48edab2025adda718021f6e63815fc691540753c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 337a1b694023bfba9376c461255979d944330c5f
+ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68074207"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "70908325"
 ---
 # <a name="validate-query-and-change-json-data-with-built-in-functions-sql-server"></a>Проверка, построение запросов и изменение данных JSON с помощью встроенных функций (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -34,62 +34,151 @@ ms.locfileid: "68074207"
 -   [JSON_MODIFY](#MODIFY) обновляет значение свойства в строке JSON и возвращает обновленную строку JSON.  
  
 ## <a name="json-text-for-the-examples-on-this-page"></a>Текст JSON для примеров на этой странице
-Примеры, представленные на этой странице, используют следующий текст в формате JSON, который содержит сложный элемент.
 
-```sql 
-DECLARE @jsonInfo NVARCHAR(MAX)
+В примерах на этой странице используется текст JSON, аналогичный содержимому в следующем примере:
 
-SET @jsonInfo=N'{  
-     "info":{    
-       "type":1,  
-       "address":{    
-         "town":"Bristol",  
-         "county":"Avon",  
-         "country":"England"  
-       },  
-       "tags":["Sport", "Water polo"]  
-    },  
-    "type":"Basic"  
- }' 
+```json
+{
+  "id": "WakefieldFamily",
+  "parents": [
+      { "familyName": "Wakefield", "givenName": "Robin" },
+      { "familyName": "Miller", "givenName": "Ben" }
+  ],
+  "children": [
+      {
+        "familyName": "Merriam",
+        "givenName": "Jesse",
+        "gender": "female",
+        "grade": 1,
+        "pets": [
+            { "givenName": "Goofy" },
+            { "givenName": "Shadow" }
+        ]
+      },
+      { 
+        "familyName": "Miller",
+         "givenName": "Lisa",
+         "gender": "female",
+         "grade": 8 }
+  ],
+  "address": { "state": "NY", "county": "Manhattan", "city": "NY" },
+  "creationDate": 1431620462,
+  "isRegistered": false
+}
+```
+
+Этот документ JSON, содержащий вложенные сложные элементы, хранится в следующем образце таблицы:
+
+```sql
+CREATE TABLE Families (
+   id int identity constraint PK_JSON_ID primary key,
+   doc nvarchar(max)
+)
 ``` 
 
 ##  <a name="ISJSON"></a> Проверка строки JSON с помощью функции ISJSON  
  Функция **ISJSON** проверяет наличие допустимых данных JSON в строке.  
   
-В следующем примере возвращаются строки, в которых столбец `json_col` содержит допустимые данные JSON.  
+В приведенном ниже примере возвращаются строки, в которых столбец JSON содержит допустимый текст JSON. Обратите внимание, что без явного ограничения JSON в столбце NVARCHAR можно ввести любой текст:  
   
 ```sql  
-SELECT id, json_col
-FROM tab1
-WHERE ISJSON(json_col) > 0 
+SELECT *
+FROM Families
+WHERE ISJSON(doc) > 0 
 ```  
 
 Дополнительные сведения см. в разделе [ISJSON (Transact-SQL)](../../t-sql/functions/isjson-transact-sql.md).  
   
 ##  <a name="VALUE"></a> Для извлечения значения из строки JSON используется функция JSON_VALUE  
-Функция **JSON_VALUE** извлекает скалярное значение из строки JSON.  
-  
-В следующем примере значение вложенного свойства JSON `town` извлекается в локальную переменную.  
-  
+Функция **JSON_VALUE** извлекает скалярное значение из строки JSON. Следующий запрос вернет документы, в которых поле JSON `id` соответствует значению `AndersenFamily`, с упорядочением по полям JSON `city` и `state`:
+
 ```sql  
-SET @town = JSON_VALUE(@jsonInfo, '$.info.address.town')  
+SELECT JSON_VALUE(f.doc, '$.id')  AS Name, 
+       JSON_VALUE(f.doc, '$.address.city') AS City,
+       JSON_VALUE(f.doc, '$.address.county') AS County
+FROM Families f 
+WHERE JSON_VALUE(f.doc, '$.id') = N'AndersenFamily'
+ORDER BY JSON_VALUE(f.doc, '$.address.city') DESC, JSON_VALUE(f.doc, '$.address.state') ASC
 ```  
-  
+
+Результаты этого запроса показаны в приведенной ниже таблице.
+
+| Имя | Город | Округ |
+| --- | --- | --- |
+| AndersenFamily | NY | Manhattan |
+
 Дополнительные сведения см. в разделе [JSON_VALUE (Transact-SQL)](../../t-sql/functions/json-value-transact-sql.md).  
   
 ##  <a name="QUERY"></a> Для извлечения объекта или массива из строки JSON используется функция JSON_QUERY  
-Функция **JSON_QUERY** извлекает объект или массив из строки JSON.  
- 
-В следующем примере показано, как можно вернуть фрагмент JSON в результатах запроса.  
+
+Функция **JSON_QUERY** извлекает объект или массив из строки JSON. В следующем примере показано, как можно вернуть фрагмент JSON в результатах запроса.  
   
-```sql  
-SELECT FirstName, LastName, JSON_QUERY(jsonInfo,'$.info.address') AS Address
-FROM Person.Person
-ORDER BY LastName
+```sql
+SELECT JSON_QUERY(f.doc, '$.address') AS Address,
+       JSON_QUERY(f.doc, '$.parents') AS Parents,
+       JSON_QUERY(f.doc, '$.parents[0]') AS Parent0
+FROM Families f 
+WHERE JSON_VALUE(f.doc, '$.id') = N'AndersenFamily'
 ```  
-  
+Результаты этого запроса показаны в приведенной ниже таблице.
+
+| Адрес | Parents | Parent0 |
+| --- | --- | --- |
+| { "state": "NY", "county": "Manhattan", "city": "NY" } | [{ "familyName": "Wakefield", "givenName": "Robin" }, {"familyName": "Miller", "givenName": "Ben" } ]| { "familyName": "Wakefield", "givenName": "Robin" } |
+
 Дополнительные сведения см. в разделе [JSON_QUERY (Transact-SQL)](../../t-sql/functions/json-query-transact-sql.md).  
-  
+
+## <a name="parse-nested-json-collections"></a>Анализ вложенных коллекций JSON
+
+Функция `OPENJSON` позволяет преобразовать вложенный массив JSON в набор строк, а затем присоединить его к родительскому элементу. Например, можно вернуть все документы о семьях и присоединить их к объектам `children`, которые хранятся в виде внутреннего массива JSON:
+
+```sql
+SELECT JSON_VALUE(f.doc, '$.id')  AS Name, 
+       JSON_VALUE(f.doc, '$.address.city') AS City,
+       c.givenName, c.grade
+FROM Families f
+        CROSS APPLY OPENJSON(f.doc, '$.children')
+            WITH(grade int, givenName nvarchar(100))  c
+```
+
+Результаты этого запроса показаны в приведенной ниже таблице.
+
+| Имя | Город | givenName | grade |
+| --- | --- | --- | --- |
+| AndersenFamily | NY | Jesse | 1 |
+| AndersenFamily | NY | Lisa | 8 |
+
+В результате мы получаем две строки, так как одна родительская строка объединена с двумя дочерними строками, созданными путем анализа двух элементов дочернего подмассива. Функция `OPENJSON` анализирует фрагмент `children` из столбца `doc` и возвращает `grade` и `givenName` из каждого элемента в виде набора строк. Этот набор строк можно объединить с родительским документом.
+ 
+## <a name="query-nested-hierarchical-json-sub-arrays"></a>Запрос вложенных иерархических подмассивов JSON
+
+Вы можете использовать несколько вызовов `CROSS APPLY OPENJSON` для запроса вложенных структур JSON. В документе JSON, используемом в этом примере, есть вложенный массив с именем `children`, каждый дочерний элемент которого имеет вложенный массив `pets`. Следующий запрос будет анализировать дочерние элементы из каждого документа, возвращать каждый объект массива в виде строки, а затем анализировать массив `pets`:
+
+```sql
+SELECT  familyName,
+    c.givenName AS childGivenName,
+    c.firstName AS childFirstName,
+    p.givenName AS petName 
+FROM Families f 
+    CROSS APPLY OPENJSON(f.doc) 
+        WITH (familyName nvarchar(100), children nvarchar(max) AS JSON)
+        CROSS APPLY OPENJSON(children) 
+        WITH (givenName nvarchar(100), firstName nvarchar(100), pets nvarchar(max) AS JSON) as c
+            OUTER APPLY OPENJSON (pets)
+            WITH (givenName nvarchar(100))  as p
+```
+
+Первый вызов `OPENJSON` вернет фрагмент массива `children` с помощью предложения AS JSON. Этот фрагмент массива будет передан во вторую функцию `OPENJSON`, которая вернет `givenName`, `firstName` каждого дочернего элемента, а также массив `pets`. Массив `pets` будет передан в третью функцию `OPENJSON`, которая вернет значение `givenName` для домашнего животного.
+Результаты этого запроса показаны в приведенной ниже таблице.
+
+| familyName | childGivenName | childFirstName | petName |
+| --- | --- | --- | --- |
+| AndersenFamily | Jesse | Merriam | Goofy |
+| AndersenFamily | Jesse | Merriam | Shadow |
+| AndersenFamily | Lisa | Miller| `NULL` |
+
+Корневой документ объединяется с двумя строками `children`, возвращаемыми при первом вызове `OPENJSON(children)`, в результате чего получаются две строки (или два кортежа). Затем каждая строка объединяется с новыми строками, созданными функцией `OPENJSON(pets)`, с помощью оператора `OUTER APPLY`. У Jesse два домашних животных, поэтому `(AndersenFamily, Jesse, Merriam)` объединяется с двумя строками, созданными для Goofy и Shadow. У Lisa нет домашних животных, поэтому функция `OPENJSON(pets)` не возвращает строк для этого кортежа. Однако, так как используется оператор `OUTER APPLY`, в столбце будет значение `NULL`. Если использовать `CROSS APPLY` вместо `OUTER APPLY`, Lisa не будет возвращаться в результатах из-за отсутствия строк домашних животных, которые можно было бы объединить с этим кортежем.
+
 ##  <a name="JSONCompare"></a> Сравнение JSON_VALUE и JSON_QUERY  
 Основное различие между **JSON_VALUE** и **JSON_QUERY** заключается в том, что **JSON_VALUE** возвращает скалярное значение, а **JSON_QUERY** возвращает объект или массив.  
   
@@ -113,7 +202,7 @@ ORDER BY LastName
 |**$.b [0]**|1|NULL или ошибка|  
 |**$.c**|hi|NULL или ошибка|  
   
-## <a name="test-jsonvalue-and-jsonquery-with-the-adventureworks-sample-database"></a>Тестирование JSON_VALUE и JSON_QUERY на образце базы данных AdventureWorks  
+## <a name="test-json_value-and-json_query-with-the-adventureworks-sample-database"></a>Тестирование JSON_VALUE и JSON_QUERY на образце базы данных AdventureWorks  
 Чтобы проверить работу встроенных функций, описанных в этой статье, запустите следующие примеры. Они обращаются к базе данных AdventureWorks. Сведения о получении AdventureWorks, а также о добавлении данных JSON для тестирования с помощью скрипта см. в разделе [Проверка встроенной поддержки JSON](json-data-sql-server.md#test-drive-built-in-json-support-with-the-adventureworks-sample-database).
   
 В следующих примерах столбец `Info` таблицы `SalesOrder_json` содержит текст в формате JSON.  

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: b3812746-14b0-4b22-809e-b4a95e1c8083
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 448870b31500b0a1f214b215d342ce27e3c36b61
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0b62c9aa125bf249ed3dc895055030feb8e178b1
+ms.sourcegitcommit: 26715b4dbef95d99abf2ab7198a00e6e2c550243
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67907903"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70284018"
 ---
 # <a name="create-a-publication-from-an-oracle-database"></a>Создание публикации из базы данных Oracle
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -117,32 +117,32 @@ ms.locfileid: "67907903"
   
 2.  Если удаленный распространитель не существует, настройте удаленный распространитель. Дополнительные сведения см. в статье [Configure Publishing and Distribution](../../../relational-databases/replication/configure-publishing-and-distribution.md).  
   
-3.  На удаленном распространителе, который будет использовать издатель Oracle, выполните хранимую процедуру [sp_adddistpublisher (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md). Задайте имя TNS (Transparent Network Substrate) экземпляра базы данных Oracle для **@publisher** и значение **ORACLE** или **ORACLE GATEWAY** для **@publisher_type** . `Specify` режим безопасности, используемый при соединении с издателем Oracle к удаленному распределителю [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] одним из следующих способов:  
+3.  На удаленном распространителе, который будет использовать издатель Oracle, выполните хранимую процедуру [sp_adddistpublisher (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md). Задайте имя TNS (Transparent Network Substrate) экземпляра базы данных Oracle для **\@publisher** и значение **ORACLE** или **ORACLE GATEWAY** для **\@publisher_type**. `Specify` режим безопасности, используемый при соединении с издателем Oracle к удаленному распределителю [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] одним из следующих способов:  
   
-    -   Чтобы по умолчанию использовать стандартную проверку подлинности Oracle, укажите значение **0** для **@security_mode** , имя входа административной схемы пользователей репликации, созданной во время настройки издателя Oracle, в параметре **@login** и пароль в параметре **@password** .  
+    -   Чтобы по умолчанию использовать стандартную проверку подлинности Oracle, укажите значение **0** в параметре **\@security_mode**, имя входа административной схемы пользователей репликации, созданной во время настройки издателя Oracle, в параметре **\@login** и пароль в параметре **\@password**.  
   
         > [!IMPORTANT]  
         >  По возможности предлагайте пользователям вводить учетные данные системы безопасности во время выполнения приложения. При хранении учетных данных в файле скрипта необходимо защитить этот файл во избежание несанкционированного доступа.  
   
-    -   Чтобы использовать проверку подлинности Windows укажите в параметре **@security_mode** для **@security_mode** .  
+    -   Чтобы использовать проверку подлинности Windows, укажите в параметре **\@security_mode** значение **1**.  
   
         > [!NOTE]  
         >  Чтобы использовать проверку подлинности Windows, на сервере Oracle должны быть разрешены соединения с помощью учетных данных Windows (дополнительные сведения см. в документации Oracle). Кроме того, необходимо войти в систему с той же учетной записью Microsoft Windows, которая была указана для схемы администратора репликации.  
   
 4.  Создайте задание агента чтения журнала для базы данных публикации.  
   
-    -   Если неизвестно, существует ли задание агента чтения журнала для опубликованной базы данных, выполните хранимую процедуру [sp_helplogreader_agent (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-helplogreader-agent-transact-sql.md) на распространителе, который используется издателем Oracle в базе данных распространителя. В параметре **@publisher** . Если результирующий набор пуст, необходимо создать задание агента чтения журнала.  
+    -   Если неизвестно, существует ли задание агента чтения журнала для опубликованной базы данных, выполните хранимую процедуру [sp_helplogreader_agent (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-helplogreader-agent-transact-sql.md) на распространителе, который используется издателем Oracle в базе данных распространителя. В параметре **\@publisher** укажите имя издателя Oracle. Если результирующий набор пуст, необходимо создать задание агента чтения журнала.  
   
     -   Если агент чтения журнала для базы данных публикации уже существует, переходите к шагу 5.  
   
-    -   На распространителе, который используется издателем Oracle в базе данных распространителя, выполните хранимую процедуру [sp_addlogreader_agent (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md). Укажите учетные данные Windows, с которыми будет запущен агент, в качестве значений параметров **@job_login** и **@job_password** .  
+    -   На распространителе, который используется издателем Oracle в базе данных распространителя, выполните хранимую процедуру [sp_addlogreader_agent (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md). Укажите учетные данные Windows, с которыми будет запущен агент, в качестве значений параметров **\@job_login** и **\@job_password**.  
   
         > [!NOTE]  
-        >  Параметр **@job_login** должен соответствовать имени входа, заданному на шаге 3. Не указывайте сведения о безопасности издателя. Агент чтения журнала соединяется с издателем с помощью сведений о безопасности издателя, указанных на шаге 3.  
+        >  Параметр **\@job_login** должен соответствовать имени входа, заданному в шаге 3. Не указывайте сведения о безопасности издателя. Агент чтения журнала соединяется с издателем с помощью сведений о безопасности издателя, указанных на шаге 3.  
   
 5.  Чтобы создать публикацию, на распространителе в базе данных распространителя выполните хранимую процедуру [sp_addpublication (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md). Дополнительные сведения см. в статье [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md).  
   
-6.  На распространителе в базе данных распространителя выполните процедуру [sp_addpublication_snapshot (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md). Укажите имя публикации, используемое на шаге 4, в параметре **@publication** , а учетные данные Windows, с которыми работает агент моментальных снимков, — в параметрах **@job_name** и **@password** . Чтобы использовать стандартную проверку подлинности Oracle при подключении к издателю, требуется также указать значение **0** для **@publisher_security_mode** и сведения об имени входа Oracle для параметров **@publisher_login** и **@publisher_password** . Будет создано задание агента моментальных снимков для публикации.  
+6.  На распространителе в базе данных распространителя выполните процедуру [sp_addpublication_snapshot (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md). Укажите имя публикации, используемое в шаге 4, в параметре **\@publication**, а учетные данные Windows, с которыми работает агент моментальных снимков, — в параметрах **\@job_name** и **\@password**. Чтобы использовать стандартную проверку подлинности Oracle при подключении к издателю, требуется также указать значение **0** в параметре **\@publisher_security_mode** и сведения об имени входа Oracle в параметрах **\@publisher_login** и **\@publisher_password**. Будет создано задание агента моментальных снимков для публикации.  
   
 ## <a name="see-also"></a>См. также:  
  [Настройка издателя Oracle](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)   

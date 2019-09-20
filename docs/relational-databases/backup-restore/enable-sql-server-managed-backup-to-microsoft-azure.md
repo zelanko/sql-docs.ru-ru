@@ -1,5 +1,5 @@
 ---
-title: Включение управляемого резервного копирования SQL Server в Microsoft Azure | Документация Майкрософт
+title: Включение управляемого резервного копирования SQL Server в Azure | Документация Майкрософт
 ms.custom: ''
 ms.date: 10/03/2016
 ms.prod: sql
@@ -10,74 +10,103 @@ ms.topic: conceptual
 ms.assetid: 68ebb53e-d5ad-4622-af68-1e150b94516e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 281f1144fc9698fcb39d974167d02ce36602b4fd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0b778c458852adc2c26d62eb9d7ef8066b9fbb89
+ms.sourcegitcommit: ecb19d0be87c38a283014dbc330adc2f1819a697
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68089813"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70238735"
 ---
-# <a name="enable-sql-server-managed-backup-to-microsoft-azure"></a>Включение управляемого резервного копирования SQL Server в Microsoft Azure
+# <a name="enable-sql-server-managed-backup-to-azure"></a>Включение управляемого резервного копирования SQL Server в Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   В этом разделе описано, как включить [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] с параметрами по умолчанию на уровне базы данных и экземпляра. Здесь также объясняется, как включить уведомления по электронной почте и как отслеживать резервное копирование.  
   
  В этом руководстве используется Azure PowerShell. Перед началом работы с руководством [скачайте и установите Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/).  
   
 > [!IMPORTANT]  
->  Если также требуется включить дополнительные параметры или использовать настраиваемое расписание, выполните эти настройки, прежде чем включать [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Дополнительные сведения см. в статье [Configure Advanced Options for SQL Server Managed Backup to Microsoft Azure](../../relational-databases/backup-restore/configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure.md).  
+>  Если также требуется включить дополнительные параметры или использовать настраиваемое расписание, выполните эти настройки, прежде чем включать [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Дополнительные сведения см. в статье [Настройка дополнительных параметров управляемого резервного копирования SQL Server в Azure](../../relational-databases/backup-restore/configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure.md).  
   
-## <a name="enable-and-configure-includesssmartbackupincludesss-smartbackup-mdmd-with-default-settings"></a>Как включить и настроить [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] с параметрами по умолчанию  
-  
-#### <a name="create-the-azure-blob-container"></a>Создание контейнера BLOB-объектов Azure  
-  
-1.  **Оформите подписку Azure**. Если у вас уже есть подписка Azure, перейдите к следующему шагу. В противном случае вы можете начать работу с [бесплатной пробной версией](https://azure.microsoft.com/pricing/free-trial/) или просмотреть [варианты приобретения](https://azure.microsoft.com/pricing/purchase-options/).  
-  
-2.  **Создайте учетную запись хранения Azure**. Если у вас уже есть учетная запись хранения, перейдите к следующему шагу. В противном случае можно создать учетную запись хранения с помощью [портала управления Azure](https://manage.windowsazure.com/) или Azure PowerShell. Следующая команда `New-AzureStorageAccount` создает учетную запись хранения с именем `managedbackupstorage` в восточной части США.  
-  
-    ```powershell  
-    New-AzureStorageAccount -StorageAccountName "managedbackupstorage" -Location "EAST US"  
-    ```  
-  
-     Дополнительные сведения об учетных записях хранения см. в статье [Об учетных записях хранения Azure](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/).  
-  
-3.  **Создайте контейнер больших двоичных объектов для файлов резервных копий.** Контейнер больших двоичных объектов можно создать на портале управления Azure или с помощью Azure PowerShell. Следующая команда `New-AzureStorageContainer` создает контейнер BLOB-объектов с именем `backupcontainer` в учетной записи хранения `managedbackupstorage` .  
-  
-    ```powershell  
-    $context = New-AzureStorageContext -StorageAccountName managedbackupstorage -StorageAccountKey (Get-AzureStorageKey -StorageAccountName managedbackupstorage).Primary  
-    New-AzureStorageContainer -Name backupcontainer -Context $context  
-    ```  
-  
-4.  **Создайте подписанный URL-адрес (SAS)** . Для доступа к контейнеру необходимо создать SAS. Это можно сделать с помощью кода и Azure PowerShell. Следующая команда `New-AzureStorageContainerSASToken` создает маркер SAS для контейнера BLOB-объектов `backupcontainer` , срок действия которого истекает через год.  
-  
-  ```powershell  
-  $context = New-AzureStorageContext -StorageAccountName managedbackupstorage -StorageAccountKey (Get-AzureStorageKey -StorageAccountName managedbackupstorage).Primary   
-  New-AzureStorageContainerSASToken -Name backupcontainer -Permission rwdl -ExpiryTime (Get-Date).AddYears(1) -FullUri -Context $context  
-  ```  
+## <a name="create-the-azure-blob-container"></a>Создание контейнера BLOB-объектов Azure
 
-В Azure используйте следующую команду:
-  ```powershell
-  Connect-AzAccount
-  Set-AzContext -SubscriptionId "YOURSUBSCRIPTIONID"
-  $StorageAccountKey = (Get-AzStorageAccountKey -ResourceGroupName YOURRESOURCEGROUPFORTHESTORAGE -Name managedbackupstorage)[0].Value
-  $context = New-AzureStorageContext -StorageAccountName managedbackupstorage -StorageAccountKey $StorageAccountKey 
-  New-AzureStorageContainerSASToken -Name backupcontainer -Permission rwdl -ExpiryTime (Get-Date).AddYears(1) -FullUri -Context $context
-  ```  
+Для этой процедуры требуется учетная запись Azure. Если у вас уже есть учетная запись, перейдите к следующему шагу. В противном случае вы можете начать работу с [бесплатной пробной версией](https://azure.microsoft.com/pricing/free-trial/) или просмотреть [варианты приобретения](https://azure.microsoft.com/pricing/purchase-options/).
+
+Дополнительные сведения об учетных записях хранения см. в статье [Об учетных записях хранения Azure](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/). 
+
+#### <a name="azure-clitabazure-cli"></a>[Azure CLI](#tab/azure-cli)
+
+1. Войдите в учетную запись Azure.
+
+    ```azurecli-interactive
+    az login
+    ```
   
-Выходные данные этой команды будут содержать как URL-адрес контейнера, так и маркер SAS. Ниже представлен пример такого кода:  
+1. Создайте учетную запись хранения Azure. Если у вас уже есть учетная запись хранения, перейдите к следующему шагу. Приведенная ниже команда создает учетную запись хранения с именем `<backupStorage>` в восточной части США.  
+  
+    ```azurecli-interactive
+    az storage account create -n <backupStorage> -l "eastus" --resource-group <resourceGroup>
+    ```  
+    
+1. Создайте контейнер больших двоичных объектов с именем `<backupContainer>` для файлов резервных копий.
+  
+    ```azurecli-interactive
+    $keys = az storage account keys list --account-name <backupStorage> --resource-group <resourceGroup> | ConvertFrom-Json
+    az storage container create --name <backupContainer> --account-name <backupStorage> --account-key $keys[0].value 
+    ```  
+  
+1. Создайте подписанный URL-адрес (SAS) для доступа к контейнеру. Приведенная ниже команда создает маркер SAS для контейнера больших двоичных объектов `<backupContainer>`, срок действия которого истекает через год.  
+  
+    ```azurecli-interactive 
+    az storage container generate-sas --name <backupContainer> --account-name <backupStorage> --account-key $keys[0].value
+    ```
+
+#### <a name="powershelltabazure-powershell"></a>[PowerShell](#tab/azure-powershell)
+
+1. С помощью приведенной ниже команды выполняется вход в учетную запись Azure.
+
+    ```azurepowershell-interactive
+    Connect-AzAccount
+    Set-AzContext -SubscriptionId "<subscriptionId>"
+    ```
+  
+1. Создайте учетную запись хранения Azure. Если у вас уже есть учетная запись хранения, перейдите к следующему шагу. Приведенная ниже команда создает учетную запись хранения с именем `<backupStorage>` в восточной части США.  
+  
+    ```azurepowershell-interactive
+    New-AzStorageAccount -StorageAccountName <backupStorage> -Location "EAST US" -ResourceGroupName <resourceGroup> -SkuName Standard_GRS
+    ```   
+  
+1. Создайте контейнер больших двоичных объектов с именем `<backupContainer>` для файлов резервных копий.  
+  
+    ```azurepowershell-interactive
+    $context = New-AzStorageContext -StorageAccountName <backupStorage> -StorageAccountKey (Get-AzStorageAccountKey -Name <backupStorage> -ResourceGroupName <resourceGroup>).Value[0]  
+    New-AzStorageContainer -Name <backupContainer> -Context $context  
+    ```  
+  
+1. Создайте подписанный URL-адрес (SAS) для доступа к контейнеру. Приведенная ниже команда создает маркер SAS для контейнера больших двоичных объектов `<backupContainer>`, срок действия которого истекает через год.
+  
+    ```azurepowershell-interactive 
+    New-AzStorageContainerSASToken -Name <backupContainer> -Permission rwdl -ExpiryTime (Get-Date).AddYears(1) -FullUri -Context $context 
+    ```
+
+* * *
+
+> [!NOTE]
+> Эти действия также можно выполнить на [портале Azure](https://portal.azure.com/).
+
+Выходные данные будут содержать URL-адрес контейнера, маркер SAS или и то, и другое. Ниже представлен пример такого кода:  
   
   `https://managedbackupstorage.blob.core.windows.net/backupcontainer?sv=2014-02-14&sr=c&sig=xM2LXVo1Erqp7LxQ%9BxqK9QC6%5Qabcd%9LKjHGnnmQWEsDf%5Q%se=2015-05-14T14%3B93%4V20X&sp=rwdl`
   
-В предыдущем примере разделите URL-адрес контейнера от маркера SAS на вопросительном знаке (не включая вопросительный знак). Например, предыдущие выходные данные будут разделены на следующие два значения.  
+Если URL-адрес включен, отделите его от маркера SAS на вопросительном знаке (не включая вопросительный знак). Например, предыдущие выходные данные будут разделены на следующие два значения.  
   
 |||  
 |-|-|  
-|**URL-адрес контейнера:**|https://managedbackupstorage.blob.core.windows.net/backupcontainer|  
-|**Маркер SAS:**|sv=2014-02-14&sr=c&sig=xM2LXVo1Erqp7LxQ%9BxqK9QC6%5Qabcd%9LKjHGnnmQWEsDf%5Q%se=2015-05-14T14%3B93%4V20X&sp=rwdl|  
+|**URL-адрес контейнера**|https://managedbackupstorage.blob.core.windows.net/backupcontainer|  
+|**Маркер SAS**|sv=2014-02-14&sr=c&sig=xM2LXVo1Erqp7LxQ%9BxqK9QC6%5Qabcd%9LKjHGnnmQWEsDf%5Q%se=2015-05-14T14%3B93%4V20X&sp=rwdl|  
 |||
   
 Запишите URL-адрес контейнера и SAS для использования при создании учетных данных (CREDENTIAL) SQL. Дополнительные сведения о SAS см. в статье [Подписанные URL-адреса. Часть 1. Общие сведения о модели SAS](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/).  
   
-#### <a name="enable-includesssmartbackupincludesss-smartbackup-mdmd"></a>Как включить [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]  
+## <a name="enable-managed-backup-to-azure"></a>Включение управляемого резервного копирования в Azure
   
 1.  **Создайте учетные данные SQL для URL-адреса SAS**. Используйте маркер SAS, чтобы создать учетные данные SQL для URL-адреса контейнера больших двоичных объектов. В SQL Server Management Studio с помощью указанного ниже запроса Transact-SQL создайте учетные данные для URL-адреса контейнера BLOB-объектов, основываясь на следующем примере:  
   
@@ -97,7 +126,7 @@ ms.locfileid: "68089813"
     >  Чтобы включить управляемое резервное копирование на уровне экземпляра, укажите значение `NULL` для параметра `database_name` .  
   
     ```sql  
-    Use msdb;  
+    USE msdb;  
     GO  
     EXEC msdb.managed_backup.sp_backup_config_basic   
      @enable_backup = 1,   
@@ -111,7 +140,7 @@ ms.locfileid: "68089813"
   
 5.  **Просмотр конфигурации расширенных событий по умолчанию.** Просмотрите параметры расширенных событий, выполнив приведенную ниже инструкцию Transact-SQL.  
   
-    ```  
+    ```sql
     SELECT * FROM msdb.managed_backup.fn_get_current_xevent_settings()  
     ```  
   
@@ -125,21 +154,20 @@ ms.locfileid: "68089813"
   
     3.  **Включите уведомления по электронной почте для получения ошибок и предупреждений, связанных с резервными копиями**. В окне запроса выполните следующие инструкции Transact-SQL:  
   
-        ```  
+        ```sql
         EXEC msdb.managed_backup.sp_set_parameter  
         @parameter_name = 'SSMBackup2WANotificationEmailIds',  
         @parameter_value = '<email1;email2>'  
-  
         ```  
   
-7.  **Просмотр файлов резервных копий в учетной записи хранения Microsoft Azure**. Подключитесь к учетной записи хранения из SQL Server Management Studio либо с помощью портала управления Azure. Все файлы резервных копий отобразятся в указанном контейнере. Обратите внимание, что база данных и резервная копия журнала могут отобразиться в течение 5 минут после включения [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] для базы данных.  
+7.  **Просмотр файлов резервных копий в учетной записи хранения Azure** Подключитесь к учетной записи хранения из SQL Server Management Studio либо с портала Azure. Все файлы резервных копий отобразятся в указанном контейнере. Обратите внимание, что база данных и резервная копия журнала могут отобразиться в течение 5 минут после включения [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] для базы данных.  
   
 8.  **Мониторинг состояния работоспособности**.  Можно вести мониторинг с помощью настроенных ранее уведомлений по электронной почте либо активно просматривать события в журнале. Ниже приведены примеры инструкций Transact-SQL, которые используются для просмотра событий.  
   
     ```sql  
     --  view all admin events  
-    Use msdb;  
-    Go  
+    USE msdb;  
+    GO  
     DECLARE @startofweek datetime  
     DECLARE @endofweek datetime  
     SET @startofweek = DATEADD(Day, 1-DATEPART(WEEKDAY, CURRENT_TIMESTAMP), CURRENT_TIMESTAMP)   
@@ -157,21 +185,19 @@ ms.locfileid: "68089813"
   
     SELECT * from @eventresult  
     WHERE event_type LIKE '%admin%'  
-  
     ```  
   
     ```sql  
     -- to enable debug events  
-    Use msdb;  
-    Go  
-             EXEC managed_backup.sp_set_parameter 'FileRetentionDebugXevent', 'True'  
-  
+    USE msdb;  
+    GO  
+    EXEC managed_backup.sp_set_parameter 'FileRetentionDebugXevent', 'True'  
     ```  
   
     ```sql  
     --  View all events in the current week  
-    Use msdb;  
-    Go  
+    USE msdb;  
+    GO  
     DECLARE @startofweek datetime  
     DECLARE @endofweek datetime  
     SET @startofweek = DATEADD(Day, 1-DATEPART(WEEKDAY, CURRENT_TIMESTAMP), CURRENT_TIMESTAMP)   
@@ -180,7 +206,7 @@ ms.locfileid: "68089813"
     EXEC managed_backup.sp_get_backup_diagnostics @begin_time = @startofweek, @end_time = @endofweek;  
     ```
   
- Шаги, описанные в этом разделе, специально предназначены для первой настройки [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] в базе данных. Существующие конфигурации можно изменять с помощью тех же системных хранимых процедур и указывать новые значения.  
+Шаги, описанные в этом разделе, специально предназначены для первой настройки [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] в базе данных. Существующие конфигурации можно изменять с помощью тех же системных хранимых процедур и указывать новые значения.  
   
-## <a name="see-also"></a>См. также:  
- [Управляемое резервное копирование SQL Server в Microsoft Azure](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  
+## <a name="see-also"></a>См. также раздел  
+ [Управляемое резервное копирование SQL Server в Azure](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  

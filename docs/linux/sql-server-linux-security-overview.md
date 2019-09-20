@@ -3,17 +3,17 @@ title: Ограничения системы безопасности для SQL
 description: В этой статье описываются ограничения SQL Server на Linux.
 author: VanMSFT
 ms.author: vanto
-ms.date: 01/30/2018
+ms.date: 09/12/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 64da74cc-14bf-4636-a55e-8cc1fce2aaff
-ms.openlocfilehash: 9f54197c8613293b36c1eb1ec362a8ed4db835e4
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 8a9094977597fd7c2d76f2c80a1773c176b9c6dc
+ms.sourcegitcommit: 77293fb1f303ccfd236db9c9041d2fb2f64bce42
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68065118"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929810"
 ---
 # <a name="security-limitations-for-sql-server-on-linux"></a>Ограничения системы безопасности для SQL Server на Linux
 
@@ -21,7 +21,7 @@ ms.locfileid: "68065118"
 
 SQL Server на Linux в настоящее время имеет указанные ниже ограничения.
 
-* Применяется стандартная политика паролей. MUST_CHANGE — это единственный параметр, который можно настроить.  
+* Применяется стандартная политика паролей. MUST_CHANGE — это единственный параметр, который можно настроить. Параметр CHECK_POLICY не поддерживается.
 * Расширенное управление ключами не поддерживается. 
 * Использование ключей, хранящихся в Azure Key Vault, не поддерживается.
 * SQL Server создает собственный самозаверяющий сертификат для шифрования подключений. В SQL Server можно настроить использование предоставляемого пользователем сертификата для TLS. 

@@ -1,7 +1,7 @@
 ---
 title: CREATE TABLE (граф SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 05/04/2017
+ms.date: 09/09/2019
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -32,12 +32,12 @@ ms.assetid: ''
 author: shkale-msft
 ms.author: shkale
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cc76bc81bc1f8573430bec9cdeba62b04e25167f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 37e374d44fc6013c1cdf6b9594d709ff4282f7aa
+ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68116946"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70846724"
 ---
 # <a name="create-table-sql-graph"></a>CREATE TABLE (граф SQL)
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -54,9 +54,44 @@ ms.locfileid: "68116946"
 ```  
 CREATE TABLE   
     { database_name.schema_name.table_name | schema_name.table_name | table_name }
-    ( { <column_definition> } [ ,...n ] )   
+    ( { <column_definition> } 
+       | <computed_column_definition>
+       | <column_set_definition>
+       | [ <table_constraint> ] [ ,... n ]
+       | [ <table_index> ] }
+          [ ,...n ]
+    )   
     AS [ NODE | EDGE ]
-[ ; ]  
+    [ ON { partition_scheme_name ( partition_column_name )
+           | filegroup
+           | "default" } ]
+[ ; ] 
+
+< table_constraint > ::=
+[ CONSTRAINT constraint_name ]
+{
+    { PRIMARY KEY | UNIQUE }
+        [ CLUSTERED | NONCLUSTERED ]
+        (column [ ASC | DESC ] [ ,...n ] )
+        [
+            WITH FILLFACTOR = fillfactor
+           |WITH ( <index_option> [ , ...n ] )
+        ]
+        [ ON { partition_scheme_name (partition_column_name)
+            | filegroup | "default" } ]
+    | FOREIGN KEY
+        ( column [ ,...n ] )
+        REFERENCES referenced_table_name [ ( ref_column [ ,...n ] ) ]
+        [ ON DELETE { NO ACTION | CASCADE | SET NULL | SET DEFAULT } ]
+        [ ON UPDATE { NO ACTION | CASCADE | SET NULL | SET DEFAULT } ]
+        [ NOT FOR REPLICATION ]
+    | CONNECTION
+        ( { node_table TO node_table } 
+          [ , {node_table TO node_table }]
+          [ , ...n ]
+        )
+        [ ON DELETE { NO ACTION | CASCADE } ]
+    | CHECK [ NOT FOR REPLICATION ] ( logical_expression )
 ```  
   
   
@@ -69,7 +104,7 @@ CREATE TABLE
  *schema_name*    
  Имя схемы, которой принадлежит новая таблица.  
   
- *table_name*    
+ *table_name*      
  Это имя таблицы узлов или граничной таблицы. Имена таблиц должны соответствовать правилам для [идентификаторов](../../relational-databases/databases/database-identifiers.md). Аргумент *table_name* может состоять не более чем из 128 символов, за исключением имен локальных временных таблиц (имена с префиксом из одного символа решетки #), длина которых не должна превышать 116 символов.  
   
  NODE   
@@ -77,6 +112,15 @@ CREATE TABLE
 
  EDGE  
  Создает граничную таблицу.  
+ 
+ *table_constraint*   
+ Задает свойства ограничений PRIMARY KEY, UNIQUE, FOREIGN KEY, CONNECTION или CHECK либо определения DEFAULT, добавленного в таблицу.
+ 
+ ON { partition_scheme | filegroup | "default" }    
+ Указывает схему секционирования или файловую группу, в которой хранится таблица. Если аргумент partition_scheme указан, таблица будет разбита на секции, хранимые в одной или нескольких файловых группах, указанных в аргументе partition_scheme. Если указан аргумент filegroup, таблица сохраняется в файловой группе с таким именем. Это должна быть существующая файловая группа в базе данных. Если указано значение "default" или параметр ON не определен вообще, таблица сохраняется в файловой группе по умолчанию. Механизм хранения таблицы, указанный в инструкции CREATE TABLE, изменить в дальнейшем невозможно.
+
+ ON {partition_scheme | filegroup | "default"}    
+ Также может указываться в ограничении PRIMARY KEY или UNIQUE. С помощью этих ограничений создаются индексы. Если указан аргумент filegroup, индекс сохраняется в файловой группе с таким именем. Если указано значение "default" или параметр ON не определен вообще, индекс сохраняется в той же файловой группе, что и таблица. Если ограничение PRIMARY KEY или UNIQUE создает кластеризованный индекс, страницы данных таблицы сохраняются в той же файловой группе, что и индекс. Если ограничение создает кластеризованный индекс (с помощью параметра CLUSTERED или другим способом), а указанный аргумент partition_scheme отличается от аргументов partition_scheme и filegroup из определения таблицы, либо, наоборот, принимается во внимание только определение ограничения, а все остальное не учитывается.
   
 ## <a name="remarks"></a>Remarks  
 Создание временной таблицы в качестве таблицы узлов или граничной таблицы не поддерживается.  
@@ -86,6 +130,8 @@ CREATE TABLE
 Stretch Database не поддерживается для таблицы узлов или граничной таблицы.
 
 Таблицы узлов или граничные таблицы не могут быть внешними (поддержка PolyBase для графовых таблиц отсутствует). 
+
+Несекционированную таблицу узлов графа или граничную таблицу невозможно преобразовать в секционированную. 
   
  
 ## <a name="examples"></a>Примеры  
@@ -119,7 +165,8 @@ Stretch Database не поддерживается для таблицы узл�
 ```
 
 
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также: 
+ [ALTER TABLE table_constraint](../../t-sql/statements/alter-table-table-constraint-transact-sql.md)   
  [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)   
  [INSERT (граф SQL)](../../t-sql/statements/insert-sql-graph.md)  
  [Graph Processing with SQL Server 2017](../../relational-databases/graphs/sql-graph-overview.md) (Работа с графами в SQL Server 2017)

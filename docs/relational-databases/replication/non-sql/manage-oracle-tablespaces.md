@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: b8ea6c3b-01d6-4efc-bbfb-03b264530bbd
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e132bea4e0926719092d9a7055735210e2b5908b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6320d7192d2493486779a1b6ac433f78a45114ca
+ms.sourcegitcommit: 26715b4dbef95d99abf2ab7198a00e6e2c550243
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67942752"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70276544"
 ---
 # <a name="manage-oracle-tablespaces"></a>Управление табличными пространствами Oracle
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,15 +32,15 @@ ms.locfileid: "67942752"
   
 -   Используйте [sp_changearticle (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md). Чтобы использовать **sp_changearticle**, укажите следующее:  
   
-    -   имя издателя Oracle в качестве параметра **@publisher** .  
+    -   имя издателя Oracle в качестве параметра **\@publisher**;  
   
-    -   имя публикации Oracle в качестве параметра **@publication** .  
+    -   имя публикации Oracle в качестве параметра **\@publication**;  
   
-    -   имя статьи в качестве параметра **@article** .  
+    -   имя статьи в качестве параметра **\@article**;  
   
-    -   значение tablespace для параметра **@property** .  
+    -   значение tablespace для параметра **\@property**;  
   
-    -   имя табличного пространства для параметра **@value** .  
+    -   имя табличного пространства для параметра **\@value**.  
   
 ## <a name="see-also"></a>См. также:  
  [Настройка издателя Oracle](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)   

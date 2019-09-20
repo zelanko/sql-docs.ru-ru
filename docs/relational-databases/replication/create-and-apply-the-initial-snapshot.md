@@ -14,12 +14,12 @@ ms.assetid: 742727a1-5189-44ec-b3ae-6fd7aa1f5347
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 65d0b89dfc2862c63d9fbb8f81d4145aba9d391f
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 7b55822e011b03044d9fafad4ff2b30884ea5ec2
+ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768640"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70846709"
 ---
 # <a name="create-and-apply-the-initial-snapshot"></a>Создание и применение исходного моментального снимка
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -90,13 +90,13 @@ ms.locfileid: "68768640"
 
 1.  Создайте моментальный снимок, публикацию слиянием или публикацию транзакций. Дополнительные сведения см. в разделе [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md).  
   
-2.  Выполните хранимую процедуру [sp_addpublication_snapshot (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md). Укажите параметр **@publication** и следующие параметры.  
+2.  Выполните хранимую процедуру [sp_addpublication_snapshot (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md). Укажите параметр **\@publication** и следующие параметры:  
   
-    -   **@job_login — указывает** учетные данные для проверки подлинности Windows, под которыми запускается агент моментальных снимков на распространителе.  
+    -   **\@job_login** — указывает учетные данные для проверки подлинности Windows, с которыми запускается агент моментальных снимков в распространителе.  
   
-    -   **@job_password** — пароль для указанных учетных данных Windows.  
+    -   **\@job_password** — пароль для указанных учетных данных Windows.  
   
-    -   (Необязательно) Значение **0** в параметре **@publisher_security_mode** , если агент при соединении с издателем будет использовать проверку подлинности SQL Server. В этом случае в параметрах **@publisher_login** и **@publisher_password** .  
+    -   (Необязательно) Значение **0** в параметре **\@publisher_security_mode**, если агент при соединении с издателем будет использовать проверку подлинности SQL Server. В этом случае в параметрах **\@publisher_login** и **\@publisher_password** нужно также указать данные имени входа для проверки подлинности SQL Server.  
   
     -   (Необязательно) Расписание синхронизации для задания агента моментальных снимков. Дополнительные сведения см. в разделе [Specify Synchronization Schedules](../../relational-databases/replication/specify-synchronization-schedules.md).  
   
@@ -105,7 +105,7 @@ ms.locfileid: "68768640"
   
 3.  Добавьте статьи к публикации. Дополнительные сведения см. в статье [определить статью](../../relational-databases/replication/publish/define-an-article.md).  
   
-4.  На издателе в базе данных публикации выполните хранимую процедуру [sp_startpublication_snapshot (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-startpublication-snapshot-transact-sql.md), указав в параметре **@publication** значение из шага 1.  
+4.  В издателе в базе данных публикации выполните хранимую процедуру [sp_startpublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-startpublication-snapshot-transact-sql.md), указав в параметре **\@publication** значение из шага 1.  
   
 ## <a name="apply-a-snapshot"></a>Применение моментального снимка  
 

@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sqlfreshmay19
 ms.technology: linux
 ms.assetid: eff8e226-185f-46d4-a3e3-e18b7a439e63
-ms.openlocfilehash: 056110966ece8e344320b73890dbead9d513230b
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: c10b97116cfde197a332d873fba5a807a2eb4ce9
+ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68085726"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "70910796"
 ---
 # <a name="install-sqlcmd-and-bcp-the-sql-server-command-line-tools-on-linux"></a>Установка программ командной строки SQL Server sqlcmd и bcp в Linux
 
@@ -197,7 +197,7 @@ brew install mssql-tools
 
 ## <a id="docker"></a> Docker
 
-Программы командной строки SQL Server включены в образ Docker. Если подключиться к образу с помощью интерактивной командной строки, можно запускать программы локально.
+Если [SQL Server выполняется в контейнере Docker](quickstart-install-connect-docker.md), программы командной строки SQL Server уже включены в образ контейнера SQL Server в Linux. Если подключиться к запущенному контейнеру с помощью интерактивной оболочки bash, можно запускать программы локально.
 
 ## <a name="offline-installation"></a>Автономная установка
 
