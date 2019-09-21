@@ -9,12 +9,12 @@ ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1655525fd9ec8acba80637a86936484859f85df2
-ms.sourcegitcommit: dacf6c57f6a2e3cf2005f3268116f3c609639905
+ms.openlocfilehash: da0adf179cb85368d78a06688cc34cfa28b232e1
+ms.sourcegitcommit: 0ea19d8e3bd9d91a416311e00a5fb0267d41949e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70878717"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71174266"
 ---
 # <a name="how-to-deploy-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-on-kubernetes"></a>Развертывание [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] на Kubernetes
 
@@ -148,9 +148,9 @@ azdata bdc create --accept-eula=yes
 | **CONTROLLER_PASSWORD** | Обязательно |Пароль для администратора кластера. |
 | **MSSQL_SA_PASSWORD** | Обязательно |Пароль пользователя SA (с правами системного администратора) для главного экземпляра SQL. |
 | **KNOX_PASSWORD** | Обязательно |Пароль для **привилегированного** пользователя Knox. Обратите внимание, что при настройке обычной проверки подлинности только пользователь, поддерживаемый для Knox, является **корневым**.|
-| **ACCEPT_EULA**| Требуется для первого использования `azdata`.| Никакое значение не требуется. При задании в качестве переменной среды применяет лицензионное соглашение как к SQL Server, так и к `azdata`. Если параметр не задан в качестве переменной среды, можно включить `--accept-eula` при первом использовании команды `azdata`.|
-| **DOCKER_USERNAME** | Необязательный | Имя пользователя для доступа к образам контейнера в случае, если они хранятся в частном репозитории. Дополнительные сведения о том, как использовать частный репозиторий Docker для развертывания кластеров больших данных, см. в разделе [Автономные развертывания](deploy-offline.md).|
-| **DOCKER_PASSWORD** | Необязательный |Пароль для доступа к указанному выше частному репозиторию. |
+| **ACCEPT_EULA**| Требуется для первого использования `azdata`.| Задайте значение "Да". При задании в качестве переменной среды применяет лицензионное соглашение как к SQL Server, так и к `azdata`. Если параметр не задан в качестве переменной среды, можно включить `--accept-eula=yes` при первом использовании команды `azdata`.|
+| **DOCKER_USERNAME** | Необязательно | Имя пользователя для доступа к образам контейнера в случае, если они хранятся в частном репозитории. Дополнительные сведения о том, как использовать частный репозиторий Docker для развертывания кластеров больших данных, см. в разделе [Автономные развертывания](deploy-offline.md).|
+| **DOCKER_PASSWORD** | Необязательно |Пароль для доступа к указанному выше частному репозиторию. |
 
 Эти переменные среды должны быть заданы до вызова **azdata bdc create**. Если какая-либо из переменных не задана, вам будет предложено ввести ее.
 
@@ -161,6 +161,7 @@ export CONTROLLER_USERNAME=admin
 export CONTROLLER_PASSWORD=<password>
 export MSSQL_SA_PASSWORD=<password>
 export KNOX_PASSWORD=<password>
+export ACCEPT_EULA=yes
 ```
 
 ```PowerShell
