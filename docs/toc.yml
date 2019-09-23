@@ -537,7 +537,7 @@
                       href: relational-databases/backup-restore/vdi-reference/iclientvirtualdevice-getcommand.md
                 - name: IClientVirtualDeviceSet2
                   items:
-                    - name: Close
+                    - name: Закрыть
                       href: relational-databases/backup-restore/vdi-reference/iclientvirtualdeviceset2-close.md
                     - name: CreateEx
                       href: relational-databases/backup-restore/vdi-reference/iclientvirtualdeviceset2-createex.md
@@ -565,7 +565,7 @@
                       href: relational-databases/backup-restore/vdi-reference/iservervirtualdeviceset2-allocatebuffer.md
                     - name: BeginConfiguration
                       href: relational-databases/backup-restore/vdi-reference/iservervirtualdeviceset2-beginconfiguration.md
-                    - name: Close
+                    - name: Закрыть
                       href: relational-databases/backup-restore/vdi-reference/iservervirtualdeviceset2-close.md
                     - name: EndConfiguration
                       href: relational-databases/backup-restore/vdi-reference/iservervirtualdeviceset2-endconfiguration.md
@@ -1643,7 +1643,7 @@
               href: relational-databases/tables/use-column-sets.md
             - name: 'Параметры, возвращающие табличные значения'
               href: relational-databases/tables/use-table-valued-parameters-database-engine.md
-        - name: "Ограничения Microsoft\_Edge"
+        - name: Ограничения границ
           href: relational-databases/tables/graph-edge-constraints.md
           items:
             - name: Создание
@@ -4183,8 +4183,12 @@
           href: sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md
         - name: Использование и сбор данных диагностики
           items:
-            - name: Приложение к конфиденциальности
-              href: sql-server/sql-server-privacy.md
+            - name: "Приложение к конфиденциальности в SQL\_Server"
+              items:
+                - name: "SQL Server\_2017 и более ранние версии"
+                  href: sql-server/sql-server-privacy.md
+                - name: "SQL\_Server\_2019"
+                  href: sql-server/sql-server-privacy-ver15.md
             - name: "Настройка использования SQL\_Server и данных диагностики"
               href: sql-server/usage-and-diagnostic-data-configuration-for-sql-server.md
             - name: Настройка использования средств и данных диагностики
@@ -6495,6 +6499,12 @@
   items:
     - name: Управление
       items:
+        - name: Ускорение восстановления базы данных
+          items:
+            - name: Обзор
+              href: relational-databases/accelerated-database-recovery-concepts.md
+            - name: Управление
+              href: relational-databases/accelerated-database-recovery-management.md
         - name: Центральные серверы управления
           href: relational-databases/administer-multiple-servers-using-central-management-servers.md
         - name: диспетчер конфигураций

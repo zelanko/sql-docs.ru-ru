@@ -10,12 +10,12 @@ ms.prod: sql
 ms.technology: linux
 helpviewer_keywords:
 - Linux, encrypted connections
-ms.openlocfilehash: 3f658ba8723b142f37763ea8b4f0c8f7b0c5d0e1
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 975a312988a7df4bdb4fb2858d7b0fcbe95cea33
+ms.sourcegitcommit: 6413b7495313830ad1ae5aefe0c09e8e7a284b07
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68077288"
+ms.lasthandoff: 09/16/2019
+ms.locfileid: "71016863"
 ---
 # <a name="encrypting-connections-to-sql-server-on-linux"></a>Шифрование соединений с SQL Server на Linux
 
@@ -69,7 +69,7 @@ ms.locfileid: "68077288"
         - **Windows**:  импортируйте PEM-файл в качестве сертификата в раздел "Текущий пользователь" -> "Доверенные корневые центры сертификации" -> "Сертификаты".
         - **macOS**: 
            - скопируйте сертификат в ```/usr/local/etc/openssl/certs```.
-           - Выполните следующую команду, чтобы получить хэш-значение: ```/usr/local/Cellar/openssql/1.0.2l/openssql x509 -hash -in mssql.pem -noout```.
+           - Выполните следующую команду, чтобы получить хэш-значение: ```/usr/local/Cellar/openssl/1.0.2l/openssl x509 -hash -in mssql.pem -noout```.
            - Переименуйте сертификат в value. Например: ```mv mssql.pem dc2dd900.0```. Убедитесь, что dc2dd900.0 указано в ```/usr/local/etc/openssl/certs```.
     
 -   **Примеры строк подключения** 
