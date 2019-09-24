@@ -1,5 +1,5 @@
 ---
-title: sys.dm_exec_describe_first_result_set_for_object (Transact-SQL) | Документация Майкрософт
+title: sys. DM _exec_describe_first_result_set_for_object (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,19 +18,19 @@ ms.assetid: 63b0fde7-95d7-4ad7-a219-a9feacf1bd89
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b3d08f031394522b0d9c9ab5f09bb6a79c4d5a01
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c500967b83581cc3bc108232f12c9a0f4d008da6
+ms.sourcegitcommit: 9221a693d4ab7ae0a7e2ddeb03bd0cf740628fd0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68097828"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71199334"
 ---
-# <a name="sysdmexecdescribefirstresultsetforobject-transact-sql"></a>sys.dm_exec_describe_first_result_set_for_object (Transact-SQL)
+# <a name="sysdm_exec_describe_first_result_set_for_object-transact-sql"></a>sys.dm_exec_describe_first_result_set_for_object (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  Данная функция динамического управления принимает @object_id как параметр и описывает метаданные первого результата для модуля с этим идентификатором. @object_id Указан идентификатор может быть [!INCLUDE[tsql](../../includes/tsql-md.md)] хранимой процедуры или [!INCLUDE[tsql](../../includes/tsql-md.md)] триггера. Если же передан идентификатор любого другого объекта (представления, функции, таблицы или процедуры CLR), то в столбцах ошибки результата будет содержаться ошибка.  
+  Эта функция динамического управления принимает @object_id в качестве параметра и описывает первый результирующий набор метаданных для модуля с таким идентификатором. Заданный параметр может быть идентификатором [!INCLUDE[tsql](../../includes/tsql-md.md)] хранимой процедуры или [!INCLUDE[tsql](../../includes/tsql-md.md)] триггера. @object_id Если же передан идентификатор любого другого объекта (представления, функции, таблицы или процедуры CLR), то в столбцах ошибки результата будет содержаться ошибка.  
   
- **sys.dm_exec_describe_first_result_set_for_object** имеет тот же результат определение набора, что [sys.dm_exec_describe_first_result_set &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md) и аналогичен [sp_ describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md).  
+ представление **sys. DM _exec_describe_first_result_set_for_object** имеет то же определение результирующего набора, что и [sys. DM _exec_describe_first_result_set &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md) , и аналогично [sp_describe_first_result_set &#40; Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md).  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,11 +43,11 @@ sys.dm_exec_describe_first_result_set_for_object
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *@object_id*  
- @object_id Из [!INCLUDE[tsql](../../includes/tsql-md.md)] хранимой процедуры или [!INCLUDE[tsql](../../includes/tsql-md.md)] триггера. @object_id является типом **int**.  
+ *\@object_id*  
+ Хранимой процедуры или[!INCLUDE[tsql](../../includes/tsql-md.md)] триггера. @object_id [!INCLUDE[tsql](../../includes/tsql-md.md)] @object_idявляется типом **int**.  
   
- *@include_browse_information*  
- @include_browse_information является типом **бит**. Если имеет значение 1, то каждый запрос анализируется так, как будто он имеет параметр FOR BROWSE для запроса. Возвращает дополнительные ключевые столбцы и сведения об исходной таблице.  
+ *\@include_browse_information*  
+ @include_browse_informationявляется **битом**типа. Если имеет значение 1, то каждый запрос анализируется так, как будто он имеет параметр FOR BROWSE для запроса. Возвращает дополнительные ключевые столбцы и сведения об исходной таблице.  
   
 ## <a name="table-returned"></a>Возвращаемая таблица  
  Эти общие метаданные возвращаются в виде результирующего набора с одной строкой для каждого столбца в результирующих метаданных. Каждая строка описывает тип и допустимость значений NULL в столбце в формате, описанном в следующем разделе. Если первая инструкция не существует для каждого пути управления, возвращается результирующий набор с нулем строк.  
@@ -58,9 +58,9 @@ sys.dm_exec_describe_first_result_set_for_object
 |**column_ordinal**|**int**|Содержит порядковый номер столбца в результирующем наборе. Позиция первого столбца будет указана как 1.|  
 |**name**|**sysname**|Содержит имя столбца, если его можно определить. В противном случае значение равно NULL.|  
 |**is_nullable**|**bit**|Содержит значение 1, если столбец допускает значения NULL, значение 0, если столбец не допускает значения NULL, или значение -1, если не удалось определить, допускает ли столбец значения NULL.|  
-|**system_type_id**|**int**|Содержит system_type_id для типа данных столбца, как указано в sys.types. Для типов CLR, даже если system_type_name возвращает NULL, этот столбец вернет значение 240.|  
+|**system_type_id**|**int**|Содержит system_type_id типа данных столбца, как указано в таблице sys. types. Для типов CLR, даже если system_type_name возвращает NULL, этот столбец вернет значение 240.|  
 |**system_type_name**|**nvarchar(256)**|Содержит имя типа данных. Включает аргументы (длина, точность, масштаб), заданные для типа данных столбца. Если тип данных является пользовательским псевдонимом, то здесь указывается базовый системный тип данных. Если это определяемый пользователем тип данных CLR, то в этом столбце вернется NULL.|  
-|**max_length**|**smallint**|Максимальная длина столбца (в байтах).<br /><br /> -1 = тип данных столбца — **varchar(max)** , **nvarchar(max)** , **varbinary(max)** , или **xml**.<br /><br /> Для **текст** столбцы, **max_length** значение будет равно 16 или значение, заданное параметром **sp_tableoption «text in row»** .|  
+|**max_length**|**smallint**|Максимальная длина столбца (в байтах).<br /><br /> -1 = тип данных столбца — **varchar (max)** , **nvarchar (max)** , **varbinary (max)** или **XML**.<br /><br /> Для **текстовых** столбцов значение **max_length** будет равно 16, или значение, заданное **в sp_tableoption "текст в строке"** .|  
 |**precision**|**tinyint**|Точность столбца, если он является числовым. В противном случае возвращается 0.|  
 |**масштаб**|**tinyint**|Масштаб значений столбца в случае числового выражения. В противном случае возвращается 0.|  
 |**collation_name**|**sysname**|Имя параметров сортировки столбца, если он символьный. В противном случае возвращается NULL.|  
@@ -76,7 +76,7 @@ sys.dm_exec_describe_first_result_set_for_object
 |**is_xml_document**|**bit**|Возвращает значение 1, если возвращается тип данных XML, который гарантированно будет полным XML-документом (включая корневой узел), а не фрагментом XML. В противном случае возвращается 0.|  
 |**is_case_sensitive**|**bit**|Возвращает значение 1, если столбец относится к строковому типу с учетом регистра, либо значение 0 в противном случае.|  
 |**is_fixed_length_clr_type**|**bit**|Возвращает значение 1, если столбец относится к типу CLR с фиксированной длиной, либо значение 0 в противном случае.|  
-|**source_server**|**sysname**|Имя исходного сервера, возвращаемое столбцом этого результата (если он исходит от удаленного сервера). Имя дается так, как оно отображается в представлении каталога sys.servers.  Возвращает значение NULL, если столбец поступает с локального сервера или если невозможно определить, с какого сервера он поступил. Заполняется только при запросе просмотра информации.|  
+|**source_server**|**sysname**|Имя исходного сервера, возвращаемое столбцом этого результата (если он исходит от удаленного сервера). Имя указывается в том виде, в котором оно отображается в sys. Servers.  Возвращает значение NULL, если столбец поступает с локального сервера или если невозможно определить, с какого сервера он поступил. Заполняется только при запросе просмотра информации.|  
 |**source_database**|**sysname**|Имя исходной базы данных, возвращаемое столбцом этого результата. Возвращает NULL, если не удалось определить базу данных. Заполняется только при запросе просмотра информации.|  
 |**source_schema**|**sysname**|Имя исходной схемы, возвращаемое столбцом в этом результате. Возвращает NULL, если не удалось определить схему. Заполняется только при запросе просмотра информации.|  
 |**source_table**|**sysname**|Имя исходной таблицы, возвращаемое столбцом в этом результате. Возвращает NULL, если не удалось определить таблицу. Заполняется только при запросе просмотра информации.|  
@@ -88,16 +88,16 @@ sys.dm_exec_describe_first_result_set_for_object
 |**is_sparse_column_set**|**bit**|Возвращает значение 1, если столбец является разреженным, и значение 0 в противном случае. Возвращает NULL, если не удалось определить, является ли столбец частью набора разреженных столбцов.|  
 |**ordinal_in_order_by_list**|**smallint**|Позиция этого столбца в списке ORDER BY. Возвращает значение NULL, если столбец отсутствует в списке ORDER BY либо список ORDER BY не может быть уникальным образом определен.|  
 |**order_by_list_length**|**smallint**|Длина списка ORDER BY. Возвращает NULL, если нет списка ORDER BY или если список ORDER BY нельзя однозначно определить. Обратите внимание на то, что это значение будет одним и тем же для всех строк, возвращаемых процедурой sp_describe_first_result_set.|  
-|**order_by_is_descending**|**smallint NULL**|Если значение ordinal_in_order_by_list не равно NULL, **order_by_is_descending** столбец сообщает направление в предложении ORDER BY для этого столбца. В противном случае возвращается значение NULL.|  
+|**order_by_is_descending**|**smallint NULL**|Если ordinal_in_order_by_list не равен NULL, столбец **order_by_is_descending** сообщает о направлении предложения ORDER BY для этого столбца. В противном случае возвращается значение NULL.|  
 |**error_number**|**int**|Содержит номер ошибки, возвращаемый этой функцией. Содержит NULL, если в столбце не возникло ошибок.|  
 |**error_severity**|**int**|Содержит серьезность ошибки, возвращаемую этой функцией. Содержит NULL, если в столбце не возникло ошибок.|  
 |**error_state**|**int**|Содержит сообщение состояния, возвращаемое этой функцией. При отсутствии ошибок. Столбец будет содержать значение NULL.|  
-|**error_message**|**nvarchar(4096)**|Содержит сообщение, возвращаемое этой функцией. Столбец будет содержать NULL, если не возникло ошибок.|  
+|**error_message**|**nvarchar (4096)**|Содержит сообщение, возвращаемое этой функцией. Столбец будет содержать NULL, если не возникло ошибок.|  
 |**error_type**|**int**|Содержит целое число, представляющее возвращаемую ошибку. Соответствует error_type_desc. См. список под замечаниями.|  
 |**error_type_desc**|**nvarchar(60)**|Содержит короткую строку в верхнем регистре, представляющую возвращаемую ошибку. Сопоставляется с error_type. См. список под замечаниями.|  
   
 ## <a name="remarks"></a>Примечания  
- Эта функция использует тот же алгоритм, **sp_describe_first_result_set**. Дополнительные сведения см. в разделе [sp_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md).  
+ Эта функция использует тот же алгоритм, что и **sp_describe_first_result_set**. Дополнительные сведения см. в [разделе &#40;SP_DESCRIBE_FIRST_RESULT_SET Transact-&#41;SQL](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md).  
   
  В следующей таблице содержится список типов ошибок и их описания  
   
@@ -110,20 +110,20 @@ sys.dm_exec_describe_first_result_set_for_object
 |5|CLR_PROCEDURE|Результат не удалось определить из-за того, что хранимая процедура CLR потенциально могла вернуть первый результат.|  
 |6|CLR_TRIGGER|Результат не удалось определить из-за того, что триггер CLR потенциально мог вернуть первый результат.|  
 |7|EXTENDED_PROCEDURE|Результат не удалось определить из-за того, что расширенная хранимая процедура потенциально могла вернуть первый результат.|  
-|8|UNDECLARED_PARAMETER|Не удалось определить результат, так как тип данных из одного или нескольких столбцов результирующего набора потенциально зависит от необъявленного параметра.|  
+|8|UNDECLARED_PARAMETER|Не удалось определить результат, так как тип данных одного или нескольких столбцов результирующего набора может зависеть от необъявленного параметра.|  
 |9|RECURSION|Не удается определить результат, так как в пакете содержится рекурсивная инструкция.|  
 |10|TEMPORARY_TABLE|Не удалось определить результат, так как пакет содержит временную таблицу и не поддерживается **sp_describe_first_result_set** .|  
-|11|UNSUPPORTED_STATEMENT|Не удалось определить результат, так как пакет содержит инструкцию, которая не поддерживается **sp_describe_first_result_set** (FETCH, REVERT и т.д.).|  
-|12|OBJECT_ID_NOT_SUPPORTED|@object_id , Передаваемое функции — не поддерживается (т. е. не является хранимой процедурой)|  
-|13|OBJECT_ID_DOES_NOT_EXIST|@object_id , Передаваемый функции не найден в системном каталоге.|  
+|11|UNSUPPORTED_STATEMENT|Не удалось определить результат, так как пакет содержит инструкцию, которая не поддерживается **sp_describe_first_result_set** (например, FETCH, revert и т. д.).|  
+|12|OBJECT_ID_NOT_SUPPORTED|Переданный функции объект @object_id не поддерживается (т. е. не является хранимой процедурой)|  
+|13|OBJECT_ID_DOES_NOT_EXIST|Переданный функции объект @object_id не найден в системном каталоге.|  
   
 ## <a name="permissions"></a>Разрешения  
- Требуется разрешение на выполнение @tsql аргумент.  
+ Требуется разрешение для выполнения @tsql аргумента.  
   
 ## <a name="examples"></a>Примеры  
   
 ### <a name="a-returning-metadata-with-and-without-browse-information"></a>A. Возвращает метаданные со сведениями для просмотра и без них  
- В следующем примере создается хранимая процедура с именем TestProc2, которая возвращает два результирующих набора. Затем пример показывает, что **sys.dm_exec_describe_first_result_set** возвращает сведения о первом результирующем наборе в процедуре, с и без информации обзора.  
+ В следующем примере создается хранимая процедура с именем TestProc2, которая возвращает два результирующих набора. Затем в примере показано, что **sys. DM _exec_describe_first_result_set** возвращает сведения о первом результирующем наборе в процедуре со сведениями о просмотре и без нее.  
   
 ```  
 CREATE PROC TestProc2  
@@ -137,8 +137,8 @@ SELECT * FROM sys.dm_exec_describe_first_result_set_for_object(OBJECT_ID('TestPr
 GO  
 ```  
   
-### <a name="b-combining-the-sysdmexecdescribefirstresultsetforobject-function-and-a-table-or-view"></a>Б. Объединение функции sys.dm_exec_describe_first_result_set_for_object с таблицей или представлением  
- В следующем примере используется обоих sys.procedures представления системного каталога и **sys.dm_exec_describe_first_result_set_for_object** функцию для отображения метаданных для результирующих наборов всех хранимых процедур в [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] База данных.  
+### <a name="b-combining-the-sysdm_exec_describe_first_result_set_for_object-function-and-a-table-or-view"></a>Б. Объединение функции sys.dm_exec_describe_first_result_set_for_object с таблицей или представлением  
+ В следующем примере используются как представление каталога sys. процедур, так и функция **sys. DM _exec_describe_first_result_set_for_object** для отображения метаданных для результирующих наборов всех хранимых процедур в [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] базе данных.  
   
 ```  
 USE AdventureWorks2012;  
@@ -152,8 +152,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также  
- [sp_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)   
- [sp_describe_undeclared_parameters &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md)   
- [sys.dm_exec_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)  
+ [sp_describe_first_result_set &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)   
+ [sp_describe_undeclared_parameters &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md)   
+ [sys. DM _exec_describe_first_result_set &#40;, TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)  
   
   
