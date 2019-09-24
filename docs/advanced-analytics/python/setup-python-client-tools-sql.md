@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6f40f04d677d5dcfa758a13321009da3e535c5d4
-ms.sourcegitcommit: 632ff55084339f054d5934a81c63c77a93ede4ce
+ms.openlocfilehash: 87c05fafb122e292c45033bb019548c84df44de0
+ms.sourcegitcommit: 9221a693d4ab7ae0a7e2ddeb03bd0cf740628fd0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69634541"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71199474"
 ---
 # <a name="set-up-a-data-science-client-for-python-development-on-sql-server-machine-learning-services"></a>Настройка клиента обработки и анализа данных для разработки на Python на SQL Server Службы машинного обучения
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "69634541"
 
 Для разработки на Python можно использовать записные книжки Jupyter, которые поставляются в дистрибутив Anaconda, установленный SQL Server. В этой статье объясняется, как запустить записные книжки Jupyter, чтобы можно было выполнять код Python локально и удаленно на SQL Server.
 
-SSMS — это отдельная загрузка, которая полезна для создания и выполнения хранимых процедур на SQL Server, включая те, которые содержат код Python. Практически любой код Python, написанный в записных книжках Jupyter, можно внедрять в хранимую процедуру. Вы можете пошагово пройти другие краткие руководства, чтобы узнать о [SSMS и Embedded Python](../tutorials/quickstart-python-verify.md).
+SSMS — это отдельная загрузка, которая полезна для создания и выполнения хранимых процедур на SQL Server, включая те, которые содержат код Python. Практически любой код Python, написанный в записных книжках Jupyter, можно внедрять в хранимую процедуру. Вы можете пошагово пройти другие краткие руководства, чтобы узнать о [SSMS и Embedded Python](../tutorials/quickstart-python-create-script.md).
 
 ## <a name="1---install-python-packages"></a>1\. Установка пакетов Python
 
@@ -305,4 +305,4 @@ display.Image(data=image)
 Теперь, когда у вас есть инструменты и работающее подключение к SQL Server, расширьте свои навыки, запустив краткие руководства по Python с помощью [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 
 > [!div class="nextstepaction"]
-> [Краткое руководство Проверка наличия Python в SQL Server](../tutorials/quickstart-python-verify.md)
+> [Краткое руководство. Создание и выполнение простых скриптов Python с помощью SQL Server Службы машинного обучения](../tutorials/quickstart-python-create-script.md)

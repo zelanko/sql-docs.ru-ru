@@ -10,12 +10,12 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 00ce4893cfe96fcf115227cc5a7fd38085584dda
-ms.sourcegitcommit: 26715b4dbef95d99abf2ab7198a00e6e2c550243
+ms.openlocfilehash: eef8a0f0f11e6d9085a1685145e4c6815979470d
+ms.sourcegitcommit: 9221a693d4ab7ae0a7e2ddeb03bd0cf740628fd0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70294379"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71199351"
 ---
 # <a name="tutorial-deploy-a-model-in-python-to-categorize-customers-with-sql-server-machine-learning-services"></a>Учебник. Развертывание модели в Python для категоризации клиентов с помощью SQL Server Службы машинного обучения
 
@@ -27,7 +27,7 @@ ms.locfileid: "70294379"
 
 В этом разделе вы перемещаете код Python, который вы только что написали в SQL Server, и развертываете кластеризацию с помощью SQL Server Службы машинного обучения.
 
-Из этой статьи вы узнаете о следующем:
+В этой статье вы узнаете, как выполнять следующие задачи:
 
 > [!div class="checklist"]
 > * Создание хранимой процедуры, которая создает модель
@@ -186,7 +186,7 @@ SELECT customer.[c_email_address], customer.c_customer_sk
 
 Дополнительные сведения об использовании Python в SQL Server Службы машинного обучения см. в следующих статьях:
 
-* [Краткое руководство Запуск скрипта Python "Hello World" на SQL Server Службы машинного обучения](quickstart-python-run-using-t-sql.md)
+* [Краткое руководство. Создание и выполнение простых скриптов Python с помощью SQL Server Службы машинного обучения](quickstart-python-create-script.md)
 * [Другие руководства по Python для SQL Server Службы машинного обучения](sql-server-python-tutorials.md)
 * [Установка пакетов Python с помощью склмлутилс](../package-management/install-additional-python-packages-on-sql-server.md)
 

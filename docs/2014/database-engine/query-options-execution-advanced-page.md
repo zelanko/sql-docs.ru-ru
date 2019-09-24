@@ -12,12 +12,12 @@ manager: jroth
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 09/03/2019
-ms.openlocfilehash: 4530d07ceb284f6f7c5a795836b979e846562f40
-ms.sourcegitcommit: b016c01c47bc08351d093a59448d895cc170f8c3
+ms.openlocfilehash: 39a43adeb82b154a076fc7bfc24cc56b54cc8640
+ms.sourcegitcommit: 9221a693d4ab7ae0a7e2ddeb03bd0cf740628fd0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71118108"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71199327"
 ---
 # <a name="query-options-execution-advanced-page"></a>Выполнение параметров запроса (страница «Дополнительно»)
 
@@ -58,11 +58,11 @@ ms.locfileid: "71118108"
 
 **Показывать время завершения** Позволяет напечатать время завершения выполнения запроса либо после результатов запроса, либо на вкладке сообщения.
 
-**Протокол аттестации для vbs енклавес для Always encrypted** Позволяет задать протокол аттестации для безопасности на основе виртуализации (VBS) енклавес, используемый Always Encrypted с защищенным енклавес. 
+**Протокол аттестации для vbs енклавес для Always encrypted** Позволяет задать протокол аттестации для безопасности на основе виртуализации (VBS) енклавес, используемый Always encrypted с Secure енклавес.
 
-  Текущие поддерживаемые протоколы аттестации:
+Текущие поддерживаемые протоколы аттестации:
 
-  * Служба защиты узла — протокол аттестации, использующий службу защиты узла Windows (HGS).
+* Служба защиты узла — протокол аттестации, использующий службу защиты узла Windows (HGS).
 
 Дополнительные сведения см. в статьях [Always encrypted с Secure енклавес](https://docs.microsoft.com/sql/relational-databases/security/encryption/always-encrypted-enclaves?view=sqlallproducts-allversions) и [Secure анклава аттестация](https://docs.microsoft.com/sql/relational-databases/security/encryption/always-encrypted-enclaves?view=sqlallproducts-allversions#secure-enclave-attestation).
 
