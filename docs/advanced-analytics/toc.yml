@@ -47,26 +47,22 @@
   items:
     - name: Python
       items:
-        - name: "Проверка наличия\_Python в SQL\_Server"
-          href: ../advanced-analytics/tutorials/quickstart-python-verify.md
-        - name: "Hello\_World на Python и\_SQL"
-          href: ../advanced-analytics/tutorials/quickstart-python-run-using-t-sql.md
-        - name: Работа с входными и выходными данными
-          href: ../advanced-analytics/tutorials/quickstart-python-inputs-and-outputs.md
-        - name: Структуры данных Python и SQL
+        - name: "Создание сценариев на\_Python"
+          href: ../advanced-analytics/tutorials/quickstart-python-create-script.md
+        - name: Работа с типами данных и объектами
           href: ../advanced-analytics/tutorials/quickstart-python-data-structures.md
-        - name: Обучение и использование первой модели
-          href: ../advanced-analytics/tutorials/quickstart-python-train-score-in-tsql.md
+        - name: Обучение и оценка модели
+          href: ../advanced-analytics/tutorials/quickstart-python-train-score-model.md
     - name: Чтение
       items:
         - name: "Создание сценариев на\_R"
           href: ../advanced-analytics/tutorials/quickstart-r-create-script.md
-        - name: Обучение и оценка модели
-          href: ../advanced-analytics/tutorials/quickstart-r-train-score-model.md
         - name: Работа с типами данных и объектами
           href: ../advanced-analytics/tutorials/quickstart-r-data-types-and-objects.md
         - name: "Написание функций\_R"
           href: ../advanced-analytics/tutorials/quickstart-r-functions.md
+        - name: Обучение и оценка модели
+          href: ../advanced-analytics/tutorials/quickstart-r-train-score-model.md
 - name: Учебники
   items:
     - name: Python
