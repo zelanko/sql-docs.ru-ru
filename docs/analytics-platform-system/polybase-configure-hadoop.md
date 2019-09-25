@@ -1,6 +1,6 @@
 ---
 title: Настройка PolyBase для доступа к внешним данным в Hadoop | Документация Майкрософт
-description: В этой статье описывается настройка PolyBase в Parallel Data Warehouse для подключения к внешней Hadoop.
+description: Объясняется, как настроить Polybase в Parallel Data Warehouse для подключения к внешним Hadoop.
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,30 +8,30 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 2e675b87c3c4f01f63e21bafd5d071cebb4ae4c9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ceaa1cbe04148443dd7a60b8d2b7936dc0a2cf55
+ms.sourcegitcommit: 853c2c2768caaa368dce72b4a5e6c465cc6346cf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67960273"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71227126"
 ---
 # <a name="configure-polybase-to-access-external-data-in-hadoop"></a>Настройка PolyBase для доступа к внешним данным в Hadoop
 
-Объясняется, как использовать PolyBase на устройство APS для запроса внешних данных в Hadoop.
+В этой статье объясняется, как использовать Polybase на устройстве APS для запроса внешних данных в Hadoop.
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 PolyBase поддерживает два поставщика Hadoop — Hortonworks Data Platform (HDP) и Cloudera Distributed Hadoop (CDH). В новых выпусках Hadoop соблюдается шаблон "Основной номер версии.дополнительный номер версии.версия". Также поддерживаются все версии в рамках поддерживаемых основного и дополнительного выпусков. Поддерживаются следующие поставщики Hadoop:
  - Hortonworks HDP 1.3 в ОС Linux или Windows Server;  
- - Hortonworks HDP 2.1 2.6 в Linux
- - Hortonworks HDP 3.0 3.1 на платформе Linux
+ - Hortonworks HDP 2,1-2,6 в Linux
+ - Hortonworks HDP 3,0-3,1 в Linux
  - Hortonworks HDP 2.1–2.3 в ОС Windows Server;  
  - Cloudera CDH 4.3 в Linux;  
- - Cloudera CDH 5.1 – 5.5, 5.9 – 5.13 в Linux
+ - Cloudera CDH 5,1-5,5, 5,9-5,13, 5,15 & 5,16 в Linux
 
 ### <a name="configure-hadoop-connectivity"></a>Настройка подключения к Hadoop
 
-Во-первых настройте APS для использования конкретного поставщика Hadoop.
+Сначала настройте ТД для использования конкретного поставщика Hadoop.
 
 1. Запустите [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) с hadoop connectivity и задайте соответствующее значение для поставщика. Значение для поставщика см. в статье [Конфигурация подключения к PolyBase (Transact-SQL)](../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md). 
 
@@ -46,15 +46,15 @@ PolyBase поддерживает два поставщика Hadoop — Horton
    GO
    ```  
 
-2. Перезапустите APS области, расположенные на странице состояния службы [устройства Configuration Manager](launch-the-configuration-manager.md).
+2. Перезапустите регион APS с помощью страницы состояния службы [Configuration Manager устройства](launch-the-configuration-manager.md).
   
 ## <a id="pushdown"></a> Активация вычислений pushdown  
 
 Чтобы улучшить производительность при выполнении запроса, активируйте вычисление pushdown для кластера Hadoop.  
   
-1. Откройте удаленный рабочий стол для узла управления PDW.
+1. Откройте подключение к удаленному рабочему столу на узле управления PDW.
 
-2. Найдите файл **yarn-site.xml** в управляющем узле. Как правило, путь выглядит следующим образом:  
+2. Найдите файл **Yarn-site. XML** на управляющем узле. Как правило, путь выглядит следующим образом:  
 
    ```xml  
    C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100\Hadoop\conf\  
@@ -62,11 +62,11 @@ PolyBase поддерживает два поставщика Hadoop — Horton
 
 3. Найдите аналогичный файл на компьютере с Hadoop в каталоге конфигурации. Открыв его, найдите и скопируйте значение ключа конфигурации yarn.application.classpath.  
   
-4. На узле управления в **файла yarn.site.xml** найти **yarn.application.classpath** свойство. Вставьте значение, скопированное на компьютере с Hadoop, в качестве значения элемента.  
+4. В узле Control в **файле Yarn. site. XML** найдите свойство **Yarn. Application. подкаталог** . Вставьте значение, скопированное на компьютере с Hadoop, в качестве значения элемента.  
   
 5. Для всех версий CDH 5.X необходимо добавить параметры конфигурации mapreduce.application.classpath либо в конец файла yarn.site.xml, либо в файл mapred-site.xml. HortonWorks содержит эти настройки в конфигурациях yarn.application.classpath. Примеры см. в статье [Конфигурация PolyBase](../relational-databases/polybase/polybase-configuration.md).
 
-## <a name="example-xml-files-for-cdh-5x-cluster-default-values"></a>Пример XML-кода файлы для CDH 5.X кластера по умолчанию
+## <a name="example-xml-files-for-cdh-5x-cluster-default-values"></a>Пример XML-файлов для значений по умолчанию для кластера CDH 5. X
 
 Yarn-site.xml yarn.application.classpath и mapreduce.application.classpath конфигурации.
 
@@ -101,7 +101,7 @@ Yarn-site.xml yarn.application.classpath и mapreduce.application.classpath ко
 </configuration>
 ```
 
-Если вы решили разбить на mapred-site.xml и yarn-site.xml 2 параметра конфигурации, то будет следующие файлы:
+Если вы решили разбить два параметра конфигурации на mapred-site. XML и Yarn-site. XML, файлы будут выглядеть следующим образом:
 
 **yarn-site.xml**
 
@@ -138,7 +138,7 @@ Yarn-site.xml yarn.application.classpath и mapreduce.application.classpath ко
 
 **mapred-site.xml**
 
-Обратите внимание, что было добавлено свойство mapreduce.application.classpath. В CDH 5.x, вы увидите значения конфигурации, в то же соглашение об именовании в Ambari.
+Обратите внимание, что было добавлено свойство mapreduce.application.classpath. В CDH 5. x значения конфигурации можно найти по тому же соглашению об именовании в Ambari.
 
 ```xml
 <?xml version="1.0"?>
@@ -172,7 +172,7 @@ Yarn-site.xml yarn.application.classpath и mapreduce.application.classpath ко
 </configuration>
 ```
 
-## <a name="example-xml-files-for-hdp-3x-cluster-default-values"></a>Пример XML-кода файлы для HDP значения по умолчанию кластера 3.X
+## <a name="example-xml-files-for-hdp-3x-cluster-default-values"></a>Пример XML-файлов для значений по умолчанию для кластера HDP 3. X
 
 **yarn-site.xml**
 
@@ -211,7 +211,7 @@ Yarn-site.xml yarn.application.classpath и mapreduce.application.classpath ко
 
 Чтобы запросить данные из источника данных Hadoop, необходимо определить внешнюю таблицу для использования в запросах Transact-SQL. Далее указаны шаги по настройке внешней таблицы.
 
-1. Создайте главный ключ в базе данных. Он необходим для шифрования секрета учетных данных.
+1. Создайте главный ключ в базе данных. Необходимо зашифровать секрет учетных данных.
 
    ```sql
    CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'S0me!nfo';  
@@ -285,7 +285,7 @@ Yarn-site.xml yarn.application.classpath и mapreduce.application.classpath ко
 
 ### <a name="ad-hoc-queries"></a>Нерегламентированные запросы  
 
-Следующий нерегламентированный запрос объединяет реляционные с данными Hadoop. Он выбирает клиентов, занимающихся разработкой быстрее, чем 35 миль/ч, присоединяемый клиента структурированные данные, хранящиеся в APS, данные датчиков автомобиля, хранящиеся в Hadoop.  
+Следующий нерегламентированный запрос объединяет реляционные данные с данными Hadoop. Он выбирает клиентов, которые работают быстрее, чем 35 миль/ч, объединяя структурированные данные клиентов, хранящиеся в ТД, с данными датчика автомобиля, хранящимися в Hadoop.  
 
 ```sql  
 SELECT DISTINCT Insured_Customers.FirstName,Insured_Customers.LastName,
@@ -298,7 +298,7 @@ OPTION (FORCE EXTERNALPUSHDOWN);   -- or OPTION (DISABLE EXTERNALPUSHDOWN)
 
 ### <a name="importing-data"></a>импорт данных  
 
-Следующий запрос выполняется Импорт внешних данных в APS. В этом примере импортирует данные для быстрого драйверов в точках доступа, чтобы выполнить более глубокий анализ. Для повышения производительности, при этом используется технология Columnstore в APS.  
+Следующий запрос импортирует внешние данные в ТД. В этом примере данные для быстрых драйверов импортируются в ТД для более глубокого анализа. Для повышения производительности она использует технологию columnstore в ТД.  
 
 ```sql
 CREATE TABLE Fast_Customers
@@ -317,7 +317,7 @@ ON Insured_Customers.CustomerKey = SensorD.CustomerKey
 
 ### <a name="exporting-data"></a>Экспорт данных  
 
-Следующий запрос экспортирует данные из APS Hadoop. Он может использоваться для архивации реляционных данных в Hadoop время по-прежнему иметь возможность запрашивать его.
+Следующий запрос экспортирует данные из ТД в Hadoop. Он может использоваться для архивации реляционных данных в Hadoop, в то время как они по-прежнему могут выполнять запросы.
 
 ```sql
 -- Export data: Move old data to Hadoop while keeping it query-able via an external table.  
@@ -333,14 +333,14 @@ ON (T1.CustomerKey = T2.CustomerKey)
 WHERE T2.YearMeasured = 2009 and T2.Speed > 40;  
 ```  
 
-## <a name="view-polybase-objects-in-ssdt"></a>Просмотреть объекты PolyBase в SSDT  
+## <a name="view-polybase-objects-in-ssdt"></a>Просмотр объектов Polybase в SSDT  
 
-В SQL Server Data Tools, внешние таблицы отображаются в отдельной папке **внешние таблицы**. Внешние источники данных и форматы внешних файлов находятся в папках, вложенных в папку **Внешние ресурсы**.  
+В SQL Server Data Tools внешние таблицы отображаются в отдельных папках **внешние таблицы**. Внешние источники данных и форматы внешних файлов находятся в папках, вложенных в папку **Внешние ресурсы**.  
   
-![Объекты PolyBase в SSDT](media/polybase/external-tables-datasource.png)  
+![Объекты Polybase в SSDT](media/polybase/external-tables-datasource.png)  
 
 ## <a name="next-steps"></a>Следующие шаги
 
-См. в разделе параметров безопасности Hadoop [настроить безопасность Hadoop](polybase-configure-hadoop-security.md).<br>
+Параметры безопасности Hadoop см. в статье [Настройка безопасности Hadoop](polybase-configure-hadoop-security.md).<br>
 Дополнительные сведения о PolyBase см. в [этом руководстве](../relational-databases/polybase/polybase-guide.md). 
  
