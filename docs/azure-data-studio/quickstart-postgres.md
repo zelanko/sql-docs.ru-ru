@@ -3,26 +3,26 @@ title: Краткое руководство. Подключение и отпр
 titleSuffix: Azure Data Studio
 description: В этом кратком руководстве показано, как использовать Azure Data Studio для подключения к PostgreSQL и выполнения запроса.
 ms.custom: seodec18
-ms.date: 03/19/2019
+ms.date: 09/18/2019
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
 ms.topic: quickstart
 author: rachel-msft
 ms.author: raagyema
-ms.openlocfilehash: 9dcbbe621ab237eeceff55cd5f931d7d650dd3b4
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: ac4d1a3ae93310475c284661e1b8dff1d9a9f523
+ms.sourcegitcommit: 183d622fff36a22b882309378892010be3bdcd52
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67959466"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71127244"
 ---
 # <a name="quickstart-connect-and-query-postgresql-using-includename-sosincludesname-sos-shortmd"></a>Краткое руководство. Подключение и отправка запроса PostgreSQL с помощью [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 В этом кратком руководстве показано, как использовать [!INCLUDE[name-sos](../includes/name-sos-short.md)] для подключения к Postgres и как с помощью инструкций SQL создать базу данных *tutorialdb* и выполнять к ней запросы.
 
 ## <a name="prerequisites"></a>предварительные требования
 
-Для работы с этим кратким руководством вам потребуется [!INCLUDE[name-sos](../includes/name-sos-short.md)], расширение PostgreSQL для [!INCLUDE[name-sos](../includes/name-sos-short.md), а также доступ к серверу PostgreSQL.
+Для работы с этим кратким руководством вам потребуется [!INCLUDE[name-sos](../includes/name-sos-short.md)], расширение PostgreSQL для [!INCLUDE[name-sos](../includes/name-sos-short.md)], а также доступ к серверу PostgreSQL.
 
 - [Установите [!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md).
 - [Установите расширение PostgreSQL для Azure Data Studio](postgres-extension.md).

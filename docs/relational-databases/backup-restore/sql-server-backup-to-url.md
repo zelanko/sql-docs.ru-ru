@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 534907b49e5139f57f8b008742cf76346f7838ec
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.openlocfilehash: 86ef1638fc37fd70d8438c173b5972fa2fc8f551
+ms.sourcegitcommit: b016c01c47bc08351d093a59448d895cc170f8c3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70176355"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71118188"
 ---
 # <a name="sql-server-backup-to-url"></a>Резервное копирование в SQL Server по URL-адресу
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -66,8 +66,10 @@ ms.locfileid: "70176355"
 - вы можете выполнять резервное копирование в несколько блочных BLOB-объектов, чтобы получить лучший уровень производительности резервного копирования и восстановления, а также поддержку резервного копирования базы данных больших размеров;
 - [блочный BLOB-объект](https://azure.microsoft.com/pricing/details/storage/blobs/) дешевле, чем [страничный BLOB-объект](https://azure.microsoft.com/pricing/details/storage/page-blobs/). 
 
-При резервном копировании в блочный BLOB-объект максимальный размер блока, который можно указать, — это 4 МБ. Максимальный размер одного файла блочного BLOB-объекта составляет 4 МБ * 50000 = 195 ГБ. Если размер базы данных превышает 195 ГБ, мы рекомендуем:
-- использовать сжатие резервной копии;
+При резервном копировании большой базы данных в хранилище BLOB-объектов действуют ограничения, перечисленные в статье [Отличия, ограничения и известные проблемы в T-SQL управляемого экземпляра](/azure/sql-database/sql-database-managed-instance-transact-sql-information#backup).
+
+ Если база данных слишком велика, следует:
+- использовать сжатие резервной копии; или
 - выполнять резервное копирование в несколько блочных BLOB-объектов.
 
 ###  <a name="Blob"></a> Служба хранилища больших двоичных объектов Microsoft Azure  

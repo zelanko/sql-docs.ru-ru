@@ -14,12 +14,12 @@ ms.assetid: 6ad23de1-2bab-4933-9122-c09f5565028d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: bb521f3c71dc1f72a6225cb10a375c91f476b07d
-ms.sourcegitcommit: 594cee116fa4ee321e1f5e5206f4a94d408f1576
+ms.openlocfilehash: 16d90e031f6892a132a2a64ad52aedfc34d39a08
+ms.sourcegitcommit: 1661c3e1bb38ed12f8485c3860fc2d2b97dd2c9d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "70009386"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71149975"
 ---
 # <a name="install-sql-server-from-the-installation-wizard-setup"></a>Установка SQL Server с помощью мастера установки (программа установки)
 
@@ -132,7 +132,11 @@ ms.locfileid: "70009386"
     > [!NOTE]
     > Начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], вы можете установить флажок **Предоставить право на выполнение задач обслуживания тома службе ядра СУБД SQL Server**, чтобы разрешить учетной записи службы [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] использовать [мгновенную инициализацию файлов](../../relational-databases/databases/database-instant-file-initialization.md).
   
-     На странице **Настройка сервера — параметры сортировки** можно для [!INCLUDE[ssDE](../../includes/ssde-md.md)] и [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] задать параметры сортировки, отличные от заданных по умолчанию. Дополнительные сведения см. в статье [Поддержка параметров сортировки и Юникода](../../relational-databases/collations/collation-and-unicode-support.md).  
+1. На странице **Настройка сервера — параметры сортировки** можно для компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] и служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] задать параметры сортировки, отличные от заданных по умолчанию.    
+
+   Вариант по умолчанию при установке определяется языковым стандартом операционной системы (ОС). Параметры сортировки уровня сервера могут быть изменены в процессе установки. Кроме того, их можно изменить, сменив языковой стандарт ОС перед установкой. Для параметров сортировки по умолчанию устанавливается самая старая доступная версия, связанная с определенным языковым стандартом. Это делается в целях обеспечения обратной совместимости. В связи с этим данные параметры сортировки рекомендуется использовать не во всех случаях. Для использования всех возможностей [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] следует изменить параметры установки по умолчанию для параметров сортировки Windows. Например, для языкового стандарта ОС **Английский (США)** (кодовая страница 1252) параметры сортировки по умолчанию во время установки — **SQL_Latin1_General_CP1_CI_AS**. Их можно изменить на ближайший аналог в Windows **Latin1_General_100_CI_AS_SC**.
+
+   Дополнительные сведения см. в статье [Поддержка параметров сортировки и Юникода](../../relational-databases/collations/collation-and-unicode-support.md).  
   
 1. На странице **Настройка ядра СУБД — конфигурация сервера** укажите перечисленные далее сведения.  
   

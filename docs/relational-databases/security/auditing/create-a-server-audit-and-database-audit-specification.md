@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 26ee85de-6e97-4318-b526-900924d96e62
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 5199849b0f3dced34ced0ec7a102f03cb054d789
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: da064aa2e8cd8c32a96f52ad06ef29ed4e835997
+ms.sourcegitcommit: 5a03dc2bba481c2e2f03d67f6ee9486fc9f8ba95
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68095202"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71066882"
 ---
 # <a name="create-a-server-audit-and-database-audit-specification"></a>Создание спецификация аудита для сервера и базы данных
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -85,7 +85,7 @@ ms.locfileid: "68095202"
      Имя спецификации аудита базы данных. Этот текст формируется автоматически во время создания новой спецификации аудита сервера, однако он доступен для изменения.  
   
      **Аудит**  
-     Имя спецификации существующего аудита базы данных. Введите имя аудита или выберите его из списка.  
+     Имя существующего объекта аудита сервера. Введите имя аудита или выберите его из списка.  
   
      **Тип действия аудита**  
      Указывает группы действий аудита на уровне базы данных и действия аудита для захвата. Список групп действий аудита на уровне базы данных, действия аудита и описание содержащихся в них событий см. в статье [Действия и группы действий подсистемы аудита SQL Server](../../../relational-databases/security/auditing/sql-server-audit-action-groups-and-actions.md).  

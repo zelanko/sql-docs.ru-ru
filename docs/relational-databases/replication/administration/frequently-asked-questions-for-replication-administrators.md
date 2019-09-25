@@ -14,12 +14,12 @@ ms.assetid: 5a9e4ddf-3cb1-4baf-94d6-b80acca24f64
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: e4ad8e1ec6d70f6155afd49712fdd8b2b3d1626b
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 8641b1466a4f836c32259ac4f46022d43f8fe216
+ms.sourcegitcommit: 0ea19d8e3bd9d91a416311e00a5fb0267d41949e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770825"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71174250"
 ---
 # <a name="frequently-asked-questions-for-replication-administrators"></a>Вопросы, часто задаваемые администраторам репликации
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -154,7 +154,7 @@ ms.locfileid: "68770825"
   
 -   Задание того, что при повторной инициализации подписки объекты не должны удаляться. Перед повторной инициализацией либо:  
   
-    -   Выполните хранимую процедуру [sp_changearticle](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md) или [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Задайте значение «pre_creation_command» (хранимая процедура**sp_changearticle**) или значение «pre_creation_command» (хранимая процедура**sp_changemergearticle**) для параметра **@property** и значение «none», «delete» или «truncate» для параметра **@value** .  
+    -   Выполните хранимую процедуру [sp_changearticle](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md) или [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Задайте значение pre_creation_cmd (хранимая процедура **sp_changearticle**) или значение pre_creation_command (хранимая процедура **sp_changemergearticle**) для параметра **\@property** и значение none, delete или truncate для параметра **\@value**.  
   
     -   В диалоговом окне **Свойства статьи — \<статья>** в разделе **Целевой объект** выберите значение **Не изменять существующий объект**, **Удалить данные. Если статья имеет фильтр строк, удалить только данные, соответствующие критерию фильтра.** либо **Выполнить усечение всех данных в существующем объекте** для параметра **Действие, если имя уже используется**. Дополнительные сведения о доступе к этому диалоговому окну см. в статье [Просмотр и изменение свойств публикации](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
   

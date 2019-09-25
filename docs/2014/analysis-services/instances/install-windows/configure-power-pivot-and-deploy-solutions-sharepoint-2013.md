@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6d835269f77e563b94c89c3a68c5c82844edc773
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69493972"
 ---
 # <a name="configure-powerpivot-and-deploy-solutions-sharepoint-2013"></a>Настройка PowerPivot и развертывание решений (SharePoint 2013)
@@ -26,9 +26,9 @@ ms.locfileid: "69493972"
   
 -   Настройка приложения служб Excel на использование сервера [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] в режиме интеграции с SharePoint. Сведения о серверных службах и установке [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] сервера в режиме интеграции с SharePoint см. в разделе [PowerPivot для SharePoint 2013 установка](https://docs.microsoft.com/analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode).  
   
- Сведения об установке средства настройки PowerPivot для SharePoint 2013 см. в разделе [Установка и удаление надстройки &#40;PowerPivot для SharePoint SharePoint 2013&#41; ](https://docs.microsoft.com/analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013) .  
+ Сведения об установке средства настройки PowerPivot для SharePoint 2013 см. в разделе [Установка и удаление надстройки PowerPivot для SharePoint &#40;SharePoint 2013&#41; ](https://docs.microsoft.com/analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013) .  
   
- В этом разделе содержатся следующие подразделы.  
+ Этот раздел состоит из следующих подразделов.  
   
  [Запуск PowerPivot для SharePoint конфигурации 2013](#bkmk_run_configuration_tool)  
   

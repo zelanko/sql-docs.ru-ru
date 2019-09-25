@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b945aa26f0cd9137763a3a8d84b0f74c7d2311bc
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "68889607"
 ---
 # <a name="logical-architecture-overview-analysis-services---multidimensional-data"></a>Обзор логической архитектуры (службы Analysis Services — многомерные данные)
   Службы Analysis Services работают в режиме развертывания сервера, который определяет архитектуру памяти и среду выполнения, используемую моделями Analysis Services различных типов. Режим сервера определяется во время установки. **Режим многомерной модели и** интеллектуального анализа данных поддерживает традиционные OLAP и интеллектуальный анализ данных. **Табличный режим** поддерживает табличные модели. **Режим интеграции с SharePoint** относится к экземпляру Analysis Services, который был установлен как PowerPivot для SharePoint, который используется для загрузки и запроса моделей данных Excel или PowerPivot в книге.  
   
- В этом разделе рассматривается основная архитектура служб Analysis Services, применяемая в режиме многомерных данных и интеллектуального анализа данных. Дополнительные сведения о других режимах см. в разделе табличное [моделирование &#40;&#41; SSAS табличное](../../tabular-models/tabular-models-ssas.md) и [Сравнение табличных и многомерных решений &#40;SSAS&#41;](https://docs.microsoft.com/analysis-services/comparing-tabular-and-multidimensional-solutions-ssas).  
+ В этом разделе рассматривается основная архитектура служб Analysis Services, применяемая в режиме многомерных данных и интеллектуального анализа данных. Дополнительные сведения о других режимах см. в разделе табличное [моделирование &#40;SSAS табличное&#41; ](../../tabular-models/tabular-models-ssas.md) и [Сравнение табличных &#40;и&#41;многомерных решений SSAS](https://docs.microsoft.com/analysis-services/comparing-tabular-and-multidimensional-solutions-ssas).  
   
 ## <a name="basic-architecture"></a>Базовая архитектура  
  Экземпляр служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] может содержать несколько баз данных, а в базе данных могут одновременно присутствовать объекты OLAP и объекты интеллектуального анализа данных. Приложения подключаются к указанному экземпляру служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] и к указанной базе данных. На серверном компьютере может эксплуатироваться несколько экземпляров служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Экземпляры имеют имя "\<ServerName >\\< instanceName\>". [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] На следующем рисунке показаны все указанные связи между [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] объектами.  
@@ -94,7 +94,7 @@ ms.locfileid: "68889607"
 ### <a name="mapping-measures-attributes-and-hierarchies"></a>Сопоставление мер, атрибутов и иерархий  
  Меры, атрибуты и иерархии в примере куба выводятся из следующих столбцов таблиц фактов и измерений куба.  
   
-|Мера или атрибут (уровень)|Members|Исходная таблица|Исходный столбец|Образец значения столбца|  
+|Мера или атрибут (уровень)|Участники|Исходная таблица|Исходный столбец|Образец значения столбца|  
 |------------------------------------|-------------|------------------|-------------------|-------------------------|  
 |Мера «Посылки»|Неприменимо|ImportsFactTable|Пакеты|12|  
 |Мера «Последняя дата»|Неприменимо|ImportsFactTable|Последняя|03-май-99|  

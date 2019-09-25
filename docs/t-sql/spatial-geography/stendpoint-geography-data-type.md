@@ -1,5 +1,5 @@
 ---
-title: STEndpoint (тип данных geography) | Документы Майкрософт
+title: STEndPoint (тип данных geography) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -8,23 +8,23 @@ ms.reviewer: ''
 ms.technology: t-sql
 ms.topic: language-reference
 f1_keywords:
-- STEndpoint (geography Data Type)
-- STEndpoint_TSQL
+- STEndPoint (geography Data Type)
+- STEndPoint_TSQL
 dev_langs:
 - TSQL
 helpviewer_keywords:
-- STEndpoint method
+- STEndPoint method
 ms.assetid: 8974cd07-8ec4-4126-8fc2-fdcf322ccedd
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: efdc5658997bf0cf19637900c96c8f06d4a2e3ce
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: eb5d28712e5d4132cd8be07ab1e5014d5cb26567
+ms.sourcegitcommit: b016c01c47bc08351d093a59448d895cc170f8c3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68042286"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71118138"
 ---
-# <a name="stendpoint-geography-data-type"></a>STEndpoint (тип данных geography)
+# <a name="stendpoint-geography-data-type"></a>STEndPoint (тип данных geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Возвращает конечную точку экземпляра **geography**.  
@@ -49,7 +49,7 @@ ms.locfileid: "68042286"
  Если этот метод вызывается для пустого экземпляра **geography**, то он возвращает значение NULL.  
   
 ## <a name="examples"></a>Примеры  
- В следующем примере с помощью метода `LineString` создается экземпляр `STGeomFromText()`, а затем метод `STEndpoint()` производит получение конечной точки экземпляра `LineString`.  
+ В следующем примере с помощью метода `LineString` создается экземпляр `STGeomFromText()`, а затем метод `STEndPoint()` производит получение конечной точки экземпляра `LineString`.  
   
 ```  
 DECLARE @g geography;  

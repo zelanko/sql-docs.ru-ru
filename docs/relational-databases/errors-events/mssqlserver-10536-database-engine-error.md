@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: 9f97b41f-0ef8-4ad2-aec0-906a5d7522ba
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 0ace2712cd53b1b0371bd9deeb4191308a1393de
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 85901c0fc1a720849cb93f7392ade34ff1db35e0
+ms.sourcegitcommit: 0ea19d8e3bd9d91a416311e00a5fb0267d41949e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68060651"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71174278"
 ---
-# <a name="mssqlserver10536"></a>MSSQLSERVER_10536
+# <a name="mssqlserver_10536"></a>MSSQLSERVER_10536
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Сведения  
@@ -30,10 +30,10 @@ ms.locfileid: "68060651"
 |Источник события|MSSQLSERVER|  
 |Компонент|SQLEngine|  
 |Символическое имя|PG_TOO_MANY_STMTS|  
-|Текст сообщения|Не удалось создать структуру плана "%.\*ls", поскольку пакет или модуль, соответствующий указанному параметру **@plan_handle** , содержит более 1000 подходящих инструкций. Создайте структуру плана для каждой инструкции в пакете или модуле, указав для каждой инструкции значение **statement_start_offset**.|  
+|Текст сообщения|Не удалось создать структуру плана "%.\*ls", поскольку пакет или модуль, соответствующий указанному параметру **\@plan_handle**, содержит более 1000 подходящих инструкций. Создайте структуру плана для каждой инструкции в пакете или модуле, указав для каждой инструкции значение **statement_start_offset**.|  
   
 ## <a name="explanation"></a>Объяснение  
-Пакет или модуль, соответствующий указанному дескриптору **@plan_handle** , содержит больше 1000 подходящих инструкций.  
+Пакет или модуль, соответствующий указанному дескриптору **\@plan_handle**, содержит больше 1000 подходящих инструкций.  
   
 ## <a name="user-action"></a>Действие пользователя  
 Создайте структуру плана для каждой инструкции в пакете или модуле, указав для каждой инструкции значение **statement_start_offset**.  

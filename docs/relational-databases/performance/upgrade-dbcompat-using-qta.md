@@ -18,12 +18,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811e7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 28390d824e04287264b328878f888dbcfac1cdb1
-ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
+ms.openlocfilehash: 6c09d18bc2b9413eb324e75abfb52e6fa361c357
+ms.sourcegitcommit: 7625f78617a5b4fd0ff68b2c6de2cb2c758bb0ed
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70123118"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71163906"
 ---
 # <a name="upgrading-databases-by-using-the-query-tuning-assistant"></a>Обновление баз данных с помощью помощника по настройке запросов
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "70123118"
 Начиная с [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] версии 18, используя новый **помощник по настройке запросов (QTA)** , пользователи смогут выполнять рекомендуемые действия для поддержки стабильной производительности во время обновлений до более новых версий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], как описано в разделе *Поддержание стабильной производительности во время обновления до новой версии SQL Server* статьи [Сценарии использования хранилища запросов](../../relational-databases/performance/query-store-usage-scenarios.md#CEUpgrade). Тем не менее QTA не выполняет откат к ранее известному удачному плану, как показано на предыдущем шаге рекомендуемого рабочего процесса. Вместо этого QTA будет отслеживать регрессии, обнаруженные в представлении [**запросов со сниженной производительностью** хранилища запросов](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md#Regressed), перебирая возможные перестановки вариантов применимой модели оптимизатора, чтобы создать новый улучшенный план.
 
 > [!IMPORTANT]
-> QTA не создает рабочую нагрузку для пользователя. Если QTA выполняется в среде, которая не используется приложениями, убедитесь, что вы можете по-прежнему выполнять репрезентативную тестовую рабочую нагрузку в целевом [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] с помощью других средств. 
+> QTA не создает рабочую нагрузку для пользователя. Если QTA выполняется в среде, которая не используется приложениями, убедитесь в том, что вы можете по-прежнему выполнять репрезентативную тестовую рабочую нагрузку в целевом [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] с помощью других средств. 
 
 ## <a name="the-query-tuning-assistant-workflow"></a>Рабочий процесс помощника по настройке запросов
 В начале работы QTA предполагается, что база данных из предыдущей версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] перемещается (с помощью [CREATE DATABASE … FOR ATTACH](../..//relational-databases/databases/attach-a-database.md) или [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)) в более новую версию [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], а уровень совместимости базы данных перед обновлением изменяется не сразу. QTA поможет выполнить следующие действия.

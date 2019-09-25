@@ -8,12 +8,12 @@ ms.topic: article
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8fe83d73c0c7413715122d849141ea5378c24c47
-ms.sourcegitcommit: 2da98f924ef34516f6ebf382aeb93dab9fee26c1
+ms.openlocfilehash: d65ca67e43c35f0997b3d0784c97e501606bd05b
+ms.sourcegitcommit: c0fd28306a3b42895c2ab673734fbae2b56f9291
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70228462"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71096892"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>Новые возможности [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]
 
@@ -53,7 +53,7 @@ ms.locfileid: "70228462"
 
 |Новые функции или обновления | Сведения |
 |:---|:---|
-|Индексирование зашифрованных столбцов|Вы можете индексировать столбцы, зашифрованные с помощью случайного шифрования и ключей с поддержкой анклава, чтобы повысить производительность полнофункциональных запросов (с помощью операторов `LIKE` и операторов сравнения). См. подробнее об [использовании Always Encrypted с безопасными анклавами](../relational-databases/security/encryption/always-encrypted-enclaves.md).
+|Always Encrypted с безопасными анклавами.|К Always Encrypted добавляется функция шифрования на месте и полнофункциональные вычисления, что позволяет выполнять вычисления с данными в виде обычного текста внутри безопасного анклава на стороне сервера. Шифрование на месте повышает производительность и надежность криптографических операций (шифрования столбцов, смены ключей шифрования столбцов и т. д.) благодаря тому, что данные не требуется перемещать за пределы базы данных. Поддержка многофункциональных вычислений (сопоставления шаблонов и операций сравнения) дает возможность использовать Always Encrypted в более широком спектре сценариев и приложений, которые требуют защиты конфиденциальных данных, а также более широкой функциональности в запросах Transact-SQL. См. подробнее об [использовании Always Encrypted с безопасными анклавами](../relational-databases/security/encryption/always-encrypted-enclaves.md).|
 |Приостановка и возобновление начального сканирования прозрачного шифрования данных (TDE)|См. раздел [Сканирование — прозрачное шифрование данных (TDE)](../relational-databases/security/encryption/transparent-data-encryption.md#scan-suspend-resume).|
 |Управление сертификатами в диспетчере конфигурации SQL Server.|См. статью [Управление сертификатами (диспетчер конфигурации SQL Server)](../database-engine/configure-windows/manage-certificates.md).|
 | &nbsp; | &nbsp; |

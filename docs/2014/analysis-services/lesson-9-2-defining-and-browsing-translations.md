@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f9a254f685f83e97b14c78c7d6c4c21e2737b636
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69493781"
 ---
 # <a name="defining-and-browsing-translations"></a>Определение и просмотр переводов
@@ -104,7 +104,7 @@ ms.locfileid: "69493781"
   
      Обратите внимание, что элементы в панели метаданных заполняются повторно. После заполнения элементов в панели метаданных обратите внимание, что мера «Продажи через Интернет — сумма продаж» больше не отображается в папке отображения «Продажи через Интернет». Вместо этого он отображается на испанском языке в новой папке отображения с `Ventas del lnternet`именем, как показано на следующем рисунке.  
   
-     ![Панель метаданных] повторно заполнена (../../2014/tutorials/media/l9-translations-6.gif "Панель метаданных") повторно заполнена  
+     ![Панель метаданных повторно заполнена](../../2014/tutorials/media/l9-translations-6.gif "Панель метаданных повторно заполнена")  
   
 6.  На панели Метаданные щелкните правой кнопкой мыши `Cantidad de las Ventas del Internet` и выберите **Добавить в запрос**.  
   

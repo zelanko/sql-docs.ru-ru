@@ -17,10 +17,10 @@ author: mikeraymsft
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 87d19bc837219b5573dd237310b11dab9f146406
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "68811037"
 ---
 # <a name="columnstore-indexes-described"></a>Columnstore Indexes Described
@@ -128,7 +128,7 @@ ms.locfileid: "68811037"
  ![Column segment](../../database-engine/media/sql-server-pdw-columnstore-columnsegment.gif "Column segment")  
   
  некластеризованный индекс columnstore  
- Некластеризованный *индекс columnstore* является индексом только для чтения, созданным в существующем кластеризованном индексе или таблице кучи. Он содержит копию подмножества столбцов вплоть до включения всех столбцов в таблице. Таблица доступна только для чтения, если она содержит некластеризованный индекс columnstore.  
+ *Некластеризованный индекс columnstore* является индексом только для чтения, созданным в существующем кластеризованном индексе или таблице кучи. Он содержит копию подмножества столбцов вплоть до включения всех столбцов в таблице. Таблица доступна только для чтения, если она содержит некластеризованный индекс columnstore.  
   
  Некластеризованный индекс columnstore дает возможность использования индекса columnstore для выполнения запросов анализа, выполняемых одновременно с операциями только для чтения в исходной таблице.  
   
