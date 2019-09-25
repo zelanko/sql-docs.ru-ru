@@ -9,12 +9,12 @@ ms.prod_service: sql-tools
 ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
-ms.openlocfilehash: 01654df047d2dc78014c6e8c41edbb370d15da60
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
-ms.translationtype: HT
+ms.openlocfilehash: d8422146e3569ff991ef16179e54f0f78961fc79
+ms.sourcegitcommit: 6413b7495313830ad1ae5aefe0c09e8e7a284b07
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70874388"
+ms.lasthandoff: 09/16/2019
+ms.locfileid: "71016869"
 ---
 # <a name="download-and-install-sqlpackage"></a>Скачивание и установка sqlpackage
 
@@ -24,10 +24,10 @@ ms.locfileid: "70874388"
 
 |Платформа|Загрузить|Дата выпуска|Версия|Сборка
 |:---|:---|:---|:---|:---|
-|Windows|[Установщик MSI](https://go.microsoft.com/fwlink/?linkid=2102893)|6 сентября 2019 г.|18,3|15.0.4532.1|
-|macOS .NET Core (предварительная версия)|[ZIP-файл](https://go.microsoft.com/fwlink/?linkid=2102894)|6 сентября 2019 г.| 18,3|15.0.4532.1|
-|Linux .NET Core (предварительная версия)|[ZIP-файл](https://go.microsoft.com/fwlink/?linkid=2102978)|6 сентября 2019 г.| 18,3|15.0.4532.1|
-|Windows .NET Core (Предварительная версия)|[ZIP-файл](https://go.microsoft.com/fwlink/?linkid=2102979)|6 сентября 2019 г.| 18,3|15.0.4532.1|
+|Windows|[Установщик MSI](https://go.microsoft.com/fwlink/?linkid=2102893)|13 сентября 2019 г.|18.3.1|15.0.4538.1|
+|macOS .NET Core (предварительная версия)|[ZIP-файл](https://go.microsoft.com/fwlink/?linkid=2102894)|13 сентября 2019 г.| 18.3.1|15.0.4538.1|
+|Linux .NET Core (предварительная версия)|[ZIP-файл](https://go.microsoft.com/fwlink/?linkid=2102978)|13 сентября 2019 г.| 18.3.1|15.0.4538.1|
+|Windows .NET Core (Предварительная версия)|[ZIP-файл](https://go.microsoft.com/fwlink/?linkid=2102979)|13 сентября 2019 г.| 18.3.1|15.0.4538.1|
 
 Подробнее см. в [заметках о выпуске](release-notes-sqlpackage.md).
 
@@ -46,7 +46,7 @@ ms.locfileid: "70874388"
 
 1. Скачайте [sqlpackage для Windows](https://go.microsoft.com/fwlink/?linkid=2102979).
 2. Чтобы извлечь файл, щелкните правой кнопкой мыши файл в проводнике Windows и выберите пункт "извлечь все..." и укажите целевой каталог.
-3. Откройте новые окна терминала, а также компакт-диск в расположение, где SqlPackage был ексрактед:
+3. Откройте новое окно терминала и компакт-диск в папку, в которую был извлечен SqlPackage:
 
    **Установка ZIP:**
 
