@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3e1e74c9d14c93cf44a7da5db4795a1524d238be
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: f60aa3684778a7347b1ffd613a924c3bf0b7b94a
+ms.sourcegitcommit: 2f56848ec422845ee81fb84ed321a716c677aa0e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715271"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71271940"
 ---
 # <a name="install-sql-server-machine-learning-r-and-python-components-from-the-command-line"></a>Установка компонентов R и Python машинного обучения SQL Server из командной строки
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "68715271"
 | /IACCEPTROPENLICENSETERMS  | Указывает, что вы приняли условия лицензионного соглашения на использование компонентов R с открытым исходным кодом. |
 | /IACCEPTPYTHONLICENSETERMS | Указывает, что вы приняли условия лицензионного соглашения на использование компонентов Python. |
 | /IACCEPTSQLSERVERLICENSETERMS | Указывает, что вы приняли условия лицензионного соглашения на использование SQL Server.|
-| /МРКАЧЕДИРЕКТОРИ | Для автономной установки задает папку, содержащую CAB-файлы компонента R. |
+| /MRCACHEDIRECTORY | Для автономной установки задает папку, содержащую CAB-файлы компонента R. |
 ::: moniker-end
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
@@ -68,8 +68,8 @@ ms.locfileid: "68715271"
 | /IACCEPTROPENLICENSETERMS  | Указывает, что вы приняли условия лицензионного соглашения на использование компонентов R с открытым исходным кодом. |
 | /IACCEPTPYTHONLICENSETERMS | Указывает, что вы приняли условия лицензионного соглашения на использование компонентов Python. |
 | /IACCEPTSQLSERVERLICENSETERMS | Указывает, что вы приняли условия лицензионного соглашения на использование SQL Server.|
-| /МРКАЧЕДИРЕКТОРИ | Для автономной установки задает папку, содержащую CAB-файлы компонента R. |
-| /МПИКАЧЕДИРЕКТОРИ | Зарезервировано для будущего использования. Используйте% TEMP% для хранения CAB-файлов компонента Python для установки на компьютерах без подключения к Интернету. |
+| /MRCACHEDIRECTORY | Для автономной установки задает папку, содержащую CAB-файлы компонента R. |
+| /MPYCACHEDIRECTORY | Зарезервировано для последующего использования. Используйте% TEMP% для хранения CAB-файлов компонента Python для установки на компьютерах без подключения к Интернету. |
 ::: moniker-end
 
 ## <a name="indb"></a>Установка экземпляра в базе данных
@@ -201,14 +201,14 @@ Setup.exe /q /ACTION=Install /FEATURES=SQL_SHARED_MR
 
 ## <a name="next-steps"></a>Следующие шаги
 
-Разработчики r могут приступить к работе с некоторыми простыми примерами и ознакомиться с основами работы R с SQL Server. Следующий шаг см. по следующим ссылкам:
+Разработчики на языке R могут ознакомиться с простыми примерами, а также узнать, как код R работает с SQL Server. Дополнительные сведения см. в следующих статьях.
 
-+ [Учебник. Запуск R в T-SQL](../tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
-+ [Учебник. Аналитика в базе данных для разработчиков R](../tutorials/sqldev-in-database-r-for-sql-developers.md)
++ [Учебник. Запуск R в T-SQL](../tutorials/quickstart-r-create-script.md)
++ [Учебник. Аналитические функции в базе данных для разработчиков R](../tutorials/sqldev-in-database-r-for-sql-developers.md)
 
-Разработчики Python могут узнать, как использовать Python с SQL Server, следуя этим учебникам:
+Разработчики на языке Python могут узнать, как использовать Python с SQL Server, изучив следующие руководства.
 
 + [Учебник. Запуск Python в T-SQL](../tutorials/run-python-using-t-sql.md)
-+ [Учебник. Аналитика в базе данных для разработчиков Python](../tutorials/sqldev-in-database-python-for-sql-developers.md)
++ [Учебник. Аналитические функции в базе данных для разработчиков Python](../tutorials/sqldev-in-database-python-for-sql-developers.md)
 
-Примеры машинного обучения, основанные на реальных сценариях, см. в разделе [учебники](../tutorials/machine-learning-services-tutorials.md)по машинному обучению.
+Примеры машинного обучения, основанные на реальных сценариях, см. в разделе [руководствах по машинному обучению](../tutorials/machine-learning-services-tutorials.md).

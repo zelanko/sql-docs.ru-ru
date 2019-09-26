@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: d01be0f7d7a18091b965ad73b9bf035558b34864
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: 14ccd4beb2186213cb3d94b10031ac732224f4d9
+ms.sourcegitcommit: 2f56848ec422845ee81fb84ed321a716c677aa0e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715689"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71271903"
 ---
 # <a name="how-to-generate-forecasts-and-predictions-using-machine-learning-models-in-sql-server"></a>Как создавать прогнозы и прогнозы с помощью моделей машинного обучения в SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -84,7 +84,7 @@ _Оценка_ состоит из двух этапов. Во-первых, в�
 
 **Использование SQL**
 
-Из кода SQL можно обучить модель с помощью [sp_execute_external_script](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)и непосредственно вставлять обученные модели в таблицу в столбце типа **varbinary (max)** . Простой пример см. в разделе [Создание модели предитиве в R](../tutorials/rtsql-create-a-predictive-model-r.md) .
+Из кода SQL можно обучить модель с помощью [sp_execute_external_script](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)и непосредственно вставлять обученные модели в таблицу в столбце типа **varbinary (max)** . Простой пример см. в разделе [Создание модели предитиве в R](../tutorials/quickstart-r-train-score-model.md) .
 
 **Использование языка R**
 

@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: =sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 61dd49191e85d9fd4685904ae01b72d754d43318
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: a255b70b71f29f9cc28e4022ecfdf2741f9a838d
+ms.sourcegitcommit: 2f56848ec422845ee81fb84ed321a716c677aa0e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715813"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71271885"
 ---
 # <a name="install-sql-server-2016-r-services"></a>Установка служб R SQL Server 2016
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -255,9 +255,9 @@ ms.locfileid: "68715813"
 
 ## <a name="next-steps"></a>Следующие шаги
 
-Разработчики r могут приступить к работе с некоторыми простыми примерами и ознакомиться с основами работы R с SQL Server. Следующий шаг см. по следующим ссылкам:
+Разработчики на языке R могут ознакомиться с простыми примерами, а также узнать, как код R работает с SQL Server. Дополнительные сведения см. в следующих статьях.
 
-+ [Учебник. Запуск R в T-SQL](../tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
-+ [Учебник. Аналитика в базе данных для разработчиков R](../tutorials/sqldev-in-database-r-for-sql-developers.md)
++ [Учебник. Запуск R в T-SQL](../tutorials/quickstart-r-create-script.md)
++ [Учебник. Аналитические функции в базе данных для разработчиков R](../tutorials/sqldev-in-database-r-for-sql-developers.md)
 
-Примеры машинного обучения, основанные на реальных сценариях, см. в разделе [учебники](../tutorials/machine-learning-services-tutorials.md)по машинному обучению.
+Примеры машинного обучения, основанные на реальных сценариях, см. в разделе [руководствах по машинному обучению](../tutorials/machine-learning-services-tutorials.md).

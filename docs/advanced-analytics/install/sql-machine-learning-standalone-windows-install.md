@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 94ca7b3646b9005e11b3ee4968cbfaaa65d42264
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: f9835bae00aab15ee902dfe77dcf211eb412bc96
+ms.sourcegitcommit: 2f56848ec422845ee81fb84ed321a716c677aa0e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715840"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71271953"
 ---
 # <a name="install-machine-learning-server-standalone-or-r-server-standalone-using-sql-server-setup"></a>Установка Machine Learning Server (изолированной) или сервера R Server (автономная версия) с помощью программы установки SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -214,16 +214,16 @@ SQL Server программа установки включает парамет
 
 ## <a name="next-steps"></a>Следующие шаги
 
-Разработчики r могут приступить к работе с некоторыми простыми примерами и ознакомиться с основами работы R с SQL Server. Следующий шаг см. по следующим ссылкам:
+Разработчики на языке R могут ознакомиться с простыми примерами, а также узнать, как код R работает с SQL Server. Дополнительные сведения см. в следующих статьях.
 
-+ [Учебник. Запуск R в T-SQL](../tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
-+ [Учебник. Аналитика в базе данных для разработчиков R](../tutorials/sqldev-in-database-r-for-sql-developers.md)
++ [Учебник. Запуск R в T-SQL](../tutorials/quickstart-r-create-script.md)
++ [Учебник. Аналитические функции в базе данных для разработчиков R](../tutorials/sqldev-in-database-r-for-sql-developers.md)
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
-Разработчики Python могут узнать, как использовать Python с SQL Server, следуя этим учебникам:
+Разработчики на языке Python могут узнать, как использовать Python с SQL Server, изучив следующие руководства.
 
 + [Учебник. Запуск Python в T-SQL](../tutorials/run-python-using-t-sql.md)
-+ [Учебник. Аналитика в базе данных для разработчиков Python](../tutorials/sqldev-in-database-python-for-sql-developers.md)
++ [Учебник. Аналитические функции в базе данных для разработчиков Python](../tutorials/sqldev-in-database-python-for-sql-developers.md)
 ::: moniker-end
 
-Примеры машинного обучения, основанные на реальных сценариях, см. в разделе [учебники](../tutorials/machine-learning-services-tutorials.md)по машинному обучению.
+Примеры машинного обучения, основанные на реальных сценариях, см. в разделе [руководствах по машинному обучению](../tutorials/machine-learning-services-tutorials.md).
