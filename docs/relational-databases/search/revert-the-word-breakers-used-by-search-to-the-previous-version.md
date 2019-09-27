@@ -23,7 +23,7 @@ ms.locfileid: "70874902"
   
  В этой статье не обсуждаются следующие языки:  
   
--   **Английский**. Способ возврата к использованию или восстановления компонентов английского языка см. в разделе [Change the Word Breaker Used for US English and UK English](../../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md).  
+-   **Английский**. Способ возврата к использованию или восстановления компонентов английского языка см. в разделе [Изменение средства разбиения по словам, используемого для английского (США) и английского (Британского)](../../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md).  
   
 -   **Датский, польский и турецкий**. Средства разбиения по словам сторонних поставщиков для датского, польского и турецкого языков, входившие в предыдущие выпуски [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , заменены компонентами [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
@@ -167,7 +167,7 @@ ms.locfileid: "70874902"
   
     4.  Если в выбранном языке используется парадигматический модуль, обновите значение по умолчанию этого раздела, указав имя файла предыдущего парадигматического модуля из таблицы.  
   
-7.  Перейдите к следующему узлу реестра: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<InstanceRoot>\MSSearch\Language\<language_key>**. *<language_key>* представляет сокращенное название языка, используемое в реестре, например: "fra" представляет французский язык, "esn" — испанский.  
+7.  Перейдите к следующему узлу реестра: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<InstanceRoot>\MSSearch\Language\<language_key>** . *<language_key>* представляет сокращенное название языка, используемое в реестре, например: "fra" представляет французский язык, "esn" — испанский.  
   
 8.  Замените значение раздела **WBreakerClass** значением текущего средства разбиения по словам из таблицы.  
   
@@ -196,7 +196,7 @@ ms.locfileid: "70874902"
   
     4.  Если в выбранном языке используется парадигматический модуль, обновите значение по умолчанию этого раздела, указав имя файла текущего парадигматического модуля из таблицы.  
   
-5.  Перейдите к следующему узлу реестра: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<InstanceRoot>\MSSearch\Language\<language_key>**. *<language_key>* представляет сокращенное название языка, используемое в реестре, например: "fra" представляет французский язык, "esn" — испанский.  
+5.  Перейдите к следующему узлу реестра: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<InstanceRoot>\MSSearch\Language\<language_key>** . *<language_key>* представляет сокращенное название языка, используемое в реестре, например: "fra" представляет французский язык, "esn" — испанский.  
   
 6.  Замените значение раздела **WBreakerClass** значением предыдущего средства разбиения по словам из таблицы.  
   
@@ -288,7 +288,7 @@ ms.locfileid: "70874902"
   
     4.  Если в выбранном языке используется парадигматический модуль, обновите значение по умолчанию этого раздела, указав имя файла предыдущего парадигматического модуля из таблицы.  
   
-4.  Перейдите к следующему узлу реестра: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<InstanceRoot>\MSSearch\Language\<language_key>**. *<language_key>* представляет сокращенное название языка, используемое в реестре, например: "fra" представляет французский язык, "esn" — испанский.  
+4.  Перейдите к следующему узлу реестра: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<InstanceRoot>\MSSearch\Language\<language_key>** . *<language_key>* представляет сокращенное название языка, используемое в реестре, например: "fra" представляет французский язык, "esn" — испанский.  
   
 5.  Замените значение раздела **WBreakerClass** значением текущего средства разбиения по словам из таблицы.  
   
@@ -312,7 +312,7 @@ ms.locfileid: "70874902"
   
     4.  Если в выбранном языке используется парадигматический модуль, обновите значение по умолчанию этого раздела, указав имя файла текущего парадигматического модуля из таблицы.  
   
-4.  Перейдите к следующему узлу реестра: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<InstanceRoot>\MSSearch\Language\<language_key>**. *<language_key>* представляет сокращенное название языка, используемое в реестре, например: "fra" представляет французский язык, "esn" — испанский.  
+4.  Перейдите к следующему узлу реестра: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<InstanceRoot>\MSSearch\Language\<language_key>** . *<language_key>* представляет сокращенное название языка, используемое в реестре, например: "fra" представляет французский язык, "esn" — испанский.  
   
 5.  Замените значение раздела **WBreakerClass** значением предыдущего средства разбиения по словам из таблицы.  
   
@@ -380,6 +380,6 @@ ms.locfileid: "70874902"
 |Текущее имя файла|MsWb70804.dll|  
   
 ## <a name="see-also"></a>См. также:  
- [Change the Word Breaker Used for US English and UK English](../../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md)   
+ [Изменение средства разбиения по словам, используемого для английского (США) и английского (Британского)](../../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md)   
  [Изменения в функциях полнотекстового поиска](/sql/database-engine/behavior-changes-to-full-text-search)
  
