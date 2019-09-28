@@ -1,7 +1,7 @@
 ---
 title: Установка инструментов для больших данных
 titleSuffix: SQL Server big data clusters
-description: Узнайте, как устанавливать средства, используемые [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] с (Предварительная версия).
+description: Узнайте, как установить средства, используемые с [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (Предварительная версия).
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,18 +9,18 @@ ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: afd036dfe33ab538d3d845e73f45e804052a9903
-ms.sourcegitcommit: ecb19d0be87c38a283014dbc330adc2f1819a697
+ms.openlocfilehash: cbb34d5cd209281a5c97d819c7741503d234ad2d
+ms.sourcegitcommit: c4875c097e3aae1b76233777d15e0a0ec8e0d681
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70238694"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71342021"
 ---
 # <a name="install-sql-server-2019-big-data-tools"></a>Установка средств для работы с большими данными SQL Server 2019
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-В этой статье описываются клиентские средства, которые должны быть установлены для создания, управления и [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] использования (Предварительная версия). В следующем разделе приведен список средств и ссылки на инструкции по установке. Перед развертыванием кластера больших данных настройте средства, отмеченные как обязательные в Windows или Linux.
+В этой статье описываются клиентские средства, которые должны быть установлены для создания, управления и использования [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (Предварительная версия). В следующем разделе приведен список средств и ссылки на инструкции по установке. Перед развертыванием кластера больших данных настройте средства, отмеченные как обязательные в Windows или Linux.
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
@@ -28,11 +28,11 @@ ms.locfileid: "70238694"
 
 В следующей таблице перечислены общие инструменты кластера больших данных и способы их установки.
 
-| Tool | Обязательно | Описание | Установка |
+| Инструмент | Обязательно | Описание | Установка |
 |---|---|---|---|
 | **python** | Да | Python — это интерпретируемый объектно-ориентированный высокоуровневый язык программирования с динамической семантикой. Многие части кластеров больших данных для SQL Server используют Python. | [Установка Python](#python)|
 | **azdata** | Да | Программа командной строки для установки кластера больших данных и управления им. | [Установка](deploy-install-azdata.md) |
-| **kubectl**<sup>1</sup> | Да | Программа командной строки для мониторинга базового кластера Kubernetes ([дополнительные сведения](https://kubernetes.io/docs/tasks/tools/install-kubectl/)). | [Windows](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-with-powershell-from-psgallery) \| [Linux](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-binary-using-native-package-management) |
+| **kubectl**<sup>1</sup> | Да | Программа командной строки для мониторинга базового кластера Kubernetes ([дополнительные сведения](https://kubernetes.io/docs/tasks/tools/install-kubectl/)). | [Windows](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-with-powershell-from-psgallery) \| [Linux](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-using-native-package-management) |
 | **Версия-кандидат Azure Data Studio SQL Server 2019 (RC)** | Да | Кросс-платформенный графический инструмент для запроса SQL Server. | [Установка](#download-and-install-azure-data-studio-sql-server-2019-release-candidate-rc) |
 | **Расширение SQL Server 2019** | Да | Расширение для Azure Data Studio, которое поддерживает подключение к кластеру больших данных. Также включает мастер виртуализации данных. | [Установка](../azure-data-studio/sql-server-2019-extension.md) |
 | **Azure CLI**<sup>2</sup> | Для AKS | Современный интерфейс командной строки для управления службами Azure. Используется с развертываниями кластера больших данных AKS ([дополнительные сведения](https://docs.microsoft.com/cli/azure/?view=azure-cli-latest)). | [Установка](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest) |
@@ -216,4 +216,4 @@ Azure Data Studio SQL Server 2019 RC предоставляет возможно
 - [Краткое руководство. Развертывание кластера больших данных SQL Server в службе Azure Kubernetes (AKS)](quickstart-big-data-cluster-deploy.md)
 - [Развертывание [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] на Kubernetes](deployment-guidance.md)
 
-Дополнительные сведения о кластерах больших данных см. в разделе [ [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]что такое?](big-data-cluster-overview.md).
+Дополнительные сведения о кластерах больших данных см. в разделе [что такое [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md).

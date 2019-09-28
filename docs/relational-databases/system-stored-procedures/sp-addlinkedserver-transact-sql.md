@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: fed3adb0-4c15-4a1a-8acd-1b184aff558f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3ef386d6643be7742c0bc042a2b2a16f1877f2e2
-ms.sourcegitcommit: a24f6e12357979f1134a54a036ebc58049484a4f
+ms.openlocfilehash: 0d54f307ce71418af0b43ebae5353d2c6200e677
+ms.sourcegitcommit: c4875c097e3aae1b76233777d15e0a0ec8e0d681
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71314513"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71341980"
 ---
 # <a name="sp_addlinkedserver-transact-sql"></a>sp_addlinkedserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,22 +43,28 @@ sp_addlinkedserver [ @server= ] 'server' [ , [ @srvproduct= ] 'product_name' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-[ @server =] *сервер\'\'*           
+[@server =] *\'server @ no__t-3*          
 Имя создаваемого связанного сервера. Аргумент*server* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-[ @srvproduct =] *product_name\'\'*           
+[@srvproduct =] *\'product_name @ no__t-3*          
 Введите название продукта для источника данных OLE DB, который добавляется в качестве связанного сервера. *product_name* имеет тип **nvarchar (** 128 **)** и значение по умолчанию NULL. Если **SQL Server**, то не обязательно указывать *provider_name*, *data_source*, *Location*, *provider_string*и *Catalog* .  
   
-[ @provider =] *provider_name\'\'*           
-Введите уникальный программный идентификатор (PROGID) поставщика OLE DB, соответствующий этому источнику данных. *provider_name* должен быть уникальным для указанного поставщика OLE DB, установленного на текущем компьютере. *provider_name* имеет тип **nvarchar (** 128 **)** и значение по умолчанию NULL. Однако если *provider_name* опущен, используется sqlncli. (При использовании SQLNCLI [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] будет использовать последнюю версию поставщика OLE DB для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].) Предполагается, что поставщик OLE DB зарегистрирован с указанным идентификатором PROGID в реестре.  
+[@provider =] *\'provider_name @ no__t-3*          
+Введите уникальный программный идентификатор (PROGID) поставщика OLE DB, соответствующий этому источнику данных. *provider_name* должен быть уникальным для указанного поставщика OLE DB, установленного на текущем компьютере. *provider_name* имеет тип **nvarchar (128)** и значение по умолчанию NULL. Однако если *provider_name* опущен, используется sqlncli. 
+
+> [!NOTE]
+> При использовании SQLNCLI будет перенаправлен [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] к последней версии поставщика OLE DB Native Client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Предполагается, что поставщик OLE DB зарегистрирован с указанным идентификатором PROGID в реестре.
+
+> [!IMPORTANT] 
+> Предыдущий поставщик OLE DB Майкрософт для SQL Server (SQLOLEDB) и поставщик SQL Server Native Client OLE DB (SQLNCLI) остаются устаревшими и не рекомендуется использовать для новых задач разработки. Вместо этого используйте новый [драйвер Microsoft OLE DB для SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) (мсоледбскл), который будет обновлен с самыми последними серверными компонентами.
   
-[ @datasrc =] *data_source\'\'*           
+[@datasrc =] *\'data_source @ no__t-3*          
  Имя источника данных, как оно интерпретируется поставщиком OLE DB. *data_source* имеет тип **nvarchar (** 4000 **)** . *data_source* передается как свойство DBPROP_INIT_DATASOURCE для инициализации поставщика OLE DB.  
   
-[ @location =] *расположение\'\'*           
+[@location =] *\'location @ no__t-3*          
  Введите местонахождение базы данных, понятное поставщику OLE DB. *Location* имеет тип **nvarchar (** 4000 **)** и значение по умолчанию NULL. *Расположение* передается как свойство DBPROP_INIT_LOCATION для инициализации поставщика OLE DB.  
   
-[ @provstr =] *provider_string\'\'*           
+[@provstr =] *\'provider_string @ no__t-3*          
  Строка подключения для конкретного поставщика OLE DB, указывающая уникальный источник данных. *provider_string* имеет тип **nvarchar (** 4000 **)** и значение по умолчанию NULL. *provstr* либо передается в IDataInitialize, либо устанавливается как свойство DBPROP_INIT_PROVIDERSTRING для инициализации поставщика OLE DB.  
   
  При создании связанного [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сервера для поставщика OLE DB собственного клиента экземпляр можно указать с помощью ключевого слова Server Server =*ServerName*\\*instanceName* , чтобы указать конкретный экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *ServerName* — это имя компьютера, на котором [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняется, а *instanceName* — [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имя конкретного экземпляра, к которому будет подключен пользователь.  
@@ -66,7 +72,7 @@ sp_addlinkedserver [ @server= ] 'server' [ , [ @srvproduct= ] 'product_name' ]
 > [!NOTE]
 > Чтобы получить доступ к зеркальной базе данных, строка соединения должна содержать имя базы данных. Это имя необходимо, чтобы предоставить поставщику доступа к данным возможность пытаться отработать отказ. База данных может быть указана в **@provstr** параметре или **@catalog** . Кроме того, строка соединения может содержать имя партнера по обеспечению отработки отказа.  
   
-[ @catalog =] *каталог\'\'*        
+[@catalog =] *\'catalog @ no__t-3*       
  Каталог, который должен использоваться при подключении к поставщику OLE DB. *Catalog* имеет тип **sysname**и значение по умолчанию NULL. *Каталог* передается как свойство DBPROP_INIT_CATALOG для инициализации поставщика OLE DB. Если связанный сервер определен для экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], то каталог ссылается на базу данных по умолчанию, с которой сопоставлен связанный сервер.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
@@ -104,14 +110,14 @@ sp_addlinkedserver [ @server= ] 'server' [ , [ @srvproduct= ] 'product_name' ]
  процедуру **sp_addlinkedserver** невозможно выполнить в пользовательской транзакции.  
   
 > [!IMPORTANT]
->  При создании связанного сервера с помощью процедуры **sp_addlinkedserver**для всех локальных имен входа добавляется автоматическое сопоставление по умолчанию. Для пользователей, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не являющихся поставщиками, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверенные имена входа могут иметь возможность получить доступ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] к поставщику в учетной записи службы. Администраторам нужно рассмотреть применение процедуры `sp_droplinkedsrvlogin <linkedserver_name>, NULL` для удаления глобального сопоставления.  
+> При создании связанного сервера с помощью процедуры **sp_addlinkedserver**для всех локальных имен входа добавляется автоматическое сопоставление по умолчанию. Для пользователей, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не являющихся поставщиками, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверенные имена входа могут иметь возможность получить доступ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] к поставщику в учетной записи службы. Администраторам нужно рассмотреть применение процедуры `sp_droplinkedsrvlogin <linkedserver_name>, NULL` для удаления глобального сопоставления.  
   
 ## <a name="permissions"></a>Разрешения  
  `sp_addlinkedserver` Инструкции`ALTER ANY LINKED SERVER` требуется разрешение. (Диалоговое окно **новый связанный сервер** реализуется так, что `sysadmin` требует членства в предопределенной роли сервера.) [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
   
 ## <a name="examples"></a>Примеры  
   
-### <a name="a-using-the-microsoft-sql-server-native-client-ole-db-provider"></a>A. Использование поставщика OLE DB для собственного клиента Microsoft SQL Server  
+### <a name="a-using-the-microsoft-sql-server-ole-db-provider"></a>A. Использование поставщика Microsoft SQL Server OLE DB  
  В следующем примере показано создание связанного сервера с именем `SEATTLESales`. Название продукта — `SQL Server`, имя поставщика не используется.  
   
 ```sql  
@@ -122,8 +128,21 @@ EXEC sp_addlinkedserver
    N'SQL Server';  
 GO  
 ```  
-  
+
+ В следующем примере создается связанный сервер `S1_instance1` на экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью драйвера OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+
+```sql  
+EXEC sp_addlinkedserver     
+   @server=N'S1_instance1',   
+   @srvproduct=N'',  
+   @provider=N'MSOLEDBSQL',   
+   @datasrc=N'S1\instance1';  
+```  
+
  В следующем примере создается связанный сервер `S1_instance1` на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] экземпляре с помощью [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственного клиента OLE DB Provider.  
+ 
+> [!IMPORTANT] 
+> Поставщик SQL Server Native Client OLE DB (SQLNCLI) остается устаревшим и не рекомендуется использовать его для новых задач разработки. Вместо этого используйте новый [драйвер Microsoft OLE DB для SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) (мсоледбскл), который будет обновлен с самыми последними серверными компонентами.
   
 ```sql  
 EXEC sp_addlinkedserver     
@@ -163,7 +182,7 @@ GO
 ```  
   
 ### <a name="c-using-the-microsoft-ole-db-provider-for-odbc-with-the-data_source-parameter"></a>В. Использование поставщика Microsoft OLE DB для ODBC с аргументом источника данных  
- В следующем примере создается связанный сервер с именем `SEATTLE Payroll` , который [!INCLUDE[msCoName](../../includes/msconame-md.md)] использует поставщик OLE DB для ODBC (`MSDASQL`) и параметр *data_source* .  
+ В следующем примере создается связанный сервер с именем `SEATTLE Payroll`, который использует поставщик OLE DB [!INCLUDE[msCoName](../../includes/msconame-md.md)] для ODBC (`MSDASQL`) и параметр *data_source* .  
   
 > [!NOTE]  
 > Указанный источник данных ODBC должен быть определен как системный DSN на сервере до того, как будет использоваться связанный сервер.  
@@ -307,11 +326,11 @@ SELECT * FROM myLinkedServer.myDatabase.dbo.myTable
   
 ## <a name="see-also"></a>См. также  
  [Хранимые процедуры &#40;распределенных запросов TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)   
- [хранимая процедуры sp_addlinkedsrvlogin &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
- [хранимая процедуры sp_addserver &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)   
- [sp_dropserver &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropserver-transact-sql.md)   
+ хранимая процедуры [ &#40;sp_addlinkedsrvlogin&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
+ [sp_addserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)   
+ [sp_dropserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropserver-transact-sql.md)   
  [sp_serveroption (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)   
- [sp_setnetname &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-setnetname-transact-sql.md)   
+ [sp_setnetname &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-setnetname-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Системные таблицы (Transact-SQL)](../../relational-databases/system-tables/system-tables-transact-sql.md)  
   

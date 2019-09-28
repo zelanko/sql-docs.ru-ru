@@ -9,12 +9,12 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: f6b6581eacad2fa9a65f64fdc29d6dfcde53852a
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 2379f96e3b5288fc33f5c925613bf9fd5d35612d
+ms.sourcegitcommit: c4875c097e3aae1b76233777d15e0a0ec8e0d681
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69652344"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71341838"
 ---
 # <a name="deploy-with-a-bash-script-to-a-single-node-kubeadm-cluster"></a>Развертывание в кластере kubeadm с одним узлом с помощью скрипта bash
 
@@ -24,7 +24,7 @@ ms.locfileid: "69652344"
 
 ## <a name="prerequisites"></a>Предварительные требования
 
-- Виртуальный или физический компьютер обычный Ubuntu 18,04 или 16,04. Все зависимости настраиваются скриптом, который запускается из виртуальной машины.
+- **Виртуальный или** физический компьютер обычный Ubuntu 18,04 или 16,04. Все зависимости настраиваются скриптом, который запускается из виртуальной машины.
 
   > [!NOTE]
   > Использование виртуальных машин Linux в Azure пока не поддерживается.
@@ -34,7 +34,7 @@ ms.locfileid: "69652344"
 - Обновите существующие пакеты с помощью приведенных ниже команд, чтобы убедиться, что образ ОС обновлен.
 
    ``` bash
-   sudo apt update&&apt upgrade -y
+   sudo apt update && sudo apt upgrade -y
    sudo systemctl reboot
    ```
 
@@ -85,4 +85,4 @@ ms.locfileid: "69652344"
 
 ## <a name="next-steps"></a>Следующие шаги
 
-Чтобы приступить к работе с кластерами больших данных [, см. раздел учебник. Загрузка демонстрационных данных в SQL Server кластер](tutorial-load-sample-data.md)больших данных.
+Чтобы приступить к работе с кластерами больших данных, см. раздел [Tutorial: Загрузите образец данных в SQL Server кластер больших данных @ no__t-0.
