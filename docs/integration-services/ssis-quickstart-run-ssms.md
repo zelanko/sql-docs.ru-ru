@@ -6,14 +6,14 @@ ms.prod: sql
 ms.prod_service: integration-services
 ms.custom: ''
 ms.technology: integration-services
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 60a98dceeef0b4c58f676ed1db73433b480b211d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 9b9f44c7fbd4b0b801347f1b1360165fb504e6bf
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68068766"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71281506"
 ---
 # <a name="run-an-ssis-package-with-sql-server-management-studio-ssms"></a>Выполнение пакета служб SSIS с помощью SQL Server Management Studio (SSMS)
 
@@ -79,7 +79,7 @@ SQL Server Management Studio — это интегрированная сред�
 
 4.  Нажмите кнопку "ОК", чтобы выполнить пакет.
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 - Рассмотрите другие варианты выполнения пакета.
     - [Выполнение пакета служб SSIS с помощью Transact-SQL (SSMS)](./ssis-quickstart-run-tsql-ssms.md)
     - [Выполнение пакета служб SSIS с помощью Transact-SQL (Visual Studio Code)](ssis-quickstart-run-tsql-vscode.md)

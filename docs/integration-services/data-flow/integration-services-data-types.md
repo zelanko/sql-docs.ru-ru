@@ -16,14 +16,14 @@ helpviewer_keywords:
 - Integration Services, data types
 - SQL Server Integration Services, data types
 ms.assetid: 896fc3e8-3aa6-4396-ba82-5d7741cffa56
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: eab2401dc3cb85dfeaedc22b406f1da73c112127
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 45ada0520d90c1c6e63adad4f9e62bf1ea31e270
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67941461"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71292417"
 ---
 # <a name="integration-services-data-types"></a>Типы данных служб Integration Services
 
@@ -109,7 +109,7 @@ ms.locfileid: "67941461"
 ### <a name="converting-datetime-data-types"></a>Преобразование типов данных «дата-время»  
  Можно изменить тип данных столбца с данными «дата-время» для извлечения даты или временной части данных. В следующей таблице приводятся результаты переходов от одного типа данных «дата-время» к другому.  
   
-#### <a name="converting-from-dtfiletime"></a>Преобразование из типа данных DT_FILETIME  
+#### <a name="converting-from-dt_filetime"></a>Преобразование из типа данных DT_FILETIME  
   
 |Преобразование типа данных DT_FILETIME в|Результат|  
 |-----------------------------|------------|  
@@ -122,7 +122,7 @@ ms.locfileid: "67941461"
 |DT_DBTIMESTAMP2|Удаляет значение для долей секунды, если его масштаб больше числа разрядов, предусмотренного для типа данных DT_DBTIMESTAMP2. После удаления долей секунд формируется отчет об усечении данных. Дополнительные сведения см. в разделе [Обработка ошибок в данных](../../integration-services/data-flow/error-handling-in-data.md).|  
 |DT_DBTIMESTAMPOFFSET|Устанавливает поле часового пояса для типа данных DT_DBTIMESTAMPOFFSET в нулевое значение.<br /><br /> Удаляет значение долей секунд, если его масштаб больше числа разрядов, предусмотренного для типа данных DT_DBTIMESTAMPOFFSET. После удаления долей секунд формируется отчет об усечении данных. Дополнительные сведения см. в разделе [Обработка ошибок в данных](../../integration-services/data-flow/error-handling-in-data.md).|  
   
-#### <a name="converting-from-dtdate"></a>Преобразование из типа данных DT_DATE  
+#### <a name="converting-from-dt_date"></a>Преобразование из типа данных DT_DATE  
   
 |Преобразовать тип данных DT_DATE в|Результат|  
 |-------------------------|------------|  
@@ -135,7 +135,7 @@ ms.locfileid: "67941461"
 |DT_DBTIMESTAMP2|Преобразует тип данных.|  
 |DT_DBTIMESTAMPOFFSET|Устанавливает поле часового пояса для типа данных DT_DBTIMESTAMPOFFSET в нулевое значение.|  
   
-#### <a name="converting-from-dtdbdate"></a>Преобразование из типа данных DT_DBDATE  
+#### <a name="converting-from-dt_dbdate"></a>Преобразование из типа данных DT_DBDATE  
   
 |Преобразовать тип данных DT_DBDATE в|Результат|  
 |---------------------------|------------|  
@@ -148,7 +148,7 @@ ms.locfileid: "67941461"
 |DT_DBTIMESTAMP2|Устанавливает поля времени для типа данных DT_DBTIMESTAMP в нулевое значение.|  
 |DT_DBTIMESTAMPOFFSET|Устанавливает поля времени и часового пояса для типа данных DT_DBTIME2 в нулевое значение.|  
   
-#### <a name="converting-from-dtdbtime"></a>Преобразование из типа данных DT_DBTIME  
+#### <a name="converting-from-dt_dbtime"></a>Преобразование из типа данных DT_DBTIME  
   
 |Преобразование типа данных DT_DBTIME в|Результат|  
 |---------------------------|------------|  
@@ -161,7 +161,7 @@ ms.locfileid: "67941461"
 |DT_DBTIMESTAMP2|Устанавливает поля даты для типа данных DT_DBTIMESTAMP2 в значения, соответствующие текущей дате.|  
 |DT_DBTIMESTAMPOFFSET|Устанавливает поля даты для типа данных DT_DBTIMESTAMPOFFSET в значения, соответствующие текущей дате, а поле часового пояса — в нулевое значение.|  
   
-#### <a name="converting-from-dtdbtime2"></a>Преобразование из типа данных DT_DBTIME2  
+#### <a name="converting-from-dt_dbtime2"></a>Преобразование из типа данных DT_DBTIME2  
   
 |Преобразование типа данных DT_DBTIME2 в|Результат|  
 |----------------------------|------------|  
@@ -174,7 +174,7 @@ ms.locfileid: "67941461"
 |DT_DBTIMESTAMP2|Устанавливает поля даты для типа данных DT_DBTIMESTAMP2 в значения, соответствующие текущей дате.<br /><br /> Удаляет значение для долей секунды, если его масштаб больше числа разрядов, предусмотренного для типа данных DT_DBTIMESTAMP2. После удаления долей секунд формируется отчет об усечении данных. Дополнительные сведения см. в разделе [Обработка ошибок в данных](../../integration-services/data-flow/error-handling-in-data.md).|  
 |DT_DBTIMESTAMPOFFSET|Устанавливает поля даты для типа данных DT_DBTIMESTAMPOFFSET в значения, соответствующие текущей дате, а поле часового пояса — в нулевое значение.<br /><br /> Удаляет значение долей секунд, если его масштаб больше числа разрядов, предусмотренного для типа данных DT_DBTIMESTAMPOFFSET. После удаления долей секунд формируется отчет об усечении данных. Дополнительные сведения см. в разделе [Обработка ошибок в данных](../../integration-services/data-flow/error-handling-in-data.md).|  
   
-#### <a name="converting-from-dtdbtimestamp"></a>Преобразование из типа данных DT_DBTIMESTAMP  
+#### <a name="converting-from-dt_dbtimestamp"></a>Преобразование из типа данных DT_DBTIMESTAMP  
   
 |Преобразование типа данных DT_DBTIMESTAMP в|Результат|  
 |--------------------------------|------------|  
@@ -187,7 +187,7 @@ ms.locfileid: "67941461"
 |DT_DBTIMESTAMP2|Удаляет значение для долей секунды, если его масштаб больше числа разрядов, предусмотренного для типа данных DT_DBTIMESTAMP2. После удаления долей секунд формируется отчет об усечении данных. Дополнительные сведения см. в разделе [Обработка ошибок в данных](../../integration-services/data-flow/error-handling-in-data.md).|  
 |DT_DBTIMESTAMPOFFSET|Устанавливает поле часового пояса для типа данных DT_DBTIMESTAMPOFFSET в нулевое значение.<br /><br /> Удаляет значение долей секунд, если его масштаб больше числа разрядов, предусмотренного для типа данных DT_DBTIMESTAMPOFFSET. После удаления долей секунд формируется отчет об усечении данных. Дополнительные сведения см. в разделе [Обработка ошибок в данных](../../integration-services/data-flow/error-handling-in-data.md).|  
   
-#### <a name="converting-from-dtdbtimestamp2"></a>Преобразование из типа данных DT_DBTIMESTAMP2  
+#### <a name="converting-from-dt_dbtimestamp2"></a>Преобразование из типа данных DT_DBTIMESTAMP2  
   
 |Преобразование типа данных DT_DBTIMESTAMP2 в|Результат|  
 |---------------------------------|------------|  
@@ -200,7 +200,7 @@ ms.locfileid: "67941461"
 |DT_DBTIMESTAMP2|Удаляет значение долей секунд, если его масштаб больше числа разрядов, предусмотренного для целевого типа данных DT_DBTIMESTAMP2. После удаления долей секунд формируется отчет об усечении данных. Дополнительные сведения см. в разделе [Обработка ошибок в данных](../../integration-services/data-flow/error-handling-in-data.md).|  
 |DT_DBTIMESTAMPOFFSET|Устанавливает поле часового пояса для типа данных DT_DBTIMESTAMPOFFSET в нулевое значение.<br /><br /> Удаляет значение долей секунд, если его масштаб больше числа разрядов, предусмотренного для типа данных DT_DBTIMESTAMPOFFSET. После удаления долей секунд формируется отчет об усечении данных. Дополнительные сведения см. в разделе [Обработка ошибок в данных](../../integration-services/data-flow/error-handling-in-data.md).|  
   
-#### <a name="converting-from-dtdbtimestampoffset"></a>Преобразование из типа данных DT_DBTIMESTAMPOFFSET  
+#### <a name="converting-from-dt_dbtimestampoffset"></a>Преобразование из типа данных DT_DBTIMESTAMPOFFSET  
   
 |Преобразование типа данных DT_DBTIMESTAMPOFFSET в|Результат|  
 |--------------------------------------|------------|  

@@ -32,12 +32,12 @@ ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
 author: pmasl
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1cd488c24da5e937bde1d7dd3e3bb2bd193bb3bb
-ms.sourcegitcommit: 1661c3e1bb38ed12f8485c3860fc2d2b97dd2c9d
+ms.openlocfilehash: 515e0501e86d81a34cd9e0f14d720ba3024b241c
+ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71149920"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71251089"
 ---
 # <a name="collation-and-unicode-support"></a>Collation and Unicode Support
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -79,7 +79,7 @@ ms.locfileid: "71149920"
 |Элемент двоичного кода (\_BIN2) <sup>1</sup> | Данные в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сортируются и сравниваются на основе элементов Юникода для данных в Юникоде. Для типов данных не в Юникоде при выборе BIN2 сравнение производится так же, как и двоичная сортировка.<br/><br/> Преимуществом использования порядка сортировки BIN2 является то, что приложениям, сравнивающим отсортированные данные [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], не требуется никакой повторной сортировки данных. В результате сортировка BIN2 упрощает разработку приложения и увеличивает ожидаемую производительность. Дополнительные сведения см. в разделе [Параметры двоичной сортировки](#Binary-collations) на этой странице.|
 |UTF-8 (\_UTF8)|Позволяет хранить данные в кодировке UTF-8 в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Если этот параметр не выбран, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использует формат кодировки по умолчанию (не в Юникоде) для подходящих типов данных. Дополнительные сведения см. в разделе [Поддержка UTF-8](#utf8) на этой странице.| 
 
-<sup>1</sup> Если выбран порядок сортировки BIN или BIN2, параметры с учетом регистра (\_CS), диакритических знаков (\_AS), типа японской азбуки (\_KS) и ширины символов (\WS) недоступны.      
+<sup>1</sup> Если выбран порядок сортировки BIN или BIN2, параметры с учетом регистра (\_CS), диакритических знаков (\_AS), типа японской азбуки (\_KS) и ширины символов (\_WS) недоступны.      
 
 #### <a name="examples-of-collation-options"></a>Примеры параметров сортировки
 Каждый набор параметров сортировки представляет собой последовательность суффиксов для определения учета регистра, диакритических знаков, ширины символов и типа японской азбуки. В следующих примерах описан порядок сортировки для различных сочетаний суффиксов.

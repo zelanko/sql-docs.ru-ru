@@ -19,14 +19,14 @@ helpviewer_keywords:
 - SSIS Script component, coding
 - VSTA
 ms.assetid: c3913c15-66aa-4b61-89b5-68488fa5f0a4
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 6b1392368eeceb391d99321326c7a7ec19b87c70
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c4b3337be486123545a187337949da1c160343ad
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68074603"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71286545"
 ---
 # <a name="coding-and-debugging-the-script-component"></a>Кодирование и отладка компонента скрипта
 
@@ -175,7 +175,7 @@ public class ScriptMain : UserComponent
 |Переменные|Использование именованных и типизированных свойств метода доступа класса коллекции **Variables** в элементе проекта **ComponentWrapper**, отображенном в свойстве **Variables** класса **ScriptMain**.<br /><br /> Метод **PreExecute** может обращаться только к переменным, доступным только для чтения. Метод **PostExecute** может обращаться как к переменным, доступным только для чтения, так и к переменным, доступным для чтения и записи.|  
 |Соединения|Использование именованных и типизированных свойств метода доступа класса коллекции **Connections** в элементе проекта **ComponentWrapper**, отображенном в свойстве **Connections** класса **ScriptMain**.|  
 |События|Создание событий с помощью свойства <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ComponentMetaData%2A> класса **ScriptMain** и методов **Fire\<X>** интерфейса <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100>.|  
-|Ведение журнала|Ведение журнала с помощью метода <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.Log%2A> класса **ScriptMain**.|  
+|Logging|Ведение журнала с помощью метода <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.Log%2A> класса **ScriptMain**.|  
   
 ## <a name="debugging-the-script-component"></a>Отладка компонента скрипта  
  Для отладки кода в компоненте «Скрипт» установите в коде по крайней мере одну точку останова, а затем закройте среду разработки VSTA IDE, чтобы запустить пакет в среде [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]. Когда выполнение пакета входит в компонент «Скрипт», среда разработки VSTA IDE открывается повторно и отображает код в режиме только для чтения. После того как выполнение достигает точку останова, можно проверить значения переменных и выполнить оставшийся код в режиме пошагового выполнения.  
