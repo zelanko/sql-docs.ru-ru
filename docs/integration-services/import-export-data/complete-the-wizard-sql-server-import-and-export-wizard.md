@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dts.impexpwizard.completewizard.f1
 ms.assetid: fbf0aa37-fd9e-47e1-82b4-26c1359ec3da
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 82eef3aee29e3552e36f12c078682350abb341a9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a945c51a5ba75c20a0925a4f548d98765379459b
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68054188"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71296368"
 ---
 # <a name="complete-the-wizard-sql-server-import-and-export-wizard"></a>Завершение работы мастера (мастер импорта и экспорта SQL Server)
 
