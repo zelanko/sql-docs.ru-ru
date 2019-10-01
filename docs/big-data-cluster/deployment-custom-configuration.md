@@ -9,12 +9,12 @@ ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 0b76b6645e6be35f04b1a83670a99e529dcb84d6
-ms.sourcegitcommit: a97d551b252b76a33606348082068ebd6f2c4c8c
+ms.openlocfilehash: 699e4260368d3467e68df9ba6b86e961959a8192
+ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70745443"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71682039"
 ---
 # <a name="configure-deployment-settings-for-cluster-resources-and-services"></a>Настройка параметров развертывания для ресурсов и служб кластера
 
@@ -576,7 +576,7 @@ azdata bdc config patch --config-file custom/bdc.json --patch-file ./patch.json
 }
 ```
 
-Можно вручную изменить файл **Control. JSON** и добавить приведенный выше раздел в **спецификацию**. также можно создать файл исправления **elasticsearch-patch. JSON** , как показано ниже, и использовать **аздата** CLI для исправления файла **config. JSON** :
+Можно вручную изменить файл **Control. JSON** и добавить приведенный выше раздел в **спецификацию**. также можно создать файл исправления **elasticsearch-patch. JSON** , как показано ниже, и использовать **аздата** CLI для исправления файла **Control. JSON** :
 
 ```json
 {

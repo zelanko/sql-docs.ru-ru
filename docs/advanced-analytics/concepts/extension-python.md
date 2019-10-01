@@ -3,17 +3,17 @@ title: Расширение языка программирования Python
 description: Сведения о выполнении кода Python и встроенных библиотеках Python в SQL Server Службы машинного обучения.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/05/2018
+ms.date: 09/30/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 61a1a5629d4f0488b5f75a08578c39f2e68f2c7d
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: f3825a2b5085bf5a6e144a602c36cb20ccaca430
+ms.sourcegitcommit: 36c3ead6f2a3628f58040acf47f049f0b0957b8a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715874"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71688281"
 ---
 # <a name="python-language-extension-in-sql-server"></a>Расширение языка Python в SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -92,9 +92,11 @@ Microsoftml и revoscalepy тесно связаны. источники дан�
 8. Вспомогательная программа SQL управляет связью с SQL Server и очисткой связанных объектов заданий.
 9. SQL Server передает результаты обратно клиенту.
 
-## <a name="see-also"></a>См. также
+## <a name="next-steps"></a>Следующие шаги
 
 + [модуль revoscalepy в SQL Server](../python/ref-py-revoscalepy.md)
 + [Справочник по функциям revoscalepy](https://docs.microsoft.com/r-server/python-reference/revoscalepy/revoscalepy-package) 
 + [Инфраструктура расширяемости в SQL Server](extensibility-framework.md)
 + [Расширения R и машинного обучения в SQL Server](extension-r.md)
++ [Получение сведений о пакете Python](../package-management/python-package-information.md)
++ [Установка пакетов Python с помощью склмлутилс](../package-management/install-additional-python-packages-on-sql-server.md)

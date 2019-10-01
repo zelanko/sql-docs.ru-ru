@@ -9,12 +9,12 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 7036a88ddb2940a16593806cfe1ec679653e30d9
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 90c13c270b1e2fe64290603e256027e945d98b84
+ms.sourcegitcommit: 36c3ead6f2a3628f58040acf47f049f0b0957b8a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71295000"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71688303"
 ---
 # <a name="configure-kubernetes-on-multiple-machines-for-sql-server-big-data-cluster-deployments"></a>Настройка Kubernetes на нескольких компьютерах для развертываний кластера больших данных SQL Server
 
@@ -26,13 +26,16 @@ ms.locfileid: "71295000"
 > Примеры сценариев, которые настраивают Kubernetes, см. в статье [ Создание кластера Kubernetes с использованием Kubeadm в Ubuntu 16.04 LTS или 18.04 LTS](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/kubeadm).
 Кроме того, в [этом](deployment-script-single-node-kubeadm.md) разделе приведен пример скрипта, который автоматизирует развертывание kubeadm из одного узла на виртуальной машине, а затем поверх него развертывает конфигурацию по умолчанию кластера больших данных.
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 - Не меньше 3 физических компьютеров или виртуальных машин с Linux
 - Рекомендуемая конфигурация отдельного компьютера:
    - 8 ЦП
    - 64 ГБ памяти
    - 100 ГБ хранилища
+ 
+> [!Important] 
+> Перед запуском развертывания кластера больших данных убедитесь, что часы синхронизируются на всех узлах Kubernetes, на которых нацелено развертывание. Кластер больших данных имеет встроенные свойства работоспособности для различных служб с учетом времени и отклонений часов может привести к неправильному состоянию.
 
 ## <a name="prepare-the-machines"></a>Подготовка компьютеров
 
