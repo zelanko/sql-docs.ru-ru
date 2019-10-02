@@ -2,7 +2,7 @@
 title: Встраивание скалярных пользовательских функций в базах данных Microsoft SQL | Документация Майкрософт
 description: Функция встраивания скалярных пользовательских функций для повышения производительности запросов, вызывающих скалярные пользовательские функции, в SQL Server (2018 и более поздних версиях) и базе данных SQL Azure.
 ms.custom: ''
-ms.date: 02/28/2019
+ms.date: 09/13/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,12 +15,12 @@ ms.assetid: ''
 author: s-r-k
 ms.author: karam
 monikerRange: = azuresqldb-current || >= sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: e73a03eae61601f28578b23ac2f2afc1a80f5f76
-ms.sourcegitcommit: 823d7bdfa01beee3cf984749a8c17888d4c04964
+ms.openlocfilehash: 6492c08242e927ac7f5356f96f4da02465ece547
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/26/2019
-ms.locfileid: "70030339"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71299141"
 ---
 # <a name="scalar-udf-inlining"></a>Встраивание скалярных пользовательских функций
 
@@ -154,7 +154,8 @@ SELECT C_NAME, dbo.customer_category(C_CUSTKEY) FROM CUSTOMER;
 - В функции используется предложение `EXECUTE AS CALLER` (поведение предложения `EXECUTE AS` по умолчанию не определено).
 - Функция не ссылается на табличные переменные или параметры с табличными значениями.
 - В запросе, вызывающем скалярную пользовательскую функцию, вызов такой функции не указан в предложении `GROUP BY`.
-- В запросе, вызывающем скалярную пользовательскую функцию в своем списке выборки с предложением `DISTINCT`, вызов такой функции не указан в предложении `ORDER BY`.
+- В запросе, вызывающем скалярную пользовательскую функцию в своем списке выборки с предложением `DISTINCT`, нет предложения `ORDER BY`.
+- UDF не используется в предложении `ORDER BY`.
 - Функция не скомпилирована в собственном коде (поддерживается взаимодействие).
 - Функция не используется в определении вычисляемого столбца или ограничения CHECK.
 - Функция не ссылается на пользовательские типы.

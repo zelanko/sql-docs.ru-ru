@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: ca34b5cd-07b3-4dca-b66a-ed8c6a826c95
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 4d24a636e47c6e969b339350caba0f8609a86d9f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9791a9672965757f5b86cbae60241ef7528ae565
+ms.sourcegitcommit: a24f6e12357979f1134a54a036ebc58049484a4f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68079930"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71314522"
 ---
 # <a name="decryptbypassphrase-transact-sql"></a>DECRYPTBYPASSPHRASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -64,19 +64,19 @@ DecryptByPassPhrase ( { 'passphrase' | @passphrase }
 Строка данных, зашифрованная с помощью ключа. *ciphertext* имеет тип данных **varbinary**.  
  
 @ciphertext  
-Переменная типа **varbinary**, содержащая данные, зашифрованные с помощью ключа. Переменная типа *@ciphertext* с максимальным размером 8000 байт.  
+Переменная типа **varbinary**, содержащая данные, зашифрованные с помощью ключа. Переменная *\@ciphertext* обладает максимальным размером 8000 байт.  
   
 *add_authenticator*  
 Указывает, включен ли исходный процесс шифрования и зашифрована ли структура проверки подлинности вместе с данными в виде открытого текста. *add_authenticator* имеет значение 1, если в процессе шифрования использовалась структура проверки подлинности. *add_authenticator* имеет тип данных **int**.  
   
 @add_authenticator  
-Переменная, указывающая, включен ли исходный процесс шифрования и зашифрована ли структура проверки подлинности вместе с данными в виде открытого текста. *@add_authenticator* имеет значение 1, если в процессе шифрования использовалась структура проверки подлинности. *@add_authenticator* имеет тип данных **int**.  
+Переменная, указывающая, включен ли исходный процесс шифрования и зашифрована ли структура проверки подлинности вместе с данными в виде открытого текста. Здесь *\@add_authenticator* имеет значение 1, если в процессе шифрования использовалась структура проверки подлинности. *\@add_authenticator* имеет тип данных **int**.  
 
 *authenticator*  
 Данные, используемые в качестве основы для создания структуры проверки подлинности. *authenticator* имеет тип данных **sysname**.  
   
 @authenticator  
-Переменная, содержащая данные, которые использовались в качестве основы для создания структуры проверки подлинности. *@authenticator* имеет тип данных **sysname**.  
+Переменная, содержащая данные, которые использовались в качестве основы для создания структуры проверки подлинности. *\@authenticator* имеет тип данных **sysname**.  
   
 ## <a name="return-types"></a>Типы возвращаемых данных  
 Переменная типа **varbinary** с максимальным размером 8000 байт.  

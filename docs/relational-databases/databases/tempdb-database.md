@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 ms.reviewer: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8197b243bc0789da9acb0e94069585d8619d5fa0
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 76fb1dcfaab16e560b67f92d7bc3a6203f93037b
+ms.sourcegitcommit: 4c7151f9f3f341f8eae70cb2945f3732ddba54af
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653774"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71326119"
 ---
 # <a name="tempdb-database"></a>База данных tempdb
 
@@ -47,7 +47,9 @@ ms.locfileid: "69653774"
   - версии строк, создаваемые транзакциями изменения данных для таких функций, как операции с индексами в сети, функции режима MARS и триггеры AFTER.  
   
 Операции в базе данных **tempdb** регистрируются минимально, что позволяет откатывать транзакции. База данных**tempdb** пересоздается при каждом запуске [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , чтобы система всегда запускалась с чистой копией базы данных. Временные таблицы и хранимые процедуры удаляются автоматически при отключении, и при выключении системы нет активных соединений. Поэтому в базе данных **tempdb** ничего не сохраняется от одного сеанса [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] до следующего. Операции резервного копирования и восстановления базы данных **tempdb**запрещены.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="physical-properties-of-tempdb-in-sql-server"></a>Физические свойства базы данных tempdb в SQL Server
 
 В приведенной ниже таблице описывается исходная конфигурация данных и файлов журналов базы данных **tempdb**, которая основывается на значениях по умолчанию для шаблона базы данных. Размеры этих файлов могут немного изменяться в зависимости от выпуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -242,9 +244,7 @@ ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED TEMPDB_METADATA = ON
     COMMIT TRAN
     ```
 3. Запросы к таблицам, оптимизированным для памяти, не поддерживают указания блокировки и изоляции, поэтому запросы к представлениям каталога оптимизированной для памяти TempDB не будут учитывать указания блокировки и изоляции. Как и в случае с другими системными представлениями каталога в SQL Server, все транзакции для системных представлений будут находиться в изоляции READ COMMITTED (или READ COMMITTED SNAPSHOT в данном случае).
-4. При включении оптимизированных для памяти метаданных tempdb возможны некоторые проблемы с индексами columnstore во временных таблицах. В этом предварительном выпуске рекомендуется избегать индексов columnstore во временных таблицах при использовании оптимизированных для памяти метаданных tempdb.
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+4. При включении оптимизированных для памяти метаданных tempdb индексы [columnstore](../indexes/columnstore-indexes-overview.md) невозможно создавать во временных таблицах.
 
 > [!NOTE] 
 > Эти ограничения действуют только при ссылке на системные представления TempDB, при необходимости вы сможете создать временную таблицу в той же транзакции, где обращаетесь к оптимизированной для памяти таблице в пользовательской базе данных.
@@ -253,6 +253,8 @@ ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED TEMPDB_METADATA = ON
 ```
 SELECT SERVERPROPERTY('IsTempdbMetadataMemoryOptimized')
 ```
+
+Если не удается запустить сервер по какой-либо причине после включения оптимизированных для памяти метаданных TempDB, можно обойти эту функцию, запустив SQL Server в [минимальной конфигурации](../../database-engine/configure-windows/start-sql-server-with-minimal-configuration.md) с помощью параметра запуска **-f**. Это позволит отключить функцию, а затем перезапустить SQL Server в нормальном режиме.
 
 ## <a name="capacity-planning-for-tempdb-in-sql-server"></a>Планирование размера базы данных tempdb в SQL Server
 

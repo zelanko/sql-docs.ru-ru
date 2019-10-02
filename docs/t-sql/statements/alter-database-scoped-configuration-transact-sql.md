@@ -1,7 +1,7 @@
 ---
 title: ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 05/22/2019
+ms.date: 09/23/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: cdd652c18af72c73566afac978c4dc00e2867a8a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: decb69879ca80e599fa90f1eb1aa150ccf7f49a5
+ms.sourcegitcommit: 853c2c2768caaa368dce72b4a5e6c465cc6346cf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68065849"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71227189"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -44,8 +44,9 @@ ms.locfileid: "68065849"
 - включить или выключить сбор статистики выполнения для скомпилированных в собственном коде модулей T-SQL.
 - включить или отключить параметры подключения по умолчанию для инструкций DDL, поддерживающих синтаксис `ONLINE =`;
 - включить или отключить параметры возобновления по умолчанию для инструкций DDL, поддерживающих синтаксис `RESUMABLE =`;
-- Включение или отключение функции автоматического удаления глобальных временных таблиц.
 - Включение или отключение функции [интеллектуальной обработки запросов](../../relational-databases/performance/intelligent-query-processing.md).
+- Включение или отключение принудительного применения плана с ускорением.
+- Включение или отключение функции автоматического удаления глобальных временных таблиц.
 - Включение или отключение [упрощенной инфраструктуры профилирования запросов](../../relational-databases/performance/query-profiling-infrastructure.md).
 - включить или отключить новое сообщение об ошибке `String or binary data would be truncated`.
 - Включает или отключает запись последнего действительного плана выполнения в [sys.dm_exec_query_plan_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md).
@@ -82,6 +83,7 @@ ALTER DATABASE SCOPED CONFIGURATION
     | ROW_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF }
     | BATCH_MODE_ON_ROWSTORE = { ON | OFF }
     | DEFERRED_COMPILATION_TV = { ON | OFF }
+    | ACCELERATED_PLAN_FORCING = { ON | OFF }
     | GLOBAL_TEMPORARY_TABLE_AUTODROP = { ON | OFF }
     | LIGHTWEIGHT_QUERY_PROFILING = { ON | OFF }
     | VERBOSE_TRUNCATION_WARNINGS = { ON | OFF }
@@ -287,11 +289,20 @@ DEFERRED_COMPILATION_TV **=** { **ON** | OFF}
 > [!NOTE]
 > Для уровня совместимости базы данных 140 или более низкого эта конфигурация области баз данных не оказывает влияния.
 
+ACCELERATED_PLAN_FORCING **=** { **ON** | OFF }
+
+**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)])
+
+Включает оптимизированный механизм для принудительного применения плана запроса, допустимый для всех форм применения планов, таких как [Принудительно использовать план хранилища запросов](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md#Regressed), [Автоматическая настройка](../../relational-databases/automatic-tuning/automatic-tuning.md#automatic-plan-correction) или подсказка запроса [USE PLAN](../../t-sql/queries/hints-transact-sql-query.md#use-plan). Значение по умолчанию — ON.
+
+> [!NOTE]
+> Не рекомендуется отключать ускоренное применение планов.
+
 GLOBAL_TEMPORARY_TABLE_AUTODROP **=** { **ON** | OFF }
 
 **Применимо к**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] (компонент в общедоступной предварительной версии)
 
-Настройка функции автоматического удаления [глобальных временных таблиц](create-table-transact-sql.md). По умолчанию имеет значение ON, то есть глобальные временные таблицы автоматически удаляются, когда не используются ни одним сеансом. Если задано значение OFF, глобальные временные таблицы следует удалять явным образом с помощью инструкции DROP TABLE, или они будут автоматически удалены при перезапуске сервера.
+Настройка функции автоматического удаления [глобальных временных таблиц](../../t-sql/statements/create-table-transact-sql.md#temporary-tables). По умолчанию имеет значение ON, то есть глобальные временные таблицы автоматически удаляются, когда не используются ни одним сеансом. Если задано значение OFF, глобальные временные таблицы следует удалять явным образом с помощью инструкции DROP TABLE, или они будут автоматически удалены при перезапуске сервера.
 
 - В отдельных базах данных и эластичных пулах [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] этот параметр можно задать для отдельных баз данных пользователей сервера Базы данных SQL.
 - В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и управляемом экземпляре [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] этот параметр задается в `TempDB` и не учитывается на уровне отдельных пользовательских баз данных.
@@ -356,7 +367,7 @@ LAST_QUERY_PLAN_STATS **=** { ON | **OFF**}
 
 - Параметр процедуры `sp_configure` переопределяется параметром Resource Governor.
 
-### <a name="queryoptimizerhotfixes"></a>QUERY_OPTIMIZER_HOTFIXES
+### <a name="query_optimizer_hotfixes"></a>QUERY_OPTIMIZER_HOTFIXES
 
 Указание `QUERYTRACEON` используется для включения оптимизатора запросов по умолчанию для версий от SQL Server 7.0 до [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] или исправлений оптимизатора запросов; между указанием запроса и параметром конфигурации уровня базы данных используется условие ИЛИ, что означает, что если хотя бы одна из этих сущностей включена, параметры уровня базы данных применяются.
 
@@ -368,11 +379,11 @@ LAST_QUERY_PLAN_STATS **=** { ON | **OFF**}
 
 Так как инструкция `ALTER DATABASE SCOPED CONFIGURATION` — это новая функция в [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]), которая влияет на схему базы данных, экспорт схемы (с данными или без них) невозможно импортировать в более старую версию [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], например [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] или [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. Например, экспорт в [DACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_3) или [BACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_4) из базы данных [!INCLUDE[ssSDS](../../includes/sssds-md.md)] или [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], использовавшей эту новую функцию, невозможно будет импортировать на сервер нижнего уровня.
 
-### <a name="elevateonline"></a>ELEVATE_ONLINE
+### <a name="elevate_online"></a>ELEVATE_ONLINE
 
 Этот параметр применяется только к инструкциям DDL, поддерживающим синтаксис `WITH (ONLINE = <syntax>)`. Не затрагивает индексы XML.
 
-### <a name="elevateresumable"></a>ELEVATE_RESUMABLE
+### <a name="elevate_resumable"></a>ELEVATE_RESUMABLE
 
 Этот параметр применяется только к инструкциям DDL, поддерживающим синтаксис `WITH (RESUMABLE = <syntax>)`. Не затрагивает индексы XML.
 
@@ -404,7 +415,7 @@ ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET MAXDOP = 4 ;
 ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET MAXDOP = PRIMARY ;
 ```
 
-### <a name="c-set-legacycardinalityestimation"></a>В. Задание параметра LEGACY_CARDINALITY_ESTIMATION
+### <a name="c-set-legacy_cardinality_estimation"></a>В. Задание параметра LEGACY_CARDINALITY_ESTIMATION
 В этом примере для параметра LEGACY_CARDINALITY_ESTIMATION задается значение ON для базы данных-получателя в сценарии георепликации.
 
 ```sql
@@ -417,7 +428,7 @@ ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET LEGACY_CARDINALITY_ESTIMAT
 ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET LEGACY_CARDINALITY_ESTIMATION = PRIMARY ;
 ```
 
-### <a name="d-set-parametersniffing"></a>Г. Задание параметра PARAMETER_SNIFFING
+### <a name="d-set-parameter_sniffing"></a>Г. Задание параметра PARAMETER_SNIFFING
 В этом примере параметру PARAMETER_SNIFFING присваивается значение OFF для базы данных-источника в сценарии георепликации.
 
 ```sql
@@ -436,7 +447,7 @@ ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET PARAMETER_SNIFFING = OFF ;
 ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET PARAMETER_SNIFFING = PRIMARY ;
 ```
 
-### <a name="e-set-queryoptimizerhotfixes"></a>Д. Задание параметра QUERY_OPTIMIZER_HOTFIXES
+### <a name="e-set-query_optimizer_hotfixes"></a>Д. Задание параметра QUERY_OPTIMIZER_HOTFIXES
 Задайте для параметра QUERY_OPTIMIZER_HOTFIXES значение ON для базы данных-источника в сценарии георепликации.
 
 ```sql
@@ -450,7 +461,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET QUERY_OPTIMIZER_HOTFIXES = ON ;
 ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE;
 ```
 
-### <a name="g-set-identitycache"></a>Ж. Задание параметра IDENTITY_CACHE
+### <a name="g-set-identity_cache"></a>Ж. Задание параметра IDENTITY_CACHE
 **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (функция на этапе общедоступной предварительной версии)
 
 В этом примере отключается кэш идентификаторов.
@@ -459,7 +470,7 @@ ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE;
 ALTER DATABASE SCOPED CONFIGURATION SET IDENTITY_CACHE = OFF ;
 ```
 
-### <a name="h-set-optimizeforadhocworkloads"></a>З. Задание параметра OPTIMIZE_FOR_AD_HOC_WORKLOADS
+### <a name="h-set-optimize_for_ad_hoc_workloads"></a>З. Задание параметра OPTIMIZE_FOR_AD_HOC_WORKLOADS
 **Область применения**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
 
 В этом примере включается заглушка скомпилированного плана для сохранения в кэше при первой компиляции пакета.
@@ -468,7 +479,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET IDENTITY_CACHE = OFF ;
 ALTER DATABASE SCOPED CONFIGURATION SET OPTIMIZE_FOR_AD_HOC_WORKLOADS = ON;
 ```
 
-### <a name="i-set-elevateonline"></a>И. Задание ELEVATE_ONLINE
+### <a name="i-set-elevate_online"></a>И. Задание ELEVATE_ONLINE
 **Применимо к**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] (компонент в общедоступной предварительной версии)
 
 В этом примере параметру ELEVATE_ONLINE присваивается значение FAIL_UNSUPPORTED.
@@ -477,7 +488,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET OPTIMIZE_FOR_AD_HOC_WORKLOADS = ON;
 ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_ONLINE = FAIL_UNSUPPORTED ;
 ```
 
-### <a name="j-set-elevateresumable"></a>К. Задание ELEVATE_RESUMABLE
+### <a name="j-set-elevate_resumable"></a>К. Задание ELEVATE_RESUMABLE
 **Применимо к**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] и [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] (компонент в общедоступной предварительной версии)
 
 В этом примере параметру ELEVEATE_RESUMABLE присваивается значение WHEN_SUPPORTED.
@@ -502,26 +513,26 @@ ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE 0x06000500F443610F003B
 - [Степень параллелизма](../../relational-databases/query-processing-architecture-guide.md#DOP)
 - [Рекомендации и инструкции по использованию параметра конфигурации "max degree of parallelism" в SQL Server](https://support.microsoft.com/kb/2806535)
 
-### <a name="legacycardinalityestimation-resources"></a>Ресурсы по параметру LEGACY_CARDINALITY_ESTIMATION
+### <a name="legacy_cardinality_estimation-resources"></a>Ресурсы по параметру LEGACY_CARDINALITY_ESTIMATION
 
 - [Оценка количества элементов (SQL Server)](../../relational-databases/performance/cardinality-estimation-sql-server.md)
 - [Оптимизация планов запроса с помощью средства оценки кратности SQL Server 2014](https://msdn.microsoft.com/library/dn673537.aspx)
 
-### <a name="parametersniffing-resources"></a>Ресурсы по параметру PARAMETER_SNIFFING
+### <a name="parameter_sniffing-resources"></a>Ресурсы по параметру PARAMETER_SNIFFING
 
 - [Сканирование параметров](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing)
 - ["Кажется, здесь есть параметр!"](https://blogs.msdn.microsoft.com/queryoptteam/2006/03/31/i-smell-a-parameter/)
 
-### <a name="queryoptimizerhotfixes-resources"></a>Ресурсы по параметру QUERY_OPTIMIZER_HOTFIXES
+### <a name="query_optimizer_hotfixes-resources"></a>Ресурсы по параметру QUERY_OPTIMIZER_HOTFIXES
 
 - [Флаги трассировки](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)
 - [Модель обслуживания флага трассировки 4199 для исправления оптимизатора запросов SQL Server](https://support.microsoft.com/kb/974006)
 
-### <a name="elevateonline-resources"></a>Ресурсы по ELEVATE_ONLINE
+### <a name="elevate_online-resources"></a>Ресурсы по ELEVATE_ONLINE
 
 [Рекомендации по операциям с индексами в оперативном режиме](../../relational-databases/indexes/guidelines-for-online-index-operations.md)
 
-### <a name="elevateresumable-resources"></a>Ресурсы по ELEVATE_RESUMABLE
+### <a name="elevate_resumable-resources"></a>Ресурсы по ELEVATE_RESUMABLE
 
 [Рекомендации по операциям с индексами в оперативном режиме](../../relational-databases/indexes/guidelines-for-online-index-operations.md)
 

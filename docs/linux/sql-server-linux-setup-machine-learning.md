@@ -1,31 +1,37 @@
 ---
-title: Установка Служб машинного обучения SQL Server (R, Python) в Linux
-description: Сведения об установке Служб машинного обучения SQL Server (R, Python) в Red Hat, Ubuntu и SUSE.
+title: Установка Служб машинного обучения SQL Server (Python, R) в Linux
+description: Сведения об установке Служб машинного обучения SQL Server (Python, R) в Linux Red Hat, Ubuntu и SUSE.
 author: dphansen
 ms.author: davidph
 ms.reviewer: vanto
 manager: cgronlun
-ms.date: 05/22/2019
+ms.date: 09/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 91bacc4ab4c8876ac49a09b58d1821f1c2853a3c
-ms.sourcegitcommit: 3bd813ab2c56b415a952e5fbd5cfd96b361c72a2
+ms.openlocfilehash: b3d2fb6c05a078e222a68e8de8998d4edff3c1a8
+ms.sourcegitcommit: 2f56848ec422845ee81fb84ed321a716c677aa0e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70913565"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71271968"
 ---
-# <a name="install-sql-server-machine-learning-services-r-python-on-linux"></a>Установка Служб машинного обучения SQL Server (R, Python) в Linux
+# <a name="install-sql-server-machine-learning-services-python-and-r-on-linux"></a>Установка Служб машинного обучения SQL Server (Python, R) в Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-[Службы машинного обучения SQL Server](../advanced-analytics/index.yml) работают в операционных системах Linux, начиная с этой предварительной версии SQL Server 2019. Следуйте инструкциям в этой статье, чтобы установить расширения машинного обучения для R и Python.
+В этой статье объясняется, как установить [Службы машинного обучения SQL Server](../advanced-analytics/index.yml) в Linux. Службы машинного обучения можно использовать для запуска сценариев R или Python в базе данных.
 
-Расширения машинного обучения и программирования — это надстройка ядра СУБД. Хотя [ядро СУБД и Службы машинного обучения можно установить одновременно](#install-all), рекомендуется сначала установить и настроить ядро СУБД SQL Server, чтобы устранить все неполадки, прежде чем добавлять дополнительные компоненты. 
+Поддерживаются следующие дистрибутивы Linux:
 
-Пакет расширений R и Python находится в репозиториях исходного кода SQL Server для Linux. Если вы уже настроили репозитории исходного кода для ядра СУБД, команды установки пакета **mssql-mlservices** можно выполнить, используя ту же регистрацию репозиториев.
+- Red Hat Enterprise Linux (RHEL)
+- SUSE Linux Enterprise Server (SLES)
+- Ubuntu
+
+Службы машинного обучения являются надстройкой ядра СУБД. Хотя [ядро СУБД и Службы машинного обучения можно установить одновременно](#install-all), рекомендуется сначала установить и настроить ядро СУБД SQL Server, чтобы устранить все неполадки, прежде чем добавлять дополнительные компоненты. 
+
+Пакет расширений Python и R находится в репозиториях исходного кода SQL Server для Linux. Если вы уже настроили репозитории исходного кода для ядра СУБД, команды установки пакета **mssql-mlservices** можно выполнить, используя ту же регистрацию репозиториев.
 
 Службы машинного обучения также поддерживаются в контейнерах Linux. Мы не предоставляем готовые контейнеры со Службами машинного обучения, однако вы можете создать такой контейнер для SQL Server, используя [шаблон, доступный в GitHub](https://github.com/Microsoft/mssql-docker/tree/master/linux/preview/examples/mssql-mlservices).
 
@@ -52,8 +58,8 @@ ls /opt/microsoft/mssql/bin
 
 | Платформа  | Команды для удаления пакетов | 
 |-----------|----------------------------|
-| RHEL  | `sudo yum remove microsoft-r-open-mro-3.4.4`<br/>`sudo yum remove msssql-mlservices-python` |
-| SLES  | `sudo zypper remove microsoft-r-open-mro-3.4.4`<br/>`sudo zypper remove msssql-mlservices-python` |
+| Red Hat   | `sudo yum remove microsoft-r-open-mro-3.4.4`<br/>`sudo yum remove msssql-mlservices-python` |
+| SUSE  | `sudo zypper remove microsoft-r-open-mro-3.4.4`<br/>`sudo zypper remove msssql-mlservices-python` |
 | Ubuntu    | `sudo apt-get remove microsoft-r-open-mro-3.4.4`<br/>`sudo apt-get remove msssql-mlservices-python`|
 
 > [!Note]
@@ -74,7 +80,7 @@ ls /opt/microsoft/mssql/bin
 
 2. Выполните команды установки, используя диспетчеры пакетов и синтаксис для вашей операционной системы. 
 
-   + [RedHat](#RHEL)
+   + [Red Hat](#RHEL)
    + [Ubuntu](#ubuntu)
    + [SUSE](#suse)
 
@@ -128,7 +134,7 @@ dpkg -i packages-microsoft-prod.deb
 sudo apt-get update
 ```
 
-#### <a name="mro-on-rhel"></a>MRO в RHEL
+#### <a name="mro-on-red-hat"></a>MRO в Red Hat
 
 ```bash
 # Import the Microsoft repository key
@@ -143,6 +149,7 @@ rpm -Uvh https://packages.microsoft.com/config/rhel/7/packages-microsoft-prod.rp
 # Update packages on your system (optional)
 yum update
 ```
+
 #### <a name="mro-on-suse"></a>MRO в SUSE
 
 ```bash
@@ -531,7 +538,7 @@ mssql-mlservices-mlm-py-9.4.7.64
 
 Разработчики на языке R могут ознакомиться с простыми примерами, а также узнать, как код R работает с SQL Server. Дополнительные сведения см. в следующих статьях.
 
-+ [Учебник. Запуск R в T-SQL](../advanced-analytics/tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
++ [Учебник. Запуск R в T-SQL](../advanced-analytics/tutorials/quickstart-r-create-script.md)
 + [Учебник. Аналитические функции в базе данных для разработчиков R](../advanced-analytics/tutorials/sqldev-in-database-r-for-sql-developers.md)
 
 Разработчики на языке Python могут узнать, как использовать Python с SQL Server, изучив следующие руководства.

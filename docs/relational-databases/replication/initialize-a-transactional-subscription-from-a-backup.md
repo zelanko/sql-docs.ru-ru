@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d0637fc4-27cc-4046-98ea-dc86b7a3bd75
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 3e0848a5452ad7cdb189b00c5ed90a6ad1cb8a1a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 466598ca9e7846b3b5ffbeef17987cd61233ec7a
+ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68127866"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71251093"
 ---
 # <a name="initialize-a-transactional-subscription-from-a-backup"></a>Инициализация подписки на публикацию транзакций из резервной копии
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "68127866"
 2.  В новой публикации выполните хранимую процедуру [sp_addpublication (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md) на издателе в базе данных публикации. Задайте значение **true** для параметра **allow_initialize_from_backup**. Дополнительные сведения см. в разделе [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md).  
   
     > [!WARNING]  
-    >  Чтобы предотвратить отсутствие данных подписчика, при использовании процедуры **sp_addpublication** с `@allow_initialize_from_backup = N'true'`всегда используйте `@immediate_sync = N'true'`.  
+    >  Чтобы предотвратить отсутствие данных подписчика, при использовании процедуры **sp_addpublication** или **sp_changepublication** с `@allow_initialize_from_backup = N'true'` всегда используйте `@immediate_sync = N'true'`.  
   
 3.  Создайте резервную копию базы данных публикации с использованием инструкции [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md).  
   

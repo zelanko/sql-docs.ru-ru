@@ -1,6 +1,6 @@
 ---
 title: Настройка распределенной группы доступности
-description: 'В этом разделе описано создание и настройка распределенной группы доступности Always On. '
+description: 'В этом разделе описаны создание и настройка распределенной группы доступности Always On. '
 ms.custom: seodec18
 ms.date: 08/17/2017
 ms.prod: sql
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: f7c7acc5-a350-4a17-95e1-e689c78a0900
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a90f9b303fa285c5fc826aab232abe3e07166992
-ms.sourcegitcommit: 67261229b93f54f9b3096890b200d1aa0cc884ac
+ms.openlocfilehash: 8b9e1151d5a757f42420c90519c79c3793cfef16
+ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68354602"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71250954"
 ---
-# <a name="configure-a-distributed-always-on-availability-group"></a>Настройка распределенной группы доступности Always On  
+# <a name="configure-an-always-on-distributed-availability-group"></a>Настройка распределенной группы доступности Always On  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Для создания распределенной группы доступности необходимо создать две группы доступности, каждая из которых имеет собственный прослушиватель. После этого можно объединить эти группы доступности в распределенную группу доступности. Ниже представлен простой пример c Transact-SQL. В этом примере представлены не все детали создания групп доступности и прослушивателей; основное внимание уделяется ключевым требованиям.
@@ -178,6 +178,19 @@ GO
   
 > [!NOTE]  
 >  **LISTENER_URL** указывает прослушиватель для каждой группы доступности, а также конечную точку зеркального отображения базы данных для группы доступности. В этом примере это порт `5022` (а не порт `60173` , который использовался для создания прослушивателя). Если вы используете подсистему балансировки нагрузки, например в Azure, [добавьте правило балансировки нагрузки для порта распределенной группы доступности](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-alwayson-int-listener#add-load-balancing-rule-for-distributed-availability-group). Добавьте правило для порта прослушивателя в дополнение к порту экземпляра SQL Server. 
+
+### <a name="cancel-automatic-seeding-to-forwarder"></a>Отменить автоматическое заполнение для сервера пересылки
+Если необходимо отменить инициализацию сервера пересылки перед синхронизацией двух групп доступности, измените (ALTER) распределенную группу доступности, задав для параметра SEEDING_MODE сервера пересылки значение вручную и немедленно отменив заполнение. Выполните команду в глобальной первичной группе: 
+
+```sql
+-- Cancel automatic seeding.  Connect to global primary but specify DAG AG2
+ALTER AVAILABILITY GROUP [distributedag]   
+   MODIFY  
+   AVAILABILITY GROUP ON  
+   'ag2' WITH  
+   (  SEEDING_MODE = MANUAL  );   
+```
+
   
 ## <a name="join-distributed-availability-group-on-second-cluster"></a>Присоединение распределенной группы доступности во втором кластере  
  Присоедините распределенную группу доступности во втором кластере WSFC.  
@@ -218,7 +231,7 @@ ALTER DATABASE [db1] SET HADR AVAILABILITY GROUP = [ag2];
 1. Подождите, пока распределенная группа доступности синхронизируется.
 1. В глобальной первичной реплике задайте для роли распределенной группы доступности значение `SECONDARY`.
 1. Проверьте готовность к отработке отказа.
-1. Выполните отработку отказа первичной группы доступности.
+1. Возобновите работу первичной группы доступности.
 
 В следующем примере Transact-SQL пошагово демонстрируется отработка отказа распределенной группы доступности с именем `distributedag`:
 

@@ -14,12 +14,12 @@ ms.assetid: a4f9de95-dc8f-4ad8-b957-137e32bfa500
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: efc1a13d0ed05560558e0386ea051d3a9aaa85f2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1877f653244100126226b85b29a24ca458c1cf74
+ms.sourcegitcommit: 4c7151f9f3f341f8eae70cb2945f3732ddba54af
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140370"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71326138"
 ---
 # <a name="use-column-sets"></a>Использование наборов столбцов
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "68140370"
   
  Наборы столбцов следует использовать в том случае, если в таблице существует большое число столбцов и работать с ними по отдельности неудобно. У приложений может возрасти производительность, если они будут выбирать и вставлять данные в таблицы, имеющие много столбцов, с помощью наборов столбцов. Однако производительность наборов столбцов может уменьшиться, если для столбцов в таблице было определено большое количество индексов. Это происходит из-за увеличения объема памяти, необходимого для плана выполнения.  
   
- Определить набор столбцов можно с помощью ключевых слов *<имя_набора_столбцов>* FOR ALL_SPARSE_COLUMNS в инструкциях [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) и [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).  
+ Определить набор столбцов можно с помощью ключевых слов *<имя_набора_столбцов>* FOR ALL_SPARSE_COLUMNS в инструкции [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) или [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).  
   
 ## <a name="guidelines-for-using-column-sets"></a>Рекомендации по использованию наборов столбцов  
  При использовании наборов столбцов следует учитывать следующие рекомендации.  
@@ -91,14 +91,14 @@ ms.locfileid: "68140370"
 -   Разреженные столбцы, содержащие значения NULL, не включаются в XML-представление набора столбцов.  
   
 > [!WARNING]  
->  Добавление набора столбцов изменяет поведение запросов SELECT *. Запрос будет возвращать набор столбцов как XML-столбец, а не как отдельные разреженные столбцы. Разработчики схем и приложений должны учитывать это, чтобы не нарушить работу существующих приложений.  
+>  Добавление набора столбцов изменяет поведение запросов `SELECT *`. Запрос будет возвращать набор столбцов как XML-столбец, а не как отдельные разреженные столбцы. Разработчики схем и приложений должны учитывать это, чтобы не нарушить работу существующих приложений.  
   
 ## <a name="inserting-or-modifying-data-in-a-column-set"></a>Вставка или изменение данных в наборе столбцов  
  Управлять данными в разреженных столбцах можно с помощью имен индивидуальных столбцов либо ссылаясь на имя набора столбцов и указывая значения набора столбцов, используя XML-формат набора столбцов. Разреженные столбцы могут быть расположены в XML-столбце в любом порядке.  
   
  При вставке или обновлении значений разреженных столбцов с помощью набора XML-столбцов производится неявное преобразование значений, вставляемых в лежащие в основе разреженные столбцы, из типа данных **xml** . Для числовых столбцов пустые значения в XML-столбцах преобразуются в пустые строки. Поэтому в числовые столбцы вставляются значения 0, как это показано в следующем примере.  
   
-```  
+```sql  
 CREATE TABLE t (i int SPARSE, cs xml column_set FOR ALL_SPARSE_COLUMNS);  
 GO  
 INSERT t(cs) VALUES ('<i/>');  
@@ -109,7 +109,7 @@ GO
   
  В этом примере для столбца `i`не было указано значение, однако было вставлено значение `0` .  
   
-## <a name="using-the-sqlvariant-data-type"></a>Использование типа данных sql_variant  
+## <a name="using-the-sql_variant-data-type"></a>Использование типа данных sql_variant  
  Тип данных **sql_variant** может хранить несколько разных типов данных, например **int**, **char**и **date**. Наборы столбцов выводят сведения о типе данных (например, масштаб, точность или сведения о локали), связанном со значением **sql_variant** , в виде атрибутов в формируемом XML-столбце. Если нужно предоставить эти атрибуты в сформированной пользователем XML-инструкции в качестве входных данных для операции вставки или обновления в наборе столбцов, то некоторые из этих атрибутов будут обязательными, а для некоторых других атрибутов будут назначены значения по умолчанию. В следующей таблице перечисляются типы данных и значения по умолчанию, которые формирует сервер, если значения предоставлены не были.  
   
 |Тип данных|localeID*|sqlCompareOptions|sqlCollationVersion|SqlSortId|Максимальная длина|Точность|Масштаб|  
@@ -148,7 +148,7 @@ GO
 > [!NOTE]  
 >  Эта таблица насчитывает лишь пять столбцов, что упрощает ее отображение и чтение.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
   
@@ -166,7 +166,7 @@ GO
 ### <a name="b-inserting-data-to-a-table-by-using-the-names-of-the-sparse-columns"></a>Б. Вставка данных в таблицу с использованием имен разреженных столбцов  
  В следующих примерах в таблицу, созданную в примере А, вставляются две строки. В примерах используются имена разреженных столбцов; набор столбцов не упоминается.  
   
-```  
+```sql  
 INSERT DocumentStoreWithColumnSet (DocID, Title, ProductionSpecification, ProductionLocation)  
 VALUES (1, 'Tire Spec 1', 'AXZZ217', 27);  
 GO  
@@ -179,7 +179,7 @@ GO
 ### <a name="c-inserting-data-to-a-table-by-using-the-name-of-the-column-set"></a>В. Вставка данных в таблицу с использованием имени набора столбцов  
  В следующем примере в таблицу, созданную в примере А, вставляется третья строка. В этот раз имена разреженных столбцов не используются. Вместо этого используется имя набора столбцов, а операция вставки предоставляет значения для двух из четырех разреженных столбцов в формате XML.  
   
-```  
+```sql  
 INSERT DocumentStoreWithColumnSet (DocID, Title, SpecialPurposeColumns)  
 VALUES (3, 'Tire Spec 2', '<ProductionSpecification>AXW9R411</ProductionSpecification><ProductionLocation>38</ProductionLocation>');  
 GO  
@@ -188,24 +188,23 @@ GO
 ### <a name="d-observing-the-results-of-a-column-set-when-select--is-used"></a>Г. Рассмотрение результатов для набора столбцов при выполнении инструкции SELECT *  
  В следующем примере из таблицы, содержащей набор столбцов, выбираются все столбцы. Возвращается XML-столбец, содержащий сочетание значений разреженных столбцов. Разреженные столбцы не возвращаются индивидуально.  
   
-```  
+```sql  
 SELECT DocID, Title, SpecialPurposeColumns FROM DocumentStoreWithColumnSet ;  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `DocID Title        SpecialPurposeColumns`  
-  
- `1      Tire Spec 1  <ProductionSpecification>AXZZ217</ProductionSpecification><ProductionLocation>27</ProductionLocation>`  
-  
- `2      Survey 2142  <MarketingSurveyGroup>Men 25 - 35</MarketingSurveyGroup>`  
-  
- `3      Tire Spec 2  <ProductionSpecification>AXW9R411</ProductionSpecification><ProductionLocation>38</ProductionLocation>`  
+ ```
+ DocID  Title        SpecialPurposeColumns  
+ 1      Tire Spec 1  <ProductionSpecification>AXZZ217</ProductionSpecification><ProductionLocation>27</ProductionLocation>  
+ 2      Survey 2142  <MarketingSurveyGroup>Men 25 - 35</MarketingSurveyGroup>  
+ 3      Tire Spec 2  <ProductionSpecification>AXW9R411</ProductionSpecification><ProductionLocation>38</ProductionLocation> 
+ ```
   
 ### <a name="e-observing-the-results-of-selecting-the-column-set-by-name"></a>Д. Рассмотрение результатов выбора набора столбцов с использованием его имени  
  Поскольку производственному отделу не нужны маркетинговые данные, в этом примере для ограничения выходных данных добавляется предложение `WHERE` . В этом примере используется имя набора столбцов.  
   
-```  
+```sql  
 SELECT DocID, Title, SpecialPurposeColumns  
 FROM DocumentStoreWithColumnSet  
 WHERE ProductionSpecification IS NOT NULL ;  
@@ -213,16 +212,16 @@ WHERE ProductionSpecification IS NOT NULL ;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `DocID Title        SpecialPurposeColumns`  
-  
- `1     Tire Spec 1  <ProductionSpecification>AXZZ217</ProductionSpecification><ProductionLocation>27</ProductionLocation>`  
-  
- `3     Tire Spec 2  <ProductionSpecification>AXW9R411</ProductionSpecification><ProductionLocation>38</ProductionLocation>`  
-  
+ ```
+ DocID  Title        SpecialPurposeColumns  
+ 1      Tire Spec 1  <ProductionSpecification>AXZZ217</ProductionSpecification><ProductionLocation>27</ProductionLocation>  
+ 3      Tire Spec 2  <ProductionSpecification>AXW9R411</ProductionSpecification><ProductionLocation>38</ProductionLocation>  
+ ```
+ 
 ### <a name="f-observing-the-results-of-selecting-sparse-columns-by-name"></a>Е. Рассмотрение результатов выбора разреженных столбцов с использованием их имен  
  Несмотря на то, что таблица содержит набор столбцов, можно выполнять запросы из таблицы с использованием имен отдельных столбцов. Это показано в следующем примере.  
   
-```  
+```sql  
 SELECT DocID, Title, ProductionSpecification, ProductionLocation   
 FROM DocumentStoreWithColumnSet  
 WHERE ProductionSpecification IS NOT NULL ;  
@@ -230,16 +229,16 @@ WHERE ProductionSpecification IS NOT NULL ;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `DocID Title        ProductionSpecification ProductionLocation`  
-  
- `1     Tire Spec 1  AXZZ217                 27`  
-  
- `3     Tire Spec 2  AXW9R411                38`  
-  
+ ```
+ DocID  Title        ProductionSpecification ProductionLocation`  
+ 1      Tire Spec 1  AXZZ217                 27`  
+ 3      Tire Spec 2  AXW9R411                38`  
+ ```
+ 
 ### <a name="g-updating-a-table-by-using-a-column-set"></a>Ж. Обновление таблицы с помощью набора столбцов  
  В следующем примере третья запись обновляется новыми значениями для обоих разреженных столбцов, использующихся в этой строке.  
   
-```  
+```sql  
 UPDATE DocumentStoreWithColumnSet  
 SET SpecialPurposeColumns = '<ProductionSpecification>ZZ285W</ProductionSpecification><ProductionLocation>38</ProductionLocation>'  
 WHERE DocID = 3 ;  
@@ -251,7 +250,7 @@ GO
   
  В следующем примере обновляется третья запись, однако значение указывается только для одного из двух заполненных столбцов. Второй столбец, `ProductionLocation` , не включен в инструкцию `UPDATE` , и для него устанавливается значение NULL.  
   
-```  
+```sql  
 UPDATE DocumentStoreWithColumnSet  
 SET SpecialPurposeColumns = '<ProductionSpecification>ZZ285W</ProductionSpecification>'  
 WHERE DocID = 3 ;  

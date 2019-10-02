@@ -1,6 +1,6 @@
 ---
 title: Документация по SQL Server | Документы Майкрософт
-ms.date: 08/08/2019
+ms.date: 09/24/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.custom: ''
@@ -19,17 +19,17 @@ helpviewer_keywords:
 ms.assetid: 674933a8-e423-4d44-a39b-2a997e2c2333
 author: craigg-msft
 ms.author: jroth
-monikerRange: '>=sql-server-linux-2017||>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 580b54e761e3d728496d4fede2c758c378bcedd7
-ms.sourcegitcommit: 26715b4dbef95d99abf2ab7198a00e6e2c550243
+monikerRange: =azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>= aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=sql-server-previousversions||=sqlallproducts-allversions
+ms.openlocfilehash: 098f27712b99fd5606aeb367b284f3f5201b68e7
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70284596"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71299130"
 ---
 # <a name="sql-server-documentation"></a>Документация по SQL Server
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 ::: moniker range=">= sql-server-linux-2017 || >= sql-server-2017 || = sqlallproducts-allversions"
 SQL Server является центральной частью платформы обработки данных Майкрософт. SQL Server — это ведущее отраслевое решение среди систем управления рабочими базами данных (ODBMS). Приведенные в этой документации сведения будут полезны при установке, настройке и использовании SQL Server в Windows и Linux. Материалы включают в себя комплексные примеры, примеры кода и видеоролики. Разделы о языке SQL Server см. в [справочнике по языку](../t-sql/language-reference.md).
@@ -115,6 +115,27 @@ SQL Server является центральной частью платформ
 |![Службы Master Data Services](../sql-server/media/master-data-services.png)|**[Службы Master Data Services](../master-data-services/master-data-services-installation-and-configuration.md)**<br /><br /> [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] — это решение [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] для управления основными данными. Решение, построенное на основе [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] , позволяет обеспечить правильность информации, используемой для построения отчетов и выполнения анализа. С помощью [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]можно создать центральный репозиторий основных данных и поддерживать запись этих данных по мере их изменения, защищенную и доступную для аудита.|
 | &nbsp; | &nbsp; |
 
+## <a name="other-members-of-the-sql-server-family"></a>Другие члены семейства SQL Server
+
+| Имя | Корневой URL-адрес HTTPS |
+| :--- | :------------- |
+| Отдельная база данных Базы данных SQL Azure | [https://docs.microsoft.com/azure/sql-database/](/azure/sql-database/) |
+| Управляемый экземпляр Базы данных SQL Azure | [https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance](/azure/sql-database/sql-database-managed-instance) |
+| SQL Server на виртуальной машине | [https://docs.microsoft.com/azure/virtual-machines/windows/sql/](/azure/virtual-machines/windows/sql/) |
+| Хранилище данных SQL | [https://docs.microsoft.com/azure/sql-data-warehouse/](/azure/sql-data-warehouse/) |
+| Система платформы аналитики | [https://docs.microsoft.com/sql/analytics-platform-system/](../analytics-platform-system/index.md) <br/><br/> _Примечание._ Система платформы аналитики поддерживает размещение SQL Server [Parallel Data Warehouse (PDW)](../analytics-platform-system/parallel-data-warehouse-overview.md), программного обеспечения для хранилища данных с массивной параллельной обработкой (MPP). |
+| SQL Server в Linux | [https://docs.microsoft.com/sql/linux/](../linux/index.md) |
+| &nbsp; | &nbsp; |
+
+### <a name="cousins-of-sql-server"></a>Родственные SQL Server
+
+| Имя | Корневой URL-адрес HTTPS |
+| :--- | :------------- |
+| База данных PostgreSQL | [https://docs.microsoft.com/azure/postgresql/](/azure/postgresql/) |
+| База данных MySQL | [https://docs.microsoft.com/azure/mysql/](/azure/mysql/) |
+| NoSQL: &nbsp; Azure Cosmos DB | [https://docs.microsoft.com/azure/cosmos-db/](/azure/cosmos-db/) |
+| &nbsp; | &nbsp; |
+
 ::: moniker range="= sql-server-2016 || = sqlallproducts-allversions"
 ## <a name="migrate-and-move-data-in-version-2016"></a>Миграция и перемещение данных в версии 2016
 
@@ -136,7 +157,7 @@ SQL Server является центральной частью платформ
 
 ## <a name="update-your-version-of-sql-server"></a>Обновление версии SQL Server
 
-- Ссылки и сведения для всех поддерживаемых версий в[Центре обновления SQL Server](https://msdn.microsoft.com/library/ff803383.aspx) 
+- Ссылки и сведения для всех поддерживаемых версий в[Центре обновления SQL Server](https://msdn.microsoft.com/library/ff803383.aspx)
 
 ## <a name="samples"></a>Примеры
 

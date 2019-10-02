@@ -1558,6 +1558,8 @@
       href: ../integration-services/change-data-capture/the-oracle-cdc-instance.md
     - name: Базы данных CDC Oracle
       href: ../integration-services/change-data-capture/the-oracle-cdc-databases.md
+    - name: Диагностика
+      href: ../integration-services/change-data-capture/known-issues-resolutions-with-cdc-for-oracle-attunity.md
     - name: Справка F1 конструктора системы отслеживания измененных данных для Oracle компании Attunity
       href: ../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity-f1-help-reference.md
       items:

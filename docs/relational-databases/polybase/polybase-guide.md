@@ -18,12 +18,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: aboke
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions||>=aps-pdw-2016||=azure-sqldw-latest'
-ms.openlocfilehash: b414cf8eb783a64deb65010ab549c9791e82580c
-ms.sourcegitcommit: 63c6f3758aaacb8b72462c2002282d3582460e0b
+ms.openlocfilehash: c33e212ea513cbb5271c1271f938b1009855559c
+ms.sourcegitcommit: 4c7151f9f3f341f8eae70cb2945f3732ddba54af
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68495381"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71326154"
 ---
 # <a name="what-is-polybase"></a>Что такое PolyBase?
 
@@ -39,13 +39,13 @@ PolyBase позволяет экземпляру SQL Server 2016 обрабат�
 PolyBase отправляет некоторые вычисления на узел Hadoop, чтобы оптимизировать общий запрос. Но PolyBase обеспечивает внешний доступ не только к Hadoop. Поддерживаются и другие неструктурированные нереляционные таблицы, например текстовые файлы с разделителями.
 
 > [!TIP]
-> В SQL Server 2019 CTP 2.0 представлены новые соединители для PolyBase, включая SQL Server, Oracle, Teradata и MongoDB. Дополнительные сведения см. в [документации по PolyBase для SQL Server 2019 CTP 2.0](polybase-guide.md?view=sql-server-ver15).
+> В SQL Server 2019 представлены новые соединители для PolyBase, включая SQL Server, Oracle, Teradata и MongoDB. Дополнительные сведения см. в [документации по PolyBase для SQL Server 2019](polybase-guide.md?view=sql-server-ver15).
 
 ::: moniker-end
 <!--SQL Server 2019-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-PolyBase позволяет экземпляру SQL Server обрабатывать запросы Transact-SQL, которые считывают данные из внешних источников. SQL Server 2016 и более поздних версий может получать доступ к внешним данным в Hadoop и хранилище BLOB-объектов Azure. Начиная с SQL Server 2019 CTP 2.0 PolyBase можно использовать для доступа к внешним данным в [SQL Server](polybase-configure-sql-server.md), [Oracle](polybase-configure-oracle.md), [Teradata](polybase-configure-teradata.md) и [MongoDB](polybase-configure-mongodb.md).
+PolyBase позволяет экземпляру SQL Server обрабатывать запросы Transact-SQL, которые считывают данные из внешних источников. SQL Server 2016 и более поздних версий может получать доступ к внешним данным в Hadoop и хранилище BLOB-объектов Azure. Начиная с SQL Server 2019, PolyBase можно использовать для доступа к внешним данным в [SQL Server](polybase-configure-sql-server.md), [Oracle](polybase-configure-oracle.md), [Teradata](polybase-configure-teradata.md) и [MongoDB](polybase-configure-mongodb.md).
 
 Те же запросы, которые обращаются к внешним данным, могут работать с реляционными таблицами в вашем экземпляре SQL Server. Это позволяет объединять данные из внешних источников с важными реляционными данными в вашей базе данных. В SQL Server подключение к Hadoop обеспечивают [внешние таблицы](../../t-sql/statements/create-external-table-transact-sql.md) или [внешний источник данных](../../t-sql/statements/create-external-data-source-transact-sql.md).
 
@@ -99,7 +99,7 @@ PolyBase поддерживает перечисленные ниже сцена
 <!--SQL Server 2016/2017-->
 ::: moniker range="=sql-server-2016||=sql-server-2017"
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 Прежде чем использовать PolyBase, необходимо [установить компонент PolyBase](polybase-installation.md). Затем ознакомьтесь со следующими руководствами по настройке в зависимости от источника данных:
 

@@ -11,16 +11,16 @@ helpviewer_keywords:
 ms.assetid: b1289cc3-f5be-40bb-8801-0e3eed40336e
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a1006e7cb677ec6d06af633191b10ab1f341ef1a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8608d91495ca255a0205247a557687ad32ac46df
+ms.sourcegitcommit: 853c2c2768caaa368dce72b4a5e6c465cc6346cf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68020796"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71227134"
 ---
 # <a name="upgrading-log-shipping-to-sql-server-2016-transact-sql"></a>Обновление доставки журналов до SQL Server 2016 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Если вы обновляете [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в конфигурации доставки журналов до новой версии [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] либо устанавливаете новый пакет обновления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]или накопительный пакет обновления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], обновление серверов доставки журналов в правильном порядке позволит сохранить ваше решение для аварийного восстановления доставки журналов.  
+  Если вы обновляете конфигурацию доставки журналов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] до новой версии [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] либо устанавливаете новый пакет обновления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или накопительный пакет обновления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], обновление серверов доставки журналов в правильном порядке позволит сохранить ваше решение для аварийного восстановления доставки журналов.  
   
 > [!NOTE]  
 >  [Сжатие резервной копии](../../relational-databases/backup-restore/backup-compression-sql-server.md) было введено в выпуске [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)]. В обновленной конфигурации доставки журналов используется параметр **стандартного сжатия резервных копий** уровня сервера, который управляет применением сжатия резервной копии к файлам резервной копии журнала транзакций. Режим сжатия резервной копии журналов можно указать отдельно для каждой конфигурации доставки журналов. Дополнительные сведения см. в статьях [Настройка доставки журналов (SQL Server)](../../database-engine/log-shipping/configure-log-shipping-sql-server.md).  

@@ -9,12 +9,12 @@ ms.assetid: 13942af8-5a40-4cef-80f5-918386767a47
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: 65438f911246038cee272763e19be12b5860b463
-ms.sourcegitcommit: 75fe364317a518fcf31381ce6b7bb72ff6b2b93f
+ms.openlocfilehash: c7efb49870e148b6a854547d39d4a01139829a89
+ms.sourcegitcommit: 4c7151f9f3f341f8eae70cb2945f3732ddba54af
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70911199"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71326130"
 ---
 # <a name="sql-server-2019-preview-release-notes"></a>Заметки о выпуске предварительной версии SQL Server 2019
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -60,17 +60,6 @@ ms.locfileid: "70911199"
     - Платформа Microsoft .NET Framework 4.6.2. Доступна в [Центре загрузки](https://www.microsoft.com/download/details.aspx?id=53344).
     - Для Linux обратитесь к разделу [поддерживаемых платформ](../linux/sql-server-linux-setup.md#supportedplatforms).
 
-## <a name = "release-notes"></a>Функции, исключенные из программы поддержки
-
-- **Проблема и последствия для клиентов**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] исключает из программы поддержки следующие компоненты, функции и сценарии:
-  - службы SQL Server Analysis Services
-  - службы SQL Server Reporting Services
-  - Группы доступности Always On в Kubernetes
-
-- **Обходной путь**: Нет. Исключение применяется для всех клиентов, включая участников программы ранних последователей SQL.
-
-- **Область применения**: релиз-кандидат.
-
 ## <a name="updated-compiler"></a>Обновленный компилятор
 
 - **Проблема и последствия для клиентов**: сборка [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] выполнена с помощью обновленного компилятора. В CTP 2.1 была известная проблема, при которой результаты для чисел с плавающей точкой и результаты других сценариев преобразования могли отличаться от результатов таких же операций в прошлых версиях из-за использования обновленного компилятора. В CTP 2.2 была проведена дополнительная работа, чтобы убедиться, что сценарии, на которые распространяется эта проблема, возвращают те же результаты, что и в предыдущих версиях [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. На момент выхода релиз-кандидата проблемы устранены. Если вы обнаружите какие-либо различия в результатах по сравнению с [!INCLUDE[ss2017](../includes/sssqlv14-md.md)], незамедлительно сообщите о них [команде разработчиков [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]](https://aka.ms/sqlfeedback).
@@ -114,7 +103,7 @@ ms.locfileid: "70911199"
 
 ## <a name="sql-server-configuration-manager-may-not-start"></a>Диспетчер конфигурации SQL Server может не запуститься
 
-- **Проблема и последствия для клиентов**: Диспетчер конфигурации SQL Server (SSCM) не запускается на компьютере без VCRuntime 140. При запуске SSCM может появиться следующее сообщение: 
+- **Проблема и последствия для клиентов**: Диспетчер конфигурации SQL Server (SSCM) не запускается на компьютере без VCRuntime 140 (VCRUNTIME140.dll). При запуске SSCM может появиться следующее сообщение: 
 
 
   `MMC could not create the snap-in. The snap-in might not have been installed correctly.`

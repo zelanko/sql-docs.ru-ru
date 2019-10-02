@@ -24,12 +24,12 @@ ms.assetid: abb0afa9-44f6-42a2-a871-5f471dfb222b
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 564edb184c5b9d56159c6b931557daf85beeb295
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0bb5b030b138fa49f90c77c13e12bf2f64968da3
+ms.sourcegitcommit: c4875c097e3aae1b76233777d15e0a0ec8e0d681
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68117720"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71342004"
 ---
 # <a name="stuff-transact-sql"></a>STUFF (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -52,7 +52,7 @@ STUFF ( character_expression , start , length , replaceWith_expression )
  Целочисленное значение, определяющее место начала удаления и вставки. Если аргумент *start* отрицателен или равен нулю, то возвращается пустая строка. Если значение аргумента *start* превышает длину первого аргумента *character_expression*, возвращается значение NULL. *start* может иметь тип **bigint**.  
   
  *length*  
- Целочисленное выражение, которое определяет, какое количество символов следует удалить. Если аргумент *length* отрицателен, то возвращается пустая строка. Если значение аргумента *length* превышает длину первого аргумента *character_expression*, удаляются все символы вплоть до последнего в последнем аргументе *character_expression*.  Если аргумент *length* равен нулю, вставка производится перед первым символом в строке. *length* может иметь тип **bigint**.
+ Целочисленное выражение, которое определяет, какое количество символов следует удалить. Если аргумент *length* отрицателен, то возвращается пустая строка. Если значение аргумента *length* превышает длину первого аргумента *character_expression*, удаляются все символы вплоть до последнего в последнем аргументе *character_expression*.  Если значение *length* равно нулю, вставка происходит в расположении *start*, а символы не удаляются. *length* может иметь тип **bigint**.
 
  *replaceWith_expression*  
  [Выражение](../../t-sql/language-elements/expressions-transact-sql.md) символьного типа данных. Аргумент *character_expression* может быть константой, переменной или столбцом символьных или двоичных данных. Это выражение заменяет *length* символов выражения *character_expression*, начиная с позиции *start*. Если указать `NULL` в качестве значения *replaceWith_expression*, символы удаляются, причем вставка не производится.   

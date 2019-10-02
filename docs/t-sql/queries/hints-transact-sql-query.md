@@ -55,12 +55,12 @@ helpviewer_keywords:
 ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 15135461eaad00ad38238b450c045dd8d4903535
-ms.sourcegitcommit: 2da98f924ef34516f6ebf382aeb93dab9fee26c1
+ms.openlocfilehash: 559a39d1748835e422822fcef1c73e1b3113cb4a
+ms.sourcegitcommit: 816ff47eeab157c66e0f75f18897a63dc8033502
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70228399"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71207737"
 ---
 # <a name="hints-transact-sql---query"></a>Указания (Transact-SQL) — запросы
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -107,7 +107,8 @@ ms.locfileid: "70228399"
   | RECOMPILE  
   | ROBUST PLAN   
   | USE HINT ( '<hint_name>' [ , ...n ] )
-  | USE PLAN N'xml_plan'  | TABLE HINT ( exposed_object_name [ , <table_hint> [ [, ]...n ] ] )  
+  | USE PLAN N'xml_plan'  
+  | TABLE HINT ( exposed_object_name [ , <table_hint> [ [, ]...n ] ] )  
 }  
   
 <table_hint> ::=  
@@ -327,8 +328,8 @@ ROBUST PLAN
 > [!IMPORTANT] 
 > Некоторые указания USE HINT могут конфликтовать с флагами трассировки, включенными на глобальном уровне или уровне сеанса, или параметрами конфигурации области баз данных. В этом случае приоритет всегда имеет указание уровня запроса (USE HINT). Если USE HINT конфликтует с другим указанием запроса или флагом трассировки, включенным на уровне запроса (например, с помощью QUERYTRACEON), при попытке выполнить запрос [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выведет ошибку. 
 
-USE PLAN N'_xml\_plan_'  
- Указывает оптимизатору запросов использовать существующий план запроса для запроса, определенного параметром **'** _xml\_plan_ **'** . Указание USE PLAN нельзя использовать в инструкциях INSERT, UPDATE, MERGE и DELETE.  
+<a name="use-plan"></a> USE PLAN N'_xml\_plan_'  
+ Указывает оптимизатору запросов использовать существующий план запроса для запроса, определенного параметром **'** _xml\_plan_ **'** . Подсказку USE PLAN нельзя указывать в инструкциях INSERT, UPDATE MERGE и DELETE.  
   
 TABLE HINT **(** _exposed\_object\_name_ [ **,** \<table_hint> [ [ **,** ]..._n_ ] ] **)** Применяет заданное табличное указание к таблице или представлению, которые соответствуют имени _exposed\_object\_name_. Табличные указания рекомендуется использовать в качестве подсказок в запросах только в контексте [структуры плана](../../relational-databases/performance/plan-guides.md).  
   
@@ -348,7 +349,7 @@ TABLE HINT **(** _exposed\_object\_name_ [ **,** \<table_hint> [ [ **,** ]..._n_
 > Указание FORCESEEK с параметрами ограничивает число планов, которые могут быть использованы оптимизатором, в отличие от указания FORCESEEK без параметров. Из-за этого может чаще возникать ошибка "Невозможно сформировать план". В будущих выпусках внутренние изменения оптимизатора могут привести к увеличению числа этих планов.  
   
 ## <a name="remarks"></a>Remarks  
- Указания запросов нельзя задавать в инструкции INSERT, кроме случая, когда внутри этой инструкции используется предложение SELECT.  
+ Указания запросов нельзя задавать в инструкции INSERT, кроме случая, когда внутри инструкции используется предложение SELECT.  
   
  Указания запросов можно задавать только в запросах верхнего уровня, но не во вложенных запросах. Если табличное указание задается в качестве указания запроса, его можно определить в запросе верхнего уровня или во вложенном запросе. Но при этом значение _exposed\_object\_name_ в предложении TABLE HINT должно точно соответствовать имени, предоставленному в запросе или вложенном запросе.  
   

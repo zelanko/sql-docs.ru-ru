@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 5a2e4fd4583b7e43c04e03e6450c1fb958cf064b
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.openlocfilehash: d8135706b5fa220fa4e62bbcaf9ad677681fe029
+ms.sourcegitcommit: a24f6e12357979f1134a54a036ebc58049484a4f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70874326"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71314502"
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine"></a>Включение зашифрованных соединений для ядра СУБД
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -124,7 +124,10 @@ ms.locfileid: "70874326"
   
 2. Чтобы сохранить файл сертификата в удобном расположении, выполните **мастер экспорта сертификатов**.  
   
-## <a name="to-configure-the-server-to-force-encrypted-connections"></a>Настройка принудительного использования зашифрованных соединений на сервере  
+## <a name="to-configure-the-server-to-force-encrypted-connections"></a>Настройка принудительного использования зашифрованных соединений на сервере
+
+> [!IMPORTANT]
+> Учетная запись службы SQL Server должна иметь разрешения на чтение для сертификата принудительного шифрования в SQL Server. Для непривилегированной учетной записи службы разрешения на чтение необходимо добавить в сертификат. Несоблюдение этого требования может привести к сбою перезапуска службы SQL Server.
   
 1. В **диспетчере конфигурации SQL Server** разверните узел **Сетевая конфигурация SQL Server**, щелкните правой кнопкой мыши элемент **Протоколы для** _\<экземпляр сервера>_ и выберите пункт **Свойства**.  
   

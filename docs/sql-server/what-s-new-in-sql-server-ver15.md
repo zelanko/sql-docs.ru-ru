@@ -8,12 +8,12 @@ ms.topic: article
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: d65ca67e43c35f0997b3d0784c97e501606bd05b
-ms.sourcegitcommit: c0fd28306a3b42895c2ab673734fbae2b56f9291
+ms.openlocfilehash: 4ef11893ca08e32c7aed177f53ea63305add4d14
+ms.sourcegitcommit: 4c7151f9f3f341f8eae70cb2945f3732ddba54af
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71096892"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71326190"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>Новые возможности [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]
 
@@ -77,11 +77,12 @@ ms.locfileid: "71096892"
 |Возобновляемая сборка индексов rowstore в режиме "в сети" | См. раздел [Выполнение операций с индексами в режиме "в сети"](../relational-databases/indexes/perform-index-operations-online.md). |
 | &nbsp; | &nbsp; |
 
-### <a name="in-memory-databases"></a>Базы данных в памяти
+### <a name="in-memory-database"></a>Выполняемая в памяти база данных
 
 |Новые функции или обновления | Сведения |
 |:---|:---|
-|Управление DDL для гибридного буферного пула |Благодаря [гибридному буферному пулу](../database-engine/configure-windows/hybrid-buffer-pool.md) доступ к страницам базы данных, хранящимся в файлах базы данных и помещенным в устройство постоянной памяти (PMEM), осуществляется напрямую, если это необходимо.|
+|Гибридный буферный пул| Новая возможность [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)], которая при необходимости обеспечивает прямой доступ к страницам базы данных, хранящимся в файлах базы данных и помещенным в устройство постоянной памяти (PMEM). См. статью [Гибридный буферный пул](../database-engine/configure-windows/hybrid-buffer-pool.md).|
+|Оптимизированные для памяти метаданные `tempdb`| В [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] появилась новая функция оптимизированных для памяти метаданных `tempdb`, входящая в семейство функций [выполняющейся в памяти базы данных](../relational-databases/in-memory-database.md). Она эффективно устраняет существующую проблему и открывает новый уровень масштабируемости для рабочих нагрузок, активно использующих `tempdb`. В [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] системные таблицы, связанные с управлением метаданными временной таблицы, можно переместить в неустойчивые таблицы без кратковременной блокировки, оптимизированные для памяти. См. раздел [Оптимизированные для памяти метаданные `tempdb`](../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata).|
 | &nbsp; | &nbsp; |
 
 ### <a name="unicode-support"></a>Поддержка Юникода
@@ -99,13 +100,6 @@ ms.locfileid: "71096892"
 |Поддержка кодировки UTF-8|Поддержка символов UTF-8 с внешними таблицами. См. раздел [Поддержка параметров сортировки и Юникода](../relational-databases/collations/collation-and-unicode-support.md).|
 | &nbsp; | &nbsp; |
 
-### <a name="server-settings"></a>Параметры сервера
-
-|Новые функции или обновления | Сведения |
-|:---|:---|
-|Гибридный буферный пул| Новая возможность [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)], которая при необходимости обеспечивает прямой доступ к страницам базы данных, хранящимся в файлах базы данных и помещенным в устройство постоянной памяти (PMEM). См. статью [Гибридный буферный пул](../database-engine/configure-windows/hybrid-buffer-pool.md).|
-| &nbsp; | &nbsp; |
-
 ### <a name="performance-monitoring"></a>Мониторинг производительности
 
 |Новые функции или обновления | Сведения |
@@ -117,6 +111,7 @@ ms.locfileid: "71096892"
 |`sys.dm_exec_query_plan_stats` |Новая функция динамического управления возвращает эквивалент последнего известного действительного плана выполнения для большинства запросов. См. раздел [sys.dm_exec_query_plan_stats](../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md).|
 |`LAST_QUERY_PLAN_STATS` | Новая конфигурация области базы данных для включения `sys.dm_exec_query_plan_stats`. В разделе [ALTER DATABASE SCOPED CONFIGURATION](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).|
 |`query_post_execution_plan_profile` | Расширенное событие служит для сбора эквивалента действительного плана выполнения на основе упрощенного, а не стандартного профилирования, как в случае с событием `query_post_execution_showplan`. См. раздел [Инфраструктура профилирования запросов](../relational-databases/performance/query-profiling-infrastructure.md).|
+|`sys.dm_db_page_info(database_id, file_id, page_id, mode)` | Новая функция динамического управления возвращает сведения о странице в базе данных. См. раздел [sys.dm_db_page_info (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-db-page-info-transact-sql.md).|
 | &nbsp; | &nbsp; |
 
 ### <a name="language-extensions"></a>Расширения языка
@@ -147,7 +142,6 @@ ms.locfileid: "71096892"
 |Управление ресурсами| Тип данных настраиваемого значения для параметра `REQUEST_MAX_MEMORY_GRANT_PERCENT` в `CREATE WORKLOAD GROUP` и `ALTER WORKLOAD GROUP` изменен с целого числа на число с плавающей точкой, что позволяет более точно контролировать ограничения памяти. Дополнительные сведения: [ALTER WORKLOAD GROUP](../t-sql/statements/alter-workload-group-transact-sql.md), [CREATE WORKLOAD GROUP](../t-sql/statements/create-workload-group-transact-sql.md).|
 |Сокращение повторных компиляций для рабочих нагрузок| Улучшает использование временных таблиц в нескольких областях. См. раздел [Сокращение повторных компиляций для рабочих нагрузок](../relational-databases/tables/tables.md#ctp23). |
 |Масштабируемость косвенных контрольных точек |См. раздел [Улучшена масштабируемость косвенных контрольных точек](../relational-databases/logs/database-checkpoints-sql-server.md#ctp23).|
-|Оптимизированные для памяти метаданные `tempdb`| В [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] появилась новая функция оптимизированных для памяти метаданных `tempdb`, входящая в семейство функций [выполняющейся в памяти базы данных](../relational-databases/in-memory-database.md). Она эффективно устраняет существующую проблему и открывает новый уровень масштабируемости для рабочих нагрузок, активно использующих `tempdb`. В [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] системные таблицы, связанные с управлением метаданными временной таблицы, можно переместить в неустойчивые таблицы без кратковременной блокировки, оптимизированные для памяти. См. раздел [Оптимизированные для памяти метаданные `tempdb`](../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata).|
 |Одновременные обновления PFS|[Страницы PFS](https://techcommunity.microsoft.com/t5/SQL-Server/Under-the-covers-GAM-SGAM-and-PFS-pages/ba-p/383125) — это специальные страницы в файле базы данных, с помощью которых SQL Server находит свободное место при выделении пространства для объекта. Состязание за кратковременные блокировки страниц на страницах PFS обычно характерно для [`tempdb`](https://support.microsoft.com/en-us/help/2154845/recommendations-to-reduce-allocation-contention-in-sql-server-tempdb-d). Но также оно может возникать в пользовательских базах данных при наличии большого количества параллельных потоков выделения объектов. Это улучшение позволяет изменить способ управления параллелизмом с помощью обновлений PFS, чтобы при этом можно было использовать общую кратковременную блокировку, а не монопольную блокировку. Это поведение включено по умолчанию во всех базах данных (включая `tempdb`) начиная с версии [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].|
 |Обратная связь по временно предоставляемому буферу памяти в строковом режиме |Расширяет функцию обратной связи с временно предоставляемым буфером памяти в пакетном режиме путем настройки размеров временно предоставляемого буфера памяти для операторов пакетного и строкового режимов. Позволяет автоматически отменять излишние предоставленные разрешения, которые занимают память и снижают уровень параллелизма, а также решать проблемы, возникшие из-за недостатка временных буферов памяти. Такие проблемы влекут за собой чрезмерный расход ресурсов при записи на диск. См. раздел [Обратная связь по временно предоставляемому буферу памяти в строковом режиме](../relational-databases/performance/intelligent-query-processing.md#row-mode-memory-grant-feedback). |
 |Отложенная компиляция табличных переменных|Оптимизирует план и повышает общую производительность запросов со ссылками на табличные переменные. Во время оптимизации и первичной компиляции эта функция распространяет оценки кратности, основанные на фактическом количестве строк табличной переменной. Эти точные сведения о количестве строк позволяют оптимизировать последующие операции плана. См. раздел [Отложенная компиляция табличных переменных](../relational-databases/performance/intelligent-query-processing.md#table-variable-deferred-compilation). |
@@ -235,7 +229,7 @@ ms.locfileid: "71096892"
 - [`SqlServer` Модуль PowerShell](https://www.powershellgallery.com/packages/Sqlserver)
 - [Документация по SQL Server PowerShell](../powershell/sql-server-powershell.md)
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 - [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]: заметки о выпуске](sql-server-ver15-release-notes.md).
 
