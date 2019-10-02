@@ -1,9 +1,6 @@
 ---
 title: Массовый импорт и экспорт данных с использованием программы bcp (SQL Server) | Документация Майкрософт
-ms.custom: ''
-ms.date: 06/14/2017
 ms.prod: sql-server-2014
-ms.reviewer: ''
 ms.technology: data-movement
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,18 +8,22 @@ helpviewer_keywords:
 - bulk importing [SQL Server], bcp utility
 - bcp utility [SQL Server], about bcp utility
 ms.assetid: 73e949de-67a3-4c84-9735-7da1ad4ba34a
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b291b24d18420005cdda4e5b079eb08abee27b8b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.reviewer: ''
+ms.custom: ''
+ms.date: 06/14/2017
+ms.openlocfilehash: 7075bf87ed64686750bc4a267af431268987ff35
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66011930"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71708211"
 ---
 # <a name="import-and-export-bulk-data-by-using-the-bcp-utility-sql-server"></a>Массовый импорт и экспорт данных с использованием программы bcp (SQL Server)
-  В этом разделе представлен обзор использования [программы bcp](../../tools/bcp-utility.md) для экспорта данных из любого местоположения в базу данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], в которой может применяться инструкция SELECT, включая секционированные представления.  
+
+В этом разделе представлен обзор использования [программы bcp](../../tools/bcp-utility.md) для экспорта данных из любого местоположения в базу данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], в которой может применяться инструкция SELECT, включая секционированные представления.  
   
  Программа bcp (bcp.exe) представляет собой инструмент командной строки, использующий API-интерфейс программы массового копирования (BCP). Программа bcp выполняет следующие задачи:  
   
@@ -45,7 +46,8 @@ ms.locfileid: "66011930"
   
  Описание синтаксиса команды **bcp** см. в разделе [Служебная программа bcp](../../tools/bcp-utility.md).  
   
-## <a name="examples"></a>Примеры  
+## <a name="examples"></a>Примеры
+
  Примеры **bcp** см. здесь:  
   
 -   [Программа bcp](../../tools/bcp-utility.md)  
@@ -69,15 +71,12 @@ ms.locfileid: "66011930"
 -   [Использование символьного формата Юникод для импорта и экспорта данных (SQL Server)](use-unicode-character-format-to-import-or-export-data-sql-server.md)  
   
 -   [Использование собственного формата Юникод для импорта и экспорта данных (SQL Server)](use-unicode-native-format-to-import-or-export-data-sql-server.md)  
-  
-## <a name="see-also"></a>См. также  
- [INSERT (Transact-SQL)](/sql/t-sql/statements/insert-transact-sql)   
- [Предложение SELECT (Transact-SQL)](/sql/t-sql/queries/select-clause-transact-sql)   
- [bcp Utility](../../tools/bcp-utility.md)   
- [Подготовка массового импорта данных (SQL Server)](prepare-to-bulk-import-data-sql-server.md)   
- [BULK INSERT (Transact-SQL)](/sql/t-sql/statements/bulk-insert-transact-sql)   
- [Массовый импорт и экспорт данных (SQL Server)](bulk-import-and-export-of-data-sql-server.md)   
- [OPENROWSET (Transact-SQL)](/sql/t-sql/functions/openrowset-transact-sql)   
- [Создание файла форматирования (SQL Server)](create-a-format-file-sql-server.md)  
-  
-  
+
+## <a name="see-also"></a>См. также
+
+[INSERT &#40;t-SQL&#41;](/sql/t-sql/statements/insert-transact-sql)
+[предложение &#40;SELECT, инструкция Transact&#41;-SQL](/sql/t-sql/queries/select-clause-transact-sql)
+[bcp](../../tools/bcp-utility.md)   
+[Подготовка к групповому импорту&#41;данных &#40;SQL Server](prepare-to-bulk-import-data-sql-server.md)
+[BULK INSERT &#40;Transact&#41;-SQL](/sql/t-sql/statements/bulk-insert-transact-sql)
+[массовым импортом &#40;и&#41;экспортом данных SQL Server](bulk-import-and-export-of-data-sql-server.md)1[OPENROWSET &#40; Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)5[Создание &#40;файла форматирования SQL Server&#41; ](create-a-format-file-sql-server.md)

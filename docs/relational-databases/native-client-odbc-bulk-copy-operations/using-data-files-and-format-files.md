@@ -15,15 +15,15 @@ helpviewer_keywords:
 - ODBC, bulk copy operations
 - bulk copy [ODBC], data files
 ms.assetid: c01b7155-3f0a-473d-90b7-87a97bc56ca5
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2fae3c62d923d2e52fd454493b7d1218608b233e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5110057262eb09acc40f3c546184f7ee75b784a8
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68134252"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71707793"
 ---
 # <a name="using-data-files-and-format-files"></a>Использование файлов данных и файлов форматирования
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,33 +31,33 @@ ms.locfileid: "68134252"
 
   Простейшая программа массового копирования выполняет следующие действия.  
   
-1.  Вызовы [bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) для задания массового копирования (задания значения BCP_OUT) из таблицы или просмотр в файл данных.  
+1.  Вызывает [bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) , чтобы указать групповое копирование (Set BCP_OUT) из таблицы или представления в файл данных.  
   
-2.  Вызовы [bcp_exec](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md) для выполнения операции массового копирования.  
+2.  Вызывает [bcp_exec](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md) для выполнения операции с массовым копированием.  
   
- Файл данных создается в собственном режиме; следовательно, данные из всех столбцов таблицы или представления хранятся в файле данных в том же формате, что и в базе данных. Затем файл можно с помощью операции массового копирования скопировать на сервер, выполнив те же шаги и установив значение DB_IN вместо DB_OUT. Это возможно только в случае, когда структура исходной и целевой таблиц идентична. Результирующий файл данных также может быть входным для **bcp** программы с помощью **/n** (собственный режим).  
+ Файл данных создается в собственном режиме; следовательно, данные из всех столбцов таблицы или представления хранятся в файле данных в том же формате, что и в базе данных. Затем файл можно с помощью операции массового копирования скопировать на сервер, выполнив те же шаги и установив значение DB_IN вместо DB_OUT. Это возможно только в случае, когда структура исходной и целевой таблиц идентична. Полученный файл данных также может быть введен в служебную программу **bcp** с помощью параметра **/n** (собственный режим).  
   
  Для массового копирования результирующего набора из инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)], а не непосредственно из таблицы или представления.  
   
-1.  Вызовите **bcp_init** для задания массового копирования out, но имя таблицы, укажите значение NULL.  
+1.  Вызовите **bcp_init** , чтобы указать групповое копирование, но укажите значение NULL для имени таблицы.  
   
-2.  Вызовите [bcp_control](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md) с *eOption* значение BCPHINTS и *iValue* — указатель на строку SQLTCHAR, содержащую инструкцию Transact-SQL.  
+2.  Вызовите [bcp_control](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md) с параметром *eOption* , для которого задано значение bcphints а, а *iValue* — указателем на строку SQLTCHAR, содержащую инструкцию Transact-SQL.  
   
-3.  Вызовите **bcp_exec** для выполнения операции массового копирования.  
+3.  Вызовите **bcp_exec** , чтобы выполнить операцию с массовым копированием.  
 
 [!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  В качестве инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] подходит любая инструкция, которая создает результирующий набор. Создается файл данных, содержащий первый результирующий набор инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)]. Если инструкция [!INCLUDE[tsql](../../includes/tsql-md.md)] создает несколько результирующих наборов, операция массового копирования пропускает все результирующие наборы, следующие за первым.  
   
- Чтобы создать файл данных, в которых столбец данные хранятся в другом формате, чем в таблице, вызовите [bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md) чтобы указать, сколько столбцов будет изменен, а затем вызовите [bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md) для каждого столбца, формат которого Вы хотите изменить. Это необходимо сделать после вызова метода **bcp_init** , но перед вызовом **bcp_exec**. **bcp_colfmt** указывает формат, в котором данные столбца хранятся в файле данных. Он может использоваться при выполнении массового копирования in или out. Можно также использовать **bcp_colfmt** для задания признаков конца строк и столбцов. Например, если данные содержат не символы табуляции, можно создать файл с разделителями табуляции с помощью **bcp_colfmt** задать символ табуляции в качестве признака конца для каждого столбца.  
+ Чтобы создать файл данных, в котором данные столбца хранятся в другом формате, чем в таблице, вызовите [bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md) , чтобы указать количество столбцов, которые будут изменены, а затем вызовите [bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md) для каждого столбца, формат которого необходимо изменить. Это выполняется после вызова **bcp_init** , но перед вызовом **bcp_exec**. **bcp_colfmt** указывает формат, в котором данные столбца хранятся в файле данных. Его можно использовать при выполнении операций копирования или извлечения. Можно также использовать **bcp_colfmt** для установки признаков конца строки и столбца. Например, если данные не содержат символы табуляции, можно создать файл с разделителями-символами табуляции с помощью **bcp_colfmt** , чтобы задать символ табуляции в качестве признака конца для каждого столбца.  
   
- При массовом копировании с использованием **bcp_colfmt**, можно легко создать файл форматирования, описывающий файл данных, созданный путем вызова [bcp_writefmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-writefmt.md) после последнего вызова **bcp_colfmt**.  
+ При выполнении операций с массовым копированием и использованием **bcp_colfmt**можно легко создать файл форматирования с описанием файла данных, созданного путем вызова [bcp_writefmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-writefmt.md) после последнего вызова **bcp_colfmt**.  
   
- При массовом копировании из файла данных, описанного файлом форматирования, считать файл форматирования, путем вызова [bcp_readfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-readfmt.md) после **bcp_init** прежде **bcp_exec**.  
+ При выполнении операции с массовым копированием из файла данных, описанного в файле форматирования, прочтите файл форматирования, вызвав [bcp_readfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-readfmt.md) после **bcp_init** , но до **bcp_exec**.  
   
- **Bcp_control** функция управляет несколькими параметрами при массовом копировании в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] из файла данных. **bcp_control** устанавливает значения параметров, например максимальное число ошибок до завершения операции, номер строки в файле, на которой начинается массовое копирование, строке, чтобы остановить при возникновении и размер пакета.  
+ Функция **bcp_control** управляет несколькими параметрами при выполнении операции копирования в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] из файла данных. **bcp_control** задает параметры, такие как максимальное количество ошибок перед завершением, строку в файле, с которой начинается копирование, строка, которую следует приступить к обработке, и размер пакета.  
   
 ## <a name="see-also"></a>См. также  
- [Выполнение операций массового копирования &#40;ODBC&#41;](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)  
+ [Выполнение операций &#40;с массовым копированием в ODBC&#41;](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)  
   
   

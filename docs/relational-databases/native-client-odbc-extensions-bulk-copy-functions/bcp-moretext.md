@@ -15,17 +15,17 @@ apitype: DLLExport
 helpviewer_keywords:
 - bcp_moretext function
 ms.assetid: 23e98015-a8e4-4434-9b3f-9c7350cf965f
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f6b88e9931ab7575e46f6179680ad721ce40dea8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1ea8cb10227ccebe10e350ce82b0887eb8a8bacf
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67895499"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71707524"
 ---
-# <a name="bcpmoretext"></a>bcp_moretext
+# <a name="bcp_moretext"></a>bcp_moretext
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
@@ -42,11 +42,11 @@ RETCODE bcp_moretext (
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *HDBC*  
+ *хдбк*  
  Дескриптор соединения ODBC с поддержкой массового копирования.  
   
  *cbData*  
- Число байтов данных, копируемых в SQL Server на основе данных, который ссылается *pData*. Значение SQL_NULL_DATA соответствует значению NULL.  
+ Число байтов данных, копируемых в SQL Server из данных, на которые ссылается *pData*. Значение SQL_NULL_DATA соответствует значению NULL.  
   
  *pData*  
  Представляет собой указатель на ту часть значения поддерживаемого длинного типа данных переменной длины, которую нужно переслать в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -55,19 +55,19 @@ RETCODE bcp_moretext (
  SUCCEED или FAIL.  
   
 ## <a name="remarks"></a>Примечания  
- Эта функция может использоваться в сочетании с [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) и [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) долго, копирование значений данных переменной длины в SQL Server в виде фрагментов меньшего размера. **bcp_moretext** может использоваться со столбцами, имеющими следующие типы данных SQL Server: **текст**, **ntext**, **изображение**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** , определяемого пользователем типа (UDT) и XML. **bcp_moretext** не поддерживает преобразование данных, передаваемых данных должен соответствовать тип данных целевого столбца.  
+ Эта функция может использоваться в сочетании с [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) и [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) для копирования длинных значений данных переменной длины в SQL Server нескольких меньших фрагментов. **bcp_moretext** можно использовать со столбцами, имеющими следующие SQL Server типы данных: **Text**, **ntext**, **Image**, **varchar (max)** , **nvarchar (max)** , **varbinary (max)** , определяемого пользователем типа (UDT) и XML. **bcp_moretext** не поддерживает преобразования данных, указанные данные должны соответствовать типу данных целевого столбца.  
   
- Если **bcp_bind** вызывается с НЕНУЛЕВОЙ *pData* параметров для типов данных, поддерживаемых **bcp_moretext**, **bcp_sendrow** отправляет значения типа данных, независимо от его длины. Если, однако **bcp_bind** имеет значение NULL *pData* параметр для поддерживаемых типов данных, **bcp_moretext** можно использовать для копирования данных сразу после успешного возвращения из **bcp_sendrow** , указывающее, что все привязанные столбцы с данными, которые присутствуют были обработаны.  
+ Если **bcp_bind** вызывается с параметром *pData* , отличным от NULL, для типов данных, поддерживаемых **bcp_moretext**, **bcp_sendrow** отправляет все значение данных, независимо от длины. Однако если **bcp_bind** имеет параметр *pData* , имеющий значение null, для поддерживаемых типов данных **bcp_moretext** может использоваться для копирования данных сразу после успешного возврата из **bcp_sendrow** , указывающего на наличие связанных столбцов с данными. были обработаны.  
   
- Если вы используете **bcp_moretext** для отправки один столбец типа данных, поддерживаемых в строке, необходимо также использовать его для отправки всех остальных столбцов типа данных, поддерживаемых в строке. Ни один столбец не может быть пропущен. Поддерживаемыми типами данных являются SQLTEXT, SQLNTEXT, SQLIMAGE, SQLUDT и SQLXML. То же относится к типам данных SQLCHARACTER, SQLVARCHAR, SQNCHAR, SQLBINARY и SQLVARBINARY, если столбец имеет тип varchar(max), nvarchar(max) или varbinary(max) соответственно.  
+ Если для отправки одного столбца поддерживаемого типа данных в строке используется **bcp_moretext** , необходимо также использовать его для отправки всех остальных поддерживаемых столбцов типа данных в строке. Ни один столбец не может быть пропущен. Поддерживаемыми типами данных являются SQLTEXT, SQLNTEXT, SQLIMAGE, SQLUDT и SQLXML. То же относится к типам данных SQLCHARACTER, SQLVARCHAR, SQNCHAR, SQLBINARY и SQLVARBINARY, если столбец имеет тип varchar(max), nvarchar(max) или varbinary(max) соответственно.  
   
- Вызов любого **bcp_bind** или [bcp_collen](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md) задает общую длину всех фрагментов данных для копирования столбца SQL Server. При попытке отправки SQL Server большее число байтов, чем указано в вызове **bcp_bind** или **bcp_collen** приводит к ошибке. Эта ошибка возникает, если, например, в приложении после использования **bcp_collen** для задания длины допустимых данных для SQL Server **текст** столбца равной 4500, а затем вызывал **bcp_moretext** пять раз время, указывающее, при каждом вызове, что длина буфера данных 1000 байт.  
+ Вызов либо **bcp_bind** , либо [bcp_collen](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md) задает общую длину всех фрагментов данных, которые будут скопированы в столбец SQL Server. Попытка отправить SQL Server больше байтов, чем указано в вызове **bcp_bind** или **bcp_collen** , приводит к ошибке. Эта ошибка может возникнуть, например, в приложении, которое использовало **bcp_collen** для установки длины доступных данных для SQL Server **текстового** столбца в 4500, затем вызывается **bcp_moretext** пять раз, указывая при каждом вызове, что буфер данных Длина составляет 1000 байт.  
   
- Если копируемая строка содержит более одного столбца long и variable-length, **bcp_moretext** сначала передает данные к меньшему порядковым номером столбца, следуют следующей наименьшей столбец с порядковым номером и т. д. Необходимо правильно задать длину ожидаемых данных. Какой-либо иной способ определения того, что в операции массового копирования получены все данные столбца, кроме проверки по заданной длине, отсутствует.  
+ Если скопированная строка содержит более одного столбца переменной длины, **bcp_moretext** сначала отправляет свои данные в столбец с наименьшим порядковым номером, за которым следует столбец с наименьшим порядковым номером и так далее. Необходимо правильно задать длину ожидаемых данных. Какой-либо иной способ определения того, что в операции массового копирования получены все данные столбца, кроме проверки по заданной длине, отсутствует.  
   
- Когда **var(max)** значения отправляются на сервер, с помощью команды bcp_sendrow и bcp_moretext, нет необходимости вызывать bcp_collen для задания длины столбца. Вместо этого только для указанных типов, значение завершается путем вызова bcp_sendrow с нулевой длины.  
+ Когда значения **var (max)** отправляются на сервер с помощью bcp_sendrow и bcp_moretext, нет необходимости вызывать bcp_collen для задания длины столбца. Вместо этого для этих типов значение завершается вызовом bcp_sendrow с нулевой длиной.  
   
- Приложение обычно вызывает **bcp_sendrow** и **bcp_moretext** в циклах для пересылки нескольких строк данных. Ниже приводится объяснение того, как это сделать для таблицы, содержащий два **текст** столбцы:  
+ Приложение обычно вызывает **bcp_sendrow** и **bcp_moretext** внутри циклов для отправки нескольких строк данных. Ниже приведена схема того, как это сделать для таблицы, содержащей два **текстовых** столбца:  
   
 ```  
 while (there are still rows to send)  

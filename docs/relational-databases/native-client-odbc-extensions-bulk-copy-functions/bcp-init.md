@@ -16,15 +16,15 @@ apitype: DLLExport
 helpviewer_keywords:
 - bcp_init function
 ms.assetid: 6a25862c-7f31-4873-ab65-30f3abde89d2
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9401b9702696ca38d378669e8b9901c06fb17228
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: d10c8d721b44fc372ee5a17a39c653797925dd46
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155509"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71707565"
 ---
 # <a name="bcp_init"></a>bcp_init
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -85,7 +85,7 @@ RETCODE bcp_init (
   
 -   При копировании в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] файл данных должен содержать данные для каждого столбца таблицы базы данных. При копировании на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] данные из всех столбцов в таблице, представлении или результирующем наборе инструкции SELECT базы данных копируются в файл данных.  
   
--   При копировании в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] порядковый номер столбца в файле данных должен совпадать с порядковым номером столбца таблицы базы данных. При копировании [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]из **bcp_exec** помещает данные на основе порядкового положения столбца в таблице базы данных.  
+-   При копировании в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] порядковый номер столбца в файле данных должен совпадать с порядковым номером столбца таблицы базы данных. При копировании из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **bcp_exec** помещает данные на основе порядкового номера столбца в таблице базы данных.  
   
 -   Если тип данных базы данных имеет переменную длину (например, **varbinary (22)** ) или столбец базы данных может содержать значения NULL, то данные в файле данных имеют префикс длины или значения NULL. Ширина признака изменяется в зависимости от типа данных и версии массового копирования.  
   
@@ -93,7 +93,7 @@ RETCODE bcp_init (
   
  Массовое копирование в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может быть оптимизировано для таблиц, не содержащих индексов, путем установки модели восстановления базы данных в значение SIMPLE или BULK_LOGGED. Дополнительные сведения см. [в разделе Предварительные требования для минимального ведения журнала при выполнении массового импорта](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md) и [изменения базы данных](../../t-sql/statements/alter-database-transact-sql.md).  
   
- Если файл данных не используется, необходимо вызвать [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) , чтобы указать формат и расположение данных в памяти для каждого столбца, а затем скопировать строки данных в объект [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md).  
+ Если файл данных не используется, необходимо вызвать [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) , чтобы указать формат и расположение данных в памяти для каждого столбца, а затем скопировать строки данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md).  
   
 ## <a name="example"></a>Пример  
  В этом образце демонстрируется использование функции ODBC bcp_init с файлом форматирования.  

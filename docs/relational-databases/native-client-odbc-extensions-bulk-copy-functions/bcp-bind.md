@@ -1,10 +1,7 @@
 ---
 title: bcp_bind | Документация Майкрософт
-ms.custom: ''
-ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
 apiname:
@@ -15,28 +12,32 @@ apitype: DLLExport
 helpviewer_keywords:
 - bcp_bind function
 ms.assetid: 6e335a5c-64b2-4bcf-a88f-35dc9393f329
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
+ms.custom: ''
+ms.reviewer: ''
+ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c1c53d7fc6578f753e92cf3192c7cd7783590292
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 99da52886b15cf89b693fdfb5f1cc5d039e64905
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67895737"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71707733"
 ---
-# <a name="bcpbind"></a>bcp_bind
+# <a name="bcp_bind"></a>bcp_bind
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   Привязывает данные программной переменной к столбцу таблицы для массового копирования в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
-  
-## <a name="syntax"></a>Синтаксис  
-  
+
+## <a name="syntax"></a>Синтаксис
+
 ```  
   
 RETCODE bcp_bind (  
-        HDBC hdbc,   
+        HDBC hdbc,
         LPCBYTE pData,  
         INT cbIndicator,  
         DBINT cbData,  
@@ -46,19 +47,20 @@ RETCODE bcp_bind (
         INT idxServerCol);  
 ```  
   
-## <a name="arguments"></a>Аргументы  
- *HDBC*  
+## <a name="arguments"></a>Аргументы
+
+ *хдбк*  
  Дескриптор соединения ODBC с поддержкой массового копирования.  
   
  *pData*  
- Указатель на копируемые данные. Если *eDataType* является SQLTEXT, SQLNTEXT, SQLXML, SQLUDT, SQLCHARACTER, SQLVARCHAR, SQLVARBINARY, SQLBINARY, SQLNCHAR или SQLIMAGE, *pData* может иметь значение NULL. Значение NULL *pData* означает, что данные большого будет отправлено для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] частями с помощью функции [bcp_moretext](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md). Пользователь должен задать только для *pData* значение NULL, если столбец, соответствующий связанному полю — это столбец BLOB-ОБЪЕКТОВ, в противном случае **bcp_bind** завершится ошибкой.  
+ Указатель на копируемые данные. Если *eDataType* имеет значение SQLTEXT, SQLNTEXT, SQLXML, SQLUDT, SQLCHARACTER, SQLVARCHAR, SQLVARBINARY, SqlBinary, SQLNCHAR или SQLIMAGE, *pData* может быть равен null. ЗНАЧЕНИЕ типа *pData* , указывающее, что значения длинных данных будут отправляться в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в блоках с помощью [bcp_moretext](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md). Пользователь должен задать для *pData* значение null, если столбец, соответствующий привязанному к пользователю полю, является столбцом большого двоичного объекта, иначе **bcp_bind** завершится ошибкой.  
   
- Если в данных присутствуют признаки, они размещаются в памяти непосредственно перед данными. *PData* указывает на переменную признака, в данном случае и ширина признака, параметр *cbIndicator* , используется при массовом копировании для адресации пользовательских данных правильно.  
+ Если в данных присутствуют признаки, они размещаются в памяти непосредственно перед данными. Параметр *pData* указывает на переменную индикатора в этом случае, а ширина индикатора, параметр *кбиндикатор* , используется массовым копированием для правильного адресации данных пользователя.  
   
  *cbIndicator*  
  Ширина индикатора в байтах или значение NULL для данных столбца. Допускаются следующие значения длины признака: 0 (если признак не используется), 1, 2, 4 или 8. Признаки размещаются в памяти непосредственно перед данными. Например, следующее определение типа структуры можно использовать для вставки целочисленных значений в таблицу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью массового копирования:  
   
-```  
+```
 typedef struct tagBCPBOUNDINT  
     {  
     int iIndicator;  
@@ -66,66 +68,65 @@ typedef struct tagBCPBOUNDINT
     } BCPBOUNDINT;  
 ```  
   
- В этом примере *pData* параметр должен быть установлен на адрес объявленного экземпляра структуры, адреса элемента *iIndicator* член структуры. *CbIndicator* будет иметь значение для размера типа integer (sizeof(int)) и *cbData* параметр будет иметь значение для размера типа integer (sizeof(int)). Чтобы выполнить массовое копирование, значение строки на сервер, содержащий значение NULL для связанного столбца, значение экземпляра *iIndicator* член должен быть равным SQL_NULL_DATA.  
+ В этом примере параметру *pData* присваивается адрес объявленного экземпляра структуры, адрес члена структуры *iIndicator* iIndicator. Для параметра *кбиндикатор* будет задан размер целого числа (sizeof (int)), а для параметра *cbData* снова будет задан размер целого числа (sizeof (int)). Чтобы выполнить операцию с массовым копированием строки на сервер, содержащий значение NULL для привязанного столбца, значение элемента *iIndicator* экземпляра должно быть равно SQL_NULL_DATA.  
   
  *cbData*  
  Количество байт данных в программной переменной, исключая любую длину, NULL-индикатор или признак конца.  
   
- Установка *cbData* значения SQL_NULL_DATA означает, что все строки, скопированные на сервер содержит значение NULL для столбца.  
+ Установка параметра *cbData* в значение SQL_NULL_DATA означает, что все строки, скопированные на сервер, содержат значение NULL для столбца.  
   
- Установка *cbData* значения SQL_VARLEN_DATA указывает, что система будет использовать строковый признак конца или другой метод, чтобы определить длину данных копирования.  
+ Установка параметра *cbData* в значение SQL_VARLEN_DATA указывает, что система будет использовать признак конца строки или другой метод, чтобы определить длину копируемых данных.  
   
- Для типов данных фиксированной длины, например для целых чисел, система определяет длину данных на основе типа. Таким образом, для типов данных фиксированной длины *cbData* может иметь значение SQL_VARLEN_DATA или длину данных.  
+ Для типов данных фиксированной длины, например для целых чисел, система определяет длину данных на основе типа. Таким образом, для типов данных фиксированной длины *cbData* можно безопасно SQL_VARLEN_DATA или длину данных.  
   
- Для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] символьных и двоичных типов данных *cbData* может быть SQL_VARLEN_DATA, SQL_NULL_DATA, 0 или положительное значение. Если *cbData* имеет значение SQL_VARLEN_DATA, система использует либо признак длины, null (при его наличии), либо последовательность с признаком конца для определения длины данных. Если представлено и то, и другое, система использует то значение, которое приводит к наименьшему объему копируемых данных. Если *cbData* имеет значение SQL_VARLEN_DATA, тип данных столбца является [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] указан символ или двоичного типа и ни признак длины, ни последовательность с признаком конца, система возвращает сообщение об ошибке.  
+ Для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] символьных и двоичных типов данных *cbData* может быть SQL_VARLEN_DATA, SQL_NULL_DATA, положительным значением или 0. Если *cbData* имеет значение SQL_VARLEN_DATA, система использует либо индикатор длины, либо значение null (если присутствует), либо последовательность признаков конца для определения длины данных. Если представлено и то, и другое, система использует то значение, которое приводит к наименьшему объему копируемых данных. Если *cbData* имеет значение SQL_VARLEN_DATA, то типом данных столбца является [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] символьный или двоичный тип, и не указан ни индикатор длины, ни последовательность признака конца, система возвращает сообщение об ошибке.  
   
- Если *cbData* равно 0 или положительное значение, система использует *cbData* как длину данных. Тем не менее если в дополнение к положительному *cbData* предоставляется значение, последовательность длины или признака конца, то система определяет длину данных с помощью метода, который вычисляет наименьший размер копируемых данных.  
+ Если значение *cbData* равно 0 или положительному значению, система использует *cbData* в качестве длины данных. Однако если в дополнение к положительному значению *cbData* предоставляется индикатор длины или последовательность признака конца, система определяет длину данных с помощью метода, который приводит к наименьшему объему копируемых данных.  
   
- *CbData* значение параметра представляет число байтов данных. Если символьные данные представлены строкой знаков в Юникоде, то положительное *cbData* значение параметра представляет число символов, умноженное на размер в байтах каждого символа.  
+ Значение параметра *cbData* представляет число байтов данных. Если символьные данные представлены расширенными символами Юникода, то положительное значение параметра *cbData* представляет собой число символов, умноженное на размер в байтах каждого символа.  
   
- *pTerm*  
+ *птерм*  
  Указатель на байтовый шаблон, если таковой имеется, являющийся признаком конца программной переменной. Например, строки ANSI и MBCS C обычно имеют 1-байтовый признаки конца строки (\0).  
   
- Если признак конца переменной отсутствует, присвойте *pTerm* значение NULL.  
+ Если для переменной нет терминатора, задайте для *птерм* значение null.  
   
- Для обозначения символа конца строки в качестве признака конца программной переменной в языке C можно использовать пустую строку (""). Так как пустая строка, завершающаяся нулем, составляет один байт (байт признака конца строки сам), задайте *cbTerm* 1. Например, чтобы указать, что строка, содержащаяся в *szName* заканчивается нулевым байтом и знак завершения, что следует использовать для указания длины:  
+ Для обозначения символа конца строки в качестве признака конца программной переменной в языке C можно использовать пустую строку (""). Поскольку пустая строка, заканчивающаяся нулем, образует один байт (сам байт признака конца), установите для *кбтерм* значение 1. Например, чтобы указать, что строка в параметре *szName* завершается нулем, и что для обозначения длины следует использовать признак конца:  
   
-```  
+```
 bcp_bind(hdbc, szName, 0,  
    SQL_VARLEN_DATA, "", 1,  
    SQLCHARACTER, 2)  
-```  
-  
- Форму вариант этого примера может означать, что 15 символов, копируемых из *szName* переменной во второй столбец связанной таблицы:  
-  
-```  
-bcp_bind(hdbc, szName, 0, 15,   
+```
+
+ Незавершенная форма этого примера может означать, что 15 символов будут скопированы из переменной *szName* во второй столбец связанной таблицы:  
+
+```
+bcp_bind(hdbc, szName, 0, 15,
    NULL, 0, SQLCHARACTER, 2)  
-```  
+```
+
+ При необходимости API-интерфейс массового копирования выполнит преобразование символов из Юникода в многобайтовую кодировку (MBCS). Убедитесь, что правильно задана строка байтов признака конца и количество байт в строке. Например, чтобы указать, что строка в параметре *szName* является строкой расширенных символов Юникода, заканчивающейся значением конца Юникода NULL:  
   
- При необходимости API-интерфейс массового копирования выполнит преобразование символов из Юникода в многобайтовую кодировку (MBCS). Убедитесь, что правильно задана строка байтов признака конца и количество байт в строке. Например, чтобы указать, что строка, содержащаяся в *szName* строка расширенных символов в Юникоде, оканчивающихся значением нулевого символа Юникода:  
-  
 ```  
-bcp_bind(hdbc, szName, 0,   
+bcp_bind(hdbc, szName, 0,
    SQL_VARLEN_DATA, L"",  
    sizeof(WCHAR), SQLNCHAR, 2)  
 ```  
   
- Если значение границы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] столбец содержит расширенные символы, не выполняют никаких преобразований на [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md). Если столбец [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имеет символьный тип в кодировке MBCS, при передаче данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняется преобразование расширенных символов в несколько символов.  
+ Если связанный столбец [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] является расширенным символом, преобразование в [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)не выполняется. Если столбец [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имеет символьный тип в кодировке MBCS, при передаче данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняется преобразование расширенных символов в несколько символов.  
   
- *cbTerm*  
- Количество байт в признаке конца программной переменной, если такой имеется. Если признак конца переменной отсутствует, присвойте *cbTerm* 0.  
-  
- *eDataType*  
- Тип данных языка C для программной переменной. Данные в программной переменной преобразуются в тип столбца базы данных. Если этот параметр равен 0, преобразование не выполняется.  
-  
- *EDataType* перечисляется [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] токенами типов данных в файле sqlncli.h, не перечислителях типов данных ODBC C. Например, можно задать целое двухбайтовое значение ODBC типа SQL_C_SHORT с помощью типа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQLINT2.  
-  
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] появилась поддержка SQLXML и SQLUDT токенами типов данных в **_eDataType_** регистр.  
- 
- В приведенной ниже таблице перечислены допустимые перечисляемые типы данных и соответствующие типы данных C в ODBC.
-  
-|eDataType|Тип C|  
+ *кбтерм*  
+ Количество байт в признаке конца программной переменной, если такой имеется. Если для переменной нет терминатора, задайте для *кбтерм* значение 0.  
+
+*eDataType* Тип данных C переменной программы. Данные в программной переменной преобразуются в тип столбца базы данных. Если этот параметр равен 0, преобразование не выполняется.  
+
+Параметр *eDataType* перечисляется с помощью токенов типа данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в sqlncli. h, а не в перечислителях типов данных ODBC C. Например, можно задать целое двухбайтовое значение ODBC типа SQL_C_SHORT с помощью типа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQLINT2.  
+
+[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] представил поддержку токенов типа данных SQLXML и SQLUDT в параметре **_eDataType_** .  
+
+В приведенной ниже таблице перечислены допустимые перечисляемые типы данных и соответствующие типы данных C в ODBC.
+
+|eDataType|Тип C|
 |-----------------------|------------|  
 |SQLTEXT|char *|  
 |SQLNTEXT|wchar_t *|  
@@ -143,22 +144,22 @@ bcp_bind(hdbc, szName, 0,
 |SQLBITN|char|  
 |SQLINT1|char|  
 |SQLINT2|short int|  
-|SQLINT4|ssNoversion|  
+|SQLINT4|int|  
 |SQLINT8|_int64|  
-|SQLINTN|*cbIndicator*<br /> 1: SQLINT1<br /> 2: SQLINT2<br /> 4: SQLINT4<br /> 8\. SQLINT8|  
+|SQLINTN|*cbIndicator*<br /> 1: SQLINT1<br /> 2: SQLINT2<br /> 4: SQLINT4<br /> 8 SQLINT8|  
 |SQLFLT4|float|  
 |SQLFLT8|float|  
-|SQLFLTN|*cbIndicator*<br /> 4: SQLFLT4<br /> 8\. SQLFLT8|  
+|SQLFLTN|*cbIndicator*<br /> 4: SQLFLT4<br /> 8 SQLFLT8|  
 |SQLDECIMALN|SQL_NUMERIC_STRUCT|  
 |SQLNUMERICN|SQL_NUMERIC_STRUCT|  
 |SQLMONEY|DBMONEY|  
 |SQLMONEY4|DBMONEY4|  
-|SQLMONEYN|*cbIndicator*<br /> 4: SQLMONEY4<br /> 8\. SQLMONEY|  
+|SQLMONEYN|*cbIndicator*<br /> 4: SQLMONEY4<br /> 8 SQLMONEY|  
 |SQLTIMEN|SQL_SS_TIME2_STRUCT|  
 |SQLDATEN|SQL_DATE_STRUCT|  
 |SQLDATETIM4|DBDATETIM4|  
 |SQLDATETIME|DBDATETIME|  
-|SQLDATETIMN|*cbIndicator*<br /> 4: SQLDATETIM4<br /> 8\. SQLDATETIME|  
+|SQLDATETIMN|*cbIndicator*<br /> 4: SQLDATETIM4<br /> 8 SQLDATETIME|  
 |SQLDATETIME2N|SQL_TIMESTAMP_STRUCT|  
 |SQLDATETIMEOFFSETN|SQL_SS_TIMESTAMPOFFSET_STRUCT|  
 |SQLIMAGE|unsigned char *|  
@@ -166,58 +167,60 @@ bcp_bind(hdbc, szName, 0,
 |SQLUNIQUEID|SQLGUID|  
 |SQLVARIANT|*Любой тип данных, кроме следующих:*<br />— text<br />— ntext<br />— image<br />— varchar(max)<br />— varbinary(max)<br />— nvarchar(max)<br />— xml<br />— timestamp|  
 |SQLXML|*Поддерживаемые типы данных C:*<br />— char *<br />— wchar_t *<br />— unsigned char *|  
+
+*idxServerCol* Порядковый номер столбца в таблице базы данных, в которую копируются данные. Первый столбец в таблице имеет порядковый номер 1. Порядковый номер столбца возвращается функцией [SQLColumns](../../relational-databases/native-client-odbc-api/sqlcolumns.md).  
   
- *idxServerCol*  
- Порядковый номер столбца в таблице базы данных, в которую копируются данные. Первый столбец в таблице имеет порядковый номер 1. Порядковый номер столбца возвращается функцией [SQLColumns](../../relational-databases/native-client-odbc-api/sqlcolumns.md).  
-  
-## <a name="returns"></a>Возвращает  
- SUCCEED или FAIL.  
-  
-## <a name="remarks"></a>Примечания  
- Используйте **bcp_bind** быстрый и эффективный способ копирования данных из программной переменной в таблицу в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
-  
- Вызовите [bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) перед вызовом этой или любой другой функции массового копирования. Вызов **bcp_init** задает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] целевой таблицы для массового копирования. При вызове **bcp_init** для использования с **bcp_bind** и [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md), **bcp_init** _szDataFile_параметр, указывающий файл данных имеет значение NULL; **bcp_init**_eDirection_ параметр имеет значение DB_IN.  
-  
- Сделать отдельного **bcp_bind** вызова для каждого столбца в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] таблицы, в которую требуется скопировать. После необходимого **bcp_bind** вызовы были внесены, а затем вызовите **bcp_sendrow** отправлять строки данных из программной переменной в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Повторная привязка столбца не поддерживается.  
-  
- При необходимости [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для фиксации уже полученные строки, вызовите [bcp_batch](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-batch.md). Например, вызвать **bcp_batch** один раз для каждой 1 000 вставленных строк или через любой другой интервал.  
-  
- Если больше нет строк для вставки, вызовите [bcp_done](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-done.md). Несоблюдение этого правила приведет к ошибке.  
-  
- Настройки параметров управления, указанный с помощью [bcp_control](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md), не оказывают влияния на **bcp_bind** передачу строк.  
-  
- Если *pData* для столбца имеет значение NULL, так как его значение будет предоставлено вызовами [bcp_moretext](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md), любой последующий столбец со *eDataType* присвоено SQLTEXT, SQLNTEXT, SQLXML, SQLUDT, SQLCHARACTER, SQLVARCHAR, SQLVARBINARY, SQLBINARY, SQLNCHAR или SQLIMAGE должен быть также связан с *pData* присваивается значение NULL, и их значения, также должен быть указан при вызове **bcp_moretext**.  
-  
- Для новых типов больших значений таких как **varchar(max)** , **varbinary(max)** , или **nvarchar(max)** , можно использовать значения SQLCHARACTER, SQLVARCHAR, SQLVARBINARY, SQLBINARY, и КАЧЕСТВЕ индикаторов типа в *eDataType* параметра.  
-  
- Если *cbTerm* является не равен 0, любое значение (1, 2, 4 или 8) является допустимым для префикса (*cbIndicator*). В этом случае [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client будет искать признак конца, вычислять его длину данных признак конца (*я*) и задайте *cbData* наименьшее значение i и значение префикс.  
-  
- Если *cbTerm* равно 0 и *cbIndicator* (префикс) не является 0, *cbIndicator* должна быть 8. Восьмибайтовый префикс может принимать следующие значения.  
-  
--   0xFFFFFFFFFFFFFFFF означает значение NULL для поля.  
-  
--   0xFFFFFFFFFFFFFFFE рассматривается как специальное значение префикса, которое используется для эффективной отправки на сервер данных, разбитых на фрагменты. Данные со специальным префиксом имеют следующий формат.  
-  
--   < специальный_префикс > \<0 или больше ФРАГМЕНТОВ_ДАННЫХ >< нулевой_фрагмент > где:  
-  
--   СПЕЦИАЛЬНЫЙ_ПРЕФИКС имеет значение 0xFFFFFFFFFFFFFFFE.  
-  
--   ФРАГМЕНТ_ДАННЫХ является 4-байтовым префиксом, содержащим длину фрагмента, за которым следуют фактические данные, длина которых задана 4-байтовым префиксом.  
-  
--   НУЛЕВОЙ_ФРАГМЕНТ является 4-байтовым значением, содержащим все нули (00000000), которое указывает конец данных.  
-  
--   Любая другая 8-байтовая длина рассматривается как длина обычных данных.  
-  
+## <a name="returns"></a>Возвращает
+
+ SUCCEED или FAIL.
+
+## <a name="remarks"></a>Примечания
+
+Используйте **bcp_bind** для быстрого и эффективного способа копирования данных из программной переменной в таблицу в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+
+Вызовите [bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) перед вызовом этой или любой другой функции небольшого копирования. При вызове **bcp_init** устанавливается целевая таблица [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для операции с массовым копированием. При вызове **bcp_init** для использования с **bcp_bind** и [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)параметр **bcp_init** _СЗДАТАФИЛЕ_ , указывающий файл данных, имеет значение null. параметр_eDirection_ bcp_init имеет значение DB_IN.  
+
+Создайте отдельный вызов **bcp_bind** для каждого столбца в таблице [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], куда нужно выполнить копирование. После внесения необходимых вызовов **bcp_bind** вызовите **bcp_sendrow** , чтобы отправить строку данных из переменных программы в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Повторная привязка столбца не поддерживается.
+
+Каждый раз, когда требуется, чтобы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] зафиксировать уже полученные строки, вызовите [bcp_batch](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-batch.md). Например, вызовите **bcp_batch** один раз для каждых 1000 строк или в любой другой интервал.  
+
+Если строки для вставки не найдены, вызовите [bcp_done](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-done.md). Несоблюдение этого правила приведет к ошибке.
+
+Параметры управления, заданные параметром [bcp_control](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md), не влияют на передачу строк **bcp_bind** .  
+
+Если *pData* для столбца имеет значение null, так как оно будет предоставлено вызовами [bcp_moretext](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md), все последующие столбцы с *eDataType* , заданными как SQLTEXT, SQLNTEXT, SQLXML, SQLUDT, SQLCHARACTER, SQLVARCHAR, SQLVARBINARY, SqlBinary, SQLNCHAR или SQLIMAGE также должны быть привязаны к параметру *pData* со значением NULL, а их значения также должны быть предоставлены вызовами **bcp_moretext**.  
+
+Для новых типов больших значений, таких как **varchar (max)** , **varbinary (max)** или **nvarchar (max)** , можно использовать SQLCHARACTER, SQLVARCHAR, SQLVARBINARY, SqlBinary и SQLNCHAR в качестве индикаторов типа в параметре *eDataType* .  
+
+Если *кбтерм* не равен 0, то любое значение (1, 2, 4 или 8) допустимо для префикса (*кбиндикатор*). В этой ситуации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client будет искать признак конца, вычислять длину данных относительно терминатора (*i*) и задавать для *cbData* меньшее значение i и значение prefix.  
+
+Если *кбтерм* имеет значение 0 и *кбиндикатор* (префикс) не равно 0, *кбиндикатор* должен быть равен 8. 8-байтовый префикс может принимать следующие значения:  
+
+- 0xFFFFFFFFFFFFFFFF означает значение NULL для поля.  
+
+- 0xFFFFFFFFFFFFFFFE рассматривается как специальное значение префикса, которое используется для эффективной отправки данных в блоки на сервер. Данные со специальным префиксом имеют следующий формат.  
+
+- < SPECIAL_PREFIX > \<0 или больше ФРАГМЕНТов данных > < ZERO_CHUNK >, где:  
+
+- СПЕЦИАЛЬНЫЙ_ПРЕФИКС имеет значение 0xFFFFFFFFFFFFFFFE.  
+
+- DATA_CHUNK — 4-байтовый префикс, содержащий длину фрагмента, за которым следуют фактические данные, длина которых указана в 4-байтовом префиксе.  
+
+- ZERO_CHUNK — это 4-байтовое значение, содержащее все нули (00000000), указывающие конец данных.  
+
+- Любая другая допустимая 8-байтовая длина обрабатывается как обычная длина данных.  
+
  Вызов [bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md) при использовании **bcp_bind** приводит к ошибке.  
   
-## <a name="bcpbind-support-for-enhanced-date-and-time-features"></a>Поддержка функцией bcp_bind улучшенных возможностей даты и времени  
- Сведения о типах, используемых с *eDataType* параметров для типов даты и времени, см. в разделе [изменения массового копирования для типов усиленной даты и времени &#40;OLE DB и ODBC&#41;](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md).  
+## <a name="bcp_bind-support-for-enhanced-date-and-time-features"></a>Поддержка функцией bcp_bind улучшенных возможностей даты и времени
+
+Дополнительные сведения о типах, используемых с параметром *eDataType* для типов даты и времени, см. в разделе [изменения при выполнении операций копирования для &#40;расширенных типов&#41;даты и времени OLE DB и ODBC](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md).  
+
+Дополнительные сведения см. в разделе [улучшения &#40;даты и времени&#41;ODBC](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
+
+## <a name="example"></a>Пример
   
- Дополнительные сведения см. в разделе [время улучшения функций даты и &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
-  
-## <a name="example"></a>Пример  
-  
-```  
+```
 #include sql.h  
 #include sqlext.h  
 #include odbcss.h  
@@ -231,7 +234,7 @@ char*      pTerm = "\t\t";
   
 // Application initiation, get an ODBC environment handle, allocate the  
 // hdbc, and so on.  
-...   
+...
   
 // Enable bulk copy prior to connecting on allocated hdbc.  
 SQLSetConnectAttr(hdbc, SQL_COPT_SS_BCP, (SQLPOINTER) SQL_BCP_ON,  
@@ -245,7 +248,7 @@ if (!SQL_SUCCEEDED(SQLConnect(hdbc, _T("myDSN"), SQL_NTS,
    return;  
    }  
   
-// Initialize bcp.   
+// Initialize bcp.
 if (bcp_init(hdbc, "comdb..accounts_info", NULL, NULL  
    DB_IN) == FAIL)  
    {  
@@ -253,7 +256,7 @@ if (bcp_init(hdbc, "comdb..accounts_info", NULL, NULL
    return;  
    }  
   
-// Bind program variables to table columns.   
+// Bind program variables to table columns.
 if (bcp_bind(hdbc, (LPCBYTE) &idCompany, 0, sizeof(DBINT), NULL, 0,  
    SQLINT4, 1)    == FAIL)  
    {  
@@ -269,10 +272,10 @@ if (bcp_bind(hdbc, (LPCBYTE) szCompanyName, 0, SQL_VARLEN_DATA,
   
 while (TRUE)  
    {  
-   // Retrieve and process program data.   
+   // Retrieve and process program data.
    if ((bMoreData = getdata(&idCompany, szCompanyName)) == TRUE)  
       {  
-      // Send the data.   
+      // Send the data.
       if (bcp_sendrow(hdbc) == FAIL)  
          {  
          // Raise error and return.  
@@ -296,7 +299,6 @@ if ((nRowsProcessed = bcp_done(hdbc)) == -1)
 printf_s("%ld rows copied.\n", nRowsProcessed);  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Функции массового копирования](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
-  
-  
+## <a name="see-also"></a>См. также
+
+ [Функции массового копирования](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)
