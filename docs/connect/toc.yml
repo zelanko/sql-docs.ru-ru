@@ -2406,14 +2406,14 @@
           href: ../connect/jdbc/validating-user-input.md
         - name: Безопасность приложений
           href: ../connect/jdbc/application-security.md
-        - name: Использование SSL-шифрования
+        - name: Использование шифрования
           href: ../connect/jdbc/using-ssl-encryption.md
           items:
-            - name: Основные сведения о поддержке SSL
+            - name: Основные сведения о поддержке шифрования
               href: ../connect/jdbc/understanding-ssl-support.md
-            - name: Соединение с помощью SSL-шифрования
+            - name: Подключение с шифрованием
               href: ../connect/jdbc/connecting-with-ssl-encryption.md
-            - name: Настройка SSL-шифрования на клиенте
+            - name: Настройка шифрования на клиенте
               href: ../connect/jdbc/configuring-the-client-for-ssl-encryption.md
         - name: Режим FIPS
           href: ../connect/jdbc/fips-mode.md

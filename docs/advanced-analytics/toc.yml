@@ -255,28 +255,26 @@
               href: ../advanced-analytics/package-management/tips-for-using-r-packages.md
     - name: Администрирование
       items:
-        - name: Управление интеграцией
-          href: ../advanced-analytics/r/managing-and-monitoring-r-solutions.md
         - name: Монитор
           items:
             - name: Мониторинг с помощью отчетов SSMS
-              href: ../advanced-analytics/r/monitor-r-services-using-custom-reports-in-management-studio.md
+              href: ../advanced-analytics/administration/monitor-sql-server-machine-learning-services-using-custom-reports-management-studio.md
             - name: Наблюдение с помощью динамических административных представлений
               href: ../advanced-analytics/administration/monitor-sql-server-machine-learning-services-using-dynamic-management-views.md
             - name: Расширенные события
               items:
-                - name: Расширенные события
-                  href: ../advanced-analytics/r/extended-events-for-sql-server-r-services.md
-                - name: Расширенные события PREDICT T-SQL
-                  href: ../advanced-analytics/xe-event-predict-tsql.md
+                - name: Мониторинг с помощью расширенных событий
+                  href: ../advanced-analytics/administration/extended-events.md
+                - name: Мониторинг инструкций T-SQL PREDICT
+                  href: ../advanced-analytics/administration/extended-events-predict-tsql.md
         - name: Масштабирование выполнения сценария
-          href: ../advanced-analytics/administration/modify-user-account-pool.md
+          href: ../advanced-analytics/administration/scale-concurrent-execution-external-scripts.md
         - name: Регулятор ресурсов
           items:
             - name: Использование регулятора ресурсов
-              href: ../advanced-analytics/administration/resource-governance.md
+              href: ../advanced-analytics/administration/resource-governor.md
             - name: Создание пула ресурсов
-              href: ../advanced-analytics/administration/how-to-create-a-resource-pool.md
+              href: ../advanced-analytics/administration/create-external-resource-pool.md
     - name: безопасность
       items:
         - name: Предоставление пользователям разрешения
