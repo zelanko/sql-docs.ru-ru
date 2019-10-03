@@ -3,17 +3,17 @@ title: Управление рабочими нагрузками Python и R с
 description: Узнайте, как использовать Resource Governor для управления ресурсами ЦП, физических операций ввода-вывода и выделения ресурсов памяти для рабочих нагрузок Python и R в SQL Server Службы машинного обучения.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/01/2019
+ms.date: 10/02/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: eec3d2762366252fbc170c2a6c4176fe0283edce
-ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
+ms.openlocfilehash: 9000ab8bb15e8f9910b8b780aa38d134fa984032
+ms.sourcegitcommit: af5e1f74a8c1171afe759a4a8ff2fccb5295270a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71714318"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71823536"
 ---
 # <a name="manage-python-and-r-workloads-with-resource-governor-in-sql-server-machine-learning-services"></a>Управление рабочими нагрузками Python и R с помощью Resource Governor в SQL Server Службы машинного обучения
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -31,11 +31,11 @@ ms.locfileid: "71714318"
 
 По умолчанию среда выполнения внешних скриптов для машинного обучения ограничивается не более чем на 20% от общего объема памяти компьютера. Это зависит от системы, но в общем случае это ограничение не подходит для серьезных задач машинного обучения, таких как обучение модели или прогнозирование многих строк данных. 
 
-## <a name="use-resource-governor-to-control-resourcing"></a>Использование Resource Governor для управления перебора источников
+## <a name="manage-resources-with-resource-governor"></a>Управление ресурсами с помощью Resource Governor
  
 По умолчанию внешние процессы используют до 20% общего объема памяти узла на локальном сервере. Пул ресурсов по умолчанию можно изменить, чтобы внести изменения на уровне сервера, а процессы R и Python будут использовать любую емкость, доступную для внешних процессов.
 
-Кроме того, можно создать пользовательские *Внешние пулы ресурсов*со связанными группами рабочей нагрузки и классификаторами, чтобы определить выделение ресурсов для запросов, исходящих от конкретных программ, узлов или других предоставленных вами критериев. Внешний пул ресурсов — это тип пула ресурсов, представленный в [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] , помогающий управлять процессами R и Python, внешними по отношению к ядру СУБД.
+Кроме того, можно создать пользовательские **Внешние пулы ресурсов**со связанными группами рабочей нагрузки и классификаторами, чтобы определить выделение ресурсов для запросов, исходящих от конкретных программ, узлов или других предоставленных вами критериев. Внешний пул ресурсов — это тип пула ресурсов, представленный в [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] , помогающий управлять процессами R и Python, внешними по отношению к ядру СУБД.
 
 1. [Включить управление ресурсами](https://docs.microsoft.com/sql/relational-databases/resource-governor/enable-resource-governor) (по умолчанию он отключен).
 

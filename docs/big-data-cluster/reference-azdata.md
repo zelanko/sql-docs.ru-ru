@@ -9,12 +9,12 @@ ms.date: 08/28/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 66b5d00e8f920aca9435fca7f05037184f75f130
-ms.sourcegitcommit: 49f3d12c0a46d98b82513697a77a461340f345e1
+ms.openlocfilehash: e12a6a19ae076a42bef345a05076adab0d9ea471
+ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70391951"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71816654"
 ---
 # <a name="azdata"></a>azdata
 
@@ -27,9 +27,8 @@ ms.locfileid: "70391951"
 |[azdata sql](reference-azdata-sql.md) | Интерфейс командной строки (CLI) баз данных SQL позволяет пользователю взаимодействовать с SQL Server с помощью T-SQL. |
 |[azdata app](reference-azdata-app.md) | Создание, удаление и запуск приложений, а также управление ими. |
 |[azdata bdc](reference-azdata-bdc.md) | Создание кластеров больших данных SQL, а также управление ими и обеспечение работы. |
-|[элемент управления аздата](reference-azdata-control.md) | Создание, удаление и управление плоскостями управления. |
-[azdata login](#azdata-login) | Вход в конечную точку контроллера кластера.
-[azdata logout](#azdata-logout) | Выход из кластера.
+|[azdata login](#azdata-login) | Вход в конечную точку контроллера кластера.
+|[azdata logout](#azdata-logout) | Выход из кластера.
 ## <a name="azdata-login"></a>azdata login
 Если кластер развернут, выводит список конечных точек контроллера в процессе развертывания, которые следует использовать для входа.  Если вам не известна конечная точка контроллера, вы можете выполнить вход с использованием конфигурации KUBE кластера в системе, которая по умолчанию располагается в каталоге <user home>/.kube/config, или переменной среды KUBECONFIG, то есть экспортировать KUBECONFIG=path/to/.kube/config.
 ```bash
@@ -68,7 +67,7 @@ azdata login -n ClusterName
 #### `--output -o`
 Формат вывода.  Допустимые значения: json, jsonc, table, tsv.  Значение по умолчанию: json.
 #### `--query -q`
-Строка запроса JMESPath. Дополнительные сведения и примеры см. в разделе [http://jmespath.org/](http://jmespath.org/]).
+Строка запроса JMESPath. Дополнительные сведения и примеры см. в разделе [http://jmespath.org/](http://jmespath.org/).
 #### `--verbose`
 Повышение уровня детализации журнала. Чтобы включить полные журналы отладки, используйте параметр --debug.
 ## <a name="azdata-logout"></a>azdata logout
