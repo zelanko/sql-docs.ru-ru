@@ -207,8 +207,6 @@
               items:
                 - name: azdata
                   href: big-data-cluster/reference-azdata.md
-                - name: элемент управления
-                  href: big-data-cluster/reference-azdata-control.md
                 - name: записная книжка
                   href: big-data-cluster/reference-azdata-notebook.md
                 - name: sql
@@ -4160,8 +4158,8 @@
           href: database-engine/deprecated-database-engine-features-in-sql-server-2017.md
         - name: "Устаревшие функции в SQL Server\_2016"
           href: database-engine/deprecated-database-engine-features-in-sql-server-2016.md
-        - name: "Неподдерживаемые функции в SQL Server\_2016"
-          href: database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md
+        - name: Неподдерживаемые функции в SQL Server
+          href: database-engine/discontinued-database-engine-functionality-in-sql-server.md
         - name: "Критически важные изменения в SQL Server\_2017"
           href: database-engine/breaking-changes-to-database-engine-features-in-sql-server-2017.md
         - name: "Критически важные изменения в SQL Server\_2016"
