@@ -1,5 +1,5 @@
 ---
-title: Для служб Reporting Services разделы справки F1 Configuration Manager (собственный режим служб SSRS) | Документация Майкрософт
+title: Диспетчер конфигурации служб Reporting Services разделов справки F1 (собственный режим служб SSRS) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services Configuration tool
 ms.assetid: 7b6fb18e-ec39-4661-88e3-977ed64e2c82
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 95d18bdc96a8215f5050c3b8ecd68ec2b133e28f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d2205465f1fd6f03c67e1fc09ec76a2dfbb2e083
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66092668"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952045"
 ---
 # <a name="reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode"></a>Разделы справки (F1) диспетчера конфигурации служб Reporting Services (службы Reporting Services в собственном режиме)
   В этом разделе приводится справка F1 для диспетчера конфигурации служб Reporting Services.  
@@ -26,7 +26,7 @@ ms.locfileid: "66092668"
   
 ## <a name="in-this-section"></a>в этом разделе  
   
--   [Подключение к серверу отчетов](../../../2014/sql-server/install/connect-to-a-native-mode-report-server.md)  
+-   [Соединение с сервером отчетов](../../../2014/sql-server/install/connect-to-a-native-mode-report-server.md)  
   
 -   [Состояние сервера отчетов](../../../2014/sql-server/install/report-server-status-ssrs-native-mode.md)  
   
@@ -34,7 +34,7 @@ ms.locfileid: "66092668"
   
 -   [URL веб-службы](../../../2014/sql-server/install/web-service-url-ssrs-native-mode.md)  
   
--   [Расширенная настройка нескольких веб-сайта](../../../2014/sql-server/install/advanced-multiple-web-site-configuration-ssrs-native-mode.md)  
+-   [Расширенная конфигурация нескольких веб-сайтов](../../../2014/sql-server/install/advanced-multiple-web-site-configuration-ssrs-native-mode.md)  
   
 -   [База данных](../../../2014/sql-server/install/database-ssrs-native-mode.md)  
   
@@ -42,7 +42,7 @@ ms.locfileid: "66092668"
   
 -   [Мастер изменения учетных данных](../../../2014/sql-server/install/change-credentials-wizard-ssrs-native-mode.md)  
   
--   [URL-адрес диспетчера отчетов](../../../2014/sql-server/install/report-manager-url-ssrs-native-mode.md)  
+-   [URL-адрес диспетчер отчетов](../../../2014/sql-server/install/report-manager-url-ssrs-native-mode.md)  
   
 -   [Настройки электронной почты](../../reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)  
   
@@ -54,7 +54,7 @@ ms.locfileid: "66092668"
   
 -   [Восстановление ключа шифрования](../../../2014/sql-server/install/restore-encryption-key-ssrs-native-mode.md)  
   
--   [Конфигурации с масштабным развертыванием](../../../2014/sql-server/install/scale-out-deployment-native-mode-report-server.md)  
+-   [Масштабное развертывание](../../../2014/sql-server/install/scale-out-deployment-native-mode-report-server.md)  
   
 ## <a name="see-also"></a>См. также  
  [Диспетчер конфигурации служб Reporting Services &#40;del&#41;](reporting-services-configuration-manager-native-mode.md)  

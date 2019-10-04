@@ -7,20 +7,20 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 7f1f2b28-c9f5-49ad-934b-02f2fa6b9328
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 4677413e517812bf18bc41f59374367b6e27276a
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 8b8460927baa185233234baa2f6401fa600f3fff
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68890172"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952133"
 ---
 # <a name="install-powerpivot-from-the-command-prompt"></a>Установка PowerPivot из командной строки
   Программу установки SQL Server PowerPivot для SharePoint можно запустить из командной строки. В команду необходимо включить параметр `/ROLE` и исключить из нее параметр `/FEATURES`.  
   
-## <a name="prerequisites"></a>предварительные требования  
+## <a name="prerequisites"></a>Предварительные требования  
  Необходимо установить выпуск SharePoint Server 2010 Enterprise Edition с пакетом обновления 1 (SP1).  
   
  Для подготовки к работе служб Analysis Services необходимо использовать учетные записи пользователей домена.  
@@ -41,7 +41,7 @@ ms.locfileid: "68890172"
  В отличие от предыдущих выпусков, все задачи настройки сервера выполняются как задачи после установки. В целях автоматизации шагов по установке и настройке для настройки сервера можно использовать PowerShell. Дополнительные сведения см. в статье [Настройка PowerPivot с помощью Windows PowerShell](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-configuration-using-windows-powershell).  
   
 ## <a name="example-commands"></a>Примеры команд  
- В следующих примерах демонстрируется применение каждого из вариантов. В примере 1 `SPI_AS_ExistingFarm`показано.  
+ В следующих примерах демонстрируется применение каждого из вариантов. В примере 1 показано `SPI_AS_ExistingFarm`.  
   
 ```  
 Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /ROLE=SPI_AS_ExistingFarm /INSTANCENAME=PowerPivot /INDICATEPROGRESS/ASSVCACCOUNT=<DomainName\UserName> /ASSVCPASSWORD=<StrongPassword> /ASSYSADMINACCOUNTS=<DomainName\UserName>   
@@ -82,9 +82,9 @@ Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /ROLE=SPI_AS_NewFarm 
   
     ```  
   
-3.  Замените заполнители для \<домен \ имя_пользователя > \<и StrongPassword > действительными учетными записями пользователей и паролями.  
+3.  Замените заполнители для \<domain \ username > и \<StrongPassword > действительными учетными записями пользователей и паролями.  
   
-     Параметры и **/ассвкпассворд** используются для настройки экземпляранасервереприложений.[!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] `/assvaccount` Замените эти заполнители на допустимые сведения учетной записи.  
+     Параметры `/assvaccount` и **/ассвкпассворд** используются для настройки экземпляра [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] на сервере приложений. Замените эти заполнители на допустимые сведения учетной записи.  
   
      Для параметра **/ассисадминаккаунтс** необходимо задать идентификатор пользователя, выполняющего программу установки SQL Server. Для служб необходимо указать хотя бы одного системного администратора. Следует отметить, что программа установки SQL Server больше не предоставляет автоматически разрешения sysadmin членам встроенной группы «Администраторы».  
   

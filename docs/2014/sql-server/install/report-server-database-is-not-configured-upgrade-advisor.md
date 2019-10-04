@@ -1,5 +1,5 @@
 ---
-title: База данных сервера отчетов не настроена (Советник по переходу) | Документация Майкрософт
+title: База данных сервера отчетов не настроена (советник по переходу) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], upgrade issues
 ms.assetid: b964300c-b220-4244-9fa6-c0c6a57760f6
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 813319309e489943cfdd94e13f300990b72e94be
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bb5dd5968930319532a29ff7c3909c36af99b3a0
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66092715"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952108"
 ---
 # <a name="report-server-database-is-not-configured-upgrade-advisor"></a>База данных сервера отчетов настроена (советник по переходу)
   Обновление заблокировано в связи с тем, что настройка сервера отчетов не завершена. База данных сервера отчетов не настроена.  
@@ -38,6 +38,6 @@ ms.locfileid: "66092715"
  Дополнительные сведения об удалении служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] см. в разделе [Удаление служб Reporting Services 2012](https://technet.microsoft.com/library/hh479745.aspx\(v=sql.11\)). в разделе описывается удаление конкретной версии. Эта процедура похожа на ту, которая была в предыдущих версиях.  
   
 ## <a name="see-also"></a>См. также  
- [Проблемы обновления служб Reporting Services &#40;помощник по обновлению&#41;](../../../2014/sql-server/install/reporting-services-upgrade-issues-upgrade-advisor.md)  
+ [Советник по переходу Reporting Services проблем &#40;обновления&#41;](../../../2014/sql-server/install/reporting-services-upgrade-issues-upgrade-advisor.md)  
   
   

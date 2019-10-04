@@ -7,22 +7,22 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 9a2575c8-06fc-4ef4-9f24-c19e52b1bbcf
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
-ms.openlocfilehash: be1c0b23afa8110fcf32b969e93fae7d9bf7f324
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: f1eb0f6892192e5ed328386e6730ec3b1c41f05b
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68890595"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952555"
 ---
 # <a name="deployment-checklist-reporting-services-power-view-and-powerpivot-for-sharepoint"></a>Контрольный список развертывания: службы Reporting Services, Power View и PowerPivot для SharePoint
   Чтобы установить эти компоненты бизнес-аналитики в той же ферме SharePoint, используйте следующий контрольный список: PowerPivot для SharePoint, построитель отчетов и [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]. Хотя в этом списке рекомендуется определенный порядок установки, на практике эти компоненты можно устанавливать практически в любом порядке. Контрольный список предполагает наличие следующих установленных продуктов:  
   
 1.  SharePoint Server 2010 с пакетом обновления 1 (SP1)  
   
-2.  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]ядро СУБД  
+2.  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ядро СУБД  
   
 3.  Службы [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Reporting Services и надстройка служб Reporting Services  
   
@@ -41,7 +41,7 @@ ms.locfileid: "68890595"
 >   
 >  В этом контрольном списке предполагается, что шаг настройки фермы выполняется во время настройки PowerPivot для SharePoint с помощью средства настройки PowerPivot. Вместо него можно использовать мастер настройки продуктов SharePoint, если вы предпочитаете такой подход. Оба подхода приводят к получению работоспособной фермы, поддерживающей PowerPivot для SharePoint.  
   
-## <a name="prerequisites"></a>предварительные требования  
+## <a name="prerequisites"></a>Предварительные требования  
  Для запуска программы установки SQL Server необходимо быть локальным администратором.  
   
  Для работы PowerPivot для SharePoint необходим выпуск Enterprise Edition сервера SharePoint Server 2010. Можно также использовать ознакомительный выпуск Enterprise Edition.  
@@ -66,8 +66,8 @@ ms.locfileid: "68890595"
 |Шаг|Ссылка|  
 |----------|----------|  
 |Запустите программу подготовки продуктов SharePoint 2010|Требуется наличие установочного носителя SharePoint 2010. Средством подготовки на установочном носителе является файл PrerequisiteInstaller.exe.|  
-|Установите SharePoint Server 2010 Enterprise или соответствующий выпуск Evaluation Edition.|При установке SharePoint можно отложить настройку фермы путем отмены запуска мастера настройки продуктов SharePoint 2010 после окончания работы программы установки. Ожидание настройки фермы позволит использовать [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] экземпляр ядро СУБД, который устанавливается на более позднем этапе, в качестве сервера базы данных фермы. Настройка фермы будет выполняться с помощью средства настройки PowerPivot. Сюда относятся действия по провизионированию фермы к работе, если ферма еще не настроена.|  
-|Установите SharePoint Server 2010 с пакетом обновления 1 (SP1).|Загрузите пакет обновления [https://support.microsoft.com/kb/2460045](https://go.microsoft.com/fwlink/p/?linkID=219697)1 (SP1) из.|  
+|Установите SharePoint Server 2010 Enterprise или соответствующий выпуск Evaluation Edition.|При установке SharePoint можно отложить настройку фермы путем отмены запуска мастера настройки продуктов SharePoint 2010 после окончания работы программы установки. Ожидание настройки фермы позволит использовать экземпляр ядро СУБД [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], который устанавливается на более позднем этапе, в качестве сервера базы данных фермы. Настройка фермы будет выполняться с помощью средства настройки PowerPivot. Сюда относятся действия по провизионированию фермы к работе, если ферма еще не настроена.|  
+|Установите SharePoint Server 2010 с пакетом обновления 1 (SP1).|Загрузите пакет обновления 1 (SP1) из [https://support.microsoft.com/kb/2460045](https://go.microsoft.com/fwlink/p/?linkID=219697).|  
 |Запустите программу установки [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], чтобы установить компонент Database Engine и PowerPivot для SharePoint.|[Установка PowerPivot для SharePoint 2010](../../../2014/sql-server/install/install-powerpivot-for-sharepoint-2010.md)<br /><br /> В шаге 1 объясняется, как установить PowerPivot for SharePoint. В этом шаге обязательно установите флажок на странице «Роль установки», добавляющий к роли компонент Database Engine. Это приведет к добавлению ядро СУБД в установку, чтобы его можно было использовать в качестве сервера базы данных фермы при настройке фермы на следующем шаге. Однако, если ферма уже настроена, этот шаг можно пропустить.<br /><br /> В шаге 2 задается вопрос по настройке сервера. Выберите в этом шаге средство настройки PowerPivot. Хотя доступно несколько способов настройки, использование средства настройки наиболее эффективно для автономной установки.<br /><br /> Если SharePoint 2010 установлен, но не настроен, средство настройки предварительно выбирает действия по созданию фермы, веб-приложения по умолчанию и корневого семейства сайтов. Обязательно оставьте эти параметры выбранными, иначе ферма не будет создана. Если ферма уже настроена, средство настройки пропустит эти действия и предложит только действия, необходимые для настройки PowerPivot для SharePoint.<br /><br /> В шаге 3 приведены инструкции по установке поставщика OLE DB версии SQL Server 2008 R2 для служб Analysis Services. Этот шаг важен с точки зрения поддержки версий книг, созданных в PowerPivot для Excel версии 2008 R2.|  
 |Проверьте работоспособность фермы.|Во-первых, запустите центр администрирования и убедитесь в его доступности. Затем откройте сайт группы, введя http://localhost.  Должен появиться сайт группы SharePoint.|  
 |Убедитесь, что PowerPivot для SharePoint работает.|[Проверка установки PowerPivot для SharePoint](https://docs.microsoft.com/analysis-services/instances/install-windows/verify-a-power-pivot-for-sharepoint-installation)<br /><br /> Эта задача проверяет доступ к данным PowerPivot с помощью переданного образца книги.|  

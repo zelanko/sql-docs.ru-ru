@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.restoreencryptionkey.F1
 ms.assetid: 11ce51e5-f5d4-40b6-88d8-9360fb50e66c
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
-ms.openlocfilehash: b537f8413ca460d8eb1991bdd71f1a73ac9ceba1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 111e44275922149949cd7e252e112d95cef65076
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66092520"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952036"
 ---
 # <a name="restore-encryption-key-ssrs-native-mode"></a>Восстановление ключа шифрования (службы Reporting Services в собственном режиме)
   Службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] используют ключ шифрования для защиты конфиденциальных данных, хранящихся в базе данных сервера отчетов. Чтобы не лишиться доступа к зашифрованным данным в результате смены учетной записи службы или запланированной миграции, необходимо создать резервную копию ключа шифрования. Этот раздел содержит общие сведения об использовании диспетчера конфигурации [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] для восстановления ключей.  
@@ -31,7 +31,7 @@ ms.locfileid: "66092520"
  Если восстановлен не тот ключ, при помощи которого производилось шифрование данных, хранящихся в базе данных сервера отчетов, то их расшифровка будет невозможна. В этом случае следует немедленно восстановить правильный ключ из резервной копии, если она доступна. При отсутствии резервной копии ключа, которым производилось шифрование данных, все зашифрованные данные придется удалить. Чтобы выполнить этот шаг, на странице **Ключи шифрования** нажмите кнопку [Удалить](../../../2014/sql-server/install/encryption-keys-ssrs-native-mode.md) . После удаления зашифрованного содержимого необходимо вручную обновить все подписки и повторно задать все сохраненные учетные данные, которые определены для отчетов и управляемых данными подписок на сервере отчетов.  
   
 ## <a name="restore-encryption-key-dialog"></a>Диалоговое окно «Восстановление ключа шифрования»  
- Сведения о расположении [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager, см. в разделе [диспетчер конфигурации служб Reporting Services &#40;собственный режим&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
+ Сведения о том, где найти Configuration Manager [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], см. в разделе [ &#40;Диспетчер конфигурации служб Reporting Services&#41;в собственном режиме](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
   
  Чтобы открыть диалоговое окно «Восстановление ключа шифрования», выберите элемент **Ключи шифрования** на панели навигации диспетчера конфигурации служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , а затем щелкните **Восстановить**. Это диалоговое окно отображается при обновлении учетной записи службы на странице «Учетная запись службы» диспетчера конфигурации служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Дополнительные сведения о  
   
@@ -43,11 +43,11 @@ ms.locfileid: "66092520"
  Введите пароль, чтобы разблокировать этот файл. Восстановление ключа возможно только после ввода пароля пользователем. Службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] применяют политику надежных паролей. Пароль должен содержать не менее 8 символов и состоять из цифровых и алфавитных символов в верхнем и нижнем регистре, а также как минимум один специальный символ.  
   
 ## <a name="see-also"></a>См. также  
- [Разделы справки F1 диспетчера конфигурации служб Reporting Services &#40;собственный режим служб SSRS&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
+ [Диспетчер конфигурации служб Reporting Services разделы &#40;справки F1 службы SSRS в&#41;основном режиме](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
  [Резервное копирование и восстановление ключей шифрования служб Reporting Services](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)   
  [Удаление и повторное создание ключей шифрования (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)   
  [Инициализация сервера отчетов &#40;диспетчер конфигурации служб SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   
  [Хранение зашифрованных данных сервера отчетов &#40;диспетчер конфигурации служб SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
- [Ключи шифрования &#40;собственный режим служб SSRS&#41;](../../../2014/sql-server/install/encryption-keys-ssrs-native-mode.md)  
+ [Основной режим &#40;SSRS для ключей шифрования&#41;](../../../2014/sql-server/install/encryption-keys-ssrs-native-mode.md)  
   
   

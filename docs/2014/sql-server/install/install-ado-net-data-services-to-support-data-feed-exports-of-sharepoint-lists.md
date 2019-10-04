@@ -1,5 +1,5 @@
 ---
-title: Установка служб данных ADO.NET для поддержки данных экспорта списков SharePoint в виде веб-канала | Документация Майкрософт
+title: Установка служб ADO.NET Data Services для поддержки экспорта каналов данных в списках SharePoint | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -7,28 +7,28 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: f32527ae-f623-4e08-adfb-6d3262f5c2ac
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 622d729e0b86a210bbdaaedf29818a49e81ed2ce
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b9b3ec2d8b7459f9d66313c6a40b1cbc26450e0d
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66094654"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952165"
 ---
 # <a name="install-adonet-data-services-to-support-data-feed-exports-of-sharepoint-lists"></a>Для поддержки экспорта списков SharePoint в виде веб-каналов данных установите службы ADO.NET Data Services
   Для обеспечения возможности экспорта списков SharePoint в виде веб-каналов данных требуется служба ADO.NET Data Services. SharePoint 2010 не включает этот компонент в установщик компонентов, необходимых для SharePoint 2010, поэтому его необходимо устанавливать вручную.  
   
- Без этих предварительных условий вы получите следующую ошибку при попытке использования списка SharePoint, который был экспортирован как поток данных: «По соображениям безопасности DTD запрещен в этом документе XML. Для разрешения обработки DTD присвойте свойству ProhibitDtd в XmlReaderSettings значение false и передайте параметры в метод XmlReader.Create».  
+ Без этого предварительного требования при попытке использовать список SharePoint, экспортированный в качестве веб-канала данных, появится следующая ошибка: "По соображениям безопасности DTD запрещен в этом XML-документе. Для разрешения обработки DTD присвойте свойству ProhibitDtd в XmlReaderSettings значение false и передайте параметры в метод XmlReader.Create».  
   
  Используйте следующие инструкции для установки служб ADO.NET Data Services на каждом сервере SharePoint, для которого нужно разрешить экспорт списков как веб-каналов данных.  
   
 ### <a name="download-and-install-adonet-data-services"></a>Загрузка и установка служб ADO.NET Data Services  
   
-1.  Перейдите к документации требования к оборудованию и программному обеспечению для SharePoint 2010, [оборудованию и программному обеспечению (SharePoint 2010)](https://go.microsoft.com/fwlink/?LinkId=169734)  
+1.  Перейдите к документации по требованиям к оборудованию и программному обеспечению для SharePoint 2010, [требованиям к оборудованию и программному обеспечению (SharePoint 2010)](https://go.microsoft.com/fwlink/?LinkId=169734)  
   
-2.  В **доступ к применимым программам**, найти ссылку на службы ADO.NET Data Services 3.5, соответствующую операционной системе, используемой (Windows Server 2008 SP2 или Windows Server 2008 R2).  
+2.  В окне **доступ к соответствующему программному обеспечению**найдите ссылку на ADO.NET Data Services 3,5, соответствующую используемой операционной системе (windows Server 2008 SP2 или windows Server 2008 R2).  
   
 3.  Щелкните ссылку и запустите программу установки службы.  
   

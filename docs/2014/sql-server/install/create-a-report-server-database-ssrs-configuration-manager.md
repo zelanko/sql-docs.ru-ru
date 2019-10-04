@@ -11,15 +11,15 @@ helpviewer_keywords:
 - report server database
 - databases [Reporting Services], creating
 ms.assetid: 8a3a6ffe-4001-46be-8548-94532550f6a5
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
-ms.openlocfilehash: e6a5c6544acae62a5a9ed7d2fbafe05bbd0f9f2e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 638f96285f4dab2bb109353d7d648b9de8b6bb67
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66454668"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952305"
 ---
 # <a name="create-a-report-server-database--ssrs-configuration-manager"></a>Создание базы данных сервера отчетов (диспетчер конфигурации служб SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **основном режиме** , используют две реляционные базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для хранения метаданных и объектов сервера отчетов. Одна база данных используется как основное хранилище, а вторая — для хранения временных данных. Эти базы данных создаются одновременно и связываются по именам. В экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по умолчанию базы данных именуются `reportserver` и `reportservertempdb`. В совокупности эти две базы данных называются «базой данных сервера отчетов» или «каталогом сервера отчетов».  
@@ -35,14 +35,14 @@ ms.locfileid: "66454668"
 > [!IMPORTANT]  
 >  Выполнять запросы к базе данных сервера отчетов из приложений не рекомендуется, схема базы данных сервера отчетов не предназначена для общего доступа. Структура таблиц в разных версиях может различаться. При создании приложений, которым необходим доступ к базе данных сервера отчетов, всегда используйте API-интерфейсы служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
 >   
->  Исключением являются представления журнала выполнения. Дополнительные сведения см. в разделе [журнал выполнения сервера отчетов и представление ExecutionLog3](../../reporting-services/report-server/report-server-executionlog-and-the-executionlog3-view.md)  
+>  Исключением являются представления журнала выполнения. Дополнительные сведения см. [в разделе Журнал выполнения сервера отчетов и представление ExecutionLog3](../../reporting-services/report-server/report-server-executionlog-and-the-executionlog3-view.md) .  
   
 ## <a name="ways-to-create-the-report-server-database"></a>Способы создания базы данных сервера отчетов  
- **Собственный режим**: Базы данных сервера отчетов собственный режим можно создать одним из следующих способов:  
+ **Собственный режим**: Базу данных сервера отчетов в собственном режиме можно создать следующими способами.  
   
--   Автоматически: Используйте мастер установки SQL Server, если выбран вариант установки конфигурации по умолчанию. В мастере установки SQL Server это раздел **Установка и настройка** на странице «Параметры установки сервера отчетов». Если выбран параметр **Установить только** , то для создания базы данных необходимо воспользоваться диспетчером конфигурации служб Reporting Services.  
+-   Автоматической Используйте мастер установки SQL Server, если выбран параметр установки конфигурации по умолчанию. В мастере установки SQL Server это раздел **Установка и настройка** на странице «Параметры установки сервера отчетов». Если выбран параметр **Установить только** , то для создания базы данных необходимо воспользоваться диспетчером конфигурации служб Reporting Services.  
   
--   Вручную: Используйте [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager. При использовании удаленного компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] для хранения базы данных следует создавать базу данных сервера отчетов вручную. Дополнительные сведения см. в разделе [Создание базы данных сервера отчетов, работающего в собственном режиме (диспетчер конфигураций служб SSRS)](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).  
+-   Необходимости Используйте Configuration Manager [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. При использовании удаленного компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] для хранения базы данных следует создавать базу данных сервера отчетов вручную. Дополнительные сведения см. в разделе [Создание базы данных сервера отчетов, работающего в собственном режиме (диспетчер конфигураций служб SSRS)](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).  
   
  **Режим интеграции с SharePoint.** На странице "Параметры установки сервера отчетов" имеется только один вариант для режима интеграции с SharePoint: **Установить только**. При выборе этого параметра устанавливаются все файлы служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и общая служба [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Следующий шаг заключается в создании по крайней мере одного приложения служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] одним из следующих способов.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "66454668"
 >  Сервер отчетов и экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , на котором хранится база данных сервера отчетов, могут находиться в разных доменах. При развертывании в Интернете сервер, как правило, защищают с помощью брандмауэра. При настройке доступа в Интернет на сервере отчетов для защиты соединения при подключении к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , который защищен брандмауэром и IPSEC, следует использовать учетные данные [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="database-server-edition-requirements"></a>Требования к выпуску сервера баз данных  
- При создании базы данных сервера отчетов убедитесь в том, что данный выпуск [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может быть использован для ее хранения. Дополнительные сведения см. в разделе «Сервера базы данных сервера требования к выпуску отчетов» из [функции, поддерживаемые различными выпусками SQL Server 2014](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
+ При создании базы данных сервера отчетов убедитесь в том, что данный выпуск [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может быть использован для ее хранения. Дополнительные сведения см. в подразделе «требования к выпуску сервера базы данных сервера отчетов» раздела [функции, поддерживаемые Выпусками SQL Server 2014](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
 ## <a name="see-also"></a>См. также  
  [Диспетчер конфигурации служб Reporting Services &#40;del&#41;](https://docs.microsoft.com/sql/sql-server/install/reporting-services-configuration-manager-native-mode)  

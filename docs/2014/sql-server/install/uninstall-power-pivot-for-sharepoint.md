@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: install
 ms.topic: conceptual
 ms.assetid: 3941a2f0-0d0c-4d1a-8618-7a6a7751beac
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
-ms.openlocfilehash: dd1f843159e4fcbfc4d46c762647f21bd7fec843
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 837843ec91a5bce8475d8153a15f61ad62721f12
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893488"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71951996"
 ---
 # <a name="uninstall-powerpivot-for-sharepoint"></a>Удаление PowerPivot для SharePoint
   Удаление установки [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] — это многоэтапная процедура, состоящая из подготовки к удалению, удаления компонентов и решений из фермы и удаления файлов программ и параметров реестра.  
@@ -32,7 +32,7 @@ ms.locfileid: "68893488"
   
 -   [Шаг 3. Запуск программы установки SQL Server для удаления программ с локального компьютера](#bkmk_uninstall)  
   
--   [Шаг 4. Удаление надстройки PowerPivot для SharePoint](#bkmk_addin)  
+-   [Шаг 4. Удаление надстройки PowerPivot для SharePoint @ no__t-0  
   
 -   [Шаг 5. Проверка удаления](#verify)  
   
@@ -146,7 +146,7 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
      В программе установки можно выбрать экземпляр **PowerPivot** , а затем установить флажки **Службы Analysis Services** и **Интеграция служб Analysis Services с SharePoint** , чтобы удалить только эти компоненты, оставив все остальные.  
   
 ##  <a name="bkmk_addin"></a> Шаг 4. Удаление надстройки PowerPivot для SharePoint  
- Если развертывание служб [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] имеет два или более сервера и установлена надстройка служб [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] , то, чтобы полностью удалить все файлы [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] , удалите надстройку служб [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] на каждом сервере, где она установлена. Дополнительные сведения см. [в разделе Установка или удаление надстройки PowerPivot для SharePoint &#40;SharePoint 2013&#41;](https://docs.microsoft.com/analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013).  
+ Если развертывание служб [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] имеет два или более сервера и установлена надстройка служб [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] , то, чтобы полностью удалить все файлы [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] , удалите надстройку служб [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] на каждом сервере, где она установлена. Дополнительные сведения см. [в разделе Установка или удаление надстройки &#40;PowerPivot для SharePoint SharePoint 2013&#41;](https://docs.microsoft.com/analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013).  
   
 ##  <a name="verify"></a> Шаг 5. Проверка удаления  
   

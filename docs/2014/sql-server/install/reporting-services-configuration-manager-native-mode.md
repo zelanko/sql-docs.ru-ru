@@ -12,15 +12,15 @@ helpviewer_keywords:
 - report servers [Reporting Services], configuring
 - components [Reporting Services], Reporting Services Configuration tool
 ms.assetid: 379eab68-7f13-4997-8d64-38810240756e
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
-ms.openlocfilehash: bbd786485915405de36511f5710e3490bdfd8a3f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e7b5e46b90702bf39bf2902eed3e5a6c609757e0
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66092663"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952494"
 ---
 # <a name="reporting-services-configuration-manager-native-mode"></a>Использование диспетчера конфигурации служб Reporting Services (собственный режим)
   Используйте диспетчер конфигурации служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] для настройки установленных служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в собственном режиме. Если сервер отчетов был установлен в режиме «только файлы», то перед использованием сервера необходимо воспользоваться диспетчером конфигурации. Если сервер отчетов устанавливался в режиме по умолчанию, используйте диспетчер настройки для проверки или изменения настроек, заданных во время установки. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] может использоваться для настройки экземпляра локального или удаленного сервера отчетов.  
@@ -28,7 +28,7 @@ ms.locfileid: "66092663"
  [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в основном режиме.  
   
 > [!NOTE]  
->  Начиная с выпуска [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] , диспетчер конфигурации служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] не предназначен для управления серверами отчетов, работающими в режиме интеграции с SharePoint. Управление и настройка режима интеграции с SharePoint осуществляются с использованием центра администрирования SharePoint и скриптов PowerShell. Сведения см. в разделе [SharePoint режим установки служб Reporting Services &#40;SharePoint 2010 и SharePoint 2013&#41;](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md).  
+>  Начиная с выпуска [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] , диспетчер конфигурации служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] не предназначен для управления серверами отчетов, работающими в режиме интеграции с SharePoint. Управление и настройка режима интеграции с SharePoint осуществляются с использованием центра администрирования SharePoint и скриптов PowerShell. Дополнительные сведения см. в разделе [Reporting Services SharePoint &#40;Mode установка SharePoint 2010 и&#41;SharePoint 2013](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md).  
   
  **В этом разделе:**  
   
@@ -47,7 +47,7 @@ ms.locfileid: "66092663"
  [Настройка учетной записи автоматического выполнения (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)  
  Описывает, как настроить пользовательскую учетную запись для обработки отчетов в автоматическом режиме.  
   
- [Настройка сервера отчетов для доставки электронной почты &#40;диспетчер конфигурации служб SSRS&#41;](../../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)  
+ [Настройка сервера отчетов для доставки &#40;сообщений электронной почты с помощью служб SSRS Configuration Manager&#41;](../../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)  
  Описывает, как настроить сервер отчетов для поддержки рассылки отчетов по электронной почте.  
   
  [Настройка масштабного развертывания сервера отчетов в основном режиме (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)  
@@ -59,16 +59,16 @@ ms.locfileid: "66092663"
  [Управление сервером отчетов Reporting Services в собственном режиме](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)  
  Предоставляет пошаговую инструкцию по выполнению типичных задач.  
   
- [Разделы справки F1 диспетчера конфигурации служб Reporting Services &#40;собственный режим служб SSRS&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)  
+ [Диспетчер конфигурации служб Reporting Services разделы &#40;справки F1 службы SSRS в собственном режиме&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)  
  Содержит разделы справки по страницам в программе настройки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
  **В этом разделе:**  
   
--   [Сценарии использования диспетчера конфигурации Reporting Services](#bkmk_scenarios)  
+-   [Сценарии использования диспетчер конфигурации служб Reporting Services](#bkmk_scenarios)  
   
 -   [Требования](#bkmk_requirements)  
   
--   [Чтобы запустить диспетчер конфигурации служб Reporting Services](#bkmk_start_configuration_manager)  
+-   [Запуск диспетчер конфигурации служб Reporting Services](#bkmk_start_configuration_manager)  
   
 ##  <a name="bkmk_scenarios"></a> Сценарии использования диспетчера конфигурации служб Reporting Services  
  С помощью программы настройки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] можно выполнять следующие задачи.  

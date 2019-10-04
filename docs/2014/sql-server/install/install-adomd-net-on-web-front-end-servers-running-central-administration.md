@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: c2372180-e847-4cdb-b267-4befac3faf7e
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
-ms.openlocfilehash: b77948b3ae5b27d7ecb82c277424057fe39ff7a0
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: f36e00a9393dcbdf1f8cbfe878b8382e6a8dac9d
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68891041"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952154"
 ---
 # <a name="install-adomdnet-on-web-front-end-servers-running-central-administration"></a>Установка ADOMD.NET на веб-серверах, обслуживающих клиентские запросы, под управлением центра администрирования
   При установке PowerPivot для SharePoint в ферму с топологией центра администрирования без служб Excel или PowerPivot для SharePoint загрузите и установите клиентскую библиотеку Microsoft ADOMD.NET, если желаете иметь полный доступ к встроенным на панели управления PowerPivot отчетам. Некоторые отчеты с панели мониторинга используют ADOMD.NET для доступа к внутренним данным, предоставляющим сведения об обработке запросов PowerPivot и исправности сервера в ферме.  
@@ -42,7 +42,7 @@ ms.locfileid: "68891041"
   
 3.  Нажмите **Версия**.  
   
-4.  Убедитесь, что версия включает 12,00. \<номер сборки > и описание — Microsoft. AnalysisService. AdomdClient.  
+4.  Убедитесь, что версия содержит 12,00. \<build number > и описание — Microsoft. AnalysisService. AdomdClient.  
   
 ## <a name="see-also"></a>См. также  
  [Панель мониторинга управления PowerPivot и данные об использовании](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data)  

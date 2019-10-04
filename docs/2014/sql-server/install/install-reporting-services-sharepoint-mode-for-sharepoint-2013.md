@@ -7,22 +7,22 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: b29d0f45-0068-4c84-bd7e-5b8a9cd1b538
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
-ms.openlocfilehash: f829c49c47565fb7ed2dc4540216a4de4d3243d2
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 1a249c7a6fa260d5800c81b33b7674a2affa4eb5
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68890280"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952222"
 ---
 # <a name="install-reporting-services-sharepoint-mode-for-sharepoint-2013"></a>Установка служб Reporting Services в режиме SharePoint для SharePoint 2013
   В данном разделе подробно описываются процедуры установки одиночного сервера [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в режиме SharePoint. Эти шаги охватывают запуск мастера установки SQL Server, а также выполнение дополнительных задач по настройке с использованием центра администрирования SharePoint. В разделе также можно ознакомиться с отдельными процедурами обновления существующей установки, например с созданием приложения службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]** SharePoint 2013 &#124; **Примечание.** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Режим интеграции с SharePoint **не** поддерживает Мультитенантность SharePoint Server.|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2013 &#124; **Примечание.** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в режиме интеграции с SharePoint **не** поддерживает Мультитенантность SharePoint Server.|  
   
  Сведения о добавлении дополнительных серверов [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в существующую ферму см. в следующих разделах:  
   
@@ -38,13 +38,13 @@ ms.locfileid: "68890280"
   
 -   [Настройка учетных записей](#bkmk_setupaccounts)  
   
--   [Шаг 1. Установка Reporting Services сервера отчетов в режиме интеграции с SharePoint](#bkmk_install_SSRS)  
+-   [Шаг 1. Установка Reporting Services сервера отчетов в режиме интеграции с SharePoint @ no__t-0  
   
--   [Шаг 2. Регистрация и запуск службы Reporting Services SharePoint](#bkmk_install_SSRS_sharedservice)  
+-   [Шаг 2. Регистрация и запуск Reporting Services службы SharePoint @ no__t-0  
   
--   [Шаг 3. Создание приложения службы Reporting Services](#bkmk_create_serrviceapplication)  
+-   [Шаг 3. Создание приложения службы Reporting Services @ no__t-0  
   
--   [Шаг 4. Активируйте компонент семейства веб-сайтов Power View.](#bkmk_powerview)  
+-   [Шаг 4. Активировать компонент семейства веб-сайтов Power View. ](#bkmk_powerview)  
   
 -   [Сценарий Windows PowerShell для шагов 1-4](#bkmk_full_script)  
   
@@ -74,7 +74,7 @@ ms.locfileid: "68890280"
   
  **Установка и регистрация службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] :**  
   
--   Текущая учетная запись во время установки (называемая учетной записью установки) [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в режиме интеграции с SharePoint должна иметь права администратора на локальном компьютере. Если установка [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] выполняется после установки SharePoint и учетная запись установки также входит в группу администраторов фермы SharePoint, то [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] при установке будет зарегистрирована [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] служба. Если установка [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] выполняется до установки SharePoint или учетная запись установки не входит в группу администраторов фермы, Служба регистрируется вручную. См. раздел [Step 2: Зарегистрируйте и запустите службу](#bkmk_install_SSRS_sharedservice)Reporting Services SharePoint.  
+-   Текущая учетная запись во время установки (называемая учетной записью установки) [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в режиме интеграции с SharePoint должна иметь права администратора на локальном компьютере. Если при установке [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] после установки SharePoint и учетная запись установки также является членом группы администраторов фермы SharePoint, то при установке [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] будет зарегистрирована служба [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Если установка [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] перед установкой SharePoint или учетная запись установки не является членом группы администраторов фермы, то вы регистрируете службу вручную. См. раздел [Step 2: Зарегистрируйте и запустите Reporting Services службу SharePoint @ no__t-0.  
   
  **Создание [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] приложения службы**  
   
@@ -148,7 +148,7 @@ ms.locfileid: "68890280"
     > [!NOTE]  
     >  По завершении установки SQL Server используйте сведения в других подразделах этого раздела для настройки среды SharePoint. В том числе надо будет установить общую службу [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и создать приложения службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
-     ![Мастер установки SQL Server — страница конфигурации SSRS](../../../2014/sql-server/install/media/rs-2012sp1-setup-ssrs-configpage-with-circles.gif "Мастер установки SQL Server — страница конфигурации SSRS")  
+     ![Мастер установки SQL Server — страница конфигурации ssrs](../../../2014/sql-server/install/media/rs-2012sp1-setup-ssrs-configpage-with-circles.gif "SQL Server мастер установки") служб SSRS  
   
 17. Помогите компании Майкрософт улучшить работу функций и служб SQL Server, установив флажок в знак согласия отправлять отчеты об ошибках на странице **Отчеты об ошибках** .  
   
@@ -231,7 +231,7 @@ ms.locfileid: "68890280"
 3.  В меню кнопки «Создать» выберите пункт **Приложение службы SQL Server Reporting Services**.  
   
     > [!IMPORTANT]  
-    >  Если параметр не отображается в списке, это  **[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] означает, что общая служба не установлена.** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Просмотрите предыдущий раздел, в котором описана установка службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] с помощью командлетов PowerShell.  
+    >  Если параметр [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] не отображается в списке, это **означает, что общая служба [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] не установлена**. Просмотрите предыдущий раздел, в котором описана установка службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] с помощью командлетов PowerShell.  
   
 4.  На странице **Создание приложения службы SQL Server Reporting Services** введите имя приложения. Если создается несколько приложений службы Reporting Services, описательные имена или контекст именования помогут упорядочить операции по администрированию и управлению.  
   
@@ -251,7 +251,7 @@ ms.locfileid: "68890280"
   
 11. Создание приложения службы может занять несколько минут. По завершении этого процесса отобразятся подтверждение и ссылка на страницу **Подготовка подписок и предупреждений** . Выполните шаг подготовки, если нужно использовать функции подписки и предупреждений данных служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Дополнительные сведения см. в разделе [Подготовка подписок и предупреждений для приложений служб SSRS](../../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md).  
   
- ![Содержимое, связанное с PowerShell](../../../2014/reporting-services/media/rs-powershellicon.jpg "Содержимое, связанное с PowerShell") Сведения об использовании PowerShell для создания [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] приложения службы см. в следующих статьях:  
+ Содержимое, связанное с PowerShell ![содержимое](../../../2014/reporting-services/media/rs-powershellicon.jpg "PowerShell") . сведения об использовании PowerShell для создания приложения службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] см. в следующих статьях:  
   
 -   Обратитесь к следующему разделу [Скрипт Windows PowerShell для шагов 1–4](#bkmk_full_script).  
   
@@ -287,7 +287,7 @@ ms.locfileid: "68890280"
   
 -   Создает прокси-сервер службы с именем Reporting Services.  
   
--   Создает приложение [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] службы с именем "Reporting Services приложение".  
+-   Создает приложение службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] с именем "Reporting Services приложение".  
   
 -   Включает компонент [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] для семейства веб-сайтов.  
   
@@ -413,8 +413,8 @@ Enable-SPfeature -identity "reportserver" -Url http://server/sites/bi
 ## <a name="see-also"></a>См. также  
  [Командлеты PowerShell для режима служб SharePoint Reporting Services](../../../2014/reporting-services/powershell-cmdlets-for-reporting-services-sharepoint-mode.md)   
  [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
- [Стратегия содержимого: Установка и настройка SharePoint Server и SQL Server BI](https://technet.microsoft.com/library/dn205112.aspx)   
- [Функции, поддерживаемые различными выпусками SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473)   
+ Стратегия @no__t 0Content: Установка и настройка SharePoint Server и SQL Server BI @ no__t-0 @ no__t-1  
+ [Функции, поддерживаемые различными Выпусками SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473)   
  [Служба SharePoint и Служебные приложения службы Reporting Services](../../../2014/reporting-services/reporting-services-sharepoint-service-and-service-applications.md)  
   
   

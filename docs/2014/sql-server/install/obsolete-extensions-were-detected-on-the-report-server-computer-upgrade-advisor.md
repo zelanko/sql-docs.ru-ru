@@ -1,5 +1,5 @@
 ---
-title: Обнаружены устаревшие модули на компьютере сервера отчетов (Советник по переходу) | Документация Майкрософт
+title: На компьютере сервера отчетов обнаружены устаревшие расширения (советник по переходу) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], upgrade issues
 ms.assetid: 40d245a2-0631-470e-81b3-1feb47e028cb
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 93a971b82fa4bafd1d8fb51a148b7e488c7d6d20
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 18f90bd6c551a6240a49eed9a0ec39723851bce1
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66093809"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952069"
 ---
 # <a name="obsolete-extensions-were-detected-on-the-report-server-computer-upgrade-advisor"></a>На компьютере сервера отчетов обнаружены устаревшие модули (советник по переходу)
   Советник по переходу обнаружил один или несколько модулей подготовки отчетов, которые в текущей версии недоступны.  
@@ -44,6 +44,6 @@ ms.locfileid: "66093809"
  Оцените существующий набор функций служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], чтобы определить, выполняют ли поддерживаемые функции необходимые требования.  
   
 ## <a name="see-also"></a>См. также  
- [Проблемы обновления служб Reporting Services &#40;помощник по обновлению&#41;](../../../2014/sql-server/install/reporting-services-upgrade-issues-upgrade-advisor.md)  
+ [Советник по переходу Reporting Services проблем &#40;обновления&#41;](../../../2014/sql-server/install/reporting-services-upgrade-issues-upgrade-advisor.md)  
   
   
