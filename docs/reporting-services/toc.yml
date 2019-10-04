@@ -123,12 +123,12 @@
       href: ../reporting-services/report-design/report-design-tips-report-builder-and-ssrs.md
     - name: Возможности служб Reporting Services в различных выпусках SQL Server
       href: ../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md
-- name: Установка служб Reporting Services
+- name: "Установка версий Reporting\_Services"
   items:
-    - name: "Установка Reporting Services\_2017"
+    - name: Установка служб Reporting Services
       href: ../reporting-services/install-windows/install-reporting-services.md
       items:
-        - name: "Как найти ключ продукта для Reporting Services\_2017"
+        - name: "Как найти ключ продукта для Reporting\_Services"
           href: ../reporting-services/install-windows/find-reporting-services-product-key-ssrs.md
     - name: "Установка Reporting Services\_2016 в собственном режиме"
       href: ../reporting-services/install-windows/install-reporting-services-native-mode-report-server.md
