@@ -11,12 +11,12 @@ ms.assetid: 83acbcc4-c51e-439e-ac48-6d4048eba189
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a2786ebcf87f5af0ed9abcb9adaf0a85253327fa
-ms.sourcegitcommit: 594cee116fa4ee321e1f5e5206f4a94d408f1576
+ms.openlocfilehash: bc6409f7a8f5fc15568e583aa50552667f2dd874
+ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "70009378"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71816714"
 ---
 # <a name="columnstore-indexes---query-performance"></a>Производительность запросов по индексам columnstore
 
@@ -154,8 +154,6 @@ FROM FactResellerSalesXL_CCI
 При включении предиката строки выполнение запроса вычисляет предикат для значений в словаре и, если он соответствует заданному значению, все строки, ссылающиеся на значение словаря, автоматически становятся подходящими. Это способствует улучшению производительности двумя способами.
 1.  Возвращается только соответствующая строка, что приводит к сокращению числа строк, которые должны передаваться из узла SCAN. 
 2.  Значительно уменьшается число сравнений строк. В этом примере вместо 1 миллиона сравнений требуется только 100 сравнений строк. Существует ряд ограничений, указанных ниже.    
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
     -   Отсутствует включение строки предиката для разностных групп строк. Отсутствует словарь для столбцов в разностных группах строк.    
     -   Отсутствует включение строки предиката, если размер элементов в словаре превышает 64 КБ.    

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 187fbba3-c555-4030-9bdf-0f01994c5230
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: a0acec2dd2e4e7e9d08d979febf85cf98f883e77
-ms.sourcegitcommit: 5a03dc2bba481c2e2f03d67f6ee9486fc9f8ba95
+ms.openlocfilehash: 652ef86f26f92068465668cadeccf8e193db1f90
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71066879"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71708280"
 ---
 # <a name="create-a-database-snapshot-transact-sql"></a>создать моментальный снимок базы данных (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -99,28 +99,26 @@ AdventureWorks_snapshot_evening
   
 2.  Используйте инструкцию CREATE DATABASE для файлов с помощью предложения AS SNAPSHOT OF. Создание моментального снимка требует указания логического имени каждого файла базы данных-источника. Синтаксис:  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-     CREATE DATABASE *database_snapshot_name*  
+     CREATE DATABASE *имя_снимка_базы_данных*  
   
      ON  
   
      (  
   
-     NAME =*logical_file_name*,  
+     NAME =*логическое_имя_файла*,  
   
-     FILENAME ='*os_file_name*'  
+     FILENAME ='*имя_файла_ОС*'  
   
      ) [ ,...*n* ]  
   
-     AS SNAPSHOT OF *source_database_name*  
+     AS SNAPSHOT OF *имя_исходной_базы_данных*  
   
      [;]  
   
-     Where *source_**database_name* is the source database, *logical_file_name i*s the logical name used in SQL Server when referencing the file, *os_file_name* is the path and file name used by the operating system when you create the file, and *database_snapshot_name* is the name of the snapshot to which you want to revert the database. For a full description of this syntax, see [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
+     Здесь *имя_**исходной_базы_данных* — это исходная база данных, *логическое_имя_файла* — это логическое имя, используемое в SQL Server при ссылке на файл, *имя_файла_ОС* — это путь и имя файла, используемые операционной системой при создании файла, а *имя_снимка_базы данных* — это имя снимка, на основе которого требуется восстановить базу данных. Полное описание этого синтаксиса см. в разделе [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
   
     > [!NOTE]  
-    >  When you create a database snapshot, log files, offline files, restoring files, and defunct files are not allowed in the CREATE DATABASE statement.  
+    >  При создании моментального снимка базы данных файлы журнала файлы в режиме вне сети, восстанавливаемые из копии файлы и нефункционирующие файлы являются недопустимыми в инструкции CREATE DATABASE.  
   
 ###  <a name="TsqlExample"></a> Примеры (Transact-SQL)  
   

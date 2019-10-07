@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b4efb0ae-cfe6-4d81-a4b4-6e4916885caa
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: ca1ff898841b946c0823b71b065f360a59e69696
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5d3d470a42d21e5c9946cd3b90dbd488bde515b8
+ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68071702"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71816764"
 ---
 # <a name="attach-a-database"></a>Присоединение базы данных
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,35 +56,33 @@ ms.locfileid: "68071702"
   
 2.  Щелкните правой кнопкой мыши узел **Базы данных** и выберите команду **Присоединить**.  
   
-3.  Чтобы указать присоединяемую базу данных, в диалоговом окне **Присоединение баз данных** нажмите кнопку **Добавить**, в диалоговом окне **Расположение файлов базы данных** выберите диск, на котором находится база данных, и разверните дерево каталогов, чтобы найти и выбрать MDF-файл, например:  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+3.  Чтобы указать присоединяемую базу данных, в диалоговом окне **Присоединение баз данных** нажмите кнопку **Добавить**, в диалоговом окне **Расположение файлов базы данных** выберите диск, на котором находится база данных, и разверните дерево каталогов, чтобы найти и выбрать MDF-файл, например:
 
      `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\DATA\AdventureWorks2012_Data.mdf`  
   
     > [!IMPORTANT]  
-    > Trying to select a database that is already attached generates an error.  
+    > При попытке выбора базы данных, которая уже присоединена, возникает ошибка.  
   
-     **Databases to attach**  
-     Displays information about the selected databases.  
+     **Базы данных для присоединения**  
+     Отобразятся сведения о выбранных базах данных.  
   
-     \<no column header>  
-     Displays an icon indicating the status of the attach operation. The possible icons are described in the **Status** description, below).  
+     \<нет заголовка столбца>  
+     Отображается значок, указывающий на состояние операции присоединения. Возможные значки описываются в приводимом ниже описании **Состояние** .  
   
-     **MDF File Location**  
-     Displays the path and file name of the selected MDF file.  
+     **Расположение файла MDF**  
+     Отображается путь и имя выбранного MDF-файла.  
   
      **Database Name**  
-     Displays the name of the database.  
+     Отображается имя базы данных.  
   
-     **Attach As**  
-     Optionally, specifies a different name for the database to attach as.  
+     **Присоединить как**  
+     Необязательный параметр, указывает другое имя, под которым присоединяется база данных.  
   
-     **Owner**  
-     Provides a drop-down list of possible database owners from which you can optionally select a different owner.  
+     **Владелец**  
+     Содержит раскрывающийся список возможных владельцев базы данных, из которого при необходимости можно выбрать другого владельца.  
   
-     **Status**  
-     Displays the status of the database according to the following table.  
+     **Состояние**  
+     Отображается состояние базы данных в соответствии со следующей таблицей.  
   
     |Значок|Текст состояния|Описание|  
     |----------|-----------------|-----------------|  
@@ -95,32 +93,32 @@ ms.locfileid: "68071702"
     |Кружок с двумя черными квадратами (слева и справа) и двумя белыми квадратами (сверху и снизу)|Остановлена|Операция присоединения не была успешно завершена, т.к. пользователь остановил операцию.|  
     |Кружок, содержащий изогнутую стрелку, указывающую в направлении против часовой стрелки|Выполнен откат|Операция присоединения была успешной, но был выполнен ее откат из-за ошибки, возникшей при вложении другого объекта.|  
   
-     **Message**  
-     Displays either a blank message or a "File not found" hyperlink.  
+     **Сообщение**  
+     Отображается пустое сообщение или гиперссылка «Файл не найден».  
   
-     **Add**  
-     Find the necessary main database files. When the user selects an .mdf file, applicable information is automatically filled in the respective fields of the **Databases to attach** grid.  
+     **Добавить**  
+     Найдите необходимые основные файлы базы данных. Если пользователь выбирает mdf-файл, необходимые сведения автоматически вводятся в соответствующие поля сетки **Базы данных для присоединения** .  
   
-     **Remove**  
-     Removes the selected file from the **Databases to attach** grid.  
+     **Удалить**  
+     Удаляет выбранный файл из сетки **Базы данных для присоединения** .  
   
-     **"** *<database_name>* **" database details**  
-     Displays the names of the files to be attached. To verify or change the pathname of a file, click the **Browse** button (**...**).  
+     **"** *<database_name>* **" сведения о базе данных**  
+     Отображаются имена файлов, которые необходимо присоединить. Чтобы проверить или изменить путь к файлу, нажмите кнопку **Обзор** ( **...** ).  
   
     > [!NOTE]  
-    > If a file does not exist, the **Message** column displays "Not found." If a log file is not found, it exists in another directory or has been deleted. You need to either update the file path in the **database details** grid to point to the correct location or remove the log file from the grid. If an .ndf data file is not found, you need to update its path in the grid to point to the correct location.  
+    > Если файл не существует, в столбце **Сообщение** отображается сообщение «Не найден». Если файл журнала не найден, то он существует в другом каталоге или был удален. Необходимо или обновить путь файла в сетке **Сведения о базе данных** таким образом, чтобы этот путь указывал на правильное расположение, или удалить файл журнала из сетки. Если MDF-файл не найден, необходимо обновить путь этого файла в сетке таким образом, чтобы этот путь указывал на правильное расположение.  
   
-     **Original File Name**  
-     Displays the name of the attached file belonging to the database.  
+     **Имя исходного файла**  
+     Отображается имя присоединенного файла, принадлежащего базе данных.  
   
-     **File Type**  
-     Indicates the type of file, **Data** or **Log**.  
+     **Тип файла**  
+     Указывается тип файла: **Данные** или **Журнал**.  
   
-     **Current File Path**  
-     Displays the path to the selected database file. The path can be edited manually.  
+     **Текущий путь к файлу**  
+     Отображается путь к выбранному файлу базы данных. Путь может быть изменен вручную.  
   
-     **Message**  
-     Displays either a blank message or a "**File not found**" hyperlink.  
+     **Сообщение**  
+     Отображается пустое сообщение или гиперссылка "**Файл не найден**".  
   
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
   

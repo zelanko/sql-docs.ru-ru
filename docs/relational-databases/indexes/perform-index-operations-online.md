@@ -15,12 +15,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.prod_service: table-view-index, sql-database
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ac1c10bfefd80a121e858cc0175f08b6ee68ab6f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 914d2a3bfd73c76fc89b1ca6ed0302f32e0a4d32
+ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67909604"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71680788"
 ---
 # <a name="perform-index-operations-online"></a>Выполнение операции с индексами в сети
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -96,12 +96,11 @@ ms.locfileid: "67909604"
 ### <a name="to-create-rebuild-or-drop-an-index-online"></a>Создание, перестроение и удаление индекса в режиме «в сети»  
   
 В следующем примере показано, как перестроить имеющийся онлайн-индекс в базе данных AdventureWorks.
-  
- ```sql  
- ALTER INDEX AK_Employee_NationalIDNumber
-   ON HumanResources.Employee  
-   REBUILD WITH (ONLINE = ON)
-;
+
+```sql
+ALTER INDEX AK_Employee_NationalIDNumber
+    ON HumanResources.Employee
+    REBUILD WITH (ONLINE = ON);
 ```  
   
 В следующем примере кластеризованный индекс удаляется в режиме в сети и результирующая таблица (куча) перемещается в файловую группу `NewGroup` с использованием предложения `MOVE TO` . Представления каталога `sys.indexes`, `sys.tables`и `sys.filegroups` запрашиваются для проверки размещения индекса и таблицы в файловых группах до и после перемещения.  

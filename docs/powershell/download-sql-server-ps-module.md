@@ -11,12 +11,12 @@ keywords:
 ms.assetid: ''
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 622d086c110bbf321534371d6b5547cadf9cbfd8
-ms.sourcegitcommit: 182ed49fa5a463147273b58ab99dc228413975b6
+ms.openlocfilehash: 82daddf2589970c415a53ca756599ac892be1a35
+ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68697279"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71713198"
 ---
 # <a name="install-sql-server-powershell-module"></a>Установка модуля SQL Server PowerShell
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "68697279"
 
 Предварительные версии модуля могут выходить чаще. О том, как получить их, см. в разделе внизу этой страницы.
 
-Чтобы установить модуль **SqlServer** из коллекции PowerShell, запустите сеанс [PowerShell](https://docs.microsoft.com/powershell/scripting/powershell-scripting) и выполните следующие команды. Если при установке возникли проблемы, см. [документацию по Install-Module](https://docs.microsoft.com/powershell/gallery/psget/module/psget_install-module) и [справочник по Install-Module](https://docs.microsoft.com/powershell/module/powershellget/Install-Module).
+Чтобы установить модуль **SqlServer** из коллекции PowerShell, запустите сеанс [PowerShell](https://docs.microsoft.com/powershell/scripting/powershell-scripting) и выполните следующие команды. Если при установке возникли проблемы, см. [документацию по Install-Module](https://www.powershellgallery.com/packages/PowerShellGet/2.2.1) и [справочник по Install-Module](https://docs.microsoft.com/powershell/module/powershellget/Install-Module).
 
 Чтобы установить модуль **SqlServer**, выполните следующую команду.
 

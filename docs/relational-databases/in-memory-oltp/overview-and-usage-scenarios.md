@@ -11,12 +11,12 @@ ms.assetid: 62c964c5-eae4-4cf1-9024-d5a19adbd652
 author: jodebrui
 ms.author: jodebrui
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b6448718ce9e9cea380c352a57c3e824709de848
-ms.sourcegitcommit: 2bc15f81d7a238c6fc409440800f1d6c7943a4b5
+ms.openlocfilehash: 47726a76f853b8728369a2b406de1fdc8456facd
+ms.sourcegitcommit: 5d9ce5c98c23301c5914f142671516b2195f9018
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70059288"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71961937"
 ---
 # <a name="overview-and-usage-scenarios"></a>Общие сведения и сценарии использования
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -145,7 +145,7 @@ ms.locfileid: "70059288"
 
 С помощью скрипта в следующем расположении можно создать файловую группу в папке данных по умолчанию, а также настроить рекомендуемые параметры:
 
-- [enable-in-memory-oltp.sql](https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/in-memory/t-sql-scripts/enable-in-memory-oltp.sql)
+- [enable-in-memory-oltp.sql](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/in-memory-database/in-memory-oltp/t-sql-scripts/enable-in-memory-oltp.sql)
 
 В следующем скрипте показаны объекты выполняющейся в памяти OLTP, которые можно создать в базе данных.
 
@@ -225,7 +225,7 @@ GO
 [Технологии выполнения OLTP в памяти для повышения производительности службы Transact-SQL](https://msdn.microsoft.com/library/mt694156.aspx)   
 Демонстрацию производительности с использованием выполняющейся в памяти OLTP см. по адресу [in-memory-oltp-perf-demo-v1.0](https://github.com/Microsoft/sql-server-samples/releases/tag/in-memory-oltp-demo-v1.0)   
 [17-минутный видеоролик, в котором объясняется, что такое выполняющаяся в памяти OLTP, а также показывается демонстрация](in-memory-oltp-in-memory-optimization.md#anchorname-17minute-video)  
-[Скрипт, позволяющий включить выполняющуюся в памяти OLTP и задать рекомендуемые параметры](https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/in-memory/t-sql-scripts/enable-in-memory-oltp.sql)   
+[Скрипт, позволяющий включить выполняющуюся в памяти OLTP и задать рекомендуемые параметры](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/in-memory-database/in-memory-oltp/t-sql-scripts/enable-in-memory-oltp.sql)   
 [Основная документация по выполняющейся в памяти OLTP](in-memory-oltp-in-memory-optimization.md)   
 [Повышение производительности и использования ресурсов благодаря выполняющейся в памяти OLTP в базе данных SQL Azure](https://azure.microsoft.com/blog/in-memory-oltp-in-azure-sql-database/)  
 [Улучшение производительности временной таблицы и табличной переменной с помощью оптимизации памяти](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/21/improving-temp-table-and-table-variable-performance-using-memory-optimization/)   

@@ -10,12 +10,12 @@ ms.assetid: e000a1d8-a049-4542-bfeb-943fd6ab3969
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cb25c33fd2c885eb46c24dbe94e90d052bbf1371
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d42aa77e4ecddf96ee0405645e7f98a52b5823e7
+ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68048690"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71816746"
 ---
 # <a name="curvepolygon"></a>CurvePolygon
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -44,10 +44,8 @@ ms.locfileid: "68048690"
   
 3.  Начальная и конечная точки имеют одинаковые координаты X и Y.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
     > [!NOTE]  
-    > Z and M values are ignored.  
+    > Значения Z и M пропускаются.  
   
 В следующем примере показаны принятые экземпляры **CurvePolygon** .  
   

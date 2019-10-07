@@ -11,12 +11,12 @@ ms.assetid: 38512a22-7e63-436f-9c13-dde7cf5c2202
 author: Jodebrui
 ms.author: jodebrui
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1ffea82cc9abdd016ec63771510109046e7da5ad
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: eb1c7dc1571371b12f759e31cfb508f63f05a530
+ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68092230"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71713254"
 ---
 # <a name="faster-temp-table-and-table-variable-by-using-memory-optimization"></a>Улучшение производительности временной таблицы и табличной переменной с помощью оптимизации памяти
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -190,7 +190,7 @@ go
   
   
   
-## <a name="d-scenario-table-variable-can-be-memoryoptimizedon"></a>Г. Сценарий: Табличная переменная может задаваться с MEMORY_OPTIMIZED=ON  
+## <a name="d-scenario-table-variable-can-be-memory_optimizedon"></a>Г. Сценарий: Табличная переменная может задаваться с MEMORY_OPTIMIZED=ON  
   
   
 Традиционная табличная переменная представляет таблицу в базе данных tempdb. Чтобы значительно повысить производительность, можно оптимизировать табличную переменную для памяти.  
@@ -298,7 +298,7 @@ go
 ```  
 
 
-Следующий скрипт создает файловую группу и настраивает рекомендованные параметры базы данных: [enable-in-memory-oltp.sql](https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/in-memory/t-sql-scripts/enable-in-memory-oltp.sql)
+Следующий скрипт создает файловую группу и настраивает рекомендованные параметры базы данных: [enable-in-memory-oltp.sql](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/in-memory-database/in-memory-oltp/t-sql-scripts/enable-in-memory-oltp.sql)
   
 Дополнительные сведения о `ALTER DATABASE ... ADD` для FILE и FILEGROUP см. в следующих разделах:  
   

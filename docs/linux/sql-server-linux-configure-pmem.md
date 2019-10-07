@@ -1,20 +1,20 @@
 ---
 title: Настройка энергонезависимой памяти (PMEM) для SQL Server на Linux
 description: В этой статье представлено пошаговое руководство по настройке PMEM в Linux.
-author: DBArgenis
-ms.author: argenisf
+author: briancarrig
+ms.author: brcarrig
 ms.reviewer: vanto
 ms.date: 11/06/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 4ed705b1b26193585a6278508ac98666d069418a
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+monikerRange: '>= sql-server-linux-ver15  || >= sql-server-ver15 || = sqlallproducts-allversions'
+ms.openlocfilehash: 6f9a5d8c6b2db65bd237f0a3a267638a8cc16b68
+ms.sourcegitcommit: 071065bc5433163ebfda4fdf6576349f9d195663
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68077563"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71923830"
 ---
 # <a name="how-to-configure-persistent-memory-pmem-for-sql-server-on-linux"></a>Настройка энергонезависимой памяти (PMEM) для SQL Server на Linux
 
@@ -83,6 +83,6 @@ ndctl list
 
 1. Перезапуск SQL Server.
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
-Дополнительные сведения об SQL Server на Linux см. в статье [SQL Server на Linux](sql-server-linux-overview.md).
+Дополнительные сведения об SQL Server на Linux см. в статье [SQL Server на Linux](sql-server-linux-overview.md).
