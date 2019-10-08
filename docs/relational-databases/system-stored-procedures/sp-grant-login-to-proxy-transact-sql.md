@@ -17,14 +17,14 @@ helpviewer_keywords:
 ms.assetid: 90e1a6d5-a692-4462-a163-4b0709d83150
 ms.author: vanto
 author: VanMSFT
-ms.openlocfilehash: e944a3b8e2f7b46f22ff0a349e061b03072407b3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bdfeab5754a2397c01ace2bb9f822fa168eeef6b
+ms.sourcegitcommit: 454270de64347db917ebe41c081128bd17194d73
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68123849"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005854"
 ---
-# <a name="spgrantlogintoproxy-transact-sql"></a>sp_grant_login_to_proxy (Transact-SQL)
+# <a name="sp_grant_login_to_proxy-transact-sql"></a>sp_grant_login_to_proxy (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
@@ -44,27 +44,27 @@ sp_grant_login_to_proxy
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @login_name = ] 'login_name'` Имя входа для предоставления доступа к. *Login_name* — **nvarchar(256)** , значение по умолчанию NULL. Один из **@login_name** , **@fixed_server_role** , или **@msdb_role** должен быть указан, или хранимая процедура завершается ошибкой.  
+`[ @login_name = ] 'login_name'` имя входа для предоставления доступа. Аргумент *login_name* имеет тип **nvarchar (256)** и значение по умолчанию NULL. Необходимо указать один из **\@login_name**, **\@fixed_server_role**или **\@msdb_role** , иначе хранимая процедура завершится ошибкой.  
   
-`[ @fixed_server_role = ] 'fixed_server_role'` Чтобы предоставить доступ к фиксированной серверной роли. *Fixed_server_role* — **nvarchar(256)** , значение по умолчанию NULL. Один из **@login_name** , **@fixed_server_role** , или **@msdb_role** должен быть указан, или хранимая процедура завершается ошибкой.  
+`[ @fixed_server_role = ] 'fixed_server_role'` предопределенной роли сервера для предоставления доступа. *Fixed_server_role* имеет тип **nvarchar (256)** и значение по умолчанию NULL. Необходимо указать один из **\@login_name**, **\@fixed_server_role**или **\@msdb_role** , иначе хранимая процедура завершится ошибкой.  
   
-`[ @msdb_role = ] 'msdb_role'` Роль базы данных в **msdb** базы данных для предоставления доступа к. *Msdb_role* — **nvarchar(256)** , значение по умолчанию NULL. Один из **@login_name** , **@fixed_server_role** , или **@msdb_role** должен быть указан, или хранимая процедура завершается ошибкой.  
+`[ @msdb_role = ] 'msdb_role'` роль базы данных в базе данных **msdb** , к которой предоставляется доступ. *Msdb_role* имеет тип **nvarchar (256)** и значение по умолчанию NULL. Необходимо указать один из **\@login_name**, **\@fixed_server_role**или **\@msdb_role** , иначе хранимая процедура завершится ошибкой.  
   
-`[ @proxy_id = ] id` Идентификатор для прокси-сервера, к которой предоставляется доступ. *Идентификатор* — **int**, значение по умолчанию NULL. Один из **@proxy_id** или **@proxy_name** должен быть указан, или хранимая процедура завершается ошибкой.  
+`[ @proxy_id = ] id` идентификатор учетной записи-посредника, для которой предоставляется доступ. *Идентификатор* имеет **тип int**и значение по умолчанию NULL. Необходимо указать один из **\@proxy_id** или **\@proxy_name** , иначе хранимая процедура завершится с ошибкой.  
   
-`[ @proxy_name = ] 'proxy_name'` Имя прокси-сервера, к которой предоставляется доступ. *Proxy_name* — **nvarchar(256)** , значение по умолчанию NULL. Один из **@proxy_id** или **@proxy_name** должен быть указан, или хранимая процедура завершается ошибкой.  
+`[ @proxy_name = ] 'proxy_name'` имя учетной записи-посредника, для которой предоставляется доступ. *Proxy_name* имеет тип **nvarchar (256)** и значение по умолчанию NULL. Необходимо указать один из **\@proxy_id** или **\@proxy_name** , иначе хранимая процедура завершится с ошибкой.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- **0** (успешное завершение) или **1** (неуспешное завершение)  
+ **0** (успешное завершение) или **1** (сбой)  
   
 ## <a name="remarks"></a>Примечания  
- **sp_grant_login_to_proxy** должна запускаться из **msdb** базы данных.  
+ **sp_grant_login_to_proxy** необходимо запускать из базы данных **msdb** .  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **sysadmin** предопределенной роли сервера может выполняться **sp_grant_login_to_proxy**.  
+ Только члены предопределенной роли сервера **sysadmin** могут выполнять **sp_grant_login_to_proxy**.  
   
 ## <a name="examples"></a>Примеры  
- Следующий пример разрешает имени входа `adventure-works\terrid` для использования прокси-сервер `Catalog application proxy`.  
+ В следующем примере имя входа `adventure-works\terrid` позволяет использовать прокси-сервер `Catalog application proxy`.  
   
 ```sql
 USE msdb ;  
@@ -78,7 +78,7 @@ GO
   
 ## <a name="see-also"></a>См. также  
  [CREATE LOGIN (Transact-SQL)](../../t-sql/statements/create-login-transact-sql.md)   
- [Хранимая процедура sp_add_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-proxy-transact-sql.md)   
- [sp_revoke_login_from_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-revoke-login-from-proxy-transact-sql.md)  
+ [sp_add_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-proxy-transact-sql.md)   
+ [sp_revoke_login_from_proxy &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-revoke-login-from-proxy-transact-sql.md)  
   
   

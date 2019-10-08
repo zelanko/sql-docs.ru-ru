@@ -4,18 +4,18 @@ titleSuffix: SQL Server Machine Learning Services
 description: В этом кратком руководстве описано, как работать с типами данных и объектами данных в R и SQL Server с помощью SQL Server Службы машинного обучения.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/17/2019
+ms.date: 10/04/2019
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 85bfe26826e6e8ed04579526462babe2b5dcf009
-ms.sourcegitcommit: 1661c3e1bb38ed12f8485c3860fc2d2b97dd2c9d
+ms.openlocfilehash: 0e490821194e909643e5307e833f093363cb9558
+ms.sourcegitcommit: 454270de64347db917ebe41c081128bd17194d73
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71149954"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72006010"
 ---
 # <a name="quickstart-handle-data-types-and-objects-using-r-in-sql-server-machine-learning-services"></a>Краткое руководство. Работа с типами данных и объектами с помощью R в SQL Server Службы машинного обучения
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -119,7 +119,7 @@ $ c..world..: Factor w/ 1 level "world": 1
 Сейчас помните, что необходимо проверить ожидаемые результаты при приведении объектов R в кадры данных.
 
 > [!TIP]
-> Можно также использовать функции идентификации R, такие как `is.matrix`, `is.vector`для получения сведений о внутренней структуре данных.
+> Можно также использовать функции идентификации R, такие как `is.matrix`, `is.vector`, чтобы получить сведения о внутренней структуре данных.
 
 ## <a name="implicit-conversion-of-data-objects"></a>Неявное преобразование объектов данных
 
@@ -197,7 +197,7 @@ execute sp_execute_external_script
 
 R обеспечивает большую гибкость при работе с векторами различных размеров, а также для объединения этих структур, таких как столбцы, к кадрам данных. Списки векторов могут выглядеть как таблица, но они не подчиняются всем правилам, управляющим таблицами базы данных.
 
-Например, следующий скрипт определяет числовой массив, длина которого равна 6, и сохраняет его в переменной R `df1`. Затем числовой массив объединяется с целыми числами таблицы RTestData, которая содержит три (3) значения, для создания нового кадра `df2`данных.
+Например, следующий скрипт определяет числовой массив, длина которого равна 6, и сохраняет его в переменной R `df1`. Затем числовой массив объединяется с целыми числами таблицы RTestData, которая содержит три (3) значения, для создания нового кадра данных `df2`.
 
 ```sql
 EXECUTE sp_execute_external_script
@@ -305,6 +305,7 @@ STDOUT message(s) from external script: $ Amount       : num  3400 16925 20350 1
 > [!div class="nextstepaction"]
 > [Написание расширенных функций R с помощью SQL Server Службы машинного обучения](quickstart-r-functions.md)
 
-Дополнительные сведения о SQL Server Службы машинного обучения см. в следующих статьях:
+Дополнительные сведения об использовании R в SQL Server Службы машинного обучения см. в следующих статьях:
 
+- [Создание и оценка прогнозной модели в R с помощью SQL Server Службы машинного обучения](quickstart-r-train-score-model.md)
 - [Что такое Службы машинного обучения SQL Server (Python и R)?](../what-is-sql-server-machine-learning.md)

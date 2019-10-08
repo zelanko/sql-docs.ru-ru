@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: cc81f227-0df3-4151-bb4d-4f45ea997b71
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 5e90136d319ed0f04766bfec503126999bb73dd0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 835ae5b262426fabdc657e78f4961a7aafb14224
+ms.sourcegitcommit: 454270de64347db917ebe41c081128bd17194d73
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68061221"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72006112"
 ---
-# <a name="spupdateagentprofile-transact-sql"></a>sp_update_agent_profile (Transact-SQL)
+# <a name="sp_update_agent_profile-transact-sql"></a>sp_update_agent_profile (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Обновляет профиль, используемый агентом репликации. Эта хранимая процедура выполняется на распространителе в базе данных распространителя.  
@@ -37,8 +37,8 @@ sp_update_agent_profile [@agent_type=] agent_type, [ @agent_id= ] agent_id, [ @p
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ **@agent_type=** ] **"***agent_type***"**  
- Тип агента. *agent_type* — **int**, по умолчанию и может принимать одно из следующих значений.  
+ [ **\@agent_type =** ] **"***agent_type***"**  
+ Тип агента. *agent_type* имеет **тип int**, не имеет значения по умолчанию и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -48,20 +48,20 @@ sp_update_agent_profile [@agent_type=] agent_type, [ @agent_id= ] agent_id, [ @p
 |**4**|Агент слияния.|  
 |**9**|Агент чтения очереди.|  
   
- [ **@agent_id=** ] *agent_id*  
- Идентификатор агента. *agent_id* — **int**, не имеет значения по умолчанию.  
+ [ **\@agent_id =** ] *agent_id*  
+ Идентификатор агента. *agent_id* имеет **тип int**и не имеет значения по умолчанию.  
   
- [ **@profile_id=** ] *profile_id*  
- Идентификатор профиля, который должен использовать агент. *profile_id* — **int**, не имеет значения по умолчанию. Чтобы просмотреть список профилей, определенных для каждого агента, используйте [sp_help_agent_profile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql.md). Дополнительные сведения о системных профилях см. в разделе [профили агента репликации](../../relational-databases/replication/agents/replication-agent-profiles.md).  
+ [ **\@profile_id =** ] *profile_id*  
+ Идентификатор профиля, который должен использовать агент. *profile_id* имеет **тип int**и не имеет значения по умолчанию. Чтобы просмотреть список профилей, определенных для каждого агента, используйте [sp_help_agent_profile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql.md). Дополнительные сведения о системных профилях см. в разделе [Профили агента репликации](../../relational-databases/replication/agents/replication-agent-profiles.md).  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- **0** (успешное завершение) или **1** (неуспешное завершение)  
+ **0** (успешное завершение) или **1** (сбой)  
   
 ## <a name="remarks"></a>Примечания  
  **sp_update_agent_profile** используется во всех типах репликации.  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **sysadmin** предопределенной роли сервера могут выполнять процедуру **sp_update_agent_profile**.  
+ Только члены предопределенной роли сервера **sysadmin** могут выполнять **sp_update_agent_profile**.  
   
 ## <a name="see-also"></a>См. также  
  [Профили агента репликации](../../relational-databases/replication/agents/replication-agent-profiles.md)   

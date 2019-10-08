@@ -4,18 +4,18 @@ titleSuffix: SQL Server Machine Learning Services
 description: В этом кратком руководстве вы узнаете, как работать с типами данных и объектами данных в Python и SQL Server с помощью SQL Server Службы машинного обучения.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/17/2019
+ms.date: 10/04/2019
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e3606072fefa9b74adcfdb914d02e4e82c11e0eb
-ms.sourcegitcommit: 9221a693d4ab7ae0a7e2ddeb03bd0cf740628fd0
-ms.translationtype: MT
+ms.openlocfilehash: 06540305d84ea16b76363ebb21cea0a246fd9ed8
+ms.sourcegitcommit: 454270de64347db917ebe41c081128bd17194d73
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71199436"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72006061"
 ---
 # <a name="quickstart-handle-data-types-and-objects-using-python-in-sql-server-machine-learning-services"></a>Краткое руководство. Работа с типами данных и объектами с помощью Python в SQL Server Службы машинного обучения
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,9 +26,9 @@ SQL Server полагается на пакет Python **Pandas** , которы
 
 Основные понятия, которые необходимо изучить:
 
-+ Кадр данных — это таблица с _несколькими_ столбцами.
-+ Единственным столбцом в кадре данных является объект, подобный списку, называемый серией.
-+ Одно значение кадра данных называется ячейкой и доступ к нему осуществляется по индексу.
+- Кадр данных — это таблица с _несколькими_ столбцами.
+- Единственным столбцом в кадре данных является объект, подобный списку, называемый серией.
+- Одно значение кадра данных называется ячейкой и доступ к нему осуществляется по индексу.
 
 Как можно предоставить один результат вычисления как кадр данных, если для данных. Frame требуется табличная структура? Одним из ответов является представление одного скалярного значения в виде ряда, которое легко преобразовать в кадр данных. 
 
@@ -119,7 +119,7 @@ SQL Server полагается на пакет Python **Pandas** , которы
 
 После преобразования скалярных математических результатов в табличную структуру все равно необходимо преобразовать их в формат, который SQL Server может быть обработано.
 
-1. Для преобразования ряда в Data. Frame вызовите [метод Pandas данных](https://pandas.pydata.org/pandas-docs/stable/dsintro.html#dataframe) .
+1. Для преобразования ряда в Data [. Frame вызовите метод Pandas данных](https://pandas.pydata.org/pandas-docs/stable/dsintro.html#dataframe) .
 
    ```sql
    EXECUTE sp_execute_external_script @language = N'Python'
@@ -203,11 +203,12 @@ SQL Server полагается на пакет Python **Pandas** , которы
 
 ## <a name="next-steps"></a>Следующие шаги
 
-Далее предстоит создать прогнозную модель с помощью Python в SQL Server.
+Дополнительные сведения о написании расширенных функций Python в SQL Server см. в этом кратком руководстве:
 
 > [!div class="nextstepaction"]
-> [Создание и оценка прогнозной модели в Python](quickstart-python-train-score-model.md)
+> [Создавайте дополнительные функции Python с помощью SQL Server Службы машинного обучения](quickstart-python-functions.md)
 
-Дополнительные сведения о SQL Server Службы машинного обучения см. в следующих статьях:
+Дополнительные сведения об использовании Python в SQL Server Службы машинного обучения см. в следующих статьях:
 
+- [Создание и оценка прогнозной модели в Python](quickstart-python-train-score-model.md)
 - [Что такое Службы машинного обучения SQL Server (Python и R)?](../what-is-sql-server-machine-learning.md)

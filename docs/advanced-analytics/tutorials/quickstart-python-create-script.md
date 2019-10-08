@@ -4,18 +4,18 @@ titleSuffix: SQL Server Machine Learning Services
 description: Создавайте и запускайте простые скрипты Python в экземпляре SQL Server с SQL Server Службы машинного обучения.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/17/2019
+ms.date: 10/04/2019
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a6f7fe62f746a8f6e74ebdf9f766b76c0edc720a
-ms.sourcegitcommit: 9221a693d4ab7ae0a7e2ddeb03bd0cf740628fd0
+ms.openlocfilehash: ecf99f1ae70cf44b32955ae164dbe3017bdf5f24
+ms.sourcegitcommit: 454270de64347db917ebe41c081128bd17194d73
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71204301"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72006115"
 ---
 # <a name="quickstart-create-and-run-simple-python-scripts-with-sql-server-machine-learning-services"></a>Краткое руководство. Создание и выполнение простых скриптов Python с помощью SQL Server Службы машинного обучения
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,9 +45,9 @@ print(c, d)
 
 1. Откройте новое окно запроса в **SQL Server Management Studio** , подключенном к экземпляру SQL Server.
 
-1. Передайте полный сценарий `sp_execute_external_script` Python в хранимую процедуру.
+1. Передайте полный сценарий Python в хранимую процедуру `sp_execute_external_script`.
 
-   Скрипт передается через `@script` аргумент. Все, что `@script` находится внутри аргумента, должно быть допустимым кодом Python.
+   Скрипт передается через аргумент `@script`. Все, что находится внутри аргумента `@script`, должно быть допустимым кодом Python.
 
     ```sql
     EXECUTE sp_execute_external_script @language = N'Python'
@@ -83,7 +83,7 @@ WITH RESULT SETS(([Hello World] INT));
 GO
 ```
 
-Входные данные `sp_execute_external_script` для хранимой процедуры включают:
+Входные данные для хранимой процедуры `sp_execute_external_script` включают:
 
 | | |
 |-|-|
@@ -100,9 +100,9 @@ GO
 
 ## <a name="use-inputs-and-outputs"></a>Использование входных и выходных данных
 
-По умолчанию `sp_execute_external_script` принимает один набор данных в качестве входных, который обычно предоставляется в виде допустимого SQL-запроса. Затем он возвращает один кадр данных Python в качестве выходных данных.
+По умолчанию `sp_execute_external_script` принимает один набор данных в качестве входных, что обычно предоставляется в виде допустимого SQL-запроса. Затем он возвращает один кадр данных Python в качестве выходных данных.
 
-Сейчас давайте будем использовать входные и выходные переменные `sp_execute_external_script`по умолчанию: **InputDataSet** и **OutputDataSet**.
+Сейчас давайте будем использовать входные и выходные переменные по умолчанию `sp_execute_external_script`: **InputDataSet** и **OutputDataSet**.
 
 1. Создайте небольшую таблицу тестовых данных.
 
@@ -120,7 +120,7 @@ GO
     GO
     ```
 
-1. `SELECT` Используйте инструкцию для запроса таблицы.
+1. Используйте инструкцию `SELECT` для запроса таблицы.
   
     ```sql
     SELECT *
@@ -131,7 +131,7 @@ GO
 
     ![Содержимое таблицы Писонтестдата](./media/select-pythontestdata.png)
 
-1. Выполните следующий скрипт Python. Он получает данные из таблицы с помощью `SELECT` инструкции, передает их через среду выполнения Python и возвращает данные в виде кадра данных. Предложение определяет схему возвращаемой таблицы данных для SQL, добавляя имя столбца *невколнаме.* `WITH RESULT SETS`
+1. Выполните следующий скрипт Python. Он получает данные из таблицы с помощью оператора `SELECT`, передает их через среду выполнения Python и возвращает данные в виде кадра данных. Предложение `WITH RESULT SETS` определяет схему возвращаемой таблицы данных для SQL, добавляя имя столбца *невколнаме*.
 
     ```sql
     EXECUTE sp_execute_external_script @language = N'Python'
@@ -155,12 +155,12 @@ GO
     WITH RESULT SETS(([NewColName] INT NOT NULL));
     ```
 
-    Обратите внимание, что в Python учитывается регистр. Входные и выходные переменные, используемые в скрипте Python (**SQL_out**, **SQL_in**), должны соответствовать `@input_data_1_name` именам, определенным в и `@output_data_1_name`, включая регистр.
+    Обратите внимание, что в Python учитывается регистр. Входные и выходные переменные, используемые в скрипте Python (**SQL_out**, **SQL_in**), должны соответствовать именам, определенным в `@input_data_1_name` и `@output_data_1_name`, включая регистр.
 
    > [!TIP]
    > В качестве параметра можно передать только один входной набор данных. Возвращаться может также только один набор данных. Однако можно вызвать другие наборы данных из кода Python, а также можно вернуть выходные данные других типов в дополнение к набору данных. Кроме того, вы можете добавить ключевое слово OUTPUT к любому параметру, чтобы он возвращался с результатами.
 
-1. Можно также создавать значения только с помощью скрипта Python без входных данных (`@input_data_1` пустое).
+1. Можно также формировать значения только с помощью скрипта Python без входных данных (`@input_data_1` установлен в пустое значение).
 
    Следующий скрипт выводит текст "Hello" и "World".
 
@@ -177,7 +177,7 @@ GO
 
    **Результаты**
 
-   ![Результаты запроса, @script использующие в качестве входных данных](./media/python-data-generated-output.png)
+   ![Результаты запроса с использованием @script в качестве входных данных](./media/python-data-generated-output.png)
 
 > [!NOTE]
 > Python использует начальные пробелы для группирования операторов. Таким образом, когда сценарий Python с невнедренным фрагментом охватывает несколько строк, как в предыдущем сценарии, не пытайтесь понизить уровень команд Python, чтобы они были в строке с командами SQL. Например, этот скрипт выдаст ошибку:
@@ -206,7 +206,7 @@ print(sys.version)
 GO
 ```
 
-Функция Python `print` Возвращает версию в окно **сообщений** . В приведенном ниже примере выходных данных видно, что в этом случае устанавливается Python версии 3.5.2.
+Функция Python `print` возвращает версию в окно **сообщений** . В приведенном ниже примере выходных данных видно, что в этом случае устанавливается Python версии 3.5.2.
 
 **Результаты**
 
@@ -231,7 +231,7 @@ for i in pip.get_installed_distributions():
 GO
 ```
 
-Выходные данные выводятся `pip.get_installed_distributions()` в Python и возвращаются `STDOUT` в виде сообщений.
+Выходные данные изменяются `pip.get_installed_distributions()` в Python и возвращаются как сообщения `STDOUT`.
 
 **Результаты**
 
@@ -254,12 +254,13 @@ toolz 0.8.2
 
 ## <a name="next-steps"></a>Следующие шаги
 
-Чтобы создать модель машинного обучения на языке Python в SQL Server, следуйте указаниям в этом кратком руководстве:
+Чтобы узнать, как использовать структуры данных при использовании Python в SQL Server Службы машинного обучения, следуйте указаниям в этом кратком руководстве:
 
 > [!div class="nextstepaction"]
-> [Создание и оценка прогнозной модели в Python с помощью SQL Server Службы машинного обучения](quickstart-python-train-score-model.md)
+> [Работа с типами данных и объектами с помощью Python в SQL Server Службы машинного обучения](quickstart-python-data-structures.md)
 
-Дополнительные сведения о SQL Server Службы машинного обучения см. в следующих статьях.
+Дополнительные сведения об использовании Python в SQL Server Службы машинного обучения см. в следующих статьях:
 
-- [Работа с типами данных и объектами с помощью Python в SQL Server Службы машинного обучения](quickstart-python-data-structures.md)
+- [Создавайте дополнительные функции Python с помощью SQL Server Службы машинного обучения](quickstart-python-functions.md)
+- [Создание и оценка прогнозной модели в Python с помощью SQL Server Службы машинного обучения](quickstart-python-train-score-model.md)
 - [Что такое Службы машинного обучения SQL Server (Python и R)?](../what-is-sql-server-machine-learning.md)

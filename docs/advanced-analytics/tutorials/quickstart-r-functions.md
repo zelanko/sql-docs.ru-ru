@@ -4,18 +4,18 @@ titleSuffix: SQL Server Machine Learning Services
 description: В этом кратком руководстве вы узнаете, как написать функцию R для расширенных статистических вычислений с помощью SQL Server Службы машинного обучения.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/03/2019
+ms.date: 10/04/2019
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 55849cec8b3362b3a5f2786e007f08f0c376b8a5
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.openlocfilehash: 747a6b06d1c9ad198971ff50068ac48d862a83da
+ms.sourcegitcommit: 454270de64347db917ebe41c081128bd17194d73
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71951865"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72006025"
 ---
 # <a name="quickstart-write-advanced-r-functions-with-sql-server-machine-learning-services"></a>Краткое руководство. Написание расширенных функций R с помощью SQL Server Службы машинного обучения
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "71951865"
 
 ## <a name="create-a-stored-procedure-to-generate-random-numbers"></a>Создание хранимой процедуры для формирования случайных чисел
 
-Для простоты давайте воспользуемся пакетом R `stats` , который по умолчанию устанавливается и загружается в SQL Server службы машинного обучения с установленным R. Он содержит сотню функций для общих статистических задач, в том числе функцию `rnorm`, которая формирует указанное количество случайных чисел с нормальным распределением при заданном среднем значении и стандартном отклонении.
+Для простоты давайте воспользуемся пакетом R `stats`, который по умолчанию устанавливается и загружается в SQL Server Службы машинного обучения с установленным R. Он содержит сотню функций для общих статистических задач, в том числе функцию `rnorm`, которая формирует указанное количество случайных чисел с нормальным распределением при заданном среднем значении и стандартном отклонении.
 
 Например, следующий код R возвращает 100 чисел в среднем 50, учитывая стандартное отклонение 3.
 
@@ -40,7 +40,7 @@ ms.locfileid: "71951865"
 as.data.frame(rnorm(100, mean = 50, sd = 3));
 ```
 
-Чтобы вызвать эту строку r из T-SQL, добавьте функцию r в параметр скрипта r для `sp_execute_external_script`, как показано ниже:
+Чтобы вызвать эту строку R из T-SQL, добавьте функцию R в параметр скрипта R `sp_execute_external_script`, как показано ниже.
 
 ```sql
 EXECUTE sp_execute_external_script
@@ -103,9 +103,14 @@ WITH RESULT SETS (([Col1] int not null));
 ```
 
 > [!TIP]
-> Многие пользователи, например, используют системные функции времени в r, такие как `system.time` и `proc.time`, для записи времени, используемого процессами r, и анализа проблем производительности. Пример см. в руководстве [Создание функций данных](../tutorials/walkthrough-create-data-features.md) , в которых функции времени R внедряются в решение.
+> Многие пользователи наподобие использования функций времени системы в R, например `system.time` и `proc.time`, для записи времени, используемого процессами R, и анализа проблем производительности. Пример см. в руководстве [Создание функций данных](../tutorials/walkthrough-create-data-features.md) , в которых функции времени R внедряются в решение.
 
 ## <a name="next-steps"></a>Следующие шаги
+
+Чтобы создать модель машинного обучения с помощью R в SQL Server, следуйте указаниям в этом кратком руководстве:
+
+> [!div class="nextstepaction"]
+> [Создание и оценка прогнозной модели в R с помощью SQL Server Службы машинного обучения](quickstart-r-train-score-model.md)
 
 Дополнительные сведения о SQL Server Службы машинного обучения см. в следующих статьях:
 
