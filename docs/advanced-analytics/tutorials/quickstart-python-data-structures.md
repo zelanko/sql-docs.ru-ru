@@ -10,12 +10,12 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 06540305d84ea16b76363ebb21cea0a246fd9ed8
-ms.sourcegitcommit: 454270de64347db917ebe41c081128bd17194d73
-ms.translationtype: HT
+ms.openlocfilehash: c09c9ad4625520054f2d3f103ec055c37764aed2
+ms.sourcegitcommit: 84e6922a57845a629391067ca4803e8d03e0ab90
+ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 10/07/2019
-ms.locfileid: "72006061"
+ms.locfileid: "72008428"
 ---
 # <a name="quickstart-handle-data-types-and-objects-using-python-in-sql-server-machine-learning-services"></a>Краткое руководство. Работа с типами данных и объектами с помощью Python в SQL Server Службы машинного обучения
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,6 +31,9 @@ SQL Server полагается на пакет Python **Pandas** , которы
 - Одно значение кадра данных называется ячейкой и доступ к нему осуществляется по индексу.
 
 Как можно предоставить один результат вычисления как кадр данных, если для данных. Frame требуется табличная структура? Одним из ответов является представление одного скалярного значения в виде ряда, которое легко преобразовать в кадр данных. 
+
+> [!NOTE]
+> При возврате дат Python в SQL использует DATETIME с ограниченным диапазоном дат 1753-01-01 (-53690) до 9999-12-31 (2958463). 
 
 ## <a name="prerequisites"></a>Предварительные требования
 
