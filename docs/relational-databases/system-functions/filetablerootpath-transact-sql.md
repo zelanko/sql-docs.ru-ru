@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0cba908a-c85c-4b09-b16a-df1cb333c629
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 80651e82fb643d044f4c953481dde2114adcadda
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 10b4aa19b86530213f852ea90f959a1d7ef6c74f
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68042859"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251238"
 ---
 # <a name="filetablerootpath-transact-sql"></a>FileTableRootPath (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -38,10 +38,10 @@ FileTableRootPath ( [ '[schema_name.]FileTable_name' ], @option )
   
 ## <a name="arguments"></a>Аргументы  
  *FileTable_name*  
- Имя таблицы FileTable. *FileTable_name* имеет тип **nvarchar**. Этот параметр является необязательным. Значением по умолчанию является текущая база данных. Указание *schema_name* также является необязательным. Вы можете передать значение NULL для *FileTable_name* использовать значение параметра по умолчанию  
+ Имя таблицы FileTable. *FileTable_name* имеет тип **nvarchar**. Этот параметр является необязательным. Значением по умолчанию является текущая база данных. Указание *schema_name* также является необязательным. Можно передать значение NULL для *FileTable_name* , чтобы использовать значение параметра по умолчанию.  
   
- *@option*  
- Целочисленное выражение, определяющее способ форматирования серверных компонентов пути. *@option* Может принимать одно из следующих значений:  
+ *@no__t 1option*  
+ Целочисленное выражение, определяющее способ форматирования серверных компонентов пути. *\@option* может иметь одно из следующих значений:  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -52,21 +52,21 @@ FileTableRootPath ( [ '[schema_name.]FileTable_name' ], @option )
 ## <a name="return-type"></a>Тип возвращаемых данных  
  **nvarchar(4000)**  
   
- Если база данных принадлежит к группе доступности Always On, то **FileTableRootPath** функция возвращает имя виртуальной сети (VNN) вместо имени компьютера.  
+ Когда база данных принадлежит к Always On группе доступности, функция **FileTableRootPath** возвращает имя виртуальной сети (VNN) вместо имени компьютера.  
   
 ## <a name="general-remarks"></a>Общие замечания  
- **FileTableRootPath** функция возвращает значение NULL, если выполняется одно из следующих условий:  
+ Функция **FileTableRootPath** возвращает значение null, если выполняется одно из следующих условий.  
   
--   Значение *FileTable_name* является недопустимым.  
+-   Недопустимое значение *FileTable_name* .  
   
 -   Вызывающая сторона не имеет достаточных разрешений для ссылки на указанную таблицу или текущую базу данных.  
   
--   Параметр FILESTREAM *database_directory* не задан для текущей базы данных.  
+-   Параметр FILESTREAM параметра *database_directory* не задан для текущей базы данных.  
   
  Дополнительные сведения см. в статье [Work with Directories and Paths in FileTables](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md).  
   
 ## <a name="best-practices"></a>Рекомендации  
- Чтобы код и приложения были независимы от текущего компьютера и базы данных, следует избегать создания кода с использованием абсолютных путей. Вместо этого рекомендуется получать полный путь для файла во время выполнения с помощью **FileTableRootPath** и **GetFileNamespacePath** функций, как показано в следующем примере. По умолчанию функция **GetFileNamespacePath** возвращает относительный путь к файлу, находящемуся внутри корневого пути к базе данных.  
+ Чтобы код и приложения были независимы от текущего компьютера и базы данных, следует избегать создания кода с использованием абсолютных путей. Вместо этого получите полный путь к файлу во время выполнения, используя функции **FileTableRootPath** и **GetFileNamespacePath** вместе, как показано в следующем примере. По умолчанию функция **GetFileNamespacePath** возвращает относительный путь к файлу, находящемуся внутри корневого пути к базе данных.  
   
 ```sql  
 USE MyDocumentDatabase;  
@@ -80,17 +80,17 @@ FROM DocumentStore
 WHERE Name = N'document.docx';  
 ```  
   
-## <a name="security"></a>Безопасность  
+## <a name="security"></a>безопасность  
   
 ### <a name="permissions"></a>Разрешения  
- **FileTableRootPath** функции требуется:  
+ Функция **FileTableRootPath** требует:  
   
 -   разрешение SELECT на FileTable, чтобы получить корневой путь конкретной таблицы FileTable;  
   
--   **db_datareader** или выше разрешение, чтобы получить корневой путь для текущей базы данных.  
+-   разрешение **db_datareader** или более высокого уровня для получения корневого пути для текущей базы данных.  
   
 ## <a name="examples"></a>Примеры  
- Следующие примеры показывают, как вызывать **FileTableRootPath** функции.  
+ В следующих примерах показано, как вызвать функцию **FileTableRootPath** .  
   
 ```  
 USE MyDocumentDatabase;  

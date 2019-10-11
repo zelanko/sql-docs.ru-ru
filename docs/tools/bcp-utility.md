@@ -1,10 +1,7 @@
 ---
 title: Программа bcp | Документы Майкрософт
-ms.custom: ''
-ms.date: 01/14/2019
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
@@ -27,13 +24,16 @@ helpviewer_keywords:
 ms.assetid: c0af54f5-ca4a-4995-a3a4-0ce39c30ec38
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ''
+ms.custom: ''
+ms.date: 01/14/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 5267b5b02ce84d70feb4245fe75f62591409f39f
-ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
+ms.openlocfilehash: facd5fe78ae3dd20390e9510a47e914dd6d3945e
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68743005"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71708713"
 ---
 # <a name="bcp-utility"></a>Программа bcp
 
@@ -43,10 +43,10 @@ ms.locfileid: "68743005"
 >
 > Подробные сведения об использовании bcp с хранилищем данных SQL Azure см. в разделе [Загрузка данных с помощью bcp](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-load-with-bcp).
 
-  Служебная программа "**b**ulk **c**opy **p**rogram" (**bcp**) используется для массового копирования данных между экземпляром [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и файлом данных в указанном пользователем формате. С помощью программы **bcp** можно выполнять импорт большого количества новых строк в таблицы [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] или экспорт данных из таблиц в файлы данных. За исключением случаев использования параметра **queryout** , применение программы не требует знания языка [!INCLUDE[tsql](../includes/tsql-md.md)]. Чтобы выполнить импорт данных в таблицу, необходимо или использовать файл форматирования, созданный для этой таблицы, либо изучить структуру таблицы и типов данных, допустимых для ее столбцов.  
-  
- ![Topic link icon](../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел")Сведения о синтаксических обозначениях в программе **bcp** см. в разделе [Синтаксические обозначения в Transact-SQL (Transact-SQL)](../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
-  
+Служебная программа "**b**ulk **c**opy **p**rogram" (**bcp**) используется для массового копирования данных между экземпляром [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и файлом данных в указанном пользователем формате. С помощью программы **bcp** можно выполнять импорт большого количества новых строк в таблицы [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] или экспорт данных из таблиц в файлы данных. За исключением случаев использования параметра **queryout** , применение программы не требует знания языка [!INCLUDE[tsql](../includes/tsql-md.md)]. Чтобы выполнить импорт данных в таблицу, необходимо или использовать файл форматирования, созданный для этой таблицы, либо изучить структуру таблицы и типов данных, допустимых для ее столбцов.  
+
+![Topic link icon](../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел")Сведения о синтаксических обозначениях в программе **bcp** см. в разделе [Синтаксические обозначения в Transact-SQL (Transact-SQL)](../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
+
 > [!NOTE]
 > При использовании программы **bcp** для резервного копирования данных создайте файл форматирования для записи формата данных. Файлы данных**bcp**  **не включают** сведения о схеме или формате, поэтому при удалении таблицы или представления, если отсутствует файл форматирования, импорт данных будет невозможен.
 
@@ -72,7 +72,7 @@ Windows 10, Windows 7, Windows 8, Windows 8.1, Windows Server 2008, Windows Serv
 
 Этот компонент требует наличия [установщика Windows версии 4.5](https://www.microsoft.com/download/details.aspx?id=8483) и [драйвера Microsoft ODBC 17.3 для SQL Server](https://www.microsoft.com/download/details.aspx?id=56567).
 
-Чтобы проверить выполнение `bcp /v` команды bcp Version и убедиться, что используется 15.0.1000.34 или более поздняя версия.
+Чтобы проверить, используется ли команда BCP версии Execute `bcp /v`, убедитесь, что 15.0.1000.34 или более поздняя версия.
 
 <table><th>Синтаксис</th><tr><td><pre>
 bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a href="#tbl_name">table_name</a> | <a href="#vw_name">view_name</a> | <a href="#query">"query"</a>}
@@ -110,7 +110,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
     [<a href="#V">-V (80 | 90 | 100 | 110 | 120 | 130 ) </a>]
     [<a href="#w">-w</a>]
     [<a href="#x">-x</a>]
-</pre></td></tr></table>  
+</pre></td></tr></table>
 
 ## <a name="arguments"></a>Аргументы
 
@@ -175,9 +175,9 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 |*code_page*|Определенный номер кодовой страницы, например 850.<br /><br /> Версии раньше 13 ([!INCLUDE[ssSQL15](../includes/sssql15-md.md)]) не поддерживают кодовую страницу 65001 (кодировка UTF-8). Начиная с версии 13, кодировку UTF-8 можно импортировать в более ранние версии [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|  
   
  **-d** _**имя\_базы данных**_ <a name="d"></a>   
- Указывает базу данных, с которой надо соединиться. По умолчанию программа bcp.exe соединяется с пользовательской базой данных по умолчанию. Если указан параметр **-d** *database_name* и имя, состоящее из трех частей (*database_name.schema.table*, passed as the first parameter to bcp.exe) is specified, an error will occur because you cannot specify the database name twice.Если указан параметр *database_name* начинается с дефиса (-) или прямой косой черты (/), не добавляйте пробел между **-d** и именем базы данных.  
+ Указывает базу данных, с которой надо соединиться. По умолчанию программа bcp.exe соединяется с пользовательской базой данных по умолчанию. Если задано значение * *-d database_name и имя из трех частей (имя_базы_данных. Schema. Table, переданное в качестве первого параметра в bcp. exe), возникнет ошибка, так как нельзя указать имя базы данных дважды. Если параметр *database_name* начинается с дефиса (-) или косой черты (/), не ставьте пробел между **-d** и именем базы данных.  
   
- **-e**  _**файлErr\_**_ <a name="e"></a>  
+ **-e**  _**Err \_file**_ <a name="e"></a>  
  Указывает полный путь к файлу ошибок, используемому для хранения строк, которые служебная программа **bcp** не может передать из файла в базу данных. Сообщения об ошибках команды **bcp** поступают на рабочую станцию пользователя. Если этот параметр не используется, то файл ошибок не создается.  
   
  Если параметр *err_file* начинается с дефиса (-) или косой черты (/), не ставьте пробел между **-e** и значением *err_file* .  
@@ -214,35 +214,33 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 > Интегрированная и интерактивная проверка подлинности AAD в настоящее время не поддерживается в Linux или macOS.
 
 > [!TIP]
->  Чтобы проверить, поддерживает ли ваша версия программы **bcp тип** Azure Active Directory Authentication (AAD), (BCP\<Space >\<тире >\<тире >) и убедитесь, что вы видите-G в списке доступные аргументы.
+>  Чтобы проверить, поддерживает ли ваша версия программы bcp тип Azure Active Directory Authentication (AAD), **bcp--** (BCP \<space > \<dash > \<dash >) и убедитесь, что в списке доступных аргументов отображается-G.
 
 - **Имя пользователя и пароль Azure Active Directory** 
 
     Если вы хотите использовать имя пользователя и пароль Azure Active Directory, можно указать параметр **-G** , а также использовать имя пользователя и пароль, задав параметры **-U** и **-P** . 
 
-    В следующем примере данные экспортируются с помощью имени пользователя и пароля Azure AD, где пользователь и пароль являются учетными данными AAD. Пример экспортирует таблицу `bcptest` из базы данных `testdb` с сервера `aadserver.database.windows.net` Azure и сохраняет данные в файле `c:\last\data1.dat`:
+    В следующем примере данные экспортируются с помощью имени пользователя и пароля Azure AD, где пользователь и пароль являются учетными данными AAD. Пример экспортирует таблицу `bcptest` из базы данных `testdb` с сервера Azure `aadserver.database.windows.net` и сохраняет данные в файле `c:\last\data1.dat`:
     ``` 
     bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com -P xxxxx
     ``` 
 
-    В следующем примере данные импортируются с помощью имени пользователя и пароля Azure AD, где пользователь и пароль являются учетными данными AAD. Пример импортирует `c:\last\data1.dat` данные из файла в таблицу `bcptest` для базы данных `testdb` на сервере `aadserver.database.windows.net` Azure с помощью пользователя или пароля Azure AD:
+    В следующем примере данные импортируются с помощью имени пользователя и пароля Azure AD, где пользователь и пароль являются учетными данными AAD. Пример импортирует данные из файла `c:\last\data1.dat` в таблицу `bcptest` для базы данных `testdb` на сервере Azure `aadserver.database.windows.net` с помощью пользователя или пароля Azure AD:
     ```
     bcp bcptest in "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com -P xxxxx
     ```
 
+- **Встроенная проверка подлинности Azure Active Directory**
 
-
-- **Встроенная проверка подлинности Azure Active Directory** 
- 
     Чтобы использовать встроенную проверку подлинности Azure Active Directory, укажите параметр **-G** без имени пользователя или пароля. В этой конфигурации предполагается, что текущая учетная запись пользователя Windows (учетная запись, под которой выполняется команда bcp) — это федеративный с Azure AD: 
 
-    В следующем примере выполняется экспорт данных с помощью интегрированной учетной записи Azure AD. Пример экспортирует таблицу `bcptest` из базы данных `testdb` с помощью Azure AD, интегрированной `aadserver.database.windows.net` с сервера Azure, и сохраняет `c:\last\data2.dat`данные в файле:
+    В следующем примере данные экспортируются с помощью учетной записи, интегрированной с Azure AD. Пример экспортирует таблицу `bcptest` из базы данных `testdb` с помощью Azure AD, интегрированной с сервера Azure `aadserver.database.windows.net`, и сохраняет данные в файле `c:\last\data2.dat`:
 
     ```
     bcp bcptest out "c:\last\data2.dat" -S aadserver.database.windows.net -d testdb -G -c -t
     ```
 
-    В следующем примере выполняется импорт данных с помощью интегрированной проверки подлинности Azure AD. В примере выполняется импорт данных из `c:\last\data2.txt` файла в `bcptest` таблицу для `testdb` базы данных на `aadserver.database.windows.net` сервере Azure с помощью интегрированной проверки подлинности Azure AD:
+    В следующем примере выполняется импорт данных с помощью встроенной проверки подлинности Azure AD. Пример импортирует данные из файла `c:\last\data2.txt` в таблицу `bcptest` для базы данных `testdb` на сервере Azure `aadserver.database.windows.net` с помощью интегрированной проверки подлинности Azure AD:
 
     ```
     bcp bcptest in "c:\last\data2.dat" -S aadserver.database.windows.net -d testdb -G -c -t
@@ -250,7 +248,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 
 - **Интерактивная проверка подлинности Azure Active Directory**  
 
-   Интерактивная проверка подлинности Azure AD для базы данных SQL Azure и хранилища данных SQL позволяет использовать интерактивный метод, поддерживающий многофакторную проверку подлинности. Дополнительные сведения см. в статье [Active Directoryная Интерактивная проверка](../ssdt/azure-active-directory.md#active-directory-interactive-authentication)подлинности. 
+   Интерактивная проверка подлинности Azure AD для базы данных SQL Azure и хранилища данных SQL позволяет использовать интерактивный метод, поддерживающий многофакторную проверку подлинности. Дополнительные сведения см. в статье [Active Directoryная Интерактивная проверка подлинности](../ssdt/azure-active-directory.md#active-directory-interactive-authentication). 
 
    Для интерактивной работы Azure AD требуется **bcp** [версии 15.0.1000.34](#download-the-latest-version-of-bcp-utility) или более поздней, а также [ODBC версии 17,2 или более поздней](https://www.microsoft.com/download/details.aspx?id=56567).  
 
@@ -264,7 +262,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
    bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com 
    ``` 
 
-   Если пользователь Azure AD — это федеративный домен, использующий учетную запись Windows, имя пользователя, необходимое в командной строке, содержит учетную запись домена (например joe@contoso.com , см. ниже):   
+   Если пользователь Azure AD — это федеративный домен, использующий учетную запись Windows, имя пользователя, необходимое в командной строке, содержит учетную запись домена (например, joe@contoso.com см. ниже):   
 
    ```
    bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U joe@contoso.com 
@@ -284,7 +282,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 Приблизительный объем данных в каждом пакете в килобайтах (значение *cc*). По умолчанию, значение KILOBYTES_PER_BATCH неизвестно.  
   
 * **TABLOCK**  
-Указывает, что при выполнении массового обновления на период операции массовой загрузки будет получена блокировка на уровне таблицы. В противном случае запрашивается блокировка на уровне строки. Применение этого указания значительно повышает производительность, так как удержание блокировки в течение операции массового копирования уменьшает вероятность состязаний блокировок в таблице. Если таблица не имеет индексов и указано ключевое слово **TABLOCK** , загрузка в таблицу может производиться параллельно несколькими клиентами. По умолчанию работа блокировки определяется параметром таблицы **table lock on bulk load**.  
+Указывает, что при выполнении массового обновления на период операции массовой загрузки будет получена блокировка на уровне таблицы. В противном случае запрашивается блокировка на уровне строки. Применение этого указания значительно повышает производительность, так как удержание блокировки в течение операции массового копирования уменьшает вероятность состязаний блокировок в таблице. Если таблица не имеет индексов и указано ключевое слово **TABLOCK** , загрузка в таблицу может производиться параллельно несколькими клиентами. По умолчанию работа блокировки определяется параметром таблицы **table lock on bulkload**.  
   
   > [!NOTE]
   > Если целевая таблица представляет собой кластеризованный индекс columnstore, подсказка TABLOCK для параллельной загрузки сразу нескольких клиентов не требуется, так как каждый параллельный поток назначается отдельной группе строк в индексе и загружает в нее данные. Дополнительные сведения см. в справочных материалах по индексу columnstore.
@@ -300,7 +298,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
   Отключение проверки ограничений (настройка по умолчанию) может потребоваться в тех ситуациях, когда входные данные содержат строки, нарушающие эти ограничения. Импорт данных можно выполнить с отключенными ограничениями CHECK, после чего использовать инструкции языка [!INCLUDE[tsql](../includes/tsql-md.md)] для удаления недопустимых значений.  
   
   > [!NOTE]
-  > Теперь программа **bcp** производит проверку данных, которые могут привести к ошибкам в работе существующих скриптов, если файлы данных будут содержать недопустимые данные.
+  > Теперь программа**bcp** производит проверку данных, которые могут привести к ошибкам в работе существующих скриптов, если файлы данных будут содержать недопустимые данные.
   
   > [!NOTE]
   > Параметр **-m** *max_errors* не применяется при проверке ограничений.
@@ -349,7 +347,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
   
  Это предупреждение можно пропустить. Одним из способов его устранения является применение аргумента командной строки **-n** вместо **-N**.  
   
- **-o**  _**выходнойфайл\_**_ <a name="o"></a>  
+ **-o**  _**Output \_file**_ <a name="o"></a>  
  Указывает имя файла, который принимает перенаправленные из командной строки выходные данные.  
   
  Если параметр *output_file* начинается с дефиса (-) или косой черты (/), не ставьте пробел между **-e** и значением *output_file* .  
@@ -373,7 +371,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
   
  Дополнительные сведения см. в подразделе " [Примечания](#remarks)" ниже.  
   
- **-r**  _**условиестроки\_**_ <a name="r"></a>  
+ **-r**  _**Row \_term**_ <a name="r"></a>  
  Указывает признак конца строки. Значением по умолчанию является **\n** (символ перевода строки). Используйте этот параметр, чтобы переопределить признак конца строки по умолчанию. Дополнительные сведения см. в разделе [Определение признаков конца поля и строки (SQL Server)](../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md).  
   
  Если в команде bcp.exe указан признак конца строки в шестнадцатеричном виде, то значение будет усечено до 0x00. Например, если указать значение 0x410041, то будет использовано значение 0x41.  
@@ -385,7 +383,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
   
  **-S** _**имя\_сервера**_ [\\ _**имя\_экземпляра**_ ]<a name="S"></a> — указывает экземпляр [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], к которому выполняется подключение. Если сервер не указан, программа **bcp** выполняет подключение к экземпляру [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] по умолчанию на локальном компьютере. Этот параметр необходим, если команда **bcp** выполняется с удаленного компьютера в сети или с локального именованного экземпляра. Чтобы подключиться к экземпляру по умолчанию [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] на сервере, укажите только *server_name*. Чтобы подключиться к именованному экземпляру [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], укажите _имя\_сервера_ **\\** _имя\_экземпляра_.  
   
- **-t**  _**условиеполя\_**_ <a name="t"></a>  
+ **-t**  _**field \_erm**_ <a name="t"></a>  
  Указывает признак конца поля. Значением по умолчанию является **\t** (символ табуляции). Используйте этот параметр, чтобы переопределить признак конца поля по умолчанию. Дополнительные сведения см. в разделе [Определение признаков конца поля и строки (SQL Server)](../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md).  
   
  Если в команде bcp.exe указан признак конца поля в шестнадцатеричном виде, то значение будет усечено до 0x00. Например, если указать значение 0x410041, то будет использовано значение 0x41.  
@@ -407,7 +405,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
  **-v**<a name="v"></a>  
  Выводит номер версии и сведения об авторских правах для служебной программы **bcp** .  
   
- **-V** (**80** | **90** | **100** | **110** | **120** | **130** )<a name="V"></a>  
+ **-V** (**80** | **90** | **100** | **110** | **120** | **130)<a name="V"></a>  
  Выполняет операцию массового копирования, используя типы данных более ранней версии [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Этот параметр не запрашивает тип данных каждого поля, он использует значения по умолчанию.  
   
  **80** = [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)]  
@@ -483,7 +481,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 
  Теперь программа**bcp** производит проверку данных, которые могут привести к ошибкам в работе существующих скриптов, если файлы данных будут содержать недопустимые данные. Например, программа **bcp** проверяет, что:  
   
--   собственные представления типов данных **float** или **real** являются допустимыми;  
+-   собственные представления типов данных float или real являются допустимыми.  
   
 -   Данные в Юникоде имеют четную длину.  
   
@@ -526,36 +524,37 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
   
 -   (Администратор/пользователь) Если возможно, используйте собственный формат (-n) во избежание проблем с разделением. Используйте собственный формат для экспорта и импорта с помощью [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Экспортируйте данные из [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] с помощью параметра - c или -w, если данные планируется импортировать в базу данных, отличную от[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
--   (Администратор) Проверьте данные при использовании BCP OUT. Например, при использовании BCP OUT, BCP IN, а затем BCP OUT убедитесь, что данные экспортируются правильно и значения признака конца не используются как часть какого-либо значения данных. Попробуйте переопределить признаки конца по умолчанию (с помощью параметров -t и - r) на случайные шестнадцатеричные значения, чтобы избежать конфликта между значениями признака конца и значениями данных.  
+-   (Администратор) Проверьте данные при использовании BCP OUT. Например, при использовании BCP OUT, BCP IN, а затем BCP OUT убедитесь, что данные экспортируются правильно и значения признака конца не используются как часть какого-либо значения данных. Попробуйте переопределить признаки конца по умолчанию (с помощью параметров -t и -r) на случайные шестнадцатеричные значения, чтобы избежать конфликта между значениями признака конца и значениями данных.  
   
 -   (Пользователь) Используйте длинные и уникальные признаки конца (любая последовательность байт или символов), чтобы свести к минимуму возможность конфликта с фактическим строковым значением. Это можно выполнить с помощью параметров -t и -r.  
 
 ## <a name="examples"></a>Примеры
 
- Этот раздел содержит следующие примеры.  
- 
--   A. Определение версии служебной программы **bcp**
-  
--   Б. Копирование строк из таблицы в файл данных (с помощью доверительного соединения)  
-  
--   [В.](#c-copying-table-rows-into-a-data-file-with-mixed-mode-authentication) Копирование строк из таблицы в файл данных (в смешанном режиме проверки подлинности)  
-  
--   Г. Копирование данных из файла в таблицу  
-  
--   Д. Копирование отдельного столбца в файл данных  
-  
--   Е. Копирование отдельной строки в файл данных  
-  
--   Ж. Копирование данных из запроса в файл данных  
-  
--   З. Создание файлов форматирования
-    
--   И. Использование файла форматирования для массового импорта данных c помощью программы **bcp**  
+Этот раздел содержит следующие примеры.
 
+A. Определение версии служебной программы **bcp**
+
+Б. Копирование строк из таблицы в файл данных (с помощью доверительного соединения)
+
+В. Копирование строк из таблицы в файл данных (в смешанном режиме проверки подлинности)
+
+Г. Копирование данных из файла в таблицу
+
+Д. Копирование отдельного столбца в файл данных
+
+Е. Копирование отдельной строки в файл данных
+
+Ж. Копирование данных из запроса в файл данных
+
+З. Создание файлов форматирования
+
+И. Использование файла форматирования для массового импорта данных c помощью программы **bcp**
+
+К. Указание кодовой страницы
 
 ### <a name="example-test-conditions"></a>**Пример условий теста**
 
-В примерах ниже используется образец базы данных `WideWorldImporters` для SQL Server (начиная с 2016) и База данных SQL Azure.  `WideWorldImporters`можно скачать из [https://github.com/Microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0](https://github.com/Microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0).  Синтаксис для восстановления образца базы данных см. в разделе [RESTORE (Transact-SQL)](../t-sql/statements/restore-statements-transact-sql.md) .  Если не указано иное, в этом примере предполагается, что используется проверка подлинности Windows и существует доверительное подключение к экземпляру сервера, на котором запускается команда **bcp** .  Каталог с именем `D:\BCP` будет использоваться во многих примерах.
+В примерах ниже используется образец базы данных `WideWorldImporters` для SQL Server (начиная с 2016) и База данных SQL Azure.  `WideWorldImporters` можно скачать отсюда: [https://github.com/Microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0](https://github.com/Microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0).  Синтаксис для восстановления образца базы данных см. в разделе [RESTORE (Transact-SQL)](../t-sql/statements/restore-statements-transact-sql.md) .  Если не указано иное, в этом примере предполагается, что используется проверка подлинности Windows и существует доверительное подключение к экземпляру сервера, на котором запускается команда **bcp** .  Каталог с именем `D:\BCP` будет использоваться во многих примерах.
 
 Приведенный ниже скрипт создает пустую копию таблицы `WideWorldImporters.Warehouse.StockItemTransactions`, а затем добавляет ограничение первичного ключа.  Запустите следующий скрипт T-SQL в SQL Server Management Studio (SSMS):
 
@@ -583,93 +582,106 @@ END
 > TRUNCATE TABLE WideWorldImporters.Warehouse.StockItemTransactions_bcp;
 
 ### <a name="a--identify-bcp-utility-version"></a>A.  Определение версии служебной программы **bcp**
+
 В командной строке введите следующую команду:
+
 ```
 bcp -v
 ```
   
-### <a name="b-copying-table-rows-into-a-data-file-with-a-trusted-connection"></a>Б. Копирование строк из таблицы в файл данных (с помощью доверительного соединения)  
-В следующих примерах показано применение параметра **out** к таблице `WideWorldImporters.Warehouse.StockItemTransactions` .
+### <a name="b-copying-table-rows-into-a-data-file-with-a-trusted-connection"></a>Б. Копирование строк из таблицы в файл данных (с помощью доверительного соединения)
 
-- **Основной**  
-В этом примере создается файл данных с именем `StockItemTransactions_character.bcp` , и в него копируются данные таблицы в **символьном** формате.
+В следующих примерах показано применение параметра **out** к таблице `WideWorldImporters.Warehouse.StockItemTransactions`.
+
+- **Базовый** В этом примере создается файл данных с именем `StockItemTransactions_character.bcp`, и в него копируются данные таблицы в **символьном** формате.
 
   В командной строке введите следующую команду:
+
   ```
   bcp WideWorldImporters.Warehouse.StockItemTransactions out D:\BCP\StockItemTransactions_character.bcp -c -T
   ```
- 
+
  - **Расширенный**  
 В этом примере создается файл данных с именем `StockItemTransactions_native.bcp` , и в него копируются данные таблицы в **собственном** формате.  Пример также указывает максимальное количество синтаксических ошибок, файл ошибок и выходной файл.
 
     В командной строке введите следующую команду:
     ```
     bcp WideWorldImporters.Warehouse.StockItemTransactions OUT D:\BCP\StockItemTransactions_native.bcp -m 1 -n -e D:\BCP\Error_out.log -o D:\BCP\Output_out.log -S -T
-    ``` 
- 
+    ```
+
 Просмотрите `Error_out.log` и `Output_out.log`.  `Error_out.log` должно быть пустым.  Сравните размеры файлов между `StockItemTransactions_character.bcp` и `StockItemTransactions_native.bcp`. 
-   
-### <a name="c-copying-table-rows-into-a-data-file-with-mixed-mode-authentication"></a>В. Копирование строк из таблицы в файл данных (в смешанном режиме проверки подлинности)  
+
+### <a name="c-copying-table-rows-into-a-data-file-with-mixed-mode-authentication"></a>В. Копирование строк из таблицы в файл данных (в смешанном режиме проверки подлинности)
+
 В следующем примере показано применение параметра **out** к таблице `WideWorldImporters.Warehouse.StockItemTransactions` .  В этом примере создается файл данных с именем `StockItemTransactions_character.bcp` , и в него копируются данные таблицы в **символьном** формате.  
   
  В этом примере предполагается, что применяется смешанный режим проверки подлинности. Для указания идентификатора входа необходимо использовать параметр **-U** . Кроме того, за исключением случаев, когда выполняется соединение с экземпляром, не являющимся экземпляром [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] по умолчанию на локальном компьютере, нужно использовать параметр **-S** , чтобы указать системное имя и (при необходимости) имя экземпляра.  
 
 В командной строке введите следующую команду: \(система попросит вас ввести пароль\)
-```  
+
+```
 bcp WideWorldImporters.Warehouse.StockItemTransactions out D:\BCP\StockItemTransactions_character.bcp -c -U<login_id> -S<server_name\instance_name>
-```  
-  
-### <a name="d-copying-data-from-a-file-to-a-table"></a>Г. Копирование данных из файла в таблицу  
+```
+
+### <a name="d-copying-data-from-a-file-to-a-table"></a>Г. Копирование данных из файла в таблицу
+
 В следующих примерах показано применение параметра **in** к таблице `WideWorldImporters.Warehouse.StockItemTransactions_bcp` с использованием созданных выше файлов.
-  
-- **Basic**  
-В этом примере используется ранее созданный файл данных `StockItemTransactions_character.bcp` .
+
+- **Базовый** В этом примере используется ранее созданный файл данных `StockItemTransactions_character.bcp`.
 
   В командной строке введите следующую команду:
-  ```  
-  bcp WideWorldImporters.Warehouse.StockItemTransactions_bcp IN D:\BCP\StockItemTransactions_character.bcp -c -T  
-  ```  
 
-- **Расширенный**  
-В этом примере используется ранее созданный файл данных `StockItemTransactions_native.bcp` .  Пример также использует указание **TABLOCK**, указывает размер пакета, максимальное количество синтаксических ошибок, файл ошибок и выходной файл.
-  
-  В командной строке введите следующую команду:
-  ```  
-  bcp WideWorldImporters.Warehouse.StockItemTransactions_bcp IN D:\BCP\StockItemTransactions_native.bcp -b 5000 -h "TABLOCK" -m 1 -n -e D:\BCP\Error_in.log -o D:\BCP\Output_in.log -S -T 
-  ```    
-  Просмотрите `Error_in.log` и `Output_in.log`.
-   
-### <a name="e-copying-a-specific-column-into-a-data-file"></a>Д. Копирование отдельного столбца в файл данных  
-Чтобы выполнить копирование конкретного столбца, можно использовать параметр **queryout** .  Следующий пример копирует в файл данных из таблицы `StockItemTransactionID` только столбец `Warehouse.StockItemTransactions` . 
+  ```
+  bcp WideWorldImporters.Warehouse.StockItemTransactions_bcp IN D:\BCP\StockItemTransactions_character.bcp -c -T
+  ```
+
+- **Расширенный** В этом примере используется ранее созданный файл данных `StockItemTransactions_native.bcp`.  Пример также использует указание **TABLOCK**, указывает размер пакета, максимальное количество синтаксических ошибок, файл ошибок и выходной файл.
   
 В командной строке введите следующую команду:
+
+```
+bcp WideWorldImporters.Warehouse.StockItemTransactions_bcp IN D:\BCP\StockItemTransactions_native.bcp -b 5000 -h "TABLOCK" -m 1 -n -e D:\BCP\Error_in.log -o D:\BCP\Output_in.log -S -T
+```
+
+  Просмотрите `Error_in.log` и `Output_in.log`.
+
+### <a name="e-copying-a-specific-column-into-a-data-file"></a>Д. Копирование отдельного столбца в файл данных
+
+Чтобы выполнить копирование конкретного столбца, можно использовать параметр **queryout** .  Следующий пример копирует в файл данных из таблицы `StockItemTransactionID` только столбец `Warehouse.StockItemTransactions` .
   
-```  
+В командной строке введите следующую команду:
+
+```
 bcp "SELECT StockItemTransactionID FROM WideWorldImporters.Warehouse.StockItemTransactions WITH (NOLOCK)" queryout D:\BCP\StockItemTransactionID_c.bcp -c -T
-```  
-  
-### <a name="f-copying-a-specific-row-into-a-data-file"></a>Е. Копирование отдельной строки в файл данных  
+```
+
+### <a name="f-copying-a-specific-row-into-a-data-file"></a>Е. Копирование отдельной строки в файл данных
+
 Чтобы выполнить копирование конкретной строки, можно использовать параметр **queryout** . Следующий пример копирует только строку человека с именем `Amy Trefl` из таблицы `WideWorldImporters.Application.People` в файл данных `Amy_Trefl_c.bcp`.  Примечание. Параметр **-d** используется для идентификации базы данных.
   
-В командной строке введите следующую команду: 
-```  
-bcp "SELECT * from Application.People WHERE FullName = 'Amy Trefl'" queryout D:\BCP\Amy_Trefl_c.bcp -d WideWorldImporters -c -T
-```  
-  
-### <a name="g-copying-data-from-a-query-to-a-data-file"></a>Ж. Копирование данных из запроса в файл данных  
-Результирующий набор инструкции Transact-SQL копируется в файл данных с помощью параметра **queryout** .  Следующий пример копирует имена из таблицы `WideWorldImporters.Application.People` , упорядоченные по полному имени, в файл данных `People.txt`.  Примечание. Параметр **-t** используется для создания файла с разделителями-запятыми.
-  
 В командной строке введите следующую команду:
-```  
+
+```
+bcp "SELECT * from Application.People WHERE FullName = 'Amy Trefl'" queryout D:\BCP\Amy_Trefl_c.bcp -d WideWorldImporters -c -T
+```
+
+### <a name="g-copying-data-from-a-query-to-a-data-file"></a>Ж. Копирование данных из запроса в файл данных
+
+Результирующий набор инструкции Transact-SQL копируется в файл данных с помощью параметра **queryout** .  Следующий пример копирует имена из таблицы `WideWorldImporters.Application.People` , упорядоченные по полному имени, в файл данных `People.txt` .  Примечание. Параметр **-t** используется для создания файла с разделителями-запятыми.
+
+В командной строке введите следующую команду:
+
+```
 bcp "SELECT FullName, PreferredName FROM WideWorldImporters.Application.People ORDER BY FullName" queryout D:\BCP\People.txt -t, -c -T
-```  
-  
-### <a name="h-creating-format-files"></a>З. Создание файлов форматирования  
+```
+
+### <a name="h-creating-format-files"></a>З. Создание файлов форматирования
+
 Следующий пример создает три разных файла форматирования для таблицы `Warehouse.StockItemTransactions` в базе данных `WideWorldImporters`.  Просмотрите содержимое каждого из созданных файлов.
-  
+
 В командной строке введите следующие команды:
-  
-```  
+
+```
 REM non-XML character format
 bcp WideWorldImporters.Warehouse.StockItemTransactions format nul -f D:\BCP\StockItemTransactions_c.fmt -c -T 
 
@@ -678,37 +690,33 @@ bcp WideWorldImporters.Warehouse.StockItemTransactions format nul -f D:\BCP\Stoc
 
 REM XML character format
 bcp WideWorldImporters.Warehouse.StockItemTransactions format nul -f D:\BCP\StockItemTransactions_c.xml -x -c -T
- 
-```  
+```
+
+> [!NOTE]
+> Для использования параметра **-x** необходима версия клиента **bcp** 9.0. Дополнительные сведения об использовании клиента **bcp** 9.0 см. в разделе "[Примечания](#remarks)".
   
-> [!NOTE]  
->  Для использования параметра **-x** необходима версия клиента **bcp** 9.0. Дополнительные сведения об использовании клиента **bcp** 9.0 см. в разделе "[Примечания](#remarks)".  
+ Дополнительные сведения см. в разделах [Файлы формата, отличные от XML &#40;SQL Server&#41;](../relational-databases/import-export/non-xml-format-files-sql-server.md) и [XML-файлы форматирования &#40;SQL Server&#41;](../relational-databases/import-export/xml-format-files-sql-server.md).
   
- Дополнительные сведения см. в разделах [Файлы формата, отличные от XML &#40;SQL Server&#41;](../relational-databases/import-export/non-xml-format-files-sql-server.md) и [XML-файлы форматирования &#40;SQL Server&#41;](../relational-databases/import-export/xml-format-files-sql-server.md).  
-  
-### <a name="i-using-a-format-file-to-bulk-import-with-bcp"></a>И. Использование файла форматирования для массового импорта данных c помощью программы bcp  
+### <a name="i-using-a-format-file-to-bulk-import-with-bcp"></a>И. Использование файла форматирования для массового импорта данных c помощью программы bcp
+
 Чтобы использовать ранее созданный файл форматирования при выполнении импорта данных в экземпляр [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], укажите параметр **-f** и параметр **in** .  Например, следующая команда выполняет массовое копирование содержимого файла данных `StockItemTransactions_character.bcp`в копию таблицы `Warehouse.StockItemTransactions_bcp` с помощью ранее созданного файла форматирования `StockItemTransactions_c.xml`.  Примечание. Параметр **-L** используется для импорта только первых 100 записей.
-  
+
 В командной строке введите следующую команду:
-```  
-bcp WideWorldImporters.Warehouse.StockItemTransactions_bcp in D:\BCP\StockItemTransactions_character.bcp -L 100 -f D:\BCP\StockItemTransactions_c.xml -T 
-```  
-  
+
+```
+bcp WideWorldImporters.Warehouse.StockItemTransactions_bcp in D:\BCP\StockItemTransactions_character.bcp -L 100 -f D:\BCP\StockItemTransactions_c.xml -T
+```
+
 > [!NOTE]  
 >  Файлы форматирования используются в тех случаях, когда поля файла данных отличаются от столбцов таблицы, например: по количеству, порядку или типу данных. Дополнительные сведения см в разделе [Файлы форматирования для импорта или экспорта данных (SQL Server)](../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md).  
-  
-### <a name="j-specifying-a-code-page"></a>К. Указание кодовой страницы  
- В следующем фрагменте кода показан импорт bcp с указанием страницы кода 65001:  
-  
-```  
+
+### <a name="j-specifying-a-code-page"></a>К. Указание кодовой страницы
+
+В следующем фрагменте кода показан импорт bcp с указанием страницы кода 65001:
+
+```
 bcp.exe MyTable in "D:\data.csv" -T -c -C 65001 -t , ...  
-```  
-  
- В следующем фрагменте кода показан экспорт bcp с указанием страницы кода 65001:  
-  
-```  
-bcp.exe MyTable out "D:\data.csv" -T -c -C 65001 -t , ...  
-```  
+```
 
 ## <a name="additional-examples"></a>Дополнительные примеры
 

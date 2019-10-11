@@ -22,13 +22,13 @@ ms.assetid: adafeeef-4255-4924-8042-02f503d599ca
 author: dnethi
 ms.author: dinethi
 ms.custom: ''
-ms.date: 09/24/2019
-ms.openlocfilehash: 21678d69305cbe01e1fed3b254da627e00eb60f1
-ms.sourcegitcommit: c4875c097e3aae1b76233777d15e0a0ec8e0d681
+ms.date: 10/03/2019
+ms.openlocfilehash: 3f5b4cbe56d395b88dc756d823b526b05b2fde74
+ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71342054"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71816807"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>Скачивание SQL Server Management Studio (SSMS)
 
@@ -40,19 +40,19 @@ SQL Server Management Studio (SSMS) — это интегрированная с
 
 SSMS распространяется бесплатно!
 
-## <a name="download-ssms-183"></a>Скачать SSMS 18.3
+## <a name="download-ssms-1831"></a>Скачивание SSMS 18.3.1
 
-**Вышла версия SSMS 18.3. Это новейшая общедоступная версия *SQL Server Management Studio* с поддержкой [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]!**
+**Вышла версия SSMS 18.3.1. Это новейшая общедоступная версия *SQL Server Management Studio* с поддержкой [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]!**
 
-**[![скачать](../ssdt/media/download.png) Скачать SQL Server Management Studio 18.3](https://go.microsoft.com/fwlink/?linkid=2104251)**
+**[![скачать](../ssdt/media/download.png) Скачать SQL Server Management Studio 18.3.1](https://go.microsoft.com/fwlink/?linkid=2105412)**
 
-SSMS 18.3 является последней общедоступной версией SSMS. Если у вас установлена предыдущая общедоступная версия SSMS 18, при установке SSMS 18.3 она обновится до версии 18.3. Если у вас установлена предыдущая *предварительная версия* SSMS 18.x, перед установкой SSMS 18.3 ее необходимо удалить.
+SSMS 18.3.1 является последней общедоступной версией SSMS. Если у вас установлена предыдущая общедоступная версия SSMS 18, при установке SSMS 18.3.1 она обновляется до версии 18.3.1. Если у вас установлена предыдущая *предварительная версия* SSMS 18.x, перед установкой SSMS 18.3.1 ее необходимо удалить.
 
 **Сведения о версии**
 
-- Номер выпуска: 18.3  
-- Номер сборки: 15.0.18178.0  
-- Дата выпуска: 23 сентября 2019 г.  
+- Номер выпуска: 18.3.1  
+- Номер сборки: 15.0.18183.0  
+- Дата выпуска: 2 октября 2019 г.  
 
 Если у вас есть замечания или предложения или вы хотите сообщить о проблеме, обратитесь к группе SSMS на [UserVoice](https://aka.ms/sqlfeedback).
 
@@ -60,17 +60,17 @@ SSMS 18.3 является последней общедоступной вер
 
 Если на компьютере есть несколько параллельных установок SSMS, следует всегда проверять, правильную ли версию вы запускаете. Последняя версия называется **Microsoft SQL Server Management Studio 18**.
 
-## <a name="available-languages-ssms-183"></a>Доступные языки (SSMS 18.3)
+## <a name="available-languages-ssms-1831"></a>Доступные языки (SSMS 18.3.1)
 
 Этот выпуск SSMS можно установить на следующих языках.
 
-SQL Server Management Studio 18.2:  
-[Китайский (упрощенное письмо)](https://go.microsoft.com/fwlink/?linkid=2104251&clcid=0x804) | [Китайский (традиционное письмо)](https://go.microsoft.com/fwlink/?linkid=2104251&clcid=0x404) | [Английский (США)](https://go.microsoft.com/fwlink/?linkid=2104251&clcid=0x409) | [Французский](https://go.microsoft.com/fwlink/?linkid=2104251&clcid=0x40c) | [Немецкий](https://go.microsoft.com/fwlink/?linkid=2104251&clcid=0x407) | [Итальянский](https://go.microsoft.com/fwlink/?linkid=2104251&clcid=0x410) | [Японский](https://go.microsoft.com/fwlink/?linkid=2104251&clcid=0x411) | [Корейский](https://go.microsoft.com/fwlink/?linkid=2104251&clcid=0x412) | [Португальский (Бразилия)](https://go.microsoft.com/fwlink/?linkid=2104251&clcid=0x416) | [Русский](https://go.microsoft.com/fwlink/?linkid=2104251&clcid=0x419) | [Испанский](https://go.microsoft.com/fwlink/?linkid=2104251&clcid=0x40a)
+SQL Server Management Studio 18.3.1:  
+[Китайский (упрощенное письмо)](https://go.microsoft.com/fwlink/?linkid=2105412&clcid=0x804) | [Китайский (традиционное письмо)](https://go.microsoft.com/fwlink/?linkid=2105412&clcid=0x404) | [Английский (США)](https://go.microsoft.com/fwlink/?linkid=2105412&clcid=0x409) | [Французский](https://go.microsoft.com/fwlink/?linkid=2105412&clcid=0x40c) | [Немецкий](https://go.microsoft.com/fwlink/?linkid=2105412&clcid=0x407) | [Итальянский](https://go.microsoft.com/fwlink/?linkid=2105412&clcid=0x410) | [Японский](https://go.microsoft.com/fwlink/?linkid=2105412&clcid=0x411) | [Корейский](https://go.microsoft.com/fwlink/?linkid=2105412&clcid=0x412) | [Португальский (Бразилия)](https://go.microsoft.com/fwlink/?linkid=2105412&clcid=0x416) | [Русский](https://go.microsoft.com/fwlink/?linkid=2105412&clcid=0x419) | [Испанский](https://go.microsoft.com/fwlink/?linkid=2105412&clcid=0x40a)
 
 > [!NOTE]
 > Модуль SQL Server PowerShell устанавливается отдельно из коллекции PowerShell. Дополнительные сведения см. в статье [Загрузка модуля PowerShell (SQL Server)](download-sql-server-ps-module.md).
 
-## <a name="new-in-this-release-ssms-183"></a>Новые возможности в этом выпуске (SSMS 18.3)
+## <a name="new-in-this-release-ssms-1831"></a>Новые возможности в этом выпуске (SSMS 18.3.1)
 
 | Изменения | Сведения |
 |---------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -82,13 +82,13 @@ SQL Server Management Studio 18.2:
 
 Дополнительные сведения о новых возможностях в этом выпуске см. в [заметках о выпуске SSMS](release-notes-ssms.md).
 
-## <a name="supported-sql-offerings-ssms-183"></a>Поддерживаемые предложения SQL (SSMS 18.3)
+## <a name="supported-sql-offerings-ssms-1831"></a>Поддерживаемые предложения SQL (SSMS 18.3.1)
 
 - Эта версия SSMS работает со всеми [поддерживаемыми версиями SQL Server 2008–[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]](https://support.microsoft.com/lifecycle?C2=1044) и предоставляет превосходную поддержку новейших облачных функций базы данных SQL Azure и хранилища данных SQL Azure.
 - Кроме того, SSMS 18.x можно установить одновременно с SSMS 17.x, SSMS 16.x или SQL Server 2014 и более ранними версиями.
 - Службы SQL Server Integration Services (SSIS) — среда SSMS версии 17.x и более поздней не поддерживает подключение к устаревшим службам SQL Server Integration Services. Для подключения к более ранней версии служб Integration Services используйте соответствующую версию SSMS. Например, используйте SSMS 16.x для подключения к службам SQL Server 2016 Integration Services. Версии SSMS 17.x и SSMS 16.x можно установить параллельно на одном компьютере. Начиная с выпуска SQL Server 2012 база данных каталога SSIS (SSISDB) является рекомендуемым средством для хранения, выполнения и мониторинга пакетов служб Integration Services, а также управления ими. Дополнительные сведения см. в разделе [Каталог служб SSIS](../integration-services/catalog/ssis-catalog.md).
 
-## <a name="supported-operating-systems-ssms-183"></a>Поддерживаемые операционные системы (SSMS 18.3)
+## <a name="supported-operating-systems-ssms-1831"></a>Поддерживаемые операционные системы (SSMS 18.3.1)
 
 При использовании последнего пакета обновления этот выпуск SSMS поддерживает следующие 64-разрядные платформы:
 
@@ -105,9 +105,9 @@ SQL Server Management Studio 18.2:
 > [!NOTE]
 > SSMS работает только на Windows. Если вам требуется средство, которое работает на платформах, отличных от Windows, рассмотрите Azure Data Studio. Azure Data Studio — это новое кроссплатформенное средство для macOS, Linux, а также Windows. Дополнительные сведения см. в разделе [Azure Data Studio](../azure-data-studio/what-is.md).
 
-## <a name="release-notes-ssms-183"></a>Заметки о выпуске (SSMS 18.3)
+## <a name="release-notes-ssms-1831"></a>Заметки о выпуске (SSMS 18.3.1)
 
-В этом выпуске есть несколько [известных проблем](release-notes-ssms.md#known-issues-183).
+В этом выпуске есть несколько [известных проблем](release-notes-ssms.md#known-issues-1831).
 
 Дополнительные сведения об этом выпуске см. в [заметках о выпуске SSMS](release-notes-ssms.md).
 

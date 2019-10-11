@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: af45e2b2-57fb-4bcd-a58b-e61401fb3b26
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: cde6f00d16bcff4ee56513f515cf2ecac93a1b5b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6062522ca6c5c3a311ba2f2c796f791c47e874ab
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68002511"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72252114"
 ---
-# <a name="spredirectpublisher-transact-sql"></a>sp_redirect_publisher (Transact-SQL)
+# <a name="sp_redirect_publisher-transact-sql"></a>sp_redirect_publisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Указывает перенаправленного издателя для существующей пары «издатель/база данных». Если база данных издателя принадлежит к группе доступности AlwaysOn, перенаправленный издатель — имя прослушивателя группы доступности, связанное с группой доступности.  
+  Указывает перенаправленного издателя для существующей пары «издатель/база данных». Если база данных издателя принадлежит к Always On группе доступности, перенаправленный издатель является именем прослушивателя группы доступности, связанным с группой доступности.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -40,30 +40,30 @@ sp_redirect_publisher
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @original_publisher = ] 'original_publisher'` Имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , первоначально опубликовавшего базу данных. *original_publisher* — **sysname**, не имеет значения по умолчанию.  
+`[ @original_publisher = ] 'original_publisher'` имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], который первоначально опубликовал базу данных. *original_publisher* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @publisher_db = ] 'publisher_db'` Имя базы данных публикации. *publisher_db* — **sysname**, не имеет значения по умолчанию.  
+`[ @publisher_db = ] 'publisher_db'` имя публикуемой базы данных. *publisher_db* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @redirected_publisher = ] 'redirected_publisher'` Имя прослушивателя доступности группы, связанное с группой доступности, который будет новым издателем. *redirected_publisher* — **sysname**, не имеет значения по умолчанию. Когда прослушивателю группы доступности задан порт, отличный от порта по умолчанию, указывайте номер порта вместе с именем прослушивателя, например `'Listenername,51433'`  
+`[ @redirected_publisher = ] 'redirected_publisher'` — имя прослушивателя группы доступности, связанного с группой доступности, который будет новым издателем. *redirected_publisher* имеет тип **sysname**и не имеет значения по умолчанию. Когда прослушивателю группы доступности задан порт, отличный от порта по умолчанию, указывайте номер порта вместе с именем прослушивателя, например `'Listenername,51433'`  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- **0** (успешное завершение) или **1** (неуспешное завершение)  
+ **0** (успешное завершение) или **1** (сбой)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
  None  
   
 ## <a name="remarks"></a>Примечания  
- **sp_redirect_publisher** используется для разрешения является издателем репликации перенаправляться в текущей первичной группы доступности AlwaysOn, связав пару издатель/база данных с помощью прослушивателя группы доступности. Выполнение **sp_redirect_publisher** после настройки прослушивателя группы Доступности для группы доступности, которая содержит опубликованную базу данных.  
+ **sp_redirect_publisher** используется, чтобы разрешить перенаправление издателя репликации в текущий первичный объект группы доступности Always on, связав пару издателя и базы данных с прослушивателем группы доступности. Выполните **sp_redirect_publisher** после настройки прослушивателя AG для группы доступности, содержащей опубликованную базу данных.  
   
- Если базе данных публикации на первоначальном издателе удаляется из группы доступности на первичной реплике, выполнение **sp_redirect_publisher** без указания значения для *@redirected_publisher* параметр, чтобы удалить перенаправление для пары «издатель/база данных». Дополнительные сведения о перенаправлении издателя, см. в разделе [обслуживание базы данных публикации AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/maintaining-an-always-on-publication-database-sql-server.md).  
+ Если база данных публикации на исходном издателе удаляется из группы доступности на первичной реплике, выполните **sp_redirect_publisher** без указания значения для параметра *\@redirected_publisher* , чтобы удалить перенаправление для пары "издатель — база данных". Дополнительные сведения о перенаправлении издателя в см. в разделе [обслуживание базы данных &#40;&#41;публикации AlwaysOn SQL Server](../../database-engine/availability-groups/windows/maintaining-an-always-on-publication-database-sql-server.md).  
   
 ## <a name="permissions"></a>Разрешения  
- Вызывающий объект должен быть либо членом **sysadmin** предопределенной роли сервера, **db_owner** предопределенной роли базы данных для базы данных распространителя или членом списка доступа публикации для определенной публикации связанные с базой данных издателя.  
+ Участник должен быть членом предопределенной роли сервера **sysadmin** , предопределенной роли базы данных **db_owner** для базы данных распространителя или членом списка доступа к публикации для определенной публикации, связанной с базой данных издателя.  
   
 ## <a name="see-also"></a>См. также  
  [Хранимые процедуры репликации (Transact-SQL)](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
  [sp_validate_redirected_publisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validate-redirected-publisher-transact-sql.md)   
  [sp_get_redirected_publisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-get-redirected-publisher-transact-sql.md)   
- [sp_validate_replica_hosts_as_publishers &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validate-replica-hosts-as-publishers-transact-sql.md)  
+ [sp_validate_replica_hosts_as_publishers &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validate-replica-hosts-as-publishers-transact-sql.md)  
   
   

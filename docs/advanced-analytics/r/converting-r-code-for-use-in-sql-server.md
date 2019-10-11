@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 536be600d319335173dbf112ec2d8f67cc7bf14b
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: 713c5cc8de5daecec77ff984a22f85b220ece2a2
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715738"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251342"
 ---
 # <a name="convert-r-code-for-execution-in-sql-server-in-database-instances"></a>Преобразование кода R для выполнения в экземплярах SQL Server (в базе данных)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "68715738"
 
 + Вы используете библиотеки R, которые обращаются к сети или не могут быть установлены на SQL Server.
 + Код выполняет отдельные вызовы источников данных вне SQL Server, таких как листы Excel, файлы в общих папках и другие базы данных. 
-+ Необходимо выполнить код в *@script* параметре [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) , а также параметризовать хранимую процедуру.
++ Необходимо выполнить код в параметре *\@script* параметра [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) , а также параметризовать хранимую процедуру.
 + Исходное решение включает в себя несколько шагов, которые могут быть более эффективными в рабочей среде, если они выполняются независимо, например подготовка данных или проектирование функций, а также обучение модели, оценка или отчетность.
 + Вы хотите повысить производительность, изменив библиотеки, используя параллельное выполнение, или разгрузим обработку в SQL Server. 
 
@@ -56,9 +56,9 @@ ms.locfileid: "68715738"
 
 + Составьте контрольный список возможных проблем с типами данных.
 
-    Службы SQL Server машинного обучения поддерживают все типы данных R. Однако поддерживает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] более разнообразные типы данных, чем R. Поэтому при отправке [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] данных в R и наоборот выполняются некоторые неявные преобразования типов данных. Может потребоваться явное приведение или преобразование некоторых данных. 
+    Службы SQL Server машинного обучения поддерживают все типы данных R. Однако [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает более разнообразные типы данных, чем R. Таким образом, некоторые неявные преобразования типов данных выполняются при отправке данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в R, и наоборот. Может потребоваться явное приведение или преобразование некоторых данных. 
 
-    Значения NULL поддерживаются. Однако R использует `na` конструкцию данных для представления отсутствующего значения, которое аналогично значению NULL.
+    Значения NULL поддерживаются. Однако R использует конструкцию данных `na` для представления отсутствующего значения, которое аналогично значению NULL.
 
 + Рекомендуется исключить зависимость от данных, которые не могут использоваться в R: например, типы данных ROWID и GUID из SQL Server не могут быть использованы R и создают ошибки.
 
@@ -72,7 +72,7 @@ ms.locfileid: "68715738"
 
 + При запуске R в хранимой процедуре можно передавать несколько **скалярных** входных данных. Для всех параметров, которые необходимо использовать в выходных данных, добавьте ключевое слово **Output** . 
 
-    Например, следующие скалярные входные `@model_name` данные содержат имя модели, которое также выводится в виде собственного столбца в результатах:
+    Например, следующий скалярный вход `@model_name` содержит имя модели, которое также выводится в виде собственного столбца в результатах:
 
     ```sql
     EXEC sp_execute_external_script @model_name="DefaultModel" OUTPUT, @language=N'R', @script=N'R code here'
@@ -106,7 +106,7 @@ ms.locfileid: "68715738"
 
 + Выполните все запросы заранее и изучите SQL Server планы запросов, чтобы найти задачи, которые можно выполнять параллельно.
 
-    Если входной запрос можно выполнить параллельно, задайте в `@parallel=1` качестве части аргументов значение [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md). 
+    Если входной запрос можно выполнить параллельно, задайте `@parallel=1` как часть аргументов [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md). 
 
     Параллельная обработка с использованием этого параметра обычно поддерживается, если SQL Server может работать с секционированными таблицами или распределять запрос между несколькими процессами и выполнять статистическую обработку результатов в конце. Параллельная обработка с использованием этого параметра обычно не поддерживается, если для обучения моделей применяются алгоритмы, требующие считывания всех данных, или если требуется создать агрегаты.
 
@@ -114,11 +114,11 @@ ms.locfileid: "68715738"
 
 + Поиск способов использования T-SQL вместо кода R для вычислений на основе наборов.
 
-    Например, это решение R показывает, как пользовательские функции T-SQL и R могут выполнять одну и ту же задачу по проектированию функций: [Пошаговое руководство по](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md)обработке и анализу данных.
+    Например, это решение R показывает, как пользовательские функции T-SQL и R могут выполнять одну и ту же задачу по проектированию функций: [Пошаговое руководство по обработке и анализу данных](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md).
 
 + По возможности замените обычные функции R функциями **масштабирования** , поддерживающими распределенное выполнение. Дополнительные сведения см. в разделе [Сравнение базовых функций r и Scale](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler-compared-to-base-r).
 
-+ Обратитесь к разработчику базы данных, чтобы определить способы повышения производительности с помощью SQL Serverных функций, таких как оптимизированные для [памяти таблицы](https://docs.microsoft.com/sql/relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables), или, если используется выпуск Enterprise Edition, [Resource Governor](https://docs.microsoft.com/sql/relational-databases/resource-governor/resource-governor)).
++ Обратитесь к разработчику базы данных, чтобы определить способы повышения производительности с помощью SQL Serverных функций, таких как [оптимизированные для памяти таблицы](https://docs.microsoft.com/sql/relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables), или, если используется выпуск Enterprise Edition, [Resource Governor](https://docs.microsoft.com/sql/relational-databases/resource-governor/resource-governor)).
 
     Дополнительные сведения см. в статье [Советы и рекомендации по оптимизации SQL Server для служб аналитики](https://gallery.cortanaintelligence.com/Tutorial/SQL-Server-Optimization-Tips-and-Tricks-for-Analytics-Services) .
 
@@ -149,7 +149,7 @@ ms.locfileid: "68715738"
 
 + Использование средств T-SQL и процессов ETL. Проведите проектирование функций, извлечение признаков и очистку данных в рамках рабочих процессов данных.
 
-    При работе в выделенной среде разработки R, такой как [!INCLUDE[rsql_rtvs_md](../../includes/rsql-rtvs-md.md)] или RStudio, можно извлечь данные на компьютер, выполнить итеративный анализ данных, а затем выписать или отобразить результаты. 
+    При работе в выделенной среде разработки R, такой как [!INCLUDE[rsql_rtvs_md](../../includes/rsql-rtvs-md.md)] или RStudio, вы можете извлечь данные на компьютер, последовательно анализировать данные, а затем записывать или отображать результаты. 
     
     Однако при переносе отдельного кода R в SQL Server большую часть этого процесса можно упростить или делегировать другим средствам SQL Server. 
 

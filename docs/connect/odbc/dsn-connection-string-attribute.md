@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.reviewer: MightyPen
 ms.author: v-jizho2
 author: karinazhou
-ms.openlocfilehash: 7350fd7556040cded7f84db3ab9112ddfe7f816d
-ms.sourcegitcommit: 00350f6ffb73c2c0d99beeded61c5b9baa63d171
+ms.openlocfilehash: c06f6e9f95af02ba6240f9f71ac6a92c25bec755
+ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/02/2019
-ms.locfileid: "68702796"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71712917"
 ---
 # <a name="dsn-and-connection-string-keywords-and-attributes"></a>Ключевые слова и атрибуты строки подключения и имени DSN
 
@@ -116,6 +116,8 @@ ms.locfileid: "68702796"
 | | [SQL_COPT_SS_TXN_ISOLATION](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptsstxnisolation) | LMW |
 | | [SQL_COPT_SS_USER_DATA](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssuserdata) | LMW |
 | | [SQL_COPT_SS_WARN_ON_CP_ERROR](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptsswarnoncperror) | LMW |
+| [ClientCertificate](../../connect/odbc/dsn-connection-string-attribute.md#clientcertificate) | | LMW | 
+| [ClientKey](../../connect/odbc/dsn-connection-string-attribute.md#clientkey) | | LMW | 
 
 
 Ниже приведены некоторые ключевые слова для строк подключения и атрибуты подключения, которые не описаны в статьях [Использование ключевых слов строки подключения с собственным клиентом SQL Server](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md), [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) и [Функция SQLSetConnectAttr](../../odbc/reference/syntax/sqlsetconnectattr-function.md).
@@ -190,6 +192,31 @@ ms.locfileid: "68702796"
 |-|-|
 |нет|(По умолчанию) Для метаданных (при их наличии) используется процедура sp_describe_first_result_set. |
 |Да| Для метаданных используется параметр SET FMTONLY. |
+
+
+## <a name="clientcertificate"></a>ClientCertificate
+
+Указывает сертификат, используемый для проверки подлинности. Доступны следующие возможности: 
+
+| Значение параметра | Описание |
+|-|-|
+| sha1:`<hash_value>` | Драйвер ODBC использует хэш SHA1 для нахождение сертификата в хранилище сертификатов Windows |
+| subject:`<subject>` | Драйвер ODBC использует субъект для нахождение сертификата в хранилище сертификатов Windows |
+| файл: `<file_location>` [, пароль: `<password>`] | Драйвер ODBC использует файл сертификата. |
+
+Если сертификат находится в формате PFX, а закрытый ключ в сертификате PFX защищен паролем, необходимо указать ключевое слово Password. Для сертификатов в PEM и форматах DER требуется атрибут ClientKey
+
+
+## <a name="clientkey"></a>ClientKey
+
+Указывает расположение закрытого ключа для сертификатов PEM или DER, заданных атрибутом ClientCertificate. Формат: 
+
+| Значение параметра | Описание |
+|-|-|
+| файл: `<file_location>` [, пароль: `<password>`] | Указывает расположение файла закрытого ключа. |
+
+Если файл закрытого ключа защищен паролем, требуется ключевое слово Password. Если пароль содержит символы ",", лишний символ "," добавляется сразу после каждого из них. Например, если пароль имеет значение "a, b, c", в строке подключения содержится экранированный пароль "a,, b,, c". 
+    
 
 ### <a name="sql_copt_ss_access_token"></a>SQL_COPT_SS_ACCESS_TOKEN
 

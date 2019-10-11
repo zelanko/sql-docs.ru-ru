@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: 4c523848-1ce6-49ad-92b3-e0e90f24f1c2
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 60dbabcadaf5108572eaba6361fab28eaf0f49b3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9bef63c267bdf5b7d0c2603ed7a93af329d1992c
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68046139"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251968"
 ---
-# <a name="spauditwrite-transact-sql"></a>sp_audit_write (Transact-SQL)
+# <a name="sp_audit_write-transact-sql"></a>sp_audit_write (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Добавляет событие аудита, определяемые пользователем **USER_DEFINED_AUDIT_GROUP**. Если **USER_DEFINED_AUDIT_GROUP** не включена, **sp_audit_write** учитывается.  
+  Добавляет определенное пользователем событие аудита в **USER_DEFINED_AUDIT_GROUP**. Если **USER_DEFINED_AUDIT_GROUP** не включен, **sp_audit_write** игнорируется.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,13 +42,13 @@ sp_audit_write [ @user_defined_event_id = ] user_defined_event_id
   
 ## <a name="arguments"></a>Аргументы  
  `[ @user_defined_event_id = ] user_defined_event_id`  
- Параметр, определяемый пользователем, который заносится в **user_defined_event_id** столбец журнала аудита. *@user_defined_event_id* является типом **smallint**.  
+ Параметр, определенный пользователем, записывается в столбец **user_defined_event_id** журнала аудита. *\@user_defined_event_id* имеет тип **smallint**.  
   
  `[ @succeeded = ] succeeded`  
- Параметр, переданный пользователем с целью указания, было ли событие успешным или нет. Содержится в столбце успеха журнала аудита. `@succeeded` — **бит**.  
+ Параметр, переданный пользователем с целью указания, было ли событие успешным или нет. Содержится в столбце успеха журнала аудита. бит `@succeeded` является **битом**.  
   
  `[ @user_defined_information = ] 'user_defined_information'`  
- Определяемый пользователем текст, который заносится в новый столбец user_defined_event_id журнала аудита. `@user_defined_information` — **nvarchar(4000)** .  
+ Определяемый пользователем текст, который заносится в новый столбец user_defined_event_id журнала аудита. `@user_defined_information` имеет тип **nvarchar (4000)** .  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
@@ -56,10 +56,10 @@ sp_audit_write [ @user_defined_event_id = ] user_defined_event_id
  Ошибки вызваны неверными входными параметрами или ошибкой записи в целевой журнал аудита.  
   
 ## <a name="remarks"></a>Примечания  
- Когда **USER_DEFINED_AUDIT_GROUP** добавляется в спецификацию аудита сервера или спецификацию аудита базы данных, событие, вызванное **sp_audit_write** будут включены в журнале аудита.  
+ Когда **USER_DEFINED_AUDIT_GROUP** добавляется в спецификацию аудита сервера или в спецификацию аудита базы данных, событие, запускаемое **sp_audit_write** , будет включено в журнал аудита.  
   
 ## <a name="permissions"></a>Разрешения  
- Требуется членство в **открытый** роли базы данных.  
+ Требуется членство в роли базы данных **Public** .  
   
 ## <a name="examples"></a>Примеры  
   

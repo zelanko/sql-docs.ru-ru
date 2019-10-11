@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9d11d055-a3be-45aa-99a7-46447a94ed42
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c00b9536ad5a97e5e0d3d302e2960bc1b1a9f077
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 26a9703bea3e2c5647f2a96bac5e3673a55e09b7
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66500465"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71951786"
 ---
 # <a name="data-sources-supported-by-reporting-services-ssrs"></a>Источники данных, поддерживаемые службами Reporting Services (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] получают через модульный и расширяемый уровень данных, где работают модули обработки данных. Для получения данных отчета из источника данных необходимо выбрать модуль обработки данных, поддерживающий как тип источника данных, так и версию программного обеспечения источника данных и его платформу (32-разрядная или 64-разрядная [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]).  
@@ -113,7 +113,7 @@ ms.locfileid: "66500465"
 |Многомерная база данных SAP|SAP BW|Встроенный модуль обработки данных служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|См. документацию SAP по поддержке платформ.|Недоступно|Недоступно|SAP BW 7.0–7.5|Да|Недоступно|  
 |[!INCLUDE[extEssbase](../../includes/extessbase-md.md)]|[Hyperion Essbase](#Hyperion)|Встроенный модуль обработки данных служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|См. документацию Hyperion по поддержке платформ.|Да|Недоступно|[!INCLUDE[extEssbase](../../includes/extessbase-md.md)] 9.3.1|Да|Недоступно|  
 |Реляционная база данных Oracle|[Oracle;](#OracleClient)|Встроенный модуль обработки данных служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|Необходимы клиентские компоненты Oracle 12c или более поздней версии.|Да|Недоступно|Oracle 11g, 11g R2, 12c|Да|Да|  
-|Реляционная база данных Teradata|[Teradata](#Teradata)|Встроенный модуль обработки данных служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|Расширяет поставщика данных .NET для Teradata от Teradata.<br /><br /> Требует поставщика данных .NET для Teradata от Teradata.<br /><br /> См. документацию Teradata по поддержке платформ.|Да|Недоступно|Teradata v15<br /><br />Teradata v14<br /><br /> Teradata v13|Да|Нет|  
+|Teradata |[Teradata](#Teradata)|Встроенный модуль обработки данных служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|Расширяет поставщика данных .NET для Teradata от Teradata.<br /><br /> Требует поставщика данных .NET для Teradata от Teradata.<br /><br /> См. документацию Teradata по поддержке платформ.|Да|Недоступно|Teradata v15<br /><br />Teradata v14<br /><br /> Teradata v13|Да|Нет|  
 |Реляционная база данных DB2|Имя специализированного зарегистрированного модуля обработки данных||2004 Host Integration (HI) Server<br /><br /> См. [документацию по Host Integration Server](https://msdn.microsoft.com/library/gg241192\(v=bts.10\).aspx).|Да|Недоступно|Недоступно|Да|Нет|  
 |Обычный источник данных OLE DB|OLEDB|Встроенный модуль обработки данных служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|Любой источник данных, поддерживающий OLE DB.<br /><br /> См. документацию источника данных по поддержке платформ.|Да|Недоступно|Любой источник данных, поддерживающий OLE DB. См. [примечание](#OLEDBStandard).|Да|Недоступно|  
 |Обычный источник данных ODBC|[интерфейс ODBC](#ODBCGeneric)|Встроенный модуль обработки данных служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|Любой источник данных, поддерживающий ODBC.<br /><br /> См. документацию источника данных по поддержке платформ.|Да|Недоступно|Любой источник данных, поддерживающий ODBC. См. [примечание](#ODBCGeneric).|Да|Да|  
@@ -244,13 +244,13 @@ ms.locfileid: "66500465"
  [Назад к таблице источников данных](#DataSourcesTable)  
   
 ###  <a name="Teradata"></a> Модуль обработки данных Teradata  
- При выборе типа источника данных **Teradata**выбирается модуль обработки данных служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , который расширяет возможности поставщика данных .NET Framework для Teradata. Чтобы получить данные отчета из базы данных Teradata, системный администратор должен установить поставщика данных .NET Framework для Teradata на клиенте разработки отчетов для предварительного просмотра отчетов и на сервере отчетов для просмотра опубликованных отчетов.  
+ При выборе типа источника данных **Teradata**выбирается модуль обработки данных служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , который расширяет возможности поставщика данных .NET Framework для Teradata. Чтобы получить данные отчета от Teradata, системный администратор должен установить поставщика данных .NET Framework для Teradata на клиенте разработки отчетов для предварительного просмотра отчетов и на сервере отчетов для просмотра опубликованных отчетов.  
   
  Для проектов сервера отчетов не существует графического конструктора запросов для этого модуля. Для создания запросов используйте текстовый конструктор запросов.  
   
  В следующей таблице показаны поддерживаемые версии поставщика данных .NET Framework для Teradata для определения источника в определении отчета в [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)]:  
   
-|[!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] version|Версия базы данных Teradata|Поставщик данных .NET Framework для ODBC|  
+|[!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] version|Версия Teradata|Поставщик данных .NET Framework для ODBC|  
 |-----------------------------------|-------------------------------|-------------------------------------------------------|    
 |[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|12.00|12.00.01|  
 |[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|6.20|12.00.01|  
@@ -269,9 +269,7 @@ ms.locfileid: "66500465"
  Этот модуль поддерживает многозначные параметры. Макросы могут быть указаны в запросе с использованием команды EXECUTE в режиме запроса TEXT.  
   
  Дополнительные сведения см. в разделе [Тип соединения Teradata (службы SSRS)](../../reporting-services/report-data/teradata-connection-type-ssrs.md).  
-  
- Также можно создавать модели на основе базы данных Teradata. Дополнительные сведения см. в следующем техническом документе на веб-сайте Teradata: [Microsoft SQL Server 2012 Reporting Services and Teradata Corporation](https://www.teradata.com/white-papers/Microsoft-SQL-Server-2012-Reporting-Services-and-Teradata-Corporation/?type=WP)(Службы Microsoft SQL Server 2012 Reporting Services и корпорация Teradata).  
-  
+ 
  [Назад к таблице источников данных](#DataSourcesTable)  
   
 ###  <a name="SharePointList"></a> Модуль обработки списка данных SharePoint  

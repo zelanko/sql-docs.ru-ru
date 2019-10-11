@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: 6b95ad90-6c82-4a23-9294-a2adb74934a3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f79f9f94d56c900d879fce06646b401f735e0bd0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b64c1d0d6032ce5032a92c840635fdf0c087e571
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140579"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251953"
 ---
 # <a name="pathname-transact-sql"></a>PathName (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Возвращает путь в виде большого двоичного объекта (BLOB) FILESTREAM. OpenSqlFilestream API использует этот путь, чтобы вернуть дескриптор, который приложение может использовать для работы с данными больших двоичных ОБЪЕКТОВ с помощью API-интерфейсов Win32. Функция PathName доступна только для чтения.  
+  Возвращает путь в виде большого двоичного объекта (BLOB) FILESTREAM. API OpenSqlFilestream использует этот путь для возврата маркера, который приложение может использовать для работы с данными большого двоичного объекта с помощью API-интерфейсов Win32. Функция PathName доступна только для чтения.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -40,25 +40,25 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
   
 ## <a name="arguments"></a>Аргументы  
  *column_name*  
- Имя столбца **varbinary(max)** столбец FILESTREAM. *column_name* должно быть именем столбца. Он не может быть выражением или результатом инструкции CAST или CONVERT.  
+ Имя столбца FILESTREAM типа **varbinary (max)** . Аргумент *column_name* должен быть именем столбца. Он не может быть выражением или результатом инструкции CAST или CONVERT.  
   
- PathName для столбца, в любой другой тип данных или для **varbinary(max)** columnthat не поддерживает FILESTREAM хранилища атрибутов, возникнет ошибка компиляции запроса.  
+ Запрос пути к столбцу любого другого типа данных или для колумнсат **varbinary (max)** не имеет атрибута хранилища FILESTREAM, что вызовет ошибку во время компиляции запроса.  
   
- *@option*  
- Целое число [выражение](../../t-sql/language-elements/expressions-transact-sql.md) , определяющий способ форматирования серверных компонентов пути. *@option* может принимать одно из следующих значений. Значение по умолчанию равно 0.  
+ *@no__t 1option*  
+ Целочисленное [выражение](../../t-sql/language-elements/expressions-transact-sql.md) , определяющее способ форматирования серверного компонента пути. *\@option* может принимать одно из следующих значений. Значение по умолчанию равно 0.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
-|0|Пример возвращает имя сервера, преобразованное в BIOS формат: `\\SERVERNAME\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F19F7-38EA-4AB0-BB89-E6C545DBD3F9`|  
-|1|Возвращает имя сервера без преобразования, например: `\\ServerName\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F1`|  
-|2|Возвращает полный путь сервера, например: `\\ServerName.MyDomain.com\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F19F7-38EA-4AB0-BB89-E6C545DBD3F9`|  
+|0|Возвращает имя сервера, преобразованное в формат BIOS, например: `\\SERVERNAME\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F19F7-38EA-4AB0-BB89-E6C545DBD3F9`.|  
+|1|Возвращает имя сервера без преобразования, например: `\\ServerName\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F1`.|  
+|2|Возвращает полный путь к серверу, например: `\\ServerName.MyDomain.com\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F19F7-38EA-4AB0-BB89-E6C545DBD3F9`.|  
   
  *use_replica_computer_name*  
- Значение бита, определяет, как имя сервера должно возвращаться в группе доступности Always On.  
+ Битовое значение, определяющее, как имя сервера должно возвращаться в группе доступности Always On.  
   
- Когда базы данных не принадлежит к группе доступности Always On, то значение этого аргумента игнорируется. В пути всегда используется имя компьютера.  
+ Если база данных не принадлежит группе доступности Always On, значение этого аргумента игнорируется. В пути всегда используется имя компьютера.  
   
- При доступности Always On база данных принадлежит группе, затем значение *use_replica_computer_name* следующим образом влияет на выходные данные **PathName** функции:  
+ Если база данных принадлежит к Always On группе доступности, то в выходных данных функции **PathName** значение *use_replica_computer_name* имеет следующий результат:  
   
 |Значение|Описание|  
 |-----------|-----------------|  

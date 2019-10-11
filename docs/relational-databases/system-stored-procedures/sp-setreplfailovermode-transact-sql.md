@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: ca98a4c3-bea4-4130-88d7-79e0fd1e85f6
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: a32c5eb0a7dcd18558b3d1a931d9a8c83cfeca0c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5b39a5fa53560abb825b303d37d111bcbd7d0886
+ms.sourcegitcommit: 79e6d49ae4632f282483b0be935fdee038f69cc2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68104369"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72173564"
 ---
-# <a name="spsetreplfailovermode-transact-sql"></a>Хранимая процедура sp_setreplfailovermode (Transact-SQL)
+# <a name="sp_setreplfailovermode-transact-sql"></a>Хранимая процедура sp_setreplfailovermode (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Позволяет установить режим отработки отказа для подписок, включенных для немедленного обновления с отработкой отказа с обновлением посредством очередей. Эта хранимая процедура выполняется на подписчике в базе данных подписки. Дополнительные сведения о режимах отработки отказа см. в разделе [обновляемые подписки для репликации транзакций](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md).  
@@ -41,33 +41,32 @@ sp_setreplfailovermode [ @publisher= ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publisher = ] 'publisher'` — Имя публикации. *Публикация* — **sysname**, не имеет значения по умолчанию. Публикация уже должна существовать.  
+`[ @publisher = ] 'publisher'` — имя публикации. Аргумент *publication* имеет тип **sysname**и не имеет значения по умолчанию. Публикация уже должна существовать.  
   
-`[ @publisher_db = ] 'publisher_db'` — Имя базы данных публикации. *publisher_db* — **sysname**, не имеет значения по умолчанию.  
+`[ @publisher_db = ] 'publisher_db'` — это имя базы данных публикации. *publisher_db* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @publication = ] 'publication'` — Имя публикации. *Публикация*— **sysname**, не имеет значения по умолчанию.  
+`[ @publication = ] 'publication'` — имя публикации. Аргумент *publication* имеет тип **sysname**и не имеет значения по умолчанию.  
   
- [ **@failover_mode=** ] **"***failover_mode***"**  
- Режим отработки отказа для подписок. *failover_mode* — **nvarchar(10)** и может принимать одно из следующих значений.  
+`[ @failover_mode = ] 'failover_mode'` является режимом отработки отказа для подписки. *FAILOVER_MODE* имеет тип **nvarchar (10)** и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
-|**немедленное** или **синхронизации**|Изменения данных на подписчике массово копируются на издатель по мере их возникновения.|  
-|**в очереди**|Изменения данных сохраняются в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] очереди.|  
+|**Интерпретация** или **Синхронизация**|Изменения данных на подписчике массово копируются на издатель по мере их возникновения.|  
+|**в очереди**|Изменения данных хранятся в очереди [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
   
 > [!NOTE]  
->  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Служба Message Queuing устарел и больше не поддерживается.  
+>  [!INCLUDE[msCoName](../../includes/msconame-md.md)] очередь сообщений устарела и больше не поддерживается.  
   
-`[ @override = ] override` Только для внутреннего использования.  
+`[ @override = ] override` только для внутреннего использования.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- **0** (успешное завершение) или **1** (неуспешное завершение)  
+ **0** (успешное завершение) или **1** (сбой)  
   
 ## <a name="remarks"></a>Примечания  
- **sp_setreplfailovermode** используется в репликации моментальных снимков или репликации транзакций для которых подписки включены, либо обновления с переходом на немедленное обновление посредством очередей или немедленного обновления с отработкой отказа в очередь обновление.  
+ **sp_setreplfailovermode** используется в репликации моментальных снимков или репликации транзакций, для которой включены подписки, либо для обновления посредством очередей с отработкой отказа, либо для немедленного обновления с отработкой отказа на обновление посредством очередей.  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **sysadmin** предопределенной роли сервера или **db_owner** предопределенной роли базы данных могут выполнять процедуру **sp_setreplfailovermode**.  
+ Только члены предопределенной роли сервера **sysadmin** или предопределенной роли базы данных **db_owner** могут выполнять **sp_setreplfailovermode**.  
   
 ## <a name="see-also"></a>См. также  
  [Переключение между режимами обновления для обновляемой подписки на публикацию транзакций](../../relational-databases/replication/administration/switch-between-update-modes-for-an-updatable-transactional-subscription.md)   

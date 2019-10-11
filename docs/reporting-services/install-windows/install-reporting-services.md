@@ -1,29 +1,37 @@
 ---
-title: Установка служб SQL Server Reporting Services (2017 или более поздней версии) | Документы Майкрософт
-ms.date: 12/20/2017
+title: Установка служб SQL Server Reporting Services | Документы Майкрософт
+ms.date: 10/02/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: d636086c909d1d486040df6fc8d31cfea57c4f4d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 749dfd8f7cce37aeeb9721af9f951caa6ab15dfd
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65502692"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952743"
 ---
-# <a name="install-sql-server-reporting-services-2017-and-later"></a>Установка служб SQL Server Reporting Services (2017 или более поздней версии)
+# <a name="install-sql-server-reporting-services"></a>Установите службы SQL Server Reporting Services
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2017-and-later](../../includes/ssrs-appliesto-2017-and-later.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
 
 Установка служб SQL Server Reporting Services включает в себя серверные компоненты для хранения элементов отчета, подготовки отчетов к просмотру, а также для обработки подписок и других служб отчетов. 
 
-Чтобы скачать службы Microsoft SQL Server 2017 Reporting Services, перейдите в [Центр загрузки Майкрософт](https://www.microsoft.com/download/details.aspx?id=55252).
+::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+Скачайте [службы SQL Server 2019 Reporting Services](https://www.microsoft.com/download/details.aspx?id=100122) из Центра загрузки Майкрософт.
+
+::: moniker-end
+
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+Скачайте [службы SQL Server 2017 Reporting Services](https://www.microsoft.com/download/details.aspx?id=55252) из Центра загрузки Майкрософт.
+
+::: moniker-end
 
 > [!NOTE]
-> Ищете сервер отчетов Power BI? См. раздел [Установка сервера отчетов Power BI](https://powerbi.microsoft.com/documentation/reportserver-install-report-server/).
+> Ищете сервер отчетов Power BI? См. раздел [Установка сервера отчетов Power BI](https://powerbi.microsoft.com/documentation/reportserver-install-report-server/).
 
 ## <a name="before-you-begin"></a>Перед началом
 
@@ -40,34 +48,24 @@ ms.locfileid: "65502692"
 
 2. Выберите **Установка служб Reporting Services**.
 
-    ![Установка служб Reporting Services](media/install-reporting-services/report-server-install.png)
-
 3. Выберите устанавливаемый выпуск, а затем нажмите кнопку **Далее**.
-
-    ![Выбор выпуска](media/install-reporting-services/report-server-install-edition.png)
 
     Для бесплатного выпуска в раскрывающемся списке выберите выпуск Evaluation или Developer.
 
     ![Выпуск Evaluation или Developer](media/install-reporting-services/report-server-install-edition-select.png)
 
-    В противном случае введите ключ продукта. [Как найти ключ продукта для SQL Server Reporting Services 2017](find-reporting-services-product-key-ssrs.md)
+    В противном случае введите ключ продукта. [Как найти ключ продукта для SQL Server Reporting Services](find-reporting-services-product-key-ssrs.md).
 
 4. Прочтите и примите условия лицензионного соглашения, а затем нажмите кнопку **Далее**.
 
 5. Для хранения базы данных сервера отчетов вам потребуется ядро СУБД. Нажмите кнопку **Далее**, чтобы установить только сервер отчетов.
 
-    ![Устанавливать базу данных не требуется](media/install-reporting-services/report-server-install-db-engine.png)
-
 6. Укажите расположение установки для сервера отчетов. Чтобы продолжить, нажмите кнопку **Установить**.
-
-    ![Укажите путь установки](media/install-reporting-services/report-server-install-file-path.png)
 
     > [!NOTE]
     > По умолчанию установка производится в каталог C:\Program Files\Microsoft SQL Server Reporting Services.
 
 7. После успешной установки нажмите кнопку **Настроить сервер отчетов**, чтобы запустить диспетчер конфигурации служб Reporting Services.
-
-    ![Настроить сервер отчетов](media/install-reporting-services/report-server-install-configure.png)
 
 ## <a name="configuration-your-report-server"></a>Настройка вашего сервера отчетов
 

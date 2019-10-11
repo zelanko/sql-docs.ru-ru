@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 45001fc9-2dbd-463c-af1d-aa8982d8c813
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f9cb198b8083a525c6416af17df774ecfe605bd0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8df9c4fcc88f568c920f0a5959338f195d79d925
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68119380"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72252107"
 ---
-# <a name="spvalidatereplicahostsaspublishers-transact-sql"></a>sp_validate_replica_hosts_as_publishers (Transact-SQL)
+# <a name="sp_validate_replica_hosts_as_publishers-transact-sql"></a>sp_validate_replica_hosts_as_publishers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  **sp_validate_replica_hosts_as_publishers** является расширением **sp_validate_redirected_publisher** , позволяющий все вторичные реплики для проверки, а не только текущей первичной реплики. **sp_validate_replicat_hosts_as_publisher** проверяет всю Always On репликации топологию. **sp_validate_replica_hosts_as_publishers** должна выполняться прямо для распространителя с помощью сеанса удаленного рабочего стола, чтобы избежать ошибки безопасности двойного прыжка (21892).  
+  **sp_validate_replica_hosts_as_publishers** — это расширение **sp_validate_redirected_publisher** , которое позволяет проверять все вторичные реплики, а не только текущую первичную реплику. **sp_validate_replicat_hosts_as_publisher** проверяет всю топологию Always on репликации. **sp_validate_replica_hosts_as_publishers** должен выполняться непосредственно на распространителе с помощью сеанса удаленного рабочего стола, чтобы избежать ошибки безопасности двойного прыжка (21892).  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -40,24 +40,24 @@ sp_validate_replica_hosts_as_publishers
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @original_publisher = ] 'original_publisher'` Имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , первоначально опубликовавшего базу данных. *original_publisher* — **sysname**, не имеет значения по умолчанию.  
+`[ @original_publisher = ] 'original_publisher'` имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], который первоначально опубликовал базу данных. *original_publisher* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @publisher_db = ] 'publisher_db'` Имя базы данных публикации. *publisher_db* — **sysname**, не имеет значения по умолчанию.  
+`[ @publisher_db = ] 'publisher_db'` имя публикуемой базы данных. *publisher_db* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @redirected_publisher = ] 'redirected_publisher'` Цель перенаправления при **sp_redirect_publisher** был вызван для первоначальный издатель/опубликованная база данных пары. *redirected_publisher* — **sysname**, не имеет значения по умолчанию.  
+`[ @redirected_publisher = ] 'redirected_publisher'` целевой объект перенаправления при вызове **sp_redirect_publisher** для исходной пары издателей и опубликованных баз данных. *redirected_publisher* имеет тип **sysname**и не имеет значения по умолчанию.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- **0** (успешное завершение) или **1** (неуспешное завершение)  
+ **0** (успешное завершение) или **1** (сбой)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
  Нет.  
   
 ## <a name="remarks"></a>Примечания  
- Если не существует запись для издателя и базы данных публикации, **sp_validate_redirected_publisher** возвращает значение null, если для параметра вывода *@redirected_publisher* . В противном случае происходит возврат связанного перенаправленного издателя как в случае успеха, так и в случае неудачи.  
+ Если для издателя и базы данных публикации не существует записи, **sp_validate_redirected_publisher** возвращает значение NULL для выходного параметра *\@redirected_publisher*. В противном случае происходит возврат связанного перенаправленного издателя как в случае успеха, так и в случае неудачи.  
   
- Если проверка прошла успешно, **sp_validate_redirected_publisher** Возвращает указание на успех.  
+ Если проверка завершается успешно, **sp_validate_redirected_publisher** Возвращает индикатор успеха.  
   
- Если проверка завершается неудачно, формируются соответствующие ошибки.  **sp_validate_redirected_publisher** делает обнаружил максимум усилий для вызова обо всех проблемах и не только первый.  
+ Если проверка завершается неудачно, формируются соответствующие ошибки.  **sp_validate_redirected_publisher** предоставляет лучшие усилия для вызова всех проблем, а не только для первого.  
   
 > [!NOTE]  
 >  Работа**sp_validate_replica_hosts_as_publishers** завершится сбоем со следующей ошибкой при проверке узлов вторичной реплики, которые не допускают доступ для чтения либо требуют указания намерения чтения.  
@@ -69,12 +69,12 @@ sp_validate_replica_hosts_as_publishers
 >  Произошла одна или несколько ошибок проверки издателя для узла реплики «MyReplicaHostName».  
   
 ## <a name="permissions"></a>Разрешения  
- Вызывающий объект должен быть либо членом **sysadmin** предопределенной роли сервера, **db_owner** предопределенной роли базы данных для базы данных распространителя или членом списка доступа публикации для определенной публикации связанные с базой данных издателя.  
+ Участник должен быть членом предопределенной роли сервера **sysadmin** , предопределенной роли базы данных **db_owner** для базы данных распространителя или членом списка доступа к публикации для определенной публикации, связанной с базой данных издателя.  
   
 ## <a name="see-also"></a>См. также  
  [Хранимые процедуры репликации (Transact-SQL)](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
  [sp_get_redirected_publisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-get-redirected-publisher-transact-sql.md)   
  [sp_redirect_publisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-redirect-publisher-transact-sql.md)   
- [sp_validate_redirected_publisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validate-redirected-publisher-transact-sql.md)  
+ [sp_validate_redirected_publisher &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validate-redirected-publisher-transact-sql.md)  
   
   

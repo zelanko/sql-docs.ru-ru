@@ -18,17 +18,17 @@ ms.assetid: 322e3170-93f8-468a-a123-104ce7bd7fad
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3818c2ff4689605ff03660d6ae66bf4d579cb443
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5c579d8d31daff1b03db4c82bcd33642c02f85c5
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68037313"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251276"
 ---
-# <a name="spxtpflushtemporalhistory-transact-sql"></a>sp_xtp_flush_temporal_history (Transact-SQL)
+# <a name="sp_xtp_flush_temporal_history-transact-sql"></a>sp_xtp_flush_temporal_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Вызывает задача очистки данных для перемещения всех фиксированных строк из промежуточной таблицы в памяти в таблицу журнала на диске.  
+  Вызывает задачу сброса данных для перемещения всех зафиксированных строк из промежуточной таблицы в памяти в таблицу журнала на диске.  
 
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -41,17 +41,17 @@ sys.sp_xtp_flush_temporal_history @schema_name, @object_name
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *@schema_name*  
- Имя схемы для текущей или темпоральной таблицей  
+ *@no__t 1schema_name*  
+ Имя схемы для текущей или темпоральной таблицы  
   
- *@object_name*  
- Имя текущей или темпоральной таблицей  
+ *\@object_name*  
+ Имя текущей или темпоральной таблицы  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- 0 (успешное завершение) или > 0 (неуспешное завершение)  
+ 0 (успешное завершение) или > 0 (сбой)  
   
 ## <a name="permissions"></a>Разрешения  
- Требуются права db_owner.  
+ Требуются разрешения db_owner.  
   
 ## <a name="see-also"></a>См. также  
  [Вопросы производительности оптимизированных для памяти темпоральных таблиц с системным управлением версиями](../../relational-databases/tables/memory-optimized-system-versioned-temporal-tables-performance.md)  

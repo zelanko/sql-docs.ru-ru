@@ -20,19 +20,19 @@ ms.assetid: 4161dc57-f3e7-4492-8972-8cfb77b29643
 author: pmasl
 ms.author: pelopes
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 17dea47b6659122e02b092f5825d5c05497f28a3
-ms.sourcegitcommit: 071065bc5433163ebfda4fdf6576349f9d195663
+ms.openlocfilehash: dbd8e8898bf6453e456156e7c6c070a4867761b9
+ms.sourcegitcommit: aece9f7db367098fcc0c508209ba243e05547fe1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71923779"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72261558"
 ---
 # <a name="sysdm_exec_requests-transact-sql"></a>sys.dm_exec_requests (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Возвращает сведения о каждом из запросов, выполняющихся в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
-  
+Возвращает сведения о каждом запросе, который выполняется в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения о запросах см. в разделе [руководств по архитектуре потоков и задач](../../relational-databases/thread-and-task-architecture-guide.md).
+   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |session_id|**smallint**|Идентификатор сеанса, к которому относится данный запрос. Не допускает значение NULL.|  
@@ -94,17 +94,17 @@ ms.locfileid: "71923779"
 |parallel_worker_count |**int** |**Применимо к**: с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Количество зарезервированных параллельных рабочих ролей, если это параллельный запрос.  |  
 |external_script_request_id |**uniqueidentifier** |**Применимо к**: с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Идентификатор запроса внешнего скрипта, связанный с текущим запросом. |  
 |is_resumable |**bit** |**Применимо к**: с [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Указывает, является ли запрос возобновляемой операцией с индексом. |  
-|page_resource |**Binary (8)** |**Область применения**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]<br /><br /> 8-байтовое шестнадцатеричное представление ресурса страницы, если `wait_resource` столбец содержит страницу. Дополнительные сведения см. в разделе [sys. fn_PageResCracker](../../relational-databases/system-functions/sys-fn-pagerescracker-transact-sql.md). |  
+|page_resource |**Binary (8)** |**Область применения**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]<br /><br /> 8-байтовое шестнадцатеричное представление ресурса страницы, если столбец `wait_resource` содержит страницу. Дополнительные сведения см. в разделе [sys. fn_PageResCracker](../../relational-databases/system-functions/sys-fn-pagerescracker-transact-sql.md). |  
 |page_server_reads|**bigint**|**Область применения**: Масштабирование базы данных SQL Azure<br /><br /> Число операций чтения сервера страниц, выполненных этим запросом. Не допускает значение NULL.|  
 | &nbsp; | &nbsp; | &nbsp; |
 
 ## <a name="remarks"></a>Примечания 
 Чтобы выполнить код, внешний по отношению к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (например, расширенную хранимую процедуру или распределенный запрос), поток должен выйти из-под управления планировщика, работающего в режиме без вытеснения. Для этого исполнитель переходит в режим с вытеснением. Значения времени, возвращаемые этим динамическим административным представлением, не включают время, затраченное в режиме с вытеснением.
 
-При выполнении параллельных запросов в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [режиме строки](../../relational-databases/query-processing-architecture-guide.md#row-mode-execution)назначает рабочий поток для координации рабочих потоков, ответственных за выполнение назначенных им задач. В этом динамическом административном отображении для запроса отображается только поток координатора. Столбцы **READS**, **writes**, **logical_reads**и **row_count** **не обновляются** для потока координатора. Столбцы **wait_type**, **wait_time**, **last_wait_type**, **wait_resource**и **granted_query_memory** **обновляются только** для потока координатора. Дополнительные сведения см. в разделе [руководств по архитектуре потоков и задач](../../relational-databases/thread-and-task-architecture-guide.md).
+При выполнении параллельных запросов в [режиме строки](../../relational-databases/query-processing-architecture-guide.md#row-mode-execution)[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] назначает рабочий поток для координации рабочих потоков, ответственных за выполнение назначенных им задач. В этом динамическом административном отображении для запроса отображается только поток координатора. Столбцы **READS**, **writes**, **logical_reads**и **row_count** **не обновляются** для потока координатора. Столбцы **wait_type**, **wait_time**, **last_wait_type**, **wait_resource**и **granted_query_memory** **обновляются только** для потока координатора. Дополнительные сведения см. в разделе [руководств по архитектуре потоков и задач](../../relational-databases/thread-and-task-architecture-guide.md).
 
 ## <a name="permissions"></a>Разрешения
-Если пользователь имеет `VIEW SERVER STATE` разрешение на сервере, он увидит все выполняющиеся сеансы на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]экземпляре; в противном случае пользователь увидит только текущий сеанс. `VIEW SERVER STATE`невозможно предоставить в [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] , так `sys.dm_exec_requests` как всегда ограничено текущим соединением.
+Если пользователь имеет разрешение `VIEW SERVER STATE` на сервере, то он увидит все сеансы выполнения на экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; в противном случае пользователь увидит только текущий сеанс. `VIEW SERVER STATE` не может быть предоставлено в [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], поэтому `sys.dm_exec_requests` всегда ограничено текущим соединением.
   
 ## <a name="examples"></a>Примеры  
   
@@ -184,11 +184,12 @@ GO
 ```
 
 ## <a name="see-also"></a>См. также
-
-- [Динамические административные представления и функции](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)
-- [Динамические административные представления и функции, связанные с выполнением](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)
-- [sys.dm_os_memory_clerks](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)
-- [sys.dm_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)
-- [sys.dm_exec_query_memory_grants](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)
-- [sys.dm_exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)
-- [sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)  
+[Динамические административные представления и функции](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)    
+[Динамические административные представления и функции, связанные с выполнением](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)     
+[Руководство по архитектуре обработки запросов](../../relational-databases/query-processing-architecture-guide.md#DOP)       
+[Инструкции по архитектуре потоков и задач](../../relational-databases/thread-and-task-architecture-guide.md)    
+[sys. DM _os_memory_clerks](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)    
+[sys. DM _os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)    
+[sys. DM _exec_query_memory_grants](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)    
+[sys. DM _exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)    
+[sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)      
