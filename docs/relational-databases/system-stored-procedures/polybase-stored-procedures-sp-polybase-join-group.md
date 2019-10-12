@@ -14,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: 48066431-fed2-4a8a-85af-ac704689e183
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0b7be2bb99a92794ed8c1b5971edca47522c2552
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ba22ffe282e6b4248ed58bed850bc6ac08255df5
+ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67941939"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72278111"
 ---
-# <a name="sppolybasejoingroup-transact-sql"></a>sp_polybase_join_group (Transact-SQL)
+# <a name="sp_polybase_join_group-transact-sql"></a>sp_polybase_join_group (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Добавляет экземпляр SQL Server в качестве вычислительного узла в группу PolyBase для масштабируемых вычислений.  
+  Добавляет экземпляр SQL Server в качестве вычислительного узла в группу Polybase для вычислений с масштабным масштабированием.  
   
- Экземпляр SQL Server должен иметь [PolyBase](../../relational-databases/polybase/polybase-guide.md) установлен компонент.  PolyBase позволяет интегрировать источников данных SQL Server, таких как Hadoop и Azure хранилище BLOB-объектов. См. также [sp_polybase_leave_group &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/polybase-stored-procedures-sp-polybase-leave-group.md).  
+ На экземпляре SQL Server должен быть установлен компонент [polybase](../../relational-databases/polybase/polybase-guide.md) .  Polybase обеспечивает интеграцию источников данных, отличных от SQL Server, таких как Hadoop и хранилище BLOB-объектов Azure. См. [также &#40;SP_POLYBASE_LEAVE_GROUP Transact-&#41;SQL](../../relational-databases/system-stored-procedures/polybase-stored-procedures-sp-polybase-leave-group.md).  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -40,14 +40,14 @@ sp_polybase_join_group (@head_node_address = N'head_node_address',
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *@head_node_address* = N "*head_node_address*"  
- Имя компьютера, на котором размещается SQL Server головной узел масштабируемой группы PolyBase. *@head_node_address* имеет тип nvarchar(255).  
+ *\@head_node_address* = N '*head_node_address*'  
+ Имя компьютера, на котором размещен головной узел SQL Server масштабируемой группы Polybase. *\@head_node_address* имеет тип nvarchar (255).  
   
- *@dms_control_channel_port* = dms_control_channel_port  
- Порт, где выполняется канал управления для головного узла службы перемещения данных PolyBase. *@dms_control_channel_port* является __int16 без знака. По умолчанию используется **16450**.  
+ *\@dms_control_channel_port* = dms_control_channel_port  
+ Порт, на котором работает канал управления для Перемещение данных PolyBase службы головного узла. *\@dms_control_channel_port* — это неподписанный __int16. Значение по умолчанию — **16450**.  
   
- *@head_node_sql_server_instance_name* = head_node_sql_server_instance_name  
- Имя экземпляра SQL Server головного узла в масштабируемой группе PolyBase. *@head_node_sql_server_instance_name* — nvarchar(16) в формате.  
+ *\@head_node_sql_server_instance_name* = head_node_sql_server_instance_name  
+ Имя SQL Serverного экземпляра головного узла в масштабируемой группе Polybase. *\@head_node_sql_server_instance_name* имеет тип nvarchar (16).  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
@@ -56,10 +56,10 @@ sp_polybase_join_group (@head_node_address = N'head_node_address',
  Необходимо разрешение CONTROL SERVER.  
   
 ## <a name="remarks"></a>Примечания  
- После выполнения хранимой процедуры, завершите работу ядра PolyBase и перезапустите службу перемещения данных PolyBase на компьютере. Для проверки выполнения следующему динамическому административному Представлению на головном узле: **sys.dm_exec_compute_nodes**.  
+ После выполнения хранимой процедуры завершите работу ядра Polybase и перезапустите службу Перемещение данных PolyBase на компьютере. Чтобы проверить, выполняется ли следующее динамическое административное представление на головном узле: **sys. DM _exec_compute_nodes**.  
   
 ## <a name="example"></a>Пример  
- В примере объединяются текущего компьютера в качестве вычислительного узла в группу PolyBase.  Имя головного узла — **HST01** и имя экземпляра SQL Server на головном узле **MSSQLSERVER**.  
+ В примере текущий компьютер присоединяется в качестве расчетного узла к группе Polybase.  Имя головного узла — **HST01** , а имя экземпляра SQL Server на головном узле — **MSSQLServer**.  
   
 ```  
 EXEC sp_polybase_join_group N'HST01', 16450, N'MSSQLSERVER'   

@@ -1,5 +1,5 @@
 ---
-title: Переименовать имена входа, совпадающие имена предопределенных ролей сервера | Документация Майкрософт
+title: Переименовывать имена входа, совпадающие с именами предопределенных ролей сервера | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,12 +15,12 @@ ms.assetid: 10a1d77c-3153-474f-a6a0-969556794467
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d983f514f7cc0185021de40f153d78fd6e4dd112
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: df9d9e51846e286c67a4773823207524755d15dc
+ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66092880"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72278214"
 ---
 # <a name="rename-logins-matching-fixed-server-role-names"></a>Переименование имен входа, которые совпадают с именами предопределенной роли сервера
   Помощник по обновлению обнаружил одно или несколько определяемых пользователем имен входа, совпадающих с именами предопределенных ролей сервера. Имена предопределенных ролей сервера зарезервированы. Прежде чем производить обновление, измените имя входа.  
@@ -60,10 +60,10 @@ ms.locfileid: "66092880"
   
 2.  Удалите имена входа.  
   
-3.  Используйте **sp_addlogin** системной процедуры для создания новых имен входа. Укажите SID, возвращенное на шаге 1 в **@sid** параметра для каждого соответствующего имени входа.  
+3.  Для создания новых имен входа используйте системную процедуру **sp_addlogin** . Укажите идентификатор безопасности, возвращенный на шаге 1 в параметре **\@sid** для каждого соответствующего имени входа.  
   
 ## <a name="see-also"></a>См. также  
- [Проблемы обновления компонента Database Engine](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [Помощник по обновлению SQL Server 2014 &#91;new&#93;](sql-server-2014-upgrade-advisor.md)  
+ [Проблемы ядро СУБД обновления](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
+ [Новый помощник по &#91;обновлению SQL Server 2014&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

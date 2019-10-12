@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: c0bdd3de-3be0-455c-898a-98d4660e7ce3
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 8558c8d9caffd27d7a87743c88e1d62c430640fd
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: a15162774d3814e574735d8e1d5fd5e6b769327f
+ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768915"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72278124"
 ---
-# <a name="spdropdistpublisher-transact-sql"></a>sp_dropdistpublisher (Transact-SQL)
+# <a name="sp_dropdistpublisher-transact-sql"></a>sp_dropdistpublisher (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Удаляет распространяющего издателя. Эта хранимая процедура выполняется на распространителе в любой базе данных.  
@@ -39,15 +39,15 @@ sp_dropdistpublisher [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publisher = ] 'publisher'`Удаляемый издатель. параметр *Publisher* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @publisher = ] 'publisher'` — Удаляемый издатель. параметр *Publisher* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @no_checks = ] no_checks`Указывает, проверяет ли **sp_dropdistpublisher** , что издатель удалил сервер в качестве распространителя. *no_checks* имеет **бит**и значение по умолчанию **0**.  
+`[ @no_checks = ] no_checks` указывает, проверяет ли **sp_dropdistpublisher** , что издатель удалил сервер в качестве распространителя. *no_checks* имеет **бит**и значение по умолчанию **0**.  
   
  Если значение **равно 0**, то при репликации проверяется, что удаленный издатель удалил локальный сервер в качестве распространителя. Если издатель является локальным, репликация проверит отсутствие на локальном сервере объектов публикации или распространителя.  
   
- Если значение равно **1**, все объекты репликации, связанные с издателем распространения, удаляются, даже если удаленный издатель недоступен. После этого удаленный издатель должен удалить репликацию с помощью [sp_dropdistributor](../../relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql.md) **@ignore_distributor** с  =  **1**.  
+ Если значение равно **1**, все объекты репликации, связанные с издателем распространения, удаляются, даже если удаленный издатель недоступен. После этого удаленный издатель должен удалить репликацию с помощью [sp_dropdistributor](../../relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql.md) с **\@ignore_distributor** = **1**.  
   
-`[ @ignore_distributor = ] ignore_distributor`Указывает, остались ли на распространителе объекты распространителя при удалении издателя. *ignore_distributor* имеет **бит** и может принимать одно из следующих значений:  
+`[ @ignore_distributor = ] ignore_distributor` указывает, остались ли на распространителе объекты распространения при удалении издателя. *ignore_distributor* имеет **бит** и может принимать одно из следующих значений:  
   
  **1** = объекты распространения, принадлежащие *издателю* , остаются на распространителе.  
   
@@ -69,7 +69,7 @@ sp_dropdistpublisher [ @publisher = ] 'publisher'
   
 ## <a name="see-also"></a>См. также  
  [Disable Publishing and Distribution](../../relational-databases/replication/disable-publishing-and-distribution.md)  (Отключение публикации и распространения)  
- [sp_adddistpublisher &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
+ [sp_adddistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
  [sp_changedistpublisher (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changedistpublisher-transact-sql.md)   
  [sp_helpdistpublisher (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpdistpublisher-transact-sql.md)   
  [Хранимые процедуры репликации (Transact-SQL)](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  

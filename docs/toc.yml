@@ -4286,6 +4286,8 @@
               href: database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md
             - name: Изменение режима совместимости базы данных с помощью Помощника по настройке запросов
               href: relational-databases/performance/upgrade-dbcompat-using-qta.md
+            - name: Последние обновления для SQL Server
+              href: database-engine/install-windows/latest-updates-for-microsoft-sql-server.md
     - name: Конфигурация
       href: database-engine/configure-windows/database-engine-instances-sql-server.md
       items:
@@ -5064,10 +5066,6 @@
                   href: relational-databases/replication/publish/automatically-generate-join-filters-between-merge-articles.md
                 - name: Определение связи логических записей
                   href: relational-databases/replication/publish/define-a-logical-record-relationship-between-merge-table-articles.md
-                - name: Настройка веб-синхронизации
-                  href: relational-databases/replication/configure-web-synchronization.md
-                - name: настроить сервер IIS для веб-синхронизации
-                  href: relational-databases/replication/configure-iis-for-web-synchronization.md
                 - name: Настройка сервера IIS 7 для веб-синхронизации
                   href: relational-databases/replication/configure-iis-7-for-web-synchronization.md
                 - name: Устранение конфликтов данных
