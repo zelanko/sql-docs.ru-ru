@@ -20,12 +20,12 @@ ms.assetid: 4d5d1e52-a574-4bdd-87ae-b932527235e8
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 822f4fea2764c6420da731845e8defc05807d3cf
-ms.sourcegitcommit: aece9f7db367098fcc0c508209ba243e05547fe1
+ms.openlocfilehash: 87cc5d8dc07c0c4c927b7214bca01bfec09555e1
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72261656"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72289358"
 ---
 # <a name="sysdm_os_workers-transact-sql"></a>sys.dm_os_workers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -82,9 +82,8 @@ ms.locfileid: "72261656"
  Когда исполнитель, ожидающий события, получает сигнал, он помещается в начало очереди готовых к работе исполнителей. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] разрешает делать это тысячу раз подряд, после чего исполнитель помещается в конец очереди. Перемещение исполнителя в конец очереди имеет некоторые последствия для производительности.  
   
 ## <a name="permissions"></a>Разрешения
-
 Для [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] требуется разрешение `VIEW SERVER STATE`.   
-На уровнях [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровня "Премиум" требуется разрешение `VIEW DATABASE STATE` в базе данных. На уровнях [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровня "Стандартный" и "базовый" требуется **Администратор сервера** или учетная запись **администратора Azure Active Directory** .   
+На уровнях [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровня "Премиум" требуется разрешение `VIEW DATABASE STATE` в базе данных. На уровнях [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровня Standard и Basic требуется членство в роли `Server Admin` или учетная запись `Azure Active Directory admin`.   
 
 ## <a name="examples"></a>Примеры  
  Можно воспользоваться следующим запросом, чтобы определить, как долго исполнитель находился в состояниях SUSPENDED и RUNNABLE.  
@@ -137,6 +136,6 @@ SELECT
  На выходе, если переменные `w_runnable` и `w_suspended` равны, они представляют время, которое исполнитель находится в состоянии SUSPENDED. Иначе переменная `w_runnable` представляет время, проведенное исполнителем в состоянии RUNNABLE. На выходе, сеанс `52` находится в состоянии `SUSPENDED` в течение `35,094` миллисекунд.  
   
 ## <a name="see-also"></a>См. также  
- [SQL Server динамические административные представления &#40;, связанные с операционной системой,&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)       
- [Руководство по архитектуре обработки запросов](../../relational-databases/query-processing-architecture-guide.md#DOP)       
- [Руководство по архитектуре потоков и задач](../../relational-databases/thread-and-task-architecture-guide.md)    
+[SQL Server динамические административные представления &#40;, связанные с операционной системой,&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)       
+[Руководство по архитектуре обработки запросов](../../relational-databases/query-processing-architecture-guide.md#DOP)       
+[Руководство по архитектуре потоков и задач](../../relational-databases/thread-and-task-architecture-guide.md)    
