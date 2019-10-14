@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 23e7e8c1-002f-4e69-8c99-d63e4100de64
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 20469bf6d6d7050c79346afea0f96e4167708f08
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4dcb5f8bd05b5cd1b5b68927abfef49576d6b072
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68121328"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710723"
 ---
 # <a name="peer-to-peer---transactional-replication"></a>Одноранговая репликация транзакций
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -139,19 +139,19 @@ ms.locfileid: "68121328"
   
 -   Параметр агента распространителя **-SubscriptionStreams** и параметр агента чтения журнала **-MaxCmdsInTran**.  
   
--   Свойства статьи **@destination_owner** и **@destination_table** .
+-   Свойства статьи `@destination_owner` и `@destination_table`.
 
 -   Одноранговая репликация транзакций не поддерживает создание односторонней транзакционной подписки на одноранговые публикации.   
   
  Следующие свойства имеют особые соглашения.  
   
--   Свойство публикации **@allow_initialize_from_backup** должно иметь значение **true**.  
+-   Свойство публикации `@allow_initialize_from_backup` должно иметь значение **true**.  
   
--   Свойство статьи **@replicate_ddl** должно иметь значение **true**, свойство **@identityrangemanagementoption** должно иметь значение **manual**, а свойство **@status** — значение **24** .  
+-   Свойство статьи `@replicate_ddl` должно иметь значение **true**, свойство `@identityrangemanagementoption` должно иметь значение **manual**, а свойство `@status` — значение **24**.  
   
--   Свойствам статьи **@ins_cmd** , **@del_cmd** и **@upd_cmd** не может быть присвоено значение **SQL**.  
+-   Свойствам статьи `@ins_cmd`, `@del_cmd` и `@upd_cmd` не может быть присвоено значение **SQL**.  
   
--   Свойству подписки **@sync_type** должно иметь значение **none** или **automatic**.  
+-   Свойство подписки `@sync_type` должно иметь значение **none** или **automatic**.  
   
 ### <a name="maintenance-considerations"></a>Вопросы обслуживания  
  Некоторые действия требуют замораживания системы. Это подразумевает остановку действий в опубликованных таблицах на всех узлах и проверку получения изменений на каждом узле.  

@@ -6,16 +6,16 @@ ms.reviewer: mikeray
 ms.technology: polybase
 ms.devlang: ''
 ms.topic: conceptual
-ms.date: 04/23/2019
+ms.date: 10/02/2019
 ms.prod: sql
 ms.prod_service: polybase, sql-data-warehouse, pdw
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 3ac5c5fa9a19b88ef25702ae4f6c3359fd302892
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f937ba5ff6fe4d9c0837d861bf75253f24bbf33b
+ms.sourcegitcommit: af5e1f74a8c1171afe759a4a8ff2fccb5295270a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68062011"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71823592"
 ---
 # <a name="troubleshoot-polybase-kerberos-connectivity"></a>Устранение неполадок с подключением PolyBase к Kerberos
 
@@ -25,15 +25,19 @@ ms.locfileid: "68062011"
 
 В статье приведено пошаговое руководство по использованию этого инструмента для отладки таких проблем.
 
+> [!TIP]
+> Вместо действий, описанных в этом руководстве, можно запустить [HDFS Kerberos](https://github.com/microsoft/sql-server-samples/tree/master/samples/manage/hdfs-kerberos-tester), чтобы устранить неполадки подключений HDFS Kerberos для Polybase в случае ошибки HDFS Kerberos при создании внешней таблицы в защищенном Kerberos кластере HDFS.
+> Это средство поможет вам исключить проблемы, не связанные с SQL Server, чтобы сосредоточиться на решении проблем установки HDFS Kerberos, а именно — выявлении проблем с неправильной конфигурацией имени пользователя или пароля и неправильной конфигурацией протокола Kerberos для кластера.      
+> Это средство полностью независимо от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Оно доступно в виде Jupyter Notebook и требует Azure Data Studio.
+
 ## <a name="prerequisites"></a>предварительные требования
 
-1. SQL Server 2016 RTM CU6/SQL Server 2016 SP1 CU3/SQL Server 2017 или более поздние версии с установленной технологией PolyBase
+1. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] RTM CU6, [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] с пакетом обновления 1 (SP1) CU3, [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] или выше с установленной службой Polybase
 1. Кластер Hadoop (Cloudera или Hortonworks), защищенный с помощью Kerberos (Active Directory или MIT)
 
 [!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="introduction"></a>Введение
-
 В первую очередь рекомендуется понять, как происходит работа протокола Kerberos на высоком уровне. В ней участвуют три субъекта:
 
 1. клиент Kerberos (SQL Server);
@@ -44,10 +48,10 @@ ms.locfileid: "68062011"
 
 При использовании PolyBase, когда на любом защищенном Kerberos ресурсе запрашивается аутентификация, запускается процедура подтверждения, происходящая в четыре этапа:
 
-1. SQL Server подключается к центру распространения ключей и загружает билет на получение билетов для пользователя. Этот билет шифруется с использованием закрытого ключа от центра.
-1. Затем SQL Server вызывает защищенный ресурс Hadoop (HDFS) и определяет, для какого имени субъекта-службы требуется билет службы.
-1. SQL Server возвращает центру распространения ключей билет на получение билетов, а затем запрашивает у него билет службы для доступа к нужному защищенному ресурсу. Билет службы шифруется закрытым ключом защищенной службы.
-1. SQL Server переадресовывает билет службы в Hadoop и проходит аутентификацию, необходимую для создания сеанса с этой службой.
+1. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] подключается к центру распространения ключей и загружает билет на получение билетов для пользователя. Этот билет шифруется с использованием закрытого ключа от центра.
+1. Затем [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] вызывает защищенный ресурс Hadoop (HDFS) и определяет, для какого имени субъекта-службы требуется билет службы.
+1. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возвращает центру распространения ключей билет на получение билетов, а затем запрашивает у него билет службы для доступа к нужному защищенному ресурсу. Билет службы шифруется закрытым ключом защищенной службы.
+1. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] переадресовывает билет службы в Hadoop и проходит аутентификацию, необходимую для создания сеанса с этой службой.
 
 ![](./media/polybase-sqlserver.png)
 
@@ -68,7 +72,7 @@ ms.locfileid: "68062011"
 
 `\[System Drive\]:{install path}\{instance}\{name}\MSSQL\Binn\PolyBase\Hadoop\conf`
 
-Например, для SQL Server 2016 по умолчанию используется папка `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\PolyBase\Hadoop\conf`.
+Например, для [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] по умолчанию используется `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\PolyBase\Hadoop\conf`.
 
 Обновите файл **core-site.xml**, добавив три приведенных ниже свойства. Задайте значения в соответствии со средой:
 
@@ -89,10 +93,10 @@ ms.locfileid: "68062011"
 
 Если планируется использовать операции передачи, впоследствии нужно будет изменить и другие XML-файлы. Но изменения одного этого файла уже будет достаточно как минимум для доступа к файловой системе HDFS.
 
-Инструмент работает независимо от SQL Server, поэтому его не требуется запускать заранее или перезапускать при изменении XML-конфигураций. Для запуска инструмента выполните на хост-компьютере с установленным SQL Server следующие команды:
+Инструмент работает независимо от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], поэтому его не требуется запускать заранее или перезапускать при изменении XML-конфигураций. Для запуска инструмента выполните на хост-компьютере с установленным [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] следующие команды:
 
 ```cmd
-> cd C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\PolyBase  
+> cd C:\Program Files\Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL13.MSSQLSERVER\MSSQL\Binn\PolyBase  
 > java -classpath ".\Hadoop\conf;.\Hadoop\*;.\Hadoop\HDP2_2\*" com.microsoft.polybase.client.HdfsBridge {Name Node Address} {Name Node Port} {Service Principal} {Filepath containing Service Principal's Password} {Remote HDFS file path (optional)}
 ```
 
@@ -117,8 +121,7 @@ java -classpath ".\Hadoop\conf;.\Hadoop\*;.\Hadoop\HDP2_2\*" com.microsoft.polyb
 Следующие фрагменты получены при работе с центром распространения ключей MIT. Полные примеры выходных данных для MIT и Active Directory см. в ссылках в конце статьи.
 
 ## <a name="checkpoint-1"></a>Контрольная точка 1
-
-В выходных данных должен быть шестнадцатеричный дамп билета со значением `Server Principal = krbtgt/MYREALM.COM@MYREALM.COM`. Его наличие показывает, что сервер SQL Server успешно прошел проверку подлинности в центре распространения ключей и ему был предоставлен билет на получение билетов. Если такого дампа нет, проблема лежит строго между SQL Server и центром и Hadoop здесь ни при чем.
+В выходных данных должен быть шестнадцатеричный дамп билета со значением `Server Principal = krbtgt/MYREALM.COM@MYREALM.COM`. Его наличие показывает, что сервер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] успешно прошел проверку подлинности в центре распространения ключей и ему был предоставлен билет на получение билетов. Если такого дампа нет, проблема лежит строго между [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и центром; Hadoop здесь ни при чем.
 
 Технология PolyBase **не поддерживает** установление отношений доверия между Active Directory и MIT, поэтому она должна быть настроена на тот же центр получения ключей, что и Hadoop-кластер. В таких средах вы можете вручную создать в центре учетную запись службы и использовать ее для аутентификации.
 
@@ -147,7 +150,6 @@ java -classpath ".\Hadoop\conf;.\Hadoop\*;.\Hadoop\HDP2_2\*" com.microsoft.polyb
 ```
 
 ## <a name="checkpoint-2"></a>Контрольная точка 2
-
 PolyBase пытается получить доступ к HDFS и не может это сделать, так как запрос не содержит нужного билета службы.
 
 ```cmd
@@ -159,8 +161,7 @@ PolyBase пытается получить доступ к HDFS и не мож
 ```
 
 ## <a name="checkpoint-3"></a>Контрольная точка 3
-
-Второй шестнадцатеричный дамп показывает, что SQL Server успешно воспользовался билетом на получение билетов и загрузил из центра распространения ключей нужный билет для имени субъекта-службы в узле имен.
+Второй шестнадцатеричный дамп показывает, что [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] успешно воспользовался билетом на получение билетов и загрузил из центра распространения ключей нужный билет для имени субъекта-службы в узле имен.
 
 ```cmd
  >>> KrbKdcReq send: kdc=kerberos.contoso.com UDP:88, timeout=30000, number of retries =3, #bytes=664 
@@ -186,8 +187,7 @@ PolyBase пытается получить доступ к HDFS и не мож
 ```
 
 ## <a name="checkpoint-4"></a>Контрольная точка 4
-
-Наконец, должны выводиться свойства файла по целевому пути и подтверждение. Свойства файла подтверждают, что SQL Server прошел в Hadoop проверку подлинности с билетом службы и был создан сеанс для доступа к защищенному ресурсу.
+Наконец, должны выводиться свойства файла по целевому пути и подтверждение. Свойства файла подтверждают, что [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] прошел в Hadoop проверку подлинности с билетом службы и был создан сеанс для доступа к защищенному ресурсу.
 
 Достижение этой точки подтверждает, что: (i) три субъекта могут обмениваться друг с другом данными, (ii) файлы core-site.xml и jaas.conf корректные, (iii) центр распространения ключей подтвердил ваши учетные данные.
 
@@ -197,7 +197,6 @@ PolyBase пытается получить доступ к HDFS и не мож
 ```
 
 ## <a name="common-errors"></a>Распространенные ошибки
-
 Если после запуска инструмента *не были* выведены свойства файла по целевому пути (контрольная точка 4), в ходе работы должно было быть выдано исключение. Проверьте его и рассмотрите контекст, то есть на каком из четырех этапов потока оно возникло. Рассмотрите по порядку следующие распространенные проблемы, которые могли возникнуть:
 
 | Исключение и сообщения | Причина | 
@@ -213,11 +212,10 @@ PolyBase пытается получить доступ к HDFS и не мож
 ## <a name="debugging-tips"></a>Советы по отладке
 
 ### <a name="mit-kdc"></a>Центр распространения ключей MIT  
-
 Все имена субъектов-служб, в том числе служб администрирования, зарегистрированные в центре распространения ключей, можно просмотреть, запустив **kadmin.local** > (войти в качестве администратора) > **listprincs** на хост-компьютере или любом настроенном клиенте центра. Если для кластера Hadoop корректно настроена защита Kerberos, имена субъектов-служб должны иметься для каждой из служб, доступных в кластере (например, `nn`, `dn`, `rm`, `yarn`, `spnego` и т. д.). Соответствующие им файлы KEYTAB (заменители паролей) по умолчанию находятся в папке **/etc/security/keytabs**. Они шифруются с использованием закрытого ключа центра распространения ключей.  
 
 Попробуйте также проверить учетные данные администратора в центре распространения ключей локально с помощью инструмента [`kinit`](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html). Пример его использования: `kinit identity@MYREALM.COM`. Если запрашивается пароль, значит, такой идентификатор существует.  
-Журналы центра распространения ключей по умолчанию находятся здесь: **/var/log/krb5kdc.log**. Они включают все запросы билетов и IP-адрес клиента, с которого поступал запрос. Должно быть два запроса с IP-адреса компьютера, где работает SQL Server и где был запущен инструмент. Первый — запрос билета на получение билетов к серверу аутентификации в качестве **AS\_REQ**. Второй — запрос билета службы к северу выдачи билетов в качестве **TGS\_REQ**.
+Журналы центра распространения ключей по умолчанию находятся здесь: **/var/log/krb5kdc.log**. Они включают все запросы билетов и IP-адрес клиента, с которого поступал запрос. Должно быть два запроса с IP-адреса компьютера, где работает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и где был запущен инструмент. Первый — запрос билета на получение билетов к серверу аутентификации в качестве **AS\_REQ**. Второй — запрос билета службы к северу выдачи билетов в качестве **TGS\_REQ**.
 
 ```bash
  [root@MY-KDC log]# tail -2 /var/log/krb5kdc.log 
@@ -226,16 +224,14 @@ PolyBase пытается получить доступ к HDFS и не мож
 ```
 
 ### <a name="active-directory"></a>Active Directory 
-
 В Active Directory вы можете просмотреть имена объектов-служб, перейдя в Панель управления > Пользователи и компьютеры Active Directory > *MyRealm* > *MyOrganizationalUnit*. Если для кластера Hadoop корректно настроена защита Kerberos, имена субъектов-служб должны иметься для каждой из доступных служб (например, `nn`, `dn`, `rm`, `yarn`, `spnego` и т. д.).
 
 ### <a name="general-debugging-tips"></a>Общие советы по отладке
-
 Для просмотра журналов и устранения неполадок Kerberos, которые не связаны с компонентом PolyBase SQL Server, полезно иметь некоторый опыт работы с Java.
 
 Если у вас возникают проблемы с доступом посредством Kerberos, выполните указанные ниже действия по отладке.
 
-1. Убедитесь в наличии доступа к данным Kerberos HDFS извне SQL Server. Вы можете сделать одно из двух: 
+1. Убедитесь в наличии доступа к данным Kerberos HDFS извне [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Вы можете сделать одно из двух: 
 
     - Создайте свою программу на Java или
     - используйте класс `HdfsBridge` из папки установки PolyBase. Пример:
@@ -253,10 +249,9 @@ PolyBase пытается получить доступ к HDFS и не мож
 3. Если применяется проверка подлинности Kerberos в Active Directory, убедитесь в том, что при использовании команды `klist` в Windows отображается кэшированный билет.
     - Войдите на компьютер PolyBase и выполните в командной строке команды `klist` и `klist tgt`, чтобы проверить правильность центра распространения ключей, имени пользователя и типов шифрования.
 
-4.  Если центр распространения ключей поддерживает только алгоритм AES256, должны быть установлены [файлы политик JCE](http://www.oracle.com/technetwork/java/javase/downloads/index.html).
+4. Если центр распространения ключей поддерживает только алгоритм AES256, должны быть установлены [файлы политик JCE](http://www.oracle.com/technetwork/java/javase/downloads/index.html).
 
 ## <a name="see-also"></a>См. также раздел
-
 [Integrating PolyBase with Cloudera using Active Directory Authentication](https://blogs.msdn.microsoft.com/microsoftrservertigerteam/2016/10/17/integrating-polybase-with-cloudera-using-active-directory-authentication) (Интеграция PolyBase и Cloudera с помощью аутентификации Active Directory)  
 [Руководство Cloudera по настройке Kerberos для CDH](https://www.cloudera.com/documentation/enterprise/5-6-x/topics/cm_sg_principal_keytab.html)  
 [Руководство Hortonworks по настройке Kerberos для HDP](https://docs.hortonworks.com/HDPDocuments/Ambari-2.2.0.0/bk_Ambari_Security_Guide/content/ch_configuring_amb_hdp_for_kerberos.html)  

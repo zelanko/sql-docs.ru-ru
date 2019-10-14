@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: fb5566fe-58c5-48f7-8464-814ea78e6221
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2e454850de56674a594b23585aaf1f5af1f3549a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1171d30f7b21b99a3d4a396937b1e94c58787859
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68002685"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710895"
 ---
 # <a name="manage-partitions-for-a-merge-publication-with-parameterized-filters"></a>Управление секциями для публикации слиянием с параметризованными фильтрами
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -103,25 +103,25 @@ ms.locfileid: "68002685"
   
 #### <a name="to-view-information-on-existing-partitions"></a>Просмотр информации о существующих секциях  
   
-1.  На издателе в базе данных публикации выполните хранимую процедуру [sp_helpmergepartition (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-helpmergepartition-transact-sql.md). Укажите имя публикации в параметре **@publication** . Укажите в параметрах **@suser_sname** или **@host_name** возврат данных на основе одного критерия фильтрации (необязательно).  
+1.  На издателе в базе данных публикации выполните хранимую процедуру [sp_helpmergepartition (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-helpmergepartition-transact-sql.md). Укажите имя публикации в параметре `@publication`. (Необязательно) Укажите с помощью параметра `@suser_sname` или `@host_name`, что нужно вернуть данные на основе одного критерия фильтрации.  
   
 #### <a name="to-define-a-new-partition-and-generate-a-new-partitioned-snapshot"></a>Определение новой секции и формирование нового секционированного снимка  
   
-1.  На издателе в базе данных публикации выполните хранимую процедуру [sp_addmergepartition (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addmergepartition-transact-sql.md). Укажите имя публикации в параметре **@publication** имя публикации, а также параметризованное значение определения секции в одном из следующих параметров:  
+1.  На издателе в базе данных публикации выполните хранимую процедуру [sp_addmergepartition (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addmergepartition-transact-sql.md). Укажите имя публикации в параметре `@publication`, а также параметризованное значение, определяющее секцию, в одном из следующих параметров:  
   
-    -   **@suser_sname** — если параметризованный фильтр определен значением, возвращенным [SUSER_SNAME (Transact-SQL)](../../../t-sql/functions/suser-sname-transact-sql.md).  
+    -   `@suser_sname`, если параметризованный фильтр определен значением, возвращенным [SUSER_SNAME &#40;Transact-SQL&#41;](../../../t-sql/functions/suser-sname-transact-sql.md);  
   
-    -   **@host_name** — если параметризованный фильтр определен значением, возвращенным [HOST_NAME (Transact-SQL)](../../../t-sql/functions/host-name-transact-sql.md).  
+    -   `@host_name`, если параметризованный фильтр определен значением, возвращенным [HOST_NAME &#40;Transact-SQL&#41;](../../../t-sql/functions/host-name-transact-sql.md).  
   
 2.  Создайте и инициализируйте параметризованный снимок для новой секции. Дополнительные сведения см. в статье [Создание моментального снимка для публикации слиянием с параметризованными фильтрами](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
   
 #### <a name="to-delete-a-partition"></a>Удаление секции  
   
-1.  На издателе в базе данных публикации выполните хранимую процедуру [sp_dropmergepartition (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-dropmergepartition-transact-sql.md). Укажите имя публикации в параметре **@publication** имя публикации, а также параметризованное значение определения секции в одном из следующих параметров:  
+1.  На издателе в базе данных публикации выполните хранимую процедуру [sp_dropmergepartition (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-dropmergepartition-transact-sql.md). Укажите имя публикации в параметре `@publication`, а также параметризованное значение, определяющее секцию, в одном из следующих параметров:  
   
-    -   **@suser_sname** — если параметризованный фильтр определен значением, возвращенным [SUSER_SNAME (Transact-SQL)](../../../t-sql/functions/suser-sname-transact-sql.md).  
+    -   `@suser_sname`, если параметризованный фильтр определен значением, возвращенным [SUSER_SNAME &#40;Transact-SQL&#41;](../../../t-sql/functions/suser-sname-transact-sql.md);  
   
-    -   **@host_name** — если параметризованный фильтр определен значением, возвращенным [HOST_NAME (Transact-SQL)](../../../t-sql/functions/host-name-transact-sql.md).  
+    -   `@host_name`, если параметризованный фильтр определен значением, возвращенным [HOST_NAME &#40;Transact-SQL&#41;](../../../t-sql/functions/host-name-transact-sql.md).  
   
      При этом также будет удалено задание моментального снимка и все файлы снимка для этой секции.  
   
@@ -165,5 +165,6 @@ ms.locfileid: "68002685"
 ## <a name="see-also"></a>См. также:  
  [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)   
  [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)  
+  
   
   

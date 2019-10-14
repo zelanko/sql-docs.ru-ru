@@ -14,12 +14,12 @@ ms.assetid: c09007f0-9374-4f60-956b-8a87670cd043
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: b0a8e8280db176c66e25ff97e1cc86f153286fa9
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 9a2b5eda749329e405a1d5d2aff1af6a6e0bb3fe
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769821"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710857"
 ---
 # <a name="replicate-schema-changes"></a>Репликация изменений схемы
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -73,27 +73,27 @@ ms.locfileid: "68769821"
   
 #### <a name="to-create-a-snapshot-or-transactional-publication-that-does-not-replicate-schema-changes"></a>Создание публикации моментальных снимков или публикации транзакций без репликации изменений схемы  
   
-1.  На издателе в базе данных публикации выполните хранимую процедуру [sp_addpublication (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md), указав в параметре **@replicate_ddl** значение **0**. Дополнительные сведения см. в разделе [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md).  
+1.  В издателе в базе данных публикации выполните хранимую процедуру [sp_addpublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md), указав в параметре `@replicate_ddl` значение `0`. Дополнительные сведения см. в разделе [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md).  
   
 #### <a name="to-create-a-merge-publication-that-does-not-replicate-schema-changes"></a>Создание публикации слиянием без репликации изменений схемы  
   
-1.  На издателе в базе данных публикации выполните хранимую процедуру [sp_addmergepublication (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md), указав в параметре **@replicate_ddl** значение **0**. Дополнительные сведения см. в разделе [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md).  
+1.  В издателе в базе данных публикации выполните хранимую процедуру [sp_addmergepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md), указав в параметре `@replicate_ddl` значение `0`. Дополнительные сведения см. в разделе [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md).  
   
 #### <a name="to-temporarily-disable-replicating-schema-changes-for-a-snapshot-or-transactional-publication"></a>Временное отключение репликации изменений схемы для публикации моментальных снимков или публикации транзакций  
   
-1.  Для публикации с репликацией изменений схемы выполните процедуру [sp_changepublication (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md), указав в параметре **@property** значение **replicate_ddl**, а в параметре **@value** — значение **0**.  
+1.  Для публикации с репликацией изменений схемы выполните процедуру [sp_changepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md), указав в параметре `@property` значение `replicate_ddl`, а в параметре `@value` — значение `0`.  
   
 2.  Выполните команду DDL на опубликованном объекте.  
   
-3.  (Необязательно.) Для повторного включения репликации изменений схемы выполните процедуру [sp_changepublication (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md), указав в параметре **@property** значение **replicate_ddl**, а в параметре **@value** — значение **1**.  
+3.  (Необязательно.) Для повторного включения репликации изменений схемы выполните процедуру [sp_changepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md), указав в параметре `@property` значение `replicate_ddl`, а в параметре `@value` — значение `1`.  
   
 #### <a name="to-temporarily-disable-replicating-schema-changes-for-a-merge-publication"></a>Временное отключение репликации изменений схемы для публикации слиянием  
   
-1.  Для публикации с репликацией изменений схемы выполните процедуру [sp_changemergepublication (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md), указав в параметре **@property** значение **replicate_ddl**, а в параметре **@value** — значение **0**.  
+1.  Для публикации с репликацией изменений схемы выполните процедуру [sp_changemergepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md), указав в параметре `@property` значение `replicate_ddl`, а в параметре `@value` — значение `0`.  
   
 2.  Выполните команду DDL на опубликованном объекте.  
   
-3.  (Необязательно.) Для повторного включения репликации изменений схемы выполните процедуру [sp_changemergepublication (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md), указав в параметре **@property** значение **replicate_ddl**, а в параметре **@value** — значение **1**.  
+3.  (Необязательно.) Для повторного включения репликации изменений схемы выполните процедуру [sp_changemergepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md), указав в параметре `@property` значение `replicate_ddl`, а в параметре `@value` — значение `1`.  
   
 ## <a name="see-also"></a>См. также:  
  [Внесение изменений в схемы баз данных публикации](../../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)   

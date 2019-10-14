@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5020ee68-b988-4d57-8066-67d183e61237
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d199fff8243584ee86dd97f97bcc3b8b68beb3dd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3f37431c1d8359eface4a5ad374ed8ba6717708a
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68063108"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710429"
 ---
 # <a name="create-a-subscription-for-a-non-sql-server-subscriber"></a>Создание подписки для подписчика, отличного от подписчика SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -156,27 +156,27 @@ ms.locfileid: "68063108"
   
     -   Если параметр **enabled_for_het_sub** имеет значение 1, то подписчики, отличные от[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , поддерживаются.  
   
-    -   Если значение **enabled_for_het_sub** равно 0, выполните процедуру [sp_changepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md), указав значение **enabled_for_het_sub** для параметра **@property** и **true** для параметра **@value** .  
+    -   Если значение **enabled_for_het_sub** равно 0, выполните процедуру [sp_changepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md), указав значение **enabled_for_het_sub** для параметра `@property` и **true** для параметра `@value`.  
   
         > [!NOTE]  
         >  Перед изменением значения **enabled_for_het_sub** на **true**необходимо удалить все существующие подписки на публикацию. Нельзя присвоить параметру **enabled_for_het_sub** значение **true** , если публикация также поддерживает обновляемые подписки. Изменение параметра **enabled_for_het_sub** отразится на других свойствах публикации. Дополнительные сведения см. в статье [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md).  
   
-3.  В издателе в базе данных публикации выполните процедуру [sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Задайте **@publication** , **@subscriber** , **(назначение по умолчанию)** @property **@destination_db** , **push** @property **@subscription_type** , а также 3 в качестве значения параметра **@subscriber_type** (задает поставщика OLE DB).  
+3.  В издателе в базе данных публикации выполните процедуру [sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Задайте `@publication`, `@subscriber`, значение `(default destination)` для `@destination_db`, значение **push** для `@subscription_type` и значение 3 для `@subscriber_type` (задает поставщик OLE DB).  
   
 4.  В издателе в базе данных публикации выполните процедуру [sp_addpushsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md). Укажите следующее.  
   
-    -   параметры **@subscriber** и **@publication** ;  
+    -   Параметры `@subscriber` и `@publication`.  
   
-    -   значение **(назначение по умолчанию)** @property **@subscriber_db** ,  
+    -   Значение **(назначение по умолчанию)** для `@subscriber_db`,  
   
-    -   свойства источника данных, отличного от[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , для параметров **@subscriber_provider** , **@subscriber_datasrc** , **@subscriber_location** , **@subscriber_provider_string** и **@subscriber_catalog** .  
+    -   свойства источника данных, отличного от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], для параметров `@subscriber_provider`, `@subscriber_datasrc`, `@subscriber_location`, `@subscriber_provider_string` и `@subscriber_catalog`.  
   
-    -   параметры [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, с которыми будет запускаться агент распространителя на распространителе в параметре **@job_login** и **@job_password** .  
+    -   Учетные данные [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, с которыми будет запускаться агент распространителя на распространителе, в параметрах `@job_login` и `@job_password`.  
   
-        > [!NOTE]  
-        >  Для соединений, производимых с использованием встроенной проверки подлинности Windows, в параметрах **@job_login** и **@job_password** . Агент распространителя всегда создает локальные соединения с распространителем через встроенную систему проверки подлинности Windows. По умолчанию агент подключается к подписчику через встроенную систему проверки подлинности Windows;  
+       > [!NOTE]  
+       > Для соединений, производимых с использованием встроенной проверки подлинности Windows, всегда используются учетные данные Windows в параметрах `@job_login` и `@job_password`. Агент распространителя всегда создает локальные соединения с распространителем через встроенную систему проверки подлинности Windows. По умолчанию агент подключается к подписчику через встроенную систему проверки подлинности Windows;  
   
-    -   значение **0** @property **@subscriber_security_mode** и сведения об имени входа поставщика OLE DB для параметров **@subscriber_login** и **@subscriber_password** .  
+    -   значение **0** для `@subscriber_security_mode` и сведения об имени входа поставщика OLE DB для параметров `@subscriber_login` и `@subscriber_password`.  
   
     -   Расписание задания агента распространителя для этой подписки. Дополнительные сведения см. в статье [Specify Synchronization Schedules](../../relational-databases/replication/specify-synchronization-schedules.md).  
   

@@ -17,12 +17,12 @@ ms.assetid: 4addd426-7523-4067-8d7d-ca6bae4c9e34
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: c349569d2f0973a3085337eb171a17d9cee21c82
-ms.sourcegitcommit: 632ff55084339f054d5934a81c63c77a93ede4ce
+ms.openlocfilehash: eef53dd48e960ac15e68e28e0be7265a8f25ba74
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69633406"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71711026"
 ---
 # <a name="measure-latency-and-validate-connections-for-transactional-replication"></a>Измерение задержки и проверка правильности соединений для репликации транзакций
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -127,7 +127,7 @@ ms.locfileid: "69633406"
   
 1.  В издателе в базе данных публикации выполните процедуру [sp_helptracertokens (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md), указав параметр **\@publication**. Будет возвращен список всех трассировочных токенов, опубликованных для публикации. Запомните нужное значение **tracer_id** в результирующем наборе для удаляемого трассировочного токена.  
   
-2.  В издателе в базе данных публикации выполните хранимую процедуру [sp_deletetracertokenhistory (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql.md), указав параметр **\@publication**, а также идентификатор удаляемого трассировочного маркера, полученного на шаге 2, в параметре **@tracer_id** .  
+2.  В издателе в базе данных публикации выполните хранимую процедуру [sp_deletetracertokenhistory &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql.md), указав параметр **\@publication**, а также идентификатор удаляемого трассировочного маркера, полученного в шаге 2, в параметре `@tracer_id`.  
   
 ###  <a name="TsqlExample"></a> Примеры (Transact-SQL)  
  В этом примере продемонстрирована отправка трассировочного токена, и просмотр сведений о задержке по возвращенному идентификатору отправленного трассировочного токена.  

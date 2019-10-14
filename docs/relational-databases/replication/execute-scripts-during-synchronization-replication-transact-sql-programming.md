@@ -17,12 +17,12 @@ ms.assetid: b58a0877-4e43-4fab-a281-24e6022d3fb1
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7cfc7873669eb49d3fc3e160ff33f56371517e6c
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: d7311d16a888b0adfbb2952c6f6027cdcf08fa00
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768115"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710269"
 ---
 # <a name="execute-scripts-during-synchronization-replication-transact-sql-programming"></a>Выполнение скриптов во время синхронизации (программирование репликации на языке Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "68768115"
   
 2.  Сохраните файл скрипта в папке, доступной для агента моментальных снимков публикации.  
   
-3.  В издателе в базе данных публикации выполните процедуру [sp_addscriptexec &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addscriptexec-transact-sql.md). Задайте параметр **@publication** и имя созданного на шаге 2 файла скрипта в полном UNC-формате в параметре **@scriptfile** , а в параметре **@skiperror** укажите одно из следующих значений.  
+3.  В издателе в базе данных публикации выполните процедуру [sp_addscriptexec &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addscriptexec-transact-sql.md). Задайте параметр `@publication` и имя созданного в шаге 2 файла скрипта в полном UNC-формате в параметре `@scriptfile`, а в параметре `@skiperror` укажите одно из следующих значений:  
   
     -   **0** — выполнение скрипта агентом в случае ошибки будет остановлено.  
   

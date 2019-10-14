@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: c17996d6-56a6-482f-80d8-086a3423eecc
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e6585b6a50701ac4583bdbb02d9bd2529ee08f01
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 0a49bef9dc75beea0e098908362f198b60a8b92c
+ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653357"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71680838"
 ---
 # <a name="merge-transact-sql"></a>MERGE (Transact-SQL)
 
@@ -223,8 +223,8 @@ WHEN MATCHED THEN \<merge_matched>
 Инструкция MERGE включать не больше двух предложений WHEN MATCHED. Если указаны два предложения, первое предложение должно сопровождаться предложением AND \<search_condition>. Для любой строки второе предложение WHEN MATCHED применяется только в том случае, если не применяется первое. Если указаны два предложения WHEN MATCHED, одно должно содержать действие UPDATE, а другое — действие DELETE. Если действие UPDATE указано в предложении \<merge_matched> и более одной строки из \<table_source> соответствует строке в *target_table* на основе \<merge_search_condition>, то [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возвращает ошибку. Инструкция MERGE не может обновить одну строку более одного раза или одновременно обновить и удалить одну и ту же строку.  
   
 WHEN NOT MATCHED [ BY TARGET ] THEN \<merge_not_matched>  
-Указывает, что в таблицу *target_table* вставляется строка для каждой строки, возвращенной выражением \<table_source> ON \<merge_search_condition>, которая не соответствует строке в таблице *target_table*, но удовлетворяет дополнительному условию поиска (если оно есть). Значения для вставки указываются с помощью предложения \<merge_not_matched>. Инструкция MERGE может иметь только одно предложение WHEN MATCHED.  
-  
+Указывает, что в таблицу *target_table* вставляется строка для каждой строки, возвращенной выражением \<table_source> ON \<merge_search_condition>, которая не соответствует строке в таблице *target_table*, но удовлетворяет дополнительному условию поиска (если оно есть). Значения для вставки указываются с помощью предложения \<merge_not_matched>. Инструкция MERGE может иметь только одно предложение WHEN NOT MATCHED [ BY TARGET ].
+
 WHEN NOT MATCHED BY SOURCE THEN \<merge_matched>  
 Указывает, что все строки таблицы *target_table, которые не соответствуют строкам, возвращенным выражением \<table_source> ON \<merge_search_condition> и удовлетворяют дополнительным условиям поиска, обновляются или удаляются в соответствии с предложением \<merge_matched>.  
   

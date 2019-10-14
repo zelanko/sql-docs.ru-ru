@@ -1,7 +1,7 @@
 ---
 title: ALTER TABLE (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 05/18/2019
+ms.date: 10/02/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -59,12 +59,12 @@ ms.assetid: f1745145-182d-4301-a334-18f799d361d1
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 63f1b415471e8793e66bd3e90acc6f6be987904e
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 7683610745cf63ff67eeda6296684a6d2737a5b8
+ms.sourcegitcommit: af5e1f74a8c1171afe759a4a8ff2fccb5295270a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68889818"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71823623"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 
@@ -473,6 +473,9 @@ ALTER COLUMN
 *column_name*  
 Имя столбца, который требуется изменить, добавить или удалить. Длина имени *column_name* не может превышать 128 символов. Для новых столбцов, созданных с типом данных **timestamp**, аргумент *column_name* можно опустить. Если для столбца типа **timestamp** не указан аргумент *column_name*, используется имя **timestamp**.
 
+> [!NOTE]
+> Новые столбцы добавляются после изменения всех существующих столбцов в таблице.
+
 [ _type\_schema\_name_ **.** ] _type\_name_  
 Новый тип данных для изменяемого столбца либо тип данных для добавляемого столбца. Значение *type_name* нельзя задать для существующих столбцов секционированных таблиц. Тип *type_name* может иметь любое из следующих значений:
 
@@ -614,6 +617,9 @@ ALTER INDEX *index_name*
 
 ADD  
 Указывает, что добавляется одно или несколько определений столбца, определений вычисляемого столбца или ограничений таблиц. Или же добавляются столбцы, которые система использует для системного управления версиями. Для таблиц, оптимизированных для памяти, можно добавить индекс.
+
+> [!NOTE]
+> Новые столбцы добавляются после изменения всех существующих столбцов в таблице.
 
 > [!IMPORTANT]
 > Инструкции [CREATE INDEX](create-index-transact-sql.md), [DROP INDEX](drop-index-transact-sql.md), [ALTER INDEX](alter-index-transact-sql.md) и [PAD_INDEX](alter-table-index-option-transact-sql.md) не будут работать с индексами в таблицах, оптимизированных для памяти, если не применить инструкцию ALTER TABLE.

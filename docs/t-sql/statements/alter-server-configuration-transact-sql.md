@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: f3059e42-5f6f-4a64-903c-86dca212a4b4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ba3e69e44ec02240ef36eee3563becf03165a5fe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 06237e28f9ba75e798da1af57964cc8b251d0b26
+ms.sourcegitcommit: f6bfe4a0647ce7efebaca11d95412d6a9a92cd98
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68070260"
+ms.lasthandoff: 10/05/2019
+ms.locfileid: "71974409"
 ---
 # <a name="alter-server-configuration-transact-sql"></a>ALTER SERVER CONFIGURATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -140,7 +140,8 @@ NUMANODE = \<NUMA_node_range_spec>
   
 **\<diagnostic_log> ::=**  
   
-**Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]).  
+
   
 DIAGNOSTICS LOG  
 Запускает или останавливает запись в журнал диагностических данных, полученных с помощью хранимой процедуры sp_server_diagnostics. Этот аргумент также задает параметры конфигурации журналов SQLDIAG, такие как количество переключений файлов журнала, размер файлов журнала и расположение файлов. Дополнительные сведения см. в статье [Просмотр и чтение журнала диагностики экземпляра отказоустойчивого кластера](../../sql-server/failover-clusters/windows/view-and-read-failover-cluster-instance-diagnostics-log.md).  
@@ -162,7 +163,7 @@ MAX_FILES = { 'max_file_count' | DEFAULT }
   
 **\<failover_cluster_property> ::=**  
   
-**Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]).    
   
 FAILOVER CLUSTER PROPERTY  
 Изменяет свойства закрытого ресурса отказоустойчивого кластера SQL Server.  
@@ -193,7 +194,7 @@ HEALTHCHECKTIMEOUT = { 'health_check_time-out' | DEFAULT }
   
 **\<hadr_cluster_context> ::=**  
   
-**Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]).   
   
 HADR CLUSTER CONTEXT **=** { **'** _remote\_windows\_cluster_ **'** | LOCAL }  
 Переключает контекст кластера HADR экземпляра сервера на указанный отказоустойчивый кластер Windows Server (WSFC). *Контекст кластера HADR* определяет кластер WSFC, который управляет метаданными для реплик доступности, размещенных в экземпляре сервера. Используйте параметр SET HADR CLUSTER CONTEXT только во время миграции с кластера [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] на экземпляр [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] или более новой версии в новом кластере WSFC.  
@@ -217,7 +218,7 @@ LOCAL
   
 **\<buffer_pool_extension>::=**  
   
-**Применимо к**: с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]).    
   
 ON  
 Обеспечивает возможность расширения буферного пула. Этот параметр расширяет размер буферного пула за счет использования энергонезависимого хранилища. Энергонезависимое хранилище, такое как твердотельные накопители (SSD), сохраняет чистые страницы данных в пуле. Дополнительные сведения об этой возможности см. в статье [Buffer Pool Extension](../../database-engine/configure-windows/buffer-pool-extension.md). Расширение буферного пула поддерживается не во всех выпусках SQL Server. Дополнительные сведения см. в статье [Возможности, поддерживаемые различными выпусками SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
@@ -238,7 +239,7 @@ OFF
   
 **\<soft_numa>**  
 
-**Применимо к**: с [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]).  
   
 ON  
 Включает автоматическое секционирование для разбиения крупных аппаратных узлов NUMA на более мелкие узлы NUMA. При изменении текущего значения потребуется перезапустить ядро СУБД.  
@@ -257,7 +258,7 @@ OFF
 
 **\<memory_optimized> ::=**
 
-**Область применения**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] и более поздних версий
+**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)])
 
 ON <br>
 Включает все функции уровня экземпляра, которые являются частью семейства функций [выполняющейся в памяти базы данных](../../relational-databases/in-memory-database.md). Сейчас к ним относятся [оптимизированные для памяти метаданные tempdb](../../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata) и [гибридный буферный пул](../../database-engine/configure-windows/hybrid-buffer-pool.md). Для вступления в силу требуется перезагрузка.
@@ -312,7 +313,7 @@ HYBRID_BUFFER_POOL = ON | OFF <br>
 #### <a name="a-setting-affinity-to-all-cpus-in-groups-0-and-2"></a>A. Задание привязки для всех процессоров в группах 0 и 2  
 В следующем примере задается соответствие для всех процессоров в группах 0 и 2.  
   
-```  
+```sql  
 ALTER SERVER CONFIGURATION   
 SET PROCESS AFFINITY CPU=0 TO 63, 128 TO 191;  
 ```  
@@ -320,7 +321,7 @@ SET PROCESS AFFINITY CPU=0 TO 63, 128 TO 191;
 #### <a name="b-setting-affinity-to-all-cpus-in-numa-nodes-0-and-7"></a>Б. Задание привязки для всех процессоров в узлах NUMA 0 и 7  
 В следующем примере задается привязка процессоров только к узлам `0` и `7`.  
   
-```  
+```sql  
 ALTER SERVER CONFIGURATION   
 SET PROCESS AFFINITY NUMANODE=0, 7;  
 ```  
@@ -328,7 +329,7 @@ SET PROCESS AFFINITY NUMANODE=0, 7;
 #### <a name="c-setting-affinity-to-cpus-60-through-200"></a>В. Задание привязки к процессорам с номерами от 60 до 200  
 В следующем примере задается соответствие для процессоров от 60 до 200.  
   
-```  
+```sql  
 ALTER SERVER CONFIGURATION   
 SET PROCESS AFFINITY CPU=60 TO 200;  
 ```  
@@ -350,28 +351,28 @@ SET PROCESS AFFINITY CPU=AUTO;
   
 ###  <a name="Diagnostic"></a> Setting diagnostic log options  
   
-**Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]).    
   
 В примерах этого раздела показана установка значений параметра журнала диагностики.  
   
 #### <a name="a-starting-diagnostic-logging"></a>A. Запуск регистрации диагностических данных в журнале  
 В следующем примере запускается запись в журнал диагностических данных.  
   
-```  
+```sql  
 ALTER SERVER CONFIGURATION SET DIAGNOSTICS LOG ON;  
 ```  
   
 #### <a name="b-stopping-diagnostic-logging"></a>Б. Останов регистрации диагностических данных в журнале  
 В следующем примере запись в журнал диагностических данных прекращается.  
   
-```  
+```sql  
 ALTER SERVER CONFIGURATION SET DIAGNOSTICS LOG OFF;  
 ```  
   
 #### <a name="c-specifying-the-location-of-the-diagnostic-logs"></a>В. Задание расположения журналов диагностических данных  
 В следующем примере для журналов диагностических данных задается расположение по указанному пути к файлам.  
   
-```  
+```sql  
 ALTER SERVER CONFIGURATION  
 SET DIAGNOSTICS LOG PATH = 'C:\logs';  
 ```  
@@ -379,21 +380,21 @@ SET DIAGNOSTICS LOG PATH = 'C:\logs';
 #### <a name="d-specifying-the-maximum-size-of-each-diagnostic-log"></a>Г. Задание максимального размера каждого из журналов диагностики  
 В следующем примере задан максимальный размер каждого из журналов диагностики, равный 10 мегабайтам.  
   
-```  
+```sql  
 ALTER SERVER CONFIGURATION   
 SET DIAGNOSTICS LOG MAX_SIZE = 10 MB;  
 ```  
   
 ###  <a name="Failover"></a> Установка свойств отказоустойчивого кластера  
   
-**Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]).   
   
 В следующем примере показана установка свойств ресурса отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 #### <a name="a-specifying-the-value-for-the-healthchecktimeout-property"></a>A. Указание значения свойства HealthCheckTimeout  
 В следующем примере устанавливается параметр `HealthCheckTimeout`, равный 15 000 миллисекунд (15 секунд).  
   
-```  
+```sql  
 ALTER SERVER CONFIGURATION   
 SET FAILOVER CLUSTER PROPERTY HealthCheckTimeout = 15000;  
 ```  
@@ -401,7 +402,7 @@ SET FAILOVER CLUSTER PROPERTY HealthCheckTimeout = 15000;
 ###  <a name="ChangeClusterContextExample"></a> Б. Изменение контекста кластера для реплики доступности  
 В следующем примере выполняется смена контекста экземпляра кластера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]HADR. Для задания целевого кластера WSFC `clus01` в примере указывается полное имя объекта кластера — `clus01.xyz.com`.  
   
-```  
+```sql  
 ALTER SERVER CONFIGURATION SET HADR CLUSTER CONTEXT = 'clus01.xyz.com';  
 ```  
   
@@ -409,11 +410,11 @@ ALTER SERVER CONFIGURATION SET HADR CLUSTER CONTEXT = 'clus01.xyz.com';
   
 ####  <a name="BufferPoolExtension"></a> A. Установка параметра расширения буферного пула  
   
-**Применимо к**: с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]).    
   
 В следующем примере выполняется включение параметра расширения буферного пула и задается имя и размер файла.  
   
-```  
+```sql  
 ALTER SERVER CONFIGURATION   
 SET BUFFER POOL EXTENSION ON  
     (FILENAME = 'F:\SSDCACHE\Example.BPE', SIZE = 50 GB);  
@@ -422,7 +423,7 @@ SET BUFFER POOL EXTENSION ON
 #### <a name="b-modifying-buffer-pool-extension-parameters"></a>Б. Изменение параметров расширения буферного пула  
 В следующем примере изменяется размер файла расширения буферного пула. Для изменения любых параметров необходимо отключить параметр расширения буферного пула.  
   
-```  
+```sql  
 ALTER SERVER CONFIGURATION   
 SET BUFFER POOL EXTENSION OFF;  
 GO  
@@ -433,39 +434,40 @@ GO
 ALTER SERVER CONFIGURATION  
 SET BUFFER POOL EXTENSION ON  
     (FILENAME = 'F:\SSDCACHE\Example.BPE', SIZE = 60 GB);  
-GO  
-  
+GO   
 ```  
 
 ### <a name="MemoryOptimized"></a> Настройка параметров выполняющейся в памяти базы данных
 
-**Область применения**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] и более поздних версий
+**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]).
 
 #### <a name="a-enable-all-in-memory-database-features-with-default-options"></a>A. Включение всех функций выполняющейся в памяти базы данных с параметрами по умолчанию
 
-```
+```sql
 ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED ON;
 GO
 ```
 
 #### <a name="b-enable-memory-optimized-tempdb-metadata-using-the-default-resource-pool"></a>Б. Включение оптимизированных для памяти метаданных tempdb с использованием пула ресурсов по умолчанию
-```
+
+```sql
 ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED TEMPDB_METADATA = ON;
 GO
 ```
 
 #### <a name="c-enable-memory-optimized-tempdb-metadata-with-a-user-defined-resource-pool"></a>В. Включение оптимизированных для памяти метаданных tempdb с пользовательским пулом ресурсов
-```
+
+```sql
 ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED TEMPDB_METADATA = ON (RESOURCE_POOL = 'pool_name');
 GO
 ```
 
 #### <a name="d-enable-hybrid-buffer-pool"></a>Г. Включение гибридного буферного пула
-```
+
+```sql
 ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED HYBRID_BUFFER_POOL = ON;
 GO
 ```
-
 
 ## <a name="see-also"></a>См. также:  
 [Soft-NUMA (SQL Server)](../../database-engine/configure-windows/soft-numa-sql-server.md)   

@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d0637fc4-27cc-4046-98ea-dc86b7a3bd75
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 466598ca9e7846b3b5ffbeef17987cd61233ec7a
-ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
+ms.openlocfilehash: 7a0282d1b9f2aa63e89d5246d37210a2b088ad35
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71251093"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710302"
 ---
 # <a name="initialize-a-transactional-subscription-from-a-backup"></a>Инициализация подписки на публикацию транзакций из резервной копии
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "71251093"
   
     -   Если оно равно **1**, то публикация поддерживает данную функцию.  
   
-    -   Если значение равно **0**, выполните хранимую процедуру [sp_changepublication (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) на издателе в базе данных публикации. В параметре **allow_initialize_from_backup** укажите значение **@property** , а в параметре **@value** укажите значение **@value** .  
+    -   Если значение равно **0**, выполните хранимую процедуру [sp_changepublication (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) на издателе в базе данных публикации. В параметре **allow_initialize_from_backup** укажите значение `@property`, а в параметре `@value` — значение **true**.  
   
 2.  В новой публикации выполните хранимую процедуру [sp_addpublication (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md) на издателе в базе данных публикации. Задайте значение **true** для параметра **allow_initialize_from_backup**. Дополнительные сведения см. в разделе [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md).  
   
@@ -48,23 +48,23 @@ ms.locfileid: "71251093"
   
 5.  На издателе в базе данных издателя выполните хранимую процедуру [sp_addsubscription (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Укажите значения следующих параметров.  
   
-    -   **@sync_type** — значение параметра **initialize with backup**.  
+    -   `@sync_type` — значение параметра **initialize with backup**.  
   
-    -   **@backupdevicetype** — тип устройства резервного копирования: **logical** (по умолчанию), **disk**или **tape**.  
+    -   `@backupdevicetype` — тип устройства резервного копирования: **logical** (по умолчанию), **disk** или **tape**.  
   
-    -   **@backupdevicename** — логическое или физическое устройство резервного копирования, с которого будет производиться восстановление.  
+    -   `@backupdevicename` — логическое или физическое устройство резервного копирования, с которого будет производиться восстановление.  
   
          Для логического устройства задайте имя устройства резервного копирования, указанное при создании устройства при помощи хранимой процедуры **sp_addumpdevice** .  
   
          Для физического устройства укажите полный путь и имя файла, например: `DISK = 'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\BACKUP\Mybackup.dat'` или `TAPE = '\\.\TAPE0'`.  
   
-    -   (Необязательно) **@password** — пароль, заданный во время сеанса создания резервного набора данных.  
+    -   (Необязательно) `@password` — пароль, заданный во время сеанса создания резервного набора данных.  
   
-    -   (Необязательно) **@mediapassword** — пароль, заданный во время сеанса форматирования набора носителей.  
+    -   (Необязательно) `@mediapassword` — пароль, заданный во время сеанса форматирования набора носителей.  
   
-    -   (Необязательно) **@fileidhint** — идентификатор восстанавливаемой резервной копии. Например, значение **1** указывает первый резервный набор данных на носителе данных резервных копий, а значение **2** — второй резервный набор данных.  
+    -   (Необязательно) `@fileidhint` — идентификатор восстанавливаемой резервной копии. Например, значение **1** указывает первый резервный набор данных на носителе данных резервных копий, а значение **2** — второй резервный набор данных.  
   
-    -   (Для ленточных устройств необязательно.) **@unload** . Если после завершения сеанса восстановления необходимо извлечь ленту из устройства считывания, укажите значение **1** (по умолчанию), в противном случае — значение **0**.  
+    -   (Для ленточных устройств необязательно.) `@unload` — если после завершения сеанса восстановления необходимо извлечь ленту из устройства считывания, укажите значение **1** (по умолчанию), в противном случае — значение **0**.  
   
 6.  (Необязательно.) Для подписки по запросу выполните процедуру [sp_addpullsubscription (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md) и [sp_addpullsubscription_agent (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md) на подписчике в базе данных подписки. Дополнительные сведения см. в статье [Создание подписки по запросу](../../relational-databases/replication/create-a-pull-subscription.md).  
   

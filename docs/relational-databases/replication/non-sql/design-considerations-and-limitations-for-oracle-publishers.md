@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8d9dcc59-3de8-4d36-a61f-bc3ca96516b6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 159a2f0b75371aa24661d3e33f3e2108dc93432b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a2bf159b42298a2b1fc031383dffe7218f55aabd
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67901093"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710938"
 ---
 # <a name="design-considerations-and-limitations-for-oracle-publishers"></a>Рассмотрение структуры и ограничений издателей Oracle
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -120,7 +120,7 @@ ms.locfileid: "67901093"
   
 -   Стандартные публикации транзакций поддерживают таблицы, содержащие до 1000 столбцов. Публикации транзакций Oracle поддерживают 995 столбцов (репликация добавляет пять столбцов в каждую публикуемую таблицу).  
   
--   К инструкциям CREATE TABLE добавляются выражения порядка следования, чтобы сделать возможными сравнения, учитывающие регистр, которые имеют важные значения для первичных ключей и уникальных ограничений. Эта логика поведения управляется параметром схемы 0x1000, который указывается с помощью параметра **@schema_option** хранимой процедуры [sp_addarticle (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md).  
+-   К инструкциям CREATE TABLE добавляются выражения порядка следования, чтобы сделать возможными сравнения, учитывающие регистр, которые имеют важные значения для первичных ключей и уникальных ограничений. Эта логика поведения управляется параметром схемы 0x1000, который указывается с помощью параметра `@schema_option` хранимой процедуры [sp_addarticle (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md).  
   
 -   Если для настройки или обслуживания издателя Oracle используются хранимые процедуры, не вставляйте эти процедуры в явную транзакцию. Такая вложенность не поддерживается связанным сервером, используемым для подключения к издателю Oracle.  
   
@@ -150,7 +150,7 @@ ms.locfileid: "67901093"
   
 -   Учетная запись, под которой агент моментальных снимков и агент чтения журналов устанавливают подключения от распространителя к издателю, указывается с помощью одного из следующих методов:  
   
-    -   Параметр **@security_mode** хранимой процедуры [sp_adddistpublisher (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md) (также указываются параметры **@login** и **@password** , если используется проверка подлинности Oracle).  
+    -   Параметр `@security_mode` хранимой процедуры [sp_adddistpublisher (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md) (также указываются параметры `@login` и `@password`, если используется проверка подлинности Oracle).  
   
     -   в диалоговом окне **Соединение с сервером** в среде SQL Server Management Studio, которое используется при настройке издателя Oracle на распространителе [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
@@ -158,11 +158,11 @@ ms.locfileid: "67901093"
   
 -   Учетную запись, под которой агент моментальных снимков и агент чтения журналов устанавливают подключения, невозможно изменить с помощью хранимой процедуры [sp_changedistpublisher (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-changedistpublisher-transact-sql.md) или таблицы свойств, но пароль можно изменить.  
   
--   Если указывается значение 1 (встроенная проверка подлинности Windows) для параметра **@security_mode** хранимой процедуры [sp_adddistpublisher (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md):  
+-   Если указывается значение 1 (встроенная проверка подлинности Windows) для параметра `@security_mode` хранимой процедуры [sp_adddistpublisher (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md):  
   
-    -   Учетная запись процесса и пароль, используемые и агентом моментальных снимков, и агентом чтения журнала (параметры **@job_login** и **@job_password** хранимых процедур [sp_addpublication_snapshot (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md) и [sp_addlogreader_agent (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md)) должны совпадать с учетной записью и паролем, используемыми для подключения к издателю Oracle.  
+    -   Учетная запись процесса и пароль, используемые и агентом моментальных снимков, и агентом чтения журнала (параметры `@job_login` и `@job_password` хранимых процедур [sp_addpublication_snapshot (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md) и [sp_addlogreader_agent (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md)) должны совпадать с учетной записью и паролем, используемыми для подключения к издателю Oracle.  
   
-    -   Параметр **@job_login** невозможно изменить с помощью хранимой процедуры [sp_changepublication_snapshot (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql.md) или [sp_changelogreader_agent (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-changelogreader-agent-transact-sql.md), но пароль можно изменить.  
+    -   Параметр `@job_login` невозможно изменить с помощью хранимой процедуры [sp_changepublication_snapshot (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql.md) или [sp_changelogreader_agent (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-changelogreader-agent-transact-sql.md), но пароль можно изменить.  
   
  Дополнительные сведения о безопасности репликации см. в статье [Просмотр и изменение параметров безопасности репликации](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md).  
   

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 14839cec-6dbf-49c2-aa27-56847b09b4db
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 24ed9dad8c45206f405c4bc0cb2d948c98d8b5ea
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 058e46441b22f5be5b0d63cf8e9a61dd6c75ef27
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68018711"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71711041"
 ---
 # <a name="specify-merge-replication-properties"></a>Указание свойств репликации слиянием
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,20 +52,20 @@ ms.locfileid: "68018711"
   
 #### <a name="new-article"></a>Новая статья  
   
-1.  Выполните хранимую процедуру [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md), указав значение **1** или **2** в параметре **@subscriber_upload_options** . Числа соответствуют следующему поведению.  
+1.  Выполните хранимую процедуру [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md), указав значение **1** или **2** в параметре `@subscriber_upload_options`. Числа соответствуют следующему поведению.  
   
     -   **0** = без ограничений (по умолчанию). Изменения, произведенные на подписчике, передаются на издатель.    
     -   **1** — изменения на подписчике разрешены, но они не передаются на издатель.    
     -   **2** — изменения на подписчике не разрешены.  
   
-        > [!NOTE]  
-        >  Если исходная таблица для статьи уже опубликована в другой публикации, то значение параметра **@subscriber_upload_options** должно быть одинаковым для обеих статей.  
+       > [!NOTE]  
+       > Если исходная таблица для статьи уже опубликована в другой публикации, то значение параметра `@subscriber_upload_options` должно быть одинаковым для обеих статей.  
   
 #### <a name="existing-article"></a>Существующая статья
   
 1.  Чтобы определить, является ли статья доступной только для скачивания, выполните хранимую процедуру [sp_helpmergearticle](../../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md) и проверьте значение **upload_options** для статьи в результирующем наборе. 
   
-2.  Если значение, возвращенное в шаге 1, равно **0**, выполните хранимую процедуру [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md), указав значение **subscriber_upload_options** в параметре **@property** , значение **1** в параметре **@force_invalidate_snapshot** и **@force_reinit_subscription** и значение **1** или **2** в параметре **@value** , что соответствует следующему.  
+2.  Если значение, возвращенное в шаге 1, равно **0**, выполните хранимую процедуру [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md), указав значение **subscriber_upload_options** в параметре `@property`, значение **1** в параметрах `@force_invalidate_snapshot` и `@force_reinit_subscription` и значение **1** или **2** в параметре `@value`, что соответствует следующему:  
   
     -   **1** — изменения на подписчике разрешены, но они не передаются на издатель.    
     -   **2** — изменения на подписчике не разрешены.  
@@ -103,20 +103,20 @@ ms.locfileid: "68018711"
   
 #### <a name="create-a-merge-pull-subscription-that-uses-the-interactive-resolver"></a>Создание подписки по запросу на публикации слиянием, использующую интерактивный сопоставитель  
   
-1.  На издателе в базе данных публикации выполните хранимую процедуру [sp_helpmergearticle](../../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md), указав параметр **@publication** . Запомните значение **allow_interactive_resolver** для каждой статьи в результирующем наборе, для которого будет использоваться интерактивный сопоставитель.   
+1.  В издателе в базе данных публикации выполните хранимую процедуру [sp_helpmergearticle](../../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md), указав параметр `@publication`. Запомните значение **allow_interactive_resolver** для каждой статьи в результирующем наборе, для которого будет использоваться интерактивный сопоставитель.   
     -   Если это значение равно **1**, будет использоваться интерактивный сопоставитель.    
-    -   Если значение равно **0**, необходимо вначале включить интерактивный сопоставитель для каждой статьи. Для этого выполните хранимую процедуру [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md), указав параметр **@publication** , **@article** , значение **allow_interactive_resolver** в параметре **@property** и значение **true** в параметре **@value** .    
+    -   Если значение равно **0**, необходимо вначале включить интерактивный сопоставитель для каждой статьи. Для этого выполните хранимую процедуру [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md), указав параметр `@publication`, `@article`, значение **allow_interactive_resolver** в параметре `@property` и значение **true** в параметре `@value`.    
 2.  В базе данных подписки на издателе выполните процедуру [sp_addmergepushsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md). Дополнительные сведения см. в статье [Создание подписки по запросу](../../../relational-databases/replication/create-a-pull-subscription.md).    
 3.  На подписчике в базе данных подписки выполните хранимую процедуру [sp_addmergepullsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md), указав следующие параметры.    
-    -   **@publisher** , **@publisher_db** (публикуемая база данных) и **@publication** .    
-    -   Значение **true** в параметре **@enabled_for_syncmgr** .    
-    -   Значение **true** в параметре **@use_interactive_resolver** .    
+    -   `@publisher`, `@publisher_db` (публикуемая база данных) и `@publication`.    
+    -   Значение **true** в параметре `@enabled_for_syncmgr`.    
+    -   Значение **true** в параметре `@use_interactive_resolver`.    
     -   Сведения учетной записи безопасности, необходимой для агента слияния. Дополнительные сведения см. в разделе [Create a Pull Subscription](../../../relational-databases/replication/create-a-pull-subscription.md).    
 4.  В базе данных публикации на издателе выполните процедуру [sp_addmergepushsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md).  
   
 #### <a name="define-an-article-that-supports-the-interactive-resolver"></a>Определение статьи, поддерживающей интерактивный сопоставитель  
   
-1.  В базе данных публикации на издателе выполните процедуру [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md). Укажите имя публикации, которой принадлежит статья, в параметре **@publication** , имя статьи в параметре **@article** , публикуемый объект базы данных в параметре **@source_object** и значение **true** в параметре **@allow_interactive_resolver** . Дополнительные сведения см. в статье [определить статью](../../../relational-databases/replication/publish/define-an-article.md).  
+1.  В базе данных публикации на издателе выполните процедуру [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md). Укажите имя публикации, которой принадлежит статья, в параметре `@publication`, имя статьи в параметре `@article`, публикуемый объект базы данных в параметре `@source_object` и значение **true** в параметре `@allow_interactive_resolver`. Дополнительные сведения см. в статье [определить статью](../../../relational-databases/replication/publish/define-an-article.md).  
  
 ## <a name="conflict-tracking-and-resolution-level-for-merge-articles"></a>Уровень отслеживания и разрешения конфликтов для статей публикации слиянием
 В данном разделе описывается указание уровня отслеживания и разрешения конфликтов для статей публикации слиянием в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] при помощи среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
@@ -142,7 +142,7 @@ ms.locfileid: "68018711"
   
 #### <a name="to-specify-conflict-tracking-options-for-a-new-merge-article"></a>Настройка параметров отслеживания конфликтов для новой статьи публикации слиянием  
   
-1.  На издателе базы данных публикации выполните хранимую процедуру [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) и присвойте параметру **@column_tracking** одно из приведенных ниже значений:  
+1.  В издателе базы данных публикации выполните хранимую процедуру [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) и присвойте параметру `@column_tracking` одно из приведенных ниже значений.  
   
     -   **true** — использовать для статьи отслеживание на уровне столбцов;    
     -   **false** — использовать отслеживание на уровне строк (значение по умолчанию).  
@@ -150,12 +150,12 @@ ms.locfileid: "68018711"
 #### <a name="change-conflict-tracking-options-for-a-merge-article"></a>Изменение параметров отслеживания конфликтов для статьи публикации слиянием  
   
 1.  Чтобы определить текущие параметры отслеживания конфликтов для статьи публикации слиянием, выполните хранимую процедуру [sp_helpmergearticle](../../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md). Проверьте значение параметра **column_tracking** в результирующем наборе для статьи. Значение **1** показывает, что используется отслеживание конфликтов уровня столбца, а значение **0** — отслеживание конфликтов уровня строки.    
-2.  В базе данных публикации на издателе выполните процедуру [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). В качестве значения параметра **column_tracking** задайте значение **@property** , а параметру **@value** одно из приведенных ниже значений:  
+2.  В базе данных публикации на издателе выполните процедуру [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Присвойте параметру **column_tracking** значение `@property`, а параметру `@value` — одно из приведенных ниже значений.  
   
     -   **true** — использовать для статьи отслеживание на уровне столбцов;    
     -   **false** — использовать отслеживание на уровне строк (значение по умолчанию).  
   
-     В качестве значения параметра **1** параметрам **@force_invalidate_snapshot** и **@force_reinit_subscription** . 
+     Присвойте значение **1** параметрам `@force_invalidate_snapshot` и `@force_reinit_subscription`. 
 
 ## <a name="manage-tracking--deletes"></a>Управление отслеживанием команд удаления
     
@@ -169,7 +169,7 @@ ms.locfileid: "68018711"
   
 ### <a name="specify-that-deletes-be-ignored-for-a-new-merge-article"></a>Отключение обработки команд удаления для новой статьи слияния  
   
-В базе данных публикации на издателе выполните процедуру [sp_addmergearticle (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md). В параметре **@delete_tracking** @delete_tracking **@delete_tracking** ). Дополнительные сведения см. в статье [определить статью](../../../relational-databases/replication/publish/define-an-article.md).
+В базе данных публикации на издателе выполните процедуру [sp_addmergearticle (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md). Укажите значение **false** в параметре `@delete_tracking`. Дополнительные сведения см. в статье [определить статью](../../../relational-databases/replication/publish/define-an-article.md).
   
     > [!NOTE]  
     >  If the source table for an article is already published in another publication, the value of **delete_tracking** must be the same for both articles.  
@@ -178,7 +178,7 @@ ms.locfileid: "68018711"
   
 1.  Чтобы определить, включена ли компенсация ошибок для статьи, выполните хранимую процедуру [sp_helpmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md) и в полученных результатах проверьте значение параметра **delete_tracking**. Если это значение равно **0**, то команды удаления уже не обрабатываются.  
   
-2.  Если на шаге 1 получено значение **1**, в базе данных публикации на издателе выполните процедуру [sp_changemergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Укажите значение **delete_tracking** для **@property** и значение **false** для **@value** .  
+2.  Если на шаге 1 получено значение **1**, в базе данных публикации на издателе выполните процедуру [sp_changemergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Укажите значение `delete_tracking` для `@property` и значение **false** для `@value`.  
   
     > [!NOTE]  
     >  Если исходная таблица для статьи уже опубликована в другой публикации, значение **delete_tracking** должно быть одинаковым для обеих статей.  
@@ -198,15 +198,15 @@ ms.locfileid: "68018711"
   
 ### <a name="new-article"></a>Новая статья
   
-1.  В базе данных публикации на издателе выполните процедуру [sp_addmergearticle (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md). Укажите целое значение, представляющее порядок обработки статьи, в параметре **@processing_order** . Дополнительные сведения см. в статье [определить статью](../../../relational-databases/replication/publish/define-an-article.md).  
+1.  В базе данных публикации на издателе выполните процедуру [sp_addmergearticle (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md). Укажите целое значение, представляющее порядок обработки статьи, в параметре `@processing_order`. Дополнительные сведения см. в статье [определить статью](../../../relational-databases/replication/publish/define-an-article.md).  
   
     > [!NOTE]  
-    >  При создании упорядоченных статей необходимо оставлять промежутки между значениями порядковых номеров статей. Это облегчит задание новых значений в будущем. Например, если существуют три статьи, для которых нужно указать фиксированный порядок обработки, укажите в параметре **@processing_order** значения 10, 20 и 30, а не 1, 2 и 3 соответственно.  
+    >  При создании упорядоченных статей необходимо оставлять промежутки между значениями порядковых номеров статей. Это облегчит задание новых значений в будущем. Например, если существуют три статьи, для которых нужно указать фиксированный порядок обработки, укажите в параметре `@processing_order` значения 10, 20 и 30, а не 1, 2 и 3 соответственно.  
   
 ### <a name="existing-article"></a>Существующая статья
   
 1.  Чтобы определить порядок обработки статьи, выполните процедуру [sp_helpmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md) и проверьте значение **processing_order** в результирующем наборе.   
-2.  В базе данных публикации на издателе выполните процедуру [sp_changemergearticle (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Укажите значение из свойства **processing_order** в параметре **@property** и целое значение, представляющее порядок обработки, в параметре **@value** .  
+2.  В базе данных публикации на издателе выполните процедуру [sp_changemergearticle (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Укажите значение из свойства **processing_order** в параметре `@property` и целое значение, представляющее порядок обработки, в параметре `@value`.  
 
 
 ## <a name="see-also"></a>См. также:  

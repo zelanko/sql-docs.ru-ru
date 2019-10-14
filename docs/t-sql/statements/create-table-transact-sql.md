@@ -46,12 +46,12 @@ helpviewer_keywords:
 ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8be2e837ff71237cf6d39f8593e8b852cc08ed2e
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 22a2009b4728cfd0e1fdf9eb1623a3fb43b74904
+ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653376"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71680908"
 ---
 # <a name="create-table-transact-sql"></a>Инструкция CREATE TABLE (Transact-SQL)
 
@@ -67,7 +67,7 @@ ms.locfileid: "69653376"
 ## <a name="simple-syntax"></a>Простой синтаксис
 
 ```
---Simple CREATE TABLE Syntax (common if not using options)
+-- Simple CREATE TABLE Syntax (common if not using options)
 CREATE TABLE
     { database_name.schema_name.table_name. | schema_name.table_name | table_name }
     ( { <column_definition> } [ ,...n ] )
@@ -77,7 +77,7 @@ CREATE TABLE
 ## <a name="full-syntax"></a>Полный синтаксис
 
 ```
---Disk-Based CREATE TABLE Syntax
+-- Disk-Based CREATE TABLE Syntax
 CREATE TABLE
     { database_name.schema_name.table_name | schema_name.table_name | table_name }
     [ AS FileTable ]
@@ -265,7 +265,7 @@ column_set_name XML COLUMN_SET FOR ALL_SPARSE_COLUMNS
 ```
 
 ```
---Memory optimized CREATE TABLE Syntax
+-- Memory optimized CREATE TABLE Syntax
 CREATE TABLE
     { database_name.schema_name.table_name | schema_name.table_name | table_name }
     ( { <column_definition>
@@ -345,43 +345,36 @@ column_name <data_type>
 
 ## <a name="arguments"></a>Аргументы
 
-*database_name*      
-Имя базы данных, в которой создается таблица. Параметр *database_name* должен указывать имя существующей базы данных. Если не указано, в качестве *database_name* по умолчанию выбирается текущая база данных. Имя входа для текущего соединения должно быть связано с идентификатором пользователя, существующего в базе данных, указанной аргументом *database_name*, а этот пользователь должен обладать разрешениями CREATE TABLE.
+*database_name* — имя базы данных, в которой создается таблица. Параметр *database_name* должен указывать имя существующей базы данных. Если не указано, в качестве *database_name* по умолчанию выбирается текущая база данных. Имя входа для текущего соединения должно быть связано с идентификатором пользователя, существующего в базе данных, указанной аргументом *database_name*, а этот пользователь должен обладать разрешениями CREATE TABLE.
 
-*schema_name*     
-Имя схемы, которой принадлежит новая таблица.
+*schema_name* — имя схемы, которой принадлежит новая таблица.
 
-*table_name*    
-Имя новой таблицы. Имена таблиц должны соответствовать правилам для [идентификаторов](../../relational-databases/databases/database-identifiers.md). Аргумент *table_name* может состоять не более чем из 128 символов, за исключением имен локальных временных таблиц (имена с префиксом из одного символа решетки #), длина которых не должна превышать 116 символов.
+*table_name* — имя новой таблицы. Имена таблиц должны соответствовать правилам для [идентификаторов](../../relational-databases/databases/database-identifiers.md). Аргумент *table_name* может состоять не более чем из 128 символов, за исключением имен локальных временных таблиц (имена с префиксом из одного символа решетки #), длина которых не должна превышать 116 символов.
 
-AS FileTable    
-**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).
+AS FileTable **Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).
 
 Создает новую таблицу FileTable. Нет необходимости указывать столбцы, так как таблица FileTable имеет фиксированное схему. Дополнительные сведения см. в статье [Таблицы FileTable](../../relational-databases/blob/filetables-sql-server.md).
 
-*column_name*      
-*computed_column_expression*    
-Выражение, определяющее значение вычисляемого столбца. Вычисляемый столбец представляет собой виртуальный столбец, физически не хранящийся в таблице, если для него не установлен признак PERSISTED. Значение столбца вычисляется на основе выражения, использующего другие столбцы той же таблицы. Например, вычисляемый столбец может иметь определение **cost** AS **price** \* **qty**. Выражение может быть именем невычисляемого столбца, константой, функцией, переменной или любой их комбинацией, соединенной одним или несколькими операторами. Выражение не может быть вложенным запросом или содержать псевдонимы типов данных.
+*column_name*
+*computed_column_expression* — выражение, определяющее значение вычисляемого столбца. Вычисляемый столбец представляет собой виртуальный столбец, физически не хранящийся в таблице, если для него не установлен признак PERSISTED. Значение столбца вычисляется на основе выражения, использующего другие столбцы той же таблицы. Например, вычисляемый столбец может иметь определение **cost** AS **price** \* **qty**. Выражение может быть именем невычисляемого столбца, константой, функцией, переменной или любой их комбинацией, соединенной одним или несколькими операторами. Выражение не может быть вложенным запросом или содержать псевдонимы типов данных.
 
 Вычисляемые столбцы могут использоваться в списках выбора, предложениях WHERE, ORDER BY и в любых других местах, в которых могут использоваться обычные выражения, за исключением следующих случаев.
 
--  Для использования в ограничениях FOREIGN KEY или CHECK вычисляемые столбцы должны быть помечены как PERSISTED.
--  Вычисляемый столбец может использоваться в качестве ключевого столбца в индексе или в качестве компонента какого-либо ограничения PRIMARY KEY или UNIQUE, если значение этого вычисляемого столбца определено детерминистическим выражением, а тип данных результата разрешен в столбцах индекса.
+- Для использования в ограничениях FOREIGN KEY или CHECK вычисляемые столбцы должны быть помечены как PERSISTED.
+- Вычисляемый столбец может использоваться в качестве ключевого столбца в индексе или в качестве компонента какого-либо ограничения PRIMARY KEY или UNIQUE, если значение этого вычисляемого столбца определено детерминистическим выражением, а тип данных результата разрешен в столбцах индекса.
 
    Например, если таблица содержит целочисленные столбцы **a** и **b**, вычисляемый столбец **a+b** может быть включен в индекс, а вычисляемый столбец **a+DATEPART(dd, GETDATE())**  — не может, так как его значение может изменяться при последующих вызовах.
 
--  Вычисляемый столбец не может быть целевым столбцом инструкций INSERT или UPDATE.
+- Вычисляемый столбец не может быть целевым столбцом инструкций INSERT или UPDATE.
 
 > [!NOTE]
 > Каждая строка таблицы может содержать различные значения столбцов, задействованных в вычисляемом столбце; таким образом, значение вычисляемого столбца не будет одним и тем же в каждой строке.
 
 Компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] автоматически определяет для вычисляемых столбцов допустимость значений NULL на основе использованных выражений. Считается, что результат большинства выражений допускает значение NULL, даже если используются только столбцы, для которых значение NULL запрещено, так как при возможном переполнении или потере точности может получаться значение NULL. Для выяснения допустимости значения NULL в вычисляемом столбце таблицы используйте функцию `COLUMNPROPERTY` со свойством **AllowsNull**. Добиться того, чтобы выражение не допускало значения NULL, можно, указав `ISNULL` с константой *check_expression*, где константа представляет собой ненулевое значение, заменяющее любое значение NULL. Для вычисляемых столбцов, основанных на выражениях, содержащих определяемые пользователем типы среды CLR, требуется разрешение REFERENCES на тип.
 
-PERSISTED    
-Указывает, что компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] будет физически хранить вычисляемые значения в таблице и обновлять их при изменении любого столбца, от которого зависит вычисляемый столбец. Указание `PERSISTED` для вычисляемого столбца позволяет создать индекс по вычисляемому столбцу, который будет детерминированным, но не точным. Дополнительные сведения см. в разделе [Индексы вычисляемых столбцов](../../relational-databases/indexes/indexes-on-computed-columns.md). Все вычисляемые столбцы, используемые как столбцы секционирования в секционированной таблице, должны быть явно помечены как `PERSISTED`. Если указан параметр `PERSISTED`, значение *computed_column_expression* должно быть детерминированным.
+PERSISTED — указывает, что компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] будет физически хранить вычисляемые значения в таблице и обновлять их при изменении любого столбца, от которого зависит вычисляемый столбец. Указание `PERSISTED` для вычисляемого столбца позволяет создать индекс по вычисляемому столбцу, который будет детерминированным, но не точным. Дополнительные сведения см. в разделе [Индексы вычисляемых столбцов](../../relational-databases/indexes/indexes-on-computed-columns.md). Все вычисляемые столбцы, используемые как столбцы секционирования в секционированной таблице, должны быть явно помечены как `PERSISTED`. Если указан параметр `PERSISTED`, значение *computed_column_expression* должно быть детерминированным.
 
-ON { *partition_scheme* | *filegroup* |  **"default"** }     
-Указывает схему секционирования или файловую группу, в которой хранится таблица. Если аргумент *partition_scheme* указан, таблица будет разбита на секции, хранимые в одной или нескольких файловых группах, указанных аргументом *partition_scheme*. Если указан аргумент *filegroup*, таблица сохраняется в файловой группе с таким именем. Это должна быть существующая файловая группа в базе данных. Если указано значение **"default"** или параметр ON не определен вообще, таблица сохраняется в файловой группе по умолчанию. Механизм хранения таблицы, указанный в инструкции CREATE TABLE, изменить в дальнейшем невозможно.
+ON { *partition_scheme* | *filegroup* |  **"default"** } Указывает схему секционирования или файловую группу, в которой хранится таблица. Если аргумент *partition_scheme* указан, таблица будет разбита на секции, хранимые в одной или нескольких файловых группах, указанных аргументом *partition_scheme*. Если указан аргумент *filegroup*, таблица сохраняется в файловой группе с таким именем. Это должна быть существующая файловая группа в базе данных. Если указано значение **"default"** или параметр ON не определен вообще, таблица сохраняется в файловой группе по умолчанию. Механизм хранения таблицы, указанный в инструкции CREATE TABLE, изменить в дальнейшем невозможно.
 
 Параметр ON {*partition_scheme* | *filegroup* |  **"default"** } может также указываться в ограничении PRIMARY KEY или UNIQUE. С помощью этих ограничений создаются индексы. Если указан аргумент *filegroup*, индекс сохраняется в файловой группе с таким именем. Если указано значение **"default"** или параметр ON не определен вообще, индекс сохраняется в той же файловой группе, что и таблица. Если ограничение `PRIMARY KEY` или `UNIQUE` создает кластеризованный индекс, страницы данных таблицы сохраняются в той же файловой группе, что и индекс. Если ограничение создает кластеризованный индекс (с помощью параметра `CLUSTERED` или другим способом), а указанный аргумент *partition_scheme* отличается от аргументов *partition_scheme* и *filegroup* из определения таблицы либо наоборот, принимается во внимание только определение ограничения, а все остальное не учитывается.
 
@@ -390,8 +383,7 @@ ON { *partition_scheme* | *filegroup* |  **"default"** }
 >
 > После создания секционированной таблицы рекомендуется присвоить параметру `LOCK_ESCALATION` для таблицы значения `AUTO`. При этом можно усовершенствовать параллелизм, разрешив укрупнение блокировок до уровня секции (HoBT) вместо таблицы. Дополнительные сведения см. в разделе [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).
 
-TEXTIMAGE_ON { *filegroup*|  **"default"** }    
-Указывает, что столбцы типов **text**, **ntext**, **image**, **xml**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** , а также определяемых пользователем типов данных CLR (включая geometry и geography) хранятся в указанной файловой группе.
+TEXTIMAGE_ON { *filegroup*|  **"default"** } Указывает, что столбцы с типами **text**, **ntext**, **image**, **xml**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** и с определяемыми пользователем типами данных CLR (включая geometry и geography) хранятся в указанной файловой группе.
 
 Параметр `TEXTIMAGE_ON` недопустим, если в таблице нет столбцов с большими значениями. Нельзя указывать параметр `TEXTIMAGE_ON` одновременно с параметром *partition_scheme*. Если указано значение **"default"** или параметр `TEXTIMAGE_ON` не определен вообще, столбцы с большими значениями сохраняются в файловой группе по умолчанию. Способ хранения любых данных столбцов с большими значениями, определенный инструкцией `CREATE TABLE`, изменить в дальнейшем невозможно.
 
@@ -935,10 +927,10 @@ HASH
 
 ```sql
 CREATE TABLE #MyTempTable (
-  col1 INT PRIMARY KEY
+    col1 INT PRIMARY KEY
 );
 
-INSERT INTO #MyTempTable 
+INSERT INTO #MyTempTable
 VALUES (1);
 ```
 
@@ -959,17 +951,17 @@ VALUES (1);
 ```sql
 CREATE PROCEDURE dbo.Test2
 AS
-    CREATE TABLE #t(x INT PRIMARY KEY);
+    CREATE TABLE #t (x INT PRIMARY KEY);
     INSERT INTO #t VALUES (2);
     SELECT Test2Col = x FROM #t;
 GO
 
 CREATE PROCEDURE dbo.Test1
 AS
-    CREATE TABLE #t(x INT PRIMARY KEY);
+    CREATE TABLE #t (x INT PRIMARY KEY);
     INSERT INTO #t VALUES (1);
     SELECT Test1Col = x FROM #t;
- EXEC Test2;
+    EXEC Test2;
 GO
 
 CREATE TABLE #t(x INT PRIMARY KEY);
@@ -1131,16 +1123,16 @@ Test1Col
 В следующем примере показано определение ограничения PRIMARY KEY с кластеризованным индексом для столбца `EmployeeID` таблицы `Employee`. Поскольку имя ограничения не указано, оно будет подставлено системой.
 
 ```sql
-CREATE TABLE dbo.Employee (EmployeeID int
-PRIMARY KEY CLUSTERED);
+CREATE TABLE dbo.Employee (
+    EmployeeID INT PRIMARY KEY CLUSTERED
+);
 ```
 
 ### <a name="b-using-foreign-key-constraints"></a>Б. Использование ограничений FOREIGN KEY
 Ограничение FOREIGN KEY используется для ссылки на другую таблицу. Внешние ключи могут включать один или несколько столбцов. В следующем примере показано ограничение FOREIGN KEY с одним столбцом в таблице `SalesOrderHeader`, ссылающееся на таблицу `SalesPerson`. Для ограничения FOREIGN KEY с одним столбцом требуется только предложение REFERENCES.
 
 ```sql
-SalesPersonID int NULL
-REFERENCES SalesPerson(SalesPersonID)
+SalesPersonID INT NULL REFERENCES SalesPerson(SalesPersonID)
 ```
 
 Кроме того, предложение FOREIGN KEY можно применить явно и заново определить атрибут столбца. Обратите внимание, что имена столбцов в обеих таблицах могут различаться.
@@ -1152,16 +1144,16 @@ FOREIGN KEY (SalesPersonID) REFERENCES SalesPerson(SalesPersonID)
 Ограничения по ключам с несколькими столбцами создаются в виде табличных ограничений. В базе данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] таблица `SpecialOfferProduct` включает ограничение PRIMARY KEY с несколькими столбцами. В следующем примере показано, как обращаться к этому ключу из другой таблицы; задавать имя ограничения явно необязательно.
 
 ```sql
-CONSTRAINT FK_SpecialOfferProduct_SalesOrderDetail FOREIGN KEY
- (ProductID, SpecialOfferID)
-REFERENCES SpecialOfferProduct (ProductID, SpecialOfferID)
+CONSTRAINT FK_SpecialOfferProduct_SalesOrderDetail
+    FOREIGN KEY (ProductID, SpecialOfferID)
+    REFERENCES SpecialOfferProduct (ProductID, SpecialOfferID)
 ```
 
 ### <a name="c-using-unique-constraints"></a>В. Использование ограничений UNIQUE
 Ограничения UNIQUE используются для указания уникальности непервичных ключевых столбцов. В следующем примере применяется ограничение уникальности столбца `Name` таблицы `Product`.
 
 ```sql
-Name nvarchar(100) NOT NULL
+Name NVARCHAR(100) NOT NULL
 UNIQUE NONCLUSTERED
 ```
 
@@ -1175,7 +1167,7 @@ DEFAULT 'New Position - title not formalized yet'
 Кроме констант, определения DEFAULT могут включать функции. Следующий пример позволяет получить текущую дату для той или иной записи.
 
 ```sql
-DEFAULT (getdate())
+DEFAULT (GETDATE())
 ```
 
 Обработка функциями без параметров также может повысить целостность данных. Чтобы определить пользователя, вставившего строку, используйте функцию без параметров для USER. Не заключайте функции без параметров в скобки.
@@ -1194,16 +1186,19 @@ CHECK (CreditRating >= 1 and CreditRating <= 5)
 В этом примере показано именованное ограничение вводимых в столбец таблицы символьных данных по шаблону.
 
 ```sql
-CONSTRAINT CK_emp_id CHECK (emp_id LIKE
-'[A-Z][A-Z][A-Z][1-9][0-9][0-9][0-9][0-9][FM]'
-OR emp_id LIKE '[A-Z]-[A-Z][1-9][0-9][0-9][0-9][0-9][FM]')
+CONSTRAINT CK_emp_id CHECK (
+    emp_id LIKE '[A-Z][A-Z][A-Z][1-9][0-9][0-9][0-9][0-9][FM]'
+    OR emp_id LIKE '[A-Z]-[A-Z][1-9][0-9][0-9][0-9][0-9][FM]'
+)
 ```
 
 В этом примере указывается, что значения должны входить в заданный список или соответствовать заданному шаблону.
 
 ```sql
-CHECK (emp_id IN ('1389', '0736', '0877', '1622', '1756')
-OR emp_id LIKE '99[0-9][0-9]')
+CHECK (
+    emp_id IN ('1389', '0736', '0877', '1622', '1756')
+    OR emp_id LIKE '99[0-9][0-9]'
+)
 ```
 
 ### <a name="f-showing-the-complete-table-definition"></a>Е. Вывод на экран полного определения таблицы
@@ -1223,9 +1218,9 @@ CREATE TABLE dbo.PurchaseOrderDetail
     RejectedQty float NULL,
     DueDate datetime NULL,
     rowguid uniqueidentifier ROWGUIDCOL NOT NULL
-        CONSTRAINT DF_PurchaseOrderDetail_rowguid DEFAULT (newid()),
+        CONSTRAINT DF_PurchaseOrderDetail_rowguid DEFAULT (NEWID()),
     ModifiedDate datetime NOT NULL
-        CONSTRAINT DF_PurchaseOrderDetail_ModifiedDate DEFAULT (getdate()),
+        CONSTRAINT DF_PurchaseOrderDetail_ModifiedDate DEFAULT (GETDATE()),
     LineTotal AS ((UnitPrice*OrderQty)),
     StockedQty AS ((ReceivedQty-RejectedQty)),
     CONSTRAINT PK_PurchaseOrderDetail_PurchaseOrderID_LineNumber
@@ -1240,8 +1235,11 @@ ON PRIMARY;
 
 ```sql
 CREATE TABLE HumanResources.EmployeeResumes
-   (LName nvarchar(25), FName nvarchar(25),
-    Resume xml( DOCUMENT HumanResources.HRResumeSchemaCollection) );
+(
+    LName nvarchar(25),
+    FName nvarchar(25),
+    Resume xml(DOCUMENT HumanResources.HRResumeSchemaCollection)
+);
 ```
 
 ### <a name="h-creating-a-partitioned-table"></a>З. Создание секционированной таблицы
@@ -1249,16 +1247,16 @@ CREATE TABLE HumanResources.EmployeeResumes
 
 ```sql
 CREATE PARTITION FUNCTION myRangePF1 (int)
-    AS RANGE LEFT FOR VALUES (1, 100, 1000) ;
+    AS RANGE LEFT FOR VALUES (1, 100, 1000);
 GO
 
 CREATE PARTITION SCHEME myRangePS1
     AS PARTITION myRangePF1
-    TO (test1fg, test2fg, test3fg, test4fg) ;
+    TO (test1fg, test2fg, test3fg, test4fg);
 GO  
   
 CREATE TABLE PartitionTable (col1 int, col2 char(10))
-    ON myRangePS1 (col1) ;
+    ON myRangePS1 (col1);
 GO
 ```
 
@@ -1274,11 +1272,13 @@ GO
 
 ```sql
 CREATE TABLE dbo.Globally_Unique_Data
-    (guid uniqueidentifier
+(
+    GUID UNIQUEIDENTIFIER
         CONSTRAINT Guid_Default DEFAULT
         NEWSEQUENTIALID() ROWGUIDCOL,
-    Employee_Name varchar(60)
-    CONSTRAINT Guid_PK PRIMARY KEY (guid) );
+    Employee_Name VARCHAR(60)
+    CONSTRAINT Guid_PK PRIMARY KEY (GUID)
+);
 ```
 
 ### <a name="j-using-an-expression-for-a-computed-column"></a>К. Использование выражения для вычисляемого столбца
@@ -1286,7 +1286,11 @@ CREATE TABLE dbo.Globally_Unique_Data
 
 ```sql
 CREATE TABLE dbo.mytable
-    ( low int, high int, myavg AS (low + high)/2 ) ;
+(
+    low INT,
+    high INT,
+    myavg AS (low + high)/2
+);
 ```
 
 ### <a name="k-creating-a-computed-column-based-on-a-user-defined-type-column"></a>Л. Создание вычисляемого столбца на основе столбца определяемого пользователем типа
@@ -1294,7 +1298,10 @@ CREATE TABLE dbo.mytable
 
 ```sql
 CREATE TABLE UDTypeTable
-    ( u utf8string, ustr AS u.ToString() PERSISTED ) ;
+(
+    u UTF8STRING,
+    ustr AS u.ToString() PERSISTED
+);
 ```
 
 ### <a name="l-using-the-user_name-function-for-a-computed-column"></a>М. Использование функции USER_NAME для вычисляемого столбца
@@ -1302,7 +1309,11 @@ CREATE TABLE UDTypeTable
 
 ```sql
 CREATE TABLE dbo.mylogintable
-    ( date_in datetime, user_id int, myuser_name AS USER_NAME() ) ;
+(
+    date_in DATETIME,
+    user_id INT,
+    myuser_name AS USER_NAME()
+);
 ```
 
 ### <a name="m-creating-a-table-that-has-a-filestream-column"></a>Н. Создание таблицы со столбцом FILESTREAM
@@ -1310,12 +1321,11 @@ CREATE TABLE dbo.mylogintable
 
 ```sql
 CREATE TABLE dbo.EmployeePhoto
-    (
-     EmployeeId int NOT NULL PRIMARY KEY
-    ,Photo varbinary(max) FILESTREAM NULL
-    ,MyRowGuidColumn uniqueidentifier NOT NULL ROWGUIDCOL
-        UNIQUE DEFAULT NEWID()
-    );
+(
+    EmployeeId INT NOT NULL PRIMARY KEY,
+    Photo VARBINARY(MAX) FILESTREAM NULL,
+    MyRowGuidColumn UNIQUEIDENTIFIER NOT NULL ROWGUIDCOL UNIQUE DEFAULT NEWID()
+);
 ```
 
 ### <a name="n-creating-a-table-that-uses-row-compression"></a>О. О. Создание таблицы, использующей сжатие строк
@@ -1323,7 +1333,10 @@ CREATE TABLE dbo.EmployeePhoto
 
 ```sql
 CREATE TABLE dbo.T1
-(c1 int, c2 nvarchar(200) )
+(
+    c1 INT,
+    c2 NVARCHAR(200)
+)
 WITH (DATA_COMPRESSION = ROW);
 ```
 
@@ -1336,18 +1349,22 @@ WITH (DATA_COMPRESSION = ROW);
 
 ```sql
 CREATE TABLE dbo.T1
-    (c1 int PRIMARY KEY,
-    c2 varchar(50) SPARSE NULL ) ;
+(
+    c1 INT PRIMARY KEY,
+    c2 VARCHAR(50) SPARSE NULL
+);
 ```
 
 В этом примере создается таблица с двумя разреженными столбцами и набором столбцов с именем `CSet`.
 
 ```sql
 CREATE TABLE T1
-    (c1 int PRIMARY KEY,
-    c2 varchar(50) SPARSE NULL,
-    c3 int SPARSE NULL,
-    CSet XML COLUMN_SET FOR ALL_SPARSE_COLUMNS ) ;
+(
+    c1 INT PRIMARY KEY,
+    c2 VARCHAR(50) SPARSE NULL,
+    c3 INT SPARSE NULL,
+    CSet XML COLUMN_SET FOR ALL_SPARSE_COLUMNS
+);
 ```
 
 ### <a name="p-creating-a-system-versioned-disk-based-temporal-table"></a>Т. Создание темпоральной таблицы на основе диска с системным управлением версиями
@@ -1360,13 +1377,13 @@ CREATE TABLE T1
 ```sql
 CREATE TABLE Department
 (
-    DepartmentNumber char(10) NOT NULL PRIMARY KEY CLUSTERED,
-    DepartmentName varchar(50) NOT NULL,
-    ManagerID int NULL,
-    ParentDepartmentNumber char(10) NULL,
-    SysStartTime datetime2 GENERATED ALWAYS AS ROW START HIDDEN NOT NULL,
-    SysEndTime datetime2 GENERATED ALWAYS AS ROW END HIDDEN NOT NULL,
-    PERIOD FOR SYSTEM_TIME (SysStartTime,SysEndTime)
+    DepartmentNumber CHAR(10) NOT NULL PRIMARY KEY CLUSTERED,
+    DepartmentName VARCHAR(50) NOT NULL,
+    ManagerID INT NULL,
+    ParentDepartmentNumber CHAR(10) NULL,
+    SysStartTime DATETIME2 GENERATED ALWAYS AS ROW START HIDDEN NOT NULL,
+    SysEndTime DATETIME2 GENERATED ALWAYS AS ROW END HIDDEN NOT NULL,
+    PERIOD FOR SYSTEM_TIME (SysStartTime, SysEndTime)
 )
 WITH (SYSTEM_VERSIONING = ON);
 ```
@@ -1374,31 +1391,29 @@ WITH (SYSTEM_VERSIONING = ON);
 В этом примере создается новая темпоральная таблица, привязанная к существующей таблице журнала.
 
 ```sql
---Existing table
+-- Existing table
 CREATE TABLE Department_History
 (
-    DepartmentNumber char(10) NOT NULL,
-    DepartmentName varchar(50) NOT NULL,
-    ManagerID int NULL,
-    ParentDepartmentNumber char(10) NULL,
-    SysStartTime datetime2 NOT NULL,
-    SysEndTime datetime2 NOT NULL
+    DepartmentNumber CHAR(10) NOT NULL,
+    DepartmentName VARCHAR(50) NOT NULL,
+    ManagerID INT NULL,
+    ParentDepartmentNumber CHAR(10) NULL,
+    SysStartTime DATETIME2 NOT NULL,
+    SysEndTime DATETIME2 NOT NULL
 );
---Temporal table
+
+-- Temporal table
 CREATE TABLE Department
 (
-    DepartmentNumber char(10) NOT NULL PRIMARY KEY CLUSTERED,
-    DepartmentName varchar(50) NOT NULL,
+    DepartmentNumber CHAR(10) NOT NULL PRIMARY KEY CLUSTERED,
+    DepartmentName VARCHAR(50) NOT NULL,
     ManagerID INT NULL,
-    ParentDepartmentNumber char(10) NULL,
-    SysStartTime datetime2 GENERATED ALWAYS AS ROW START HIDDEN NOT NULL,
-    SysEndTime datetime2 GENERATED ALWAYS AS ROW END HIDDEN NOT NULL,
-    PERIOD FOR SYSTEM_TIME (SysStartTime,SysEndTime)
+    ParentDepartmentNumber CHAR(10) NULL,
+    SysStartTime DATETIME2 GENERATED ALWAYS AS ROW START HIDDEN NOT NULL,
+    SysEndTime DATETIME2 GENERATED ALWAYS AS ROW END HIDDEN NOT NULL,
+    PERIOD FOR SYSTEM_TIME (SysStartTime, SysEndTime)
 )
-WITH
-    (SYSTEM_VERSIONING = ON
-        (HISTORY_TABLE = dbo.Department_History, DATA_CONSISTENCY_CHECK = ON )
-    );
+WITH (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.Department_History, DATA_CONSISTENCY_CHECK = ON));
 ```
 
 ### <a name="q-creating-a-system-versioned-memory-optimized-temporal-table"></a>У. Создание оптимизированной для памяти темпоральной таблицы с системным управлением версиями
@@ -1409,53 +1424,56 @@ WITH
 В этом примере создается новая темпоральная таблица, привязанная к новой таблице журнала.
 
 ```sql
-CREATE SCHEMA History
+CREATE SCHEMA History;
 GO
+
 CREATE TABLE dbo.Department
 (
-    DepartmentNumber char(10) NOT NULL PRIMARY KEY NONCLUSTERED,
-    DepartmentName varchar(50) NOT NULL,
-    ManagerID int NULL,
-    ParentDepartmentNumber char(10) NULL,
-    SysStartTime datetime2 GENERATED ALWAYS AS ROW START HIDDEN NOT NULL,
-    SysEndTime datetime2 GENERATED ALWAYS AS ROW END HIDDEN NOT NULL,
-    PERIOD FOR SYSTEM_TIME (SysStartTime,SysEndTime)
+    DepartmentNumber CHAR(10) NOT NULL PRIMARY KEY NONCLUSTERED,
+    DepartmentName VARCHAR(50) NOT NULL,
+    ManagerID INT NULL,
+    ParentDepartmentNumber CHAR(10) NULL,
+    SysStartTime DATETIME2 GENERATED ALWAYS AS ROW START HIDDEN NOT NULL,
+    SysEndTime DATETIME2 GENERATED ALWAYS AS ROW END HIDDEN NOT NULL,
+    PERIOD FOR SYSTEM_TIME (SysStartTime, SysEndTime)
 )
 WITH
-    (
-        MEMORY_OPTIMIZED = ON, DURABILITY = SCHEMA_AND_DATA,
-            SYSTEM_VERSIONING = ON ( HISTORY_TABLE = History.DepartmentHistory )
-    );
+(
+    MEMORY_OPTIMIZED = ON,
+    DURABILITY = SCHEMA_AND_DATA,
+    SYSTEM_VERSIONING = ON (HISTORY_TABLE = History.DepartmentHistory)
+);
 ```
 
 В этом примере создается новая темпоральная таблица, привязанная к существующей таблице журнала.
 
 ```sql
---Existing table
+-- Existing table
 CREATE TABLE Department_History
 (
-    DepartmentNumber char(10) NOT NULL,
-    DepartmentName varchar(50) NOT NULL,
-    ManagerID int NULL,
-    ParentDepartmentNumber char(10) NULL,
-    SysStartTime datetime2 NOT NULL,
-    SysEndTime datetime2 NOT NULL
+    DepartmentNumber CHAR(10) NOT NULL,
+    DepartmentName VARCHAR(50) NOT NULL,
+    ManagerID INT NULL,
+    ParentDepartmentNumber CHAR(10) NULL,
+    SysStartTime DATETIME2 NOT NULL,
+    SysEndTime DATETIME2 NOT NULL
 );
---Temporal table
+
+-- Temporal table
 CREATE TABLE Department
 (
-    DepartmentNumber char(10) NOT NULL PRIMARY KEY CLUSTERED,
-    DepartmentName varchar(50) NOT NULL,
+    DepartmentNumber CHAR(10) NOT NULL PRIMARY KEY CLUSTERED,
+    DepartmentName VARCHAR(50) NOT NULL,
     ManagerID INT NULL,
-    ParentDepartmentNumber char(10) NULL,
-    SysStartTime datetime2 GENERATED ALWAYS AS ROW START HIDDEN NOT NULL,
-    SysEndTime datetime2 GENERATED ALWAYS AS ROW END HIDDEN NOT NULL,
-    PERIOD FOR SYSTEM_TIME (SysStartTime,SysEndTime)
+    ParentDepartmentNumber CHAR(10) NULL,
+    SysStartTime DATETIME2 GENERATED ALWAYS AS ROW START HIDDEN NOT NULL,
+    SysEndTime DATETIME2 GENERATED ALWAYS AS ROW END HIDDEN NOT NULL,
+    PERIOD FOR SYSTEM_TIME (SysStartTime, SysEndTime)
 )
 WITH
-    (SYSTEM_VERSIONING = ON
-        (HISTORY_TABLE = dbo.Department_History, DATA_CONSISTENCY_CHECK = ON )
-    );
+(
+    SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.Department_History, DATA_CONSISTENCY_CHECK = ON)
+);
 ```
 
 ### <a name="r-creating-a-table-with-encrypted-columns"></a>Ф. Создание таблицы с зашифрованными столбцами
@@ -1463,21 +1481,19 @@ WITH
 
 ```sql
 CREATE TABLE Customers (
-    CustName nvarchar(60)
-        ENCRYPTED WITH
-            (
-             COLUMN_ENCRYPTION_KEY = MyCEK,
-             ENCRYPTION_TYPE = RANDOMIZED,
-             ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256'
-            ),
-    SSN varchar(11) COLLATE Latin1_General_BIN2
-        ENCRYPTED WITH
-            (
-             COLUMN_ENCRYPTION_KEY = MyCEK,
-             ENCRYPTION_TYPE = DETERMINISTIC ,
-             ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256'
-            ),
-    Age int NULL
+    CustName NVARCHAR(60)
+        ENCRYPTED WITH (
+            COLUMN_ENCRYPTION_KEY = MyCEK,
+            ENCRYPTION_TYPE = RANDOMIZED,
+            ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256'
+        ),
+    SSN VARCHAR(11) COLLATE Latin1_General_BIN2
+        ENCRYPTED WITH (
+            COLUMN_ENCRYPTION_KEY = MyCEK,
+            ENCRYPTION_TYPE = DETERMINISTIC ,
+            ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256'
+        ),
+    Age INT NULL
 );
 ```
 
@@ -1487,7 +1503,7 @@ CREATE TABLE Customers (
 ```sql
 CREATE TABLE t1
 (
-    c1 int,
+    c1 INT,
     index IX1 (c1) WHERE c1 > 0
 );
 ```
@@ -1496,22 +1512,22 @@ CREATE TABLE t1
 В приведенном ниже примере показано использование встроенного параметра NONCLUSTERED для дисковых таблиц.
 
 ```sql
-CREATE TABLE t1 
+CREATE TABLE t1
 (
-    c1 int, 
+    c1 INT,
     INDEX ix_1 NONCLUSTERED (c1)
 );
 
-CREATE TABLE t2 
+CREATE TABLE t2
 (
-    c1 int, 
-    c2 int INDEX ix_1 NONCLUSTERED
+    c1 INT,
+    c2 INT INDEX ix_1 NONCLUSTERED
 );
 
-CREATE TABLE t3 
+CREATE TABLE t3
 (
-    c1 int, 
-    c2 int, 
+    c1 INT,
+    c2 INT,
     INDEX ix_1 NONCLUSTERED (c1,c2)
 );
 ```
@@ -1522,8 +1538,8 @@ CREATE TABLE t3
 ```sql
 CREATE TABLE #tmp
 (
-    c1 int,
-    c2 int,
+    c1 INT,
+    c2 INT,
     PRIMARY KEY CLUSTERED ([c1], [c2])
 );
 GO
@@ -1545,13 +1561,14 @@ Could not create constraint or index. See previous errors.
 
 ```sql
 CREATE TABLE ##test (
-    a int, 
-    b int
+    a INT,
+    b INT
 );
-INSERT INTO ##test 
-VALUES (1,1);
 
---Obtain object ID for temp table ##test
+INSERT INTO ##test
+VALUES (1, 1);
+
+-- Obtain object ID for temp table ##test
 SELECT OBJECT_ID('tempdb.dbo.##test') AS 'Object ID';
 ```
 
@@ -1562,26 +1579,27 @@ SELECT OBJECT_ID('tempdb.dbo.##test') AS 'Object ID';
 ```
 
 Получаем имя глобальной временной таблицы для идентификатора объекта 1253579504 в tempdb (2)
+
 ```sql
-SELECT name FROM tempdb.sys.objects WHERE object_id = 1253579504
+SELECT name FROM tempdb.sys.objects WHERE object_id = 1253579504;
 ```
 
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
 
-```
+```sql
 ##test
 ```
 
 В сеансе B устанавливается подключение к [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] testdb1 и доступ к таблице ##test, созданной в сеансе A.
 
 ```sql
-SELECT * FROM ##test
+SELECT * FROM ##test;
 ```
 
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
 
-```
-1,1
+```sql
+1, 1
 ```
 
 В сеансе C устанавливается подключение к другой базе данных [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] testdb2 и выполняется попытка получить доступ к таблице ##test, созданной в базе данных testdb1. Это невозможно, поскольку глобальные временные таблицы существуют в области базы данных
@@ -1589,6 +1607,7 @@ SELECT * FROM ##test
 ```sql
 SELECT * FROM ##test
 ```
+
 В результате выдается следующая ошибка:
 
 ```
@@ -1599,26 +1618,26 @@ Invalid object name '##test'
 Обращение к системному объекту в [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] tempdb из текущей базы данных пользователя testdb1.
 
 ```sql
-SELECT * FROM tempdb.sys.objects
-SELECT * FROM tempdb.sys.columns
-SELECT * FROM tempdb.sys.database_files
+SELECT * FROM tempdb.sys.objects;
+SELECT * FROM tempdb.sys.columns;
+SELECT * FROM tempdb.sys.database_files;
 ```
 
 ## <a name="see-also"></a>См. также:
-[ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)    
-[COLUMNPROPERTY](../../t-sql/functions/columnproperty-transact-sql.md)    
-[CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md)    
-[CREATE VIEW](../../t-sql/statements/create-view-transact-sql.md)    
-[Data Types](../../t-sql/data-types/data-types-transact-sql.md)    
-[DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md)    
-[sys.dm_sql_referenced_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md)    
-[sys.dm_sql_referencing_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md)    
-[DROP TABLE](../../t-sql/statements/drop-table-transact-sql.md)    
-[CREATE PARTITION FUNCTION](../../t-sql/statements/create-partition-function-transact-sql.md)    
-[CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md)    
-[CREATE TYPE](../../t-sql/statements/create-type-transact-sql.md)    
-[EVENTDATA](../../t-sql/functions/eventdata-transact-sql.md)    
-[sp_help](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md)    
-[sp_helpconstraint](../../relational-databases/system-stored-procedures/sp-helpconstraint-transact-sql.md)    
-[sp_rename](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md)    
-[sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)    
+[ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)
+[COLUMNPROPERTY](../../t-sql/functions/columnproperty-transact-sql.md)
+[CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md)
+[CREATE VIEW](../../t-sql/statements/create-view-transact-sql.md)
+[Data Types](../../t-sql/data-types/data-types-transact-sql.md)
+[DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md)
+[sys.dm_sql_referenced_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md)
+[sys.dm_sql_referencing_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md)
+[DROP TABLE](../../t-sql/statements/drop-table-transact-sql.md)
+[CREATE PARTITION FUNCTION](../../t-sql/statements/create-partition-function-transact-sql.md)
+[CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md)
+[CREATE TYPE](../../t-sql/statements/create-type-transact-sql.md)
+[EVENTDATA](../../t-sql/functions/eventdata-transact-sql.md)
+[sp_help](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md)
+[sp_helpconstraint](../../relational-databases/system-stored-procedures/sp-helpconstraint-transact-sql.md)
+[sp_rename](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md)
+[sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 16e6498a-b449-4051-aec4-ea814a2ad993
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 44c3549b04bd2bf534e626764bbc56c688b3ca5f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f5b6deb043b12dc90a6543f7ef394046b00aaf5e
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085844"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710287"
 ---
 # <a name="bulk-load-data-into-tables-in-a-merge-publication"></a>Массовая загрузка данных в таблицы при публикации слиянием
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,6 +35,6 @@ ms.locfileid: "68085844"
   
     -   Выполните операцию массового копирования с параметром FIRE_TRIGGERS.  
   
-    -   В базе данных, в которую вставлены данные, выполните процедуру [sp_addtabletocontents (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addtabletocontents-transact-sql.md). Укажите в параметре **@table_name** .  
+    -   В базе данных, в которую вставлены данные, выполните процедуру [sp_addtabletocontents (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addtabletocontents-transact-sql.md). Укажите в параметре `@table_name` имя таблицы, в которую были вставлены данные.  
   
   

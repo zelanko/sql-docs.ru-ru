@@ -21,12 +21,12 @@ ms.assetid: a8afcdbc-55db-4916-a219-19454f561f9e
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: ddfc9d657334e6aa971ff57b2febdff175ce3911
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 94135f0fea3373dbab2b1bfba363e9cd9e8385e8
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768730"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710342"
 ---
 # <a name="strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication"></a>Стратегии резервного копирования и восстановления из копии репликации моментальных снимков и репликации транзакций
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -207,19 +207,19 @@ ms.locfileid: "68768730"
   
     1.  Заново создайте публикацию в базе данных **B**. Перейдите к шагу b.  
   
-    2.  Создайте заново подписку в базе данных **B** на публикацию в базе данных **A**, указав, что подписка должна быть инициализирована с резервной копией (значение **initialize with backup** для параметра **@sync_type** хранимой процедуры [sp_addsubscription](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)). Перейдите к шагу c.  
+    2.  Создайте заново подписку в базе данных **B** на публикацию в базе данных **A**, указав, что подписка должна быть инициализирована с резервной копией (значение **initialize with backup** для параметра `@sync_type` хранимой процедуры [sp_addsubscription](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)). Перейдите к шагу c.  
   
-    3.  Создайте заново подписку в базе данных **A** на публикацию в базе данных **B**, указав, что подписчик уже содержит данные (значение **replication support only** для параметра **@sync_type** хранимой процедуры [sp_addsubscription](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)). Перейдите к шагу 8.  
+    3.  Создайте заново подписку в базе данных **A** на публикацию в базе данных **B**, указав, что подписчик уже содержит данные (значение **replication support only** для параметра `@sync_type` хранимой процедуры [sp_addsubscription](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)). Перейдите к шагу 8.  
   
 8.  Запустите агент распространителя для синхронизации подписок в базах данных **A** и **B**. Если в публикуемых таблицах имеются столбцы идентификаторов, перейдите к шагу 9. Если нет, перейдите к шагу 10.  
   
 9. После восстановления диапазон идентификаторов, присвоенный каждой таблице в базе данных **A**, будет также использоваться в базе данных **B**. Убедитесь, что восстановленная база данных **B** получила все изменения из поврежденной базы данных **B**, которые были переданы в базы данных **A** и **C**, затем обновите начальные значения диапазона идентификаторов для каждой таблицы.  
   
-    1.  Выполните процедуру [sp_requestpeerresponse](../../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md) в базе данных **B** и получите выходной параметр **@request_id** . Перейдите к шагу b.  
+    1.  Выполните процедуру [sp_requestpeerresponse](../../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md) в базе данных **B** и получите выходной параметр `@request_id`. Перейдите к шагу b.  
   
     2.  По умолчанию агент распространителя работает непрерывно, поэтому токены отправляются на все узлы автоматически. Если агент распространителя не выполняется в непрерывном режиме, запустите его. Дополнительные сведения см. в разделах [Основные понятия исполняемых файлов агента репликации](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md) и [Запуск и остановка агента репликации (среда SQL Server Management Studio)](../../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md). Перейдите к шагу c.  
   
-    3.  Выполните процедуру [sp_helppeerresponses](../../../relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql.md), указав значение **@request_id** , полученное на шаге b. Подождите, пока все узлы сообщат о получении однорангового запроса. Перейдите к шагу d.  
+    3.  Выполните процедуру [sp_helppeerresponses](../../../relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql.md), указав значение `@request_id`, полученное в шаге b. Подождите, пока все узлы сообщат о получении однорангового запроса. Перейдите к шагу d.  
   
     4.  Выполните инструкцию [DBCC CHECKIDENT](../../../t-sql/database-console-commands/dbcc-checkident-transact-sql.md) для обновления начальных значений каждой таблицы в базе данных **B** , чтобы убедиться, что используется соответствующий диапазон. Перейдите к шагу 10.  
   
@@ -231,11 +231,11 @@ ms.locfileid: "68768730"
   
     1.  Остановите все действия в опубликованных таблицах в одноранговой топологии. Перейдите к шагу b.  
   
-    2.  Выполните процедуру [sp_requestpeerresponse](../../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md) в базе данных **B** и получите выходной параметр **@request_id** . Перейдите к шагу c.  
+    2.  Выполните процедуру [sp_requestpeerresponse](../../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md) в базе данных **B** и получите выходной параметр `@request_id`. Перейдите к шагу c.  
   
     3.  По умолчанию агент распространителя работает непрерывно, поэтому токены отправляются на все узлы автоматически. Если агент распространителя не выполняется в непрерывном режиме, запустите его. Перейдите к шагу d.  
   
-    4.  Выполните процедуру [sp_helppeerresponses](../../../relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql.md), указав значение **@request_id** , полученное на шаге b. Подождите, пока все узлы сообщат о получении однорангового запроса. Перейдите к шагу e.  
+    4.  Выполните процедуру [sp_helppeerresponses](../../../relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql.md), указав значение `@request_id`, полученное в шаге b. Подождите, пока все узлы сообщат о получении однорангового запроса. Перейдите к шагу e.  
   
     5.  Создайте заново подписку в базе данных **B** на публикацию в базе данных **C**, указав, что подписчик уже содержит данные. Перейдите к шагу b.  
   
@@ -245,7 +245,7 @@ ms.locfileid: "68768730"
   
     1.  В базе данных **B**выполните запрос к таблице [MSpeer_lsns](../../../relational-databases/system-tables/mspeer-lsns-transact-sql.md) , чтобы получить номер LSN последней транзакции, которая была передана в базу данных **B** из базы данных **C**.  
   
-    2.  Создайте заново подписку в базе данных **B** на публикацию в базе данных **C**, указав, что подписка должна быть инициализирована на основе номера LSN (значение **initialize from lsn** для параметра **@sync_type** хранимой процедуры [sp_addsubscription](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)). Перейдите к шагу b.  
+    2.  Создайте заново подписку в базе данных **B** на публикацию в базе данных **C**, указав, что подписка должна быть инициализирована на основе номера LSN (значение **initialize from lsn** для параметра `@sync_type` хранимой процедуры [sp_addsubscription](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)). Перейдите к шагу b.  
   
     3.  Создайте заново подписку в базе данных **C** на публикацию в базе данных **B**, указав, что подписчик уже содержит данные. Перейдите к шагу 13.  
   

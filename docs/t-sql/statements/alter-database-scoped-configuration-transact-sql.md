@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: decb69879ca80e599fa90f1eb1aa150ccf7f49a5
-ms.sourcegitcommit: 853c2c2768caaa368dce72b4a5e6c465cc6346cf
+ms.openlocfilehash: b7fdd216dd93863e2c783de5da315b2ac208a449
+ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71227189"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71713216"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -91,6 +91,12 @@ ALTER DATABASE SCOPED CONFIGURATION
 }
 ```
 
+> [!IMPORTANT]
+> Начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] и в [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] изменились некоторые имена параметров:      
+> -  `DISABLE_INTERLEAVED_EXECUTION_TVF` изменено на `INTERLEAVED_EXECUTION_TVF`
+> -  `DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK` изменено на `BATCH_MODE_MEMORY_GRANT_FEEDBACK`
+> -  `DISABLE_BATCH_MODE_ADAPTIVE_JOINS` изменено на `BATCH_MODE_ADAPTIVE_JOINS`
+
 ## <a name="arguments"></a>Аргументы
 
 FOR SECONDARY
@@ -113,6 +119,9 @@ MAXDOP **=** {\<value> | PRIMARY } **\<value>**
 Для ограничения количества процессоров в плане параллельного выполнения может быть использован параметр max degree of parallelism. SQL Server учитывает планы параллельного выполнения для запросов, операций DDL с индексами, параллельной вставки, изменения столбца в режиме "в сети", параллельного сбора статистики и заполнения статических курсоров и курсоров, управляемых набором ключей.
 
 Сведения о настройке этого параметра на уровне экземпляра см. в разделе [Настройка параметра конфигурации сервера max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).
+
+> [!NOTE]
+> В базе данных SQL Azure на уровне сервера **максимальная степень параллелизма** всегда устанавливается со значением 0. MAXDOP можно настроить для каждой базы данных, как описано в текущей статье. Рекомендации по оптимальной настройке MAXDOP см. в разделе [Дополнительные ресурсы](https://docs.microsoft.com/en-us/sql/t-sql/statements/alter-database-scoped-configuration-transact-sql?view=sql-server-2017#additional-resources).
 
 > [!TIP]
 > Для выполнения этого на уровне запросов добавьте [указание запроса](../../t-sql/queries/hints-transact-sql-query.md) **MAXDOP**.
@@ -351,6 +360,11 @@ LAST_QUERY_PLAN_STATS **=** { ON | **OFF**}
 Событие `ALTER_DATABASE_SCOPED_CONFIGURATION` добавляется дочерним элементом в группу триггеров `ALTER_DATABASE_EVENTS` в качестве события DDL, с помощью которого можно инициировать триггер DDL.
 
 Параметры конфигурации уровня базы данных будут перенесены вместе с базой данных, то есть при восстановлении или подключении любой базы данных сохранятся ее текущие параметры конфигурации.
+
+Начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] и в [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] изменились некоторые имена параметров:      
+-  `DISABLE_INTERLEAVED_EXECUTION_TVF` изменено на `INTERLEAVED_EXECUTION_TVF`
+-  `DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK` изменено на `BATCH_MODE_MEMORY_GRANT_FEEDBACK`
+-  `DISABLE_BATCH_MODE_ADAPTIVE_JOINS` изменено на `BATCH_MODE_ADAPTIVE_JOINS`
 
 ## <a name="limitations-and-restrictions"></a>Ограничения
 

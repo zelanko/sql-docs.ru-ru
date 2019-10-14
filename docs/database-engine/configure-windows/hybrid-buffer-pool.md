@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ''
 author: briancarrig
 ms.author: brcarrig
-ms.openlocfilehash: 8bbc7670f3a4d6d8a017e7284c5a661d38594f08
-ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
+ms.openlocfilehash: d03c66219330df3cca892bd005d1e9a456959c83
+ms.sourcegitcommit: af5e1f74a8c1171afe759a4a8ff2fccb5295270a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71251059"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71823574"
 ---
 # <a name="hybrid-buffer-pool"></a>Гибридный буферный пул
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -76,10 +76,8 @@ ALTER DATABASE <databaseName> SET MEMORY_OPTIMIZED = OFF;
 Следующий пример возвращает текущее состояние конфигурации системы гибридного буферного пула для экземпляра SQL Server.
 
 ```sql
-SELECT *
-FROM sys.configurations
-WHERE
-    name = 'hybrid_buffer_pool';
+SELECT * FROM
+sys.server_memory_optimized_hybrid_buffer_pool_configuration;
 ```
 
 В следующем примере возвращаются две таблицы:
@@ -95,9 +93,9 @@ SELECT name, is_memory_optimized_enabled FROM sys.databases;
 
 ## <a name="best-practices-for-hybrid-buffer-pool"></a>Рекомендации по использованию гибридного буферного пула
 
-Не рекомендуется включать гибридный буферный пул в экземплярах менее чем с 16 ГБ ОЗУ.
-
 При форматировании PMEM-устройства в Windows используйте максимальный размер единицы размещения, доступный для файловой системы NTFS (2 МБ в Windows Server 2019), и отформатируйте устройство для DAX (Direct Access).
+
+Для обеспечения оптимальной производительности включите [блокировку страниц в памяти](./enable-the-lock-pages-in-memory-option-windows.md) в Windows.
 
 Размеры файлов должны быть кратны 2 МБ (деление по модулю на 2 МБ должно давать ноль).
 

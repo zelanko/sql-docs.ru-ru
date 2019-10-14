@@ -1,7 +1,7 @@
 ---
 title: Типы данных float и real (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 07/22/2017
+ms.date: 09/10/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -23,12 +23,12 @@ ms.assetid: 08ea66b7-624e-4d8b-86bc-750ff76cdfc5
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9811fdb3f7199e3a4cf10053f0f8c2f850a57845
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7f31e3894448e5d6a044af75c7e86b704b993aa6
+ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68086756"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71682017"
 ---
 # <a name="float-and-real-transact-sql"></a>Типы данных float и real (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -62,7 +62,7 @@ ms.locfileid: "68086756"
   
 Если тип данных **float** или **real** нужно преобразовать в символьный тип, то, как правило, строковую функцию STR использовать удобнее, чем CAST( ). Это объясняется большими возможностями функции STR в отношении форматирования. Дополнительные сведения см. в статьях [STR (Transact-SQL)](../../t-sql/functions/str-transact-sql.md) и [Функции (Transact-SQL)](../../t-sql/functions/functions.md).
   
-Точность преобразования значений **float**, которые используют экспоненциальное представление, в **decimal** или **numeric** ограничена только 17 знаками. Любое значение меньше 5E-18 округляется до 0.
+До версии [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)] точность преобразования значений **float** в **decimal** или **numeric** была ограничена 17 знаками. Любое значение типа **float** менее 5E-18 (в экспоненциальном представлении 5E-18 или десятичном представлении 0.0000000000000000050000000000000005) округлялось до 0. Начиная с версии [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)] это ограничение отсутствует.
   
 ## <a name="see-also"></a>См. также раздел
 [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)  

@@ -17,12 +17,12 @@ ms.assetid: fceb216b-0b18-4e3b-8ae0-13e35920dcbc
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: fa63ed5cf1367bc0834b0241f40fa9e52f741c87
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: b8a72455aafbf31f5a926719e821f3d15393d953
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769652"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710784"
 ---
 # <a name="manage-logins-in-the-publication-access-list"></a>Управление именами входа в списке доступа к публикации
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -62,15 +62,15 @@ ms.locfileid: "68769652"
   
 #### <a name="to-view-groups-and-logins-that-belong-to-the-pal"></a>Просмотр групп и имен входа из списка доступа к публикации  
   
-1.  На издателе в базе данных публикации выполните хранимую процедуру [sp_help_publication_access](../../../relational-databases/system-stored-procedures/sp-help-publication-access-transact-sql.md). Для параметра **@publication** укажите имя публикации. Будут отображены сведения о группах и именах входа из списка доступа к публикации.  
+1.  На издателе в базе данных публикации выполните хранимую процедуру [sp_help_publication_access](../../../relational-databases/system-stored-procedures/sp-help-publication-access-transact-sql.md). Для параметра `@publication` укажите имя публикации. Будут отображены сведения о группах и именах входа из списка доступа к публикации.  
   
 #### <a name="to-add-groups-and-logins-to-the-pal"></a>Добавление групп и имен входа в список доступа к публикации  
   
-1.  На издателе в базе данных публикации выполните хранимую процедуру [sp_grant_publication_access](../../../relational-databases/system-stored-procedures/sp-grant-publication-access-transact-sql.md). Для параметра **@publication** укажите имя публикации, а в параметре **@login** — имя входа или имя группы, которое нужно добавить.  
+1.  На издателе в базе данных публикации выполните хранимую процедуру [sp_grant_publication_access](../../../relational-databases/system-stored-procedures/sp-grant-publication-access-transact-sql.md). Для параметра `@publication` укажите имя публикации, а в параметре `@login` — имя входа или имя группы, которое нужно добавить.  
   
 #### <a name="to-remove-groups-and-logins-from-the-pal"></a>Удаление групп и имен входа из списка доступа к публикации  
   
-1.  На издателе в базе данных публикации выполните хранимую процедуру [sp_revoke_publication_access](../../../relational-databases/system-stored-procedures/sp-revoke-publication-access-transact-sql.md). Для параметра **@publication** укажите имя публикации, а в параметре **@login** укажите имя входа или имя группы, которое нужно удалить.  
+1.  На издателе в базе данных публикации выполните хранимую процедуру [sp_revoke_publication_access](../../../relational-databases/system-stored-procedures/sp-revoke-publication-access-transact-sql.md). Для параметра `@publication` укажите имя публикации, а в параметре `@login` — имя входа или имя группы, которое нужно удалить.  
   
 ## <a name="see-also"></a>См. также:  
  [Управление именами входа в списке доступа к публикации](../../../relational-databases/replication/security/manage-logins-in-the-publication-access-list.md)   

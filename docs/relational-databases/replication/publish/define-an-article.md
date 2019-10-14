@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 220584d8-b291-43ae-b036-fbba3cc07a2e
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f08360562112b23344543d2c63c28ebfa39bc88d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 69766a9278b09f081bbfaaced90e45acd1cf91c5
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67907846"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710984"
 ---
 # <a name="define-an-article"></a>Определение статьи
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -106,7 +106,7 @@ ms.locfileid: "67907846"
   
 #### <a name="to-define-an-article-for-a-snapshot-or-transactional-publication"></a>Определение статьи для публикации транзакций или моментальных снимков  
   
-1.  Выполните процедуру [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)на издателе в базе данных публикации. Укажите имя публикации, которой принадлежит статья, в качестве значения параметра **@publication** , имя статьи в качестве значения параметра **@article** , публикуемый объект базы данных в качестве значения параметра **@source_object** , а также, при необходимости, другие параметры. С помощью параметра **@source_owner** задайте принадлежность схемы объекта. Если она отсутствует, то **dbo**. Если статья не является статьей таблицы, основанной на журнале, укажите тип статьи в качестве значения параметра **@type** . Дополнительные сведения см. в статье [Определение типов статей (программирование репликации на языке Transact-SQL)](../../../relational-databases/replication/publish/specify-article-types-replication-transact-sql-programming.md).  
+1.  Выполните процедуру [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)на издателе в базе данных публикации. Укажите имя публикации, которой принадлежит статья, в качестве значения параметра `@publication`, имя статьи в качестве значения параметра `@article`, публикуемый объект базы данных в качестве значения параметра `@source_object`, а также, при необходимости, другие параметры. С помощью параметра `@source_owner` задайте принадлежность схемы объекта. Если она отсутствует, то **dbo**. Если статья не является статьей таблицы, основанной на журнале, укажите тип статьи в качестве значения параметра `@type`. Дополнительные сведения см. в статье [Определение типов статей (программирование репликации на языке Transact-SQL)](../../../relational-databases/replication/publish/specify-article-types-replication-transact-sql-programming.md).  
   
 2.  Для горизонтальной фильтрации строк в таблице или для просмотра статьи используйте хранимую процедуру [sp_articlefilter](../../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md) , определяющую предложение фильтра. Дополнительные сведения см. в разделе [Define and Modify a Static Row Filter](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md).  
   
@@ -123,7 +123,7 @@ ms.locfileid: "67907846"
   
 #### <a name="to-define-an-article-for-a-merge-publication"></a>Определение статьи для публикации слиянием  
   
-1.  В базе данных публикации на издателе выполните процедуру [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md). Укажите имя публикации в качестве значения параметра **@publication** , имя статьи в качестве значения параметра **@article** , а также публикуемый объект в качестве значения параметра **@source_object** . Для горизонтальной фильтрации строк таблицы укажите значение параметра **@subset_filterclause** . Дополнительные сведения см. в разделах [Определение и изменение параметризованного фильтра строк для статьи публикации слиянием](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md) и [Определение и изменение статического строкового фильтра](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md). Если статья не является статьей таблицы, укажите ее тип в качестве значения параметра **@type** . Дополнительные сведения см. в статье [Определение типов статей (программирование репликации на языке Transact-SQL)](../../../relational-databases/replication/publish/specify-article-types-replication-transact-sql-programming.md).  
+1.  В базе данных публикации на издателе выполните процедуру [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md). Укажите имя публикации в качестве значения параметра `@publication`, имя статьи в качестве значения параметра `@article`, а также публикуемый объект в качестве значения параметра `@source_object`. Для горизонтальной фильтрации строк таблицы укажите значение параметра `@subset_filterclause`. Дополнительные сведения см. в разделах [Определение и изменение параметризованного фильтра строк для статьи публикации слиянием](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md) и [Определение и изменение статического строкового фильтра](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md). Если статья не является статьей таблицы, укажите ее тип в качестве значения параметра `@type`. Дополнительные сведения см. в статье [Определение типов статей (программирование репликации на языке Transact-SQL)](../../../relational-databases/replication/publish/specify-article-types-replication-transact-sql-programming.md).  
   
 2.  Чтобы определить фильтр соединения между двумя статьями, на издателе в базе данных публикации выполните процедуру [sp_addmergefilter](../../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md) (необязательно). Дополнительные сведения см. в разделе [Определение и изменение фильтра соединения между статьями публикации слиянием](../../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md).  
   

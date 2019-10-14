@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 49349605-ebd0-4757-95be-c0447f30ba13
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: df643e5881a4c53ee2a55c2cda53cdc3b3279ef5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 08bc847d6b3bffe57df7fc0c70be622365f156d0
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68059442"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710866"
 ---
 # <a name="optimize-parameterized-row-filters"></a>Оптимизация параметризованных фильтров строк
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -112,34 +112,34 @@ ms.locfileid: "68059442"
   
 #### <a name="to-set-optimize-synchronization"></a>Задание настройки «Оптимизировать синхронизацию»  
   
-1.  На странице **Параметры подписки** диалогового окна **Свойства публикации — \<публикация>** установите значение **True** для параметра **Оптимизировать синхронизацию**.  
+1.  На странице **Параметры подписки** диалогового окна **Свойства публикации — \<публикация>** установите значение `True` для параметра **Оптимизировать синхронизацию**.  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
- Определения параметров фильтрации для параметров **@keep_partition_changes** и **@use_partition_groups** см. в разделе [sp_addmergepublication](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md).  
+ Определения параметров фильтрации для параметров `@keep_partition_changes` и `@use_partition_groups` см. в разделе [sp_addmergepublication](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md).  
   
 #### <a name="to-specify-merge-filter-optimizations-when-creating-a-new-publication"></a>Указание оптимизации фильтра слияния при создании публикации  
   
-1.  На издателе в базе данных публикации выполните процедуру [sp_addmergepublication](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md). Укажите параметр **@publication** и значение **true** для одного из следующих параметров.  
+1.  На издателе в базе данных публикации выполните процедуру [sp_addmergepublication](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md). Укажите параметр `@publication` и значение `true` для одного из следующих параметров.  
   
-    -   **@use_partition_groups** — оптимизация для наивысшей производительности при условии, что статьи соответствуют требованиям предварительно вычисляемых секций. Дополнительные сведения см. в статье [Оптимизация производительности параметризованного фильтра с помощью предварительно вычисляемых секций](../../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md).  
+    -   `@use_partition_groups` — оптимизация для наивысшей производительности при условии, что статьи соответствуют требованиям предварительно вычисляемых секций. Дополнительные сведения см. в статье [Оптимизация производительности параметризованного фильтра с помощью предварительно вычисляемых секций](../../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md).  
   
-    -   **@keep_partition_changes** — применяется, если невозможно использовать предварительно вычисляемые секции.  
+    -   `@keep_partition_changes` — применяется, если невозможно использовать предварительно вычисляемые секции.  
   
 2.  Добавьте задание моментального снимка для публикации. Дополнительные сведения см. в статье [о создании публикации](../../../relational-databases/replication/publish/create-a-publication.md).  
   
 3.  На издателе в базе данных публикации выполните хранимую процедуру [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md), указав следующие параметры:  
   
-    -   **@publication** — имя публикации из шага 1;  
+    -   `@publication` — имя публикации из шага 1;  
   
-    -   **@article** — имя статьи;  
+    -   `@article` — имя статьи;  
   
-    -   **@source_object** — публикуемый объект базы данных;  
+    -   `@source_object` — публикуемый объект базы данных;  
   
-    -   **@subset_filterclause** — необязательное предложение параметризованного фильтра, которое используется для горизонтальной фильтрации статьи;  
+    -   `@subset_filterclause` — необязательное предложение параметризованного фильтра, которое используется для горизонтальной фильтрации статьи;  
   
-    -   **@partition_options** — параметры секционирования для фильтруемой статьи.  
+    -   `@partition_options` — параметры секционирования для фильтруемой статьи.  
   
 4.  Повторите шаг 3 для каждой статьи в публикации.  
   
@@ -147,16 +147,16 @@ ms.locfileid: "68059442"
   
 #### <a name="to-view-and-modify-merge-filter-behaviors-for-an-existing-publication"></a>Просмотр и изменение поведения фильтра слияния для существующей публикации  
   
-1.  Чтобы определить фильтр соединения между двумя статьями, на издателе в базе данных публикации выполните процедуру [sp_helpmergepublication](../../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md), указав параметр **@publication** . Запомните значения **keep_partition_changes** и **use_partition_groups** в результирующем наборе.  
+1.  Чтобы определить фильтр соединения между двумя статьями, на издателе в базе данных публикации выполните процедуру [sp_helpmergepublication](../../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md), указав параметр `@publication`. Запомните значение параметров `keep_partition_changes` и `use_partition_groups` в результирующем наборе.  
   
-2.  На издателе в базе данных публикации выполните процедуру [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)(необязательно). Укажите значение **use_partition_groups** в параметре **@property** и **true** или **false** в параметре **@value** .  
+2.  На издателе в базе данных публикации выполните процедуру [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)(необязательно). Укажите значение `use_partition_groups` для `@property` и либо `true`, либо `false` для `@value`.  
   
-3.  На издателе в базе данных публикации выполните процедуру [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)(необязательно). Укажите значение **keep_partition_changes** в параметре **@property** и **true** или **false** в параметре **@value** .  
+3.  На издателе в базе данных публикации выполните процедуру [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)(необязательно). Укажите значение `keep_partition_changes` для `@property` и либо `true`, либо `false` для `@value`.  
   
     > [!NOTE]  
-    >  При включении параметра **keep_partition_changes**необходимо вначале отключить параметр **use_partition_groups** и указать значение **1** в параметре **@force_reinit_subscription** .  
+    >  При включении `keep_partition_changes` необходимо сначала отключить `use_partition_groups` и указать значение `1` для `@force_reinit_subscription`.  
   
-4.  На издателе в базе данных публикации выполните хранимую процедуру [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)(необязательно). Укажите значение **partition_options** в параметре **@property** и соответствующее значение в параметре **@value** . Определения этих параметров фильтрации см. в разделе [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) .  
+4.  На издателе в базе данных публикации выполните хранимую процедуру [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)(необязательно). Укажите значение `partition_options` в параметре `@property` и соответствующее значение в параметре *@value`. Определения этих параметров фильтрации см. в разделе [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) .  
   
 5.  При необходимости запустите агент моментальных снимков для повторного создания моментального снимка (необязательно). Сведения об изменениях, после которых необходимо повторно создавать моментальный снимок, см. в статье [Изменение свойств публикации и статьи](../../../relational-databases/replication/publish/change-publication-and-article-properties.md).  
   

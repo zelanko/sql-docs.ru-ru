@@ -1,7 +1,7 @@
 ---
 title: decimal и numeric (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 07/23/2017
+ms.date: 09/10/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -23,12 +23,12 @@ ms.assetid: 9d862a90-e6b7-4692-8605-92358dccccdf
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 48080db61a91a13cd04d436784ce74a7e45e3135
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c2836dc2d57ef5844463c303c6432698bf05a4d1
+ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68086738"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71682103"
 ---
 # <a name="decimal-and-numeric-transact-sql"></a>decimal и numeric (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -67,7 +67,7 @@ p (точность)
   
 По умолчанию [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использует округление с потерей точности и масштаба при преобразовании числа в значение **decimal** или **numeric**. И наоборот, при включенном (ON) параметре SET ARITHABORT в случае переполнения [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] вызывает ошибку. Для возникновения ошибки недостаточно только потери точности и масштаба.
   
-При преобразовании значений с плавающей запятой или действительных значений в десятичное или числовое, число десятичных разрядов в десятичном значении никогда не превышает 17. Любое значение с плавающей запятой < 5E-18 преобразуется в 0.
+До версии [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)] точность преобразования значений **float** в **decimal** или **numeric** была ограничена 17 знаками. Любое значение типа **float** менее 5E-18 (в экспоненциальном представлении 5E-18 или десятичном представлении 0.0000000000000000050000000000000005) округлялось до 0. Начиная с версии [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)] это ограничение отсутствует.
   
 ## <a name="examples"></a>Примеры  
 В приведенном ниже примере создается таблица, в которой используются типы данных **decimal** и **numeric**.  Значения вставляются в каждый столбец. Результаты возвращаются с помощью инструкции SELECT.

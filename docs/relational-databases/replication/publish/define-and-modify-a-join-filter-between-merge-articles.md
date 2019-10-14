@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f7f23415-43ff-40f5-b3e0-0be1d148ee5b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4155bdd03dfc809eee26e505cb842404524cbe59
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d695ccd9545c6bc839edcc1b0644c1f1a4d84ab8
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67907800"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710905"
 ---
 # <a name="define-and-modify-a-join-filter-between-merge-articles"></a>Определение и изменение фильтра соединения между статьями публикации слиянием
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -117,7 +117,7 @@ ms.locfileid: "67907800"
   
 2.  Чтобы определить связанные с публикацией статьи (которые также называют дочерними), в базе данных публикации на издателе выполните хранимую процедуру [sp_addmergearticle (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md). Дополнительные сведения см. в статье [определить статью](../../../relational-databases/replication/publish/define-an-article.md).  
   
-3.  На издателе в базе данных публикации выполните хранимую процедуру [sp_addmergefilter (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md). Задайте значение параметра **@publication** , а также укажите уникальное имя фильтра в параметре **@filtername** , имя дочерней статьи, созданной на шаге 2, в параметре **@article** , имя родительской статьи, к которой производится присоединение, в параметре **@join_articlename** , а в параметре **@join_unique_key** задайте одно из следующих значений.  
+3.  На издателе в базе данных публикации выполните хранимую процедуру [sp_addmergefilter (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md). Задайте значение параметра `@publication`, а также укажите уникальное имя фильтра в параметре `@filtername`, имя дочерней статьи, созданной на шаге 2, — в параметре `@article`, имя родительской статьи, к которой производится присоединение, — в параметре `@join_articlename`, а в параметре `@join_unique_key` задайте одно из следующих значений.  
   
     -   **0** — указывает на соединение типа «многие к одному» или «многие ко многим» между родительской и дочерними статьями.  
   
@@ -126,7 +126,7 @@ ms.locfileid: "67907800"
      Таким образом определяется используемый фильтр соединения двух статей.  
   
     > [!CAUTION]  
-    >  Если на столбец, по которому производится соединение, в базовой таблице для родительской статьи наложено ограничение, гарантирующее уникальность, укажите в параметре **@join_unique_key** значение **1** . Если параметру **@join_unique_key** по ошибке будет присвоено значение **1** , то может произойти потеря конвергенции данных.  
+    >  Если на столбец, по которому производится соединение, в базовой таблице для родительской статьи наложено ограничение, гарантирующее уникальность, укажите в параметре `@join_unique_key` значение **1**. Если параметру `@join_unique_key` по ошибке будет присвоено значение **1**, то может произойти потеря конвергенции данных.  
   
 ###  <a name="TsqlExample"></a> Примеры (Transact-SQL)  
  В следующем примере производится определение статьи для публикации слиянием, где статья таблицы `SalesOrderDetail` фильтруется по таблице `SalesOrderHeader` , для фильтрации которой, в свою очередь, используется статический строковый фильтр. Дополнительные сведения см. в разделе [Define and Modify a Static Row Filter](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md).  

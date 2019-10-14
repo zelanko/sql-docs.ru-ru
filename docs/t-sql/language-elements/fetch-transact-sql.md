@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 5d68dac2-f91b-4342-bb4e-209ee132665f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: aa0ec88e64c317c2106a4a6a2a4d204e7192f114
-ms.sourcegitcommit: 0ea19d8e3bd9d91a416311e00a5fb0267d41949e
+ms.openlocfilehash: 8fd770d8f1af098d4328df12a11cdcff609f2328
+ms.sourcegitcommit: f6bfe4a0647ce7efebaca11d95412d6a9a92cd98
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71174295"
+ms.lasthandoff: 10/05/2019
+ms.locfileid: "71974404"
 ---
 # <a name="fetch-transact-sql"></a>FETCH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -76,10 +76,10 @@ FETCH
  *cursor_name*  
  Имя открытого курсора, из которого должна быть произведена выборка. Когда имеется как глобальный, так и локальный курсор с именем *cursor_name*, то *cursor_name* ссылается на глобальный курсор, если задано GLOBAL, и на локальный, если GLOBAL не задано.  
   
- @*cursor_variable_name*  
+ \@*cursor_variable_name*  
  Имя переменной курсора, ссылающейся на открытый курсор, из которого должна быть произведена выборка.  
   
- INTO @*variable_name*[ ,...*n*]  
+ INTO \@*variable_name*[ ,...*n*]  
  Позволяет поместить данные из столбцов выборки в локальные переменные. Каждая переменная из списка, слева направо, связывается с соответствующим столбцом в результирующем наборе курсора. Тип данных каждой переменной должен соответствовать типу данных соответствующего столбца результирующего набора, или должна обеспечиваться поддержка неявного преобразования в тип данных этого столбца. Количество переменных должно совпадать с количеством столбцов в списке выбора курсора.  
   
 ## <a name="remarks"></a>Remarks  

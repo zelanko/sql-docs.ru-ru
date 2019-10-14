@@ -11,12 +11,12 @@ ms.assetid: ea21c73c-40e8-4c54-83d4-46ca36b2cf73
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 1e913f7c09327be46ab7e4b67ec903fc60e30975
-ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
+ms.openlocfilehash: 5b9c22a366ad6757821783ba2cf077d251193d55
+ms.sourcegitcommit: 5d9ce5c98c23301c5914f142671516b2195f9018
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68419608"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71961792"
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>CREATE TABLE (хранилище данных SQL Azure)
 
@@ -51,7 +51,8 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
   
 <table_option> ::=
     {
-        <cci_option> --default for Azure SQL Data Warehouse
+       CLUSTERED COLUMNSTORE INDEX --default for SQL Data Warehouse 
+      | CLUSTERED COLUMNSTORE INDEX ORDER (column [,...n])  
       | HEAP --default for Parallel Data Warehouse
       | CLUSTERED INDEX ( { index_column_name [ ASC | DESC ] } [ ,...n ] ) -- default is ASC
     }  
@@ -63,8 +64,6 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
     | PARTITION ( partition_column_name RANGE [ LEFT | RIGHT ] -- default is LEFT  
         FOR VALUES ( [ boundary_value [,...n] ] ) )
 
-<cci_option> ::= [CLUSTERED COLUMNSTORE INDEX] [ORDER (column [,…n])]
-  
 <data type> ::=
       datetimeoffset [ ( n ) ]  
     | datetime2 [ ( n ) ]  
@@ -165,7 +164,7 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
 
 ### <a name="ordered-clustered-columnstore-index-option-preview-for-azure-sql-data-warehouse"></a>Вариант упорядоченного кластеризованного индекса columnstore (предварительная версия для Хранилища данных SQL Azure)
 
-Кластеризованный индекс columnstore включен по умолчанию для создания таблиц в Хранилище данных SQL Azure.  Спецификация ORDER связана с ключами COMPOUND по умолчанию.  Сортировка будет всегда выполняться по возрастанию. Если предложение ORDER не указано, индекс columnstore не будет отсортирован. Из-за упорядочения в таблице, содержащей упорядоченный кластеризованный индекс columnstore, время загрузки данных может быть увеличено по сравнению с неупорядоченными кластеризованными индексами columnstore. Если вам необходимо больше места в базе данных tempdb при загрузке данных, можно уменьшить объем данных в одной инструкции insert.
+Кластеризованный индекс columnstore включен по умолчанию для создания таблиц в Хранилище данных SQL Azure.  Перед сжатием данных в сегментах columnstore данные в индексе не сортируются.  При создании индекса с ORDER данные сортируются до добавления в сегменты индекса, и производительность запросов можно улучшить. Дополнительные сведения см. в разделе [Настройка производительности с упорядоченным кластеризованным индексом columnstore](https://docs.microsoft.com/en-us/azure/sql-data-warehouse/performance-tuning-ordered-cci).  
 
 Пользователи могут запрашивать столбец column_store_order_ordinal в sys.index_columns для получения списка столбцов, по которым упорядочена таблица, и последовательности упорядочения.  
 
@@ -379,17 +378,6 @@ WITH ( CLUSTERED COLUMNSTORE INDEX )
 ;  
 ```
 
-### <a name="OrderedClusteredColumnstoreIndex"></a> В. Создание упорядоченного кластеризованного индекса columnstore
-
-В следующем примере показано, как создать упорядоченный кластеризованный индекс columnstore. Индекс упорядочен по SHIPDATE.
-
-```sql
-CREATE TABLE Lineitem  
-WITH (DISTRIBUTION = ROUND_ROBIN, CLUSTERED COLUMNSTORE INDEX ORDER(SHIPDATE))  
-AS  
-SELECT * FROM ext_Lineitem
-```
-
 <a name="ExamplesTemporaryTables"></a> 
 ## <a name="examples-for-temporary-tables"></a>Примеры для временных таблиц
 
@@ -432,11 +420,22 @@ WITH
   )  
 ;  
 ```  
- 
+
+### <a name="OrderedClusteredColumnstoreIndex"></a> Д. Создание упорядоченного кластеризованного индекса columnstore
+
+В следующем примере показано, как создать упорядоченный кластеризованный индекс columnstore. Индекс упорядочен по SHIPDATE.
+
+```sql
+CREATE TABLE Lineitem  
+WITH (DISTRIBUTION = ROUND_ROBIN, CLUSTERED COLUMNSTORE INDEX ORDER(SHIPDATE))  
+AS  
+SELECT * FROM ext_Lineitem
+```
+
 <a name="ExTableDistribution"></a> 
 ## <a name="examples-for-table-distribution"></a>Примеры распределения таблиц
 
-### <a name="RoundRobin"></a> Д. Создание таблицы ROUND_ROBIN  
+### <a name="RoundRobin"></a> Е. Создание таблицы ROUND_ROBIN  
  В следующем примере создается таблица ROUND_ROBIN с тремя столбцами и без секций. Данные распространяются между всеми распределениями. Создается таблица с кластеризованным индексом columnstore, который обладает лучшей производительностью и характеристиками сжатия данных по сравнению с кучей или кластеризованным индексом rowstore.  
   
 ```sql
@@ -449,7 +448,7 @@ CREATE TABLE myTable
 WITH ( CLUSTERED COLUMNSTORE INDEX );  
 ```  
   
-### <a name="HashDistributed"></a> Е. Создание таблицы с распределением хэша
+### <a name="HashDistributed"></a> G. Создание таблицы с распределением хэша
 
  В следующем примере создается точно такая же таблица, как в предыдущем примере. Тем не менее для этой таблицы строки распределены (по столбцу `id`) вместо случайного распределения, как в таблице ROUND_ROBIN. Создается таблица с кластеризованным индексом columnstore, который обладает лучшей производительностью и характеристиками сжатия данных по сравнению с кучей или кластеризованным индексом rowstore.  
   
@@ -467,7 +466,7 @@ WITH
   );  
 ```  
   
-### <a name="Replicated"></a> G. Создание реплицированной таблицы  
+### <a name="Replicated"></a> H. Создание реплицированной таблицы  
  В следующем примере создается реплицированная таблица, как и в предыдущем примере. Реплицированные таблицы копируются в полном объеме на каждый вычислительный узел. Благодаря наличию копии на каждом вычислительном узле уменьшается объем перемещаемых данных для запросов. В этом примере таблица создается с использованием кластеризованного индекса, который обеспечивает лучшее сжатие данных, чем куча. Куча может не содержать достаточно записей для достижения хорошего сжатия с использованием кластеризованного индекса columnstore.  
   
 ```sql
@@ -487,7 +486,7 @@ WITH
 <a name="ExTablePartitions"></a> 
 ## <a name="examples-for-table-partitions"></a>Примеры секций таблиц
 
-###  <a name="PartitionedTable"></a> H. Создание секционированной таблицы
+###  <a name="PartitionedTable"></a> I. Создание секционированной таблицы
 
  В следующем примере создается такая же таблица, как в примере A, с добавлением секционирования RANGE LEFT для столбца `id`. В нем указаны четыре граничных значения секций, таким образом, общее количество секций равно пяти.  
   
@@ -522,7 +521,7 @@ WITH
 - Секция 4: столбцы с 30-го по 39-й
 - Секция 5: столбцы с 40-го и далее  
   
-### <a name="OnePartition"></a> I. Создание секционированной таблицы с одной секцией
+### <a name="OnePartition"></a> J. Создание секционированной таблицы с одной секцией
 
  В следующем примере создается секционированная таблица с одной секцией. В нем не указаны граничные значения, поэтому создается одна секция.  
   
@@ -539,7 +538,7 @@ WITH
 ;  
 ```  
   
-### <a name="DatePartition"></a> J. Создание таблицы с секционированием даты
+### <a name="DatePartition"></a> K. Создание таблицы с секционированием даты
 
  В следующем примере создается новая таблица с именем `myTable` с секционированием по столбцу `date`. При использовании RANGE RIGHT и дат в качестве граничных значений в каждой секции будут находиться данные для одного месяца.  
   

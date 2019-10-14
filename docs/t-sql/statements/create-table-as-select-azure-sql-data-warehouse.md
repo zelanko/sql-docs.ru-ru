@@ -11,12 +11,12 @@ ms.assetid: d1e08f88-64ef-4001-8a66-372249df2533
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: dcef896bed81f094f1ab0e22f40ec5ac31bfb9d0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7b9e469cd522ecf28684a6e34ded51a41356fec5
+ms.sourcegitcommit: 5d9ce5c98c23301c5914f142671516b2195f9018
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68116966"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71961797"
 ---
 # <a name="create-table-as-select-azure-sql-data-warehouse"></a>CREATE TABLE AS SELECT (хранилище данных SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -46,7 +46,8 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
       <distribution_option> -- required
       [ , <table_option> [ ,...n ] ]    
     )  
-    AS <select_statement>   
+    AS <select_statement>  
+    OPTION <query_hint> 
 [;]  
 
 <distribution_option> ::=
@@ -59,16 +60,21 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
 <table_option> ::= 
     {   
         CLUSTERED COLUMNSTORE INDEX --default for SQL Data Warehouse 
+      | CLUSTERED COLUMNSTORE INDEX ORDER (column[,...n])
       | HEAP --default for Parallel Data Warehouse   
       | CLUSTERED INDEX ( { index_column_name [ ASC | DESC ] } [ ,...n ] ) --default is ASC 
     }  
-    | PARTITION ( partition_column_name RANGE [ LEFT | RIGHT ] --default is LEFT  
+      | PARTITION ( partition_column_name RANGE [ LEFT | RIGHT ] --default is LEFT  
         FOR VALUES ( [ boundary_value [,...n] ] ) ) 
   
 <select_statement> ::=  
     [ WITH <common_table_expression> [ ,...n ] ]  
     SELECT select_criteria  
 
+<query_hint> ::=
+    {
+        MAXDOP 
+    }
 ```  
 
 <a name="arguments-bk"></a>
@@ -102,7 +108,7 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
 
 <a name="select-options-bk"></a>
 
-### <a name="select-options"></a>Параметры выбора
+### <a name="select-statement"></a>Select, инструкция
 Инструкция SELECT принципиально отличает инструкцию CTAS от инструкции CREATE TABLE.  
 
  `WITH` *обобщенное_табличное_выражение*  
@@ -110,7 +116,11 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
   
  `SELECT` *критерии_выборки*  
  Заполняет новую таблицу результатами выполнения инструкции SELECT. *select_criteria* являются основной частью инструкции SELECT и определяют, какие данные нужно скопировать в новую таблицу. Сведения об инструкциях SELECT см. в разделе [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md).  
-  
+ 
+### <a name="query-hint"></a>Указание запроса
+Пользователи могут задать для параметра MAXDOP целое значение, чтобы управлять максимальной степенью параллелизма.  Если параметр MAXDOP имеет значение 1, запрос выполняется одним потоком.
+
+ 
 <a name="permissions-bk"></a>  
   
 ## <a name="permissions"></a>Разрешения  
@@ -820,6 +830,14 @@ OPTION (LABEL = 'CTAS : Partition IN table : Create');
 ```
 
 Таким образом, рекомендуется использовать инструкцию CTAS для обеспечения согласованности типов и поддержания допустимости значений NULL. Это помогает поддерживать целостность вычислений и обеспечивает возможность переключения секций.
+
+### <a name="n-create-an-ordered-clustered-columnstore-index-with-maxdop-1"></a>О. Создание упорядоченного кластеризованного индекса columnstore при помощи MAXDOP 1  
+```sql
+CREATE TABLE Table1 WITH (DISTRIBUTION = HASH(c1), CLUSTERED COLUMNSTORE INDEX ORDER(c1) )
+AS SELECT * FROM ExampleTable
+OPTION (MAXDOP 1);
+```
+
  
 ## <a name="see-also"></a>См. также:  
  [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md)   

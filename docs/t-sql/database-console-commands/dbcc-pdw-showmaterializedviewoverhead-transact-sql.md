@@ -12,12 +12,12 @@ dev_langs:
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: ddbb104690c4ded69b1c15628e2f509644c11cb3
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 000ba97314d3d2c7efaf75a42e91b4843e69733d
+ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68809868"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71682063"
 ---
 # <a name="dbcc-pdw_showmaterializedviewoverhead-transact-sql-preview"></a>DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD (Transact-SQL) (предварительная версия)
 
@@ -44,15 +44,17 @@ DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD ( " [ schema_name .] materialized_view_nam
 
 ## <a name="remarks"></a>Remarks
 
-После изменения базовых таблиц в определении материализованного представления все добавочные изменения в базовых таблицах сохраняются для материализованного представления.  Выбор из материализованного представления предусматривает сканирование структуры его кластеризованного индекса columnstore и применение этих дополнительных изменений.   Если число сохраненных добавочных изменений слишком высоко, это приведет к снижению производительности выбора.  Пользователи могут перестроить материализованное представление, чтобы воссоздать структуру кластеризованного индекса columnstore и объединить все добавочные изменения в базовых таблицах.
-  
+Для сохранения материализованных представлений, обновляемых при изменении данных в базовых таблицах, подсистема хранилища данных добавляет отслеживаемые строки в каждое затронутое представление для отражения изменений. Выборка из материализованного представления предусматривает сканирование его кластеризованного индекса columnstore и применение всех дополнительных изменений.  Строки отслеживания (TOTAL_ROWS-BASE_VIEW_ROWS) не удаляются до тех пор, пока пользователи не перестроят материализованное представление.  
+
+Коэффициент затрат overhead_ratio рассчитывается по следующей формуле: TOTAL_ROWS/MAX(1, BASE_VIEW_ROWS).  Если значение высокое, производительность SELECT будет снижена.  Пользователи могут перестроить материализованные представления, чтобы уменьшить коэффициент.
+
 ## <a name="permissions"></a>Разрешения  
   
 Необходимо разрешение VIEW DATABASE STATE.  
 
-## <a name="example"></a>Пример  
+## <a name="examples"></a>Примеры  
 
-Этот пример возвращает разностное пространство, используемое материализованным представлением.
+### <a name="a-this-example-returns-the-overhead-ratio-of-a-materialized-view"></a>A. Этот пример возвращает коэффициент накладных расходов для материализованного представления.
 
 ```sql
 DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD ( "dbo.MyIndexedView" )
@@ -66,15 +68,82 @@ DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD ( "dbo.MyIndexedView" )
 
 </br>
 
-|OBJECT_ID |BASE_VIEW_ROWS|TOTAL_ROWS|OVERHEAD_RATIO|
-|--------|--------|--------|--------|
-|4567|0|0|0,0|
+### <a name="b-this-example-shows-how-the-materialized-view-overhead-increases-as-data-changes-in-base-tables"></a>Б. В этом примере показано, как увеличиваются издержки материализованных представлений по мере изменения данных в базовых таблицах.
 
-</br>
+Создание таблицы
+```sql
+CREATE TABLE t1 (c1 int NOT NULL, c2 int not null, c3 int not null)
+```
+Вставка пяти строк в t1
+```sql
+INSERT INTO t1 VALUES (1, 1, 1)
+INSERT INTO t1 VALUES (2, 2, 2) 
+INSERT INTO t1 VALUES (3, 3, 3) 
+INSERT INTO t1 VALUES (4, 4, 4) 
+INSERT INTO t1 VALUES (5, 5, 5) 
+```
+Создание материализованного представления MV1
+```sql
+CREATE materialized view MV1 
+WITH (DISTRIBUTION = HASH(c1))  
+AS
+SELECT c1, count(*) total_number 
+FROM dbo.t1 where c1 < 3
+GROUP BY c1  
+```
+Выборка из материализованного представления возвращает две строки.
+
+|c1|total_number|
+|--------|--------| 
+|1|1| 
+|2|1|
+
+Проверка издержек материализованного представления перед изменением данных в базовой таблице.
+```sql
+DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD ("dbo.mv1")
+```
+Выходные данные:
 
 |OBJECT_ID|BASE_VIEW_ROWS|TOTAL_ROWS|OVERHEAD_RATIO|
-|--------|--------|--------|--------|
-|789|0|2|2.0|
+|--------|--------|--------|--------|  
+|587149137|2|2 |1.00000000000000000 |
+
+Обновление базовой таблицы.  Этот запрос обновляет один и тот же столбец в одной строке 100 раз одним и тем же значением.  Содержимое материализованного представления не изменяется.
+```sql
+DECLARE @p int
+SELECT @p = 1
+WHILE (@p < 101)
+BEGIN
+UPDATE t1 SET c1 = 1 WHERE c1 = 1
+SELECT @p = @p+1
+END  
+```
+
+Выборка из материализованного представления возвращает тот же результат.  
+
+|c1|total_number|
+|--------|--------| 
+|1|1| 
+|2|1|
+
+Ниже приведены выходные данные DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD ("dbo. mv1").  В материализованное представление (total_row-base_view_rows) добавлено 100 строк, и его overhead_ratio увеличивается. 
+
+|OBJECT_ID|BASE_VIEW_ROWS|TOTAL_ROWS|OVERHEAD_RATIO|
+|--------|--------|--------|--------|  
+|587149137|2|102 |51.00000000000000000 |
+
+После перестроения материализованного представления удаляются все строки отслеживания для добавочных изменений данных, а также уменьшается коэффициент издержек представления.  
+
+```sql
+ALTER MATERIALIZED VIEW dbo.MV1 REBUILD
+go
+DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD ("dbo.mv1")
+```
+Вывод
+
+|OBJECT_ID|BASE_VIEW_ROWS|TOTAL_ROWS|OVERHEAD_RATIO|
+|--------|--------|--------|--------|  
+|587149137|2|2 |1.00000000000000000 |
 
 ## <a name="see-also"></a>См. также раздел
 

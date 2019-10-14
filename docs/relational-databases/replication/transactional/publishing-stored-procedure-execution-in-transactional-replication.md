@@ -15,12 +15,12 @@ ms.assetid: f4686f6f-c224-4f07-a7cb-92f4dd483158
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 25aa20472daec1e20113627b4cbd778dfa142002
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 93377a86d55086f2f3af501a962c6973f0d66234
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769333"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710735"
 ---
 # <a name="publishing-stored-procedure-execution-in-transactional-replication"></a>Публикация выполнения хранимых процедур в репликации транзакций
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ EXEC give_raise
   
 -   Среда SQL Server Management Studio: [Публикация выполнения хранимой процедуры в публикации транзакций (среда SQL Server Management Studio)](../../../relational-databases/replication/publish/publish-execution-of-stored-procedure-in-transactional-publication.md)  
   
--   Программирование репликации на языке Transact-SQL: выполните хранимую процедуру [sp_addarticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) и укажите значение "serializable proc exec" (рекомендуется) или "proc exec" для параметра **@type** . Дополнительные сведения об определении статей см. в [этой статье](../../../relational-databases/replication/publish/define-an-article.md).  
+-   Программирование репликации на языке Transact-SQL: выполните хранимую процедуру [sp_addarticle (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) и укажите значение "serializable proc exec" (рекомендуется) или "proc exec" для параметра `@type`. Дополнительные сведения об определении статей см. в [этой статье](../../../relational-databases/replication/publish/define-an-article.md).  
   
 ## <a name="modifying-the-procedure-at-the-subscriber"></a>Изменение процедуры на подписчике  
  По умолчанию определение хранимой процедуры на издателе отправляется каждому подписчику. Тем не менее хранимую процедуру можно также изменить на подписчике. Эта возможность используется, когда требуется разная логика для выполнения процедуры на подписчике и на издателе. В качестве примера рассмотрим **sp_big_delete**, хранимую процедуру на издателе, которая выполняет две функции: процедура удаляет 1 000 000 строк из реплицируемой таблицы **big_table1** и обновляет нереплицируемую таблицу **big_table2**. Чтобы уменьшить необходимый объем сетевых ресурсов, следует передать удаление 1 миллиона строк в виде хранимой процедуры посредством публикации **sp_big_delete**. На подписчике можно изменить хранимую процедуру **sp_big_delete** , чтобы удалить только 1 миллион строк, но не выполнять последующее обновление таблицы **big_table2**.  
@@ -90,7 +90,7 @@ COMMIT TRANSACTION T2
   
  Блокировки удерживаются дольше, когда процедура выполняется в рамках сериализуемой транзакции, и могут привести к снижению степени параллелизма.  
   
-## <a name="the-xactabort-setting"></a>Настройки XACT_ABORT  
+## <a name="the-xact_abort-setting"></a>Настройки XACT_ABORT  
  При репликации выполнения хранимой процедуры настройка сеанса, в котором выполняется хранимая процедура, должна задавать значение XACT_ABORT ON. Если значение параметра XACT_ABORT установлено в OFF и во время выполнения процедуры на издателе возникает ошибка, то такая же ошибка возникнет на подписчике и вызовет сбой в работе агента распространителя. Значение параметра XACT_ABORT ON гарантирует полный откат процедуры в случае возникновения ошибок во время выполнения процедуры на издателе, что позволяет исключить сбои в работе агента распространителя. Дополнительные сведения о настройке XACT_ABORT см. в статье [SET XACT_ABORT &#40;Transact-SQL&#41;](../../../t-sql/statements/set-xact-abort-transact-sql.md).  
   
  Если требуется использование настройки XACT_ABORT OFF, укажите для агента распространителя параметр **-SkipErrors** . Это позволит агенту продолжить применение изменений на подписчике, даже если возникнет ошибка.  

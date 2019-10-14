@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: b48a6825-068f-47c8-afdc-c83540da4639
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c0168db6a35606f3495d66eae87a0671672a6e99
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3dee5b4c6522afd93591d1e8aa0c94052d41d9bd
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140132"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71711064"
 ---
 # <a name="parameterized-filters---parameterized-row-filters"></a>Параметризованные фильтры. Параметризованные фильтры строк
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,12 +48,12 @@ ms.locfileid: "68140132"
   
      Можно также переопределить эту функцию с помощью значения, отличного от имени подписчика и распространителя. Обычно приложения переопределяют данную функцию на более осмысленные значения, например имя или идентификатор менеджера по продажам. Дополнительные сведения см. в подразделе «Переопределение значения HOST_NAME()» далее в этом разделе.  
   
- Возвращаемое системной функцией значение сравнивается со столбцом, указываемым в фильтруемой таблице, и соответствующие данные загружаются на подписчик. Сравнение производится при инициализации подписки (поэтому в исходном моментальном снимке содержатся только подходящие данные) и при каждой синхронизации подписки. По умолчанию, если изменение в издателе приводит к удалению строки из секции, эта строка удаляется в подписчике (это поведение контролируется с помощью параметра **@allow_partition_realignment** хранимой процедуры [sp_addmergepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)).  
+ Возвращаемое системной функцией значение сравнивается со столбцом, указываемым в фильтруемой таблице, и соответствующие данные загружаются на подписчик. Сравнение производится при инициализации подписки (поэтому в исходном моментальном снимке содержатся только подходящие данные) и при каждой синхронизации подписки. По умолчанию, если изменение в издателе приводит к удалению строки из секции, эта строка удаляется в подписчике (это поведение контролируется с помощью параметра `@allow_partition_realignment` хранимой процедуры [sp_addmergepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)).  
   
 > [!NOTE]  
 >  Когда для параметризованных фильтров производится сравнение, всегда используется порядок следования базы данных. Например, если порядок следования в базе данных не зависит от регистра символов, а порядок следования в таблице или столбце зависит от регистра символов, то сравнение не будет зависеть от регистра символов.  
   
-### <a name="filtering-with-susersname"></a>Фильтрация с помощью SUSER_SNAME()  
+### <a name="filtering-with-suser_sname"></a>Фильтрация с помощью SUSER_SNAME()  
  Рассмотрим **таблицу Employee** в образце базы данных [!INCLUDE[ssSampleDBCoShort](../../../includes/sssampledbcoshort-md.md)] . Эта таблица содержит столбец **LoginID**, содержащий имя входа каждого сотрудника в формате*Домен\ИмяВхода*. Чтобы отфильтровать эту таблицу таким образом, чтобы сотрудникам были доступны только относящиеся к ним данные, укажите следующее предложение фильтрации:  
   
 ```  
@@ -62,7 +62,7 @@ LoginID = SUSER_SNAME()
   
  Например, для одного из сотрудников значение равно adventure-works\john5. Когда агент слияния подключается к издателю, он использует имя входа, указываемое при создании подписки (в данном случает adventure-works\john5). Затем агент слияния сравнивает значение, возвращаемое SUSER_SNAME(), со значениями в таблице и загружает только ту строку, которая содержит в столбце **LoginID** значение adventure-works\john5.  
   
-### <a name="filtering-with-hostname"></a>Фильтрация с помощью HOST_NAME()  
+### <a name="filtering-with-host_name"></a>Фильтрация с помощью HOST_NAME()  
  Рассмотрим таблицу **HumanResources.Employee** . Предположим, в этой таблице столбец **ComputerName** содержит имя компьютера каждого из сотрудников в формате*Имя_Тип*. Чтобы отфильтровать эту таблицу таким образом, чтобы сотрудникам были доступны только относящиеся к ним данные, укажите следующее предложение фильтрации:  
   
 ```  
@@ -82,7 +82,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
 > [!IMPORTANT]  
 >  Значение функции HOST_NAME() может быть переопределено, поэтому фильтры, содержащие HOST_NAME(), нельзя использовать для управления доступом к секциям данных. Для управления доступом к секциям данных используйте функции SUSER_SNAME(), SUSER_SNAME() вместе с HOST_NAME() или статические строковые фильтры.  
   
-#### <a name="overriding-the-hostname-value"></a>Переопределение значения HOST_NAME()  
+#### <a name="overriding-the-host_name-value"></a>Переопределение значения HOST_NAME()  
  Как упоминалось ранее, по умолчанию HOST_NAME() возвращает имя компьютера, подключающегося к экземпляру [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Если используются параметризованные фильтры, это значение обычно переопределяется путем указания значения при создании подписки. В этом случае функция HOST_NAME() будет возвращать указанное значение вместо имени компьютера.  
   
 > [!NOTE]  
@@ -95,7 +95,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
  Например, сотруднику Pamela Ansman-Wolfe присвоен идентификационный номер 280. При создании подписки для этого сотрудника задайте значение идентификационного номера (в данном примере это 280) в качестве значения функции HOST_NAME(). Когда агент слияния подключается к издателю, он сравнивает значение, возвращаемое функцией HOST_NAME(), со значениями в таблице и загружает только ту строку, которая содержит в столбце **EmployeeID** значение 280.  
   
 > [!IMPORTANT]
->  Функция HOST_NAME() возвращает значение типа **nchar** , поэтому следует использовать CONVERT, если столбец в предложении фильтра имеет числовой тип (как в приведенном выше примере). Из соображений производительности функции к именам столбцов в предложениях параметризованных фильтров строк применять не рекомендуется, например: `CONVERT(nchar,EmployeeID) = HOST_NAME()`. Вместо этого рекомендуется использовать показанный в примере подход: `EmployeeID = CONVERT(int,HOST_NAME())`. Это предложение может быть передано в качестве параметра **@subset_filterclause** хранимой процедуры [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md), но обычно в мастере создания публикации оно не применяется (мастер выполняет предложение фильтрации для его проверки, что приводит к ошибке, поскольку имя компьютера невозможно преобразовать в тип **int**они назывались динамическими фильтрами) позволяют отсылать разным подписчикам разные секции данных, что исключает необходимость создания множества публикаций. В мастере создания публикации рекомендуется указать `CONVERT(nchar,EmployeeID) = HOST_NAME()` , а затем перед созданием моментального снимка публикации воспользоваться функцией [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) для замены предложения на `EmployeeID = CONVERT(int,HOST_NAME())` .  
+>  Функция HOST_NAME() возвращает значение типа **nchar** , поэтому следует использовать CONVERT, если столбец в предложении фильтра имеет числовой тип (как в приведенном выше примере). Из соображений производительности функции к именам столбцов в предложениях параметризованных фильтров строк применять не рекомендуется, например: `CONVERT(nchar,EmployeeID) = HOST_NAME()`. Вместо этого рекомендуется использовать показанный в примере подход: `EmployeeID = CONVERT(int,HOST_NAME())`. Это предложение может быть передано в качестве параметра `@subset_filterclause` хранимой процедуры [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md), но обычно в мастере создания публикации оно не применяется (мастер выполняет предложение фильтрации для его проверки, что приводит к ошибке, так как имя компьютера невозможно преобразовать в тип **int**). В мастере создания публикации рекомендуется указать `CONVERT(nchar,EmployeeID) = HOST_NAME()` , а затем перед созданием моментального снимка публикации воспользоваться функцией [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) для замены предложения на `EmployeeID = CONVERT(int,HOST_NAME())` .  
   
  **Переопределение значения HOST_NAME()**  
   
@@ -103,7 +103,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
   
 -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: укажите значение на странице **Значения HOST\_NAME\(\)** мастера создания подписки. Дополнительные сведения о создании подписок см. в статье [Подписка на публикации](../../../relational-databases/replication/subscribe-to-publications.md).  
   
--   Программирование репликации для [!INCLUDE[tsql](../../../includes/tsql-md.md)]: укажите значение параметра **@hostname** в процедуре [sp_addmergesubscription (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md) (для принудительных подписок) или [sp_addmergepullsubscription_agent (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md) (для подписок по запросу).  
+-   Программирование репликации для [!INCLUDE[tsql](../../../includes/tsql-md.md)]: укажите значение параметра `@hostname` в процедуре [sp_addmergesubscription &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md) (для принудительных подписок) или [sp_addmergepullsubscription_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md) (для подписок по запросу).  
   
 -   Агент слияния: задайте значение параметра **-Hostname** в командной строке или с помощью профиля агента. Дополнительные сведения об агенте слияния см. в разделе [Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md). Дополнительные сведения о профилях агентов см. в разделе [Replication Agent Profiles](../../../relational-databases/replication/agents/replication-agent-profiles.md).  
   

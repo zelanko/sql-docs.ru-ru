@@ -22,12 +22,12 @@ ms.assetid: e71831fa-3d39-4e4a-9706-4d3a497082cc
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: b11273743ecdd54fa7a48aa4b8750d1925e8cca0
-ms.sourcegitcommit: 0ea19d8e3bd9d91a416311e00a5fb0267d41949e
+ms.openlocfilehash: 61a55d8b72669fb83425e74b9888bd254b076378
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71174311"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710802"
 ---
 # <a name="view-and-modify-article-properties"></a>Просмотр и изменение свойств статьи
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -104,29 +104,29 @@ ms.locfileid: "71174311"
   
 #### <a name="to-view-the-properties-of-an-article-belonging-to-a-snapshot-or-transactional-publication"></a>Просмотр свойств статьи, принадлежащей публикации транзакций или моментальных снимков  
   
-1.  Выполните хранимую процедуру [sp_helparticle](../../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md), задав в качестве параметров **\@publication** и **\@article** имя публикации и имя статьи соответственно. Если параметр **\@article** не указан, сведения будут возвращены по всем статьям публикации.  
+1.  Выполните хранимую процедуру [sp_helparticle](../../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md), задав в качестве параметров `@publication` и `@article` имя публикации и имя статьи соответственно. Если не указан параметр `@article`, то сведения будут возвращены по всем статьям публикации.  
   
 2.  Чтобы получить список всех столбцов базовой таблицы, выполните хранимую процедуру [sp_helparticlecolumns](../../../relational-databases/system-stored-procedures/sp-helparticlecolumns-transact-sql.md) для статей таблиц.  
   
 #### <a name="to-modify-the-properties-of-an-article-belonging-to-a-snapshot-or-transactional-publication"></a>Изменение свойств статьи, принадлежащей публикации транзакций или моментальных снимков  
   
-1.  Выполните хранимую процедуру [sp_changearticle](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md), указав изменяемое свойство статьи в параметре **\@property**, а его новое значение — в параметре **\@value**.  
+1.  Выполните хранимую процедуру [sp_changearticle](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md), указав изменяемое свойство статьи в параметре `@property`, а его новое значение — в параметре `@value` имя публикации и имя статьи соответственно.  
   
     > [!NOTE]  
-    >  Если в результате изменения требуется создать новый моментальный снимок, необходимо также задать значение **1** для параметра **\@force_invalidate_snapshot**, а если в результате изменения требуется повторная инициализация подписчиков, также необходимо указать значение **1** в параметре **\@force_reinit_subscription**. Дополнительные сведения о свойствах публикации и статьи, при изменении которых требуется создание нового моментального снимка или повторная инициализация, см. в [этой статье](../../../relational-databases/replication/publish/change-publication-and-article-properties.md).  
+    >  Если в результате изменения необходимо создать новый моментальный снимок, необходимо также задать значение `1` в параметре `@force_invalidate_snapshot`, а если в результате изменения необходима повторная инициализация подписчиков, также необходимо указать значение `1` в параметре `@force_reinit_subscription`. Дополнительные сведения о свойствах публикации и статьи, при изменении которых требуется создание нового моментального снимка или повторная инициализация, см. в [этой статье](../../../relational-databases/replication/publish/change-publication-and-article-properties.md).  
   
 #### <a name="to-view-the-properties-of-an-article-belonging-to-a-merge-publication"></a>Просмотр свойств статьи, принадлежащей публикации слиянием  
   
-1.  Выполните хранимую процедуру [sp_helpmergearticle](../../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md), указав в параметрах **\@publication** и **\@article** имя публикации и имя статьи соответственно. Если эти параметры не указаны, то сведения будут возвращены по всем статьям в публикации или на издателе.  
+1.  Выполните хранимую процедуру [sp_helpmergearticle](../../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md), задав в качестве параметров `@publication` и `@article` имя публикации и имя статьи соответственно. Если эти параметры не указаны, то сведения будут возвращены по всем статьям в публикации или на издателе.  
   
 2.  Чтобы получить список всех столбцов базовой таблицы, выполните хранимую процедуру [sp_helpmergearticlecolumn](../../../relational-databases/system-stored-procedures/sp-helpmergearticlecolumn-transact-sql.md) для статей таблиц.  
   
 #### <a name="to-modify-the-properties-of-an-article-belonging-to-a-merge-publication"></a>Изменение свойств статьи, принадлежащей публикации слиянием  
   
-1.  Выполните хранимую процедуру [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md), указав изменяемое свойство статьи в параметре **\@property**, а его новое значение — в параметре **\@value**.  
+1.  Выполните хранимую процедуру [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md), указав изменяемое свойство статьи в параметре `@property`, а его новое значение — в параметре `@value` имя публикации и имя статьи соответственно.  
   
     > [!NOTE]  
-    >  Если в результате изменения требуется создать новый моментальный снимок, необходимо также задать значение **1** для параметра **\@force_invalidate_snapshot**, а если в результате изменения требуется повторная инициализация подписчиков, также необходимо указать значение **1** в параметре **\@force_reinit_subscription**. Дополнительные сведения о свойствах публикации и статьи, при изменении которых требуется создание нового моментального снимка или повторная инициализация, см. в [этой статье](../../../relational-databases/replication/publish/change-publication-and-article-properties.md).  
+    >  Если в результате изменения необходимо создать новый моментальный снимок, необходимо также задать значение `1` в параметре `@force_invalidate_snapshot`, а если в результате изменения необходима повторная инициализация подписчиков, также необходимо указать значение `1` в параметре `@force_reinit_subscription`. Дополнительные сведения о свойствах публикации и статьи, при изменении которых требуется создание нового моментального снимка или повторная инициализация, см. в [этой статье](../../../relational-databases/replication/publish/change-publication-and-article-properties.md).  
   
 ###  <a name="TsqlExample"></a> Примеры (Transact-SQL)  
  Следующий пример репликации транзакций производит получение свойств опубликованной статьи.  

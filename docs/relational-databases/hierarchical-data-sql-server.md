@@ -1,7 +1,7 @@
 ---
 title: Иерархические данные (SQL Server) | Документация Майкрософт
 ms.custom: ''
-ms.date: 09/03/2017
+ms.date: 10/04/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -18,12 +18,12 @@ ms.assetid: 19aefa9a-fbc2-4b22-92cf-67b8bb01671c
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 018866c81a84455bd3480a523dbdc2fffaa538c9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 36fea2a22bddcf130725e6092314e00fbb0b6a8f
+ms.sourcegitcommit: f6bfe4a0647ce7efebaca11d95412d6a9a92cd98
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68035856"
+ms.lasthandoff: 10/05/2019
+ms.locfileid: "71974255"
 ---
 # <a name="hierarchical-data-sql-server"></a>Иерархические данные (SQL Server)
 
@@ -325,7 +325,7 @@ GO
   
   
 #### <a name="example-using-a-serializable-transaction"></a>Пример использования сериализуемой транзакции  
- Тип данных **Org_BreadthFirst** обеспечивает использование поиска по диапазону для определения значения **@last_child** . В дополнение к другим случаям ошибок, проверка которых может потребоваться приложению, нарушение повторяющихся ключей после вставки может свидетельствовать о попытке добавления нескольких сотрудников с одним и тем же идентификатором; вследствие этого вычисление значения **@last_child** должно быть выполнено повторно. Следующий код использует сериализуемую транзакцию и индекс по ширине для вычисления значения нового узла:  
+ Тип данных **Org_BreadthFirst** обеспечивает использование поиска по диапазону для определения значения **@last_child** . В дополнение к другим случаям ошибок, проверка которых может потребоваться приложению, нарушение повторяющихся ключей после вставки может свидетельствовать о попытке добавления нескольких сотрудников с одним и тем же идентификатором; вследствие этого вычисление значения **@last_child** должно быть выполнено повторно. Следующий код вычислит новое значение узла в сериализуемой транзакции:  
   
 ```sql
 CREATE TABLE Org_T2  
@@ -343,9 +343,12 @@ DECLARE @last_child hierarchyid
 SET TRANSACTION ISOLATION LEVEL SERIALIZABLE  
 BEGIN TRANSACTION   
   
-UPDATE Org_T2   
-SET @last_child = LastChild = EmployeeId.GetDescendant(LastChild,NULL)  
-WHERE EmployeeId = @mgrid  
+SELECT @last_child  =  EmployeeId.GetDescendant(LastChild,NULL)
+FROM Org_T2
+WHERE EmployeeId = @mgrid
+
+UPDATE Org_T2 SET LastChild = @last_child  WHERE EmployeeId = @mgrid
+
 INSERT Org_T2 (EmployeeId, EmployeeName)   
     VALUES(@last_child, @EmpName)  
 COMMIT  

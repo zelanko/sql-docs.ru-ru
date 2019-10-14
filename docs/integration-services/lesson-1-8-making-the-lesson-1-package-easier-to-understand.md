@@ -10,12 +10,12 @@ ms.topic: tutorial
 ms.assetid: e3751e53-77c7-47d0-8fe8-73ed1a53413a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 17c69ca2ecb09f734f5d2018baea299d282917ed
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 3a67d7593ca63a2271fc94fc7203e9bb55d6efcc
+ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71283820"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71680970"
 ---
 # <a name="lesson-1-8-annotate-and-format-the-lesson-1-package"></a>Занятие 1-8. Добавление заметок и форматирование пакета занятия 1 
 
@@ -55,9 +55,9 @@ ms.locfileid: "71283820"
   
     Чтобы в поле заметки перенести текст на следующую строку, поместите курсор в то место, где должна начинаться новая строка, и нажмите клавишу **ВВОД**.  
   
-    Если в поле заметки текст не введен, то оно закрывается при щелчке за его пределами.  
+    Если в поле заметки текст не введен, то оно закрывается при щелчке за его пределами.  Поэтому если нужно вставить текст в поле заметки, скопируйте текст в буфер обмена перед выбором команды "Добавить заметку". 
   
-## <a name="go-to-next-task"></a>Перейти к следующему шагу
+## <a name="go-to-next-task"></a>Переход к следующей задаче
 [Шаг 9. Тестирование пакета занятия 1](../integration-services/lesson-1-9-testing-the-lesson-1-tutorial-package.md)  
   
   

@@ -11,12 +11,12 @@ ms.prod: sql
 ms.technology: ssms
 ms.custom: ''
 ms.date: 03/13/2018
-ms.openlocfilehash: 105bcea172a91496c664578befc33f022b5c8d9e
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: eaf544085bfe6040bdf9f54300eb733ee4fd92f0
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68256710"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71708333"
 ---
 # <a name="tutorial-connect-to-and-query-a-sql-server-instance-by-using-sql-server-management-studio-ssms"></a>Руководство. Подключение к экземпляру SQL Server и выполнение запросов с помощью SQL Server Management Studio (SSMS)
 
@@ -109,9 +109,10 @@ ms.locfileid: "68256710"
    ![Изменение базы данных](media/connect-query-sql-server/changedb.png)
 
 2. Вставьте в окно запросов следующий фрагмент кода T-SQL, выберите его, а затем нажмите кнопку **Выполнить** (или клавишу F5).  
-   Вы можете заменить имеющийся текст в окне запроса или добавить новый текст в конце. Чтобы выполнить весь код в окне запросов, нажмите кнопку **Выполнить**. Чтобы выполнить часть кода, сначала выделите ее, а затем нажмите кнопку **Выполнить**.  
+   Вы можете заменить имеющийся текст в окне запроса или добавить новый текст в конце. Чтобы выполнить весь код в окне запросов, нажмите кнопку **Выполнить**. Если вы добавили текст, вам необходимо выполнить только его часть, поэтому сначала выделите ее, а затем нажмите кнопку **Выполнить**.  
   
    ```sql
+   USE [TutorialDB]
    -- Create a new table called 'Customers' in schema 'dbo'
    -- Drop the table if it already exists
    IF OBJECT_ID('dbo.Customers', 'U') IS NOT NULL

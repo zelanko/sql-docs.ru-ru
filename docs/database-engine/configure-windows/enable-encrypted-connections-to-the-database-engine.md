@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: d8135706b5fa220fa4e62bbcaf9ad677681fe029
-ms.sourcegitcommit: a24f6e12357979f1134a54a036ebc58049484a4f
+ms.openlocfilehash: 3572c6f9476fb450e0090e88019412c03af145ac
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71314502"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71708512"
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine"></a>Включение зашифрованных соединений для ядра СУБД
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -76,11 +76,11 @@ ms.locfileid: "71314502"
 
 - Текущее системное время должно превышать значение свойства сертификата **Действителен с** и не превышать значение свойства "Действителен до".
 
-- Сертификат должен быть предназначен для проверки подлинности сервера. Для этого требуется задать свойству сертификата **Улучшенный ключ** значение **Проверка подлинности сервера (1.3.6.1.5.5.7.3.1)** .
+- Сертификат должен быть предназначен для проверки подлинности сервера. Для этого требуется задать свойству сертификата **Улучшенный ключ** значение **Проверка подлинности сервера (1.3.6.1.5.5.7.3.1)**.
 
 - Сертификат должен быть создан с помощью параметра **KeySpec** свойства **AT_KEYEXCHANGE**. Обычно в свойстве применения ключа сертификата (**KEY_USAGE**) также предусмотрено шифрование ключа (**CERT_KEY_ENCIPHERMENT_KEY_USAGE**).
 
-- Свойство **Субъект** сертификата должно указывать, что общее имя (CN) совпадает с именем узла или полным доменным именем (FQDN) сервера. Если [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняется в отказоустойчивом кластере, то общее имя должно совпадать с именем узла или полным доменным именем виртуального сервера, а сертификаты должны быть подготовлены во всех узлах отказоустойчивого кластера.
+- Свойство **Субъект** сертификата должно указывать, что общее имя (CN) совпадает с именем узла или полным доменным именем (FQDN) сервера. При использовании имени узла в сертификате должен быть указан DNS-суффикс. Если [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняется в отказоустойчивом кластере, то общее имя должно совпадать с именем узла или полным доменным именем виртуального сервера, а сертификаты должны быть подготовлены во всех узлах отказоустойчивого кластера.
 
 - [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] и [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] Native Client поддерживают групповые сертификаты. Интерфейс SNAC устарел и был заменен [Microsoft OLE DB Driver for SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) и [Microsoft ODBC Driver for SQL Server](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md). Другие клиенты могут их не поддерживать. Дополнительные сведения см. в документации клиента и статье базы знаний [KB 258858](http://support.microsoft.com/kb/258858).       
   Групповые сертификаты невозможно выбрать с помощью диспетчера конфигурации SQL Server. Чтобы использовать групповой сертификат, нужно изменить раздел реестра `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQLServer\SuperSocketNetLib` и ввести отпечаток сертификата без пробелов в качестве значения **Сертификат**.  

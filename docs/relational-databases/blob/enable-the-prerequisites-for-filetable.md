@@ -11,12 +11,12 @@ ms.assetid: 6286468c-9dc9-4eda-9961-071d2a36ebd6
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
-ms.openlocfilehash: 4f339b343da4adc12b7b5cf692d217c5fb0419c8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: dab00f633a72df1a0c799a2d074befee73cf561e
+ms.sourcegitcommit: f6bfe4a0647ce7efebaca11d95412d6a9a92cd98
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085375"
+ms.lasthandoff: 10/05/2019
+ms.locfileid: "71974308"
 ---
 # <a name="enable-the-prerequisites-for-filetable"></a>Включение необходимых компонентов для таблицы FileTable
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,31 +56,31 @@ ms.locfileid: "68085375"
   
 ###  <a name="HowToCheckAccess"></a> Как проверить состояние нетранзакционного доступа (включен или выключен)  
  Выполнить запрос к представлению каталога [sys.database_filestream_options (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-filestream-options-transact-sql.md) и проверить столбцы **non_transacted_access** и **non_transacted_access_desc**.  
-  
-```sql  
+
+```sql
 SELECT DB_NAME(database_id), non_transacted_access, non_transacted_access_desc  
     FROM sys.database_filestream_options;  
 GO  
-```  
-  
+```
+
 ###  <a name="HowToNTAccess"></a> Как включить нетранзакционный доступ на уровне базы данных  
  Доступными уровнями нетранзакционного доступа являются FULL, READ_ONLY и OFF.  
   
  **Указание уровня нетранзакционного доступа с помощью Transact-SQL**  
- -   При **create a new database** вызовите инструкцию [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md) с параметром **NON_TRANSACTED_ACCESS** FILESTREAM.  
-  
-    ```sql  
-    CREATE DATABASE database_name  
-        WITH FILESTREAM ( NON_TRANSACTED_ACCESS = FULL, DIRECTORY_NAME = N'directory_name' )  
-    ```  
-  
--   При **изменении существующей базы данных** вызовите инструкцию [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md) с параметром **NON_TRANSACTED_ACCESS** FILESTREAM.  
-  
-    ```sql  
-    ALTER DATABASE database_name  
-        SET FILESTREAM ( NON_TRANSACTED_ACCESS = FULL, DIRECTORY_NAME = N'directory_name' )  
-    ```  
-  
+ - При **create a new database** вызовите инструкцию [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md) с параметром **NON_TRANSACTED_ACCESS** FILESTREAM.
+
+   ```sql
+   CREATE DATABASE database_name  
+     WITH FILESTREAM ( NON_TRANSACTED_ACCESS = FULL, DIRECTORY_NAME = N'directory_name' )  
+   ```
+
+- При **изменении существующей базы данных** вызовите инструкцию [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md) с параметром **NON_TRANSACTED_ACCESS** FILESTREAM.
+
+   ```sql
+   ALTER DATABASE database_name  
+     SET FILESTREAM ( NON_TRANSACTED_ACCESS = FULL, DIRECTORY_NAME = N'directory_name' )  
+   ```
+
  **Задание уровня нетранзакционного доступа в среде SQL Server Management Studio**  
  Можно задать уровень нетранзакционного доступа в поле **Нетранзакционный доступ к файловому потоку** на странице **Параметры** диалогового окна **Свойства базы данных** . Дополнительные сведения об этом диалоговом окне см. в статье [Свойства базы данных (страница "Параметры")](../../relational-databases/databases/database-properties-options-page.md).  
   
@@ -92,15 +92,15 @@ GO
 ###  <a name="HowToDirectory"></a> Как указать каталог для таблиц FileTable на уровне базы данных  
  Указанное имя должно быть уникальным в экземпляре для каталогов уровня базы данных.  
   
- **Указание каталога для таблиц FileTable с помощью языка Transact-SQL**  
- -   При **create a new database** вызовите инструкцию [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md) с параметром **DIRECTORY_NAME** FILESTREAM.  
-  
-    ```sql  
-    CREATE DATABASE database_name  
-        WITH FILESTREAM ( NON_TRANSACTED_ACCESS = FULL, DIRECTORY_NAME = N'directory_name' );  
-    GO  
-    ```  
-  
+**Указание каталога для таблиц FileTable с помощью языка Transact-SQL**  
+- При **create a new database** вызовите инструкцию [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md) с параметром **DIRECTORY_NAME** FILESTREAM.
+
+   ```sql
+   CREATE DATABASE database_name  
+     WITH FILESTREAM ( NON_TRANSACTED_ACCESS = FULL, DIRECTORY_NAME = N'directory_name' );  
+   GO  
+   ```
+
 -   При **изменении существующей базы данных** вызовите инструкцию [ALTER DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md) с параметром **DIRECTORY_NAME** FILESTREAM. Если эти параметры используются для изменения имени каталога, то база данных должна быть заблокирована в монопольном режиме при отсутствии открытых дескрипторов файлов.  
   
     ```sql  

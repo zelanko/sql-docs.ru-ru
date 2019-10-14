@@ -22,12 +22,12 @@ ms.assetid: 67084a67-43ff-4065-987a-3b16d1841565
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 2db87395b7170315e14e10db075a4d6ca5721ab3
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: f50978c19295f5973e787bdaab46efea6367308a
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768789"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710380"
 ---
 # <a name="enhance-transactional-replication-performance"></a>Повышение производительности репликации транзакций
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -116,7 +116,7 @@ ms.locfileid: "68768789"
   
 Параметр **–SubscriptionStreams** может значительно повысить суммарную пропускную способность репликации. Он позволяет нескольким соединениям с подписчиком параллельно применять пакеты изменений, при этом сохраняя многие свойства транзакций, характерные для использования одиночного потока. Если одному из соединений не удается осуществить выполнение или фиксацию, все подключения прекратят выполнение текущего пакета, и агент будет использовать одиночный поток для повторных попыток выполнения поврежденных пакетов. Перед завершением фазы выполнения повторной попытки могут существовать временные несоответствия транзакций на подписчике. После успешной фиксации всех поврежденных пакетов подписчик возвращается в состояние согласованности транзакций.  
   
-Значение для этого параметра агента можно указать, используя параметр **@subscriptionstreams** процедуры [sp_addsubscription (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md).  
+Значение для этого параметра агента можно указать, используя параметр `@subscriptionstreams` процедуры [sp_addsubscription (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md).  
 
 Дополнительные сведения о реализации потоков подписки см. в руководстве по [использованию параметра subscriptionStream для репликации SQL](https://blogs.msdn.microsoft.com/repltalk/2010/03/01/navigating-sql-replication-subscriptionstreams-setting).
   

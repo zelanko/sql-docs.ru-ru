@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: db47ac73-948b-4d77-b272-bb3565135ea5
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: dcf95ea2aaab71771f90bc861265bb19e2f9d0ba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bcb11ef0f2c6216b26957f732e5ed34fb233cc05
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68073560"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710884"
 ---
 # <a name="set-the-compatibility-level-for-merge-publications"></a>Задание уровня совместимости для публикаций слиянием
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,13 +52,13 @@ ms.locfileid: "68073560"
   
 #### <a name="to-set-the-publication-compatibility-level-for-a-merge-publication"></a>Установка уровня совместимости для публикации слиянием  
   
-1.  Чтобы сделать публикацию совместимой с прежними версиями [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], выполните в издателе хранимую процедуру [sp_addmergepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md), указав значение для **@publication_compatibility_level** . Дополнительные сведения см. в разделе [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md).  
+1.  Чтобы сделать публикацию совместимой с прежними версиями [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], выполните в издателе хранимую процедуру [sp_addmergepublication (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md), указав значение для `@publication_compatibility_level`. Дополнительные сведения см. в разделе [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md).  
 
 [!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 #### <a name="to-change-the-publication-compatibility-level-of-a-merge-publication"></a>Изменение уровня совместимости для публикации слиянием  
   
-1.  Выполните хранимую процедуру [sp_changemergepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md), указав значение **publication_compatibility_level** для параметра **@property** и соответствующий уровень совместимости публикации в параметре **@value** .  
+1.  Выполните хранимую процедуру [sp_changemergepublication (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md), указав значение **publication_compatibility_level** для параметра `@property` и соответствующий уровень совместимости публикации в параметре `@value`.  
   
 #### <a name="to-determine-the-publication-compatibility-level-of-a-merge-publication"></a>Определение уровня совместимости для публикации слиянием  
   
@@ -69,7 +69,7 @@ ms.locfileid: "68073560"
 ###  <a name="TsqlExample"></a> Примеры (Transact-SQL)  
  В примере создается публикация слиянием и устанавливается уровень совместимости публикации.  
   
-```  
+```sql  
 -- To avoid storing the login and password in the script file, the values   
 -- are passed into SQLCMD as scripting variables. For information about   
 -- how to use scripting variables on the command line and in SQL Server  
@@ -106,7 +106,7 @@ GO
 > [!NOTE]  
 >  Изменение уровня совместимости публикации может быть запрещено, если публикация использует функции, для которых необходим конкретный уровень совместимости. Дополнительные сведения см. в статье [Обратная совместимость репликации](../../../relational-databases/replication/replication-backward-compatibility.md).  
   
-```  
+```sql  
 DECLARE @publication AS sysname;  
 SET @publication = N'AdvWorksSalesOrdersMerge' ;  
   
@@ -122,7 +122,7 @@ GO
   
  В примере возвращается текущий уровень совместимости публикации для публикации слиянием.  
   
-```  
+```sql  
 DECLARE @publication AS sysname;  
 SET @publication = N'AdvWorksSalesOrdersMerge' ;  
 EXEC sp_helpmergepublication   

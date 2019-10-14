@@ -1,10 +1,10 @@
 ---
 title: Проекты и решения служб Integration Services (SSIS) | Документы Майкрософт
 ms.custom: ''
-ms.date: 08/24/2016
+ms.date: 09/20/2019
 ms.prod: sql
 ms.prod_service: integration-services
-ms.reviewer: ''
+ms.reviewer: vanto
 ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
@@ -18,23 +18,22 @@ helpviewer_keywords:
 ms.assetid: 28ea8120-0a79-4029-93f0-07d521b32bee
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d31bad0e0438ec331f674124e907fd098b2cefd7
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 50938fe4f3be40f280340fff5bfbca23ac8b1b44
+ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71296180"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71680986"
 ---
 # <a name="integration-services-ssis-projects-and-solutions"></a>Проекты и решения служб Integration Services (SSIS)
 
 [!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
-
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] включает среду [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] , предназначенную для разработки пакетов [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
   
-Пакеты [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] находятся в проектах. Для создания проектов служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] и работы с ними необходимо установить среду [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] . Дополнительные сведения см. в статье [Установка служб Integration Services](../integration-services/install-windows/install-integration-services.md).  
+Пакеты [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] находятся в проектах. Для создания проектов служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] и работы с ними необходимо установить среду [SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md). Дополнительные сведения см. в статье [Установка служб Integration Services](../integration-services/install-windows/install-integration-services.md).  
   
- При создании нового проекта служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]отображается диалоговое окно **Создание проекта** с шаблоном **Проект служб Integration Services** . Этот шаблон позволяет создать проект, в котором содержится единственный пакет.  
+ При создании нового проекта служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]отображается диалоговое окно **Создание проекта** с шаблоном **Проект служб Integration Services** . Этот шаблон позволяет создать проект, в котором содержится единственный пакет.
   
 ## <a name="projects-and-solutions"></a>Проекты и решения  
  Проекты сохраняются в решениях. Можно сначала создать решение, затем добавить к решению проект служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Если не существует никаких решений, среда [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] автоматически создает для пользователя решение после того, как пользователь сначала создаст проект. Решение может содержать несколько проектов различного типа.  
@@ -65,40 +64,46 @@ ms.locfileid: "71296180"
 ## <a name="folders-in-integration-services-projects"></a>Папки в проектах служб Integration Services  
  На следующей диаграмме показаны папки проекта служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
- ![Папки в проекте служб Integration Services](../integration-services/media/solutionexplorer.gif "Папки в проекте служб Integration Services")  
+![ssis-solution-explorer.png](media/ssis-solution-explorer.png)
   
  В следующей таблице описаны папки, появляющиеся в проекте служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
   
 |Папка|Описание|  
-|------------|-----------------|  
+|------------|-----------------|
+|Диспетчеры соединений|Содержит диспетчеры соединений проектов. Дополнительные сведения см. в статье [Соединения служб Integration Services (SSIS)](../integration-services/connection-manager/integration-services-ssis-connections.md).|
 |[!INCLUDE[ssIS](../includes/ssis-md.md)] Пакеты|Содержит пакеты. Дополнительные сведения см. в разделе [Пакеты служб Integration Services (SSIS)](../integration-services/integration-services-ssis-packages.md).|  
+|Части пакета|Содержит части пакета, которые могут быть повторно использованы или импортированы. Дополнительные сведения см. в разделе [Повторное использование потока управления для нескольких пакетов с помощью частей пакета потока управления](reuse-control-flow-across-packages-by-using-control-flow-package-parts.md).
 |Разное|Содержит файлы, не являющиеся файлами пакетов.|  
   
 ## <a name="files-in-integration-services-projects"></a>Файлы в проектах служб Integration Services  
- При добавлении в решение нового или существующего проекта служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] среда [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] создает файлы проекта, имеющие расширения Dtproj, Dtproj.user и Database.  
+ При добавлении в решение нового или существующего проекта служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] среда [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] создает файлы проекта, имеющие расширения .dtproj, .dtproj.user, .database, Project.params. 
   
 -   Файл *.dtproj содержит данные о конфигурации проекта и таких элементах, как пакеты.  
   
 -   Файл *.dtproj.user содержит данные о личных настройках работы с этим проектом.  
   
--   Файл *.database содержит данные, необходимые среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] для открытия проекта служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
+-   Файл *.database содержит данные, необходимые среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] для открытия проекта служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .
+
+-   Файл Project.params содержит сведения о [параметрах проекта](integration-services-ssis-package-and-project-parameters.md).
   
 ## <a name="version-targeting-in-integration-services-projects"></a>Поддержка версий в проектах служб Integration Services  
- В среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]можно создавать, обслуживать и выполнять пакеты, предназначенные для версий SQL Server 2016, SQL Server 2014 или SQL Server 2012.  
+ В среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]можно создавать, обслуживать и выполнять пакеты, предназначенные для версий SQL Server 2017, SQL Server 2016, SQL Server 2014 или SQL Server 2012.  
   
- В обозревателе решений щелкните правой кнопкой мыши проект служб Integration Services и выберите пункт **Свойства**, чтобы открыть страницу свойств проекта. На вкладке **Общие** окна **Свойства конфигурации** выберите свойство **TargetServerVersion** и затем SQL Server 2016, SQL Server 2014 или SQL Server 2012.  
+ В обозревателе решений щелкните правой кнопкой мыши проект служб Integration Services и выберите пункт **Свойства**, чтобы открыть страницу свойств проекта. На вкладке **Общие** окна **Свойства конфигурации** выберите свойство **TargetServerVersion** и затем SQL Server 2017, SQL Server 2016, SQL Server 2014 или SQL Server 2012.  
   
  ![Свойство TargetServerVersion в диалоговом окне свойств проекта](../integration-services/media/targetserverversion2.png "Свойство TargetServerVersion в диалоговом окне свойств проекта")  
- 
+
 ## <a name="create-a-new-integration-services-project"></a>Создание нового проекта служб Integration Services  
   
 1.  Откройте среду [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
 2.  В меню **Файл** укажите **Создать**, затем нажмите **Проект**.  
   
-3.  В диалоговом окне **Создание проекта** на панели **Шаблоны** выберите шаблон **Проект служб Integration Services** .  
+3.  В диалоговом окне **Создать проект** выберите раздел **Бизнес-аналитика** и шаблон **Проект Integration Services**.  
   
-     Шаблон **Проект служб Integration Services** создает проект служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , содержащий единственный пустой пакет.  
+     Шаблон **Проект служб Integration Services** создает проект служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , содержащий единственный пустой пакет.
+
+  ![ssis-ssdt-new-project.png](media/ssis-ssdt-new-project.png)
   
 4.  (Необязательно) При необходимости измените имя и расположение проекта.  
   
@@ -113,16 +118,6 @@ ms.locfileid: "71296180"
     > **ПРИМЕЧАНИЕ.** Чтобы просмотреть и изменить выбранный встраиваемый модуль управления версиями, а также настроить среду управления версиями, выберите пункт **Параметры** в меню **Сервис**, а затем разверните узел **Управление версиями**.  
   
 8.  Нажмите кнопку **ОК** , чтобы добавить решение в **обозреватель решений** , и добавьте проект в решение.  
-  
-## <a name="choose-the-target-version-of-a-project-and-its-packages"></a>Выбор целевой версии проекта и его пакетов  
-  
-1.  В обозревателе решений щелкните правой кнопкой мыши проект служб Integration Services и выберите пункт **Свойства** , чтобы открыть страницу свойств проекта.  
-  
-2.  На вкладке **Общие** окна **Свойства конфигурации** выберите свойство **TargetServerVersion** и затем SQL Server 2016, SQL Server 2014 или SQL Server 2012.  
-  
-     ![Свойство TargetServerVersion в диалоговом окне свойств проекта](../integration-services/media/targetserverversion2.png "Свойство TargetServerVersion в диалоговом окне свойств проекта")  
-  
- Можно создавать, обслуживать и выполнять пакеты, предназначенные для версий SQL Server 2016, SQL Server 2014 или SQL Server 2012.  
 
 ## <a name="import-an-existing-project-with-the-import-project-wizard"></a>Импорт существующего проекта с помощью мастера импорта проектов
   
@@ -142,9 +137,9 @@ ms.locfileid: "71296180"
   
 8.  Нажмите кнопку **Далее** , чтобы перейти на страницу **Выбор источника данных** .  
   
-9. При импортировании из файла с расширением **ISPAC** введите путь в текстовое поле **Путь** , включая имя файла. Нажмите кнопку **Обзор** , чтобы перейти к папке, где необходимо сохранить решение, введите имя файла в текстовое поле **Имя файла** и нажмите кнопку **Открыть**.  
+9. При импортировании из файла с расширением **ISPAC** введите путь в текстовое поле **Путь**, включая имя файла. Нажмите кнопку **Обзор** , чтобы перейти к папке, где необходимо сохранить решение, введите имя файла в текстовое поле **Имя файла** и нажмите кнопку **Открыть**.  
   
-     При импортировании из **Каталога служб Integration Services**введите имя экземпляра базы данных в текстовое поле **Имя сервера** или нажмите кнопку **Обзор** и выберите экземпляр базы данных, в котором содержится каталог.  
+     При импортировании из **Каталога служб Integration Services** введите имя экземпляра базы данных в текстовое поле **Имя сервера** или нажмите кнопку **Обзор** и выберите экземпляр базы данных, в котором содержится каталог.  
   
      Нажмите кнопку **Обзор** , которая находится рядом с текстовым полем **Путь** , раскройте папку в каталоге, выберите проект, который необходимо импортировать и нажмите **OK**.  
   
@@ -217,5 +212,9 @@ ms.locfileid: "71296180"
   
 4.  Щелкните правой кнопкой мыши проект служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], в который будет выполняться копирование, и выберите **Вставить**.  
   
-     Элементы автоматически копируются в нужную папку. При копировании элементов в проект служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , которые не являются пакетами, элементы копируются в папку **Разное** .  
-     
+     Элементы автоматически копируются в нужную папку. При копировании элементов в проект служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], которые не являются пакетами, элементы копируются в папку **Разное**.  
+
+## <a name="next-steps"></a>Дальнейшие действия
+
+- Скачивание и установка [SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md).
+- [Службы SSIS: создание пакета ETL](ssis-how-to-create-an-etl-package.md)

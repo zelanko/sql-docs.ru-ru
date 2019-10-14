@@ -4,16 +4,16 @@ ms.date: 04/23/2019
 ms.prod: sql
 ms.technology: polybase
 ms.topic: conceptual
-author: Abiola
-ms.author: aboke
+author: MikeRayMSFT
+ms.author: mikeray
 ms.reviewer: mikeray
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions'
-ms.openlocfilehash: 5b75a57e233882540208a428e94f6aca139cd946
-ms.sourcegitcommit: 3be14342afd792ff201166e6daccc529c767f02b
+ms.openlocfilehash: e71fc7c603ad5ca975a3e55ee1bbd41601b85387
+ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/18/2019
-ms.locfileid: "68307618"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71816778"
 ---
 # <a name="configure-polybase-to-access-external-data-in-sql-server"></a>Настройка PolyBase для доступа к внешним данным в SQL Server
 
@@ -39,47 +39,47 @@ ms.locfileid: "68307618"
 - [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md) 
 - [CREATE STATISTICS (Transact-SQL)](../../t-sql/statements/create-statistics-transact-sql.md)
 
-1.  Создайте учетные данные в области базы данных для доступа к источнику MongoDB.
+1. Создайте учетные данные в области базы данных для доступа к источнику SQL Server. В следующем примере создаются учетные данные для внешнего источника данных с `IDENTITY = 'username'` и `SECRET = 'password'`.
 
     ```sql
-    /*  specify credentials to external data source
-    *  IDENTITY: user name for external source.  
-    *  SECRET: password for external source.
-    */
-    CREATE DATABASE SCOPED CREDENTIAL SqlServerCredentials   
-    WITH IDENTITY = 'username', Secret = 'password';
+    CREATE DATABASE SCOPED CREDENTIAL SqlServerCredentials
+    WITH IDENTITY = 'username', SECRET = 'password';
     ```
 
-1. Создайте внешний источник данных с помощью инструкции [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md).
+1. Создайте внешний источник данных с помощью инструкции [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md). Следующий пример:
+
+   - Создает внешний источник данных `SQLServerInstance`.
+   - Определяет внешний источник данных (`LOCATION = '<vendor>://<server>[:<port>]'`). В примере он указывает на экземпляр SQL Server по умолчанию.
+   - Определяет, следует ли передавать вычисления на источник (`PUSHDOWN`). `PUSHDOWN` по умолчанию равен `ON`.
+
+   Наконец, в примере используются учетные данные, созданные ранее.
 
     ```sql
-    /*  LOCATION: Location string should be of format '<vendor>://<server>[:<port>]'.
-    *  PUSHDOWN: specify whether computation should be pushed down to the source. ON by default.
-    *  CREDENTIAL: the database scoped credential, created above.
-    */
     CREATE EXTERNAL DATA SOURCE SQLServerInstance
-    WITH ( LOCATION = 'sqlserver://SqlServer',
-    -- PUSHDOWN = ON | OFF,
-    CREDENTIAL = SQLServerCredentials);
+        WITH ( LOCATION = 'sqlserver://SqlServer',
+        PUSHDOWN = ON,
+        CREDENTIAL = SQLServerCredentials);
     ```
 
-1. **Необязательно**. Создайте статистику внешней таблицы.
+1. (Необязательно) Создайте статистику для внешней таблицы.
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+  Чтобы обеспечить оптимальную производительность запросов, создайте статистику столбцов внешней таблицы, особенно тех, которые используются для объединения, фильтров и статистических выражений.
 
-    We recommend creating statistics on external table columns, especially the ones used for joins, filters and aggregates, for optimal query performance.
-
-    ```sql
-    CREATE STATISTICS statistics_name ON customer (C_CUSTKEY) WITH FULLSCAN;
-    ```
+  ```sql
+    CREATE STATISTICS statistics_name ON customer (C_CUSTKEY)
+    WITH FULLSCAN;
+  ```
 
 >[!IMPORTANT] 
 >После создания внешнего источника данных можно использовать команду [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md), чтобы создать таблицу с поддержкой запросов по этому источнику.
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 
 ## <a name="sql-server-connector-compatible-types"></a>Совместимые типы соединителей SQL Server
 
 Вы можете установить подключение к другим источникам данных, поддерживающим подключение SQL Server. Соединитель SQL Server PolyBase позволяет создать внешнюю таблицу Хранилища данных SQL Azure и Базы данных SQL Azure. Для этого выполните те же действия, что указаны ранее. Учетные данные в области базы, а также адрес сервера, порт и строка расположения должны соответствовать аналогичным параметрам в совместимом источнике данных, к которому нужно подключиться.
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 Дополнительные сведения о PolyBase см. в статье [Руководство по PolyBase](polybase-guide.md).

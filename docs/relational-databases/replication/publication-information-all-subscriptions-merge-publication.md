@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 0f4fa946-a0d9-4d3b-b90b-53503c40fba2
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 86f2d59e142458e68fe3946f7d6f56956b6562e8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8a85b419ff9b129fe4f4baace0c49ca46fb5304d
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68120408"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710913"
 ---
 # <a name="publication-information-all-subscriptions-merge-publication"></a>Сведения о публикации, все подписки (публикация слиянием)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -70,7 +70,7 @@ ms.locfileid: "68120408"
  Имя каждой подписки в виде: *ИмяПодписчика: ИмяБазыДанныхПодписки*.  
   
  **Понятное имя**  
- Только для версии[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] и более поздних версий. Описание каждой подписки. Описание вводится в диалоговое окно **Свойства подписки** или указывается с помощью параметра **@description** процедуры [sp_addmergesubscription](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md) или [sp_addmergepullsubscription](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md). Пользователи часто используют описание как «понятное имя» или псевдоним для подписки.  
+ Только для версии[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] и более поздних версий. Описание каждой подписки. Описание вводится в диалоговом окне **Свойства подписки** или указывается с помощью параметра `@description` процедуры [sp_addmergesubscription](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md) или [sp_addmergepullsubscription](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md). Пользователи часто используют описание как «понятное имя» или псевдоним для подписки.  
   
  **Производительность**  
  Только для версии[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] и более поздних версий. Определение оценки производительности каждой подписки на основе последних по времени измерений скорости доставки данных, снятых монитором репликации. Оценка определяется с помощью сравнения индивидуальной производительности подписки со средним значением производительности из истории подписок на публикации, имеющие тот же тип соединения (коммутируемое или по локальной сети). Монитор репликации отображает значение после пяти синхронизаций, использующих один тип соединения, каждая из которых содержит 50 или более изменений. Если произошло менее 5 синхронизаций с 50 и более изменениями или последняя выполненная синхронизация имела менее 50 изменений, то этот столбец остается пустым.  

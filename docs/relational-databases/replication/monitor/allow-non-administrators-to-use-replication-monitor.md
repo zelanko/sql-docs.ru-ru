@@ -13,12 +13,12 @@ ms.assetid: 1cf21d9e-831d-41a1-a5a0-83ff6d22fa86
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: b39dafbff7c9923ca730538b46eb75ecedb040c9
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 2fa52b0c0126c737fc3c55985aadbd596713f26b
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68767671"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71711037"
 ---
 # <a name="allow-non-administrators-to-use-replication-monitor"></a>Предоставление пользователям без прав администратора разрешения на использование монитора репликации
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -77,14 +77,14 @@ ms.locfileid: "68767671"
   
 1.  В базе данных на распространителе выполните процедуру [sp_helpuser &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md). Если пользователь не указан в поле **UserName** итогового набора, ему следует предоставить доступ к базе данных распространителя с помощью инструкции [CREATE USER &#40;Transact-SQL&#41;](../../../t-sql/statements/create-user-transact-sql.md).  
   
-2.  В базе данных распространителя на распространителе выполните процедуру [sp_helprolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helprolemember-transact-sql.md), указав значение **replmonitor** в параметре **@rolename** . Если пользователь указан в поле **MemberName** результирующего набора, он уже принадлежит этой роли.  
+2.  В базе данных распространителя на распространителе выполните процедуру [sp_helprolemember (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-helprolemember-transact-sql.md), указав значение **replmonitor** в параметре `@rolename`. Если пользователь указан в поле **MemberName** результирующего набора, он уже принадлежит этой роли.  
   
-3.  Если пользователь не принадлежит роли **replmonitor**, выполните процедуру [sp_addrolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md) в базе данных распространителя на распространителе. Укажите значение **replmonitor** для **@rolename** , а также добавляемое имя пользователя базы данных или имя входа [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows для **@membername** .  
+3.  Если пользователь не принадлежит роли **replmonitor**, выполните процедуру [sp_addrolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md) в базе данных распространителя на распространителе. Укажите значение **replmonitor** для `@rolename`, а также добавляемое имя пользователя базы данных или имя входа [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows для `@membername`.  
   
 #### <a name="to-remove-a-user-from-the-replmonitor-fixed-database-role"></a>Удаление пользователя из предопределенной роли «replmonitor» базы данных  
   
-1.  Чтобы убедиться, что пользователь принадлежит роли **replmonitor**, выполните в базе данных распространителя на распространителе процедуру [sp_helprolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helprolemember-transact-sql.md) и задайте значение **replmonitor** для параметра **@rolename** . Если пользователь не указан в поле **MemberName** результирующего набора, в данный момент он не принадлежит этой роли.  
+1.  Чтобы убедиться, что пользователь принадлежит роли **replmonitor**, выполните в базе данных распространителя на распространителе процедуру [sp_helprolemember (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-helprolemember-transact-sql.md) и задайте значение **replmonitor** для параметра `@rolename`. Если пользователь не указан в поле **MemberName** результирующего набора, в данный момент он не принадлежит этой роли.  
   
-2.  Если пользователь принадлежит роли **replmonitor**, выполните процедуру [sp_droprolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md) в базе данных распространителя на распространителе. Укажите значение **replmonitor** для **@rolename** , а также имя пользователя базы данных или имя входа Windows, подлежащее удалению, для **@membername** .  
+2.  Если пользователь принадлежит роли **replmonitor**, выполните процедуру [sp_droprolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md) в базе данных распространителя на распространителе. Укажите значение **replmonitor** для `@rolename`, а также имя пользователя базы данных или имя входа Windows, подлежащее удалению, для `@membername`. 
   
   

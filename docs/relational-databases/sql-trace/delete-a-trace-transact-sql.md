@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a5502814-b281-42dd-b885-5c9368025ae6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2a84a40c5d35335e4fbd73aaa65291ddabe303ec
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3e7338e9068c1b8c58623cf744022a165ce90eda
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68072907"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952712"
 ---
 # <a name="delete-a-trace-transact-sql"></a>удалить трассировку (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,9 +29,9 @@ ms.locfileid: "68072907"
   
 ### <a name="to-delete-a-trace"></a>Удаление трассировки  
   
-1.  Чтобы остановить трассировку, выполните процедуру **sp_trace_setstatus** , указав параметр **@status =0**.  
+1.  Чтобы остановить трассировку, выполните процедуру **sp_trace_setstatus**, указав параметр `@status = 0`.  
   
-2.  Чтобы закрыть трассировку и удалить сведения о ней с сервера, выполните процедуру **sp_trace_setstatus** , указав параметр **@status =2**.  
+2.  Чтобы закрыть трассировку и удалить сведения о ней с сервера, выполните процедуру **sp_trace_setstatus**, указав параметр `@status = 2`.  
   
 > [!NOTE]  
 >  Перед закрытием трассировка должна быть остановлена.  

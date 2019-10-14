@@ -17,12 +17,12 @@ ms.assetid: 215b4c9a-0ce9-4c00-ac0b-43b54151dfa3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 2e3abb6dfb8556f4e598e55e8ae3d645e117a8b5
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 354afb535abb1efab76e005d88b3bdfd464a299c
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769292"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710766"
 ---
 # <a name="validate-replicated-data"></a>Проверка реплицированных данных
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -108,7 +108,7 @@ ms.locfileid: "68769292"
 
 #### <a name="all-articles"></a>Все статьи 
   
-1.  На издателе в базе данных публикации выполните хранимую процедуру [sp_publication_validation (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-publication-validation-transact-sql.md). Задайте параметр **@publication** и одно из следующих значений для **@rowcount_only** :  
+1.  На издателе в базе данных публикации выполните хранимую процедуру [sp_publication_validation (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-publication-validation-transact-sql.md). Задайте параметр `@publication` и одно из следующих значений для `@rowcount_only`:  
   
     -   **1** — проверка только количества строк (по умолчанию);    
     -   **2** — проверка количества строк и двоичной контрольной суммы.  
@@ -120,7 +120,7 @@ ms.locfileid: "68769292"
   
 #### <a name="single-article"></a>Одна статья  
   
-1.  На издателе в базе данных публикации выполните процедуру [sp_article_validation (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md). Задайте параметр **@publication** , имя статьи в параметре **@article** и одно из следующих значений в параметре **@rowcount_only** :  
+1.  На издателе в базе данных публикации выполните процедуру [sp_article_validation (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md). Задайте параметр `@publication`, имя статьи в параметре `@article` и одно из следующих значений в параметре `@rowcount_only`:  
   
     -   **1** — проверка только количества строк (по умолчанию)    
     -   **2** — проверка количества строк и двоичной контрольной суммы.  
@@ -134,9 +134,9 @@ ms.locfileid: "68769292"
 #### <a name="single-subscriber"></a>Один подписчик 
   
 1.  На издателе в базе данных публикации откройте явную транзакцию с помощью [BEGIN TRANSACTION (Transact-SQL)](../../t-sql/language-elements/begin-transaction-transact-sql.md).    
-2.  На издателе в базе данных публикации выполните процедуру [sp_marksubscriptionvalidation (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-marksubscriptionvalidation-transact-sql.md). Задайте публикацию в параметре **@publication** , имя подписчика в параметре **@subscriber** и имя базы данных подписки для **@destination_db** .    
+2.  На издателе в базе данных публикации выполните процедуру [sp_marksubscriptionvalidation (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-marksubscriptionvalidation-transact-sql.md). Задайте публикацию в параметре `@publication`, имя подписчика в параметре `@subscriber` и имя базы данных подписки для `@destination_db`.    
 3.  Повторите шаг 2 для каждой проверяемой подписки (необязательно).    
-4.  На издателе в базе данных публикации выполните процедуру [sp_article_validation (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md). Задайте параметр **@publication** , имя статьи в параметре **@article** и одно из следующих значений в параметре **@rowcount_only** :    
+4.  На издателе в базе данных публикации выполните процедуру [sp_article_validation (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md). Задайте параметр `@publication`, имя статьи в параметре `@article` и одно из следующих значений в параметре `@rowcount_only`:    
     -   **1** — проверка только количества строк (по умолчанию)    
     -   **2** — проверка количества строк и двоичной контрольной суммы.  
   
@@ -214,7 +214,7 @@ ms.locfileid: "68769292"
     3.  Просмотрите сведения на вкладке **Журнал синхронизации** в текстовом поле **Последнее сообщение выбранного сеанса** .  
 
 ### <a name="using-transact-sql"></a>Использование Transact-SQL
-1.  На издателе в базе данных публикации выполните процедуру [sp_validatemergesubscription (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-validatemergesubscription-transact-sql.md). Задайте параметр **@publication** , имя подписчика в параметре **@subscriber** , имя базы данных подписки в параметре **@subscriber_db** и одно из следующих значений в параметре **@level** :   
+1.  На издателе в базе данных публикации выполните процедуру [sp_validatemergesubscription (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-validatemergesubscription-transact-sql.md). Задайте параметр `@publication`, имя подписчика в параметре `@subscriber`, имя базы данных подписки в параметре `@subscriber_db` и одно из следующих значений в параметре `@level`:   
     -   **1** — проверка только количества строк.    
     -   **3** — проверка двоичной контрольной суммы.  
   
@@ -241,7 +241,7 @@ ms.locfileid: "68769292"
     3.  Просмотрите сведения на вкладке **Журнал синхронизации** в текстовом поле **Последнее сообщение выбранного сеанса** . 
   
 ### <a name="using-transact-sql"></a>Использование Transact-SQL
-1.  На издателе в базе данных публикации выполните процедуру [sp_validatemergepublication (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-validatemergepublication-transact-sql.md). Задайте параметр **@publication** и одно из следующих значений для **@level** :    
+1.  На издателе в базе данных публикации выполните процедуру [sp_validatemergepublication (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-validatemergepublication-transact-sql.md). Задайте параметр `@publication` и одно из следующих значений для `@level`:    
     -   **1** — проверка только количества строк.   
     -   **3** — проверка двоичной контрольной суммы.  
   

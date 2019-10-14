@@ -53,14 +53,14 @@ helpviewer_keywords:
 - USE HINT query hint
 - QUERY_PLAN_PROFILE query hint
 ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
-author: VanMSFT
+author: pmasl
 ms.author: vanto
-ms.openlocfilehash: 559a39d1748835e422822fcef1c73e1b3113cb4a
-ms.sourcegitcommit: 816ff47eeab157c66e0f75f18897a63dc8033502
+ms.openlocfilehash: 6c219db3dd5deda9201c0c629eb057b3162b0e49
+ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71207737"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71713192"
 ---
 # <a name="hints-transact-sql---query"></a>Указания (Transact-SQL) — запросы
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -182,23 +182,23 @@ KEEP PLAN
 KEEPFIXED PLAN  
 Принуждает оптимизатор запросов не перекомпилировать запрос при изменении статистики. Указание KEEPFIXED PLAN гарантирует, что запрос будет перекомпилирован только при изменении схемы базовых таблиц или при выполнении для них процедуры **sp_recompile**.  
   
-IGNORE_NONCLUSTERED_COLUMNSTORE_INDEX  
-**Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+IGNORE_NONCLUSTERED_COLUMNSTORE_INDEX       
+**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
   
 Предотвращает использование в запросе некластеризованного индекса columnstore с оптимизацией для памяти. Если в запросе содержится указание запроса, исключающее использование индекса columnstore, а также указание индекса для использования индекса columnstore, то данные указания будут конфликтовать между собой, и запрос вернет ошибку.  
   
-MAX_GRANT_PERCENT = _percent_  
+MAX_GRANT_PERCENT = _percent_     
+**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+
 Максимальный объем предоставленной памяти в PERCENT. Запрос гарантированно не превышает это ограничение. Реальное ограничение может быть ниже, если значение параметра Resource Governor ниже значения в этом указании. Допустимые значения — от 0 до 100.  
   
-**Применимо к**: с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
-  
-MIN_GRANT_PERCENT = _percent_  
+MIN_GRANT_PERCENT = _percent_        
+**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].   
+
 Минимальный размер предоставления памяти в PERCENT = % от ограничения по умолчанию. Запрос гарантированно получает MAX(required memory, min grant), поскольку для запуска запроса требуется по меньшей мере необходимый объем памяти. Допустимые значения — от 0 до 100.  
-  
-**Применимо к**: с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
-  
-MAXDOP _number_  
-**Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ 
+MAXDOP _number_      
+**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
 Переопределяет параметр конфигурации, задающий **максимальный уровень параллелизма**, в **sp_configure**. Также переопределяет Resource Governor для запроса, в котором указан этот параметр. Указание запроса MAXDOP может превысить значение, настроенное с помощью sp_configure. Если MAXDOP превышает значение, настроенное с помощью Resource Governor, компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] использует значение MAXDOP из Resource Governor, как описано в статье [ALTER WORKLOAD GROUP (Transact-SQL)](../../t-sql/statements/alter-workload-group-transact-sql.md). Все семантические правила, используемые параметром конфигурации **max degree of parallelism**, применимы при использовании подсказки в запросе MAXDOP. Дополнительные сведения см. в разделе [Настройка параметра конфигурации сервера max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).  
   
@@ -215,7 +215,7 @@ MAXRECURSION _number_
 Дополнительные сведения см. в разделе [WITH common_table_expression (Transact-SQL)](../../t-sql/queries/with-common-table-expression-transact-sql.md).     
   
 NO_PERFORMANCE_SPOOL    
- **Применимо к**: с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].   
   
 Запрещает добавление оператора очередей в планы запроса (за исключением тех планов, когда очередь необходима для гарантированного обеспечения допустимой семантики обновления). В некоторых сценариях оператор очередей может снизить производительность. Например, очередь использует базу данных tempdb, и за нее может возникнуть состязание при наличии множества параллельных запросов, выполняющихся с операциями очереди.  
   
@@ -269,13 +269,17 @@ ROBUST PLAN
 *  'ASSUME_MIN_SELECTIVITY_FOR_FILTER_ESTIMATES' <a name="use_hint_correlation"></a>      
    Заставляет [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] создавать план с минимальной избирательностью при оценке предикатов AND для фильтров в случае корреляции. Это указание эквивалентно [флагу трассировки](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4137 при использовании модели оценки кратности в [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более ранних версиях и имеет тот же эффект, что и при использовании [флага трассировки](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9471 с моделью оценки кратности в [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] или более поздних версиях.
 *  "DISABLE_BATCH_MODE_ADAPTIVE_JOINS"       
-   Отключает адаптивные соединения в пакетном режиме. Дополнительные сведения: [Адаптивные соединения в пакетном режиме](../../relational-databases/performance/intelligent-query-processing.md#batch-mode-adaptive-joins). **Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].   
+   Отключает адаптивные соединения в пакетном режиме. Дополнительные сведения: [Адаптивные соединения в пакетном режиме](../../relational-databases/performance/intelligent-query-processing.md#batch-mode-adaptive-joins).     
+   **Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].   
 *  "DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK"       
-   Отключает обратную связь по временно предоставляемому буферу памяти в пакетном режиме. Дополнительные сведения см. в разделе [Обратная связь по временно предоставляемому буферу памяти в пакетном режиме](../../relational-databases/performance/intelligent-query-processing.md#batch-mode-memory-grant-feedback). **Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].   
+   Отключает обратную связь по временно предоставляемому буферу памяти в пакетном режиме. Дополнительные сведения см. в разделе [Обратная связь по временно предоставляемому буферу памяти в пакетном режиме](../../relational-databases/performance/intelligent-query-processing.md#batch-mode-memory-grant-feedback).     
+   **Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].   
 * "DISABLE_DEFERRED_COMPILATION_TV"    
-  Отключает отложенную компиляцию табличных переменных. См. дополнительные сведения об [отложенной компиляции табличных переменных](../../t-sql/data-types/table-transact-sql.md#table-variable-deferred-compilation). **Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].   
+  Отключает отложенную компиляцию табличных переменных. См. дополнительные сведения об [отложенной компиляции табличных переменных](../../t-sql/data-types/table-transact-sql.md#table-variable-deferred-compilation).     
+  **Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].   
 *  "DISABLE_INTERLEAVED_EXECUTION_TVF"      
-   Отключает выполнение с чередованием для функций с табличным значением с несколькими инструкциями. Дополнительные сведения см. в разделе о [выполнении с чередованием для функций с табличным значением с несколькими инструкциями](../../relational-databases/performance/intelligent-query-processing.md#interleaved-execution-for-mstvfs). **Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].   
+   Отключает выполнение с чередованием для функций с табличным значением с несколькими инструкциями. Дополнительные сведения см. в разделе о [выполнении с чередованием для функций с табличным значением с несколькими инструкциями](../../relational-databases/performance/intelligent-query-processing.md#interleaved-execution-for-mstvfs).     
+   **Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].   
 *  'DISABLE_OPTIMIZED_NESTED_LOOP'      
    Заставляет обработчик запросов не использовать операцию сортировки (сортировки пакетов) для оптимизации соединений вложенного цикла при формировании плана запроса. Это указание эквивалентно [флагу трассировки](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2340.
 *  'DISABLE_OPTIMIZER_ROWGOAL' <a name="use_hint_rowgoal"></a>      
@@ -290,11 +294,14 @@ ROBUST PLAN
 *  'DISABLE_PARAMETER_SNIFFING'      
    Указывает, что оптимизатор запросов должен использовать среднее распределение данных при компиляции запроса с одним или несколькими параметрами. Эта инструкция делает план запроса независимым от значения параметра, которое было использовано при первой компиляции запроса. Это указание эквивалентно [флагу трассировки](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4136 или параметру [конфигурации области баз данных](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) `PARAMETER_SNIFFING = OFF`.
 * "DISABLE_ROW_MODE_MEMORY_GRANT_FEEDBACK"    
-  Отключает обратную связь по временно предоставляемому буферу памяти в строковом режиме. Дополнительные сведения см. в разделе [Обратная связь по временно предоставляемому буферу памяти в строковом режиме](../../relational-databases/performance/intelligent-query-processing.md#row-mode-memory-grant-feedback). **Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].     
+  Отключает обратную связь по временно предоставляемому буферу памяти в строковом режиме. Дополнительные сведения см. в разделе [Обратная связь по временно предоставляемому буферу памяти в строковом режиме](../../relational-databases/performance/intelligent-query-processing.md#row-mode-memory-grant-feedback).      
+  **Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].     
 * "DISABLE_TSQL_SCALAR_UDF_INLINING"    
-  Отключает встраивание скалярных пользовательских функций. Дополнительные сведения: [Встраивание скалярной функции, определяемой пользователем](../../relational-databases/user-defined-functions/scalar-udf-inlining.md). **Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]).    
+  Отключает встраивание скалярных пользовательских функций. Дополнительные сведения: [Встраивание скалярной функции, определяемой пользователем](../../relational-databases/user-defined-functions/scalar-udf-inlining.md).     
+  **Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]).    
 * "DISALLOW_BATCH_MODE"    
-  Отключает выполнение в пакетном режиме. Дополнительные сведения см. в разделе [Режимы выполнения](../../relational-databases/query-processing-architecture-guide.md#execution-modes). **Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].     
+  Отключает выполнение в пакетном режиме. Дополнительные сведения см. в разделе [Режимы выполнения](../../relational-databases/query-processing-architecture-guide.md#execution-modes).     
+  **Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].     
 *  'ENABLE_HIST_AMENDMENT_FOR_ASC_KEYS'      
    Позволяет использовать автоматически созданную быструю статистику (поправку к гистограмме) для любого начального столбца индекса, для которого требуется оценить кратность. Гистограмма, используемая для оценки кратности, будет так откорректирована во время компиляции запроса, чтобы учитывать фактическое максимальное или минимальное значение этого столбца. Это указание эквивалентно [флагу трассировки](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4139. 
 *  'ENABLE_QUERY_OPTIMIZER_HOTFIXES'     
@@ -304,7 +311,8 @@ ROBUST PLAN
 *  'FORCE_LEGACY_CARDINALITY_ESTIMATION' <a name="use_hint_ce70"></a>      
    Заставляет оптимизатор запросов использовать модель [оценки кратности](../../relational-databases/performance/cardinality-estimation-sql-server.md) для [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более ранних версий. Это указание эквивалентно [флагу трассировки](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9481 или параметру [конфигурации области баз данных](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) `LEGACY_CARDINALITY_ESTIMATION = ON`.
 *  'QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_n'          
- Принудительно изменяет поведение оптимизатора запросов на уровне запроса. Оптимизация выполняется так, как если бы запрос компилировался с уровнем совместимости базы данных _n_, где _n_— максимальный поддерживаемый уровень совместимости базы данных. Список значений, поддерживаемых сейчас для _n_, см. здесь: [sys.dm_exec_valid_use_hints](../../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md). **Применимо к** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] с накопительным пакетом обновления CU10).    
+ Принудительно изменяет поведение оптимизатора запросов на уровне запроса. Оптимизация выполняется так, как если бы запрос компилировался с уровнем совместимости базы данных _n_, где _n_— максимальный поддерживаемый уровень совместимости базы данных. Список значений, поддерживаемых сейчас для _n_, см. здесь: [sys.dm_exec_valid_use_hints](../../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md).      
+   **Применимо к** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] с накопительным пакетом обновления CU10).    
 
    > [!NOTE]
    > Указание QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_n не переопределяет значение по умолчанию или унаследованное значение параметра оценки кратности, если оно указано в конфигурации области базы данных, с помощью флага трассировки или другого указания запроса, например QUERYTRACEON.   
@@ -312,7 +320,8 @@ ROBUST PLAN
    > Дополнительные сведения об этом указании см. в разделе [Developer’s Choice: Hinting Query Execution model](https://blogs.msdn.microsoft.com/sql_server_team/developers-choice-hinting-query-execution-model) (Выбор разработчика: модель выполнения запроса указания).
     
 *  'QUERY_PLAN_PROFILE'      
- Включает упрощенное профилирование для запроса. Когда завершается запрос, содержащий это новое указание, вызывается новое расширенное событие query_plan_profile. Это расширенное событие предоставляет статистику выполнения и фактический план выполнения XML (подобно расширенному событию query_post_execution_showplan, но только для запросов, содержащих новое указание). **Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] с пакетом обновления 2 (SP2) и накопительным пакетом обновления 3 (CU3) и [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] с накопительным пакетом обновления 11 (CU11)). 
+ Включает упрощенное профилирование для запроса. Когда завершается запрос, содержащий это новое указание, вызывается новое расширенное событие query_plan_profile. Это расширенное событие предоставляет статистику выполнения и фактический план выполнения XML (подобно расширенному событию query_post_execution_showplan, но только для запросов, содержащих новое указание).    
+   **Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] с пакетом обновления 2 (SP2) и накопительным пакетом обновления 3 (CU3) и [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] с накопительным пакетом обновления 11 (CU11)). 
 
    > [!NOTE]
    > Если включен сбор расширенных событий query_post_execution_showplan, в каждый запрос, который выполняется на сервере, будет добавлена стандартная инфраструктура профилирования. Это может повлиять на общую производительность сервера.      
@@ -453,8 +462,6 @@ GO
 ### <a name="f-using-maxdop"></a>Е. Использование MAXDOP  
  В следующем примере используется указание запроса MAXDOP. В этом примере используется база данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
-**Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
-  
 ```sql  
 SELECT ProductID, OrderQty, SUM(LineTotal) AS Total  
 FROM Sales.SalesOrderDetail  
@@ -583,8 +590,6 @@ GO
 ### <a name="l-using-use-hint"></a>М. Указание USE HINT  
  В следующем примере используются указания запросов RECOMPILE и USE HINT. В этом примере используется база данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
-**Применимо к**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].  
-  
 ```sql  
 SELECT * FROM Person.Address  
 WHERE City = 'SEATTLE' AND PostalCode = 98104
@@ -592,7 +597,7 @@ OPTION (RECOMPILE, USE HINT ('ASSUME_MIN_SELECTIVITY_FOR_FILTER_ESTIMATES', 'DIS
 GO  
 ```  
     
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
 [Указания (Transact-SQL)](../../t-sql/queries/hints-transact-sql.md)   
 [sp_create_plan_guide (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)   
 [sp_control_plan_guide (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql.md)  

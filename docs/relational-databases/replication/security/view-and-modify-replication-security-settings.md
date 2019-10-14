@@ -17,12 +17,12 @@ ms.assetid: 67d79532-1482-4de1-ac9f-4a23d162c85e
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 904ca2ccc3992ae6c4f03f03da8c70761ec5e907
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 2e0407382f1a0986add69a4b47e9cbb2eebc4d34
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768402"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710744"
 ---
 # <a name="view-and-modify-replication-security-settings"></a>Просмотр и изменение параметров безопасности репликации
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -252,10 +252,10 @@ ms.locfileid: "68768402"
   
 #### <a name="to-change-all-instances-of-a-stored-password-at-a-replication-server"></a>Изменение всех экземпляров сохраненного пароля на сервере репликации  
   
-1.  На сервере базы данных master в топологии репликации выполните хранимую процедуру [sp_changereplicationserverpasswords](../../../relational-databases/system-stored-procedures/sp-changereplicationserverpasswords-transact-sql.md). Укажите учетную запись [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows или имя входа [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в параметре **@login** и новый пароль в параметре **@password** . В результате выполнения этой операции производится изменение всех экземпляров пароля, используемого всеми агентами сервера для соединения с другими серверами топологии.  
+1.  На сервере базы данных master в топологии репликации выполните хранимую процедуру [sp_changereplicationserverpasswords](../../../relational-databases/system-stored-procedures/sp-changereplicationserverpasswords-transact-sql.md). Укажите учетную запись [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows или имя входа [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в параметре `@login` и новый пароль в параметре `@password`. В результате выполнения этой операции производится изменение всех экземпляров пароля, используемого всеми агентами сервера для соединения с другими серверами топологии.  
   
     > [!NOTE]  
-    >  Чтобы изменить имя входа и пароль для соединения с определенным сервером топологии (например с сервером распространителя или подписчика), необходимо задать его имя в параметре **@server** .  
+    >  Чтобы изменить имя входа и пароль для соединения с определенным сервером топологии (например, с сервером распространителя или подписчика), необходимо задать его имя в параметре `@server`.  
   
 2.  Повторите шаг 1 на каждом из серверов в топологии репликации, где необходимо изменить пароль.  
   
@@ -264,30 +264,30 @@ ms.locfileid: "68768402"
   
 #### <a name="to-change-security-settings-for-the-snapshot-agent"></a>Изменение настроек безопасности для агента моментальных снимков  
   
-1.  На издателе выполните хранимую процедуру [sp_helppublication_snapshot](../../../relational-databases/system-stored-procedures/sp-helppublication-snapshot-transact-sql.md), задав значение параметра **@publication** . Она возвращает текущие параметры безопасности агента моментальных снимков.  
+1.  На издателе выполните хранимую процедуру [sp_helppublication_snapshot](../../../relational-databases/system-stored-procedures/sp-helppublication-snapshot-transact-sql.md), задав значение параметра `@publication`. Она возвращает текущие параметры безопасности агента моментальных снимков.  
   
-2.  На издателе выполните хранимую процедуру [sp_changepublication_snapshot](../../../relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql.md), задав значение параметра **@publication** , а также один или несколько следующих параметров безопасности.  
+2.  На издателе выполните хранимую процедуру [sp_changepublication_snapshot](../../../relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql.md), задав значение параметра `@publication`, а также один из следующих параметров безопасности или несколько.  
   
-    -   Чтобы изменить учетную запись Windows, с которой работает агент, или изменить пароль для этой учетной записи, задайте параметры **@job_login** и **@job_password** .  
+    -   Чтобы изменить учетную запись Windows, с которой работает агент, или изменить пароль для этой учетной записи, задайте параметры `@job_login` и `@job_password`.  
   
-    -   Чтобы изменить режим безопасности, который используется для соединения с издателем, укажите значение **1** или **0** в параметре **@publisher_security_mode** .  
+    -   Чтобы изменить режим безопасности, который используется для соединения с издателем, укажите значение **1** или **0** в параметре `@publisher_security_mode`.  
   
-    -   Когда режим безопасности, используемый для соединения с издателем, меняется с **1** на **0** или когда меняется имя входа [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , используемое для этого соединения, укажите параметры **@publisher_login** и **@publisher_password** .  
+    -   Когда режим безопасности, используемый для соединения с издателем, меняется с **1** на **0** или когда меняется имя входа [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], используемое для этого соединения, укажите параметры `@publisher_login` и `@publisher_password`.  
   
     > [!IMPORTANT]  
     >  Если издатель настраивается с удаленным распространителем, то значения, передаваемые для всех аргументов, включая *job_login* и *job_password*, передаются распространителю в формате обычного (незашифрованного) текста. Прежде чем выполнять эту хранимую процедуру, необходимо зашифровать соединение между издателем и его удаленным распространителем. Дополнительные сведения см. в разделе [Включение шифрования соединений в компоненте Database Engine (диспетчер конфигураций SQL Server)](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
 #### <a name="to-change-security-settings-for-the-log-reader-agent"></a>Изменение настроек безопасности для агента чтения журнала  
   
-1.  На издателе выполните хранимую процедуру [sp_helplogreader_agent](../../../relational-databases/system-stored-procedures/sp-helplogreader-agent-transact-sql.md), задав значение параметра **@publisher** . Она возвращает текущие параметры безопасности агента чтения журнала.  
+1.  На издателе выполните хранимую процедуру [sp_helplogreader_agent](../../../relational-databases/system-stored-procedures/sp-helplogreader-agent-transact-sql.md), задав значение параметра `@publisher`. Она возвращает текущие параметры безопасности агента чтения журнала.  
   
-2.  На издателе выполните хранимую процедуру [sp_changelogreader_agent](../../../relational-databases/system-stored-procedures/sp-changelogreader-agent-transact-sql.md), задав значение параметра **@publication** , а также один или несколько следующих параметров безопасности.  
+2.  На издателе выполните хранимую процедуру [sp_changelogreader_agent](../../../relational-databases/system-stored-procedures/sp-changelogreader-agent-transact-sql.md), задав значение параметра `@publication`, а также один из следующих параметров безопасности или несколько.  
   
-    -   Чтобы изменить учетную запись Windows, с которой работает агент, или изменить пароль для этой учетной записи, задайте параметры **@job_login** и **@job_password** .  
+    -   Чтобы изменить учетную запись Windows, с которой работает агент, или изменить пароль для этой учетной записи, задайте параметры `@job_login` и `@job_password`.  
   
-    -   Чтобы изменить режим безопасности, который используется для соединения с издателем, укажите значение **1** или **0** в параметре **@publisher_security_mode** .  
+    -   Чтобы изменить режим безопасности, который используется для соединения с издателем, укажите значение **1** или **0** в параметре `@publisher_security_mode`.  
   
-    -   Когда режим безопасности, используемый для соединения с издателем, меняется с **1** на **0** или когда меняется имя входа [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , используемое для этого соединения, укажите параметры **@publisher_login** и **@publisher_password** .  
+    -   Когда режим безопасности, используемый для соединения с издателем, меняется с **1** на **0** или когда меняется имя входа [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], используемое для этого соединения, укажите параметры `@publisher_login` и `@publisher_password`.  
   
     > [!NOTE]  
     >  После изменения имени входа и пароля агента необходимо остановить и повторно запустить агент, чтобы изменения вступили в силу.  
@@ -297,17 +297,17 @@ ms.locfileid: "68768402"
   
 #### <a name="to-change-security-settings-for-the-distribution-agent-for-a-push-subscription"></a>Изменение настроек безопасности агента распространителя для принудительной подписки  
   
-1.  На издателе в базе данных публикации выполните хранимую процедуру [sp_helpsubscription](../../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md), задав значение параметра **@publication** и **@subscriber** . Она возвращает свойства подписки, включая параметры безопасности агента распространителя на распространителе.  
+1.  На издателе в базе данных публикации выполните хранимую процедуру [sp_helpsubscription](../../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md), задав значение параметра `@publication` и `@subscriber`. Она возвращает свойства подписки, включая параметры безопасности агента распространителя на распространителе.  
   
-2.  На издателе в базе данных публикации выполните хранимую процедуру [sp_changesubscription](../../../relational-databases/system-stored-procedures/sp-changesubscription-transact-sql.md), задав значение параметра **@publication** , **@subscriber** , **@subscriber_db** , значение **all** в параметре **@article** , а также имя параметра безопасности в параметре **@property** и его новое значения в параметре **@value** .  
+2.  На издателе в базе данных публикации выполните хранимую процедуру [sp_changesubscription](../../../relational-databases/system-stored-procedures/sp-changesubscription-transact-sql.md), задав значение параметров `@publication`, `@subscriber`, `@subscriber_db**`, значение `all` в параметре `@article`, а также имя свойства безопасности в параметре `@property` и его новое значение для `@value`.  
   
 3.  Повторите шаг 2 для каждого из следующих свойств безопасности, которые подвергаются изменениям.  
   
-    -   Чтобы изменить учетную запись Windows, с которой работает агент, или пароль для этой учетной записи, укажите значение **distrib_job_password** в параметре **@property** и задайте новый пароль в параметре **@value** . Если изменяется учетная запись, повторите шаг 2, указав значение **distrib_job_login** в параметре **@property** и новую учетную запись Windows в параметре **@value** .  
+    -   Чтобы изменить учетную запись Windows, с которой работает агент, или пароль для этой учетной записи, укажите значение **distrib_job_password** в параметре `@property` и задайте новый пароль в параметре `@value`. Если изменяется учетная запись, повторите шаг 2, указав значение **distrib_job_login** в параметре `@property` и новую учетную запись Windows в параметре `@value`.  
   
-    -   Чтобы изменить режим безопасности, который используется для соединения с подписчиком, задайте значение **subscriber_security_mode** в параметре **@property** и значение **1** (встроенная проверка подлинности Windows) или **0** (проверка подлинности SQL Server) в параметре **@value** .  
+    -   Чтобы изменить режим безопасности, который используется для соединения с подписчиком, задайте значение **subscriber_security_mode** в параметре `@property` и значение **1** (встроенная проверка подлинности Windows) или **0** (проверка подлинности SQL Server) в параметре `@value`.  
   
-    -   Если режим безопасности подписчика меняется на проверку подлинности SQL Server или если меняются данные входа для проверки подлинности SQL Server, укажите значение **subscriber_password** в параметре **@property** и задайте новый пароль в параметре **@value** . Повторите шаг 2, указав значение **subscriber_login** в параметре **@property** и задав новое имя входа в параметре **@value** .  
+    -   Если режим безопасности подписчика меняется на проверку подлинности SQL Server или меняются данные входа для проверки подлинности SQL Server, укажите значение **subscriber_password** в параметре `@property` и задайте новый пароль в параметре `@value`. Повторите шаг 2, указав значение **subscriber_login** в параметре `@property` и задав новое имя входа в параметре `@value`.  
   
     > [!NOTE]  
     >  После изменения имени входа и пароля агента необходимо остановить и повторно запустить агент, чтобы изменения вступили в силу.  
@@ -317,38 +317,38 @@ ms.locfileid: "68768402"
   
 #### <a name="to-change-security-settings-for-the-distribution-agent-for-a-pull-subscription"></a>Изменение настроек безопасности агента распространителя для подписки по запросу  
   
-1.  На подписчике выполните хранимую процедуру [sp_helppullsubscription](../../../relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql.md), задав значение параметра **@publication** . Она возвращает список свойств подписки, включая параметры безопасности агента распространителя на подписчике.  
+1.  На подписчике выполните хранимую процедуру [sp_helppullsubscription](../../../relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql.md), задав значение параметра `@publication`. Она возвращает список свойств подписки, включая параметры безопасности агента распространителя на подписчике.  
   
-2.  Выполните процедуру [sp_change_subscription_properties](../../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md), задав значение параметра **@publisher** , **@publisher_db** , **@publication** , а также имя параметра безопасности в параметре **@property** и его новое значения в параметре **@value** .  
+2.  Выполните процедуру [sp_change_subscription_properties](../../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md), задав значение параметров `@publisher`, `@publisher_db`, `@publication`, а также имя свойства безопасности в параметре `@property` и его новое значение в параметре `@value`.  
   
 3.  Повторите шаг 2 для каждого из следующих свойств безопасности, которые подвергаются изменениям.  
   
-    -   Чтобы изменить учетную запись Windows, с которой работает агент, или пароль для этой учетной записи, укажите значение **distrib_job_password** в параметре **@property** и задайте новый пароль в параметре **@value** . Если изменяется учетная запись, повторите шаг 2, указав значение **distrib_job_login** в параметре **@property** и новую учетную запись Windows в параметре **@value** .  
+    -   Чтобы изменить учетную запись Windows, с которой работает агент, или пароль для этой учетной записи, укажите значение **distrib_job_password** в параметре `@property` и задайте новый пароль в параметре `@value`. Если изменяется учетная запись, повторите шаг 2, указав значение **distrib_job_login** в параметре `@property` и новую учетную запись Windows в параметре `@value`.  
   
-    -   Чтобы изменить режим безопасности, используемый для соединения с распространителем, укажите значение **distributor_security_mode** в параметре **@property** и значение **1** (встроенная проверка подлинности Windows) или **0** (проверка подлинности SQL Server) в параметре **@value** .  
+    -   Чтобы изменить режим безопасности, используемый для соединения с распространителем, укажите значение **distributor_security_mode** в параметре `@property` и значение **1** (встроенная проверка подлинности Windows) или **0** (проверка подлинности SQL Server) в параметре `@value`.  
   
-    -   Если режим безопасности распространителя меняется на проверку подлинности SQL Server или если меняются данные входа для проверки подлинности SQL Server, укажите значение **distributor_password** в параметре **@property** и задайте новый пароль в параметре **@value** . Повторите шаг 2, указав значение **distributor_login** в параметре **@property** и задав новое имя входа в параметре **@value** .  
+    -   Если режим безопасности распространителя меняется на проверку подлинности SQL Server или меняются данные входа для проверки подлинности SQL Server, укажите значение **distributor_password** в параметре `@property` и задайте новый пароль в параметре `@value`. Повторите шаг 2, указав значение **distributor_login** в параметре `@property` и задав новое имя входа в параметре `@value`.  
   
     > [!NOTE]  
     >  После изменения имени входа и пароля агента необходимо остановить и повторно запустить агент, чтобы изменения вступили в силу.  
   
 #### <a name="to-change-security-settings-for-the-merge-agent-for-a-push-subscription"></a>Изменение настроек безопасности агента слияния для принудительной подписки  
   
-1.  На издателе в базе данных публикации выполните хранимую процедуру [sp_helpmergesubscription](../../../relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql.md), задав значение параметра **@publication** , **@subscriber** и **@subscriber_db** . Она возвращает свойства подписки, включая параметры безопасности агента слияния на распространителе.  
+1.  На издателе в базе данных публикации выполните хранимую процедуру [sp_helpmergesubscription](../../../relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql.md), задав значение параметра `@publication`, `@subscriber,` и `@subscriber_db`. Она возвращает свойства подписки, включая параметры безопасности агента слияния на распространителе.  
   
-2.  На издателе в базе данных публикации выполните хранимую процедуру [sp_changemergesubscription](../../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md), задав значение параметра **@publication** , **@subscriber** , **@subscriber_db** , а также имя параметра безопасности в параметре **@property** и его новое значения в параметре **@value** .  
+2.  На издателе в базе данных публикации выполните хранимую процедуру [sp_changemergesubscription](../../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md), задав значение параметров `@publication`, `@subscriber`, `@subscriber_db`, а также имя свойства безопасности в параметре `@property` и его новое значение в параметре `@value`.  
   
 3.  Повторите шаг 2 для каждого из следующих свойств безопасности, которые подвергаются изменениям.  
   
-    -   Чтобы изменить учетную запись Windows, от которой запускается агент (или только пароль для нее), укажите значение **merge_job_password** в параметре **@property** и задайте новый пароль в параметре **@value** . Если изменяется учетная запись, повторите шаг 2, указав значение **merge_job_password** в параметре **@property** и новую учетную запись Windows в параметре **@value** .  
+    -   Чтобы изменить учетную запись Windows, от которой запускается агент (или только пароль для нее), укажите значение **merge_job_password** в параметре `@property` и задайте новый пароль в параметре `@value`. Если изменяется учетная запись, повторите шаг 2, указав значение **merge_job_password** в параметре `@property` и новую учетную запись Windows в параметре `@value`.  
   
-    -   Чтобы изменить режим безопасности, который используется для соединения с подписчиком, задайте значение **subscriber_security_mode** в параметре **@property** и значение **1** (встроенная проверка подлинности Windows) или **0** (проверка подлинности SQL Server) в параметре **@value** .  
+    -   Чтобы изменить режим безопасности, который используется для соединения с подписчиком, задайте значение **subscriber_security_mode** в параметре `@property` и значение **1** (встроенная проверка подлинности Windows) или **0** (проверка подлинности SQL Server) в параметре `@value`.  
   
-    -   Если режим безопасности подписчика меняется на проверку подлинности SQL Server или если меняются данные входа для проверки подлинности SQL Server, укажите значение **subscriber_password** в параметре **@property** и задайте новый пароль в параметре **@value** . Повторите шаг 2, указав значение **subscriber_login** в параметре **@property** и задав новое имя входа в параметре **@value** .  
+    -   Если режим безопасности подписчика меняется на проверку подлинности SQL Server или меняются данные входа для проверки подлинности SQL Server, укажите значение **subscriber_password** в параметре `@property` и задайте новый пароль в параметре `@value`. Повторите шаг 2, указав значение **subscriber_login** в параметре `@property` и задав новое имя входа в параметре `@value`.  
   
-    -   Чтобы изменить режим безопасности, который используется для соединения с издателем, укажите значение **publisher_security_mode** в параметре **@property** и значение **1** (встроенная проверка подлинности Windows) или **0** (проверка подлинности SQL Server) в параметре **@value** .  
+    -   Чтобы изменить режим безопасности, который используется для соединения с издателем, укажите значение **publisher_security_mode** в параметре `@property` и значение **1** (встроенная проверка подлинности Windows) или **0** (проверка подлинности SQL Server) в параметре `@value`.  
   
-    -   При переключении режима безопасности издателя на проверку подлинности SQL Server или сведений об имени входа для нее задайте значение **publisher_password** в параметре **@property** и задайте новый пароль в параметре **@value** . Повторите шаг 2, указав значение **publisher_login** в параметре **@property** и задав новое имя входа в параметре **@value** .  
+    -   При переключении режима безопасности издателя на проверку подлинности SQL Server или сведений об имени входа для нее задайте значение **publisher_password** в параметре `@property` и задайте новый пароль в параметре `@value`. Повторите шаг 2, указав значение **publisher_login** в параметре `@property` и задав новое имя входа в параметре `@value`.  
   
     > [!NOTE]  
     >  После изменения имени входа и пароля агента необходимо остановить и повторно запустить агент, чтобы изменения вступили в силу.  
@@ -358,30 +358,30 @@ ms.locfileid: "68768402"
   
 #### <a name="to-change-security-settings-for-the-merge-agent-for-a-pull-subscription"></a>Изменение настроек безопасности агента слияния для подписки по запросу  
   
-1.  На подписчике выполните хранимую процедуру [sp_helpmergepullsubscription](../../../relational-databases/system-stored-procedures/sp-helpmergepullsubscription-transact-sql.md), задав значение параметра **@publication** . Она возвращает свойства подписки, включая параметры безопасности агента слияния на подписчике.  
+1.  На подписчике выполните хранимую процедуру [sp_helpmergepullsubscription](../../../relational-databases/system-stored-procedures/sp-helpmergepullsubscription-transact-sql.md), задав значение параметра ``@publication``. Она возвращает свойства подписки, включая параметры безопасности агента слияния на подписчике.  
   
-2.  Выполните процедуру [sp_change_subscription_properties](../../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md), задав значение параметра **@publisher** , **@publisher_db** , **@publication** , а также имя параметра безопасности в параметре **@property** и его новое значения в параметре **@value** .  
+2.  Выполните процедуру [sp_change_subscription_properties](../../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md), задав значение параметров `@publisher`, `@publisher_db`, `@publication`, а также имя свойства безопасности в параметре `@property` и его новое значение в параметре `@value`.  
   
 3.  Повторите шаг 2 для каждого из следующих свойств безопасности, которые подвергаются изменениям.  
   
-    -   Чтобы изменить учетную запись Windows, с которой работает агент, или пароль для этой учетной записи, укажите значение **merge_job_password** в параметре **@property** и новый пароль в параметре **@value** . When changing the account itself, repeat Step 2 specifying a value of **merge_job_password** в параметре **@property** и новую учетную запись Windows в параметре **@value** .  
+    -   Чтобы изменить учетную запись Windows, с которой работает агент, или пароль для этой учетной записи, укажите значение **merge_job_password** в параметре `@property` и новый пароль в параметре `@value`. Если изменяется учетная запись, повторите шаг 2, указав значение **merge_job_password** в параметре `@property` и новую учетную запись Windows в параметре `@value`.  
   
-    -   Чтобы изменить режим безопасности, используемый для соединения с распространителем, укажите значение **distributor_security_mode** в параметре **@property** и значение **1** (встроенная проверка подлинности Windows) или **0** (проверка подлинности SQL Server) в параметре **@value** .  
+    -   Чтобы изменить режим безопасности, используемый для соединения с распространителем, укажите значение **distributor_security_mode** в параметре `@property` и значение **1** (встроенная проверка подлинности Windows) или **0** (проверка подлинности SQL Server) в параметре `@value`.  
   
-    -   Если режим безопасности распространителя меняется на проверку подлинности SQL Server или если меняются данные входа для проверки подлинности SQL Server, укажите значение **distributor_password** в параметре **@property** и задайте новый пароль в параметре **@value** . Повторите шаг 2, указав значение **distributor_login** в параметре **@property** и задав новое имя входа в параметре **@value** .  
+    -   Если режим безопасности распространителя меняется на проверку подлинности SQL Server или меняются данные входа для проверки подлинности SQL Server, укажите значение **distributor_password** в параметре `@property` и задайте новый пароль в параметре `@value`. Повторите шаг 2, указав значение **distributor_login** в параметре `@property` и задав новое имя входа в параметре `@value`.  
   
-    -   Чтобы изменить режим безопасности, который используется для соединения с издателем, укажите значение **publisher_security_mode** в параметре **@property** и значение **1** (встроенная проверка подлинности Windows) или **0** (проверка подлинности SQL Server) в параметре **@value** .  
+    -   Чтобы изменить режим безопасности, который используется для соединения с издателем, укажите значение **publisher_security_mode** в параметре `@property` и значение **1** (встроенная проверка подлинности Windows) или **0** (проверка подлинности SQL Server) в параметре `@value`.  
   
-    -   При переключении режима безопасности издателя на проверку подлинности SQL Server или сведений об имени входа для нее задайте значение **publisher_password** в параметре **@property** и задайте новый пароль в параметре **@value** . Повторите шаг 2, указав значение **publisher_login** в параметре **@property** и задав новое имя входа в параметре **@value** .  
+    -   При переключении режима безопасности издателя на проверку подлинности SQL Server или сведений об имени входа для нее задайте значение **publisher_password** в параметре `@property` и задайте новый пароль в параметре `@value`. Повторите шаг 2, указав значение **publisher_login** в параметре `@property` и задав новое имя входа в параметре `@value`.  
   
     > [!NOTE]  
     >  После изменения имени входа и пароля агента необходимо остановить и повторно запустить агент, чтобы изменения вступили в силу.  
   
 #### <a name="to-change-security-settings-for-the-snapshot-agent-to-generate-a-filtered-snapshot-for-a-subscriber"></a>Изменение параметров безопасности агента моментальных снимков для создания моментального снимка с фильтрацией для подписчика  
   
-1.  На издателе выполните хранимую процедуру [sp_helpdynamicsnapshot_job](../../../relational-databases/system-stored-procedures/sp-helpdynamicsnapshot-job-transact-sql.md), задав значение параметра **@publication** . В результирующем наборе запомните значение параметра **job_name** , соответствующее которому задание будет изменять секцию подписчика.  
+1.  На издателе выполните хранимую процедуру [sp_helpdynamicsnapshot_job](../../../relational-databases/system-stored-procedures/sp-helpdynamicsnapshot-job-transact-sql.md), задав значение параметра `@publication`. В результирующем наборе запомните значение параметра **job_name** , соответствующее которому задание будет изменять секцию подписчика.  
   
-2.  На издателе выполните хранимую процедуру [sp_changedynamicsnapshot_job](../../../relational-databases/system-stored-procedures/sp-changedynamicsnapshot-job-transact-sql.md), задав значение параметра **@publication** и указав полученное на шаге 1 значение в параметре **@dynamic_snapshot_jobname** , а также новый пароль в параметре **@job_password** либо введя имя входа и пароль учетной записи Windows, от которой запущен агент, в параметрах **@job_login** и **@job_password** .  
+2.  На издателе выполните хранимую процедуру [sp_changedynamicsnapshot_job](../../../relational-databases/system-stored-procedures/sp-changedynamicsnapshot-job-transact-sql.md), задав значение параметра `@publication` и указав полученное на шаге 1 значение в параметре `dynamic_snapshot_jobname`, а также новый пароль в параметре `@job_password` либо введя имя входа и пароль учетной записи Windows, от имени которой запущен агент, в параметрах `@job_login` и `@job_password`.  
   
     > [!IMPORTANT]  
     >  Если издатель настраивается с удаленным распространителем, то значения, передаваемые для всех аргументов, включая *job_login* и *job_password*, передаются распространителю в формате обычного (незашифрованного) текста. Прежде чем выполнять эту хранимую процедуру, необходимо зашифровать соединение между издателем и его удаленным распространителем. Дополнительные сведения см. в разделе [Включение шифрования соединений в компоненте Database Engine (диспетчер конфигураций SQL Server)](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
@@ -390,7 +390,7 @@ ms.locfileid: "68768402"
   
 1.  На распространителе выполните хранимую процедуру [sp_helpqreader_agent](../../../relational-databases/system-stored-procedures/sp-helpqreader-agent-transact-sql.md). Она возвращает текущую учетную запись Windows, от которой запускается агент чтения очереди.  
   
-    -   На распространителе выполните хранимую процедуру [sp_changeqreader_agent](../../../relational-databases/system-stored-procedures/sp-changeqreader-agent-transact-sql.md), указав параметры учетной записи Windows в полях **@job_login** и **@job_passwsord** .  
+    -   На распространителе выполните хранимую процедуру [sp_changeqreader_agent](../../../relational-databases/system-stored-procedures/sp-changeqreader-agent-transact-sql.md), указав параметры учетной записи Windows в полях `@job_login` и `@job_password`.  
   
     > [!NOTE]  
     >  После изменения имени входа и пароля агента необходимо остановить и повторно запустить агент, чтобы изменения вступили в силу. Для каждой базы распространителя существует только один агент чтения очереди. Изменение настроек безопасности агента оказывает влияние на параметры всех публикаций на всех издателях, использующих эту базу данных распространителя.  
@@ -399,9 +399,9 @@ ms.locfileid: "68768402"
   
 #### <a name="to-change-security-mode-used-by-an-immediate-updating-subscriber-when-connecting-to-the-publisher"></a>Смена текущего режима безопасности, используемого при немедленном обновлении подписчика при соединении с издателем  
   
-1.  В базе данных подписки на подписчике выполните процедуру [sp_link_publication](../../../relational-databases/system-stored-procedures/sp-link-publication-transact-sql.md). Укажите параметр **@publisher** , **@publication** , имя базы данных публикации в параметре **@publisher_db** и одно из следующих значений параметра **@security_mode** .  
+1.  В базе данных подписки на подписчике выполните процедуру [sp_link_publication](../../../relational-databases/system-stored-procedures/sp-link-publication-transact-sql.md). Укажите параметр `@publisher`, параметр `@publication`, имя базы данных публикации в параметре `@publisher_db`и одно из следующих значений параметра `@security_mode`.  
   
-    -   **0** — использовать проверку подлинности SQL Server при выполнении обновлений на издателе. При этом необходимо указать допустимое имя входа на издатель в параметрах **@login** и **@password** .  
+    -   **0** — использовать проверку подлинности SQL Server при выполнении обновлений на издателе. При этом необходимо указать допустимое имя входа на издатель в параметрах `@login` и `@password`.  
   
     -   **1** — при соединении с издателем использовать контекст безопасности пользователя, вносящего изменения на подписчике. Связанные с этим режимом безопасности ограничения см. в разделе [sp_link_publication](../../../relational-databases/system-stored-procedures/sp-link-publication-transact-sql.md) .  
   
@@ -409,12 +409,12 @@ ms.locfileid: "68768402"
   
 #### <a name="to-change-the-password-for-a-remote-distributor"></a>Смена пароля для удаленного распространителя  
   
-1.  На распространителе в базе данных распространителя выполните хранимую процедуру [sp_changedistributor_password](../../../relational-databases/system-stored-procedures/sp-changedistributor-password-transact-sql.md), указав новый пароль для текущего имени входа в параметре **@password** .  
+1.  На распространителе в базе данных распространителя выполните хранимую процедуру [sp_changedistributor_password](../../../relational-databases/system-stored-procedures/sp-changedistributor-password-transact-sql.md), указав новый пароль для текущего имени входа в параметре `@password`.  
   
     > [!IMPORTANT]  
     >  Напрямую менять пароль для имени входа **distributor_admin** не рекомендуется.  
   
-2.  На каждом издателе, связанном с этим удаленным распространителем, выполните хранимую процедуру [sp_changedistributor_password](../../../relational-databases/system-stored-procedures/sp-changedistributor-password-transact-sql.md), указав заданный на шаге 1 пароль в параметре **@password** .  
+2.  На каждом издателе, связанном с этим удаленным распространителем, выполните хранимую процедуру [sp_changedistributor_password](../../../relational-databases/system-stored-procedures/sp-changedistributor-password-transact-sql.md), указав заданный на шаге 1 пароль в параметре `@password`.  
   
 ##  <a name="RMOProcedure"></a> При помощи объектов RMO  
   
