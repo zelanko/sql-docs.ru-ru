@@ -13,18 +13,26 @@ ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
 author: v-makouz
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: 9aba2495e5f4661c7c042125608f34d577cddfe3
-ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
+ms.openlocfilehash: 2b939db6ac0f89075b39ba74eadb0e86e63e3980
+ms.sourcegitcommit: 512acc178ec33b1f0403b5b3fd90e44dbf234327
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68702813"
+ms.lasthandoff: 10/08/2019
+ms.locfileid: "72041221"
 ---
 # <a name="list-of-bugs-fixed"></a>Список исправленных ошибок
 
-На этой странице содержится список ошибок, исправленных в каждом выпуске [!INCLUDE[msCoName](../../includes/msconame_md.md)] , начиная с ODBC Driver 17 для[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+На этой странице содержится список ошибок, исправленных в каждом выпуске, начиная с версии [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17 для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
-### <a name="bug-fixes-in-the-includemsconameincludesmsconamemdmd-odbc-driver-174-for-includessnoversionincludesssnoversion-mdmd"></a>Исправления ошибок в [!INCLUDE[msCoName](../../includes/msconame_md.md)] драйвере ODBC 17,4 для[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+### <a name="bug-fixes-in-the-includemsconameincludesmsconame_mdmd-odbc-driver-1742-for-includessnoversionincludesssnoversion-mdmd"></a>Исправления ошибок в драйвере [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC 17.4.2 для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+
+ - Устранена проблема, когда идентификатор процесса и имя приложения не будут правильно отправлены в SQL Server (для анализа sys. DM _exec_sessions) (Linux)
+ - Удалена избыточная зависимость от либууид (Linux)
+ - Исправление ошибки с отправкой данных UTF8 в SQL Server 2019
+ - Исправление ошибки, при которой неправильно обнаруживаются языковые стандарты, заканчивающиеся на "@euro" (Linux)
+ - Исправление для XML-данных, возвращаемых неправильно при выборке в качестве выходного параметра при использовании Always Encrypted
+
+### <a name="bug-fixes-in-the-includemsconameincludesmsconame_mdmd-odbc-driver-174-for-includessnoversionincludesssnoversion-mdmd"></a>Исправления ошибок в драйвере [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC 17,4 для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 - Исправление для периодического зависания при включенном режиме MARS
 - Устранение проблемы с устойчивостью подключения при включении асинхронного уведомления
@@ -36,13 +44,13 @@ ms.locfileid: "68702813"
 - Исправление импорта столбцов sql_variant, содержащих более 7992 байт, с помощью программы bcp
 - Исправление неправильной кодировки на сервер для узких символьных данных
 
-### <a name="bug-fixes-in-the-includemsconameincludesmsconamemdmd-odbc-driver-173-for-includessnoversionincludesssnoversion-mdmd"></a>Исправления ошибок в [!INCLUDE[msCoName](../../includes/msconame_md.md)] драйвере ODBC 17,3 для[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+### <a name="bug-fixes-in-the-includemsconameincludesmsconame_mdmd-odbc-driver-173-for-includessnoversionincludesssnoversion-mdmd"></a>Исправления ошибок в драйвере [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC 17,3 для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 - Исправлено утечку памяти для дескриптора события отправки TCP
 - Исправлена проблема переопределения enum _SQL_FILESTREAM_DESIRED_ACCESS в файле заголовка msodbcsql. h
 - Исправлена отсутствующая ACCESS_TOKEN и связанное с ПРОВЕРКой подлинности определение в файле заголовка msodbcsql. h для Linux
 
-### <a name="bug-fixes-in-the-includemsconameincludesmsconamemdmd-odbc-driver-172-for-includessnoversionincludesssnoversion-mdmd"></a>Исправления ошибок в [!INCLUDE[msCoName](../../includes/msconame_md.md)] драйвере ODBC 17,2 для[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+### <a name="bug-fixes-in-the-includemsconameincludesmsconame_mdmd-odbc-driver-172-for-includessnoversionincludesssnoversion-mdmd"></a>Исправления ошибок в драйвере [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC 17,2 для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 - Исправлено сообщение об ошибке Azure Active Directory проверки подлинности
 - Исправлено обнаружение кодирования, если переменные среды языкового стандарта заданы по-разному
@@ -55,7 +63,7 @@ ms.locfileid: "68702813"
 - Исправлена проблема с кэшем при использовании проверки подлинности ADAL в Windows
 - Исправлена проблема блокировки и перезаписи журналов трассировки в Windows.
 
-### <a name="bug-fixes-in-the-includemsconameincludesmsconamemdmd-odbc-driver-171-for-includessnoversionincludesssnoversion-mdmd"></a>Исправления ошибок в [!INCLUDE[msCoName](../../includes/msconame_md.md)] драйвере ODBC 17,1 для[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+### <a name="bug-fixes-in-the-includemsconameincludesmsconame_mdmd-odbc-driver-171-for-includessnoversionincludesssnoversion-mdmd"></a>Исправления ошибок в драйвере [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC 17,1 для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 - Исправлена задержка 1 секунда при вызове SQLFreeHandle с включенным режимом MARS и атрибутом подключения "Encrypt = Yes"
 - Исправлена ошибка 22003 при сбое в SQLGetData, если размер переданного буфера меньше, а затем получаемые данные (Windows)
@@ -65,7 +73,7 @@ ms.locfileid: "68702813"
 - Исправлено предупреждение в установщике MacOS
 - Исправлена ошибка отправки неверного состояния в SQL Server во время попытки восстановления сеанса, когда включены отказоустойчивость подключения и пул соединений, что приводит к удалению сеанса сервером.
 
-### <a name="bug-fixes-in-the-includemsconameincludesmsconamemdmd-odbc-driver-17-for-includessnoversionincludesssnoversion-mdmd"></a>Исправления ошибок в [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17 для[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+### <a name="bug-fixes-in-the-includemsconameincludesmsconame_mdmd-odbc-driver-17-for-includessnoversionincludesssnoversion-mdmd"></a>Исправления ошибок в драйвере [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17 для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 - Исправлена ошибка, при которой при использовании проверки подлинности Kerberos может произойти сбой при выполнении инструкции INSERT с ошибкой "отказано в доступе"
 - Удален обходной путь для ошибки unixODBC, представленной в версии "2.3.1" (драйвер вдвое превышает размеры некоторых буферов, переданных в unixODBC).

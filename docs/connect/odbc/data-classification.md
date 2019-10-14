@@ -13,12 +13,12 @@ ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
 author: v-makouz
 ms.author: v-makouz
 manager: kenvh
-ms.openlocfilehash: 75688cc1e5155c83501204f1634d320b9ae7d8be
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 8f0f821890cabe25a9abb572e453c9846c75ec94
+ms.sourcegitcommit: 512acc178ec33b1f0403b5b3fd90e44dbf234327
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263997"
+ms.lasthandoff: 10/08/2019
+ms.locfileid: "72041129"
 ---
 # <a name="data-classification"></a>Классификация данных
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -57,7 +57,7 @@ SQLRETURN SQLGetDescField(
  *BufferLength*  
  Входной Длина выходного буфера в байтах
 
- *Стрингленгсптр* Проверки Указатель на буфер, в котором возвращается общее число байтов, доступных для возврата в *ValuePtr*.
+ *Стрингленгсптр* [Output] указатель на буфер, в котором возвращается общее число байт, доступных для возврата в *ValuePtr*.
  
 > [!NOTE]
 > Если размер буфера неизвестен, его можно определить, вызвав SQLGetDescField с *ValuePtr* как NULL и проверив значение *стрингленгсптр*.
@@ -69,9 +69,9 @@ SQLRETURN SQLGetDescField(
  `nn nn [n sensitivitylabels] tt tt [t informationtypes] cc cc [c columnsensitivitys]`
 
 > [!NOTE]
-> `nn nn`, `tt tt` и`cc cc` — это многобайтовые целые числа, которые хранятся с наименьшим значащим байтом по нижнему адресу.
+> `nn nn`, `tt tt` и `cc cc` — многобайтовые целые числа, которые хранятся с наименьшим значащим байтом по нижнему адресу.
 
-*`sensitivitylabel`* и *`informationtype`* оба имеют форму
+*`sensitivitylabel`* и *`informationtype`* являются обеими формами
 
  `nn [n bytes name] ii [i bytes id]`
 
@@ -79,13 +79,13 @@ SQLRETURN SQLGetDescField(
 
  `nn nn [n sensitivityprops]`
 
-Для каждого столбца *(c)* существуют *n* 4 байта *`sensitivityprops`* :
+Для каждого столбца *(c)* имеются *n* 4 байта *`sensitivityprops`* :
 
  `ss ss tt tt`
 
-s-индекс в массиве *`sensitivitylabels`* , `FF FF` если он не помечен
+s-index в массив *`sensitivitylabels`* `FF FF`, если он не помечен
 
-t-индекс в массиве *`informationtypes`* , `FF FF` если он не помечен
+t-индекс в массиве *`informationtypes`* `FF FF`, если он не помечен
 
 
 <br><br>
@@ -241,5 +241,26 @@ int main(int argc, char **argv)
     }
     return 0;
 }
+```
+
+## <a name="bkmk-version"></a>Поддерживаемая версия
+Microsoft ODBC Driver 17,2 позволяет получить сведения о классификации данных с помощью `SQLGetDescField`, если `FieldIdentifier` имеет значение `SQL_CA_SS_DATA_CLASSIFICATION` (1237). 
+
+Начиная с Microsoft ODBC Driver 17.4.1.1 можно извлечь версию классификации данных, поддерживаемую сервером, с помощью `SQLGetDescField`, используя идентификатор поля `SQL_CA_SS_DATA_CLASSIFICATION_VERSION` (1238). В 17.4.1.1 для поддерживаемой версии классификации данных задано значение "2".
+
+ 
+
+Начиная с 17.4.2.1 была введена версия по умолчанию для классификации данных, для которой задано значение "1", а драйвер версии сообщает о том, что SQL Server поддерживается. Новый атрибут подключения `SQL_COPT_SS_DATACLASSIFICATION_VERSION` (1400) позволяет приложению изменять поддерживаемую версию классификации данных с "1" до максимальной поддерживаемой версии.  
+
+Пример 
+
+Чтобы задать версию, этот вызов должен быть сделан прямо перед вызовом SQLConnect или SQLDriverConnect:
+```
+ret = SQLSetConnectAttr(dbc, SQL_COPT_SS_DATACLASSIFICATION_VERSION, (SQLPOINTER)2, SQL_IS_INTEGER);
+```
+
+Значение поддерживаемой в настоящее время версии классификации данных можно ретирвед через вызов SQLGetConnectAttr: 
+```
+ret = SQLGetConnectAttr(dbc, SQL_COPT_SS_DATACLASSIFICATION_VERSION, (SQLPOINTER)&dataClassVersion, SQL_IS_INTEGER, 0);
 ```
 

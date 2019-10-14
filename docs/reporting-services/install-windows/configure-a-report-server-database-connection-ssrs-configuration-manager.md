@@ -7,13 +7,13 @@ author: maggiesMSFT
 ms.author: maggies
 ms.reviewer: ''
 ms.custom: seodec18
-ms.date: 04/26/2019
-ms.openlocfilehash: 86f3d1834212ff17125abc9a124eb10d3f7e9be5
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.date: 10/09/2019
+ms.openlocfilehash: 7c781721ff9dcd2ec82844e8e0604aca83a186e4
+ms.sourcegitcommit: 3cde6aa3159beb761a19bc568d7e402bfa7aeb41
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264982"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72239372"
 ---
 # <a name="configure-a-report-server-database-connection-ssrs-configuration-manager"></a>Настройка подключения к базе данных сервера отчетов (диспетчер конфигурации служб Reporting Services)
 
@@ -105,6 +105,13 @@ ms.locfileid: "68264982"
 #### <a name="using-a-sql-server-login"></a>Использование имени входа SQL Server
 
 Чтобы подключиться к базе данных сервера отчетов, можно задать единое имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Если используется проверка подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , а база данных сервера отчетов находится на удаленном компьютере, то в целях обеспечения безопасности передачи данных между серверами следует использовать IPSec. При использовании имени входа базы данных необходимо обновлять подключение к базе данных каждый раз, когда меняется пароль или учетная запись.  
+
+::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+
+> [!NOTE]
+> При использовании Управляемый экземпляр Azure SQL для размещения баз данных Reporting Services 2019, поддержка ограничена использованием SQL Server учетных данных входа для подключения.
+
+::: moniker-end
 
 ### <a name="database-permissions"></a>Разрешения базы данных
 

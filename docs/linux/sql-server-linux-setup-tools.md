@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sqlfreshmay19
 ms.technology: linux
 ms.assetid: eff8e226-185f-46d4-a3e3-e18b7a439e63
-ms.openlocfilehash: c10b97116cfde197a332d873fba5a807a2eb4ce9
-ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
+ms.openlocfilehash: 23610c3144c7cf03a4c93be900bfc60a449448ed
+ms.sourcegitcommit: 512acc178ec33b1f0403b5b3fd90e44dbf234327
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70910796"
+ms.lasthandoff: 10/08/2019
+ms.locfileid: "72041247"
 ---
 # <a name="install-sqlcmd-and-bcp-the-sql-server-command-line-tools-on-linux"></a>Установка программ командной строки SQL Server sqlcmd и bcp в Linux
 
@@ -254,7 +254,7 @@ brew install mssql-tools
     dpkg -I mssql-tools_<version>_amd64.deb | grep "Depends:"
     ```
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 Пример использования **sqlcmd** для подключения к SQL Server и создания базы данных см. в одном из следующих кратких руководств:
 
