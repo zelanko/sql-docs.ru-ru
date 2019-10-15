@@ -17,14 +17,14 @@ helpviewer_keywords:
 ms.assetid: e598d4c8-3041-4965-b046-dce3a8e3d3e0
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: f55025f8eec24925aec8661c46b81a1a40ed2aa6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e4b0d4fb1f3c233ad8e7eedf91802da35fbbb1d2
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67909077"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72304745"
 ---
-# <a name="sysmailhelpconfiguresp-transact-sql"></a>sysmail_help_configure_sp (Transact-SQL)
+# <a name="sysmail_help_configure_sp-transact-sql"></a>sysmail_help_configure_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Отображает настройки конфигурации компонента Database Mail.  
@@ -40,30 +40,30 @@ sysmail_help_configure_sp  [ [ @parameter_name = ] 'parameter_name' ]
   
 ## <a name="arguments"></a>Аргументы  
  [ **@parameter_name** =] **"***parameter_name***"**  
- Имя параметра конфигурации, значение которого нужно получить. Если он указан, значение параметра конфигурации возвращается в **@parameter_value** ВЫХОДНОЙ параметр. Если аргумент **@parameter_name** указан, эта хранимая процедура возвращает результирующий набор, содержащий все параметры конфигурации компонента Database Mail в экземпляре.  
+ Имя параметра конфигурации, значение которого нужно получить. Если указано, значение параметра конфигурации возвращается в параметре OUTPUT **\@parameter_value** . Если параметр **\@parameter_name** не указан, эта хранимая процедура возвращает результирующий набор, содержащий все параметры конфигурации Database Mail в экземпляре.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- **0** (успешное завершение) или **1** (неуспешное завершение)  
+ **0** (успешное завершение) или **1** (сбой)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
- Если аргумент **@parameter_name** указан, возвращает результирующий набор со следующими столбцами.  
+ Если **\@parameter_name** не указан, возвращает результирующий набор со следующими столбцами.  
   
 ||||  
 |-|-|-|  
 |Имя столбца|Тип данных|Описание|  
 |**paramName**|**nvarchar(256)**|Имя параметра конфигурации.|  
-|**ParamValue**|**nvarchar(256)**|Значение параметра конфигурации.|  
-|**description**|**nvarchar(256)**|Описание параметра конфигурации.|  
+|**paramvalue**|**nvarchar(256)**|Значение параметра конфигурации.|  
+|**Описание**|**nvarchar(256)**|Описание параметра конфигурации.|  
   
 ## <a name="remarks"></a>Примечания  
- Хранимая процедура **sysmail_help_configure_sp** отображает список текущих параметров конфигурации компонента Database Mail для экземпляра.  
+ Хранимая процедура **sysmail_help_configure_sp** перечисляет текущие параметры конфигурации Database Mail для экземпляра.  
   
- Когда **@parameter_name** указано, но без выходного параметра предоставляется для **@parameter_value** , эта хранимая процедура не возвращает выходные данные.  
+ Если указан аргумент **\@parameter_name** , но для **\@parameter_value**не указан выходной параметр, эта хранимая процедура не создает выходных данных.  
   
- Хранимая процедура **sysmail_help_configure_sp** в **msdb** базы данных и принадлежит **dbo** схемы. Процедура должен вызываться с трехкомпонентным именем, если текущая база данных не **msdb**.  
+ Хранимая процедура **sysmail_help_configure_sp** находится в базе данных **msdb** и принадлежит схеме **dbo** . Процедура должна быть вызвана с именем, сопоставленным с тремя частями, если текущей базой данных не является **msdb**.  
   
 ## <a name="permissions"></a>Разрешения  
- Разрешения для этой процедуры по умолчанию члены выполнение **sysadmin** предопределенной роли сервера.  
+ По умолчанию разрешения EXECUTE для этой процедуры имеют члены предопределенной роли сервера **sysadmin** .  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере процедура отображает список параметров конфигурации компонента Database Mail для экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -89,6 +89,6 @@ ProhibitedExtensions            exe,dll,vbs,js  Extensions not allowed in outgoi
   
 ## <a name="see-also"></a>См. также  
  [Database Mail](../../relational-databases/database-mail/database-mail.md)   
- [Хранимые процедуры Database Mail &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [Database Mail хранимых &#40;процедур TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: 7d9abe49-ce92-47f3-82c9-aea749518c91
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 078cb7f1607e6af94756d43efc2e6d21fbada52c
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 6f9021ec9b71694fc6567db5edf79965e09fd3c0
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68762337"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72304912"
 ---
-# <a name="spreinitpullsubscription-transact-sql"></a>sp_reinitpullsubscription (Transact-SQL)
+# <a name="sp_reinitpullsubscription-transact-sql"></a>sp_reinitpullsubscription (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Помечает анонимную или транзакционную подписку по запросу для повторной инициализации при следующем запуске агента распространителя. Эта хранимая процедура выполняется на подписчике в базе данных подписки по запросу.  
@@ -39,11 +39,11 @@ sp_reinitpullsubscription [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publisher = ] 'publisher'`Имя издателя. параметр *Publisher* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @publisher = ] 'publisher'` — это имя издателя. параметр *Publisher* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @publisher_db = ] 'publisher_db'`Имя базы данных издателя. *publisher_db* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @publisher_db = ] 'publisher_db'` — это имя базы данных издателя. *publisher_db* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @publication = ] 'publication'`Имя публикации. Аргумент *publication* имеет тип **sysname**и значение по умолчанию All, что помечает все подписки для повторной инициализации.  
+`[ @publication = ] 'publication'` — имя публикации. Аргумент *publication* имеет тип **sysname**и значение по умолчанию All, что помечает все подписки для повторной инициализации.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
@@ -55,7 +55,7 @@ sp_reinitpullsubscription [ @publisher = ] 'publisher'
   
  **sp_reinitpullsubscription** можно вызвать с подписчика для повторной инициализации подписки во время следующего выполнения агент распространения.  
   
- Подписки на публикации, созданные со значением **false** для **@immediate_sync** , не могут быть повторно инициализированы с подписчика.  
+ Подписки на публикации, созданные со значением **false** для **\@immediate_sync** , не могут быть повторно инициализированы с подписчика.  
   
  Можно повторно инициализировать подписку по запросу, либо выполнив **sp_reinitpullsubscription** на подписчике, либо **sp_reinitsubscription** на издателе.  
   

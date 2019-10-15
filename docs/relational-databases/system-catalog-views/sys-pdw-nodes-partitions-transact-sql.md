@@ -1,5 +1,5 @@
 ---
-title: sys.pdw_nodes_partitions (Transact-SQL) | Документация Майкрософт
+title: sys. PDW _nodes_partitions (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -12,48 +12,48 @@ ms.assetid: b4216752-4813-4b2c-b259-7d8ffc6cc190
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 00ce680a0648b7641249d5fba6b7d0fa493deebd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d0fc42e1ce8d15498caf89582b66549f4e083130
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68001146"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72305227"
 ---
-# <a name="syspdwnodespartitions-transact-sql"></a>sys.pdw_nodes_partitions (Transact-SQL)
+# <a name="syspdw_nodes_partitions-transact-sql"></a>sys. PDW _nodes_partitions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  Содержит по одной строке для каждой секции всех таблиц и большинства типов индексов в [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] базы данных. Все таблицы и индексы содержат по крайней мере одну секцию, независимо от того, имеется ли явно разбиения на разделы.  
+  Содержит по одной строке для каждой секции всех таблиц и большинства типов индексов в базе данных [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. Все таблицы и индексы содержат по крайней мере одну секцию, независимо от того, были ли они явно секционированы.  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|partition_id|`bigint`|Идентификатор секции. Уникален в базе данных.|  
-|object_id|`int`|Идентификатор объекта, к которому принадлежит данная секция. Каждая таблица или представление содержит как минимум одну секцию.|  
-|index_id|`int`|Идентификатор индекса в пределах объекта, к которому принадлежит данная секция.|  
-|partition_number|`int`|Номер секции (начиная с 1) в индексе владельца или куче. Для [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], значение этого столбца равно 1.|  
-|hobt_id|`bigint`|Идентификатор кучи данных или сбалансированного дерева, содержащего строки данной секции.|  
-|rows|`bigint`|Приблизительное количество строк в данной секции. |  
-|data_compression|`int`|Указывает состояние сжатия для каждой секции.<br /><br /> 0 = нет<br /><br /> 1 = ROW<br /><br /> 2 = PAGE<br /><br /> 3 = COLUMNSTORE|  
-|data_compression_desc|`nvarchar(60)`|Указывает состояние сжатия для каждой секции. Возможными значениями являются NONE, ROW и PAGE.|  
-|pdw_node_id|`int`|Уникальный идентификатор [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] узла.|  
+|partition_id|**bigint**|Идентификатор секции. Уникален в базе данных.|  
+|object_id|**int**|Идентификатор объекта, которому принадлежит эта секция. Каждая таблица или представление содержит как минимум одну секцию.|  
+|index_id|**int**|Идентификатор индекса в объекте, которому принадлежит эта секция.|  
+|partition_number|**int**|Номер секции (начиная с 1) в индексе владельца или куче. Для [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] значение этого столбца равно 1.|  
+|hobt_id|**bigint**|Идентификатор куча или сбалансированное дерево данных (HoBT), который содержит строки для этой секции.|  
+|rows|**bigint**|Приблизительное количество строк в данной секции. |  
+|data_compression|**int**|Указывает состояние сжатия для каждой секции.<br /><br /> 0 = нет<br /><br /> 1 = ROW<br /><br /> 2 = PAGE<br /><br /> 3 = COLUMNSTORE|  
+|data_compression_desc|**nvarchar(60)**|Указывает состояние сжатия для каждой секции. Возможными значениями являются NONE, ROW и PAGE.|  
+|pdw_node_id|**int**|Уникальный идентификатор узла [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].|  
   
 ## <a name="permissions"></a>Разрешения  
- Необходимо разрешение CONTROL SERVER.  
+ Требуется разрешение `CONTROL SERVER`.  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 
-### <a name="example-a-display-rows-in-each-partition-within-each-distribution"></a>Пример А. Отображение строк в каждой секции в пределах каждого распределения 
+### <a name="example-a-display-rows-in-each-partition-within-each-distribution"></a>Пример А. Отображение строк в каждой секции в каждом распределении 
 
-Применимо к: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+**Применимо к:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
  
-Чтобы отобразить число строк в каждой секции в пределах каждого распределения, используйте [DBCC PDW_SHOWPARTITIONSTATS (SQL Server PDW)](../../t-sql/database-console-commands/dbcc-pdw-showpartitionstats-transact-sql.md) .
+Чтобы отобразить количество строк в каждой секции в каждом распределении, используйте [инструкцию DBCC PDW_SHOWPARTITIONSTATS (SQL Server PDW)](../../t-sql/database-console-commands/dbcc-pdw-showpartitionstats-transact-sql.md) .
 
-### <a name="example-b-uses-system-views-to-view-rows-in-each-partition-of-each-distribution-of-a-table"></a>Пример Б. Использует системные представления для просмотра строк в каждой секции каждой распределения таблицы
+### <a name="example-b-uses-system-views-to-view-rows-in-each-partition-of-each-distribution-of-a-table"></a>Пример Б. Использует системные представления для просмотра строк в каждой секции каждого распределения таблицы.
 
-Применимо к: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]
+**Применимо к:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]
  
 Этот запрос возвращает количество строк в каждой секции каждого распределения таблицы `myTable`.  
  
-```  
+```sql  
 SELECT o.name, pnp.index_id, pnp.partition_id, pnp.rows,   
     pnp.data_compression_desc, pnp.pdw_node_id  
 FROM sys.pdw_nodes_partitions AS pnp  
@@ -70,7 +70,7 @@ ORDER BY o.name, pnp.index_id, pnp.partition_id;
 ```    
   
 ## <a name="see-also"></a>См. также  
- [Хранилище данных SQL и представления каталога хранилища параллельных данных](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
+ [Хранилища данных SQL и представления каталога параллельных хранилищ данных](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
   
   
 

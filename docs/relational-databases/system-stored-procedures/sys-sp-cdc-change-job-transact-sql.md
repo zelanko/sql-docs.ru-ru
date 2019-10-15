@@ -1,5 +1,5 @@
 ---
-title: sys.sp_cdc_change_job (Transact-SQL) | Документация Майкрософт
+title: sys. sp_cdc_change_job (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,17 +19,17 @@ helpviewer_keywords:
 ms.assetid: ea918888-0fc5-4cc1-b301-26b2a9fbb20d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5f5973382b7a09080fa990b0807deb01660ce0d2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4bd906f9a359a73a15d89a4cb60b6646a2abe53a
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68106531"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72305061"
 ---
-# <a name="sysspcdcchangejob-transact-sql"></a>sys.sp_cdc_change_job (Transact-SQL)
+# <a name="syssp_cdc_change_job-transact-sql"></a>sys.sp_cdc_change_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Изменяет конфигурацию задания очистки системы отслеживания измененных данных или задания записи в текущей базе данных. Чтобы просмотреть текущую конфигурацию задания, запросите [dbo.cdc_jobs](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md) таблицы либо использовать [sp_cdc_help_jobs](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md).  
+  Изменяет конфигурацию задания очистки системы отслеживания измененных данных или задания записи в текущей базе данных. Чтобы просмотреть текущую конфигурацию задания, выполните запрос к таблице [dbo. CDC _jobs](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md) или используйте [sp_cdc_help_jobs](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md).  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,58 +47,58 @@ sys.sp_cdc_change_job [ [ @job_type = ] 'job_type' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @job_type = ] 'job_type'` Тип задания для изменения. *job_type* — **nvarchar(20)** значение по умолчанию «Capture». Допустимы следующие варианты ввода: «capture» и «cleanup».  
+@no__t — 0 тип задания для изменения. *job_type* имеет тип **nvarchar (20)** и значение по умолчанию "Capture". Допустимы следующие варианты ввода: «capture» и «cleanup».  
   
-`[ @maxtrans ] = max_trans_` Максимальное количество транзакций, обрабатываемое в каждом цикле просмотра. *max_trans* — **int** и по умолчанию NULL, которое указывает, этот параметр не изменяется. Указываемое значение должно быть положительным целым числом.  
+`[ @maxtrans ] = max_trans_` максимальное количество транзакций для обработки в каждом цикле просмотра. *max_trans* имеет **тип int** и значение по умолчанию NULL, которое указывает на отсутствие изменений для этого параметра. Указываемое значение должно быть положительным целым числом.  
   
- *max_trans* допустим только для заданий записи.  
+ *max_trans* является допустимым только для заданий отслеживания.  
   
-`[ @maxscans ] = max_scans_` Максимальное число циклов просмотра, выполняемых для извлечения всех строк из журнала. *max_scans* — **int** и по умолчанию NULL, которое указывает, этот параметр не изменяется.  
+`[ @maxscans ] = max_scans_` максимальное число циклов просмотра для выполнения, чтобы извлечь все строки из журнала. *max_scans* имеет **тип int** и значение по умолчанию NULL, которое указывает на отсутствие изменений для этого параметра.  
   
- *max_scan* допустим только для заданий записи.  
+ *max_scan* является допустимым только для заданий отслеживания.  
   
-`[ @continuous ] = continuous_` Указывает, является ли задание отслеживания непрерывно (1), или запускать однократно (0). *Непрерывная* — **бит** и по умолчанию NULL, которое указывает, этот параметр не изменяется.  
+`[ @continuous ] = continuous_` указывает, должно ли задание отслеживания выполняться непрерывно (1) или выполняться только один раз (0). параметр *Continuous* имеет **бит** и значение по умолчанию NULL, что означает отсутствие изменений для этого параметра.  
   
- Когда *непрерывной* = 1, [sp_cdc_scan](../../relational-databases/system-stored-procedures/sys-sp-cdc-scan-transact-sql.md) задания просматривает журнал и обрабатывает до (*max_trans* \* *max_scans*) транзакции. Затем ожидается число секунд, указанных в *polling_interval* перед началом следующего просмотра журнала.  
+ Если *Continuous* = 1, задание [sp_cdc_scan](../../relational-databases/system-stored-procedures/sys-sp-cdc-scan-transact-sql.md) сканирует журнал и обрабатывает транзакции до (*max_trans* \* *max_scans*). Затем он ожидает число секунд, указанное в *polling_interval* , перед началом следующего просмотра журнала.  
   
- Когда *непрерывной* = 0, **sp_cdc_scan** задание выполняет до *max_scans* просмотров журнала, обрабатывая до *max_trans* транзакций во время каждого сканирования и затем завершает работу.  
+ Если *Continuous* = 0, задание **sp_cdc_scan** выполняется до *max_scans* просмотров журнала, обработки до *max_trans* транзакций во время каждого сканирования, а затем завершает работу.  
   
- Если **@continuous** меняется с 1 на 0, **@pollinginterval** автоматически устанавливается значение 0. Значение, указанное для **@pollinginterval** отличные от 0 учитывается.  
+ Если параметр **\@continuous** изменен с 1 на 0, **\@pollinginterval** автоматически устанавливается в значение 0. Значение, указанное для **\@pollinginterval** , отличное от 0, игнорируется.  
   
- Если **@continuous** опущен или явно установлен в значение NULL и **@pollinginterval** явно присвоено значение больше 0, **@continuous** автоматически значение 1.  
+ Если параметр **\@continuous** опущен или явно задано значение null, а **\@pollinginterval** явно задано значение больше 0, **\@continuous** автоматически устанавливается в 1.  
   
- *Непрерывная* допустим только для заданий записи.  
+ *Непрерывная* допустима только для заданий отслеживания.  
   
-`[ @pollinginterval ] = polling_interval_` Число секунд между циклами просмотра журнала. *polling_interval* — **bigint** и по умолчанию NULL, которое указывает, этот параметр не изменяется.  
+`[ @pollinginterval ] = polling_interval_` число секунд между циклами просмотра журнала. *polling_interval* имеет тип **bigint** и значение по умолчанию NULL, которое указывает на отсутствие изменений для этого параметра.  
   
- *polling_interval* допустим только для отслеживания заданий при *непрерывной* имеет значение 1.  
+ *polling_interval* является допустимым только для заданий отслеживания, если параметр *Continuous* установлен в значение 1.  
   
-`[ @retention ] = retention_` Количество минут, строки изменений должны храниться в таблицах изменений. *хранение* — **bigint** и по умолчанию NULL, которое указывает, этот параметр не изменяется. Максимальное значение составляет 52494800 (100 лет). Указываемое значение должно быть положительным целым числом.  
+`[ @retention ] = retention_` — количество минут, в течение которых строки изменений должны храниться в таблицах изменений. параметр *retention* имеет тип **bigint** и значение по умолчанию NULL, которое указывает на отсутствие изменений для этого параметра. Максимальное значение составляет 52494800 (100 лет). Указываемое значение должно быть положительным целым числом.  
   
- *хранение* допустим только для заданий очистки.  
+ *Хранение* допустимо только для заданий очистки.  
   
-`[ @threshold = ] 'delete threshold'` Максимальное количество записей, подлежащих удалению, которые могут быть удалены с помощью одной инструкции при очистке. *удалить пороговое значение* — **bigint** и по умолчанию NULL, которое указывает, этот параметр не изменяется. *удалить пороговое значение* допустим только для заданий очистки.  
+`[ @threshold = ] 'delete threshold'` максимальное число записей удаления, которые можно удалить с помощью одной инструкции при очистке. *пороговое значение удаления* — **bigint** и значение по умолчанию NULL, которое указывает на отсутствие изменений для этого параметра. *порог удаления* допустим только для заданий очистки.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- **0** (успешное завершение) или **1** (неуспешное завершение)  
+ **0** (успешное завершение) или **1** (сбой)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
  None  
   
 ## <a name="remarks"></a>Примечания  
- Если параметр пропущен, связанного значения в [dbo.cdc_jobs](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md) обновляется. Явное присвоение параметру значения NULL эквивалентно его пропусканию.  
+ Если параметр не указан, связанное значение в таблице [dbo. CDC _jobs](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md) не обновляется. Явное присвоение параметру значения NULL эквивалентно его пропусканию.  
   
  Указание недопустимого для типа задания параметра приведет к ошибке при выполнении инструкции.  
   
- Изменения в задании не вступают в силу до остановки задания с помощью [sp_cdc_stop_job](../../relational-databases/system-stored-procedures/sys-sp-cdc-stop-job-transact-sql.md) и перезапустить с помощью [sp_cdc_start_job](../../relational-databases/system-stored-procedures/sys-sp-cdc-start-job-transact-sql.md).  
+ Изменения в задании вступают в силу только после остановки задания с помощью [sp_cdc_stop_job](../../relational-databases/system-stored-procedures/sys-sp-cdc-stop-job-transact-sql.md) и перезапуска с помощью [sp_cdc_start_job](../../relational-databases/system-stored-procedures/sys-sp-cdc-start-job-transact-sql.md).  
   
 ## <a name="permissions"></a>Разрешения  
- Требуется членство в **db_owner** предопределенной роли базы данных.  
+ Требуется членство в предопределенной роли базы данных **db_owner** .  
   
 ## <a name="examples"></a>Примеры  
   
 ### <a name="a-changing-a-capture-job"></a>A. Изменение задания отслеживания  
- В следующем примере обновляется `@job_type`, `@maxscans`, и `@maxtrans` параметры задания отслеживания в `AdventureWorks2012` базы данных. Другие допустимые параметры задания отслеживания (`@continuous` и `@pollinginterval`) пропущены; их значения не изменяются.  
+ В следующем примере выполняется обновление параметров `@job_type`, `@maxscans` и `@maxtrans` задания отслеживания в базе данных `AdventureWorks2012`. Другие допустимые параметры задания отслеживания (`@continuous` и `@pollinginterval`) пропущены; их значения не изменяются.  
   
 ```  
 USE AdventureWorks2012;  
@@ -111,7 +111,7 @@ GO
 ```  
   
 ### <a name="b-changing-a-cleanup-job"></a>Б. Изменение задания очистки  
- В следующем примере обновляется задание очистки базы данных `AdventureWorks2012`. Все допустимые параметры для этого типа задания за исключением **@threshold** , указаны. Значение **@threshold** не изменяется.  
+ В следующем примере обновляется задание очистки базы данных `AdventureWorks2012`. Указаны все допустимые параметры для этого типа задания, кроме **@threshold** . Значение **@threshold** не изменяется.  
   
 ```  
 USE AdventureWorks2012;  
@@ -123,8 +123,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также  
- [dbo.cdc_jobs &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)   
- [sys.sp_cdc_enable_table &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)   
+ [dbo. CDC _jobs &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)   
+ [sys. sp_cdc_enable_table &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)   
  [sys.sp_cdc_add_job (Transact-SQL)](../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md)  
   
   

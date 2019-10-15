@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: e9ef4c99-abde-4038-b6a3-a25dcbaf0958
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 5c1587b65df123400188ba062ef40e57f9a0a550
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 66b353c7fc79b49cb9cd3fb9fe228075f3a0d473
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085316"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72305100"
 ---
-# <a name="spdeletejobsteplog-transact-sql"></a>sp_delete_jobsteplog (Transact-SQL)
+# <a name="sp_delete_jobsteplog-transact-sql"></a>sp_delete_jobsteplog (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Удаляет все журналы шагов заданий для агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], заданные аргументами. Эта хранимая процедура используется для поддержания **sysjobstepslogs** в таблицу **msdb** базы данных.  
+  Удаляет все журналы шагов заданий для агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], заданные аргументами. Используйте эту хранимую процедуру для обслуживания таблицы **таблицу sysjobstepslogs** в базе данных **msdb** .  
   
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -43,32 +43,32 @@ sp_delete_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @job_id = ] 'job_id'` Идентификационный номер задания, содержащего удаляемый журнал шага задания. *job_id* — **int**, значение по умолчанию NULL.  
+`[ @job_id = ] 'job_id'` — идентификационный номер задания, содержащего удаляемый журнал шагов задания. Аргумент *job_id* имеет **тип int**и значение по умолчанию NULL.  
   
-`[ @job_name = ] 'job_name'` Имя задания. *имя_задания* — **sysname**, значение по умолчанию NULL.  
+`[ @job_name = ] 'job_name'` — имя задания. Аргумент *имя_задания* имеет тип **sysname**и значение по умолчанию NULL.  
   
-> **ПРИМЕЧАНИЕ.** Либо *job_id* или *имя_задания* должен быть указан, но не оба аргумента одновременно.  
+> **ПРИМЕЧАНИЕ.** Необходимо указать *job_id* или *имя_задания* , но не указывать оба значения.  
   
-`[ @step_id = ] step_id` Идентификационный номер шага задания, для которого задания, журнал которого необходимо удалить. Если не включен, все журналы шагов задания в задании удаляются **@older_than** или **@larger_than** указаны. *step_id* — **int**, значение по умолчанию NULL.  
+`[ @step_id = ] step_id` — идентификационный номер этапа в задании, для которого удаляется журнал шагов задания. Если не указано, все журналы шагов заданий в задании удаляются, если не указаны **\@older_than** или **\@larger_than** . *step_id* имеет **тип int**и значение по умолчанию NULL.  
   
-`[ @step_name = ] 'step_name'` Имя шага задания, для которого задания, журнал которого необходимо удалить. *step_name* — **sysname**, значение по умолчанию NULL.  
+`[ @step_name = ] 'step_name'` — имя шага в задании, для которого необходимо удалить журнал шагов задания. *step_name* имеет тип **sysname**и значение по умолчанию NULL.  
   
-> **ПРИМЕЧАНИЕ.** Либо *step_id* или *step_name* можно указать, но не оба аргумента одновременно.  
+> **ПРИМЕЧАНИЕ.** Можно указать либо *step_id* , либо *step_name* , но нельзя указывать оба значения.  
   
-`[ @older_than = ] 'date'` Дата и время, самая старая журнала шагов задания, которые вы хотите сохранить. Удаляются все журналы шагов задания старше указанной даты и времени. *Дата* — **datetime**, значение по умолчанию NULL. Оба **@older_than** и **@larger_than** можно указать.  
+`[ @older_than = ] 'date'` Дата и время самого старого журнала шагов задания, который вы хотите удержать. Удаляются все журналы шагов задания старше указанной даты и времени. *Date* имеет тип **DateTime**и значение по умолчанию NULL. Можно указать как **\@older_than** , так и **\@larger_than** .  
   
-`[ @larger_than = ] 'size_in_bytes'` Размер в байтах наибольшего журнала шагов задания, вы хотите сохранить. Удаляются все журналы шагов задания, размер которых превышает указанный. Оба **@larger_than** и **@older_than** можно указать.  
+`[ @larger_than = ] 'size_in_bytes'` — Размер в байтах самого крупного журнала шагов задания, который вы хотите удержать. Удаляются все журналы шагов задания, размер которых превышает указанный. Можно указать как **\@larger_than** , так и **\@older_than** .  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- **0** (успешное завершение) или **1** (неуспешное завершение)  
+ **0** (успешное завершение) или **1** (сбой)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
  None  
   
 ## <a name="remarks"></a>Примечания  
- **sp_delete_jobsteplog** в **msdb** базы данных.  
+ **sp_delete_jobsteplog** находится в базе данных **msdb** .  
   
- Если никакие аргументы, кроме **@job_id** или **@job_name** указаны, удаляются все журналы шагов задания для указанного задания.  
+ Если не указаны аргументы, кроме **\@job_id** или **\@job_name** , удаляются все журналы шагов задания для указанного задания.  
   
 ## <a name="permissions"></a>Разрешения  
  По умолчанию эту хранимую процедуру могут выполнять только члены предопределенной роли сервера **sysadmin** . Другим пользователям должна быть предоставлена одна из следующих предопределенных ролей базы данных агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в базе данных **msdb** :  
@@ -81,7 +81,7 @@ sp_delete_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
   
  Дополнительные сведения о разрешениях этих ролей см. в разделе [Предопределенные роли базы данных агента SQL Server](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
- Только члены **sysadmin** можно удалить журнал шага задания, которая принадлежит другому пользователю.  
+ Только члены **роли sysadmin** могут удалять журнал шагов задания, который принадлежит другому пользователю.  
   
 ## <a name="examples"></a>Примеры  
   
@@ -126,6 +126,6 @@ GO
   
 ## <a name="see-also"></a>См. также  
  [sp_help_jobsteplog &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-jobsteplog-transact-sql.md)   
- [Агент SQL Server хранимых процедур &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)  
+ [Агент SQL Server хранимых &#40;процедур TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)  
   
   

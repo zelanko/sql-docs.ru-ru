@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: 821d4127-3ce5-4474-8561-043404a20d81
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: dce44e2045b7d3031058ffd976b01bdd53801c48
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c2503e5d3b94b5bc73d9bf2427e0162ba2eda2fe
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085144"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72304910"
 ---
-# <a name="sphelpspatialgeographyindexxml-transact-sql"></a>sp_help_spatial_geography_index_xml (Transact-SQL)
+# <a name="sp_help_spatial_geography_index_xml-transact-sql"></a>sp_help_spatial_geography_index_xml (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Возвращает имя и значение для указанного набора свойств о **geography** пространственного индекса. Можно задать возврат основного набора свойств или всех свойств индекса.  
+  Возвращает имя и значение для указанного набора свойств пространственного индекса **Geography** . Можно задать возврат основного набора свойств или всех свойств индекса.  
   
  Результаты возвращаются во фрагменте XML, который отображает имена и значения выбранных свойств.  
   
@@ -45,10 +45,10 @@ sp_help_spatial_geography_index_xml [ @tabname =] 'tabname'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- См. в разделе [аргументов и свойств пространственного индекса хранимых процедур](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md).  
+ См. раздел [аргументы и свойства хранимых процедур пространственного индекса](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md).  
   
 ## <a name="properties"></a>Свойства  
- См. в разделе [аргументов и свойств пространственного индекса хранимых процедур](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md).  
+ См. раздел [аргументы и свойства хранимых процедур пространственного индекса](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md).  
   
 ## <a name="permissions"></a>Разрешения  
  Пользователю должна быть назначена роль PUBLIC для получения доступа к процедуре. Необходимо разрешение READ ACCESS на сервере и объекте.  
@@ -57,9 +57,9 @@ sp_help_spatial_geography_index_xml [ @tabname =] 'tabname'
  Свойства, которые содержат значения NULL, не включаются в набор возвращаемых значений.  
   
 ## <a name="example"></a>Пример  
- В следующем примере используется `sp_help_spatial_geography_index_xml` для анализа пространственного индекса **SIndx_SpatialTable_geography_col2** определен в таблице **geography_col** для определенного образца запроса в  **@qs** . В этом примере основные свойства указанного индекса возвращаются в XML-фрагменте, в котором отображаются имя и значение выбранных свойств.  
+ В следующем примере `sp_help_spatial_geography_index_xml` используется для исследования пространственного индекса **SIndx_SpatialTable_geography_col2** , определенного в таблице **geography_col** для данного примера запроса в **\@qs**. В этом примере основные свойства указанного индекса возвращаются в XML-фрагменте, в котором отображаются имя и значение выбранных свойств.  
   
- [XQuery](../../xquery/xquery-basics.md) затем в результирующем наборе, возвращается определенное свойство будет запущено.  
+ Затем в результирующем наборе выполняется [запрос XQuery](../../xquery/xquery-basics.md) , возвращающий определенное свойство.  
   
 ```  
 declare @qs geography  
@@ -69,9 +69,9 @@ exec sp_help_spatial_geography_index_xml 'geography_col', 'SIndx_SpatialTable_ge
 select @x.value('(/Primary_Filter_Efficiency/text())[1]', 'float');  
 ```  
   
- Аналогичную [sp_help_spatial_geography_index](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-transact-sql.md), эта хранимая процедура обеспечивает более простой программный доступ к свойствам **geography** пространственный индекс и сообщает о результирующем наборе в формате XML.  
+ Как и в случае с [sp_help_spatial_geography_index](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-transact-sql.md), эта хранимая процедура предоставляет более простой программный доступ к свойствам пространственного индекса **Geography** и сообщает РЕЗУЛЬТИРУЮЩИЙ набор в формате XML.  
   
- Ограничивающий прямоугольник **geography** является вся планета.  
+ Ограничивающий прямоугольник **географии** — это вся земля.  
   
 ## <a name="requirements"></a>Требования  
   
@@ -80,7 +80,7 @@ select @x.value('(/Primary_Filter_Efficiency/text())[1]', 'float');
  [sp_help_spatial_geography_index](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-transact-sql.md)   
  [Общие сведения о пространственных индексах](../../relational-databases/spatial/spatial-indexes-overview.md)   
  [Пространственные данные (SQL Server)](../../relational-databases/spatial/spatial-data-sql-server.md)   
- [Основы языка XQuery](../../xquery/xquery-basics.md)   
+ [Основы XQuery](../../xquery/xquery-basics.md)   
  [Справочник по языку XQuery](../../xquery/xquery-language-reference-sql-server.md)  
   
   

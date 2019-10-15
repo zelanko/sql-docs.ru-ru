@@ -18,17 +18,17 @@ ms.assetid: ac1fc7a0-7f46-4a12-8c5c-8d378226a8ce
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 949d22b0acdd4cc6d1e9d865f4f65e847d87aa46
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 98e360887d63db59e1e61bf5c52928e9626b0f39
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68055049"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72304882"
 ---
-# <a name="sphelpfulltextsystemcomponents-transact-sql"></a>sp_help_fulltext_system_components (Transact-SQL)
+# <a name="sp_help_fulltext_system_components-transact-sql"></a>sp_help_fulltext_system_components (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
 
-  Возвращает сведения о зарегистрированных средствах разбиения по словам, фильтрах и обработчиках протоколов. **sp_help_fulltext_system_components** также возвращает список идентификаторов баз данных и полнотекстовых каталогов, использовавших указанный компонент.  
+  Возвращает сведения о зарегистрированных средствах разбиения по словам, фильтрах и обработчиках протоколов. **sp_help_fulltext_system_components** также возвращает список идентификаторов баз данных и полнотекстовых каталогов, которые использовали указанный компонент.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,9 +45,9 @@ sp_help_fulltext_system_components
  'all'  
  Возвращает сведения для всех полнотекстовых компонентов.  
   
-`[ @component_type = ] component_type` Указывает тип компонента. *component_type* может принимать одно из следующих:  
+`[ @component_type = ] component_type` указывает тип компонента. *component_type* может быть одним из следующих:  
   
--   **средство разбиения по словам**  
+-   **Разделитель слов**  
   
 -   **фильтр**  
   
@@ -57,7 +57,7 @@ sp_help_fulltext_system_components
   
  Если указан полный путь, в аргументе *param* необходимо также указать полный путь к DLL-библиотеке компонента. В противном случае будет возвращено сообщение об ошибке.  
   
-`[ @param = ] param` В зависимости от типа компонента, это одно из следующих: идентификатор локали (LCID), расширение файла с «.» префикса, полное имя компонента обработчика протокола или полный путь к DLL-компоненту.  
+`[ @param = ] param` в зависимости от типа компонента это один из следующих: код локали (LCID), расширение файла с префиксом ".", полное имя компонента обработчика протокола или полный путь к библиотеке DLL компонента.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
@@ -67,22 +67,22 @@ sp_help_fulltext_system_components
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**componenttype**|**sysname**|Тип компонента. Это может быть:<br /><br /> filter<br /><br /> обработчик протокола<br /><br /> разделитель слов|  
-|**componentname**|**sysname**|Имя компонента.|  
-|**CLSID**|**uniqueidentifier**|Идентификатор класса компонента.|  
-|**FullPath**|**nvarchar(256)**|Путь к расположению компонента.<br /><br /> NULL = вызывающая сторона не является членом **serveradmin** предопределенной роли сервера.|  
+|**параметра ComponentType**|**sysname**|Тип компонента. Это может быть:<br /><br /> filter<br /><br /> обработчик протокола<br /><br /> разделитель слов|  
+|**ComponentName**|**sysname**|Имя компонента.|  
+|**этому**|**uniqueidentifier**|Идентификатор класса компонента.|  
+|**FullPath**|**nvarchar(256)**|Путь к расположению компонента.<br /><br /> NULL = вызывающая сторона не является членом предопределенной роли сервера **serveradmin** .|  
 |**version**|**nvarchar(30)**|Версия компонента.|  
-|**Изготовитель**|**sysname**|Имя производителя компонента.|  
+|**производителя**|**sysname**|Имя производителя компонента.|  
   
- Следующий результирующий набор возвращается только в том случае, если один или более одного полнотекстового каталога, использующий *component_type*.  
+ Следующий результирующий набор возвращается только в том случае, если существует один или несколько полнотекстовых каталогов, использующих *component_type*.  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**dbid**|**int**|Идентификатор базы данных.|  
-|**ftcatid**|**int**|Идентификатор полнотекстового каталога.|  
+|**столбцу ftcatid**|**int**|Идентификатор полнотекстового каталога.|  
   
 ## <a name="permissions"></a>Разрешения  
- Требуется членство в **открытый** роли; тем не менее, пользователи могут видеть только сведения о полнотекстовых каталогах, для которых у них есть разрешение VIEW DEFINITION. Значения столбца **fullpath** могут просматривать только члены предопределенной роли сервера **serveradmin** .  
+ Требуется членство в роли **Public** ; Тем не менее пользователи могут видеть только сведения о полнотекстовых каталогах, для которых у них есть разрешение VIEW DEFINITION. Значения столбца **fullpath** могут просматривать только члены предопределенной роли сервера **serveradmin** .  
   
 ## <a name="remarks"></a>Примечания  
  Этот метод очень важен при подготовке к обновлению. Запустите хранимую процедуру в определенной базе данных и используйте результаты, чтобы определить, будет ли определенный каталог затронут обновлением.  
@@ -106,7 +106,7 @@ GO
 ```  
   
 ### <a name="c-determining-whether-a-specific-word-breaker-is-registered"></a>В. Определение того, зарегистрировано ли средство разбиения по словам  
- В следующем примере будет выведено средство разбиения по словам для турецкого языка (LCID = 1055), если оно установлено в системе и зарегистрировано в экземпляре сервера. В этом примере задаются имена параметров, **@component_type** и **@param** .  
+ В следующем примере будет выведено средство разбиения по словам для турецкого языка (LCID = 1055), если оно установлено в системе и зарегистрировано в экземпляре сервера. В этом примере указываются имена параметров, **\@component_type** и **\@param**.  
   
 ```  
 EXEC sp_help_fulltext_system_components @component_type = 'wordbreaker', @param = 1055;  
@@ -136,9 +136,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Просмотр или изменение зарегистрированных фильтров и разбиения по словам](../../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md)   
+ [Просмотр или изменение зарегистрированных фильтров и разделителей слов](../../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md)   
  [Настройка и управление средством разбиения на слова и парадигматические модули для поиска](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
  [Настройка и управление фильтрами для поиска](../../relational-databases/search/configure-and-manage-filters-for-search.md)   
- [Компонент Full-Text Search и семантический поиск хранимых процедур &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)  
+ [Хранимые процедуры &#40;полнотекстового поиска и семантического поиска TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)  
   
   

@@ -19,19 +19,19 @@ ms.assetid: 8ca6b0c6-8d9c-4eee-b02f-51ddffab4492
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9e92b9ec98ee08579164c403fe1be6ff6ef47816
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2fd136eddc1aba4dc5a927d6ca027c17dfb38485
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68104497"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72304762"
 ---
-# <a name="spsequencegetrange-transact-sql"></a>sp_sequence_get_range (Transact-SQL)
+# <a name="sp_sequence_get_range-transact-sql"></a>sp_sequence_get_range (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
 
   Возвращает диапазон значений последовательности из объекта последовательности. Объект последовательности создает и выдает запрошенное количество значений, а также предоставляет приложению метаданные, связанные с диапазоном.  
   
- Дополнительные сведения о порядковых номерах, см. в разделе [порядковые номера](../../relational-databases/sequence-numbers/sequence-numbers.md).  
+ Дополнительные сведения о порядковых номерах см. в разделе [порядковые номера](../../relational-databases/sequence-numbers/sequence-numbers.md).  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,27 +51,27 @@ sp_sequence_get_range [ @sequence_name = ] N'<sequence>'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @sequence_name = ] N'sequence'` Имя объекта последовательности. Схема является необязательной. *sequence_name* — **nvarchar(776)** .  
+`[ @sequence_name = ] N'sequence'` имя объекта последовательности. Схема является необязательной. *sequence_name* имеет тип **nvarchar (776)** .  
   
-`[ @range_size = ] range_size` Количество значений, извлекаемых из последовательности. **@range_size** — **bigint**.  
+`[ @range_size = ] range_size` количество значений для выборки из последовательности. **\@range_size** имеет тип **bigint**.  
   
-`[ @range_first_value = ] range_first_value` Выходной параметр возвращает первое (минимальное или максимальное) значение объекта последовательности, используемое для вычисления запрошенного диапазона. **@range_first_value** — **sql_variant** с тем же базовым типом, что и объект последовательности используется в запросе.  
+параметр вывода `[ @range_first_value = ] range_first_value` возвращает первое (минимальное или максимальное) значение объекта последовательности, используемого для вычисления запрошенного диапазона. **\@range_first_value** имеет тип **sql_variant** с тем же базовым типом, что и объект последовательности, используемый в запросе.  
   
-`[ @range_last_value = ] range_last_value` Необязательный выходной параметр Возвращает последнее значение запрашиваемого диапазона. **@range_last_value** — **sql_variant** с тем же базовым типом, что и объект последовательности используется в запросе.  
+`[ @range_last_value = ] range_last_value` Необязательный выходной параметр возвращает последнее значение запрошенного диапазона. **\@range_last_value** имеет тип **sql_variant** с тем же базовым типом, что и объект последовательности, используемый в запросе.  
   
-`[ @range_cycle_count = ] range_cycle_count` Необязательный выходной параметр Возвращает количество попыток объект последовательности, которое потребовалось для возврата запрошенного диапазона. **@range_cycle_count** — **int**.  
+`[ @range_cycle_count = ] range_cycle_count` Необязательный выходной параметр возвращает количество раз, когда объект последовательности был циклическим для возврата запрошенного диапазона. **\@range_cycle_count** имеет **тип int**.  
   
-`[ @sequence_increment = ] sequence_increment` Необязательный выходной параметр Возвращает приращение объекта последовательности, используемое для вычисления запрошенного диапазона. **@sequence_increment** — **sql_variant** с тем же базовым типом, что и объект последовательности используется в запросе.  
+`[ @sequence_increment = ] sequence_increment` Необязательный выходной параметр возвращает приращение объекта последовательности, используемого для вычисления запрошенного диапазона. **\@sequence_increment** имеет тип **sql_variant** с тем же базовым типом, что и объект последовательности, используемый в запросе.  
   
-`[ @sequence_min_value = ] sequence_min_value` Необязательный выходной параметр Возвращает минимальное значение объекта последовательности. **@sequence_min_value** — **sql_variant** с тем же базовым типом, что и объект последовательности используется в запросе.  
+`[ @sequence_min_value = ] sequence_min_value` Необязательный выходной параметр возвращает минимальное значение объекта последовательности. **\@sequence_min_value** имеет тип **sql_variant** с тем же базовым типом, что и объект последовательности, используемый в запросе.  
   
-`[ @sequence_max_value = ] sequence_max_value` Необязательный выходной параметр Возвращает максимальное значение для объекта последовательности. **@sequence_max_value** — **sql_variant** с тем же базовым типом, что и объект последовательности используется в запросе.  
+`[ @sequence_max_value = ] sequence_max_value` Необязательный выходной параметр возвращает максимальное значение объекта последовательности. **\@sequence_max_value** имеет тип **sql_variant** с тем же базовым типом, что и объект последовательности, используемый в запросе.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
 ## <a name="remarks"></a>Примечания  
- sp_sequence_get_rangeis в sys. схемы и может использоваться как sys.sp_sequence_get_range.  
+ sp_sequence_get_rangeis в представлении sys. Схема и может быть указана как sys. sp_sequence_get_range.  
   
 ### <a name="cycling-sequences"></a>Циклические последовательности  
  При необходимости объект последовательности может выполняться циклически требуемое число раз для обработки запрошенного диапазона. Количество циклов возвращается вызывающему методу через параметр `@range_cycle_count`.  
@@ -88,7 +88,7 @@ sp_sequence_get_range [ @sequence_name = ] N'<sequence>'
  Требуется разрешение UPDATE для объекта последовательности или его схемы.  
   
 ## <a name="examples"></a>Примеры  
- В следующих примерах используется объект последовательности с именем Test.RangeSeq. Используйте следующую инструкцию для создания последовательности Test.RangeSeq.  
+ В следующих примерах используется объект последовательности с именем Test. Ранжесек. Используйте следующую инструкцию, чтобы создать последовательность Test. Ранжесек.  
   
 ```  
 CREATE SCHEMA Test ;  
@@ -106,7 +106,7 @@ CREATE SEQUENCE Test.RangeSeq
 ```  
   
 ### <a name="a-retrieving-a-range-of-sequence-values"></a>A. Получение диапазона значений последовательности  
- Следующая инструкция получает четыре порядковых номера из объекта Test.RangeSeq последовательности и возвращает первое из чисел пользователю.  
+ Следующая инструкция получает четыре порядковых номера из объекта последовательности Test. Ранжесек и возвращает первый из чисел пользователю.  
   
 ```  
 DECLARE @range_first_value sql_variant ,   
@@ -122,7 +122,7 @@ SELECT @range_first_value_output AS FirstNumber ;
 ```  
   
 ### <a name="b-returning-all-output-parameters"></a>Б. Возврат всех выходных параметров  
- Следующий пример возвращает все выходные значения из процедуры sp_sequence_get_range.  
+ В следующем примере возвращаются все выходные значения процедуры sp_sequence_get_range.  
   
 ```  
 DECLARE    
@@ -157,7 +157,7 @@ SELECT
  Если увеличить значение аргумента `@range_size`, например, до 75, то объект последовательности будет выполняться циклически. Проверьте по аргументу `@range_cycle_count`, выполнялся ли объект циклически и, если это так, сколько раз.  
   
 ### <a name="c-example-using-adonet"></a>В. Пример использования ADO.NET  
- Следующий пример возвращает диапазон из Test.RangeSeq с помощью ADO.NET.  
+ В следующем примере извлекается диапазон из теста Test. Ранжесек с помощью ADO.NET.  
   
 ```  
 SqlCommand cmd = new SqlCommand();  

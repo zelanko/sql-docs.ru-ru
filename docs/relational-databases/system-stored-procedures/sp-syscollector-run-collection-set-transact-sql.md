@@ -18,14 +18,14 @@ helpviewer_keywords:
 ms.assetid: 7bbaee48-dfc7-45c0-b11f-c636b6a7e720
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 337697ec5a0ce842d3ade808db885a671b6adcc3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3807a53921572bbe20b4c459bff34958cbb42001
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68010702"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72304992"
 ---
-# <a name="spsyscollectorruncollectionset-transact-sql"></a>sp_syscollector_run_collection_set (Transact-SQL)
+# <a name="sp_syscollector_run_collection_set-transact-sql"></a>sp_syscollector_run_collection_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Запускает набор сбора в случае, если сборщик данных уже включен, а набор сбора настроен на сбор без кэширования.  
@@ -46,22 +46,22 @@ sp_syscollector_run_collection_set [[ @collection_set_id = ] collection_set_id ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @collection_set_id = ] collection_set_id` — Это уникальный локальный идентификатор набора элементов сбора. *collection_set_id* — **int** и должен иметь значение, если *имя* имеет значение NULL.  
+`[ @collection_set_id = ] collection_set_id` является уникальным локальным идентификатором набора сбора. *collection_set_id* имеет **тип int** и должен иметь значение, если *Name* имеет значение null.  
   
-`[ @name = ] 'name'` — Имя набора элементов сбора. *имя* — **sysname** и должен иметь значение, если *collection_set_id* имеет значение NULL.  
+`[ @name = ] 'name'` — это имя набора элементов сбора. Аргумент *Name* имеет тип **sysname** и должен иметь значение, если *collection_set_id* имеет значение null.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- **0** (успешное завершение) или **1** (неуспешное завершение)  
+ **0** (успешное завершение) или **1** (сбой)  
   
 ## <a name="remarks"></a>Примечания  
- Либо *collection_set_id* или *имя* должен иметь значение, не может быть NULL.  
+ Либо *collection_set_id* , либо *Name* должны иметь значение null.  
   
- Эта процедура будет начать сбор и отправка заданий для указанной коллекции набора, а также немедленно запускает задание агента сбора, если в наборе сбора есть его **@collection_mode** значение без кэширования (1). Дополнительные сведения см. [sp_syscollector_create_collection_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md).  
+ Эта процедура запускает сбор и передачу заданий для указанного набора сбора и немедленно запускает задание агента сбора, если для набора сбора **\@collection_mode** установлен некэшированный (1). Дополнительные сведения см. в [разделе &#40;SP_SYSCOLLECTOR_CREATE_COLLECTION_SET Transact-&#41;SQL](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md).  
   
  Процедура sp_sycollector_run_collection_set также может быть использована для запуска набора сбора, не имеющего расписания.  
   
 ## <a name="permissions"></a>Разрешения  
- Требуется членство в **dc_operator** (с разрешением EXECUTE) предопределенной роли базы данных для выполнения этой процедуры.  
+ Для выполнения этой процедуры требуется членство в предопределенной роли базы данных **dc_operator** (с разрешением EXECUTE).  
   
 ## <a name="example"></a>Пример  
  Запуск набора сбора с помощью его идентификатора.  

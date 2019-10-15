@@ -1,5 +1,5 @@
 ---
-title: sys.partitions (Transact-SQL) | Документация Майкрософт
+title: sys. partitions (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,12 +20,12 @@ ms.assetid: 1c19e1b1-c925-4dad-a652-581692f4ab5e
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 661a37b4136202b9a83b863535670a88a3f100dc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d56671fd3c1dbd38cc2ff4bc4d9f4331e5484b91
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68102178"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72305022"
 ---
 # <a name="syspartitions-transact-sql"></a>sys.partitions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -38,10 +38,10 @@ ms.locfileid: "68102178"
 |object_id|**int**|Указывает идентификатор объекта, которому принадлежит данная секция. Каждая таблица или представление содержит как минимум одну секцию.|  
 |index_id|**int**|Указывает идентификатор индекса в пределах объекта, которому принадлежит данная секция.<br /><br /> 0 = куча<br />1 = кластеризованный индекс<br />2 или больше = некластеризованный индекс|  
 |partition_number|**int**|Является номером секции (начиная с 1) во владеющем ей индексе или куче. Для несекционированных таблиц и индексов значение этого столбца равно 1.|  
-|hobt_id|**bigint**|Указывает идентификатор кучи данных или сбалансированного дерева, содержащего строки данной секции.|  
+|hobt_id|**bigint**|Указывает идентификатор куча или сбалансированное дерево данных (HoBT), который содержит строки для этой секции.|  
 |rows|**bigint**|Указывает приблизительное количество строк в данной секции.|  
 |filestream_filegroup_id|**smallint**|**Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Указывает ID для файловой группы FILESTREAM, хранимой в этой секции.|  
-|data_compression|**tinyint**|Указывает состояние сжатия для каждой секции.<br /><br /> 0 = нет <br />1 = ROW <br />2 = PAGE <br />3 = COLUMNSTORE: **Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br />4 = COLUMNSTORE_ARCHIVE: **Применимо к**: с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> **Примечание.** Полнотекстовые индексы будут сжаты в любом выпуске [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|data_compression|**tinyint**|Указывает состояние сжатия для каждой секции.<br /><br /> 0 = нет <br />1 = ROW <br />2 = PAGE <br />3 = COLUMNSTORE: **Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br />4 = COLUMNSTORE_ARCHIVE: **Применимо к**: с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> **Примечание.** Полнотекстовые индексы будут сжиматься в любом выпуске [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |data_compression_desc|**nvarchar(60)**|Указывает состояние сжатия для каждой секции. Возможные значения для таблиц rowstore: NONE, ROW и PAGE. Возможные значения для таблиц columnstore: COLUMNSTORE и COLUMNSTORE_ARCHIVE.|  
   
 ## <a name="permissions"></a>Разрешения  

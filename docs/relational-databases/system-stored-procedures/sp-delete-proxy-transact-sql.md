@@ -18,14 +18,14 @@ helpviewer_keywords:
 ms.assetid: 44a1db13-b7f2-4dab-a1b5-b8dafb41737c
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: a5750e7a2346f55d97e19ba58db548f726b38cd2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fd717f645b9e53d08f6dabbfc1ea5779c373056e
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68009192"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72305106"
 ---
-# <a name="spdeleteproxy-transact-sql"></a>sp_delete_proxy (Transact-SQL)
+# <a name="sp_delete_proxy-transact-sql"></a>sp_delete_proxy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Удаляет указанную учетную запись-посредник.  
@@ -40,23 +40,23 @@ sp_delete_proxy [ @proxy_id = ] id , [ @proxy_name = ] 'proxy_name'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @proxy_id = ] id` Идентификационный номер прокси-сервера для удаления. *Proxy_id* — **int**, значение по умолчанию NULL.  
+`[ @proxy_id = ] id` идентификационный номер прокси-сервера, который необходимо удалить. *Proxy_id* имеет **тип int**и значение по умолчанию NULL.  
   
-`[ @proxy_name = ] 'proxy_name'` Имя прокси-сервера для удаления. *Proxy_name* — **sysname**, значение по умолчанию NULL.  
+`[ @proxy_name = ] 'proxy_name'` имя удаляемого прокси-сервера. Аргумент *proxy_name* имеет тип **sysname**и значение по умолчанию NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- **0** (успешное завершение) или **1** (неуспешное завершение)  
+ **0** (успешное завершение) или **1** (сбой)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
  None  
   
 ## <a name="remarks"></a>Примечания  
- Либо **@proxy_name** или **@proxy_id** должен быть указан. Если указаны оба аргумента, они должны ссылаться на одну и ту же учетную запись-посредник, в противном случае хранимая процедура завершается ошибкой.  
+ Необходимо указать либо **\@proxy_name** , либо **\@proxy_id** . Если указаны оба аргумента, они должны ссылаться на одну и ту же учетную запись-посредник, в противном случае хранимая процедура завершается ошибкой.  
   
  Если шаг задания ссылается на указанную учетную запись-посредник, хранимая процедура завершается с ошибкой.  
   
 ## <a name="permissions"></a>Разрешения  
- По умолчанию только члены **sysadmin** предопределенной роли сервера могут выполнять процедуру **sp_delete_proxy**.  
+ По умолчанию **sp_delete_proxy**может выполнять только члены предопределенной роли сервера **sysadmin** .  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере производится удаление учетной записи-посредника `Catalog application proxy`.  
@@ -71,6 +71,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Хранимая процедура sp_add_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-proxy-transact-sql.md)  
+ [sp_add_proxy &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-proxy-transact-sql.md)  
   
   

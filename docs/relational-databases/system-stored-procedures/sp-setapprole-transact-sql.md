@@ -17,14 +17,14 @@ helpviewer_keywords:
 ms.assetid: cf0901c0-5f90-42d4-9d5b-8772c904062d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 44e7b670ef5f16b6df861e939f9b8b2d9ace8dd5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: de85505295ceff98f404b2ba4c1effe3946fdbe5
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68104436"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72304966"
 ---
-# <a name="spsetapprole-transact-sql"></a>sp_setapprole (Transact-SQL)
+# <a name="sp_setapprole-transact-sql"></a>sp_setapprole (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
@@ -45,27 +45,27 @@ sp_setapprole [ @rolename = ] 'role',
 
 ## <a name="arguments"></a>Аргументы
 
-`[ @rolename = ] 'role'` — Имя роли приложения, определенной в текущей базе данных. *роль* — **sysname**, не имеет значения по умолчанию. *роль* должен существовать в текущей базе данных.  
+`[ @rolename = ] 'role'` — имя роли приложения, определенной в текущей базе данных. Аргумент *Role* имеет тип **sysname**и не имеет значения по умолчанию. *роль* должна существовать в текущей базе данных.  
   
-`[ @password = ] { encrypt N'password' }` — Пароль, необходимый для активации роли приложения. *пароль* — **sysname**, не имеет значения по умолчанию. *пароль* может быть закодирован с помощью ODBC **шифрования** функции. При использовании **шифрования** функции, пароль должен быть преобразован в строку Юникода, поместив **N** перед первой кавычкой.  
+`[ @password = ] { encrypt N'password' }` — это пароль, необходимый для активации роли приложения. Аргумент *Password* имеет тип **sysname**и не имеет значения по умолчанию. *пароль* может быть замаскирован с помощью функции **шифрования** ODBC. При использовании функции **Encrypt** пароль необходимо преобразовать в строку в Юникоде, поместив **N** перед первой кавычкой.  
   
- Параметр шифрования не поддерживается на соединениях, использующих **SqlClient**.  
+ Параметр Encrypt не поддерживается для соединений, использующих **SqlClient**.  
   
 > [!IMPORTANT]  
-> ODBC **шифрования** функция не обеспечивает шифрование. Не следует полагаться на эту функцию для защиты паролей, передаваемых по сети. При передаче таких данных по сети используйте протокол SSL или IPSec.
+> Функция **шифрования** ODBC не обеспечивает шифрование. Не следует полагаться на эту функцию для защиты паролей, передаваемых по сети. При передаче таких данных по сети используйте протокол SSL или IPSec.
   
- **@encrypt = «none»**  
+ **@encrypt = "None"**  
  Указывает, что кодирование пароля не используется. Пароль передается серверу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] как обычный текст. Это значение по умолчанию.  
   
- **@encrypt= «odbc»**  
- Указывает, что ODBC закодирует пароль с помощью ODBC **шифрования** функцию перед отправкой компоненту [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Этот аргумент может быть указан, только если используется клиент ODBC или поставщик OLE DB для SQL Server.  
+ **@encrypt = "ODBC"**  
+ Указывает, что ODBC будет маскировать пароль с помощью функции **шифрования** ODBC перед отправкой пароля в [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Этот аргумент может быть указан, только если используется клиент ODBC или поставщик OLE DB для SQL Server.  
   
-`[ @fCreateCookie = ] true | false` Указывает, является ли файл cookie должен быть создан. **значение true,** неявно преобразуется в 1. **false** неявно преобразуется в 0.  
+`[ @fCreateCookie = ] true | false` указывает, следует ли создавать файл cookie. **значение true** неявно преобразуется в 1. **значение false** неявно преобразуется в 0.  
   
-`[ @cookie = ] @cookie OUTPUT` Указывает выходной параметр, содержащий файл cookie. Куки-файл формируется только в том случае, если значение **@fCreateCookie** — **true**. **varbinary(8000)**  
+`[ @cookie = ] @cookie OUTPUT` указывает выходной параметр, в котором будет содержаться файл cookie. Файл cookie создается только в том случае, если значение **\@fCreateCookie** равно **true**. **varbinary(8000)**  
   
 > [!NOTE]  
-> Параметр **OUTPUT** куки-файла для инструкции **sp_setapprole** в настоящее время описан в документации как **varbinary(8000)** , что верно определяет его максимальную длину. Однако текущая реализация возвращает параметр **varbinary(50)** . Приложения должны продолжать зарезервировать **varbinary(8000)** таким образом, приложение для правильной работы в случае увеличения размера куки в будущем выпуске.
+> Параметр **OUTPUT** куки-файла для инструкции **sp_setapprole** в настоящее время описан в документации как **varbinary(8000)** , что верно определяет его максимальную длину. Однако текущая реализация возвращает параметр **varbinary(50)** . Приложения должны продолжать зарезервировать **varbinary (8000)** , чтобы приложение продолжало работать правильно, если размер возвращаемого файла cookie увеличивается в будущем выпуске.
   
 ## <a name="return-code-values"></a>Значения кода возврата
 
@@ -73,17 +73,17 @@ sp_setapprole [ @rolename = ] 'role',
   
 ## <a name="remarks"></a>Примечания
 
- После приложение активации роли с помощью **sp_setapprole**, роль остается активной, пока пользователь отключается от сервера или выполняет **sp_unsetapprole**. **sp_setapprole** может быть запущена только непосредственными [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкций. **sp_setapprole** не может быть выполнена внутри другой хранимой процедуры или определяемой пользователем транзакции.  
+ После активации роли приложения с помощью процедуры **sp_setapprole**роль остается активной до тех пор, пока пользователь не отключится от сервера или не выполнит **sp_unsetapprole**. Процедура **sp_setapprole** может выполняться только прямыми инструкциями [!INCLUDE[tsql](../../includes/tsql-md.md)]. Процедура **sp_setapprole** не может быть выполнена в другой хранимой процедуре или в пользовательской транзакции.  
   
- Обзор ролей приложения, см. в разделе [ролей приложения](../../relational-databases/security/authentication-access/application-roles.md).  
+ Общие сведения о ролях приложений см. в разделе [роли приложений](../../relational-databases/security/authentication-access/application-roles.md).  
   
 > [!IMPORTANT]  
-> Чтобы защитить пароля роли приложения, при передаче по сети, следует всегда использовать зашифрованное соединение при включении роли приложения.
-> [!INCLUDE[msCoName](../../includes/msconame-md.md)] ODBC **шифрования** параметр не поддерживается **SqlClient**. Если необходимо сохранить учетные данные, зашифруйте их с помощью функций API. Параметр *пароль* хранится в виде одностороннего хэша. Для сохранения совместимости с более ранними версиями [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], политика сложности паролей не применяется принудительно **sp_addapprole**. Чтобы требовать использование политики сложности паролей, используйте [CREATE APPLICATION ROLE](../../t-sql/statements/create-application-role-transact-sql.md).  
+> Чтобы защитить пароль роли приложения при передаче по сети, следует всегда использовать зашифрованное соединение при включении роли приложения.
+> Параметр **шифрования** [!INCLUDE[msCoName](../../includes/msconame-md.md)] ODBC не поддерживается **SqlClient**. Если необходимо сохранить учетные данные, зашифруйте их с помощью функций API. *Пароль* параметра хранится в виде одностороннего хэша. Чтобы сохранить совместимость с более ранними версиями [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], политика сложности паролей не применяется **sp_addapprole**. Чтобы применить политику сложности паролей, используйте параметр [создать роль приложения](../../t-sql/statements/create-application-role-transact-sql.md).  
   
 ## <a name="permissions"></a>Разрешения
 
-Требуется членство в **открытый** и знания пароля для роли.  
+Требуется членство в **общедоступной** версии и знание пароля для роли.  
   
 ## <a name="examples"></a>Примеры  
   
@@ -118,4 +118,4 @@ GO
 
 ## <a name="see-also"></a>См. также
 
- [Системные хранимые процедуры &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md) [хранимые процедуры безопасности &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md) [CREATE APPLICATION ROLE &#40;Transact-SQL&#41; ](../../t-sql/statements/create-application-role-transact-sql.md) [DROP APPLICATION ROLE &#40;Transact-SQL&#41; ](../../t-sql/statements/drop-application-role-transact-sql.md) [sp_unsetapprole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-unsetapprole-transact-sql.md)
+ [Системные хранимые &#40;процедуры Transact-&#41; SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md) [Security хранимые процедуры &#40;Transact&#41; -SQL](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md) [Create &#40;приложение роль приложения&#41; Transact-SQL](../../t-sql/statements/create-application-role-transact-sql.md) [Drop приложение Role &#40; Transact-SQL&#41; ](../../t-sql/statements/drop-application-role-transact-sql.md) [sp_unsetapprole &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-unsetapprole-transact-sql.md)

@@ -17,23 +17,23 @@ helpviewer_keywords:
 ms.assetid: 59bc993e-7913-4091-89cb-d2871cffda95
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: cf96da996996a98a965d2563c729321318ac400c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 88b0dffa84674b2d7e55895830f28cf1b95cd3dc
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68046205"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72305271"
 ---
-# <a name="spattachdb-transact-sql"></a>sp_attach_db (Transact-SQL)
+# <a name="sp_attach_db-transact-sql"></a>sp_attach_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Присоединение базы данных к серверу.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Мы рекомендуем использовать инструкцию CREATE DATABASE *имя_базы_данных* FOR ATTACH вместо этого. Дополнительные сведения см. в разделе [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] вместо этого рекомендуется использовать CREATE DATABASE *имя_базы_данных* для Attach. Дополнительные сведения см. в разделе [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
   
 > [!NOTE]  
->  Чтобы перестроить несколько файлов журналов, когда один или несколько имеют новое расположение, использовать инструкцию CREATE DATABASE *имя_базы_данных* FOR ATTACH_REBUILD_LOG.  
+>  Чтобы перестроить несколько файлов журнала, если одно или несколько из них имеют новое расположение, используйте CREATE DATABASE *имя_базы_данных* FOR ATTACH_REBUILD_LOG.  
   
 > [!IMPORTANT]  
 >  Не рекомендуется подключать или восстанавливать базы данных, полученные из неизвестных или ненадежных источников. В этих базах данных может содержаться вредоносный код, вызывающий выполнение непредусмотренных инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)] или появление ошибок из-за изменения схемы или физической структуры базы данных. Перед тем как использовать базу данных, полученную из неизвестного или ненадежного источника, выполните на тестовом сервере инструкцию [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) для этой базы данных, а также изучите исходный код в базе данных, например хранимые процедуры и другой пользовательский код.  
@@ -47,9 +47,9 @@ sp_attach_db [ @dbname= ] 'dbname'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @dbname = ] 'dbnam_ '` — Имя базы данных, подключенные к серверу. Имя должно быть уникальным. *DBName* — **sysname**, значение по умолчанию NULL.  
+`[ @dbname = ] 'dbnam_ '` — имя базы данных, которая должна быть присоединена к серверу. Имя должно быть уникальным. Аргумент *dbname* имеет тип **sysname**и значение по умолчанию NULL.  
   
-`[ @filename1 = ] 'filename_n'` Это физическое имя, включая путь файла базы данных. *filename_n* — **nvarchar(260)** , значение по умолчанию NULL. Можно указать до 16 имен файлов. Имена параметров начинаются с **@filename1** и возрастают до **@filename16** . Список имен файлов должен включать хотя бы первичный файл. Первичный файл содержит системные таблицы, указывающие на другие файлы базы данных. Список также должен включать все файлы, перемещенные после отключения базы данных.  
+`[ @filename1 = ] 'filename_n'` — физическое имя файла базы данных, включая путь. *filename_n* имеет тип **nvarchar (260)** и значение по умолчанию NULL. Можно указать до 16 имен файлов. Имена параметров начинаются с **\@filename1** и увеличиваются в **\@filename16**. Список имен файлов должен включать хотя бы первичный файл. Первичный файл содержит системные таблицы, указывающие на другие файлы базы данных. Список также должен включать все файлы, перемещенные после отключения базы данных.  
   
 > [!NOTE]  
 >  Этот аргумент сопоставляется с параметром FILENAME инструкции CREATE DATABASE. Дополнительные сведения см. в разделе [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
@@ -63,7 +63,7 @@ sp_attach_db [ @dbname= ] 'dbname'
  None  
   
 ## <a name="remarks"></a>Примечания  
- **Sp_attach_db** хранимая процедура должна выполняться только в базах данных, которые были предварительно отсоединены от сервера базы данных с помощью явной **sp_detach_db** операции или на скопированных базах данных. Если вам нужно указать более 16 файлов, использовать инструкцию CREATE DATABASE *имя_базы_данных* FOR ATTACH или CREATE DATABASE *имя_базы_данных* FOR_ATTACH_REBUILD_LOG. Дополнительные сведения см. в разделе [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
+ Хранимая процедура **sp_attach_db** должна выполняться только для баз данных, которые ранее были отключены от сервера базы данных с помощью явной операции **sp_detach_db** или скопированных баз данных. Если необходимо указать более 16 файлов, используйте CREATE DATABASE *имя_базы_данных* для Attach или CREATE DATABASE *имя_базы_данных* FOR_ATTACH_REBUILD_LOG. Дополнительные сведения см. в разделе [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
   
  Предполагается, что любые неуказанные файлы находятся в своем последнем известном расположении. Чтобы использовать файл, расположенный в другом месте, необходимо указать его новое расположение.  
   
@@ -83,7 +83,7 @@ sp_attach_db [ @dbname= ] 'dbname'
  При первом присоединении базы данных к новому экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или ее восстановлении копия главного ключа базы данных (зашифрованная главным ключом службы) еще не хранится на сервере. Необходимо расшифровать главный ключ базы данных с помощью инструкции **OPEN MASTER KEY**. Как только главный ключ базы данных будет расшифрован, появится возможность разрешить автоматическую расшифровку в будущем с помощью инструкции **ALTER MASTER KEY REGENERATE**, чтобы оставить на сервере копию главного ключа базы данных, зашифрованного с помощью главного ключа службы. После обновления базы данных с переходом от более ранней версии главный ключ базы данных должен быть создан повторно для использования нового алгоритма шифрования AES. Дополнительные сведения о повторном создании главного ключа базы данных см. в статье [ALTER MASTER KEY (Transact-SQL)](../../t-sql/statements/alter-master-key-transact-sql.md). Время, необходимое для повторного создания главного ключа базы данных с обновлением до алгоритма шифрования AES, зависит от числа объектов, защищаемых главным ключом базы данных. Повторное создание главного ключа базы данных с обновлением до алгоритма шифрования AES необходимо произвести только один раз. Это никак не повлияет на последующие операции повторного создания, выполняемые в соответствии со стратегией смены ключей.  
   
 ## <a name="permissions"></a>Разрешения  
- Сведения об управлении разрешениями при присоединении базы данных, см. в разделе [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
+ Сведения о том, как обрабатываются разрешения при присоединении базы данных, см. в разделе [ &#40;Create&#41;Database SQL Server Transact-SQL](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
   
 ## <a name="examples"></a>Примеры  
  В данном примере происходит подключение файлов из базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] к текущему серверу.  

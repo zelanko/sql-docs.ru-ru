@@ -17,14 +17,14 @@ helpviewer_keywords:
 ms.assetid: 87c7c39c-8e05-4e68-9272-45f908809c3b
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 2b5f416d1f2989cd9392ecac0279e792477cca8d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 857e4139081833980ee6c90eca9d90d16d4c0ad2
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67909186"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72305143"
 ---
-# <a name="sysmailhelpaccountsp-transact-sql"></a>sysmail_help_account_sp (Transact-SQL)
+# <a name="sysmail_help_account_sp-transact-sql"></a>sysmail_help_account_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Предоставляет сведения (за исключением паролей) об учетных записях компонента Database Mail.  
@@ -39,12 +39,12 @@ sysmail_help_account_sp [ [ @account_id = ] account_id | [ @account_name = ] 'ac
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @account_id = ] account_id` Идентификатор учетной записи, учетной записи необходимо вывести сведения. *account_id* — **int**, значение по умолчанию NULL.  
+`[ @account_id = ] account_id` идентификатор учетной записи, для которой необходимо получить список сведений. *account_id* имеет **тип int**и значение по умолчанию NULL.  
   
-`[ @account_name = ] 'account_name'` Имя учетной записи необходимо вывести сведения. *account_name* — **sysname**, значение по умолчанию NULL.  
+`[ @account_name = ] 'account_name'` имя учетной записи, сведения о которой нужно вывести. Аргумент *account_name* имеет тип **sysname**и значение по умолчанию NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- **0** (успешное завершение) или **1** (неуспешное завершение)  
+ **0** (успешное завершение) или **1** (сбой)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
  Возвращает результирующий набор, содержащий столбцы перечисленные ниже.  
@@ -54,27 +54,27 @@ sysmail_help_account_sp [ [ @account_id = ] account_id | [ @account_name = ] 'ac
 |Имя столбца|Тип данных|Описание|  
 |**account_id**|**int**|Идентификатор учетной записи.|  
 |**name**|**sysname**|Имя учетной записи.|  
-|**description**|**nvarchar(256)**|Описание учетной записи.|  
+|**Описание**|**nvarchar(256)**|Описание учетной записи.|  
 |**email_address**|**nvarchar(128)**|Адрес электронной почты для отправки сообщений.|  
 |**display_name**|**nvarchar(128)**|Отображаемое имя учетной записи.|  
 |**replyto_address**|**nvarchar(128)**|Адрес, на который посылаются ответы на сообщения данной учетной записи.|  
 |**serverType**|**sysname**|Тип почтового сервера для учетной записи.|  
-|**имя_сервера**|**sysname**|Имя почтового сервера для учетной записи.|  
+|**имя**|**sysname**|Имя почтового сервера для учетной записи.|  
 |**port**|**int**|Номер порта, который использует почтовый сервер.|  
-|**username**|**nvarchar(128)**|Имя пользователя, используемое для входа на почтовый сервер в случае, если почтовый сервер использует проверку подлинности. Когда **username** имеет значение NULL, компонент Database Mail не использует проверку подлинности для этой учетной записи.|  
-|**use_default_credentials**|**bit**|Указывает, посылать ли почту серверу SMTP с помощью учетных данных компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. **use_default_credentials** имеет тип bit и не имеет значения по умолчанию. Если этот параметр равен 1, компонент Database Mail использует учетные данные службы компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Если этот параметр равен 0, компонент Database Mail использует **@username** и **@password** для проверки подлинности на SMTP-сервера. Если **@username** и **@password** имеют значение NULL, то компонент Database Mail использует анонимную проверку подлинности. Перед указанием этого параметра проконсультируйтесь с администратором SMTP-сервера.|  
-|**enable_ssl**|**bit**|Указывает, шифрует ли компонент Database Mail соединение с помощью протокола SSL. Используйте этот аргумент, если требуется поддержка протокола SSL для SMTP-сервера. **enable_ssl** имеет тип bit и не имеет значения по умолчанию. Значение 1 означает, что компонент Database Mail шифрует соединение при помощи протокола SSL. Значение 0 означает, что компонент Database Mail посылает электронную почту без шифрования при помощи протокола SSL.|  
+|**username**|**nvarchar(128)**|Имя пользователя, используемое для входа на почтовый сервер в случае, если почтовый сервер использует проверку подлинности. Если параметр **username** имеет значение NULL, Database Mail не использует для этой учетной записи проверку подлинности.|  
+|**use_default_credentials**|**bit**|Указывает, посылать ли почту серверу SMTP с помощью учетных данных компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. **use_default_credentials** имеет бит и не имеет значения по умолчанию. Если этот параметр равен 1, компонент Database Mail использует учетные данные службы компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Если этот параметр равен 0, Database Mail использует **\@username** и **\@password** для проверки подлинности на SMTP-сервере. Если **\@username** и **\@password** имеют значение null, Database Mail использует анонимную проверку подлинности. Перед указанием этого параметра проконсультируйтесь с администратором SMTP-сервера.|  
+|**enable_ssl**|**bit**|Указывает, шифрует ли компонент Database Mail соединение с помощью протокола SSL. Используйте этот аргумент, если требуется поддержка протокола SSL для SMTP-сервера. **enable_ssl** имеет бит и не имеет значения по умолчанию. Значение 1 означает, что компонент Database Mail шифрует соединение при помощи протокола SSL. Значение 0 означает, что компонент Database Mail посылает электронную почту без шифрования при помощи протокола SSL.|  
   
 ## <a name="remarks"></a>Примечания  
- Если аргумент *account_id* или *account_name* предоставляется, **sysmail_help_account** выводит сведения для всех учетных записей компонента Database Mail в экземпляре Microsoft SQL Server.  
+ Если не указано *account_id* или *account_name* , **sysmail_help_account** выводит сведения обо всех учетных записях Database Mail в экземпляре Microsoft SQL Server.  
   
- Хранимая процедура **sysmail_help_account_sp** в **msdb** базы данных и принадлежит **dbo** схемы. Процедуру необходимо выполнять с трехкомпонентным именем, если текущая база данных не **msdb**.  
+ Хранимая процедура **sysmail_help_account_sp** находится в базе данных **msdb** и принадлежит схеме **dbo** . Процедура должна быть выполнена с именем, сопоставленным с тремя частями, если текущей базой данных не является **msdb**.  
   
 ## <a name="permissions"></a>Разрешения  
- Разрешения для этой процедуры по умолчанию члены выполнение **sysadmin** предопределенной роли сервера.  
+ По умолчанию разрешения EXECUTE для этой процедуры имеют члены предопределенной роли сервера **sysadmin** .  
   
 ## <a name="examples"></a>Примеры  
- **А. Вывод сведений обо всех учетных записей**  
+ **А. Вывод сведений обо всех учетных записях @ no__t-0  
   
  На следующем примере показано, как выводятся сведения обо всех учетных записях в экземпляре.  
   
@@ -91,7 +91,7 @@ account_id  name                         description                            
 149         Audit Account                Account for audit e-mail.               audit@Adventure-Works.com Automated Mailer (Audit)         NULL            SMTP       smtp.Adventure-Works.com  25          NULL 0                          0        
 ```  
   
- **Б. Вывод сведений об определенной учетной записи**  
+ **Б. Вывод сведений для конкретной учетной записи @ no__t-0  
   
  На следующем примере показано, как выводятся сведения об учетной записи с именем `AdventureWorks Administrator`.  
   
@@ -110,7 +110,7 @@ account_id  name                         description                            
   
 ## <a name="see-also"></a>См. также  
  [Database Mail](../../relational-databases/database-mail/database-mail.md)   
- [Создайте учетную запись почты базы данных](../../relational-databases/database-mail/create-a-database-mail-account.md)   
- [Хранимые процедуры Database Mail &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [Создание учетной записи Database Mail](../../relational-databases/database-mail/create-a-database-mail-account.md)   
+ [Database Mail хранимых &#40;процедур TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

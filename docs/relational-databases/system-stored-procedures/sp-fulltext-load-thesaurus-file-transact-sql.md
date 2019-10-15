@@ -19,18 +19,18 @@ helpviewer_keywords:
 ms.assetid: 73a309c3-6d22-42dc-a6fe-8a63747aa2e4
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 5a71c4d61ec920b51146cc3d3111adefc09f23b3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 96fb5c880346c534c3b956e577f15622e598d48c
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68124234"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72305210"
 ---
-# <a name="spfulltextloadthesaurusfile-transact-sql"></a>sp_fulltext_load_thesaurus_file (Transact-SQL)
+# <a name="sp_fulltext_load_thesaurus_file-transact-sql"></a>sp_fulltext_load_thesaurus_file (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Запускает на экземпляре сервера синтаксический анализ и загрузку данных из файла тезауруса, который соответствует языку с указанным кодом языка. Эту хранимую процедуру полезно использовать после обновления файла тезауруса. Выполнение **sp_fulltext_load_thesaurus_file** запускает повторную компиляцию полнотекстовых запросов, использующих тезаурус указанного кода языка.  
+  Запускает на экземпляре сервера синтаксический анализ и загрузку данных из файла тезауруса, который соответствует языку с указанным кодом языка. Эту хранимую процедуру полезно использовать после обновления файла тезауруса. Выполнение **sp_fulltext_load_thesaurus_file** приводит к перекомпиляции полнотекстовых запросов, использующих ТЕЗАУРУС указанного LCID.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,14 +42,14 @@ sys.sp_fulltext_load_thesaurus_file lcid [ , @loadOnlyIfNotLoaded  = action ]
   
 ## <a name="arguments"></a>Аргументы  
  *lcid*  
- Целое число, сопоставляющее идентификатор локали, для которого необходимо загрузить XML-определение тезауруса. Чтобы получить коды языков, доступных на экземпляре сервера, используйте [sys.fulltext_languages &#40;Transact-SQL&#41; ](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md) представления каталога.  
+ Целое число, сопоставляющее идентификатор локали, для которого необходимо загрузить XML-определение тезауруса. Чтобы получить идентификаторы LCID языков, доступных на экземпляре сервера, используйте представление каталога [Transact-SQL&#41; sys &#40;. fulltext_languages](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md) .  
   
- **@loadOnlyIfNotLoaded**  = *Действие*  
- Указывает, нужно ли загружать файл тезауруса во внутренние таблицы тезауруса в случае, если он уже загружен. *Действие* является одним из:  
+ *действие* **\@loadOnlyIfNotLoaded** =   
+ Указывает, нужно ли загружать файл тезауруса во внутренние таблицы тезауруса в случае, если он уже загружен. *действие* является одним из следующих:  
   
 |Значение|Определение|  
 |-----------|----------------|  
-|**0**|Загружать файл тезауруса независимо от того, загружен ли он. Это поведение по умолчанию **sp_fulltext_load_thesaurus_file**.|  
+|**0**|Загружать файл тезауруса независимо от того, загружен ли он. Это поведение по умолчанию для **sp_fulltext_load_thesaurus_file**.|  
 |1|Загружать файл тезауруса только в случае, если он еще не загружен.|  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
@@ -59,12 +59,12 @@ sys.sp_fulltext_load_thesaurus_file lcid [ , @loadOnlyIfNotLoaded  = action ]
  None  
   
 ## <a name="remarks"></a>Примечания  
- Файлы тезауруса загружаются автоматически полнотекстовыми запросами, использующими этот тезаурус. Чтобы избежать снижения производительности в первый раз на полнотекстовые запросы, мы рекомендуем выполнить **sp_fulltext_load_thesaurus_file**.  
+ Файлы тезауруса загружаются автоматически полнотекстовыми запросами, использующими этот тезаурус. Чтобы избежать этого первого воздействия на полнотекстовые запросы, рекомендуется выполнить **sp_fulltext_load_thesaurus_file**.  
   
- Используйте [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)"**update_languages**" для обновления списка языков, зарегистрированных для полнотекстового поиска.  
+ Используйте [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)'**update_languages**' для обновления списка языков, зарегистрированных в полнотекстовом поиске.  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **sysadmin** предопределенной роли сервера или системный администратор могут выполнять процедуру **sp_fulltext_load_thesaurus_file** хранимой процедуры.  
+ Только члены предопределенной роли сервера **sysadmin** или системного администратора могут выполнять хранимую процедуру **sp_fulltext_load_thesaurus_file** .  
   
  Только системные администраторы имеют право обновлять, изменять и удалять файлы тезауруса.  
   
