@@ -1,7 +1,7 @@
 ---
 title: Шаг 3. Подтверждение концепции, подразумевающее подключение к SQL с помощью pyodbc | Документы Майкрософт
 ms.custom: ''
-ms.date: 08/08/2017
+ms.date: 10/09/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 4bfd6e52-817d-4f0a-a33d-11466e3f0484
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 30ba3db5e23d95128aecbb5cc8974faeb6d58d75
-ms.sourcegitcommit: 6413b7495313830ad1ae5aefe0c09e8e7a284b07
+ms.openlocfilehash: faa2d63e0d1104665768ea436986b8fd3a52c107
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "71016843"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251782"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-pyodbc"></a>Шаг 3. Эксперимент, подразумевающий подключение к SQL с помощью pyodbc
 
@@ -76,7 +76,24 @@ while row:
     print 'Inserted Product key is ' + str(row[0]) 
     row = cursor.fetchone()
 ```  
-  `      
-  ## <a name="next-steps"></a>Следующие шаги  
+
+## <a name="azure-active-directory-aad-and-the-connection-string"></a>Azure Active Directory (AAD) и строка подключения
+
+pyODBC использует драйвер Microsoft ODBC для SQL Server.
+Если ваша версия драйвера ODBC — 17,1 или более поздней версии, можно использовать интерактивный режим AAD драйвера ODBC через pyODBC.
+Этот параметр AAD Interactive работает, если Python и pyODBC позволяют драйверу ODBC открывать диалоговое окно.
+Этот параметр доступен только в операционной системе Windows.
+
+### <a name="example-connection-string-for-aad-interactive-authentication"></a>Пример строки подключения для интерактивной проверки подлинности AAD
+
+Ниже приведен пример строки подключения ODBC, в которой указывается Интерактивная проверка подлинности AAD:
+
+- `server=Server;database=Database;UID=UserName;Authentication=ActiveDirectoryInteractive;`
+
+Дополнительные сведения о параметрах проверки подлинности AAD драйвера ODBC см. в следующей статье:
+
+- [Использование Azure Active Directory с драйвером ODBC](../../odbc/using-azure-active-directory.md#new-andor-modified-dsn-and-connection-string-keywords)
+
+## <a name="next-steps"></a>Следующие шаги
   
 Дополнительные сведения см. в [центре разработчиков Python](https://azure.microsoft.com/develop/python/).
