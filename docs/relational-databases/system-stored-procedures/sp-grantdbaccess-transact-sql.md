@@ -17,21 +17,21 @@ helpviewer_keywords:
 ms.assetid: 3eb09513-03f1-42f8-9917-3a1f3a579bec
 ms.author: vanto
 author: VanMSFT
-ms.openlocfilehash: 184ebbde266ab21c0fa94ebff0e2be0aca61988b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3b88badb8b1852617d9edd8acd31f2c19258cca7
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68123796"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72304863"
 ---
-# <a name="spgrantdbaccess-transact-sql"></a>sp_grantdbaccess (Transact-SQL)
+# <a name="sp_grantdbaccess-transact-sql"></a>sp_grantdbaccess (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Добавляет нового пользователя в текущую базу данных.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Используйте [CREATE USER](../../t-sql/statements/create-user-transact-sql.md) вместо этого.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] используйте вместо этого [CREATE USER](../../t-sql/statements/create-user-transact-sql.md) .  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,23 +43,23 @@ sp_grantdbaccess [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @loginame = ] 'login_ '` Имя группы Windows, имя входа Windows или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] входа должны быть сопоставлены новому пользователю базы данных. Имена групп Windows и имена входа Windows должны быть дополнены именем домена Windows в виде *домена*\\*входа*, например **LONDON\Joeb**. Указанное имя входа не может быть уже сопоставлено с пользователем в базе данных. *Имя входа* — **sysname**, не имеет значения по умолчанию.  
+`[ @loginame = ] 'login_ '` — имя группы Windows, имя входа Windows или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имя входа для сопоставления с новым пользователем базы данных. Имена групп Windows и имен входа Windows должны быть дополнены именем домена Windows в формате *домен*\\*Login*; Например, **LONDON\Joeb**. Указанное имя входа не может быть уже сопоставлено с пользователем в базе данных. *имя входа* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-``[ @name_in_db = ] 'name_in_db' [ OUTPUT]`` — Это имя для нового пользователя базы данных. *name_in_db* является ВЫХОДНОЙ переменной с типом данных **sysname**и значение по умолчанию NULL. Если не указан, *входа* используется. Если указано как переменная OUTPUT со значением NULL, **@name_in_db** присваивается *входа*. *name_in_db* не должен существовать в текущей базе данных.  
+``[ @name_in_db = ] 'name_in_db' [ OUTPUT]`` — это имя нового пользователя базы данных. *name_in_db* — это выходная переменная с типом данных **sysname**и ЗНАЧЕНИЕМ по умолчанию NULL. Если значение не указано, используется *имя входа* . Если параметр указан как ВЫХОДная переменная со значением NULL, для параметра **\@name_in_db** задано значение *Login*. *name_in_db* уже не должен существовать в текущей базе данных.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
 ## <a name="remarks"></a>Примечания  
- **sp_grantdbaccess** вызывает создание пользователя, которая поддерживает дополнительные параметры. Сведения о создании пользователей базы данных, см. в разделе [CREATE USER &#40;Transact-SQL&#41;](../../t-sql/statements/create-user-transact-sql.md). Чтобы удалить пользователя базы данных из базы данных, используйте [DROP USER](../../t-sql/statements/drop-user-transact-sql.md).  
+ **sp_grantdbaccess** вызывает CREATE USER, который поддерживает дополнительные параметры. Дополнительные сведения о создании пользователей базы данных см. в разделе [Create &#40;user&#41;Transact-SQL](../../t-sql/statements/create-user-transact-sql.md). Чтобы удалить пользователя базы данных из базы данных, используйте [инструкцию DROP USER](../../t-sql/statements/drop-user-transact-sql.md).  
   
- **sp_grantdbaccess** не может выполняться внутри пользовательской транзакции.  
+ **sp_grantdbaccess** нельзя выполнить в пользовательской транзакции.  
   
 ## <a name="permissions"></a>Разрешения  
- Требуется членство в **db_owner** предопределенной роли базы данных или **db_accessadmin** предопределенной роли базы данных.  
+ Требуется членство в предопределенной роли базы данных **db_owner** или предопределенной роли базы данных **db_accessadmin** .  
   
 ## <a name="examples"></a>Примеры  
- В следующем примере используется `CREATE USER` Добавление пользователя базы данных для имени входа Windows `Edmonds\LolanSo` в текущей базе данных. Новому пользователю присваивается имя `Lolan`. Этот метод является предпочтительным при создании пользователя базы данных.  
+ В следующем примере `CREATE USER` используется для добавления пользователя базы данных для имени входа Windows `Edmonds\LolanSo` в текущую базу данных. Новому пользователю присваивается имя `Lolan`. Этот метод является предпочтительным при создании пользователя базы данных.  
   
 ```sql
 CREATE USER Lolan FOR LOGIN [Edmonds\LolanSo];  

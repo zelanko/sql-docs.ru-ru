@@ -1,5 +1,5 @@
 ---
-title: sys.database_files (Transact-SQL) | Документация Майкрософт
+title: sys. database_files (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 09/19/2016
 ms.prod: sql
@@ -20,14 +20,14 @@ ms.assetid: 0f5b0aac-c17d-4e99-b8f7-d04efc9edf44
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 37ec05a27421b8b55fb0085dbac97ab564bc5bff
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c314c00931e24049551e4a630c56001b14792ece
+ms.sourcegitcommit: c7a202af70fd16467a498688d59637d7d0b3d1f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67915096"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72313725"
 ---
-# <a name="sysdatabasefiles-transact-sql"></a>sys.database_files (Transact-SQL)
+# <a name="sysdatabase_files-transact-sql"></a>sys.database_files (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Содержит по одной строке для каждого из файлов базы данных, в которых она хранится. Это представление на каждую базу данных.  
@@ -35,21 +35,21 @@ ms.locfileid: "67915096"
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**file_id**|**int**|Идентификатор файла в базе данных.|  
-|**file_guid**|**uniqueidentifier**|Идентификатор GUID файла.<br /><br /> NULL = база данных обновлена с предыдущей версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**file_guid**|**uniqueidentifier**|Идентификатор GUID файла.<br /><br /> NULL = база данных была обновлена с более ранней версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (действует для SQL Server 2005 и более ранних версий).|  
 |**type**|**tinyint**|Тип файла:<br /><br /> 0 = строки (включает файлы полнотекстовых каталогов, которые обновляются или создаются в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])<br /><br /> 1 = журнал.<br /><br /> 2 = FILESTREAM.<br /><br /> 3 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 4 = полнотекстовый (полнотекстовые каталоги с датой, более ранней, чем [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]; полнотекстовые каталоги, которые были обновлены или созданы в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], сообщат о типе файлов 0).|  
 |**type_desc**|**nvarchar(60)**|Описание типа файла:<br /><br /> ROWS (включает файлы полнотекстовых каталогов, которые обновляются или создаются в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).<br /><br /> LOG<br /><br /> FILESTREAM<br /><br /> FULLTEXT (полнотекстовые каталоги в версии, предшествующей [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).|  
 |**data_space_id**|**int**|Значение может быть больше или равно 0. Значение, равное 0, представляет файл журнала базы данных, а значение больше 0 представляет идентификатор файловой группы, в которой хранится этот файл данных.|  
 |**name**|**sysname**|Логическое имя файла в базе данных.|  
-|**physical_name**|**nvarchar(260)**|Имя файла в операционной системе. Если база данных размещается с AlwaysOn [вторичная реплика](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md), **physical_name** указывает на папку первичной реплики базы данных. Правильное расположение файла для чтения базы данных-получателя, выполните запрос [sys.sysaltfiles](../../relational-databases/system-compatibility-views/sys-sysaltfiles-transact-sql.md).|  
+|**physical_name**|**nvarchar(260)**|Имя файла в операционной системе. Если база данных размещена в [доступной для чтения вторичной реплике](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)AlwaysOn, **physical_name** указывает расположение файла базы данных первичной реплики. Для правильного расположения файла базы данных-получателя, доступной для чтения, запросите представление [sys. sysaltfiles](../../relational-databases/system-compatibility-views/sys-sysaltfiles-transact-sql.md).|  
 |**state**|**tinyint**|Состояние файла:<br /><br /> 0 = ONLINE<br /><br /> 1 = RESTORING<br /><br /> 2 = RECOVERING<br /><br /> 3 = RECOVERY_PENDING<br /><br /> 4 = SUSPECT<br /><br /> 5 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 6 = OFFLINE<br /><br /> 7 = DEFUNCT|  
 |**state_desc**|**nvarchar(60)**|Описание состояния файла:<br /><br /> ONLINE<br /><br /> RESTORING<br /><br /> RECOVERING<br /><br /> RECOVERY_PENDING<br /><br /> SUSPECT<br /><br /> OFFLINE<br /><br /> DEFUNCT<br /><br /> Дополнительные сведения см. в разделе [Состояния файлов](../../relational-databases/databases/file-states.md).|  
-|**size**|**int**|Текущий размер файла в страницах по 8 КБ.<br /><br /> 0 = не определено.<br /><br /> Для моментального снимка базы данных аргумент size отражает максимальное пространство, которое моментальный снимок может использовать только для файла.<br /><br /> Для контейнеров файловых групп FILESTREAM размер отражает текущий используемый размер контейнера.|  
-|**max_size**|**int**|Максимальный размер файла в страницах по 8 КБ:<br /><br /> 0 = Увеличение размера запрещено.<br /><br /> -1 = размер файла может увеличиваться до полного заполнения диска.<br /><br /> 268435456 = файл журнала может увеличиваться до 2 ТБ.<br /><br /> Для контейнеров файловых групп FILESTREAM max_size отражает максимальный размер контейнера.<br /><br /> Обратите внимание на то, что базы данных, которые обновляются с размером файла журнала неограниченного возвращают -1 для максимального размера файла журнала.|  
-|**рост**|**int**|0 = Файл имеет фиксированный размер и не будет увеличиваться.<br /><br /> > 0 = размер файла будет увеличиваться автоматически.<br /><br /> Если значение is_percent_growth = 0, шаг увеличения размера указывается в единицах по 8 КБ, с округлением до ближайших 64 КБ.<br /><br /> Если значение аргумента is_percent_growth = 1, шаг увеличения размера выражается в процентах от общего размера.|  
+|**size**|**int**|Текущий размер файла в страницах по 8 КБ.<br /><br /> 0 = не определено.<br /><br /> Для моментального снимка базы данных аргумент size отражает максимальное пространство, которое моментальный снимок может использовать только для файла.<br /><br /> Для контейнеров файловой группы FILESTREAM размер отражает текущий используемый размер контейнера.|  
+|**max_size**|**int**|Максимальный размер файла в страницах по 8 КБ:<br /><br /> 0 = Увеличение размера запрещено.<br /><br /> -1 = размер файла может увеличиваться до полного заполнения диска.<br /><br /> 268435456 = файл журнала может увеличиваться до 2 ТБ.<br /><br /> Для контейнеров файловой группы FILESTREAM max_size отражает максимальный размер контейнера.<br /><br /> Обратите внимание, что базы данных, которые были обновлены с неограниченным размером файла журнала, будут сообщать-1 о максимальном размере файла журнала.|  
+|**квот**|**int**|0 = Файл имеет фиксированный размер и не будет увеличиваться.<br /><br /> > 0 = файл будет автоматически расти.<br /><br /> Если значение is_percent_growth = 0, шаг увеличения размера указывается в единицах по 8 КБ, с округлением до ближайших 64 КБ.<br /><br /> Если значение аргумента is_percent_growth = 1, шаг увеличения размера выражается в процентах от общего размера.|  
 |**is_media_read_only**|**bit**|1 = файл находится на носителе только для чтения.<br /><br /> 0 = файл размещен на носителе для чтения-записи.|  
 |**is_read_only**|**bit**|1 = файл помечен как файл только для чтения.<br /><br /> 0 = файл помечен для чтения-записи.|  
 |**is_sparse**|**bit**|1 = разреженный файл.<br /><br /> 0 = неразреженный файл.<br /><br /> Дополнительные сведения см. в разделе [Просмотр размера разреженного файла снимка базы данных (Transact-SQL)](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md).|  
-|**значение аргумента is_percent_growth**|**bit**|1 = размер файла увеличивается в процентах.<br /><br /> 0 = абсолютное увеличение размера в страницах.|  
+|**is_percent_growth**|**bit**|1 = размер файла увеличивается в процентах.<br /><br /> 0 = абсолютное увеличение размера в страницах.|  
 |**is_name_reserved**|**bit**|1 = имя удаленного файла (name или physical_name) доступно для использования только после следующего резервного копирования журнала. После того как файлы удалены из базы данных, логические имена остаются в зарезервированном состоянии до следующего резервного копирования журнала. Этот столбец является важным только в случае использования модели полного восстановления и модели восстановления с неполным протоколированием.|  
 |**create_lsn**|**numeric(25,0)**|Регистрационный номер транзакции в журнале (LSN), на котором создан файл.|  
 |**drop_lsn**|**numeric(25,0)**|Номер LSN, с которым файл удален.<br /><br /> 0 = имя файла недоступно для повторного использования.|  
@@ -71,7 +71,7 @@ ms.locfileid: "67915096"
  Необходимо быть членом роли **public**. Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
 
 ## <a name="examples"></a>Примеры  
-Следующая инструкция возвращает имя, размер файла и объем свободного места для каждого файла базы данных.
+Следующая инструкция возвращает имя, размер файла и объем пустого пространства для каждого файла базы данных.
 
 ```
 SELECT name, size/128.0 FileSizeInMB,
@@ -79,11 +79,11 @@ size/128.0 - CAST(FILEPROPERTY(name, 'SpaceUsed') AS int)/128.0
    AS EmptySpaceInMB
 FROM sys.database_files;
 ```
-Дополнительные сведения, при использовании [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], см. в разделе [определение размера базы данных в базе данных SQL Azure версии 12](https://blogs.msdn.microsoft.com/sqlcat/2016/09/21/determining-database-size-in-azure-sql-database-v12/) в блоге группы консультирования клиентов SQL.
+Дополнительные сведения об использовании [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] см. в разделе [Определение размера базы данных в базе данных SQL Azure 12](https://blogs.msdn.microsoft.com/sqlcat/2016/09/21/determining-database-size-in-azure-sql-database-v12/) в блоге группы консультирования клиентов SQL.
   
 ## <a name="see-also"></a>См. также  
  [Представления каталогов баз данных и файлов (Transact-SQL)](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)   
- [Состояния файла](../../relational-databases/databases/file-states.md)   
+ [Состояния файлов](../../relational-databases/databases/file-states.md)   
  [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [sys.master_files (Transact-SQL)](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
  [Database Files and Filegroups](../../relational-databases/databases/database-files-and-filegroups.md)   

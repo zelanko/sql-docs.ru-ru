@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: 3c56cd62-2966-4e87-a986-44cb3fd0b760
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: d1a093364192e3bab32a2fa0234c7198d8e0f3ff
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 5d3f67794eb2825c10b822ce719459b563f046d2
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68771432"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72304824"
 ---
-# <a name="spcopysubscription-transact-sql"></a>sp_copysubscription (Transact-SQL)
+# <a name="sp_copysubscription-transact-sql"></a>sp_copysubscription (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
     
@@ -43,11 +43,11 @@ sp_copysubscription [ @filename = ] 'file_name'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @filename = ] 'file_name'`Строка, указывающая полный путь, включая имя файла, в который сохраняется копия файла данных (MDF). *имя файла* имеет тип **nvarchar (260)** и не имеет значения по умолчанию.  
+`[ @filename = ] 'file_name'` — это строка, указывающая полный путь, включая имя файла, в который сохраняется копия файла данных (MDF). *имя файла* имеет тип **nvarchar (260)** и не имеет значения по умолчанию.  
   
-`[ @temp_dir = ] 'temp_dir'`Имя каталога, содержащего временные файлы. *temp_dir* имеет тип **nvarchar (260)** и значение по умолчанию NULL. Если значение равно NULL [!INCLUDE[msCoName](../../includes/msconame-md.md)] , [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] будет использоваться каталог данных по умолчанию. Каталог должен включать достаточно свободного места для хранения файла с размером, равным суммарному размеру всех файлов баз данных подписчика.  
+`[ @temp_dir = ] 'temp_dir'` — это имя каталога, содержащего временные файлы. *temp_dir* имеет тип **nvarchar (260)** и значение по умолчанию NULL. Если значение равно NULL, будет использоваться каталог данных по умолчанию [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Каталог должен включать достаточно свободного места для хранения файла с размером, равным суммарному размеру всех файлов баз данных подписчика.  
   
-`[ @overwrite_existing_file = ] 'overwrite_existing_file'`Необязательный логический флаг, указывающий, следует ли перезаписывать существующий файл с тем же именем, указанным в **@filename** параметре. *overwrite_existing_file*имеет **бит**и значение по умолчанию **0**. Если значение равно **1**, он перезаписывает файл, заданный параметром **@filename** , если он существует. Если значение **равно 0**, хранимая процедура завершается ошибкой, если файл существует, а файл не перезаписывается.  
+`[ @overwrite_existing_file = ] 'overwrite_existing_file'` является необязательным логическим флагом, указывающим, следует ли перезаписывать существующий файл с тем же именем, указанным в **\@filename**. *overwrite_existing_file*имеет **бит**и значение по умолчанию **0**. Если значение равно **1**, то файл, заданный параметром **\@filename**, перезаписывается, если он существует. Если значение **равно 0**, хранимая процедура завершается ошибкой, если файл существует, а файл не перезаписывается.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
