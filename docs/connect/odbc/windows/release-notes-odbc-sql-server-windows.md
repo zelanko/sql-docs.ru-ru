@@ -11,12 +11,12 @@ ms.reviewer: v-jizho2, v-chojas, genemi
 author: v-makouz
 ms.author: v-makouz
 manager: kenvh
-ms.openlocfilehash: d6eebce61ede6e1e3dd76028a653a00ffa06990e
-ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
+ms.openlocfilehash: 98e7aec7883bc12d04ce24aba7b9a93244f707f6
+ms.sourcegitcommit: 512acc178ec33b1f0403b5b3fd90e44dbf234327
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68702756"
+ms.lasthandoff: 10/08/2019
+ms.locfileid: "72041161"
 ---
 # <a name="release-notes-for-odbc-to-sql-server-on-windows"></a>Заметки о выпуске ODBC для SQL Server в Windows
 
@@ -43,6 +43,16 @@ By the way, in GitHub, the file name is changing today 2019/03/30:
 Thank you.
 GeneMi (and CraigG).  2019/03/30.
 -->
+
+## <a name="1742-october-2019"></a>17.4.2, октябрь 2019 г.
+
+| Добавленная возможность | Сведения |
+| :------------ | :------ |
+| Поддержка дополнительных конечных точек Azure Key Vault | См. сведения об [использовании функции Always Encrypted с драйвером ODBC](../using-always-encrypted-with-the-odbc-driver.md). |
+| Поддержка настройки версии классификации данных | См. статью [Классификация данных](../data-classification.md#bkmk-version). |
+| Теперь драйвер будет устанавливать библиотеку проверки подлинности Azure Active Дриректори (ADAL. dll), используемую для проверки подлинности в Azure. | |
+| Исправления ошибок. | См. статью [Исправления ошибок](../bug-fixes.md). |
+| &nbsp; | &nbsp; |
 
 ## <a name="174-july-2019"></a>17.4, июль 2019 г.
 
