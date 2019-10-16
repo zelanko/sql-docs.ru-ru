@@ -14,12 +14,12 @@ ms.assetid: 5a9e4ddf-3cb1-4baf-94d6-b80acca24f64
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 7553b584a37685fd7fb9455423e55c27c8343e72
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 7ff8009136f95247bc13c213d9b656abfab28ae0
+ms.sourcegitcommit: 512acc178ec33b1f0403b5b3fd90e44dbf234327
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710392"
+ms.lasthandoff: 10/08/2019
+ms.locfileid: "72041197"
 ---
 # <a name="frequently-asked-questions-for-replication-administrators"></a>Вопросы, часто задаваемые администраторам репликации
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -116,14 +116,14 @@ ms.locfileid: "71710392"
 ## <a name="logins-and-object-ownership"></a>Имена входа и принадлежность объектов  
   
 ### <a name="are-logins-and-passwords-replicated"></a>Осуществляется ли репликация имен входа и паролей?  
- Нет. Можно создать пакет служб DTS для передачи имен входа и паролей с издателя на одного или нескольких подписчиков.  
+ Нет. Вы можете создать пакет SSIS для передачи имен входа и паролей от издателя любому числу подписчиков.  
   
 ### <a name="what-are-schemas-and-how-are-they-replicated"></a>Что такое схемы и как они реплицируются?  
  Начиная с [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], *схема* имеет два значения.  
   
--   Определение объекта, например инструкция CREATE TABLE. По умолчанию репликация копирует определения всех реплицируемых объектов на подписчик.  
+-   Определение объекта, например инструкция `CREATE TABLE`. По умолчанию репликация копирует определения всех реплицируемых объектов на подписчик.  
   
--   Пространство имен, в котором создается объект: \<база_данных>.\<схема>.\<объект>. Схемы определяются с использованием инструкции CREATE SCHEMA.  
+-   Пространство имен, в котором создается объект: \<база_данных>.\<схема>.\<объект>. Схемы определяются с помощью инструкции `CREATE SCHEMA`.  
   
 -   Репликации свойственно следующее поведение по умолчанию в мастере создания публикаций, касающееся схем и принадлежности объектов:  
   
@@ -178,7 +178,7 @@ ms.locfileid: "71710392"
  Существует несколько механизмов перестроения индексов. Для репликации можно использовать все эти механизмы без особых предосторожностей, за исключением следующего: в публикациях транзакций в таблицах необходимы первичные ключи, поэтому невозможно удалять и перестраивать первичные ключи в этих таблицах.  
   
 ### <a name="how-do-i-add-or-change-indexes-on-publication-and-subscription-databases"></a>Как добавить или изменить индексы в базах данных публикации или подписки?  
- Индексы можно добавлять на издателе или подписчиках без особых предосторожностей в отношении репликации (не следует забывать, что индексы влияют на производительность). CREATE INDEX и ALTER INDEX не реплицируются, поэтому при добавлении или изменении индекса, например на издателе, необходимо создать или изменить его и на подписчике, чтобы он отразился и там.  
+ Индексы можно добавлять на издателе или подписчиках без особых предосторожностей в отношении репликации (не следует забывать, что индексы влияют на производительность). `CREATE INDEX` и `ALTER INDEX` не реплицируются, поэтому, например, при добавлении или изменении индекса на издателе необходимо также создать или изменить его на подписчике, чтобы он отразился и там.  
   
 ### <a name="how-do-i-move-or-rename-files-for-databases-involved-in-replication"></a>Как переместить или переименовать файлы баз данных, участвующих в репликации?  
  В предыдущих версиях [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , предшествующих [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], перемещение или переименование файлов баз данных требовало отсоединения и повторного присоединения базы данных. Поскольку реплицируемую базу данных отсоединить нельзя, необходимо было вначале удалить репликацию из этих баз данных. Начиная с версии [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], можно перемещать или переименовывать файлы без отсоединения и повторного присоединения базы данных, не влияя при этом на репликацию. Дополнительные сведения о перемещении и переименовании файлов см. в статье [ALTER DATABASE (Transact-SQL)](../../../t-sql/statements/alter-database-transact-sql.md).  
@@ -187,7 +187,7 @@ ms.locfileid: "71710392"
  Вначале удалите статью из публикации с помощью хранимых процедур [sp_droparticle](../../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md), [sp_dropmergearticle](../../../relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql.md) или диалогового окна **Свойства публикации — \<публикация>** , а затем удалите ее из базы данных с помощью инструкции `DROP <Object>`. После добавления подписок невозможно удалить статьи из моментального снимка или публикаций транзакций; вначале следует удалить подписки. Дополнительные сведения см. в статье [Добавление и удаление статей в существующих публикациях](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md).  
   
 ### <a name="how-do-i-add-or-drop-columns-on-a-published-table"></a>Как добавить или удалить столбцы в публикуемой таблице?  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддерживает разнообразные изменения схем для публикуемых объектов, включая добавление и удаление столбцов. Например, при выполнении инструкции ALTER TABLE … DROP COLUMN на издателе эта инструкция будет реплицирована на подписчиках, а затем выполнена для удаления столбца. Подписчики, использующие версии [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , предшествующие [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] , поддерживают добавление и удаление столбцов с помощью хранимых процедур [sp_repladdcolumn](../../../relational-databases/system-stored-procedures/sp-repladdcolumn-transact-sql.md) и [sp_repldropcolumn](../../../relational-databases/system-stored-procedures/sp-repldropcolumn-transact-sql.md). Дополнительные сведения см. в статье [Внесение изменений в схемы баз данных публикации](../../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md).  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддерживает разнообразные изменения схем для публикуемых объектов, включая добавление и удаление столбцов. Например, выполните `ALTER TABLE … DROP COLUMN` на издателе, и эта инструкция будет реплицирована на подписчиках, а затем выполнена для удаления столбца. Подписчики, использующие версии [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , предшествующие [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] , поддерживают добавление и удаление столбцов с помощью хранимых процедур [sp_repladdcolumn](../../../relational-databases/system-stored-procedures/sp-repladdcolumn-transact-sql.md) и [sp_repldropcolumn](../../../relational-databases/system-stored-procedures/sp-repldropcolumn-transact-sql.md). Дополнительные сведения см. в статье [Внесение изменений в схемы баз данных публикации](../../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md).  
   
 ## <a name="replication-maintenance"></a>Обслуживание репликации  
   

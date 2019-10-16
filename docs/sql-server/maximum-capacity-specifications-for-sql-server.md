@@ -1,6 +1,6 @@
 ---
 title: Спецификации максимально допустимых параметров SQL Server | Документация Майкрософт
-ms.date: 11/06/2017
+ms.date: 10/07/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.custom: ''
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 13e95046-0e76-4604-b561-d1a74dd824d7
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 08097b4aac0d14a3da21443a4903df90797b9316
-ms.sourcegitcommit: 36c3ead6f2a3628f58040acf47f049f0b0957b8a
+ms.openlocfilehash: 0fae5c47de0b8017d3f374afe18e926eea9818cc
+ms.sourcegitcommit: 84e6922a57845a629391067ca4803e8d03e0ab90
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71687372"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72008436"
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>Спецификации максимально допустимых параметров SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -85,7 +85,8 @@ ms.locfileid: "71687372"
 |Блокировок на соединение||Максимальное число блокировок на сервер||  
 |Блокировок на экземпляр [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]||Ограничено только объемом памяти|Это значение относится только к статическим блокировкам. Количество динамических блокировок ограничивается только объемом памяти.|  
 |Уровней вложенных хранимых процедур||32|Если хранимая процедура обращается больше чем к 64 базам данных или более чем к двум базам в режиме чередования, может возникнуть ошибка.|  
-|Вложенных запросов||32||  
+|Вложенных запросов||32||    
+|Вложенных транзакций||4 294 967 296||     
 |Уровней вложенных триггеров||32||  
 |Количество некластеризованных индексов на одну таблицу||999||  
 |Количество уникальных выражений в предложении GROUP BY, если присутствует одна из следующих конструкций: CUBE, ROLLUP, GROUPING SETS, WITH CUBE, WITH ROLLUP||32||  

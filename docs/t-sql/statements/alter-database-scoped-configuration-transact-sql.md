@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b7fdd216dd93863e2c783de5da315b2ac208a449
-ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
+ms.openlocfilehash: 0637a5f421dd1301314f4da3b3d899bfcf0cab93
+ms.sourcegitcommit: aece9f7db367098fcc0c508209ba243e05547fe1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71713216"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72261011"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -114,17 +114,22 @@ CLEAR PROCEDURE_CACHE [plan_handle]
 
 MAXDOP **=** {\<value> | PRIMARY } **\<value>**
 
-Задает используемый по умолчанию параметр MAXDOP для использования в инструкциях. 0 — это значение по умолчанию, указывающее, что вместо этого будет использоваться конфигурация сервера. MAXDOP на уровне базы данных переопределяет (если имеет значение, отличное от 0) **максимальную степень параллелизма**, заданную на уровне сервера процедурой sp_configure. Указания запросов все равно могут переопределять MAXDROP с областью действия "база данных", чтобы настроить конкретные запросы, требующие другой параметр. Все эти параметры ограничены параметром MAXDOP, заданным для группы рабочей нагрузки.
+Задает параметр максимальной степени параллелизма, **max degree of parallelism (MAXDOP)** , по умолчанию для использования в инструкциях. 0 — это значение по умолчанию, указывающее, что вместо этого будет использоваться конфигурация сервера. MAXDOP на уровне базы данных переопределяет (если имеет значение, отличное от 0) **максимальную степень параллелизма**, заданную на уровне сервера процедурой sp_configure. Указания запросов все равно могут переопределять MAXDOP в области базы данных для настройки конкретных запросов, требующих особых параметров. Все эти параметры ограничены параметром MAXDOP, заданным для [группы рабочей нагрузки]().
 
-Для ограничения количества процессоров в плане параллельного выполнения может быть использован параметр max degree of parallelism. SQL Server учитывает планы параллельного выполнения для запросов, операций DDL с индексами, параллельной вставки, изменения столбца в режиме "в сети", параллельного сбора статистики и заполнения статических курсоров и курсоров, управляемых набором ключей.
+Параметр MAXDOP можно использовать для ограничения числа процессоров, применяемых при параллельном выполнении планов. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] учитывает планы параллельного выполнения для запросов, операций с индексами на языке описания данных (DDL), параллельной вставки, изменения столбцов в оперативном режиме, параллельного сбора статистики и для заполнения курсоров (статических и управляемых набором ключей).
+
+> [!NOTE]
+> Ограничение параметра **max degree of parallelism (MAXDOP)** задается для каждой [задачи](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md). Оно не задается для каждого [запроса](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md). Это означает, что во время параллельного выполнения один запрос может порождать множество задач, назначаемых [планировщику](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md). Дополнительные сведения см. в [Руководстве по архитектуре потоков и задач](../../relational-databases/thread-and-task-architecture-guide.md). 
 
 Сведения о настройке этого параметра на уровне экземпляра см. в разделе [Настройка параметра конфигурации сервера max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).
 
 > [!NOTE]
-> В базе данных SQL Azure на уровне сервера **максимальная степень параллелизма** всегда устанавливается со значением 0. MAXDOP можно настроить для каждой базы данных, как описано в текущей статье. Рекомендации по оптимальной настройке MAXDOP см. в разделе [Дополнительные ресурсы](https://docs.microsoft.com/en-us/sql/t-sql/statements/alter-database-scoped-configuration-transact-sql?view=sql-server-2017#additional-resources).
+> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] использует конфигурацию, где параметру **max degree of parallelism** на уровне сервера всегда задается значение 0. MAXDOP можно настроить для каждой базы данных, как описано в текущей статье. Рекомендации по оптимальной настройке MAXDOP см. в разделе [Дополнительные ресурсы](#additional-resources).
 
 > [!TIP]
-> Для выполнения этого на уровне запросов добавьте [указание запроса](../../t-sql/queries/hints-transact-sql-query.md) **MAXDOP**.
+> На уровне запросов используйте [указание запроса](../../t-sql/queries/hints-transact-sql-query.md) **MAXDOP**.    
+> На уровне сервера используйте [параметр конфигурации сервера](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) **max degree of parallelism (MAXDOP)** .     
+> На уровне рабочих нагрузок используйте [параметр конфигурации группы рабочей нагрузки Resource Governor](../../t-sql/statements/create-workload-group-transact-sql.md) **MAX_DOP**.    
 
 PRIMARY
 
@@ -344,7 +349,7 @@ LAST_QUERY_PLAN_STATS **=** { ON | **OFF**}
 
 **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) (функция на этапе общедоступной предварительной версии)
 
-Позволяет включить или отключить сбор статистики плана последнего запроса (эквивалент фактического плана выполнения) в [sys.dm_exec_query_plan_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md).
+Позволяет включать и отключать сбор статистики последнего плана запроса (эквивалент фактического плана выполнения) в [sys.dm_exec_query_plan_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md).
 
 ## <a name="Permissions"></a> Permissions
 
@@ -550,13 +555,13 @@ ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE 0x06000500F443610F003B
 
 [Рекомендации по операциям с индексами в оперативном режиме](../../relational-databases/indexes/guidelines-for-online-index-operations.md)
 
-## <a name="more-information"></a>Дополнительные сведения
-
-- [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md)
-- [sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)
-- [Представления каталога баз данных и файлов](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)
-- [Параметры конфигурации сервера](../../database-engine/configure-windows/server-configuration-options-sql-server.md)
-- [Об операциях с индексами в сети](../../relational-databases/indexes/how-online-index-operations-work.md)
-- [Выполнение операции с индексами в сети](../../relational-databases/indexes/perform-index-operations-online.md)
-- [ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md)
-- [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)
+## <a name="more-information"></a>Дополнительные сведения   
+ [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md)      
+ [Рекомендации и правила для параметра конфигурации "max degree of parallelism" в SQL Server](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines)      
+ [sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)    
+ [Представления каталога баз данных и файлов](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)    
+ [Параметры конфигурации сервера](../../database-engine/configure-windows/server-configuration-options-sql-server.md)    
+ [Об операциях с индексом в сети](../../relational-databases/indexes/how-online-index-operations-work.md)    
+ [Выполнение операций с индексами в режиме "в сети"](../../relational-databases/indexes/perform-index-operations-online.md)    
+ [ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md)    
+ [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)    

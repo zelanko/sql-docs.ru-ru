@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: f3059e42-5f6f-4a64-903c-86dca212a4b4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 06237e28f9ba75e798da1af57964cc8b251d0b26
-ms.sourcegitcommit: f6bfe4a0647ce7efebaca11d95412d6a9a92cd98
+ms.openlocfilehash: ef4bf385e2ce0ecd140ad402c43d0039669c56e8
+ms.sourcegitcommit: 454270de64347db917ebe41c081128bd17194d73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/05/2019
-ms.locfileid: "71974409"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72006065"
 ---
 # <a name="alter-server-configuration-transact-sql"></a>ALTER SERVER CONFIGURATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -258,7 +258,7 @@ OFF
 
 **\<memory_optimized> ::=**
 
-**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)])
+**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]).
 
 ON <br>
 Включает все функции уровня экземпляра, которые являются частью семейства функций [выполняющейся в памяти базы данных](../../relational-databases/in-memory-database.md). Сейчас к ним относятся [оптимизированные для памяти метаданные tempdb](../../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata) и [гибридный буферный пул](../../database-engine/configure-windows/hybrid-buffer-pool.md). Для вступления в силу требуется перезагрузка.
@@ -284,9 +284,11 @@ HYBRID_BUFFER_POOL = ON | OFF <br>
 Эта инструкция не поддерживает триггеры DDL.  
   
 ## <a name="permissions"></a>Разрешения  
-Требует разрешений ALTER SETTINGS для параметра PROCESS AFFINITY. Разрешения ALTER SETTINGS и VIEW SERVER STATE для параметров свойств журнала диагностики и отказоустойчивого кластера и разрешение CONTROL SERVER для параметра контекста кластера HADR.  
-  
-Необходимо разрешение ALTER SERVER STATE для параметра расширения буферного пула.  
+Требования:
+- Разрешения `ALTER SETTINGS` для параметра сопоставления процессов.
+- Разрешения `ALTER SETTINGS` и `VIEW SERVER STATE` для параметров журнала диагностики и свойств отказоустойчивого кластера.
+- Разрешение `CONTROL SERVER` для параметра контекста кластера HADR.  
+- Разрешение `ALTER SERVER STATE` для параметра расширения буферного пула.  
   
 Библиотека DLL ресурсов компонента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../../includes/ssde-md.md)] запускается от имени учетной записи Local System. В результате в учетной записи Local System должен быть доступ на чтение и запись к пути, указанному в параметре журнала диагностики.  
   
@@ -337,14 +339,14 @@ SET PROCESS AFFINITY CPU=60 TO 200;
 #### <a name="d-setting-affinity-to-cpu-0-on-a-system-that-has-two-cpus"></a>Г. Задание привязки к процессору 0 в системе с двумя процессорами  
 В следующем примере демонстрируется задание соответствия для `CPU=0` на компьютере с двумя процессорами. Перед выполнением следующей инструкции использовалась внутренняя битовая маска соответствия 00.  
   
-```  
+```sql  
 ALTER SERVER CONFIGURATION SET PROCESS AFFINITY CPU=0;  
 ```  
   
 #### <a name="e-setting-affinity-to-auto"></a>Д. Задание привязки AUTO  
 В этом примере параметр соответствия устанавливается на `AUTO`.  
   
-```  
+```sql  
 ALTER SERVER CONFIGURATION  
 SET PROCESS AFFINITY CPU=AUTO;  
 ```  

@@ -30,12 +30,12 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: 9f1aefd6b05e5bace4bfc296c14c881645030f5e
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.openlocfilehash: 330fa479beb3dc86ba290d36baa54870e8e61d6e
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71952755"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251352"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>Параметры ALTER DATABASE SET (Transact-SQL)
 
@@ -53,7 +53,7 @@ ms.locfileid: "71952755"
 
 > |||||
 > |---|---|---|---|
-> |**\*_ SQL Server \*_** &nbsp;|[Отдельная база данных/эластичный пул Базы данных SQL<br />](alter-database-transact-sql-set-options.md?view=azuresqldb-current)|[Управляемый экземпляр Базы данных SQL<br />](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)|[Хранилище данных<br />SQL](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)|||
+> |**\* _SQL Server \*_** &nbsp;|[Отдельная база данных/эластичный пул Базы данных SQL<br />](alter-database-transact-sql-set-options.md?view=azuresqldb-current)|[Управляемый экземпляр Базы данных SQL<br />](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)|[Хранилище данных<br />SQL](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)|||
 
 &nbsp;
 
@@ -300,7 +300,7 @@ CURRENT
 
 Выполняет действие в текущей базе данных. `CURRENT` работает не со всеми параметрами и не во всех контекстах. Если `CURRENT` не работает, укажите имя базы данных.
 
-**\<accelerated_database_recovery> ::=**        
+**\<accelerated_database_recovery> ::=**         
 **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)])
 
 [Ускорение восстановления базы данных](../../relational-databases/accelerated-database-recovery-management.md) (ADR) для отдельных баз данных. По умолчанию в [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] параметр ADR имеет значение OFF. Используя этот синтаксис, можно при необходимости назначить определенную файловую группу для данных постоянного хранилища версий (PVS). Если файловая группа не указана, PVS сохраняется в файловой группе PRIMARY. Примеры и дополнительные сведения см. в разделе [Ускоренное восстановление баз данных](../../relational-databases/accelerated-database-recovery-management.md).
@@ -405,7 +405,7 @@ OFF
 
 Дополнительные сведения, описывающие условия применения синхронного и асинхронного обновлений статистики, см. в разделе "Параметры статистики" статьи [Статистика](../../relational-databases/statistics/statistics.md#statistics-options).
 
-<a name="auto_tuning"></a> **\<automatic_tuning_option> ::=**        
+<a name="auto_tuning"></a> **\<automatic_tuning_option> ::=**         
 **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)])
 
 Включает или отключает параметр [автоматической настройки](../../relational-databases/automatic-tuning/automatic-tuning.md) `FORCE_LAST_GOOD_PLAN`.
@@ -419,7 +419,7 @@ ON
 OFF        
 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] сообщает о потенциальном снижении производительности запросов, вызванном изменениями планов запросов в представлении [sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md). Однако эти рекомендации не применяются автоматически. Пользователь может отслеживать активные рекомендации и устранять выявленные проблемы, применяя сценарии [!INCLUDE[tsql-md](../../includes/tsql-md.md)], которые отображаются в представлении. Значение по умолчанию — OFF.
 
-**\<change_tracking_option> ::=**        
+**\<change_tracking_option> ::=**         
 **Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и [!INCLUDE[ssSDSFull](../../includes/sssds-md.md)]
 
 Определяет параметры отслеживания изменений. Отслеживание изменений можно включить или отключить, а также установить или изменить параметры. Примеры использования см. далее в этой статье.
@@ -444,7 +444,7 @@ CHANGE_RETENTION = *retention_period* { **DAYS** | HOURS | MINUTES }
 OFF        
 Отключает отслеживание изменений для базы данных. Перед отключением отслеживания изменений для базы данных предварительно отключите отслеживание изменений для всех таблиц.
 
-**\<containment_option> ::=**        
+**\<containment_option> ::=**         
 **Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
 
 Управляет параметрами автономной работы базы данных.
@@ -488,12 +488,12 @@ GLOBAL
 
 Вы можете определить состояние этого параметра, проверив столбец `is_local_cursor_default` в представлении каталога [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md). Состояние можно также определить, проверив свойство `IsLocalCursorsDefault` функции [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md).
 
-**\<database_mirroring>**        
+**\<database_mirroring>**         
 **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 Описания аргументов см. в статье [Зеркальное отображение базы данных ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md).
 
-**\<date_correlation_optimization_option> ::=**        
+**\<date_correlation_optimization_option> ::=**         
 **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 Управляет параметром date_correlation_optimization.
@@ -534,7 +534,7 @@ RESUME
 
 Состояние шифрования базы данных и состояние сканирования шифрования можно просмотреть с помощью динамического административного представления [sys.dm_database_encryption_keys](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md).
 
-**\<db_state_option> ::=**        
+**\<db_state_option> ::=**         
 **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 Управляет состоянием базы данных.
@@ -598,7 +598,7 @@ MULTI_USER
 
 Вы можете определить состояние этого параметра, проверив столбец `user_access` в представлении каталога [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md). Состояние можно также определить, проверив свойство `UserAccess` функции [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md).
 
-**\<delayed_durability_option> ::=**        
+**\<delayed_durability_option> ::=**         
 **Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
 
 Управляет тем, является ли фиксация транзакций полностью устойчивой или отложенной устойчивой.
@@ -612,7 +612,7 @@ ALLOWED
 FORCED        
 Все транзакции, следующие за SET FORCED, являются отложенными устойчивыми. Все параметры устойчивости, заданные в блоке ATOMIC или инструкции COMMIT, не учитываются.
 
-**\<external_access_option> ::=**        
+**\<external_access_option> ::=**         
 **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 Управляет возможностью обращения к базе данных из внешних ресурсов, таких как объекты другой базы данных.
@@ -676,7 +676,7 @@ TWO_DIGIT_YEAR_CUTOFF
 
 Указывает целое число в промежутке от 1753 до 9999, представляющее пороговое значение года для преобразования двухзначной записи лет в четырехзначную. Этот параметр допустим только в случае, если параметр CONTAINMENT равен PARTIAL. Если параметр CONTAINMENT установлен в состояние NONE, возникнут ошибки.
 
-**\<FILESTREAM_option> ::=**        
+**\<FILESTREAM_option> ::=**         
 **Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
 
 Управляет параметрами таблиц FileTables.
@@ -691,15 +691,15 @@ READ_ONLY
 FULL        
 Включает полный нетранзакционный доступ к данным FILESTREAM в таблицах FileTable.
 
-DIRECTORY_NAME = *\<directory_name>*        
+DIRECTORY_NAME = *\<directory_name>*         
 Имя каталога, совместимое с Windows. Это имя должно быть уникальным среди всех имен каталогов уровня базы данных в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Проверка уникальности выполняется без учета регистра, независимо от параметров сортировки. Этот параметр должен быть задан до создания таблицы FileTable в этой базе данных.
 
-**\<HADR_options> ::=**        
+**\<HADR_options> ::=**         
 **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 Дополнительные сведения см. в описании [ALTER DATABASE SET HADR](../../t-sql/statements/alter-database-transact-sql-set-hadr.md).
 
-**\<mixed_page_allocation_option> ::=**        
+**\<mixed_page_allocation_option> ::=**         
 **Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
 
 Управляет возможностью базы данных создавать начальные страницы с использованием смешанного экстента для первых восьми страниц таблицы или индекса.
@@ -726,7 +726,7 @@ FORCED
 
 Текущее состояние этого параметра можно определить по столбцу `is_parameterization_forced column` в представлении каталога [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).
 
-<a name="query-store"></a> **\<query_store_options> ::=**        
+<a name="query-store"></a> **\<query_store_options> ::=**         
 **Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
 
 ON | **OFF** | CLEAR [ ALL ]        
@@ -802,7 +802,7 @@ QUERY_CAPTURE_MODE имеет тип **nvarchar**.
 MAX_PLANS_PER_QUERY        
 Определяет максимальное количество поддерживаемых планов для каждого запроса. Значение по умолчанию равно 200. MAX_PLANS_PER_QUERY имеет тип **int**.
 
-**\<query_capture_policy_option_list> :: =**        
+**\<query_capture_policy_option_list> :: =**         
 **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 3.0)
 
 Управляет параметрами политики записи для хранилища запросов. За исключением STALE_CAPTURE_POLICY_THRESHOLD, эти параметры определяют условия OR, которые должны выполняться для запросов, записываемых в определенное пороговое значение устаревшей политики записи.
@@ -819,7 +819,7 @@ TOTAL_COMPILE_CPU_TIME_MS
 TOTAL_EXECUTION_CPU_TIME_MS        
 Определяет общее время ЦП, затраченное на выполнение, которое запрос использовал за ознакомительный период. Значение по умолчанию — 100, то есть для порогового значения устаревшей политики записи по умолчанию запрос должен иметь общее время ЦП, затраченное на выполнение, не менее 100 мс за один день, чтобы быть сохраненным в хранилище запросов. TOTAL_EXECUTION_CPU_TIME_MS имеет тип **int**.
 
-**\<recovery_option> ::=**        
+**\<recovery_option> ::=**         
 **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 Управляет параметрами восстановления базы данных и проверкой ошибок дискового ввода-вывода.
@@ -888,7 +888,7 @@ None
 
 Текущее состояние этого параметра можно определить, проверив значение столбца `page_verify_option` в представлении каталога [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) или свойство `IsTornPageDetectionEnabled` функции [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md).
 
-**\<remote_data_archive_option> ::=**        
+**\<remote_data_archive_option> ::=**         
 **Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
 
 Включает или отключает Stretch Database для базы данных. Дополнительные сведения см. в разделе [Stretch Database](../../sql-server/stretch-database/stretch-database.md).
@@ -922,7 +922,7 @@ OFF
 
 Отключение Stretch Database не приводит к стиранию удаленной базы данных. Чтобы удалить удаленную базу данных, воспользуйтесь порталом Azure.
 
-**\<service_broker_option> ::=**        
+**\<service_broker_option> ::=**         
 **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 Управляет следующими параметрами компонента [!INCLUDE[ssSB](../../includes/sssb-md.md)]: включает и отключает доставку сообщений, задает новый идентификатор компонента [!INCLUDE[ssSB](../../includes/sssb-md.md)] или устанавливает приоритеты диалога в значение ON или OFF.
@@ -1056,7 +1056,7 @@ OFF
 > [!IMPORTANT]
 > В будущей версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] параметр ANSI_PADDING всегда будет иметь значение ON, а все приложения, явно присваивающие ему значение OFF, будут вызывать ошибку. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Рекомендуется всегда задавать для параметра ANSI_PADDING значение ON. При создании или управлении индексами, основанными на вычисляемых столбцах или индексированных представлениях, параметр ANSI_PADDING должен быть установлен в ON.
 
-Столбцы с типами **char(_n_)** и **binary(_n_)**, допускающие значения NULL, выравниваются по длине столбца, если параметр ANSI_PADDING имеет значение ON. Конечные пробелы и нули отбрасываются, если параметр ANSI_PADDING имеет значение OFF. Столбцы с типами **char(_n_)** и **binary(_n_)**, которые не допускают значений NULL, всегда выравниваются по длине столбца.
+Столбцы с типами **char(_n_)** и **binary(_n_)** , допускающие значения NULL, выравниваются по длине столбца, если параметр ANSI_PADDING имеет значение ON. Конечные пробелы и нули отбрасываются, если параметр ANSI_PADDING имеет значение OFF. Столбцы с типами **char(_n_)** и **binary(_n_)** , которые не допускают значений NULL, всегда выравниваются по длине столбца.
 
 Настройки уровня соединения, установленные с помощью инструкции SET, переопределяют настройки уровня базы данных по умолчанию для ANSI_PADDING. Клиенты ODBC и OLE DB задают параметр уровня соединения инструкции SET, устанавливая ANSI_PADDING в значение ON для сеанса по умолчанию. Клиенты выполняют инструкцию при подключении к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в описании [SET ANSI_PADDING](../../t-sql/statements/set-ansi-padding-transact-sql.md).
 
@@ -1149,7 +1149,7 @@ OFF
 
 Состояние этого параметра можно определить, проверив значение столбца `is_recursive_triggers_on` в представлении каталога [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) или свойства `IsRecursiveTriggersEnabled` функции [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md).
 
-**\<target_recovery_time_option> ::=**        
+**\<target_recovery_time_option> ::=**         
 **Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
 
 Указывает частоту косвенных контрольных точек для каждой базы данных. Начиная с версии [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], значение по умолчанию для новых баз данных равно **1 минуте**. Оно означает, что база данных будет использовать косвенные контрольные точки. Для более старых версий по умолчанию установлено значение 0, при котором базой данных используются автоматические контрольные точки, а их частота зависит от параметра интервала для восстановления экземпляра сервера. [!INCLUDE[msCoName](../../includes/msconame-md.md)] рекомендует 1 минуту для большинства систем.
@@ -1632,7 +1632,7 @@ OFF
 
 Дополнительные сведения, описывающие условия применения синхронного и асинхронного обновлений статистики, см. в разделе "Параметры статистики" статьи [Статистика](../../relational-databases/statistics/statistics.md#statistics-options).
 
-<a name="auto_tuning"></a> **\<automatic_tuning_option> ::=**        
+<a name="auto_tuning"></a> **\<automatic_tuning_option> ::=**         
 **Область применения**: [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]
 
 Управляет автоматическими параметрами для [автоматической настройки](../../relational-databases/automatic-tuning/automatic-tuning.md).
@@ -1948,7 +1948,7 @@ OFF
 > [!IMPORTANT]
 > В будущей версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] параметр ANSI_PADDING всегда будет иметь значение ON, а все приложения, явно присваивающие ему значение OFF, будут вызывать ошибку. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Рекомендуется всегда задавать для параметра ANSI_PADDING значение ON. При создании или управлении индексами, основанными на вычисляемых столбцах или индексированных представлениях, параметр ANSI_PADDING должен быть установлен в ON.
 
-Столбцы с типами **char(_n_)** и **binary(_n_)**, допускающие значения NULL, выравниваются по длине столбца, если параметр ANSI_PADDING имеет значение ON. Конечные пробелы и нули отбрасываются, если параметр ANSI_PADDING имеет значение OFF. Столбцы с типами **char(_n_)** и **binary(_n_)**, которые не допускают значений NULL, всегда выравниваются по длине столбца.
+Столбцы с типами **char(_n_)** и **binary(_n_)** , допускающие значения NULL, выравниваются по длине столбца, если параметр ANSI_PADDING имеет значение ON. Конечные пробелы и нули отбрасываются, если параметр ANSI_PADDING имеет значение OFF. Столбцы с типами **char(_n_)** и **binary(_n_)** , которые не допускают значений NULL, всегда выравниваются по длине столбца.
 
   Настройки уровня соединения, установленные с помощью инструкции SET, переопределяют настройки уровня базы данных по умолчанию для ANSI_PADDING. Клиенты ODBC и OLE DB задают параметр уровня соединения инструкции SET, устанавливая ANSI_PADDING в значение ON для сеанса по умолчанию. Клиенты выполняют инструкцию при подключении к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в описании [SET ANSI_PADDING](../../t-sql/statements/set-ansi-padding-transact-sql.md).
 
@@ -2410,7 +2410,7 @@ OFF
 
 Дополнительные сведения, описывающие условия применения синхронного и асинхронного обновлений статистики, см. в подразделе "Использование параметров статистики на уровне базы данных" раздела [Статистика](../../relational-databases/statistics/statistics.md).
 
-<a name="auto_tuning"></a> **\<automatic_tuning_option> ::=**        
+<a name="auto_tuning"></a> **\<automatic_tuning_option> ::=**         
 **Область применения**: [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]
 
 Включает или отключает параметр [автоматической настройки](../../relational-databases/automatic-tuning/automatic-tuning.md) `FORCE_LAST_GOOD_PLAN`.
@@ -2683,7 +2683,7 @@ OFF
 > [!IMPORTANT]
 > В будущей версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] параметр ANSI_PADDING всегда будет иметь значение ON, а все приложения, явно присваивающие ему значение OFF, будут вызывать ошибку. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Рекомендуется всегда задавать для параметра ANSI_PADDING значение ON. При создании или управлении индексами, основанными на вычисляемых столбцах или индексированных представлениях, параметр ANSI_PADDING должен быть установлен в ON.
 
-Столбцы с типами **char(_n_)** и **binary(_n_)**, допускающие значения NULL, выравниваются по длине столбца, если параметр ANSI_PADDING имеет значение ON. Конечные пробелы и нули отбрасываются, если параметр ANSI_PADDING имеет значение OFF. Столбцы с типами **char(_n_)** и **binary(_n_)**, которые не допускают значений NULL, всегда выравниваются по длине столбца.
+Столбцы с типами **char(_n_)** и **binary(_n_)** , допускающие значения NULL, выравниваются по длине столбца, если параметр ANSI_PADDING имеет значение ON. Конечные пробелы и нули отбрасываются, если параметр ANSI_PADDING имеет значение OFF. Столбцы с типами **char(_n_)** и **binary(_n_)** , которые не допускают значений NULL, всегда выравниваются по длине столбца.
 
   Настройки уровня соединения, установленные с помощью инструкции SET, переопределяют настройки уровня базы данных по умолчанию для ANSI_PADDING. Клиенты ODBC и OLE DB задают параметр уровня соединения инструкции SET, устанавливая ANSI_PADDING в значение ON для сеанса по умолчанию. Клиенты выполняют инструкцию при подключении к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в описании [SET ANSI_PADDING](../../t-sql/statements/set-ansi-padding-transact-sql.md).
 
@@ -2780,7 +2780,7 @@ OFF
 
 Указывает частоту косвенных контрольных точек для каждой базы данных. Начиная с версии [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], значение по умолчанию для новых баз данных равно **1 минуте**. Оно означает, что база данных будет использовать косвенные контрольные точки. Для более старых версий по умолчанию установлено значение 0, при котором базой данных используются автоматические контрольные точки, а их частота зависит от параметра интервала для восстановления экземпляра сервера. [!INCLUDE[msCoName](../../includes/msconame-md.md)] рекомендует 1 минуту для большинства систем.
 
-TARGET_RECOVERY_TIME **=**_target_recovery_time_ { SECONDS | MINUTES }        
+TARGET_RECOVERY_TIME **=** _target_recovery_time_ { SECONDS | MINUTES }        
 *target_recovery_time*        
 Указывает максимальное время для восстановления определенной базы данных в случае сбоя.
 
@@ -3018,7 +3018,7 @@ OFF
 > [!NOTE]
 > Для [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] необходимо выполнить `ALTER DATABASE SET QUERY_STORE` из пользовательской базы данных. Выполнение этой инструкции из другого экземпляра хранилища данных не поддерживается.
 
-**<result_set_caching_option> ::=**        
+**<result_set_caching_option> ::=**         
 **Область применения**: Хранилище данных SQL Azure (предварительная версия)
 
 Указывает, кэшируется ли результат запроса в базе данных.
@@ -3029,18 +3029,36 @@ ON
 Указывает, что результирующие наборы запросов, возвращаемые из этой базы данных, будут кэшироваться в Хранилище данных SQL Azure.
 
 OFF        
-Указывает, что результирующие наборы запросов, возвращаемые из этой базы данных, не будут кэшироваться в Хранилище данных SQL Azure. Пользователи могут определить, был ли запрос результатов выполнен с попаданием в кэше или промахом кэша, запросив sys.pdw_request_steps с конкретным идентификатором запроса request_id.   Если имеет место попадание в кэше, результат запроса будет содержать один шаг со следующими сведениями:
-
-|**Имя столбца** |**Оператор** |**Значение** |
-|----|----|----|
-| operation_type|=|ReturnOperation|
-|step_index|=|0|
-|location_type|=|Control|
-command|Похоже|%DWResultCacheDb%|
-| | |
+Указывает, что результирующие наборы запросов, возвращаемые из этой базы данных, не будут кэшироваться в Хранилище данных SQL Azure. 
 
 ### <a name="remarks"></a>Remarks
-Эта команда должна выполняться при подключении к базе данных `master`.  Изменение данного параметра базы данных применяется немедленно.  Затраты на хранение связаны с кэшированием результирующих наборов запроса. После отключения кэширования результатов для базы данных ранее сохраненный кэш результатов немедленно удаляется из Хранилища данных SQL Azure. В [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) появился новый столбец с именем is_result_set_caching_on. В нем отображаются параметры кэширования результатов для базы данных.  
+Эта команда должна выполняться при подключении к базе данных `master`.  Изменение данного параметра базы данных применяется немедленно.  Затраты на хранение связаны с кэшированием результирующих наборов запроса. После отключения кэширования результатов для базы данных ранее сохраненный кэш результатов немедленно удаляется из Хранилища данных SQL Azure. 
+
+Выполните эту команду, чтобы проверить конфигурацию кэширования результирующего набора базы данных.  Если кэширование результирующего набора включено, is_result_set_caching_on вернет 1.
+
+```sql
+
+SELECT name, is_result_set_caching_on FROM sys.databases 
+WHERE name = <'Your_Database_Name'>
+
+```
+
+Выполните эту команду, чтобы проверить, как был выполнен запрос — с попаданием или промахом в кэше результатов.  При попадании в кэше result_cache_hit вернет 1. 
+
+```sql
+
+SELECT request_id, command, result_cache_hit FROM sys.pdw_exec_requests 
+WHERE request_id = <'Your_Query_Request_ID'>
+
+```
+
+При включении кэширования результирующих наборов для базы данных результаты будут сохраняться в кэше (пока он не заполнится) для всех запросов, кроме следующих:
+
+- запросы с недетерминированными функциями, такими как DateTime.Now(); 
+- запросы с пользовательскими функциями;
+- запросы, возвращающие данные с размером строк более 64 КБ.   
+
+Запросы с большими результирующими наборами (например, свыше 1 млн строк) могут вызывать снижение производительности во время первого запуска, так как результат кэшируется.
 
 Для запроса повторно используется кэшированный результирующий набор при соблюдении всех следующих требований:
 
@@ -3048,11 +3066,8 @@ command|Похоже|%DWResultCacheDb%|
 1. Имеется точное соответствие между новым запросом и предыдущим запросом, породившим результирующий набор в кэше.
 1. Нет изменений в данных или схеме в таблицах, на основе которых создан кэшированный результирующий набор.  
 
-После включения кэширования результирующих наборов для базы данных результаты сохраняются в кэше для всех запросов, за исключением запросов с недетерминированными функциями, такими как DateTime.Now(), и запросов, возвращающих данные со строками размером свыше 64 КБ, пока кэш не заполнится.   
 
-Запросы с большими результирующими наборами (например, свыше 1 млн строк) могут вызывать снижение производительности во время первого запуска, так как результат кэшируется.
-
-**<snapshot_option> ::=**        
+**<snapshot_option> ::=**         
 **Область применения**: Хранилище данных SQL Azure (предварительная версия)
 
 Задает уровень изоляции транзакции в базе данных.
