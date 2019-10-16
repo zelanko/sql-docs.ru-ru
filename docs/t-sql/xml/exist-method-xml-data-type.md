@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a55b75e0-0a17-4787-a525-9b095410f7af
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: bf4f3d11eeb9975bb399fc58a0fd52d0d56dc5a2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9621d6be1c309930f6104d2193d6127a3167cd7a
+ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68051316"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72278154"
 ---
 # <a name="exist-method-xml-data-type"></a>Метод exist() (тип данных xml)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ select @f;
   
 -   Код `cast as xs:date?` используется для приведения значения к типу **xs:date** с целью сравнения.  
   
--   Значение атрибута **@Somedate** является нетипизированным. При сравнении это значение неявно приводится к типу правой части выражения сравнения, а именно — к типу **xs:date**.  
+-   Значение атрибута **\@Somedate** является нетипизированным. При сравнении это значение неявно приводится к типу правой части выражения сравнения, а именно — к типу **xs:date**.  
   
 -   Вместо выражения **cast as xs:date()** можно использовать функцию-конструктор **xs:date()** . Дополнительные сведения см. в разделе [Функции конструктора (XQuery)](../../xquery/constructor-functions-xquery.md).  
   

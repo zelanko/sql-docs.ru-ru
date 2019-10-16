@@ -11,12 +11,12 @@ ms.assetid: 9f527883-031b-442f-8e95-24bc0151ecbf
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: 051e0a70bedaf7c7731b5f8cd0b9dfe91f078fea
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ed2ab9fadcb9a546d26fd150abaad5d7cc785f86
+ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68082800"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72278307"
 ---
 # <a name="find-similar-and-related-documents-with-semantic-search"></a>Поиск похожих и связанных документов с использованием семантического поиска
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "68082800"
 >  Для целевых столбцов должно быть включено полнотекстовое и семантическое индексирование.  
   
 ###  <a name="HowToIdentifySimilar"></a> Пример. Поиск наиболее важных документов, больше всего схожих с другим документом  
- В следующем примере извлекается до 10 кандидатов, подобных указанному кандидату, обозначенному *@CandidateID* из таблицы HumanResources.JobCandidate в образце базы данных AdventureWorks2012.  
+ В следующем примере извлекается до 10 кандидатов, подобных указанному кандидату, обозначенному *\@CandidateID* из таблицы HumanResources.JobCandidateHumanResources.JobCandidate в примере базы данных AdventureWorks2012.  
   
 ```scr  
 SELECT TOP(10) KEY_TBL.matched_document_key AS Candidate_ID  

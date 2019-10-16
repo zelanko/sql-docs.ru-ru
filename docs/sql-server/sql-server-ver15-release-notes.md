@@ -1,6 +1,6 @@
 ---
 title: Заметки о выпуске SQL Server 2019 | Документация Майкрософт
-ms.date: 08/21/2019
+ms.date: 10/07/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: release-landing
@@ -9,12 +9,12 @@ ms.assetid: 13942af8-5a40-4cef-80f5-918386767a47
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: c7efb49870e148b6a854547d39d4a01139829a89
-ms.sourcegitcommit: 4c7151f9f3f341f8eae70cb2945f3732ddba54af
+ms.openlocfilehash: 9b6895abfa0b09459911eba03b52837379f2d162
+ms.sourcegitcommit: 512acc178ec33b1f0403b5b3fd90e44dbf234327
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71326130"
+ms.lasthandoff: 10/08/2019
+ms.locfileid: "72041187"
 ---
 # <a name="sql-server-2019-preview-release-notes"></a>Заметки о выпуске предварительной версии SQL Server 2019
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -59,6 +59,22 @@ ms.locfileid: "71326130"
     - Windows Server 2016 или более поздней версии. Дополнительные требования см. в статье [Требования к оборудованию и программному обеспечению для установки SQL Server](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).
     - Платформа Microsoft .NET Framework 4.6.2. Доступна в [Центре загрузки](https://www.microsoft.com/download/details.aspx?id=53344).
     - Для Linux обратитесь к разделу [поддерживаемых платформ](../linux/sql-server-linux-setup.md#supportedplatforms).
+
+## <a name="sql-server-installation-may-fail-if-ssms-18x-is-installed"></a>Установка SQL Server может быть прервана, если установлена среда SSMS 18.x.
+
+- **Проблема и последствия для клиентов**: при установке [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] происходит сбой, если следующие установки выполняются в приведенном ниже порядке:
+  1. SQL Server Management Studio (SSMS) версии 18.0, 18.1, 18.2 или 18.3 установлена на сервере.
+  1. Предпринята попытка установки [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] со съемного носителя. Например, с установочного носителя DVD.
+
+- **Обходной путь**:
+  1. Удалите любую версию SSMS выше, чем SSMS 18.3.1.
+  1. Установите более новую версию SSMS (18.3.1 или новее). Для получения последней версии обратитесь к статье [Скачивание SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md).
+  1. Установите [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] как обычно.
+
+  >[!NOTE]
+  >Требуется удаление.
+
+- **Область применения**: релиз-кандидат [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)].
 
 ## <a name="updated-compiler"></a>Обновленный компилятор
 
@@ -111,7 +127,7 @@ ms.locfileid: "71326130"
 - **Обходной путь**:  Установите последнюю версию среды выполнения VC 2013 (x86):
 
   - [Verbose](https://support.microsoft.com/help/2977003/the-latest-supported-visual-c-downloads)
-  - [Direct](https://support.microsoft.com/en-us/help/4032938/update-for-visual-c-2013-redistributable-package)
+  - [Direct](https://support.microsoft.com/help/4032938/update-for-visual-c-2013-redistributable-package)
 
 - **Область применения**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 3.1, CTP 3.0, CTP 2.5.
 
@@ -132,6 +148,10 @@ ms.locfileid: "71326130"
 - **Обходной путь**: Откройте портал MDS и перейдите к ресурсу вручную.
 
 - **Область применения**: релиз-кандидат SQL Server 2019.
+
+## <a name="machine-learning-services"></a>Службы машинного обучения
+
+Сведения о проблемах в Службах машинного обучения SQL Server см. в статье [Known issues in SQL Server Machine Learning Services](../advanced-analytics/known-issues-for-sql-server-machine-learning-services.md) (Известные проблемы в Службах машинного обучения SQL Server).
 
 [!INCLUDE[get-help-options-msft-only](../includes/paragraph-content/get-help-options.md)]
 

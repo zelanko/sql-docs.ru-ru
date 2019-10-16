@@ -24,12 +24,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: d9ec87979d0f91653d5f287749ccfb5b7f806dc4
-ms.sourcegitcommit: 71fac5fee00e0eca57e555f44274dd7e08d47e1e
+ms.openlocfilehash: 9d174dab31e6a3f508d3d3858b87844854f6ee7e
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70161341"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72252215"
 ---
 # <a name="execute-as-transact-sql"></a>EXECUTE AS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -69,8 +69,7 @@ ms.locfileid: "70161341"
 > [!IMPORTANT]  
 >  Пока переключение контекста на пользователя базы данных активно, любая попытка подключиться к ресурсам вне базы данных будет приводить к завершению инструкции с ошибками. Это касается инструкций USE *database*, распределенных запросов, а также запросов, которые ссылаются на другую базу данных, использующую трех- и четырехчастные идентификаторы.  
   
- **'** *name* **'**  
- Допустимое имя пользователя или имя входа. Аргумент *name* должен принадлежать предопределенной роли сервера **sysadmin** либо быть субъектом в базе данных [sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) или [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) соответственно.  
+ *name* — допустимое имя пользователя или имя входа. Аргумент *name* должен принадлежать предопределенной роли сервера **sysadmin** либо быть субъектом в базе данных [sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) или [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) соответственно.  
   
  *name* можно задавать как локальную переменную.  
   
@@ -83,10 +82,10 @@ ms.locfileid: "70161341"
   
  Дополнительные сведения о переключении к предыдущему контексту см. в разделе [REVERT &(Transact-SQL)](../../t-sql/statements/revert-transact-sql.md).  
   
- COOKIE INTO * *@***varbinary_variable*  
- Указывает, что контекст выполнения можно переключить к предыдущему контексту, если при вызове инструкция REVERT WITH COOKIE содержит правильное значение * *@***varbinary_variable*. [!INCLUDE[ssDE](../../includes/ssde-md.md)] передает файл cookie для * *@***varbinary_variable*. Параметр **COOKIE INTO** можно использовать только на нерегламентированном уровне.  
+ COOKIE INTO @*varbinary_variable*  
+ Указывает, что контекст выполнения можно вернуть к предыдущему контексту, если при вызове инструкция REVERT WITH COOKIE содержит правильное значение @*varbinary_variable*. [!INCLUDE[ssDE](../../includes/ssde-md.md)] передает файл cookie для @*varbinary_variable*. Параметр **COOKIE INTO** можно использовать только на нерегламентированном уровне.  
   
- **@** *varbinary_variable* — это **varbinary(8000)** .  
+ @*varbinary_variable* — **это varbinary(8000)** .  
   
 > [!NOTE]  
 >  Параметр **OUTPUT** файла cookie в настоящее время описан в документации как **varbinary(8000)** , что верно определяет его максимальную длину. Однако текущая реализация возвращает параметр **varbinary(100)** . Для продолжения правильной работы в случае увеличения размера файлов cookie в последующих версиях в приложении должен быть зарезервирован тип **varbinary(8000)** .  
@@ -95,7 +94,7 @@ ms.locfileid: "70161341"
  При использовании внутри модуля указывает, что инструкции модуля выполняются в контексте вызывающей стороны.
 При использовании вне модуля инструкция не действует.
  > [!NOTE]  
->  Этот параметр недоступен в хранилище данных SQL.  
+>  Этот параметр недоступен в Хранилище данных SQL.  
   
 ## <a name="remarks"></a>Remarks  
  Изменение в контексте выполнения продолжает действовать до тех пор, пока не произойдет одно из следующих событий.  

@@ -17,16 +17,16 @@ ms.assetid: 9e583a18-5f4a-4054-bfe1-4b2a76630db6
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 5ee4fc6502b9d31d9ccade786c5cc0129c61da22
-ms.sourcegitcommit: 636c02bd04f091ece934e78640b2363d88cac28d
+ms.openlocfilehash: fc0eb0e3e8cd6a095a6f30f44ee08c520db19e45
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67860551"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72289295"
 ---
 # <a name="compare-execution-plans"></a>Сравнение планов выполнения
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-В этом разделе описывается сравнение сходств и различий между фактическими графическими планами выполнения с помощью функции сравнения планов [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. 
+В этом разделе описывается сравнение сходств и различий между фактическими графическими планами выполнения с помощью функции сравнения планов [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Эта функция доступна начиная с [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] версии 16.
   
 > [!NOTE]
 > Фактические планы выполнения создаются после выполнения запросов или пакетов [!INCLUDE[tsql](../../includes/tsql-md.md)]. Поэтому фактический план выполнения содержит сведения о времени выполнения, такие как фактическое число строк, фактические метрики использования ресурса и предупреждения времени выполнения (если они есть). Дополнительные сведения см. в статье [Отображение фактического плана выполнения](../../relational-databases/performance/display-an-actual-execution-plan.md).

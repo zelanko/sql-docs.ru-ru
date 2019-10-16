@@ -9,13 +9,13 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
-ms.date: 09/24/2018
-ms.openlocfilehash: e114c4991d5f3df10537e459263b49152c466f99
-ms.sourcegitcommit: 26715b4dbef95d99abf2ab7198a00e6e2c550243
+ms.date: 10/03/2019
+ms.openlocfilehash: 6f0a2ab021873a2a9414bfbcdb7aed63c2d31056
+ms.sourcegitcommit: cf268c4e39edf00a8552466e9440e79e6a5d0084
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70274831"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72166719"
 ---
 # <a name="extend-the-functionality-of-includename-sosincludesname-sos-shortmd"></a>Расширение функциональности [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
@@ -26,9 +26,11 @@ ms.locfileid: "70274831"
 
 ## <a name="add-azure-data-studio-extensions"></a>Добавление расширений Azure Data Studio
 
-1. Чтобы открыть диспетчер расширений и получить доступ к имеющимся расширениям, щелкните значок расширений или выберите пункт **Расширения** в меню **Вид**.\
-    Чтобы быстро получить доступ к диспетчеру расширений, можно также нажать клавиши `Ctrl+Shift+X` (в Windows или Linux) или `Command+Shift+X` (в macOS).\
-    ![значок диспетчера расширений](media/extensions/extension-manager-icon.png)
+1. Получите доступ к доступным расширениям, выбрав значок "Расширения" или щелкнув **Расширения** в меню **Представление**.
+
+    ![Значок "Диспетчер расширений"](media/extensions/extension-manager-icon.png)
+
+    Чтобы быстро получить доступ к диспетчеру расширений, можно также нажать клавиши `Ctrl+Shift+X` (в Windows или Linux) или `Command+Shift+X` (в macOS).
 
 2. Выберите доступное расширение и просмотрите сведения о нем.
     ![сведения о расширении](media/extensions/extension-details.png)
@@ -36,6 +38,8 @@ ms.locfileid: "70274831"
 3. Выберите нужное расширение и **установите** его.
 
 4. После установки выберите **Перезагрузить**, чтобы включить расширение в Azure Data Studio (требуется только при первой установке расширения).
+
+Если при получении доступа к диспетчеру расширений в Azure Data Studio возникают проблемы, вы можете скачать необходимое расширение на [вики-сайте GitHub](https://github.com/microsoft/azuredatastudio/wiki/List-of-Extensions).
 
 
 ## <a name="access-installed-azure-data-studio-extensions"></a>Доступ к установленным расширениям Azure Data Studio

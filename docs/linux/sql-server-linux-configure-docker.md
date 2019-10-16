@@ -10,12 +10,12 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: c70ba17073030f4fbbe4851fffb84a4c4a30fbbc
-ms.sourcegitcommit: da8bb7abd256b2bebee7852dc0164171eeff11be
+ms.openlocfilehash: 817367c20c2495f29e5d889cc64e5c13a43e9b1e
+ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70988142"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72278250"
 ---
 # <a name="configure-sql-server-container-images-on-docker"></a>Настройка образов контейнеров с SQL Server в Docker
 
@@ -25,6 +25,9 @@ ms.locfileid: "70988142"
 
 > [!NOTE]
 > В этой статье особое внимание уделяется использованию образа mssql-server-linux. Образ с Windows не рассматривается, но сведения о нем вы можете найти на странице [mssql-server-windows](https://hub.docker.com/r/microsoft/mssql-server-windows-developer/) центра Docker Hub.
+
+> [!IMPORTANT]
+> Прежде чем запустить контейнер SQL Server для использования в рабочей среде, просмотрите нашу [политику поддержки для контейнеров SQL Server](https://support.microsoft.com/en-us/help/4047326/support-policy-for-microsoft-sql-server), чтобы убедиться, что вы используете поддерживаемую конфигурацию.
 
 ## <a name="pull-and-run-the-container-image"></a>Извлечение и запуск образа контейнера
 
@@ -761,7 +764,7 @@ docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=MyStrongPassword" -e "MSSQL_DATA_D
 ```
 
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 Сведения о начале работы с образами контейнеров с SQL Server 2017 в Docker можно найти в [кратком руководстве](quickstart-install-connect-docker.md).
 

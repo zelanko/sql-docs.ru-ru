@@ -13,12 +13,12 @@ ms.assetid: aae5ae6d-7c90-4661-a1c5-df704319888a
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6fa2f5a4694b8f8f9f59a5663d996777d0c78df9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: db274ccde27abf92617e0eadf95b1971e740705a
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67986654"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251294"
 ---
 # <a name="using-the-query-store-with-in-memory-oltp"></a>Использование хранилища запросов с выполняющейся в памяти OLTP
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "67986654"
   
 -   При включении хранилища запросов по умолчанию собираются запросы, планы и статистика времени компиляции. Тем не менее сбор статистики выполнения не активируется, если только не включить его явно с помощью [sys.sp_xtp_control_query_exec_stats (Transact-SQL)](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md).  
   
--   При установке для *@new_collection_value* значения 0 хранилище запросов прекращает сбор статистики выполнения для соответствующей процедуры или всего экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+-   При установке для параметра *\@new_collection_value* значения 0 хранилище запросов прекратит сбор статистики выполнения для соответствующей процедуры или всего экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 -   Значение, настроенное с помощью [sys.sp_xtp_control_query_exec_stats (Transact-SQL)](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md), не сохраняется. Не забудьте проверить и заново настроить сбор статистики после перезагрузки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

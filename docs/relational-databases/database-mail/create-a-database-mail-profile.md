@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 58ae749d-6ada-4f9c-bf00-de7c7a992a2d
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 789d56e63572f6744055bb78e819e69e2e15c824
-ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
+ms.openlocfilehash: 09b3759af6fc956d83daee464b5120fa80462dcf
+ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/02/2019
-ms.locfileid: "70211245"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72278313"
 ---
 # <a name="create-a-database-mail-profile"></a>Создание профиля компонента Database Mail
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -93,35 +93,35 @@ ms.locfileid: "70211245"
   
      **EXECUTEmsdb.dbo.sysmail_add_profile_sp**  
   
-     *@profile_name* = '*Имя профиля*'  
+     *\@profile_name* = '*Имя профиля*'  
   
-     *@description* = '*Описание*'  
+     *\@description* = '*Описание*'  
   
-     где *@profile_name* — имя профиля, а *@description* — описание профиля. Этот параметр является необязательным.  
+     *\@profile_name* — имя профиля, а *\@description* — описание профиля. Этот параметр является необязательным.  
   
 -   Для каждой учетной записи выполните хранимую процедуру [sysmail_add_profileaccount_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-add-profileaccount-sp-transact-sql.md), как показано ниже.  
   
      **EXECUTEmsdb.dbo.sysmail_add_profileaccount_sp**  
   
-     *@profile_name* = '*Имя профиля*'  
+     *\@profile_name* = '*Имя профиля*'  
   
-     *@account_name* = '*Имя учетной записи*'  
+     *\@account_name* = '*Имя учетной записи*'  
   
-     *@sequence_number* = '*порядковый номер учетной записи в профиле.* '  
+     *\@sequence_number* = '*порядковый номер учетной записи в профиле.* '  
   
-     где *@profile_name* — имя профиля, а *@account_name* — имя учетной записи, добавляемой к профилю, а *@sequence_number* определяет порядок использования учетных записей в профиле.  
+     *\@profile_name* — имя профиля, *\@account_name* — имя учетной записи, добавляемой к профилю, а *\@sequence_number* определяет порядок использования учетных записей в профиле.  
   
 -   Всем ролям или пользователям баз данных, отправляющим письма с использованием этого профиля, следует предоставить доступ к профилю. Для этого выполните хранимую процедуру [sysmail_add_principalprofile_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-add-principalprofile-sp-transact-sql.md), как показано ниже.  
   
      **EXECUTEmsdb.sysmail_add_principalprofile_sp**  
   
-     *@profile_name* = '*Имя профиля*'  
+     *\@profile_name* = '*Имя профиля*'  
   
-     *@ principal_name* = '*Имя пользователя или роли базы данных*'  
+     *\@principal_name* = '*Имя пользователя или роли базы данных*'  
   
-     *@is_default* = '*Статус профиля по умолчанию* '  
+     *\@is_default* = '*Состояние профиля по умолчанию* '  
   
-     где *@profile_name* — имя профиля, а *@principal_name* — имя пользователя или роли базы данных, а *@is_default* определяет, является ли этот профиль профилем по умолчанию для пользователя или роли базы данных.  
+     *\@profile_name* — имя профиля, *\@principal_name* — имя пользователя или роли базы данных, а *\@is_default* определяет, является ли этот профиль профилем по умолчанию для пользователя или роли базы данных.  
   
  В следующем примере создается учетная запись компонента Database Mail, создается закрытый профиль компонента Database Mail, затем учетная запись добавляется к профилю и предоставляется доступ к профилю для роли базы данных **DBMailUsers** в базе данных **msdb** .  
   
@@ -161,35 +161,35 @@ EXECUTE msdb.dbo.sysmail_add_principalprofile_sp
   
      **EXECUTEmsdb.dbo.sysmail_add_profile_sp**  
   
-     *@profile_name* = '*Имя профиля*'  
+     *\@profile_name* = '*Имя профиля*'  
   
-     *@description* = '*Описание*'  
+     *\@description* = '*Описание*'  
   
-     где *@profile_name* — имя профиля, а *@description* — описание профиля. Этот параметр является необязательным.  
+     *\@profile_name* — имя профиля, а *\@description* — описание профиля. Этот параметр является необязательным.  
   
 -   Для каждой учетной записи выполните хранимую процедуру [sysmail_add_profileaccount_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-add-profileaccount-sp-transact-sql.md), как показано ниже.  
   
      **EXECUTEmsdb.dbo.sysmail_add_profileaccount_sp**  
   
-     *@profile_name* = '*Имя профиля*'  
+     *\@profile_name* = '*Имя профиля*'  
   
-     *@account_name* = '*Имя учетной записи*'  
+     *\@account_name* = '*Имя учетной записи*'  
   
-     *@sequence_number* = '*порядковый номер учетной записи в профиле.* '  
+     *\@sequence_number* = '*порядковый номер учетной записи в профиле.* '  
   
-     где *@profile_name* — имя профиля, а *@account_name* — имя учетной записи, добавляемой к профилю, а *@sequence_number* определяет порядок использования учетных записей в профиле.  
+     *\@profile_name* — имя профиля, *\@account_name* — имя учетной записи, добавляемой к профилю, а *\@sequence_number* определяет порядок использования учетных записей в профиле.  
   
 -   Чтобы предоставить открытый доступ, выполните хранимую процедуру [sysmail_add_principalprofile_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-add-principalprofile-sp-transact-sql.md), как показано ниже.  
   
      **EXECUTEmsdb.sysmail_add_principalprofile_sp**  
   
-     *@profile_name* = '*Имя профиля*'  
+     *\@profile_name* = '*Имя профиля*'  
   
-     *@ principal_name* = '**открытый** или **0**'  
+     *\@ principal_name* = '**открытый** или **0**'  
   
-     *@is_default* = '*Статус профиля по умолчанию* '  
+     *\@is_default* = '*Состояние профиля по умолчанию* '  
   
-     где *@profile_name* — имя профиля; *@principal_name* указывает, что этот профиль является общим, а *@is_default* определяет, является ли этот профиль профилем по умолчанию для пользователя или роли базы данных.  
+     *\@profile_name* — имя профиля, *\@principal_name* указывает, что этот профиль является общим, а *\@is_default* определяет, является ли он профилем по умолчанию для пользователя или роли базы данных.  
   
  В следующем примере создается учетная запись компонента Database Mail, создается закрытый профиль компонента Database Mail, затем учетная запись добавляется к профилю и предоставляется общий доступ к профилю.  
   

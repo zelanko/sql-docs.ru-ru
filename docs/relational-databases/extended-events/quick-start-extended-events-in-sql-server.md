@@ -11,12 +11,12 @@ ms.assetid: 7bb78b25-3433-4edb-a2ec-c8b2fa58dea1
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 18a70b5ec95c382bc37d4bec894f9953389a664a
-ms.sourcegitcommit: 6413b7495313830ad1ae5aefe0c09e8e7a284b07
+ms.openlocfilehash: 4bad2f6cf7f36141b4f5a1d42f648c1631175d36
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "71016845"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251535"
 ---
 # <a name="quickstart-extended-events-in-sql-server"></a>Краткое руководство. Расширенные события в SQL Server
 
@@ -410,9 +410,9 @@ SELECT
 Существует бесчисленное множество ситуаций, в которых можно эффективно использовать расширенные события. В приведенных ниже статьях рассматриваются примеры ситуаций, в которых во время выполнения запросов возникают блокировки.
 
 
-Сценарии использования событий для возникновения блокировок описываются в приведенных ниже статьях. В них также рассматриваются ряд особых приемов, таких как использование **@dbid** и динамической инструкции `EXECUTE (@YourSqlString)`.
+Сценарии использования событий для возникновения блокировок описываются в приведенных ниже статьях. В них также рассматривается ряд особых приемов, таких как использование **\@dbid** и динамической инструкции `EXECUTE (@YourSqlString)`:
 
-- [найти объекты, на которые наложено наибольшее число блокировок](../../relational-databases/extended-events/find-the-objects-that-have-the-most-locks-taken-on-them.md)
+- [Поиск объектов, на которые наложено наибольшее число блокировок](../../relational-databases/extended-events/find-the-objects-that-have-the-most-locks-taken-on-them.md)
   - В этом сценарии используется целевая гистограмма package0.histogram, которая обрабатывает необработанные данные события перед их отображением.
 - [определить запросы, удерживающие блокировки](../../relational-databases/extended-events/determine-which-queries-are-holding-locks.md)
   - В этом примере используется [целевое сопоставление package0.pair_matching](https://msdn.microsoft.com/library/3c87dcfb-543a-4bd8-a73d-1390bdf4ffa3), в котором парой событий является is sqlserver.lock_acquire и lock_release.

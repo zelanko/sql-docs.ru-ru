@@ -1,7 +1,7 @@
 ---
 title: Установка и изменение параметров сортировки базы данных | Документация Майкрософт
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 10/11/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: ''
@@ -13,19 +13,19 @@ ms.assetid: 1379605c-1242-4ac8-ab1b-e2a2b5b1f895
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3411477bbb183c7b9585f0cb93afde0b2bfebc6f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5fe614dc28c434a068378d256a6e1c7aaa59e6d6
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140847"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72289342"
 ---
 # <a name="set-or-change-the-database-collation"></a>Установка и изменение параметров сортировки базы данных
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   В этом разделе описано, как задать и изменить параметры сортировки базы данных в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Если параметры сортировки не указаны, используются параметры сортировки сервера.  
  
 > [!NOTE]
-> После создания базы данных в [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] параметры сортировки невозможно изменить.
+> После создания базы данных в [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] параметры сортировки невозможно изменить, используя [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Их можно изменить только с помощью [!INCLUDE[tsql](../../includes/tsql-md.md)].
 
  **В этом разделе**  
   
@@ -51,30 +51,28 @@ ms.locfileid: "68140847"
   
 -   Если указанные или используемые объектом по ссылке параметры сортировки используют кодовую страницу, не поддерживаемую Windows, то компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] выдаст ошибку.  
 
--   После создания базы данных в [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] параметры сортировки невозможно изменить.
+-   После создания базы данных в [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] параметры сортировки невозможно изменить, используя [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Их можно изменить только с помощью [!INCLUDE[tsql](../../includes/tsql-md.md)].
   
 ###  <a name="Recommendations"></a> Рекомендации  
   
--   Имена поддерживаемых параметров сортировки вы можете найти в статьях [Имя параметров сортировки Windows (Transact-SQL)](../../t-sql/statements/windows-collation-name-transact-sql.md) и [Имя параметров сортировки SQL Server (Transact-SQL)](../../t-sql/statements/sql-server-collation-name-transact-sql.md)или воспользоваться системной функцией [sys.fn_helpcollations (Transact-SQL)](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md) .  
+Имена поддерживаемых параметров сортировки вы можете найти в статьях [Имя параметров сортировки Windows (Transact-SQL)](../../t-sql/statements/windows-collation-name-transact-sql.md) и [Имя параметров сортировки SQL Server (Transact-SQL)](../../t-sql/statements/sql-server-collation-name-transact-sql.md)или воспользоваться системной функцией [sys.fn_helpcollations (Transact-SQL)](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md) .  
   
--   Если изменяются параметры сортировки базы данных, то изменяется следующее:  
+Если изменяются параметры сортировки базы данных, то изменяется следующее:  
   
-    -   Все столбцы типа **char**, **varchar**, **text**, **nchar**, **nvarchar**или **ntext** в системных таблицах заменяются новым параметром сортировки.  
+-   Все столбцы типа **char**, **varchar**, **text**, **nchar**, **nvarchar**или **ntext** в системных таблицах заменяются новым параметром сортировки.  
   
-    -   Все существующие параметры типа **char**, **varchar**, **text**, **nchar**, **nvarchar**или **ntext** и возвращаемые скалярные значения для хранимых процедур и определяемых пользователем функций заменяются новым параметром сортировки.  
+-   Все существующие параметры типа **char**, **varchar**, **text**, **nchar**, **nvarchar**или **ntext** и возвращаемые скалярные значения для хранимых процедур и определяемых пользователем функций заменяются новым параметром сортировки.  
   
-    -   Системные типы данных **char**, **varchar**, **text**, **nchar**, **nvarchar**или **ntext** и все определяемые пользователем типы данных, основанные на этих системных типах данных, заменяются новым параметром сортировки по умолчанию.  
+-   Системные типы данных **char**, **varchar**, **text**, **nchar**, **nvarchar**или **ntext** и все определяемые пользователем типы данных, основанные на этих системных типах данных, заменяются новым параметром сортировки по умолчанию.  
   
--   Можно изменить параметры сортировки любых новых объектов, созданных в пользовательской базе данных, с помощью предложения COLLATE инструкции [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) . Эта инструкция не изменяет параметры сортировки столбцов в любых существующих пользовательских таблицах. Он может быть изменен с помощью предложения COLLATE инструкции [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).  
+Вы можете изменить параметры сортировки любых новых объектов, созданных в пользовательской базе данных, с помощью предложения `COLLATE` инструкции [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md). Эта инструкция **не изменяет** параметры сортировки столбцов в любых существующих пользовательских таблицах. Они могут быть изменены с помощью предложения `COLLATE` инструкции [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).  
   
 ###  <a name="Security"></a> безопасность  
   
 ####  <a name="Permissions"></a> Permissions  
- CREATE DATABASE  
- Требуется разрешение CREATE DATABASE в базе данных **master** или разрешение CREATE ANY DATABASE или ALTER ANY DATABASE.  
+ Чтобы создать базу данных, требуется разрешение `CREATE DATABASE` в базе данных **master**, разрешение `CREATE ANY DATABASE` либо `ALTER ANY DATABASE`.  
   
- ALTER DATABASE  
- Необходимо разрешение ALTER на базу данных.  
+ Чтобы изменить параметры сортировки имеющейся базы данных, требуется разрешение `ALTER` в базе данных.  
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
@@ -113,7 +111,6 @@ SELECT name, collation_name
 FROM sys.databases  
 WHERE name = N'MyOptionsTest';  
 GO  
-  
 ```  
   
 #### <a name="to-change-the-database-collation"></a>Изменение параметров сортировки базы данных  
@@ -136,7 +133,6 @@ SELECT name, collation_name
 FROM sys.databases  
 WHERE name = N'MyOptionsTest';  
 GO  
-  
 ```  
   
 ## <a name="see-also"></a>См. также:  

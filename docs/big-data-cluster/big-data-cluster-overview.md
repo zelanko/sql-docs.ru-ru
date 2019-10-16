@@ -9,12 +9,12 @@ ms.date: 08/28/2019
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: f7790c133ae9f686f2551de8744c6836ffc8ae25
-ms.sourcegitcommit: c4875c097e3aae1b76233777d15e0a0ec8e0d681
+ms.openlocfilehash: cffb1bcf353932183703f810c876b6adacaa7bbf
+ms.sourcegitcommit: 873504573569546eb7223d3afefd89bb3d422d6f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71342026"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72359534"
 ---
 # <a name="what-are-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Что такое [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]?
 
@@ -58,7 +58,7 @@ ms.locfileid: "71342026"
 
 Возможности управления и мониторинга реализуются на основе сочетания средств командной строки, API, порталов и динамических административных представлений.
 
-Вы можете использовать Azure Data Studio для выполнения самых разных задач в кластере больших данных. Эту возможность обеспечивает новое **расширение SQL Server 2019 (предварительная версия)** . Это расширение предоставляет следующие возможности:
+Вы можете использовать Azure Data Studio для выполнения самых разных задач в кластере больших данных. Эту возможность обеспечивает новое **расширение SQL Server 2019 (предварительная версия)**. Это расширение предоставляет следующие возможности:
 
 - Встроенные фрагменты кода для общих задач управления.
 - Просмотр HDFS, загрузка и предварительный просмотр файлов, а также создание каталогов.
@@ -90,7 +90,7 @@ Kubernetes — это оркестратор контейнеров с откр
 
 ### <a id="controlplane"></a> Контроллер
 
-Контроллер обеспечивает управление кластером и его безопасность. Он включает службу управления, хранилище конфигурации, а также другие службы уровня кластера, такие как Kibana, Grafana и Elastic Search.
+Контроллер обеспечивает управление кластером и его безопасность. Он содержит службу управления, хранилище конфигураций и другие службы на уровне кластера, такие как Kibana, Grafana и эластичный Поиск.
 
 ### <a id="computeplane"></a> Вычислительный пул
 
@@ -105,7 +105,7 @@ Kubernetes — это оркестратор контейнеров с откр
 Пул носителей формируется из pod пула носителей, состоящих из SQL Server на Linux, Spark и HDFS. Все узлы хранилища в кластере больших данных SQL Server входят в кластер HDFS.
 
 > [!TIP]
-> Подробный обзор архитектуры кластера больших данных и установки см. в статье [Семинар. Microsoft [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] архитектура @ no__t-1.
+> Подробные сведения об архитектуре и установке кластера больших данных см. в [статье семинар: Microsoft [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] Architecture](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters).
 
 ## <a name="next-steps"></a>Следующие шаги
 

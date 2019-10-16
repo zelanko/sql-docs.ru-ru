@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 87e51f4e-156c-4def-8572-76a15075d75e
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: be32b0412b71f4f6e6ca2044bfdd6ead682572c2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9da0204a19161b918c1a19d5babe28f707f3af52
+ms.sourcegitcommit: 79e6d49ae4632f282483b0be935fdee038f69cc2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68087174"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72173662"
 ---
 # <a name="lesson-2-create-and-apply-a-naming-standards-policy"></a>Урок 2. Создание и применение политики стандартов именования
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "68087174"
   
 2.  В диалоговом окне **Создание нового условия** в поле **Имя** введите **Finance Tables**.  
     1. В списке **Аспект** выберите **Многокомпонентное имя**. 
-    1. В диалоговом окне **Выражение** области **Поле** выберите **@Name** , в поле **Оператор** выберите **Like**, а в поле **Значение** введите ```'fintbl%'``` для того, чтобы все имена таблиц начинались с букв **fintbl**.
+    1. В окне **Выражение** в области **Поле** выберите **\@Name**, а в поле **Оператор** выберите **Like**, а в поле **Значение** введите ```'fintbl%'```, чтобы все имена таблиц начинались с букв **fintbl**.
     1. На странице **Описание** введите **Имена таблиц Finance должны начинаться с букв "fintbl"** , а затем нажмите кнопку **ОК** для создания условия.  
 
     ![Условие "Таблицы Finance"](Media/lesson-2-create-and-apply-a-naming-standards-policy/finance-tables-condition.png)

@@ -17,19 +17,19 @@ helpviewer_keywords:
 ms.assetid: 65e15e2e-107c-49c3-b12c-f4edf0eb1617
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 32b8c8b1bbac53b099afc64f06a0eb5137292555
-ms.sourcegitcommit: 454270de64347db917ebe41c081128bd17194d73
+ms.openlocfilehash: d382d8ee7a871244213467b7a46bdc5b864c55cb
+ms.sourcegitcommit: 4c75b49599018124f05f91c1df3271d473827e4d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72006090"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72381904"
 ---
 # <a name="sysmail_add_account_sp-transact-sql"></a>sysmail_add_account_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   Создает новую учетную запись компонента Database Mail, хранящую сведения об учетной записи SMTP.  
   
- ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [соглашения о синтаксисе Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -53,17 +53,17 @@ sysmail_add_account_sp  [ @account_name = ] 'account_name',
 ## <a name="arguments"></a>Аргументы  
 `[ @account_name = ] 'account_name'` имя добавляемой учетной записи. Аргумент *account_name* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @email_address = ] 'email_address'` адрес электронной почты, с которого отправляется сообщение. Этот адрес должен быть адресом электронной почты Интернета. *email_address* имеет тип **nvarchar (128)** и не имеет значения по умолчанию. Например, учетная запись для агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может отправить сообщение электронной почты с адреса **SqlAgent@Adventure-Works.com** .  
+`[ @email_address = ] 'email_address'` адрес электронной почты, с которого отправляется сообщение. Этот адрес должен быть адресом электронной почты Интернета. *email_address* имеет тип **nvarchar (128)** и не имеет значения по умолчанию. Например, учетная запись для агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может отправить сообщение электронной почты с адреса **SqlAgent\@Adventure-Works.com**.  
   
 `[ @display_name = ] 'display_name'` отображаемое имя, используемое для сообщений электронной почты из этой учетной записи. *display_name* имеет тип **nvarchar (128)** и значение по умолчанию NULL. Например, учетная запись для агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может отображать имя **Агент SQL Server автоматической почты** в сообщениях электронной почты.  
   
-`[ @replyto_address = ] 'replyto_address'` — адрес, на который отправляются ответы на сообщения от этой учетной записи. *replyto_address* имеет тип **nvarchar (128)** и значение по умолчанию NULL. Например, ответы на учетную запись агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] могут попасть в администратор базы данных **danw@Adventure-Works.com** .  
+`[ @replyto_address = ] 'replyto_address'` — адрес, на который отправляются ответы на сообщения от этой учетной записи. *replyto_address* имеет тип **nvarchar (128)** и значение по умолчанию NULL. Например, ответы на учетную запись агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] могут попасть в администратор базы данных **danw\@Adventure-Works.com**.  
   
 `[ @description = ] 'description'` — описание учетной записи. *Description* имеет тип **nvarchar (256)** и значение по умолчанию NULL.  
   
 `[ @mailserver_name = ] 'server_name'` — имя или IP-адрес почтового SMTP-сервера, который будет использоваться для этой учетной записи. Компьютер, на котором работает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], должен иметь возможность разрешить *имя_сервера* в IP-адрес. параметр *server_name* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @mailserver_type = ] 'server_type'` тип сервера электронной почты. *server_type* имеет тип **sysname**и значение по умолчанию **"SMTP"** .  
+`[ @mailserver_type = ] 'server_type'` тип сервера электронной почты. *server_type* имеет тип **sysname**и значение по умолчанию **"SMTP"**.  
   
 `[ @port = ] port_number` номер порта для почтового сервера. *port_number* имеет **тип int**и значение по умолчанию 25.  
   
@@ -80,16 +80,16 @@ sysmail_add_account_sp  [ @account_name = ] 'account_name',
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Database Mail предоставляет отдельные параметры для **\@email_address**, **\@display_name**и **\@replyto_address**. Параметр **\@email_address** — это адрес, из которого отправляется сообщение. Параметр **\@display_name** — это имя, отображаемое в поле **от:** сообщения электронной почты. Параметр **\@replyto_address** — это адрес, куда будут отправляться ответы на сообщение электронной почты. Например, учетная запись, используемая для агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], может отправлять сообщения электронной почты с адреса, используемого только агентом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Сообщения с этого адреса должны отображать понятные имена, таким образом получатели могут легко определить, что сообщение отправлено агентом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Если получатель отвечает на сообщение, ответ должен быть доставлен администратору базы данных, а не на адрес агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. В этом сценарии учетная запись использует **SqlAgent@Adventure-Works.com** в качестве адреса электронной почты. Отображаемое имя имеет значение **Агент SQL Server автоматической рассылки**. Учетная запись использует **danw@Adventure-Works.com** в качестве ответа на адрес, поэтому ответы на сообщения, отправленные из этой учетной записи, отправляются администратору базы данных, а не по адресу электронной почты агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. С помощью указания независимых значений для этих трех параметров компонент Database Mail позволяет настраивать сообщения так, как необходимо.  
   
- Параметр **\@mailserver_type** поддерживает значение **"SMTP"** .  
+ Параметр **\@mailserver_type** поддерживает значение **"SMTP"**.  
   
  Если **\@use_default_credentials** — 1 почта отправляется на SMTP-сервер с использованием учетных данных [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Если параметр **\@use_default_credentials** имеет значение 0, а для учетной записи указаны **\@username** и **\@password** , то учетная запись использует проверку подлинности SMTP. **@No__t-1username** и **\@password** — это учетные данные, используемые учетной записью для SMTP-сервера, а не учетные данные для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или сети, в которой находится компьютер.  
   
  Хранимая процедура **sysmail_add_account_sp** находится в базе данных **msdb** и принадлежит схеме **dbo** . Процедура должна быть выполнена с именем, сопоставленным с тремя частями, если текущей базой данных не является **msdb**.  
   
-## <a name="permissions"></a>Разрешения  
+## <a name="permissions"></a>Permissions  
  По умолчанию разрешения EXECUTE для этой процедуры имеют члены предопределенной роли сервера **sysadmin** .  
   
 ## <a name="examples"></a>Примеры  
@@ -104,7 +104,7 @@ EXECUTE msdb.dbo.sysmail_add_account_sp
     @mailserver_name = 'smtp.Adventure-Works.com' ;  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также статью  
  [Database Mail](../../relational-databases/database-mail/database-mail.md)   
  [Создание учетной записи Database Mail](../../relational-databases/database-mail/create-a-database-mail-account.md)   
  [Database Mail хранимых &#40;процедур TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  

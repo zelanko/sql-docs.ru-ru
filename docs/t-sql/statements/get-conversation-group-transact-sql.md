@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 4da8a855-33c0-43b2-a49d-527487cb3b5c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c6cb2cf4bae18604d77c8644f18efd32702b8197
-ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
+ms.openlocfilehash: d0ede71391f31096191255c5a8fee2051ad6f696
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/02/2019
-ms.locfileid: "70211293"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72252184"
 ---
 # <a name="get-conversation-group-transact-sql"></a>GET CONVERSATION GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "70211293"
  WAITFOR  
  Указывает, что инструкция GET CONVERSATION GROUP ожидает поступления сообщения в очередь, если в настоящий момент сообщения отсутствуют.  
   
- *@conversation_group_id*  
+ *\@conversation_group_id*  
  Переменная, которая используется для хранения идентификатора группы сообщений, возвращенных инструкцией GET CONVERSATION GROUP. Переменная должна иметь тип **uniqueidentifier**. Если нет доступных групп диалогов, переменной присваивается значение NULL.  
   
  FROM  
@@ -72,12 +72,12 @@ ms.locfileid: "70211293"
  Имя очереди, из которой должна быть получена группа сообщений.  
   
  TIMEOUT *timeout*  
- Указывает продолжительность времени (в миллисекундах), в течение которого компонент Service Broker ожидает поступления сообщения в очередь. Это предложение может быть использовано только вместе с предложением WAITFOR. Если инструкция, использующая WAITFOR, не включает в себя этого предложения или значение *timeout* равно –1, то время ожидания не ограничено. Если время ожидания истекает, GET CONVERSATION GROUP присваивает переменной *@conversation_group_id* значение NULL.  
+ Указывает продолжительность времени (в миллисекундах), в течение которого компонент Service Broker ожидает поступления сообщения в очередь. Это предложение может быть использовано только вместе с предложением WAITFOR. Если инструкция, использующая WAITFOR, не включает в себя этого предложения или значение *timeout* равно –1, то время ожидания не ограничено. Если время ожидания истекает, GET CONVERSATION GROUP присваивает переменной *\@conversation_group_id* значение NULL.  
   
 ## <a name="remarks"></a>Remarks  
   
 > [!IMPORTANT]  
->  Если инструкция GET CONVERSATION GROUP не является первой инструкцией в пакете или хранимой процедуре, предыдущая инструкция должна заканчиваться точкой с запятой (**;**) — разделителем инструкций языка [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+>  Если инструкция GET CONVERSATION GROUP не является первой инструкцией в пакете или хранимой процедуре, предыдущая инструкция должна заканчиваться точкой с запятой ( **;** ) — разделителем инструкций языка [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  Если очередь, указанная в инструкции GET CONVERSATION GROUP, недоступна, инструкция выдает ошибку языка [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   

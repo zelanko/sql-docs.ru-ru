@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2d7cc40a-47e8-4419-9b2b-7c69f700e806
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d1263cec8cf59826357388a148e0bb19bc332bdf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b7924bc8d7dfc8a3460ca4beb989fd0daf0e85a8
+ms.sourcegitcommit: 84e6922a57845a629391067ca4803e8d03e0ab90
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68057922"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72008448"
 ---
 # <a name="change-roles-between-primary-and-secondary-log-shipping-servers-sql-server"></a>Обмен ролями между сервером-источником и сервером-получателем доставки журналов (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,17 +42,17 @@ ms.locfileid: "68057922"
   
     3.  В диалоговом окне **Настройки базы данных-получателя** выберите параметр **Нет, база данных-получатель инициализирована**.  
   
-4.  Если в предыдущей конфигурации доставки журналов был включен мониторинг доставки журнала, внесите изменения в настройки мониторинга доставки журнала для отслеживания новой конфигурации доставки журнала.  Выполните следующие команды, заменив *database_name* именем вашей базы данных:  
+4.  Если в предыдущей конфигурации доставки журналов был включен мониторинг доставки журнала, внесите изменения в настройки мониторинга доставки журнала для отслеживания новой конфигурации доставки журнала.  Установка для параметра threshold_alert_enabled значения 1 указывает, что при превышении предела restore_threshold будет создано предупреждение. Выполните следующие команды, заменив *database_name* именем вашей базы данных:  
   
     1.  **На новом сервере-источнике**  
   
          Выполните следующие инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
-        ```  
+        ```sql  
         -- Statement to execute on the new primary server  
         USE msdb  
         GO  
-        EXEC master.dbo.sp_change_log_shipping_secondary_database @secondary_database = N'database_name', @threshold_alert_enabled = 0;  
+        EXEC master.dbo.sp_change_log_shipping_secondary_database @secondary_database = N'database_name', @threshold_alert_enabled = 1;  
         GO  
         ```  
   
@@ -60,11 +60,11 @@ ms.locfileid: "68057922"
   
          Выполните следующие инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
-        ```  
+        ```sql  
         -- Statement to execute on the new secondary server  
         USE msdb  
         GO  
-        EXEC master.dbo.sp_change_log_shipping_primary_database @database=N'database_name', @threshold_alert_enabled = 0;  
+        EXEC master.dbo.sp_change_log_shipping_primary_database @database=N'database_name', @threshold_alert_enabled = 1;  
         GO  
         ```  
   

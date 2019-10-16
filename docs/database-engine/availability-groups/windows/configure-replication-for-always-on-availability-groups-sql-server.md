@@ -14,12 +14,12 @@ ms.assetid: 4e001426-5ae0-4876-85ef-088d6e3fb61c
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 2532e7c2a173441cf804cdc5bdcd9be8e69bb135
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c6481b7e94c2d9b8d7e1df99a4a38026a9d6edee
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67988462"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251932"
 ---
 # <a name="configure-replication-with-always-on-availability-groups"></a>Настройка репликации в группах доступности Always On
 
@@ -32,7 +32,7 @@ ms.locfileid: "67988462"
   
  Базу данных распространителя нельзя поместить в группу доступности с использованием SQL Server 2012 и SQL Server 2014. Размещение базы данных распространителя в группе доступности поддерживается в SQL 2016 и более поздних версий. Дополнительные сведения см. в статье о [настройке базы данных распространителя в группе доступности](../../../relational-databases/replication/configure-distribution-availability-group.md).
   
-1.  Настройка распространения на распространителе. Если хранимые процедуры используются для настройки, запустите **sp_adddistributor**. Используйте параметр *@password* для определения пароля, который будет использоваться при подключении удаленного издателя к распространителю. Кроме того, пароль понадобится для каждого удаленного издателя при настройке удаленного распространителя.  
+1.  Настройка распространения на распространителе. Если хранимые процедуры используются для настройки, запустите **sp_adddistributor**. Используйте параметр *\@password* для определения пароля, который будет использоваться при подключении удаленного издателя к распространителю. Кроме того, пароль понадобится для каждого удаленного издателя при настройке удаленного распространителя.  
   
     ```  
     USE master;  

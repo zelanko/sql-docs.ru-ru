@@ -1,69 +1,71 @@
 ---
-title: Краткое руководство. Резервное копирование и восстановление SQL Server с помощью службы хранилища BLOB-объектов Azure | Документация Майкрософт
+title: Краткое руководство. Резервное копирование и восстановление SQL с помощью службы хранилища BLOB-объектов Azure | Документация Майкрософт
 ms.custom: ''
 ms.date: 04/09/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: performance
-ms.topic: conceptual
+ms.topic: quickstart
 ms.assetid: 9e1d94ce-2c93-45d1-ae2a-2a7d1fa094c4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ae4d9cd9333e8dd42582f972a0d19260b2c9a3ee
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 7d04c2fb2fd405a582cb6c94b59bdca83ba3dbb5
+ms.sourcegitcommit: 3cde6aa3159beb761a19bc568d7e402bfa7aeb41
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155713"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72239469"
 ---
-# <a name="quickstart-sql-server-backup-and-restore-to-azure-blob-storage-service"></a>Краткое руководство. Резервное копирование и восстановление SQL Server с помощью службы хранилищ BLOB-объектов Azure
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-С помощью этого краткого руководства вы научитесь создавать и восстанавливать резервные копии, используя службу хранилища BLOB-объектов Azure.  В этом руководстве рассматривается, как создать контейнер больших двоичных объектов Azure, учетные данные для доступа к учетной записи хранения, как записать резервную копию в службу BLOB-объектов, а затем выполнить простое восстановление.
+# <a name="quickstart-sql-backup-and-restore-to-azure-blob-storage-service"></a>Краткое руководство. Резервное копирование и восстановление SQL с помощью службы хранилища BLOB-объектов Azure
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md](../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+С помощью этого краткого руководства вы научитесь создавать и восстанавливать резервные копии, используя службу хранилища BLOB-объектов Azure.  В этой статье описывается создание контейнера больших двоичных объектов Azure, запись резервной копии в службу BLOB-объектов и выполнение восстановления.
   
-### <a name="prerequisites"></a>предварительные требования  
-Чтобы выполнить задания этого руководства, необходимо владеть основными понятиями резервного копирования и восстановления [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и синтаксисом T-SQL. Для работы с этим руководством требуется учетная запись хранения Azure, среда SQL Server Management Studio (SSMS), доступ к серверу SQL Server и база данных AdventureWorks. Кроме того, учетная запись, используемая для выдачи команд резервного копирования и восстановления, должна находиться в роли базы данных **db_backupoperator** с разрешениями **изменение любых учетных данных**. 
+## <a name="prerequisites"></a>предварительные требования  
+Чтобы выполнить задания этого руководства, необходимо владеть основными понятиями резервного копирования и восстановления [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и синтаксисом T-SQL.  Вам потребуется учетная запись хранения Azure, среда SQL Server Management Studio (SSMS), доступ к серверу SQL Server или управляемому экземпляру Базы данных SQL Azure. Кроме того, учетная запись, используемая для выдачи команд резервного копирования и восстановления, должна находиться в роли базы данных **db_backupoperator** с разрешениями **изменение любых учетных данных**. 
 
 - Получите бесплатную [учетную запись Azure](https://azure.microsoft.com/offers/ms-azr-0044p/).
 - Создайте [учетную запись хранения Azure](https://docs.microsoft.com/azure/storage/common/storage-quickstart-create-account?tabs=portal).
 - Установите [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
-- Установите выпуск [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
+- Установите выпуск [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads) или разверните [управляемый экземпляр](/azure/sql-database/sql-database-managed-instance-get-started) с подключением, установленным через [виртуальную машину SQL Azure](/azure/sql-database/sql-database-managed-instance-configure-vm) или с помощью соединения [точка — сеть](/azure/sql-database/sql-database-managed-instance-configure-p2s).
 - Назначьте учетной записи пользователя роль [db_backupoperator](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles) и предоставьте разрешения на [изменение любых учетных данных](https://docs.microsoft.com/sql/t-sql/statements/alter-credential-transact-sql). 
+
+[!INCLUDE[freshInclude](../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 
 ## <a name="create-azure-blob-container"></a>Создание контейнера больших двоичных объектов Azure
-Контейнер группирует набор больших двоичных объектов. Все большие двоичные объекты должны находиться в контейнере. Учетная запись может содержать неограниченное количество контейнеров, но не менее одного. В контейнере может храниться неограниченное количество больших двоичных объектов. 
-
-[!INCLUDE[freshInclude](../includes/paragraph-content/fresh-note-steps-feedback.md)]
+Контейнер группирует набор больших двоичных объектов. Все большие двоичные объекты должны находиться в контейнере. Учетная запись хранения может содержать неограниченное количество контейнеров, но не менее одного. В контейнере может храниться неограниченное количество больших двоичных объектов. 
 
 Чтобы создать контейнер, выполните следующие действия.
 
 1. Откройте портал Azure. 
 1. Перейдите к своей учетной записи хранения. 
 1. Выберите учетную запись хранения, прокрутите вниз до раздела **Службы BLOB-объектов**.
-1. Выберите **BLOB-объекты**, а затем щелкните **+ Контейнер**, чтобы добавить новый контейнер. 
+1. Выберите **BLOB-объекты**, а затем щелкните **+ Контейнер**, чтобы добавить новый контейнер. 
 1. Введите имя контейнера и запишите его. Эти сведения используются в URL-адресе (пути к файлу резервной копии) в инструкциях T-SQL далее в этом руководстве. 
 1. Нажмите кнопку **ОК**. 
     
     ![Создание контейнера](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/new-container.png)
 
-
   > [!NOTE]
-  > Для резервного копирования и восстановления SQL Server проводится проверка подлинности учетной записи хранилища даже при создании открытого контейнера. Можно также создать контейнер программным образом с помощью REST API. Дополнительные сведения см. в статье [Создание контейнера](https://docs.microsoft.com/rest/api/storageservices/Create-Container).
+  > Для резервного копирования и восстановления SQL Server проводится проверка подлинности учетной записи хранилища даже при создании открытого контейнера. Можно также создать контейнер программным образом с помощью API-интерфейсов REST. Дополнительные сведения см. в статье [Создание контейнера](https://docs.microsoft.com/rest/api/storageservices/Create-Container).
 
 ## <a name="create-a-test-database"></a>Создание тестовой базы данных 
+На этом шаге создайте тестовую базу данных с помощью среды SQL Server Management Studio (SSMS). 
 
 1. Запустите среду [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) и подключитесь к своему экземпляру SQL Server.
 1. Откройте окно **Новый запрос**. 
-1. Выполните следующий код Transact-SQL (T-SQL) для создания тестовой базы данных. Обновите узел **Базы данных** в **обозревателе объектов** для отображения новой базы данных. 
+1. Выполните следующий код Transact-SQL (T-SQL) для создания тестовой базы данных. Обновите узел **Базы данных** в **обозревателе объектов** для отображения новой базы данных. Для созданных баз данных в управляемом экземпляре Базы данных SQL Azure автоматически включается TDE. Чтобы продолжить, вам необходимо отключить его. 
 
 ```sql
 USE [master]
 GO
 
+-- Create database
 CREATE DATABASE [SQLTestDB]
 GO
 
+-- Create table in database
 USE [SQLTestDB]
 GO
 CREATE TABLE SQLTest (
@@ -73,7 +75,7 @@ CREATE TABLE SQLTest (
 )
 GO
 
-
+-- Populate table 
 USE [SQLTestDB]
 GO
 
@@ -86,72 +88,149 @@ GO
 
 SELECT * FROM SQLTest
 GO
+
+-- Disable TDE for newly-created databases on a managed instance 
+USE [SQLTestDB];
+GO
+ALTER DATABASE [SQLTestDB] SET ENCRYPTION OFF;
+GO
 ```
 
+## <a name="create-credential"></a>Создание учетных данных
 
-## <a name="create-a-sql-server-credential"></a>Создание учетных данных SQL Server
-Учетные данные SQL Server — это объект, который используется для хранения сведений, необходимых для проверки подлинности при подключении к ресурсу вне SQL Server. В этом случае в процессах резервного копирования и восстановления SQL Server используются учетные данные для проверки подлинности в службе хранилища BLOB-объектов Azure. Учетные данные хранят имя учетной записи хранилища и значения **ключа доступа** учетной записи хранилища. После создания учетных данных их необходимо указать в параметре WITH CREDENTIAL при выполнении инструкций BACKUP/RESTORE. Дополнительные сведения об учетных данных см. в статье [Учетные данные (ядро СУБД)](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/credentials-database-engine). 
+Выполните приведенные ниже действия, чтобы создать учетные данные, используя графический пользовательский интерфейс в SQL Server Management Studio. Кроме того, вы можете создать учетные данные [программным способом](tutorial-use-azure-blob-storage-service-with-sql-server-2016.md#2---create-a-sql-server-credential-using-a-shared-access-signature). 
 
-  > [!IMPORTANT]
-  > Требования к созданию учетных данных SQL Server, описанные ниже, характерны для процессов резервного копирования SQL Server ([резервное копирование в SQL Server по URL-адресу](backup-restore/sql-server-backup-to-url.md) и [управляемое резервное копирование SQL Server в Microsoft Azure](backup-restore/sql-server-managed-backup-to-microsoft-azure.md)). При доступе к хранилищу Azure для записи или чтения резервных копий SQL Server использует информацию об имени и ключе доступа учетной записи хранения.
+1. Разверните узел **Базы данных** в **обозревателе объектов** среды [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md).
+1. Щелкните правой кнопкой мыши новую базу данных `SQLTestDB`, наведите указатель мыши на параметр **Задачи**, а затем выберите **Архивировать...** , чтобы запустить мастер **Резервное копирование базы данных**. 
+1. В раскрывающемся списке расположений **Архивировать на** выберите **URL-адрес**, а затем выберите **Добавить**, чтобы открыть диалоговое окно **Выбор расположения резервной копии**. 
 
-### <a name="access-keys"></a>Ключи доступа
-Для создания учетных данных понадобятся ключи доступа для учетной записи хранения. 
+   ![Резервное копирование по URL-адресу](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/back-up-to-url.png)
 
-1. Перейдите к **учетной записи хранения** на портале Azure. 
-1. В разделе **Параметры** выберите **Ключи доступа**. 
-1. Сохраните строку подключения и ключ для дальнейшего использования в этом руководстве. 
+1. В диалоговом окне **Выбор расположения резервной копии** щелкните **Новый контейнер**, чтобы открыть окно **Соединение с подпиской Майкрософт**. 
 
-   ![Ключи доступа](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/access-keys.png)
+   ![Расположение резервной копии](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/select-backup-destination.png)
 
-### <a name="create-a-sql-server-credential"></a>Создание учетных данных SQL Server
-Используя ключ доступа, сохраненный ранее, создайте учетные данные SQL Server, выполнив следующие действия. 
+1. Войдите на портал Azure, выбрав **Вход...** , а затем выполните процедуру входа. 
+1. Выберите **подписку** в раскрывающемся списке. 
+1. Выберите **учетную запись хранения** в раскрывающемся списке. 
+1. В раскрывающемся списке выберите контейнер, созданный ранее. 
+1. Выберите **Создать учетные данные**, чтобы создать *подписанный URL-адрес (SAS)* .  **Сохраните это значение, так как оно понадобится для восстановления.**
 
-1. Подключитесь к SQL Server, используя SQL Server Management Studio. 
-1. Выберите базу данных **SQLTestDB** и откройте окно **нового запроса**. 
-1. Скопируйте, вставьте и выполните следующий пример в окне запроса (при необходимости измените). 
+   ![Создание учетных данных](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/create-credential.png)
 
-   ```sql
-   CREATE CREDENTIAL mycredential   
-   WITH IDENTITY= 'msftutorialstorage', -- this is the name of the storage account you specified when creating a storage account   
-   SECRET = '<storage account access key>' -- this should be either the Primary or Secondary Access Key for the storage account 
-   ```
+1. Нажмите кнопку **ОК**, чтобы закрыть диалоговое окно **Соединение с подпиской Майкрософт**. Это действие приведет к заполнению значения *Контейнер службы хранилища Azure* в диалоговом окне **Выбор расположения резервной копии**. Нажмите кнопку **ОК**, чтобы выбрать указанный контейнер хранилища и закройте диалоговое окно. 
+1. На этом этапе вы можете перейти к шагу 4 в следующем разделе, чтобы создать резервную копию базы данных, или закрыть мастер **Резервное копирование базы данных**, если вместо этого вы хотите продолжить использовать Transact-SQL для создания резервной копии базы данных. 
 
-1. Выполните инструкцию для создания учетных данных. 
 
-## <a name="back-up-database-to-the-azure-blob-storage-service"></a>Резервное копирование базы данных в службу хранилища BLOB-объектов Azure
-В этом разделе объясняется, как выполнить полное резервное копирование базы данных в службу хранилища BLOB-объектов Azure, используя инструкцию T-SQL. 
+## <a name="back-up-database"></a>Резервное копирование базы данных
+На этом шаге выполните резервное копирование базы данных `SQLTestDB` в учетную запись хранилища BLOB-объектов Azure, используя графический пользовательский интерфейс в среде SQL Server Management Studio или Transact-SQL (T-SQL). 
 
-1. Подключитесь к SQL Server, используя SQL Server Management Studio. 
-1. Выберите базу данных **SQLTestDB** и откройте окно **нового запроса**. 
-1. Скопируйте и вставьте следующий пример в окно запроса (при необходимости измените). 
+# <a name="ssmstabssms"></a>[SSMS](#tab/SSMS)
 
-     ```sql
-     BACKUP DATABASE [SQLTestDB] 
-     TO URL = 'https://msftutorialstorage.blob.core.windows.net/sql-backup/SQLTestDB.bak' 
-     /* URL includes the endpoint for the BLOB service, followed by the container name, and the name of the backup file*/ 
-     WITH CREDENTIAL = 'mycredential';
-     /* name of the credential you created in the previous step */ 
-     GO
-     ```
+1. Если мастер **Резервное копирование базы данных** еще не открыт, разверните узел **Базы данных** в **обозревателе объектов** в среде [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md).
+1. Щелкните правой кнопкой мыши новую базу данных `SQLTestDB`, наведите указатель мыши на параметр **Задачи**, а затем выберите **Архивировать...** , чтобы запустить мастер **Резервное копирование базы данных**. 
+1. Выберите **URL-адрес** из раскрывающегося списка **Архивировать на**, а затем выберите **Добавить**, чтобы открыть диалоговое окно **Выбор расположения резервной копии**. 
 
-1. Выполните инструкцию для резервного копирования вашей базы данных SQLTestDB на URL-адрес. 
+   ![Резервное копирование по URL-адресу](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/back-up-to-url.png)
 
- 
-## <a name="restore-database-from-azure-blob-storage-service"></a>Восстановление базы данных из службы хранилища BLOB-объектов Azure
-В этом разделе мы восстановим полную резервную копию базы данных, используя инструкцию T-SQL. 
+1. В раскрывающемся списке **Контейнер службы хранилища Azure** выберите контейнер, созданный на предыдущем шаге. 
 
-1. Подключитесь к SQL Server, используя SQL Server Management Studio. 
-1. Откройте окно **Новый запрос**. 
-1. Скопируйте и вставьте следующий пример в окно запроса (при необходимости измените). 
+   ![Контейнер хранилища Azure](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/azure-storage-container.png)
 
- ```sql
- RESTORE DATABASE [SQLTestDB] 
- FROM URL = 'https://msftutorialstorage.blob.core.windows.net/sql-backup/SQLTestDB.bak' 
- WITH CREDENTIAL = 'mycredential',
- STATS = 5 -- use this to see monitor the progress
- GO
- ``` 
+1. Нажмите кнопку **ОК** в мастере **Резервное копирование базы данных**, чтобы создать резервную копию базы данных. 
+1. После успешного создания резервной копии нажмите кнопку **ОК**, чтобы закрыть все окна, связанные с резервным копированием. 
+
+   > [!TIP]
+   > Вы можете создать скрипт Transact-SQL для этой команды, выбрав **Скрипт** в верхней части мастера **Резервное копирование базы данных**. ![команда "Скрипт"](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/script-backup-command.png)
+
+
+# <a name="transact-sqltabtsql"></a>[Transact-SQL](#tab/tsql)
+
+Создайте резервную копию базы данных с помощью Transact-SQL. Для этого выполните следующую команду: 
+
+
+```sql
+USE [master]
+
+BACKUP DATABASE [SQLTestDB] 
+TO  URL = N'https://msftutorialstorage.blob.core.windows.net/sql-backup/sqltestdb_backup_2020_01_01_000001.bak' 
+WITH  COPY_ONLY, CHECKSUM
+GO
+```
+
+---
+
+## <a name="delete-database"></a>Удаление базы данных
+На этом шаге удалите базу данных перед выполнением восстановления. Этот этап необходим только для целей данного учебника, но он вряд ли будет использоваться в обычных процедурах управления базой данных. Вы можете пропустить этот шаг, но тогда вам нужно будет либо изменить имя базы данных во время восстановления на управляемом экземпляре, либо выполнить команду восстановления `WITH REPLACE` для успешного восстановления базы данных локально. 
+
+# <a name="ssmstabssms"></a>[SSMS](#tab/SSMS)
+
+1. Разверните узел **Базы данных** в **обозревателе объектов**, щелкните правой кнопкой мыши базу данных `SQLTestDB` и выберите "Удалить", чтобы запустить мастер **Удаление объекта**. 
+1. В управляемом экземпляре нажмите кнопку **ОК**, чтобы удалить базу данных. В локальной среде установите флажок рядом с параметром **Закрыть существующие соединения**, а затем нажмите кнопку **ОК**, чтобы удалить базу данных. 
+
+# <a name="transact-sqltabtsql"></a>[Transact-SQL](#tab/tsql)
+
+Удалите базу данных, выполнив следующую команду Transact-SQL:
+
+```sql
+USE [master]
+GO
+DROP DATABASE [SQLTestDB]
+GO
+
+-- If connections currently exist on-premises, you'll need to set the database into single user mode first
+USE [master]
+GO
+ALTER DATABASE [SQLTestDB] SET  SINGLE_USER WITH ROLLBACK IMMEDIATE
+GO
+USE [master]
+GO
+DROP DATABASE [SQLTestDB]
+GO
+```
+
+---
+
+
+## <a name="restore-database"></a>Восстановление базы данных 
+На этом шаге восстановите базу данных, используя графический пользовательский интерфейс в среде SQL Server Management Studio или Transact-SQL. 
+
+# <a name="ssmstabssms"></a>[SSMS](#tab/SSMS)
+
+1. Щелкните правой кнопкой мыши узел **Базы данных** в **обозревателе объектов** в среде SQL Server Management Studio и выберите **Восстановить базу данных**. 
+1. Щелкните **Устройство** и нажмите кнопку с многоточием (...), чтобы выбрать устройство. 
+
+   ![Выбор устройства для восстановления](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/select-restore-device.png)
+
+1. Выберите **URL-адрес** в раскрывающемся списке **Тип носителя резервной копии** и щелкните **Добавить**, чтобы добавить устройство. 
+
+   ![Добавление устройства резервного копирования](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/add-backup-device.png)
+
+1. Выберите контейнер из раскрывающегося списка, а затем вставьте подписанный URL-адрес (SAS), который вы сохранили при создании учетных данных. 
+
+   ![Расположение резервной копии](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/restore-from-container.png)
+
+1. Нажмите кнопку **ОК**, чтобы выбрать расположение файла резервной копии. 
+1. Разверните узел **Контейнеры** и выберите контейнер, в котором расположен файл резервной копии. 
+1. Выберите файл резервной копии, который необходимо восстановить, а затем нажмите кнопку **ОК**. Если файлы не отображаются, возможно, используется неправильный ключ SAS. Вы можете заново создать ключ SAS, выполнив те же действия, что и перед добавлением контейнера. 
+
+   ![Выбор файла восстановления](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/select-restore-file.png)
+
+1. Снова нажмите **ОК** в диалоговом окне **Выбор устройств резервного копирования**, чтобы закрыть его. 
+1. Чтобы восстановить базу данных, нажмите кнопку **ОК**. 
+
+# <a name="transact-sqltabtsql"></a>[Transact-SQL](#tab/tsql)
+
+Чтобы восстановить локальную базу данных из хранилища BLOB-объектов Azure, измените следующую команду Transact-SQL для использования собственной учетной записи хранения, а затем выполните команду в новом окне запроса. 
+
+```sql
+USE [master]
+RESTORE DATABASE [SQLTestDB] FROM 
+URL = N'https://msftutorialstorage.blob.core.windows.net/sql-backup/sqltestdb_backup_2020_01_01_000001.bak'
+```
+
+---
+
 
 ## <a name="see-also"></a>См. также раздел 
 Чтобы разобраться в концепциях и рекомендациях использования службы хранилища BLOB-объектов Azure для резервного копирования [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], рекомендуется изучить перечисленные ниже материалы.  

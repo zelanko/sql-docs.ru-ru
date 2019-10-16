@@ -12,12 +12,12 @@ ms.assetid: 73f598cf-b02a-4dba-8d89-9fc0b55a12b8
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: ffd0ad4ddcdae91071811e57cdb8c5f6aaaea656
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: c2dd0389f4ec3287fbe23875458ab5d34ef269f7
+ms.sourcegitcommit: 79e6d49ae4632f282483b0be935fdee038f69cc2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68476309"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72174651"
 ---
 # <a name="dbcc-showresultcachespaceused-transact-sql"></a>DBCC SHOWRESULTCACHESPACEUSED (Transact-SQL)
 
@@ -42,7 +42,12 @@ DBCC SHOWRESULTCACHESPACEUSED
 - каждые 48 часов, если результирующий набор не использовался;
 - если кэш результирующих наборов достигает максимального размера.
 
-Пользователи могут вручную очистить кэш результирующих наборов базы данных, отключив функции кэша или с помощью команды `DBCC DROPRESULTSETCACHE`.   Если приостановить базу данных, кэш результирующих наборов не очищается.  
+Чтобы вручную очистить кэш результирующего набора для базы данных, пользователи могут использовать один из следующих вариантов:
+
+- Отключение функции кэша результирующего набора для базы данных.
+- Запуск `DBCC DROPRESULTSETCACHE` при подключении к базе данных. 
+
+Если приостановить базу данных, кэш результирующих наборов не очищается.  
 
 ## <a name="permissions"></a>Разрешения
 

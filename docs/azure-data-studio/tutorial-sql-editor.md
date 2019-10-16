@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: b4778d54fe3853f2560159a83dae42c4fd8e55e2
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 06554c42bb7f98263fe48aa43f2366059ad5541f
+ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67959014"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72278243"
 ---
 # <a name="tutorial-use-the-transact-sql-editor-to-create-database-objects---includename-sosincludesname-sos-shortmd"></a>Руководство. Создание объектов базы данных с помощью редактора Transact-SQL — [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
@@ -54,7 +54,7 @@ ms.locfileid: "67959014"
 
    ![мини-приложение быстрого поиска](./media/tutorial-sql-editor/quick-search-widget.png)
 
-1. Измените значение в первой строке столбца **Email** (Адрес электронной почты) на *orlando0@adventure-works.com* и нажмите клавишу **ВВОД**, чтобы сохранить изменение.
+1. Измените значение в первой строке столбца **Email** (Адрес электронной почты), введите *orlando0\@adventure-works.com* и нажмите клавишу **ВВОД**, чтобы сохранить изменение.
 
    ![изменение данных](./media/tutorial-sql-editor/edit-data.png)
 
@@ -182,7 +182,7 @@ ms.locfileid: "67959014"
 
 ## <a name="use-save-query-results-as-json-to-test-the-setcustomer-stored-procedure"></a>Сохранение результатов запроса в формате JSON для тестирования хранимой процедуры setCustomer
 
-Хранимая процедура *setCustomer*, созданная в предыдущем разделе, требует передачи данных JSON в параметре *@json_val* . В этом разделе показано, как получить правильно отформатированные данные JSON для передачи в параметре, чтобы можно было протестировать хранимую процедуру.
+Хранимая процедура *setCustomer*, созданная в предыдущем разделе, требует передачи данных JSON в параметр *\@json_val*. В этом разделе показано, как получить правильно отформатированные данные JSON для передачи в параметре, чтобы можно было протестировать хранимую процедуру.
 
 1. На боковой панели **Серверы** щелкните правой кнопкой мыши таблицу *dbo.Customers* и выберите пункт **Выбрать первые 1000 строк**.
 

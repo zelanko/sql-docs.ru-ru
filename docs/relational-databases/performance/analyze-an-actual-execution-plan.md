@@ -1,7 +1,7 @@
 ---
 title: Анализ фактического плана выполнения | Документация Майкрософт
 ms.custom: ''
-ms.date: 08/21/2017
+ms.date: 10/11/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,16 +15,18 @@ ms.assetid: 9e583a18-5f4a-4054-bfe1-4b2a76630db6
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: e0f23ceb75856db921e4c6303a8013d351f364e8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5c94d2d60bf851742aca68d5b7bc25ea4d8afd9c
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68219598"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72289320"
 ---
 # <a name="analyze-an-actual-execution-plan"></a>Анализ фактического плана выполнения
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-В этой статье описывается, как анализировать фактические графические планы выполнения с использованием функции анализа плана [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. 
+
+В этой статье описывается, как можно анализировать фактические графические планы выполнения с использованием функции анализа плана [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Эта функция доступна начиная с [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] версии 17.4. Обычно мы рекомендуем [установить последнюю версию SSMS](../../ssms/download-sql-server-management-studio-ssms.md).
 
 > [!NOTE]
 > Фактические планы выполнения создаются после выполнения запросов или пакетов [!INCLUDE[tsql](../../includes/tsql-md.md)]. Поэтому фактический план выполнения содержит сведения о времени выполнения, такие как фактическое число строк, фактические метрики использования ресурса и предупреждения времени выполнения (если они есть). Дополнительные сведения см. в статье [Отображение фактического плана выполнения](../../relational-databases/performance/display-an-actual-execution-plan.md).

@@ -23,12 +23,12 @@ author: dnethi
 ms.author: dinethi
 ms.custom: ''
 ms.date: 10/03/2019
-ms.openlocfilehash: 3f5b4cbe56d395b88dc756d823b526b05b2fde74
-ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
+ms.openlocfilehash: b3fa70eb83ddd46c0901cfe5d5499a0a12f33db8
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71816807"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251393"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>Скачивание SQL Server Management Studio (SSMS)
 
@@ -44,7 +44,7 @@ SSMS распространяется бесплатно!
 
 **Вышла версия SSMS 18.3.1. Это новейшая общедоступная версия *SQL Server Management Studio* с поддержкой [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]!**
 
-**[![скачать](../ssdt/media/download.png) Скачать SQL Server Management Studio 18.3.1](https://go.microsoft.com/fwlink/?linkid=2105412)**
+**[Скачивание SQL Server Management Studio 18.3.1](https://go.microsoft.com/fwlink/?linkid=2105412)**
 
 SSMS 18.3.1 является последней общедоступной версией SSMS. Если у вас установлена предыдущая общедоступная версия SSMS 18, при установке SSMS 18.3.1 она обновляется до версии 18.3.1. Если у вас установлена предыдущая *предварительная версия* SSMS 18.x, перед установкой SSMS 18.3.1 ее необходимо удалить.
 
@@ -74,9 +74,9 @@ SQL Server Management Studio 18.3.1:
 
 | Изменения | Сведения |
 |---------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Классификация данных | Добавление сведений о классификации данных в пользовательский интерфейс свойств столбца (*Тип информации*, *Идентификатор информации*, *Метка конфиденциальности* и *Идентификатор метки конфиденциальности* не отображаются в пользовательском интерфейсе SSMS). |
-| Редактор и IntelliSense | Обновлена поддержка функций, недавно добавленных в SQL Server 2019 (например, ALTER SERVER CONFIGURATION). |
-| Службы Integration Services | Добавьте новый элемент меню выбора `Tools > Migrate to Azure > Configure Azure-enabled DTExec`, который будет вызывать выполнение пакетов служб SSIS в Azure-SSIS Integration Runtime как действий пакета служб SSIS в конвейерах ADF. |
+| Классификация данных | Добавление сведений о классификации данных в пользовательский интерфейс свойств столбца (*Тип информации*, *Идентификатор типа информации*, *Метка конфиденциальности* и *Идентификатор метки конфиденциальности* не отображаются в пользовательском интерфейсе SSMS). |
+| Редактор и IntelliSense | Обновлена поддержка функций, недавно добавленных в SQL Server 2019 (например, ALTER SERVER CONFIGURATION). |
+| Службы Integration Services | Добавлен новый элемент меню выбора `Tools > Migrate to Azure > Configure Azure-enabled DTExec`, который будет вызывать выполнение пакетов служб SSIS в Azure-SSIS Integration Runtime как действий пакета служб SSIS в конвейерах ADF. |
 | Написание скриптов и SMO | Добавлена поддержка скриптов для ограничения уникальности хранилища данных SQL Azure. |
 | Написание скриптов и SMO | Классификация данных — добавлена поддержка SQL версии 10 (SQL 2008) и более поздних версий.  — Добавлен новый атрибут конфиденциальности rank для SQL версии 15 (SQL 2019) и более поздних версий и базы данных SQL Azure. |
 

@@ -46,12 +46,12 @@ ms.assetid: b796c829-ef3a-405c-a784-48286d4fb2b9
 author: pmasl
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 66e4ecf9e2858c37145a7b6bd63bbfa8511349a4
-ms.sourcegitcommit: 594cee116fa4ee321e1f5e5206f4a94d408f1576
+ms.openlocfilehash: e032b93772658c90c67dafe948c6542ce3510494
+ms.sourcegitcommit: 79e6d49ae4632f282483b0be935fdee038f69cc2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "70009394"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72174455"
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -341,7 +341,7 @@ FILLFACTOR = *fillfactor*
  
 **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
- Указывает, следует ли сохранять результаты сортировки в базе данных **tempdb**. Значение по умолчанию — OFF.  
+ Указывает, следует ли сохранять результаты сортировки в базе данных **tempdb**. Значение по умолчанию — OFF, за исключением функции гипермасштабирования базы данных SQL Azure. Для всех операций построения индекса в режиме гипермасштабирования параметр SORT_IN_TEMPDB всегда включен независимо от указанного параметра, если не используется возобновляемое перестроение индекса.  
   
  ON  
  Промежуточные результаты сортировки, которые используются при индексировании, хранятся в базе данных **tempdb**. Это может сократить время, требуемое для создания индекса, если база данных **tempdb** размещена на иных дисках, нежели пользовательская база данных. Однако это увеличивает использование места на диске, которое используется при индексировании.  

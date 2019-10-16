@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e17a9ca9-dd96-4f84-a85d-60f590da96ad
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8eef8241d5c8413f3722f11854074d415399165b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2faa46529ea44ce348c382877d39d780cb22572b
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014340"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251964"
 ---
 # <a name="replication-change-tracking--change-data-capture---always-on-availability-groups"></a>Репликация, отслеживание изменений, изменение данных в группах доступности AlwaysOn
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -108,7 +108,7 @@ ms.locfileid: "68014340"
     ```  
   
     > [!NOTE]  
-    >  Рекомендуется создавать задания для всех возможных целей отработки отказа и отключить их, пока одна из реплик доступности на узле не станет новой первичной репликой. Задания CDC, запущенные в старой базе данных-источнике, также должны быть отключены, когда локальная база данных становится базой данных-получателем. Для включения и отключения заданий используйте параметр *@enabled* процедуры [sp_update_job (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md). Дополнительные сведения о создании заданий CDC см. в разделе [sys.sp_cdc_add_job (Transact-SQL)](../../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md).  
+    >  Рекомендуется создавать задания для всех возможных целей отработки отказа и отключить их, пока одна из реплик доступности на узле не станет новой первичной репликой. Задания CDC, запущенные в старой базе данных-источнике, также должны быть отключены, когда локальная база данных становится базой данных-получателем. Для включения и отключения заданий используйте параметр *\@enabled* процедуры [sp_update_job &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md). Дополнительные сведения о создании заданий CDC см. в разделе [sys.sp_cdc_add_job (Transact-SQL)](../../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md).  
   
 -   **Добавление ролей CDC для первичной реплики базы данных AlwaysOn**  
   
@@ -155,7 +155,7 @@ ms.locfileid: "68014340"
   
      Для поиска вторичной реплики можно использовать имя прослушивателя группы доступности или явное имя узла. Если используется имя прослушивателя группы доступности, то доступ будет перенаправлен любой подходящей вторичной реплике.  
   
-     При использовании **sp_addlinkedserver** для создания связанного сервера и доступа к получателю в параметре *@datasrc* указывается имя прослушивателя группы доступности или явное имя сервера, а в параметре *@provstr* — намерение только для чтения.  
+     При использовании параметра **sp_addlinkedserver** для создания связанного сервера и доступа к получателю в параметре *\@datasrc* указывается имя прослушивателя группы доступности или явное имя сервера, а в параметре *\@provstr* — намерение только для чтения.  
   
     ```sql  
     EXEC sp_addlinkedserver   

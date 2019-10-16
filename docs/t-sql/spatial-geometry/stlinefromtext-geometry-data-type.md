@@ -1,7 +1,7 @@
 ---
 title: STLineFromText (тип данных geometry) | Документы Майкрософт
 ms.custom: ''
-ms.date: 08/03/2017
+ms.date: 10/11/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 430508ad-207b-4dee-a4d1-4ddf25e6b4a9
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 9c3dfad17abfe2113807bf8eb9a1570ed0a2f7a9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a0a912e4ab228617537e9c28e9a5cecc4a0278fe
+ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68129455"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72278138"
 ---
 # <a name="stlinefromtext-geometry-data-type"></a>STLineFromText (тип данных geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -51,18 +51,39 @@ STLineFromText ( 'linestring_tagged_text' , SRID )
  Тип OGC: **LineString**  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод вызывает исключение **FormatException**, если входные данные представлены в неверном формате.  
+Если входные данные имеют неверный формат, метод вызовет исключение **FormatException**. Нотация трехмерной измеряемой геометрии WKT из спецификации консорциума OGC "Simple Features for SQL" версии 1.2.1 не поддерживается. Ознакомьтесь с примерами для поддерживаемого представления значений Z (повышение) и M (измерение).
   
 ## <a name="examples"></a>Примеры  
- В следующем примере метод `STLineFromText()` применяется для создания экземпляра `geometry`.  
-  
+ В следующих примерах метод `STLineFromText()` применяется для создания экземпляра `geometry`.
+
+### <a name="example-1-two-dimension-geometry-wkt"></a>Пример 1. Двумерная геометрия WKT
 ```  
 DECLARE @g geometry;  
 SET @g = geometry::STLineFromText('LINESTRING (100 100, 200 200)', 0);  
 SELECT @g.ToString();  
 ```  
   
-## <a name="see-also"></a>См. также  
+### <a name="example-2-three-dimension-geometry-wkt"></a>Пример 2. Трехмерная геометрия WKT
+```  
+DECLARE @g geometry;  
+SET @g = geometry::STLineFromText('LINESTRING (100 100 100, 200 200 200)', 0);  
+SELECT @g.ToString();  
+``` 
+
+### <a name="example-3-two-dimension-measured-geometry-wkt"></a>Пример 3. Двумерная измеряемая геометрия WKT
+```  
+DECLARE @g geometry;  
+SET @g = geometry::STLineFromText('LINESTRING (100 100 NULL 100, 200 200 NULL 200)', 0);  
+SELECT @g.ToString();  
+``` 
+
+### <a name="example-4-three-dimension-measured-geometry-wkt"></a>Пример 4. Трехмерная измеряемая геометрия WKT
+```  
+DECLARE @g geometry;  
+SET @g = geometry::STLineFromText('LINESTRING (100 100 100 100, 200 200 200 200)', 0);  
+SELECT @g.ToString();  
+``` 
+## <a name="see-also"></a>См. также:  
  [Статические геометрические методы OGC](../../t-sql/spatial-geometry/ogc-static-geometry-methods.md)  
   
   
