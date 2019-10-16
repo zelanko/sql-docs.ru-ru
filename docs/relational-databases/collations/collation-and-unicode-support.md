@@ -189,7 +189,7 @@ ms.locfileid: "71680785"
 |Боснийский (Босния и Герцеговина, латиница)|0x141a|0x141a|Latin1_General_CI_AI|
 |Бретонский (Франция)|0x047e|0x047e|Latin1_General_CI_AI|
 |Болгарский (Болгария)|0x0402|0x0419|Cyrillic_General_CI_AS|
-|Каталонский (Каталония)|0x0403|0x0409|Latin1_General_CI_AS|
+|Catalan (Catalan)|0x0403|0x0409|Latin1_General_CI_AS|
 |Китайский (Гонконг, КНР)|0x0c04|0x0404|Chinese_Taiwan_Stroke_CI_AS|
 |Chinese (Macao SAR)|0x1404|0x1404|Latin1_General_CI_AI|
 |Китайский (Макау)|0x21404|0x21404|Latin1_General_CI_AI|
