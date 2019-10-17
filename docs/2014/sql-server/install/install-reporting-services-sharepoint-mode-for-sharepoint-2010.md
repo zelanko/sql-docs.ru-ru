@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: b69c6193720dd9975c364f5f4d729bba1e35d821
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 10/16/2019
 ms.locfileid: "71952521"
 ---
 # <a name="install-reporting-services-sharepoint-mode-for-sharepoint-2010"></a>Установка служб Reporting Services в режиме SharePoint для SharePoint 2010
@@ -31,7 +31,7 @@ ms.locfileid: "71952521"
   
 
   
-##  <a name="bkmk_prereq"></a> Предварительные требования  
+##  <a name="bkmk_prereq"></a> предварительные требования  
   
 -   > [!IMPORTANT]  
     >  Диспетчер конфигурации служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] больше не требуется и может использоваться для настройки и администрирования служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в режиме интеграции с SharePoint. Для настройки сервера отчетов в режиме Sharepoint используйте центр администрирования SharePoint. Дополнительные сведения см. [в разделе Управление приложением службы Reporting Services SharePoint](../../../2014/reporting-services/manage-a-reporting-services-sharepoint-service-application.md).  
@@ -48,7 +48,7 @@ ms.locfileid: "71952521"
   
 -   Убедитесь, что служба **администрирования SharePoint 2010** запущена в Диспетчер сервера Windows.  
   
- ![Компоненты SSRS на установке 1 сервера](../../../2014/sql-server/install/media/rs-deployment-1-server.gif "компоненты SSRS на установке 1 сервера")  
+ ![Компоненты SSRS на установке 1 сервера](../../../2014/sql-server/install/media/rs-deployment-1-server.gif "Компоненты SSRS на установке 1 сервера")  
   
 ### <a name="database-considerations-for-a-single-server-configuration"></a>Сведения о базах данных для конфигурации с одиночным сервером  
   
@@ -76,29 +76,29 @@ ms.locfileid: "71952521"
   
 6.  На странице **ключ продукта** введите свой ключ или примите значение по умолчанию для выпуска Enterprise Evaluation.  
   
-     Нажмите кнопку **Далее**.  
+     Установите переключатель в положение **Далее**.  
   
 7.  Просмотрите и примите лицензионные условия. Корпорация Майкрософт будет признательна вам за согласие отправлять данные об использовании компонентов, которые помогут улучшить функции и поддержку продукта.  
   
-     Нажмите кнопку **Далее**.  
+     Установите переключатель в положение **Далее**.  
   
 8.  Выберите **SQL Server Установка компонентов** на странице **роль установки** .  
   
      Нажмите кнопку **Далее**  
   
-     ![Установка компонентов SQL Server для роли установки](../../../2014/sql-server/install/media/rs-setuprole.gif "Установка компонентов SQL Server для роли установки")  
+     ![Установка компонентов SQL Server для роли установки](../../../2014/sql-server/install/media/rs-setuprole.gif "Установка компонентов SQL Server для роли установки")  
   
 9. Выберите следующие компоненты на странице **Выбор компонентов** :  
   
     -   **Службы Reporting Services — SharePoint**  
   
-    -   **Reporting Services надстройки для продуктов SharePoint 2010**. ![Примечание](../../../2014/reporting-services/media/rs-fyinote.png "Примечание.")параметр мастера установки для установки надстройки впервые работает с выпуском [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+    -   **Reporting Services надстройки для продуктов SharePoint 2010**. ![Примечание](../../../2014/reporting-services/media/rs-fyinote.png "nоте ") . Параметр мастера установки для установки надстройки впервые используется в выпуске [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
     -   Если экземпляр компонента SQL Server [!INCLUDE[ssDE](../../includes/ssde-md.md)]еще не установлен, для завершения установки можно также выбрать **Службы ядра СУБД** и **Полный набор средств управления** .  
   
-     Нажмите кнопку **Далее**.  
+     Установите переключатель в положение **Далее**.  
   
-     ![Выбор компонентов SSRS для режима интеграции с SharePoint ](../../../2014/sql-server/install/media/rs-setupfeatureselection-sharepoint-with-circles.gif "Выбор компонентов SSRS для режима интеграции с SharePoint")  
+     ![Выбор компонентов SSRS для режима интеграции с SharePoint](../../../2014/sql-server/install/media/rs-setupfeatureselection-sharepoint-with-circles.gif "Выбор компонентов SSRS для режима интеграции с SharePoint")  
   
 10. На странице **правила установки** нажмите кнопку **Далее** . Просмотрите все предупреждения и определите критические препятствия.  
   
@@ -108,7 +108,7 @@ ms.locfileid: "71952521"
   
 13. На странице **Конфигурация сервера** введите соответствующие учетные данные. Если необходимо использовать функции предупреждения об изменении данных или подписки на данные служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , необходимо изменить **Тип запуска** для агента SQL Server на **Автоматический**.  
   
-     Нажмите кнопку **Далее**.  
+     Установите переключатель в положение **Далее**.  
   
 14. Если выбрана установка служб ядра СУБД, откроется страница **Настройка компонента Database Engine** , на которой следует добавить соответствующие учетные записи в список администраторов SQL и нажать кнопку **Далее**.  
   
@@ -118,7 +118,7 @@ ms.locfileid: "71952521"
   
 16. Помогите компании Майкрософт улучшить работу функций и служб SQL Server, установив флажок в знак согласия отправлять отчеты об ошибках на странице **Отчеты об ошибках** .  
   
-     Нажмите кнопку **Далее**.  
+     Установите переключатель в положение **Далее**.  
   
 17. Просмотрите возможные предупреждения и нажмите кнопку **Далее** на странице **Правила настройки установки** .  
   
@@ -201,7 +201,7 @@ ms.locfileid: "71952521"
   
 11. Создание приложения службы может занять несколько минут. По завершении этого процесса отобразятся подтверждение и ссылка на страницу **Подготовка подписок и предупреждений** . Выполните этот шаг подготовки, если нужно использовать функции подписки и предупреждения служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Дополнительные сведения см. в разделе [Подготовка подписок и предупреждений для приложений служб SSRS](../../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md).  
   
- Содержимое, связанное с PowerShell ![содержимое],(../../../2014/reporting-services/media/rs-powershellicon.jpg "относящееся к PowerShell") . сведения об использовании PowerShell для создания приложения службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] см. в статье [Создание приложения Reporting Services службы с помощью PowerShell](../../../2014/reporting-services/reporting-services-sharepoint-service-and-service-applications.md#bkmk_powershell_create_ssrs_serviceapp).  
+ ![Содержимое, связанное с PowerShell](../../../2014/reporting-services/media/rs-powershellicon.jpg "Содержимое, связанное с PowerShell") Сведения об использовании PowerShell для создания приложения службы @no__t 1 см. [в статье Создание приложения службы Reporting Services с помощью PowerShell](../../../2014/reporting-services/reporting-services-sharepoint-service-and-service-applications.md#bkmk_powershell_create_ssrs_serviceapp).  
   
 
   
@@ -247,7 +247,7 @@ ms.locfileid: "71952521"
 ### <a name="activate-the-file-sync-feature"></a>Активация функции синхронизации файлов  
  Если пользователи часто передают элементы опубликованных отчетов непосредственно в библиотеки документов SharePoint, может оказаться полезной функция синхронизации файлов сервера отчетов. Функция синхронизации файлов позволяет синхронизировать каталог сервера отчетов с элементами библиотек документов на более регулярной основе. Дополнительные сведения см. в статье [активировать функции синхронизации файлов сервера отчетов в центре администрирования SharePoint](../../../2014/reporting-services/activate-report-server-file-sync-feature-sharepoint-central-administration.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также статью  
  [Командлеты PowerShell для режима служб SharePoint Reporting Services](../../../2014/reporting-services/powershell-cmdlets-for-reporting-services-sharepoint-mode.md)   
  [Функции, поддерживаемые различными Выпусками SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473)   
  [Служба SharePoint и Служебные приложения службы Reporting Services](../../../2014/reporting-services/reporting-services-sharepoint-service-and-service-applications.md)  

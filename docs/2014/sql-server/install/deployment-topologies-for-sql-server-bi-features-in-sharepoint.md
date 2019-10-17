@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: d1d8d503fc5020fb9d44bb8daa4be79abd00dc0d
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 10/16/2019
 ms.locfileid: "71952641"
 ---
 # <a name="deployment-topologies-for-sql-server-bi-features-in-sharepoint"></a>Deployment Topologies for SQL Server BI Features in SharePoint
@@ -60,7 +60,7 @@ ms.locfileid: "71952641"
 ###  <a name="bkmk_bi_Sharepoint2013_3tier"></a>PowerPivot для SharePoint 2013 и Reporting Services развертывание трех серверов  
  В следующем трехсерверном развертывании компонент SQL Server Database Engine, сервер [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] в режиме интеграции с SharePoint, а также SharePoint выполняются на отдельных серверах. Пакет установщика [!INCLUDE[ssGeminiShortvnext](../../includes/ssgeminishortvnext-md.md)] 2013 PowerPivot (**spPowerPivot.msi**) должен запускаться на сервере SharePoint.  
   
- Развертывание серверов ![SSAS и SSRS в режиме интеграции с SharePoint 3 Server](../../../2014/sql-server/install/media/as-and-rs-3server-deployment.gif "SSAS и SSRS SharePoint в режиме 3")  
+ ![Развертывание сервера SSAS и SSRS SharePoint в режиме 3](../../../2014/sql-server/install/media/as-and-rs-3server-deployment.gif "Развертывание сервера SSAS и SSRS SharePoint в режиме 3")  
   
 |||  
 |-|-|  
@@ -72,14 +72,14 @@ ms.locfileid: "71952641"
 |**(6)**|Сервер [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] в режиме интеграции с SharePoint. Для использования этого сервера настройте **параметры модели данных** приложения служб Excel.|  
 |**(7)**|Базы данных содержимого SharePoint, конфигурации и приложений службы.|  
   
- Параметры ![SharePoint]параметры(https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint") [отправляют отзывы и контактные данные через Microsoft SQL Server Connect](https://connect.microsoft.com/SQLServer/Feedback) (https://connect.microsoft.com/SQLServer/Feedback) ).  
+ ![Параметры SharePoint](https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "Параметры SharePoint") [отправляют отзывы и контактные данные через Microsoft SQL Server Connect](https://connect.microsoft.com/SQLServer/Feedback) (https://connect.microsoft.com/SQLServer/Feedback) ).  
   
 ###  <a name="bkmk_powerpivot_sharepoint2013_1server"></a>Развертывание с одним сервером PowerPivot для SharePoint 2013  
  Развертывание одиночного сервера полезно для тестирования, но не рекомендуется для производственных целей.  
   
  На следующей диаграмме показаны компоненты, которые входят в состав развертывания [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] одиночного сервера.  
   
- Развертывание одиночного сервера ![PowerPivot для SharePoint развертывание](../../../2014/sql-server/install/media/as-powerpivot-mode-1server-deployment.gif "PowerPivot для SharePoint с одним") сервером  
+ ![PowerPivot для SharePoint развертывание с одним сервером](../../../2014/sql-server/install/media/as-powerpivot-mode-1server-deployment.gif "PowerPivot для SharePoint развертывание с одним сервером")  
   
 |||  
 |-|-|  
@@ -108,7 +108,7 @@ ms.locfileid: "71952641"
 ###  <a name="bkmk_powerpivot_sharepoint2013_3server"></a>Развертывание сервера PowerPivot для SharePoint 2013 3  
  В следующем трехсерверном развертывании компонент SQL Server Database Engine, сервер [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] в режиме интеграции с SharePoint, а также SharePoint выполняются на отдельных серверах. Пакет установщика [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013 (spPowerPivot.msi) должен быть установлен на сервере SharePoint.  
   
- ![Как развертывание PowerPivot Mode3 Server](../../../2014/sql-server/install/media/as-powerpivot-mode-3server-deployment.gif "как развертывание PowerPivot Mode3 Server")  
+ ![Развертывание сервера PowerPivot Mode3 Server](../../../2014/sql-server/install/media/as-powerpivot-mode-3server-deployment.gif "Развертывание сервера PowerPivot Mode3 Server")  
   
 |||  
 |-|-|  
@@ -121,7 +121,7 @@ ms.locfileid: "71952641"
 ###  <a name="bkmk_powerpivot_ssrs_sharepoint2013_1server"></a>PowerPivot для SharePoint 2013 и Reporting Services развертывание с одним сервером  
  Развертывание одиночного сервера полезно для тестирования, но не рекомендуется для производственных целей.  
   
- Развертывание служб ![SSAS и SSRS SharePoint в режиме 1 Server развертывания](../../../2014/sql-server/install/media/as-and-rs-1server-deployment.gif "SSAS и служб SSRS SharePoint режим 1 Server")  
+ ![Развертывание серверов SSAS и SSRS SharePoint в режиме 1](../../../2014/sql-server/install/media/as-and-rs-1server-deployment.gif "Развертывание серверов SSAS и SSRS SharePoint в режиме 1")  
   
 |||  
 |-|-|  
@@ -135,7 +135,7 @@ ms.locfileid: "71952641"
 ###  <a name="bkmk_powerpivot_ssrs_sharepoint2013_2server"></a>PowerPivot для SharePoint 2013 и Reporting Services развертывания двух серверов  
  В следующем двухсерверном развертывании ядро СУБД SQL Server и сервер Analysis Services в режиме интеграции с SharePoint работают на сервере, отдельном от SharePoint. Пакет установщика PowerPivot для SharePoint 2013 (с помощью программы **PowerPivot. msi)** должен быть запущен на сервере SharePoint.  
   
- Развертывание сервера ![SSAS и служб SSRS в режиме интеграции с SharePoint 2 Server](../../../2014/sql-server/install/media/as-and-rs-2server-deployment.gif "SSAS и службы SSRS SharePoint в режиме 2")  
+ ![Развертывание сервера SSAS и SSRS SharePoint в режиме 2](../../../2014/sql-server/install/media/as-and-rs-2server-deployment.gif "Развертывание сервера SSAS и SSRS SharePoint в режиме 2")  
   
 |||  
 |-|-|  
@@ -150,12 +150,12 @@ ms.locfileid: "71952641"
 ##  <a name="bkmk_example_deployments_2010"></a>Примеры топологий развертывания SharePoint 2010  
  На следующей диаграмме показано, какие службы и поставщики работают на каждом из уровней. Обратите внимание, что диаграмма включает несколько встроенных служб. Эти службы необходимы для поддержки некоторых сценариев SQL Server BI. Службы Excel Services, Secure Store и Claims to Windows Token Service либо необходимы, либо рекомендуются для поддержки работы PowerPivot для SharePoint или служб Reporting Services в SharePoint. Кроме того, для поддержки некоторых сценариев доступа к данным PowerPivot необходимы поставщики MSOLAP OLE DB и службы ADO.NET. Дополнительно можно установить на уровне данных службу Analysis Services, если предполагается создавать отчеты [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] на основе баз данных табличных моделей, размещенных за пределами SharePoint.  
   
- ![](../../../2014/sql-server/install/media/sql11bisetup.gif "Схема логической архитектуры") схемы логической архитектуры  
+ ![Схема логической архитектуры](../../../2014/sql-server/install/media/sql11bisetup.gif "Схема логической архитектуры")  
   
 ##  <a name="bkmk_sharepoint2010_1server"></a>Развертывания на одном сервере  
  Все компоненты сервера, включая уровень данных, можно установить на одном компьютере. Такая конфигурация развертывания полезна при ознакомлении с ПО или при разработке пользовательских приложений, включающих службы Reporting Services в режиме SharePoint. Это развертывание является наиболее простым в настройке. Поскольку все компоненты устанавливаются на одном и том же компьютере, требуется также наименьшее количество лицензий. Службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] и компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] устанавливаются как однолицензионная копия [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Чтобы установить все компоненты на одиночный сервер, последовательно установите службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] на один и тот же физический сервер. Инструкции по конфигурации изолированного сервера см. в разделе [Deployment контрольный список: Reporting Services, Power View и PowerPivot для SharePoint @ no__t-0.  
+ Чтобы установить все компоненты на одиночный сервер, последовательно установите службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] на один и тот же физический сервер. Инструкции по конфигурации изолированного сервера см. в разделе [Контрольный список развертывания: Reporting Services, Power View и PowerPivot для SharePoint](deployment-checklist-reporting-services-power-view-power-pivot-for-sharepoint.md).  
   
 ##  <a name="bkmk_sharepoint2010_2server"></a>Двухстороннее развертывание  
  Двухуровневое развертывание обычно включает установку SharePoint Server 2010 на один компьютер и компонент SQL Server Database Engine на второй компьютер. Перемещение уровня данных на выделенный сервер — это наиболее типичная конфигурация двухкомпьютерной фермы. В двухуровневой ферме на сервере SharePoint устанавливаются служба [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и служба [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] . Все веб-службы на сервере, обслуживающем клиентские запросы, и общие службы на уровне приложений эксплуатируются на одном и том же физическом сервере. Шаги по установке в двухуровневой конфигурации очень похожи на установку на отдельном сервере: службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] последовательно устанавливаются на одном и том же физическом сервере.  
@@ -163,16 +163,16 @@ ms.locfileid: "71952641"
 ##  <a name="bkmk_sharepoint2010_3server"></a>Трехуровневой уровень развертывания  
  В трехуровневом развертывании обычно отделяют службы клиентского веб-интерфейса от приложений, интенсивно использующих память. В этой топологии службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] устанавливаются только на сервере приложений. Веб-службы, выполняющиеся на клиентском веб-интерфейсе, устанавливаются как решения, которые развернуты в качестве приложений в ферме в процессе настройки сервера, как задача после установки. На следующей диаграмме проиллюстрировано трехуровневое развертывание.  
   
- ![3-Server топологии](../../../2014/sql-server/install/media/sql11bisetup-3server.gif "3-Server топологии")  
+ ![3 — сервер топологии](../../../2014/sql-server/install/media/sql11bisetup-3server.gif "3 — сервер топологии")  
   
 ##  <a name="bkmk_sharepoint2010_scaleserver"></a>3-уровневое масштабное развертывание  
  Эта топология иллюстрирует масштабное развертывание, при котором одна и та же общая служба выполняется на нескольких серверах, что позволяет обслуживать большое количество запросов и предоставлять дополнительные мощности по обработке данных PowerPivot или отчетов служб Reporting Services. На нижеследующей диаграмме показаны три кластера серверов приложений, в каждом из которых в различных сочетаниях выполняются общие службы. В среде SharePoint функции обнаружения и проверки доступности служб встроены в ферму. Балансировка загрузки нескольких физических серверов, на которых выполняется одно и то же приложение общей службы, является частью архитектуры общих служб.  
   
- При развертывании фермы с несколькими серверами обязательно следуйте инструкциям в этой статье SharePoint: [Несколько серверов для трехуровневой фермы (SharePoint Server 2010)](https://go.microsoft.com/fwlink/?linkID=219834).  
+ При развертывании многосерверной фермы следуйте инструкциям, приведенным в статье по SharePoint: [Несколько серверов в трехуровневой ферме (SharePoint Server 2010)](https://go.microsoft.com/fwlink/?linkID=219834).  
   
- ![5-Server топологии](../../../2014/sql-server/install/media/sql11bisetup-5server.gif "5-Server топологии")  
+ ![5 — Серверная топологии](../../../2014/sql-server/install/media/sql11bisetup-5server.gif "5 — Серверная топологии")  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также статью  
  [Reporting Services &#40;установки SharePoint в режиме интеграции SharePoint 2010 и&#41;SharePoint 2013](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)   
  [PowerPivot для SharePoint 2013 установка](https://docs.microsoft.com/analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode)   
  [Установка PowerPivot для SharePoint 2010](../../../2014/sql-server/install/powerpivot-for-sharepoint-2010-installation.md)  

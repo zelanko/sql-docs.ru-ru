@@ -1,5 +1,5 @@
 ---
-title: sys.sp_add_trusted_assembly (Transact-SQL) | Документация Майкрософт
+title: sys. sp_add_trusted_assembly (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql
@@ -18,19 +18,19 @@ ms.assetid: ''
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1c9e7fad6c73cd5dd32673db6fc1ab841eb20994
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bb34a814780a46c12c65948bd0b552effaacda4d
+ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68106555"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72452869"
 ---
-# <a name="sysspaddtrustedassembly-transact-sql"></a>sys.sp_add_trusted_assembly (Transact-SQL)  
-[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
+# <a name="syssp_add_trusted_assembly-transact-sql"></a>sys. sp_add_trusted_assembly (Transact-SQL)  
+[!INCLUDE[tsql-appliesto-ss2017-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdbmi-xxxx-xxx-md.md)]
 
 Добавляет сборку в список доверенных сборок для сервера.
 
- ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [соглашения о синтаксисе Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
 
 ## <a name="syntax"></a>Синтаксис
@@ -40,36 +40,36 @@ sp_add_trusted_assembly
     [ , [ @description = ] 'description' ]
 ```  
 
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
 
-Эта процедура добавляет сборку [sys.trusted_assemblies](../../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md).
+Эта процедура добавляет сборку в [sys. trusted_assemblies](../../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md).
 
 ## <a name="arguments"></a>Аргументы
 
-[ @hash =] '*значение*"  
-SHA2_512 хэш-значение сборку для добавления в список доверенных сборок для сервера. Доверенные сборки загружаются [CLR strict security](../../database-engine/configure-windows/clr-strict-security.md) включена, даже в том случае, если сборка не имеет знака или база данных не помечена как заслуживающая доверия.
+[@hash =] "*значение*"  
+Значение хэша SHA2_512 сборки, добавляемое в список доверенных сборок для сервера. Доверенные сборки могут загружаться, когда включена [строгая безопасность CLR](../../database-engine/configure-windows/clr-strict-security.md) , даже если сборка не подписана или база данных не помечена как заслуживающая доверия.
 
-[ @description =] '*описание*"  
-Необязательное пользовательское описание сборки. Корпорация Майкрософт рекомендует использовать каноническое имя, кодирующая простое имя, номер версии, язык и региональные параметры, открытый ключ и архитектуру сборки для доверия. Это значение уникально идентифицирует сборку среды выполнения (CLR) стороны выполнения и совпадает со значением значение clr_name sys.assemblies. 
+[@description =] "*Описание*"  
+Необязательное описание сборки, определяемое пользователем. Корпорация Майкрософт рекомендует использовать каноническое имя, которое кодирует простое имя, номер версии, язык и региональные параметры, Открытый ключ и архитектуру сборки для отношения доверия. Это значение однозначно определяет сборку на стороне среды CLR и совпадает со значением clr_name в sys. assemblies. 
 
-## <a name="permissions"></a>Разрешения
+## <a name="permissions"></a>Permissions
 
-Требуется членство в `sysadmin` предопределенной роли сервера или `CONTROL SERVER` разрешение.
+Требуется членство в предопределенной роли сервера `sysadmin` или разрешение `CONTROL SERVER`.
 
 ## <a name="examples"></a>Примеры  
 
-В следующем примере добавляется сборку с именем `pointudt` в список доверенных сборок для сервера. Эти значения доступны из [sys.assemblies](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md).     
+В следующем примере в список доверенных сборок для сервера добавляется сборка с именем `pointudt`. Эти значения доступны из представления [sys. assemblies](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md).     
 
 ```  
 EXEC sp_add_trusted_assembly 0x8893AD6D78D14EE43DF482E2EAD44123E3A0B684A8873C3F7BF3B5E8D8F09503F3E62370CE742BBC96FE3394477214B84C7C1B0F7A04DCC788FA99C2C09DFCCC, 
 N'pointudt, version=0.0.0.0, culture=neutral, publickeytoken=null, processorarchitecture=msil';
 ```  
 
-## <a name="see-also"></a>См. также  
-  [sys.sp_drop_trusted_assembly](sys-sp-drop-trusted-assembly-transact-sql.md)  
-  [sys.trusted_assemblies](../../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md)  
+## <a name="see-also"></a>См. также статью  
+  [sys. sp_drop_trusted_assembly](sys-sp-drop-trusted-assembly-transact-sql.md)  
+  [sys. trusted_assemblies](../../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md)  
   [CREATE ASSEMBLY (Transact-SQL)](../../t-sql/statements/create-assembly-transact-sql.md)  
-  [Строгая безопасность среды CLR](../../database-engine/configure-windows/clr-strict-security.md)  
+  [Среда CLR с уровнем безопасности](../../database-engine/configure-windows/clr-strict-security.md)  
   [sys.assemblies](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md)  
   [sys.dm_clr_loaded_assemblies](../../relational-databases/system-dynamic-management-views/sys-dm-clr-loaded-assemblies-transact-sql.md)  
 
