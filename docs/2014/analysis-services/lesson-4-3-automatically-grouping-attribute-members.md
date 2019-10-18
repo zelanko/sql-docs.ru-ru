@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6dc768188f25640a3685c8526bfceb3874154f40
-ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/17/2019
 ms.locfileid: "69890836"
 ---
 # <a name="automatically-grouping-attribute-members"></a>Автоматическое группирование элементов атрибута
@@ -28,7 +28,7 @@ ms.locfileid: "69890836"
  **Clusters**  
  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] группы создаются путем проведения одномерной кластеризации входных значений с помощью метода кластеризации К-средних с нормальным распределением. Эта функция применима только в отношении числовых столбцов.  
   
- После выбора метода группирования необходимо указать количество групп, используя свойство **DiscretizationBucketCount** . Дополнительные сведения см. в разделе [Группирование элементов атрибутов (дискретизация)](multidimensional-models/attribute-properties-group-attribute-members.md).  
+ После выбора метода группирования необходимо указать количество групп, используя свойство **DiscretizationBucketCount** . Дополнительные сведения см. в разделе [Группирование элементов атрибутов (дискретизация)](multidimensional-models/attribute-properties-group-attribute-members.md)  
   
  В ходе выполнения задач данного раздела будут опробованы следующие критерии группирования: значение годового дохода в измерении **Заказчик** , количество часов отсутствия по болезни в измерении **Сотрудники** , данные о количестве часов отпуска сотрудников в измерении **Сотрудники** . Затем предстоит выполнить обработку куба учебника по службам [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] и просмотреть результаты группирования элементов. На конечной стадии будут изменены свойства групп элементов, чтобы выявить эффект от изменения типа группирования.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "69890836"
   
      На следующем рисунке показаны измененные свойства атрибута **Yearly Income**.  
   
-     ![Измененные свойства для годового дохода] (../../2014/tutorials/media/l4-discretizationmethod-1.gif "Измененные свойства для годового дохода")  
+     ![Измененные свойства для годового дохода](../../2014/tutorials/media/l4-discretizationmethod-1.gif "Измененные свойства для годового дохода")  
   
 ## <a name="grouping-attribute-hierarchy-members-in-the-employee-dimension"></a>Группирование элементов иерархии атрибута в измерении Employee  
   
@@ -94,7 +94,7 @@ ms.locfileid: "69890836"
   
      На приведенном ниже рисунке приведена зависимость объемов продаж от количества часов отпуска по болезни.  
   
-     ![Объем продаж, измеренный по часам отпуска по болезни] (../../2014/tutorials/media/l4-discretizationmethod-2.gif "Объем продаж, измеренный по часам отпуска по болезни")  
+     ![Объем продаж, измеренный по часам отпуска по болезни](../../2014/tutorials/media/l4-discretizationmethod-2.gif "Объем продаж, измеренный по часам отпуска по болезни")  
   
 10. Удалите иерархию атрибута **Sick Leave Hours** из раздела столбцов панели **Данные** .  
   
@@ -125,7 +125,7 @@ ms.locfileid: "69890836"
 ## <a name="next-task-in-lesson"></a>Следующая задача занятия  
  [Скрытие и отключение иерархий атрибутов](lesson-4-4-hiding-and-disabling-attribute-hierarchies.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также статью  
  [Группирование элементов атрибутов (дискретизация)](multidimensional-models/attribute-properties-group-attribute-members.md)  
   
   

@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 8333da0bd3b5b4ad4f0b377edec110e30565c273
-ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 10/17/2019
 ms.locfileid: "71713182"
 ---
 # <a name="monitor-sql-server-machine-learning-services-using-dynamic-management-views-dmvs"></a>Мониторинг SQL Server Службы машинного обучения с помощью динамических административных представлений
@@ -38,17 +38,17 @@ ms.locfileid: "71713182"
 
 ## <a name="dynamic-management-views"></a>Динамические административные представления
 
-При наблюдении за рабочими нагрузками машинного обучения в SQL Server можно использовать следующие динамические административные представления. Для запроса динамических административных представлений `VIEW SERVER STATE` необходимо разрешение на экземпляр.
+При наблюдении за рабочими нагрузками машинного обучения в SQL Server можно использовать следующие динамические административные представления. Для запроса динамических административных представлений требуется `VIEW SERVER STATE` разрешение на экземпляр.
 
-| Динамическое административное представление | Type | Описание |
+| Динамическое административное представление | В качестве описания введите | Description |
 |-------------------------|------|-------------|
 | [sys.dm_external_script_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md) | Выполнение | Возвращает строку для каждой активной рабочей учетной записи, в которой выполняется внешний скрипт. |
 | [sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md) | Выполнение | Возвращает по одной строке для каждого типа запроса внешнего скрипта. |
-| [sys.dm_os_performance_counters](../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md) | Выполнение | Возвращает по строке на каждый счетчик производительности, хранимый на сервере. Если используется условие `WHERE object_name LIKE '%External Scripts%'`поиска, эти сведения можно использовать для просмотра количества выполненных скриптов, выполнения скриптов с использованием режима проверки подлинности или количества вызовов R или Python, выданных экземпляром в целом. |
+| [sys.dm_os_performance_counters](../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md) | Выполнение | Возвращает по строке на каждый счетчик производительности, хранимый на сервере. Если используется условие поиска `WHERE object_name LIKE '%External Scripts%'`, эти сведения можно использовать для просмотра количества выполненных скриптов, сценариев, которые выполнялись с использованием режима проверки подлинности, или количества вызовов R или Python, выданных экземпляром в целом. |
 | [sys.dm_resource_governor_external_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md) | Resource Governor | Возвращает сведения о текущем состоянии внешнего пула ресурсов в Resource Governor, текущую конфигурацию пулов ресурсов и статистику пула ресурсов. |
 | [sys.dm_resource_governor_external_resource_pool_affinity](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pool-affinity-transact-sql.md) | Resource Governor | Возвращает сведения о сходстве ЦП с текущей внешней конфигурацией пула ресурсов в Resource Governor. Возвращает по одной строке для каждого планировщика [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], сопоставленного с отдельным процессором. Используйте это представление для мониторинга состояния планировщика или для определения отклонившихся от расписания задач. |
 
-Сведения о мониторинге [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] экземпляров см. в разделе [представления каталога](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md) и [динамические административные представления, связанные с RESOURCE GOVERNOR](../../relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md).
+Сведения о наблюдении за экземплярами [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] см. в разделе [представления каталога](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md) и [динамические административные представления, связанные с Resource Governor](../../relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md).
 
 ## <a name="settings-and-configuration"></a>Параметры и конфигурация
 
@@ -78,7 +78,7 @@ WHERE name = 'external scripts enabled';
 
 Запрос возвращает следующие столбцы:
 
-| Столбец | Описание |
+| столбцом | Description |
 |--------|-------------|
 | исмлсервицесинсталлед | Возвращает значение 1, если для экземпляра установлен SQL Server Службы машинного обучения. В противном случае возвращает 0. |
 | екстерналскриптсенаблед | Возвращает значение 1, если для экземпляра включены внешние скрипты. В противном случае возвращает 0. |
@@ -106,7 +106,7 @@ ON s.session_id = r.session_id;
 
 Запрос возвращает следующие столбцы:
 
-| Столбец | Описание |
+| столбцом | Description |
 |--------|-------------|
 | session_id | Идентификатор сеанса, связанный со всеми активными первичными соединениями. |
 | blocking_session_id | Идентификатор сеанса, блокирующего данный запрос. Если этот столбец содержит значение NULL, то запрос не блокирован или сведения о сеансе блокировки недоступны (или не могут быть идентифицированы). |
@@ -142,7 +142,7 @@ ORDER BY language, counter_name;
 
 Запрос возвращает следующие столбцы:
 
-| Столбец | Описание |
+| столбцом | Description |
 |--------|-------------|
 | language | Имя зарегистрированного языка внешних скриптов. |
 | counter_name | Имя зарегистрированной функции внешних скриптов. |
@@ -164,13 +164,13 @@ WHERE object_name LIKE '%External Scripts%'
 
 **sys. DM _os_performance_counters** выводит следующие счетчики производительности для внешних скриптов:
 
-| Счетчик | Описание |
+| Счетчик | Description |
 |---------|-------------|
 | Всего выполнений | Количество внешних процессов, запущенных локальными или удаленными вызовами. |
-| Параллельное выполнение | Количество раз, когда сценарий включал [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]  _\@_ спецификацию Parallel и мог создать и использовать параллельный план запроса. |
+| Параллельное выполнение | Количество раз, когда сценарий включал спецификацию _\@parallel_ и [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] мог создать и использовать параллельный план запроса. |
 | Потоковое выполнение | Количество раз, когда была вызвана функция потоковой передачи. |
 | Выполнение SQL CC | Количество внешних скриптов, в которых вызов был создан удаленно и SQL Server использовался в качестве контекста вычислений. |
-| Имена входа с неявной проверкой подлинности Имена входа | Количество случаев, когда вызов обратной связи ODBC был выполнен с использованием подразумеваемой проверки подлинности; то есть, [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] выполняет вызов от имени пользователя, отправляющего запрос скрипта. |
+| Подразумеваемая проверка подлинности. имена входа | Количество случаев, когда вызов обратной связи ODBC был выполнен с использованием подразумеваемой проверки подлинности; то есть [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] выполнил вызов от имени пользователя, отправляющего запрос скрипта. |
 | Общее время выполнения (мс) | Время, прошедшее между вызовом и завершением вызова. |
 | Ошибки выполнения | Количество раз, когда скрипты сообщили об ошибках. Это число не включает ошибки R или Python. |
 
@@ -192,7 +192,7 @@ FROM sys.dm_os_sys_info;
 
 Запрос возвращает следующие столбцы:
 
-| Столбец | Описание |
+| столбцом | Description |
 |--------|-------------|
 | physical_memory_kb | Общий объем физической памяти на компьютере. |
 | committed_kb | Выделенная память в килобайтах (КБ) в диспетчере памяти. Не включает зарезервированную память в диспетчере памяти. |
@@ -221,9 +221,9 @@ FROM sys.dm_resource_governor_external_resource_pools AS ep;
 
 Запрос возвращает следующие столбцы:
 
-| Столбец | Описание |
+| столбцом | Description |
 |--------|-------------|
-| name | Имя внешнего пула ресурсов или SQL Server. |
+| NAME | Имя внешнего пула ресурсов или SQL Server. |
 | max_memory_percent | Максимальный объем памяти, который может использоваться SQL Server или внешним пулом ресурсов. |
 
 ## <a name="resource-pools"></a>Пулы ресурсов
@@ -246,9 +246,9 @@ FROM sys.dm_resource_governor_external_resource_pools AS ep;
 
 Запрос возвращает следующие столбцы:
 
-| Столбец | Описание |
+| столбцом | Description |
 |--------|-------------|
-| pool_name | Имя пула ресурсов. SQL Server пулы ресурсов имеют префикс `SQL Server` , а внешние пулы ресурсов имеют `External Pool`префикс.
+| pool_name | Имя пула ресурсов. SQL Server пулы ресурсов имеют префикс `SQL Server` и внешние пулы ресурсов имеют префикс `External Pool`.
 | total_cpu_usage_hours | Совокупное использование ЦП в миллисекундах с момента сброса статистики сброса регулятора ресурсов. |
 | read_io_completed_total | Общая сумма завершенных операций ввода-вывода с момента сброса регулятора ресурсов. |
 | write_io_completed_total | Общая сумма завершенных операций ввода-вывода записи с момента сброса регулятора ресурсов. |
@@ -275,7 +275,7 @@ WITH result sets((Package NVARCHAR(255), Version NVARCHAR(100), Depends NVARCHAR
 
 Возвращаются следующие столбцы:
 
-| Столбец | Описание |
+| столбцом | Description |
 |--------|-------------|
 | Пакет | Имя установленного пакета. |
 | Version | Версия пакета. |
@@ -301,11 +301,11 @@ WITH result sets((Package NVARCHAR(128), Version NVARCHAR(128), Location NVARCHA
 
 Возвращаются следующие столбцы:
 
-| Столбец | Описание |
+| столбцом | Description |
 |--------|-------------|
 | Пакет | Имя установленного пакета. |
 | Version | Версия пакета. |
-| Location | Каталог, в котором можно найти пакет. |
+| Местоположение | Каталог, в котором можно найти пакет. |
 
 ## <a name="next-steps"></a>Следующие шаги
 

@@ -9,12 +9,12 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3b5a55ec16c7dfa2f16dbae62674a475fb39c5d7
-ms.sourcegitcommit: 26715b4dbef95d99abf2ab7198a00e6e2c550243
+ms.openlocfilehash: f8ce5c7bcf12a2431c2de779912d2e309c628cb1
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70275677"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72542140"
 ---
 # <a name="install-new-r-packages-with-sqlmlutils"></a>Установка новых пакетов R с помощью склмлутилс
 
@@ -23,9 +23,9 @@ ms.locfileid: "70275677"
 В этой статье описывается, как использовать функции в пакете [**склмлутилс**](https://github.com/Microsoft/sqlmlutils) для установки новых пакетов R в экземпляр SQL Server Службы машинного обучения или SQL Server R Services. Устанавливаемые пакеты можно использовать в скриптах R, выполняющихся в базе данных, с помощью инструкции T-SQL [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) .
 
 > [!NOTE]
-> Стандартная команда r `install.packages` не рекомендуется для добавления пакетов r на SQL Server. Вместо этого используйте **склмлутилс** , как описано в этой статье.
+> Стандартная команда R `install.packages` не рекомендуется для добавления пакетов R в SQL Server. Вместо этого используйте **склмлутилс** , как описано в этой статье.
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>предварительные требования
 
 - Установите [R](https://www.r-project.org) и [RStudio Desktop](https://www.rstudio.com/products/rstudio/download/) на клиентском компьютере, который используется для подключения к SQL Server. Для выполнения скриптов можно использовать любую интегрированную среду разработки R, но в этой статье предполагается RStudio.
 
@@ -50,7 +50,7 @@ ms.locfileid: "70275677"
 
 Если клиентский компьютер имеет доступ к Интернету, вы можете скачать и установить **склмлутилс** и зависимые пакеты в сети.
 
-1. Скачайте последнюю версию ZIP-файла склмлутилс https://github.com/Microsoft/sqlmlutils/tree/master/R/dist с на клиентский компьютер. Не Распакуйте файл.
+1. Скачайте последний ZIP-файл **склмлутилс** с https://github.com/Microsoft/sqlmlutils/tree/master/R/dist на клиентский компьютер. Не Распакуйте файл.
 
 1. Откройте **командную строку** и выполните следующие команды, чтобы установить пакеты **склмлутилс** и **родбцекст**. Замените полный путь к скачанному ZIP-файлу **склмлутилс** (в этом примере предполагается, что файл находится в папке "документы"). Пакет **родбцекст** находится в сети и установлен.
 
@@ -72,7 +72,7 @@ ms.locfileid: "70275677"
 
 1. Установите **miniCRAN**. Дополнительные сведения см. в разделе [Install miniCRAN](create-a-local-package-repository-using-minicran.md#install-minicran) .
 
-1. В RStudio выполните следующий скрипт R, чтобы создать локальный репозиторий пакета **родбцекст**. В этом примере создается репозиторий в папке `c:\downloads\rodbcext`.
+1. В RStudio выполните следующий скрипт R, чтобы создать локальный репозиторий пакета **родбцекст**. В этом примере репозиторий создается в папке `c:\downloads\rodbcext`.
 
    ::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
 
@@ -100,16 +100,16 @@ ms.locfileid: "70275677"
 
    ::: moniker-end
 
-   В качестве `Rversion` значения используйте версию R, установленную на SQL Server. Чтобы проверить установленную версию, используйте следующую команду T-SQL.
+   Для `Rversion` значения используйте версию R, установленную на SQL Server. Чтобы проверить установленную версию, используйте следующую команду T-SQL.
 
    ```sql
    EXECUTE sp_execute_external_script @language = N'R'
     , @script = N'print(R.version)'
    ```
 
-1. Скачайте последнюю версию ZIP-файла склмлутилс https://github.com/Microsoft/sqlmlutils/tree/master/R/dist из (не извлеките файл). Например, скачайте файл в `c:\downloads\sqlmlutils_0.7.1.zip`.
+1. Скачайте последнюю версию ZIP-файла **склмлутилс** из https://github.com/Microsoft/sqlmlutils/tree/master/R/dist (не извлеките файл). Например, скачайте файл в `c:\downloads\sqlmlutils_0.7.1.zip`.
 
-1. Скопируйте всю папку репозитория **родбцекст** `c:\downloads\rodbcext`() и ZIP-файл **склмлутилс** (`c:\downloads\sqlmlutils_0.7.1.zip`) на клиентский компьютер. Например, скопируйте их в папку `c:\temp\packages` на клиентском компьютере.
+1. Скопируйте на клиентский компьютер всю папку репозитория **родбцекст** (`c:\downloads\rodbcext`) и ZIP-файл **склмлутилс** (`c:\downloads\sqlmlutils_0.7.1.zip`). Например, скопируйте их в папку, `c:\temp\packages` на клиентском компьютере.
 
 На клиентском компьютере, используемом для подключения к SQL Server, откройте командную строку и выполните следующие команды, чтобы установить **родбцекст** , а затем **склмлутилс**.
 
@@ -128,15 +128,13 @@ R CMD INSTALL c:\temp\packages\sqlmlutils_0.7.1.zip
 
 1. На клиентском компьютере откройте RStudio и создайте новый файл **скрипта R** .
 
-1. Используйте следующий скрипт R для установки **связывающего** пакета с помощью **склмлутилс**. Замените сведения о подключении к базе данных SQL Server.
+1. Используйте следующий скрипт R для установки **связывающего** пакета с помощью **склмлутилс**. Замените сведения о подключении к базе данных SQL Server (если не используется проверка подлинности Windows, добавьте параметры `uid` и `pwd`).
 
    ```R
    library(sqlmlutils)
    connection <- connectionInfo(
      server= "yourserver",
-     database = "yourdatabase",
-     uid = "yoursqluser",
-     pwd = "yoursqlpassword")
+     database = "yourdatabase")
 
    sql_install.packages(connectionString = connection, pkgs = "glue", verbose = TRUE, scope = "PUBLIC")
    ```
@@ -180,7 +178,7 @@ R CMD INSTALL c:\temp\packages\sqlmlutils_0.7.1.zip
    ::: moniker-end
 
 
-   В качестве `Rversion` значения используйте версию R, установленную на SQL Server. Чтобы проверить установленную версию, используйте следующую команду T-SQL.
+   Для `Rversion` значения используйте версию R, установленную на SQL Server. Чтобы проверить установленную версию, используйте следующую команду T-SQL.
 
    ```sql
    EXECUTE sp_execute_external_script @language = N'R'
@@ -193,15 +191,13 @@ R CMD INSTALL c:\temp\packages\sqlmlutils_0.7.1.zip
 
 1. Откройте RStudio и создайте новый файл **скрипта R** .
 
-1. Используйте следующий скрипт R для установки **связывающего** пакета с помощью **склмлутилс**. Замените сведения о подключении к базе данных SQL Server.
+1. Используйте следующий скрипт R для установки **связывающего** пакета с помощью **склмлутилс**. Замените сведения о подключении к базе данных SQL Server (если не используется проверка подлинности Windows, добавьте параметры `uid` и `pwd`).
 
    ```R
    library(sqlmlutils)
    connection <- connectionInfo(
      server= "yourserver",
-     database = "yourdatabase",
-     uid = "yoursqluser",
-     pwd = "yoursqlpassword")
+     database = "yourdatabase")
    localRepo = "c:/temp/packages/glue"
 
    sql_install.packages(connectionString = connection, pkgs = "glue", verbose = TRUE, scope = "PUBLIC", repos=paste0("file:///",localRepo))

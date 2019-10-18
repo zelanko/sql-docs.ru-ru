@@ -9,12 +9,12 @@ ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 699e4260368d3467e68df9ba6b86e961959a8192
-ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
+ms.openlocfilehash: 31c745a585adf26b521054cbcd0234fd4087a114
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71682039"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72542172"
 ---
 # <a name="configure-deployment-settings-for-cluster-resources-and-services"></a>Настройка параметров развертывания для ресурсов и служб кластера
 
@@ -151,11 +151,11 @@ ms.locfileid: "71682039"
 
 Чтобы настроить файлы конфигурации развертывания кластера, можно использовать любой редактор формата JSON, например VSCode. Чтобы внести эти изменения в скрипты для автоматизации, используйте команду **azdata bdc config**. В этой статье описано, как настроить развертывания кластера больших данных, изменив файлы конфигурации развертывания. Она содержит примеры изменения конфигурации для различных сценариев. Дополнительные сведения об использовании файлов конфигурации используются в развертываниях, см. в [руководстве по развертыванию](deployment-guidance.md#configfile).
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>предварительные требования
 
 - [Установка azdata](deploy-install-azdata.md).
 
-- В каждом из примеров в этом разделе предполагается, что вы создали копию одной из стандартных конфигураций. Дополнительные сведения см. в статье [Создание настраиваемой конфигурации](deployment-guidance.md#customconfig). Например, следующая команда `custom` создает каталог с именем, который содержит два файла конфигурации развертывания JSON, **BDC. JSON** и **Control. JSON**на основе конфигурации по умолчанию **AKS-dev-test** .
+- В каждом из примеров в этом разделе предполагается, что вы создали копию одной из стандартных конфигураций. Дополнительные сведения см. в статье [Создание настраиваемой конфигурации](deployment-guidance.md#customconfig). Например, следующая команда создает каталог с именем `custom`, который содержит два файла конфигурации развертывания JSON, **BDC. JSON** и **Control. JSON**, на основе конфигурации по умолчанию **AKS-dev-test** .
 
    ```bash
    azdata bdc config init --source aks-dev-test --target custom
@@ -539,18 +539,8 @@ azdata bdc config patch --config-file custom/bdc.json --patch-file ./patch.json
       "op": "add",
       "path": "spec.services.hdfs.resources/-",
       "value": "spark-0"
-    },
-    {
-      "op": "add",
-      "path": "spec.services.spark.settings",
-      "value": {
-        "DriverMemory": "2g",
-        "DriverCores": "1",
-        "ExecutorInstances": "2",
-        "ExecutorMemory": "2g",
-        "ExecutorCores": "1"
-      }
     }
+   }
   ]
 }
 ```
@@ -635,4 +625,4 @@ azdata bdc config patch --config-file control.json --patch-file elasticsearch-pa
 > Рекомендуется вручную обновить параметр **max_map_count** вручную на каждом узле в кластере Kubernetes, как описано в [этой статье](https://www.elastic.co/guide/en/elasticsearch/reference/current/vm-max-map-count.html).
 ## <a name="next-steps"></a>Следующие шаги
 
-Дополнительные сведения об использовании файлов конфигурации в развертываниях кластера больших данных см. в разделе [развертывание [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] в Kubernetes](deployment-guidance.md#configfile).
+Дополнительные сведения об использовании файлов конфигурации в развертываниях кластера больших данных см. [в статье развертывание [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] в Kubernetes](deployment-guidance.md#configfile).

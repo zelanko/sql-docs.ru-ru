@@ -9,12 +9,12 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: 90bc0d33b00f77f942dd736ff1e1904f5d2e7396
-ms.sourcegitcommit: 26715b4dbef95d99abf2ab7198a00e6e2c550243
+ms.openlocfilehash: 2e3452a6aad04d0d524e4eb0e6bd473fd39a2bf7
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70276463"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72542148"
 ---
 # <a name="install-python-packages-with-sqlmlutils"></a>Установка пакетов Python с помощью склмлутилс
 
@@ -25,9 +25,9 @@ ms.locfileid: "70276463"
 Дополнительные сведения о расположении пакетов и путях установки см. в разделе [Получение сведений о пакете Python](../package-management/python-package-information.md).
 
 > [!NOTE]
-> Стандартная команда Python `pip install` не рекомендуется для добавления пакетов Python на SQL Server. Вместо этого используйте **склмлутилс** , как описано в этой статье.
+> Стандартная команда Python `pip install` не рекомендуется для добавления пакетов Python в SQL Server. Вместо этого используйте **склмлутилс** , как описано в этой статье.
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>предварительные требования
 
 + При использовании параметра язык Python необходимо установить [SQL Server службы машинного обучения](../install/sql-machine-learning-services-windows-install.md) .
 
@@ -58,9 +58,9 @@ ms.locfileid: "70276463"
 
 Чтобы использовать **склмлутилс**, необходимо сначала установить его на клиентском компьютере, который используется для подключения к SQL Server.
 
-1. Скачайте последнюю версию ZIP-файла склмлутилс https://github.com/Microsoft/sqlmlutils/tree/master/Python/dist с на клиентский компьютер. Не Распакуйте файл.
+1. Скачайте последний ZIP-файл **склмлутилс** с https://github.com/Microsoft/sqlmlutils/tree/master/Python/dist на клиентский компьютер. Не Распакуйте файл.
 
-1. Откройте **командную строку** и выполните следующую команду, чтобы установить пакет **склмлутилс** . Замените полный путь к скачанному ZIP-файлу **склмлутилс** . в этом примере предполагается, что скачанный файл имеет `c:\temp\sqlmlutils_0.6.0.zip`значение.
+1. Откройте **командную строку** и выполните следующую команду, чтобы установить пакет **склмлутилс** . Замените полный путь к скачанному ZIP-файлу **склмлутилс** . в этом примере предполагается, что скачанный файл `c:\temp\sqlmlutils_0.6.0.zip`.
 
    ```console
    pip install --upgrade --upgrade-strategy only-if-needed c:\temp\sqlmlutils_0.6.0.zip
@@ -76,11 +76,11 @@ ms.locfileid: "70276463"
 
 1. На клиентском компьютере откройте **Python** или среду Python.
 
-1. Используйте следующие команды для установки пакета **текстовых средств** . Замените сведения о подключении к базе данных SQL Server.
+1. Используйте следующие команды для установки пакета **текстовых средств** . Замените сведения о подключении к базе данных SQL Server (если не используется проверка подлинности Windows, добавьте параметры `uid` и `pwd`).
 
    ```python
    import sqlmlutils
-   connection = sqlmlutils.ConnectionInfo(server="yourserver", database="yourdatabase", uid="yoursqluser", pwd="yoursqlpassword")
+   connection = sqlmlutils.ConnectionInfo(server="yourserver", database="yourdatabase")
    sqlmlutils.SQLPackageManager(connection).install("text-tools")
    ```
 
@@ -96,19 +96,19 @@ ms.locfileid: "70276463"
    pip download text-tools -d c:\temp\text-tools
    ```
 
-1. `text-tools` Скопируйте папку на клиентский компьютер. В следующем примере предполагается, что вы `c:\temp\packages\text-tools`скопировали его в.
+1. Скопируйте папку `text-tools` на клиентский компьютер. В следующем примере предполагается, что вы скопировали его в `c:\temp\packages\text-tools`.
 
 #### <a name="on-the-client-computer"></a>На клиентском компьютере
 
 Используйте **склмлутилс** для установки каждого пакета (WHL-файла), который находится в локальной папке, созданной **PIP** . Не имеет значения порядок установки пакетов.
 
-В этом примере **текстовые средства** не имеют зависимостей, поэтому для установки существует только один файл из `text-tools` папки. В отличие от этого, пакет, такой как **scikit-Graph** , имеет 11 зависимостей, поэтому в папке будут находиться 12 файлов (пакет **scikit-Graph** и 11 зависимых пакетов), и каждый из них будет установлен.
+В этом примере **текстовые средства** не имеют зависимостей, поэтому для установки существует только один файл из папки `text-tools`. В отличие от этого, пакет, такой как **scikit-Graph** , имеет 11 зависимостей, поэтому в папке будут находиться 12 файлов (пакет **scikit-Graph** и 11 зависимых пакетов), и каждый из них будет установлен.
 
-Выполните следующий скрипт Python. Замените сведения о подключении к базе данных SQL Server, укажите фактические путь к файлу и имя пакета. `sqlmlutils.SQLPackageManager` Повторите инструкцию для каждого файла пакета в папке.
+Выполните следующий скрипт Python. Замените фактический путь к файлу и имя пакета, а также сведения о подключении к базе данных SQL Server (если не используется проверка подлинности Windows, добавьте параметры `uid` и `pwd`). Повторите инструкцию `sqlmlutils.SQLPackageManager` для каждого файла пакета в папке.
 
 ```python
 import sqlmlutils
-connection = sqlmlutils.ConnectionInfo(server="yourserver", database="yourdatabase", uid="yoursqluser", pwd="yoursqlpassword")
+connection = sqlmlutils.ConnectionInfo(server="yourserver", database="yourdatabase")
 sqlmlutils.SQLPackageManager(connection).install("c:/temp/packages/text-tools/text_tools-1.0.0-py3-none-any.whl")
 ```
 
@@ -136,7 +136,7 @@ print(first_match)
 sqlmlutils.SQLPackageManager(connection).uninstall("text-tools")
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 + Сведения о том, как просмотреть пакеты Python, установленные в SQL Server Службы машинного обучения, см. в разделе [Получение сведений о пакете Python](../package-management/python-package-information.md).
 
