@@ -9,16 +9,16 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 2b8d55e95991437e4d76911fd26afb5b1bc9c550
-ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/17/2019
 ms.locfileid: "68715170"
 ---
 # <a name="create-ssis-and-ssrs-workflows-with-r-on-sql-server"></a>Создание рабочих процессов служб SSIS и SSRS с помощью R на SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-В этой статье объясняется, как использовать внедренный скрипт R и Python с использованием функций языка и обработки и анализа данных SQL Server Службы машинного обучения с двумя важными SQL Server функциями. SQL Server Integration Services (SSIS) и службы SSRS SQL Server Reporting Services. Библиотеки R и Python в SQL Server предоставляют статистические и прогнозирующие функции. Службы SSIS и SSRS предоставляют согласованное преобразование и визуализацию ETL соответственно. В этой статье описывается, как объединить все эти функции в этом шаблоне рабочего процесса:
+В этой статье объясняется, как использовать внедренный скрипт R и Python с использованием функций языка и обработки и анализа данных SQL Server Службы машинного обучения с двумя важными SQL Server функциями: SQL Server Integration Services (SSIS) и SQL Server Reporting Services Служба. Библиотеки R и Python в SQL Server предоставляют статистические и прогнозирующие функции. Службы SSIS и SSRS предоставляют согласованное преобразование и визуализацию ETL соответственно. В этой статье описывается, как объединить все эти функции в этом шаблоне рабочего процесса:
 
 > [!div class="checklist"]
 > * Создание хранимой процедуры, содержащей исполняемый файл R или Python
@@ -32,9 +32,9 @@ ms.locfileid: "68715170"
 
 Рабочие процессы для обработки и анализа данных имеют высокий уровень цикличности и содержат множество преобразований данных, в том числе масштабирование, агрегирование, вычисление вероятностей, переименование и слияние атрибутов. Исследователи данных могут выполнять такие задачи с использованием R, Python или других языков, но применение таких процессов к корпоративным данным требует беспроблемной интеграции со средствами и процессами извлечения, преобразования и загрузки данных.
 
-Поскольку [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] позволяет выполнять сложные операции в R с помощью Transact-SQL и хранимых процедур, можно интегрировать задачи обработки и анализа данных с существующими процессами ETL. Вместо того, чтобы создавать цепочку ресурсоемких задач, можно оптимизировать подготовку данных с помощью наиболее эффективных средств, включая [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] и. [!INCLUDE[tsql](../../includes/tsql-md.md)] 
+Поскольку [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] позволяет выполнять сложные операции в R с помощью Transact-SQL и хранимых процедур, можно интегрировать задачи обработки и анализа данных с существующими процессами ETL. Вместо того, чтобы создавать цепочку ресурсоемких задач, можно оптимизировать подготовку данных с помощью наиболее эффективных средств, включая [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] и [!INCLUDE[tsql](../../includes/tsql-md.md)]. 
 
-Ниже приведены некоторые идеи, которые помогут автоматизировать процессы обработки и моделирования данных с помощью [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]:
+Ниже приведены некоторые идеи, которые помогут вам автоматизировать процессы обработки и моделирования данных с помощью [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].
 
 + Извлечение данных из локальных или облачных источников для создания обучающих данных 
 + Создание и запуск моделей R или Python в рамках рабочего процесса интеграции данных
@@ -45,7 +45,7 @@ ms.locfileid: "68715170"
 
 ## <a name="ssis-example"></a>Пример служб SSIS
 
-Следующий пример основан на немедленно отмененной записи блога MSDN, созданной с помощью Джимми Вонг (по этому URL-адресу:`https://blogs.msdn.microsoft.com/ssis/2016/01/11/operationalize-your-machine-learning-project-using-sql-server-2016-ssis-and-r-services/`
+Следующий пример основан на уже отмененной записи блога MSDN, созданной с помощью Джимми Вонг (по этому URL-адресу: `https://blogs.msdn.microsoft.com/ssis/2016/01/11/operationalize-your-machine-learning-project-using-sql-server-2016-ssis-and-r-services/`
 
 В этом примере показано, как автоматизировать задачи с помощью служб SSIS. Вы создаете хранимые процедуры с внедренным R с помощью SQL Server Management Studio, а затем выполняете эти хранимые процедуры из [задачи «Выполнение задач T-SQL](https://docs.microsoft.com/sql/integration-services/control-flow/execute-t-sql-statement-task) » в пакете служб SSIS.
 
@@ -191,13 +191,13 @@ exec predict_species_length 'rxLinMod';
 
 Хотя R может создавать диаграммы и интересные визуализации, она не интегрирована с внешними источниками данных, что означает, что каждая диаграмма или диаграмма должна быть создана отдельно. Совместное использование данных также может быть затруднено.
 
-С помощью [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]можно выполнять сложные операции в R с помощью [!INCLUDE[tsql](../../includes/tsql-md.md)] хранимых процедур, которые можно легко использовать в различных средствах корпоративного создания отчетов, включая [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и Power BI.
+С помощью [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] можно выполнять сложные операции в R с помощью [!INCLUDE[tsql](../../includes/tsql-md.md)] хранимых процедур, которые можно легко использовать в различных средствах корпоративного создания отчетов, включая [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и Power BI.
 
 ### <a name="ssrs-example"></a>Пример SSRS
 
 [R Graphics Device for Microsoft Reporting Services (SSRS)](https://rgraphicsdevice.codeplex.com/) (Графическое устройство R для служб Microsoft Reporting Services (SSRS))
 
-Этот проект CodePlex предоставляет код, помогающий создать пользовательский элемент отчета, который визуализирует графические выходные данные R в виде изображения, которое можно использовать в [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] отчетах.  С помощью пользовательского элемента отчета можно:
+Этот проект CodePlex предоставляет код, помогающий создать пользовательский элемент отчета, который визуализирует графические выходные данные R в виде изображения, которое можно использовать в отчетах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  С помощью пользовательского элемента отчета можно:
 
 + опубликовать диаграммы и графики, созданные с помощью графического устройства R, на панелях мониторинга [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)];
 
