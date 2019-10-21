@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: tmichael-ms
 ms.author: tmichael
 mtps_version: v=MSDN.10
-ms.openlocfilehash: 948604fbd548a2fb614fd4a671f512c4a4890d52
-ms.sourcegitcommit: 3cde6aa3159beb761a19bc568d7e402bfa7aeb41
+ms.openlocfilehash: 58ae65590f99d7fc330adca7f1db1898b8874571
+ms.sourcegitcommit: ac90f8510c1dd38d3a44a45a55d0b0449c2405f5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72245582"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72586731"
 ---
 # <a name="latest-updates-for-microsoft-sql-server"></a>Последние обновления для Microsoft SQL Server
 
@@ -49,7 +49,7 @@ ms.locfileid: "72245582"
 |SQL Server 2005 |Пакет обновления 4 [(статья базы знаний 2463332)](http://support.microsoft.com/kb/2463332)|Недоступно|Недоступно|Недоступно|[Установка SQL Server 2005](https://msdn.microsoft.com/en-us/library/ms143516(sql.90).aspx)|
 |SQL Server 2000|Пакет обновления 4 [(статья базы знаний 290211)](http://support.microsoft.com/kb/290211)|Недоступно|Недоступно|Недоступно|[Установка SQL Server 2000](https://technet.microsoft.com/en-us/library/aa197941(sql.80).aspx)|
 
-**Узнайте, как проверять обновления:**  [Testing and Developing Supportability Roadmaps for ISV Applications](http://blogs.technet.com/cfs-file.ashx/__key/communityserver-blogs-components-weblogfiles/00-00-00-85-48-files/0827.testing-and-developing-supportability-roadmaps-for-isv-applications.pdf) (Проверка и разработка схем действий по поддержке для приложений ISV (формат PDF)).
+**Узнайте, как проверять обновления:**  [Testing and Developing Supportability Roadmaps for ISV Applications](https://msdnshared.blob.core.windows.net/media/TNBlogsFS/prod.evol.blogs.technet.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/85/48/Files/0827.Testing%20And%20Developing%20Supportability%20Roadmaps%20for%20ISV%20Applications.pdf) (Проверка и разработка схем действий по поддержке для приложений ISV (формат PDF)).
 
 ### <a name="knowledge-base"></a>База знаний
 

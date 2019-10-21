@@ -1,7 +1,7 @@
 ---
 title: Использование операторов PIVOT и UNPIVOT | Документы Майкрософт
 ms.custom: ''
-ms.date: 03/16/2017
+ms.date: 10/14/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -24,12 +24,12 @@ ms.assetid: 24ba54fc-98f7-4d35-8881-b5158aac1d66
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6e4ec1c90f49de20707690825f9e5ba802965278
-ms.sourcegitcommit: 869d4de6c807a37873b66e5479d2c5ceff9efb85
+ms.openlocfilehash: 10ab5b2359d272eb53c7cad3d9c1fc5936c8c71a
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67559419"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72305176"
 ---
 # <a name="from---using-pivot-and-unpivot"></a>FROM — использование PIVOT и UNPIVOT
 
@@ -153,7 +153,7 @@ SELECT PurchaseOrderID, EmployeeID, VendorID
 FROM PurchaseOrderHeader;  
 ```  
   
-Уникальные значения столбца `EmployeeID` становятся полями итогового результирующего набора. Таким образом, имеется столбец, соответствующий каждому идентификатору `EmployeeID`, указанному в предложении PIVOT: в данном случае это сотрудники `164`, `198`, `223`, `231` и `233`. `PurchaseOrderID` служит столбцом значений, по которому группируются столбцы, возвращаемые в конечный вывод и называемые столбцами группирования. В этом случае значения столбцов группирования обрабатываются с помощью функции `COUNT`. Обратите внимание, что при вычислении функции `COUNT` для каждого сотрудника появится предупреждающее сообщение о том, что значения NULL столбца `PurchaseOrderID` не учитываются.  
+Уникальные значения столбца `EmployeeID` становятся полями итогового результирующего набора. Таким образом, имеется столбец, соответствующий каждому идентификатору `EmployeeID`, указанному в предложении PIVOT: в данном случае это сотрудники `250`, `251`, `256`, `257` и `260`. `PurchaseOrderID` служит столбцом значений, по которому группируются столбцы, возвращаемые в конечный вывод и называемые столбцами группирования. В этом случае значения столбцов группирования обрабатываются с помощью функции `COUNT`. Обратите внимание, что при вычислении функции `COUNT` для каждого сотрудника появится предупреждающее сообщение о том, что значения NULL столбца `PurchaseOrderID` не учитываются.  
   
 > [!IMPORTANT]  
 >  При статистической обработке данных с использованием агрегатных функций, содержащих оператор `PIVOT`, пустые значения столбцов не учитываются.  

@@ -8,12 +8,12 @@ ms.date: 11/27/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 339473439fe1afa20ab618fe49d53f213e1b1a6f
-ms.sourcegitcommit: df1f71231f8edbdfe76e8851acf653c25449075e
+ms.openlocfilehash: 2f5f14134c0932e44160076a36f5de72cbde5a04
+ms.sourcegitcommit: ac90f8510c1dd38d3a44a45a55d0b0449c2405f5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/09/2019
-ms.locfileid: "70809953"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72586758"
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>Основные сведения о доступности SQL Server для развертываний Linux
 
@@ -76,7 +76,7 @@ scp MyAGCert.cer username@servername:/folder/subfolder
 
 Также можно использовать общие ресурсы SMB на основе Windows. Общие ресурсы SMB не должны быть основаны на Linux, если клиентская часть Samba правильно настроена на сервере Linux, где размещается [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)], и общему ресурсу заданы соответствующие права доступа. Пользователи, работающие в смешанной среде, для развертываний [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] на основе Linux могут использовать существующую инфраструктуру.
 
-Важно отметить, что версия развернутого пакета Samba должна быть совместима с SMB 3.0. После добавления поддержки SMB в [!INCLUDE[sssql11-md](../includes/sssql11-md.md)] все общие ресурсы должны поддерживать SMB 3.0. Если в качестве общего ресурса используется Samba, а не Windows Server, то общий ресурс на основе Samba должен поддерживать Samba 4.0 или более позднюю версию, а в идеале — 4.3 или более позднюю версию, которая поддерживает SMB 3.1.1. Сведения об SMB и Linux см. в документе об [SMB3 в Samba](https://events.linuxfoundation.org/sites/events/files/slides/smb3-in-samba.pr__0.pdf).
+Важно отметить, что версия развернутого пакета Samba должна быть совместима с SMB 3.0. После добавления поддержки SMB в [!INCLUDE[sssql11-md](../includes/sssql11-md.md)] все общие ресурсы должны поддерживать SMB 3.0. Если в качестве общего ресурса используется Samba, а не Windows Server, то общий ресурс на основе Samba должен поддерживать Samba 4.0 или более позднюю версию, а в идеале — 4.3 или более позднюю версию, которая поддерживает SMB 3.1.1. Сведения об SMB и Linux см. в документе об [SMB3 в Samba](https://events.static.linuxfound.org/sites/events/files/slides/smb3-in-samba.pr__0.pdf).
 
 Кроме того, можно использовать общий ресурс сетевой файловой системы (NFS). NFS не подходит для развертываний [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] на основе Windows и может применяться только для развертываний на основе Linux.
 
