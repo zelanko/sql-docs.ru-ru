@@ -6,7 +6,7 @@
   href: toc/previous-versions-sql-server.md
 - name: Обзор
   items:
-    - name: "Новые возможности SQL\_Server"
+    - name: What's New
       items:
         - name: "SQL\_Server\_2019"
           href: sql-server/what-s-new-in-sql-server-ver15.md
@@ -23,6 +23,8 @@
           href: database-engine/whats-new-in-sql-server-2016.md
     - name: Выпуски и компоненты
       items:
+        - name: "SQL\_Server\_2019"
+          href: sql-server/editions-and-components-of-sql-server-version-15.md
         - name: "SQL Server\_2017"
           href: sql-server/editions-and-components-of-sql-server-2017.md
         - name: "SQL Server\_2016"
@@ -89,8 +91,6 @@
                   href: big-data-cluster/deploy-on-aks.md
                 - name: Kubeadm
                   href: big-data-cluster/deploy-with-kubeadm.md
-                - name: Minikube
-                  href: big-data-cluster/deploy-on-minikube.md
             - name: Скрипты развертывания
               items:
                 - name: Скрипт AKS на Python
@@ -8348,27 +8348,27 @@
         - name: Модули
           href: azure-data-studio/extensions.md
           items:
-            - name: Расширение PostgreSQL (предварительная версия)
+            - name: Расширение PostgreSQL
               href: azure-data-studio/postgres-extension.md
-            - name: SQL Server 2019 (предварительная версия)
+            - name: "SQL\_Server\_2019"
               href: azure-data-studio/sql-server-2019-extension.md
-            - name: Агент SQL Server (предварительная версия)
+            - name: "Агент SQL\_Server"
               href: azure-data-studio/sql-server-agent-extension.md
-            - name: "Расширение Центральных серверов управления SQL\_Server (предварительная версия)"
+            - name: Расширение центральных серверов управления SQL Server
               href: azure-data-studio/sql-server-cms-extension.md
-            - name: "Расширение DACPAC-файлов SQL\_Server (предварительная версия)"
+            - name: Расширение DACPAC-файлов SQL Server
               href: azure-data-studio/sql-server-dacpac-extension.md
-            - name: Импорт SQL Server (предварительная версия)
+            - name: "Импорт SQL\_Server"
               href: azure-data-studio/sql-server-import-extension.md
-            - name: SQL Server Profiler (предварительная версия)
+            - name: Приложение SQL Server Profiler
               href: azure-data-studio/sql-server-profiler-extension.md
-            - name: Расширение Сравнения схем (предварительная версия)
+            - name: Расширение сравнения схем
               href: azure-data-studio/schema-compare-extension.md
             - name: Расширение PowerShell
               href: azure-data-studio/powershell-extension.md
-            - name: Расширение управляемого экземпляра (предварительная версия)
+            - name: Расширение для Управляемого экземпляра
               href: azure-data-studio/azure-sql-managed-instance-extension.md
-            - name: Расширение SandDance (предварительная версия)
+            - name: Расширение SandDance
               href: azure-data-studio/sanddance-extension.md
         - name: Разработка расширений
           items:
@@ -10293,7 +10293,7 @@
           items:
             - name: "SQL Server\_2017"
               href: linux/sql-server-linux-release-notes.md
-            - name: "Предварительная версия SQL Server\_2019"
+            - name: "SQL\_Server\_2019"
               href: linux/sql-server-linux-release-notes-2019.md
         - name: Новые возможности
           href: linux/sql-server-linux-whats-new.md
