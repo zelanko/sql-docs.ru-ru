@@ -13,12 +13,12 @@ ms.assetid: af673514-30c7-403a-9d18-d01e1a095115
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7e7a186efb5da3ef509f3ada02e301d0777ffd2d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 062e84a5ff0874353a40236ea6ce56c325dfa6ab
+ms.sourcegitcommit: 4c5fb002719627f1a1594f4e43754741dc299346
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67895370"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72517966"
 ---
 # <a name="tutorial-configure-replication-between-a-server-and-mobile-clients-merge"></a>Руководство. Настройка репликации между сервером и мобильными клиентами (репликация слиянием)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "67895370"
    - Любой выпуск SQL Server, кроме SQL Server Express или SQL Server Compact. Эти выпуски не могут быть издателями репликации.   
    - Образец базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . В целях повышения безопасности образцы баз данных по умолчанию не устанавливаются.  
   
-- На сервере-подписчике (целевом) установите любой выпуск SQL Server, кроме [!INCLUDE[ssEW](../../includes/ssew-md.md)]. Публикация, созданная в этом учебнике, не поддерживает [!INCLUDE[ssEW](../../includes/ssew-md.md)]. 
+- На сервере-подписчике (целевом) установите любой выпуск SQL Server, кроме SQL Server Express или SQL Server Compact. Созданная в рамках этого учебника публикация не поддерживает выпуски SQL Server Express и SQL Server Compact. 
 
 - Установите [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 - Установите выпуск [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).

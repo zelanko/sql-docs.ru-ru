@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: e65bb118-99d5-4fdb-b1d5-0ec70f0a677b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4f718b124bb9fa0fba37619349d2efc0a3bb643f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cbce2b5273b73213fda328490081c785e8ccf13d
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68060663"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72304771"
 ---
-# <a name="mssqlserver10534"></a>MSSQLSERVER_10534
+# <a name="mssqlserver_10534"></a>MSSQLSERVER_10534
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Сведения  
@@ -30,10 +30,10 @@ ms.locfileid: "68060663"
 |Источник события|MSSQLSERVER|  
 |Компонент|SQLEngine|  
 |Символическое имя|PG_INVALID_PARAMS|  
-|Текст сообщения|Не удается создать структуру плана "%.\*ls", поскольку задано недопустимое значение параметра **@params** . Задайте значение в форме *имя_параметра тип_параметра* или укажите значение NULL.|  
+|Текст сообщения|Не удается создать структуру плана "%.\*ls", поскольку задано недопустимое значение **\@params**. Задайте значение в форме *имя_параметра тип_параметра* или укажите значение NULL.|  
   
 ## <a name="explanation"></a>Объяснение  
-Значение, указанное для **@params** , недопустимо.  
+Значение, указанное для **\@params**, недопустимо.  
   
 ## <a name="user-action"></a>Действие пользователя  
 Задайте значение в форме *имя_параметра тип_параметра* или укажите значение NULL.  

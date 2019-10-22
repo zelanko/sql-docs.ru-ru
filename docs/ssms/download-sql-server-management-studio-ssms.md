@@ -23,12 +23,12 @@ author: dnethi
 ms.author: dinethi
 ms.custom: ''
 ms.date: 10/03/2019
-ms.openlocfilehash: b3fa70eb83ddd46c0901cfe5d5499a0a12f33db8
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.openlocfilehash: a51b0a3da9fda396b23f6ddcf9121fe7a30ec202
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72251393"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72542227"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>Скачивание SQL Server Management Studio (SSMS)
 
@@ -40,11 +40,7 @@ SQL Server Management Studio (SSMS) — это интегрированная с
 
 SSMS распространяется бесплатно!
 
-## <a name="download-ssms-1831"></a>Скачивание SSMS 18.3.1
-
-**Вышла версия SSMS 18.3.1. Это новейшая общедоступная версия *SQL Server Management Studio* с поддержкой [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]!**
-
-**[Скачивание SQL Server Management Studio 18.3.1](https://go.microsoft.com/fwlink/?linkid=2105412)**
+## <a name="download-ssmshttpsakamsssmsfullsetup"></a>[Скачивание SSMS](https://aka.ms/ssmsfullsetup)
 
 SSMS 18.3.1 является последней общедоступной версией SSMS. Если у вас установлена предыдущая общедоступная версия SSMS 18, при установке SSMS 18.3.1 она обновляется до версии 18.3.1. Если у вас установлена предыдущая *предварительная версия* SSMS 18.x, перед установкой SSMS 18.3.1 ее необходимо удалить.
 
@@ -59,6 +55,9 @@ SSMS 18.3.1 является последней общедоступной ве
 При установке SSMS 18.x не обновляются и не заменяются версии SSMS 17.x или более ранние. Среда SSMS 18.x устанавливается параллельно с предыдущими версиями, и обе версии остаются доступными для использования.
 
 Если на компьютере есть несколько параллельных установок SSMS, следует всегда проверять, правильную ли версию вы запускаете. Последняя версия называется **Microsoft SQL Server Management Studio 18**.
+
+> [!Note]
+> Если вы открываете локализованную версию этой страницы и хотите просмотреть актуальные материалы, посетите эту страницу на [английском языке](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver15). С английской версии сайта вы можете скачать другие [языки из числа доступных](#available-languages-ssms-1831).
 
 ## <a name="available-languages-ssms-1831"></a>Доступные языки (SSMS 18.3.1)
 
@@ -76,7 +75,7 @@ SQL Server Management Studio 18.3.1:
 |---------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Классификация данных | Добавление сведений о классификации данных в пользовательский интерфейс свойств столбца (*Тип информации*, *Идентификатор типа информации*, *Метка конфиденциальности* и *Идентификатор метки конфиденциальности* не отображаются в пользовательском интерфейсе SSMS). |
 | Редактор и IntelliSense | Обновлена поддержка функций, недавно добавленных в SQL Server 2019 (например, ALTER SERVER CONFIGURATION). |
-| Службы Integration Services | Добавлен новый элемент меню выбора `Tools > Migrate to Azure > Configure Azure-enabled DTExec`, который будет вызывать выполнение пакетов служб SSIS в Azure-SSIS Integration Runtime как действий пакета служб SSIS в конвейерах ADF. |
+| Службы Integration Services | Добавлен новый элемент меню выбора `Tools > Migrate to Azure > Configure Azure-enabled DTExec`, который вызывает выполнение пакетов Integration Services SSIS в Azure-SSIS Integration Runtime как действий пакета служб SSIS в конвейерах ADF. |
 | Написание скриптов и SMO | Добавлена поддержка скриптов для ограничения уникальности хранилища данных SQL Azure. |
 | Написание скриптов и SMO | Классификация данных — добавлена поддержка SQL версии 10 (SQL 2008) и более поздних версий.  — Добавлен новый атрибут конфиденциальности rank для SQL версии 15 (SQL 2019) и более поздних версий и базы данных SQL Azure. |
 

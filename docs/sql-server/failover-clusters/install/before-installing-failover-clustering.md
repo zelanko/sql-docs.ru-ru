@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: a655225d-8c54-4b30-95fd-31f588167899
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e30bc0e3dd0402d4b62ac55a897268c021507560
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5d2fe2d80b0f9d54e877d6bc1be9a05c8c34c584
+ms.sourcegitcommit: 4c5fb002719627f1a1594f4e43754741dc299346
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68063990"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72517939"
 ---
 # <a name="before-installing-failover-clustering"></a>Подготовка к установке отказоустойчивого кластера
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Перед тем как установить отказоустойчивый кластер SQL Server, необходимо выбрать оборудование и операционную систему, на которых SQL Server будет работать. Кроме того, необходимо настроить отказоустойчивую кластеризацию Windows Server (WSFC) и проверить настройки сети, безопасности и другого программного обеспечения, которое будет запускаться на отказоустойчивом кластере.  
   
- Если в кластере Windows есть локальный диск и при этом диск с такой же буквой используется на одном или нескольких узлах кластера в качестве общего диска, то установить [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] на этот диск невозможно.  
+ Если в кластере Windows есть локальный диск и при этом диск с такой же буквой используется на одном или нескольких узлах кластера в качестве общего диска, то установить [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] на этот диск невозможно. Это ограничение относится как к экземплярам отказоустойчивого кластера SQL Server, так и к автономным экземплярам на сервере, который входит в состав экземпляра отказоустойчивого кластера Windows.
   
  Дополнительные сведения об основных понятиях, функциях и задачах отказоустойчивых кластеров [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] приведены в следующих разделах.  
   

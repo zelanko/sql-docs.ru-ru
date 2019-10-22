@@ -59,12 +59,12 @@ ms.assetid: f1745145-182d-4301-a334-18f799d361d1
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7683610745cf63ff67eeda6296684a6d2737a5b8
-ms.sourcegitcommit: af5e1f74a8c1171afe759a4a8ff2fccb5295270a
+ms.openlocfilehash: 44c5a4c9a39f60616574a479637d3ab97230784c
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71823623"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72304846"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 
@@ -806,7 +806,7 @@ SET **(** LOCK_ESCALATION = { AUTO | TABLE | DISABLE } **)**
 AUTO  
 Этот параметр позволяет [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] выбрать гранулярность укрупнения блокировки, подходящую для схемы конкретной таблицы.
 
-- В секционированных таблицах допускается укрупнение блокировки до секций. После укрупнения блокировки до уровня секции дальнейшее укрупнение до гранулярности TABLE выполняться не будет.
+- Если таблица является секционированной, то укрупнению блокировки будет разрешен доступ к куче или гранулярности сбалансированного дерева. Другими словами, укрупнение блокировки будет разрешено вплоть до уровня секции. После укрупнения блокировки до уровня HoBT блокировка не будет укрупнена позднее до гранулярности TABLE.
 - Если таблица не секционирована, блокировка укрупняется до гранулярности TABLE.
 
 TABLE  

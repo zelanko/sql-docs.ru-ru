@@ -1,7 +1,7 @@
 ---
 title: Определение запросов, удерживающих блокировки | Документация Майкрософт
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 10/18/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -17,26 +17,26 @@ ms.assetid: bdfce092-3cf1-4b5e-99d5-fd8c6f9ad560
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 413e395a865245b4e4a6c3c7705e654e6855c245
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7f6bdf2ed730330e03068473e5db9f82015caacc
+ms.sourcegitcommit: 49fd567e28bfd6e94efafbab422eaed4ce913eb3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68021913"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72589983"
 ---
 # <a name="determine-which-queries-are-holding-locks"></a>определить запросы, удерживающие блокировки
 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  Администраторам баз данных часто нужно определить источник блокировок, приводящих к ухудшению производительности базы данных.  
+Администраторам баз данных часто нужно определить источник блокировок, приводящих к ухудшению производительности базы данных.  
   
- Например, может возникнуть подозрение о том, что проблемы с производительностью сервера вызваны блокировками. При выполнении запроса к sys.dm_exec_requests обнаруживается несколько приостановленных сеансов с типом ожидания, указывающим, что ожидаемым ресурсом является блокировка.  
+Например, может возникнуть подозрение о том, что проблемы с производительностью сервера вызваны блокировками. При выполнении запроса к sys.dm_exec_requests обнаруживается несколько приостановленных сеансов с типом ожидания, указывающим, что ожидаемым ресурсом является блокировка.  
   
- Результаты выполнения запроса к представлению sys.dm_tran_locks показывают наличие многих необработанных блокировок, но в представлении sys.dm_exec_requests у сеансов, которым были предоставлены блокировки, никаких активных запросов нет.  
+Результаты выполнения запроса к представлению sys.dm_tran_locks показывают наличие многих необработанных блокировок, но в представлении sys.dm_exec_requests у сеансов, которым были предоставлены блокировки, никаких активных запросов нет.  
   
- На этом примере продемонстрирован метод определения запроса, принявшего блокировку, плана запроса и стека [!INCLUDE[tsql](../../includes/tsql-md.md)] в момент принятия блокировки. Этот пример также демонстрирует использование цели «Попарное разбиение событий» в сеансе расширенных событий.  
+На этом примере продемонстрирован метод определения запроса, принявшего блокировку, плана запроса и стека [!INCLUDE[tsql](../../includes/tsql-md.md)] в момент принятия блокировки. Этот пример также демонстрирует использование цели «Попарное разбиение событий» в сеансе расширенных событий.  
   
- Эта задача решается с помощью редактора запросов в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] для выполнения следующей процедуры.  
+Эта задача решается с помощью редактора запросов в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] для выполнения следующей процедуры.  
   
 > [!NOTE]  
 >  В примере используется база данных AdventureWorks.  
@@ -45,7 +45,7 @@ ms.locfileid: "68021913"
   
 1.  В редакторе запросов выполните следующие инструкции.  
   
-    ```  
+    ```sql
     -- Perform cleanup.   
     IF EXISTS(SELECT * FROM sys.server_event_sessions WHERE name='FindBlockers')  
         DROP EVENT SESSION FindBlockers ON SERVER  
@@ -88,12 +88,11 @@ ms.locfileid: "68021913"
     --  
     ALTER EVENT SESSION FindBlockers ON SERVER  
     STATE = START  
-  
     ```  
   
 2.  Чтобы выявить запросы, до сих пор удерживающие блокировки, после выполнения рабочей нагрузки на сервере выполните в редакторе запросов следующие инструкции.  
   
-    ```  
+    ```sql
     --  
     -- The pair matching targets report current unpaired events using   
     -- the sys.dm_xe_session_targets dynamic management view (DMV)  
@@ -150,11 +149,17 @@ ms.locfileid: "68021913"
   
 3.  После определения проблем удалите все временные таблицы и сеанс события.  
   
-    ```  
+    ```sql
     DROP TABLE #unmatched_locks  
     DROP EVENT SESSION FindBlockers ON SERVER  
     ```  
-  
+
+> [!NOTE]
+> Приведенные выше примеры кода Transact-SQL выполняются на локальном экземпляре SQL Server, но при этом _могут не выполняться в базе данных SQL Azure._ При этом основные фрагменты этого примера, напрямую связанные с обработкой событий, например `ADD EVENT sqlserver.lock_acquired`, корректно работают в базе данных SQL Azure. Тем не менее, для выполнения этого примера необходимо заменить предварительные элементы, такие как `sys.server_event_sessions`, на их аналоги из базы данных SQL Azure, например `sys.database_event_sessions`.
+> Дополнительные сведения об этих незначительных различиях между локальным экземпляром SQL Server и базой данных SQL Azure см. в следующих статьях:
+> - [Расширенные события в Базе данных SQL Azure](/azure/sql-database/sql-database-xevent-db-diff-from-svr#transact-sql-differences)
+> - [Системные объекты, которые поддерживают расширенные события](xevents-references-system-objects.md)
+
 ## <a name="see-also"></a>См. также:  
  [CREATE EVENT SESSION (Transact-SQL)](../../t-sql/statements/create-event-session-transact-sql.md)   
  [ALTER EVENT SESSION (Transact-SQL)](../../t-sql/statements/alter-event-session-transact-sql.md)   

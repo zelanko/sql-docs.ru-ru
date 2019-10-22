@@ -17,12 +17,12 @@ ms.assetid: ad8a2fd4-f092-4c0f-be85-54ce8b9d725a
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8f54ff6306e3a4b2066a05ded891f4b8e6e98f99
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ad8e6a73ee20a98f9dd97d8220a592c8c1600b2e
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68016220"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72305006"
 ---
 # <a name="table-properties---ssms"></a>Table Properties - SSMS
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -75,9 +75,8 @@ ms.locfileid: "68016220"
  AUTO  
  Этот параметр позволяет [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] выбрать степень детализации укрупнения блокировки, подходящую для данной схемы таблицы.  
   
--   Если таблица является секционированной, то укрупнению блокировки будет разрешен доступ к куче или гранулярности сбалансированного дерева. После укрупнения блокировки до уровня HoBT блокировка не будет укрупнена позднее до гранулярности TABLE.  
-  
--   Если таблица не секционирована, то блокировка будет укрупняться до гранулярности TABLE.  
+- Если таблица является секционированной, то укрупнению блокировки будет разрешен доступ к куче или гранулярности сбалансированного дерева. Другими словами, укрупнение блокировки будет разрешено вплоть до уровня секции. После укрупнения блокировки до уровня HoBT блокировка не будет укрупнена позднее до гранулярности TABLE.
+- Если таблица не секционирована, блокировка укрупняется до гранулярности TABLE. 
   
  TABLE  
  Укрупнение блокировки будет выполняться на уровне гранулярности таблицы независимо от того, секционирована таблица или нет. Значение по умолчанию равно TABLE.  

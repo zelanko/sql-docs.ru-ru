@@ -8,14 +8,14 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 ms.custom: seodec18
-ms.date: 10/08/2019
+ms.date: 10/11/2019
 ms.reviewer: alayu; sstein
-ms.openlocfilehash: d56bf097bc38670fb7bad83933a1a48800172d5b
-ms.sourcegitcommit: 79e6d49ae4632f282483b0be935fdee038f69cc2
+ms.openlocfilehash: b7a9e9a13b5b19e2450ab1d4b12aea7a97cdc206
+ms.sourcegitcommit: c7a202af70fd16467a498688d59637d7d0b3d1f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72173154"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72313656"
 ---
 # <a name="download-and-install-azure-data-studio"></a>Скачивание и установка Azure Data Studio
 
@@ -29,9 +29,9 @@ ms.locfileid: "72173154"
 
 |Платформа|Загрузить|Дата выпуска| Версия |
 |:---|:---|:---|:---|
-|Windows|[Пользовательский установщик (рекомендуется)](https://go.microsoft.com/fwlink/?linkid=2105135)<br>[Системный установщик](https://go.microsoft.com/fwlink/?linkid=2105134)<br>[ZIP](https://go.microsoft.com/fwlink/?linkid=2104938)|8 октября 2019 г. |1.12.1|
-|macOS|[ZIP](https://go.microsoft.com/fwlink/?linkid=2105133)|8 октября 2019 г. |1.12.1|
-|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=2105131)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2104937)<br>[.tar.gz](https://azuredatastudiobuilds.blob.core.windows.net/releases/1.12.1/azuredatastudio-linux-1.12.1.tar.gz)|8 октября 2019 г. |1.12.1|
+|Windows|[Пользовательский установщик (рекомендуется)](https://go.microsoft.com/fwlink/?linkid=2105135)<br>[Системный установщик](https://go.microsoft.com/fwlink/?linkid=2105134)<br>[ZIP](https://go.microsoft.com/fwlink/?linkid=2104938)|11 октября 2019 г. |1.12.2|
+|macOS|[ZIP](https://go.microsoft.com/fwlink/?linkid=2105133)|11 октября 2019 г. |1.12.2|
+|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=2105131)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2104937)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2105132)|11 октября 2019 г. |1.12.2|
 
 Подробнее см. в [заметках о выпуске](release-notes.md).
 
@@ -68,7 +68,7 @@ ms.locfileid: "72173154"
 ## <a name="get-azure-data-studio-for-linux"></a>Получение Azure Data Studio для Linux
 
 1. Скачайте [!INCLUDE[name-sos](../includes/name-sos-short.md)] для Linux с помощью одного из установщиков или архива tar.gz:
-    - [.deb](https://go.microsoft.com/fwlink/?linkid=2103004)
+    - [.deb](https://go.microsoft.com/fwlink/?linkid=2105131)
     - [.rpm](https://go.microsoft.com/fwlink/?linkid=2104937)
     - [.tar.gz](https://go.microsoft.com/fwlink/?linkid=2105131)
 1. Чтобы извлечь файл и запустить [!INCLUDE[name-sos](../includes/name-sos-short.md)], откройте новое окно терминала и введите следующие команды:

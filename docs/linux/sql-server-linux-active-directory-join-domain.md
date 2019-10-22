@@ -9,12 +9,12 @@ ms.date: 04/01/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: d5cd6356f4bc691518f11e1e6fb00add527cc595
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 90a2bcdac4fd1870adc4eeaa888b906857ef9854
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68027340"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72305277"
 ---
 # <a name="join-sql-server-on-a-linux-host-to-an-active-directory-domain"></a>Присоединение SQL Server на узле Linux к домену Active Directory
 
@@ -197,9 +197,9 @@ ping contoso.com
    ```
 
    > [!NOTE]
-   > - Если **id user@contoso.com** возвращает `No such user`, убедитесь, что служба SSSD успешно запущена, выполнив команду `sudo systemctl status sssd`. Если служба запущена и вы по-прежнему видите ошибку, попробуйте включить подробное ведение журнала для SSSD. Дополнительные сведения см. в разделе об [устранении неполадок SSSD](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/System-Level_Authentication_Guide/trouble.html#SSSD-Troubleshooting) в документации по Red Hat.
+   > - Если **id user\@contoso.com** возвращает `No such user`, убедитесь, что служба SSSD успешно запущена, выполнив команду `sudo systemctl status sssd`. Если служба запущена и вы по-прежнему видите ошибку, попробуйте включить подробное ведение журнала для SSSD. Дополнительные сведения см. в разделе об [устранении неполадок SSSD](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/System-Level_Authentication_Guide/trouble.html#SSSD-Troubleshooting) в документации по Red Hat.
    >
-   > - Если **kinit user@CONTOSO.COM** возвращает `KDC reply did not match expectations while getting initial credentials`, убедитесь, что вы указали область прописными буквами.
+   > - Если **kinit user\@CONTOSO.COM** возвращает `KDC reply did not match expectations while getting initial credentials`, убедитесь, что вы указали область прописными буквами.
 
 Дополнительные сведения см. в разделе об [обнаружении доменов удостоверений и присоединении к ним](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/Windows_Integration_Guide/realmd-domain.html) в документации по Red Hat.
 

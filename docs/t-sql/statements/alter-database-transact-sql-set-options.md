@@ -30,12 +30,12 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: 330fa479beb3dc86ba290d36baa54870e8e61d6e
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.openlocfilehash: 62074eb9c621c2243a079a21ae9bbcba66c930cd
+ms.sourcegitcommit: ac90f8510c1dd38d3a44a45a55d0b0449c2405f5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72251352"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72586711"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>Параметры ALTER DATABASE SET (Transact-SQL)
 
@@ -3051,20 +3051,8 @@ SELECT request_id, command, result_cache_hit FROM sys.pdw_exec_requests
 WHERE request_id = <'Your_Query_Request_ID'>
 
 ```
-
-При включении кэширования результирующих наборов для базы данных результаты будут сохраняться в кэше (пока он не заполнится) для всех запросов, кроме следующих:
-
-- запросы с недетерминированными функциями, такими как DateTime.Now(); 
-- запросы с пользовательскими функциями;
-- запросы, возвращающие данные с размером строк более 64 КБ.   
-
-Запросы с большими результирующими наборами (например, свыше 1 млн строк) могут вызывать снижение производительности во время первого запуска, так как результат кэшируется.
-
-Для запроса повторно используется кэшированный результирующий набор при соблюдении всех следующих требований:
-
-1. Пользователь, выполняющий запрос, имеет доступ ко всем таблицам, на которые ссылается запрос.
-1. Имеется точное соответствие между новым запросом и предыдущим запросом, породившим результирующий набор в кэше.
-1. Нет изменений в данных или схеме в таблицах, на основе которых создан кэшированный результирующий набор.  
+### <a name="permissions"></a>Разрешения
+Для задания параметра RESULT_SET_CACHING пользователю требуется имя входа участника на уровне сервера (созданное процессом подготовки) или членство в роли базы данных `dbmanager`.  
 
 
 **<snapshot_option> ::=**         
@@ -3085,10 +3073,7 @@ OFF
 
 В базе данных с включенным параметром READ_COMMITTED_SNAPSHOT запросы могут испытывать низкую производительность из-за проверки версий, если имеется несколько версий данных. Длительные транзакции также могут привести к увеличению размера базы данных. Эта проблема возникает при изменении данных транзакциями, блокирующими очистку версий.  
 
-## <a name="permissions"></a>Разрешения
-
-Для задания параметра RESULT_SET_CACHING пользователю требуется имя входа участника на уровне сервера (созданное процессом подготовки) или членство в роли базы данных `dbmanager`.  
-
+### <a name="permissions"></a>Разрешения
 Чтобы задать параметр READ_COMMITTED_SNAPSHOT, пользователю необходимо разрешение ALTER для базы данных.
 
 ## <a name="examples"></a>Примеры
@@ -3119,26 +3104,6 @@ SELECT name, is_result_set_caching_on
 FROM sys.databases;
 ```
 
-### <a name="check-for-result-set-cache-hit-or-cache-miss-for-a-query"></a>Проверка попадания в кэше и промаха кэша результирующих наборов для запроса
-
-```sql
-If
-(SELECT step_index  
-FROM sys.dm_pdw_request_steps  
-WHERE request_id = 'QID58286' and operation_type = 'ReturnOperation' and command like '%DWResultCacheDb%') = 0
-SELECT 1 as is_cache_hit  
-ELSE
-SELECT 0 as is_cache_hit;
-```
-
-### <a name="check-for-all-queries-with-result-set-cache-hits"></a>Проверка всех запросов с попаданием в кэше результирующих наборов
-
-```sql
-SELECT *  
-FROM sys.dm_pdw_request_steps  
-WHERE command like '%DWResultCacheDb%' and step_index = 0;
-```
-
 ### <a name="enable-the-read_committed_snapshot-option-for-a-database"></a>Включение параметра READ_COMMITTED_SNAPSHOT для базы данных
 
 ```sql
@@ -3148,6 +3113,7 @@ SET READ_COMMITTED_SNAPSHOT ON
 
 ## <a name="see-also"></a>См. также раздел
 
+- [Настройка производительности — кэширование результирующего набора](https://docs.microsoft.com/en-us/azure/sql-data-warehouse/performance-tuning-result-set-caching)
 - [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)
 - [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md)
 - [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)

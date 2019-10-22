@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: 47fb4212-2165-4fec-bc41-6d548465d7be
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 729443d2e9a9758a6ebedb15ac981e945128fa17
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4e780d6afaddc5ac3af0e87e6b629fb39c987879
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68002818"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72305039"
 ---
-# <a name="mssqlserver137"></a>MSSQLSERVER_137
+# <a name="mssqlserver_137"></a>MSSQLSERVER_137
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Сведения  
@@ -33,13 +33,13 @@ ms.locfileid: "68002818"
 |Текст сообщения|Должна быть объявлена скалярная переменная «%.*ls».|  
   
 ## <a name="explanation"></a>Объяснение  
-Эта ошибка происходит, если переменная используется в скрипте SQL без предварительного объявления этой переменной. Следующий пример возвращает ошибку 137 для обеих инструкций (SET и SELECT), так как переменная **@mycol** не объявлена.  
+Эта ошибка происходит, если переменная используется в скрипте SQL без предварительного объявления этой переменной. В следующем примере происходит возврат ошибки 137 применительно к обеим инструкциям, SET и SELECT, поскольку переменная **\@mycol** не объявлена.  
   
 SET @mycol = 'ContactName';  
   
 SELECT @mycol;  
   
-Одной из трудноуловимых причин этой ошибки является использование переменной, которая объявлена вне инструкции EXECUTE. Например, переменная **@mycol** , указанная в инструкции SELECT, является локальной по отношению к инструкции SELECT и поэтому находится вне инструкции EXECUTE.  
+Одной из трудноуловимых причин этой ошибки является использование переменной, которая объявлена вне инструкции EXECUTE. В следующем примере переменная **\@mycol**, указанная в инструкции SELECT, является локальной по отношению к инструкции SELECT и поэтому находится вне инструкции EXECUTE.  
   
 USE AdventureWorks2012;  
   

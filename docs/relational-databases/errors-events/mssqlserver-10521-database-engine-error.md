@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: ba2d7e44-207c-4428-b5f0-c975ac122c0d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f86922211e670cb59b4541071e9e7d7f67302bc9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d2dde7bedad58273cb207b05f54824c9c5ddff5c
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68068148"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72305848"
 ---
-# <a name="mssqlserver10521"></a>MSSQLSERVER_10521
+# <a name="mssqlserver_10521"></a>MSSQLSERVER_10521
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Сведения  
@@ -30,10 +30,10 @@ ms.locfileid: "68068148"
 |Источник события|MSSQLSERVER|  
 |Компонент|SQLEngine|  
 |Символическое имя|PG_PARAM_NEEDED|  
-|Текст сообщения|Не удалось создать структуру плана "%.\*ls", поскольку значение **@type** указано как "%ls", а параметр "%ls" имеет значение NULL. Этот тип должен иметь значение, отличное от NULL, для этого параметра. Укажите для этого параметра значение, отличное от NULL, либо измените его тип таким образом, чтобы он допускал значение NULL.|  
+|Текст сообщения|Не удалось создать структуру плана "%.\*ls", поскольку значение **\@type** указано как "%ls", а параметр "%ls" имеет значение NULL. Этот тип должен иметь значение, отличное от NULL, для этого параметра. Укажите для этого параметра значение, отличное от NULL, либо измените его тип таким образом, чтобы он допускал значение NULL.|  
   
 ## <a name="explanation"></a>Объяснение  
-Для типа, указанного в **@type** , требуется значение, отличное от NULL, но предоставлено значение NULL.  
+В параметре **\@type** указан тип, требующий отличное от NULL значение для указанного параметра, но было задано значение NULL.  
   
 ## <a name="user-action"></a>Действие пользователя  
 Укажите для этого параметра значение, отличное от NULL, либо измените его тип таким образом, чтобы он допускал значение NULL.  

@@ -10,18 +10,18 @@ ms.assetid: 4846a576-57ea-4068-959c-81e69e39ddc1
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 6cb2bdc652eb77908c044b640d315a90da8cf428
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: da38a5171694f1f563e67d4be6a852527fd0377b
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68809811"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72542187"
 ---
 # <a name="explain-transact-sql"></a>EXPLAIN (Transact-SQL) 
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
-  Возвращает план запроса для инструкции [!INCLUDE[ssDW](../../includes/ssdw-md.md)] [!INCLUDE[DWsql](../../includes/dwsql-md.md)] без выполнения инструкции. Используйте **EXPLAIN**, чтобы узнать, каким операциям потребуется перемещение данных, и определить предполагаемые затраты на операции запроса. `WITH RECOMMENDATIONS` применяется к Хранилищу данных SQL Azure (предварительная версия).
+  Возвращает план запроса для инструкции [!INCLUDE[ssDW](../../includes/ssdw-md.md)] [!INCLUDE[DWsql](../../includes/dwsql-md.md)] без выполнения инструкции. Используйте EXPLAIN, чтобы узнать, каким операциям потребуется перемещение данных, и определить предполагаемые затраты на операции запроса. `WITH RECOMMENDATIONS` применяется к Хранилищу данных SQL Azure (предварительная версия).
   
  Дополнительные сведения о планах запросов см. в разделе "Основные сведения о планах запросов" в [!INCLUDE[pdw-product-documentation_md](../../includes/pdw-product-documentation-md.md)].  
   
@@ -35,9 +35,12 @@ EXPLAIN [WITH_RECOMMENDATIONS] SQL_statement
 ## <a name="arguments"></a>Аргументы
 
  *SQL_statement*  
- Инструкция [!INCLUDE[DWsql](../../includes/dwsql-md.md)], в которой будет выполняться команда **EXPLAIN**. Аргумент *SQL_statement* может быть любой из следующих команд: **SELECT**, **INSERT**, **UPDATE**, **DELETE**, **CREATE TABLE AS SELECT**, **CREATE REMOTE TABLE**.
 
-*WITH_RECOMMENDATIONS* возвращает план запроса с рекомендациями по оптимизации производительности инструкции SQL.  
+ Инструкция [!INCLUDE[DWsql](../../includes/dwsql-md.md)], в которой будет выполняться команда EXPLAIN. Аргумент *SQL_statement* может быть любой из следующих команд: SELECT, INSERT, UPDATE, DELETE, CREATE TABLE AS SELECT, CREATE REMOTE TABLE.
+
+*WITH_RECOMMENDATIONS* (предварительная версия)
+
+Возвращает план запроса с рекомендациями по оптимизации производительности инструкции SQL.  
   
 ## <a name="permissions"></a>Разрешения
 
@@ -310,7 +313,7 @@ GO
 **Отправка инструкции EXPLAIN WITH_RECOMMENDATIONS**
 
 ```sql
--- EXPLAIN WITH_RECOMMENDATIONS
+EXPLAIN WITH_RECOMMENDATIONS
 select count(*)
 from ((select distinct c_last_name, c_first_name, d_date
        from store_sales, date_dim, customer
@@ -326,7 +329,7 @@ from ((select distinct c_last_name, c_first_name, d_date
 ) top_customers
 ```
 
-**Пример выходных данных для EXPLAIN WITH_RECOMMENDATIONS** (предварительная версия)
+**Пример выходных данных для EXPLAIN WITH_RECOMMENDATIONS**  
 
 В представленных ниже выходных данных присутствует рекомендуемое материализованное представление с именем View1.  
 

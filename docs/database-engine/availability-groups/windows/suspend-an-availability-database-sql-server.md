@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 86858982-6af1-4e80-9a93-87451f0d7ee9
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 61b8ccb7a52cee68e709200c4d1d376379b5dd0f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c3be8b96e35dda7d5a1037543d750b2ccd020e64
+ms.sourcegitcommit: 4c5fb002719627f1a1594f4e43754741dc299346
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68013892"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72517959"
 ---
 # <a name="suspend-an-availability-database-sql-server"></a>Приостановка базы данных доступности (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -100,9 +100,9 @@ ms.locfileid: "68013892"
   
 1.  Подключитесь к экземпляру сервера, на котором размещена реплика, базу данных которой нужно приостановить. Дополнительные сведения см. в подразделе [Предварительные условия](#Prerequisites)ранее в этом разделе.  
   
-2.  Приостановите базу данных с помощью следующей инструкции [ALTER DATABASE](../../../t-sql/statements/alter-database-transact-sql-set-hadr.md):  
+2.  Приостановите базу данных с помощью следующей инструкции [ALTER DATABASE](../../../t-sql/statements/alter-database-transact-sql-set-hadr.md):  
   
-     ALTER DATABASE *имя_базы_данных* SET HADR SUSPEND  
+     ALTER DATABASE *имя_базы_данных* SET HADR SUSPEND;
   
 ##  <a name="PowerShellProcedure"></a> Использование PowerShell  
  **Приостановка базы данных**  

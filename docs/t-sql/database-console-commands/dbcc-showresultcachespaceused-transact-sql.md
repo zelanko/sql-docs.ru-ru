@@ -12,12 +12,12 @@ ms.assetid: 73f598cf-b02a-4dba-8d89-9fc0b55a12b8
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: c2dd0389f4ec3287fbe23875458ab5d34ef269f7
-ms.sourcegitcommit: 79e6d49ae4632f282483b0be935fdee038f69cc2
+ms.openlocfilehash: 0a8e9207e22a0e9bb4fbb75d872697fc9d2ff76e
+ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72174651"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72452831"
 ---
 # <a name="dbcc-showresultcachespaceused-transact-sql"></a>DBCC SHOWRESULTCACHESPACEUSED (Transact-SQL)
 
@@ -25,7 +25,7 @@ ms.locfileid: "72174651"
 
 Отображает сведения о месте в хранилище, используемом кэшем результирующих наборов базы данных службы "[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] Azure".
   
-![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL (Transact-SQL)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -36,18 +36,6 @@ DBCC SHOWRESULTCACHESPACEUSED
 ## <a name="remarks"></a>Remarks
 
 Команда `DBCC SHOWRESULTCACHESPACEUSED` не требует указания никаких параметров и возвращает пространство, используемое базой данных, в которой она выполняется.
-
-Максимальный размер кэша результирующих наборов составляет 1 ТБ на базу данных.  Служба "Хранилище данных SQL Azure" автоматически исключает записи в кэше результирующих наборов:
-
-- каждые 48 часов, если результирующий набор не использовался;
-- если кэш результирующих наборов достигает максимального размера.
-
-Чтобы вручную очистить кэш результирующего набора для базы данных, пользователи могут использовать один из следующих вариантов:
-
-- Отключение функции кэша результирующего набора для базы данных.
-- Запуск `DBCC DROPRESULTSETCACHE` при подключении к базе данных. 
-
-Если приостановить базу данных, кэш результирующих наборов не очищается.  
 
 ## <a name="permissions"></a>Разрешения
 
@@ -65,6 +53,7 @@ DBCC SHOWRESULTCACHESPACEUSED
 
 ## <a name="see-also"></a>См. также раздел
 
+[Настройка производительности — кэширование результирующего набора](https://docs.microsoft.com/en-us/azure/sql-data-warehouse/performance-tuning-result-set-caching)</br>
 [Параметры ALTER DATABASE SET &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options?view=azure-sqldw-latest)</br>
 [ALTER DATABASE (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql?view=azure-sqldw-latest)</br>
 [SET RESULT SET CACHING &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-result-set-caching-transact-sql)</br>

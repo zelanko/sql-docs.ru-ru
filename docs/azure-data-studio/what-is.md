@@ -9,13 +9,13 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18, sqlfreshmay19
-ms.date: 05/14/2019
-ms.openlocfilehash: a7fbde0a4dab0becdaa9fb7b59221e57fd81c59e
-ms.sourcegitcommit: 2604e13627fbc9f3bda3926b67045fceb7b04e37
+ms.date: 10/15/2019
+ms.openlocfilehash: 9a82168afd82d4670521e1a84f87ae1bea57281e
+ms.sourcegitcommit: c4258a644ac588fc222abee2854f89a81325814c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68822614"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72545053"
 ---
 # <a name="what-is-azure-data-studio"></a>Что такое Azure Data Studio?
 
@@ -68,6 +68,7 @@ Azure Data Studio — это кроссплатформенное решение
 - можете выполнять большинство задач администрирования через встроенный терминал с помощью sqlcmd или PowerShell;
 - имеете незначительную потребность в использовании мастера;
 - не будете выполнять детализированную административную конфигурацию.
+- Требуется выполнить 
 
 **Используйте SQL Server Management Studio, если вы...**
 - тратите большую часть времени на выполнение задач администрирования базы данных;
@@ -117,6 +118,8 @@ Azure Data Studio — это кроссплатформенное решение
 |В виде текста||Да|
 |Средство просмотра пространственных данных||Да|
 |SQLCMD||Да|
+|Записные книжки|Да||
+|Сохранение запроса в виде фрагмента кода|Да||
 
 ### <a name="operating-system-support"></a>Поддержка операционных систем
 
@@ -139,6 +142,7 @@ Azure Data Studio — это кроссплатформенное решение
 |Компонент|Azure Data Studio|SSMS|
 |:---|:---|:---|
 |Резервное копирование и восстановление|Да|Да|
+|Поддержка кластеров больших данных|Да||
 |Импорт неструктурированных файлов|Предварительный просмотр|Да|
 |Агент SQL Server|Предварительный просмотр|Да|
 |SQL Profiler|Предварительный просмотр|Да|
@@ -160,6 +164,7 @@ Azure Data Studio — это кроссплатформенное решение
 |Template Explorer||Да|
 |Оценка уязвимостей||Да|
 |Управление XEvent||Да|
+|Интеграция с API оценки SQL||Да|
 
 ## <a name="next-steps"></a>Следующие шаги
 

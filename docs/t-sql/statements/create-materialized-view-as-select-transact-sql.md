@@ -37,12 +37,12 @@ ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: d841f7aa8a5aacfa684b984791a15128b306ab1d
-ms.sourcegitcommit: 52d3902e7b34b14d70362e5bad1526a3ca614147
+ms.openlocfilehash: a0bf701395723b1d21efea38f969024a1921c3f6
+ms.sourcegitcommit: c4258a644ac588fc222abee2854f89a81325814c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70109765"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72545074"
 ---
 # <a name="create-materialized-view-as-select-transact-sql-preview"></a>CREATE MATERIALIZED VIEW AS SELECT (Transact-SQL) (предварительная версия)
 
@@ -111,8 +111,8 @@ CREATE MATERIALIZED VIEW [ schema_name. ] materialized_view_name
 Материализованное представление в хранилище данных Azure очень похоже на индексированное представление SQL Server.  Оно имеет практически те же ограничения, что и индексированное представление (подробности см. в статье [Создание индексированных представлений](/sql/relational-databases/views/create-indexed-views)) за исключением того, что материализованное представление поддерживает агрегатные функции.   Ниже приведены дополнительные факторы, которые необходимо учитывать при работе с материализованным представлением.  
  
 Материализованное представление поддерживает только кластеризованный индекс columnstore. 
- 
-Материализованное представление можно удалить с помощью инструкции DROP VIEW.  Отключить или перестроить материализованное представление можно с помощью инструкции ALTER MATERIALIZED VIEW.   
+
+Материализованное представление не может ссылаться на другие представления.  
  
 Материализованные представления можно создавать в секционированных таблицах.  Таблицы, связанные с материализованными представлениями, поддерживают операции SPLIT и MERGE.  Таблицы, связанные с материализованными представлениями, не поддерживают операцию SWITCH. При попытке выполнить ее возвращается следующее сообщение об ошибке: `Msg 106104, Level 16, State 1, Line 9`
  
@@ -129,6 +129,8 @@ CREATE MATERIALIZED VIEW [ schema_name. ] materialized_view_name
 После создания материализованные представления отображаются в SQL Server Management Studio в папке представлений экземпляра службы "Хранилище данных SQL Azure".
 
 Пользователи могут определить место, используемое материализованным представлением, с помощью инструкций [SP_SPACEUSED](/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql?view=azure-sqldw-latest) и [DBCC PDW_SHOWSPACEUSED](/sql/t-sql/database-console-commands/dbcc-pdw-showspaceused-transact-sql?view=azure-sqldw-latest).  
+
+Материализованное представление можно удалить с помощью инструкции DROP VIEW.  Отключить или перестроить материализованное представление можно с помощью инструкции ALTER MATERIALIZED VIEW.   
 
 План EXPLAIN и графический предполагаемый план выполнения в SQL Server Management Studio предоставляют сведения о том, учитывает ли оптимизатор запросов материализованное представление во время выполнения запроса. и графический предполагаемый план выполнения в SQL Server Management Studio предоставляют сведения о том, учитывает ли оптимизатор запросов материализованное представление во время выполнения запроса.
 

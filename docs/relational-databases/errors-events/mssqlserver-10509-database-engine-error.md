@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: e9dd5357-ee3d-420a-9a89-d12ab5404e73
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9808157b943a45f9d23320d270752e7ec712c310
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0cdf2c06311e703b6a07667ba41d1c853c17eb86
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68068283"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72305885"
 ---
-# <a name="mssqlserver10509"></a>MSSQLSERVER_10509
+# <a name="mssqlserver_10509"></a>MSSQLSERVER_10509
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Сведения  
@@ -30,10 +30,10 @@ ms.locfileid: "68068283"
 |Источник события|MSSQLSERVER|  
 |Компонент|SQLEngine|  
 |Символическое имя|PG_INVALID_STMT|  
-|Текст сообщения|Не удалось создать структуру плана '%.\*ls', поскольку инструкция, указанная параметром **@stmt** или **@statement_start_offset** , содержит синтаксическую ошибку или недопустима для использования в структуре плана. Задайте одну допустимую инструкцию [!INCLUDE[tsql](../../includes/tsql-md.md)] или допустимую начальную позицию инструкции внутри пакета. Допустимую начальную позицию можно запросить из столбца statement_start_offset функции динамического управления sys.dm_exec_query_stats.|  
+|Текст сообщения|Не удалось создать структуру плана "%.\*ls", поскольку инструкция, указанная параметром **\@stmt** или **\@statement_start_offset**, содержит синтаксическую ошибку или недопустима для использования в структуре плана. Задайте одну допустимую инструкцию [!INCLUDE[tsql](../../includes/tsql-md.md)] или допустимую начальную позицию инструкции внутри пакета. Допустимую начальную позицию можно запросить из столбца statement_start_offset функции динамического управления sys.dm_exec_query_stats.|  
   
 ## <a name="explanation"></a>Объяснение  
-Инструкция, указанная параметром **@stmt** или **@statement_start_offset** , содержит синтаксическую ошибку или недопустима для использования в структуре плана.  
+Инструкция, указанная параметром **\@stmt** или **\@statement_start_offset**, содержит синтаксическую ошибку или недопустима для использования в структуре плана.  
   
 ## <a name="user-action"></a>Действие пользователя  
 Задайте одну допустимую инструкцию [!INCLUDE[tsql](../../includes/tsql-md.md)] или допустимую начальную позицию инструкции внутри пакета. Допустимую начальную позицию можно запросить из столбца statement_start_offset функции динамического управления sys.dm_exec_query_stats.  

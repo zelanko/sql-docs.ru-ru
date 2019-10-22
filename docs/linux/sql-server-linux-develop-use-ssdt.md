@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 1e924704-e07c-4a8b-b243-8c1dd8cff0d3
-ms.openlocfilehash: b98980837f6dce2ebd9f39be142b816f37f16cd8
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: c6d5789092ea2bbfc6fd9a8bb20cc7d078eaf6de
+ms.sourcegitcommit: c4258a644ac588fc222abee2854f89a81325814c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68077402"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72545044"
 ---
 # <a name="use-visual-studio-to-create-databases-for-sql-server-on-linux"></a>Создание баз данных для SQL Server на Linux с помощью Visual Studio
 
@@ -23,7 +23,7 @@ ms.locfileid: "68077402"
 
 ## <a name="install-visual-studio-and-sql-server-data-tools"></a>Установка Visual Studio и SQL Server Data Tools
 
-1. Если вы еще не установили Visual Studio на компьютере Windows, [Скачивание и установка Visual Studio]. Если у вас нет лицензии Visual Studio, используйте выпуск Visual Studio Community — бесплатную полнофункциональную интегрированную среду разработки для учащихся, проектов с открытым исходным кодом и индивидуальных разработчиков.
+1. Если вы еще не установили Visual Studio на компьютере c Windows, [скачайте и установите Visual Studio](https://visualstudio.microsoft.com/downloads/). Если у вас нет лицензии Visual Studio, используйте выпуск Visual Studio Community — бесплатную полнофункциональную интегрированную среду разработки для учащихся, проектов с открытым исходным кодом и индивидуальных разработчиков.
 
 2. Во время установки Visual Studio выберите **Выборочная** для параметра **Выберите тип установки**. Нажмите кнопку **Далее**
 
@@ -105,12 +105,12 @@ SQL Server на Linux поддерживается SSDT 17.0 RC или боле�
 
 ## <a name="next-steps"></a>Следующие шаги
 
-Если вы не знакомы с T-SQL, изучите статьи [Учебник. Составление инструкций Transact-SQL] и [Справочник по Transact-SQL (ядро СУБД)].
+Если вы не знакомы с T-SQL, изучите статьи [Руководство. Составление инструкций Transact-SQL](../t-sql/tutorial-writing-transact-sql-statements.md).
 
-Дополнительные сведения о разработке базы данных с помощью SQL Data Tools см. в [Документация MSDN по SSDT].
+Дополнительные сведения о разработке базы данных с помощью SQL Data Tools см. в представленных ниже статьях.
 
-[Скачивание и установка Visual Studio]:https://www.visualstudio.com/downloads/
-[Download and Install SSDT]:https://aka.ms/ssdt-download
-[Документация MSDN по SSDT]:https://msdn.microsoft.com/library/hh272686(v=vs.103).aspx
-[Учебник. Составление инструкций Transact-SQL]:https://msdn.microsoft.com/library/ms365303.aspx
-[Справочник по Transact-SQL (ядро СУБД)]:https://msdn.microsoft.com/library/bb510741.aspx
+* [Скачивание и установка Visual Studio](https://www.visualstudio.com/downloads/)
+* [Скачивание и установка SSDT](https://aka.ms/ssdt-download)
+* [Документация MSDN по SSDT](https://msdn.microsoft.com/library/hh272686(v=vs.103).aspx)
+* [Учебник. Составление инструкций Transact-SQL](https://msdn.microsoft.com/library/ms365303.aspx)
+* [Справочник по Transact-SQL (ядро СУБД)](https://msdn.microsoft.com/library/bb510741.aspx)

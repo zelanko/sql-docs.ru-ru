@@ -12,12 +12,12 @@ author: haoqian
 ms.author: haoqian
 f1_keywords:
 - sql13.ssis.ssms.ispackageexecuteinscaleout.f1
-ms.openlocfilehash: 25dc76122c8b4d1e68df4e83e3e1bd01d6f51890
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 68a24188a307dd84a28342d89559630efa9a9d80
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68092628"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72305071"
 ---
 # <a name="run-packages-in-integration-services-ssis-scale-out"></a>Выполнение пакетов в SQL Server Integration Services (SSIS) Scale Out
 
@@ -65,7 +65,7 @@ ms.locfileid: "68092628"
 
 1.  Создайте выполнения.
 
-    Вызовите процедуру `[catalog].[create_execution]` для каждого пакета. Задайте для параметра **@runinscaleout** значение `True`. Если выполнять пакет разрешено не всем компьютерам рабочей роли Scale Out, задайте для параметра **@useanyworker** значение `False`. Дополнительные сведения об этой хранимой процедуре и параметре **@useanyworker** см. в разделе [catalog.create_execution](../system-stored-procedures/catalog-create-execution-ssisdb-database.md). 
+    Вызовите процедуру `[catalog].[create_execution]` для каждого пакета. Присвойте параметру **\@runinscaleout** значение `True`. Если выполнять пакет разрешено не всем компьютерам рабочей роли Scale Out, задайте для параметра **\@useanyworker** значение `False`. Дополнительные сведения об этой хранимой процедуре и параметре **\@useanyworker** см. в разделе [catalog.create_execution](../system-stored-procedures/catalog-create-execution-ssisdb-database.md). 
 
 2. Задайте параметры выполнения.
 
@@ -77,7 +77,7 @@ ms.locfileid: "68092628"
 
 4. Запустите выполнения.
 
-    Вызовите процедуру `[catalog].[start_execution]`. Задайте параметр **@retry_count** , указывающий, сколько раз будет предприниматься повторная попытка выполнения пакета в случае сбоя.
+    Вызовите процедуру `[catalog].[start_execution]`. Задайте параметр **\@retry_count**, указывающий, сколько раз будет предприниматься повторная попытка выполнения пакета в случае сбоя.
     
 ### <a name="example"></a>Пример
 В приведенном ниже примере выполняются два пакета — `package1.dtsx` и `package2.dtsx` — в Scale Out с использованием одной рабочей роли.  
@@ -118,7 +118,7 @@ GO
 
 2.  В диалоговом окне **Свойства каталога** присвойте свойству **Серверный режим выполнения по умолчанию** значение **Scale Out**.
 
-После задания этого режима выполнения по умолчанию больше не нужно указывать параметр **@runinscaleout** при вызове хранимой процедуры `[catalog].[create_execution]`. Пакеты выполняются в Scale Out автоматически. 
+После задания этого режима выполнения по умолчанию больше не нужно указывать параметр **\@runinscaleout** при вызове хранимой процедуры `[catalog].[create_execution]`. Пакеты выполняются в Scale Out автоматически. 
 
 ![Режим выполнения](media/exe-mode.PNG)
 
