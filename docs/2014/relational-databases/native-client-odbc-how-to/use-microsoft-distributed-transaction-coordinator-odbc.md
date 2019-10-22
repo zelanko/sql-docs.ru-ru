@@ -1,7 +1,7 @@
 ---
-title: Используйте Microsoft координатор распределенных транзакций (ODBC) | Документация Майкрософт
+title: Использование координатор распределенных транзакций Майкрософт (ODBC) | Документация Майкрософт
 ms.custom: ''
-ms.date: 06/13/2017
+ms.date: 10/18/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: native-client
@@ -12,12 +12,12 @@ ms.assetid: 12a275e1-8c7e-436d-8a4e-b7bee853b35c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 739d87c7a590489a2dd263535356b0b520a4a9b7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 425f9fc0b7637aab1869130a2830c2f3c134fe7d
+ms.sourcegitcommit: 82a1ad732fb31d5fa4368c6270185c3f99827c97
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63200225"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688699"
 ---
 # <a name="use-microsoft-distributed-transaction-coordinator-odbc"></a>Использование координатора распределенных транзакции Майкрософт (ODBC)
     
@@ -25,7 +25,7 @@ ms.locfileid: "63200225"
   
 1.  Подключитесь к координатору распределенных транзакций (MS DTC), используя функцию DtcGetTransactionManager MS DTC OLE. Дополнительные сведения о координаторе распределенных транзакций (MS DTC) см. в разделе «Координатор распределенных транзакций (Майкрософт)».  
   
-2.  Вызывать SQL DriverConnect один раз для каждого Microsoft?? SQL Server код подключение, которое вы хотите установить.  
+2.  Вызывайте SQL Дриверконнект один раз для каждого устанавливаемого соединения Microsoft SQL Server.  
   
 3.  Вызовите функцию MS DTC OLE ITransactionDispenser::BeginTransaction, чтобы начать транзакцию координатора распределенных транзакций (MS DTC) и получить объект Transaction, представляющий транзакцию.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "63200225"
 > [!NOTE]  
 >  Можно также вызывать [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) и [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399) по очереди для каждого экземпляра SQL Server, а не вызывать их описанным выше в шагах 4 и 5 способом.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также статью  
  [Выполнение транзакций &#40;ODBC&#41;](../../database-engine/dev-guide/performing-transactions-odbc.md)  
   
   

@@ -1,7 +1,7 @@
 ---
 title: CircularString | Документация Майкрософт
 ms.custom: ''
-ms.date: 06/13/2017
+ms.date: 10/18/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: ''
@@ -10,18 +10,18 @@ ms.assetid: 9fe06b03-d98c-4337-9f89-54da98f49f9f
 author: MladjoA
 ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: efe15f6eea386522fc6139601af66ce736e980f3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b3eacaba2ad0ddc2c0475d29b151d0a50be98fc0
+ms.sourcegitcommit: 82a1ad732fb31d5fa4368c6270185c3f99827c97
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66014412"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688707"
 ---
 # <a name="circularstring"></a>CircularString
   Объект `CircularString` — это коллекция, состоящая из нуля или большего количества непрерывных круговых сегментов дуги. Сегмент дуги — это сегмент кривой, определяемый тремя точками на двумерной плоскости; первая точка не может совпадать с третьей. Если все три точки сегмента дуги лежат на одной прямой, сегмент дуги считается линейным сегментом.  
   
 > [!IMPORTANT]  
->  Подробное описание и примеры использования новых функций обработки, представленные в [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], в том числе `CircularString` подтипа, загрузив Технический документ, [новые функции обработки пространственных в SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=226407).  
+>  Подробное описание и примеры новых пространственных функций, появившихся в [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], включая подтип `CircularString`, можно скачать, загрузив технический документ [новые функции пространственного класса в SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=226407).  
   
 ## <a name="circularstring-instances"></a>Экземпляры CircularString  
  На следующем рисунке показаны допустимые экземпляры `CircularString`.  
@@ -29,9 +29,9 @@ ms.locfileid: "66014412"
  ![](../../database-engine/media/5ff17e34-b578-4873-9d33-79500940d0bc.png "5ff17e34-b578-4873-9d33-79500940d0bc")  
   
 ### <a name="accepted-instances"></a>Правильные экземпляры  
- Объект `CircularString` принимается, если он пуст или содержит нечетное количество точек, n, где n > 1. Следующие экземпляры `CircularString` правильные.  
+ Экземпляр `CircularString` принимается, если он пуст или содержит нечетное число точек, n, где n > 1. Следующие экземпляры `CircularString` правильные.  
   
-```  
+```sql
 DECLARE @g1 geometry = 'CIRCULARSTRING EMPTY';  
 DECLARE @g2 geometry = 'CIRCULARSTRING(1 1, 2 0, -1 1)';  
 DECLARE @g3 geometry = 'CIRCULARSTRING(1 1, 2 0, 2 0, 2 0, 1 1)';  
@@ -39,7 +39,7 @@ DECLARE @g3 geometry = 'CIRCULARSTRING(1 1, 2 0, 2 0, 2 0, 1 1)';
   
  Пример `@g3` показывает, что экземпляр `CircularString` может быть правильным, но недопустимым. Следующее объявление экземпляра CircularString неверно. Это объявление вызывает исключение `System.FormatException`.  
   
-```  
+```sql
 DECLARE @g geometry = 'CIRCULARSTRING(1 1, 2 0, 2 0, 1 1)';  
 ```  
   
@@ -58,7 +58,7 @@ DECLARE @g geometry = 'CIRCULARSTRING(1 1, 2 0, 2 0, 1 1)';
   
  В следующем примере показаны допустимые экземпляры `CircularString`.  
   
-```  
+```sql
 DECLARE @g1 geometry = 'CIRCULARSTRING EMPTY';  
 DECLARE @g2 geometry = 'CIRCULARSTRING(1 1, 2 0, -1 1)';  
 DECLARE @g3 geometry = 'CIRCULARSTRING(1 1, 2 0, 2 0, 1 1, 0 1)';  
@@ -70,7 +70,7 @@ SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid(),@g4.STIsValid();
   
  В следующем примере показаны недопустимые экземпляры CircularString.  
   
-```  
+```sql
 DECLARE @g1 geometry = 'CIRCULARSTRING(1 1, 2 0, 1 1)';  
 DECLARE @g2 geometry = 'CIRCULARSTRING(0 0, 0 0, 0 0)';  
 SELECT @g1.STIsValid(), @g2.STIsValid();  
@@ -95,7 +95,7 @@ DECLARE @g geometry;
 SET @g = geometry::Parse('CIRCULARSTRING EMPTY');  
 ```  
   
-### <a name="b-instantiating-a-geometry-instance-using-a-circularstring-with-one-circular-arc-segment"></a>Б. Создание экземпляра Geometry с экземпляром CircularString, содержащим один сегмент дуги  
+### <a name="b-instantiating-a-geometry-instance-using-a-circularstring-with-one-circular-arc-segment"></a>б. Создание экземпляра Geometry с экземпляром CircularString, содержащим один сегмент дуги  
  В следующем примере показывается создание экземпляра `CircularString` с одним сегментом дуги (полукруга):  
   
 ```sql  
@@ -133,7 +133,7 @@ SELECT 'Perimeter = ' + CAST(@g.STLength() AS NVARCHAR(10));
 Perimeter = 5.65685  
 ```  
   
- Обратите внимание, что значение `CircularString` пример приближается к 2 код, который есть действительному круга.  
+ Обратите внимание, что значение для `CircularString` примере близко к 2&#x03c0; (2 * PI), то есть к фактической окружности окружности.  
   
 ### <a name="d-declaring-and-instantiating-a-geometry-instance-with-a-circularstring-in-the-same-statement"></a>Г. Объявление и создание экземпляра Geometry с экземпляром CircularString в одной инструкции  
  В этом фрагменте кода показывается объявление и создание экземпляра `geometry` с экземпляром `CircularString` в одной инструкции:  
@@ -157,7 +157,7 @@ DECLARE @g geometry;
 SET @g = geometry::STGeomFromText('CIRCULARSTRING(0 0, 1 2, 2 4)', 0);  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также статью  
  [Основные сведения о типах пространственных данных](spatial-data-types-overview.md)   
  [CompoundCurve](compoundcurve.md)   
  [MakeValid (тип данных geography)](/sql/t-sql/spatial-geography/makevalid-geography-data-type)   

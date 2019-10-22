@@ -1,6 +1,6 @@
 ---
 title: Электронная документация по SQL Server 2014 | Документация Майкрософт
-ms.date: 05/25/2017
+ms.date: 10/18/2019
 ms.prod: sql-server-2014
 ms.technology: release-landing
 ms.reviewer: ''
@@ -19,12 +19,12 @@ ms.assetid: 674933a8-e423-4d44-a39b-2a997e2c2333
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: a66e558abcd1835674915955d0cda65eff58f8c0
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: a943685156ce9ec0ed3c94f4650c5a8222bff445
+ms.sourcegitcommit: 82a1ad732fb31d5fa4368c6270185c3f99827c97
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68887756"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688774"
 ---
 # <a name="books-online-for-sql-server-2014"></a>Электронная документация по SQL Server 2014
 
@@ -43,11 +43,11 @@ SQL Server 2016 и более поздних версий описаны [зде
 |-|-|  
 |![Значок ядро СУБД](media/database-engine.gif "Значок ядро СУБД")|[Ядро СУБД](../database-engine/sql-server-database-engine-overview.md)<br /><br /> Компонент Database Engine представляет собой основную службу для хранения, обработки и обеспечения безопасности данных. Этот компонент обеспечивает управляемый доступ к ресурсам и быструю обработку транзакций, что позволяет использовать его даже в самых требовательных корпоративных приложениях обработки данных. Кроме того, ядро СУБД предоставляет разносторонние средства поддержания высокого уровня доступности.|  
 |![Логотип DQS для домашней статьи электронной документации](media/dqs-logo.jpg "Логотип DQS для домашней статьи электронной документации")|[Службы Data Quality Services](../data-quality-services/data-quality-services.md)<br /><br /> Службы SQL Server Data Quality Services (DQS) являются решением для очистки данных на основе знаний. Службы DQS позволяют создать базу знаний, а затем выполнить в ней исправление данных и удаление дубликатов с помощью как автоматизированных, так и интерактивных средств. Можно использовать службы справочных данных на основе облачных вычислений, а также создавать решения по управлению данными, где службы DQS будут интегрированы со службами SQL Server Integration Services и Master Data Services.|  
-|![Значок Analysis Services](media/analysisserver.gif "Значок Analysis Services")|[Службы Analysis Services](https://docs.microsoft.com/analysis-services/analysis-services-overview)<br /><br /> Службы[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] — это платформа аналитических данных и набор средств для бизнес-аналитики на личном уровне, уровне рабочей группы и организации. Серверный и клиентский конструкторы поддерживают стандартные решения OLAP, новые решения для создания табличных моделей, а также самостоятельную аналитику и совместную работу с помощью PowerPivot, Excel и среды SharePoint Server. Службы[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] также включают интеллектуальный анализ данных, который позволяет выявлять закономерности и связи на основе больших объемов данных.|  
-|![Значок Integration Services](media/dts.gif "Значок Integration Services")|[Службы интеграции](../integration-services/sql-server-integration-services.md)<br /><br /> [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] — это платформа для создания таких высокопроизводительных решений по интеграции данных, как пакеты для хранения данных, которые обеспечивают извлечение, преобразование и загрузку данных.|  
+|![Значок Analysis Services](media/analysisserver.gif "Значок Analysis Services")|[службы Analysis Services](https://docs.microsoft.com/analysis-services/analysis-services-overview)<br /><br /> Службы[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] — это платформа аналитических данных и набор средств для бизнес-аналитики на личном уровне, уровне рабочей группы и организации. Серверный и клиентский конструкторы поддерживают стандартные решения OLAP, новые решения для создания табличных моделей, а также самостоятельную аналитику и совместную работу с помощью PowerPivot, Excel и среды SharePoint Server. Службы[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] также включают интеллектуальный анализ данных, который позволяет выявлять закономерности и связи на основе больших объемов данных.|  
+|![Значок Integration Services](media/dts.gif "Значок Integration Services")|[Службы Integration Services](../integration-services/sql-server-integration-services.md)<br /><br /> [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] — это платформа для создания таких высокопроизводительных решений по интеграции данных, как пакеты для хранения данных, которые обеспечивают извлечение, преобразование и загрузку данных.|  
 |![mds_cm_icon](media/mds-cm-icon.gif "mds_cm_icon")|[Службы Master Data Services](../master-data-services/master-data-services.md)<br /><br /> [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] — это решение [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] для управления основными данными. Решение, построенное на основе [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] , позволяет обеспечить правильность информации, используемой для построения отчетов и выполнения анализа. С помощью [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]можно создать центральный репозиторий основных данных и поддерживать запись этих данных по мере их изменения, защищенную и доступную для аудита.|  
 |![Значок репликации](media/replication.gif "Значок репликации")|[Репликация](../relational-databases/replication/sql-server-replication.md)<br /><br /> Репликация представляет собой набор технологий копирования и распространения данных и объектов баз данных между базами данных, а также синхронизации баз данных для поддержания согласованности. Благодаря репликации данные можно размещать в различных местах, обеспечивая возможность доступа к ним удаленных и мобильных пользователей по локальным или глобальным сетям, посредством коммутируемых и беспроводных соединений, а также через Интернет.|  
-|![Значок Reporting Services](media/reportingservices.gif "Значок Reporting Services")|[службы Reporting Services](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)<br /><br /> Службы Reporting Services предлагают средства создания корпоративных отчетов с поддержкой веб-интерфейса, которые позволяют включать в отчеты данные из различных источников, публиковать отчеты в разнообразных форматах, а также централизованно управлять безопасностью и подписками.|  
+|![Значок Reporting Services](media/reportingservices.gif "Значок Reporting Services")|[Службы Reporting Services:](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)<br /><br /> Службы Reporting Services предлагают средства создания корпоративных отчетов с поддержкой веб-интерфейса, которые позволяют включать в отчеты данные из различных источников, публиковать отчеты в разнообразных форматах, а также централизованно управлять безопасностью и подписками.|  
   
 ## <a name="sql-server-information-on-the-web"></a>Сведения о SQL Server в Интернете  
 
@@ -59,7 +59,7 @@ SQL Server 2016 и более поздних версий описаны [зде
   
 -   [Центр ресурсов SQL Server](https://www.microsoft.com/sql-server/sql-server-2017-resources)  
   
--   [Технический центр SQL Server](https://go.microsoft.com/fwlink/?linkid=28107)  
+-   [Документация по SQL Server для технических специалистов](https://go.microsoft.com/fwlink/?linkid=28107)  
   
 -   [Центр SQL Server Developer](https://go.microsoft.com/fwlink/?LinkId=42457)  
   
@@ -69,9 +69,9 @@ SQL Server 2016 и более поздних версий описаны [зде
 
 ## <a name="previous-versions-gm2014"></a>SQL Server 2005, 2008, 2012, 2016 +
 
-[!INCLUDE[???](../includes/paragraph-content/previous-versions-archive-documentation-sql-server.md)]
+[!INCLUDE[previous versions](../includes/paragraph-content/previous-versions-archive-documentation-sql-server.md)]
 
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также статью  
 
  [Справка диспетчера конфигурации SQL Server](../tools/configuration-manager/sql-server-configuration-manager-help.md)  
   
