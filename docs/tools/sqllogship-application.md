@@ -13,17 +13,17 @@ ms.assetid: 8ae70041-f3d9-46e4-8fa8-31088572a9f8
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 0e59ba2473ce58caebcb76521dcc191479abdb92
-ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/17/2019
 ms.locfileid: "68065452"
 ---
 # <a name="sqllogship-application"></a>Приложение sqllogship
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Приложение **sqllogship** выполняет операции резервного копирования, обычного копирования и восстановления, а также связанные с ними задачи очистки для конфигурации доставки журналов. Операция выполняется на определенном экземпляре [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] для определенной базы данных.  
   
- ![Значок ссылки на раздел](../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") Сведения о синтаксических обозначениях см. в [справочнике &#40;по программе командной строки ядро СУБД&#41;](../tools/command-prompt-utility-reference-database-engine.md).  
+ Соглашения о синтаксисе см. в ![Справочнике по программе командной строки (Database Engine)](../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел").  
   
 ## <a name="syntax"></a>Синтаксис  
   
