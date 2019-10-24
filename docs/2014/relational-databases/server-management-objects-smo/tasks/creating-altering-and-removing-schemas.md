@@ -12,18 +12,18 @@ ms.assetid: 3e3619de-c6a2-4280-b2be-4ec9924608fb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 384c1e0f14d3cfe5237913b29be1d9ae74aa2d9d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 073cdba829845c940c67d60a92b0346d4ed7541d
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62511324"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72782262"
 ---
 # <a name="creating-altering-and-removing-schemas"></a>Создание, изменение и удаление схем
   Объект <xref:Microsoft.SqlServer.Management.Smo.Schema> представляет контекст владения для объекта базы данных. Свойство <xref:Microsoft.SqlServer.Management.Smo.Database.Schemas%2A> объекта <xref:Microsoft.SqlServer.Management.Smo.Database> представляет коллекцию объектов <xref:Microsoft.SqlServer.Management.Smo.Schema>.  
   
 ## <a name="example"></a>Пример  
- Чтобы использовать какой-либо из представленных примеров кода, нужно выбрать среду, шаблон и язык программирования, с помощью которых будет создаваться приложение. Дополнительные сведения см. в разделе [Создание проекта SMO на Visual Basic в Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) или [Visual C создайте&#35; проекта SMO в Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Чтобы использовать какой-либо из представленных примеров кода, нужно выбрать среду, шаблон и язык программирования, с помощью которых будет создаваться приложение. Дополнительные сведения см. в статьях [Создание проекта Visual Basic SMO в Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) или [Создание проекта Visual&#35; C SMO в Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="creating-altering-and-removing-a-schema-in-visual-basic"></a>Создание, изменение и удаление схемы на языке Visual Basic  
  Данный пример кода демонстрирует, как создавать схему и назначать ее объекту базы данных. Затем программа предоставляет пользователю разрешение и создает новую таблицу в схеме.  
@@ -33,7 +33,7 @@ ms.locfileid: "62511324"
 ## <a name="creating-altering-and-removing-a-schema-in-visual-c"></a>Создание, изменение и удаление схемы на языке Visual C#  
  Данный пример кода демонстрирует, как создавать схему и назначать ее объекту базы данных. Затем программа предоставляет пользователю разрешение и создает новую таблицу в схеме.  
   
-```  
+```csharp
 {  
          //Connect to the local, default instance of SQL Server.   
          Server srv = new Server();   
@@ -73,27 +73,26 @@ ms.locfileid: "62511324"
 ## <a name="creating-altering-and-removing-a-schema-in-powershell"></a>Создание, изменение и удаление схемы в PowerShell  
  Данный пример кода демонстрирует, как создавать схему и назначать ее объекту базы данных. Затем программа предоставляет пользователю разрешение и создает новую таблицу в схеме.  
   
-```  
+```powershell
 # Set the path context to the local, default instance of SQL Server and get a reference to AdventureWorks2012  
 CD \sql\localhost\default\databases  
-$db = get-item Adventureworks2012  
+$db = Get-Item Adventureworks2012  
   
-# Define a schema object variable by supplying the parent database and name arguments in the constructor.   
-$sch  = New-Object -TypeName Microsoft.SqlServer.Management.SMO.Schema `  
--argumentlist $db, "MySchema1"  
+# Define a schema object variable by supplying the parent database and name arguments in the constructor.
+$sch  = New-Object -TypeName Microsoft.SqlServer.Management.SMO.Schema -argumentlist $db, "MySchema1"  
   
 # Set schema owner  
-$sch.Owner = "dbo"   
+$sch.Owner = "dbo"
   
-# Create the schema on the instance of SQL Server.   
+# Create the schema on the instance of SQL Server.
 $sch.Create()  
   
-# Define an ObjectPermissionSet that contains the Update and Select object permissions.   
+# Define an ObjectPermissionSet that contains the Update and Select object permissions.
 $obperset  = New-Object -TypeName Microsoft.SqlServer.Management.SMO.ObjectPermissionSet  
 $obperset.Add([Microsoft.SqlServer.Management.SMO.ObjectPermission]::Select)  
 $obperset.Add([Microsoft.SqlServer.Management.SMO.ObjectPermission]::Update)  
   
-# Grant the set of permissions on the schema to the guest account.   
+# Grant the set of permissions on the schema to the guest account.
 $sch.Grant($obperset, "guest")  
   
 #Create a SMO Table with one column and add it to the database  
@@ -101,15 +100,13 @@ $tb = New-Object -TypeName Microsoft.SqlServer.Management.SMO.Table -argumentlis
 $Type = [Microsoft.SqlServer.Management.SMO.DataType]::DateTime  
 $mycol =  New-Object -TypeName Microsoft.SqlServer.Management.SMO.Column -argumentlist $tb,"Date", $Type  
 $tb.Columns.Add($mycol)  
-$tb.Create()   
+$tb.Create()
   
-# Modify the owner of the schema and run the Alter method to make the change on the instance of SQL Server.   
+# Modify the owner of the schema and run the Alter method to make the change on the instance of SQL Server.
 $sch.Owner = "guest"  
 $sch.Alter()  
   
-# Run the Drop method for the table and the schema to remove them.   
+# Run the Drop method for the table and the schema to remove them.
 $tb.Drop()  
 $sch.Drop()  
-```  
-  
-  
+```

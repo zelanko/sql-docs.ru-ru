@@ -17,21 +17,21 @@ ms.assetid: 726ffcc2-9221-424a-8477-99e3f85f03bd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a5560379c07e3f6a5ff21ca2db19dbe0e8a420a1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 56655f7d75635668d266b44853fc29969fd741ed
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62917918"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72782671"
 ---
 # <a name="validate-a-dac-package"></a>Проверка пакета приложения уровня данных
   Перед развертыванием пакета приложения уровня данных рекомендуется просмотреть его содержимое и проверить действия по обновлению перед обновлением существующего пакета приложения уровня данных. Тем более это истина для развертывания пакетов, которые ранее в организации не развертывались.  
   
-1.  **Перед началом:**  [Предварительные требования](#Prerequisites)  
+1.  **Before you begin:**  [Prerequisites](#Prerequisites)  
   
-2.  **Обновление приложения уровня данных с использованием:**  [просмотра содержимого приложения уровня данных](#ViewDACContents), [просмотра изменений базы данных](#ViewDBChanges), [просмотра действий по обновлению](#ViewUpgradeActions), [сравнения приложений уровня данных](#CompareDACs)  
+2.  **Обновление приложения уровня данных с использованием следующих средств:**  [просмотр содержимого приложения уровня данных](#ViewDACContents), [просмотр изменений базы данных](#ViewDBChanges), [просмотр действий по обновлению](#ViewUpgradeActions), [Compare DACs](#CompareDACs)  
   
-##  <a name="Prerequisites"></a> Предварительные требования  
+##  <a name="Prerequisites"></a> предварительные требования  
  Рекомендуется не выполнять развертывание пакетов DAC, полученных из неизвестных или ненадежных источников. В этих пакетах может содержаться вредоносный код, вызывающий выполнение непредусмотренных инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)] или появление ошибок из-за изменения схемы. Прежде чем использовать приложение уровня данных, полученное из ненадежного источника, разверните его на изолированном тестовом экземпляре компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)], выполните для базы данных инструкцию [DBCC CHECKDB (Transact-SQL)](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql), а также изучите исходный код в базе данных, например хранимые процедуры и другой определенный пользователем код.  
   
 ##  <a name="ViewDACContents"></a> просмотр содержимого приложения уровня данных  
@@ -74,7 +74,7 @@ ms.locfileid: "62917918"
   
 4.  Дополнительные сведения об использовании мастера см. в разделе [Обновление приложения уровня данных](upgrade-a-data-tier-application.md).  
   
- **Просмотр изменений базы данных с помощью PowerShell**  
+### <a name="view-database-changes-by-using-powershell"></a>Просмотр изменений базы данных с помощью PowerShell
   
 1.  Создайте объект SMO Server и задайте его равным экземпляру, содержащему приложение уровня данных, которое требуется просмотреть.  
   
@@ -84,15 +84,14 @@ ms.locfileid: "62917918"
   
 4.  Используйте метод `GetDatabaseChanges()` для вызова объекта `ChangeResults` и направьте объект по каналу в текстовый файл, чтобы сформировать простой отчет о новых, удаленных и измененных объектах.  
   
-### <a name="view-database-changes-example-powershell"></a>Просмотр примера изменений базы данных (PowerShell)  
- **Просмотр примера изменений базы данных (PowerShell)**  
+### <a name="view-database-changes-example-powershell"></a>Просмотр примера изменений базы данных (PowerShell)
   
  В следующем примере сообщается о любых изменениях в базе данных, которые были выполнены в развернутом приложении уровня данных с именем MyApplicaiton.  
   
-```  
+```powershell
 ## Set a SMO Server object to the default instance on the local computer.  
 CD SQLSERVER:\SQL\localhost\DEFAULT  
-$srv = get-item .  
+$srv = Get-Item .  
   
 ## Open a Common.ServerConnection to the same instance.  
 $serverconnection = New-Object Microsoft.SqlServer.Management.Common.ServerConnection($srv.ConnectionContext.SqlConnectionObject)  
@@ -133,15 +132,14 @@ $dacChanges = $dacstore.GetDatabaseChanges($dacName) | Out-File -Filepath C:\DAC
   
 6.  Закройте файловый поток, используемый для чтения файла пакета приложения уровня данных.  
   
-### <a name="view-upgrade-actions-example-powershell"></a>Просмотр примера действий по обновлению (PowerShell)  
- **Просмотр примера действий по обновлению (PowerShell)**  
+### <a name="view-upgrade-actions-example-powershell"></a>Просмотр примера действий по обновлению (PowerShell)
   
  Следующий пример предоставляет сведения об инструкциях Transact-SQL, которые будут выполняться для обновления приложения уровня данных с именем MyApplicaiton с переходом на схему, указанную в файле MyApplicationVNext.dacpac.  
   
-```  
+```powershell
 ## Set a SMO Server object to the default instance on the local computer.  
 CD SQLSERVER:\SQL\localhost\DEFAULT  
-$srv = get-item .  
+$srv = Get-Item .  
   
 ## Open a Common.ServerConnection to the same instance.  
 $serverconnection = New-Object Microsoft.SqlServer.Management.Common.ServerConnection($srv.ConnectionContext.SqlConnectionObject)  
@@ -170,9 +168,7 @@ $fileStream.Close()
   
  Можно также распаковать приложения уровня данных в отдельные папки. После этого проанализировать различия можно будет с помощью средства поиска отличий, например программы WinDiff.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также статью  
  [Приложения уровня данных](data-tier-applications.md)   
  [Развертывание приложения уровня данных](deploy-a-data-tier-application.md)   
  [Обновление приложения уровня данных](upgrade-a-data-tier-application.md)  
-  
-  
