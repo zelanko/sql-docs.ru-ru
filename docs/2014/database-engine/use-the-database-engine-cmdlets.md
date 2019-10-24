@@ -22,12 +22,12 @@ ms.assetid: 720aa982-09ae-41a3-b603-a91004cfbe3e
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 190b8f0ec6ac647ee45a07181af1bd7094199dcb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cd5575c94c9a74623efaa80c9470c54982a41d0d
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66088674"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72783111"
 ---
 # <a name="use-the-database-engine-cmdlets"></a>Использование командлетов компонента Database Engine
   Командлеты Windows PowerShell представляют собой команды из одной функции, в именах которых, как правило, используется соглашение об именовании "глагол-существительное", например **Get-Help** или **Set-MachineName**. Поставщик [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] для Windows PowerShell предоставляет командлеты, относящиеся к [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
@@ -43,7 +43,7 @@ ms.locfileid: "66088674"
 ### <a name="partial-parameter-names"></a>Частичные имена параметров  
  Полное имя параметра командлета указывать не обязательно. Необходимо только указать достаточную часть имени, чтобы уникально отделить его от других параметров, поддерживаемых данным командлетом. В следующих примерах показано три способа задания параметра **Invoke-Sqlcmd -QueryTimeout** :  
   
-```  
+```powershell
 Invoke-Sqlcmd -Query "SELECT @@VERSION;" -QueryTimeout 3  
 Invoke-Sqlcmd -Query "SELECT @@VERSION;" -QueryTime 3  
 Invoke-Sqlcmd -Query "SELECT @@VERSION;" -QueryT 3  
@@ -53,14 +53,14 @@ Invoke-Sqlcmd -Query "SELECT @@VERSION;" -QueryT 3
   
 |Описание задачи|Раздел|  
 |----------------------|-----------|  
-|Описывает использование командлета **Invoke-Sqlcmd** для выполнения скриптов **sqlcmd** или команд, содержащих инструкции [!INCLUDE[tsql](../includes/tsql-md.md)] или XQuery. Он может принимать входные данные **sqlcmd** в виде символьного строкового входного параметра или имени открываемого файла скрипта.|[Invoke-Sqlcmd, командлет](../../2014/database-engine/invoke-sqlcmd-cmdlet.md)|  
-|Описывает использование командлета **Invoke-PolicyEvaluation** для сообщения о том, соответствует ли целевой набор объектов [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] условиям, определенным в схемах управления на основе политик. Кроме того, этот командлет можно использовать для повторного задания любых настраиваемых параметров в целевых объектах, которые не соответствуют условиям политики.|[Invoke-PolicyEvaluation, командлет](../../2014/database-engine/invoke-policyevaluation-cmdlet.md)|  
+|Описывает использование командлета **Invoke-Sqlcmd** для выполнения скриптов **sqlcmd** или команд, содержащих инструкции [!INCLUDE[tsql](../includes/tsql-md.md)] или XQuery. Он может принимать входные данные **sqlcmd** в виде символьного строкового входного параметра или имени открываемого файла скрипта.|[Командлет Invoke-Sqlcmd](../../2014/database-engine/invoke-sqlcmd-cmdlet.md)|  
+|Описывает использование командлета **Invoke-PolicyEvaluation** для сообщения о том, соответствует ли целевой набор объектов [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] условиям, определенным в схемах управления на основе политик. Кроме того, этот командлет можно использовать для повторного задания любых настраиваемых параметров в целевых объектах, которые не соответствуют условиям политики.|[Командлет Invoke-PolicyEvaluation](../../2014/database-engine/invoke-policyevaluation-cmdlet.md)|  
 |Описывает использование `Encode-Sqlname` и `Decode-Sqlname` для обработки идентификаторов SQL Server, содержащих символы, не поддерживаемые в путях Windows PowerShell.|[Шифрование и расшифровка идентификаторов SQL Server](../powershell/encode-and-decode-sql-server-identifiers.md)|  
 |Описывает использование `Convert-UrnToPath` для преобразования универсального имени ресурса (URN) объекта управляемости SQL Server в эквивалентный путь поставщика SQL Server.|[Преобразование URNs в пути поставщика SQL Server](../../2014/database-engine/convert-urns-to-sql-server-provider-paths.md)|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также статью  
  [SQL Server PowerShell, поставщик](../powershell/sql-server-powershell-provider.md)   
  [SQL Server PowerShell](../powershell/sql-server-powershell.md)   
- [Обзор командлетов PowerShell для групп доступности AlwaysOn &#40;SQL Server&#41;](availability-groups/windows/overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md)  
+ [Общие сведения о командлетах PowerShell &#40;для группы доступности AlwaysOn SQL Server&#41;](availability-groups/windows/overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md)  
   
   

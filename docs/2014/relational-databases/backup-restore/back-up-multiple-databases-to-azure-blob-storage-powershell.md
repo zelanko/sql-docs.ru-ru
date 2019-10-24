@@ -10,18 +10,18 @@ ms.assetid: f7008339-e69d-4e20-9265-d649da670460
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f8d1917798137ed8aa96ddf106392ffd311ed9b1
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.openlocfilehash: 701928a722e14cf3eb5c1e678a1dd764597f46ec
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70176011"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72783088"
 ---
-# <a name="use-powershell-to-backup-multiple-databases-to-azure-blob-storage-service"></a>Резервное копирование нескольких баз данных в службу хранилища BLOB-объектов Azure с помощью PowerShell
-  В этом разделе приводятся примеры сценариев, которые можно использовать для автоматизации резервного копирования в службу хранилища BLOB-объектов Azure с помощью командлетов PowerShell.  
+# <a name="use-powershell-to-backup-multiple-databases-to-azure-blob-storage-service"></a>Использование PowerShell для резервного копирования нескольких баз данных в службу хранилища BLOB-объектов Azure
+  В этом разделе приведены примеры скриптов, которые можно использовать для автоматизации резервного копирования в службу хранилища BLOB-объектов Azure с помощью командлетов PowerShell.  
   
 ## <a name="overview-of-powershell-cmdlets-for-backup-and-restore"></a>Обзор командлетов PowerShell для резервного копирования и восстановления  
- `Backup-SqlDatabase` и `Restore-SqlDatabase` — два основных командлета для операций резервного копирования и восстановления. Кроме того, существуют другие командлеты, которые могут потребоваться для автоматизации резервного копирования в хранилище BLOB-объектов Azure, например набор командлетов **SqlCredential** . ниже приведен список командлетов PowerShell, доступных в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , которые используются в операциях резервного копирования и восстановления.  
+ `Backup-SqlDatabase` и `Restore-SqlDatabase` — два основных командлета для операций резервного копирования и восстановления. Кроме того, есть и другие командлеты, которые могут потребоваться для автоматизации резервного копирования в хранилище BLOB-объектов Azure, такие как набор командлетов **SqlCredential**. Ниже приведен список командлетов PowerShell, доступных в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] и используемых в операциях резервного копирования и восстановления.  
   
  Backup-SqlDatabase  
  Этот командлет используется для создания резервной копии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -42,108 +42,97 @@ ms.locfileid: "70176011"
  Этот командлет используется для изменения или задания свойств объекта учетных данных SQL.  
   
 > [!TIP]  
->  Командлеты учетных данных используются при резервном копировании и восстановлении в сценариях хранилища BLOB-объектов Azure.  
+>  Командлеты учетных данных используются в операциях резервного копирования и восстановления в сценариях работы с хранилищем BLOB-объектов Azure.  
   
 ### <a name="powershell-for-multi-database-multi-instance-backup-operations"></a>PowerShell для операций резервного копирования для нескольких баз данных и нескольких экземпляров  
  Следующие разделы содержат скрипты для различных операций, таких как создание учетных данных SQL в нескольких экземплярах SQL Server, резервное копирование всех пользовательских баз данных в экземпляре SQL Server и т. д. С помощью этих скриптов можно автоматизировать или запланировать операции резервного копирования в соответствии с требованиями среды. Скрипты, описанные здесь, являются примерами, и их можно изменять или расширять для конкретной среды.  
   
  Ниже приведены замечания для примеров скриптов.  
   
-1.  **Навигация путей SQL Server PowerShell.** В Windows PowerShell предусмотрены командлеты для навигации по структуре пути, которая представляет иерархию объектов, поддерживаемых поставщиком PowerShell. После перехода к нужному узлу можно использовать другие командлеты для выполнения основных операций с текущим объектом.  
+1.  **Навигация по путям SQL Server PowerShell.** В Windows PowerShell предусмотрены командлеты для навигации по структуре пути, которая представляет иерархию объектов, поддерживаемых поставщиком PowerShell. После перехода к нужному узлу можно использовать другие командлеты для выполнения основных операций с текущим объектом.  
   
-2.  `Get-ChildItem`Командлет Сведения, возвращаемые, `Get-ChildItem` зависят от расположения в SQL Server PowerShell пути. Например, если размещение находится на уровне компьютера, командлет возвращает все экземпляры ядра СУБД SQL Server, установленные на компьютере. Другой пример: если расположение находится на уровне объектов, таких как базы данных, командлет возвращает список объектов базы данных.  По умолчанию командлет `Get-ChildItem` не возвращает системные объекты.  Системные объекты можно просмотреть, задав параметр -Force.  
+2.  `Get-ChildItem`ный командлет. сведения, возвращаемые `Get-ChildItem`, зависят от расположения в SQL Server PowerShell пути. Например, если размещение находится на уровне компьютера, командлет возвращает все экземпляры ядра СУБД SQL Server, установленные на компьютере. Другой пример: если расположение находится на уровне объектов, таких как базы данных, командлет возвращает список объектов базы данных.  По умолчанию командлет `Get-ChildItem` не возвращает системные объекты.  Системные объекты можно просмотреть, задав параметр -Force.  
   
      Дополнительные сведения см. в статье [Navigate SQL Server PowerShell Paths](../../powershell/navigate-sql-server-powershell-paths.md).  
   
-3.  Хотя каждый пример кода можно попытаться независимо, изменив значения переменных, создайте учетную запись хранения Azure и учетные данные SQL, необходимые для всех операций резервного копирования и восстановления в службе хранилища BLOB-объектов Azure.  
+3.  Хотя каждый пример кода можно использовать отдельно, изменив значения переменных, создание учетной записи хранения Azure и учетных данных SQL является предварительным условием и требуется для всех операций резервного копирования и восстановления в службе хранилища BLOB-объектов Azure.  
   
 ### <a name="create-a-sql-credential-on-all-the-instances-of-sql-server"></a>Создание учетных данных SQL для всех экземпляров SQL Server  
  Имеется два образца скрипта, и оба создают учетные данные SQL "mybackupToURL" на всех экземплярах SQL Server на компьютере. В первом простом примере создаются учетные данные и не перехватываются исключения.  Например, если в одном из экземпляров на компьютере уже существуют учетные данные с тем же именем, работа скрипта завершится сбоем. Второй пример перехватывает ошибки, что позволяет продолжить выполнение скрипта.  
   
-```  
-  
+```powershell
 import-module sqlps  
   
 # create variables  
 $storageAccount = "mystorageaccount"  
 $storageKey = "<storageaccesskeyvalue>"  
-$secureString = convertto-securestring $storageKey  -asplaintext -force  
+$secureString = ConvertTo-SecureString $storageKey  -asplaintext -force  
 $credentialName = "mybackuptoURL"  
   
 #cd to computer level  
 cd sqlserver:\sql\COMPUTERNAME  
 # get the list of instances  
-$instances = Get-childitem  
+$instances = Get-ChildItem  
 #pipe the instances to new-sqlcredentail cmdlet to create SQL credential  
-$instances | new-sqlcredential -Name $credentialName  -Identity $storageAccount -Secret $secureString  
+$instances | New-SqlCredential -Name $credentialName -Identity $storageAccount -Secret $secureString  
 ```  
   
-```  
-  
+```powershell
 import-module sqlps  
   
-# set the parameter values  
-  
+# set the parameter values
 $storageAccount = "mystorageaccount"  
 $storageKey = "<storageaccesskeyvalue>"  
-$secureString = convertto-securestring $storageKey  -asplaintext -force  
+$secureString = ConvertTo-SecureString $storageKey  -asplaintext -force  
 $credentialName = "mybackuptoURL"  
   
 #cd to computer level  
 cd sqlserver:\sql\COMPUTERNAME  
 # get the list of instances  
-$instances = Get-childitem  
+$instances = Get-ChildItem  
 #loop through instances and create a SQL credential, output any errors  
-foreach ($instance in $instances)  
+ForEach ($instance In $instances)  
 {  
     Try  
 {  
-     new-sqlcredential -Name $credentialName -path "SQLServer:\SQL\$($instance.name)" -Identity $storageAccount -Secret $secureString -ea Stop   
+     New-SqlCredential -Name $credentialName -path "SQLServer:\SQL\$($instance.name)" -Identity $storageAccount -Secret $secureString -ea Stop
 }  
 Catch [Exception]  
-    {  
-  
-            write-host "instance - $($instance.name): "$_.Exception.Message  
-  
-    }  
-  
- }  
-  
+    {
+            Write-Host "instance - $($instance.name): "$_.Exception.Message
+    }
+ }
 ```  
   
 ### <a name="remove-a-sql-credential-from-all-the-instances-of-sql-server"></a>Удаление учетных данных SQL для всех экземпляров SQL Server  
  Этот скрипт может использоваться для удаления конкретных учетных данных из всех экземпляров SQL Server, установленных на компьютере. Если объект учетных данных не существует в определенном экземпляре, выводится сообщение об ошибке, а скрипт продолжает выполняться до тех пор, пока не будут проверены все экземпляры.  
   
-```  
-  
+```powershell
 import-module sqlps  
   
 cd SQLServer:\SQL\COMPUTERNAME  
 $credentialName = "mybackuptoURL"  
   
-$instances = Get-childitem  
+$instances = Get-ChildItem  
   
-foreach ($instance in $instances)  
-   {   
-    try  
+ForEach ($instance In $instances)  
+   {
+    Try  
         {  
             $path = "SQLServer:\SQL\$($instance.name)\credentials\$credentialName"   
-            Remove-sqlCredential -path $path -ea stop   
+            Remove-SqlCredential -Path $path -ea stop   
          }  
-         catch [Exception]  
+         Catch [Exception]  
          {  
-            write-host $_.Exception.Message  
-  
-        }  
-  
+            Write-Host $_.Exception.Message
+        }
     }  
 ```  
   
 ### <a name="full-database-backup-for-all-databases-including-system-databases"></a>Полное резервное копирование для всех баз данных (ВКЛЮЧАЯ СИСТЕМНЫЕ)  
  Следующий скрипт создает резервные копии всех баз данных на компьютере. Это касается и пользовательских баз данных, и системной базы данных **msdb** . Скрипт фильтрует системные базы данных **tempdb** и **model** .  
   
-```  
-  
+```powershell
 import-module sqlps  
 # set the parameter values  
 $storageAccount = "mystorageaccount"  
@@ -151,51 +140,45 @@ $blobContainer = "privatecontainertest"
 $backupUrlContainer = "https://$storageAccount.blob.core.windows.net/$blobContainer/"  
 $credentialName = "mybackuptoURL"  
   
-# cd to computer level  
-  
+# cd to computer level
 cd SQLServer:\SQL\COMPUTERNAME  
-$instances = Get-childitem   
+$instances = Get-ChildItem
 # loop through each instances and backup up all the  databases -filter out tempdb and model databases  
   
- foreach ($instance in $instances)  
+ ForEach ($instance In $instances)  
  {  
    $path = "sqlserver:\sql\$($instance.name)\databases"  
-   $alldatabases = get-childitem -Force -path $path |Where-object {$_.name -ne "tempdb" -and $_.name -ne "model"}   
-  
+   $alldatabases = Get-ChildItem -Force -path $path | Where-Object {$_.name -ne "tempdb" -and $_.name -ne "model"}   
    $alldatabases | Backup-SqlDatabase -BackupContainer $backupUrlContainer -SqlCredential $credentialName -Compression On -script   
- }  
-  
+ }
 ```  
   
 ### <a name="full-database-backup-for-all-user-databases"></a>Полное резервное копирование для ВСЕХ пользовательских баз данных  
  Следующий скрипт можно использовать для резервного копирования всех пользовательских баз данных во всех экземплярах SQL Server на компьютере.  
   
-```  
-  
-import-module sqlps   
+```powershell
+import-module sqlps
   
 $storageAccount = "mystorageaccount"  
 $blobContainer = "privatecontainertest"  
 $backupUrlContainer = "https://$storageAccount.blob.core.windows.net/$blobContainer/"  
 $credentialName = "mybackuptoURL"  
   
-# cd to computer level  
-  
+# cd to computer level
 cd SQLServer:\SQL\COMPUTERNAME  
-$instances = Get-childitem   
+$instances = Get-ChildItem
 # loop through each instances and backup up all the user databases  
- foreach ($instance in $instances)  
+ ForEach ($instance In $instances)  
  {  
     $databases = dir "sqlserver:\sql\$($instance.name)\databases"  
-   $databases | Backup-SqlDatabase -BackupContainer $backupUrlContainer -SqlCredential $credentialName -Compression On   
+    $databases | Backup-SqlDatabase -BackupContainer $backupUrlContainer -SqlCredential $credentialName -Compression On
  }  
 ```  
   
 ### <a name="full-database-backup-for-master-and-msdb-system-databases-on-all-the-instances-of-sql-server"></a>Полное резервное копирование баз данных MASTER и MSDB (СИСТЕМНЫХ БАЗ ДАННЫХ) для всех экземпляров SQL Server  
  Следующий скрипт можно использовать для резервного копирования баз данных **master** и **msdb** во всех экземплярах SQL Server, установленных на компьютере.  
   
-```  
-  
+```powershell
 import-module sqlps  
   
 $storageAccount = "mystorageaccount"  
@@ -206,22 +189,20 @@ $sysDbs = "master", "msdb"
   
 #cd to computer level  
 cd sqlserver:\sql\COMPUTERNAME  
-$instances = Get-childitem   
-foreach ($instance in $instances)  
+$instances = Get-ChildItem
+ForEach ($instance In $instances)  
  {  
-      foreach ($s in $sysdbs)  
+      ForEach ($s In $sysdbs)  
      {  
-Backup-SqlDatabase -Database $s -path "sqlserver:\sql\$($instance.name)" -BackupContainer  $backupUrlContainer -SqlCredential $credentialName -Compression On   
-}    
- }  
-  
+        Backup-SqlDatabase -Database $s -path "sqlserver:\sql\$($instance.name)" -BackupContainer  $backupUrlContainer -SqlCredential $credentialName -Compression On   
+}
+ } 
 ```  
   
 ### <a name="full-database-backup-for-all-user-databases-on-an-instance-of-sql-server"></a>Полное резервное копирование всех пользовательских баз данных для одного экземпляра SQL Server  
  Следующий скрипт используется для резервного копирования только пользовательских баз данных, доступных на именованном экземпляре SQL Server. Тот же скрипт можно использовать для экземпляра по умолчанию на компьютере, изменив значение параметра $srvPath.  
   
-```  
-  
+```powershell
 import-module sqlps  
   
 $storageAccount = "mystorageaccount"  
@@ -243,8 +224,7 @@ $databases | Backup-SqlDatabase -BackupContainer $backupUrlContainer -SqlCredent
 ### <a name="full-database-backup-for-only-system-databases-master-and-msdb-on-an-instance-of-sql-server"></a>Полное резервное копирование только системных баз данных (MASTER И MSDB) для одного экземпляра SQL Server  
  Полный скрипт можно использовать для резервного копирования баз данных **master** и **msdb** на именованном экземпляре SQL Server. Тот же скрипт можно использовать для экземпляра по умолчанию на компьютере, изменив значение параметра $srvPath.  
   
-```  
-  
+```powershell
 import-module sqlps  
   
 $storageAccount = "mystorageaccount"  
@@ -257,15 +237,11 @@ $credentialName = "mybackupToUrl"
 cd $srvPath  
   
 $sysDbs = "master", "msdb"  
-foreach ($s in $sysDbs)   
+ForEach ($s In $sysDbs)
 {  
 Backup-SqlDatabase -Database $s -BackupContainer $backupUrlContainer -SqlCredential $credentialName -Compression On  
-}  
-  
+}
 ```  
   
-## <a name="see-also"></a>См. также  
- [SQL Server резервного копирования и восстановления с помощью службы хранилища BLOB-объектов Azure](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)   
- [Архивация в SQL Server по URL-адресу — рекомендации и устранение неполадок](sql-server-backup-to-url-best-practices-and-troubleshooting.md)  
-  
-  
+## <a name="see-also"></a>См. также статью
+ [SQL Server резервного копирования и восстановления с помощью службы хранилища BLOB-объектов Azure](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) [SQL Server резервного копирования в URL рекомендации и устранение неполадок](sql-server-backup-to-url-best-practices-and-troubleshooting.md)  

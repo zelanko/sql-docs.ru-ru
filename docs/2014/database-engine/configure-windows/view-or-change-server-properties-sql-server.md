@@ -15,19 +15,19 @@ ms.assetid: 55f3ac04-5626-4ad2-96bd-a1f1b079659d
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 2597a2e8f1f97635ed52bf639d57f8de3c26fcd4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5c5ff985b62e39287b696e96f10142daf90ae0a3
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62756880"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72783129"
 ---
 # <a name="view-or-change-server-properties-sql-server"></a>Просмотр или изменение свойств сервера (SQL Server)
   В этом разделе описывается просмотр и изменение свойств экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]или диспетчера конфигурации SQL Server.  
   
  **В этом разделе**  
   
--   **Перед началом работы**  
+-   **Перед началом:**  
   
      [Ограничения](#Restrictions)  
   
@@ -35,17 +35,17 @@ ms.locfileid: "62756880"
   
 -   **Для просмотра или изменения свойств сервера используется:**  
   
-     [Среда SQL Server Management Studio](#SSMSProcedure)  
+     [Среда Среда SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
      [Диспетчер конфигурации SQL Server](#PowerShellProcedure)  
   
--   **Дальнейшие действия.**  [После изменения свойств сервера](#FollowUp)  
+-   **Дальнейшие действия**  [После изменения свойств сервера](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Restrictions"></a> Ограничения  
+###  <a name="Restrictions"></a> ограничения  
   
 -   Используя sp_configure, необходимо выполнить инструкцию RECONFIGURE или инструкцию RECONFIGURE WITH OVERRIDE после установки параметра конфигурации. Инструкция RECONFIGURE WITH OVERRIDE обычно употребляется для параметров конфигурации, которые должны использоваться с особой осторожностью. Однако инструкция RECONFIGURE WITH OVERRIDE пригодна для всех параметров конфигурации, и ее можно использовать вместо инструкции RECONFIGURE.  
   
@@ -56,10 +56,10 @@ ms.locfileid: "62756880"
   
 ###  <a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Разрешения  
  Дополнительные сведения см. в статье [Роли уровня сервера](../../relational-databases/security/authentication-access/server-level-roles.md).  
   
- Разрешения на выполнение `sp_configure` без параметров или с только первый параметр предоставляются всем пользователям по умолчанию. Для выполнения `sp_configure` с обоими параметрами для изменения параметра конфигурации или запуска инструкции RECONFIGURE пользователя должно быть предоставлено разрешение ALTER SETTINGS на уровне сервера. Разрешение ALTER SETTINGS неявным образом предоставлено предопределенным ролям сервера **sysadmin** и **serveradmin** .  
+ Разрешения EXECUTE на `sp_configure` без параметров или только по первому параметру по умолчанию предоставляются всем пользователям. Чтобы выполнить `sp_configure` с обоими параметрами для изменения параметра конфигурации или выполнения инструкции RECONFIGURE, пользователю необходимо предоставить разрешение ALTER SETTINGS на уровне сервера. Разрешение ALTER SETTINGS неявным образом предоставлено предопределенным ролям сервера **sysadmin** и **serveradmin** .  
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
@@ -75,7 +75,7 @@ ms.locfileid: "62756880"
   
 1.  Установите соединение с компонентом [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
-2.  На панели «Стандартная» нажмите **Создать запрос**.  
+2.  На панели "Стандартная" нажмите **Создать запрос**.  
   
 3.  Скопируйте следующий пример в окно запроса и нажмите кнопку **Выполнить**. В этом примере используется встроенная функция [SERVERPROPERTY](/sql/t-sql/functions/serverproperty-transact-sql) в инструкции `SELECT` для возврата сведений о текущем сервере. Этот сценарий полезен, когда на сервере Windows установлено несколько экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и клиенту приходится открывать другое соединение с тем же экземпляром, который используется текущим соединением.  
   
@@ -88,7 +88,7 @@ ms.locfileid: "62756880"
   
 1.  Установите соединение с компонентом [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
-2.  На панели «Стандартная» нажмите **Создать запрос**.  
+2.  На панели "Стандартная" нажмите **Создать запрос**.  
   
 3.  Скопируйте следующий пример в окно запроса и нажмите кнопку **Выполнить**. В этом примере запрашивается представление каталога [sys.servers](/sql/relational-databases/system-catalog-views/sys-servers-transact-sql) для получения имени (`name`) и идентификатора (`server_id`) текущего сервера, а также имя поставщика OLE DB (`provider`) для подключения к связанному серверу.  
   
@@ -97,32 +97,30 @@ ms.locfileid: "62756880"
     GO  
     SELECT name, server_id, provider  
     FROM sys.servers ;   
-    GO  
-  
+    GO
     ```  
   
 #### <a name="to-view-server-properties-by-using-the-sysconfigurations-catalog-view"></a>Просмотр свойств сервера с помощью представления каталога sys.configurations  
   
 1.  Установите соединение с компонентом [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
-2.  На панели «Стандартная» нажмите **Создать запрос**.  
+2.  На панели "Стандартная" нажмите **Создать запрос**.  
   
 3.  Скопируйте следующий пример в окно запроса и нажмите кнопку **Выполнить**. В этом примере запрашивается представление каталога [sys.configurations](/sql/relational-databases/system-catalog-views/sys-configurations-transact-sql) , чтобы вернуть сведения о каждом параметре конфигурации для текущего сервера. В примере возвращается имя (`name`) и описание (`description`) параметра, а также указывается, является ли параметр дополнительным (`is_advanced`).  
   
-    ```wmimof  
-    USE AdventureWorks2012;   
+    ```sql
+    USE AdventureWorks2012;
     GO  
     SELECT name, description, is_advanced  
-    FROM sys.configurations ;   
-    GO  
-  
+    FROM sys.configurations ;
+    GO
     ```  
   
-#### <a name="to-change-a-server-property-by-using-spconfigure"></a>Изменение свойства сервера с помощью процедуры sp_configure  
+#### <a name="to-change-a-server-property-by-using-sp_configure"></a>Изменение свойства сервера с помощью процедуры sp_configure  
   
 1.  Установите соединение с компонентом [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
-2.  На панели «Стандартная» нажмите **Создать запрос**.  
+2.  На панели "Стандартная" нажмите **Создать запрос**.  
   
 3.  Скопируйте следующий пример в окно запроса и нажмите кнопку **Выполнить**. В этом примере показано, как изменить свойство сервера с помощью процедуры [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) . В примере значение параметра `fill factor` меняется на `100`. Чтобы изменение вступило в силу, необходимо перезапустить сервер.  
   
@@ -146,7 +144,7 @@ GO
   
 #### <a name="to-view-or-change-server-properties"></a>Просмотр или изменение свойств сервера  
   
-1.  В меню **Пуск** последовательно укажите пункты **Все программы**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], **Средства настройки**и выберите пункт **Диспетчер конфигурации SQL Server**.  
+1.  В меню **Пуск** последовательно выберите пункты **Все программы**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], **Средства настройки**и щелкните **Диспетчер конфигурации SQL Server**.  
   
 2.  В **диспетчере конфигурации SQL Server**выберите **Службы SQL Server**.  
   
@@ -157,7 +155,7 @@ GO
 ##  <a name="FollowUp"></a> Дальнейшие действия. После изменения свойств сервера  
  Для некоторых свойств необходимо перезапустить сервер, чтобы изменения вступили в силу.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также статью  
  [Параметры конфигурации сервера (SQL Server)](server-configuration-options-sql-server.md)   
  [Инструкции SET (Transact-SQL)](/sql/t-sql/statements/set-statements-transact-sql)   
  [SERVERPROPERTY (Transact-SQL)](/sql/t-sql/functions/serverproperty-transact-sql)   
@@ -168,5 +166,3 @@ GO
  [Диспетчер конфигурации SQL Server](../../relational-databases/sql-server-configuration-manager.md)   
  [Функции настройки (Transact-SQL)](/sql/t-sql/functions/configuration-functions-transact-sql)   
  [Динамические административные представления и функции, связанные с сервером (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/server-related-dynamic-management-views-and-functions-transact-sql)  
-  
-  

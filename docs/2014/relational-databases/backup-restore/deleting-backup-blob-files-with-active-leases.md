@@ -10,12 +10,12 @@ ms.assetid: 13a8f879-274f-4934-a722-b4677fc9a782
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9e4550f64d815c40b4069c2e62e9eee7ffd0cf1d
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 663bab775aff9a04a4a9d93f2bcbd0e193b18f37
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70154760"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72783055"
 ---
 # <a name="deleting-backup-blob-files-with-active-leases"></a>Удаление резервных файлов больших двоичных объектов с активной арендой
   При резервном копировании или восстановлении из хранилища Azure SQL Server получает бесконечную аренду для блокировки монопольного доступа к большому двоичному объекту. После успешного завершения процесса резервного копирования или восстановления аренда аннулируется. Если резервное копирование или восстановление оканчивается неудачей, то в процессе резервного копирования предпринимается попытка очистить все недействительные большие двоичные объекты. Но если резервное копирование оканчивается неудачей из-за длительного или неустранимого сбоя связи с сетью, то, возможно, в процессе резервного копирования нельзя будет получить доступ к большому двоичному объекту и он останется потерянным. Это означает, что большой двоичный объект не может быть записан или удален до тех пор, пока аренда не освободится. В этом разделе показано, как освободить и удалить зарезервированный большой двоичный объект.  
@@ -29,29 +29,28 @@ ms.locfileid: "70154760"
 ## <a name="managing-orphaned-blobs"></a>Управление потерянными большими двоичными объектами  
  Следующие действия описывают процесс очистки после неудачной операции резервного копирования или восстановления. Все действия могут быть выполнены с помощью скриптов PowerShell. Пример кода представлен в следующем разделе:  
   
-1.  **Определение больших двоичных объектов с арендой:** Если процессы резервного копирования выполняются скриптом или процессом, можно фиксировать ошибки внутри такого скрипта или процесса и использовать эти данные для очистки больших двоичных объектов.   Можно также использовать свойства LeaseStats и LeastState, чтобы выделить большие двоичные объекты с арендой. После определения больших двоичных объектов рекомендуется просмотреть список, проверить работоспособность файла резервной копии перед удалением большого двоичного объекта.  
+1.  **Определение больших двоичных объектов с арендой.** Если резервное копирование выполняется с помощью скрипта или процесса, вы можете фиксировать ошибки внутри такого скрипта или процесса и использовать эти данные для очистки больших двоичных объектов.   Можно также использовать свойства LeaseStats и LeastState, чтобы выделить большие двоичные объекты с арендой. После определения больших двоичных объектов рекомендуется просмотреть список, проверить работоспособность файла резервной копии перед удалением большого двоичного объекта.  
   
-2.  **Прерывание аренды:** Авторизованный запрос может прервать аренду без предоставления идентификатора аренды. Дополнительные сведения см. в [этом разделе](https://go.microsoft.com/fwlink/?LinkID=275664) .  
+2.  **Прерывание аренды.** Авторизованный запрос может прерывать аренду без предоставления идентификатора аренды. Дополнительные сведения см. в [этом разделе](https://go.microsoft.com/fwlink/?LinkID=275664) .  
   
     > [!TIP]  
     >  SQL Server выдает идентификатор аренды для получения монопольного доступа во время операции восстановления. Идентификатор аренды при операции восстановления — BAC2BAC2BAC2BAC2BAC2BAC2BAC2BAC2.  
   
-3.  **Удаление большого двоичного объекта:** Чтобы удалить большой двоичный объект с активной арендой, сначала необходимо прервать аренду.  
+3.  **Удаление большого двоичного объекта.** Чтобы удалить большой двоичный объект с активной арендой, сначала необходимо прервать аренду.  
   
 ###  <a name="Code_Example"></a> Пример скрипта PowerShell  
- Важно! Если вы используете PowerShell 2,0, возможно, возникли проблемы при загрузке сборки Microsoft WindowsAzure. Storage. dll. **\* \* \* \*** Рекомендуется обновить Powershell до версии 3.0, чтобы решить проблему. Можно также использовать следующее решение для PowerShell 2.0:  
+ **\* \* важное \* \*** Если вы используете PowerShell 2,0, возможно, возникли проблемы при загрузке сборки Microsoft WindowsAzure. Storage. dll. Рекомендуется обновить Powershell до версии 3.0, чтобы решить проблему. Можно также использовать следующее решение для PowerShell 2.0:  
   
 -   Создайте или измените файл powershell.exe.config для загрузки сборки .NET Framework 2.0 и .NET Framework 4.0 в среде выполнения с помощью следующего:  
   
-    ```  
-    <?xml version="1.0"?>   
-    <configuration>   
-        <startup useLegacyV2RuntimeActivationPolicy="true">   
-            <supportedRuntime version="v4.0.30319"/>   
-            <supportedRuntime version="v2.0.50727"/>   
-        </startup>   
-    </configuration>  
-  
+    ```xml
+    <?xml version="1.0"?>
+    <configuration>
+        <startup useLegacyV2RuntimeActivationPolicy="true">
+            <supportedRuntime version="v4.0.30319"/>
+            <supportedRuntime version="v2.0.50727"/>
+        </startup>
+    </configuration>
     ```  
   
  В следующем примере показано определение больших двоичных объектов с активной арендой и ее последующее прерывание. В этом примере также показано, как отфильтровывать идентификаторы аренды.  
@@ -80,11 +79,11 @@ ms.locfileid: "70154760"
   
      **Прерывание аренды**  
   
-     **Аренда \<URL of the Blob> — это аренда восстановления. Это сообщение появится только при наличии большого двоичного объекта с активной арендой восстановления.**  
+     **Аренда \<URL-адрес большого двоичного объекта> — это аренда восстановления: такое сообщение появится только в том случае, если существует большой двоичный объект с активной арендой восстановления.**  
   
      **Аренда \<URL-адрес большого двоичного объекта> не является арендой восстановления: аренда \<URL-адрес большого двоичного объекта> прерывается.**  
   
-```  
+```powershell
 param(  
        [Parameter(Mandatory=$true)]  
        [string]$storageAccount,  
@@ -104,34 +103,32 @@ $bytes = [System.IO.File]::ReadAllBytes($storageAssemblyPath)
 [System.Reflection.Assembly]::Load($bytes)  
   
 $cred = New-Object 'Microsoft.WindowsAzure.Storage.Auth.StorageCredentials' $storageAccount, $storageKey  
-  
 $client = New-Object 'Microsoft.WindowsAzure.Storage.Blob.CloudBlobClient' "https://$storageAccount.blob.core.windows.net", $cred  
-  
 $container = $client.GetContainerReference($blobContainer)  
   
 #list all the blobs  
-$allBlobs = $container.ListBlobs()   
+$allBlobs = $container.ListBlobs()
   
 $lockedBlobs = @()  
 # filter blobs that are have Lease Status as "locked"  
 foreach($blob in $allBlobs)  
 {  
-    $blobProperties = $blob.Properties   
+    $blobProperties = $blob.Properties
     if($blobProperties.LeaseStatus -eq "Locked")  
     {  
         $lockedBlobs += $blob  
-  
     }  
 }  
   
 if ($lockedBlobs.Count -eq 0)  
-    {   
-        Write-Host " There are no blobs with locked lease status"  
-    }  
+{
+    Write-Host " There are no blobs with locked lease status"  
+}
+
 if($lockedBlobs.Count -gt 0)  
 {  
-    write-host "Breaking leases"  
-    foreach($blob in $lockedBlobs )   
+    Write-Host "Breaking leases"  
+    foreach($blob in $lockedBlobs )
     {  
         try  
         {  
@@ -149,11 +146,8 @@ if($lockedBlobs.Count -gt 0)
         Write-Host "Breaking lease on $($blob.Uri)"  
         $blob.BreakLease($(New-TimeSpan), $null, $null, $null) | Out-Null  
     }  
-}  
-  
+}
 ```  
   
-## <a name="see-also"></a>См. также  
- [Резервное копирование SQL Server на URL-адрес — рекомендации и устранение неполадок](sql-server-backup-to-url-best-practices-and-troubleshooting.md)  
-  
-  
+## <a name="see-also"></a>См. также статью  
+ [Резервное копирование SQL Server на URL-адрес — рекомендации и устранение неполадок](sql-server-backup-to-url-best-practices-and-troubleshooting.md)  
