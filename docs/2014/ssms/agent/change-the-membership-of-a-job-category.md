@@ -15,12 +15,12 @@ ms.assetid: 6a18f7f0-eb50-485f-a9c7-df31ae0f994e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a3e8497e4f5a8b5e74b7bb0b5d9c01cef78e275d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f5ed0e086f5743f6759ed8b317750eefcb377180
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63017169"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72782790"
 ---
 # <a name="change-the-membership-of-a-job-category"></a>Change the Membership of a Job Category
   В этом разделе описывается изменение членства категории заданий в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]или управляющих объектов SQL Server.  
@@ -29,13 +29,13 @@ ms.locfileid: "63017169"
   
  **В этом разделе**  
   
--   **Перед началом работы**  
+-   **Перед началом:**  
   
      [безопасность](#Security)  
   
 -   **Для изменения состава категории заданий используется:**  
   
-     [Среда SQL Server Management Studio](#SSMS)  
+     [Среда Среда SQL Server Management Studio](#SSMS)  
   
      [Transact-SQL](#TSQL)  
   
@@ -52,7 +52,7 @@ ms.locfileid: "63017169"
   
 1.  В **обозревателе объектов**щелкните значок «плюс», чтобы развернуть сервер, на котором нужно изменить категорию заданий.  
   
-2.  Щелкните знак "плюс", чтобы развернуть **Агент SQL Server**.  
+2.  Щелкните знак «плюс», чтобы развернуть **Агент SQL Server**.  
   
 3.  Щелкните правой кнопкой мыши папку **Задания** и выберите пункт **Управление категориями заданий**.  
   
@@ -68,13 +68,13 @@ ms.locfileid: "63017169"
   
 #### <a name="to-change-the-membership-of-a-job-category"></a>Изменение состава категории заданий  
   
-1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  На стандартной панели выберите пункт **Создать запрос**.  
   
 3.  Скопируйте следующий пример в окно запроса и нажмите кнопку **Выполнить**.  
   
-    ```  
+    ```sql
     -- adding a new job category to the "NightlyBackups" job  
     USE msdb ;  
     GO  
@@ -84,11 +84,9 @@ ms.locfileid: "63017169"
     GO  
     ```  
   
- Дополнительные сведения см. в разделе [sp_update_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-update-job-transact-sql).  
+ Дополнительные сведения см. в [разделе &#40;SP_UPDATE_JOB Transact-&#41;SQL](/sql/relational-databases/system-stored-procedures/sp-update-job-transact-sql).  
   
-##  <a name="SMO"></a> Использование управляющих объектов SQL Server  
+##  <a name="SMO"></a>Использование управляющие объекты SQL Server  
  **Изменение состава категории заданий**  
   
  Воспользуйтесь классом `JobCategory` в любом языке программирования (Visual Basic, Visual C# или PowerShell).  
-  
-  

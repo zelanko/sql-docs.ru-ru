@@ -1,5 +1,5 @@
 ---
-title: Использование политик AlwaysOn для определения работоспособности группы доступности (SQL Server) | Документация Майкрософт
+title: Использование политик AlwaysOn для просмотра работоспособности группы доступности (SQL Server) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2019
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.assetid: 6f1bcbc3-1220-4071-8e53-4b957f5d3089
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 12a183718ee13915fd6236caf943fea03819e723
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 66f898dbe10a9a7e17c1908a5bf25e86f5a57c7e
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62812990"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72782852"
 ---
 # <a name="use-alwayson-policies-to-view-the-health-of-an-availability-group-sql-server"></a>Использование политик AlwaysOn для определения работоспособности группы доступности (SQL Server)
-  В этом разделе описано, как определить состояние работоспособности группы доступности AlwaysOn с помощью политики AlwaysOn в среде [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] или с помощью Powershell в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Сведения об управлении на основе политики AlwaysOn см. в разделе [политики AlwaysOn на случай проблем в работе с группами доступности AlwaysOn (SQL Server)](always-on-policies-for-operational-issues-always-on-availability.md).  
+  В этом разделе описано, как определить состояние работоспособности группы доступности AlwaysOn с помощью политики AlwaysOn в среде [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] или с помощью Powershell в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Дополнительные сведения об управлении на основе политик AlwaysOn см. [в разделе политики AlwaysOn для проблем в работе с группы доступности AlwaysOn (SQL Server)](always-on-policies-for-operational-issues-always-on-availability.md).  
   
 > [!IMPORTANT]  
 >  При работе с политиками AlwaysOn имена категорий используются в качестве идентификаторов. При изменении имени категории AlwaysOn ее функция оценки работоспособности будет нарушена. Поэтому имена категорий AlwaysOn изменять не следует никогда.  
@@ -31,11 +31,11 @@ ms.locfileid: "62812990"
   
 ###  <a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Разрешения  
  Требуются разрешения CONNECT, VIEW SERVER STATE и VIEW ANY DEFINITION.  
   
-##  <a name="SSMSProcedure"></a> С помощью панели мониторинга AlwaysOn  
- **Чтобы открыть панель мониторинга AlwaysOn**  
+##  <a name="SSMSProcedure"></a>Использование панели мониторинга AlwaysOn  
+ **Открытие панели мониторинга AlwaysOn**  
   
 1.  В обозревателе объектов подключитесь к экземпляру сервера, на котором размещена одна из реплик доступности. Чтобы просмотреть сведения обо всех репликах доступности в группе доступности, используйте экземпляр сервера, на котором размещена первичная реплика.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "62812990"
  Дополнительные сведения об использовании панели мониторинга AlwaysOn см. в разделе [Использование панели мониторинга AlwaysOn (среда SQL Server Management Studio)](use-the-always-on-dashboard-sql-server-management-studio.md).  
   
 ##  <a name="PowerShellProcedure"></a> Использование PowerShell  
- **Использование политик AlwaysOn для определения работоспособности группы доступности**  
+ **Использование политик AlwaysOn для просмотра работоспособности группы доступности**  
   
 1.  Перейдите в каталог (`cd`) экземпляра сервера, на котором размещена одна из реплик доступности. Чтобы просмотреть сведения обо всех репликах доступности в группе доступности, используйте экземпляр сервера, на котором размещена первичная реплика.  
   
@@ -73,8 +73,7 @@ ms.locfileid: "62812990"
      Например, следующая команда оценивает работоспособность реплики доступности с именем `MyReplica` в группе доступности `MyAg` и выводит краткую сводку.  
   
     ```powershell
-    Test-SqlAvailabilityReplica `   
-    -Path SQLSERVER:\Sql\Computer\Instance\AvailabilityGroups\MyAg\AvailabilityReplicas\MyReplica  
+    Test-SqlAvailabilityReplica -Path SQLSERVER:\Sql\Computer\Instance\AvailabilityGroups\MyAg\AvailabilityReplicas\MyReplica  
     ```  
   
      `Test-SqlDatabaseReplicaState`  
@@ -89,7 +88,7 @@ ms.locfileid: "62812990"
   
      Эти командлеты принимают следующие параметры.  
   
-    |Параметр|Описание|  
+    |Параметр|Description|  
     |------------|-----------------|  
     |`AllowUserPolicies`|Выполняет пользовательские политики из категорий политик AlwaysOn.|  
     |`InputObject`|Коллекция объектов, представляющих состояния групп доступности, реплик доступности или базы данных доступности (в зависимости от того, какой используется командлет). Этот командлет вычисляет исправность указанных объектов.|  
@@ -100,9 +99,7 @@ ms.locfileid: "62812990"
      Например, следующая команда `Test-SqlAvailabilityGroup` указывает параметр `-ShowPolicyDetails`, чтобы показать результат вычисления, выполненного этим командлетом для управления на основе политик PBM в группе доступности с именем `MyAg`.  
   
     ```powershell
-    Test-SqlAvailabilityGroup `   
-    -Path SQLSERVER:\Sql\Computer\Instance\AvailabilityGroups\AgName `  
-    -ShowPolicyDetails  
+    Test-SqlAvailabilityGroup -Path SQLSERVER:\Sql\Computer\Instance\AvailabilityGroups\AgName -ShowPolicyDetails  
     ```  
   
     > [!NOTE]  
@@ -115,20 +112,18 @@ ms.locfileid: "62812990"
 -   [Получение справок по SQL Server PowerShell](../../../powershell/sql-server-powershell.md)  
   
 ##  <a name="RelatedContent"></a> См. также  
- **SQL Server AlwaysOn Team блоги мониторинг работоспособности AlwaysOn с помощью PowerShell:**  
+ **Блоги группы SQL Server AlwaysOn. Мониторинг работоспособности AlwaysOn с помощью PowerShell:**  
   
--   [Часть 1. Общие сведения о командлетах](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/monitoring-alwayson-health-with-powershell-part-1.aspx)  
+-   [Часть 1. Общие сведения о командлете](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/monitoring-alwayson-health-with-powershell-part-1.aspx)  
   
--   [Часть 2. Расширенное использование командлетов](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/monitoring-alwayson-health-with-powershell-part-2.aspx)  
+-   [Часть 2. Расширенное использование командлета](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/monitoring-alwayson-health-with-powershell-part-2.aspx)  
   
 -   [Часть 3. Простое приложение для мониторинга](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/15/monitoring-alwayson-health-with-powershell-part-3.aspx)  
   
 -   [Часть 4. Интеграция с агентом SQL Server](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/15/the-always-on-health-model-part-4.aspx)  
   
-## <a name="see-also"></a>См. также  
- [Обзор групп доступности AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+## <a name="see-also"></a>См. также статью  
+ [Общие сведения о &#40;группы доступности AlwaysOn&#41; SQL Server](overview-of-always-on-availability-groups-sql-server.md)    
  [Администрирование группы доступности (SQL Server)](administration-of-an-availability-group-sql-server.md)   
- [Отслеживание групп доступности (SQL Server)](monitoring-of-availability-groups-sql-server.md)   
- [Политики AlwaysOn на случай проблем в работе с группами доступности AlwaysOn (SQL Server)](always-on-policies-for-operational-issues-always-on-availability.md) 
-  
-  
+ [Мониторинг групп доступности (SQL Server)](monitoring-of-availability-groups-sql-server.md)   
+ [Политики AlwaysOn для проблем в работе с группы доступности AlwaysOn (SQL Server)](always-on-policies-for-operational-issues-always-on-availability.md) 

@@ -1,5 +1,5 @@
 ---
-title: С помощью шифрования | Документация Майкрософт
+title: Использование шифрования | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,12 +19,12 @@ ms.assetid: 405e0ed7-50a9-430e-a343-471f54b4af76
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 09de7053de66d2d280c2bc6da61b8bf6b2ebf55b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 233f5bc9decf5e8246f2aba6836ec5ecb650283b
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63213494"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72781849"
 ---
 # <a name="using-encryption"></a>Использование шифрования
   В SMO главный ключ службы представлен объектом <xref:Microsoft.SqlServer.Management.Smo.ServiceMasterKey>. На него ссылается свойство <xref:Microsoft.SqlServer.Management.Smo.Server.ServiceMasterKey%2A> объекта <xref:Microsoft.SqlServer.Management.Smo.Server>. Его можно сформировать заново с помощью метода <xref:Microsoft.SqlServer.Management.Smo.ServiceMasterKey.Regenerate%2A>.  
@@ -40,7 +40,7 @@ ms.locfileid: "63213494"
  В SMO сертификаты представлены объектом <xref:Microsoft.SqlServer.Management.Smo.Certificate>. У объекта <xref:Microsoft.SqlServer.Management.Smo.Certificate> есть свойства, указывающие открытый ключ, имя субъекта, срок действия и сведения об издателе. Разрешение на доступ к сертификату управляется с помощью методов `Grant`, `Revoke` и `Deny`.  
   
 ## <a name="example"></a>Пример  
- В следующем примере кода для создания приложения необходимо выбрать среду программирования, шаблон программирования и язык программирования. Дополнительные сведения см. в разделе [Создание проекта SMO на Visual Basic в Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) и [Visual C создайте&#35; проекта SMO в Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ В следующем примере кода для создания приложения необходимо выбрать среду программирования, шаблон программирования и язык программирования. Дополнительные сведения см. в статьях [Создание проекта Visual Basic SMO в Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) и [Создание проекта Visual&#35; C SMO в Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="adding-a-certificate-in-visual-basic"></a>Добавление сертификата на языке Visual Basic  
  В этом примере кода создается простой сертификат с паролем для шифрования. В отличие от других объектов у метода <xref:Microsoft.SqlServer.Management.Smo.Certificate.Create%2A> есть несколько перегруженных методов. Перегруженный метод, используемый в этом примере, создает новый сертификат с паролем для шифрования.  
@@ -50,7 +50,7 @@ ms.locfileid: "63213494"
 ## <a name="adding-a-certificate-in-visual-c"></a>Добавление сертификата на языке Visual C#  
  В этом примере кода создается простой сертификат с паролем для шифрования. В отличие от других объектов у метода <xref:Microsoft.SqlServer.Management.Smo.Certificate.Create%2A> есть несколько перегруженных методов. Перегруженный метод, используемый в этом примере, создает новый сертификат с паролем для шифрования.  
   
-```  
+```csharp
 {  
             //Connect to the local, default instance of SQL Server.   
             {  
@@ -78,24 +78,20 @@ ms.locfileid: "63213494"
 ## <a name="adding-a-certificate-in-powershell"></a>Добавление сертификата в PowerShell  
  В этом примере кода создается простой сертификат с паролем для шифрования. В отличие от других объектов у метода <xref:Microsoft.SqlServer.Management.Smo.Certificate.Create%2A> есть несколько перегруженных методов. Перегруженный метод, используемый в этом примере, создает новый сертификат с паролем для шифрования.  
   
-```  
+```powershell
 # Set the path context to the local, default instance of SQL Server and get a reference to AdventureWorks2012  
 CD \sql\localhost\default\databases  
 $db = get-item AdventureWorks2012  
   
-#Create a certificate  
-  
-$c = New-Object -TypeName Microsoft.SqlServer.Management.Smo.Certificate -argumentlist $db, "Test_Certificate"  
+#Create a certificate
+$c = New-Object -TypeName Microsoft.SqlServer.Management.Smo.Certificate -ArgumentList $db, "Test_Certificate"  
 $c.StartDate = "January 01, 2010"  
 $c.Subject = "This is a test certificate."  
 $c.ExpirationDate = "January 01, 2015"  
   
 #Create the certificate on the instance of SQL Server by supplying the certificate password argument.  
-$c.Create("pGFD4bb925DGvbd2439587y")  
-  
+$c.Create("pGFD4bb925DGvbd2439587y")
 ```  
   
-## <a name="see-also"></a>См. также  
- [С помощью ключей шифрования](using-encryption.md)  
-  
-  
+## <a name="see-also"></a>См. также статью  
+ [Использование ключей шифрования](using-encryption.md)  

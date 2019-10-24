@@ -14,20 +14,19 @@ ms.assetid: e0d30dbe-7daf-47eb-8412-1b96792b6fb9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d92557b37cac982a70d5b3203472c40a2fd72ce4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4fec86c0f732a4f47d3132be51226b877c428d5f
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62922890"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72782755"
 ---
 # <a name="query-expressions-and-uniform-resource-names"></a>Выражения запросов и универсальные имена ресурсов
   В моделях объектов SMO [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и оснастках [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell используется два типа строк выражений, которые похожи на выражения XPath. Выражения запроса — это строки, которые указывают набор условий, используемых для перечисления одного или нескольких объектов в иерархии объектной модели. Универсальное имя ресурса (URN) — это конкретный тип строки выражения запроса, который уникально определяет один объект.  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
-  
+```
       Object1  
       [<FilterExpression1>]/ ... /ObjectN[<FilterExpressionN>]<FilterExpression>::=  
 <PropertyExpression> [and <PropertyExpression>][...n]  
@@ -84,7 +83,7 @@ ms.locfileid: "62922890"
 |||  
 |-|-|  
 |гггг|Год из четырех цифр.|  
-|ММ|Месяц из двух цифр (от 01 до 12).|  
+|мм|Месяц из двух цифр (от 01 до 12).|  
 |дд|День из двух цифр (от 01 до 31).|  
 |чч|Час из двух цифр в 24-часовом формате (от 01 до 23).|  
 |ми|Минута из двух цифр (от 01 до 59).|  
@@ -99,7 +98,7 @@ ms.locfileid: "62922890"
  not(\<*PropertyExpression*>)  
  Инвертирует значение вычисленного выражения *PropertyExpression*, перечисляя все объекты, не соответствующие условию, заданному в *PropertyExpression*. Например, not(contains(\@Name, 'xyz')) перечисляет все объекты, в именах которых нет строки xyz.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Выражения запроса — это строки, которые перечисляют узлы в иерархии моделей SMO. У каждого узла есть критерий фильтра, задающий условие для определения того, какие объекты в этом узле будут перечисляться. Выражения запроса моделируются на языке выражений XPath. Выражения запроса представляют собой небольшое подмножество выражений XPath, кроме того, в них есть некоторые выражения, которых нет в XPath. Выражения XPath — это строки, которые указывают набор критериев, используемых для перечисления одного или нескольких тегов в XML-документе. Дополнительные сведения об XPath см. в разделе [Язык W3C XPath](http://www.w3.org/TR/xpath20/).  
   
  Выражения запроса должны начинаться с абсолютной ссылки на объект сервера. Относительные выражения, начинающиеся с символа /, не допустимы. Последовательность объектов, указанных в выражении запроса, должна соответствовать иерархии коллекции объектов в связанной модели объекта. Например, выражение запроса, которое ссылается на объекты в пространстве имен Microsoft.SqlServer.Management.Smo, должно начинаться с узла сервера, за которым идет узел базы данных, и так далее.  
@@ -122,7 +121,7 @@ Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2012']/Table[@Name='Sal
 Server[@Name='MYCOMPUTER']/Database[@AutoClose=false()]  
 ```  
   
-### <a name="b-enumerating-objects-using-contains"></a>Б. Перечисление объектов при помощи функции contains  
+### <a name="b-enumerating-objects-using-contains"></a>б. Перечисление объектов при помощи функции contains  
  Следующее выражение запроса перечисляет все базы данных, в которых учитывается регистр и в имени которых имеется символ «m».  
   
 ```  
@@ -150,15 +149,13 @@ Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2012"]/Table[@Schema='S
 Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2012"]/Table[@CreateDate=datetime('2008-03-21 19:49:32.647')]  
 ```  
   
-### <a name="f-enumerating-objects-using-isnull"></a>Е. Перечисление объектов при помощи функции is_null  
+### <a name="f-enumerating-objects-using-is_null"></a>Е. Перечисление объектов при помощи функции is_null  
  Следующее выражение запроса перечисляет все таблицы в базе данных [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] , значение свойства «Дата последнего изменения» в которых не равно NULL:  
   
 ```  
 Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2012"]/Table[Not(is_null(@DateLastModified))]  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также статью  
  [Invoke-PolicyEvaluation, командлет](../database-engine/invoke-policyevaluation-cmdlet.md)   
  [Подсистема аудита SQL Server (компонент Database Engine)](../relational-databases/security/auditing/sql-server-audit-database-engine.md)  
-  
-  
