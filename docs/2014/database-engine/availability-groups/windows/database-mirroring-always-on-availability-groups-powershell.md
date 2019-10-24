@@ -1,5 +1,5 @@
 ---
-title: Создание базы данных конечной точки зеркального отображения для групп доступности AlwaysOn (SQL Server PowerShell) | Документация Майкрософт
+title: Создание конечной точки зеркального отображения базы данных для группы доступности AlwaysOn (SQL Server PowerShell) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,21 +14,21 @@ ms.assetid: 6197bbe7-67d4-446d-ba5f-cabfa5df77f1
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 77df7902f5dd1673736f4a993c4e29c50d7accc0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5fb67c488da5f01ac572ec78a369790fc9014513
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62814670"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72782992"
 ---
 # <a name="create-a-database-mirroring-endpoint-for-alwayson-availability-groups-sql-server-powershell"></a>Создайте конечную точку зеркального отображения базы данных для групп доступности AlwaysOn (SQL Server PowerShell)
   В этом разделе описывается создание конечной точки зеркального отображения базы данных для использования [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] с помощью PowerShell.  
   
  **В этом разделе**  
   
--   **Перед началом:**  [Безопасность](#Security)  
+-   **Before you begin:**  [Security](#Security)  
   
--   **Создание конечной точки зеркального отображения базы данных с помощью различных средств.**  [PowerShell](#PowerShellProcedure)  
+-   **Создание конечной точки зеркального отображения базы данных с помощью следующих средств:**  [PowerShell](#PowerShellProcedure)  
   
 ## <a name="before-you-begin"></a>Перед началом  
   
@@ -37,7 +37,7 @@ ms.locfileid: "62814670"
 > [!IMPORTANT]  
 >  Алгоритм RC4 устарел. [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)] Вместо этого рекомендуется использовать алгоритм AES.  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Разрешения  
  Требуется разрешение CREATE ENDPOINT или членство в предопределенной роли сервера sysadmin. Дополнительные сведения см. в разделе [GRANT, предоставление разрешений на конечную точку (Transact-SQL)](/sql/t-sql/statements/grant-endpoint-permissions-transact-sql).  
   
 ##  <a name="PowerShellProcedure"></a> Использование PowerShell  
@@ -53,13 +53,12 @@ ms.locfileid: "62814670"
 > [!IMPORTANT]  
 >  Этот пример работает только на экземпляре сервера, на котором в данный момент отсутствует конечная точка зеркального отображения базы данных.  
   
-```  
+```powershell
 # Create the endpoint.  
 $endpoint = New-SqlHadrEndpoint MyMirroringEndpoint -Port 5022 -Path SQLSERVER:\SQL\Machine\Instance  
   
 # Start the endpoint  
-Set-SqlHadrEndpoint -InputObject $endpoint -State "Started"  
-  
+Set-SqlHadrEndpoint -InputObject $endpoint -State "Started"
 ```  
   
 ##  <a name="RelatedTasks"></a> Связанные задачи  
@@ -75,14 +74,12 @@ Set-SqlHadrEndpoint -InputObject $endpoint -State "Started"
   
 -   [Указание сетевого адреса сервера (зеркальное отображение базы данных)](../../database-mirroring/specify-a-server-network-address-database-mirroring.md)  
   
--   [Указание URL-адреса конечной точки при добавлении или изменении реплики доступности (SQL Server)](specify-endpoint-url-adding-or-modifying-availability-replica.md)  
+-   [Укажите URL-адрес конечной точки при добавлении или изменении реплики доступности (SQL Server)](specify-endpoint-url-adding-or-modifying-availability-replica.md)  
   
  **Просмотр сведений о конечной точке зеркального отображения базы данных**  
   
 -   [sys.database_mirroring_endpoints (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также статью  
  [Создание группы доступности (Transact-SQL)](create-an-availability-group-transact-sql.md)   
- [Обзор групп доступности AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  
-  
-  
+ [Общие сведения о &#40;группы доступности AlwaysOn SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  

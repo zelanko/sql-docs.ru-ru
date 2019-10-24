@@ -15,14 +15,14 @@ ms.assetid: ee20c6cd-0258-4550-bdb0-71e86a0fb330
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 945c403a44f2b0c2cf2d691a1bcfda6cc96d422b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cd6cefd41ea223b91445042ff3cee9090074feeb
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62523750"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72783185"
 ---
-# <a name="delete-a-job-step-log"></a>Удаление журнала шага задания
+# <a name="delete-a-job-step-log"></a>Delete a Job Step Log
   В этом разделе описывается, как удалить журнал шага задания агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 -   **Перед началом:**  
@@ -33,7 +33,7 @@ ms.locfileid: "62523750"
   
 -   **Для удаления журнала шага задания агента SQL Server используется:**  
   
-     [Среда SQL Server Management Studio](#SSMS)  
+     [Среда Среда SQL Server Management Studio](#SSMS)  
   
      [Transact-SQL](#TSQL)  
   
@@ -41,12 +41,12 @@ ms.locfileid: "62523750"
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Restrictions"></a> Ограничения  
+###  <a name="Restrictions"></a> ограничения  
  При удалении шагов задания автоматически удаляются их выходные журналы.  
   
 ###  <a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Разрешения  
  Если пользователь не является членом предопределенной роли сервера **sysadmin** , он может изменять только свои собственные задания.  
   
 ##  <a name="SSMS"></a> Использование среды SQL Server Management Studio  
@@ -63,13 +63,13 @@ ms.locfileid: "62523750"
   
 #### <a name="to-delete-a-sql-server-agent-job-step-log"></a>Удаление журнала шага задания агента SQL Server  
   
-1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  На стандартной панели выберите пункт **Создать запрос**.  
   
 3.  Скопируйте следующий пример в окно запроса и нажмите кнопку **Выполнить**.  
   
-    ```  
+    ```sql
     -- removes the job step log for step 2 in the job Weekly Sales Data Backup  
     USE msdb ;  
     GO  
@@ -80,16 +80,14 @@ ms.locfileid: "62523750"
     GO  
     ```  
   
- Дополнительные сведения см. в разделе [sp_delete_jobsteplog &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-delete-jobsteplog-transact-sql).  
+ Дополнительные сведения см. в [разделе &#40;SP_DELETE_JOBSTEPLOG Transact-&#41;SQL](/sql/relational-databases/system-stored-procedures/sp-delete-jobsteplog-transact-sql).  
   
-##  <a name="SMO"></a> Использование управляющих объектов SQL Server  
+##  <a name="SMO"></a>Использование управляющие объекты SQL Server  
  Вызовите методы `DeleteJobStepLogs` класса `Job`, используя выбранный язык программирования, например Visual Basic, Visual C# или PowerShell. Дополнительные сведения см. в разделе[Управляющие объекты SQL Server](https://msdn.microsoft.com/library/ms162169.aspx).  
   
-```  
--- Uses PowerShell to delete all job step log files that have ID values larger than 5.  
-$srv = new-object Microsoft.SqlServer.Management.Smo.Server("(local)")  
+```powershell
+# Delete all job step log files that have ID values larger than 5.  
+$srv = New-Object Microsoft.SqlServer.Management.Smo.Server("(local)")  
 $jb = $srv.JobServer.Jobs["Test Job"]  
 $jb.DeleteJobStepLogs(5)  
-```  
-  
-  
+```

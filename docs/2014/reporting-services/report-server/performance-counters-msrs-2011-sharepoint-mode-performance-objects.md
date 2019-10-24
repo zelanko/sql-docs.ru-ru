@@ -1,5 +1,5 @@
 ---
-title: Счетчики производительности для MSRS 2014 Web Service SharePoint Mode и MSRS 2014 Windows Service SharePoint Mode, объекты производительности (режим SharePoint) | Документация Майкрософт
+title: Счетчики производительности для объектов производительности служб MSRS 2014 Web Service SharePoint Mode и MSRS 2014 Windows Service SharePoint Mode (режим интеграции с SharePoint) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,12 +17,12 @@ ms.assetid: 70bf6980-7845-4ab5-8b2a-ebf526d811a6
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: d994fa563870f01f4a9ca8824b5372587eca804b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 23dd102c0144761d3c84d0735357318f27666706
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66103698"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72782835"
 ---
 # <a name="performance-counters-for-the-msrs-2014-web-service-sharepoint-mode-and-msrs-2014-windows-service-sharepoint-mode-performance-objects-sharepoint-mode"></a>Счетчики производительности для объектов производительности веб-службы MSRS 2014 в режиме интеграции с SharePoint и службы Windows для MSRS 2014 в режиме интеграции с SharePoint (режим SharePoint)
   В этом разделе рассматриваются счетчики производительности для объектов производительности `MSRS 2014 Web Service SharePoint Mode` и `MSRS 2014 Windows Service SharePoint Mode`, которые принадлежат к числу компонентов развертывания служб [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] в режиме SharePoint.  
@@ -36,18 +36,18 @@ ms.locfileid: "66103698"
   
  **В этом разделе:**  
   
--   [Режим счетчики производительности веб-службы MSRS 2014 SharePoint](#bkmk_webservice)  
+-   [Счетчики производительности для веб-службы MSRS 2014 в режиме интеграции с SharePoint](#bkmk_webservice)  
   
--   [MSRS 2014 Windows SharePoint счетчики производительности службы режиме](#bkmk_windowsservice)  
+-   [Счетчики производительности для службы Windows MSRS 2014 в режиме интеграции с SharePoint](#bkmk_windowsservice)  
   
 -   [Использование командлетов PowerShell для возврата списков](#bkmk_powershell)  
   
-##  <a name="bkmk_webservice"></a> Режим счетчики производительности веб-службы MSRS 2014 SharePoint  
+##  <a name="bkmk_webservice"></a>Счетчики производительности для веб-службы MSRS 2014 в режиме интеграции с SharePoint  
  Объект производительности `MSRS 2014 Web Service SharePoint Mode` используется для наблюдения за производительностью сервера отчетов. Этот объект производительности включает коллекцию счетчиков, используемых для отслеживания работы сервера отчетов, обычно инициируемой интерактивными операциями просмотра отчетов. Если включить этот счетчик, его можно применять ко всем экземплярам служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Также можно выбирать конкретные экземпляры. Эти счетчики сбрасываются, когда платформа [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] останавливает веб-службу сервера отчетов.  
   
  В следующей таблице перечислены счетчики, включенные в объект производительности `MSRS 2014 Web Service SharePoint Mode`.  
   
-|Счетчик|Описание|  
+|Счетчик|Description|  
 |-------------|-----------------|  
 |`Active Sessions`|Число активных сеансов. Этот счетчик ведет подсчет совокупного количества сеансов браузера, создаваемых при выполнении отчета, как активных, так и неактивных.<br /><br /> Значение счетчика уменьшается на единицу при удалении каждой записи сеанса. По умолчанию сеансы удаляются через десять минут неактивности.|  
 |`Cache Hits/Sec`|Количество запросов в секунду для кэшированных отчетов. Это запросы для повторно подготовленных к просмотру отчетов, а не для отчетов, обрабатываемых непосредственно из кэша. (См. счетчик `Total Cache Hits` далее в этом разделе.)|  
@@ -72,12 +72,12 @@ ms.locfileid: "66103698"
 |`Total Reports Executed`|Общее количество успешно выполненных отчетов с момента запуска службы. Этот счетчик сбрасывается каждый раз, когда [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] останавливает веб-службу сервера отчетов.|  
 |`Total Requests`|Общее число всех запросов, выполненных к серверу отчетов после запуска службы. Этот счетчик сбрасывается каждый раз, когда [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] останавливает веб-службу сервера отчетов.|  
   
-##  <a name="bkmk_windowsservice"></a> MSRS 2014 Windows SharePoint счетчики производительности службы режиме  
- Объект производительности `MSRS 2014 Windows Service SharePoint Mode` используется для наблюдения за службами Windows сервера отчетов. Этот объект производительности включает коллекцию счетчиков, используемых для отслеживания обработки отчетов, обычно инициируемой операциями по расписанию. Выполняемые по расписанию операции могут включать операции подписки и доставки, формирование снимков состояния выполнения отчета и создание журнал отчета. Если включить этот счетчик, его можно применять ко всем экземплярам служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] . Также можно выбирать конкретные экземпляры.  
+##  <a name="bkmk_windowsservice"></a>Счетчики производительности для службы Windows MSRS 2014 в режиме интеграции с SharePoint  
+ Объект производительности `MSRS 2014 Windows Service SharePoint Mode` используется для наблюдения за службами Windows сервера отчетов. Этот объект производительности включает коллекцию счетчиков, используемых для отслеживания обработки отчетов, обычно инициируемой операциями по расписанию. Выполняемые по расписанию операции могут включать операции подписки и доставки, формирование снимков состояния выполнения отчета и создание журнал отчета. Если включить этот счетчик, его можно применять ко всем экземплярам служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Также можно выбирать конкретные экземпляры.  
   
  В следующей таблице перечислены счетчики, включенные в объект производительности `MSRS 2014 Windows Service SharePoint mode`.  
   
-|Счетчик|Описание|  
+|Счетчик|Description|  
 |-------------|-----------------|  
 |`Active Sessions`|Количество активных сеансов, хранящихся в базе данных сервера отчетов. Этот счетчик обеспечивает совокупный подсчет всех используемых сеансов браузера, формируемых из подписок на отчет, которые все еще активны или нет.|  
 |`Alerting: event queue length`||  
@@ -120,23 +120,25 @@ ms.locfileid: "66103698"
 |`Total Snapshot Updates`|Общее число обновлений моментальных снимков состояния выполнения отчета.|  
   
 ##  <a name="bkmk_powershell"></a> Использование командлетов PowerShell для возврата списков  
- ![Содержимое, связанное с PowerShell](../media/rs-powershellicon.jpg "Содержимое, связанное с PowerShell")Следующий скрипт Windows PowerShell возвращает наборы счетчиков, в которых CounterSetName начинается с "msr"  
+ ![Содержимое, связанное с PowerShell](../media/rs-powershellicon.jpg "Содержимое, связанное с PowerShell") Следующий сценарий Windows PowerShell возвратит наборы счетчиков, в которых CounterSetName начинается с MSR  
   
-```  
-get-counter -listset msr*  
-Returns a list with the following information  
+```powershell
+Get-Counter -ListSet msr*
+```
+
+Возвращает список со следующими сведениями:
+
+```
 CounterSetName     : MSRS 2014 Windows Service SharePoint Mode  
 CounterSetName     : MSRS 2014 Web Service SharePoint Mode  
 ```  
   
- Следующий сценарий Windows PowerShell вернет список счетчиков производительности для CounterSetName «MSRS 2014 Windows Service SharePoint Mode».  
+ Следующий сценарий Windows PowerShell возвратит список счетчиков производительности для CounterSetName "MSRS 2014 службы Windows Service SharePoint Mode".  
   
-```  
-(get-counter -listset "MSRS 2014 Windows Service SharePoint Mode").paths  
+```powershell
+(Get-Counter -ListSet "MSRS 2014 Windows Service SharePoint Mode").Paths  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также статью  
  [Наблюдение за производительностью сервера отчетов](monitoring-report-server-performance.md)   
- [Счетчики производительности для MSRS 2014 Web Service и объекты производительности компонента MSRS 2014 Windows Service &#40;собственный режим&#41;](../report-server/performance-counters-msrs-2011-web-service-performance-objects.md)  
-  
-  
+ [Счетчики производительности для объектов &#40;производительности веб-службы MSRS 2014 и службы Windows MSRS 2014 основной режим&#41;](../report-server/performance-counters-msrs-2011-web-service-performance-objects.md)  

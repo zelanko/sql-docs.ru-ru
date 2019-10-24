@@ -14,12 +14,12 @@ ms.assetid: 47a0a172-a969-4deb-bca9-dd04401a0fe1
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 06fee22dc02a543aa9ab8ff249ca26f4cfb4aa40
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 54995cc99aae2065112cbb510203b656c409dcac
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63226161"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72782129"
 ---
 # <a name="creating-and-updating-statistics"></a>Создание и обновление статистики
   В SMO статистические сведения об обработке запросов в базе данных можно собирать с помощью объекта <xref:Microsoft.SqlServer.Management.Smo.Statistic>.  
@@ -27,7 +27,7 @@ ms.locfileid: "63226161"
  Собирать статистические данные можно по любому столбцу с помощью объектов <xref:Microsoft.SqlServer.Management.Smo.Statistic> и <xref:Microsoft.SqlServer.Management.Smo.StatisticColumn>. С помощью метода <xref:Microsoft.SqlServer.Management.Smo.Statistic.Update%2A> можно обновить статистику в объекте <xref:Microsoft.SqlServer.Management.Smo.Statistic>. Результаты можно просмотреть в оптимизаторе запросов.  
   
 ## <a name="example"></a>Пример  
- Чтобы использовать какой-либо из представленных примеров кода, нужно выбрать среду, шаблон и язык программирования, с помощью которых будет создаваться приложение. Дополнительные сведения см. в разделе [Создание проекта SMO на Visual Basic в Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) или [Visual C создайте&#35; проекта SMO в Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Чтобы использовать какой-либо из представленных примеров кода, нужно выбрать среду, шаблон и язык программирования, с помощью которых будет создаваться приложение. Дополнительные сведения см. в статьях [Создание проекта Visual Basic SMO в Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) или [Создание проекта Visual&#35; C SMO в Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="creating-and-update-statistics-in-visual-basic"></a>Создание и обновление статистики на языке Visual Basic  
  В этом примере кода в существующей базе данных создается новая таблица, для которой создаются объекты <xref:Microsoft.SqlServer.Management.Smo.Statistic> и <xref:Microsoft.SqlServer.Management.Smo.StatisticColumn>.  
@@ -37,7 +37,7 @@ ms.locfileid: "63226161"
 ## <a name="creating-and-update-statistics-in-visual-c"></a>Создание и обновление статистики на языке Visual C#  
  В этом примере кода в существующей базе данных создается новая таблица, для которой создаются объекты <xref:Microsoft.SqlServer.Management.Smo.Statistic> и <xref:Microsoft.SqlServer.Management.Smo.StatisticColumn>.  
   
-```  
+```csharp
 {  
             //Connect to the local, default instance of SQL Server.  
             Server srv = new Server();  
@@ -64,7 +64,7 @@ ms.locfileid: "63226161"
 ## <a name="creating-and-update-statistics-in-powershell"></a>Создание и обновление статистики в PowerShell  
  В этом примере кода в существующей базе данных создается новая таблица, для которой создаются объекты <xref:Microsoft.SqlServer.Management.Smo.Statistic> и <xref:Microsoft.SqlServer.Management.Smo.StatisticColumn>.  
   
-```  
+```powershell
 # Example of implementing a full text search on the default instance.  
 # Set the path context to the local, default instance of SQL Server and database tables  
   
@@ -107,5 +107,3 @@ $fti.CatalogName = "Test_Catalog2"
 # Create the Full Text Search Index  
 $fti.Create()  
 ```  
-  
-  
