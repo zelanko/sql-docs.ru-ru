@@ -1,5 +1,5 @@
 ---
-title: С помощью компонента Database Mail | Документация Майкрософт
+title: Использование Database Mail | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,20 +14,20 @@ ms.assetid: 7605390f-b485-48cc-8d97-e364a066067b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 232ea094ac81badfe7a6ec378371b55a0b08103b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2db385919c30037612f00e53b2b990c1a7df0429
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62518752"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72781856"
 ---
 # <a name="using-database-mail"></a>Использование компонента Database Mail
   В SMO подсистема компонента Database Mail представлена объектом <xref:Microsoft.SqlServer.Management.Smo.Mail.SqlMail>, на который ссылается свойство <xref:Microsoft.SqlServer.Management.Smo.Server.Mail%2A>. С помощью объекта SMO <xref:Microsoft.SqlServer.Management.Smo.Mail.SqlMail> можно настраивать подсистему компонента Database Mail и управлять профилями и учетными записями почты. Объект SMO <xref:Microsoft.SqlServer.Management.Smo.Mail.SqlMail> принадлежит объекту `Server`, и это означает, что область действия учетных записей почты соответствует уровню сервера.  
   
 ## <a name="examples"></a>Примеры  
- Чтобы использовать какой-либо из представленных примеров кода, нужно выбрать среду, шаблон и язык программирования, с помощью которых будет создаваться приложение. Дополнительные сведения см. в разделе [Создание проекта SMO на Visual Basic в Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) или [Visual C создайте&#35; проекта SMO в Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Чтобы использовать какой-либо из представленных примеров кода, нужно выбрать среду, шаблон и язык программирования, с помощью которых будет создаваться приложение. Дополнительные сведения см. в статьях [Создание проекта Visual Basic SMO в Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) или [Создание проекта Visual&#35; C SMO в Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
- Для программ, использующих [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] компонента Database Mail, необходимо включить `Imports` инструкции для уточнения пространства имен Mail. Вставьте инструкцию после других инструкций `Imports` и перед любыми декларациями в приложении.  
+ Для программ, использующих [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Database Mail, необходимо включить инструкцию `Imports`, чтобы уточнить пространство имен почты. Вставьте инструкцию после других инструкций `Imports` и перед любыми декларациями в приложении.  
   
  `Imports Microsoft.SqlServer.Management.Smo`  
   
@@ -64,9 +64,7 @@ ms.locfileid: "62518752"
 ```  
   
 ## <a name="creating-a-database-mail-account-by-using-powershell"></a>Создание учетной записи для компонента Database Mail в PowerShell  
- В этом примере кода демонстрируется создание учетной записи электронной почты в объектах SMO. Компонент Database Mail представлен объектом <xref:Microsoft.SqlServer.Management.Smo.Mail.SqlMail>, и на него ссылается свойство <xref:Microsoft.SqlServer.Management.Smo.Server.Mail%2A> объекта <xref:Microsoft.SqlServer.Management.Smo.Server>. Объекты SMO можно использовать для программной настройки компонента Database Mail, но не для отправления или обработки полученной почты.  
-  
- PowerShell  
+ В этом примере кода демонстрируется создание учетной записи электронной почты в объектах SMO. Компонент Database Mail представлен объектом <xref:Microsoft.SqlServer.Management.Smo.Mail.SqlMail>, и на него ссылается свойство <xref:Microsoft.SqlServer.Management.Smo.Server.Mail%2A> объекта <xref:Microsoft.SqlServer.Management.Smo.Server>. Объекты SMO можно использовать для программной настройки компонента Database Mail, но не для отправления или обработки полученной почты.
   
 ```powershell  
 #Connect to the local, default instance of SQL Server.  
@@ -79,10 +77,8 @@ $sm = $srv.Mail
   
 #Define and create a mail account by supplying the Database Mail service,  
 #name, description, display name, and email address arguments in the constructor.  
-$a = New-Object -TypeName Microsoft.SqlServer.Management.SMO.Mail.MailAccount -argumentlist $sm, `  
+$a = New-Object -TypeName Microsoft.SqlServer.Management.SMO.Mail.MailAccount -ArgumentList $sm, `  
 "Adventure Works Administrator", "Adventure Works Automated Mailer",`  
  "Mail account for administrative e-mail.", "dba@Adventure-Works.com"  
 $a.Create()  
 ```  
-  
-  

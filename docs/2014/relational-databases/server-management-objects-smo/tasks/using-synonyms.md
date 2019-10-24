@@ -14,12 +14,12 @@ ms.assetid: db0a9022-9549-43e5-b6b3-deb236f05fb8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 534379a9ae5ea7150348bb345c59083c3392155f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a96f6ee89b920ec668af21ce625694fc31ce13bd
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63213943"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72781869"
 ---
 # <a name="using-synonyms"></a>Использование синонимов
   Синоним — это альтернативное имя, которое дается объекту в области схемы. В SMO синонимы представлены объектом <xref:Microsoft.SqlServer.Management.Smo.Synonym>. Объект <xref:Microsoft.SqlServer.Management.Smo.Synonym> является дочерним для объекта <xref:Microsoft.SqlServer.Management.Smo.Database>. Это означает, что синонимы действительны только в пределах базы данных, в которой они определены. Однако синоним может относиться к объектам другой базы данных или к удаленному экземпляру [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
@@ -27,7 +27,7 @@ ms.locfileid: "63213943"
  Объект, которому дано альтернативное имя, известен как базовый объект. Свойство имени объекта <xref:Microsoft.SqlServer.Management.Smo.Synonym> служит альтернативным именем базового объекта.  
   
 ## <a name="example"></a>Пример  
- В следующем примере кода для создания приложения необходимо выбрать среду программирования, шаблон программирования и язык программирования. Дополнительные сведения см. в разделе [Создание проекта SMO на Visual Basic в Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) и [Visual C создайте&#35; проекта SMO в Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ В следующем примере кода для создания приложения необходимо выбрать среду программирования, шаблон программирования и язык программирования. Дополнительные сведения см. в статьях [Создание проекта Visual Basic SMO в Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) и [Создание проекта Visual&#35; C SMO в Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="creating-a-synonym-in-visual-basic"></a>Создание синонима на языке Visual Basic  
  Этот пример кода показывает, как создать синоним или альтернативное имя для объекта из области схемы. Клиентские приложения для ссылки на базовый объект могут использовать одну ссылку на него через синоним вместо использования имени, состоящего из нескольких частей.  
@@ -37,7 +37,7 @@ ms.locfileid: "63213943"
 ## <a name="creating-a-synonym-in-visual-c"></a>Создание синонима на языке Visual C#  
  Этот пример кода показывает, как создать синоним или альтернативное имя для объекта из области схемы. Клиентские приложения для ссылки на базовый объект могут использовать одну ссылку на него через синоним вместо использования имени, состоящего из нескольких частей.  
   
-```  
+```csharp
 {  
             //Connect to the local, default instance of SQL Server.   
             Server srv = new Server();  
@@ -65,15 +65,14 @@ ms.locfileid: "63213943"
 ## <a name="creating-a-synonym-in-powershell"></a>Создание синонима в PowerShell  
  Этот пример кода показывает, как создать синоним или альтернативное имя для объекта из области схемы. Клиентские приложения для ссылки на базовый объект могут использовать одну ссылку на него через синоним вместо использования имени, состоящего из нескольких частей.  
   
-```  
+```powershell
 #Get a server object which corresponds to the default instance  
 $srv = New-Object -TypeName Microsoft.SqlServer.Management.SMO.Server  
   
 #And the database object corresponding to Adventureworks  
 $db = $srv.Databases["AdventureWorks2012"]  
   
-$syn = New-Object -TypeName Microsoft.SqlServer.Management.SMO.Synonym `  
--argumentlist $db, "Shop", "Sales"  
+$syn = New-Object -TypeName Microsoft.SqlServer.Management.SMO.Synonym -ArgumentList $db, "Shop", "Sales"  
   
 #Specify the base object, which is the object on which the synonym is based.  
 $syn.BaseDatabase = "AdventureWorks2012"  
@@ -85,7 +84,5 @@ $syn.BaseServer = $srv.Name
 $syn.Create()  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также статью  
  [CREATE SYNONYM (Transact-SQL)](/sql/t-sql/statements/create-synonym-transact-sql)  
-  
-  

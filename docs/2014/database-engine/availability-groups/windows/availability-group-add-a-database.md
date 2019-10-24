@@ -14,12 +14,12 @@ ms.assetid: 2a54eef8-9e8e-4e04-909c-6970112d55cc
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 69d148f9ef780e28300a6d3e233f2b680f0d37d5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: dda5ac5b2f569c8438439ec77da33fde3a385fa0
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62791990"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72782902"
 ---
 # <a name="add-a-database-to-an-availability-group-sql-server"></a>Добавление базы данных в группу доступности (SQL Server)
   В этом разделе описывается добавление базы данных в группу доступности AlwaysOn с помощью [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]или PowerShell в среде [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
@@ -28,11 +28,11 @@ ms.locfileid: "62791990"
   
      [Требования и ограничения](#Prerequisites)  
   
-     [Разрешения](#Permissions)  
+     [Permissions](#Permissions)  
   
 -   **Добавление базы данных в группу доступности с помощью:**  
   
-     [Среда SQL Server Management Studio](#SSMSProcedure)  
+     [Среда Среда SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -48,7 +48,7 @@ ms.locfileid: "62791990"
   
 ###  <a name="Security"></a> безопасность  
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="Permissions"></a> Разрешения  
  Необходимо разрешение ALTER AVAILABILITY GROUP для группы доступности, разрешение CONTROL AVAILABILITY GROUP, разрешение ALTER ANY AVAILABILITY GROUP или разрешение CONTROL SERVER.  
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
@@ -103,11 +103,10 @@ ms.locfileid: "62791990"
   
      Например, следующая команда добавляет базу данных-получатель `MyDd` к группе доступности `MyAG` , первичная реплика которой размещена в расположении `PrimaryServer\InstanceName`.  
   
-    ```  
-  
+    ```powershell
     Add-SqlAvailabilityDatabase `   
-    -Path SQLSERVER:\SQL\PrimaryServer\InstanceName\AvailabilityGroups\MyAG `   
-    -Database "MyDb"  
+     -Path SQLSERVER:\SQL\PrimaryServer\InstanceName\AvailabilityGroups\MyAG `   
+     -Database "MyDb"  
     ```  
   
     > [!NOTE]  
@@ -115,18 +114,13 @@ ms.locfileid: "62791990"
   
 3.  После добавления базы данных в группу доступности необходимо настроить соответствующую базу данных-получатель на каждом из экземпляров сервера, на которых размещена вторичная реплика. Дополнительные сведения см. в разделе [Запуск перемещения данных в базе данных-получателе AlwaysOn (SQL Server)](start-data-movement-on-an-always-on-secondary-database-sql-server.md).  
   
- **Настройка и использование поставщика SQL Server PowerShell**  
-  
--   [Поставщик SQL Server PowerShell](../../../powershell/sql-server-powershell-provider.md)  
-  
- Полный пример см. в разделе [Пример (PowerShell)](#PSExample)ниже.  
-  
-###  <a name="PSExample"></a> Пример (PowerShell)  
+ Сведения о настройке и использовании поставщика SQL Server PowerShell см. в разделе [поставщик SQL Server PowerShell](../../../powershell/sql-server-powershell-provider.md).
+
  В следующем примере показан полный процесс подготовки базы данных-получателя из базы данных на экземпляре сервера, на котором размещается первичная реплика группы доступности, добавления базы данных в группу доступности (в качестве базы данных-источника) и присоединения базы данных-получателя к группе доступности. Во-первых, в примере выполняется резервное копирование базы данных и ее журнала транзакций. Затем выполняется восстановление из резервной копии базы данных и журнала в экземпляры сервера, в которых размещается вторичная реплика.  
   
  В этом примере `Add-SqlAvailabilityDatabase` вызывается дважды: сначала в первичной реплике для добавления базы данных в группу доступности, а затем во вторичной реплике для присоединения базы данных-получателя из этой реплики к группе доступности. При наличии нескольких вторичных реплик нужно выполнить восстановление и присоединение базы данных-получателя в каждой из них.  
   
-```  
+```powershell
 $DatabaseBackupFile = "\\share\backups\MyDatabase.bak"  
 $LogBackupFile = "\\share\backups\MyDatabase.trn"  
 $MyAgPrimaryPath = "SQLSERVER:\SQL\PrimaryServer\InstanceName\AvailabilityGroups\MyAg"  
@@ -139,14 +133,11 @@ Restore-SqlDatabase -Database "MyDatabase" -BackupFile $DatabaseBackupFile -Serv
 Restore-SqlDatabase -Database "MyDatabase" -BackupFile $LogBackupFile -ServerInstance "SecondaryServer\InstanceName" -RestoreAction 'Log' -NoRecovery  
   
 Add-SqlAvailabilityDatabase -Path $MyAgPrimaryPath -Database "MyDatabase"  
-Add-SqlAvailabilityDatabase -Path $MyAgSecondaryPath -Database "MyDatabase"  
-  
+Add-SqlAvailabilityDatabase -Path $MyAgSecondaryPath -Database "MyDatabase"
 ```  
   
-## <a name="see-also"></a>См. также  
- [Обзор групп доступности AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+## <a name="see-also"></a>См. также статью  
+ [Общие сведения о &#40;группы доступности AlwaysOn&#41; SQL Server](overview-of-always-on-availability-groups-sql-server.md)    
  [Создание и настройка групп доступности (SQL Server)](creation-and-configuration-of-availability-groups-sql-server.md)   
- [Использование панели мониторинга AlwaysOn &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)   
+ [Использование панели мониторинга &#40;AlwaysOn SQL Server Management Studio&#41; ](use-the-always-on-dashboard-sql-server-management-studio.md)    
  [Отслеживание групп доступности (Transact-SQL)](monitor-availability-groups-transact-sql.md)  
-  
-  

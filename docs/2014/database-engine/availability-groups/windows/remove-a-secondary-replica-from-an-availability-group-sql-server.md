@@ -15,12 +15,12 @@ ms.assetid: 35ddc8b6-3e7c-4417-9a0a-d4987a09ddf7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 91a19eebfb03019fdbd928a340c139a23d9f27d1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b927483f5e57272460f1c2f0f1c4b1bca56a3abe
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62814080"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72782938"
 ---
 # <a name="remove-a-secondary-replica-from-an-availability-group-sql-server"></a>Удаление вторичной реплики из группы доступности (SQL Server)
   В этом разделе описывается удаление вторичной реплики из группы доступности AlwaysOn с помощью среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]или PowerShell в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
@@ -35,7 +35,7 @@ ms.locfileid: "62814080"
   
 -   **Удаление вторичной реплики с помощью**  
   
-     [Среда SQL Server Management Studio](#SSMSProcedure)  
+     [Среда Среда SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -45,19 +45,19 @@ ms.locfileid: "62814080"
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Restrictions"></a> Ограничения  
+###  <a name="Restrictions"></a> ограничения  
   
 -   Эта задача поддерживается только в первичной реплике.  
   
 -   Из группы доступности может быть удалена только вторичная реплика.  
   
-###  <a name="Prerequisites"></a> Предварительные требования  
+###  <a name="Prerequisites"></a> предварительные требования  
   
 -   Необходимо иметь подключение к экземпляру сервера, на котором размещена первичная реплика группы доступности.  
   
 ###  <a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Разрешения  
  Необходимо разрешение ALTER AVAILABILITY GROUP для группы доступности, разрешение CONTROL AVAILABILITY GROUP, разрешение ALTER ANY AVAILABILITY GROUP или разрешение CONTROL SERVER.  
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
@@ -71,7 +71,7 @@ ms.locfileid: "62814080"
   
 4.  Этот шаг имеет следующие различия в зависимости от того, удаляется одна или несколько реплик.  
   
-    -   Чтобы удалить несколько реплик, используйте область **Подробности** обозревателя объектов, чтобы просмотреть и выбрать реплики для удаления. Дополнительные сведения см. в разделе [Использование раздела "Подробности обозревателя объектов" для мониторинга групп доступности (среда SQL Server Management Studio)](use-object-explorer-details-to-monitor-availability-groups.md).  
+    -   Чтобы удалить несколько реплик, используйте область **Подробности** обозревателя объектов, чтобы просмотреть и выбрать реплики для удаления. Дополнительные сведения см. в статье [Использование раздела "Подробности обозревателя объектов" для мониторинга групп доступности (среда SQL Server Management Studio)](use-object-explorer-details-to-monitor-availability-groups.md).  
   
     -   Чтобы удалить одну реплику, выберите ее на панели **Обозреватель объектов** или на панели **Подробности обозревателя объектов** .  
   
@@ -92,7 +92,7 @@ ms.locfileid: "62814080"
   
      В следующем примере удаляется вторичная реплика из группы доступности *MyAG* . Целевая вторичная реплика расположена на экземпляре сервера с именем *HADR_INSTANCE* на компьютере *COMPUTER02*.  
   
-    ```  
+    ```sql
     ALTER AVAILABILITY GROUP MyAG REMOVE REPLICA ON 'COMPUTER02\HADR_INSTANCE';  
     ```  
   
@@ -105,9 +105,8 @@ ms.locfileid: "62814080"
   
      Например, следующая команда удаляет реплику доступности на сервере `MyReplica` из группы доступности с именем `MyAg`.  Эта команда должна выполняться на экземпляре сервера, на котором размещена первичная реплика группы доступности.  
   
-    ```  
-    Remove-SqlAvailabilityReplica `   
-    -Path SQLSERVER:\SQL\PrimaryServer\InstanceName\AvailabilityGroups\MyAg\AvailabilityReplicas\MyReplica  
+    ```powershell
+    Remove-SqlAvailabilityReplica -Path SQLSERVER:\SQL\PrimaryServer\InstanceName\AvailabilityGroups\MyAg\AvailabilityReplicas\MyReplica  
     ```  
   
     > [!NOTE]  
@@ -122,9 +121,7 @@ ms.locfileid: "62814080"
   
  Удаление реплики прекращает поступление в нее данных. После того, как вторичная реплика подтверждает, что она была удалена из глобального хранилища, реплика удаляет параметры группы доступности из своих баз данных, которые остаются на экземпляре локального сервера в состоянии RECOVERING.  
   
-## <a name="see-also"></a>См. также  
- [Обзор групп доступности AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+## <a name="see-also"></a>См. также статью  
+ [Общие сведения о &#40;группы доступности AlwaysOn&#41; SQL Server](overview-of-always-on-availability-groups-sql-server.md)    
  [Добавление вторичной реплики к группе доступности (SQL Server)](add-a-secondary-replica-to-an-availability-group-sql-server.md)   
  [Удаление группы доступности (SQL Server)](remove-an-availability-group-sql-server.md)  
-  
-  

@@ -15,12 +15,12 @@ ms.assetid: 619a826f-8e65-48eb-8c34-39497d238279
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5b2a481de3c100e65f780d28aa23650bd8fd4711
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6750456d708d68e57aadd4b1139f6e108a93b9ba
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62791982"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72783019"
 ---
 # <a name="change-the-failover-mode-of-an-availability-replica-sql-server"></a>Изменение режима отработки отказа для реплики доступности (SQL Server)
   В этом разделе описывается изменение режима отработки отказа для реплики доступности в группе доступности AlwaysOn в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]или PowerShell. Режим отработки отказа ― это свойство реплики, которое определяет режим отработки отказа для реплик, работающих в режиме доступности с синхронной фиксацией. Дополнительные сведения см. в разделах [Отработка отказа и режимы отработки отказа (группы доступности AlwaysOn)](failover-and-failover-modes-always-on-availability-groups.md) и [Режимы доступности (группы доступности AlwaysOn)](availability-modes-always-on-availability-groups.md).  
@@ -37,7 +37,7 @@ ms.locfileid: "62791982"
   
 ###  <a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Разрешения  
  Необходимо разрешение ALTER AVAILABILITY GROUP для группы доступности, разрешение CONTROL AVAILABILITY GROUP, разрешение ALTER ANY AVAILABILITY GROUP или разрешение CONTROL SERVER.  
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
@@ -84,7 +84,7 @@ ms.locfileid: "62791982"
          *сетевое_имя_FCI*  
          Сетевое имя, используемое для доступа к отказоустойчивому кластеру [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , в котором целевой экземпляр сервера является партнером по обеспечению отработки отказа [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
-         *имя_экземпляра*  
+         *instance_name*  
          Имя экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , на котором размещается целевая реплика доступности. Для экземпляра сервера по умолчанию указывать параметр *имя_экземпляра* не обязательно.  
   
      Дополнительные сведения об этих параметрах см. в разделе [ALTER AVAILABILITY GROUP (Transact-SQL)](/sql/t-sql/statements/alter-availability-group-transact-sql).  
@@ -97,7 +97,8 @@ ms.locfileid: "62791982"
     ```  
   
 ##  <a name="PowerShellProcedure"></a> Использование PowerShell  
- **Изменение режима отработки отказа для реплики доступности**  
+
+### <a name="to-change-the-failover-mode-of-an-availability-replica"></a>Изменение режима отработки отказа для реплики доступности
   
 1.  Перейдите в каталог (`cd`) экземпляра сервера, на котором находится первичная реплика.  
   
@@ -105,21 +106,17 @@ ms.locfileid: "62791982"
   
      Например, следующая команда изменяет реплику `MyReplica` в группе доступности `MyAg` , устанавливая использование режима доступности с синхронной фиксацией и поддержку автоматического перехода на другой ресурс.  
   
-    ```  
-    Set-SqlAvailabilityReplica -AvailabilityMode "SynchronousCommit" -FailoverMode "Automatic" `   
-    -Path SQLSERVER:\Sql\PrimaryServer\InstanceName\AvailabilityGroups\MyAg\Replicas\MyReplica  
+    ```powershell
+    Set-SqlAvailabilityReplica -AvailabilityMode "SynchronousCommit" -FailoverMode "Automatic" `
+     -Path SQLSERVER:\Sql\PrimaryServer\InstanceName\AvailabilityGroups\MyAg\Replicas\MyReplica  
     ```  
   
     > [!NOTE]  
     >  Чтобы просмотреть синтаксис командлета, воспользуйтесь командлетом `Get-Help` в среде [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Дополнительные сведения см. в разделе [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
   
- **Настройка и использование поставщика SQL Server PowerShell**  
+Сведения о настройке и использовании поставщика SQL Server PowerShell см. в разделе [поставщик SQL Server PowerShell](../../../powershell/sql-server-powershell-provider.md).
   
--   [Поставщик SQL Server PowerShell](../../../powershell/sql-server-powershell-provider.md)  
-  
-## <a name="see-also"></a>См. также  
- [Обзор групп доступности AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  
- [Режимы доступности &#40;группы доступности AlwaysOn&#41;](availability-modes-always-on-availability-groups.md)   
- [Отработка отказа и режимы отработки отказа &#40;группы доступности AlwaysOn&#41;](failover-and-failover-modes-always-on-availability-groups.md) 
-  
-  
+## <a name="see-also"></a>См. также статью  
+ [Общие сведения о &#40;группы доступности AlwaysOn SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  
+ [Режимы &#40;доступности группы доступности AlwaysOn&#41; ](availability-modes-always-on-availability-groups.md)    
+ [Отказоустойчивость и режимы &#40;отработки отказа группы доступности AlwaysOn&#41;](failover-and-failover-modes-always-on-availability-groups.md) 

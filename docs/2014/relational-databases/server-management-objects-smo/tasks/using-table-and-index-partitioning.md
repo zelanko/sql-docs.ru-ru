@@ -1,5 +1,5 @@
 ---
-title: Используя секционирование таблиц и индексов | Документация Майкрософт
+title: Использование секционирования таблиц и индексов | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,12 +15,12 @@ ms.assetid: 0e682d7e-86c3-4d73-950d-aa692d46cb62
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 73a106a4e17ea770517c7662dfecd98fe58e36b8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 936f037852f39f24690e1cb9af3f63a2cfa2a613
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63270739"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72781834"
 ---
 # <a name="using-table-and-index-partitioning"></a>Использование секционирования таблиц и индексов
   Хранение данных может осуществляться с помощью алгоритмов хранения, указанных в разделе [Partitioned Tables and Indexes](../../partitions/partitioned-tables-and-indexes.md). Секционирование может улучшить управляемость и масштабируемость больших таблиц и индексов.  
@@ -33,7 +33,7 @@ ms.locfileid: "63270739"
  Каждый из объектов <xref:Microsoft.SqlServer.Management.Smo.Table> и <xref:Microsoft.SqlServer.Management.Smo.Index> указывает в свойстве <xref:Microsoft.SqlServer.Management.Smo.PartitionScheme>, какую схему секционирования он использует, а в свойстве <xref:Microsoft.SqlServer.Management.Smo.PartitionSchemeParameterCollection> ─ столбцы.  
   
 ## <a name="example"></a>Пример  
- В следующем примере кода для создания приложения необходимо выбрать среду программирования, шаблон программирования и язык программирования. Дополнительные сведения см. в разделе [Создание проекта SMO на Visual Basic в Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) и [Visual C создайте&#35; проекта SMO в Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ В следующем примере кода для создания приложения необходимо выбрать среду программирования, шаблон программирования и язык программирования. Дополнительные сведения см. в статьях [Создание проекта Visual Basic SMO в Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) и [Создание проекта Visual&#35; C SMO в Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="setting-up-a-partition-scheme-for-a-table-in-visual-basic"></a>Настройка схемы секционирования для таблицы на языке Visual Basic  
  В примере кода показано, как создать функцию секционирования и схему секционирования для таблицы `TransactionHistory` в образце базы данных [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] . Секции разделяются по дате, чтобы отделить старые записи в таблицу `TransactionHistoryArchive` .  
@@ -43,7 +43,7 @@ ms.locfileid: "63270739"
 ## <a name="setting-up-a-partition-scheme-for-a-table-in-visual-c"></a>Настройка схемы секционирования для таблицы на языке Visual C#  
  В примере кода показано, как создать функцию секционирования и схему секционирования для таблицы `TransactionHistory` в образце базы данных [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] . Секции разделяются по дате, чтобы отделить старые записи в таблицу `TransactionHistoryArchive` .  
   
-```  
+```csharp
 {   
 //Connect to the local, default instance of SQL Server.   
 Server srv;   
@@ -112,7 +112,7 @@ $T.GetType()
 #Add a partition function parameter that specifies the function uses a DateTime range type.  
 $pfp =  New-Object -TypeName Microsoft.SqlServer.Management.SMO.PartitionFunctionParameter -argumentlist $pf, $T  
   
-#Specify the three dates that divide the data into four partitions.   
+#Specify the three dates that divide the data into four partitions.
 #Create an array of type object to hold the partition data  
 $val = "1/1/2003"."1/1/2004","1/1/2005"  
 $pf.RangeValues = $val  
@@ -124,7 +124,7 @@ $pf.Create()
 $ps = New-Object -TypeName Microsoft.SqlServer.Management.SMO.PartitionScheme -argumentlist $db, "TransHistPS"  
 $ps.PartitionFunction = "TransHistPF"  
   
-#add the filegroups to the scheme   
+#add the filegroups to the scheme
 $ps.FileGroups.Add("PRIMARY")  
 $ps.FileGroups.Add("Second")  
 $ps.FileGroups.Add("Third")  
@@ -134,7 +134,5 @@ $ps.FileGroups.Add("Fourth")
 $ps.Create()  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также статью  
  [Partitioned Tables and Indexes](../../partitions/partitioned-tables-and-indexes.md)  
-  
-  

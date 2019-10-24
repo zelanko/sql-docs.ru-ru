@@ -19,27 +19,27 @@ ms.assetid: 1d7bd180-fd6c-4b38-a87b-351496040542
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1fc7ff4dc3142fa6f6cd18fc7b00e691d3bf29df
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a1d50f31078389cad9fc1e687e67b515c61c89b1
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62655699"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72783052"
 ---
 # <a name="backing-up-and-restoring-databases-and-transaction-logs"></a>Резервное копирование и восстановление баз данных и журналов транзакций
-  В SMO классы <xref:Microsoft.SqlServer.Management.Smo.Backup> и <xref:Microsoft.SqlServer.Management.Smo.Restore> являются служебными классами, которые предоставляют средства для выполнения конкретных задач резервного копирования и восстановления из копий. Объект <xref:Microsoft.SqlServer.Management.Smo.Backup> представляет конкретную задачу резервного копирования, которая требуется вместо объекта [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] объекта на экземпляре сервера.  
+  В SMO классы <xref:Microsoft.SqlServer.Management.Smo.Backup> и <xref:Microsoft.SqlServer.Management.Smo.Restore> являются служебными классами, которые предоставляют средства для выполнения конкретных задач резервного копирования и восстановления из копий. Объект <xref:Microsoft.SqlServer.Management.Smo.Backup> представляет собой конкретную задачу резервного копирования, которая требуется вместо объекта [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] на экземпляре сервера.  
   
  При потере или повреждении данных резервная копия полностью или частично должна быть восстановлена. Частичное восстановление использует коллекцию <xref:Microsoft.SqlServer.Management.Smo.FileGroupCollection> для разбиения восстанавливаемых данных. При резервном восстановлении журнала транзакций, с помощью свойства <xref:Microsoft.SqlServer.Management.Smo.Restore.ToPointInTime%2A> объекта <xref:Microsoft.SqlServer.Management.Smo.Restore> можно восстановить данные до определенного момента времени. Также данные можно проверить с помощью метода <xref:Microsoft.SqlServer.Management.Smo.Restore.SqlVerify%2A>. Рекомендуемой процедурой резервного копирования является проверка целостности резервной копии путем выполнения операции восстановления и проверки данных в базе данных на регулярной основе.  
   
  Как и объект <xref:Microsoft.SqlServer.Management.Smo.Backup>, объект <xref:Microsoft.SqlServer.Management.Smo.Restore> не нужно создавать с помощью метода `Create`, так как он не представляет никакой из объектов экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Объект <xref:Microsoft.SqlServer.Management.Smo.Restore> является набором свойств и методов, используемых для восстановления базы данных.  
   
 ## <a name="examples"></a>Примеры  
- Чтобы использовать какой-либо из представленных примеров кода, нужно выбрать среду, шаблон и язык программирования, с помощью которых будет создаваться приложение. Дополнительные сведения см. в разделе [Создание проекта SMO на Visual Basic в Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) или [Visual C создайте&#35; проекта SMO в Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Чтобы использовать какой-либо из представленных примеров кода, нужно выбрать среду, шаблон и язык программирования, с помощью которых будет создаваться приложение. Дополнительные сведения см. в статьях [Создание проекта Visual Basic SMO в Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) или [Создание проекта Visual&#35; C SMO в Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="backing-up-databases-and-transaction-logs-in-visual-basic"></a>Резервное копирование баз данных и журналов транзакций на языке Visual Basic  
  Данный пример кода показывает, как создать резервную копию существующей базы данных в виде файла и как ее затем восстанавливать.  
   
-```  
+```vb
 Imports Microsoft.SqlServer.Management.Common  
 Imports Microsoft.SqlServer.Management.Smo  
 Imports Microsoft.VisualBasic.MyServices  
@@ -179,7 +179,7 @@ End Module
 ## <a name="backing-up-databases-and-transaction-logs-in-visual-c"></a>Резервное копирование баз данных и журналов транзакций на языке Visual C#  
  Данный пример кода показывает, как создать резервную копию существующей базы данных в виде файла и как ее затем восстанавливать.  
   
-```  
+```csharp
 using Microsoft.SqlServer.Management.Common;  
 using Microsoft.SqlServer.Management.Smo;  
   
@@ -317,9 +317,7 @@ class A {
 ## <a name="backing-up-databases-and-transaction-logs-in-powershell"></a>Резервное копирование баз данных и журналов транзакций в PowerShell  
  Данный пример кода показывает, как создать резервную копию существующей базы данных в виде файла и как ее затем восстанавливать.  
   
-```  
-#Backing up and restoring a Database from PowerShell  
-  
+```powershell
 #Connect to the local, default instance of SQL Server.  
   
 #Get a server object which corresponds to the default instance  
@@ -452,7 +450,7 @@ del "C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Backup\Test
 > [!NOTE]  
 >  Объект <xref:System.Collections.Specialized.StringCollection> требует ссылки на пространство имен с помощью инструкции `imports System.Collections.Specialized`.  
   
-```  
+```vb
 Imports Microsoft.SqlServer.Management.Smo  
 Imports Microsoft.SqlServer.Management.Common  
 Imports System.Collections.Specialized  
@@ -482,7 +480,7 @@ End Module
 > [!NOTE]  
 >  Объект <xref:System.Collections.Specialized.StringCollection> требует ссылки на пространство имен с помощью инструкции `imports System.Collections.Specialized`.  
   
-```  
+```csharp
 using Microsoft.SqlServer.Management.Common;  
 using Microsoft.SqlServer.Management.Smo;  
 using System;  
@@ -514,16 +512,14 @@ class A {
 > [!NOTE]  
 >  Объект <xref:System.Collections.Specialized.StringCollection> требует ссылки на пространство имен с помощью инструкции `imports System.Collections.Specialized`.  
   
-```  
+```powershell
 # Set the path context to the local, default instance of SQL Server and get a reference to AdventureWorks2012  
 CD \sql\localhost\default\databases  
-$db = get-item Adventureworks2012  
+$db = Get-Item Adventureworks2012  
   
 $sc = $db.CheckTables([Microsoft.SqlServer.Management.SMO.RepairType]::None)  
-foreach ($c in $sc)  
+ForEach ($c In $sc)  
 {  
     $c  
- }  
+}  
 ```  
-  
-  

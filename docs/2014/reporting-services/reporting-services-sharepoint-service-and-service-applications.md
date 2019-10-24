@@ -1,5 +1,5 @@
 ---
-title: Службы SharePoint Services и приложения службы Reporting | Документация Майкрософт
+title: Reporting Services службы SharePoint и приложений служб | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: 501aa9ee-8c13-458c-bf6f-24e00c82681b
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 035cc8b8de493761b79ac391f2f543f96c941507
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 93a8092dc9ed731349a1948a74e3950eb32f4f47
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66102871"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72783163"
 ---
 # <a name="reporting-services-sharepoint-service-and-service-applications"></a>Служба SharePoint и Служебные приложения службы Reporting Services
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] спроектирован на основе архитектуры службы SharePoint и использует службу SharePoint, а также одно или несколько приложений службы. Создание приложения службы открывает доступ к службе и формирует базу данных приложения службы. Можно создать несколько приложений службы Reporting Services, однако для большинства сценариев развертывания достаточно одного приложения службы.  
@@ -62,19 +62,19 @@ ms.locfileid: "66102871"
   
 1.  Добавьте объект пула приложений, соответствующий имени пула приложений, в переменную, передаваемую в новое действие.  
   
-    ```  
-    $appPoolName = get-spserviceapplicationpool "<application pool name>"  
+    ```powershell
+    $appPoolName = Get-SPServiceApplicationPool "<application pool name>"  
     ```  
   
 2.  Создайте приложение службы с указанным именем и именем пула приложений.  
   
-    ```  
+    ```powershell
     New-SPRSServiceApplication -Name 'MyServiceApplication' -ApplicationPool $appPoolName -DatabaseName 'MyServiceApplicationDatabase' -DatabaseServer '<Server Name>'  
     ```  
   
 3.  Получите новый объект приложения службы и передайте объект в канал командлета создания новой учетной записи-посредника.  
   
-    ```  
+    ```powershell
     Get-SPRSServiceApplication -name MyServiceApplication | New-SPRSServiceApplicationProxy "MyServiceApplicationProxy"  
     ```  
   
@@ -82,7 +82,5 @@ ms.locfileid: "66102871"
   
 |Задача|Ссылка|  
 |----------|----------|  
-|Управление параметрами приложения службы.|[Управление приложением службы SharePoint — Reporting Services](../../2014/reporting-services/manage-a-reporting-services-sharepoint-service-application.md)|  
+|Управление параметрами приложения службы.|[Управление Служебным приложением SharePoint службы Reporting Services](../../2014/reporting-services/manage-a-reporting-services-sharepoint-service-application.md)|  
 |Резервное копирование и восстановление приложения службы и связанных компонентов, таких как ключи шифрования и прокси-серверы.|[Резервное копирование и восстановление Служебного приложения SharePoint службы Reporting Services](../../2014/reporting-services/backup-and-restore-reporting-services-sharepoint-service-applications.md)|  
-  
-  

@@ -20,19 +20,19 @@ ms.assetid: 16fe1c18-4486-424d-81d6-d276ed97482f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5b8b6b1d5975ff94fda98784449330571cc93cec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: efbd01499940490fd85dfaf1e0786d26b722749c
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62872723"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72782736"
 ---
 # <a name="delete-a-data-tier-application"></a>Удаление приложения уровня данных
   Для удаления приложения уровня данных (DAC) используйте мастер удаления приложения уровня данных или скрипт Windows PowerShell. Можно указать, будет ли связанная база данных сохранена, отсоединена или уничтожена.  
   
--   **Перед началом:**  [ограничения](#LimitationsRestrictions), [разрешения](#Permissions)  
+-   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
   
--   **Обновление приложения уровня данных с использованием:**  [Мастер регистрации приложения уровня данных](#UsingDeleteDACWizard), [PowerShell](#DeleteDACPowerShell)  
+-   **Обновление приложения уровня данных с использованием следующих средств:**  [мастер регистрации приложения уровня данных](#UsingDeleteDACWizard), [PowerShell](#DeleteDACPowerShell)  
   
 ## <a name="before-you-begin"></a>Перед началом  
  При удалении экземпляра приложения уровня данных (DAC) можно выбрать один из трех параметров, которые определяют действие над базой данных, связанной с этим приложением уровня данных. При использовании любого из трех параметров удаляются метаданные определения DAC. Различие между ними состоит в действиях, которые они выполняют с базой данных, связанной с приложением уровня данных. Мастер не удаляет ни один из объектов уровня экземпляра, связанных с DAC или базой данных, таких как имена входа.  
@@ -43,7 +43,7 @@ ms.locfileid: "62872723"
 |Отсоединение базы данных|Выполняется отсоединение связанной базы данных. Экземпляр компонента Database Engine не может ссылаться на эту базу данных, но данные и файлы журналов сохраняются целыми.|  
 |Удаление базы данных|Связанная база данных уничтожается. Происходит удаление данных и файлов журналов.|  
   
-###  <a name="LimitationsRestrictions"></a> Ограничения  
+###  <a name="LimitationsRestrictions"></a> ограничения  
  Автоматический механизм восстановления метаданных определения приложения уровня данных или базы данных после удаления приложения уровня данных отсутствует. Способ, как можно будет вручную перестроить экземпляр приложения уровня данных, зависит от параметра удаления.  
   
 |Параметр|Повторное создание экземпляра приложения уровня данных|  
@@ -55,7 +55,7 @@ ms.locfileid: "62872723"
 > [!WARNING]  
 >  При повторном создании экземпляра приложения уровня данных путем его регистрации из восстановленной или повторно присоединенной базы данных некоторые части исходного приложения уровня данных, например политика выбора сервера, не создаются повторно.  
   
-###  <a name="Permissions"></a> разрешения  
+###  <a name="Permissions"></a> Разрешения  
  Приложение уровня данных (DAC) может быть удалено только членами предопределенных ролей сервера **sysadmin** и **serveradmin** или владельцем базы данных. Этот мастер также может быть запущен от имени учетной записи системного администратора [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с именем **sa** .  
   
 ##  <a name="UsingDeleteDACWizard"></a> Использование мастера удаления приложения уровня данных  
@@ -149,10 +149,10 @@ ms.locfileid: "62872723"
 ### <a name="example-deleting-the-dac-but-leaving-the-database-powershell"></a>Пример удаления приложения уровня данных без изменения базы данных (PowerShell)  
  В следующем примере рассматривается удаление приложения уровня данных с названием MyApplication при помощи метода `Unmanage()`, который позволяет удалить приложение уровня данных без изменения базы данных.  
   
-```  
+```powershell
 ## Set a SMO Server object to the default instance on the local computer.  
 CD SQLSERVER:\SQL\localhost\DEFAULT  
-$srv = get-item .  
+$srv = Get-Item .  
   
 ## Open a Common.ServerConnection to the same instance.  
 $serverconnection = New-Object Microsoft.SqlServer.Management.Common.ServerConnection($srv.ConnectionContext.SqlConnectionObject)  
@@ -173,7 +173,7 @@ $dacstore.Unmanage($dacName)
 ### <a name="example-deleting-the-dac-and-detaching-the-database-powershell"></a>Пример удаления приложения уровня данных с отсоединением базы данных (PowerShell)  
  В следующем примере рассматривается удаление приложения уровня данных с названием MyApplication при помощи метода `Uninstall()`, который позволяет удалить приложение уровня данных с отсоединением базы данных.  
   
-```  
+```powershell
 ## Set a SMO Server object to the default instance on the local computer.  
 CD SQLSERVER:\SQL\localhost\DEFAULT  
 $srv = get-item .  
@@ -197,10 +197,10 @@ $dacstore.Uninstall($dacName, [Microsoft.SqlServer.Management.Dac.DacUninstallMo
 ### <a name="example-deleting-the-dac-and-dropping-the-database-powershell"></a>Пример удаления приложения уровня данных и базы данных (PowerShell)  
  В следующем примере рассматривается удаление приложения уровня данных с названием MyApplication при помощи метода `Uninstall()`, который позволяет удалить приложение уровня данных и базу данных.  
   
-```  
+```powershell
 ## Set a SMO Server object to the default instance on the local computer.  
 CD SQLSERVER:\SQL\localhost\DEFAULT  
-$srv = get-item .  
+$srv = Get-Item .  
   
 ## Open a Common.ServerConnection to the same instance.  
 $serverconnection = New-Object Microsoft.SqlServer.Management.Common.ServerConnection($srv.ConnectionContext.SqlConnectionObject)  
@@ -218,12 +218,10 @@ $dacName  = "MyApplication"
 ## $dacstore.Uninstall($dacName, [Microsoft.SqlServer.Management.Dac.DacUninstallMode]::DropDatabase)  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также статью  
  [Приложения уровня данных](data-tier-applications.md)   
  [Приложения уровня данных](data-tier-applications.md)   
  [Развертывание приложения уровня данных](deploy-a-data-tier-application.md)   
  [Регистрация базы данных в качестве приложения уровня данных](register-a-database-as-a-dac.md)   
  [Резервное копирование и восстановление баз данных SQL Server](../backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [Присоединение и отсоединение базы данных (SQL Server)](../databases/database-detach-and-attach-sql-server.md)  
-  
-  

@@ -10,12 +10,12 @@ ms.assetid: 7835bc97-2827-4215-b0dd-52f692ce5e02
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: fb6a91b5ef9d97bbceafd57f5665b06336f37e94
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 8cb603eebc75c03420300757bd09cae25fce3c52
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68891052"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72783309"
 ---
 # <a name="powershell-cmdlets-for-reporting-services-sharepoint-mode"></a>PowerShell cmdlets для режима SharePoint службы Reporting Services
   При установке служб [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] в режиме интеграции с SharePoint инсталлируются командлеты PowerShell для поддержки серверов отчетов в режиме интеграции с SharePoint. Командлеты охватывают три категории функциональных возможностей.  
@@ -56,12 +56,12 @@ ms.locfileid: "68891052"
   
 ##  <a name="bkmk_cmdlet_sum"></a> Обзор командлетов  
 
- Для выполнения командлетов необходимо открыть консоль управления SharePoint. Можно также использовать редактор графического пользовательского интерфейса, который включен в Microsoft Windows, **интегрированная среда скриптов Windows PowerShell (ISE)** . Дополнительные сведения см. в разделе [Запуск Windows PowerShell на Windows Server](https://docs.microsoft.com/powershell/scripting/getting-started/starting-windows-powershell). В следующих сводках командлетов ссылки на приложение службы "базы данных" относятся ко всем базам данных, созданным и используемым [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] приложением службы. Это включает базы данных конфигурации, предупреждений и временные базы данных.  
+ Для выполнения командлетов необходимо открыть консоль управления SharePoint. Можно также использовать редактор графического пользовательского интерфейса, который включен в Microsoft Windows, **интегрированная среда скриптов Windows PowerShell (ISE)** . Дополнительные сведения см. в разделе [Запуск Windows PowerShell на Windows Server](https://docs.microsoft.com/powershell/scripting/getting-started/starting-windows-powershell). В следующих сводках командлетов ссылки на приложение службы "базы данных" относятся ко всем базам данных, созданным и используемым приложением службы [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Это включает базы данных конфигурации, предупреждений и временные базы данных.  
 
   
  Если при вводе примеров PowerShell отображается сообщение об ошибке следующего вида:  
   
--   Install-SPRSService: Термин "Install-SPRSService" не распознан как  
+-   термин "Install-SPRSService" не опознан как  
     имя командлета, функции, файла скрипта или действующей программы. Проверьте правильность написания имени, а если включен путь, то проверьте правильность пути и повторите попытку.  
   
  Возникает одна из следующих проблем.  
@@ -70,7 +70,7 @@ ms.locfileid: "68891052"
   
 -   Команда PowerShell была выполнена в Windows PowerShell или Windows PowerShell ISE, а не в оболочке управления SharePoint. Используйте оболочку управления SharePoint или добавьте оснастку SharePoint к окну Windows PowerShell с помощью следующей команды:  
   
-    ```  
+    ```powershell
     Add-PSSnapin Microsoft.SharePoint.PowerShell  
     ```  
   
@@ -91,9 +91,9 @@ ms.locfileid: "68891052"
 ###  <a name="bkmk_sharedservice_cmdlets"></a> Командлеты общей службы и прокси-серверов  
  В следующей таблице содержатся командлеты PowerShell для общей службы SharePoint [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  
   
-|Командлет|Описание|  
+|Командлет|Description|  
 |------------|-----------------|  
-|Install-SPRSService|Устанавливает и регистрирует, либо удаляет общую службу [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Это можно сделать только на компьютере, где имеется установка служб SQL Server [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] в режиме интеграции с SharePoint. При установке выполняются две операции.<br /><br /> 1) [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] служба установлена в ферме.<br /><br /> 2. экземпляр службы устанавливается на текущий компьютер. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]<br /><br /> При удалении выполняются две операции.<br />1) [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] служба удалена с текущего компьютера.<br />2. служба удалена из фермы. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]<br /><br /> <br /><br /> Примечание. Если в ферме есть другие компьютеры, на которых [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] установлена служба, или если на ферме все еще [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] выполняются приложения службы, выводится предупреждающее сообщение.|  
+|Install-SPRSService|Устанавливает и регистрирует, либо удаляет общую службу [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Это можно сделать только на компьютере, где имеется установка служб SQL Server [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] в режиме интеграции с SharePoint. При установке выполняются две операции.<br /><br /> 1) служба [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] установлена в ферме.<br /><br /> 2. экземпляр службы [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] установлен на текущем компьютере.<br /><br /> При удалении выполняются две операции.<br />1) служба [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] удаляется с текущего компьютера.<br />2. Служба [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] удаляется из фермы.<br /><br /> <br /><br /> Примечание. Если в ферме присутствуют другие компьютеры, на которых установлена служба [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , или если в ферме все еще выполняются приложения службы [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , будет отображено предупреждающее сообщение.|  
 |Install-SPRSServiceProxy|Устанавливает и регистрирует или удаляет прокси-сервер службы Reporting Services на ферме SharePoint.|  
 |Get-SPRSProxyUrl|Возвращает URL-адреса для доступа к службе [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .|  
 |Get-SPRSServiceApplicationServers|Возвращает все серверы в локальной ферме SharePoint, на которых имеется установка общей службы [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Этот командлет полезен при обновлении служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , чтобы определить, на каких серверах выполняется общая служба, в связи с чем требуется обновление.|  
@@ -101,10 +101,10 @@ ms.locfileid: "68891052"
 ###  <a name="bkmk_serviceapp_cmdlets"></a> Командлеты приложения службы и прокси-серверов  
  В следующей таблице содержатся командлеты PowerShell для приложений служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] и связанные с ними прокси-серверы.  
   
-|Командлет|Описание|  
+|командлет|Description|  
 |------------|-----------------|  
 |Get-SPRSServiceApplication|Возвращает один или больше объектов служебного приложения [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .|  
-|New-SPRSServiceApplication|Создание нового приложения службы Reporting Services и связанных баз данных.<br /><br /> Параметр LogonType: Указывает, использует ли сервер отчетов учетную запись пула приложений служб SSRS или SQL Server имя входа для доступа к базе данных сервера отчетов. Может принимать одно из следующих значений:<br /><br /> 0 Проверка подлинности Windows<br /><br /> 1 SQL Server<br /><br /> 2 Учетная запись пула приложений (по умолчанию)|  
+|New-SPRSServiceApplication|Создание нового приложения службы Reporting Services и связанных баз данных.<br /><br /> Параметр LogonType указывает, использует ли сервер отчетов учетную запись пула приложений служб SSRS или имя входа SQL Server для доступа к базе данных сервера отчетов. Может принимать одно из следующих значений:<br /><br /> 0 Проверка подлинности Windows<br /><br /> 1 SQL Server<br /><br /> 2 Учетная запись пула приложений (по умолчанию)|  
 |Remove-SPRSServiceApplication|Удаляет указанное приложение службы Reporting Services. Также будут удалены связанные базы данных.|  
 |Set-SPRSServiceApplication|Изменяет свойства существующего приложения службы Reporting Services.|  
 |New-SPRSServiceApplicationProxy|Создание прокси-сервера приложения службы Reporting Services.|  
@@ -121,7 +121,7 @@ ms.locfileid: "68891052"
   
 ###  <a name="bkmk_ssrsfeatures_cmdlets"></a> Командлеты пользовательской функциональности служб Reporting Services  
   
-|Командлет|Описание|  
+|Командлет|Description|  
 |------------|-----------------|  
 |Update-SPRSEncryptionKey|Обновляет ключ шифрования для указанного приложения службы Reporting Services и повторно шифрует его данные.|  
 |Restore-SPRSEncryptionKey|Восстанавливает созданную ранее резервную копию ключа шифрования для приложения службы Reporting Services.|  
@@ -130,42 +130,42 @@ ms.locfileid: "68891052"
 |New-SPRSExtension|Регистрирует новый модуль для работы с приложением службы Reporting Services.|  
 |Set-SPRSExtension|Задает свойства существующего модуля служб Reporting Services.|  
 |Remove-SPRSExtension|Удаляет модуль из приложения службы Reporting Services.|  
-|Get-SPRSExtension|Возвращает одно или несколько расширений служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] для приложения службы [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .<br /><br /> Допустимые значения:<br /><br /> **Клад**<br /><br /> **DeliveryUI**<br /><br /> **Render**<br /><br /> **Data**<br /><br /> **безопасность**<br /><br /> **Authentication**<br /><br /> **евентпроцессинг**<br /><br /> **ReportItems**<br /><br /> **Designer**<br /><br /> **репортитемдесигнер**<br /><br /> **репортитемконвертер**<br /><br /> **репортдефинитионкустомизатион**|  
+|Get-SPRSExtension|Возвращает одно или несколько расширений служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] для приложения службы [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .<br /><br /> Допустимые значения:<br /><br /> **Клад**<br /><br /> **DeliveryUI**<br /><br /> **Render**<br /><br /> **Data**<br /><br /> **безопасность**<br /><br /> **Проверка подлинности**<br /><br /> **евентпроцессинг**<br /><br /> **ReportItems**<br /><br /> **Designer**<br /><br /> **репортитемдесигнер**<br /><br /> **репортитемконвертер**<br /><br /> **репортдефинитионкустомизатион**|  
 |Get-SPRSSite|Возвращает сайты SharePoint с учетом того, включена ли на них функция «ReportingService». По умолчанию возвращаются сайты, на которых включена функция «ReportingService».|  
   
 ##  <a name="bkmk_basic_samples"></a>Основные примеры  
  Возвращает список командлетов, содержащих в названии строку "SPRS". Это будет полный список [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] командлетов.  
   
-```  
+```powershell
 Get-command -noun *SPRS*  
 ```  
   
  Или (немного более подробно) перенаправлены в текстовый файл с именем commandlist.txt  
   
-```  
-Get-command -noun *SPRS* | Select name, definition | Format-List | Out-File c:\commandlist.txt  
+```powershell
+Get-Command -Noun *SPRS* | Select name, definition | Format-List | Out-File c:\commandlist.txt  
 ```  
   
  Установка службы SharePoint [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] и прокси-сервера службы.  
   
-```  
+```powershell
 Install-SPRSService  
 ```  
   
-```  
+```powershell
 Install-SPRSServiceProxy  
 ```  
   
  Запуск служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]  
   
-```  
-get-spserviceinstance -all |where {$_.TypeName -like "SQL Server Reporting*"} | Start-SPServiceInstance  
+```powershell
+Get-SPServiceInstance -all | where {$_.TypeName -like "SQL Server Reporting*"} | Start-SPServiceInstance  
 ```  
   
  Введите следующую команду в консоли управления SharePoint, чтобы получить из файла журнала отфильтрованный список строк. Команда отфильтрует строки, содержащие подстроку "ssrscustomactionerror". В этом примере рассматривается файл журнала, созданный при установке rssharepoint.msi.  
   
-```  
-Get-content -path C:\Users\testuser\AppData\Local\Temp\rs_sp_0.log | select-string "ssrscustomactionerror"  
+```powershell
+Get-Content -Path C:\Users\testuser\AppData\Local\Temp\rs_sp_0.log | Select-String "ssrscustomactionerror"  
 ```  
   
 ##  <a name="bkmk_detailedsamples"></a>Подробные примеры  
@@ -178,9 +178,9 @@ Get-content -path C:\Users\testuser\AppData\Local\Temp\rs_sp_0.log | select-stri
   
 2.  Добавьте прокси-сервер в группу прокси-серверов по умолчанию  
   
-3.  Предоставьте приложению службы доступ к порту 80 базы данных содержимого веб-приложения. В скрипте предполагается http://sitename, что сайт "" уже существует.  
+3.  Предоставьте приложению службы доступ к порту 80 базы данных содержимого веб-приложения. В скрипте предполагается, что сайт "http://sitename" уже существует.  
   
-```  
+```powershell
 # Create service application and service application proxy  
 $appPool = Get-SPServiceApplicationPool "My App Pool"  
 $serviceApp = New-SPRSServiceApplication "My RS Service App" -ApplicationPool $appPool  
@@ -192,50 +192,49 @@ Get-SPServiceApplicationProxyGroup -default | Add-SPServiceApplicationProxyGroup
 # Grant application pool account access to the port 80 web application's content database.  
 $webApp = Get-SPWebApplication "http://sitename"  
 $appPoolAccountName = $appPool.ProcessAccount.LookupName()  
-$webApp.GrantAccessToProcessIdentity($appPoolAccountName)  
-  
+$webApp.GrantAccessToProcessIdentity($appPoolAccountName)
 ```  
   
 ###  <a name="bkmk_example_delivery_extension"></a>Проверка и обновление модуля доставки Reporting Services  
  Следующий пример скрипта PowerShell показывает обновление конфигурации модуля доставки электронной почты сервера отчетов для приложения службы с именем `My RS Service App`. Измените значения для SMTP-сервера (`<email server name>`) и псевдонима FROM электронной почты (`<your FROM email address>`).  
   
-```  
-$app=get-sprsserviceapplication -Name "My RS Service App"  
-$emailCfg = Get-SPRSExtension -identity $app -ExtensionType "Delivery" -name "Report Server Email" | select -ExpandProperty ConfigurationXml   
-$emailXml = [xml]$emailCfg   
+```powershell
+$app = Get-SPRSServiceApplication -Name "My RS Service App"  
+$emailCfg = Get-SPRSExtension -Identity $app -ExtensionType "Delivery" -Name "Report Server Email" | Select -ExpandProperty ConfigurationXml
+$emailXml = [xml]$emailCfg
 $emailXml.SelectSingleNode("//SMTPServer").InnerText = "<email server name>"  
 $emailXml.SelectSingleNode("//SendUsing").InnerText = "2"  
 $emailXml.SelectSingleNode("//SMTPAuthenticate").InnerText = "2"  
 $emailXml.SelectSingleNode("//From").InnerText = '<your FROM email address>'  
-Set-SPRSExtension -identity $app -ExtensionType "Delivery" -name "Report Server Email" -ExtensionConfiguration $emailXml.OuterXml  
+Set-SPRSExtension -Identity $app -ExtensionType "Delivery" -Name "Report Server Email" -ExtensionConfiguration $emailXml.OuterXml  
 ```  
   
  В приведенном выше примере, если точное имя приложения службы не известно, можно было изменить первую инструкцию таким образом, чтобы имя приложения службы возвращалось на основе поиска фрагмента имени. Пример:  
   
-```  
-$app=get-sprsserviceapplication | where {$_.name -like " ssrs_testapp *"}  
+```powershell
+$app = Get-SPRSServiceApplication | Where {$_.name -like " ssrs_testapp *"}  
 ```  
   
  Следующий сценарий вернет текущие значения настройки модулю доставки электронной почты сервера отчетов для служебного приложения под именем "Приложения служб Reporting Services". В ходе первого шага производится задание для переменной $app значения, равного объекту приложения службы с именем «Мое приложение служб RS».  
   
  Во второй инструкции запрашивается значение модуля доставки "электронная почта сервера отчетов" для объекта приложения службы в переменной $app и выбрано configurationXML (XML-файлы конфигурации).  
   
-```  
-$app=get-sprsserviceapplication -Name "Reporting Services Application"  
-Get-SPRSExtension -identity $app -ExtensionType "Delivery" -name "Report Server Email" | select -ExpandProperty ConfigurationXml  
+```powershell
+$app = Get-SPRSServiceapplication -Name "Reporting Services Application"  
+Get-SPRSExtension -Identity $app -ExtensionType "Delivery" -Name "Report Server Email" | Select -ExpandProperty ConfigurationXml  
 ```  
   
  Вы также можете переписать указанные выше два выражения в одно:  
   
-```  
-get-sprsserviceapplication -Name "Reporting Services Application" | Get-SPRSExtension -ExtensionType "Delivery" -name "Report Server Email" | select -ExpandProperty ConfigurationXml  
+```powershell
+Get-SPRSServiceApplication -Name "Reporting Services Application" | Get-SPRSExtension -ExtensionType "Delivery" -Name "Report Server Email" | Select -ExpandProperty ConfigurationXml  
 ```  
   
 ###  <a name="bkmk_example_db_properties"></a>Получение и задание свойств базы данных приложения Reporting Service, например времени ожидания базы данных  
  Следующий пример сначала возвращает список баз данных и параметров, чтобы вы могли определить guid базы данных (идентификатор), который вы затем предоставите для настройки команды. Полный список параметров смотрите в `Get-SPRSDatabase | format-list`.  
   
-```  
-get-SPRSDatabase | select id, querytimeout,connectiontimeout, status, server, ServiceInstance   
+```powershell
+Get-SPRSDatabase | Select id, querytimeout,connectiontimeout, status, server, ServiceInstance
 ```  
   
  Следующий пример является примеров вывода. Определите идентификатор для базы данных, которую вы хотите изменить и используйте идентификатор в SET cmdlet.  
@@ -252,25 +251,25 @@ get-SPRSDatabase | select id, querytimeout,connectiontimeout, status, server, Se
   
      `ServiceInstance   : SPDatabaseServiceInstance`  
   
-```  
-Set-SPRSDatabase -identity 56f8d1bc-cb04-44cf-bd41-a873643c5a14 -QueryTimeout 300  
+```powershell
+Set-SPRSDatabase -Identity 56f8d1bc-cb04-44cf-bd41-a873643c5a14 -QueryTimeout 300  
 ```  
   
  Чтобы убедиться в том, что значение установлено, снова запустите GET cmdlet.  
   
-```  
-Get-SPRSDatabase -identity 56f8d1bc-cb04-44cf-bd41-a873643c5a14 | select id, querytimeout,connectiontimeout, status, server, ServiceInstance  
+```powershell
+Get-SPRSDatabase -Identity 56f8d1bc-cb04-44cf-bd41-a873643c5a14 | Select id, querytimeout,connectiontimeout, status, server, ServiceInstance  
 ```  
   
 ###  <a name="bkmk_example_list_data_extensions"></a>Список расширений данных служб Reporting Services — режим интеграции с SharePoint  
  В примере ниже циклически опрашивается каждое приложение службы [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , выводится список текущих данных модулей обработки для каждого приложения.  
   
-```  
+```powershell
 $apps = Get-SPRSServiceApplication  
-foreach ($app in $apps)   
+foreach ($app in $apps)
 {  
 Write-host -ForegroundColor "yellow" Service App Name $app.Name  
-Get-SPRSExtension -identity $app -ExtensionType "Data" | select name,extensiontype | Format-Table -AutoSize  
+Get-SPRSExtension -identity $app -ExtensionType "Data" | select name, extensiontype | Format-Table -AutoSize  
 }  
 ```  
   
@@ -301,10 +300,8 @@ Get-SPRSExtension -identity $app -ExtensionType "Data" | select name,extensionty
 ###  <a name="bkmk_change_subscription_owner"></a>Изменение и перечисление владельцев подписок  
  См. раздел [Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription](subscriptions/manage-subscription-owners-and-run-subscription-powershell.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также статью  
  [Использование PowerShell для смены и перечисления владельцев подписок служб Reporting Services и запуска подписки](subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)   
- [Списке Использование PowerShell для проверки PowerPivot для SharePoint](https://docs.microsoft.com/analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint)   
- [Скрипты PowerShell для управления SharePoint CodePlex](http://sharepointpsscripts.codeplex.com/)   
+ [Контрольный список: использование PowerShell для проверки PowerPivot для SharePoint](https://docs.microsoft.com/analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint)    
+ [Скрипты PowerShell для управления SharePoint CodePlex](http://sharepointpsscripts.codeplex.com/)    
  [Администрирование служб SSRS с помощью PowerShell](https://curatedviews.cloudapp.net/13107/how-to-administer-ssrs-using-powershell)  
-  
-  
