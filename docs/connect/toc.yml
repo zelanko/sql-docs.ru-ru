@@ -1,7 +1,7 @@
 - name: Программирование для взаимодействия с SQL Server
   href: ../connect/homepage-sql-connection-programming.md
 - name: Вас приветствует SQL Server >
-  href: ../sql-server/sql-server-technical-documentation.md?toc=../toc.json
+  href: ../sql-server/index.yml
 - name: Драйверы для SQL Server
   href: ../connect/sql-connection-libraries.md
 - name: Журнал драйвера SQL Server

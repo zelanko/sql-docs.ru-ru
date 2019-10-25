@@ -1,7 +1,7 @@
 - name: "Документация по Службам машинного обучения SQL\_Server"
   href: ../advanced-analytics/index.yml
 - name: Вас приветствует SQL Server >
-  href: ../sql-server/sql-server-technical-documentation.md?toc=../toc.json
+  href: ../sql-server/index.yml
 - name: Обзор
   expanded: true
   items:
