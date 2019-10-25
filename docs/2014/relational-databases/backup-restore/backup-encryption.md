@@ -10,12 +10,12 @@ ms.assetid: 334b95a8-6061-4fe0-9e34-b32c9f1706ce
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6e007dfaf2e14b488fb538f6b0c0ad958988a4c0
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 177eef6f6280e236106f9ec67684e4a15ef479a3
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70154844"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72783075"
 ---
 # <a name="backup-encryption"></a>Шифрование резервной копии
   В этом разделе приводится общее описание параметров шифрования для резервного копирования [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Он содержит сведения об использовании, преимуществах и рекомендациях для шифрования при резервном копировании.  
@@ -26,14 +26,14 @@ ms.locfileid: "70154844"
   
  Для шифрования резервной копии необходимо указать алгоритм шифрования и шифратор для защиты ключа шифрования. Поддерживаются следующие варианты шифрования:  
   
--   **Алгоритм шифрования:** поддерживаются следующие алгоритмы шифрования: AES 128, AES 192, AES 256 и Triple DES.  
+-   **Алгоритм шифрования.** Поддерживаются следующие алгоритмы шифрования: AES 128, AES 192, AES 256 и Triple DES.  
   
--   **Шифратор:** сертификат или асимметричный ключ.  
+-   **Шифратор.** сертификат или асимметричный ключ.  
   
 > [!CAUTION]  
 >  Очень важно создать резервную копию сертификата или асимметричного ключа и предпочтительно в ином местоположении, чем зашифрованный ими файл резервной копии. Без сертификата или асимметричного ключа резервную копию нельзя будет восстановить, т. е. файл резервной копии будет непригоден для использования.  
   
- **Восстановление из зашифрованной резервной копии**. Восстановление SQL Server не требует указания никаких параметров шифрования во время восстановления. Для него требуется, чтобы сертификат или асимметричный ключ, использованный при шифровании файла резервной копии, был доступен в экземпляре, на который производится восстановление. Учетная запись пользователя, выполняющего восстановление, должна иметь разрешения `VIEW DEFINITION` на сертификат или ключ. Если зашифрованная резервная копия восстанавливается на другой экземпляр, необходимо убедиться, что сертификат доступен на этом экземпляре.  
+ **Восстановление из зашифрованной резервной копии.** Восстановление SQL Server не требует указания никаких параметров шифрования во время восстановления. Для него требуется, чтобы сертификат или асимметричный ключ, использованный при шифровании файла резервной копии, был доступен в экземпляре, на который производится восстановление. Учетная запись пользователя, выполняющего восстановление, должна иметь разрешения `VIEW DEFINITION` на сертификат или ключ. Если зашифрованная резервная копия восстанавливается на другой экземпляр, необходимо убедиться, что сертификат доступен на этом экземпляре.  
   
  При восстановлении резервной копии из базы данных c прозрачным шифрованием сертификат TDE должен быть доступен на экземпляре, на который производится восстановление.  
   
@@ -50,10 +50,10 @@ ms.locfileid: "70154844"
 5.  Ключи шифрования можно интегрировать с поставщиками расширенного управления ключами (EKM).  
   
   
-##  <a name="Prerequisites"></a> Предварительные требования  
+##  <a name="Prerequisites"></a> предварительные требования  
  Предварительные требования, обязательные для шифрования резервной копии:  
   
-1.  **Создайте главный ключ базы данных для базы данных master**. Главный ключ базы данных — это симметричный ключ, который применяется для защиты закрытых ключей сертификатов и асимметричный ключей, которые есть в базе данных. Дополнительные сведения см. в разделе [Ключи шифрования базы данных и SQL Server (компонент Database Engine)](../security/encryption/sql-server-and-database-encryption-keys-database-engine.md).  
+1.  **Создайте главный ключ базы данных для БД master** . Главный ключ базы данных — это симметричный ключ, который применяется для защиты закрытых ключей сертификатов и асимметричных ключей, которые есть в базе данных. Дополнительные сведения см. в разделе [Ключи шифрования базы данных и SQL Server (компонент Database Engine)](../security/encryption/sql-server-and-database-encryption-keys-database-engine.md).  
   
 2.  Создайте сертификат или асимметричный ключ для шифрования резервной копии. Дополнительные сведения о создании сертификата см. в разделе [CREATE CERTIFICATE (Transact-SQL)](/sql/t-sql/statements/create-certificate-transact-sql). Дополнительные сведения о создании асимметричного ключа см. в разделе [CREATE ASYMMETRIC KEY (Transact-SQL)](/sql/t-sql/statements/create-asymmetric-key-transact-sql).  
   
@@ -72,7 +72,7 @@ ms.locfileid: "70154844"
 -   Присоединение к существующему резервному набору данных для зашифрованных резервных копий не поддерживается.  
   
   
-##  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> Разрешения  
  **Для шифрования резервной копии или восстановления из зашифрованной резервной копии требуется следующее:**  
   
  Разрешение `VIEW DEFINITION` на сертификат или асимметричный ключ, используемый для шифрования резервной копии базы данных.  
@@ -93,7 +93,7 @@ ms.locfileid: "70154844"
 ### <a name="using-transact-sql"></a>Использование Transact-SQL  
  Ниже приведен пример инструкции Transact-SQL для шифрования файла резервной копии.  
   
-```  
+```sql
 BACKUP DATABASE [MYTestDB]  
 TO DISK = N'C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Backup\MyTestDB.bak'  
 WITH  
@@ -104,8 +104,7 @@ WITH
    SERVER CERTIFICATE = BackupEncryptCert  
    ),  
   STATS = 10  
-GO  
-  
+GO
 ```  
   
  Полный синтаксис инструкции Transact-SQL см. в разделе [BACKUP (Transact-SQL)](/sql/t-sql/statements/backup-transact-sql).  
@@ -113,12 +112,9 @@ GO
 ### <a name="using-powershell"></a>Использование PowerShell  
  В этом примере создаются параметры шифрования, которые используются в качестве значения параметра в командлете **Backup-SqlDatabase** для создания зашифрованной резервной копии.  
   
-```  
-C:\PS>$encryptionOption = New-SqlBackupEncryptionOption -Algorithm Aes256 -EncryptorType ServerCertificate -EncryptorName "BackupCert"  
-```  
-  
-```  
-C:\PS>Backup-SqlDatabase -ServerInstance . -Database "MyTestDB" -BackupFile "MyTestDB.bak" -CompressionOption On -EncryptionOption $encryptionOption  
+```powershell
+$encryptionOption = New-SqlBackupEncryptionOption -Algorithm Aes256 -EncryptorType ServerCertificate -EncryptorName "BackupCert"  
+Backup-SqlDatabase -ServerInstance . -Database "MyTestDB" -BackupFile "MyTestDB.bak" -CompressionOption On -EncryptionOption $encryptionOption  
 ```  
   
 ##  <a name="RecommendedPractices"></a> Рекомендации  
@@ -132,13 +128,13 @@ C:\PS>Backup-SqlDatabase -ServerInstance . -Database "MyTestDB" -BackupFile "MyT
   
 ##  <a name="RelatedTasks"></a> Связанные задачи  
   
-|Раздел или задача|Описание|  
+|Раздел или задача|Description|  
 |-----------------|-----------------|  
 |[Создание зашифрованной резервной копии](create-an-encrypted-backup.md)|Описывает основные шаги, которые необходимо выполнить, чтобы создать зашифрованную резервную копию.|  
 |[SQL Server управляемого резервного копирования в Azure — параметры хранения и хранения](../../database-engine/sql-server-managed-backup-to-windows-azure-retention-and-storage-settings.md)|Описывает основные шаги, необходимые для настройки [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] с указанием параметров шифрования.|  
-|[Расширенное управление ключами с помощью хранилища ключей Azure (SQL Server)](../security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)|Предоставлен пример создания зашифрованной резервной копии, защищенной ключами в хранилище ключей Azure.|  
+|[Расширенное управление ключами с помощью хранилища ключей Azure &#40;SQL Server&#41;](../security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)|Предоставлен пример создания зашифрованной резервной копии, защищенной ключами в хранилище ключей Azure.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также статью  
  [Общие сведения о резервном копировании (SQL Server)](backup-overview-sql-server.md)  
   
   
