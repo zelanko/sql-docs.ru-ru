@@ -24,12 +24,12 @@ ms.assetid: 51352afc-a0a4-428b-8985-f9e58bb57c31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 395b2ea5647560b141d93ef2ba4e1a26b81b042a
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 27dfa9f596d63021eb5f22b2e0b25a306e7fa2b5
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893134"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798218"
 ---
 # <a name="manage-job-steps"></a>Управление шагами задания
   Шаг задания — это действие, производимое заданием над базой данных или сервером. Каждое задание должно иметь, по крайней мере, один шаг. Шагами задания могут быть:  
@@ -101,12 +101,12 @@ ms.locfileid: "68893134"
   
 -   Существующий файл скрипта PowerShell.  
   
- Подсистема агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell открывает сеанс PowerShell и загружает оснастки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell. Скрипт PowerShell, используемый в качестве команды для шага задания, может обращаться к поставщику [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell и командлетам. Дополнительные сведения о написании скриптов PowerShell с помощью оснасток [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell см. в разделе [SQL Server PowerShell](../../powershell/sql-server-powershell.md).  
+ Подсистема PowerShell [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent открывает сеанс PowerShell и загружает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] оснастки PowerShell. Сценарий PowerShell, используемый в качестве команды шага задания, может ссылаться на поставщик [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и командлеты PowerShell. Дополнительные сведения о написании скриптов PowerShell с помощью оснасток [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell см. в разделе [SQL Server PowerShell](../../powershell/sql-server-powershell.md).  
   
 ## <a name="activex-scripting-job-steps"></a>Шаги задания скрипта ActiveX  
   
 > [!IMPORTANT]  
->  Шаг задания скрипта ActiveX будет удален из агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в следующей версии [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется.  
+>  Шаг задания скрипта ActiveX будет удален из агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в следующей версии [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Избегайте использовать этот компонент в новых разработках и запланируйте изменение существующих приложений, в которых он применяется.  
   
  При создании шага задания скрипта ActiveX необходимо:  
   
@@ -128,8 +128,7 @@ oServer.LoginSecure = True
 oServer.Connect "(local)"  
 'Disconnect and destroy the server object  
 oServer.DisConnect  
-Set oServer = nothing  
-  
+Set oServer = nothing
 ```  
   
 ## <a name="replication-job-steps"></a>Шаги задания репликации  
@@ -166,7 +165,7 @@ Set oServer = nothing
   
 -   Ввести инструкцию, которую необходимо выполнить. Эта инструкция должна быть запросом многомерных выражений (MDX).  
   
- Дополнительные сведения о многомерных выражениях см. в разделе [основные принципы запросов многомерных &#40;выражений Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services).  
+ Дополнительные сведения о многомерных выражениях см. в разделе [основные принципы запросов многомерных выражений &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services).  
   
 ## <a name="integration-services-packages"></a>Пакеты служб Integration Services  
  При создании шага задания с пакетом служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] необходимо выполнить следующее.  
@@ -195,24 +194,22 @@ Set oServer = nothing
   
  Дополнительные сведения о создании шагов заданий, которые выполняют пакеты служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , см. в разделе [Пакеты служб из заданий агента SQL Server](../../integration-services/packages/sql-server-agent-jobs-for-packages.md).  
   
-## <a name="related-tasks"></a>Связанные задачи  
+## <a name="related-tasks"></a>Related Tasks  
   
 |||  
 |-|-|  
-|**Описание**|**Раздел**|  
+|**Description**|**Раздел**|  
 |Описывает создание шага задания с помощью исполняемой программы.|[Создание шага задания «CmdExec»](create-a-cmdexec-job-step.md)|  
 |Описывает, как сбросить разрешения агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|[Настройка пользователя для создания заданий агента SQL Server и управления заданиями](configure-a-user-to-create-and-manage-sql-server-agent-jobs.md)|  
 |Описывает создание шага задания [!INCLUDE[tsql](../../includes/tsql-md.md)] .|[Create a Transact-SQL Job Step](create-a-transact-sql-job-step.md)|  
-|Описывает определение параметров для шагов заданий Transact-SQL агента Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|[Define Transact-SQL Job Step Options](define-transact-sql-job-step-options.md)|  
+|Описывает определение параметров для шагов заданий Transact-SQL агента Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|[Определение параметров шага задания Transact-SQL](define-transact-sql-job-step-options.md)|  
 |Описывает создание шага задания скрипта ActiveX.|[Create an ActiveX Script Job Step](create-an-activex-script-job-step.md)|  
-|Описывает процесс создания и определения шагов заданий агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , выполняющих команды и запросы служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Analysis Services.|[Create an Analysis Services Job Step](create-an-analysis-services-job-step.md)|  
+|Описывает процесс создания и определения шагов заданий агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , выполняющих команды и запросы служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Analysis Services.|[Создание шага задания служб Analysis Services](create-an-analysis-services-job-step.md)|  
 |Описывает, какое действие будет выполнять [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , если при выполнении задания происходит ошибка.|[Настройка потока действий системы при успешном или неуспешном выполнении шага задания](set-job-step-success-or-failure-flow.md)|  
 |Описывает, как просмотреть сведения о шаге задания в окне «Свойства шага задания».|[Просмотр сведений о шаге задания](view-job-step-information.md)|  
-|Описывает, как удалить журнал шага задания агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|[Delete a Job Step Log](delete-a-job-step-log.md)|  
+|Описывает, как удалить журнал шага задания агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|[Удаление журнала шага задания](delete-a-job-step-log.md)|  
   
-## <a name="see-also"></a>См. также  
- [dbo. таблицу sysjobstepslogs &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-tables/dbo-sysjobstepslogs-transact-sql)   
+## <a name="see-also"></a>См. также статью  
+  [Transact- &#40;SQL&#41; в dbo. таблицу sysjobstepslogs](/sql/relational-databases/system-tables/dbo-sysjobstepslogs-transact-sql)  
  [Создание заданий](create-jobs.md)   
  [sp_add_job (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-add-job-transact-sql)  
-  
-  

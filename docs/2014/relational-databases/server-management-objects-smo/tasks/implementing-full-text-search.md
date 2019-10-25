@@ -1,5 +1,5 @@
 ---
-title: Реализация Full-Text Search | Документация Майкрософт
+title: Реализация полнотекстового поиска | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,27 +12,27 @@ ms.assetid: 9ce9ad9c-f671-4760-90b5-e0c8ca051473
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b320f5a2b0ba1a7de4e348b3ba8877ef83714209
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6ddc3521031f34f179cdfef08abf178f21f5f47e
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63226233"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72796723"
 ---
 # <a name="implementing-full-text-search"></a>Реализация полнотекстового поиска
-  Полнотекстовый поиск доступен для отдельных экземпляров [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и представлен в SMO объектом <xref:Microsoft.SqlServer.Management.Smo.Server.FullTextService%2A>. Объект <xref:Microsoft.SqlServer.Management.Smo.FullTextService> размещен в объекте `Server`. Он используется для управления параметрами конфигурации для [!INCLUDE[msCoName](../../../includes/msconame-md.md)] службы полнотекстового поиска. Объект <xref:Microsoft.SqlServer.Management.Smo.FullTextCatalogCollection> принадлежит объекту <xref:Microsoft.SqlServer.Management.Smo.Database> и является коллекцией объектов <xref:Microsoft.SqlServer.Management.Smo.FullTextCatalog>, представляющих полнотекстовые каталоги, определенные в базе данных. Для каждой таблицы можно определить только один полнотекстовый индекс (в отличие от обычных индексов). Индекс представлен объектом <xref:Microsoft.SqlServer.Management.Smo.FullTextIndexColumn> в объекте <xref:Microsoft.SqlServer.Management.Smo.Table>.  
+  Полнотекстовый поиск доступен для отдельных экземпляров [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и представлен в SMO объектом <xref:Microsoft.SqlServer.Management.Smo.Server.FullTextService%2A>. Объект <xref:Microsoft.SqlServer.Management.Smo.FullTextService> размещен в объекте `Server`. Он используется для управления параметрами конфигурации [!INCLUDE[msCoName](../../../includes/msconame-md.md)] службы полнотекстового поиска. Объект <xref:Microsoft.SqlServer.Management.Smo.FullTextCatalogCollection> принадлежит объекту <xref:Microsoft.SqlServer.Management.Smo.Database> и является коллекцией объектов <xref:Microsoft.SqlServer.Management.Smo.FullTextCatalog>, представляющих полнотекстовые каталоги, определенные в базе данных. Для каждой таблицы можно определить только один полнотекстовый индекс (в отличие от обычных индексов). Индекс представлен объектом <xref:Microsoft.SqlServer.Management.Smo.FullTextIndexColumn> в объекте <xref:Microsoft.SqlServer.Management.Smo.Table>.  
   
  Чтобы создать службу полнотекстового поиска, необходимо иметь полнотекстовый каталог, определенный в базе данных, и индекс полнотекстового поиска, определенный на одной из таблиц в базе данных.  
   
  Сначала создайте полнотекстовый каталог для базы данных, вызвав конструктор <xref:Microsoft.SqlServer.Management.Smo.FullTextCatalog> и указав имя каталога. Затем создайте полнотекстовый индекс, вызвав конструктор и указав таблицу, по которой он будет создан. Затем для полнотекстового индекса можно добавить столбцы индекса с помощью объекта <xref:Microsoft.SqlServer.Management.Smo.FullTextIndexColumn>, указав имя столбца в таблице. Потом укажите в свойстве <xref:Microsoft.SqlServer.Management.Smo.FullTextIndex.CatalogName%2A> путь к созданному каталогу. Наконец, вызовите метод <xref:Microsoft.SqlServer.Management.Smo.FullTextIndex.Create%2A> и создайте полнотекстовый индекс для экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="example"></a>Пример  
- Чтобы использовать какой-либо из представленных примеров кода, нужно выбрать среду, шаблон и язык программирования, с помощью которых будет создаваться приложение. Дополнительные сведения см. в разделе [Создание проекта SMO на Visual Basic в Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) или [Visual C создайте&#35; проекта SMO в Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Чтобы использовать какой-либо из представленных примеров кода, нужно выбрать среду, шаблон и язык программирования, с помощью которых будет создаваться приложение. Дополнительные сведения см. в статьях [Создание проекта Visual Basic SMO в Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) или [Создание проекта Visual&#35; C SMO в Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="creating-a-full-text-search-service-in-visual-basic"></a>Создание службы полнотекстового поиска на языке Visual Basic  
  В этом примере кода создается каталог полнотекстового поиска для таблицы `ProductCategory` в образце базы данных [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)]. Затем создается индекс полнотекстового поиска на столбце имен в таблице `ProductCategory`. Для индекса полнотекстового поиска необходимо, чтобы для столбца уже был определен уникальный индекс.  
   
-```  
+```vb
 ' compile with:   
 ' /r:Microsoft.SqlServer.SqlEnum.dll   
 ' /r:Microsoft.SqlServer.Smo.dll   
@@ -92,7 +92,7 @@ End Class
 ## <a name="creating-a-full-text-search-service-in-visual-c"></a>Создание службы полнотекстового поиска на языке Visual C#  
  В этом примере кода создается каталог полнотекстового поиска для таблицы `ProductCategory` в образце базы данных [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)]. Затем создается индекс полнотекстового поиска на столбце имен в таблице `ProductCategory`. Для индекса полнотекстового поиска необходимо, чтобы для столбца уже был определен уникальный индекс.  
   
-```  
+```csharp
 // compile with:   
 // /r:Microsoft.SqlServer.SqlEnum.dll   
 // /r:Microsoft.SqlServer.Smo.dll   
@@ -152,33 +152,33 @@ public class A {
 ## <a name="creating-a-full-text-search-service-in-powershell"></a>Создание службы полнотекстового поиска в PowerShell  
  В этом примере кода создается каталог полнотекстового поиска для таблицы `ProductCategory` в образце базы данных [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)]. Затем создается индекс полнотекстового поиска на столбце имен в таблице `ProductCategory`. Для индекса полнотекстового поиска необходимо, чтобы для столбца уже был определен уникальный индекс.  
   
-```  
+```powershell
 # Example of implementing a full text search on the default instance.  
 # Set the path context to the local, default instance of SQL Server and database tables  
   
 CD \sql\localhost\default\databases  
-$db = get-item AdventureWorks2012  
+$db = Get-Item AdventureWorks2012  
   
 CD AdventureWorks\tables  
   
 #Get a reference to the table  
-$tb = get-item Production.ProductCategory  
+$tb = Get-Item Production.ProductCategory  
   
 # Define a FullTextCatalog object variable by specifying the parent database and name arguments in the constructor.  
   
-$ftc = New-Object -TypeName Microsoft.SqlServer.Management.SMO.FullTextCatalog -argumentlist $db, "Test_Catalog2"  
+$ftc = New-Object -TypeName Microsoft.SqlServer.Management.SMO.FullTextCatalog -ArgumentList $db, "Test_Catalog2"  
 $ftc.IsDefault = $true  
   
 # Create the Full Text Search catalog on the instance of SQL Server.  
 $ftc.Create()  
   
 # Define a FullTextIndex object variable by supplying the parent table argument in the constructor.  
-$fti = New-Object -TypeName Microsoft.SqlServer.Management.SMO.FullTextIndex -argumentlist $tb  
+$fti = New-Object -TypeName Microsoft.SqlServer.Management.SMO.FullTextIndex -ArgumentList $tb  
   
-#  Define a FullTextIndexColumn object variable by supplying the parent index   
+#  Define a FullTextIndexColumn object variable by supplying the parent index
 #  and column name arguments in the constructor.  
   
-$ftic = New-Object -TypeName Microsoft.SqlServer.Management.SMO.FullTextIndexColumn -argumentlist $fti, "Name"  
+$ftic = New-Object -TypeName Microsoft.SqlServer.Management.SMO.FullTextIndexColumn -ArgumentList $fti, "Name"  
   
 # Add the indexed column to the index.  
 $fti.IndexedColumns.Add($ftic)  
@@ -195,5 +195,3 @@ $fti.CatalogName = "Test_Catalog2"
 # Create the Full Text Search Index  
 $fti.Create()  
 ```  
-  
-  

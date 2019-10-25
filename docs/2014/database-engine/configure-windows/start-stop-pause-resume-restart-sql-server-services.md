@@ -1,5 +1,5 @@
 ---
-title: Запуск, остановка, приостановка, возобновление и перезапуск ядра СУБД, агента SQL Server и служба обозревателя SQL Server | Документация Майкрософт
+title: Запуск, остановка, приостановка, возобновление и перезапуск ядро СУБД, агент SQL Server или службы обозреватель SQL Server | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -40,15 +40,15 @@ ms.assetid: 32660a02-e5a1-411a-9e57-7066ca459df6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 341640e4aff44fbc14c85f61b5a98246f857538a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 11d146144a05c9185a360b2791f9e162a94ff59a
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62808753"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72797953"
 ---
 # <a name="start-stop-pause-resume-restart-the-database-engine-sql-server-agent-or-sql-server-browser-service"></a>Запуск, остановка, приостановка, возобновление и перезапуск компонента Database Engine, агента SQL и службы браузера SQL Server
-  В этом разделе описывается, как запустить, остановить, приостановить, возобновить или перезапустить [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] агент, или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] служба браузера с помощью [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], **net** команды из командной строки, [!INCLUDE[tsql](../../includes/tsql-md.md)], или PowerShell.  
+  В этом разделе описывается запуск, остановка, приостановка, возобновление или перезапуск [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] браузера с помощью [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], команды **net** из командной строки [!INCLUDE[tsql](../../includes/tsql-md.md)]или PowerShell.  
   
 -   **Перед началом:**  
   
@@ -62,7 +62,7 @@ ms.locfileid: "62808753"
   
     -   [Диспетчер конфигурации SQL Server](#SSCMProcedure)  
   
-    -   [Среда SQL Server Management Studio](#SSMSProcedure)  
+    -   [Среда Среда SQL Server Management Studio](#SSMSProcedure)  
   
     -   [Команды NET из окна командной строки](#CommandPrompt)  
   
@@ -114,10 +114,10 @@ ms.locfileid: "62808753"
   
 ###  <a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Разрешения  
  По умолчанию только участники локальной группы «Администраторы» могут запускать, останавливать, приостанавливать, возобновлять или перезапускать службу. При необходимости предоставить возможность управления службой для пользователей, не обладающих правами администратора, см. раздел [Как предоставить пользователям права для управления службами в Windows Server 2003](https://support.microsoft.com/kb/325349). (Процесс такой же, как и в других версиях Windows.)  
   
- Остановка [!INCLUDE[ssDE](../../includes/ssde-md.md)] с помощью [!INCLUDE[tsql](../../includes/tsql-md.md)] `SHUTDOWN` команды необходимо быть членом **sysadmin** или **serveradmin** предопределенных ролей сервера и не предназначена для передачи.  
+ Остановка [!INCLUDE[ssDE](../../includes/ssde-md.md)] с помощью команды [!INCLUDE[tsql](../../includes/tsql-md.md)]`SHUTDOWN` требует членства в предопределенных ролях сервера **sysadmin** или **serveradmin** и не может быть передана.  
   
 ##  <a name="SSCMProcedure"></a> С помощью диспетчера конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
@@ -264,7 +264,7 @@ ms.locfileid: "62808753"
     SHUTDOWN WITH NOWAIT;   
     ```  
   
- Дополнительные сведения о `SHUTDOWN` инструкции, см. в разделе [завершение работы &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/shutdown-transact-sql).  
+ Дополнительные сведения об инструкции `SHUTDOWN` см. в разделе [Shutdown &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/shutdown-transact-sql).  
   
 ##  <a name="PowerShellProcedure"></a> Использование PowerShell  
   
@@ -281,8 +281,7 @@ ms.locfileid: "62808753"
     ```powershell  
     # Get a reference to the ManagedComputer class.  
     CD SQLSERVER:\SQL\computername  
-    $Wmi = (get-item .).ManagedComputer  
-  
+    $Wmi = (Get-Item .).ManagedComputer
     ```  
   
 3.  Определите службу, которую нужно остановить или запустить. Выберите одну из следующих строк. Замените `instancename` именем именованного экземпляра.  
@@ -338,8 +337,6 @@ ms.locfileid: "62808753"
     $DfltInstance  
     ```  
   
-## <a name="see-also"></a>См. также  
- [Запуск SQL Server с минимальной конфигурацией](start-sql-server-with-minimal-configuration.md)   
+## <a name="see-also"></a>См. также статью  
+ [Запустите SQL Server с минимальной конфигурацией](start-sql-server-with-minimal-configuration.md)   
  [Возможности, поддерживаемые различными выпусками SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)  
-  
-  

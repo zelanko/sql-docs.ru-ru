@@ -19,25 +19,25 @@ ms.assetid: 13aabe2d-67fe-4c67-8d49-2928dd705b7a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5a001509cba1ef02182963fd8d8f8946f95321ef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 744ebc5411e626c083676440502489029e888a28
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62659842"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798194"
 ---
 # <a name="make-a-target-server"></a>Создание целевого сервера
   В этом разделе описывается создание целевого сервера в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]или управляющих объектов SQL Server (SMO).  
   
  **В этом разделе**  
   
--   **Перед началом работы**  
+-   **Перед началом:**  
   
      [безопасность](#Security)  
   
 -   **Для создания целевого сервера используется:**  
   
-     [Среда SQL Server Management Studio](#SSMSProcedure)  
+     [Среда Среда SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -48,7 +48,7 @@ ms.locfileid: "62659842"
 ###  <a name="Security"></a> безопасность  
  Распределенные задания, имеющие связанные с учетной записью-посредником шаги, выполняются в контексте учетной записи-посредника на целевом сервере. Убедитесь в том, что выполняются нижеприведенные условия, либо в том, что шаги заданий, связанные с учетной записью-посредником, не будут загружаться с главного сервера на целевой:  
   
--   Подраздел реестра главного сервера **\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<*имя_экземпляра*> \SQL Server Agent\AllowDownloadedJobsToMatchProxyName**  (REG_DWORD) имеет значение 1 (true). По умолчанию для него задается значение 0 (false).  
+-   Подраздел реестра главного сервера **\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<*имя_экземпляра*> \SQL Server Agent\AllowDownloadedJobsToMatchProxyName** (REG_DWORD) имеет значение 1 (true). По умолчанию для него задается значение 0 (false).  
   
 -   На целевом сервере есть учетная запись-посредник. Ее имя совпадает с именем учетной записи-посредника на главном сервере, под которой выполняется шаг задания.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "62659842"
   
      Чтобы устранить эту ошибку, убедитесь, что на целевом сервере есть учетная запись-посредник, имя которой совпадает с именем посреднической учетной записи на главном сервере, под которой выполняется шаг задания.  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Разрешения  
  По умолчанию разрешения на выполнение этой процедуры предоставляются членам предопределенной роли сервера `sysadmin`.  
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
@@ -92,11 +92,11 @@ ms.locfileid: "62659842"
   
 1.  Установите соединение с компонентом [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
-2.  На панели «Стандартная» нажмите **Создать запрос**.  
+2.  На панели "Стандартная" нажмите **Создать запрос**.  
   
 3.  Скопируйте следующий пример в окно запроса и нажмите кнопку **Выполнить**. В этом примере текущий сервер прикрепляется к главному серверу AdventureWorks1. Расположение текущего сервера: строение 21, комната 309, стойка 5.  
   
-    ```  
+    ```sql
     USE msdb ;  
     GO  
   
@@ -105,11 +105,9 @@ ms.locfileid: "62659842"
     GO;  
     ```  
   
-     Дополнительные сведения см. в разделе [sp_msx_enlist &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-msx-enlist-transact-sql).  
+     Дополнительные сведения см. в [разделе &#40;SP_MSX_ENLIST Transact-&#41;SQL](/sql/relational-databases/system-stored-procedures/sp-msx-enlist-transact-sql).  
   
-##  <a name="PowerShellProcedure"></a> Использование управляющих объектов SQL Server (SMO)  
+##  <a name="PowerShellProcedure"></a>Использование управляющие объекты SQL Server (SMO)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также статью  
  [Автоматизация администрирования в масштабах предприятия](automated-administration-across-an-enterprise.md)  
-  
-  

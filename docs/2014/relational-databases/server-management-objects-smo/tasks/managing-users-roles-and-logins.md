@@ -1,5 +1,5 @@
 ---
-title: Управление пользователями, ролями и имена входа | Документация Майкрософт
+title: Управление пользователями, ролями и именами входа | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,12 +14,12 @@ ms.assetid: 74e411fa-74ed-49ec-ab58-68c250f2280e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9bac188dcc6eb26c1bca77ec292a096f4eac2f35
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 86b67202537e650619f835e9c64d2c35a8e78fc2
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63226178"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72796606"
 ---
 # <a name="managing-users-roles-and-logins"></a>Управление пользователями, ролями и именами входа
   В SMO имена входа представлены объектом <xref:Microsoft.SqlServer.Management.Smo.Login>. Если имя входа существует в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], его можно добавить в роль сервера. Роль сервера представлена объектом <xref:Microsoft.SqlServer.Management.Smo.ServerRole>. Роль базы данных представлена объектом <xref:Microsoft.SqlServer.Management.Smo.DatabaseRole>, а роль приложения представлена объектом <xref:Microsoft.SqlServer.Management.Smo.ApplicationRole>.  
@@ -31,7 +31,7 @@ ms.locfileid: "63226178"
  В базах данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] также есть роли, которые определяют набор прав доступа уровня базы данных, позволяющих пользователям выполнять определенные задачи. В отличие от ролей сервера, роли базы данных не являются фиксированными. Их можно создавать, изменять и удалять. Права доступа и пользователей можно назначать роли базы данных для пакетного администрирования.  
   
 ## <a name="example"></a>Пример  
- В следующем примере кода для создания приложения необходимо выбрать среду программирования, шаблон программирования и язык программирования. Дополнительные сведения см. в разделе [Создание проекта SMO на Visual Basic в Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) и [Visual C создайте&#35; проекта SMO в Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ В следующем примере кода для создания приложения необходимо выбрать среду программирования, шаблон программирования и язык программирования. Дополнительные сведения см. в статьях [Создание проекта Visual Basic SMO в Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) и [Создание проекта Visual&#35; C SMO в Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="enumerating-logins-and-associated-users-in-visual-basic"></a>Перечисление имен входа и связанных пользователей на языке Visual Basic  
  Каждый пользователь базы данных связан с именем входа. Имя входа может быть связано с пользователями в нескольких базах данных. В этом примере кода показан вызов метода <xref:Microsoft.SqlServer.Management.Smo.Login.EnumDatabaseMappings%2A> объекта <xref:Microsoft.SqlServer.Management.Smo.Login> для перечисления всех пользователей базы данных, связанных с именем входа. В примере создается имя входа и пользователь в базе данных [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] , чтобы обеспечить сведения о сопоставлении для перечисления.  
@@ -41,7 +41,7 @@ ms.locfileid: "63226178"
 ## <a name="enumerating-logins-and-associated-users-in-visual-c"></a>Перечисление имен входа и связанных пользователей на языке Visual C#  
  Каждый пользователь базы данных связан с именем входа. Имя входа может быть связано с пользователями в нескольких базах данных. В этом примере кода показан вызов метода <xref:Microsoft.SqlServer.Management.Smo.Login.EnumDatabaseMappings%2A> объекта <xref:Microsoft.SqlServer.Management.Smo.Login> для перечисления всех пользователей базы данных, связанных с именем входа. В примере создается имя входа и пользователь в базе данных [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] , чтобы обеспечить сведения о сопоставлении для перечисления.  
   
-```  
+```csharp
 {   
 Server srv = new Server();   
 //Iterate through each database and display.   
@@ -67,7 +67,7 @@ foreach ( Database db in srv.Databases) {
 ## <a name="enumerating-logins-and-associated-users-in-powershell"></a>Перечисление имен входа и связанных пользователей в PowerShell  
  Каждый пользователь базы данных связан с именем входа. Имя входа может быть связано с пользователями в нескольких базах данных. В этом примере кода показан вызов метода <xref:Microsoft.SqlServer.Management.Smo.Login.EnumDatabaseMappings%2A> объекта <xref:Microsoft.SqlServer.Management.Smo.Login> для перечисления всех пользователей базы данных, связанных с именем входа. В примере создается имя входа и пользователь в базе данных [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] , чтобы обеспечить сведения о сопоставлении для перечисления.  
   
-```  
+```powershell
 # Set the path context to the local, default instance of SQL Server.  
 CD \sql\localhost\Default\Databases  
   
@@ -77,7 +77,7 @@ CD \sql\localhost\Default\Databases
  "====="  
  "Login Mappings for the database: "+ $db.Name  
   
- #get the datatable containing the mapping from the smo database oject  
+ #get the datatable containing the mapping from the smo database object  
  $dt = $db.EnumLoginMappings()  
   
  #display the results  
@@ -86,8 +86,7 @@ CD \sql\localhost\Default\Databases
         foreach($col in $row.Table.Columns)  
       {  
         $col.ColumnName + "=" + $row[$col]  
-       }  
-  
+       }
      }  
  }  
 ```  
@@ -103,7 +102,7 @@ CD \sql\localhost\Default\Databases
   
 -   Microsoft.SqlServer.SqlEnum.dll  
   
-```  
+```csharp
 using Microsoft.SqlServer.Management.Smo;  
 using System;  
   
@@ -171,7 +170,7 @@ public class A {
   
  Далее приведена версия этого образца на языке Visual Basic:  
   
-```  
+```vb
 Imports Microsoft.SqlServer.Management.Smo  
   
 Public Class A  
@@ -235,5 +234,3 @@ Public Class A
    End Sub  
 End Class  
 ```  
-  
-  

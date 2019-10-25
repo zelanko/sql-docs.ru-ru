@@ -14,25 +14,25 @@ ms.assetid: cec9f7f7-d0a7-4239-9dc5-a69c011ebaa0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6c375c8776f7c33b445676e45ce70839353d469f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e94adcf8242c6acaca7c28ff9a854e0aa87cb3ea
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68211321"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798177"
 ---
-# <a name="start-a-job"></a>Запуск задания
+# <a name="start-a-job"></a>Start a Job
   В этом разделе описано, как запустить задание агента [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] или управляющих объектов SQL Server.  
   
  Задание — это указанная последовательность действий, выполняемых агентом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] могут выполняться на одном локальном сервере или на нескольких удаленных серверах.  
   
--   **Перед началом работы выполните следующие действия.**  
+-   **Перед началом:**  
   
      [безопасность](#Security)  
   
 -   **Для запуска задания используется:**  
   
-     [Среда SQL Server Management Studio](#SSMS)  
+     [Среда Среда SQL Server Management Studio](#SSMS)  
   
      [Transact-SQL](#TSQL)  
   
@@ -45,7 +45,7 @@ ms.locfileid: "68211321"
   
 ##  <a name="SSMS"></a> Использование среды SQL Server Management Studio  
   
-#### <a name="to-start-a-job"></a>Запуск задания  
+### <a name="to-start-a-job"></a>Запуск задания  
   
 1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]и разверните его.  
   
@@ -61,15 +61,15 @@ ms.locfileid: "68211321"
   
 ##  <a name="TSQL"></a> Использование Transact-SQL  
   
-#### <a name="to-start-a-job"></a>Запуск задания  
+### <a name="to-start-a-job"></a>Запуск задания  
   
-1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  На стандартной панели выберите пункт **Создать запрос**.  
   
 3.  Скопируйте следующий пример в окно запроса и нажмите кнопку **Выполнить**.  
   
-    ```  
+    ```sql
     -- starts a job named Weekly Sales Data Backup.    
     USE msdb ;  
     GO  
@@ -80,9 +80,8 @@ ms.locfileid: "68211321"
   
  Дополнительные сведения см. в разделе [sp_start_job (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-start-job-transact-sql).  
   
-##  <a name="SMO"></a> Использование управляющих объектов SQL Server  
- **Запуск задания**  
+##  <a name="SMO"></a>Использование управляющие объекты SQL Server  
+
+### <a name="to-start-a-job"></a>Запуск задания
   
  Вызовите метод `Start` класса `Job` на языке программирования по своему выбору (Visual Basic, Visual C# или PowerShell). Дополнительные сведения см. в статье [Управляющие объекты SQL Server (SMO)](https://msdn.microsoft.com/library/ms162169.aspx).  
-  
-  

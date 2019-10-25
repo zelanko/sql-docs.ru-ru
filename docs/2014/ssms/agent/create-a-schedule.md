@@ -15,12 +15,12 @@ ms.assetid: 8c7ef3b3-c06d-4a27-802d-ed329dc86ef3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b044fb7b3b8dd0cc0586cc9908daab8f0a2b6424
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a00b07bb54d30d4e1db49cf2db70dec8286b27e0
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68189524"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798294"
 ---
 # <a name="create-a-schedule"></a>Создание расписания
   Расписание для заданий агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] вы можете создать с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]или управляющих объектов SQL Server.  
@@ -31,7 +31,7 @@ ms.locfileid: "68189524"
   
 -   **Для создания расписания используется:**  
   
-     [Среда SQL Server Management Studio](#SSMS)  
+     [Среда Среда SQL Server Management Studio](#SSMS)  
   
      [Transact-SQL](#TSQL)  
   
@@ -68,13 +68,13 @@ ms.locfileid: "68189524"
   
 #### <a name="to-create-a-schedule"></a>Создание расписания  
   
-1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  На стандартной панели выберите пункт **Создать запрос**.  
   
 3.  Скопируйте следующий пример в окно запроса и нажмите кнопку **Выполнить**.  
   
-    ```  
+    ```sql
     -- creates a schedule named RunOnce.   
     -- The schedule runs one time, at 23:30 on the day that the schedule is created.  
     USE msdb ;  
@@ -88,11 +88,9 @@ ms.locfileid: "68189524"
     GO  
     ```  
   
- Дополнительные сведения см. в разделе [sp_add_schedule &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-schedule-transact-sql).  
+ Дополнительные сведения см. в [разделе &#40;SP_ADD_SCHEDULE Transact-&#41;SQL](/sql/relational-databases/system-stored-procedures/sp-add-schedule-transact-sql).  
   
-##  <a name="SMO"></a> Использование управляющих объектов SQL Server  
+##  <a name="SMO"></a>Использование управляющие объекты SQL Server  
  **Создание расписания**  
   
  Воспользуйтесь классом `JobSchedule` в любом языке программирования (Visual Basic, Visual C# или PowerShell). Дополнительные сведения см. в статье [Управляющие объекты SQL Server (SMO)](https://msdn.microsoft.com/library/ms162169.aspx).  
-  
-  

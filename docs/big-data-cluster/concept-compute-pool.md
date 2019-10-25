@@ -9,12 +9,12 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 6156d23fa55690224cd6df82e5f4bafe10e4d1ab
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 420c4705d86eb55b6b99a6cf432cb95f3b9a6694
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653085"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798244"
 ---
 # <a name="what-are-compute-pools-in-a-sql-server-big-data-cluster"></a>Что такое вычислительные пулы в кластере больших данных SQL Server
 
@@ -28,11 +28,11 @@ ms.locfileid: "69653085"
 
 ## <a name="scale-out-groups"></a>Масштабируемые группы
 
-Вычислительный пул может выступать в роли масштабируемой группы PolyBase для распределенных запросов к различным источникам данных, таким как HDFS, Oracle, MongoDB или Terradata. Kubernetes позволяет автоматизировать создание и настройку вычислительных объектов pod в кластерах больших данных для масштабируемых групп PolyBase.
+Пул вычислений может использоваться в качестве масштабируемой группы Polybase для распределенных запросов по различным источникам данных, таким как HDFS, Oracle, MongoDB или Teradata. Kubernetes позволяет автоматизировать создание и настройку вычислительных объектов pod в кластерах больших данных для масштабируемых групп PolyBase.
 
 ## <a name="next-steps"></a>Следующие шаги
 
 Дополнительные сведения о [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]см. в следующих ресурсах:
 
-- [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]Что?](big-data-cluster-overview.md)
-- [Семинар. Архитектура [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] Майкрософт](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)
+- [Что такое [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md)
+- [Семинар: архитектура [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] Майкрософт](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)

@@ -10,12 +10,12 @@ ms.assetid: f698ceb1-d53e-4717-a3a0-225b346760d0
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: db1cdc1f10d53f11e06e37196d938667fb96327a
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: f792790e6bdc8c116c629910cdd64ec9aa0e6701
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888518"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72797255"
 ---
 # <a name="migrate-powerpivot-to-sharepoint-2013"></a>Перенос PowerPivot на SharePoint 2013
   
@@ -54,25 +54,25 @@ ms.locfileid: "68888518"
   
 3.  Установите экземпляр сервера [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] в режиме интеграции с SharePoint. Дополнительные сведения см. в разделе [PowerPivot for SharePoint 2013 Installation](https://docs.microsoft.com/analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode).  
   
-4.  Запустите пакет установки [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] 2013 **spPowerPivot.msi** на каждом сервере в ферме SharePoint. Дополнительные сведения см. [в разделе Установка или удаление надстройки PowerPivot для SharePoint &#40;SharePoint 2013&#41;](https://docs.microsoft.com/analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013).  
+4.  Запустите пакет установки [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] 2013 **spPowerPivot.msi** на каждом сервере в ферме SharePoint. Дополнительные сведения см. [в разделе Установка или удаление надстройки &#40;PowerPivot для SharePoint SharePoint 2013&#41;](https://docs.microsoft.com/analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013).  
   
 5.  В центре администрирования SharePoint 2013 настройте приложение служб Excel для использования сервера служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] в режиме интеграции с SharePoint, созданного на предыдущем шаге. Дополнительные сведения см. в разделе "Настройка базовой интеграции Analysis Services SharePoint" статьи [установка PowerPivot для SharePoint 2013](https://docs.microsoft.com/analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode).  
   
 ##  <a name="bkmk_backup_restore"></a> 2) Резервное копирование, копирование и восстановление баз данных  
  Процесс "обновление присоединения к базе данных SharePoint" — это последовательность действий по резервному копированию, копированию и восстановлению связанных с PowerPivot содержимого и баз данных приложений службы в ферме SharePoint 2013.  
   
-1.  **Задать для базы данных доступ только для чтения:** В [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]щелкните правой кнопкой мыши имя базы данных и выберите пункт **Свойства**. На странице **Параметры** установите значение свойства **База данных доступна только для чтения** , равное **True**.  
+1.  **Перевод базы данных в режим только чтения.** В [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]щелкните правой кнопкой мыши имя базы данных и выберите пункт **Свойства**. На странице **Параметры** установите значение свойства **База данных доступна только для чтения** , равное **True**.  
   
-2.  **Подавай назад:** Создайте резервную копию каждой базы данных содержимого и базы данных приложения службы, которую необходимо перенести на ферму SharePoint 2013. В [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]щелкните правой кнопкой мыши имя базы данных, выберите пункт **Задачи**, а затем команду **Создать резервную копию**.  
+2.  **Создание резервной копии.** Создайте резервную копию каждой базы данных содержимого и базы данных приложения службы, для которых необходимо выполнить перенос в ферму SharePoint 2013. В [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]щелкните правой кнопкой мыши имя базы данных, выберите пункт **Задачи**, а затем команду **Создать резервную копию**.  
   
 3.  Скопируйте файлы резервной копии базы данных (BAK) на целевой сервер.  
   
-4.  **Восстановлен** Восстановите базы данных в [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]целевом объекте. Этот этап можно выполнить с помощью [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)].  
+4.  **Восстановление.** Восстановите базу данных в назначение [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]. Этот этап можно выполнить с помощью [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)].  
   
-5.  **Задать для базы данных доступ для чтения и записи:** Установите для **базы данных** **значение false**только для чтения.  
+5.  **Перевод базы данных в режим доступа для чтения и записи.** Задайте для параметра **База данных доступна только для чтения** значение **False**.  
   
 ##  <a name="bkmk_prepare_mount_databases"></a> 3) Подготовка веб-приложений и присоединение баз данных содержимого  
- Более подробное описание следующих процедур см. в разделе [Upgrade databases from sharepoint 2010 to sharepoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256690) (https://go.microsoft.com/fwlink/p/?LinkId=256690).  
+ Более подробное описание следующих процедур см. в статье [обновление баз данных с sharepoint 2010 на sharepoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256690) (https://go.microsoft.com/fwlink/p/?LinkId=256690).  
   
 1.  **Перевод баз данных в режим «вне сети».**  
   
@@ -90,15 +90,15 @@ ms.locfileid: "68888518"
   
 -   **Подключение баз данных содержимого.**  
   
-     Используйте командлеты PowerShell в консоли управления SharePoint 2013 для подключения перенесенной базы данных содержимого. База данных приложения службы не требует подключения, это необходимо только для баз данных содержимого. ![Содержимое, связанное с PowerShell](../../../reporting-services/media/rs-powershellicon.jpg "Содержимое, связанное с PowerShell")  
+     Используйте командлеты PowerShell в консоли управления SharePoint 2013 для подключения перенесенной базы данных содержимого. Базу данных приложения службы не нужно монтировать, а только базы данных содержимого: содержимое, ![связанное с PowerShell](../../../reporting-services/media/rs-powershellicon.jpg "Содержимое, связанное с PowerShell")  
   
-    ```  
+    ```powershell
     Mount-SPContentDatabase "SharePoint_Content_O14-KJSP1" -DatabaseServer "[server name]\powerpivot" -WebApplication [web application URL]  
     ```  
   
-     Дополнительные сведения см. в разделе Присоединение или отсоединение [баз данных содержимого (SharePoint Server 2010)](https://technet.microsoft.com/library/ff628582.aspx) (https://technet.microsoft.com/library/ff628582.aspx).  
+     Дополнительные сведения см. в разделе [присоединение или отсоединение баз данных содержимого (SharePoint Server 2010)](https://technet.microsoft.com/library/ff628582.aspx) (https://technet.microsoft.com/library/ff628582.aspx).  
   
-     **Состояние после завершения шага:**  После завершения операции подключения пользователи смогут видеть файлы, которые были в старой базе данных содержимого. Поэтому пользователи могут видеть и открывать книги в библиотеке документов.  
+     **Состояние после завершения этого шага.**  После завершения операции подключения пользователи могут видеть файлы, которые присутствовали в старой базе данных содержимого. Поэтому пользователи могут видеть и открывать книги в библиотеке документов.  
   
     > [!TIP]  
     >  На этом этапе в процессе переноса можно создавать новые расписания для перенесенных книг. Однако эти расписания создаются в новой базе данных приложения службы [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] , а не в базе данных, скопированной из старой фермы SharePoint. Поэтому она не содержит ни одного из старых расписаний. После выполнения следующей процедуры для использования старой базы данных и переноса старых расписаний новые расписания недоступны.  
@@ -106,9 +106,9 @@ ms.locfileid: "68888518"
 ### <a name="troubleshoot-issues-when-you-attempt-to-mount-databases"></a>Устранение неполадок при попытке подключения баз данных  
  В этом разделе описаны возможные проблемы, обнаруживаемые при подключении базы данных.  
   
-1.  **Ошибки проверки подлинности:** Если отображаются ошибки, связанные с проверкой подлинности, проверьте, какой режим проверки подлинности использует исходные веб-приложения. Ошибка может быть вызвана несовпадением способов проверки подлинности между веб-приложением SharePoint 2013 и веб-приложением SharePoint 2010. Дополнительные сведения см. в разделе [1) Подготовка фермы SharePoint 2013](#bkmk_prepare_sharepoint2013) .  
+1.  **Ошибки проверки подлинности.** При обнаружении ошибок, связанных с проверкой подлинности, определите, какой режим проверки подлинности используется в исходных веб-приложениях. Ошибка может быть вызвана несовпадением способов проверки подлинности между веб-приложением SharePoint 2013 и веб-приложением SharePoint 2010. Дополнительные сведения см. в разделе [1) Подготовка фермы SharePoint 2013](#bkmk_prepare_sharepoint2013) .  
   
-2.  **Отсутствуют файлы PowerPivot. Files:** Если отображаются ошибки, связанные с отсутствием PowerPivot. dll, значит, программа **PowerPivot. msi** не установлена или [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] средство настройки не использовалось для настройки PowerPivot.  
+2.  **Отсутствие PowerPivot.Files.** Возникновение ошибок, связанных с отсутствием библиотек DLL PowerPivot, указывает, что не выполнена установка **spPowerPivot.msi** или для настройки PowerPivot не использовалось средство настройки [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] .  
   
 ##  <a name="bkmk_upgrade_powerpivot_schedules"></a>4) обновление расписаний PowerPivot  
  Этот раздел содержит сведения и параметры для переноса расписаний PowerPivot. Изменение расписания — двухэтапный процесс. Вначале настройте приложение службы PowerPivot на использование перенесенной базы данных. После этого необходимо выбрать один из двух вариантов переноса расписания.  
@@ -127,12 +127,12 @@ ms.locfileid: "68888518"
   
  Настройка приложения службы PowerPivot для переноса обновленных расписаний.  
   
--   **Перенос расписаний, параметр1: Администратор фермы SharePoint**  
+-   **Перенос расписаний, вариант 1. Администратор фермы SharePoint**  
   
-    1.  В службе управления SharePoint 2013 выполните `Set-PowerPivotServiceApplication` командлет `-StartMigratingRefreshSchedules` с параметром, чтобы включить автоматическое планирование по требованию содержимое, связанное с![PowerShell](../../../reporting-services/media/rs-powershellicon.jpg "PowerShell"). При использовании следующего скрипта Windows PowerShell предполагается наличие только одного приложения службы PowerPivot.  
+    1.  В службе управления SharePoint 2013 выполните командлет `Set-PowerPivotServiceApplication` с параметром `-StartMigratingRefreshSchedules`, чтобы включить автоматическое ![содержимое, связанное с PowerShell](../../../reporting-services/media/rs-powershellicon.jpg "Содержимое, связанное с PowerShell")по планированию миграции. При использовании следующего скрипта Windows PowerShell предполагается наличие только одного приложения службы PowerPivot.  
   
-        ```  
-        $app=Get-PowerPivotServiceApplication  
+        ```powershell
+        $app = Get-PowerPivotServiceApplication  
         Set-PowerPivotServiceApplication $app -StartMigratingRefreshSchedules  
         ```  
   
@@ -140,13 +140,12 @@ ms.locfileid: "68888518"
   
     2.  Чтобы проверить текущее значение свойства StartMigratingRefreshSchedules, выполните следующий скрипт PowerShell. Этот скрипт обрабатывает в цикле все объекты приложения службы PowerPivot и отображает имя и значение свойства.  
   
-        ```  
+        ```powershell
         $apps = Get-PowerPivotServiceApplication  
-        foreach ($app in $apps){}  
-        Get-PowerPivotServiceApplication $appp | format-table -property displayname,id,StartMigratingRefreshSchedules  
+        foreach ($app in $apps){ Get-PowerPivotServiceApplication $app | Format-Table -Property displayname, id, StartMigratingRefreshSchedules }
         ```  
   
-     **Миграция расписаний параметр2: Пользователь обновляет каждую книгу**  
+     **Перенос расписаний, вариант 2. Пользователь обновляет каждую книгу**  
   
     1.  Еще один способ переноса расписания состоит в том, чтобы включить обновление расписания для каждой книги. Перейдите к библиотеке документов, которая содержит книги.  
   
@@ -171,10 +170,8 @@ ms.locfileid: "68888518"
   
 -   [Обновление книг и запланированное обновление данных (SharePoint 2013)](https://docs.microsoft.com/analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013).  
   
--   [Обзор процесса обновления до SharePoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256688) (https://go.microsoft.com/fwlink/p/?LinkId=256688).  
+-   [Общие сведения о процессе обновления до SharePoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256688) (https://go.microsoft.com/fwlink/p/?LinkId=256688).  
   
--   [Очистка подготовительных действий перед обновлением до SharePoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256689) (https://go.microsoft.com/fwlink/p/?LinkId=256689).  
+-   [Удалите подготовительные действия перед обновлением до SharePoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256689) (https://go.microsoft.com/fwlink/p/?LinkId=256689).  
   
--   [Обновление баз данных с sharepoint 2010 на sharepoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256690) (https://go.microsoft.com/fwlink/p/?LinkId=256690).  
-  
-  
+-   [Обновите базы данных с sharepoint 2010 на sharepoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256690) (https://go.microsoft.com/fwlink/p/?LinkId=256690).

@@ -15,12 +15,12 @@ ms.assetid: fcfb3ec2-7556-4f72-971a-501295892cb0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5c718fee71538fcd5d1babde72ab87746b3e4e85
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 645ba8428dddb36de9a3edeb784d64f96b5c0603
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63223344"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72797038"
 ---
 # <a name="creating-altering-and-removing-databases"></a>Создание, изменение и удаление баз данных
   В SMO база данных представлена объектом <xref:Microsoft.SqlServer.Management.Smo.Database>.  
@@ -28,7 +28,7 @@ ms.locfileid: "63223344"
  Чтобы изменить или удалить ее, необязательно создавать объект <xref:Microsoft.SqlServer.Management.Smo.Database>. На базу данных можно сослаться с помощью коллекции.  
   
 ## <a name="example"></a>Пример  
- Чтобы использовать какой-либо из представленных примеров кода, нужно выбрать среду, шаблон и язык программирования, с помощью которых будет создаваться приложение. Дополнительные сведения см. в разделе [Создание проекта SMO на Visual Basic в Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) или [Visual C создайте&#35; проекта SMO в Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Чтобы использовать какой-либо из представленных примеров кода, нужно выбрать среду, шаблон и язык программирования, с помощью которых будет создаваться приложение. Дополнительные сведения см. в статьях [Создание проекта Visual Basic SMO в Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) или [Создание проекта Visual&#35; C SMO в Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="creating-altering-and-removing-a-database-in-visual-basic"></a>Создание, изменение и удаление базы данных на языке Visual Basic  
  В этом примере кода создается новая база данных. Для этой базы данных автоматически создаются файлы и файловые группы.  
@@ -38,7 +38,7 @@ ms.locfileid: "63223344"
 ## <a name="creating-altering-and-removing-a-database-in-visual-c"></a>Создание, изменение и удаление базы данных на языке Visual C#  
  В этом примере кода создается новая база данных. Для этой базы данных автоматически создаются файлы и файловые группы.  
   
-```  
+```csharp
 {  
                 //Connect to the local, default instance of SQL Server.   
                 Server srv;  
@@ -59,16 +59,16 @@ ms.locfileid: "63223344"
 ## <a name="creating-altering-and-removing-a-database-in-powershell"></a>Создание, изменение и удаление баз данных в PowerShell  
  В этом примере кода создается новая база данных. Для этой базы данных автоматически создаются файлы и файловые группы.  
   
-```  
+```powershell
 #Get a server object which corresponds to the default instance  
 cd \sql\localhost\  
-$srv = get-item default  
+$srv = Get-Item default  
   
 #Create a new database  
 $db = New-Object -TypeName Microsoft.SqlServer.Management.Smo.Database -argumentlist $srv, "Test_SMO_Database"  
 $db.Create()  
   
-#Reference the database and display the date when it was created.   
+#Reference the database and display the date when it was created.
 $db = $srv.Databases["Test_SMO_Database"]  
 $db.CreateDate  
   
@@ -76,7 +76,5 @@ $db.CreateDate
 $db.Drop()  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также статью  
  <xref:Microsoft.SqlServer.Management.Smo.Database>  
-  
-  

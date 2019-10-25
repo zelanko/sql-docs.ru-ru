@@ -20,12 +20,12 @@ ms.assetid: a801c619-611b-4e82-a8d8-d1e01691b7a1
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 98350d5d68990fdf31d42bacff2fc2ebb77c116b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 37a148393d66a7434fda4461b704ee81b7e05223
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62468276"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798081"
 ---
 # <a name="enroll-an-instance-of-sql-server-sql-server-utility"></a>Регистрация экземпляра SQL Server (служебная программа SQL Server)
   Зарегистрируйте экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в существующей программе [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для наблюдения за его производительностью и конфигурацией как управляемого экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Точка управления служебной программой (UCP) выполняет сбор данных о конфигурации и производительности от управляемых экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] каждые 15 минут. Эти сведения хранятся в хранилище данных управления для программы (UMDW) в UCP, имя файла UMDW — sysutility_mdw. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сравниваются с политиками с целью определения того, в каких местах отмечается нехватка ресурсов, а также возможностей консолидации.  
@@ -62,7 +62,7 @@ ms.locfileid: "62468276"
   
 -   Данные FILESTREAM не поддерживаются при наблюдении с помощью [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility.  
   
- Дополнительные сведения см. в разделе [спецификации максимально допустимых параметров SQL Server](../../sql-server/maximum-capacity-specifications-for-sql-server.md) и [функции, поддерживаемые различными выпусками SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
+ Дополнительные сведения см. в статье [спецификации максимальной емкости для SQL Server](../../sql-server/maximum-capacity-specifications-for-sql-server.md) и [функций, поддерживаемых выпусками SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
  Дополнительные сведения об основных понятиях служебной программы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] см. в статье [Функции и задачи служебной программы SQL Server](sql-server-utility-features-and-tasks.md).  
   
@@ -92,7 +92,7 @@ ms.locfileid: "62468276"
  Чтобы продолжить, нажмите кнопку **Далее**.  
   
 ##  <a name="Instance_name"></a> Укажите экземпляр SQL Server  
- Чтобы выбрать экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в диалоговом окне соединения, нажмите кнопку **Подключить...** . Введите имя компьютера и имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в формате "имя_компьютера\имя_экземпляра". Дополнительные сведения см. в статье [Соединение с сервером (компонент Database Engine)](../../ssms/f1-help/connect-to-server-database-engine.md).  
+ Чтобы выбрать экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в диалоговом окне соединения, нажмите кнопку **Подключить...** . Укажите имя компьютера и имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в формате Компутернаме\инстанценаме.. Дополнительные сведения см. в статье [Соединение с сервером (компонент Database Engine)](../../ssms/f1-help/connect-to-server-database-engine.md).  
   
  Чтобы продолжить, нажмите кнопку **Далее**.  
   
@@ -145,9 +145,9 @@ ms.locfileid: "62468276"
   
  Параметры управляемого экземпляра:  
   
--   Имя экземпляра SQL Server: "Имя_компьютера\имя_экземпляра"  
+-   Имя экземпляра SQL Server: имя_компьютера\имя_экземпляра  
   
--   Учетная запись набора элементов сбора служебной программы: Имя_домена\имя_пользователя  
+-   Набор элементов сбора служебной программы: имя_домена\имя_пользователя  
   
  Чтобы продолжить, нажмите кнопку **Далее**.  
   
@@ -169,7 +169,7 @@ ms.locfileid: "62468276"
 >   
 >  Возникло исключение при выполнении пакета или инструкции Transact-SQL. (Microsoft.SqlServer.ConnectionInfo)  
 >   
->  Дополнительные сведения:  Не удалось получить сведения о пользователе/группе Windows NT "\<Имя_домена\имя_учетной_записи >", код ошибки 0x5. (Microsoft SQL Server, ошибка: 15404)  
+>  Дополнительные сведения. Не удалось получить сведения о пользователе или группе Windows NT "\<имя_домена\имя_учетной_записи>", код ошибки 0x5. (Microsoft SQL Server, ошибка: 15404)  
 >   
 >  Дополнительные сведения об устранении этой неполадки см. в статье [Устранение неполадок служебной программы SQL Server](../../database-engine/troubleshoot-the-sql-server-utility.md).  
   
@@ -185,16 +185,16 @@ ms.locfileid: "62468276"
 ##  <a name="PowerShell_enroll"></a> Регистрация экземпляра SQL Server с помощью PowerShell  
  В следующем примере показана регистрация экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в существующей служебной программе [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-```  
-> $UtilityInstance = new-object -Type Microsoft.SqlServer.Management.Smo.Server "ComputerName\UCP-Name";  
-> $SqlStoreConnection = new-object -Type Microsoft.SqlServer.Management.Sdk.Sfc.SqlStoreConnection $UtilityInstance.ConnectionContext.SqlConnectionObject;  
-> $Utility = [Microsoft.SqlServer.Management.Utility.Utility]::Connect($SqlStoreConnection);  
-> $Instance = new-object -Type Microsoft.SqlServer.Management.Smo.Server "ComputerName\ManagedInstanceName";  
-> $InstanceConnection = new-object -Type Microsoft.SqlServer.Management.Sdk.Sfc.SqlStoreConnection $Instance.ConnectionContext.SqlConnectionObject;  
-> $ManagedInstance = $Utility.EnrollInstance($InstanceConnection, "ProxyAccount", "ProxyPassword");  
+```powershell
+$UtilityInstance = new-object -Type Microsoft.SqlServer.Management.Smo.Server "ComputerName\UCP-Name";  
+$SqlStoreConnection = new-object -Type Microsoft.SqlServer.Management.Sdk.Sfc.SqlStoreConnection $UtilityInstance.ConnectionContext.SqlConnectionObject;  
+$Utility = [Microsoft.SqlServer.Management.Utility.Utility]::Connect($SqlStoreConnection);  
+$Instance = new-object -Type Microsoft.SqlServer.Management.Smo.Server "ComputerName\ManagedInstanceName";  
+$InstanceConnection = new-object -Type Microsoft.SqlServer.Management.Sdk.Sfc.SqlStoreConnection $Instance.ConnectionContext.SqlConnectionObject;  
+$ManagedInstance = $Utility.EnrollInstance($InstanceConnection, "ProxyAccount", "ProxyPassword");  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также статью  
  [Функции и задачи служебной программы SQL Server](sql-server-utility-features-and-tasks.md)   
  [Наблюдение за экземплярами SQL Server в служебной программе SQL Server](monitor-instances-of-sql-server-in-the-sql-server-utility.md)   
  [Устранение неполадок служебной программы SQL Server](../../database-engine/troubleshoot-the-sql-server-utility.md)  

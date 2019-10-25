@@ -1,5 +1,5 @@
 ---
-title: Предоставление, Отмена и запрет разрешений | Документация Майкрософт
+title: Предоставление, отмена и запрет разрешений | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,12 +15,12 @@ ms.assetid: b0eb0f60-3e56-4880-b645-138832b38a1e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4be66faa119b4e89c05ffae149bc7a518323055c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6c64c70965d00967e0cac254cf4d26f6ce25ec5f
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63226148"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72796790"
 ---
 # <a name="granting-revoking-and-denying-permissions"></a>Предоставление, отмена и запрет разрешений
   Объект <xref:Microsoft.SqlServer.Management.Smo.ServerPermission> используется для назначения набора разрешений или индивидуального серверного разрешения объекту <xref:Microsoft.SqlServer.Management.Smo.ServerPermissionSet>. Применительно к разрешениям уровня сервера тот участник, которому предоставлено разрешение, ссылается на имя входа. Имена для входа в систему, проверка подлинности которых осуществляется Windows, перечислены как пользовательские имена Windows. При работе этого образца кода он отменяет разрешение участника, которому оно было предоставлено, и проверяет его удаление с помощью метода <xref:Microsoft.SqlServer.Management.Smo.Server.EnumServerPermissions%2A>.  
@@ -28,12 +28,12 @@ ms.locfileid: "63226148"
  Разрешения на базы данных и объекты баз данных назначаются аналогично с помощью объектов <xref:Microsoft.SqlServer.Management.Smo.DatabasePermissionSet> и <xref:Microsoft.SqlServer.Management.Smo.ObjectPermissionSet>.  
   
 ## <a name="example"></a>Пример  
- Чтобы использовать какой-либо из представленных примеров кода, нужно выбрать среду, шаблон и язык программирования, с помощью которых будет создаваться приложение. Дополнительные сведения см. в разделе [Создание проекта SMO на Visual Basic в Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) или [Visual C создайте&#35; проекта SMO в Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Чтобы использовать какой-либо из представленных примеров кода, нужно выбрать среду, шаблон и язык программирования, с помощью которых будет создаваться приложение. Дополнительные сведения см. в статьях [Создание проекта Visual Basic SMO в Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) или [Создание проекта Visual&#35; C SMO в Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="granting-server-permissions-in-visual-basic"></a>Предоставление разрешений уровня сервера на языке Visual Basic  
  В этом примере кода указанному имени входа предоставляются разрешения на создание конечной точки и изменение любой конечной точки, а затем перечисляются и отображаются все разрешения. Одно из разрешений отменяется, затем эти разрешения перечисляются снова. В этом примере предполагается, что заданное имя входа обладает указанными разрешениями, с которых можно начать работу.  
   
-```  
+```vb
 ' compile with: /r:Microsoft.SqlServer.Smo.dll /r:Microsoft.SqlServer.ConnectionInfo.dll   
 ' /r:Microsoft.SqlServer.Management.Sdk.Sfc.dll /r:Microsoft.SqlServer.SqlEnum.dll  
 Imports Microsoft.SqlServer.Management.Smo  
@@ -112,7 +112,7 @@ End Class
 ## <a name="granting-server-permissions-in-visual-c"></a>Предоставление разрешений уровня сервера на языке Visual C#  
  В этом примере кода указанному имени входа предоставляются разрешения на создание конечной точки и изменение любой конечной точки, а затем перечисляются и отображаются все разрешения. Одно из разрешений отменяется, затем эти разрешения перечисляются снова. В этом примере предполагается, что заданное имя входа обладает указанными разрешениями, с которых можно начать работу.  
   
-```  
+```csharp
 // compile with: /r:Microsoft.SqlServer.Smo.dll /r:Microsoft.SqlServer.ConnectionInfo.dll   
 // /r:Microsoft.SqlServer.Management.Sdk.Sfc.dll /r:Microsoft.SqlServer.SqlEnum.dll  
 using System;  
@@ -192,7 +192,7 @@ public class A {
 ## <a name="granting-server-permissions-in-powershell"></a>Предоставление разрешений уровня сервера в PowerShell  
  В этом примере кода указанному имени входа предоставляются разрешения на создание конечной точки и изменение любой конечной точки, а затем перечисляются и отображаются все разрешения. Одно из разрешений отменяется, затем эти разрешения перечисляются снова. В этом примере предполагается, что заданное имя входа обладает указанными разрешениями, с которых можно начать работу.  
   
-```  
+```powershell
 # Set the path context to the local, default instance of SQL Server.  
 CD \sql\localhost\  
 $srv = get-item default  
@@ -251,7 +251,5 @@ foreach ( $spi in $spis)
 }  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также статью  
  [Иерархия разрешений (компонент Database Engine)](../../security/permissions-hierarchy-database-engine.md)  
-  
-  

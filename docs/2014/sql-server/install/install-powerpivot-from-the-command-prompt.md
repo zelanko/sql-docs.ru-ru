@@ -10,17 +10,17 @@ ms.assetid: 7f1f2b28-c9f5-49ad-934b-02f2fa6b9328
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 8b8460927baa185233234baa2f6401fa600f3fff
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.openlocfilehash: 8959b1ca4ea719ce571cb8609b817bba965185bd
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71952133"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798327"
 ---
 # <a name="install-powerpivot-from-the-command-prompt"></a>Установка PowerPivot из командной строки
   Программу установки SQL Server PowerPivot для SharePoint можно запустить из командной строки. В команду необходимо включить параметр `/ROLE` и исключить из нее параметр `/FEATURES`.  
   
-## <a name="prerequisites"></a>Предварительные требования  
+## <a name="prerequisites"></a>предварительные требования  
  Необходимо установить выпуск SharePoint Server 2010 Enterprise Edition с пакетом обновления 1 (SP1).  
   
  Для подготовки к работе служб Analysis Services необходимо использовать учетные записи пользователей домена.  
@@ -43,13 +43,13 @@ ms.locfileid: "71952133"
 ## <a name="example-commands"></a>Примеры команд  
  В следующих примерах демонстрируется применение каждого из вариантов. В примере 1 показано `SPI_AS_ExistingFarm`.  
   
-```  
+```cmd
 Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /ROLE=SPI_AS_ExistingFarm /INSTANCENAME=PowerPivot /INDICATEPROGRESS/ASSVCACCOUNT=<DomainName\UserName> /ASSVCPASSWORD=<StrongPassword> /ASSYSADMINACCOUNTS=<DomainName\UserName>   
 ```  
   
  Пример 2 иллюстрирует вариант `SPI_AS_NewFarm`. Обратите внимание, что он включает параметры для провизионирования компонента Database Engine.  
   
-```  
+```cmd
 Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /ROLE=SPI_AS_NewFarm /INSTANCENAME=PowerPivot /INDICATEPROGRESS/SQLSVCACCOUNT=<DomainName\UserName> /SQLSVCPASSWORD=<StrongPassword> /SQLSYSADMINACCOUNTS=<DomainName\UserName> /AGTSVCACCOUNT=<DomainName\UserName> /AGTSVCPASSWORD=<StrongPassword> /ASSVCACCOUNT=<DomainName\UserName> /ASSVCPASSWORD=<StrongPassword> /ASSYSADMINACCOUNTS=<DomainName\UserName>   
 ```  
   
@@ -58,7 +58,7 @@ Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /ROLE=SPI_AS_NewFarm 
   
 1.  Скопируйте следующую команду в Блокнот:  
   
-    ```  
+    ```cmd
     Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /ROLE=SPI_AS_ExistingFarm /INSTANCENAME=PowerPivot /INDICATEPROGRESS/ASSVCACCOUNT=<DomainName\UserName> /ASSVCPASSWORD=<StrongPassword> /ASSYSADMINACCOUNTS=<DomainName\UserName>   
     ```  
   
@@ -77,12 +77,10 @@ Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /ROLE=SPI_AS_NewFarm 
 2.  Параметр `PID` в команде не указывается, в результате чего устанавливается выпуск Evaluation. Если требуется установить выпуск Enterprise Edition, добавьте параметр PID в команду запуска программы установки и укажите действительный ключ продукта.  
   
     ```  
-  
     /PID=<product key for an Enterprise installation>  
-  
     ```  
   
-3.  Замените заполнители для \<domain \ username > и \<StrongPassword > действительными учетными записями пользователей и паролями.  
+3.  Замените заполнители для \<домен \ имя_пользователя > и \<StrongPassword > с действительными учетными записями пользователей и паролями.  
   
      Параметры `/assvaccount` и **/ассвкпассворд** используются для настройки экземпляра [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] на сервере приложений. Замените эти заполнители на допустимые сведения учетной записи.  
   
@@ -104,8 +102,6 @@ Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /ROLE=SPI_AS_NewFarm 
   
 11. Настройте сервер. Как минимум необходимо развернуть решения, создать приложение службы и включить этот компонент для каждого семейства веб-сайтов. Дополнительные сведения см. в разделе [Настройка или восстановление PowerPivot для SharePoint &#40;2010 средства&#41; настройки PowerPivot](../../../2014/analysis-services/configure-repair-powerpivot-sharepoint-2010.md) или [Администрирование и настройка сервера PowerPivot в центре администрирования](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также статью  
  [Настройка учетных записей служб PowerPivot](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts)   
  [Установка PowerPivot для SharePoint 2010](../../../2014/sql-server/install/powerpivot-for-sharepoint-2010-installation.md)  
-  
-  

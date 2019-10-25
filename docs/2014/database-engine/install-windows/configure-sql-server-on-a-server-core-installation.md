@@ -13,12 +13,12 @@ ms.assetid: ed6e5e94-4b8d-422a-a17e-61b05a4df903
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e8134b7a69df7254ce3609ddce24a15293c47efd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0c2a82aac84777c0601d234162135f9404184c39
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62779737"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72797906"
 ---
 # <a name="configure-sql-server-on-a-server-core-installation"></a>Настройка SQL Server на установке Server Core
   Этот раздел содержит сведения о настройке [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на установке Server Core из [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] с пакетом обновления 1 (SP1). 
@@ -30,28 +30,28 @@ ms.locfileid: "62779737"
   
  Дополнительные сведения о дистанционной настройке и управлении установкой Server Core см. в следующих разделах:  
   
--   [Windows Server 2008 R2: Рекомендации по развертыванию ядра сервера](https://go.microsoft.com/fwlink/?LinkID=245957) (https://go.microsoft.com/fwlink/?LinkID=245957)  
+-   [Windows Server 2008 R2: рекомендации по развертыванию основных серверных компонентов](https://go.microsoft.com/fwlink/?LinkID=245957) (https://go.microsoft.com/fwlink/?LinkID=245957)  
   
--   [Настройка установки Server Core: Общие сведения о](https://go.microsoft.com/fwlink/?LinkId=245958) (https://go.microsoft.com/fwlink/?LinkId=245958)  
+-   [Настройка установки Server Core: обзор](https://go.microsoft.com/fwlink/?LinkId=245958) (https://go.microsoft.com/fwlink/?LinkId=245958)  
   
--   [Настройка установки Server Core Windows Server 2008 R2 с помощью Sconfig.cmd](https://go.microsoft.com/fwlink/?LinkId=245959) (https://go.microsoft.com/fwlink/?LinkId=245959)  
+-   [Настройка установки основных серверных компонентов Windows server 2008 R2 с помощью SCONFIG. cmd](https://go.microsoft.com/fwlink/?LinkId=245959) (https://go.microsoft.com/fwlink/?LinkId=245959)  
   
--   [Установка роли сервера на сервере под управлением установки Server Core Windows Server 2008 R2: Общие сведения о](https://go.microsoft.com/fwlink/?LinkId=245960) (https://go.microsoft.com/fwlink/?LinkId=245960)  
+-   [Установка роли сервера на сервере, на котором выполняется установка основных серверных компонентов Windows server 2008 R2: обзор](https://go.microsoft.com/fwlink/?LinkId=245960) (https://go.microsoft.com/fwlink/?LinkId=245960)  
   
--   [Установка компонентов Windows на сервере под управлением установки Server Core Windows Server 2008 R2: Общие сведения о](https://go.microsoft.com/fwlink/?LinkId=245961) (https://go.microsoft.com/fwlink/?LinkId=245961)  
+-   [Установка компонентов Windows на сервере с установленным компонентом Server Core Windows server 2008 R2: обзор](https://go.microsoft.com/fwlink/?LinkId=245961) (https://go.microsoft.com/fwlink/?LinkId=245961)  
   
--   [Управление установкой Server Core. Общие сведения о](https://go.microsoft.com/fwlink/?LinkId=245962) (https://go.microsoft.com/fwlink/?LinkId=245962)  
+-   [Управление установкой Server Core: обзор](https://go.microsoft.com/fwlink/?LinkId=245962) (https://go.microsoft.com/fwlink/?LinkId=245962)  
   
 -   [Администрирование установки Server Core](https://go.microsoft.com/fwlink/?LinkId=245963) (https://go.microsoft.com/fwlink/?LinkId=245963)  
   
 ##  <a name="install-updates"></a>Установка обновлений  
- Этот раздел содержит сведения об установке обновлений для [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] на компьютере под управлением Windows Server Core. Пользователям рекомендуется своевременно оценивать и устанавливать последние обновления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , чтобы обеспечить наличие последних обновлений безопасности для систем. Дополнительные сведения об установке [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] на компьютере под управлением Windows Server Core см. в разделе [Установка SQL Server 2014 на Server Core](install-sql-server-on-server-core.md).  
+ Этот раздел содержит сведения об установке обновлений для [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] на компьютере под управлением Windows Server Core. Пользователям рекомендуется своевременно оценивать и устанавливать последние обновления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], чтобы обеспечить наличие последних обновлений безопасности для систем. Дополнительные сведения об установке [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] на компьютере под Windows Server Core см. в разделе [Install SQL Server 2014 на Server Core](install-sql-server-on-server-core.md).  
   
  Ниже приведены два сценария для установки обновлений продукта.  
   
 -   [Установка обновлений для SQL Server 2014 во время новой установки](#installing-updates-during-a-new-installation) 
   
--   [Установка обновлений для SQL Server 2014, после установки](#installing-updates-after-installation) 
+-   [Установка обновлений для SQL Server 2014 после установки](#installing-updates-after-installation) 
   
 ### <a name="installing-updates-during-a-new-installation"></a>Установка обновлений во время новой установки  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает только установку из командной строки в операционной системе Server Core. Дополнительные сведения см. в статье [Установка SQL Server 2014 из командной строки](install-sql-server-from-the-command-prompt.md).  
@@ -62,7 +62,7 @@ ms.locfileid: "62779737"
   
  Укажите параметры UpdateEnabled и UpdateSource, чтобы ввести последние обновления продукта в установку основного продукта. В следующем примере показано, как выполнить обновления продукта в процессе установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-```sql  
+```cmd 
 Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,Replication /INSTANCENAME=MSSQLSERVER /SQLSVCACCOUNT="<DomainName\UserName>" /SQLSVCPASSWORD="<StrongPassword>" /SQLSYSADMINACCOUNTS="<DomainName\UserName>" /AGTSVCACCOUNT="NT AUTHORITY\Network Service" /UpdateEnabled=True /UpdateSource="<SourcePath>" /IACCEPTSQLSERVERLICENSETERMS  
 ```  
   
@@ -89,7 +89,7 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,Replication /INSTANCENAME=MSSQ
     <package_name>.exe /qs /IAcceptSQLServerLicenseTerms /Action=Patch /AllInstances  
     ```  
   
-##  <a name="startstop-sql-server-service"></a>Службы SQL Server для запуска и остановки  
+##  <a name="startstop-sql-server-service"></a>Запуск и завершение службы SQL Server  
  [Приложение sqlservr](../../tools/sqlservr-application.md) позволяет запускать, останавливать, приостанавливать и возобновлять работу экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] из командной строки.  
   
  Для запуска и остановки служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно также использовать службы Net.  
@@ -97,7 +97,7 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,Replication /INSTANCENAME=MSSQ
 ## <a name="enable-alwayson-availability-groups"></a>Включение групп доступности AlwaysOn  
  Включение групп доступности AlwaysOn является предварительным требованием для экземпляра сервера, чтобы использовать группы доступности в качестве решения высокого уровня доступности и аварийного восстановления. Дополнительные сведения об управлении группами доступности AlwaysOn см. в разделе [Включение и отключение групп доступности AlwaysOn (SQL Server)](../availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md).  
   
-### <a name="using-sql-server-configuration-manager-remotely"></a>Удаленное использование диспетчера конфигурации SQL Server  
+### <a name="using-sql-server-configuration-manager-remotely"></a>Удаленное использование диспетчер конфигурации SQL Server  
  Эти действия предназначены для выполнения на компьютере под управлением клиентской редакции [!INCLUDE[win7](../../includes/win7-md.md)] или более поздней версии или на другом сервере, где установлена графическая оболочка сервера (т. е. полной установки [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] или Windows 8 с включенным компонентом графической оболочки сервера).  
   
 1.  Откройте оснастку «Управление компьютером». Чтобы открыть оснастку «Управление компьютером», выполните одно из следующих действий.  
@@ -120,9 +120,9 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,Replication /INSTANCENAME=MSSQ
   
 4.  В дереве консоли в разделе «Управление компьютером» компьютера Server Core выберите «Службы и приложения».  
   
-5.  Дважды щелкните диспетчер конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+5.  Дважды щелкните диспетчер конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-6.  В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager последовательно щелкните [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] службы, щелкните правой кнопкой мыши [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (\<имя экземпляра >), где \<имя экземпляра > — имя локального экземпляра сервера для которого вы хотите включить AlwaysOn Группы доступности и выберите пункт Свойства.  
+6.  В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager щелкните [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] службы, щелкните правой кнопкой мыши [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (\<имя экземпляра >), где \<имя экземпляра > — имя локального экземпляра сервера, для которого требуется включить группы доступности AlwaysOn, и нажмите кнопку Свойства.  
   
 7.  Перейдите на вкладку Высокий уровень доступности AlwaysOn.  
   
@@ -136,7 +136,8 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,Replication /INSTANCENAME=MSSQ
 >  -   Чтобы подключиться к этому компьютеру, необходимо иметь соответствующие разрешения пользователя или получить полномочия на целевом компьютере от соответствующего источника.  
 > -   Имя управляемого компьютера отображается в скобках рядом с элементом «Управление компьютером» в дереве консоли.  
   
-### <a name="using-powershell-cmdlets-to-enable-alwayson-availability-groups"></a>Использование командлетов PowerShell для активации групп доступности AlwaysOn  
+### <a name="using-powershell-cmdlets-to-enable-alwayson-availability-groups"></a>Использование командлетов PowerShell для активации групп доступности AlwaysOn
+
  Командлет PowerShell, Enable-SqlAlwaysOn, используется для активации групп доступности AlwaysOn на экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Если группы доступности AlwaysOn включаются во время работы службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , то для вступления изменения в силу необходимо перезапустить службу компонента ядра СУБД. Если не указан параметр -Force, командлет запрашивает, следует ли перезапустить службу. В случае отказа никаких действий не предпринимается.  
   
  Для выполнения этого командлета необходимо иметь разрешения администратора.  
@@ -157,14 +158,14 @@ Enable-SqlAlwaysOn [-ServerInstance <string>] [-Credential <PSCredential>] [-For
   
  Следующая команда PowerShell активирует группы доступности AlwaysOn на экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (компьютер или экземпляр).  
   
-```  
+```powershell
 Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Machine\Instance  
 ```  
   
-## <a name="configuring-remote-access-of-sql-server-running-on-server-core"></a>Настройка удаленного доступа к SQL Server на Server Core  
+## <a name="configuring-remote-access-of-sql-server-running-on-server-core"></a>Настройка удаленного доступа SQL Server, выполняющегося в Server Core  
  Чтобы настроить удаленный доступ к экземпляру [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , который запускается в [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] Server Core с пакетом обновления 1 (SP1), выполните действия, описанные ниже.  
   
-### <a name="enable-remote-connections-on-an-instance-of-sql-server"></a>Включение удаленных подключений на экземпляре SQL Server 
+### <a name="enable-remote-connections-on-an-instance-of-sql-server"></a>Включение удаленных соединений на экземпляре SQL Server 
  Чтобы разрешить удаленные соединения, выполните следующие инструкции для экземпляра Server Core в локальной программе SQLCMD.exe.  
   
 -   `EXEC sys.sp_configure N'remote access', N'1'`  
@@ -175,7 +176,7 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Machine\Instance
   
      `GO`  
   
-### <a name="enable-and-start-the-sql-server-browser-service"></a>Включить и запустить службу обозревателя SQL Server  
+### <a name="enable-and-start-the-sql-server-browser-service"></a>Включите и запустите службу обозревателя SQL Server  
  По умолчанию эта служба отключена.  Если она отключена на экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , работающем на Server Core, то для ее включения выполните следующую команду из командной строки:  
   
  `sc config SQLBROWSER start= auto`  
@@ -187,7 +188,7 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Machine\Instance
 ### <a name="create-exceptions-in-windows-firewall"></a>Создание исключений в брандмауэре Windows  
  Чтобы создать исключения в брандмауэре Windows для доступа к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , выполните действия, описанные в разделе [Настройка брандмауэра Windows для разрешения доступа к SQL Server](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
   
-### <a name="enable-tcpip-on-an-instance-of-sql-server"></a>Включите поддержку TCP/IP в экземпляре SQL Server
+### <a name="enable-tcpip-on-an-instance-of-sql-server"></a>Включение TCP/IP на экземпляре SQL Server
  Протокол TCP/IP для экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в Server Core можно включить через Windows PowerShell. Выполните следующие действия.  
   
 1.  На компьютере, где запущена ОС Windows Server 2008 R2 Server Core с пакетом обновления 1 (SP1), запустите диспетчер задач.  
@@ -198,7 +199,7 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Machine\Instance
   
 4.  В окне **Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Powershell** выполните следующий скрипт, чтобы включить протокол TCP/IP:  
   
-```  
+```powershell
 $smo = 'Microsoft.SqlServer.Management.Smo.'  
 $wmi = new-object ($smo + 'Wmi.ManagedComputer')  
 # Enable the TCP protocol on the default instance.  If the instance is named, replace MSSQLSERVER with the instance name in the following line.  
@@ -219,29 +220,27 @@ $Tcp
 ##  <a name="sql-server-auditing"></a>Подсистема аудита SQL Server  
  Для определения аудита можно дистанционно использовать среду [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)] . После создания и включения аудита он начнет вести записи в целевое назначение. Дополнительные сведения о создании аудитов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и управлении ими см. в разделе [Подсистема аудита SQL Server (компонент Database Engine)](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
-##  <a name="sql-servevr-command-prompt-utilities"></a>Программы командной строки Servevr команды SQL  
+##  <a name="sql-servevr-command-prompt-utilities"></a>Программы командной строки SQL Сервевр  
  Можно использовать следующие средства командной строки, которые позволяют объединить в скрипт операции [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на компьютере Server Core. В следующей таблице содержится список программ командной строки, поставляемых вместе с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для Server Core.  
   
-|**Служебная программа**|**Описание**|**Установлена в**|  
+|**Служебная программа**|**Description**|**Установлена в**|  
 |-----------------|---------------------|----------------------|  
 |[Программа bcp](../../tools/bcp-utility.md)|Используется для копирования данных между экземпляром [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и файлом данных в указанном пользователем формате.|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]Tools\Binn|  
-|[Программа dtexec](../../integration-services/packages/dtexec-utility.md)|Используется для настройки и выполнения пакета служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]DTS\Binn|  
+|[Программа dtexec](../../integration-services/packages/dtexec-utility.md)|Используется для настройки и выполнения пакета служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]DTS\Binn|  
 |[Программа dtutil](../../integration-services/dtutil-utility.md)|Используется для управления пакетами служб SSIS.|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]DTS\Binn|  
-|[Программа osql](../../tools/osql-utility.md)|Позволяет вводить инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] , системные процедуры и файлы скрипта в командной строке.|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]Tools\Binn|  
+|[Программа osql](../../tools/osql-utility.md)|Позволяет вводить инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)], системные процедуры и файлы скрипта в командной строке.|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]Tools\Binn|  
 |[Приложение sqlagent90](../../tools/sqlagent90-application.md)|Используется для запуска агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] из командной строки.|\<диск>:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\<*имя_экземпляра*>\MSSQL\Binn|  
-|[Служебная программа sqlcmd](../../tools/sqlcmd-utility.md)|Позволяет вводить инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] , системные процедуры и файлы скрипта в командной строке.|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]Tools\Binn|  
+|[Программа sqlcmd](../../tools/sqlcmd-utility.md)|Позволяет вводить инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)], системные процедуры и файлы скрипта в командной строке.|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]Tools\Binn|  
 |[Программа SQLdiag](../../tools/sqldiag-utility.md)|Используется для сбора диагностических сведений для службы поддержки пользователей [!INCLUDE[msCoName](../../includes/msconame-md.md)] .|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]Tools\Binn|  
-|[Программа sqlmaint](../../tools/sqlmaint-utility.md)|Служит для выполнения планов обслуживания баз данных, созданных в предыдущих версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|\<drive>:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12.MSSQLSERVER\MSSQL\Binn|  
+|[Программа sqlmaint](../../tools/sqlmaint-utility.md)|Служит для выполнения планов обслуживания баз данных, созданных в предыдущих версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|\<диск >: \Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12. мссклсервер\мсскл\бинн|  
 |[Программа sqlps](../../tools/sqlps-utility.md)|Используется для выполнения команд и скриптов PowerShell. Загружает и регистрирует командлеты и поставщика PowerShell [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]Tools\Binn|  
-|[Приложение sqlservr](../../tools/sqlservr-application.md)|Служит для запуска и остановки экземпляра компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] из командной строки при устранении неполадок.|\<drive>:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12.MSSQLSERVER\MSSQL\Binn|  
+|[Приложение sqlservr](../../tools/sqlservr-application.md)|Служит для запуска и остановки экземпляра компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] из командной строки при устранении неполадок.|\<диск >: \Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12. мссклсервер\мсскл\бинн|  
   
 ##  <a name="use-troubleshooting-tools"></a>Использование средств устранения неполадок  
- Для определения аудита можно дистанционно использовать среду [SQLdiag Utility](../../tools/sqldiag-utility.md) позволяет выполнять сбор файлов журналов и данных с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и других типов серверов, а также мониторинг серверов и устранение определенных неполадок на серверах. SQLdiag предназначена для исследования и упрощения сбора диагностической информации для Microsoft Customer Support Services.  
+ Программа [SQLdiag](../../tools/sqldiag-utility.md) позволяет выполнять сбор журналов и файлов данных с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и других типов серверов, а также мониторинг серверов и устранение определенных неполадок на серверах. SQLdiag предназначена для исследования и упрощения сбора диагностической информации для Microsoft Customer Support Services.  
   
- Вы можете запустить программу в командной строке администратора в Server Core, используя синтаксис, описанный в разделе: [Программа SQLdiag](../../tools/sqldiag-utility.md).  
+ Служебную программу можно запустить в командной строке администратора в Server Core, используя синтаксис, описанный в статье [SQLdiag Utility](../../tools/sqldiag-utility.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также статью  
  [Установка SQL Server 2014 на Server Core](install-sql-server-on-server-core.md)   
  [Инструкции по установке](../../sql-server/install/installation-how-to-topics.md)  
-  
-  

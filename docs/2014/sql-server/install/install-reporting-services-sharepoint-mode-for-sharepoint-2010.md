@@ -10,15 +10,15 @@ ms.assetid: 47efa72e-1735-4387-8485-f8994fb08c8c
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: b69c6193720dd9975c364f5f4d729bba1e35d821
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
+ms.openlocfilehash: 758c76bf243af66157aa06f761df010a1e086a91
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "71952521"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798347"
 ---
 # <a name="install-reporting-services-sharepoint-mode-for-sharepoint-2010"></a>Установка служб Reporting Services в режиме SharePoint для SharePoint 2010
-  Процедуры, описанные в данном разделе, позволят установить сервер отчетов служб Reporting Services на одиночный сервер в режиме SharePoint. Эти шаги включают запуск мастера установки SQL Server, а также дополнительные задачи по настройке с использованием центра администрирования SharePoint 2010. В этом разделе также можно ознакомиться с отдельными процедурами для существующей установки, например созданием приложения службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Дополнительные сведения о добавлении дополнительных серверов [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в существующую ферму см. в разделе [Добавление дополнительного сервера отчетов в ферму &#40;SSRS развертывание&#41; ](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md) и [Добавление дополнительного Reporting Services клиентского веб-интерфейса в ферму](../../reporting-services/install-windows/add-an-additional-reporting-services-web-front-end-to-a-farm.md).  
+  Процедуры, описанные в данном разделе, позволят установить сервер отчетов служб Reporting Services на одиночный сервер в режиме SharePoint. Эти шаги включают запуск мастера установки SQL Server, а также дополнительные задачи по настройке с использованием центра администрирования SharePoint 2010. В этом разделе также можно ознакомиться с отдельными процедурами для существующей установки, например созданием приложения службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Сведения о добавлении дополнительных [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] серверов в существующую ферму см. в разделе [Добавление дополнительного сервера отчетов в ферму &#40;SSRS&#41; развертывание](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md) и [Добавление дополнительного Reporting Services клиентского веб-интерфейса в ферму](../../reporting-services/install-windows/add-an-additional-reporting-services-web-front-end-to-a-farm.md).  
   
 ||  
 |-|  
@@ -27,7 +27,7 @@ ms.locfileid: "71952521"
  Установка на одиночный сервер полезна в сценариях разработки и тестирования, но не рекомендуется для рабочих сред.  
   
 > [!NOTE]  
->  Сведения об обновлении и существующей установке [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в режиме интеграции с [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] см. в разделе [обновление и миграция Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md).  
+>  Сведения об обновлении и существующей установке [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в режиме интеграции с SharePoint в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]см. в разделе [обновление и миграция Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md).  
   
 
   
@@ -92,7 +92,7 @@ ms.locfileid: "71952521"
   
     -   **Службы Reporting Services — SharePoint**  
   
-    -   **Reporting Services надстройки для продуктов SharePoint 2010**. ![Примечание](../../../2014/reporting-services/media/rs-fyinote.png "nоте ") . Параметр мастера установки для установки надстройки впервые используется в выпуске [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+    -   **Reporting Services надстройки для продуктов SharePoint 2010**. ![Примечание](../../../2014/reporting-services/media/rs-fyinote.png "nоте ") . Параметр мастера установки для установки надстройки впервые используется в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] выпуске.  
   
     -   Если экземпляр компонента SQL Server [!INCLUDE[ssDE](../../includes/ssde-md.md)]еще не установлен, для завершения установки можно также выбрать **Службы ядра СУБД** и **Полный набор средств управления** .  
   
@@ -142,20 +142,20 @@ ms.locfileid: "71952521"
   
 4.  Выполните следующую команду PowerShell, чтобы установить службу SharePoint. При успешном завершении команды отобразится новая строка в консоли управления. При успешном завершении работы команды в консоль управления не возвращаются какие-либо сообщения:  
   
-    ```  
+    ```powershell
     Install-SPRSService  
     ```  
   
 5.  Выполните следующую команду PowerShell, чтобы установить прокси-сервер службы:  
   
-    ```  
+    ```powershell
     Install-SPRSServiceProxy  
     ```  
   
 6.  Выполните следующую команду PowerShell, чтобы запустить службу, или просмотрите нижеперечисленные замечания для получения указаний по запуску службы из центра администрирования SharePoint.  
   
-    ```  
-    get-spserviceinstance -all |where {$_.TypeName -like "SQL Server Reporting*"} | Start-SPServiceInstance  
+    ```powershell
+    Get-SPServiceInstance -All | Where {$_.TypeName -like "SQL Server Reporting*"} | Start-SPServiceInstance  
     ```  
   
  Можно также запустить службу из центра администрирования SharePoint, а не с помощью третьей команды PowerShell. С помощью следующих шагов можно также проверить, выполняется ли служба.  
@@ -168,9 +168,7 @@ ms.locfileid: "71952521"
   
     > [!NOTE]  
     >  Если служба Reporting Services остается в состоянии **запуска** и не меняется на " **запущена**", проверьте, запущена ли служба администрирования SharePoint 2010 в Windows Диспетчер сервера.  
-  
 
-  
 ##  <a name="bkmk_create_serrviceapplication"></a>Создание приложения службы Reporting Services  
  В этом разделе описаны шаги по созданию приложения службы и описания его свойств (в случае просмотра существующего приложения службы).  
   
@@ -201,12 +199,12 @@ ms.locfileid: "71952521"
   
 11. Создание приложения службы может занять несколько минут. По завершении этого процесса отобразятся подтверждение и ссылка на страницу **Подготовка подписок и предупреждений** . Выполните этот шаг подготовки, если нужно использовать функции подписки и предупреждения служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Дополнительные сведения см. в разделе [Подготовка подписок и предупреждений для приложений служб SSRS](../../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md).  
   
- ![Содержимое, связанное с PowerShell](../../../2014/reporting-services/media/rs-powershellicon.jpg "Содержимое, связанное с PowerShell") Сведения об использовании PowerShell для создания приложения службы @no__t 1 см. [в статье Создание приложения службы Reporting Services с помощью PowerShell](../../../2014/reporting-services/reporting-services-sharepoint-service-and-service-applications.md#bkmk_powershell_create_ssrs_serviceapp).  
+ ![Содержимое, связанное с PowerShell](../../../2014/reporting-services/media/rs-powershellicon.jpg "Содержимое, связанное с PowerShell") Сведения об использовании PowerShell для создания приложения службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] см. в разделе [Создание приложения Reporting Services службы с помощью PowerShell](../../../2014/reporting-services/reporting-services-sharepoint-service-and-service-applications.md#bkmk_powershell_create_ssrs_serviceapp).  
   
 
   
 ##  <a name="bkmk_powerview"></a>Активируйте компонент семейства веб-сайтов Power View.  
- [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], функция [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] @ no__t-2 для [!INCLUDE[msCoName](../../includes/msconame-md.md)] @ no__t-4 Enterprise Edition, является функцией семейства веб-сайтов. Этот компонент активируется автоматически для корневых семейств веб-сайтов, созданных после установки надстройки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Если вы планируете использовать [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], необходимо удостовериться в том, что этот компонент активирован.  
+ [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], компонент [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] для [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Enterprise Edition, является компонентом семейства веб-сайтов. Этот компонент активируется автоматически для корневых семейств веб-сайтов, созданных после установки надстройки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Если вы планируете использовать [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], необходимо удостовериться в том, что этот компонент активирован.  
   
  При установке надстройки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] для продуктов SharePoint 2010 после установки продукта SharePoint 2010 функция интеграции с сервером отчетов и функция интеграции с Power View будут активированы только для корневых семейств веб-сайтов. Для других семейств веб-сайтов необходимо активировать эти компоненты вручную.  
   
@@ -251,5 +249,3 @@ ms.locfileid: "71952521"
  [Командлеты PowerShell для режима служб SharePoint Reporting Services](../../../2014/reporting-services/powershell-cmdlets-for-reporting-services-sharepoint-mode.md)   
  [Функции, поддерживаемые различными Выпусками SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473)   
  [Служба SharePoint и Служебные приложения службы Reporting Services](../../../2014/reporting-services/reporting-services-sharepoint-service-and-service-applications.md)  
-  
-  

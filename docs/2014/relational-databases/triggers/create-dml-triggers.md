@@ -19,28 +19,28 @@ ms.assetid: b2b52258-642b-462e-8e0f-18c09d2eccf4
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3fa03aae36fd7de30f8efd88742b1e3a73907a0f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 10399a26335912a9370aa21a386f58d04d04321e
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62676430"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72796387"
 ---
 # <a name="create-dml-triggers"></a>Создание триггеров DML
   В этом разделе описано, как создать триггер DML [!INCLUDE[tsql](../../includes/tsql-md.md)] с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE TRIGGER.  
   
 ##  <a name="Top"></a> Перед началом  
   
-### <a name="limitations-and-restrictions"></a>Ограничения  
+### <a name="limitations-and-restrictions"></a>ограничения  
  Список ограничений, связанных с созданием триггеров DML, см. в разделе [CREATE TRIGGER (Transact-SQL)](/sql/t-sql/statements/create-trigger-transact-sql).  
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="Permissions"></a> Разрешения  
  Требует разрешения ALTER на таблицу или представление, на которых создается триггер.  
   
 ##  <a name="Procedures"></a> Как создать триггер DML  
  Можно использовать один из следующих способов:  
   
--   [Среда SQL Server Management Studio](#SSMSProcedure)  
+-   [Среда Среда SQL Server Management Studio](#SSMSProcedure)  
   
 -   [Transact-SQL](#TsqlProcedure)  
   
@@ -56,11 +56,11 @@ ms.locfileid: "62676430"
   
 5.  В диалоговом окне **Задание значений для параметров шаблона** введите для показанных параметров следующие значения.  
   
-    |Параметр|Значение|  
+    |Parameter|Value|  
     |---------------|-----------|  
     |Автор|*Ваше имя*|  
     |Дата создания|*Сегодняшняя дата*|  
-    |Описание|Проверяет кредитоспособность поставщика, прежде чем позволить вставить новый заказ на покупку от этого поставщика.|  
+    |Description|Проверяет кредитоспособность поставщика, прежде чем позволить вставить новый заказ на покупку от этого поставщика.|  
     |Имя_схемы|Purchasing|  
     |Имя_триггера|NewPODetail2|  
     |Имя_таблицы|PurchaseOrderDetail|  
@@ -108,7 +108,7 @@ ms.locfileid: "62676430"
   
 3.  Скопируйте следующий пример в окно запроса и нажмите кнопку **Выполнить**. В этом примере создается такой же хранимый триггер DML, как показано выше.  
   
-    ```  
+    ```sql
     -- Trigger valid for multirow and single row inserts  
     -- and optimal for single row inserts.  
     USE AdventureWorks2012;  
@@ -136,7 +136,3 @@ ms.locfileid: "62676430"
           (SELECT PurchaseOrderID FROM inserted)  
     END;  
     ```  
-  
-##  <a name="PowerShellProcedure"></a> [Перед началом](#Top)  
-  
-  

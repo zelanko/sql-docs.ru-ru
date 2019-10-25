@@ -20,12 +20,12 @@ ms.assetid: d5335124-1625-47ce-b4ac-36078967158c
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c027b6648da799be5a2b9381a0f19dc437563242
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: db76db817561095b7b09b1a86e7c2ca10ec9174a
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62806379"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798085"
 ---
 # <a name="create-a-sql-server-utility-control-point-sql-server-utility"></a>создать точку управления служебной программы SQL Server (служебная программа SQL Server)
   На предприятии может работать несколько служебных программ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , при этом каждая служебная программа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может управлять несколькими экземплярами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и приложениями уровня данных. У каждой служебной программы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имеется одна и только одна точка управления служебной программой (UCP). Для каждой служебной программы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] необходимо создать точку управления служебной программой. Каждый управляемый экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и каждый компонент приложения уровня данных относится только к одной служебной программе [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и управляется одной точкой управления служебной программой.  
@@ -65,7 +65,7 @@ ms.locfileid: "62806379"
   
 -   Данные FILESTREAM не поддерживаются при наблюдении с помощью [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility.  
   
- Дополнительные сведения см. в разделе [спецификации максимально допустимых параметров SQL Server](../../sql-server/maximum-capacity-specifications-for-sql-server.md) и [функции, поддерживаемые различными выпусками SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
+ Дополнительные сведения см. в статье [спецификации максимальной емкости для SQL Server](../../sql-server/maximum-capacity-specifications-for-sql-server.md) и [функций, поддерживаемых выпусками SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
 ### <a name="remove-previous-utility-control-points-before-installing-a-new-one"></a>Удаление предыдущих точек управления служебной программой перед установкой новой точки  
  Если точка управления служебной программой устанавливается в экземпляре SQL Server, который когда-либо ранее был настроен в качестве точки управления служебной программой, то перед установкой новой точки необходимо удалить все управляемые экземпляры SQL Server и точку управления служебной программой. Для этого можно выполнить хранимую процедуру **sp_sysutility_ucp_remove** .  
@@ -76,13 +76,13 @@ ms.locfileid: "62806379"
   
 -   Эта процедура должна выполняться пользователем, имеющим разрешения sysadmin, необходимые для создания точки управления служебной программой.  
   
--   Из точки управления служебной программой необходимо удалить все управляемые экземпляры SQL Server. Заметьте, что сама точка управления также является управляемым экземпляром SQL Server. Дополнительные сведения см. в разделе [Как Удаление экземпляра SQL Server из служебной программы SQL Server](https://go.microsoft.com/fwlink/?LinkId=169392).  
+-   Из точки управления служебной программой необходимо удалить все управляемые экземпляры SQL Server. Заметьте, что сама точка управления также является управляемым экземпляром SQL Server. Дополнительные сведения см. в разделах [Как удалить экземпляр SQL Server с помощью служебной программы SQL Server](https://go.microsoft.com/fwlink/?LinkId=169392).  
   
  Эта процедура предназначена для удаления точки управления служебной программой SQL Server из служебной программы SQL Server. После завершения операции в экземпляре SQL Server можно снова создать точку управления служебной программой.  
   
  Установите соединение с точкой управления служебной программой из среды SQL Server Management Studio, а затем выполните следующий скрипт:  
   
-```  
+```sql
 EXEC msdb.dbo.sp_sysutility_ucp_remove;  
 ```  
   
@@ -101,7 +101,7 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
 ## <a name="wizard-steps"></a>Шаги мастера  
  ![](../../database-engine/media/create-ucp.gif "Create_UCP")  
   
- В следующих разделах содержатся сведения о каждой странице потока операций мастера по созданию нового пункта управления программой [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Чтобы запустить мастер для создания точки управления служебной программой (UCP), откройте область проводника служебной программы из меню "Вид" в SSMS, а затем нажмите кнопку ![](../../database-engine/media/create-ucp.gif "Create_UCP") **Create_UCP** (Создать UCP) в верхней части области проводника служебной программы.  
+ В следующих разделах содержатся сведения о каждой странице потока операций мастера по созданию нового пункта управления программой [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Чтобы запустить мастер для создания новой точки управления служебной программой, откройте панель Обозреватель программ в меню Вид в SSMS, а затем нажмите кнопку ![](../../database-engine/media/create-ucp.gif "Create_UCP") **создать точку управления** служебной программой в верхней части панели проводника служебной программы.  
   
  Щелкните ссылку в следующем списке, чтобы открыть в мастере подробные сведения для страницы.  
   
@@ -124,14 +124,14 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
 ##  <a name="Welcome"></a> Общие сведения о мастере создания UCP  
  Если при открытии обозревателя программ нет ни одного пункта управления программой, необходимо установить соединение с таким пунктом или создать новый пункт.  
   
- **Connect to existing UCP** (Подключиться к существующей UCP). Если в системе уже есть точка управления служебной программой (UCP), можно установить соединение с ней, нажав кнопку ![](../../database-engine/media/connect-to-utility.gif "Connect_to_Utility")**Connect to Utility** (Соединение со служебной программой) в верхней части области проводника служебной программы. Чтобы установить соединение с существующей точкой управления служебной программой, необходимо иметь учетные данные администратора или быть членом роли чтения данных служебной программы. Обратите внимание, что у каждой служебной программы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может быть только одна точка управления служебной программой, а с экземпляра SSMS можно подключиться только к одной точке управления служебной программой.  
+ **Подключиться к существующей точке** управления служебной программой. Если в развернутой системе уже есть точка контроля служебной программы, к ней ![ ](../../database-engine/media/connect-to-utility.gif "Connect_to_Utility")можно подключиться, нажав кнопку **подключиться к программе** в верхней части панели обозревателя служебных программ. Чтобы установить соединение с существующей точкой управления служебной программой, необходимо иметь учетные данные администратора или быть членом роли чтения данных служебной программы. Обратите внимание, что у каждой служебной программы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может быть только одна точка управления служебной программой, а с экземпляра SSMS можно подключиться только к одной точке управления служебной программой.  
   
- **Create a new UCP** (Создать UCP). Чтобы создать точку управления служебной программой, нажмите кнопку ![](../../database-engine/media/create-ucp.gif "Create_UCP")**Create UCP** (Создать UCP) в верхней части панели проводника служебной программы. Чтобы создать новую точку управления служебной программой, в диалоговом окне соединения необходимо указать имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и учетные данные администратора. Обратите внимание, что на дну служебную программу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может приходиться только одна точка управления служебной программой.  
+ **Создание новой** точки управления служебной программой. чтобы создать новую точку, нажмите кнопку ![ ](../../database-engine/media/create-ucp.gif "Create_UCP") **создать служебную** программу в верхней части панели проводника служебной программы. Чтобы создать новую точку управления служебной программой, в диалоговом окне соединения необходимо указать имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и учетные данные администратора. Обратите внимание, что на дну служебную программу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может приходиться только одна точка управления служебной программой.  
   
 ##  <a name="Instance_name"></a> Укажите экземпляр  
  Укажите следующие сведения для создаваемого UCP.  
   
--   **Имя экземпляра**. Чтобы выбрать экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] из диалогового окна соединения, щелкните **Подключить…** . Введите имя компьютера и имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в формате "имя_компьютера\имя_экземпляра".  
+-   **Имя экземпляра** — чтобы выбрать экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] из диалогового окна соединения, нажмите кнопку **Подключить...** . Укажите имя компьютера и имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в формате Компутернаме\инстанценаме..  
   
 -   **Имя программы.** Укажите имя, которое будет использоваться для обозначения служебной программы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в сети.  
   
@@ -219,14 +219,12 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
 ##  <a name="PowerShell_create_UCP"></a> Создание нового пункта управления программой с помощью PowerShell  
  Для создания нового пункта управления программой используйте следующий пример:  
   
-```  
-> $UtilityInstance = new-object -Type Microsoft.SqlServer.Management.Smo.Server "ComputerName\UCP-Name";  
-> $SqlStoreConnection = new-object -Type Microsoft.SqlServer.Management.Sdk.Sfc.SqlStoreConnection $UtilityInstance.ConnectionContext.SqlConnectionObject;  
-> $Utility = [Microsoft.SqlServer.Management.Utility.Utility]::CreateUtility("Utility", $SqlStoreConnection, "ProxyAccount", "ProxyAccountPassword");  
+```powershell
+$UtilityInstance = new-object -Type Microsoft.SqlServer.Management.Smo.Server "ComputerName\UCP-Name";  
+$SqlStoreConnection = new-object -Type Microsoft.SqlServer.Management.Sdk.Sfc.SqlStoreConnection $UtilityInstance.ConnectionContext.SqlConnectionObject;  
+$Utility = [Microsoft.SqlServer.Management.Utility.Utility]::CreateUtility("Utility", $SqlStoreConnection, "ProxyAccount", "ProxyAccountPassword");  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также статью  
  [Функции и задачи служебной программы SQL Server](sql-server-utility-features-and-tasks.md)   
  [Устранение неполадок служебной программы SQL Server](../../database-engine/troubleshoot-the-sql-server-utility.md)  
-  
-  

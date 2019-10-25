@@ -16,12 +16,12 @@ ms.assetid: 3e6d4f5a-59b7-4203-b95a-f7e692c0f131
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 871f5eb0dab1105017fac8be1f978e0c81a9f1d3
-ms.sourcegitcommit: 9af07bd57b76a34d3447e9e15f8bd3b17709140a
+ms.openlocfilehash: 17da45f3e66ed0adc68a40a776bfb8fe1126f330
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67624370"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72797847"
 ---
 # <a name="invoke-policyevaluation-cmdlet"></a>Invoke-PolicyEvaluation, командлет
   **Invoke-PolicyEvaluation** — это командлет [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , который определяет, соответствует ли набор целей объектов SQL Server условиям, заданным в одной или нескольких политиках в системе управления на основе политик.  
@@ -49,34 +49,34 @@ ms.locfileid: "67624370"
   
  Если политики хранятся в хранилище политик, необходимо передавать набор PSObjects, указывающий на те политики, которые должны быть оценены. Обычно это делается путем перенаправления вывода командлета, например Get-Item, в командлет **Invoke-PolicyEvaluation**. При этом указывать параметр **-Policy** не нужно. Например, если политики "Рекомендации корпорации Майкрософт" были импортированы в экземпляр ядра СУБД, оценивать политику **Состояние базы данных** будет следующая команда:  
   
-```  
+```powershell
 sl "SQLSERVER:\SQLPolicy\MyComputer\DEFAULT\Policies"  
 Get-Item "Database Status" | Invoke-PolicyEvaluation -TargetServerName "MYCOMPUTER"  
 ```  
   
  В этом примере показано использование командлета Where-Object для фильтрации нескольких политик из хранилища политик на основе свойства **PolicyCategory** . Объекты из перенаправленного вывода **Where-Object** используются командлетом **Invoke-PolicyEvaluation**.  
   
-```  
+```powershell
 sl "SQLSERVER:\SQLPolicy\MyComputer\DEFAULT\Policies"  
 gci | Where-Object {$_.PolicyCategory -eq "Microsoft Best Practices: Maintenance"} | Invoke-PolicyEvaluation -TargetServer "MYCOMPUTER"  
 ```  
   
  Если политики хранятся в виде XML-файлов, вам нужно с помощью параметра **-Policy** указать путь и имя для каждой политики. Если вы не укажете путь в параметре **-Policy** , командлет **Invoke-PolicyEvaulation** будет использовать текущий параметр пути **sqlps** . Например, эта команда оценивает одну из политик «Microsoft Best Practice», установленных с SQL Server, по базе данных по умолчанию для этого имени входа:  
   
-```  
+```powershell
 Invoke-PolicyEvaluation -Policy "C:\Program Files\Microsoft SQL Server\120\Tools\Policies\DatabaseEngine\1033\Database Status.xml" -TargetServerName "MYCOMPUTER"  
 ```  
   
  Эта команда делает то же самое, но в ней для определения местоположения XML-файла политики используется текущий путь **sqlps** :  
   
-```  
+```powershell
 sl "C:\Program Files\Microsoft SQL Server\120\Tools\Policies\DatabaseEngine\1033"  
 Invoke-PolicyEvaluation -Policy "Database Status.xml" -TargetServerName "MYCOMPUTER"  
 ```  
   
  В этом примере показано использование командлета **Get-ChildItem** для извлечения нескольких XML-файлов политик и перенаправления объектов в командлет **Invoke-PolicyEvaluation**:  
   
-```  
+```powershell
 sl "C:\Program Files\Microsoft SQL Server\120\Tools\Policies\DatabaseEngine\1033"  
 gci "Database Status.xml", "Trustworthy Database.xml" | Invoke-PolicyEvaluation -TargetServer "MYCOMPUTER"  
 ```  
@@ -88,13 +88,13 @@ gci "Database Status.xml", "Trustworthy Database.xml" | Invoke-PolicyEvaluation 
   
 -   Параметр **-TargetObjects** принимает объект или массив объектов, которые представляют объекты SQL Server в наборе целей. Например, можно создать массив объектов класса <xref:Microsoft.SqlServer.Management.Smo.Database> для передачи параметру **-TargetObjects**.  
   
--   Параметр **-TargetExpressions** принимает строку, содержащую выражение запроса, которое определяет объекты в наборе целей. Это выражение запроса состоит из узлов, разделенных символом «/». Каждый узел имеет вид ObjectType[Filter]. Тип объекта является один из объектов в иерархии объектов управления SQL Server (SMO) объекта. Фильтр — это выражение, которое фильтрует объекты в этом узле. Дополнительные сведения см. в статье [Query Expressions and Uniform Resource Names](../powershell/query-expressions-and-uniform-resource-names.md).  
+-   Параметр **-TargetExpressions** принимает строку, содержащую выражение запроса, которое определяет объекты в наборе целей. Это выражение запроса состоит из узлов, разделенных символом «/». Каждый узел имеет вид ObjectType[Filter]. Тип объекта является одним из объектов SQL Server в иерархии объектов SMO. Фильтр — это выражение, которое фильтрует объекты в этом узле. Дополнительные сведения см. в статье [Query Expressions and Uniform Resource Names](../powershell/query-expressions-and-uniform-resource-names.md).  
   
  Укажите либо **-TargetObjects** , либо **-TargetExpression**, но не оба параметра.  
   
  В этом примере для указания целевого сервера используется объект Sfc.SqlStoreConnection:  
   
-```  
+```powershell
 sl "C:\Program Files\Microsoft SQL Server\120\Tools\Policies\DatabaseEngine\1033"  
 $conn = New-Object Microsoft.SqlServer.Management.Sdk.Sfc.SqlStoreConnection("server='MYCOMPUTER';Trusted_Connection=True")  
 Invoke-PolicyEvaluation -Policy "Database Status.xml" -TargetServerName $conn  
@@ -102,7 +102,7 @@ Invoke-PolicyEvaluation -Policy "Database Status.xml" -TargetServerName $conn
   
  В этом примере для определения базы данных для оценки используется параметр **-TargetExpression** :  
   
-```  
+```powershell
 sl "C:\Program Files\Microsoft SQL Server\120\Tools\Policies\DatabaseEngine\1033"  
 Invoke-PolicyEvaluation -Policy "Database Status.xml" -TargetServerName "MyComputer" -TargetExpression "Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2012']"  
 ```  
@@ -110,10 +110,10 @@ Invoke-PolicyEvaluation -Policy "Database Status.xml" -TargetServerName "MyCompu
 ## <a name="evaluating-analysis-services-policies"></a>Оценка политик служб Analysis Services  
  Чтобы оценить политики относительно экземпляра служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], необходимо загрузить и зарегистрировать сборку в PowerShell, создать переменную с использованием объекта соединения служб Analysis Services и передать переменную параметру **-TargetObject** . В этом примере показана оценка политики настройки контактной зоны «Рекомендации» для служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]:  
   
-```  
+```powershell
 sl "C:\Program Files\Microsoft SQL Server\120\Tools\Policies\AnalysisServices\1033"  
 [System.Reflection.Assembly]::LoadWithPartialName("Microsoft.AnalysisServices")  
-$SSASsvr = new-object Microsoft.AnalysisServices.Server  
+$SSASsvr = New-Object Microsoft.AnalysisServices.Server  
 $SSASsvr.Connect("Data Source=Localhost")  
 Invoke-PolicyEvaluation -Policy "Surface Area Configuration for Analysis Services Features.xml" -TargetObject $SSASsvr  
 ```  
@@ -121,7 +121,7 @@ Invoke-PolicyEvaluation -Policy "Surface Area Configuration for Analysis Service
 ## <a name="evaluating-reporting-services-policies"></a>Оценка политик служб Reporting Services  
  Чтобы оценить политики служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , необходимо загрузить и зарегистрировать сборку в PowerShell, создать переменную с помощью объекта соединения [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] и передать переменную параметру **-TargetObject** . В этом примере показана оценка политики настройки контактной зоны «Рекомендации» для служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]:  
   
-```  
+```powershell
 sl "C:\Program Files\Microsoft SQL Server\120\Tools\Policies\ReportingServices\1033"  
 [System.Reflection.Assembly]::LoadWithPartialName("Microsoft.SqlServer.Dmf.Adapters")  
 $SSRSsvr = new-object Microsoft.SqlServer.Management.Adapters.RSContainer('MyComputer')  
@@ -131,12 +131,10 @@ Invoke-PolicyEvaluation -Policy "Surface Area Configuration for Reporting Servic
 ## <a name="formatting-output"></a>Форматирование выходных данных  
  По умолчанию выходные данные командлета **Invoke-PolicyEvaluation** отображаются в окне командной строки в виде краткого отчета в удобной для чтения форме. С помощью параметра **-OutputXML** можно указать, что командлет должен генерировать подробный отчет в виде XML-файла. Командлет**Invoke-PolicyEvaluation** использует схему SML-IF, поэтому файл смогут читать модули чтения SML-IF.  
   
-```  
+```powershell
 sl "SQLSERVER:\SQLPolicy\MyComputer\DEFAULT\Policies"  
 Invoke-PolicyEvaluation -Policy "Datbase Status" -TargetServer "MYCOMPUTER" -OutputXML > C:\MyReports\DatabaseStatusReport.xml  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также статью  
  [Использование командлетов ядра СУБД](../../2014/database-engine/use-the-database-engine-cmdlets.md)  
-  
-  

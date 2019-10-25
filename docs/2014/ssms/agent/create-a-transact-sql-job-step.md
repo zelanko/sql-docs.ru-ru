@@ -14,12 +14,12 @@ ms.assetid: 69c571a7-debe-4063-9d38-e4b6a1e8e84c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 383a85bbbad6675c629f7789a09dca4cb0666559
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 488e07e86ba5a7febcb0675611136a1e0d792007
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68211447"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798257"
 ---
 # <a name="create-a-transact-sql-job-step"></a>Создание шага задания Transact-SQL
   В этом разделе описано, как создать шаг задания агента [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , который исполняет скрипты [!INCLUDE[tsql](../../includes/tsql-md.md)] в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]или управляющих объектов SQL Server.  
@@ -28,13 +28,13 @@ ms.locfileid: "68211447"
   
  **В этом разделе**  
   
--   **Перед началом работы**  
+-   **Перед началом:**  
   
      [безопасность](#Security)  
   
 -   **Для создания шага задания Transact-SQL используется:**  
   
-     [Среда SQL Server Management Studio](#SSMS)  
+     [Среда Среда SQL Server Management Studio](#SSMS)  
   
      [Transact-SQL](#TSQL)  
   
@@ -73,13 +73,13 @@ ms.locfileid: "68211447"
   
 #### <a name="to-create-a-transact-sql-job-step"></a>Создание шага задания Transact-SQL  
   
-1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  На стандартной панели выберите пункт **Создать запрос**.  
   
 3.  Скопируйте следующий пример в окно запроса и нажмите кнопку **Выполнить**.  
   
-    ```  
+    ```sql
     -- creates a job step that uses Transact-SQL  
     USE msdb;  
     GO  
@@ -93,11 +93,9 @@ ms.locfileid: "68211447"
     GO  
     ```  
   
- Дополнительные сведения см. в разделе [sp_add_jobstep &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql).  
+ Дополнительные сведения см. в [разделе &#40;SP_ADD_JOBSTEP Transact-&#41;SQL](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql).  
   
-##  <a name="SMO"></a> Использование управляющих объектов SQL Server  
+##  <a name="SMO"></a>Использование управляющие объекты SQL Server  
  **Создание шага задания Transact-SQL**  
   
  Воспользуйтесь классом `JobStep` в любом языке программирования (Visual Basic, Visual C# или PowerShell).  
-  
-  

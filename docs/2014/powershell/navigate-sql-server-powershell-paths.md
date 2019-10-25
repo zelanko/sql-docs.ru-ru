@@ -10,12 +10,12 @@ ms.assetid: d68aca48-d161-45ed-9f4f-14122ed30218
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8a5d9f7119730a904dd760f43d001f1a7734f47c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ce1e3a2088214c222cd2c2e84fc333f4993b7a6b
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62762095"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72797809"
 ---
 # <a name="navigate-sql-server-powershell-paths"></a>Перемещение путей SQL Server PowerShell
   Поставщик компонента [!INCLUDE[ssDE](../includes/ssde-md.md)] PowerShell представляет набор объектов в экземпляре SQL Server в структуре, аналогичной пути к файлу. Командлеты Windows PowerShell можно использовать для навигации по пути поставщика и для создания нестандартных дисков, укорачивающих путь, который требуется ввести.  
@@ -25,7 +25,7 @@ ms.locfileid: "62762095"
   
  Поставщик [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] реализует подмножество командлетов поставщика, приведенных в следующей таблице.  
   
-|командлет|Канонический псевдоним|Псевдоним командной строки|Псевдоним оболочки UNIX|Описание|  
+|командлет|Канонический псевдоним|Псевдоним командной строки|Псевдоним оболочки UNIX|Description|  
 |------------|---------------------|---------------|----------------------|-----------------|  
 |**Get-Location**|**gl**|**pwd**|**pwd**|Возвращает текущий узел.|  
 |`Set-Location`|**sl**|**cd, chdir**|**cd, chdir**|Изменяет текущий узел.|  
@@ -61,7 +61,7 @@ ms.locfileid: "62762095"
 ### <a name="alias-example-powershell"></a>Пример псевдонима (PowerShell)  
  Например, чтобы получить список экземпляров [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , доступных путем перехода к папке SQLSERVER:\SQL и запроса списка дочерних элементов для папки, можно использовать один из следующих наборов командлетов или псевдонимов.  
   
-```  
+```powershell
 ## Shows using the full cmdet name.  
 Set-Location SQLSERVER:\SQL  
 Get-ChildItem  
@@ -80,7 +80,8 @@ ls
 ```  
   
 ## <a name="use-get-childitem"></a>Использование Get-ChildItem  
- **Получение сведений с помощью командлета Get-ChildItem**  
+
+### <a name="return-information-by-using-get-childitem"></a>Получение сведений с помощью командлета Get-ChildItem
   
 1.  Перейдите на узел, для которого хотите получить список потомков  
   
@@ -89,14 +90,13 @@ ls
 ### <a name="get-childitem-example-powershell"></a>Пример командлета Get-ChildItem пример (PowerShell)  
  Эти примеры показывают сведения, возвращаемые командлетом Get-ChildItem для различных узлов на пути поставщика SQL Server.  
   
-```  
+```powershell
 ## Return the current computer and any computer  
 ## to which you have made a SQL or WMI connection.  
 Set-Location SQLSERVER:\SQL  
 Get-ChildItem  
   
 ## List the instances of the Database Engine on the local computer.  
-  
 Set-Location SQLSERVER:\SQL\localhost  
 Get-ChildItem  
   
@@ -112,7 +112,8 @@ Get-ChildItem -force
 ```  
   
 ## <a name="create-a-custom-drive"></a>Создание пользовательского диска  
- **Создание и использование пользовательского диска**  
+
+### <a name="create-and-use-a-custom-drive"></a>Создание и использование пользовательского диска
   
 1.  Использование `New-PSDrive` для определения пользовательского диска. Используйте параметр `Root` для указания пути, представляемого именем пользовательского диска.  
   
@@ -121,7 +122,7 @@ Get-ChildItem -force
 ### <a name="custom-drive-example-powershell"></a>Пример пользовательского диска (PowerShell)  
  В приведенном ниже примере создается виртуальный диск AWDB, сопоставленный с узлом для развернутой копии образца базы данных AdventureWorks2012. Виртуальный диск затем используется для перехода к таблице в базе данных.  
   
-```  
+```powershell
 ## Create a new virtual drive.  
 New-PSDrive -Name AWDB -Root SQLSERVER:\SQL\localhost\DEFAULT\Databases\AdventureWorks2012  
   
@@ -129,10 +130,8 @@ New-PSDrive -Name AWDB -Root SQLSERVER:\SQL\localhost\DEFAULT\Databases\Adventur
 Set-Location AWDB:\Tables\Purchasing.Vendor  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также статью  
  [SQL Server PowerShell, поставщик](sql-server-powershell-provider.md)   
  [Работа с  путями SQL Server PowerShell](work-with-sql-server-powershell-paths.md)   
  [Преобразование универсальных имен ресурса в пути поставщика SQL Server](../database-engine/convert-urns-to-sql-server-provider-paths.md)   
  [SQL Server PowerShell](sql-server-powershell.md)  
-  
-  

@@ -10,26 +10,26 @@ ms.assetid: bb9fe0d3-e432-42d3-b324-64dc908b544a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 46dbf6654b557d612bac6dd2b2a79da114603414
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 373b2b9d90512293e1776d06ab5797faaf47a210
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64775058"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72797769"
 ---
 # <a name="encode-and-decode-sql-server-identifiers"></a>Шифрование и расшифровка идентификаторов SQL Server
   Идентификаторы SQL Server с разделителями иногда содержат символы, не поддерживаемые в путях Windows PowerShell. Эти символы можно задавать путем кодирования их шестнадцатеричных значений.  
   
-1.  **Перед началом:**  [Ограничения](#LimitationsRestrictions)  
+1.  **Перед началом работы выполните следующие действия.**  [Ограничения](#LimitationsRestrictions)  
   
-2.  **Обработка специальных символов:**  [Кодирование идентификатора](#EncodeIdent), [декодирование идентификатора](#DecodeIdent)  
+2.  **Обработка специальных символов:**  [кодирование идентификатора](#EncodeIdent), [декодирование идентификатора](#DecodeIdent)  
   
 ## <a name="before-you-begin"></a>Перед началом  
  Символы, неподдерживаемые в именах путей Windows PowerShell, могут быть представлены или закодированы в виде символа «%», за которым следует шестнадцатеричное значение для битового шаблона, представляющего символ, например « **%** xx». Для обработки символов, неподдерживаемых в обозначениях путей Windows PowerShell, всегда можно использовать кодировку.  
   
  Командлет **Encode-SqlName** принимает в качестве входных данных идентификатор [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Он возвращает строку, в которой все символы, не поддерживаемые языком Windows PowerShell, закодированы в виде «%xx». Командлет **Decode-SqlName** принимает в качестве входных данных закодированный идентификатор [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и возвращает исходный идентификатор.  
   
-###  <a name="LimitationsRestrictions"></a> Ограничения  
+###  <a name="LimitationsRestrictions"></a> ограничения  
  Командлеты `Encode-Sqlname` и `Decode-Sqlname` обеспечивают только кодирование или декодирование символов, допустимых в идентификаторах SQL Server с разделителями, но не поддерживаемых в путях PowerShell. Символы, кодируемые командлетом **Encode-SqlName** и декодируемые командлетом **Decode-SqlName**, перечислены ниже.  
   
 |||||||||||||  
@@ -55,7 +55,7 @@ Set-Location Table%3ATest
   
  Можно также использовать **Encode-SqlName** для формирования имени, поддерживаемого Windows PowerShell:  
   
-```  
+```powershell
 Set-Location (Encode-SqlName "Table:Test")  
 ```  
   
@@ -67,13 +67,11 @@ Set-Location (Encode-SqlName "Table:Test")
 ### <a name="examples-decoding"></a>Примеры (декодирование)  
  В этом примере происходит возврат строки Table:Test:  
   
-```  
+```powershell
 Decode-SqlName "Table%3ATest"  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также статью  
  [Идентификаторы SQL Server в PowerShell](sql-server-identifiers-in-powershell.md)   
  [SQL Server PowerShell, поставщик](sql-server-powershell-provider.md)   
  [SQL Server PowerShell](sql-server-powershell.md)  
-  
-  

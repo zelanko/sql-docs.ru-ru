@@ -15,12 +15,12 @@ ms.assetid: d7520c13-a8ee-4ddc-9e9a-54cd3d27ef1c
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 85f3fe4115f770f45df6dc226eac81e798514f08
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 524f9d4b3173a70d3491f2efc0f00f4061c4d6b4
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62788465"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72797966"
 ---
 # <a name="specify-the-endpoint-url-when-adding-or-modifying-an-availability-replica-sql-server"></a>Укажите URL-адрес конечной точки при добавлении или изменении реплики доступности (SQL Server)
   Для размещения реплики доступности для группы доступности экземпляр сервера должен иметь конечную точку зеркального отображения базы данных. Экземпляр сервера использует эту конечную точку для прослушивания сообщений [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] , получаемых от реплик доступности, размещенных на других экземплярах сервера. Чтобы определить реплику доступности для группы доступности, необходимо задать URL-адрес конечной точки экземпляра сервера, на котором размещена реплика. *URL-адрес конечной точки* определяет транспортный протокол конечной точки зеркального отображения базы данных — TCP, системный адрес экземпляра сервера и номер порта, связанный с конечной точкой.  
@@ -39,7 +39,7 @@ ms.locfileid: "62788465"
 ##  <a name="SyntaxOfURL"></a> Синтаксис для URL-адреса конечной точки  
  Синтаксис URL-адреса конечной точки имеет следующую форму:  
   
- TCP<strong>://</strong> *\<системный_адрес>* <strong>:<strong> *\<порт>*  
+ TCP<strong>://</strong> *\<системный_адрес>* <strong>:</strong> *\<порт>*  
   
  где  
   
@@ -69,7 +69,7 @@ ms.locfileid: "62788465"
   
      Чтобы определить, какой порт в текущий момент связан с конечной точкой зеркального отображения базы данных экземпляра сервера, воспользуйтесь следующей инструкцией [!INCLUDE[tsql](../../../includes/tsql-md.md)] :  
   
-    ```  
+    ```sql
     SELECT type_desc, port FROM sys.TCP_endpoints  
     ```  
   
@@ -82,7 +82,7 @@ ms.locfileid: "62788465"
   
  `TCP://SYSTEM46:7022`  
   
-#### <a name="b-using-a-fully-qualified-domain-name"></a>Б. Использование полного доменного имени  
+#### <a name="b-using-a-fully-qualified-domain-name"></a>б. Использование полного доменного имени  
  В следующем URL-адресе конечной точки определено полное доменное имя `DBSERVER8.manufacturing.Adventure-Works.com`и порт `7024`.  
   
  `TCP://DBSERVER8.manufacturing.Adventure-Works.com:7024`  
@@ -122,7 +122,7 @@ ms.locfileid: "62788465"
 ##  <a name="RelatedTasks"></a> Связанные задачи  
  **Настройка конечной точки зеркального отображения базы данных**  
   
--   [Создание базы данных конечной точки зеркального отображения для групп доступности AlwaysOn &#40;SQL Server PowerShell&#41;](database-mirroring-always-on-availability-groups-powershell.md)  
+-   [Создание конечной точки зеркального отображения базы данных &#40;для группы доступности AlwaysOn SQL Server PowerShell&#41;](database-mirroring-always-on-availability-groups-powershell.md)  
   
 -   [Создание конечной точки зеркального отображения базы данных с проверкой подлинности Windows (Transact-SQL)](../../database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
   
@@ -134,7 +134,7 @@ ms.locfileid: "62788465"
   
 -   [Указание сетевого адреса сервера (зеркальное отображение базы данных)](../../database-mirroring/specify-a-server-network-address-database-mirroring.md)  
   
--   [Устранение неполадок с конфигурацией групп доступности AlwaysOn &#40;SQL Server&#41;удален](troubleshoot-always-on-availability-groups-configuration-sql-server.md)  
+-   [Устранение неполадок &#40;SQL Server&#41;конфигурации группы доступности AlwaysOn](troubleshoot-always-on-availability-groups-configuration-sql-server.md)  
   
  **Просмотр сведений о конечной точке зеркального отображения базы данных**  
   
@@ -148,11 +148,9 @@ ms.locfileid: "62788465"
   
 ##  <a name="RelatedContent"></a> См. также  
   
--   [Microsoft SQL Server AlwaysOn Solutions Guide for высокий уровень доступности и аварийного восстановления](https://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Microsoft SQL Server рекомендации по решениям AlwaysOn для обеспечения высокого уровня доступности и аварийного восстановления](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также статью  
  [Создание и настройка групп доступности (SQL Server)](creation-and-configuration-of-availability-groups-sql-server.md)   
- [Обзор групп доступности AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [Общие сведения о &#40;группы доступности AlwaysOn&#41; SQL Server](overview-of-always-on-availability-groups-sql-server.md)    
  [CREATE ENDPOINT (Transact-SQL)](/sql/t-sql/statements/create-endpoint-transact-sql)  
-  
-  

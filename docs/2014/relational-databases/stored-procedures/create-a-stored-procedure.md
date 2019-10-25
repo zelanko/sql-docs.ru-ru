@@ -14,28 +14,28 @@ ms.assetid: 76e8a6ba-1381-4620-b356-4311e1331ca7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 463b077fe6ac972f87dcf90773c07575e839bb14
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9aa5518ee9ebcaca287b76636d6eeea8af2f4ea5
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63016045"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72796420"
 ---
 # <a name="create-a-stored-procedure"></a>Создание хранимой процедуры
   В этом разделе описывается, как можно создать хранимую процедуру [!INCLUDE[tsql](../../includes/tsql-md.md)] в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] с использованием инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE PROCEDURE.  
   
 ##  <a name="Top"></a>   
--   **Перед началом:**  [Разрешения](#Permissions)  
+-   **Перед началом работы выполните следующие действия.**  [Разрешения](#Permissions)  
   
--   **Создание процедуры с использованием:**  [среды SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
+-   **To create a procedure, using:**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> Разрешения  
  Для выполнения этой инструкции требуется разрешение CREATE PROCEDURE в отношении базы данных и разрешение ALTER в отношении схемы, в которой создается процедура.  
   
 ##  <a name="Procedures"></a> Создание хранимой процедуры  
  Можно использовать один из следующих способов:  
   
--   [Среда SQL Server Management Studio](#SSMSProcedure)  
+-   [Среда Среда SQL Server Management Studio](#SSMSProcedure)  
   
 -   [Transact-SQL](#TsqlProcedure)  
   
@@ -52,11 +52,11 @@ ms.locfileid: "63016045"
   
 5.  В диалоговом окне **Задание значений для параметров шаблона** введите для показанных параметров следующие значения.  
   
-    |Параметр|Значение|  
+    |Parameter|Value|  
     |---------------|-----------|  
     |Автор|*Ваше имя*|  
     |Дата создания|*Сегодняшняя дата*|  
-    |Описание|Возвращает данные о сотрудниках.|  
+    |Description|Возвращает данные о сотрудниках.|  
     |Procedure_name|HumanResources.uspGetEmployeesTest|  
     |@Param1|@LastName|  
     |@Datatype_For_Param1|`nvarchar`(50)|  
@@ -92,44 +92,40 @@ ms.locfileid: "63016045"
 ###  <a name="TsqlProcedure"></a> Использование Transact-SQL  
  **Создание процедуры в редакторе запросов**  
   
-1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  В меню **Файл** выберите пункт **Создать запрос**.  
   
 3.  Скопируйте следующий пример в окно запроса и нажмите кнопку **Выполнить**. В данном примере создается та же хранимая процедура, что и раньше, но с другим именем процедуры.  
   
-    ```  
+    ```sql
     USE AdventureWorks2012;  
     GO  
     CREATE PROCEDURE HumanResources.uspGetEmployeesTest2   
         @LastName nvarchar(50),   
         @FirstName nvarchar(50)   
-    AS   
+    AS
   
         SET NOCOUNT ON;  
         SELECT FirstName, LastName, Department  
         FROM HumanResources.vEmployeeDepartmentHistory  
         WHERE FirstName = @FirstName AND LastName = @LastName  
         AND EndDate IS NULL;  
-    GO  
-  
+    GO
     ```  
   
 4.  Чтобы выполнить процедуру, скопируйте следующий пример в окно создаваемого запроса и нажмите кнопку **Выполнить**. Показаны различные методы задания значений параметров.  
   
-    ```  
+    ```sql
     EXECUTE HumanResources.uspGetEmployeesTest2 N'Ackerman', N'Pilar';  
     -- Or  
     EXEC HumanResources.uspGetEmployeesTest2 @LastName = N'Ackerman', @FirstName = N'Pilar';  
     GO  
     -- Or  
     EXECUTE HumanResources.uspGetEmployeesTest2 @FirstName = N'Pilar', @LastName = N'Ackerman';  
-    GO  
-  
+    GO
     ```  
   
-##  <a name="PowerShellProcedure"></a>   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также статью  
  [CREATE PROCEDURE (Transact-SQL)](/sql/t-sql/statements/create-procedure-transact-sql)  
-  
   

@@ -1,5 +1,5 @@
 ---
-title: Использование PowerShell для смены и перечисления владельцев подписок служб Reporting Services и запуска подписки | Документация Майкрософт
+title: Использование PowerShell для изменения и перечисления Reporting Services владельцев подписок и запуска подписки | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: 0fa6cb36-68fc-4fb8-b1dc-ae4f12bf6ff0
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: d83ee924a1df8db92b74be5a3282bd7b4d16cf11
-ms.sourcegitcommit: 0b0f5aba602732834c8439c192d95921149ab4c3
+ms.openlocfilehash: ebb20180e96302ba2ee90e9ab90cb79be19b7e1b
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67500058"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72796376"
 ---
 # <a name="use-powershell-to-change-and-list-reporting-services-subscription-owners-and-run-a-subscription"></a>Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription
   Приступая к работе с [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)][!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] , вы можете программно передать владение подпиской [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] от одного пользователя другому. В этом разделе содержится несколько скриптов Windows PowerShell, которые можно использовать для смены владельца подписки или простого перечисления владельцев. В каждом примере содержится образец синтаксиса для собственного режима и режима SharePoint. После смены владельца подписки подписка будет выполняться в контексте безопасности нового владельца, а в отчете в поле «User!UserID» будет отображаться значение нового владельца. Дополнительные сведения об объектной модели вызовов образцов см. в разделе <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>  
@@ -30,21 +30,21 @@ ms.locfileid: "67500058"
   
 -   [Использование скриптов](#bkmk_how_to)  
   
--   [Скрипт: Вывод списка владельцев всех подписок](#bkmk_list_ownership_all)  
+-   [Скрипт: вывод списка владельцев всех подписок](#bkmk_list_ownership_all)  
   
--   [Скрипт: Вывод списка всех подписок, принадлежащих конкретному пользователю](#bkmk_list_all_one_user)  
+-   [Скрипт: вывод списка подписок, принадлежащих конкретному пользователю](#bkmk_list_all_one_user)  
   
--   [Скрипт: Смена владельца всех подписок, принадлежащих конкретному пользователю](#bkmk_change_all)  
+-   [Скрипт: смена владельца всех подписок, принадлежащих конкретному пользователю](#bkmk_change_all)  
   
--   [Скрипт: Вывод списка всех подписок, связанных с конкретным отчетом](#bkmk_list_for_1_report)  
+-   [Скрипт: вывод списка всех подписок, связанных с конкретным отчетом](#bkmk_list_for_1_report)  
   
--   [Скрипт: Смена владельца конкретной подписки](#bkmk_change_all_1_subscription)  
+-   [Скрипт: смена владельца конкретной подписки](#bkmk_change_all_1_subscription)  
   
--   [Скрипт: Запуск (вызов) одной подписки](#bkmk_run_1_subscription)  
+-   [Скрипт: запуск (вызов) одной подписки](#bkmk_run_1_subscription)  
   
 ##  <a name="bkmk_how_to"></a> Использование скриптов  
   
-### <a name="permissions"></a>Разрешения  
+### <a name="permissions"></a>Permissions  
  В этом разделе приводится сводка по уровням разрешений, необходимым для использования каждого метода в собственном режиме и режиме SharePoint [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. В скриптах, рассматриваемых в этом разделе, используются следующие методы [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] .  
   
 -   [Метод ReportingService2010.ListSubscriptions](https://technet.microsoft.com/library/reportservice2010.reportingservice2010.listsubscriptions.aspx)  
@@ -57,17 +57,17 @@ ms.locfileid: "67500058"
   
  **Собственный режим.**  
   
--   Список подписок: (HYPERLINK "https://technet.microsoft.com/library/microsoft.reportingservices.interfaces.reportoperation.aspx" ReadSubscription в отчете и пользователь является владельцем подписки) или ReadAnySubscription  
+-   Список подписок: (HYPERLINK "https://technet.microsoft.com/library/microsoft.reportingservices.interfaces.reportoperation.aspx" ReadSubscription в отчете, а пользователь является владельцем подписки) или ReadAnySubscription  
   
--   Изменение подписок: Пользователь должен быть членом группы «BUILTIN\Администраторы»  
+-   Изменение подписок: пользователь должен состоять в группе BUILTIN\Administrators  
   
--   Список дочерних элементов: Свойства ReadProperties для элемента  
+-   Список дочерних элементов: ReadProperties для элемента  
   
 -   Вызов события: GenerateEvents (System)  
   
  **Режим интеграции с SharePoint:**  
   
--   Список подписок: ManageAlerts или (гиперссылка "https://technet.microsoft.com/library/microsoft.sharepoint.spbasepermissions.aspx" CreateAlerts в отчете и пользователь является владельцем подписки и подписка является подпиской по времени).  
+-   Список подписок: ManageAlerts или (HYPERLINK "https://technet.microsoft.com/library/microsoft.sharepoint.spbasepermissions.aspx" CreateAlerts в отчете, и пользователь является владельцем подписки, а подписка является подпиской по времени).  
   
 -   Изменение подписок: ManageWeb  
   
@@ -98,24 +98,24 @@ ms.locfileid: "67500058"
   
 -   [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)]  
   
-##  <a name="bkmk_list_ownership_all"></a> Скрипт: Вывод списка владельцев всех подписок  
+##  <a name="bkmk_list_ownership_all"></a> Скрипт: вывод списка владельцев всех подписок  
  Этот скрипт выводит список всех подписок на одной сайте. С помощью этого скрипта можно проверить подключение или проверить путь к отчету и ИД подписки для использования в других скриптах. Этот скрипт упрощает аудит существующих подписок и их владельцев.  
   
- **Синтаксис собственного режима:**  
+### <a name="native-mode-syntax"></a>Синтаксис в собственном режиме
   
-```  
+```cmd
 powershell c:\scripts\ListAll_SSRS_Subscriptions.ps1 "[server]/reportserver" "/"  
 ```  
   
- **Синтаксис режима SharePoint:**  
+### <a name="sharepoint-mode-syntax"></a>Синтаксис режима интеграции с SharePoint
   
-```  
+```cmd
 powershell c:\scripts\ListAll_SSRS_Subscriptions.ps1 "[server]/_vti_bin/reportserver" "http://[server]"  
 ```  
   
- **Скрипт:**  
+### <a name="script"></a>Скрипт
   
-```  
+```powershell
 # Parameters  
 #    server   - server and instance name (e.g. myserver/reportserver or myserver/reportserver_db2)  
   
@@ -135,24 +135,24 @@ $subscriptions | select Path, report, Description, Owner, SubscriptionID, lastex
 > [!TIP]  
 >  Чтобы проверить URL-адреса сайтов в режиме SharePoint, воспользуйтесь командлетом SharePoint **Get-SPSite**. Дополнительные сведения см. в статье [Get-SPSite](https://technet.microsoft.com/library/ff607950\(v=office.15\).aspx).  
   
-##  <a name="bkmk_list_all_one_user"></a> Скрипт: Вывод списка всех подписок, принадлежащих конкретному пользователю  
+##  <a name="bkmk_list_all_one_user"></a> Скрипт: вывод списка подписок, принадлежащих конкретному пользователю  
  Этот скрипт перечисляет все подписки, принадлежащие конкретному пользователю. С помощью этого скрипта можно проверить подключение или проверить путь к отчету и ИД подписки для использования в других скриптах. Этот скрипт полезен в случае, если какой-либо сотрудник увольняется из организации и необходимо проверить принадлежащие ему подписки, чтобы в дальнейшем сменить владельца или удалить подписку.  
   
- **Синтаксис собственного режима:**  
+### <a name="native-mode-syntax"></a>Синтаксис в собственном режиме
   
-```  
+```cmd
 powershell c:\scripts\ListAll_SSRS_Subscriptions4User.ps1 "[Domain]\[user]" "[server]/reportserver" "/"  
 ```  
   
- **Синтаксис режима SharePoint:**  
+### <a name="sharepoint-mode-syntax"></a>Синтаксис режима интеграции с SharePoint
   
-```  
+```cmd
 powershell c:\scripts\ListAll_SSRS_Subscriptions4User.ps1 "[Domain]\[user]"  "[server]/_vti_bin/reportserver" "http://[server]"  
 ```  
   
- **Скрипт:**  
+### <a name="script"></a>Скрипт  
   
-```  
+```powershell
 # Parameters:  
 #    currentOwner - DOMAIN\USER that owns the subscriptions you wish to change  
 #    server        - server and instance name (e.g. myserver/reportserver or myserver/reportserver_db2)  
@@ -172,24 +172,24 @@ Write-Host "----- $currentOwner's Subscriptions: "
 $subscriptions | select Path, report, Description, Owner, SubscriptionID, lastexecuted,Status | where {$_.owner -eq $currentOwner}  
 ```  
   
-##  <a name="bkmk_change_all"></a> Скрипт: Смена владельца всех подписок, принадлежащих конкретному пользователю  
+##  <a name="bkmk_change_all"></a> Скрипт: смена владельца всех подписок, принадлежащих конкретному пользователю  
  Этот скрипт меняет владельца подписок, принадлежащих конкретному пользователю параметр нового владельца.  
   
- **Синтаксис собственного режима:**  
+### <a name="native-mode-syntax"></a>Синтаксис в собственном режиме
   
-```  
+```cmd
 powershell c:\scripts\ChangeALL_SSRS_SubscriptionOwner.ps1 "[Domain]\current owner]" "[Domain]\[new owner]" "[server]/reportserver"  
 ```  
   
- **Синтаксис режима SharePoint:**  
+### <a name="sharepoint-mode-syntax"></a>Синтаксис режима интеграции с SharePoint
   
-```  
+```cmd
 powershell c:\scripts\ChangeALL_SSRS_SubscriptionOwner.ps1 "[Domain]\{current owner]" "[Domain]\[new owner]" "[server]/_vti_bin/reportserver"  
 ```  
   
- **Скрипт:**  
+### <a name="script"></a>Скрипт
   
-```  
+```powershell
 # Parameters:  
 #    currentOwner - DOMAIN\USER that owns the subscriptions you wish to change  
 #    newOwner      - DOMAIN\USER that will own the subscriptions you wish to change  
@@ -242,24 +242,24 @@ ForEach ($item in $items)
 }  
 ```  
   
-##  <a name="bkmk_list_for_1_report"></a> Скрипт: Вывод списка всех подписок, связанных с конкретным отчетом  
+##  <a name="bkmk_list_for_1_report"></a> Скрипт: вывод списка всех подписок, связанных с конкретным отчетом  
  Этот скрипт перечисляет все подписки, связанные с конкретным отчетом. В синтаксисе пути к отчету требуется использовать полный URL-адрес. В примерах синтаксиса в имени отчета указывается только название, содержащее пробел. Поэтому имя отчета следует заключить в одинарные кавычки.  
   
- **Синтаксис собственного режима:**  
+### <a name="native-mode-syntax"></a>Синтаксис в собственном режиме
   
-```  
+```cmd
 powershell c:\scripts\List_SSRS_One_Reports_Subscriptions.ps1 "[server]/reportserver" "'/reports/title only'" "/"  
 ```  
   
- **Синтаксис режима SharePoint:**  
+### <a name="sharepoint-mode-syntax"></a>Синтаксис режима интеграции с SharePoint
   
-```  
+```cmd
 powershell c:\scripts\List_SSRS_One_Reports_Subscriptions.ps1 "[server]/_vti_bin/reportserver"  "'http://[server]/shared documents/title only.rdl'" "http://[server]"  
 ```  
   
- **Скрипт:**  
+### <a name="script"></a>Скрипт
   
-```  
+```powershell
 # Parameters:  
 #    server      - server and instance name (e.g. myserver/reportserver or myserver/reportserver_db2)  
 #    reportpath  - path to report in the report server, including report name e.g. /reports/test report >> pass in  "'/reports/title only'"  
@@ -280,24 +280,24 @@ Write-Host "----- $reportpath 's Subscriptions: "
 $subscriptions | select Path, report, Description, Owner, SubscriptionID, lastexecuted,Status | where {$_.path -eq $reportpath}  
 ```  
   
-##  <a name="bkmk_change_all_1_subscription"></a> Скрипт: Смена владельца конкретной подписки  
+##  <a name="bkmk_change_all_1_subscription"></a> Скрипт: смена владельца конкретной подписки  
  Этот сценарий меняет владельца конкретной подписки. Подписка идентифицируется по SubscriptionID, указанному в скрипте. Чтобы определить правильный SubscriptionID, можно воспользоваться одним из скриптов вывода списка подписок.  
   
- **Синтаксис собственного режима:**  
+### <a name="native-mode-syntax"></a>Синтаксис в собственном режиме
   
-```  
+```cmd
 powershell c:\scripts\Change_SSRS_Owner_One_Subscription.ps1 "[Domain]\[new owner]" "[server]/reportserver" "/" "ac5637a1-9982-4d89-9d69-a72a9c3b3150"  
 ```  
   
- **Синтаксис режима SharePoint:**  
+### <a name="sharepoint-mode-syntax"></a>Синтаксис режима интеграции с SharePoint
   
-```  
+```cmd
 powershell c:\scripts\Change_SSRS_Owner_One_Subscription.ps1 "[Domain]\[new owner]" "[server]/_vti_bin/reportserver" "http://[server]" "9660674b-f020-453f-b1e3-d9ba37624519"  
 ```  
   
- **Скрипт:**  
+### <a name="script"></a>Скрипт
   
-```  
+```powershell
 # Parameters:  
 #    newOwner       - DOMAIN\USER that will own the subscriptions you wish to change  
 #    server         - server and instance name (e.g. myserver/reportserver or myserver/reportserver_db2)  
@@ -326,7 +326,7 @@ Write-Host "----- $subscriptionid's Subscription properties: "
 $subscription | select Path, report, Description, SubscriptionID, Owner, Status  
 ```  
   
-##  <a name="bkmk_run_1_subscription"></a> Скрипт: Запуск (вызов) одной подписки  
+##  <a name="bkmk_run_1_subscription"></a> Скрипт: запуск (вызов) одной подписки  
  Этот скрипт запускает определенную подписку с помощью метода FireEvent. Независимо от настроенного для подписки расписания скрипт запустит подписку немедленно. EventType сопоставляется с известным набором событий, которые определены в файле конфигурации сервера отчетов **rsreportserver.config** . Скрипт использует следующий тип событий для стандартных подписок:  
   
  `<Event>`  
@@ -339,22 +339,21 @@ $subscription | select Path, report, Description, SubscriptionID, Owner, Status
   
  Скрипт содержит логику задержки "`Start-Sleep -s 6`", поэтому после запуска события есть небольшой период времени для ввода обновленного состояния в метод ListSubscription.  
   
- **Синтаксис собственного режима:**  
+### <a name="native-mode-syntax"></a>Синтаксис в собственном режиме
   
-```  
+```cmd
 powershell c:\scripts\FireSubscription.ps1 "[server]/reportserver" $null "70366e82-2d3c-4edd-a216-b97e51e26de9"  
 ```  
   
- **Синтаксис режима SharePoint:**  
+### <a name="sharepoint-mode-syntax"></a>Синтаксис режима интеграции с SharePoint
   
-```  
+```cmd
 powershell c:\scripts\FireSubscription.ps1 "[server]/_vti_bin/reportserver" "http://[server]" "c3425c72-580d-423e-805a-41cf9799fd25"  
 ```  
   
- **Скрипт:**  
+### <a name="script"></a>Скрипт
   
-```  
-  
+```powershell
 # Parameters  
 #    server         - server and instance name (e.g. myserver/reportserver or myserver/reportserver_db2)  
 #    site           - use $null for a native mode server  
@@ -375,14 +374,11 @@ Write-Host "----- Subscription ($subscriptionid) status: "
 #get list of subscriptions and filter to the specific ID to see the Status and LastExecuted  
 Start-Sleep -s 6 # slight delay in processing so ListSubscription returns the updated Status and LastExecuted  
 $subscriptions = $rs2010.ListSubscriptions($site);   
-$subscriptions | select Status, Path, report, Description, Owner, SubscriptionID, EventType, lastexecuted | where {$_.SubscriptionID -eq $subscriptionid}  
-  
+$subscriptions | select Status, Path, report, Description, Owner, SubscriptionID, EventType, lastexecuted | where {$_.SubscriptionID -eq $subscriptionid}
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также статью  
  <xref:ReportService2010.ReportingService2010.ListSubscriptions%2A>   
  <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>   
  <xref:ReportService2010.ReportingService2010.ListChildren%2A>   
  <xref:ReportService2010.ReportingService2010.FireEvent%2A>  
-  
-  

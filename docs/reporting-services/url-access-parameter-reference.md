@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1c3e680a-83ea-4979-8e79-fa2337ae12a3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4e5627b752099438ad19f3ba31792f08666abdfe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fba128636ce726396b499200b060592a63db5f65
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65620594"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72542183"
 ---
 # <a name="url-access-parameter-reference"></a>Ссылка на параметр доступа по URL-адресу
   Чтобы настроить внешний вид отчетов служб [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)], можно использовать приведенные здесь параметры как часть URL-адреса. В этом разделе перечислены основные параметры. Параметры не учитывают регистр символов и начинаются с префикса параметра *rs:* , если направлены на сервер отчетов, и с префикса параметра *rc:* , если направлены в средство просмотра HTML-страниц. Также можно указать конкретные параметры устройств или модулей подготовки отчетов. Дополнительные сведения о параметрах, определяемых устройством, см. в разделе [Указание настройки сведений об устройстве в URL-адресе](../reporting-services/specify-device-information-settings-in-a-url.md).  

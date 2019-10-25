@@ -17,33 +17,29 @@ ms.assetid: 7bd89ddd-0403-4930-a5eb-3c78718533d4
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a129386b5c88939d68f5d7f23a5fe2b4d8ce7cca
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f50ff5cd5a3ecbc70aafb6da7cf5008f31bada0f
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62789526"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72797730"
 ---
 # <a name="configure-read-only-routing-for-an-availability-group-sql-server"></a>Настройка маршрутизации только для чтения в группе доступности (SQL Server)
-  Чтобы настроить группу доступности AlwaysOn для поддержки маршрутизации только для чтения в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], можно использовать процедуру [!INCLUDE[tsql](../../../includes/tsql-md.md)] или PowerShell. *Маршрутизация только для чтения* означает способность [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] направлять уточняющие запросы на соединение только для чтения к имеющейся [доступной для чтения вторичной реплике](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md) AlwaysOn (то есть реплике, настроенной для разрешения рабочих нагрузок только для чтения при выполнении вторичной роли). Для поддержки маршрутизации только для чтения группа доступности должна иметь [прослушиватель группы доступности](../../listeners-client-connectivity-application-failover.md). Клиент, запрашивающий данные в режиме только чтения, должен направлять свои запросы к данному прослушивателю, а строки подключения клиента должны определять намерение приложения как «только для чтения». Это означает, что они должны быть *запросами на соединение с правами чтения*.  
+  Чтобы настроить группу доступности AlwaysOn для поддержки маршрутизации только для чтения в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], можно использовать процедуру [!INCLUDE[tsql](../../../includes/tsql-md.md)] или PowerShell. *Маршрутизация только для чтения* означает способность [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] направлять уточняющие запросы на соединение только для чтения к имеющейся [доступной для чтения вторичной реплике](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md) AlwaysOn (то есть реплике, настроенной для разрешения рабочей нагрузки только для чтения при выполнении вторичной роли). Для поддержки маршрутизации только для чтения группа доступности должна иметь [прослушиватель группы доступности](../../listeners-client-connectivity-application-failover.md). Клиент, запрашивающий данные в режиме только чтения, должен направлять свои запросы к данному прослушивателю, а строки подключения клиента должны определять намерение приложения как «только для чтения». Это означает, что они должны быть *запросами на соединение с правами чтения*.  
   
 > [!NOTE]
->  Дополнительные сведения о настройке доступной для чтения вторичной реплики см. в разделе [Настройка доступа только для чтения в реплике доступности (SQL Server)](configure-read-only-access-on-an-availability-replica-sql-server.md).  
-> 
-> 
-> 
+>  Дополнительные сведения о настройке доступной для чтения вторичной реплики см. в разделе [Настройка доступа только для чтения в реплике доступности (SQL Server)](configure-read-only-access-on-an-availability-replica-sql-server.md).
+
 > [!NOTE]
 >  Настройка маршрутизации только для чтения не поддерживается в среде [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)].  
   
-
-  
 ##  <a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Prerequisites"></a> Предварительные требования  
+###  <a name="Prerequisites"></a> предварительные требования  
   
 -   Группа доступности должна обладать прослушивателем группы доступности. Дополнительные сведения см. в разделе [Создание или настройка прослушивателя группы доступности (SQL Server)](create-or-configure-an-availability-group-listener-sql-server.md).  
   
--   Один или несколько реплик доступности необходимо настроить для принятия только для чтения во вторичной роли (то есть быть [вторичные реплики для чтения](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)(AlwaysOn % 20Availability % 20Groups\).md)). Дополнительные сведения см. в разделе [Настройка доступа только для чтения в реплике доступности (SQL Server)](configure-read-only-access-on-an-availability-replica-sql-server.md).  
+-   Одна или несколько реплик доступности должны быть настроены на прием только для чтения во вторичной роли (то есть доступны для чтения [вторичные реплики](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)(AlwaysOn% 20Availability% 20Groups\). md)). Дополнительные сведения см. в разделе [Настройка доступа только для чтения в реплике доступности (SQL Server)](configure-read-only-access-on-an-availability-replica-sql-server.md).  
   
 -   Необходимо подключиться к экземпляру сервера, на котором размещена текущая первичная реплика.  
   
@@ -51,7 +47,7 @@ ms.locfileid: "62789526"
   
 -   Для каждой доступной для чтения вторичной реплики, которая поддерживает маршрутизацию только для чтения, необходимо указать *URL-адрес маршрутизации только для чтения*. Этот URL-адрес задействуется, только если локальная реплика выполняется под вторичной ролью. URL-адрес маршрутизации только для чтения должен быть указан для каждой реплики отдельно (если для реплики требуется подобная маршрутизация). Все URL-адреса маршрутизации только для чтения используются для направления запросов на соединение с намерением чтения к определенной доступной для чтения вторичной реплике. Как правило, каждой доступной для чтения вторичной реплике назначается URL-адрес маршрутизации только для чтения.  
   
-     Дополнительные сведения о вычислении URL-адреса маршрутизации только для чтения для реплики доступности см. в разделе [Вычисление read_only_routing_url для AlwaysOn](https://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-alwayson.aspx).  
+     Дополнительные сведения о вычислении URL-адреса маршрутизации только для чтения для реплики доступности см. в разделе [Вычисление для AlwaysOn](https://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-alwayson.aspx).  
   
 -   Для каждой реплики доступности, которая должна поддерживать маршрутизацию только для чтения и при этом являющейся первичной, необходимо задать *список маршрутизации только для чтения*. Определенный список маршрутизации только для чтения вступает в силу, только если локальная реплика выполняется под первичной ролью. Такой список должен указываться для тех конкретных реплик, для которых он требуется. Как правило, каждый список маршрутизации только для чтения будет содержать все URL-адреса маршрутизации только для чтения, причем URL-адрес локальной реплики будет идти в конце списка.  
   
@@ -63,15 +59,15 @@ ms.locfileid: "62789526"
   
 ###  <a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Разрешения  
   
-|Задача|Разрешения|  
+|Задача|Permissions|  
 |----------|-----------------|  
 |Настройка реплик при создании группы доступности|Требуется членство в фиксированной роли сервера **sysadmin** и одно из разрешений: CREATE AVAILABILITY GROUP, ALTER ANY AVAILABILITY GROUP или CONTROL SERVER.|  
 |Изменение реплики доступности|Необходимо разрешение ALTER AVAILABILITY GROUP для группы доступности, разрешение CONTROL AVAILABILITY GROUP, разрешение ALTER ANY AVAILABILITY GROUP или разрешение CONTROL SERVER.|  
   
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
- **Чтобы настроить маршрутизацию только для чтения**  
+ **Настройка маршрутизации только для чтения**  
   
 > [!NOTE]  
 >  Пример кода см. в подразделе [Пример (Transact-SQL)](#TsqlExample)далее в этом разделе.  
@@ -82,7 +78,7 @@ ms.locfileid: "62789526"
   
     -   Чтобы настроить маршрутизацию только для чтения для вторичной роли, укажите в предложении ADD REPLICA или MODIFY REPLICA WITH параметр SECONDARY_ROLE следующим образом:  
   
-         SECONDARY_ROLE **(** READ_ONLY_ROUTING_URL **= "** TCP **:// *`system-address`* : *`port`* ")**  
+         SECONDARY_ROLE **(** READ_ONLY_ROUTING_URL **= '** TCP **:// *`system-address`* : *`port`* ')**  
   
          Существуют следующие параметры URL-адреса маршрутизации только для чтения.  
   
@@ -100,7 +96,7 @@ ms.locfileid: "62789526"
   
     -   Чтобы настроить маршрутизацию только для чтения для первичной роли, в предложении ADD REPLICA или MODIFY REPLICA WITH укажите параметр PRIMARY_ROLE следующим образом:  
   
-         PRIMARY_ROLE **(** READ_ONLY_ROUTING_LIST **= (" *`server`* "** [ **,** ... *n* ] **))**  
+         PRIMARY_ROLE **(** READ_ONLY_ROUTING_LIST **= (' *`server`* '** [ **,** ... *n* ] **))**  
   
          Здесь *server* идентифицирует экземпляр сервера, на котором размещена вторичная реплика только для чтения в группе доступности.  
   
@@ -109,10 +105,10 @@ ms.locfileid: "62789526"
         > [!NOTE]  
         >  Необходимо настроить URL-адрес маршрутизации только для чтения перед настройкой списка маршрутизации только для чтения.  
   
-###  <a name="TsqlExample"></a> Примеры (Transact-SQL)  
+###  <a name="TsqlExample"></a> Пример (Transact-SQL)  
  В следующем примере изменяются две реплики доступности существующей группы доступности `AG1` для поддержки маршрутизации только для чтения в том случае, если одна из этих реплик в настоящий момент обладает первичной ролью. Чтобы определить экземпляры сервера, на которых размещена реплика доступности, в этом примере указаны имена экземпляров —`COMPUTER01` и `COMPUTER02`.  
   
-```  
+```sql
 ALTER AVAILABILITY GROUP [AG1]  
  MODIFY REPLICA ON  
 N'COMPUTER01' WITH   
@@ -140,12 +136,12 @@ ALTER AVAILABILITY GROUP [AG1]
 MODIFY REPLICA ON  
 N'COMPUTER02' WITH   
 (PRIMARY_ROLE (READ_ONLY_ROUTING_LIST=('COMPUTER01','COMPUTER02')));  
-GO  
-  
+GO
 ```  
   
 ##  <a name="PowerShellProcedure"></a> Использование PowerShell  
- **Чтобы настроить маршрутизацию только для чтения**  
+
+### <a name="to-configure-read-only-routing"></a>Настройка маршрутизации только для чтения
   
 > [!NOTE]  
 >  Пример кода см. в подразделе [Пример (PowerShell)](#PSExample)далее в этом разделе.  
@@ -154,13 +150,13 @@ GO
   
 2.  При добавлении реплики доступности в группу доступности воспользуйтесь командлетом `New-SqlAvailabilityReplica`. При изменении существующей реплики доступности воспользуйтесь командлетом `Set-SqlAvailabilityReplica`. Соответствующие параметры:  
   
-    -   Чтобы настроить маршрутизацию только для чтения для вторичной роли, укажите **ReadonlyRoutingConnectionUrl» *`url`* "** параметра.  
+    -   Чтобы настроить маршрутизацию только для чтения для вторичной роли, укажите параметр **параметр readonlyroutingconnectionurl " *`url`* "** .  
   
          Здесь *url* — это полное доменное имя и порт, которые используются для маршрутизации к реплике соединений только для чтения. Например:  `-ReadonlyRoutingConnectionUrl "TCP://DBSERVER8.manufacturing.Adventure-Works.com:7024"`  
   
          Дополнительные сведения см. в разделе [Вычисления для AlwaysOn](https://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-alwayson.aspx).  
   
-    -   Чтобы настроить доступ соединения для первичной роли, укажите **ReadonlyRoutingList» *`server`* "** [ **,** ... *n* ], где *server* обозначает экземпляр сервера, на котором размещена вторичная реплика только для чтения в группе доступности. Например:  `-ReadOnlyRoutingList "SecondaryServer","PrimaryServer"`  
+    -   Чтобы настроить доступ к соединению для первичной роли, укажите **ReadonlyRoutingList " *`server`* "** [ **,** ... *n* ], где *Server* определяет экземпляр сервера, на котором размещена вторичная реплика только для чтения в группе доступности. Например:  `-ReadOnlyRoutingList "SecondaryServer","PrimaryServer"`  
   
         > [!NOTE]  
         >  Необходимо настроить URL-адрес маршрутизации только для чтения для реплики перед тем, как перейти к настройке ее списка маршрутизации.  
@@ -168,16 +164,12 @@ GO
     > [!NOTE]  
     >  Чтобы просмотреть синтаксис командлета, воспользуйтесь командлетом `Get-Help` в среде [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Дополнительные сведения см. в разделе [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
   
- **Настройка и использование поставщика SQL Server PowerShell**  
-  
--   [Поставщик SQL Server PowerShell](../../../powershell/sql-server-powershell-provider.md)  
-  
--   [Получение справок по SQL Server PowerShell](../../../powershell/sql-server-powershell.md)  
+Чтобы настроить и использовать поставщик SQL Server PowerShell, см. статью [SQL Server PowerShell Provider](../../../powershell/sql-server-powershell-provider.md) и [Получение справки SQL Server PowerShell](../../../powershell/sql-server-powershell.md).
   
 ###  <a name="PSExample"></a> Пример (PowerShell)  
  В следующем примере выполняется настройка первичной реплики и одной вторичной реплики в группе доступности с использованием маршрутизации только для чтения. С начала примера каждой реплике присваивается URL-адрес для маршрутизации только для чтения. Затем для первичной реплики задается список маршрутизации только для чтения. Соединения со свойством «ReadOnly» в строке подключения будут перенаправляться на вторичную реплику. Если такая вторичная реплика недоступна для чтения (в соответствии со значением параметра `ConnectionModeInSecondaryRole`), соединение направляется обратно в первичную реплику.  
   
-```  
+```powershell
 Set-Location SQLSERVER:\SQL\PrimaryServer\default\AvailabilityGroups\MyAg  
 $primaryReplica = Get-Item "AvailabilityReplicas\PrimaryServer"  
 $secondaryReplica = Get-Item "AvailabilityReplicas\SecondaryServer"  
@@ -187,11 +179,11 @@ Set-SqlAvailabilityReplica -ReadOnlyRoutingConnectionUrl "TCP://SecondaryServer.
 Set-SqlAvailabilityReplica -ReadOnlyRoutingList "SecondaryServer","PrimaryServer" -InputObject $primaryReplica  
 ```  
   
-##  <a name="FollowUp"></a> Дальнейшие действия. После настройки маршрутизации только для чтения  
+##  <a name="FollowUp"></a> Продолжение: после настройки маршрутизации только для чтения  
  Как только текущая первичная реплика и предназначенные для чтения вторичные реплики будут настроены для поддержки маршрутизации только для чтения в обеих ролях, предназначенные для чтения вторичные реплики смогут принимать запросы соединения с намерением чтения от клиентов, которые подключаются через прослушиватель группы доступности.  
   
 > [!TIP]  
->  При использовании [служебная программа bcp](../../../tools/bcp-utility.md) или [служебная программа sqlcmd](../../../tools/sqlcmd-utility.md), можно указать доступ только для чтения к любой вторичной реплике, которая включена для доступа только для чтения, указав `-K ReadOnly` переключения.  
+>  При использовании [программы bcp](../../../tools/bcp-utility.md) или [программы sqlcmd](../../../tools/sqlcmd-utility.md)можно указать доступ только для чтения ко всем вторичным репликам, для которых разрешен доступ только для чтения, указав параметр `-K ReadOnly`.  
   
 ###  <a name="ConnStringReqsRecs"></a> Требования и рекомендации для строк подключения клиента  
  В случае если клиентское приложение использует маршрутизацию только для чтения, его строка подключения должна удовлетворять следующим требованиям.  
@@ -215,22 +207,23 @@ Server=tcp:MyAgListener,1433;Database=Db1;IntegratedSecurity=SSPI;ApplicationInt
  Дополнительные сведения о намерении приложения и маршрутизации только для чтения см. в разделе [Прослушиватели групп доступности, возможность подключения клиентов и отработка отказа приложений (SQL Server)](../../listeners-client-connectivity-application-failover.md).  
   
 ### <a name="if-read-only-routing-is-not-working-correctly"></a>Маршрутизация только для чтения работает неправильно  
- Дополнительные сведения об устранении неполадок с конфигурацией маршрутизации только для чтения см. в разделе [Маршрутизация только для чтения работает неправильно](troubleshoot-always-on-availability-groups-configuration-sql-server.md).  
+ Дополнительные сведения об устранении неполадок с конфигурацией маршрутизации только для чтения можно найти в статье [Read-Only Routing is Not Working Correctly](troubleshoot-always-on-availability-groups-configuration-sql-server.md).  
   
 ##  <a name="RelatedTasks"></a> Связанные задачи  
- **Просмотр конфигурации маршрутизации только для чтения**  
+
+### <a name="to-view-read-only-routing-configurations"></a>Просмотр конфигурации маршрутизации только для чтения
   
 -   [sys.availability_read_only_routing_lists (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-availability-read-only-routing-lists-transact-sql)  
   
 -   [sys.availability_replicas (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-availability-replicas-transact-sql) (столбец **read_only_routing_url**)  
   
- **Настройка доступа соединения клиентов**  
+### <a name="to-configure-client-connection-access"></a>Настройка доступа соединения клиентов
   
 -   [Создание или настройка прослушивателя группы доступности (SQL Server)](create-or-configure-an-availability-group-listener-sql-server.md)  
   
 -   [Настройка доступа только для чтения в реплике доступности (SQL Server)](configure-read-only-access-on-an-availability-replica-sql-server.md)  
   
- **Использование строк подключения в приложениях**  
+### <a name="to-use-connection-strings-in-applications"></a>Использование строк подключения в приложениях
   
 -   [Поддержка высокого уровня доступности и аварийного восстановления собственного клиента SQL Server](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)  
   
@@ -240,9 +233,9 @@ Server=tcp:MyAgListener,1433;Database=Db1;IntegratedSecurity=SSPI;ApplicationInt
   
 -   **Блоги**  
   
-     [Вычисление значения read_only_routing_url для AlwaysOn](https://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-alwayson.aspx)  
+     [Вычисление READ_ONLY_ROUTING_URL для AlwaysOn](https://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-alwayson.aspx)  
   
-     [Блоги группы AlwaysOn SQL Server: Официальный блог по SQL Server AlwaysOn Team](https://blogs.msdn.com/b/sqlalwayson/)  
+     [Блоги группы разработчиков SQL Server AlwaysOn: Официальный блог группы SQL Server AlwaysOn](https://blogs.msdn.com/b/sqlalwayson/)  
   
      [Блоги инженеров CSS SQL Server](https://blogs.msdn.com/b/psssql/)  
   
@@ -252,11 +245,9 @@ Server=tcp:MyAgListener,1433;Database=Db1;IntegratedSecurity=SSPI;ApplicationInt
   
      [Технические документы группы консультантов по SQL Server](http://sqlcat.com/)  
   
-## <a name="see-also"></a>См. также  
- [Обзор групп доступности AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [Обзор групп доступности AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [Активные вторичные реплики: Вторичные реплики для чтения (группы доступности AlwaysOn)](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
+## <a name="see-also"></a>См. также статью  
+ [Общие сведения о &#40;группы доступности AlwaysOn&#41; SQL Server](overview-of-always-on-availability-groups-sql-server.md)    
+ [Общие сведения о &#40;группы доступности AlwaysOn&#41; SQL Server](overview-of-always-on-availability-groups-sql-server.md)    
+ [Активные вторичные реплики: доступные только для чтения (группы доступности AlwaysOn)](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
  [Сведения о доступе клиентского подключения к репликам доступности (SQL Server)](about-client-connection-access-to-availability-replicas-sql-server.md)   
  [Прослушиватели групп доступности, возможность подключения клиентов и отработка отказа приложений (SQL Server)](../../listeners-client-connectivity-application-failover.md)  
-  
-  

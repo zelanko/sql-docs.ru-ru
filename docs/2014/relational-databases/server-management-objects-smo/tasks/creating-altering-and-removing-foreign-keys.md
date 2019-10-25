@@ -12,12 +12,12 @@ ms.assetid: d43c8dca-bb6b-4a41-8a79-c96fd546fc91
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4f8c7474d645de0ba8b8c94beed44ee7c02d33de
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a0462af67afbf5ac25c52ded8523ca26678699b9
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63021879"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72796956"
 ---
 # <a name="creating-altering-and-removing-foreign-keys"></a>Создание, изменение и удаление внешних ключей
   В иерархии управляющих объектов [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (SMO) внешние ключи представлены объектом <xref:Microsoft.SqlServer.Management.Smo.ForeignKey>.  
@@ -27,7 +27,7 @@ ms.locfileid: "63021879"
  Столбцы, представляющие внешний ключ, перечислены в свойстве `Columns` объекта <xref:Microsoft.SqlServer.Management.Smo.ForeignKey>. Первичный ключ, на который ссылается внешний ключ, представлен свойством <xref:Microsoft.SqlServer.Management.Smo.ForeignKey.ReferencedKey%2A>, которое находится в таблице, указанной в свойстве <xref:Microsoft.SqlServer.Management.Smo.ForeignKey.ReferencedTable%2A>.  
   
 ## <a name="example"></a>Пример  
- Чтобы использовать какой-либо из представленных примеров кода, нужно выбрать среду, шаблон и язык программирования, с помощью которых будет создаваться приложение. Дополнительные сведения см. в разделе [Создание проекта SMO на Visual Basic в Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) или [Visual C создайте&#35; проекта SMO в Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Чтобы использовать какой-либо из представленных примеров кода, нужно выбрать среду, шаблон и язык программирования, с помощью которых будет создаваться приложение. Дополнительные сведения см. в статьях [Создание проекта Visual Basic SMO в Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) или [Создание проекта Visual&#35; C SMO в Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="creating-altering-and-removing-a-foreign-key-in-visual-basic"></a>Создание, изменение и удаление внешнего ключа на языке Visual Basic  
  Этот пример кода показывает, как создать связь по внешнему ключу между одним или несколькими столбцами одной таблицы и первичным ключевым столбцом другой таблицы.  
@@ -37,7 +37,7 @@ ms.locfileid: "63021879"
 ## <a name="creating-altering-and-removing-a-foreign-key-in-visual-c"></a>Создание, изменение и удаление внешнего ключа на языке Visual C#  
  Этот пример кода показывает, как создать связь по внешнему ключу между одним или несколькими столбцами одной таблицы и первичным ключевым столбцом другой таблицы.  
   
-```  
+```csharp
 {  
             //Connect to the local, default instance of SQL Server.   
             Server srv;  
@@ -66,7 +66,7 @@ ms.locfileid: "63021879"
 ## <a name="creating-altering-and-removing-a-foreign-key-in-powershell"></a>Создание, изменение и удаление внешнего ключа в PowerShell  
  Этот пример кода показывает, как создать связь по внешнему ключу между одним или несколькими столбцами одной таблицы и первичным ключевым столбцом другой таблицы.  
   
-```  
+```powershell
 # Set the path context to the local, default instance of SQL Server and to the  
 #database tables in Adventureworks2012  
 CD \sql\localhost\default\databases\AdventureWorks2012\Tables\  
@@ -103,7 +103,7 @@ $fk.Create()
   
  Версия на языке C#:  
   
-```  
+```csharp
 // compile with:   
 // /r:Microsoft.SqlServer.Smo.dll   
 // /r:microsoft.sqlserver.management.sdk.sfc.dll   
@@ -198,7 +198,7 @@ public class A {
   
  Версия на языке Visual Basic:  
   
-```  
+```vb
 ' compile with:   
 ' /r:Microsoft.SqlServer.Smo.dll   
 ' /r:microsoft.sqlserver.management.sdk.sfc.dll   
@@ -291,5 +291,3 @@ Public Class A
    End Sub  
 End Class  
 ```  
-  
-  

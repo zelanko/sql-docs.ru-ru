@@ -1,5 +1,5 @@
 ---
-title: Прослушиватели группы доступности, возможность подключения клиентов и отработка отказа приложений (SQL Server) | Документация Майкрософт
+title: Прослушиватели групп доступности, подключение клиентов и отработка отказа приложений (SQL Server) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,12 +17,12 @@ ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: dccbdee0e7db72a9946e92229d06dce519ca94a1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5ee2879bc0ef94d8abee20032c83a74d00696ef2
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62774797"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72797839"
 ---
 # <a name="availability-group-listeners-client-connectivity-and-application-failover-sql-server"></a>Прослушиватели групп доступности, возможность подключения клиентов и отработка отказа приложений (SQL Server)
   В этом разделе содержатся сведения о клиентских компонентах [!INCLUDE[ssHADR](../includes/sshadr-md.md)] и функциях переключения приложений.  
@@ -118,7 +118,7 @@ Server=tcp: AGListener,1433;Database=MyDB;IntegratedSecurity=SSPI
 Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;ApplicationIntent=ReadOnly  
 ```  
   
- В этом примере строки подключения клиент пытается подключиться к прослушивателю группы доступности `AGListener` через порт 1433 (номер порта также можно не указывать, если прослушиватель группы доступности отслеживает порт 1433).  Строка подключения имеет `ApplicationIntent` свойство значение `ReadOnly`, что делает эту *строку соединения с намерением чтения*.  Без этого параметра сервер не стал бы пытаться выполнить для этого подключения маршрутизацию только для чтения.  
+ В этом примере строки подключения клиент пытается подключиться к прослушивателю группы доступности `AGListener` через порт 1433 (номер порта также можно не указывать, если прослушиватель группы доступности отслеживает порт 1433).  В строке подключения для свойства `ApplicationIntent` задано значение `ReadOnly`, что делает *строку подключения с намерением чтения*.  Без этого параметра сервер не стал бы пытаться выполнить для этого подключения маршрутизацию только для чтения.  
   
  База данных-источник группы доступности обрабатывает входящий запрос на маршрутизацию только для чтения и пытается найти находящуюся в сети и доступную только для чтения реплику, присоединенную к первичной реплике и настроенную для маршрутизации только для чтения.  Клиент получает от сервера первичной реплики данные для подключения и устанавливает соединение с указанной, доступной только для чтения репликой.  
   
@@ -184,7 +184,7 @@ SAN = ServerFQDN,AG1_listener.Adventure-Works.com, AG2_listener.Adventure-Works.
   
  Для задания SPN используйте программу командной строки Windows `setspn`.  Пример настройки SPN для группы доступности `AG1listener.Adventure-Works.com` , размещенной на наборе экземпляров SQL Server, работающих под учетной записью домена `corp/svclogin2`.  
   
-```  
+```cmd
 setspn -A MSSQLSvc/AG1listener.Adventure-Works.com:1433 corp/svclogin2  
 ```  
   
@@ -192,7 +192,7 @@ setspn -A MSSQLSvc/AG1listener.Adventure-Works.com:1433 corp/svclogin2
   
 ##  <a name="RelatedTasks"></a> Связанные задачи  
   
--   [Подключение клиента AlwaysOn &#40;SQL Server&#41;](availability-groups/windows/always-on-client-connectivity-sql-server.md)
+-   [SQL Server подключения &#40;клиента AlwaysOn&#41;](availability-groups/windows/always-on-client-connectivity-sql-server.md)
   
 -   [Создание или настройка прослушивателя группы доступности (SQL Server)](availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)  
   
@@ -206,17 +206,15 @@ setspn -A MSSQLSvc/AG1listener.Adventure-Works.com:1433 corp/svclogin2
   
 ##  <a name="RelatedContent"></a> См. также  
   
--   [Microsoft SQL Server AlwaysOn Solutions Guide for высокий уровень доступности и аварийного восстановления](https://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Microsoft SQL Server рекомендации по решениям AlwaysOn для обеспечения высокого уровня доступности и аварийного восстановления](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
 -   [Общие сведения о прослушивателях группы доступности](https://blogs.msdn.com/b/sqlalwayson/archive/2012/01/16/introduction-to-the-availability-group-listener.aspx) (блог группы разработчиков SQL Server AlwaysOn)  
   
--   [Блог группы AlwaysOn SQL Server: Официальный блог по SQL Server AlwaysOn Team](https://blogs.msdn.com/b/sqlalwayson/)  
+-   [Блог группы SQL Server AlwaysOn: Официальный блог группы SQL Server AlwaysOn](https://blogs.msdn.com/b/sqlalwayson/)  
   
-## <a name="see-also"></a>См. также  
- [Обзор групп доступности AlwaysOn &#40;SQL Server&#41;](availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [Подключение клиента AlwaysOn &#40;SQL Server&#41;](availability-groups/windows/always-on-client-connectivity-sql-server.md)  
+## <a name="see-also"></a>См. также статью  
+ [Общие сведения о &#40;группы доступности AlwaysOn&#41; SQL Server](availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)    
+ [SQL Server подключения &#40;клиента AlwaysOn&#41;](availability-groups/windows/always-on-client-connectivity-sql-server.md)  
  [Сведения о доступе клиентского подключения к репликам доступности (SQL Server)](availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)   
- [Активные вторичные реплики: Вторичные реплики для чтения &#40;группы доступности AlwaysOn&#41;](availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
+ [Активные вторичные реплики: &#40;группы доступности AlwaysOn&#41; , доступные для чтения](availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md) ,   
  [Подключение клиентов к сеансу зеркального отображения базы данных (SQL Server)](database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)
-  
-  

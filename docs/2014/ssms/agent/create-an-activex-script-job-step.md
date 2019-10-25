@@ -13,12 +13,12 @@ ms.assetid: e6c46c6b-2d61-4571-bc8e-a831cd6e6302
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ca659230443301ed816dfb8adeffdd3b361cd5fc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6f065793a86eb5c4c6ebb55883e2e206ccff9b9c
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62680259"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798274"
 ---
 # <a name="create-an-activex-script-job-step"></a>Create an ActiveX Script Job Step
   В этом разделе описывается создание и определение шага агента [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , выполняющего скрипт ActiveX, с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]или управляющих объектов SQL Server.  
@@ -31,7 +31,7 @@ ms.locfileid: "62680259"
   
 -   **Для создания шага задания Transact-SQL используется:**  
   
-     [Среда SQL Server Management Studio](#SSMS)  
+     [Среда Среда SQL Server Management Studio](#SSMS)  
   
      [Transact-SQL](#TSQL)  
   
@@ -39,7 +39,7 @@ ms.locfileid: "62680259"
   
 ## <a name="before-you-begin"></a>Перед началом  
   
-###  <a name="Restrictions"></a> Ограничения  
+###  <a name="Restrictions"></a> ограничения  
  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
 ###  <a name="Security"></a> безопасность  
@@ -71,15 +71,14 @@ ms.locfileid: "62680259"
   
 #### <a name="to-create-an-activex-script-job-step"></a>Создание шага задания скрипта ActiveX  
   
-1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  На стандартной панели выберите пункт **Создать запрос**.  
   
 3.  Скопируйте следующий пример в окно запроса и нажмите кнопку **Выполнить**.  
   
-    ```  
-  
-              -- create an ActiveX Script job step written in VBScript that creates a restore point  
+    ```sql
+    -- create an ActiveX Script job step written in VBScript that creates a restore point  
     USE msdb;  
     GO  
     EXEC sp_add_jobstep  
@@ -99,11 +98,9 @@ ms.locfileid: "62680259"
     GO  
     ```  
   
- Дополнительные сведения см. в разделе [sp_add_jobstep &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql).  
+ Дополнительные сведения см. в [разделе &#40;SP_ADD_JOBSTEP Transact-&#41;SQL](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql).  
   
-##  <a name="SMO"></a> Использование управляющих объектов SQL Server  
+##  <a name="SMO"></a>Использование управляющие объекты SQL Server  
  **Создание шага задания скрипта ActiveX**  
   
  Воспользуйтесь классом `JobStep` в любом языке программирования (Visual Basic, Visual C# или PowerShell).  
-  
-  

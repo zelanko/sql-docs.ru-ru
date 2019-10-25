@@ -15,19 +15,19 @@ ms.assetid: eea255c3-8251-40f0-973b-fe4ef6cb5261
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 49754be9b412f9cf6e7d660402527aed954a09fa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a51364838173f70c4d5daac794176caa6ea01221
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62519186"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72796537"
 ---
 # <a name="transferring-data"></a>Передача данных
   Класс <xref:Microsoft.SqlServer.Management.Smo.Transfer> является служебным классом, наделенным средствами для передачи объектов и данных.  
   
  Объекты в схеме базы данных передаются в ходе выполнения сформированного скрипта на целевом сервере. Данные <xref:Microsoft.SqlServer.Management.Smo.Table> передаются вместе с динамически созданным пакетом DTS.  
   
- Объект <xref:Microsoft.SqlServer.Management.Smo.Transfer> обладает всеми функциональными возможностями объектов <xref:Microsoft.SqlServer.Management.Smo.Transfer> в DMO и дополнительными функциональными возможностями [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Однако в объектах SMO в [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], <xref:Microsoft.SqlServer.Management.Smo.Transfer> объектов используют [SQLBulkCopy](https://msdn.microsoft.com/library/system.data.sqlclient.sqlbulkcopy\(v=VS.90\).aspx) API для передачи данных. Кроме того, методы и свойства, используемые для передачи данных, располагаются в объекте <xref:Microsoft.SqlServer.Management.Smo.Transfer>, а не в объекте <xref:Microsoft.SqlServer.Management.Smo.Database>. Перенос функциональных возможностей с экземпляров классов на вспомогательные классы согласуется с облегченной объектной моделью, поскольку код для выполнения конкретных задач загружается только по мере необходимости.  
+ Объект <xref:Microsoft.SqlServer.Management.Smo.Transfer> обладает всеми функциональными возможностями объектов <xref:Microsoft.SqlServer.Management.Smo.Transfer> в DMO и дополнительными функциональными возможностями [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Однако в SMO в [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]объект <xref:Microsoft.SqlServer.Management.Smo.Transfer> использует API [SQLBulkCopy](https://msdn.microsoft.com/library/system.data.sqlclient.sqlbulkcopy\(v=VS.90\).aspx) для перемещения данных. Кроме того, методы и свойства, используемые для передачи данных, располагаются в объекте <xref:Microsoft.SqlServer.Management.Smo.Transfer>, а не в объекте <xref:Microsoft.SqlServer.Management.Smo.Database>. Перенос функциональных возможностей с экземпляров классов на вспомогательные классы согласуется с облегченной объектной моделью, поскольку код для выполнения конкретных задач загружается только по мере необходимости.  
   
  Объект <xref:Microsoft.SqlServer.Management.Smo.Transfer> не поддерживает передачи данных в целевую базу данных, у которой <xref:Microsoft.SqlServer.Management.Smo.Database.CompatibilityLevel%2A> меньше, чем у версии экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
@@ -37,7 +37,7 @@ ms.locfileid: "62519186"
 ## <a name="transferring-schema-and-data-from-one-database-to-another-in-visual-basic"></a>Передача схемы и данных из одной базы данных в другую на языке Visual Basic  
  Этот пример кода показывает, как передавать схему и данные из одной базы данных в другую с помощью объекта <xref:Microsoft.SqlServer.Management.Smo.Transfer>.  
   
-```VBNET
+```vb
 'Connect to the local, default instance of SQL Server.
 Dim srv As Server
 srv = New Server
@@ -65,7 +65,7 @@ xfr.ScriptTransfer()
 ## <a name="transferring-schema-and-data-from-one-database-to-another-in-visual-c"></a>Передача схемы и данных из одной базы данных в другую на языке Visual C#  
  Этот пример кода показывает, как передавать схему и данные из одной базы данных в другую с помощью объекта <xref:Microsoft.SqlServer.Management.Smo.Transfer>.  
   
-```  
+```csharp
 {  
             Server srv;  
             srv = new Server();  
@@ -95,7 +95,7 @@ xfr.ScriptTransfer()
 ## <a name="transferring-schema-and-data-from-one-database-to-another-in-powershell"></a>Передача схемы и данных из одной базы данных в другую в PowerShell  
  Этот пример кода показывает, как передавать схему и данные из одной базы данных в другую с помощью объекта <xref:Microsoft.SqlServer.Management.Smo.Transfer>.  
   
-```  
+```powershell
 #Connect to the local, default instance of SQL Server.  
   
 #Get a server object which corresponds to the default instance  
@@ -105,11 +105,11 @@ $srv = New-Object -TypeName Microsoft.SqlServer.Management.SMO.Server
 $db = $srv.Databases["AdventureWorks2012"]  
   
 #Create a database to hold the copy of AdventureWorks  
-$dbCopy = New-Object -TypeName Microsoft.SqlServer.Management.SMO.Database -argumentlist $srv, "AdventureWorksCopy"  
+$dbCopy = New-Object -TypeName Microsoft.SqlServer.Management.SMO.Database -ArgumentList $srv, "AdventureWorksCopy"  
 $dbCopy.Create()  
   
 #Define a Transfer object and set the required options and properties.  
-$xfr = New-Object -TypeName Microsoft.SqlServer.Management.SMO.Transfer -argumentlist $db  
+$xfr = New-Object -TypeName Microsoft.SqlServer.Management.SMO.Transfer -ArgumentList $db  
   
 #Set this objects properties  
 $xfr.CopyAllTables = $true  
@@ -123,5 +123,3 @@ $xfr.CopySchema = $true
 #Script the transfer. Alternatively perform immediate data transfer with TransferData method.  
 $xfr.ScriptTransfer()  
 ```  
-  
-  

@@ -15,12 +15,12 @@ ms.assetid: 0c74d21b-84a5-4fa4-be51-90f0f7230044
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0079ca11eb6400b2bce524fd909acbaafd112323
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c6aff97c8bee8fe8ccc469c2ee57bc94466e1e31
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66064708"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72797858"
 ---
 # <a name="invoke-sqlcmd-cmdlet"></a>Invoke-Sqlcmd, командлет
   **Invoke-Sqlcmd** представляет собой командлет [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], предназначенный для выполнения сценариев, которые содержат инструкции определенных языков ([!INCLUDE[tsql](../includes/tsql-md.md)] и XQuery) и команды, поддерживаемые служебной программой **sqlcmd**.  
@@ -30,40 +30,40 @@ ms.locfileid: "66064708"
   
  Ниже приведен пример вызова командлета Invoke-Sqlcmd для выполнения простого запроса, аналогичного тому, который выполняется путем задания команды **sqlcmd** с параметрами **-Q** и **-S** :  
   
-```  
+```powershell
 Invoke-Sqlcmd -Query "SELECT GETDATE() AS TimeOfQuery;" -ServerInstance "MyComputer\MyInstance"  
 ```  
   
  В этом примере вызывается командлет **Invoke-Sqlcmd**, указывается входной файл и вывод перенаправляется прямо в файл. Это аналогично заданию команды **sqlcmd** с параметрами **-i** и **-o** :  
   
-```  
-Invoke-Sqlcmd -InputFile "C:\MyFolder\TestSQLCmd.sql" | Out-File -filePath "C:\MyFolder\TestSQLCmd.rpt"  
+```powershell
+Invoke-Sqlcmd -InputFile "C:\MyFolder\TestSQLCmd.sql" | Out-File -FilePath "C:\MyFolder\TestSQLCmd.rpt"  
 ```  
   
  В следующем примере массив Windows PowerShell используется для передачи нескольких переменных сценария **sqlcmd** в командлет **Invoke-Sqlcmd**. Символ "$", обозначающий переменные сценария **sqlcmd** в инструкции SELECT, отмечен как специальный с помощью escape-символа обратной кавычки PowerShell "`":  
   
-```  
+```powershell
 $MyArray = "MyVar1 = 'String1'", "MyVar2 = 'String2'"  
 Invoke-Sqlcmd -Query "SELECT `$(MyVar1) AS Var1, `$(MyVar2) AS Var2;" -Variable $MyArray  
 ```  
   
  В следующем примере с помощью поставщика [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] для Windows PowerShell выполняется переход к экземпляру компонента [!INCLUDE[ssDE](../includes/ssde-md.md)], а затем с помощью командлета **Get-Item** среды Windows PowerShell получается объект сервера SMO для экземпляра и передается командлету **Invoke-Sqlcmd**:  
   
-```  
+```powershell
 Set-Location SQLSERVER:\SQL\MyComputer\MyInstance  
 Invoke-Sqlcmd -Query "SELECT GETDATE() AS TimeOfQuery;" -ServerInstance (Get-Item .)  
 ```  
   
  Параметр -Query является позиционным, ему не обязательно присваивать имя. Если первая строка, которая передается командлету **Invoke-Sqlcmd**, не имеет имени, то она обрабатывается как параметр -Query.  
   
-```  
+```powershell
 Invoke-Sqlcmd "SELECT GETDATE() AS TimeOfQuery;" -ServerInstance "MyComputer\MyInstance"  
 ```  
   
 ## <a name="path-context-in-invoke-sqlcmd"></a>Путь к контексту в Invoke-Sqlcmd  
  Если параметр -Database не используется, контекст базы данных для Invoke-Sqlcmd задается активным путем при вызове командлета.  
   
-|`Path`|Контекст базы данных|  
+|путь|Контекст базы данных|  
 |----------|----------------------|  
 |Начинается с диска, отличного от SQLSERVER:|База данных по умолчанию для данного идентификатора входа в экземпляре по умолчанию на локальном компьютере.|  
 |SQLSERVER:\SQL|База данных по умолчанию для данного идентификатора входа в экземпляре по умолчанию на локальном компьютере.|  
@@ -74,14 +74,14 @@ Invoke-Sqlcmd "SELECT GETDATE() AS TimeOfQuery;" -ServerInstance "MyComputer\MyI
   
  Например, предположим, что база данных по умолчанию для данной учетной записи Windows в экземпляре по умолчанию локального компьютера является основной. В этом случае следующие команды возвратят значение «master»:  
   
-```  
+```powershell
 Set-Location SQLSERVER:\SQL  
 Invoke-Sqlcmd "SELECT DB_NAME() AS DatabaseName;"  
 ```  
   
  Следующие команды возвратят базу данных [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]:  
   
-```  
+```powershell
 Set-Location SQLSERVER:\SQL\MyComputer\DEFAULT\Databases\AdventureWorks2012\Tables\Person.Person  
 Invoke-Sqlcmd "SELECT DB_NAME() AS DatabaseName;"  
 ```  
@@ -97,23 +97,23 @@ Invoke-Sqlcmd "SELECT DB_NAME() AS DatabaseName;"
   
  Командлет**Invoke-Sqlcmd** не отображает сообщения, такие как выходные данные инструкций PRINT, если не указан общий параметр **-Verbose** среды Windows PowerShell. Пример:  
   
-```  
+```powershell
 Invoke-Sqlcmd -Query "PRINT N'abc';" -Verbose  
 ```  
   
  В среде PowerShell требуются не все параметры **sqlcmd** . Например, среда Windows PowerShell форматирует все выходные данные командлетов, поэтому параметры форматирования **sqlcmd** не реализованы в командлете **Invoke-Sqlcmd**. В следующей таблице показана связь между параметрами **Invoke-Sqlcmd** и параметрами **sqlcmd** .  
   
-|Описание|Параметр sqlcmd|Параметр Invoke-Sqlcmd|  
+|Description|Параметр sqlcmd|Параметр Invoke-Sqlcmd|  
 |-----------------|-------------------|------------------------------|  
 |Сервер и имя экземпляра|-S|-ServerInstance|  
 |Используемая исходная база данных|-d|-Database|  
 |Выполнение указанного запроса и выход|-Q|-Query|  
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .|-U|-Username|  
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .|-P|-Password|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .|-p|-Password|  
 |Определение переменной|-V|-Variable|  
 |Интервал времени ожидания запроса|-T|-QueryTimeout|  
 |Прекращение выполнения в случае ошибки|-b|-AbortOnError|  
-|Выделенное административное соединение|-A|-DedicatedAdministratorConnection|  
+|Выделенное административное соединение|-a|-DedicatedAdministratorConnection|  
 |Отключение интерактивных команд, скрипта запуска и переменных среды|-X|-DisableCommands|  
 |Отключение подстановки переменных|-X|-DisableVariables|  
 |Минимальная степень серьезности для формирования отчета|-v|-SeverityLevel|  
@@ -135,8 +135,8 @@ Invoke-Sqlcmd -Query "PRINT N'abc';" -Verbose
 |Разделитель столбцов|-S|Параметр отсутствует|  
 |Управлять заголовками выходных данных|-H|Параметр отсутствует|  
 |Указать управляющие символы|-k|Параметр отсутствует|  
-|Постоянная ширина экрана|-Y|Параметр отсутствует|  
-|Переменная ширина экрана|-Y|Параметр отсутствует|  
+|Постоянная ширина экрана|-y|Параметр отсутствует|  
+|Переменная ширина экрана|-y|Параметр отсутствует|  
 |Эхо-повтор входных данных|-E|Параметр отсутствует|  
 |Включить использование заключенных в кавычки идентификаторов|-i|Параметр отсутствует|  
 |Удалить конечные пробелы|-w|Параметр отсутствует|  
@@ -146,9 +146,7 @@ Invoke-Sqlcmd -Query "PRINT N'abc';" -Verbose
 |Окончание команды|-c|Параметр отсутствует|  
 |Подключение с помощью проверки подлинности Windows|-E|Параметр отсутствует|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также статью  
  [Использование командлетов компонента Database Engine](../../2014/database-engine/use-the-database-engine-cmdlets.md)   
- [Программа sqlcmd](../tools/sqlcmd-utility.md)   
+ [Служебная программа sqlcmd](../tools/sqlcmd-utility.md)   
  [Использование программы sqlcmd](../relational-databases/scripting/sqlcmd-use-the-utility.md)  
-  
-  

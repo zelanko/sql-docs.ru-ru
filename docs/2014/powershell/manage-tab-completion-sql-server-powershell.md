@@ -10,12 +10,12 @@ ms.assetid: 6296848a-890f-4ad3-8d9f-92ed6a79aa00
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ec946a26c898c4ed66bd60e1ad71e69c008766df
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8e759e521d62def1f253ab5ef6423c29fb7fa2b4
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62922955"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72797787"
 ---
 # <a name="manage-tab-completion-sql-server-powershell"></a>Управление завершением по нажатию клавиши Tab (SQL Server PowerShell)
   В [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell введены три системные переменные (`$SqlServerMaximumTabCompletion`, `$SqlServerMaximumChildItems` и `$SqlServerIncludeSystemObjects`) для управления функцией завершения Windows PowerShell по клавише TAB. Функция завершения по клавише TAB позволяет сократить объем вводимого текста, поскольку возвращает таблицы элементов, имена которых начинаются с набранной строки.  
@@ -42,14 +42,12 @@ ms.locfileid: "62922955"
 ### <a name="example-powershell"></a>Пример (PowerShell)  
  В следующем примере задаются все три переменные и выводятся их значения:  
   
-```  
+```powershell
 $SqlServerMaximumTabCompletion = 20  
 $SqlServerMaximumChildItems = 10  
 $SqlServerIncludeSystemObjects = $False  
 dir variable:sqlserver*  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также статью  
  [SQL Server PowerShell](sql-server-powershell.md)  
-  
-  

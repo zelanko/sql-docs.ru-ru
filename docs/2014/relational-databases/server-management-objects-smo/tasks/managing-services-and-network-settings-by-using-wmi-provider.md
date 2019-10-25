@@ -1,5 +1,5 @@
 ---
-title: Управление службами и сетевыми настройками с помощью поставщика WMI | Документация Майкрософт
+title: Управление службами и сетевыми параметрами с помощью поставщика WMI | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,12 +15,12 @@ ms.assetid: ef8c3986-1098-4f21-b03a-f1f6bdb51c26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3d16548f201f047ba83516469050e41380b7bc6f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9ba2f9688adb5579616693470be151d757818117
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63226215"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72796626"
 ---
 # <a name="managing-services-and-network-settings-by-using-wmi-provider"></a>Управление службами и сетевыми настройками с помощью поставщика WMI
   Поставщик WMI представляет собой опубликованный интерфейс, используемый консолью управления (MMC) [!INCLUDE[msCoName](../../../includes/msconame-md.md)] для управления службами и сетевыми протоколами [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . В SMO поставщик WMI представляется объектом <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer>.  
@@ -30,7 +30,7 @@ ms.locfileid: "63226215"
 ## <a name="example"></a>Пример  
  [!INCLUDE[ssChooseProgEnv](../../../includes/sschooseprogenv-md.md)]  
   
- Для программ, использующих [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поставщик инструментария WMI, необходимо включить `Imports` инструкцию для определения пространства имен WMI. Вставьте инструкцию после других инструкций `Imports` и перед любыми декларациями в приложении.  
+ Для программ, использующих поставщик WMI [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], необходимо включить инструкцию `Imports`, чтобы уточнить пространство имен WMI. Вставьте инструкцию после других инструкций `Imports` и перед любыми декларациями в приложении.  
   
  `Imports Microsoft.SqlServer.Management.Smo`  
   
@@ -46,7 +46,7 @@ ms.locfileid: "63226215"
 ## <a name="enabling-a-server-protocol-using-a-urn-string-in-visual-basic"></a>Включение протокола сервера с помощью строки URN на языке Visual Basic  
  В примере кода показано, как определить протокол сервера с помощью объекта URN, а затем включить этот протокол.  
   
-```  
+```vb
 'This program must run with administrator privileges.  
         'Declare the ManagedComputer WMI interface.  
         Dim mc As New ManagedComputer()  
@@ -68,7 +68,7 @@ ms.locfileid: "63226215"
 ## <a name="enabling-a-server-protocol-using-a-urn-string-in-powershell"></a>Включение протокола сервера с помощью строки URN в PowerShell  
  В примере кода показано, как определить протокол сервера с помощью объекта URN, а затем включить этот протокол.  
   
-```  
+```powershell
 #This example shows how to identify a server protocol using a URN object, and then enable the protocol  
 #This program must run with administrator privileges.  
   
@@ -95,7 +95,7 @@ $sp.Alter()
 ## <a name="starting-and-stopping-a-service-in-visual-c"></a>Остановка и запуск службы на языке Visual C#  
  Пример кода показывает, как остановить и запустить экземпляр SQL Server.  
   
-```  
+```csharp
 {   
    //Declare and create an instance of the ManagedComputer   
    //object that represents the WMI Provider services.   
@@ -139,7 +139,7 @@ $sp.Alter()
 ## <a name="starting-and-stopping-a-service-in-powershell"></a>Остановка и запуск службы в PowerShell  
  Пример кода показывает, как остановить и запустить экземпляр SQL Server.  
   
-```  
+```powershell
 #Load the assembly containing the objects used in this example  
 [reflection.assembly]::LoadWithPartialName("Microsoft.SqlServer.SqlWmiManagement")  
   
@@ -172,11 +172,8 @@ $svc.Refresh()
 $svc.ServiceState  
 }  
 $svc.ServiceState  
-"Service" + $svc.Name + "is now started"  
-  
+"Service" + $svc.Name + "is now started"
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также статью  
  [Основные понятия о поставщике WMI для управления конфигурацией](../../wmi-provider-configuration/wmi-provider-for-configuration-management.md)  
-  
-  

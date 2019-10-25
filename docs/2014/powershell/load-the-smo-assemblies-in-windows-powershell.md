@@ -10,12 +10,12 @@ ms.assetid: 8ca42b69-da5a-47f4-9085-34e443f0e389
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4b559003c3ee58e1220c1714e4ab26403cfdf11f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cb70ab2f2098b0857ba632a3b9501d596c0af864
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62922965"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798049"
 ---
 # <a name="load-the-smo-assemblies-in-windows-powershell"></a>Загрузка сборки объектов SMO в Windows PowerShell
   В данном разделе описана загрузка сборок управляющих объектов SQL Server (SMO) в скриптах Windows PowerShell, не использующих поставщик SQL Server для PowerShell.  
@@ -29,17 +29,15 @@ ms.locfileid: "62922965"
   
 -   Код объектов SMO переносится из другого языка, такого как C# или Visual Basic, который не использует этот поставщик или командлеты.  
   
-## <a name="example-loading-the-sql-server-management-objects"></a>Пример Загрузка управляющих объектов SQL Server  
+## <a name="example-loading-the-sql-server-management-objects"></a>Пример. Загрузка управляющих объектов SQL Server  
  Следующий код загружает сборки объектов SMO:  
   
-```  
-#  
+```powershell
 # Loads the SQL Server Management Objects (SMO)  
-#  
   
 $ErrorActionPreference = "Stop"  
   
-$sqlpsreg="HKLM:\SOFTWARE\Microsoft\PowerShell\1\ShellIds\Microsoft.SqlServer.Management.PowerShell.sqlps"  
+$sqlpsreg = "HKLM:\SOFTWARE\Microsoft\PowerShell\1\ShellIds\Microsoft.SqlServer.Management.PowerShell.sqlps"  
   
 if (Get-ChildItem $sqlpsreg -ErrorAction "SilentlyContinue")  
 {  
@@ -81,11 +79,9 @@ foreach ($asm in $assemblylist)
   
 Push-Location  
 cd $sqlpsPath  
-update-FormatData -prependpath SQLProvider.Format.ps1xml   
+Update-FormatData -PrependPath SQLProvider.Format.ps1xml
 Pop-Location  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также статью  
  [SQL Server PowerShell](sql-server-powershell.md)  
-  
-  

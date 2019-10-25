@@ -12,21 +12,19 @@ ms.assetid: bc69a7df-20fa-41e1-9301-11317c5270d2
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 824479a4fa58e171cee07a3187b85e5a1be94699
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 43210110405eca5f44fc458311f90582f159aff6
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62790673"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72797710"
 ---
 # <a name="create-an-availability-group-sql-server-powershell"></a>Создание группы доступности (SQL Server PowerShell)
   В данном разделе описывается использование командлетов PowerShell для создания и настройки группы доступности AlwaysOn в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. *Группа доступности* определяет набор пользовательских баз данных, которые будут действовать при сбое как единое целое, а также набор партнеров по обеспечению отработки отказа, называемых *репликами доступности*и поддерживающих отработку отказа.  
   
 > [!NOTE]  
 >  Базовые сведения о группах доступности см. в разделе [Обзор групп доступности AlwaysOn (SQL Server)](overview-of-always-on-availability-groups-sql-server.md).  
-  
 
-  
 > [!NOTE]  
 >  Вместо командлетов PowerShell вы можете использовать мастер создания группы доступности или [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Дополнительные сведения см. в статьях [Использование диалогового окна "Создание группы доступности" (среда SQL Server Management Studio)](use-the-new-availability-group-dialog-box-sql-server-management-studio.md) и [Создание группы доступности (Transact-SQL)](create-an-availability-group-transact-sql.md).  
   
@@ -39,21 +37,21 @@ ms.locfileid: "62790673"
   
 ###  <a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Разрешения  
  Требуется членство в фиксированной роли сервера **sysadmin** и одно из разрешений: CREATE AVAILABILITY GROUP, ALTER ANY AVAILABILITY GROUP или CONTROL SERVER.  
   
 ###  <a name="SummaryPSStatements"></a> Сводка задач и соответствующие командлеты PowerShell  
  В следующей таблице перечислены основные задачи, входящие в настройку группы доступности, и указывается, какие из них поддерживаются командлетами PowerShell. Задачи [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] должны выполняться в той последовательности, в которой они перечислены в таблице.  
   
-|Задача|Командлеты PowerShell (если доступны) или инструкции Transact-SQL|Место выполнения задачи**<sup>*</sup>**|  
+|Задача|Командлеты PowerShell (если доступны) или инструкции Transact-SQL|Где выполняется **<sup>*</sup> задач**|  
 |----------|--------------------------------------------------------------------|-------------------------------------------|  
-|Создание конечной точки зеркального отображения базы данных (одна точка на экземпляр [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] )|`New-SqlHadrEndPoint`|Выполнить на каждом экземпляре сервера, у которого нет конечной точки зеркального отображения базы данных.<br /><br /> Примечание. Для изменения существующей конечной точки зеркального отображения базы данных, используйте `Set-SqlHadrEndpoint`.|  
+|Создание конечной точки зеркального отображения базы данных (одна точка на экземпляр [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] )|`New-SqlHadrEndPoint`|Выполнить на каждом экземпляре сервера, у которого нет конечной точки зеркального отображения базы данных.<br /><br /> Примечание. Для изменения существующей конечной точки зеркального отображения базы данных используйте `Set-SqlHadrEndpoint`.|  
 |Создание группы доступности|Во-первых, используйте командлет `New-SqlAvailabilityReplica` с параметром `-AsTemplate` для создания объекта реплики доступности в памяти для каждой из двух реплик доступности, которые планируется включить в группу доступности.<br /><br /> Затем создайте группу доступности с помощью командлета `New-SqlAvailabilityGroup`, ссылаясь на объекты реплики доступности.|Выполнить на экземпляре сервера, где будет размещена исходная первичная реплика.|  
 |Присоединить вторичную реплику к группе доступности|`Join-SqlAvailabilityGroup`|Выполнить на каждом экземпляре сервера, размещающем вторичную реплику.|  
-|Подготовьте базу данных-получатель|`Backup-SqlDatabase` и `Restore-SqlDatabase`|Создайте резервные копии на экземпляре сервера, размещающем первичную реплику.<br /><br /> Восстановите резервные копии на каждом из тех экземпляров сервера, на которых размещена вторичная реплика, при помощи параметра восстановления `NoRecovery`. Если пути к файлам различны на компьютерах, на которых размещена основная реплика и целевая вторичная реплика, также следует использовать параметр восстановления `RelocateFile`.|  
+|Подготовьте базу данных-получатель|`Backup-SqlDatabase` и средой `Restore-SqlDatabase`|Создайте резервные копии на экземпляре сервера, размещающем первичную реплику.<br /><br /> Восстановите резервные копии на каждом из тех экземпляров сервера, на которых размещена вторичная реплика, при помощи параметра восстановления `NoRecovery`. Если пути к файлам различны на компьютерах, на которых размещена основная реплика и целевая вторичная реплика, также следует использовать параметр восстановления `RelocateFile`.|  
 |Запуск синхронизации данных с помощью присоединения каждой базы данных-получателя к группе доступности|`Add-SqlAvailabilityDatabase`|Выполнить на каждом экземпляре сервера, размещающем вторичную реплику.|  
   
- **<sup>*</sup>**  Для выполнения данной задачи измените каталог (`cd`) в указанный экземпляр или экземпляры сервера.  
+ **<sup>*</sup>**  Чтобы выполнить указанную задачу, измените каталог (`cd`) на указанный экземпляр или экземпляры сервера.  
   
 ###  <a name="PsProviderLinks"></a> Настройка и использование поставщика SQL Server PowerShell  
   
@@ -105,7 +103,7 @@ ms.locfileid: "62790673"
   
 7.  База данных-получатель присоединяется к группе доступности.  
   
-```  
+```powershell
 # Backup my database and its log on the primary  
 Backup-SqlDatabase `  
     -Database "MyDatabase" `  
@@ -165,11 +163,11 @@ Add-SqlAvailabilityDatabase -Path "SQLSERVER:\SQL\SecondaryComputer\Instance\Ava
 ```  
   
 ##  <a name="RelatedTasks"></a> Связанные задачи  
- **Настройка экземпляра сервера для групп доступности AlwaysOn**  
+ **Настройка экземпляра сервера для группы доступности AlwaysOn**  
   
 -   [Включение и отключение групп доступности AlwaysOn (SQL Server)](enable-and-disable-always-on-availability-groups-sql-server.md)  
   
--   [Создание базы данных конечной точки зеркального отображения для групп доступности AlwaysOn &#40;SQL Server PowerShell&#41;](database-mirroring-always-on-availability-groups-powershell.md)  
+-   [Создание конечной точки зеркального отображения базы данных &#40;для группы доступности AlwaysOn SQL Server PowerShell&#41;](database-mirroring-always-on-availability-groups-powershell.md)  
   
  **Настройка свойств группы доступности и реплики**  
   
@@ -179,7 +177,7 @@ Add-SqlAvailabilityDatabase -Path "SQLSERVER:\SQL\SecondaryComputer\Instance\Ava
   
 -   [Создание или настройка прослушивателя группы доступности (SQL Server)](create-or-configure-an-availability-group-listener-sql-server.md)  
   
--   [Настройка гибкой политики отработки отказа для обеспечения контроля над для автоматической отработки отказа (группы доступности AlwaysOn)](configure-flexible-automatic-failover-policy.md)  
+-   [Настройка гибкой политики отработки отказа для управления условиями автоматического перехода на другой ресурс (группы доступности AlwaysOn)](configure-flexible-automatic-failover-policy.md)  
   
 -   [Укажите URL-адрес конечной точки при добавлении или изменении реплики доступности (SQL Server)](specify-endpoint-url-adding-or-modifying-availability-replica.md)  
   
@@ -209,40 +207,38 @@ Add-SqlAvailabilityDatabase -Path "SQLSERVER:\SQL\SecondaryComputer\Instance\Ava
   
 -   [Создание группы доступности (Transact-SQL)](create-an-availability-group-transact-sql.md)  
   
- **Устранение неполадок с конфигурацией групп доступности AlwaysOn**  
+ **Устранение неполадок с конфигурацией группы доступности AlwaysOn**  
   
--   [Устранение неполадок конфигурации групп доступности AlwaysOn (SQL Server) удалена](troubleshoot-always-on-availability-groups-configuration-sql-server.md)  
+-   [Устранение неполадок при группы доступности AlwaysOn конфигурации (SQL Server)](troubleshoot-always-on-availability-groups-configuration-sql-server.md)  
   
--   [Устранение неполадок с операцией добавления файла, завершившейся сбоем &#40;группы доступности AlwaysOn&#41;](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  
+-   [Устранение неполадок при выполнении операции &#40;добавления файла группы доступности AlwaysOn&#41;](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  
   
 ##  <a name="RelatedContent"></a> См. также  
   
 -   **Блоги**  
   
-     [AlwaysON — HADRON обучающая серия. Использование рабочего пула для баз данных с HADRON](https://blogs.msdn.com/b/psssql/archive/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
+     [Учебные серии AlwaysON — HADRON. Использование пула рабочих ролей для баз данных с поддержкой HADRON](https://blogs.msdn.com/b/psssql/archive/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
   
      [Настройка AlwaysOn с помощью SQL Server PowerShell](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/03/configuring-alwayson-with-sql-server-powershell.aspx)  
   
-     [Блоги группы AlwaysOn SQL Server: Официальный блог по SQL Server AlwaysOn Team](https://blogs.msdn.com/b/sqlalwayson/)  
+     [Блоги группы разработчиков SQL Server AlwaysOn: Официальный блог группы SQL Server AlwaysOn](https://blogs.msdn.com/b/sqlalwayson/)  
   
      [Блоги инженеров CSS SQL Server](https://blogs.msdn.com/b/psssql/)  
   
 -   **Видеоролики**  
   
-     [Серия Microsoft SQL Server с кодовым названием «Denali» AlwaysOn, часть 1: вводные сведения о решении следующего поколения по обеспечению высокого уровня доступности](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
+     [Microsoft SQL Server серии AlwaysOn с кодовым названием «Denali», часть 1: введение в решение высокого уровня доступности следующего поколения](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
   
-     [Серия Microsoft SQL Server с кодовым названием «Denali» AlwaysOn, часть 2: Создание решения критически важных высокого уровня доступности с помощью AlwaysOn](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
+     [Microsoft SQL Server серии AlwaysOn с кодовым названием «Denali», часть 2. Создание критически важных решений с высоким уровнем доступности с помощью AlwaysOn](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
   
 -   **Технические документы**  
   
-     [Microsoft SQL Server AlwaysOn Solutions Guide for высокий уровень доступности и аварийного восстановления](https://go.microsoft.com/fwlink/?LinkId=227600)  
+     [Microsoft SQL Server рекомендации по решениям AlwaysOn для обеспечения высокого уровня доступности и аварийного восстановления](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
      [Технические документы Майкрософт Microsoft по SQL Server 2012](https://msdn.microsoft.com/library/hh403491.aspx)  
   
      [Технические документы группы консультантов по SQL Server](http://sqlcat.com/)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также статью  
  [Конечная точка зеркального отображения базы данных (SQL Server)](../../database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
- [Обзор групп доступности AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  
-  
-  
+ [Общие сведения о &#40;группы доступности AlwaysOn SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  

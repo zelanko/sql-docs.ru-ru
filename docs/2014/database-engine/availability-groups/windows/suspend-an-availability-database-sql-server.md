@@ -17,12 +17,12 @@ ms.assetid: 86858982-6af1-4e80-9a93-87451f0d7ee9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5853ef42066eca006bfc5b7229f7bd7900a8fb6d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7c428d9141acfaca3e8ec7876e62b733c30ec161
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62814027"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72797960"
 ---
 # <a name="suspend-an-availability-database-sql-server"></a>Приостановка базы данных доступности (SQL Server)
   В [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] можно приостановить базу данных доступности с помощью [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]или PowerShell в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Обратите внимание, что команда приостановки должна выполняться на экземпляре сервера, содержащем базу данных, которая приостанавливается или возобновляется.  
@@ -49,30 +49,30 @@ ms.locfileid: "62814027"
   
 -   **Для приостановки базы данных используется:**  
   
--   [Среда SQL Server Management Studio](#SSMSProcedure)  
+-   [Среда Среда SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
      [PowerShell](#PowerShellProcedure)  
   
--   **Дальнейшие действия:** [Как избежать переполнения журнала транзакций](#FollowUp)  
+-   **Дальнейшие действия.** [Избежание переполнения журнала транзакций](#FollowUp)  
   
 -   [Связанные задачи](#RelatedTasks)  
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Restrictions"></a> Ограничения  
+###  <a name="Restrictions"></a> ограничения  
  Команда SUSPEND возвращается сразу после принятия репликой, в которой размещена целевая база данных, но фактическая приостановка базы данных происходит асинхронно.  
   
-###  <a name="Prerequisites"></a> Предварительные требования  
+###  <a name="Prerequisites"></a> предварительные требования  
  Необходимо иметь соединение с экземпляром сервера, на котором размещена приостанавливаемая база данных. Чтобы приостановить базу данных-источник и соответствующие базы данных-получатели, подключитесь к экземпляру сервера, на котором размещена первичная реплика. Чтобы приостановить базу данных-получатель, оставляя при этом доступной базу данных-источник, подключитесь к вторичной реплике.  
   
-###  <a name="Recommendations"></a> Рекомендации  
- При возникновении узких мест краткая приостановка одной или нескольких баз данных-получателей может временно повысить производительность на первичной реплике. Пока база данных-получатель находится в состоянии приостановки, журнал транзакций соответствующей базы данных-источника не может быть усечен. Это приводит к накоплению записей журнала в базе данных-источнике. Поэтому рекомендуется быстро возобновить или удалить приостановленную базу данных-получатель. Дополнительные сведения см. в разделе [дальнейшие действия: Избежание переполнения журнала транзакций](#FollowUp)далее в этом разделе.  
+###  <a name="Recommendations"></a> рекомендации  
+ При возникновении узких мест краткая приостановка одной или нескольких баз данных-получателей может временно повысить производительность на первичной реплике. Пока база данных-получатель находится в состоянии приостановки, журнал транзакций соответствующей базы данных-источника не может быть усечен. Это приводит к накоплению записей журнала в базе данных-источнике. Поэтому рекомендуется быстро возобновить или удалить приостановленную базу данных-получатель. Дополнительные сведения см. ниже в разделе [Дальнейшие действия. Избежание переполнения журнала транзакций](#FollowUp).  
   
 ###  <a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Разрешения  
  Необходимо разрешение ALTER на базу данных.  
   
  Необходимо разрешение ALTER AVAILABILITY GROUP для группы доступности, разрешение CONTROL AVAILABILITY GROUP, разрешение ALTER ANY AVAILABILITY GROUP или разрешение CONTROL SERVER.  
@@ -113,9 +113,8 @@ ms.locfileid: "62814027"
   
      Например, следующая команда приостанавливает синхронизацию данных для базы данных доступности `MyDb3` в группе доступности `MyAg` на экземпляре сервера под именем `Computer\Instance`.  
   
-    ```  
-    Suspend-SqlAvailabilityDatabase `   
-    -Path SQLSERVER:\Sql\Computer\Instance\AvailabilityGroups\MyAg\Databases\MyDb3  
+    ```powershell
+    Suspend-SqlAvailabilityDatabase -Path SQLSERVER:\Sql\Computer\Instance\AvailabilityGroups\MyAg\Databases\MyDb3  
     ```  
   
     > [!NOTE]  
@@ -125,7 +124,7 @@ ms.locfileid: "62814027"
   
 -   [Поставщик SQL Server PowerShell](../../../powershell/sql-server-powershell-provider.md)  
   
-##  <a name="FollowUp"></a> Дальнейшие действия. Как избежать переполнения журнала транзакций  
+##  <a name="FollowUp"></a> Follow Up: Avoiding a Full Transaction Log  
  Обычно при обработке в базе данных автоматической контрольной точки журнал транзакций этой базы данных усекается до этой контрольной точки после следующего резервного копирования журнала. Однако, пока база данных-получатель приостановлена, все текущие записи журнала остаются активными в базе данных-источнике. Если журнал транзакций заполняется до конца (достигается максимальный размер, или на экземпляре сервера не хватает пространства), база данных не позволяет обновить данные.  
   
  Во избежание этой проблемы следует предпринять одно из приведенных ниже действий.  
@@ -138,14 +137,12 @@ ms.locfileid: "62814027"
   
  **Устранение неполадок при переполнении журнала транзакций**  
   
--   [Устранение неполадок при переполнении журнала транзакций (ошибка SQL Server 9002)](../../../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)  
+-   [Устранение неполадок при переполнении журнала транзакций &#40;ошибка SQL Server 9002&#41;](../../../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)  
   
 ##  <a name="RelatedTasks"></a> Связанные задачи  
   
 -   [Возобновление базы данных доступности (SQL Server)](resume-an-availability-database-sql-server.md)  
   
-## <a name="see-also"></a>См. также  
- [Обзор групп доступности AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+## <a name="see-also"></a>См. также статью  
+ [Общие сведения о &#40;группы доступности AlwaysOn&#41; SQL Server](overview-of-always-on-availability-groups-sql-server.md)    
  [Возобновление базы данных доступности (SQL Server)](resume-an-availability-database-sql-server.md)  
-  
-  

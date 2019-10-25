@@ -1,5 +1,5 @@
 ---
-title: Устранение неполадок служебной программы SQL Server | Документация Майкрософт
+title: Устранение неполадок служебная программа SQL Server | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,22 +10,22 @@ ms.assetid: f5f47c2a-38ea-40f8-9767-9bc138d14453
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ed71e0fb889b0cff71937e78245bef1453e13a10
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d5203a0a613bcd8af4b247058f3cb594be5d4c3f
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62842530"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72797777"
 ---
 # <a name="troubleshoot-the-sql-server-utility"></a>Устранение неполадок служебной программы SQL Server
-  При устранении неполадок служебной программы [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] может понадобиться устранить причину ошибок при регистрации экземпляра SQL Server в пункте управления программой, устранить неполадки, связанные с ошибками при сборе данных и вызывающие отображение серых значков в представлении списка управляемых экземпляров в пункте управления программой, устранить «узкие места» производительности или разрешить проблемы, связанные с исправностью ресурсов. Дополнительные сведения об устранении неполадок с работоспособностью ресурсов определяется [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] UCP, см. в разделе [Устранение неполадок исправности ресурсов SQL Server &#40;служебной программы SQL Server&#41;](../relational-databases/manage/troubleshoot-sql-server-resource-health-sql-server-utility.md).  
+  При устранении неполадок служебной программы [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] может понадобиться устранить причину ошибок при регистрации экземпляра SQL Server в пункте управления программой, устранить неполадки, связанные с ошибками при сборе данных и вызывающие отображение серых значков в представлении списка управляемых экземпляров в пункте управления программой, устранить «узкие места» производительности или разрешить проблемы, связанные с исправностью ресурсов. Дополнительные сведения об устранении проблем с работоспособностью ресурсов, обнаруженных [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] точке управления служебной программой, см. в разделе [Устранение неполадок SQL Server &#40;работоспособность ресурсов служебная программа SQL Server&#41;](../relational-databases/manage/troubleshoot-sql-server-resource-health-sql-server-utility.md).  
   
 ## <a name="failed-operation-to-enroll-an-instance-of-sql-server-into-a-sql-server-utility"></a>Неудачная операция регистрации экземпляра SQL Server в служебной программе SQL Server  
  Если при подключении к экземпляру [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] для регистрации используется проверка подлинности [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , а указанная при этом учетная запись-посредник принадлежит домену Active Directory, отличному от домена, в котором находится пункт управления программой, то проверка экземпляра завершится успешно, но во время операции регистрации произойдет ошибка и отобразится следующее сообщение об ошибке:  
   
  Возникло исключение при выполнении пакета или инструкции Transact-SQL. (Microsoft.SqlServer.ConnectionInfo)  
   
- Дополнительные сведения:  Не удалось получить сведения о пользователе/группе Windows NT "\<Имя_домена\имя_учетной_записи >", код ошибки 0x5. (Microsoft SQL Server, ошибка: 15404)  
+ Дополнительные сведения. Не удалось получить сведения о пользователе или группе Windows NT "\<имя_домена\имя_учетной_записи>", код ошибки 0x5. (Microsoft SQL Server, ошибка: 15404)  
   
  Например, эта проблема может возникнуть в следующих сценариях.  
   
@@ -35,11 +35,11 @@ ms.locfileid: "62842530"
   
 3.  Экземпляр [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , который следует зарегистрировать в служебной программе [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , также входит в «Домен_1».  
   
-4.  Во время операции регистрации подключитесь к экземпляру [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] регистрироваться с помощью «sa». Укажите учетную запись-посредник из домена «Домен_2».  
+4.  Во время операции регистрации подключитесь к экземпляру [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] для регистрации с помощью SA. Укажите учетную запись-посредник из домена «Домен_2».  
   
 5.  Проверка пройдет успешно, но при регистрации возникнет ошибка.  
   
- Устранить эту проблему, используя пример выше, является подключение к экземпляру [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] регистрация [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] программы с помощью «sa» и укажите учетную запись-посредник из домена «домен_1».  
+ Чтобы решить эту проблему с помощью приведенного выше примера, нужно подключиться к экземпляру [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] для регистрации в служебной программе [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], используя "SA", и предоставить учетную запись-посредник из "Domain_1".  
   
 ## <a name="failed-wmi-validation"></a>Сбой проверки WMI  
  Если в экземпляре [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]WMI настроена неправильно, то при операциях создания пункта управления программой и регистрации управляемого экземпляра будет отображаться предупреждение, но операция не будет прервана. Кроме того, при изменении настройки учетной записи агента [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] таким образом, что у агента [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] будут отсутствовать разрешения на доступ к требуемым классам WMI, передача собираемых данных из затронутого изменением управляемого экземпляра [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] в пункте управления программой прекратится. В результате в пункте управления программой будет отображаться серый значок.  
@@ -48,9 +48,9 @@ ms.locfileid: "62842530"
   
  Возможны следующие сокращенные сообщения об ошибках.  
   
- Выполнение команды прервано, так как переменной среды «ErrorActionPreference» установлено значение Stop: Доступ запрещен.  
+ Выполнение команды прервано, так как для переменной среды "ErrorActionPreference" установлено значение Stop: Access denied.  
   
- ОШИБКА: \<Дата и время (мм/дд/гггг чч) >: Возникло исключение при сборе данных о свойствах ЦП.  Возможно, произошла ошибка запроса WMI.  ВНИМАНИЕ.  
+ Ошибка: \<Дата-время (мм/дд/гггг чч: мм: СС) >: перехвачено исключение при сборе свойств ЦП.  Возможно, произошла ошибка запроса WMI.  ВНИМАНИЕ.  
   
  Чтобы устранить эту проблему, проверьте следующие параметры конфигурации.  
   
@@ -102,7 +102,7 @@ Get-WmiObject Win32_LogicalDisk -ErrorAction Stop | Out-Null
   
 -   Если произошел сбой передачи или сбора данных в связи со временем ожидания, нужно обновить функцию dbo.fn_sysutility_mi_get_collect_script() в базе данных MSDB. В частности, в функцию «Invoke-BulkCopyCommand()» нужно добавить строку:  
   
-    ```  
+    ```
     $bulkCopy.BulkCopyTimeout=180  
     ```  
   
@@ -116,7 +116,7 @@ Get-WmiObject Win32_LogicalDisk -ErrorAction Stop | Out-Null
   
     2.  Щелкните правой кнопкой мыши **UtilityAgentProxyCredential_\<GUID >** и выберите **свойства**.  
   
-    3.  В диалоговом окне Свойства учетных данных, обновите учетные данные для **UtilityAgentProxyCredential_\<GUID >** учетных данных.  
+    3.  В диалоговом окне Свойства учетных данных обновите учетные данные, необходимые для **UtilityAgentProxyCredential_\<GUID >** учетных данных.  
   
     4.  Нажмите кнопку **ОК** , чтобы подтвердить изменение.  
   
@@ -124,13 +124,13 @@ Get-WmiObject Win32_LogicalDisk -ErrorAction Stop | Out-Null
   
 -   Служба обозревателя SQL Server должна быть запущена на UCP и настроена для автоматического запуска. Если в организации запрещено использование службы обозревателя SQL Server, то для обеспечения подключения управляемого экземпляра [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] к UCP выполните следующие действия.  
   
-    1.  На панели задач Windows на управляемом экземпляре [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], нажмите кнопку **запустить**, затем нажмите кнопку **запуска...** .  
+    1.  На панели задач Windows на управляемом экземпляре [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]нажмите кнопку **Пуск**, а затем выберите команду **выполнить...** .  
   
     2.  Введите «cliconfg.exe» в соответствующем поле и нажмите кнопку **ОК**.  
   
     3.  При запросе разрешить запуск «Средства настройки клиента SQL» нажмите кнопку**Продолжить**.  
   
-    4.  На **SQL Server Client Network Utility** выберите **псевдоним** , а затем нажмите кнопку **добавить...** .  
+    4.  В диалоговом окне **SQL Server клиентская сетевая программа** » перейдите на вкладку **псевдоним** и нажмите кнопку **Добавить...** .  
   
     5.  В диалоговом окне **Добавление конфигурации сетевой библиотеки** .  
   
@@ -164,8 +164,6 @@ Get-WmiObject Win32_LogicalDisk -ErrorAction Stop | Out-Null
   
     5.  Если экземпляр [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] уже был зарегистрирован в UCP до добавления пользователя в эту группу, перезапустите службу агента [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также статью  
  [Функции и задачи служебной программы SQL Server](../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
- [Устранение неполадок исправности ресурсов SQL Server (служебная программа SQL Server)](../relational-databases/manage/troubleshoot-sql-server-resource-health-sql-server-utility.md)  
-  
-  
+ [Устранение неполадок исправности ресурсов SQL Server (служебная программа SQL Server)](../relational-databases/manage/troubleshoot-sql-server-resource-health-sql-server-utility.md)
