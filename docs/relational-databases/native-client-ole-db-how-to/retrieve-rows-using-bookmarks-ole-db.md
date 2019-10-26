@@ -14,12 +14,12 @@ ms.assetid: 5e14d5c8-e7c6-498f-8041-7e006a1c2d81
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 62a21ebe62cb9a62172ffc63e15ced0deb6a23b5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a3a1e8f9076cce34de811713455c914f41b5814d
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67908159"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908051"
 ---
 # <a name="retrieve-rows-using-bookmarks-ole-db"></a>Получение строк с помощью закладок (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "67908159"
   Потребитель устанавливает для поля **dwFlag** значение структуры привязки, равное DBCOLUMNSINFO_ISBOOKMARK, для указания, что столбец используется в качестве закладки. Пользователь также присваивает свойству набора строк DBPROP_BOOKMARKS значение VARIANT_TRUE. Это обеспечивает присутствие в наборе строк столбца с номером 0. Затем с помощью метода**IRowsetLocate::GetRowsAt** производится выборка строк, начиная со строки, указанной в качестве смещения относительно закладки.  
   
 > [!IMPORTANT]  
->  По возможности используйте проверку подлинности Windows. Если проверка подлинности Windows недоступна, запросите у пользователя ввод учетных данных во время выполнения. Избегайте хранения учетных данных в файле. Если необходимо сохранить учетные данные, зашифруйте их с помощью [API-интерфейса шифрования Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
+>  По возможности используйте аутентификацию Windows. Если проверка подлинности Windows недоступна, запросите у пользователя ввод учетных данных во время выполнения. Избегайте хранения учетных данных в файле. Если необходимо сохранить учетные данные, зашифруйте их с помощью [API-интерфейса шифрования Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
   
 ### <a name="to-retrieve-rows-using-bookmarks"></a>Получение строк с помощью закладок  
   
@@ -41,8 +41,6 @@ ms.locfileid: "67908159"
 4.  Установите в поле **dwFlag** структуры привязки флаг DBCOLUMNSINFO_ISBOOKMARK для столбца, используемого в качестве закладки.  
   
 5.  С помощью метода **IRowsetLocate::GetRowsAt** выполните выборку строк, начиная со строки, указанной в качестве смещения относительно закладки.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="example"></a>Пример  
  В данном образце демонстрируется выполнение выборки строк с использованием закладки. Этот образец не поддерживается на архитектуре IA64.  

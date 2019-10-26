@@ -17,14 +17,14 @@ helpviewer_keywords:
 ms.assetid: bfbbbee2-c255-4a59-a963-47d6e980a8e2
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: efbd753b40159afcca81b8922e8ef2842d22e5e4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 155f59426e8167d5d888f3890089dd4b2ea3bf7c
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68067720"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909686"
 ---
-# <a name="spaddlogshippingsecondaryprimary-transact-sql"></a>sp_add_log_shipping_secondary_primary (Transact-SQL)
+# <a name="sp_add_log_shipping_secondary_primary-transact-sql"></a>sp_add_log_shipping_secondary_primary (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Настраивает первичные данные, добавляет ссылки на локальные и удаленные мониторы, а также создает задания копирования и восстановления на сервере-получателе для указанной базы данных-источника.  
@@ -53,70 +53,68 @@ sp_add_log_shipping_secondary_primary
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @primary_server = ] 'primary_server'` Имя первичного экземпляра [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] в конфигурации доставки журналов. *primary_server* — **sysname** и не может иметь значение NULL.  
+`[ @primary_server = ] 'primary_server'` имя основного экземпляра [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] в конфигурации доставки журналов. *primary_server* имеет тип **sysname** и не может иметь значение null.  
   
-`[ @primary_database = ] 'primary_database'` — Имя базы данных на сервере-источнике. *primary_database* — **sysname**, не имеет значения по умолчанию.  
+`[ @primary_database = ] 'primary_database'` — это имя базы данных на сервере-источнике. *primary_database* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @backup_source_directory = ] 'backup_source_directory'` Каталог, где хранятся файлы резервной копии журнала транзакций с сервера-источника. *backup_source_directory* — **nvarchar(500)** и не может иметь значение NULL.  
+`[ @backup_source_directory = ] 'backup_source_directory'` каталог, в котором хранятся файлы резервных копий журналов транзакций с сервера источника. *backup_source_directory* имеет тип **nvarchar (500)** и не может иметь значение null.  
   
-`[ @backup_destination_directory = ] 'backup_destination_directory'` Каталог на сервере-получателе, которые будут копироваться файлы резервных копий. *backup_destination_directory* — **nvarchar(500)** и не может иметь значение NULL.  
+`[ @backup_destination_directory = ] 'backup_destination_directory'` каталог на сервере-получателе, куда копируются файлы резервных копий. *backup_destination_directory* имеет тип **nvarchar (500)** и не может иметь значение null.  
   
-`[ @copy_job_name = ] 'copy_job_name'` Имя, используемое для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] задание агента, создаваемой для копирования резервных копий журналов транзакций на сервер-получатель. *copy_job_name* — **sysname** и не может иметь значение NULL.  
+`[ @copy_job_name = ] 'copy_job_name'` имя, которое будет использоваться для создаваемого задания агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для копирования резервных копий журналов транзакций на сервер-получатель. *copy_job_name* имеет тип **sysname** и не может иметь значение null.  
   
-`[ @restore_job_name = ] 'restore_job_name'` Имя [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] задание агента на сервере-получателе, которое восстанавливает резервные копии базы данных-получателя. *restore_job_name* — **sysname** и не может иметь значение NULL.  
+`[ @restore_job_name = ] 'restore_job_name'` — это имя задания агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на сервере-получателе, которое восстанавливает резервные копии в базе данных-получателе. *restore_job_name* имеет тип **sysname** и не может иметь значение null.  
   
-`[ @file_retention_period = ] 'file_retention_period'` Продолжительность времени в минутах, в которых файл резервной копии хранится на сервере-получателе в пути, указанному свойством @backup_destination_directory параметров перед их удалением. *history_retention_period* — **int**, значение по умолчанию NULL. Если ничего не указано, подразумевается значение 14420.  
+`[ @file_retention_period = ] 'file_retention_period'` время в минутах, в течение которого файл резервной копии сохраняется на сервере-получателе в пути, указанном параметром @backup_destination_directory, перед удалением. *history_retention_period* имеет **тип int**и значение по умолчанию NULL. Если ничего не указано, подразумевается значение 14420.  
   
-`[ @monitor_server = ] 'monitor_server'` — Имя сервера мониторинга. *Monitor_server* — **sysname**, не имеет значения по умолчанию и не может иметь значение NULL.  
+`[ @monitor_server = ] 'monitor_server'` — имя сервера мониторинга. *Monitor_server* имеет тип **sysname**, не имеет значения по умолчанию и не может иметь значение null.  
   
-`[ @monitor_server_security_mode = ] 'monitor_server_security_mode'` Режим безопасности, используемый для подключения к серверу мониторинга.  
+`[ @monitor_server_security_mode = ] 'monitor_server_security_mode'` режим безопасности, используемый для подключения к серверу мониторинга.  
   
  1 = проверка подлинности Windows.  
   
  0 = проверка подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- *monitor_server_security_mode* — **бит** и не может иметь значение NULL.  
+ *monitor_server_security_mode* имеет **бит** и не может иметь значение null.  
   
-`[ @monitor_server_login = ] 'monitor_server_login'` — Это имя пользователя учетной записи, используемой для доступа к серверу мониторинга.  
+`[ @monitor_server_login = ] 'monitor_server_login'` — имя пользователя учетной записи, используемой для доступа к серверу мониторинга.  
   
-`[ @monitor_server_password = ] 'monitor_server_password'` — Пароль учетной записи, используемой для доступа к серверу мониторинга.  
+`[ @monitor_server_password = ] 'monitor_server_password'` — это пароль учетной записи, используемой для доступа к серверу мониторинга.  
   
-`[ @copy_job_id = ] 'copy_job_id' OUTPUT` Идентификатор, связанный с заданием копирования на сервере-получателе. *copy_job_id* — **uniqueidentifier** и не может иметь значение NULL.  
+`[ @copy_job_id = ] 'copy_job_id' OUTPUT` идентификатор, связанный с заданием копирования на сервере-получателе. *copy_job_id* имеет тип **uniqueidentifier** и не может иметь значение null.  
   
-`[ @restore_job_id = ] 'restore_job_id' OUTPUT` Идентификатор, связанный с заданием восстановления на сервере-получателе. *restore_job_id* — **uniqueidentifier** и не может иметь значение NULL.  
+`[ @restore_job_id = ] 'restore_job_id' OUTPUT` идентификатор, связанный с заданием восстановления на сервере-получателе. *restore_job_id* имеет тип **uniqueidentifier** и не может иметь значение null.  
   
-`[ @secondary_id = ] 'secondary_id' OUTPUT` Идентификатор сервера-получателя в конфигурации доставки журналов. *secondary_id* — **uniqueidentifier** и не может иметь значение NULL.  
+`[ @secondary_id = ] 'secondary_id' OUTPUT` идентификатор сервера-получателя в конфигурации доставки журналов. *secondary_id* имеет тип **uniqueidentifier** и не может иметь значение null.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
- None  
+ Нет  
   
-## <a name="remarks"></a>Примечания  
- **sp_add_log_shipping_secondary_primary** должна запускаться из **master** базы данных на сервере-получателе. Эта хранимая процедура выполняет следующее:  
+## <a name="remarks"></a>Remarks  
+ **sp_add_log_shipping_secondary_primary** должен быть запущен из базы данных **master** на сервере-получателе. Эта хранимая процедура выполняет следующее:  
   
 1.  Формирует идентификатор получателя для указанного сервера-источника и базы данных-источника.  
   
 2.  Выполняет следующее:  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-    1.  Добавляет запись для идентификатора получателя в **log_shipping_secondary** с указанными аргументами.  
+    1.  Добавляет запись для вторичного идентификатора в **log_shipping_secondary** , используя указанные аргументы.  
   
     2.  создает отключенное задание копирования для идентификатора получателя;  
   
-    3.  Задает идентификатор задания копирования в **log_shipping_secondary** запись идентификатору задания копирования.  
+    3.  Задает идентификатор задания копирования в записи **log_shipping_secondary** в качестве идентификатора задания копирования.  
   
     4.  создает отключенное задание восстановления для идентификатора получателя;  
   
-    5.  Задайте идентификатор задания восстановления **log_shipping_secondary** запись идентификатору задания восстановления.  
+    5.  Задайте идентификатор задания восстановления в записи **log_shipping_secondary** в качестве идентификатора задания восстановления.  
   
-## <a name="permissions"></a>Разрешения  
- Только члены **sysadmin** предопределенной роли сервера могут выполнять эту процедуру.  
+## <a name="permissions"></a>Permissions  
+ Эту процедуру могут выполнять только члены предопределенной роли сервера **sysadmin** .  
   
 ## <a name="examples"></a>Примеры  
- Этот пример иллюстрирует использование **sp_add_log_shipping_secondary_primary** хранимую процедуру, чтобы настроить данные для базы данных-источника [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] на сервере-получателе.  
+ В этом примере показано использование хранимой процедуры **sp_add_log_shipping_secondary_primary** для настройки сведений для базы данных-источника [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] на сервере-получателе.  
   
 ```  
 EXEC master.dbo.sp_add_log_shipping_secondary_primary   
@@ -135,8 +133,8 @@ EXEC master.dbo.sp_add_log_shipping_secondary_primary
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
- [О доставке журналов &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+## <a name="see-also"></a>См. также статью  
+ [Сведения о доставке журналов (SQL Server)](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

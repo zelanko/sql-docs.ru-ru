@@ -13,18 +13,18 @@ ms.assetid: 4810fe3f-78ee-4f0d-8bcc-a4659fbcf46f
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dfd7e36ca2bad2e067d82fa5ad0751f2ef7aef34
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ee80b68bafa419472c5c650a270a20d4d54526bd
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68133451"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908191"
 ---
 # <a name="processing-results---process-results"></a>Результаты обработки — обработка результатов
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-Обработка результатов в приложении ODBC включает в себя сначала Определение характеристик результирующего набора, а затем данные считываются в программные переменные либо при помощи [SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md) или [SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md) .  
+Обработка результатов в приложении ODBC заключается в том, чтобы сначала определить характеристики результирующего набора, а затем извлечь данные в переменные программы с помощью [SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md) или [SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md).  
   
 ### <a name="to-process-results"></a>Обработка результатов  
   
@@ -40,7 +40,7 @@ ms.locfileid: "68133451"
   
     -   Если используются непривязанные столбцы, вызовите функцию [SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md) один или несколько раз, чтобы получить данные для непривязанных столбцов после последнего привязанного столбца. Вызовы функции **SQLGetData** должны следовать по возрастанию номера столбца.  
   
-    -   Получение данных из столбца типа text или image производится многократным вызовом функции **SQLGetData**.  
+    -   Получение данных из столбца типа text или image производится многократным вызовом функции **SQLGetData** .  
   
 4.  Когда функция [SQLFetch](https://go.microsoft.com/fwlink/?LinkId=58401) указывает конец результирующего набора, возвращая SQL_NO_DATA, вызовите функцию [SQLMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md), чтобы определить, доступен ли другой результирующий набор.  
   
@@ -59,12 +59,10 @@ ms.locfileid: "68133451"
   
 6.  Если есть еще один результирующий набор, перейдите к шагу 1.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 > [!NOTE]  
 >  Чтобы отменить обработку результирующего набора прежде, чем функция [SQLFetch](https://go.microsoft.com/fwlink/?LinkId=58401) вернет значение SQL_NO_DATA, вызовите функцию [SQLCloseCursor](../../relational-databases/native-client-odbc-api/sqlclosecursor.md).  
   
-## <a name="see-also"></a>См. также  
-[Получение сведений о результирующем наборе &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/processing-results-retrieve-result-set-information.md)   
+## <a name="see-also"></a>См. также статью  
+[Получение сведений о &#40;результирующем наборе ODBC&#41;](../../relational-databases/native-client-odbc-how-to/processing-results-retrieve-result-set-information.md)   
   
   

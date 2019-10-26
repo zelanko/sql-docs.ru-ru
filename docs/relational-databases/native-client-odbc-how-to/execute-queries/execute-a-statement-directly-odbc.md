@@ -13,12 +13,12 @@ ms.assetid: b690f9de-66e1-4ee5-ab6a-121346fb5f85
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c2342e24ec6763be32fce8d4fa5ade96b25c9bc6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 458493c1d9c1bd7cb37914469992987055dc4ef2
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67898562"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908204"
 ---
 # <a name="execute-a-statement-directly-odbc"></a>Непосредственное выполнение инструкции (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,8 +32,6 @@ ms.locfileid: "67898562"
 2.  Чтобы выполнить инструкцию, вызовите метод [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399) .  
   
 3.  При использовании входных параметров с данными времени выполнения вызов [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399) возвращает SQL_NEED_DATA. Отправьте данные по фрагментам при помощи функций [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) и [SQLPutData](../../../relational-databases/native-client-odbc-api/sqlputdata.md).  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ### <a name="to-execute-a-statement-multiple-times-by-using-column-wise-parameter-binding"></a>Выполнение инструкции несколько раз при помощи привязки параметра на уровне столбца  
   
@@ -91,7 +89,7 @@ ms.locfileid: "67898562"
   
  **Примечание.** Привязка на уровне столбцов и строк используется чаще совместно с функциями [SQLPrepare](https://go.microsoft.com/fwlink/?LinkId=59360) и [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400) , чем с функцией [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399).  
   
-## <a name="see-also"></a>См. также  
- [Выполнении запросов разделы руководства, посвященные &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md)  
+## <a name="see-also"></a>См. также статью  
+ [Разделы &#40;руководства по выполнению запросов ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md)  
   
   

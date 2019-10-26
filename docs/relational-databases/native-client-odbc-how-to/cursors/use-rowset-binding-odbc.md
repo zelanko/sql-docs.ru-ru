@@ -1,5 +1,5 @@
 ---
-title: Использование привязки наборов строк (ODBC) | Документация Майкрософт
+title: Использовать привязку наборов строк (ODBC) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ ms.assetid: a7be05f0-6b11-4b53-9fbc-501e591eef09
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a6e10c45331e1a2d4395506a0b687ecfd3510d77
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 99c2f54ce648358cdbb47cda9893078d69087ad2
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67898569"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908228"
 ---
 # <a name="use-rowset-binding-odbc"></a>Использование привязки наборов строк (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -49,8 +49,6 @@ ms.locfileid: "67898569"
   
 4.  При каждом вызове функции [SQLFetch](https://go.microsoft.com/fwlink/?LinkId=58401) или [SQLFetchScroll](../../../relational-databases/native-client-odbc-api/sqlfetchscroll.md) происходит получение числа строк, равного R, и передача данных в привязанные столбцы.  
 
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ### <a name="to-use-row-wise-binding"></a>Использование привязки на уровне строки  
   
 1.  Выделите массив array[R] структур, где R — это число строк в наборе строк. Структура должна иметь по одному элементу для каждого столбца, а каждый элемент должен состоять из двух частей:  
@@ -75,9 +73,9 @@ ms.locfileid: "67898569"
   
 5.  При каждом вызове функции [SQLFetch](https://go.microsoft.com/fwlink/?LinkId=58401) или [SQLFetchScroll](../../../relational-databases/native-client-odbc-api/sqlfetchscroll.md) происходит получение числа строк, равного R, и передача данных в привязанные столбцы.  
   
-## <a name="see-also"></a>См. также  
- [Использование инструкций по курсорам &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/cursors/using-cursors-how-to-topics-odbc.md)   
- [Способы реализации курсоров](../../../relational-databases/native-client-odbc-cursors/implementation/how-cursors-are-implemented.md)   
+## <a name="see-also"></a>См. также статью  
+ [Разделы &#40;руководства по использованию курсоров&#41; ODBC](../../../relational-databases/native-client-odbc-how-to/cursors/using-cursors-how-to-topics-odbc.md)   
+ [Как реализуются курсоры](../../../relational-databases/native-client-odbc-cursors/implementation/how-cursors-are-implemented.md)   
  [Использование курсоров &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/cursors/use-cursors-odbc.md)  
   
   

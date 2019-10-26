@@ -1,5 +1,5 @@
 ---
-title: Выбор столбцов с помощью метода IRow::GetColumns (OLE DB) | Документация Майкрософт
+title: 'Выборка столбцов с помощью IRow:: DataColumn (OLE DB) | Документация Майкрософт'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ ms.assetid: a4f79906-da0e-42f2-b0e9-812c29f39e48
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f30acc0027c2456ff0194280c28a0ef97c1383a9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fec568cae05e791d3d1263fddabdf695fd879bcb
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68110328"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907610"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-ole-db"></a>Выбор столбцов при помощи метода IRow::GetColumns (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,8 +44,6 @@ ms.locfileid: "68110328"
 3.  Вызовите функцию IRow::GetColumns() для извлечения одного или нескольких столбцов из полученной строки. Если перед получением данных нужно определить фактический размер столбца, присвойте pData в структуре DBCOLUMNACCESS значение NULL. Вызов IRow::GetColumns() возвращает только ширину столбца. Еще один вызов IRow::GetColumns() получает данные.  
   
 4.  Выполняйте функцию IRow::GetColumns(), пока не получите данные из всех нужных столбцов. Доступ к столбцами должен осуществляться последовательно.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="example"></a>Пример  
  В данном образце показывается, как использовать интерфейс IRow для прямого доступа к столбцам строки результирующего набора. В этом примере показано следующее.  
@@ -522,7 +520,7 @@ if exists (select name from sysobjects where name = 'MyTable')
 go  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также статью  
  [Инструкции по OLE DB](../../relational-databases/native-client-ole-db-how-to/ole-db-how-to-topics.md)  
   
   

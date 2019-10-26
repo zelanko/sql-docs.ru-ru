@@ -1,5 +1,5 @@
 ---
-title: Обработка XML-кода на стороне клиента (управляемые классы SQLXML) | Документация Майкрософт
+title: Обработка XML на стороне клиента (управляемые классы SQLXML) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,18 +17,18 @@ ms.assetid: 5e7ecf18-66fc-49ff-bc50-83635cd7ac0b
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 547e7df24fcf18b3183cd2d279c84e9b38977671
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d6133cbedb01dce5cb4d868e79e52e236e773f4b
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68119589"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909170"
 ---
 # <a name="processing-xml-on-the-client-side-sqlxml-managed-classes"></a>Обработка XML-кода на стороне клиента (управляемые классы SQLXML)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  В этом примере показано использование свойства ClientSideXml. Приложение выполняет хранимую процедуру на сервере. Результат хранимой процедуры (набор строк из двух столбцов) обрабатывается на стороне клиента для создания XML-документа.  
+  В этом примере показано использование свойства Клиентсидексмл. Приложение выполняет хранимую процедуру на сервере. Результат хранимой процедуры (набор строк из двух столбцов) обрабатывается на стороне клиента для создания XML-документа.  
   
- Следующие GetContacts хранимая процедура возвращает **FirstName** и **LastName** сотрудников из таблицы Person.Contact в базе данных AdventureWorks.  
+ Следующая хранимая процедура "связи" возвращает " **FirstName** " и " **LastName** " сотрудников в таблице Person. Contact в базе данных AdventureWorks.  
   
 ```  
 USE AdventureWorks  
@@ -40,7 +40,7 @@ WHERE LastName = @LastName
 Go  
 ```  
   
- Это приложение C# выполняет хранимую процедуру и задает параметр FOR XML AUTO при указании значение CommandText. В приложении, ClientSideXml SqlXmlCommand объекта свойству значение true. Это позволяет выполнять существующие хранимые процедуры, возвращающие наборы строк, и применить к ним преобразование XML на стороне клиента.  
+ Это C# приложение выполняет хранимую процедуру и ЗАДАЕТ параметр FOR XML AUTO в указании значения CommandText. В приложении свойству Клиентсидексмл объекта SqlXmlCommand присваивается значение true. Это позволяет выполнять существующие хранимые процедуры, возвращающие наборы строк, и применить к ним преобразование XML на стороне клиента.  
   
 > [!NOTE]  
 >  В коде необходимо задать имя экземпляра Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в строке соединения.  
@@ -96,6 +96,4 @@ public static int Main(String[] args)
      Будет создан исполняемый файл (DocSample.exe).  
   
 4.  Запустите файл DocSample.exe из командной строки.  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 

@@ -19,18 +19,18 @@ ms.assetid: 8e5738e5-4bbe-4f34-bd69-0c0633290bdd
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4de0a6213f27f4feb88949dd6062321ad30c2866
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 969d4b7218ae7a6b1f04ee75ad95c8ee8ba54690
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68031858"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907372"
 ---
 # <a name="stored-procedures---calling"></a>Вызов хранимых процедур
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  Хранимая процедура может иметь ноль и более параметров. Также она может возвращать значение. При использовании [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поставщика OLE DB для собственного клиента, параметры для хранимой процедуры могут быть переданы:  
+  Хранимая процедура может иметь ноль и более параметров. Также она может возвращать значение. При использовании поставщика [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] собственного клиента OLE DB параметры для хранимой процедуры могут передаваться следующим образом:  
   
 -   Заданные в коде значения данных.  
   
@@ -79,10 +79,8 @@ ms.locfileid: "68031858"
   
 5.  Выполните команду с помощью метода **ICommand::Execute**.  
 
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ## <a name="methods-of-calling-a-stored-procedure"></a>Методы вызова хранимых процедур  
- При выполнении хранимой процедуры в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддерживает поставщик OLE DB для собственного клиента:  
+ При выполнении хранимой процедуры в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]поставщик [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB поддерживает:  
   
 -   Escape-последовательность ODBC CALL.  
   
@@ -97,7 +95,7 @@ ms.locfileid: "68031858"
   
  Общий синтаксис для вызова процедуры с помощью escape-последовательности ODBC CALL выглядит следующим образом.  
   
- {[ **? =** ]**вызвать**_имя_процедуры_[ **(** [*параметр*] [ **,** [*параметр*]]... **)** ]}  
+ {[ **? =** ]**вызовите**_procedure_name_[ **(** [*параметр*] [ **,** [*параметр*]]... **)** ]}  
   
  Пример:  
   
@@ -110,7 +108,7 @@ ms.locfileid: "68031858"
   
  Если escape-последовательность RPC используется для выполнения хранимой процедуры, поставщик не вызывает вспомогательные функции для определения сведений о параметре, как в случае применения синтаксиса ODBC CALL. Синтаксис RPC проще синтаксиса ODBC CALL, поэтому команда анализируется быстрее, что увеличивает производительность. В этом случае необходимо указать сведения о параметрах путем выполнения метода **ICommandWithParameters::SetParameterInfo**.  
   
- Escape-последовательность RPC требует наличия возвращаемого значения. Если хранимая процедура не возвращает значение, сервер по умолчанию возвращает 0. Кроме того, для хранимой процедуры нельзя открыть курсор [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Хранимая процедура подготавливается неявно, и вызов метода **ICommandPrepare::Prepare** завершится ошибкой. Из-за невозможности подготовить вызов RPC не могут запрашивать метаданные столбцов; IColumnsInfo::GetColumnInfo и IColumnsRowset::GetColumnsRowset будут возвращать значение DB_E_NOTPREPARED.  
+ Escape-последовательность RPC требует наличия возвращаемого значения. Если хранимая процедура не возвращает значение, сервер по умолчанию возвращает 0. Кроме того, для хранимой процедуры нельзя открыть курсор [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Хранимая процедура подготавливается неявно, и вызов метода **ICommandPrepare::Prepare** завершится ошибкой. Из-за невозможности подготовить RPC-вызов не удается запросить метаданные столбца. IColumnsInfo:: GetColumnInfo и IColumnsRowset:: Жетколумнсровсет будут возвращать DB_E_NOTPREPARED.  
   
  Если известны все метаданные параметров, для выполнения хранимых процедур рекомендуется использовать escape-последовательность RPC.  
   
@@ -120,10 +118,10 @@ ms.locfileid: "68031858"
 {rpc SalesByCategory}  
 ```  
   
- Пример приложения, демонстрирующего escape-последовательность RPC, см. в разделе [выполнение хранимых процедур &#40;с использованием синтаксиса RPC&#41; и Обработка кодов возврата и выходные параметры &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/results/execute-stored-procedure-with-rpc-and-process-output.md).  
+ Пример приложения, демонстрирующий escape-последовательность RPC, см. в разделе [ &#40;выполнение хранимой процедуры с&#41; использованием синтаксиса RPC и обработка кодов &#40;возврата&#41;и выходных параметров OLE DB](../../../relational-databases/native-client-ole-db-how-to/results/execute-stored-procedure-with-rpc-and-process-output.md).  
   
 ### <a name="transact-sql-execute-statement"></a>Инструкция Transact-SQL EXECUTE  
- Escape-последовательность ODBC CALL и escape-последовательность RPC — это предпочтительные способы вызова хранимых процедур в отличие от инструкции [EXECUTE](../../../t-sql/language-elements/execute-transact-sql.md). [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Поставщик OLE DB для собственного клиента использует механизм RPC [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] для оптимизации обработки команд. Этот протокол RPC повышает производительность, устраняя большую часть обработки параметров и синтаксической проверки инструкций на сервере.  
+ Escape-последовательность ODBC CALL и escape-последовательность RPC — это предпочтительные способы вызова хранимых процедур в отличие от инструкции [EXECUTE](../../../t-sql/language-elements/execute-transact-sql.md). Поставщик [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB использует механизм RPC [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] для оптимизации обработки команд. Этот протокол RPC повышает производительность, устраняя большую часть обработки параметров и синтаксической проверки инструкций на сервере.  
   
  Это пример инструкции [!INCLUDE[tsql](../../../includes/tsql-md.md)] **EXECUTE**.  
   
@@ -131,7 +129,7 @@ ms.locfileid: "68031858"
 EXECUTE SalesByCategory 'Produce', '1995'  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также статью  
  [Хранимые процедуры](../../../relational-databases/native-client/ole-db/stored-procedures.md)  
   
   

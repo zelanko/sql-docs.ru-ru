@@ -1,5 +1,5 @@
 ---
-title: Указание реляционных операторов в запросах XPath (SQLXML 4.0) | Документация Майкрософт
+title: Указание реляционных операторов в запросах XPath (SQLXML 4,0) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -16,29 +16,29 @@ ms.assetid: 177a0eb2-11ef-4459-a317-485a433ee769
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3cc16364c9a1d587de00311ee7f8931b82cd6283
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 180962ac5afae577625415d94cb9beda65f9537a
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68027052"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909442"
 ---
 # <a name="specifying-relational-operators-in-xpath-queries-sqlxml-40"></a>Применение реляционных операторов в запросах XPath (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  В следующих примерах показано, как задаются реляционные операторы в запросах XPath. В данных примерах запросы XPath определены в соответствии со схемой сопоставления, которая содержится в файле SampleSchema1.xml. Сведения об этом образце схемы см. в разделе [образец аннотированные схемы XSD для примеров XPath &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
+  В следующих примерах показано, как задаются реляционные операторы в запросах XPath. В данных примерах запросы XPath определены в соответствии со схемой сопоставления, которая содержится в файле SampleSchema1.xml. Сведения об этом образце схемы см. в статье [Пример схемы XSD с заметками &#40;для&#41;XPath примеры SQLXML 4,0](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
   
 ## <a name="examples"></a>Примеры  
   
 ### <a name="a-specify-relational-operator"></a>A. Укажите реляционный оператор  
- Этот запрос XPath возвращает дочерние элементы  **\<клиента >** элемент где **CustomerID** атрибут имеет значение «1» и где дочерние  **\<заказа >** элементы содержат  **\<OrderDetail >** дочерний элемент с **OrderQty** атрибут со значением больше 3:  
+ Этот запрос XPath возвращает дочерние элементы элемента **\<Customer >** , в котором атрибут **CustomerID** имеет значение 1 и где любой дочерний **\<порядок элементов >** содержит элемент **\<OrderDetail >** с атрибутом **OrderQty** со значением больше 3:  
   
 ```  
 /child::Customer[@CustomerID="1"]/Order/OrderDetail[@OrderQty > 3]  
 ```  
   
- Предикат, указанный в квадратных скобках фильтры  **\<клиента >** элементов. Только  **\<клиента >** элементов, которые имеют по крайней мере  **\<OrderDetail >** внучатый элемент с атрибутом OrderQty, значение больше 3 возвращаются.  
+ Предикат, указанный в квадратных скобках, фильтрует элементы **\<Customer >** . Возвращаются только элементы **\<Customer >** , которые имеют по крайней мере один **\<OrderDetail >** внучатый с атрибутом OrderQty, превышающим 3.  
   
- **Дочерних** оси используется по умолчанию. Поэтому запрос можно определить следующим образом.  
+ По умолчанию используется **дочерняя** ось. Поэтому запрос можно определить следующим образом.  
   
 ```  
 /Customer[@CustomerID="1"]/Order/OrderDetail[@OrderQty > 3]  
@@ -46,7 +46,7 @@ ms.locfileid: "68027052"
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>Проверка запроса XPath к схеме сопоставления  
   
-1.  Копировать [образец кода схемы](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) и вставьте его в текстовый файл. Сохраните файл с именем SampleSchema1.xml.  
+1.  Скопируйте [пример кода схемы](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) и вставьте его в текстовый файл. Сохраните файл с именем SampleSchema1.xml.  
   
 2.  Создайте следующий шаблон (SpecifyRelationalA.xml) и сохраните его в каталоге, в котором сохранен файл SampleSchema1.xml.  
   
@@ -66,9 +66,7 @@ ms.locfileid: "68027052"
   
 3.  Создайте и запустите тестовый скрипт SQLXML 4.0 (Sqlxml4test.vbs), чтобы выполнить шаблон.  
 
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-     For more information, see [Using ADO to Execute SQLXML 4.0 Queries](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Дополнительные сведения см. [в разделе Использование ADO для выполнения запросов SQLXML 4,0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Далее приведен результирующий набор, полученный в результате выполнения этого шаблона.  
   
@@ -82,25 +80,25 @@ ms.locfileid: "68027052"
 </ROOT>  
 ```  
   
-### <a name="b-specify-relational-operator-in-the-xpath-query-and-use-boolean-function-to-compare-the-result"></a>Б. Укажите реляционный оператор в запросе XPath и используйте логическую функцию для сравнения результатов  
- Этот запрос возвращает все  **\<порядок >** дочерний элемент контекстного узла, имеющего **SalesPersonID** атрибута значение, которое меньше 270:  
+### <a name="b-specify-relational-operator-in-the-xpath-query-and-use-boolean-function-to-compare-the-result"></a>б. Укажите реляционный оператор в запросе XPath и используйте логическую функцию для сравнения результатов  
+ Этот запрос возвращает все **\<порядок >** дочерних элементов узла контекста, у которых значение атрибута **SalesPersonID** меньше 270:  
   
 ```  
 /child::Customer/child::Order[(attribute::SalesPersonID < 270)=true()]  
 ```  
   
- Ярлык для **атрибут** оси (@) можно указать и поскольку **дочерних** оси используется по умолчанию, его можно исключить из запроса:  
+ Можно указать ярлык оси **атрибута** (@), а так как **дочерняя** ось является значением по умолчанию, ее можно опустить в запросе:  
   
 ```  
 /Customer/Order[(@SalesPersonID < 270)=true()]  
 ```  
   
 > [!NOTE]  
->  Если указан этот запрос в шаблоне < символ должен быть закодированы, поскольку в сущность < символ имеет особое значение в XML-документа. В шаблоне, использовать `<` для указания < символ.  
+>  Если этот запрос указан в шаблоне, < символ должен быть закодирован в кодировке Entity, так как < символ имеет специальное значение в XML-документе. В шаблоне используйте `<`, чтобы указать < символ.  
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>Проверка запроса XPath к схеме сопоставления  
   
-1.  Копировать [образец кода схемы](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) и вставьте его в текстовый файл. Сохраните файл с именем SampleSchema1.xml.  
+1.  Скопируйте [пример кода схемы](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) и вставьте его в текстовый файл. Сохраните файл с именем SampleSchema1.xml.  
   
 2.  Создайте следующий шаблон (SpecifyRelationalB.xml) и сохраните его в том же каталоге, в котором сохранен файл SampleSchema1.xml.  
   
@@ -120,7 +118,7 @@ ms.locfileid: "68027052"
   
 3.  Создайте и запустите тестовый скрипт SQLXML 4.0 (Sqlxml4test.vbs), чтобы выполнить шаблон.  
   
-     Дополнительные сведения см. в разделе [использование объектов ADO для выполнения запросов SQLXML 4.0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Дополнительные сведения см. [в разделе Использование ADO для выполнения запросов SQLXML 4,0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Далее приведен частичный результирующий набор, полученный в результате выполнения этого шаблона.  
   

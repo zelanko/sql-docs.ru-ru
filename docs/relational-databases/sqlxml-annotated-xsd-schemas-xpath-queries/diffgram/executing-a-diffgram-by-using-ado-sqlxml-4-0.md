@@ -1,5 +1,5 @@
 ---
-title: Выполнение дельты с использованием ADO (SQLXML 4.0) | Документация Майкрософт
+title: Запуск DiffGram с помощью ADO (SQLXML 4,0) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,30 +17,30 @@ ms.assetid: 741fce82-de83-4923-86eb-30acb5b9a5e6
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 764ba5c11e6ec4b41017e9839c46c0e8f4c8d70a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b3d0b352c31c7661a92cb53f8331d2a8e062aa8a
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68073476"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909345"
 ---
 # <a name="executing-a-diffgram-by-using-ado-sqlxml-40"></a>Выполнение дельты с использованием ADO (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Следующее приложение на языке [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic использует ADO для установки соединения с экземпляром Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и выполняет DiffGram. В этом приложении дельты и схема XSD хранятся в файле. Приложение загружает DiffGram из заданного файла. Можно использовать любые дельты (и связанной схемы XSD) описано в разделе [примеры дельт](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/diffgram-examples-sqlxml-4-0.md).  
+  Следующее приложение на языке [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic использует ADO для установки соединения с экземпляром Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и выполняет DiffGram. В этом приложении дельты и схема XSD хранятся в файле. Приложение загружает DiffGram из заданного файла. Вы можете использовать любую из дельтами (и связанную с ней схему XSD), описанную в разделе [примеры DiffGram](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/diffgram-examples-sqlxml-4-0.md).  
   
  Ниже приводится последовательность действий в образце приложения.  
   
--   **Conn** объекта (**ADODB. Подключение**) устанавливает соединение с запущенным экземпляром сервера SQL на конкретном сервере.  
+-   Объект **conn** (**ADODB. Соединение**) устанавливает соединение с выполняющимся экземпляром SQL Server на определенном сервере.  
   
--   **Cmd** объекта (**ADODB.Command**) выполняется в рамках установленного подключения.  
+-   Объект **cmd** (**ADODB. Command**) выполняется для установленного соединения.  
   
 -   В качестве диалекта команды задано значение DBGUID_MSSQLXML.  
   
--   Дельта копируется в поток команды (**strmIn**) из файла.  
+-   Объект DiffGram копируется в поток команд (**strmIn**) из файла.  
   
--   Выходной поток команды присваивается **StrmOut** объекта (**ADODB. Stream**), который получает все возвращаемых данных.  
+-   Поток вывода команды задается как объект **стрмаут** (**ADODB. Stream**) для получения возвращенных данных.  
   
--   При использовании поставщика SQLOLEDB вы по умолчанию получаете функциональность Microsoft SQLXML, предоставляемую библиотекой Sqlxmlx.dll. Чтобы использовать библиотеку Sqlxml4.dll с поставщиком SQLOLEDB, **SQLXML Version** свойству должно быть присвоено **SQLXML.4.0** на поставщик SQLOLEDB **подключения** объекта.  
+-   При использовании поставщика SQLOLEDB вы по умолчанию получаете функциональность Microsoft SQLXML, предоставляемую библиотекой Sqlxmlx.dll. Чтобы использовать библиотеку Sqlxml4. dll с поставщиком SQLOLEDB, свойство **версии SQLXML** должно иметь значение **SQLXML. 4.0** для объекта **соединения** поставщика SQLOLEDB.  
   
 -   Команда (дельта) будет выполнена.  
   
@@ -86,7 +86,7 @@ End Sub
   
 ### <a name="to-test-the-diffgram"></a>Проверка дельты  
   
-1.  В папку на компьютере, скопируйте любой из дельту и соответствующую схему XSD из одного из примеров в [примеры дельт](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/diffgram-examples-sqlxml-4-0.md).  
+1.  В папку на компьютере скопируйте любую из дельтами и соответствующую схему XSD из одного из примеров в [примерах DiffGram](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/diffgram-examples-sqlxml-4-0.md).  
   
 2.  Откройте Visual Basic и создайте проект стандартного исполняемого файла.  
   
@@ -96,13 +96,11 @@ End Sub
     Microsoft ActiveX Data Objects 2.8 Library  
     ```  
   
-4.  В области элементов щелкните **CommandButton**, а затем нарисуйте кнопку в форме.  
+4.  На панели элементов щелкните **CommandButton**, а затем нарисуйте кнопку в форме.  
   
 5.  Дважды нажмите кнопку, чтобы изменить ее код, и добавьте код приложения из раздела.  
   
 6.  Отредактируйте код, чтобы в нем указывались имена файлов DiffGram и XSD. Также отредактируйте строку соединения.  
   
 7.  Запустите приложение. Результат выполнения зависит от типа DiffGram.  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 

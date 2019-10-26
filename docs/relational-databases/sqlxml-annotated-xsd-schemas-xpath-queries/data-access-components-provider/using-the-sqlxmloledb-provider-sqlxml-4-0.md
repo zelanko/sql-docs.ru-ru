@@ -1,5 +1,5 @@
 ---
-title: Использование поставщика SQLXMLOLEDB (SQLXML 4.0) | Документация Майкрософт
+title: Использование поставщика SQLXMLOLEDB (SQLXML 4,0) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -15,12 +15,12 @@ ms.assetid: fbcefac5-29c9-478b-b0e0-d510b593f446
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f71fffba9ccfff30188056d931fb08526ce43a75
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9bc5e79f52f3aabbe157065db86e8d0968537ef7
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67895124"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909358"
 ---
 # <a name="using-the-sqlxmloledb-provider-sqlxml-40"></a>Использование поставщика SQLXMLOLEDB (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,38 +31,36 @@ ms.locfileid: "67895124"
   
 1.  Создать приложение Microsoft Visual Basic и добавить одну из следующих ссылок.  
   
-    -   Microsoft ActiveX Data Objects 2,6 библиотеки  
+    -   Библиотека Microsoft объекты данных ActiveX 2,6  
   
-    -   2\.7 библиотеки объектов данных ActiveX  
+    -   Библиотека Microsoft объекты данных ActiveX 2,7  
   
     -   Библиотека объектов Microsoft ADO 2.8  
   
 2.  Развернуть и установить SQLXML версии 4.0 и собственный клиент [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
 
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-     For more information, see on [SQLXML 4.0 Programming Concepts](../../../relational-databases/sqlxml/sqlxml-4-0-programming-concepts.md) and [Installing SQL Server Native Client](../../../relational-databases/native-client/applications/installing-sql-server-native-client.md).  
+     Дополнительные сведения см. в статье [Основные понятия программирования SQLXML 4,0](../../../relational-databases/sqlxml/sqlxml-4-0-programming-concepts.md) и [Установка SQL Server Native Client](../../../relational-databases/native-client/applications/installing-sql-server-native-client.md).  
   
 ## <a name="in-this-section"></a>в этом разделе  
- [Выполнение запросов SQL &#40;поставщик SQLXMLOLEDB&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-sql-queries-sqlxmloledb-provider.md)  
- Демонстрирует использование свойства корневого ClientSideXML и xml для выполнения запросов SQL.  
+ [Запуск поставщика SQLXMLOLEDB &#40;запросов SQL&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-sql-queries-sqlxmloledb-provider.md)  
+ Демонстрирует использование свойств Клиентсидексмл и корня XML для выполнения SQL-запросов.  
   
- [Выполнение шаблонов, содержащих запросы SQL &#40;поставщик SQLXMLOLEDB&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-templates-that-contain-sql-queries-sqlxmloledb-provider.md)  
- Демонстрирует использование ClientSideXML, свойство.  
+ [Запуск шаблонов, содержащих поставщик SQLXMLOLEDB &#40;запросов SQL&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-templates-that-contain-sql-queries-sqlxmloledb-provider.md)  
+ Иллюстрирует использование свойства Клиентсидексмл.  
   
- [Выполнение запросов XPath &#40;поставщик SQLXMLOLEDB&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-xpath-queries-sqlxmloledb-provider.md)  
- Демонстрирует использование свойства ClientSideXML, базовый путь и схемы сопоставления.  
+ [Запуск поставщика SQLXMLOLEDB &#40;запросов XPath&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-xpath-queries-sqlxmloledb-provider.md)  
+ Демонстрирует использование свойств Клиентсидексмл, базового пути и схемы сопоставления.  
   
- [Выполнение запросов XPath с пространствами имен &#40;поставщик SQLXMLOLEDB&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-xpath-queries-with-namespaces-sqlxmloledb-provider.md)  
+ [Запуск запросов XPath с &#40;SQLXMLOLEDB поставщика пространства имен&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-xpath-queries-with-namespaces-sqlxmloledb-provider.md)  
  Иллюстрирует выполнение запроса к схемам пространства имен.  
   
- [Выполнение шаблонов, содержащих запросы XPath &#40;поставщик SQLXMLOLEDB&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-templates-that-contain-xpath-queries-sqlxmloledb-provider.md)  
- Иллюстрирует выполнение шаблонов с запросами SQL с помощью свойств ClientSideXML, базовый путь и схемы сопоставления.  
+ [Исполнение шаблонов, содержащих поставщик SQLXMLOLEDB &#40;запросов XPath&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-templates-that-contain-xpath-queries-sqlxmloledb-provider.md)  
+ Показывает, как выполнять шаблоны с запросами SQL с помощью Клиентсидексмл, базового пути и свойств схемы сопоставления.  
   
- [Применение преобразования XSL &#40;поставщик SQLXMLOLEDB&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/applying-an-xsl-transformation-sqlxmloledb-provider.md)  
- Демонстрирует использование свойств ClientSideXML и xsl в применение преобразования XSL.  
+ [Применение поставщика SQLXMLOLEDB преобразования &#40;XSL&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/applying-an-xsl-transformation-sqlxmloledb-provider.md)  
+ Демонстрирует использование свойств Клиентсидексмл и XSL в применении преобразования XSL.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также статью  
  [Системные требования для SQL Server Native Client](../../../relational-databases/native-client/system-requirements-for-sql-server-native-client.md)  
   
   

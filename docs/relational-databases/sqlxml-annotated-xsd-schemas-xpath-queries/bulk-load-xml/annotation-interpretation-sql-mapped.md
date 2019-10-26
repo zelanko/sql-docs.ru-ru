@@ -1,5 +1,5 @@
 ---
-title: 'SQL: mapped (SQLXML 4.0) | Документация Майкрософт'
+title: 'SQL: сопоставлено (SQLXML 4,0) | Документация Майкрософт'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,18 +18,18 @@ ms.assetid: 7042741e-ce4d-4912-9c4a-d77194a028fc
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c639a9eaf7165bfc83b141235e1ce0b2ed9bb246
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7711386722d618b35a8d957b680244243b4de5d5
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68055409"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907138"
 ---
 # <a name="annotation-interpretation---sqlmapped"></a>Интерпретация заметки — sql:mapped
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Массовая загрузка XML обрабатывает **sql: сопоставлены** является заметки в схемах XSD, ожидается, если схема сопоставления задает **sql: сопоставлены = «false»** для любого элемента или атрибута, Массовая загрузка XML не поддерживает Попытка сохранить связанные данные в соответствующем столбце.  
+  При выполнении групповой загрузки XML обрабатывается заметка **SQL:** в схеме XSD, как ожидалось, т. е. Если схема сопоставления задает **SQL: mappingd = "false"** для любого элемента или атрибута, то при выполнении XML-загрузки не выполняется попытка сохранить связанные данные в соответствующий столбец.  
   
- Массовая загрузка XML пропускает элементы и атрибуты, которые не сопоставлены (поскольку они не описаны в схеме, или они помечены в схеме XSD с **sql: сопоставлены = «false»** ). Все несопоставленные данные попадают в столбце переполнения, если такой столбец задается с помощью **SQL: Overflow-поле**.  
+ При выполнении групповой загрузки XML не учитываются элементы и атрибуты, которые не сопоставлены (так как они не описаны в схеме, или из-за того, что они добавлены в схему XSD с помощью **SQL: сопоставлено = "false"** ). Все несопоставленные данные попадают в столбец Overflow, если такой столбец указан с помощью **SQL: overflow-field**.  
   
  В качестве примера рассмотрим следующую схему XSD.  
   
@@ -55,11 +55,11 @@ ms.locfileid: "68055409"
 </xsd:schema>  
 ```  
   
- Так как **HomePhone** атрибут задает **sql: сопоставлены = «false»** , Массовая загрузка XML не сопоставляет этот атрибут в соответствующий столбец. В схеме XSD определяется столбец переполнения (**OverflowColumn**) в который Массовая загрузка сохраняет невостребованные данные.  
+ Поскольку атрибут **HomePhone** указывает **SQL: Map = "false"** , при XML-загрузке не выполняется сопоставление этого атрибута с соответствующим столбцом. Схема XSD определяет столбец переполнения (**оверфловколумн**), в котором при выполнении групповой загрузки XML эти невостребованные данные сохраняются.  
   
 ### <a name="to-test-a-working-sample"></a>Проверка рабочего образца  
   
-1.  Создайте следующую таблицу в **tempdb** базы данных:  
+1.  Создайте в базе данных **tempdb** следующую таблицу:  
   
     ```  
     USE tempdb  
@@ -85,8 +85,6 @@ ms.locfileid: "68055409"
     ```  
   
 4.  Чтобы выполнить массовую загрузку XML-данных, сохраните этот пример на языке [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic Scripting Edition (VBScript) в файле Sample.vbs и выполните его.  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
     ```  
     set objBL = CreateObject("SQLXMLBulkLoad.SQLXMLBulkload.4.0")  

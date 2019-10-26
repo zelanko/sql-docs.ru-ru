@@ -1,5 +1,5 @@
 ---
-title: Массовое копирование данных с использованием интерфейса IRowsetFastLoad (OLE DB) | Документация Майкрософт
+title: Групповое Копирование данных с использованием IRowsetFastLoad (OLE DB) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,12 +16,12 @@ ms.assetid: 0b8908d1-fd6d-47a9-9e30-514cee8f60c8
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 57d166dd4f08ef46a87b1dc467453056ad88d84c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d8d3d095e038f296ffbaf908798bcdc7f9bfe6d6
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68106738"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72906657"
 ---
 # <a name="bulk-copy-data-using-irowsetfastload-ole-db"></a>Выполнение массового копирования данных с использованием интерфейса IRowsetFastLoad (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,17 +44,15 @@ ms.locfileid: "68106738"
   
 2.  Установите зависящее от поставщика SQLOLEDB свойство источника данных SSPROP_ENABLEFASTLOAD в значение VARIANT_TRUE. При присвоении этому свойству значения VARIANT_TRUE созданный сеанс позволит потребителю получить доступ к **IRowsetFastLoad**.  
   
-3.  Создайте сеанс, запрашивающий **IOpenRowset** интерфейс.  
+3.  Создайте сеанс, запрашивающий интерфейс **IOpenRowset** .  
   
 4.  Вызовите метод **IOpenRowset::OpenRowset** для открытия набора строк, включающего все строки таблицы (в которую необходимо скопировать данные с помощью операции массового копирования).  
   
-5.  Выполните необходимые привязки и создайте метод доступа **IAccessor::CreateAccessor**.  
+5.  Выполните необходимые привязки и создайте метод доступа с помощью **IAccessor:: CreateAccessor**.  
   
 6.  Задайте буфер памяти, из которого данные будут копироваться в таблицу.  
   
-7.  Вызовите **IRowsetFastLoad::InsertRow** для массового копирования данных в таблицу.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+7.  Вызовите метод **IRowsetFastLoad:: insertRow** , чтобы выполнить массовые копирование данных в таблицу.  
 
 ## <a name="example"></a>Пример  
  В этом примере в таблицу IRFLTable добавляется 10 записей. Необходимо создать в базе данных таблицу IRFLTable. Этот образец не поддерживается на архитектуре IA64.  

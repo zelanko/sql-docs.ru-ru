@@ -1,5 +1,5 @@
 ---
-title: Выполнение запросов XPath с пространствами имен (управляемые классы SQLXML) | Документация Майкрософт
+title: Исполнение запросов XPath с пространствами имен (управляемые классы SQLXML) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -19,26 +19,26 @@ ms.assetid: c6fc46d8-6b42-4992-a8f1-a8d4b8886e6e
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bc54797e5f423b277e1cd3ffc3fbb77e588cca11
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 884ea584ec54425d6d0ed2d134e9181cd4d56678
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67934152"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909218"
 ---
 # <a name="executing-xpath-queries-with-namespaces-sqlxml-managed-classes"></a>Выполнение запросов XPath с пространствами имен (управляемые классы SQLXML)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   В запросы XPath могут быть включены пространства имен. Если имена элементов схемы уточнены именем пространства имен (используйте целевое пространство имен), оно должно быть указано в запросах XPath к этой схеме.  
   
- Поскольку символ-шаблон (*) в [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0 не поддерживается, запрос XPath нужно задавать с указанием префикса пространства имен. Для разрешения префикса, свойство пространства имен для указания привязки пространства имен.  
+ Поскольку символ-шаблон (*) в [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0 не поддерживается, запрос XPath нужно задавать с указанием префикса пространства имен. Для разрешения префикса используйте свойство namespaces, чтобы указать привязку пространства имен.  
   
- В следующем примере запрос XPath задает пространства имен с помощью подстановочного знака (\*) и функции XPath local-name() и namespace-uri(). Этот запрос XPath возвращает все элементы, в котором локальное имя **сотрудника** и пространство имен URI является **urn: myschema:Contacts**:  
+ В следующем примере запрос XPath задает пространства имен, используя подстановочный знак (\*) и функции XPath local-name () и Namespace-URI (). Этот запрос XPath возвращает все элементы, где локальное имя — **Employee** , а URI-код пространства имен — **urn: MySchema: Contacts**:  
   
 ```  
 /*[local-name() = 'Contact' and namespace-uri() = 'urn:myschema:Contacts']  
 ```  
   
- В SQLXML 4.0 этот запрос XPath необходимо указывать с префиксом пространства имен. Например, **x: контакт**, где **x** префикса пространства имен. Рассмотрим следующую схему XSD.  
+ В SQLXML 4.0 этот запрос XPath необходимо указывать с префиксом пространства имен. Например, **КС:контакт**, где **x** — префикс пространства имен. Рассмотрим следующую схему XSD.  
   
 ```  
 <schema xmlns="http://www.w3.org/2001/XMLSchema"  
@@ -56,7 +56,7 @@ ms.locfileid: "67934152"
   
  Поскольку эта схема задает целевое пространство имен, запрос XPath к этой схеме (например, «Employee») должен содержать пространство имен.  
   
- Следующие образец приложения на C# исполняет запрос XPath к предыдущей схеме XSD (MySchema.xml). Для разрешения префикса, указываете привязку пространства имен с помощью пространства имен свойства объекта SqlXmlCommand.  
+ Следующие образец приложения на C# исполняет запрос XPath к предыдущей схеме XSD (MySchema.xml). Чтобы разрешить префикс, укажите привязку пространства имен с помощью свойства Namespaces объекта SqlXmlCommand.  
   
 > [!NOTE]  
 >  В коде необходимо задать имя экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в строке соединения.  
@@ -109,6 +109,4 @@ class Test
      Будет создан исполняемый файл (DocSample.exe).  
   
 4.  Запустите файл DocSample.exe из командной строки.  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 

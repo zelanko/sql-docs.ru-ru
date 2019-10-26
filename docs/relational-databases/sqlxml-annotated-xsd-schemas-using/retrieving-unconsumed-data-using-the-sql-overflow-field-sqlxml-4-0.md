@@ -1,5 +1,5 @@
 ---
-title: 'Получение невостребованных данных с помощью SQL: Overflow-field (SQLXML 4.0) | Документация Майкрософт'
+title: 'Извлечение невостребованных данных с помощью SQL: overflow-field (SQLXML 4,0) | Документация Майкрософт'
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -18,20 +18,20 @@ author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 292c07e1ab55313f0eedf7f4cb0c3f4a155aff30
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6714940fe14e2f7a1182a24c37f0d7c58b4d3e72
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68067014"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907170"
 ---
 # <a name="retrieving-unconsumed-data-using-the-sqloverflow-field-sqlxml-40"></a>Получение невостребованных данных с помощью sql:overflow-field (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Когда в базу данных с помощью функции OPENXML [!INCLUDE[tsql](../../includes/tsql-md.md)] вставляются записи из XML-документа, все невостребованные данные из исходного XML-документа могут быть сохранены в столбце. При получении данных из базы данных с использованием аннотированных схем, можно указать **SQL: Overflow-поле** атрибут для идентификации столбца в таблице, в котором хранятся данные переполнения. **SQL: Overflow-поле** атрибут может быть указан в  **\<элемент >** .  
+  Когда в базу данных с помощью функции OPENXML [!INCLUDE[tsql](../../includes/tsql-md.md)] вставляются записи из XML-документа, все невостребованные данные из исходного XML-документа могут быть сохранены в столбце. При извлечении данных из базы данных с помощью схем с заметками можно указать атрибут **SQL: overflow-field** , чтобы определить столбец в таблице, в которой хранятся данные о переполнении. Атрибут **SQL: overflow-field** можно указать в **\<элемента**.  
   
  Затем эти данные можно получить одним из трех способов.  
   
--   Атрибуты, сохраненные в столбце переполнения, добавляются к элементу, который содержит **SQL: Overflow-поле** заметки.  
+-   Атрибуты, хранящиеся в столбце Overflow, добавляются к элементу, содержащему заметку **SQL: overflow-поле** .  
   
 -   Дочерние элементы и их потомки, хранимые в столбце переполнения базы данных, добавляются в качестве дочерних элементов вслед за содержимым, которое явным образом указывается в схеме. (Порядок не сохраняется.)  
   
@@ -62,7 +62,7 @@ INSERT INTO Customers2 VALUES (
 GO  
 ```  
   
- Кроме того, необходимо создать виртуальный каталог для базы данных tempdb- и виртуальное имя шаблона из **шаблона** тип с именем «template».  
+ Кроме того, необходимо создать виртуальный каталог для базы данных tempdb — и виртуальное имя шаблона типа **шаблона** с именем template.  
   
  В следующем примере схема сопоставления получает невостребованные данные, которые сохраняются в столбце AddressOverflow таблицы Customers2:  
   
@@ -101,9 +101,7 @@ GO
   
 3.  Создайте и запустите тестовый скрипт SQLXML 4.0 (Sqlxml4test.vbs), чтобы выполнить шаблон.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-     For more information, see [Using ADO to Execute SQLXML 4.0 Queries](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Дополнительные сведения см. [в разделе Использование ADO для выполнения запросов SQLXML 4,0](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Результирующий набор:  
   

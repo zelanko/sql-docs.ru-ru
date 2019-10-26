@@ -1,5 +1,5 @@
 ---
-title: Присваивание больших данных | Документация Майкрософт
+title: Задание больших данных | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,18 +17,18 @@ ms.assetid: 9d0c524b-22b0-475a-9ff5-5a69a6393b46
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ac0d1d370951ea5daa2d1849d833dcc50abf83bf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 57a5c840ac796cf0b30e71c70be72d7c3be5a4e0
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68128865"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909464"
 ---
 # <a name="setting-large-data"></a>Присваивание больших данных
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  С помощью [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поставщика OLE DB для собственного клиента позволяет передавать данные BLOB по указателю на объект хранилища потребителя.  
+  С помощью поставщика [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственного клиента OLE DB можно задать данные большого двоичного объекта, передав указатель на объект хранилища объекта-получателя.  
   
  Потребитель создает объект хранилища, содержащий эти данные, и передает поставщику указатель на этот объект. Поставщик считывает данные из объекта в хранилище поставщика и записывает их в столбец BLOB.  
   
@@ -49,15 +49,13 @@ ms.locfileid: "68128865"
   
 2.  Установите свойства в группе свойств DBPROPSET_ROWSET, чтобы включить возможность обновления для набора строк.  
   
-3.  Создайте набор привязок (по одной для каждого столбца) с помощью массива структур DBBINDING. Установите для элемента *wType* структуры DBBINDING значение DBTYPE_IUNKNOWN, а для элемента *pObject* значение указателя на созданную структуру DBOBJECT.  
+3.  Создайте набор привязок (по одной для каждого столбца) с помощью массива структур DBBINDING. Установите для элемента *wType* структуры DBBINDING значение DBTYPE_IUNKNOWN, а для элемента *pObject* — значение указателя на созданную структуру DBOBJECT.  
   
 4.  Создайте метод доступа на основе сведений о привязках в массиве структур DBBINDINGS.  
   
 5.  Вызовите функцию **GetNextRows** для выборки следующих строк из набора строк. Вызовите функцию **GetData** для чтения данных набора строк.  
   
 6.  Создайте объект хранилища, содержащий данные (с признаком длины) и вызовите метод **IRowsetChange::SetData** (или **IRowsetChange::InsertRow**) с методом доступа, привязывающим столбец BLOB для задания данных.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="example"></a>Пример  
  Следующий пример показывает получение данных BLOB. В примере создается таблица, добавляется образец записи, эта запись выбирается из набора строк, а затем устанавливается значение поля BLOB.  
@@ -723,7 +721,7 @@ Exit:
 } //end function  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также статью  
  [Большие двоичные объекты и объекты OLE](../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md)   
  [Использование типов больших значений](../../relational-databases/native-client/features/using-large-value-types.md)  
   

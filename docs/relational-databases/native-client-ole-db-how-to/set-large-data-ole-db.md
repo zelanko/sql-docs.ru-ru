@@ -1,5 +1,5 @@
 ---
-title: Задание данных больших объектов (OLE DB) | Документация Майкрософт
+title: Задание больших данных (OLE DB) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ ms.assetid: b057f04b-e5f4-466e-a39a-090dae797236
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 174f1da22fb847e46c9f9d16cc3a4a78f758c80f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b75d112900e9ff955da587fa76bf2bb6a7210abe
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68110025"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72904972"
 ---
 # <a name="set-large-data-ole-db"></a>Задание данных больших объектов (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "68110025"
   
 2.  Установите свойства в группе свойств DBPROPSET_ROWSET, чтобы включить возможность обновления для набора строк.  
   
-3.  Создайте набор привязок (по одной для каждого столбца) с помощью массива структур DBBINDING. Установите для элемента **wType** структуры DBBINDING значение DBTYPE_IUNKNOWN, а для элемента **pObject** значение указателя на созданную структуру DBOBJECT.  
+3.  Создайте набор привязок (по одной для каждого столбца) с помощью массива структур DBBINDING. Установите для элемента **wType** структуры DBBINDING значение DBTYPE_IUNKNOWN, а для элемента **pObject** — значение указателя на созданную структуру DBOBJECT.  
   
 4.  Создайте метод доступа на основе сведений о привязках в массиве структур DBBINDINGS.  
   
@@ -49,14 +49,12 @@ ms.locfileid: "68110025"
   
 6.  Для задания данных создайте объект хранения, содержащий данные (а также индикатор длины), а затем вызовите метод **IRowsetChange::SetData** (или **IRowsetChange::InsertRow**) с методом доступа, который привяжет столбец BLOB.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ## <a name="example"></a>Пример  
   
-### <a name="description"></a>Описание  
+### <a name="description"></a>Description  
  Скомпилируйте с библиотеками ole32.lib и oleaut32.lib и выполните следующий листинг кода (C++). Это приложение соединяется с установленным на компьютер экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по умолчанию. В некоторых операционных системах Windows придется заменить (localhost) или (local) на имя своего экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Чтобы подключиться к именованному экземпляру, измените строку подключения с L"(local)" на L"(local)\\\<имя>", где <имя> — это именованный экземпляр. По умолчанию [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express устанавливается на именованный экземпляр. Убедитесь, что переменная среды INCLUDE включает каталог, содержащий файл sqlncli.h.  
   
-### <a name="code"></a>Код  
+### <a name="code"></a>код  
   
 ```  
 // compile with: ole32.lib oleaut32.lib  

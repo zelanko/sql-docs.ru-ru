@@ -1,5 +1,5 @@
 ---
-title: Используйте Microsoft координатор распределенных транзакций (ODBC) | Документация Майкрософт
+title: Использование координатор распределенных транзакций Майкрософт (ODBC) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ ms.assetid: 12a275e1-8c7e-436d-8a4e-b7bee853b35c
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b62fbf4a7f687b4aa65472556a4999d0323f9b0c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ec4623e2047819bd5b080a06516d2a0b9b4ea71c
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67937383"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908149"
 ---
 # <a name="use-microsoft-distributed-transaction-coordinator-odbc"></a>Использование координатора распределенных транзакции Майкрософт (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "67937383"
   
 1.  Подключитесь к координатору распределенных транзакций (MS DTC), используя функцию DtcGetTransactionManager MS DTC OLE. Дополнительные сведения о координаторе распределенных транзакций (MS DTC) см. в разделе «Координатор распределенных транзакций (Майкрософт)».  
   
-2.  Вызовите SQL DriverConnect один раз для каждого подключения SQL Server требуется установить.  
+2.  Вызывайте SQL Дриверконнект один раз для каждого устанавливаемого соединения SQL Server.  
   
 3.  Вызовите функцию MS DTC OLE ITransactionDispenser::BeginTransaction, чтобы начать транзакцию координатора распределенных транзакций (MS DTC) и получить объект Transaction, представляющий транзакцию.  
   
@@ -38,8 +38,6 @@ ms.locfileid: "67937383"
 5.  Вызовите [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399) по одному разу для каждого экземпляра SQL Server, который нужно обновить.  
   
 6.  Вызовите функцию MS DTC OLE ITransaction::Commit, чтобы зафиксировать транзакцию MS DTC. Объект Transaction более не действителен.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  Чтобы выполнить ряд транзакций MS DTC, повторите шаги с 3 по 6.  
   
@@ -50,7 +48,7 @@ ms.locfileid: "67937383"
 > [!NOTE]  
 >  Можно также вызывать [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) и [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399) по очереди для каждого экземпляра SQL Server, а не вызывать их описанным выше в шагах 4 и 5 способом.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также статью  
  [Выполнение транзакций &#40;ODBC&#41;](https://msdn.microsoft.com/library/f431191a-5762-4f0b-85bb-ac99aff29724)  
   
   

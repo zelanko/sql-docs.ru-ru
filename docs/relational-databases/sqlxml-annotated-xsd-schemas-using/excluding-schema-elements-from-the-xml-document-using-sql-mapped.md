@@ -1,5 +1,5 @@
 ---
-title: 'Исключение элементов схемы из XML-документа с помощью sql: сопоставлены | Документация Майкрософт'
+title: 'Исключение элементов схемы из XML-документа с помощью SQL: сопоставлено | Документация Майкрософт'
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -23,30 +23,30 @@ author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7e92b8b90793a82df9c38b819630070373e6e8ff
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d466ad57d7644f73d7fdd44df62aac6a0c2a1b0b
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68067129"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72905959"
 ---
 # <a name="excluding-schema-elements-from-the-xml-document-using-sqlmapped"></a>Исключение элементов схемы из XML-документа с помощью sql:mapped
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  В результате сопоставления по умолчанию каждый элемент и атрибут в схеме XSD будет сопоставлен с таблицей и столбцом в базе данных. Если вы хотите создать элемент в схеме XSD, который не сопоставляется любой таблицы базы данных (представления) или столбца и не фигурирующий в XML, можно указать **sql: сопоставлены** заметки.  
+  В результате сопоставления по умолчанию каждый элемент и атрибут в схеме XSD будет сопоставлен с таблицей и столбцом в базе данных. Если необходимо создать элемент в схеме XSD, который не сопоставлен ни с одной таблицей (представлением) базы данных или столбцом, который не отображается в XML, можно указать заметку **SQL:** Map.  
   
- **Sql: сопоставлены** заметки особенно полезен, если схема не может быть изменена или если схема используется для проверки XML из других источников и еще содержит данные, которые не хранятся в базе данных. **Sql: сопоставлены** заметки отличается от **sql: является константа** тем, что несопоставленные элементы и атрибуты не отображаются в документе XML.  
+ Если схема не может быть изменена или схема используется для проверки XML из других источников и содержит данные, не хранящиеся в базе данных **, это особенно** полезно. **Сопоставленная Аннотация SQL:** **имеет значение-Constant** в том, что несопоставленные элементы и атрибуты не отображаются в XML-документе.  
   
- **Sql: сопоставлены** заметка имеет логическое значение (0 = false, 1 = true). Допустимые значения: 0, 1, true и false.  
+ **Сопоставленная Аннотация SQL:** принимает логическое значение (0 = false, 1 = true). Допустимые значения: 0, 1, true и false.  
   
 ## <a name="examples"></a>Примеры  
  Чтобы создать рабочие образцы на основе следующих примеров, необходимо выполнить определенные требования. Дополнительные сведения см. в разделе [требования для запуска примеров SQLXML](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
 ### <a name="a-specifying-the-sqlmapped-annotation"></a>A. Задание заметки sql:mapped  
- Предположим, существует схема XSD, полученная из другого источника. Эта схема XSD состоит из  **\<Person.Contact >** элемент с **ContactID**, **FirstName**, **LastName**, и **HomeAddress** атрибуты.  
+ Предположим, существует схема XSD, полученная из другого источника. Эта схема XSD состоит из элемента **\<Person. Contact >** с атрибутами **ContactID**, **FirstName**, **LastName**и **HomeAddress** .  
   
- При сопоставлении этой схемы XSD с таблицей Person.Contact в базе данных AdventureWorks, **sql: сопоставлены** заметка указывается для **HomeAddress** атрибут, поскольку таблица Employees не хранятся дома адреса сотрудников. В результате этот атрибут не сопоставлен с базой данных и не возвращается в результирующем XML-документе в ответ на запрос XPath к схеме сопоставления.  
+ При сопоставлении этой схемы XSD с таблицей Person. Contact в базе данных AdventureWorks в атрибуте **HomeAddress** указывается значение **SQL:** mappingd, поскольку в таблице Employees не хранятся домашние адреса сотрудников. В результате этот атрибут не сопоставлен с базой данных и не возвращается в результирующем XML-документе в ответ на запрос XPath к схеме сопоставления.  
   
- Для остальной части схемы используется сопоставление по умолчанию. **\<Person.Contact >** элемент сопоставляется с таблицей Person.Contact, а все атрибуты сопоставляются со столбцами с тем же именем в таблице Person.Contact.  
+ Для остальной части схемы используется сопоставление по умолчанию. Элемент **\<Person. contact >** сопоставляется с таблицей Person. Contact, а все атрибуты сопоставляются со столбцами с тем же именем в таблице Person. Contact.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -85,9 +85,7 @@ ms.locfileid: "68067129"
   
 3.  Создайте и запустите тестовый скрипт SQLXML 4.0 (Sqlxml4test.vbs), чтобы выполнить шаблон.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-     For more information, see [Using ADO to Execute SQLXML Queries](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Дополнительные сведения см. [в разделе Использование ADO для выполнения запросов SQLXML](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Результирующий набор:  
   
@@ -105,9 +103,9 @@ ms.locfileid: "68067129"
 </ROOT>  
 ```  
   
- Обратите внимание, что ContactID, FirstName и LastName присутствуют, но не HomeAddress, поскольку в схеме сопоставления задано значение 0 для **sql: сопоставлены** атрибута.  
+ Обратите внимание, что указываются ContactID, FirstName и LastName, но HomeAddress не так, поскольку схема сопоставления задается значение 0 для атрибута **SQL:** mappingd.  
   
-## <a name="see-also"></a>См. также  
- [По умолчанию осуществляется сопоставление элементов и атрибутов с таблицами и столбцами XSD &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-4-0.md)  
+## <a name="see-also"></a>См. также статью  
+ [Сопоставление элементов и атрибутов XSD по умолчанию с таблицами &#40;и столбцами SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-4-0.md)  
   
   

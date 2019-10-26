@@ -1,5 +1,5 @@
 ---
-title: Журнал длительных запросов (ODBC) | Документация Майкрософт
+title: Ведение журнала длительных запросов (ODBC) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ ms.assetid: b9c1ddce-1dd9-409d-a414-8b544d616273
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3a46d16426aed58c966bb632ae107e2c5a1086d8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bbcb19a3f5ad2d281306eb1cd22f3018d7f9e1c2
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68133427"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908177"
 ---
 # <a name="profiling-odbc-driver-performance-data---log-long-running-queries"></a>Создание профилей данных производительности драйвера ODBC — ведение журналов длительных запросов
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,38 +31,36 @@ ms.locfileid: "68133427"
   
 ### <a name="to-log-long-running-queries-using-odbc-administrator"></a>Ведение журнала длительно выполняющихся запросов с помощью администратора ODBC  
   
-1.  В **панели управления**, дважды щелкните **Администрирование** и дважды щелкните **источники данных (ODBC)** . (Можно также запустить файл odbcad32.exe из командной строки.)  
+1.  На **панели управления**дважды щелкните **Администрирование** , а затем дважды щелкните **Источники данных (ODBC)** . (Можно также запустить файл odbcad32.exe из командной строки.)  
   
-2.  Нажмите кнопку **DSN пользователя**, **системный DSN**, или **файловый DSN** вкладки.  
+2.  Щелкните вкладку **DSN пользователя**, **системное имя DSN**или **Файловый DSN** .  
   
 3.  Щелкните источник данных, для которого создается журнал длительно выполняющихся запросов.  
   
-4.  Нажмите кнопку **Настройка**.  
+4.  Нажмите кнопку **настроить**.  
   
-5.  В Microsoft SQL Server DSN мастер настройки, перейдите на страницу с **сохранять длительные запросы в файл журнала**.  
+5.  В мастере настройки имени DSN Microsoft SQL Server перейдите к странице с **сохраненными запросами длительного выполнения в файле журнала**.  
   
-6.  Выберите **сохранять длительные запросы в файл журнала**. В текстовое поле введите имя файла журнала для запросов длительного выполнения. При необходимости щелкните **Обзор** чтобы просматривать файловую систему для журнала запросов.  
+6.  Выберите **сохранить длительные запросы в файл журнала**. В текстовое поле введите имя файла журнала для запросов длительного выполнения. При необходимости нажмите кнопку **Обзор** , чтобы просмотреть файловую систему для журнала запросов.  
   
-7.  Задайте интервал времени ожидания запроса, в миллисекундах, в **длительность запроса (в миллисекундах)** поле.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+7.  Задайте интервал времени ожидания запроса (в миллисекундах) в поле **длительное время запроса (миллисекунды)** .  
 
 ### <a name="to-log-long-running-queries-data-programmatically"></a>Ведение журнала длительно выполняющихся запросов программным образом  
   
-1.  Вызовите [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) SQL_COPT_SS_PERF_QUERY_LOG и полный путь и имя файла журнала долго выполняющегося запроса. Пример:  
+1.  Вызовите [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) с параметром SQL_COPT_SS_PERF_QUERY_LOG, указав полный путь и имя файла журнала долго выполняющегося запроса. Пример:  
   
     ```  
     C:\\Odbcqry.log  
     ```  
   
-2.  Вызовите [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) с параметром SQL_COPT_SS_PERF_QUERY_INTERVAL и задайте интервал времени ожидания в миллисекундах.  
+2.  Вызовите [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) с параметром SQL_COPT_SS_PERF_QUERY_INTERVAL и задайте значение интервала времени ожидания (в миллисекундах).  
   
-3.  Вызовите [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) с параметрами SQL_COPT_SS_PERF_QUERY и SQL_PERF_START для начала ведения журнала долго выполняющихся запросов.  
+3.  Вызовите [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) с SQL_COPT_SS_PERF_QUERY и SQL_PERF_START, чтобы начать запись долго выполняющихся запросов.  
   
-4.  Вызовите [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) с параметрами SQL_COPT_SS_PERF_QUERY и SQL_PERF_STOP, чтобы остановить запись в журнал долго выполняющихся запросов.  
+4.  Вызовите [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) с помощью SQL_COPT_SS_PERF_QUERY и SQL_PERF_STOP, чтобы прерывать ведение журнала долго выполняющихся запросов.  
   
 ## <a name="example"></a>Пример  
- Также необходим источник данных ODBC с именем AdventureWorks, для которого базой данных по умолчанию является образец базы данных AdventureWorks. (Образец базы данных AdventureWorks можно скачать с домашней страницы [Microsoft SQL Server Samples and Community Projects](https://go.microsoft.com/fwlink/?LinkID=85384) (Образцы кода и проекты сообщества Microsoft SQL Server).) Этот источник данных должен быть основан на драйвере ODBC, предоставленном операционной системой (имя драйвера — «SQL Server»). При построении и запуске этого образца как 32-разрядного приложения в 64-разрядной операционной системе необходимо создать источник данных ODBC с помощью программы администрирования ODBC (исполняемый файл %windir%\SysWOW64\odbcad32.exe).  
+ Также необходим источник данных ODBC с именем AdventureWorks, для которого базой данных по умолчанию является образец базы данных AdventureWorks. (Образец базы данных AdventureWorks можно скачать на домашней странице [Microsoft SQL Server примеры и проекты сообщества](https://go.microsoft.com/fwlink/?LinkID=85384) .) Этот источник данных должен быть основан на драйвере ODBC, предоставленном операционной системой (имя драйвера — "SQL Server"). При построении и запуске этого образца как 32-разрядного приложения в 64-разрядной операционной системе необходимо создать источник данных ODBC с помощью программы администрирования ODBC (исполняемый файл %windir%\SysWOW64\odbcad32.exe).  
   
  Этот образец соединяется с установленным на компьютер экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по умолчанию. Чтобы соединиться с именованным экземпляром, измените определение источника данных ODBC, указав экземпляр в следующем формате: Сервер\ИменованныйЭкземпляр. По умолчанию [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] устанавливается на именованный экземпляр.  
   
@@ -221,7 +219,7 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Профилирование разделы руководства по производительности драйвера ODBC &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)  
+## <a name="see-also"></a>См. также статью  
+ [Разделы &#40;руководства по профилированию драйверов ODBC в ODBC&#41;](../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)  
   
   

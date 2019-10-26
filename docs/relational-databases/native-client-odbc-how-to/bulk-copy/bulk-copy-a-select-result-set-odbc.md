@@ -1,5 +1,5 @@
 ---
-title: Массовое копирование результирующего набора SELECT (ODBC) | Документация Майкрософт
+title: Групповое копирование набора результатов SELECT (ODBC) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,12 +15,12 @@ ms.assetid: 63d5a87b-4d5f-449b-8c77-9f9cc6b190d4
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5ca6bd8711bf0c3fb292f795141e9da981a5dcde
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7c73b98d623490d9885188a5d71fd5caac02e4c4
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68099415"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908101"
 ---
 # <a name="bulk-copy-a-select-result-set-odbc"></a>Выполнение массового копирования результирующего набора SELECT (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,26 +39,24 @@ ms.locfileid: "68099415"
   
 3.  Соединитесь с SQL Server.  
   
-4.  Вызовите [bcp_init](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) задать следующие сведения:  
+4.  Вызовите [bcp_init](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) , чтобы задать следующие сведения:  
   
-    -   Укажите значение NULL для *szTable* параметра.  
+    -   Укажите значение NULL для параметра *сзтабле* .  
   
     -   Имя файла данных, получающего данные результирующего набора.  
   
     -   Имя файла данных, в который сохраняются все сообщения об ошибках массового копирования (укажите значение NULL, если файл для сообщений не требуется).  
   
-    -   Направление копирования: ЗНАЧЕНИЕ DB_OUT.  
+    -   Направление копирования: DB_OUT.  
   
-5.  Вызовите [bcp_control](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md), установите параметр eOption в BCPHINTS и поместите ivalue присвойте указатель на массив SQLTCHAR, содержащую инструкцию SELECT.  
+5.  Вызовите [bcp_control](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md), установите EOPTION в bcphints а и поместите в iValue указатель на массив SQLTCHAR, содержащий инструкцию SELECT.  
   
-6.  Вызовите [bcp_exec](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md) для выполнения операции массового копирования.  
+6.  Вызовите [bcp_exec](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md) , чтобы выполнить операцию с массовым копированием.  
 
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
- При использовании этих шагов создается файл в собственном формате. Значения данных можно преобразовать в другие типы данных с помощью [bcp_colfmt](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md). Дополнительные сведения см. в разделе [Создание файла форматирования массового копирования &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/bulk-copy/create-a-bulk-copy-format-file-odbc.md).  
+ При использовании этих шагов создается файл в собственном формате. Значения данных можно преобразовать в другие типы данных с помощью [bcp_colfmt](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md). Дополнительные сведения см. [в разделе Создание файла формата для копирования &#40;файлов&#41;с помощью инструкций ODBC](../../../relational-databases/native-client-odbc-how-to/bulk-copy/create-a-bulk-copy-format-file-odbc.md).  
   
 ## <a name="example"></a>Пример  
- Также необходим источник данных ODBC с именем AdventureWorks, для которого базой данных по умолчанию является образец базы данных AdventureWorks. (Образец базы данных AdventureWorks можно скачать с домашней страницы [Microsoft SQL Server Samples and Community Projects](https://go.microsoft.com/fwlink/?LinkID=85384) (Образцы кода и проекты сообщества Microsoft SQL Server).) Этот источник данных должен быть основан на драйвере ODBC, предоставленном операционной системой (имя драйвера — «SQL Server»). При построении и запуске этого образца как 32-разрядного приложения в 64-разрядной операционной системе необходимо создать источник данных ODBC с помощью программы администрирования ODBC (исполняемый файл %windir%\SysWOW64\odbcad32.exe).  
+ Также необходим источник данных ODBC с именем AdventureWorks, для которого базой данных по умолчанию является образец базы данных AdventureWorks. (Образец базы данных AdventureWorks можно скачать на домашней странице [Microsoft SQL Server примеры и проекты сообщества](https://go.microsoft.com/fwlink/?LinkID=85384) .) Этот источник данных должен быть основан на драйвере ODBC, предоставленном операционной системой (имя драйвера — "SQL Server"). При построении и запуске этого образца как 32-разрядного приложения в 64-разрядной операционной системе необходимо создать источник данных ODBC с помощью программы администрирования ODBC (исполняемый файл %windir%\SysWOW64\odbcad32.exe).  
   
  Этот образец соединяется с установленным на компьютер экземпляром [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] по умолчанию. Чтобы соединиться с именованным экземпляром, измените определение источника данных ODBC, указав экземпляр в следующем формате: Сервер\ИменованныйЭкземпляр. По умолчанию [!INCLUDE[ssExpress](../../../includes/ssexpress-md.md)] устанавливается на именованный экземпляр.  
   
@@ -168,7 +166,7 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Массовое копирование с помощью инструкции SQL Server ODBC драйвер &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/bulk-copy/bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)  
+## <a name="see-also"></a>См. также статью  
+ [Инструкции по копированию с помощью драйвера ODBC для SQL Server. &#40;разделы руководства по ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/bulk-copy/bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)  
   
   

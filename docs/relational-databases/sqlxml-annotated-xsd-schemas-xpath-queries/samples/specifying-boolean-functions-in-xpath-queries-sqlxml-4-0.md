@@ -1,5 +1,5 @@
 ---
-title: Указание логических функций в запросах XPath (SQLXML 4.0) | Документация Майкрософт
+title: Указание логических функций в запросах XPath (SQLXML 4,0) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -17,27 +17,27 @@ ms.assetid: c72cd333-9294-4d41-84f2-1748bf20e3eb
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 95569262bc55da45390705486871a73f0eb5f5ba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4d00bf01660c212b19c529f6012ec29eda60295c
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68027107"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907757"
 ---
 # <a name="specifying-boolean-functions-in-xpath-queries-sqlxml-40"></a>Указание логических функций в запросах XPath (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  В следующих примерах показано, как задаются логические функции в запросах XPath. В данных примерах запросы XPath определены в соответствии со схемой сопоставления, которая содержится в файле SampleSchema1.xml. Сведения об этом образце схемы см. в разделе [образец аннотированные схемы XSD для примеров XPath &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
+  В следующих примерах показано, как задаются логические функции в запросах XPath. В данных примерах запросы XPath определены в соответствии со схемой сопоставления, которая содержится в файле SampleSchema1.xml. Сведения об этом образце схемы см. в статье [Пример схемы XSD с заметками &#40;для&#41;XPath примеры SQLXML 4,0](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
   
 ## <a name="examples"></a>Примеры  
   
 ## <a name="a-specify-the-not-boolean-function"></a>A. Задание логической функции not()  
- Этот запрос возвращает все  **\<клиента >** дочерние элементы узла контекста, у которых нет  **\<порядок >** дочерние элементы:  
+ Этот запрос возвращает все **\<клиент >** дочерние элементы контекстного узла, не имеющие **\<порядок >** дочерних элементов:  
   
 ```  
 /child::Customer[not(child::Order)]  
 ```  
   
- **Дочерних** оси используется по умолчанию. Поэтому запрос можно определить следующим образом.  
+ По умолчанию используется **дочерняя** ось. Поэтому запрос можно определить следующим образом.  
   
 ```  
 /Customer[not(Order)]  
@@ -45,7 +45,7 @@ ms.locfileid: "68027107"
   
 #### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>Проверка запроса XPath к схеме сопоставления  
   
-1.  Копировать [образец кода схемы](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) и вставьте его в текстовый файл. Сохраните файл с именем SampleSchema1.xml.  
+1.  Скопируйте [пример кода схемы](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) и вставьте его в текстовый файл. Сохраните файл с именем SampleSchema1.xml.  
   
 2.  Создайте следующий шаблон (BooleanFunctionsA.xml) и сохраните его в каталоге, где находится файл SampleSchema1.xml.  
   
@@ -65,9 +65,7 @@ ms.locfileid: "68027107"
   
 3.  Создайте и запустите тестовый скрипт SQLXML 4.0 (Sqlxml4test.vbs), чтобы выполнить шаблон.  
 
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-     For more information, see [Using ADO to Execute SQLXML 4.0 Queries](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Дополнительные сведения см. [в разделе Использование ADO для выполнения запросов SQLXML 4,0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Далее приведен частичный результирующий набор, полученный в результате выполнения этого шаблона.  
   
@@ -80,14 +78,14 @@ ms.locfileid: "68027107"
 </ROOT>  
 ```  
   
-## <a name="b-specify-the-true-and-false-boolean-functions"></a>Б. Задание логических функций true() и false()  
- Этот запрос возвращает все  **\<клиента >** дочерние элементы узла контекста, у которых нет  **\<порядок >** дочерних элементов. В реляционных терминах этот запрос возвращает всех заказчиков, не разместивших ни одного заказа.  
+## <a name="b-specify-the-true-and-false-boolean-functions"></a>б. Задание логических функций true() и false()  
+ Этот запрос возвращает все **\<элементы >** элемента "клиент" для узла контекста, не имеющие **\<порядок >** дочерних элементов. В реляционных терминах этот запрос возвращает всех заказчиков, не разместивших ни одного заказа.  
   
 ```  
 /child::Customer[child::Order=false()]  
 ```  
   
- **Дочерних** оси используется по умолчанию. Поэтому запрос можно определить следующим образом.  
+ По умолчанию используется **дочерняя** ось. Поэтому запрос можно определить следующим образом.  
   
 ```  
 /Customer[Order=false()]  
@@ -113,7 +111,7 @@ ms.locfileid: "68027107"
   
 #### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>Проверка запроса XPath к схеме сопоставления  
   
-1.  Копировать [образец кода схемы](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) и вставьте его в текстовый файл. Сохраните файл с именем SampleSchema1.xml.  
+1.  Скопируйте [пример кода схемы](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) и вставьте его в текстовый файл. Сохраните файл с именем SampleSchema1.xml.  
   
 2.  Создайте следующий шаблон (BooleanFunctionsB.xml) и сохраните его в каталоге, где находится файл SampleSchema1.xml.  
   
@@ -133,7 +131,7 @@ ms.locfileid: "68027107"
   
 3.  Создайте и запустите тестовый скрипт SQLXML 4.0 (Sqlxml4test.vbs), чтобы выполнить шаблон.  
   
-     Дополнительные сведения см. в разделе [использование объектов ADO для выполнения запросов SQLXML 4.0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Дополнительные сведения см. [в разделе Использование ADO для выполнения запросов SQLXML 4,0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Далее приведен частичный результирующий набор, полученный в результате выполнения этого шаблона.  
   

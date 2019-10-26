@@ -17,12 +17,12 @@ ms.assetid: 2c17fba0-7a3c-453c-91b7-f801e7b39ccb
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fc61ad955be287faad20289245ca4520efcd4bbd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 537537ef2f3dd07a27ffcb4d092be2f8719f6ee1
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67913177"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907374"
 ---
 # <a name="create-a-distributed-transaction"></a>Создание распределенной транзакции
 
@@ -35,49 +35,47 @@ The following includes .md file is Empty, as of long before 2019/May/13.
 
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-Распределенная транзакция могут создаваться для разных систем Microsoft SQL по-разному.
+Распределенную транзакцию можно создать для различных систем Microsoft SQL разными способами.
 
-## <a name="odbc-driver-calls-the-msdtc-for-sql-server-on-premises"></a>Драйвер ODBC вызывает координатор MSDTC для локального сервера SQL
+## <a name="odbc-driver-calls-the-msdtc-for-sql-server-on-premises"></a>Драйвер ODBC вызывает MSDTC для локальной SQL Server
 
-Координатор распределенных транзакций Microsoft (MSDTC) позволяет приложениям для расширения или _распространять_ транзакцию по нескольким экземплярам [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Распределенная транзакция работает даже в том случае, если два экземпляра размещаются на разных компьютерах.
+Microsoft координатор распределенных транзакций (MSDTC) позволяет приложениям расширять или _распределять_ транзакции между двумя или более экземплярами [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Распределенная транзакция работает, даже если два экземпляра размещены на разных компьютерах.
 
-MSDTC установлена для Microsoft SQL Server в локальной, но недоступен для облачной службы Майкрософт базы данных SQL Azure.
+Служба MSDTC устанавливается локально для Microsoft SQL Server, но недоступна для облачной службы базы данных SQL Microsoft Azure.
 
-MSDTC вызывается драйвером собственного клиента SQL Server для Open Database Connectivity (ODBC), когда ваш C++ программа управляет распределенной транзакции. Драйвер ODBC для собственного клиента используется диспетчер транзакций, совместимый с открытым группы распределенных транзакций обработки (DTP) стандартный XA. Этот соответствия требуется координатором MS DTC. Как правило все команды управления транзакциями отправляются через этот драйвер ODBC для собственного клиента. Последовательность выглядит следующим образом:
+MSDTC вызывается драйвером SQL Server Native Client для ODBC, когда C++ программа управляет распределенной транзакцией. Драйвер ODBC для собственного клиента имеет диспетчер транзакций, совместимый со стандартом XA с открытой групповой обработкой распределенных транзакций (DTP). Это соответствие требуется для MSDTC. Как правило, все команды управления транзакциями отправляются с помощью этого драйвера ODBC собственного клиента. Последовательность выглядит следующим образом:
 
-1. Ваш C++ ODBC для собственного клиента приложение запускает транзакцию путем вызова [SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md), с выключенным режимом автоматической фиксации.
+1. Приложение C++ ODBC для собственного клиента запускает транзакцию путем вызова [SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)с выключенным режимом автоматической фиксации.
 
-2. Приложение обновляет некоторые данные в SQL Server X на компьютере A.
+2. Приложение обновляет некоторые данные на SQL Server X на компьютере а.
 
-3. Приложение обновляет некоторые данные на сервере SQL на компьютере B.
-    - При сбое обновления на сервере SQL, откатываются все незафиксированные обновления на обоих экземплярах SQL Server
+3. Приложение обновляет некоторые данные на SQL Server Y на компьютере B.
+    - Если обновление на SQL Server Y завершается сбоем, выполняется откат всех незафиксированных обновлений в обоих экземплярах SQL Server.
 
-4. Наконец, приложение завершает транзакцию путем вызова [SQLEndTran _(1)_ ](../../../relational-databases/native-client-odbc-api/sqlendtran.md), с параметром SQL_COMMIT или SQL_ROLLBACK.
+4. Наконец, приложение завершает транзакцию путем вызова [SQLEndTran _(1)_ ](../../../relational-databases/native-client-odbc-api/sqlendtran.md)с параметром SQL_COMMIT или SQL_ROLLBACK.
 
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+_(1)_ MSDTC можно вызывать без ODBC. В этом случае MSDTC превращается в диспетчер транзакций, а приложение больше не использует **SQLEndTran**.
 
-_(1)_  MSDTC можно вызывать, не ODBC. В этом случае MSDTC становится диспетчером транзакций, а приложение больше не использует **SQLEndTran**.
+### <a name="only-one-distributed-transaction"></a>Только одна распределенная транзакция
 
-### <a name="only-one-distributed-transaction"></a>Только одной распределенной транзакции
+Предположим, что C++ приложение ODBC собственного клиента прикреплено к распределенной транзакции. Затем приложение прикрепляется во второй распределенной транзакции. В этом случае драйвер ODBC для собственного клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] оставляет исходную распределенную транзакцию и прикрепляется к новой распределенной транзакции.
 
-Предположим, что ваш C++ приложения ODBC для собственного клиента прикрепляется к распределенной транзакции. Затем приложение присоединяет второй распределенной транзакции. В этом случае [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] драйвер ODBC собственного клиента покидает исходную распределенную транзакцию и прикрепляется к новой распределенной транзакции.
-
-Дополнительные сведения см. в разделе [Справочник программиста DTC](https://docs.microsoft.com/previous-versions/windows/desktop/ms686108\(v=vs.85\)).
+Дополнительные сведения см. в [справочнике программиста по DTC](https://docs.microsoft.com/previous-versions/windows/desktop/ms686108\(v=vs.85\)).
 
 ## <a name="c-alternative-for-sql-database-in-the-cloud"></a>C#альтернатива для базы данных SQL в облаке
 
-MSDTC не поддерживается для базы данных SQL Azure или хранилище данных SQL Azure.
+MSDTC не поддерживается для базы данных SQL Azure или хранилища данных SQL Azure.
 
-Тем не менее, распределенной транзакции могут создаваться для базы данных SQL за счет вашей C# программы использовать класс .NET [System.Transactions.TransactionScope](/dotnet/api/system.transactions.transactionscope).
+Однако для базы данных SQL можно создать распределенную транзакцию, C# используя класс .NET [System. Transactions. TransactionScope](/dotnet/api/system.transactions.transactionscope).
 
 ### <a name="other-programming-languages"></a>Другие языки программирования
 
-Следующие другие языки программирования может не предоставляет поддержку распределенных транзакций в службе базы данных SQL:
+Следующие языки программирования могут не обеспечивать поддержку распределенных транзакций со службой базы данных SQL:
 
-- Собственный C++ , использующие драйверы ODBC
-- Связанный сервер с помощью Transact-SQL
+- Машинный код C++ , использующий драйверы ODBC
+- Связанный сервер с использованием Transact-SQL
 - Драйверы JDBC
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Выполнение транзакций (ODBC)](performing-transactions-in-odbc.md)

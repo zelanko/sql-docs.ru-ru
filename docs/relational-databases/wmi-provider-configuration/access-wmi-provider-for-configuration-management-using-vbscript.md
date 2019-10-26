@@ -1,5 +1,5 @@
 ---
-title: Изменить SQL Server расширенные свойства службы с помощью VBScript | Документация Майкрософт
+title: Изменение дополнительных свойств SQL Serverной службы с помощью VBScript | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,22 +16,22 @@ helpviewer_keywords:
 ms.assetid: f3c5d981-eaa3-4d34-9b91-37e42636aa81
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 90632548114577475735a6dfca9244c84c09ab2a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3f46fa55f330274b6966f6181a022c3895dec4f9
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68139436"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909202"
 ---
 # <a name="access-wmi-provider-for-configuration-management-using-vbscript"></a>Доступ к поставщику WMI для управления конфигурацией с использованием VBScript
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  В этом разделе описывается создание программы на языке VBScript, выводит список версий установленных экземпляров [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , запущенных на компьютере.  
+  В этом разделе описывается создание программы VBScript, которая содержит версию установленных экземпляров [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], работающих на компьютере.  
   
  В этом примере кода перечисляются экземпляры [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], запущенные на компьютере, и их версии.  
   
 ### <a name="listing-name-and-version-of-installed-instances-of-sql-server"></a>Список имен и версий установленных экземпляров SQL Server  
   
-1.  Откройте новый документ в текстовом редакторе, например [!INCLUDE[msCoName](../../includes/msconame-md.md)] Блокнот. Скопируйте код, который следует за данной процедурой, и сохраните файл с расширением VBS. Этот пример называется test.vbs.  
+1.  Откройте новый документ в текстовом редакторе, например в [!INCLUDE[msCoName](../../includes/msconame-md.md)] блокноте. Скопируйте код, который следует за данной процедурой, и сохраните файл с расширением VBS. Этот пример называется test.vbs.  
   
 2.  Подключитесь к экземпляру поставщика WMI при помощи функции `GetObject` языка VBScript. В данном примере выполняется подключение к удаленному компьютеру с именем mpc, но не указывается имя компьютера для подключения к локальному компьютеру: winmgmts:root\Microsoft\SqlServer\ComputerManagement. Дополнительные сведения о функции `GetObject` см. в справочнике по VBScript.  
   
@@ -41,9 +41,7 @@ ms.locfileid: "68139436"
   
 5.  Сохраните файл.  
   
-6.  Запустите скрипт, введя **cscript test.vbs** в командной строке.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+6.  Запустите скрипт, введя **cscript Test. vbs** в командной строке.  
 
 ## <a name="example"></a>Пример  
   

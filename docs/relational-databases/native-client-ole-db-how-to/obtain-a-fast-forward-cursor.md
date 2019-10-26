@@ -13,14 +13,14 @@ ms.assetid: 931a28c3-8ea1-45d6-9ca1-2b8388c4d8b0
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 75402ddc6c04ef9487f544fb070a143138cf66ae
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ec168903543e42dff34d03086949bee79829f328
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68110118"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909540"
 ---
-# <a name="obtain-a-fastforward-cursor"></a>Получение курсора FAST_FORWARD
+# <a name="obtain-a-fast_forward-cursor"></a>Получение курсора FAST_FORWARD
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
@@ -31,15 +31,13 @@ ms.locfileid: "68110118"
 > [!IMPORTANT]  
 >  По возможности используйте аутентификацию Windows. Если проверка подлинности Windows недоступна, запросите у пользователя ввод учетных данных во время выполнения. Избегайте хранения учетных данных в файле. Если необходимо сохранить учетные данные, зашифруйте их с помощью [API-интерфейса шифрования Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
   
-### <a name="to-obtain-fastforward-cursor"></a>Получение курсора FAST_FORWARD  
+### <a name="to-obtain-fast_forward-cursor"></a>Получение курсора FAST_FORWARD  
   
 1.  Установите соединение с источником данных.  
   
 2.  Установите свойства набора строк DBPROP_SERVERCURSOR, DBPROP_OTHERINSERT, DBPROP_OTHERUPDATEDELETE, DBPROP_OWNINSERT и DBPROP_OWNUPDATEDELETE в значение VARIANT_TRUE.  
   
 3.  Выполните команду.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="example"></a>Пример  
  В приведенном ниже примере показано, как настроить свойства набора строк для получения курсора FAST_FORWARD. После настройки свойств выполняется инструкция SELECT, получающая и отображающая столбец Name таблицы Purchasing.Vendor в базе данных AdventureWorks. Этот образец не поддерживается на архитектуре IA64.  

@@ -14,17 +14,17 @@ ms.assetid: 13a35511-3987-426b-a3b7-3b2e83900dc7
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6c6c99edd1d52e3175dcd8793bd4bf7afcd605b7
-ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
+ms.openlocfilehash: 63f6e86f08ea93525704159483b939c79c6575d8
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "70148337"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909038"
 ---
-# <a name="scripting"></a>Скрипты
+# <a name="scripting"></a>Написание скриптов
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  Скрипты в объектах SMO управляются <xref:Microsoft.SqlServer.Management.Smo.Scripter> объектом и его дочерними объектами или методом **скрипта** для отдельных объектов. Объект управляет сопоставлением из отношений зависимости для объектов в [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]экземпляре. <xref:Microsoft.SqlServer.Management.Smo.Scripter>  
+  Скрипты в объектах SMO управляются объектом <xref:Microsoft.SqlServer.Management.Smo.Scripter> и его дочерними объектами или методом **скрипта** для отдельных объектов. Объект <xref:Microsoft.SqlServer.Management.Smo.Scripter> управляет сопоставлением из отношений зависимости для объектов в экземпляре [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
  Расширенное создание сценария с помощью объекта <xref:Microsoft.SqlServer.Management.Smo.Scripter> и его дочерних объектов является процессом из трех фаз.  
   
@@ -33,8 +33,6 @@ ms.locfileid: "70148337"
 2.  Создание списка  
   
 3.  Создание скрипта  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  Фаза обнаружения использует объект <xref:Microsoft.SqlServer.Management.Smo.DependencyWalker>. Учитывая URN-список объектов, метод <xref:Microsoft.SqlServer.Management.Smo.DependencyWalker.DiscoverDependencies%2A> объекта <xref:Microsoft.SqlServer.Management.Smo.DependencyWalker> возвращает объект <xref:Microsoft.SqlServer.Management.Smo.DependencyTree> объектам в URN-списке. Параметр логического *фпарентс* используется для выбора того, должны ли быть обнаружены родители или дочерние элементы указанного объекта. На данном этапе можно изменить дерево зависимостей.  
   
@@ -47,7 +45,7 @@ ms.locfileid: "70148337"
 ## <a name="example"></a>Пример  
  Чтобы использовать какой-либо из представленных примеров кода, нужно выбрать среду, шаблон и язык программирования, с помощью которых будет создаваться приложение. Дополнительные сведения см. [в разделе Создание проекта Visual&#35; C SMO в Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
- Для этого примера кода требуется оператор Imports для пространства имен System. Collections. специализированные. Вставьте инструкцию с другими инструкциями Imports и перед любыми декларациями в приложении.  
+ Для этого примера кода требуется оператор **Imports** для пространства имен System. Collections. специализированные. Вставьте инструкцию с другими инструкциями Imports и перед любыми декларациями в приложении.  
   
 ```  
 Imports Microsoft.SqlServer.Management.Smo  

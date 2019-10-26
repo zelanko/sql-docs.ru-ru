@@ -14,12 +14,12 @@ ms.assetid: 1eb60087-da67-433f-9b45-4028595e68ab
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d7235217173217b01b224e1772629dc3a7fc87ee
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2b58abcebdc310a1a5979049495b610ffef37a7b
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67908262"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909514"
 ---
 # <a name="execute-stored-procedure-with-rpc-and-process-output"></a>Выполнение хранимой процедуры с использованием RPC и обработка выходных данных
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,17 +38,15 @@ ms.locfileid: "67908262"
   
 3.  Создайте набор привязок (по одной для каждого маркера параметра) с помощью массива структур DBBINDING.  
   
-4.  Создайте метод доступа для определенных параметров с помощью **IAccessor::CreateAccessor** метод. **CreateAccessor** создает метод доступа на основе набора привязок.  
+4.  Создайте метод доступа для определенных параметров с помощью метода **IAccessor:: CreateAccessor** . **CreateAccessor** создает метод доступа на основе набора привязок.  
   
 5.  Заполните структуру DBPARAMS.  
   
 6.  Выполните команду **Execute** (в данном случае это вызов хранимой процедуры).  
   
-7.  Обработайте набор строк и освободите его с помощью **IRowset::Release** метод.  
+7.  Обработать набор строк и освободить его с помощью метода **IRowset:: Release** .  
   
 8.  Обработайте значения кода возврата и выходного параметра, полученные от хранимой процедуры.  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="example"></a>Пример  
  В этом примере показана обработка набора строк, а также кода возврата и выходного параметра. Результирующие наборы не обрабатываются. Этот образец не поддерживается на архитектуре IA64.  
@@ -399,7 +397,7 @@ DROP PROCEDURE myProc
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также статью  
  [Инструкции по обработке результатов &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/results/processing-results-how-to-topics-ole-db.md)  
   
   

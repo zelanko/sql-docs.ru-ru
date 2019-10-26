@@ -1,5 +1,5 @@
 ---
-title: Принципы работы расширенных хранимых процедур | Документация Майкрософт
+title: Как работают расширенные хранимые процедуры | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6e946d8c-3268-4b59-8a1c-1637909cd701
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3c9b8bf0da73545a9ec9c582aedf5b8f44980c5c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 42aad667b6081e79b4b7897d4dd1f354a6148e8b
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68064331"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72904042"
 ---
 # <a name="how-extended-stored-procedures-work"></a>Принципы работы расширенных хранимых процедур
 
@@ -28,13 +28,11 @@ ms.locfileid: "68064331"
   
  Принцип работы расширенной хранимой процедуры заключается в следующем.  
   
-1.  Когда клиент выполняет расширенную хранимую процедуру, запрос передается в поток табличных данных (TDS) или формате Simple Object Access Protocol (SOAP) из клиентского приложения к [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+1.  Когда клиент выполняет расширенную хранимую процедуру, запрос передается в клиентском приложении в виде потока табличных данных (TDS) или протокола SOAP из клиентского приложения для [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 2.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ищет DLL-библиотеки, связанные с расширенной хранимой процедурой, и загружает их, если они еще не загружены.  
   
 3.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] вызывает запрошенную расширенную хранимую процедуру (реализованную как функцию внутри DLL-библиотеки).  
   
 4.  Расширенная хранимая процедура передает результирующий набор и возвращает параметры обратно на сервер через API-интерфейс расширенной хранимой процедуры.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 

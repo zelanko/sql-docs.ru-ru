@@ -1,5 +1,5 @@
 ---
-title: Выполнение запросов XPath с пространствами имен (поставщик SQLXMLOLEDB) | Документация Майкрософт
+title: Исполнение запросов XPath с пространствами имен (поставщик SQLXMLOLEDB) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -18,26 +18,26 @@ ms.assetid: 024a4b7d-435d-47ba-9e80-2c2f640108f5
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1c72948e0497b65aed942bad9afa12d07fbd09e5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3a77fc2ee8dd70b8ef8956b99d7412232cbcae0c
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68109596"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909340"
 ---
 # <a name="executing-xpath-queries-with-namespaces-sqlxmloledb-provider"></a>Выполнение запросов XPath с пространствами имен (поставщик SQLXMLOLEDB)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   В запросы XPath могут быть включены пространства имен. Если для элементов схемы указано пространство имен (то есть в случае включения целевого пространства имен), то запросы XPath к схеме должны указывать данное пространство имен.  
   
- Так как использование символа-шаблона (*) не поддерживается в SQLXML 4.0, необходимо указать запрос XPath с помощью префикса пространства имен. Чтобы разрешить использование данного префикса, используйте свойство пространства имен для указания привязки пространства имен.  
+ Так как использование символа-шаблона (*) не поддерживается в SQLXML 4.0, необходимо указать запрос XPath с помощью префикса пространства имен. Для разрешения этого префикса используйте свойство namespaces, чтобы указать привязку пространства имен.  
   
- В следующем примере запрос XPath задает пространства имен с помощью подстановочного знака (\*) и функции XPath local-name() и namespace-uri(). Этот запрос XPath возвращает все элементы, в котором локальное имя **контакт** и пространство имен URI является **urn: myschema:Contacts**.  
+ В следующем примере запрос XPath задает пространства имен, используя подстановочный знак (\*) и функции XPath local-name () и Namespace-URI (). Этот запрос XPath возвращает все элементы, в которых локальным именем является **Contact** , а URI пространства имен — **urn: MySchema: Contacts**.  
   
 ```  
 /*[local-name() = 'Contact' and namespace-uri() = 'urn:myschema:Contacts']  
 ```  
   
- В SQLXML 4.0 данный запрос XPath должен указываться с префиксом пространства имен. Например, **x: контакт**, где **x** префикса пространства имен. Рассмотрим следующую схему XSD.  
+ В SQLXML 4.0 данный запрос XPath должен указываться с префиксом пространства имен. Например, **КС:контакт**, где **x** — префикс пространства имен. Рассмотрим следующую схему XSD.  
   
 ```  
 <schema xmlns="http://www.w3.org/2001/XMLSchema"  
@@ -55,10 +55,10 @@ ms.locfileid: "68109596"
   
  Поскольку эта схема определяет целевое пространство имен, запрос XPath (например «Employee») к схеме должен включать пространство имен.  
   
- Это образец приложения [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic, которое выполняет запрос XPath (x:Сотрудник) к предыдущей схеме XSD. Для разрешения префикса пространства имен привязка задается с помощью свойства пространства имен.  
+ Это образец приложения [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic, которое выполняет запрос XPath (x:Сотрудник) к предыдущей схеме XSD. Для разрешения префикса привязка пространства имен задается с помощью свойства Namespaces.  
   
 > [!NOTE]  
->  В коде необходимо задать имя экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в строке соединения. Кроме того, в данном примере задается использование собственного клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (SQLNCLI11) для поставщика данных, для которого необходимо установить дополнительное клиентское сетевое ПО. Дополнительные сведения см. в разделе [требования к системе для собственного клиента SQL Server](../../../relational-databases/native-client/system-requirements-for-sql-server-native-client.md).  
+>  В коде необходимо задать имя экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в строке соединения. Кроме того, в данном примере задается использование собственного клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (SQLNCLI11) для поставщика данных, для которого необходимо установить дополнительное клиентское сетевое ПО. Дополнительные сведения см. в разделе [требования к системе для SQL Server Native Client](../../../relational-databases/native-client/system-requirements-for-sql-server-native-client.md).  
   
 ```  
 Option Explicit  
@@ -95,8 +95,6 @@ End Sub
     ```  
   
 4.  Запустите приложение.  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  Частичный результат:  
   

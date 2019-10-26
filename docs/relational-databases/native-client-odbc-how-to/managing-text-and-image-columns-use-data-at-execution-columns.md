@@ -1,5 +1,5 @@
 ---
-title: Использование столбцов данных времени выполнения (ODBC) | Документация Майкрософт
+title: Использование столбцов данных на этапе выполнения (ODBC) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ ms.assetid: 4eae58d1-03d4-40ca-8aa1-9b3ea10a38cf
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 641310f127e37f00e096c5e9ed2da8ed4b09347f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 294c441ec2b27a33325aa10ce51513fa9613df47
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67898430"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908199"
 ---
 # <a name="managing-text-and-image-columns---use-data-at-execution-columns"></a>Управление столбцами text и image — использование столбцов данных времени выполнения
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,20 +43,18 @@ ms.locfileid: "67898430"
   
 4.  Вызовите функцию [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) , чтобы указать, что данные для конечного столбца с данными времени выполнения отправлены. При этом не будет возвращено значение SQL_NEED_DATA.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ## <a name="example"></a>Пример  
  В этом образце показано, как с помощью функции SQLGetData считывать символьные данные из переменной типа SQL_LONG. Этот образец не поддерживается на архитектуре IA64.  
   
- Также необходим источник данных ODBC с именем AdventureWorks, для которого базой данных по умолчанию является образец базы данных AdventureWorks. (Образец базы данных AdventureWorks можно скачать с домашней страницы [Microsoft SQL Server Samples and Community Projects](https://go.microsoft.com/fwlink/?LinkID=85384) (Образцы кода и проекты сообщества Microsoft SQL Server).) Этот источник данных должен быть основан на драйвере ODBC, предоставленном операционной системой (имя драйвера — «SQL Server»). При построении и запуске этого образца как 32-разрядного приложения в 64-разрядной операционной системе необходимо создать источник данных ODBC с помощью программы администрирования ODBC (исполняемый файл %windir%\SysWOW64\odbcad32.exe).  
+ Также необходим источник данных ODBC с именем AdventureWorks, для которого базой данных по умолчанию является образец базы данных AdventureWorks. (Образец базы данных AdventureWorks можно скачать на домашней странице [Microsoft SQL Server примеры и проекты сообщества](https://go.microsoft.com/fwlink/?LinkID=85384) .) Этот источник данных должен быть основан на драйвере ODBC, предоставленном операционной системой (имя драйвера — "SQL Server"). При построении и запуске этого образца как 32-разрядного приложения в 64-разрядной операционной системе необходимо создать источник данных ODBC с помощью программы администрирования ODBC (исполняемый файл %windir%\SysWOW64\odbcad32.exe).  
   
  Этот образец соединяется с установленным на компьютер экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по умолчанию. Чтобы соединиться с именованным экземпляром, измените определение источника данных ODBC, указав экземпляр в следующем формате: Сервер\ИменованныйЭкземпляр. По умолчанию [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] устанавливается на именованный экземпляр.  
   
- Выполните первый ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) листинг, чтобы создать таблицу, используемую образцом кода.  
+ Выполните первый листинг кода ([!INCLUDE[tsql](../../includes/tsql-md.md)]), чтобы создать таблицу, используемую образцом.  
   
  Скомпилируйте второй листинг кода (C++) с библиотекой odbc32.lib. Затем запустите программу.  
   
- Выполните третий ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) листинг удалить таблицу, используемую образцом кода.  
+ Выполните третий листинг кода ([!INCLUDE[tsql](../../includes/tsql-md.md)]), чтобы удалить таблицу, используемую образцом.  
   
 ```  
 use AdventureWorks  
@@ -189,7 +187,7 @@ IF EXISTS (SELECT name FROM sysobjects WHERE name = 'emp3')
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Инструкции по столбцы text и image управлению &#40;ODBC&#41;](https://msdn.microsoft.com/library/f97333ad-e2ab-4d26-9395-741ba25f2c28)  
+## <a name="see-also"></a>См. также статью  
+ [Разделы &#40;руководства по управлению столбцами текста и изображений в ODBC&#41;](https://msdn.microsoft.com/library/f97333ad-e2ab-4d26-9395-741ba25f2c28)  
   
   

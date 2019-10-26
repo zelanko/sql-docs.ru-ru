@@ -1,5 +1,5 @@
 ---
-title: Определение предикатов с логическим значением в запросах XPath (SQLXML 4.0) | Документация Майкрософт
+title: Указание предикатов с логическими значениями в запросах XPath (SQLXML 4,0) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -19,16 +19,16 @@ ms.assetid: 5f6e7219-6911-4bca-a54b-56b95e0b43dd
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 43433aeaa1583d6aa66b1862e10c07158f21645e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fe35725e8dbd6903157866d0512966885c4c2c0b
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68027091"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907732"
 ---
 # <a name="specifying-boolean-valued-predicates-in-xpath-queries-sqlxml-40"></a>Определение предикатов с логическим значением в запросах XPath (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  В следующем примере показано, как предикаты с логическим значением указываются в запросах XPath. В данных примерах запросы XPath определены в соответствии со схемой сопоставления, которая содержится в файле SampleSchema1.xml. Сведения об этом образце схемы см. в разделе [образец аннотированные схемы XSD для примеров XPath &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
+  В следующем примере показано, как предикаты с логическим значением указываются в запросах XPath. В данных примерах запросы XPath определены в соответствии со схемой сопоставления, которая содержится в файле SampleSchema1.xml. Сведения об этом образце схемы см. в статье [Пример схемы XSD с заметками &#40;для&#41;XPath примеры SQLXML 4,0](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
   
 ## <a name="examples"></a>Примеры  
   
@@ -47,7 +47,7 @@ ms.locfileid: "68027091"
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>Проверка запроса XPath к схеме сопоставления  
   
-1.  Копировать [образец кода схемы](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) и вставьте его в текстовый файл. Сохраните файл с именем SampleSchema1.xml.  
+1.  Скопируйте [пример кода схемы](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) и вставьте его в текстовый файл. Сохраните файл с именем SampleSchema1.xml.  
   
 2.  Создайте следующий шаблон (BooleanValuedPredicatesA.xml) и сохраните его в каталоге, где содержится файл SampleSchema1.xml.  
   
@@ -67,11 +67,9 @@ ms.locfileid: "68027091"
   
 3.  Создайте и запустите тестовый скрипт SQLXML 4.0 (Sqlxml4test.vbs), чтобы выполнить шаблон.  
 
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-     For more information, see [Using ADO to Execute SQLXML 4.0 Queries](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Дополнительные сведения см. [в разделе Использование ADO для выполнения запросов SQLXML 4,0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
-     Here is the result:  
+     Результат:  
   
     ```  
     <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -92,22 +90,22 @@ ms.locfileid: "68027091"
     </ROOT>  
     ```  
   
-### <a name="b-specify-successive-and-nested-predicates"></a>Б. Указание последовательных и вложенных предикатов  
- В следующем запросе показано использование последовательных предикатов. Запрос возвращает все  **\<клиента >** дочерние элементы узла контекста, имеющие и **SalesPersonID** атрибут со значением 277 и **TerritoryID**атрибут со значением 3:  
+### <a name="b-specify-successive-and-nested-predicates"></a>б. Указание последовательных и вложенных предикатов  
+ В следующем запросе показано использование последовательных предикатов. Запрос возвращает все **\<клиент >** дочерние элементы контекстного узла, оба которых имеют атрибут **SalesPersonID** со значением 277 и атрибутом **территорид** со значением 3:  
   
 ```  
 /child::Customer[attribute::SalesPersonID="277"][attribute::TerritoryID="3"]  
 ```  
   
- Запрос возвращает  **\<клиента >** элементы, удовлетворяющие обоим условиям, указанным в предикатах.  
+ Запрос возвращает элементы **\<Customer >** , которые соответствуют условиям, заданным в предикатах.  
   
- Ярлык для **атрибут** оси (@) можно указать и поскольку **дочерних** оси используется по умолчанию, его можно исключить из запроса:  
+ Можно указать ярлык оси **атрибута** (@), а так как **дочерняя** ось является значением по умолчанию, ее можно опустить в запросе:  
   
 ```  
 /Customer[@SalesPersonID="277"][@TerritoryID="3"]  
 ```  
   
- В следующем запросе XPath показано использование вложенных предикатов. Запрос возвращает все  **\<клиента >** дочерние элементы узла контекста, которые включают  **\<порядок >** дочерние элементы, имеющие по крайней мере  **\<Порядок >** элемент, имеющий **SalesPersonID** атрибута значение 2.  
+ В следующем запросе XPath показано использование вложенных предикатов. Запрос возвращает все **\<клиент >** дочерние элементы контекстного узла, которые включают **\<порядок >** дочерним элементам по крайней мере с одним элементом\<**порядка** , имеющим значение атрибута **SalesPersonID** открыт.  
   
 ```  
 /Customer[Order[@SalesPersonID=2]]  
@@ -115,7 +113,7 @@ ms.locfileid: "68027091"
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>Проверка запроса XPath к схеме сопоставления  
   
-1.  Копировать [образец кода схемы](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) и вставьте его в текстовый файл. Сохраните файл с именем SampleSchema1.xml.  
+1.  Скопируйте [пример кода схемы](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) и вставьте его в текстовый файл. Сохраните файл с именем SampleSchema1.xml.  
   
 2.  Создайте следующий шаблон (nestedSuccessive.xml) и сохраните его в каталоге, где содержится файл SampleSchema1.xml.  
   
@@ -135,7 +133,7 @@ ms.locfileid: "68027091"
   
 3.  Создайте и запустите тестовый скрипт SQLXML 4.0 (Sqlxml4test.vbs), чтобы выполнить шаблон.  
   
-     Дополнительные сведения см. в разделе [использование объектов ADO для выполнения запросов SQLXML 4.0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Дополнительные сведения см. [в разделе Использование ADO для выполнения запросов SQLXML 4,0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Далее показан частичный результат:  
   
@@ -170,13 +168,13 @@ ms.locfileid: "68027091"
 ```  
   
 ### <a name="c-specify-a-top-level-predicate"></a>В. Указание предиката верхнего уровня  
- Следующий запрос возвращает  **\<клиента >** дочерние узлы элемента для узла контекста, которые имеют  **\<порядок >** дочерние элементы. В этом запросе проверяется, является ли путь доступа предикатом верхнего уровня:  
+ Следующий запрос возвращает **\<клиент >** дочерние узлы элементов контекстного узла, которые имеют **\<порядок >** дочерних элементов. В этом запросе проверяется, является ли путь доступа предикатом верхнего уровня:  
   
 ```  
 /child::Customer[child::Order]  
 ```  
   
- **Дочерних** оси используется по умолчанию. Поэтому запрос можно определить следующим образом.  
+ По умолчанию используется **дочерняя** ось. Поэтому запрос можно определить следующим образом.  
   
 ```  
 /Customer[Order]  
@@ -184,7 +182,7 @@ ms.locfileid: "68027091"
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>Проверка запроса XPath к схеме сопоставления  
   
-1.  Копировать [образец кода схемы](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) и вставьте его в текстовый файл. Сохраните файл с именем SampleSchema1.xml.  
+1.  Скопируйте [пример кода схемы](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) и вставьте его в текстовый файл. Сохраните файл с именем SampleSchema1.xml.  
   
 2.  Создайте следующий шаблон (TopLevelPredicate.xml) и сохраните его в каталоге, где содержится файл SampleSchema1.xml.  
   
@@ -204,7 +202,7 @@ ms.locfileid: "68027091"
   
 3.  Создайте и запустите тестовый скрипт SQLXML 4.0 (Sqlxml4test.vbs), чтобы выполнить шаблон.  
   
-     Дополнительные сведения см. в разделе [использование объектов ADO для выполнения запросов SQLXML 4.0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Дополнительные сведения см. [в разделе Использование ADO для выполнения запросов SQLXML 4,0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Частичный результат:  
   

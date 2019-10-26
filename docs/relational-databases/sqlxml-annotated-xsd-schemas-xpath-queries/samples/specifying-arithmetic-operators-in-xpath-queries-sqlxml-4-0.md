@@ -1,5 +1,5 @@
 ---
-title: Задание арифметических операторов в запросах XPath (SQLXML 4.0) | Документация Майкрософт
+title: Указание арифметических операторов в запросах XPath (SQLXML 4,0) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -16,34 +16,34 @@ ms.assetid: fdfbc87d-759f-4abc-acf5-a21de01f78d3
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4594fadb7c12ac187219c16cf8505dd77fa0c479
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2fa1bf6dd7d5652e33eb5fa7c75a86268f31129a
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68119453"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907765"
 ---
 # <a name="specifying-arithmetic-operators-in-xpath-queries-sqlxml-40"></a>Задание арифметических операторов в запросах XPath (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  В следующем примере показано, как в запросах XPath указывать арифметические операторы. В этом примере задается запрос XPath к схеме сопоставления, содержащейся в файле SampleSchema1.xml. Сведения об этом образце схемы см. в разделе [образец аннотированные схемы XSD для примеров XPath &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
+  В следующем примере показано, как в запросах XPath указывать арифметические операторы. В этом примере задается запрос XPath к схеме сопоставления, содержащейся в файле SampleSchema1.xml. Сведения об этом образце схемы см. в статье [Пример схемы XSD с заметками &#40;для&#41;XPath примеры SQLXML 4,0](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
   
 ## <a name="examples"></a>Примеры  
   
 ### <a name="a-specify-the--arithmetic-operator"></a>A. Указание арифметического оператора *  
- Этот запрос XPath возвращает  **\<OrderDetail >** элементы, которые удовлетворяют указанному предикату:  
+ Этот запрос XPath возвращает **\<OrderDetail >** элементов, которые соответствуют заданному предикату:  
   
 ```  
 /child::OrderDetail[@UnitPrice * @Quantity = 12.350]  
 ```  
   
- В запросе `child` является осью и `OrderDetail` является проверкой узла (значение TRUE, если **OrderDetail** —  **\<узла элемента >** , так как  **\< Элемент >** узел является основным узлом для **дочерних** оси). Для всех  **\<OrderDetail >** узлов элемента применяется проверка в предикате и возвращаются только те узлы, которые удовлетворяют условию.  
+ В запросе `child` — это ось, а `OrderDetail` — это проверка узла (TRUE, если **OrderDetail** является **\<ным узлом элемента >** , поскольку\<**элемент** > является основным узлом для **дочерней** оси). Для всех узлов элементов **\<OrderDetail >** применяется тест в предикате и возвращаются только те узлы, которые соответствуют условию.  
   
 > [!NOTE]  
 >  Числа в языке XPath являются числами с плавающей запятой двойной точности, и сравнение чисел с плавающей запятой, как указано в примере, приводит к округлению.  
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>Проверка запроса XPath к схеме сопоставления  
   
-1.  Копировать [образец кода схемы](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) и вставьте его в текстовый файл. Сохраните файл с именем SampleSchema1.xml.  
+1.  Скопируйте [пример кода схемы](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) и вставьте его в текстовый файл. Сохраните файл с именем SampleSchema1.xml.  
   
 2.  Создайте следующий шаблон (ArithmeticOperatorA.xml) и сохраните его в каталоге, где содержится файл SampleSchema1.xml.  
   
@@ -63,9 +63,7 @@ ms.locfileid: "68119453"
   
 3.  Создайте и запустите тестовый скрипт SQLXML 4.0 (Sqlxml4test.vbs), чтобы выполнить шаблон.  
 
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-     For more information, see [Using ADO to Execute SQLXML 4.0 Queries](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Дополнительные сведения см. [в разделе Использование ADO для выполнения запросов SQLXML 4,0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
 ```  
 Here is the partial result set of the template execution:    

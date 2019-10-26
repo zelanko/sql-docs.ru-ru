@@ -1,5 +1,5 @@
 ---
-title: Использование ADO для выполнения SQLXML 4.0 запросов | Документация Майкрософт
+title: Использование ADO для выполнения запросов SQLXML 4,0 | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +17,12 @@ ms.assetid: 3d54e3bb-7c5f-427e-82f8-1403a54c4f53
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f2b5f8ce7f2b7e0fab2da5eed698fadfb9538c12
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 642e98a743585226d984c378607b83a7ad432d92
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68135333"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909124"
 ---
 # <a name="using-ado-to-execute-sqlxml-40-queries"></a>Использование ADO для выполнения запросов SQLXML 4.0
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "68135333"
   
  В качестве альтернативы можно выполнять запросы и использовать SQLXML 4.0 с приложениями на основе COM, используя расширения SQLXML для объектов данных ActiveX (ADO), которые появились в компонентах доступа к данным (MDAC) версии 2.6 и более поздних.  
   
- В этом разделе демонстрируется использование SQLXML и ADO как части приложения Visual Basic Scripting Edition (VBScript) (скрипта с расширением .vbs). Обеспечивает начальную процедуру установки, которая помогает создать повторно и тестировать образцы запросов в документации SQLXML 4.0.  
+ В этом разделе демонстрируется использование SQLXML и ADO в качестве части приложения Visual Basic Scripting Edition (VBScript) (скрипт с расширением имени файла vbs). Обеспечивает начальную процедуру установки, которая помогает создать повторно и тестировать образцы запросов в документации SQLXML 4.0.  
   
 ## <a name="creating-the-sqlxml-40-test-script"></a>Создание тестового скрипта SQLXML 4.0  
  В этой процедуре создается файл VBScript (.vbs), Sqlxml4test.vbs, который можно использовать для выполнения запросов SQLXML с использованием ADO-расширений SQLXML в ADO 2.6 и более поздних версий.  
@@ -107,8 +107,6 @@ ms.locfileid: "68135333"
   
 5.  Следуйте инструкциям следующего раздела по использованию тестового скрипта SQLXML 4.0.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ## <a name="using-the-sqlxml-40-test-script"></a>Использование тестового скрипта SQLXML 4.0  
  Следующая процедура описывает способ использования файлов Sqlxml4test.vbs для тестирования примеров запросов, предоставленных в этой документации.  
   
@@ -116,14 +114,14 @@ ms.locfileid: "68135333"
   
 1.  Проверьте, что установлен собственный клиент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-    1.  Из **запустить** последовательно выберите пункты **параметры**, а затем нажмите кнопку **панели управления**.  
+    1.  В меню " **Пуск** " выберите пункт " **Параметры**", а затем " **Панель управления**".  
   
-    2.  В панели управления откройте **Установка и удаление программ**  
+    2.  В панели управления откройте окно **Установка и удаление программ** .  
   
-    3.  В списке установленных программ, убедитесь, что **Microsoft SQL Server Native Client** появится в списке.  
+    3.  В списке установленных программ убедитесь, что в списке присутствует **Microsoft SQL Server Native Client** .  
   
         > [!NOTE]  
-        >  Если вам нужно установить [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, см. в разделе [Установка SQL Server Native Client](../../relational-databases/native-client/applications/installing-sql-server-native-client.md).  
+        >  Если необходимо установить [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственный клиент, см. раздел Installing [SQL Server Native Client](../../relational-databases/native-client/applications/installing-sql-server-native-client.md).  
   
 2.  Проверьте, что на клиентском компьютере установлена версия MDAC 2.6 или более поздняя. Если нужно проверить сведения о версии MDAC, можно использовать средство проверки компонентов MDAC, которое можно бесплатно загрузить с веб-сайта Майкрософт (www.microsoft.com). Чтобы получить дополнительные сведения, выполните поиск с ключевыми словами «MDAC Component Checker» на веб-сайте корпорации Майкрософт.  
   
