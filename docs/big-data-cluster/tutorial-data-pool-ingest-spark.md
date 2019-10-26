@@ -1,7 +1,7 @@
 ---
 title: Прием данных с помощью заданий Spark
 titleSuffix: SQL Server big data clusters
-description: В этом руководстве показано, как принимать данные в пул [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] данных с помощью заданий Spark в Azure Data Studio.
+description: В этом руководстве показано, как принимать данные в пул данных [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] с помощью заданий Spark в Azure Data Studio.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: shivsood
@@ -9,18 +9,18 @@ ms.date: 08/21/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 5325b44512d2dc1522d4bc49478e65ae4c0999e0
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: e2390da93f9359c2f812bc93ec588490a218ad87
+ms.sourcegitcommit: e7c3c4877798c264a98ae8d51d51cb678baf5ee9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653296"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72916009"
 ---
-# <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-spark-jobs"></a>Учебник. Прием данных в пул данных SQL Server с помощью заданий Spark
+# <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-spark-jobs"></a>Учебник. прием данных в пул данных SQL Server с помощью заданий Spark
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-В этом руководстве показано, как использовать задания Spark для загрузки данных [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]в [пул данных](concept-data-pool.md) . 
+В этом руководстве показано, как использовать задания Spark для загрузки данных в [пул данных](concept-data-pool.md) [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. 
 
 В этом руководстве описано следующее.
 
@@ -32,19 +32,19 @@ ms.locfileid: "69653296"
 > [!TIP]
 > При необходимости вы можете скачать и выполнить скрипт, содержащий команды из этого руководства. См. инструкции в разделе [Примеры пулов данных](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/data-pool) на сайте GitHub.
 
-## <a id="prereqs"></a> Предварительные требования
+## <a id="prereqs"></a> предварительные требования
 
 - [Средства работы с большими данными](deploy-big-data-tools.md)
    - **kubectl**
    - **Azure Data Studio**
-   - **Расширение SQL Server 2019**
+   - **Расширение SQL Server 2019**
 - [Загрузка примера данных в кластер больших данных](tutorial-load-sample-data.md)
 
 ## <a name="create-an-external-table-in-the-data-pool"></a>Создание внешней таблицы в пуле данных
 
 Выполните следующие действия, чтобы создать внешнюю таблицу с именем **web_clickstreams_spark_results** в пуле данных. В дальнейшем эта таблица может использоваться для приема данных в кластер больших данных.
 
-1. В Azure Data Studio установите подключение к главному экземпляру SQL Server в кластере больших данных. Дополнительные сведения см. в разделе [Подключение к главному экземпляру SQL Server](connect-to-big-data-cluster.md#master).
+1. В Azure Data Studio установите подключение к главному экземпляру SQL Server в кластере больших данных. Дополнительные сведения см. в разделе [Подключение к главному экземпляру SQL Server](connect-to-big-data-cluster.md#master).
 
 1. Дважды щелкните подключение в окне **Серверы**, чтобы открыть панель мониторинга сервера для главного экземпляра SQL Server. Выберите **Создать запрос**.
 
@@ -77,49 +77,54 @@ ms.locfileid: "69653296"
 
 ## <a name="start-a-spark-streaming-job"></a>Запуск задания потоковой передачи Spark
 
-Следующим шагом является создание задания потоковой передачи Spark, которое загружает сведения о посещениях из пула носителей (HDFS) во внешнюю таблицу, созданную в пуле данных.
+Следующим шагом является создание задания потоковой передачи Spark, которое загружает сведения о посещениях из пула носителей (HDFS) во внешнюю таблицу, созданную в пуле данных. Эти данные были добавлены в/clickstream_data в процессе [загрузки демонстрационных данных в кластер больших данных](tutorial-load-sample-data.md).
 
 1. В Azure Data Studio установите подключение к главному экземпляру в кластере больших данных. Дополнительные сведения см. в разделе [Подключение к кластеру больших данных](connect-to-big-data-cluster.md).
 
-1. Дважды щелкните подключение шлюза HDFS/Spark в окне **Серверы**. Затем выберите **New Spark Job** (Создать задание Spark).
+2. Создание новой записной книжки и выбор Spark | Scala в качестве ядра.
 
-   ![Создание задания Spark](media/tutorial-data-pool-ingest-spark/hdfs-new-spark-job.png)
+3. Запуск задания приема Spark
+   1. Настройка параметров соединителя Spark-SQL
+      ```
+      import org.apache.spark.sql.types._
+      import org.apache.spark.sql.{SparkSession, SaveMode, Row, DataFrame}
 
-1. В окне **Создание задания** введите имя в поле **Имя задания**.
+      // Change per your installation
+      val user= "username"
+      val password= "****"
+      val database =  "MyTestDatabase"
+      val sourceDir = "/clickstream_data"
+      val datapool_table = "web_clickstreams_spark_results"
+      val datasource_name = "SqlDataPool"
+      val schema = StructType(Seq(
+      StructField("wcs_click_date_sk",IntegerType,true), StructField("wcs_click_time_sk",IntegerType,true), StructField("wcs_sales_sk",IntegerType,true), StructField("wcs_item_sk",IntegerType,true), 
+      StructField("wcs_web_page_sk",IntegerType,true), StructField("wcs_user_sk",IntegerType,true)
+      ))
 
-1. В раскрывающемся списке **Файл JAR/PY** выберите **HDFS**. Введите следующий путь к JAR-файлу.
+      val hostname = "master-0.master-svc"
+      val port = 1433
+      val url = s"jdbc:sqlserver://${hostname}:${port};database=${database};user=${user};password=${password};"
+      ```
+   2. Определение и запуск задания Spark
+      * Каждое задание состоит из двух частей: Реадстреам и Вритестреам. Ниже мы создадим кадр данных, используя определенную выше схему, а затем выполним запись во внешнюю таблицу в пуле данных.
+      ```
+      import org.apache.spark.sql.{SparkSession, SaveMode, Row, DataFrame}
+      
+      val df = spark.readStream.format("csv").schema(schema).option("header", true).load(sourceDir)
+      val query = df.writeStream.outputMode("append").foreachBatch{ (batchDF: DataFrame, batchId: Long) => 
+                batchDF.write
+                 .format("com.microsoft.sqlserver.jdbc.spark")
+                 .mode("append")
+                  .option("url", url)
+                  .option("dbtable", datapool_table)
+                  .option("user", user)
+                  .option("password", password)
+                  .option("dataPoolDataSource",datasource_name).save()
+               }.start()
 
-   ```text
-   /jar/mssql-spark-lib-assembly-1.0.jar
-   ```
-
-1. В поле **Класс Main** введите `FileStreaming`.
-
-1. В поле **Аргументы** введите приведенный ниже текст, указав пароль для главного экземпляра SQL Server в заполнителе `<your_password>`. 
-
-   ```text
-   --server mssql-master-pool-0.service-master-pool --port 1433 --user sa --password <your_password> --database sales --table web_clickstreams_spark_results --source_dir hdfs:///clickstream_data --input_format csv --enable_checkpoint false --timeout 380000
-   ```
-
-   В следующей таблице описаны все аргументы.
-
-   | Аргумент | Описание |
-   |---|---|
-   | имя сервера | Сервер SQL Server, используемый для чтения схемы таблицы |
-   | номер порта | Порт, прослушиваемый SQL Server (по умолчанию 1433) |
-   | username | Имя пользователя для входа SQL Server |
-   | password | Пароль для входа SQL Server |
-   | Имя базы данных | Целевая база данных |
-   | external table name | Таблица, используемая для результатов |
-   | Исходный каталог для потоковой передачи | Это должен быть полный универсальный код ресурса (URI), например hdfs:///clickstream_data |
-   | input format | Это может быть csv, parquet или json |
-   | enable checkpoint | true или false |
-   | timeout | Время выполнения задания в миллисекундах перед выходом |
-
-1. Нажмите кнопку **Отправить**, чтобы отправить задание.
-
-   ![Отправка задания Spark](media/tutorial-data-pool-ingest-spark/spark-new-job-settings.png)
-
+      query.processAllAvailable()
+      query.awaitTermination(40000)
+      ```
 ## <a name="query-the-data"></a>Запрос данных
 
 Следующие шаги показывают, что задание потоковой передачи Spark загрузило данные из HDFS в пул данных.
@@ -138,7 +143,24 @@ ms.locfileid: "69653296"
    SELECT count(*) FROM [web_clickstreams_spark_results];
    SELECT TOP 10 * FROM [web_clickstreams_spark_results];
    ```
+1. Данные также можно запрашивать в Spark. Например, приведенный ниже код выводит число записей в таблице.
+   ```
+   def df_read(dbtable: String,
+                url: String,
+                dataPoolDataSource: String=""): DataFrame = {
+        spark.read
+             .format("com.microsoft.sqlserver.jdbc.spark")
+             .option("url", url)
+             .option("dbtable", dbtable)
+             .option("user", user)
+             .option("password", password)
+             .option("dataPoolDataSource", dataPoolDataSource)
+             .load()
+             }
 
+   val new_df = df_read(datapool_table, url, dataPoolDataSource=datasource_name)
+   println("Number of rows is " +  new_df.count)
+   ```
 ## <a name="clean-up"></a>Очистка
 
 Выполните следующую команду, чтобы удалить объекты базы данных, созданные в рамках этого руководства.
