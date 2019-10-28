@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 2ef803ee-a9f8-454a-ad63-fedcbe6838d1
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 7b39b4391780a8133dae199e39638a6db77d73aa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 64427c005dca0e7a69dcc73b953260429b325332
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68083901"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908541"
 ---
 # <a name="create-a-maintenance-plan-maintenance-plan-design-surface"></a>Создание планов обслуживания (область конструктора планов обслуживания)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -231,50 +231,48 @@ ms.locfileid: "68083901"
   
 12. Для просмотра результатов в средстве просмотра журнала в **Обозревателе объектов**щелкните правой кнопкой мыши папку **Планы обслуживания** или конкретный план обслуживания и выберите команду **Просмотр журнала**.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-     The following options are available on the **Log File Viewer -**_server\_name_ dialog box.  
+     В диалоговом окне **Средство просмотра журнала —** _имя\_сервера_ доступны указанные ниже параметры.  
   
-     **Load Log**  
-     Open a dialog box where you can specify a log file to load.  
+     **Загрузить журнал**  
+     Открывает диалоговое окно, в котором можно указать загружаемый файл журнала.  
   
-     **Export**  
-     Open a dialog box that lets you export the information that is shown in the **Log file summary** grid to a text file.  
+     **Экспорт**  
+     Открывает диалоговое окно, позволяющее экспортировать данные из сетки **Сведения о файле журнала** в текстовый файл.  
   
-     **Refresh**  
-     Refresh the view of the selected logs. The **Refresh** button rereads the selected logs from the target server while applying any filter settings.  
+     **Обновить**  
+     Позволяет обновить представление выбранных журналов. При нажатии кнопки **Обновить** выбранные журналы заново считываются с целевого сервера с применением параметров фильтра.  
   
-     **Filter**  
-     Open a dialog box that lets you specify settings that are used to filter the log file, such as **Connection**, **Date**, or other **General** filter criteria.  
+     **Фильтр**  
+     Открывает диалоговое окно, позволяющее указывать параметры фильтрации файла журнала, например **Соединение**и **Дата**или другие **Общие** условия фильтра.  
   
-     **Search**  
-     Search the log file for specific text. Searching with wildcard characters is not supported.  
+     **Поиск**  
+     Позволяет найти определенный текст в файле журнала. Поиск с символами-шаблонами не поддерживается.  
   
-     **Stop**  
-     Stops loading the log file entries. For example, you can use this option if a remote or offline log file takes a long time to load, and you only want to view the most recent entries.  
+     **Остановить**  
+     Прекращает загрузку записей файла журнала. Например, можно использовать этот параметр, если загрузка удаленного файла или файла журнала вне сети занимает длительное время, а нужно просмотреть лишь наиболее свежие записи.  
   
-     **Log file summary**  
-     This information panel displays a summary of the log file filtering. If the file is not filtered, you will see the following text, **No filter applied**. If a filter is applied to the log, you will see the following text, **Filter log entries where:** \<filter criteria>.  
+     **Сведения о файле журнала**  
+     Эта информационная панель содержит сводку данных по фильтрации файла журнала. Если файл не фильтруется, на панели отображается текст **без фильтров**. Если фильтр применяется к журналу, отображается следующий текст: **Критерий отбора:** \<критерии фильтрации>.  
   
-     **Date**  
-     Displays the date of the event.  
+     **Дата**  
+     Дата события.  
   
      **Source**  
-     Displays the source feature from which the event is created, such as the name of the service (MSSQLSERVER, for example). This does not appear for all log types.  
+     Исходная функция, создавшая событие, например имя службы (MSSQLSERVER). Отображается не для всех типов журнала.  
   
-     **Message**  
-     Displays any messages associated with the event.  
+     **Сообщение**  
+     Сообщение, связанное с событием.  
   
      **Log Type**  
-     Displays the type of log to which the event belongs. All selected logs appear in the log file summary window.  
+     Отображает тип журнала, которому принадлежит событие. Все выбранные журналы отображаются в окне сводки файла журнала.  
   
      **Log Source**  
-     Displays a description of the source log in which the event is captured.  
+     Отображает описание исходного журнала, в котором зарегистрировано событие.  
   
-     **Selected row details**  
-     Select a row to display additional details about the selected event row at the bottom of the page. The columns can be reordered by dragging them to new locations in the grid. The columns can be resized by dragging the column separator bars in the grid header to the left or right. Double-click the column separator bars in the grid header to automatically size the column to the content width.  
+     **Сведения о выбранной строке**  
+     Выберите строку для отображения дополнительных сведений о выбранной строке события внизу страницы. Порядок столбцов можно менять, перетаскивая их в нужное место сетки. Размер столбцов можно менять, перетаскивая разделители столбцов в заголовке сетки вправо или влево. Если дважды щелкнуть разделитель столбцов в заголовке сетки, ширина столбца будет автоматически подогнана под его содержимое.  
   
-     **Instance**  
-     The name of the instance on which the event occurred. This is displayed as *computer name*\\*instance name*.  
+     **Экземпляр**  
+     Имя экземпляра, к которому относится происшедшее событие. Отображается как *имя_компьютера*\\*имя_экземпляра*.  
   
   

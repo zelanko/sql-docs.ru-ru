@@ -13,12 +13,12 @@ helpviewer_keywords:
 - ghost clean up process
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a1b4075a577991909ac129ce51c7625ae44ad1aa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 34be16d305bbb42a23c686e9b2befdd83792d523
+ms.sourcegitcommit: bb56808dd81890df4f45636b600aaf3269c374f2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68035958"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72890484"
 ---
 # <a name="ghost-cleanup-process-guide"></a>Руководство по процессу очистки фантомных записей
 
@@ -38,7 +38,7 @@ ms.locfileid: "68035958"
 
  ```sql
  SELECT sum(ghost_record_count) total_ghost_records, db_name(database_id) 
- FROM sys.dm_db_index_physical_stats (NULL, NULL, NULL, NULL, NULL)
+ FROM sys.dm_db_index_physical_stats (NULL, NULL, NULL, NULL, 'SAMPLED')
  group by database_id
  order by total_ghost_records desc
 ```
@@ -55,7 +55,7 @@ ms.locfileid: "68035958"
  > Обычно не рекомендуется отключать процесс очистки фантомных записей. Перед окончательным отключением процесса в рабочей среде необходимо провести соответствующую тщательную проверку в управляемой среде.
 
 
-## <a name="next-steps"></a>Следующие шаги  
+## <a name="next-steps"></a>Дальнейшие действия  
 [Отключение процесса очистки фантомных записей](https://support.microsoft.com/help/920093/tuning-options-for-sql-server-when-running-in-high-performance-workloa)
 <br>[Удаление фантомных записей из одного файла базы данных](system-stored-procedures/sp-clean-db-file-free-space-transact-sql.md)
 <br>[Удаление фантомных записей из всех файлов базы данных](system-stored-procedures/sp-clean-db-free-space-transact-sql.md)

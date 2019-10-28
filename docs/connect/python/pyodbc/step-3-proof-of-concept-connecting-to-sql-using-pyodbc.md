@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 4bfd6e52-817d-4f0a-a33d-11466e3f0484
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: faa2d63e0d1104665768ea436986b8fd3a52c107
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.openlocfilehash: 0e241d84ebc60acceafe09b1a9240711a72d2067
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72251782"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798317"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-pyodbc"></a>Шаг 3. Эксперимент, подразумевающий подключение к SQL с помощью pyodbc
 
@@ -55,7 +55,7 @@ Cursor. ExecuteFunction можно использовать для получе�
 cursor.execute("SELECT @@version;") 
 row = cursor.fetchone() 
 while row: 
-    print row[0] 
+    print(row[0])
     row = cursor.fetchone()
 
 ```  
@@ -94,6 +94,6 @@ pyODBC использует драйвер Microsoft ODBC для SQL Server.
 
 - [Использование Azure Active Directory с драйвером ODBC](../../odbc/using-azure-active-directory.md#new-andor-modified-dsn-and-connection-string-keywords)
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
   
 Дополнительные сведения см. в [центре разработчиков Python](https://azure.microsoft.com/develop/python/).

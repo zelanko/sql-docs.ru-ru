@@ -18,12 +18,12 @@ ms.assetid: ed2a5522-f4d2-4111-95a4-d3e1e5081739
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 207bb036ad89e135a7bdcbeaba7e5fb29bd41571
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 980b179f39edc3e93e5cb0bc105b6b2f8d12bb58
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68094981"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72903745"
 ---
 # <a name="create-a-database-schema"></a>Создание схемы базы данных
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -60,8 +60,6 @@ ms.locfileid: "68094981"
 5.  В поле **Владелец схемы** введите имя пользователя или роли базы данных, которые будут владельцем схемы. Также можно нажать кнопку **Поиск** , чтобы открыть диалоговое окно **Поиск ролей и пользователей** .  
   
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 > [!NOTE]
 > Диалоговое окно не будет отображаться, если вы создаете схему с помощью SSMS для **базы данных SQL Azure** или **хранилища данных SQL Azure**. Потребуется создать схему шаблона T-SQL.

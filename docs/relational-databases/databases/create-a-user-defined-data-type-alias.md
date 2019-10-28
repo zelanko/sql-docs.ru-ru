@@ -16,12 +16,12 @@ ms.assetid: b1dd8413-0cd0-411b-a79b-1bb043ccc62d
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c529a7f64fb3db9bdbe7d18cb5a5cb36ebdd9786
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2c83006aab69b7d72a2c3006dab48811eeda8495
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68037608"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909119"
 ---
 # <a name="create-a-user-defined-data-type-alias"></a>Создание псевдонима определяемого пользователем типа данных
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -109,8 +109,6 @@ ms.locfileid: "68037608"
 6.  Если новый псевдоним типа данных должен поддерживать значения NULL, установите флажок **Разрешить значения NULL** .  
   
 7.  Если требуется связать с новым псевдонимом типа данных значение по умолчанию или правило, заполните в области **Привязка** поле **По умолчанию** или **Правило** . В среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]нельзя создавать правила или значения по умолчанию. Используйте [!INCLUDE[tsql](../../includes/tsql-md.md)]. Примеры кода, создающего умолчания и правила, доступны в окне обозревателя шаблонов.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
   

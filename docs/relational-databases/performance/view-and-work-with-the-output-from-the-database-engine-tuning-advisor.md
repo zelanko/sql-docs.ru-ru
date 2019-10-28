@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 47f9d9a7-80b0-416d-9d9a-9e265bc190dc
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 481a6a0a109683c94ef754ea679a801a92a8aabc
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: a160fe7fbf98a428c9cfacecd00305ce83ba0a5a
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68811356"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907041"
 ---
 # <a name="view-and-work-with-the-output-from-the-database-engine-tuning-advisor"></a>Просмотр и работа с выходными данными помощника по настройке ядра СУБД
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -60,8 +60,6 @@ ms.locfileid: "68811356"
 5.  Снимите флажок **Показать существующие объекты** в нижней части страницы **Рекомендации** . Это приводит к тому, что в сетке отображаются только те объекты базы данных, на которые ссылаются рекомендации. Используя горизонтальную полосу прокрутки, просмотрите самый правый столбец в сетке рекомендаций и щелкните элемент в столбце **Определение** , чтобы вывести копию скрипта [!INCLUDE[tsql](../../includes/tsql-md.md)] , который создает этот объект в базе данных.  
   
 6.  Если нужно сохранить все скрипты [!INCLUDE[tsql](../../includes/tsql-md.md)] , создающие или удаляющие объекты базы данных в этой рекомендации, в один файл скрипта, выберите **Сохранить рекомендации** в меню **Действия** .  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 #### <a name="to-view-the-tuning-summary-and-reports-with-the-database-engine-tuning-advisor-gui"></a>Просмотр сводок и отчетов по настройке с помощью GUI помощника по настройке ядра СУБД  
   

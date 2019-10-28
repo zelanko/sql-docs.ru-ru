@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: ae1d126a-46d2-47bf-b339-17c743df6491
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: b14ea78ab74849befcf966edf0c50a7e6ba30fcd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 785c056b50ed3594fe9886eb9c6a9ec79f7895c1
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68115340"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908661"
 ---
 # <a name="remove-an-instance-of-sql-server-from-the-sql-server-utility"></a>Удаление экземпляра SQL Server с помощью служебной программы SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,8 +33,6 @@ ms.locfileid: "68115340"
 3.  Укажите учетные данные с правами администратора для экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Нажмите кнопку **Подключить…** , проверьте данные в диалоговом окне **Подключение к серверу**, а затем нажмите кнопку **Подключить**. В диалоговом окне **Удаление управляемого экземпляра** появятся данные входа.  
   
 4.  Чтобы подтвердить операцию, нажмите кнопку **ОК**. Чтобы прервать операцию, нажмите кнопку **Отмена**.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="manually-remove-a-managed-instance-of-sql-server-from-a-sql-server-utility"></a>Удаление управляемого экземпляра SQL Server из программы SQL Server Utility вручную  
  Эта процедура используется для удаления экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] из списка пункта управления программой и остановки сбора данных программой [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не удален.  

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 850b7ef9-d2b7-4754-bf04-7cb419ffb776
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 5701d3b250c784c3e0578bd81c1971c36a0403b0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ae1a68e63bd9d83cd80ec04b8ad2801b9f238a7b
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68087243"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908646"
 ---
 # <a name="import-a-policy-based-management-policy"></a>Импорт политики управления на основе политик
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -60,6 +60,4 @@ ms.locfileid: "68087243"
 5.  Введите имя и путь к файлу в диалоговом окне **Импортировать** либо найдите XML-файл, содержащий политику, при помощи кнопки (**Обзор...** ) и выберите его. Дополнительные сведения о параметрах, доступных в диалоговом окне **Импорт** , см. в разделе [Import Policies Dialog Box](../../relational-databases/policy-based-management/import-policies-dialog-box.md).  
   
 6.  После завершения нажмите кнопку **ОК**.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 

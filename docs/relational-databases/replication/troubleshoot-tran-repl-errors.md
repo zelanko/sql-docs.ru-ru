@@ -11,12 +11,12 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 705bf95c2bcff4062962166249055ec940f00d5b
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 7c9924d2062b3c4fa41c8731df17b49fe9a86b07
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769351"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907292"
 ---
 # <a name="troubleshooter-find-errors-with-sql-server-transactional-replication"></a>Средство устранения неполадок: поиск ошибок, связанных с репликацией транзакций SQL Server 
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -27,8 +27,6 @@ ms.locfileid: "68769351"
 1. Транзакции происходят в реплицируемых объектах и помечаются для репликации в журнале транзакций. 
 2. Агент чтения журнала просматривает журнал транзакций в поиске транзакций, которые помечены "для репликации". Затем эти транзакции сохраняются в базе данных распространителя. 
 3. Агент распространения просматривает базу данных распространителя с помощью потока чтения. Затем с помощью потока записи этот агент подключается к подписчику, чтобы применить к нему изменения.
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 Ошибки могут возникать на любом этапе этого процесса. Выявление ошибок может быть наиболее сложным аспектом устранения неполадок, возникающих при синхронизации. К счастью, монитор репликации упрощает данный процесс. 
 

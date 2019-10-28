@@ -1,7 +1,7 @@
 ---
 title: Содержимое справки SQL Server и окно справки | Документы Майкрософт
 ms.custom: ''
-ms.date: 12/16/2017
+ms.date: 10/15/2019
 ms.prod: sql
 ms.technology: ''
 ms.reviewer: ''
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 51f8a08c-51d0-41d8-8bc5-1cb4d42622fb
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 1c435ef5ee077d569d0b071f351a3b55400f9a72
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fb5b270acac06411d5758f49ce8037311727d62b
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68136368"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908008"
 ---
 # <a name="sql-server-offline-help-and-help-viewer"></a>Автономная справка SQL Server и окно справки
 
@@ -171,7 +171,7 @@ ms.locfileid: "68136368"
 
 **Просмотр справки SQL Server в Интернете с помощью SQL Server Management Studio 17.x**
 
-- В меню **Справка** выберите пункт **Просмотр справки**. В окне браузера отобразится последняя версия документации по SQL Server 2016 и SQL Server 2017 ( [https://docs.microsoft.com/sql/https://docs.microsoft.com/sql/sql-server/sql-server-technical-documentation](https://docs.microsoft.com/sql/sql-server/sql-server-technical-documentation) ). 
+- В меню **Справка** выберите пункт **Просмотр справки**. В окне браузера отобразится последняя версия документации по SQL Server 2016 и SQL Server 2017 ( [https://docs.microsoft.com/sql/sql-server/](https://docs.microsoft.com/sql/sql-server/index.yml) ).
 
    ![Просмотр справки](../sql-server/media/sql-server-help-installation/viewhelp.png)
 

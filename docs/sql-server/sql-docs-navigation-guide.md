@@ -1,7 +1,7 @@
 ---
 title: Советі по навигации в документации SQL Server
 description: В руководстве и советах по навигации в технической документации SQL Server объясняются такие элементы, как главная страница, оглавление, заголовок, а также использование адресной строки и фильтра версий.
-ms.date: 07/11/2019
+ms.date: 10/15/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.custom: ''
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 42bf8211f8b5907d21f98e12bd058eedb658bbe2
-ms.sourcegitcommit: cdbb0ee5ee5259119ad21695f549207457990f71
+ms.openlocfilehash: e0a18b05395cffaa4154e8f4a7d74ed04750e430
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69621721"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72904310"
 ---
 # <a name="sql-server-docs-navigation-guide"></a>Руководство по навигации в документации по SQL Server 
 
@@ -93,6 +93,6 @@ ms.locfileid: "69621721"
 
 ## <a name="next-steps"></a>Следующие шаги
 
-- Начните работу с [технической документацией по SQL Server](sql-server-technical-documentation.md). 
+- Начните работу с [технической документацией по SQL Server](index.yml).
 - Дополнительные сведения об отправке отзывов и получении справки по SQL Server см. на странице [получения справки](sql-server-get-help.md). 
 - Чтобы быстро получить доступ ко всем кратким руководствам и учебникам, перейдите в [центр обучения SQL Server](../lp/sql-server/sql-education-center.md).

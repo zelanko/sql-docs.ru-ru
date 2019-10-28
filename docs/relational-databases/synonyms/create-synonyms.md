@@ -14,12 +14,12 @@ ms.assetid: fedfa7a5-d0b6-4e2b-90f4-a08122958e33
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3500552ae0dde03b7cd4b354560bc3d0857eebec
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5b6ccdce58ca96a26a607996943e6d48d9bac1d8
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68050898"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909741"
 ---
 # <a name="create-synonyms"></a>Создание синонимов
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -54,28 +54,26 @@ ms.locfileid: "68050898"
   
 3.  В диалоговом окне **Добавление синонима** введите следующие сведения.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-     **Synonym name**  
-     Type the new name you will use for this object.  
+     **Имя синонима**  
+     Введите новое имя, которое будет использоваться для обращения к этому объекту.  
   
-     **Synonym schema**  
-     Type the schema of the new name you will use for this object.  
+     **Схема синонима**  
+     Введите схему нового имени, которая будет использоваться для обращения к этому объекту.  
   
-     **Server name**  
-     Type the server instance to connect to.  
+     **Имя сервера**  
+     Введите экземпляр сервера для подключения.  
   
-     **Database name**  
-     Type or select the database containing the object.  
+     **Имя базы данных**  
+     Введите или выберите базу данных, содержащую объект.  
   
-     **Schema**  
-     Type or select the schema that owns the object.  
+     **Схема**  
+     Введите или выберите схему, владеющую объектом.  
   
-     **Object type**  
-     Select the type of object.  
+     **Тип объекта**  
+     Выберите тип объекта.  
   
-     **Object name**  
-     Type the name of the object to which the synonym refers.  
+     **Имя объекта**  
+     Введите имя объекта, которому должен соответствовать синоним.  
   
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
   

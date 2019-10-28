@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 98b2914e-7147-40af-ba7d-87253bbe8bf9
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 19938b95101d6ffb61ffba478ad80df90e353c31
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bbcec1ab749b87f37397f94425226e5f4f523132
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68007121"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908515"
 ---
 # <a name="publish-a-database-sql-server-management-studio"></a>Публикация базы данных (среда SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,8 +44,6 @@ ms.locfileid: "68007121"
 4.  На странице **Сводка** просмотрите выбранные параметры. Чтобы изменить выбранные параметры, нажмите кнопку **Назад** . Для публикации выделенных объектов нажмите кнопку **Далее** .  
   
 5.  На странице **Сохранение или публикация скриптов** можно наблюдать ход выполнения публикации.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="see-also"></a>См. также:  
  [Формирование скриптов (среда SQL Server Management Studio)](../../relational-databases/scripting/generate-scripts-sql-server-management-studio.md)   

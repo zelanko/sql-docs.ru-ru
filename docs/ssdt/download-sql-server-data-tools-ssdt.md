@@ -12,12 +12,12 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 08/15/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 7ddf814a849dfd0272f87dec2e2d7650c557d0be
-ms.sourcegitcommit: c4258a644ac588fc222abee2854f89a81325814c
+ms.openlocfilehash: a79940fa5696a65ed580d8550984d090a48eebdf
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72545091"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72807442"
 ---
 # <a name="download-and-install-sql-server-data-tools-ssdt-for-visual-studio"></a>Скачивание и установка SQL Server Data Tools (SSDT) для Visual Studio
 
@@ -32,12 +32,12 @@ ms.locfileid: "72545091"
 Если у вас есть лицензия на Visual Studio 2019, сделайте следующее:
 
 - Для проектов Базы данных SQL установите рабочую нагрузку "Хранение и обработка данных" в Visual Studio.
-- Для проектов Analysis Services, Integration Services или Reporting Services установите соответствующие [расширения](https://docs.microsoft.com/en-us/==visualstudio/ide/finding-and-using-visual-studio-extensions) из Marketplace.
+- Для проектов Analysis Services, Integration Services или Reporting Services установите соответствующие [расширения](https://docs.microsoft.com/visualstudio/ide/finding-and-using-visual-studio-extensions) из Marketplace.
 
 Если у вас нет лицензии на Visual Studio 2019, сделайте следующее:
 
 - Установите [Visual Studio 2019 Community](https://visualstudio.microsoft.com/downloads/).
-- При необходимости установите [расширение](https://docs.microsoft.com/en-us/==visualstudio/ide/finding-and-using-visual-studio-extensions) Analysis Services, Integration Services или Reporting Services.
+- При необходимости установите [расширение](https://docs.microsoft.com/visualstudio/ide/finding-and-using-visual-studio-extensions) Analysis Services, Integration Services или Reporting Services.
 
 ## <a name="changes-in-ssdt-for-visual-studio-2017"></a>Изменения в SSDT для Visual Studio 2017
 

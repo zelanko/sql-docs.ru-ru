@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 66f36e1d-0287-4fac-8a51-71f9f0d7ad5b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 65cb5e39b8bda5d0f964a1586588c5f6e60bb89c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f260ee4737f1d493986e5cfa8e308d8882328140
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68075924"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908960"
 ---
 # <a name="define-a-logical-backup-device-for-a-tape-drive-sql-server"></a>Определение логического устройства резервного копирования для ленточного накопителя (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -74,8 +74,6 @@ ms.locfileid: "68075924"
 5.  В разделе «Расположение» установите переключатель **Лента** и выберите ленточный накопитель, который еще не связан с другим устройством резервного копирования. Если таких накопителей нет, не устанавливайте переключатель **Лента** .  
   
 6.  Чтобы определить новое устройство, нажмите кнопку **OK**.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  Чтобы выполнить резервное копирование на новое устройство, добавьте его в поле **Создать резервную копию на** в диалоговом окне **Резервное копирование базы данных** (**Общие**). Дополнительные сведения см. в разделе [Создание полной резервной копии базы данных (SQL Server)](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md).  
   

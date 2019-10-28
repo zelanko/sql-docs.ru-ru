@@ -13,14 +13,14 @@ ms.assetid: fdc744d5-530e-48c4-9420-cca032fd482b
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: c077342016a8da6c660a991c6ccd577a59a92640
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 0853bc504655b5fe97bab28b300134c0f5aab289
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770490"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908617"
 ---
-# <a name="mssqleng014144"></a>MSSQL_ENG014144
+# <a name="mssql_eng014144"></a>MSSQL_ENG014144
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
     
 ## <a name="message-details"></a>Сведения о сообщении  
@@ -43,8 +43,6 @@ ms.locfileid: "68770490"
 1.  Выполните [sp_helpsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md) в базе данных публикации в издателе, чтобы найти подписки.  
   
 2.  Выполните [sp_dropsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md) в базе данных публикации в издателе, чтобы удалить подписки.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="see-also"></a>См. также:  
  [Справочник по ошибкам и событиям (репликация)](../../relational-databases/replication/errors-and-events-reference-replication.md)   

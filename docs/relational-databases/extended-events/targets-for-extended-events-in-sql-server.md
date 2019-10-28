@@ -11,12 +11,12 @@ ms.assetid: 47c64144-4432-4778-93b5-00496749665b
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 12fea405001214a3f380c204b27c9932b9e59470
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c50fb79383890a2e09cb465c89b459b3bea9a3ca
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68009362"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908000"
 ---
 # <a name="targets-for-extended-events-in-sql-server"></a>Целевые объекты для расширенных событий в SQL Server
 
@@ -73,7 +73,7 @@ ms.locfileid: "68009362"
 
 <a name="h2_target_etw_classic_sync_target"></a>
 
-## <a name="etwclassicsynctarget-target"></a>Целевой объект etw_classic_sync_target
+## <a name="etw_classic_sync_target-target"></a>Целевой объект etw_classic_sync_target
 
 
 Расширенные события SQL Server могут взаимодействовать с трассировкой событий Windows (ETW) для отслеживания активности системы. Дополнительные сведения см. в разделе:
@@ -91,7 +91,7 @@ ms.locfileid: "68009362"
 
 <a name="h2_target_event_counter"></a>
 
-## <a name="eventcounter-target"></a>Целевой объект event_counter
+## <a name="event_counter-target"></a>Целевой объект event_counter
 
 
 Целевой объект event_counter просто подсчитывает, сколько раз возникает каждое указанное событие.
@@ -107,7 +107,7 @@ ms.locfileid: "68009362"
     - Ядро СУБД отключится от любого целевого объекта, который выполняется слишком медленно и может, таким образом, снизить производительность ядра СУБД. Это одна из причин того, что большинство целевых объектов работают *асинхронно*.
 
 
-#### <a name="example-output-captured-by-eventcounter"></a>Пример выходных данных, захваченных event_counter
+#### <a name="example-output-captured-by-event_counter"></a>Пример выходных данных, захваченных event_counter
 
 
 ```
@@ -139,7 +139,7 @@ CREATE EVENT SESSION [event_counter_1]
 
 <a name="h2_target_event_file"></a>
 
-## <a name="eventfile-target"></a>Целевой объект event_file
+## <a name="event_file-target"></a>Целевой объект event_file
 
 
 Целевой объект **event_file** записывает выходные данные сеанса событий из буфера в файл на диске:
@@ -161,7 +161,7 @@ CREATE EVENT SESSION [event_counter_1]
 ::: moniker-end
 
 
-#### <a name="create-event-session-with-eventfile-target"></a>CREATE EVENT SESSION с целевым объектом **event_file**
+#### <a name="create-event-session-with-event_file-target"></a>CREATE EVENT SESSION с целевым объектом **event_file**
 
 
 Далее идет CREATE EVENT SESSION, который мы использовали для тестирования. Одно из предложений ADD TARGET указывает event_file.
@@ -213,7 +213,7 @@ CREATE EVENT SESSION [locks_acq_rel_eventfile_22]
 ```
 
 
-#### <a name="sysfnxefiletargetreadfile-function"></a>функция sys.fn_xe_file_target_read_file
+#### <a name="sysfn_xe_file_target_read_file-function"></a>функция sys.fn_xe_file_target_read_file
 
 
 Целевой объект event_file хранит полученные данные в двоичном формате, который непригоден для чтения человеком. Transact-SQL может вывести содержимое XEL-файла, использовав SELECT FROM для функции [**sys.fn_xe_file_target_read_file**](../../relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql.md) .
@@ -249,7 +249,7 @@ SELECT f.*
 Конечно, можно вручную использовать интерфейс SSMS для просмотра данных в XEL-файлах:
 
 
-#### <a name="data-stored-in-the-eventfile-target"></a>Данные, хранящиеся в целевом объекте event_file
+#### <a name="data-stored-in-the-event_file-target"></a>Данные, хранящиеся в целевом объекте event_file
 
 
 Далее приведен отчет по результатам использования инструкции SELECT для **sys.fn_xe_file_target_read_file**в SQL Server 2016.
@@ -412,7 +412,7 @@ sqlserver      checkpoint_end     database_id  NULL
 
 <a name="h2_target_pair_matching"></a>
 
-## <a name="pairmatching-target"></a>Целевой объект pair_matching
+## <a name="pair_matching-target"></a>Целевой объект pair_matching
 
 
 Целевой объект pair_matching позволяет обнаруживать начальные события без соответствующего конечного события. Например, если событие lock_acquired возникает без своевременной выдачи события lock_released, может возникнуть проблема.
@@ -450,7 +450,7 @@ sqlserver   lock_acquired   resource_type            NULL
 ```
 
 
-### <a name="example-of-pairmatching"></a>Пример pair_matching
+### <a name="example-of-pair_matching"></a>Пример pair_matching
 
 
 Следующая инструкция CREATE EVENT SESSION указывает два события и два целевых объекта. Целевой объект pair_matching указывает два набора полей для сопоставления событий по парам. Порядок полей с разделителями-запятыми, назначенный **begin_matching_columns =** и **end_matching_columns =** , должен совпадать. Между полями, указанными в значении с разделителями-запятыми, нельзя использовать символы табуляции и новой строки, но можно использовать пробелы.
@@ -520,8 +520,6 @@ CREATE EVENT SESSION [pair_matching_lock_a_r_33]
 3. Намеренное отсутствие COMMIT TRANSACTION, до изучения целевых объектов.
 4. Выполнение COMMIT TRANSACTION после тестирования.
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 Простой целевой объект **event_counter** предоставил указанные ниже выходные строки. Поскольку 52-50 = 2, выходные данные указывают на то, что мы должны видеть 2 непарных события lock_acquired при рассмотрении результата целевого объекта pair_matching.
 
 
@@ -549,7 +547,7 @@ sqlserver      lock_acquired   2016-08-05 12:45:47.9980000   InMemTest2      0  
 
 <a name="h2_target_ring_buffer"></a>
 
-## <a name="ringbuffer-target"></a>Целевой объект ring_buffer
+## <a name="ring_buffer-target"></a>Целевой объект ring_buffer
 
 
 Целевой объект ring_buffer удобен для быстрого и простого тестирования событий. При остановке сеанса событий хранимые выходные данные удаляются.
@@ -557,7 +555,7 @@ sqlserver      lock_acquired   2016-08-05 12:45:47.9980000   InMemTest2      0  
 В этом разделе ring_buffer также показано, как можно использовать реализацию XQuery на языке Transact-SQL для копирования XML-содержимого ring_buffer в более удобочитаемый реляционный набор строк.
 
 
-#### <a name="create-event-session-with-ringbuffer"></a>CREATE EVENT SESSION с ring_buffer
+#### <a name="create-event-session-with-ring_buffer"></a>CREATE EVENT SESSION с ring_buffer
 
 
 В этой инструкции CREATE EVENT SESSION, которая использует целевой объект ring_buffer, нет ничего особенного.
@@ -591,7 +589,7 @@ CREATE EVENT SESSION [ring_buffer_lock_acquired_4]
 ```
 
 
-### <a name="xml-output-received-for-lockacquired-by-ringbuffer"></a>Выходные данные XML, полученные ring_buffer для lock_acquired
+### <a name="xml-output-received-for-lock_acquired-by-ring_buffer"></a>Выходные данные XML, полученные ring_buffer для lock_acquired
 
 
 При извлечении инструкцией SELECT содержимое находится в виде XML-строки. Далее показана XML-строка, хранимая целевым объектом ring_buffer в тестировании. Однако для краткости последующего XML-кода были удалены все элементы &#x3c;event&#x3e;, кроме двух. Кроме того, внутри каждого &#x3c;event&#x3e; было удалено несколько лишних элементов &#x3c;data&#x3e;.

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 486ee339-165b-4aeb-b760-d2ba023d7d0a
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: cab94f3f628f1b3423af25467c12ba7b595ede77
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: acea8d44048de35ecbc3214712f699217838e60d
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68021072"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72905236"
 ---
 # <a name="specify-paths-and-optimization-hints-for-selective-xml-indexes"></a>Задайте путь и указания по оптимизации для селективных XML-индексов
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -235,8 +235,6 @@ node1223 = '/a/b/d' as SQL NVARCHAR(200) SINGLETON
     -   Узел `b`, поскольку предикат применяется на узел`b` в выражении XQuery.  
   
 2.  **Принцип 2**. Для достижения наилучшей производительности рекомендуется индексировать все узлы, необходимые для вычисления заданного выражения XQuery. Если индексируются только некоторые узлы, селективный XML-индекс улучшает оценку вложенных выражений, содержащих только индексированные узлы.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  Для улучшения производительности инструкции SELECT, описанной выше, вы можете создать следующий селективный XML-индекс.  
   

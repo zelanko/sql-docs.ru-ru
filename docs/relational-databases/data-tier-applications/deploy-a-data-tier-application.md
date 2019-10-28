@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: c117af35-aa53-44a5-8034-fa8715dc735f
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 7dcb81e48ddd4861e3f89547280b372df4c56ec3
-ms.sourcegitcommit: 873504573569546eb7223d3afefd89bb3d422d6f
+ms.openlocfilehash: db961211295a83b61478f0849feb1cd6b3fa6c7c
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72359539"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907886"
 ---
 # <a name="deploy-a-data-tier-application"></a>Развертывание приложения уровня данных
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -66,8 +66,6 @@ ms.locfileid: "72359539"
 2.  Щелкните правой кнопкой мыши узел **Базы данных** и выберите **Развернуть приложение уровня данных…** .  
   
 3.  Укажите сведения в диалоговых окнах мастера и нажмите кнопку "Готово".
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 Дополнительные сведения о некоторых диалоговых окнах мастера см. ниже. 
      

@@ -16,17 +16,17 @@ ms.assetid: 54757c91-615b-468f-814b-87e5376a960f
 author: aliceku
 ms.author: aliceku
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1ded5b442a6a61ba1a6cf2c0313834cce85f674f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ca2c6f4967368489e49014e7a97267cb64b9a235
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68043188"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72903169"
 ---
 # <a name="always-encrypted-database-engine"></a>Always Encrypted (ядро СУБД)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  ![Постоянное шифрование](../../../relational-databases/security/encryption/media/always-encrypted.png "Постоянное шифрование")  
+  ![Постоянное шифрование](../../../relational-databases/security/encryption/media/always-encrypted.png "Always Encrypted")  
   
  Always Encrypted — это функция, предназначенная для защиты конфиденциальных данных, таких как номера кредитных карт или номера документов (например, номеров социального страхования в США), которые хранятся в базах данных [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)] и [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Постоянное шифрование позволяет клиентам шифровать конфиденциальные данные в клиентских приложениях, не раскрывая ключи шифрования [!INCLUDE[ssDE](../../../includes/ssde-md.md)] ([!INCLUDE[ssSDS](../../../includes/sssds-md.md)] или [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]). Таким образом, постоянное шифрование позволяет разделить пользователей на тех, кто владеет данными (или имеет право их просматривать) и тех, кто управляет данными (но не должен иметь к ним доступа). У локальных администраторов баз данных, операторов облачных баз данных и других неавторизованных пользователей с высоким уровнем привилегий нет доступа к зашифрованным данным, поэтому постоянное шифрование позволяет клиентам хранить конфиденциальные данные вне сферы их непосредственного контроля. При этом организации могут шифровать данные при хранении и использовании в Azure, делегировать права администратора локальной базы данных третьим лицам или упростить требования к безопасности для собственных администраторов базы данных.  
   
@@ -82,8 +82,6 @@ Operand type clash: char(11) encrypted with (encryption_type = 'DETERMINISTIC', 
 
 1. Выберите (SELECT) данные в столбце SSN и сохраните их в приложении как результирующий набор. Это позволит приложению (*драйвер* клиента) расшифровать столбец.
 2. Вставьте (INSERT) данные из результирующего набора в SQL Server. 
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  >[!IMPORTANT]
  > В этом сценарии при обратной отправке на сервер данные будут расшифрованы, так как целевой столбец имеет обычный тип "varchar" и не принимает зашифрованные данные. 

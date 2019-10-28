@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 70f49794-b217-4519-9f2a-76ed61fa9f99
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: fffc95d74a90fc840a49f00563f4f626f755281f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: becdaa14d8876b9baed0b5f0a87ed2ccba098d82
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68076151"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908994"
 ---
 # <a name="create-a-differential-database-backup-sql-server"></a>Создание разностной резервной копии базы данных (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -68,8 +68,6 @@ ms.locfileid: "68076151"
 ##  <a name="SSMSProcedure"></a> Среда SQL Server Management Studio  
   
 #### <a name="create-a-differential-database-backup"></a>Создание разностной резервной копии базы данных  
-
-[!INCLUDE[Freshness](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 1.  После соединения с соответствующим экземпляром компонента [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]в обозревателе объектов разверните дерево сервера, щелкнув его имя.  
   

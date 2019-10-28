@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 64c25012-7068-476f-afa2-0b4f3adde9a4
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: ae4caa882a2618ea57c84a33e8c9cb7e87db7c0a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: eeb3d08f0a14434fa5d071d88a3d26ec6fcaf6c9
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68099225"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72903918"
 ---
 # <a name="resource-governor-classifier-function"></a>Resource Governor Classifier Function
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -73,8 +73,6 @@ ms.locfileid: "68099225"
 2.  Выполнение триггера LOGON.  
   
 3.  Классификация  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  После запуска сеанса классификатор регулятора ресурсов назначает этот сеанс группе рабочей нагрузки, и этот сеанс должен функционировать с использованием ресурсов, назначенных этой группе рабочей нагрузки.  
   

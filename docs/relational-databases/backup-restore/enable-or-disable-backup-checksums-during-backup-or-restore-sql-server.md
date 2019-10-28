@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6786bd1e-ad97-430a-8dfb-d4ba952d6c4d
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 95a1761334328ed01c54ea03ff282cbec0bb6903
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 14327b3d8b06355445ae92edaa65464124faff8a
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68089821"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908952"
 ---
 # <a name="enable-or-disable-backup-checksums-during-backup-or-restore-sql-server"></a>Включение или отключение вычисления контрольных сумм резервных копий во время резервного копирования или восстановления (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -60,8 +60,6 @@ ms.locfileid: "68089821"
 1.  Выполните следующие шаги, чтобы [создать резервную копию базы данных](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md).  
   
 2.  На странице **Параметры** в разделе **Надежность** выберите параметр **Вычислять контрольную сумму перед записью на носитель**.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
   

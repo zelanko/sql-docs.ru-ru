@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 79dd4254-e3c6-467a-bb6f-f99e51757e99
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 22e393c2758342c0d4a48b8b03ed757d8f95d38c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7c1641f0aad5758f709776322e7eb66f93fcca0f
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68073014"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909234"
 ---
 # <a name="create-a-trace-transact-sql"></a>создать трассировку (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,12 +32,10 @@ ms.locfileid: "68073014"
   
 3.  Дополнительно выполните хранимую процедуру **sp_trace_setfilter** , чтобы установить любой фильтр или комбинацию фильтров.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-     **sp_trace_setevent** and **sp_trace_setfilter** can be executed only on existing traces that are stopped.  
+     Хранимые процедуры**sp_trace_setevent** и **sp_trace_setfilter** могут быть выполнены только для существующих остановленных трассировок.  
   
     > [!IMPORTANT]  
-    >  Unlike regular stored procedures, parameters of all SQL Server Profiler stored procedures (<strong>sp_trace_*xx*</strong>) are strictly typed and do not support automatic data type conversion. If these parameters are not called with the correct input parameter data types, as specified in the argument description, the stored procedure returns an error.  
+    >  В отличие от обычных хранимых процедур, параметры всех хранимых процедур приложения SQL Server Profiler (<strong>sp_trace_*xx*</strong>) жестко типизированы и не поддерживают автоматическое преобразование типов данных. Если эти параметры не вызываются вместе с правильными типами данных входных параметров, как указано в описании аргумента, хранимая процедура возвращает ошибку.  
   
 ## <a name="example"></a>Пример  
  В следующем примере кода с помощью [!INCLUDE[tsql](../../includes/tsql-md.md)]создается трассировка. Он состоит из трех разделов: создание трассировки, заполнение файла трассировки и остановка трассировки. Настройте трассировку, добавив события, которые необходимо отслеживать. Список событий и столбцов см. в статье [Хранимая процедура sp_trace_setevent (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)создается трассировка.  

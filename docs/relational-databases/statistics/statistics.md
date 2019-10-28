@@ -23,12 +23,12 @@ ms.assetid: b86a88ba-4f7c-4e19-9fbd-2f8bcd3be14a
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ac146dc20fbbf078a7f71dfdbe81b4489ea1849f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 410025552d46c22ddf168fb3521e1f92641e13b9
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67934116"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907081"
 ---
 # <a name="statistics"></a>Статистика
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "67934116"
 
 На следующей диаграмме показана гистограмма с шестью шагами. Первый шаг — это область слева от первого верхнего граничного значения.
   
-![](../../relational-databases/system-dynamic-management-views/media/histogram_2.gif "Гистограмма") 
+![](../../relational-databases/system-dynamic-management-views/media/histogram_2.gif "Histogram") 
   
 Для каждого шага гистограммы (см. выше):
 -   Полужирной линией обозначено верхнее граничное значение (*range_high_key*) и количество его вхождений (*equal_rows*).  
@@ -104,7 +104,7 @@ WHERE s.name like '_WA%'
 ORDER BY s.name;  
 ```  
   
-#### <a name="autoupdatestatistics-option"></a>Параметр AUTO_UPDATE_STATISTICS  
+#### <a name="auto_update_statistics-option"></a>Параметр AUTO_UPDATE_STATISTICS  
  Если включен параметр [AUTO_UPDATE_STATISTICS](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_update_statistics) (автоматическое обновление статистики), оптимизатор запросов определяет, устарела ли статистика, и при необходимости обновляет ее, если она используется в запросе. Статистика становится устаревшей, после того как операции вставки, обновления, удаления или слияния изменяют распределение данных в таблице или индексированном представлении. Оптимизатор запросов определяет, устарела ли статистика, подсчитывая операции изменения данных с момента последнего обновления статистики и сравнивая число изменений с пороговым значением. Пороговое значение основано на количестве строк в таблице или индексированном представлении.  
   
 * Если используется версия до [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] применяет пороговое значение в зависимости от процента измененных строк. Это значение не зависит от числа строк в таблице. Пороговое значение:
@@ -122,7 +122,7 @@ ORDER BY s.name;
  
 Дополнительные сведения см. в разделе об [управлении поведением Autostat (AUTO_UPDATE_STATISTICS) в SQL Server](https://support.microsoft.com/help/2754171).
   
-#### <a name="autoupdatestatisticsasync"></a>AUTO_UPDATE_STATISTICS_ASYNC  
+#### <a name="auto_update_statistics_async"></a>AUTO_UPDATE_STATISTICS_ASYNC  
  Параметр [AUTO_UPDATE_STATISTICS_ASYNC](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_update_statistics_async) (асинхронное обновление статистики) определяет, какой режим обновления статистики использует оптимизатор запросов: синхронный или асинхронный. По умолчанию параметр асинхронного обновления статистики отключен, и оптимизатор запросов обновляет статистику синхронно. Параметр AUTO_UPDATE_STATISTICS_ASYNC применяется к объектам статистики, создаваемым для индексов, отдельных столбцов в предикатах запросов, и к статистике, создаваемой инструкцией [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) .  
  
  > [!NOTE]
@@ -161,8 +161,6 @@ ORDER BY s.name;
 1.  Оптимизатор запросов создает статистику для индексов таблиц или представлений в момент создания индекса. Такая статистика создается по ключевым столбцам индекса. Если индекс является отфильтрованным, оптимизатор запросов создает отфильтрованную статистику по подмножеству строк, которое указано для отфильтрованного индекса. Дополнительные сведения об отфильтрованных индексах см. в статье [Создание отфильтрованных индексов](../../relational-databases/indexes/create-filtered-indexes.md) и [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).  
   
 2.  Если включен параметр [AUTO_CREATE_STATISTICS](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_create_statistics), оптимизатор запросов создает статистику для отдельных столбцов в предикатах запросов.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 Для большинства запросов эти два метода создания статистики обеспечивают создание высококачественного плана запроса. В некоторых случаях план запроса можно усовершенствовать, создав дополнительную статистику с помощью инструкции [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) . Эта дополнительная статистика может фиксировать статистическую корреляцию, которую не учитывает оптимизатор запросов при создании статистики для индексов или отдельных столбцов. Приложение может иметь дополнительные статистические корреляции в данных таблицы. Если учитывать такие корреляции в объекте статистики, оптимизатор запросов сможет усовершенствовать планы запросов. Например, план запроса можно улучшить путем использования отфильтрованной статистики по подмножеству строк данных или статистики по нескольким столбцам предиката запроса.  
   

@@ -16,12 +16,12 @@ ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb7
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 352aa27fd759c14677ed2b674045c55e2b9c0896
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 76ad73aa54d05081827a99a5b14c5390a04f3782
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68073003"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909272"
 ---
 # <a name="transaction-locking-and-row-versioning-guide"></a>Руководство по блокировке и управлению версиями строк транзакций
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -1073,8 +1073,6 @@ BEGIN TRANSACTION
   
 1.  Задайте для одного или обоих параметров базы данных `READ_COMMITTED_SNAPSHOT` и `ALLOW_SNAPSHOT_ISOLATION` значение ON.  
 2.  Задание соответствующего уровня изоляции транзакций в приложении:  
-
-[!INCLUDE[freshInclude](../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
     -   Если параметр базы данных `READ_COMMITTED_SNAPSHOT` имеет значение ON, транзакции, устанавливающие уровень изоляции READ COMMITTED, используют управление версиями строк.  
     -   Если параметр базы данных `ALLOW_SNAPSHOT_ISOLATION` имеет значение ON, транзакции могут устанавливать уровень изоляции моментальных снимков.  

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: f0001b33-9078-4432-8460-496736fb325a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 4203f082d093cae12dc546b083adc6e049d8799f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 241cd0e4ec225c6627bb47ff6a4312f42aba26d1
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68087392"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908631"
 ---
 # <a name="export-a-policy-based-management-policy"></a>Экспорт политики управления на основе политик
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,6 +57,4 @@ ms.locfileid: "68087392"
 6.  В диалоговом окне **Экспорт политики** введите в адресной строке имя файла и путь к нему. Также можно найти подходящее расположение для файла в области панели навигации диалогового окна, а затем ввести имя XML-файла в поле **Имя файла** .  
   
 7.  После завершения нажмите кнопку **Сохранить**.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 

@@ -11,12 +11,12 @@ ms.assetid: db1d668a-23b7-4757-a9c5-1bd848ba7f6d
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9ec9cd60ff4197b94a91e280ad17cc349b906dc6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: aa54440c5b1a506ce9c218dc7213383e0ff43ca0
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68138499"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72906869"
 ---
 # <a name="delete-user-defined-functions"></a>Удаление определенных пользователем функций
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -69,10 +69,8 @@ ms.locfileid: "68138499"
   
 5.  В диалоговом окне **Удаление объекта** нажмите кнопку **ОК**.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
     > [!IMPORTANT]  
-    >  Click **Show Dependencies** in the **Delete Object** dialog box to open the _function\_name_**Dependencies** dialog box. This will show all of the objects that depend on the function and all of the objects on which the function depends.  
+    >  Щелкните **Показать зависимости** в диалоговом окне **Удаление объекта**, чтобы открыть диалоговое окно _Зависимости_**имя\_функции**. При этом будут отображены все объекты, зависящие от функции, и все объекты, от которых зависит функция.  
   
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
   

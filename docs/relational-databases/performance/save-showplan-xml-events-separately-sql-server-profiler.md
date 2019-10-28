@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 33320a7a-36e8-401c-876d-5b82c49abd85
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: cc0fcbe1a04e9b49f47c30e9eae40abbd1dccfd1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4a3530d3796cf65dd66dd509e3f168183d4b274a
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68113373"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908078"
 ---
 # <a name="save-showplan-xml-events-separately-sql-server-profiler"></a>Раздельное сохранение событий Showplan XML (приложение SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -62,8 +62,6 @@ ms.locfileid: "68113373"
 10. Чтобы все события **Showplan XML** сохранялись в одном XML-файле, установите флажок **Все пакеты XML Showplan в один файл**. Чтобы для каждого события **Showplan XML** создавался отдельный XML-файл, установите флажок **Каждый пакет XML Showplan в отдельный файл**.  
   
 11. Для просмотра события **Showplan XML** в среде SQL Server Management Studio выберите в меню **Файл** пункт **Открыть**, затем выберите **Файл**. Чтобы выбрать и открыть один из файлов событий **Showplan XML**, перейдите в каталог с этими файлами. Файлы событий**Showplan XML** имеют расширение .SQLPlan.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="see-also"></a>См. также раздел  
  [Анализ запросов с помощью результатов инструкции Showplan в приложении SQL Server Profiler](../../tools/sql-server-profiler/analyze-queries-with-showplan-results-in-sql-server-profiler.md)  

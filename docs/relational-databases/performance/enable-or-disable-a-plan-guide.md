@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b00ab550-5308-4cb8-8330-483cd1d25654
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 1f0ae81c7b58fde86de13bc7cdd83451592183ee
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6ebda9e472f2b276b66d393a808aaac3e8b595b1
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67946829"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907632"
 ---
 # <a name="enable-or-disable-a-plan-guide"></a>Включение или отключение структуры плана.
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -63,8 +63,6 @@ ms.locfileid: "67946829"
 3.  Правой кнопкой мыши щелкните ту структуру плана, которую требуется включить или отключить, затем выберите команду **Отключить** или **Включить**.  
   
 4.  В диалоговом окне **Отключение структуры плана** или **Включение структуры плана** убедитесь, что выбранное действие выполнено успешно, и нажмите кнопку **Закрыть**.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 #### <a name="to-disable-or-enable-all-plan-guides-in-a-database"></a>Отключение или включение всех структур планов в базе данных  
   

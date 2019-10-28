@@ -14,12 +14,12 @@ ms.assetid: c1ef96f1-290d-4952-8369-2f49f27afee2
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d25137348904fdf3eceb1cc0fceb2a147580f744
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a392904b378514bb22816a3c325535fbe94cbacf
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68092289"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907861"
 ---
 # <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>Определение, должна ли таблица или хранимая процедура быть перенесена в In-Memory OLTP
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -122,8 +122,6 @@ ms.locfileid: "68092289"
 3.  Нажмите кнопку **Далее** и убедитесь, что список задач соответствует параметрам на странице **Настройка параметров создания контрольных списков** .  
   
 4.  Нажмите кнопку **Готово**, а затем убедитесь, что отчеты контрольных списков миграции созданы только для выбранных объектов.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  Точность отчетов можно проверить, сравнив их с отчетами, созданными с помощью помощника по оптимизации памяти и помощника по собственной компиляции. Дополнительные сведения см. в разделах [Memory Optimization Advisor](../../relational-databases/in-memory-oltp/memory-optimization-advisor.md) и [Native Compilation Advisor](../../relational-databases/in-memory-oltp/native-compilation-advisor.md).  
   

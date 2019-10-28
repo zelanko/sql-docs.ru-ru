@@ -24,12 +24,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0b3115fa833f657236939200b262c862182d9117
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 52fc7d3d43c1f0adcf7ab94d78cf301254a9a18d
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68132195"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72903879"
 ---
 # <a name="populate-full-text-indexes"></a>Заполнение полнотекстовых индексов
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -207,8 +207,6 @@ ALTER FULLTEXT INDEX ON Production.Document
     -   Чтобы **удалить** существующее расписание, выберите существующее расписание и щелкните **Удалить**.  
   
 2.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]   
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ##  <a name="crawl"></a> Устранение ошибок в заполнении средства полнотекстового поиска (сканирование)  
 При возникновении ошибки во время сканирования модуль протоколирования сканирования, входящий в механизм полнотекстового поиска, создает и обновляет журнал сканирования, хранящийся в текстовом файле. Каждый журнал сканирования соответствует конкретному полнотекстовому каталогу. По умолчанию журналы сканирования для конкретного экземпляра (в нашем случае — для экземпляра по умолчанию) хранятся в папке `%ProgramFiles%\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\LOG`.

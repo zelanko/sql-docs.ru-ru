@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: be94f1c1-816b-4b1d-83f6-2fd6f5807ab7
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 3edd60a47ac4cebcdea3f70a0658ce837e3d63ee
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c0bb4dfc3a0ac9109b210cfe02fb6a2e743f0ce5
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68095649"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907954"
 ---
 # <a name="troubleshooting-oracle-publishers"></a>Диагностика издателей Oracle
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -78,8 +78,6 @@ ms.locfileid: "68095649"
 2.  Выполните команду SQL `DROP PUBLIC SYNONYM MSSQLSERVERDISTRIBUTOR;`.  
   
 3.  Выполните команду SQL `DROP USER <replication_administrative_user_schema>``CASCADE;`.  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="sql-server-error-21663-is-raised-regarding-the-lack-of-a-primary-key"></a>Ошибка SQL Server 21663 возникает из-за отсутствия первичного ключа  
  Статьи в публикациях транзакций должны иметь правильный первичный ключ. Если они не имеют правильного первичного ключа, при попытке добавления статьи выдается следующее сообщение об ошибке:  

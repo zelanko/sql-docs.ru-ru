@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7b18a04a-2c3d-4efe-a0bc-c3f92be72fd0
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 379a7fe83694307c9f4d981d000dc8b9457fa6c9
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: f85dfc4a05b8affad4ef814c1871f504d619cdb8
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769415"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907703"
 ---
 # <a name="tutorial-configure-replication-between-two-fully-connected-servers-transactional"></a>Руководство. Настройка репликации между двумя полностью подключенными серверами (репликация транзакций)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -115,8 +115,6 @@ ms.locfileid: "68769415"
     ![Страница "Завершение работы мастера" с именем публикации](media/tutorial-replicating-data-between-continuously-connected-servers/advworksproducttrans.png)
   
 14. После создания публикации нажмите кнопку **Закрыть**, чтобы закрыть мастер. 
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 Если при попытке создать публикацию обнаруживается, что агент SQL Server не запущен, может возникнуть следующая ошибка. Она указывает на то, что публикация создана успешно, но при этом агент моментальных снимков запустить не удалось. В этом случае необходимо запустить агент SQL Server, а затем вручную запустить агент моментальных снимков. Инструкции приведены в следующем разделе. 
 

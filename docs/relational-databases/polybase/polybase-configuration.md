@@ -8,12 +8,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 726b9c7ab8e5eddde8fe4b4ab7b545dda35cad1e
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: ef4222b866be7979410f6a3f97dce8a4fc24ecd7
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710644"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909431"
 ---
 # <a name="polybase-configuration-and-security-for-hadoop"></a>Конфигурация и обеспечение безопасности PolyBase для Hadoop
 
@@ -168,8 +168,6 @@ Yarn-site.xml yarn.application.classpath и mapreduce.application.classpath ко
    |7|yarn-site.xml yarn|yarn.resourcemanager.principal|Найдите конфигурацию для Hadoop и скопируйте ее на компьютер с SQL Server. Например: yarn/_HOST@YOUR-REALM.COM.|  
 
 4. Создайте объект учетных данных для базы данных, чтобы указать аутентификационные сведения для каждого пользователя Hadoop. См. статью [Объекты T-SQL PolyBase](../../relational-databases/polybase/polybase-t-sql-objects.md).  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="next-steps"></a>Следующие шаги  
 

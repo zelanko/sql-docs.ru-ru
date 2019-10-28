@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 591c0313-82ce-4689-9fc1-73752ff122cf
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8e7ee336c9f81c8d4258e16cf09aa9ffec177e0f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a97acba6af3cb960cf4d98d26d3f8da4805822da
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68110960"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907988"
 ---
 # <a name="oracle-subscribers"></a>Подписчики Oracle
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,8 +50,6 @@ ms.locfileid: "68110960"
     |Задайте сведения об узле для идентификации прослушивателя базы данных|Узел — это имя или DNS-псевдоним компьютера, на котором запущен прослушиватель Oracle. Обычно это тот же компьютер, на котором расположена база данных. Для некоторых протоколов, возможно, нужно будет указать дополнительные сведения. Например если выбрать протокол ТСР, нужно будет указать порт, который слушается прослушивателем для запросов на подключение к целевой базе данных. По умолчанию для протокола TCP используется порт 1521.|  
   
 3.  Создайте публикацию моментальных снимков или публикацию транзакций, активируйте ее для подписчиков, отличных от[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , а затем создайте принудительную подписку для подписчика. Дополнительные сведения см. в статье [Создание подписки для подписчика, отличного от подписчика SQL Server](../../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md).  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ### <a name="setting-directory-permissions"></a>Настройте разрешения для каталога  
  Учетной записи, под которой запускается служба [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] на распространителе, должны быть предоставлены права на чтение и выполнение для каталога (и всех вложенных каталогов), где установлено клиентское сетевое программное обеспечение Oracle.  

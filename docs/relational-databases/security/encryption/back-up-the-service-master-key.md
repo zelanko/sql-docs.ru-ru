@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: f60b917c-6408-48be-b911-f93b05796904
 author: aliceku
 ms.author: aliceku
-ms.openlocfilehash: 4a5b28fda96be3fce311abc159bbe8e94fc061ed
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3ce0d7685c042e22e45cd85e05a8e7f779045ee6
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68024419"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72903004"
 ---
 # <a name="back-up-the-service-master-key"></a>Создание резервной копии главного ключа службы
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +68,5 @@ ms.locfileid: "68024419"
 8. Скопируйте файл на носитель данных резервных копий и проверьте правильность копирования.  
   
 9. Сохраните резервную копию в надежном месте вне системы.  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  Дополнительные сведения см. в разделах [OPEN MASTER KEY (Transact-SQL)](../../../t-sql/statements/open-master-key-transact-sql.md) и [BACKUP MASTER KEY (Transact-SQL)](../../../t-sql/statements/backup-master-key-transact-sql.md).  

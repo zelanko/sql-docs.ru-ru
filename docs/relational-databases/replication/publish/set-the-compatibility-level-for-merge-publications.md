@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: db47ac73-948b-4d77-b272-bb3565135ea5
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: bcb11ef0f2c6216b26957f732e5ed34fb233cc05
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 3506974f6eb1bc22aa6a20833b9205c3507c113c
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710884"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72904901"
 ---
 # <a name="set-the-compatibility-level-for-merge-publications"></a>Задание уровня совместимости для публикаций слиянием
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,8 +53,6 @@ ms.locfileid: "71710884"
 #### <a name="to-set-the-publication-compatibility-level-for-a-merge-publication"></a>Установка уровня совместимости для публикации слиянием  
   
 1.  Чтобы сделать публикацию совместимой с прежними версиями [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], выполните в издателе хранимую процедуру [sp_addmergepublication (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md), указав значение для `@publication_compatibility_level`. Дополнительные сведения см. в разделе [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md).  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 #### <a name="to-change-the-publication-compatibility-level-of-a-merge-publication"></a>Изменение уровня совместимости для публикации слиянием  
   

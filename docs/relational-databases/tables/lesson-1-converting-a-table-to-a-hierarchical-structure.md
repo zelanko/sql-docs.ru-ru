@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5ee6f19a-6dd7-4730-a91c-bbed1bd77e0b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e1a9217d42af6b361a02595abcb459102183494b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 05906db66c2bf4948e91dddafa2cdd54aaf936ec
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68016341"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907297"
 ---
 # <a name="lesson-1-converting-a-table-to-a-hierarchical-structure"></a>Урок 1. Преобразование таблицы в иерархическую структуру
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -41,9 +41,6 @@ ms.locfileid: "68016341"
 ### <a name="copy-the-employee-table"></a>Копирование таблицы Employee  
   
 1.  Запустите следующий код в окне редактора запросов, чтобы скопировать структуру и данные таблицы **Employee** в новую таблицу **EmployeeDemo**. Поскольку в исходной таблице уже используется hierarchyid, этот запрос фактически преобразует иерархию в плоскую структуру, чтобы получить записи руководителя и сотрудника. В следующих частях этого занятия мы будем реконструировать эту иерархию.
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 
    ```sql  
    USE AdventureWorks2017;  
@@ -349,7 +346,7 @@ ms.locfileid: "68016341"
     SELECT * FROM HumanResources.EmployeeDemo ;  
     ```  
   
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 Следующая статья содержит сведения для создания иерархической таблицы и управления данными в ней. 
 
 Дополнительные сведения см. в следующей статье:

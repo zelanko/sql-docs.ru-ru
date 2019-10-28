@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 428908b8-fb6a-4d0c-8339-ee133e23aad2
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 24c587168f9778601e672141775f822b1b0362fc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 41ad2257f18b73794fa788cefdd3e77e602e11b7
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68055483"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909628"
 ---
 # <a name="view-collection-set-logs-sql-server-management-studio"></a>Просмотр журналов набора элементов сбора (среда SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,8 +32,6 @@ ms.locfileid: "68055483"
      При этом открывается **средство просмотра журнала**. Все файлы журнала для каждого набора сбора будут перечислены и предварительно выбраны в узле **Сбор данных** .  
   
 3.  Для просмотра журналов только определенных наборов сбора снимите флажки рядом с каждым набором сбора, журналы которых просматривать нет необходимости. Сведения о журнале для этих наборов сбора будут удалены из панели данных **средства просмотра файлов журнала** .  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ### <a name="to-view-a-specific-collection-set-log-file"></a>Просмотр определенного файла журнала набора сбора  
   

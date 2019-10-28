@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 697b69b3-f157-4e22-ac4e-f65c5fc2d0ad
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 159369a30ffe4f0b67f59f3970c241d9275f7a54
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5e2be902c241403ec044b3d348f90dc85327b8ad
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68134670"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909523"
 ---
 # <a name="unpack-a-dac-package"></a>Распаковка пакета DAC
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -27,8 +27,6 @@ ms.locfileid: "68134670"
 1.  **Перед началом работы**  [безопасность](#Security)  
   
 2.  **Распаковка приложения уровня данных с использованием:**  [диалогового окна распаковки приложения уровня данных](#UnpackDACDial), [изучения содержимого пакета приложения уровня данных](#ExamDACPack)  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ##  <a name="Security"></a> безопасность  
  Рекомендуется не выполнять развертывание пакетов DAC, полученных из неизвестных или ненадежных источников. В этих пакетах может содержаться вредоносный код, вызывающий выполнение непредусмотренных инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)] или появление ошибок из-за изменения схемы. Перед тем как использовать приложение уровня данных, полученное из неизвестного или ненадежного источника, разверните его на изолированном тестовом экземпляре компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)], распакуйте приложение уровня данных и изучите его код, например хранимые процедуры или другой определенный пользователем код.  

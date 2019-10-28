@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 055f9c6a-5c18-4942-98e7-ec918f0ff975
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: d2fd69c58f9572a479e4ba95fab1d1af9e0214be
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4314dbd1ab80fe8a26a1c6fa2b2429b68c6645fa
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67937676"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908900"
 ---
 # <a name="remove-defunct-filegroups-sql-server"></a>Удаление уничтоженных файловых групп (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -78,8 +78,6 @@ ms.locfileid: "67937676"
 5.  Выберите страницу **Файловые группы** .  
   
 6.  В списке **Строки** выберите файловую группу для удаления, нажмите кнопку **Удалить**, а затем кнопку **ОК**.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
   

@@ -25,12 +25,12 @@ ms.assetid: 736d8d9a-39f1-4bf8-b81f-2e56c134d12e
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 28e7a72be3cbf18cd2adf821f3310a1ea6801ccc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 88f53ba0372b56fce72a23fe33790c822729d8d1
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68134772"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908490"
 ---
 # <a name="import-a-bacpac-file-to-create-a-new-user-database"></a>Импорт файла BACPAC для создания новой пользовательской базы данных
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -42,8 +42,6 @@ ms.locfileid: "68134772"
 1.  При импорте создается новое приложение уровня данных (DAC) и связанная с ним база данных, которая использует определение DAC, сохраненное в файле экспорта, точно так же при развертывании DAC создается новое приложение уровня данных из определения в файле пакета DAC.  
   
 2.  Массовый импорт копирует данные из файла экспорта.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="sql-server-utility"></a>Служебная программа SQL Server  
  При импорте приложения уровня данных в экземпляр компонента Database Engine импортированное приложение уровня данных будет включено в служебную программу SQL Server при следующей отправке набора элементов сбора программы из экземпляра в точке управления служебной программой. После этого приложение уровня данных появится в узле **Развернутые приложения уровня данных** в окне [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **Utility Explorer** and reported in the **Развернутые приложения уровня данных** details page.  

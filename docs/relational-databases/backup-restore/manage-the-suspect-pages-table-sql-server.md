@@ -18,14 +18,14 @@ helpviewer_keywords:
 ms.assetid: f394d4bc-1518-4e61-97fc-bf184d972e2b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 6b463e8afdfa7f3f1c2054c273ed1b9074b7035b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 97c69fe0a6e1de53840b5f31c16d51d1d6d08263
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68033810"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908916"
 ---
-# <a name="manage-the-suspectpages-table-sql-server"></a>Управление таблицей suspect_pages (SQL Server)
+# <a name="manage-the-suspect_pages-table-sql-server"></a>Управление таблицей suspect_pages (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   В этом разделе описывается управление таблицей **suspect_pages** в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с использованием [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Таблица **suspect_pages** содержит сведения о потенциально поврежденных страницах и используется при принятии решений о необходимости восстановления. Таблица [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md) находится в [базе данных msdb](../../relational-databases/databases/msdb-database.md).  
   
@@ -123,7 +123,7 @@ ms.locfileid: "68033810"
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
-#### <a name="to-manage-the-suspectpages-table"></a>Управление таблицей suspect_pages  
+#### <a name="to-manage-the-suspect_pages-table"></a>Управление таблицей suspect_pages  
   
 1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], разверните его, а затем разверните узел **Базы данных**.  
   
@@ -133,11 +133,9 @@ ms.locfileid: "68033810"
   
 4.  В окне запроса измените, обновите или удалите необходимые строки.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
   
-#### <a name="to-manage-the-suspectpages-table"></a>Управление таблицей suspect_pages  
+#### <a name="to-manage-the-suspect_pages-table"></a>Управление таблицей suspect_pages  
   
 1.  Установите соединение с компонентом [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   

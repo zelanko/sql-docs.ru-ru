@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9b8873cc-df54-4336-ab9b-8f525132c2b0
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 6a84998850a5530aec771d19b2ba3182ed9de098
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 66f12768a7fb739125022908d1decb4ef3327a77
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67940868"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909189"
 ---
 # <a name="back-up-the-transaction-log-when-the-database-is-damaged-sql-server"></a>Создание резервной копии журнала транзакций при повреждении базы данных (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,8 +61,6 @@ ms.locfileid: "67940868"
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
 #### <a name="to-back-up-the-tail-of-the-transaction-log"></a>Создание резервной копии заключительного фрагмента журнала транзакций  
-
-[!INCLUDE[Freshness](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 1.  После соединения с соответствующим экземпляром компонента [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]в обозревателе объектов разверните дерево сервера, щелкнув его имя.  
   

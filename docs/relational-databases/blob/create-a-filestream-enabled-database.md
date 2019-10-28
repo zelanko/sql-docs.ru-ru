@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 0fc16356-76f7-44b8-a58b-f0b7c43694ec
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 45a26647502841a87f6ba525e0296903cf64ef6c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 033e90cbccbb6db9a454183ae982ed2a898c2054
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085421"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908754"
 ---
 # <a name="create-a-filestream-enabled-database"></a>Создание базы данных с поддержкой FILESTREAM
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,8 +35,6 @@ ms.locfileid: "68085421"
     >  Для этого скрипта должен существовать каталог C:\Data.  
   
 3.  Чтобы построить базу данных, нажмите кнопку **Выполнить**.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="example"></a>Пример  
  В следующем примере кода создается база данных с именем `Archive`. В этой базе данных содержатся три файловые группы: `PRIMARY`, `Arch1`и `FileStreamGroup1`. `PRIMARY` и `Arch1` — это обычные файловые группы, которые не могут содержать данные FILESTREAM. `FileStreamGroup1` — это файловая группа `FILESTREAM` .  

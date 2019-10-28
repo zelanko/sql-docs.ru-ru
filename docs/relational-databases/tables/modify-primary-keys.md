@@ -14,12 +14,12 @@ ms.assetid: 8e2a15ba-1cd1-4408-b860-16c3ee37d635
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9c224493a9ada07b4153632f4a9aa4fd80646d7f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ef278fbdc9fa2599e7612cd9c3b54b909a9bf1f0
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67999477"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907321"
 ---
 # <a name="modify-primary-keys"></a>Изменение первичных ключей
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -63,8 +63,6 @@ ms.locfileid: "67999477"
     |Изменение порядка столбцов|Выберите свойство **Столбцы**и нажмите кнопку с многоточием **(...)** справа от свойства. В диалоговом окне  **Столбцы индекса** удалите столбцы из первичного ключа. Затем снова добавьте эти столбцы в необходимом порядке. Чтобы удалить столбец из ключа, просто удалите имя столбца из списка имен **Столбец** .|  
   
 4.  В меню **Файл** выберите пункт **Сохранить**_table name_.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
  **Изменение первичного ключа**  

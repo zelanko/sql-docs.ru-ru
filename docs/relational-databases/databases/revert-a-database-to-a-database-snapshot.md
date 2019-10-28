@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8f74dd31-c9ca-4537-8760-0c7648f0787d
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: a44e97d97a98b1b3f10c77ca632a67437ca48ae9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c636db77ffdf8249cf03814abca031b0897fb4c9
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68127231"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909508"
 ---
 # <a name="revert-a-database-to-a-database-snapshot"></a>Восстановление базы данных до состояния, сохраненного в моментальном снимке
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -117,8 +117,6 @@ ms.locfileid: "68127231"
 5.  Запустите базу данных.  
   
 6.  Кроме того, можно создать резервную копию восстанавливаемой базы данных, особенно если в ней используется полная модель восстановления или модель восстановления с неполным протоколированием. Сведения о резервном копировании базы данных см. в разделе [Создание полной резервной копии базы данных (SQL Server)](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md).  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ###  <a name="TsqlExample"></a> Примеры (Transact-SQL)  
  В этом разделе содержатся примеры восстановления базы данных до состояния, соответствующего моментальному снимку.  

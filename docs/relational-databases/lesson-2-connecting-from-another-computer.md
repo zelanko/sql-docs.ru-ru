@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: fd4ddeb8-0cb6-441b-9704-03575c07020f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 0240c3e4f9f58bfb453e2537695631d8be3aa793
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5d1bffd38e1c604d5002f00cae0bcda9e4becf21
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68073716"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909703"
 ---
 # <a name="lesson-2-connecting-from-another-computer"></a>Урок 2. Подключение с другого компьютера
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -63,8 +63,6 @@ ms.locfileid: "68073716"
   
     > [!NOTE]  
     > После внесения изменений в сетевые протоколы необходимо перезапустить службу [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ; однако это выполняется в следующей задаче.  
-
-[!INCLUDE[fresh-note-steps-feedback](../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="port"></a>Настройка фиксированного порта  
 В целях повышения безопасности в таких системах, как Windows Server 2008, [!INCLUDE[wiprlhlong](../includes/wiprlhlong-md.md)]и Windows 7, включен брандмауэр Windows. При подключении к этому экземпляру из другого компьютера необходимо открыть порт соединения в брандмауэре. Экземпляр компонента [!INCLUDE[ssDE](../includes/ssde-md.md)] , запускаемый по умолчанию, прослушивает порт 1433, поэтому нет необходимости настраивать фиксированный порт. Однако именованные экземпляры, включая [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] , принимают соединения через динамически назначаемые порты. Прежде чем появится возможность открыть порт в брандмауэре, необходимо предварительно настроить компонент [!INCLUDE[ssDE](../includes/ssde-md.md)] для прослушивания конкретного порта, известного как постоянный порт или статический порт; в противном случае компонент [!INCLUDE[ssDE](../includes/ssde-md.md)] может прослушивать другой порт после каждого запуска. Дополнительные сведения о брандмауэрах, настройках брандмауэра Windows по умолчанию и описание портов TCP, влияющих на ядро СУБД, службы Analysis Services, службы Reporting Services и службы Integration Services, см. в разделе [Настройка брандмауэра Windows для разрешения доступа к SQL Server](../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  

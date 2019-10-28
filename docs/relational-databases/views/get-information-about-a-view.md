@@ -22,12 +22,12 @@ ms.assetid: 05a73e33-8f85-4fb6-80c1-1b659e753403
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d22a591c770a09e0bd57f4c92116fcf72af45758
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f5e660301620a98e7ea6b93b4242da1a0d852ce9
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68123412"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909883"
 ---
 # <a name="get-information-about-a-view"></a>Получение сведений о представлении
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -63,42 +63,40 @@ ms.locfileid: "68123412"
   
 2.  Щелкните правой кнопкой представление, свойства которого необходимо просмотреть, и выберите пункт **Свойства**.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-     The following properties show in the **View Properties** dialog box.  
+     В диалоговом окне **Свойства представления** отображаются следующие свойства:  
   
-     **Database**  
-     The name of the database containing this view.  
+     **База данных**  
+     Имя базы данных, содержащей это представление.  
   
      **Server**  
-     The name of the current server instance.  
+     Имя текущего экземпляра сервера.  
   
-     **User**  
-     The name of the user of this connection.  
+     **Пользователь**  
+     Имя пользователя этого соединения.  
   
-     **Created date**  
-     Displays the date the view was created.  
+     **Дата создания**  
+     Отображает дату создания представления.  
   
-     **Name**  
-     The name of the current view.  
+     **Название**  
+     Имя текущего представления.  
   
-     **Schema**  
-     Displays the schema that owns the view.  
+     **Схема**  
+     Схема, которой принадлежит представление.  
   
-     **System object**  
-     Indicates whether the view is a system object. Values are True and False.  
+     **Системный объект**  
+     Указывает, является ли представление системным объектом. Возможные значения: True и False.  
   
-     **ANSI NULLs**  
-     Indicates if the object was created with the ANSI NULLs option.  
+     **Значения NULL по стандарту ANSI**  
+     Указывает, был ли объект создан с параметром ANSI NULL.  
   
-     **Encrypted**  
-     Indicates whether the view is encrypted. Values are True and False.  
+     **Зашифрована**  
+     Указывает, зашифровано ли представление. Возможные значения: True и False.  
   
-     **Quoted identifier**  
-     Indicates if the object was created with the quoted identifier option.  
+     **Заключенный в кавычки идентификатор**  
+     Показывает, был ли объект создан с параметром «заключенный в кавычки идентификатор».  
   
-     **Schema bound**  
-     Indicates whether the view is schema-bound. Values are True and False. For information about schema-bound views, see the SCHEMABINDING portion of [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md).  
+     **Привязка к схеме**  
+     Указывает, является ли представление привязанным к схеме. Возможные значения: True и False. Сведения о представлениях, привязанных к схеме, см. в подразделе SCHEMABINDING раздела [CREATE VIEW (Transact-SQL)](../../t-sql/statements/create-view-transact-sql.md).  
   
 #### <a name="getting-view-properties-by-using-the-view-designer-tool"></a>Получение свойств представления с помощью конструктора представлений  
   

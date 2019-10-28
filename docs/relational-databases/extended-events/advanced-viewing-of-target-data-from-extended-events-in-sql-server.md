@@ -11,12 +11,12 @@ ms.assetid: b2e839d7-1872-46d9-b7b7-6dcb3984829f
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 030635af78475eebfa63169b712528b8beeafa38
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0070948697c7aaed76330da233bdf3739f5b3e3a
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68021924"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909417"
 ---
 # <a name="advanced-viewing-of-target-data-from-extended-events-in-sql-server"></a>Расширенный просмотр целевых данных из расширенных событий в SQL Server
 
@@ -164,7 +164,7 @@ XEL-файл также можно перетащить на панель вкл
 
 
 
-### <a name="b4-view-xel-with-sysfnxefiletargetreadfile-function"></a>Б.4. Просмотр XEL-файла с помощью функции sys.fn_xe_file_target_read_file
+### <a name="b4-view-xel-with-sysfn_xe_file_target_read_file-function"></a>Б.4. Просмотр XEL-файла с помощью функции sys.fn_xe_file_target_read_file
 
 
 Для выполнения пакетной обработки следующая системная функция может создать XML для записей в XEL-файле:
@@ -180,8 +180,6 @@ XEL-файл также можно перетащить на панель вкл
 
 
 1. Перемещение фокуса на отображение данных.
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
     - Неожиданно появляется новая панель инструментов и новый пункт меню для расширенных событий.
 

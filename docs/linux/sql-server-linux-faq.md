@@ -3,16 +3,16 @@ title: Вопросы и ответы по SQL Server на Linux
 description: В этой статье содержатся ответы на часто задаваемые вопросы о сервере SQL Server, работающем в Linux.
 author: VanMSFT
 ms.author: vanto
-ms.date: 01/10/2019
+ms.date: 10/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: c6d9ea0eb36c212d3312522adafc50406c7a646d
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 4fe5ea36b2e60a3a0531e247acc303b70e0db801
+ms.sourcegitcommit: 39630fddc69141531eddca2a3c156ccf8536f49c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67952635"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72929907"
 ---
 # <a name="sql-server-on-linux-frequently-asked-questions-faq"></a>Часто задаваемые вопросы об SQL Server на Linux
 
@@ -32,7 +32,7 @@ ms.locfileid: "67952635"
 
 1. **Отличается ли SQL Server на Linux от версии для Windows?**
 
-   Основное ядро СУБД для SQL Server в Linux и Windows одинаковое. Однако некоторые функции в настоящее время не поддерживаются в Linux. Список функций, которые недоступны в Linux, см. в статье [Неподдерживаемые функции и службы](sql-server-linux-release-notes.md#Unsupported). Кроме того, ознакомьтесь с [известными проблемами](sql-server-linux-release-notes.md#known-issues). Функции и службы SQL Server, не указанные в этих списках, поддерживаются в Linux.
+   Основное ядро СУБД для SQL Server в Linux и Windows одинаковое. Однако некоторые функции в настоящее время не поддерживаются в Linux. Список функций, которые недоступны в Linux, см. в статье [Неподдерживаемые функции и службы](sql-server-linux-editions-and-components-2019.md#Unsupported). Кроме того, ознакомьтесь с [известными проблемами](sql-server-linux-release-notes.md#known-issues). Функции и службы SQL Server, не указанные в этих списках, поддерживаются в Linux.
 
 1. **Какова политика поддержки для SQL Server?**
 

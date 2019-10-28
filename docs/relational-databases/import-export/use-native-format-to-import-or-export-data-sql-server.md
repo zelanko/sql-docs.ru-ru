@@ -14,12 +14,12 @@ ms.assetid: eb279b2f-0f1f-428f-9b8f-2a7fc495b79f
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ca38f321fa06434429b78606d5962cf8623955c3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 62346249b427f7a6d6162d2c09e22ce54b8b87df
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68091491"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908612"
 ---
 # <a name="use-native-format-to-import-or-export-data-sql-server"></a>Использование собственного формата для импорта или экспорта данных
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,8 +33,6 @@ ms.locfileid: "68091491"
 1.  Массовый экспорт данных из исходной таблицы в файл данных.  
   
 2.  Массовый импорт данных из файла данных в целевую таблицу.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 Использование собственного формата между идентичными таблицами позволяет избежать бесполезного преобразования типов данных из символьного формата и обратно, экономя тем самым время и пространство хранения. Для достижения оптимальной скорости передачи, однако, уменьшается количество проверок форматирования данных. Чтобы избежать проблемы с загруженными данными, изучите следующий список ограничений.  
 

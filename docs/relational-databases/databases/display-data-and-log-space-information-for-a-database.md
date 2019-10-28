@@ -20,12 +20,12 @@ ms.assetid: c7b99463-4bab-4e9b-9217-fcb0898dc757
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f9d067869ce73bc0d5c048b62b264cd0a4e28add
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.openlocfilehash: 4b55ac532bcfa3a312c4203277b73de201eba718
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/14/2019
-ms.locfileid: "72305287"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909065"
 ---
 # <a name="display-data-and-log-space-information-for-a-database"></a>Отображение данных и сведений о пространстве журнала для базы данных
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -48,8 +48,6 @@ ms.locfileid: "72305287"
 2.  Разверните узел **Базы данных**.  
   
 3.  Щелкните правой кнопкой мыши базу данных, укажите **Отчеты**, **Стандартные отчеты**, а затем щелкните **Использование диска**.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
   

@@ -15,12 +15,12 @@ ms.assetid: 6b8da1f5-3d8e-4f88-b111-b915788b06f1
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4ca72f042d8a41501cef58e321654fa8c8374a88
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 09f90bcf10db6d5a1406aa7a68f90b4704270d95
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68094932"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72903152"
 ---
 # <a name="create-an-application-role"></a>Создание роли приложения
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -69,8 +69,6 @@ ms.locfileid: "68094932"
 8.  В поле **Схемы, принадлежащие данной роли**выберите или просмотрите схемы, которые будут принадлежать этой роли. Схема может принадлежать только одной схеме или роли.  
   
 9. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ### <a name="additional-options"></a>Дополнительные параметры  
  Кроме того, в диалоговом окне **Роль приложения — создать** имеются параметры на двух дополнительных страницах: **Защищаемые объекты** и **Расширенные свойства**.  

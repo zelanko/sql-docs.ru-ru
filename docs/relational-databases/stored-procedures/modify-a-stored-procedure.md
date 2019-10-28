@@ -14,12 +14,12 @@ ms.assetid: 13396239-6100-48ce-aa34-461358d99c92
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: aa0cac44c29f98a6adaa1f1301131781f400d1d4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 810dfbc7230171f59cb8f1df04ab1c7f4774e044
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68136831"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907247"
 ---
 # <a name="modify-a-stored-procedure"></a>Изменение хранимой процедуры
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -65,8 +65,6 @@ ms.locfileid: "68136831"
 6.  Чтобы сохранить изменения определения процедуры, в меню **Запрос** выберите пункт **Выполнить**.  
   
 7.  Чтобы сохранить обновленное определение процедуры в качестве скрипта [!INCLUDE[tsql](../../includes/tsql-md.md)] , в меню **Файл** выберите команду **Сохранить как...** Можно принять предложенное имя файла или заменить его новым, после чего следует нажать кнопку **Сохранить**.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 > [!IMPORTANT]  
 >  Проверяйте все данные, вводимые пользователем. Не включайте их в сценарий, не выполнив проверку. Никогда не выполняйте команду, построенную на основании непроверенных пользовательских входных данных.  

@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 50a73574-1a69-448e-83dd-9abcc7cb7e1a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 94d4a76233304347865049c118d7b956b8416a44
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c884662acb111ab197ebf437d7eaacd5859ebde7
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68041330"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908791"
 ---
 # <a name="use-marked-transactions-to-recover-related-databases-consistently"></a>Согласованное восстановление связанных баз данных с помощью помеченных транзакций
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -62,8 +62,6 @@ ms.locfileid: "68041330"
 4.  Восстановление резервных копий базы данных с ключевым словом WITH NORECOVERY.  
   
 5.  Восстановление журналов с ключевым словом WITH STOPATMARK.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="considerations-for-using-marked-transactions"></a>Сведения об использовании помеченных транзакций  
  Перед вставкой именованных меток в журнал транзакций следует учесть следующее:  

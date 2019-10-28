@@ -15,12 +15,12 @@ ms.assetid: 579867ec-57cb-4cb8-af35-9688c1e9e15d
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b1eb75b2ce7b0674ad62a406e3a99d4782b61f3a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b8a613f8842cc6f067261e941bab39858d1727bb
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68009595"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909856"
 ---
 # <a name="view-or-change-the-compatibility-level-of-a-database"></a>Просмотр или изменение уровня совместимости базы данных
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -62,8 +62,6 @@ ms.locfileid: "68009595"
      Текущий уровень совместимости будет указан в списке **Уровень совместимости** .  
   
 5.  Чтобы изменить уровень совместимости, выберите в списке другой параметр. Возможные варианты: **SQL Server 2008 (100)** , **SQL Server 2012 (110)** , **SQL Server 2014 (120)** , **SQL Server 2016 (130)** и **SQL Server 2017 (140)** .  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
   

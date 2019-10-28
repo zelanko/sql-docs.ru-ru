@@ -14,12 +14,12 @@ ms.assetid: 742727a1-5189-44ec-b3ae-6fd7aa1f5347
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 7b55822e011b03044d9fafad4ff2b30884ea5ec2
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.openlocfilehash: 11628e5b490c30ef64329f6b9d06aee1b6c10fa9
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70846709"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908284"
 ---
 # <a name="create-and-apply-the-initial-snapshot"></a>Создание и применение исходного моментального снимка
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -62,8 +62,6 @@ ms.locfileid: "70846709"
     >  Агент моментальных снимков должен иметь разрешения на запись в указанный каталог, а агент распространителя или агент слияния должен иметь разрешения на чтение из этого каталога. Если используются подписки по запросу, необходимо указать UNC-путь общего каталога, например \\\computername\snapshot. Дополнительные сведения см. в статье [Организация безопасности папки моментальных снимков](../../relational-databases/replication/security/secure-the-snapshot-folder.md).  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="create-snapshot"></a>Создание моментального снимка
 По умолчанию, если выполняется агент SQL Server, агент моментальных снимков создает моментальный снимок сразу после того, как создана публикация с помощью мастера создания публикаций. Затем по умолчанию агент распространителя (для репликации моментальных снимков и репликации транзакций) или агент слияния (для подписок на публикацию слиянием) применяет моментальный снимок ко всем подпискам. Моментальный снимок также можно создать с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] и монитора репликации. Сведения о запуске монитора репликации см. в [этой статье](../../relational-databases/replication/monitor/start-the-replication-monitor.md).  

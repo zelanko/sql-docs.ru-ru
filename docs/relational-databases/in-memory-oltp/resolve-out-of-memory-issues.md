@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: f855e931-7502-44bd-8a8b-b8543645c7f4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a2dd428c7f035cf73e679bbd6c47e78f1f745457
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8171a91d18650285c7bcaf4eb780083e958a8789
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68111825"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908449"
 ---
 # <a name="resolve-out-of-memory-issues"></a>Устранение проблем нехватки памяти
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -77,8 +77,6 @@ ms.locfileid: "68111825"
   
 2.  [Примените действие по исправлению](#bkmk_takeCorrectiveAction)  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ###  <a name="bkmk_openDAC"></a> Откройте выделенное административное соединение  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет выделенное административное соединение (DAC). С помощью выделенного административного соединения администратор может обращаться к запущенному экземпляру ядра СУБД SQL Server для устранения неполадок на сервере, даже если сервер не отвечает на другие клиентские соединения. DAC доступны в программе `sqlcmd` и в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
@@ -101,7 +99,7 @@ ms.locfileid: "68111825"
   
 #### <a name="increase-available-memory"></a>Увеличение объема доступной памяти  
   
-##### <a name="increase-value-of-maxmemorypercent-on-the-resource-pool"></a>Увеличение значения MAX_MEMORY_PERCENT для пула ресурсов  
+##### <a name="increase-value-of-max_memory_percent-on-the-resource-pool"></a>Увеличение значения MAX_MEMORY_PERCENT для пула ресурсов  
  Если именованный пул ресурсов для таблиц в памяти еще не создан, то его необходимо создать и привязать к нему базы данных [!INCLUDE[hek_2](../../includes/hek-2-md.md)] . Инструкции по созданию пула ресурсов и привязки к нему баз данных [см. в разделе](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md) Привязка базы данных с таблицами, оптимизированными для памяти, к пулу ресурсов [!INCLUDE[hek_2](../../includes/hek-2-md.md)] .  
   
  Если база данных [!INCLUDE[hek_2](../../includes/hek-2-md.md)] привязана к пулу ресурсов, то пользователь может увеличить процент памяти, доступной для пула. Инструкции по изменению значения MIN_MEMORY_PERCENT и MAX_MEMORY_PERCENT для пула ресурсов см. в подразделе [Изменение параметров MIN_MEMORY_PERCENT и MAX_MEMORY_PERCENT для существующего пула](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#bkmk_ChangeAllocation) .  

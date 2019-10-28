@@ -2,7 +2,7 @@
 title: Что представляют собой распределенные группы доступности
 description: Распределенная группа доступности — это особый тип группы доступности, который охватывает сразу две отдельные группы доступности. Группы доступности, участвующие в распределенной группе доступности, необязательно должны находиться в одном и том же месте.
 ms.custom: seodec18
-ms.date: 07/31/2018
+ms.date: 10/15/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2670a5967c5bb3921cb23d79670eeefe859cb5a0
-ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
+ms.openlocfilehash: 93e95e52249a44c0ef7425d11f3400974e123f3f
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68702742"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907280"
 ---
 # <a name="distributed-availability-groups"></a>Распределенные группы доступности
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Распределенные группы доступности — это новая функция SQL Server 2016, схожая с функцией групп доступности AlwaysOn. Данная статья разъясняет некоторые аспекты распределенных групп доступности и дополняет существующую [документацию по SQL Server](https://docs.microsoft.com/sql/sql-server/sql-server-technical-documentation).
+Распределенные группы доступности — это новая функция SQL Server 2016, схожая с функцией групп доступности AlwaysOn. Данная статья разъясняет некоторые аспекты распределенных групп доступности и дополняет существующую [документацию по SQL Server](https://docs.microsoft.com/sql/sql-server/index.yml).
 
 > [!NOTE]
 > Аббревиатура "DAG" не является официальным сокращением для *распределенной группы доступности*, поскольку уже используется для обозначения функции группы доступности базы данных Exchange. Эта функция Exchange никак не связана с группами доступности SQL Server или распределенными группами доступности.

@@ -10,12 +10,12 @@ ms.topic: quickstart
 ms.assetid: 9e1d94ce-2c93-45d1-ae2a-2a7d1fa094c4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7d04c2fb2fd405a582cb6c94b59bdca83ba3dbb5
-ms.sourcegitcommit: 3cde6aa3159beb761a19bc568d7e402bfa7aeb41
+ms.openlocfilehash: cedb601d9a16bc7562463e78f2d1a6296b687f3d
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72239469"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72906981"
 ---
 # <a name="quickstart-sql-backup-and-restore-to-azure-blob-storage-service"></a>Краткое руководство. Резервное копирование и восстановление SQL с помощью службы хранилища BLOB-объектов Azure
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md](../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -29,9 +29,6 @@ ms.locfileid: "72239469"
 - Установите [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 - Установите выпуск [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads) или разверните [управляемый экземпляр](/azure/sql-database/sql-database-managed-instance-get-started) с подключением, установленным через [виртуальную машину SQL Azure](/azure/sql-database/sql-database-managed-instance-configure-vm) или с помощью соединения [точка — сеть](/azure/sql-database/sql-database-managed-instance-configure-p2s).
 - Назначьте учетной записи пользователя роль [db_backupoperator](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles) и предоставьте разрешения на [изменение любых учетных данных](https://docs.microsoft.com/sql/t-sql/statements/alter-credential-transact-sql). 
-
-[!INCLUDE[freshInclude](../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 
 ## <a name="create-azure-blob-container"></a>Создание контейнера больших двоичных объектов Azure
 Контейнер группирует набор больших двоичных объектов. Все большие двоичные объекты должны находиться в контейнере. Учетная запись хранения может содержать неограниченное количество контейнеров, но не менее одного. В контейнере может храниться неограниченное количество больших двоичных объектов. 

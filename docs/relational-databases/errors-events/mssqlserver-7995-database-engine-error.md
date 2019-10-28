@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: af6d6322-3cba-43d8-be97-e6ef15f8c933
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d8e8c1f982bfc912cac76207d81178037fb320f1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 16f2bebd761898fad44cd19c78c02470420b6d18
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68007047"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72906561"
 ---
-# <a name="mssqlserver7995"></a>MSSQLSERVER_7995
+# <a name="mssqlserver_7995"></a>MSSQLSERVER_7995
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Сведения  
@@ -40,8 +40,6 @@ ms.locfileid: "68007047"
 2.  Проверка согласованности системных базовых таблиц. Это равносильно запуску команды DBCC CHECKTABLE для небольшого количества необходимых системных базовых таблиц.  
   
 3.  Полная проверка согласованности базы данных.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 Ошибка MSSQLEngine_7995 возникает на втором этапе, когда команда DBCC CHECKDB находит ошибки, которые она не может исправить, или команда, для которой параметр REPAIR не определен. Команда DBCC CHECKDB не может перейти к этапу 3, так как соответствующие базовые системные таблицы хранят метаданные всех объектов базы данных, либо повреждены.  
   

@@ -10,12 +10,12 @@ ms.assetid: ae357f9b-e3e2-4cdf-af02-012acda2e466
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8c840140008f56e492271d5792031e4e56233673
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a063a2a00ba67640b6a36a43abda2ea9eb45025d
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68048758"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909211"
 ---
 # <a name="compoundcurve"></a>CompoundCurve
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -29,8 +29,6 @@ ms.locfileid: "68048758"
 1.  Должен содержать хотя бы один экземпляр **CircularString** или **LineString** .  
   
 2.  Последовательность экземпляров **CircularString** или **LineString** должна быть непрерывной.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 Если объект **CompoundCurve** содержит последовательность из нескольких экземпляров **CircularString** и **LineString** , то конечная точка каждого экземпляра, кроме последнего, должна быть начальной конечной точкой следующего экземпляра в последовательности. Это означает, что, если конечная точка предыдущего экземпляра в последовательности — (4 3 7 2), начальной точкой следующего экземпляра в последовательности также должна быть (4 3 7 2). Обратите внимание, что значения Z (высота) и M (мера) этих точек также должны совпадать. Если такие две точки отличаются друг от друга, формируется исключение `System.FormatException` . Точки в объектах **CircularString** могут не иметь значение Z или M. Если значения Z или M не заданы для конечной точки предыдущего экземпляра, начальная точка следующего экземпляра также не может иметь значения Z или M. Если конечная точка для предыдущей последовательности — (4 3), начальной точкой для следующей последовательности также должна быть (4 3) и не может быть (4 3 7 2). Все точки в экземпляре **CompoundCurve** должны либо не иметь значения Z, либо иметь одинаковые значения Z.  
   

@@ -11,12 +11,12 @@ ms.assetid: 856e8061-c604-4ce4-b89f-a11876dd6c88
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 50e5fd4eaf56bebb430d2d2153038a7128d34398
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a8f9dbfc7f75d853232e0074d52735e9e38d68d5
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68049984"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72902965"
 ---
 # <a name="create-and-store-column-master-keys-always-encrypted"></a>Создание и хранение главных ключей столбцов (постоянное шифрование)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -108,8 +108,6 @@ $cert = New-SelfSignedCertificate -Subject "AlwaysEncryptedCert" -CertStoreLocat
 7.  В диалоговом окне **Добавление или удаление оснастки** нажмите кнопку **ОК**.
 8.  В оснастке **Сертификаты** найдите сертификат в папке **Сертификаты/Личное**, правой кнопкой мыши щелкните "Сертификат", укажите**Все задачи** и выберите **Управление закрытыми ключами**.
 9.  В диалоговом окне **Безопасность** добавьте разрешение на чтение для учетной записи пользователя (если необходимо).
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="creating-column-master-keys-in-azure-key-vault"></a>Создание главных ключей столбцов в хранилище ключей Azure
 

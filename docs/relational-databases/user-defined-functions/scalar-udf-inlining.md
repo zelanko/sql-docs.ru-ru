@@ -15,12 +15,12 @@ ms.assetid: ''
 author: s-r-k
 ms.author: karam
 monikerRange: = azuresqldb-current || >= sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: cfc56126ae84cc8674e7316b45e855584fdabde7
-ms.sourcegitcommit: 4c5fb002719627f1a1594f4e43754741dc299346
+ms.openlocfilehash: c778894dbe532a64c4907c9e4281ecf076da70dc
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72517997"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909313"
 ---
 # <a name="scalar-udf-inlining"></a>Встраивание скалярных пользовательских функций
 
@@ -134,8 +134,6 @@ SELECT C_NAME, dbo.customer_category(C_CUSTKEY) FROM CUSTOMER;
 1. Сервер SQL Server определил наличие неявного соединения между `CUSTOMER` и `ORDERS` и сделал его явным с помощью оператора соединения.
 2. Сервер SQL Server определил наличие неявного предложения `GROUP BY O_CUSTKEY on ORDERS` и реализовал его с помощью IndexSpool и StreamAggregate.
 3. Параллелизм теперь применяется для всех операторов.
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 В зависимости от сложности логики в пользовательской функции план запроса также может быть больше и сложнее. Как видите, операции внутри пользовательской функции теперь прозрачны, поэтому оптимизатор запросов может оценить затраты и оптимизировать их. Кроме того, так как в плане больше нет пользовательской функции, полностью устраняются накладные расходы, связанные с ее итеративными вызовами.
 

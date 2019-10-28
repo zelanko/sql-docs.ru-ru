@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: aa4d3188-6927-43de-a3e3-90fc16eeaca7
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 1be170b2b32ed1529af98fa2b072749de8f1165c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 97725acacdd4486ebd92a4424704288c5e4efd3e
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67946938"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907481"
 ---
 # <a name="delete-a-plan-guide"></a>Удаление структуры плана
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -52,8 +52,6 @@ ms.locfileid: "67946938"
 3.  Щелкните правой кнопкой мыши структуру плана, которую необходимо удалить, и выберите команду **Удалить**.  
   
 4.  В диалоговом окне **Удаление объекта** убедитесь, что выбрана верная структура плана, и нажмите кнопку **OК**.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
   

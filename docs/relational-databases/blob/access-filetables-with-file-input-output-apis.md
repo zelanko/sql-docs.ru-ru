@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: fa504c5a-f131-4781-9a90-46e6c2de27bb
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: de6b89d8c561df851b3cbc8696283f1ed95489f4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d1cdc6947c97052660dea3be9d6013a8e61a090d
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68041206"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908778"
 ---
 # <a name="access-filetables-with-file-input-output-apis"></a>Доступ к таблицам FileTable с помощью API-интерфейсов ввода-вывода файлов
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,8 +29,6 @@ ms.locfileid: "68041206"
 1.  Доступ API-интерфейса файлового ввода-вывода обычно начинается с получения логического UNC-пути к файлу или каталогу. Для получения логического пути к файлу или каталогу приложения могут использовать инструкцию [!INCLUDE[tsql](../../includes/tsql-md.md)] с функцией [GetFileNamespacePath (Transact-SQL)](../../relational-databases/system-functions/getfilenamespacepath-transact-sql.md). Дополнительные сведения см. в статье [Work with Directories and Paths in FileTables](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md).  
   
 2.  Затем приложение использует этот логический путь для получения дескриптора файла или каталога и совершения каких-либо действий с объектом. Путь может быть передан какой-либо из поддерживаемых функций API файловой системы, например CreateFile() или CreateDirectory(), для создания или открытия файла и получения дескриптора. Затем дескриптор может использоваться для потоковой передачи данных, перечисления или упорядочивания каталогов, получения или задания атрибутов файлов, удаления файлов или каталогов и т. д.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ##  <a name="create"></a> Создание файлов и каталогов в таблице FileTable  
  Файл или каталог в таблице FileTable можно создать путем вызова таких API-интерфейсов файлового ввода-вывода, как CreateFile или CreateDirectory.  

@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: 63d6d6d7-3850-4061-8e96-b1fa665e3180
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a00288d4aa7d98ac74be6703cc0754ea4bedb798
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d867839a68e3b6fc595f0753872b8224f3bf51fb
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68132300"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908320"
 ---
-# <a name="mssqlserver8645"></a>MSSQLSERVER_8645
+# <a name="mssqlserver_8645"></a>MSSQLSERVER_8645
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Сведения  
@@ -57,8 +57,6 @@ ms.locfileid: "68132300"
 4.  Обратите внимание на сообщения инструкции DBCC MEMORYSTATUS и способ их изменения при появлении сообщений об ошибках.  
   
 5.  Проверьте рабочую нагрузку (например, число параллельных сеансов, в текущий момент выполняющих запросы).  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 Следующие действия могут позволить использовать больший объем памяти в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   

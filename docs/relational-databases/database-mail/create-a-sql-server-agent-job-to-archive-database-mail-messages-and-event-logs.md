@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8f8f0fba-f750-4533-9b76-a9cdbcdc3b14
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 8396b30122a393ea3532113e261a908d8079432a
-ms.sourcegitcommit: 2da98f924ef34516f6ebf382aeb93dab9fee26c1
+ms.openlocfilehash: 14089cb8f302fbfee3f3a58c3f28edf634cbaa10
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70228480"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909226"
 ---
 # <a name="create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs"></a>Создание задания агента SQL Server по архивации сообщений компонента Database Mail и журналов событий базы данных
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -47,11 +47,11 @@ ms.locfileid: "70228480"
   
 -   Первая процедура, которая создает задание с именем «Archive Database Mail», состоит из следующих действий.  
   
-    1.  Скопируйте все сообщения из таблиц компонента Database Mail в новую таблицу с именем прошлого месяца в формате **DBMailArchive_**_<год_месяц>_.  
+    1.  Скопируйте все сообщения из таблиц компонента Database Mail в новую таблицу с именем прошлого месяца в формате **DBMailArchive_** _<год_месяц>_ .  
   
-    2.  Скопируйте вложения, прикрепленные к сообщениям, скопированным на первом шаге из таблиц компонента Database Mail, в новую таблицу с именем прошлого месяца в формате **DBMailArchive_Attachments_**_<год_месяц>_.  
+    2.  Скопируйте вложения, прикрепленные к сообщениям, скопированным на первом шаге из таблиц компонента Database Mail, в новую таблицу с именем прошлого месяца в формате **DBMailArchive_Attachments_** _<год_месяц>_ .  
   
-    3.  Скопируйте из журналов событий компонента Database Mail события, имеющие отношение к сообщениям, скопированным на первом шаге, из таблиц компонента Database Mail в новую таблицу с именем прошлого месяца в формате **DBMailArchive_Log_**_<год_месяц>_.  
+    3.  Скопируйте из журналов событий компонента Database Mail события, имеющие отношение к сообщениям, скопированным на первом шаге, из таблиц компонента Database Mail в новую таблицу с именем прошлого месяца в формате **DBMailArchive_Log_** _<год_месяц>_ .  
   
     4.  Удаление всех скопированных элементов из таблиц компонента Database Mail.  
   
@@ -72,8 +72,6 @@ ms.locfileid: "70228480"
   
 5.  В поле **Описание** введите **Archive Database Mail messages**, а затем выберите вкладку **Шаги**.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
  [Обзор](#Process_Overview)  
   
 ## <a name="to-create-a-step-to-archive-the-database-mail-messages"></a>Создание шага по архивации сообщений компонента Database Mail  
@@ -82,7 +80,7 @@ ms.locfileid: "70228480"
   
 2.  В текстовое поле **Имя шага** введите **Copy Database Mail Items**.  
   
-3.  В поле **Тип** выберите **Скрипт Transact-SQL (T-SQL)**.  
+3.  В поле **Тип** выберите **Скрипт Transact-SQL (T-SQL)** .  
   
 4.  В поле **База данных** выберите **msdb**.  
   
@@ -108,7 +106,7 @@ ms.locfileid: "70228480"
   
 2.  В текстовое поле **Имя шага** введите **Copy Database Mail Attachments**.  
   
-3.  В поле **Тип** выберите **Скрипт Transact-SQL (T-SQL)**.  
+3.  В поле **Тип** выберите **Скрипт Transact-SQL (T-SQL)** .  
   
 4.  В поле **База данных** выберите **msdb**.  
   
@@ -135,7 +133,7 @@ ms.locfileid: "70228480"
   
 2.  В текстовом поле **Имя шага** введите **Copy Database Mail Log**.  
   
-3.  В поле **Тип** выберите **Скрипт Transact-SQL (T-SQL)**.  
+3.  В поле **Тип** выберите **Скрипт Transact-SQL (T-SQL)** .  
   
 4.  В поле **База данных** выберите **msdb**.  
   
@@ -162,7 +160,7 @@ ms.locfileid: "70228480"
   
 2.  В текстовом поле **Имя шага** введите **Remove rows from Database Mail**.  
   
-3.  В поле **Тип** выберите **Скрипт Transact-SQL (T-SQL)**.  
+3.  В поле **Тип** выберите **Скрипт Transact-SQL (T-SQL)** .  
   
 4.  В поле **База данных** выберите **msdb**.  
   
@@ -184,7 +182,7 @@ ms.locfileid: "70228480"
   
 2.  В текстовом поле **Имя шага** введите **Remove rows from Database Mail event log**.  
   
-3.  В поле **Тип** выберите **Скрипт Transact-SQL (T-SQL)**.  
+3.  В поле **Тип** выберите **Скрипт Transact-SQL (T-SQL)** .  
   
 4.  Чтобы удалить из журнала событий компонента Database Mail строки, созданные ранее начала текущего месяца, в окне **Команда** введите представленную ниже инструкцию:  
   
@@ -210,7 +208,7 @@ ms.locfileid: "70228480"
   
 5.  В области **Периодичность** задайте параметр выполнения периодического задания, например, первое число каждого месяца.  
   
-6.  В области **Сколько раз в день** выберите **Выполняется один раз в \<время>**.  
+6.  В области **Сколько раз в день** выберите **Выполняется один раз в \<время>** .  
   
 7.  Убедитесь, что другие параметры настроены правильно, и сохраните расписание, нажав кнопку **OK** .  
   

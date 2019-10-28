@@ -17,12 +17,12 @@ ms.assetid: c439e53b-56f3-4442-97c6-dabd48a203d8
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 16625dea87649bde97a854a507ab89831b7681e1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8feec11884ae31e34cbc5497bf818991e59b39dd
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68113389"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909784"
 ---
 # <a name="save-an-execution-plan-in-xml-format"></a>Сохранение плана выполнения в формате XML
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -71,8 +71,6 @@ ms.locfileid: "68113389"
 5.  В диалоговом окне **Сохранить** **результаты** \<сетка или текст> найдите поле **Тип файла** и выберите в нем значение **Все файлы (\*.\*)** .  
   
 6.  В поле **Имя файла** укажите имя в формате \<имя **>.sqlplan**, после чего нажмите кнопку **Сохранить**.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ### <a name="to-save-an-execution-plan-by-using-sql-server-management-studio-options"></a>Сохранение плана выполнения с помощью параметров среды SQL Server Management Studio  
   

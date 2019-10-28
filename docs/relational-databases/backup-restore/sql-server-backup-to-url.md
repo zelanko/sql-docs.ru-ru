@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 86ef1638fc37fd70d8438c173b5972fa2fc8f551
-ms.sourcegitcommit: b016c01c47bc08351d093a59448d895cc170f8c3
+ms.openlocfilehash: 9eb3f9c071194941d76878a016fbcefa4f5fbe5c
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71118188"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908822"
 ---
 # <a name="sql-server-backup-to-url"></a>Резервное копирование в SQL Server по URL-адресу
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -79,7 +79,7 @@ ms.locfileid: "71118188"
   
  **Большой двоичный объект**. Файл любого типа и размера. Существует два типа больших двоичных объектов, которые можно хранить в службе хранилища больших двоичных объектов Microsoft Azure: блочные и страничные большие двоичные объекты. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Резервное копирование может использовать любой тип больших двоичных объектов в зависимости от применяемого синтаксиса Transact-SQL. Обращаться к большим двоичным объектам можно с помощью URL-адреса следующего вида: https://\<учетная запись хранения>.blob.core.windows.net/\<контейнер>/\<blob>. Дополнительные сведения о службе хранилища больших двоичных объектов Microsoft Azure см. в разделе [Как использовать хранилище больших двоичных объектов из .NET](https://www.windowsazure.com/develop/net/how-to-guides/blob-storage/). Дополнительные сведения о больших двоичных объектах см. в разделе [Основные сведения о блочных и страничных больших двоичных объектах](https://msdn.microsoft.com/library/windowsazure/ee691964.aspx).  
   
- ![Хранилище BLOB-объектов Azure](../../relational-databases/backup-restore/media/backuptocloud-blobarchitecture.gif "Хранилище BLOB-объектов Azure")  
+ ![Хранилище BLOB-объектов Azure](../../relational-databases/backup-restore/media/backuptocloud-blobarchitecture.gif "хранилище BLOB-объектов Azure")  
   
  **Моментальный снимок Azure**. Снимок большого двоичного объекта Azure, сделанный в определенный момент времени. Дополнительные сведения см. в разделе [Создание моментального снимка большого двоичного объекта](https://msdn.microsoft.com/library/azure/hh488361.aspx). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] теперь поддерживает резервные копии моментальных снимков Azure файлов базы данных, хранящиеся в службе хранилища больших двоичных объектов Microsoft Azure. Дополнительные сведения см. в разделе [Резервные копии моментальных снимков файлов для файлов базы данных в Azure](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md).  
   
@@ -230,8 +230,6 @@ ms.locfileid: "71118188"
 
 > [!NOTE] 
 >  **Добавить** поддерживает несколько файлов резервных копий и контейнеров хранилища для одного набора носителей.
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 При выборе **URL-адреса** в качестве назначения некоторые параметры на странице **Параметры носителя** отключаются.  Следующие разделы содержат дополнительные сведения о диалоговом окне «Резервное копирование базы данных»:  
   

@@ -16,12 +16,12 @@ ms.assetid: 98df1aea-0406-40bf-a917-4bd80464125c
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 1bc6b8506244b16a1c9592ed59e91684494bfa1e
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: f157f541cae6fed5613f95df8d883044f8e09ff5
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768554"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908307"
 ---
 # <a name="sql-server-replication-publisher-properties-dialog-box"></a>Репликация SQL Server: диалоговое окно "Свойства издателя"
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -33,8 +33,6 @@ ms.locfileid: "68768554"
   
 1.  Отключите публикацию на сервере издателя. Дополнительные сведения см. в статье [Отключение публикации и распространения](../../relational-databases/replication/disable-publishing-and-distribution.md).    
 2.  Повторно настройте публикацию и распространение. Дополнительные сведения см. в статье [Configure Publishing and Distribution](../../relational-databases/replication/configure-publishing-and-distribution.md).  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="distributor"></a>Распространитель 
 Диалоговое окно **Свойства издателя** позволяет просматривать и изменять свойства, относящиеся к связи между издателем и его распространителем.  

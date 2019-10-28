@@ -10,12 +10,12 @@ ms.topic: quickstart
 ms.assetid: e8db82f0-50ed-4531-9209-940006ed34cb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1ab78eab73526568736dea8c4aef1525b2607c93
-ms.sourcegitcommit: 512acc178ec33b1f0403b5b3fd90e44dbf234327
+ms.openlocfilehash: b61761ff30a32d6781e61e988325fbfc40b5762e
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/08/2019
-ms.locfileid: "72162556"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909761"
 ---
 # <a name="lesson-1-connecting-to-the-database-engine"></a>Урок 1. Подключение к ядру СУБД
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -58,8 +58,6 @@ ms.locfileid: "72162556"
 2.  В диалоговом окне **Соединения с сервером** нажмите кнопку **Отмена**.  
 3.  Если компонент «Зарегистрированные серверы» не отображается, в меню **Вид** выберите пункт **Зарегистрированные серверы**.
 4.  Выбрав компонент **Ядро СУБД** на панели инструментов "Зарегистрированные серверы", разверните компонент **Ядро СУБД**, щелкните правой кнопкой мыши пункт **Группы локальных серверов**, наведите указатель на пункт **Задачи**и выберите пункт **Зарегистрировать локальные серверы**. Разверните узел **Группы локальных серверов**, чтобы увидеть все экземпляры [!INCLUDE[ssDE](../includes/ssde-md.md)], установленные на отображаемом компьютере. Экземпляр по умолчанию безымянный и отображается как имя компьютера. Именованный экземпляр отображается как имя компьютера, за которым следует обратная косая черта (\\), а затем имя экземпляра. Для [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] имя экземпляра — *<имя_компьютера>* \sqlexpress, если имя не было изменено в процессе установки.  
-
-[!INCLUDE[fresh-note-steps-feedback](../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ##### <a name="to-verify-that-the-database-engine-is-running"></a>Подтверждение того, что компонент ядра СУБД запущен
 

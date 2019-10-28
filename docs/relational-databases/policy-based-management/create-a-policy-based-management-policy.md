@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: b28bf963-89f9-4941-b6c1-6004fec347f1
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: bdd275d5c8a65d5443e3f439b3506790f9048a14
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cd95caaa746204084c0d4748cd8bb20fede39f9a
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68137971"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907176"
 ---
 # <a name="create-a-policy-based-management-policy"></a>Создание политики управления на основе политик
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -69,6 +69,4 @@ ms.locfileid: "68137971"
      Дополнительные сведения о параметрах, доступных в диалоговом окне **Создание новой политики** , см. в разделах [Диалоговое окно «Создание новой политики» или «Открытие политики», страница «Общие»](../../relational-databases/policy-based-management/create-new-policy-or-open-policy-dialog-box-general-page.md) и [Диалоговое окно «Создание новой политики» или «Открытие политики», страница «Описание»](../../relational-databases/policy-based-management/create-new-policy-or-open-policy-dialog-box-description-page.md).  
   
 12. В завершение нажмите кнопку **ОК**.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 

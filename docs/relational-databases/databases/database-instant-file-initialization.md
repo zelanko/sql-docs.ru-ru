@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1ad468f5-4f75-480b-aac6-0b01b048bd67
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: ea9ab84a59fd020a7dc5c67b6ad74630e113ee55
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c36c745e6b54feb27da2ae4f36834a40c79cbfe5
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68037598"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909082"
 ---
 # <a name="database-file-initialization"></a>Инициализация файлов базы данных
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -62,8 +62,6 @@ ms.locfileid: "68037598"
 5.  Нажмите кнопку **Применить**и закройте все диалоговые окна **Локальная политика безопасности** .  
 
 1. Перезапустите службу SQL Server.
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 > [!NOTE]
 > Начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], это разрешение можно предоставлять учетной записи службы во время установки. При использовании [установки из командной строки](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md) добавьте аргумент /SQLSVCINSTANTFILEINIT либо установите флажок *Предоставить право на выполнение задач обслуживания тома службе ядра СУБД SQL Server* в [мастере установки](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md).

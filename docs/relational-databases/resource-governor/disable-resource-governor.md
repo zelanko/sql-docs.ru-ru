@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 2c2d2db0-34a5-4f50-b783-17693e3ce3f1
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 13016fa1baf3dd01f7e00c11a322f10ba720c57c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3b746c7ed116627f8fe57cdb43724c619eeb5dd4
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68099244"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72903931"
 ---
 # <a name="disable-resource-governor"></a>Отключение регулятора ресурсов
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -55,8 +55,6 @@ ms.locfileid: "68099244"
 1.  В среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]откройте обозреватель объектов и рекурсивно разверните узел **Управление** вплоть до узла **Регулятор ресурсов**.  
   
 2.  Щелкните элемент **Resource Governor**правой кнопкой мыши и выберите команду **Отключить**.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ##  <a name="RGOffProp"></a> Отключение регулятора ресурсов с помощью свойств регулятора ресурсов  
  **Отключение регулятора ресурсов с помощью страницы «Свойства регулятора ресурсов»**  

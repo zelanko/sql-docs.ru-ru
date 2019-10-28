@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 539d5bb0-b808-4d8c-baf4-cb6d32d2c595
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 0e10891c4627c881f9ef8f9cb9c9ae81b61c8f17
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.openlocfilehash: c3b599ac576a71438fb13505521eff24b6c7e3fc
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70846729"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907963"
 ---
 # <a name="enable-updating-subscriptions-for-transactional-publications"></a>Включение обновляемых подписок для публикаций транзакций
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,9 +44,7 @@ ms.locfileid: "70846729"
   
 2.  На странице **Безопасность агентов** укажите настройки безопасности агента чтения очереди в дополнение к агенту моментальных снимков и агенту чтения журнала. Дополнительные сведения о разрешениях, необходимых для учетной записи, под которой запускается агент чтения очереди, см. в разделе [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md).  
 
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-    > **NOTE:** The Queue Reader Agent is configured even if you use only immediate updating subscriptions.  
+    > **ПРИМЕЧАНИЕ.** Настройка агента чтения очереди осуществляется даже при использовании только подписок, обновляемых немедленно.  
   
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
  При создании публикации транзакций программным путем при помощи хранимых процедур репликации подписки на нее могут быть настроены как на немедленное обновление, так и на обновление посредством очередей.  

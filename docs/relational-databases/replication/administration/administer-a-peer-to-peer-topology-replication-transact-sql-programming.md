@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4d0fa941-f9ea-4a14-aed9-34df593fc6f2
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2983ecd08b352c354c2fdd7987dbeb102e506601
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 633e1a3cc6db676065d588c570d75c6b5a376f6d
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67939422"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908070"
 ---
 # <a name="administer-a-peer-to-peer-topology-replication-transact-sql-programming"></a>Администрирование одноранговой топологии (программирование репликации на языке Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,8 +44,6 @@ ms.locfileid: "67939422"
     >  После завершения хранимой процедуры [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) репликация автоматически добавит статью в подписки топологии.  
   
 6.  Перезапустите агент распространителя в каждом из узлов топологии.  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ### <a name="to-make-schema-changes-to-a-publication-database"></a>Внесение изменений в схему баз данных публикации  
   

@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f0f738ff-2819-4675-a8c8-1eb6c210a7e6
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: e3722a6860fea48f32fd2528435b9929cc3bd689
-ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
+ms.openlocfilehash: 7a6cbd0829105c03dbb453de52d84455faeaef99
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72278221"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907450"
 ---
 # <a name="specify-query-parameterization-behavior-by-using-plan-guides"></a>Указание механизма параметризации запросов с помощью структур плана
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -54,8 +54,6 @@ GROUP BY pi.ProductID, pi.Quantity HAVING SUM(pi.Quantity) > 50;
 
     > [!IMPORTANT]  
     >  В ходе параметризации запроса [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] присваивает параметрам, заменяющим литеральные значения, определенный тип данных в зависимости от значения и размера литерала. Подобный процесс выполняется и для значений констант-литералов, передаваемых в качестве выходного параметра **\@stmt** процедуры **sp_get_query_template**. Так как тип данных, указанный в аргументе **\@params** процедуры **sp_create_plan_guide**, должен соответствовать типу данных в запросе после его параметризации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], может потребоваться создание нескольких структур планов для охвата всего диапазона возможных значений параметров запроса.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 Следующий скрипт можно использовать как для получения параметризированного запроса, так и для дальнейшего создания по нему структуры плана:  
   

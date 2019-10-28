@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 83a27b29-1191-4f8d-9648-6e6be73a9b7c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 7ba9cba3a56a76fee51b6b21aec99f8019b59157
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 79bfbeec5a22dd387b97977d12b95a0e232125aa
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68033641"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908871"
 ---
 # <a name="possible-media-errors-during-backup-and-restore-sql-server"></a>Возможные ошибки носителей во время резервного копирования и восстановления (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -59,8 +59,6 @@ ms.locfileid: "68033641"
 2.  Независимо от того, присутствует ли контрольная сумма страницы или нет, инструкция BACKUP создает отдельные контрольные суммы резервных копий для потока резервных файлов. Дополнительно операции восстановления могут использовать контрольные суммы резервных копий для проверки наличия повреждений в резервных файлах. Контрольная сумма резервной копии хранится на носителе резервных файлов, а не на страницах базы данных. Контрольную сумму резервной копии также можно использовать во время восстановления.  
   
 3.  Резервный набор данных помечен как содержащий контрольные суммы резервных копий (в столбце **has_backup_checksums** таблицы **msdb..backupset**). Дополнительные сведения см. в разделе [backupset (Transact-SQL)](../../relational-databases/system-tables/backupset-transact-sql.md).  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  Во время операции восстановления, если на резервном носителе имеются контрольные суммы, по умолчанию и инструкция RESTORE, и инструкция RESTORE VERIFYONLY проверяют контрольные суммы резервных копий и страниц. Если у резервной копии нет контрольной суммы, все операции восстановления продолжаются без проверок. Данное поведение объясняется тем, что без контрольной суммы резервной копии операция восстановления не может достоверно проверять контрольные суммы страниц.  
   

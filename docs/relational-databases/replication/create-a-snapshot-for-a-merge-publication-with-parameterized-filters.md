@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 00dfb229-f1de-4d33-90b0-d7c99ab52dcb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1ae8e8c1394372347f9e26bb7163f0e1cf0bf47e
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.openlocfilehash: a803d848d12965f7e0c0b167bf3a2f20a235ecdc
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70846751"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907389"
 ---
 # <a name="create-a-snapshot-for-a-merge-publication-with-parameterized-filters"></a>Создание моментального снимка для публикации слиянием с параметризованными фильтрами
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,8 +65,6 @@ ms.locfileid: "70846751"
 1.  Создать публикацию слиянием при помощи мастера создания публикаций и указать один или несколько параметризованных фильтров строк на странице **Добавление фильтра** окна мастера. Дополнительные сведения см. в статье [Определение и изменение параметризованного фильтра строк для статьи публикации слиянием](../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md).  
   
 2.  Создайте моментальный снимок схемы для публикации. По умолчанию создание моментального снимка схемы происходит по завершении выполнения мастера создания публикаций; создание моментального снимка схемы также возможно из среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 #### <a name="to-generate-a-schema-snapshot"></a>Создание моментального снимка схемы  
   

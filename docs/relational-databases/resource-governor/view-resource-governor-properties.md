@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: de3510df-f792-4a9d-80fa-f198fd36cdc8
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 461c222e6558ca2c003abc7920e1479c050df89e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2250030405a0c6bb2512e3b8446cb76e11a7080e
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68106725"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72903908"
 ---
 # <a name="view-resource-governor-properties"></a>Просмотр свойств регулятора ресурсов
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -61,8 +61,6 @@ ms.locfileid: "68106725"
 3.  Описания полей этой страницы см. в разделе [Свойства регулятора ресурсов](#RGProp).  
   
 4.  Чтобы сохранить изменения, нажмите кнопку **ОК**.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ##  <a name="RGProp"></a> Resource Governor properties  
  **Имя функции-классификатора**  

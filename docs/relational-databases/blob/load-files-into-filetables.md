@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: dc842a10-0586-4b0f-9775-5ca0ecc761d9
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 9af9e8f2a1e54b4fbcbc935a3256d6cf3b100178
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: de6e6a237c0aa80e2793f33373ec664dfe93f953
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68125117"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908711"
 ---
 # <a name="load-files-into-filetables"></a>выполнить загрузку файлов в таблицу FileTables
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,8 +54,6 @@ ms.locfileid: "68125117"
 2.  Для копирования JPG-файлов с их структурой каталогов в корневой каталог таблицы FileTable можно использовать программу xcopy или аналогичное средство.  
   
 3.  Исправьте метаданные в таблице **PhotoMetadata** с помощью кода, похожего на следующий:  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ```sql  
 --  Add a path locator column to the PhotoMetadata table.  

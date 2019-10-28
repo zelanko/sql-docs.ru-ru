@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3a5daefd-08a8-4565-b54f-28ad01a47d32
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: ef6b65623f5070f665a7d6bf3ea8973a34541eda
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f4a4a91c4703bd4634f471e3d6bc0b9b4baf2305
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67944815"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908891"
 ---
 # <a name="restore-a-sql-server-database-to-a-point-in-time-full-recovery-model"></a>Восстановление базы данных SQL Server до определенного момента времени (модель полного восстановления)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -124,8 +124,6 @@ ms.locfileid: "67944815"
 13. Если имеются активные соединения с базой данных, то операция восстановления может завершиться ошибкой. Проверьте окно **Закрыть существующие соединения** и убедитесь, что все активные соединения между [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] и базой данных закрыты. Этот параметр переводит базу данных в однопользовательский режим перед началом выполнения процедуры восстановления, а затем возвращает в многопользовательский режим после ее завершения.  
   
 14. Установите флажок **Выдавать запрос перед восстановлением каждой резервной копии** , если хотите отследить каждую операцию восстановления. Обычно это не требуется, за исключением случаев, если необходимо наблюдать за состоянием операции восстановления базы данных большого объема.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
  **Before you begin**  

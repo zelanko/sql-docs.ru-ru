@@ -13,12 +13,12 @@ ms.assetid: 3ef96a63-8a52-45be-9a1f-265bff400e54
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: 792b605f4c85484a8cb6ab7987aeee2bd427c67a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cb88891354154ff987cedc31a56f56e4bf953532
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68098273"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72903891"
 ---
 # <a name="configure-and-manage-thesaurus-files-for-full-text-search"></a>Настройка и управление файлами тезауруса для полнотекстового поиска
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -82,8 +82,6 @@ ms.locfileid: "68098273"
 В каждом запросе тезауруса используется как языковой тезаурус, так и глобальный.
 1.  Вначале запрос ищет файл, относящийся к конкретному языку, и загружает его для обработки (если он не загружен). Запрос расширяется с целью включить в файл тезауруса синонимы конкретного языка, заданные правилами расширяющего и заменяющего наборов. 
 2.  Затем эти шаги повторяются для глобального тезауруса. Но если термин уже входит в состав соответствий в файле конкретного языка, он используется в глобальном тезаурусе.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ##  <a name="structure"></a> Структура файла тезауруса  
  Каждый файл тезауруса определяет XML-контейнер, идентификатор которого — `Microsoft Search Thesaurus`, и комментарий, `<!--` ... `-->`, который содержит образец тезауруса. Тезаурус определен в элементе `<thesaurus>`, содержащем образцы дочерних элементов, которые определяют настройку диакритических знаков, расширяющие наборы и заменяющие наборы.

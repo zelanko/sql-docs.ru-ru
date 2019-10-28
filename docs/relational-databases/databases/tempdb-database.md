@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 ms.reviewer: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d901c19587db97532be101ff66af69a1808463f3
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.openlocfilehash: a7a1f692abdb5f9ce1b9fd69c494f719b9027c22
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72289305"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909552"
 ---
 # <a name="tempdb-database"></a>База данных tempdb
 
@@ -47,8 +47,6 @@ ms.locfileid: "72289305"
   - версии строк, создаваемые транзакциями изменения данных для таких функций, как операции с индексами в сети, функции режима MARS и триггеры AFTER.  
   
 Операции в **TempDB** в минимальном объеме записываются в журнал, что позволяет откатывать транзакции. **TempDB** создается заново при каждом запуске [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], чтобы система всегда запускалась с чистой копией базы. Временные таблицы и хранимые процедуры удаляются автоматически при отключении, и при выключении системы нет активных соединений. Поэтому сохранять что-либо в **TempDB** между сеансами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не требуется. Операции резервного копирования и восстановления для **TempDB** недопустимы.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="physical-properties-of-tempdb-in-sql-server"></a>Физические свойства TempDB в SQL Server
 

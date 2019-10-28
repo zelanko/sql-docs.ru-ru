@@ -10,12 +10,12 @@ ms.date: 10/02/2019
 ms.prod: sql
 ms.prod_service: polybase, sql-data-warehouse, pdw
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: f937ba5ff6fe4d9c0837d861bf75253f24bbf33b
-ms.sourcegitcommit: af5e1f74a8c1171afe759a4a8ff2fccb5295270a
+ms.openlocfilehash: 631cfbf59cedddc699d82f36d4ea42ff23b0119c
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71823592"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909143"
 ---
 # <a name="troubleshoot-polybase-kerberos-connectivity"></a>Устранение неполадок с подключением PolyBase к Kerberos
 
@@ -34,8 +34,6 @@ ms.locfileid: "71823592"
 
 1. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] RTM CU6, [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] с пакетом обновления 1 (SP1) CU3, [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] или выше с установленной службой Polybase
 1. Кластер Hadoop (Cloudera или Hortonworks), защищенный с помощью Kerberos (Active Directory или MIT)
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="introduction"></a>Введение
 В первую очередь рекомендуется понять, как происходит работа протокола Kerberos на высоком уровне. В ней участвуют три субъекта:
