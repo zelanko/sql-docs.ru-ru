@@ -37,7 +37,7 @@ ms.locfileid: "72688883"
   
 -   [Пакетная Копирование данных из переменных &#40;программы ODBC&#41;](bulk-copy-data-from-program-variables-odbc.md)  
   
-## <a name="see-also"></a>См. также статью  
+## <a name="see-also"></a>См. также  
  [Инструкции по ODBC](../odbc-how-to-topics.md)  
   
   

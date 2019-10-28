@@ -149,7 +149,7 @@ select CAST(@x.query('1.34e1') as nvarchar(50))
   
  Возвращается строковое значение 13.4.  
   
-## <a name="see-also"></a>См. также статью  
+## <a name="see-also"></a>См. также  
  [Правила приведения типов в запросах XQuery](/sql/xquery/type-casting-rules-in-xquery)   
  [Функции CAST и CONVERT (Transact-SQL)](/sql/t-sql/functions/cast-and-convert-transact-sql)  
   

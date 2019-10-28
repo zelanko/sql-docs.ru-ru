@@ -44,7 +44,7 @@ ms.locfileid: "72688699"
 > [!NOTE]  
 >  Можно также вызывать [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) и [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399) по очереди для каждого экземпляра SQL Server, а не вызывать их описанным выше в шагах 4 и 5 способом.  
   
-## <a name="see-also"></a>См. также статью  
+## <a name="see-also"></a>См. также  
  [Выполнение транзакций &#40;ODBC&#41;](../../database-engine/dev-guide/performing-transactions-odbc.md)  
   
   
