@@ -1,7 +1,7 @@
 ---
 title: Ресурсы поддержки по драйверам Майкрософт на языке PHP для SQL Server | Документация Майкрософт
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 10/15/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -12,19 +12,19 @@ helpviewer_keywords:
 ms.assetid: 6f35a38f-b260-44cb-a8ac-0a979aa2c218
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: e0b7054a390f8318b3c4c2db39eda3d2bd2fb842
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d227b5d6b6681ecebbef9c2b910f9525e877cad8
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014867"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907881"
 ---
 # <a name="support-resources-for-the-microsoft-drivers-for-php-for-sql-server"></a>Ресурсы поддержки по драйверам Майкрософт для PHP для SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 В этой статье перечислены ресурсы, которые могут оказаться полезными при разработке приложений, использующих [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
   
-## <a name="includessdriverphpincludesssdriverphpmdmd-support-resources"></a>[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] Ресурсы поддержки  
+## <a name="includessdriverphpincludesssdriverphp_mdmd-support-resources"></a>[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] Ресурсы поддержки  
 Последнюю версию документации по [см. в статье](../../connect/php/microsoft-php-driver-for-sql-server.md) Драйвер Microsoft PHP Driver for SQL Server [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
   
 Чтобы обратиться за помощью к коллегам, зайдите на [форум](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=sqldriverforphp) по [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
@@ -33,8 +33,8 @@ ms.locfileid: "68014867"
   
 [Исходный код драйвера Microsoft PHP Driver for SQL Server на Github](https://github.com/Microsoft/msphpsql)  
   
-## <a name="sql-servertransact-sql-support-resources"></a>Ресурсы поддержки SQL Server/Transact-SQL  
-Документацию по SQL Server и Transact-SQL см. в [документации SQL Server](../../sql-server/sql-server-technical-documentation.md).  
+## <a name="sql-server-and-transact-sql-support-resources"></a>Ресурсы поддержки SQL Server и Transact-SQL
+Документацию по SQL Server и Transact-SQL см. в [документации SQL Server](../../sql-server/index.yml).
   
 Чтобы обратиться за помощью к коллегам, зайдите на [форумы MSDN по SQL Server](https://social.msdn.microsoft.com/Forums/sqlserver/home).  
   
@@ -46,12 +46,12 @@ ms.locfileid: "68014867"
 ## <a name="php-support-resources"></a>Ресурсы поддержки PHP  
 [Документация по PHP для Windows](https://windows.php.net/)  
   
-Последние сведения о PHP см. на сайте [http://www.php.net/](http://www.php.net).  
+Последние сведения о PHP см. по адресу [http://www.php.net/](http://www.php.net).  
   
-Документацию по PHP можно [http://www.php.net/docs.php](http://www.php.net/docs.php)найти по адресу.  
+Документацию по PHP можно найти по адресу [http://www.php.net/docs.php](http://www.php.net/docs.php).  
   
 ## <a name="microsoft-customer-support"></a>Служба поддержки клиентов Майкрософт  
-Для получения вопросов о поддержке [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], связанных с, можно обратиться в [Служба поддержки Майкрософт](https://support.microsoft.com/contactus/)или запросить на [странице проекта GitHub](https://github.com/Microsoft/msphpsql/issues).  
+Для получения вопросов о поддержке, связанных с [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], можно обратиться в службу [Служба поддержки Майкрософт](https://support.microsoft.com/contactus/)или запросить на [странице проекта GitHub](https://github.com/Microsoft/msphpsql/issues).  
   
 ## <a name="see-also"></a>См. также:  
 [Обзор драйверов Майкрософт для PHP для SQL Server](../../connect/php/overview-of-the-php-sql-driver.md)
