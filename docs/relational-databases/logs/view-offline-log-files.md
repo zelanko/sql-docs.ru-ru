@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9223e474-f224-4907-a4f2-081e11db58f5
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 39a5ab4ab7159c0915994e555271ba0246f3f896
-ms.sourcegitcommit: 734529a6f108e6ee6bfce939d8be562d405e1832
+ms.openlocfilehash: 814bfdd9c44170cc25f8dbd7eabcfd78ebde2a7d
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/02/2019
-ms.locfileid: "70212304"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908557"
 ---
 # <a name="view-offline-log-files"></a>просматривать файлы журнала в режиме «вне сети»
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -86,8 +86,6 @@ ms.locfileid: "70212304"
 6.  Перейдите на вкладку **Безопасность**.  
   
 7.  Убедитесь в том, что у учетной записи, которая будет использоваться, имеется разрешение **Включить учетную запись** . Это разрешение предоставляет доступ на чтение к объектам WMI.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ### <a name="view-log-files"></a>Просмотр файлов журнала  
  В следующей процедуре демонстрируется просмотр файлов журнала вне сети с помощью списка «Зарегистрированные серверы». Для этой процедуры предполагается следующее.  
