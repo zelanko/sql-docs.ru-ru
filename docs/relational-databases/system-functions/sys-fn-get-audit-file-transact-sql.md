@@ -21,19 +21,19 @@ ms.assetid: d6a78d14-bb1f-4987-b7b6-579ddd4167f5
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7fa19a06d3743e91665ee2355eb5f6c380df413d
-ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
+ms.openlocfilehash: 358b08fe10f29d6a8aaec40f6a80e92c5950e7b7
+ms.sourcegitcommit: d65cef35cdf992297496095d3ad76e3c18c9794a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72542234"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72989506"
 ---
 # <a name="sysfn_get_audit_file-transact-sql"></a>sys.fn_get_audit_file (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
   Возвращает сведения из файла аудита, созданного аудитом сервера в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в статье [Подсистема аудита SQL Server (ядро СУБД)](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
- ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [соглашения о синтаксисе Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -53,17 +53,17 @@ fn_get_audit_file ( file_pattern,
   
     -   **\<path > \\ \*** — получение всех файлов аудита в указанном расположении.  
   
-    -   **\<path > \LoginsAudit_{GUID}** — получение всех файлов аудита с указанными именем и парой GUID.  
+    -   **\<путь > \LoginsAudit_{GUID}** — получение всех файлов аудита с указанными именем и парой GUID.  
   
-    -   **\<path > \LoginsAudit_{GUID}_00_29384.sqlaudit** — получение конкретного файла аудита.  
+    -   **\<путь > \LoginsAudit_{GUID}_00_29384.sqlaudit** — получение конкретного файла аудита.  
   
- - **База данных SQL Azure**:
+ - **База данных SQL Azure или хранилище данных SQL Azure**:
  
     Этот аргумент используется для указания URL-адреса большого двоичного объекта (включая конечную точку хранилища и контейнер). Хотя она не поддерживает подстановочные знаки, можно использовать префикс имени файла (BLOB) (вместо полного имени большого двоичного объекта) для получения нескольких файлов (больших двоичных объектов), начинающихся с этого префикса. Пример:
  
-      - **\<Storage_endpoint \> / \<Container \> / \<ServerName \> / 0DatabaseName 1 2** — собирает все файлы аудита (BLOB-объекты) для конкретной базы данных.    
+      - **\<Storage_endpoint\>/\<Container\>/\<ServerName\>/\<DatabaseName\>/** — собирает все файлы аудита (BLOB-объекты) для конкретной базы данных.    
       
-      - **\<Storage_endpoint \> / \<Container \> / \<ServerName \> / 0DatabaseName 1 2 3AuditName 4 5 6CreationDate 7 8 9FileName 0. XEL-** — собирает конкретный файл аудита (BLOB-объект).
+      - **\<Storage_endpoint\>/\<Container\>/\<имя_сервера\>/\<DatabaseName\>/\<аудитнаме\>/\<CreationDate\>/\<FileName\>. XEL-** — собирает конкретный файл аудита (BLOB).
   
 > [!NOTE]  
 >  При передаче пути без имени файла сформируется ошибка.  
