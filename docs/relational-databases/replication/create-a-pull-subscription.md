@@ -17,14 +17,22 @@ ms.assetid: 41d1886d-59c9-41fc-9bd6-a59b40e0af6e
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 259ff6d422788f302d05b435026839970b9f75db
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 5dde30d826d5b6662a4f488aed7c3a1f21dd00b2
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768661"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908424"
 ---
 # <a name="create-a-pull-subscription"></a>Создание подписки по запросу
+
+<!--
+2019-10-24 , GeneMi:
+This article .md file exists in the so-called "2016+" section of repo 'sql-docs-pr'.
+No article in 2016+ should ever have the moniker 'sql-server-2014' on its metadata line 'monikerRange:', I think.
+Presently 'sql-server-2014' moniker is on this 'monikerRange'. This situation deserves further investigation.
+-->
+
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   В данном разделе описывается процесс создания подписки по запросу в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]или объектов RMO.  
   
@@ -64,8 +72,6 @@ ms.locfileid: "68768661"
 3.  Щелкните правой кнопкой мыши публикацию, для которой хотите создать одну или более подписок, затем щелкните **Создать подписку**.  
   
 4.  Выполните инструкции на страницах мастера создания подписки.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 #### <a name="to-create-a-pull-subscription-from-the-subscriber"></a>Создание подписки по запросу с подписчика  
   

@@ -1,7 +1,7 @@
 ---
 title: ALTER USER (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 12/03/2018
+ms.date: 10/22/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -25,89 +25,653 @@ ms.assetid: 344fc6ce-a008-47c8-a02e-47fae66cc590
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3ae71b89e4dff780e8d01aa137b020665a9c8602
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 9fc839390b89cb133bb51ae8c76552df1804c59b
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155649"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72783225"
 ---
 # <a name="alter-user-transact-sql"></a>ALTER USER (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Переименовывает пользователя базы данных или изменяет его схему, используемую по умолчанию.  
+Переименовывает пользователя базы данных или изменяет его схему, используемую по умолчанию.  
   
- ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+
+## <a name="click-a-product"></a>Выберите продукт!
+
+В следующей строке щелкните имя продукта, который вас интересует. На этой веб-странице отобразится другой контент, относящийся к выбранному продукту.
+
+::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
+
+||||||
+|-|-|-|-|-|
+|**\* _SQL Server \*_** &nbsp;|[Отдельная база данных/эластичный пул Базы данных SQL<br />](alter-user-transact-sql.md?view=azuresqldb-current)|[Управляемый экземпляр Базы данных SQL<br />](alter-user-transact-sql.md?view=azuresqldb-mi-current)|[Хранилище данных<br />SQL](alter-user-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](alter-user-transact-sql.md?view=aps-pdw-2016)
+||||||
+
+&nbsp;
+
+## <a name="sql-server"></a>SQL Server
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
--- Syntax for SQL Server and Azure SQL Database
+```
+-- Syntax for SQL Server
   
-ALTER USER userName    
+ALTER USER userName
      WITH <set_item> [ ,...n ]  
 [;]  
   
-<set_item> ::=   
-      NAME = newUserName   
+<set_item> ::=
+      NAME = newUserName
     | DEFAULT_SCHEMA = { schemaName | NULL }  
     | LOGIN = loginName  
     | PASSWORD = 'password' [ OLD_PASSWORD = 'oldpassword' ]  
     | DEFAULT_LANGUAGE = { NONE | <lcid> | <language name> | <language alias> }  
     | ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | OFF ]  
 ```
+  
+## <a name="arguments"></a>Аргументы
 
-> [!IMPORTANT]
-> Имена входа Azure AD для управляемого экземпляра Базы данных SQL находятся в **общедоступной предварительной версии**. Для управляемого экземпляра Базы данных SQL Azure поддерживаются только следующие параметры при применении к пользователям с именами входа Azure AD: `DEFAULT_SCHEMA = { schemaName | NULL }` и `DEFAULT_LANGUAGE = { NONE | lcid | language name | language alias }`
+ *userName*  
+ Указывает имя, по которому пользователь идентифицируется в этой базе данных.  
+  
+ LOGIN **=** _loginName_  
+ Сопоставляет пользователя с другим именем входа, заменив идентификатор безопасности пользователя для соответствия идентификатору безопасности имени входа.  
+  
+ NAME **=** _newUserName_  
+ Задает новое имя для этого пользователя. Аргумент *newUserName* еще не должен существовать в текущей базе данных.  
+  
+ DEFAULT_SCHEMA **=** { *schemaName* | NULL }  
+ Задает первую схему для поиска сервером, когда он разрешает имена объектов для этого пользователя. При установке схемы по умолчанию в значение NULL схема по умолчанию удаляется из группы Windows. Параметр NULL нельзя использовать с пользователем Windows.  
+  
+ PASSWORD **=** '*password*'  
+ **Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+  
+ Указывает пароль для пользователя, которого необходимо изменить. В паролях учитывается регистр символов.  
+  
+> [!NOTE]  
+> Данный параметр доступен только для содержащихся пользователей. Дополнительные сведения см. в разделах [Автономные базы данных](../../relational-databases/databases/contained-databases.md) и [sp_migrate_user_to_contained &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md).  
+  
+ OLD_PASSWORD **=** _'oldpassword'_  
+ **Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+  
+ Текущий пароль пользователя, который будет заменен на "*password*". В паролях учитывается регистр символов. Параметр *OLD_PASSWORD* является обязательным для изменения пароля. Изменить пароль без этого параметра можно только при наличии разрешения **ALTER ANY USER**. Необходимость указать *OLD_PASSWORD* не позволит пользователям с разрешением **IMPERSONATION** изменить пароль.  
+  
+> [!NOTE]  
+> Данный параметр доступен только для содержащихся пользователей.
+  
+ DEFAULT_LANGUAGE **=** _{ NONE | \<lcid> | \<language name> | \<language alias> }_  
+ **Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+  
+ Указывает язык по умолчанию, присвоенный пользователю. Если этот параметр установлен в значение NONE, то в качестве языка по умолчанию выбирается текущий язык по умолчанию для базы данных. При последующей смене языка по умолчанию для базы данных язык по умолчанию для пользователя не меняется. Аргумент *DEFAULT_LANGUAGE* может быть идентификатором локали (lcid), названием языка или псевдонимом языка.  
+  
+> [!NOTE]  
+> Этот параметр можно задать только в автономной базе данных и только для содержащихся пользователей.
+  
+ ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | **OFF** ]  
+ **Применимо к**: с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+  
+ Отключает проверки шифрованных метаданных на сервере в операциях массового копирования. Это позволяет пользователю массово копировать зашифрованные данные между таблицами или базами данных без расшифровки данных. Значение по умолчанию — OFF.  
+  
+> [!WARNING]  
+> Неправильное использование этого параметра может привести к повреждению данных. Дополнительные сведения см. в разделе [Перенос конфиденциальных данных с помощью функции Always Encrypted](../../relational-databases/security/encryption/migrate-sensitive-data-protected-by-always-encrypted.md).
+  
+## <a name="remarks"></a>Примечания
+
+ Схемой по умолчанию будет первая схема, которую найдет сервер, после того как получит имена объектов для данного пользователя базы данных. Если не указано иное, схемой по умолчанию будет владелец объектов, создаваемых этим пользователем базы данных.  
+  
+ Если пользователь имеет схему по умолчанию, то будет использоваться эта схема. Если у пользователя нет схемы по умолчанию, но он является членом группы, которая имеет схему по умолчанию, используется схема по умолчанию группы. Если пользователь не имеет схемы по умолчанию и является членом нескольких групп, схемой по умолчанию для этого пользователя будет схема по умолчанию группы Windows с минимальным значением principal_id и явно заданной схемой по умолчанию. Если для пользователя нельзя определить схему по умолчанию, будет использоваться схема **dbo**.  
+  
+ В качестве значения DEFAULT_SCHEMA можно задать схему, которая в настоящий момент не существует в базе данных. Поэтому значение DEFAULT_SCHEMA можно определить для пользователя еще до создания схемы.  
+  
+ Значение DEFAULT_SCHEMA не может быть указано для пользователя, сопоставленного с сертификатом или асимметричным ключом.  
+  
+> [!IMPORTANT]  
+> Значение параметра DEFAULT_SCHEMA не учитывается, если пользователь является членом предопределенной роли сервера **sysadmin**. Для всех членов роли сервера **sysadmin** по умолчанию установлена схема `dbo`.
+  
+ Имя пользователя, сопоставленное с именем входа или группой Windows, можно изменить только в том случае, если значение идентификатора безопасности имени нового пользователя совпадает с уже записанным в базе данных. Такая проверка предотвращает имитацию подключения к базе данных с помощью имен входа Windows.  
+  
+ Предложение WITH LOGIN позволяет сопоставить пользователя с другим именем входа. Пользователи, не имеющие имени входа, а также пользователи, сопоставленные с сертификатом или с асимметричным ключом, не могут быть повторно сопоставлены с помощью этого предложения. Возможно повторное сопоставление только пользователей (или групп) SQL и Windows. Предложение WITH LOGIN не удастся использовать для изменения типа пользователя, например для перехода от учетной записи Windows на имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  
+ Имя пользователя будет автоматически изменено на имя входа, если удовлетворяются следующие условия.  
+  
+- Пользователь является пользователем Windows.  
+  
+- Имя является именем Windows (содержит обратную косую черту).  
+  
+- Новое имя не было указано.  
+  
+- Текущее имя отличается от имени входа.  
+  
+ В противном случае пользователь не будет переименован, если только вызывающий не вызовет дополнительно предложение NAME.  
+  
+Имя пользователя, сопоставленное с именем входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], сертификатом или асимметричным ключом, не может содержать обратную косую черту (\\).  
+  
+> [!CAUTION]  
+> [!INCLUDE[ssCautionUserSchema](../../includes/sscautionuserschema-md.md)]  
+  
+## <a name="security"></a>безопасность  
+  
+> [!NOTE]  
+> Пользователь с разрешением **ALTER ANY USER** может изменить схему по умолчанию для любого пользователя. Пользователь с измененной схемой может производить выборку данных неизвестным образом из неправильной таблицы или выполнять код из неправильной схемы.
+  
+### <a name="permissions"></a>Разрешения
+
+ Чтобы изменить имя пользователя, необходимо разрешение **ALTER ANY USER** для базы данных.  
+  
+ Чтобы изменить целевое имя входа пользователя, необходимо разрешение **CONTROL** в базе данных.  
+  
+ Чтобы изменить имя пользователя с разрешением **CONTROL** в базе данных, требуется разрешение **CONTROL** в базе данных.  
+  
+ Чтобы изменить схему или язык по умолчанию, требуется разрешение **ALTER** на пользователя. Пользователь может изменить свою собственную схему или язык по умолчанию.  
+  
+## <a name="examples"></a>Примеры  
+
+Все примеры выполняются в базе данных пользователя.  
+
+### <a name="a-changing-the-name-of-a-database-user"></a>A. Изменение имени пользователя базы данных
+
+ В следующем примере показано изменение имени пользователя базы данных с `Mary5` на `Mary51`.  
+  
+```sql
+ALTER USER Mary5 WITH NAME = Mary51;  
+GO  
+```  
+  
+### <a name="b-changing-the-default-schema-of-a-user"></a>Б. Изменение схемы пользователя, используемой по умолчанию
+
+ В данном примере показано изменение схемы пользователя, используемой по умолчанию, с `Mary51` на `Purchasing`.  
+  
+```sql
+ALTER USER Mary51 WITH DEFAULT_SCHEMA = Purchasing;  
+GO  
+```  
+  
+### <a name="c-changing-several-options-at-once"></a>В. Изменение нескольких параметров одновременно
+
+ В следующем примере несколько параметров пользователя автономной базы данных изменяются одной инструкцией.  
+  
+**Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+  
+```sql
+ALTER USER Philip
+WITH NAME = Philipe
+    , DEFAULT_SCHEMA = Development
+    , PASSWORD = 'W1r77TT98%ab@#' OLD_PASSWORD = 'New Devel0per'
+    , DEFAULT_LANGUAGE  = French ;  
+GO  
+```  
+
+## <a name="see-also"></a>См. также раздел
+
+ - [CREATE USER (Transact-SQL)](../../t-sql/statements/create-user-transact-sql.md)
+ - [DROP USER (Transact-SQL)](../../t-sql/statements/drop-user-transact-sql.md)
+ - [Автономные базы данных](../../relational-databases/databases/contained-databases.md)
+ - [EVENTDATA (Transact-SQL)](../../t-sql/functions/eventdata-transact-sql.md)
+ - [sp_migrate_user_to_contained (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md)
+
+::: moniker-end
+::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
+
+> ||||||
+> |-|-|-|-|-|
+> |[SQL Server](alter-user-transact-sql.md?view=sql-server-2017)|**_\* Отдельная база данных/эластичный пул Базы данных SQL<br /> \*_**|[Управляемый экземпляр Базы данных SQL<br />](alter-user-transact-sql.md?view=azuresqldb-mi-current)|[Хранилище данных<br />SQL](alter-user-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](alter-user-transact-sql.md?view=aps-pdw-2016)
+
+&nbsp;
+
+## <a name="azure-sql-database-single-databaseelastic-pool"></a>Отдельная база данных или эластичный пул Базы данных SQL Azure
+
+## <a name="syntax"></a>Синтаксис
 
 ```
--- Syntax for Azure SQL Database  
+-- Syntax for Azure SQL Database
   
-ALTER USER userName    
+ALTER USER userName
      WITH <set_item> [ ,...n ]  
   
-<set_item> ::=   
-      NAME = newUserName   
+<set_item> ::=
+      NAME = newUserName
     | DEFAULT_SCHEMA = schemaName  
     | LOGIN = loginName  
-    | ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | OFF ]   
+    | ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | OFF ]
 [;]  
   
 -- Azure SQL Database Update Syntax  
-ALTER USER userName    
+ALTER USER userName
      WITH <set_item> [ ,...n ]  
 [;]  
   
-<set_item> ::=   
-      NAME = newUserName   
+<set_item> ::=
+      NAME = newUserName
     | DEFAULT_SCHEMA = { schemaName | NULL }  
     | LOGIN = loginName  
     | PASSWORD = 'password' [ OLD_PASSWORD = 'oldpassword' ]  
-    | ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | OFF ]   
+    | ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | OFF ]
   
 -- SQL Database syntax when connected to a federation member  
 ALTER USER userName  
-     WITH <set_item> [ ,... n ]   
+     WITH <set_item> [ ,... n ]
 [;]  
   
-<set_item> ::=   
+<set_item> ::=
      NAME = newUserName  
 ```  
+
+## <a name="arguments"></a>Аргументы
+
+ *userName*  
+ Указывает имя, по которому пользователь идентифицируется в этой базе данных.  
   
+ LOGIN **=** _loginName_  
+ Сопоставляет пользователя с другим именем входа, заменив идентификатор безопасности пользователя для соответствия идентификатору безопасности имени входа.  
+  
+ Если ALTER USER является единственной инструкцией в пакете SQL, предложение WITH LOGIN поддерживается в Базе данных SQL Azure. Если инструкция ALTER USER не единственная в пакете SQL или выполняется в динамическом коде SQL, предложение WITH LOGIN не поддерживается.  
+  
+ NAME **=** _newUserName_  
+ Задает новое имя для этого пользователя. Аргумент *newUserName* еще не должен существовать в текущей базе данных.  
+  
+ DEFAULT_SCHEMA **=** { *schemaName* | NULL }  
+ Задает первую схему для поиска сервером, когда он разрешает имена объектов для этого пользователя. При установке схемы по умолчанию в значение NULL схема по умолчанию удаляется из группы Windows. Параметр NULL нельзя использовать с пользователем Windows.  
+  
+ PASSWORD **=** '*password*'  
+ **Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+  
+ Указывает пароль для пользователя, которого необходимо изменить. В паролях учитывается регистр символов.  
+  
+> [!NOTE]  
+> Данный параметр доступен только для содержащихся пользователей. Дополнительные сведения см. в разделах [Автономные базы данных](../../relational-databases/databases/contained-databases.md) и [sp_migrate_user_to_contained &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md).
+  
+ OLD_PASSWORD **=** _'oldpassword'_  
+ **Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+  
+ Текущий пароль пользователя, который будет заменен на "*password*". В паролях учитывается регистр символов. Параметр *OLD_PASSWORD* является обязательным для изменения пароля. Изменить пароль без этого параметра можно только при наличии разрешения **ALTER ANY USER**. Необходимость указать *OLD_PASSWORD* не позволит пользователям с разрешением **IMPERSONATION** изменить пароль.  
+  
+> [!NOTE]  
+> Данный параметр доступен только для содержащихся пользователей.
+  
+ ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | **OFF** ]  
+ **Применимо к**: с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+  
+ Отключает проверки шифрованных метаданных на сервере в операциях массового копирования. Это позволяет пользователю массово копировать зашифрованные данные между таблицами или базами данных без расшифровки данных. Значение по умолчанию — OFF.  
+  
+> [!WARNING]  
+> Неправильное использование этого параметра может привести к повреждению данных. Дополнительные сведения см. в разделе [Перенос конфиденциальных данных с помощью функции Always Encrypted](../../relational-databases/security/encryption/migrate-sensitive-data-protected-by-always-encrypted.md).
+  
+## <a name="remarks"></a>Примечания
+
+ Схемой по умолчанию будет первая схема, которую найдет сервер, после того как получит имена объектов для данного пользователя базы данных. Если не указано иное, схемой по умолчанию будет владелец объектов, создаваемых этим пользователем базы данных.  
+  
+ Если пользователь имеет схему по умолчанию, будет использоваться эта схема. Если у пользователя нет схемы по умолчанию, но он является членом группы, которая имеет схему по умолчанию, используется схема по умолчанию группы. Если пользователь не имеет схемы по умолчанию и является членом нескольких групп, схемой по умолчанию для этого пользователя будет схема по умолчанию группы Windows с минимальным значением principal_id и явно заданной схемой по умолчанию. Если для пользователя нельзя определить схему по умолчанию, будет использоваться схема **dbo**.  
+  
+ В качестве значения DEFAULT_SCHEMA можно задать схему, которая в настоящий момент не существует в базе данных. Поэтому значение DEFAULT_SCHEMA можно определить для пользователя еще до создания схемы.  
+  
+ Значение DEFAULT_SCHEMA не может быть указано для пользователя, сопоставленного с сертификатом или асимметричным ключом.  
+  
+> [!IMPORTANT]  
+> Значение параметра DEFAULT_SCHEMA не учитывается, если пользователь является членом предопределенной роли сервера **sysadmin**. Для всех членов роли сервера **sysadmin** по умолчанию установлена схема `dbo`.
+  
+ Имя пользователя, сопоставленное с именем входа или группой Windows, можно изменить только в том случае, если значение идентификатора безопасности имени нового пользователя совпадает с уже записанным в базе данных. Такая проверка предотвращает имитацию подключения к базе данных с помощью имен входа Windows.  
+  
+ Предложение WITH LOGIN позволяет сопоставить пользователя с другим именем входа. Пользователи, не имеющие имени входа, а также пользователи, сопоставленные с сертификатом или с асимметричным ключом, не могут быть повторно сопоставлены с помощью этого предложения. Возможно повторное сопоставление только пользователей (или групп) SQL и Windows. Предложение WITH LOGIN не удастся использовать для изменения типа пользователя, например для перехода от учетной записи Windows на имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  
+ Имя пользователя будет автоматически изменено на имя входа, если удовлетворяются следующие условия.  
+  
+- Пользователь является пользователем Windows.  
+  
+- Имя является именем Windows (содержит обратную косую черту).  
+  
+- Новое имя не было указано.  
+  
+- Текущее имя отличается от имени входа.  
+  
+ В противном случае пользователь не будет переименован, если только вызывающий не вызовет дополнительно предложение NAME.  
+  
+Имя пользователя, сопоставленное с именем входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], сертификатом или асимметричным ключом, не может содержать обратную косую черту (\\).  
+  
+> [!CAUTION]  
+> [!INCLUDE[ssCautionUserSchema](../../includes/sscautionuserschema-md.md)]  
+  
+## <a name="security"></a>безопасность
+  
+> [!NOTE]  
+> Пользователь с разрешением **ALTER ANY USER** может изменить схему по умолчанию для любого пользователя. Пользователь с измененной схемой может производить выборку данных неизвестным образом из неправильной таблицы или выполнять код из неправильной схемы.  
+  
+### <a name="permissions"></a>Разрешения
+
+ Чтобы изменить имя пользователя, необходимо разрешение **ALTER ANY USER** для базы данных.  
+  
+ Чтобы изменить целевое имя входа пользователя, необходимо разрешение **CONTROL** в базе данных.  
+  
+ Чтобы изменить имя пользователя с разрешением **CONTROL** в базе данных, требуется разрешение **CONTROL** в базе данных.  
+  
+ Чтобы изменить схему или язык по умолчанию, требуется разрешение **ALTER** на пользователя. Пользователь может изменить свою собственную схему или язык по умолчанию.  
+  
+## <a name="examples"></a>Примеры
+
+Все примеры выполняются в базе данных пользователя.  
+
+### <a name="a-changing-the-name-of-a-database-user"></a>A. Изменение имени пользователя базы данных
+
+ В следующем примере показано изменение имени пользователя базы данных с `Mary5` на `Mary51`.  
+  
+```sql
+ALTER USER Mary5 WITH NAME = Mary51;  
+GO  
 ```  
+  
+### <a name="b-changing-the-default-schema-of-a-user"></a>Б. Изменение схемы пользователя, используемой по умолчанию
+
+ В данном примере показано изменение схемы пользователя, используемой по умолчанию, с `Mary51` на `Purchasing`.  
+  
+```sql
+ALTER USER Mary51 WITH DEFAULT_SCHEMA = Purchasing;  
+GO  
+```  
+  
+### <a name="c-changing-several-options-at-once"></a>В. Изменение нескольких параметров одновременно
+
+ В следующем примере несколько параметров пользователя автономной базы данных изменяются одной инструкцией.
+  
+```sql
+ALTER USER Philip
+WITH  NAME = Philipe
+    , DEFAULT_SCHEMA = Development
+    , PASSWORD = 'W1r77TT98%ab@#' OLD_PASSWORD = 'New Devel0per';
+GO  
+```  
+
+## <a name="see-also"></a>См. также раздел
+
+ - [CREATE USER (Transact-SQL)](../../t-sql/statements/create-user-transact-sql.md)
+ - [DROP USER (Transact-SQL)](../../t-sql/statements/drop-user-transact-sql.md)
+ - [Автономные базы данных](../../relational-databases/databases/contained-databases.md)
+ - [EVENTDATA (Transact-SQL)](../../t-sql/functions/eventdata-transact-sql.md)
+ - [sp_migrate_user_to_contained (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md)
+
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+
+> ||||||
+> |-|-|-|-|-|
+> |[SQL Server](alter-user-transact-sql.md?view=sql-server-2017)|[Отдельная база данных/эластичный пул Базы данных SQL<br />](alter-user-transact-sql.md?view=azuresqldb-current)|**_\* Управляемый экземпляр Базы данных SQL<br /> \*_**|[Хранилище данных<br />SQL](alter-user-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](alter-user-transact-sql.md?view=aps-pdw-2016)
+
+&nbsp;
+
+## <a name="azure-sql-database-managed-instance"></a>Управляемый экземпляр Базы данных SQL Azure
+
+## <a name="syntax"></a>Синтаксис
+
+> [!IMPORTANT]
+> Для управляемого экземпляра Базы данных SQL Azure поддерживаются только следующие параметры при применении к пользователям с именами входа Azure AD: `DEFAULT_SCHEMA = { schemaName | NULL }` и `DEFAULT_LANGUAGE = { NONE | lcid | language name | language alias }`
+> </br> </br> Для сопоставления пользователей в базе данных, которая была перенесена в управляемый экземпляр, было добавлено новое расширение синтаксиса. Синтаксис ALTER USER позволяет сопоставлять пользователей базы данных в объединенном и синхронизированном домене с Azure AD с именами входа Azure AD.
+
+```
+-- Syntax for Azure SQL Database managed instance
+ALTER USER userName
+     { WITH <set_item> [ ,...n ] | FROM EXTERNAL PROVIDER }
+[;]  
+  
+<set_item> ::=
+      NAME = newUserName
+    | DEFAULT_SCHEMA = { schemaName | NULL }  
+    | LOGIN = loginName  
+    | PASSWORD = 'password' [ OLD_PASSWORD = 'oldpassword' ]
+    | DEFAULT_LANGUAGE = { NONE | <lcid> | <language name> | <language alias> }
+    | ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | OFF ]
+  
+-- Users or groups that are migrated as federated and synchronized with Azure AD have the following syntax:
+
+    /** Applies to Windows users that were migrated and have the following user names:
+    - Windows user <domain\user>
+    - Windows group <domain\MyWindowsGroup>
+    - Windows alias <MyWindowsAlias>
+    **/
+
+ALTER USER userName  
+     { WITH <set_item> [ ,...n ] | FROM EXTERNAL PROVIDER }
+[;]  
+  
+<set_item> ::=
+     NAME = newUserName
+    | DEFAULT_SCHEMA = { schemaName | NULL }
+    | LOGIN = loginName
+    | DEFAULT_LANGUAGE = { NONE | <lcid> | <language name> | <language alias> }
+```
+  
+## <a name="arguments"></a>Аргументы
+
+ *userName*  
+ Указывает имя, по которому пользователь идентифицируется в этой базе данных.  
+  
+ LOGIN **=** _loginName_  
+ Сопоставляет пользователя с другим именем входа, заменив идентификатор безопасности пользователя для соответствия идентификатору безопасности имени входа.  
+  
+ Если ALTER USER является единственной инструкцией в пакете SQL, предложение WITH LOGIN поддерживается в Базе данных SQL Azure. Если инструкция ALTER USER не единственная в пакете SQL или выполняется в динамическом коде SQL, предложение WITH LOGIN не поддерживается.  
+  
+ NAME **=** _newUserName_  
+ Задает новое имя для этого пользователя. Аргумент *newUserName* еще не должен существовать в текущей базе данных.  
+  
+ DEFAULT_SCHEMA **=** { *schemaName* | NULL }  
+ Задает первую схему для поиска сервером, когда он разрешает имена объектов для этого пользователя. При установке схемы по умолчанию в значение NULL схема по умолчанию удаляется из группы Windows. Параметр NULL нельзя использовать с пользователем Windows.  
+  
+ PASSWORD **=** '*password*' 
+  
+ Указывает пароль для пользователя, которого необходимо изменить. В паролях учитывается регистр символов.  
+  
+> [!NOTE]  
+> Данный параметр доступен только для содержащихся пользователей. Дополнительные сведения см. в разделах [Автономные базы данных](../../relational-databases/databases/contained-databases.md) и [sp_migrate_user_to_contained &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md).
+  
+ OLD_PASSWORD **=** _'oldpassword'_
+  
+ Текущий пароль пользователя, который будет заменен на "*password*". В паролях учитывается регистр символов. Параметр *OLD_PASSWORD* является обязательным для изменения пароля. Изменить пароль без этого параметра можно только при наличии разрешения **ALTER ANY USER**. Необходимость указать *OLD_PASSWORD* не позволит пользователям с разрешением **IMPERSONATION** изменить пароль.  
+  
+> [!NOTE]  
+> Данный параметр доступен только для содержащихся пользователей.
+  
+ DEFAULT_LANGUAGE **=** _{ NONE | \<lcid> | \<language name> | \<language alias> }_  
+  
+ Указывает язык по умолчанию, присвоенный пользователю. Если этот параметр установлен в значение NONE, то в качестве языка по умолчанию выбирается текущий язык по умолчанию для базы данных. При последующей смене языка по умолчанию для базы данных язык по умолчанию для пользователя не меняется. Аргумент *DEFAULT_LANGUAGE* может быть идентификатором локали (lcid), названием языка или псевдонимом языка.  
+  
+> [!NOTE]  
+> Этот параметр можно задать только в автономной базе данных и только для содержащихся пользователей.
+  
+ ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | **OFF** ]  
+  
+ Отключает проверки шифрованных метаданных на сервере в операциях массового копирования. Это позволяет пользователю массово копировать зашифрованные данные между таблицами или базами данных без расшифровки данных. Значение по умолчанию — OFF.  
+  
+> [!WARNING]  
+> Неправильное использование этого параметра может привести к повреждению данных. Дополнительные сведения см. в разделе [Перенос конфиденциальных данных с помощью функции Always Encrypted](../../relational-databases/security/encryption/migrate-sensitive-data-protected-by-always-encrypted.md).
+  
+## <a name="remarks"></a>Примечания
+
+ Схемой по умолчанию будет первая схема, которую найдет сервер, после того как получит имена объектов для данного пользователя базы данных. Если не указано иное, схемой по умолчанию будет владелец объектов, создаваемых этим пользователем базы данных.  
+  
+ Если пользователь имеет схему по умолчанию, будет использоваться эта схема. Если у пользователя нет схемы по умолчанию, но он является членом группы, которая имеет схему по умолчанию, используется схема по умолчанию группы. Если пользователь не имеет схемы по умолчанию и является членом нескольких групп, схемой по умолчанию для этого пользователя будет схема по умолчанию группы Windows с минимальным значением principal_id и явно заданной схемой по умолчанию. Если для пользователя нельзя определить схему по умолчанию, будет использоваться схема **dbo**.  
+  
+ В качестве значения DEFAULT_SCHEMA можно задать схему, которая в настоящий момент не существует в базе данных. Поэтому значение DEFAULT_SCHEMA можно определить для пользователя еще до создания схемы.  
+  
+ Значение DEFAULT_SCHEMA не может быть указано для пользователя, сопоставленного с сертификатом или асимметричным ключом.  
+  
+> [!IMPORTANT]  
+> Значение параметра DEFAULT_SCHEMA не учитывается, если пользователь является членом предопределенной роли сервера **sysadmin**. Для всех членов роли сервера **sysadmin** по умолчанию установлена схема `dbo`.
+  
+ Имя пользователя, сопоставленное с именем входа или группой Windows, можно изменить только в том случае, если значение идентификатора безопасности имени нового пользователя совпадает с уже записанным в базе данных. Такая проверка предотвращает имитацию подключения к базе данных с помощью имен входа Windows.  
+  
+ Предложение WITH LOGIN позволяет сопоставить пользователя с другим именем входа. Пользователи, не имеющие имени входа, а также пользователи, сопоставленные с сертификатом или с асимметричным ключом, не могут быть повторно сопоставлены с помощью этого предложения. Возможно повторное сопоставление только пользователей (или групп) SQL и Windows. Предложение WITH LOGIN не удастся использовать для изменения типа пользователя, например для перехода от учетной записи Windows на имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Единственным исключением является изменение пользователя Windows на пользователя Azure AD.
+
+> [!NOTE]
+> Следующие правила не применяются к пользователям Windows на управляемом экземпляре, так как мы не поддерживаем создание имен входа Windows на управляемом экземпляре. Параметр WITH LOGIN можно использовать только при наличии имен входа Azure AD.
+  
+ Имя пользователя будет автоматически изменено на имя входа, если удовлетворяются следующие условия.  
+  
+- Пользователь является пользователем Windows.  
+  
+- Имя является именем Windows (содержит обратную косую черту).  
+  
+- Новое имя не было указано.  
+  
+- Текущее имя отличается от имени входа.  
+  
+ В противном случае пользователь не будет переименован, если только вызывающий не вызовет дополнительно предложение NAME.  
+  
+Имя пользователя, сопоставленное с именем входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], сертификатом или асимметричным ключом, не может содержать обратную косую черту (\\).  
+  
+> [!CAUTION]  
+> [!INCLUDE[ssCautionUserSchema](../../includes/sscautionuserschema-md.md)]
+
+### <a name="remarks-for-windows-users-in-sql-on-premises-migrated-to-managed-instance"></a>Примечания для пользователей Windows в локальной среде SQL, перенесенных на управляемый экземпляр
+
+Эти замечания относятся к проверке подлинности в качестве пользователей Windows, которые были объединены и синхронизированы с Azure AD.
+
+- Проверка пользователей или групп Windows, сопоставленных с Azure AD, выполняется по умолчанию с помощью API Graph во всех версиях синтаксиса ALTER USER, используемого для миграции.
+- Локальные пользователи, которым были назначены псевдонимы (другое имя, помимо имени исходной учетной записи Windows), будут иметь имя с псевдонимом.
+- При проверке подлинности Azure AD параметр LOGIN применяется только к управляемому экземпляру и не может использоваться с базой данных SQL.
+- Чтобы просмотреть имена входа для субъектов Azure AD, используйте следующую команду: `select * from sys.server_principals`.
+    - Проверьте, что указанный тип имени входа имеет значение `E` или `X`.
+- Параметр PASSWORD нельзя использовать для пользователей Azure AD.
+- Во всех случаях миграции роли и разрешения пользователей или групп Windows будут автоматически переданы новым пользователям или группам Azure AD.
+- Новое расширение синтаксиса, **FROM EXTERNAL PROVIDER**, доступно для изменения пользователей и групп Windows из локальной среды SQL на пользователей и группы Azure AD. Домен Windows должен быть объединен с Azure AD, а при использовании этого расширения все члены домена Windows должны существовать в Azure AD. Синтаксис **FROM EXTERNAL PROVIDER** применяется к управляемому экземпляру и должен использоваться в случае, если пользователи Windows не имеют имен входа в исходном экземпляре SQL и их следует сопоставлять с автономными пользователями базы данных Azure AD.
+  - В этом случае допустимое userName может быть следующим:
+    - Пользователь Widows (_домен\пользователь_).
+    - Группа Windows (_MyWidnowsGroups_).
+    - Псевдоним Windows (_MyWindowsAlias_).
+  - Результат команды ALTER заменяет старое userName соответствующим именем, которое найдено в Azure AD на основе исходного идентификатора безопасности старого userName. Измененное имя заменяется и сохраняется в метаданных базы данных:
+    - (_домен\пользователь_) будет заменено на Azure AD user@domain.com.
+    - (_домен\\MyWidnowsGroup_) будет заменено на группу Azure AD.
+    - (_MyWindowsAlias_) останется без изменений, но идентификатор безопасности этого пользователя будет проверен в Azure AD.
+
+> [!NOTE]
+> Если идентификатор безопасности исходного пользователя, преобразованный в objectID, не удается найти в Azure AD, команда ALTER USER завершится ошибкой.
+
+- Чтобы просмотреть измененных пользователей, используйте следующую команду: `select * from sys.database_principals`
+  - Проверьте указанный тип пользователя `E` или `X`.
+- Если для миграции пользователей Windows в пользователи Azure AD используется синтаксис NAME, действуют следующие ограничения.
+  - Необходимо указать допустимый LOGIN.
+  - Параметр NAME будет проверен Azure AD и может быть только следующим:
+    - Имя LOGIN.
+    - Псевдоним — имя не может существовать в Azure AD.
+  - Во всех остальных случаях синтаксис завершится ошибкой.
+  
+## <a name="security"></a>безопасность
+  
+> [!NOTE]  
+> Пользователь с разрешением **ALTER ANY USER** может изменить схему по умолчанию для любого пользователя. Пользователь с измененной схемой может производить выборку данных неизвестным образом из неправильной таблицы или выполнять код из неправильной схемы.  
+  
+### <a name="permissions"></a>Разрешения
+
+ Чтобы изменить имя пользователя, необходимо разрешение **ALTER ANY USER** для базы данных.  
+  
+ Чтобы изменить целевое имя входа пользователя, необходимо разрешение **CONTROL** в базе данных.  
+  
+ Чтобы изменить имя пользователя с разрешением **CONTROL** в базе данных, требуется разрешение **CONTROL** в базе данных.  
+  
+ Чтобы изменить схему или язык по умолчанию, требуется разрешение **ALTER** на пользователя. Пользователь может изменить свою собственную схему или язык по умолчанию.  
+  
+## <a name="examples"></a>Примеры
+
+Все примеры выполняются в базе данных пользователя.  
+
+### <a name="a-changing-the-name-of-a-database-user"></a>A. Изменение имени пользователя базы данных
+
+ В следующем примере показано изменение имени пользователя базы данных с `Mary5` на `Mary51`.  
+  
+```sql
+ALTER USER Mary5 WITH NAME = Mary51;  
+GO  
+```  
+  
+### <a name="b-changing-the-default-schema-of-a-user"></a>Б. Изменение схемы пользователя, используемой по умолчанию
+
+ В данном примере показано изменение схемы пользователя, используемой по умолчанию, с `Mary51` на `Purchasing`.  
+  
+```sql
+ALTER USER Mary51 WITH DEFAULT_SCHEMA = Purchasing;  
+GO  
+```  
+  
+### <a name="c-changing-several-options-at-once"></a>В. Изменение нескольких параметров одновременно
+
+ В следующем примере несколько параметров пользователя автономной базы данных изменяются одной инструкцией.  
+  
+```sql
+ALTER USER Philip
+WITH NAME = Philipe
+    , DEFAULT_SCHEMA = Development
+    , PASSWORD = 'W1r77TT98%ab@#' OLD_PASSWORD = 'New Devel0per'
+    , DEFAULT_LANGUAGE  = French ;  
+GO  
+```
+
+### <a name="d-map-the-user-in-the-database-to-an-azure-ad-login-after-migration"></a>Г. После миграции сопоставьте пользователя в базе данных с именем входа Azure AD
+
+В следующем примере показано повторное сопоставление пользователя `westus/joe` с пользователем Azure AD, `joe@westus.com`. Этот пример предназначен для имен входа, уже существующих в управляемом экземпляре. Это необходимо сделать после завершения миграции базы данных на управляемый экземпляр и в том случае, когда есть необходимость использовать имя входа Azure AD для проверки подлинности.
+
+```sql
+ALTER USER [westus/joe] WITH LOGIN = joe@westus.com
+```
+
+### <a name="e-map-an-old-windows-user-in-the-database-without-a-login-in-managed-instance-to-an-azure-ad-user"></a>Д. Сопоставление старого пользователя Windows в базе данных без имени входа в управляемом экземпляре с пользователем Azure AD.
+
+В следующем примере показано повторное сопоставление пользователя, `westus/joe` без имени входа, с пользователем Azure AD, `joe@westus.com`. Федеративный пользователь должен существовать в Azure AD.
+
+```sql
+ALTER USER [westus/joe] FROM EXTERNAL PROVIDER
+```
+
+### <a name="f-map-the-user-alias-to-an-existing-azure-ad-login"></a>Е. Сопоставление псевдонима пользователя с существующим именем входа Azure AD.
+
+В следующем примере показано повторное сопоставление имени пользователя, `westus\joe` с `joe_alias`. В этом случае соответствующая учетная запись Azure AD — это `joe@westus.com`.
+
+```sql
+ALTER USER [westus/joe] WITH LOGIN = joe@westus.com, name= joe_alias  
+```
+
+### <a name="g-map-a-windows-group-that-was-migrated-in-managed-instance-to-an-azure-ad-group"></a>Ж. Сопоставление группы Windows, перенесенной в управляемый экземпляр, с группой Azure AD
+
+В следующем примере выполняется повторное сопоставление старой локальной группы `westus\mygroup` с группой Azure AD `mygroup` в управляемом экземпляре. Эта группа должна существовать в Azure AD.
+
+```sql
+ALTER USER [westus\mygroup] WITH LOGIN = mygroup
+```
+
+## <a name="see-also"></a>См. также раздел
+
+ - [CREATE USER (Transact-SQL)](../../t-sql/statements/create-user-transact-sql.md)
+ - [DROP USER (Transact-SQL)](../../t-sql/statements/drop-user-transact-sql.md)
+ - [Автономные базы данных](../../relational-databases/databases/contained-databases.md)
+ - [EVENTDATA (Transact-SQL)](../../t-sql/functions/eventdata-transact-sql.md)
+ - [sp_migrate_user_to_contained (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md)
+ - [Учебник. Миграция локальных пользователей и групп Windows в SQL Server в управляемый экземпляр базы данных SQL Azure с помощью синтаксиса T-SQL DDL](/azure/sql-database/sql-database-managed-instance-aad-migration-tutorial)
+
+::: moniker-end
+::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
+
+> ||||||
+> |-|-|-|-|-|
+> |[SQL Server](alter-user-transact-sql.md?view=sql-server-2017)|[Отдельная база данных/эластичный пул Базы данных SQL<br />](alter-user-transact-sql.md?view=azuresqldb-current)|[Управляемый экземпляр Базы данных SQL<br />](alter-user-transact-sql.md?view=azuresqldb-mi-current)|**_\* Хранилище данных<br />SQL \*_**|[Analytics Platform<br />System (PDW)](alter-user-transact-sql.md?view=aps-pdw-2016)
+
+&nbsp;
+
+## <a name="azure-sql-data-warehouse"></a>Хранилище данных SQL Azure
+
+## <a name="syntax"></a>Синтаксис
+  
+```
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
-ALTER USER userName    
+ALTER USER userName
      WITH <set_item> [ ,...n ]  
   
-<set_item> ::=   
-     NAME =newUserName   
-     | LOGIN =loginName  
+<set_item> ::=
+     NAME = newUserName
+     | LOGIN = loginName  
      | DEFAULT_SCHEMA = schema_name  
 [;]  
 ```  
   
-## <a name="arguments"></a>Аргументы  
+## <a name="arguments"></a>Аргументы
+
  *userName*  
  Указывает имя, по которому пользователь идентифицируется в этой базе данных.  
   
@@ -122,39 +686,8 @@ ALTER USER userName
  DEFAULT_SCHEMA **=** { *schemaName* | NULL }  
  Задает первую схему для поиска сервером, когда он разрешает имена объектов для этого пользователя. При установке схемы по умолчанию в значение NULL схема по умолчанию удаляется из группы Windows.   Параметр NULL нельзя использовать с пользователем Windows.  
   
- PASSWORD **=** '*password*'  
- **Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
-  
- Указывает пароль для пользователя, которого необходимо изменить. В паролях учитывается регистр символов.  
-  
-> [!NOTE]  
->  Данный параметр доступен только для содержащихся пользователей. Дополнительные сведения см. в разделах [Автономные базы данных](../../relational-databases/databases/contained-databases.md) и [sp_migrate_user_to_contained (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md).  
-  
- OLD_PASSWORD **=** _'oldpassword'_  
- **Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
-  
- Текущий пароль пользователя, который будет заменен на "*password*". В паролях учитывается регистр символов. Параметр *OLD_PASSWORD* является обязательным для изменения пароля. Изменить пароль без этого параметра можно только при наличии разрешения **ALTER ANY USER**. Необходимость указать *OLD_PASSWORD* не позволит пользователям с разрешением **IMPERSONATION** изменить пароль.  
-  
-> [!NOTE]  
->  Данный параметр доступен только для содержащихся пользователей.  
-  
- DEFAULT_LANGUAGE **=** _{ NONE | \<lcid> | \<language name> | \<language alias> }_  
- **Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
-  
- Указывает язык по умолчанию, присвоенный пользователю. Если этот параметр установлен в значение NONE, то в качестве языка по умолчанию выбирается текущий язык по умолчанию для базы данных. При последующей смене языка по умолчанию для базы данных язык по умолчанию для пользователя не меняется. Аргумент *DEFAULT_LANGUAGE* может быть идентификатором локали (lcid), названием языка или псевдонимом языка.  
-  
-> [!NOTE]  
->  Этот параметр можно задать только в автономной базе данных и только для содержащихся пользователей.  
-  
- ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | **OFF** ] ]  
- **Применимо к**: с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
-  
- Отключает проверки шифрованных метаданных на сервере в операциях массового копирования. Это позволяет пользователю массово копировать зашифрованные данные между таблицами или базами данных без расшифровки данных. Значение по умолчанию — OFF.  
-  
-> [!WARNING]  
->  Неправильное использование этого параметра может привести к повреждению данных. Дополнительные сведения см. в разделе [Перенос конфиденциальных данных с помощью функции Always Encrypted](../../relational-databases/security/encryption/migrate-sensitive-data-protected-by-always-encrypted.md).  
-  
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks
+
  Схемой по умолчанию будет первая схема, которую найдет сервер, после того как получит имена объектов для данного пользователя базы данных. Если не указано иное, схемой по умолчанию будет владелец объектов, создаваемых этим пользователем базы данных.  
   
  Если пользователь имеет схему по умолчанию, будет использоваться эта схема. Если у пользователя нет схемы по умолчанию, но он является членом группы, которая имеет схему по умолчанию, используется схема по умолчанию группы. Если пользователь не имеет схемы по умолчанию и является членом нескольких групп, схемой по умолчанию для этого пользователя будет схема по умолчанию группы Windows с минимальным значением principal_id и явно заданной схемой по умолчанию. Если для пользователя нельзя определить схему по умолчанию, будет использоваться схема **dbo**.  
@@ -164,35 +697,30 @@ ALTER USER userName
  Значение DEFAULT_SCHEMA не может быть указано для пользователя, сопоставленного с сертификатом или асимметричным ключом.  
   
 > [!IMPORTANT]  
->  Значение параметра DEFAULT_SCHEMA не учитывается, если пользователь является членом предопределенной роли сервера **sysadmin**. Для всех членов роли сервера **sysadmin** по умолчанию установлена схема `dbo`.  
-  
- Имя пользователя, сопоставленное с именем входа или группой Windows, можно изменить только в том случае, если значение идентификатора безопасности имени нового пользователя совпадает с уже записанным в базе данных. Такая проверка предотвращает имитацию подключения к базе данных с помощью имен входа Windows.  
-  
- Предложение WITH LOGIN позволяет сопоставить пользователя с другим именем входа. Пользователи, не имеющие имени входа, а также пользователи, сопоставленные с сертификатом или с асимметричным ключом, не могут быть повторно сопоставлены с помощью этого предложения. Возможно повторное сопоставление только пользователей (или групп) SQL и Windows. Предложение WITH LOGIN не может быть использовано для изменения типа пользователя, например для перехода от учетной записи Windows на имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+> Значение параметра DEFAULT_SCHEMA не учитывается, если пользователь является членом предопределенной роли сервера **sysadmin**. Для всех членов роли сервера **sysadmin** по умолчанию установлена схема `dbo`.
+
+ Предложение WITH LOGIN позволяет сопоставить пользователя с другим именем входа. Пользователи, не имеющие имени входа, а также пользователи, сопоставленные с сертификатом или с асимметричным ключом, не могут быть повторно сопоставлены с помощью этого предложения. Возможно повторное сопоставление только пользователей (или групп) SQL и Windows. Предложение WITH LOGIN не удастся использовать для изменения типа пользователя, например для перехода от учетной записи Windows на имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Имя пользователя будет автоматически изменено на имя входа, если удовлетворяются следующие условия.  
+
+- Новое имя не было указано.  
   
--   Пользователь является пользователем Windows.  
-  
--   Имя является именем Windows (содержит обратную косую черту).  
-  
--   Новое имя не было указано.  
-  
--   Текущее имя отличается от имени входа.  
+- Текущее имя отличается от имени входа.  
   
  В противном случае пользователь не будет переименован, если только вызывающий не вызовет дополнительно предложение NAME.  
   
 Имя пользователя, сопоставленное с именем входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], сертификатом или асимметричным ключом, не может содержать обратную косую черту (\\).  
   
 > [!CAUTION]  
->  [!INCLUDE[ssCautionUserSchema](../../includes/sscautionuserschema-md.md)]  
+> [!INCLUDE[ssCautionUserSchema](../../includes/sscautionuserschema-md.md)]
   
-## <a name="security"></a>Безопасность  
+## <a name="security"></a>безопасность
   
 > [!NOTE]  
->  Пользователь с разрешением **ALTER ANY USER** может изменить схему по умолчанию для любого пользователя. Пользователь с измененной схемой может производить выборку данных неизвестным образом из неправильной таблицы или выполнять код из неправильной схемы.  
+> Пользователь с разрешением **ALTER ANY USER** может изменить схему по умолчанию для любого пользователя. Пользователь с измененной схемой может производить выборку данных неизвестным образом из неправильной таблицы или выполнять код из неправильной схемы.  
   
-### <a name="permissions"></a>Разрешения  
+### <a name="permissions"></a>Разрешения
+
  Чтобы изменить имя пользователя, необходимо разрешение **ALTER ANY USER** для базы данных.  
   
  Чтобы изменить целевое имя входа пользователя, необходимо разрешение **CONTROL** в базе данных.  
@@ -201,14 +729,15 @@ ALTER USER userName
   
  Чтобы изменить схему или язык по умолчанию, требуется разрешение **ALTER** на пользователя. Пользователь может изменить свою собственную схему или язык по умолчанию.  
   
-## <a name="examples"></a>Примеры  
+## <a name="examples"></a>Примеры
 
 Все примеры выполняются в базе данных пользователя.  
 
-### <a name="a-changing-the-name-of-a-database-user"></a>A. Изменение имени пользователя базы данных  
+### <a name="a-changing-the-name-of-a-database-user"></a>A. Изменение имени пользователя базы данных
+
  В следующем примере показано изменение имени пользователя базы данных с `Mary5` на `Mary51`.  
   
-```  
+```sql
 ALTER USER Mary5 WITH NAME = Mary51;  
 GO  
 ```  
@@ -216,33 +745,131 @@ GO
 ### <a name="b-changing-the-default-schema-of-a-user"></a>Б. Изменение схемы пользователя, используемой по умолчанию  
  В данном примере показано изменение схемы пользователя, используемой по умолчанию, с `Mary51` на `Purchasing`.  
   
-```  
+```sql
 ALTER USER Mary51 WITH DEFAULT_SCHEMA = Purchasing;  
 GO  
+```
+
+## <a name="see-also"></a>См. также раздел
+
+ - [CREATE USER (Transact-SQL)](../../t-sql/statements/create-user-transact-sql.md)
+ - [DROP USER (Transact-SQL)](../../t-sql/statements/drop-user-transact-sql.md)
+ - [Автономные базы данных](../../relational-databases/databases/contained-databases.md)
+ - [EVENTDATA (Transact-SQL)](../../t-sql/functions/eventdata-transact-sql.md)
+ - [sp_migrate_user_to_contained (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md)
+
+::: moniker-end
+::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
+
+> ||||||
+> |-|-|-|-|-|
+> |[SQL Server](alter-user-transact-sql.md?view=sql-server-2017)|[Отдельная база данных/эластичный пул Базы данных SQL<br />](alter-user-transact-sql.md?view=azuresqldb-current)|[Управляемый экземпляр Базы данных SQL<br />](alter-user-transact-sql.md?view=azuresqldb-mi-current)|[Хранилище данных<br />SQL](alter-user-transact-sql.md?view=azure-sqldw-latest)|**_\* Analytics<br />Platform System (PDW) \*_**
+
+&nbsp;
+
+## <a name="analytics-platform-system"></a>Система платформы аналитики
+
+## <a name="syntax"></a>Синтаксис
+
+```
+-- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+  
+ALTER USER userName
+     WITH <set_item> [ ,...n ]  
+  
+<set_item> ::=
+     NAME = newUserName
+     | LOGIN = loginName  
+     | DEFAULT_SCHEMA = schema_name  
+[;]  
 ```  
   
-### <a name="c-changing-several-options-at-once"></a>В. Изменение нескольких параметров одновременно  
- В следующем примере несколько параметров пользователя автономной базы данных изменяются одной инструкцией.  
+## <a name="arguments"></a>Аргументы
+
+ *userName*  
+ Указывает имя, по которому пользователь идентифицируется в этой базе данных.  
   
-**Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ LOGIN **=** _loginName_  
+ Сопоставляет пользователя с другим именем входа, заменив идентификатор безопасности пользователя для соответствия идентификатору безопасности имени входа.  
   
-```  
-ALTER USER Philip   
-WITH  NAME = Philipe   
-    , DEFAULT_SCHEMA = Development   
-    , PASSWORD = 'W1r77TT98%ab@#' OLD_PASSWORD = 'New Devel0per'   
-    , DEFAULT_LANGUAGE  = French ;  
+ Если ALTER USER является единственной инструкцией в пакете SQL, предложение WITH LOGIN поддерживается в Базе данных SQL Azure. Если инструкция ALTER USER не единственная в пакете SQL или выполняется в динамическом коде SQL, предложение WITH LOGIN не поддерживается.  
+  
+ NAME **=** _newUserName_  
+ Задает новое имя для этого пользователя. Аргумент *newUserName* еще не должен существовать в текущей базе данных.  
+  
+ DEFAULT_SCHEMA **=** { *schemaName* | NULL }  
+ Задает первую схему для поиска сервером, когда он разрешает имена объектов для этого пользователя. При установке схемы по умолчанию в значение NULL схема по умолчанию удаляется из группы Windows.   Параметр NULL нельзя использовать с пользователем Windows.  
+  
+## <a name="remarks"></a>Remarks
+
+ Схемой по умолчанию будет первая схема, которую найдет сервер, после того как получит имена объектов для данного пользователя базы данных. Если не указано иное, схемой по умолчанию будет владелец объектов, создаваемых этим пользователем базы данных.  
+  
+ Если пользователь имеет схему по умолчанию, будет использоваться эта схема. Если у пользователя нет схемы по умолчанию, но он является членом группы, которая имеет схему по умолчанию, используется схема по умолчанию группы. Если пользователь не имеет схемы по умолчанию и является членом нескольких групп, схемой по умолчанию для этого пользователя будет схема по умолчанию группы Windows с минимальным значением principal_id и явно заданной схемой по умолчанию. Если для пользователя нельзя определить схему по умолчанию, будет использоваться схема **dbo**.  
+  
+ В качестве значения DEFAULT_SCHEMA можно задать схему, которая в настоящий момент не существует в базе данных. Поэтому значение DEFAULT_SCHEMA можно определить для пользователя еще до создания схемы.  
+  
+ Значение DEFAULT_SCHEMA не может быть указано для пользователя, сопоставленного с сертификатом или асимметричным ключом.  
+  
+> [!IMPORTANT]  
+> Значение параметра DEFAULT_SCHEMA не учитывается, если пользователь является членом предопределенной роли сервера **sysadmin**. Для всех членов роли сервера **sysadmin** по умолчанию установлена схема `dbo`.
+
+ Предложение WITH LOGIN позволяет сопоставить пользователя с другим именем входа. Пользователи, не имеющие имени входа, а также пользователи, сопоставленные с сертификатом или с асимметричным ключом, не могут быть повторно сопоставлены с помощью этого предложения. Возможно повторное сопоставление только пользователей (или групп) SQL и Windows. Предложение WITH LOGIN не удастся использовать для изменения типа пользователя, например для перехода от учетной записи Windows на имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  
+ Имя пользователя будет автоматически изменено на имя входа, если удовлетворяются следующие условия.  
+
+- Новое имя не было указано.  
+  
+- Текущее имя отличается от имени входа.  
+  
+ В противном случае пользователь не будет переименован, если только вызывающий не вызовет дополнительно предложение NAME.  
+  
+Имя пользователя, сопоставленное с именем входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], сертификатом или асимметричным ключом, не может содержать обратную косую черту (\\).  
+  
+> [!CAUTION]  
+> [!INCLUDE[ssCautionUserSchema](../../includes/sscautionuserschema-md.md)]
+  
+## <a name="security"></a>безопасность
+  
+> [!NOTE]  
+> Пользователь с разрешением **ALTER ANY USER** может изменить схему по умолчанию для любого пользователя. Пользователь с измененной схемой может производить выборку данных неизвестным образом из неправильной таблицы или выполнять код из неправильной схемы.  
+  
+### <a name="permissions"></a>Разрешения
+
+ Чтобы изменить имя пользователя, необходимо разрешение **ALTER ANY USER** для базы данных.  
+  
+ Чтобы изменить целевое имя входа пользователя, необходимо разрешение **CONTROL** в базе данных.  
+  
+ Чтобы изменить имя пользователя с разрешением **CONTROL** в базе данных, требуется разрешение **CONTROL** в базе данных.  
+  
+ Чтобы изменить схему или язык по умолчанию, требуется разрешение **ALTER** на пользователя. Пользователь может изменить свою собственную схему или язык по умолчанию.  
+  
+## <a name="examples"></a>Примеры
+
+Все примеры выполняются в базе данных пользователя.  
+
+### <a name="a-changing-the-name-of-a-database-user"></a>A. Изменение имени пользователя базы данных
+
+ В следующем примере показано изменение имени пользователя базы данных с `Mary5` на `Mary51`.  
+  
+```sql
+ALTER USER Mary5 WITH NAME = Mary51;  
 GO  
 ```  
   
+### <a name="b-changing-the-default-schema-of-a-user"></a>Б. Изменение схемы пользователя, используемой по умолчанию
+ В данном примере показано изменение схемы пользователя, используемой по умолчанию, с `Mary51` на `Purchasing`.  
   
-## <a name="see-also"></a>См. также  
- [CREATE USER (Transact-SQL)](../../t-sql/statements/create-user-transact-sql.md)   
- [DROP USER (Transact-SQL)](../../t-sql/statements/drop-user-transact-sql.md)   
- [Автономные базы данных](../../relational-databases/databases/contained-databases.md)   
- [EVENTDATA (Transact-SQL)](../../t-sql/functions/eventdata-transact-sql.md)   
- [sp_migrate_user_to_contained (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md)  
-  
-  
+```sql
+ALTER USER Mary51 WITH DEFAULT_SCHEMA = Purchasing;  
+GO  
+```
 
+## <a name="see-also"></a>См. также раздел
 
+ - [CREATE USER (Transact-SQL)](../../t-sql/statements/create-user-transact-sql.md)
+ - [DROP USER (Transact-SQL)](../../t-sql/statements/drop-user-transact-sql.md)
+ - [Автономные базы данных](../../relational-databases/databases/contained-databases.md)
+ - [EVENTDATA (Transact-SQL)](../../t-sql/functions/eventdata-transact-sql.md)
+ - [sp_migrate_user_to_contained (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md)
+
+::: moniker-end

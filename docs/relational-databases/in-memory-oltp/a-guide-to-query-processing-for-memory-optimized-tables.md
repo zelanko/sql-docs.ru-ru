@@ -11,12 +11,12 @@ ms.assetid: 065296fe-6711-4837-965e-252ef6c13a0f
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bf133d6cfc07482b9d10505592b2ea402095c46c
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 4fb248183abf1511ed535740838b890225691fd0
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68811154"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908726"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>Руководство по обработке запросов для таблиц, оптимизированных для памяти
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -92,7 +92,7 @@ SELECT o.*, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.CustomerID =
   
  Предполагаемый план выполнения для этого запроса:  
   
- ![План запроса для хэш-соединений дисковых таблиц.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-2.png "План запроса для хэш-соединений дисковых таблиц.")  
+ ![план запроса для хэш-соединений дисковых таблиц.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-2.png "план запроса для хэш-соединений дисковых таблиц.")  
 план запроса для хэш-соединений дисковых таблиц.  
   
  В этом запросе строки из таблицы заказов получаются с помощью кластеризованного индекса. Физический оператор **Hash Match** теперь используется для **Inner Join**. Кластеризованный индекс в таблице Order не отсортирован по столбцу CustomerID, поэтому для **Merge Join** потребуется оператор сортировки, который повлияет на производительность запроса. Обратите внимание на относительную стоимость оператора **Hash Match** (75 %) по сравнению с затратами оператора **Merge Join** в предыдущем примере (46 %). Оптимизатором также рассматривался оператор **Hash Match** из предыдущего примера, но оказалось, что оператор **Merge Join** обеспечивает лучшую производительность.  
@@ -100,7 +100,7 @@ SELECT o.*, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.CustomerID =
 ## <a name="includessnoversionincludesssnoversion-mdmd-query-processing-for-disk-based-tables"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Обработка запросов для дисковых таблиц  
  На следующей диаграмме показан поток обработки запросов в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для нерегламентированных запросов:  
   
- ![Конвейер обработки запросов в SQL Server.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-3.png "Конвейер обработки запросов в SQL Server.")  
+ ![Канал обработки запросов в SQL Server.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-3.png "Канал обработки запросов в SQL Server.")  
 Канал обработки запросов в SQL Server.  
   
  В этом сценарии.  
@@ -117,8 +117,6 @@ SELECT o.*, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.CustomerID =
   
 6.  Методы доступа получают строки из индекса и страниц данных в буферном пуле, и по мере необходимости загружают страницы из диска в буферный пул.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
  В первом примере запроса подсистема выполнения запрашивает у методов доступа строки в кластеризованном индексе таблицы Customer и в некластеризованном индексе таблицы Order. Чтобы получить запрашиваемые строки, методы доступа обходят индексные структуры сбалансированного дерева. В этом случае извлекаются все строки после полного просмотра индексов в соответствии с планом.  
   
 ## <a name="interpreted-includetsqlincludestsql-mdmd-access-to-memory-optimized-tables"></a>Доступ к оптимизированным для памяти таблицам с помощью интерпретируемого кода [!INCLUDE[tsql](../../includes/tsql-md.md)]  
@@ -126,7 +124,7 @@ SELECT o.*, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.CustomerID =
   
  Интерпретируемый код [!INCLUDE[tsql](../../includes/tsql-md.md)] можно использовать для доступа к таблицам, оптимизированных для памяти, и к дисковым таблицам. На следующей диаграмме показана обработка запросов для доступа с помощью интерпретируемого кода [!INCLUDE[tsql](../../includes/tsql-md.md)] к таблицам, оптимизированным для памяти.  
   
- ![Конвейер обработки запросов для интерпретируемых инструкций tsql.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-4.png "Конвейер обработки запросов для интерпретируемых инструкций tsql.")  
+ ![Канал обработки запросов для интерпретируемых инструкций tsql.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-4.png "Канал обработки запросов для интерпретируемых инструкций tsql.")  
 Конвейер обработки запросов для доступа к оптимизированным для памяти таблицам с помощью интерпретируемого кода Transact-SQL.  
   
  Как показано на рисунке, конвейер обработки запросов в основном остается неизменным:  

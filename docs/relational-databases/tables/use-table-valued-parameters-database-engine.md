@@ -16,12 +16,12 @@ ms.assetid: 5e95a382-1e01-4c74-81f5-055612c2ad99
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b47d53f088089ed348e01ae380e0f21dcca420fa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c01f99fc2f1964e1a459de12d77f0bfc3ea40ca6
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140323"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72796638"
 ---
 # <a name="use-table-valued-parameters-database-engine"></a>Использование параметров, возвращающих табличные значения (компонент Database Engine)
 
@@ -57,6 +57,9 @@ ms.locfileid: "68140323"
 - Строго типизированы.
 - Позволяют клиенту указать порядок сортировки и уникальные ключи.
 - Кэшируются как временная таблица при использовании в хранимой процедуре. Начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], возвращающие табличное значение параметры также кэшируется для параметризированных запросов.
+
+## <a name="Permissions"></a> Permissions
+Чтобы создать экземпляр определяемого пользователем типа таблицы или вызвать хранимую процедуру с параметром, возвращающим значение таблицы, пользователь должен иметь разрешение EXECUTE на тип, схему или базу данных, содержащую этот тип.
 
 ## <a name="Restrictions"></a> Ограничения
 

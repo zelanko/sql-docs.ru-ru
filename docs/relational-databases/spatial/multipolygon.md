@@ -13,12 +13,12 @@ ms.assetid: 2c5db358-2a16-49d9-aac5-a74e86813932
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bfbe6343432453b26b3283959cf8dd15bfa7cf81
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8522e65762e8c27ec65fb5fc4a56db0653b5f5c9
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68048570"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907009"
 ---
 # <a name="multipolygon"></a>MultiPolygon
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "68048570"
 ## <a name="polygon-instances"></a>Экземпляры многоугольников  
  На рисунке ниже приведены примеры экземпляров **MultiPolygon** .  
   
- ![Примеры геометрических экземпляров MultiPolygon](../../relational-databases/spatial/media/multipolygon.gif "Примеры геометрических экземпляров MultiPolygon")  
+ ![Примеры экземпляров MultiPolygon типа geometry](../../relational-databases/spatial/media/multipolygon.gif "Примеры экземпляров MultiPolygon типа geometry")  
   
  На рисунке представлены:  
   
@@ -64,8 +64,6 @@ DECLARE @g geometry = 'MULTIPOLYGON(((1 1, 1 -1, -1 -1, -1 1, 1 1)),((1 1, 3 1, 
 1.  Все экземпляры, составляющие экземпляр **MultiPolygon** , являются допустимыми экземплярами **Polygon** . Сведения о допустимых экземплярах **Polygon** см. в разделе [Polygon](../../relational-databases/spatial/polygon.md).  
   
 2.  Никакие экземпляры **Polygon** , составляющие экземпляр **MultiPolygon** , не перекрываются.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 В следующем примере показаны два допустимых экземпляра **MultiPolygon** и один недопустимый экземпляр **MultiPolygon** .  
   

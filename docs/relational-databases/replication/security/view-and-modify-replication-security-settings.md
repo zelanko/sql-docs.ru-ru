@@ -17,12 +17,12 @@ ms.assetid: 67d79532-1482-4de1-ac9f-4a23d162c85e
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 2e0407382f1a0986add69a4b47e9cbb2eebc4d34
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 72ed98492db592ecd86d1c0490c652e604dcb589
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710744"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907974"
 ---
 # <a name="view-and-modify-replication-security-settings"></a>Просмотр и изменение параметров безопасности репликации
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -71,8 +71,6 @@ ms.locfileid: "71710744"
 4.  Диалоговые окна **Свойства распространителя — \<распространитель>** и **Свойства базы данных распространителя — \<база данных>** . Дополнительные сведения о доступе к этим диалоговым окнам см. в разделе [Просмотр и изменение свойств издателя и распространителя](../../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md).  
   
 5.  Диалоговое окно **Свойства издателя — \<издатель>** . Дополнительные сведения о доступе к этому диалоговому окну см. в разделе [Просмотр и изменение свойств издателя и распространителя](../../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md).  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 #### <a name="to-change-the-password-for-an-account-used-by-one-or-more-agents"></a>Изменение пароля для учетной записи, используемой одним или несколькими агентами  
   
@@ -220,7 +218,7 @@ ms.locfileid: "71710744"
   
 #### <a name="to-change-security-settings-for-an-immediate-updating-pull-subscription"></a>Изменение настроек безопасности для подписки по запросу, обновляемой немедленно  
   
-1.  В диалоговом окне **Свойства подписки — \<подписка>** на подписчике щелкните строку **Соединение с издателем**, а затем нажмите кнопку свойств ( **…** ) в этой строке.  
+1.  В диалоговом окне **Свойства подписки — \<Подписка>** в разделе подписчика щелкните строку **Соединение с издателем**, а затем нажмите кнопку свойств ( **&#x2026;** ) в этой строке.  
   
 2.  В диалоговом окне **Ввод сведений о соединении** выберите один из следующих параметров:  
   

@@ -21,12 +21,12 @@ ms.assetid: 919158f2-38d0-4f68-82ab-e1633bd0d308
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 41cc9d68ad0ad9c39795f156a17291ce6cdeb33f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cd6ab74a1009862be44950bd77bd105acf76b6d5
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68099794"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798407"
 ---
 # <a name="update-statistics-transact-sql"></a>UPDATE STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -125,6 +125,9 @@ PERSIST_SAMPLE_PERCENT = { ON | OFF }
  > Если выполняется инструкция AUTO_UPDATE_STATISTICS, используется сохраненный процент выборки, если он указан, или процент выборки по умолчанию, если нет.
  > Этот параметр не влияет на реакцию RESAMPLE.
  
+ > [!NOTE]
+ > Если таблица усечена, вся статистика, построенная на усеченном HoBT, вернется к использованию процентного соотношения выборки по умолчанию.
+ 
  > [!TIP] 
  > Значение сохраненного процента выборки для выбранной статистики отображается в [DBCC SHOW_STATISTICS](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md) и [sys.dm_db_stats_properties](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md).
  
@@ -190,7 +193,7 @@ MAXDOP = *max_degree_of_parallelism*
 * Параметр `MAXDOP` несовместим с параметрами `STATS_STREAM`, `ROWCOUNT` и `PAGECOUNT`.
 * Параметр `MAXDOP` ограничивается параметром `MAX_DOP` группы рабочей нагрузки Resource Governor (если применимо).
 
-### <a name="updating-all-statistics-with-spupdatestats"></a>Обновление всей статистики с помощью процедуры sp_updatestats  
+### <a name="updating-all-statistics-with-sp_updatestats"></a>Обновление всей статистики с помощью процедуры sp_updatestats  
 Сведения об обновлении статистики по всем определяемым пользователем таблицам и внутренним таблицам в базе данных см. в описании хранимой процедуры [sp_updatestats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md). Например, следующая команда вызывает процедуру sp_updatestats для обновления всей статистики для базы данных.  
   
 ```sql  

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
-ms.openlocfilehash: 19a2aab72c1e820e6d07af770a89196662c6fdd1
-ms.sourcegitcommit: 58f1d5498c87bfe0f6ec4fd9d7bbe723be47896b
+ms.openlocfilehash: 8e36eb9bccd183c8c38ebbfeafcc4ace7e025960
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68995885"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72783400"
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>Настройка SQL Server на Linux с помощью средства mssql-conf
 
@@ -510,7 +510,7 @@ sudo systemctl restart mssql-server
 | Параметр mssql-conf | Описание |
 |---|---|
 | distributedtransaction.allowonlysecurerpccalls | Настройка только безопасных удаленных вызовов процедур (RPC) для распределенных транзакций |
-| distributedtransaction.fallbacktounsecurerpcifnecessary | Настройка только безопасных удаленных вызовов процедур (RPC) для распределенных |транзакции
+| distributedtransaction.fallbacktounsecurerpcifnecessary | Настройка только безопасных удаленных вызовов процедур (RPC) для распределенных транзакций |
 | distributedtransaction.maxlogsize | Размер файла журнала транзакций для координатора распределенных транзакций в МБ. Значение по умолчанию — 64 МБ. |
 | distributedtransaction.memorybuffersize | Размер циклического буфера, в котором хранятся трассировки. Размер указывается в МБ. Значение по умолчанию — 10 МБ. |
 | distributedtransaction.servertcpport | Порт RPC-сервера координатора распределенных транзакций Майкрософт |
@@ -793,7 +793,7 @@ traceflag = 3456
 
 ::: moniker-end
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 Сведения о том, как вносить некоторые из описанных изменений в конфигурацию с помощью переменных среды, см. в статье [Настройка параметров SQL Server с помощью переменных среды ](sql-server-linux-configure-environment-variables.md).
 

@@ -20,12 +20,12 @@ ms.assetid: fa20fee4-884d-4301-891a-c03e901345ae
 author: pmasl
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0b6f470a08c3605f9ea5afa5fff1f7b6cbd17f1b
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: c7fa3d9db220dcacf425399600166858300489dc
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653246"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798422"
 ---
 # <a name="len-transact-sql"></a>LEN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -66,7 +66,7 @@ SELECT LEN(@v2) AS [nvarchar LEN], DATALENGTH(@v2) AS [nvarchar DATALENGTH];
 ```  
 
 > [!NOTE]
-> Функция [LEN](../../t-sql/functions/len-transact-sql.md) возвращает количество символов, закодированных в определенное строковое выражение, а функция [DATALENGTH](../../t-sql/functions/datalength-transact-sql.md) — размер данных в байтах для определенного строкового выражения. Эти выходные данные могут быть разными в зависимости от типа данных и типа кодировки, используемой в столбце. Дополнительные сведения об отличиях типов кодировок, используемых для хранения данных, см. в статье [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md) (Поддержка параметров сортировки и Юникода).
+> При использовании [LEN](../../t-sql/functions/len-transact-sql.md) для возврата количества символов, закодированных для заданного выражения строки, или [DATALENGTH](../../t-sql/functions/datalength-transact-sql.md) для возврата размера в байтах для заданного строкового выражения, результаты могут отличаться в зависимости от типа данных и типа кодирования, используемого в столбце. Дополнительные сведения об отличиях типов кодировок, используемых для хранения данных, см. в статье [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md) (Поддержка параметров сортировки и Юникода).
 
 ## <a name="examples"></a>Примеры  
  Следующий пример выбирает число символов и данные по имени людей `FirstName`, живущих в `Australia`. В примере используется база данных AdventureWorks.  

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: pelopes
 ms.author: harinid
-ms.openlocfilehash: 21cf6f634fd9caa40f3d5685372f24d09567ca2a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 915dde0b6b2083c45b5bfe4196e7578537a91379
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006135"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909161"
 ---
 # <a name="post-migration-validation-and-optimization-guide"></a>Руководство по оптимизации и проверке после миграции
 
@@ -43,7 +43,7 @@ ms.locfileid: "68006135"
 
 Измените [уровень совместимости базы данных](../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) на исходную версию и следуйте рекомендуемому рабочему процессу обновления, показанному на следующем рисунке:
 
-![query-store-usage-5](../relational-databases/performance/media/query-store-usage-5.png "query-store-usage-5")  
+![хранилище запросов-использование-5](../relational-databases/performance/media/query-store-usage-5.png "хранилище запросов-использование-5")  
 
 Дополнительные сведения по этой теме см. в разделе [Поддержание стабильной производительности во время обновления до более новой версии SQL Server](../relational-databases/performance/query-store-usage-scenarios.md#CEUpgrade).
 
@@ -107,8 +107,6 @@ ms.locfileid: "68006135"
   -   Для этого может потребоваться сравнение конструкции пользовательского кода, хранящийся в базе данных (например, хранимых процедур, определяемых пользователем функций или представлений), с системными таблицами, которые содержат сведения о типах данных, используемых в базовых таблицах (таких как [sys.columns](../relational-databases/system-catalog-views/sys-columns-transact-sql.md)).
 2. Если перебрать весь код до указанной выше точки нельзя, то с той же целью можно изменить тип данных в таблице в соответствии с объявлением переменной или параметра.
 3. Рассмотрите целесообразность применения следующих конструкций:
-
-[!INCLUDE[freshInclude](../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
   -   функции, используемые в качестве предикатов;
   -   поиск с подстановочными знаками;

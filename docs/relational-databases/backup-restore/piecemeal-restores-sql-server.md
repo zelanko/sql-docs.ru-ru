@@ -1,7 +1,7 @@
 ---
 title: Поэтапное восстановление (SQL Server) | Документация Майкрософт
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 10/23/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 208f55e0-0762-4cfb-85c4-d36a76ea0f5b
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 8dfdfc8ea7d34975046545688cca3f34ed324311
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7d818eb992ae95527281de6f53a2e17007490b3b
+ms.sourcegitcommit: e7c3c4877798c264a98ae8d51d51cb678baf5ee9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68033656"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72915996"
 ---
 # <a name="piecemeal-restores-sql-server"></a>Поэтапное восстановление (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -144,7 +144,7 @@ ms.locfileid: "68033656"
      В выпуске Enterprise Edition любая автономная вторичная файловая группа может быть восстановлена, пока база данных остается в сети. Если данный доступный только для чтения файл не поврежден и согласуется с текущим состоянием базы данных, его восстанавливать не нужно. Дополнительные сведения см. в разделе [Восстановление базы данных без восстановления данных (Transact-SQL)](../../relational-databases/backup-restore/recover-a-database-without-restoring-data-transact-sql.md).  
   
 ### <a name="applying-log-backups"></a>Применение резервных копий журнала  
- Если файловая группа доступна только для чтения с момента, предшествующего созданию резервной копии файловых групп, использование резервных копий журналов не нужно, и эта группа пропускается при восстановлении файлов. Если файловая группа доступна для чтения и для записи, то с целью перевода файловой группы в состояние, соответствующее текущему файлу журнала, необходимо применить непрерывную последовательность резервных копий журнала к последнему экземпляру, полученному в результате полного или разностного восстановления.  
+ Если файловая группа доступна только для чтения с момента, предшествующего созданию резервной копии файловых групп, использование резервных копий журналов не нужно, и эта группа пропускается при восстановлении файлов. Если файловая группа доступна для чтения и для записи, то с целью перевода файловой группы в состояние, соответствующее текущему файлу журнала, необходимо применить непрерывную последовательность резервных копий журнала к последнему экземпляру, полученному в результате полного или разностного восстановления. Дополнительные сведения о процессе восстановления см. в статье [Обзор процессов восстановления (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery).
   
 ### <a name="examples"></a>Примеры  
   
@@ -173,13 +173,11 @@ ms.locfileid: "68033656"
   
 4.  разностные резервные копии, следующие за любыми другими резервными копиями, восстановленными в исходной последовательности поэтапного восстановления, чтобы восстановить данные до первоначальной точки восстановления.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ## <a name="see-also"></a>См. также:  
  [Применение резервных копий журналов транзакций (SQL Server)](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   
  [RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)   
  [Восстановление базы данных SQL Server до определенного момента времени (модель полного восстановления)](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)   
  [Обзор процессов восстановления (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)   
- [Планирование и выполнение последовательностей восстановления (модель полного восстановления)](../../relational-databases/backup-restore/plan-and-perform-restore-sequences-full-recovery-model.md)  
-  
+ [Планирование и выполнение последовательностей восстановления (модель полного восстановления)](../../relational-databases/backup-restore/plan-and-perform-restore-sequences-full-recovery-model.md)    
+ [Обзор процессов восстановления (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)     
   

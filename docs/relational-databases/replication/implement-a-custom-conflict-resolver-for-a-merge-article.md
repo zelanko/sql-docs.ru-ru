@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 76bd8524-ebc1-4d80-b5a2-4169944d6ac0
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b36d610912f518f0586739e0380e300efefbed40
-ms.sourcegitcommit: 3d189b68c0965909d167de61546b574af1ef7a96
+ms.openlocfilehash: 1b7e530386a2c0a6dae21b370b89d4f5542faa8d
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69561135"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72905117"
 ---
 # <a name="implement-a-custom-conflict-resolver-for-a-merge-article"></a>Реализация пользовательского арбитра конфликтов для статьи слиянием
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -60,8 +60,6 @@ ms.locfileid: "69561135"
   
 2.  Предоставьте разрешения EXECUTE на хранимую процедуру любым именам входа, используемым подписчиками для соединения с издателем.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 #### <a name="use-a-custom-conflict-resolver-with-a-new-table-article"></a>Применение пользовательского арбитра конфликтов с новой статьей таблицы  
   
 1. Выполните [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) для определения статьи. 
@@ -77,7 +75,7 @@ ms.locfileid: "69561135"
 2.  Выполните хранимую процедуру [sp_changemergearticle](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md), указав параметры **\@publication**, **\@article**, значение **resolver_info** в параметре **\@property** и имя хранимой процедуры, реализующей логику арбитра конфликтов, в параметре **\@value**.  
   
 ##  <a name="COM"></a> Использование пользовательского арбитра конфликтов на основе COM  
- Пространство имен <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport> реализует интерфейс, позволяющий создавать сложную бизнес-логику для обработки событий и разрешения конфликтов, возникающих при синхронизации репликации слиянием. Дополнительные сведения см. в руководстве по [реализации обработчика бизнес-логики для статьи слияния](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md). Для разрешения конфликтов можно записать в машинном коде собственную бизнес-логику. Эта логика построена как COM-компонент. Она компилируется в динамические библиотеки (DLL) с помощью таких продуктов, как [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C++. Такой арбитр конфликтов на основе COM должен реализовывать интерфейс **ICustomResolver**, спроектированный специально для разрешения конфликтов.  
+ Пространство имен <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport> реализует интерфейс, позволяющий создавать сложную бизнес-логику для обработки событий и разрешения конфликтов, возникающих при синхронизации репликации слиянием. Дополнительные сведения см. в руководстве по [реализации обработчика бизнес-логики для статьи слияния](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md). Для разрешения конфликтов можно записать в машинном коде собственную бизнес-логику. Эта логика построена как COM-компонент. Она компилируется в динамические библиотеки (DLL) с помощью таких продуктов, как [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C++. Такой сопоставитель конфликтов на основе COM должен реализовывать интерфейс **ICustomResolver**, спроектированный специально для разрешения конфликтов.  
   
 #### <a name="to-create-and-register-a-com-based-custom-conflict-resolver"></a>Создание и регистрация пользовательского сопоставителя конфликтов на основе COM  
   

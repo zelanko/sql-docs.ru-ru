@@ -1,7 +1,7 @@
 ---
 title: Восстановление базы данных без восстановления данных (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 10/23/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7e8fa620-315d-4e10-a718-23fa5171c09e
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: e87e806b8af58c74bf4406d697a99f42d7f67c4c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 68cf8bc2412ff715d42ad22b2000f832d86b1f63
+ms.sourcegitcommit: e7c3c4877798c264a98ae8d51d51cb678baf5ee9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68033606"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72916052"
 ---
 # <a name="recover-a-database-without-restoring-data-transact-sql"></a>Восстановление базы данных без восстановления данных (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,16 +40,16 @@ ms.locfileid: "68033606"
   
  Синтаксис инструкции [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) для восстановления базы данных только по журналу транзакций:  
   
- RESTORE DATABASE *имя_базы_данных* WITH RECOVERY  
+ `RESTORE DATABASE *database_name* WITH RECOVERY`  
   
 > [!NOTE]  
->  Предложение FROM **=** \<*устройство_резервного_копирования>* не используется для восстановления базы данных только по журналу транзакций, так как резервная копия не требуется.  
+> Предложение FROM **=** \<*устройство_резервного_копирования>* не используется для восстановления базы данных только по журналу транзакций, так как резервная копия не требуется.  
   
  **Пример**  
   
  В следующем примере выполняется восстановление базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] в ходе операции восстановления без восстановления данных.  
   
-```  
+```sql  
 -- Restore database using WITH RECOVERY.  
 RESTORE DATABASE AdventureWorks2012  
    WITH RECOVERY  
@@ -60,21 +60,21 @@ RESTORE DATABASE AdventureWorks2012
   
  База данных поэтапно восстановлена из резервной копии. После восстановления первичной файловой группы один или несколько еще не восстановленных файлов согласованы с новым состоянием базы данных, потому что, например, в течение некоторого времени они были доступны только для чтения. Эти файлы достаточно восстановить по журналу транзакций. Копировать данные не нужно.  
   
- Операция восстановления только по журналу транзакций переводит файловую группу «вне сети» в режим «в сети», при этом не выполняется ни копирование, ни повтор, ни стадия отката. Сведения об этапах восстановления см. в статье [Обзор процессов восстановления (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md).  
+ Операция восстановления только по журналу транзакций переводит файловую группу «вне сети» в режим «в сети», при этом не выполняется ни копирование, ни повтор, ни стадия отката. Сведения об этапах восстановления см. в статье [Обзор процессов восстановления (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery).  
   
  Синтаксис инструкции [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) для восстановления файлов только по журналу транзакций:  
   
- RESTORE DATABASE *database_name* { FILE **=** _логическое_имя_файла_ | FILEGROUP **=** _логическое_имя_файловой_группы_ }[ **,** ...*n* ] WITH RECOVERY  
+ `RESTORE DATABASE *database_name* { FILE **=**_logical_file_name_ | FILEGROUP **=**_logical_filegroup_name_ }[ **,**...*n* ] WITH RECOVERY`  
   
  **Пример**  
   
  В следующем примере показано восстановление по журналу транзакций для файлов вторичной файловой группы `SalesGroup2`в базе данных `Sales` . Первичная файловая группа уже восстановлена в качестве первого шага поэтапного восстановления, поэтому группа `SalesGroup2` согласована с первичной файловой группой. Восстановление файловой группы и ее перевод в режим «в сети» требует только одной инструкции.  
   
-```  
+```sql  
 RESTORE DATABASE Sales FILEGROUP=SalesGroup2 WITH RECOVERY;  
 ```  
   
-## <a name="examples-of-completing-a-piecemeal-restore-scenario-with-a-recovery-only-restore"></a>Примеры завершения сценария поэтапного восстановления восстановлением только по журналу транзакций  
+## <a name="examples-of-completing-a-piecemeal-restore-scenario-with-a-recovery-only-restore"></a>Примеры завершения сценария поэтапного восстановления с восстановлением только по журналу транзакций  
  **Простая модель восстановления**  
   
 -   [Пример. Поэтапное восстановление базы данных &#40;простая модель восстановления&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-database-simple-recovery-model.md)  
@@ -95,5 +95,5 @@ RESTORE DATABASE Sales FILEGROUP=SalesGroup2 WITH RECOVERY;
  [Восстановление файлов (простая модель восстановления)](../../relational-databases/backup-restore/file-restores-simple-recovery-model.md)   
  [Восстановления файлов (модель полного восстановления)](../../relational-databases/backup-restore/file-restores-full-recovery-model.md)   
  [RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)  
-  
+ [Обзор процессов восстановления (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md) 
   

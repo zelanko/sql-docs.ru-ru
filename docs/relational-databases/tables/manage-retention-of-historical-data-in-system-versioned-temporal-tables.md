@@ -11,12 +11,12 @@ ms.assetid: 7925ebef-cdb1-4cfe-b660-a8604b9d2153
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e569d7676d363dc6526354ed6087a778fccce79d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9066f82c01dede49307cd38565f40f263d7ae76f
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68031630"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909568"
 ---
 # <a name="manage-retention-of-historical-data-in-system-versioned-temporal-tables"></a>Управление хранением данных журнала в темпоральных таблицах с системным управлением версиями
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -72,23 +72,21 @@ ms.locfileid: "68031630"
   
 2.  В окне **Выбор таблиц** установите флажок рядом с темпоральной таблицей журнала и нажмите кнопку "Далее".  
   
-     ![Выбор таблицы журнала на странице "Выбор таблиц"](../../relational-databases/tables/media/stretch-wizard-2-for-temporal.png "Выбор таблицы журнала на странице \"Выбор таблиц\"")  
+     ![Выбор таблицы журнала на странице "Выбор таблиц"](../../relational-databases/tables/media/stretch-wizard-2-for-temporal.png "Выбор таблицы журнала на странице "Выбор таблиц"")  
   
 3.  В окне **Настройка Azure** укажите учетные данные для входа. Выполните вход в Microsoft Azure или зарегистрируйте учетную запись. Выберите подписку, которую будете использовать, и регион Azure. Затем создайте новый сервер или выберите существующий. Нажмите кнопку **Далее**.  
   
-     ![Создание нового сервера Azure — мастер настройки базы данных Stretch](../../relational-databases/tables/media/stretch-wizard-4.png "Создание нового сервера Azure — мастер настройки базы данных Stretch")  
+     ![Создание нового сервера Azure — мастер Stretch Database](../../relational-databases/tables/media/stretch-wizard-4.png "Создание нового сервера Azure — мастер Stretch Database")  
   
 4.  В окне **Учетные данные безопасности** укажите пароль для главного ключа базы данных для обеспечения безопасности учетных данных исходной базы данных SQL Server и нажмите кнопку "Далее".  
   
-     ![Страница защиты учетных данных в мастере настройки базы данных Stretch](../../relational-databases/tables/media/stretch-wizard-6.png "Страница защиты учетных данных в мастере настройки базы данных Stretch")  
+     ![Страница "Учетные данные безопасности" мастера Stretch Database](../../relational-databases/tables/media/stretch-wizard-6.png "Страница "Учетные данные безопасности" мастера Stretch Database")  
   
 5.  В окне **Выбор IP-адреса** укажите диапазон IP-адресов для вашего сервера SQL Server, необходимый для взаимодействия сервера Azure с сервером SQL Server (если выбран существующий сервер, для которого уже существует правило брандмауэра, просто нажмите кнопку "Далее", чтобы использовать это правило). Нажмите кнопку **Далее** , а затем — кнопку **Готово** , чтобы включить базу данных Stretch и выполнить растяжение темпоральной таблицы журнала.  
   
-     ![Страница выбора IP-адреса в мастере настройки базы данных Stretch](../../relational-databases/tables/media/stretch-wizard-7.png "Страница выбора IP-адреса в мастере настройки базы данных Stretch")  
+     ![Страница "Выбор IP-адреса" мастера Stretch Database](../../relational-databases/tables/media/stretch-wizard-7.png "Страница "Выбор IP-адреса" мастера Stretch Database")  
   
 6.  По завершении работы мастера убедитесь в том, что растяжение для вашей базы данных успешно включено. Проверьте значки в обозревателе объектов. Они должны указывать, что для базы данных выполнено растяжение.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 > **ПРИМЕЧАНИЕ.** Если не удается разрешить растяжение для базы данных, просмотрите журнал ошибок. Распространенной ошибкой является неверная настройка правила брандмауэра.  
   
@@ -357,7 +355,7 @@ COMMIT TRANSACTION
   
  На следующей схеме показано, как должна быть организована логика очистки для одиночной таблицы, чтобы снизить влияние на выполнение рабочих нагрузок.  
   
- ![Схема пользовательского скрипта очистки](../../relational-databases/tables/media/customcleanupscriptdiagram.png "Схема пользовательского скрипта очистки")  
+ ![CustomCleanUpScriptDiagram](../../relational-databases/tables/media/customcleanupscriptdiagram.png "CustomCleanUpScriptDiagram")  
   
  Ниже приведены общие рекомендации по реализации процесса. Составьте план ежедневного выполнения очистки с перебором всех темпоральных таблиц, для которых требуется очистка данных. Для планирования этого процесса используйте Агент SQL Server или другое средство:  
   
@@ -498,7 +496,7 @@ ON T1.history_table_id = T2.object_id WHERE T1.temporal_type = 2
 
 Задача очистки для кластеризованного индекса columnstore удаляет всю группу строк за раз (обычно каждая такая группа содержит по миллиону строк) — это очень эффективно, особенно в случаях, когда исторические данные создаются быстрыми темпами.
 
-![Кластеризованный индекс columnstore](../../relational-databases/tables/media/cciretention.png "Кластеризованный индекс columnstore")
+![Кластеризованный период удержания columnstore](../../relational-databases/tables/media/cciretention.png "Кластеризованный период удержания columnstore")
 
 Превосходное сжатие данных и эффективная очистка хранилища делают кластеризованный индекс columnstore наиболее подходящим для случаев, когда рабочая нагрузка вызывает быстрое образование большого количества исторических данных. Подобная ситуация типична для интенсивных рабочих нагрузок по обработке транзакций, в которых темпоральные таблицы используются для контроля и аудита изменений, анализа тенденций и приема данных Интернета вещей.
 

@@ -3,28 +3,25 @@ title: Новые возможности SQL Server 2017 на Linux
 description: В этой статье описываются новые возможности SQL Server 2017 на Linux.
 author: VanMSFT
 ms.author: vanto
-ms.date: 04/23/2019
+ms.date: 10/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.assetid: 456b6f31-6b97-4e31-80ab-b40151ec4868
-ms.openlocfilehash: 3f3f51716acf69368ae2554446c47d125b500e03
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 6874c34c70b562ef726bda5abbda2aebe615cc08
+ms.sourcegitcommit: bb56808dd81890df4f45636b600aaf3269c374f2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68032160"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72890542"
 ---
-# <a name="whats-new-for-sql-server-on-linux"></a>Новые возможности SQL Server на Linux
+# <a name="whats-new-for-sql-server-2017-on-linux"></a>Новые возможности SQL Server 2017 на Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 В этой статье описываются основные функции и службы, доступные для SQL Server 2017 на Linux.
 
-Выпущена предварительная версия SQL Server 2019. Эта статья не охватывает предварительные выпуски SQL Server 2019. Дополнительные сведения о предварительной версии SQL Server 2019 см. в статье [Новые возможности в предварительной версии SQL Server 2019 на Linux](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15#sql-server-on-linux).
-
 > [!NOTE]
-> Помимо описанных ниже возможностей, следует отметить накопительные обновления, которые регулярно выпускаются после выхода общедоступной версии. Эти накопительные обновления содержат много усовершенствований и исправлений. Просмотреть сведения о последнем выпуске накопительного обновления можно здесь: [https://aka.ms/sql2017cu](https://aka.ms/sql2017cu). Дополнительные сведения и известные проблемы см. в статье с [заметками о выпуске](sql-server-linux-release-notes.md).
+> Помимо описанных ниже возможностей, следует отметить регулярно выпускаемые накопительные обновления. Эти накопительные обновления содержат много усовершенствований и исправлений. Дополнительные сведения о последнем выпуске накопительного обновления см. здесь: [https://aka.ms/sql2017cu](https://aka.ms/sql2017cu). Дополнительные сведения и известные проблемы см. в статье с [заметками о выпуске](sql-server-linux-release-notes.md).
 
 ## <a name="sql-server-database-engine"></a>Компонент SQL Server Database Engine
 
@@ -56,7 +53,7 @@ ms.locfileid: "68032160"
 - Кроссплатформенный генератор сценариев, [mssql-scripter](https://github.com/Microsoft/sql-xplat-cli/blob/dev/doc/usage_guide.md).
 - Кроссплатформенный монитор динамического административного представления (DMV), [средство DBFS](https://github.com/Microsoft/dbfs).
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 Чтобы установить SQL Server на Linux, используйте один из следующих учебников:
 
@@ -66,9 +63,6 @@ ms.locfileid: "68032160"
 - [Запуск в Docker](quickstart-install-connect-docker.md)
 - [Подготовка виртуальной машины SQL в Azure](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=/sql/toc/toc.json)
 
-Дополнительные сведения об улучшениях, появившихся в SQL Server 2017, см. в разделе [Новые возможности SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md).
-
-> [!TIP]
-> Ответы на часто задаваемые вопросы об SQL Server на Linux см. в [этой статье](sql-server-linux-faq.md).
+Ответы на часто задаваемые вопросы об SQL Server на Linux см. в [этой статье](sql-server-linux-faq.md). Дополнительные сведения об улучшениях, появившихся в SQL Server 2017, см. в разделе [Новые возможности SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md).
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

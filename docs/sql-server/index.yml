@@ -1,0 +1,140 @@
+### YamlMime:Landing
+title: Техническая документация по SQL Server
+summary: Техническая документация поможет вам приступить к работе, администрировать, разрабатывать и работать с SQL Server и связанными продуктами.
+metadata:
+  title: Техническая документация по SQL Server
+  description: Выберите необходимую область SQL Server.
+  ms.prod: sql
+  ms.topic: landing-page
+  author: MashaMSFT
+  ms.author: mathoma
+  ms.date: 10/14/2019
+  ms.openlocfilehash: 0290fb90b15b0c8f3660db3c19e9850c4b0617ee
+  ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+  ms.translationtype: HT
+  ms.contentlocale: ru-RU
+  ms.lasthandoff: 10/25/2019
+  ms.locfileid: "72909941"
+landingContent:
+- title: SQL Server
+  linkLists:
+  - linkListType: whats-new
+    links:
+    - text: SQL Server 2019
+      url: what-s-new-in-sql-server-ver15.md
+    - text: Azure Data Studio
+      url: ../azure-data-studio/what-is.md
+    - text: SQL Server в Linux
+      url: ../linux/sql-server-linux-overview.md
+  - linkListType: quickstart
+    links:
+    - text: Подключение и отправка запроса (SSMS)
+      url: ../ssms/tutorials/connect-query-sql-server.md
+    - text: Подключение и отправка запроса (Azure Data Studio)
+      url: ../azure-data-studio/quickstart-sql-server.md
+  - linkListType: download
+    links:
+    - text: SQL Server
+      url: https://www.microsoft.com/en-us/sql-server/sql-server-downloads
+    - text: SQL Server Management Studio
+      url: ../ssms/download-sql-server-management-studio-ssms.md
+    - text: Azure Data Studio
+      url: ../azure-data-studio/download.md
+  - linkListType: reference
+    links:
+    - text: Transact-SQL
+      url: ../t-sql/language-reference.md
+    - text: SQL PowerShell
+      url: ../powershell/sql-server-powershell.md
+    - text: Образцы баз данных
+      url: https://docs.microsoft.com/sql/samples/sql-samples-where-are
+    - text: Руководство по внутренним компонентам и архитектуре
+      url: https://aka.ms/sqlserverguides
+    - text: Предыдущие версии (2005–2014)
+      url: https://docs.microsoft.com/sql/toc/previous-versions-sql-server
+- title: SQL в Azure
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Отдельная база данных Базы данных SQL Azure
+      url: /azure/sql-database/sql-database-single-database
+    - text: Управляемый экземпляр Базы данных SQL Azure
+      url: /azure/sql-database/sql-database-managed-instance
+    - text: Хранилище данных SQL Azure
+      url: /azure/sql-data-warehouse/sql-data-warehouse-overview-what-is
+    - text: SQL Server на виртуальной машине Windows
+      url: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview
+    - text: SQL Server на виртуальной машине Linux
+      url: ../linux/quickstart-install-connect-clouds.md
+- title: Администрирование
+  linkLists:
+  - linkListType: deploy
+    links:
+    - text: Установка SQL Server
+      url: https://docs.microsoft.com/sql/database-engine/install-windows/installation-for-sql-server
+    - text: Обновление SQL Server
+      url: ../database-engine/install-windows/upgrade-sql-server.md
+  - linkListType: overview
+    links:
+    - text: безопасность
+      url: https://docs.microsoft.com/sql/relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database
+    - text: Мониторинг и настройка производительности
+      url: https://docs.microsoft.com/sql/relational-databases/performance/monitor-and-tune-for-performance
+    - text: Выполняющаяся в памяти база данных
+      url: ..//relational-databases/in-memory-database.md
+    - text: Автоматическая настройка
+      url: ../relational-databases/automatic-tuning/automatic-tuning.md
+    - text: Интеллектуальная обработка запросов
+      url: https://aka.ms/IQP
+  - linkListType: concept
+    links:
+    - text: Резервное копирование и восстановление
+      url: ../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md
+    - text: Группы доступности AlwaysOn
+      url: ../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md
+    - text: Экземпляры отказоустойчивого кластера
+      url: failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md
+    - text: Репликация SQL Server
+      url: ../relational-databases/replication/sql-server-replication.md
+- title: Business Intelligence
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Службы SQL Server Reporting Services (SSRS)
+      url: ../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md
+    - text: Службы SQL Server Analysis Services (SSAS)
+      url: /analysis-services/analysis-services-overview
+    - text: Службы SQL Server Integration Services (SSIS)
+      url: ../integration-services/sql-server-integration-services.md
+    - text: Фабрика данных Azure
+      url: https://docs.microsoft.com/azure/data-factory/
+- title: Миграция
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Руководство по миграции данных
+      url: https://datamigration.microsoft.com/
+    - text: Сертификация на совместимость базы данных
+      url: https://aka.ms/dbcompat
+    - text: Служба Azure Database Migration Service
+      url: https://docs.microsoft.com/azure/dms/dms-overview
+    - text: Помощник по миграции данных (DMA)
+      url: ../dma/dma-overview.md
+    - text: Database Experimentation Assistant
+      url: ../dea/database-experimentation-assistant-overview.md
+    - text: Помощник по миграции SQL Server (SSMA)
+      url: ../ssma/sql-server-migration-assistant.md
+- title: Большие данные и машинное обучение
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Кластеры больших данных SQL Server
+      url: ../big-data-cluster/big-data-cluster-overview.md
+    - text: Система платформы аналитики
+      url: https://www.microsoft.com/sql/analytics-platform-system/
+    - text: Машинное обучение с SQL Server
+      url: https://docs.microsoft.com/sql/advanced-analytics/
+    - text: Службы R
+      url: ../advanced-analytics/r/sql-server-r-services.md
+    - text: Виртуализация данных через Polybase
+      url: ../relational-databases/polybase/polybase-guide.md

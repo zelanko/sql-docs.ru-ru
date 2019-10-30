@@ -8,12 +8,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: f075ae6e8392b0eae2bb78da588c43f3a5c438b0
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: ecb0f89cb7093587feb9c7e57be56e2cafaee5a0
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710633"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907578"
 ---
 # <a name="configure-polybase-to-access-external-data-in-hadoop"></a>Настройка PolyBase для доступа к внешним данным в Hadoop
 
@@ -59,8 +59,6 @@ ms.locfileid: "71710633"
    ```  
 
 2. Перезапустите SQL Server с помощью **services.msc**. При перезапуске SQL Server следующие службы также будут перезапущены:  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
    - Служба перемещения данных SQL Server PolyBase  
    - Компонент SQL Server PolyBase Engine  

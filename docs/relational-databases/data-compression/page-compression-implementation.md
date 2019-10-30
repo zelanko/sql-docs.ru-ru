@@ -14,12 +14,12 @@ ms.assetid: 78c83277-1dbb-4e07-95bd-47b14d2b5cd4
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3ff36fb2d0a5ed84beae6a90f6058a7a66ab9f1b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 43086213ec4c13e6849a40a4013a99ffc9df3903
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68030488"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907086"
 ---
 # <a name="page-compression-implementation"></a>Реализация сжатия страниц
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -36,8 +36,6 @@ ms.locfileid: "68030488"
   
 3.  сжатие словаря.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
  При сжатии страницы неконечные страницы индексов сжимаются с использованием только сжатия строк. Дополнительные сведения о сжатии строк см. в разделе [Row Compression Implementation](../../relational-databases/data-compression/row-compression-implementation.md).  
   
 ## <a name="prefix-compression"></a>сжатие префикса;  
@@ -51,18 +49,18 @@ ms.locfileid: "68030488"
   
  Следующая иллюстрация показывает образец страницы таблицы перед сжатием префикса.  
   
- ![Страница до сжатия префикса](media/skt-tblcompression1c.gif "Страница до сжатия префикса")  
+ ![Страница до префиксного сжатия](media/skt-tblcompression1c.gif "Страница до префиксного сжатия")  
   
  Следующая иллюстрация содержит эту же страницу после сжатия префикса. Префикс перемещается к заголовку, а значения столбца изменяются ссылками на данный префикс.  
   
- ![Страница после сжатия префикса](media/tblcompression2.gif "Страница после сжатия префикса")  
+ ![Страница после префиксного сжатия](media/tblcompression2.gif "Страница после префиксного сжатия")  
   
  В первом столбце первой строки значение 4b указывает, что первые четыре символа префикса (aaab) присутствуют для этой строки вместе с символом b. Это делает результирующим значение aaabb, которое представляет собой исходное значение.  
   
 ## <a name="dictionary-compression"></a>сжатие словаря.  
  После завершения сжатия префикса применяется сжатие словаря. При сжатии словаря выполняется поиск на странице повторяющихся значений и сохранение их в области CI. В отличие от сжатия префикса, сжатие словаря не ограничено одним столбцом. При сжатии словаря можно заменить повторяющиеся значения, встречающиеся в любом месте страницы. Следующая иллюстрация содержит эту же страницу после сжатия словаря.  
   
- ![Страница после сжатия словаря](media/tblcompression3.gif "Страница после сжатия словаря")  
+ ![Страница после словарного сжатия](media/tblcompression3.gif "Страница после словарного сжатия")  
   
  Обратите внимание, что ссылки на значение 4b существуют в различных столбцах страницы.  
   

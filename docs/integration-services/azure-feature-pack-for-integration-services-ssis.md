@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 31de555f-ae62-4f2f-a6a6-77fea1fa8189
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e8188dd6b26b3eb81596394ce8b7947654b00df5
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: cef051bcd3e7de6f381bba3f15f4e2e720f2a254
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71294954"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72807433"
 ---
 # <a name="azure-feature-pack-for-integration-services-ssis"></a>Пакет дополнительных компонентов Azure для служб Integration Services (SSIS)
 
@@ -27,8 +27,9 @@ ms.locfileid: "71294954"
 
 Пакет дополнительных компонентов Azure для служб SQL Server Integration Services (SSIS) — это дополнение, которое предоставляет перечисленные на этой странице компоненты для подключения служб SSIS к Azure, передачи данных между Azure и локальными источниками данных и обработки данных, хранящихся в Azure.
 
-[![Скачать пакет дополнительных компонентов служб SSIS для Azure](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png)](https://www.microsoft.com/download/details.aspx?id=54798) **Скачать**
+[![Скачать пакет дополнительных компонентов служб SSIS для Azure](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png)](https://www.microsoft.com/download/details.aspx?id=100430) **Скачать**
 
+- Для SQL Server 2019: [Пакет дополнительных компонентов служб Microsoft SQL Server Integration Services 2019 для Azure](https://www.microsoft.com/download/details.aspx?id=100430)
 - Для SQL Server 2017: [Пакет дополнительных компонентов служб Microsoft SQL Server Integration Services 2017 для Azure](https://www.microsoft.com/download/details.aspx?id=54798)
 - Для SQL Server 2016: [Пакет дополнительных компонентов служб Microsoft SQL Server Integration Services 2016 для Azure](https://www.microsoft.com/download/details.aspx?id=49492)
 - Для SQL Server 2014: [Пакет дополнительных компонентов служб Microsoft SQL Server Integration Services 2014 для Azure](https://www.microsoft.com/download/details.aspx?id=47366)
@@ -177,3 +178,16 @@ Expand-Archive zulu8.33.0.1-jdk8.0.192-win_x64.zip -DestinationPath C:\
 
 ![SSIS-AzureConnector-CloudArchive-3](../integration-services/media/ssis-azureconnector-cloudarchive-3.png)
   
+## <a name="release-notes"></a>Заметки о выпуске
+
+### <a name="version-1150"></a>Версия 1.15.0
+
+#### <a name="improvements"></a>Улучшения
+
+1. Добавление операции удаления папки или файла в задачу "Гибкая работа с файлами"
+1. Добавление функции преобразования внешнего и выходного типа данных в источник "Гибкая работа с файлами"
+
+#### <a name="bugfixes"></a>Исправление ошибок
+
+1. В некоторых случаях проверьте наличие неисправностей подключения для Data Lake Storage 2-го поколения с сообщением об ошибке "Попытка получить доступ к элементу как к типу, несовместимому с массивом"
+1. Вернуться к поддержке эмулятора службы хранилища Azure

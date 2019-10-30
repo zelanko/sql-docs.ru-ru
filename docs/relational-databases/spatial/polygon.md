@@ -13,14 +13,14 @@ ms.assetid: b6a21c3c-fdb8-4187-8229-1c488454fdfb
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a82789da3207fc42a820a18ff6d7da438f84cdd7
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.openlocfilehash: bd7b379df56f94710a22684c9cc8d662cfb0a396
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69026144"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907212"
 ---
-# <a name="polygon"></a>Polygon
+# <a name="polygon"></a>Многоугольник
 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
@@ -33,7 +33,7 @@ ms.locfileid: "69026144"
   
 На рисунке ниже приведены примеры экземпляров **Polygon** .  
   
- ![Примеры геометрических экземпляров многоугольника](../../relational-databases/spatial/media/polygon.gif "Примеры геометрических экземпляров многоугольника")  
+ ![Примеры экземпляров Polygon типа geometry](../../relational-databases/spatial/media/polygon.gif "Примеры экземпляров Polygon типа geometry")  
   
 На рисунке представлены:  
   
@@ -42,8 +42,6 @@ ms.locfileid: "69026144"
 2.  на рисунке 2 представлен экземпляр **Polygon** , граница которого определяется внешним и двумя внутренними кольцами. Область внутри внутренних колец является частью внешней стороны экземпляра **Polygon** ;  
   
 3.  на рисунке 3 представлен допустимый экземпляр **Polygon** , поскольку внутренние кольца пересекаются в одной точке касания.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ### <a name="accepted-instances"></a>Правильные экземпляры  
  Правильные экземпляры **Polygon** — это экземпляры, которые можно сохранить в переменной **geometry** или **geography** , не вызывая исключения. Следующие экземпляры **Polygon** являются правильными:  

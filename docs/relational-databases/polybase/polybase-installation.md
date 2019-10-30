@@ -10,12 +10,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 7823f9e76207802b7f05a21ccd11b5de1fa9d18d
-ms.sourcegitcommit: 5d9ce5c98c23301c5914f142671516b2195f9018
+ms.openlocfilehash: 007719c2407f6e193b8612ef51944ccbfd3238d3
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71961971"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908668"
 ---
 # <a name="install-polybase-on-windows"></a>Установка PolyBase на компьютере по управлением Windows
 
@@ -90,8 +90,6 @@ ms.locfileid: "71961971"
      Кроме того, при выборе этого варианта в брандмауэре будут включены подключения для координатора распределенных транзакций Майкрософт (MSDTC) и будут изменены параметры реестра для MSDTC.  
    
 6. На странице конфигурации PolyBase укажите диапазон портов (не менее шести). Программа установки SQL Server выделяет первые шесть доступных портов из указанного диапазона.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
    >[!IMPORTANT]
    > После установки необходимо [включить компонент PolyBase](#enable).

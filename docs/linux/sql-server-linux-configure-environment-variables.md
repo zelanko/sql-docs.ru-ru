@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: f6e78603aee684a9db3dc89e94f331275d1cd0bf
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 019878cd1dde4425ba69e0c69ce7a4a4a1d0dd62
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68476215"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72807465"
 ---
 # <a name="configure-sql-server-settings-with-environment-variables-on-linux"></a>Настройка параметров SQL Server с помощью переменных среды в Linux
 
@@ -94,7 +94,7 @@ ms.locfileid: "68476215"
 В этом примере `mssql-conf setup` запускается с настроенными переменными среды. Заданы следующие переменные среды:
 
 - **ACCEPT_EULA** — принимает условия лицензионного соглашения.
-- **MSSSQL_PID** — задает выпуск SQL Server Developer Edition с бесплатной лицензией для нерабочего использования.
+- **MSSQL_PID** — задает выпуск SQL Server Developer Edition с бесплатной лицензией для нерабочего использования.
 - **MSSQL_SA_PASSWORD** — задает надежный пароль.
 - **MSSQL_TCP_PORT** — задает порт TCP 1234, который будет прослушивать SQL Server.
 
@@ -107,7 +107,7 @@ sudo ACCEPT_EULA='Y' MSSQL_PID='Developer' MSSQL_SA_PASSWORD='<YourStrong!Passw0
 В этом примере в команде docker используются следующие переменные среды для создания нового контейнера SQL Server:
 
 - **ACCEPT_EULA** — принимает условия лицензионного соглашения.
-- **MSSSQL_PID** — задает выпуск SQL Server Developer Edition с бесплатной лицензией для нерабочего использования.
+- **MSSQL_PID** — задает выпуск SQL Server Developer Edition с бесплатной лицензией для нерабочего использования.
 - **MSSQL_SA_PASSWORD** — задает надежный пароль.
 - **MSSQL_TCP_PORT** — задает порт TCP 1234, который будет прослушивать SQL Server. Это означает, что вместо сопоставления порта 1433 (по умолчанию) с портом узла в этом примере необходимо выполнить сопоставление пользовательского порта TCP с помощью команды `-p 1234:1234`.
 

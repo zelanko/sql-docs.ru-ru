@@ -8,12 +8,12 @@ ms.topic: article
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e85461ef0a6395904b0f80590a01f035eb51dc3a
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.openlocfilehash: bb83237e33f477468cd58ea8a692970268bf1d66
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71952760"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72807475"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>Новые возможности [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]
 
@@ -69,7 +69,7 @@ ms.locfileid: "71952760"
 |Новые функции или обновления | Сведения |
 |:---|:---|
 |Гибридный буферный пул| Новая возможность [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)], которая при необходимости обеспечивает прямой доступ к страницам базы данных, хранящимся в файлах базы данных и помещенным в устройство постоянной памяти (PMEM). См. статью [Гибридный буферный пул](../database-engine/configure-windows/hybrid-buffer-pool.md).|
-|Оптимизированные для памяти метаданные `tempdb`| В [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] появилась новая функция оптимизированных для памяти метаданных `tempdb`, входящая в семейство функций [выполняющейся в памяти базы данных](../relational-databases/in-memory-database.md). Она эффективно устраняет существующую проблему и открывает новый уровень масштабируемости для рабочих нагрузок, активно использующих `tempdb`. В [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] системные таблицы, связанные с управлением метаданными временной таблицы, можно переместить в неустойчивые таблицы без кратковременной блокировки, оптимизированные для памяти. См. раздел [Оптимизированные для памяти метаданные `tempdb`](../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata).|
+|Оптимизированные для памяти метаданные TempDB| В [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]появилась новая функция из семейства функций для [выполняющейся в памяти базы данных](../relational-databases/in-memory-database.md): оптимизированные для памяти метаданные TempDB. В сущности это позволяет устранить узкие места и обеспечить новый уровень масштабируемости для рабочих нагрузок, активно использующих TempDB. В [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] системные таблицы, связанные с управлением метаданными временных таблиц, можно переместить в неустойчивые таблицы без кратковременной блокировки, оптимизированные для памяти. См. раздел [Оптимизированные для памяти метаданные TempDB](../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata).|
 | Поддержка выполняющейся в памяти OLTP для моментальных снимков базы данных | [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] предоставляет поддержку для создания [моментальных снимков баз данных](../relational-databases/databases/database-snapshots-sql-server.md), которые включают оптимизированные для памяти файловые группы. |
 | &nbsp; | &nbsp; |
 
@@ -115,7 +115,7 @@ ms.locfileid: "71952760"
 
 |Новые функции или обновления | Сведения |
 |:---|:---|
-|Поддержка кодировки UTF-8 |Поддержка символов UTF-8 для импорта и экспорта кодировки, а также как параметров сортировки на уровне столбцов и базы данных для строковых данных. Это позволяет приложениям расширяться до глобального масштаба в тех случаях, когда для выполнения требований клиентов и определенных рыночных нормативов критически важно предоставлять глобальные многоязычные приложения баз данных и служб. См. раздел [Поддержка параметров сортировки и Юникода](../relational-databases/collations/collation-and-unicode-support.md).<br/><br/> Релиз-кандидат [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] включает поддержку UTF-8 для внешних таблиц Polybase и для Always Encrypted.|
+|Поддержка кодировки UTF-8 |Поддержка символов UTF-8 для импорта и экспорта кодировки, а также как параметров сортировки на уровне столбцов и базы данных для строковых данных. Это позволяет приложениям расширяться до глобального масштаба в тех случаях, когда для выполнения требований клиентов и определенных рыночных нормативов критически важно предоставлять глобальные многоязычные приложения баз данных и служб. См. раздел [Поддержка параметров сортировки и Юникода](../relational-databases/collations/collation-and-unicode-support.md).<br/><br/> Релиз-кандидат [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]включает поддержку UTF-8 для внешних таблиц Polybase и для Always Encrypted (если не используется с Анклавами)|
 | &nbsp; | &nbsp; |
 
 ### <a name="language-extensions"></a>Расширения языка
@@ -197,7 +197,7 @@ ms.locfileid: "71952760"
 |Поддержка координатора распределенных транзакций Майкрософт (MSDTC). |[Настройка MSDTC на платформе Linux](../linux/sql-server-linux-configure-msdtc.md) |
 |Поддержка OpenLDAP для сторонних поставщиков Active Directory. |[Учебник. Использование проверки подлинности Azure Active Directory с SQL Server на Linux](../linux/sql-server-linux-active-directory-authentication.md) |
 |Поддержка машинного обучения в Linux. |[Настройка машинного обучения в Linux](../linux/sql-server-linux-setup-machine-learning.md) |
-|Улучшения `tempdb` | По умолчанию новая установка SQL Server на Linux создает несколько файлов данных `tempdb` на основе числа логических ядер (до 8 файлов данных). Это не применимо к обновлениям основной или дополнительной версии на месте. Размер каждого файла `tempdb` составляет 8 МБ с возможностью автоматического увеличения до 64 МБ. Это поведение аналогично поведению установки SQL Server по умолчанию в Windows. |
+|Улучшения TempDB | По умолчанию новая установка SQL Server на Linux создает несколько файлов данных TempDB на основе числа логических ядер (до 8 файлов данных). Это не применимо к обновлениям основной или дополнительной версии на месте. Размер каждого файла TempDB составляет 8 МБ с возможностью автоматического увеличения до 64 МБ. Это поведение аналогично поведению установки SQL Server по умолчанию в Windows. |
 | PolyBase на компьютерах под управлением Linux | [Установка PolyBase](../relational-databases/polybase/polybase-linux-setup.md) в Linux для соединителей вне Hadoop.<br/><br/>[Сопоставление типов PolyBase](../relational-databases/polybase/polybase-type-mapping.md). |
 | Поддержка системы отслеживания измененных данных (CDC) | Система отслеживания измененных данных (CDC) теперь поддерживается в Linux для SQL Server 2019. |
 | &nbsp; | &nbsp; |
@@ -252,7 +252,7 @@ ms.locfileid: "71952760"
 - [`SqlServer` Модуль PowerShell](https://www.powershellgallery.com/packages/Sqlserver)
 - [Документация по SQL Server PowerShell](../powershell/sql-server-powershell.md)
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 - [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]: заметки о выпуске](sql-server-ver15-release-notes.md).
 

@@ -3,46 +3,60 @@ title: Расширение DACPAC-файлов SQL Server
 titleSuffix: Azure Data Studio
 description: Установка и использование расширения DACPAC-файлов SQL Server (предварительная версия) для Azure Data Studio
 ms.custom: seodec18
-ms.date: 03/18/2019
+ms.date: 10/21/2019
 ms.reviewer: alayu; sstein
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: e40e377310b33034b4abecdc5e58eab17d39695d
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 769e6157e7d84702716dfce79d0217efeee83076
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67959198"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72783332"
 ---
 # <a name="sql-server-dacpac-extension-preview"></a>Расширение DACPAC-файлов SQL Server (предварительная версия)
 
-**Мастер приложений уровня данных** предоставляет удобный интерфейс для развертывания и извлечения DACPAC-файлов, а также импорта и экспорта BACPAC-файлов.
+**Мастер приложений уровня данных** предоставляет мастер с удобным интерфейсом для развертывания и извлечения DACPAC-файлов, а также импорта и экспорта BACPAC-файлов.
 
 Сейчас это расширение находится на этапе начальной предварительной версии. Сообщить о проблемах и запросить функции можно [здесь](https://github.com/microsoft/azuredatastudio/issues).
 
-![действия с данными](media/sql-server-dacpac-extension/data-tier-application-actions.png)
 
- ### <a name="requirements"></a>Требования
- * Для запуска этого мастера требуется активное подключение к экземпляру SQL Server.
+## <a name="features"></a>Компоненты
 
- ### <a name="how-do-i-start-the-data-tier-application-wizard"></a>Как запустить мастер приложений уровня данных?
- * Самый простой способ начать работу с мастером — щелкнуть базу данных правой кнопкой мыши в обозревателе объектов и выбрать пункт **Мастер приложений уровня данных**.
- * Если пользователь подключен к экземпляру SQL Server, он также может запустить мастер из палитры команд (CTRL+SHIFT+P), выполнив поиск строки **мастер приложений уровня данных.**
+* Развертывание DACPAC-файлов в экземпляре SQL Server
+* Извлечение экземпляра SQL Server в DACPAC-файл
+* Создание базы данных из BACPAC-файлов
+* Экспорт схемы и данных в BACPAC-файл
 
- ### <a name="why-would-i-use-the-data-tier-application-wizard"></a>Как использовать мастер приложений уровня данных?
- Этот мастер был создан, чтобы добавить возможность извлечения и развертывания DACPAC-файлов, а также импорта и экспорта BACPAC-файлов в Azure Data Studio.
+![Демонстрационный GIF-файл расширения DACPAC](media/extensions/sql-server-dacpac-extension/dacpac-extension-demo.gif)
 
-## <a name="install-the-sql-server-dacpac-extension"></a>Установка расширения DACPAC-файлов SQL Server
 
-1. Чтобы открыть диспетчер расширений и получить доступ к доступным расширениям, щелкните значок расширений или выберите пункт **Расширения** в меню **Вид**.
-2. Выберите расширение DACPAC-файлов SQL Server и щелкните **Установить**.
-1. Выберите **Перезагрузить**, чтобы включить расширение (требуется только при первой установке расширения).
-2. Перейдите на панель мониторинга управления, щелкнув сервер или базу данных правой кнопкой мыши и выбрав пункт **Управление**.
-3. Установленные расширения отображаются в виде вкладок на панели мониторинга управления.
+## <a name="why-would-i-use-the-data-tier-application-wizard"></a>Как использовать мастер приложения уровня данных?
 
-## <a name="next-steps"></a>Следующие шаги
+Мастер упрощает управление файлами DACPAC и BACPAC, что облегчает разработку и развертывание элементов уровня данных, поддерживающих приложение. Дополнительные сведения об использовании приложений уровня данных см. в [нашей документации](https://docs.microsoft.com/sql/relational-databases/data-tier-applications/data-tier-applications?view=sql-server-2017).
+
+
+## <a name="install-the-extension"></a>Установка расширения
+
+1. Щелкните значок расширений, чтобы просмотреть доступные расширения.
+
+    ![Значок "Диспетчер расширений"](media/extensions/extension-manager-icon.png)
+
+2. Найдите расширение **SQL Server DACPAC** и выберите его, чтобы просмотреть сведения. Щелкните **Установить**, чтобы добавить расширение.
+
+3. После установки выберите **Перезагрузить**, чтобы включить расширение в Azure Data Studio (требуется только при первой установке расширения).
+
+
+## <a name="launch-the-data-tier-application-wizard"></a>Запуск мастера приложений уровня данных
+
+Чтобы запустить мастер, щелкните правой кнопкой мыши папку "Базы данных" или щелкните правой кнопкой мыши нужную базу данных в Обозревателе объектов. Затем щелкните **Мастер приложений уровня данных**.
+
+![меню запуска расширения DACPAC](media/extensions/sql-server-dacpac-extension/dacpac-extension-launch.png)
+
+
+## <a name="next-steps"></a>Дальнейшие действия
 
 Дополнительные сведения о DACPAC-файлах см. в [нашей документации](https://docs.microsoft.com/sql/relational-databases/data-tier-applications/data-tier-applications?view=sql-server-2017).

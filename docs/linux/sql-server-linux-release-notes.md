@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
-ms.openlocfilehash: 568790caac848c0823c58bd004ffca8546650340
-ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
+ms.openlocfilehash: 839d789e633e8f8794ec6fde70980e6c1a43ce91
+ms.sourcegitcommit: 39630fddc69141531eddca2a3c156ccf8536f49c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72278266"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72930490"
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Заметки о выпуске для SQL Server 2017 на Linux
 
@@ -101,7 +101,7 @@ ms.locfileid: "72278266"
 
 |Новые функции или обновления | Сведения |
 |:---|:---|
-| Поддержка координатора распределенных транзакций | Поддержка координатора распределенных транзакций Майкрософт (MSDTC) для SQL Sever 2017. Дополнительные сведения см. в статье [Сведения о настройке координатора распределенных транзакций Майкрософт (MSDTC) в Linux](sql-server-linux-configure-msdtc.md). |
+| Поддержка координатора распределенных транзакций | Поддержка координатора распределенных транзакций Майкрософт (MSDTC) для SQL Server 2017. Дополнительные сведения см. в статье [Сведения о настройке координатора распределенных транзакций (Майкрософт) (MSDTC) в Linux](sql-server-linux-configure-msdtc.md). |
 
 ### <a name="package-details"></a>Сведения о пакете
 
@@ -392,7 +392,7 @@ sudo systemctl start mssql-server
 
 ### <a name="package-details"></a>Сведения о пакете
 
-Сведения о пакете и расположениях для скачивания для пакетов RPM и Debian приведены в приведенной ниже таблице. Обратите внимание, что эти пакеты не требуется скачивать напрямую, если вы следуете инструкциям в следующих руководствах по установке.
+Сведения о пакете и расположениях для скачивания для пакетов RPM и Debian приведены в приведенной ниже таблице. Эти пакеты не требуется скачивать напрямую, если вы следуете инструкциям, описанным в следующих руководствах по установке:
 
 - [Установка пакета SQL Server](sql-server-linux-setup.md)
 - [Установка пакета полнотекстового поиска](sql-server-linux-setup-full-text-search.md)
@@ -404,42 +404,6 @@ sudo systemctl start mssql-server
 | Пакет Red Hat RPM | 14.0.1000.169-2 | [Пакет RPM подсистемы](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-14.0.1000.169-2.x86_64.rpm)</br>[Пакет RPM высокой доступности](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-ha-14.0.1000.169-2.x86_64.rpm)</br>[Пакет RPM полнотекстового поиска](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-fts-14.0.1000.169-2.x86_64.rpm)</br>[Пакет RPM агента SQL Server](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-agent-14.0.1000.169-2.x86_64.rpm)</br>[Пакет SSIS](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-is-14.0.1000.169-1.x86_64.rpm) | 
 | Пакет SLES RPM | 14.0.1000.169-2 | [Пакет RPM подсистемы mssql-server](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.1000.169-2.x86_64.rpm)</br>[Пакет RPM высокой доступности](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.1000.169-2.x86_64.rpm)</br>[Пакет RPM полнотекстового поиска](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.1000.169-2.x86_64.rpm)</br>[Пакет RPM агента SQL Server](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-agent-14.0.1000.169-2.x86_64.rpm) | 
 | Пакет Ubuntu 16.04 Debian | 14.0.1000.169-2 | [Пакет подсистемы Debian](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.1000.169-2_amd64.deb)</br>[Пакет Debian высокой доступности](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.1000.169-2_amd64.deb)</br>[Пакет Debian полнотекстового поиска](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.1000.169-2_amd64.deb)</br>[Пакет Debian агента SQL Server](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-agent/mssql-server-agent_14.0.1000.169-2_amd64.deb)<br/>[Пакет SSIS](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
-
-## <a name="Unsupported"></a> Неподдерживаемые функции и службы
-
-Следующие функции и службы недоступны в Linux на момент выхода выпуска GA. Поддержка этих функций будет постепенно реализовываться с течением времени.
-
-| Область | Неподдерживаемая функция или служба |
-|-----|-----|
-| **Ядро СУБД** | Репликация транзакций |
-| &nbsp; | Репликация слиянием |
-| &nbsp; | Отслеживание измененных данных (см. описание агента SQL Server) |
-| &nbsp; | База данных Stretch |
-| &nbsp; | PolyBase |
-| &nbsp; | Распределенный запрос с сторонними подключениями |
-| &nbsp; | Связанные серверы для источников данных, отличных от [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  |
-| &nbsp; | Системные расширенные хранимые процедуры (XP_CMDSHELL и т. п.) |
-| &nbsp; | Filetable, FILESTREAM |
-| &nbsp; | Сборки CLR с набором разрешений EXTERNAL_ACCESS или UNSAFE |
-| &nbsp; | Buffer Pool Extension |
-| **Агент SQL Server** |  Подсистемы: CmdExec, PowerShell, средство чтения очереди, SSIS, SSAS, SSRS |
-| &nbsp; | видны узлы |
-| &nbsp; | Агент чтения журнала. |
-| &nbsp; | Система отслеживания измененных данных (CDC) |
-| &nbsp; | Управляемое резервное копирование |
-| **Обеспечение высокого уровня доступности** | Зеркальное отображение базы данных  |
-| **безопасность** | расширенное управление ключами |
-| &nbsp; | Проверка подлинности AD для связанных серверов | 
-| &nbsp; | Проверка подлинности AD для групп доступности | 
-| &nbsp; | Сторонние средства AD (Centrify, Vintela, Powerbroker) | 
-| **Службы** | Обозреватель SQL Server |
-| &nbsp; | Службы R SQL Server |
-| &nbsp; | StreamInsight |
-| &nbsp; | Службы Analysis Services |
-| &nbsp; | Службы Reporting Services |
-| &nbsp; | Data Quality Services |
-| &nbsp; | Службы Master Data Services |
-| &nbsp; | Координатор распределенных транзакций (DTC) |
 
 ## <a name="known-issues"></a>Известные проблемы
 
@@ -467,13 +431,11 @@ sudo systemctl start mssql-server
 
 #### <a name="databases"></a>Базы данных
 
-- Невозможно переместить базу данных master с помощью служебной программы mssql-conf. Другие базы данных с помощью mssql-conf переместить можно.
+- Базу данных master нельзя переместить с помощью служебной программы mssql-conf. Другие базы данных с помощью mssql-conf переместить можно.
 
 - При восстановлении базы данных, для которой была создана резервная копия в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] на базе Windows, нужно использовать предложение **WITH MOVE** в инструкции Transact-SQL.
 
-- Распределенные транзакции, которым необходима служба координатора распределенных транзакций (Майкрософт), не поддерживаются в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] на базе Linux. Связанные серверы [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] для [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] поддерживаются, если только они не используют DTC. Дополнительные сведения см. в разделе [Распределенные транзакции, которым необходима служба координатора распределенных транзакций (Майкрософт), не поддерживаются в SQL Server на базе Linux](https://blogs.msdn.microsoft.com/bobsql/2017/12/11/sql-server-linux-distributed-transactions-requiring-the-microsoft-distributed-transaction-coordinator-service-are-not-supported-on-sql-server-running-on-linux-sql-server-to-sql-server-distributed-tr/).
-
-- Некоторые алгоритмы (комплекты шифров) для протокола TLS не работают должным образом с [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] в Linux. Это приводит к сбоям подключения при попытке подключиться к [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], а также к проблемам при установке соединений между репликами в группах с высокой доступностью.
+- Некоторые алгоритмы (наборы шифров) для протокола TLS не работают должным образом с [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] на Linux. Это приводит к сбоям подключения при попытке подключиться к [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], а также к проблемам при установке соединений между репликами в группах с высокой доступностью.
 
    - **Решение**. Измените скрипт конфигурации **mssql.conf** для [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] в Linux, чтобы отключить проблемные комплекты шифров, выполнив следующие действия.
 
@@ -493,7 +455,7 @@ sudo systemctl start mssql-server
       sudo systemctl restart mssql-server
       ```
 
-- Базы данных [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] в Windows, которые используют выполняющуюся в памяти OLTP, невозможно восстановить в [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] на базе Linux. Чтобы восстановить базу данных [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], использующую выполняющуюся в памяти OLTP, сначала обновите базы до [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] или [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] в Windows, прежде чем перемещать их в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] на базе Linux с помощью операции резервного копирования/восстановления или подключения/отключения.
+- Базы данных [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] в Windows, использующие встроенный OLTP, не могут быть восстановлены в [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] на Linux. Чтобы восстановить базу данных [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], использующую выполняющуюся в памяти OLTP, сначала обновите базы до [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] или [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] в Windows, прежде чем перемещать их в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] на базе Linux с помощью операции резервного копирования/восстановления или подключения/отключения.
 
 - Сейчас разрешение пользователя **ADMINISTER BULK OPERATIONS** в Linux не поддерживается.
 
@@ -550,7 +512,7 @@ sudo systemctl start mssql-server
 
 - С помощью [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] в Linux CTP 2.1 и более поздних версиях пакеты [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] могут использовать подключения ODBC в Linux. Эта функция была протестирована с использованием [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и драйверов ODBC для MySQL, но она также должна работать с любым драйвером ODBC для Юникода, который поддерживает спецификацию ODBC. Во время разработки можно указать либо имя DSN, либо строку подключения для подключения к данным ODBC. Кроме того, можно использовать проверку подлинности Windows. Дополнительные сведения см. в [записи блога с объявлением поддержки ODBC в Linux.](https://blogs.msdn.microsoft.com/ssis/2017/06/16/odbc-is-supported-in-ssis-on-linux-ssis-helsinki-ctp2-1-refresh/)
 
-- Следующие функции не поддерживаются в этом выпуске при запуске пакетов SSIS в Linux.
+- Следующие функции не поддерживаются в этом выпуске при запуске пакетов служб SSIS в Linux:
   - База данных каталогов [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]
   - Выполнение пакета агентом SQL по расписанию
   - Проверка подлинности Windows.
@@ -578,9 +540,9 @@ sudo systemctl start mssql-server
 
 - Компоненты пользовательского интерфейса [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], использующие параметры проверки подлинности Windows или журнала событий Windows, не работают с Linux. Эти функции по-прежнему можно использовать с другими параметрами, такими как имена входа SQL. 
 
-- Число хранящихся файлов журнала невозможно изменить.
+- Число сохраняемых файлов журнала не подлежит изменению.
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 Чтобы приступить к работе, ознакомьтесь со следующими краткими руководствами.
 

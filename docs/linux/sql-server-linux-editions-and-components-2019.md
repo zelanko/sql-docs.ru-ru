@@ -1,5 +1,5 @@
 ---
-title: Выпуски и поддерживаемые функции SQL Server 2017 на Linux
+title: Выпуски и поддерживаемые функции SQL Server 2019 на Linux
 ms.date: 10/23/2019
 ms.prod: sql
 ms.technology: linux
@@ -21,33 +21,33 @@ helpviewer_keywords:
 - installing SQL Server, editions
 - editions [SQL Server], about edition options
 - Setup [SQL Server]
-author: MikeRayMSFT
-ms.author: mikeray
-ms.reviewer: vanto
-ms.openlocfilehash: 661d74060d9bb6f7097a5fe50291bdde23e0a591
+author: VanMSFT
+ms.author: vanto
+ms.reviewer: mikeray
+ms.openlocfilehash: 18ec5ca6700008bb2b1ebe3709db0c49123f4fec
 ms.sourcegitcommit: 39630fddc69141531eddca2a3c156ccf8536f49c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 10/25/2019
-ms.locfileid: "72928910"
+ms.locfileid: "72954996"
 ---
-# <a name="editions-and-supported-features-of-sql-server-2017-on-linux"></a>Выпуски и поддерживаемые функции SQL Server 2017 в Linux
+# <a name="editions-and-supported-features-of-sql-server-2019-on-linux"></a>Выпуски и поддерживаемые функции SQL Server 2019 на Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-В этой статье подробно описаны функции, поддерживаемые различными выпусками SQL Server 2017 на Linux. Описание выпусков и поддерживаемых функций SQL Server в Windows см. в статье [SQL Server 2017 — Windows](../sql-server/editions-and-components-of-sql-server-2017.md).  
+В этой статье подробно описаны функции, поддерживаемые различными выпусками SQL Server 2019 на Linux. Описание выпусков и поддерживаемых функций SQL Server в Windows см. в статье [SQL Server 2019 — Windows](../sql-server/editions-and-components-of-sql-server-version-15.md).  
   
 Требования для установки сильно зависят от потребностей приложения. Различные выпуски [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] удовлетворяют индивидуальным требованиям каждой организации или отдельного лица к производительности, среде выполнения и цене. Набор устанавливаемых компонентов [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] зависит от потребностей конкретного пользователя. В следующих разделах содержатся сведения, на основе которых из множества выпусков и компонентов, доступных в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], можно сделать наилучший выбор.  
 
 Актуальные заметки о выпуске и сведения о новых возможностях содержатся в следующих разделах:
-- [Заметки о выпуске для SQL Server 2017 на Linux](sql-server-linux-release-notes.md)
-- [Новые возможности SQL Server 2017 на Linux](sql-server-linux-whats-new.md)
+- [Заметки о выпуске SQL Server 2019 на Linux](sql-server-linux-release-notes-2019.md)
+- [Новые возможности SQL Server 2019 на Linux](sql-server-linux-whats-new-2019.md)
 
 Список функций SQL Server, которые недоступны в Linux, см. в статье [Неподдерживаемые функции и службы](#Unsupported).
 
 ### <a name="try-sql-server"></a>Попробуйте SQL Server!    
     
-[Скачать SQL Server 2017](https://www.microsoft.com/sql-server/sql-server-2017)
+[Загрузить SQL Server 2019](https://www.microsoft.com/sql-server/sql-server-2019)
 
 ## <a name="includessnoversionincludesssnoversion-mdmd-editions"></a>[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] , выпуски  
  Эти выпуски [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]описаны в следующей таблице. 
@@ -66,7 +66,7 @@ ms.locfileid: "72928910"
   
 ## <a name="includessnoversionincludesssnoversion-mdmd-components"></a>составные части компонента [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
 
-SQL Server 2017 на Linux поддерживает ядро СУБД SQL Server. В приведенной ниже таблице описаны функции ядра СУБД.   
+SQL Server 2019 на Linux поддерживает ядро СУБД SQL Server. В приведенной ниже таблице описаны функции ядра СУБД.   
   
 |Компоненты сервера|Описание|  
 |-----------------------|-----------------|  
@@ -209,17 +209,15 @@ SQL Server 2017 на Linux поддерживает ядро СУБД SQL Serv
 |Плоский и геодезический типы данных|Да|Да|Да|Да| 
 |Дополнительные пространственные библиотеки|Да|Да|Да|Да|   
 |Импорт-экспорт стандартных форматов пространственных данных|Да|Да|Да|Да|   
+
 ## <a name="Unsupported"></a> Неподдерживаемые функции и службы
 
-Следующие функции и службы недоступны для SQL Server 2017 на Linux. Поддержка этих функций будет постепенно реализовываться с течением времени.
+Следующие функции и службы недоступны для SQL Server 2019 на Linux. Поддержка этих функций будет постепенно реализовываться с течением времени.
 
 | Область | Неподдерживаемая функция или служба |
 |-----|-----|
-| **Ядро СУБД** | Репликация транзакций |
-| &nbsp; | Репликация слиянием |
-| &nbsp; | Отслеживание измененных данных (см. описание агента SQL Server) |
+| **Ядро СУБД** | Репликация слиянием |
 | &nbsp; | База данных Stretch |
-| &nbsp; | PolyBase |
 | &nbsp; | Распределенный запрос с сторонними подключениями |
 | &nbsp; | Связанные серверы для источников данных, отличных от [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  |
 | &nbsp; | Системные расширенные хранимые процедуры (XP_CMDSHELL и т. п.) |
@@ -228,25 +226,28 @@ SQL Server 2017 на Linux поддерживает ядро СУБД SQL Serv
 | &nbsp; | Buffer Pool Extension |
 | **Агент SQL Server** |  Подсистемы: CmdExec, PowerShell, средство чтения очереди, SSIS, SSAS, SSRS |
 | &nbsp; | видны узлы |
-| &nbsp; | Агент чтения журнала. |
-| &nbsp; | Система отслеживания измененных данных (CDC) |
 | &nbsp; | Управляемое резервное копирование |
 | **Обеспечение высокого уровня доступности** | Зеркальное отображение базы данных  |
 | **безопасность** | расширенное управление ключами |
 | &nbsp; | Проверка подлинности AD для связанных серверов | 
 | &nbsp; | Проверка подлинности AD для групп доступности | 
 | **Службы** | Обозреватель SQL Server |
-| &nbsp; | Службы R SQL Server |
+| &nbsp; | Службы R <sup>1</sup> SQL Server |
 | &nbsp; | StreamInsight |
 | &nbsp; | Службы Analysis Services |
 | &nbsp; | Службы Reporting Services |
 | &nbsp; | Data Quality Services |
 | &nbsp; | Службы Master Data Services |
+
+<sup>1</sup> R SQL Server поддерживается в SQL Server, однако службы R SQL Server в виде отдельного пакета нет.
   
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
+ [Выпуски и поддерживаемые функции для SQL Server 2017 на Linux](sql-server-linux-editions-and-components-2017.md)  
  [Возможности, поддерживаемые различными выпусками SQL Server 2019 — Windows](../sql-server/editions-and-components-of-sql-server-version-15.md)  
  [Возможности, поддерживаемые различными выпусками SQL Server 2017 — Windows](../sql-server/editions-and-components-of-sql-server-2017.md)  
  [Возможности, поддерживаемые различными выпусками SQL Server 2016 — Windows](../sql-server/editions-and-components-of-sql-server-2016.md)  
  [Возможности, поддерживаемые различными выпусками SQL Server 2014 — Windows](https://msdn.microsoft.com/library/cc645993(v=sql.120).aspx)  
  [Установка SQL Server 2016](../database-engine/install-windows/installation-for-sql-server-2016.md)  
  [Спецификации SQL Server](https://msdn.microsoft.com/library/6445fd53-6844-4170-a86b-7fe76a9f64cb)
+
+

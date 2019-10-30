@@ -11,12 +11,12 @@ ms.assetid: 7a458b9c-3423-4e24-823d-99573544c877
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a362e060eb9fc9d8e39459007e50a0c81fba393d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0ceeaedd10d8c9e38664083365ee943422a2ca91
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68069664"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907534"
 ---
 # <a name="monitor-and-troubleshoot-memory-usage"></a>Мониторинг и устранение неполадок с использованием памяти
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -48,8 +48,6 @@ ms.locfileid: "68069664"
 2.  Нажмите кнопку **Создать запрос**.  
   
 3.  Вставьте этот код в окно нового запроса и выполните каждый раздел.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
     ```  
     -- create a database to be used  
@@ -248,7 +246,7 @@ memory_object_address pages_ in_bytes bytes_used type
   
  Дополнительные сведения см. в статье [sys.dm_os_memory_objects (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md).  
   
-#### <a name="memory-consumed-by-includehek2includeshek-2-mdmd-engine-across-the-instance"></a>Память, используемая модулем [!INCLUDE[hek_2](../../includes/hek-2-md.md)] в памяти в пределах экземпляра  
+#### <a name="memory-consumed-by-includehek_2includeshek-2-mdmd-engine-across-the-instance"></a>Память, используемая модулем [!INCLUDE[hek_2](../../includes/hek-2-md.md)] в памяти в пределах экземпляра  
  В экземпляре SQL Server память, выделенная для модуля [!INCLUDE[hek_2](../../includes/hek-2-md.md)] в памяти и оптимизированных для памяти объектов, управляется таким же образом, как и любой другой потребитель памяти в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Клерки типа учетных записей MEMORYCLERK_XTP для всей памяти, выделенной для модуля [!INCLUDE[hek_2](../../includes/hek-2-md.md)] . Следующий запрос применяется для вычисления объема всей памяти, используемого модулем [!INCLUDE[hek_2](../../includes/hek-2-md.md)] .  
   
 ```sql  

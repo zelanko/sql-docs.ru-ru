@@ -3,7 +3,7 @@ title: Заметки о выпуске SQL Server 2008 R2 с пакетом �
 ms.prod: sql
 ms.technology: install
 ms.custom: ''
-ms.date: 01/31/2017
+ms.date: 10/15/2019
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,12 +13,12 @@ ms.assetid: e2bd3de7-674c-4ea7-8d53-bb40bba86fae
 author: craigg-msft
 ms.author: craigg
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: 7b591e7383861e878496553fd8091f8a5137fb8d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 61afc55e04f7cd317e11c7db527dc97fb80fc7be
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67938988"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72904255"
 ---
 # <a name="sql-server-2008-r2-sp2-release-notes"></a>Заметки о выпуске пакета обновления 2 (SP2) для SQL Server 2008 R2
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "67938988"
 ## <a name="20-before-you-install"></a>2.0 Перед началом установки  
 Сведения об установке обновлений [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] см. в [Документации по службам SQL Server 2008 R2](https://msdn.microsoft.com/library/dd638062(SQL.105).aspx).  
   
-Для получения общих сведений о начале работы и установке SQL Server 2008 R2 см. файл сведений для SQL Server 2008 R2. Файл сведений имеется на установочном носителе. Дополнительные сведения также можно найти в [электронной документации по SQL Server](sql-server-technical-documentation.md) и на [форумах по SQL Server](https://social.msdn.microsoft.com/Forums/category/sqlserver/).  
+Для получения общих сведений о начале работы и установке SQL Server 2008 R2 см. файл сведений для SQL Server 2008 R2. Файл сведений имеется на установочном носителе. Дополнительные сведения также можно найти на [форумах по SQL Server](https://social.msdn.microsoft.com/Forums/category/sqlserver/).
   
 ### <a name="21-choose-the-correct-file-to-download-and-install"></a>2.1 Выбор правильного файла для скачивания и установки  
 Используйте следующую таблицу, чтобы определить, какой файл необходимо загрузить и установить. Перед установкой пакета обновления убедитесь, что соблюдены все требования к системе. Требования к системе приведены на страницах загрузки, ссылки на которые указаны в таблице.  

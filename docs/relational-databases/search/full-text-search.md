@@ -12,12 +12,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d17a2d0f2abb6324d1cb990dcf673458fb5205dc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 81a3e6268b74c6aeb4a3fc7ea7c492133abf372d
+ms.sourcegitcommit: 39630fddc69141531eddca2a3c156ccf8536f49c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68082762"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72930271"
 ---
 # <a name="full-text-search"></a>Компонент Full-text Search
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -73,7 +73,7 @@ ms.locfileid: "68082762"
     ```  
     SELECT candidate_name,SSN   
     FROM candidates   
-    WHERE CONTAINS(candidate_resume,"SQL Server") AND candidate_division =DBA;  
+    WHERE CONTAINS(candidate_resume,"SQL Server") AND candidate_division = 'DBA';  
     ```  
   
  Дополнительные сведения см. в разделе [Запросы с полнотекстовым поиском](../../relational-databases/search/query-with-full-text-search.md).  
@@ -111,7 +111,7 @@ ms.locfileid: "68082762"
 
     >[!NOTE]  
     >  В [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версиях средство полнотекстового поиска находится в процессе [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , а не в отдельной службе. Интеграция средства полнотекстового поиска в ядро СУБД повышает возможности работы с текстом, оптимизацию смешанных запросов и общую производительность.  
- 
+
 -   **Модуль записи индекса (индексатор).** Модуль записи индекса строит структуру, используемую для хранения индексированных токенов.  
   
 -   **Диспетчер управляющей программы фильтрации.** Диспетчер управляющей программы фильтрации отвечает за наблюдение за состоянием узла управляющей программы фильтрации для полнотекстового поиска.  

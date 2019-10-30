@@ -15,12 +15,12 @@ ms.assetid: 702359c4-6ca9-42a8-860c-a95a802898a1
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 68c18f0be55716f668e47576b3abd041bfb1c076
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3b8e9f5f6682b8d44785d9b2600f15013a2f615c
+ms.sourcegitcommit: d0e5543e8ebf8627eebdfd1e281adb47d6cc2084
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67990811"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72717230"
 ---
 # <a name="supported-version-and-edition-upgrades-for-sql-server-2017"></a>Поддерживаемые обновления версий и выпусков SQL Server 2017
 
@@ -42,7 +42,7 @@ ms.locfileid: "67990811"
   
 ## <a name="unsupported-scenarios"></a>Неподдерживаемые сценарии  
   
--   Многоверсионные экземпляры в [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] не поддерживаются. Компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)], а также службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]и [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] должны иметь один и тот же номер версии для одного экземпляра [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)].  
+-   Многоверсионные экземпляры в [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] не поддерживаются. Компоненты [!INCLUDE[ssDE](../../includes/ssde-md.md)] должны иметь один и тот же номер версии для одного экземпляра [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)].  
   
 -   [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] доступен только для 64-разрядных платформ. Межплатформенное обновление не поддерживается. Невозможно обновить 32-разрядный экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] до стандартного 64-разрядного при помощи программы установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Но можно создать резервную копию или отсоединить базы данных от 32-разрядного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], а затем восстановить их или присоединить к новому экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (64-разрядная версия), если базы данных не опубликованы в репликации. Необходимо повторно создать имена входа и другие объекты пользователя в системных базах данных master, msdb и model.  
   

@@ -26,12 +26,12 @@ ms.assetid: b23e2f6b-076c-4e6d-9281-764bdb616ad2
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f76f03e2953c6fe460aa958858709d0ca5943bbc
-ms.sourcegitcommit: ac90f8510c1dd38d3a44a45a55d0b0449c2405f5
+ms.openlocfilehash: d232d3985a1a4ab27f5cc69e9fd9e486e41f8fe4
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72586744"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798380"
 ---
 # <a name="create-statistics-transact-sql"></a>CREATE STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -165,6 +165,9 @@ CREATE STATISTICS statistics_name
  PERSIST_SAMPLE_PERCENT = { ON | OFF }  
  Если установлено значение **ON**, статистика будет сохранять заданный процент выборки для последующих обновлений, где явно не указан процент выборки. Если установлено значение **OFF**, процент выборки будет сбрасываться на значение по умолчанию при последующих обновлениях, где явно не указан процент выборки. Значение по умолчанию — **OFF**. 
  
+ > [!NOTE]
+ > Если таблица усечена, вся статистика, построенная на усеченном HoBT, вернется к использованию процентного соотношения выборки по умолчанию.
+
  **Применимо к**: с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] (начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4) до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] (начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU1).    
   
  STATS_STREAM **=** _stats_stream_  

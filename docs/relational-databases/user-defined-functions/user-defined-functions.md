@@ -16,12 +16,12 @@ ms.assetid: d7ddafab-f5a6-44b0-81d5-ba96425aada4
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ec08bd8459e51c3ace52fc4eea433aaa046050b4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5d4d63a03c2b5b40f7d57fa5c2de5f0abfab3f36
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68123564"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72783296"
 ---
 # <a name="user-defined-functions"></a>Определяемые пользователем функции
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "68123564"
   
 ##  <a name="FunctionTypes"></a> Типы функций  
 **Скалярная функция**  
- Пользовательские скалярные функции возвращают одно значение типа данных, заданного в предложении RETURNS. Встроенная скалярная функция не имеет тела, скалярное значение является результатом одной инструкции. Скалярная функция из нескольких инструкций имеет текст, ограниченное блоком BEGIN...END, и содержит последовательность инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)] , возвращающих одно значение. Такие функции могут возвращать любые типы данных, кроме **text**, **ntext**, **image**, **cursor**и **timestamp**. 
+ Пользовательские скалярные функции возвращают одно значение типа данных, заданного в предложении RETURNS. Для встроенной скалярной функции возвращаемое скалярное значение является результатом одной инструкции. Скалярная функция из нескольких инструкций имеет текст может содержать последовательность инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)], возвращающих одно значение. Такие функции могут возвращать любые типы данных, кроме **text**, **ntext**, **image**, **cursor**и **timestamp**. 
  **[Примеры.](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#Scalar)**
   
 **Функции с табличными значениями**  

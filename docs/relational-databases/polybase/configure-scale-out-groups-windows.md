@@ -8,12 +8,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 81bfb5f4e2a69b065d8995823ee87fe9b913d11b
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: d686cbe2fb314a59085adee76b3bbad22fcea0fc
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710624"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72906891"
 ---
 # <a name="configure-polybase-scale-out-groups-on-windows"></a>Настройка масштабируемых групп PolyBase в Windows
 
@@ -40,8 +40,6 @@ ms.locfileid: "71710624"
 4. Для мониторинга узлов группы используйте инструкцию [sys.dm_exec_compute_nodes (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md).
 
 5. Необязательный параметр. Для удаления вычислительных узлов используйте инструкцию [sp_polybase_leave_group (Transact-SQL)](../../relational-databases/system-stored-procedures/polybase-stored-procedures-sp-polybase-leave-group.md).
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="example-walk-through"></a>Пошаговое руководство с примерами
 

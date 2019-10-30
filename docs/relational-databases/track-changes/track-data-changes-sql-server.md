@@ -19,12 +19,12 @@ ms.assetid: 7a34be46-15b4-4b6b-8497-cfd8f9f14234
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 88cfc841f3e8cdf2a04cccdc76eb3bbf7f5e2147
-ms.sourcegitcommit: cdbb0ee5ee5259119ad21695f549207457990f71
+ms.openlocfilehash: 76e375259132528b84cbc0cc85b1f61da49f9b93
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69621780"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907835"
 ---
 # <a name="track-data-changes-sql-server"></a>Отслеживание измененных данных (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -66,7 +66,7 @@ ms.locfileid: "69621780"
   
  Как показано на следующем рисунке, изменения в пользовательской таблице записываются в соответствующих таблицах изменений. Эти таблицы изменений обеспечивают журнальное представление изменений, распределенных во времени. Функции [отслеживания измененных данных](../../relational-databases/system-functions/change-data-capture-functions-transact-sql.md), предоставляемые [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], обеспечивают простую систематическую обработку данных об изменениях.  
   
- ![Блок-схема фиксации изменений данных](../../relational-databases/track-changes/media/cdcart1.gif "Блок-схема фиксации изменений данных")  
+ ![Принципиальная схема отслеживания измененных данных](../../relational-databases/track-changes/media/cdcart1.gif "Принципиальная схема отслеживания измененных данных")  
   
 ### <a name="security-model"></a>Модель безопасности  
  В этом разделе описана модель безопасности системы отслеживания измененных данных.  
@@ -109,8 +109,6 @@ ms.locfileid: "69621780"
   
 2.  Создайте задание отслеживания и задание очистки на зеркальном сервере после того, как был выполнен переход с основного сервера на зеркальный. Для создания заданий используйте хранимую процедуру [sys.sp_cdc_add_job (Transact-SQL)](../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md).  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
  Дополнительные сведения о зеркальном отображении базы данных см. в разделе [Зеркальное отображение базы данных (SQL Server)](../../database-engine/database-mirroring/database-mirroring-sql-server.md).  
   
 #### <a name="transactional-replication"></a>репликация транзакций  
@@ -143,7 +141,7 @@ ms.locfileid: "69621780"
   
  На следующем рисунке показан сценарий синхронизации, при котором оптимальным является отслеживание изменений. В этом сценарии приложению требуются следующие данные: все строки таблицы, измененные с момента последней синхронизации, и только текущие данные строк. Поскольку для отслеживания изменений используется синхронный механизм, приложение может выполнить двустороннюю синхронизацию и уверенно определить возможные конфликты.  
   
- ![Блок-схема отслеживания изменений данных](../../relational-databases/track-changes/media/cdcart2.gif "Блок-схема отслеживания изменений данных")  
+ ![Принципиальная схема отслеживания измененных данных](../../relational-databases/track-changes/media/cdcart2.gif "Принципиальная схема отслеживания измененных данных")  
   
 ### <a name="change-tracking-and-sync-services-for-adonet"></a>Отслеживание изменений и службы Sync Services для ADO.NET  
  [!INCLUDE[sql_sync_long](../../includes/sql-sync-long-md.md)] обеспечивает синхронизацию между базами данных, предоставляя интуитивно понятный и гибкий интерфейс API, с помощью которого можно разрабатывать приложения для работы вне сети или совместной работы. [!INCLUDE[sql_sync_long](../../includes/sql-sync-long-md.md)] предоставляет интерфейс API для синхронизации изменений, но фактически не отслеживает изменения в серверной или одноранговой базе данных. Можно создать нестандартную систему отслеживания изменений, однако обычно это сопряжено со значительным усложнением среды и повышенными затратами ресурсов. Чтобы отслеживать изменения на сервере или в одноранговой базе данных, рекомендуется использовать входящую в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] систему отслеживания изменений, поскольку она легко настраивается и обладает высокой производительностью.  

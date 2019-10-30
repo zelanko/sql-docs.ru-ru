@@ -14,12 +14,12 @@ ms.assetid: 30e0e7b9-d131-46c7-90a4-6ccf77e3d4f3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1f1e1c469b7864ed9a454cd8f18fa81903865be6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9acac3eca271c8bb8c20df7e429dd830d19bdd43
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68024978"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909257"
 ---
 # <a name="use-a-format-file-to-skip-a-table-column-sql-server"></a>Пропуск столбца таблицы с помощью файла форматирования (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -59,8 +59,6 @@ GO
 
 2.   Измените формат файла форматирования по умолчанию в текстовом редакторе.
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 Измененный файл форматирования должен сопоставлять каждое существующее поле с соответствующим ему столбцом в целевой таблице. Он также должен указывать, какие столбцы таблицы следует пропускать. 
 
 Например, чтобы выполнить массовый импорт данных из `myTestSkipCol2.dat` в таблицу `myTestSkipCol`, в файле форматирования первое поле данных сопоставляется с `Col1`, пропускается `Col2`, и второе поле сопоставляется с `Col3`.  
@@ -81,7 +79,7 @@ bcp WideWorldImporters..myTestSkipCol format nul -f myTestSkipCol_Default.fmt -c
   
  На следующем снимке экрана показаны значения в образцах файлов форматирования по умолчанию. 
   
- ![Файл форматирования по умолчанию для myTestSkipCol, в формате, отличном от XML](../../relational-databases/import-export/media/mytestskipcol-f-c-default-fmt.gif "Файл форматирования по умолчанию для myTestSkipCol, в формате, отличном от XML")  
+ ![файл форматирования по умолчанию в формате, отличном от XML, для myTestSkipCol](../../relational-databases/import-export/media/mytestskipcol-f-c-default-fmt.gif "файл форматирования по умолчанию в формате, отличном от XML, для myTestSkipCol")  
   
 > [!NOTE]  
 >  Дополнительные сведения о файлах форматирования в формате, отличном от XML, см. в разделе [Файлы формата, отличные от XML (SQL Server)](../../relational-databases/import-export/non-xml-format-files-sql-server.md).  
