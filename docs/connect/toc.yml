@@ -2507,8 +2507,6 @@
           href: ../connect/jdbc/understanding-java-ee-support.md
         - name: Развертывание драйвера JDBC
           href: ../connect/jdbc/deploying-the-jdbc-driver.md
-        - name: Повторное распространение драйвера Microsoft JDBC
-          href: ../connect/jdbc/redistributing-the-microsoft-jdbc-driver.md
         - name: Поиск дополнительных сведений о драйвере JDBC
           href: ../connect/jdbc/finding-additional-jdbc-driver-information.md
         - name: Матрица поддержки драйвера Microsoft JDBC Driver for SQL Server
