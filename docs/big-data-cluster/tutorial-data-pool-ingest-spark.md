@@ -9,12 +9,12 @@ ms.date: 08/21/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 5ffc2773144d2b1a170e2f087d7abf607af99ef6
-ms.sourcegitcommit: 4fb6bc7c81a692a2df706df063d36afad42816af
-ms.translationtype: MT
+ms.openlocfilehash: 6ebcc95d48f894ff8cef9771946130fc67216a45
+ms.sourcegitcommit: c8b8101c62a6af3e4a7244683e3f34f7189c150f
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73049860"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73182633"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-spark-jobs"></a>Учебник. прием данных в пул данных SQL Server с помощью заданий Spark
 
@@ -131,9 +131,9 @@ ms.locfileid: "73049860"
 
 Следующие шаги показывают, что задание потоковой передачи Spark загрузило данные из HDFS в пул данных.
 
-1. Перед запросом принятых данных просмотрите выходные данные журнала задач, чтобы убедиться, что задание завершено.
+1. Перед запросом полученных данных просмотрите состояние выполнения Spark, включая идентификатор приложения Yarn, Пользовательский интерфейс Spark и журналы драйверов.
 
-   ![Журнал заданий Spark](media/tutorial-data-pool-ingest-spark/spark-task-history.png)
+   ![Сведения о выполнении Spark](./media/tutorial-data-pool-ingest-spark/Spark-Joblog-sparkui-yarn.png)
 
 1. Вернитесь в окно запроса главного экземпляра SQL Server, которое было открыто в начале работы с этим руководством.
 
