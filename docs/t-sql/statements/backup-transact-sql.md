@@ -46,12 +46,12 @@ ms.assetid: 89a4658a-62f1-4289-8982-f072229720a1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 867ad139d591827a2159e77bbcdd33dbb85c6b6d
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.openlocfilehash: 5204e876de1517f794f654bbfbc545203cca4888
+ms.sourcegitcommit: af6f66cc3603b785a7d2d73d7338961a5c76c793
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69028963"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73142860"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 
@@ -608,7 +608,7 @@ DISK='Y:\SQLServerBackups\AdventureWorks2.bak',
 DISK='Z:\SQLServerBackups\AdventureWorks3.bak'
 WITH FORMAT,
   MEDIANAME = 'AdventureWorksStripedSet0',
-  MEDIADESCRIPTION = 'Striped media set for AdventureWorks2012 database;
+  MEDIADESCRIPTION = 'Striped media set for AdventureWorks2012 database';
 GO
 ```
 
@@ -1205,6 +1205,8 @@ DIFFERENTIAL — указывает, что необходимо создать
 - В целевой общей сетевой папке недостаточно места для хранения резервной копии. Команда BACKUP DATABASE не подтверждает, что дискового пространства достаточно, прежде чем запустить резервное копирование, из-за чего при выполнении инструкции BACKUP DATABASE может возникнуть ошибка нехватки места. В случае нехватки места на диске [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] выполняет откат команды BACKUP DATABASE. Чтобы уменьшить размер базы данных, запустите [DBCC SHRINKLOG (хранилище данных SQL Azure)](../../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md)
 - Попытка запустить резервное копирование в рамках транзакции.
 
+::: moniker-end
+::: moniker range=">=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 ## <a name="general-remarks"></a>Общие замечания
 
 Прежде чем выполнять резервное копирование базы данных, воспользуйтесь инструкцией [DBCC SHRINKLOG (хранилище данных SQL Azure)](../../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md), чтобы уменьшить размер базы данных.
@@ -1217,6 +1219,8 @@ DIFFERENTIAL — указывает, что необходимо создать
 
 Полные резервные копии и разностные резервные копии хранятся в разных каталогах. Соглашения об именовании не применяются для указания, что полная и разностная резервные копии связаны. Для отслеживания этого можно использовать собственные соглашения об именовании. Кроме того, это можно отследить, воспользовавшись инструкцией WITH DESCRIPTION для добавления описания, а затем воспользовавшись инструкцией RESTORE HEADERONLY для извлечения описания.
 
+::: moniker-end
+::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
 ## <a name="limitations-and-restrictions"></a>Ограничения
 
 Невозможно создать разностную резервную копию базы данных master. Поддерживается только создание полных резервных копий базы данных master.

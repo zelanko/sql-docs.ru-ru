@@ -10,18 +10,16 @@ ms.topic: conceptual
 ms.assetid: 01a9e3c1-2a5f-4b98-a424-0ffc15d312cf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 288d96a116412eea133e881f2d13b6b4ce5fddb6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a2e2f782673f1f11ad42e7de09f137291e1bfdf3
+ms.sourcegitcommit: 27c267bf2a3cfaf2abcb5f3777534803bf4cffe5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67991293"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73240753"
 ---
 # <a name="generate-and-analyze-the-clusterlog-for-an-always-on-availability-group"></a>Создание и анализ журнала CLUSTER.LOG для группы доступности Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  В качестве ресурса отказоустойчивого кластера существуют внешние взаимодействия между SQL Server, службой отказоустойчивого кластера Windows Server (WSFC) и библиотекой SQL Server (hadrres.dll), которые невозможно отслеживать внутри SQL Server. Журнал WSFC — CLUSTER.LOG — позволяет диагностировать проблемы в кластере WSFC или в библиотеке ресурсов SQL Server.  
-  
- На приведенной ниже схеме показана связь между приложениями, такими как SQL Server и диспетчер кластеров Windows, инициирующими создание, удаление ресурса группы доступности или изменение его состояния.  
+  В качестве ресурса отказоустойчивого кластера существуют внешние взаимодействия между SQL Server, службой отказоустойчивого кластера Windows Server (WSFC) и библиотекой SQL Server (hadrres.dll), которые невозможно отслеживать внутри SQL Server. Журнал WSFC — CLUSTER.LOG — позволяет диагностировать проблемы в кластере WSFC или в библиотеке ресурсов SQL Server. 
   
 ## <a name="generate-cluster-log"></a>Создание журнала кластера  
  Вы можете создать журнал кластера одним из двух способов:  

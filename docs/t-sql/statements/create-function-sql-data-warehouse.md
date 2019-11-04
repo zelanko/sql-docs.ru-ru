@@ -13,12 +13,12 @@ ms.assetid: 8cad1b2c-5ea0-4001-9060-2f6832ccd057
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 23949aec32acce44cd139ab8505cd1ffc743e64d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f5510d6c75380e48008740ab8a0f5b1c9f500fe5
+ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67912707"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73064543"
 ---
 # <a name="create-function-sql-data-warehouse"></a>CREATE FUNCTION (хранилище данных SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -155,7 +155,7 @@ RETURNS return_data_type
   
  [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md): отображает определение определяемых пользователем функций [!INCLUDE[tsql](../../includes/tsql-md.md)]. Пример:  
   
-```  
+```sql  
 SELECT definition, type   
 FROM sys.sql_modules AS m  
 JOIN sys.objects AS o   
@@ -165,9 +165,9 @@ GO
   
 ```  
   
- [sys.parameters](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md): выводит сведения о параметрах, определенных в определяемых пользователем функциях.  
+ [sys.parameters](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md): Выводит сведения о параметрах, определенных в определяемых пользователем функциях.  
   
- [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md): отображает базовые объекты, на которые ссылается функция.  
+ [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md): Отображает базовые объекты, на которые ссылается функция.  
   
 ## <a name="permissions"></a>Разрешения  
  Требуется разрешение CREATE FUNCTION на базу данных и разрешение ALTER на схему, в которой создается функция.  
@@ -177,7 +177,7 @@ GO
 ### <a name="a-using-a-scalar-valued-user-defined-function-to-change-a-data-type"></a>A. Применение скалярной определяемой пользователем функции для изменения типа данных  
  Эта скалярная функция принимает тип данных **int** и возвращает тип данных **decimal(10,2)** .  
   
-```  
+```sql  
 CREATE FUNCTION dbo.ConvertInput (@MyValueIn int)  
 RETURNS decimal(10,2)  
 AS  

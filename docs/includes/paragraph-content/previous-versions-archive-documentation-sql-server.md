@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: e80ca43ad2a16496673b20cb4144784988333a55
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 28835571ef6bd3690884ea3e2b916d0c0d237eab
+ms.sourcegitcommit: 4fb6bc7c81a692a2df706df063d36afad42816af
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72912856"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73057336"
 ---
 
 Мы накапливаем и храним документацию по очень старым версиям Microsoft SQL Server в наборе архивных веб-страниц. Архивные веб-страницы не обрабатываются поисковыми системами, такими как Bing.com и Google.com. Эти архивы доступны в нашей документации по адресу _previous-versions/sql/_ :
@@ -20,7 +20,7 @@ ms.locfileid: "72912856"
 
 [Документация по SQL Server 2014](https://docs.microsoft.com/sql/2014-toc/index?view=sql-server-2014) по-прежнему доступна по адресу основной документации.
 
-[Документация по SQL Server 2019](https://docs.microsoft.com/sql/sql-server/index.yml?view=sql-server-ver15) доступна по адресу основной документации. Выберите нужную версию в раскрывающемся списке в верхней части страницы.
+[Документация по SQL Server 2019](https://docs.microsoft.com/sql/sql-server?view=sql-server-ver15) доступна по адресу основной документации. Выберите нужную версию в раскрывающемся списке в верхней части страницы.
 
 Дополнительные сведения о документации по предыдущим версиям SQL Server см. на странице [Документация по предыдущим версиям SQL Server](/sql/toc/previous-versions-sql-server).
 

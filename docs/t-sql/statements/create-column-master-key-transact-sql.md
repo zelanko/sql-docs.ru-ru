@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: f8926b95-e146-4e3f-b56b-add0c0d0a30e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6405f27391915af7305ab4615f4b3746fd17e5ac
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9b0c03e6d4c7d938336d1287bd190433f7588ff2
+ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68061057"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73064565"
 ---
 # <a name="create-column-master-key-transact-sql"></a>CREATE COLUMN MASTER KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -192,7 +192,7 @@ WITH (
   
 Создайте элемент метаданных главного ключа столбца для главного ключа столбца. Клиентские приложения, которые используют поставщик MSSQL_CNG_STORE, получат доступ к главному ключу столбца:  
   
-```  
+```sql  
 CREATE COLUMN MASTER KEY MyCMK  
 WITH (  
     KEY_STORE_PROVIDER_NAME = N'MSSQL_CNG_STORE',    
@@ -202,7 +202,7 @@ WITH (
   
 Создайте элемент метаданных главного ключа столбца для главного ключа столбца. Главный ключ столбца сохраняется в Azure Key Vault, чтобы предоставить доступ к нему клиентским приложениям, которые используют поставщик AZURE_KEY_VAULT.  
   
-```  
+```sql  
 CREATE COLUMN MASTER KEY MyCMK  
 WITH (  
     KEY_STORE_PROVIDER_NAME = N'AZURE_KEY_VAULT',  
@@ -212,7 +212,7 @@ WITH (
   
 Создайте элемент метаданных главного ключа столбца для главного ключа столбца. Главный ключ столбца сохраняется в пользовательском хранилище главных ключей столбцов.  
   
-```  
+```sql  
 CREATE COLUMN MASTER KEY MyCMK  
 WITH (  
     KEY_STORE_PROVIDER_NAME = 'CUSTOM_KEY_STORE',    
@@ -222,7 +222,7 @@ WITH (
 ### <a name="b-creating-an-enclave-enabled-column-master-key"></a>Б. Создание главного ключа столбца с поддержкой анклава  
 Следующий пример создает элемент метаданных главного ключа столбца для главного ключа столбца с поддержкой анклава. Главный ключ столбца с поддержкой анклава сохраняется в хранилище сертификатов, чтобы предоставить доступ к нему клиентским приложениям, которые используют поставщик MSSQL_CERTIFICATE_STORE.  
   
-```  
+```sql  
 CREATE COLUMN MASTER KEY MyCMK  
 WITH (  
      KEY_STORE_PROVIDER_NAME = N'MSSQL_CERTIFICATE_STORE',   
@@ -233,7 +233,7 @@ WITH (
   
 Создайте элемент метаданных главного ключа столбца для главного ключа столбца с поддержкой анклава. Главный ключ столбца с поддержкой анклава сохраняется в Azure Key Vault, чтобы предоставить доступ к нему клиентским приложениям, которые используют поставщик AZURE_KEY_VAULT.  
   
-```  
+```sql  
 CREATE COLUMN MASTER KEY MyCMK  
 WITH (  
     KEY_STORE_PROVIDER_NAME = N'AZURE_KEY_VAULT',  

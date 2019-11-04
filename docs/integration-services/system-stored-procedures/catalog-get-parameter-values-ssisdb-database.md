@@ -10,12 +10,12 @@ ms.topic: language-reference
 ms.assetid: 5b1aeaf7-c938-4aef-bafc-e4d7a82eb578
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: cc2237ff2f7e7e5610a88288c386359c57937f90
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 0338675549b49dd5c50eff9a8996f7a3ee6ee329
+ms.sourcegitcommit: 4fb6bc7c81a692a2df706df063d36afad42816af
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71296807"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73049952"
 ---
 # <a name="catalogget_parameter_values-ssisdb-database"></a>catalog.get_parameter_values (база данных SSISDB)
 
@@ -44,7 +44,7 @@ catalog.get_parameter_values [ @folder_name = ] folder_name
  Имя проекта, где находятся параметры. Параметр *project_name* имеет тип **nvarchar(128)** .  
   
  [ @package_name = ] *package_name*  
- Имя пакета. Укажите имя пакета для извлечения всех параметров проекта и параметры из конкретного пакета. Укажите NULL для извлечения всех параметров проекта и параметров из всех пакетов. Параметр *package_name* имеет тип **nvarchar(260)** .  
+ Имя пакета. Укажите имя пакета для извлечения всех параметров проекта и параметры из конкретного пакета. Параметр *package_name* имеет тип **nvarchar(260)** .  
   
  [ @reference_id = ] *reference_id*  
  Уникальный идентификатор ссылки на среду. Этот параметр является необязательным. Параметр *reference_id* имеет тип **bigint**.  
