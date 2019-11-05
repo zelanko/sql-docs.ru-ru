@@ -1,7 +1,7 @@
 ---
 title: sp_configure (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
-ms.date: 09/07/2018
+ms.date: 11/04/2019
 ms.prod: sql
 ms.prod_service: database-engine, pdw
 ms.reviewer: ''
@@ -18,12 +18,12 @@ ms.assetid: d18b251d-b37a-4f5f-b50c-502d689594c8
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 22d8f61af08f183e10910544e42614769b9dafd9
-ms.sourcegitcommit: f6bfe4a0647ce7efebaca11d95412d6a9a92cd98
+ms.openlocfilehash: 09f5a26493600fd346192f6ba7ebbc73ea7ed184
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/05/2019
-ms.locfileid: "71974351"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73536218"
 ---
 # <a name="sp_configure-transact-sql"></a>sp_configure (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-pdw-md.md)]
@@ -74,7 +74,7 @@ RECONFIGURE
 ## <a name="result-sets"></a>Результирующие наборы  
  При выполнении без параметров **хранимая процедура sp_configure** возвращает результирующий набор с пятью столбцами и упорядочивает параметры в алфавитном порядке по возрастанию, как показано в следующей таблице.  
   
- Значения для **config_value** и **run_value** не эквивалентны автоматически. После обновления параметра конфигурации с помощью **хранимой процедуры sp_configure**системный администратор должен обновить выполняемое значение конфигурации, используя перенастройку или ПЕРЕнастроить с помощью переопределения. Дополнительные сведения см. в разделе "Примечания".  
+ Значения для **config_value** и **run_value** не эквивалентны автоматически. После обновления параметра конфигурации с помощью **хранимой процедуры sp_configure**системный администратор должен обновить выполняемое значение конфигурации, используя перенастройку или ПЕРЕнастроить с помощью переопределения. Дополнительные сведения см. в разделе «Примечания».  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
@@ -84,9 +84,13 @@ RECONFIGURE
 |**config_value**|**int**|Значение, для которого параметр конфигурации был задан с помощью **хранимой процедуры sp_configure** (значение в **sys. Configurations. Value**). Дополнительные сведения об этих параметрах см. в разделе [Параметры &#40;конфигурации&#41; сервера SQL Server](../../database-engine/configure-windows/server-configuration-options-sql-server.md) и [sys &#40;. Configurations&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md).|  
 |**run_value**|**int**|Текущее значение параметра конфигурации (значение в **sys. Configurations. value_in_use**).<br /><br /> Дополнительные сведения см. в разделе [sys. &#40;Configurations Transact&#41;-SQL](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md).|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  Используйте **хранимую процедуру sp_configure** для вывода или изменения параметров серверного уровня. Для изменения параметров уровня базы данных используйте инструкцию ALTER DATABASE. Для изменения параметров, влияющих только на сеанс текущего пользователя, используйте инструкцию SET.  
   
+### [!INCLUDE [ssbigdataclusters-ss-nover](../../includes/ssbigdataclusters-ss-nover.md)]
+
+[!INCLUDE [big-data-clusters-master-instance-ha-endpoint-requirement](../../includes/big-data-clusters-master-instance-ha-endpoint-requirement.md)]
+
 ## <a name="updating-the-running-configuration-value"></a>Обновление активного значения конфигурации  
  При указании нового *значения* для *параметра*результирующий набор показывает это значение в столбце **config_value** . Изначально это значение отличается от значения в столбце **run_value** , которое показывает текущее выполняемое значение конфигурации. Чтобы обновить значение выполняющейся конфигурации в столбце **run_value** , системный администратор должен выполнить перенастройку или ПЕРЕнастроить с переопределением.  
   
@@ -102,7 +106,7 @@ RECONFIGURE
  Это изменение также записывается в SQL Server журнал ошибок.
   
 > [!NOTE]  
->  Если указанное *значение* слишком велико для параметра, столбец **run_value** отражает тот факт, что [!INCLUDE[ssDE](../../includes/ssde-md.md)] по умолчанию имеет значение динамической памяти, а не использует недопустимый параметр.  
+>  Если указанное *значение* слишком велико для параметра, то в столбце **run_value** будет отражен тот факт, что [!INCLUDE[ssDE](../../includes/ssde-md.md)] по умолчанию использует динамическую память вместо недопустимого параметра.  
   
  Дополнительные сведения см. в разделе [Повторная настройка &#40;Transact&#41;-SQL](../../t-sql/language-elements/reconfigure-transact-sql.md).  
   
@@ -125,7 +129,7 @@ GO
 EXEC sp_configure 'show advanced option', '1';  
 ```  
   
- Вот сообщение: "Параметр конфигурации" Показывать дополнительные параметры "изменен с 0 на 1. Выполните инструкцию RECONFIGURE для установки.  
+ Сообщение: "параметр конфигурации" Показывать дополнительные параметры "изменен с 0 на 1. Выполните инструкцию RECONFIGURE для установки.  
   
  Выполните инструкцию `RECONFIGURE` и отобразите все параметры конфигурации:  
   
@@ -164,7 +168,7 @@ EXEC sp_configure @configname='hadoop connectivity';
 ### <a name="e-set-hadoop-connectivity"></a>Д. Установка подключения к Hadoop.  
  Настройка подключения Hadoop требует выполнения еще нескольких действий в дополнение к запуску процедуры sp_configure. Полную процедуру см. в разделе [Создание внешнего источника &#40;данных Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
  [RECONFIGURE (Transact-SQL)](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [Инструкции SET (Transact-SQL)](../../t-sql/statements/set-statements-transact-sql.md)   
  [Параметры конфигурации сервера (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   

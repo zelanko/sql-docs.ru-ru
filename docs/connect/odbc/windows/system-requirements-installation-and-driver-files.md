@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: d90fa182-1dab-4d6f-bd85-a04dd1479986
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: c8e7098cbd454b37e7de0a221c55b86194f883c3
-ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
+ms.openlocfilehash: 6ab9a4035e3a714e6725f28f7e4e370bf3fd0119
+ms.sourcegitcommit: 82b70c39550402a2b0b327db32bf5ecf88b50d3c
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71250944"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73032987"
 ---
 # <a name="system-requirements-installation-and-driver-files"></a>Системные требования, установка и файлы драйвера
 
@@ -27,17 +27,17 @@ ms.locfileid: "71250944"
 
 | Версия драйвера | Описание поддержки |
 | :------------- | :--------------------- |
-| Драйвер ODBC 11 для[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] | Поддерживает подключения к SQL Server 2014, SQL Server 2012, [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssKatmai](../../../includes/sskatmai_md.md)], и [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. |
+| Драйвер ODBC 11 для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] | Поддерживает подключения к SQL Server 2014, SQL Server 2012, [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssKatmai](../../../includes/sskatmai_md.md)]и [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. |
 | Драйвер ODBC 11 для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в Windows | Может быть установлен на компьютере, на котором также установлена одна или несколько версий [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] собственного клиента. |
-| Драйвер ODBC 13 для[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] | Поддерживает подключения к SQL Server 2016, SQL Server 2014, SQL Server 2012, [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)]и. [!INCLUDE[ssKatmai](../../../includes/sskatmai_md.md)] |
+| Драйвер ODBC 13 для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] | Поддерживает подключения к SQL Server 2016, SQL Server 2014, SQL Server 2012, [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)]и [!INCLUDE[ssKatmai](../../../includes/sskatmai_md.md)]. |
 | Драйвер ODBC 13,1 для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], <br/> Помимо указанного выше для 13 | Поддерживает SQL Server 2017. |
-| ODBC Driver 17 для[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] | Поддерживает те же версии базы данных, что и 13,1. |
+| Драйвер ODBC 17 для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] | Поддерживает те же версии базы данных, что и 13,1. |
 | ODBC Driver for SQL Server версии 17 | Поддерживает SQL Server 2019 начиная с версии драйвера 17,3. |
 | &nbsp; | &nbsp; |
 
 ### <a name="connection-string-details"></a>Сведения о строке подключения
 
-Имя драйвера, указанное в строке подключения, равно `ODBC Driver 11 for SQL Server` или `ODBC Driver 13 for SQL Server` (для 13 и 13,1) или `ODBC Driver 17 for SQL Server`.
+Имя драйвера, указанное в строке подключения, — `ODBC Driver 11 for SQL Server` или `ODBC Driver 13 for SQL Server` (как для 13, так и для 13,1) или `ODBC Driver 17 for SQL Server`.
 
 ## <a name="supported-operating-systems"></a>Поддерживаемые операционные системы
 
@@ -46,7 +46,8 @@ ms.locfileid: "71250944"
 - Windows Server 2008 R2
 - Windows Server 2012
 - Windows Server 2012 R2
-- Windows Vista SP2 &nbsp; _(только ODBC Driver 11)._
+- Windows Server 2016
+- Windows Vista с пакетом обновления 2 _(SP2) &nbsp; (только ODBC Driver 11)_
 - Windows 7
 - Windows 8
 - Windows 8.1
@@ -100,13 +101,13 @@ msiexec /i msodbcsql.msi APPGUID={ <Your dependent application's APPGUID> }
 
 ## <a name="command-line-tools-sqlcmdexe-and-bcpexe"></a>Программы командной строки: sqlcmd.exe и bcp.exe
 
-Средства `bcp.exe` и`sqlcmd.exe` для использования с драйвером можно загрузить на сайте [Microsoft программы командной строки 11 для SQL Server](https://www.microsoft.com/download/details.aspx?id=36433), [Microsoft программы командной строки 13 для SQL Server](https://www.microsoft.com/download/details.aspx?id=52680)или [Microsoft программы командной строки 13,1 для SQL Server](https://www.microsoft.com/download/details.aspx?id=53591). Драйвер является необходимым условием для установки `sqlcmd.exe` и. `bcp.exe`
+Средства `bcp.exe` и `sqlcmd.exe` для использования с драйвером можно загрузить в [microsoft программы командной строки 11 для SQL Server](https://www.microsoft.com/download/details.aspx?id=36433), [Microsoft программы командной строки 13 для SQL Server](https://www.microsoft.com/download/details.aspx?id=52680)или [Microsoft программы командной строки 13,1 для SQL Server ](https://www.microsoft.com/download/details.aspx?id=53591). Драйвер является необходимым условием для установки `sqlcmd.exe` и `bcp.exe`.
   
-`bcp.exe`и `sqlcmd.exe` устанавливаются `110\Tools` во вложенную папку `%PROGRAMFILES%\Microsoft SQL Server\Client SDK\ODBC` для версии 11, а `130\Tools` также для 13 и 13,1.
+`bcp.exe` и `sqlcmd.exe` устанавливаются в подпапку `110\Tools` `%PROGRAMFILES%\Microsoft SQL Server\Client SDK\ODBC` для версии 11 и `130\Tools` для 13 и 13,1.
 
 Приложение, использующее функции BCP, должно указывать драйвер из той же версии, которая поставлялась с файлом заголовка и библиотекой, применявшимися при компиляции приложения.  
 
-Например, при компиляции приложения ODBC с помощью `msodbcsql11.lib` и `msodbcsql.h`используйте "Driver = {ODBC Driver 11 for SQL Server}" в строке подключения.
+Например, при компиляции приложения ODBC с `msodbcsql11.lib` и `msodbcsql.h`используйте "DRIVER = {ODBC Driver 11 for SQL Server}" в строке подключения.
 
 ## <a name="components-of-the-microsoft-odbc-driver-for-includessnoversionincludesssnoversion-mdmd-on-windows"></a>Компоненты Microsoft ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в Windows
 
