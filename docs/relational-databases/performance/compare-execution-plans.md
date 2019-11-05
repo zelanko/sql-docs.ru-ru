@@ -55,7 +55,7 @@ ms.locfileid: "72907680"
 
 2.  Щелкните правой кнопкой мыши в пустой области плана выполнения и выберите пункт **Сравнить showplan**. 
 
-    ![Щелкните правой кнопкой мыши "Сравнить showplan"](../../relational-databases/performance/media/plancomparisonmenuoption.png "Щелкните правой кнопкой мыши "Сравнить Showplan"")   
+    ![Щелкните правой кнопкой мыши Сравнить showplan](../../relational-databases/performance/media/plancomparisonmenuoption.png "Щелкните правой кнопкой мыши Сравнить Showplan")   
 
 3.  Выберите второй файл плана запроса для сравнения. Откроется второй файл, чтобы вы могли сравнить планы.
 
