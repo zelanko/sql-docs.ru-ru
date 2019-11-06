@@ -1,0 +1,225 @@
+### YamlMime:Hub
+title: Документация по Microsoft SQL
+summary: Узнайте, как использовать возможности Microsoft SQL Server для эффективной работы с базами данных, размещаемыми как локально, так и в облаке.
+brand: sql
+metadata:
+  title: Документация по Microsoft SQL | Документация Майкрософт
+  description: Узнайте, как использовать возможности Microsoft SQL Server для эффективного управления базами данных, размещаемыми как локально, так и в облаке.
+  ms.topic: hub-page
+  ms.openlocfilehash: dfacfdd1d8df0c90705a1d77a9a98937ea5ac692
+  ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+  ms.translationtype: HT
+  ms.contentlocale: ru-RU
+  ms.lasthandoff: 11/04/2019
+  ms.locfileid: "73595469"
+highlightedContent:
+  items:
+  - title: Попробовать SQL Server 2019 (предварительная версия)
+    itemType: download
+    url: https://www.microsoft.com/evalcenter/evaluate-sql-server-2019-ctp
+  - title: Получить виртуальную машину Azure с SQL Server
+    itemType: overview
+    url: https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm
+  - title: Скачать средства запросов к данным
+    itemType: download
+    url: tools/overview-sql-tools.md
+  - title: 'SQL Server: центр обучения'
+    itemType: learn
+    url: lp/sql-server/sql-education-center.md
+productDirectory:
+  items:
+  - title: SQL в Azure
+    imageSrc: media/index/azure.png
+    links:
+    - url: https://docs.microsoft.com/azure/sql-database/
+      text: База данных SQL Azure
+    - url: https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-overview-what-is/
+      text: Azure Synapse Analytics (хранилище данных SQL)
+  - title: SQL Server в Windows
+    imageSrc: media/index/windows.png
+    links:
+    - url: sql-server/index.yml
+      text: В локальной среде
+    - url: https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview/
+      text: На виртуальной машине Azure
+    - url: https://docs.microsoft.com/previous-versions/sql/
+      text: Предыдущие версии (SQL 2005–2012)
+  - title: SQL Server в Linux
+    imageSrc: media/index/linux.png
+    links:
+    - url: linux/sql-server-linux-overview.md
+      text: В локальной среде
+    - url: linux/quickstart-install-connect-clouds.md
+      text: На виртуальной машине Azure
+conceptualContent:
+  items:
+  - title: Начало работы
+    links:
+    - text: Подключение и отправка запроса (Azure Data Studio)
+      url: azure-data-studio/quickstart-sql-server.md
+      itemType: quickstart
+    - text: Подключение и отправка запроса (SSMS)
+      url: ssms/tutorials/connect-query-sql-server.md
+      itemType: quickstart
+    - text: Создание инструкций на языке Transact-SQL
+      url: t-sql/tutorial-writing-transact-sql-statements.md
+      itemType: quickstart
+    - text: Контейнер Docker SQL Server
+      url: linux/quickstart-install-connect-docker.md
+      itemType: quickstart
+    - text: Советы по работе с документацией SQL
+      url: sql-server/sql-docs-navigation-guide.md
+      itemType: get-started
+  - title: Новые возможности
+    links:
+    - text: SQL Server 2019
+      url: https://docs.microsoft.com/sql/sql-server/what-s-new-in-sql-server-ver15?view=sql-server-ver15
+      itemType: whats-new
+    - text: Кластер больших данных SQL Server
+      url: https://docs.microsoft.com/sql/big-data-cluster/big-data-cluster-overview?view=sql-server-ver15
+      itemType: whats-new
+    - text: Azure Data Studio
+      url: azure-data-studio/what-is.md
+      itemType: whats-new
+    - text: Служба Azure Database Migration Service
+      url: https://docs.microsoft.com/azure/dms/dms-overview
+      itemType: whats-new
+    - text: Службы машинного обучения SQL
+      url: advanced-analytics/index.yml
+      itemType: whats-new
+  - title: Установка
+    links:
+    - text: SQL Server
+      url: database-engine/install-windows/install-sql-server.md
+      itemType: deploy
+    - text: SQL Server Management Studio (SSMS)
+      url: ssms/download-sql-server-management-studio-ssms.md
+      itemType: deploy
+    - text: Analysis Services (SSAS)
+      url: https://docs.microsoft.com/analysis-services/instances/install-windows/install-analysis-services/
+      itemType: deploy
+    - text: Службы Integration Services (SSIS)
+      url: integration-services/install-windows/install-integration-services.md
+      itemType: deploy
+    - text: Cлужбы Reporting Services (SSRS)
+      url: reporting-services/install-windows/install-reporting-services.md
+      itemType: deploy
+    footerLink:
+      text: Подробнее
+      url: lp/sql-server/install-sql-and-services.md
+  - title: Миграция
+    links:
+    - text: Руководство по миграции данных
+      url: https://datamigration.microsoft.com/
+      itemType: overview
+    - text: Сертификация на совместимость базы данных
+      url: https://aka.ms/dbcompat
+      itemType: overview
+    - text: Azure Database Migration Service (DMS)
+      url: https://docs.microsoft.com/azure/dms/dms-overview
+      itemType: overview
+    - text: Помощник по миграции баз данных (DMA)
+      url: dma/dma-overview.md
+      itemType: overview
+    - text: Database Experimentation Assistant (DEA)
+      url: dea/database-experimentation-assistant-overview.md
+      itemType: overview
+    - text: Помощник по миграции SQL Server (SSMA)
+      url: ssma/sql-server-migration-assistant.md
+      itemType: overview
+    footerLink:
+      text: Подробнее
+      url: lp/sql-server/load-move-data.md
+additionalContent:
+  sections:
+  - items:
+    - title: Администрирование
+      links:
+      - text: Динамические административные представления
+        url: relational-databases/system-dynamic-management-views/system-dynamic-management-views.md
+      - text: Представления системного каталога
+        url: relational-databases/system-catalog-views/catalog-views-transact-sql.md
+      - text: Расширенные события
+        url: relational-databases/extended-events/quick-start-extended-events-in-sql-server.md
+      - text: Обеспечение безопасности SQL Server
+        url: relational-databases/security/securing-sql-server.md
+      - text: SQL PowerShell
+        url: powershell/sql-server-powershell.md
+      - text: REST API SQL Azure
+        url: https://docs.microsoft.com/rest/api/sql/
+      - text: PowerShell SQL Azure
+        url: https://docs.microsoft.com/powershell/module/az.sql/
+    - title: Безопасность и конфиденциальность
+      links:
+      - text: Подсистема аудита SQL Server
+        url: relational-databases/security/auditing/sql-server-audit-database-engine.md
+      - text: Аудит базы данных SQL Azure
+        url: https://docs.microsoft.com/azure/sql-database/sql-database-auditing
+      - text: Классификация данных
+        url: relational-databases/security/sql-data-discovery-and-classification.md
+      - text: Always Encrypted
+        url: relational-databases/security/encryption/always-encrypted-database-engine.md
+    - title: Разработка
+      links:
+      - text: Создание приложения с помощью SQL Server
+        url: https://www.microsoft.com/sql-server/developer-get-started/
+      - text: DevOps с использованием SQL Server
+        url: https://www.microsoft.com/sql-server/developer-get-started/sql-devops/
+      - text: Безопасность SQL Server
+        url: https://docs.microsoft.com/dotnet/framework/data/adonet/sql/overview-of-sql-server-security
+      - text: Приложения базы данных SQL Azure
+        url: https://docs.microsoft.com/azure/sql-database/sql-database-develop-overview
+      - text: Библиотеки подключений базы данных SQL Azure
+        url: https://docs.microsoft.com/azure/sql-database/sql-database-connect-query#libraries
+      - text: Подключение клиентов SQL Server
+        url: connect/homepage-sql-connection-programming.md
+      - text: Transact-SQL (T-SQL)
+        url: t-sql/language-reference.md
+      - text: Примеры баз данных
+        url: samples/sql-samples-where-are.md
+    - title: Отчеты и Машинное обучение
+      links:
+      - text: Сервер отчетов Power BI
+        url: https://docs.microsoft.com/power-bi/report-server/get-started
+      - text: Служба Power BI
+        url: https://docs.microsoft.com/power-bi/service-get-started
+      - text: Службы SQL Server Reporting Services (SSRS)
+        url: reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md
+      - text: Машинное обучение Azure
+        url: https://docs.microsoft.com/azure/machine-learning/
+      - text: Службы машинного обучения SQL (R, Python)
+        url: advanced-analytics/index.yml
+      - text: Службы SQL Server R Services
+        url: advanced-analytics/r/sql-server-r-services.md
+    - title: Большие данные
+      links:
+      - text: Кластеры больших данных SQL Server 2019
+        url: https://docs.microsoft.com/sql/big-data-cluster/big-data-cluster-overview?view=sql-server-ver15
+      - text: Виртуализация данных с помощью Polybase
+        url: relational-databases/polybase/polybase-guide.md
+      - text: Azure Synapse Analytics (хранилище данных SQL)
+        url: https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-overview-what-is/
+      - text: База данных SQL Azure с гипермасштабированием
+        url: https://docs.microsoft.com/azure/sql-database/sql-database-service-tier-hyperscale
+      - text: Службы Analysis Services
+        url: https://docs.microsoft.com/azure/analysis-services/
+      - text: Службы SQL Server Analysis Services (SSAS)
+        url: https://docs.microsoft.com/analysis-services/analysis-services-overview
+      - text: Microsoft Analytics Platform System
+        url: analytics-platform-system/index.md
+    - title: Инструменты
+      links:
+      - text: Azure Data Studio
+        url: azure-data-studio/download.md
+      - text: SQL Server Management Studio (SSMS)
+        url: ssms/download-sql-server-management-studio-ssms.md
+      - text: mssql-cli
+        url: tools/mssql-cli.md
+      - text: CLI SQL Azure
+        url: https://docs.microsoft.com/cli/azure/sql
+      - text: SQL Server Data Tools (SSDT)
+        url: ssdt/download-sql-server-data-tools-ssdt.md
+      - text: Распределенное воспроизведение
+        url: tools/distributed-replay/sql-server-distributed-replay.md
+      - text: Дополнительные инструменты
+        url: tools/overview-sql-tools.md

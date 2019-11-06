@@ -14,13 +14,6 @@
           href: sql-server/what-s-new-in-sql-server-2017.md
         - name: "SQL Server\_2016"
           href: sql-server/what-s-new-in-sql-server-2016.md
-    - name: Новые возможности ядра СУБД
-      href: database-engine/sql-server-database-engine-overview.md
-      items:
-        - name: "SQL Server\_2017"
-          href: database-engine/whats-new-in-sql-server-2017.md
-        - name: "SQL Server\_2016"
-          href: database-engine/whats-new-in-sql-server-2016.md
     - name: Выпуски и компоненты
       items:
         - name: "SQL\_Server\_2019"
@@ -32,7 +25,7 @@
     - name: Заметки о выпуске
       items:
         - name: "SQL\_Server\_2019"
-          href: sql-server/sql-server-ver15-release-notes.md
+          href: sql-server/sql-server-version-15-release-notes.md
         - name: "SQL Server\_2017"
           href: sql-server/sql-server-2017-release-notes.md?toc=../toc.json
         - name: "SQL Server\_2016"
@@ -45,7 +38,7 @@
           href: sql-server/sql-server-2012-release-notes.md
         - name: SQL Server 2008 R2 с пакетом обновления 2 (SP2)
           href: sql-server/sql-server-2008-r2-sp2-release-notes.md
-- name: Кластер больших данных
+- name: Кластеры больших данных
   items:
     - name: Обзор
       items:
@@ -57,7 +50,7 @@
       items:
         - name: Приступая к работе
           items:
-            - name: Развертывание кластера больших данных
+            - name: Развертывание
               href: big-data-cluster/deploy-get-started.md
             - name: Загрузка примера данных
               href: big-data-cluster/tutorial-load-sample-data.md
@@ -67,6 +60,8 @@
               href: big-data-cluster/deploy-big-data-tools.md
             - name: Установка azdata
               items:
+                - name: С помощью установщика Windows
+                  href: big-data-cluster/deploy-install-azdata-installer.md
                 - name: С помощью диспетчера пакетов Linux
                   href: big-data-cluster/deploy-install-azdata-linux-package.md
                 - name: С помощью PIP
@@ -83,8 +78,14 @@
               href: big-data-cluster/concept-data-persistence.md
             - name: Автономное развертывание
               href: big-data-cluster/deploy-offline.md
+            - name: Режим Active Directory
+              href: big-data-cluster/deploy-active-directory.md
             - name: Развертывание с высоким уровнем доступности
-              href: big-data-cluster/deployment-high-availability.md
+              items:
+                - name: Главный экземпляр
+                  href: big-data-cluster/deployment-high-availability.md
+                - name: Имя узла HDFS и Spark
+                  href: big-data-cluster/deployment-high-availability-hdfs-spark.md
             - name: Кластеры Kubernetes
               items:
                 - name: Служба Azure Kubernetes
@@ -117,6 +118,10 @@
           href: big-data-cluster/concept-security.md
     - name: Практические руководства
       items:
+        - name: Конфигурация
+          items:
+            - name: Главный экземпляр SQL Server
+              href: big-data-cluster/configure-sql-server-master-instance.md
         - name: Виртуализация данных
           items:
             - name: Реляционные данные
@@ -137,6 +142,8 @@
                   href: big-data-cluster/hdfs-tiering-mount-adlsgen2.md
                 - name: Подключение S3 для распределения по уровням HDFS
                   href: big-data-cluster/hdfs-tiering-mount-s3.md
+                - name: Управление разрешениями HDFS
+                  href: big-data-cluster/hdfs-tiering-manage-permissions.md
         - name: Прием данных
           items:
             - name: Загрузка данных с помощью cURL
@@ -157,6 +164,8 @@
               href: big-data-cluster/big-data-cluster-consume-apps.md
         - name: Большие данные и машинное обучение
           items:
+            - name: 'Использование Служб машинного обучения (Python, R)'
+              href: big-data-cluster/machine-learning-services.md
             - name: Первичная обработка данных с помощью ускорителя кода PROSE
               href: big-data-cluster/use-prose-for-big-data-automation.md
             - name: Модели машинного обучения Spark с MLeap
@@ -165,9 +174,9 @@
               href: big-data-cluster/sparklyr-from-RStudio.md
             - name: Интеграция Spark с SQL Server
               href: big-data-cluster/spark-mssql-connector.md
-        - name: "Управление кластером больших данных SQL\_Server"
+        - name: Управление
           items:
-            - name: Подключение к кластеру больших данных
+            - name: Подключение
               href: big-data-cluster/connect-to-big-data-cluster.md
             - name: Просмотр состояния кластера
               href: big-data-cluster/view-cluster-status.md
@@ -245,10 +254,6 @@
                   href: big-data-cluster/reference-azdata-bdc-hdfs-mount.md
                 - name: состояние bdc hdfs
                   href: big-data-cluster/reference-azdata-bdc-hdfs-status.md
-                - name: bdc pool
-                  href: big-data-cluster/reference-azdata-bdc-pool.md
-                - name: bdc pool status
-                  href: big-data-cluster/reference-azdata-bdc-pool-status.md
                 - name: bdc spark
                   href: big-data-cluster/reference-azdata-bdc-spark.md
                 - name: bdc spark batch
@@ -4168,7 +4173,11 @@
       href: sql-server/install/planning-a-sql-server-installation.md
       items:
         - name: Требования к оборудованию и программному обеспечению
-          href: sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md
+          items:
+            - name: "SQL\_Server\_2019"
+              href: sql-server/install/hardware-and-software-requirements-for-installing-sql-server-ver15.md
+            - name: "SQL Server\_2017 и более ранние версии"
+              href: sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md
         - name: Соображения безопасности
           href: sql-server/install/security-considerations-for-a-sql-server-installation.md
         - name: Сетевые протоколы и библиотеки
@@ -4247,6 +4256,8 @@
       items:
         - name: Сертификация на совместимость
           href: database-engine/install-windows/compatibility-certification.md
+        - name: "Поддерживаемые обновления версий и выпусков SQL Server\_2019"
+          href: database-engine/install-windows/supported-version-and-edition-upgrades-version-15.md
         - name: "Поддерживаемые обновления версий и выпусков SQL Server\_2017"
           href: database-engine/install-windows/supported-version-and-edition-upgrades-2017.md
         - name: "Поддерживаемые обновления версий и выпусков SQL Server\_2016"
@@ -8125,29 +8136,91 @@
               href: relational-databases/security/authentication-access/create-a-credential.md
         - name: Шифрование
           items:
+            - name: Always Encrypted
+              items:
+                - name: Configure Always Encrypted using PowerShell
+                  href: relational-databases/security/encryption/configure-always-encrypted-using-powershell.md
+                - name: Настройка постоянного шифрования с помощью SSMS
+                  href: relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md
+                - name: "Подготовка ключей Always\_Encrypted"
+                  items:
+                    - name: Создание и хранение главных ключей столбцов
+                      href: relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md
+                    - name: "Подготовка ключей Always\_Encrypted с помощью SSMS"
+                      href: relational-databases/security/encryption/configure-always-encrypted-keys-using-ssms.md
+                    - name: "Подготовка ключей Always\_Encrypted с помощью PowerShell"
+                      href: relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell.md
+                - name: "Ротация ключей Always\_Encrypted"
+                  items:
+                    - name: "Смена ключей Always\_Encrypted с помощью SSMS"
+                      href: relational-databases/security/encryption/rotate-always-encrypted-keys-using-ssms.md
+                    - name: "Смена ключей Always\_Encrypted с помощью PowerShell"
+                      href: relational-databases/security/encryption/rotate-always-encrypted-keys-using-powershell.md
+                - name: Настройка столбцов с помощью Always Encrypted
+                  items:
+                    - name: Настройка шифрования столбцов с помощью мастера функции Always Encrypted
+                      href: relational-databases/security/encryption/always-encrypted-wizard.md
+                    - name: Настройка шифрования столбцов с помощью мастера функции Always Encrypted с PowerShell
+                      href: relational-databases/security/encryption/configure-column-encryption-using-powershell.md
+                    - name: Настройка шифрования столбцов с помощью мастера функции Always Encrypted с пакетом приложения уровня данных
+                      href: relational-databases/security/encryption/configure-always-encrypted-using-dacpac.md
+                - name: Запросы к столбцам с помощью Always Encrypted
+                  items:
+                    - name: Запросы к столбцам с помощью Always Encrypted с SSMS
+                      href: relational-databases/security/encryption/always-encrypted-query-columns-ssms.md
+                - name: 'Перенос конфиденциальных данных, защищенных с помощью Always Encrypted'
+                  items:
+                    - name: Экспорт и импорт баз данных с помощью Always Encrypted
+                      href: relational-databases/security/encryption/always-encrypted-migrate-using-bacpac.md
+                    - name: Резервное копирование и восстановление баз данных с помощью Always Encrypted
+                      href: relational-databases/security/encryption/always-encrypted-migrate-using-backup-restore.md
+                    - name: Миграция данных с помощью мастера импорта и экспорта
+                      href: relational-databases/security/encryption/always-encrypted-migrate-using-import-export-wizard.md
+                    - name: Массовая загрузка зашифрованных данных в столбцы с помощью Always Encrypted
+                      href: relational-databases/security/encryption/migrate-sensitive-data-protected-by-always-encrypted.md
+                - name: "Разработка приложений с помощью Always\_Encrypted"
+                  items:
+                    - name: "Разработка приложений с помощью Always\_Encrypted"
+                      href: relational-databases/security/encryption/always-encrypted-client-development.md
+                    - name: "Разработка приложений с помощью .NET\_Framework"
+                      href: relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider.md
+            - name: Always Encrypted с безопасными анклавами.
+              href: relational-databases/security/encryption/configure-always-encrypted-enclaves.md
+              items:
+                - name: Настройка среды для поддержки анклавов и аттестации
+                  items:
+                    - name: Настройка анклавов VBS с помощью аттестации службы защиты узла
+                      items:
+                        - name: Планирование аттестации службы защиты узла
+                          href: relational-databases/security/encryption/always-encrypted-enclaves-host-guardian-service-plan.md
+                - name: Управление ключами для Always Encrypted с безопасными анклавами
+                  items:
+                    - name: Управление ключами с поддержкой анклава
+                      href: relational-databases/security/encryption/always-encrypted-enclaves-manage-keys.md
+                    - name: Подготовка ключей с поддержкой анклава
+                      href: relational-databases/security/encryption/always-encrypted-enclaves-provision-keys.md
+                    - name: Смена ключей с поддержкой анклава
+                      href: relational-databases/security/encryption/always-encrypted-enclaves-rotate-keys.md
+                - name: Настройка столбцов с помощью Always Encrypted с безопасными анклавами
+                  items:
+                    - name: Настройка шифрования столбцов
+                      href: relational-databases/security/encryption/always-encrypted-enclaves-configure-encryption.md
+                    - name: Настройка шифрования столбцов на месте с помощью Transact-SQL
+                      href: relational-databases/security/encryption/always-encrypted-enclaves-configure-encryption-tsql.md
+                    - name: Включение Always Encrypted с безопасными анклавами для существующих зашифрованных столбцов
+                      href: relational-databases/security/encryption/always-encrypted-enclaves-enable-for-encrypted-columns.md
+                - name: Выполнение запросов к столбцам с помощью Always Encrypted с безопасными анклавами
+                  items:
+                    - name: Выполнение запросов к столбцам с помощью Always Encrypted с безопасными анклавами
+                      href: relational-databases/security/encryption/always-encrypted-enclaves-query-columns.md
+                    - name: Выполнение запросов к столбцам с помощью Always Encrypted с безопасными анклавами и SSMS
+                      href: relational-databases/security/encryption/always-encrypted-enclaves-query-columns-ssms.md
+                - name: Создание и использование индексов в столбцах с поддержкой анклава
+                  href: relational-databases/security/encryption/always-encrypted-enclaves-create-use-indexes.md
+                - name: "Разработка приложений с помощью Always\_Encrypted с безопасными анклавами"
+                  href: relational-databases/security/encryption/always-encrypted-enclaves-client-development.md
             - name: Устранение неполадок TDE
               href: relational-databases/security/encryption/troubleshoot-tde.md
-            - name: "Настройка Always\_Encrypted"
-              items:
-                - name: Настройка Always Encrypted с безопасными анклавами
-                  href: relational-databases/security/encryption/configure-always-encrypted-enclaves.md
-                - name: "Настройка с помощью SQL\_Server Management\_Studio"
-                  href: relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md
-                - name: "Настройка с помощью\_PowerShell"
-                  href: relational-databases/security/encryption/configure-always-encrypted-using-powershell.md
-                  items:
-                    - name: "Настройка ключей Always\_Encrypted"
-                      href: relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell.md
-                    - name: "Ротация ключей Always\_Encrypted"
-                      href: relational-databases/security/encryption/rotate-always-encrypted-keys-using-powershell.md
-                    - name: Настройка шифрования столбцов
-                      href: relational-databases/security/encryption/configure-column-encryption-using-powershell.md
-                - name: Создание и хранение главных ключей столбцов
-                  href: relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md
-                - name: Миграция конфиденциальных данных
-                  href: relational-databases/security/encryption/migrate-sensitive-data-protected-by-always-encrypted.md
-                - name: "Разработка приложений с помощью .NET\_Framework"
-                  href: relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider.md
             - name: 'Перемещение базы данных, защищаемой прозрачным шифрованием'
               href: relational-databases/security/encryption/move-a-tde-protected-database-to-another-sql-server.md
             - name: расширенное управление ключами
@@ -8255,14 +8328,12 @@
             - name: Always Encrypted
               href: relational-databases/security/encryption/always-encrypted-database-engine.md
               items:
-                - name: Always Encrypted с безопасными анклавами
-                  href: relational-databases/security/encryption/always-encrypted-enclaves.md
-                - name: Управление ключами
+                - name: Общие сведения об управлении ключами для Always Encrypted
                   href: relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md
-                - name: Шифрование
+                - name: Шифрование Always Encrypted
                   href: relational-databases/security/encryption/always-encrypted-cryptography.md
-                - name: Разработка клиентских приложений
-                  href: relational-databases/security/encryption/always-encrypted-client-development.md
+            - name: Always Encrypted с безопасными анклавами.
+              href: relational-databases/security/encryption/always-encrypted-enclaves.md
             - name: Ключи шифрования
               href: relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md
               items:
@@ -8279,16 +8350,24 @@
               href: relational-databases/security/auditing/sql-server-audit-records.md
     - name: Учебники
       items:
-        - name: Начало работы с Always Encrypted с безопасными анклавами с использованием SSMS
-          href: relational-databases/security/tutorial-getting-started-with-always-encrypted-enclaves.md
-        - name: Создание и использование индексов в столбцах Always Encrypted с безопасными анклавами
-          href: relational-databases/security/tutorial-creating-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md
+        - name: Always Encrypted
+          items:
+            - name: "Защита конфиденциальных данных и хранение ключей шифрования в хранилище сертификатов Windows\_>"
+              href: /azure/sql-database/sql-database-always-encrypted
+            - name: "Защита конфиденциальных данных и хранение ключей шифрования в Azure Key Vault\_>"
+              href: /azure/sql-database/sql-database-always-encrypted-azure-key-vault
+        - name: Always Encrypted с безопасными анклавами.
+          items:
+            - name: Начало работы с Always Encrypted с безопасными анклавами с использованием SSMS
+              href: relational-databases/security/tutorial-getting-started-with-always-encrypted-enclaves.md
+            - name: Создание и использование индексов в столбцах Always Encrypted с безопасными анклавами
+              href: relational-databases/security/tutorial-creating-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md
+            - name: "Разработка приложения .NET Framework с помощью Always\_Encrypted с безопасными анклавами"
+              href: relational-databases/security/tutorial-always-encrypted-enclaves-develop-net-framework-apps.md
     - name: Справочник
       items:
         - name: Страница "Разрешения" или "Защищаемые объекты"
           href: relational-databases/security/permissions-or-securables-page.md
-        - name: Мастер постоянного шифрования
-          href: relational-databases/security/encryption/always-encrypted-wizard.md
 - name: Инструменты
   href: tools/overview-sql-tools.md
   items:
@@ -8350,8 +8429,8 @@
           items:
             - name: Расширение PostgreSQL
               href: azure-data-studio/postgres-extension.md
-            - name: "SQL\_Server\_2019"
-              href: azure-data-studio/sql-server-2019-extension.md
+            - name: Расширение виртуализации данных
+              href: azure-data-studio/data-virtualization-extension.md
             - name: "Агент SQL\_Server"
               href: azure-data-studio/sql-server-agent-extension.md
             - name: Расширение центральных серверов управления SQL Server
@@ -10255,6 +10334,10 @@
           href: relational-databases/sqltoolsvsnativehelpers.md
         - name: FrameWindowVisible
           href: relational-databases/sqltoolsvsnativehelpers-framewindowvisible.md
+    - name: Расширенные функции
+      items:
+        - name: Расширенные функции и инструменты
+          href: tools/download-sql-feature-packs.md
 - name: Учебники
   items:
     - name: "SQL\_Server"
@@ -10352,8 +10435,6 @@
           href: linux/tutorial-sql-server-containers-kubernetes.md
         - name: Настройка репликации
           href: linux/sql-server-linux-replication-tutorial-tsql.md
-        - name: Машинное обучение в контейнере
-          href: linux/sql-server-linux-machine-learning-services-container.md
     - name: Основные понятия
       items:
         - name: Установка
@@ -12479,6 +12560,12 @@
               href: relational-databases/system-dynamic-management-views/sys-dm-hadr-name-id-map-transact-sql.md
             - name: sys.dm_tcp_listener_states
               href: relational-databases/system-dynamic-management-views/sys-dm-tcp-listener-states-transact-sql.md
+        - name: Кластеры больших данных
+          items:
+            - name: sys.dm_cluster_endpoints
+              href: relational-databases/system-dynamic-management-views/sys-dm-cluster-endpoints.md
+            - name: sys.dm_exec_compute_pools
+              href: relational-databases/system-dynamic-management-views/sys-dm-exec-compute-pools.md
         - name: Система отслеживания измененных данных
           items:
             - name: sys.dm_cdc_errors
@@ -12835,6 +12922,8 @@
               href: relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md
             - name: sys.dm_audit_class_type_map
               href: relational-databases/system-dynamic-management-views/sys-dm-audit-class-type-map-transact-sql.md
+            - name: sys.dm_column_encryption_enclave
+              href: relational-databases/system-dynamic-management-views/sys-dm-column-encryption-enclave.md
             - name: sys.dm_cryptographic_provider_algorithms
               href: relational-databases/system-dynamic-management-views/sys-dm-cryptographic-provider-algorithms-transact-sql.md
             - name: sys.dm_cryptographic_provider_keys
