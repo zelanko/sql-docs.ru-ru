@@ -9,12 +9,12 @@ ms.prod_service: sql-tools
 ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
-ms.openlocfilehash: d8422146e3569ff991ef16179e54f0f78961fc79
-ms.sourcegitcommit: 6413b7495313830ad1ae5aefe0c09e8e7a284b07
+ms.openlocfilehash: f966de4951e5c90dac8d6e48f00f8de6ff067e3c
+ms.sourcegitcommit: 82b70c39550402a2b0b327db32bf5ecf88b50d3c
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "71016869"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73033013"
 ---
 # <a name="download-and-install-sqlpackage"></a>Скачивание и установка sqlpackage
 
@@ -24,12 +24,12 @@ ms.locfileid: "71016869"
 
 |Платформа|Загрузить|Дата выпуска|Версия|Сборка
 |:---|:---|:---|:---|:---|
-|Windows|[Установщик MSI](https://go.microsoft.com/fwlink/?linkid=2102893)|13 сентября 2019 г.|18.3.1|15.0.4538.1|
-|macOS .NET Core (предварительная версия)|[ZIP-файл](https://go.microsoft.com/fwlink/?linkid=2102894)|13 сентября 2019 г.| 18.3.1|15.0.4538.1|
-|Linux .NET Core (предварительная версия)|[ZIP-файл](https://go.microsoft.com/fwlink/?linkid=2102978)|13 сентября 2019 г.| 18.3.1|15.0.4538.1|
-|Windows .NET Core (Предварительная версия)|[ZIP-файл](https://go.microsoft.com/fwlink/?linkid=2102979)|13 сентября 2019 г.| 18.3.1|15.0.4538.1|
+|Windows (x64)|[Установщик MSI](https://go.microsoft.com/fwlink/?linkid=2108813)|29 октября 2019 г.|18.4|15.0.4573.2|
+|macOS .NET Core (x64)|[ZIP-файл](https://go.microsoft.com/fwlink/?linkid=2108815)|29 октября 2019 г.| 18.4|15.0.4573.2|
+|Linux .NET Core (x64) |[ZIP-файл](https://go.microsoft.com/fwlink/?linkid=2108814)|29 октября 2019 г.| 18.4|15.0.4573.2|
+|Windows .NET Core (x64) |[ZIP-файл](https://go.microsoft.com/fwlink/?linkid=2109019)|29 октября 2019 г.| 18.4|15.0.4573.2|
 
-Подробнее см. в [заметках о выпуске](release-notes-sqlpackage.md).
+Подробнее см. в [заметках о выпуске](release-notes-sqlpackage.md). Чтобы скачать дополнительные языки, ознакомьтесь с разделом [Доступные языки](#available-languages) .
 
 [!INCLUDE[Freshness](../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
@@ -37,53 +37,46 @@ ms.locfileid: "71016869"
 
 Этот выпуск sqlpackage включает стандартные средства установщика Windows и ZIP-файл: 
 
-1. Скачайте и запустите [установщик DacFramework.msi для Windows](https://go.microsoft.com/fwlink/?linkid=2102893).
+1. Скачайте и запустите [установщик DacFramework.msi для Windows](https://go.microsoft.com/fwlink/?linkid=2108813).
 2. Откройте новое окно командной строки и запустите файл sqlpackage.exe.
     - Программа sqlpackage устанавливается в папку ```C:\Program Files\Microsoft SQL Server\150\DAC\bin```.
-    - При установке версии x86 на x64-разрядном компьютере sqlpackage устанавливается в папку ```C:\Program Files (x86)\Microsoft SQL Server\150\DAC\bin```.
 
-## <a name="get-sqlpackage-net-core-preview-for-windows"></a>Получение SqlPackage .NET Core (Предварительная версия) для Windows
+## <a name="get-sqlpackage-net-core-for-windows"></a>Получение SqlPackage .NET Core для Windows
 
-1. Скачайте [sqlpackage для Windows](https://go.microsoft.com/fwlink/?linkid=2102979).
+1. Скачайте [sqlpackage для Windows](https://go.microsoft.com/fwlink/?linkid=2109019).
 2. Чтобы извлечь файл, щелкните правой кнопкой мыши файл в проводнике Windows и выберите пункт "извлечь все..." и укажите целевой каталог.
 3. Откройте новое окно терминала и компакт-диск в папку, в которую был извлечен SqlPackage:
 
-   **Установка ZIP:**
-
-   ```bash
-   sqlpackage
+   ```cmd
+   > sqlpackage
    ```
 
-## <a name="get-sqlpackage-net-core-preview-for-macos"></a>Получение SqlPackage .NET Core (Предварительная версия) для macOS
+## <a name="get-sqlpackage-net-core-for-macos"></a>Получение SqlPackage .NET Core для macOS
 
-1. Скачайте [sqlpackage для macOS](https://go.microsoft.com/fwlink/?linkid=2102894).
+1. Скачайте [sqlpackage для macOS](https://go.microsoft.com/fwlink/?linkid=2108815).
 2. Чтобы извлечь файл и запустить sqlpackage, откройте новое окно терминала и введите следующие команды:
-
-   **Установка ZIP:**
 
    ```bash
-   mkdir sqlpackage
-   unzip ~/Downloads/sqlpackage-osx-<version string>.zip ~/sqlpackage 
-   echo 'export PATH="$PATH:~/sqlpackage"' >> ~/.bash_profile
-   source ~/.bash_profile
-   sqlpackage
+   $ mkdir sqlpackage
+   $ unzip ~/Downloads/sqlpackage-osx-<version string>.zip ~/sqlpackage 
+   $ echo 'export PATH="$PATH:~/sqlpackage"' >> ~/.bash_profile
+   $ source ~/.bash_profile
+   $ sqlpackage
    ```
 
-## <a name="get-sqlpackage-net-core-preview-for-linux"></a>Получение SqlPackage .NET Core (Предварительная версия) для Linux
+## <a name="get-sqlpackage-net-core-for-linux"></a>Получение SqlPackage .NET Core для Linux
 
-1. Скачайте [sqlpackage для Linux](https://go.microsoft.com/fwlink/?linkid=2102978) с помощью одного из установщиков или архива tar.gz:
+1. Скачайте [sqlpackage для Linux](https://go.microsoft.com/fwlink/?linkid=2108814) с помощью одного из установщиков или архива tar.gz:
 2. Чтобы извлечь файл и запустить sqlpackage, откройте новое окно терминала и введите следующие команды:
-
-   **Установка ZIP:**
 
    ```bash
    cd ~
-   mkdir sqlpackage
-   unzip ~/Downloads/sqlpackage-linux-<version string>.zip -d ~/sqlpackage 
-   echo "export PATH=\"\$PATH:$HOME/sqlpackage\"" >> ~/.bashrc
-   chmod a+x ~/sqlpackage/sqlpackage
-   source ~/.bashrc
-   sqlpackage
+   $ mkdir sqlpackage
+   $ unzip ~/Downloads/sqlpackage-linux-<version string>.zip -d ~/sqlpackage 
+   $ echo "export PATH=\"\$PATH:$HOME/sqlpackage\"" >> ~/.bashrc
+   $ chmod a+x ~/sqlpackage/sqlpackage
+   $ source ~/.bashrc
+   $ sqlpackage
    ```
 
    > [!NOTE]
@@ -92,33 +85,33 @@ ms.locfileid: "71016869"
    **Debian:**
 
    ```bash
-   sudo apt-get install libunwind8
+   $ sudo apt-get install libunwind8
    ```
 
    **Redhat:**
 
    ```bash
-   yum install libunwind
-   yum install libicu
+   $ yum install libunwind
+   $ yum install libicu
    ```
 
    **Ubuntu:**
 
    ```bash
-   sudo apt-get install libunwind8
+   $ sudo apt-get install libunwind8
 
    # install the libicu library based on the Ubuntu version
-   sudo apt-get install libicu52      # for 14.x
-   sudo apt-get install libicu55      # for 16.x
-   sudo apt-get install libicu57      # for 17.x
-   sudo apt-get install libicu60      # for 18.x
+   $ sudo apt-get install libicu52      # for 14.x
+   $ sudo apt-get install libicu55      # for 16.x
+   $ sudo apt-get install libicu57      # for 17.x
+   $ sudo apt-get install libicu60      # for 18.x
    ```
 
 ## <a name="uninstall-sqlpackage-preview"></a>Удаление sqlpackage (предварительная версия)
 
 Если вы установили sqlpackage с помощью установщика Windows, удаление выполняется так же, как и для любого приложения Windows.
 
-Если вы установили sqlpackage с помощью ZIP-файла или другого архива, просто удалите файлы.
+Если вы установили sqlpackage с помощью ZIP-файла или другого архива, удалите файлы.
 
 ## <a name="supported-operating-systems"></a>Поддерживаемые операционные системы
 
@@ -128,12 +121,10 @@ ms.locfileid: "71016869"
 
 - Windows 10
 - Windows 8.1
-- Windows 8
 - Windows 7 с пакетом обновления 1 (SP1)
-- Windows Server 2016
-- Windows Server 2012 R2
-- Windows Server 2012
 - Windows Server 2008 R2
+- Windows Server 2012 R2
+- Windows Server 2016
 
 ### <a name="macos"></a>macOS
 
@@ -146,6 +137,22 @@ ms.locfileid: "71016869"
 - Red Hat Enterprise Linux 7.3
 - SUSE Linux Enterprise Server версии 12 с пакетом обновления 2 (SP2)
 - Ubuntu 16.04
+
+## <a name="available-languages"></a>Доступные языки
+
+Этот выпуск sqlpackage можно установить для следующих языков:
+
+SqlPackage Windows:  
+[Китайский (упрощенное письмо)](https://go.microsoft.com/fwlink/?linkid=2108813&clcid=0x804) | [Китайский (традиционное письмо)](https://go.microsoft.com/fwlink/?linkid=2108813&clcid=0x404) | [Английский (США)](https://go.microsoft.com/fwlink/?linkid=2108813&clcid=0x409) | [Французский](https://go.microsoft.com/fwlink/?linkid=2108813&clcid=0x40c) | [Немецкий](https://go.microsoft.com/fwlink/?linkid=2108813&clcid=0x407) | [Итальянский](https://go.microsoft.com/fwlink/?linkid=2108813&clcid=0x410) | [Японский](https://go.microsoft.com/fwlink/?linkid=2108813&clcid=0x411) | [Корейский](https://go.microsoft.com/fwlink/?linkid=2108813&clcid=0x412) | [Португальский (Бразилия)](https://go.microsoft.com/fwlink/?linkid=2108813&clcid=0x416) | [Русский](https://go.microsoft.com/fwlink/?linkid=2108813&clcid=0x419) | [Испанский](https://go.microsoft.com/fwlink/?linkid=2108813&clcid=0x40a)
+
+SqlPackage .NET Core Windows:  
+[Китайский (упрощенное письмо)](https://go.microsoft.com/fwlink/?linkid=2109019&clcid=0x804) | [Китайский (традиционное письмо)](https://go.microsoft.com/fwlink/?linkid=2109019&clcid=0x404) | [Английский (США)](https://go.microsoft.com/fwlink/?linkid=2109019&clcid=0x409) | [Французский](https://go.microsoft.com/fwlink/?linkid=2109019&clcid=0x40c) | [Немецкий](https://go.microsoft.com/fwlink/?linkid=2109019&clcid=0x407) | [Итальянский](https://go.microsoft.com/fwlink/?linkid=2109019&clcid=0x410) | [Японский](https://go.microsoft.com/fwlink/?linkid=2109019&clcid=0x411) | [Корейский](https://go.microsoft.com/fwlink/?linkid=2109019&clcid=0x412) | [Португальский (Бразилия)](https://go.microsoft.com/fwlink/?linkid=2109019&clcid=0x416) | [Русский](https://go.microsoft.com/fwlink/?linkid=2109019&clcid=0x419) | [Испанский](https://go.microsoft.com/fwlink/?linkid=2109019&clcid=0x40a)
+
+SqlPackage .NET Core macOS:  
+[Китайский (упрощенное письмо)](https://go.microsoft.com/fwlink/?linkid=2108815&clcid=0x804) | [Китайский (традиционное письмо)](https://go.microsoft.com/fwlink/?linkid=2108815&clcid=0x404) | [Английский (США)](https://go.microsoft.com/fwlink/?linkid=2108815&clcid=0x409) | [Французский](https://go.microsoft.com/fwlink/?linkid=2108815&clcid=0x40c) | [Немецкий](https://go.microsoft.com/fwlink/?linkid=2108815&clcid=0x407) | [Итальянский](https://go.microsoft.com/fwlink/?linkid=2108815&clcid=0x410) | [Японский](https://go.microsoft.com/fwlink/?linkid=2108815&clcid=0x411) | [Корейский](https://go.microsoft.com/fwlink/?linkid=2108815&clcid=0x412) | [Португальский (Бразилия)](https://go.microsoft.com/fwlink/?linkid=2108815&clcid=0x416) | [Русский](https://go.microsoft.com/fwlink/?linkid=2108815&clcid=0x419) | [Испанский](https://go.microsoft.com/fwlink/?linkid=2108815&clcid=0x40a)
+
+SqlPackage .NET Core Linux:  
+[Китайский (упрощенное письмо)](https://go.microsoft.com/fwlink/?linkid=2108814&clcid=0x804) | [Китайский (традиционное письмо)](https://go.microsoft.com/fwlink/?linkid=2108814&clcid=0x404) | [Английский (США)](https://go.microsoft.com/fwlink/?linkid=2108814&clcid=0x409) | [Французский](https://go.microsoft.com/fwlink/?linkid=2108814&clcid=0x40c) | [Немецкий](https://go.microsoft.com/fwlink/?linkid=2108814&clcid=0x407) | [Итальянский](https://go.microsoft.com/fwlink/?linkid=2108814&clcid=0x410) | [Японский](https://go.microsoft.com/fwlink/?linkid=2108814&clcid=0x411) | [Корейский](https://go.microsoft.com/fwlink/?linkid=2108814&clcid=0x412) | [Португальский (Бразилия)](https://go.microsoft.com/fwlink/?linkid=2108814&clcid=0x416) | [Русский](https://go.microsoft.com/fwlink/?linkid=2108814&clcid=0x419) | [Испанский](https://go.microsoft.com/fwlink/?linkid=2108814&clcid=0x40a)
 
 ## <a name="next-steps"></a>Next Steps
 

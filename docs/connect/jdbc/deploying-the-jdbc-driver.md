@@ -1,7 +1,7 @@
 ---
 title: Развертывание JDBC Driver | Документация Майкрософт
 ms.custom: ''
-ms.date: 08/12/2019
+ms.date: 10/28/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 3ad3508d-d9b1-47fb-a63b-21cdc3ed44e0
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 7e8b4655695d37db10d18fbaa6215587036017bf
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.openlocfilehash: 518f6bd2605d92857520f870b20edcd351771c54
+ms.sourcegitcommit: 4fb6bc7c81a692a2df706df063d36afad42816af
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69028110"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73049838"
 ---
 # <a name="deploying-the-jdbc-driver"></a>Развертывание JDBC Driver
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -51,7 +51,13 @@ ms.locfileid: "69028110"
  Чтобы распаковать TAR-файл, переместите его в каталог, в который нужно установить драйвер, и введите следующую команду:  
   
  `tar -xf sqljdbc_<version>_<language>.tar`  
-  
+
+## <a name="legalities-of-driver-redistribution"></a>Судебное распространение драйверов
+
+Драйверы JDBC версии 6,0, 6,2, 6,4 и 7,0 являются распространяемыми. В лицензионном соглашении ознакомьтесь с разделом _Распространяемый код_.
+
+Драйверы JDBC версии 4. x устарели и являются устаревшими. Срок действия поддержки 4. x истек до 2018.
+
 ## <a name="see-also"></a>См. также раздел  
  [Общие сведения о JDBC Driver](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   

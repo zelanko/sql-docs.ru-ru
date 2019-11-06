@@ -8,33 +8,29 @@ author: maggiesMSFT
 ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
-ms.date: 08/27/2019
-ms.openlocfilehash: 81c9af6b8d4b711c8e8511b94364bbe498470007
-ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
+ms.date: 10/30/2019
+ms.openlocfilehash: 0fea81e009d4d281c36d1882ac41835af609294b
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70123114"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73536284"
 ---
 # <a name="whats-new-in-sql-server-reporting-services-ssrs"></a>Новые возможности служб SQL Server Reporting Services (SSRS)
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../includes/ssrs-appliesto-not-pbirs.md)]
 
-Сведения о новых возможностях SQL Server [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Эта статья охватывает основные функциональные аспекты и обновляется по мере выпуска новых элементов.
-
-Заметки о текущем выпуске см. в разделе [Заметки о выпуске SQL Server 2017](../sql-server/sql-server-2017-release-notes.md). 
+Узнайте о новых возможностях различных версий SQL Server [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Эта статья охватывает основные функциональные аспекты и обновляется по мере выпуска новых элементов.
 
 Сведения о сервере отчетов Power BI см. в статье [Что такое сервер отчетов Power BI?](https://docs.microsoft.com/power-bi/report-server/get-started)
 
-**Загрузка** ![download](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png "download")
-
-Чтобы скачать службы SQL Server 2017 Reporting Services, перейдите в **[Центр загрузки Майкрософт](https://www.microsoft.com/download/details.aspx?id=55252)** .
-
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
 
-## <a name="sql-server-2019-reporting-services-preview"></a>Предварительная версия SQL Server 2019 Reporting Services
+## <a name="sql-server-2019-reporting-services"></a>SQL Server 2019 Reporting Services
 
-[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]Предварительный просмотр Reporting Services доступен для загрузки из [центра загрузки Майкрософт](https://www.microsoft.com/download/details.aspx?id=100122).
+**Скачать скачивание** ![](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png "скачиваемого файла")
+
+[SQL Server 2019 Reporting Services](https://www.microsoft.com/download/details.aspx?id=100122) можно загрузить в центре загрузки Майкрософт.
 
 ### <a name="azure-sql-managed-instance-support"></a>Поддержка Управляемого экземпляра SQL Azure
 
@@ -48,11 +44,27 @@ ms.locfileid: "70123114"
 
 При создании отчетов можно использовать подсказки для указания текста для каждого элемента отчета. Технология чтения с экрана правильно определяет эти подсказки.
 
+### <a name="azure-active-directory-application-proxy-support"></a>Поддержка Azure Active Directory Application Proxy
+
+С Azure Active Directory Application Proxy, вам больше не нужно управлять собственным прокси-сервером, чтобы обеспечить безопасный доступ через веб-приложения или мобильные приложения.
+
+### <a name="transparent-database-encryption"></a>Прозрачное шифрование данных
+
+SQL Server 2019 теперь поддерживает прозрачное шифрование базы данных каталога SSRS для выпусков Enterprise и Standard. 
+
+### <a name="microsoft-report-builder-update"></a>Обновление построителя отчетов (Майкрософт)
+
+Новая выпущенная версия построитель отчетов полностью совместима с версиями Reporting Services 2016, 2017 и 2019. Она также совместима со всеми выпущенными и поддерживаемыми версиями Сервер отчетов Power BI.
+
 ::: moniker-end
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
 
-## <a name="ssrs-2017"></a>SSRS 2017
+## <a name="sql-server-2017-reporting-services"></a>Службы SQL Server 2017 Reporting Services
+
+**Скачать скачивание** ![](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png "скачиваемого файла")
+
+Чтобы скачать службы SQL Server 2017 Reporting Services, перейдите в **[Центр загрузки Майкрософт](https://www.microsoft.com/download/details.aspx?id=55252)** .
 
 ### <a name="comments-on-reports"></a>Комментарии к отчетам
 
@@ -129,7 +141,7 @@ ms.locfileid: "70123114"
 
 [!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long.md)] позволяет создавать и публиковать мобильные отчеты SQL Server на [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
 
-![SS_MRP_LayoutTabSmall](../reporting-services/media/ss-mrp-layouttabsm.png "SS_MRP_LayoutTabSmall")  
+![SS_MRP_LayoutTabSmall](../reporting-services/media/ss-mrp-layouttabsm.png "|::ref4::|")  
 
 Дополнительные сведения см. в разделе [Создание мобильных отчетов с помощью издателя мобильных отчетов SQL Server](../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md).  
 
@@ -137,7 +149,7 @@ ms.locfileid: "70123114"
 
 Приложение Power BI Mobile для iOS на iPad и iPhone сейчас может отображать мобильные отчеты SQL Server, которые находятся на вашем локальном сервере отчетов.  
 
-![SS_MRP_iPad_HomeSm](../reporting-services/media/ss-mrp-ipad-homesm.png "SS_MRP_iPad_HomeSm")  
+![SS_MRP_iPad_HomeSm](../reporting-services/media/ss-mrp-ipad-homesm.png "|::ref5::|")  
 
 По умолчанию без внесения изменений в конфигурацию установить соединение будет невозможно. Дополнительные сведения о том, как разрешить приложению Power BI Mobile устанавливать соединение с сервером отчетов, см. в разделе [Enable a report server for Power BI Mobile access](../reporting-services/report-server/enable-a-report-server-for-power-bi-mobile-access.md).
 
@@ -165,7 +177,7 @@ ms.locfileid: "70123114"
 
 **Современные отчеты с разбиением на страницы:** новейшие стили для диаграмм, датчиков, карт и других средств визуального представления данных позволяют создавать удобные актуальные отчеты с разбивкой на страницы.
 
-**Диаграммы типа "дерево" и "солнечные лучи"** : улучшайте отчеты с помощью диаграмм "дерево" ![ssrs_treemap_icon](../reporting-services/media/ssrs-treemap-icon.png "ssrs_treemap_icon") и "солнечные лучи" ![ssrs_sunburst_icon](../reporting-services/media/ssrs-sunburst-icon.png "ssrs_sunburst_icon") для удобной визуализации иерархических данных. Дополнительные сведения см. в разделе [Tree Map and Sunburst Charts in Reporting Services](../reporting-services/report-design/tree-map-and-sunburst-charts-in-reporting-services.md).  
+**Диаграммы типа "дерево" и "солнечные лучи"** : улучшайте отчеты с помощью диаграмм "дерево" ![ssrs_treemap_icon](../reporting-services/media/ssrs-treemap-icon.png "|::ref6::|") и "солнечные лучи" ![ssrs_sunburst_icon](../reporting-services/media/ssrs-sunburst-icon.png "|::ref7::|") для удобной визуализации иерархических данных. Дополнительные сведения см. в разделе [Tree Map and Sunburst Charts in Reporting Services](../reporting-services/report-design/tree-map-and-sunburst-charts-in-reporting-services.md).  
 
 **Внедрение отчетов:** с помощью iframe и параметров URL-адреса вы можете внедрять мобильные отчеты и отчеты с разбиением по страницам в другие веб-страницы и приложения.  
 
@@ -175,7 +187,7 @@ ms.locfileid: "70123114"
 2. Выберите панель мониторинга, на которой требуется закрепить элемент.
 3. Выберите частоту обновления плитки на этой панели мониторинга.
 
-![примечание](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png "примечание") Обновлением управляют подписки служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], а после закрепления элемента можно изменить подписку и настроить другое расписание обновления.
+![Примечание.](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png "Примечание") Обновлением управляют подписки служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], а после закрепления элемента можно изменить подписку и настроить другое расписание обновления.
 
 ![ssRS_Pin_to_PowerBI](../reporting-services/media/ssrs-pin-to-powerbi.png) 
 
@@ -219,11 +231,11 @@ https://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freport
 |||  
 |-|-|  
 |Создать|Previous|  
-|![ssrs_rbfacelift_new](../reporting-services/media/ssrs-rbfacelift-new.png "ssrs_rbfacelift_new")|![ssrs_rbfacelift_old](../reporting-services/media/ssrs-rbfacelift-old.png "ssrs_rbfacelift_old")|  
+|![ssrs_rbfacelift_new](../reporting-services/media/ssrs-rbfacelift-new.png "|::ref9::|")|![ssrs_rbfacelift_old](../reporting-services/media/ssrs-rbfacelift-old.png "|::ref10::|")|  
 
 **Панель пользовательских параметров** : сейчас можно настраивать панель параметров. С помощью области конструктора в построителе отчетов параметр можно перетащить в конкретный столбец и строку на панели параметров. Для изменения макета панели столбцы можно добавлять и удалять. Дополнительные сведения см. в разделах [Настройка области параметров в отчете (построитель отчетов)](../reporting-services/report-design/customize-the-parameters-pane-in-a-report-report-builder.md).  
 
-![Список параметров в области "Данные отчета" и в области параметров](../reporting-services/media/ssrs-customizeparameter-parameterlist-reportdatapane.png "Список параметров в области \"Данные отчета\" и в области параметров")  
+![Список параметров в области данных отчета и на панели «Параметры»](../reporting-services/media/ssrs-customizeparameter-parameterlist-reportdatapane.png "|::ref11::|")  
 
 **Поддержка высокого разрешения**: [!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)] поддерживает масштабирование с высоким разрешением (DPI; точек на дюйм) и соответствующие устройства.  Дополнительные сведения о высоком разрешении см. в следующих разделах:  
 

@@ -28,12 +28,12 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 01/14/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: facd5fe78ae3dd20390e9510a47e914dd6d3945e
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 0f9081562a0cb0f8ddba663f04305c7bd2b387fe
+ms.sourcegitcommit: d65cef35cdf992297496095d3ad76e3c18c9794a
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71708713"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72989568"
 ---
 # <a name="bcp-utility"></a>Программа bcp
 
@@ -45,7 +45,7 @@ ms.locfileid: "71708713"
 
 Служебная программа "**b**ulk **c**opy **p**rogram" (**bcp**) используется для массового копирования данных между экземпляром [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и файлом данных в указанном пользователем формате. С помощью программы **bcp** можно выполнять импорт большого количества новых строк в таблицы [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] или экспорт данных из таблиц в файлы данных. За исключением случаев использования параметра **queryout** , применение программы не требует знания языка [!INCLUDE[tsql](../includes/tsql-md.md)]. Чтобы выполнить импорт данных в таблицу, необходимо или использовать файл форматирования, созданный для этой таблицы, либо изучить структуру таблицы и типов данных, допустимых для ее столбцов.  
 
-![Topic link icon](../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел")Сведения о синтаксических обозначениях в программе **bcp** см. в разделе [Синтаксические обозначения в Transact-SQL (Transact-SQL)](../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
+![Значок ссылки на раздел](../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") Сведения о синтаксических обозначениях в **bcp** см. в разделе [Синтаксические обозначения в Transact-SQL (Transact-SQL)](../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
 
 > [!NOTE]
 > При использовании программы **bcp** для резервного копирования данных создайте файл форматирования для записи формата данных. Файлы данных**bcp**  **не включают** сведения о схеме или формате, поэтому при удалении таблицы или представления, если отсутствует файл форматирования, импорт данных будет невозможен.
@@ -68,11 +68,11 @@ ms.locfileid: "71708713"
 
 ### <a name="system-requirements"></a>Требования к системе
 
-Windows 10, Windows 7, Windows 8, Windows 8.1, Windows Server 2008, Windows Server 2008 R2, Windows Server 2008 R2 с пакетом обновления 1 (SP1), Windows Server 2012, Windows Server 2012 R2
+Windows 10, Windows 7, Windows 8, Windows 8.1, Windows Server 2008, Windows Server 2008 R2, Windows Server 2008 R2 с пакетом обновления 1 (SP1), Windows Server 2012, Windows Server 2012 R2, Windows Server 2016
 
 Этот компонент требует наличия [установщика Windows версии 4.5](https://www.microsoft.com/download/details.aspx?id=8483) и [драйвера Microsoft ODBC 17.3 для SQL Server](https://www.microsoft.com/download/details.aspx?id=56567).
 
-Чтобы проверить, используется ли команда BCP версии Execute `bcp /v`, убедитесь, что 15.0.1000.34 или более поздняя версия.
+Чтобы проверить выполнение команды BCP версии Execute `bcp /v` и убедиться, что используется 15.0.1000.34 или более поздняя версия.
 
 <table><th>Синтаксис</th><tr><td><pre>
 bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a href="#tbl_name">table_name</a> | <a href="#vw_name">view_name</a> | <a href="#query">"query"</a>}
@@ -177,7 +177,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
  **-d** _**имя\_базы данных**_ <a name="d"></a>   
  Указывает базу данных, с которой надо соединиться. По умолчанию программа bcp.exe соединяется с пользовательской базой данных по умолчанию. Если задано значение * *-d database_name и имя из трех частей (имя_базы_данных. Schema. Table, переданное в качестве первого параметра в bcp. exe), возникнет ошибка, так как нельзя указать имя базы данных дважды. Если параметр *database_name* начинается с дефиса (-) или косой черты (/), не ставьте пробел между **-d** и именем базы данных.  
   
- **-e**  _**Err \_file**_ <a name="e"></a>  
+ **-e**  _**Ошибка\_файл**_ <a name="e"></a>  
  Указывает полный путь к файлу ошибок, используемому для хранения строк, которые служебная программа **bcp** не может передать из файла в базу данных. Сообщения об ошибках команды **bcp** поступают на рабочую станцию пользователя. Если этот параметр не используется, то файл ошибок не создается.  
   
  Если параметр *err_file* начинается с дефиса (-) или косой черты (/), не ставьте пробел между **-e** и значением *err_file* .  
@@ -214,7 +214,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 > Интегрированная и интерактивная проверка подлинности AAD в настоящее время не поддерживается в Linux или macOS.
 
 > [!TIP]
->  Чтобы проверить, поддерживает ли ваша версия программы bcp тип Azure Active Directory Authentication (AAD), **bcp--** (BCP \<space > \<dash > \<dash >) и убедитесь, что в списке доступных аргументов отображается-G.
+>  Чтобы проверить, поддерживает ли ваша версия программы **bcp тип Azure Active Directory Authentication (AAD** ), (BCP\<space >\<тире >\<тире >) и убедитесь, что в списке доступных аргументов отображается-G.
 
 - **Имя пользователя и пароль Azure Active Directory** 
 
@@ -225,7 +225,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
     bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com -P xxxxx
     ``` 
 
-    В следующем примере данные импортируются с помощью имени пользователя и пароля Azure AD, где пользователь и пароль являются учетными данными AAD. Пример импортирует данные из файла `c:\last\data1.dat` в таблицу `bcptest` для базы данных `testdb` на сервере Azure `aadserver.database.windows.net` с помощью пользователя или пароля Azure AD:
+    В следующем примере данные импортируются с помощью имени пользователя и пароля Azure AD, где пользователь и пароль являются учетными данными AAD. В примере данные из файла `c:\last\data1.dat`ся в таблицу `bcptest` для `testdb` базы данных на сервере Azure `aadserver.database.windows.net` с помощью пользователя или пароля Azure AD:
     ```
     bcp bcptest in "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com -P xxxxx
     ```
@@ -234,13 +234,13 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 
     Чтобы использовать встроенную проверку подлинности Azure Active Directory, укажите параметр **-G** без имени пользователя или пароля. В этой конфигурации предполагается, что текущая учетная запись пользователя Windows (учетная запись, под которой выполняется команда bcp) — это федеративный с Azure AD: 
 
-    В следующем примере данные экспортируются с помощью учетной записи, интегрированной с Azure AD. Пример экспортирует таблицу `bcptest` из базы данных `testdb` с помощью Azure AD, интегрированной с сервера Azure `aadserver.database.windows.net`, и сохраняет данные в файле `c:\last\data2.dat`:
+    В следующем примере данные экспортируются с помощью учетной записи, интегрированной с Azure AD. В примере экспортируется таблица `bcptest` из базы данных `testdb` используя Azure AD, интегрированную с сервером Azure `aadserver.database.windows.net` и сохраняющая данные в файле `c:\last\data2.dat`:
 
     ```
     bcp bcptest out "c:\last\data2.dat" -S aadserver.database.windows.net -d testdb -G -c -t
     ```
 
-    В следующем примере выполняется импорт данных с помощью встроенной проверки подлинности Azure AD. Пример импортирует данные из файла `c:\last\data2.txt` в таблицу `bcptest` для базы данных `testdb` на сервере Azure `aadserver.database.windows.net` с помощью интегрированной проверки подлинности Azure AD:
+    В следующем примере выполняется импорт данных с помощью встроенной проверки подлинности Azure AD. В примере данные из файла `c:\last\data2.txt`ся в таблицу `bcptest` для `testdb` базы данных на сервере Azure `aadserver.database.windows.net` с помощью интегрированной проверки подлинности Azure AD:
 
     ```
     bcp bcptest in "c:\last\data2.dat" -S aadserver.database.windows.net -d testdb -G -c -t
@@ -347,7 +347,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
   
  Это предупреждение можно пропустить. Одним из способов его устранения является применение аргумента командной строки **-n** вместо **-N**.  
   
- **-o**  _**Output \_file**_ <a name="o"></a>  
+ **-o**  _**выходной файл\_**_ <a name="o"></a>  
  Указывает имя файла, который принимает перенаправленные из командной строки выходные данные.  
   
  Если параметр *output_file* начинается с дефиса (-) или косой черты (/), не ставьте пробел между **-e** и значением *output_file* .  
@@ -371,7 +371,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
   
  Дополнительные сведения см. в подразделе " [Примечания](#remarks)" ниже.  
   
- **-r**  _**Row \_term**_ <a name="r"></a>  
+ **-r**  _**строка\_термин**_ <a name="r"></a>  
  Указывает признак конца строки. Значением по умолчанию является **\n** (символ перевода строки). Используйте этот параметр, чтобы переопределить признак конца строки по умолчанию. Дополнительные сведения см. в разделе [Определение признаков конца поля и строки (SQL Server)](../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md).  
   
  Если в команде bcp.exe указан признак конца строки в шестнадцатеричном виде, то значение будет усечено до 0x00. Например, если указать значение 0x410041, то будет использовано значение 0x41.  
@@ -383,7 +383,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
   
  **-S** _**имя\_сервера**_ [\\ _**имя\_экземпляра**_ ]<a name="S"></a> — указывает экземпляр [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], к которому выполняется подключение. Если сервер не указан, программа **bcp** выполняет подключение к экземпляру [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] по умолчанию на локальном компьютере. Этот параметр необходим, если команда **bcp** выполняется с удаленного компьютера в сети или с локального именованного экземпляра. Чтобы подключиться к экземпляру по умолчанию [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] на сервере, укажите только *server_name*. Чтобы подключиться к именованному экземпляру [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], укажите _имя\_сервера_ **\\** _имя\_экземпляра_.  
   
- **-t**  _**field \_erm**_ <a name="t"></a>  
+ **-t**  _**поле\_термин**_ <a name="t"></a>  
  Указывает признак конца поля. Значением по умолчанию является **\t** (символ табуляции). Используйте этот параметр, чтобы переопределить признак конца поля по умолчанию. Дополнительные сведения см. в разделе [Определение признаков конца поля и строки (SQL Server)](../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md).  
   
  Если в команде bcp.exe указан признак конца поля в шестнадцатеричном виде, то значение будет усечено до 0x00. Например, если указать значение 0x410041, то будет использовано значение 0x41.  
