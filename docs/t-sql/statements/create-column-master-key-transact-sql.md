@@ -1,7 +1,7 @@
 ---
 title: CREATE COLUMN MASTER KEY (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 09/24/2018
+ms.date: 10/15/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -24,19 +24,19 @@ helpviewer_keywords:
 - CREATE COLUMN MASTER KEY statement
 - Always Encrypted, create column master key
 ms.assetid: f8926b95-e146-4e3f-b56b-add0c0d0a30e
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 9b0c03e6d4c7d938336d1287bd190433f7588ff2
-ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
+author: jaszymas
+ms.author: jaszymas
+ms.openlocfilehash: cd6148499c6e9d906d0077632001d3fe32ce9cc3
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73064565"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593897"
 ---
 # <a name="create-column-master-key-transact-sql"></a>CREATE COLUMN MASTER KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-Создает объект метаданных главного ключа столбца в базе данных. Элемент метаданных главного ключа столбца представляет ключ, хранящийся во внешнем хранилище ключей. Этот ключ защищает (шифрует) ключи шифрования столбца, если вы используете компонент [&#40;Database Engine&#41; Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md). Использование нескольких главных ключей столбца позволяет регулярно сменять их для повышения безопасности. Создайте главный ключ столбца в хранилище ключей и связанный с ним объект метаданных в базе данных с помощью обозревателя объектов в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или с помощью PowerShell. Подробные сведения см. в статье [Общие сведения об управлении ключами для постоянного шифрования](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md).  
+Создает объект метаданных главного ключа столбца в базе данных. Элемент метаданных главного ключа столбца представляет ключ, хранящийся во внешнем хранилище ключей. Ключ защищает (шифрует) ключи шифрования столбцов, когда вы используете [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md) или [Always Encrypted с безопасными анклавами](../../relational-databases/security/encryption/always-encrypted-enclaves.md). Использование нескольких главных ключей столбца позволяет регулярно сменять их для повышения безопасности. Создайте главный ключ столбца в хранилище ключей и связанный с ним объект метаданных в базе данных с помощью обозревателя объектов в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или с помощью PowerShell. Подробные сведения см. в статье [Общие сведения об управлении ключами для постоянного шифрования](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md).  
   
 ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
  
@@ -46,7 +46,7 @@ ms.locfileid: "73064565"
 
 ## <a name="syntax"></a>Синтаксис  
 
-```  
+``` sql 
 CREATE COLUMN MASTER KEY key_name   
     WITH (  
         KEY_STORE_PROVIDER_NAME = 'key_store_provider_name',  
@@ -72,9 +72,7 @@ CREATE COLUMN MASTER KEY key_name
   
 Библиотеки драйвера клиента с поддержкой Always Encrypted включают в себя поставщики хранилища ключей для распространенных хранилищ ключей.   
   
-Набор доступных поставщиков зависит от типа и версии драйвера клиента. Сведения о конкретных драйверах см. в документации по Always Encrypted:
-
-[Разработка приложений с использованием функции Always Encrypted и поставщика .NET Framework для SQL Server](../../relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider.md)
+Набор доступных поставщиков зависит от типа и версии драйвера клиента. Сведения о конкретных драйверах см. в документации по Always Encrypted: [Разработка приложений с помощью Always Encrypted](../../relational-databases/security/encryption/always-encrypted-client-development.md).
 
 
 В следующей таблице показаны имена системных поставщиков.  
@@ -84,7 +82,8 @@ CREATE COLUMN MASTER KEY key_name
     |'MSSQL_CERTIFICATE_STORE'|Хранилище сертификатов Windows| 
     |'MSSQL_CSP_PROVIDER'|Хранилище, например аппаратный модуль безопасности (HSM), которое поддерживает интерфейс Microsoft CryptoAPI.|
     |'MSSQL_CNG_STORE'|Хранилище, например аппаратный модуль безопасности (HSM), с поддержкой API шифрования следующего поколения.|  
-    |'Azure_Key_Vault'|См. статью [Приступая к работе с хранилищем ключей Azure](https://azure.microsoft.com/documentation/articles/key-vault-get-started/).|  
+    |AZURE_KEY_VAULT|См. статью [Приступая к работе с хранилищем ключей Azure](https://azure.microsoft.com/documentation/articles/key-vault-get-started/).|  
+    |MSSQL_JAVA_KEYSTORE| Хранилище ключей Java.}
   
 
 Вы можете настроить пользовательский поставщик хранилища ключей в драйвере клиента Always Encrypted, чтобы хранить главные ключи столбцов, для которых нет встроенного поставщика хранилища ключей. Обратите внимание на то, что имена пользовательских поставщиков хранилища ключей не могут начинаться с префикса MSSQL_, так как он зарезервирован для поставщиков хранилищ ключей [!INCLUDE[msCoName](../../includes/msconame-md.md)]. 
@@ -172,6 +171,7 @@ ENCLAVE_COMPUTATIONS
 
 Элемент метаданных главного ключа столбца следует создать, прежде чем создавать элемент метаданных ключа шифрования столбца в базе данных и применять Always Encrypted для шифрования столбцов в базе данных. Элемент главного ключа столбца в метаданных не содержит фактического значения главного ключа столбца. Главный ключ столбца должен храниться во внешнем хранилище ключей столбца (за пределами SQL Server). Имя поставщика хранилища ключей и путь к главному ключу столбца в метаданных должны быть допустимыми для клиентского приложения. Клиентскому приложению следует использовать главный ключ столбца для расшифровки ключа шифрования столбца. Ключ шифрования столбца шифруется с помощью главного ключа столбца. Клиентскому приложению также нужно выполнять запросы по зашифрованным столбцам.
 
+Для управления главным ключами столбцов рекомендуется использовать такие средства, как SQL Server Management Studio (SSMS) или PowerShell. Такие средства создают подписи (если используется Always Encrypted с безопасными анклавами) и автоматически выдают инструкции `CREATE COLUMN MASTER KEY` для создания объектов метаданных ключа шифрования столбцов. См. разделы [Подготовка ключей Always Encrypted с помощью SQL Server Management Studio](../../relational-databases/security/encryption/configure-always-encrypted-keys-using-ssms.md) и [Подготовка ключей Always Encrypted с помощью PowerShell](../../relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell.md). 
 
   
 ## <a name="permissions"></a>Разрешения  
@@ -182,7 +182,7 @@ ENCLAVE_COMPUTATIONS
 ### <a name="a-creating-a-column-master-key"></a>A. Создание главного ключа столбца  
 Следующий пример создает элемент метаданных главного ключа столбца для главного ключа столбца. Главный ключ столбца сохраняется в хранилище сертификатов, чтобы предоставить доступ к нему клиентским приложениям, которые используют поставщик MSSQL_CERTIFICATE_STORE.  
   
-```  
+```sql  
 CREATE COLUMN MASTER KEY MyCMK  
 WITH (  
      KEY_STORE_PROVIDER_NAME = N'MSSQL_CERTIFICATE_STORE',   
@@ -247,6 +247,8 @@ WITH (
 * [DROP COLUMN MASTER KEY (Transact-SQL)](../../t-sql/statements/drop-column-master-key-transact-sql.md)   
 * [CREATE COLUMN ENCRYPTION KEY (Transact-SQL)](../../t-sql/statements/create-column-encryption-key-transact-sql.md)
 * [sys.column_master_keys (Transact-SQL)](../../relational-databases/system-catalog-views/sys-column-master-keys-transact-sql.md)
-* [Постоянное шифрование (компонент Database Engine)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)  
-* [Общие сведения об управлении ключами для постоянного шифрования](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)
+* [Постоянное шифрование](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
+* [Always Encrypted с безопасными анклавами](../../relational-databases/security/encryption/always-encrypted-enclaves.md)   
+* [Общие сведения об управлении ключами для постоянного шифрования](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)   
+* [Управление ключами для Always Encrypted с безопасными анклавами](../../relational-databases/security/encryption/always-encrypted-enclaves-manage-keys.md)   
   

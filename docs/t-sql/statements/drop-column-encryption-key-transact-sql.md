@@ -1,7 +1,7 @@
 ---
 title: DROP COLUMN ENCRYPTION KEY (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 06/02/2016
+ms.date: 10/15/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -18,14 +18,14 @@ helpviewer_keywords:
 - DROP COLUMN ENCRYPTION KEY statement
 - column encryption key, drop
 ms.assetid: 86415302-1383-4d36-9fc7-f780831a2d37
-author: VanMSFT
-ms.author: vanto
-ms.openlocfilehash: 04c8689780ce03a634d81c9951b3f12c96de5723
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: jaszymas
+ms.author: jaszymas
+ms.openlocfilehash: 4141a205028b22bfd627e2660b057879b5982250
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67898234"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73594308"
 ---
 # <a name="drop-column-encryption-key-transact-sql"></a>DROP COLUMN ENCRYPTION KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -61,10 +61,13 @@ DROP COLUMN ENCRYPTION KEY MyCEK;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Always Encrypted (ядро СУБД)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
+## <a name="see-also"></a>См. также:  
  [CREATE COLUMN ENCRYPTION KEY (Transact-SQL)](../../t-sql/statements/create-column-encryption-key-transact-sql.md)   
  [ALTER COLUMN ENCRYPTION KEY (Transact-SQL)](../../t-sql/statements/alter-column-encryption-key-transact-sql.md)   
  [CREATE COLUMN MASTER KEY (Transact-SQL)](../../t-sql/statements/create-column-master-key-transact-sql.md)  
+ [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
+ [Always Encrypted с безопасными анклавами](../../relational-databases/security/encryption/always-encrypted-enclaves.md)   
+ [Общие сведения об управлении ключами для Always Encrypted](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)   
+ [Управление ключами для Always Encrypted с безопасными анклавами](../../relational-databases/security/encryption/always-encrypted-enclaves-manage-keys.md)   
   
   

@@ -4,24 +4,30 @@ titleSuffix: SQL Server
 description: Установка, обновление и удаление SQL Server на Linux. В этой статье рассматриваются сценарии сетевой, автономной и автоматической установки.
 author: VanMSFT
 ms.author: vanto
-ms.date: 05/28/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sqlfreshmay19
 ms.technology: linux
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
-ms.openlocfilehash: 7f4b2aa37b20cceaa3269527c95bfa97a2daa311
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: a6cd31b1f67d37f1316db9db5d4356bbb5e31d3b
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68032429"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593665"
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>Руководство по установке SQL Server на Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-В этой статье приводятся инструкции по установке, обновлению и удалению предварительных версий SQL Server 2017 и SQL Server 2019 на Linux.
+В этой статье приводятся инструкции по установке, обновлению и удалению SQL Server 2017 и SQL Server 2019 на Linux.
+
+Дополнительные сведения о других сценариях развертывания см. в следующих источниках:
+
+- [Windows](../database-engine/install-windows/install-sql-server.md)
+- [Контейнеры Docker](../linux/sql-server-linux-configure-docker.md)
+- [Kubernetes — кластеры больших данных](../big-data-cluster/deploy-get-started.md)
 
 > [!TIP]
 > Здесь рассматривается несколько сценариев развертывания. Если вам нужны пошаговые инструкции по установке, перейдите к одному из приведенных далее кратких руководств.
@@ -34,7 +40,10 @@ ms.locfileid: "68032429"
 
 ## <a id="supportedplatforms"></a> Поддерживаемые платформы
 
-SQL Server 2017 поддерживается на платформах Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES) и Ubuntu. Он также поддерживается в виде образа Docker, который можно запускать в подсистеме Docker в Linux или Docker для Windows или Mac.
+SQL Server поддерживается на платформах Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES) и Ubuntu. Он также поддерживается в виде образа Docker, который можно запускать в подсистеме Docker в Linux или Docker для Windows или Mac.
+
+<!--SQL Server 2017 on Linux-->
+::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
 | Платформа | Поддерживаемые версии | Получить
 |-----|-----|-----
@@ -43,6 +52,20 @@ SQL Server 2017 поддерживается на платформах Red Hat E
 | **Ubuntu** | 16.04 | [Получить Ubuntu 16.04](http://releases.ubuntu.com/xenial/)
 | **Подсистема Docker** | 1.8 и выше | [Получить Docker](https://www.docker.com/get-started)
 
+::: moniker-end
+
+<!--SQL Server 2019 on Linux-->
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+
+| Платформа | Поддерживаемые версии | Получить
+|-----|-----|-----
+| **Red Hat Enterprise Linux** | 7.3, 7.4, 7.5, 7.6 | [Получить RHEL 7.6](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation)
+| **SUSE Linux Enterprise Server** | v12 SP2, SP3, SP4 | [Получить SLES v12](https://www.suse.com/products/server)
+| **Ubuntu** | 16.04 | [Получить Ubuntu 16.04](http://releases.ubuntu.com/xenial/)
+| **Подсистема Docker** | 1.8 и выше | [Получить Docker](https://www.docker.com/get-started)
+
+::: moniker-end
+
 Корпорация Майкрософт также поддерживает развертывание контейнеров SQL Server и управление ими с помощью OpenShift и Kubernetes.
 
 > [!NOTE]
@@ -50,7 +73,7 @@ SQL Server 2017 поддерживается на платформах Red Hat E
 
 ## <a id="system"></a> Требования к системе
 
-Ниже перечислены требования к системе для установки SQL Server 2017 на Linux.
+Ниже перечислены требования к системе для установки SQL Server на Linux:
 
 |||
 |-----|-----|
@@ -69,23 +92,22 @@ SQL Server 2017 поддерживается на платформах Red Hat E
 
 ## <a id="repositories"></a> Настройка исходных репозиториев
 
-При установке или обновлении SQL Server вы получите последнюю версию SQL Server из настроенного репозитория Майкрософт. В кратких руководствах используется репозиторий накопительного обновления **CU** SQL Server 2017. Но вместо него можно настроить репозиторий **GDR** или репозиторий **предварительной версии (vNext)** . Дополнительные сведения о репозиториях и их настройке см. в статье [Настройка репозиториев для установки и обновления SQL Server на Linux.](sql-server-linux-change-repo.md)
+При установке или обновлении SQL Server вы получите последнюю версию SQL Server из настроенного репозитория Майкрософт. В кратких руководствах используется репозиторий накопительного обновления **CU** для SQL Server. Но вместо этого можно настроить репозиторий **GDR**. Дополнительные сведения о репозиториях и их настройке см. в статье [Настройка репозиториев для установки и обновления SQL Server на Linux.](sql-server-linux-change-repo.md)
 
-## <a id="platforms"></a> Установка SQL Server 2017
+## <a id="platforms"></a> Установка SQL Server
 
-Вы можете установить SQL Server 2017 на Linux из командной строки. Пошаговые инструкции см. в следующих кратких руководствах.
+Вы можете установить SQL Server 2017 или SQL Server 2019 на Linux из командной строки. Пошаговые инструкции см. в следующих кратких руководствах.
 
-- [Установка в Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
-- [Установка в SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
-- [Установка в Ubuntu](quickstart-install-connect-ubuntu.md)
-- [Запуск в Docker](quickstart-install-connect-docker.md)
-- [Подготовка виртуальной машины SQL в Azure](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=/sql/toc/toc.json)
+| Платформа | Краткие руководства по установке |
+|---|---|
+| Red Hat Enterprise Linux (RHEL) | [2017](quickstart-install-connect-red-hat.md?view=sql-server-2017) \| [2019](quickstart-install-connect-red-hat.md?view=sql-server-linux-ver15) |
+| SUSE Linux Enterprise Server (SLES) | [2017](quickstart-install-connect-suse.md?view=sql-server-2017) \| [2019](quickstart-install-connect-suse.md?view=sql-server-linux-ver15) |
+| Ubuntu | [2017](quickstart-install-connect-ubuntu.md?view=sql-server-2017) \| [2019](quickstart-install-connect-ubuntu.md?view=sql-server-linux-ver15) |
+| Docker | [2017](quickstart-install-connect-docker.md?view=sql-server-2017) \| [2019](quickstart-install-connect-docker.md?view=sql-server-linux-ver15) |
+
+Вы также можете запустить SQL Server на Linux на виртуальной машине Azure. Дополнительные сведения см. в статье [Подготовка виртуальной машины SQL в Azure](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=/sql/toc/toc.json).
 
 После установки рекомендуется внести дополнительные изменения в конфигурацию для достижения оптимальной производительности. Дополнительные сведения см. в статье [Рекомендации по производительности и конфигурации для SQL Server на Linux](sql-server-linux-performance-best-practices.md).
-
-## <a id="sqlvnext"></a> Установка предварительной версии SQL Server 2019
-
-Для установки предварительной версии SQL Server 2019 на Linux можно использовать ссылки на краткие руководства, приведенные в предыдущем разделе. Однако вместо репозитория **CU** необходимо зарегистрировать репозиторий **предварительной версии (vNext)** . Инструкции по выполнению этой задачи приведены в кратком руководстве.  
 
 ## <a id="upgrade"></a> Обновление SQL Server
 
@@ -99,8 +121,7 @@ SQL Server 2017 поддерживается на платформах Red Hat E
 
 Эти команды скачивают новейшие пакеты и заменяют двоичные файлы, расположенные в папке `/opt/mssql/`. Эта операция не влияет на созданные пользователем базы данных и системные базы данных.
 
-> [!TIP]
-> Если вы [изменили настроенный репозиторий](sql-server-linux-change-repo.md), команда **update** может обновить версию SQL Server. Это происходит только в том случае, если два репозитория поддерживают этот вариант обновления.
+Чтобы обновить SQL Server, сначала [измените настроенный репозиторий](sql-server-linux-change-repo.md) на нужную версию SQL Server. Затем используйте ту же команду **update**, чтобы обновить версию SQL Server. Это возможно только в том случае, если два репозитория поддерживают этот вариант обновления.
 
 ## <a id="rollback"></a> Откат SQL Server
 
@@ -117,7 +138,7 @@ SQL Server 2017 поддерживается на платформах Red Hat E
    | Ubuntu | `sudo apt-get install mssql-server=<version_number>`<br/>`sudo systemctl start mssql-server` |
 
 > [!NOTE]
-> Поддерживается только переход на использование более раннего выпуска с тем же основным номером версии, например SQL Server 2017.
+> Поддерживается только переход на использование более раннего выпуска с тем же основным номером версии, например SQL Server 2019.
 
 ## <a id="versioncheck"></a> Проверка установленной версии SQL Server
 

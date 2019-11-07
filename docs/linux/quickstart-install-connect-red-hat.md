@@ -4,17 +4,17 @@ titleSuffix: SQL Server
 description: В этом кратком руководстве описано, как установить SQL Server 2017 или SQL Server 2019 в Red Hat Enterprise Linux, а затем создать базу данных и выполнить к ней запрос с помощью средства sqlcmd.
 author: VanMSFT
 ms.author: vanto
-ms.date: 07/16/2018
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 92503f59-96dc-4f6a-b1b0-d135c43e935e
-ms.openlocfilehash: 38df65ffefbc0ed264d631214025059449d84b35
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: b94ea0ef8956e7807f075da548ae817dc6a205df
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67910503"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73531366"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-red-hat"></a>Краткое руководство. Установка SQL Server и создание базы данных в Red Hat
 
@@ -29,12 +29,12 @@ ms.locfileid: "67910503"
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-В этом кратком руководстве вы установите предварительную версию SQL Server 2019 в Red Hat Enterprise Linux (RHEL) 7.3+. Затем вы подключитесь с помощью **sqlcmd** для создания первой базы данных и выполнения запросов.
+В этом кратком руководстве вы установите SQL Server 2019 в Red Hat Enterprise Linux (RHEL) 7.3 и более поздних версий. Затем вы подключитесь с помощью **sqlcmd** для создания первой базы данных и выполнения запросов.
 
 ::: moniker-end
 
 > [!TIP]
-> Для выполнения этого руководства требуется ввод данных пользователем и подключение к Интернету. Если вас интересуют процедуры [автоматической](sql-server-linux-setup.md#unattended) или [автономной](sql-server-linux-setup.md#offline) установки, см. [руководство по установке SQL Server на Linux](sql-server-linux-setup.md).
+> Для выполнения этого руководства требуется ввод данных пользователем и подключение к Интернету. Если вас интересуют процедуры [автоматической](sql-server-linux-setup.md#unattended) или [автономной](sql-server-linux-setup.md#offline) установки, см. [руководство по установке SQL Server на Linux](sql-server-linux-setup.md).
 
 ## <a name="prerequisites"></a>предварительные требования
 
@@ -42,7 +42,7 @@ ms.locfileid: "67910503"
 
 Чтобы установить Red Hat Enterprise Linux на собственном компьютере, перейдите на страницу [https://access.redhat.com/products/red-hat-enterprise-linux/evaluation](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation). Можно также создать виртуальные машины RHEL в Azure. См. статью [Создание виртуальных машин Linux и управление ими с помощью Azure CLI](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm) и используйте параметр `--image RHEL` в вызове `az vm create`.
 
-Если вы ранее установили выпуск CTP или RC сервера SQL Server 2017, необходимо удалить старый репозиторий, прежде чем выполнять эти действия. Дополнительные сведения см. в статье [Настройка репозиториев Linux для SQL Server 2017 и 2019](sql-server-linux-change-repo.md).
+Если вы ранее установили выпуск CTP или RC сервера SQL Server, необходимо удалить старый репозиторий, прежде чем выполнять эти действия. Дополнительные сведения см. в статье [Настройка репозиториев Linux для SQL Server 2017 и 2019](sql-server-linux-change-repo.md).
 
 Другие требования к системе см. в разделе [Требования к системе для SQL Server на Linux](sql-server-linux-setup.md#system).
 
@@ -60,13 +60,13 @@ ms.locfileid: "67910503"
    ```
 
    > [!TIP]
-   > Если вы хотите опробовать SQL Server 2019, необходимо зарегистрировать вместо этого репозиторий **предварительной версии (2019)** . Используйте следующую команду для установки SQL Server 2019.
+   > Если вы хотите установить SQL Server 2019, необходимо зарегистрировать вместо этого репозиторий SQL Server 2019. Используйте следующую команду для установки SQL Server 2019:
    >
    > ```bash
-   > sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-preview.repo
+   > sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2019.repo
    > ```
 
-2. Выполните следующие команды для установки SQL Server.
+2. Выполните следующие команды для установки SQL Server:
 
    ```bash
    sudo yum install -y mssql-server
@@ -82,7 +82,7 @@ ms.locfileid: "67910503"
    > Следующие выпуски SQL Server 2017 имеют бесплатные лицензии: Evaluation, Developer и Express.
 
    > [!NOTE]
-   > Для учетной записи системного администратора необходимо установить надежный пароль (минимальная длина — 8 символов; должен содержать строчные и прописные буквы, десятичные цифры и/или символы, отличные от букв и цифр).
+   > Для учетной записи системного администратора необходимо установить надежный пароль (минимальная длина — 8 символов; должен содержать строчные и прописные буквы, десятичные цифры и (или) символы, отличные от букв и цифр).
 
 4. По завершении настройки убедитесь в том, что служба работает.
 
@@ -107,13 +107,13 @@ ms.locfileid: "67910503"
 
 Чтобы настроить SQL Server в RHEL, выполните следующие команды в терминале для установки пакета **mssql-server**.
 
-1. Скачайте файл конфигурации репозитория Red Hat для предварительной версии Microsoft SQL Server 2019.
+1. Скачайте файл конфигурации репозитория Microsoft SQL Server 2019 Red Hat:
 
    ```bash
-   sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-preview.repo
+   sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2019.repo
    ```
 
-2. Выполните следующие команды для установки SQL Server.
+2. Выполните следующие команды для установки SQL Server:
 
    ```bash
    sudo yum install -y mssql-server
@@ -126,7 +126,7 @@ ms.locfileid: "67910503"
    ```
 
    > [!NOTE]
-   > Для учетной записи системного администратора необходимо установить надежный пароль (минимальная длина — 8 символов; должен содержать строчные и прописные буквы, десятичные цифры и/или символы, отличные от букв и цифр).
+   > Для учетной записи системного администратора необходимо установить надежный пароль (минимальная длина — 8 символов; должен содержать строчные и прописные буквы, десятичные цифры и (или) символы, отличные от букв и цифр).
 
 4. По завершении настройки убедитесь в том, что служба работает.
 
@@ -141,7 +141,7 @@ ms.locfileid: "67910503"
    sudo firewall-cmd --reload
    ```
 
-В результате предварительная версия сервера SQL Server 2019 будет запущена на компьютере RHEL и готова к использованию!
+В результате сервер SQL Server 2019 будет запущен на компьютере RHEL и готов к использованию!
 
 ::: moniker-end
 

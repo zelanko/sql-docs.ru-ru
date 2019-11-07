@@ -3,17 +3,17 @@ title: Настройка репозиториев Linux для SQL Server 201
 description: Проверьте и настройте репозитории исходного кода для SQL Server 2019 и SQL Server 2017 в Linux. Репозиторий исходного кода влияет на версию SQL Server, используемую во время установки и обновления.
 author: VanMSFT
 ms.author: vanto
-ms.date: 02/11/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 zone_pivot_groups: ld2-linux-distribution
-ms.openlocfilehash: 33616b9a7767156e4cfd69d233f7dcfe5fc080f6
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: b71078e0d1d6af9bd35f248e8bbc324ac5c0e570
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67967522"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73531333"
 ---
 # <a name="configure-repositories-for-installing-and-upgrading-sql-server-on-linux"></a>Настройка репозиториев для установки и обновления SQL Server на Linux
 
@@ -32,24 +32,25 @@ ms.locfileid: "67967522"
 ::: zone-end
 
 > [!TIP]
-> Предварительная версия SQL Server 2019 теперь доступна. Чтобы опробовать ее, настройте новый репозиторий **mssql-server-preview**, как описано в этой статье. После этого выполните инструкции в [руководстве по установке](sql-server-linux-setup.md).
+> SQL Server 2019 уже доступен! Чтобы опробовать его, настройте новый репозиторий **mssql-server-2019**, как описано в этой статье. После этого выполните инструкции в [руководстве по установке](sql-server-linux-setup.md).
 
 ## <a id="repositories"></a> Репозитории
 
-При установке SQL Server на Linux необходимо настроить репозиторий Майкрософт. Он используется для получения пакета ядра СУБД (**mssql-server**) и связанных с ним пакетов SQL Server. В настоящее время существует три основных репозитория:
+При установке SQL Server на Linux необходимо настроить репозиторий Майкрософт. Он используется для получения пакета ядра СУБД (**mssql-server**) и связанных с ним пакетов SQL Server. В настоящее время существует пять основных репозиториев:
 
 | Хранилище | Имя | Описание |
 |---|---|---|
-| **Предварительная версия (2017)** | **mssql-server** | Репозиторий для SQL Server 2017 CTP и RC (больше не поддерживается). |
-| **Предварительная версия (2019)** | **mssql-server-preview** | Репозиторий для предварительной версии и версии RC SQL Server 2019. |
-| **Накопительный пакет обновления** | **mssql-server-2017** | Репозиторий для SQL Server 2017 с накопительным пакетом обновления. |
-| **Выпуск для общего распространения (GDR)** | **mssql-server-2017-gdr** | Репозиторий выпуска SQL Server 2017 для общего распространения, предназначенный только для критических обновлений. |
+| **2019** | **mssql-server-2019** | Репозиторий для SQL Server 2019 с накопительным пакетом обновления. |
+| **2019 GDR** | **mssql-server-2019-gdr** | Репозиторий выпуска SQL Server 2019 для общего распространения, предназначенный только для критических обновлений. |
+| **2019, предварительная версия** | **mssql-server-preview** | Репозиторий для предварительной версии и версии релиз-кандидата SQL Server 2019. |
+| **2017** | **mssql-server-2017** | Репозиторий для SQL Server 2017 с накопительным пакетом обновления. |
+| **2017 GDR** | **mssql-server-2017-gdr** | Репозиторий выпуска SQL Server 2017 для общего распространения, предназначенный только для критических обновлений. |
 
 ## <a id="cuversusgdr"></a> Накопительный пакет обновления и GDR
 
 Важно отметить, что для каждого дистрибутива имеются два основных типа репозиториев.
 
-- **Накопительный пакет обновления**. Репозиторий накопительного пакета обновления содержит пакеты для основного выпуска SQL Server, а также все исправления ошибок и улучшения, добавленные с момента этого выпуска. Накопительные пакеты обновления связаны с определенной версий, например SQL Server 2017. Они выпускаются регулярно.
+- **Накопительный пакет обновления**. Репозиторий накопительного пакета обновления содержит пакеты для основного выпуска SQL Server, а также все исправления ошибок и улучшения, добавленные с момента этого выпуска. Накопительные пакеты обновления связаны с определенной версий, например SQL Server 2019. Они выпускаются регулярно.
 
 - **Выпуск для общего распространения (GDR)** . Репозиторий GDR содержит пакеты для основного выпуска SQL Server и только критические исправления и обновления для системы безопасности, добавленные с момента этого выпуска. Эти обновления также добавляются в следующий накопительный пакет обновления.
 
@@ -144,10 +145,11 @@ sudo rm -rf /etc/yum.repos.d/mssql-server.repo
 
 | Хранилище | Команда для удаления |
 |---|---|
-| **Предварительная версия (2017)** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server'` |
 | **Предварительная версия (2019)** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server-preview'` |
-| **Накопительный пакет обновления** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server-2017'` |
-| **Выпуск для общего распространения (GDR)** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server-2017-gdr'`|
+| **2019 CU** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server-2019'` |
+| **2019 GDR** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server-2019-gdr'`|
+| **2017 CU** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server-2017'` |
+| **2017 GDR** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server-2017-gdr'`|
 
 ::: zone-end
 
@@ -157,10 +159,11 @@ sudo rm -rf /etc/yum.repos.d/mssql-server.repo
 
 | Хранилище | Команда для удаления |
 |---|---|
-| **Предварительная версия (2017)** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server xenial main'` |
 | **Предварительная версия (2019)** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview xenial main'` |
-| **Накопительный пакет обновления** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017 xenial main'` | 
-| **Выпуск для общего распространения (GDR)** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017-gdr xenial main'` |
+| **2019 CU** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019 xenial main'` | 
+| **2019 GDR** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019-gdr xenial main'` |
+| **2017 CU** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017 xenial main'` | 
+| **2017 GDR** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017-gdr xenial main'` |
 
 ::: zone-end
 
@@ -172,9 +175,10 @@ sudo rm -rf /etc/yum.repos.d/mssql-server.repo
 
 | Хранилище | Версия | Command |
 |---|---|---|
-| **Предварительная версия (2019)** | 2019 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-preview.repo` |
-| **Накопительный пакет обновления** | 2017 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017.repo` |
-| **Выпуск для общего распространения (GDR)** | 2017 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017-gdr.repo` |
+| **2019 CU** | 2019 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2019.repo` |
+| **2019 GDR** | 2019 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2019-gdr.repo` |
+| **2017 CU** | 2017 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017.repo` |
+| **2017 GDR** | 2017 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017-gdr.repo` |
 
 ::: zone-end
 
@@ -184,9 +188,10 @@ sudo rm -rf /etc/yum.repos.d/mssql-server.repo
 
 | Хранилище | Версия | Command |
 |---|---|---|
-| **Предварительная версия (2019)** | 2019 | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-preview.repo` |
-| **Накопительный пакет обновления** | 2017 | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017.repo` |
-| **Выпуск для общего распространения (GDR)** | 2017 | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017-gdr.repo` |
+| **2019 CU** | 2019 | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2019.repo` |
+| **2019 GDR** | 2019 | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2019-gdr.repo` |
+| **2017 CU** | 2017 | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017.repo` |
+| **2017 GDR** | 2017 | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017-gdr.repo` |
 
 ::: zone-end
 
@@ -204,9 +209,10 @@ sudo rm -rf /etc/yum.repos.d/mssql-server.repo
 
    | Хранилище | Версия | Command |
    |---|---|---|
-   | **Предварительная версия (2019)** | 2019 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-preview.list)"` |
-   | **Накопительный пакет обновления** | 2017 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017.list)"` |
-   | **Выпуск для общего распространения (GDR)** | 2017 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017-gdr.list)"` |
+   | **2019 CU** | 2019 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2019.list)"` |
+   | **2019 GDR** | 2019 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2019-gdr.list)"` |
+   | **2017 CU** | 2017 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017.list)"` |
+   | **2017 GDR** | 2017 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017-gdr.list)"` |
 
 3. Выполните команду **apt-get update**.
 
@@ -216,7 +222,7 @@ sudo rm -rf /etc/yum.repos.d/mssql-server.repo
 
 ::: zone-end
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 Настроив нужный репозиторий, можно перейти к [установке](sql-server-linux-setup.md#platforms) или [обновлению](sql-server-linux-setup.md#upgrade) SQL Server и всех связанных пакетов из него.
 

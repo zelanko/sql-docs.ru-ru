@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: 4010936be7224773e522879af8cc919b16b18078
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 9ccea3e07dfd6fca5df6b6f92786ff650d9b3f05
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68184605"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73531550"
 ---
-<Token>**ОБЛАСТЬ ПРИМЕНЕНИЯ:** ![ да](media/yes.png)SQL Server (только в Windows) ![нет](media/no.png)База данных SQL Azure ![нет](media/no.png)Хранилище данных SQL Azure![нет](media/no.png)Parallel Data Warehouse </Token>
+<Token>**ОБЛАСТЬ ПРИМЕНЕНИЯ:** ![да](media/yes.png)SQL Server (только в Windows) ![нет](media/no.png)База данных SQL Azure ![нет](media/no.png)Azure Synapse Analytics (хранилище данных SQL) ![нет](media/no.png)Parallel Data Warehouse </Token>

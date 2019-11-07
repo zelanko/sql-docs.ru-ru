@@ -1,7 +1,7 @@
 ---
 title: CREATE COLUMN ENCRYPTION KEY (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 07/18/2016
+ms.date: 10/15/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -26,25 +26,25 @@ helpviewer_keywords:
 - column encryption key
 - CREATE COLUMN ENCRYPTION KEY statement
 ms.assetid: 517fe745-d79b-4aae-99a7-72be45ea6acb
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: b3789e894f08c4e34cb5ea8861d699f850e365f3
-ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
+author: jaszymas
+ms.author: jaszymas
+ms.openlocfilehash: 28952359d69fa1fa1c140a8a2a18222ec114cea0
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73064574"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593903"
 ---
 # <a name="create-column-encryption-key-transact-sql"></a>CREATE COLUMN ENCRYPTION KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-Создает ключ шифрования столбца (CEK) с начальным набором значений, зашифрованных с помощью указанных главных ключей столбцов (CMK). Это шифрование является операцией с метаданными. CEK может иметь до двух значений, что позволяет менять CMK. CEK необходимо создать до того, как функция [Always Encrypted (ядро СУБД)](../../relational-databases/security/encryption/always-encrypted-database-engine.md) зашифрует какой-либо столбец в базе данных. CEK можно также создать с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Перед созданием ключа шифрования столбца необходимо определить главный ключ столбца с помощью [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] или инструкции [CREATE COLUMN MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md).  
+Создает объект метаданных ключа шифрования столбца для [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md) или [Always Encrypted с безопасными анклавами](../../relational-databases/security/encryption/always-encrypted-enclaves.md). Объект метаданных ключа шифрования столбца содержит одно или два зашифрованных значения ключа шифрования столбца, используемого для шифрования данных в столбце. Каждое значение шифруется с помощью главного ключа столбца. 
   
 ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```sql  
 CREATE COLUMN ENCRYPTION KEY key_name   
 WITH VALUES  
   (  
@@ -64,25 +64,28 @@ WITH VALUES
 _key\_name_  
 Имя, под которым ключ шифрования столбца будет доступен в базе данных.  
   
-_column\_master\_key\_name_. Указывает имя настраиваемого CMK, используемого для шифрования CEK.  
+_column\_master\_key\_name_. Указывает имя настраиваемого CMK, используемого для ключа шифрования столбца.  
   
 _algorithm\_name_  
 Имя алгоритма шифрования, используемого для шифрования значения ключа шифрования столбца. Для системных поставщиков это должен быть алгоритм **RSA_OAEP**.  
   
 _varbinary\_literal_  
-Большой двоичный объект зашифрованного значения ключа шифрования столбца.  
+Большой двоичный объект значения ключа шифрования зашифрованных столбцов.  
   
 > [!WARNING]  
 >  Никогда не передавайте значения ключа шифрования столбца в виде открытого текста в этой инструкции. Это является преимуществом этой функции.  
   
 ## <a name="remarks"></a>Remarks  
-Инструкция CREATE COLUMN ENCRYPTION KEY должна включать по крайней мере одно предложение VALUES, но не более двух. Если указано только одно, с помощью инструкции ALTER COLUMN ENCRYPTION KEY можно позже добавить второе значение. С помощью инструкции ALTER COLUMN ENCRYPTION KEY можно удалить предложение VALUES.  
+Оператор `CREATE COLUMN ENCRYPTION KEY` должен содержать по крайней мере одно или два значения. Вы можете использовать инструкцию [ALTER COLUMN ENCRYPTION KEY (Transact-SQL)](alter-column-encryption-key-transact-sql.md), чтобы позже добавить второе значение. Для удаления значения также можно использовать инструкцию `ALTER COLUMN ENCRYPTION KEY`.  
   
-Как правило, CEK создается всего с одним зашифрованным значением. В некоторых случаях необходимо изменить CMK на новый. Если вам нужно изменить ключ, добавьте новое значение ключа шифрования столбца, зашифрованное с помощью нового CMK. Это позволяет удостовериться, что клиентские приложения смогут обращаться к данным, зашифрованным с помощью CEK, тогда как новый CMK будет доступен для клиентских приложений. Драйвер с поддержкой Always Encrypted в клиентском приложении, не имеющем доступа к новому главному ключу, сможет использовать значение CEK, зашифрованное с помощью старого CMK, для доступа к конфиденциальным данным.  
+Как правило, ключ шифрования столбца создается со всего одним зашифрованным значением. Иногда необходимо менять главный ключ столбца, чтобы заменить текущий главный ключ столбца новым. Если вам нужно изменить ключ, добавьте новое значение ключа шифрования столбца, зашифрованное с помощью нового главного ключа столбца. Эта замена позволяет удостовериться, что клиентские приложения смогут обращаться к данным, зашифрованным с помощью ключа шифрования, тогда как новый главный ключ столбца будет доступен для клиентских приложений. Драйвер с поддержкой Always Encrypted в клиентском приложении, не имеющем доступа к новому главному ключу, сможет использовать значение ключа шифрования столбца, зашифрованное с помощью старого главного ключа столбца, для доступа к конфиденциальным данным.  
+
   
 Для алгоритмов шифрования, поддерживаемых функцией Always Encrypted, требуется значение открытого текста размером 256 бит.  
   
-Зашифрованное значение должно быть создано с помощью поставщика хранилища ключей, который инкапсулирует хранилище ключей, содержащее CMK. Дополнительные сведения см. в разделе [Always Encrypted (разработка клиентских приложений)](../../relational-databases/security/encryption/always-encrypted-client-development.md).  
+Для управления ключами шифрования столбцов рекомендуется использовать такие средства, как SQL Server Management Studio (SSMS) или PowerShell. Такие средства создают зашифрованные значения и автоматически выдают инструкции `CREATE COLUMN ENCRYPTION KEY` для создания объекта метаданных ключа шифрования столбца. См. разделы [Подготовка ключей Always Encrypted с помощью SQL Server Management Studio](../../relational-databases/security/encryption/configure-always-encrypted-keys-using-ssms.md) и [Подготовка ключей Always Encrypted с помощью PowerShell](../../relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell.md). 
+
+Можно также программно создать значение ключа шифрования столбца с помощью поставщика хранилища ключей, который инкапсулирует хранилище ключей, содержащее главный ключ столбца. Дополнительные сведения см. в разделе [Разработка приложений с помощью Always Encrypted](../../relational-databases/security/encryption/always-encrypted-client-development.md).
   
 Сведения о ключах шифрования столбцов см. в разделах [sys.columns (Transact-SQL)](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md), [sys.column_encryption_keys (Transact-SQL)](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md) и [sys.column_encryption_key_values (Transact-SQL)](../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md).  
   
@@ -129,9 +132,12 @@ GO
 [ALTER COLUMN ENCRYPTION KEY (Transact-SQL)](../../t-sql/statements/alter-column-encryption-key-transact-sql.md)   
 [DROP COLUMN ENCRYPTION KEY (Transact-SQL)](../../t-sql/statements/drop-column-encryption-key-transact-sql.md)   
 [CREATE COLUMN MASTER KEY (Transact-SQL)](../../t-sql/statements/create-column-master-key-transact-sql.md)   
-[Постоянное шифрование (компонент Database Engine)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
 [sys.column_encryption_keys (Transact-SQL)](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md)   
 [sys.column_encryption_key_values (Transact-SQL)](../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md)   
 [sys.columns (Transact-SQL)](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)  
+[Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
+[Always Encrypted с безопасными анклавами](../../relational-databases/security/encryption/always-encrypted-enclaves.md)   
+[Общие сведения об управлении ключами для Always Encrypted](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)   
+[Управление ключами для Always Encrypted с безопасными анклавами](../../relational-databases/security/encryption/always-encrypted-enclaves-manage-keys.md)   
   
   

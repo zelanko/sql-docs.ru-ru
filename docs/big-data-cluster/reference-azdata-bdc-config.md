@@ -1,33 +1,33 @@
 ---
 title: Справочник по azdata bdc config
 titleSuffix: SQL Server big data clusters
-description: Справочная статья по командам конфигурации BDC аздата.
+description: Справочная статья по командам azdata bdc config.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/28/2019
+ms.date: 11/04/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: b24a552bcfaae45fa4c8644d590d2573909a03ce
-ms.sourcegitcommit: 0c6c1555543daff23da9c395865dafd5bb996948
-ms.translationtype: MT
+ms.openlocfilehash: 37c9fedd0a33ff65767b0635208ef936aa7c7715
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70304836"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73531812"
 ---
 # <a name="azdata-bdc-config"></a>azdata bdc config
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
 
-Эта статья содержит справочную статью по **аздата**. 
+В следующей статье приводятся справочные сведения по командам `sql` в средстве `azdata`. Дополнительные сведения о других командах `azdata` см. в [справочнике по azdata](reference-azdata.md)
 
 ## <a name="commands"></a>Команды
 |     |     |
 | --- | --- |
 [azdata bdc config init](#azdata-bdc-config-init) | Инициализирует профиль конфигурации кластера больших данных, который можно использовать с командой cluster create.
 [azdata bdc config list](#azdata-bdc-config-list) | Выводит список доступных профилей конфигурации.
-[azdata bdc config show](#azdata-bdc-config-show) | Отображается текущая конфигурация или Конфигурация локального файла BDC, например Custom/BDC. JSON.
+[azdata bdc config show](#azdata-bdc-config-show) | Выводит текущую конфигурацию кластера больших данных или конфигурацию из указанного локального файла, например custom/bdc.json.
 [azdata bdc config add](#azdata-bdc-config-add) | Добавляет значение для пути JSON в файле конфигурации.
 [azdata bdc config remove](#azdata-bdc-config-remove) | Удаляет значение пути JSON в файле конфигурации.
 [azdata bdc config replace](#azdata-bdc-config-replace) | Заменяет значение пути JSON в файле конфигурации.
@@ -51,13 +51,13 @@ azdata bdc config init --source aks-dev-test --target custom
 ```
 ### <a name="optional-parameters"></a>Необязательные параметры
 #### `--target -t`
-Путь к файлу, в который следует поместить профиль конфигурации; по умолчанию cwd с custom-config.json.
+Путь к файлу, в который следует поместить профиль конфигурации; по умолчанию <cwd>/custom.
 #### `--source -s`
-Источник профиля конфигурации: ["AKS-dev-test", "кубеадм-произв", "minikube-dev-test", "кубеадм-dev-test"]
+Источник профиля конфигурации: ['kubeadm-dev-test', 'kubeadm-prod', 'aks-dev-test', 'aks-dev-test-ha']
 #### `--force -f`
 Принудительная перезапись целевого файла.
 #### `--accept-eula -a`
-Вы принимаете условия лицензии? [да/нет]. Если вы не хотите использовать этот аргумент, можно присвоить переменной среды ACCEPT_EULA значение "yes". 
+Вы принимаете условия лицензии? [да/нет]. Если вы не хотите использовать этот аргумент, можно присвоить переменной среды ACCEPT_EULA значение "yes". Условия лицензии для этого продукта можно просмотреть по адресу https://aka.ms/eula-azdata-en.
 ### <a name="global-arguments"></a>Глобальные аргументы
 #### `--debug`
 Повышение уровня детализации журнала для включения всех журналов отладки.
@@ -66,7 +66,7 @@ azdata bdc config init --source aks-dev-test --target custom
 #### `--output -o`
 Формат вывода.  Допустимые значения: json, jsonc, table, tsv.  Значение по умолчанию: json.
 #### `--query -q`
-Строка запроса JMESPath. Дополнительные сведения и примеры см. в разделе [http://jmespath.org/](http://jmespath.org/]).
+Строка запроса JMESPath. Дополнительные сведения и примеры см. в разделе [http://jmespath.org/](http://jmespath.org/).
 #### `--verbose`
 Повышение уровня детализации журнала. Чтобы включить полные журналы отладки, используйте параметр --debug.
 ## <a name="azdata-bdc-config-list"></a>azdata bdc config list
@@ -87,12 +87,12 @@ azdata bdc config list --config-profile aks-dev-test
 ```
 ### <a name="optional-parameters"></a>Необязательные параметры
 #### `--config-profile -c`
-Профиль конфигурации по умолчанию: ["AKS-dev-test", "кубеадм-произв", "minikube-dev-test", "кубеадм-dev-test"]
+Профиль конфигурации по умолчанию: ['kubeadm-dev-test', 'kubeadm-prod', 'aks-dev-test', 'aks-dev-test-ha']
 #### `--type -t`
 Тип конфигурации, который следует просмотреть.
 `cluster`
 #### `--accept-eula -a`
-Вы принимаете условия лицензии? [да/нет]. Если вы не хотите использовать этот аргумент, можно присвоить переменной среды ACCEPT_EULA значение "yes". 
+Вы принимаете условия лицензии? [да/нет]. Если вы не хотите использовать этот аргумент, можно присвоить переменной среды ACCEPT_EULA значение "yes". Условия лицензии для этого продукта можно просмотреть по адресу https://aka.ms/eula-azdata-en.
 ### <a name="global-arguments"></a>Глобальные аргументы
 #### `--debug`
 Повышение уровня детализации журнала для включения всех журналов отладки.
@@ -101,11 +101,11 @@ azdata bdc config list --config-profile aks-dev-test
 #### `--output -o`
 Формат вывода.  Допустимые значения: json, jsonc, table, tsv.  Значение по умолчанию: json.
 #### `--query -q`
-Строка запроса JMESPath. Дополнительные сведения и примеры см. в разделе [http://jmespath.org/](http://jmespath.org/]).
+Строка запроса JMESPath. Дополнительные сведения и примеры см. в разделе [http://jmespath.org/](http://jmespath.org/).
 #### `--verbose`
 Повышение уровня детализации журнала. Чтобы включить полные журналы отладки, используйте параметр --debug.
 ## <a name="azdata-bdc-config-show"></a>azdata bdc config show
-Отображается текущая конфигурация или Конфигурация локального файла BDC, например Custom/BDC. JSON. Команда также может принимать только путь JSON, если нужно получить только раздел.  Вы также можете указать целевой файл для вывода данных.  Если целевой файл не указан, выходные данные выводятся в терминал.
+Выводит текущую конфигурацию кластера больших данных или конфигурацию из указанного локального файла, например custom/bdc.json. Команда также может принимать только путь JSON, если нужно получить только раздел.  Вы также можете указать целевой файл для вывода данных.  Если целевой файл не указан, выходные данные выводятся в терминал.
 ```bash
 azdata bdc config show [--config-file -c] 
                        [--target -t]  
@@ -121,13 +121,13 @@ azdata bdc config show
 ```bash
 azdata bdc config show --config-file custom-config/bdc.json --json-path 'metadata.name' --target section.json
 ```
-В локальном файле конфигурации получает ресурсы в службе.
+В локальном файле конфигурации возвращаются ресурсы в составе службы
 ```bash
-azdata bdc config show --config-file custom-config/bdc.json  --json-path '$.spec.services.sql.resources' --target section.json
+azdata bdc config show --config-file custom-config/bdc.json --json-path '$.spec.services.sql.resources' --target section.json
 ```
 ### <a name="optional-parameters"></a>Необязательные параметры
 #### `--config-file -c`
-Путь к файлу конфигурации кластера больших данных, если вы не хотите использовать конфигурацию кластера, в которую вы куррентлилогжеде, например Custom/BDC. JSON
+Путь к файлу конфигурации кластера больших данных, если не требуется конфигурация кластера, в который выполнен вход в настоящее время, то есть custom/bdc.json
 #### `--target -t`
 Выходной файл, в котором следует сохранить результат. По умолчанию: направляется в stdout.
 #### `--json-path -j`
@@ -142,7 +142,7 @@ azdata bdc config show --config-file custom-config/bdc.json  --json-path '$.spec
 #### `--output -o`
 Формат вывода.  Допустимые значения: json, jsonc, table, tsv.  Значение по умолчанию: json.
 #### `--query -q`
-Строка запроса JMESPath. Дополнительные сведения и примеры см. в разделе [http://jmespath.org/](http://jmespath.org/]).
+Строка запроса JMESPath. Дополнительные сведения и примеры см. в разделе [http://jmespath.org/](http://jmespath.org/).
 #### `--verbose`
 Повышение уровня детализации журнала. Чтобы включить полные журналы отладки, используйте параметр --debug.
 ## <a name="azdata-bdc-config-add"></a>azdata bdc config add
@@ -158,9 +158,9 @@ azdata bdc config add --config-file custom/control.json --json-values 'spec.stor
 ```
 ### <a name="required-parameters"></a>Обязательные параметры
 #### `--config-file -c`
-Путь к файлу конфигурации кластера больших данных, который вы хотите задать, например Custom/BDC. JSON
+Путь к файлу с конфигурацией кластера больших данных, которую нужно задать, например custom/bdc.json
 #### `--json-values -j`
-Список пар "ключ–значение" с путями JSON и значениями: ключ1.подключ1=значение1,ключ2.подключ2=значение2. Вы можете указать значения JSON в коде, например key='{"тип":"кластер","имя":"тестовый-кластер"}', или предоставить путь к файлу, например key=./values.json. При добавлении не поддерживаются условные выражения.  Если встроенное значение, которое вы предоставляете, является парой «ключ-значение» с символами «=» и «,», необходимо экранировать эти символы.  Например, key1 = "key2\=val2\,Key3\=val3". Примеры путей см. на сайте http://jsonpatch.com/.  Для доступа к массиву необходимо указать индекс, например ключ.0=значение
+Список пар "ключ–значение" с путями JSON и значениями: ключ1.подключ1=значение1,ключ2.подключ2=значение2. Вы можете указать значения JSON в коде, например key='{"тип":"кластер","имя":"тестовый-кластер"}', или предоставить путь к файлу, например key=./values.json. При добавлении не поддерживаются условные выражения.  Если предоставляемое вами встроенное значение представляет собой пару "ключ/значение" с символами "=" и ",", необходимо экранировать эти символы.  Например, key1="key2\=val2\,key3\=val3". Примеры путей см. на сайте http://jsonpatch.com/.  Для доступа к массиву необходимо указать индекс, например ключ.0=значение
 ### <a name="global-arguments"></a>Глобальные аргументы
 #### `--debug`
 Повышение уровня детализации журнала для включения всех журналов отладки.
@@ -169,7 +169,7 @@ azdata bdc config add --config-file custom/control.json --json-values 'spec.stor
 #### `--output -o`
 Формат вывода.  Допустимые значения: json, jsonc, table, tsv.  Значение по умолчанию: json.
 #### `--query -q`
-Строка запроса JMESPath. Дополнительные сведения и примеры см. в разделе [http://jmespath.org/](http://jmespath.org/]).
+Строка запроса JMESPath. Дополнительные сведения и примеры см. в разделе [http://jmespath.org/](http://jmespath.org/).
 #### `--verbose`
 Повышение уровня детализации журнала. Чтобы включить полные журналы отладки, используйте параметр --debug.
 ## <a name="azdata-bdc-config-remove"></a>azdata bdc config remove
@@ -185,7 +185,7 @@ azdata bdc config remove --config-file custom/control.json --json-path '.spec.st
 ```
 ### <a name="required-parameters"></a>Обязательные параметры
 #### `--config-file -c`
-Путь к файлу конфигурации кластера больших данных, который вы хотите задать, например Custom/BDC. JSON
+Путь к файлу с конфигурацией кластера больших данных, которую нужно задать, например custom/bdc.json
 #### `--json-path -j`
 Список путей JSON на основе библиотеки jsonpatch, в котором перечислены значения, которые необходимо удалить, например: ключ.подключ1,ключ2.подключ2. При удалении не поддерживаются условные выражения. Примеры путей см. на сайте http://jsonpatch.com/.  Для доступа к массиву необходимо указать индекс, например ключ.0=значение
 ### <a name="global-arguments"></a>Глобальные аргументы
@@ -196,7 +196,7 @@ azdata bdc config remove --config-file custom/control.json --json-path '.spec.st
 #### `--output -o`
 Формат вывода.  Допустимые значения: json, jsonc, table, tsv.  Значение по умолчанию: json.
 #### `--query -q`
-Строка запроса JMESPath. Дополнительные сведения и примеры см. в разделе [http://jmespath.org/](http://jmespath.org/]).
+Строка запроса JMESPath. Дополнительные сведения и примеры см. в разделе [http://jmespath.org/](http://jmespath.org/).
 #### `--verbose`
 Повышение уровня детализации журнала. Чтобы включить полные журналы отладки, используйте параметр --debug.
 ## <a name="azdata-bdc-config-replace"></a>azdata bdc config replace
@@ -214,15 +214,15 @@ azdata bdc config replace --config-file custom/control.json --json-values '$.spe
 ```bash
 azdata bdc config replace --config-file custom/control.json --json-values 'spec.storage={"accessMode":"ReadWriteOnce","className":"managed-premium","size":"10Gi"}'
 ```
-Пример 3. Замена спецификации ресурсов хранилища (0), включая реплики.
+Пример 3. Замена спецификации ресурса storage-0, включая реплики.
 ```bash
 azdata bdc config replace --config-file custom/bdc.json --json-values '$.spec.resources.storage-0.spec={"replicas": 2,"storage": {"className": "managed-premium","size": "10Gi","accessMode": "ReadWriteOnce"},"type": "Storage"}'
 ```
 ### <a name="required-parameters"></a>Обязательные параметры
 #### `--config-file -c`
-Путь к файлу конфигурации кластера больших данных, который вы хотите задать, например Custom/BDC. JSON
+Путь к файлу с конфигурацией кластера больших данных, которую нужно задать, например custom/bdc.json
 #### `--json-values -j`
-Список пар "ключ–значение" с путями JSON и значениями: ключ1.подключ1=значение1,ключ2.подключ2=значение2. Вы можете указать значения JSON в коде, например key='{"тип":"кластер","имя":"тестовый-кластер"}', или предоставить путь к файлу, например key=./values.json. При замене условные выражения поддерживаются посредством библиотеки jsonpath.  Для этого путь должен начинаться с символа $. Это позволяет использовать такие условные конструкции, как -j $.ключ1.ключ2[?(@.key3=='некотороеЗначение'].ключ4=значение. Если встроенное значение, которое вы предоставляете, является парой «ключ-значение» с символами «=» и «,», необходимо экранировать эти символы.  Например, key1 = "key2\=val2\,Key3\=val3". Примеры приведены ниже. Дополнительные справочные сведения см. на сайте https://jsonpath.com/.
+Список пар "ключ–значение" с путями JSON и значениями: ключ1.подключ1=значение1,ключ2.подключ2=значение2. Вы можете указать значения JSON в коде, например key='{"тип":"кластер","имя":"тестовый-кластер"}', или предоставить путь к файлу, например key=./values.json. При замене условные выражения поддерживаются посредством библиотеки jsonpath.  Для этого путь должен начинаться с символа $. Это позволяет использовать такие условные конструкции, как -j $.ключ1.ключ2[?(@.key3=='некотороеЗначение'].ключ4=значение. Если предоставляемое вами встроенное значение представляет собой пару "ключ/значение" с символами "=" и ",", необходимо экранировать эти символы.  Например, key1="key2\=val2\,key3\=val3". Примеры приведены ниже. Дополнительные справочные сведения см. на сайте https://jsonpath.com/.
 ### <a name="global-arguments"></a>Глобальные аргументы
 #### `--debug`
 Повышение уровня детализации журнала для включения всех журналов отладки.
@@ -231,7 +231,7 @@ azdata bdc config replace --config-file custom/bdc.json --json-values '$.spec.re
 #### `--output -o`
 Формат вывода.  Допустимые значения: json, jsonc, table, tsv.  Значение по умолчанию: json.
 #### `--query -q`
-Строка запроса JMESPath. Дополнительные сведения и примеры см. в разделе [http://jmespath.org/](http://jmespath.org/]).
+Строка запроса JMESPath. Дополнительные сведения и примеры см. в разделе [http://jmespath.org/](http://jmespath.org/).
 #### `--verbose`
 Повышение уровня детализации журнала. Чтобы включить полные журналы отладки, используйте параметр --debug.
 ## <a name="azdata-bdc-config-patch"></a>azdata bdc config patch
@@ -245,26 +245,26 @@ azdata bdc config patch --config-file -c
 ```bash
 azdata bdc config patch --config-file custom/control.json --patch ./patch.json
 
-    Patch File Example (patch.json): 
+    Patch File Example (patch.json):
         {"patch":[{"op":"replace","path":"$.spec.endpoints[?(@.name=='Controller')].port","value":30080}]}
 ```
 Пример 2. Замена хранилища уровня управления с помощью файла исправления
 ```bash
 azdata bdc config patch --config-file custom/control.json --patch ./patch.json
 
-    Patch File Example (patch.json): 
+    Patch File Example (patch.json):
         {"patch":[{"op":"replace","path":".spec.storage","value":{"accessMode":"ReadWriteMany","className":"managed-premium","size":"10Gi"}}]}
 ```
 Пример 3. Замена пула носителей, включая реплики (пул носителей), с помощью файла исправления
 ```bash
 azdata bdc config patch --config-file custom/bdc.json --patch ./patch.json
 
-    Patch File Example (patch.json): 
+    Patch File Example (patch.json):
         {"patch":[{"op":"replace","path":"$.spec.resources.storage-0.spec","value":{"replicas": 2,"storage": {"className": "managed-premium","size": "10Gi","accessMode": "ReadWriteOnce"},"type": "Storage"}}]}
 ```
 ### <a name="required-parameters"></a>Обязательные параметры
 #### `--config-file -c`
-Путь к файлу конфигурации кластера больших данных, который вы хотите задать, например Custom/BDC. JSON
+Путь к файлу с конфигурацией кластера больших данных, которую нужно задать, например custom/bdc.json
 #### `--patch-file -p`
 Путь к файлу исправления JSON на основе библиотеки jsonpatch: http://jsonpatch.com/. Файл исправления JSON должен начинаться с ключа "patch", значением которого является массив операций исправления, подлежащих выполнению. Для пути операции исправления можно использовать точечную нотацию, например ключ1.ключ2 для большинства операций. Если необходимо выполнить операцию замены и для замены значения в массиве требуется условное выражение, используйте нотацию jsonpath, указав в начале пути символ $. Это позволяет использовать такие условные конструкции, как -j $.ключ1.ключ2[?(@.key3=='некотороеЗначение'].ключ4. См. примеры ниже. Дополнительные справочные сведения об условных выражениях см. на сайте https://jsonpath.com/.
 ### <a name="global-arguments"></a>Глобальные аргументы
@@ -275,12 +275,10 @@ azdata bdc config patch --config-file custom/bdc.json --patch ./patch.json
 #### `--output -o`
 Формат вывода.  Допустимые значения: json, jsonc, table, tsv.  Значение по умолчанию: json.
 #### `--query -q`
-Строка запроса JMESPath. Дополнительные сведения и примеры см. в разделе [http://jmespath.org/](http://jmespath.org/]).
+Строка запроса JMESPath. Дополнительные сведения и примеры см. в разделе [http://jmespath.org/](http://jmespath.org/).
 #### `--verbose`
 Повышение уровня детализации журнала. Чтобы включить полные журналы отладки, используйте параметр --debug.
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
-- Дополнительные сведения о других командах **azdata** см. в [справочнике по azdata](reference-azdata.md). 
-
-- Дополнительные сведения об установке средства **azdata** см. в статье [Установка azdata для управления кластерами больших данных SQL Server 2019](deploy-install-azdata.md).
+Дополнительные сведения о других командах `azdata` см. в [справочнике по azdata](reference-azdata.md). Дополнительные сведения об установке средства `azdata` см. в статье [Установка azdata для управления кластерами больших данных SQL Server 2019](deploy-install-azdata.md).

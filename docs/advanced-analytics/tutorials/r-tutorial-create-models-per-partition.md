@@ -1,53 +1,53 @@
 ---
-title: Руководство по созданию, обучению и оценке моделей на основе секций в R
-description: Сведения о моделировании, обучении и использовании секционированных данных, создаваемых динамически при использовании возможности моделирования на основе секций для машинного обучения SQL Server.
+title: Учебник по созданию, обучению и оценке моделей на основе секций в R
+description: Узнайте о моделировании, обучении и использовании секционированных данных, создаваемых динамически, с помощью возможностей моделирования на основе секций машинного обучения SQL Server.
 ms.custom: sqlseattle
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 03/27/2019
+ms.date: 11/04/2019
 ms.topic: tutorial
 ms.author: davidph
 author: dphansen
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3395b237e08a10033819eeed74057cc7319d7f11
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
-ms.translationtype: MT
+ms.openlocfilehash: 1f73f45d2ac9830fed810746a5895554cded0691
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71952019"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73532578"
 ---
-# <a name="tutorial-create-partition-based-models-in-r-on-sql-server"></a>Учебник. Создание моделей на основе секций в R на SQL Server
+# <a name="tutorial-create-partition-based-models-in-r-on-sql-server"></a>Руководство. Создание моделей на основе секций в R в SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-В SQL Server 2019 моделирование на основе секций — это возможность создания и обучения моделей по секционированным данным. Для данных стратифицированной, которые естественным образом направлены в определенную схему классификации, такие как географические регионы, Дата и время, возраст или пол, можно выполнить сценарий для всего набора данных, с возможностью моделировать, обучать и оценивать секции, которые остаются без изменений. над всеми этими операциями. 
+В SQL Server 2019 моделирование на основе секций — это возможность создания и обучения моделей по секционированным данным. Для стратифицированных данных, которые естественным образом сегментируются в определенную классификационную схему, например по географическим регионам, дате и времени, возрасту или полу, вы можете выполнить скрипт для всего набора данных с возможностью моделирования, обучения и оценки по секциям, которые не затрагиваются всеми этими операциями. 
 
-Моделирование на основе секций включено с помощью двух новых параметров в [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql):
+Моделирование на основе секций включается с помощью следующих двух новых параметров в [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql).
 
-+ **input_data_1_partition_by_columns**, который указывает столбец для секционирования.
-+ **input_data_1_order_by_columns** указывает, какие столбцы нужно упорядочить. 
++ Параметр **input_data_1_partition_by_columns** задает столбец для секционирования.
++ Параметр **input_data_1_order_by_columns** указывает, какие столбцы следует упорядочить. 
 
-В этом руководстве рассматривается моделирование на основе секций с помощью классической модели НЬЮного такси и скрипта R. Столбец секционирования — это метод оплаты.
+В этом руководстве рассматривается моделирование на основе секций с использованием классической выборки данных о работе такси в Нью-Йорке и скрипта R. Столбец секционирования — метод оплаты.
 
 > [!div class="checklist"]
-> * Секции основываются на типах платежей (5).
+> * Построение секций по типам платежей (5).
 > * Создание и обучение моделей в каждой секции и сохранение объектов в базе данных.
-> * Прогноз вероятности результатов TIP для каждой модели секционирования с использованием образцов данных, зарезервированных для этой цели.
+> * Прогнозирование вероятности исходов по каждой модели секционирования с использованием выборочных данных, зарезервированных для этой цели.
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>предварительные требования
  
-Для работы с этим руководством необходимо следующее:
+Для работы с этим учебником необходимо наличие следующих компонентов.
 
-+ Достаточно системных ресурсов. Набор данных является большим, и операции обучения требуют больших ресурсов. Если это возможно, используйте систему, имеющую не менее 8 ГБ ОЗУ. Кроме того, можно использовать небольшие наборы данных, чтобы обойти ограничения ресурсов. Инструкции по сокращению набора данных являются встроенными. 
++ Достаточное количество системных ресурсов. Так как работа выполняется на большом наборе данных, операции обучения требуют много ресурсов. По возможности используйте систему с ОЗУ не менее 8 ГБ. Можно также попробовать использовать меньшие наборы данных, чтобы обойти ресурсные ограничения. Следуйте встроенным инструкциям по сокращению набора данных. 
 
-+ Средство для выполнения запросов T-SQL, например [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
++ Средство выполнения запросов T-SQL, например [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 
-+ [NYCTaxi_Sample. bak](https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak), который можно [скачать и восстановить](demo-data-nyctaxi-in-sql.md) в локальном экземпляре ядра СУБД. Размер файла составляет примерно 90 МБ.
++ Файл [NYCTaxi_Sample.bak](https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak), который можно [скачать и восстановить](demo-data-nyctaxi-in-sql.md) в локальном экземпляре ядра СУБД. Размер файла составляет приблизительно 90 МБ.
 
-+ SQL Server 2019 предварительный просмотр экземпляра ядра СУБД с интеграцией Службы машинного обучения и R.
++ Экземпляр ядра СУБД SQL Server 2019 (предварительная версия) со службами машинного обучения и интеграцией R.
 
-Проверьте версию, выполнив **`SELECT @@Version`** как запрос T-SQL в средстве запроса. Выходные данные должны иметь значение "Microsoft SQL Server 2019 (CTP 2,4)-15,0. x".
+Проверьте версию, выполнив **`SELECT @@Version`** как запрос T-SQL в средстве выполнения запросов.
 
-Проверьте доступность пакетов R, выполнив правильный отформатированный список всех пакетов R, установленных в данный момент с экземпляром ядра СУБД.
+Проверьте доступность пакетов R путем получения правильно отформатированного списка всех пакетов R, установленных в текущий момент с вашим экземпляром ядра СУБД:
 
 ```sql
 EXECUTE sp_execute_external_script
@@ -63,13 +63,13 @@ WITH RESULT SETS ((PackageName nvarchar(250), PackageVersion nvarchar(max) ))
 
 ## <a name="connect-to-the-database"></a>Подключение к базе данных
 
-Запустите Management Studio и подключитесь к экземпляру ядра СУБД. В обозревателе объектов убедитесь, что [база данных NYCTaxi_Sample](demo-data-nyctaxi-in-sql.md) существует. 
+Запустите Management Studio и подключитесь к экземпляру ядра СУБД. Убедитесь, что в обозревателе объектов имеется [база данных NYCTaxi_Sample](demo-data-nyctaxi-in-sql.md). 
 
-## <a name="create-calculatedistance"></a>Создание Калкулатедистанце
+## <a name="create-calculatedistance"></a>Создание функции CalculateDistance
 
-Демонстрационная база данных поставляется с скалярной функцией для вычисления расстояния, но наша хранимая процедура лучше работает с возвращающей табличное значение функцией. Выполните следующий скрипт, чтобы создать функцию **калкулатедистанце** , которая будет использоваться на [шаге обучения](#training-step) позже.
+Демонстрационная база данных предоставляется со скалярной функцией для вычисления расстояния, но наша хранимая процедура лучше работает с функцией с табличным значением. Чтобы создать функцию **CalculateDistance**, которая позднее будет использоваться на [этапе обучения](#training-step), выполните следующий скрипт.
 
-Чтобы убедиться, что функция создана, проверьте функции \Программабилити\функтионс\табле-валуед в базе данных **NYCTaxi_Sample** в обозревателе объектов.
+Чтобы убедиться, что функция создана, проверьте раздел \Programmability\Functions\Table-valued Functions в ветке базы данных **NYCTaxi_Sample** в обозревателе объектов.
 
 ```sql
 USE NYCTaxi_sample
@@ -99,15 +99,15 @@ FROM (
 GO
  ```
 
-## <a name="define-a-procedure-for-creating-and-training-per-partition-models"></a>Определение процедуры создания и обучения моделей отдельных секций
+## <a name="define-a-procedure-for-creating-and-training-per-partition-models"></a>Определение процедуры создания и обучения моделей для отдельных секций
 
-В этом руководстве сценарий R создается в виде оболочки в хранимой процедуре. На этом шаге создается хранимая процедура, которая использует R для создания входного набора данных, построения модели классификации для прогнозирования результатов TIP, а затем сохраняет модель в базе данных.
+В этом учебнике сценарий R заключается в хранимую процедуру. На этом шаге создается хранимая процедура, которая с использованием R создает входной набор данных, строит модель классификации для прогнозирования результатов, а затем сохраняет эту модель в базе данных.
 
-Между входными параметрами, используемыми этим скриптом, вы увидите **input_data_1_partition_by_columns** и **input_data_1_order_by_columns**. Помните, что эти параметры являются механизмом, с помощью которого создается секционированное моделирование. Параметры передаются в качестве входных данных [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) для обработки секций с помощью внешнего скрипта, который выполняется один раз для каждой секции. 
+В качестве входных параметров, используемых этим скриптом, вы увидите **input_data_1_partition_by_columns** и **input_data_1_order_by_columns**. Напомним, что эти параметры и есть механизм, с помощью которого создается секционированное моделирование. Эти параметры передаются в качестве входных данных в [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) для обработки секций с помощью данного внешнего скрипта, который выполняется один раз для каждой секции. 
 
-Для этой хранимой процедуры [Используйте Parallel](#parallel) для ускорения выполнения.
+Чтобы эта хранимая процедура выполнялась быстрее, [используйте параллелизм](#parallel).
 
-После выполнения этого скрипта вы увидите **train_rxLogIt_per_partition** в процедурах \программабилити\сторед в базе данных **NYCTaxi_Sample** в обозревателе объектов. Также должна отобразиться новая таблица, используемая для хранения моделей: **dbo. nyctaxi_models**.
+После выполнения этого скрипта в обозревателе объектов в ветке базы данных **NYCTaxi_Sample** в разделе \Programmability\Stored Procedures появится **train_rxLogIt_per_partition**. Также должна появиться новая таблица, используемая для хранения моделей: **dbo.nyctaxi_models**.
 
 ```sql
 USE NYCTaxi_Sample
@@ -167,18 +167,18 @@ GO
 
 ### <a name="parallel-execution"></a>Параллельное выполнение
 
-Обратите внимание, что входные данные [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) включают `@parallel=1`, используемые для поддержки параллельной обработки. В отличие от предыдущих выпусков, в SQL Server 2019 установка `@parallel=1` обеспечивает более строгую подсказку оптимизатору запросов, что делает параллельное выполнение гораздо более вероятным результатом.
+Обратите внимание, что среди входных данных для скрипта [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) имеется параметр `@parallel=1`. Он используется для включения параллельной обработки. В отличие от предыдущих выпусков, в SQL Server 2019 параметр `@parallel=1` обеспечивает более строгое указание оптимизатору запросов, что делает параллельное выполнение гораздо более вероятным результатом.
 
-По умолчанию оптимизатор запросов работает с `@parallel=1` в таблицах, имеющих более 256 строк, но если эту операцию можно обработать явно, задав `@parallel=1`, как показано в этом скрипте.
+По умолчанию в рамках `@parallel=1` оптимизатор запросов стремится работать в таблицах, имеющих более 256 строк, но это можно задать явно, установив `@parallel=1`, как показано в данном скрипте.
 
 > [!Tip]
-> Для обучающих воркоадс можно использовать `@parallel` с любым произвольным сценарием обучения, даже при использовании алгоритмов, отличных от Microsoft RX. Как правило, только алгоритмы RevoScaleR (с префиксом RX) предлагают параллелизм в сценариях обучения в SQL Server. Но с помощью нового параметра можно параллелизации скрипта, который вызывает функции, включая функции R с открытым исходным кодом, не разработанные специально для этой возможности. Это работает потому, что секции имеют сходство с конкретными потоками, поэтому все операции, вызываемые в скрипте, выполняются по отдельности для каждого раздела, в параметре @ no__t-0<a name="training-step"></a>
+> Для рабочих нагрузок обучения можно использовать `@parallel` с любым произвольным скриптом обучения, даже при использовании алгоритмов, отличных от Microsoft RX. Как правило, в SQL Server параллелизм в скриптах обучения предусмотрен только в алгоритмах RevoScaleR (с префиксом RX). Но с помощью нового параметра можно параллелизовать скрипт, который вызывает функции, не разрабатывавшиеся специально с включением этой возможности (в том числе функции R с открытым исходным кодом). Это работает потому, что секции имеют сходство с определенными потоками,так что все операции, вызываемые в скрипте, выполняются для каждого раздела по отдельности, в выделенном `thread.`<a name="training-step"></a>
 
 ## <a name="run-the-procedure-and-train-the-model"></a>Выполнение процедуры и обучение модели
 
-В этом разделе Скрипт обучает модель, созданную и сохраненную на предыдущем шаге. В приведенных ниже примерах демонстрируются два подхода к обучению модели: использование всего набора данных или частичных данных. 
+В этом разделе скрипт обучает модель, созданную и сохраненную на предыдущем шаге. В приведенных ниже примерах демонстрируются два подхода к обучению модели: с использованием всего набора данных или частичных данных. 
 
-Этот шаг должен занять некоторое время. Обучение выполняется очень интенсивно и занимает много минут. Если системные ресурсы, в особенности память, недостаточно для загрузки, используйте подмножество данных. Во втором примере показан синтаксис.
+Этот шаг займет некоторое время. Обучение требует больших вычислительных ресурсов и выполняется много минут. Если системных ресурсов, в особенности памяти, недостаточно для этой нагрузки, используйте подмножество данных. Во втором примере показан синтаксис.
 
 ```sql
 --Example 1: train on entire dataset
@@ -200,22 +200,22 @@ GO
 ```
 
 > [!NOTE]
-> Если вы используете другие рабочие нагрузки, можно добавить `OPTION(MAXDOP 2)` к инструкции SELECT, если требуется ограничить обработку запросов только двумя ядрами.
+> Если одновременно выполняются и другие рабочие нагрузки, можно ограничить до двух число ядер, используемых для обработки запросов, добавив `OPTION(MAXDOP 2)` в инструкцию SELECT.
 
-## <a name="check-results"></a>Результаты проверки
+## <a name="check-results"></a>Проверка результатов
 
-Результат в таблице Models должен состоять из пяти разных моделей, основанных на пяти секциях, сегментированных пятью типами платежей. Модели находятся в источнике данных **ml_models** .
+В результате в таблице models должно появиться пять разных моделей, основанных на пяти секциях, сегментированных по пяти типам платежей. Модели находятся в источнике данных **ml_models**.
 
 ```sql
 SELECT *
 FROM ml_models
 ```
  
-## <a name="define-a-procedure-for-predicting-outcomes"></a>Определение процедуры для прогнозирования результатов
+## <a name="define-a-procedure-for-predicting-outcomes"></a>Задание процедуры для прогнозирования результатов
 
-Для оценки можно использовать одни и те же параметры. Следующий пример содержит скрипт R, который будет оценивать использование правильной модели для секции, которая в данный момент обрабатывается.
+Для оценки можно использовать те же параметры. В следующем примере приведен скрипт R, оценивающий использование правильной модели для секции, которая в данный момент обрабатывается.
 
-Как и ранее, создайте хранимую процедуру для упаковки кода R.
+Как и ранее, создайте хранимую процедуру для включение в нее кода R.
 
 ```sql
 USE NYCTaxi_Sample
@@ -325,35 +325,17 @@ GO
 
 ## <a name="view-predictions"></a>Просмотр прогнозов
 
-Поскольку прогнозы хранятся, можно выполнить простой запрос для возврата результирующего набора.
+Так как прогнозы сохраняются, можно выполнить простой запрос для возврата результатов.
 
 ```sql
 SELECT *
 FROM prediction_results;
 ```
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
-В этом руководстве вы использовали [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) для итерации операций по секционированным данным. Подробнее о вызове внешних скриптов в хранимых процедурах и использовании функций RevoScaleR см. в следующем руководстве.
+В этом руководстве вы использовали скрипт [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) для выполнения цикла операций по секционированным данным. Более подробно вызов внешних скриптов в хранимых процедурах и использование функций RevoScaleR рассматривается в следующем учебнике.
 
 > [!div class="nextstepaction"]
 > [Пошаговое руководство для R и SQL Server](walkthrough-data-science-end-to-end-walkthrough.md)
 
-<!--
-## Old intro
-
-**(Not for production workloads)**
-
-One of the more common approaches for executing R or Python code on SQL data is providing script as an input parameter to the [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) stored procedure. In this CTP release, SQL Server 2019 adds new parameters to `sp_execute_external_script` to process partitions with the external script executing once for every partition:
-
-| Parameter | Usage |
-|-----------|-------|
-| **input_data_1_partition_by_columns** | Specifies which columns to partition by. |
-| **input_data_1_order_by_columns** | Specifies which columns to order by.  |
-
-Partitions are an organizational mechanism for stratified data that naturally segments into a given classification scheme. Common examples include partitioning by geographic region, by date and time, by age or gender, and so forth. Given the existence of partitioned data, you might want to execute script over the entire data set, with the ability to model, train, and score partitions that remain intact over all these operations. Calling `sp_execute_external_script` with the new parameters allows you to do just that.
-
-You can run this operation in parallel by combining `partition_by` with `@parallel`. If the input query can be parallelized, set `@parallel=1` as part of your arguments to `sp_execute_external_script`. By default, the query optimizer operates under `@parallel=1` on tables having more than 256 rows.
-
-When the scenario is training, one advantage is that any arbitrary training script, even those using non-Microsoft-rx algorithms, can be parallelized by also using the @parallel parameter. Typically, you would have to use RevoScaleR algorithms (with the rx prefix) to obtain parallelism in training scenarios in SQL Server. But with the new parameter, you can parallelize a script that calls functions not specifically engineered with that capability.
--->

@@ -1,38 +1,36 @@
 ---
-title: Что такое кластеры больших данных?
+title: Что представляют собой кластеры больших данных?
 titleSuffix: SQL Server Big Data Clusters
-description: Сведения о [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (Предварительная версия), которые выполняются в Kubernetes и предоставляют варианты горизонтального масштабирования для реляционных данных и HDFS.
+description: Узнайте о [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (предварительная версия), которые выполняются в Kubernetes и обеспечивают возможности горизонтального масштабирования для реляционных данных и данных HDFS.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/28/2019
+ms.date: 11/04/2019
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: cffb1bcf353932183703f810c876b6adacaa7bbf
-ms.sourcegitcommit: 873504573569546eb7223d3afefd89bb3d422d6f
-ms.translationtype: MT
+ms.openlocfilehash: 296a39a59521441a8f3cd5b95bd8e61710fa568a
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72359534"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73532510"
 ---
 # <a name="what-are-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Что такое [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]?
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Начиная с [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] позволяет развертывать масштабируемые кластеры контейнеров SQL Server, Spark и HDFS, запущенных на Kubernetes. Эти компоненты работают параллельно, позволяя считывать, записывать и обрабатывать большие данные в Transact-SQL или Spark, благодаря чему вы можете с легкостью объединять и анализировать важные реляционные данные с объемными большими данными.
+Начиная с версии [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)], [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] обеспечивают развертывание масштабируемых кластеров SQL Server, Spark и контейнеров HDFS, работающих в Kubernetes. Эти компоненты работают параллельно, позволяя считывать, записывать и обрабатывать большие данные в Transact-SQL или Spark, благодаря чему вы можете с легкостью объединять и анализировать важные реляционные данные с объемными большими данными.
 
 Дополнительные сведения о новых возможностях и известных проблемах в последнем выпуске см. в [заметках о выпуске](release-notes-big-data-cluster.md).
 
-[!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
-
 ## <a name="scenarios"></a>Сценарии
 
-[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] обеспечивают гибкость при взаимодействии с большими данными. Вы можете выполнять запросы к внешним источникам данных, сохранять большие данные в HDFS под управлением SQL Server, а также запрашивать данные из нескольких внешних источников данных через кластер. Полученные данные можно обрабатывать с применением технологий искусственного интеллекта, машинного обучения и других аналитических задач. В следующих подразделах содержатся дополнительные сведения об этих сценариях.
+[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] обеспечивают гибкость при работе с большими данными. Вы можете выполнять запросы к внешним источникам данных, сохранять большие данные в HDFS под управлением SQL Server, а также запрашивать данные из нескольких внешних источников данных через кластер. Полученные данные можно обрабатывать с применением технологий искусственного интеллекта, машинного обучения и других аналитических задач. В следующих подразделах содержатся дополнительные сведения об этих сценариях.
 
 ### <a name="data-virtualization"></a>Виртуализация данных
 
-Используя [SQL Server polybase](../relational-databases/polybase/polybase-guide.md), [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] может выполнять запросы к внешним источникам данных без перемещения или копирования данных. В [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] применяются новые соединители с источниками данных.
+С помощью [SQL Server PolyBase](../relational-databases/polybase/polybase-guide.md) [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] могут выполнять запросы к внешним источникам данных, не прибегая при этом к перемещению или копированию данных. В [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] применяются новые соединители с источниками данных.
 
 ![Виртуализация данных](media/big-data-cluster-overview/data-virtualization.png)
 
@@ -44,13 +42,13 @@ ms.locfileid: "72359534"
 
 ### <a name="scale-out-data-mart"></a>Киоск данных горизонтального масштабирования
 
-[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] предоставляют масштабное вычисление и хранение для повышения производительности при анализе любых данных. При этом данные из самых разных источников могут приниматься и распределяться между экземплярами *пула данных* в качестве кэша для последующего анализа.
+[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] обеспечивают горизонтальное масштабирование ресурсов для вычислений и хранения, позволяя повысить производительность анализа любых данных. При этом данные из самых разных источников могут приниматься и распределяться между экземплярами *пула данных* в качестве кэша для последующего анализа.
 
 ![Киоск данных](media/big-data-cluster-overview/data-mart.png)
 
 ### <a name="integrated-ai-and-machine-learning"></a>Встроенные возможности искусственного интеллекта и машинного обучения
 
-[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] включает задачи искусственного интеллекта и машинного обучения для данных, хранящихся в пулах хранения HDFS и пулах данных. Вы можете использовать Spark, а также встроенные в SQL Server средства на основе искусственного интеллекта, использующие языки R, Python, Scala или Java.
+[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] позволяют выполнять задачи на основе искусственного интеллекта и машинного обучения в отношении данных, хранящихся в пулах данных и пулах носителей HDFS. Вы можете использовать Spark, а также встроенные в SQL Server средства на основе искусственного интеллекта, использующие языки R, Python, Scala или Java.
 
 ![Искусственный интеллект и машинное обучение](media/big-data-cluster-overview/ai-ml-spark.png)
 
@@ -58,7 +56,7 @@ ms.locfileid: "72359534"
 
 Возможности управления и мониторинга реализуются на основе сочетания средств командной строки, API, порталов и динамических административных представлений.
 
-Вы можете использовать Azure Data Studio для выполнения самых разных задач в кластере больших данных. Эту возможность обеспечивает новое **расширение SQL Server 2019 (предварительная версия)**. Это расширение предоставляет следующие возможности:
+Вы можете использовать Azure Data Studio для выполнения самых разных задач в кластере больших данных. Эту возможность обеспечивает новое **расширение SQL Server 2019 (предварительная версия)** . Это расширение предоставляет следующие возможности:
 
 - Встроенные фрагменты кода для общих задач управления.
 - Просмотр HDFS, загрузка и предварительный просмотр файлов, а также создание каталогов.
@@ -80,7 +78,7 @@ Kubernetes — это оркестратор контейнеров с откр
 | **Pod** | Pod — это атомарная единица развертывания Kubernetes. Pod представляет собой логическую группу, которая состоит из одного или нескольких контейнеров и связанных ресурсов, необходимых для запуска приложения. Каждый pod выполняется на узле. При этом узел может выполняться в одном или нескольких pod. Главный узел Kubernetes автоматически назначает существующие pod узлам в кластере. |
 | &nbsp; ||
 
-В [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] Kubernetes отвечает за состояние [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]; Kubernetes создает и настраивает узлы кластера, назначает модули Pod для узлов и отслеживает работоспособность кластера.
+В [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] Kubernetes отвечает за состояние [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]. Для выполнения этой задачи Kubernetes создает и настраивает узлы кластера, назначает им существующие pod, а также осуществляет мониторинг работоспособности кластера.
 
 ### <a name="big-data-clusters-architecture"></a>Архитектура кластеров больших данных
 
@@ -90,7 +88,7 @@ Kubernetes — это оркестратор контейнеров с откр
 
 ### <a id="controlplane"></a> Контроллер
 
-Контроллер обеспечивает управление кластером и его безопасность. Он содержит службу управления, хранилище конфигураций и другие службы на уровне кластера, такие как Kibana, Grafana и эластичный Поиск.
+Контроллер обеспечивает управление кластером и его безопасность. Он включает службу контроля, хранилище конфигурации, а также другие службы уровня кластера, такие как Kibana, Grafana и Elastic Search.
 
 ### <a id="computeplane"></a> Вычислительный пул
 
@@ -105,8 +103,8 @@ Kubernetes — это оркестратор контейнеров с откр
 Пул носителей формируется из pod пула носителей, состоящих из SQL Server на Linux, Spark и HDFS. Все узлы хранилища в кластере больших данных SQL Server входят в кластер HDFS.
 
 > [!TIP]
-> Подробные сведения об архитектуре и установке кластера больших данных см. в [статье семинар: Microsoft [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] Architecture](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters).
+> Подробный обзор архитектуры кластера больших данных и установки см. в статье [Семинар. Архитектура [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] Майкрософт](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters).
 
 ## <a name="next-steps"></a>Следующие шаги
 
-Дополнительные сведения о развертывании SQL Server кластеров больших данных см. в статье Начало [работы с SQL Server кластерами больших данных](deploy-get-started.md).
+Дополнительные сведения о развертывании кластеров больших данных SQL Server см. в статье [Начало работы с кластерами больших данных SQL Server](deploy-get-started.md).

@@ -5,26 +5,26 @@ description: Эта статья описывает, как просмотрет
 author: yualan
 ms.author: alayu
 ms.reviewer: mikeray
-ms.date: 08/21/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 028864712658e35913fa04fb1a85e4ca960ad573
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
-ms.translationtype: MT
+ms.openlocfilehash: 45cf5461b9154d397ee5365fd275d2545a3cc376
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653274"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73531587"
 ---
-# <a name="how-to-view-the-status-of-a-big-data-cluster"></a>Просмотр состояния кластера больших данных
+# <a name="how-to-view-the-status-of-a-big-data-cluster"></a>Просмотр состояния кластера больших данных 
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Эта статья описывает, как получить доступ к конечным точкам служб и просмотреть состояние кластера больших данных SQL Server (предварительная версия). Вы можете использовать как Azure Data Studio, так и **azdata**, и в этой статье рассмотрены обе методики.
+В этой статье описывается, как получить доступ к конечным точкам служб и просмотреть состояние кластера больших данных SQL Server. Вы можете использовать как Azure Data Studio, так и **azdata**, и в этой статье рассмотрены обе методики.
 
 ## <a id="datastudio"></a> Использование Azure Data Studio
 
-После скачивания последней **сборки предварительной оценки** [Azure Data Studio](https://aka.ms/azdata-insiders) вы можете просматривать конечные точки служб и состояние кластера больших данных с помощью панели мониторинга кластера больших данных SQL Server. Обратите внимание, что некоторые из приведенных ниже функций появились в сборке предварительной оценки Azure Data Studio впервые.
+После скачивания последней **сборки предварительной оценки** [Azure Data Studio](https://aka.ms/getazuredatastudio) вы можете просматривать конечные точки служб и состояние кластера больших данных с помощью панели мониторинга кластера больших данных SQL Server. Некоторые из приведенных ниже функций появились в сборке предварительной оценки Azure Data Studio впервые.
 
 1. Сначала создайте подключение к кластеру больших данных в Azure Data Studio. Дополнительные сведения см. в статье [Подключение к кластеру больших данных SQL Server с помощью Azure Data Studio](connect-to-big-data-cluster.md).
 
@@ -42,16 +42,9 @@ ms.locfileid: "69653274"
 
 ![конечные точки служб](media/view-cluster-status/service-endpoints.png)
 
-Первые несколько строк предоставляют следующие службы.
-
-- Прокси приложения
-- Служба управления кластерами
-- HDFS и Spark
-- Прокси управления
-
 Эти службы выводят список конечных точек, которые можно копировать и вставлять, когда требуется конечная точка для подключения к таким службам. Например, можно щелкнуть значок копирования справа от конечной точки, а затем вставить ее в текстовом окне, запрашивающем эту конечную точку. Конечная точка службы управления кластерами нужна для запуска [записной книжки состояния кластера](#notebook).
 
-### <a name="dashboards"></a>Панели мониторинга
+### <a name="dashboards"></a>Информационные панели
 
 Таблица конечных точек служб также предоставляет несколько панелей мониторинга для наблюдения.
 
@@ -60,7 +53,7 @@ ms.locfileid: "69653274"
 - Мониторинг заданий Spark
 - Управление ресурсами Spark
 
-Вы можете напрямую щелкнуть эти ссылки. Перед подключением к службе вам будет дважды предложено указать имя пользователя и пароль.
+Вы можете напрямую щелкнуть эти ссылки. При доступе к этим панелям мониторинга вам придется пройти проверку подлинности. Для панелей мониторинга метрик и журналов укажите учетные данные администратора контроллера, которые задаются во время развертывания с помощью переменных среды **AZDATA_USERNAME** и **AZDATA_PASSWORD**. Панели мониторинга Spark будут использовать учетные данные шлюза (Knox): либо удостоверение AD в кластере, интегрированном с AD, либо пользователя **root** и переменную среды **AZDATA_PASSWORD**, если в кластере используется обычная проверка подлинности. 
 
 ### <a id="notebook"></a> Записная книжка состояния кластера
 
@@ -84,7 +77,7 @@ ms.locfileid: "69653274"
     > [!Note]
     > Если у вас нет файла конфигурации, настроенного для больших данных, вам будет предложено указать конечную точку контроллера. Введите или вставьте ее, а затем нажмите клавишу ВВОД для продолжения.
 
-5. Если подключение выполнено успешно, в оставшейся части записной книжки отображаются выходные данные каждого компонента в кластере больших данных. Если вы хотите повторно запустить определенную ячейку кода, наведите на нее указатель мыши и щелкните значок **Выполнить**.
+5. Если подключение выполнено успешно, в оставшейся части записной книжки отображаются выходные данные каждого компонента в кластере больших данных. Чтобы повторно запустить определенную ячейку кода, наведите на нее указатель мыши и щелкните значок **Выполнить**.
 
 ## <a name="use-azdata"></a>Использование azdata
 
@@ -92,26 +85,20 @@ ms.locfileid: "69653274"
 
 ### <a name="service-endpoints"></a>Конечные точки служб
 
-Вы можете получить IP-адреса внешних конечных точек для кластера больших данных, выполнив указанные ниже действия.
-
-1. Найдите IP-адрес конечной точки контроллера в выходных данных EXTERNAL-IP следующей команды **kubectl**.
-
-   ```bash
-   kubectl get svc controller-svc-external -n <your-big-data-cluster-name>
-   ```
-
-   > [!TIP]
-   > Если вы не изменили имя по умолчанию во время развертывания, используйте `-n mssql-cluster` в предыдущей команде. **mssql-cluster** — это имя по умолчанию для кластера больших данных.
-
 1. Войдите в кластер больших данных с помощью [azdata login](reference-azdata.md). Задайте для параметра **--controller-endpoint** значение внешнего IP-адреса конечной точки контроллера.
 
    ```bash
-   azdata login --controller-endpoint https://<ip-address-of-controller-svc-external>:30080 --controller-username <user-name>
+   azdata login --endpoint https://<ip-address-of-controller-svc-external>:30080 --username <user-name>
    ```
 
-   Укажите имя пользователя и пароль, настроенные для контроллера (CONTROLLER_USERNAME и CONTROLLER_PASSWORD) во время развертывания.
+   Укажите имя пользователя и пароль, настроенные для контроллера (AZDATA_USERNAME и AZDATA_PASSWORD) во время развертывания. 
+   Для проверки подлинности AD используется следующая команда:
 
-1. Выполните команду [azdata bdc endpoint list](reference-azdata-bdc-endpoint.md), чтобы получить список с описанием каждой конечной точки и соответствующими значениями IP-адреса и порта. 
+  ```bash
+   azdata login --endpoint https://<control_domain_name>:30080 --auth ad
+   ```
+
+1. Выполните команду [`azdata bdc endpoint list`](reference-azdata-bdc-endpoint.md), чтобы получить список с описанием каждой конечной точки и соответствующими значениями IP-адреса и порта. 
 
    ```bash
    azdata bdc endpoint list -o table
@@ -137,10 +124,10 @@ ms.locfileid: "69653274"
 
 ### <a name="view-cluster-status"></a>Просмотр состояния кластера
 
-Вы можете проверить состояние кластера с помощью команды [azdata bdc status show](reference-azdata-bdc-status.md).
+Проверить состояние кластера можно с помощью команды [`azdata bdc status show`](reference-azdata-bdc-status.md).
 
 ```bash
-azdata bdc status show -o table
+azdata bdc status show
 ```
 
 > [!TIP]
@@ -149,60 +136,177 @@ azdata bdc status show -o table
 Ниже приведен пример выходных данных этой команды.
 
 ```output
-Kind     Name           State
--------  -------------  -------
-BDC      mssql-cluster  Ready
-Control  default        Ready
-Master   default        Ready
-Compute  default        Ready
-Data     default        Ready
-Storage  default        Ready
+ Bdc: ready                                                                                                                                                                                                          Health Status:  healthy
+ ===========================================================================================================================================================================================================================================
+ Services: ready                                                                                                                                                                                                     Health Status:  healthy
+ -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Servicename    State    Healthstatus    Details
+
+ spark          ready    healthy         -
+ sql            ready    healthy         -
+ hdfs           ready    healthy         -
+ control        ready    healthy         -
+ gateway        ready    healthy         -
+ app            ready    healthy         -
+
+
+ Spark Services: ready                                                                                                                                                                                               Health Status:  healthy
+ -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Resourcename    State    Healthstatus    Details
+
+ sparkhead       ready    healthy         StatefulSet sparkhead is healthy
+ storage-0       ready    healthy         StatefulSet storage-0 is healthy
+
+
+ Sql Services: ready                                                                                                                                                                                                 Health Status:  healthy
+ -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Resourcename    State    Healthstatus    Details
+
+ master          ready    healthy         StatefulSet master is healthy
+ compute-0       ready    healthy         StatefulSet compute-0 is healthy
+ data-0          ready    healthy         StatefulSet data-0 is healthy
+ storage-0       ready    healthy         StatefulSet storage-0 is healthy
+
+
+ Hdfs Services: ready                                                                                                                                                                                                Health Status:  healthy
+ -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Resourcename    State    Healthstatus    Details
+
+ nmnode-0        ready    healthy         StatefulSet nmnode-0 is healthy
+ zookeeper       ready    healthy         StatefulSet zookeeper is healthy
+ storage-0       ready    healthy         StatefulSet storage-0 is healthy
+ sparkhead       ready    healthy         StatefulSet sparkhead is healthy
+
+
+ Control Services: ready                                                                                                                                                                                             Health Status:  healthy
+ -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Resourcename    State    Healthstatus    Details
+
+ controldb       ready    healthy         StatefulSet controldb is healthy
+ control         ready    healthy         ReplicaSet control is healthy
+ metricsdc       ready    healthy         DaemonSet metricsdc is healthy
+ metricsui       ready    healthy         ReplicaSet metricsui is healthy
+ metricsdb       ready    healthy         StatefulSet metricsdb is healthy
+ logsui          ready    healthy         ReplicaSet logsui is healthy
+ logsdb          ready    healthy         StatefulSet logsdb is healthy
+ mgmtproxy       ready    healthy         ReplicaSet mgmtproxy is healthy
+ controlwd       ready    healthy         ReplicaSet controlwd is healthy
+
+
+ Gateway Services: ready                                                                                                                                                                                             Health Status:  healthy
+ -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Resourcename    State    Healthstatus    Details
+
+ gateway         ready    healthy         StatefulSet gateway is healthy
+
+
+ App Services: ready                                                                                                                                                                                                 Health Status:  healthy
+ -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Resourcename    State    Healthstatus    Details
+
+ appproxy        ready    healthy         ReplicaSet appproxy is healthy
 ```
 
-### <a name="view-pool-status"></a>Просмотр состояния пула
+### <a name="view-specific-resource-status"></a>Просмотр состояния конкретного ресурса
 
-Вы можете проверить состояние пулов в кластере с помощью команды [azdata bdc pool status show](reference-azdata-bdc-pool-status.md). Чтобы использовать эту команду, укажите тип пула с помощью параметра `--kind`. Типы пулов:
+Состояние конкретного ресурса в кластере можно просмотреть с помощью команды [azdata bdc status show](reference-azdata-bdc-status.md). При использовании этой команды можно фильтровать результаты с помощью параметра `--resource`. Ниже приведены некоторые примеры входных данных для параметра `--resource`.
 
-- вычислительные;
-- data
 - master
-- spark;
-- носителей.
+- управляющие
+- compute-0
+- storage-0
+- gateway
 
 Например, следующая команда отображает состояние пула носителей.
 
 ```bash
-azdata bdc pool status show --kind storage
+azdata bdc status show --all --resource storage-0
 ```
 
-Должен отобразиться текст, аналогичный приведенному ниже.
+Чтобы просмотреть состояние всех компонентов, в которых запущена определенная служба, необходимо использовать соответствующую группу команд `azdata bdc <serviceName> status show`. Пример:
+
+- azdata bdc sql status show --all
+- azdata bdc hdfs status show --all
+- azdata bdc spark status show --all
+
+Ниже приведен пример выходных данных.
 
 ```output
-[
-  {
-    "kind": "Pod",
-    "logsUrl": "https://11.111.111.111:30080/clusters/mssql-cluster/pods/storage-0-0/logs/ui",
-    "name": "storage-0-0",
-    "nodeMetricsUrl": "https://11.111.111.111:30080/clusters/mssql-cluster/pods/storage-0-0/nodemetrics/ui",
-    "sqlMetricsUrl": "https://11.111.111.111:30080/clusters/mssql-cluster/pods/storage-0-0/sqlmetrics/ui",
-    "state": "Running"
-  },
-  {
-    "kind": "Pod",
-    "logsUrl": "https://11.111.111.111:30080/clusters/mssql-cluster/pods/storage-0-1/logs/ui",
-    "name": "storage-0-1",
-    "nodeMetricsUrl": "https://11.111.111.111:30080/clusters/mssql-cluster/pods/storage-0-1/nodemetrics/ui",
-    "sqlMetricsUrl": "https://11.111.111.111:30080/clusters/mssql-cluster/pods/storage-0-1/sqlmetrics/ui",
-    "state": "Running"
-  }
-]
+  Storage-0: ready                                                                                                                                                                                                    Health Status:  healthy
+ ===========================================================================================================================================================================================================================================
+ Instances: running                                                                                                                                                                                                  Health Status:  healthy
+ -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Instancename    State    Healthstatus    Details
+
+ storage-0-0     running  healthy         Pod storage-0-0 is healthy
+ storage-0-1     running  healthy         Pod storage-0-1 is healthy
+
+
+ Dashboards
+ -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Name            Url
+
+ nodeMetricsUrl  https://13.91.50.9:30777/api/v1/bdc/instances/storage-0-1/status/nodemetrics/ui
+ sqlMetricsUrl   https://13.91.50.9:30777/api/v1/bdc/instances/storage-0-1/status/sqlmetrics/ui
+ logsUrl         https://13.91.50.9:30777/api/v1/bdc/instances/storage-0-1/status/logs/ui
+ ```
+
+> [!TIP]
+> Для получения дополнительных сведений о работоспособности, включая ссылки на панели мониторинга метрик и журналов, соответствующие конкретному экземпляру, выполните команду status с параметрами `--all`. Ниже приведен пример выходных данных при использовании параметров `--all`.
+
+```output
+ Spark: ready                                                                                                                                                                                                        Health Status:  healthy
+ ===========================================================================================================================================================================================================================================
+ Resources: ready                                                                                                                                                                                                    Health Status:  healthy
+ -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Resourcename    State    Healthstatus    Details
+
+ sparkhead       ready    healthy         StatefulSet sparkhead is healthy
+ storage-0       ready    healthy         StatefulSet storage-0 is healthy
+
+
+ Sparkhead Resources: running                                                                                                                                                                                        Health Status:  healthy
+ -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Instancename    State    Healthstatus    Details
+
+ sparkhead-0     running  healthy         Pod sparkhead-0 is healthy
+ sparkhead-1     running  healthy         Pod sparkhead-1 is healthy
+
+
+      Dashboards
+      --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+      Name            Url
+
+      nodeMetricsUrl  https://13.91.50.9:30777/api/v1/bdc/instances/sparkhead-1/status/nodemetrics/ui
+      sqlMetricsUrl   https://13.91.50.9:30777/api/v1/bdc/instances/sparkhead-1/status/sqlmetrics/ui
+      logsUrl         https://13.91.50.9:30777/api/v1/bdc/instances/sparkhead-1/status/logs/ui
+
+
+ Storage-0 Resources: running                                                                                                                                                                                        Health Status:  healthy
+ -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Instancename    State    Healthstatus    Details
+
+ storage-0-0     running  healthy         Pod storage-0-0 is healthy
+ storage-0-1     running  healthy         Pod storage-0-1 is healthy
+
+
+      Dashboards
+      --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+      Name            Url
+
+      nodeMetricsUrl  https://13.91.50.9:30777/api/v1/bdc/instances/storage-0-1/status/nodemetrics/ui
+      sqlMetricsUrl   https://13.91.50.9:30777/api/v1/bdc/instances/storage-0-1/status/sqlmetrics/ui
+      logsUrl         https://13.91.50.9:30777/api/v1/bdc/instances/storage-0-1/status/logs/ui
 ```
 
-Значение `logsUrl` ссылается на панель мониторинга kibana со сведениями журнала.
+Значение `logsUrl` ссылается на панель мониторинга Kibana:
 
 ![Панель мониторинга Kibana](./media/view-cluster-status/kibana-dashboard.png)
 
-Значения `nodeMetricsUrl` и `sqlMetricsUrl` ссылаются на панель мониторинга grafana для отслеживания работоспособности узла и метрик SQL.
+> [!NOTE]
+> Браузер Microsoft Edge (старый) несовместим с Kibana. Чтобы эта панель мониторинга отображалась корректно, необходимо использовать браузер на базе Chromium. При загрузке панелей мониторинга в неподдерживаемом браузере вы увидите пустую страницу. Поддерживаемые браузеры для Kibana см. здесь.
+
+Значения `nodeMetricsUrl` и `sqlMetricsUrl` ссылаются на панель мониторинга Grafana для мониторинга метрик узла Kubernetes и метрик службы кластеров больших данных.
 
 ![Панель мониторинга Grafana](./media/view-cluster-status/grafana-dashboard.png)
 
@@ -210,8 +314,8 @@ azdata bdc pool status show --kind storage
 
 ### <a name="view-controller-status"></a>Просмотр состояния контроллера
 
-Вы можете просмотреть состояние контроллера с помощью команды [azdata bdc control status show](reference-azdata-bdc-control-status.md). Она предоставляет аналогичные ссылки на панели мониторинга, связанные с узлами контроллера в кластере больших данных.
+Состояние контроллера можно увидеть с помощью команды [`azdata bdc control status show`](reference-azdata-bdc-control-status.md). Она предоставляет аналогичные ссылки на панели мониторинга, связанные с компонентами контроллера в кластере больших данных.
 
 ## <a name="next-steps"></a>Следующие шаги
 
-Дополнительные сведения о кластерах больших данных см. в разделе [что такое [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] ](big-data-cluster-overview.md).
+Дополнительные сведения о кластерах больших данных см. в статье [Что такое [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](big-data-cluster-overview.md).

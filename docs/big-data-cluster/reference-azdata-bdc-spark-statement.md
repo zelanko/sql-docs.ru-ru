@@ -5,22 +5,22 @@ description: Справочная статья по командам azdata bdc 
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/28/2019
+ms.date: 11/04/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 31368eab4f3cdd10c6d54456823120bcd1637c5a
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
-ms.translationtype: MT
+ms.openlocfilehash: f8fcfb09201e9995b9c86f47adeab54fc037b866
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71708451"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73531770"
 ---
 # <a name="azdata-bdc-spark-statement"></a>azdata bdc spark statement
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
 
-Эта статья содержит справочную статью по **аздата**. 
+В следующей статье приводятся справочные сведения по командам `sql` в средстве `azdata`. Дополнительные сведения о других командах `azdata` см. в [справочнике по azdata](reference-azdata.md)
 
 ## <a name="commands"></a>Команды
 |     |     |
@@ -33,12 +33,11 @@ ms.locfileid: "71708451"
 Список всех инструкций в заданном сеансе Spark.
 ```bash
 azdata bdc spark statement list --session-id -i 
-                                
-```
-### <a name="examples"></a>Примеры
-Список всех инструкции сеанса.
+              ```
+### Examples
+List all the session statements.
 ```bash
-azdata bdc spark statement list --session-id 0
+azdata spark statement list --session-id 0
 ```
 ### <a name="required-parameters"></a>Обязательные параметры
 #### `--session-id -i`
@@ -51,7 +50,7 @@ azdata bdc spark statement list --session-id 0
 #### `--output -o`
 Формат вывода.  Допустимые значения: json, jsonc, table, tsv.  Значение по умолчанию: json.
 #### `--query -q`
-Строка запроса JMESPath. Дополнительные сведения и примеры см. в разделе [http://jmespath.org/](http://jmespath.org/]).
+Строка запроса JMESPath. Дополнительные сведения и примеры см. в разделе [http://jmespath.org/](http://jmespath.org/).
 #### `--verbose`
 Повышение уровня детализации журнала. Чтобы включить полные журналы отладки, используйте параметр --debug.
 ## <a name="azdata-bdc-spark-statement-create"></a>azdata bdc spark statement create
@@ -63,7 +62,7 @@ azdata bdc spark statement create --session-id -i
 ### <a name="examples"></a>Примеры
 Выполнение инструкции.
 ```bash
-azdata bdc spark statement create --session-id 0 --code "2+2"
+azdata spark statement create --session-id 0 --code "2+2"
 ```
 ### <a name="required-parameters"></a>Обязательные параметры
 #### `--session-id -i`
@@ -78,7 +77,7 @@ azdata bdc spark statement create --session-id 0 --code "2+2"
 #### `--output -o`
 Формат вывода.  Допустимые значения: json, jsonc, table, tsv.  Значение по умолчанию: json.
 #### `--query -q`
-Строка запроса JMESPath. Дополнительные сведения и примеры см. в разделе [http://jmespath.org/](http://jmespath.org/]).
+Строка запроса JMESPath. Дополнительные сведения и примеры см. в разделе [http://jmespath.org/](http://jmespath.org/).
 #### `--verbose`
 Повышение уровня детализации журнала. Чтобы включить полные журналы отладки, используйте параметр --debug.
 ## <a name="azdata-bdc-spark-statement-info"></a>azdata bdc spark statement info
@@ -90,7 +89,7 @@ azdata bdc spark statement info --session-id -i
 ### <a name="examples"></a>Примеры
 Получение сведений об инструкции для сеанса с идентификатором 0 и идентификатора инструкции 0.
 ```bash
-azdata bdc spark statement info --session-id 0 --statement-id 0
+azdata spark statement info --session-id 0 --statement-id 0
 ```
 ### <a name="required-parameters"></a>Обязательные параметры
 #### `--session-id -i`
@@ -105,7 +104,7 @@ azdata bdc spark statement info --session-id 0 --statement-id 0
 #### `--output -o`
 Формат вывода.  Допустимые значения: json, jsonc, table, tsv.  Значение по умолчанию: json.
 #### `--query -q`
-Строка запроса JMESPath. Дополнительные сведения и примеры см. в разделе [http://jmespath.org/](http://jmespath.org/]).
+Строка запроса JMESPath. Дополнительные сведения и примеры см. в разделе [http://jmespath.org/](http://jmespath.org/).
 #### `--verbose`
 Повышение уровня детализации журнала. Чтобы включить полные журналы отладки, используйте параметр --debug.
 ## <a name="azdata-bdc-spark-statement-cancel"></a>azdata bdc spark statement cancel
@@ -117,7 +116,7 @@ azdata bdc spark statement cancel --session-id -i
 ### <a name="examples"></a>Примеры
 Отмена инструкции.
 ```bash
-azdata bdc spark statement cancel --session-id 0 --statement-id 0
+azdata spark statement cancel --session-id 0 --statement-id 0
 ```
 ### <a name="required-parameters"></a>Обязательные параметры
 #### `--session-id -i`
@@ -138,6 +137,4 @@ azdata bdc spark statement cancel --session-id 0 --statement-id 0
 
 ## <a name="next-steps"></a>Следующие шаги
 
-- Дополнительные сведения о других командах **azdata** см. в [справочнике по azdata](reference-azdata.md). 
-
-- Дополнительные сведения об установке средства **azdata** см. в статье [Установка azdata для управления кластерами больших данных SQL Server 2019](deploy-install-azdata.md).
+Дополнительные сведения о других командах `azdata` см. в [справочнике по azdata](reference-azdata.md). Дополнительные сведения об установке средства `azdata` см. в статье [Установка azdata для управления кластерами больших данных SQL Server 2019](deploy-install-azdata.md).

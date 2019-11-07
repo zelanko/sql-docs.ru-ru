@@ -1,42 +1,42 @@
 ---
 title: Развертывание приложений с помощью azdata
 titleSuffix: SQL Server big data clusters
-description: Развертывание скрипта Python или R в качестве приложения в [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
+description: Развертывание скрипта Python или R как приложения в [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
 author: jeroenterheerdt
 ms.author: jterh
 ms.reviewer: mikeray
-ms.date: 08/21/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 93c94b8ca5688bd5c67369849094e20d1dae697e
-ms.sourcegitcommit: 77293fb1f303ccfd236db9c9041d2fb2f64bce42
-ms.translationtype: MT
+ms.openlocfilehash: 863b569014bf35ef4e6aab01ba966edb34812bd1
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929725"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73532521"
 ---
-# <a name="how-to-deploy-an-app-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Развертывание приложения в[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
+# <a name="how-to-deploy-an-app-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Развертывание приложения в [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-В этой статье описывается развертывание и Управление скриптами R и Python в качестве приложения в кластере больших данных SQL Server 2019.
+В этой статье описывается, как развернуть скрипт Python или R и управлять им как приложением в кластере больших данных SQL Server 2019.
 
 ## <a name="whats-new-and-improved"></a>Новые возможности и усовершенствования
 
 - Единая служебная программа командной строки для управления кластером и приложением.
 - Упрощенное развертывание приложений, обеспечивающее детальный контроль с помощью файлов спецификаций.
-- Поддержка размещения дополнительных типов приложений — SSIS и Млеап (новые в CTP-версии 2,3).
+- Поддержка размещения дополнительных типов приложений — SSIS и MLeap (новая возможность в CTP 2.3).
 - [Расширение Visual Studio Code](app-deployment-extension.md) для управления развертыванием приложений.
 
-Для развертывания приложений и управления ими используется служебная программа командной строки `azdata`. В этой статье приведены примеры развертывания приложений из командной строки. Сведения об использовании этого Visual Studio Code см. в разделе [расширение Visual Studio Code](app-deployment-extension.md).
+Для развертывания приложений и управления ими используется служебная программа командной строки `azdata`. В этой статье приведены примеры развертывания приложений из командной строки. Сведения об использовании этой функции в Visual Studio Code см. в разделе [Расширение Visual Studio Code](app-deployment-extension.md).
 
 Поддерживаются следующие типы приложений.
 - Приложения R и Python (функции, модели и приложения)
 - MLeap Serving
 - Службы SQL Server Integration Services (SSIS)
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>предварительные требования
 
 - [Кластер больших данных SQL Server 2019](deployment-guidance.md)
 - [Служебная программа командной строки azdata](deploy-install-azdata.md)
@@ -81,9 +81,9 @@ azdata login --controller-endpoint https://<ip-address-of-controller-svc-externa
 kubectl get svc controller-svc-external -n <name of your big data cluster>
 ```
 
-## <a name="kubeadm-or-minikube"></a>Kubeadm или Minikube
+## <a name="kubernetes-clusters-created-with-kubeadm"></a>Кластеры Kubernetes, созданные с помощью kubeadm
 
-Если вы используете Кубеадм или Minikube, выполните следующую команду, чтобы получить IP-адрес для входа в кластер.
+Чтобы получить IP-адрес для входа в кластер, выполните следующую команду.
 
 ```bash
 kubectl get node --selector='node-role.kubernetes.io/master'
@@ -105,7 +105,7 @@ azdata app create --spec <directory containing spec file>
 azdata app create --spec ./addpy
 ```
 
-Предполагается, что ваше приложение хранится в папке `addpy`. Эта папка также должна содержать файл спецификации для приложения — `spec.yaml`. Дополнительные сведения `spec.yaml` о файле см. на [странице развертывания приложения](concept-application-deployment.md) .
+Предполагается, что ваше приложение хранится в папке `addpy`. Эта папка также должна содержать файл спецификации для приложения — `spec.yaml`. Дополнительные сведения о файле `spec.yaml` см. на [странице "Развертывание приложений"](concept-application-deployment.md).
 
 Чтобы развернуть этот пример приложения, создайте следующие файлы в каталоге с именем `addpy`.
 
@@ -241,7 +241,7 @@ azdata app run --name add-app --version v1 --inputs x=1,y=2
 azdata app init --name hello --version v1 --template python
 ```
 
-При этом создается папка с именем hello.  Вы можете перейди в каталог с помощью `cd` и проверить созданные файлы в папке. Спецификация Spec. YAML определяет приложение, например имя, версию и исходный код. Можно изменить спецификацию, чтобы изменить имя, версию, входные и выходные данные.
+При этом создается папка с именем hello.  Вы можете перейди в каталог с помощью `cd` и проверить созданные файлы в папке. Спецификация spec. YAML определяет приложение, например имя, версию и исходный код. Вы можете изменить эту спецификацию, чтобы изменить имя, версию, входные и выходные данные.
 
 Ниже приведен пример выходных данных команды init, которые будут отображаться в папке.
 
@@ -291,8 +291,8 @@ spec.yaml
 azdata app delete --name add-app --version v1
 ```
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
-Узнайте, как интегрировать приложения, развернутые [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] в, в собственных приложениях, чтобы получить дополнительные сведения об [использовании приложений в кластерах больших данных](big-data-cluster-consume-apps.md) . Дополнительные примеры можно просмотреть в наборе [примеров развертывания приложений](https://aka.ms/sql-app-deploy).
+Дополнительные сведения о том, как интегрировать приложения, развернутые в [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], в собственные приложения, см. в статье [Использование приложений в кластерах больших данных](big-data-cluster-consume-apps.md). Дополнительные примеры можно просмотреть в наборе [примеров развертывания приложений](https://aka.ms/sql-app-deploy).
 
-Дополнительные сведения о [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]см. в разделе [что [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]такое?](big-data-cluster-overview.md).
+Дополнительные сведения о [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] см. в статье [Что такое [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md).

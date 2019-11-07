@@ -22,13 +22,13 @@ ms.assetid: adafeeef-4255-4924-8042-02f503d599ca
 author: dnethi
 ms.author: dinethi
 ms.custom: ''
-ms.date: 10/03/2019
-ms.openlocfilehash: a51b0a3da9fda396b23f6ddcf9121fe7a30ec202
-ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
+ms.date: 11/04/2019
+ms.openlocfilehash: 7597b0ef624958010981844969889b1c589c4883
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72542227"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73594328"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>Скачивание SQL Server Management Studio (SSMS)
 
@@ -42,13 +42,13 @@ SSMS распространяется бесплатно!
 
 ## <a name="download-ssmshttpsakamsssmsfullsetup"></a>[Скачивание SSMS](https://aka.ms/ssmsfullsetup)
 
-SSMS 18.3.1 является последней общедоступной версией SSMS. Если у вас установлена предыдущая общедоступная версия SSMS 18, при установке SSMS 18.3.1 она обновляется до версии 18.3.1. Если у вас установлена предыдущая *предварительная версия* SSMS 18.x, перед установкой SSMS 18.3.1 ее необходимо удалить.
+SSMS 18.4 является последней общедоступной версией SSMS. Если у вас установлена предыдущая общедоступная версия SSMS 18, при установке SSMS 18.4 она обновится до версии 18.4. Если у вас установлена предыдущая *предварительная версия* SSMS 18.x, перед установкой SSMS 18.4 ее необходимо удалить.
 
 **Сведения о версии**
 
-- Номер выпуска: 18.3.1  
-- Номер сборки: 15.0.18183.0  
-- Дата выпуска: 2 октября 2019 г.  
+- Номер выпуска: 18.4  
+- Номер сборки: 15.0.18206.0  
+- Дата выпуска: 4 ноября 2019 г.  
 
 Если у вас есть замечания или предложения или вы хотите сообщить о проблеме, обратитесь к группе SSMS на [UserVoice](https://aka.ms/sqlfeedback).
 
@@ -57,37 +57,45 @@ SSMS 18.3.1 является последней общедоступной ве
 Если на компьютере есть несколько параллельных установок SSMS, следует всегда проверять, правильную ли версию вы запускаете. Последняя версия называется **Microsoft SQL Server Management Studio 18**.
 
 > [!Note]
-> Если вы открываете локализованную версию этой страницы и хотите просмотреть актуальные материалы, посетите эту страницу на [английском языке](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver15). С английской версии сайта вы можете скачать другие [языки из числа доступных](#available-languages-ssms-1831).
+> Если вы открываете локализованную версию этой страницы и хотите просмотреть актуальные материалы, посетите эту страницу на [версии сайта на языке US-English](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms). С версии сайта US-English вы можете скачать другие [языки из числа доступных](#available-languages).
 
-## <a name="available-languages-ssms-1831"></a>Доступные языки (SSMS 18.3.1)
+## <a name="available-languages"></a>Доступные языки
 
 Этот выпуск SSMS можно установить на следующих языках.
 
-SQL Server Management Studio 18.3.1:  
-[Китайский (упрощенное письмо)](https://go.microsoft.com/fwlink/?linkid=2105412&clcid=0x804) | [Китайский (традиционное письмо)](https://go.microsoft.com/fwlink/?linkid=2105412&clcid=0x404) | [Английский (США)](https://go.microsoft.com/fwlink/?linkid=2105412&clcid=0x409) | [Французский](https://go.microsoft.com/fwlink/?linkid=2105412&clcid=0x40c) | [Немецкий](https://go.microsoft.com/fwlink/?linkid=2105412&clcid=0x407) | [Итальянский](https://go.microsoft.com/fwlink/?linkid=2105412&clcid=0x410) | [Японский](https://go.microsoft.com/fwlink/?linkid=2105412&clcid=0x411) | [Корейский](https://go.microsoft.com/fwlink/?linkid=2105412&clcid=0x412) | [Португальский (Бразилия)](https://go.microsoft.com/fwlink/?linkid=2105412&clcid=0x416) | [Русский](https://go.microsoft.com/fwlink/?linkid=2105412&clcid=0x419) | [Испанский](https://go.microsoft.com/fwlink/?linkid=2105412&clcid=0x40a)
+SQL Server Management Studio 18.4:  
+[Китайский (упрощенное письмо)](https://go.microsoft.com/fwlink/?linkid=2108895&clcid=0x804) | [Китайский (традиционное письмо)](https://go.microsoft.com/fwlink/?linkid=2108895&clcid=0x404) | [Английский (США)](https://go.microsoft.com/fwlink/?linkid=2108895&clcid=0x409) | [Французский](https://go.microsoft.com/fwlink/?linkid=2108895&clcid=0x40c) | [Немецкий](https://go.microsoft.com/fwlink/?linkid=2108895&clcid=0x407) | [Итальянский](https://go.microsoft.com/fwlink/?linkid=2108895&clcid=0x410) | [Японский](https://go.microsoft.com/fwlink/?linkid=2108895&clcid=0x411) | [Корейский](https://go.microsoft.com/fwlink/?linkid=2108895&clcid=0x412) | [Португальский (Бразилия)](https://go.microsoft.com/fwlink/?linkid=2108895&clcid=0x416) | [Русский](https://go.microsoft.com/fwlink/?linkid=2108895&clcid=0x419) | [Испанский](https://go.microsoft.com/fwlink/?linkid=2108895&clcid=0x40a)
 
 > [!NOTE]
 > Модуль SQL Server PowerShell устанавливается отдельно из коллекции PowerShell. Дополнительные сведения см. в статье [Загрузка модуля PowerShell (SQL Server)](download-sql-server-ps-module.md).
 
-## <a name="new-in-this-release-ssms-1831"></a>Новые возможности в этом выпуске (SSMS 18.3.1)
+## <a name="new-in-this-release-ssms-184"></a>Новые возможности в этом выпуске (SSMS 18.4)
 
 | Изменения | Сведения |
 |---------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Классификация данных | Добавление сведений о классификации данных в пользовательский интерфейс свойств столбца (*Тип информации*, *Идентификатор типа информации*, *Метка конфиденциальности* и *Идентификатор метки конфиденциальности* не отображаются в пользовательском интерфейсе SSMS). |
-| Редактор и IntelliSense | Обновлена поддержка функций, недавно добавленных в SQL Server 2019 (например, ALTER SERVER CONFIGURATION). |
-| Службы Integration Services | Добавлен новый элемент меню выбора `Tools > Migrate to Azure > Configure Azure-enabled DTExec`, который вызывает выполнение пакетов Integration Services SSIS в Azure-SSIS Integration Runtime как действий пакета служб SSIS в конвейерах ADF. |
-| Написание скриптов и SMO | Добавлена поддержка скриптов для ограничения уникальности хранилища данных SQL Azure. |
-| Написание скриптов и SMO | Классификация данных — добавлена поддержка SQL версии 10 (SQL 2008) и более поздних версий.  — Добавлен новый атрибут конфиденциальности rank для SQL версии 15 (SQL 2019) и более поздних версий и базы данных SQL Azure. |
+| Классификация данных | Добавлена поддержка пользовательской политики защиты информации для классификации данных. |
+| Хранилище запросов | В диалоговое окно свойств добавлен параметр *Макс. план на запрос*. |
+| Хранилище запросов | Добавлена поддержка новых пользовательских политик сбора данных. |
+| Написание скриптов и SMO | Добавлена поддержка скрипта материализованного представления в хранилище данных SQL. |
+| Написание скриптов и SMO | Добавлена поддержка *SQL по запросу*. |
+| Написание скриптов и SMO | [API оценки SQL](../sql-assessment-api/sql-assessment-api-overview.md) — добавлено 50 правил оценки (подробнее см. на GitHub). |
+| Написание скриптов и SMO | [API оценки SQL](../sql-assessment-api/sql-assessment-api-overview.md) — добавлены базовые математические выражения и условия сопоставления с правилами. |
+| Написание скриптов и SMO | [API оценки SQL](../sql-assessment-api/sql-assessment-api-overview.md) — добавлена поддержка объекта RegisteredServer. |
+| Написание скриптов и SMO | [API оценки SQL](../sql-assessment-api/sql-assessment-api-overview.md) — обновлен способ хранения правил в формате JSON, а также механизм применения переопределений и настроек. |
+| Написание скриптов и SMO | [API оценки SQL](../sql-assessment-api/sql-assessment-api-overview.md) — обновлены правила поддержки SQL в Linux. |
+| Написание скриптов и SMO | [API оценки SQL](../sql-assessment-api/sql-assessment-api-overview.md) — обновлен формат набора правил JSON и добавлена версия схемы. |
+| Написание скриптов и SMO | [API оценки SQL](../sql-assessment-api/sql-assessment-api-overview.md) — обновлены выходные данные командлетов для повышения удобства чтения рекомендаций. |
+| Профилировщик XEvent | В сеансы профилировщика XEvent добавлено событие *error_reported*. |
 
 Дополнительные сведения о новых возможностях в этом выпуске см. в [заметках о выпуске SSMS](release-notes-ssms.md).
 
-## <a name="supported-sql-offerings-ssms-1831"></a>Поддерживаемые предложения SQL (SSMS 18.3.1)
+## <a name="supported-sql-offerings-ssms-184"></a>Поддерживаемые предложения SQL (SSMS 18.4)
 
 - Эта версия SSMS работает со всеми [поддерживаемыми версиями SQL Server 2008–[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]](https://support.microsoft.com/lifecycle?C2=1044) и предоставляет превосходную поддержку новейших облачных функций базы данных SQL Azure и хранилища данных SQL Azure.
 - Кроме того, SSMS 18.x можно установить одновременно с SSMS 17.x, SSMS 16.x или SQL Server 2014 и более ранними версиями.
 - Службы SQL Server Integration Services (SSIS) — среда SSMS версии 17.x и более поздней не поддерживает подключение к устаревшим службам SQL Server Integration Services. Для подключения к более ранней версии служб Integration Services используйте соответствующую версию SSMS. Например, используйте SSMS 16.x для подключения к службам SQL Server 2016 Integration Services. Версии SSMS 17.x и SSMS 16.x можно установить параллельно на одном компьютере. Начиная с выпуска SQL Server 2012 база данных каталога SSIS (SSISDB) является рекомендуемым средством для хранения, выполнения и мониторинга пакетов служб Integration Services, а также управления ими. Дополнительные сведения см. в разделе [Каталог служб SSIS](../integration-services/catalog/ssis-catalog.md).
 
-## <a name="supported-operating-systems-ssms-1831"></a>Поддерживаемые операционные системы (SSMS 18.3.1)
+## <a name="supported-operating-systems-ssms-184"></a>Поддерживаемые операционные системы (SSMS 18.4)
 
 При использовании последнего пакета обновления этот выпуск SSMS поддерживает следующие 64-разрядные платформы:
 
@@ -104,7 +112,7 @@ SQL Server Management Studio 18.3.1:
 > [!NOTE]
 > SSMS работает только на Windows. Если вам требуется средство, которое работает на платформах, отличных от Windows, рассмотрите Azure Data Studio. Azure Data Studio — это новое кроссплатформенное средство для macOS, Linux, а также Windows. Дополнительные сведения см. в разделе [Azure Data Studio](../azure-data-studio/what-is.md).
 
-## <a name="release-notes-ssms-1831"></a>Заметки о выпуске (SSMS 18.3.1)
+## <a name="release-notes-ssms-184"></a>Заметки о выпуске (SSMS 18.4)
 
 В этом выпуске есть несколько [известных проблем](release-notes-ssms.md#known-issues-1831).
 

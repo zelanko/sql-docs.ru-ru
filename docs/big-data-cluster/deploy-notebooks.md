@@ -5,16 +5,16 @@ description: Используйте записную книжку из Azure Dat
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 07/24/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: d68baa615f384dd5afb665f29decb6d72113c5a3
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MT
+ms.openlocfilehash: dfdf7dfd2ca5521bd80c4fdbf81e7b5c45d58b8d
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69028574"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73594261"
 ---
 # <a name="deploy-sql-server-big-data-cluster-with-azure-data-studio-notebooks"></a>Развертывание кластера больших данных SQL Server с помощью записных книжек Azure Data Studio
 
@@ -30,31 +30,108 @@ ms.locfileid: "69028574"
 
 Для запуска записной книжки требуются следующие компоненты:
 
-* Установлена последняя версия [сборки Azure Data Studio для участников программы предварительной оценки](https://github.com/microsoft/azuredatastudio#try-out-the-latest-insiders-build-from-master)
-* расширение [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)], установленное в Azure Data Studio.
+* Последняя [сборка Azure Data Studio для участников программы предварительной оценки](https://github.com/microsoft/azuredatastudio#try-out-the-latest-insiders-build-from-master)
 
 Помимо перечисленных выше компонентов, для развертывания кластера больших данных SQL Server 2019 требуется следующее:
 
 * [azdata](deploy-install-azdata.md)
 * [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-binary-using-native-package-management)
-* [Azure CLI](/cli/azure/install-azure-cli)
+* [Azure CLI (при развертывании в Azure)](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest)
 
 ## <a name="launch-the-notebook"></a>Запуск записной книжки
 
-1. Запустите Azure Data Studio участников программы предварительной оценки.
+1. Запустите Azure Data Studio.
 
-1. На вкладке **Подключения** нажмите **...** и выберите**Развернуть кластер больших данных SQL Server...** .
+2. На вкладке **Подключения** нажмите на многоточие ( **...** ) и выберите параметр **Развернуть SQL Server...** .
 
-   ![Искусственный интеллект и машинное обучение](media/deploy-notebooks/deploy-notebooks-1.png)
+   ![Развертывание SQL Server](media/deploy-notebooks/deploy-notebooks.png)
 
-1. В разделе**Параметры** **целевого объекта развертывания** выберите **новый кластер Azure Kubernetes** или **существующий кластер службы Azure Kubernetes**.
+3. В параметрах развертывания выберите **Кластер больших данных SQL Server**.
 
-1. Нажмите кнопку **выбрать** .
+4. В разделе**Параметры** **целевого объекта развертывания** выберите **новый кластер Azure Kubernetes** или **существующий кластер службы Azure Kubernetes**.
 
-1. Это действие запускает диалоговое окно для получения вводимых пользователем данных, предоставления необходимых сведений и просмотра значений по умолчанию.
+5. Принятие условий соглашения о конфиденциальности и лицензии
 
-1. Нажмите кнопку **открыть записную книжку** .
-Это действие запускает соответствующую записную книжку. Чтобы завершить развертывание, следуйте инструкциям в записной книжке, чтобы развернуть кластер больших данных для [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] в существующем или новом кластере службы Azure Kubernetes.
+6. Это диалоговое окно также проверяет, существуют ли на узле средства, необходимые для выбранного типа развертывания SQL. Кнопка **Выбрать** активируется только после того, как проверка инструментов будет выполнена успешно.
+
+7. Нажмите кнопку **Выбрать**. Это действие запускает процесс развертывания.
+
+## <a name="set-deployment-configuration-template"></a>Настройка шаблона конфигурации развертывания
+
+Чтобы настроить параметры профиля развертывания, выполните приведенные ниже инструкции.
+
+### <a name="target-configuration-template"></a>Целевой шаблон конфигурации
+
+Выберите целевой шаблон конфигурации из доступных шаблонов. Доступность профилей зависит от типа целевого объекта развертывания, выбранного в предыдущем диалоговом окне.
+
+   ![Шаблон конфигурации развертывания: шаг 1](media/deploy-notebooks/deployment-configuration-template.png)
+
+### <a name="azure-settings"></a>Параметры Azure
+
+Если целевым объектом развертывания является новая AKS, для создания кластера AKS потребуются дополнительные данные, такие как идентификатор подписки Azure, группа ресурсов, имя кластера AKS, число виртуальных машин, размер и другие дополнительные сведения.
+
+   ![Параметры Azure](media/deploy-notebooks/azure-settings.png)
+
+Если целевым объектом развертывания является существующий кластер Kubernetes, мастер запрашивает путь к файлу конфигурации *KUBE*, чтобы импортировать параметры кластера Kubernetes. Убедитесь, что выбран тот контекст кластера, в котором можно развернуть кластер больших данных SQL Server 2019.
+
+   ![Контекст целевого кластера](media/deploy-notebooks/target-cluster-context.png)
+
+### <a name="cluster-docker-and-ad-settings"></a>Параметры кластера, Docker и Active Directory
+
+1. Введите имя кластера для BDC SQL Server 2019, а также имя пользователя и пароль администратора.
+Примечание. Для контроллера и SQL Server используется одна и та же учетная запись.
+
+   ![Параметры кластера](media/deploy-notebooks/cluster-settings.png)
+
+2. Введите необходимые параметры Docker
+
+   ![Параметры Docker](media/deploy-notebooks/docker-settings.png)
+
+3. Если доступна проверка подлинности Active Directory, введите параметры Active Directory
+
+   ![Параметры Active Directory](media/deploy-notebooks/active-directory-settings.png)
+
+### <a name="service-settings"></a>Параметры службы
+
+На этом экране отображаются входные данные для различных параметров, таких как **Масштабирование**, **Конечные точки**, **Хранилище** и **Дополнительные параметры хранилища**. Введите соответствующие значения и нажмите **Далее**.
+
+#### <a name="scale-settings"></a>Настройки масштабирования
+
+Введите количество экземпляров каждого компонента в кластере больших данных.
+
+Экземпляр Spark можно добавить вместе с HDFS. Он добавляется в пул носителей или используется отдельно в пуле Spark.
+
+   ![Параметры службы](media/deploy-notebooks/service-settings.png)
+
+Дополнительные сведения о каждом из этих компонентов см. в разделе о [главном экземпляре](concept-master-instance.md), [пуле данных](concept-data-pool.md), [пуле носителей](concept-storage-pool.md) или [пуле вычислений](concept-compute-pool.md).
+
+#### <a name="endpoint-settings"></a>Параметры конечных точек
+
+Конечные точки по умолчанию задаются автоматически. Однако при необходимости их можно изменить.
+
+   ![Параметры конечных точек](media/deploy-notebooks/endpoint-settings.png)
+
+#### <a name="storage-settings"></a>Параметры хранилища
+
+Параметры хранилища включают класс хранения и размер утверждения для данных и журналов. Данные параметры можно применять к хранилищу, данным и главному пулу SQL Server.
+
+   ![Параметры хранилища](media/deploy-notebooks/storage-settings.png)
+
+#### <a name="advanced-storage-settings"></a>Дополнительные параметры хранилища
+
+Дополнительные параметры хранилища можно добавить в разделе **Дополнительные параметры хранилища**
+
+* Пул носителей (HDFS)
+* Пул данных
+* SQL Server Master
+
+   ![Дополнительные параметры хранилища](media/deploy-notebooks/advanced-storage-settings.png)
+
+### <a name="summary"></a>Сводка
+
+На этом экране перечисляются все входные данные, предоставленные для развертывания кластера больших данных SQL Server 2019. Файлы конфигурации можно скачать с помощью кнопки **Сохранить файлы конфигурации**. Выберите **Вывести скрипт в записную книжку**, чтобы сохранить скрипт для всей конфигурации развертывания в записной книжке. Открыв приложение Notebook, выберите команду **Выполнить ячейки**, чтобы начать развертывание BDC SQL Server 2019 в выбранном целевом объекте.
+
+   ![Сводка](media/deploy-notebooks/deploy-sql-server-big-data-cluster-on-a-new-AKS-cluster.png)
 
 ## <a name="next-steps"></a>Следующие шаги
 

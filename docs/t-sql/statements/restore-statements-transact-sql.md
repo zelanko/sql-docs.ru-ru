@@ -1,7 +1,7 @@
 ---
 title: RESTORE (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 02/21/2019
+ms.date: 11/04/2019
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -40,12 +40,12 @@ ms.assetid: 877ecd57-3f2e-4237-890a-08f16e944ef1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 9e21af82bf762f8945c9d00232e63d9970054c31
-ms.sourcegitcommit: e7c3c4877798c264a98ae8d51d51cb678baf5ee9
+ms.openlocfilehash: cd6b2c3cea9876091532a5da3cf15bdda1da2d8d
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72916177"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73530939"
 ---
 # <a name="restore-statements-transact-sql"></a>Инструкции RESTORE (Transact-SQL)
 
@@ -345,7 +345,7 @@ Note: URL is the format used to specify the location and the file name for the M
 
 Восстановление поврежденной базы данных **master** выполняется при помощи специальной процедуры. Дополнительные сведения см. в статье [Резервное копирование и восстановление системных баз данных (SQL Server)](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md).
 
-Восстановление базы данных из копии удаляет кэш планов для экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Очистка кэша планов становится причиной перекомпиляции всех последующих планов выполнения и приводит к непредвиденному временному снижению производительности обработки запросов. Для каждого удаленного хранилища кэша в кэше планов журнал ошибок [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] содержит следующее информационное сообщение: "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обнаружил %d экземпляров, записанных на диск хранилищ кэша для хранилища кэша "%s" (части кэша планов) в результате операций по обслуживанию или изменению конфигурации базы данных". Это сообщение добавляется в журнал каждые пять минут при сбросе кэша в течение этого интервала времени.
+Восстановление базы данных из копии удаляет кэш планов для восстанавливаемой базы данных. Очистка кэша планов становится причиной перекомпиляции всех последующих планов выполнения и приводит к непредвиденному временному снижению производительности обработки запросов. 
 
 Чтобы восстановить базу данных доступности, сначала восстановите базу данных в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], а затем добавьте базу данных в группу доступности.
 
@@ -373,6 +373,10 @@ Note: URL is the format used to specify the location and the file name for the M
 
 > [!NOTE]
 > Полнотекстовые каталоги, импортированные из [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], по-прежнему рассматриваются как файлы базы данных. Для них остается применимой процедура [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] по резервному копированию полнотекстовых каталогов, за исключением того, что более нет необходимости использовать паузу и возобновление в процессе выполнения резервного копирования. Дополнительные сведения см. в разделе [Резервное копирование и восстановление полнотекстовых каталогов](https://go.microsoft.com/fwlink/?LinkId=107381).
+
+### [!INCLUDE [ssbigdataclusters-ss-nover](../../includes/ssbigdataclusters-ss-nover.md)]
+
+[!INCLUDE [big-data-clusters-master-instance-ha-endpoint-requirement](../../includes/big-data-clusters-master-instance-ha-endpoint-requirement.md)]
 
 ## <a name="metadata"></a>Метаданные
 

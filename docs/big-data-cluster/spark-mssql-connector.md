@@ -5,16 +5,16 @@ description: Сведения о том, как использовать сое�
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: shivsood
-ms.date: 08/21/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 3ad3a0e03c75f7961864f70fc52655e47e2b89ea
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
-ms.translationtype: MT
+ms.openlocfilehash: 19edd6bf2e28a0dd0ec2007493dc02ff55108554
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653305"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73531613"
 ---
 # <a name="how-to-read-and-write-to-sql-server-from-spark-using-the-mssql-spark-connector"></a>Чтение и запись в SQL Server из Spark с помощью соединителя MSSQL Spark
 
@@ -35,7 +35,7 @@ ms.locfileid: "69653305"
 
 ## <a name="mssql-spark-connector-interface"></a>Интерфейс соединителя MSSQL Spark
 
-Предварительная версия SQL Server 2019 предоставляет **соединитель MSSQL Spark** для кластеров больших данных, использующий API массовой записи SQL Server для записи из Spark в SQL. Соединитель MSSQL Spark основан на интерфейсах API источника данных Spark и предоставляет привычный интерфейс соединителя JDBC Spark. Сведения о параметрах интерфейса см. в [документации по Apache Spark](http://spark.apache.org/docs/latest/sql-data-sources-jdbc.html). Для ссылки на соединитель MSSQL используется имя **com.microsoft.sqlserver.jdbc.spark**.
+SQL Server 2019 предоставляет **соединитель MSSQL Spark** для кластеров больших данных, использующий API массовой записи SQL Server для записи из Spark в SQL. Соединитель MSSQL Spark основан на интерфейсах API источника данных Spark и предоставляет привычный интерфейс соединителя JDBC Spark. Сведения о параметрах интерфейса см. в [документации по Apache Spark](http://spark.apache.org/docs/latest/sql-data-sources-jdbc.html). Для ссылки на соединитель MSSQL используется имя **com.microsoft.sqlserver.jdbc.spark**.
 
 В следующей таблице описаны параметры интерфейса, которые были изменены или являются новыми.
 
@@ -45,11 +45,11 @@ ms.locfileid: "69653305"
 
 Соединитель использует API-интерфейсы массовой записи SQL Server. Любые параметры массовой записи могут передаваться пользователем в качестве необязательного параметра и передаются соединителем в базовый API. Дополнительные сведения об операциях массовой записи см. в разделе [SQLServerBulkCopyOptions]( ../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#sqlserverbulkcopyoptions).
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>предварительные требования
 
 - [Кластер больших данных SQL Server](deploy-get-started.md).
 
-- [Azure Data Studio](https://aka.ms/azdata-insiders).
+- [Azure Data Studio](https://aka.ms/getazuredatastudio).
 
 ## <a name="create-the-target-database"></a>Создание целевой базы данных
 
@@ -88,6 +88,6 @@ ms.locfileid: "69653305"
 
 1. Выполните каждую ячейку кода в примере, чтобы просмотреть использование соединителя MSSQL Spark.
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
-Дополнительные сведения о кластерах больших данных см. в статье [развертывание [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] в Kubernetes](deployment-guidance.md) .
+Дополнительные сведения о кластерах больших данных см. в статье [Развертывание [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] в Kubernetes](deployment-guidance.md).

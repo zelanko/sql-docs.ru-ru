@@ -5,17 +5,17 @@ author: dphansen
 ms.author: davidph
 ms.reviewer: vanto
 manager: cgronlun
-ms.date: 09/23/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: b3d2fb6c05a078e222a68e8de8998d4edff3c1a8
-ms.sourcegitcommit: 2f56848ec422845ee81fb84ed321a716c677aa0e
+ms.openlocfilehash: 4f32f4219e438a3f6dc390d11b50e6487c47ee49
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71271968"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73531250"
 ---
 # <a name="install-sql-server-machine-learning-services-python-and-r-on-linux"></a>Установка Служб машинного обучения SQL Server (Python, R) в Linux
 
@@ -35,9 +35,11 @@ ms.locfileid: "71271968"
 
 Службы машинного обучения также поддерживаются в контейнерах Linux. Мы не предоставляем готовые контейнеры со Службами машинного обучения, однако вы можете создать такой контейнер для SQL Server, используя [шаблон, доступный в GitHub](https://github.com/Microsoft/mssql-docker/tree/master/linux/preview/examples/mssql-mlservices).
 
-## <a name="uninstall-previous-ctp"></a>Удаление предыдущей версии CTP
+Службы машинного обучения устанавливаются по умолчанию в кластерах больших данных SQL Server, и вам не нужно в этом случае выполнять шаги. Дополнительные сведения см. в разделе [Использование Служб машинного обучения (Python и R) в кластерах больших данных](../big-data-cluster/machine-learning-services.md).
 
-За последние несколько выпусков CTP список пакетов изменился, и их стало меньше. Мы рекомендуем удалить версию CTP 2.x, чтобы удалить все предыдущие пакеты, прежде чем устанавливать версию CTP 3.2. Параллельная установка нескольких версий не поддерживается.
+## <a name="uninstall-preview-release"></a>Удаление предварительной версии
+
+Если вы установили предварительную версию (CTP-версию или версию-кандидат), рекомендуется удалить эту версию для удаления всех предыдущих пакетов перед установкой SQL Server 2019. Параллельная установка нескольких версий не поддерживается, и список пакетов был изменен после выхода последних предварительных версий (CTP/RC).
 
 ### <a name="1-confirm-package-installation"></a>1. Подтверждение установки пакета
 
@@ -47,7 +49,7 @@ ms.locfileid: "71271968"
 ls /opt/microsoft/mssql/bin
 ```
 
-### <a name="2-uninstall-previous-ctp-2x-packages"></a>2. Удаление пакетов предыдущей версии CTP 2.x
+### <a name="2-uninstall-ctprc-packages"></a>2. Удаление пакетов CTP/RC
 
 Выполняйте удаление на самом низком уровне пакета. Любой вышестоящий пакет, зависящий от пакета более низкого уровня, удаляется автоматически.
 
@@ -70,7 +72,7 @@ ls /opt/microsoft/mssql/bin
 > microsoft-r-open-mro-3.4.4
 > ```
 
-### <a name="3-proceed-with-ctp-32-install"></a>3. Начало установки CTP 3.2
+### <a name="3-proceed-with-install"></a>3. Перейдите к установке
 
 Выполните установку на самом верхнем уровне пакета, следуя инструкциям из этой статьи для вашей операционной системы.
 
@@ -178,8 +180,6 @@ zypper update
 | [microsoft-r-open *](#mro) | Чтение | Дистрибутив R с открытым исходным кодом, состоящий из трех пакетов. |
 |mssql-mlservices-mlm-r  | Чтение | *Полная установка*. Предоставляет RevoScaleR, MicrosoftML, sqlRUtils, olapR, предварительно обученные модели для выделения признаков изображений и анализа тональности текста.| 
 |mssql-mlservices-packages-r  | Чтение | *Минимальная установка*. Предоставляет RevoScaleR, sqlRUtils, MicrosoftML, olapR. <br/>Не включает в себя предварительно обученные модели. | 
-|mssql-mlservices-mml-py  | Только CTP 2.0-2.1 | Устарело в CTP 2.2 из-за объединения пакетов Python в mssql-mslservices-python. Предоставляет revoscalepy. Не включает в себя предварительно обученные модели и microsoftml.| 
-|mssql-mlservices-mml-r  | Только CTP 2.0-2.1 | Устарело в CTP 2.2 из-за объединения пакетов R в mssql-mslservices-python. Предоставляет RevoScaleR, sqlRUtils, olapR. Не включает в себя предварительно обученные модели и MicrosoftML.  |
 
 <a name="RHEL"></a>
 
@@ -420,7 +420,7 @@ sudo /opt/mssql/bin/mssql-conf setup accept-eula-ml
 
 #### <a name="download-site"></a>Сайт загрузки
 
-Пакеты можно скачать по адресу [https://packages.microsoft.com/](https://packages.microsoft.com/). Все пакеты mlservices для R и Python размещены вместе с пакетом ядра СУБД. Базовой версией для пакетов mlservices является 9.4.5 (для CTP 2.0) или 9.4.6 (для CTP 2.1 и более поздних версий). Не забывайте, что пакеты microsoft-r-open находятся [в другом репозитории](#mro).
+Пакеты можно скачать по адресу [https://packages.microsoft.com/](https://packages.microsoft.com/). Все пакеты mlservices для R и Python размещены вместе с пакетом ядра СУБД. Базовой версией для пакетов mlservices является 9.4.6. Не забывайте, что пакеты microsoft-r-open находятся [в другом репозитории](#mro).
 
 #### <a name="rhel7-paths"></a>Пути RHEL/7
 
@@ -515,24 +515,87 @@ mssql-mlservices-mlm-py-9.4.7.64
    @script = N'import httpie' 
    ```
 
-## <a name="limitations-in-ctp-releases"></a>Ограничения в выпусках CTP
+## <a name="run-in-a-container"></a>Запуск в контейнере
 
-Интеграция с R и Python в Linux по-прежнему находится на этапе активной разработки. Следующие функции пока не работают в предварительной версии.
+Выполните следующие действия, чтобы создать и запустить Службы машинного обучения SQL Server в контейнере Docker. Дополнительные сведения см. в статье [Настройка образов контейнеров SQL Server в Docker](sql-server-linux-configure-docker.md).
 
-+ Неявная проверка подлинности сейчас недоступна в Службах машинного обучения на Linux, поэтому вы не можете подключиться обратно к серверу из выполняемого скрипта R или Python для доступа к данным или другим ресурсам. 
+### <a name="prerequisites"></a>предварительные требования
 
-### <a name="resource-governance"></a>Управление ресурсами
+- Интерфейс командной строки Git.
+- Docker Engine 1.8 или более поздней версии на любом поддерживаемом дистрибутиве Linux или Docker для Mac или Windows. Дополнительные сведения см. в разделе [Установка Docker](https://docs.docker.com/engine/installation/).
+- Не менее 2 гигабайт (ГБ) места на диске.
+- Не менее 2 ГБ ОЗУ.
+- [Требования к системе для SQL Server на Linux](sql-server-linux-setup.md#system).
 
-С точки зрения [управления ресурсами](../t-sql/statements/create-external-resource-pool-transact-sql.md) для внешних пулов ресурсов между Linux и Windows наблюдается паритет, однако статистика для [sys.dm_resource_governor_external_resource_pools](../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md) сейчас содержит другие единицы измерения для Linux. Единицы измерения будут согласованы в предстоящей версии CTP.
- 
-| Имя столбца   | Описание | Значение в Linux | 
-|---------------|--------------|---------------|
-|peak_memory_kb | Максимальный объем используемой памяти для пула ресурсов. | В Linux эта статистика извлекается из подсистемы memory CGroups, где используется значение memory.max_usage_in_bytes. |
-|write_io_count | Общее число выполненных операций ввода-вывода записи с момента сброса статистики Resource Governor. | В Linux эта статистика извлекается из подсистемы blkio CGroups, где для строки write используется значение blkio.throttle.io_serviced. | 
-|read_io_count | Общее число выполненных операций ввода-вывода чтения с момента сброса статистики Resource Governor. | В Linux эта статистика извлекается из подсистемы blkio CGroups, где для строки read используется значение blkio.throttle.io_serviced. | 
-|total_cpu_kernel_ms | Совокупное время ядра использования ЦП, в миллисекундах, с момента сброса статистики Resource Governor. | В Linux эта статистика извлекается из подсистемы cpuacct CGroups, где для строки user используется значение cpuacct.stat. |  
-|total_cpu_user_ms | Совокупное время использования ЦП, в миллисекундах, с момента сброса статистики Resource Governor.| В Linux эта статистика извлекается из подсистемы cpuacct CGroups, где для строки system используется значение cpuacct.stat. | 
-|active_processes_count | Количество внешних процессов, выполняемых в момент запроса.| В Linux эта статистика извлекается из подсистемы pids CGroups, где используется значение pids.current. | 
+### <a name="clone-the-mssql-docker-repository"></a>Клонирование репозитория mssql-docker
+
+1. Откройте терминал bash в ОС Linux или Mac либо терминал WSL в ОС Windows.
+
+1. Создайте локальный каталог для хранения локальной копии репозитория mssql-docker.
+
+1. Выполните команду git clone, чтобы клонировать репозиторий mssql-docker:
+
+    ```bash
+    git clone https://github.com/microsoft/mssql-docker mssql-docker
+    ```
+
+### <a name="build-a-sql-server-linux-container-image-with-machine-learning-services"></a>Создание образа контейнера SQL Server в Linux со Службами машинного обучения
+
+1. Измените каталог на mssql-mlservices:
+
+    ```bash
+    cd mssql-docker/linux/preview/examples/mssql-mlservices
+    ```
+
+1. Выполните скрипт build.sh:
+
+   ```bash
+   ./build.sh
+   ```
+
+   > [!NOTE]
+   > Для создания образа Docker вам нужно установить пакеты размером в несколько ГБ. Выполнение скрипта может занять до 20 минут. Этот период зависит от пропускной способности сети.
+
+### <a name="run-the-sql-server-linux-container-image-with-machine-learning-services"></a>Запуск образа контейнера SQL Server в Linux со Службами машинного обучения
+
+1. Перед запуском контейнера задайте переменные среды. В качестве значения переменной среды PATH_TO_MSSQL укажите каталог узла:
+
+   ```bash
+    export MSSQL_PID='Developer'
+    export ACCEPT_EULA='Y'
+    export ACCEPT_EULA_ML='Y'
+    export PATH_TO_MSSQL='/home/mssql/'
+   ```
+
+1. Выполните скрипт run.sh:
+
+   ```bash
+   ./run.sh
+   ```
+
+   Эта команда позволяет создать контейнер SQL Server со Службами машинного обучения, используя выпуск Developer Edition (по умолчанию). Порт SQL Server **1433** доступен на узле как порт **1401**.
+
+   > [!NOTE]
+   > Процесс запуска контейнера с рабочими выпусками SQL Server немного отличается. Дополнительные сведения см. в статье [Настройка образов контейнеров SQL Server в Docker](sql-server-linux-configure-docker.md). Если вы используете те же имена и порты контейнеров, действия в оставшейся части этого руководства будут актуальны и для рабочих контейнеров.
+
+1. Чтобы просмотреть контейнеры Docker, выполните команду `docker ps`:
+
+   ```bash
+   sudo docker ps -a
+   ```
+
+1. Если в столбце **STATUS** (Состояние) отображается значение **Up** (Работает), SQL Server выполняется в контейнере и прослушивает порт, указанный в столбце **PORTS** (Порты). Если в столбце **STATUS** контейнера с SQL Server отображается **Exited** (завершен), см.руководство [Устранение неполадок конфигурации](sql-server-linux-configure-docker.md#troubleshooting).
+
+   ```bash
+   $ sudo docker ps -a
+   ```
+
+    Выходные данные: 
+    
+    ```
+    CONTAINER ID        IMAGE                          COMMAND                  CREATED             STATUS              PORTS                    NAMES
+    941e1bdf8e1d        mcr.microsoft.com/mssql/server/mssql-server-linux   "/bin/sh -c /opt/m..."   About an hour ago   Up About an hour     0.0.0.0:1401->1433/tcp   sql1
+    ```
 
 ## <a name="next-steps"></a>Следующие шаги
 

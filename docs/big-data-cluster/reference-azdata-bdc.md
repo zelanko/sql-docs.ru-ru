@@ -5,42 +5,43 @@ description: Справочная статья по командам azdata bdc.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/28/2019
+ms.date: 11/04/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 689b01b7798a5a1f4ec282343bfea0a1781e3437
-ms.sourcegitcommit: 0c6c1555543daff23da9c395865dafd5bb996948
-ms.translationtype: MT
+ms.openlocfilehash: a4b619396c2dcdad589deff3f9fc6a03fe37c1d5
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70304735"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73531687"
 ---
 # <a name="azdata-bdc"></a>azdata bdc
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
 
-Эта статья содержит справочную статью по **аздата**. 
+В следующей статье приводятся справочные сведения по командам `sql` в средстве `azdata`. Дополнительные сведения о других командах `azdata` см. в [справочнике по azdata](reference-azdata.md)
 
 ## <a name="commands"></a>Команды
 |     |     |
 | --- | --- |
 [azdata bdc create](#azdata-bdc-create) | Создание кластера больших данных.
 [azdata bdc delete](#azdata-bdc-delete) | Удаление кластера больших данных.
+[azdata bdc upgrade](#azdata-bdc-upgrade) | Обновление образов, развернутых в каждом контейнере в кластере больших данных SQL Server.
 [azdata bdc config](reference-azdata-bdc-config.md) | Команды настройки.
 [azdata bdc endpoint](reference-azdata-bdc-endpoint.md) | Команды конечной точки.
 [azdata bdc debug](reference-azdata-bdc-debug.md) | Команды отладки.
 [azdata bdc status](reference-azdata-bdc-status.md) | Команды состояния BDC.
-[azdata bdc control](reference-azdata-bdc-control.md) | Управление командами службы.
-[SQL BDC аздата](reference-azdata-bdc-sql.md) | Команды службы SQL.
+[azdata bdc control](reference-azdata-bdc-control.md) | Команды службы контроля.
+[azdata bdc sql](reference-azdata-bdc-sql.md) | Команды службы SQL.
 [azdata bdc hdfs](reference-azdata-bdc-hdfs.md) | Команды службы HDFS.
 [azdata bdc spark](reference-azdata-bdc-spark.md) | Команды службы Spark.
-[Шлюз BDC аздата](reference-azdata-bdc-gateway.md) | Команды службы шлюза.
-[приложение BDC аздата](reference-azdata-bdc-app.md) | Команды службы приложений.
-[azdata bdc hdfs](reference-azdata-bdc-hdfs.md) | Модуль HDFS предоставляет команды для доступа к файловой системе HDFS.
+[azdata bdc gateway](reference-azdata-bdc-gateway.md) | Команды службы шлюза.
+[azdata bdc app](reference-azdata-bdc-app.md) | Команды службы приложений.
 [azdata bdc spark](reference-azdata-bdc-spark.md) | Команды Spark позволяют пользователю взаимодействовать с системой Spark, создавая сеансы, инструкции и пакеты и управляя ими.
+[azdata bdc hdfs](reference-azdata-bdc-hdfs.md) | Модуль HDFS предоставляет команды для доступа к файловой системе HDFS.
 ## <a name="azdata-bdc-create"></a>azdata bdc create
-Создание SQL Server кластера больших данных. в системе требуется конфигурация Kubernetes, а также следующие переменные среды [' CONTROLLER_USERNAME ', ' CONTROLLER_PASSWORD ', ' MSSQL_SA_PASSWORD ', ' KNOX_PASSWORD '].
+Создание кластера больших данных SQL Server. В системе должна быть конфигурация Kubernetes, а также следующие переменные среды: ['AZDATA_USERNAME', 'AZDATA_PASSWORD'].
 ```bash
 azdata bdc create [--name -n] 
                   [--config-profile -c]  
@@ -69,9 +70,9 @@ azdata bdc create --accept-eula yes --config-profile aks-dev-test --force
 #### `--name -n`
 Имя кластера больших данных, используемого для пространств имен Kubernetes.
 #### `--config-profile -c`
-Профиль конфигурации кластера больших данных, используемый для развертывания кластера: ["AKS-dev-test", "кубеадм-произв", "minikube-dev-test", "кубеадм-dev-test"]
+Профиль конфигурации кластера больших данных, используемый для развертывания кластера: ['kubeadm-dev-test', 'kubeadm-prod', 'aks-dev-test', 'aks-dev-test-ha']
 #### `--accept-eula -a`
-Вы принимаете условия лицензии? [да/нет]. Если вы не хотите использовать этот аргумент, можно присвоить переменной среды ACCEPT_EULA значение "yes". Условия лицензии для этого продукта можно просмотреть по адресу https://go.microsoft.com/fwlink/?LinkId=2002534.
+Вы принимаете условия лицензии? [да/нет]. Если вы не хотите использовать этот аргумент, можно присвоить переменной среды ACCEPT_EULA значение "yes". С условиями лицензии для azdata можно ознакомиться по адресу https://aka.ms/eula-azdata-en. Условия лицензии для кластера больших данных: Enterprise°— https://go.microsoft.com/fwlink/?linkid=2104292, Standard°— https://go.microsoft.com/fwlink/?linkid=2104294, Developer°— https://go.microsoft.com/fwlink/?linkid=2104079.
 #### `--node-label -l`
 Метка узлов кластера больших данных, используемая для указания узлов, в которых будет выполняться развертывание.
 #### `--force -f`
@@ -84,11 +85,11 @@ azdata bdc create --accept-eula yes --config-profile aks-dev-test --force
 #### `--output -o`
 Формат вывода.  Допустимые значения: json, jsonc, table, tsv.  Значение по умолчанию: json.
 #### `--query -q`
-Строка запроса JMESPath. Дополнительные сведения и примеры см. в разделе [http://jmespath.org/](http://jmespath.org/]).
+Строка запроса JMESPath. Дополнительные сведения и примеры см. в разделе [http://jmespath.org/](http://jmespath.org/).
 #### `--verbose`
 Повышение уровня детализации журнала. Чтобы включить полные журналы отладки, используйте параметр --debug.
 ## <a name="azdata-bdc-delete"></a>azdata bdc delete
-Удалите SQL Server кластер больших данных. в системе требуется конфигурация Kubernetes.
+Удаление кластера больших данных SQL Server. В системе должна быть конфигурация Kubernetes.
 ```bash
 azdata bdc delete --name -n 
                   [--force -f]
@@ -112,12 +113,45 @@ azdata bdc delete --name <cluster_name>
 #### `--output -o`
 Формат вывода.  Допустимые значения: json, jsonc, table, tsv.  Значение по умолчанию: json.
 #### `--query -q`
-Строка запроса JMESPath. Дополнительные сведения и примеры см. в разделе [http://jmespath.org/](http://jmespath.org/]).
+Строка запроса JMESPath. Дополнительные сведения и примеры см. в разделе [http://jmespath.org/](http://jmespath.org/).
+#### `--verbose`
+Повышение уровня детализации журнала. Чтобы включить полные журналы отладки, используйте параметр --debug.
+## <a name="azdata-bdc-upgrade"></a>azdata bdc upgrade
+Обновление образов, развернутых в каждом контейнере в кластере больших данных SQL Server. Обновленные образы создаются на основе переданного образа Docker. Если обновленные образы не из того же репозитория образов Docker, из которого образы, развернутые в текущий момент, то необходимо указать параметр "repository".
+```bash
+azdata bdc upgrade --name -n 
+                   --tag -t  
+                   [--repository -r]
+```
+### <a name="examples"></a>Примеры
+Обновление BDC до нового образа с помощью тега "cu2" из того же репозитория.
+```bash
+azdata bdc upgrade -t cu2
+```
+Обновление BDC до новых образов с помощью тега "cu2" из нового репозитория "foo/bar/baz".
+```bash
+azdata bdc upgrade -t cu2 -r foo/bar/baz
+```
+### <a name="required-parameters"></a>Обязательные параметры
+#### `--name -n`
+Имя кластера больших данных, используемого для пространств имен Kubernetes.
+#### `--tag -t`
+Тег целевого образа Docker для обновления всех контейнеров в кластере.
+### <a name="optional-parameters"></a>Необязательные параметры
+#### `--repository -r`
+Репозиторий Docker, откуда все контейнеры в кластере должны получать свои образы.
+### <a name="global-arguments"></a>Глобальные аргументы
+#### `--debug`
+Повышение уровня детализации журнала для включения всех журналов отладки.
+#### `--help -h`
+Отображение этого справочного сообщения и выход.
+#### `--output -o`
+Формат вывода.  Допустимые значения: json, jsonc, table, tsv.  Значение по умолчанию: json.
+#### `--query -q`
+Строка запроса JMESPath. Дополнительные сведения и примеры см. в разделе [http://jmespath.org/](http://jmespath.org/).
 #### `--verbose`
 Повышение уровня детализации журнала. Чтобы включить полные журналы отладки, используйте параметр --debug.
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
-- Дополнительные сведения о других командах **azdata** см. в [справочнике по azdata](reference-azdata.md). 
-
-- Дополнительные сведения об установке средства **azdata** см. в статье [Установка azdata для управления кластерами больших данных SQL Server 2019](deploy-install-azdata.md).
+Дополнительные сведения о других командах `azdata` см. в [справочнике по azdata](reference-azdata.md). Дополнительные сведения об установке средства `azdata` см. в статье [Установка azdata для управления кластерами больших данных SQL Server 2019](deploy-install-azdata.md).

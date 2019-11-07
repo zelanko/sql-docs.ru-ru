@@ -5,17 +5,17 @@ author: dphansen
 ms.author: davidph
 ms.reviewer: vanto
 manager: cgronlun
-ms.date: 08/21/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3f4f4bad8bbe72681b699af25b87eb4a533b7002
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 3e86da652231a06cd28318096ada3ae3aed7526e
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653523"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73531232"
 ---
 # <a name="install-sql-server-2019-language-extensions-java-on-linux"></a>Установка расширений языка (Java) для SQL Server 2019 на Linux
 
@@ -29,9 +29,11 @@ ms.locfileid: "69653523"
 
 Расширения языка также поддерживаются в контейнерах Linux. Мы не предоставляем готовые контейнеры с расширениями языка, однако вы можете создать такой контейнер для SQL Server, используя [шаблон, доступный в GitHub](https://github.com/Microsoft/mssql-docker/tree/master/linux/preview/examples/mssql-mlservices).
 
-## <a name="uninstall-previous-ctp-version"></a>Удаление предыдущей версии CTP
+Расширения языка и [службы машинного обучения](../advanced-analytics/index.yml) устанавливаются по умолчанию в кластерах больших данных SQL Server. Если вы используете кластеры больших данных, нет необходимости выполнять действия, описанные в этой статье. Дополнительные сведения см. в разделе [Использование служб машинного обучения (Python и R) в кластерах больших данных](../big-data-cluster/machine-learning-services.md).
 
-За последние несколько выпусков CTP список пакетов изменился, и их стало меньше. Мы рекомендуем удалить версию CTP, чтобы удалить все предыдущие пакеты, прежде чем устанавливать версию RC 1. Параллельная установка нескольких версий не поддерживается.
+## <a name="uninstall-preview-version"></a>Удаление предварительной версии
+
+Если вы установили предварительную версию (CTP или RC), рекомендуется удалить эту версию, чтобы удалить все предыдущие пакеты перед установкой SQL Server 2019. Параллельная установка нескольких версий не поддерживается, и список пакетов был изменен после выхода последних предварительных версий (CTP/RC).
 
 ### <a name="1-confirm-package-installation"></a>1. Подтверждение установки пакета
 
@@ -41,7 +43,7 @@ ms.locfileid: "69653523"
 ls /opt/microsoft/mssql/bin
 ```
 
-### <a name="2-uninstall-previous-ctp-packages"></a>2. Удаление пакетов предыдущей версии CTP
+### <a name="2-uninstall-previous-ctprc-packages"></a>2. Удаление пакетов предыдущей версии CTP/RC
 
 Выполняйте удаление на самом низком уровне пакета. Любой вышестоящий пакет, зависящий от пакета более низкого уровня, удаляется автоматически.
 
@@ -55,7 +57,7 @@ ls /opt/microsoft/mssql/bin
 | SLES  | `sudo zypper remove msssql-server-extensibility-java` |
 | Ubuntu    | `sudo apt-get remove msssql-server-extensibility-java`|
 
-### <a name="3-install-release-candidate-1-rc-1"></a>3. Установка версии-кандидата 1
+### <a name="3-install-sql-server-2019"></a>3. Установка SQL Server 2019
 
 Выполните установку на самом верхнем уровне пакета, следуя инструкциям из этой статьи для вашей операционной системы.
 
@@ -286,12 +288,9 @@ mssql-server-extensibility-15.0.1000
 mssql-server-extensibility-java-15.0.1000
 ```
 
-## <a name="limitations-in-the-rc-1-release"></a>Ограничения в выпуске RC 1
-
-Расширения языка и интеграция Java по-прежнему находятся на этапе активной разработки. Перечисленные ниже функции пока не работают в предварительной версии.
+## <a name="limitations"></a>Ограничения
 
 + Неявная проверка подлинности в настоящее время недоступна в Linux, поэтому вы не можете подключиться обратно к серверу из выполняемого скрипта Java для доступа к данным или другим ресурсам.
-
 
 ### <a name="resource-governance"></a>Управление ресурсами
 

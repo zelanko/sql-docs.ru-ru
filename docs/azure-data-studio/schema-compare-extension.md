@@ -1,31 +1,29 @@
 ---
 title: Расширение сравнения схем
 titleSuffix: Azure Data Studio
-description: Установка и использование расширения сравнения схем (предварительная версия) для Azure Data Studio
+description: Установка и использование расширения Schema Compare в Azure Data Studio
 ms.custom: seodec18
-ms.date: 10/03/2019
+ms.date: 11/04/2019
 ms.reviewer: alayu; sstein
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: 031bdc19762213ff2c85e6fe4612ded294fcaaa9
-ms.sourcegitcommit: 4c75b49599018124f05f91c1df3271d473827e4d
+ms.openlocfilehash: f93711983eb32a979e47941883e968b52e03459c
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72381814"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73532536"
 ---
-# <a name="schema-compare-extension-preview"></a>Расширение Сравнения схем (предварительная версия)
+# <a name="schema-compare-extension"></a>Расширение сравнения схем
 Расширение сравнения схем предоставляет удобный интерфейс для сравнения определений двух баз данных, а также применения различий из источника к целевому объекту.
-
-Сейчас это расширение находится на этапе начальной предварительной версии. Сообщить о проблемах и запросить функции можно [здесь](https://github.com/microsoft/azuredatastudio/issues).
 
 
 ## <a name="features"></a>Компоненты
 
-* Сравнение схем двух DACPAC-файлов или баз данных
+* Сравнение схем двух файлов или баз данных DACPAC
 * Просмотр результатов в виде набора действий, которые необходимо применить к целевому объекту, чтобы согласовать его с источником
 * Выборочное исключение действий, представленных в результатах
 * Установка параметров, определяющих область сравнения
@@ -72,3 +70,4 @@ ms.locfileid: "72381814"
 ## <a name="next-steps"></a>Дальнейшие действия
 
 Дополнительные сведения о сравнении схем см. в [нашей документации](https://docs.microsoft.com/sql/ssdt/how-to-use-schema-compare-to-compare-different-database-definitions).
+Сообщить о проблемах и запросить функции можно [здесь](https://github.com/microsoft/azuredatastudio/issues).

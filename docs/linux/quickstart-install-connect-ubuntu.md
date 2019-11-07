@@ -4,18 +4,18 @@ titleSuffix: SQL Server
 description: В этом кратком руководстве рассказывается, как установить SQL Server 2017 или SQL Server 2019 в Ubuntu, а затем создать и запросить базу данных с помощью средства sqlcmd.
 author: VanMSFT
 ms.author: vanto
-ms.date: 05/28/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sqlfreshmay19
 ms.technology: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
-ms.openlocfilehash: e21761c221ec83770be7c9aa19f8a4ec971617e2
-ms.sourcegitcommit: 823d7bdfa01beee3cf984749a8c17888d4c04964
+ms.openlocfilehash: 17f73e7529fb8e74e9ff83de8d7e0ebd61783909
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/26/2019
-ms.locfileid: "70030315"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73531348"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-ubuntu"></a>Краткое руководство. Установка SQL Server и создание базы данных в Ubuntu
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
@@ -24,13 +24,13 @@ ms.locfileid: "70030315"
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-В этом кратком руководстве вы установите SQL Server 2017 или предварительную версию SQL Server 2019 в Ubuntu 16.04. Затем вы подключитесь с помощью **sqlcmd** для создания первой базы данных и выполнения запросов.
+В этом кратком руководстве вы установите SQL Server 2017 или SQL Server 2019 в Ubuntu 16.04. Затем вы подключитесь с помощью **sqlcmd** для создания первой базы данных и выполнения запросов.
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-В этом кратком руководстве вы установите предварительную версию SQL Server 2019 в Ubuntu 16.04. Затем вы подключитесь с помощью **sqlcmd** для создания первой базы данных и выполнения запросов.
+В этом кратком руководстве вы установите SQL Server 2019 в Ubuntu 16.04. Затем вы подключитесь с помощью **sqlcmd** для создания первой базы данных и выполнения запросов.
 
 ::: moniker-end
 
@@ -71,10 +71,10 @@ ms.locfileid: "70030315"
    ```
 
    > [!TIP]
-   > Если вы хотите опробовать SQL Server 2019, необходимо зарегистрировать вместо этого репозиторий **предварительной версии (2019)** . Используйте следующую команду для установки SQL Server 2019:
+   > Если вы хотите установить SQL Server 2019, необходимо зарегистрировать вместо этого репозиторий SQL Server 2019. Используйте следующую команду для установки SQL Server 2019:
    >
    > ```bash
-   > sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-preview.list)"
+   > sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2019.list)"
    > ```
 
 3. Выполните следующие команды для установки SQL Server:
@@ -120,10 +120,10 @@ ms.locfileid: "70030315"
    wget -qO- https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
    ```
 
-2. Зарегистрируйте репозиторий Ubuntu для предварительной версии SQL Server 2019:
+2. Зарегистрируйте репозиторий Microsoft SQL Server Ubuntu для SQL Server 2019:
 
    ```bash
-   sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-preview.list)"
+   sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2019.list)"
    ```
 
 3. Выполните следующие команды для установки SQL Server:
@@ -150,11 +150,11 @@ ms.locfileid: "70030315"
 
 6. Если вы планируете подключаться удаленно, может потребоваться открыть в брандмауэре TCP-порт SQL Server (по умолчанию 1433).
 
-В результате предварительная версия сервера SQL Server 2019 будет запущена на компьютере Ubuntu и готова к использованию!
+В результате SQL Server 2019 будет запущен на компьютере Ubuntu и готов к использованию!
 
 ::: moniker-end
 
-## <a id="tools"></a>Установка программ командной строки SQL Server
+## <a id="tools"></a>Установка программ командной строки SQL Server
 
 Чтобы создать базу данных, необходимо подключиться с помощью средства, которое позволяет выполнять инструкции Transact-SQL в SQL Server. Ниже приведены инструкции по установке программ командной строки SQL Server: [sqlcmd](../tools/sqlcmd-utility.md) и [bcp](../tools/bcp-utility.md).
 

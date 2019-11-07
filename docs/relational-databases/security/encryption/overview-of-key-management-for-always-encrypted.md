@@ -1,28 +1,28 @@
 ---
-title: Общие сведения об управлении ключами для постоянного шифрования | Документация Майкрософт
+title: Общие сведения об управлении ключами для Always Encrypted | Документация Майкрософт
 ms.custom: ''
-ms.date: 06/26/2019
+ms.date: 10/01/2019
 ms.prod: sql
 ms.prod_service: security, sql-database"
 ms.reviewer: vanto
 ms.technology: security
 ms.topic: conceptual
 ms.assetid: 07a305b1-4110-42f0-b7aa-28a4e32e912a
-author: VanMSFT
-ms.author: vanto
+author: jaszymas
+ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 872c752355c12074ed90b525940fa3889726e662
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 50411ab35801dea8db00dcea6f6d0109be954a02
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68111640"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73594100"
 ---
-# <a name="overview-of-key-management-for-always-encrypted"></a>Overview of Key Management for Always Encrypted
+# <a name="overview-of-key-management-for-always-encrypted"></a>Общие сведения об управлении ключами для Always Encrypted
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 
-Функция [постоянного шифрования](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) использует два типа ключей шифрования для защиты данных: один ключ для шифрования данных, а другой — для шифрования ключа, который шифрует данные. Ключ шифрования столбца шифрует данные, главный ключ столбца шифрует ключ шифрования столбца. В этой статье приведен подробный обзор процесса управления этими ключами.
+Функция [постоянного шифрования](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) использует два типа ключей шифрования для защиты данных: один ключ для шифрования данных, а другой — для шифрования ключа, который шифрует данные. Ключ шифрования столбца шифрует данные, главный ключ столбца шифрует ключ шифрования столбца. В этой статье приведен подробный обзор процесса управления этими ключами.  
 
 При обсуждении постоянного шифрования и управления ключами важно понимать различие между фактическими криптографическими ключами и объектами метаданных, *описывающими* ключи. Для обозначения фактических криптографических ключей служат термины **ключ шифрования столбца** и **главный ключ столбца** . Применительно к **описаниям** ключа постоянного шифрования в базе данных используются **метаданные ключа шифрования столбца** и *метаданные главного ключа шифрования* .
 
@@ -33,7 +33,7 @@ ms.locfileid: "68111640"
 
 Важно отметить, что метаданные ключа в системе базы данных не содержат главных ключей столбцов с открытым текстом или ключей шифрования столбцов с открытым текстом. Базы данных содержат только сведения о типе и расположении главных ключей столбцов и зашифрованные значения ключей шифрования столбцов. Это означает, что ключи с открытым текстом никогда не попадают в систему базы данных, что гарантирует безопасность данных, защищенных с помощью постоянного шифрования, даже в случае компрометации базы данных. Чтобы исключить доступ системы базы данных к ключам с открытым текстом, средства управления ключами следует запускать на компьютере, отличном от компьютера с базой данных. Подробные сведения см. в разделе [Вопросы безопасности для управления ключами](#security-considerations-for-key-management) ниже.
 
-Так как база данных содержит только зашифрованные данные (в столбцах, защищенных функцией постоянного шифрования) и не имеет доступа к ключам с открытым текстом, она не может расшифровать данные. Это означает, что запросы к всегда зашифрованным столбцам будут возвращать зашифрованные значения, поэтому клиентские приложения, которые должны шифровать или расшифровывать защищенные данные, должны иметь доступ к главному ключу столбца и связанным ключам шифрования столбцов. Дополнительные сведения см. в разделе [Постоянное шифрование (разработка клиентских приложений)](../../../relational-databases/security/encryption/always-encrypted-client-development.md).
+Так как база данных содержит только зашифрованные данные (в столбцах, защищенных функцией постоянного шифрования) и не имеет доступа к ключам с открытым текстом, она не может расшифровать данные. Это означает, что запросы к всегда зашифрованным столбцам будут возвращать зашифрованные значения, поэтому клиентские приложения, которые должны шифровать или расшифровывать защищенные данные, должны иметь доступ к главному ключу столбца и связанным ключам шифрования столбцов. Дополнительные сведения см. в разделе [Разработка приложений с помощью Always Encrypted](always-encrypted-client-development.md).
 
 
 
@@ -70,15 +70,12 @@ ms.locfileid: "68111640"
 Для управления ключами постоянного шифрования можно использовать [среду SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/ms174173.aspx) и [PowerShell](../../scripting/sql-server-powershell.md).
 
 - **SQL Server Management Studio (SSMS)** предоставляет диалоговые окна и мастера для выполнения задач, касающихся доступа к хранилищу ключей и доступа к базе данных, поэтому среда SSMS не поддерживает разделение ролей, но упрощает процесс настройки ключей. Дополнительные сведения об управлении ключами с помощью среды SSMS см. в разделе:
-    - [Подготовка главных ключей столбцов](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md#provisioncmk)
-    - [Подготовка ключей шифрования столбцов](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md#provisioncek)
-    - [Смена главных ключей столбцов](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md#rotatecmk)
-    - [Смена ключей шифрования столбцов](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md#rotatecek)
-
+    - [Подготовка к работе ключей Always Encrypted с помощью SQL Server Management Studio](configure-always-encrypted-keys-using-ssms.md)
+    - [Ротация ключей Always Encrypted с помощью SQL Server Management Studio](rotate-always-encrypted-keys-using-ssms.md)
 
 - **SQL Server PowerShell** содержит командлеты для управления ключами Always Encrypted с разделением ролей и без него. Дополнительные сведения см. в разделе:
     - [Настройка ключей постоянного шифрования с помощью PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell.md)
-    - [Смена ключей постоянного шифрования с помощью PowerShell](../../../relational-databases/security/encryption/rotate-always-encrypted-keys-using-powershell.md)
+    - [Смена ключей Always Encrypted с помощью PowerShell](../../../relational-databases/security/encryption/rotate-always-encrypted-keys-using-powershell.md)
 
 
 ## <a name="security-considerations-for-key-management"></a>Вопросы безопасности для управления ключами
@@ -96,16 +93,13 @@ ms.locfileid: "68111640"
 - Чтобы исключить возможность случайного раскрытия главных ключей столбцов или ключей шифрования столбцов в процессе управления ключами, перед определением и реализацией этого процесса крайне важно идентифицировать потенциальных злоумышленников и угрозы безопасности. Например, если требуется, чтобы администраторы баз данных не имели доступа к конфиденциальным данным, то эти администраторы не могут отвечать за создание ключей. Однако администратор баз данных *может* управлять метаданными ключей в базе данных, так как метаданные не содержат ключей с открытым текстом.
 
 ## <a name="next-steps"></a>Next Steps
+- [Настройка шифрования столбцов с помощью мастера Always Encrypted](always-encrypted-wizard.md)
+- [Создание и хранение главных ключей столбцов для Always Encrypted](create-and-store-column-master-keys-always-encrypted.md)
+- [Подготовка к работе ключей Always Encrypted с помощью SQL Server Management Studio](configure-always-encrypted-keys-using-ssms.md)
+- [Подготовка ключей Always Encrypted с помощью PowerShell](configure-always-encrypted-keys-using-powershell.md)
 
-- [Создание и хранение главных ключей столбцов (постоянное шифрование)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)
-- [Настройка ключей постоянного шифрования с помощью PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell.md)
-- [Смена ключей постоянного шифрования с помощью PowerShell](../../../relational-databases/security/encryption/rotate-always-encrypted-keys-using-powershell.md)
-- [Настройка функции Always Encrypted с помощью SQL Server Management Studio](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md)
-
-## <a name="additional-resources"></a>Дополнительные ресурсы
-
-- [Always Encrypted (ядро СУБД)](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
-- [Always Encrypted (Client Development)](../../../relational-databases/security/encryption/always-encrypted-client-development.md)
+## <a name="see-also"></a>См. также:
+- [Постоянное шифрование](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [Руководство по использованию мастера постоянного шифрования (хранилище ключей Azure)](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted-azure-key-vault/)
 - [Руководство по использованию мастера постоянного шифрования (хранилище сертификатов Windows)](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/)
 

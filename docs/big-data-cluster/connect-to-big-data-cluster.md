@@ -1,57 +1,60 @@
 ---
-title: Подключение к кластерам больших данных в главном и HDFS
-description: Узнайте, как подключиться к экземпляру SQL Server master и шлюзу HDFS/Spark для [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
+title: Подключение к главному кластеру больших данных и кластеру больших данных HDFS
+description: Сведения о том, как подключиться к главному экземпляру SQL Server и шлюзу HDFS/Spark для [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/21/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: fb6e1f684a277740c06fbd0a2fdc23dbd77f8e5c
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
-ms.translationtype: MT
+ms.openlocfilehash: 0717226ee785df568d4cea75511e65acb728c592
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69652421"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73532243"
 ---
 # <a name="connect-to-a-sql-server-big-data-cluster-with-azure-data-studio"></a>Подключение к кластеру больших данных SQL Server с помощью Azure Data Studio
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-В этой статье описывается подключение к [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] из Azure Data Studio.
+В этой статье описывается, как подключиться к [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] из Azure Data Studio.
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>предварительные требования
 
 - Развернутый [кластер больших данных SQL Server 2019](deployment-guidance.md).
 - [Средства для работы с большими данными SQL Server 2019](deploy-big-data-tools.md):
    - **Azure Data Studio**
    - **Расширение SQL Server 2019**
    - **kubectl**
+   - **azdata**
 
 ## <a id="master"></a> Подключение к кластеру
 
 Чтобы подключиться к кластеру больших данных с помощью Azure Data Studio, установите новое подключение к главному экземпляру SQL Server в кластере. Далее описывается процедура подключения к главному экземпляру с помощью Azure Data Studio.
 
-1. В командной строке определите IP-адрес главного экземпляра с помощью следующей команды:
+1. Найдите конечную точку главного экземпляра SQL Server:
 
    ```
-   kubectl get svc master-svc-external -n <your-big-data-cluster-name>
+   azdata bdc endpoint list -e sql-server-master
    ```
 
    > [!TIP]
-   > Если вы не изменили соответствующие настройки в файле конфигурации развертывания, кластеру больших данных по умолчанию присваивается имя **mssql-cluster**. Дополнительные сведения см. в статье [Настройка параметров развертывания для кластеров больших данных](deployment-custom-configuration.md#clustername).
+   > Дополнительные сведения об извлечении конечных точек см. в разделе [Извлечение конечных точек](deployment-guidance.md#endpoints).
 
 1. В Azure Data Studio нажмите **F1** > **Создать подключение**.
 
 1. В разделе **Тип подключения** выберите **Microsoft SQL Server**.
 
-1. Введите IP-адрес главного экземпляра SQL Server в поле **Имя сервера** (например, **\<IP-адрес\>,31433**).
+1. Введите название конечной точки, которую вы нашли для основного экземпляра SQL Server, в текстовом поле **Имя сервера** (например: **\<IP-адрес\>,31433**). 
 
-1. Введите **имя пользователя** и **пароль** для входа в SQL.
+1. Выберите тип проверки подлинности. Для основного экземпляра SQL Server, выполняемого в кластерах больших данных, поддерживаются только **проверка подлинности Windows** и **вход с учетными данными SQL**. 
+
+1. Введите **Имя пользователя** и **Пароль**учетных данных SQL. Если вы используете проверку подлинности Windows, в этом нет необходимости.
 
    > [!TIP]
-   > По умолчанию применяется имя пользователя **SA**. Если конфигурация не изменялась, пароль соответствует значению переменной среды **MSSQL_SA_PASSWORD**, используемой во время развертывания.
+   > По умолчанию имя пользователя **SA** отключено во время развертывания кластера больших данных. Новый пользователь sysadmin подготавливается во время развертывания; ему присваивается имя, соответствующее переменной среды **AZDATA_USERNAME**, и пароль, соответствующий переменной среды **AZDATA_PASSWORD**, которая используется при развертывании.
 
 1. В поле **Имя базы данных** укажите в качестве целевой одну из ваших реляционных баз данных.
 
@@ -69,4 +72,4 @@ ms.locfileid: "69652421"
 
 ## <a name="next-steps"></a>Следующие шаги
 
-Дополнительные сведения о [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]см. в разделе [что [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]такое ](big-data-cluster-overview.md).
+Дополнительные сведения о [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] см. в статье [Что такое [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](big-data-cluster-overview.md).

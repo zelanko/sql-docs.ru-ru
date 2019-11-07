@@ -3,17 +3,16 @@ title: Заметки о выпуске для SQL Server 2019 в Linux
 description: Эта статья содержит заметки о выпуске и поддерживаемые функции для SQL Server 2019 в Linux. Приведены заметки о выпуске для последнего и нескольких предыдущих выпусков.
 author: VanMSFT
 ms.author: vanto
-ms.date: 08/21/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-monikerRange: '>= sql-server-linux-ver15  || >= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: af3b6f82e3b76e2dd2b11403bccf4b3e0885912e
-ms.sourcegitcommit: cbbb210c0315f9e2be2b9cd68db888ac53429814
+ms.openlocfilehash: 8edcbf91c827ea2afafa0830aad5a26423102f17
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69890900"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73594541"
 ---
 # <a name="release-notes-for-sql-server-2019-on-linux"></a>Заметки о выпуске для SQL Server 2019 в Linux
 
@@ -29,7 +28,7 @@ ms.locfileid: "69890900"
 | Платформа | Файловая система | Руководство по установке |
 |-----|-----|-----|
 | Red Hat Enterprise Linux 7.3, 7.4, 7.5 или 7.6 Server | XFS или EXT4 | [Руководство по установке](quickstart-install-connect-red-hat.md) | 
-| SUSE Enterprise Linux Server версии 12 с пакетом обновления 2 (SP2) | XFS или EXT4 | [Руководство по установке](quickstart-install-connect-suse.md) |
+| SUSE Enterprise Linux Server версии 12 с пакетом обновления 2, 3 или 4 (SP2, SP3 или SP4) | XFS или EXT4 | [Руководство по установке](quickstart-install-connect-suse.md) |
 | Ubuntu 16.04LTS | XFS или EXT4 | [Руководство по установке](quickstart-install-connect-ubuntu.md) | 
 | Подсистема Docker Engine 1.8+ на базе Windows, Mac или Linux | Недоступно | [Руководство по установке](quickstart-install-connect-docker.md) | 
 
@@ -42,33 +41,39 @@ ms.locfileid: "69890900"
 
 ## <a name="release-history"></a>История выпусков
 
-В следующей таблице указана история выпусков для выпусков предварительной версии SQL Server 2019.
+В следующей таблице указана история выпусков версий SQL Server 2019.
 
 | Выпуск                   | Версия       | Дата выпуска |
 |---------------------------|---------------|--------------|
-| [Релиз-кандидат](#rc)  | 15.0.1900.25  | 2019-8-21    |
-| [CTP 3.2](#CTP32)         | 15.0.1800.32  | 2019-7-24    |
-| [CTP 3.1](#CTP31)         | 15.0.1700.37  | 2019-6-26    |
-| [CTP 3.0](#CTP30)         | 15.0.1600.8   | 2019-5-22    |
-| [CTP 2.5](#CTP25)         | 15.0.1500.28  | 2019-4-24    |
-| [CTP 2.4](#CTP24)         | 15.0.1400.75  | 2019-3-27    |
-| [CTP 2.3](#CTP23)         | 15.0.1300.359 | 2019-3-01    |
-| [CTP 2.2](#CTP22)         | 15.0.1200.24  | 2018-12-11   |
-| [CTP 2.1](#CTP21)         | 15.0.1100.94  | 2018-11-06   |
-| [CTP 2.0](#CTP20)         | 15.0.1000.34  | 2018-09-24   |
+| [GA](#ga)                 | 15.0.2000.5  | 2019-11-04    |
+| [Релиз-кандидат](#rc)  | 15.0.1900.25  | 2019-08-21   |
 
 ## <a id="cuinstall"></a> Установка обновлений
 
-Если вы настроили репозиторий предварительных версий (**mssql-server-preview**), то получите последние пакеты CTP SQL Server при выполнении новых установок. Если вам требуются образы контейнеров Docker, см. официальные образы для [Microsoft SQL Server на Linux для подсистемы Docker](https://hub.docker.com/r/microsoft/mssql-server/). Дополнительные сведения о настройке репозиториев см. в статье [Настройка репозиториев для установки и обновления SQL Server на Linux.](sql-server-linux-change-repo.md)
+Если вы настроили репозиторий CU (mssql-server-2019), то получите последнюю версию накопительного пакета обновления для пакетов SQL Server при выполнении новых установок. Если вам требуются образы контейнеров Docker, см. официальные образы для [Microsoft SQL Server на Linux для подсистемы Docker](https://hub.docker.com/r/microsoft/mssql-server/). Дополнительные сведения о настройке репозиториев см. в статье [Настройка репозиториев для установки и обновления SQL Server на Linux.](sql-server-linux-change-repo.md)
 
 При обновлении существующих пакетов SQL Server выполните соответствующую команду обновления для каждого пакета, чтобы получить последний накопительный пакет обновления. Конкретные инструкции по обновлению для каждого пакета см. в следующих руководствах по установке.
 
 - [Установка пакета SQL Server](sql-server-linux-setup.md#upgrade)
 - [Установка пакета полнотекстового поиска](sql-server-linux-setup-full-text-search.md)
 - [Установка служб SQL Server Integration Services](sql-server-linux-setup-ssis.md)
-- [Установка поддержки R и Python для Служб машинного обучения предварительной версии SQL Server 2019 в Linux](sql-server-linux-setup-machine-learning.md)
+- [Установка поддержки R и Python для служб машинного обучения SQL Server 2019 в Linux](sql-server-linux-setup-machine-learning.md)
 - [Установка пакета PolyBase](../relational-databases/polybase/polybase-linux-setup.md)
 - [Включение агента SQL Server](sql-server-linux-setup-sql-agent.md)
+
+## <a id="ga"></a> Общедоступная версия (ноябрь 2019 г.)
+
+Это выпуск общедоступной версии (GA) SQL Server 2019 (15.x). Версия ядра СУБД SQL Server в этом выпуске — 15.0.2000.5.
+
+### <a name="package-details"></a>Сведения о пакете
+
+Для ручной или автономной установки пакета можно скачать пакеты RPM и Debian, используя сведения из следующей таблицы.
+
+| Пакет | Версия пакета | Файлы для загрузки |
+|-----|-----|-----|
+| Пакет Red Hat RPM | 15.0.2000.5-5 | [Пакет RPM подсистемы](https://packages.microsoft.com/rhel/7/mssql-server-2019/mssql-server-15.0.2000.5-5.x86_64.rpm)</br>[Пакет RPM высокой доступности](https://packages.microsoft.com/rhel/7/mssql-server-2019/mssql-server-ha-15.0.2000.5-5.x86_64.rpm)</br>[Пакет RPM полнотекстового поиска](https://packages.microsoft.com/rhel/7/mssql-server-2019/mssql-server-fts-15.0.2000.5-5.x86_64.rpm)</br>[Пакет RPM расширяемости](https://packages.microsoft.com/rhel/7/mssql-server-2019/mssql-server-extensibility-15.0.2000.5-5.x86_64.rpm)</br>[Пакет RPM расширяемости Java](https://packages.microsoft.com/rhel/7/mssql-server-2019/mssql-server-extensibility-java-15.0.2000.5-5.x86_64.rpm)</br>[Пакет RPM PolyBase](https://packages.microsoft.com/rhel/7/mssql-server-2019/mssql-server-polybase-15.0.2000.5-5.x86_64.rpm)|
+| Пакет SLES RPM | 15.0.2000.5-5 | [Пакет RPM подсистемы mssql-server](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-15.0.2000.5-5.x86_64.rpm)</br>[Пакет RPM высокой доступности](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-ha-15.0.2000.5-5.x86_64.rpm)</br>[Пакет RPM полнотекстового поиска](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-fts-15.0.2000.5-5.x86_64.rpm)</br>[Пакет RPM расширяемости](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-extensibility-15.0.2000.5-5.x86_64.rpm)</br>[Пакет RPM расширяемости Java](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-extensibility-java-15.0.2000.5-5.x86_64.rpm)</br>[Пакет RPM PolyBase](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-polybase-15.0.2000.5-5.x86_64.rpm)|
+| Пакет Ubuntu 16.04 Debian | 15.0.2000.5-5 | [Пакет подсистемы Debian](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/mssql-server/mssql-server_15.0.2000.5-5_amd64.deb)</br>[Пакет Debian высокой доступности](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/mssql-server-ha/mssql-server-ha_15.0.2000.5-5_amd64.deb)</br>[Пакет Debian полнотекстового поиска](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/mssql-server-fts/mssql-server-fts_15.0.2000.5-5_amd64.deb)</br>[Пакет Debian расширяемости](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/mssql-server-extensibility/mssql-server-extensibility_15.0.2000.5-5_amd64.deb)</br>[Пакет Debian расширяемости Java](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/mssql-server-extensibility-java/mssql-server-extensibility-java_15.0.2000.5-5_amd64.deb)</br>[Пакет RPM PolyBase](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/mssql-server-polybase/mssql-server-polybase_15.0.2000.5-5_amd64.deb)|
 
 ## <a id="rc"></a> Релиз-кандидат (август 2019 г.)
 
@@ -84,175 +89,144 @@ ms.locfileid: "69890900"
 | Пакет SLES RPM | 15.0.1900.25-1 | [Пакет RPM подсистемы mssql-server](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-15.0.1900.25-1.x86_64.rpm)</br>[Пакет RPM высокой доступности](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-ha-15.0.1900.25-1.x86_64.rpm)</br>[Пакет RPM полнотекстового поиска](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-fts-15.0.1900.25-1.x86_64.rpm)</br>[Пакет RPM расширяемости](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-extensibility-15.0.1900.25-1.x86_64.rpm)</br>[Пакет RPM расширяемости Java](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-extensibility-java-15.0.1900.25-1.x86_64.rpm)</br>[Пакет RPM PolyBase](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-polybase-15.0.1900.25-1.x86_64.rpm)|
 | Пакет Ubuntu 16.04 Debian | 15.0.1900.25-1 | [Пакет подсистемы Debian](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server/mssql-server_15.0.1900.25-1_amd64.deb)</br>[Пакет Debian высокой доступности](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-ha/mssql-server-ha_15.0.1900.25-1_amd64.deb)</br>[Пакет Debian полнотекстового поиска](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-fts/mssql-server-fts_15.0.1900.25-1_amd64.deb)</br>[Пакет Debian расширяемости](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-extensibility/mssql-server-extensibility_15.0.1900.25-1_amd64.deb)</br>[Пакет Debian расширяемости Java](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-extensibility-java/mssql-server-extensibility-java_15.0.1900.25-1_amd64.deb)</br>[Пакет RPM PolyBase](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-polybase/mssql-server-polybase_15.0.1900.25-1_amd64.deb)|
 
-## <a id="CTP32"></a> CTP 3.2 (июль 2019 г.)
+## <a name="known-issues"></a>Известные проблемы
 
-В следующих разделах приведены сведения о расположениях пакетов и известных проблемах в выпуске CTP 3.2. Дополнительные сведения о новых возможностях для Linux в SQL Server 2019 см. в статье [Новые возможности SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md).
+В следующих разделах описаны известные проблемы с общедоступным (GA) выпуском SQL Server 2019 (15.x) в Linux.
 
-### <a name="package-details"></a>Сведения о пакете
+#### <a name="general"></a>Общие
 
-Для ручной или автономной установки пакета можно скачать пакеты RPM и Debian, используя сведения из следующей таблицы.
+- Длина имени узла, где устанавливается [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], не должна превышать 15 символов. 
 
-| Пакет | Версия пакета | Файлы для загрузки |
-|-----|-----|-----|
-| Пакет Red Hat RPM | 15.0.1800.32-1 | [Пакет RPM подсистемы](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-15.0.1800.32-1.x86_64.rpm)</br>[Пакет RPM высокой доступности](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-ha-15.0.1800.32-1.x86_64.rpm)</br>[Пакет RPM полнотекстового поиска](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-fts-15.0.1800.32-1.x86_64.rpm)</br>[Пакет RPM расширяемости](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-extensibility-15.0.1800.32-1.x86_64.rpm)</br>[Пакет RPM расширяемости Java](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-extensibility-java-15.0.1800.32-1.x86_64.rpm)</br>[Пакет RPM PolyBase](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-polybase-15.0.1800.32-1.x86_64.rpm)|
-| Пакет SLES RPM | 15.0.1800.32-1 | [Пакет RPM подсистемы mssql-server](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-15.0.1800.32-1.x86_64.rpm)</br>[Пакет RPM высокой доступности](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-ha-15.0.1800.32-1.x86_64.rpm)</br>[Пакет RPM полнотекстового поиска](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-fts-15.0.1800.32-1.x86_64.rpm)</br>[Пакет RPM расширяемости](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-extensibility-15.0.1800.32-1.x86_64.rpm)</br>[Пакет RPM расширяемости Java](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-extensibility-java-15.0.1800.32-1.x86_64.rpm)</br>[Пакет RPM PolyBase](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-polybase-15.0.1800.32-1.x86_64.rpm)|
-| Пакет Ubuntu 16.04 Debian | 15.0.1800.32-1 | [Пакет подсистемы Debian](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server/mssql-server_15.0.1800.32-1_amd64.deb)</br>[Пакет Debian высокой доступности](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-ha/mssql-server-ha_15.0.1800.32-1_amd64.deb)</br>[Пакет Debian полнотекстового поиска](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-fts/mssql-server-fts_15.0.1800.32-1_amd64.deb)</br>[Пакет Debian расширяемости](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-extensibility/mssql-server-extensibility_15.0.1800.32-1_amd64.deb)</br>[Пакет Debian расширяемости Java](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-extensibility-java/mssql-server-extensibility-java_15.0.1800.32-1_amd64.deb)</br>[Пакет RPM PolyBase](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-polybase/mssql-server-polybase_15.0.1800.32-1_amd64.deb)|
+    - **Решение**. Измените имя в /etc/hostname, чтобы оно содержало не более 15 символов.
 
-## <a id="CTP31"></a> CTP 3.1 (июнь 2019 г.)
+- Ручной перевод системного времени назад приведет к тому, что [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] прекратит обновлять внутреннее системное время в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
-В следующих разделах приведены сведения о расположениях пакетов и известных проблемах в выпуске CTP 3.1. Дополнительные сведения о новых возможностях для Linux в SQL Server 2019 см. в статье [Новые возможности SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md).
+    - **Решение**. Перезапустите [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
-### <a name="package-details"></a>Сведения о пакете
+- Поддерживаются только установки с одним экземпляром.
 
-Для ручной или автономной установки пакета можно скачать пакеты RPM и Debian, используя сведения из следующей таблицы.
+    - **Решение**. Если на заданном узле требуется несколько экземпляров, рекомендуется использовать виртуальные машины или контейнеры Docker. 
 
-| Пакет | Версия пакета | Файлы для загрузки |
-|-----|-----|-----|
-| Пакет Red Hat RPM | 15.0.1700.37-2 | [Пакет RPM подсистемы](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-15.0.1700.37-2.x86_64.rpm)</br>[Пакет RPM высокой доступности](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-ha-15.0.1700.37-2.x86_64.rpm)</br>[Пакет RPM полнотекстового поиска](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-fts-15.0.1700.37-2.x86_64.rpm)</br>[Пакет RPM расширяемости](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-extensibility-15.0.1700.37-2.x86_64.rpm)</br>[Пакет RPM расширяемости Java](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-extensibility-java-15.0.1700.37-2.x86_64.rpm)</br>[Пакет RPM PolyBase](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-polybase-15.0.1700.37-2.x86_64.rpm)|
-| Пакет SLES RPM | 15.0.1700.37-2 | [Пакет RPM подсистемы mssql-server](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-15.0.1700.37-2.x86_64.rpm)</br>[Пакет RPM высокой доступности](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-ha-15.0.1700.37-2.x86_64.rpm)</br>[Пакет RPM полнотекстового поиска](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-fts-15.0.1700.37-2.x86_64.rpm)</br>[Пакет RPM расширяемости](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-extensibility-15.0.1700.37-2.x86_64.rpm)</br>[Пакет RPM расширяемости Java](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-extensibility-java-15.0.1700.37-2.x86_64.rpm)</br>[Пакет RPM PolyBase](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-polybase-15.0.1700.37-2.x86_64.rpm)|
-| Пакет Ubuntu 16.04 Debian | 15.0.1700.37-2 | [Пакет подсистемы Debian](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server/mssql-server_15.0.1700.37-2_amd64.deb)</br>[Пакет Debian высокой доступности](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-ha/mssql-server-ha_15.0.1700.37-2_amd64.deb)</br>[Пакет Debian полнотекстового поиска](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-fts/mssql-server-fts_15.0.1700.37-2_amd64.deb)</br>[Пакет Debian расширяемости](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-extensibility/mssql-server-extensibility_15.0.1700.37-2_amd64.deb)</br>[Пакет Debian расширяемости Java](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-extensibility-java/mssql-server-extensibility-java_15.0.1700.37-2_amd64.deb)</br>[Пакет RPM PolyBase](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-polybase/mssql-server-polybase_15.0.1700.37-2_amd64.deb)|
+- Диспетчеру конфигурации [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] не удается подключиться к [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] в Linux.
 
-## <a id="CTP30"></a> CTP 3.0 (май 2019 г.)
+- По умолчанию для имени входа **sa** используется английский язык.
 
-В следующих разделах приведены сведения о расположениях пакетов и известных проблемах в выпуске CTP 3.0. Дополнительные сведения о новых возможностях для Linux в SQL Server 2019 см. в статье [Новые возможности SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md).
+    - **Решение**. Измените язык для имени входа **sa** с помощью инструкции **ALTER LOGIN**.
 
-### <a name="package-details"></a>Сведения о пакете
+#### <a name="databases"></a>Базы данных
 
-Для ручной или автономной установки пакета можно скачать пакеты RPM и Debian, используя сведения из следующей таблицы.
+- Невозможно переместить базу данных master с помощью служебной программы mssql-conf. Другие базы данных с помощью mssql-conf переместить можно.
 
-| Пакет | Версия пакета | Файлы для загрузки |
-|-----|-----|-----|
-| Пакет Red Hat RPM | 15.0.1600.8-1 | [Пакет RPM подсистемы](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-15.0.1600.8-1.x86_64.rpm)</br>[Пакет RPM высокой доступности](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-ha-15.0.1600.8-1.x86_64.rpm)</br>[Пакет RPM полнотекстового поиска](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-fts-15.0.1600.8-1.x86_64.rpm)</br>[Пакет RPM расширяемости](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-extensibility-15.0.1600.8-1.x86_64.rpm)</br>[Пакет RPM расширяемости Java](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-extensibility-java-15.0.1600.8-1.x86_64.rpm)</br>[Пакет RPM PolyBase](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-polybase-15.0.1600.8-1.x86_64.rpm)|
-| Пакет SLES RPM | 15.0.1600.8-1 | [Пакет RPM подсистемы mssql-server](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-15.0.1600.8-1.x86_64.rpm)</br>[Пакет RPM высокой доступности](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-ha-15.0.1600.8-1.x86_64.rpm)</br>[Пакет RPM полнотекстового поиска](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-fts-15.0.1600.8-1.x86_64.rpm)</br>[Пакет RPM расширяемости](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-extensibility-15.0.1600.8-1.x86_64.rpm)</br>[Пакет RPM расширяемости Java](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-extensibility-java-15.0.1600.8-1.x86_64.rpm)</br>[Пакет RPM PolyBase](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-polybase-15.0.1600.8-1.x86_64.rpm)|
-| Пакет Ubuntu 16.04 Debian | 15.0.1600.8-1 | [Пакет подсистемы Debian](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server/mssql-server_15.0.1600.8-1_amd64.deb)</br>[Пакет Debian высокой доступности](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-ha/mssql-server-ha_15.0.1600.8-1_amd64.deb)</br>[Пакет Debian полнотекстового поиска](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-fts/mssql-server-fts_15.0.1600.8-1_amd64.deb)</br>[Пакет Debian расширяемости](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-extensibility/mssql-server-extensibility_15.0.1600.8-1_amd64.deb)</br>[Пакет Debian расширяемости Java](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-extensibility-java/mssql-server-extensibility-java_15.0.1600.8-1_amd64.deb)</br>[Пакет RPM PolyBase](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-polybase/mssql-server-polybase_15.0.1600.8-1_amd64.deb)|
+- При восстановлении базы данных, для которой была создана резервная копия в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] на базе Windows, нужно использовать предложение **WITH MOVE** в инструкции Transact-SQL.
 
-### <a name="known-issues"></a>Известные проблемы
+- Некоторые алгоритмы (комплекты шифров) для протокола TLS не работают должным образом с [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] в Linux. Это приводит к сбоям подключения при попытке подключиться к [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], а также к проблемам при установке соединений между репликами в группах с высокой доступностью.
 
-#### <a id="msdtc"></a> Координатор распределенных транзакций (Майкрософт)
+   - **Решение**. Измените скрипт конфигурации **mssql.conf** для [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] в Linux, чтобы отключить проблемные комплекты шифров, выполнив следующие действия.
 
-Сейчас MSDTC требует, чтобы транзакции не проходили проверку подлинности. Например, если вы используете связанный сервер из SQL Server на базе Windows в SQL Server на базе Linux или используете клиентское приложение Windows для запуска распределенной транзакции в SQL Server на базе Linux, то для MSDTC на сервере/клиенте Windows необходимо использовать параметр "Проверка подлинности не требуется".
+      1. Добавьте следующий код в /var/opt/mssql/mssql.conf.
 
-## <a id="CTP25"></a> CTP 2.5 (апрель 2019 г.)
+      ```
+      [network]
+      tlsciphers= AES256-GCM-SHA384:AES128-GCM-SHA256:AES256-SHA256:AES128-SHA256:AES256-SHA:AES128-SHA:!ECDHE-RSA-AES128-GCM-SHA256:!ECDHE-RSA-AES256-GCM-SHA384:!ECDHE-ECDSA-AES256-GCM-SHA384:!ECDHE-ECDSA-AES128-GCM-SHA256:!ECDHE-ECDSA-AES256-SHA384:!ECDHE-ECDSA-AES128-SHA256:!ECDHE-ECDSA-AES256-SHA:!ECDHE-ECDSA-AES128-SHA:!ECDHE-RSA-AES256-SHA384:!ECDHE-RSA-AES128-SHA256:!ECDHE-RSA-AES256-SHA:!ECDHE-RSA-AES128-SHA:!DHE-RSA-AES256-GCM-SHA384:!DHE-RSA-AES128-GCM-SHA256:!DHE-RSA-AES256-SHA:!DHE-RSA-AES128-SHA:!DHE-DSS-AES256-SHA256:!DHE-DSS-AES128-SHA256:!DHE-DSS-AES256-SHA:!DHE-DSS-AES128-SHA:!DHE-DSS-DES-CBC3-SHA:!NULL-SHA256:!NULL-SHA
+      ```
 
-В следующих разделах приведены сведения о расположениях пакетов и известных проблемах в выпуске CTP 2.5. Дополнительные сведения о новых возможностях для Linux в SQL Server 2019 см. в статье [Новые возможности SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md).
+         >[!NOTE]
+         >In the preceding code, `!` negates the expression. This tells OpenSSL to not use the following cipher suite.  
 
-### <a name="package-details"></a>Сведения о пакете
+      1. Перезапустите [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] с помощью следующей команды.
 
-Для ручной или автономной установки пакета можно скачать пакеты RPM и Debian, используя сведения из следующей таблицы.
+      ```bash
+      sudo systemctl restart mssql-server
+      ```
 
-| Пакет | Версия пакета | Файлы для загрузки |
-|-----|-----|-----|
-| Пакет Red Hat RPM | 15.0.1500.28-1 | [Пакет RPM подсистемы](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-15.0.1500.28-1.x86_64.rpm)</br>[Пакет RPM высокой доступности](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-ha-15.0.1500.28-1.x86_64.rpm)</br>[Пакет RPM полнотекстового поиска](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-fts-15.0.1500.28-1.x86_64.rpm)</br>[Пакет RPM расширяемости](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-extensibility-15.0.1500.28-1.x86_64.rpm)</br>[Пакет RPM расширяемости Java](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-extensibility-java-15.0.1500.28-1.x86_64.rpm)</br>[Пакет RPM PolyBase](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-polybase-15.0.1500.28-1.x86_64.rpm)|
-| Пакет SLES RPM | 15.0.1500.28-1 | [Пакет RPM подсистемы mssql-server](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-15.0.1500.28-1.x86_64.rpm)</br>[Пакет RPM высокой доступности](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-ha-15.0.1500.28-1.x86_64.rpm)</br>[Пакет RPM полнотекстового поиска](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-fts-15.0.1500.28-1.x86_64.rpm)</br>[Пакет RPM расширяемости](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-extensibility-15.0.1500.28-1.x86_64.rpm)</br>[Пакет RPM расширяемости Java](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-extensibility-java-15.0.1500.28-1.x86_64.rpm)</br>[Пакет RPM PolyBase](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-polybase-15.0.1500.28-1.x86_64.rpm)|
-| Пакет Ubuntu 16.04 Debian | 15.0.1500.28-1 | [Пакет подсистемы Debian](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server/mssql-server_15.0.1500.28-1_amd64.deb)</br>[Пакет Debian высокой доступности](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-ha/mssql-server-ha_15.0.1500.28-1_amd64.deb)</br>[Пакет Debian полнотекстового поиска](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-fts/mssql-server-fts_15.0.1500.28-1_amd64.deb)</br>[Пакет Debian расширяемости](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-extensibility/mssql-server-extensibility_15.0.1500.28-1_amd64.deb)</br>[Пакет Debian расширяемости Java](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-extensibility-java/mssql-server-extensibility-java_15.0.1500.28-1_amd64.deb)</br>[Пакет RPM PolyBase](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-polybase/mssql-server-polybase_15.0.1500.28-1_amd64.deb)|
+- Базы данных [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] в Windows, которые используют выполняющуюся в памяти OLTP, невозможно восстановить в SQL Server 2019 (15.x) на базе Linux. Чтобы восстановить базу данных [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], выполняющуюся в памяти OLTP, сначала обновите базы до [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SQL Server 2017, или SQL Server 2019 в Windows, прежде чем перемещать их в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] на базе Linux с помощью операции резервного копирования/восстановления или подключения/отключения.
 
-### <a name="known-issues"></a>Известные проблемы
+- Сейчас разрешение пользователя **ADMINISTER BULK OPERATIONS** в Linux не поддерживается.
 
-#### <a id="msdtc"></a> Координатор распределенных транзакций (Майкрософт)
+#### <a name="networking"></a>Работа с сетью
 
-Сейчас MSDTC требует, чтобы транзакции не проходили проверку подлинности. Например, если вы используете связанный сервер из SQL Server на базе Windows в SQL Server на базе Linux или используете клиентское приложение Windows для запуска распределенной транзакции в SQL Server на базе Linux, то для MSDTC на сервере/клиенте Windows необходимо использовать параметр "Проверка подлинности не требуется".
+Функции, затрагивающие исходящие подключения TCP из процесса sqlservr, такие как связанные серверы или группы доступности, могут не работать, если выполняются оба следующих условия.
 
-## <a id="CTP24"></a> CTP 2.4 (март 2019 г.)
+1. Целевой сервер указан в виде имени узла, а не IP-адреса.
 
-В следующих разделах приведены сведения о расположениях пакетов и известных проблемах в выпуске CTP 2.4. Дополнительные сведения о новых возможностях для Linux в SQL Server 2019 см. в статье [Новые возможности SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md).
+1. В ядре для экземпляра источника отключен протокол IPv6. Чтобы проверить, включена ли в ядре поддержка протокола IPv6, необходимо успешно выполнить все следующие проверки.
 
-### <a name="package-details"></a>Сведения о пакете
+   - `cat /proc/cmdline` выводит на печать командную строку загрузки текущего ядра. Выходные данные не должны содержать `ipv6.disable=1`.
+   - Каталог /proc/sys/net/ipv6/ должен существовать.
+   - Программа на языке C, которая вызывает `socket(AF_INET6, SOCK_STREAM, IPPROTO_IP)`, должна выполняться успешно — системный вызов должен возвращать fd != -1, а не завершиться с ошибкой EAFNOSUPPORT.
 
-Для ручной или автономной установки пакета можно скачать пакеты RPM и Debian, используя сведения из следующей таблицы.
+Конкретная ошибка зависит от функции. Для связанных серверов это проявляется в виде ошибки времени ожидания при входе. Для групп доступности команда DDL `ALTER AVAILABILITY GROUP JOIN` на вторичной реплике завершится сбоем через 5 минут с ошибкой времени ожидания конфигурации скачивания.
 
-| Пакет | Версия пакета | Файлы для загрузки |
-|-----|-----|-----|
-| Пакет Red Hat RPM | 15.0.1400.75-2 | [Пакет RPM подсистемы](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-15.0.1400.75-2.x86_64.rpm)</br>[Пакет RPM высокой доступности](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-ha-15.0.1400.75-2.x86_64.rpm)</br>[Пакет RPM полнотекстового поиска](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-fts-15.0.1400.75-2.x86_64.rpm)</br>[Пакет RPM расширяемости](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-extensibility-15.0.1400.75-2.x86_64.rpm)</br>[Пакет RPM расширяемости Java](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-extensibility-java-15.0.1400.75-2.x86_64.rpm)|
-| Пакет SLES RPM | 15.0.1400.75-2 | [Пакет RPM подсистемы mssql-server](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-15.0.1400.75-2.x86_64.rpm)</br>[Пакет RPM высокой доступности](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-ha-15.0.1400.75-2.x86_64.rpm)</br>[Пакет RPM полнотекстового поиска](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-fts-15.0.1400.75-2.x86_64.rpm)</br>[Пакет RPM расширяемости](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-extensibility-15.0.1400.75-2.x86_64.rpm)</br>[Пакет RPM расширяемости Java](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-extensibility-java-15.0.1400.75-2.x86_64.rpm)|
-| Пакет Ubuntu 16.04 Debian | 15.0.1400.75-2 | [Пакет подсистемы Debian](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server/mssql-server_15.0.1400.75-2_amd64.deb)</br>[Пакет Debian высокой доступности](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-ha/mssql-server-ha_15.0.1400.75-2_amd64.deb)</br>[Пакет Debian полнотекстового поиска](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-fts/mssql-server-fts_15.0.1400.75-2_amd64.deb)</br>[Пакет Debian расширяемости](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-extensibility/mssql-server-extensibility_15.0.1400.75-2_amd64.deb)</br>[Пакет Debian расширяемости Java](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-extensibility-java/mssql-server-extensibility-java_15.0.1400.75-2_amd64.deb)|
+Для обхода этой проблемы выполните одно из следующих действий.
 
-### <a name="known-issues"></a>Известные проблемы
+1. Используйте IP-адреса вместо имен узлов, чтобы указать целевой объект подключения TCP.
 
-#### <a id="msdtc"></a> Координатор распределенных транзакций (Майкрософт)
+1. Включите протокол IPv6 в ядре, удалив `ipv6.disable=1` из командной строки загрузки. Используемая для этого процедура зависит от дистрибутива Linux и загрузчика, такого как grub. Если вы хотите отключить протокол IPv6, это можно сделать, задав `net.ipv6.conf.all.disable_ipv6 = 1` в конфигурации `sysctl` (например, `/etc/sysctl.conf`). Это по-прежнему помешает сетевому адаптеру системы получить IPv6-адрес, но обеспечит работу функций sqlservr.
 
-Сейчас MSDTC требует, чтобы транзакции не проходили проверку подлинности. Например, если вы используете связанный сервер из SQL Server на базе Windows в SQL Server на базе Linux или используете клиентское приложение Windows для запуска распределенной транзакции в SQL Server на базе Linux, то для MSDTC на сервере/клиенте Windows необходимо использовать параметр "Проверка подлинности не требуется".
+#### <a name="network-file-system-nfs"></a>Файловая система NFS
+При использовании удаленных общих папок **NFS** в рабочей среде необходимо обратить внимание на следующие требования к поддержке.
 
-## <a id="CTP23"></a> CTP 2.3 (февраль 2019 г.)
+- Версия NFS должна быть **4.2 или более поздняя**. Более старые версии NFS не поддерживают необходимые функции, такие как использование команды fallocate и создание разреженных файлов, общие для современных файловых систем.
+- При подключении NFS следует указать только каталоги **/var/opt/mssql**. Другие файлы, например системные двоичные файлы [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], не поддерживаются.
+- При подключении удаленной общей папки клиенты NFS должны использовать параметр nolock.
 
-В следующих разделах приведены сведения о расположениях пакетов и известных проблемах в выпуске CTP 2.3. Дополнительные сведения о новых возможностях для Linux в SQL Server 2019 см. в статье [Новые возможности SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md).
+#### <a name="localization"></a>Локализация
 
-### <a name="package-details"></a>Сведения о пакете
+- Если ваш языковой стандарт отличается от английского (en_us) во время установки, в сеансе или терминале bash нужно использовать кодировку UTF-8. Если использовать кодировку ASCII, появится примерно следующее сообщение об ошибке.
 
-Для ручной или автономной установки пакета можно скачать пакеты RPM и Debian, используя сведения из следующей таблицы.
+   ```
+   UnicodeEncodeError: 'ascii' codec can't encode character u'\xf1' in position 8: ordinal not in range(128)
+   ```
 
-| Пакет | Версия пакета | Файлы для загрузки |
-|-----|-----|-----|
-| Пакет Red Hat RPM | 15.0.1300.359-1 | [Пакет RPM подсистемы](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-15.0.1300.359-1.x86_64.rpm)</br>[Пакет RPM высокой доступности](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-ha-15.0.1300.359-1.x86_64.rpm)</br>[Пакет RPM полнотекстового поиска](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-fts-15.0.1300.359-1.x86_64.rpm)</br>[Пакет RPM расширяемости](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-extensibility-15.0.1300.359-1.x86_64.rpm)</br>[Пакет RPM расширяемости Java](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-extensibility-java-15.0.1300.359-1.x86_64.rpm)|
-| Пакет SLES RPM | 15.0.1300.359-1 | [Пакет RPM подсистемы mssql-server](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-15.0.1300.359-1.x86_64.rpm)</br>[Пакет RPM высокой доступности](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-ha-15.0.1300.359-1.x86_64.rpm)</br>[Пакет RPM полнотекстового поиска](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-fts-15.0.1300.359-1.x86_64.rpm)</br>[Пакет RPM расширяемости](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-extensibility-15.0.1300.359-1.x86_64.rpm)</br>[Пакет RPM расширяемости Java](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-extensibility-java-15.0.1300.359-1.x86_64.rpm)|
-| Пакет Ubuntu 16.04 Debian | 15.0.1300.359-1 | [Пакет подсистемы Debian](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server/mssql-server_15.0.1300.359-1_amd64.deb)</br>[Пакет Debian высокой доступности](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-ha/mssql-server-ha_15.0.1300.359-1_amd64.deb)</br>[Пакет Debian полнотекстового поиска](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-fts/mssql-server-fts_15.0.1300.359-1_amd64.deb)</br>[Пакет Debian расширяемости](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-extensibility/mssql-server-extensibility_15.0.1300.359-1_amd64.deb)</br>[Пакет Debian расширяемости Java](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-extensibility-java/mssql-server-extensibility-java_15.0.1300.359-1_amd64.deb)|
+   Если вы не можете использовать кодировку UTF-8, запустите программу установки с помощью переменной среды MSSQL_LCID, чтобы указать требуемый язык.
 
-### <a name="known-issues"></a>Известные проблемы
+   ```bash
+   sudo MSSQL_LCID=<LcidValue> /opt/mssql/bin/mssql-conf setup
+   ```
 
-#### <a id="msdtc"></a> Координатор распределенных транзакций (Майкрософт)
+- При выполнении программы установки mssql-conf и выполнении установки [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] на языке, отличном от английского, после локализованного текста "Настройка SQL Server..." отображаются неверные символы национального алфавита. А для установок на языках, отличных от романских, это предложение может отсутствовать полностью. В отсутствующем предложении должна отображаться следующая локализованная строка: "Идентификатор процесса лицензирования обработан. Новый выпуск: [выпуск \<имя\>]". Эта строка выводится только для информационных целей, а в следующем накопительном пакете обновления [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] эта проблема будет устранена для всех языков. Это никак не влияет на успешное выполнение установки [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. 
 
-Сейчас MSDTC требует, чтобы транзакции не проходили проверку подлинности. Например, если вы используете связанный сервер из SQL Server на базе Windows в SQL Server на базе Linux или используете клиентское приложение Windows для запуска распределенной транзакции в SQL Server на базе Linux, то для MSDTC на сервере/клиенте Windows необходимо использовать параметр "Проверка подлинности не требуется".
+#### <a name="full-text-search"></a>Компонент Full-text Search
 
-## <a id="CTP22"></a> CTP 2.2 (декабрь 2018 г.)
+- В этом выпуске доступны не все фильтры, включая фильтры для документов Office. Список поддерживаемых фильтров см. в статье [Установка полнотекстового поиска SQL Server в Linux](sql-server-linux-setup-full-text-search.md#filters).
 
-В следующих разделах приведены сведения о расположениях пакетов и известных проблемах в выпуске CTP 2.2. Дополнительные сведения о новых возможностях для Linux в SQL Server 2019 см. в статье [Новые возможности SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md).
+#### <a id="ssis"></a> Службы SQL Server Integration Services
 
-### <a name="package-details"></a>Сведения о пакете
+- В этом выпуске пакет **mssql-server-is** не поддерживается в SUSE. Сейчас он поддерживается в Ubuntu и Red Hat Enterprise Linux (RHEL).
 
-Для ручной или автономной установки пакета можно скачать пакеты RPM и Debian, используя сведения из следующей таблицы.
+- С помощью [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] в Linux CTP 2.1 и более поздних версиях пакеты [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] могут использовать подключения ODBC в Linux. Эта функция была протестирована с использованием [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и драйверов ODBC для MySQL, но она также должна работать с любым драйвером ODBC для Юникода, который поддерживает спецификацию ODBC. Во время разработки можно указать либо имя DSN, либо строку подключения для подключения к данным ODBC. Кроме того, можно использовать проверку подлинности Windows. Дополнительные сведения см. в [записи блога с объявлением поддержки ODBC в Linux.](https://blogs.msdn.microsoft.com/ssis/2017/06/16/odbc-is-supported-in-ssis-on-linux-ssis-helsinki-ctp2-1-refresh/)
 
-| Пакет | Версия пакета | Файлы для загрузки |
-|-----|-----|-----|
-| Пакет Red Hat RPM | 15.0.1200.24-2 | [Пакет RPM подсистемы](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-15.0.1200.24-2.x86_64.rpm)</br>[Пакет RPM высокой доступности](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-ha-15.0.1200.24-2.x86_64.rpm)</br>[Пакет RPM полнотекстового поиска](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-fts-15.0.1200.24-2.x86_64.rpm)</br>[Пакет RPM расширяемости](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-extensibility-15.0.1200.24-2.x86_64.rpm)</br>[Пакет RPM расширяемости Java](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-extensibility-java-15.0.1200.24-2.x86_64.rpm)|
-| Пакет SLES RPM | 15.0.1200.24-2 | [Пакет RPM подсистемы mssql-server](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-15.0.1200.24-2.x86_64.rpm)</br>[Пакет RPM высокой доступности](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-ha-15.0.1200.24-2.x86_64.rpm)</br>[Пакет RPM полнотекстового поиска](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-fts-15.0.1200.24-2.x86_64.rpm)</br>[Пакет RPM расширяемости](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-extensibility-15.0.1200.24-2.x86_64.rpm)</br>[Пакет RPM расширяемости Java](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-extensibility-java-15.0.1200.24-2.x86_64.rpm)|
-| Пакет Ubuntu 16.04 Debian | 15.0.1200.24-2 | [Пакет подсистемы Debian](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server/mssql-server_15.0.1200.24-2_amd64.deb)</br>[Пакет Debian высокой доступности](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-ha/mssql-server-ha_15.0.1200.24-2_amd64.deb)</br>[Пакет Debian полнотекстового поиска](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-fts/mssql-server-fts_15.0.1200.24-2_amd64.deb)</br>[Пакет Debian расширяемости](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-extensibility/mssql-server-extensibility_15.0.1200.24-2_amd64.deb)</br>[Пакет Debian расширяемости Java](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-extensibility-java/mssql-server-extensibility-java_15.0.1200.24-2_amd64.deb)|
+- Следующие функции не поддерживаются в этом выпуске при запуске пакетов SSIS в Linux.
+  - База данных каталогов [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]
+  - Выполнение пакета агентом SQL по расписанию
+  - Проверка подлинности Windows.
+  - Сторонние компоненты
+  - Система отслеживания измененных данных (CDC)
+  - [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Scale Out
+  - Пакет дополнительных компонентов Azure для SSIS
+  - Поддержка Hadoop и HDFS
+  - Соединитель Microsoft Connector для SAP BW
 
-### <a name="known-issues"></a>Известные проблемы
+Список встроенных компонентов SSIS, которые сейчас не поддерживаются или поддерживаются с ограничениями, см. в статье [Ограничения и известные проблемы для служб SSIS в Linux](sql-server-linux-ssis-known-issues.md#components).
 
-#### <a id="msdtc"></a> Координатор распределенных транзакций (Майкрософт)
+Дополнительные сведения о службах SSIS в Linux см. в следующих статьях.
+-   [Запись блога с объявлением о поддержке SSIS для Linux](https://blogs.msdn.microsoft.com/ssis/2017/05/17/ssis-helsinki-is-available-in-sql-server-vnext-ctp2-1/)
+-   [Установка служб SQL Server Integration Services (SSIS) в Linux](sql-server-linux-setup-ssis.md)
+-   [Извлечение, преобразование и загрузка данных в Linux с помощью служб SSIS](sql-server-linux-migrate-ssis.md)
 
-Сейчас MSDTC требует, чтобы транзакции не проходили проверку подлинности. Например, если вы используете связанный сервер из SQL Server на базе Windows в SQL Server на базе Linux или используете клиентское приложение Windows для запуска распределенной транзакции в SQL Server на базе Linux, то для MSDTC на сервере/клиенте Windows необходимо использовать параметр "Проверка подлинности не требуется".
+#### <a id="ssms"></a> SQL Server Management Studio (SSMS)
 
-## <a id="CTP21"></a> CTP 2.1 (ноябрь 2018 г.)
+На [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] в Windows, подключенный к [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] в Linux, распространяются следующие ограничения.
 
-В следующих разделах приведены сведения о расположениях пакетов и известных проблемах в выпуске CTP 2.1. Дополнительные сведения о новых возможностях для Linux в SQL Server 2019 см. в статье [Новые возможности SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md).
+- Планы обслуживания не поддерживаются.
 
-### <a name="package-details"></a>Сведения о пакете
+- Хранилище данных управления (MDW) и сборщик данных в [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] не поддерживаются. 
 
-Для ручной или автономной установки пакета можно скачать пакеты RPM и Debian, используя сведения из следующей таблицы.
+- Компоненты пользовательского интерфейса [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], использующие параметры проверки подлинности Windows или журнала событий Windows, не работают с Linux. Эти функции по-прежнему можно использовать с другими параметрами, такими как имена входа SQL. 
 
-| Пакет | Версия пакета | Файлы для загрузки |
-|-----|-----|-----|
-| Пакет Red Hat RPM | 15.0.1100.94-1 | [Пакет RPM подсистемы](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-15.0.1100.94-1.x86_64.rpm)</br>[Пакет RPM высокой доступности](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-ha-15.0.1100.94-1.x86_64.rpm)</br>[Пакет RPM полнотекстового поиска](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-fts-15.0.1100.94-1.x86_64.rpm)</br>[Пакет RPM расширяемости](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-extensibility-15.0.1100.94-1.x86_64.rpm)</br>[Пакет RPM расширяемости Java](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-extensibility-java-15.0.1100.94-1.x86_64.rpm)|
-| Пакет SLES RPM | 15.0.1100.94-1 | [Пакет RPM подсистемы mssql-server](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-15.0.1100.94-1.x86_64.rpm)</br>[Пакет RPM высокой доступности](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-ha-15.0.1100.94-1.x86_64.rpm)</br>[Пакет RPM полнотекстового поиска](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-fts-15.0.1100.94-1.x86_64.rpm)</br>[Пакет RPM расширяемости](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-extensibility-15.0.1100.94-1.x86_64.rpm)</br>[Пакет RPM расширяемости Java](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-extensibility-java-15.0.1100.94-1.x86_64.rpm)|
-| Пакет Ubuntu 16.04 Debian | 15.0.1100.94-1 | [Пакет подсистемы Debian](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server/mssql-server_15.0.1100.94-1_amd64.deb)</br>[Пакет Debian высокой доступности](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-ha/mssql-server-ha_15.0.1100.94-1_amd64.deb)</br>[Пакет Debian полнотекстового поиска](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-fts/mssql-server-fts_15.0.1100.94-1_amd64.deb)</br>[Пакет Debian расширяемости](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-extensibility/mssql-server-extensibility_15.0.1100.94-1_amd64.deb)</br>[Пакет Debian расширяемости Java](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-extensibility-java/mssql-server-extensibility-java_15.0.1100.94-1_amd64.deb)|
+- Число хранящихся файлов журнала невозможно изменить.
 
-### <a name="known-issues"></a>Известные проблемы
-
-#### <a name="microsoft-distributed-transaction-coordinator"></a>Координатор распределенных транзакций (Майкрософт)
-
-Сейчас MSDTC требует, чтобы транзакции не проходили проверку подлинности. Например, если вы используете связанный сервер из SQL Server на базе Windows в SQL Server на базе Linux или используете клиентское приложение Windows для запуска распределенной транзакции в SQL Server на базе Linux, то для MSDTC на сервере/клиенте Windows необходимо использовать параметр "Проверка подлинности не требуется".
-
-## <a id="CTP20"></a> CTP 2.0 (сентябрь 2018 г.)
-
-В следующих разделах приведены сведения о расположениях пакетов и известных проблемах в выпуске CTP 2.0. Дополнительные сведения о новых возможностях для Linux в SQL Server 2019 см. в статье [Новые возможности SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md).
-
-### <a name="package-details"></a>Сведения о пакете
-
-Для ручной или автономной установки пакета можно скачать пакеты RPM и Debian, используя сведения из следующей таблицы.
-
-| Пакет | Версия пакета | Файлы для загрузки |
-|-----|-----|-----|
-| Пакет Red Hat RPM | 15.0.1000.34-2 | [Пакет RPM подсистемы](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-15.0.1000.34-2.x86_64.rpm)</br>[Пакет RPM высокой доступности](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-ha-15.0.1000.34-2.x86_64.rpm)</br>[Пакет RPM полнотекстового поиска](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-fts-15.0.1000.34-2.x86_64.rpm)</br>[Пакет RPM расширяемости](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-extensibility-15.0.1000.34-2.x86_64.rpm)</br>[Пакет RPM расширяемости Java](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-extensibility-java-15.0.1000.34-2.x86_64.rpm)|
-| Пакет SLES RPM | 15.0.1000.34-2 | [Пакет RPM подсистемы mssql-server](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-15.0.1000.34-2.x86_64.rpm)</br>[Пакет RPM высокой доступности](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-ha-15.0.1000.34-2.x86_64.rpm)</br>[Пакет RPM полнотекстового поиска](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-fts-15.0.1000.34-2.x86_64.rpm)</br>[Пакет RPM расширяемости](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-extensibility-15.0.1000.34-2.x86_64.rpm)</br>[Пакет RPM расширяемости Java](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-extensibility-java-15.0.1000.34-2.x86_64.rpm)|
-| Пакет Ubuntu 16.04 Debian | 15.0.1000.34-2 | [Пакет подсистемы Debian](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server/mssql-server_15.0.1000.34-2_amd64.deb)</br>[Пакет Debian высокой доступности](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-ha/mssql-server-ha_15.0.1000.34-2_amd64.deb)</br>[Пакет Debian полнотекстового поиска](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-fts/mssql-server-fts_15.0.1000.34-2_amd64.deb)</br>[Пакет Debian расширяемости](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-extensibility/mssql-server-extensibility_15.0.1000.34-2_amd64.deb)</br>[Пакет Debian расширяемости Java](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-extensibility-java/mssql-server-extensibility-java_15.0.1000.34-2_amd64.deb)|
-
-### <a name="known-issues"></a>Известные проблемы
-
-#### <a name="microsoft-distributed-transaction-coordinator"></a>Координатор распределенных транзакций (Майкрософт)
-
-Сейчас MSDTC требует, чтобы транзакции не проходили проверку подлинности. Например, если вы используете связанный сервер из SQL Server на базе Windows в SQL Server на базе Linux или используете клиентское приложение Windows для запуска распределенной транзакции в SQL Server на базе Linux, то для MSDTC на сервере/клиенте Windows необходимо использовать параметр "Проверка подлинности не требуется".
-
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 Чтобы приступить к работе, ознакомьтесь со следующими краткими руководствами.
 

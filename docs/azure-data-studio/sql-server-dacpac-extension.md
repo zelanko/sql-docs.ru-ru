@@ -1,27 +1,25 @@
 ---
 title: Расширение DACPAC-файлов SQL Server
 titleSuffix: Azure Data Studio
-description: Установка и использование расширения DACPAC-файлов SQL Server (предварительная версия) для Azure Data Studio
+description: Установка и использование расширения DACPAC SQL Server для Azure Data Studio
 ms.custom: seodec18
-ms.date: 10/21/2019
+ms.date: 11/04/2019
 ms.reviewer: alayu; sstein
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: 769e6157e7d84702716dfce79d0217efeee83076
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.openlocfilehash: d33f43f4232e7a9a62365c5bb438c91339f4fd47
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72783332"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73532417"
 ---
-# <a name="sql-server-dacpac-extension-preview"></a>Расширение DACPAC-файлов SQL Server (предварительная версия)
+# <a name="sql-server-dacpac-extension"></a>Расширение DACPAC-файлов SQL Server
 
 **Мастер приложений уровня данных** предоставляет мастер с удобным интерфейсом для развертывания и извлечения DACPAC-файлов, а также импорта и экспорта BACPAC-файлов.
-
-Сейчас это расширение находится на этапе начальной предварительной версии. Сообщить о проблемах и запросить функции можно [здесь](https://github.com/microsoft/azuredatastudio/issues).
 
 
 ## <a name="features"></a>Компоненты
@@ -60,3 +58,4 @@ ms.locfileid: "72783332"
 ## <a name="next-steps"></a>Дальнейшие действия
 
 Дополнительные сведения о DACPAC-файлах см. в [нашей документации](https://docs.microsoft.com/sql/relational-databases/data-tier-applications/data-tier-applications?view=sql-server-2017).
+Сообщить о проблемах и запросить функции можно [здесь](https://github.com/microsoft/azuredatastudio/issues).

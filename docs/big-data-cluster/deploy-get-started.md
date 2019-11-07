@@ -1,35 +1,43 @@
 ---
 title: Начало работы
 titleSuffix: SQL Server big data clusters
-description: Ознакомьтесь с инструкциями и ресурсами по [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] развертыванию (Предварительная версия).
+description: Ознакомьтесь с пошаговыми инструкциями и ресурсами по развертыванию [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (предварительная версия).
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/21/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 323394f9590551528ce9e9dfdf1fb97c7d1c2225
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
-ms.translationtype: MT
+ms.openlocfilehash: de20b8bea27f3b8003ab11941f044d4246155eeb
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653394"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73532205"
 ---
-# <a name="get-started-with-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Начало работы с[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
+# <a name="get-started-with-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Начало работы с [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-В этой статье приводятся общие сведения о [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](big-data-cluster-overview.md)развертывании. Она призвана дать основные понятия и предоставляет основу для понимания других статей по развертыванию в этом разделе. Конкретные шаги по развертыванию зависят от выбора платформ клиента и сервера.
+В этой статье содержится обзор развертывания [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](big-data-cluster-overview.md).
+
+Дополнительные сведения о других сценариях развертывания см. в следующих источниках:
+
+- [Windows](../database-engine/install-windows/install-sql-server.md)
+- [Linux](../linux/sql-server-linux-setup.md)
+- [Контейнеры Docker](../linux/sql-server-linux-configure-docker.md)
+
+Эта статья призвана дать определения основным понятиям и предоставить базовые знания для понимания других статей по развертыванию в этом разделе. Конкретные шаги по развертыванию зависят от выбора платформ клиента и сервера.
 
 > [!TIP]
-> Чтобы быстро получить среду с развернутым Kubernetes и кластером больших данных, чтобы повысить его возможности, используйте один из примеров сценариев, [указанных в разделе сценарии](#scripts). После развертывания для управления кластером используйте клиентские [средства](#tools) из следующего раздела.
+> Чтобы быстро развернуть среду с Kubernetes и кластером больших данных и начать реализовывать ее потенциал, воспользуйтесь одним из примеров сценариев, указанных в [разделе сценариев](#scripts). После развертывания используйте для управления кластером [клиентские средства](#tools), описанные в следующем разделе.
 
 ## <a id="tools"></a> Клиентские средства
 
 Для кластеров больших данных требуется специальный набор клиентских средств. Перед развертыванием кластера больших данных в Kubernetes необходимо установить следующие средства:
 
-| Tool | Описание |
+| Инструмент | Описание |
 |---|---|
 | **azdata** | Подключение и управление для кластеров больших данных. |
 | **kubectl** | Создает базовый кластер Kubernetes и управляет им. |
@@ -42,11 +50,9 @@ ms.locfileid: "69653394"
 
 Кластеры больших данных развертываются в виде последовательности взаимосвязанных контейнеров, управляемых в [Kubernetes](https://kubernetes.io/docs/home). Вы можете размещать Kubernetes различными способами. Даже если у вас уже есть среда Kubernetes, ознакомьтесь со связанными требованиями для кластеров больших данных.
 
-- **Служба Azure Kubernetes (AKS)** : AKS позволяет развернуть управляемый кластер Kubernetes в Azure. Управление и обслуживание приходится вести только для узлов агентов. При использовании AKS вам не нужно подготавливать собственное оборудование для кластера. Также можно легко использовать[скрипт Python](quickstart-big-data-cluster-deploy.md) или [записную книжку развертывания](deploy-notebooks.md) для создания кластера AKS и развертывания кластера больших данных за один шаг. Дополнительные сведения о настройке AKS для развертывания кластера больших данных см. в статье [Настройка службы Kubernetes Azure для [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] ](deploy-on-aks.md)развертываний.
+- **Служба Azure Kubernetes (AKS)** : AKS позволяет развернуть управляемый кластер Kubernetes в Azure. Управление и обслуживание приходится вести только для узлов агентов. При использовании AKS вам не нужно подготавливать собственное оборудование для кластера. Также можно легко использовать[скрипт Python](quickstart-big-data-cluster-deploy.md) или [записную книжку развертывания](deploy-notebooks.md) для создания кластера AKS и развертывания кластера больших данных за один шаг. Дополнительные сведения о настройке AKS для развертывания кластера больших данных см. в разделе [Настройка службы Azure Kubernetes для развертывания [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](deploy-on-aks.md).
 
-- **Несколько машин**: вы также можете развернуть Kubernetes на нескольких машинах с Linux, которые могут быть физическими серверами или виртуальными машинами. Средство [kubeadm](https://kubernetes.io/docs/setup/independent/create-cluster-kubeadm/) можно использовать для создания кластера Kubernetes. Для автоматизации этого типа развертывания можно использовать [скрипт Bash](deployment-script-single-node-kubeadm.md). Этот метод хорошо работает, если у вас уже есть инфраструктура, которую вы хотите использовать для кластера больших данных. Дополнительные сведения об использовании развертываний **кубеадм** с кластерами больших данных см. [в статье Настройка Kubernetes на [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] нескольких компьютерах для развертывания](deploy-with-kubeadm.md).
-
-- **Minikube**: Minikube позволяет запускать Kubernetes локально на одном сервере. Это хороший вариант, если вы только пробуете кластеры больших данных или хотите использовать технологию в сценарии тестирования или разработки. Дополнительные сведения см. в [документации по использованию Minikube](https://kubernetes.io/docs/setup/minikube/). Конкретные требования для использования Minikube с кластерами больших данных см. в статье [Настройка Minikube для развертываний кластеров больших данных в SQL Server 2019](deploy-on-minikube.md).
+- **Несколько машин**: вы также можете развернуть Kubernetes на нескольких машинах с Linux, которые могут быть физическими серверами или виртуальными машинами. Средство [kubeadm](https://kubernetes.io/docs/setup/independent/create-cluster-kubeadm/) можно использовать для создания кластера Kubernetes. Для автоматизации этого типа развертывания можно использовать [скрипт Bash](deployment-script-single-node-kubeadm.md). Этот метод хорошо работает, если у вас уже есть инфраструктура, которую вы хотите использовать для кластера больших данных. Дополнительные сведения об использовании **kubeadm** для развертывания кластера больших данных см. в разделе [Настройка Kubernetes на нескольких машинах для развертывания [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](deploy-with-kubeadm.md).
 
 ## <a name="deploy-a-big-data-cluster"></a>Развертывание кластера больших данных
 
@@ -74,6 +80,6 @@ ms.locfileid: "69653394"
 
 - [Развертывание кластера больших данных с помощью записных книжек Azure Data Studio](deploy-notebooks.md).
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 После успешного развертывания кластера больших данных [подключитесь к кластеру](connect-to-big-data-cluster.md) и рассмотрите возможность [загрузки демонстрационных данных](tutorial-load-sample-data.md) для использования с несколькими пошаговыми руководствами.

@@ -5,60 +5,82 @@ description: Справочная статья по командам azdata.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/28/2019
+ms.date: 11/04/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: e12a6a19ae076a42bef345a05076adab0d9ea471
-ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
+ms.openlocfilehash: 4ef2ba9c68f3586e159c326863ef76ba231f01b9
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71816654"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73531653"
 ---
 # <a name="azdata"></a>azdata
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
 
+В следующей статье приводятся справочные сведения по командам `sql` в средстве `azdata`. Дополнительные сведения о других командах `azdata` см. в [справочнике по azdata](reference-azdata.md)
+
 ## <a name="commands"></a>Команды
 |     |     |
 | --- | --- |
-|[azdata notebook](reference-azdata-notebook.md) | Команды для просмотра, запуска записных книжек и управления ими из терминала. |
-|[azdata sql](reference-azdata-sql.md) | Интерфейс командной строки (CLI) баз данных SQL позволяет пользователю взаимодействовать с SQL Server с помощью T-SQL. |
-|[azdata app](reference-azdata-app.md) | Создание, удаление и запуск приложений, а также управление ими. |
 |[azdata bdc](reference-azdata-bdc.md) | Создание кластеров больших данных SQL, а также управление ими и обеспечение работы. |
-|[azdata login](#azdata-login) | Вход в конечную точку контроллера кластера.
-|[azdata logout](#azdata-logout) | Выход из кластера.
+|[azdata app](reference-azdata-app.md) | Создание, удаление и запуск приложений, а также управление ими. |
+[azdata login](#azdata-login) | Войдите на конечную точку контроллера кластера и задайте его пространство имен в качестве активного контекста. Чтобы использовать пароль при входе, необходимо задать переменную среды AZDATA_PASSWORD.
+[azdata logout](#azdata-logout) | Выход из кластера.
+|[azdata context](reference-azdata-context.md) | Команды управления контекстом. |
+|[azdata control](reference-azdata-control.md) | Создание, удаление уровней управления и управление ими. |
+|[azdata sql](reference-azdata-sql.md) | Интерфейс командной строки (CLI) баз данных SQL позволяет пользователю взаимодействовать с SQL Server с помощью T-SQL. |
+|[azdata notebook](reference-azdata-notebook.md) | Команды для просмотра, запуска записных книжек и управления ими из терминала. |
 ## <a name="azdata-login"></a>azdata login
-Если кластер развернут, выводит список конечных точек контроллера в процессе развертывания, которые следует использовать для входа.  Если вам не известна конечная точка контроллера, вы можете выполнить вход с использованием конфигурации KUBE кластера в системе, которая по умолчанию располагается в каталоге <user home>/.kube/config, или переменной среды KUBECONFIG, то есть экспортировать KUBECONFIG=path/to/.kube/config.
+Если кластер развернут, выводит список конечных точек контроллера в процессе развертывания, которые следует использовать для входа.  Если вам не известна конечная точка контроллера, вы можете выполнить вход с использованием конфигурации KUBE кластера в системе, которая по умолчанию располагается в каталоге <user home>/.kube/config, или переменной среды KUBECONFIG, то есть экспортировать KUBECONFIG=path/to/.kube/config.  При входе в систему пространство имен этого кластера будет установлено в ваш активный контекст.
 ```bash
-azdata login [--cluster-name -n] 
-             [--controller-username -u]  
-             [--controller-endpoint -e]  
-             [--accept-eula -a]
+azdata login [--auth] 
+             [--endpoint -e]  
+             [--accept-eula -a]  
+             [--namespace -n]  
+             [--username -u]  
+             [--principal -p]
 ```
 ### <a name="examples"></a>Примеры
-Вход в интерактивном режиме. Имя кластера будет запрашиваться всегда, кроме случаев, когда оно задано в качестве аргумента. Если в вашей системе заданы переменные среды CONTROLLER_USERNAME, CONTROLLER_PASSWORD и ACCEPT_EULA, соответствующий запрос не появляется. Если в вашей системе задана конфигурация KUBE или используется переменная среды KUBECONFIG для указания пути к конфигурации, интерактивный интерфейс сначала пробует использовать конфигурацию и только в случае сбоя отображает запрос.
+Вход с использованием обычной проверки подлинности.
+```bash
+azdata login --auth basic --username johndoe --endpoint https://<ip or domain name>:30080            
+```
+Вход с использованием Active Directory.
+```bash
+azdata login --auth ad --endpoint https://<ip or domain name>:30080                
+```
+Вход с использованием Active Directory с явным субъектом.
+```bash
+azdata login --auth ad --principal johndoe@COSTOSO.COM --endpoint https://<ip or domain name>:30080
+```
+Вход в интерактивном режиме. Имя кластера будет запрашиваться всегда, кроме случаев, когда оно задано в качестве аргумента. Если в вашей системе заданы переменные среды AZDATA_USERNAME, AZDATA_PASSWORD и ACCEPT_EULA, соответствующий запрос не появляется. Если в вашей системе задана конфигурация KUBE или используется переменная среды KUBECONFIG для указания пути к конфигурации, интерактивный интерфейс сначала пробует использовать конфигурацию и только в случае сбоя отображает запрос.
 ```bash
 azdata login
 ```
-Вход не в интерактивном режиме. Выполните вход, указав в качестве аргументов имя кластера, имя пользователя контроллера, конечную точку контроллера, а также информацию о принятии условий лицензионного соглашения. Должна быть задана переменная среды CONTROLLER_PASSWORD.  Если вы не хотите указывать конечную точку контроллера, вы можете использовать конфигурацию KUBE в системе, которая по умолчанию располагается в каталоге <user home>/.kube/config, или переменную среды KUBECONFIG, то есть экспортировать KUBECONFIG=path/to/.kube/config.
+Вход не в интерактивном режиме. Выполните вход, указав в качестве аргументов имя кластера, имя пользователя контроллера, конечную точку контроллера, а также информацию о принятии условий лицензионного соглашения. Должна быть задана переменная среды AZDATA_PASSWORD.  Если вы не хотите указывать конечную точку контроллера, вы можете использовать конфигурацию KUBE в системе, которая по умолчанию располагается в каталоге <user home>/.kube/config, или переменную среды KUBECONFIG, то есть экспортировать KUBECONFIG=path/to/.kube/config.
 ```bash
-azdata login --cluster-name ClusterName --controller-user johndoe@contoso.com  --controller-endpoint https://<ip>:30080 --accept-eula yes
+azdata login --namespace ClusterName --username johndoe@contoso.com  --endpoint https://<ip or domain name>:30080 --accept-eula yes
 ```
-Выполните вход с использованием конфигурации KUBE на компьютере с заданными переменными среды CONTROLLER_USERNAME, CONTROLLER_PASSWORD и ACCEPT_EULA.
+Выполните вход с использованием конфигурации KUBE на компьютере и с заданными переменными среды AZDATA_USERNAME, AZDATA_PASSWORD и ACCEPT_EULA.
 ```bash
 azdata login -n ClusterName
 ```
 ### <a name="optional-parameters"></a>Необязательные параметры
-#### `--cluster-name -n`
-Имя кластера.
-#### `--controller-username -u`
-Имя пользователя учетной записи. Если вы не хотите использовать этот аргумент, можно задать переменную среды CONTROLLER_USERNAME.
-#### `--controller-endpoint -e`
+#### `--auth`
+Стратегия проверки подлинности. Обычная проверка подлинности или проверка подлинности Active Directory. По умолчанию используется обычная проверка подлинности.
+#### `--endpoint -e`
 Конечная точка контроллера кластера "https://host:port". Если вы не хотите использовать этот аргумент, можно использовать конфигурацию KUBE на компьютере. Убедитесь, что конфигурация располагается в заданном по умолчанию месте (<user home>/.kube/config) или используйте переменную среды KUBECONFIG.
 #### `--accept-eula -a`
-Вы принимаете условия лицензии? [да/нет]. Если вы не хотите использовать этот аргумент, можно присвоить переменной среды ACCEPT_EULA значение "yes". 
+Вы принимаете условия лицензии? [да/нет]. Если вы не хотите использовать этот аргумент, можно присвоить переменной среды ACCEPT_EULA значение "yes". Условия лицензии для этого продукта можно просмотреть по адресу https://aka.ms/eula-azdata-en.
+#### `--namespace -n`
+Пространство имен уровня управления кластером.
+#### `--username -u`
+Имя пользователя учетной записи. Если вы не хотите использовать этот аргумент, можно задать переменную среды AZDATA_USERNAME.
+#### `--principal -p`
+Ваша область Kerberos. В большинстве случаев область Kerberos — это ваше доменное имя прописными буквами.
 ### <a name="global-arguments"></a>Глобальные аргументы
 #### `--debug`
 Повышение уровня детализации журнала для включения всех журналов отладки.
@@ -92,6 +114,6 @@ azdata logout
 #### `--verbose`
 Повышение уровня детализации журнала. Чтобы включить полные журналы отладки, используйте параметр --debug.
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
-- Дополнительные сведения об установке средства **azdata** см. в статье [Установка azdata для управления кластерами больших данных SQL Server 2019](deploy-install-azdata.md).
+Дополнительные сведения о других командах `azdata` см. в [справочнике по azdata](reference-azdata.md). Дополнительные сведения об установке средства `azdata` см. в статье [Установка azdata для управления кластерами больших данных SQL Server 2019](deploy-install-azdata.md).

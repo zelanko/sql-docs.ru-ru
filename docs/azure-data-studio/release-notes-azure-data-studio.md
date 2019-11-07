@@ -9,17 +9,35 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
-ms.date: 10/11/2019
-ms.openlocfilehash: c77d22b01b824906e4d5c32311bfe20258fa3c61
-ms.sourcegitcommit: c7a202af70fd16467a498688d59637d7d0b3d1f3
+ms.date: 11/04/2019
+ms.openlocfilehash: 16e2a7568bb88dbf36576cf5a6d64a1b268621fa
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72313620"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73532529"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Заметки о выпуске для Azure Data Studio
 
 **[Скачайте и установите последний выпуск.](download.md)**
+
+## <a name="november-2019"></a>Ноябрь 2019 г.
+
+4 ноября 2019 г. &nbsp; / &nbsp;, версия: 1.13.0 
+
+&nbsp;
+
+| Изменить | Сведения |
+| :----- | :------ |
+| Поддержка новой версии SQL Server 2019 | &bull; &nbsp; Развертывание кластера больших данных SQL Server 2019 с помощью мастера развертывания BDC <br/>&bull; &nbsp; Управление работоспособностью кластера с помощью панели мониторинга контроллера <br/>&bull; &nbsp; Управление списками управления доступом HDFS с помощью диалогового окна "ACL безопасности" <br/> &bull; &nbsp; Добавление подключений с помощью диалогового окна "Уровни HDFS" <br/> &bull; &nbsp; Устранение неполадок с помощью встроенной книги Jupyter, руководство по SQL Server 2019 <br/> &bull; &nbsp; Расширение виртуализации данных переименовано в расширение SQL vNext <br/> &bull; &nbsp; Добавлена поддержка Teradata и Mongo в мастере внешних таблиц|
+| Новые функции записной книжки | &bull; &nbsp; Объявление о выпуске записных книжек PowerShell &bull; &nbsp; Объявление о выпуске сворачиваемых ячеек кода <br/>&bull; &nbsp; Улучшения производительности в записных книжках <br/> &bull; &nbsp; Полный список усовершенствований см. [здесь](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22November+2019+Release%22+is%3Aclosed+label%3A%22Area+-+Notebooks%22) |
+| Объявление о выпуске книг Jupyter  | Книги Jupyter — это набор записных книжек и файлов Markdown, упорядоченных в содержание. |
+| Новый мастер развертывания SQL Server  | Теперь включает поддержку следующих развертываний: <br/> &bull; &nbsp; SQL Server 2019 в Windows <br/> &bull; &nbsp; SQL Server 2017 в Windows <br/> &bull; &nbsp; SQL Server 2019 в Docker <br/> &bull; &nbsp; SQL Server 2017 в Docker |
+| Объявление о выпуске общедоступной версии расширения Schema Compare| &bull; &nbsp; Режим SQLCMD <br/> &bull; &nbsp; Поддержка локализации <br/> &bull; &nbsp; Исправления специальных возможностей <br/> &bull; &nbsp; Ошибки системы безопасности  |
+| Объявление о выпуске общедоступной версии расширения SQL Server Dacpac| <br/> &bull; &nbsp; Поддержка локализации <br/> &bull; &nbsp; Исправления специальных возможностей <br/> &bull; &nbsp; Ошибки системы безопасности |
+| Объявление о выпуске расширения Visual Studio IntelliCode | Visual Studio IntelliCode теперь поддерживает SQL, что позволяет более разумно предлагать зарезервированные ключевые слова. |
+| Устраненные ошибки и проблемы | Полный список исправлений см. на странице [ошибок и проблем в GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22November+2019+Release%22+is%3Aclosed). |
+| &nbsp; | &nbsp; |
 
 ## <a name="october-2019-hotfix-2"></a>Октябрь 2019 г. (исправление 2)
 
@@ -228,7 +246,7 @@ ms.locfileid: "72313620"
 | Добавлена поддержка фильтрации расширенных событий в расширении Profiler. | &nbsp; |
 | Добавлена функция "Сохранить как XML", позволяющая сохранять результаты T-SQL в формате XML. | &nbsp; |
 | Добавлены улучшения мастера приложений уровня данных. | &bull; &nbsp; Добавлена кнопка "Создать скрипт"<br/>&bull; &nbsp; Добавлено представление, выводящее предупреждения о возможной потере данных при развертывании |
-| Обновление до расширения предварительной версии SQL Server 2019. | См. описание [расширения предварительной версии SQL Server 2019](sql-server-2019-extension.md?view=sql-server-ver15). |
+| Обновление до расширения предварительной версии SQL Server 2019. | См. [Расширение Data Virtualization](data-virtualization-extension.md?view=sql-server-ver15). |
 | Для длительных запросов потоковая передача результатов включена по умолчанию. | &nbsp; |
 | Устранены ошибки и проблемы | См. страницу [ошибок и проблем в GitHub](https://github.com/Microsoft/azuredatastudio/milestone/23?closed=1). |
 | &nbsp; | &nbsp; |
@@ -256,7 +274,7 @@ ms.locfileid: "72313620"
 | Добавлена поддержка проверки подлинности Azure Active Directory. | &nbsp; |
 | Объявление о Idera SQL DM Performance Insights (предварительная версия). | &nbsp; |
 | Поддержка мастера приложений уровня данных в расширении импорта SQL Server. | &nbsp; |
-| Обновление до расширения предварительной версии SQL Server 2019. | См. описание [расширения предварительной версии SQL Server 2019](sql-server-2019-extension.md?view=sql-server-ver15). |
+| Обновление до расширения предварительной версии SQL Server 2019. | См. [Расширение Data Virtualization](data-virtualization-extension.md?view=sql-server-ver15). |
 | Улучшения SQL Server Profiler. | &nbsp; |
 | Потоковая передача результатов для больших запросов (предварительная версия). | &nbsp; |
 | Расширения сообщества: преобразование sp_executesql в SQL и создание базы данных. | &nbsp; |
@@ -271,7 +289,7 @@ ms.locfileid: "72313620"
 
 | Изменить | Сведения |
 | :----- | :------ |
-| Обновление до расширения предварительной версии SQL Server 2019. | См. описание [расширения предварительной версии SQL Server 2019](sql-server-2019-extension.md?view=sql-server-ver15). |
+| Обновление до расширения предварительной версии SQL Server 2019. | См. [Расширение Data Virtualization](data-virtualization-extension.md?view=sql-server-ver15). |
 | Появление расширения вставки плана. | &nbsp; |
 | Появление расширения запросов High Color, включая тему редактора SSMS. | &nbsp; |
 | Исправления для расширений агента SQL Server, Profiler и импорта. | &nbsp; |
@@ -301,7 +319,7 @@ ms.locfileid: "72313620"
 | Появление обозревателя ресурсов Azure для просмотра Баз данных SQL Azure. | &nbsp; |
 | Улучшение надежности подключений обозревателя объектов и редактора запросов. | &nbsp; |
 | Усовершенствования расширений агента SQL Server. | &nbsp; |
-| Обновление до расширения предварительной версии SQL Server 2019. | См. описание [расширения предварительной версии SQL Server 2019](sql-server-2019-extension.md?view=sql-server-ver15). |
+| Обновление до расширения предварительной версии SQL Server 2019. | См. [Расширение Data Virtualization](data-virtualization-extension.md?view=sql-server-ver15). |
 | &nbsp; | &nbsp; |
 
 ### <a name="bug-fixes-october-2018"></a>Исправления ошибок, октябрь 2018 г.

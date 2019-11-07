@@ -3,17 +3,17 @@ title: Обзор SQL Server на Linux
 description: В этой статье описывается работа SQL Server на Linux и приводятся ссылки для получения дополнительной информации.
 author: VanMSFT
 ms.author: vanto
-ms.date: 04/23/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 9dcc6a90-0add-42c2-815b-862e4e2a21ac
-ms.openlocfilehash: e3bd50cba4bcab81e7dcf00db9394704c5486160
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 31904a43dba642c73620a66bcf4abaa066b5ef82
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68105460"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73531282"
 ---
 # <a name="sql-server-on-linux"></a>SQL Server в Linux
 
@@ -24,22 +24,22 @@ ms.locfileid: "68105460"
 ::: moniker-end
 
 ::: moniker range=">= sql-server-ver15 || >= sql-server-linux-ver15"
-Предварительная версия SQL Server 2019 работает на Linux. Несмотря на другую операционную систему, это то же ядро СУБД SQL Server с множеством схожих функций и служб. Дополнительные сведения об этом выпуске см. в статье [Новые возможности в предварительной версии SQL Server 2019 для Linux](../sql-server/what-s-new-in-sql-server-ver15.md#sql-server-on-linux).
+SQL Server 2019 работает в Linux. Несмотря на другую операционную систему, это то же ядро СУБД SQL Server с множеством схожих функций и служб. Дополнительные сведения об этом выпуске см. в статье [Новые возможности SQL Server 2019 для Linux](sql-server-linux-whats-new-2019.md).
 ::: moniker-end
 
 ::: moniker range="= sql-server-2017"
 > [!TIP]
-> [Предварительная версия SQL Server 2019](sql-server-linux-overview.md?view=sql-server-ver15) уже выпущена! Сведения о новых возможностях см. в статье [Новые возможности в предварительной версии SQL Server 2019 для Linux](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15#sql-server-on-linux).
+> [SQL Server 2019](sql-server-linux-overview.md?view=sql-server-ver15) доступен! Сведения о новых возможностях см. в статье [Новые возможности SQL Server 2019 для Linux](sql-server-linux-whats-new-2019.md?view=sql-server-ver15).
 ::: moniker-end
 
 ::: moniker range="= sql-server-linux-2017"
 > [!TIP]
-> [Предварительная версия SQL Server 2019](sql-server-linux-overview.md?view=sql-server-linux-ver15) уже выпущена! Сведения о новых возможностях см. в статье [Новые возможности в предварительной версии SQL Server 2019 для Linux](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-linux-ver15#sql-server-on-linux).
+> [SQL Server 2019](sql-server-linux-overview.md?view=sql-server-linux-ver15) доступен! Сведения о новых возможностях см. в статье [Новые возможности SQL Server 2019 для Linux](sql-server-linux-whats-new-2019.md?view=sql-server-linux-ver15).
 ::: moniker-end
 
 ::: moniker range="= sqlallproducts-allversions"
 > [!TIP]
-> Предварительная версия SQL Server 2019 уже выпущена! Сведения о новых возможностях см. в статье [Новые возможности в предварительной версии SQL Server 2019 для Linux](../sql-server/what-s-new-in-sql-server-ver15.md#sql-server-on-linux).
+> SQL Server 2019 доступен! Сведения о новых возможностях см. в статье [Новые возможности SQL Server 2019 для Linux](sql-server-linux-whats-new-2019.md).
 ::: moniker-end
 
 ## <a name="install"></a>Установка
@@ -80,7 +80,7 @@ SQL Server 2017 использует одинаковое базовое ядр
 
 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] использует одинаковое базовое ядро СУБД на всех поддерживаемых платформах, включая Linux. Благодаря этому многие существующие функции и возможности работают в Linux так же, как и на других платформах. В этой части документации некоторые из этих функций рассматриваются с точки зрения платформы Linux. Кроме того, отмечаются области, в которых платформа Linux предъявляет уникальные требования.
 
-Если вы уже знакомы с SQL Server на Linux, изучите общие рекомендации и известные проблемы в [заметках об этом выпуске](sql-server-linux-release-notes-2019.md). Также ознакомьтесь с [новыми возможностями в предварительной версии SQL Server 2019 на Linux](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15).
+Если вы уже знакомы с SQL Server на Linux, изучите общие рекомендации и известные проблемы в [заметках об этом выпуске](sql-server-linux-release-notes-2019.md). Также ознакомьтесь с [новыми возможностями SQL Server 2019 на Linux](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15).
 
 ::: moniker-end
 
@@ -92,12 +92,12 @@ SQL Server 2017 и [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] ис
 Если вы уже знакомы с SQL Server на Linux, ознакомьтесь с заметками о выпуске:
 
 - [Заметки о выпуске для SQL Server 2017](sql-server-linux-release-notes.md)
-- [Заметки о выпуске предварительной версии SQL Server 2019](sql-server-linux-release-notes-2019.md)
+- [Заметки о выпуске для SQL Server 2019](sql-server-linux-release-notes-2019.md)
 
 Также ознакомьтесь с новыми возможностями:
 
 - [Новые возможности в SQL Server 2017](sql-server-linux-whats-new.md)
-- [Новые возможности в предварительной версии SQL Server 2019 на Linux](../sql-server/what-s-new-in-sql-server-ver15.md#sql-server-on-linux)
+- [Новые возможности SQL Server 2019 на Linux](../sql-server/what-s-new-in-sql-server-ver15.md#sql-server-on-linux)
 
 ::: moniker-end
 

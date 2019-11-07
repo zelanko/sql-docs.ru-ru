@@ -1,24 +1,24 @@
 ---
-title: Создание и хранение главных ключей столбцов (постоянное шифрование) | Документация Майкрософт
+title: Создание и хранение главных ключей столбцов для Always Encrypted | Документация Майкрософт
 ms.custom: ''
-ms.date: 07/01/2016
+ms.date: 10/31/2019
 ms.prod: sql
 ms.prod_service: security, sql-database"
 ms.reviewer: vanto
 ms.technology: security
 ms.topic: conceptual
 ms.assetid: 856e8061-c604-4ce4-b89f-a11876dd6c88
-author: VanMSFT
-ms.author: vanto
+author: jaszymas
+ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a8f9dbfc7f75d853232e0074d52735e9e38d68d5
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: a090adbfbaae886ef11e848c1296d1d4e300521a
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72902965"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73594435"
 ---
-# <a name="create-and-store-column-master-keys-always-encrypted"></a>Создание и хранение главных ключей столбцов (постоянное шифрование)
+# <a name="create-and-store-column-master-keys-for-always-encrypted"></a>Создание и хранение главных ключей столбцов для Always Encrypted
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 *Главные ключи столбцов* являются защищающими ключами, которые используются в режиме постоянного шифрования для кодирования ключей шифрования столбцов. Главные ключи столбцов должны храниться в надежном хранилище ключей и быть доступны для приложений, которым необходимо зашифровать или расшифровать данные, а также для средств для настройки постоянного шифрования и управления ключами постоянного шифрования.
@@ -35,28 +35,20 @@ ms.locfileid: "72902965"
 
 * **Локальные хранилища ключей** могут использоваться только приложениями на компьютерах с локальным хранилищем ключей. Другими словами, нужно реплицировать хранилище ключей и ключ на каждый компьютер, где запущено приложение. Примером локального хранилища ключей является хранилище сертификатов Windows. При использовании локального хранилища ключей необходимо убедиться, что хранилище ключей существует на каждом компьютере, на котором размещается приложение, и что компьютер содержит главные ключи столбцов, необходимые приложению для доступа к данным, защищенным с помощью постоянного шифрования. При первой подготовке главного ключа столбца или при изменении (смене) ключа необходимо проверить, что ключ будет развернут на всех компьютерах, где размещены приложения.
 
-* **Централизованные хранилища ключей** обслуживают приложения на нескольких компьютерах. Примером централизованного хранилища ключей является [хранилище ключей Azure](https://azure.microsoft.com/services/key-vault/). Централизованное хранилище ключей обычно упрощает управление ключами, так как вам не требуется поддерживать несколько копий главных ключей столбцов на нескольких компьютерах. Необходимо убедиться, что приложения настроены для подключения к централизованному хранилищу ключей.
+* **Централизованные хранилища ключей** обслуживают приложения на нескольких компьютерах. Примером централизованного хранилища ключей является [хранилище ключей Azure](https://azure.microsoft.com/services/key-vault/). Централизованное хранилище ключей обычно упрощает управление ключами, так как вам не требуется поддерживать несколько копий главных ключей столбцов на нескольких компьютерах. Убедитесь, что приложения настроены для подключения к централизованному хранилищу ключей.
 
 ### <a name="which-key-stores-are-supported-in-always-encrypted-enabled-client-drivers"></a>Какие хранилища ключей поддерживаются клиентскими драйверами с включенным постоянным шифрованием?
 
-Клиентские драйверы с включенным постоянным шифрованием — это драйверы клиента SQL Server со встроенной поддержкой для внедрения постоянного шифрования в клиентские приложения. Они включают в себя несколько встроенных поставщиков распространенных хранилищ ключей. Обратите внимание, что некоторые драйверы также позволяют реализовывать и регистрировать настраиваемый поставщик хранилища главных ключей столбцов, поэтому вы можете использовать любое хранилище ключей, даже если для него отсутствует встроенный поставщик. Делая выбор между встроенным поставщиком и настраиваемым поставщиком, необходимо учитывать, что использование встроенного поставщика обычно связано с незначительным изменением приложений (в некоторых случаях требуется только изменить строку подключения к базе данных).
+Клиентские драйверы с включенным постоянным шифрованием — это драйверы клиента SQL Server со встроенной поддержкой для внедрения постоянного шифрования в клиентские приложения. Они включают в себя несколько встроенных поставщиков распространенных хранилищ ключей. Некоторые драйверы также позволяют реализовывать и регистрировать настраиваемый поставщик хранилища главных ключей столбцов, поэтому вы можете использовать любое хранилище ключей, даже если для него отсутствует встроенный поставщик. Делая выбор между встроенным поставщиком и настраиваемым поставщиком, необходимо учитывать, что использование встроенного поставщика обычно связано с незначительным изменением приложений (в некоторых случаях требуется только изменить строку подключения к базе данных).
 
-Доступные встроенные поставщики зависят от выбранного драйвера, версии драйвера и операционной системы.  Обратитесь к документации по постоянному шифрованию для конкретного драйвера, чтобы определить, какие готовые хранилища ключей поддерживаются, и узнать, поддерживает ли ваш драйвер настраиваемые поставщики хранилищ ключей.
+Доступные встроенные поставщики зависят от выбранного драйвера, версии драйвера и операционной системы.  Обратитесь к документации по Always Encrypted для конкретного драйвера, чтобы определить, какие готовые хранилища ключей поддерживаются, и узнать, поддерживает ли ваш драйвер настраиваемые поставщики хранилищ ключей. См. раздел [Разработка приложений с помощью Always Encrypted](always-encrypted-client-development.md).
 
-- [Разработка приложений с помощью постоянного шифрования и поставщика данных .NET Framework для SQL Server](../../../relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider.md)
-
-
-### <a name="supported-tools"></a>Поддерживаемые средства
-
-Для настройки постоянного шифрования и управления ключами постоянного шифрования можно использовать [среду SQL Server Management Studio](../../../ssms/sql-server-management-studio-ssms.md) и [модуль SqlServer PowerShell](https://blogs.technet.microsoft.com/dataplatforminsider/2016/06/30/sql-powershell-july-2016-update) . Список хранилищ ключей, поддерживающих это средство, см. в следующих разделах:
-
-- [Configure Always Encrypted using SQL Server Management Studio (Настройка постоянного шифрования с помощью среды SQL Server Management Studio)](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md)
-- [Настройка постоянного шифрования с помощью PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)
-
+### <a name="which-key-stores-are-supported-in-sql-tools"></a>Какие хранилища ключей поддерживаются в инструментах SQL?
+SQL Server Management Studio и модуль SqlServer PowerShell поддерживают только главные ключи столбцов, хранящиеся в Azure Key Vault, хранилище сертификатов Windows и хранилищах ключей, которые предоставляют API шифрования следующего поколения (CNG) или API шифрования (CAPI). 
 
 ## <a name="creating-column-master-keys-in-windows-certificate-store"></a>Создание главных ключей столбцов в хранилище сертификатов Windows    
 
-Главный ключ столбца может быть сертификатом, который хранится в хранилище сертификатов Windows. Обратите внимание, что драйвер с поддержкой постоянного шифрования не проверяет дату окончания срока действия или цепочку центра сертификации. Сертификат просто используется как пара ключей, состоящая из открытого и закрытого ключей.
+Главный ключ столбца может быть сертификатом, который хранится в хранилище сертификатов Windows. Драйвер с поддержкой Always Encrypted не проверяет дату окончания срока действия или цепочку центра сертификации. Сертификат просто используется как пара ключей, состоящая из открытого и закрытого ключей.
 
 Чтобы быть допустимым главным ключом столбца, сертификат должен отвечать следующим условиям:
 * являться сертификатом X.509;
@@ -82,7 +74,7 @@ $cert = New-SelfSignedCertificate -Subject "AlwaysEncryptedCert" -CertStoreLocat
 
 ### <a name="create-a-self-signed-certificate-using-sql-server-management-studio-ssms"></a>Создание самозаверяющего сертификата с помощью среды SQL Server Management Studio (SSMS)
 
-Подробные сведения см. в разделе [Configure Always Encrypted using SQL Server Management Studio (Настройка постоянного шифрования с помощью среды SQL Server Management Studio)](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md).
+Дополнительные сведения см. в разделе [Подготовка к работе ключей Always Encrypted с помощью SQL Server Management Studio](configure-always-encrypted-keys-using-ssms.md).
 Пошаговое руководство, где используется среда SSMS и ключи постоянного шифрования сохраняются в хранилище сертификатов Windows, см. в статье [Постоянное шифрование: защита конфиденциальных данных в базе данных SQL с помощью шифрования базы данных и хранение ключей шифрования в хранилище сертификатов Windows](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/).
 
 
@@ -113,7 +105,7 @@ $cert = New-SelfSignedCertificate -Subject "AlwaysEncryptedCert" -CertStoreLocat
 
 Хранилище ключей Azure обеспечивает защиту криптографических ключей и удобно для хранения главных ключей столбцов для постоянного шифрования, особенно в том случае, если приложения размещены в Azure. Для создания ключа в [хранилище ключей Azure](https://azure.microsoft.com/documentation/articles/key-vault-get-started/)необходимы [подписка Azure](https://azure.microsoft.com/free/) и хранилище ключей Azure.
 
-#### <a name="using-powershell"></a>Использование PowerShell
+### <a name="using-powershell"></a>Использование PowerShell
 
 В примере ниже показано создание хранилища ключей Azure и ключа и последующее предоставление разрешений нужному пользователю.
 
@@ -132,8 +124,9 @@ Set-AzKeyVaultAccessPolicy -VaultName $akvName -ResourceGroupName $resourceGroup
 $akvKey = Add-AzureKeyVaultKey -VaultName $akvName -Name $akvKeyName -Destination HSM
 ```
 
-#### <a name="sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS)
+### <a name="using-sql-server-management-studio-ssms"></a>Использование среды SQL Server Management Studio (SSMS)
 
+Дополнительные сведения о создании главного ключа столбца в Azure Key Vault с помощью среды SSMS см. в разделе [Подготовка ключей Always Encrypted с помощью SQL Server Management Studio](configure-always-encrypted-keys-using-ssms.md).
 Пошаговое руководство, где используется среда SSMS и ключи постоянного шифрования сохраняются в хранилище ключей Azure, см. в статье [Постоянное шифрование: защита конфиденциальных данных в базе данных SQL с помощью шифрования данных и хранение ключей шифрования в хранилище ключей Azure](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted-azure-key-vault).
 
 ### <a name="making-azure-key-vault-keys-available-to-applications-and-users"></a>Предоставление приложениям и пользователям доступа к ключам в хранилище ключей Azure
@@ -144,7 +137,7 @@ $akvKey = Add-AzureKeyVaultKey -VaultName $akvName -Name $akvKeyName -Destinatio
 
 #### <a name="using-powershell"></a>Использование PowerShell
 
-Чтобы предоставить пользователям и приложениям доступ к фактическим ключам в Azure Key Vault, необходимо задать политику доступа к хранилищу ([Set-AzKeyVaultAccessPolicy](https://docs.microsoft.com/powershell/module/az.keyvault/set-azkeyvaultaccesspolicy)).
+Чтобы предоставить пользователям и приложениям доступ к фактическим ключам в Azure Key Vault, необходимо задать политику доступа к хранилищу ([Set-AzKeyVaultAccessPolicy](https://docs.microsoft.com/powershell/module/az.keyvault/set-azkeyvaultaccesspolicy)):
 
 ```
 $vaultName = "<vault name>"
@@ -195,8 +188,7 @@ $cngKey = [System.Security.Cryptography.CngKey]::Create($cngAlgorithm, $cngKeyNa
 
 #### <a name="using-sql-server-management-studio"></a>Использование среды SQL Server Management Studio
 
-См. раздел [Provisioning Column Master using SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt757096.aspx#Anchor_2)(Подготовка главных ключей столбцов с помощью среды SQL Server Management Studio (SSMS)).
-
+См. раздел [Подготовка к работе ключей Always Encrypted с помощью SQL Server Management Studio](configure-always-encrypted-keys-using-ssms.md).
 
 ### <a name="making-cng-keys-available-to-applications-and-users"></a>Предоставление приложениям и пользователям доступа к ключам CNG
 
@@ -206,7 +198,10 @@ $cngKey = [System.Security.Cryptography.CngKey]::Create($cngAlgorithm, $cngKeyNa
 
 Главный ключ столбца для постоянного шифрования может храниться в хранилище ключей, реализующем API криптографии (CAPI). Как правило, такое хранилище представляет собой аппаратный модуль безопасности (HSM) — физическое устройство, которое защищает цифровые ключи и управляет ими, а также обеспечивает обработку шифрования. Аппаратные модули безопасности традиционно имеют вид подключаемой платы или внешнего устройства, напрямую подключаемого к компьютеру (локальный HSM) или сетевому серверу.
 
-Чтобы модуль HSM был доступен для приложений на данном компьютере, на компьютере должен быть установлен и настроен поставщик служб шифрования (CSP), реализующий CAPI. Клиентский драйвер с постоянным шифрованием (поставщик хранилища главных ключей столбцов в драйвере) использует CSP для шифрования и расшифровки ключей шифрования столбцов, защищенных главным ключом столбца, который хранится в хранилище ключей. Примечание. CAPI — это устаревший API, который не рекомендуется использовать. Если для вашего модуля HSM доступен поставщик KSP, следует использовать именно его, а не CSP или CAPI.
+Чтобы модуль HSM был доступен для приложений на данном компьютере, на компьютере должен быть установлен и настроен поставщик служб шифрования (CSP), реализующий CAPI. Клиентский драйвер с постоянным шифрованием (поставщик хранилища главных ключей столбцов в драйвере) использует CSP для шифрования и расшифровки ключей шифрования столбцов, защищенных главным ключом столбца, который хранится в хранилище ключей. 
+
+> [!NOTE]
+> CAPI — это устаревший API, который не рекомендуется использовать. Если для вашего модуля HSM доступен поставщик KSP, следует использовать именно его, а не CSP или CAPI.
 
 CSP должен поддерживать алгоритм RSA, используемый с постоянным шифрованием.
 
@@ -220,25 +215,15 @@ CSP должен поддерживать алгоритм RSA, использу
 Обратитесь к документации по имеющемуся аппаратному модулю безопасности.
 
 #### <a name="using-sql-server-management-studio-ssms"></a>Использование среды SQL Server Management Studio (SSMS)
-См. подраздел "Provisioning Column Master Keys" (Подготовка главных ключей столбцов) раздела "Configuring Always Encrypted using SQL Server Management Studio" (Настройка постоянного шифрования с помощью среды SQL Server Management Studio).
+См. раздел [Подготовка к работе ключей Always Encrypted с помощью SQL Server Management Studio](configure-always-encrypted-keys-using-ssms.md).
 
- 
 ### <a name="making-cng-keys-available-to-applications-and-users"></a>Предоставление приложениям и пользователям доступа к ключам CNG
 Сведения о настройке CSP на компьютере и предоставлении приложениям и пользователям доступа к HSM см. в документации по HSM и CSP.
  
- 
 ## <a name="next-steps"></a>Next Steps  
+- [Подготовка к работе ключей Always Encrypted с помощью SQL Server Management Studio](configure-always-encrypted-keys-using-ssms.md)
+- [Подготовка ключей Always Encrypted с помощью PowerShell](configure-always-encrypted-keys-using-powershell.md)
   
-- [Настройка ключей постоянного шифрования с помощью PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell.md)
-- [Смена ключей постоянного шифрования с помощью PowerShell](../../../relational-databases/security/encryption/rotate-always-encrypted-keys-using-powershell.md)
-- [Настройка функции Always Encrypted с помощью SQL Server Management Studio](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md)
-
-  
-## <a name="additional-resources"></a>Дополнительные ресурсы  
-
-- [Overview of Key Management for Always Encrypted](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)
-- [Always Encrypted (ядро СУБД)](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
-- [Develop Applications using Always Encrypted with the .NET Framework Data Provider for SQL Server (Разработка приложений с помощью постоянного шифрования и поставщика данных .NET Framework для SQL Server)](../../../relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider.md)
-- [Блог о постоянном шифровании](https://blogs.msdn.microsoft.com/sqlsecurity/tag/always-encrypted/)
-    
-
+## <a name="see-also"></a>См. также: 
+- [Постоянное шифрование](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+- [Общие сведения об управлении ключами для Always Encrypted](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)  

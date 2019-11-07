@@ -3,17 +3,17 @@ title: Восстановление базы данных SQL Server в Docker
 description: В этом руководстве описано, как восстановить резервную копию базы данных SQL Server в новом контейнере Docker на базе Linux.
 author: VanMSFT
 ms.author: vanto
-ms.date: 10/02/2017
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: 0a91e3fd121cf5e49aca3bbe079d41416aca805a
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 28c2bbd60b5a1565e2920968e40bb1dc4e75db22
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68476212"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73531204"
 ---
 # <a name="restore-a-sql-server-database-in-a-linux-docker-container"></a>Восстановление базы данных SQL Server в контейнере Docker на базе Linux
 
@@ -28,7 +28,7 @@ ms.locfileid: "68476212"
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-В этом руководстве показано, как переместить файл резервной копии SQL Server в образ контейнера Linux предварительной версии SQL Server 2019, запущенный в Docker, и восстановить его.
+В этом руководстве показано, как переместить файл резервной копии SQL Server в образ контейнера Linux SQL Server 2019, запущенный в Docker, и восстановить его.
 
 ::: moniker-end
 
@@ -112,14 +112,14 @@ ms.locfileid: "68476212"
 
 1. Откройте терминал bash в Linux или Mac либо сеанс PowerShell с повышенными привилегиями в Windows.
 
-1. Извлеките образ контейнера предварительной версии SQL Server 2019 на базе Linux из Docker Hub.
+1. Извлеките образ контейнера Linux с SQL Server 2019 из центра Docker.
 
    ```bash
-   sudo docker pull mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
+   sudo docker pull mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
    ```
 
    ```PowerShell
-   docker pull mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
+   docker pull mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
    ```
 
    > [!TIP]
@@ -131,17 +131,17 @@ ms.locfileid: "68476212"
    sudo docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' \
       --name 'sql1' -p 1401:1433 \
       -v sql1data:/var/opt/mssql \
-      -d mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
+      -d mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
    ```
 
    ```PowerShell
    docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" `
       --name "sql1" -p 1401:1433 `
       -v sql1data:/var/opt/mssql `
-      -d mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
+      -d mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
    ```
 
-   Эта команда создает контейнер предварительной версии SQL Server 2019 с выпуском Developer (по умолчанию). Порт SQL Server **1433** доступен на узле как порт **1401**. Необязательный параметр `-v sql1data:/var/opt/mssql` создает контейнер томов данных с именем **sql1ddata**. Он используется для сохранения данных, созданных SQL Server.
+   Эта команда создает контейнер SQL Server 2019 с выпуском Developer (по умолчанию). Порт SQL Server **1433** доступен на узле как порт **1401**. Необязательный параметр `-v sql1data:/var/opt/mssql` создает контейнер томов данных с именем **sql1ddata**. Он используется для сохранения данных, созданных SQL Server.
 
 1. Для просмотра ваших контейнеров Docker используйте команду `docker ps`.
 
@@ -492,13 +492,13 @@ docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd `
     ```bash
     sudo docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' \
        --name 'sql2' -e 'MSSQL_PID=Developer' -p 1401:1433 \
-       -v sql1data:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
+       -v sql1data:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
     ```
 
     ```PowerShell
     docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" `
        --name "sql2" -e "MSSQL_PID=Developer" -p 1401:1433 `
-       -v sql1data:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
+       -v sql1data:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
     ```
 
 1. Теперь база данных Wide World Importers находится в новом контейнере. Выполните запрос, чтобы проверить внесенное ранее изменение.
@@ -520,7 +520,7 @@ docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd `
 
 ::: moniker-end
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 <!--SQL Server 2017 on Linux -->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
@@ -531,7 +531,7 @@ docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd `
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-В этом руководстве вы узнали, как создать резервную копию базы данных в Windows и переместить ее на сервер Linux под управлением предварительной версии SQL Server 2019. Вы ознакомились с выполнением следующих задач:
+В этом руководстве вы узнали, как создать резервную копию базы данных в Windows и переместить ее на сервер Linux под управлением SQL Server 2019. Вы ознакомились с выполнением следующих задач:
 
 ::: moniker-end
 

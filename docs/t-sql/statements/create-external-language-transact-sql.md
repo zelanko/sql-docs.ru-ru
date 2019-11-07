@@ -1,7 +1,7 @@
 ---
 title: CREATE EXTERNAL LANGUAGE (Transact-SQL) — SQL Server | Документация Майкрософт
 ms.custom: ''
-ms.date: 08/08/2019
+ms.date: 11/04/2019
 ms.prod: sql
 ms.reviewer: dphansen
 ms.technology: language-extensions
@@ -9,13 +9,13 @@ ms.topic: language-reference
 author: nelgson
 ms.author: negust
 manager: cgronlun
-monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f0a371e328a585e8a559e3c23c28be135f16c208
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 3f2911406b902ea4d4e7840676dcf08b0318664d
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893414"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73536242"
 ---
 # <a name="create-external-language-transact-sql"></a>CREATE EXTERNAL LANGUAGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -110,7 +110,7 @@ WITH (<option_spec>)
 
 ## <a name="remarks"></a>Remarks
 
-В CTP 3.0 **PARAMETERS** и **ENVIRONMENT_VARIABLES** не поддерживаются.
+В настоящее время **PARAMETERS** и **ENVIRONMENT_VARIABLES** не поддерживаются.
 
 ## <a name="permissions"></a>Разрешения
 
@@ -120,7 +120,7 @@ WITH (<option_spec>)
 
 ### <a name="execute-external-script-permission"></a>Разрешение EXECUTE EXTERNAL SCRIPT
 
-В SQL Server 2019 мы представляем разрешения EXECUTE EXTERNAL SCRIPT, чтобы разрешить предоставление разрешений на выполнение внешних скриптов для определенных языков. Ранее было доступно только разрешение базы данных EXECUTE ANY EXTERNAL SCRIPT, которое не позволяло предоставлять разрешение на выполнение для определенного языка.
+Вы можете использовать разрешения EXECUTE EXTERNAL SCRIPT, чтобы можно было предоставлять разрешения на выполнение внешних скриптов для определенных языков. Это отличается от разрешения EXECUTE ANY EXTERNAL SCRIPT, которое не позволяло предоставлять разрешение на выполнение для определенного языка.
 
 Это означает, что пользователям без учетной записи **dbo** нужно предоставить разрешения на выполнение конкретного языка:
 

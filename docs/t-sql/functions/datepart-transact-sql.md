@@ -27,12 +27,12 @@ ms.assetid: 15f1a5bc-4c0c-4c48-848d-8ec03473e6c1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cfb568170a549fe7c952807e7aa7dda6b7fca854
-ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
+ms.openlocfilehash: 7d3eda2a9f3f3756fd2fdc0095b999dcde189d83
+ms.sourcegitcommit: d65cef35cdf992297496095d3ad76e3c18c9794a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72278191"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72988431"
 ---
 # <a name="datepart-transact-sql"></a>DATEPART (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -119,19 +119,15 @@ DATEPART ( datepart , date )
 ## <a name="week-and-weekday-datepart-arguments"></a>Аргументы функции datepart, содержащие информацию о номере недели и дня
 Для **week** (**wk**, **ww**) или **weekday** (**dw**) *datepart* возвращаемое значение `DATEPART` зависит от значения, заданного функцией [SET DATEFIRST](../../t-sql/statements/set-datefirst-transact-sql.md).
   
-1 января любого года определяет начальное число для раздела даты **week**_datepart_. Пример:
+1 января любого года определяет начальное число для значения **week** _datepart_. Пример:
 
 DATEPART (**wk**, 'Jan 1, *xxx*x') = 1,
 
 где *xxxx* — любой год.
   
-Ниже представлена таблица возвращаемых значений параметров **week** и **weekday** *datepart* для даты
+В этой таблице представлены возвращаемые значения параметров **week** и **weekday** *datepart* даты 21.04.2007 с каждым аргументом функции SET DATEFIRST. 1 января 2007 г. приходится на понедельник. 21 апреля 2007 г. приходится на субботу. Для региональных настроек "Английский (США)"
 
-21.04.2007
-
-с каждым аргументом функции SET DATEFIRST. 1 января 2007 г. приходится на понедельник. 21 апреля 2007 г. приходится на субботу. Для региональных настроек "Английский (США)"
-
-по умолчанию используется значение
+`SET DATEFIRST 7 -- ( Sunday )`
 
 SET DATEFIRST 7 (воскресенье). После задания DATEFIRST используйте предлагаемую инструкцию SQL для табличных значений datepart:
 

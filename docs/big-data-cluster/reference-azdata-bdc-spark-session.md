@@ -5,22 +5,22 @@ description: Справочная статья по командам azdata bdc 
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/28/2019
+ms.date: 11/04/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 9e8f4103511085bd834d9970e399604c7082ec0b
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
-ms.translationtype: MT
+ms.openlocfilehash: f1da72349e7594d267ae0d965ddad03cee93017b
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71708590"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73531744"
 ---
 # <a name="azdata-bdc-spark-session"></a>azdata bdc spark session
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
 
-Эта статья содержит справочную статью по **аздата**. 
+В следующей статье приводятся справочные сведения по командам `sql` в средстве `azdata`. Дополнительные сведения о других командах `azdata` см. в [справочнике по azdata](reference-azdata.md)
 
 ## <a name="commands"></a>Команды
 |     |     |
@@ -52,7 +52,7 @@ azdata bdc spark session create [--session-kind -k]
 ### <a name="examples"></a>Примеры
 Создание сеанса.
 ```bash
-azdata bdc spark session create --session-kind pyspark
+azdata spark session create --session-kind pyspark
 ```
 ### <a name="optional-parameters"></a>Необязательные параметры
 #### `--session-kind -k`
@@ -91,7 +91,7 @@ azdata bdc spark session create --session-kind pyspark
 #### `--output -o`
 Формат вывода.  Допустимые значения: json, jsonc, table, tsv.  Значение по умолчанию: json.
 #### `--query -q`
-Строка запроса JMESPath. Дополнительные сведения и примеры см. в разделе [http://jmespath.org/](http://jmespath.org/]).
+Строка запроса JMESPath. Дополнительные сведения и примеры см. в разделе [http://jmespath.org/](http://jmespath.org/).
 #### `--verbose`
 Повышение уровня детализации журнала. Чтобы включить полные журналы отладки, используйте параметр --debug.
 ## <a name="azdata-bdc-spark-session-list"></a>azdata bdc spark session list
@@ -102,7 +102,7 @@ azdata bdc spark session list
 ### <a name="examples"></a>Примеры
 Вывод списка всех активных сеансов.
 ```bash
-azdata bdc spark session list
+azdata spark session list
 ```
 ### <a name="global-arguments"></a>Глобальные аргументы
 #### `--debug`
@@ -112,19 +112,18 @@ azdata bdc spark session list
 #### `--output -o`
 Формат вывода.  Допустимые значения: json, jsonc, table, tsv.  Значение по умолчанию: json.
 #### `--query -q`
-Строка запроса JMESPath. Дополнительные сведения и примеры см. в разделе [http://jmespath.org/](http://jmespath.org/]).
+Строка запроса JMESPath. Дополнительные сведения и примеры см. в разделе [http://jmespath.org/](http://jmespath.org/).
 #### `--verbose`
 Повышение уровня детализации журнала. Чтобы включить полные журналы отладки, используйте параметр --debug.
 ## <a name="azdata-bdc-spark-session-info"></a>azdata bdc spark session info
 Возвращает сведения об активном сеансе Spark с указанным идентификатором.  Идентификатор сеанса возвращается командой spark session create.
 ```bash
 azdata bdc spark session info --session-id -i 
-                              
-```
-### <a name="examples"></a>Примеры
-Получение сведений о сеансе с идентификатором 0.
+            ```
+### Examples
+Get session info for session with ID of 0.
 ```bash
-azdata bdc spark session info --session-id 0
+azdata spark session info --session-id 0
 ```
 ### <a name="required-parameters"></a>Обязательные параметры
 #### `--session-id -i`
@@ -137,19 +136,18 @@ azdata bdc spark session info --session-id 0
 #### `--output -o`
 Формат вывода.  Допустимые значения: json, jsonc, table, tsv.  Значение по умолчанию: json.
 #### `--query -q`
-Строка запроса JMESPath. Дополнительные сведения и примеры см. в разделе [http://jmespath.org/](http://jmespath.org/]).
+Строка запроса JMESPath. Дополнительные сведения и примеры см. в разделе [http://jmespath.org/](http://jmespath.org/).
 #### `--verbose`
 Повышение уровня детализации журнала. Чтобы включить полные журналы отладки, используйте параметр --debug.
 ## <a name="azdata-bdc-spark-session-log"></a>azdata bdc spark session log
 Возвращает записи журнала для активного сеанса Spark с указанным идентификатором.  Идентификатор сеанса возвращается командой spark session create.
 ```bash
 azdata bdc spark session log --session-id -i 
-                             
-```
-### <a name="examples"></a>Примеры
-Получение журнала для сеанса с идентификатором 0.
+           ```
+### Examples
+Get session log for session with ID of 0.
 ```bash
-azdata bdc spark session log --session-id 0
+azdata spark session log --session-id 0
 ```
 ### <a name="required-parameters"></a>Обязательные параметры
 #### `--session-id -i`
@@ -162,19 +160,18 @@ azdata bdc spark session log --session-id 0
 #### `--output -o`
 Формат вывода.  Допустимые значения: json, jsonc, table, tsv.  Значение по умолчанию: json.
 #### `--query -q`
-Строка запроса JMESPath. Дополнительные сведения и примеры см. в разделе [http://jmespath.org/](http://jmespath.org/]).
+Строка запроса JMESPath. Дополнительные сведения и примеры см. в разделе [http://jmespath.org/](http://jmespath.org/).
 #### `--verbose`
 Повышение уровня детализации журнала. Чтобы включить полные журналы отладки, используйте параметр --debug.
 ## <a name="azdata-bdc-spark-session-state"></a>azdata bdc spark session state
 Возвращает состояние для активного сеанса Spark с указанным идентификатором.  Идентификатор сеанса возвращается командой spark session create.
 ```bash
 azdata bdc spark session state --session-id -i 
-                               
-```
-### <a name="examples"></a>Примеры
-Получение состояния сеанса с идентификатором 0.
+             ```
+### Examples
+Get session state for session with ID of 0.
 ```bash
-azdata bdc spark session state --session-id 0
+azdata spark session state --session-id 0
 ```
 ### <a name="required-parameters"></a>Обязательные параметры
 #### `--session-id -i`
@@ -187,19 +184,18 @@ azdata bdc spark session state --session-id 0
 #### `--output -o`
 Формат вывода.  Допустимые значения: json, jsonc, table, tsv.  Значение по умолчанию: json.
 #### `--query -q`
-Строка запроса JMESPath. Дополнительные сведения и примеры см. в разделе [http://jmespath.org/](http://jmespath.org/]).
+Строка запроса JMESPath. Дополнительные сведения и примеры см. в разделе [http://jmespath.org/](http://jmespath.org/).
 #### `--verbose`
 Повышение уровня детализации журнала. Чтобы включить полные журналы отладки, используйте параметр --debug.
 ## <a name="azdata-bdc-spark-session-delete"></a>azdata bdc spark session delete
 Удаляет интерактивный сеанс Spark. Идентификатор сеанса возвращается командой spark session create.
 ```bash
 azdata bdc spark session delete --session-id -i 
-                                
-```
-### <a name="examples"></a>Примеры
-Удаление сеанса.
+              ```
+### Examples
+Delete a session.
 ```bash
-azdata bdc spark session delete --session-id 0
+azdata spark session delete --session-id 0
 ```
 ### <a name="required-parameters"></a>Обязательные параметры
 #### `--session-id -i`
@@ -216,8 +212,6 @@ azdata bdc spark session delete --session-id 0
 #### `--verbose`
 Повышение уровня детализации журнала. Чтобы включить полные журналы отладки, используйте параметр --debug.
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
-- Дополнительные сведения о других командах **azdata** см. в [справочнике по azdata](reference-azdata.md). 
-
-- Дополнительные сведения об установке средства **azdata** см. в статье [Установка azdata для управления кластерами больших данных SQL Server 2019](deploy-install-azdata.md).
+Дополнительные сведения о других командах `azdata` см. в [справочнике по azdata](reference-azdata.md). Дополнительные сведения об установке средства `azdata` см. в статье [Установка azdata для управления кластерами больших данных SQL Server 2019](deploy-install-azdata.md).

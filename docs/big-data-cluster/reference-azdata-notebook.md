@@ -5,22 +5,22 @@ description: Справочная статья по командам azdata note
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/28/2019
+ms.date: 11/04/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 97b8cbae68e16dbdde6e9662b18e37f222a1af80
-ms.sourcegitcommit: b016c01c47bc08351d093a59448d895cc170f8c3
-ms.translationtype: MT
+ms.openlocfilehash: 3d9b5538170e57b09a1cf8bc4360a68187595ac2
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71118159"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73531671"
 ---
 # <a name="azdata-notebook"></a>azdata notebook
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
 
-Эта статья содержит справочную статью по **аздата**. 
+В следующей статье приводятся справочные сведения по командам `sql` в средстве `azdata`. Дополнительные сведения о других командах `azdata` см. в [справочнике по azdata](reference-azdata.md)
 
 ## <a name="commands"></a>Команды
 |     |     |
@@ -56,22 +56,19 @@ azdata notebook view --path '/home/me/notebooks/demo_notebook.ipynb' --stop-on-e
 #### `--output -o`
 Формат вывода.  Допустимые значения: json, jsonc, table, tsv.  Значение по умолчанию: json.
 #### `--query -q`
-Строка запроса JMESPath. Дополнительные сведения и примеры см. в разделе [http://jmespath.org/](http://jmespath.org/]).
+Строка запроса JMESPath. Дополнительные сведения и примеры см. в разделе [http://jmespath.org/](http://jmespath.org/).
 #### `--verbose`
 Повышение уровня детализации журнала. Чтобы включить полные журналы отладки, используйте параметр --debug.
 ## <a name="azdata-notebook-run"></a>azdata notebook run
 Эта команда создает временный каталог и выполняет заданную записную книжку в нем как в рабочем каталоге.
-
->[!NOTE]
->Проверено на соответствие аздата v 15.0.1900: команда Run, поддерживаемая только для записных книжек Python 3.
-
 ```bash
 azdata notebook run --path -p 
                     [--output-path]  
                     [--output-html]  
                     [--arguments -a]  
                     [--interactive -i]  
-                    [--clear -c]
+                    [--clear -c]  
+                    [--timeout -t]
 ```
 ### <a name="examples"></a>Примеры
 Запуск записной книжки.
@@ -85,13 +82,16 @@ azdata notebook run --path '/home/me/notebooks/demo_notebook.ipynb'
 #### `--output-path`
 Путь к каталогу, используемый для выходных данных записной книжки.  Записная книжка с выходными данными и любые выводимые ею файлы создаются относительно этого каталога.
 #### `--output-html`
-Необязательный флаг, указывающий, следует ли дополнительно преобразовать выходную записную книжку в формат HTML.  Создает второй выходной файл.
+Необязательный флаг, показывающий, следует ли дополнительно преобразовать выходную записную книжку в формат HTML.  Создает второй выходной файл.
 #### `--arguments -a`
-Необязательный список аргументов записной книжки, которые необходимо ввести в выполнение записной книжки.  Кодируется как словарь JSON.  Пример: "{" Name ":" value "," имя2 ":" value2 "}"
+Необязательный список аргументов записной книжки для внедрения в выполнение записной книжки.  Кодируется как словарь JSON.  Пример: '{"имя":"значение", "имя2":"значение2"}'
 #### `--interactive -i`
-Запуск записной книжки в интерактивном режиме.
+Запустите записную книжку в интерактивном режиме.
 #### `--clear -c`
-В интерактивном режиме очистите консоль перед отрисовкой ячейки.
+В интерактивном режиме очистите консоль перед отображением ячейки.
+#### `--timeout -t`
+Подождите несколько секунд, пока завершится выполнение. Значение -1 означает бесконечное ожидание.
+`600`
 ### <a name="global-arguments"></a>Глобальные аргументы
 #### `--debug`
 Повышение уровня детализации журнала для включения всех журналов отладки.
@@ -104,8 +104,6 @@ azdata notebook run --path '/home/me/notebooks/demo_notebook.ipynb'
 #### `--verbose`
 Повышение уровня детализации журнала. Чтобы включить полные журналы отладки, используйте параметр --debug.
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
-- Дополнительные сведения о других командах **azdata** см. в [справочнике по azdata](reference-azdata.md). 
-
-- Дополнительные сведения об установке средства **azdata** см. в статье [Установка azdata для управления кластерами больших данных SQL Server 2019](deploy-install-azdata.md).
+Дополнительные сведения о других командах `azdata` см. в [справочнике по azdata](reference-azdata.md). Дополнительные сведения об установке средства `azdata` см. в статье [Установка azdata для управления кластерами больших данных SQL Server 2019](deploy-install-azdata.md).

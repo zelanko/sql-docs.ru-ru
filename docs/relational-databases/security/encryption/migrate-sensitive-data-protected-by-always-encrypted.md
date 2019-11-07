@@ -1,5 +1,5 @@
 ---
-title: Перенос конфиденциальных данных с помощью функции постоянного шифрования | Документация Майкрософт
+title: Массовая загрузка зашифрованных данных в столбцы с помощью Always Encrypted | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2015
 ms.prod: sql
@@ -10,28 +10,28 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Always Encrypted, bulk import
 ms.assetid: b2ca08ed-a927-40fb-9059-09496752595e
-author: aliceku
-ms.author: aliceku
+author: jaszymas
+ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ff72a94df79c6f8fe7b8bb37caeb57587e44b034
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9faa58382c1916d6691c790e955e1dbc409bb119
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68111676"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73594164"
 ---
-# <a name="migrate-sensitive-data-protected-by-always-encrypted"></a>Перенос конфиденциальных данных с помощью функции постоянного шифрования
+# <a name="bulk-load-encrypted-data-to-columns-using-always-encrypted"></a>Массовая загрузка зашифрованных данных в столбцы с помощью Always Encrypted
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-Чтобы во время операций массового копирования загрузить зашифрованные данные, не проверяя метаданные на сервере, создайте пользователя с параметром **ALLOW_ENCRYPTED_VALUE_MODIFICATIONS** . Этот параметр предназначен для средств устаревших версий сервера [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], выпущенных до выпуска [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] (например, bcp.exe), или для сторонних рабочих процессов извлечения, преобразования и загрузки (ETL), которые не могут использовать функцию Always Encrypted. Таким образом пользователи могут безопасно перемещать зашифрованные данные из одного набора таблиц, содержащего зашифрованные столбцы, в другой набор таблиц с зашифрованными столбцами (в той же или другой базе данных).  
+Чтобы во время операций массового копирования загрузить зашифрованные данные, не проверяя метаданные на сервере, создайте пользователя с параметром **ALLOW_ENCRYPTED_VALUE_MODIFICATIONS** . Этот параметр предназначен для устаревших средств или сторонних рабочих процессов извлечения, преобразования и загрузки (ETL), которые не могут использовать функцию Always Encrypted. Таким образом пользователи могут безопасно перемещать зашифрованные данные из одного набора таблиц, содержащего зашифрованные столбцы, в другой набор таблиц с зашифрованными столбцами (в той же или другой базе данных).  
 
- ## <a name="the-allowencryptedvaluemodifications-option"></a>Параметр ALLOW_ENCRYPTED_VALUE_MODIFICATIONS  
+ ## <a name="the-allow_encrypted_value_modifications-option"></a>Параметр ALLOW_ENCRYPTED_VALUE_MODIFICATIONS  
  Команды [CREATE USER](../../../t-sql/statements/create-user-transact-sql.md) и [ALTER USER](../../../t-sql/statements/alter-user-transact-sql.md) имеют параметр ALLOW_ENCRYPTED_VALUE_MODIFICATIONS. Если задано значение ON (значение по умолчанию — OFF), этот параметр отключает проверки шифрованных метаданных на сервере в операциях массового копирования, что позволяет пользователю массово копировать зашифрованные данные из одной таблицы или базы данных в другую и при этом не расшифровывать данные.  
   
 ## <a name="data-migration-scenarios"></a>Сценарии переноса данных  
 В таблице ниже показаны рекомендуемые параметры, подходящие для нескольких сценариев переноса.  
  
-![Миграция постоянного шифрования](../../../relational-databases/security/encryption/media/always-encrypted-migration.PNG "Миграция постоянного шифрования")  
+![always-encrypted-migration](../../../relational-databases/security/encryption/media/always-encrypted-migration.PNG "always-encrypted-migration")  
 
 ## <a name="bulk-loading-of-encrypted-data"></a>Массовая загрузка зашифрованных данных  
 Загружайте зашифрованные данные с помощью такого процесса:  
@@ -42,7 +42,7 @@ ms.locfileid: "68111676"
     ALTER USER Bob WITH ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = ON;  
    ```  
 
-2.  Подключившись, как этот пользователь, запустите приложение или средство массового копирования. (Если приложение использует драйвер клиента с включенным постоянным шифрованием, убедитесь, что строка подключения для источника данных не содержит параметр **column encryption setting=enabled** , который оставляет зашифрованными данные, извлеченные из зашифрованных столбцов. Дополнительные сведения см. в разделе [Постоянное шифрование (разработка клиентских приложений)](../../../relational-databases/security/encryption/always-encrypted-client-development.md)(Постоянное шифрование (разработка клиентских приложений)).  
+2.  Подключившись, как этот пользователь, запустите приложение или средство массового копирования. (Если приложение использует драйвер клиента с включенным постоянным шифрованием, убедитесь, что строка подключения для источника данных не содержит параметр **column encryption setting=enabled** , который оставляет зашифрованными данные, извлеченные из зашифрованных столбцов. Дополнительные сведения см. в разделе [Разработка приложений с помощью Always Encrypted](always-encrypted-client-development.md).)  
   
 3.  Снова задайте для параметра ALLOW_ENCRYPTED_VALUE_MODIFICATIONS значение OFF. Пример:  
 
@@ -69,11 +69,15 @@ ms.locfileid: "68111676"
  
 Работая с кратковременно работающими приложениями или средствами массового копирования, которым нужно переместить зашифрованные данные, но не нужно их расшифровывать, задавайте для параметра значение ON непосредственно перед запуском приложения, возвращая значение OFF сразу после запуска операции.  
  
-Не разрабатывайте новые приложения с помощью этого параметра. Лучше используйте драйвер клиента (например, ADO 4.6.1), в котором есть API, отключающий проверки зашифрованных метаданных на время одного сеанса.  
+Не разрабатывайте новые приложения с помощью этого параметра. Вместо этого используйте драйвер клиента, который предоставляет API для подавления проверок криптографических метаданных для одного сеанса, например параметр AllowEncryptedValueModifications в поставщике данных .NET Framework для SQL Server — см. [Копирование зашифрованных данных с помощью SqlBulkCopy](develop-using-always-encrypted-with-net-framework-data-provider.md#copying-encrypted-data-using-sqlbulkcopy). 
+
+## <a name="next-steps"></a>Next Steps
+- [Выполнение запросов к столбцам с помощью Always Encrypted с использованием SQL Server Management Studio](always-encrypted-query-columns-ssms.md)
+- [Разработка приложений с помощью Always Encrypted](always-encrypted-client-development.md)
 
 ## <a name="see-also"></a>См. также:  
-[CREATE USER (Transact-SQL)](../../../t-sql/statements/create-user-transact-sql.md)   
-[ALTER USER (Transact-SQL)](../../../t-sql/statements/alter-user-transact-sql.md)   
-[Постоянное шифрование (компонент Database Engine)](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
-[Мастер постоянного шифрования](../../../relational-databases/security/encryption/always-encrypted-wizard.md)   
-[Постоянное шифрование (разработка клиентских приложений)](../../../relational-databases/security/encryption/always-encrypted-client-development.md)  
+- [Постоянное шифрование](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+- [Перенос данных в столбцы или из них с помощью Always Encrypted с использованием мастера импорта и экспорта SQL Server](always-encrypted-migrate-using-import-export-wizard.md)
+- [CREATE USER (Transact-SQL)](../../../t-sql/statements/create-user-transact-sql.md)   
+- [ALTER USER (Transact-SQL)](../../../t-sql/statements/alter-user-transact-sql.md)   
+

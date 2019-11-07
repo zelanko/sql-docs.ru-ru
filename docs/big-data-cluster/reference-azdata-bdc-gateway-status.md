@@ -1,32 +1,32 @@
 ---
-title: Справочник по состоянию шлюза BDC аздата
+title: Справочник по состояниям шлюза bdc azdata
 titleSuffix: SQL Server big data clusters
-description: Справочная статья по командам состояния шлюза BDC аздата.
+description: Справочная статья по командам состояния шлюза bdc azdata.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/28/2019
+ms.date: 11/04/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: f627eeedb6877b446deee0a2fc6800269b94b94f
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
-ms.translationtype: MT
+ms.openlocfilehash: 15e285a2802e223d144a7ec24882311e90b4d83c
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70158309"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73531802"
 ---
-# <a name="azdata-bdc-gateway-status"></a>состояние шлюза BDC аздата
+# <a name="azdata-bdc-gateway-status"></a>Состояние шлюза bdc azdata
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
 
-Эта статья содержит справочную статью по **аздата**. 
+В следующей статье приводятся справочные сведения по командам `sql` в средстве `azdata`. Дополнительные сведения о других командах `azdata` см. в [справочнике по azdata](reference-azdata.md)
 
 ## <a name="commands"></a>Команды
 |     |     |
 | --- | --- |
-[Отображение состояния шлюза BDC аздата](#azdata-bdc-gateway-status-show) | Состояние службы шлюза.
-## <a name="azdata-bdc-gateway-status-show"></a>Отображение состояния шлюза BDC аздата
+[Показать состояние шлюза bdc azdata](#azdata-bdc-gateway-status-show) | Состояние службы шлюза.
+## <a name="azdata-bdc-gateway-status-show"></a>Показать состояние шлюза bdc azdata
 Состояние службы шлюза.
 ```bash
 azdata bdc gateway status show [--resource -r] 
@@ -47,7 +47,7 @@ azdata bdc gateway status show --resource gateway
 ```
 ### <a name="optional-parameters"></a>Необязательные параметры
 #### `--resource -r`
-Получить этот ресурс в этой службе.
+Получение ресурса в этой службе.
 #### `--all -a`
 Отображение всех экземпляров каждого ресурса в службе.
 ### <a name="global-arguments"></a>Глобальные аргументы
@@ -58,12 +58,10 @@ azdata bdc gateway status show --resource gateway
 #### `--output -o`
 Формат вывода.  Допустимые значения: json, jsonc, table, tsv.  Значение по умолчанию: json.
 #### `--query -q`
-Строка запроса JMESPath. Дополнительные сведения и примеры см. в разделе [http://jmespath.org/](http://jmespath.org/]).
+Строка запроса JMESPath. Дополнительные сведения и примеры см. в разделе [http://jmespath.org/](http://jmespath.org/).
 #### `--verbose`
 Повышение уровня детализации журнала. Чтобы включить полные журналы отладки, используйте параметр --debug.
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
-- Дополнительные сведения о других командах **azdata** см. в [справочнике по azdata](reference-azdata.md). 
-
-- Дополнительные сведения об установке средства **azdata** см. в статье [Установка azdata для управления кластерами больших данных SQL Server 2019](deploy-install-azdata.md).
+Дополнительные сведения о других командах `azdata` см. в [справочнике по azdata](reference-azdata.md). Дополнительные сведения об установке средства `azdata` см. в статье [Установка azdata для управления кластерами больших данных SQL Server 2019](deploy-install-azdata.md).

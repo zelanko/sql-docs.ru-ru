@@ -19,12 +19,12 @@ helpviewer_keywords:
 - solutions [SQL Server Management Studio], tutorials
 - SQL Server Management Studio [SQL Server], tutorials
 - scripts [SQL Server], SQL Server Management Studio
-ms.openlocfilehash: d4bf028163905763ae87f04e03c0a95ddf4abcaf
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 36d3b90a9ac1e49af564323c86421216216522a9
+ms.sourcegitcommit: d65cef35cdf992297496095d3ad76e3c18c9794a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263364"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72988419"
 ---
 # <a name="script-objects-in-sql-server-management-studio"></a>Создание скриптов для объектов в среде SQL Server Management Studio
 
@@ -209,7 +209,7 @@ ms.locfileid: "68263364"
 
 4. Разверните узел **Сеансы**.
 
-5. Щелкните правой кнопкой мыши нужный расширенный сеанс и выберите пункты **Создать скрипт для сеанса** > **Новое окно редактора запросов**:
+5. Щелкните правой кнопкой мыши нужный расширенный сеанс и выберите пункты **Создать скрипт для сеанса** > **СОЗДАТЬ в** > **Новое окно редактора запросов**:
 
     ![Расширенный сеанс нового окна редактора запросов](media/scripting-ssms/scriptxevents.png)
 
@@ -222,7 +222,7 @@ ms.locfileid: "68263364"
     >[!NOTE]
     > Вы можете запустить сеанс, щелкнув его правой кнопкой мыши и выбрав команду **Запустить**. Так как это копия уже запущенного сеанса **system_health**, этот шаг можно пропустить. Вы можете удалить копию расширенного сеанса события, щелкнув его правой кнопкой мыши и выбрав команду **Удалить**.
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 Лучший способ познакомиться с SSMS — это поработать в среде самостоятельно. Эти *руководства* и *статьи* помогут вам ознакомиться с различными функциями SSMS. С их помощью вы научитесь работать с компонентами SSMS и легко находить регулярно используемые функции.
 

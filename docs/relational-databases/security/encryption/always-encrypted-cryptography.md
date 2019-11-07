@@ -1,7 +1,7 @@
 ---
-title: Системы шифрования c технологиями постоянного шифрования | Документация Майкрософт
+title: Шифрование Always Encrypted | Документация Майкрософт
 ms.custom: ''
-ms.date: 06/26/2019
+ms.date: 10/30/2019
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -9,17 +9,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Always Encrypted, cryptography system
 ms.assetid: ae8226ff-0853-4716-be7b-673ce77dd370
-author: aliceku
-ms.author: aliceku
+author: jaszymas
+ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 70a18e569b43066bd64fe56593c47980a6894b09
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b0fe0e861e8139416250ffc2677230dbc2aeab6d
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68043288"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73594406"
 ---
-# <a name="always-encrypted-cryptography"></a>Системы шифрования c технологиями постоянного шифрования
+# <a name="always-encrypted-cryptography"></a>Шифрование Always Encrypted
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   В этой статье описаны алгоритмы шифрования и механизмы извлечения шифровальных материалов, которые используются в функции [Постоянное шифрование](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) баз данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)].  
@@ -27,7 +27,7 @@ ms.locfileid: "68043288"
 ## <a name="keys-key-stores-and-key-encryption-algorithms"></a>Ключи, хранилища ключей и алгоритмы шифрования ключей
  Технологии постоянного шифрования используют два типа ключей: главные ключи столбцов и ключи шифрования столбцов.  
   
- Главный ключ столбца — это ключ, который используется для шифрования других ключей. Он находится под контролем клиента и хранится во внешнем хранилище ключей. Драйвер клиента с поддержкой постоянного шифрования взаимодействует с хранилищем ключей через поставщика хранилища главного столбца ключа, который может быть либо частью библиотеки драйверов (системный поставщик или поставщик [!INCLUDE[msCoName](../../../includes/msconame-md.md)]), либо частью клиентского приложения (пользовательский поставщик). На данный момент клиентские библиотеки драйверов включают поставщики хранилища ключей [!INCLUDE[msCoName](../../../includes/msconame-md.md)] для [хранилища сертификатов Windows](/windows/desktop/SecCrypto/using-certificate-stores) и аппаратные модули безопасности (HSM).  (Текущий список поставщиков см. в статье [CREATE COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/create-column-master-key-transact-sql.md).) Разработчик приложения может задать пользовательского поставщика для произвольного хранилища.  
+ Главный ключ столбца — это ключ, который используется для шифрования других ключей. Он находится под контролем клиента и хранится во внешнем хранилище ключей. Драйвер клиента с поддержкой постоянного шифрования взаимодействует с хранилищем ключей через поставщика хранилища главного столбца ключа, который может быть либо частью библиотеки драйверов (системный поставщик или поставщик [!INCLUDE[msCoName](../../../includes/msconame-md.md)]), либо частью клиентского приложения (пользовательский поставщик). На данный момент клиентские библиотеки драйверов включают поставщики хранилища ключей [!INCLUDE[msCoName](../../../includes/msconame-md.md)] для [хранилища сертификатов Windows](/windows/desktop/SecCrypto/using-certificate-stores) и аппаратные модули безопасности (HSM). Текущий список поставщиков см. в статье [CREATE COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/create-column-master-key-transact-sql.md). Разработчик приложения может задать пользовательского поставщика для произвольного хранилища.  
   
  Ключ шифрования столбца — это ключ шифрования содержимого (например, ключ, используемый для защиты данных). Он защищен главным ключом столбца.  
   
@@ -67,12 +67,12 @@ When using deterministic encryption: IV = HMAC-SHA-256( iv_key, cell_data ) trun
 iv_key = HMAC-SHA-256(CEK, "Microsoft SQL Server cell IV key" + algorithm + CEK_length)  
 ```  
   
- Чтобы привести блок данных в соответствие с требованиями вектора инициализации, значение HMAC сокращается.
+ Чтобы привести один блок данных в соответствие с требованиями вектора инициализации, значение HMAC сокращается.
 Как результат, при выполнении детерминированного шифрования всегда создается один зашифрованный текст для значений открытого текста. Это позволяет определить одинаковые значения открытого текста, сравнив соответствующие значения зашифрованного текста. Благодаря предотвращению раскрытия информации система базы данных поддерживает возможность сравнения значений зашифрованного столбца на равенство.  
   
  По сравнению с другими способами шифрования (например, использования предварительно определенного значения вектора инициализации), метод детерминированного шифрования более эффективно скрывает шаблоны.  
   
-### <a name="step-2-computing-aes256cbc-ciphertext"></a>Шаг 2. Вычисление зашифрованного текста AES_256_CBC  
+### <a name="step-2-computing-aes_256_cbc-ciphertext"></a>Шаг 2. Вычисление зашифрованного текста AES_256_CBC  
  После вычисления вектора инициализации создается зашифрованный текст **AES_256_CBC** :  
   
 ```  
@@ -175,10 +175,10 @@ aead_aes_256_cbc_hmac_sha_256 = versionbyte + MAC + IV + aes_256_cbc_ciphertext
 |**xml**|Не поддерживается.|  
   
 ## <a name="net-reference"></a>Справочник по .NET  
- Дополнительные сведения об алгоритмах, описанных в этой статье, см. в файлах **SqlAeadAes256CbcHmac256Algorithm.cs** и **SqlColumnEncryptionCertificateStoreProvider.cs** в [справочнике по .NET](https://referencesource.microsoft.com/).  
+ Дополнительные сведения об алгоритмах, описанных в этой статье, см. в файлах **SqlAeadAes256CbcHmac256Algorithm.cs**, **SqlColumnEncryptionCertificateStoreProvider.cs** и **SqlColumnEncryptionCertificateStoreProvider.cs** в [справочнике по .NET](https://referencesource.microsoft.com/).  
   
 ## <a name="see-also"></a>См. также:  
- [Постоянное шифрование (компонент Database Engine)](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
- [Постоянное шифрование (разработка клиентских приложений)](../../../relational-databases/security/encryption/always-encrypted-client-development.md)  
+ - [Постоянное шифрование](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
+ - [Разработка приложений с помощью Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-client-development.md)  
   
   

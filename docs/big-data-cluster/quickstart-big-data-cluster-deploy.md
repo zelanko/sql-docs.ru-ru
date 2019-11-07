@@ -1,35 +1,33 @@
 ---
 title: Развертывание с помощью скрипта Python
 titleSuffix: SQL Server big data clusters
-description: Узнайте, как использовать скрипт развертывания для развертывания [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (предварительной версии) в службе Azure Kubernetes (AKS).
+description: Узнайте, как развертывать [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (предварительная версия) в службе Azure Kubernetes (AKS) с помощью скрипта развертывания.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/21/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1bd3af32448bfce7dc584ac630d503e4cf63b286
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
-ms.translationtype: MT
+ms.openlocfilehash: 3233ec8a266ea77fe0eb62f5cfcadde8f2949ff9
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653230"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73531933"
 ---
 # <a name="use-a-python-script-to-deploy-a-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>Развертывание кластера больших данных SQL Server в Службе Azure Kubernetes (AKS) с помощью скрипта Python
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-В этом руководстве вы используете пример скрипта развертывания Python для развертывания [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] в службе Azure Kubernetes Service (AKS).
+В этом руководстве используется пример скрипта Python для развертывания [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] в службе Azure Kubernetes (AKS).
 
 > [!TIP]
-> AKS — это единственный вариант размещения Kubernetes для кластера больших данных. Дополнительные сведения о других вариантах развертывания, а также о настройке параметров развертывания см. в разделе [развертывание [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] в Kubernetes](deployment-guidance.md).
+> AKS — это единственный вариант размещения Kubernetes для кластера больших данных. Сведения о других вариантах развертывания и настройке параметров развертывания см. в статье [Развертывание [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] в Kubernetes](deployment-guidance.md).
 
 Используемое здесь развертывание кластера больших данных по умолчанию состоит из главного экземпляра SQL, одного экземпляра пула вычислительных ресурсов, двух экземпляров пула данных и двух экземпляров пула носителей. Данные сохраняются с помощью постоянных томов Kubernetes, использующих классы хранения AKS по умолчанию. Конфигурация по умолчанию, применяемая в этом руководстве, подходит для сред разработки и тестирования.
 
-[!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
-
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>предварительные требования
 
 - Подписка Azure.
 - [Средства работы с большими данными](deploy-big-data-tools.md):
@@ -81,7 +79,7 @@ curl -o deploy-sql-big-data-aks.py "https://raw.githubusercontent.com/Microsoft/
    | **Рабочие узлы** | Число рабочих узлов в кластере AKS (по умолчанию **1**). |
    | **Имя кластера** | Имя кластера AKS и кластера больших данных. Имя кластера больших данных должно содержать только строчные буквы и цифры без пробелов. (Имя по умолчанию — **sqlbigdata**.) |
    | **Пароль** | Пароль для контроллера, шлюза HDFS/Spark и главного экземпляра (по умолчанию **MySQLBigData2019**). |
-   | **Пользователь контроллера** | Имя пользователя контроллера (по умолчанию **admin**). |
+   | **Имя пользователя** | Имя пользователя контроллера (по умолчанию **admin**). |
 
 Для участников программы раннего внедрения кластера больших данных SQL Server 2019 требовались следующие параметры: **имя пользователя Docker** и **пароль Docker**. Начиная с версии CTP 3.2 они больше не требуются.
 
@@ -89,7 +87,7 @@ curl -o deploy-sql-big-data-aks.py "https://raw.githubusercontent.com/Microsoft/
    > Размер машины **Standard_L8s** по умолчанию может быть доступен не во всех регионах Azure. Если вы выбираете другой размер машины, имейте в виду, что общее количество дисков, которые можно подключить во всех узлах кластера, должно быть не меньше 24. Для каждого утверждения постоянного тома в кластере требуется подключенный диск. В настоящее время для кластера больших данных требуется 24 утверждения постоянных томов. Например, размер машины [Standard_L8s](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-storage#lsv2-series) поддерживает 32 подключенных диска, поэтому вы можете оценивать кластеры больших данных с одним узлом этого размера.
 
    > [!NOTE]
-   > Учетная запись `sa` обладает правами системного администратора в главном экземпляре SQL Server, создаваемом во время установки. После создания развертывания переменную среды `MSSQL_SA_PASSWORD` можно обнаружить, выполнив команду `echo $MSSQL_SA_PASSWORD` в контейнере главного экземпляра. В целях безопасности измените пароль учетной записи `sa` в главном экземпляре после развертывания. Дополнительные сведения см. в разделе [Смена пароля администратора](../linux/quickstart-install-connect-docker.md#sapassword).
+   > Учетная запись `sa` SQL Server отключена во время развертывания кластера больших данных. В основном экземпляре SQL Server подготавливается новая учетная запись sysadmin с именем пользователя, соответствующим введенному в поле **Имя пользователя** значению, и паролем, соответствующим значению, введенному в поле **Пароль**. Те же значения **Имя пользователя** и **Пароль** используются для подготовки пользователя с полномочиями администратора контроллера. Поддерживаемый для шлюза (Knox) пользователь — **root**, пароль — такой же, как указано выше.
 
 1. Скрипт сначала создает кластер AKS, используя указанные параметры. Это может занять несколько минут.
 
@@ -113,7 +111,7 @@ curl -o deploy-sql-big-data-aks.py "https://raw.githubusercontent.com/Microsoft/
 ```
 
 > [!IMPORTANT]
-> Полное развертывание может занять много времени из-за временных затрат на скачивание образов контейнеров для компонентов кластера больших данных. Однако это не должно занять несколько часов. При возникновении проблем с развертыванием см. раздел [мониторинг и устранение неполадок [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] ](cluster-troubleshooting-commands.md).
+> Полное развертывание может занять много времени из-за временных затрат на скачивание образов контейнеров для компонентов кластера больших данных. Однако это не должно занять несколько часов. При возникновении проблем с развертыванием см. статью [Мониторинг и устранение неполадок [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](cluster-troubleshooting-commands.md).
 
 ## <a name="inspect-the-cluster"></a>Проверка кластера
 
@@ -151,7 +149,7 @@ curl -o deploy-sql-big-data-aks.py "https://raw.githubusercontent.com/Microsoft/
    ```
 
 > [!TIP]
-> Дополнительные сведения о мониторинге и устранении неполадок развертывания см. в разделе [мониторинг и [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]устранение неполадок ](cluster-troubleshooting-commands.md).
+> Дополнительные сведения об отслеживании и устранении неполадок развертывания см. в статье [Мониторинг и устранение неполадок [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](cluster-troubleshooting-commands.md).
 
 ## <a name="connect-to-the-cluster"></a>Подключение к кластеру
 
@@ -166,7 +164,7 @@ curl -o deploy-sql-big-data-aks.py "https://raw.githubusercontent.com/Microsoft/
 
 ## <a name="clean-up"></a>Очистка
 
-При тестировании [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] в Azure следует удалить кластер AKS по завершении, чтобы избежать непредвиденных расходов. Не удаляйте кластер, если планируете продолжать использовать его.
+Если вы тестируете [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] в Azure, по завершении следует удалить кластер AKS, чтобы избежать непредвиденных расходов. Не удаляйте кластер, если планируете продолжать использовать его.
 
 > [!WARNING]
 > Приведенные ниже инструкции служат для удаления кластера AKS, что также приводит к удалению кластера больших данных SQL Server. Если вы хотите сохранить какие-либо базы данных или данные HDFS, перед удалением кластера следует выполнить их резервное копирование.
@@ -177,9 +175,9 @@ curl -o deploy-sql-big-data-aks.py "https://raw.githubusercontent.com/Microsoft/
 az group delete -n <resource group name>
 ```
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
-Скрипт развертывания настроил Службу Azure Kubernetes, а также развернул кластер больших данных SQL Server 2019. Вы также можете настраивать будущие развертывания путем установки вручную. Дополнительные сведения о развертывании кластеров больших данных, а также о настройке развертываний см. в разделе [ [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] развертывание в Kubernetes](deployment-guidance.md).
+Скрипт развертывания настроил Службу Azure Kubernetes, а также развернул кластер больших данных SQL Server 2019. Вы также можете настраивать будущие развертывания путем установки вручную. Дополнительные сведения о развертывании кластеров больших данных и настройке развертывания см. в статье [Развертывание [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] в Kubernetes](deployment-guidance.md).
 
 Теперь, когда кластер больших данных SQL Server развернут, вы можете загрузить демонстрационные данные и изучить другие руководства:
 

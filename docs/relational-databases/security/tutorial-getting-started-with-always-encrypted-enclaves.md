@@ -1,7 +1,7 @@
 ---
 title: Руководство. Начало работы с Always Encrypted с безопасными анклавами с использованием SSMS | Документация Майкрософт
 ms.custom: ''
-ms.date: 08/07/2019
+ms.date: 10/15/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: vanto
@@ -12,15 +12,15 @@ ms.topic: tutorial
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 7012ae6863394e6895a192f9ec7df3d8ceea3ee0
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: d5912e7cca2ceeba1fe0db95743b4d29e1154a86
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909677"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73592344"
 ---
 # <a name="tutorial-getting-started-with-always-encrypted-with-secure-enclaves-using-ssms"></a>Руководство. Начало работы с Always Encrypted с безопасными анклавами с использованием SSMS
-[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
 
 В этом руководстве показывается, как приступить к работе с [Always Encrypted с безопасными анклавами](encryption/always-encrypted-enclaves.md). Буду рассмотрены следующие темы.
 - Создание простой среды для тестирования и оценки Always Encrypted с безопасными анклавами.
@@ -35,20 +35,17 @@ ms.locfileid: "72909677"
 
 ### <a name="sql-server-computer-requirements"></a>Требования к компьютеру с SQL Server
 
-- [!INCLUDE [sssqlv15-md](../../includes/sssqlv15-md.md)] или последующей версии.
-- Windows 10 Корпоративная (версия 1809) или Windows Server 2019 Datacenter.
-- Если SQL Server работает на физическом компьютере, он должен соответствовать [требованиям Hyper-V к оборудованию](https://docs.microsoft.com/virtualization/hyper-v-on-windows/reference/hyper-v-requirements#hardware-requirements):
-   - 64-разрядный процессор с преобразованием адресов второго уровня (SLAT).
-   - Поддержка ЦП для расширения режима мониторинга виртуальной машины (технология VT-c на процессорах Intel).
-   - Включенная поддержка виртуализации (Intel VT-x или AMD-V).
-- Если SQL Server работает в виртуальной машине, она должна быть настроена для поддержки безопасности на основе виртуализации.
-   - В Hyper-V 2016 или более поздней версии используйте виртуальную машину 1-го поколения и [включите расширения вложенной виртуализации](https://docs.microsoft.com/virtualization/hyper-v-on-windows/user-guide/nested-virtualization#configure-nested-virtualization) в процессоре виртуальной машины либо используйте виртуальную машину 2-го поколения. Дополнительные сведения о поколениях виртуальных машин см. в статье [Следует ли создавать виртуальные машины поколения 1 или 2 в Hyper-V?](https://docs.microsoft.com/windows-server/virtualization/hyper-v/plan/should-i-create-a-generation-1-or-2-virtual-machine-in-hyper-v) 
-   - В Azure необходимо выбрать виртуальную машину нужного размера для поддержки одной из следующих технологий:
-      - вложенная виртуализации, например виртуальные машины серий Dv3 и Ev3; См. раздел [Create a nesting capable Azure VM](https://docs.microsoft.com/azure/virtual-machines/windows/nested-virtualization#create-a-nesting-capable-azure-vm) (Создание виртуальной машины Azure с поддержкой вложения).
-      - виртуальные машины 2-го поколения, например серий Dsv3 или Esv3. См. статью о [поддержке виртуальных машин 2-го поколения в Azure](https://docs.microsoft.com/azure/virtual-machines/windows/generation-2).
-   - В VMWare vSphere 6.7 или более поздней версии включите для виртуальной машины поддержку технологии Virtualization Based Security (VBS), как описано в [документации VMware](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vm_admin.doc/GUID-C2E78F3E-9DE2-44DB-9B0A-11440800AADD.html).
-   - Другие гипервизоры и общедоступные облака могут поддерживать использование Always Encrypted с безопасными анклавами на виртуальной машине, если ей предоставлены расширения виртуализации (иногда также называются встроенной виртуализацией). Просмотрите сведения о совместимости и инструкции по настройке в документации по своему решению для виртуализации.
-- [SQL Server Management Studio (SSMS) версии не ниже 18.0](../../ssms/download-sql-server-management-studio-ssms.md)
+- [!INCLUDE [sssqlv15-md](../../includes/sssqlv15-md.md)] или более поздняя версия.
+- Windows 10 Корпоративная (версия 1809) или более поздние версии или выпуск Windows Server 2019 Datacenter. Другие выпуски Windows 10 и Windows Server не поддерживают аттестацию с помощью HGS.
+- Поддержка ЦП для технологий виртуализации:
+  - Intel VT-x с Extended Page Tables.
+  - AMD-V с Rapid Virtualization Indexing.
+  - Если [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] работает на виртуальной машине, низкоуровневая оболочка и физический ЦП должны предоставлять возможности вложенной виртуализации. 
+    - В Hyper-V 2016 или более поздней версии [включите расширения вложенной виртуализации на процессоре виртуальной машины](https://docs.microsoft.com/virtualization/hyper-v-on-windows/user-guide/nested-virtualization#configure-nested-virtualization).
+    - В Azure выберите размер виртуальной машины, поддерживающий вложенную виртуализацию. Это все виртуальные машины серии v3, например Dv3 и Ev3. См. раздел [Create a nesting capable Azure VM](https://docs.microsoft.com/azure/virtual-machines/windows/nested-virtualization#create-a-nesting-capable-azure-vm) (Создание виртуальной машины Azure с поддержкой вложения).
+    - В VMWare vSphere 6.7 или более поздней версии включите для виртуальной машины поддержку технологии Virtualization Based Security (VBS), как описано в [документации VMware](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vm_admin.doc/GUID-C2E78F3E-9DE2-44DB-9B0A-11440800AADD.html).
+    - Другие низкоуровневые оболочки и общедоступные облака могут поддерживать возможности вложенной виртуализации, позволяющие использовать Always Encrypted с анклавами VBS. Просмотрите сведения о совместимости и инструкции по настройке в документации по своему решению для виртуализации.
+- [SQL Server Management Studio (SSMS) версии не ниже 18.3](../../ssms/download-sql-server-management-studio-ssms.md).
 
 Кроме того, можно установить SSMS на другом компьютере.
 
@@ -158,7 +155,7 @@ ms.locfileid: "72909677"
 
 Ошибка UnauthorizedHost указывает, что открытый ключ не был зарегистрирован на сервере HGS. Повторите шаги 5 и 6, чтобы устранить эту ошибку.
 
-Если все эти действия не помогают, запустите командлет Clear-HgsClientHostKey и повторите шаги 4–7.
+Если все эти действия не помогают, запустите командлет Remove-HgsClientHostKey и повторите шаги 4–7.
 
 ## <a name="step-3-enable-always-encrypted-with-secure-enclaves-in-sql-server"></a>Шаг 3. Настройка Always Encrypted с безопасными анклавами в SQL Server
 
@@ -343,10 +340,12 @@ ms.locfileid: "72909677"
 3. Попробуйте выполнить тот же запрос еще раз в экземпляре SSMS с отключенной функцией Always Encrypted и запишите код возникшей ошибки.
 
 ## <a name="next-steps"></a>Next Steps
-Перейдите к статье [Руководство. Создание и использование индексов в столбцах с поддержкой анклава с помощью случайного шифрования](./tutorial-creating-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md), которая является продолжением этого руководства.
+После завершения работы с этим учебником вы можете обратиться к одному из следующих учебников:
+- [Учебник. Разработка приложения .NET Framework с помощью Always Encrypted с безопасными анклавами](tutorial-always-encrypted-enclaves-develop-net-framework-apps.md)
+- [Учебник. Создание и использование индексов в столбцах с поддержкой анклава с помощью случайного шифрования](./tutorial-creating-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md)
 
-Подробные сведения о других сценариях использования для Always Encrypted с безопасными анклавами см. в статье [Настройка Always Encrypted с безопасными анклавами](encryption/configure-always-encrypted-enclaves.md). Пример:
-
-- [Настройка аттестации доверенного платформенного модуля (TPM).](https://docs.microsoft.com/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-initialize-hgs-tpm-mode)
-- [Настройка HTTPS для экземпляра HGS.](https://docs.microsoft.com/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-configure-hgs-https)
-- Разработка приложений, отправляющих полнофункциональные запросы к зашифрованным столбцам.
+## <a name="see-also"></a>См. также:
+- [Настройка типа анклава для параметра конфигурации сервера Always Encrypted](../../database-engine/configure-windows/configure-column-encryption-enclave-type.md)
+- [Подготовка ключей с поддержкой анклава](encryption/always-encrypted-enclaves-provision-keys.md)
+- [Настройка шифрования столбцов на месте с помощью Transact-SQL](encryption/always-encrypted-enclaves-configure-encryption-tsql.md)
+- [Выполнение запросов к столбцам с помощью Always Encrypted с безопасными анклавами](encryption/always-encrypted-enclaves-query-columns.md)
