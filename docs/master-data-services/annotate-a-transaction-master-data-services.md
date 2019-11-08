@@ -1,5 +1,5 @@
 ---
-title: Добавление заметки для транзакции (службы Master Data Services) | Документы Майкрософт
+title: Добавление заметки для транзакции
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: f5a6b2ca-56de-4e42-9da8-fba0ac3e8d92
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: e12ef7cf4be0259029b6214bd821bf85f89df73b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 17474c603e437dd0cb2dcfbedf5e444ba50ba3ae
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047779"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728788"
 ---
 # <a name="annotate-a-transaction-master-data-services"></a>Добавление заметки для транзакции (Master Data Services)
 
@@ -28,7 +28,7 @@ ms.locfileid: "68047779"
 > [!NOTE]  
 >  Заметки нельзя удалить.  
   
-## <a name="prerequisites"></a>предварительные требования  
+## <a name="prerequisites"></a>Предварительные требования  
   
 -   Для добавления заметок к созданным транзакциям необходимы права на доступ к функциональной области **Браузер** и как минимум разрешение **Обновление** на объект модели, к которому добавляется заметка.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "68047779"
   
 5.  Нажмите кнопку **ОК**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
  [Заметки (службы Master Data Services)](../master-data-services/annotations-master-data-services.md)   
  [Транзакции (службы Master Data Services)](../master-data-services/transactions-master-data-services.md)  
   

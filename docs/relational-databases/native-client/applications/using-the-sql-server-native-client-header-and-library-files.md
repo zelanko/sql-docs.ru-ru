@@ -1,5 +1,5 @@
 ---
-title: С помощью SQL Server Native Client файлов заголовков и библиотек | Документация Майкрософт
+title: Использование SQL Server Native Client файлов заголовка и библиотеки | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,22 +22,21 @@ ms.assetid: 69889a98-7740-4667-aecd-adfc0b37f6f0
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 01cfd9fe1aba63e5b63c6878d0332bd3a4a8eaff
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: db0f7fd455c84e11e64abf12c089f3855ebb055b
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67987544"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73761446"
 ---
 # <a name="using-the-sql-server-native-client-header-and-library-files"></a>Использование файлов заголовков и библиотек собственного клиента SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  Файлы заголовка и библиотеки собственного клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] устанавливаются с [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. При разработке приложения важно скопировать и установить все требуемые файлы для работы среды разработки. Дополнительные сведения об установке и распространении [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, см. в разделе [Установка SQL Server Native Client](../../../relational-databases/native-client/applications/installing-sql-server-native-client.md).  
+  Файлы заголовка и библиотеки собственного клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] устанавливаются с [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. При разработке приложения важно скопировать и установить все требуемые файлы для работы среды разработки. Дополнительные сведения об установке и распространении [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] собственного клиента см. в разделе [installing SQL Server Native Client](../../../relational-databases/native-client/applications/installing-sql-server-native-client.md).  
   
  Файлы заголовка и библиотеки собственного клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] устанавливаются в следующий каталог.  
   
- *% PROGRAM FILES %* \Microsoft SQL Server\110\SDK  
+ *% Program Files%* \Microsoft SQL Server\110\SDK  
   
  Файл заголовка собственного клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (sqlncli.h) можно использовать для добавления в пользовательские приложения функциональных возможностей по доступу к данным собственного клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Файл заголовка собственного клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] содержит все определения, атрибуты, свойства и интерфейсы, необходимые для использования новых функций, представленных в [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
   
@@ -50,7 +49,7 @@ ms.locfileid: "67987544"
  Приложениям OLE DB, использующим поставщик OLE DB собственного клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], необходима ссылка только на файл sqlncli.h. Если приложение использует и компоненты MDAC (SQLOLEDB), и поставщик OLE DB собственного клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], оно может ссылаться как на sqloledb.h, так и на sqlncli.h при условии, что ссылка на файл sqloledb.h будет идти первой.  
   
 ## <a name="using-the-sql-server-native-client-header-file"></a>Использование файла заголовка собственного клиента SQL Server  
- Чтобы использовать [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] файл заголовка собственного клиента, необходимо использовать **включают** инструкции в программном коде на C/C++. В следующих подразделах описано, как это сделать для приложений OLE DB и ODBC.  
+ Чтобы использовать файл заголовка собственного клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], необходимо использовать инструкцию **include** в коде C/C++ программирования. В следующих подразделах описано, как это сделать для приложений OLE DB и ODBC.  
   
 > [!NOTE]  
 >  Файлы заголовка и библиотеки собственного клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] могут быть скомпилированы только с помощью компилятора C++ среды Visual Studio 2002 или более поздней версии.  
@@ -64,7 +63,7 @@ include "sqlncli.h";
 ```  
   
 > [!NOTE]  
->  Если приложение использует оба API-интерфейса (OLE DB и ODBC), то первая строка приведенного выше кода должна быть пропущена. Кроме того, если приложение имеет **включают** инструкции для файла sqloledb.h, **включают** инструкции для файла sqlncli.h должна идти после нее.  
+>  Если приложение использует оба API-интерфейса (OLE DB и ODBC), то первая строка приведенного выше кода должна быть пропущена. Кроме того, если приложение содержит оператор **include** для SQLOLEDB. h, после него должен следовать оператор **include** для sqlncli. h.  
   
  При создании соединения с источником данных с помощью собственного клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] используйте в качестве строки имени поставщика «SQLNCLI11».  
   
@@ -83,9 +82,9 @@ include "sqlncli.h";
   
 ## <a name="component-names-and-properties-by-version"></a>Имена и свойства компонентов в зависимости от версии  
   
-|Свойство|собственный клиент SQL Server<br /><br /> SQL Server 2005|SQL Server Native Client 10.0<br /><br /> SQL Server 2008|SQL Server Native Client 11.0<br /><br /> [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]|MDAC|  
+|Свойство|собственный клиент SQL Server<br /><br /> SQL Server 2005|SQL Server Native Client 10,0<br /><br /> SQL Server 2008|SQL Server Native Client 11.0<br /><br /> [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]|MDAC|  
 |--------------|--------------------------------------------------|-------------------------------------------------------|---------------------------------------------------------------|----------|  
-|Имя драйвера ODBC|Собственный клиент SQL|SQL Server Native Client 10.0|SQL Server Native Client 11.0|SQL Server|  
+|Имя драйвера ODBC|Собственный клиент SQL|SQL Server Native Client 10,0|SQL Server Native Client 11.0|SQL Server|  
 |Имя файла заголовка ODBC|Sqlncli.h|Sqlncli.h|Sqlncli.h|Odbcss.h|  
 |DLL-библиотека драйвера ODBC|Sqlncli.dll|Sqlncl10.dll|Sqlncl11.dll|sqlsrv32.dll|  
 |Библиотека ODBC для API-интерфейсов программы BCP|Sqlncli.lib|Sqlncli10.lib|Sqlncli11.lib|Odbcbcp.lib|  
@@ -101,9 +100,9 @@ include "sqlncli.h";
   
  Например, если приложение компилируется с помощью собственного клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], а связанный файл библиотеки (sqlncli11.lib) и файл заголовка (sqlncli.h) взяты из каталога «\Program Files\Microsoft SQL Server\110\SDK», то убедитесь, что в строке подключения указывается (например, посредством ODBC) параметр «DRIVER={SQL Server Native Client 11.0}».  
   
- Дополнительные сведения см. в разделе Выполнение [выполнение операций массового копирования](../../../relational-databases/native-client/features/performing-bulk-copy-operations.md).  
+ Дополнительные сведения см. в разделе Выполнение [операций с массовым копированием](../../../relational-databases/native-client/features/performing-bulk-copy-operations.md).  
   
-## <a name="see-also"></a>См. также  
- [Построение приложений с использованием SQL Server Native Client](../../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)  
+## <a name="see-also"></a>См. также раздел  
+ [Построение приложений с использованием собственного клиента SQL Server](../../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)  
   
   

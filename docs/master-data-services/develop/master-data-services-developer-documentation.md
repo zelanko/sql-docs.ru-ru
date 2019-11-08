@@ -1,5 +1,5 @@
 ---
-title: Документация для разработчика служб Master Data Services | Документы Майкрософт
+title: Документация для разработчиков
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: reference
 ms.assetid: 067b1f69-84eb-4a13-b220-120cd63704b4
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 7544660fdcab3ef4caa8082d7096bbe343790fcb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 415e20eb08041780b8d20fb124151cc700cacbe6
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006317"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728257"
 ---
 # <a name="master-data-services-developer-documentation"></a>Документация для разработчика служб Master Data Services
 
@@ -32,7 +32,7 @@ ms.locfileid: "68006317"
 -   Создавать пользовательский рабочий процесс, который выполняется в ответ на заданное бизнес-правило. Пользовательский рабочий процесс вызывает написанный вами код, который может выполнить любое требуемое действие для обработки рабочего процесса.  
   
 ## <a name="master-data-manager-web-service"></a>Веб-служба «Диспетчер основных данных»  
- Веб-служба [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] позволяет программно использовать функции [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] с любого компьютера, имеющего доступ к веб-сайту [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] . Перед написанием кода для доступа к веб-службе необходимо создать классы-посредники, которые содержатся в указанном пространстве имен. В этой документации используется пространство имен посредников <xref:Microsoft.MasterDataServices>. Основным классом-посредником, который используется для выполнения операций веб-службы, является класс <xref:Microsoft.MasterDataServices.ServiceClient>, реализующий интерфейс <xref:Microsoft.MasterDataServices.IService>. Для доступа к веб-службе [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] необходимо из своего кода вызвать методы класса <xref:Microsoft.MasterDataServices.ServiceClient>. Остальные классы из этого пространства имен используются в операциях веб-служб.  
+ Веб-служба [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] позволяет программно использовать функции [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] с любого компьютера, имеющего доступ к веб-сайту [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] . Перед написанием кода для доступа к веб-службе необходимо создать классы-посредники, которые содержатся в указанном пространстве имен. В этой документации используется пространство имен посредников <xref:Microsoft.MasterDataServices>. Основным классом-посредником, который используется для выполнения операций веб-службы, является класс <xref:Microsoft.MasterDataServices.ServiceClient>, реализующий интерфейс <xref:Microsoft.MasterDataServices.IService>. Для доступа к веб-службе <xref:Microsoft.MasterDataServices.ServiceClient> необходимо из своего кода вызвать методы класса [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]. Остальные классы из этого пространства имен используются в операциях веб-служб.  
   
 ### <a name="web-service-content"></a>Содержимое веб-службы  
  [Создание классов-посредников веб-службы диспетчера основных данных](../../master-data-services/develop/create-master-data-manager-web-service-proxy-classes.md)  

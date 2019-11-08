@@ -1,5 +1,5 @@
 ---
-title: ISQLServerErrorInfo::GetErrorInfo (OLE DB) | Документация Майкрософт
+title: 'ISQLServerErrorInfo:: Жетерроринфо (OLE DB) | Документация Майкрософт'
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -16,20 +16,19 @@ ms.assetid: 83265c9c-eaf9-41f0-9f73-b0ae0972f0d5
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 434a5abdcd04037ff61f51dc16884854d9438cf2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e9ba54dd905127dc87cb3c14f74036c78daae1a1
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68051051"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73789357"
 ---
 # <a name="isqlservererrorinfogeterrorinfo-ole-db"></a>ISQLServerErrorInfo::GetErrorInfo (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  Возвращает указатель на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SSERRORINFO поставщика OLE DB для собственного клиента структуру, содержащую [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сведения об ошибке.  
+  Возвращает указатель на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственный клиент OLE DB поставщика SSERRORINFO, содержащий сведения об ошибке [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Поставщик OLE DB для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] определяет интерфейс для работы с ошибками **ISQLServerErrorInfo** . Этот интерфейс возвращает подробные сведения об ошибке [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], в том числе уровень серьезности и состояние.  
+ Поставщик OLE DB для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] определяет интерфейс для работы с ошибками **ISQLServerErrorInfo** . Этот интерфейс возвращает подробные сведения об ошибке [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , в том числе уровень серьезности и состояние.  
 
   
 ## <a name="syntax"></a>Синтаксис  
@@ -53,13 +52,13 @@ HRESULT GetErrorInfo(
  Метод выполнен успешно.  
   
  E_INVALIDARG  
- Либо *ppSSErrorInfo* или *ppErrorStrings* аргумент имел значение NULL.  
+ Аргумент *ппссерроринфо* или *пперрорстрингс* имеет значение null.  
   
  E_OUTOFMEMORY  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Поставщика OLE DB для собственного клиента не удалось выделить достаточно памяти для выполнения запроса.  
+ Поставщику [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB не удалось выделить достаточно памяти для выполнения запроса.  
   
-## <a name="remarks"></a>Примечания  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Поставщика OLE DB для собственного клиента выделяет память для строк SSERRORINFO и olechar, которые ВОЗВРАЩАЮТСЯ переданными пользователем указателями. Пользователь должен освободить эту память с помощью метода **IMalloc::Free**, когда последнему уже не будет требоваться доступ к данным ошибки.  
+## <a name="remarks"></a>Замечания  
+ Поставщик [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственного клиента OLE DB выделяет память для строк SSERRORINFO и ОЛЕЧАР, возвращаемых с помощью указателей, переданных потребителем. Пользователь должен освободить эту память с помощью метода **IMalloc::Free**, когда последнему уже не будет требоваться доступ к данным ошибки.  
   
  Структура SSERRORINFO определена следующим образом.  
   
@@ -89,8 +88,8 @@ SSERRORINFO;
   
  Указатели в адресах ссылок на структуры в строке, возвращенной в аргументе *ppErrorStrings*.  
   
-## <a name="see-also"></a>См. также  
- [ISQLServerErrorInfo &#40;OLE DB&#41;](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1)   
+## <a name="see-also"></a>См. также раздел  
+ [ISQLServerErrorInfo &#40;OLE DB&#41; ](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1)   
  [RAISERROR (Transact-SQL)](../../t-sql/language-elements/raiserror-transact-sql.md)  
   
   

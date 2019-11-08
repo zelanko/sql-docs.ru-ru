@@ -1,5 +1,5 @@
 ---
-title: Образец Hello World Ready | Документация Майкрософт
+title: Пример готовности Hello World | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -10,17 +10,17 @@ ms.assetid: 1cb94266-f702-4a57-a1ae-689a89c98757
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 184e8a987455f181d2fe631abb6189e745bd95e2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8303c387ff38ab5448d15e478534df165e05bddf
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62781175"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73637659"
 ---
 # <a name="hello-world-ready-sample"></a>Образец Hello World Ready
   Образец Hello World Ready демонстрирует основные операции, применяемые при создании, развертывании и отладке простых общедоступных хранимых процедур на основе интеграции со средой CLR. Общедоступный компонент может быть легко локализован для различных рынков по всему миру без изменения исходного кода компонента. В этом образце также показывается, как вернуть данные через выходной параметр и через запись, которая динамически конструируется хранимой процедурой и возвращается клиенту. Он практически идентичен образцу «Hello World» за тем исключением, что это приложение значительно проще и легче локализовать. Для изменения локализованного текста необходимо:  
   
-1.  Изменение XML-файл (.`resx` файл) для определенной культуры в каталоге ресурсов  
+1.  Изменение XML-файла (`resx` файл) для конкретного языка и региональных параметров в каталоге ресурсов  
   
 2.  построение файла ресурсов культуры при помощи программы `resgen`;  
   
@@ -30,12 +30,12 @@ ms.locfileid: "62781175"
   
  Исходный код и сборка для самой хранимой процедуры CLR не изменяется. Скрипт `build.cmd` показывает, как компилировать и подключать сборки ресурсов. Хотя в исходном коде приложения создается диспетчер ресурсов на основе текущей выполняющейся сборки, нет необходимости внедрять нейтральные к культуре ресурсы в DLL-библиотеку, которая содержит хранимую процедуру. Атрибут `System.Resources.NeutralResourcesLanguage attribute` допускает существование нейтральных к культуре ресурсов в DLL-библиотеке дополнения. Для этой цели лучше использовать отдельный файл DLL, чтобы при добавлении или изменении размещенного текста не пришлось изменять основной файл DLL, содержащий хранимые процедуры CLR. Это особенно полезно для определяемых пользователем типов данных CLR, которые могут включать столбцы и другие зависимые объекты, которые усложняют удаление и повторное добавление типа. Обычно DLL-библиотека дополнения должна иметь ту же версию, что и основная сборка. Однако можно указать атрибут `SatelliteContractVersion`, чтобы обеспечить обновление основной сборки без обновления сборок дополнения. Дополнительные сведения см. в описании класса `ResourceManager` в документации по Microsoft .NET.  
   
-## <a name="prerequisites"></a>предварительные требования  
+## <a name="prerequisites"></a>Предварительные требования  
  Этот образец поддерживается только в SQL Server 2005 и более поздних версиях.  
   
  Для создания и запуска этого проекта должно быть установлено следующее программное обеспечение:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express можно получить бесплатно на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] веб-сайте [с документацией и примерами по](https://go.microsoft.com/fwlink/?LinkId=31046)Express.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express можно получить бесплатно на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] веб-сайте [с документацией и примерами по](https://www.microsoft.com/sql-server/sql-server-editions-express)Express.  
   
 -   База данных AdventureWorks, доступная на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] веб-сайте [разработки](https://go.microsoft.com/fwlink/?linkid=62796).  
   
@@ -78,7 +78,7 @@ ms.locfileid: "62781175"
   
 4.  В каталоге c:\MySample создайте файл `messages.resx` и скопируйте в него образец кода.  
   
-5.  В c:\MySample создайте файл `messages.de.resx` , сохраняя его `messages.resx` как `messages.de.resx` после изменения в строке  
+5.  В каталоге c:\MySample создайте файл `messages.de.resx`, сохранив файл `messages.resx` как `messages.de.resx` после изменения линии  
   
     -   `<value xml:space="preserve">Hello, World!</value>`  
   
@@ -86,7 +86,7 @@ ms.locfileid: "62781175"
   
     -   `<value xml:space="preserve">Hallo Welt!</value>`  
   
-6.  В c:\MySample создайте файл `messages.es.resx` , сохраняя его `messages.resx` как `messages.es.resx` после изменения в строке  
+6.  В каталоге c:\MySample создайте файл `messages.es.resx`, сохранив файл `messages.resx` как `messages.es.resx` после изменения линии  
   
     -   `<value xml:space="preserve">Hello, World!</value>`  
   
@@ -94,7 +94,7 @@ ms.locfileid: "62781175"
   
     -   `<value xml:space="preserve">Hola a todos</value>`  
   
-7.  В c:\MySample создайте файл `messages.fr.resx` , сохраняя его `messages.resx` как `messages.fr.resx` после изменения в строке  
+7.  В каталоге c:\MySample создайте файл `messages.fr.resx`, сохранив файл `messages.resx` как `messages.fr.resx` после изменения линии  
   
     -   `<value xml:space="preserve">Hello, World!</value>`  
   
@@ -102,7 +102,7 @@ ms.locfileid: "62781175"
   
     -   `<value xml:space="preserve">BonjourÂ !</value>`  
   
-8.  В c:\MySample создайте файл `messages.fr-FR.resx` , сохраняя его `messages.resx` как `messages.fr-FR.resx` после изменения в строке  
+8.  В каталоге c:\MySample создайте файл `messages.fr-FR.resx`, сохранив файл `messages.resx` как `messages.fr-FR.resx` после изменения линии  
   
     -   `<value xml:space="preserve">Hello, World!</value>`  
   
@@ -110,7 +110,7 @@ ms.locfileid: "62781175"
   
     -   `<value xml:space="preserve">Bonjour de France!</value>`  
   
-9. В c:\MySample создайте файл `messages.it.resx` , сохраняя его `messages.resx` как `messages.it.resx` после изменения в строке  
+9. В каталоге c:\MySample создайте файл `messages.it.resx`, сохранив файл `messages.resx` как `messages.it.resx` после изменения линии  
   
     -   `<value xml:space="preserve">Hello, World!</value>`  
   
@@ -118,7 +118,7 @@ ms.locfileid: "62781175"
   
     -   `<value xml:space="preserve">Buongiorno</value>`  
   
-10. В c:\MySample создайте файл `messages.ja.resx` , сохраняя его `messages.resx` как `messages.ja.resx` после изменения в строке  
+10. В каталоге c:\MySample создайте файл `messages.ja.resx`, сохранив файл `messages.resx` как `messages.ja.resx` после изменения линии  
   
     -   `<value xml:space="preserve">Hello, World!</value>`  
   
@@ -450,7 +450,7 @@ USE master;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
  [Сценарии использования и примеры интеграции со средой CLR](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
   
   

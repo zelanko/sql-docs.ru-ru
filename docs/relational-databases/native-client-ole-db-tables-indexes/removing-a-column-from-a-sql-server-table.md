@@ -16,26 +16,25 @@ ms.assetid: 210811b7-cbd6-421e-bc6e-df9482236768
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 22b4c8101c365f32b9ba67d10ac6eb21b9b40f09
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ff59a03f10e595601590201b4fede2d10424a7d2
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68069533"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73761591"
 ---
 # <a name="removing-a-column-from-a-sql-server-table"></a>Удаление столбца из таблицы SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Поставщик OLE DB для собственного клиента предоставляет **ITableDefinition::DropColumn** функции. Она позволяет пользователю удалить столбец из таблицы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  Поставщик [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB предоставляет функцию **ITableDefinition::D ропколумн** . Она позволяет пользователю удалить столбец из таблицы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Пользователь задает имя таблицы в виде символьной строки в Юникоде в элементе *pwszName* объединения *uName* в параметре *pTableID*. Элемент *eKind* параметра *pTableID* должен быть равен DBKIND_NAME.  
   
- Пользователь задает имя столбца в *pwszName*членом *uName* объединения в *pColumnID* параметра. Имя столбца задается в виде символьной строки в Юникоде. Элемент *eKind* параметра *pColumnID* должен быть равен DBKIND_NAME.  
+ Потребитель указывает имя столбца в элементе *pwszName*объединения *uname* в параметре *пколумнид* . Имя столбца задается в виде символьной строки в Юникоде. Элемент *eKind* параметра *pColumnID* должен быть равен DBKIND_NAME.  
   
 ## <a name="example"></a>Пример  
   
-### <a name="code"></a>Код  
+### <a name="code"></a>код  
   
 ```  
 DBID TableID;  
@@ -51,7 +50,7 @@ ColumnID.uName.pwszName = L"MyColumnName";
 hr = m_pITableDefinition->DropColumn(&TableID, &ColumnID);  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
  [Таблицы и индексы](../../relational-databases/native-client-ole-db-tables-indexes/tables-and-indexes.md)  
   
   

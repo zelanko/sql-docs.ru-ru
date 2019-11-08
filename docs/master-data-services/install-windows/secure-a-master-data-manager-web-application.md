@@ -1,5 +1,5 @@
 ---
-title: Обеспечение безопасности веб-приложения диспетчера основных данных | Документы Майкрософт
+title: Обеспечение безопасности веб-приложения диспетчера основных данных
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: e360ba3a-e96b-4f85-b588-ed1f767fa973
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 30b1f8addacb1c4502a50ab5d00e507aa4ca63cc
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.openlocfilehash: 0442f63413c3fd0213fb5b63151208fb10b55351
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69028805"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729179"
 ---
 # <a name="secure-a-master-data-manager-web-application"></a>Обеспечение безопасности веб-приложения диспетчера основных данных
 
@@ -25,12 +25,12 @@ ms.locfileid: "69028805"
 > [!NOTE]  
 >  Веб-приложение [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] может использовать протокол HTTP или HTTPS, но не оба.  
   
-## <a name="prerequisites"></a>предварительные требования  
+## <a name="prerequisites"></a>Предварительные требования  
  Выполнение процедуры  
   
 -   На веб-сервере, где установлен экземпляр служб [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] , нужно обладать правами администратора.  
   
--   Службы MDS должны быть установлены на веб-сервере, а веб-приложение должно существовать. Дополнительные сведения см. в разделе [Установка служб Master Data Services](../../master-data-services/install-windows/install-master-data-services.md) и [веб-приложение диспетчера основных данных &#40;службы Master Data Services&#41;](../../master-data-services/install-windows/create-a-master-data-manager-web-application-master-data-services.md).  
+-   Службы MDS должны быть установлены на веб-сервере, а веб-приложение должно существовать. Дополнительные сведения см. в статьях [Установка служб Master Data Services](../../master-data-services/install-windows/install-master-data-services.md) и [Создание веб-приложения мастера основных данных (службы Master Data Services)](../../master-data-services/install-windows/create-a-master-data-manager-web-application-master-data-services.md).  
   
 ### <a name="to-secure-the-master-data-manager-web-application-with-https"></a>Обеспечение безопасности веб-приложения диспетчера основных данных с помощью протокола HTTPS  
   
@@ -48,7 +48,7 @@ ms.locfileid: "69028805"
   
 7.  Нажмите кнопку **ОК**.  
   
-8.  Необязательный параметр. Чтобы удалить из списка протокол HTTP, разрешив доступ к сайту только по протоколу HTTPS, щелкните строку **http**. Нажмите кнопку **Удалить** и в диалоговом окне подтверждения выберите **Да**.  
+8.  Необязательно. Чтобы удалить из списка протокол HTTP, разрешив доступ к сайту только по протоколу HTTPS, щелкните строку **http**. Нажмите кнопку **Удалить** и в диалоговом окне подтверждения выберите **Да**.  
   
     > [!IMPORTANT]  
     >  Необходимо изменить настройки basicHttp и wsHttpBinding после удаления HTTP.  
@@ -64,7 +64,7 @@ ms.locfileid: "69028805"
 13. Сохраните файл и закройте его. Если возникает ошибка, это происходит из-за включенного контроля учетных записей. Теперь пользователи могут использовать для доступа к сайту протокол HTTPS.  
 
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также раздел  
  [Создание веб-приложения мастера основных данных (службы Master Data Services)](../../master-data-services/install-windows/create-a-master-data-manager-web-application-master-data-services.md)  
   
   

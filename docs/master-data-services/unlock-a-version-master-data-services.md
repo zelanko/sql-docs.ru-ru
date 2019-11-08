@@ -1,5 +1,5 @@
 ---
-title: Разблокировка версии (службы Master Data Services) | Документы Майкрософт
+title: Разблокировка версии
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: b4cf4404-40f3-46fb-801d-cbf80a95448c
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 2c81d52fadad91bb91ccf69af4b77627ef53846a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cc3b79de19795ec13fd8720b68c827d9b964084e
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68102600"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727839"
 ---
 # <a name="unlock-a-version-master-data-services"></a>Разблокировка версии (службы Master Data Services)
 
@@ -27,7 +27,7 @@ ms.locfileid: "68102600"
   В среде [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]разблокирование версии модели позволяет производить изменения элементов модели и их атрибутов.  
   
 ## <a name="prerequisites"></a>Предварительные требования  
- Для выполнения этой процедуры:  
+ Чтобы выполнить эту процедуру:  
   
 -   необходимо иметь разрешение на доступ к функциональной области **Управление версиями** ;  
   
@@ -51,7 +51,7 @@ ms.locfileid: "68102600"
   
 -   [Блокировка версии (службы Master Data Services)](../master-data-services/lock-a-version-master-data-services.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
  [Версии (службы Master Data Services)](../master-data-services/versions-master-data-services.md)  
   
   

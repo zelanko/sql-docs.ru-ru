@@ -1,5 +1,5 @@
 ---
-title: Создание числового атрибута (службы Master Data Services) | Документы Майкрософт
+title: Создание числового атрибута
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: c0dbb6d8-ba78-485a-a40d-6d5cb7e75d0a
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 4c759b196c250f4f3f868fba81a45f161dd75f67
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 608bdd69396f63fdd0389b43e27bacbab0e763f6
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67906643"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729585"
 ---
 # <a name="create-a-numeric-attribute-master-data-services"></a>Создание числового атрибута (службы Master Data Services)
 
@@ -29,8 +29,8 @@ ms.locfileid: "67906643"
 > [!NOTE]  
 >  На числовые атрибуты налагаются определенные ограничения. Дополнительные сведения см. в разделе [Атрибуты (службы Master Data Services)](../master-data-services/attributes-master-data-services.md).  
   
-## <a name="prerequisites"></a>предварительные требования  
- Для выполнения этой процедуры:  
+## <a name="prerequisites"></a>Предварительные требования  
+ Чтобы выполнить эту процедуру:  
   
 -   необходимо иметь разрешение на доступ к функциональной области **Администрирование системы** ;  
   
@@ -43,8 +43,8 @@ ms.locfileid: "67906643"
   
 |Столбец|Описание|  
 |------------|-----------------|  
-|Состояние|Состояние атрибута.<br /><br /> Когда вы нажимаете "Сохранить", появляется изображение ![Значок обновления состояния](../master-data-services/media/mds-statusicon-updating.png "Значок обновления состояния"), указывающее на обновление атрибута.<br /><br /> Если при создании или редактировании атрибута произойдет ошибка, появится изображение ![Значок состояния ошибки](../master-data-services/media/mds-statusicon-error.png "Значок состояния ошибки").<br /><br /> В противном случае состояние является нормальным, и появляется изображение ![Значок нормального состояния](../master-data-services/media/mds-statusicon-ok.png "Значок нормального состояния").|  
-|Name|Имя атрибута.|  
+|Состояние|Состояние атрибута.<br /><br /> При нажатии кнопки сохранить отображается ![значок для обновления состояния](../master-data-services/media/mds-statusicon-updating.png "ICon для обновления состояния ") , указывающий на то, что атрибут обновляется.<br /><br /> Если при создании или изменении атрибута возникли ошибки, отображается ![значок изображение состояния ошибки](../master-data-services/media/mds-statusicon-error.png "ICon для состояния ошибки») .<br /><br /> В противном случае отображается состояние ОК, а ![для значка состояния ОК](../master-data-services/media/mds-statusicon-ok.png "ICon для состояния "ОК") — изображение.|  
+|Имя|Имя атрибута.|  
 |Отображаемое имя|Отображаемое имя атрибута.|  
 |Описание|Описание атрибута.|  
 |Ширина отображаемой области (в пикселях)|Ширина атрибута.|  
@@ -97,7 +97,7 @@ ms.locfileid: "67906643"
   
 14. Нажмите кнопку **Сохранить**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
  [Атрибуты (службы Master Data Services)](../master-data-services/attributes-master-data-services.md)   
  [Изменение имени атрибута и типа данных (службы Master Data Services)](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md)   
  [Создание атрибута на основе домена (службы Master Data Services)](../master-data-services/create-a-domain-based-attribute-master-data-services.md)   

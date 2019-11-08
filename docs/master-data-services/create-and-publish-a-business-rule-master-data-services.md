@@ -1,5 +1,5 @@
 ---
-title: Создание и публикация бизнес-правила (службы Master Data Services) | Документы Майкрософт
+title: Создание и публикация бизнес-правила
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6961d636-4d69-468e-81f7-8d0be6a4a039
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 9822b9f4b26897b1162a336b1adaa6f38c5ff117
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e8deee97bd80404df5851f0845aa02b51bfe0cfc
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68025057"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729450"
 ---
 # <a name="create-and-publish-a-business-rule-master-data-services"></a>Создание и публикация бизнес-правила (службы Master Data Services)
 
@@ -26,8 +26,8 @@ ms.locfileid: "68025057"
 
   В среде [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]бизнес-правило создается для гарантии точности основных данных. Чтобы применить к данным созданное правило, его необходимо опубликовать.  
   
-## <a name="prerequisites"></a>предварительные требования  
- Для выполнения этой процедуры:  
+## <a name="prerequisites"></a>Предварительные требования  
+ Чтобы выполнить эту процедуру:  
   
 -   необходимо иметь разрешение на доступ к функциональной области **Администрирование системы** ;  
   
@@ -58,7 +58,7 @@ ms.locfileid: "68025057"
   
 10. В разделе **If** нажмите кнопку **Добавить**. Отобразится панель.  
   
-11. Из раскрывающегося списка **Атрибут** выберите атрибут.  
+11. В раскрывающемся списке **Атрибут** выберите атрибут.  
   
 12. В раскрывающемся списке **Оператор** выберите условие.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "68025057"
     > [!TIP]  
     >  Чтобы удалить элементы из бизнес-правила, щелкните каждый элемент правой кнопкой мыши и выберите пункт **Удалить**.  
   
-15. В правило также можно добавлять по несколько условий. Дополнительные сведения см. в статье [Добавление нескольких условий к бизнес-правилу (службы Master Data Services)](../master-data-services/add-multiple-conditions-to-a-business-rule-master-data-services.md).  
+15. В правило также можно добавлять по несколько условий. Дополнительные сведения см. в статье [Add Multiple Conditions to a Business Rule &#40;Master Data Services&#41;](../master-data-services/add-multiple-conditions-to-a-business-rule-master-data-services.md).  
   
 16. В разделе **Then** нажмите кнопку **Добавить** . Отобразится панель.  
   
@@ -102,12 +102,12 @@ ms.locfileid: "68025057"
 ## <a name="grid-columns"></a>Столбцы сетки  
  Для каждого созданного бизнес-правила в сетке создается строка с шестью столбцами. Ниже приведены эти столбцы.  
   
-|Name|Описание|  
+|Имя|Описание|  
 |----------|-----------------|  
-|Состояние|После нажатия кнопки **Сохранить** появится следующее изображение, которое указывает на то, что бизнес-правило обновляется.<br /><br /> ![mds_BR_refresh](../master-data-services/media/mds-br-refresh.png "mds_BR_refresh")<br /><br /> При наличии ошибок во время создания или изменения бизнес-правила появляется следующее изображение.<br /><br /> ![mds_br_error](../master-data-services/media/mds-br-error.png "mds_br_error")<br /><br /> Если ее состояние нормальное, появится следующее изображение.<br /><br /> ![mds_BR_success](../master-data-services/media/mds-br-success.png "mds_BR_success")|  
-|Name|Имя бизнес-правила.|  
+|Состояние|После нажатия кнопки **Сохранить** появится следующее изображение, которое указывает на то, что бизнес-правило обновляется.<br /><br /> ![mds_BR_refresh](../master-data-services/media/mds-br-refresh.png "mds_BR_refresh ")<br /><br /> При наличии ошибок во время создания или изменения бизнес-правила появляется следующее изображение.<br /><br /> ![mds_br_error](../master-data-services/media/mds-br-error.png "mds_br_error ")<br /><br /> Если его состояние нормальное, появится следующее изображение.<br /><br /> ![mds_BR_success](../master-data-services/media/mds-br-success.png "mds_BR_success ")|  
+|Имя|Имя бизнес-правила.|  
 |Описание|Описание бизнес-правила.|  
-|Состояние бизнес-правила|Одно из следующих состояний бизнес-правила: правило не определено, активно, исключено, ожидаются изменения, ожидаются исключения и ожидается удаление.|  
+|Состояние бизнес-правила|Одно из следующих состояний бизнес-правила: правило не определено, активно, исключено, ожидающие изменения, ожидающие исключения и ожидается удаление.|  
 |Исключена.|Указывает, исключено ли бизнес-правило.|  
 |Уведомление|Указывает выбранного пользователя или группу, которым необходимо отправлять уведомление.|  
   
@@ -119,7 +119,7 @@ ms.locfileid: "68025057"
   
     -   [Подтверждение исправления проблемы, обнаруженной при проверке на соответствие бизнес-правилам (службы Master Data Services)](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
  [Настройка в бизнес-правилах отправки уведомлений (службы Master Data Services)](../master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)   
  [Изменение имени бизнес-правила (службы Master Data Services)](../master-data-services/change-a-business-rule-name-master-data-services.md)   
  [Добавление нескольких условий к бизнес-правилу (службы Master Data Services)](../master-data-services/add-multiple-conditions-to-a-business-rule-master-data-services.md)  

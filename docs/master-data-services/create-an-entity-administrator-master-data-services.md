@@ -1,5 +1,5 @@
 ---
-title: Создание администратора сущностей (службы Master Data Services) | Документы Майкрософт
+title: Создание администратора сущностей
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 717be1e8-488e-4219-8d1e-ca9084b864cd
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 34b96a107f00e93ed2dfd0f09451aac4f1f58354
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bca3fbbfe08969f27c26ab0ca6a66e76468acdc8
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68025069"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729534"
 ---
 # <a name="create-an-entity-administrator-master-data-services"></a>Создание администратора сущностей (службы Master Data Services)
 
@@ -27,7 +27,7 @@ ms.locfileid: "68025069"
 >  Чтобы упростить администрирование, создайте локальную группу или группу Windows и настройте ее в качестве администратора сущностей. Впоследствии добавлять пользователей в группу и удалять их из нее можно без обращения к [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].  
   
 ## <a name="prerequisites"></a>Предварительные требования  
- Для выполнения этой процедуры:  
+ Чтобы выполнить эту процедуру:  
   
 -   необходимо разрешение на доступ к функциональной области **Разрешения пользователей и групп** ;  
   
@@ -47,7 +47,7 @@ ms.locfileid: "68025069"
   
 6.  Нажмите кнопку **Сохранить**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
  [Администраторы (службы Master Data Services)](../master-data-services/administrators-master-data-services.md)   
  [Назначение разрешения для объекта модели (службы Master Data Services)](../master-data-services/assign-model-object-permissions-master-data-services.md)   
  [Назначение разрешений для элемента иерархии (службы Master Data Services)](../master-data-services/assign-hierarchy-member-permissions-master-data-services.md)   

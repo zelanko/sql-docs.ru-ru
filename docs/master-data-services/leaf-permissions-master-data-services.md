@@ -1,5 +1,5 @@
 ---
-title: Разрешения конечного элемента (службы Master Data Services) | Документы Майкрософт
+title: Разрешения конечного элемента
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bde16e8c-bcd4-4041-8130-55c5450e5f72
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 72ac77fd62bd0dd0f315bd214f94fe759923ffda
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4e01c6773ce28694e95f992f1af49a7cce19e969
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68007200"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728074"
 ---
 # <a name="leaf-permissions-master-data-services"></a>Разрешения конечного элемента (службы основных данных)
 
@@ -56,12 +56,12 @@ ms.locfileid: "68007200"
 |**Создание**|Пользователь может назначать значения при создании элементов.|  
 |**Update**|Пользователь может обновлять атрибуты.|  
 |**Удаление**|Не влияет.|  
-|**Запретить**|Атрибут не отображается.<br /><br /> Примечание. Нельзя явно запретить доступ к атрибуты Name и Code.|  
+|**Запретить**|Атрибут не отображается.<br /><br /> Примечание. Нельзя явно запретить доступ к атрибутам "Имя" и "Код".|  
   
 ### <a name="example"></a>Пример  
  Сущности "Продукт" назначьте разрешение **Обновление** для атрибута Subcategory. Отмените разрешения для всех остальных атрибутов.  
   
-|Имя|Код|Подкатегория (Обновление)|  
+|Имя|код|Подкатегория (Обновление)|  
 |----------|----------|----------------------------|  
 |Mountain-100|BK-M101|{5} Mountain Bikes|  
 |Mountain-100|BK-M201|{5} Mountain Bikes|  
@@ -71,7 +71,7 @@ ms.locfileid: "68007200"
 > [!NOTE]  
 >  В этом примере «Подкатегория» является доменным атрибутом на основе сущности SubcategoryList. Можно выбрать другую подкатегорию для Mountain-100, но нельзя добавлять элементы или удалять элементы из сущности SubcategoryList.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также раздел  
  [Назначение разрешения для объекта модели (службы Master Data Services)](../master-data-services/assign-model-object-permissions-master-data-services.md)   
     
  [Разрешения объекта модели (службы Master Data Services)](../master-data-services/model-object-permissions-master-data-services.md)   

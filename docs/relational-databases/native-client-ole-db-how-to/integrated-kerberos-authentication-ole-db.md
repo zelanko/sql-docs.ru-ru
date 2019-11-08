@@ -11,16 +11,15 @@ ms.assetid: 953ee253-a4be-4f47-bbad-d2f6600207b2
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ea89096b386757f779e964aed6a468aff59ac7ae
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2773078b8e442b1cfed70ccb9f4a8518b108b678
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68110111"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73789910"
 ---
 # <a name="integrated-kerberos-authentication-ole-db"></a>Интеграция проверки подлинности Kerberos (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   Этот образец показывает, как выполнить взаимную проверку подлинности Kerberos с использованием OLE DB в собственном клиенте [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Данный образец работает с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] или более поздней версией.  
   

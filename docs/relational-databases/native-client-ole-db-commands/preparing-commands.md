@@ -16,16 +16,15 @@ ms.assetid: 09ec0c6c-0a44-4766-b9b7-5092f676ee54
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 921b5f4ce929c5a719bcabd09e2f2e7e567a831a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5f0e582d0e6ca7e2087f35fa9b8e5005478d0a43
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68128715"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73790262"
 ---
 # <a name="preparing-commands"></a>Подготовка команд
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   Поставщик OLE DB для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает подготовку команды для оптимизированного многократного выполнения, однако подготовка команды создает дополнительную нагрузку; поэтому потребителю нет необходимости подготавливать команду для ее выполнения более одного раза. Как правило, подготовку команды следует выполнять в том случае, если планируется ее не менее чем четырехкратное выполнение.  
   
@@ -55,7 +54,7 @@ ms.locfileid: "68128715"
   
  Объект команды имеет в базе данных **tempdb** не более одной хранимой процедуры. Любая существующая временная хранимая процедура представляет текущий текст команды для этого объекта.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
  [Команды](../../relational-databases/native-client-ole-db-commands/commands.md)  
   
   

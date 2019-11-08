@@ -1,5 +1,5 @@
 ---
-title: Добавление элементов в коллекцию (службы Master Data Services) | Документы Майкрософт
+title: Добавление элементов в коллекцию
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1a7155e6-2d4a-4ed1-a72c-edb37fa1a46b
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 0c750efb1570db2e8b1f6e2d521cdb24773f01da
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: aaedf62b9702d5cec44116cb906acdf9aa415c39
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047882"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729808"
 ---
 # <a name="add-members-to-a-collection-master-data-services"></a>Добавление элементов в коллекцию (службы Master Data Services)
 
@@ -25,8 +25,8 @@ ms.locfileid: "68047882"
 
   В [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]в коллекцию можно добавлять конечные и консолидированные элементы.  
   
-## <a name="prerequisites"></a>предварительные требования  
- Для выполнения этой процедуры:  
+## <a name="prerequisites"></a>Предварительные требования  
+ Чтобы выполнить эту процедуру:  
   
 -   Необходимо иметь разрешение на доступ к функциональной области **Обозреватель** .  
   
@@ -58,7 +58,7 @@ ms.locfileid: "68047882"
   
 11. При необходимости установите взвешенные значения, щелкнув значение в столбце **Вес** .  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
  [Коллекции (службы Master Data Services)](../master-data-services/collections-master-data-services.md)  
   
   

@@ -11,27 +11,26 @@ ms.assetid: 621b6d13-10f1-47d0-b63c-7adb6ab904e0
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 68fb0972c68378765a76cfc39e58f2056f554ff6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7d8621aac563f9211f7d4ee0c9ebd8f557e33bea
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67937467"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73780485"
 ---
 # <a name="support-for-large-udts"></a>Поддержка больших, определяемых пользователем типов
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   В этом образце решения содержатся два проекта. Один проект создает сборку (библиотеку DLL) из исходного кода на C#. Эта сборка содержит тип CLR. В базу данных будет добавлена таблица. Столбец в этой таблице будет иметь тип, определенный в сборке. По умолчанию в этом образце используется база данных master. Второй проект является собственным приложением C, которое считывает данные из таблицы.  
   
  С версиями [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , вышедшими до [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], образец работать не будет.  
   
- Дополнительные сведения о поддержке больших определяемых пользователем типов, см. в разделе [Large CLR User-Defined типы &#40;ODBC&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
+ Дополнительные сведения о поддержке больших определяемых пользователем типов см. в разделе [типы &#40;данных большого числа&#41;определяемых пользователем CLR в ODBC](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## <a name="example"></a>Пример  
  Первым листингом кода является исходный код на C#. Вставьте его в файл LargeStringUDT.cs и скомпилируйте его в DLL-библиотеку. Скопируйте файл LargeStringUDT.dll в корневой каталог диска C.  
   
- Второй ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) пример кода создает сборку в базе данных master.  
+ Второй листинг кода ([!INCLUDE[tsql](../../includes/tsql-md.md)]) создает сборку в базе данных master.  
   
  Скомпилируйте второй листинг кода (C++) с библиотеками odbc32.lib и user32.lib. Убедитесь, что переменная среды INCLUDE включает каталог, содержащий файл sqlncli.h.  
   
@@ -39,7 +38,7 @@ ms.locfileid: "67937467"
   
  Этот образец соединяется с установленным на компьютер экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по умолчанию. Чтобы соединиться с именованным экземпляром, измените определение источника данных ODBC, указав экземпляр в следующем формате: Сервер\ИменованныйЭкземпляр. По умолчанию [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] устанавливается на именованный экземпляр.  
   
- Четвертый ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) пример кода удаляет сборку из базы данных master.  
+ Четвертый листинг кода ([!INCLUDE[tsql](../../includes/tsql-md.md)]) удаляет сборку из базы данных master.  
   
 ```  
 // LargeStringUDT.cs  

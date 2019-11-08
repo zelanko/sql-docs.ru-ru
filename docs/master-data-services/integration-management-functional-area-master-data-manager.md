@@ -1,5 +1,5 @@
 ---
-title: Функциональная область управления интеграцией (диспетчер основных данных) | Документы Майкрософт
+title: Функциональная область управления интеграцией
 ms.custom: ''
 ms.date: 04/01/2016
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 41ac0e62-860a-4905-a318-68d6f814fb59
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 2f12e6246ac08be29c673514ad7f35dbaa74a820
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3622c5bf25b049fbf7bcd2ad19d43bd31230459c
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68007208"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729099"
 ---
 # <a name="integration-management-functional-area-master-data-manager"></a>Функциональная область управления интеграцией (диспетчер основных данных)
 
@@ -24,20 +24,20 @@ ms.locfileid: "68007208"
   В функциональной области «Управление интеграцией» администраторы могут выполнять импорт данных из промежуточных таблиц и создавать представления подписки для систем подписки. Дополнительные сведения об администраторах см. в разделе [Администраторы (службы Master Data Services)](../master-data-services/administrators-master-data-services.md).  
   
 ## <a name="import-data"></a>Импорт данных  
- [Обзор: импорт данных из таблиц &#40;службы Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)  
+ [Обзор: импорт данных из таблиц (службы Master Data Services)](../master-data-services/overview-importing-data-from-tables-master-data-services.md)  
   
  [Просмотр ошибок, возникающих во время помещения на промежуточное хранение (службы Master Data Services)](../master-data-services/view-errors-that-occur-during-staging-master-data-services.md)  
   
  [Устранение неполадок в промежуточном процессе (службы Master Data Services)](https://social.technet.microsoft.com/wiki/contents/articles/troubleshooting-the-staging-process-master-data-services.aspx)  
   
 ## <a name="export-data"></a>Экспорт данных  
- [Обзор: экспорт данных &#40;службы Master Data Services&#41;](../master-data-services/overview-exporting-data-master-data-services.md)  
+ [Обзор. Экспорт данных (службы Master Data Services)](../master-data-services/overview-exporting-data-master-data-services.md)  
   
  [Создание представления подписки для экспорта данных (службы Master Data Services)](../master-data-services/create-a-subscription-view-to-export-data-master-data-services.md)  
   
  [Удаление представления подписки (службы Master Data Services)](../master-data-services/delete-a-subscription-view-master-data-services.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
  [Веб-приложение диспетчера основных данных](../master-data-services/master-data-manager-web-application.md)  
   
   

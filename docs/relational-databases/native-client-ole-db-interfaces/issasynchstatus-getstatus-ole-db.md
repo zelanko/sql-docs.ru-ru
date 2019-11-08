@@ -1,5 +1,5 @@
 ---
-title: ISSAsynchStatus::GetStatus (OLE DB) | Документация Майкрософт
+title: Метод ISSAsynchStatus::-Status (OLE DB) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -16,16 +16,15 @@ ms.assetid: 354b6ee4-b5a1-48f6-9403-da3bdc911067
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 855bc71e1a7ad7c0d462d16e266f392128b04519
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a123717631084a61a33bbd8b106f95a51a831b9e
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68051017"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73763023"
 ---
 # <a name="issasynchstatusgetstatus-ole-db"></a>Функция ISSAsynchStatus::GetStatus (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   Возвращает состояние операции асинхронного выполнения.  
   
@@ -109,7 +108,7 @@ HRESULT GetStatus(
  E_FAIL  
  Произошла ошибка, зависящая от поставщика.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  Метод **ISSAsynchStatus::GetStatus** ведет себя точно так, как ожидает метод **IDBAsynchStatus::GetStatus**: если инициализация объекта источника данных прервана, возвращается E_UNEXPECTED, а не DB_E_CANCELED (хотя метод [ISSAsynchStatus::WaitForAsynchCompletion](../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-waitforasynchcompletion-ole-db.md) возвратит DB_E_CANCELED). Происходит это потому, что после прерывания объект источника данных не остается в обычном состоянии зомби. Делается этого для того, чтобы можно было попытаться выполнить последующие операции инициализации.  
   
  Если набор строк инициализируется или заполняется асинхронно, он должен поддерживать этот метод.  
@@ -124,8 +123,8 @@ HRESULT GetStatus(
   
  В случае вызова метода **ISSAsynchStatus::GetStatus** для инициализированного объекта источника данных или заполненного набора строк, либо передачи значения для параметра *eOperation* , отличного от DBASYNCHOP_OPEN, возвращается S_OK с параметрами *pulProgress* и *pulProgressMax* , которым установлено такое же значение. Если метод **ISSAsynchStatus::GetStatus** вызывается для объекта, созданного в результате выполнения команды, которая обновляет, удаляет или уставляет строки, оба параметра *pulProgress* и *pulProgressMax* указывают общее число строк, затронутых при выполнении этой команды.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
  [Выполнение асинхронных операций](../../relational-databases/native-client/features/performing-asynchronous-operations.md)   
- [ISSAsynchStatus &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-ole-db.md)  
+ [Метод ISSAsynchStatus &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-ole-db.md)  
   
   

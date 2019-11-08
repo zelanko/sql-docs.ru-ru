@@ -1,5 +1,5 @@
 ---
-title: Удаление атрибута (службы Master Data Services) | Документы Майкрософт
+title: Удаление атрибута
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ec3e66f7-0e35-43d7-a80d-64899948ebfe
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: ab9f0266120a298ab6f033c7d2e2a4b4fe4903fd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2d48e8c51f8151f8626e971f928a245ba6776c3e
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67906377"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728341"
 ---
 # <a name="delete-an-attribute-master-data-services"></a>Удаление атрибута (службы Master Data Services)
 
@@ -26,8 +26,8 @@ ms.locfileid: "67906377"
 
   Операция удаления атрибута в службах [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]без возможности восстановления удаляет атрибут и все связанные с ним значения.  
   
-## <a name="prerequisites"></a>предварительные требования  
- Для выполнения этой процедуры:  
+## <a name="prerequisites"></a>Предварительные требования  
+ Чтобы выполнить эту процедуру:  
   
 -   необходимо иметь разрешение на доступ к функциональной области **Администрирование системы** ;  
   
@@ -60,7 +60,7 @@ ms.locfileid: "67906377"
   
 8.  В диалоговом окне подтверждения нажмите кнопку **ОК**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
  [Атрибуты (службы Master Data Services)](../master-data-services/attributes-master-data-services.md)   
  [Атрибуты на основе домена (службы Master Data Services)](../master-data-services/domain-based-attributes-master-data-services.md)   
  [Создание текстового атрибута (службы Master Data Services)](../master-data-services/create-a-text-attribute-master-data-services.md)   

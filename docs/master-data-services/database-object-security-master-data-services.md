@@ -1,5 +1,5 @@
 ---
-title: Защита объектов базы данных (службы Master Data Services) | Документы Майкрософт
+title: Защита объектов базы данных
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: dd5ba503-7607-45d9-ad0d-909faaade179
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 65aa1f12870d47e61a0fa634f0281f8bde9c9462
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cd3ce4034a1e64c7c8ca6b1e54d989b129f177f4
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67906476"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728436"
 ---
 # <a name="database-object-security-master-data-services"></a>Защита объектов базы данных (службы Master Data Services)
 
@@ -43,19 +43,19 @@ ms.locfileid: "67906476"
 -   [Настройка параметров системы](#SysSettings)  
   
 ##  <a name="Staging"></a> Промежуточное сохранение данных  
- В следующей таблице каждый защищаемый объект имеет строку name в составе имени. Это указывает на имя промежуточной таблицы, которая определена при создании сущности. Дополнительные сведения см. в статье [Обзор: импорт данных из таблиц &#40;службы Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)  
+ В следующей таблице каждый защищаемый объект имеет строку name в составе имени. Это указывает на имя промежуточной таблицы, которая определена при создании сущности. Дополнительные сведения см. в разделе [Обзор: импорт данных из таблиц (службы Master Data Services)](../master-data-services/overview-importing-data-from-tables-master-data-services.md).  
   
-|Action|Защищаемые объекты|Разрешения|  
+|Действие|Защищаемые объекты|Разрешения|  
 |------------|----------------|-----------------|  
-|Создание, обновление и удаление конечных элементов и их атрибутов.|stg.name_Leaf|Обязательно: INSERT<br /><br /> Необязательное действие: SELECT и UPDATE|  
+|Создание, обновление и удаление конечных элементов и их атрибутов.|stg.name_Leaf|Требуется: INSERT<br /><br /> Необязательно: SELECT и UPDATE|  
 |Загрузить данные из конечной промежуточной таблицы в соответствующие таблицы базы данных MDS.|stg.udp_name_Leaf|EXECUTE|  
-|Создание, обновление и удаление консолидированных элементов и их атрибутов.|stg.name_Consolidated|Обязательно: INSERT<br /><br /> Необязательное действие: SELECT и UPDATE|  
+|Создание, обновление и удаление консолидированных элементов и их атрибутов.|stg.name_Consolidated|Требуется: INSERT<br /><br /> Необязательно: SELECT и UPDATE|  
 |Загрузить данные из объединенной промежуточной таблицы в соответствующие таблицы базы данных MDS.|stg.udp_name_Consolidated|EXECUTE|  
-|Перемещение элементов в явную иерархию.|stg.name_Relationship|Обязательно: INSERT<br /><br /> Необязательное действие: SELECT и UPDATE|  
+|Перемещение элементов в явную иерархию.|stg.name_Relationship|Требуется: INSERT<br /><br /> Необязательно: SELECT и UPDATE|  
 |Загрузить данные из промежуточной таблицы связей в соответствующие таблицы базы данных MDS.|stg.udp_name_Relationship|EXECUTE|  
 |Просмотреть ошибки, которые возникли при вставке данных из промежуточных таблиц в таблицы базы данных MDS.|stg.udp_name_Relationship|SELECT|  
   
- Дополнительные сведения см. в статье [Обзор: импорт данных из таблиц &#40;службы Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md).  
+ Дополнительные сведения см. в разделе [Обзор: импорт данных из таблиц (службы Master Data Services)](../master-data-services/overview-importing-data-from-tables-master-data-services.md).  
   
 ##  <a name="rules"></a> Проверка данных на соответствие бизнес-правилам  
   
@@ -85,7 +85,7 @@ ms.locfileid: "67906476"
 ##  <a name="SysSettings"></a> Настройка параметров системы  
  Эти параметры системы можно изменять, настраивая поведение в [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. Их можно настроить в [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] или при наличии доступа на выполнение команды UPDATE изменять непосредственно в таблице базы данных mdm.tblSystemSetting. Дополнительные сведения см. в разделе [Системные параметры (службы Master Data Services)](../master-data-services/system-settings-master-data-services.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также раздел  
  [Безопасность (службы Master Data Services)](../master-data-services/security-master-data-services.md)  
   
   

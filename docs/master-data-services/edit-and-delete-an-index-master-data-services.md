@@ -1,5 +1,5 @@
 ---
-title: Изменение и удаление индекса (службы Master Data Services) | Документы Майкрософт
+title: Изменение и удаление индекса
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: f8fb2a63-f9ae-4b9d-b26f-2024d9af15c5
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 106a496bd1bd7acb0895de2bc41438ef76cbea1d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f4855daea163d799d8f880dc74e5fee8d2a50c93
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68086431"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728213"
 ---
 # <a name="edit-and-delete-an-index-master-data-services"></a>Изменение и удаление индекса (Master Data Services)
 
@@ -23,8 +23,8 @@ ms.locfileid: "68086431"
 
   Индекс, созданный для атрибутов, можно изменить или удалить.  
   
-## <a name="prerequisites"></a>предварительные требования  
- Для выполнения этой процедуры:  
+## <a name="prerequisites"></a>Предварительные требования  
+ Чтобы выполнить эту процедуру:  
   
 -   Иметь разрешение на доступ к функциональной области "Администрирование системы". Дополнительные сведения см. в разделе [Разрешения функциональной области (службы Master Data Services)](../master-data-services/functional-area-permissions-master-data-services.md).  
   
@@ -62,7 +62,7 @@ ms.locfileid: "68086431"
   
 5.  В окнах подтверждения нажимайте кнопку **ОК**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также раздел  
  [Создание индекса (Master Data Services)](../master-data-services/create-an-index-master-data-services.md)   
  [Пользовательский индекс (Master Data Services)](../master-data-services/custom-index-master-data-services.md)  
   

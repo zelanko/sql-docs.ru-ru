@@ -1,5 +1,5 @@
 ---
-title: Зеркальное отображение базы данных | Документация Майкрософт
+title: Использование зеркального отображения базы данных | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -18,22 +18,21 @@ ms.assetid: 71b15712-7972-4465-9274-e0ddc271eedc
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ae15f57418712ab4977d993e71a9528ee489fdfd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5c2db9621490f4dc718516e5829f6704b20ee0e9
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68059526"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73761330"
 ---
 # <a name="using-database-mirroring"></a>Использование зеркального отображения базы данных
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
     
 > [!NOTE]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../../includes/ssnotedepfutureavoid-md.md)] Вместо этого используйте [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)].  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../../includes/ssnotedepfutureavoid-md.md)] Используйте вместо этого [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] .  
   
- Зеркальное отображение базы данных, впервые представленное в [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], — это решение, предназначенное для повышения доступности баз данных и избыточности данных. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Собственный клиент предоставляет неявную поддержку зеркального отображения базы данных, поэтому разработчику не нужно писать дополнительный код или выполнять другие действия, после его настройки для базы данных.  
+ Зеркальное отображение базы данных, впервые представленное в [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], — это решение, предназначенное для повышения доступности баз данных и избыточности данных. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client предоставляет неявную поддержку зеркального отображения базы данных, поэтому разработчику не нужно писать код или предпринимать другие действия после его настройки для базы данных.  
   
  Зеркальное отображение базы данных, реализованное отдельно для каждой базы данных, хранит копию рабочей базы данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] на резервном сервере. Это или «горячий», или «теплый» резервный сервер, в зависимости от конфигурации и состояния сеанса зеркального отображения базы данных. Сервер горячей замены поддерживает быструю отработку отказа без потери зафиксированных транзакций, а «горячий» резервный сервер поддерживает принудительное обслуживание (с возможной потерей данных).  
   
@@ -46,7 +45,7 @@ ms.locfileid: "68059526"
  При указании имен зеркальных баз данных можно использовать псевдонимы.  
   
 > [!NOTE]  
->  Сведения о начальных попытках соединения и попытки повторного подключения к зеркальной базе данных, см. в разделе [подключение клиентов к сеансу зеркального отображения базы данных &#40;SQL Server&#41;](../../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md).  
+>  Сведения о попытках первоначального подключения и попытках повторного подключения к зеркальной базе данных см. в разделе [подключение клиентов к &#40;сеансу зеркального отображения базы данных SQL Server&#41;](../../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md).  
   
 ## <a name="programming-considerations"></a>Замечания по программированию  
  Если сервер, на котором размещается основная база данных, дает сбой, в ответ на вызовы API клиентское приложение получает ошибки, которые указывают на потерю соединения с базой данных. Если это происходит, все незафиксированные изменения в базе данных теряются и выполняется откат текущей транзакции. При этом приложение должно закрыть соединение (или освободить объект источника данных) и вновь его открыть. Соединение прозрачно перенаправляется на зеркальную базу данных, которая к этому моменту выступает в роли основного сервера.  
@@ -61,21 +60,21 @@ ms.locfileid: "68059526"
 >  Кроме того, в именах сервера не учитывается регистр клавиатуры, но имена баз данных зависят от регистра клавиатуры. Поэтому следует убедиться, что в DSN-именах и строках соединения используются символы с одинаковым регистром.  
   
 ## <a name="sql-server-native-client-ole-db-provider"></a>Поставщик OLE DB для собственного клиента SQL Server  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Поставщика OLE DB для собственного клиента поддерживает зеркальное отображение базы данных с помощью атрибутов соединения и соединения строки. К набору свойств DBPROPSET_SQLSERVERDBINIT было добавлено свойство SSPROP_INIT_FAILOVERPARTNER, а ключевое слово **FailoverPartner** является новым атрибутом строки подключения для DBPROP_INIT_PROVIDERSTRING. Дополнительные сведения см. в разделе [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
+ Поставщик [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB поддерживает зеркальное отображение базы данных с помощью атрибутов соединения и строки подключения. К набору свойств DBPROPSET_SQLSERVERDBINIT было добавлено свойство SSPROP_INIT_FAILOVERPARTNER, а ключевое слово **FailoverPartner** является новым атрибутом строки подключения для DBPROP_INIT_PROVIDERSTRING. Дополнительные сведения см. в разделе [Использование ключевых слов строки подключения с SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
- Кэш отработки отказа сохраняется до тех пор, пока загружен поставщик, есть до **CoUninitialize** вызывается или условии, что приложение имеет ссылку на некоторый объект, управляемый [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поставщика OLE DB для собственного клиента, такие как Объект источника данных.  
+ Кэш отработки отказа поддерживается при условии, что поставщик загружен, что происходит до вызова **CoUninitialize** , или пока приложение имеет ссылку на некоторый объект, управляемый [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] собственным клиентом OLE DB поставщиком, таким как объект источника данных.  
   
- Дополнительные сведения о [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддержки поставщика OLE DB для собственного клиента для зеркального отображения базы данных, см. в разделе [свойства инициализации и авторизации](../../../relational-databases/native-client-ole-db-data-source-objects/initialization-and-authorization-properties.md).  
+ Дополнительные сведения о [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддержки поставщика OLE DB собственного клиента для зеркального отображения базы данных см. в разделе [Свойства инициализации и авторизации](../../../relational-databases/native-client-ole-db-data-source-objects/initialization-and-authorization-properties.md).  
   
 ## <a name="sql-server-native-client-odbc-driver"></a>Драйвер ODBC для собственного клиента SQL Server  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Драйвер ODBC собственного клиента поддерживает зеркальное отображение базы данных с помощью атрибутов соединения и соединения строки. В частности, был добавлен атрибут SQL_COPT_SS_FAILOVER_PARTNER для использования с [SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) и [SQLGetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md) функции; и **Failover_Partner** ключевое слово был добавлен в качестве нового атрибута строки соединения.  
+ Драйвер ODBC для собственного клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддерживает зеркальное отображение базы данных с помощью атрибутов соединения и строки подключения. В частности, добавлен атрибут SQL_COPT_SS_FAILOVER_PARTNER для использования с функциями [SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) и [SQLGetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md) . и ключевое слово **Failover_Partner** было добавлено в качестве нового атрибута строки подключения.  
   
  Кэш отработки отказа хранится, пока в приложении имеется хотя бы один дескриптор среды. Он теряется при освобождении дескриптора среды.  
   
 > [!NOTE]  
 >  Диспетчер драйвера ODBC улучшен для поддержки спецификации имени сервера отработки отказа.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
  [Компоненты собственного клиента SQL Server](../../../relational-databases/native-client/features/sql-server-native-client-features.md)   
  [Подключение клиентов к сеансу зеркального отображения базы данных (SQL Server)](../../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)   
  [Зеркальное отображение базы данных (SQL Server)](../../../database-engine/database-mirroring/database-mirroring-sql-server.md)  

@@ -1,5 +1,5 @@
 ---
-title: Удаление производной иерархии (службы Master Data Services) | Документы Майкрософт
+title: Удаление производной иерархии
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: f46d660e-47f2-47ca-9372-1b5931540beb
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 437342af4f0aa188fb898bd951249629ee44be3b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7e9e36545c9d9e99f627cc8f4a1f0a92d50af5de
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67906464"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728365"
 ---
 # <a name="delete-a-derived-hierarchy-master-data-services"></a>Удаление производной иерархии (службы Master Data Services)
 
@@ -29,8 +29,8 @@ ms.locfileid: "67906464"
 > [!NOTE]  
 >  Удаление производной иерархии не влияет на связи атрибутов, на которых основана иерархия.  
   
-## <a name="prerequisites"></a>предварительные требования  
- Для выполнения этой процедуры:  
+## <a name="prerequisites"></a>Предварительные требования  
+ Чтобы выполнить эту процедуру:  
   
 -   необходимо иметь разрешение на доступ к функциональной области **Администрирование системы** ;  
   
@@ -50,7 +50,7 @@ ms.locfileid: "67906464"
   
 6.  В диалоговом окне подтверждения нажмите кнопку **ОК**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
  [Создание производной иерархии (службы Master Data Services)](../master-data-services/create-a-derived-hierarchy-master-data-services.md)   
  [Производные иерархии (службы Master Data Services)](../master-data-services/derived-hierarchies-master-data-services.md)  
   

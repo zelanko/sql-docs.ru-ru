@@ -1,5 +1,5 @@
 ---
-title: Требования к системе для собственного клиента SQL Server | Документация Майкрософт
+title: Требования к системе для SQL Server Native Client | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -15,12 +15,12 @@ ms.assetid: 1c8e2f8a-a440-44da-8e3a-af632d34c52c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ad87b38ade044414062eba03e94dee415c53fc7e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 85b00f00e2c557f31a7343a99e1f2592741a6b59
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62637836"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73637798"
 ---
 # <a name="system-requirements-for-sql-server-native-client"></a>Системные требования для собственного клиента SQL Server
   Чтобы использовать функции доступа к данным [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], например режим MARS, необходимо установить следующее программное обеспечение:  
@@ -29,13 +29,13 @@ ms.locfileid: "62637836"
   
 -   экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на сервере.  
   
- Собственному клиенту [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] требуется установщик Windows версии 3.0. Установщик Windows версии 3.0 уже установлен в ОС [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. Для всех других платформ необходимо его установить явно. Дополнительные сведения см. в разделе [Windows 3.0 свободно распространяемый установщик](https://go.microsoft.com/fwlink/?LinkId=46459).  
+ Собственному клиенту [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] требуется установщик Windows версии 3.0. Установщик Windows версии 3.0 уже установлен в ОС [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. Для всех других платформ необходимо его установить явно. Дополнительные сведения см. в разделе [установщик Windows 3,0 распространяемый компонент](https://www.microsoft.com/download/details.aspx?id=16821).  
   
 > [!NOTE]  
 >  Перед установкой данного программного обеспечения убедитесь, что вы вошли в систему с правами администратора.  
   
 ## <a name="operating-system-requirements"></a>Требования к операционной системе  
- Список операционных систем, поддерживающих [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, см. в разделе [политики поддержки для собственного клиента SQL Server](applications/support-policies-for-sql-server-native-client.md).  
+ Список операционных систем, поддерживающих [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственного клиента, см. в разделе [политики поддержки для SQL Server Native Client](applications/support-policies-for-sql-server-native-client.md).  
   
 ## <a name="sql-server-requirements"></a>Требования к SQL Server  
  Чтобы использовать собственный клиент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для доступа к данным из баз данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], необходимо иметь установленный экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -62,23 +62,23 @@ ms.locfileid: "62637836"
   
  Управления `DataTypeCompatibility` для ODBC не существует.  
   
- IDBInfo::GetKeywords всегда будет возвращать список ключевых слов, который соответствует версии сервера для подключения и не зависит от `DataTypeCompatibility`.  
+ Ключевое слово IDBInfo:: noreturn всегда возвращает список ключевых слов, соответствующий версии сервера в соединении, на который не влияет `DataTypeCompatibility`.  
   
 |Тип данных|собственный клиент SQL Server<br /><br /> SQL Server 2005|SQL Server Native Client 11.0<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|Компоненты доступа к данным Windows, компоненты MDAC и<br /><br /> приложения OLE DB собственного клиента SQL Server со свойством DataTypeCompatibility=80|  
 |---------------|--------------------------------------------------|-------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|  
 |CLR UDT (\<= 8 КБ)|определяемый пользователем тип|Udt|Varbinary|  
 |varbinary(max)|varbinary|varbinary|Изображение|  
-|varchar(max)|varchar|varchar|Text|  
+|varchar(max)|varchar|varchar|Текст|  
 |nvarchar(max)|nvarchar|nvarchar|Ntext|  
-|Xml|Xml|Xml|Ntext|  
-|CLR UDT (> 8 КБ)|определяемый пользователем тип|varbinary|Изображение|  
+|xml|xml|xml|Ntext|  
+|Определяемый пользователем тип CLR (> 8 КБ)|определяемый пользователем тип|varbinary|Изображение|  
 |date|date|varchar|Varchar|  
 |datetime2|datetime2|varchar|Varchar|  
 |datetimeoffset|datetimeoffset|varchar|Varchar|  
 |time|time|varchar|Varchar|  
   
-## <a name="see-also"></a>См. также  
- [Программирование собственного клиента SQL Server](sql-server-native-client-programming.md)   
+## <a name="see-also"></a>См. также раздел  
+ [SQL Server Native Client  программирования](sql-server-native-client-programming.md)  
  [Установка SQL Server Native Client](applications/installing-sql-server-native-client.md)  
   
   

@@ -13,16 +13,15 @@ ms.assetid: 8b96282f-00d5-4e28-8111-0a87ae6d7781
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a95e676ff7d5d39358638727e317116aa05687f1
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: ca993b0074f13c6a3c5cfd167f533a408cd21530
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907354"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73790797"
 ---
 # <a name="sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc"></a>Отправка данных в виде возвращающего табличное значение параметра со всеми значениями в памяти (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   В этом разделе описывается передача данных хранимой процедуре в виде возвращающего табличное значение параметра, когда все значения хранятся в памяти. Другой пример, демонстрирующий возвращающий табличное значение параметр, см. в разделе [Использование возвращающих табличное значение параметров &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md).  
   
@@ -129,7 +128,7 @@ from @Items
     r = SQLExecDirect(hstmt, (SQLCHAR *) "{call TVPOrderEntry(?, ?, ?, ?)}",SQL_NTS);  
     ```  
   
-## <a name="see-also"></a>См. также статью  
+## <a name="see-also"></a>См. также раздел  
  [Примеры программирования с использованием возвращающих табличное значение параметров ODBC](https://msdn.microsoft.com/library/3f52b7a7-f2bd-4455-b79e-d015fb397726)  
   
   
