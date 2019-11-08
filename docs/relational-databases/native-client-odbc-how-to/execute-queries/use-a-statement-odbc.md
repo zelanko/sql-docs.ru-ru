@@ -1,5 +1,5 @@
 ---
-title: Использование инструкции (ODBC) | Документация Майкрософт
+title: Использование оператора (ODBC) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -13,21 +13,20 @@ ms.assetid: f7573f8f-6f21-4e03-8dd5-a5f2ea4878cc
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: abf5910d032b921f6cefa1aeb89fef1a6fcfbc44
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3624253fa70ca12078a981d694c5e50b5030ce01
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67898460"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73781176"
 ---
 # <a name="use-a-statement-odbc"></a>Использование инструкции (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
     
 ### <a name="to-use-a-statement"></a>Использование инструкции  
   
-1.  Для выделения дескриптора инструкции вызовите функцию [SQLAllocHandle](https://go.microsoft.com/fwlink/?LinkId=58396) с параметром *HandleType*, имеющим значение SQL_HANDLE_STMT.  
+1.  Для выделения дескриптора инструкции вызовите функцию [SQLAllocHandle](https://go.microsoft.com/fwlink/?LinkId=58396) с параметром *HandleType* , имеющим значение SQL_HANDLE_STMT.  
   
 2.  Также можно вызвать [SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) для настройки параметров инструкции или [SQLGetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlgetstmtattr.md) для получения атрибутов инструкции.  
   
@@ -71,9 +70,9 @@ ms.locfileid: "67898460"
   
     -   Для повторного использования дескриптора инструкции перейдите к шагу 2.  
   
-8.  Для освобождения дескриптора инструкции вызовите функцию [SQLFreeHandle](../../../relational-databases/native-client-odbc-api/sqlfreehandle.md) с параметром *HandleType*, установленным в значение SQL_HANDLE_STMT.  
+8.  Для освобождения дескриптора инструкции вызовите функцию [SQLFreeHandle](../../../relational-databases/native-client-odbc-api/sqlfreehandle.md) с параметром *HandleType* , установленным в значение SQL_HANDLE_STMT.  
   
-## <a name="see-also"></a>См. также  
- [Выполнении запросов разделы руководства, посвященные &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md)  
+## <a name="see-also"></a>См. также раздел  
+ [Разделы &#40;руководства по выполнению запросов ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md)  
   
   

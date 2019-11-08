@@ -1,5 +1,5 @@
 ---
-title: Выбор и обновление наборов строк (ODBC) | Документация Майкрософт
+title: Выборка и обновление наборов строк (ODBC) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -13,21 +13,20 @@ ms.assetid: cf0eb3b4-8b72-49fc-a845-95edc360cf93
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bb0055e8ed8c17679c824fdf6cbf96c1a42c7531
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d7c88cedf5a523832910c9057f6c0c0fc1bd8d00
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67939588"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73781613"
 ---
 # <a name="fetch-and-update-rowsets-odbc"></a>Выбор и обновление наборов строк (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
     
 ### <a name="to-fetch-and-update-rowsets"></a>Получение и обновление наборов строк  
   
-1.  Можно также вызвать [SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) с SQL_ROW_ARRAY_SIZE, чтобы изменить число строк (R) в наборе строк.  
+1.  При необходимости вызовите [SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) с SQL_ROW_ARRAY_SIZE, чтобы изменить число строк (R) в наборе строк.  
   
 2.  Вызовите [SQLFetch](https://go.microsoft.com/fwlink/?LinkId=58401) или [SQLFetchScroll](../../../relational-databases/native-client-odbc-api/sqlfetchscroll.md) , чтобы получить набор строк.  
   
@@ -47,7 +46,7 @@ ms.locfileid: "67939588"
   
 6.  Выполните инструкцию позиционирования UPDATE или DELETE, задав имя курсора (его можно получить с помощью [SQLGetCursorName](../../../relational-databases/native-client-odbc-api/sqlgetcursorname.md)) и используя дескриптор другой инструкции в том же соединении (необязательно).  
   
-## <a name="see-also"></a>См. также  
- [Использование инструкций по курсорам &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/cursors/using-cursors-how-to-topics-odbc.md)  
+## <a name="see-also"></a>См. также раздел  
+ [Разделы &#40;руководства по использованию курсоров ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/cursors/using-cursors-how-to-topics-odbc.md)  
   
   

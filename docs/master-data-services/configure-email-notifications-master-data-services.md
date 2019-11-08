@@ -1,5 +1,5 @@
 ---
-title: Настройка уведомлений электронной почты (службы Master Data Services) | Документы Майкрософт
+title: Настройка уведомления электронной почты
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4241a6ab-7465-471b-9890-57c6b572037e
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 2826041b1385966f9ac4f76358588b4af6d414f6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2b49a2a9b52df3cf5364f0e4f86b4181439ff61b
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67941069"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729650"
 ---
 # <a name="configure-email-notifications-master-data-services"></a>Настройка уведомления электронной почты (службы Master Data Services)
 
@@ -43,9 +43,9 @@ ms.locfileid: "67941069"
   
 -   В [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] есть параметры, влияющие на рассылку уведомлений. Эти параметры можно настроить в программе [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] или непосредственно в таблице системных параметров в базе данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Дополнительные сведения см. в разделе [Системные параметры (службы Master Data Services)](../master-data-services/system-settings-master-data-services.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
  [Уведомления (службы Master Data Services)](../master-data-services/notifications-master-data-services.md)   
- [Устранение неполадок в уведомлениях по электронной почте (службы Master Data Services)](https://social.technet.microsoft.com/wiki/contents/articles/troubleshooting-email-notifications-master-data-services.aspx)   
+ [Устранение неполадок в уведомлениях электронной почты (службы Master Data Services)](https://social.technet.microsoft.com/wiki/contents/articles/troubleshooting-email-notifications-master-data-services.aspx)   
  [Настройка в бизнес-правилах отправки уведомлений (службы Master Data Services)](../master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)  
   
   

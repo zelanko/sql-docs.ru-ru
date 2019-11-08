@@ -17,16 +17,15 @@ ms.assetid: 51322f92-0d76-44c9-9c33-9223676cf1d3
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a7054852982534bf0832f10694a59173ee3433b2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 59a7e18c69ffa8d928dc38eaefcaf89249c18b38
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68106133"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73784076"
 ---
 # <a name="using-cursors-odbc"></a>Использование курсоров (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   ODBC поддерживает модель курсора, которая позволяет следующее.  
   
@@ -38,21 +37,21 @@ ms.locfileid: "68106133"
   
 -   Позиционированные обновления.  
   
- Приложения ODBC редко декларируют и открывают курсоры или используют любые связанные с курсорами инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)]. ODBC автоматически открывает курсор для каждого возвращенного результирующего набора из инструкции SQL. Характеристики курсоров управляются атрибуты инструкции, набор с [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) перед SQL выполняется инструкция. Функции API ODBC для обработки результирующих наборов поддерживают полный набор функций работы с курсором, включая выборку, прокрутку и позиционированные обновления.  
+ Приложения ODBC редко декларируют и открывают курсоры или используют любые связанные с курсорами инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)]. ODBC автоматически открывает курсор для каждого возвращенного результирующего набора из инструкции SQL. Характеристики курсоров контролируются атрибутами инструкции, заданными с помощью [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) , перед выполнением инструкции SQL. Функции API ODBC для обработки результирующих наборов поддерживают полный набор функций работы с курсором, включая выборку, прокрутку и позиционированные обновления.  
   
  Далее приведено сравнение работы с курсорами в скриптах [!INCLUDE[tsql](../../includes/tsql-md.md)] и приложениях ODBC.  
   
-|Action|[!INCLUDE[tsql](../../includes/tsql-md.md)]|интерфейс ODBC|  
+|Действие|[!INCLUDE[tsql](../../includes/tsql-md.md)]|интерфейс ODBC|  
 |------------|------------------------|----------|  
-|Определение режима работы курсоров|Указание через параметры DECLARE CURSOR|Присвоить атрибутам курсора с помощью [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)|  
-|Открытие курсора|DECLARE CURSOR OPEN *cursor_name*|**SQLExecDirect** или **SQLExecute**|  
+|Определение режима работы курсоров|Указание через параметры DECLARE CURSOR|Установка атрибутов курсора с помощью [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)|  
+|Открытие курсора|ОБЪЯВЛЕНИЕ открытого КУРСОРа *cursor_name*|**SQLExecDirect** или **SQLExecute**|  
 |Выборка строк|FETCH|**SQLFetch** или [SQLFetchScroll](../../relational-databases/native-client-odbc-api/sqlfetchscroll.md)|  
 |Позиционированное обновление|Предложение WHERE CURRENT OF для инструкции UPDATE или DELETE.|**SQLSetPos**|  
-|Закрытие курсора|ЗАКРЫТЬ *cursor_name* DEALLOCATE|[SQLCloseCursor](../../relational-databases/native-client-odbc-api/sqlclosecursor.md)|  
+|Закрытие курсора|ЗАКРЫТЬ *CURSOR_NAME* освободить|[SQLCloseCursor](../../relational-databases/native-client-odbc-api/sqlclosecursor.md)|  
   
  Серверные курсоры, реализованные в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], поддерживают функции модели курсора ODBC. Драйвер для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использует серверные курсоры для поддержки функций работы с курсорами API ODBC.  
   
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
   
 -   [Способы реализации курсоров](../../relational-databases/native-client-odbc-cursors/implementation/how-cursors-are-implemented.md)  
   
@@ -62,14 +61,14 @@ ms.locfileid: "68106133"
   
 -   [Свойства курсора](../../relational-databases/native-client-odbc-cursors/properties/cursor-properties.md)  
   
--   [Подробные сведения о программировании курсоров &#40;ODBC&#41;](../../relational-databases/native-client-odbc-cursors/programming/cursor-programming-details-odbc.md)  
+-   [Сведения о &#40;программировании курсора ODBC&#41;](../../relational-databases/native-client-odbc-cursors/programming/cursor-programming-details-odbc.md)  
   
 -   [Прокрутка и выборка строк](../../relational-databases/native-client-odbc-cursors/scrolling-and-fetching-rows.md)  
   
--   [Позиционированные обновления &#40;ODBC&#41;](../../relational-databases/native-client-odbc-cursors/positioned-updates-odbc.md)  
+-   [ODBC с позиционированными обновлениями &#40;&#41;](../../relational-databases/native-client-odbc-cursors/positioned-updates-odbc.md)  
   
-## <a name="see-also"></a>См. также  
- [Собственный клиент SQL Server &#40;ODBC&#41;](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
+## <a name="see-also"></a>См. также раздел  
+ [SQL Server Native Client &#40; &#41; ODBC](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)  
  [CLOSE (Transact-SQL)](../../t-sql/language-elements/close-transact-sql.md)   
  [Курсоры](../../relational-databases/cursors.md)   
  [DEALLOCATE (Transact-SQL)](../../t-sql/language-elements/deallocate-transact-sql.md)   

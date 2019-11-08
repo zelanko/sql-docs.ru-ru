@@ -1,5 +1,5 @@
 ---
-title: Наборы изменений и утверждение (надстройка MDS для Excel) | Документы Майкрософт
+title: Наборы изменений и утверждение
 ms.custom: microsoft-excel-add-in
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 5257e054-be61-4a55-b699-708366a759af
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 6239949729ba443d1b6d60b99bd4e888d72b20eb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cca345024fcf34cee4abd3695621c9548cee6121
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68092468"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728019"
 ---
 # <a name="change-sets-and-approval-mds-add-in-for-excel"></a>Наборы изменений и утверждение (надстройка MDS для Excel)
 
@@ -25,7 +25,7 @@ ms.locfileid: "68092468"
   
  Если для изменения сущности требуется утверждение, вы должны сохранить ожидающие изменения как набор изменений и отправить его на утверждение. Дополнительные сведения см. в разделе [Требуется утверждение (службы Master Data Services)](../../master-data-services/approval-required-master-data-services.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
  [Наборы изменений (Master Data Services)](../../master-data-services/changesets-master-data-services.md)  
   
   

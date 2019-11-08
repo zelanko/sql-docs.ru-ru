@@ -1,5 +1,5 @@
 ---
-title: Подтверждение конкретных элементов, обнаруженных при проверке на соответствие бизнес-правилам (службы Master Data Services) | Документы Майкрософт
+title: Подтверждение конкретных членов, обнаруженных при проверке на соответствие бизнес-правилам (службы Master Data Services)
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2288ef43-5392-47ea-b651-ec25e5692a14
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 867f56234801e7eb659128ebeb35c38dddd2742e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 885d0c1018c1d30fd4ea5d10276c971dbbf0a114
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085572"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728848"
 ---
 # <a name="validate-specific-members-against-business-rules-master-data-services"></a>Подтверждение конкретных членов, обнаруженных при проверке на соответствие бизнес-правилам (службы Master Data Services)
 
@@ -27,10 +27,10 @@ ms.locfileid: "68085572"
   В среде [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]бизнес-правила можно применять выборочно, если требуется обновить или проверить подмножество элементов с использованием бизнес-правил.  
   
 > [!NOTE]  
->  Инструкции о том, как применить бизнес-правила ко всем элементам в версии модели, см. в разделе [проверка версии на соответствие бизнес-правила &#40;службы Master Data Services&#41;](../master-data-services/validate-a-version-against-business-rules-master-data-services.md).  
+>  Инструкции о том, как применить бизнес-правила ко всем элементам в версии модели, см. в разделе [Validate a Version against Business Rules &#40;Master Data Services&#41;](../master-data-services/validate-a-version-against-business-rules-master-data-services.md).  
   
-## <a name="prerequisites"></a>предварительные требования  
- Для выполнения этой процедуры:  
+## <a name="prerequisites"></a>Предварительные требования  
+ Чтобы выполнить эту процедуру:  
   
 -   Необходимо иметь разрешение на доступ к функциональной области **Обозреватель** .  
   
@@ -48,7 +48,7 @@ ms.locfileid: "68085572"
   
 5.  Нажмите кнопку **Применить правила**. Бизнес-правила применяются только к элементам, отображенным в сетке.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
  [Подтверждение исправления проблемы, обнаруженной при проверке на соответствие бизнес-правилам (службы Master Data Services)](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)   
  [Бизнес-правила (службы Master Data Services)](../master-data-services/business-rules-master-data-services.md)  
   

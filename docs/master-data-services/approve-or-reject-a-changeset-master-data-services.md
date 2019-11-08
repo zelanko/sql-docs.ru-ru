@@ -1,5 +1,5 @@
 ---
-title: Утверждение или отклонение набора изменений (Master Data Services) | Документы Майкрософт
+title: Утверждение или отклонение набора изменений
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 45bd01f9-ae15-4fc5-a2ba-eee565a26ef8
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 5c45d59fbdeaeeb8a2fe37800d81a63051770924
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 401983aa2e5094560f7bcc852c839986ffe4234d
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047736"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728770"
 ---
 # <a name="approve-or-reject-a-changeset-master-data-services"></a>Утверждение или отклонение набора изменений (Master Data Services)
 
@@ -23,7 +23,7 @@ ms.locfileid: "68047736"
 
   Набор изменений — это совокупность ожидающих изменений основных данных. Если для изменений сущности требуется утверждение администратора, после отправки набора изменений на утверждение администратор может просмотреть и утвердить или отклонить его.  
   
-## <a name="prerequisites"></a>предварительные требования  
+## <a name="prerequisites"></a>Предварительные требования  
   
 -   Необходимо иметь разрешение на доступ к функциональной области **Обозреватель** . Дополнительные сведения см. в разделе [Разрешения функциональной области (службы Master Data Services)](../master-data-services/functional-area-permissions-master-data-services.md).  
   
@@ -49,9 +49,9 @@ ms.locfileid: "68047736"
   
 6.  Чтобы утвердить набор изменений, нажмите кнопку **Утвердить** . Набор изменений фиксируется автоматически.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
  [Создание набора изменений (Master Data Services)](../master-data-services/create-a-changeset-master-data-services.md)   
- [Применение и обновление набора изменений (Master Data Services)](../master-data-services/apply-and-update-a-changeset-master-data-services.md)   
+ [Применение и обновление набора изменений (службы Master Data Services)](../master-data-services/apply-and-update-a-changeset-master-data-services.md)   
  [Фиксация или отправка набора изменений (Master Data Services)](../master-data-services/commit-or-submit-a-changeset-master-data-services.md)  
   
   

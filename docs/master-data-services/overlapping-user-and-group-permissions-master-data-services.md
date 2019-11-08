@@ -1,5 +1,5 @@
 ---
-title: Перекрытие разрешений пользователей и групп (службы Master Data Services) | Документы Майкрософт
+title: Пересечение разрешений для пользователей и групп
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 31c3cf7d-17d4-4474-b6a7-ffcb9fc45b37
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 44c4374e2c1304f381775be5a37f42ec3c88afc6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2df45ce2a08e545bc7da11ab3f97df8aa86b0c26
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67904011"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727934"
 ---
 # <a name="overlapping-user-and-group-permissions-master-data-services"></a>Перекрытие разрешений пользователей и групп (службы основных данных)
 
@@ -53,7 +53,7 @@ ms.locfileid: "67904011"
   
  Группа 2 имеет разрешение **Чтение** для сущности Product.  
   
- Результат: Действующее разрешение пользователя — **Обновление** для сущности Product.  
+ Результат: действующим разрешением пользователя для сущности Product будет **Обновить** .  
   
 ## <a name="example-2"></a>Пример 2  
  ![mds_conc_user_group_ex_2](../master-data-services/media/mds-conc-user-group-ex-2.gif "mds_conc_user_group_ex_2")  
@@ -66,7 +66,7 @@ ms.locfileid: "67904011"
   
  Группа 2 имеет разрешение **Запретить** для сущности Product.  
   
- Результат: Действующее разрешение пользователя — **Запретить** для сущности Product.  
+ Результат: действующим разрешением пользователя для сущности Product будет **Запретить** .  
   
 ## <a name="example-3"></a>Пример 3  
  ![mds_conc_user_group_ex_3](../master-data-services/media/mds-conc-user-group-ex-3.gif "mds_conc_user_group_ex_3")  
@@ -79,10 +79,10 @@ ms.locfileid: "67904011"
   
  Группа 2 имеет разрешение **Чтение** для группы элементов в узле иерархии.  
   
- Результат: действующее разрешение пользователя — **Обновить** для элементов.  
+ Результат: действующее разрешение пользователя для элементов — **Обновить** .  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
  [Способ определения разрешений (службы Master Data Services)](../master-data-services/how-permissions-are-determined-master-data-services.md)   
- [Перекрытие разрешений моделей и элементов (службы Master Data Services)](../master-data-services/overlapping-model-and-member-permissions-master-data-services.md)  
+ [Перекрытие разрешений моделей и элементов (службы основных данных)](../master-data-services/overlapping-model-and-member-permissions-master-data-services.md)  
   
   

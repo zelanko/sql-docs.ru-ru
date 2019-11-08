@@ -1,5 +1,5 @@
 ---
-title: Даты и времени и наборы строк схемы | Документация Майкрософт
+title: Дата и время и наборы строк схемы | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,16 +13,15 @@ ms.assetid: 8c35e86f-0597-4ef4-b2b8-f643e53ed4c2
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 21f72a13f8f5f7ac93b0f31716632c9280df5fb9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c7290c9e7a55e27a829a943157e1b0bea00f42d2
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68107023"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73773502"
 ---
 # <a name="metadata---date-and-time-and-schema-rowsets"></a>Метаданные — наборы строк даты и времени и схемы
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   В этом разделе содержатся сведения о наборе строк COLUMNS и о наборе строк PROCEDURE_PARAMETERS. Эти сведения относятся к усовершенствованиям даты и времени поставщика OLE DB, реализованного в [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
   
@@ -60,12 +59,12 @@ ms.locfileid: "68107023"
   
  Флаг DBCOLUMNFLAGS_SS_ISVARIABLESCALE допустим только при соединении с сервером [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (или более поздней версией). DBCOLUMNFLAGS_SS_ISFIXEDSCALE остается неопределенным при соединении с серверами низкого уровня.  
   
-## <a name="procedureparameters-rowset"></a>Набор строк PROCEDURE_PARAMETERS  
+## <a name="procedure_parameters-rowset"></a>Набор строк PROCEDURE_PARAMETERS  
  DATA_TYPE содержит те же значения, что и набор строк схемы COLUMNS, а TYPE_NAME содержит тип сервера.  
   
  Добавлен новый столбец SS_DATETIME_PRECISION. Он возвращает точность типа, как в столбце DATETIME_PRECISION, аналогично набору строк COLUMNS.  
   
-## <a name="providertypes-rowset"></a>Набор строк PROVIDER_TYPES  
+## <a name="provider_types-rowset"></a>Набор строк PROVIDER_TYPES  
  Для типов даты-времени возвращаются следующие строки:  
   
 |Тип -><br /><br /> Столбец|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
@@ -94,7 +93,7 @@ ms.locfileid: "68107023"
   
  В OLE DB для числовых и десятичных типов определяются только значения MINIMUM_SCALE и MAXIMUM_SCALE, поэтому использование этих столбцов собственным клиентом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для типов time, datetime2 и datetimeoffset является нестандартным.  
   
-## <a name="see-also"></a>См. также  
- [Метаданные &#40;OLE DB&#41;](https://msdn.microsoft.com/library/605e3be5-aeea-4573-9847-b866ed3c8bff)  
+## <a name="see-also"></a>См. также раздел  
+ [OLE DB &#40;метаданных&#41;](https://msdn.microsoft.com/library/605e3be5-aeea-4573-9847-b866ed3c8bff)  
   
   

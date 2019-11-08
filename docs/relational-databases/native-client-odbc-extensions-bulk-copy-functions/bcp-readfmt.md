@@ -18,16 +18,15 @@ ms.assetid: 654001c8-ae9f-425c-b820-f0191bf89367
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7f26e0dfeab95d4ad524f888d8f68a5aa569d80b
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 6e0277959c1776dfbe9bd088c639f243ad6a2f7d
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71707449"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73782516"
 ---
 # <a name="bcp_readfmt"></a>bcp_readfmt
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   Считывает определение формата файла данных из указанного файла форматирования.  
   
@@ -50,7 +49,7 @@ RETCODE bcp_readfmt (
 ## <a name="returns"></a>Возвращает  
  SUCCEED или FAIL.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  После того как **bcp_readfmt** считывает значения формата, он выполняет соответствующие вызовы [bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md) и [bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md). Пользователю не требуется анализировать файл форматирования и выполнять эти вызовы.  
   
  Чтобы сохранить файл форматирования, вызовите функцию [bcp_writefmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-writefmt.md). Вызовы функции **bcp_readfmt** могут ссылаться на сохраненные форматы. Дополнительные сведения см. в разделе [bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md).  
@@ -107,7 +106,7 @@ if (bcp_exec(hdbc, &nRowsProcessed) == SUCCEED)
 // Carry on.  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
  [Функции массового копирования](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

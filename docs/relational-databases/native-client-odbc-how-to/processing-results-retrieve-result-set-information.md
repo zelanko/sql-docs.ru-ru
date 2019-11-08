@@ -14,32 +14,31 @@ ms.assetid: 34f235e4-f80b-4123-8764-9deb18506f14
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2b99d0b97179899b804a31b48a1334172e214f9f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f2d998dd8b4444298ff67abc8369993d17e26f55
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68133448"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73780334"
 ---
 # <a name="processing-results---retrieve-result-set-information"></a>Результаты обработки — получение сведений о результирующем наборе
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
     
 ### <a name="to-get-information-about-a-result-set"></a>Получение сведений о результирующем наборе  
   
-1.  Вызовите [SQLNumResultCols](../../relational-databases/native-client-odbc-api/sqlnumresultcols.md) получить количество столбцов в результирующем наборе.  
+1.  Вызовите [SQLNumResultCols](../../relational-databases/native-client-odbc-api/sqlnumresultcols.md) , чтобы получить количество столбцов в результирующем наборе.  
   
 2.  Для каждого столбца в результирующем наборе:  
   
-    -   Вызовите [SQLDescribeCol](../../relational-databases/native-client-odbc-api/sqldescribecol.md) для получения сведений о столбце результатов.  
+    -   Вызовите [SQLDescribeCol](../../relational-databases/native-client-odbc-api/sqldescribecol.md) , чтобы получить сведения о столбце Result.  
   
-     либо  
+     или  
   
-    -   Вызовите [SQLColAttribute](../../relational-databases/native-client-odbc-api/sqlcolattribute.md) чтобы возвратить сведения конкретного дескриптора о столбце результатов.  
+    -   Вызовите [SQLColAttribute](../../relational-databases/native-client-odbc-api/sqlcolattribute.md) , чтобы получить конкретные сведения о дескрипторе столбца результатов.  
   
-## <a name="see-also"></a>См. также  
-[Обработка результатов &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/processing-results-process-results.md)
+## <a name="see-also"></a>См. также раздел  
+[Обработка результатов &#40;в ODBC&#41;](../../relational-databases/native-client-odbc-how-to/processing-results-process-results.md)
 
 [Определение характеристик результирующего набора &#40;ODBC&#41;](../../relational-databases/native-client-odbc-results/determining-the-characteristics-of-a-result-set-odbc.md)  
   

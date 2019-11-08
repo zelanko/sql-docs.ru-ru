@@ -1,6 +1,6 @@
 ---
-title: Добавление нескольких условий к бизнес-правилу (службы Master Data Services) | Документы Майкрософт
-ms.custom: ''
+title: Добавление условий к бизнес-правилу
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
@@ -12,24 +12,24 @@ helpviewer_keywords:
 ms.assetid: 5f0f6958-6cf2-444b-bdcd-05b887637a0b
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: bc678925ca35260131b318a1c3f674f5157a1fe5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4b85846202ef1cd8a30012dddb2c88803c901d16
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047839"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728799"
 ---
 # <a name="add-multiple-conditions-to-a-business-rule-master-data-services"></a>Добавление нескольких условий к бизнес-правилу (службы Master Data Services)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  Чтобы в среде [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]создать более сложное бизнес-правило, к нему с помощью операторов **AND** и **OR** можно добавить несколько условий.  
+  Чтобы в среде [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] создать более сложное бизнес-правило, к нему с помощью операторов **AND** и **OR** можно добавить несколько условий.  
   
 > [!NOTE]  
 >  Если в создаваемом бизнес-правиле используется оператор **OR** , рассмотрите возможность создания отдельного правила для каждой из условных инструкций, которые можно применить независимо. При необходимости правила можно исключать, что повышает гибкость и упрощает устранение неполадок.  
   
 ## <a name="prerequisites"></a>Предварительные требования  
- Для выполнения этой процедуры:  
+ Чтобы выполнить эту процедуру:  
   
 -   необходимо иметь разрешение на доступ к функциональной области **Администрирование системы** ;  
   
@@ -57,7 +57,7 @@ ms.locfileid: "68047839"
   
 9. Нажмите кнопку **Добавить**. Отобразится панель.  
   
-10. Из раскрывающегося списка **Атрибут** выберите атрибут.  
+10. В раскрывающемся списке **Атрибут** выберите атрибут.  
   
 11. В раскрывающемся списке **Оператор** выберите условие.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "68047839"
     > [!TIP]  
     >  Можно выбрать несколько условий и щелчком правой кнопкой мыши сгруппировать их внутри логического оператора. Кроме того, можно разгруппировать условия, содержащиеся в определенном логическом операторе.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
  [Бизнес-правила (службы Master Data Services)](../master-data-services/business-rules-master-data-services.md)   
  [Изменение имени бизнес-правила (службы Master Data Services)](../master-data-services/change-a-business-rule-name-master-data-services.md)   
  [Настройка в бизнес-правилах отправки уведомлений (службы Master Data Services)](../master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)  

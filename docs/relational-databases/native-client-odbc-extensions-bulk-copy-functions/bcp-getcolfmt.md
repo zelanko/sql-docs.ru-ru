@@ -18,16 +18,15 @@ ms.assetid: f8bdada5-7b2d-4475-8c98-f93e9d77b130
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 40e7f63438bbe6ff68284aa573e1307b17087234
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 8c32df055ea1330fb0d1bdd32b2a3860519d2575
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71707546"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73782725"
 ---
 # <a name="bcp_getcolfmt"></a>bcp_getcolfmt
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   Используется для нахождения значения свойства формата столбца.  
   
@@ -66,17 +65,17 @@ RETCODE bcp_getcolfmt (
 ## <a name="returns"></a>Возвращает  
  SUCCEED или FAIL.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  Значения свойства формата столбца перечислены в разделе [bcp_setcolfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-setcolfmt.md) . Они устанавливаются с помощью вызова функции **bcp_setcolfmt** , а для их поиска используется функция **bcp_getcolfmt** .  
   
  Изменения в поведении заметны при подключении к серверному компьютеру с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] (или более поздней версии), если сравнивать с более ранними версиями [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Дополнительные сведения см. в разделе [Обнаружение метаданных](../../relational-databases/native-client/features/metadata-discovery.md).  
   
 ## <a name="bcp_getcolfmt-support-for-enhanced-date-and-time-features"></a>Поддержка функцией bcp_getcolfmt улучшенных возможностей даты-времени  
- Типы, используемые с свойством **BCP_FMT_TYPE** для типов даты и времени, задаются в изменениях при выполнении [операции копирования для расширенных &#40;типов даты и&#41;времени OLE DB и ODBC](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md).  
+ Типы, используемые со свойством **BCP_FMT_TYPE** для типов даты и времени, задаются в изменениях при выполнении [операции копирования для расширенных &#40;типов даты и&#41;времени OLE DB и ODBC](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md).  
   
  Дополнительные сведения см. в разделе [улучшения &#40;даты и времени&#41;ODBC](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
  [Функции массового копирования](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

@@ -16,16 +16,15 @@ ms.assetid: 6526b892-1d58-4f55-8335-f09887f6ea02
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ce1ee4536769ea1531a11ca3d57f049310ade042
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 6bee3ca51a46559231242188835ff1b75624cb68
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71707596"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73782056"
 ---
 # <a name="sql-server-driver-extensions---bulk-copy-functions"></a>Расширения драйвера SQL Server — функции массового копирования
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   Интерфейс ODBC — это прикладной программный интерфейс Microsoft Win32, используемый приложениями для доступа к данным в источниках данных ODBC. Справочник по драйверу ODBC собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не содержит описания всех вызовов функций ODBC. Обсуждаются только те функции, параметры которых специфичны для драйвера или для поведения при использовании с драйвером ODBC собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -35,7 +34,7 @@ ms.locfileid: "71707596"
   
  Приложение, использующее вызовы функции BCP API, необходимо связать с библиотекой (LIB-файлом), которая поставлялась с драйвером (DLL-файлом), используемым приложением. Приложение BCP не должно быть связано более чем с одной библиотекой драйвера.  
   
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
   
 -   [bcp_batch](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-batch.md)  
   
@@ -73,8 +72,8 @@ ms.locfileid: "71707596"
   
 -   [bcp_writefmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-writefmt.md)  
   
-## <a name="see-also"></a>См. также  
- [Расширения драйверов SQL Server](https://msdn.microsoft.com/library/1043bc93-965d-4939-bd1c-21e9d8d3e9ac)   
+## <a name="see-also"></a>См. также раздел  
+ [SQL Server расширения драйверов](https://msdn.microsoft.com/library/1043bc93-965d-4939-bd1c-21e9d8d3e9ac)   
  [Выполнение операций &#40;с массовым копированием в ODBC&#41;](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)  
   
   

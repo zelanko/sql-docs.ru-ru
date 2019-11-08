@@ -1,6 +1,6 @@
 ---
-title: Добавление атрибутов в группу отслеживания изменений (службы Master Data Services) | Документы Майкрософт
-ms.custom: ''
+title: Добавление атрибутов в группу Отслеживание изменений
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e153eb5f-70ca-4c6f-89d8-1f937ed3917d
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: f3ba92322f64550f8a773b49ba533e96e113e17f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ac3f582767e3df524716f92ea4d57e53cb7b9246
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047896"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728815"
 ---
 # <a name="add-attributes-to-a-change-tracking-group-master-data-services"></a>Добавление атрибутов в группу отслеживания изменений (службы Master Data Services)
 
@@ -30,14 +30,14 @@ ms.locfileid: "68047896"
 > [!NOTE]  
 >  Если после добавления атрибута в группу отслеживания изменений значения атрибута изменяются, атрибут помечается как измененный в базе данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Создайте бизнес-правило, чтобы предпринимать действия в соответствии с произведенным изменением.  
   
-## <a name="prerequisites"></a>предварительные требования  
- Для выполнения этой процедуры:  
+## <a name="prerequisites"></a>Предварительные требования  
+ Чтобы выполнить эту процедуру:  
   
 -   необходимо иметь разрешение на доступ к функциональной области **Администрирование системы** ;  
   
 -   необходимо быть администратором модели. Дополнительные сведения см. в статье [Администраторы (службы Master Data Services)](../master-data-services/administrators-master-data-services.md).  
   
--   для добавления в группу отслеживания изменений атрибуты должны уже существовать. Дополнительные сведения см. в статье [Создание текстового атрибута (службы Master Data Services)](../master-data-services/create-a-text-attribute-master-data-services.md).  
+-   для добавления в группу отслеживания изменений атрибуты должны уже существовать. Дополнительные сведения см. в статье [Create a Text Attribute &#40;Master Data Services&#41;](../master-data-services/create-a-text-attribute-master-data-services.md).  
   
 ### <a name="to-add-attributes-to-a-change-tracking-group"></a>Добавление атрибутов в группу отслеживания изменений  
   
@@ -73,7 +73,7 @@ ms.locfileid: "68047896"
   
 -   [Инициирование действия на основе значения атрибута (службы Master Data Services)](../master-data-services/initiate-actions-based-on-attribute-value-changes-master-data-services.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
  [Создание текстового атрибута (службы Master Data Services)](../master-data-services/create-a-text-attribute-master-data-services.md)   
  [Создание атрибута на основе домена (службы Master Data Services)](../master-data-services/create-a-domain-based-attribute-master-data-services.md)  
   

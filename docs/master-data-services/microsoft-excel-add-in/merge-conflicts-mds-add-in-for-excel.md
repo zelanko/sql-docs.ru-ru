@@ -1,5 +1,5 @@
 ---
-title: Слияние конфликтов (надстройка MDS для Excel) | Документы Майкрософт
+title: Слияние конфликтов
 ms.custom: microsoft-excel-add-in
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: cf95978f-a2c5-4325-8606-dbd4e88741b8
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 22c25126106c6b93d779b6c494af0bff7b5b08af
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1062c7269c5afc0d6aecb781e7254e87c61bd65d
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68074565"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727995"
 ---
 # <a name="merge-conflicts-mds-add-in-for-excel"></a>Слияние конфликтов (надстройка MDS для Excel)
 
@@ -23,8 +23,8 @@ ms.locfileid: "68074565"
 
   В надстройке [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] для Excel попытка публикации данных, измененных на сервере другим пользователем, завершится ошибкой из-за конфликта. Чтобы устранить эту ошибку, можно выполнить слияние конфликтов и повторно опубликовать изменения.  
   
-## <a name="prerequisites"></a>предварительные требования  
- Для выполнения этой процедуры:  
+## <a name="prerequisites"></a>Предварительные требования  
+ Чтобы выполнить эту процедуру:  
   
 -   Необходимо иметь разрешение на доступ к функциональной области **Обозреватель** .  
   
@@ -50,7 +50,7 @@ ms.locfileid: "68074565"
   
 4.  Нажав кнопку **Применить**, можно внести дополнительные изменения и опубликовать данные снова. Можно также нажать кнопку **Отменить** , чтобы отменить обновление и повторно загрузить последнюю версию с сервера.  
   
-## <a name="see-also"></a>См. также  
- [Обзор: Импорт данных из Excel &#40;надстройка MDS для Excel&#41;](../../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)  
+## <a name="see-also"></a>См. также раздел  
+ [Обзор импорта данных из Excel (надстройка MDS для Excel)](../../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)  
   
   

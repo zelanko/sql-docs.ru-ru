@@ -1,5 +1,5 @@
 ---
-title: Новые возможности служб Master Data Services (MDS) | Документы Майкрософт
+title: Новые&#39;возможности
 ms.custom: ''
 ms.date: 07/08/2016
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ad530f60-d480-4457-ba7a-93a10c8a1695
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: c6b68e5643686d71e24726d44ece35e284f40c3a
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: edf04dad0ce7f0a86bd651a2699d01f9dbea029c
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68810501"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727789"
 ---
 # <a name="what39s-new-in-master-data-services-mds"></a>Новые возможности служб Master Data Services (MDS)
 
@@ -27,7 +27,7 @@ ms.locfileid: "68810501"
   
  **Инструкции по установке служб Master Data Services, настройке базы данных и веб-сайта, а также развертыванию примеров моделей см. в статье** [Общие сведения о службах Master Data Services (MDS)](../master-data-services/master-data-services-overview-mds.md).  
   
- **Скачать**  
+ **Загрузить**  
   
 -   Чтобы скачать [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], перейдите на сайт  **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)** .  
   
@@ -37,7 +37,7 @@ ms.locfileid: "68810501"
   
  Улучшенная производительность позволяет создавать модели большего размера, эффективнее загружать данные и повысить общее быстродействие. Улучшение производительности включает уменьшение времени загрузки данных в надстройке для Microsoft Excel и добавление надстройки для обработки больших сущностей.  
   
- Дополнительные сведения о надстройке для Microsoft Excel см. в разделе [Надстройка Master Data Services для Microsoft Excel](../master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md).  
+ Дополнительные сведения о надстройке для Microsoft Excel см. в разделе [Master Data Services Add-in for Microsoft Excel](../master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md).  
   
  Включены следующие улучшения функций.  
   
@@ -106,7 +106,7 @@ ms.locfileid: "68810501"
   
  Частоту удаления данных из журналов транзакций можно настроить с помощью параметров системы, а также на уровне модели. Дополнительные сведения см. в разделах [Системные параметры (службы Master Data Services)](../master-data-services/system-settings-master-data-services.md)и [Создание модели (службы Master Data Services)](../master-data-services/create-a-model-master-data-services.md). Дополнительные сведения о транзакциях см. в разделе [Транзакции (службы Master Data Services)](../master-data-services/transactions-master-data-services.md).  
   
- MDS_MDM_Sample_Log_Maintenace, задание агента SQL Server, инициирует очистку журналов транзакций и запускается каждую ночь. Для изменения расписания для этого задания можно использовать агент SQL Server.  
+ MDS_MDM_Sample_Log_Maintenace, задание агента SQL Server, запускает очистку журналов транзакций и выполняется каждую ночь. Для изменения расписания для этого задания можно использовать агент SQL Server.  
   
  Кроме того, для очистки журналов транзакций можно вызвать хранимые процедуры. Дополнительные сведения см. в разделе [Транзакции (службы Master Data Services)](../master-data-services/transactions-master-data-services.md).  
   
@@ -225,13 +225,13 @@ ms.locfileid: "68810501"
    
  **Пакеты развертывания примеров моделей обновлены**  
   
- Пакеты примеров были обновлены для поддержки новых сценариев. Дополнительные сведения см. в разделе [Образцы SQL Server: пакеты развертывания моделей (MDS)](../master-data-services/sql-server-samples-model-deployment-packages-mds.md).  
+ Пакеты примеров были обновлены для поддержки новых сценариев. Дополнительные сведения см. в статье [Примеры: пакеты развертывания моделей (службы Master Data Services)](../master-data-services/sql-server-samples-model-deployment-packages-mds.md).  
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
 
 [!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
  [Функции, поддерживаемые различными выпусками SQL Server 2016 служб Master Data Services и качества данных](../master-data-services/master-data-services-and-data-quality-services-features-support.md)  
  [Устаревшие функции Master Data Services](../master-data-services/deprecated-master-data-services-features.md)  
  [Неподдерживаемые функции служб Master Data Services](../master-data-services/discontinued-master-data-services-features.md)

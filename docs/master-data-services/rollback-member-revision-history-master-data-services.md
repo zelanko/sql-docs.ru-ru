@@ -1,5 +1,5 @@
 ---
-title: Откат журнала изменений элемента (службы Master Data Services) | Документы Майкрософт
+title: Откат журнала изменений элемента
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: d39d3474-20e7-429f-9c8d-fcc4eb0854fc
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: fb1768c056fae60e2ee3784306ac7882e123fe9d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 51465b3f3ae7193d925d30203c5a831a03b8d51a
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085678"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727924"
 ---
 # <a name="rollback-member-revision-history-master-data-services"></a>Откат журнала изменений элемента (Master Data Services)
 
@@ -23,7 +23,7 @@ ms.locfileid: "68085678"
 
   Запись в журнал изменений элемента осуществляется каждый раз при изменении элемента. Существует возможность откатить журнал изменений элемента к предыдущей версии.  
   
-## <a name="prerequisites"></a>предварительные требования  
+## <a name="prerequisites"></a>Предварительные требования  
   
 -   Необходимо иметь разрешение на обновление хотя бы одного из атрибутов выбранного элемента. При откате журнала изменений все значения атрибутов, которые могут быть обновлены, откатываются к значениям предыдущей версии.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "68085678"
   
 4.  Выберите версию для отката и нажмите **Откат**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
  [Журнал изменений элемента (Master Data Services)](../master-data-services/member-revision-history-master-data-services.md)   
  [Изменение типа журнала транзакций сущности (Master Data Services)](../master-data-services/change-the-entity-transaction-log-type-master-data-services.md)  
   

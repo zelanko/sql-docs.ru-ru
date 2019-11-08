@@ -1,5 +1,5 @@
 ---
-title: Отмена транзакции (службы Master Data Services) | Документы Майкрософт
+title: Отмена транзакции
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6f7c3f07-0f64-4283-8c9c-93facd00a046
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 44424916a27220713ab5b31639ba86bea365026f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 870341b6ae6a3ffbda345aa7a0abc4a2fe253ac5
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67897807"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728929"
 ---
 # <a name="reverse-a-transaction-master-data-services"></a>Отмена транзакции (службы Master Data Services)
 
@@ -25,7 +25,7 @@ ms.locfileid: "67897807"
 
   В службах [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]администратор может обратить транзакцию, когда необходимо отменить действие. Примеры транзакций: изменения значений атрибутов, перемещение иерархий, удаление элементов. Этот раздел относится только к транзакциям сущностей с типом журнала транзакций "Атрибут". Перейдите на страницу обозревателя сущностей для просмотра журнала сущностей с типом журнала транзакций "Элемент".  
   
-## <a name="prerequisites"></a>предварительные требования  
+## <a name="prerequisites"></a>Предварительные требования  
   
 -   необходимо иметь разрешение на доступ к функциональной области **Управление версиями** ;  
   
@@ -33,7 +33,7 @@ ms.locfileid: "67897807"
   
 ### <a name="to-reverse-a-transaction"></a>Отмена транзакции  
   
-1.  На домашней странице [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] щелкните **Управление версиями**.  
+1.  На домашней странице [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] нажмите **Управление версиями**.  
   
 2.  В строке меню выберите пункт **Транзакции**.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "67897807"
   
 7.  В диалоговом окне подтверждения нажмите кнопку **ОК**. В сетку добавляется еще одна транзакция, соответствующая отмененной транзакции.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
  [Транзакции (службы Master Data Services)](../master-data-services/transactions-master-data-services.md)   
  [Повторная активация элемента или коллекции (службы Master Data Services)](../master-data-services/reactivate-a-member-or-collection-master-data-services.md)  
  [Откат журнала изменений элемента](../master-data-services/rollback-member-revision-history-master-data-services.md)

@@ -1,5 +1,5 @@
 ---
-title: Изменение имени явной иерархии (службы Master Data Services) | Документы Майкрософт
+title: Изменение имени явной иерархии
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 12991603-474e-4042-b160-b1f7979694b1
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 0e73afa32b07f6d66fc6689215733fea35548f9d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3604fe0fa1a2b15385ebea9d31550fc984c14a42
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006332"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728629"
 ---
 # <a name="change-an-explicit-hierarchy-name-master-data-services"></a>Изменение имени явной иерархии (службы Master Data Services)
 
@@ -25,8 +25,8 @@ ms.locfileid: "68006332"
 
   В службах [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]можно изменить имя явной иерархии.  
   
-## <a name="prerequisites"></a>предварительные требования  
- Для выполнения этой процедуры:  
+## <a name="prerequisites"></a>Предварительные требования  
+ Чтобы выполнить эту процедуру:  
   
 -   необходимо иметь разрешение на доступ к функциональной области **Администрирование системы** ;  
   
@@ -48,7 +48,7 @@ ms.locfileid: "68006332"
   
 7.  Нажмите кнопку **Сохранить**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
  [Явные иерархии (службы Master Data Services)](../master-data-services/explicit-hierarchies-master-data-services.md)   
  [Создание явной иерархии (службы Master Data Services)](../master-data-services/create-an-explicit-hierarchy-master-data-services.md)   
  [Удаление явной иерархии (службы Master Data Services)](../master-data-services/delete-an-explicit-hierarchy-master-data-services.md)  

@@ -1,5 +1,5 @@
 ---
-title: Требуется утверждение (службы Master Data Services) | Документы Майкрософт
+title: Требуется утверждение
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: b475a53d-269d-49f3-bb42-965c555f80be
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: f8d15e06a9a832d28e9314f6dc0cb1c80daf3207
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 61d03410e5217175335caf0ca37241b28c887989
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047760"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729757"
 ---
 # <a name="approval-required-master-data-services"></a>Требуется утверждение (Master Data Services)
 
@@ -30,8 +30,8 @@ ms.locfileid: "68047760"
 >   
 >  Изменения, внесенные бизнес-правилом, не проходят утверждение.  
   
-## <a name="prerequisites"></a>предварительные требования  
- Для выполнения этой процедуры:  
+## <a name="prerequisites"></a>Предварительные требования  
+ Чтобы выполнить эту процедуру:  
   
 -   необходимо иметь разрешение на доступ к функциональной области "Администрирование системы";  
   
@@ -49,7 +49,7 @@ ms.locfileid: "68047760"
   
 4.  Нажмите кнопку **Изменить**, выберите **Требуется утверждение**, а затем нажмите кнопку **Сохранить**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
  [Наборы изменений (Master Data Services)](../master-data-services/changesets-master-data-services.md)  
   
   

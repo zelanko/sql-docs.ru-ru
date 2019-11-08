@@ -1,5 +1,5 @@
 ---
-title: Удаление версии (службы Master Data Services) | Документы Майкрософт
+title: Удаление версии
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2a4eeffe-8379-4744-ad44-c27d8c8ac9a8
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: e0886701a5e3554702c077c2a165029af71a545e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8ac756143790e8d6c9494489438157ee44c02d06
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67906423"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728347"
 ---
 # <a name="delete-a-version-master-data-services"></a>Удаление версии (службы Master Data Services)
 
@@ -29,10 +29,10 @@ ms.locfileid: "67906423"
 > [!WARNING]  
 >  После удаления единственной версии модели она станет непригодной к использованию.  
   
-## <a name="prerequisites"></a>предварительные требования  
- Для выполнения этой процедуры:  
+## <a name="prerequisites"></a>Предварительные требования  
+ Чтобы выполнить эту процедуру:  
   
--   пользователь должен иметь разрешения на просмотр представления mdm.viw_SYSTEM_SCHEMA_VERSION и на выполнение хранимой процедуры mds.udpVersionDelete в базе данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. Дополнительные сведения см. в разделе [Защита объектов базы данных (службы Master Data Services)](../master-data-services/database-object-security-master-data-services.md).  
+-   пользователь должен иметь разрешения на просмотр представления mdm.viw_SYSTEM_SCHEMA_VERSION и на выполнение хранимой процедуры mds.udpVersionDelete в базе данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Дополнительные сведения см. в разделе [Защита объектов базы данных (службы Master Data Services)](../master-data-services/database-object-security-master-data-services.md).  
   
 ### <a name="to-delete-a-version"></a>Удаление версии  
   
@@ -55,7 +55,7 @@ ms.locfileid: "67906423"
     > [!NOTE]  
     >  Возможно, придется подождать несколько минут, чтобы изменение отобразилось в веб-приложении.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
  [Версии (службы Master Data Services)](../master-data-services/versions-master-data-services.md)   
  [Копирование версии (службы Master Data Services)](../master-data-services/copy-a-version-master-data-services.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Группы атрибутов (службы Master Data Services) | Документы Майкрософт
+title: Группы атрибутов
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 648b3d0b-e15a-45f9-8292-3a54a072e62c
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 239b3b2131dd5da345fe415dcaa0d6846a62e1ce
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2b5cefb3548886cc26e55a9f408ac68e2bd30620
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047609"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729768"
 ---
 # <a name="attribute-groups-master-data-services"></a>Группы атрибутов (службы Master Data Services)
 
@@ -42,7 +42,7 @@ ms.locfileid: "68047609"
  Управление группами атрибутов осуществляется в функциональной области **Администрирование системы** в веб-приложении [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)].  
   
 ## <a name="show-or-hide-attribute-groups"></a>Отображение или скрытие групп атрибутов  
- При создании группы атрибутов она автоматически скрыта от всех пользователей, кроме того, кто ее создал. Дополнительные сведения о назначении видимости группе см. в разделе [Превращение группы атрибутов в видимую для пользователей &#40;службы Master Data Services&#41;](../master-data-services/make-an-attribute-group-visible-to-users-master-data-services.md).  
+ При создании группы атрибутов она автоматически скрыта от всех пользователей, кроме того, кто ее создал. Дополнительные сведения о назначении видимости группе см. в разделе [Make an Attribute Group Visible to Users &#40;Master Data Services&#41;](../master-data-services/make-an-attribute-group-visible-to-users-master-data-services.md).  
   
  При необходимости скрыть определенный атрибут внутри группы вы можете назначить атрибуту разрешение **Запрещено** . Дополнительные сведения см. в разделе [Разрешения конечного элемента (службы Master Data Services)](../master-data-services/leaf-permissions-master-data-services.md).  
   

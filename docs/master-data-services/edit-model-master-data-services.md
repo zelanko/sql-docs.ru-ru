@@ -1,5 +1,5 @@
 ---
-title: Изменение модели (Master Data Services) | Документы Майкрософт
+title: Изменение модели
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 399eed32-7c61-4239-9c06-996a65219518
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 0eb25db76d1dd14d3eb715072683ee8c046c392b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 89fa4dea57c4936a2d6a51e08f48668215ba53a2
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68052076"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728206"
 ---
 # <a name="edit-model-master-data-services"></a>Изменение модели (Master Data Services)
 
@@ -27,8 +27,8 @@ ms.locfileid: "68052076"
   
  Дополнительные сведения см. в разделе [Транзакции (службы Master Data Services)](../master-data-services/transactions-master-data-services.md).  
   
-## <a name="prerequisites"></a>предварительные требования  
- Для выполнения этой процедуры:  
+## <a name="prerequisites"></a>Предварительные требования  
+ Чтобы выполнить эту процедуру:  
   
 -   необходимо иметь разрешение на доступ к функциональной области **Администрирование системы** ;  
   
@@ -54,9 +54,9 @@ ms.locfileid: "68052076"
   
 8.  Нажмите **Сохранить модель**.  
   
- В столбце **Состояние** в сетке отображается состояние операции с моделью. При нажатии кнопки **Сохранить модель** появляется изображение ![Обновляется](../master-data-services/media/mds-model-status-updating.png "Обновляется"), которое указывает, что модель обновляется. При наличии ошибок во время создания или изменения модели появляется изображение ![Ошибка](../master-data-services/media/mds-model-status-error.png "Ошибка"). В противном случае отображается состояние "ОК" и появляется изображение ![ОК](../master-data-services/media/mds-model-status-ok.png "ОК") .  
+ В столбце **Состояние** в сетке отображается состояние операции с моделью. При нажатии кнопки **сохранить модель** отображается изображение ![обновления](../master-data-services/media/mds-model-status-updating.png "Обновить") , которое указывает на то, что модель обновляется. При возникновении ошибок при создании или изменении модели отображается изображение ![ошибки](../master-data-services/media/mds-model-status-error.png "Ошибка") . В противном случае отображается состояние "ОК" и появляется изображение ![ОК](../master-data-services/media/mds-model-status-ok.png "OK") .  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также раздел  
  [Создание модели (службы Master Data Services)](../master-data-services/create-a-model-master-data-services.md)   
  [Удаление модели (службы Master Data Services)](../master-data-services/delete-a-model-master-data-services.md)   
  [Модели (службы Master Data Services)](../master-data-services/models-master-data-services.md)  

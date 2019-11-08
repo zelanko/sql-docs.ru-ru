@@ -1,5 +1,5 @@
 ---
-title: Развертывание пакета развертывания модели с помощью мастера | Документы Майкрософт
+title: Развертывание пакета развертывания модели (мастер)
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4f65dc60-0ff8-46e6-9988-5bc5b9603ad0
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 3c546fd0abb82b87cd3d992b5afd270156e84f1b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7e41af6f7b5f1d2a770400ab66191f7957937659
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67906240"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729396"
 ---
 # <a name="deploy-a-model-deployment-package-by-using-the-wizard"></a>Развертывание пакета развертывания модели с помощью мастера
 
@@ -29,8 +29,8 @@ ms.locfileid: "67906240"
 > [!IMPORTANT]  
 >  Пакеты могут быть развернуты только в выпуске [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , в котором они были созданы. Это означает, что пакеты, созданные в среде [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] , не могут быть развернуты в [!INCLUDE[ssSQL14](../includes/sssql14-md.md)].  
   
-## <a name="prerequisites"></a>предварительные требования  
- Для выполнения этой процедуры:  
+## <a name="prerequisites"></a>Предварительные требования  
+ Чтобы выполнить эту процедуру:  
   
 -   необходимо иметь разрешение на доступ к функциональной области **Администрирование системы** в целевой среде служб [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] ;  
   
@@ -60,7 +60,7 @@ ms.locfileid: "67906240"
   
  **Примечания.**  
   
--   Если имя представления подписки в пакете совпадает с именем представления подписки в существующей модели, отображается предупреждение **Представление подписки программы развертывания переименовано**. Кроме того, создается представление *modelname.subscriptionviewname*. Если это имя уже используется, то представление подписки не создается.  
+-   Если имя представления подписки в пакете совпадает с именем представления подписки в существующей модели, отображается предупреждение **Deployer subscription view renamed**(Представление подписки программы развертывания переименовано). Кроме того, создается представление *modelname.subscriptionviewname*. Если это имя уже используется, то представление подписки не создается.  
   
 -   Процесс развертывания состоит из четырех шагов.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "67906240"
   
 -   [Назначение разрешения для объекта модели (службы Master Data Services)](../master-data-services/assign-model-object-permissions-master-data-services.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также раздел  
  [Развертывание моделей (службы Master Data Services)](../master-data-services/deploying-models-master-data-services.md)  
   
   

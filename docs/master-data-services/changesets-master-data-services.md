@@ -1,5 +1,5 @@
 ---
-title: Наборы изменений (службы Master Data Services) | Документы Майкрософт
+title: Наборы изменений
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: f227c49a-ed46-4e0f-8992-83093456cf94
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 5136be23e428e670e5f6928944203c446c120ba1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6d8c277796f743b31dfb5df349352bb6c7470421
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67913643"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728628"
 ---
 # <a name="changesets-master-data-services"></a>Наборы изменений (Master Data Services)
 
@@ -31,7 +31,7 @@ ms.locfileid: "67913643"
   
     1.  Создайте набор изменений. Набор изменений находится в открытом состоянии. См. раздел [Создание набора изменений (Master Data Services)](../master-data-services/create-a-changeset-master-data-services.md)  
   
-    2.  Примените набор изменений и добавьте в него изменения. См. раздел [Применение и обновление набора изменений &#40;службы Master Data Services&#41;](../master-data-services/apply-and-update-a-changeset-master-data-services.md)  
+    2.  Примените набор изменений и добавьте в него изменения. См. раздел [Применение и обновление набора изменений (Master Data Services)](../master-data-services/apply-and-update-a-changeset-master-data-services.md)  
   
     3.  Отправьте набор изменений администратору сущности на утверждение. Набор изменений находится в состоянии ожидания. См. раздел [Фиксация или отправка набора изменений (Master Data Services)](../master-data-services/commit-or-submit-a-changeset-master-data-services.md)  
   
@@ -51,11 +51,11 @@ ms.locfileid: "67913643"
   
     3.  Когда все будет готово, можно зафиксировать набор изменений. См. раздел [Фиксация или отправка набора изменений (Master Data Services)](../master-data-services/commit-or-submit-a-changeset-master-data-services.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также раздел  
  [Создание набора изменений (Master Data Services)](../master-data-services/create-a-changeset-master-data-services.md)   
  [Применение и обновление набора изменений (службы Master Data Services)](../master-data-services/apply-and-update-a-changeset-master-data-services.md)   
  [Фиксация или отправка набора изменений (Master Data Services)](../master-data-services/commit-or-submit-a-changeset-master-data-services.md)   
  [Утверждение или отклонение набора изменений (Master Data Services)](../master-data-services/approve-or-reject-a-changeset-master-data-services.md)   
- [Управление наборами изменений (службы Master Data Services)](../master-data-services/manage-changesets-master-data-services.md)  
+ [Управление наборами изменений (Master Data Services)](../master-data-services/manage-changesets-master-data-services.md)  
   
   

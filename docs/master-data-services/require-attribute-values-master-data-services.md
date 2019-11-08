@@ -1,5 +1,5 @@
 ---
-title: Запрос значений атрибута (службы Master Data Services) | Документы Майкрософт
+title: Запрос значений атрибута
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: a360ef13-0c34-43b8-a87e-2f5d8732d30e
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: e430e158c301279398574bee64d744a40664b623
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0e4a49778b9c75c696d079549f586187b1204fd8
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085698"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728943"
 ---
 # <a name="require-attribute-values-master-data-services"></a>Запрос значений атрибута (службы Master Data Services)
 
@@ -29,8 +29,8 @@ ms.locfileid: "68085698"
 > [!NOTE]  
 >  Если у элемента не хватает значения атрибута на основе домена, то этот элемент не отображается в производной иерархии, основанной на этих связях.  
   
-## <a name="prerequisites"></a>предварительные требования  
- Для выполнения этой процедуры:  
+## <a name="prerequisites"></a>Предварительные требования  
+ Чтобы выполнить эту процедуру:  
   
 -   необходимо иметь разрешение на доступ к функциональной области **Администрирование системы** ;  
   
@@ -58,7 +58,7 @@ ms.locfileid: "68085698"
   
 10. Из раскрывающегося списка **Оператор** выберите **необходимое действие**.  
   
-11. Из раскрывающегося списка **Атрибут** выберите атрибут.  
+11. В раскрывающемся списке **Атрибут** выберите атрибут.  
   
 12. Нажмите кнопку **Сохранить**. В сетку **Then** будет добавлена новая строка.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "68085698"
   
     -   [Подтверждение исправления проблемы, обнаруженной при проверке на соответствие бизнес-правилам (службы Master Data Services)](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
  [Бизнес-правила (службы Master Data Services)](../master-data-services/business-rules-master-data-services.md)   
  [Производные иерархии (службы Master Data Services)](../master-data-services/derived-hierarchies-master-data-services.md)  
   

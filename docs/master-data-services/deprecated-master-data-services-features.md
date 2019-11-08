@@ -1,5 +1,5 @@
 ---
-title: Нерекомендуемые функции служб Master Data Services | Документы Майкрософт
+title: Устаревшие функции Master Data Services
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,12 +11,12 @@ ms.assetid: d8506bda-66dd-45a4-bfc9-3a10fa665acc
 author: lrtoyou1223
 ms.author: lle
 manager: erikre
-ms.openlocfilehash: b5212af4f19cdf26f6c332a83877880c80bc3741
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: e6e2247cd3648e78df0349ec8de2b63f29e52e94
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267035"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729343"
 ---
 # <a name="deprecated-master-data-services-features"></a>Устаревшие функции Master Data Services
 
@@ -53,9 +53,9 @@ ms.locfileid: "68267035"
 * [Журнал изменений элемента](../master-data-services/member-revision-history-master-data-services.md)
   
 ## <a name="external-resources"></a>Внешние ресурсы  
- Запись блога [Не рекомендуется к использованию: явные иерархии и коллекции](https://go.microsoft.com/fwlink/p/?LinkId=615373) на msdn.com.  
+ Запись блога [Deprecated: Explicit Hierarchies and Collections](https://go.microsoft.com/fwlink/p/?LinkId=615373)(Устарелое. Явные иерархии и коллекции) на портале msdn.com.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
  [Неподдерживаемые функции служб Master Data Services](../master-data-services/discontinued-master-data-services-features.md)  
   
   

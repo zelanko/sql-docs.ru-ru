@@ -1,5 +1,5 @@
 ---
-title: Разрешения сущности (службы Master Data Services) | Документы Майкрософт
+title: Разрешения сущности
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 22785062-4faf-46ee-bffa-01cbd6d5a5b3
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 7e50c4ff0b3c69d1f943c0cff266520a2fabc9bc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: db9187a5a30a740e8d790a8b84b5dae597de8bfd
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68051984"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728179"
 ---
 # <a name="entity-permissions-master-data-services"></a>Разрешения сущности (службы Master Data Services)
 
@@ -47,7 +47,7 @@ ms.locfileid: "68051984"
   
  Разрешения на чтение, создание, обновление и удаление можно использовать в различных комбинациях. Когда назначаются разрешения на создание, обновление и удаление, автоматически добавляется и разрешение на чтение.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также раздел  
  [Назначение разрешения для объекта модели (службы Master Data Services)](../master-data-services/assign-model-object-permissions-master-data-services.md)   
  [Разрешения объекта модели (службы Master Data Services)](../master-data-services/model-object-permissions-master-data-services.md)   
  [Сущности (службы Master Data Services)](../master-data-services/entities-master-data-services.md)  

@@ -1,5 +1,5 @@
 ---
-title: Администраторы (службы Master Data Services) | Документы Майкрософт
+title: Администраторы
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d330aa4e-6ade-4b09-b376-1b15d6c78f7d
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 7b70c5182ec177b8867d2afab7d39dc5ac5955a2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 056975a05f697851d1fc0eac773c917c1f22b738
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047812"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729800"
 ---
 # <a name="administrators-master-data-services"></a>Администраторы (службы Master Data Services)
 
@@ -28,7 +28,7 @@ ms.locfileid: "68047812"
   В этой статье описываются типы администраторов в [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]: администраторы моделей, администраторы сущностей и суперпользователь.  
   
 ## <a name="model-administrators"></a>Администраторы модели  
- В среде [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]администратор модели — это пользователь, имеющий разрешение **Администратор** , назначенное для объекта модели верхнего уровня на вкладке **Model Objects** (Объекты модели). Если у пользователя есть разрешение **Администратор** для конкретной модели, оно переопределяет все разрешения для дочерних объектов модели (разрешения для объектов и элементов модели).  
+ В [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]Администратор модели — это пользователь, имеющий разрешение **администратора** , назначенное объекту модели верхнего уровня на вкладке **объекты модели** . Если у пользователя есть разрешение администратора на определенную модель, любые другие разрешения на дочерние объекты модели (разрешения на объекты модели и элементы) закрываются разрешениями **администратора** модели и фактически игнорируются.  
   
 -   Если пользователь имеет доступ к функциональной области **Обозреватель** , то он может добавлять, удалять и обновлять все основные данные в этой области.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "68047812"
  Сделать пользователя администратором модели можно в [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] либо с помощью программных средств. Дополнительные сведения см. в разделе [Создание администратора модели (службы Master Data Services)](../master-data-services/create-a-model-administrator-master-data-services.md).  
   
 ## <a name="entity-administrators"></a>Администраторы сущностей  
- В среде [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]администратор сущности — это пользователь, имеющий разрешения администратора, назначенные объекту сущности верхнего уровня на вкладке Model Objects (Объекты модели). Если у пользователя есть разрешения администратора на сущности, они превосходят и игнорируют другие разрешения на дочерние объекты сущности (разрешения на объекты и элементы модели).  
+ В [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]администратор сущностей — это пользователь, обладающий разрешениями администратора, назначенными объекту сущности на вкладке объекты модели. Когда пользователь имеет разрешения администратора для сущности, любые другие разрешения на дочерние объекты сущности (разрешения на объекты модели и элементы) заменяются разрешениями администратора и игнорируются.  
   
 -   Если пользователь имеет доступ к функциональной области **Обозреватель** , то он может добавлять, удалять и обновлять все основные данные в этой области.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "68047812"
 ## <a name="external-resources"></a>Внешние ресурсы  
  Запись блога [Security Improvements](https://go.microsoft.com/fwlink/p/?LinkId=615376)(Улучшения безопасности) на портале msdn.com.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также раздел  
  [Создание администратора модели (службы Master Data Services)](../master-data-services/create-a-model-administrator-master-data-services.md)   
  [Создание базы данных служб Master Data Services](../master-data-services/install-windows/create-a-master-data-services-database.md)   
  [Уведомления (службы Master Data Services)](../master-data-services/notifications-master-data-services.md)  

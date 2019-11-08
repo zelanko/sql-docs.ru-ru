@@ -1,5 +1,5 @@
 ---
-title: Разрешения объекта модели (службы Master Data Services) | Документы Майкрософт
+title: Разрешения объекта модели
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: fab6335b-4cae-47de-ae7c-6c4743e0680f
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: e652d2c42c61e1694c1f8adfa7976f3c1eda8406
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0243df5cd71ed667219b3e4e1b4a8ff6d1115f25
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68055739"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727981"
 ---
 # <a name="model-object-permissions-master-data-services"></a>Разрешения объекта модели (службы Master Data Services)
 
@@ -32,7 +32,7 @@ ms.locfileid: "68055739"
   
  Чтобы предоставить пользователю доступ для администрирования модели в функциональной области, отличной от **обозревателя**, пользователь должен быть администратором модели, что также требует назначения разрешений администратора для модели объекта. Дополнительные сведения см. в статье [Администраторы (службы Master Data Services)](../master-data-services/administrators-master-data-services.md).  
   
- Разрешения объекта модели назначаются в пользовательском интерфейсе [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] в функциональной области **Разрешения пользователей и групп** на вкладке **Модели**. На этой вкладке модель представлена в виде древовидной структуры. При назначении разрешения для объекта дерева это разрешение наследуют все объекты, находящиеся ниже данного узла. Чтобы переопределить наследование разрешений, нужно назначить разрешение отдельным объектам.  
+ Разрешения на объекты модели назначаются в [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] пользовательском интерфейсе (UI) в функциональной области **разрешения пользователей и групп** на вкладке **модели** . На этой вкладке Модель представлена в виде древовидной структуры. При назначении разрешения для объекта дерева это разрешение наследуют все объекты, находящиеся ниже данного узла. Чтобы переопределить наследование разрешений, нужно назначить разрешение отдельным объектам.  
   
  Объектам модели можно назначить сочетание из разрешений на чтение, создание, обновление и удаление, а также запретить их. Если на вкладке **Модели** не будут назначены никакие разрешения, то пользователь не сможет просматривать модели и данные в среде [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)].  
   
@@ -42,7 +42,7 @@ ms.locfileid: "68055739"
 ## <a name="external-resources"></a>Внешние ресурсы  
  Запись блога [Security Improvements](https://go.microsoft.com/fwlink/p/?LinkId=615376)(Улучшения безопасности) на портале msdn.com.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
  [Назначение разрешения для объекта модели (службы Master Data Services)](../master-data-services/assign-model-object-permissions-master-data-services.md)   
  [Разрешения модели (службы Master Data Services)](../master-data-services/model-permissions-master-data-services.md)   
  [Разрешения функциональной области (службы Master Data Services)](../master-data-services/functional-area-permissions-master-data-services.md)   

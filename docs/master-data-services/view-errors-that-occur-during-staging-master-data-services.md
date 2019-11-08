@@ -1,5 +1,5 @@
 ---
-title: Просмотр ошибок, возникающих во время помещения на промежуточное хранение (службы Master Data Services) | Документы Майкрософт
+title: Просмотр ошибок, возникающих во время помещения на промежуточное хранение
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6d2bff84-624b-47fc-a4a5-d9ea01d13412
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 54f38d156a93576d508aa24d7864dbb2d6de7392
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d3bb33d8c3a9237c96fc0bde1becba07df9a7bdc
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68017307"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728836"
 ---
 # <a name="view-errors-that-occur-during-staging-master-data-services"></a>Просмотр ошибок, возникающих во время помещения на промежуточное хранение (службы Master Data Services)
 
@@ -29,8 +29,8 @@ ms.locfileid: "68017307"
   
 -   Stg.viw_name_RelationshipErrorDetails для обновления связей иерархии.  
   
-## <a name="prerequisites"></a>предварительные требования  
- Для выполнения этой процедуры:  
+## <a name="prerequisites"></a>Предварительные требования  
+ Чтобы выполнить эту процедуру:  
   
 -   В базе данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] необходимо иметь разрешения SELECT для представления stg.viw_name_MemberErrorDetails или stg.viw_name_RelationshipErrorDetails.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "68017307"
 ## <a name="next-steps"></a>Следующие шаги  
  Дополнительные сведения о сообщениях об ошибках см. в разделе [Ошибки промежуточного процесса (службы Master Data Services)](../master-data-services/staging-process-errors-master-data-services.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
  [Обзор: импорт данных из таблиц (службы Master Data Services)](../master-data-services/overview-importing-data-from-tables-master-data-services.md)   
  [Устранение неполадок в промежуточном процессе (службы Master Data Services)](https://social.technet.microsoft.com/wiki/contents/articles/troubleshooting-the-staging-process-master-data-services.aspx)  
   

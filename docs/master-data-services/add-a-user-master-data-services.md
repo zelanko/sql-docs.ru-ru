@@ -1,5 +1,5 @@
 ---
-title: Добавление пользователя (службы Master Data Services) | Документы Майкрософт
+title: Добавление пользователя
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 44262bdd-430c-4337-ac92-9333f54c7039
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: cc478b6325e89801837828dbd90af1a7b6950665
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6fe6ec485c1d0e4bc6b30b1fa40f1be03f8b7f67
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047943"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729817"
 ---
 # <a name="add-a-user-master-data-services"></a>Добавление пользователя (службы Master Data Services)
 
@@ -27,7 +27,7 @@ ms.locfileid: "68047943"
   Чтобы начать назначение разрешений для веб-приложения, нужно добавить пользователя в список **Пользователи** в [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] . Чтобы пользователь из этого списка мог воспользоваться средой [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], ему нужно предоставить разрешение на одну или более функциональных областей и объектов модели.  
   
 ## <a name="prerequisites"></a>Предварительные требования  
- Для выполнения этой процедуры:  
+ Чтобы выполнить эту процедуру:  
   
 -   необходимо иметь разрешение на доступ к функциональной области **Разрешения пользователей и групп** ;  
   
@@ -47,7 +47,7 @@ ms.locfileid: "68047943"
   
 -   [Назначение разрешений для функциональной области (службы Master Data Services)](../master-data-services/assign-functional-area-permissions-master-data-services.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
  [Безопасность (службы Master Data Services)](../master-data-services/security-master-data-services.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Изменение адреса электронной почты пользователя (службы Master Data Services) | Документы Майкрософт
+title: Изменение адреса электронной&#39;почты пользователя
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 721277fd-84f0-41aa-8f2d-bc13a7221044
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 0cf7c9eb150ce54a9ec04c996c4c7e4d1f58b858
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6b1941b6be24b926b870ad284b0aa8ce7242fba4
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047337"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729691"
 ---
 # <a name="change-a-user39s-email-address-master-data-services"></a>Изменение адреса электронной почты пользователя (службы Master Data Services)
 
@@ -26,7 +26,7 @@ ms.locfileid: "68047337"
   В среде [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]можно изменить адрес электронной почты, на который отправляются уведомления, и формат по умолчанию для писем с уведомлениями.  
   
 ## <a name="prerequisites"></a>Предварительные требования  
- Для выполнения этой процедуры:  
+ Чтобы выполнить эту процедуру:  
   
 -   Необходимо иметь разрешение на доступ к функциональной области **Пользователи и группы** .  
   
@@ -48,7 +48,7 @@ ms.locfileid: "68047337"
   
 -   [Назначение разрешений для функциональной области (службы Master Data Services)](../master-data-services/assign-functional-area-permissions-master-data-services.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
  [Безопасность (службы Master Data Services)](../master-data-services/security-master-data-services.md)  
   
   

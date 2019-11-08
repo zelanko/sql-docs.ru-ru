@@ -1,5 +1,5 @@
 ---
-title: Создание производной иерархии (службы Master Data Services) | Документы Майкрософт
+title: Создание производной иерархии
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: fec653c4-11cc-46a2-8dd8-b605341ebb40
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 1e793b9b5dfa78909bc74112580476c7d3074536
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b0bedc60665318e2ffd89ebfc6387bbb0432989f
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68079672"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729573"
 ---
 # <a name="create-a-derived-hierarchy-master-data-services"></a>Создание производной иерархии (службы Master Data Services)
 
@@ -30,7 +30,7 @@ ms.locfileid: "68079672"
 >  Если значение атрибута на основе домена отсутствует для какого-либо элемента, он не включается в производную иерархию. Сведения о том, как сделать значение атрибута на основе домена обязательным для всех элементов, см. в разделе [Запрос значений атрибута (службы Master Data Services)](../master-data-services/require-attribute-values-master-data-services.md).  
   
 ## <a name="prerequisites"></a>Предварительные требования  
- Для выполнения этой процедуры:  
+ Чтобы выполнить эту процедуру:  
   
 -   необходимо иметь разрешение на доступ к функциональной области **Администрирование системы** ;  
   
@@ -59,7 +59,7 @@ ms.locfileid: "68079672"
   
 9. Нажмите кнопку **Назад**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
  [Производные иерархии (службы Master Data Services)](../master-data-services/derived-hierarchies-master-data-services.md)   
  [Производные иерархии с явными ограничениями (службы Master Data Services)](../master-data-services/derived-hierarchies-with-explicit-caps-master-data-services.md)   
  [Атрибуты на основе домена (службы Master Data Services)](../master-data-services/domain-based-attributes-master-data-services.md)  

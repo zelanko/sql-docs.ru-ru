@@ -1,5 +1,5 @@
 ---
-title: Изменение имени версии (службы Master Data Services) | Документы Майкрософт
+title: Изменение имени версии
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: cba8b814-155f-49c5-b636-afddc5b0de4f
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 20c12d6eceac9c68ad30486f7bb5b7fcf861eb07
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d74ce56cb1289e218d65370cd6de8fef653e462a
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047298"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729693"
 ---
 # <a name="change-a-version-name-master-data-services"></a>Изменение имени версии (службы Master Data Services)
 
@@ -25,8 +25,8 @@ ms.locfileid: "68047298"
 
   В среде [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]имя версии можно изменить для ее настройки для нужд организации.  
   
-## <a name="prerequisites"></a>предварительные требования  
- Для выполнения этой процедуры:  
+## <a name="prerequisites"></a>Предварительные требования  
+ Чтобы выполнить эту процедуру:  
   
 -   необходимо иметь разрешение на доступ к функциональной области **Управление версиями** ;  
   
@@ -44,7 +44,7 @@ ms.locfileid: "68047298"
   
 4.  Нажмите клавишу ВВОД.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
  [Подтверждение исправления проблемы, обнаруженной при проверке на соответствие бизнес-правилам (службы Master Data Services)](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)   
  [Блокировка версии (службы Master Data Services)](../master-data-services/lock-a-version-master-data-services.md)   
  [Фиксация версии (службы Master Data Services)](../master-data-services/commit-a-version-master-data-services.md)   

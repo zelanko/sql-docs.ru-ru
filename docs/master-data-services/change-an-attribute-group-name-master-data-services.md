@@ -1,5 +1,5 @@
 ---
-title: Изменение имени группы атрибутов (службы Master Data Services) | Документы Майкрософт
+title: Изменение имени группы атрибутов
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 79510fcf-4c83-4426-bdd4-15b4170ecfbd
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: d9f6905ea87c08460fe9faba22095a9ecaf0b308
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 115cb0011be22e482e6d8d8e032d8db21246bbd9
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68052105"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729709"
 ---
 # <a name="change-an-attribute-group-name-master-data-services"></a>Изменение имени группы атрибутов (службы Master Data Services)
 
@@ -26,7 +26,7 @@ ms.locfileid: "68052105"
   В среде [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]можно изменить имя группы атрибутов.  
   
 ## <a name="prerequisites"></a>Предварительные требования  
- Для выполнения этой процедуры:  
+ Чтобы выполнить эту процедуру:  
   
 -   необходимо иметь разрешение на доступ к функциональной области **Администрирование системы** ;  
   
@@ -50,7 +50,7 @@ ms.locfileid: "68052105"
   
 8.  Нажмите кнопку **Сохранить группу**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
  [Группы атрибутов (службы Master Data Services)](../master-data-services/attribute-groups-master-data-services.md)   
  [Создание группы атрибутов (службы Master Data Services)](../master-data-services/create-an-attribute-group-master-data-services.md)   
  [Удаление группы атрибутов (службы Master Data Services)](../master-data-services/delete-an-attribute-group-master-data-services.md)  

@@ -1,5 +1,5 @@
 ---
-title: Элементы (службы Master Data Services) | Документы Майкрософт
+title: Члены
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0fda32b9-677d-4ba2-bb28-f76f2383a30f
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 922ac93eed7235b560def2160b23da72a73a570b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d6e663ef23c472b2a78ec71c58086824adae185e
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68092595"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728003"
 ---
 # <a name="members-master-data-services"></a>Элементы (службы основных данных)
 
@@ -35,7 +35,7 @@ ms.locfileid: "68092595"
   
  В этом примере таблица представляет собой сущность, строки в таблице представляют элементы, а столбцы — атрибуты. Каждая ячейка представляет значение атрибута для определенного элемента.  
   
- ![Сущность служб Master Data Services, представленная в виде таблицы](../master-data-services/media/mds-conc-entity-table.gif "Сущность служб Master Data Services, представленная в виде таблицы")  
+ ![Сущность Master Data Services, представленная в виде таблицы](../master-data-services/media/mds-conc-entity-table.gif "Сущность Master Data Services, представленная в виде таблицы")  
   
 ## <a name="member-types"></a>Типы элементов  
  Существует три типа элементов: конечные элементы, консолидированные элементы и элементы коллекции.  
@@ -53,12 +53,12 @@ ms.locfileid: "68092595"
 -   В явных иерархиях консолидированные элементы могут быть родителями других элементов в иерархии, а также дочерними элементами.  
   
 ## <a name="use-hierarchies-and-collections-to-organize-members"></a>Использование иерархии и коллекций для организации элементов  
- Иерархии и коллекции можно использовать для группировки элементов для отчетов или анализа. Дополнительные сведения см. в разделах [Иерархии (службы Master Data Services)](../master-data-services/hierarchies-master-data-services.md) и [Коллекции (службы Master Data Services)](../master-data-services/collections-master-data-services.md).  
+ Иерархии и коллекции можно использовать для группировки элементов для отчетов или анализа. Дополнительные сведения см. в разделах [Hierarchies &#40;Master Data Services&#41;](../master-data-services/hierarchies-master-data-services.md) и [Collections &#40;Master Data Services&#41;](../master-data-services/collections-master-data-services.md).  
   
 ## <a name="member-example"></a>Пример элемента  
  В следующем примере каждый элемент состоит из значений атрибутов Name, Code, Subcategory, StandardCost, ListPrice и FilePhoto.  
   
- ![Таблица продукта "Велосипед"](../master-data-services/media/mds-conc-entity-table-w-data.gif "Таблица продукта \"Велосипед\"")  
+ ![Таблица сущностей продукта велосипеда](../master-data-services/media/mds-conc-entity-table-w-data.gif "Таблица сущностей продукта велосипеда")  
   
 ## <a name="related-tasks"></a>Связанные задачи  
   

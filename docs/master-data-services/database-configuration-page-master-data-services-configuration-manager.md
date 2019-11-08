@@ -1,6 +1,6 @@
 ---
-title: Страница "Конфигурация базы данных" (диспетчер конфигурации служб Master Data Services) | Документы Майкрософт
-ms.custom: ''
+title: Страница «Конфигурация базы данных»
+ms.custom: seo-lt-2019
 ms.date: 03/20/2017
 ms.prod: sql
 ms.prod_service: mds
@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: dd72220e-a599-465d-8b84-9bb6a7433216
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: efb7aac674872e723c051ecb8bf4b54430b30483
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 82b3762342c30b657f031bd53f89ae7652f5ece8
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67906489"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729434"
 ---
 # <a name="database-configuration-page-master-data-services-configuration-manager"></a>Страница «Конфигурация базы данных» (диспетчер конфигурации служб Master Data Services)
 
@@ -31,7 +31,7 @@ ms.locfileid: "67906489"
 |Имя элемента управления|Описание|  
 |------------------|-----------------|  
 |**Экземпляр SQL Server**|Отображает имя выбранного экземпляра [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Не содержит значения до подключения к экземпляру и выбора или создания базы данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .|  
-|**База данных служб основных данных**|Отображает имя выбранной базы данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Не содержит значения до подключения к экземпляру и выбора или создания базы данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .|  
+|**База данных служб Master Data Services**|Отображает имя выбранной базы данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Не содержит значения до подключения к экземпляру и выбора или создания базы данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .|  
 |**Версия базы данных Master Data Services**|Версия схемы базы данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .|  
 |**Создание базы данных**|Открывает **мастер создания базы данных** для соединения с экземпляром [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и создания базы данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] на этом экземпляре.|  
 |**Выбор базы данных**|Откройте диалоговое окно **Подключение к базе данных** для подключения к экземпляру [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и выбора базы данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .|  
@@ -43,7 +43,7 @@ ms.locfileid: "67906489"
   
  Эти параметры доступны в [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] и хранятся в таблице системных параметров (mdm.tblSystemSetting) базы данных. Список параметров см. в разделе [Системные параметры (службы Master Data Services)](../master-data-services/system-settings-master-data-services.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
 [Установка и настройка служб Master Data Services](../master-data-services/master-data-services-installation-and-configuration.md) [Требования к базе данных (службы Master Data Services)](../master-data-services/install-windows/database-requirements-master-data-services.md)  
   
   

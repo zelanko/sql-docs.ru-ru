@@ -13,16 +13,15 @@ ms.assetid: 910e3e16-7b91-49d8-80bb-b4243926afaa
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 714823ca585e85d8c1c3840da37630d975b9fdb6
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: f8e3b2f19d25374a592203cbd4b00f118385d980
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908218"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73781680"
 ---
 # <a name="configuring-the-sql-server-odbc-driver---delete-a-data-source"></a>Настройка драйвера ODBC SQL Server — удаление источника данных
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   Перед использованием приложений ODBC с [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] или более поздней версией необходимо знать, как обновлять версию хранимых процедур каталога на предыдущих версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и как добавлять, удалять и проверять источники данных.  
   
@@ -39,7 +38,7 @@ ms.locfileid: "72908218"
 4.  Нажмите кнопку **Удалить**, а затем подтвердите удаление.  
 
 ## <a name="example"></a>Пример  
- Чтобы программно удалить источник данных, вызовите [SQLConfigDataSource](../../relational-databases/native-client-odbc-api/sqlconfigdatasource.md) , используя ODBC_REMOVE_DSN или ODBC_REMOVE_SYS_DSN в качестве второго параметра.  
+ Чтобы программно удалить источник данных, вызовите [SQLConfigDataSource](../../relational-databases/native-client-odbc-api/sqlconfigdatasource.md) , используя либо ODBC_REMOVE_DSN, либо ODBC_REMOVE_SYS_DSN в качестве второго параметра.  
   
  В следующем образце показана процедура удаления источника данных программным способом.  
   
@@ -60,7 +59,7 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>См. также статью  
+## <a name="see-also"></a>См. также раздел  
  [Добавление источника &#40;данных ODBC&#41;](../../relational-databases/native-client-odbc-how-to/configuring-the-sql-server-odbc-driver-add-a-data-source.md)  
   
   

@@ -11,32 +11,31 @@ ms.assetid: e65c9253-bd99-4dc3-9cb8-7613f754c966
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9f99055c13cf04f15d652f79258b10654410e98c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e1d995abd5bb718e9e1df1e2d5af5d1c22769014
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67909246"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73772331"
 ---
 # <a name="ole-db-api-support-for-date-and-time-enhancements"></a>Новые возможности поддержки API OLE DB для функций даты и времени
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   Следующие API-интерфейсы OLE DB поддерживают улучшенные возможности по работе с данными в формате даты-времени.  
   
-|Компонент|Описание|  
+|Функция|Описание|  
 |--------------|-----------------|  
-|IAccessor::CreateAccessor|Добавляется флаг в структуре DBBINDING, чтобы позволить приложениям различать **datetime**, **datetime2**, и **smalldatetime** значения. Дополнительные сведения см. в разделе [параметра и метаданные набора строк](../../relational-databases/native-client-ole-db-date-time/metadata-parameter-and-rowset.md).|  
-|IBCPSession::BCPColFmt|Дополнительные сведения см. в разделе [изменения массового копирования для типов усиленной даты и времени &#40;OLE DB и ODBC&#41;](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md).|  
-|ICommandWithParameters::GetParameterInfo|Дополнительные сведения см. в разделе[параметра и метаданные набора строк](../../relational-databases/native-client-ole-db-date-time/metadata-parameter-and-rowset.md).|  
-|ICommandWithParameters::SetParameterinfo|Дополнительные сведения см. в разделе[параметра и метаданные набора строк](../../relational-databases/native-client-ole-db-date-time/metadata-parameter-and-rowset.md).|  
-|IColumnsRowset::GetColumnsRowset|Дополнительные сведения см. в разделе[параметра и метаданные набора строк](../../relational-databases/native-client-ole-db-date-time/metadata-parameter-and-rowset.md).|  
-|IColumnsInfo::GetColumnInfo|Дополнительные сведения см. в разделе[параметра и метаданные набора строк](../../relational-databases/native-client-ole-db-date-time/metadata-parameter-and-rowset.md).|  
-|IDBSchemaRowset::GetRowset|Сведения о затронутых наборах строк схемы см. в разделе[даты и времени и наборы строк схемы](../../relational-databases/native-client-ole-db-date-time/metadata-date-and-time-and-schema-rowsets.md).|  
+|IAccessor:: CreateAccessor|В структуру DBBINDING добавляется флаг, позволяющий приложениям отличать значения **DateTime**, **datetime2**и **smalldatetime** . Дополнительные сведения см. в разделе [метаданные параметров и наборов строк](../../relational-databases/native-client-ole-db-date-time/metadata-parameter-and-rowset.md).|  
+|IBCPSession::BCPColFmt|Дополнительные сведения см. в статье об [изменениях в разделе "операции обновления" &#40;для расширенных&#41;типов даты и времени OLE DB и ODBC](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md).|  
+|ICommandWithParameters::GetParameterInfo|Дополнительные сведения см. в разделе[метаданные параметров и наборов строк](../../relational-databases/native-client-ole-db-date-time/metadata-parameter-and-rowset.md).|  
+|ICommandWithParameters::SetParameterinfo|Дополнительные сведения см. в разделе[метаданные параметров и наборов строк](../../relational-databases/native-client-ole-db-date-time/metadata-parameter-and-rowset.md).|  
+|IColumnsRowset::GetColumnsRowset|Дополнительные сведения см. в разделе[метаданные параметров и наборов строк](../../relational-databases/native-client-ole-db-date-time/metadata-parameter-and-rowset.md).|  
+|IColumnsInfo::GetColumnInfo|Дополнительные сведения см. в разделе[метаданные параметров и наборов строк](../../relational-databases/native-client-ole-db-date-time/metadata-parameter-and-rowset.md).|  
+|IDBSchemaRowset:: Rowset|Дополнительные сведения о затронутых наборах строк схемы см. в разделе[Дата и время и наборы строк схемы](../../relational-databases/native-client-ole-db-date-time/metadata-date-and-time-and-schema-rowsets.md).|  
 |IRowsetFastLoad|Данный интерфейс поддерживает новые типы даты-времени, но он остается неизменным.|  
-|ITableDefinition::CreateTable|Дополнительные сведения см. в разделе [поддержки типов данных даты OLE DB и ускорение](../../relational-databases/native-client-ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md).|  
+|ITableDefinition::CreateTable|Дополнительные сведения см. в разделе [Поддержка типов данных для OLE DB улучшения даты и времени](../../relational-databases/native-client-ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md).|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
  [Улучшения функций даты и времени &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  
   
   

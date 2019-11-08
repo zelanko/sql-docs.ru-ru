@@ -14,16 +14,15 @@ ms.assetid: 0adecc63-4da5-486c-bc48-09a004a2fae6
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3fd2ff0c2dae01c10b720ed31fee88430a82cbe0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ea4ce4bfe51f844d6d2916623f5a9cc3ffbe01a6
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67898520"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73781393"
 ---
 # <a name="prepare-and-execute-a-statement-odbc"></a>Подготовка и выполнение инструкцию (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
     
 ### <a name="to-prepare-a-statement-once-and-then-execute-it-multiple-times"></a>Однократная подготовка инструкции и многократное ее выполнение  
@@ -62,7 +61,7 @@ ms.locfileid: "67898520"
   
 3.  Можно также вызвать метод [SQLNumParams](https://go.microsoft.com/fwlink/?LinkId=58404) , чтобы определить количество параметров в подготовленной инструкции.  
   
-4.  При необходимости для каждого параметра подготовленной инструкции вызовите функцию SQLDescribeParam, чтобы получить сведения о параметрах.  
+4.  При необходимости для каждого параметра в подготовленной инструкции вызовите SQLDescribeParam, чтобы получить сведения о параметрах.  
   
 5.  Для каждого маркера параметра выполните следующее.  
   
@@ -70,7 +69,7 @@ ms.locfileid: "67898520"
   
     -   Выделите массив из S буферов параметра для сохранения длин данных.  
   
-    -   Вызовите SQLBindParameter для привязки к параметру инструкции значение и длина массивы данных.  
+    -   Вызовите SQLBindParameter, чтобы связать массивы значений и длины данных параметра с параметром инструкции.  
   
     -   Если параметр использует данные времени выполнения типов text или image, присвойте ему значение.  
   
@@ -82,7 +81,7 @@ ms.locfileid: "67898520"
   
     -   Вызовите SQLExecute, чтобы выполнить подготовленную инструкцию.  
   
-    -   Если при использовании входных параметров данных времени выполнения, SQLExecute возвращает SQL_NEED_DATA. Отправьте данные в виде фрагментов с помощью методов SQLParamData и SQLPutData.  
+    -   Если используются входные параметры данных при выполнении, SQLExecute возвращает SQL_NEED_DATA. Отправляйте данные в фрагментах с помощью метод SQLParamData и SQLPutData.  
   
 ### <a name="to-prepare-a-statement-with-row-wise-bound-parameters"></a>Подготовка инструкции с привязкой параметра на уровне строки  
   
@@ -104,7 +103,7 @@ ms.locfileid: "67898520"
   
 3.  Вызовите SQLPrepare, чтобы подготовить инструкцию.  
   
-4.  Для каждого маркера параметра вызовите SQLBindParameter для указания параметра значение и указатель на длину данных с соответствующими им переменными в первом элементе массива структур, выделенных на шаге 1. Если параметр использует данные времени выполнения, присвойте ему значение.  
+4.  Для каждого маркера параметра вызовите SQLBindParameter, чтобы указать значения данных параметра и указатель длины данных на их переменные в первом элементе массива структур, выделенных на шаге 1. Если параметр использует данные времени выполнения, присвойте ему значение.  
   
 5.  Перед каждым выполнением подготовленной инструкции.  
   
@@ -112,9 +111,9 @@ ms.locfileid: "67898520"
   
     -   Вызовите SQLExecute, чтобы выполнить подготовленную инструкцию. Драйвер эффективно выполнит инструкцию SQL S раз, по одному разу для каждого набора параметров.  
   
-    -   Если при использовании входных параметров данных времени выполнения, SQLExecute возвращает SQL_NEED_DATA. Отправьте данные в виде фрагментов с помощью методов SQLParamData и SQLPutData.  
+    -   Если используются входные параметры данных при выполнении, SQLExecute возвращает SQL_NEED_DATA. Отправляйте данные в фрагментах с помощью метод SQLParamData и SQLPutData.  
   
-## <a name="see-also"></a>См. также  
- [Выполнении запросов разделы руководства, посвященные &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md)  
+## <a name="see-also"></a>См. также раздел  
+ [Разделы &#40;руководства по выполнению запросов ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md)  
   
   

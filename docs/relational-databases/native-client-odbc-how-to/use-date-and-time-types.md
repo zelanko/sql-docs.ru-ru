@@ -1,5 +1,5 @@
 ---
-title: Использование данных даты и времени типы | Документация Майкрософт
+title: Использование типов даты и времени | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,18 +11,17 @@ ms.assetid: a2aa5644-1e39-4d78-b149-0599d3502cda
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9de540ec1ba30ea4cfe4ff45bcbe3a203eb0ceeb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b77bb50620d106ff801241901f7054459806ef36
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67937449"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73780317"
 ---
 # <a name="use-date-and-time-types"></a>Использование типов данных даты и времени
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  Этот образец показывает, как инициализировать структуры данных даты-времени, добавленные в [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. Затем подготавливаются входные значения, привязываются параметры и выполняется запрос. Дополнительные сведения об использовании этих типов см. в разделе [время улучшения функций даты и &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
+  Этот образец показывает, как инициализировать структуры данных даты-времени, добавленные в [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. Затем подготавливаются входные значения, привязываются параметры и выполняется запрос. Дополнительные сведения об использовании этих типов см. в разделе [улучшения &#40;даты и времени&#41;ODBC](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
 ## <a name="example"></a>Пример  
  Потребуется источник данных ODBC с именем DateTime. Базой данных по умолчанию для DateTime должна быть tempdb. Этот источник данных должен быть основан на драйвере ODBC для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -31,11 +30,11 @@ ms.locfileid: "67937449"
   
  Этот образец соединяется с установленным на компьютер экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по умолчанию. Чтобы соединиться с именованным экземпляром, измените определение источника данных ODBC, указав экземпляр в следующем формате: Сервер\ИменованныйЭкземпляр. По умолчанию [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] устанавливается на именованный экземпляр.  
   
- Первый ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) пример кода создает таблицу, используемую данным образцом.  
+ Первый листинг кода ([!INCLUDE[tsql](../../includes/tsql-md.md)]) создает таблицу, используемую этим образцом.  
   
  Скомпилируйте второй листинг кода (C++) с библиотеками odbc32.lib и user32.lib. Убедитесь, что переменная среды INCLUDE включает каталог, содержащий файл sqlncli.h.  
   
- Третий ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) пример кода удаляет таблицу, используемую данным образцом.  
+ Третий листинг кода ([!INCLUDE[tsql](../../includes/tsql-md.md)]) удаляет таблицу, используемую этим образцом.  
   
 ```sql
 use tempdb  

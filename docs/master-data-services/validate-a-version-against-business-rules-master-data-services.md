@@ -1,5 +1,5 @@
 ---
-title: Подтверждение версии, обнаруженной при проверке на соответствие бизнес-правилам (службы Master Data Services) | Документы Майкрософт
+title: Подтверждение исправления проблемы, обнаруженной при проверке на соответствие бизнес-правилам
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5aee7901-6d05-41d4-8bbb-c6f26791d1df
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 57a78efbe6de9a4439846df69ac04e32d073fe3e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2995a02e738b2c185edff26ee0d6a395df14f59f
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68102556"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727826"
 ---
 # <a name="validate-a-version-against-business-rules-master-data-services"></a>Подтверждение исправления проблемы, обнаруженной при проверке на соответствие бизнес-правилам (службы Master Data Services)
 
@@ -34,7 +34,7 @@ ms.locfileid: "68102556"
 >  Чтобы версию можно было зафиксировать, все элементы должны успешно пройти проверку.  
   
 ## <a name="prerequisites"></a>Предварительные требования  
- Для выполнения этой процедуры:  
+ Чтобы выполнить эту процедуру:  
   
 -   необходимо иметь разрешение на доступ к функциональной области **Управление версиями** ;  
   
@@ -63,7 +63,7 @@ ms.locfileid: "68102556"
   
 -   [Блокировка версии (службы Master Data Services)](../master-data-services/lock-a-version-master-data-services.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
  [Состояния проверки (службы Master Data Services)](../master-data-services/validation-statuses-master-data-services.md)   
  [Проверка хранимых процедур (службы Master Data Services)](../master-data-services/validation-stored-procedure-master-data-services.md)   
  [Версии (службы Master Data Services)](../master-data-services/versions-master-data-services.md)   

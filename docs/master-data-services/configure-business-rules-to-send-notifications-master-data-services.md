@@ -1,5 +1,5 @@
 ---
-title: Настройка бизнес-правил для отправки уведомлений (службы Master Data Services) | Документы Майкрософт
+title: Настройка в бизнес-правилах отправки уведомлений
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -14,21 +14,21 @@ helpviewer_keywords:
 ms.assetid: b24f7b11-ab53-4642-999c-e17b543b3558
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: fe7bdd3ab79987f4f45a4a50d818ce454914e608
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4645b9faca312eb5bee12eef1130893785c327d5
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67941095"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728564"
 ---
 # <a name="configure-business-rules-to-send-notifications-master-data-services"></a>Настройка в бизнес-правилах отправки уведомлений (службы Master Data Services)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  Бизнес-правила для отправки уведомлений в службах [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]настраивают в том случае, если нужно уведомлять пользователей об изменениях значений атрибутов.  
+  Бизнес-правила для отправки уведомлений в службах [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] настраивают в том случае, если нужно уведомлять пользователей об изменениях значений атрибутов.  
   
-## <a name="prerequisites"></a>предварительные требования  
- Для выполнения этой процедуры:  
+## <a name="prerequisites"></a>Предварительные требования  
+ Чтобы выполнить эту процедуру:  
   
 -   Необходимо иметь разрешение на доступ к функциональным областям **Администрирование системы** и **Разрешения пользователей и групп** . Если отсутствуют разрешения для функциональной области **Разрешения пользователей и групп** , то пользователь не сможет просмотреть список пользователей и групп, которым необходимо отправить уведомления.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "67941095"
   
     -   [Настройка уведомления электронной почты (службы Master Data Services)](../master-data-services/configure-email-notifications-master-data-services.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
  [Уведомления (службы Master Data Services)](../master-data-services/notifications-master-data-services.md)   
  [Настройка уведомления электронной почты (службы Master Data Services)](../master-data-services/configure-email-notifications-master-data-services.md)  
   

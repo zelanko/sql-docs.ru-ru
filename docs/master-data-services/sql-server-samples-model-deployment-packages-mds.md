@@ -1,5 +1,5 @@
 ---
-title: 'Примеры SQL Server: пакеты развертывания моделей (MDS) | Документация Майкрософт'
+title: Примеры пакетов развертывания модели
 ms.custom: ''
 ms.date: 07/28/2017
 ms.prod: sql
@@ -8,17 +8,17 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 keywords:
-- службы master data services
+- master data services
 - образец
 ms.assetid: 9b31b7b6-319b-4840-b67d-eb383e7762b1
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 411496c30f9b32d9c011252ce1d345e64a7d02c6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 19b4cc9cc9282fff784059e6ac39bf74792f95a4
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085645"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727877"
 ---
 # <a name="sql-server-examples-model-deployment-packages-mds"></a>Примеры SQL Server: пакеты развертывания моделей (MDS)
 
@@ -29,7 +29,7 @@ ms.locfileid: "68085645"
  Инструкции по развертыванию образцов пакетов моделей см. в разделе [Развертывание образцов моделей и данных](../master-data-services/master-data-services-installation-and-configuration.md#deploySample). Вы можете развернуть эти образцы пакетов моделей с помощью [средства MDSModelDeploy](../master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md).  
   
 > [!IMPORTANT]
->  **Примеры обновлений в [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]**  
+>  **Обновления примеров в [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]**  
 > 
 >  Образцы пакетов были обновлены для поддержки перечисленных ниже новых возможностей.  
 > 
@@ -54,7 +54,7 @@ ms.locfileid: "68085645"
  
  В службах Master Data Services пакет представляет собой XML-файл, содержащий развертываемую структуру модели и (необязательно) данные этой модели. Пакеты модели используются для перемещения копий моделей из одной среды служб MDS в другую либо для создания моделей в существующей среде [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
  [Развертывание пакета развертывания модели при помощи MDSModelDeploy](../master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md)  
   
   

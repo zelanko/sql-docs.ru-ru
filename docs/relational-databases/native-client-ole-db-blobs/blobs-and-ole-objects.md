@@ -1,5 +1,5 @@
 ---
-title: Большие двоичные объекты и объекты OLE | Документация Майкрософт
+title: Большие двоичные объекты и OLE | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -17,26 +17,25 @@ ms.assetid: 767fa2f6-9cd2-436f-add5-e760bed29a58
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d6f2a73f44d762a2d17eccc8cf82570b07933426
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b4e284d2086684af232c17b59675b834b26f497b
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68128894"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73790639"
 ---
 # <a name="blobs-and-ole-objects"></a>Большие двоичные объекты и объекты OLE
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Поставщик OLE DB для собственного клиента предоставляет **ISequentialStream** интерфейс для поддержки доступа потребителя к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **ntext**, **текст**, **изображение**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** , и типы данных xml в виде двоичного кода больших объектов (больших двоичных объектов ). Метод **Read** интерфейса **ISequentialStream** позволяет потребителю получать большой объем данных в виде фрагментов данных, с которыми удобно работать.  
+  Поставщик [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB предоставляет интерфейс **ISequentialStream** для поддержки доступа потребителя к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **ntext**, **Text**, **Image**, **varchar (max)** , **nvarchar (max)** , **varbinary (max).** и типы данных XML как большие двоичные объекты (BLOB). Метод **Read** интерфейса **ISequentialStream** позволяет потребителю получать большой объем данных в виде фрагментов данных, с которыми удобно работать.  
   
- Образец, демонстрирующий эту функцию, см. в разделе [набор больших данных &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/set-large-data-ole-db.md).  
+ Пример, демонстрирующий эту функцию, см. в разделе [Set &#40;Large&#41;Data OLE DB](../../relational-databases/native-client-ole-db-how-to/set-large-data-ole-db.md).  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Поставщик OLE DB для собственного клиента может использовать реализованный потребителем **IStorage** привязан интерфейс, если потребитель предоставляет указатель на интерфейс в метод доступа для изменения данных.  
+ Поставщик [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB может использовать реализуемый потребителем интерфейс **IStorage** , когда потребитель предоставляет указатель интерфейса в методе доступа, связанном с изменением данных.  
   
- Для типов данных больших значений [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поставщика OLE DB для собственного клиента проверяет наличие предположения размер типа в **IRowset** и интерфейсы DDL. Столбцы с **varchar**, **nvarchar**, и **varbinary** типы данных с максимальным размером, заданным в неограниченное будут представлены как ISLONG через наборы строк схемы и интерфейсы Возвращение типов данных столбцов.  
+ Для типов данных больших значений [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поставщик собственного клиента OLE DB проверяет предположения о размере типов в интерфейсах **IRowset** и DDL. Столбцы с типами данных **varchar**, **nvarchar**и **varbinary** с максимальным размером, установленным в значение unlimited, будут представлены как длинные через наборы строк схемы и интерфейсы, возвращающие типы данных столбцов.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Поставщик OLE DB для собственного клиента предоставляет **varchar(max)** , **varbinary(max)** и **nvarchar(max)** типы как DBTYPE_STR, DBTYPE_BYTES и DBTYPE_ WSTR соответственно.  
+ Поставщик [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB предоставляет типы **varchar (max)** , **varbinary (max)** и **nvarchar (max)** как DBTYPE_STR, DBTYPE_BYTES и DBTYPE_WSTR соответственно.  
   
  Для работы с этими типами приложение имеет следующие возможности.  
   
@@ -46,19 +45,19 @@ ms.locfileid: "68128894"
   
 -   Выполните привязку, указав тип DBTYPE_IUNKNOWN, и используйте потоковую передачу.  
   
- При привязке к DBTYPE_IUNKNOWN используется потоковая возможность ISequentialStream. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Поставщика OLE DB для собственного клиента поддерживает привязку выходных параметров как DBTYPE_IUNKNOWN для типов данных больших значений облегчить ситуацию, где хранимая процедура возвращает эти данные типы как возвращаемые значения, которые будут представлены как DBTYPE_IUNKNOWN клиенту.  
+ При привязке к DBTYPE_IUNKNOWN используется потоковая возможность ISequentialStream. Поставщик [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB поддерживает привязку выходных параметров как DBTYPE_IUNKNOWN для типов данных больших значений, чтобы упростить сценарии, в которых хранимая процедура возвращает эти типы данных в виде возвращаемых значений, которые будут предоставлены как DBTYPE_IUNKNOWN компьютера.  
   
 ## <a name="storage-object-limitations"></a>Ограничения объекта хранилища  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Поставщик OLE DB для собственного клиента может поддерживать только один открытый объект хранилища. При попытке открыть несколько объектов хранилища (получить ссылку на несколько указателей интерфейса **ISequentialStream**) возвращается DBSTATUS_E_CANTCREATE.  
+-   Поставщик [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB может поддерживать только один открытый объект хранилища. При попытке открыть несколько объектов хранилища (получить ссылку на несколько указателей интерфейса **ISequentialStream**) возвращается DBSTATUS_E_CANTCREATE.  
   
--   В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поставщика OLE DB для собственного клиента, значение по умолчанию только для чтения свойства DBPROP_BLOCKINGSTORAGEOBJECTS имеет значение VARIANT_TRUE. Оно указывает, что если имеется активный объект хранилища, некоторые методы (не относящиеся к объектам хранилища) завершатся ошибкой E_UNEXPECTED.  
+-   В поставщике [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB значение по умолчанию свойства DBPROP_BLOCKINGSTORAGEOBJECTS только для чтения — VARIANT_TRUE. Оно указывает, что если имеется активный объект хранилища, некоторые методы (не относящиеся к объектам хранилища) завершатся ошибкой E_UNEXPECTED.  
   
--   Длина данных, представленный объект хранилища, реализованный потребителем должна быть известна для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поставщика OLE DB для собственного клиента, когда создается методом доступа к строке, который ссылается на объект хранилища. Потребитель должен выполнить привязку признака длины в структуре DBBINDING, которая используется для создания метода доступа.  
+-   Длина данных, представленных объектом хранилища, реализованным потребителем, должна быть известна [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поставщика собственного клиента OLE DB при создании метода доступа к строке, ссылающегося на объект хранилища. Потребитель должен выполнить привязку признака длины в структуре DBBINDING, которая используется для создания метода доступа.  
   
--   Если строка содержит больше одного большого значения данных и DBPROP_ACCESSORDER не имеет значения DBPROPVAL_AO_RANDOM, потребитель должен либо использовать [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB для собственного клиента поставщика строк, поддерживаемый курсорами для извлечения строки данных или обработки данных все большие значения перед получить значения других строк. Если DBPROP_ACCESSORDER имеет значение DBPROPVAL_AO_RANDOM, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поставщика OLE DB для собственного клиента кэширует все типы данных xml в виде больших двоичных объектов (BLOB), таким образом, чтобы он доступен в любом порядке.  
+-   Если строка содержит больше одного большого значения данных, а DBPROP_ACCESSORDER не DBPROPVAL_AO_RANDOM, потребитель должен либо использовать [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственный клиент OLE DB поставщика с поддержкой курсора, чтобы получить данные строк или обработать все большие значения данных до получение других значений строк. Если DBPROP_ACCESSORDER DBPROPVAL_AO_RANDOM, то [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственный клиент OLE DBный поставщик кэширует все типы данных XML как большие двоичные объекты (BLOB), чтобы к ним можно было обращаться в любом порядке.  
   
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
   
 -   [Возврат больших данных](../../relational-databases/native-client-ole-db-blobs/getting-large-data.md)  
   
@@ -66,8 +65,8 @@ ms.locfileid: "68128894"
   
 -   [Поддержка потоков для выходных параметров BLOB-объектов](../../relational-databases/native-client-ole-db-blobs/streaming-support-for-blob-output-parameters.md)  
   
-## <a name="see-also"></a>См. также  
- [Собственный клиент SQL Server &#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)   
+## <a name="see-also"></a>См. также раздел  
+ [SQL Server Native Client &#40;OLE DB&#41; ](../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)   
  [Использование типов больших значений](../../relational-databases/native-client/features/using-large-value-types.md)  
   
   

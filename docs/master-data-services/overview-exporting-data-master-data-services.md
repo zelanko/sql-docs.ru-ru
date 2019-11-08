@@ -1,5 +1,5 @@
 ---
-title: Общие сведения. Экспорт данных (службы Master Data Services) | Документы Майкрософт
+title: Exporting Data
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,20 +14,20 @@ helpviewer_keywords:
 ms.assetid: 8b74409a-ea70-45f8-84c7-da6905e4901a
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: db511e86162ff841e9ec97d8f696a3f37c4c75f3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c0376e28c1d75585795b53373a10f4798347746a
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67903999"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728994"
 ---
-# <a name="overview-exporting-data-master-data-services"></a>Общие сведения. Экспорт данных (службы Master Data Services)
+# <a name="overview-exporting-data-master-data-services"></a>Обзор. Экспорт данных (службы Master Data Services)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
   В этой статье рассматриваются типы форматов представления подписки и то, как определить, когда нужно изменить представления из-за изменений в объектах модели.  
   
- Чтобы экспортировать данные служб [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] в системы-подписчики, например [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], нужно создать представление подписки. Система-подписчик используется для просмотра данных в базе данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  Сведения о создании представления подписки см. в разделе [Создание представления подписки для экспорта данных (службы Master Data Services)](../master-data-services/create-a-subscription-view-to-export-data-master-data-services.md)  
+ Чтобы экспортировать данные служб [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] в системы-подписчики, например [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], нужно создать представление подписки. Система-подписчик используется для просмотра данных в базе данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  Сведения о создании представления подписки см. в разделе [Create a Subscription View to Export Data &#40;Master Data Services&#41;](../master-data-services/create-a-subscription-view-to-export-data-master-data-services.md)  
   
  Дополнительные сведения о представлениях см. в разделе [Представления](../relational-databases/views/views.md).  
   

@@ -1,5 +1,5 @@
 ---
-title: Создание модели (службы Master Data Services) | Документы Майкрософт
+title: Создание модели
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9bb3b3b3-bde8-44aa-ad62-eaae21188141
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 96eb620a89fc9f7507f194539d9c1e3e09fc169c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 730e18fca866891d62b68d321ec13e4be5da59bf
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67906656"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728480"
 ---
 # <a name="create-a-model-master-data-services"></a>Создание модели (службы Master Data Services)
 
@@ -26,8 +26,8 @@ ms.locfileid: "67906656"
 
   В среде [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]модель создается для того, чтобы содержать объекты.  
   
-## <a name="prerequisites"></a>предварительные требования  
- Для выполнения этой процедуры:  
+## <a name="prerequisites"></a>Предварительные требования  
+ Чтобы выполнить эту процедуру:  
   
 -   необходимо иметь разрешение на доступ к функциональной области **Администрирование системы** ;  
   
@@ -55,17 +55,17 @@ ms.locfileid: "67906656"
   
  Для каждой созданной модели в сетке создается строка с восемью столбцами. Ниже перечислены эти восемь столбцов.  
   
--   **Состояние**: состояние модели. При нажатии кнопки **Сохранить модель** появляется изображение ![Обновляется](../master-data-services/media/mds-model-status-updating.png "Обновляется"), которое указывает, что модель обновляется. При наличии ошибок во время создания или изменения модели появляется изображение ![Ошибка](../master-data-services/media/mds-model-status-error.png "Ошибка"). В противном случае отображается состояние "ОК" и появляется изображение ![ОК](../master-data-services/media/mds-model-status-ok.png "ОК") .  
+-   **Состояние**: состояние модели. При нажатии кнопки **сохранить модель** отображается изображение ![обновления](../master-data-services/media/mds-model-status-updating.png "Обновить") , которое указывает на то, что модель обновляется. При возникновении ошибок при создании или изменении модели отображается изображение ![ошибки](../master-data-services/media/mds-model-status-error.png "Ошибка") . В противном случае отображается состояние "ОК" и появляется изображение ![ОК](../master-data-services/media/mds-model-status-ok.png "OK") .  
   
--   **Имя**: Имя модели.  
+-   **Имя**: имя модели.  
   
--   **Описание**: Описание модели.  
+-   **Описание**: описание модели.  
   
 -   **Хранение журнала в днях**: количество дней, в течение которого хранится журнал для модели.  
   
--   **Кем создано**: имя пользователя, создавшего модель.  
+-   **Автор**: имя пользователя, создавшего модель.  
   
--   **Дата и время создания**: дата и время, когда была создана модель.  
+-   **Дата и время создания**: дата и время создания модели.  
   
 -   **Кем обновлено**: имя последнего пользователя, обновившего модель.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "67906656"
   
 -   [Создание сущности (службы Master Data Services)](../master-data-services/create-an-entity-master-data-services.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также раздел  
  [Модели (службы Master Data Services)](../master-data-services/models-master-data-services.md)   
  [Сущности (службы Master Data Services)](../master-data-services/entities-master-data-services.md)   
  [Удаление модели (службы Master Data Services)](../master-data-services/delete-a-model-master-data-services.md)   

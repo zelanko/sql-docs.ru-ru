@@ -15,27 +15,26 @@ ms.assetid: fe29a58d-8448-4512-9ffd-b414784ba338
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a25c3622db3271a01a0c4700ff93e0bfaebe7d93
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e62604404c83e7780d50438a485910e5af4d4f05
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67934390"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73784383"
 ---
 # <a name="implicit-cursor-conversions-odbc"></a>Неявные преобразования курсора (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  Приложения могут запросить тип курсора с помощью [SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) и затем выполнить инструкцию SQL, который не поддерживается серверными курсорами запрошенного типа. Вызов **SQLExecute** или **SQLExecDirect** возвращает SQL_SUCCESS_WITH_INFO и **SQLGetDiagRec** возвращает:  
+  Приложения могут запрашивать тип курсора через [SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) , а затем выполнять инструкцию SQL, которая не поддерживается серверными курсорами запрошенного типа. Вызов **SQLExecute** или **SQLExecDirect** возвращает SQL_SUCCESS_WITH_INFO и **SQLGetDiagRec** возвращает:  
   
 ```  
 szSqlState = "01S02", *pfNativeError = 0,  
 szErrorMsg="[Microsoft][SQL Server Native Client] Cursor type changed"  
 ```  
   
- Приложение может определить, какой тип курсора теперь используется путем вызова **SQLGetStmtOption** со значением SQL_CURSOR_TYPE. Преобразование типа курсора применяется только к одной инструкции. Следующий **SQLExecDirect** или **SQLExecute** , выполняются с использованием первоначальных настроек курсора инструкции.  
+ Приложение может определить, какой тип курсора теперь используется, вызвав **SQLGetStmtOption** в значение SQL_CURSOR_TYPE. Преобразование типа курсора применяется только к одной инструкции. Следующие **SQLExecDirect** или **SQLExecute** будут выполняться с использованием параметров курсора исходной инструкции.  
   
-## <a name="see-also"></a>См. также  
- [Подробные сведения о программировании курсоров &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-cursors/programming/cursor-programming-details-odbc.md)  
+## <a name="see-also"></a>См. также раздел  
+ [Сведения о &#40;программировании курсора ODBC&#41;](../../../relational-databases/native-client-odbc-cursors/programming/cursor-programming-details-odbc.md)  
   
   

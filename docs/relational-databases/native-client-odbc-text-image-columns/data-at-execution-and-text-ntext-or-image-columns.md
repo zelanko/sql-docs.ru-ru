@@ -1,5 +1,5 @@
 ---
-title: Данные времени выполнения и Text, ntext или столбцы изображений | Документация Майкрософт
+title: Данные во время выполнения и столбцы типа Text, ntext или Image | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -23,20 +23,19 @@ ms.assetid: 67ffb1a6-f38d-4712-ba64-96bdd41ec2b2
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ae1060b6128a9adc67bfa79d127fd279c8f08905
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3ffc786a8891ceffdfc3bc835374c4833ce9dca1
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68128936"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73790480"
 ---
 # <a name="data-at-execution-and-text-ntext-or-image-columns"></a>Данные времени выполнения и столбцы text, ntext или image
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  Данные времени выполнения ODBC позволяют приложениям работать с очень большими объемами данных в связанных столбцах или параметрах. При получении очень больших **текст**, **ntext**, или **изображение** столбцы, приложение не может иметь возможность просто выделить огромный буфер, привязать столбец в буфер и получения Строка. При обновлении очень больших **текст**, **ntext**, или **изображение** столбцы, приложение не может иметь возможность просто выделить огромный буфер, привязать его к маркеру параметра в SQL инструкции, а затем выполняется инструкция. В этом случае приложение должно использовать [SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md) или [SQLPutData](../../relational-databases/native-client-odbc-api/sqlputdata.md) с его параметрами данных во время выполнения.  
+  Данные времени выполнения ODBC позволяют приложениям работать с очень большими объемами данных в связанных столбцах или параметрах. При получении очень больших столбцов **Text**, **ntext**или **Image** приложение может не позволить просто выделить огромный буфер, привязать столбец к буферу и получить строку. При обновлении очень больших столбцов **Text**, **ntext**или **Image** приложение может не позволить просто выделить огромный буфер, привязать его к маркеру параметра в инструкции SQL, а затем выполнить инструкцию. В таких случаях приложение должно использовать [SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md) или [SQLPutData](../../relational-databases/native-client-odbc-api/sqlputdata.md) с параметрами, выполняемыми при выполнении.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
  [Управление столбцами text и image](../../relational-databases/native-client-odbc-text-image-columns/managing-text-and-image-columns.md)  
   
   

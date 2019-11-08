@@ -13,42 +13,41 @@ ms.assetid: f3389ff2-f3be-4035-9fb5-c9ebc2f15025
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8ae8fc335e899dc578e5837ece78fa20cb3e00e5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f9363fca515ba712e8968da57bf046bf2690e3ac
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68135404"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73787291"
 ---
 # <a name="sqlgetdescrec"></a>SQLGetDescRec
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  В этом разделе обсуждаются SQLGetDescRec функциональные возможности, относящиеся к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
+  В этом разделе обсуждаются функции SQLGetDescRec, характерные для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственного клиента.  
   
 ## <a name="sqlgetdescrec-and-table-valued-parameters"></a>Функция SQLGetDescRec и возвращающие табличные значения параметры  
- SQLGetDescRec может использоваться для получения значений атрибутов возвращающих табличные значения параметров и столбцов возвращающих табличные значения параметра. *RecNumber* соответствующий параметр SQLGetDescRec *ParameterNumber* функции SQLBindParameter.  
+ SQLGetDescRec можно использовать для получения значений атрибутов возвращающих табличное значение параметров и столбцов возвращающих табличное значение параметров. Параметр *рекнумбер* параметра SQLGetDescRec соответствует параметру *параметернумбер* SQLBindParameter.  
   
- Столбцы возвращающих табличное значение параметров доступны только в том случае, когда в поле заголовка дескриптора SQL_SOPT_SS_PARAM_FOCUS задан порядковый номер записи, имеющей тип SQL_DESC_TYPE со значением SQL_SS_TABLE. Дополнительные сведения о столбце SQL_SOPT_SS_PARAM_FOCUS см. в разделе [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md).  
+ Столбцы возвращающих табличное значение параметров доступны только в том случае, когда в поле заголовка дескриптора SQL_SOPT_SS_PARAM_FOCUS задан порядковый номер записи, имеющей тип SQL_DESC_TYPE со значением SQL_SS_TABLE. Дополнительные сведения о SQL_SOPT_SS_PARAM_FOCUS о см. в разделе [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md).  
   
  SQLGetDescRec возвращает следующие данные:  
   
 |Параметр|Возвращающий табличное значение параметр|Столбцы возвращающих табличные значения параметров и других параметров|  
 |---------------|-----------------------------|----------------------------------------------------------|  
-|*Name*|Имя параметра для вызова хранимой процедуры; в противном случае строка длины 0.|Имя столбца возвращающих табличные значения параметров.|  
-|*TypePtr*|SQL_DESC_TYPE. Для возвращающих табличные значения параметров — SQL_SS_TABLE.|SQL_DESC_TYPE|  
-|*SubTypePtr*|Не определено.|SQL_DESC_DATETIME_INTERVAL_CODE (для записей типа SQL_DATETIME или SQL_INTERVAL).|  
-|*LengthPtr*|0|SQL_DESC_OCTET_LENGTH|  
-|*PrecisionPtr*|0|SQL_DESC_PRECISION|  
-|*ScalePtr*|0|SQL_DESC_SCALE|  
-|*NullablePtr*|1|SQL_DESC_NULLABLE|  
+|*Название*|Имя параметра для вызова хранимой процедуры; в противном случае строка длины 0.|Имя столбца возвращающих табличные значения параметров.|  
+|*типептр*|SQL_DESC_TYPE. Для возвращающих табличные значения параметров — SQL_SS_TABLE.|SQL_DESC_TYPE|  
+|*субтипептр*|Не определено.|SQL_DESC_DATETIME_INTERVAL_CODE (для записей типа SQL_DATETIME или SQL_INTERVAL).|  
+|*ленгсптр*|0|SQL_DESC_OCTET_LENGTH|  
+|*преЦисионптр*|0|SQL_DESC_PRECISION|  
+|*скалептр*|0|SQL_DESC_SCALE|  
+|*нуллаблептр*|1|SQL_DESC_NULLABLE|  
   
- Дополнительные сведения о возвращающих табличные значения параметров, см. в разделе [возвращающего табличное значение параметров &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
+ Дополнительные сведения о возвращающих табличное значение параметрах см. в разделе [возвращающие табличное значение параметры &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   
 ## <a name="sqlgetdescrec-support-for-enhanced-date-and-time-features"></a>Поддержка функцией SQLGetDescRec улучшенных функций даты и времени  
  Для типов даты-времени возвращаются следующие значения.  
   
-||*TypePtr*|*SubTypePtr*|*LengthPtr*|*PrecisionPtr*|*ScalePtr*|  
+||*типептр*|*субтипептр*|*ленгсптр*|*преЦисионптр*|*скалептр*|  
 |-|---------------|------------------|-----------------|--------------------|----------------|  
 |datetime|SQL_DATETIME|SQL_CODE_TIMESTAMP|4|3|3|  
 |smalldatetime|SQL_DATETIME|SQL_CODE_TIMESTAMP|8|0|0|  
@@ -57,12 +56,12 @@ ms.locfileid: "68135404"
 |datetime2|SQL_DATETIME|SQL_CODE_TIMESTAMP|16|0..7|0..7|  
 |datetimeoffset|SQL_SS_TIMESTAMPOFFSET|0|20|0..7|0..7|  
   
- Дополнительные сведения см. в разделе [время улучшения функций даты и &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
+ Дополнительные сведения см. в разделе [улучшения &#40;даты и времени&#41;ODBC](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
 ## <a name="sqlgetdescrec-support-for-large-clr-udts"></a>Поддержка функцией SQLGetDescRec больших определяемых пользователем типов (UDT) среды CLR  
- **SQLGetDescRec** поддерживает большие определяемые пользователем типы CLR (UDT). Дополнительные сведения см. в разделе [Large CLR User-Defined типы &#40;ODBC&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
+ **SQLGetDescRec** поддерживает большие определяемые пользователем типы данных CLR (UDT). Дополнительные сведения см. в разделе [типы больших определяемых пользователем &#40;типов&#41;данных CLR ODBC](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
  [SQLGetDescRec](https://go.microsoft.com/fwlink/?LinkId=80707)   
  [Подробные сведения о реализации API-интерфейсов ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   

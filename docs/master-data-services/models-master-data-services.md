@@ -1,5 +1,5 @@
 ---
-title: Модели (службы Master Data Services) | Документы Майкрософт
+title: Модели
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9f862a3d-25ab-41e9-b833-1db99959e825
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 0376509a71196a8b674d6101f65b4845c660ac28
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6bee1ab1716eac70d51006b8bb4315b204be67ab
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68079612"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727946"
 ---
 # <a name="models-master-data-services"></a>Модели (службы основных данных)
 
@@ -47,7 +47,7 @@ ms.locfileid: "68079612"
   
  На рисунке отображены связи между объектами модели.  
   
- ![Объекты в модели служб Master Data Services](../master-data-services/media/mds-conc-model-circles.gif "Объекты в модели служб Master Data Services")  
+ ![Объекты в модели Master Data Services](../master-data-services/media/mds-conc-model-circles.gif "Объекты в модели Master Data Services")  
   
 > [!NOTE]  
 >  Производные иерархии — это тоже объекты модели, но на рисунке они не показаны. Производные иерархии происходят от связей атрибутов на основе домена, существующих между сущностями. Дополнительные сведения см. в разделе [Производные иерархии (службы Master Data Services)](../master-data-services/derived-hierarchies-master-data-services.md).  
@@ -59,7 +59,7 @@ ms.locfileid: "68079612"
 ## <a name="model-example"></a>Пример модели  
  В следующем примере объекты в модели «Продукт» логически группируют данные, связанные с продуктом.  
   
- ![Пример основных данных модели "Продукт"](../master-data-services/media/mds-conc-model.gif "Пример основных данных модели \"Продукт\"")  
+ ![Пример основных данных модели продукта](../master-data-services/media/mds-conc-model.gif "Пример основных данных модели продукта")  
   
  Другие распространенные модели:  
   

@@ -1,5 +1,5 @@
 ---
-title: Имена входа, пользователи и роли базы данных (службы Master Data Services) | Документы Майкрософт
+title: Имена входа, пользователи и роли базы данных
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 72ee383e-a619-461b-9f9d-1cac162ab0c5
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: b12e077e337cedcdcdd3bb23b12e1fb8dc6f704e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7200d919975a644321e596f66349a2a8aae26f99
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68094415"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729483"
 ---
 # <a name="database-logins-users-and-roles-master-data-services"></a>Имена входа, пользователи и роли базы данных (службы Master Data Services)
 
@@ -39,14 +39,14 @@ ms.locfileid: "68094415"
   
 ## <a name="msdb-users"></a>Пользователи msdb  
   
-|Пользовательская|Описание|  
+|Пользователь|Описание|  
 |----------|-----------------|  
 |**mds_clr_user**|Не используется. Сопоставляется с mds_dlp_login.|  
-|**mds_email_user**|Используется для уведомлений.<br /><br /> — Сопоставляется с mds_email_login.<br /><br /> — Является членом следующей роли: DatabaseMailUserRole.|  
+|**mds_email_user**|Используется для уведомлений.<br /><br /> — Сопоставляется с mds_email_login.<br /><br /> — Является членом роли DatabaseMailUserRole.|  
   
 ## <a name="master-data-services-database-users"></a>Пользователи базы данных Master Data Services  
   
-|Пользовательская|Описание|  
+|Пользователь|Описание|  
 |----------|-----------------|  
 |**mds_email_user**|Используется для уведомлений.<br /><br /> — Имеет разрешение SELECT для схемы mdm.<br /><br /> — Имеет разрешение EXECUTE для определяемого пользователем табличного типа mdm.MemberGetCriteria.<br /><br /> — Имеет разрешение EXECUTE для хранимой процедуры mdm.udpNotificationQueueActivate.|  
 |**mds_schema_user**|Владеет схемами mdm и mdq. Схема по умолчанию — mdm.<br /><br /> Не имеет сопоставленного имени входа.|  
@@ -54,19 +54,19 @@ ms.locfileid: "68094415"
   
 ## <a name="master-data-services-database-role"></a>Роль базы данных служб Master Data Services  
   
-|Role|Описание|Разрешения|  
+|Роль|Описание|Разрешения|  
 |----------|-----------------|-----------------|  
 |**mds_exec**|Эта роль содержит учетную запись, создаваемую в службах [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] при создании веб-приложения [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] и учетной записи для пула приложений.|Разрешение EXECUTE для всех схем.<br /><br /> <br /><br /> Разрешения ALTER, INSERT и SELECT для следующих таблиц:<br /><br /> mdm.tblStgMember<br /><br /> mdm.tblStgMemberAttribute<br /><br /> mdm.tbleStgRelationship<br /><br /> <br /><br /> Разрешение SELECT для следующих таблиц:<br /><br /> mdm.tblUser<br /><br /> mdm.tblUserGroup<br /><br /> mdm.tblUserPreference<br /><br /> <br /><br /> Разрешение SELECT для следующих представлений:<br /><br /> mdm.viw_SYSTEM_SECURITY_NAVIGATION<br /><br /> mdm.viw_SYSTEM_SECURITY_ROLE_ACCCESSCONTROL<br /><br /> mdm.viw_SYSTEM_SECURITY_ROLE_ACCCESSCONTROL_MEMBER<br /><br /> mdm.viw_SYSTEM_SECURITY_USER_MODEL|  
   
 ## <a name="schemas"></a>Схемы  
   
-|Role|Описание|  
+|Роль|Описание|  
 |----------|-----------------|  
 |**mdm**|Содержит все объекты базы данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] и компонента Service Broker кроме функций, содержащихся в схеме mdq.|  
 |**mdq**|Содержит функции базы данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] , относящиеся к фильтрации результирующих элементов на основе регулярных выражений или подобия, а также для форматирования уведомлений по электронной почте.|  
-|**stg**|Содержит таблицы базы данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] , хранимые процедуры и представления, связанные с промежуточным процессом. Запрещается удалять любые из этих объектов. Дополнительные сведения о промежуточном процессе см. в разделе [Обзор: импорт данных из таблиц (службы Master Data Services)](../master-data-services/overview-importing-data-from-tables-master-data-services.md).|  
+|**stg**|Содержит таблицы базы данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] , хранимые процедуры и представления, связанные с промежуточным процессом. Запрещается удалять любые из этих объектов. Дополнительные сведения см. в разделе [Обзор: импорт данных из таблиц (службы Master Data Services)](../master-data-services/overview-importing-data-from-tables-master-data-services.md).|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
  [Защита объектов базы данных (службы Master Data Services)](../master-data-services/database-object-security-master-data-services.md)  
   
   

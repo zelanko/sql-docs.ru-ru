@@ -1,5 +1,5 @@
 ---
-title: Назначение флага версии (службы Master Data Services) | Документы Майкрософт
+title: Назначение флага версии
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6629ec7e-32e7-4a1e-8b31-eb43c5923766
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 553df37cf728b3c48c91d0bf7edc50ac924b1106
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4e8f69d473ff15be3105c8dcef5f51edf30f4302
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047741"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729789"
 ---
 # <a name="assign-a-flag-to-a-version-master-data-services"></a>Назначение флага версии (службы Master Data Services)
 
@@ -29,14 +29,14 @@ ms.locfileid: "68047741"
 > [!NOTE]  
 >  Флаг можно назначить только одной версии в каждый момент времени. Если назначить флаг, уже назначенный другой версии, то он переместится к выбранной версии.  
   
-## <a name="prerequisites"></a>предварительные требования  
- Для выполнения этой процедуры:  
+## <a name="prerequisites"></a>Предварительные требования  
+ Чтобы выполнить эту процедуру:  
   
 -   необходимо иметь разрешение на доступ к функциональной области **Управление версиями** ;  
   
 -   необходимо быть администратором модели. Дополнительные сведения см. в статье [Администраторы (службы Master Data Services)](../master-data-services/administrators-master-data-services.md).  
   
--   Нужно создать флаг версии для назначения. Дополнительные сведения см. в статье [Создание флага версии (службы Master Data Services)](../master-data-services/create-a-version-flag-master-data-services.md).  
+-   Нужно создать флаг версии для назначения. Дополнительные сведения см. в статье [Create a Version Flag &#40;Master Data Services&#41;](../master-data-services/create-a-version-flag-master-data-services.md).  
   
 -   Необходимо иметь разрешение на доступ к функциональной области "Управление версиями". Дополнительные сведения см. в разделе [Разрешения функциональной области (службы Master Data Services)](../master-data-services/functional-area-permissions-master-data-services.md).  
   
@@ -53,7 +53,7 @@ ms.locfileid: "68047741"
   
 4.  Нажмите клавишу ВВОД, чтобы сохранить изменение.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
  [Создание флага версии (службы Master Data Services)](../master-data-services/create-a-version-flag-master-data-services.md)   
  [Версии (службы Master Data Services)](../master-data-services/versions-master-data-services.md)  
   

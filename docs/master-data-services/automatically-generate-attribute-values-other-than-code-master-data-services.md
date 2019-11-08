@@ -1,6 +1,7 @@
 ---
-title: Автоматическое формирование значений атрибута, отличного от Code (службы Master Data Services) | Документы Майкрософт
-ms.custom: ''
+title: Автоматическое формирование значений атрибутов
+titleSuffix: Master Data Services
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: b82f6f81-6e9c-4918-9ea9-4ab5f5d11b15
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 29464dcb18f5b598b83217a85eb80ad2a38d3c7f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: dc4ee9fd4eead46df29538a85013949402b1920e
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047559"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728732"
 ---
 # <a name="automatically-generate-attribute-values-other-than-code-master-data-services"></a>Автоматическое формирование значений атрибута отличного от Code (службы Master Data Services)
 
@@ -23,8 +24,8 @@ ms.locfileid: "68047559"
 
   В [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] значения для атрибутов сущности можно формировать автоматически, если каждый раз при применении бизнес-правил необходимо автоматически задавать целое число в качестве значения.  
   
-## <a name="prerequisites"></a>предварительные требования  
- Для выполнения этой процедуры:  
+## <a name="prerequisites"></a>Предварительные требования  
+ Чтобы выполнить эту процедуру:  
   
 -   необходимо иметь разрешение на доступ к функциональной области **Администрирование системы** ;  
   
@@ -68,13 +69,13 @@ ms.locfileid: "68047559"
   
 17. В диалоговом окне подтверждения нажмите кнопку **ОК**. Состояние правила изменится на **Активно**.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Следующие шаги  
   
 -   [Подтверждение конкретных членов, обнаруженных при проверке на соответствие бизнес-правилам (службы Master Data Services)](../master-data-services/validate-specific-members-against-business-rules-master-data-services.md)  
   
 -   [Подтверждение исправления проблемы, обнаруженной при проверке на соответствие бизнес-правилам (службы Master Data Services)](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также раздел  
  [Автоматическое создание кодов (службы Master Data Services)](../master-data-services/automatic-code-creation-master-data-services.md)   
  [Бизнес-правила (службы Master Data Services)](../master-data-services/business-rules-master-data-services.md)   
  [Проверка (службы Master Data Services)](../master-data-services/validation-master-data-services.md)  

@@ -1,5 +1,5 @@
 ---
-title: Применение и обновление набора изменений (Master Data Services) | Документы Майкрософт
+title: Применение и обновление набора изменений
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 3a6a3cf2-1e77-43d3-a64a-855ae51258e7
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 386bdbd2e7361567030a7d2a97e270172bdd21c7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b0e937ff9222553c42eacefc173dfec90bb6ebc6
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047747"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728782"
 ---
 # <a name="apply-and-update-a-changeset-master-data-services"></a>Применение и обновление набора изменений (Master Data Services)
 
@@ -52,7 +52,7 @@ ms.locfileid: "68047747"
 ## <a name="next-steps"></a>Следующие шаги  
  [Фиксация или отправка набора изменений (Master Data Services)](../master-data-services/commit-or-submit-a-changeset-master-data-services.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
  [Создание набора изменений (Master Data Services)](../master-data-services/create-a-changeset-master-data-services.md)   
  [Утверждение или отклонение набора изменений (Master Data Services)](../master-data-services/approve-or-reject-a-changeset-master-data-services.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Промежуточная хранимая процедура (службы Master Data Services) | Документы Майкрософт
+title: Промежуточная хранимая процедура
 ms.custom: ''
 ms.date: 04/01/2016
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 6a613106-9f87-4caf-a23a-a726fc6561c5
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: db04bda1a2147c226fb33db12ba829350aac77a7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 103c43f012f6cf7025139fd29656a42d00fc233f
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085620"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727892"
 ---
 # <a name="staging-stored-procedure-master-data-services"></a>Промежуточная хранимая процедура (службы Master Data Services)
 
@@ -36,8 +36,8 @@ ms.locfileid: "68085620"
   
 |Параметр|Описание|  
 |---------------|-----------------|  
-|**VersionName**<br /><br /> Обязательно|Имя версии. С учетом или без учета регистра, в зависимости от параметров сортировки [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .|  
-|**LogFlag**<br /><br /> Обязательно|Определяет, будут ли регистрироваться транзакции в ходе промежуточного процесса. Возможны следующие значения:<br /><br /> **0**: Не регистрировать транзакции.<br /><br /> **1**: Регистрировать транзакции.<br /><br /> <br /><br /> Дополнительные сведения о транзакциях см. в разделе [Транзакции (службы Master Data Services)](../master-data-services/transactions-master-data-services.md).|  
+|**VersionName**<br /><br /> Обязательное|Имя версии. С учетом или без учета регистра, в зависимости от параметров сортировки [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .|  
+|**LogFlag**<br /><br /> Обязательное|Определяет, будут ли регистрироваться транзакции в ходе промежуточного процесса. Возможны следующие значения:<br /><br /> **0**: не регистрировать транзакции.<br /><br /> **1**: регистрировать транзакции.<br /><br /> <br /><br /> Дополнительные сведения о транзакциях см. в разделе [Транзакции (службы Master Data Services)](../master-data-services/transactions-master-data-services.md).|  
 |**BatchTag**<br /><br /> Требуется, за исключением веб-службы|Значение **BatchTag** , как указано в промежуточной таблице.|  
 |**Batch_ID**<br /><br /> Требуется только для веб-службы|Значение **Batch_ID** , как указано в промежуточной таблице.|  
 |**Имя пользователя**|Необязательный параметр|  
@@ -60,7 +60,7 @@ GO
   
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
  [Проверка хранимых процедур (службы Master Data Services)](../master-data-services/validation-stored-procedure-master-data-services.md)   
  [Просмотр ошибок, возникающих во время помещения на промежуточное хранение (службы Master Data Services)](../master-data-services/view-errors-that-occur-during-staging-master-data-services.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Управление наборами изменений (службы Master Data Services) | Документы Майкрософт
+title: Управление наборами изменений
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: cc74d46d-7566-45d8-9b51-2cfc262f6abe
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 7f428189723987adbbf867facb819a987c502ab7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f4afb02cbd6ef9c4301bfb828415f6faa64a875b
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68054486"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728040"
 ---
 # <a name="manage-changesets-master-data-services"></a>Управление наборами изменений (Master Data Services)
 
@@ -23,7 +23,7 @@ ms.locfileid: "68054486"
 
   В [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] можно управлять всеми изменениями по моделям и версиям.  
   
-## <a name="prerequisites"></a>предварительные требования  
+## <a name="prerequisites"></a>Предварительные требования  
   
 -   Необходимо иметь разрешение на доступ к функциональной области **Обозреватель** . Дополнительные сведения см. в разделе [Разрешения функциональной области (службы Master Data Services)](../master-data-services/functional-area-permissions-master-data-services.md).  
   

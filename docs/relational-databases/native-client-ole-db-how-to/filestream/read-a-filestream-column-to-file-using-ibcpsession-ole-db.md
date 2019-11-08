@@ -11,20 +11,19 @@ ms.assetid: ab3ce02a-549d-4e01-87b9-d15281fba349
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b113dadd067ed5368ac5375e3fa1ebaf258c0985
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 68c16521b787208a4c4653096e26224695b26dd2
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68110272"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73767005"
 ---
 # <a name="read-a-filestream-column-to-file-using-ibcpsession-ole-db"></a>Чтение столбца FILESTREAM в файле с использованием интерфейса IBCPSession (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
   Этот образец считывает столбец файлового потока в файл с помощью интерфейса IBCPSession и записывает файл форматирования.  
   
- Дополнительные сведения о функции filestream, см. в разделе [поддержка FILESTREAM &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/filestream-support-ole-db.md).  
+ Дополнительные сведения о компоненте FILESTREAM см. в разделе [Поддержка &#40;FILESTREAM&#41;OLE DB](../../../relational-databases/native-client/ole-db/filestream-support-ole-db.md).  
   
 ## <a name="example"></a>Пример  
  Убедитесь, что переменная среды INCLUDE включает каталог, содержащий файл sqlncli.h.  

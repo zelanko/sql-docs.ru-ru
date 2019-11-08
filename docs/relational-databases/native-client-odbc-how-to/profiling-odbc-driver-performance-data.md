@@ -1,5 +1,5 @@
 ---
-title: Профилирование данных производительности драйвера (ODBC) | Документация Майкрософт
+title: Данные производительности драйвера профиля (ODBC) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -13,60 +13,59 @@ ms.assetid: b997790a-8cc6-4800-8867-74c1bef07be3
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1136efd8102268623de9caa6be6e4ed77930dcec
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: df90080d0c07b87d646c7c67cbe1fd672a2a582f
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68133423"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73780660"
 ---
 # <a name="profiling-odbc-driver-performance-data"></a>Создание профилей данных производительности драйвера ODBC
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  В этом образце показаны параметры [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для драйвера ODBC, относящиеся к сбору статистики производительности. Образец создает один файл: odbcperf.log.This образец показывает и создание файла журнала производительности данных и отображения данных производительности непосредственно из структуры данных SQLPERF (структура SQLPERF определена в файле Odbcss.h.). Этот образец разработан для ODBC версии 3.0 или более поздней.  
+  В этом образце показаны параметры [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для драйвера ODBC, относящиеся к сбору статистики производительности. В примере создается один файл: odbcperf. log. в этом примере показано создание файла журнала данных о производительности и отображение данных о производительности непосредственно из структуры данных SQLPERF (структура SQLPERF определена в файле ODBC. h.). Этот образец разработан для ODBC версии 3.0 или более поздней.  
   
 > [!IMPORTANT]  
 >  По возможности используйте аутентификацию Windows. Если проверка подлинности Windows недоступна, запросите у пользователя ввод учетных данных во время выполнения. Избегайте хранения учетных данных в файле. Если необходимо сохранить учетные данные, зашифруйте их с помощью [API-интерфейса шифрования Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
   
 ### <a name="to-log-driver-performance-data-using-odbc-administrator"></a>Запись сведений о производительности драйвера при помощи администратора ODBC  
   
-1.  В **панели управления**, дважды щелкните **Администрирование** и дважды щелкните **источники данных (ODBC)** . Можно также вызвать программу odbcad32.exe.  
+1.  На **панели управления**дважды щелкните **Администрирование** , а затем дважды щелкните **Источники данных (ODBC)** . Можно также вызвать программу odbcad32.exe.  
   
-2.  Нажмите кнопку **DSN пользователя**, **системный DSN**, или **файловый DSN** вкладки.  
+2.  Щелкните вкладку **DSN пользователя**, **системное имя DSN**или **Файловый DSN** .  
   
 3.  Щелкните источник данных, для которого необходимо заносить в журнал производительность.  
   
-4.  Нажмите кнопку **Настройка**.  
+4.  Нажмите кнопку **настроить**.  
   
-5.  В Microsoft SQL Server DSN мастер настройки, перейдите на страницу с **запись статистики драйвера ODBC в файл журнала**.  
+5.  В мастере настройки имени DSN Microsoft SQL Server перейдите к странице с **записью статистики драйвера ODBC log в файл журнала**.  
   
-6.  Выберите **запись статистики драйвера ODBC в файл журнала**. В поле укажите имя файла, куда будет записана статистика. При необходимости щелкните **Обзор** для просмотра журналу статистики в файловой системе.  
+6.  Выберите **Журнал статистика драйвера ODBC в файле журнала**. В поле укажите имя файла, куда будет записана статистика. При необходимости нажмите кнопку **Обзор** , чтобы просмотреть файловую систему для журнала статистики.  
   
 ### <a name="to-log-driver-performance-data-programmatically"></a>Программная запись сведений о производительности драйвера  
   
-1.  Вызовите [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) с SQL_COPT_SS_PERF_DATA_LOG и полный путь и имя файла данных журнала производительности. Пример:  
+1.  Вызовите [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) с SQL_COPT_SS_PERF_DATA_LOG, а также полный путь и имя файла журнала данных производительности. Например:  
   
     ```  
     "C:\\Odbcperf.log"  
     ```  
   
-2.  Вызовите [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) с SQL_COPT_SS_PERF_DATA и SQL_PERF_START для начала ведения журнала данных о производительности.  
+2.  Вызовите [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) с SQL_COPT_SS_PERF_DATA и SQL_PERF_START, чтобы начать запись данных о производительности.  
   
-3.  Можно также вызвать [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) с SQL_COPT_SS_LOG_NOW и NULL, чтобы сделать запись с разделением табуляцией данных о производительности в файл журнала данных производительности. Это можно делать каждый раз при запуске приложения.  
+3.  При необходимости вызовите [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) с SQL_COPT_SS_LOG_NOW и NULL, чтобы записать в файл журнала данных производительности записи с разделителями-символами табуляции. Это можно делать каждый раз при запуске приложения.  
   
-4.  Вызовите [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) с SQL_COPT_SS_PERF_DATA и SQL_PERF_STOP, чтобы остановить запись в журнал данных производительности.  
+4.  Вызовите [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) с SQL_COPT_SS_PERF_DATA и SQL_PERF_STOP, чтобы отключить ведение журнала данных о производительности.  
   
 ### <a name="to-pull-driver-performance-data-into-an-application"></a>Получение в приложение данных о производительности  
   
-1.  Вызовите [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) с SQL_COPT_SS_PERF_DATA и SQL_PERF_START для начала профилирования данные о производительности.  
+1.  Вызовите [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) с SQL_COPT_SS_PERF_DATA и SQL_PERF_START, чтобы начать профилирование данных производительности.  
   
-2.  Вызовите [SQLGetConnectAttr](../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md) с SQL_COPT_SS_PERF_DATA и адресом указателя на структуру SQLPERF. Первый такой вызов установит указатель на адрес допустимой структуры SQLPERF, содержащей текущие сведения о производительности. Драйвер не обновляет непрерывно данные в структуре производительности. Приложение должно повторить вызов [SQLGetConnectAttr](../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md) любое время, возникает необходимость обновить структуру более новыми сведениями о производительности.  
+2.  Вызовите [SQLGetConnectAttr](../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md) с SQL_COPT_SS_PERF_DATA и адресом указателя на структуру SQLPERF. Первый такой вызов установит указатель на адрес допустимой структуры SQLPERF, содержащей текущие сведения о производительности. Драйвер не обновляет непрерывно данные в структуре производительности. Приложение должно повторить вызов [SQLGetConnectAttr](../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md) каждый раз, когда ему потребуется обновить структуру с более актуальными данными о производительности.  
   
-3.  Вызовите [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) с SQL_COPT_SS_PERF_DATA и SQL_PERF_STOP, чтобы остановить запись в журнал данных производительности.  
+3.  Вызовите [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) с SQL_COPT_SS_PERF_DATA и SQL_PERF_STOP, чтобы отключить ведение журнала данных о производительности.  
   
 ## <a name="example"></a>Пример  
- Также необходим источник данных ODBC с именем AdventureWorks, для которого базой данных по умолчанию является образец базы данных AdventureWorks. (Образец базы данных AdventureWorks можно скачать с домашней страницы [Microsoft SQL Server Samples and Community Projects](https://go.microsoft.com/fwlink/?LinkID=85384) (Образцы кода и проекты сообщества Microsoft SQL Server).) Этот источник данных должен быть основан на драйвере ODBC, предоставленном операционной системой (имя драйвера — «SQL Server»). При построении и запуске этого образца как 32-разрядного приложения в 64-разрядной операционной системе необходимо создать источник данных ODBC с помощью программы администрирования ODBC (исполняемый файл %windir%\SysWOW64\odbcad32.exe).  
+ Также необходим источник данных ODBC с именем AdventureWorks, для которого базой данных по умолчанию является образец базы данных AdventureWorks. (Образец базы данных AdventureWorks можно скачать на домашней странице [Microsoft SQL Server примеры и проекты сообщества](https://go.microsoft.com/fwlink/?LinkID=85384) .) Этот источник данных должен быть основан на драйвере ODBC, предоставленном операционной системой (имя драйвера — "SQL Server"). При построении и запуске этого образца как 32-разрядного приложения в 64-разрядной операционной системе необходимо создать источник данных ODBC с помощью программы администрирования ODBC (исполняемый файл %windir%\SysWOW64\odbcad32.exe).  
   
  Этот образец соединяется с установленным на компьютер экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по умолчанию. Чтобы соединиться с именованным экземпляром, измените определение источника данных ODBC, указав экземпляр в следующем формате: Сервер\ИменованныйЭкземпляр. По умолчанию [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] устанавливается на именованный экземпляр.  
   
@@ -241,8 +240,8 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Профилирование разделы руководства по производительности драйвера ODBC &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)   
+## <a name="see-also"></a>См. также раздел  
+ [Разделы &#40;руководства по профилированию производительности драйвера ODBC  ODBC&#41; ](../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)  
  [Создание профилей производительности драйвера ODBC](../../relational-databases/native-client/odbc/profiling-odbc-driver-performance.md)  
   
   

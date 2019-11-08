@@ -1,5 +1,5 @@
 ---
-title: Хранимая процедура проверки (службы Master Data Services) | Документы Майкрософт
+title: Проверка хранимых процедур
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 332d3c86-4440-4f12-a6cb-ffbfbccde52c
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 7861b0fffa8c85f48ba3d95d417e31817c030ae9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5a9210db5a2594f03b7916d06ed975d69882b513
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68017354"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727803"
 ---
 # <a name="validation-stored-procedure-master-data-services"></a>Проверка хранимых процедур (службы Master Data Services)
 
@@ -23,7 +23,7 @@ ms.locfileid: "68017354"
 
   В среде [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]проверьте версию на применение бизнес-правил ко всем элементам версии модели.  
   
- В этом разделе объясняется, как использовать хранимую процедуру **mdm.udpValidateModel** для проверки данных. Администратор веб-приложения [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] может проводить проверку в пользовательском интерфейсе. Дополнительные сведения см. в разделе [проверка версии на соответствие бизнес-правила &#40;службы Master Data Services&#41;](../master-data-services/validate-a-version-against-business-rules-master-data-services.md).  
+ В этом разделе объясняется, как использовать хранимую процедуру **mdm.udpValidateModel** для проверки данных. Администратор веб-приложения [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] может проводить проверку в пользовательском интерфейсе. Дополнительные сведения см. в разделе [Validate a Version against Business Rules &#40;Master Data Services&#41;](../master-data-services/validate-a-version-against-business-rules-master-data-services.md).  
   
 > [!NOTE]  
 >  При запуске проверки до завершения промежуточного процесса элементы, для которых этот процесс не был завершен, не будут проверены.  
@@ -60,7 +60,7 @@ EXECUTE mdm.udpValidateModel @User_ID, @Model_ID, @Version_ID, 1
 |Model_ID|Идентификатор модели.|  
 |Version_ID|Идентификатор версии.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
  [Обзор: импорт данных из таблиц (службы Master Data Services)](../master-data-services/overview-importing-data-from-tables-master-data-services.md)   
  [Подтверждение исправления проблемы, обнаруженной при проверке на соответствие бизнес-правилам (службы Master Data Services)](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
   

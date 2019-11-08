@@ -1,5 +1,5 @@
 ---
-title: Операции веб-службы по категориям (службы Master Data Services) | Документы Майкрософт
+title: Операции веб-службы по категориям
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: reference
 ms.assetid: e3f346b5-7e26-481d-9821-1846e2e91289
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 3ad01ae5dd8407fda8d7802681695200bf25b167
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a629ead2f102c20466126bdfa9952962311bb750
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68098590"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728302"
 ---
 # <a name="categorized-web-service-operations-master-data-services"></a>Операции веб-службы по категориям (службы Master Data Services)
 
@@ -121,7 +121,7 @@ ms.locfileid: "68098590"
 |<xref:Microsoft.MasterDataServices.ServiceClient.DataQualityOperationStatus%2A>|  
   
 ## <a name="data-import-operations"></a>Операции импорта данных  
- Эти операции используются для импорта данных в базу данных [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] . Дополнительные сведения см. в статье [Обзор: импорт данных из таблиц (службы Master Data Services)](../../master-data-services/overview-importing-data-from-tables-master-data-services.md).  
+ Эти операции используются для импорта данных в базу данных [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] . Дополнительные сведения см. в разделе [Обзор: импорт данных из таблиц (службы Master Data Services)](../../master-data-services/overview-importing-data-from-tables-master-data-services.md).  
   
 ||  
 |-|  
@@ -140,7 +140,7 @@ ms.locfileid: "68098590"
 |<xref:Microsoft.MasterDataServices.ServiceClient.StagingProcess%2A>|  
   
 ## <a name="data-export-operations"></a>Операции экспорта данных  
- Эти операции используются для экспорта данных посредством использования представлений подписки. Дополнительные сведения см. в статье [Обзор: экспорт данных (службы Master Data Services)](../../master-data-services/overview-exporting-data-master-data-services.md)  
+ Эти операции используются для экспорта данных посредством использования представлений подписки. Дополнительные сведения см. в разделе [Overview: Exporting Data &#40;Master Data Services&#41;](../../master-data-services/overview-exporting-data-master-data-services.md).  
   
 ||  
 |-|  

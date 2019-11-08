@@ -14,16 +14,15 @@ ms.assetid: 5e14d5c8-e7c6-498f-8041-7e006a1c2d81
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a3a1e8f9076cce34de811713455c914f41b5814d
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 67509c447134edd816c06ac57e7714efd16c7359
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908051"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73766387"
 ---
 # <a name="retrieve-rows-using-bookmarks-ole-db"></a>Получение строк с помощью закладок (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   Потребитель устанавливает для поля **dwFlag** значение структуры привязки, равное DBCOLUMNSINFO_ISBOOKMARK, для указания, что столбец используется в качестве закладки. Пользователь также присваивает свойству набора строк DBPROP_BOOKMARKS значение VARIANT_TRUE. Это обеспечивает присутствие в наборе строк столбца с номером 0. Затем с помощью метода**IRowsetLocate::GetRowsAt** производится выборка строк, начиная со строки, указанной в качестве смещения относительно закладки.  
   

@@ -1,5 +1,5 @@
 ---
-title: Изменение пакета развертывания модели | Документы Майкрософт
+title: Изменение пакета развертывания модели
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 6b0fdb7d-83dd-4392-9011-4ae642c471f1
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 651ddeeebe7cb6896c50486aed673e02bf47b0e2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 12cacedc8f195a965b7632760976008ba4b422b0
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68086472"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728229"
 ---
 # <a name="edit-a-model-deployment-package"></a>Изменение пакета развертывания модели
 
@@ -27,8 +27,8 @@ ms.locfileid: "68086472"
   
  С помощью редактора пакетов моделей можно выбирать части модели в файле пакета, созданном либо средством MDSModelDeploy (оно создает файл пакета, включающий объекты и данные), либо мастером развертывания моделей (он создает файл, включающий только структуру модели). После редактирования модели в пакете используйте средство MDSModelDeploy для развертывания объектов и данных или мастер развертывания моделей для развертывания лишь структуры модели.  
   
-## <a name="prerequisites"></a>предварительные требования  
- Для выполнения этой процедуры:  
+## <a name="prerequisites"></a>Предварительные требования  
+ Чтобы выполнить эту процедуру:  
   
 -   необходимо быть администратором модели. Дополнительные сведения см. в статье [Администраторы (службы Master Data Services)](../master-data-services/administrators-master-data-services.md).  
   

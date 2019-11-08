@@ -1,5 +1,5 @@
 ---
-title: Скрытие или удаление уровней в производной иерархии (службы Master Data Services) | Документы Майкрософт
+title: скрыть или удалить уровни в производной иерархии
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e00582b9-9415-4b66-b4a7-9f590d83875f
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 0b6ce19214332e2a4f2ec85735657e7e55906c44
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b364213586b8f796101e099c1384cba9569f8ad9
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67945247"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728132"
 ---
 # <a name="hide-or-delete-levels-in-a-derived-hierarchy-master-data-services"></a>Скрытие или удаление уровней в производной иерархии (службы Master Data Services)
 
@@ -26,8 +26,8 @@ ms.locfileid: "67945247"
 
   В службах [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]можно скрыть уровень в производной иерархии, если он необходим для группирования, но отображать этот уровень нежелательно. Если этот уровень не нужен для группирования, то можно удалить его.  
   
-## <a name="prerequisites"></a>предварительные требования  
- Для выполнения этой процедуры:  
+## <a name="prerequisites"></a>Предварительные требования  
+ Чтобы выполнить эту процедуру:  
   
 -   необходимо иметь разрешение на доступ к функциональной области **Администрирование системы** ;  
   
@@ -51,7 +51,7 @@ ms.locfileid: "67945247"
   
     -   Чтобы удалить верхний уровень, щелкните **Удалить выбранный элемент иерархии**. В диалоговом окне подтверждения нажмите кнопку **ОК**. Можно удалить только верхний уровень.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
     
  [Производные иерархии (службы Master Data Services)](../master-data-services/derived-hierarchies-master-data-services.md)  
   

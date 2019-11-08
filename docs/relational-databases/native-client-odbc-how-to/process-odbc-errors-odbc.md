@@ -13,16 +13,15 @@ ms.assetid: 66ab0762-79fe-4a31-b655-27dd215a0af7
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e0c47713cb0aab0c87d1f9f652e1472100becf97
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2acf7bd227d04cfd5b99a45ef4fa336b78bd4cfa
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68133470"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73781043"
 ---
 # <a name="process-odbc-errors-odbc"></a>Обработка ошибок ODBC (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   Для получения сообщений ODBC можно использовать две функции ODBC: [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) и [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md). Для получения в полях диагностики **SQLState**, **pfNative**и **ErrorMessage** сведений, касающихся ODBC, вызывайте функцию [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) до тех пор, пока она не вернет значение SQL_NO_DATA. Чтобы получить отдельные поля, можно вызвать функцию [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md) для каждой записи диагностики. Все зависящие от драйвера поля нужно получить с помощью функции **SQLGetDiagField**.  
   
@@ -31,24 +30,24 @@ ms.locfileid: "68133470"
 ## <a name="example"></a>Пример  
   
 ### <a name="description"></a>Описание  
- В этом образце показана работа простого обработчика ошибок, вызывающего функцию [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) для получения стандартных сведений ODBC. Затем производится проверка наличия допустимого соединения; при положительном результате проверки вызывается функция **SQLGetDiagField** для полей диагностики, зависящих от драйвера ODBC для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Этот образец не поддерживается на архитектуре IA64.  
+ В этом образце показана работа простого обработчика ошибок, вызывающего функцию [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) для получения стандартных сведений ODBC. Затем производится проверка наличия допустимого соединения; при положительном результате проверки вызывается функция **SQLGetDiagField** для зависящих от драйвера ODBC для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] полей диагностики. Этот образец не поддерживается на архитектуре IA64.  
   
  Этот образец разработан для ODBC версии 3.0 или более поздней.  
   
 > [!IMPORTANT]  
 >  По возможности используйте аутентификацию Windows. Если проверка подлинности Windows недоступна, запросите у пользователя ввод учетных данных во время выполнения. Избегайте хранения учетных данных в файле. Если необходимо сохранить учетные данные, зашифруйте их с помощью [API-интерфейса шифрования Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
   
- Также необходим источник данных ODBC с именем AdventureWorks, для которого базой данных по умолчанию является образец базы данных AdventureWorks. (Образец базы данных AdventureWorks можно скачать с домашней страницы [Microsoft SQL Server Samples and Community Projects](https://go.microsoft.com/fwlink/?LinkID=85384) (Образцы кода и проекты сообщества Microsoft SQL Server).) Этот источник данных должен быть основан на драйвере ODBC, предоставленном операционной системой (имя драйвера — «SQL Server»). При построении и запуске этого образца как 32-разрядного приложения в 64-разрядной операционной системе необходимо создать источник данных ODBC с помощью программы администрирования ODBC (исполняемый файл %windir%\SysWOW64\odbcad32.exe).  
+ Также необходим источник данных ODBC с именем AdventureWorks, для которого базой данных по умолчанию является образец базы данных AdventureWorks. (Образец базы данных AdventureWorks можно скачать на домашней странице [Microsoft SQL Server примеры и проекты сообщества](https://go.microsoft.com/fwlink/?LinkID=85384) .) Этот источник данных должен быть основан на драйвере ODBC, предоставленном операционной системой (имя драйвера — "SQL Server"). При построении и запуске этого образца как 32-разрядного приложения в 64-разрядной операционной системе необходимо создать источник данных ODBC с помощью программы администрирования ODBC (исполняемый файл %windir%\SysWOW64\odbcad32.exe).  
   
  Этот образец соединяется с установленным на компьютер экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по умолчанию. Чтобы соединиться с именованным экземпляром, измените определение источника данных ODBC, указав экземпляр в следующем формате: Сервер\ИменованныйЭкземпляр. По умолчанию [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] устанавливается на именованный экземпляр.  
   
- Выполните первый ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) листинг для создания хранимой процедуры, используемые в этом примере кода.  
+ Выполните первый листинг кода ([!INCLUDE[tsql](../../includes/tsql-md.md)]), чтобы создать хранимую процедуру, используемую в этом образце.  
   
  Скомпилируйте второй листинг кода (C++) с библиотекой odbc32.lib. Затем запустите программу.  
   
- Выполните третий ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) листинг удалить хранимую процедуру, используемую в данном образце кода.  
+ Выполните третий листинг кода ([!INCLUDE[tsql](../../includes/tsql-md.md)]), чтобы удалить хранимую процедуру, используемую в этом образце.  
   
-### <a name="code"></a>Код  
+### <a name="code"></a>код  
   
 ```  
 use AdventureWorks  
@@ -63,7 +62,7 @@ SELECT * FROM Purchasing.Vendor
 Go  
 ```  
   
-### <a name="code"></a>Код  
+### <a name="code"></a>код  
   
 ```  
 // compile with: odbc32.lib  
@@ -231,7 +230,7 @@ void ProcessLogMessages(SQLSMALLINT plm_handle_type, SQLHANDLE plm_handle, char 
 }  
 ```  
   
-### <a name="code"></a>Код  
+### <a name="code"></a>код  
   
 ```  
 use AdventureWorks  
@@ -239,7 +238,7 @@ DROP PROCEDURE BadOne
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
  [Инструкции по ODBC](../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)  
   
   

@@ -14,26 +14,25 @@ ms.assetid: 3a980816-675c-4fba-acc9-429297d85bbd
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7264bcef75e13a25a6b4b7ef722e4e4bcfb07ea6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a2e5896456f3c4f8074b62f6e1d4707cc7c41d21
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68128529"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73770803"
 ---
 # <a name="sessions"></a>Сеансы
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  Объект [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сеанс поставщика OLE DB для собственного клиента представляет одно соединение с экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  Сеанс поставщика [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB представляет одно соединение с экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Поставщик OLE DB для собственного клиента требует, что сеансы разделили область транзакции для источника данных. Все объекты команд, созданные из определенного объекта сеанса, участвуют в локальной или распределенной транзакции объекта сеанса.  
+ Поставщик [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB требует, чтобы сеансы разделяют пространство транзакций для источника данных. Все объекты команд, созданные из определенного объекта сеанса, участвуют в локальной или распределенной транзакции объекта сеанса.  
   
  Первый объект сеанса, созданный на инициализированном источнике данных, получает соединение [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], установленное при инициализации. Когда все ссылки на интерфейсах объекта сеанса освобождены, соединение с экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] становится доступным другому объекту сеанса, созданному на источнике данных.  
   
  Дополнительный объект сеанса, созданный на источнике данных, устанавливает собственное соединение с экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], указанным источником данных. Соединение с экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] удаляется, когда приложение освобождает все ссылки на объекты, созданные в этом сеансе.  
   
- Следующий пример демонстрирует, как использовать [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поставщика OLE DB для собственного клиента для подключения к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базы данных:  
+ В следующем примере показано, как использовать поставщик [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB для подключения к базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ```  
 int main()  
@@ -182,14 +181,14 @@ EXIT:
 }  
 ```  
   
- Подключение [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] объектов сеанса поставщика OLE DB для собственного клиента к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] могут возникнуть существенные издержки для приложений, которые постоянно создают и освобождают объекты сеанса. Издержки можно уменьшить, управляя [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] эффективно объектами сеанса поставщика OLE DB для собственного клиента. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Приложения поставщика собственного клиента OLE DB можно хранить [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] подключения объекта сеанса активным, поддерживая ссылку по крайней мере один интерфейс объекта.  
+ Подключение [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] объекты сеанса поставщика собственного клиента OLE DB к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может создать значительные издержки для приложений, которые постоянно создают и освобождают объекты сеанса. Затраты могут быть сведены к минимальному управлению [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственными клиентскими объектами сеанса OLE DB поставщика. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] приложения поставщика собственного клиента OLE DB могут поддерживать [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ное подключение объекта сеанса, сохраняя ссылку по крайней мере в одном интерфейсе объекта.  
   
  Например, поддержание пула ссылок на объект создания команды сохраняет активными соединения для этих объектов сеанса в пуле. Когда требуются объекты сеанса, код обслуживания пула передает действительный указатель интерфейса **IDBCreateCommand** методу приложения, которому требуется сеанс. Когда сеанс более не требуется методу приложения, метод возвращает указатель интерфейса коду обслуживания пула, а не освобождает ссылку приложения на объект создания команды.  
   
 > [!NOTE]  
 >  В предыдущем примере используется интерфейс **IDBCreateCommand**, так как интерфейс **ICommand** реализует метод **GetDBSession**, единственный метод в команде или области набора строк, который позволяет объекту определить сеанс, в котором он был создан. Поэтому объект команды, и только объект команды, позволяет приложению получить указатель объекта источника данных, из которого могут быть созданы дополнительные сеансы.  
   
-## <a name="see-also"></a>См. также  
- [Объекты источника данных &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-data-source-objects/data-source-objects-ole-db.md)  
+## <a name="see-also"></a>См. также раздел  
+ [Объекты &#40;источника данных OLE DB&#41;](../../relational-databases/native-client-ole-db-data-source-objects/data-source-objects-ole-db.md)  
   
   

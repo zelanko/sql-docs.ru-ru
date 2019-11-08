@@ -1,5 +1,5 @@
 ---
-title: Блокировка версии (службы Master Data Services) | Документы Майкрософт
+title: Блокировка версии
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7bb62a84-12d8-4b29-9b6e-6aa25410618e
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 6c57ba8b2a5639dc271eaa7cf1877ab3ccbba9ca
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 693eeda37e65dbf1d83fdf59eaf546e711827b7e
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68131854"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728057"
 ---
 # <a name="lock-a-version-master-data-services"></a>Блокировка версии (службы Master Data Services)
 
@@ -30,7 +30,7 @@ ms.locfileid: "68131854"
 >  Если версия заблокирована, суперпользователи и администраторы модели по-прежнему могут добавлять, изменять и удалять элементы. Другие пользователи с разрешениями для модели могут только просматривать элементы.  
   
 ## <a name="prerequisites"></a>Предварительные требования  
- Для выполнения этой процедуры:  
+ Чтобы выполнить эту процедуру:  
   
 -   необходимо быть администратором модели. Дополнительные сведения см. в статье [Администраторы (службы Master Data Services)](../master-data-services/administrators-master-data-services.md).  
   
@@ -54,7 +54,7 @@ ms.locfileid: "68131854"
   
 -   [Фиксация версии (службы Master Data Services)](../master-data-services/commit-a-version-master-data-services.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
  [Версии (службы Master Data Services)](../master-data-services/versions-master-data-services.md)   
  [Разблокировка версии (службы Master Data Services)](../master-data-services/unlock-a-version-master-data-services.md)  
   
