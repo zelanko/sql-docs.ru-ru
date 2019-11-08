@@ -1,5 +1,5 @@
 ---
-title: Изменение имени флага версии (службы Master Data Services) | Документы Майкрософт
+title: Изменение имени флага версии
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: bc08b69d-a38d-4f27-a356-5bce29e6248c
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 8b92b93148d7baf1782820ccff6b033983bc6de5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e8f5d441e7d129c7f39dc2d53c6b9ac4215aba9f
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047324"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729721"
 ---
 # <a name="change-a-version-flag-name-master-data-services"></a>Изменение имени флага версии (службы Master Data Services)
 
@@ -26,7 +26,7 @@ ms.locfileid: "68047324"
   В службах [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]можно изменить имя флага версии.  
   
 ## <a name="prerequisites"></a>Предварительные требования  
- Для выполнения этой процедуры:  
+ Чтобы выполнить эту процедуру:  
   
 -   необходимо иметь разрешение на доступ к функциональной области **Управление версиями** ;  
   
@@ -48,7 +48,7 @@ ms.locfileid: "68047324"
   
 6.  Нажмите клавишу ВВОД.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
  [Версии (службы Master Data Services)](../master-data-services/versions-master-data-services.md)   
  [Назначение флага версии (службы Master Data Services)](../master-data-services/assign-a-flag-to-a-version-master-data-services.md)  
   

@@ -14,21 +14,20 @@ ms.assetid: e60101ae-a5f5-432f-a32a-d8e6fb0cbde8
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4d616ff1fb72b3f8afd618afa7bea7a873a6342e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 103331bfff23e5fd315baf37407d385523a7b63d
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68131031"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73785368"
 ---
 # <a name="sqlstatistics"></a>SQLStatistics
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   Функция**SQLStatistics** может быть выполнена для статического курсора. Попытка выполнения функции **SQLStatistics** для обновляемого (управляемого набором ключей или динамического) курсора возвращает SQL_SUCCESS_WITH_INFO, определяющий изменение типа курсора.  
   
-## <a name="see-also"></a>См. также  
- [SQLStatistics, функция](https://go.microsoft.com/fwlink/?LinkId=59372)   
+## <a name="see-also"></a>См. также раздел  
+   [функции SQLStatistics](https://go.microsoft.com/fwlink/?LinkId=59372)  
  [Подробные сведения о реализации API-интерфейсов ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

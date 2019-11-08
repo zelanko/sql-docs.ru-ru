@@ -15,18 +15,17 @@ ms.assetid: 2febe2ae-fdc1-490e-a79f-c516bc8e7c3f
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d23fc32e866167a8ae1109d52e5b4699aeffc815
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5188b87e91725e2d0e86337261fc1f915189ff19
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68092876"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73784240"
 ---
 # <a name="cursor-rowset-size"></a>Размер набора строк курсора
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  Возможности курсоров ODBC не ограничены выбором только одной строки за один раз. Они могут извлекать несколько строк в каждом вызове **SQLFetch** или [SQLFetchScroll](../../../relational-databases/native-client-odbc-api/sqlfetchscroll.md). При работе с базой данных Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в режиме клиент-сервер значительно эффективнее извлекать несколько строк за один раз. Число строк, возвращаемых при извлечении, называется размером набора строк и задается с помощью параметра sql_attr_row_array_size функции [SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md).  
+  Возможности курсоров ODBC не ограничены выбором только одной строки за один раз. Они могут получать несколько строк в каждом вызове **SQLFetch** или [SQLFetchScroll](../../../relational-databases/native-client-odbc-api/sqlfetchscroll.md). При работе с базой данных Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в режиме клиент-сервер значительно эффективнее извлекать несколько строк за один раз. Число строк, возвращаемых при выборке, называется размером набора строк и задается с помощью SQL_ATTR_ROW_ARRAY_SIZE [SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md).  
   
 ```  
 SQLUINTEGER uwRowsize;  
@@ -45,13 +44,13 @@ SQLSetStmtAttr(m_hstmt, SQL_ATTR_ROW_ARRAY_SIZE, (SQLPOINTER)uwRowsetSize, SQL_I
   
      Массив создается с использованием структур, которые содержат данные и индикаторы для всех столбцов в строке. Число структур в массиве равно размеру набора строк.  
   
- Если используется привязка на уровне строки или на уровне столбца, каждый вызов **SQLFetch** или **SQLFetchScroll** заполняет привязанный массив данными из извлеченного набора строк.  
+ При использовании привязки на уровне столбца или на уровне строки каждый вызов **SQLFetch** или **SQLFetchScroll** заполняет привязанные массивы данными из полученного набора строк.  
   
- [SQLGetData](../../../relational-databases/native-client-odbc-api/sqlgetdata.md) также может использоваться для извлечения данных столбца из блочного курсора. Так как **SQLGetData** работает с одной строкой за раз, **SQLSetPos** необходимо вызвать, чтобы указывать конкретную строку в наборе строк как текущую строку до вызова метода **SQLGetData**.  
+ [SQLGetData](../../../relational-databases/native-client-odbc-api/sqlgetdata.md) также можно использовать для извлечения данных столбца из блочного курсора. Поскольку **SQLGetData** работает по одной строке за раз, необходимо вызвать функцию **SQLSetPos** , чтобы задать определенную строку в наборе строк в качестве текущей строки перед вызовом **SQLGetData**.  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Драйвер ODBC собственного клиента обеспечивает оптимизацию за счет использования наборов строк для извлечения всего результирующего набора быстро. Чтобы использовать эту оптимизацию, присвоить атрибутам курсора значения по умолчанию (однопроходный, только для чтения, размер набора строк = 1) во время **SQLExecDirect** или **SQLExecute** вызывается. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Драйвер ODBC собственного клиента настраивает результирующий набор по умолчанию. Это более эффективно, чем использование серверных курсоров при передаче результатов клиенту без прокрутки. После выполнения инструкции увеличьте размер набора строк и примените привязку на уровне столбца или строки. Это позволяет [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] использования результирующего набора по умолчанию результирующие строки эффективно отправлять клиенту, пока [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] драйвер ODBC собственного клиента непрерывно извлекает строки из сетевых буферов на клиенте.  
+ Драйвер ODBC для собственного клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] обеспечивает оптимизацию с помощью наборов строк для быстрого получения всего результирующего набора. Чтобы использовать эту оптимизацию, задайте для атрибутов курсора значения по умолчанию ("только вперед", "только для чтения", размер набора строк = 1) во время вызова **SQLExecDirect** или **SQLExecute** . Драйвер ODBC для собственного клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] устанавливает результирующий набор по умолчанию. Это более эффективно, чем использование серверных курсоров при передаче результатов клиенту без прокрутки. После выполнения инструкции увеличьте размер набора строк и примените привязку на уровне столбца или строки. Это позволяет [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] использовать результирующий набор по умолчанию для эффективного отправки результирующих строк клиенту, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в то время как драйвер ODBC для собственного клиента постоянно извлекает строки из сетевых буферов на клиенте.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
  [Свойства курсора](../../../relational-databases/native-client-odbc-cursors/properties/cursor-properties.md)  
   
   

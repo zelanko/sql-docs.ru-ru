@@ -13,16 +13,15 @@ ms.assetid: 7ecba6f6-fe7a-462a-9aa3-d5115b6d4529
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a0e457a34f53dc95b207cecc114b413d136d34c5
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 99b36c3213a2fae81eec80bf7efbf09f3aac6c6e
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909443"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73788755"
 ---
 # <a name="executing-commands-containing-table-valued-parameters"></a>Выполняет команды, содержащие возвращающие табличное значение параметры
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   Выполнение команд, содержащих возвращающие табличное значение параметры, проводится в две стадии.  
   
@@ -50,7 +49,7 @@ ms.locfileid: "72909443"
   
 -   Данные для столбцов с атрибутом DPPROP_COL_AUTOINCREMENT или SSPROP_COL_COMPUTED будут переданы на сервер, за исключением столбцов, для которых также задан атрибут SSPROP_PARAM_TABLE_DEFAULT.  
   
-## <a name="see-also"></a>См. также статью  
+## <a name="see-also"></a>См. также раздел  
  [Возвращающие табличные значения параметры &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)   
  [Использование возвращающих табличные значения параметров &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md)  
   

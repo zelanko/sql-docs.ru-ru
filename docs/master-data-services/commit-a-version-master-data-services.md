@@ -1,5 +1,5 @@
 ---
-title: Фиксация версии (службы Master Data Services) | Документы Майкрософт
+title: Фиксация версии
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6b967a39-b333-4b84-9e5f-4fb07e156826
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: aa5096a19753bf860453b23476116fd422f3c6cb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0fa359de1daa844fbcce073b0c67efdd5f721b37
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67941136"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728591"
 ---
 # <a name="commit-a-version-master-data-services"></a>Фиксация версии (службы Master Data Services)
 
@@ -26,8 +26,8 @@ ms.locfileid: "67941136"
 
   В среде [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]фиксация версии модели препятствует изменениям элементов модели и их атрибутов. Открыть зафиксированную версию нельзя.  
   
-## <a name="prerequisites"></a>предварительные требования  
- Для выполнения этой процедуры:  
+## <a name="prerequisites"></a>Предварительные требования  
+ Чтобы выполнить эту процедуру:  
   
 -   необходимо иметь разрешение на доступ к функциональной области **Управление версиями** ;  
   
@@ -59,7 +59,7 @@ ms.locfileid: "67941136"
   
 -   [Копирование версии (службы Master Data Services)](../master-data-services/copy-a-version-master-data-services.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
  [Версии (службы Master Data Services)](../master-data-services/versions-master-data-services.md)  
   
   

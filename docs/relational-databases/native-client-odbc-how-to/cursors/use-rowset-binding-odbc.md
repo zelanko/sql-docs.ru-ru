@@ -13,16 +13,15 @@ ms.assetid: a7be05f0-6b11-4b53-9fbc-501e591eef09
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 99c2f54ce648358cdbb47cda9893078d69087ad2
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 542834d73cdea5a985ea6926d011f1db4711f3e5
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908228"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73781513"
 ---
 # <a name="use-rowset-binding-odbc"></a>Использование привязки наборов строк (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
     
 ### <a name="to-use-column-wise-binding"></a>Использование привязки на уровне столбца  
@@ -73,7 +72,7 @@ ms.locfileid: "72908228"
   
 5.  При каждом вызове функции [SQLFetch](https://go.microsoft.com/fwlink/?LinkId=58401) или [SQLFetchScroll](../../../relational-databases/native-client-odbc-api/sqlfetchscroll.md) происходит получение числа строк, равного R, и передача данных в привязанные столбцы.  
   
-## <a name="see-also"></a>См. также статью  
+## <a name="see-also"></a>См. также раздел  
  [Разделы &#40;руководства по использованию курсоров&#41; ODBC](../../../relational-databases/native-client-odbc-how-to/cursors/using-cursors-how-to-topics-odbc.md)   
  [Как реализуются курсоры](../../../relational-databases/native-client-odbc-cursors/implementation/how-cursors-are-implemented.md)   
  [Использование курсоров &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/cursors/use-cursors-odbc.md)  

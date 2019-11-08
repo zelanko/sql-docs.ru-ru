@@ -1,5 +1,5 @@
 ---
-title: Собственный клиент SQL Server (ODBC) | Документация Майкрософт
+title: SQL Server Native Client (ODBC) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -19,16 +19,15 @@ ms.assetid: 811d5ba3-a2b8-48c0-adbc-8c91f041f458
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 80adde498a5a35bb0f8ba3bdf055b669326ca5de
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 48fc5ccd2973a530010975171a90f35a2f18a7e7
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67913106"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73760250"
 ---
 # <a name="sql-server-native-client-odbc"></a>Собственный клиент SQL Server (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
   ODBC — это стандартное определение прикладного программного интерфейса (API), который используется для доступа к данным в реляционных базах данных и базах данных с индексно-последовательным методом доступа (ISAM). [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддерживает ODBC через драйвер ODBC клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client как один из собственных API для написания приложений на языках C и C++, взаимодействующих с [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
@@ -36,7 +35,7 @@ ms.locfileid: "67913106"
   
  Драйвер ODBC для собственного клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] соответствует требованиям спецификации Microsoft Win32 ODBC 3.51. Драйвер поддерживает приложения, написанные с применением более ранних версий ODBC согласно спецификации ODBC 3.51.  
   
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
   
 -   [Имена источников данных и 64-разрядные операционные системы](../../../relational-databases/native-client/odbc/data-source-names-and-64-bit-operating-systems.md)  
   
@@ -44,9 +43,9 @@ ms.locfileid: "67913106"
   
 -   [Взаимодействие с SQL Server &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-communication/communicating-with-sql-server-odbc.md)  
   
--   [Выполнение запросов &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-queries/executing-queries-odbc.md)  
+-   [Выполняя запросы &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-queries/executing-queries-odbc.md)  
   
--   [Обработка результатов &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-results/processing-results-odbc.md)  
+-   [Обработка результатов &#40;в ODBC&#41;](../../../relational-databases/native-client-odbc-results/processing-results-odbc.md)  
   
 -   [Использование курсоров &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md)  
   
@@ -58,30 +57,30 @@ ms.locfileid: "67913106"
   
 -   [Использование функций каталога](../../../relational-databases/native-client/odbc/using-catalog-functions.md)  
   
--   [Выполнение операций массового копирования &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)  
+-   [Выполнение операций &#40;с массовым копированием в ODBC&#41;](../../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)  
   
 -   [Управление столбцами text и image](../../../relational-databases/native-client-odbc-text-image-columns/managing-text-and-image-columns.md)  
   
 -   [Создание профилей производительности драйвера ODBC](../../../relational-databases/native-client/odbc/profiling-odbc-driver-performance.md)  
   
--   [Возвращающие табличные значения параметров &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
+-   [Возвращающие табличные значения параметры &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
   
--   [Дата и время улучшения &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
+-   [Улучшения &#40;даты и времени ODBC&#41;](../../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
   
--   [Определяемые пользователем типы больших значений CLR &#40;ODBC&#41;](../../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)  
+-   [ODBC-типы больших определяемых &#40;пользователем типов данных CLR&#41;](../../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)  
   
--   [Поддержка FILESTREAM &#40;ODBC&#41;](../../../relational-databases/native-client/odbc/filestream-support-odbc.md)  
+-   [Поддержка &#40;FILESTREAM в ODBC&#41;](../../../relational-databases/native-client/odbc/filestream-support-odbc.md)  
   
--   [Имена участников-служб &#40;имена участников-служб&#41; в клиентских соединениях &#40;ODBC&#41;](../../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md)  
+-   [Имя субъекта &#40;-&#41; службы имена участников &#40;-служб в клиентских соединениях ODBC&#41;](../../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md)  
   
--   [Поддержка разреженных столбцов &#40;ODBC&#41;](../../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md)  
+-   [Разреженные столбцы &#40;поддерживают ODBC&#41;](../../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md)  
   
--   [Собственный клиент SQL Server &#40;ODBC&#41; ссылки](https://msdn.microsoft.com/library/06b7edee-8636-49d9-9b5c-2c710bf4fa2d)  
+-   [Справочник &#40;по&#41; ODBC SQL Server Native Client](https://msdn.microsoft.com/library/06b7edee-8636-49d9-9b5c-2c710bf4fa2d)  
   
 -   [Инструкции по ODBC](../../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)  
   
-## <a name="see-also"></a>См. также  
- [Программирование собственного клиента SQL Server](../../../relational-databases/native-client/sql-server-native-client-programming.md)   
+## <a name="see-also"></a>См. также раздел  
+ [SQL Server Native Client  программирования](../../../relational-databases/native-client/sql-server-native-client-programming.md)  
  [Установка SQL Server Native Client](../../../relational-databases/native-client/applications/installing-sql-server-native-client.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Функциональная область разрешений пользователей и групп (диспетчер основных данных) | Документы Майкрософт
+title: Функциональная область разрешений пользователей и групп
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 320d417e-a370-48fc-a05b-444d85fd24c0
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 3fac1e0c639bbe49e0c837f6de0a5abd9d2139d5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e651a31bc37de8f90ecf18615c761100dbdfff2d
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68102558"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727821"
 ---
 # <a name="user-and-group-permissions-functional-area-master-data-manager"></a>Функциональная область разрешений пользователей и групп (диспетчер основных данных)
 
@@ -49,7 +49,7 @@ ms.locfileid: "68102558"
   
  [Устранение неполадок в системе безопасности диспетчера основных данных](https://social.technet.microsoft.com/wiki/contents/articles/troubleshooting-master-data-manager-security-master-data-services.aspx)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также раздел  
  [Веб-приложение диспетчера основных данных](../master-data-services/master-data-manager-web-application.md)  
   
   

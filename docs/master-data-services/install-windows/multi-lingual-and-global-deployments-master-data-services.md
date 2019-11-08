@@ -1,5 +1,5 @@
 ---
-title: Многоязычные и международные развертывания (службы Master Data Services) | Документы Майкрософт
+title: Многоязычные и глобальные развертывания
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: c3d485f8-867c-4aa2-a90d-f38fda192534
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 30635148aa0110a4110398ecc8334e56a3634ebd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 79a18eca1f222a4b128847a9367c46cfbe4cf891
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67944927"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728111"
 ---
 # <a name="multi-lingual-and-global-deployments-master-data-services"></a>Многоязычное и международное развертывание (службы Master Data Services)
 
@@ -32,7 +32,7 @@ ms.locfileid: "67944927"
 |[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]|При запуске программы установки на английском языке веб-приложение [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] поддерживается и доступно на всех языках приложения. [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] интерфейс доступен на всех языках приложения, и ввод данных поддерживается на любом языке в зависимости от выбранных языковых параметров клиентского веб-браузера. Если в языковых параметрах задан неподдерживаемый язык приложения, то в службах [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] по умолчанию используется английский.<br /><br /> При выполнении программы установки на любом языке, кроме английского, устанавливаются ресурсы для всех других языков приложения, однако клиенты не могут использовать [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] на языке, отличном от выбранного языка установки. При попытке доступа к [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] на языке, отличном от языка установки, могут возникнуть проблемы с отображением и вводом данных в приложении.|  
 |[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] базой данных|Данные в базе данных [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] не относятся к какой-либо конкретной локали. Это позволяет [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] определять способ отображения данных, например дат и чисел, в формате, определяемом языковыми параметрами клиентского веб-браузера.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
  [Установка служб Master Data Services](../../master-data-services/install-windows/install-master-data-services.md)  
   
   

@@ -1,7 +1,7 @@
 ---
-title: sys.workload_management_workload_classifiers (Transact-SQL) | Документация Майкрософт
+title: sys. workload_management_workload_classifiers (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
-ms.date: 05/01/2019
+ms.date: 11/05/2019
 ms.prod: sql
 ms.technology: system-objects
 ms.prod_service: sql-data-warehouse
@@ -12,28 +12,28 @@ dev_langs:
 author: ronortloff
 ms.author: rortloff
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: c6947ae0df357c1a1bd1da2973ff3bf6a81717f2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 585eb4551fb688f4f6a620729310b0245462cbff
+ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68059331"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73632967"
 ---
-# <a name="sysworkloadmanagementworkloadclassifiers-transact-sql"></a>sys.workload_management_workload_classifiers (Transact-SQL)
+# <a name="sysworkload_management_workload_classifiers-transact-sql"></a>sys. workload_management_workload_classifiers (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
- Возвращает подробные сведения о рабочей нагрузке классификаторов.  
+ Возвращает сведения для классификаторов рабочей нагрузки.  
   
 |Имя столбца|Тип данных|Описание|Диапазон|  
 |-----------------|---------------|-----------------|-----------|
 |classifier_id|**int**|Уникальный идентификатор классификатора. Не допускает значение NULL.||
-group_name|**sysname**|Имя группы рабочей нагрузки, которой назначен классификатора. Не допускает значение NULL. |Статические классы ресурсов</br>staticrc10</br>staticrc20</br>staticrc30</br>staticrc40</br>staticrc50</br>staticrc60</br>staticrc70</br>staticrc80 </br> </br>Динамические классы ресурсов</br>smallrc</br>mediumrc</br>largerc</br>xlargerc|
-name|**sysname**|Имя классификатора. Должно быть уникальным в экземпляре. Не допускает значение NULL.||
-|importance|**sysname**|— Это относительная важность запроса в данной группе рабочей нагрузки и группы рабочей нагрузки для общих ресурсов.  Важность, указанный в классификаторе переопределяет параметр важности группы рабочей нагрузки.|низкий, below_normal "," Обычная "," above_normal, высокий |
+group_name|**sysname**|Имя группы рабочей нагрузки, которой назначен классификатор. Не допускает значение NULL. Присоединение к sys. workload_management_workload_groups ||
+имя|**sysname**|Имя классификатора. Должен быть уникальным для экземпляра. Не допускает значение NULL.||
+|importance|**sysname**|— Это относительная важность запроса в этой группе рабочей нагрузки и в группах рабочей нагрузки для общих ресурсов.  Важность, указанная в классификаторе, переопределяет параметр важности группы рабочей нагрузки. Допускает значение NULL.  При значении NULL используется параметр важности группы рабочей нагрузки.|Low, below_normal, обычная (по умолчанию), above_normal, High |
 |create_time|**datetime**|Время создания классификатора. Не допускает значение NULL.||
 modify_time|**datetime**|Время последнего изменения классификатора. Не допускает значение NULL.||
-is_enabled|**bit**|Отображается ли классификатор включен или нет. Включено по умолчанию. Не допускает значение NULL.|0 = классификатор не включена </br> 1 = включено классификатор|
+is_enabled|**bit**|ВНУТРИКЛАСТЕРНЫХ||
 |&nbsp;||||
   
 ## <a name="permissions"></a>Разрешения
@@ -42,4 +42,4 @@ is_enabled|**bit**|Отображается ли классификатор вк
 
 ## <a name="next-steps"></a>Следующие шаги
 
- Список всех представлений каталога для хранилища данных SQL и Parallel Data Warehouse, см. в разделе [хранилище данных SQL и представления каталога хранилища параллельных данных](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md). Чтобы создать классификатор рабочей нагрузки, см. в разделе [СОЗДАНИЯ КЛАССИФИКАТОРА рабочей НАГРУЗКИ](../../t-sql/statements/create-workload-classifier-transact-sql.md). Дополнительные сведения о классификации рабочей нагрузки, см. в разделе [классификации рабочей нагрузки хранилища данных SQL](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification)
+ Список всех представлений каталога для хранилища данных SQL и параллельного хранилища данных см. в статье [представления каталога данных SQL и параллельного](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)хранилища данных. Сведения о создании классификатора рабочей нагрузки см. в разделе [Создание классификатора рабочей нагрузки](../../t-sql/statements/create-workload-classifier-transact-sql.md). Дополнительные сведения о классификации рабочей нагрузки см. в разделе [классификация рабочей нагрузки](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification) .

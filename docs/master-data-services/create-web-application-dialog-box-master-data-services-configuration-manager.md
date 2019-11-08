@@ -1,6 +1,6 @@
 ---
-title: Диалоговое окно "Создание веб-приложения" (диспетчер конфигурации служб Master Data Services) | Документы Майкрософт
-ms.custom: ''
+title: Диалоговое окно «Создание веб-приложения»
+ms.custom: seo-lt-2019
 ms.date: 03/20/2017
 ms.prod: sql
 ms.prod_service: mds
@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: e045b41a-4836-47f6-8e78-2b09494b461f
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: cc9885ae506dcf9fff065f99ef4a8729c0cdd05d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b35c47704915ec9e85f0c4f2ac083bfb7a6017ac
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68094441"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729503"
 ---
 # <a name="create-web-application-dialog-box-master-data-services-configuration-manager"></a>Диалоговое окно «Создание веб-приложения» (диспетчер конфигурации служб Master Data Services)
 
@@ -37,14 +37,14 @@ ms.locfileid: "68094441"
   
 |Имя элемента управления|Описание|  
 |------------------|-----------------|  
-|**Name**|Введите уникальное и понятное имя для нового пула приложений или используйте предложенное по умолчанию. Веб-приложение [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] будет добавлено в этот пул приложений.<br /><br /> Пулы приложений определяют границы, которые не позволяют приложениям из одного пула мешать работе приложений из другого пула.|  
-|**Имя пользователя**|Введите имя домена и пользователя из Active Directory. Эта учетная запись является идентификатором пула приложения, в котором выполняется веб-приложение. Эта учетная запись должна быть той же учетной записью службы, указанной при создании базы данных служб [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .<br /><br /> С целью доступа к базе данных данная учетная запись добавляется к роли базы данных mds_exec в базе данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. Дополнительные сведения см. в разделе [Имена входа, пользователи и роли базы данных (службы Master Data Services)](../master-data-services/database-logins-users-and-roles-master-data-services.md). Она также добавляется в группу Windows [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] **MDS_ServiceAccounts**, которой предоставляется разрешение на доступ к временному каталогу компиляции **MDSTempDir** в файловой системе. Дополнительные сведения см. в разделе [Разрешения для папок и файлов (службы Master Data Services)](../master-data-services/folder-and-file-permissions-master-data-services.md).|  
+|**Название**|Введите уникальное и понятное имя для нового пула приложений или используйте предложенное по умолчанию. Веб-приложение [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] будет добавлено в этот пул приложений.<br /><br /> Пулы приложений определяют границы, которые не позволяют приложениям из одного пула мешать работе приложений из другого пула.|  
+|**User name**|Введите имя домена и пользователя из Active Directory. Эта учетная запись является идентификатором пула приложения, в котором выполняется веб-приложение. Эта учетная запись должна быть той же учетной записью службы, указанной при создании базы данных служб [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .<br /><br /> С целью доступа к базе данных данная учетная запись добавляется к роли базы данных mds_exec в базе данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. Дополнительные сведения см. в разделе [Имена входа, пользователи и роли базы данных (службы Master Data Services)](../master-data-services/database-logins-users-and-roles-master-data-services.md). Она также добавляется в группу Windows [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] **MDS_ServiceAccounts**, которой предоставляется разрешение на доступ к временному каталогу компиляции **MDSTempDir**в файловой системе. Дополнительные сведения см. в разделе [Разрешения для папок и файлов (службы Master Data Services)](../master-data-services/folder-and-file-permissions-master-data-services.md).|  
 |**Пароль**|Введите пароль для указанной учетной записи пользователя.|  
 |**Подтверждение пароля**|Повторно введите пароль для указанной учетной записи пользователя. Поля **Пароль** и **Подтверждение пароля** должны содержать один и тот же пароль.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
  [Страница "Веб-конфигурация" (диспетчер конфигурации Master Data Services)](../master-data-services/web-configuration-page-master-data-services-configuration-manager.md)   
 [Установка и настройка служб Master Data Services](../master-data-services/master-data-services-installation-and-configuration.md) [Требования для веб-приложений (службы Master Data Services)](../master-data-services/install-windows/web-application-requirements-master-data-services.md)   
- [Создание веб-приложения диспетчера основных данных (службы Master Data Services)](../master-data-services/install-windows/create-a-master-data-manager-web-application-master-data-services.md)  
+ [Создание веб-приложения мастера основных данных (службы Master Data Services)](../master-data-services/install-windows/create-a-master-data-manager-web-application-master-data-services.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Программы определяемых пользователем ТИПОВ | Документация Майкрософт
+title: Служебные программы определяемого пользователем типа | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,20 +10,20 @@ ms.assetid: 9e915268-9628-445b-81c2-b0ebd11e891e
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cfd005746302bef4b8e03b520babfdef41768083
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f13445faaef35ad0005666ac1b2fc2b8f95df425
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62780223"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73637720"
 ---
 # <a name="udt-utilities"></a>Программы определяемых пользователем типов
   Образец программ определяемых пользователем типов содержит набор служебных функций. В их число входят функции для предоставления метаданных сборки в Transact-SQL, образцы потоковых функций, возвращающих типы в сборке в виде таблицы, и функции, возвращающие поля, методы и свойства в определяемом пользователем типе данных. При этом, в частности, демонстрируются возвращающие потоковые функции с табличным значением, отражение API-интерфейсов .NET Framework и вызов из Transact-SQL возвращающих табличные значения функций.  
   
-## <a name="prerequisites"></a>предварительные требования  
+## <a name="prerequisites"></a>Предварительные требования  
  Для создания и запуска этого проекта должно быть установлено следующее программное обеспечение:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express можно получить бесплатно на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] веб-сайте [с документацией и примерами по](https://go.microsoft.com/fwlink/?LinkId=31046)Express.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express можно получить бесплатно на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] веб-сайте [с документацией и примерами по](https://www.microsoft.com/sql-server/sql-server-editions-express)Express.  
   
 -   База данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] , доступная на [веб-сайте Codeplex](https://go.microsoft.com/fwlink/?linkid=62796).  
   
@@ -1596,7 +1596,7 @@ USE AdventureWorks2012;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
  [Сценарии использования и примеры интеграции со средой CLR](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
   
   

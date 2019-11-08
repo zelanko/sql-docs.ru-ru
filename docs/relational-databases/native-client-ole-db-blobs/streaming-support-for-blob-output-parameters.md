@@ -1,5 +1,5 @@
 ---
-title: Поддержка потоков для больших двоичных ОБЪЕКТОВ выходных параметров | Документация Майкрософт
+title: Поддержка потоковой передачи для выходных параметров BLOB-объекта | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -13,16 +13,15 @@ ms.assetid: b55fccbe-643e-42f1-bf9e-99509c4281af
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 00c683cd2cd629d57def7437737d0e8499f9fd77
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c15599e2e322eca4f1dca17ff2a46456d6852be9
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68128819"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73790490"
 ---
 # <a name="streaming-support-for-blob-output-parameters"></a>Поддержка потоков для выходных параметров BLOB
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   В этом разделе содержится образец, показывающий поддержку потоков для выходных параметров BLOB, который связывает выходные параметры BLOB как потоки ISequentialStreams.  
   
@@ -30,7 +29,7 @@ ms.locfileid: "68128819"
   
 ## <a name="example"></a>Пример  
   
-### <a name="code"></a>Код  
+### <a name="code"></a>код  
   
 ```  
 // blob_out_param.cpp  
@@ -511,7 +510,7 @@ _Exit:
 }  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
  [Большие двоичные объекты и объекты OLE](../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Создание атрибута на основе домена (службы Master Data Services) | Документы Майкрософт
+title: Создание атрибута на основе домена
 ms.custom: ''
 ms.date: 07/25/2017
 ms.prod: sql
@@ -14,21 +14,21 @@ helpviewer_keywords:
 ms.assetid: 11c31c9f-e6cc-47b7-b76a-d691f84c93c6
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: d0d0fdda8512167111b03c72f4c64e067493adb3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 72f415b6a814019b99d4e73db482286f9d5560b1
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67896884"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728531"
 ---
 # <a name="create-a-domain-based-attribute-master-data-services"></a>Создание атрибута на основе домена (службы Master Data Services)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  В службах [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]атрибут на основе домена создается, чтобы заполнить значения атрибута элементами сущности.  
+  В службах [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] атрибут на основе домена создается, чтобы заполнить значения атрибута элементами сущности.  
   
-## <a name="prerequisites"></a>предварительные требования  
- Для выполнения этой процедуры:  
+## <a name="prerequisites"></a>Предварительные требования  
+ Чтобы выполнить эту процедуру:  
   
 -   необходимо иметь разрешение на доступ к функциональной области **Администрирование системы** ;  
   
@@ -43,8 +43,8 @@ ms.locfileid: "67896884"
   
 |Столбец|Описание|  
 |------------|-----------------|  
-|Состояние|Состояние атрибута.<br /><br /> Когда вы нажимаете "Сохранить", появляется изображение ![Значок обновления состояния](../master-data-services/media/mds-statusicon-updating.png "Значок обновления состояния"), указывающее на обновление атрибута.<br /><br /> Если при создании или редактировании атрибута произойдет ошибка, появится изображение ![Значок состояния ошибки](../master-data-services/media/mds-statusicon-error.png "Значок состояния ошибки").<br /><br /> В противном случае состояние является нормальным, и появляется изображение ![Значок нормального состояния](../master-data-services/media/mds-statusicon-ok.png "Значок нормального состояния").|  
-|Name|Имя атрибута.|  
+|Состояние|Состояние атрибута.<br /><br /> При нажатии кнопки сохранить отображается ![значок для обновления состояния](../master-data-services/media/mds-statusicon-updating.png "ICon для обновления состояния ") , указывающий на то, что атрибут обновляется.<br /><br /> Если при создании или изменении атрибута возникли ошибки, отображается ![значок изображение состояния ошибки](../master-data-services/media/mds-statusicon-error.png "ICon для состояния ошибки») .<br /><br /> В противном случае отображается состояние ОК, а ![для значка состояния ОК](../master-data-services/media/mds-statusicon-ok.png "ICon для состояния "ОК") — изображение.|  
+|Имя|Имя атрибута.|  
 |Отображаемое имя|Отображаемое имя атрибута.|  
 |Описание|Описание атрибута.|  
 |Ширина отображаемой области (в пикселях)|Ширина атрибута.|  
@@ -99,7 +99,7 @@ ms.locfileid: "67896884"
   
 13. Нажмите кнопку **Сохранить**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
  [Атрибуты на основе домена (службы Master Data Services)](../master-data-services/domain-based-attributes-master-data-services.md)   
  [Создание производной иерархии (службы Master Data Services)](../master-data-services/create-a-derived-hierarchy-master-data-services.md)   
  [Изменение имени атрибута и типа данных (службы Master Data Services)](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md)   

@@ -1,5 +1,5 @@
 ---
-title: Изменение сущности (службы Master Data Services) | Документы Майкрософт
+title: Изменение сущности
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6a5b9f14-6dfc-49d7-a771-e96461d4feae
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 88a4850c80404ebeb002c5d17af69b0f10dc5bf6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4329f618b812bb566d974c5434ef0362b1383f2d
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68086479"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729297"
 ---
 # <a name="edit-an-entity-master-data-services"></a>Изменение сущности (Master Data Services)
 
@@ -26,7 +26,7 @@ ms.locfileid: "68086479"
   В [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]можно изменить сущность.  
   
 ## <a name="prerequisites"></a>Предварительные требования  
- Для выполнения этой процедуры:  
+ Чтобы выполнить эту процедуру:  
   
 -   необходимо иметь разрешение на доступ к функциональной области **Администрирование системы** ;  
   
@@ -69,9 +69,9 @@ ms.locfileid: "68086479"
   
  Если ее состояние нормальное, появится следующее изображение.  
   
- ![Значок нормального состояния](../master-data-services/media/mds-statusicon-ok.png "Значок нормального состояния")  
+ ![Значок состояния "ОК"](../master-data-services/media/mds-statusicon-ok.png "Значок состояния "ОК"")  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
  [Явные иерархии (службы Master Data Services)](../master-data-services/explicit-hierarchies-master-data-services.md)   
  [Удаление сущности (службы Master Data Services)](../master-data-services/delete-an-entity-master-data-services.md)   
  [Сущности (службы Master Data Services)](../master-data-services/entities-master-data-services.md)  

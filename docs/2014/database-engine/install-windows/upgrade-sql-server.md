@@ -12,17 +12,17 @@ ms.assetid: 5064e35b-b70d-4a0b-a9e9-fff04162f9d2
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: aa906aaf6d9ae2033b6d029f4844c5d388bb44ea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d47c670088f088260435f9e046e0bbdbf1fb9e4a
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62851495"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73637705"
 ---
 # <a name="upgrade-to-sql-server-2014"></a>Обновление до SQL Server 2014
   Экземпляры [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]или [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] можно обновить до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Перед запуском программы установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для обновления до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]просмотрите [техническое руководство по обновлению SQL Server 2014](https://download.microsoft.com/download/7/1/5/715BDFA7-51B6-4D7B-AF17-61E78C7E538F/SQL_Server_2014_Upgrade_technical_guide.pdf) (загружается в формате PDF), ознакомьтесь со статьями о процессе обновления в этом разделе и прочитайте [заметки о выпуске SQL Server 2014](https://go.microsoft.com/fwlink/?LinkID=296445).  
   
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
  В этом разделе рассматриваются следующие вопросы.  
   
 -   [Поддерживаемые обновления версий и выпусков](supported-version-and-edition-upgrades.md)  
@@ -51,15 +51,15 @@ ms.locfileid: "62851495"
   
 -   [Инструкции по обновлению](../../../2014/sql-server/install/upgrade-how-to-topics.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
  [Обновление [компонент ядра СУБД]](upgrade-database-engine.md)   
  [Обновление служб Analysis Services](upgrade-analysis-services.md)   
- [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
+ [Обновление и перенос служб Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
  [Обновление служб Integration Services](../../integration-services/install-windows/upgrade-integration-services.md)   
  [Обновление реплицируемых баз данных](../../database-engine/install-windows/upgrade-replicated-databases.md)   
  [Обновление служб Master Data Services](upgrade-master-data-services.md)   
- [SQL Server 2005 Best Practices Analyzer](https://go.microsoft.com/fwlink/?LinkId=197134)   
- [Анализатор соответствия рекомендациям для SQL Server 2008 R2](https://go.microsoft.com/fwlink/?LinkId=197135)   
+ [SQL Server 2005 анализатор соответствия рекомендациям](https://www.microsoft.com/download/details.aspx?id=23864)   
+ [Анализатор соответствия рекомендациям для SQL Server 2008 R2](https://www.microsoft.com/download/details.aspx?id=15289)   
  [Обратная совместимость](../../../2014/getting-started/backward-compatibility.md)  
   
   

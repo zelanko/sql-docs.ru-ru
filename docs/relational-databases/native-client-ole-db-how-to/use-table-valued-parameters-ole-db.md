@@ -11,16 +11,15 @@ ms.assetid: 18cb684f-c307-4fda-a2ab-8b638416c3f0
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f326704a949e4e0703f6dcb732471edd8187729b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0de2c67c1a2d60903054e5098a145f4057fe6e13
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68109964"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73789688"
 ---
 # <a name="use-table-valued-parameters-ole-db"></a>Использование возвращающих табличные значения параметров (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   Данный образец работает с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] или более поздней версией. Образец выполняет следующие действия.  
   
@@ -34,7 +33,7 @@ ms.locfileid: "68109964"
   
 -   Демонстрирует обработку ошибок для ошибок SQLNCLI11.  
   
- Дополнительные сведения о возвращающих табличные значения параметров, см. в разделе [возвращающего табличное значение параметров &#40;собственный клиент SQL Server&#41;](../../relational-databases/native-client/features/table-valued-parameters-sql-server-native-client.md).  
+ Дополнительные сведения о возвращающих табличное значение параметрах см. в разделе [Параметры &#40;, возвращающие&#41;](../../relational-databases/native-client/features/table-valued-parameters-sql-server-native-client.md)табличное значение, SQL Server Native Client.  
   
 ## <a name="example"></a>Пример  
  Первый листинг кода ([!INCLUDE[tsql](../../includes/tsql-md.md)]) создает базу данных, используемую в примере.  

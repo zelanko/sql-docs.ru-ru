@@ -11,20 +11,19 @@ ms.assetid: 6f8da6ab-9de6-4d0a-9b7e-acb76a50a2e7
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e7773341cfa8ffde9998d5aa8dfc85414b885929
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3ea30d6b1e0a90a4feec188698fd452903cf83ce
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67937409"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73780019"
 ---
 # <a name="use-table-valued-parameters-odbc"></a>Использование возвращающих табличные значения параметров (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   В нем демонстрируется вставка нескольких строк с несколькими столбцами за одно обращение к серверу при помощи возвращающего табличное значение параметра.  
   
- Дополнительные сведения о возвращающих табличные значения параметров, см. в разделе [возвращающего табличное значение параметров &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md). Дополнительные образцы использования возвращающих табличное значение параметров см. в разделе [ODBC Table-Valued Parameter Programming Examples](https://msdn.microsoft.com/library/3f52b7a7-f2bd-4455-b79e-d015fb397726).  
+ Дополнительные сведения о возвращающих табличное значение параметрах см. в разделе [возвращающие табличное значение параметры &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md). Дополнительные образцы использования возвращающих табличное значение параметров см. в разделе [ODBC Table-Valued Parameter Programming Examples](https://msdn.microsoft.com/library/3f52b7a7-f2bd-4455-b79e-d015fb397726).  
   
 ## <a name="example"></a>Пример  
  Кроме того, потребуется источник данных ODBC с именем TVPDemo. По умолчанию в качестве базы данных для источника данных TVPDemo может быть указана любая тестовая база данных на компьютере. Этот источник данных должен быть основан на драйвере ODBC для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

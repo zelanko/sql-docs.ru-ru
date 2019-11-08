@@ -14,16 +14,15 @@ ms.assetid: 921a24d1-ea09-4a3c-980a-4dcbd0a43d31
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0944145ae740b7448a19a2607122c8ad07fd33ba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d82fa15999c56824f31fb4172969cdbc744a7bc8
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67908276"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73789866"
 ---
 # <a name="execute-stored-procedure-with-odbc-call-and-process-output"></a>Выполнение хранимой процедуры с использованием ODBC CALL и обработка выходных данных
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
   Хранимые процедуры [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] могут иметь целочисленные коды возврата и выходные параметры. Коды возврата и выходные параметры передаются с сервера в последнем пакете и потому недоступны приложению до полного освобождения набора строк. Если команда возвращает множество результатов, то данные параметров вывода будут доступны, когда метод **IMultipleResults::GetResult** вернет значение DB_S_NORESULT или при полном освобождении интерфейса **IMultipleResults** (в зависимости от того, что произойдет раньше).  
   
@@ -36,13 +35,13 @@ ms.locfileid: "67908276"
   
 2.  Создайте набор привязок (по одной для каждого маркера параметра) с помощью массива структур DBBINDING.  
   
-3.  Создайте метод доступа для определенных параметров с помощью **IAccessor::CreateAccessor** метод. **CreateAccessor** создает метод доступа на основе набора привязок.  
+3.  Создайте метод доступа для определенных параметров с помощью метода **IAccessor:: CreateAccessor** . **CreateAccessor** создает метод доступа на основе набора привязок.  
   
 4.  Заполните структуру DBPARAMS.  
   
 5.  Выполните команду **Execute** (в данном случае это вызов хранимой процедуры).  
   
-6.  Обработайте набор строк и освободите его с помощью **IRowset::Release** метод.  
+6.  Обработать набор строк и освободить его с помощью метода **IRowset:: Release** .  
   
 7.  Обработайте значения кода возврата и выходного параметра, полученные от хранимой процедуры.  
   
@@ -357,7 +356,7 @@ DROP PROCEDURE myProc
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
  [Инструкции по обработке результатов &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/results/processing-results-how-to-topics-ole-db.md)  
   
   

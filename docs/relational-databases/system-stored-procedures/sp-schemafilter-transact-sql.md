@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: 199e869b-2cd2-44ee-b2ee-69edb06a1bc4
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: de92a64bb090a053d4cecb03cd9b812744f72fba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 231796d1678a19106eb89f3039cd755e8385082c
+ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68126400"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73633019"
 ---
-# <a name="spschemafilter-transact-sql"></a>sp_schemafilter (Transact-SQL)
+# <a name="sp_schemafilter-transact-sql"></a>sp_schemafilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Изменяет и отображает сведения о схеме, исключенной при построении списка таблиц Oracle, подходящих для публикации.  
@@ -39,19 +39,16 @@ sp_schemafilter [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ **@publisher** =] **"***издателя***"**  
- Имя отличного [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателя. *издатель* — **sysname**, не имеет значения по умолчанию.  
+`[ @publisher = ] 'publisher'` — имя издателя, не являющегося [!INCLUDE[msCoName](../../includes/msconame-md.md)]ом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. параметр *Publisher* имеет тип **sysname**и не имеет значения по умолчанию.  
   
- [ **@schema** =] **"***схемы***"**  
- Имя схемы. *схемы* — **sysname**, со значением по умолчанию NULL.  
+`[ @schema = ] 'schema'` — имя схемы. *Schema* имеет тип **sysname**и значение по умолчанию NULL.  
   
- [ **@operation** =] **"***операции***"**  
- Действие, выполняемое над этой схемой. *Операция* — **nvarchar(4)** , и может принимать одно из следующих значений.  
+`[ @operation = ] 'operation'` — это действие, выполняемое с этой схемой. *Операция* имеет тип **nvarchar (4)** и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
-|**add**|Добавляет указанную схему в список схем, не подходящих для публикации.|  
-|**DROP**|Удаляет указанную схему из списка схем, не подходящих для публикации.|  
+|**включить**|Добавляет указанную схему в список схем, не подходящих для публикации.|  
+|**тени**|Удаляет указанную схему из списка схем, не подходящих для публикации.|  
 |**Справка**|Возвращает список схем, которые не подходят для публикации.|  
   
 ## <a name="result-sets"></a>Результирующие наборы  
@@ -61,15 +58,15 @@ sp_schemafilter [ @publisher = ] 'publisher'
 |**SchemaName**|**sysname**|Имя схемы, не подходящей для публикации.|  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- **0** (успешное завершение) или **1** (неуспешное завершение)  
+ **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  **sp_schemafilter** следует использовать только для разнородных издателей.  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **sysadmin** предопределенной роли сервера на распространителе могут выполнять процедуру **sp_schemafilter**.  
+ Только члены предопределенной роли сервера **sysadmin** на распространителе могут выполнять **sp_schemafilter**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
  [Хранимые процедуры репликации (Transact-SQL)](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

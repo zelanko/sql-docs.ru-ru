@@ -1,7 +1,7 @@
 ---
-title: sys.workload_management_workload_classifier_details (Transact-SQL) | Документация Майкрософт
+title: sys. workload_management_workload_classifier_details (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
-ms.date: 05/01/2019
+ms.date: 11/05/2019
 ms.prod: sql
 ms.technology: system-objects
 ms.prod_service: sql-data-warehouse
@@ -12,14 +12,14 @@ dev_langs:
 author: ronortloff
 ms.author: rortloff
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: f9314b9297af7e8156ed86b2bfa2dadd18896bb9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 58b3f3315309a734a22e2732af5207b64e2f0a9d
+ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68061294"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73632925"
 ---
-# <a name="sysworkloadmanagementworkloadclassifierdetails-transact-sql"></a>sys.workload_management_workload_classifier_details (Transact-SQL)
+# <a name="sysworkload_management_workload_classifier_details-transact-sql"></a>sys. workload_management_workload_classifier_details (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
@@ -27,8 +27,8 @@ ms.locfileid: "68061294"
   
 |Имя столбца|Тип данных|Описание|Диапазон|  
 |-----------------|---------------|-----------------|-----------|
-|classifier_id|**int**|Идентификатор классификатора. Присоединяемые к [sys.workload_management_workload_classifiers](sys-workload-management-workload-classifiers-transact-sql.md). Не допускает значение NULL.|
-|classifier_type|**sysname**|Сущность, на котором выполняется классификации. Не допускает значение NULL.|ИМЯ ПОЛЬЗОВАТЕЛЯ|
+|classifier_id|**int**|Идентификатор классификатора.  Не допускает значение NULL.|
+|classifier_type|**sysname**|Присоединение к [sys. workload_management_workload_classifiers](sys-workload-management-workload-classifiers-transact-sql.md).|`membername`</br>`wlm_label`</br>`wlm_context`</br>`start_time`</br>`end_time`|
 |classifier_value|**sysname**|Значение классификатора. Не допускает значение NULL.||
 
 ## <a name="permissions"></a>Разрешения
@@ -37,4 +37,4 @@ ms.locfileid: "68061294"
 
 ## <a name="next-steps"></a>Следующие шаги
   
- Список всех представлений каталога для хранилища данных SQL и Parallel Data Warehouse, см. в разделе [хранилище данных SQL и представления каталога хранилища параллельных данных](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md). Чтобы создать классификатор рабочей нагрузки, см. в разделе [СОЗДАНИЯ КЛАССИФИКАТОРА рабочей НАГРУЗКИ](../../t-sql/statements/create-workload-classifier-transact-sql.md). Дополнительные сведения о классификации рабочей нагрузки, см. в разделе хранилища данных SQL [классификации рабочей нагрузки](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification) и [важность рабочих нагрузок](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification)
+Список всех представлений каталога для хранилища данных SQL и параллельного хранилища данных см. в статье [представления каталога данных SQL и параллельного](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)хранилища данных. Сведения о создании классификатора рабочей нагрузки см. в разделе [Создание классификатора рабочей нагрузки](../../t-sql/statements/create-workload-classifier-transact-sql.md). Дополнительные сведения о классификации рабочей нагрузки см. в разделе [классификация рабочей нагрузки](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification) хранилища данных SQL и [важность рабочей нагрузки](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification) .

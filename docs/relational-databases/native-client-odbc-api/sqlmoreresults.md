@@ -14,16 +14,15 @@ ms.assetid: f65698c3-7291-480d-9dab-58b13feb7771
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 42e0135513fc84d96061864207d63487b5e65566
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3256e0e4862923138cdf035eb15926364bc8e0a5
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68131311"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73786297"
 ---
 # <a name="sqlmoreresults"></a>SQLMoreResults
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   Функция**SQLMoreResults** позволяет приложению получать несколько наборов результирующих строк. Если в инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT содержится предложение COMPUTE или отправленный пакет инструкций ODBC или [!INCLUDE[tsql](../../includes/tsql-md.md)] , это это приведет к тому, что драйвер поставщика ODBC собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] создаст несколько результирующих наборов. В любом из случаев [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не допускает создания серверного курсора для обработки результатов. Таким образом, разработчик должен убедиться, что инструкция ODBC блокируется. Он должен исчерпать все возвращенные данные или отменить инструкцию ODBC до обработки данных от других активных инструкций соединения.  
   
@@ -163,8 +162,8 @@ EXIT:
     }  
 ```  
   
-## <a name="see-also"></a>См. также  
- [SQLMoreResults, функция](https://go.microsoft.com/fwlink/?LinkId=59357)   
+## <a name="see-also"></a>См. также раздел  
+   [функции SQLMoreResults](https://go.microsoft.com/fwlink/?LinkId=59357)  
  [Подробные сведения о реализации API-интерфейсов ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

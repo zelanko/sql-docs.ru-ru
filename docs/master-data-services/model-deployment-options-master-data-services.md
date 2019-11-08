@@ -1,5 +1,5 @@
 ---
-title: Варианты развертывания модели (службы Master Data Services) | Документы Майкрософт
+title: Варианты развертывания модели
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: cf1b17b4-47d5-4eba-83f9-fb0555806867
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 3493fce1ca3326b422c99bc79afdcf74faa691cb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 692b207767dfc3d1ae4a032722e4cca6b2972ea0
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68079659"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727964"
 ---
 # <a name="model-deployment-options-master-data-services"></a>Варианты развертывания модели (службы Master Data Services)
 
@@ -41,7 +41,7 @@ ms.locfileid: "68079659"
 |Клонировать|Создание новой модели, которая является точным клоном модели в пакете. Это работает, только если модель (с таким же именем или идентификатором) в целевой среде не существует. Используйте клонирование, если нужно иметь одну модель в различных средах и периодически обновлять эту клонированную модель.|Это поведение по умолчанию мастера в веб-приложении. Если модель с таким же именем или идентификатором уже существует, появится запрос о создании новой модели.|  
 |Update|Обновление существующей модели моделью из пакета. Идентификаторы в обеих моделях должны быть одинаковыми. Этот вариант используется для обновления ранее клонированной модели.|Обновлять можно только ранее клонированные модели. (Имена и идентификаторы должны совпадать.)|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также раздел  
  [Развертывание пакета развертывания модели при помощи MDSModelDeploy](../master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md)   
  [Развертывание пакета развертывания модели с помощью мастера](../master-data-services/deploy-a-model-deployment-package-by-using-the-wizard.md)   
  [Развертывание моделей (службы Master Data Services)](../master-data-services/deploying-models-master-data-services.md)  

@@ -17,16 +17,15 @@ ms.assetid: 9d0c524b-22b0-475a-9ff5-5a69a6393b46
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 57a5c840ac796cf0b30e71c70be72d7c3be5a4e0
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 317f6f25e717a49f3b26c4cc09d957f8c38557f0
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909464"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73758319"
 ---
 # <a name="setting-large-data"></a>Присваивание больших данных
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   С помощью поставщика [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственного клиента OLE DB можно задать данные большого двоичного объекта, передав указатель на объект хранилища объекта-получателя.  
   
@@ -721,7 +720,7 @@ Exit:
 } //end function  
 ```  
   
-## <a name="see-also"></a>См. также статью  
+## <a name="see-also"></a>См. также раздел  
  [Большие двоичные объекты и объекты OLE](../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md)   
  [Использование типов больших значений](../../relational-databases/native-client/features/using-large-value-types.md)  
   

@@ -13,16 +13,15 @@ ms.assetid: b9c1ddce-1dd9-409d-a414-8b544d616273
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bbcb19a3f5ad2d281306eb1cd22f3018d7f9e1c2
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 05a8d7a7777731ba23cba08c8f8ba48489231d48
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908177"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73780922"
 ---
 # <a name="profiling-odbc-driver-performance-data---log-long-running-queries"></a>Создание профилей данных производительности драйвера ODBC — ведение журналов длительных запросов
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   В этом образце демонстрируются параметры ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], относящиеся к драйверу, для долго выполняемых запросов. При запуске этот образец создает файл журнала Odbcqry.log, содержащий список запросов, время выполнения которых превысило интервал, установленный приложением. Этот образец не поддерживается на архитектуре IA64. Этот образец разработан для ODBC версии 3.0 или более поздней.  
   
@@ -47,13 +46,13 @@ ms.locfileid: "72908177"
 
 ### <a name="to-log-long-running-queries-data-programmatically"></a>Ведение журнала длительно выполняющихся запросов программным образом  
   
-1.  Вызовите [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) с параметром SQL_COPT_SS_PERF_QUERY_LOG, указав полный путь и имя файла журнала долго выполняющегося запроса. Пример:  
+1.  Вызовите [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) с SQL_COPT_SS_PERF_QUERY_LOG, а также полный путь и имя файла журнала долго выполняющегося запроса. Например:  
   
     ```  
     C:\\Odbcqry.log  
     ```  
   
-2.  Вызовите [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) с параметром SQL_COPT_SS_PERF_QUERY_INTERVAL и задайте значение интервала времени ожидания (в миллисекундах).  
+2.  Вызовите [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) с SQL_COPT_SS_PERF_QUERY_INTERVAL и задайте интервал времени ожидания (в миллисекундах).  
   
 3.  Вызовите [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) с SQL_COPT_SS_PERF_QUERY и SQL_PERF_START, чтобы начать запись долго выполняющихся запросов.  
   
@@ -219,7 +218,7 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>См. также статью  
+## <a name="see-also"></a>См. также раздел  
  [Разделы &#40;руководства по профилированию драйверов ODBC в ODBC&#41;](../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)  
   
   

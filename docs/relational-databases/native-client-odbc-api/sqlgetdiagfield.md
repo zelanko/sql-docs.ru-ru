@@ -14,16 +14,15 @@ ms.assetid: 395245ba-0372-43ec-b9a4-a29410d85a6d
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d9a180c0ead9ece1345c011108249178fd36e837
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f2a3d8d829794692cff6ecb9879e6f62f0b0b91b
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68131452"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73786472"
 ---
 # <a name="sqlgetdiagfield"></a>SQLGetDiagField
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   В драйвере ODBC для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] заданы следующие дополнительные поля для функции **SQLGetDiagField**. Эти поля поддерживают множество отчетов об ошибках для приложений [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и доступны во всех диагностических записях, созданных дескрипторами соединения ODBC и дескрипторами инструкций ODBC. Эти поля определены в файле sqlncli.h.  
   
@@ -63,7 +62,7 @@ ms.locfileid: "68131452"
 |SQL_DIAG_DFC_SS_DROP_TRIGGER|Инструкция DROP TRIGGER|  
 |SQL_DIAG_DFC_SS_DUMP_DATABASE|Инструкция BACKUP или DUMP DATABASE|  
 |SQL_DIAG_DFC_SS_DUMP_TABLE|Инструкция DUMP TABLE|  
-|SQL_DIAG_DFC_SS_DUMP_TRANSACTION|Инструкция BACKUP или DUMP TRANSACTION. Также возвращается для инструкции CHECKPOINT, если **trunc. log на контрольной точке.** базы данных включен.|  
+|SQL_DIAG_DFC_SS_DUMP_TRANSACTION|Инструкция BACKUP или DUMP TRANSACTION. Также возвращается для инструкции CHECKPOINT, если **TRUNC. log на chkpt.** базы данных включен.|  
 |SQL_DIAG_DFC_SS_GOTO|Инструкция управления потоком GOTO|  
 |SQL_DIAG_DFC_SS_INSERT_BULK|Инструкция INSERT BULK|  
 |SQL_DIAG_DFC_SS_KILL|Инструкция KILL|  
@@ -98,12 +97,12 @@ ms.locfileid: "68131452"
 |SQL_DIAG_DFC_SS_WRITETEXT|WRITETEXT, инструкция|  
   
 ## <a name="sqlgetdiagfield-and-table-valued-parameters"></a>Функция SQLGetDiagField и возвращающие табличное значение параметры  
- SQLGetDiagField может использоваться для получения двух диагностических полей: SQL_DIAG_SS_TABLE_COLUMN_NUMBER и SQL_DIAG_SS_TABLE_ROW_NUMBER. Эти поля помогают определить, какое значение вызвало ошибку или предупреждение, связанные с диагностической записью.  
+ SQLGetDiagField можно использовать для получения двух диагностических полей: SQL_DIAG_SS_TABLE_COLUMN_NUMBER и SQL_DIAG_SS_TABLE_ROW_NUMBER. Эти поля помогают определить, какое значение вызвало ошибку или предупреждение, связанные с диагностической записью.  
   
- Дополнительные сведения о возвращающих табличные значения параметров, см. в разделе [возвращающего табличное значение параметров &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
+ Дополнительные сведения о возвращающих табличное значение параметрах см. в разделе [возвращающие табличное значение параметры &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   
-## <a name="see-also"></a>См. также  
- [Функция SQLGetDiagField](https://go.microsoft.com/fwlink/?LinkId=59352)   
+## <a name="see-also"></a>См. также раздел  
+   [функции SQLGetDiagField](https://go.microsoft.com/fwlink/?LinkId=59352)  
  [Подробные сведения о реализации API-интерфейсов ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

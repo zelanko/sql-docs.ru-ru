@@ -17,52 +17,51 @@ ms.assetid: 6239d440-2818-4b98-bb79-732dced41952
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b17abb0faf59c3214fb1c995bb277e999285aea5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ac52a93674eb1eed027603214b615e23528c8f7e
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68069566"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73761599"
 ---
 # <a name="creating-sql-server-indexes"></a>Создание индексов SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Поставщик OLE DB для собственного клиента предоставляет **IIndexDefinition::CreateIndex** функцию, позволяющую потребителям определять новые индексы на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] таблиц.  
+  Поставщик [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB предоставляет функцию **IIndexDefinition:: CreateIndex** , позволяющую потребителям определять новые индексы в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] таблицах.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Поставщика OLE DB для собственного клиента создает табличные индексы в качестве индексов или ограничений. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет право создания ограничений владельцу таблицы, владельцу базы данных и членам некоторых административных ролей. По умолчанию только владелец таблицы может создавать в ней индекс. Таким образом, успех или сбой функции **CreateIndex** зависит не только от прав доступа пользователя приложения, но и от типа создаваемого индекса.  
+ Поставщик [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственного клиента OLE DB создает индексы таблиц в виде индексов или ограничений. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет право создания ограничений владельцу таблицы, владельцу базы данных и членам некоторых административных ролей. По умолчанию только владелец таблицы может создавать в ней индекс. Таким образом, успех или сбой функции **CreateIndex** зависит не только от прав доступа пользователя приложения, но и от типа создаваемого индекса.  
   
  Пользователь задает имя таблицы в виде символьной строки в Юникоде в элементе *pwszName* объединения *uName* в параметре *pTableID*. Элемент *eKind* параметра *pTableID* должен быть равен DBKIND_NAME.  
   
- *PIndexID* параметр может иметь значение NULL, и если да, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поставщика OLE DB для собственного клиента создает уникальное имя для индекса. Потребитель может сам задать имя индекса, указав для DBID допустимый указатель в параметре *ppIndexID*.  
+ Параметр *pIndexID* может иметь значение null, а если это так, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поставщик собственного клиента OLE DB создает уникальное имя для индекса. Потребитель может сам задать имя индекса, указав для DBID допустимый указатель в параметре *ppIndexID*.  
   
  Потребитель может задать имя индекса в виде символьной строки в Юникоде в элементе *pwszName* объединения *uName* параметра *pIndexID*. Элемент *eKind* параметра *pIndexID* должен быть равен DBKIND_NAME.  
   
  Потребитель указывает столбец или столбцы, входящие в индекс, по имени. Для каждой структуры DBINDEXCOLUMNDESC, используемой в функции **CreateIndex**, элемент *eKind* параметра *pColumnID* должен быть DBKIND_NAME. Имя столбца задается в виде символьной строки в Юникоде в элементе *pwszName* объединения *uName* параметра *pColumnID*.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Поставщика OLE DB для собственного клиента и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживают возрастающий порядок значений в индексе. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Поставщика OLE DB для собственного клиента возвращается E_INVALIDARG, если потребитель указывает значение DBINDEX_COL_ORDER_DESC в любой структуре DBINDEXCOLUMNDESC.  
+ Поставщик [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственного клиента OLE DB и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает сортировку значений в индексе по возрастанию. Поставщик [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB возвращает E_INVALIDARG, если потребитель указывает DBINDEX_COL_ORDER_DESC в любой структуре ДБИНДЕКСКОЛУМНДЕСК.  
   
  Функция **CreateIndex** интерпретирует свойства индекса указанным ниже образом.  
   
 |Идентификатор свойства|Описание|  
 |-----------------|-----------------|  
-|DBPROP_INDEX_AUTOUPDATE|И ЗАПИСЬ: чтение и запись<br /><br /> По умолчанию: None<br /><br /> Описание. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Поставщик OLE DB для собственного клиента не поддерживает это свойство. Попытки установить свойство в **CreateIndex** приводят к возврату значения DB_S_ERRORSOCCURRED. Элемент *dwStatus* структуры свойства указывает значение DBPROPSTATUS_BADVALUE.|  
-|DBPROP_INDEX_CLUSTERED|И ЗАПИСЬ: чтение и запись<br /><br /> По умолчанию: VARIANT_FALSE<br /><br /> Описание. Управляет кластеризацией индексов.<br /><br /> VARIANT_TRUE: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Поставщика OLE DB для собственного клиента пытается создать кластеризованный индекс для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] таблицы. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает не более одного кластеризованного индекса в любой таблице.<br /><br /> VARIANT_FALSE: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Поставщика OLE DB для собственного клиента пытается создать некластеризованный индекс на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] таблицы.|  
-|DBPROP_INDEX_FILLFACTOR|И ЗАПИСЬ: чтение и запись<br /><br /> По умолчанию: 0<br /><br /> Описание. Указывает процент страниц индекса, используемых для хранения. Дополнительные сведения см. в разделе [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md).<br /><br /> Тип варианта — VT_I4. Значение должно находиться в диапазоне от 1 до 100.|  
-|DBPROP_INDEX_INITIALIZE|И ЗАПИСЬ: чтение и запись<br /><br /> По умолчанию: None<br /><br /> Описание. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Поставщик OLE DB для собственного клиента не поддерживает это свойство. Попытки установить свойство в **CreateIndex** приводят к возврату значения DB_S_ERRORSOCCURRED. Элемент *dwStatus* структуры свойства указывает значение DBPROPSTATUS_BADVALUE.|  
-|DBPROP_INDEX_NULLCOLLATION|И ЗАПИСЬ: чтение и запись<br /><br /> По умолчанию: None<br /><br /> Описание. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Поставщик OLE DB для собственного клиента не поддерживает это свойство. Попытки установить свойство в **CreateIndex** приводят к возврату значения DB_S_ERRORSOCCURRED. Элемент *dwStatus* структуры свойства указывает значение DBPROPSTATUS_BADVALUE.|  
-|DBPROP_INDEX_NULLS|И ЗАПИСЬ: чтение и запись<br /><br /> По умолчанию: None<br /><br /> Описание. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Поставщик OLE DB для собственного клиента не поддерживает это свойство. Попытки установить свойство в **CreateIndex** приводят к возврату значения DB_S_ERRORSOCCURRED. Элемент *dwStatus* структуры свойства указывает значение DBPROPSTATUS_BADVALUE.|  
-|DBPROP_INDEX_PRIMARYKEY|И ЗАПИСЬ: чтение и запись<br /><br /> По умолчанию: VARIANT_FALSE Описание: Создает индекс в виде ссылочной целостности, ограничение PRIMARY KEY.<br /><br /> VARIANT_TRUE: Индекс создается для поддержки ограничения PRIMARY KEY таблицы. Столбцы не должны иметь значений NULL.<br /><br /> VARIANT_FALSE: Индекс не используется как ограничение PRIMARY KEY для значений строк в таблице.|  
-|DBPROP_INDEX_SORTBOOKMARKS|И ЗАПИСЬ: чтение и запись<br /><br /> По умолчанию: None<br /><br /> Описание. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Поставщик OLE DB для собственного клиента не поддерживает это свойство. Попытки установить свойство в **CreateIndex** приводят к возврату значения DB_S_ERRORSOCCURRED. Элемент *dwStatus* структуры свойства указывает значение DBPROPSTATUS_BADVALUE.|  
-|DBPROP_INDEX_TEMPINDEX|И ЗАПИСЬ: чтение и запись<br /><br /> По умолчанию: None<br /><br /> Описание. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Поставщик OLE DB для собственного клиента не поддерживает это свойство. Попытки установить свойство в **CreateIndex** приводят к возврату значения DB_S_ERRORSOCCURRED. Элемент *dwStatus* структуры свойства указывает значение DBPROPSTATUS_BADVALUE.|  
-|DBPROP_INDEX_TYPE|И ЗАПИСЬ: чтение и запись<br /><br /> По умолчанию: None<br /><br /> Описание. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Поставщик OLE DB для собственного клиента не поддерживает это свойство. Попытки установить свойство в **CreateIndex** приводят к возврату значения DB_S_ERRORSOCCURRED. Элемент *dwStatus* структуры свойства указывает значение DBPROPSTATUS_BADVALUE.|  
-|DBPROP_INDEX_UNIQUE|И ЗАПИСЬ: чтение и запись<br /><br /> По умолчанию: VARIANT_FALSE<br /><br /> Описание. Создает индекс в виде ограничения UNIQUE на определенном столбце или столбцах.<br /><br /> VARIANT_TRUE: Индекс используется для уникального ограничения значений строк в таблице.<br /><br /> VARIANT_FALSE: Индекс используется для уникального ограничения значений строк.|  
+|DBPROP_INDEX_AUTOUPDATE|Чтение и запись в R/W<br /><br /> По умолчанию: нет<br /><br /> Описание: поставщик [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB не поддерживает это свойство. Попытки установить свойство в **CreateIndex** приводят к возврату значения DB_S_ERRORSOCCURRED. Элемент *dwStatus* структуры свойства указывает значение DBPROPSTATUS_BADVALUE.|  
+|DBPROP_INDEX_CLUSTERED|Чтение и запись в R/W<br /><br /> Значение по умолчанию: VARIANT_FALSE<br /><br /> Описание: управляет кластеризацией индекса.<br /><br /> VARIANT_TRUE: поставщик OLE DB клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client пытается создать кластеризованный индекс для таблицы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает не более одного кластеризованного индекса в любой таблице.<br /><br /> VARIANT_FALSE: поставщик OLE DB клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client пытается создать некластеризованный индекс в таблице [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|DBPROP_INDEX_FILLFACTOR|Чтение и запись в R/W<br /><br /> По умолчанию: 0<br /><br /> Описание: указывает процент страниц индекса, используемых для хранения. Дополнительные сведения см. в разделе [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md).<br /><br /> Тип варианта — VT_I4. Значение должно находиться в диапазоне от 1 до 100.|  
+|DBPROP_INDEX_INITIALIZE|Чтение и запись в R/W<br /><br /> По умолчанию: нет<br /><br /> Описание: поставщик [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB не поддерживает это свойство. Попытки установить свойство в **CreateIndex** приводят к возврату значения DB_S_ERRORSOCCURRED. Элемент *dwStatus* структуры свойства указывает значение DBPROPSTATUS_BADVALUE.|  
+|DBPROP_INDEX_NULLCOLLATION|Чтение и запись в R/W<br /><br /> По умолчанию: нет<br /><br /> Описание: поставщик [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB не поддерживает это свойство. Попытки установить свойство в **CreateIndex** приводят к возврату значения DB_S_ERRORSOCCURRED. Элемент *dwStatus* структуры свойства указывает значение DBPROPSTATUS_BADVALUE.|  
+|DBPROP_INDEX_NULLS|Чтение и запись в R/W<br /><br /> По умолчанию: нет<br /><br /> Описание: поставщик [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB не поддерживает это свойство. Попытки установить свойство в **CreateIndex** приводят к возврату значения DB_S_ERRORSOCCURRED. Элемент *dwStatus* структуры свойства указывает значение DBPROPSTATUS_BADVALUE.|  
+|DBPROP_INDEX_PRIMARYKEY|Чтение и запись в R/W<br /><br /> Значение по умолчанию: VARIANT_FALSE Description: создает индекс как ссылочную целостность, ограничение ПЕРВИЧного ключа.<br /><br /> VARIANT_TRUE: индекс создается для поддержки ограничения PRIMARY KEY таблицы. Столбцы не должны иметь значений NULL.<br /><br /> VARIANT_FALSE: индекс не используется в качестве ограничения PRIMARY KEY для значений строк таблицы.|  
+|DBPROP_INDEX_SORTBOOKMARKS|Чтение и запись в R/W<br /><br /> По умолчанию: нет<br /><br /> Описание: поставщик [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB не поддерживает это свойство. Попытки установить свойство в **CreateIndex** приводят к возврату значения DB_S_ERRORSOCCURRED. Элемент *dwStatus* структуры свойства указывает значение DBPROPSTATUS_BADVALUE.|  
+|DBPROP_INDEX_TEMPINDEX|Чтение и запись в R/W<br /><br /> По умолчанию: нет<br /><br /> Описание: поставщик [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB не поддерживает это свойство. Попытки установить свойство в **CreateIndex** приводят к возврату значения DB_S_ERRORSOCCURRED. Элемент *dwStatus* структуры свойства указывает значение DBPROPSTATUS_BADVALUE.|  
+|DBPROP_INDEX_TYPE|Чтение и запись в R/W<br /><br /> По умолчанию: нет<br /><br /> Описание: поставщик [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB не поддерживает это свойство. Попытки установить свойство в **CreateIndex** приводят к возврату значения DB_S_ERRORSOCCURRED. Элемент *dwStatus* структуры свойства указывает значение DBPROPSTATUS_BADVALUE.|  
+|DBPROP_INDEX_UNIQUE|Чтение и запись в R/W<br /><br /> Значение по умолчанию: VARIANT_FALSE<br /><br /> Описание: создает индекс в виде ограничения UNIQUE для определенного столбца или столбцов.<br /><br /> VARIANT_TRUE: индекс используется для уникального ограничения значений в строках таблицы.<br /><br /> VARIANT_FALSE: индекс не используется для уникального ограничения значений строк.|  
   
- В от поставщика наборе свойств DBPROPSET_SQLSERVERINDEX [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поставщик OLE DB для собственного клиента определяет следующие свойства сведения источника данных.  
+ В DBPROPSET_SQLSERVERINDEX свойств, зависящих от поставщика, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поставщик OLE DB собственного клиента определяет следующее свойство сведений об источнике данных.  
   
 |Идентификатор свойства|Описание|  
 |-----------------|-----------------|  
-|SSPROP_INDEX_XML|Тип: VT_BOOL (ЧТЕНИЕ/ЗАПИСЬ)<br /><br /> По умолчанию: VARIANT_FALSE<br /><br /> Описание. При указании этого свойства со значением VARIANT_TRUE с IIndexDefinition::CreateIndex приводит первичного XML-индекса, создается соответствующий индексированному столбцу. Если это свойство имеет значение VARIANT_TRUE, параметр cIndexColumnDescs должен быть равен 1. В противном случае возникает ошибка.|  
+|SSPROP_INDEX_XML|Тип: VT_BOOL (R/W)<br /><br /> Значение по умолчанию: VARIANT_FALSE<br /><br /> Описание: если при вызове метода IIndexDefinition::CreateIndex это свойство указывается со значением VARIANT_TRUE, создается первичный XML-индекс, соответствующий индексированному столбцу. Если это свойство имеет значение VARIANT_TRUE, параметр cIndexColumnDescs должен быть равен 1. В противном случае возникает ошибка.|  
   
  В данном примере создается индекс первичного ключа.  
   
@@ -155,7 +154,7 @@ HRESULT CreatePrimaryKey
     }  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
  [Таблицы и индексы](../../relational-databases/native-client-ole-db-tables-indexes/tables-and-indexes.md)  
   
   

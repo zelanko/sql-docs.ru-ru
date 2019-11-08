@@ -24,22 +24,21 @@ ms.assetid: 65b0267d-b2ab-4a59-83f2-436d90cfbf79
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f915a802236394cb732959c6fbf898e9d2b2e216
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d5a7cb061c308508b0ab5d489dcabb4b25f93883
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68134179"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73784747"
 ---
 # <a name="disconnecting-from-a-data-source"></a>Отсоединение от источника данных
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  Когда приложение завершило использование источника данных, он вызывает **SQLDisconnect**. **SQLDisconnect** освобождает все инструкции, выделенных для подключения и отсоединяет драйвер от источника данных. После отсоединения приложение может вызвать [SQLFreeHandle](../../relational-databases/native-client-odbc-api/sqlfreehandle.md) для освобождения дескриптора соединения. Перед завершением работы приложение также вызывает **SQLFreeHandle** для освобождения дескриптора среды.  
+  Когда приложение завершило работу с источником данных, оно вызывает **SQLDisconnect**. **SQLDisconnect** освобождает все инструкции, выделенные для соединения, и отключает драйвер от источника данных. После отключения приложение может вызвать [SQLFreeHandle](../../relational-databases/native-client-odbc-api/sqlfreehandle.md) , чтобы освободить маркер подключения. Перед выходом приложение также вызывает **SQLFreeHandle** , чтобы освободить обработчик среды.  
   
  После отсоединения приложение может повторно использовать выделенный дескриптор соединения, либо для соединения с другим источником данных, либо для повторного соединения с тем же. Для принятия решения о сохранении соединения или отсоединении и повторном соединении, разработчик приложения должен рассмотреть сравнительную стоимость каждого варианта. Соединение с источником данных и сохранение соединения в различных окружениях могут оказаться в разной степени затратными. Чтобы сделать выбор, следует также проанализировать вероятность и временные затраты других операций в том же источнике данных. Также приложению может потребоваться более одного соединения.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
  [Взаимодействие с SQL Server &#40;ODBC&#41;](../../relational-databases/native-client-odbc-communication/communicating-with-sql-server-odbc.md)  
   
   

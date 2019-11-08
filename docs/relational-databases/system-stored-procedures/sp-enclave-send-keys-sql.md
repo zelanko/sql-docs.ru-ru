@@ -1,7 +1,7 @@
 ---
 title: sp_enclave_send_keys (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
-ms.date: 06/26/2019
+ms.date: 10/19/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: vanto
@@ -19,17 +19,26 @@ helpviewer_keywords:
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: b4ced2feee2227ba1db492f721f57907069c5d99
-ms.sourcegitcommit: 97e94b76f9f48d161798afcf89a8c2ac0f09c584
+ms.openlocfilehash: ca6e7485e85665f06c2410438b902fa0647418ae
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68661350"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593751"
 ---
-# <a name="spenclavesendkeys----transact-sql"></a>sp_enclave_send_keys (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+# <a name="sp_enclave_send_keys-transact-sql"></a>sp_enclave_send_keys (Transact-SQL)
+[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
 
-Отправляет все ключи шифрования столбцов с поддержкой анклава в базе данных в анклава, используемый [Always encrypted с безопасными енклавес &#40;ядро СУБД&#41;](../../relational-databases/security/encryption/always-encrypted-enclaves.md).
+Отправляет ключи шифрования столбцов, определенные в базе данных, в защищенную анклава на стороне сервера, используемую с [Always encrypted с защищенным енклавес](../security/encryption/always-encrypted-enclaves.md).
+
+`sp_enclave_send_keys` только отправляет только те ключи, которые являются анклава и шифруют столбцы, использующие случайное шифрование и имеющие индексы. Для обычного пользовательского запроса драйвер клиента предоставляет анклава с ключами, необходимыми для вычислений в запросе. `sp_enclave_send_keys` отправляет все ключи шифрования столбцов, определенные в базе данных и используемые для индексов зашифрованных столбцов. 
+
+`sp_enclave_send_keys` предоставляет простой способ отправки ключей в анклава и заполнения кэша ключей шифрования столбцов для последующих операций индексирования. Используйте `sp_enclave_send_keys`, чтобы включить:
+- DBA для перестроения или изменения индексов или статистики по зашифрованным столбцам базы данных, если DBA не имеет доступа к главным ключам столбцов. См. раздел [вызов операций индексирования с использованием кэшированных ключей шифрования столбцов](../security/encryption/always-encrypted-enclaves-create-use-indexes.md#invoke-indexing-operations-using-cached-column-encryption-keys).
+- [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)], чтобы завершить восстановление индексов в зашифрованных столбцах. См. раздел [Восстановление базы данных](../security/encryption/always-encrypted-enclaves.md#database-recovery).
+- Приложение, использующее .NET Framework поставщик данных для SQL Server для выполнения групповой загрузки данных в зашифрованные столбцы.
+
+Для успешного вызова `sp_enclave_send_keys`необходимо подключиться к базе данных с помощью Always Encrypted и анклава вычислений, включенных для подключения к базе данных. Кроме того, необходимо иметь доступ к главным ключам столбцов, защищать ключи шифрования столбцов, отправку, а также разрешения на доступ к метаданным ключа Always Encrypted в базе данных. 
 
 ## <a name="syntax"></a>Синтаксис  
   
@@ -50,16 +59,9 @@ sp_enclave_send_keys
 
 Эта хранимая процедура не имеет результирующих наборов.
   
-## <a name="remarks"></a>Примечания
-
-**sp_enclave_send_keys** отправляет ключи шифрования столбца с включенным анклава в анклава, если выполняются все перечисленные ниже условия.
-
-- Анклава включается в экземпляре SQL Server.
-- **sp_enclave_send_keys** был вызван из приложения с помощью [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] клиентского драйвера, поддерживающего Always encrypted с безопасным енклавес с помощью подключения к базе данных, в котором включены вычисления Always encrypted и анклава.
-
 ## <a name="permissions"></a>Разрешения
 
- Запрашивать определение **ключа шифрования столбцов** и **просматривать любые разрешения для определения главного ключа столбца** в базе данных.  
+ Требовать разрешения `VIEW ANY COLUMN ENCRYPTION KEY DEFINITION` и `VIEW ANY COLUMN MASTER KEY DEFINITION` в базе данных.  
   
 ## <a name="examples"></a>Примеры  
   
@@ -67,10 +69,9 @@ sp_enclave_send_keys
 EXEC sp_enclave_send_keys;  
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
+- [Always Encrypted с безопасными анклавами](../security/encryption/always-encrypted-enclaves.md) 
+ 
+- [Создание и использование индексов в столбцах с помощью Always Encrypted с Secure енклавес](../security/encryption/always-encrypted-enclaves-create-use-indexes.md)
 
- [Always Encrypted с защищенным &#40;енклавес ядро СУБД&#41;](../../relational-databases/security/encryption/always-encrypted-enclaves.md)   
- [Учебник. Создание и использование индексов в столбцах с поддержкой анклава с использованием случайного шифрования](../security/tutorial-creating-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md#step-3-create-an-index-with-role-separation)   
- [Вызов операций индексации с использованием кэшированных ключей шифрования столбцов](../security/encryption/configure-always-encrypted-enclaves.md#invoke-indexing-operations-using-cached-column-encryption-keys)   
- [Индексы в столбцах с поддержкой анклава с использованием случайного шифрования](../security/encryption/always-encrypted-enclaves.md#indexes-on-enclave-enabled-columns-using-randomized-encryption)   
- [Рекомендации по миграции AlwaysOn и базы данных](../security/encryption/always-encrypted-enclaves.md#anchorname-1-considerations-availability-groups-db-migration)
+- [Учебник. Создание и использование индексов в столбцах с поддержкой анклава с использованием случайного шифрования](../security/tutorial-creating-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md)

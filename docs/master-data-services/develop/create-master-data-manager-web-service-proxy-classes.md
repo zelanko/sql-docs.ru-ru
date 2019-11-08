@@ -1,5 +1,5 @@
 ---
-title: Создание прокси-классов веб-службы диспетчера основных данных | Документы Майкрософт
+title: Создание классов-посредников веб-службы диспетчера основных данных
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: reference
 ms.assetid: 8bdab026-a0c0-41f3-9d36-f3919c23247f
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 062a3bc03c85a4dc0d4fe5c6cca08b30429cd284
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1096da19a45e15ab2216cea2f4a4a38ecb05233e
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006319"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729317"
 ---
 # <a name="create-master-data-manager-web-service-proxy-classes"></a>Создание классов-посредников веб-службы диспетчера основных данных
 
@@ -39,7 +39,7 @@ ms.locfileid: "68006319"
     "Вы создали службу".  
   
 ## <a name="creating-proxy-classes-by-using-visual-studio"></a>Создание классов-посредников с помощью Visual Studio  
- Если установлена программа Visual Studio 2010, то самый простой способ создания прокси-классов заключается в добавлении в проект **Ссылки на службу**. Адресом ссылки на службу является URL-адрес веб-приложения [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)], к которому добавлено /service/service.svc. Например: `https://yourserver/MDS/service/service.svc`. Дополнительные сведения см. в разделе [Как Добавление, обновление или удаление ссылки на службу](https://go.microsoft.com/fwlink/?LinkId=221167).  
+ Если установлена программа Visual Studio 2010, то самый простой способ создания прокси-классов заключается в добавлении в проект **Ссылки на службу**. Адресом ссылки на службу является URL-адрес веб-приложения [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)], к которому добавлено /service/service.svc. Например: `https://yourserver/MDS/service/service.svc`. Дополнительные сведения см. в статье [Добавление, обновление или удаление ссылки на службу](https://go.microsoft.com/fwlink/?LinkId=221167).  
   
 ## <a name="creating-proxy-classes-by-using-svcutilexe"></a>Создание классов-посредников с помощью Svcutil.exe  
  Средство Svcutil.exe устанавливается на компьютере при установке среды [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] или пакета [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows SDK. При использовании среды [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] для выполнения команды необходимо использовать командную строку [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]. Дополнительные сведения см. в статьях [ServiceModel Metadata Utility Tool (Svcutil.exe)](https://go.microsoft.com/fwlink/?LinkId=165027) (Служебная программа для работы с метаданными ServiceModel — Svcutil.exe) и [Generating a WCF Client from Service Metadata](https://go.microsoft.com/fwlink/?LinkId=164821) (Создание клиента WCF из метаданных службы).  
@@ -61,7 +61,7 @@ svcutil.exe https://<server_name:port>/<virtual_path>/Service/Service.svc
   
 -   *proxy_name* ― это имя создаваемого прокси-файла.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также раздел  
  [Операции веб-службы по категориям (службы Master Data Services)](../../master-data-services/develop/categorized-web-service-operations-master-data-services.md)  
   
   

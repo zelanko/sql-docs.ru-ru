@@ -1,5 +1,5 @@
 ---
-title: Назначение разрешений для элемента иерархии (службы Master Data Services) | Документы Майкрософт
+title: Назначение разрешений для элемента иерархии
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e1b8b46a-7cd1-4a7d-9345-dd7df081e145
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 9635db0e61f4283b10c75b883a995b1e2034c462
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9a725ec385d72ea3719e215ea9b01c1565aadecc
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047680"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729773"
 ---
 # <a name="assign-hierarchy-member-permissions-master-data-services"></a>Назначение разрешений для элемента иерархии (службы Master Data Services)
 
@@ -28,8 +28,8 @@ ms.locfileid: "68047680"
   
  Разрешения для элементов иерархии необязательны. Они позволяют детализировать разрешения для объектов модели в случаях, когда это необходимо.  
   
-## <a name="prerequisites"></a>предварительные требования  
- Для выполнения этой процедуры:  
+## <a name="prerequisites"></a>Предварительные требования  
+ Чтобы выполнить эту процедуру:  
   
 -   необходимо иметь разрешение на доступ к функциональной области **Разрешения пользователей и групп** ;  
   
@@ -62,7 +62,7 @@ ms.locfileid: "68047680"
     > [!NOTE]  
     >  Разрешения для элемента иерархии вступают в силу не сразу. См. раздел [Срочное применение разрешения для элемента (службы Master Data Services)](../master-data-services/immediately-apply-member-permissions-master-data-services.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
  [Удаление разрешений элемента иерархии (службы Master Data Services)](../master-data-services/delete-hierarchy-member-permissions-master-data-services.md)   
  [Назначение разрешения для объекта модели (службы Master Data Services)](../master-data-services/assign-model-object-permissions-master-data-services.md)   
  [Разрешения на элементы иерархии (службы Master Data Services)](../master-data-services/hierarchy-member-permissions-master-data-services.md)  

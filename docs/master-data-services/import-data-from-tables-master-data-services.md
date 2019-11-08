@@ -1,5 +1,5 @@
 ---
-title: Импорт данных из таблиц (службы Master Data Services) | Документы Майкрософт
+title: Импорт данных из таблиц
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ad5b83b1-8e40-4ef8-9ba8-4ea17a58b672
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: fd30e00cc489da89836bb0646b1b8c10385346af
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 08cb402143cd5290d0f228d2dcab242c3139408a
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67945108"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729247"
 ---
 # <a name="import-data-from-tables-master-data-services"></a>Импорт данных из таблиц (службы Master Data Services)
 
@@ -33,7 +33,7 @@ ms.locfileid: "67945108"
   
  **Добавление, обновление и удаление данных в базе данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]**  
   
-1.  Подготовьте элементы к импорту в соответствующую промежуточную таблицу в базе данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] , в том числе укажите значения обязательных полей. Общие сведения о промежуточных таблицах см. в разделе [Обзор: импорт данных из таблиц (службы Master Data Services)](../master-data-services/overview-importing-data-from-tables-master-data-services.md)  
+1.  Подготовьте элементы к импорту в соответствующую промежуточную таблицу в базе данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] , в том числе укажите значения обязательных полей. Общие сведения о промежуточных таблицах см. в разделе [Обзор: импорт данных из таблиц (службы Master Data Services)](../master-data-services/overview-importing-data-from-tables-master-data-services.md).  
   
     -   Таблица для конечных элементов — stg.\<имя>_Leaf, где \<имя> — это имя соответствующей сущности. Сведения о требуемых полях см. в разделе [Конечный элемент таблицы элементов (службы Master Data Services)](../master-data-services/leaf-member-staging-table-master-data-services.md).  
   
@@ -65,7 +65,7 @@ ms.locfileid: "67945108"
   
          На странице **Промежуточные пакеты** в раскрывающемся списке выберите модель, к которой вы добавляете данные, и нажмите кнопку **Запустить пакеты**. Состояние пакетной обработки указывается в поле **Состояние** . Дополнительные сведения о состояниях см. в разделе [Состояния операции импорта (службы Master Data Services)](../master-data-services/import-statuses-master-data-services.md).  
   
-         ![Страница промежуточных пакетов в диспетчере основных данных](../master-data-services/media/mds-stagingbatchespage.png "Страница промежуточных пакетов в диспетчере основных данных")  
+         ![Страница промежуточных пакетов в диспетчер основных данных](../master-data-services/media/mds-stagingbatchespage.png "Страница промежуточных пакетов в диспетчер основных данных")  
   
          Промежуточный процесс запускается через промежутки времени, указанные с помощью параметра **Интервал промежуточных пакетов** в [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]. Дополнительные сведения см. в разделе [Системные параметры (службы Master Data Services)](../master-data-services/system-settings-master-data-services.md).  
   

@@ -13,16 +13,15 @@ ms.assetid: b057f04b-e5f4-466e-a39a-090dae797236
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b75d112900e9ff955da587fa76bf2bb6a7210abe
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 5fd06c01ddbb92679bc728350850f487b1ad5db8
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72904972"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73766046"
 ---
 # <a name="set-large-data-ole-db"></a>Задание данных больших объектов (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   В этом образце показывается, как задать данные типа BLOB, создать таблицу, добавить образец записи, выбрать эту запись в набор строк, а затем задать значение поля типа BLOB. Этот образец не поддерживается на архитектуре IA64.  
   
@@ -51,7 +50,7 @@ ms.locfileid: "72904972"
 
 ## <a name="example"></a>Пример  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>Описание  
  Скомпилируйте с библиотеками ole32.lib и oleaut32.lib и выполните следующий листинг кода (C++). Это приложение соединяется с установленным на компьютер экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по умолчанию. В некоторых операционных системах Windows придется заменить (localhost) или (local) на имя своего экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Чтобы подключиться к именованному экземпляру, измените строку подключения с L"(local)" на L"(local)\\\<имя>", где <имя> — это именованный экземпляр. По умолчанию [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express устанавливается на именованный экземпляр. Убедитесь, что переменная среды INCLUDE включает каталог, содержащий файл sqlncli.h.  
   
 ### <a name="code"></a>код  

@@ -16,16 +16,15 @@ ms.assetid: e70960e1-2085-46ed-9d55-aeb8c3532c84
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: eefc1981d5a064eeb362dd0781a3f682117125a4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: baa8d826718572051b1d3002bd660605cb6c44a0
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67902423"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73784234"
 ---
 # <a name="cursor-properties"></a>Свойства курсора
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
   Общие характеристики курсора определяются установкой либо типа курсора в стиле ODBC, либо режима работы курсоров SQL-92/ISO. В следующих разделах описываются дополнительные атрибуты инструкций и соединений, влияющие на поведение курсора.  
   
@@ -35,7 +34,7 @@ ms.locfileid: "67902423"
   
 -   [Уровень изоляции транзакций курсора](../../../relational-databases/native-client-odbc-cursors/properties/cursor-transaction-isolation-level.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
  [Использование курсоров &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md)  
   
   

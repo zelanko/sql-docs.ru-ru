@@ -1,5 +1,5 @@
 ---
-title: Удаление сущности (службы Master Data Services) | Документы Майкрософт
+title: Удаление сущности
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 71fffb03-38fd-46f0-9e10-6ec75da19ab2
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 2598634f239c738e0287caa9706aad497cb706a5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1fa2f891c4f5fc0d582b341ce1000d407fef743b
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67906314"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729481"
 ---
 # <a name="delete-an-entity-master-data-services"></a>Удаление сущности (службы Master Data Services)
 
@@ -29,8 +29,8 @@ ms.locfileid: "67906314"
 > [!NOTE]  
 >  Элементы сущности из всех версий будут окончательно удалены.  
   
-## <a name="prerequisites"></a>предварительные требования  
- Для выполнения этой процедуры:  
+## <a name="prerequisites"></a>Предварительные требования  
+ Чтобы выполнить эту процедуру:  
   
 -   необходимо иметь разрешение на доступ к функциональной области **Администрирование системы** ;  
   
@@ -50,7 +50,7 @@ ms.locfileid: "67906314"
   
 6.  В диалоговом окне подтверждения нажмите кнопку **ОК**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
  [Сущности (службы Master Data Services)](../master-data-services/entities-master-data-services.md)   
  [Создание сущности (службы Master Data Services)](../master-data-services/create-an-entity-master-data-services.md)  
   

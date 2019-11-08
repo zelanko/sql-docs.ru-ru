@@ -1,5 +1,5 @@
 ---
-title: UTF8 Строковый определяемый пользователем тип (UDT) | Документация Майкрософт
+title: Определяемый пользователем тип данных UTF8 (UDT) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,20 +10,20 @@ ms.assetid: 41b84606-1fa8-4e4b-8f4c-bdc66537c613
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 824a722c527b600fd09c8f68725ad033ab1a1b8c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6a983d8c4488cf9830a3dd7b63a6ad8d3fe1e5fc
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62780171"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73637625"
 ---
 # <a name="utf8-string-user-defined-data-type-udt"></a>UTF8 String User-Defined Data Type (UDT)
   Образец UTF8String для SQL Server демонстрирует реализацию определяемого пользователем типа данных. Этот образец показывает реализацию определяемого пользователем типа данных UTF8, который расширяет систему типов базы данных, обеспечивая возможность хранения значений в кодировке UTF8. Этот тип также реализует программный код для преобразования строк в Юникоде в формат UTF8 и обратно.  
   
-## <a name="prerequisites"></a>предварительные требования  
+## <a name="prerequisites"></a>Предварительные требования  
  Для создания и запуска этого проекта должно быть установлено следующее программное обеспечение:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express можно получить бесплатно на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] веб-сайте [с документацией и примерами по](https://go.microsoft.com/fwlink/?LinkId=31046)Express.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express можно получить бесплатно на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] веб-сайте [с документацией и примерами по](https://www.microsoft.com/sql-server/sql-server-editions-express)Express.  
   
 -   База данных AdventureWorks, доступная на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] веб-сайте [разработки](https://go.microsoft.com/fwlink/?linkid=62796).  
   
@@ -905,7 +905,7 @@ DROP ASSEMBLY UTF8String;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
  [Сценарии использования и примеры интеграции со средой CLR](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
   
   

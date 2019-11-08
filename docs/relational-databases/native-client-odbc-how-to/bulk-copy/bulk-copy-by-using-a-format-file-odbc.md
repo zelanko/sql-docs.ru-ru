@@ -1,5 +1,5 @@
 ---
-title: Массовое копирование с помощью файла форматирования (ODBC) | Документация Майкрософт
+title: Групповое копирование с помощью файла форматирования (ODBC) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,16 +14,15 @@ ms.assetid: 970fd3af-f918-4fc3-a5b1-92596515d4de
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 654a632024f5c004ea9c15d71b767b4cb6bf80b1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0698d534a75d6fb1b66af733c3d1eb00f88c26cc
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68099398"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73781998"
 ---
 # <a name="bulk-copy-by-using-a-format-file-odbc"></a>Выполнение массового копирования при использовании файла форматирования (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
   В этом образце демонстрируется использование функции ODBC bcp_init с файлом форматирования.  
   
@@ -35,7 +34,7 @@ ms.locfileid: "68099398"
   
 3.  Установите соединение с Microsoft® SQL Server™.  
   
-4.  Вызовите [bcp_init](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) задать следующие сведения:  
+4.  Вызовите [bcp_init](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) , чтобы задать следующие сведения:  
   
     -   Имя таблицы или представления, из которого или в которое будет производиться массовое копирование.  
   
@@ -45,18 +44,18 @@ ms.locfileid: "68099398"
   
     -   Направление копирования: DB_IN из файла в таблицу или представление.  
   
-5.  Вызовите [bcp_readfmt](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-readfmt.md) для чтения файла форматирования, описывающий файл данных, используемый в операции массового копирования.  
+5.  Вызовите [bcp_readfmt](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-readfmt.md) , чтобы прочитать файл форматирования, описывающий файл данных, который будет использоваться операцией с массовым копированием.  
   
-6.  Вызовите [bcp_exec](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md) для выполнения операции массового копирования.  
+6.  Вызовите [bcp_exec](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md) , чтобы выполнить операцию с массовым копированием.  
   
 ## <a name="example"></a>Пример  
  Этот образец не поддерживается на архитектуре IA64.  
   
- Также необходим источник данных ODBC с именем AdventureWorks, для которого базой данных по умолчанию является образец базы данных AdventureWorks. (Образец базы данных AdventureWorks можно скачать с домашней страницы [Microsoft SQL Server Samples and Community Projects](https://go.microsoft.com/fwlink/?LinkID=85384) (Образцы кода и проекты сообщества Microsoft SQL Server).) Этот источник данных должен быть основан на драйвере ODBC, предоставленном операционной системой (имя драйвера — «SQL Server»). При построении и запуске этого образца как 32-разрядного приложения в 64-разрядной операционной системе необходимо создать источник данных ODBC с помощью программы администрирования ODBC (исполняемый файл %windir%\SysWOW64\odbcad32.exe).  
+ Также необходим источник данных ODBC с именем AdventureWorks, для которого базой данных по умолчанию является образец базы данных AdventureWorks. (Образец базы данных AdventureWorks можно скачать на домашней странице [Microsoft SQL Server примеры и проекты сообщества](https://go.microsoft.com/fwlink/?LinkID=85384) .) Этот источник данных должен быть основан на драйвере ODBC, предоставленном операционной системой (имя драйвера — "SQL Server"). При построении и запуске этого образца как 32-разрядного приложения в 64-разрядной операционной системе необходимо создать источник данных ODBC с помощью программы администрирования ODBC (исполняемый файл %windir%\SysWOW64\odbcad32.exe).  
   
  Этот образец соединяется с установленным на компьютер экземпляром [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] по умолчанию. Чтобы соединиться с именованным экземпляром, измените определение источника данных ODBC, указав экземпляр в следующем формате: Сервер\ИменованныйЭкземпляр. По умолчанию [!INCLUDE[ssExpress](../../../includes/ssexpress-md.md)] устанавливается на именованный экземпляр.  
   
- Выполните первый ( [!INCLUDE[tsql](../../../includes/tsql-md.md)]) листинг, чтобы создать таблицу, которая будет использоваться образца кода.  
+ Выполните первый листинг кода ([!INCLUDE[tsql](../../../includes/tsql-md.md)]), чтобы создать таблицу, которую будет использовать образец.  
   
  Скопируйте второй листинг кода и вставьте его в файл Bcpfmt.fmt. Каждый столбец в таблице отделен символом табуляции.  
   
@@ -64,7 +63,7 @@ ms.locfileid: "68099398"
   
  Скомпилируйте четвертый листинг кода (C++) с библиотеками odbc32.lib и odbcbcp.lib. При работе с программой MSBuild.exe сначала скопируйте файлы Bcpfmt.fmt и Bcpodbc.bcp из каталога проекта в тот каталог, где находится исполняемый файл, а затем вызовите этот исполняемый файл.  
   
- Выполните пятый ( [!INCLUDE[tsql](../../../includes/tsql-md.md)]) листинг, чтобы удалить таблицу, которую использовал образец кода.  
+ Выполните Пятый листинг кода ([!INCLUDE[tsql](../../../includes/tsql-md.md)]), чтобы удалить таблицу, используемую образцом.  
   
 ```  
 use AdventureWorks  
@@ -188,8 +187,8 @@ IF EXISTS (SELECT name FROM sysobjects WHERE name = 'BCPDate')
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Массовое копирование с помощью инструкции SQL Server ODBC драйвер &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/bulk-copy/bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)   
+## <a name="see-also"></a>См. также раздел  
+ [Инструкции по копированию с помощью драйвера ODBC для SQL Server &#40;ODBC&#41; ](../../../relational-databases/native-client-odbc-how-to/bulk-copy/bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)   
  [Использование файлов данных и файлов форматирования](../../../relational-databases/native-client-odbc-bulk-copy-operations/using-data-files-and-format-files.md)  
   
   

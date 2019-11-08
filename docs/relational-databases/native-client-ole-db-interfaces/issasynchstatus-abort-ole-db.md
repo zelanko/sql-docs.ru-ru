@@ -1,5 +1,5 @@
 ---
-title: ISSAsynchStatus::Abort (OLE DB) | Документация Майкрософт
+title: 'Метод ISSAsynchStatus:: Abort (OLE DB) | Документация Майкрософт'
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -16,16 +16,15 @@ ms.assetid: 2a4bd312-839a-45a8-a299-fc8609be9a2a
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 55b018941fbd8bb4cecef7c5f10ea41bea566534
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7250c27e2ce35abbd15fc334f4f0ac07e94e985b
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68051033"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73789527"
 ---
 # <a name="issasynchstatusabort-ole-db"></a>ISSAsynchStatus::Abort (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   Отменяет операцию асинхронного выполнения.  
   
@@ -66,18 +65,18 @@ HRESULT Abort(
  E_UNEXPECTED  
  Метод**ISSAsynchStatus::Abort** был вызван для объекта источника данных, для которого не был вызван метод **IDBInitialize::Initialize** .  
   
- Метод**ISSAsynchStatus::Abort** был вызван для объекта источника данных, для которого был вызван метод **IDBInitialize::Initialize** , но впоследствии отменен до инициализации, либо истекло время ожидания. Объект источника данных еще не инициализирован.  
+ **Метод ISSAsynchStatus:: Abort** был вызван для объекта источника данных, для которого была вызвана **IDBInitialize:: Initialize** , но впоследствии была отменена до инициализации или истекло время ожидания. Объект источника данных все еще не инициализирован.  
   
  Интерфейс**ISSAsynchStatus::Abилиt** был вызван для набора строк, для которого ранее был вызван интерфейс **ITransaction::Commit** или **ITransaction::Abилиt** was previously called, and the rowset did not survive the commit или abилиt and is in a zombie state.  
   
  Интерфейс**ISSAsynchStatus::Abort** был вызван для набора строк, который был асинхронно отменен на стадии его инициализации. Набор строк находится в состоянии зомби.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  При прерывании инициализации набора строк или объекта источника данных набор строк или объект источника данных может перейти в состояние зомби, когда все методы, кроме методов **IUnknown** , возвращают E_UNEXPECTED. В этом случае единственным возможным для потребителя действием является освобождение набора строк или объекта источника данных.  
   
  При вызове интерфейса **ISSAsynchStatus::Abort** и передаче параметру *eOperation* значения, отличного от DBASYNCHOP_OPEN, возвращается S_OK. Это не подразумевает, что сама операция была завершена или отменена.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
  [Выполнение асинхронных операций](../../relational-databases/native-client/features/performing-asynchronous-operations.md)  
   
   

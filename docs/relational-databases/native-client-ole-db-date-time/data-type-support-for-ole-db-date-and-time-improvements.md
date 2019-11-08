@@ -14,18 +14,17 @@ ms.assetid: d40e3fd6-9057-4371-8236-95cef300603e
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 655b6045e8178e74e994e61691ede28052d8fb5a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 29983ce06bf5f50b4d555cee6a8997b22ccefc10
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68106971"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73770186"
 ---
 # <a name="data-type-support-for-ole-db-date-and-time-improvements"></a>Улучшения поддержки типов данных даты и времени OLE DB
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  Этот раздел содержит сведения о OLE DB ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client), поддерживающих [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] типы данных даты и времени.  
+  В этом разделе содержатся сведения о типах OLE DB ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client), поддерживающих типы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] даты и времени.  
   
 ## <a name="data-type-mapping-in-rowsets-and-parameters"></a>Сопоставление типов данных в наборах строк и параметрах  
  OLE DB предоставляет два новых типа данных для поддержки новых типов серверов: DBTYPE_DBTIME2 и DBTYPE_DBTIMESTAMPOFFSET. Следующая таблица отображает полное сопоставление типов серверов.  
@@ -35,11 +34,11 @@ ms.locfileid: "68106971"
 |datetime|DBTYPE_DBTIMESTAMP|135 (oledb.h)|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|135 (oledb.h)|  
 |date|DBTYPE_DBDATE|133 (oledb.h)|  
-|time|DBTYPE_DBTIME2|145 (sqlncli.h)|  
-|datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|146 (sqlncli.h)|  
+|time|DBTYPE_DBTIME2|145 (sqlncli. h)|  
+|datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|146 (sqlncli. h)|  
 |datetime2|DBTYPE_DBTIMESTAMP|135 (oledb.h)|  
   
-## <a name="data-formats-strings-and-literals"></a>Форматы данных: Строки и литералы  
+## <a name="data-formats-strings-and-literals"></a>Форматы данных: строки и литералы  
   
 |Тип данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Тип данных OLE DB|Формат строки для клиентских преобразований|  
 |-----------------------------------------|----------------------|------------------------------------------|  
@@ -60,7 +59,7 @@ ms.locfileid: "68106971"
   
  Пустая строка не является допустимым литералом даты-времени, она не представляет значение NULL. Попытка преобразовать пустую строку в значение даты-времени приведет к ошибкам со значением SQLState, равным 22018, и сообщением «Недопустимое символьное значение для спецификации приведения».  
   
-## <a name="data-formats-data-structures"></a>Форматы данных: Структуры данных  
+## <a name="data-formats-data-structures"></a>Форматы данных: структуры данных  
  В структурах, зависящих от поставщика OLE DB, на OLE DB налагаются те же ограничения, что и на ODBC. Следующие определения взяты из описания григорианского календаря.  
   
 -   Диапазон месяцев — от 1 до 12 включительно.  
@@ -85,7 +84,7 @@ ms.locfileid: "68106971"
   
 -   DBTYPE_FILETIME  
   
-### <a name="dbtypedbtime2"></a>DBTYPE_DBTIME2  
+### <a name="dbtype_dbtime2"></a>DBTYPE_DBTIME2  
  Эта структура дополняется до 12 байт как в 32-разрядных, так и в 64-разрядных операционных системах.  
   
 ```  
@@ -97,7 +96,7 @@ typedef struct tagDBTIME2 {
     } DBTIME2;  
 ```  
   
-### <a name="dbtype-dbtimestampoffset"></a>DBTYPE_ DBTIMESTAMPOFFSET  
+### <a name="dbtype_-dbtimestampoffset"></a>DBTYPE_ DBTIMESTAMPOFFSET  
   
 ```  
 typedef struct tagDBTIMESTAMPOFFSET {  
@@ -160,7 +159,7 @@ enum SQLVARENUM {
 };  
 ```  
   
- Приложения, переносимые в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, использовать **sql_variant** и полагаться на ограниченную точность **datetime** , должны быть обновлены, если базовая схема обновлена для использования **datetime2** вместо **datetime**.  
+ Приложения, выполняющие миграцию на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственный клиент, использующий **sql_variant** и зависящие от ограниченной точности **DateTime** , должны быть обновлены, если базовая схема обновлена для использования **datetime2** , а не **DateTime**.  
   
  Макрос доступа SSVARIANT также расширен с помощью следующего дополнения:  
   
@@ -172,18 +171,18 @@ enum SQLVARENUM {
 ```  
   
 ## <a name="data-type-mapping-in-itabledefinitioncreatetable"></a>Сопоставление типов данных в методе ITableDefinition::CreateTable  
- Следующее сопоставление типов используется со структурами DBCOLUMNDESC в МЕТОДЕ, ITableDefinition::CreateTable:  
+ Следующее сопоставление типов используется с структурами DBCOLUMNDESC, используемыми ITableDefinition:: CreateTable:  
   
 |Тип данных OLE DB (*wType*)|Тип данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Примечания|  
 |----------------------------------|-----------------------------------------|-----------|  
 |DBTYPE_DBDATE|date||  
-|DBTYPE_DBTIMESTAMP|**datetime2**(p)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Поставщика OLE DB для собственного клиента проверяет элемент DBCOLUMDESC *bScale* пытаясь определить точность в долях секунды.|  
-|DBTYPE_DBTIME2|**time**(p)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Поставщика OLE DB для собственного клиента проверяет элемент DBCOLUMDESC *bScale* пытаясь определить точность в долях секунды.|  
-|DBTYPE_DBTIMESTAMPOFFSET|**datetimeoffset**(p)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Поставщика OLE DB для собственного клиента проверяет элемент DBCOLUMDESC *bScale* пытаясь определить точность в долях секунды.|  
+|DBTYPE_DBTIMESTAMP|**datetime2**(p)|Поставщик [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB проверяет член ДБКОЛУМДЕСК *bScale* , чтобы определить точность доли секунды.|  
+|DBTYPE_DBTIME2|**time**(p)|Поставщик [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB проверяет член ДБКОЛУМДЕСК *bScale* , чтобы определить точность доли секунды.|  
+|DBTYPE_DBTIMESTAMPOFFSET|**datetimeoffset**(p)|Поставщик [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB проверяет член ДБКОЛУМДЕСК *bScale* , чтобы определить точность доли секунды.|  
   
- Если приложение задает DBTYPE_DBTIMESTAMP в *wType*, его можно переопределить сопоставление **datetime2** , указав имя типа в *pwszTypeName*. Если **datetime** указано, *bScale* должно быть 3. Если **smalldatetime** указано, *bScale* должно быть равно 0. Если *bScale* не согласуется с *wType* и *pwszTypeName*, возвращается значение db_e_badscale.  
+ Когда приложение указывает DBTYPE_DBTIMESTAMP в *wType*, оно может переопределить сопоставление на **datetime2** , указав имя типа в *pwszTypeName*. Если указано **значение DateTime** , *bScale* должно быть равно 3. Если указан **smalldatetime** , *bScale* должен быть равен 0. Если *bScale* не согласуется с *wType* и *pwszTypeName*, возвращается DB_E_BADSCALE.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
  [Улучшения функций даты и времени &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  
   
   

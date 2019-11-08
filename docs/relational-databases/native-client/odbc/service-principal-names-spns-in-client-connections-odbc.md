@@ -1,5 +1,5 @@
 ---
-title: Имена участника-службы (SPN) в клиентских соединениях (ODBC) | Документация Майкрософт
+title: Имена субъектов-служб (SPN) в клиентских соединениях (ODBC) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,18 +11,17 @@ ms.assetid: 1d60cb30-4c46-49b2-89ab-701e77a330a2
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 51bb287f23a407b7e09ddf433c3f9b31aafcbc03
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 29eee1f99186df824a51e430f97440d7ac34eb24
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67913134"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73787957"
 ---
 # <a name="service-principal-names-spns-in-client-connections-odbc"></a>Имена участника-службы в клиентских соединениях (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  В данном разделе рассматриваются атрибуты и функции ODBC, поддерживающие имена участника-службы (SPN) в клиентских приложениях. Дополнительные сведения о имена участников-служб в клиентских приложениях, см. в разделе [имени участника-службы &#40;имени участника-службы&#41; поддержка в клиентских соединениях](../../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md) и [получить взаимную проверку подлинности Kerberos](../../../relational-databases/native-client-odbc-how-to/get-mutual-kerberos-authentication.md).  
+  В данном разделе рассматриваются атрибуты и функции ODBC, поддерживающие имена участника-службы (SPN) в клиентских приложениях. Дополнительные сведения об именах участников-служб в клиентских приложениях см. [в&#41; статье поддержка имени &#40;субъекта-службы в клиентских подключениях](../../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md) и [получение взаимной проверки подлинности Kerberos](../../../relational-databases/native-client-odbc-how-to/get-mutual-kerberos-authentication.md).  
   
 ## <a name="connection-string-keywords"></a>Ключевые слова в строке подключения  
  Следующие ключевые слова в строках подключения позволяют задавать имена участника-службы в клиентских приложениях.  
@@ -35,7 +34,7 @@ ms.locfileid: "67913134"
 ## <a name="connection-attributes"></a>Атрибуты соединения  
  Следующие атрибуты соединения позволяют указать имя участника-службы и запросить метод проверки подлинности в клиентском приложении.  
   
-|Имя|Type|Использование|  
+|Имя|Тип|Использование|  
 |----------|----------|-----------|  
 |SQL_COPT_SS_SERVER_SPN<br /><br /> SQL_COPT_SS_FAILOVER_PARTNER_SPN|SQLTCHAR, чтение и запись|Задает имя участника-службы для сервера. Значением по умолчанию является пустая строка, что вынуждает собственного клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] использовать сформированное драйвером имя участника-службы по умолчанию.<br /><br /> Значение этого атрибута можно запрашивать только после его задания программным путем или после открытия соединения. В противном случае будет возвращено значение SQL_ERROR, а в журнал занесена диагностическая запись с кодом SQLState (равным 08003) и сообщением «Соединение не открыто».<br /><br /> При попытке установить этот атрибут при открытом соединении будет возвращено значение SQL_ERROR и в журнал будет занесена диагностическая запись с кодом SQLState (равным HY011) и сообщением «В настоящее время эта операция недопустима».|  
 |SQL_COPT_SS_INTEGRATED_AUTHENTICATION_METHOD|SQLTCHAR, только чтение|Возвращает метод проверки подлинности, используемый для соединения. Приложению возвращается значение, которое Windows возвращает собственному клиенту [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Возможны следующие значения:<br /><br /> Значение «NTLM», которое возвращается в том случае, если соединение установлено с использованием проверки подлинности NTLM.<br /><br /> Значение «Kerberos», которое возвращается в том случае, если соединение установлено с использованием проверки подлинности Kerberos.<br /><br /> <br /><br /> Этот атрибут можно прочитать только при открытом соединении, использующем проверку подлинности Windows. При попытке считать его до открытия соединения вернется значение SQL_ERROR и в журнал будет записана ошибка с кодом SQLState 08003 и сообщением «Соединение не открыто».<br /><br /> При попытке запросить значение этого атрибута применительно к соединению, в котором не используется проверка подлинности Windows, возвращается значение SQL_ERROR, а в журнал вносится диагностическая запись с кодом SQLState (равным HY092) и сообщением «Недопустимый идентификатор атрибута или параметра (метод SQL_COPT_SS_INTEGRATED_AUTHENTICATION_METHOD доступен только для доверительных соединений)».<br /><br /> Если не удается определить используемый метод проверки подлинности, происходит возврат значения SQL_ERROR и в журнал вносится диагностическая запись с кодом SQLState (равным HY000) и сообщением «Общая ошибка».|  
@@ -54,7 +53,7 @@ ms.locfileid: "67913134"
   
 -   [SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
  [SQL Server Native Client (ODBC)](../../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)  
   
   

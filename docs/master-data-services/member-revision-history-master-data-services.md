@@ -1,5 +1,5 @@
 ---
-title: Журнал изменений элемента (службы Master Data Services) | Документы Майкрософт
+title: Журнал изменений элемента
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 113069c5-12e6-48ec-b443-b42e14f77308
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 0ee2921a8e7178385651dc52c48b7bf82866dc49
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4bc3d2a084f7f1ec3abcf9e3d3bbcaf82e4749e8
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68092582"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729111"
 ---
 # <a name="member-revision-history-master-data-services"></a>Журнал изменений элемента (Master Data Services)
 
@@ -70,7 +70,7 @@ ms.locfileid: "68092582"
 |----------------------|-----------|  
 |Откат журнала изменений элемента|[Откат журнала изменений элемента (Master Data Services)](../master-data-services/rollback-member-revision-history-master-data-services.md)|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
  [Создание модели (службы Master Data Services)](../master-data-services/create-a-model-master-data-services.md)   
  [Системные параметры (службы Master Data Services)](../master-data-services/system-settings-master-data-services.md)  
   

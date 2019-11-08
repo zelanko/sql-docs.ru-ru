@@ -1,5 +1,5 @@
 ---
-title: Слияние конфликтов (службы Master Data Services) | Документы Майкрософт
+title: Слияние конфликтов
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 797219ad-5109-4666-94d3-dd1d59440a33
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 3b28c432ec05b1b26861073b2444d52caba7e5ec
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 028c1c20516d6f058e60dad6121aee0230d78817
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68092567"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729029"
 ---
 # <a name="merge-conflicts-master-data-services"></a>Слияние конфликтов (Master Data Services)
 
@@ -23,8 +23,8 @@ ms.locfileid: "68092567"
 
   В [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]попытка публикации данных, измененных другим пользователем, завершится ошибкой из-за конфликта. Чтобы устранить эту ошибку, можно выполнить слияние конфликтов и повторно опубликовать изменения.  
   
-## <a name="prerequisites"></a>предварительные требования  
- Для выполнения этой процедуры:  
+## <a name="prerequisites"></a>Предварительные требования  
+ Чтобы выполнить эту процедуру:  
   
 -   Необходимо иметь разрешение на доступ к функциональной области **Обозреватель** .  
   
@@ -46,7 +46,7 @@ ms.locfileid: "68092567"
   
 4.  Нажав кнопку **Применить**, можно внести дополнительные изменения и опубликовать данные снова. Можно также нажать кнопку **Отменить** , чтобы отменить обновление и повторно загрузить последнюю версию с сервера.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
  [Элементы (службы Master Data Services)](../master-data-services/members-master-data-services.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Используйте улучшенные функции даты и времени (OLE DB) | Документация Майкрософт
+title: Использование улучшенных функций даты и времени (OLE DB) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,16 +11,15 @@ ms.assetid: 50f98cab-8c80-43c5-bc9a-5d2f95f67f17
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 14790203925575ef08f2ab84e2b1f355d970448d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: dbb7d307bfe1e57b0ad5a73580f12535bb7ffd92
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68110012"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73789758"
 ---
 # <a name="use-enhanced-date-and-time-features-ole-db"></a>Использование улучшенных функций даты и времени (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   В этом образце показывается, как использовать функции даты-времени, представленные в [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. В образце используются четыре новых типа даты и времени (**date**, **time**, **datetime2**и **datetimeoffset**) для выполнения команд с параметрами и получения результирующих наборов строк.  
   

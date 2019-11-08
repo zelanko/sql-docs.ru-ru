@@ -1,5 +1,5 @@
 ---
-title: Явные иерархии (Master Data Services) | Документы Майкрософт
+title: Явные иерархии
 ms.custom: ''
 ms.date: 04/01/2016
 ms.prod: sql
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e6f44e37-e1f0-4c38-a816-1935a856d5a4
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: e54ac7b6329a678d2965f135dadf5870ca19010b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b80665b6a3b3167b362be7912c70f81ce2add2ef
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67915955"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729254"
 ---
 # <a name="explicit-hierarchies-master-data-services"></a>Явные иерархии (службы основных данных)
 
@@ -75,11 +75,11 @@ ms.locfileid: "67915955"
 |Может быть неоднородной|Всегда содержит согласованное количество уровней.|  
   
 ## <a name="explicit-hierarchy-example"></a>Пример явной иерархии  
- В следующем примере сущность Product содержит конечные элементы: BK-M101 {Mountain-100}, BK-M201 {Mountain-200}, BK-M301 {Mountain-300}, BK-R150 {Road-150}, BK-R450 {Road-450} и BK-R650 {Road-650}.  
+ В следующем примере сущность Product содержит следующие конечные элементы: BK-M101 {Mountain-100}, BK-M201 {Mountain-200}, BK-M301 {Mountain-300}, BK-R150 {Road-150}, BK-R450 {Road-450} и BK-R650 {Road-650}.  
   
  Для объединения этих конечных элементов в заданных точках консолидации можно создать консолидированные элементы для сущности Product. Для этого надо вставить консолидированные элементы на том уровне дерева иерархии, где планируется объединить конечные элементы. Не существует никаких ограничений на то, где именно необходимо вставлять консолидированные элементы, однако каждый из них (и конечный, и объединенный) можно использовать только один раз.  
   
- ![Пример явной иерархии от узла "Горный велосипед"](../master-data-services/media/mds-conc-explicit-hierarchy.gif "Пример явной иерархии от узла \"Горный велосипед\"")  
+ ![Пример явных иерархий горного велосипеда](../master-data-services/media/mds-conc-explicit-hierarchy.gif "Пример явных иерархий горного велосипеда")  
   
  Консолидированные элементы можно использовать для группировки элементов на любом уровне, при этом консолидированные и конечные элементы сортируются в том порядке, который для них определен.  
   

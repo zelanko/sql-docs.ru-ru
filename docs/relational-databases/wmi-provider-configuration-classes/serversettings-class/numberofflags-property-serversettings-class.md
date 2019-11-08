@@ -1,6 +1,6 @@
 ---
-title: Свойство NumberOfFlags (класс ServerSettings) | Документация Майкрософт
-ms.custom: ''
+title: Свойство NumberOfFlags (класс serversettings)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: d720f093-0d67-4e6c-8231-78d9ab853a8f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7d52e43994d4d038d39243c40fc93f058210e244
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 35162b8f8c359ba1e1eed9ef461773a3b87533a6
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68052861"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73657810"
 ---
 # <a name="numberofflags-property-serversettings-class"></a>Свойство NumberOfFlags (класс ServerSettings)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  Получает число общих флагов, связанных с экземпляром [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+  Возвращает число общих флагов, связанных с экземпляром [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,11 +40,11 @@ object.NumberOfFlags [= value]
  Объект [класса ServerSettings](../../../relational-databases/wmi-provider-configuration-classes/serversettings-class/serversettings-class.md) , представляющий параметры сервера в экземпляре [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="property-valuereturn-value"></a>Значение свойства/возвращаемое значение  
- Объект **uint32** значение, указывающее число общих флагов, связанных с экземпляром [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ Значение **UInt32** , указывающее количество общих флагов, связанных с экземпляром [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
  [Настройка сетевых протоколов сервера и сетевых библиотек](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

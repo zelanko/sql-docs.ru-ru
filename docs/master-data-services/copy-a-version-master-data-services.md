@@ -1,5 +1,5 @@
 ---
-title: Копирование версии (службы Master Data Services) | Документы Майкрософт
+title: Копирование версии
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: f4678a02-bbe9-4f21-9e32-627eae053fe7
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 6e34aad020117fffe598d9134276c280a05f549f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bcdf2ee38e3b45a6495c0d6b3dbc643ce2b6ea38
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68079744"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728546"
 ---
 # <a name="copy-a-version-master-data-services"></a>Копирование версии (службы Master Data Services)
 
@@ -26,8 +26,8 @@ ms.locfileid: "68079744"
 
   В среде [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]копирование версии модели позволяет создать из нее новую версию.  
   
-## <a name="prerequisites"></a>предварительные требования  
- Для выполнения этой процедуры:  
+## <a name="prerequisites"></a>Предварительные требования  
+ Чтобы выполнить эту процедуру:  
   
 -   необходимо иметь разрешение на доступ к функциональной области **Управление версиями** ;  
   
@@ -52,7 +52,7 @@ ms.locfileid: "68079744"
   
 -   [Изменение имени версии (службы Master Data Services)](../master-data-services/change-a-version-name-master-data-services.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
  [Версии (службы Master Data Services)](../master-data-services/versions-master-data-services.md)  
   
   
