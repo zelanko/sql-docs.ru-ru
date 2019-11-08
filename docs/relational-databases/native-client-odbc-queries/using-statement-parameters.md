@@ -19,16 +19,15 @@ ms.assetid: 2427d886-ec6c-49d7-b0b6-0d998b64cdb9
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e1168c81d8eeb6a25b84f473858bc924f529a572
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2e5cec08809ffbd0d51ce017bbd5ff09f45410f4
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68058676"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73779541"
 ---
 # <a name="using-statement-parameters"></a>Использование параметров инструкции
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   Параметр — это переменная в инструкции SQL, позволяющая в приложении ODBC осуществлять следующее.  
   
@@ -36,9 +35,9 @@ ms.locfileid: "68058676"
   
 -   Повышать степень взаимодействия с пользователем при конструировании критериев запроса.  
   
--   Управление **текст**, **ntext**, и **изображение** данных и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-определенные типы данных C.  
+-   Управление данными типа **Text**, **ntext**и **Image** , а [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]типами данных C.  
   
- Например **частей** таблица содержит столбцы с именем **PartID**, **описание**, и **цена**. Для добавления компонента без параметров необходимо составить инструкцию SQL, например:  
+ Например, таблица **Parts** содержит столбцы с именами **PartID**, **Description**и **Price**. Для добавления компонента без параметров необходимо составить инструкцию SQL, например:  
   
 ```  
 INSERT INTO Parts (PartID, Description, Price) VALUES (2100, 'Drive shaft', 50.00)  
@@ -54,11 +53,11 @@ INSERT INTO Parts (PartID, Description, Price) VALUES (?, ?, ?)
   
  Ссылка на каждый маркер параметра осуществляется по порядковому номеру; параметры нумеруются слева направо. Первый слева параметр в инструкции SQL имеет порядковый номер 1; следующий — 2 и т. д.  
   
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
   
 -   [Привязка параметров](../../relational-databases/native-client-odbc-queries/using-statement-parameters-binding-parameters.md)  
   
-## <a name="see-also"></a>См. также  
- [Выполнение запросов &#40;ODBC&#41;](../../relational-databases/native-client-odbc-queries/executing-queries-odbc.md)  
+## <a name="see-also"></a>См. также раздел  
+ [Выполняя запросы &#40;ODBC&#41;](../../relational-databases/native-client-odbc-queries/executing-queries-odbc.md)  
   
   

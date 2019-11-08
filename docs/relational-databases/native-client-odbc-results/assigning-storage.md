@@ -22,20 +22,19 @@ ms.assetid: 11c81955-5300-495f-925f-9256f2587b58
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 03c22e5a98f97aee9d73496bcd75c88837e6e9e1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d9afee1aa24f5f3cd15791038d12f5ac0bc842fe
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67937163"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73779365"
 ---
 # <a name="assigning-storage"></a>Назначение хранилища
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   Приложение может назначить хранилище для результатов перед выполнением инструкции SQL или после него. Если приложение сначала подготавливает или выполняет инструкцию SQL, оно может запросить о результирующем наборе перед назначением хранилища для результатов. Например, если результирующий набор неизвестен, приложение должно получить количество столбцов, прежде чем им можно будет назначить хранилище.  
   
- Чтобы связать хранилище со столбцом данных, приложение вызывает [SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md)и передает его:  
+ Чтобы связать хранилище для столбца данных, приложение вызывает [SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md)и передает его:  
   
 -   Тип данных, в который будут преобразованы данные.  
   
@@ -53,15 +52,15 @@ ms.locfileid: "67937163"
   
 -   Привязка на уровне столбца завершается, когда каждый столбец привязан к собственному массиву переменных.  
   
-     Привязка на уровне столбца указывается путем вызова функции [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) с *атрибут* значение SQL_ATTR_ROW_BIND_TYPE и *ValuePtr* имеющим значение sql_bind_bind_by_column. Все массивы должны содержать одинаковое количество элементов.  
+     Привязка на уровне столбца задается путем вызова [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) с *атрибутом* , для которого задано значение SQL_ATTR_ROW_BIND_TYPE, а *ValuePtr* — значение SQL_BIND_BY_COLUMN. Все массивы должны содержать одинаковое количество элементов.  
   
 -   Привязка на уровне строки завершается, когда все параметры в инструкции SQL привязаны как единое целое к массиву структур, которые содержат отдельные переменные для параметров.  
   
-     Привязка на уровне строки указывается путем вызова функции **SQLSetStmtAttr** с *атрибут* значение SQL_ATTR_ROW_BIND_TYPE и *ValuePtr* равным размеру вместимость структуры переменные, которые будут получать результат задания столбцов.  
+     Привязка на уровне строки задается путем вызова **SQLSetStmtAttr** с *атрибутом* , имеющим значение SQL_ATTR_ROW_BIND_TYPE, а *ValuePtr* задает размер структуры, содержащей переменные, которые будут принимать столбцы результирующего набора.  
   
  Приложение также указывает для атрибута SQL_ATTR_ROW_ARRAY_SIZE значение, равное количеству элементов в массивах столбцов или строк, и устанавливает значения SQL_ATTR_ROW_STATUS_PTR и SQL_ATTR_ROWS_FETCHED_PTR.  
   
-## <a name="see-also"></a>См. также  
- [Обработка результатов &#40;ODBC&#41;](../../relational-databases/native-client-odbc-results/processing-results-odbc.md)  
+## <a name="see-also"></a>См. также раздел  
+ [Обработка результатов &#40;в ODBC&#41;](../../relational-databases/native-client-odbc-results/processing-results-odbc.md)  
   
   

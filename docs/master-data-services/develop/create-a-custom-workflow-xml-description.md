@@ -1,5 +1,5 @@
 ---
-title: Описание XML настраиваемого рабочего процесса (службы Master Data Services) | Документы Майкрософт
+title: Описание XML настраиваемого рабочего процесса
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: reference
 ms.assetid: e267e5f4-38bb-466d-82e8-871eabeec07e
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: cd291d1615920c3b576386b3f026a4b4d7f29dd0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: eb5beeb5115c3a68ab34313ea9125c65a4f4e185
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67901674"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729304"
 ---
 # <a name="create-a-custom-workflow---xml-description"></a>Создание настраиваемого рабочего процесса — описание XML
 
@@ -68,7 +68,7 @@ ms.locfileid: "67901674"
 |Тег|Описание|  
 |---------|-----------------|  
 |\<Type>|Текст, введенный в поле **Тип рабочего процесса** в [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)], указывает пользовательскую сборку рабочего процесса, которая будет загружаться.|  
-|\<SendData>|Логическое значение, которое в [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] управляется флажком **Включить в сообщение данные элементов**. Значение 1 означает, что раздел \<MemberData> отправляется. В противном случае раздел \<MemberData> не отправляется.|  
+|\<SendData>|Логическое значение, которое в **управляется флажком**Включить в сообщение данные элементов[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]. Значение 1 означает, что раздел \<MemberData> отправляется. В противном случае раздел \<MemberData> не отправляется.|  
 |<Server_URL>|Текст, введенный в поле **Сайт рабочего процесса** в [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)].|  
 |<Action_ID>|Текст, введенный в поле **Имя рабочего процесса** в [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)].|  
 |\<MemberData>|Содержит данные элемента, вызвавшего срабатывание действия рабочего процесса. Эти данные включаются, только если значение \<SendData> равно 1.|  
@@ -77,7 +77,7 @@ ms.locfileid: "67901674"
 |\<Name>|Первый атрибут элемента, который был изменен. Этот пример элемента содержит только атрибуты Name и Code.|  
 |\<Code>|Следующий атрибут элемента, который был изменен. Если бы этот пример элемента содержал больше атрибутов, то они следовали бы за первым.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
  [Создание настраиваемого рабочего процесса (службы Master Data Services)](../../master-data-services/develop/create-a-custom-workflow-master-data-services.md)   
  [Пример настраиваемого рабочего процесса (службы Master Data Services)](../../master-data-services/develop/create-a-custom-workflow-example.md)  
   

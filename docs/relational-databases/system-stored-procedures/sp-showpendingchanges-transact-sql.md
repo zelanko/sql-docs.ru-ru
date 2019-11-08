@@ -1,5 +1,5 @@
 ---
-title: процедура sp_showpendingchanges (Transact-SQL) | Документация Майкрософт
+title: sp_showpendingchanges (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: 8013a792-639d-4550-b262-e65d30f9d291
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: cc02137e23c3871066c01ae1a7e9655232c349c7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6b09069cb5289e28d978a4f3b3483e14e63cebb2
+ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68032899"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73632748"
 ---
-# <a name="spshowpendingchanges-transact-sql"></a>sp_showpendingchanges (Transact-SQL)
+# <a name="sp_showpendingchanges-transact-sql"></a>sp_showpendingchanges (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Возвращает результирующий набор, который показывает изменения, ожидающие репликации. Эта хранимая процедура выполняется на издателе в базе данных публикации и на подписчике в базе данных подписки.  
@@ -43,17 +43,13 @@ sp_showpendingchanges [ [ @destination_server = ] 'destination_server' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ @destination_server **=** ] **"***destination_server***"**  
- Имя сервера, на котором применяются реплицированные изменения. *destination_server* — **sysname**, значение по умолчанию NULL.  
+`[ @destination_server = ] 'destination_server'` — имя сервера, на котором применяются реплицированные изменения. Аргумент *destination_server* имеет тип **sysname**и значение по умолчанию NULL.  
   
- [ @publication **=** ] **"***публикации***"**  
- Имя публикации. *Публикация* — **sysname**, со значением по умолчанию NULL. Когда *публикации* указан, результаты ограничены только указанной публикацией.  
+`[ @publication = ] 'publication'` — имя публикации. Аргумент *publication* имеет тип **sysname**и значение по умолчанию NULL. Если указан параметр *publication* , результаты ограничиваются только указанной публикацией.  
   
- [ @article **=** ] **"***статье***"**  
- Имя статьи. *статья* — **sysname**, со значением по умолчанию NULL. Когда *статье* указан, результаты ограничены только указанной статьи.  
+`[ @article = ] 'article'` — имя статьи. Аргумент *article* имеет тип **sysname**и значение по умолчанию NULL. Если указана *статья* , результаты ограничиваются только указанной статьей.  
   
- [ @show_rows **=** ] *show_rows*  
- Указывает, содержит ли результирующий набор более конкретные сведения об ожидающих изменениях со значением по умолчанию **0**. Если значение **1** задан, результирующий набор содержит столбцы is_delete и rowguid.  
+`[ @show_rows = ] 'show_rows'` указывает, содержит ли результирующий набор более конкретные сведения о ожидающих изменениях, со значением по умолчанию **0**. Если указано значение **1** , то результирующий набор содержит столбцы is_delete и ROWGUID.  
   
 ## <a name="result-set"></a>Результирующий набор  
   
@@ -62,29 +58,29 @@ sp_showpendingchanges [ [ @destination_server = ] 'destination_server' ]
 |destination_server|**sysname**|Имя сервера, на который реплицируются изменения.|  
 |pub_name|**sysname**|Имя публикации.|  
 |destination_db_name|**sysname**|Название базы данных, к которой реплицируются изменения.|  
-|is_dest_subscriber|**bit**|Свидетельствует об изменениях, реплицируемых на подписчика. Значение **1** указывает, что изменения реплицируются на подписчик. **0** означает, что изменения реплицируются на издатель.|  
+|is_dest_subscriber|**bit**|Свидетельствует об изменениях, реплицируемых на подписчика. Значение **1** указывает, что изменения реплицируются на подписчик. значение **0** означает, что изменения реплицируются на издатель.|  
 |article_name|**sysname**|Название статьи для таблицы, где были произведены изменения.|  
 |pending_deletes|**int**|Число удалений, ожидающих репликации.|  
 |pending_ins_and_upd|**int**|Число вставок и обновлений, ожидающих репликации.|  
-|is_delete|**bit**|Указывает, является ли ожидающее изменение удалением. Значение **1** указывает, что изменение является удалением. Должно быть задано значение **1** для @show_rows.|  
-|rowguid|**uniqueidentifier**|Идентификатор GUID, который определяет измененную строку. Должно быть задано значение **1** для @show_rows.|  
+|is_delete|**bit**|Указывает, является ли ожидающее изменение удалением. Значение **1** указывает на то, что изменение является удалением. Для @show_rowsтребуется значение **1** .|  
+|rowguid|**uniqueidentifier**|Идентификатор GUID, который определяет измененную строку. Для @show_rowsтребуется значение **1** .|  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- **0** (успешное завершение) или **1** (неуспешное завершение)  
+ **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  Процедура sp_showpendingchanges используется при репликации слиянием.  
   
  Процедура sp_showpendingchanges используется при диагностике и устранении неполадок в репликации слиянием.  
   
  Результат выполнения процедуры sp_showpendingchanges не включает строки в поколении 0.  
   
- Если статья, указанная для *статье* не принадлежит к публикации, указанной в *публикации* возвращаются счетчик 0 для pending_deletes и pending_ins_and_upd.  
+ Если статья, указанная для *статьи* , не принадлежит публикации, указанной для *публикации,* то для pending_deletes и pending_ins_and_upd возвращается число 0.  
   
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера sysadmin или предопределенной роли базы данных db_owner могут выполнять процедуру sp_showpendingchanges.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
  [Хранимые процедуры репликации (Transact-SQL)](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

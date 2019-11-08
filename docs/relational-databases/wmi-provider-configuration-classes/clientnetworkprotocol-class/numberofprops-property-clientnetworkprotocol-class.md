@@ -1,6 +1,6 @@
 ---
-title: Свойство NumberOfProps (класс ClientNetworkProtocol) | Документация Майкрософт
-ms.custom: ''
+title: Свойство NumberOfProps (класс clientnetworkprotocol)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 9c508bc5-c7a4-4db1-b3bf-c7098c66435a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0fd9af62ed825ff97b9d63965386567db9a34a13
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 056185a68e7657b261ec6d4c5ae659eaa54b22a8
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68079068"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73660823"
 ---
 # <a name="numberofprops-property-clientnetworkprotocol-class"></a>Свойство NumberOfProps (класс ClientNetworkProtocol)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  Получает количество свойств клиента сетевой протокол, заданный по [Setordervalue (класс ClientNetworkProtocol)](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/setordervalue-method-clientnetworkprotocol-class.md).  
+  Возвращает количество свойств сетевого протокола клиента, заданного [методом SetOrderValue (класс класс clientnetworkprotocol)](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/setordervalue-method-clientnetworkprotocol-class.md).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -42,9 +42,9 @@ object.NumberOfProps [= value]
 ## <a name="property-valuereturn-value"></a>Значение свойства/возвращаемое значение  
  Значение uint32, определяющее число свойств сетевого протокола клиента.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
  [Настройка клиентских протоколов](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

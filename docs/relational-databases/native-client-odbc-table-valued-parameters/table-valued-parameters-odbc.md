@@ -1,5 +1,5 @@
 ---
-title: Возвращающие табличные значения параметров (ODBC) | Документация Майкрософт
+title: Возвращающие табличные значения параметры (ODBC) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -14,26 +14,25 @@ ms.assetid: ef06cd13-18e2-4c65-8ede-c3955d820e54
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3af4180f248fe11087b7c60636336652652dc5a6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f53e1780beaea56ba659c11771d469163a964971
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68129012"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73790466"
 ---
 # <a name="table-valued-parameters-odbc"></a>Возвращающие табличное значение параметры (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   Поддержка в ODBC возвращающих табличное значение параметров позволяет клиентским приложениям с большей эффективностью передавать параметризованные данные на сервер за счет передачи нескольких строк в ходе одного вызова.  
   
- Сведения о возвращающих табличные значения параметров на сервере, см. в разделе [параметров, возвращающих &#40;СУБД&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md).  
+ Сведения о возвращающих табличное значение параметрах на сервере см. в разделе [использование &#40;возвращающих&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)табличные значения параметров ядро СУБД.  
   
  В ODBC существует два способа передачи на сервер возвращающих табличное значение параметров.  
   
--   Все данные возвращающего табличное значение параметра может быть в памяти во время вызова SQLExecDirect или SQLExecute. Эти данные хранятся в массивах, если в табличном значении имеется несколько строк.  
+-   Все данные возвращающего табличное значение параметра могут находиться в памяти во время вызова SQLExecDirect или SQLExecute. Эти данные хранятся в массивах, если в табличном значении имеется несколько строк.  
   
--   Приложение может указать данные времени выполнения для возвращающих табличные значения параметра при вызове SQLExecDirect или SQLExecute. В этом случае строки данных для табличного значения могут быть представлены в пакетах или по одному, чтобы снизить требования, предъявляемые к памяти.  
+-   Приложение может указать данные при выполнении для возвращающего табличное значение параметра при вызове SQLExecDirect или SQLExecute. В этом случае строки данных для табличного значения могут быть представлены в пакетах или по одному, чтобы снизить требования, предъявляемые к памяти.  
   
  В первом случае хранимые процедуры могут инкапсулировать дополнительные объемы бизнес-логики. К примеру, если элементы заказа передаются в виде возвращающего табличное значение параметра, одна хранимая процедура может инкапсулировать целую транзакцию по приему заказов. Этот параметр очень эффективен, поскольку предполагает только одно обращение к серверу. Существует и другая возможность: использовать одни процедуры для обработки заголовка заказа, а другие – для элементов заказа, но в этом случае потребуется дополнительный код и более сложный контракт между клиентом и сервером.  
   
@@ -41,7 +40,7 @@ ms.locfileid: "68129012"
   
  При создании этой табличной переменной можно формировать ограничения и первичные ключи. Ограничения дают хорошую гарантию того, что данные таблицы соответствуют определенным требованиям.  
   
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
  [Сценарии использования возвращающих табличное значение параметров ODBC](../../relational-databases/native-client-odbc-table-valued-parameters/uses-of-odbc-table-valued-parameters.md)  
  Описывает основные пользовательские сценарии для возвращающих табличное значение параметров и ODBC.  
   
@@ -67,7 +66,7 @@ ms.locfileid: "68129012"
  Описывает, как приложение может получить метаданные для заготовленного вызова процедуры.  
   
  [Дополнительные метаданные возвращающего табличное значение параметра](../../relational-databases/native-client-odbc-table-valued-parameters/additional-table-valued-parameter-metadata.md)  
- В этой статье описывается использование SQLColumns, SQLProcedureColumns и SQLTables для получения метаданных для возвращающих табличные значения параметра.  
+ Описывает, как использовать SQLProcedureColumns, SQLTables и SQLColumns для получения метаданных для возвращающего табличное значение параметра.  
   
  [Ошибки и предупреждения преобразования данных возвращающих табличное значение параметров и другие](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameter-data-conversion-and-other-errors-and-warnings.md)  
  Описывает, как обрабатывать ошибки в значениях столбцов с возвращающими табличное значение параметрами.  
@@ -81,8 +80,8 @@ ms.locfileid: "68129012"
  [Примеры программирования с использованием возвращающих табличное значение параметров ODBC](https://msdn.microsoft.com/library/3f52b7a7-f2bd-4455-b79e-d015fb397726)  
  Описывает, как следует выполнять типичные задачи.  
   
-## <a name="see-also"></a>См. также  
- [Собственный клиент SQL Server &#40;ODBC&#41;](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
- [Возвращающие табличные значения параметров &#40;собственный клиент SQL Server&#41;](../../relational-databases/native-client/features/table-valued-parameters-sql-server-native-client.md)  
+## <a name="see-also"></a>См. также раздел  
+ [SQL Server Native Client &#40; &#41; ODBC](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)  
+ [Возвращающие табличное значение параметры &#40;SQL Server Native Client&#41;](../../relational-databases/native-client/features/table-valued-parameters-sql-server-native-client.md)  
   
   

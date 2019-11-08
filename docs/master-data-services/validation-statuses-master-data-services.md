@@ -1,5 +1,5 @@
 ---
-title: Состояния проверки (службы Master Data Services) | Документы Майкрософт
+title: Состояния проверки
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: fc829d25-b3e8-4801-8a94-4df19a7a5971
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 27a205b5cf6775ea8d7486cbc6c3776fc5c9e825
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6c434e2cdc64616b5abbdf07ca4df428fce2edca
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68017381"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728856"
 ---
 # <a name="validation-statuses-master-data-services"></a>Состояния проверки (службы Master Data Services)
 
@@ -31,7 +31,7 @@ ms.locfileid: "68017381"
 |Проверка завершена с ошибкой|Элементы, не прошедшие проверку на соответствие бизнес-правилам.|  
 |Ожидание повторной проверки зависимого элемента|Обновленные консолидированные элементы, ожидающие проверки вместе с дочерними элементами.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
  [Подтверждение исправления проблемы, обнаруженной при проверке на соответствие бизнес-правилам (службы Master Data Services)](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)   
  [Версии (службы Master Data Services)](../master-data-services/versions-master-data-services.md)  
   

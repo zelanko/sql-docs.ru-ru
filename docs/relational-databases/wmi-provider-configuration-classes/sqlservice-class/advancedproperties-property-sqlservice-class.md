@@ -1,6 +1,6 @@
 ---
-title: Свойство AdvancedProperties (класс SqlService) | Документация Майкрософт
-ms.custom: ''
+title: Свойство AdvancedProperties (SqlService)
+ms.custom: seo-lt-2019
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: 63bcb7e2-1f78-4961-b4b9-1b635a89079b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 046499b3169ab73db9592952f2a71506960c2cbc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 85a0ce08d388bf79fa26172742bacb7fe05b32f6
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67929736"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73659721"
 ---
 # <a name="advancedproperties-property-sqlservice-class"></a>Свойство AdvancedProperties (класс SqlService)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  Получает массив ссылок на объекты, содержащие дополнительные свойства для **SqlService** объекта.  
+  Возвращает массив ссылок на объекты, которые содержат дополнительные свойства для объекта **SqlService** .  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,11 +39,11 @@ object.AdvancedProperties [= value]
  Объект [класса SqlService](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) , представляющий службу.  
   
 ## <a name="property-valuereturn-value"></a>Значение свойства/возвращаемое значение  
- Массив [класс SqlServiceAdvancedProperty](../../../relational-databases/wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/sqlserviceadvancedproperty-class.md) объекты, содержащие дополнительные свойства для **SqlService** объекта.  
+ Массив объектов [класса класс sqlserviceadvancedproperty](../../../relational-databases/wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/sqlserviceadvancedproperty-class.md) , содержащих дополнительные свойства для объекта **SqlService** .  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
  [Запуск и остановка служб](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

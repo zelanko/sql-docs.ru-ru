@@ -1,6 +1,6 @@
 ---
-title: Метод SetCurrentCertificate (класс ServerSettings) | Документация Майкрософт
-ms.custom: ''
+title: Метод SetCurrentCertificate (класс serversettings)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: f9c6e172-11be-42de-b19b-a5b3436e84da
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 70b0e71ad9bdd0bc4c0abb8c1ee0f57c08f818bb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8c9539157207e458f6a5d7d587709a94dfdc4912
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68052844"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73659101"
 ---
 # <a name="setcurrentcertificate-method-serversettings-class"></a>Метод SetCurrentCertificate (класс ServerSettings)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,14 +43,14 @@ object.SetCurrentCertificate(SHA)
   
 |Параметр|Описание|  
 |---------------|-----------------|  
-|*SHA*|Строковое значение, указывающее текущий сертификат безопасности.|  
+|*ХЭШ*|Строковое значение, указывающее текущий сертификат безопасности.|  
   
 ## <a name="property-valuereturn-value"></a>Значение свойства/возвращаемое значение  
  Значение **uint32** , равное 0, если служба изменена успешно, и 1, если запрос не поддерживается. Любое другое значение указывает на ошибку.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
  [Настройка сетевых протоколов сервера и сетевых библиотек](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

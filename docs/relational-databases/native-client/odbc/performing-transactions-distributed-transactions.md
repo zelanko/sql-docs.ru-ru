@@ -17,12 +17,12 @@ ms.assetid: 2c17fba0-7a3c-453c-91b7-f801e7b39ccb
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 537537ef2f3dd07a27ffcb4d092be2f8719f6ee1
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 0b01e47f81f153b73c8a57d23c9a75fc8b57ef66
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907374"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73761069"
 ---
 # <a name="create-a-distributed-transaction"></a>Создание распределенной транзакции
 
@@ -33,7 +33,6 @@ The following includes .md file is Empty, as of long before 2019/May/13.
 /includes/snac-deprecated.md
 -->
 
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
 Распределенную транзакцию можно создать для различных систем Microsoft SQL разными способами.
 
@@ -76,6 +75,6 @@ MSDTC не поддерживается для базы данных SQL Azure �
 - Связанный сервер с использованием Transact-SQL
 - Драйверы JDBC
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также:
 
 [Выполнение транзакций (ODBC)](performing-transactions-in-odbc.md)

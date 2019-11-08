@@ -1,6 +1,6 @@
 ---
-title: Свойство NumberOfFlags (класс ClientNetworkProtocol) | Документация Майкрософт
-ms.custom: ''
+title: Свойство NumberOfFlags (класс clientnetworkprotocol)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 7a656644-2154-419f-9787-99877f597770
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 38ee03d14250e49da21ae5be8526ae52f96ac380
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 48f81c86a823d75d501187ef953930ec92083d27
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68041188"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73659126"
 ---
 # <a name="numberofflags-property-clientnetworkprotocol-class"></a>Свойство NumberOfFlags (класс ClientNetworkProtocol)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  Получает число параметров флага, необходимых сетевому протоколу клиента, определяемое [Setordervalue (класс ClientNetworkProtocol)](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/setordervalue-method-clientnetworkprotocol-class.md).  
+  Возвращает число параметров флага, необходимых сетевому протоколу клиента, заданному [методом SetOrderValue (класс класс clientnetworkprotocol)](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/setordervalue-method-clientnetworkprotocol-class.md).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,11 +40,11 @@ object.NumberofFlags [= value]
  Объект [класса ClientNetworkProtocol](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/clientnetworkprotocol-class.md) , который представляет сетевой протокол, используемый клиентом [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 ## <a name="property-valuereturn-value"></a>Значение свойства/возвращаемое значение  
- Объект **Uint32** значение, указывающее число параметров флага, необходимых сетевому протоколу клиента ссылается **OrderValue** свойство.  
+ Значение **UInt32** , указывающее количество параметров флага, необходимых сетевому протоколу клиента, на который ссылается свойство **OrderValue** .  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
  [Настройка клиентских протоколов](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

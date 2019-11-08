@@ -1,6 +1,6 @@
 ---
-title: Доступ к поставщику WMI для управления конфигурацией с использованием WQL | Документация Майкрософт
-ms.custom: ''
+title: Использование WQL для доступа к поставщику WMI
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 26499530-d93b-452b-bbe4-217ef1d11e68
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2daaea77ecc69a6c3a011ce0ffdfd862f296b22a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 53ade765b0f6b6710a12da06ae0b7470b55d9400
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68139429"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73658943"
 ---
 # <a name="access-wmi-provider-for-configuration-management-using-wql"></a>производить доступ к поставщику WMI для управления конфигурацией с использованием WQL
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -30,14 +30,14 @@ ms.locfileid: "68139429"
   
 ### <a name="querying-services-using-wbemtest"></a>Запрос служб с помощью WBEMtest  
   
-1.  Из **запустить** меню, щелкните **запуска**, а затем введите **WBEMtest**.  
+1.  В меню **Пуск** выберите пункт **выполнить**и введите **WBEMTest**.  
   
 2.  Откроется диалоговое окно приложения WBEMtest.exe. Нажмите кнопку **Соединить**.  
   
 3.  В первом текстовом поле введите пространство имен поставщика WMI для управления компьютером: root\Microsoft\SqlServer\ComputerManagement11. Нажмите кнопку **Соединить**.  
   
-4.  Нажмите кнопку **запроса**. Введите запрос, возвращающий текущей службы, запущенные на локальном компьютере: **ВЫБЕРИТЕ \* из SqlService.** Нажмите кнопку **Применить**.  
+4.  Нажмите кнопку **запрос**. Введите запрос, который возвращает текущие службы, выполняющиеся на локальном компьютере: **выберите \* из SqlService.** Нажмите кнопку **Применить**.  
   
-5.  Уточните запрос, добавив **ГДЕ ServiceName = «MSSQLSERVER»** .  
+5.  Уточните запрос, добавив **WHERE ServiceName = "MSSQLSERVER"** .  
   
   

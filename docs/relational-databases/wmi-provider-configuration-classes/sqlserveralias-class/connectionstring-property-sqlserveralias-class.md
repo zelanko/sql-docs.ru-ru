@@ -1,6 +1,6 @@
 ---
-title: Свойство ConnectionString (класс SqlServerAlias) | Документация Майкрософт
-ms.custom: ''
+title: Свойство ConnectionString (SqlServerAlias)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8a3692b9-3a34-42e2-b0b9-28e6bd3a7aba
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7013087215aaca0721fc0fefd3f66f15c20035ba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 435bb6ab0585b7f453fe035fa99be913dffbf769
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68052446"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73659002"
 ---
 # <a name="connectionstring-property-sqlserveralias-class"></a>Свойство ConnectionString (класс SqlServerAlias)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,5 +41,5 @@ object.ConnectionString [= value]
 ## <a name="property-valuereturn-value"></a>Значение свойства/возвращаемое значение  
  Строка, определяющая строку соединения, которая используется при установке соединения для псевдонима соединения сервера.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
   

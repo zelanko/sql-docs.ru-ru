@@ -17,32 +17,31 @@ ms.assetid: 4a58b05c-8848-44bb-8704-f9f409efa5af
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 68458e8d24bd56c3293d0bf2547180394db8ee61
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: aeb23c612e658c71beba72bc380e656869ba6827
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68120454"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73761288"
 ---
 # <a name="using-large-value-types"></a>Использование типов больших значений
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  До выхода [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] работа с типами данных больших значений требовала особой обработки. Типы данных больших значений — это типы, размер которых превышает максимальный размер строки в 8 КБ. [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] представленные **max** описатель для **varchar**, **nvarchar** и **varbinary** типы данных, чтобы разрешить хранение значений размером до 2 ^ 31 -1 байты. Столбцы таблицы и [!INCLUDE[tsql](../../../includes/tsql-md.md)] указать переменные **varchar(max)** , **nvarchar(max)** или **varbinary(max)** типов данных.  
+  До выхода [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] работа с типами данных больших значений требовала особой обработки. Типы данных больших значений — это типы, размер которых превышает максимальный размер строки в 8 КБ. [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] предоставили описатель **Max** для типов данных **varchar**, **nvarchar** и **varbinary** , чтобы обеспечить хранение значений размером 2 ^ 31-1 байт. Столбцы таблицы и переменные [!INCLUDE[tsql](../../../includes/tsql-md.md)] могут указывать типы данных **varchar (max)** , **nvarchar (max)** или **varbinary (max)** .  
   
 > [!NOTE]  
 >  Типы больших значений могут иметь максимальный размер от 1 до 8 КБ или они могут быть указаны как неограниченные.  
   
- Ранее только типы данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **text**, **ntext** и **image** могли достигать такой длины. **Max** описатель для **varchar**, **nvarchar** и **varbinary** сделали эти типы данных избыточным. Однако поскольку типы данных большой длины до сих пор доступны, большинство интерфейсов к компонентам доступа к данным OLE DB и ODBC остаются теми же. Для обратной совместимости с более ранними версиями флаг DBCOLUMNFLAGS_ISLONG в поставщике OLE DB для собственного клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и флаг SQL_LONGVARCHAR в драйвере ODBC для собственного клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] до сих пор используются. Поставщики и драйверы, предназначенные для [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] и более поздних версий, продолжают использовать эти термины для новых типов при задании неограниченной максимальной длины.  
+ Ранее только типы данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **text**, **ntext** и **image** могли достигать такой длины. Спецификатор **Max** для **varchar**, **nvarchar** и **varbinary** сделал эти типы данных избыточными. Однако поскольку типы данных большой длины до сих пор доступны, большинство интерфейсов к компонентам доступа к данным OLE DB и ODBC остаются теми же. Для обратной совместимости с более ранними версиями флаг DBCOLUMNFLAGS_ISLONG в поставщике OLE DB для собственного клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и флаг SQL_LONGVARCHAR в драйвере ODBC для собственного клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] до сих пор используются. Поставщики и драйверы, предназначенные для [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] и более поздних версий, продолжают использовать эти термины для новых типов при задании неограниченной максимальной длины.  
   
 > [!NOTE]  
 >  Типы данных **varchar(max)** , **nvarchar(max)** и **varbinary(max)** можно также указывать в качестве типов входных и выходных параметров хранимых процедур, типов возвращаемых значений функций или в функциях [CAST и CONVERT](../../../t-sql/functions/cast-and-convert-transact-sql.md).  
   
 > [!NOTE]  
->  При репликации данных может потребоваться настроить [max параметра text repl size server configuration](../../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md) значение -1.  
+>  При репликации данных может потребоваться настроить [параметр конфигурации сервера max text repl size](../../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md) равным-1.  
   
 ## <a name="sql-server-native-client-ole-db-provider"></a>Поставщик OLE DB для собственного клиента SQL Server  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Поставщик OLE DB для собственного клиента предоставляет **varchar(max)** , **varbinary(max)** , и **nvarchar(max)** типы как DBTYPE_STR, DBTYPE_BYTES и DBTYPE_WSTR соответственно.  
+ Поставщик [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB предоставляет типы **varchar (max)** , **varbinary (max)** и **nvarchar (max)** как DBTYPE_STR, DBTYPE_BYTES и DBTYPE_WSTR соответственно.  
   
  Типы данных **varchar(max)** , **varbinary(max)** и **nvarchar(max)** в столбцах с размером **max**, установленным в неограниченное значение, представляются как ISLONG через основные наборы строк схемы OLE DB и интерфейсы, возвращающие типы столбцов.  
   
@@ -50,9 +49,9 @@ ms.locfileid: "68120454"
   
  Поток значений выходных параметров возвращается после любых результирующих строк. Если приложение пытается перейти к следующему результирующему набору, вызывая метод **IMultipleResults::GetResult** и не используя все возвращаемые значения выходных параметров, то возвращается DB_E_OBJECTOPEN.  
   
- Чтобы поддерживать потоковую передачу, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поставщик OLE DB для собственного клиента требует параметров переменной длины в последовательном порядке. Это означает, что для свойства DBPROP_ACCESSORDER необходимо задавать либо значение DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS, либо значение DBPROPVAL_AO_SEQUENTIAL каждый раз, когда столбцы **varchar(max)** , **nvarchchar(max)** или **varbinary(max)** либо выходные параметры привязываются к типу DBTYPE_IUNKNOWN. Если не следовать этому ограничению на порядок доступа, то вызов метода **IRowset::GetData** завершится с ошибкой DBSTATUS_E_UNAVAILABLE. Это ограничение не применяется, если нет выходных привязок с использованием типа DBTYPE_IUNKNOWN.  
+ Чтобы обеспечить поддержку потоковой передачи, поставщику [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB требуется доступ к параметрам переменной длины в последовательном порядке. Это означает, что для свойства DBPROP_ACCESSORDER необходимо задавать либо значение DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS, либо значение DBPROPVAL_AO_SEQUENTIAL каждый раз, когда столбцы **varchar(max)** , **nvarchchar(max)** или **varbinary(max)** либо выходные параметры привязываются к типу DBTYPE_IUNKNOWN. Если не следовать этому ограничению на порядок доступа, то вызов метода **IRowset::GetData** завершится с ошибкой DBSTATUS_E_UNAVAILABLE. Это ограничение не применяется, если нет выходных привязок с использованием типа DBTYPE_IUNKNOWN.  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Поставщик OLE DB для собственного клиента также поддерживает привязку выходных параметров как DBTYPE_IUNKNOWN для типов данных больших значений облегчить ситуацию, где хранимая процедура возвращает типы больших значений в качестве возвращаемых значений, которые отображаются как DBTYPE_IUNKNOWN клиенту.  
+ Поставщик [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB также поддерживает привязку выходных параметров как DBTYPE_IUNKNOWN для типов данных больших значений, чтобы упростить сценарии, в которых хранимая процедура возвращает типы больших значений в качестве возвращаемых значений, которые предоставляются как DBTYPE_IUNKNOWN компьютера.  
   
  Работать с этими типами приложение может следующими способами.  
   
@@ -62,9 +61,9 @@ ms.locfileid: "68120454"
   
 -   Выполните привязку, указав тип DBTYPE_IUNKNOWN, и используйте потоковую передачу.  
   
- Сообщая максимальный размер столбца, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] сообщит поставщика OLE DB для собственного клиента:  
+ При создании отчета о максимальном размере столбца поставщик [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] собственного клиента OLE DB выдаст следующее сообщение:  
   
--   Заданный максимальный размер, например, который является 2000 для **varchar (** 2000 **)** столбца, или  
+-   Определенный максимальный размер, например, 2000 для столбца **varchar (** 2000 **)** или  
   
 -   значение "unlimited", если столбец **varchar(max)** равен ~0. Это значение устанавливается для свойства метаданных DBCOLUMN_COLUMNSIZE.  
   
@@ -690,18 +689,18 @@ _ExitProcessResultSet:
 }  
 ```  
   
- Дополнительные сведения о том, как [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поставщик OLE DB для собственного клиента предоставляет типы данных больших значений, см. в разделе [большие двоичные объекты и объекты OLE](../../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md).  
+ Дополнительные сведения о том, как поставщик OLE DB собственного клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] предоставляет типы данных больших значений, см. в разделе [большие двоичные объекты и OLE](../../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md).  
   
 ## <a name="sql-server-native-client-odbc-driver"></a>Драйвер ODBC для собственного клиента SQL Server  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Драйвер ODBC собственного клиента предоставляет **varchar(max)** , **varbinary(max)** и **nvarchar(max)** типы как SQL_VARCHAR, SQL_VARBINARY и SQL_ WVARCHAR в функциях ODBC API, которые принимают или возвращают типы данных ODBC SQL.  
+ Драйвер ODBC для собственного клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] предоставляет типы **varchar (max)** , **varbinary (max)** и **nvarchar (max)** как SQL_VARCHAR, SQL_VARBINARY и SQL_WVARCHAR в функциях API ODBC, которые принимают или возвращают типы данных ODBC SQL.  
   
  Сообщая максимальный размер столбца, драйвер сообщает:  
   
--   Заданный максимальный размер, например, который является 2000 для **varchar(2000)** столбца, или  
+-   Определенный максимальный размер, например, 2000 для столбца **varchar (2000)** или  
   
--   Значение «unlimited» которой в случае использования **varchar(max)** столбца равно 0.  
+-   Значение "unlimited", которое в случае со столбцом **varchar (max)** равно 0.  
   
- Стандартные правила преобразования применяются к **varchar(max)** столбца, это означает, что любое преобразование, которое является допустимым для **varchar (** 2000 **)** столбец будет также применяться для **varchar(max)** столбца. То же относится к столбцам **nvarchar(max)** и **varbinary(max)** .  
+ Стандартные правила преобразования применяются к столбцу типа **varchar (max)** , что означает, что любое преобразование, допустимое для столбца **varchar (** 2000 **)** , также будет допустимым для столбца **varchar (max)** . То же относится к столбцам **nvarchar(max)** и **varbinary(max)** .  
   
  Ниже приведен список функций ODBC API, которые были улучшены для работы с типами больших значений:  
   
@@ -721,7 +720,7 @@ _ExitProcessResultSet:
   
 -   [SQLGetTypeInfo](../../../relational-databases/native-client-odbc-api/sqlgettypeinfo.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
  [Компоненты SQL Server Native Client](../../../relational-databases/native-client/features/sql-server-native-client-features.md)  
   
   

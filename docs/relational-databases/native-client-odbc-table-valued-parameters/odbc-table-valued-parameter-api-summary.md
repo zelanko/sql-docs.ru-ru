@@ -1,5 +1,5 @@
 ---
-title: Сводка по API ODBC возвращающих табличные значения параметров | Документация Майкрософт
+title: Сводка API возвращающего табличное значение параметра ODBC | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -14,16 +14,15 @@ ms.assetid: b035fb9d-b5c1-4ce3-beac-f2f8ff736c7c
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ea20dbe9d4c2f08fa0bfd2b25cde351bb0f92f94
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e29f25b0e830efd784a4448531d0036dc2b91623
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68129178"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73790874"
 ---
 # <a name="odbc-table-valued-parameter-api-summary"></a>Сводка по API-интерфейсам возвращающих табличное значение параметров ODBC
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   В этом разделе перечислены функции ODBC, которые были улучшены для поддержки возвращающих табличное значение параметров.  
   
@@ -63,7 +62,7 @@ ms.locfileid: "68129178"
   
 -   [SQLTables](../../relational-databases/native-client-odbc-api/sqltables.md)  
   
-## <a name="see-also"></a>См. также  
- [Возвращающие табличные значения параметров &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
+## <a name="see-also"></a>См. также раздел  
+ [Возвращающие табличные значения параметры &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
   
   

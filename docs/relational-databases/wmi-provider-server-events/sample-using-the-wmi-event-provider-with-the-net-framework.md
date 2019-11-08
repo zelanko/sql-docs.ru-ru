@@ -1,6 +1,6 @@
 ---
-title: Образец. Использование поставщика событий WMI с платформой .NET Framework | Документация Майкрософт
-ms.custom: ''
+title: Пример. Использование поставщика событий WMI в .NET
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: 3d7aa7e9-0bb3-4a5b-9a3c-047f3240a6f8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 727cacbbe0c69b25af7df15660b7adb64268c861
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8c942954d43c40dd4461237f2692afaa65ea87c4
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68139231"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73660591"
 ---
-# <a name="sample-using-the-wmi-event-provider-with-the-net-framework"></a>Образец. Использование поставщика событий WMI с платформой .NET Framework
+# <a name="sample-using-the-wmi-event-provider-with-the-net-framework"></a>Пример. Использование поставщика событий WMI с платформой .NET Framework
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   В следующем образце создается приложение на языке C#, которое использует поставщика событий WMI, чтобы возвратить данные событий для всех событий языка описания данных DDL, которые происходят на установочном экземпляре по умолчанию [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -76,7 +76,7 @@ class SQLWEPExample
 }  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
  [Основные понятия о поставщике WMI для событий сервера](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Класс SqlServiceAdvancedProperty | Документация Майкрософт
+title: Класс SqlServiceAdvancedProperty
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -17,22 +17,22 @@ helpviewer_keywords:
 ms.assetid: a5d06bde-6058-464c-a4aa-444d83f2331f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a3287220cb14702d118a1e010923898190d4f424
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 58fb650f9750e81b5e86b86cb5f630a843173930
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68105065"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73658992"
 ---
 # <a name="sqlserviceadvancedproperty-class"></a>Класс SqlServiceAdvancedProperty
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  [Класс SqlServiceAdvancedProperty](../../../relational-databases/wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/sqlserviceadvancedproperty-class.md) представляет дополнительное свойство службы, на который ссылается [класс SqlService](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) объекта.  
+  [Класс класс sqlserviceadvancedproperty](../../../relational-databases/wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/sqlserviceadvancedproperty-class.md) представляет дополнительное свойство службы, на которое ссылается объект [класса SqlService](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) .  
   
- [Свойство AdvancedProperties (класс SqlService)](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/advancedproperties-property-sqlservice-class.md) ссылается на массив [класс SqlServiceAdvancedProperty](../../../relational-databases/wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/sqlserviceadvancedproperty-class.md) объектов.  
+ [Свойство AdvancedProperties (класс SqlService)](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/advancedproperties-property-sqlservice-class.md) ссылается на массив объектов [класса класс sqlserviceadvancedproperty](../../../relational-databases/wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/sqlserviceadvancedproperty-class.md) .  
   
- [Запуск и остановка служб](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx) класс представляет свойства, уникальные для службы. Эти свойства не входят в список свойств, связанных с [класс SqlService](https://technet.microsoft.com/library/ms186497.aspx) класса. [Класс SqlServiceAdvancedProperty](https://technet.microsoft.com/library/ms182447.aspx) класс позволяет представлять строковые, числовые или логические свойства. Этот класс можно использовать для просмотра уникальных свойств заданной службы.  
+ [Начальный и остановленный класс служб](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx) представляет свойства, которые являются уникальными для службы. Эти свойства отсутствуют в списке свойств, связанных с классом [класса SqlService](https://technet.microsoft.com/library/ms186497.aspx) . Класс [класса класс sqlserviceadvancedproperty](https://technet.microsoft.com/library/ms182447.aspx) позволяет представление строковых, числовых или логических свойств. Этот класс можно использовать для просмотра уникальных свойств заданной службы.  
   
-## <a name="see-also"></a>См. также  
- [Начальный, приостановка и остановка служб](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
+## <a name="see-also"></a>См. также раздел  
+ [Запуск, остановка и приостановка служб](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

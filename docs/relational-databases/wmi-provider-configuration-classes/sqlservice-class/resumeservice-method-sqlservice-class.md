@@ -1,6 +1,6 @@
 ---
-title: Метод ResumeService (класс SqlService) | Документация Майкрософт
-ms.custom: ''
+title: Метод ResumeService (SqlService)
+ms.custom: seo-lt-2019
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0b0a5f08-b95e-4626-bf81-309da7a0aacd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d483cdd91ca349010c6b59b9003155d4166fb63b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 40c0822bc8b881153909f77ec50b0c9de9883dec
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68119990"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73660936"
 ---
 # <a name="resumeservice-method-sqlservice-class"></a>Метод ResumeService (класс SqlService)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,11 +40,11 @@ object.ResumeService()
  Объект [класса SqlService](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) , представляющий службу.  
   
 ## <a name="property-valuereturn-value"></a>Значение свойства/возвращаемое значение  
- Значение uint32, равное 0, если **ResumeService** запрос был принят, 1, если запрос не поддерживается и любому другому числу для указания ошибки.  
+ Значение UInt32, равное 0, если запрос **ResumeService** был принят, 1, если запрос не поддерживается, и любое другое число для указания ошибки.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
  [Запуск и остановка служб](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

@@ -1,6 +1,6 @@
 ---
-title: Свойство StartMode (класс SqlService) | Документация Майкрософт
-ms.custom: ''
+title: Свойство StartMode (SqlService)
+ms.custom: seo-lt-2019
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: c0c2c7f8-d4ae-44f2-ad8e-aecfcb7c2878
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e1e8102591eef3976d893ddf0c218b71aa763914
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 31d2a413aa606bc6b7065126668fdeabdfacd7b1
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006854"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73660871"
 ---
 # <a name="startmode-property-sqlservice-class"></a>Свойство StartMode (класс SqlService)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,20 +48,20 @@ object.StartMode [= value]
  Значение = 0. Служба запускается загрузчиком операционной системы. Этот параметр допустим только для служб драйверов.  
   
  Система  
- Значение = 1. Служба запущена **IoInitSystem** метод. Этот параметр допустим только для служб драйверов.  
+ Значение = 1. Служба, запущенная методом **иоинитсистем** . Этот параметр допустим только для служб драйверов.  
   
  Автоматически  
  Значение = 2. Служба запускается автоматически диспетчером управления службами во время запуска системы.  
   
  Вручную  
- Значение = 3. Служба запускается диспетчером компьютера, когда процесс вызывает **StartService** метод.  
+ Значение = 3. Служба, запускаемая диспетчером компьютера, когда процесс вызывает метод **StartService** .  
   
  Выключено  
  Значение = 4. Служба не может быть запущена.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
  [Запуск и остановка служб](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 14e53b3820e784916484cbe6a15ba82cd2ed5c8e
-ms.sourcegitcommit: 01c8df19cdf0670c02c645ac7d8cc9720c5db084
+ms.openlocfilehash: 84b498cbaf7a2f3d1118894157c17b8270259afa
+ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "70001376"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73632867"
 ---
 # <a name="perform-a-sql-server-integration-service-migration-assessment-with-data-migration-assistant"></a>Выполнение оценки миграции службы интеграции SQL Server с Помощник по миграции данных
 
@@ -37,18 +37,22 @@ ms.locfileid: "70001376"
 
     ![создать оценку](media/dma-assess-ssis/dma-assess-ssis-create.png)
 
-## <a name="add-sources-to-assess"></a>Добавление источников для оценки
+## <a name="connect-to-a-server"></a>Подключение к серверу
 
 1. Используйте параметр по умолчанию и нажмите кнопку **Далее** , чтобы **выбрать источники**.
-
 1. Введите имя экземпляра SQL Server, выберите тип проверки подлинности и задайте правильные свойства соединения.
-1. Введите путь к папке, содержащей пакеты служб SSIS
-1. Введите пароль шифрования пакета, если это применимо, а затем **подключитесь**.
-1. Выберите файловую систему для оценки и нажмите кнопку **Добавить**.
-  ![Добавить источник](media/dma-assess-ssis/dma-assess-ssis-addsource.png)
+1. Используемых Введите путь к папке, содержащей пакеты служб SSIS.
+1. Используемых Введите пароль шифрования пакета, если это применимо.
+1. Щелкните **Подключиться** к ИСХОДНОМу экземпляру SQL Server.
+  ![добавить исходный](media/dma-assess-ssis/dma-assess-ssis-addsource.png)
+
+## <a name="add-sources-to-assess"></a>Добавление источников для оценки
+
+1. Выберите типы хранилища пакетов служб SSIS для оценки, а затем нажмите кнопку **Добавить**.
+![добавить исходный](media/dma-assess-ssis/dma-assess-ssis-addsource-type.png)
 1. Выберите **Добавить источники** , чтобы открыть всплывающее меню подключения, если требуется оценка нескольких папок.
 1. Щелкните **начать оценку**.
-  ![Начать оценку](media/dma-assess-ssis/dma-assess-ssis-assess.png)
+  ![начать оценку](media/dma-assess-ssis/dma-assess-ssis-assess.png)
 
 ## <a name="view-results"></a>Просмотр результатов
 
@@ -58,5 +62,6 @@ ms.locfileid: "70001376"
 
 ## <a name="next-steps"></a>Следующие шаги
 
-- [Миграция пакетов SQL Server Integration Services в управляемый экземпляр базы данных SQL Azure](https://docs.microsoft.com/en-us/azure/dms/how-to-migrate-ssis-packages-managed-instance)
-- [Повторное развертывание пакетов SQL Server Integration Services в базе данных SQL Azure](https://docs.microsoft.com/en-us/azure/dms/how-to-migrate-ssis-packages)
+- [Общие сведения о переносе локальных рабочих нагрузок служб SSIS в службы SSIS в ADF](https://docs.microsoft.com/azure/data-factory/scenario-ssis-migration-overview)
+- [Миграция пакетов SQL Server Integration Services в управляемый экземпляр базы данных SQL Azure](https://docs.microsoft.com/azure/dms/how-to-migrate-ssis-packages-managed-instance)
+- [Повторное развертывание пакетов SQL Server Integration Services в базе данных SQL Azure](https://docs.microsoft.com/azure/dms/how-to-migrate-ssis-packages)

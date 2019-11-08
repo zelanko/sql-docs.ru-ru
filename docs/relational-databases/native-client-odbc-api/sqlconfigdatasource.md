@@ -14,23 +14,22 @@ ms.assetid: 003e75b1-54e5-4b36-a6f7-11e1f14cf98f
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 84b25a23755d0d12dcd26da8be8e64e7270fa5cf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1ef8d24c1caba7e2dfa96ce33a828ca98bb6e898
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68113541"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73787487"
 ---
 # <a name="sqlconfigdatasource"></a>SQLConfigDataSource
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Драйвер ODBC собственного клиента поддерживает различные [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-строках атрибутов конфигурации источника пар конкретных ключевое слово/значение для данных.  
+  Драйвер ODBC для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает различные пары "ключевое слово-значение" [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]для строк атрибутов конфигурации источника данных.  
   
- Список слов, доступных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] драйвер ODBC собственного клиента, см. в разделе [Using Connection String Keywords with SQL Server Native Client](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
+ Список ключевых слов, доступных в драйвере ODBC для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в разделе [Использование ключевых слов строки подключения с SQL Server Native Client](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
-## <a name="see-also"></a>См. также  
- [Функция SQLConfigDataSource](https://go.microsoft.com/fwlink/?LinkId=59337)   
+## <a name="see-also"></a>См. также раздел  
+   [функции SQLConfigDataSource](https://go.microsoft.com/fwlink/?LinkId=59337)  
  [Подробные сведения о реализации API-интерфейсов ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

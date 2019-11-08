@@ -1,6 +1,6 @@
 ---
-title: Свойство ErrorControl (класс SqlService) | Документация Майкрософт
-ms.custom: ''
+title: Свойство ErrorControl (SqlService)
+ms.custom: seo-lt-2019
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: cbb1e0fa-5bfc-4b1b-a6ed-f7d5cfad4d73
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: bad022b2c0a4b2dda7a5de2265c67dd3608b5389
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f520ddd8443699ef4d1fe388f165648b0ff188c1
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67929683"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73659664"
 ---
 # <a name="errorcontrol-property-sqlservice-class"></a>Свойство ErrorControl (класс SqlService)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,16 +51,16 @@ object.ErrorControl [= value]
  Severe  
  Система перезапускается в последней известной рабочей конфигурации.  
   
- Critical  
+ Критическая  
  Попытка перезапустить систему в рабочей конфигурации.  
   
  Неизвестно  
  Серьезность ошибки неизвестна.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  Значение задает действие, предпринимаемое программой запуска при возникновении ошибки. Все ошибки записываются в журнал системой компьютера.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
  [Запуск и остановка служб](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

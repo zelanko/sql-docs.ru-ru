@@ -10,12 +10,12 @@ ms.assetid: 25ffaea6-0eee-4169-8dd0-1da417c28fc6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 94466dc6c069ced5b2743cbd8a14d98271303477
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bd7fed6fff4ddd55ef56e4c5b342c56b6c2f462f
+ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63188835"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73632795"
 ---
 # <a name="start-sql-server-management-studio"></a>Запуск среды SQL Server Management Studio
   В начале этого учебника кратко рассмотрим среду [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -27,9 +27,9 @@ ms.locfileid: "63188835"
 1.  В меню **Пуск** укажите пункт **Все программы**, укажите пункт [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]и выберите команду **Среда SQL Server Management Studio**.  
   
     > [!NOTE]  
-    >  Среда [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] не устанавливается по умолчанию. Если среда [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] недоступна, установите ее с помощью программы установки. Среда [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] не входит в состав [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] Express доступна для бесплатной загрузки с [центра загрузки Майкрософт](https://go.microsoft.com/fwlink/?LinkID=37075&clcid=0x409), но имеет другой пользовательский интерфейс, отличный от описываемого в этом руководстве.  
+    >  Среда [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] не устанавливается по умолчанию. Если среда [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] недоступна, установите ее с помощью программы установки. Среда [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] не входит в состав [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] Express можно скачать бесплатно из [центра загрузки Майкрософт](https://www.microsoft.com/download/details.aspx?id=7593), но имеет другой пользовательский интерфейс, чем описано в этом руководстве.  
   
-2.  В диалоговом окне **Соединение с сервером** подтвердите заданные по умолчанию параметры, а затем нажмите кнопку **Подключиться**. Чтобы подключиться, **имя_сервера** поле должно содержать имя компьютера, где [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] установлен. Если [!INCLUDE[ssDE](../../includes/ssde-md.md)] является именованным экземпляром, **имя_сервера** поле должно также содержать имя экземпляра в формате \< *имя_компьютера* > \\ < *имя_экземпляра*>.  
+2.  В диалоговом окне **Соединение с сервером** подтвердите заданные по умолчанию параметры, а затем нажмите кнопку **Подключиться**. Для подключения поле **имя сервера** должно содержать имя компьютера, на котором установлен [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Если [!INCLUDE[ssDE](../../includes/ssde-md.md)] является именованным экземпляром, в поле **имя сервера** также должно содержаться имя экземпляра в формате \<*computer_name*> *\\<,* instance_name >.  
   
 ## <a name="management-studio-components"></a>Компоненты среды Management Studio  
  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] представляет данные в виде окон, выделенных для отдельных типов данных. Сведения о базе данных отображаются в обозревателе объектов и окнах документов.  
@@ -46,7 +46,7 @@ ms.locfileid: "63188835"
   
      Сверху от обозревателя объектов появится окно «Зарегистрированные серверы». В списке зарегистрированных серверов указаны серверы, работу которых приходится часто регулировать. В этом списке можно добавлять и удалять серверы. В этом списке указываются только экземпляры [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на компьютере, где запущена среда [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
-2.  Если сервер не отображается, в «зарегистрированные серверы» щелкните правой кнопкой мыши **СУБД**, а затем нажмите кнопку **обновить регистрацию локального сервера**.  
+2.  Если сервер не отображается, в окне "зарегистрированные серверы" щелкните правой кнопкой мыши **ядро СУБД**, а затем выберите **Обновить регистрацию локального сервера**.  
   
 ## <a name="next-task-in-lesson"></a>Следующая задача занятия  
  [Подключение к зарегистрированным серверам и к обозревателю объектов](../object/object-explorer.md)  

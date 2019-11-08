@@ -1,5 +1,5 @@
 ---
-title: Поддержка API ODBC для улучшенных функций времени даты и | Документация Майкрософт
+title: Поддержка API ODBC для расширенных функций даты и времени | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -13,16 +13,15 @@ ms.assetid: 430c029d-f8c1-4de7-a9dd-330e9b6bfc20
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 400c7023708b77579f6959f4eb6f21768a772eb3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 105c9463993c33cd63c419818e42bace0959ff18
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68062422"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73783767"
 ---
 # <a name="odbc-api-support-for-enhanced-date-and-time-features"></a>Поддержка API-интерфейса ODBC для улучшенных функций даты и времени
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   Следующие API-интерфейсы ODBC поддерживают улучшенную функциональность даты и времени:  
   
@@ -72,7 +71,7 @@ ms.locfileid: "68062422"
   
 -   [bcp_setcolfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-setcolfmt.md)  
   
-## <a name="see-also"></a>См. также  
- [Дата и время улучшения &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
+## <a name="see-also"></a>См. также раздел  
+ [Улучшения &#40;даты и времени ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
   
   

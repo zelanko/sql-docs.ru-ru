@@ -15,18 +15,17 @@ ms.assetid: 68228ece-cbf1-4f19-bfdc-053884c1af48
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c9b310d062ec9c9acdbfce328abc5533bfb69178
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d3ea2db629f1a1621e23257a35be52a2f58a6ea2
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68059546"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73784220"
 ---
 # <a name="cursor-concurrency-odbc"></a>Параллелизм курсоров (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  Операции курсора, как и типы курсора, зависят от параметров параллелизма, устанавливаемых приложением. Параметры параллелизма устанавливаются с помощью параметра SQL_ATTR_CONCURRENCY [SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md). Существуют следующие типы параллелизма.  
+  Операции курсора, как и типы курсора, зависят от параметров параллелизма, устанавливаемых приложением. Параметры параллелизма задаются с помощью параметра SQL_ATTR_CONCURRENCY [SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md). Существуют следующие типы параллелизма.  
   
 -   Только для чтения (SQL_CONCUR_READONLY).  
   
@@ -36,7 +35,7 @@ ms.locfileid: "68059546"
   
 -   Блокировка (SQL_CONCUR_LOCK).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
  [Свойства курсора](../../../relational-databases/native-client-odbc-cursors/properties/cursor-properties.md)  
   
   

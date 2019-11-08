@@ -10,12 +10,12 @@ ms.assetid: 0678bfbc-5d3f-44f4-89c0-13e8e52404da
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9aadb14004ff3e73c4678f08b8aafa3cdab53b28
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b8f7ab6cdbc1b6e0e3dc7d26fb579943a0c8fa95
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66088641"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73637774"
 ---
 # <a name="discontinued-sql-server-features-in-sql-server-2014"></a>Функции SQL Server, больше не поддерживаемые в SQL Server 2014
   В этом разделе описаны функции, которые становятся недоступными после обновления до [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
@@ -28,7 +28,7 @@ ms.locfileid: "66088641"
 ### <a name="discontinued-active-directory-helper-service"></a>Неподдерживаемая служба поддержки Active Directory  
  Служба поддержки Active Directory больше не поддерживается, а связанные с ней компоненты удалены. В следующей таблице перечислены связанные компоненты, которые были удалены.  
   
-|Category|Неподдерживаемая функция|Замена|  
+|Категория|Неподдерживаемая функция|Замена|  
 |--------------|--------------------------|-----------------|  
 |Системные хранимые процедуры|sp_ActiveDirectory_Obj<br /><br /> sp_ActiveDirectory_SCP<br /><br /> sp_ActiveDirectory_Start|Замена отсутствует|  
   
@@ -40,23 +40,23 @@ ms.locfileid: "66088641"
 ## <a name="discontinued-features-in-sql-server-2008"></a>Функции, неподдерживаемые в SQL Server 2008  
   
 ### <a name="discontinued-sql-dmo-from-sql-server-express-installation"></a>Неподдерживаемые функции SQL-DMO при установке SQL Server Express  
- Распределенные управляющие объекты SQL (SQL-DMO) для [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] были удалены из [!INCLUDE[ssExpressEd10](../includes/ssexpressed10-md.md)]. Рекомендуется как можно скорее внести изменения в приложения, которые пользуют эти компоненты. Если требуется поддержка объектов SQL-DMO для [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] необходима, установите компоненты обратной совместимости из [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] пакета возможностей [центра загрузки Майкрософт](https://go.microsoft.com/fwlink/?LinkID=51230). В дальнейшем для разработки пользуйтесь объектами SMO ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Objects).  
+ Распределенные управляющие объекты SQL (SQL-DMO) для [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] были удалены из [!INCLUDE[ssExpressEd10](../includes/ssexpressed10-md.md)]. Рекомендуется как можно скорее внести изменения в приложения, которые пользуют эти компоненты. Если требуется поддержка SQL-DMO для [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express, установите компоненты обратной совместимости из пакета дополнительных компонентов [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] из [центра загрузки Майкрософт](https://www.microsoft.com/download/details.aspx?id=24793). В дальнейшем для разработки пользуйтесь объектами SMO ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Objects).  
   
 ### <a name="discontinued-option-for-web-assistant"></a>Неподдерживаемый параметр для помощника Web Assistant  
- Параметр `sp_configure` для включения помощника Web Assistant удален из [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]. Вместо этого рекомендуется использовать [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  
+ Параметр `sp_configure` для включения помощника Web Assistant удален из [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]. Вместо нее рекомендуется пользоваться представлением [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  
   
 ### <a name="surface-area-configuration-tool"></a>Средство настройки контактной зоны  
  Поддержка средства настройки контактной зоны в [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] прекращена. В следующей таблице показаны средства, с помощью которых можно настраивать параметры и функции компонентов в этой версии.  
   
-|Параметры замены и функции компонентов|Порядок настройки|  
+|Параметры замены и компоненты|Порядок настройки|  
 |-------------------------------------------------|----------------------|  
 |Протоколы, соединение и параметры запуска|Используйте диспетчер конфигурации [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|  
 |Функции служб [!INCLUDE[ssDE](../includes/ssde-md.md)]|Используйте управление на уровне политик, значения свойств в среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] или хранимую процедуру sp_Configure.|  
 |Функции служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]|Используйте значения свойств в среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].|  
-|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Свойство включить встроенную безопасность|Используйте значения свойств в среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].|  
-|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -«Планирование событий и доставка отчетов» и «Веб-службы и доступ по HTTP»|Измените файл конфигурации RSReportServer.config.|  
+|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] — свойство безопасности включить встроенную|Используйте значения свойств в среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].|  
+|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]-"Планирование событий и доставки отчетов" и "веб-служба и доступ по HTTP"|Измените файл конфигурации RSReportServer.config.|  
 |Параметры командной строки|В этой версии не поддерживается.|  
-|Конечные точки SOAP и [!INCLUDE[ssSB](../includes/sssb-md.md)]|Используйте [CREATE ENDPOINT](/sql/t-sql/statements/create-endpoint-transact-sql)и [ALTER ENDPOINT](/sql/t-sql/statements/alter-endpoint-transact-sql).|  
+|Конечные точки SOAP и [!INCLUDE[ssSB](../includes/sssb-md.md)]|Используйте инструкции [CREATE ENDPOINT](/sql/t-sql/statements/create-endpoint-transact-sql)и [ALTER ENDPOINT](/sql/t-sql/statements/alter-endpoint-transact-sql).|  
   
 ### <a name="discontinued-command-prompt-parameters-for-sql-server-setup"></a>Неподдерживаемые параметры командной строки для программы установки SQL Server  
  В следующей таблице перечислены параметры командной строки из предыдущих версий [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], которые не поддерживаются в [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)].  
@@ -64,21 +64,21 @@ ms.locfileid: "66088641"
 |Неподдерживаемый параметр|Параметр замены|  
 |----------------------------|---------------------------|  
 |ADDLOCAL|/ACTION=Uninstall и /FEATURES|  
-|DISABLENETWORKPROTOCOLS|/ TCPENABLED для TCP/IP<sup>1</sup>|  
-|DISABLENETWORKPROTOCOLS|/ NPENABLED для именованных каналов<sup>1</sup>|  
+|DISABLENETWORKPROTOCOLS|/ТКПЕНАБЛЕД для TCP/IP<sup>1</sup>|  
+|DISABLENETWORKPROTOCOLS|/НПЕНАБЛЕД для именованных каналов<sup>1</sup>|  
 |INSTALLSQLDATADIR|/SQLUSERDBDIR<br /><br /> /SQLUSERDBLOGDIR<br /><br /> /SQLBACKUPDIR<br /><br /> /SQLTEMPDBDIR<br /><br /> /SQLTEMPDBLOGDIR|  
 |REINSTALL|Нет эквивалента в этой версии.|  
 |REINSTALLMODE|Нет эквивалента в этой версии.|  
 |REMOVE|/ACTION=Uninstall и /FEATURES|  
 |SAMPLEDATABASE|Нет эквивалента в этой версии.|  
 |SAVESYSDB|Нет эквивалента в этой версии.|  
-|SKUUPGRADE<sup>2</sup>|Нет эквивалента в этой версии.|  
+|СКУУПГРАДЕ<sup>2</sup>|Нет эквивалента в этой версии.|  
 |UPGRADE|/ACTION=Upgrade и /FEATURES|  
 |USESYSDB|Нет эквивалента в этой версии.|  
   
- <sup>1</sup>эти параметры допустимы только для установки.  
+ <sup>1</sup> Эти параметры допустимы только для установки.  
   
- <sup>2</sup>запуск [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)], задайте параметр/Action = EditionUpgrade, для обновления существующего выпуска [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] до другого выпуска без использования исходном установочном носителе. Дополнительные сведения о поддерживаемой версии и обновлении выпуском см. в разделе [Supported Version and Edition Upgrades](../database-engine/install-windows/supported-version-and-edition-upgrades.md).  
+ <sup>2</sup> При запуске [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]укажите/Action = EditionUpgrade, чтобы обновить существующий выпуск [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] до другого выпуска в любое время без использования исходного установочного носителя. Дополнительные сведения о поддерживаемой версии и обновлении выпуском см. в разделе [Supported Version and Edition Upgrades](../database-engine/install-windows/supported-version-and-edition-upgrades.md).  
   
  Дополнительные сведения см. в статье [Установка SQL Server 2014 из командной строки](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md).  
   

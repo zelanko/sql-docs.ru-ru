@@ -1,5 +1,5 @@
 ---
-title: Поиск дополнительных сведений о собственном клиенте SQL Server | Документация Майкрософт
+title: Поиск дополнительных сведений о SQL Server Native Client | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,16 +13,15 @@ ms.assetid: 1bbe4ea4-dda4-47eb-aca1-ddcc3829a6f4
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1b025cad8d248c4a2e801010546e7443c42216a5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 415e4817a7ed9b4fa8d3d9f8c24e9b6944cba8ef
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68046758"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73761175"
 ---
 # <a name="finding-more-sql-server-native-client-information"></a>Поиск дополнительных сведений о собственном клиенте SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   Дополнительные сведения о собственном клиенте для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и других типах программирования доступа к данным см. в следующих ресурсах в сети.  
   
@@ -38,7 +37,7 @@ ms.locfileid: "68046758"
  Пакет SDK Window DAC содержит документацию по объектам ADO, OLE DB и интерфейсу ODBC.  
   
 
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
  [Программирование собственного клиента SQL Server](../../relational-databases/native-client/sql-server-native-client-programming.md)  
   
   

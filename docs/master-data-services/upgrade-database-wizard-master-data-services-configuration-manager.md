@@ -1,5 +1,5 @@
 ---
-title: Мастер обновления баз данных (диспетчер конфигурации служб Master Data Services) | Документы Майкрософт
+title: Мастер обновления баз данных
 ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: b74edba7-d0a2-456b-9673-b1e02bcdea43
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 28330ba902b32f0b9622a3b8df0ca316848e1752
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e6d5f9fd7dfe49b71424e13818de51d8c323676c
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68102572"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728911"
 ---
 # <a name="upgrade-database-wizard-master-data-services-configuration-manager"></a>Мастер обновления баз данных (диспетчер конфигурации служб Master Data Services)
 
@@ -23,7 +23,7 @@ ms.locfileid: "68102572"
 
   Используйте **Мастер обновления баз данных** для обновления базы данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
   
-## <a name="action"></a>Action  
+## <a name="action"></a>Действие  
  Это вводная страница мастера. Нажмите кнопку **Далее** для запуска процесса обновления базы данных.  
   
 ## <a name="upgrade-review"></a>Просмотр данных по обновлению  
@@ -37,7 +37,7 @@ ms.locfileid: "68102572"
 ## <a name="progress-and-finish"></a>Ход выполнения и завершение  
  Отображает ход процесса обновления. После обновления базы данных щелкните ссылку на файл журнала, чтобы просмотреть подробные сведения об обновлении, или нажмите кнопку **Завершить** , чтобы закрыть мастер баз данных и вернуться к странице **Базы данных** . Будет выбрана обновленная база данных, которую можно просмотреть и изменить ее системные настройки.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
  [Страница "Конфигурация базы данных" (диспетчер конфигурации служб Master Data Services)](../master-data-services/database-configuration-page-master-data-services-configuration-manager.md)   
 [Установка и настройка служб Master Data Services](../master-data-services/master-data-services-installation-and-configuration.md)  
  [Обновление служб Master Data Services](../database-engine/install-windows/upgrade-master-data-services.md)  

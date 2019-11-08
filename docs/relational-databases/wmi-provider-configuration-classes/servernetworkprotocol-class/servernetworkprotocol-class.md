@@ -1,6 +1,6 @@
 ---
-title: Класс ServerNetworkProtocol | Документация Майкрософт
-ms.custom: ''
+title: Класс ServerNetworkProtocol
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,18 +17,18 @@ helpviewer_keywords:
 ms.assetid: 0f9f7f7d-f8ab-426e-a85d-4eda3a241eb5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fb3e537ea3843d400bc886e1fa47dc4eddd68726
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a0929d4a0b88a954a0beef9789b3aeb7d9ab092d
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67933647"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73660321"
 ---
 # <a name="servernetworkprotocol-class"></a>Класс ServerNetworkProtocol
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  [Класс ServerNetworkProtocol](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocol-class/servernetworkprotocol-class.md) представляет сетевые протоколы, установленные на экземпляре [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , позволяющем связываться с клиентами по сети.  
+  [Класс класс servernetworkprotocol](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocol-class/servernetworkprotocol-class.md) представляет сетевые протоколы, установленные на экземпляре [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], который обеспечивает взаимодействие с клиентами по сети.  
   
- С помощью [класс ServerNetworkProtocol](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocol-class/servernetworkprotocol-class.md), вы можете:  
+ С помощью [класса класс servernetworkprotocol](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocol-class/servernetworkprotocol-class.md)вы можете:  
   
 -   проверять имя, версию, DLL-файл, число свойств и отображаемое имя сетевого протокола сервера;  
   
@@ -36,7 +36,7 @@ ms.locfileid: "67933647"
   
 -   включать и отключать сетевой протокол сервера.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
  [Настройка сетевых протоколов сервера и сетевых библиотек](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

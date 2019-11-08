@@ -19,16 +19,15 @@ ms.assetid: 8e5738e5-4bbe-4f34-bd69-0c0633290bdd
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 969d4b7218ae7a6b1f04ee75ad95c8ee8ba54690
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: c30e6ca03f1d1d4c794d01bd594efd88306410e3
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907372"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73759041"
 ---
 # <a name="stored-procedures---calling"></a>Вызов хранимых процедур
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
   Хранимая процедура может иметь ноль и более параметров. Также она может возвращать значение. При использовании поставщика [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] собственного клиента OLE DB параметры для хранимой процедуры могут передаваться следующим образом:  
   
@@ -39,7 +38,7 @@ ms.locfileid: "72907372"
 > [!NOTE]  
 >  При вызове хранимых процедур [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] с использованием именованных параметров в OLE DB имена параметров должны начинаться со знака \@. Это ограничение, характерное для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. В поставщике OLE DB для собственного клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] это ограничение соблюдается более строго, чем в компонентах MDAC.  
   
- Для поддержки параметров объект команды предоставляет интерфейс **ICommandWithParameters**. Чтобы использовать параметры, потребитель сначала описывает параметры поставщика путем вызова метода **ICommandWithParameters::SetParameterInfo** (или при необходимости готовит инструкцию, вызывающую метод **GetParameterInfo**). Затем потребитель создает метод доступа, определяющий структуру буфера и помещающий значения параметров в этот буфер. После этого он передает дескриптор метода доступа и указатель на буфер функции **Execute**. При последующих вызовах **Execute** потребитель помещает новые значения параметров в буфер и вызывает функцию **Execute** с дескриптором метода доступа и указателем буфера.  
+ Для поддержки параметров объект команды предоставляет интерфейс **ICommandWithParameters** . Чтобы использовать параметры, потребитель сначала описывает параметры поставщика путем вызова метода **ICommandWithParameters::SetParameterInfo** (или при необходимости готовит инструкцию, вызывающую метод **GetParameterInfo**). Затем потребитель создает метод доступа, определяющий структуру буфера и помещающий значения параметров в этот буфер. После этого он передает дескриптор метода доступа и указатель на буфер функции **Execute**. При последующих вызовах **Execute** потребитель помещает новые значения параметров в буфер и вызывает функцию **Execute** с дескриптором метода доступа и указателем буфера.  
   
  Команда, вызывающая временную хранимую процедуру, использующую параметры, сначала должна вызвать метод **ICommandWithParameters::SetParameterInfo** для определения сведений о параметрах, чтобы команду можно было успешно подготовить. Это происходит по той причине, что внутреннее имя временной хранимой процедуры отличается от внешнего имени, используемого клиентом, а SQLOLEDB не может запрашивать системные таблицы, чтобы определить сведения о параметрах временной хранимой процедуры.  
   
@@ -97,7 +96,7 @@ ms.locfileid: "72907372"
   
  {[ **? =** ]**вызовите**_procedure_name_[ **(** [*параметр*] [ **,** [*параметр*]]... **)** ]}  
   
- Пример:  
+ Например:  
   
 ```  
 {call SalesByCategory('Produce', '1995')}  
@@ -129,7 +128,7 @@ ms.locfileid: "72907372"
 EXECUTE SalesByCategory 'Produce', '1995'  
 ```  
   
-## <a name="see-also"></a>См. также статью  
+## <a name="see-also"></a>См. также раздел  
  [Хранимые процедуры](../../../relational-databases/native-client/ole-db/stored-procedures.md)  
   
   

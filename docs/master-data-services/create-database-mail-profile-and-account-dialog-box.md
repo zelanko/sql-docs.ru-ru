@@ -1,5 +1,5 @@
 ---
-title: Диалоговое окно "Создание профиля и учетной записи Database Mail" | Документы Майкрософт
+title: Диалоговое окно «Создание профиля электронной почты и учетной записи базы данных»
 ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: b93ea3d4-9f22-490e-8e26-d766b454aed6
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 995d39887aa6357519ce0cbf4771ae796b1ece69
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b08dcb47303d6198bb30d4415d2c00110fd7ab04
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68094501"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729551"
 ---
 # <a name="create-database-mail-profile-and-account-dialog-box"></a>Диалоговое окно «Создание профиля электронной почты и учетной записи базы данных»
 
@@ -54,12 +54,12 @@ ms.locfileid: "68094501"
 |------------------|-----------------|  
 |**Проверка подлинности Windows с использованием учетных данных службы компонента Database Engine**|Укажите компонент Database Mail, который должен использовать учетные данные [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] для проверки подлинности на SMTP-сервере.|  
 |**обычная проверка подлинности**|Укажите, что компонент Database Mail будет использовать отдельные имя пользователя и пароль для проверки подлинности на SMTP-сервере. Эта информация будет использоваться только для проверки подлинности на почтовом сервере, при этом учетная запись не обязана соответствовать пользователю [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] или пользователю компьютера, на котором выполняется [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|  
-|**Имя пользователя**|Введите имя учетной записи пользователя, которое компонент Database Mail будет использовать для входа на SMTP-сервер. Если SMTP-сервер требует обычную проверку подлинности, необходимо имя пользователя.|  
+|**User name**|Введите имя учетной записи пользователя, которое компонент Database Mail будет использовать для входа на SMTP-сервер. Если SMTP-сервер требует обычную проверку подлинности, необходимо имя пользователя.|  
 |**Пароль**|Введите пароль, который компонент Database Mail будет использовать для входа на SMTP-сервер. Пароль необходим, если SMTP-сервер требует обычную проверку подлинности.|  
 |**Подтверждение пароля**|Еще раз введите пароль для подтверждения.|  
 |**Анонимная проверка подлинности**|Укажите, что SMTP-серверу не требуется проверка подлинности. Компонент Database Mail не будет использовать никаких учетных данных для проверки подлинности на SMTP-сервере.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
  [Страница "Конфигурация базы данных" (диспетчер конфигурации служб Master Data Services)](../master-data-services/database-configuration-page-master-data-services-configuration-manager.md)   
 [Установка и настройка служб Master Data Services](../master-data-services/master-data-services-installation-and-configuration.md)
   

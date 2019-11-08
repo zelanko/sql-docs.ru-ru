@@ -1,5 +1,5 @@
 ---
-title: Функциональная область системного администрирования (диспетчер основных данных) | Документы Майкрософт
+title: Функциональная область системного администрирования
 ms.custom: ''
 ms.date: 04/01/2016
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 4254e825-d76a-4daf-961f-087b961644a7
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 340d4736754ab4e2ffd23043d8178d7ce4fdbe0c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e128ba2b53383c83bc58ba66526e9768355e140b
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68102618"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727871"
 ---
 # <a name="system-administration-functional-area-master-data-manager"></a>Функциональная область системного администрирования (диспетчер основных данных)
 
@@ -61,7 +61,7 @@ ms.locfileid: "68102618"
   
  [Действия бизнес-правил (службы Master Data Services)](../master-data-services/business-rule-actions-master-data-services.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
  [Веб-приложение диспетчера основных данных](../master-data-services/master-data-manager-web-application.md)  
   
   

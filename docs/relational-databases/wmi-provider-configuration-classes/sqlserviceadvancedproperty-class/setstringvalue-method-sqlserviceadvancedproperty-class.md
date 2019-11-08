@@ -1,5 +1,5 @@
 ---
-title: Метод SetStringValue (класс SqlServiceAdvancedProperty) | Документация Майкрософт
+title: Метод SetStringValue (класс SqlServiceAdvancedProperty)
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: a02d05f6-1072-4709-9ecc-e23e51c8c898
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 68eaccce3d82ddb0085a73c6fbbce751b69e245a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: da797051ba3ce9c8a0d818388c999e89c7300e9f
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68139539"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73659506"
 ---
 # <a name="setstringvalue-method-sqlserviceadvancedproperty-class-"></a>Метод SetStringValue (класс SqlServiceAdvancedProperty)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,15 +43,15 @@ object.SetStringValue(StrValue)
   
 |Параметр|Описание|  
 |---------------|-----------------|  
-|*strValue*|Строка, указывающая значение дополнительного свойства.|  
+|*StrValue*|Строка, указывающая значение дополнительного свойства.|  
   
 ## <a name="property-valuereturn-value"></a>Значение свойства/возвращаемое значение  
  Значение **uint32** , равное 0, если служба изменена успешно, и 1, если запрос не поддерживается. Любое другое значение указывает на ошибку.  
   
-## <a name="remarks"></a>Примечания  
- Тип значения свойства должен быть **строка** могла установить свойство в значение строки.  
+## <a name="remarks"></a>Замечания  
+ Тип значения свойства должен быть **строковым** , чтобы иметь возможность присвоить свойству строковое значение.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
  [Запуск и остановка служб](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   
