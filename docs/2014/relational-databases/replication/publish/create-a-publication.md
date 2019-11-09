@@ -15,19 +15,19 @@ ms.assetid: 52ee6de9-1d58-4cb9-8711-372bddbe7154
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 142dd6544cafde4cea2839f955f23685a3a673f5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 87fc7802ea79a73c452f515f72f553850f017bb6
+ms.sourcegitcommit: 619917a0f91c8f1d9112ae6ad9cdd7a46a74f717
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63022507"
+ms.lasthandoff: 11/09/2019
+ms.locfileid: "73882323"
 ---
 # <a name="create-a-publication"></a>Create a Publication
   В данном разделе описывается процесс создания публикации в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]или объектов RMO.  
   
  **В этом разделе**  
   
--   **Перед началом работы**  
+-   **Перед началом работы выполните следующие действия.**  
   
      [Ограничения](#Restrictions)  
   
@@ -35,7 +35,7 @@ ms.locfileid: "63022507"
   
 -   **Для создания публикации и определения статей используется:**  
   
-     [Среда SQL Server Management Studio](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -45,9 +45,9 @@ ms.locfileid: "63022507"
   
 ###  <a name="Restrictions"></a> Ограничения  
   
--   Названия публикаций и статей не могут содержать следующие символы: %, \*, [ , ], |, :, ", ? , ' , \ , / , \< , >. Если в базе данных есть объекты, имена которых содержат любые из этих символов, и их нужно реплицировать, необходимо задать для статьи имя, отличное от имени объекта, в диалоговом окне **Свойства статьи — \<статья>** на странице **Статьи** мастера.  
+-   Названия публикаций и статей не могут содержать следующие символы: %, \*, [ , ], |, :, ", ? , ", \,/, \<, >. Если в базе данных есть объекты, имена которых содержат любые из этих символов, и их нужно реплицировать, необходимо задать для статьи имя, отличное от имени объекта, в диалоговом окне **Свойства статьи — \<статья>** на странице **Статьи** мастера.  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="Security"></a> Безопасность  
  По возможности предлагайте пользователям вводить учетные данные системы безопасности во время выполнения приложения. Если необходимо хранить учетные данные, используйте [службы шифрования](https://go.microsoft.com/fwlink/?LinkId=34733) , предоставляемые платформой [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows .NET Framework.  
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
@@ -108,21 +108,21 @@ ms.locfileid: "63022507"
   
     -   Если неизвестно, существует ли задание агента чтения журнала для публикуемой базы данных, выполните процедуру [sp_helplogreader_agent (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-helplogreader-agent-transact-sql) на издателе в базе данных издателя.  
   
-    -   Если результирующий набор пуст, необходимо создать задание агента чтения журнала. На издателе выполните процедуру [sp_addlogreader_agent (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql). Укажите в параметрах [!INCLUDE[msCoName](../../../includes/msconame-md.md)] @job_name **@job_name** @password **@password** . Если агент будет использовать проверку подлинности SQL Server для подключения к издателю, также необходимо указать значение **0** в параметре **@publisher_security_mode** и данные входа [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в параметрах **@publisher_login** и **@publisher_password** . Перейдите к шагу 3.  
+    -   Если результирующий набор пуст, необходимо создать задание агента чтения журнала. На издателе выполните процедуру [sp_addlogreader_agent (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql). Укажите в параметрах [!INCLUDE[msCoName](../../../includes/msconame-md.md)]**job_name\@ и** **password\@ учетные данные**  Windows, с которыми работает агент. Если агент будет использовать проверку подлинности SQL Server для подключения к издателю, также необходимо указать значение **0** в параметре **\@publisher_security_mode** и данные входа [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в параметрах **\@publisher_login** и **\@publisher_password**. Перейдите к шагу 3.  
   
-3.  На издателе выполните процедуру [sp_addpublication (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql). Укажите имя публикации в параметре **@publication** и для **@repl_freq** параметр, укажите значение `snapshot` для публикации моментальных снимков, или значение `continuous` для Публикация транзакций. Укажите все остальные параметры публикации. Таким образом будет определена публикация.  
+3.  На издателе выполните процедуру [sp_addpublication (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql). Укажите имя публикации для **\@публикации**, а для параметра **\@repl_freq** укажите значение `snapshot` для публикации моментальных снимков или значение `continuous` для публикации транзакций. Укажите все остальные параметры публикации. Таким образом будет определена публикация.  
   
     > [!NOTE]  
     >  Имена публикаций не могут содержать следующие символы:  
     >   
-    >  % * [ ] | : " ? \ / \< >  
+    >  % * [ ] | : " ? \< >  
   
-4.  На издателе выполните процедуру [sp_addpublication_snapshot (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql). Укажите имя публикации, использовавшееся на шаге 3, в параметре **@publication** , а учетные данные Windows, с которыми работает агент моментальных снимков, — для параметров **@snapshot_job_name** @password **@password** . Если агент будет использовать проверку подлинности SQL Server для подключения к издателю, также необходимо указать значение **0** в параметре **@publisher_security_mode** и данные входа [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в параметрах **@publisher_login** @password **@publisher_password** . Будет создано задание агента моментальных снимков для публикации.  
+4.  На издателе выполните процедуру [sp_addpublication_snapshot (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql). Укажите имя публикации, использовавшееся в шаге 3, в параметре **\@publication**, а учетные данные Windows, с которыми работает агент моментальных снимков, — в параметрах **\@snapshot_job_name** и **\@password**. Если агент будет использовать проверку подлинности SQL Server для подключения к издателю, также необходимо указать значение **0** в параметре **\@publisher_security_mode** и данные входа [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в параметрах **\@publisher_login** и **\@publisher_password**. Будет создано задание агента моментальных снимков для публикации.  
   
     > [!IMPORTANT]  
     >  Если издатель настраивается с удаленным распространителем, то значения, передаваемые для всех аргументов, включая *job_login* и *job_password*, передаются распространителю в формате обычного (незашифрованного) текста. Прежде чем выполнять эту хранимую процедуру, необходимо зашифровать соединение между издателем и его удаленным распространителем. Дополнительные сведения см. в разделе [Включение шифрования соединений в компоненте Database Engine (диспетчер конфигураций SQL Server)](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
-5.  Добавьте статьи к публикации. Дополнительные сведения см. в разделе [Define an Article](define-an-article.md).  
+5.  Добавьте статьи к публикации. Дополнительные сведения см. в статье [Define an Article](define-an-article.md).  
   
 6.  Запустите задание агента моментальных снимков, чтобы создать исходный моментальный снимок для этой публикации. Дополнительные сведения см. в разделе [Create and Apply the Initial Snapshot](../create-and-apply-the-initial-snapshot.md).  
   
@@ -130,23 +130,23 @@ ms.locfileid: "63022507"
   
 1.  Чтобы активировать публикацию текущей базы в репликации слиянием, на издателе выполните хранимую процедуру [sp_replicationdboption (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql).  
   
-2.  На издателе в базе данных публикации выполните хранимую процедуру [sp_addmergepublication (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql). Укажите имя публикации в параметре **@publication** , а также все остальные параметры публикации. Таким образом будет определена публикация.  
+2.  На издателе в базе данных публикации выполните хранимую процедуру [sp_addmergepublication (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql). Укажите имя публикации в параметре **\@publication**, а также все остальные параметры публикации. Таким образом будет определена публикация.  
   
     > [!NOTE]  
     >  Имена публикаций не могут содержать следующие символы:  
     >   
-    >  % * [ ] | : " ? \ / \< >  
+    >  % * [ ] | : " ? \< >  
   
-3.  На издателе выполните процедуру [sp_addpublication_snapshot (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql). Укажите имя публикации, использовавшееся на шаге 2, в параметре **@publication** , а учетные данные Windows, с которыми работает агент моментальных снимков, — в параметрах **@snapshot_job_name** и **@password** . Если агент будет использовать проверку подлинности SQL Server для подключения к издателю, также необходимо указать значение **0** в параметре **@publisher_security_mode** и данные входа [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в параметрах **@publisher_login** @password **@publisher_password** . Будет создано задание агента моментальных снимков для публикации.  
+3.  На издателе выполните процедуру [sp_addpublication_snapshot (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql). Укажите имя публикации, использовавшееся в шаге 2, в параметре **\@publication**, а учетные данные Windows, с которыми работает агент моментальных снимков, — в параметрах **\@snapshot_job_name** и **\@password**. Если агент будет использовать проверку подлинности SQL Server для подключения к издателю, также необходимо указать значение **0** в параметре **\@publisher_security_mode** и данные входа [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в параметрах **\@publisher_login** и **\@publisher_password**. Будет создано задание агента моментальных снимков для публикации.  
   
     > [!IMPORTANT]  
     >  Если издатель настраивается с удаленным распространителем, то значения, передаваемые для всех аргументов, включая *job_login* и *job_password*, передаются распространителю в формате обычного (незашифрованного) текста. Прежде чем выполнять эту хранимую процедуру, необходимо зашифровать соединение между издателем и его удаленным распространителем. Дополнительные сведения см. в разделе [Включение шифрования соединений в компоненте Database Engine (диспетчер конфигураций SQL Server)](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
-4.  Добавьте статьи к публикации. Дополнительные сведения см. в разделе [Define an Article](define-an-article.md).  
+4.  Добавьте статьи к публикации. Дополнительные сведения см. в статье [Define an Article](define-an-article.md).  
   
 5.  Запустите задание агента моментальных снимков, чтобы создать исходный моментальный снимок для этой публикации. Дополнительные сведения см. в разделе [Create and Apply the Initial Snapshot](../create-and-apply-the-initial-snapshot.md).  
   
-###  <a name="TsqlExample"></a> Примеры (Transact-SQL)  
+###  <a name="TsqlExample"></a> Пример (Transact-SQL)  
  В следующем примере производится создание публикации транзакций. Учетные данные Windows, необходимые для создания задания агента моментальных снимков и агента чтения журнала, передаются через переменные скрипта.  
   
  [!code-sql[HowTo#sp_AddTranPub](../../../snippets/tsql/SQL15/replication/howto/tsql/createtranpub.sql#sp_addtranpub)]  
@@ -160,7 +160,7 @@ ms.locfileid: "63022507"
   
 #### <a name="to-create-a-snapshot-or-transactional-publication"></a>Создание публикации транзакций или моментальных снимков  
   
-1.  Создайте подключение к издателю с помощью класса <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
+1.  Создайте соединение с издателем с помощью класса <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
 2.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.ReplicationDatabase> для базы данных публикации, установите в качестве значения свойства <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> экземпляр соединения <xref:Microsoft.SqlServer.Management.Common.ServerConnection> , созданный на шаге 1, и вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> . Если метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> возвращает значение `false`, убедитесь, что база данных существует.  
   
@@ -171,11 +171,11 @@ ms.locfileid: "63022507"
     -   Задайте поля <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> и <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> или <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.SecurePassword%2A> в <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.LogReaderAgentProcessSecurity%2A> для передачи данных учетной записи [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows, под которой запущен агент чтения журнала.  
   
         > [!NOTE]  
-        >  Указывать свойство <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.LogReaderAgentProcessSecurity%2A> не обязательно, если публикация создается членом предопределенной роли сервера `sysadmin`. В этом случае агент будет выполнять олицетворение учетную запись агента SQL Server. Дополнительные сведения см. в статье [Модель безопасности агента репликации](../security/replication-agent-security-model.md).  
+        >  Указывать свойство <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.LogReaderAgentProcessSecurity%2A> не обязательно, если публикация создается членом предопределенной роли сервера `sysadmin`. В этом случае агент будет выполнять олицетворение учетную запись агента SQL Server. Дополнительные сведения см. в статье [Replication Agent Security Model](../security/replication-agent-security-model.md).  
   
     -   (необязательно) при соединении с издателем с проверкой подлинности SQL Server укажите значения свойств <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> и <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> или <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SecureSqlStandardPassword%2A> объекта <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.LogReaderAgentPublisherSecurity%2A> .  
   
-    -   С помощью метода <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.CreateLogReaderAgent%2A> создайте задание агента чтения журнала для базы данных.  
+    -   Вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.CreateLogReaderAgent%2A>, чтобы создать задание агента чтения журнала для базы данных.  
   
 5.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.TransPublication> и укажите для него следующие свойства:  
   
@@ -187,10 +187,10 @@ ms.locfileid: "63022507"
   
     -   значение <xref:Microsoft.SqlServer.Replication.PublicationType> или <xref:Microsoft.SqlServer.Replication.PublicationType.Transactional> в параметре <xref:Microsoft.SqlServer.Replication.PublicationType.Snapshot>;  
   
-    -   поля <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> и <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> свойства <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A>, чтобы указать учетные данные для учетной записи Windows, с которой работает агент моментальных снимков. Эта учетная запись также используется, когда агент моментальных снимков соединяется с локальным распространителем, и для любых удаленных соединений, где применяется проверка подлинности Windows;  
+    -   поля <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> и <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> свойства <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A> , чтобы указать учетные данные для учетной записи Windows, с которой работает агент моментальных снимков. Эта учетная запись также используется, когда агент моментальных снимков соединяется с локальным распространителем, и для любых удаленных соединений, где применяется проверка подлинности Windows;  
   
         > [!NOTE]  
-        >  Указывать свойство <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A> не обязательно, если публикация создается членом предопределенной роли сервера `sysadmin`. В этом случае агент будет выполнять олицетворение учетную запись агента SQL Server. Дополнительные сведения см. в статье [Модель безопасности агента репликации](../security/replication-agent-security-model.md).  
+        >  Указывать свойство <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A> не обязательно, если публикация создается членом предопределенной роли сервера `sysadmin`. В этом случае агент будет выполнять олицетворение учетную запись агента SQL Server. Дополнительные сведения см. в статье [Replication Agent Security Model](../security/replication-agent-security-model.md).  
   
     -   Поля <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> и <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> или <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SecureSqlStandardPassword%2A> в <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentPublisherSecurity%2A> при соединении с издателем с использованием проверки подлинности SQL Server (необязательно).  
   
@@ -198,12 +198,12 @@ ms.locfileid: "63022507"
   
     -   Имя издателя в качестве значения <xref:Microsoft.SqlServer.Replication.TransPublication.PublisherName%2A> , если издатель не является издателем SQL Server (необязательно).  
   
-6.  Чтобы создать публикацию, вызовите метод <xref:Microsoft.SqlServer.Replication.Publication.Create%2A>.  
+6.  Чтобы создать публикацию, вызовите метод <xref:Microsoft.SqlServer.Replication.Publication.Create%2A> .  
   
     > [!IMPORTANT]  
-    >  При настройке издателя с удаленным распространителем значения, передаваемые для всех свойств, включая <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A>, отправляются распространителю в виде обычного текста. Перед вызовом метода <xref:Microsoft.SqlServer.Replication.Publication.Create%2A> следует зашифровать подключение между издателем и его удаленным распространителем. Дополнительные сведения см. в разделе [Включение шифрования соединений в компоненте Database Engine (диспетчер конфигураций SQL Server)](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
+    >  При настройке издателя с удаленным распространителем значения, передаваемые для всех свойств, включая <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A>, отправляются распространителю в виде обычного текста. Следует зашифровать соединение между издателем и его удаленным распространителем перед вызовом метода <xref:Microsoft.SqlServer.Replication.Publication.Create%2A> . Дополнительные сведения см. в разделе [Включение шифрования соединений в компоненте Database Engine (диспетчер конфигураций SQL Server)](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
-7.  Вызовите метод <xref:Microsoft.SqlServer.Replication.Publication.CreateSnapshotAgent%2A>, чтобы создать задание агента моментальных снимков для публикации.  
+7.  Вызовите метод <xref:Microsoft.SqlServer.Replication.Publication.CreateSnapshotAgent%2A> , чтобы создать задание агента моментальных снимков для публикации.  
   
 #### <a name="to-create-a-merge-publication"></a>Создание публикации слиянием  
   
@@ -224,14 +224,14 @@ ms.locfileid: "63022507"
     -   поля <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> и <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> свойства <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A> , чтобы указать учетные данные для учетной записи Windows, с которой работает агент моментальных снимков. Эта учетная запись также используется, когда агент моментальных снимков соединяется с локальным распространителем, и для любых удаленных соединений, где применяется проверка подлинности Windows;  
   
         > [!NOTE]  
-        >  Указывать свойство <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A> не обязательно, если публикация создается членом предопределенной роли сервера `sysadmin`. Дополнительные сведения см. в статье [Модель безопасности агента репликации](../security/replication-agent-security-model.md).  
+        >  Указывать свойство <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A> не обязательно, если публикация создается членом предопределенной роли сервера `sysadmin`. Дополнительные сведения см. в статье [Replication Agent Security Model](../security/replication-agent-security-model.md).  
   
     -   С помощью операторов включающего логического ИЛИ (`|` в Visual C# и `Or` в Visual Basic) и исключающего логического ИЛИ (`^` в Visual C# и `Xor` в Visual Basic) задайте значение <xref:Microsoft.SqlServer.Replication.PublicationAttributes> для свойства <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> (необязательно).  
   
 5.  Чтобы создать публикацию, вызовите метод <xref:Microsoft.SqlServer.Replication.Publication.Create%2A> .  
   
     > [!IMPORTANT]  
-    >  При настройке издателя с удаленным распространителем значения, передаваемые для всех свойств, включая <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A>, отправляются распространителю в виде обычного текста. Перед вызовом метода <xref:Microsoft.SqlServer.Replication.Publication.Create%2A> следует зашифровать подключение между издателем и его удаленным распространителем. Дополнительные сведения см. в разделе [Включение шифрования соединений в компоненте Database Engine (диспетчер конфигураций SQL Server)](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
+    >  При настройке издателя с удаленным распространителем значения, передаваемые для всех свойств, включая <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A>, отправляются распространителю в виде обычного текста. Следует зашифровать соединение между издателем и его удаленным распространителем перед вызовом метода <xref:Microsoft.SqlServer.Replication.Publication.Create%2A> . Дополнительные сведения см. в разделе [Включение шифрования соединений в компоненте Database Engine (диспетчер конфигураций SQL Server)](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
 6.  Вызовите метод <xref:Microsoft.SqlServer.Replication.Publication.CreateSnapshotAgent%2A> , чтобы создать задание агента моментальных снимков для публикации.  
   
@@ -248,14 +248,14 @@ ms.locfileid: "63022507"
   
  [!code-vb[HowTo#rmo_vb_CreateMergePub](../../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_createmergepub)]  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
  [Использование программы sqlcmd с переменными скрипта](../../scripting/sqlcmd-use-with-scripting-variables.md)   
  [Публикация данных и объектов базы данных](publish-data-and-database-objects.md)   
- [Replication Management Objects Concepts](../concepts/replication-management-objects-concepts.md)   
- [Define an Article](define-an-article.md)   
+ [Основные понятия объектов RMO](../concepts/replication-management-objects-concepts.md)   
+ [Определение статьи](define-an-article.md)   
  [Просмотр и изменение свойств публикации](view-and-modify-publication-properties.md)   
  [Настройка распространения](../configure-distribution.md)   
  [Организация безопасности распространителя](../security/secure-the-distributor.md)   
- [Защита издателя](../security/secure-the-publisher.md)  
+ [Организация безопасности издателя](../security/secure-the-publisher.md)  
   
   

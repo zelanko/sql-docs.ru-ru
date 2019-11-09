@@ -14,12 +14,12 @@ ms.assetid: 3cfc8966-833e-42fa-80cb-09175d1feed7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 557c3eb76dbaba037c289b93bc80bb1314e4d106
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 905b1ceed2df8afc854ad38ee07d2b21596530f1
+ms.sourcegitcommit: 619917a0f91c8f1d9112ae6ad9cdd7a46a74f717
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62721706"
+ms.lasthandoff: 11/09/2019
+ms.locfileid: "73882251"
 ---
 # <a name="configure-publishing-and-distribution"></a>Настройка публикации и распространения
   В данном разделе описывается процесс настройки публикации и распространения в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]или объектов RMO.  
@@ -27,7 +27,7 @@ ms.locfileid: "62721706"
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="Security"></a> Безопасность  
  Дополнительные сведения см. в разделе [безопасное развертывание репликации](security/view-and-modify-replication-security-settings.md).  
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
@@ -62,27 +62,27 @@ ms.locfileid: "62721706"
   
     -   Если значение **installed** в результирующем наборе равно **0**, выполните процедуру [sp_adddistributor (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-adddistributor-transact-sql) на распространителе в базе данных master.  
   
-    -   Если значение **distribution db installed** в результирующем наборе равно **0**, выполните процедуру [sp_adddistributiondb (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql) на распространителе в базе данных master. Укажите имя базы данных распространителя в параметре **@database** . При необходимости можно указать максимальный срок хранения транзакции в **@max_distretention** и срок хранения журнала в **@history_retention** . Если создается новая база данных, укажите желаемые параметры свойств.  
+    -   Если значение **distribution db installed** в результирующем наборе равно **0**, выполните процедуру [sp_adddistributiondb (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql) на распространителе в базе данных master. Укажите имя базы данных распространителя для **базы данных\@** . При необходимости можно указать максимальный срок хранения транзакций для **\@max_distretention** и срок хранения журнала для **\@history_retention**. Если создается новая база данных, укажите желаемые параметры свойств.  
   
-2.  На распространителе, который также является издателем, выполните процедуру [sp_adddistpublisher (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql), указав общий ресурс UNC, который будет использоваться как папка по умолчанию для моментальных снимков в **@working_directory** .  
+2.  На распространителе, который также является издателем, выполните [sp_adddistpublisher &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql), указав общую папку в формате UNC, которая будет использоваться в качестве папки моментальных снимков по умолчанию для **\@working_directory**.  
   
-3.  На издателе выполните процедуру [sp_replicationdboption (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql). Укажите базу данных, публикуемый **@dbname** , тип репликации для **@optname** и значение `true` для **@value** .  
+3.  На издателе выполните процедуру [sp_replicationdboption (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql). Укажите базу данных, публикуемую для **\@dbname**, тип репликации для **\@optname**и значение `true` для **\@ного значения**.  
   
 #### <a name="to-configure-publishing-using-a-remote-distributor"></a>Настройка публикации с помощью удаленного распространителя  
   
 1.  Чтобы определить, настроен ли сервер в качестве распространителя, выполните процедуру, описанную в разделе [sp_get_distributor (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-get-distributor-transact-sql).  
   
-    -   Если значение **installed** в результирующем наборе равно **0**, выполните процедуру [sp_adddistributor (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-adddistributor-transact-sql) на распространителе в базе данных master. Укажите надежный пароль в параметре **@password** . Этот пароль для учетной записи **distributor_admin** используется издателем при соединении с распространителем.  
+    -   Если значение **installed** в результирующем наборе равно **0**, выполните процедуру [sp_adddistributor (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-adddistributor-transact-sql) на распространителе в базе данных master. Укажите надежный пароль для **\@пароля**. Этот пароль для учетной записи **distributor_admin** используется издателем при соединении с распространителем.  
   
-    -   Если значение **distribution db installed** в результирующем наборе равно **0**, выполните процедуру [sp_adddistributiondb (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql) на распространителе в базе данных master. Укажите имя базы данных распространителя в параметре **@database** . При необходимости можно указать максимальный срок хранения транзакции в **@max_distretention** и срок хранения журнала в **@history_retention** . Если создается новая база данных, укажите желаемые параметры свойств.  
+    -   Если значение **distribution db installed** в результирующем наборе равно **0**, выполните процедуру [sp_adddistributiondb (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql) на распространителе в базе данных master. Укажите имя базы данных распространителя для **базы данных\@** . При необходимости можно указать максимальный срок хранения транзакций для **\@max_distretention** и срок хранения журнала для **\@history_retention**. Если создается новая база данных, укажите желаемые параметры свойств.  
   
-2.  На распространителе выполните процедуру [sp_adddistpublisher (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql), указав общий ресурс UNC, который будет использоваться как папка по умолчанию для моментальных снимков в **@working_directory** . Если распространитель будет использовать проверку подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] при соединении с издателем, то нужно также указать значение **0** в параметре **@security_mode** и данные имени входа в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для параметров **@login** и **@password** .  
+2.  На распространителе выполните [ &#40;sp_adddistpublisher Transact-&#41;SQL](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql), указав общую папку в формате UNC, которая будет использоваться в качестве папки моментальных снимков по умолчанию для **\@working_directory**. Если распространитель будет использовать проверку подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] при соединении с издателем, необходимо также указать значение **0** для **\@security_mode** и [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сведения об имени входа для **\@имени входа** и **\@пароля**.  
   
-3.  На издателе в базе данных master выполните процедуру [sp_adddistributor (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-adddistributor-transact-sql). Укажите надежный пароль из шага 1 в параметре **@password** . Этот пароль будет использоваться издателем при соединении с распространителем.  
+3.  На издателе в базе данных master выполните процедуру [sp_adddistributor (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-adddistributor-transact-sql). Укажите надежный пароль, используемый на шаге 1 для **\@пароля**. Этот пароль будет использоваться издателем при соединении с распространителем.  
   
-4.  На издателе выполните процедуру [sp_replicationdboption (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql). Укажите опубликованную базу данных в параметре **@dbname** , тип репликации в параметре **@optname** и значение true в параметре **@value** .  
+4.  На издателе выполните процедуру [sp_replicationdboption (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql). Укажите базу данных, публикуемую для **\@dbname**, тип репликации для **\@optname**, а также значение true для **параметра\@** .  
   
-###  <a name="TsqlExample"></a> Примеры (Transact-SQL)  
+###  <a name="TsqlExample"></a> Пример (Transact-SQL)  
  В следующих разделах описывается программная настройка публикации и распространения. В этом примере имя сервера, настраиваемого в качестве издателя и локального распространителя, указывается с помощью переменных скрипта. Публикацию и распространение репликации можно настроить программно с помощью хранимых процедур репликации.  
   
  [!code-sql[HowTo#AddDistPub](../../snippets/tsql/SQL15/replication/howto/tsql/adddistpub.sql#adddistpub)]  
@@ -115,7 +115,7 @@ ms.locfileid: "62721706"
   
     -   <xref:Microsoft.SqlServer.Replication.DistributionPublisher.PublisherSecurity%2A> — режим безопасности при соединении с издателем. Рекомендуется<xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> .  
   
-8.  Вызовите метод <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Create%2A>.  
+8.  Вызовите метод <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Create%2A> .  
   
 #### <a name="to-configure-publishing-and-distribution-using-a-remote-distributor"></a>Настройка публикации и распространения с использованием удаленного распространителя  
   
@@ -164,11 +164,11 @@ ms.locfileid: "62721706"
   
  [!code-vb[HowTo#rmo_vb_AddDistPub](../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_adddistpub)]  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
  [Просмотр и изменение свойств издателя и распространителя](view-and-modify-distributor-and-publisher-properties.md)   
  [Replication System Stored Procedures Concepts](concepts/replication-system-stored-procedures-concepts.md)   
  [Настройка распространения](configure-distribution.md)   
- [Replication Management Objects Concepts](concepts/replication-management-objects-concepts.md)   
- [Настройка репликации для групп доступности AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md) 
+ [Основные понятия объектов RMO](concepts/replication-management-objects-concepts.md)   
+ [Настройка репликации для группы доступности AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md) 
   
   

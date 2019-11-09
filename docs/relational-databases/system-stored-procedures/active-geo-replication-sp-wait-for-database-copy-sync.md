@@ -1,6 +1,6 @@
 ---
-title: sp_wait_for_database_copy_sync (база данных SQL Azure) | Документация Майкрософт
-ms.custom: ''
+title: sp_wait_for_database_copy_sync
+titleSuffix: Azure SQL Database
 ms.date: 03/03/2017
 ms.service: sql-database
 ms.reviewer: ''
@@ -16,17 +16,18 @@ ms.assetid: 7068da7f-cb74-47f2-b064-eb076a0d3885
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9ff5b859b9bddce216e4f6bed343611ec155ffbf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: eb274d4f022a182ac056c190a8626fa48e36511d
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68078353"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73844397"
 ---
-# <a name="active-geo-replication---spwaitfordatabasecopysync"></a>Активная Георепликация - sp_wait_for_database_copy_sync
+# <a name="active-geo-replication---sp_wait_for_database_copy_sync"></a>Активная Георепликация — sp_wait_for_database_copy_sync
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  Использование этой процедуры ограничено связью [!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)] между источником и получателем. Вызов **sp_wait_for_database_copy_sync** приводит к Подождите, пока все зафиксированные транзакции репликации и подтверждения, активная вторичная база данных приложения. Запустите **sp_wait_for_database_copy_sync** только базы данных-источника.  
+  Использование этой процедуры ограничено связью [!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)] между источником и получателем. Вызов **sp_wait_for_database_copy_sync** заставляет приложение ожидать, пока все зафиксированные транзакции не будут реплицированы и подтверждены активной базой данных-получателем. Запустите **sp_wait_for_database_copy_sync** только в базе данных источника.  
   
 ||  
 |-|  
@@ -40,10 +41,10 @@ sp_wait_for_database_copy_sync [ @target_server = ] 'server_name'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ @target_server =] «имя_сервера»  
+ [@target_server =] "server_name"  
  Имя сервера базы данных SQL, на котором размещена активная база данных-получатель. Аргумент server_name имеет тип sysname и не имеет значения по умолчанию.  
   
- [ @target_database =] «database_name»  
+ [@target_database =] "database_name"  
  Имя активной базы данных-получателя. Аргумент database_name имеет тип sysname и не имеет значения по умолчанию.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
@@ -55,16 +56,16 @@ sp_wait_for_database_copy_sync [ @target_server = ] 'server_name'
   
 -   Невозможно найти ссылку на заданное имя сервера или базы данных.  
   
--   Потеряно подключение к Interlink. **sp_wait_for_database_copy_sync** вернет после истечения времени ожидания подключения.  
+-   Потеряно подключение к Interlink. **sp_wait_for_database_copy_sync** будет возвращено после истечения времени ожидания подключения.  
   
 ## <a name="permissions"></a>Разрешения  
  Эту системную хранимую процедуру может вызывать любой пользователь в базе данных-источнике. Имя входа должно быть пользователем и в базе данных-источнике, и в активной базе данных-получателе.  
   
-## <a name="remarks"></a>Примечания  
- Все транзакции, зафиксированные до **sp_wait_for_database_copy_sync** вызова отправляются активную вторичную базу данных.  
+## <a name="remarks"></a>Замечания  
+ Все транзакции, зафиксированные до вызова **sp_wait_for_database_copy_sync** , отправляются в активную базу данных-получатель.  
   
 ## <a name="examples"></a>Примеры  
- В следующем примере вызывается **sp_wait_for_database_copy_sync** чтобы убедиться, что все транзакции будут зафиксированы в основной базе данных, db0, отправляемых его активную вторичную базу данных на целевом сервере ubfyu5ssyt.  
+ В следующем примере вызывается **sp_wait_for_database_copy_sync** , чтобы убедиться, что все транзакции фиксируются в базе данных-источнике Db0, а затем отправляются в свою активную базу данных-получатель на целевом сервере ubfyu5ssyt.  
   
 ```  
 USE db0;  
@@ -73,8 +74,8 @@ EXEC sys.sp_wait_for_database_copy_sync @target_server = N'ubfyu5ssyt1', @target
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
- [sys.dm_continuous_copy_status &#40;базы данных SQL Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-continuous-copy-status-azure-sql-database.md)   
- [Георепликация динамические административные представления и функции &#40;база данных Azure SQL&#41;](../../relational-databases/system-dynamic-management-views/geo-replication-dynamic-management-views-and-functions-azure-sql-database.md)  
+## <a name="see-also"></a>См. также раздел  
+ [sys. dm_continuous_copy_status &#40;базы&#41; данных SQL Azure](../../relational-databases/system-dynamic-management-views/sys-dm-continuous-copy-status-azure-sql-database.md)   
+ [Динамические административные представления и функции &#40;Георепликации база данных SQL Azure&#41;](../../relational-databases/system-dynamic-management-views/geo-replication-dynamic-management-views-and-functions-azure-sql-database.md)  
   
   

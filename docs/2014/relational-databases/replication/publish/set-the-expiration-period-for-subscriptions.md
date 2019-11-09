@@ -15,25 +15,25 @@ ms.assetid: 542f0613-5817-42d0-b841-fb2c94010665
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f7045454dfd2d05e37e18cdc57f53090cf8b9e76
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 663de184c811291c4b583ddbaf2fb6862097c54f
+ms.sourcegitcommit: 619917a0f91c8f1d9112ae6ad9cdd7a46a74f717
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68212089"
+ms.lasthandoff: 11/09/2019
+ms.locfileid: "73882177"
 ---
 # <a name="set-the-expiration-period-for-subscriptions"></a>Установка срока действия подписок
   В этом разделе описывается установка срока действия подписок в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Срок действия подписок определяет период времени до истечения и удаления подписки. Дополнительные сведения см. в разделе [Subscription Expiration and Deactivation](../subscription-expiration-and-deactivation.md).  
   
  **В этом разделе**  
   
--   **Перед началом работы**  
+-   **Перед началом работы выполните следующие действия.**  
   
      [Рекомендации](#Recommendations)  
   
 -   **Для установки срока действия подписок используется:**  
   
-     [Среда SQL Server Management Studio](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -50,7 +50,7 @@ ms.locfileid: "68212089"
     -   Можно задать неограниченный срок действия подписок, но настоятельно рекомендуется не использовать такое значение, так как нельзя будет очистить метаданные.  
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
- Установите срок действия для подписок на странице **Общее** диалогового окна **Свойства публикации — \<Публикация>** . Дополнительные сведения о доступе к этому диалоговому окну см. в разделе [Просмотр и изменение свойств публикации](view-and-modify-publication-properties.md).  
+ Установите срок действия для подписок на странице **Общее** диалогового окна **Свойства публикации — \<Публикация>** . Дополнительные сведения о доступе к этому диалоговому окну см. в разделе [View and Modify Publication Properties](view-and-modify-publication-properties.md).  
   
 #### <a name="to-set-the-expiration-period-for-subscriptions"></a>Установка срока действия подписок  
   
@@ -63,11 +63,11 @@ ms.locfileid: "68212089"
   
 #### <a name="to-set-the-expiration-period-for-a-subscription-to-a-snapshot-or-transactional-publication"></a>Настройка срока действия подписки на моментальный снимок или публикацию транзакций  
   
-1.  Выполните процедуру [sp_addpublication](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql)на издателе. Укажите нужный срок действия подписки в часах в параметре **@retention** . По умолчанию срок хранения равен 336 часам. Дополнительные сведения см. в разделе [Create a Publication](create-a-publication.md).  
+1.  Выполните процедуру [sp_addpublication](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql)на издателе. Укажите нужный срок действия подписки в часах в параметре **\@retention**. По умолчанию срок хранения равен 336 часам. Дополнительные сведения см. в статье [Create a Publication](create-a-publication.md).  
   
 #### <a name="to-set-the-expiration-period-for-a-subscription-to-a-merge-publication"></a>Настройка срока действия подписки на публикацию слиянием  
   
-1.  Выполните процедуру [sp_addmergepublication](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql)на издателе. Укажите нужный срок действия подписки в параметре **@retention** . Укажите единицы измерения, в которых выражается период хранения, в параметре **@retention_period_unit** . Возможны следующие варианты:  
+1.  Выполните процедуру [sp_addmergepublication](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql)на издателе. Укажите нужный срок действия подписки в параметре **\@retention**. Укажите единицы измерения, в которых выражается период хранения, в параметре **\@retention_period_unit**. Возможны следующие варианты:  
   
     -   **1** = Неделя  
   
@@ -75,15 +75,15 @@ ms.locfileid: "68212089"
   
     -   **3** = Год  
   
-     По умолчанию срок хранения равен 14 дням. Дополнительные сведения см. в разделе [Create a Publication](create-a-publication.md).  
+     По умолчанию срок хранения равен 14 дням. Дополнительные сведения см. в статье [Create a Publication](create-a-publication.md).  
   
 #### <a name="to-change-the-expiration-period-for-a-subscription-to-a-snapshot-or-transactional-publication"></a>Изменение срока действия подписки на моментальный снимок или публикацию транзакций  
   
-1.  На издателе выполните хранимую процедуру [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql). Укажите значение **retention** в параметре **@property** и новый срок действия подписки в часах в параметре **@value** .  
+1.  На издателе выполните хранимую процедуру [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql). Укажите значение **retention** в параметре **\@property** и новый срок действия подписки в часах в параметре **\@value**.  
   
 #### <a name="to-change-the-expiration-period-for-a-subscription-to-a-merge-publication"></a>Изменение срока действия подписки на публикацию слиянием  
   
-1.  Выполните процедуру [sp_helpmergepublication](/sql/relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql), указав параметры **@publication** и **@publisher** . Запомните значение **retention_period_unit** в результирующем наборе, которое может быть одним из следующих:  
+1.  В издателе выполните хранимую процедуру [sp_helpmergepublication](/sql/relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql), указав параметры **\@publication** и **\@publisher**. Запомните значение **retention_period_unit** в результирующем наборе, которое может быть одним из следующих:  
   
     -   **0** = сутки;  
   
@@ -93,11 +93,11 @@ ms.locfileid: "68212089"
   
     -   **3** = Год  
   
-2.  На издателе выполните хранимую процедуру [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql). Укажите значение **retention** в параметре **@property** и новый срок действия подписки в виде текста на основе единицы измерения срока хранения из шага 1 в параметре **@value** .  
+2.  На издателе выполните хранимую процедуру [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql). Укажите значение **retention** в параметре **\@property** и новый срок действия подписки в виде текста на основе единицы измерения срока хранения из шага 1 в параметре **\@value**.  
   
-3.  (Необязательно) На издателе выполните хранимую процедуру [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql). Укажите значение **retention_period_unit** в параметре **@property** и новую единицу измерения для срока действия подписки в параметре **@value** .  
+3.  (Необязательно) На издателе выполните хранимую процедуру [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql). Укажите значение **retention_period_unit** в параметре **\@property** и новую единицу измерения для срока действия подписки в параметре **\@value**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
  [Replication System Stored Procedures Concepts](../concepts/replication-system-stored-procedures-concepts.md)   
  [Subscription Expiration and Deactivation](../subscription-expiration-and-deactivation.md)  
   

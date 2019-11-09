@@ -1,6 +1,6 @@
 ---
-title: Правила брандмауэра хранимые процедуры (база данных Azure SQL) | Документация Майкрософт
-ms.custom: ''
+title: Хранимые процедуры правил брандмауэра
+titleSuffix: Azure SQL Database
 ms.date: 07/28/2016
 ms.service: sql-database
 ms.reviewer: ''
@@ -15,18 +15,19 @@ helpviewer_keywords:
 ms.assetid: 3d4c2585-00de-46b5-8eee-0efb71cb3aea
 author: VanMSFT
 ms.author: vanto
+ms.custom: seo-dt-2019
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: ec667b6fc6c12f94d9e0a5e87f61b4acb7f98f40
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4b4e6427f3ad91f06708e02bacca50b4e7c279a9
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67942237"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73843883"
 ---
-# <a name="firewall-rules-stored-procedures-azure-sql-database"></a>Правила брандмауэра хранимые процедуры (база данных Azure SQL)
+# <a name="firewall-rules-stored-procedures-azure-sql-database"></a>Хранимые процедуры правил брандмауэра (база данных SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
 
-  В этом разделе представлены следующие хранимые процедуры, которые создают и удаляют правила брандмауэра. [!INCLUDE[tsql_md](../../includes/tsql-md.md)] правила брандмауэра можно использовать с [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] и [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]. Дополнительные сведения см. в разделе [правила брандмауэра Настройка базы данных SQL Azure: Обзор](https://azure.microsoft.com/documentation/articles/sql-database-firewall-configure/).
+  В этом разделе представлены следующие хранимые процедуры, которые создают и удаляют правила брандмауэра. [!INCLUDE[tsql_md](../../includes/tsql-md.md)] правила брандмауэра можно использовать с [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] и [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]. Дополнительные сведения см. в статье [о настройке правил брандмауэра для базы данных SQL Azure](https://azure.microsoft.com/documentation/articles/sql-database-firewall-configure/).
   
  
   
@@ -35,7 +36,7 @@ ms.locfileid: "67942237"
 |[sp_set_firewall_rule (база данных Azure SQL)](../../relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database.md)|[sp_delete_firewall_rule &#40;базы данных SQL Azure&#41;](../../relational-databases/system-stored-procedures/sp-delete-firewall-rule-azure-sql-database.md)|  
 |[sp_set_database_firewall_rule (база данных Azure SQL)](../../relational-databases/system-stored-procedures/sp-set-database-firewall-rule-azure-sql-database.md)|[sp_delete_database_firewall_rule &#40;базы данных SQL Azure&#41;](../../relational-databases/system-stored-procedures/sp-delete-database-firewall-rule-azure-sql-database.md)|  
   
-Для [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], используйте окно правила брандмауэра. Дополнительные сведения о брандмауэре Windows см. в статье [Настройка брандмауэра Windows для доступа к компоненту Database Engine](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md).   
+Для [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]используйте правила брандмауэра окна. Дополнительные сведения о брандмауэре Windows см. в статье [Настройка брандмауэра Windows для доступа к компоненту Database Engine](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md).   
   
 
 

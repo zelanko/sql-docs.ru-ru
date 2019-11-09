@@ -15,21 +15,21 @@ ms.assetid: 408a1360-12ee-4896-ac94-482ae839593b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 08623cc2f9bf5d57141644a9f24c01d29d04cbe3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fa08a7f84cd413f1212cc73d4242b5da70fd33eb
+ms.sourcegitcommit: 619917a0f91c8f1d9112ae6ad9cdd7a46a74f717
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62865035"
+ms.lasthandoff: 11/09/2019
+ms.locfileid: "73882282"
 ---
-# <a name="delete-a-publication"></a>Удаление публикации
+# <a name="delete-a-publication"></a>Delete a Publication
   В данном разделе описывается удаление публикации в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]или объектов RMO.  
   
  **В этом разделе**  
   
 -   **Для удаления публикации используется:**  
   
-     [Среда SQL Server Management Studio](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -58,10 +58,10 @@ ms.locfileid: "62865035"
   
     -   Для удаления отдельной публикации в базе данных публикации на издателе выполните инструкцию [sp_droppublication](/sql/relational-databases/system-stored-procedures/sp-droppublication-transact-sql) .  
   
-    -   Чтобы удалить все публикации и удалить все объекты репликации из опубликованной базы данных, выполните процедуру [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) на издателе. Укажите значение `tran` для **@type** . Если распространитель недоступен или база данных находится в подозрительном состоянии или в режиме «вне сети», укажите значение **1** в параметре **@force** . Укажите имя базы данных в параметре **@dbname** , если процедура [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) не выполнялась в базе данных публикации (необязательно).  
+    -   Чтобы удалить все публикации и удалить все объекты репликации из опубликованной базы данных, выполните процедуру [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) на издателе. Укажите значение `tran` для **\@типа**. Если распространитель недоступен или база данных находится в подозрительном состоянии или в режиме "вне сети", укажите значение **1** в параметре **\@force** (необязательно). Укажите имя базы данных в параметре **\@dbname**, если процедура [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) не выполнялась в базе данных публикации (необязательно).  
   
         > [!NOTE]  
-        >  Если задать значение **1** в параметре **@force** , в базе данных могут остаться объекты публикации, связанные с репликацией.  
+        >  Если задать значение **1** в параметре **\@force**, в базе данных могут остаться объекты публикации, связанные с репликацией.  
   
 2.  Если база данных содержит только одну публикацию, то для того, чтобы отключить публикацию текущей базы данных с помощью репликации моментальных снимков или транзакций, выполните хранимую процедуру [sp_replicationdboption (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql) (необязательно).  
   
@@ -73,10 +73,10 @@ ms.locfileid: "62865035"
   
     -   Чтобы удалить отдельную публикацию, выполните инструкцию [sp_dropmergepublication (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-dropmergepublication-transact-sql) в базе данных публикации на издателе.  
   
-    -   Чтобы удалить все публикации и удалить все объекты репликации из опубликованной базы данных, выполните процедуру [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) на издателе. Укажите значение `merge` для **@type** . Если распространитель недоступен или база данных находится в подозрительном состоянии или в режиме «вне сети», укажите значение **1** в параметре **@force** . Укажите имя базы данных в параметре **@dbname** , если процедура [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) не выполнялась в базе данных публикации (необязательно).  
+    -   Чтобы удалить все публикации и удалить все объекты репликации из опубликованной базы данных, выполните процедуру [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) на издателе. Укажите значение `merge` для **\@типа**. Если распространитель недоступен или база данных находится в подозрительном состоянии или в режиме "вне сети", укажите значение **1** в параметре **\@force** (необязательно). Укажите имя базы данных в параметре **\@dbname**, если процедура [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) не выполнялась в базе данных публикации (необязательно).  
   
         > [!NOTE]  
-        >  Если задать значение **1** в параметре **@force** , в базе данных могут остаться объекты публикации, связанные с репликацией.  
+        >  Если задать значение **1** в параметре **\@force**, в базе данных могут остаться объекты публикации, связанные с репликацией.  
   
 2.  Если база данных содержит только одну публикацию, то для того, чтобы отключить публикацию текущей базы данных с помощью репликации слияния, выполните хранимую процедуру [sp_replicationdboption &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql) (необязательно).  
   
@@ -104,17 +104,17 @@ ms.locfileid: "62865035"
   
 4.  Чтобы убедиться в существовании публикации, проверьте свойство <xref:Microsoft.SqlServer.Replication.ReplicationObject.IsExistingObject%2A> . Если значение этого свойства равно `false`, то либо на шаге 3 были неверно определены свойства публикации, либо публикация не существует.  
   
-5.  Вызовите метод <xref:Microsoft.SqlServer.Replication.Publication.Remove%2A>.  
+5.  Вызовите метод <xref:Microsoft.SqlServer.Replication.Publication.Remove%2A> .  
   
 6.  (Необязательно) Если в базе данных не существует других публикаций транзакций, базу данных можно отключить от публикации транзакций следующим образом.  
   
     1.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.ReplicationDatabase> . В качестве значения для свойства <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> укажите экземпляр соединения <xref:Microsoft.SqlServer.Management.Common.ServerConnection> , созданный на шаге 1.  
   
-    2.  Вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A>. Если этот метод возвращает значение `false`, убедитесь, что база данных существует.  
+    2.  Вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> . Если этот метод возвращает значение `false`, убедитесь, что база данных существует.  
   
-    3.  Задайте для свойства <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.EnabledTransPublishing%2A> значение `false`.  
+    3.  Установите свойство <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.EnabledTransPublishing%2A> в значение `false`.  
   
-    4.  Вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A>.  
+    4.  Вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> .  
   
 7.  Закройте соединения.  
   
@@ -128,17 +128,17 @@ ms.locfileid: "62865035"
   
 4.  Чтобы убедиться в существовании публикации, проверьте свойство <xref:Microsoft.SqlServer.Replication.ReplicationObject.IsExistingObject%2A> . Если значение этого свойства равно `false`, то либо на шаге 3 были неверно определены свойства публикации, либо публикация не существует.  
   
-5.  Вызовите метод <xref:Microsoft.SqlServer.Replication.Publication.Remove%2A>.  
+5.  Вызовите метод <xref:Microsoft.SqlServer.Replication.Publication.Remove%2A> .  
   
 6.  (Необязательно) Если в базе данных не существует других публикаций слиянием, базу данных можно отключить от публикации слиянием следующим образом.  
   
     1.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.ReplicationDatabase> . Присвойте свойству <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> значение экземпляра <xref:Microsoft.SqlServer.Management.Common.ServerConnection> из шага 1.  
   
-    2.  Вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A>. Если этот метод возвращает значение `false`, проверьте, существует ли база данных.  
+    2.  Вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> . Если этот метод возвращает значение `false`, проверьте, существует ли база данных.  
   
-    3.  Задайте для свойства <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.EnabledMergePublishing%2A> значение `false`.  
+    3.  Установите свойство <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.EnabledMergePublishing%2A> в значение `false`.  
   
-    4.  Вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A>.  
+    4.  Вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> .  
   
 7.  Закройте соединения.  
   
@@ -155,7 +155,7 @@ ms.locfileid: "62865035"
   
  [!code-vb[HowTo#rmo_vb_DropMergePub](../../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_dropmergepub)]  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
  [Replication System Stored Procedures Concepts](../concepts/replication-system-stored-procedures-concepts.md)   
  [Публикация данных и объектов базы данных](publish-data-and-database-objects.md)  
   

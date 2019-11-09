@@ -1,6 +1,6 @@
 ---
-title: sys.elastic_pool_resource_stats (база данных SQL Azure) | Документация Майкрософт
-ms.custom: ''
+title: sys.elastic_pool_resource_stats
+titleSuffix: Azure SQL Database
 ms.date: 01/28/2019
 ms.service: sql-database
 ms.prod_service: sql-database
@@ -16,56 +16,57 @@ helpviewer_keywords:
 ms.assetid: f242c1bd-3cc8-4c8b-8aaf-c79b6a8a0329
 author: stevestein
 ms.author: sstein
+ms.custom: seo-dt-2019
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: ec3fae7d4e2a649ea05c48d400728e229607d92f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0712785a5af3e8cc3c606a597ba02e0075c88dd9
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68079274"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73843874"
 ---
-# <a name="syselasticpoolresourcestats-azure-sql-database"></a>sys.elastic_pool_resource_stats (база данных SQL Azure)
+# <a name="syselastic_pool_resource_stats-azure-sql-database"></a>sys. elastic_pool_resource_stats (база данных SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  Возвращает статистику использования ресурсов для всех эластичных пулов на сервере базы данных SQL. Для каждого пула эластичных БД имеется одна строка каждые 15 секунд окна (четыре строки в минуту) отчета. Это включает в себя загрузки ЦП, ввода-ВЫВОДА, журнала, использованный объем хранилища и параллельных запросов и сеансов всеми базами данных в пуле. Эти данные сохраняются в течение 14 дней. 
+  Возвращает статистику использования ресурсов для всех эластичных пулов на сервере базы данных SQL. Для каждого пула эластичных БД существует одна строка для каждого 15-секундного окна отчетов (четыре строки в минуту). Сюда входят ЦП, ввод-вывод, журнал, использование хранилища и одновременный запрос/сеанс по всем базам данных в пуле. Эти данные сохранены в течение 14 дней. 
   
 ||  
 |-|  
-|**Область применения**:  [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ДО ВЕРСИИ 12.|  
+|**Применимо к**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] V12.|  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**start_time**|**datetime2**|Время в формате UTC, с которой начинается 15 секунд, в течение отчетного интервала.|  
-|**end_time**|**datetime2**|Время в формате UTC, указывающий на конец отчетного интервала интервал 15 секунд.|  
+|**start_time**|**datetime2**|Время в формате UTC, обозначающее начало 15 секунд отчетного интервала.|  
+|**end_time**|**datetime2**|Время в формате UTC, указывающее Окончание интервала составления отчета за 15 секунд.|  
 |**elastic_pool_name**|**nvarchar(128)**|Имя пула эластичных баз данных.|  
-|**avg_cpu_percent**|**Decimal(5,2)**|Среднее использование вычислительных ресурсов в процентах от предела пула.|  
-|**avg_data_io_percent**|**Decimal(5,2)**|Среднее использование ввода-вывода в процентах от предела пула.|  
-|**avg_log_write_percent**|**Decimal(5,2)**|Среднее использование ресурсов записи в процентах от предела пула.|  
-|**avg_storage_percent**|**Decimal(5,2)**|Среднее использование хранилища в процентах от предела пула.|  
-|**max_worker_percent**|**Decimal(5,2)**|Максимальное количество одновременных рабочих ролей (запросов) в процентах от предела пула.|  
-|**max_session_percent**|**Decimal(5,2)**|Максимальное число одновременных сеансов в процентах от предела пула.|  
-|**elastic_pool_dtu_limit**|**int**|Текущее максимальное значение параметра DTU для этого пула эластичных БД в течение этого интервала.|  
-|**elastic_pool_storage_limit_mb**|**bigint**|Значение для этого пула эластичных БД в мегабайтах во время этого интервала текущего размера хранилища эластичного пула.|
-|**avg_allocated_storage_percent**|**Decimal(5,2)**|Процент пространства данных, выделенной с помощью всех баз данных в эластичном пуле.  Это отношение данных пространства, выделенного для данных максимальный размер для эластичного пула.  Дополнительные сведения см.: [Управление файлами места в базе данных SQL](https://docs.microsoft.com/azure/sql-database/sql-database-file-space-management)|  
+|**avg_cpu_percent**|**Decimal (5, 2)**|Среднее использование вычислений в процентах от предела пула.|  
+|**avg_data_io_percent**|**Decimal (5, 2)**|Среднее использование операций ввода-вывода в процентах в зависимости от ограничения пула.|  
+|**avg_log_write_percent**|**Decimal (5, 2)**|Среднее использование ресурсов записи в процентах от предела пула.|  
+|**avg_storage_percent**|**Decimal (5, 2)**|Средний уровень использования хранилища в процентах от предела хранилища пула.|  
+|**max_worker_percent**|**Decimal (5, 2)**|Максимальное число одновременных рабочих процессов (запросов) в процентах на основе ограничения пула.|  
+|**max_session_percent**|**Decimal (5, 2)**|Максимальное количество одновременных сеансов в процентах на основе ограничения пула.|  
+|**elastic_pool_dtu_limit**|**int**|Текущее значение максимального числа DTU эластичного пула для этого эластичного пула в течение этого интервала.|  
+|**elastic_pool_storage_limit_mb**|**bigint**|Текущее значение максимального размера хранилища эластичного пула для этого пула эластичных БД в мегабайтах за этот интервал.|
+|**avg_allocated_storage_percent**|**Decimal (5, 2)**|Процент пространства данных, выделенного всеми базами данных в эластичном пуле.  Это отношение пространства данных, выделенного для максимального размера данных для эластичного пула.  Дополнительные сведения см. [в разделе Управление файловым пространством в базе данных SQL](https://docs.microsoft.com/azure/sql-database/sql-database-file-space-management) .|  
   
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Замечания
 
- Это представление существует в базе данных master сервера базы данных SQL. Необходимо подключение к базе данных master, к запросу **sys.elastic_pool_resource_stats**.  
+ Это представление существует в базе данных master сервера базы данных SQL. Чтобы запросить представление **sys. elastic_pool_resource_stats**, необходимо подключиться к базе данных master.  
   
 ## <a name="permissions"></a>Разрешения
 
- Требуется членство в **dbmanager** роли.  
+ Требуется членство в роли **DBManager** .  
   
 ## <a name="examples"></a>Примеры
 
- Следующий пример возвращает данные об использовании ресурсов, упорядоченные по самой последней времени для всех пулов эластичных баз данных в текущей базе данных SQL server.  
+ В следующем примере возвращаются данные об использовании ресурсов, упорядоченные по последнему времени для всех пулов эластичных баз данных на текущем сервере базы данных SQL.  
   
 ```sql
 SELECT * FROM sys.elastic_pool_resource_stats
 ORDER BY end_time DESC;  
 ```
 
- В следующем примере вычисляется среднее относительное потребление DTU для данного пула.  
+ В следующем примере вычисляется средний процент использования DTU для заданного пула.  
 
 ```sql
 SELECT start_time, end_time,
@@ -76,11 +77,11 @@ WHERE elastic_pool_name = '<your pool name>'
 ORDER BY end_time DESC;  
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
- [Укротите взрывной рост объемов данных с эластичными базами данных](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool/)   
- [Создание и управление ими в пуле эластичных баз данных баз данных SQL (Предварительная версия)](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool-portal/)   
- [sys.resource_stats &#40;базы данных SQL Azure&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md)   
- [sys.dm_db_resource_stats &#40;базы данных SQL Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database.md)  
+ [Рост окончании образом взрывной с помощью эластичных баз данных](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool/)   
+ [Создание пула эластичных баз данных SQL и управление им (Предварительная версия)](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool-portal/)   
+ [sys. resource_stats &#40;базы&#41; данных SQL Azure](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md)   
+ [sys. dm_db_resource_stats &#40;базы данных SQL Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database.md)  
   
   
