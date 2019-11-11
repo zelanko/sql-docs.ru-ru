@@ -23,14 +23,14 @@ ms.assetid: 3dbe8532-31b6-4862-8b2a-e58b00b964de
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ffda5a599b9ef54f1e36e2d45d0c6c24117ba050
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c4bdf8b5057fcbf405d78872f7329c70c754ff76
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68022211"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73843343"
 ---
-# <a name="sessionuser-transact-sql"></a>SESSION_USER (Transact-SQL)
+# <a name="session_user-transact-sql"></a>SESSION_USER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Функция SESSION_USER возвращает имя пользователя текущего контекста в текущей базе данных.  
@@ -53,7 +53,7 @@ SESSION_USER
   
 ## <a name="examples"></a>Примеры  
   
-### <a name="a-using-sessionuser-to-return-the-user-name-of-the-current-session"></a>A. Использование функции SESSION_USER для получения имени пользователя текущего сеанса  
+### <a name="a-using-session_user-to-return-the-user-name-of-the-current-session"></a>A. Использование функции SESSION_USER для получения имени пользователя текущего сеанса  
  В следующем примере объявляется переменная типа `nchar`, ей присваивается текущее значение `SESSION_USER`, а затем эта переменная выводится на печать вместе с текстовым описанием.  
   
 ```  
@@ -72,7 +72,7 @@ This session's current user is: Surya
 (1 row(s) affected)
 ```  
   
-### <a name="b-using-sessionuser-with-default-constraints"></a>Б. Использование функции SESSION_USER с ограничениями DEFAULT  
+### <a name="b-using-session_user-with-default-constraints"></a>Б. Использование функции SESSION_USER с ограничениями DEFAULT  
  В следующем примере создается таблица, которая использует `SESSION_USER` как ограничение `DEFAULT` для имени лица, регистрирующего прием отгрузки.  
   
 ```  
@@ -139,7 +139,7 @@ Order #   Customer #  When Delivered       Received By
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-using-sessionuser-to-return-the-user-name-of-the-current-session"></a>В. Использование функции SESSION_USER для получения имени пользователя текущего сеанса  
+### <a name="c-using-session_user-to-return-the-user-name-of-the-current-session"></a>В. Использование функции SESSION_USER для получения имени пользователя текущего сеанса  
  В приведенном ниже примере возвращается пользователь текущего сеанса.  
   
 ```  
@@ -152,7 +152,7 @@ SELECT SESSION_USER;
  [CURRENT_TIMESTAMP (Transact-SQL)](../../t-sql/functions/current-timestamp-transact-sql.md)   
  [CURRENT_USER (Transact-SQL)](../../t-sql/functions/current-user-transact-sql.md)   
  [SYSTEM_USER (Transact-SQL)](../../t-sql/functions/system-user-transact-sql.md)   
- [Системные функции (Transact-SQL)](../../relational-databases/system-functions/system-functions-for-transact-sql.md)   
+ [Системные функции (Transact-SQL)](../../relational-databases/system-functions/system-functions-category-transact-sql.md)   
  [USER (Transact-SQL)](../../t-sql/functions/user-transact-sql.md)   
  [USER_NAME (Transact-SQL)](../../t-sql/functions/user-name-transact-sql.md)  
   

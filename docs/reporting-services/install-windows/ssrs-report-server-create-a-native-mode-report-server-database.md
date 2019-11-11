@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 81b9f4ad-800b-4688-8b47-a5a83dc8ff10
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 58ed98edccbf1f9ccf83aef7321ffb6a3bcb442d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5b80a7e6ee0d68009ff21f01ba0c75b3f0a7fb33
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62652342"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593557"
 ---
 # <a name="create-a-native-mode-report-server-database"></a>Создание базы данных сервера отчетов, работающего в собственном режиме
 
@@ -67,7 +67,7 @@ ms.locfileid: "62652342"
   
 6.  Перезапустите службу.  
   
-7.  Запустите программный брандмауэр и откройте порт, прослушиваемый [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . В экземпляре по умолчанию обычно используется порт 1433 для соединений TCP/IP. Дополнительные сведения о брандмауэре Windows см. в статье [Настройка брандмауэра Windows для доступа к компоненту Database Engine](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md) в электронной документации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+7.  Запустите программный брандмауэр и откройте порт, прослушиваемый [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . В экземпляре по умолчанию обычно используется порт 1433 для соединений TCP/IP. Дополнительные сведения о брандмауэре Windows см. в статье [Настройка брандмауэра Windows для доступа к компоненту Database Engine](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md).  
   
 ### <a name="to-create-a-local-report-server-database"></a>Создание базы данных локального сервера отчетов  
   
@@ -111,7 +111,7 @@ ms.locfileid: "62652342"
   
 7.  Просмотрите сведения на странице "Сводка" и удостоверьтесь в том, что все настройки указаны правильно, после этого нажмите кнопку **Далее**.  
   
-8.  Проверьте подключение, щелкнув URL-адрес на странице "URL-адрес сервера отчетов". Тест будет успешным лишь в том случае, если эти URL-адреса заранее определены. Если подключение к базе данных сервера отчетов работает, вы увидите иерархию папок сервера отчетов. Дополнительные сведения см. в статье [Проверка установки служб Reporting Services](../../reporting-services/install-windows/verify-a-reporting-services-installation.md) в электронной документации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+8.  Проверьте подключение, щелкнув URL-адрес на странице "URL-адрес сервера отчетов". Тест будет успешным лишь в том случае, если эти URL-адреса заранее определены. Если подключение к базе данных сервера отчетов работает, вы увидите иерархию папок сервера отчетов. Дополнительные сведения см. в статье [Проверка установки служб Reporting Services](../../reporting-services/install-windows/verify-a-reporting-services-installation.md).  
 
 ## <a name="change-database-credentials"></a>Учетные данные базы данных
 
@@ -145,7 +145,7 @@ ms.locfileid: "62652342"
 
 6. После внесения изменений выберите **Готово**.
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 [Настройка подключения к базе данных сервера отчетов](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
 [Управление сервером отчетов служб Reporting Services в собственном режиме](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)   

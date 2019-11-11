@@ -26,14 +26,14 @@ ms.assetid: 565984cd-60c6-4df7-83ea-2349b838ccb2
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 747ea38576b52b6a3011fd4f0b197a2b7222bcd3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 188248ea2a09875e71905878a9d9f85c3ebfcd78
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68117501"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73843572"
 ---
-# <a name="systemuser-transact-sql"></a>SYSTEM_USER (Transact-SQL)
+# <a name="system_user-transact-sql"></a>SYSTEM_USER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
   Позволяет вставить в таблицу значение текущего имени входа, назначенного системой, если не задано значение по умолчанию.  
@@ -47,7 +47,7 @@ SYSTEM_USER
 ```  
   
 ## <a name="return-types"></a>Типы возвращаемых данных  
- **nchar**  
+ **nvarchar(128)**  
   
 ## <a name="remarks"></a>Remarks  
  Функцию SYSTEM_USER можно использовать с ограничениями DEFAULT в инструкциях CREATE TABLE и ALTER TABLE. Она также может использоваться как стандартная функция.  
@@ -60,7 +60,7 @@ SYSTEM_USER
   
 ## <a name="examples"></a>Примеры  
   
-### <a name="a-using-systemuser-to-return-the-current-system-user-name"></a>A. Использование функции SYSTEM_USER для получения текущего системного имени пользователя  
+### <a name="a-using-system_user-to-return-the-current-system-user-name"></a>A. Использование функции SYSTEM_USER для получения текущего системного имени пользователя  
  В следующем примере объявляется переменная `char`, в которой сохраняется текущее значение `SYSTEM_USER`, а затем значение этой переменной выводится на печать.  
   
 ```  
@@ -79,7 +79,7 @@ The current system user is: WillisJo
 (1 row(s) affected)
  ```  
   
-### <a name="b-using-systemuser-with-default-constraints"></a>Б. Использование функции SYSTEM_USER с ограничениями DEFAULT  
+### <a name="b-using-system_user-with-default-constraints"></a>Б. Использование функции SYSTEM_USER с ограничениями DEFAULT  
  В следующем примере создается таблица с функцией `SYSTEM_USER` в качестве ограничения `DEFAULT` для столбца `SRep_tracking_user`.  
   
 ```  
@@ -129,7 +129,7 @@ Territory_id Rep_id Last_sale            SRep_tracking_user
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-using-systemuser-to-return-the-current-system-user-name"></a>В. Использование функции SYSTEM_USER для получения текущего системного имени пользователя  
+### <a name="c-using-system_user-to-return-the-current-system-user-name"></a>В. Использование функции SYSTEM_USER для получения текущего системного имени пользователя  
  В приведенном ниже примере возвращается текущее значение `SYSTEM_USER`.  
   
 ```  
@@ -142,7 +142,7 @@ SELECT SYSTEM_USER;
  [CURRENT_TIMESTAMP (Transact-SQL)](../../t-sql/functions/current-timestamp-transact-sql.md)   
  [CURRENT_USER (Transact-SQL)](../../t-sql/functions/current-user-transact-sql.md)   
  [SESSION_USER (Transact-SQL)](../../t-sql/functions/session-user-transact-sql.md)   
- [Системные функции (Transact-SQL)](../../relational-databases/system-functions/system-functions-for-transact-sql.md)   
+ [Системные функции (Transact-SQL)](../../relational-databases/system-functions/system-functions-category-transact-sql.md)   
  [USER (Transact-SQL)](../../t-sql/functions/user-transact-sql.md)  
   
   

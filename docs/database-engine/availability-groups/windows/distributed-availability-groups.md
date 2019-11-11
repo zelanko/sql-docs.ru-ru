@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 0ca8d93135a0034300bac4f5f5542350df25e866
-ms.sourcegitcommit: 4fb6bc7c81a692a2df706df063d36afad42816af
+ms.openlocfilehash: ee844af9f851d1dab1d77c54dfdd04fadd4d3c06
+ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73049844"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73706228"
 ---
 # <a name="distributed-availability-groups"></a>Распределенные группы доступности
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "73049844"
 
 ![Распределенная группа доступности и перемещение данных в этой группе](./media/distributed-availability-group/dag-02-distributed-ag-data-movement.png)
 
-Единственный способ сделать так, чтобы первичная реплика AG2 принимала вставки, обновления и удаления, — это вручную выполнить отработку отказа распределенной группы доступности из AG1. Поскольку AG 1 содержит доступную для записи копию базы данных, после отработки отказа группа доступности AG2 сможет принимать вставки, обновления и удаления. Сведения о том, как выполнить отработку отказа с переходом из одной группы доступности в другую, см. в статье [Отработка отказа с переходом на вторичную группу доступности]( https://docs.microsoft.com/sql/database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups).
+Единственный способ сделать так, чтобы первичная реплика AG2 принимала вставки, обновления и удаления, — это вручную выполнить отработку отказа распределенной группы доступности из AG1. Поскольку AG 1 содержит доступную для записи копию базы данных, после отработки отказа группа доступности AG2 сможет принимать вставки, обновления и удаления. Сведения о том, как выполнить отработку отказа с переходом из одной группы доступности в другую, см. в статье [Отработка отказа с переходом на вторичную группу доступности](configure-distributed-availability-groups.md#failover).
 
 > [!NOTE]
 > Распределенные группы доступности в SQL Server 2016 поддерживают отработку отказа только с переходом из одной группы доступности в другую с использованием параметра FORCE_FAILOVER_ALLOW_DATA_LOSS.

@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: f55c6a0e-b6bd-4803-b51a-f3a419803024
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 64637e048277db5ad082b2b6a9ffad4b4b0d3ea7
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: abae05ff73ff1da46bda029b32320a9deccfbf51
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68892295"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73637972"
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -284,7 +284,7 @@ ms.locfileid: "68892295"
   
          При наличии параметра **-n** служебная программа **netstat** выводит адреса и номера портов активных подключений TCP в числовом виде. При наличии параметра **-a** служебная программа **netstat** выводит порты TCP и UDP, которые прослушиваются компьютером.  
   
--   Служебную программу **PortQry** можно использовать для вывода состояния портов TCP/IP (прослушивается, не прослушивается, фильтруется). В состоянии фильтрации порт может либо прослушиваться, либо не прослушиваться. Это состояние указывает, что программа не получила ответа от порта. Служебную программу **PortQry** можно скачать из [Центра загрузки Майкрософт](https://go.microsoft.com/fwlink/?LinkId=28590).  
+-   Служебную программу **PortQry** можно использовать для вывода состояния портов TCP/IP (прослушивается, не прослушивается, фильтруется). В состоянии фильтрации порт может либо прослушиваться, либо не прослушиваться. Это состояние указывает, что программа не получила ответа от порта. Служебную программу **PortQry** можно скачать из [Центра загрузки Майкрософт](https://www.microsoft.com/download/details.aspx?id=17148).  
   
 ## <a name="see-also"></a>См. также:  
  [Общие сведения о службе и требования к сетевым портам в системе Windows Server](https://support.microsoft.com/kb/832017)   

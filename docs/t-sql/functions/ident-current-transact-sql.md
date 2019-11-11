@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 21517ced-39f5-4cd8-8d9c-0a0b8aff554a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 619ce91eb47d69298c2b4bc53741f2a8cb7461dd
-ms.sourcegitcommit: 316c25fe7465b35884f72928e91c11eea69984d5
+ms.openlocfilehash: 2271bbdd9a5b61fdfbf4985ca68acbffbc0b0b9d
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68969377"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73843696"
 ---
 # <a name="ident_current-transact-sql"></a>IDENT_CURRENT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -143,6 +143,6 @@ SELECT IDENT_CURRENT('t7');
  [IDENT_INCR (Transact-SQL)](../../t-sql/functions/ident-incr-transact-sql.md)   
  [IDENT_SEED (Transact-SQL)](../../t-sql/functions/ident-seed-transact-sql.md)   
  [Выражения (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md)   
- [Системные функции (Transact-SQL)](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
+ [Системные функции (Transact-SQL)](../../relational-databases/system-functions/system-functions-category-transact-sql.md)  
   
   

@@ -7,12 +7,12 @@ ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/10/2018
-ms.openlocfilehash: de0ea61c93de1464ebde068ef47d85e89b8a1587
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 3cf868f9fb89bf6daa20ae6977bf1111649d46c1
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68261606"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73594085"
 ---
 # <a name="configure-the-report-server-service-account-ssrs-configuration-manager"></a>Настройка учетной записи службы сервера отчетов (диспетчер конфигурации служб SSRS)
 
@@ -36,7 +36,7 @@ ms.locfileid: "68261606"
   
 - Автоматически обновляет разрешения на вход в экземпляр компонента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] , на котором размещена база данных сервера отчетов. Новая учетная запись будет добавлена к роли **RSExecRole**.  
   
-     Старое имя входа в базе данных автоматически не удаляется. Не забывайте удалять учетные записи, которые больше не используются. Дополнительные сведения см. в статье [Администрирование базы данных сервера отчетов (службы Reporting Services в собственном режиме)](../../reporting-services/report-server/administer-a-report-server-database-ssrs-native-mode.md) в электронной документации по SQL Server.  
+     Старое имя входа в базе данных автоматически не удаляется. Не забывайте удалять учетные записи, которые больше не используются. Дополнительные сведения см. [в разделе Администрирование базы данных &#40;сервера отчетов SSRS в&#41;собственном режиме](../../reporting-services/report-server/administer-a-report-server-database-ssrs-native-mode.md).  
   
      Предоставление новой учетной записи службы разрешений производится только в момент первой настройки подключения к базе данных сервера отчетов. Если подключение к базе данных сервера отчетов настроено на использование учетной записи пользователя домена или учетной записи базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , то на эти настройки обновление учетной записи службы не влияет.  
   

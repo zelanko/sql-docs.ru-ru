@@ -23,12 +23,12 @@ ms.assetid: 7aa816de-529a-4f6c-a99f-4d5a9ef599eb
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4771c6d611292157caf8247288f36648c8ad5179
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 75693068e1aa030f9027b1918becd27e8ec9cc5c
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68109391"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73843611"
 ---
 # <a name="isnumeric-transact-sql"></a>ISNUMERIC (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -62,7 +62,7 @@ ISNUMERIC ( expression )
 
   
 > [!NOTE]  
->    ISNUMERIC возвращает «1» для некоторых символов, которые не являются числами (например, плюс (+), минус (-) и такие символы валют, как знак доллара ($)). Полный список символов валют см. в статье [Типы money и smallmoney (Transact-SQL)](../../t-sql/data-types/money-and-smallmoney-transact-sql.md).  
+>  ISNUMERIC возвращает «1» для некоторых символов, которые не являются числами (например, плюс (+), минус (-) и такие символы валют, как знак доллара ($)). Полный список символов валют см. в статье [Типы money и smallmoney (Transact-SQL)](../../t-sql/data-types/money-and-smallmoney-transact-sql.md).  
   
 ## <a name="examples"></a>Примеры  
  Следующий пример использует функцию `ISNUMERIC` для возврата всех почтовых индексов, не являющихся числовыми значениями.  
@@ -89,7 +89,7 @@ GO
   
 ## <a name="see-also"></a>См. также:  
  [Выражения (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md)   
- [Системные функции (Transact-SQL)](../../relational-databases/system-functions/system-functions-for-transact-sql.md)   
+ [Системные функции (Transact-SQL)](../../relational-databases/system-functions/system-functions-category-transact-sql.md)   
  [Типы данных (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)  
   
   

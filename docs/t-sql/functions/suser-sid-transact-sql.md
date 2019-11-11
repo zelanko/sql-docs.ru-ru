@@ -24,14 +24,14 @@ helpviewer_keywords:
 ms.assetid: 57b42a74-94e1-4326-85f1-701b9de53c7d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 6eed882fffc8d6752d4884f006450efc5b9257be
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 97043c1232dd3003ff5c7101403c53425d75bca5
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68117602"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73843590"
 ---
-# <a name="susersid-transact-sql"></a>SUSER_SID (Transact-SQL)
+# <a name="suser_sid-transact-sql"></a>SUSER_SID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Возвращает идентификатор безопасности (SID) для указанного имени входа.  
@@ -70,14 +70,14 @@ SUSER_SID ( [ 'login' ] [ , Param2 ] )
   
 ## <a name="examples"></a>Примеры  
   
-### <a name="a-using-susersid"></a>A. Использование SUSER_SID  
+### <a name="a-using-suser_sid"></a>A. Использование SUSER_SID  
  В приведенном ниже примере возвращается идентификатор безопасности (SID) для текущего контекста безопасности.  
   
 ```  
 SELECT SUSER_SID();  
 ```  
   
-### <a name="b-using-susersid-with-a-specific-login"></a>Б. Использование SUSER_SID с определенным именем входа  
+### <a name="b-using-suser_sid-with-a-specific-login"></a>Б. Использование SUSER_SID с определенным именем входа  
  В приведенном ниже примере возвращается идентификатор безопасности для имени для входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `sa`.  
   
 **Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
@@ -87,7 +87,7 @@ SELECT SUSER_SID('sa');
 GO  
 ```  
   
-### <a name="c-using-susersid-with-a-windows-user-name"></a>В. Использование SUSER_SID с именем пользователя Windows  
+### <a name="c-using-suser_sid-with-a-windows-user-name"></a>В. Использование SUSER_SID с именем пользователя Windows  
  В следующем примере возвращается идентификационный номер безопасности для пользователя Windows `London\Workstation1`.  
   
 **Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
@@ -97,7 +97,7 @@ SELECT SUSER_SID('London\Workstation1');
 GO  
 ```  
   
-### <a name="d-using-susersid-as-a-default-constraint"></a>Г. Использование SUSER_SID в качестве ограничения DEFAULT  
+### <a name="d-using-suser_sid-as-a-default-constraint"></a>Г. Использование SUSER_SID в качестве ограничения DEFAULT  
  В следующем примере функция `SUSER_SID` используется в качестве ограничения `DEFAULT` в инструкции `CREATE TABLE`.  
   
 ```  
@@ -128,6 +128,6 @@ SELECT SUSER_SNAME(SUSER_SID('TestComputer\User', 0));
  [ORIGINAL_LOGIN (Transact-SQL)](../../t-sql/functions/original-login-transact-sql.md)   
  [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)   
  [binary и varbinary (Transact-SQL)](../../t-sql/data-types/binary-and-varbinary-transact-sql.md)   
- [Системные функции (Transact-SQL)](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
+ [Системные функции (Transact-SQL)](../../relational-databases/system-functions/system-functions-category-transact-sql.md)  
   
   

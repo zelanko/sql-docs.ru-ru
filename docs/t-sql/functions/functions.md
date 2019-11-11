@@ -20,12 +20,12 @@ ms.assetid: 17186213-5ab5-40b0-b470-b660af1ec44c
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5cd604a4f25783e7621f348ea532677cda3da433
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 95fe64603a08d4531d43e45c0b6d76c191fe7d34
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67940129"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73843710"
 ---
 # <a name="what-are-the-sql-database-functions"></a>Функции, используемых в базах данных SQL
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -64,7 +64,7 @@ ms.locfileid: "67940129"
 |[Функции метаданных](metadata-functions-transact-sql.md)|Возвращают сведения о базах данных и объектах баз данных.|  
 |[Функции безопасности](security-functions-transact-sql.md)|Возвращают данные о пользователях и ролях.|  
 |[Строковые функции](string-functions-transact-sql.md)|Выполняют операции со строковым (**char** или **varchar**) входным значением и возвращают строковое или числовое значение.|  
-|[Системные функции](../../relational-databases/system-functions/system-functions-for-transact-sql.md)|Выполняют операции над значениями, объектами и параметрами экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и возвращают сведения о них.|  
+|[Системные функции](../../relational-databases/system-functions/system-functions-category-transact-sql.md)|Выполняют операции над значениями, объектами и параметрами экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и возвращают сведения о них.|  
 |[Системные статистические функции](system-statistical-functions-transact-sql.md)|Возвращают статистические сведения о системе.|  
 |[Функции обработки текста и изображений](https://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)|Выполняют операции над текстовыми или графическими исходными значениями или столбцами и возвращают сведения о значении.|  
   

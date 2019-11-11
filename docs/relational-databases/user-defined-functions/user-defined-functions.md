@@ -16,12 +16,12 @@ ms.assetid: d7ddafab-f5a6-44b0-81d5-ba96425aada4
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5d4d63a03c2b5b40f7d57fa5c2de5f0abfab3f36
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.openlocfilehash: 8a659583df74cdc2e5100fcc25aa25e90af3bf22
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72783296"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73843842"
 ---
 # <a name="user-defined-functions"></a>Определяемые пользователем функции
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "72783296"
  Определяемые пользователем функции с табличным значением возвращают данные типа **table**. Встроенная функция с табличным значением не имеет текста, таблица является результирующим набором одной инструкции. **[Примеры.](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF)**
   
 **Системные функции**  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет множество системных функций для выполнения различных операций. Их нельзя изменить. Дополнительные сведения см. в разделах [Встроенные функции (Transact-SQL)](~/t-sql/functions/functions.md), [Системные хранимые функции (Transact-SQL)](~/relational-databases/system-functions/system-functions-for-transact-sql.md) и [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет множество системных функций для выполнения различных операций. Их нельзя изменить. Дополнительные сведения см. в разделах [Встроенные функции (Transact-SQL)](~/t-sql/functions/functions.md), [Системные хранимые функции (Transact-SQL)](~/relational-databases/system-functions/system-functions-category-transact-sql.md) и [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).  
   
 ##  <a name="Guidelines"></a> Рекомендации  
  Ошибки [!INCLUDE[tsql](../../includes/tsql-md.md)], которые вызывают отмену инструкции и продолжение выполнения со следующей инструкции в модуле (например в триггере или хранимой процедуре), внутри функций обрабатываются иначе. В функциях такие ошибки вызывают остановку выполнения функции. Это вызывает отмену инструкции, вызвавшей функцию.  

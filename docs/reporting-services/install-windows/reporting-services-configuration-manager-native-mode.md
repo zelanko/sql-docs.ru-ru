@@ -11,12 +11,12 @@ helpviewer_keywords:
 - components [Reporting Services], Reporting Services Configuration tool
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c6ea2a8ad189f5973b6fa3bb761be5c8596de761
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3df5a4c27e5c916d5a2c803d7bd4d40110aabb27
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65503628"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593785"
 ---
 # <a name="reporting-services-configuration-manager-native-mode"></a>Использование диспетчера конфигурации служб Reporting Services (собственный режим)
 
@@ -60,7 +60,7 @@ ms.locfileid: "65503628"
 
 - На каждом настраиваемом сервере отчетов должна быть включена и запущена служба инструментария управления Windows (WMI). Диспетчер конфигурации служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] производит подключение к локальным и удаленным серверам отчетов через поставщик WMI сервера отчетов. Если настраивается удаленный сервер отчетов, на компьютере должен быть разрешен удаленный доступ к инструментарию WMI. Дополнительные сведения о подготовке сервера отчетов для удаленного администрирования см. в разделе [Настройка сервера отчетов для удаленного администрирования](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md).  
 
-- Перед подключением к удаленному экземпляру сервера отчетов для его настройки необходимо обеспечить пропускание удаленных вызовов инструментария управления Windows (WMI) через брандмауэр Windows. Дополнительные сведения см. в разделе [Настройка сервера отчетов для удаленного администрирования](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md) электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .
+- Перед подключением к удаленному экземпляру сервера отчетов для его настройки необходимо обеспечить пропускание удаленных вызовов инструментария управления Windows (WMI) через брандмауэр Windows. Дополнительные сведения о подготовке сервера отчетов для удаленного администрирования см. в разделе [Настройка сервера отчетов для удаленного администрирования](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md).
 
 Диспетчер конфигурации служб Reporting Services устанавливается автоматически при установке служб SQL Server Reporting Services.
 
@@ -86,7 +86,7 @@ ms.locfileid: "65503628"
 
 6. Выберите **Подключиться**.
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 [Веб-портал](../../reporting-services/web-portal-ssrs-native-mode.md)   
 [Инструментальные средства служб Reporting Services](../../reporting-services/tools/reporting-services-tools.md)   

@@ -13,12 +13,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9f3784eb3a95b3da02dce2cdecc8c5db2faeaac8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 94a7ad079b94d9bc34e5b0e7f7ad55393d8f5de5
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68082810"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73638058"
 ---
 # <a name="find-property-set-guids-and-property-integer-ids-for-search-properties"></a>Поиск идентификаторов GUID наборов свойств и целочисленных идентификаторов свойств для свойств поиска
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "68082810"
   
  Программа **filtdump.exe** запускается из командной строки с указанием одного аргумента. Такой аргумент является именем отдельного файла с типом, для которого установлен IFilter. Служебная программа отображает список всех свойств, обнаруженных в документе фильтрами IFilter, с идентификаторами GUID набора свойств, целочисленными идентификаторами и дополнительными сведениями.  
   
- Сведения об установке этого программного обеспечения см. на странице [Microsoft Windows SDK for Windows Server 7 and .NET Framework 4 (на английском языке)](https://go.microsoft.com/fwlink/?LinkId=212980). После загрузки и установки пакета SDK перейдите к папкам, где находится служебная программа filtdump.exe.  
+ Сведения об установке этого программного обеспечения см. на странице [Microsoft Windows SDK for Windows Server 7 and .NET Framework 4 (на английском языке)](https://www.microsoft.com/download/details.aspx?id=8279). После загрузки и установки пакета SDK перейдите к папкам, где находится служебная программа filtdump.exe.  
   
 -   Сведения о 64-разрядной версии см. в каталоге `C:\Program Files\Microsoft SDKs\Windows\v7.1\Bin\x64`.  
   

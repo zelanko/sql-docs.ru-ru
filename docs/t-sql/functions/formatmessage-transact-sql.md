@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 83f18102-2035-4a87-acd0-8d96d03efad5
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 4f5a70331df04e048eb0f472299621e89b432712
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c9048efd86a7a4a993a9fff6bcab7f9058144f7e
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67952300"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73843758"
 ---
 # <a name="formatmessage-transact-sql"></a>FORMATMESSAGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -120,6 +120,6 @@ SELECT FORMATMESSAGE('Hello %-20s!', 'TEST');
  [STRING_ESCAPE (Transact-SQL)](../../t-sql/functions/string-escape-transact-sql.md)  
  [STUFF (Transact-SQL)](../../t-sql/functions/stuff-transact-sql.md)  
  [TRANSLATE (Transact-SQL)](../../t-sql/functions/translate-transact-sql.md)  
- [Системные функции (Transact-SQL)](../../relational-databases/system-functions/system-functions-for-transact-sql.md)   
+ [Системные функции (Transact-SQL)](../../relational-databases/system-functions/system-functions-category-transact-sql.md)   
   
   

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f18d6ff6-e881-444c-a399-730b52130e7c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a2c2dc7aac7ae6eb86b66a6bbb371f11dc6372cf
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 660ac899b1cf649bcc431bf10e2f9b18ca12cbc4
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71295075"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73637941"
 ---
 # <a name="troubleshooting-tools-for-package-execution"></a>Устранение неполадок инструментов с помощью отчетов
 
@@ -85,7 +85,7 @@ ms.locfileid: "71295075"
   
     3.  **Рассмотрите возможность захвата данных счетчика строк**. Создайте отдельную таблицу для данных счетчика строк, в которой каждый экземпляр выполнения пакета определяется идентификатором ExecutionID. Используйте преобразование «Счетчик строк» для сохранения числа строк в последовательность переменных в критических точках потока данных. После окончания потока данных используйте задачу «Выполнение SQL» для вставки этой последовательности значений в строку таблицы для последующего анализа и отчета.  
   
-     Дополнительные сведения об этом подходе см. в статье "ETL Auditing and Logging" (ETL: аудит и ведение журналов), входящей в технический документ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [Project REAL: Business Intelligence ETL Design Practices](https://go.microsoft.com/fwlink/?LinkId=96602) (Project REAL. Рекомендации по разработке ETL-решения для бизнес-аналитики).  
+     Дополнительные сведения об этом подходе см. в статье "ETL Auditing and Logging" (ETL: аудит и ведение журналов), входящей в технический документ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [Project REAL: Business Intelligence ETL Design Practices](https://www.microsoft.com/download/details.aspx?id=14582) (Project REAL. Рекомендации по разработке ETL-решения для бизнес-аналитики).  
   
 ## <a name="troubleshoot-package-execution-by-using-debug-dump-files"></a>Устранение неполадок выполнения пакетов с помощью отладочных файлов дампа  
  Службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]позволяют создавать отладочные файлы дампа с информацией о выполнении пакета. Дополнительные сведения см. в статье [Generating Dump Files for Package Execution](../../integration-services/troubleshooting/generating-dump-files-for-package-execution.md).  

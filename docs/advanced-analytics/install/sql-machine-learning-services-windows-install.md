@@ -1,6 +1,5 @@
 ---
-title: Установка служб машинного обучения SQL Server (Python, R) в Windows
-titleSuffix: ''
+title: Установка в Windows
 description: В этой статье объясняется, как установить службы машинного обучения SQL Server в Windows. Службы машинного обучения можно использовать для запуска сценариев R или Python в базе данных.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,13 +7,14 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: 448bb460d3cb3d041fd44b582a383037fecb98d4
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 8d51c147cfe5895356f8af270f62443643caa8f1
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532626"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727650"
 ---
 # <a name="install-sql-server-machine-learning-services-python-and-r-on-windows"></a>Установка служб машинного обучения SQL Server (Python и R) в Windows
 

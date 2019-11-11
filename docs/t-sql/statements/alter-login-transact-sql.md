@@ -1,7 +1,7 @@
 ---
 title: ALTER LOGIN (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 02/21/2019
+ms.date: 11/06/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -24,12 +24,12 @@ ms.assetid: e247b84e-c99e-4af8-8b50-57586e1cb1c5
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3fb9ce4696ffea2c345eeaeca769dda6548a9ebc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 35fc3fb65347a7e7459df18495294a2491e270b4
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68071310"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73660807"
 ---
 # <a name="alter-login-transact-sql"></a>ALTER LOGIN (Transact-SQL)
 
@@ -468,8 +468,8 @@ ALTER LOGIN login_name
   | DROP CREDENTIAL credential_name
 ```
 
-> [!IMPORTANT]
-> Имена входа Azure AD для управляемого экземпляра Базы данных SQL находятся в **общедоступной предварительной версии**.
+> [!NOTE]
+> Функция администратора Azure AD для управляемого экземпляра после создания изменилась. Дополнительные сведения см. в статье [Новые возможности администратора Azure AD для управляемого экземпляра](/azure/sql-database/sql-database-aad-authentication-configure#new-azure-ad-admin-functionality-for-mi).
 
 ```
 -- Syntax for Azure SQL Database managed instance using Azure AD logins

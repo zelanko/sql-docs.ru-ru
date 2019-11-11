@@ -10,12 +10,12 @@ ms.assetid: 9fb8656b-0e4e-4ada-b404-4db4d3eea995
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: aa027f58bd673539dd09f118ea1b9433c42c7990
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b7f3f8ee0d5766214ed7dc111728c37d0d41f071
+ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68000275"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73632907"
 ---
 # <a name="lesson-1-create-and-query-database-objects"></a>Урок 1. Создание объектов базы данных и отправка запросов к ним
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "68000275"
   
 [!INCLUDE[tsql](../includes/tsql-md.md)] могут быть написаны и пересланы компоненту [!INCLUDE[ssDE](../includes/ssde-md.md)] следующими способами:  
   
--   При помощи среды [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Предполагается, что вы используете среду [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], но можно также использовать среду [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] Express, которая может быть загружена бесплатно с веб-узла [центра загрузки Майкрософт](https://go.microsoft.com/fwlink/?linkid=67359).  
+-   При помощи среды [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Предполагается, что вы используете среду [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], но можно также использовать среду [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] Express, которая может быть загружена бесплатно с веб-узла [центра загрузки Майкрософт](https://www.microsoft.com/download/details.aspx?id=7593).  
   
 -   Посредством программы [sqlcmd](../tools/sqlcmd-utility.md).  
   
@@ -268,7 +268,7 @@ ms.locfileid: "68000275"
   GO  
   ```  
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 В следующей статье вы узнаете, как настроить разрешения в объектах базы данных. Объекты, созданные в уроке 1, также будут использоваться в уроке 2. 
 
 Дополнительные сведения см. в следующей статье:

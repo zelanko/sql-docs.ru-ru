@@ -24,14 +24,14 @@ ms.assetid: ab32d644-4228-449a-9ef0-5a975c305775
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e407ab5ac5e69c78d19a1022210ca8da5e470d64
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d2f8a3f4dbdbaa9cbd2cf1c99a86ad6f3573ab11
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67927597"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73844340"
 ---
-# <a name="username-transact-sql"></a>USER_NAME (Transact-SQL)
+# <a name="user_name-transact-sql"></a>USER_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Возвращает имя пользователя базы данных по указанному идентификационному номеру.  
@@ -49,14 +49,14 @@ USER_NAME ( [ id ] )
  Номер идентификатора, сопоставленный с пользователем базы данных. Аргумент *id* имеет тип **int**. Необходимо поставить скобки.  
   
 ## <a name="return-types"></a>Типы возвращаемых данных  
- **nvarchar(256)**  
+ **nvarchar(128)**  
   
 ## <a name="remarks"></a>Remarks  
  Когда аргумент *id* не указывается, подразумевается контекст текущего пользователя. Если параметр содержит слово NULL, то возвращается NULL. При использовании функции USER_NAME без указания *id* после инструкции EXECUTE AS функция USER_NAME возвращает имя олицетворенного пользователя. Если пользователь Windows попытается получить доступ к базе данных в качестве члена группы, функция USER_NAME вернет имя этого пользователя, а не имя группы.  
   
 ## <a name="examples"></a>Примеры  
   
-### <a name="a-using-username"></a>A. Использование USER_NAME.  
+### <a name="a-using-user_name"></a>A. Использование USER_NAME.  
  Следующий пример возвращает имя пользователя по его идентификатору `13`.  
   
 ```  
@@ -64,7 +64,7 @@ SELECT USER_NAME(13);
 GO  
 ```  
   
-### <a name="b-using-username-without-an-id"></a>Б. Использование USER_NAME без идентификатора  
+### <a name="b-using-user_name-without-an-id"></a>Б. Использование USER_NAME без идентификатора  
  Следующий пример демонстрирует поиск имени текущего пользователя без указания его идентификатора.  
   
 ```  
@@ -81,7 +81,7 @@ dbo
 (1 row(s) affected)
 ```  
   
-### <a name="c-using-username-in-the-where-clause"></a>В. Использование USER_NAME в предложении WHERE  
+### <a name="c-using-user_name-in-the-where-clause"></a>В. Использование USER_NAME в предложении WHERE  
  Следующий пример иллюстрирует поиск в таблице `sysusers` строки, имя которой равняется результату работы системной функции `USER_NAME` для пользователя с идентификационным номером, равным `1`.  
   
 ```  
@@ -99,7 +99,7 @@ dbo
 (1 row(s) affected)
 ```  
   
-### <a name="d-calling-username-during-impersonation-with-execute-as"></a>Г. Вызов USER_NAME во время олицетворения пользователя с помощью EXECUTE AS  
+### <a name="d-calling-user_name-during-impersonation-with-execute-as"></a>Г. Вызов USER_NAME во время олицетворения пользователя с помощью EXECUTE AS  
  Следующий пример показывает, как `USER_NAME` ведет себя во время олицетворения пользователя.  
   
 ```  
@@ -125,7 +125,7 @@ DBO
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="e-using-username-without-an-id"></a>Д. Использование USER_NAME без идентификатора  
+### <a name="e-using-user_name-without-an-id"></a>Д. Использование USER_NAME без идентификатора  
  Следующий пример демонстрирует поиск имени текущего пользователя без указания его идентификатора.  
   
 ```  
@@ -139,7 +139,7 @@ SELECT USER_NAME();
 User7                              
 ```  
   
-### <a name="f-using-username-in-the-where-clause"></a>Е. Использование USER_NAME в предложении WHERE  
+### <a name="f-using-user_name-in-the-where-clause"></a>Е. Использование USER_NAME в предложении WHERE  
  Следующий пример иллюстрирует поиск в таблице `sysusers` строки, имя которой равняется результату работы системной функции `USER_NAME` для пользователя с идентификационным номером, равным `1`.  
   
 ```  
@@ -160,6 +160,6 @@ User7
  [CURRENT_TIMESTAMP (Transact-SQL)](../../t-sql/functions/current-timestamp-transact-sql.md)   
  [CURRENT_USER (Transact-SQL)](../../t-sql/functions/current-user-transact-sql.md)   
  [SESSION_USER (Transact-SQL)](../../t-sql/functions/session-user-transact-sql.md)   
- [Системные функции (Transact-SQL)](../../relational-databases/system-functions/system-functions-for-transact-sql.md)   
+ [Системные функции (Transact-SQL)](../../relational-databases/system-functions/system-functions-category-transact-sql.md)   
  [SYSTEM_USER (Transact-SQL)](../../t-sql/functions/system-user-transact-sql.md)  
   

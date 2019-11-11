@@ -46,12 +46,12 @@ ms.assetid: 89a4658a-62f1-4289-8982-f072229720a1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 5204e876de1517f794f654bbfbc545203cca4888
-ms.sourcegitcommit: af6f66cc3603b785a7d2d73d7338961a5c76c793
+ms.openlocfilehash: e2eecd47141dd092fd30ee19abd47cdb7554a1c8
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73142860"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73659097"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 
@@ -1021,8 +1021,6 @@ COPY_ONLY — указывает, что используется *резерв
 
 По умолчанию резервные копии не сжимаются. Это поведение можно изменить с помощью параметра конфигурации сервера [сжатие резервной копии по умолчанию](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md). Дополнительные сведения о просмотре текущего значения этого параметра см. в статье [Просмотр или изменение свойств сервера (SQL Server)](../../database-engine/configure-windows/view-or-change-server-properties-sql-server.md).
 
-Сведения об использовании сжатия резервных копий в базах данных с включенным [прозрачным шифрованием данных (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) см. в разделе [Замечания](#general-remarks).
-
 COMPRESSION — явно включает сжатие резервных копий.
 
 NO_COMPRESSION — явно отключает сжатие резервных копий.
@@ -1050,7 +1048,6 @@ MAXTRANSFERSIZE **=** { *maxtransfersize* |  _**@** maxtransfersize\_variable_ }
 
 > [!NOTE]
 > Для баз данных с включенным [прозрачным шифрованием данных (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) и одним файлом данных `MAXTRANSFERSIZE` по умолчанию — 65 536 (64 КБ). Для баз данных без включенного шифрования TDE `MAXTRANSFERSIZE` по умолчанию — 1 048 576 (1 МБ) при сохранении резервных копий на диск и 65 536 (64 КБ) при использовании VDI или ленточных носителей.
-> Дополнительные сведения об использовании сжатия резервных копий в работе с базами данных с включенным шифрованием TDE см. в разделе [Замечания](#general-remarks).
 
 **Параметры управления ошибками**
 

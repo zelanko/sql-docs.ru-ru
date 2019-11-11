@@ -12,12 +12,12 @@ ms.assetid: 2cdd0568-7799-474b-82fb-65d79df3057c
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: c6bfd48773c066ffc29600156475495c0c2a6521
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cac6ecd59b270feecea3590c33c9dc8c41f1edcc
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68021142"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73638030"
 ---
 # <a name="install-and-configure-semantic-search"></a>Установка и настройка семантического поиска
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -144,6 +144,6 @@ GO
 ## <a name="install-optional-support-for-newer-document-types"></a>Установка дополнительной поддержки для новых типов документов  
   
 ###  <a name="office"></a> Установка последних фильтров для Microsoft Office и других типов документов Майкрософт  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] устанавливает самые последние средства разбиения по словам и парадигматические модули [!INCLUDE[msCoName](../../includes/msconame-md.md)] , но не устанавливает последние фильтры для документов [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office и других типов документов [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Эти фильтры необходимы для индексирования документов, созданных в последних версиях программ [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office и других приложениях [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Чтобы загрузить последние фильтры, см. раздел [Пакеты фильтров Microsoft Office 2010](https://go.microsoft.com/fwlink/?LinkId=218293). (На данный момент не существует пакета фильтров для Office 2013 или Office 2016).
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] устанавливает самые последние средства разбиения по словам и парадигматические модули [!INCLUDE[msCoName](../../includes/msconame-md.md)] , но не устанавливает последние фильтры для документов [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office и других типов документов [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Эти фильтры необходимы для индексирования документов, созданных в последних версиях программ [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office и других приложениях [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Чтобы загрузить последние фильтры, см. раздел [Пакеты фильтров Microsoft Office 2010](https://www.microsoft.com/download/details.aspx?id=17062). (На данный момент не существует пакета фильтров для Office 2013 или Office 2016).
   
   

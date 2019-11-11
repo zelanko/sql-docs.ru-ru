@@ -5,16 +5,16 @@ description: В этой статье описывается настройка 
 author: nelgson
 ms.author: negust
 ms.reviewer: mikeray
-ms.date: 11/01/2019
+ms.date: 11/05/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: c2c2a6510688f8adf74e50ae76a626a00955019d
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: ddf088bc8f7ba3d53bb989145e778deb3472e2a7
+ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531896"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73632785"
 ---
 # <a name="how-to-mount-adls-gen2-for-hdfs-tiering-in-a-big-data-cluster"></a>Подключение ADLS 2-го поколения для распределения по уровням HDFS в кластере больших данных
 
@@ -76,11 +76,8 @@ ms.locfileid: "73531896"
     fs.azure.account.oauth.provider.type=org.apache.hadoop.fs.azurebfs.oauth2.ClientCredsTokenProvider,
     fs.azure.account.oauth2.client.endpoint=[token endpoint],
     fs.azure.account.oauth2.client.id=[Application client ID],
-    fs.azure.account.oauth2.client.secret=[client secret],
-    fs.abfs.impl.disable.cache=true
+    fs.azure.account.oauth2.client.secret=[client secret]
    ```
-   
-Поведение по умолчанию в драйвере ADLS заключается в кэшировании учетных данных. Это означает, что неверные учетные данные тоже будут кэшироваться, и могут возникнуть проблемы, если при первой попытке подключения вводятся неверные учетные данные. Последняя часть (fs.abfs.impl.disable.cache=true) приведенных выше учетных данных используется для отключения такого кэширования.
 
 ## <a name="use-access-keys-to-mount"></a>Использование ключа доступа для подключения
 
@@ -99,11 +96,8 @@ ms.locfileid: "73531896"
 
    ```text
    set MOUNT_CREDENTIALS=fs.azure.abfs.account.name=<your-storage-account-name>.dfs.core.windows.net,
-   fs.azure.account.key.<your-storage-account-name>.dfs.core.windows.net=<storage-account-access-key>,
-   fs.abfs.impl.disable.cache=true
+   fs.azure.account.key.<your-storage-account-name>.dfs.core.windows.net=<storage-account-access-key>
    ```
-   
-Поведение по умолчанию в драйвере ADLS заключается в кэшировании учетных данных. Это означает, что неверные учетные данные тоже будут кэшироваться, и могут возникнуть проблемы, если при первой попытке подключения вводятся неверные учетные данные. Последняя часть (fs.abfs.impl.disable.cache=true) приведенных выше учетных данных используется для отключения такого кэширования.
 
 ## <a id="mount"></a> Подключение удаленного хранилища HDFS
 
@@ -163,6 +157,6 @@ azdata bdc hdfs mount refresh --mount-path <mount-path-in-hdfs>
 azdata bdc hdfs mount delete --mount-path <mount-path-in-hdfs>
 ```
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 Дополнительные сведения о [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] см. в статье [Что такое [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md).

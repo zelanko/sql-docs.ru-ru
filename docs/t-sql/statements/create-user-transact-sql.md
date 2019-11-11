@@ -1,7 +1,7 @@
 ---
 title: CREATE USER (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 05/09/2019
+ms.date: 11/06/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -29,12 +29,12 @@ ms.assetid: 01de7476-4b25-4d58-85b7-1118fe64aa80
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7c3afcf1c27d0b146e2f8762bd073853cc21ce2f
-ms.sourcegitcommit: 4fb6bc7c81a692a2df706df063d36afad42816af
+ms.openlocfilehash: 112eb132c40b5b90137ebaf919f6a4ee2916bc95
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73049929"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73660444"
 ---
 # <a name="create-user-transact-sql"></a>CREATE USER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -139,8 +139,8 @@ CREATE USER user_name
     | ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | OFF ] ] 
 ```
 
-> [!IMPORTANT]
-> Имена входа Azure AD для управляемого экземпляра Базы данных SQL находятся в **общедоступной предварительной версии**.
+> [!NOTE]
+> Функция администратора Azure AD для управляемого экземпляра после создания изменилась. Дополнительные сведения см. в статье [Новые возможности администратора Azure AD для управляемого экземпляра](/azure/sql-database/sql-database-aad-authentication-configure#new-azure-ad-admin-functionality-for-mi).
 
 ```  
 -- Syntax for Azure SQL Data Warehouse  
@@ -468,7 +468,7 @@ WITH
 
  Чтобы создать пользователя Azure AD по имени входа Azure AD, используйте приведенный ниже синтаксис.
 
- Войдите в управляемый экземпляр, используя имя входа Azure AD с ролью `sysadmin`. Приведенная ниже инструкция создает пользователя Azure AD bob@contoso.com по имени входа bob@contoso.com. Это имя входа было создано в примере [CREATE LOGIN](create-login-transact-sql.md#examples-4).
+ Войдите в управляемый экземпляр, используя имя входа Azure AD с ролью `sysadmin`. Приведенная ниже инструкция создает пользователя Azure AD bob@contoso.com по имени входа bob@contoso.com. Это имя входа было создано в примере [CREATE LOGIN](create-login-transact-sql.md#examples).
 
 ```sql
 CREATE USER [bob@contoso.com] FROM LOGIN [bob@contoso.com];

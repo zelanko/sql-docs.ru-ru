@@ -9,17 +9,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Resource Governor, workload group create
 - workload groups [SQL Server], create
-ms.assetid: 072868ec-ceff-4db6-941b-281af731a067
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 5b43793d8d43ca56d8001b986ecdb02af4b463e1
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 237ec09347ab139aabcc9f475f5e3b64aba0f054
+ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72903957"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73633002"
 ---
 # <a name="create-a-workload-group"></a>Создание группы рабочей нагрузки
+
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Группы рабочей нагрузки можно создавать в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или с помощью [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -30,17 +30,20 @@ ms.locfileid: "72903957"
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="LimitationsRestrictions"></a> Ограничения  
+###  <a name="LimitationsRestrictions"></a> Ограничения
+
  **REQUEST_MAX_MEMORY_GRANT_PERCENT**  
   
  Объем памяти, затрачиваемой на создание индекса в невыровненной секционированной таблице, пропорционален количеству секций, охватываемых индексом. Если общий объем необходимой памяти превышает лимит для каждого запроса (REQUEST_MAX_MEMORY_GRANT_PERCENT), установленный параметром для группы рабочей нагрузки, то создание этого индекса может завершиться ошибкой. Для обеспечения совместимости с версией SQL Server 2005 группа рабочей нагрузки по умолчанию позволяет запросу превысить лимит для каждого запроса с учетом минимального объема памяти, необходимого при запуске, поэтому пользователь может запустить тот же процесс создания индекса в группе рабочей нагрузки по умолчанию, если в пуле ресурсов по умолчанию достаточно памяти, настроенной для выполнения такого запроса.  
   
  Разрешено создание индексов для использования большего объема памяти рабочей области, чем было указано изначально, в целях повышения производительности. Эта специальная обработка поддерживается регулятором ресурсов, однако изначально предоставленная память и любая дополнительная выделенная память ограничены настройками группы рабочей нагрузки и пула ресурсов.  
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="Permissions"></a> Permissions
+
  Для создания группы рабочей нагрузки требуется разрешение CONTROL SERVER.  
   
-##  <a name="CreRPProp"></a> Создание группы рабочей нагрузки в среде SQL Server Management Studio  
+##  <a name="CreRPProp"></a> Создание группы рабочей нагрузки в среде SQL Server Management Studio
+
  **Создание группы рабочей нагрузки с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**  
   
 1.  В обозревателе объектов рекурсивно разверните узел **Управление** вплоть до узла «Пул ресурсов», содержащего группу рабочей нагрузки, которую необходимо изменить.  
@@ -64,10 +67,11 @@ ms.locfileid: "72903957"
   
 2.  Выполните инструкцию ALTER RESOURCE GOVERNOR RECONFIGURE.  
   
-### <a name="example-transact-sql"></a>Пример (Transact-SQL)  
+### <a name="example-transact-sql"></a>Пример (Transact-SQL)
+
  В следующем примере создается группа рабочей нагрузки с именем `groupAdhoc` , которая находится в пуле ресурсов с именем `poolAdhoc`.  
   
-```  
+```sql
 CREATE WORKLOAD GROUP groupAdhoc  
 USING poolAdhoc;  
 GO  
@@ -75,7 +79,8 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также:
+
  [регулятор ресурсов](../../relational-databases/resource-governor/resource-governor.md)   
  [Активация регулятора ресурсов](../../relational-databases/resource-governor/enable-resource-governor.md)   
  [Создание пула ресурсов](../../relational-databases/resource-governor/create-a-resource-pool.md)   

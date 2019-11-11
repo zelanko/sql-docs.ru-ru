@@ -19,19 +19,19 @@ helpviewer_keywords:
 ms.assetid: e13b491f-4f1f-4cb6-8b63-5084120f98cf
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 6edd1cb219f7250a6f9e5671efdb076c6e0a0349
-ms.sourcegitcommit: 316c25fe7465b35884f72928e91c11eea69984d5
+ms.openlocfilehash: 24c4b8af65830f8cc3a4a4bb2c4084ed4718515b
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68969480"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73843679"
 ---
 # <a name="ident_incr-transact-sql"></a>IDENT_INCR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Возвращает значение приращения, указанное при создании столбца идентификаторов в таблице или представлении.  
   
-![Значок ссылки на статью](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на статью") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Значок ссылки на статью](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -92,7 +92,7 @@ Production          BillOfMaterials                    1
   
 ## <a name="see-also"></a>См. также:  
  [Выражения (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md)   
- [Системные функции (Transact-SQL)](../../relational-databases/system-functions/system-functions-for-transact-sql.md)   
+ [Системные функции (Transact-SQL)](../../relational-databases/system-functions/system-functions-category-transact-sql.md)   
  [IDENT_CURRENT (Transact-SQL)](../../t-sql/functions/ident-current-transact-sql.md)   
  [IDENT_SEED (Transact-SQL)](../../t-sql/functions/ident-seed-transact-sql.md)   
  [DBCC CHECKIDENT (Transact-SQL)](../../t-sql/database-console-commands/dbcc-checkident-transact-sql.md)   

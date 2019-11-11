@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: f7b6ed8c-a4e0-4e33-9858-a8aa40aef309
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f7edcc2212ab54765d92cc119dfd86322ae0d523
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6e2f103303a90837a899330952b6f69544b4c496
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140941"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73659538"
 ---
 # <a name="walkthrough-authoring-a-custom-static-code-analysis-rule-assembly-for-sql-server"></a>Пошаговое руководство по созданию сборки настраиваемого правила анализа статического кода для SQL Server
 В этом пошаговом руководстве демонстрируются этапы создания правила анализа кода SQL Server. Правило, создаваемое в этом пошаговом руководстве, используется для предотвращения инструкций WAITFOR DELAY в хранимых процедурах, триггерах и функциях.  
@@ -67,7 +67,7 @@ ms.locfileid: "68140941"
 ## <a name="creating-the-custom-code-analysis-rule-supporting-classes"></a>Создание вспомогательных классов настраиваемого правила анализа  
 Перед созданием класса для самого правила в проект будут добавлены класс посетителей и класс атрибутов. Эти классы могут использоваться для создания дополнительных настраиваемых правил.  
   
-Сначала необходимо определить класс WaitForDelayVisitor, производный от [TSqlConcreteFragmentVisitor](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.aspx). Этот класс предоставляет доступ к инструкциям WAITFOR DELAY в модели. Классы посетителей используют API-интерфейсы [ScriptDom](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.aspx), предоставленные SQL Server. В этом API код Transact\-SQL представлен в виде дерева абстрактного синтаксиса (AST), поэтому классы посетителей удобны для поиска особых объектов синтаксиса, таких как инструкции WAITFORDELAY. Их может быть трудно найти с помощью объектной модели, так как они не связаны с каким-либо специальным свойством или отношением объекта, но их легко найти, используя шаблон посетителя и API [ScriptDom](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.aspx).  
+Сначала необходимо определить класс WaitForDelayVisitor, производный от [TSqlConcreteFragmentVisitor](https://docs.microsoft.com/en-us/dotnet/api/microsoft.sqlserver.transactsql.scriptdom.tsqlconcretefragmentvisitor). Этот класс предоставляет доступ к инструкциям WAITFOR DELAY в модели. Классы посетителей используют API-интерфейсы [ScriptDom](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.aspx), предоставленные SQL Server. В этом API код Transact\-SQL представлен в виде дерева абстрактного синтаксиса (AST), поэтому классы посетителей удобны для поиска особых объектов синтаксиса, таких как инструкции WAITFORDELAY. Их может быть трудно найти с помощью объектной модели, так как они не связаны с каким-либо специальным свойством или отношением объекта, но их легко найти, используя шаблон посетителя и API [ScriptDom](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.aspx).  
   
 ### <a name="defining-the-waitfordelayvisitor-class"></a>Определение класса WaitForDelayVisitor  
   

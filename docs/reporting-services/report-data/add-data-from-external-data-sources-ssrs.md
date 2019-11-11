@@ -9,12 +9,12 @@ ms.author: maggies
 reviewer: ''
 ms.custom: ''
 ms.date: 03/17/2017
-ms.openlocfilehash: 3ec3fe9ba7641a7c60b3035ff6dc5e11cdfe3691
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 003348fc8ba74420909cb3f74026932a42f97a9b
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68251251"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593913"
 ---
 # <a name="add-data-from-external-data-sources-ssrs"></a>Добавление данных из внешних источников данных (службы SSRS)
   Чтобы получить данные из внешнего источника данных, используется подключение к данным. Сведения о подключении к данным обычно указываются владельцем внешнего источника данных, ответственным за предоставление разрешений и указывающим тип используемых учетных данных. Сведения о подключении к данным сохраняются в виде источника данных отчета. Тип источника данных определяет модуль обработки данных, который будет использоваться для получения данных.  
@@ -100,8 +100,8 @@ ms.locfileid: "68251251"
 |[Подключения к данным, источники данных и строки подключения в построителе отчетов](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)|Предоставляет сведения о подключениях к данным и источникам данных.|  
 |[Внедренные и общие наборы данных отчета (построитель отчетов и службы SSRS)](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)|Предоставляет сведения об общих и внедренных наборах данных.|  
 |[Коллекция полей набора данных (построитель отчетов и службы SSRS)](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)|Предоставляет сведения о коллекции полей набора данных, создаваемой запросом.|  
-|[Источники данных, поддерживаемые службами Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md), см. в документации [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в [электронной документации](https://go.microsoft.com/fwlink/?linkid=121312) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|Предоставляет подробные сведения о поддержке платформ и версий для каждого модуля обработки данных.|  
-|[Общие сведения о модулях обработки данных](../../reporting-services/extensions/data-processing/data-processing-extensions-overview.md) , см. в документации к [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [по](https://go.microsoft.com/fwlink/?linkid=121312).|Предоставляет подробные сведения о модулях обработки данных для опытных пользователей.|  
+|[Источники данных, поддерживаемые службами Reporting Services (SSRS)](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)|Предоставляет подробные сведения о поддержке платформ и версий для каждого модуля обработки данных.|  
+|[Общие сведения о модулях обработки данных](../../reporting-services/extensions/data-processing/data-processing-extensions-overview.md)|Предоставляет подробные сведения о модулях обработки данных для опытных пользователей.|  
   
   
 ## <a name="see-also"></a>См. также:  
