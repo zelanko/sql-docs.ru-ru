@@ -38,14 +38,14 @@ ms.locfileid: "71952261"
   
 -   Службы Reporting Services включают надстройку для продуктов SharePoint. Поддерживаемые конфигурации для надстройки и сервера отчетов допускают настройку на более детальном уровне, чем указано здесь. Дополнительные сведения см. в разделе [Поддерживаемые сочетания SharePoint и Reporting Services Server и &#40;надстройки SQL Server 2014&#41;](../../reporting-services/install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md).  
   
--   Средства разработчика SharePoint поддерживают только изолированную конфигурацию SharePoint.  Дополнительные сведения см. в документации по SharePoint: [Требования для разработки решений SharePoint](https://msdn.microsoft.com/library/ee231582.aspx).  
+-   Средства разработчика SharePoint поддерживают только изолированную конфигурацию SharePoint.  Дополнительные сведения см. в документации по SharePoint: [требования для разработки решений SharePoint](https://msdn.microsoft.com/library/ee231582.aspx).  
   
 ##  <a name="bkmk_vers"></a>Выпуски SharePoint и поддержка функций бизнес-аналитики  
  Некоторые функции бизнес-аналитики [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] поддерживаются только в определенных выпусках продуктов SharePoint.  
   
 |Поддерживаемые функции|Продукт SharePoint|  
 |------------------------|------------------------|  
-|[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] — это компонент надстройки [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] @ no__t-2 для [!INCLUDE[msCoName](../../includes/msconame-md.md)] @ no__t-4 Enterprise Edition.<br /><br /> Предупреждения об изменении данных в службах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].<br /><br /> [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)].|Корпоративный выпуск [!INCLUDE[SPS2010](../../includes/sps2010-md.md)].|  
+|[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], компонент [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] надстройки для [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Enterprise Edition.<br /><br /> Предупреждения об изменении данных в службах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].<br /><br /> [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)].|Корпоративный выпуск [!INCLUDE[SPS2010](../../includes/sps2010-md.md)].|  
 |Общие возможности служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] по просмотру отчетов и интеграция функций с SharePoint.|Стандартный и корпоративный выпуск [!INCLUDE[SPS2010](../../includes/sps2010-md.md)].<br /><br /> [!INCLUDE[SPF2010](../../includes/spf2010-md.md)].|  
   
  Дополнительные сведения см. [в разделе функции, поддерживаемые различными Выпусками SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473).  
@@ -57,7 +57,7 @@ ms.locfileid: "71952261"
   
 -   Нужно использовать [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] и средство настройки служб [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)].  
   
- Одной из основных причин, по которой требуется пакет обновления 1 (SP1) для установки SharePoint с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], является функция компонента ядра СУБД **sp_dboption**, которая устарела в предыдущем выпуске, прекращена в выпуске [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. Дополнительные сведения см. [в разделе неподдерживаемые функции ядро СУБД в SQL Server 2014](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md) .  
+ Одна из основных причин, по которой требуется пакет обновления 1 (SP1) для установки SharePoint с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] — это функция ядра СУБД **sp_dboption**, которая устарела в предыдущем выпуске, прекращена в [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] выпуске. Дополнительные сведения см. [в разделе неподдерживаемые функции ядро СУБД в SQL Server 2014](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md) .  
   
 ### <a name="sharepoint-2010-sp1-installation-guidance"></a>Руководство по установке пакета обновления 1 (SP1) для SharePoint 2010  
  [Загрузите SharePoint Server 2010 с пакетом обновления 1 (SP1)](https://go.microsoft.com/fwlink/?LinkID=219697) и примените его на всех серверах фермы.  
@@ -69,7 +69,7 @@ ms.locfileid: "71952261"
   
 -   **Выполните обновление с помощью Psconfig:** Выполните команду `psconfig -upgrade`, чтобы завершить обновление с пакетом обновления 1 (SP1)  
   
- Дополнительные сведения см. в подразделе "обновление" статьи [(SharePoint Server 2010)](https://technet.microsoft.com/library/cc263093.aspx) и [Resource Center: Обновления для продуктов SharePoint 2010 @ no__t-0  
+ Дополнительные сведения см. в подразделе "обновление" статьи [(SharePoint Server 2010)](https://technet.microsoft.com/library/cc263093.aspx) и [центра ресурсов: обновления для продуктов SharePoint 2010](https://technet.microsoft.com/sharepoint/ff800847.aspx)  
   
 ## <a name="sharepoint-installation-with-sql-server-bi-features"></a>Установка SharePoint с компонентами бизнес-аналитики SQL Server  
   
@@ -78,7 +78,7 @@ ms.locfileid: "71952261"
   
 |Компонент|Action|  
 |---------------|------------|  
-|Надстройка служб Reporting Services|Средство подготовки продуктов SharePoint 2010 устанавливает версию надстройки служб [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] Reporting Services. Службы [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] содержат новую версию надстроек, необходимых для компонентов [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Надстройку можно установить с помощью мастера установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или загрузить с MSDN. Дополнительные сведения о том, где получить текущую версию надстройки и как ее установить, см. в разделе [где найти надстройку Reporting Services для продуктов SharePoint](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md) и [установить или удалить надстройку Reporting Services для SharePoint &#40; SharePoint 2010 и SharePoint 2013&#41;](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md).|  
+|Надстройка служб Reporting Services|Средство подготовки продуктов SharePoint 2010 устанавливает версию надстройки служб [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] Reporting Services. Службы [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] содержат новую версию надстроек, необходимых для компонентов [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Надстройку можно установить с помощью мастера установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или загрузить с MSDN. Дополнительные сведения о том, где можно получить текущую версию надстройки и о том, как ее установить, см. в разделе [где найти надстройку Reporting Services для продуктов SharePoint](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md) , а также [установите или удалите надстройку Reporting Services для SharePoint &#40;SharePoint 2010 и SharePoint 2013&#41;](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md).|  
 |Поставщик OLE DB службы Analysis Services (MSOLAP)|SharePoint 2010 устанавливает версию SQL Server 2008 поставщика OLE DB в составе развернутой службы Excel Services. Эта версия не поддерживает доступ к данным [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]. Для поддержки подключений к данным [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] на серверах SharePoint необходимо установить более позднюю версию этого поставщика. Дополнительные сведения см. [в статье установка поставщик Analysis Services OLE DB на серверах SharePoint](../../../2014/sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md) .|  
 |Службы ADO.NET|В списке требований SharePoint 2010 указаны службы ADO.NET, но установщик компонентов, необходимых для работы, их не устанавливает. Чтобы добавить службы ADO.NET, их необходимо установить вручную. Установка служб ADO.NET необходима для использования списков SharePoint в качестве веб-каналов данных для книг [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] или отчетов служб Reporting Services. Инструкции см. [в статье установка ADO.NET данных служб для поддержки экспорта каналов данных в списках SharePoint](../../../2014/sql-server/install/install-ado-net-data-services-to-support-data-feed-exports-of-sharepoint-lists.md).|  
   
@@ -103,7 +103,7 @@ ms.locfileid: "71952261"
   
  ![GMNI_SetupUI_DoNotConfigureMOSS](../../../2014/sql-server/install/media/gmni-setupui-donotconfiguremoss.gif "GMNI_SetupUI_DoNotConfigureMOSS")  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также статью  
  [Установка и развертывание для SharePoint Server 2010](https://technet.microsoft.com/sharepoint/ee518643.aspx)   
  [Несколько серверов для трехуровневой фермы (SharePoint Server 2010)](https://go.microsoft.com/fwlink/?linkID=219834)  
   

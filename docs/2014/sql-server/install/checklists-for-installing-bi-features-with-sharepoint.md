@@ -21,12 +21,12 @@ ms.locfileid: "71952607"
   В этом разделе приведены контрольные списки для установки компонентов SQL Server BI в различных сочетаниях или в топологиях масштабного развертывания. После ознакомления с тем, как запускать программу установки для установки компонента BI, контрольный список становится следующим этапом в изучении рекомендуемой последовательности установки, а также того, требуются ли дополнительные изменения в конфигурации для обеспечения интеграции.  
   
 ## <a name="checklists-in-this-section"></a>Контрольные списки в этом разделе  
- Контрольный список @no__t 0Deployment: Reporting Services, Power View и PowerPivot для SharePoint @ no__t-0  
+ [Контрольный список развертывания: Reporting Services, Power View и PowerPivot для SharePoint](deployment-checklist-reporting-services-power-view-power-pivot-for-sharepoint.md)  
   
- Контрольный список @no__t 0Deployment: Горизонтальное масштабирование путем добавления серверов PowerPivot в ферму SharePoint 2010 @ no__t-0  
+ [Контрольный список развертывания: горизонтальное масштабирование путем добавления серверов PowerPivot в ферму SharePoint 2010](../../../2014/sql-server/install/deployment-checklist-scale-out-adding-powerpivot-servers-sharepoint-2010-farm.md)  
   
- Контрольный список @no__t 0Deployment: Многосерверная установка PowerPivot для SharePoint 2010 @ no__t-0  
+ [Контрольный список развертывания: Установка нескольких серверов PowerPivot для SharePoint 2010](../../../2014/sql-server/install/deployment-checklist-multiserver-installation-powerpivot-sharepoint-2010.md)  
   
- Контрольный список @no__t 0Deployment: Установка Reporting Services в существующую ферму SharePoint @ no__t-0  
+ [Контрольный список развертывания: установка служб Reporting Services в существующей ферме SharePoint](../../../2014/sql-server/install/deployment-checklist-install-reporting-services-existing-sharepoint-farm.md)  
   
   

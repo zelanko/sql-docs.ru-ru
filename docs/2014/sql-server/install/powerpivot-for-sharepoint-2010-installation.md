@@ -29,7 +29,7 @@ ms.locfileid: "71952055"
   
  Для установки служб [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]воспользуйтесь установочным носителем [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
   
- Инструкции по расширенным сценариям развертывания см. в разделе [Deployment контрольный список: Контрольный список Power View и PowerPivot для SharePoint:](deployment-checklist-reporting-services-power-view-power-pivot-for-sharepoint.md) [развертывания Reporting Services, Горизонтальное масштабирование путем добавления серверов PowerPivot в ферму SharePoint 2010 @ no__t-0.  
+ Инструкции по расширенным сценариям развертывания см. в разделе [Контрольный список развертывания: Reporting Services, Power View и PowerPivot для SharePoint](deployment-checklist-reporting-services-power-view-power-pivot-for-sharepoint.md) и [Контрольный список развертывания: развертывание путем добавления серверов PowerPivot в ферму SharePoint 2010](../../../2014/sql-server/install/deployment-checklist-scale-out-adding-powerpivot-servers-sharepoint-2010-farm.md).  
   
 ## <a name="in-this-section"></a>в этом разделе  
  [Установка PowerPivot для SharePoint 2010](../../../2014/sql-server/install/install-powerpivot-for-sharepoint-2010.md)  
@@ -48,7 +48,7 @@ ms.locfileid: "71952055"
   
  [PowerPivot для SharePoint начальной &#40;конфигурации&#41;](../../../2014/sql-server/install/initial-configuration-powerpivot-for-sharepoint.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также статью  
  [Настройка и администрирование сервера PowerPivot в центре администрирования](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration)  
   
   
