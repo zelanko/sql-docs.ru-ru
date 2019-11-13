@@ -1,20 +1,20 @@
 ---
-title: Свойства сервера (страница "Дополнительно") — службы Reporting Services | Документация Майкрософт
+title: Свойства сервера (страница "Дополнительно") — службы Reporting Services | Документация Майкрософт
 author: maggiesMSFT
 ms.author: maggies
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
-ms.date: 01/15/2019
-ms.openlocfilehash: 079565c813e0b66f09881039ea3d6509bdf6cf54
-ms.sourcegitcommit: 75fe364317a518fcf31381ce6b7bb72ff6b2b93f
+ms.date: 11/05/2019
+ms.openlocfilehash: defadad0d3a2545ba3d794d5d9c38c5734d3e9af
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70908255"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73638028"
 ---
-# <a name="server-properties-advanced-page---reporting-services"></a>Свойства сервера (страница «Дополнительно») — службы Reporting Services
+# <a name="server-properties-advanced-page---reporting-services"></a>Свойства сервера (страница "Дополнительно") — службы Reporting Services
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
 
@@ -93,7 +93,7 @@ ms.locfileid: "70908255"
 
 **AccessControlMaxAge**. Задает время в секундах, в течение которого результаты запроса preflight могут кэшироваться. Значение по умолчанию — 600 (10 минут).
 
-**AllowedResourceExtensionsForUpload (Сервер отчетов Power BI и Reporting Services 2017 или более поздней версии)** . Позволяет задать расширения ресурсов, которые можно отправлять на сервер отчетов. Расширения встроенных типов файлов, таких как &ast;.rdl и &ast;.pbix, включать не нужно. Значение по умолчанию — "&ast;, &ast;.xml, &ast;.xsd, &ast;.xsl, &ast;.png, &ast;.gif, &ast;.jpg, &ast;.tif, &ast;.jpeg, &ast;.tiff, &ast;.bmp, &ast;.pdf, &ast;.svg, &ast;.rtf, &ast;.txt, &ast;.doc, &ast;.docx, &ast;.pps, &ast;.ppt, &ast;.pptx".
+**AllowedResourceExtensionsForUpload (только Сервер отчетов Power BI и Reporting Services 2017 или более поздней версии)** . Позволяет задать расширения ресурсов, которые можно отправлять на сервер отчетов. Расширения встроенных типов файлов, таких как &ast;.rdl и &ast;.pbix, включать не нужно. Значение по умолчанию — "&ast;, &ast;.xml, &ast;.xsd, &ast;.xsl, &ast;.png, &ast;.gif, &ast;.jpg, &ast;.tif, &ast;.jpeg, &ast;.tiff, &ast;.bmp, &ast;.pdf, &ast;.svg, &ast;.rtf, &ast;.txt, &ast;.doc, &ast;.docx, &ast;.pps, &ast;.ppt, &ast;.pptx".
 
 **Рестриктедресаурцемиметипефоруплоад** Набор типов MIME пользователи не могут отправлять содержимое с помощью. Все ресурсы, которые уже хранятся с ограниченным типом MIME, можно скачать только как приложение/октет-поток, а не открывать или выполнять в браузере.  По умолчанию в этом списке нет ограниченных элементов, но мы рекомендуем, чтобы организации заполнили это, чтобы обеспечить наиболее безопасный интерфейс.
 

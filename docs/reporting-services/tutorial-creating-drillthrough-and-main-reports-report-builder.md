@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 44480672cc835e455062c70943e87379a18a059e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 02defc00e1c65eff7eb624a8d3295082d8d6dc8c
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63294742"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73637987"
 ---
 # <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>Учебник. Создание детализированных и главных отчетов (построитель отчетов)
 В этом учебнике описывается создание двух типов отчетов [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] с разбивкой на страницы: детализированного отчета и главного отчета. Образцы данных по продажам, использованные в этих отчетах, извлекаются из куба служб Analysis Services. 
@@ -25,7 +25,7 @@ ms.locfileid: "63294742"
 Предполагаемое время для выполнения заданий данного учебника: 30 минут.  
   
 ## <a name="requirements"></a>Требования  
-В рамках этого учебника требуется доступ к кубу Contoso Sales как для детализированного, так и для главного отчета. Этот набор включает хранилище данных ContosoDW и базу данных OLAP Contoso_Retail. Создаваемые в данном учебнике отчеты извлекают данные из куба Contoso Sales. Базу данных OLAP Contoso_Retail можно скачать в [Центре загрузки Майкрософт](https://go.microsoft.com/fwlink/?LinkID=191575). Необходимо скачать только файл ContosoBIdemoABF.exe. Он содержит базу данных OLAP.  
+В рамках этого учебника требуется доступ к кубу Contoso Sales как для детализированного, так и для главного отчета. Этот набор включает хранилище данных ContosoDW и базу данных OLAP Contoso_Retail. Создаваемые в данном учебнике отчеты извлекают данные из куба Contoso Sales. Базу данных OLAP Contoso_Retail можно скачать в [Центре загрузки Майкрософт](https://www.microsoft.com/download/details.aspx?id=18279). Необходимо скачать только файл ContosoBIdemoABF.exe. Он содержит базу данных OLAP.  
   
 Второй файл, ContosoBIdemoBAK.exe, относится к хранилищу данных ContosoDW, которое не используется в данном учебнике.  
   
@@ -106,7 +106,7 @@ ms.locfileid: "63294742"
 2.  В диалоговом окне **Выбор куба** выберите Sales и нажмите кнопку **ОК**.  
   
     > [!TIP]  
-    > Если вы не хотите строить запрос многомерных выражений вручную, щелкните значок ![Переключение в режим конструктора](../reporting-services/media/rsqdicon-designmode.gif "Переключение в режим конструктора"), переключите конструктор запросов в режим "Запрос", вставьте законченное многомерное выражение в конструктор запросов и перейдите к шагу 6 раздела [Создание набора данных](#DSkip).  
+    > Если вы не хотите создавать запрос многомерных выражений вручную, щелкните значок ![Перейти в режим конструктора](../reporting-services/media/rsqdicon-designmode.gif "Перейти в режим конструктора"), переключите конструктор запросов в режим "Запрос", вставьте в конструктор законченное многомерное выражение и перейдите к шагу 6 раздела [Создание набора данных](#DSkip).  
   
     ```  
     SELECT NON EMPTY { [Measures].[Sales Amount], [Measures].[Sales Return Amount] } ON COLUMNS, NON EMPTY { ([Channel].[Channel Name].[Channel Name].ALLMEMBERS * [Product].[Product Category Name].[Product Category Name].ALLMEMBERS * [Product].[Product Subcategory Name].[Product Subcategory Name].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( { [Date].[Calendar Year].&[2009] } ) ON COLUMNS FROM ( SELECT ( { [Sales Territory].[Sales Territory Group].&[North America] } ) ON COLUMNS FROM ( SELECT ( STRTOSET(\@ProductProductCategoryName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( { [Channel].[Channel Name].&[2], [Channel].[Channel Name].&[4] } ) ON COLUMNS FROM [Sales])))) WHERE ( [Sales Territory].[Sales Territory Group].&[North America], [Date].[Calendar Year].&[2009] ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS  
@@ -397,7 +397,7 @@ ms.locfileid: "63294742"
 2.  В диалоговом окне **Выбор куба** выберите Sales и нажмите кнопку **ОК**.  
   
     > [!TIP]  
-    > Если вы не хотите строить запрос многомерных выражений вручную, щелкните значок ![Переключение в режим конструктора](../reporting-services/media/rsqdicon-designmode.gif "Переключение в режим конструктора"), переключите конструктор запросов в режим "Запрос", вставьте законченное многомерное выражение в конструктор запросов и перейдите к шагу 5 раздела [Создание набора данных](#MSkip).  
+    > Если вы не хотите создавать запрос многомерных выражений вручную, щелкните значок ![Перейти в режим конструктора](../reporting-services/media/rsqdicon-designmode.gif "Перейти в режим конструктора"), переключите конструктор запросов в режим "Запрос", вставьте в конструктор законченное многомерное выражение и перейдите к шагу 5 раздела [Создание набора данных](#MSkip).  
   
     ```  
     WITH MEMBER [Measures].[Net QTY] AS [Measures].[Sales Quantity] -[Measures].[Sales Return Quantity] MEMBER [Measures].[Net Sales] AS [Measures].[Sales Amount] - [Measures].[Sales Return Amount] SELECT NON EMPTY { [Measures].[Net QTY], [Measures].[Net Sales] } ON COLUMNS, NON EMPTY { ([Channel].[Channel Name].[Channel Name].ALLMEMBERS * [Product].[Product Category Name].[Product Category Name].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( { [Date].[Calendar Year].&[2009] } ) ON COLUMNS FROM ( SELECT ( STRTOSET(\@ProductProductCategoryName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( { [Sales Territory].[Sales Territory Group].&[North America] } ) ON COLUMNS FROM ( SELECT ( { [Channel].[Channel Name].&[2], [Channel].[Channel Name].&[4] } ) ON COLUMNS FROM [Sales])))) WHERE ( [Sales Territory].[Sales Territory Group].&[North America], [Date].[Calendar Year].&[2009] ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGSQuery text: Code.  

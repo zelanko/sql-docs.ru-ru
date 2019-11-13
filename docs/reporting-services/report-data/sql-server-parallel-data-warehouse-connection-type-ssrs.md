@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 3925fd3d-2aa1-4768-96ad-cfc2c0ba9283
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6733882d34d8f7afe880728d27051aa25abe5b55
-ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
+ms.openlocfilehash: 7a7da810593c6b7dee9ab80af17d840ed3d0dc4d
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66500144"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73594031"
 ---
 # <a name="sql-server-parallel-data-warehouse-connection-type-ssrs"></a>Тип соединения с параллельным хранилищем данных SQL Server (SSRS)
 
@@ -24,8 +24,7 @@ ms.locfileid: "66500144"
  Чтобы включить данные из [!INCLUDE[ssDW](../../includes/ssdw-md.md)] в отчет, пользователь должен иметь набор данных, основанный на источнике данных типа параллельного хранилища данных [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Этот встроенный тип источника данных основан на модуле обработки данных [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Parallel Data Warehouse. Используйте этот тип источника данных для подключения и извлечения данных из [!INCLUDE[ssDW](../../includes/ssdw-md.md)].  
   
  Этот модуль обработки данных поддерживает многозначные параметры, серверные статистические вычисления и учетные данные, управляемые отдельно с помощью строки подключения.  
-  
- Дополнительные сведения см. на веб-сайте [Параллельное хранилище данных SQL Server 2008 R2](https://go.microsoft.com/fwlink/?LinkId=150895).  
+   
   
  Используйте сведения в этом разделе для создания источника данных. Пошаговые инструкции см. в разделе [Добавление и проверка подключения к данным (построитель отчетов и службы SSRS)](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
   
@@ -49,9 +48,9 @@ HOST=<IP address>; database= CustomerSales; port=<port>
   
 -   Использовать сохраненные имя пользователя и пароль. Чтобы согласовать «двойной прыжок», который происходит в случае, если база данных, содержащая отчет, не является сервером отчетов, выберите в качестве учетных данных учетные данные Windows. Кроме того, после соединения с источником данных можно прибегнуть к олицетворению пользователя, прошедшего проверку подлинности.  
   
--   Учетные данные не требуются. Чтобы использовать этот параметр, необходима учетная запись автоматического выполнения, настроенная на сервере отчетов. Дополнительные сведения см. в разделе [Настройка учетной записи автоматического выполнения (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md) в [документации по службам Reporting Services](https://go.microsoft.com/fwlink/?linkid=121312) на сайте msdn.microsoft.com.  
+-   Учетные данные не требуются. Чтобы использовать этот параметр, необходима учетная запись автоматического выполнения, настроенная на сервере отчетов. Дополнительные сведения см. в разделе [Настройка учетной записи автоматического выполнения &#40;диспетчер конфигурации служб SSRS&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md). 
   
- Дополнительные сведения см. в разделе [подключения к данным, источники данных и строки подключения &#40;построитель отчетов и службы SSRS&#41; ](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) или [задание учетных данных и сведений о соединении для источников данных отчета](specify-credential-and-connection-information-for-report-data-sources.md).  
+ Дополнительные сведения см. в разделе [подключения к данным, источники данных и строки &#40;подключения построитель отчетов и&#41; службы SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) , а также [Указание учетных данных и сведений о соединении для источников данных отчета](specify-credential-and-connection-information-for-report-data-sources.md).  
   
   
 ##  <a name="Query"></a> Запросы  
@@ -79,7 +78,7 @@ HOST=<IP address>; database= CustomerSales; port=<port>
   
  В графическом конструкторе запросов, используемом [!INCLUDE[ssDW](../../includes/ssdw-md.md)] , предусмотрена встроенная поддержка группирования и агрегатов, помогающих писать запросы, которые получают только сводные данные. Далее приведены функции языка [!INCLUDE[DWsql](../../includes/dwsql-md.md)] : предложение GROUP BY, ключевое слово DISTINCT и агрегаты, например SUM и COUNT. В текстовом конструкторе запросов предусмотрена полная поддержка языка [!INCLUDE[DWsql](../../includes/dwsql-md.md)] , в том числе группирование и агрегаты.  
   
- Дополнительные сведения о [!INCLUDE[tsql](../../includes/tsql-md.md)] см. в разделе [Справочник по Transact-SQL (компонент Database Engine)](../../t-sql/transact-sql-reference-database-engine.md) [электронной документации](https://go.microsoft.com/fwlink/?LinkId=141687) по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на сайте msdn.microsoft.com.  
+ Дополнительные сведения о [!INCLUDE[tsql](../../includes/tsql-md.md)] см. в [Справочнике по Transact-SQL &#40;компонент Database Engine&#41;](../../t-sql/transact-sql-reference-database-engine.md).  
   
 ###  <a name="QueryText"></a> Использование типа запроса Text  
  В текстовом конструкторе запросов вводятся команды на языке [!INCLUDE[DWsql](../../includes/dwsql-md.md)] , определяющие данные в наборе данных. Запросы, используемые для извлечения данных из [!INCLUDE[ssDW](../../includes/ssdw-md.md)] , не отличаются от запросов, используемых для извлечения данных из экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , которые не работают внутри приложения [!INCLUDE[ssDW](../../includes/ssdw-md.md)] . Например, следующий запрос на языке [!INCLUDE[DWsql](../../includes/dwsql-md.md)] выбирает имена всех сотрудников отдела сбыта.  
@@ -123,7 +122,7 @@ WHERE EmployeeID = (@EmpID)
 ##  <a name="Remarks"></a> Замечания  
   
 ###### <a name="platform-and-version-information"></a>Сведения о платформе и версии  
- Дополнительные сведения о поддержке платформ и версий см. в разделе [Источники данных, поддерживаемые службами Reporting Services (службы SSRS)](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md) документации к [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в [электронной документации](https://go.microsoft.com/fwlink/?linkid=121312) по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Дополнительные сведения о поддержке платформ и версий см. в статье [Источники данных, поддерживаемые службами Reporting Services (SSRS)](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
   
   
 ##  <a name="HowTo"></a> Инструкции  
@@ -151,7 +150,7 @@ WHERE EmployeeID = (@EmpID)
  [Коллекция полей набора данных (построитель отчетов и службы SSRS)](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
  Предоставляет сведения о коллекции полей набора данных, создаваемой запросом.  
   
- [Источники данных, поддерживаемые службами Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md), см. в документации [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в [электронной документации](https://go.microsoft.com/fwlink/?linkid=121312) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ [Источники данных, поддерживаемые службами Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
  Предоставляет подробные сведения о поддержке платформ и версий для каждого модуля обработки данных.  
 
 ## <a name="next-steps"></a>Следующие шаги

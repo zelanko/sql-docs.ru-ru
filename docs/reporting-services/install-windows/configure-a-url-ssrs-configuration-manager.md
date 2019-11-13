@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 851e163a-ad2a-491e-bc1e-4df92327092f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: afd535a09578ae4e6141a87e486f77a26dd54818
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 616d04205fdf079435bf7810a3c6957f0cf8b32f
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62447371"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73594117"
 ---
 # <a name="configure-a-url--ssrs-configuration-manager"></a>Настройка URL-адреса (диспетчер конфигурации служб SSRS)
   Приступать к использованию [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] или веб-службы сервера отчетов можно лишь после настройки как минимум одного URL-адреса для каждого приложения. Настройка URL-адресов является обязательной в случае установки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в режиме "только файлы" (иначе говоря, если на странице "Параметры установки" сервера отчетов в мастере установки выбран параметр **Установить, но не настраивать сервер** ). При установке служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в конфигурации по умолчанию URL-адреса настраиваются автоматически для каждого приложения.  
@@ -31,7 +31,7 @@ ms.locfileid: "62447371"
   
 -   Указание дополнительных свойств URL-адреса для определения дополнительных URL-адресов.  
   
- Дополнительные сведения о том, как хранятся и обслуживаются URL-адреса, а также о проблемах совместимости см. в статьях [Сведения о резервировании и регистрации URL-адресов (диспетчер конфигураций служб SSRS)](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md) и [Параллельная установка служб Reporting Services и служб IIS (собственный режим SSRS)](../../reporting-services/install-windows/install-reporting-and-internet-information-services-side-by-side.md) в электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Обзор примеров URL-адресов, часто используемых при установке служб Reporting Services, см. в подразделе [Примеры URL-адресов](#URLExamples) данного раздела.  
+ Дополнительные сведения о хранении и поддержке URL-адресов, а также о проблемах совместимости см. в статьях [Сведения о резервировании и регистрации URL-адресов &#40;диспетчер конфигураций служб SSRS&#41;](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md) и [Параллельная установка служб Reporting Services и служб IIS &#40;собственный режим SSRS&#41;](../../reporting-services/install-windows/install-reporting-and-internet-information-services-side-by-side.md). Обзор примеров URL-адресов, часто используемых при установке служб Reporting Services, см. в подразделе [Примеры URL-адресов](#URLExamples) данного раздела.  
   
 ## <a name="prerequisites"></a>предварительные требования  
  Перед тем как приступать к созданию или изменению URL-адреса, нужно запомнить следующие моменты.  
@@ -143,7 +143,7 @@ ms.locfileid: "62447371"
   
  Указывает полное имя компьютера, для которого регистрируется сертификат. Указанное имя должно быть идентично имени, на которое зарегистрирован этот сертификат.  
   
- Для данного параметра необходим установленный сертификат. Можно также изменить параметры конфигурации UrlRoot в файле RSReportServer.config, чтобы они указывали полное имя компьютера, для которого регистрируется сертификат. Дополнительные сведения см. в статье [Настройка соединений SSL для сервера отчетов, работающего в собственном режиме](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md) электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ Для данного параметра необходим установленный сертификат. Можно также изменить параметры конфигурации UrlRoot в файле RSReportServer.config, чтобы они указывали полное имя компьютера, для которого регистрируется сертификат. Дополнительные сведения см. в разделе [Настройка соединений SSL для сервера отчетов, работающего в собственном режиме](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md).  
   
 ### <a name="to-set-advanced-properties-on-a-url"></a>Назначение дополнительных свойств URL-адресу  
   

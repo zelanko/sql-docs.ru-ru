@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 4f5e7fe0-b5b1-4665-93d4-80dce12d6b14
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 69f198696c434f53dfbef328bdbf3b9be832ca11
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 75da68330bcce06a4ffdaf152bb19811cffe1f99
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65370161"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593938"
 ---
 # <a name="urls-in-configuration-files--ssrs-configuration-manager"></a>URL-адреса файлов конфигурации (диспетчер конфигурации служб SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] сохраняют параметры приложений в файле RSReportServer.config. В этом файле содержатся как URL-адреса, так и резервирование URL-адресов. Эти параметры имеют различные предназначения и подчиняются различным правилам изменения. Пользователям, имеющим опыт изменения настройки системы через файлы конфигурации, этот раздел поможет узнать назначение каждого из параметров URL-адресов.  
@@ -25,7 +25,7 @@ ms.locfileid: "65370161"
 #### <a name="urls-for-application-access"></a>URL-адреса для доступа к приложениям  
  URL-адреса используются для доступа к веб-службам сервера отчетов и [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]. Для их настройки необходимо пользоваться программой настройки служб Reporting Services. Эта программа создает для каждого из приложений резервирование URL-адресов в компоненте HTTP.SYS и добавляет соответствующие записи в раздел **URLReservations** файла RSReportServer.config.  
   
--   Описания каждого элемента в разделе **URLReservations** см. в статье [Файл конфигурации RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) в электронной документации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+-   Описания каждого элемента в разделе **URLReservations** см. в статье [Файл конфигурации RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md).  
   
 -   Дополнительные сведения о синтаксисе элемента **UrlString** см. в статье [Синтаксис резервирования URL-адресов (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md).  
   

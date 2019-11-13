@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: b30d0308-4d9b-4f85-9f83-dece4dcb2775
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 65182936a6ea686b7b0089827ce1fb2f26e86b98
-ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
+ms.openlocfilehash: 9822af554536d9168c2ee3dd690c641865e66574
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66500584"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593869"
 ---
 # <a name="configure-a-native-mode-report-server-scale-out-deployment"></a>Настройка масштабного развертывания сервера отчетов, работающего в собственном режиме
 
@@ -93,9 +93,9 @@ An error occurred within the report server database.  This may be due to a conne
   
 2.  Запустите программу настройки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
-3.  Настройте URL-адрес веб-службы сервера отчетов, URL-адрес веб-портала и базу данных сервера отчетов. Дополнительные сведения см. в статье [Настройка сервера отчетов (службы Reporting Services в собственном режиме)](../../reporting-services/report-server/configure-a-report-server-reporting-services-native-mode.md) в электронной документации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+3.  Настройте URL-адрес веб-службы сервера отчетов, URL-адрес веб-портала и базу данных сервера отчетов. Дополнительные сведения см. в статье [Настройка сервера отчетов &#40;службы Reporting Services в собственном режиме&#41;](../../reporting-services/report-server/configure-a-report-server-reporting-services-native-mode.md).
   
-4.  Убедитесь, что сервер отчетов находится в рабочем состоянии. Дополнительные сведения см. в статье [Проверка установки служб Reporting Services](../../reporting-services/install-windows/verify-a-reporting-services-installation.md) в электронной документации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+4.  Убедитесь, что сервер отчетов находится в рабочем состоянии. Дополнительные сведения см. в разделе [Verify a Reporting Services Installation](../../reporting-services/install-windows/verify-a-reporting-services-installation.md).  
   
 ## <a name="to-install-and-configure-the-second-report-server-instance"></a>Установка и настройка второго экземпляра сервера отчетов  
   
@@ -131,7 +131,7 @@ An error occurred within the report server database.  This may be due to a conne
   
 2.  Выберите пункт **Масштабное развертывание** , чтобы открыть страницу "Масштабное развертывание". Здесь должны отображаться две записи: по одной для каждого экземпляра сервера отчетов, подключенного к базе данных сервера отчетов. Первый экземпляр сервера отчетов должен быть присоединен. Второй экземпляр сервера отчетов должен быть в состоянии «Ожидание соединения». Если в развертывании подобные записи не отображаются, проверьте соединение с первым сервером отчетов, который должен быть настроен и инициализирован для использования базы данных сервера отчетов.  
   
-     ![Частичный снимок экрана страницы "Масштабное развертывание"](../../reporting-services/install-windows/media/scaloutscreen.gif "Частичный снимок экрана страницы \"Масштабное развертывание\"")  
+     ![Частичный снимок экрана страницы "Масштабное развертывание"](../../reporting-services/install-windows/media/scaloutscreen.gif "Частичный снимок экрана страницы "Масштабное развертывание"")  
   
 3.  На странице "Масштабное развертывание" выберите экземпляр сервера отчетов, ожидающий соединения с развертыванием, и выберите пункт **Добавить сервер**.  
   
@@ -144,10 +144,10 @@ An error occurred within the report server database.  This may be due to a conne
   
  Если серверы отчетов планируется запускать в кластере со сбалансированной нагрузкой, необходима дополнительная настройка. Дополнительные сведения см. в статье [настроить сервер отчетов в кластере с балансированием сетевой нагрузки](../../reporting-services/report-server/configure-a-report-server-on-a-network-load-balancing-cluster.md).  
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 [Настройка учетной записи службы](configure-the-report-server-service-account-ssrs-configuration-manager.md)
-[задан URL-адрес](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
+[Настройка URL-адреса](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
 [Создание базы данных сервера отчетов, работающего в собственном режиме](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
 [Настройка URL-адресов сервера отчетов](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
 [Настройка подключения к базе данных сервера отчетов](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   

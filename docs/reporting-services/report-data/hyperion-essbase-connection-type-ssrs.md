@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 108a00b6-799f-4066-b796-da59e95c09fd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1906db6af5e73905b26d5e62394221ce790ec47b
-ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
+ms.openlocfilehash: 904a3bbc5b7a3d4987cd6c06b257ff680e4e8343
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66500425"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593837"
 ---
 # <a name="hyperion-essbase-connection-type-ssrs"></a>Тип соединения Hyperion Essbase (службы SSRS)
   Чтобы включить данные из внешнего источника данных [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] в отчет, пользователь должен иметь набор данных, основанный на источнике данных отчета типа [!INCLUDE[extEssbase](../../includes/extessbase-md.md)]. Этот встроенный тип источника данных основан на модуле обработки данных для [!INCLUDE[extEssbase](../../includes/extessbase-md.md)], позволяющего извлекать многомерные данные из внешнего источника данных [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] .  
@@ -35,7 +35,7 @@ Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample
   
  После публикации отчета может понадобиться изменить учетные данные источника данных, чтобы разрешения, необходимые для получения данных при запуске отчета на сервере отчетов, были допустимыми.  
   
- Дополнительные сведения см. в разделе [подключения к данным, источники данных и строки подключения &#40;построитель отчетов и службы SSRS&#41; ](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) или [задание учетных данных и сведений о соединении для источников данных отчета](specify-credential-and-connection-information-for-report-data-sources.md).  
+ Дополнительные сведения см. в разделе [подключения к данным, источники данных и строки &#40;подключения построитель отчетов и&#41; службы SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) , а также [Указание учетных данных и сведений о соединении для источников данных отчета](specify-credential-and-connection-information-for-report-data-sources.md).  
   
   
 ##  <a name="Query"></a> Запросы  
@@ -47,7 +47,7 @@ Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample
   
     -   **Представление запроса.** Перетащите измерения, элементы, свойства элементов, меры и ключевые показатели эффективности из браузера метаданных на панель «Запрос» для создания запроса многомерных выражений. Текст многомерного выражения можно изменять непосредственно на панели запроса. Перетащите вычисляемые элементы из панели "Вычисляемые элементы" в панель "Запрос" для определения дополнительных полей наборов данных.  
   
-     Дополнительные сведения см. в статье [Пользовательский интерфейс конструктора запросов Hyperion Essbase (построитель отчетов)](https://msdn.microsoft.com/library/d89a6773-dbe5-48e5-bda9-db0e67100696).  
+     Дополнительные сведения см. в статье [Пользовательский интерфейс конструктора запросов Hyperion Essbase (построитель отчетов)](../../reporting-services/report-data/hyperion-essbase-query-designer-user-interface.md).  
   
 -   Импорт существующего запроса многомерных выражений из отчета. Воспользуйтесь кнопкой **Импорт** , чтобы указать RDL-файл и импортировать запрос. Можно импортировать запрос из отчета, содержащего внедренный набор данных, основанный на источнике данных служб [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] . Импорт запроса многомерных выражений непосредственно из MDX-файла не поддерживается.  
   
@@ -56,8 +56,10 @@ Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample
  Модуль обработки данных служб [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] поддерживает расширенные свойства полей набора данных. Эти значения доступны из внешнего источника данных, но они не отображаются в области данных отчета. Дополнительные сведения см. в подразделе [Расширенные свойства поля](#Extended) далее в этом разделе.  
   
   
-##  <a name="Parameters"></a> Чтобы включить параметры запроса, необходимо создать фильтр в области фильтра конструктора запросов и пометить фильтр как параметр. Для каждого фильтра будет автоматически создан набор данных, предоставляющий доступные значения. По умолчанию эти наборы данных не отображаются в области данных отчета. Дополнительные сведения см. в разделе [Отображение скрытых наборов данных для значений параметра в многомерных данных (построитель отчетов и службы SSRS)](../../reporting-services/report-data/show-hidden-datasets-for-parameter-values-multidimensional-data.md).  
-  
+##  <a name="Parameters"></a> Параметры запроса  
+
+ Чтобы включить параметры запроса, необходимо создать фильтр в области фильтра конструктора запросов и пометить фильтр как параметр. Для каждого фильтра будет автоматически создан набор данных, предоставляющий доступные значения. По умолчанию эти наборы данных не отображаются в области данных отчета. Дополнительные сведения см. в разделе [Отображение скрытых наборов данных для значений параметра в многомерных данных (построитель отчетов и службы SSRS)](../../reporting-services/report-data/show-hidden-datasets-for-parameter-values-multidimensional-data.md).
+
  По умолчанию каждый параметр отчета имеет тип данных **Текст**. После создания параметров отчета можно изменить значения по умолчанию. Дополнительные сведения см. в разделах [Параметры отчета (построитель отчетов и конструктор отчетов)](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
   
   
@@ -104,7 +106,7 @@ Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample
   
   
 ##  <a name="Remarks"></a> Замечания  
- Этот поставщик данных поддерживает не все режимы доставки отчетов. Доставка отчетов с помощью управляемых данными подписок для этого модуля обработки данных не предусмотрена. Дополнительные сведения см. в разделе [Использование внешнего источника данных для данных подписчика (управляемая данными подписка)](../../reporting-services/subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md) документации по службам [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в [электронной документации](https://go.microsoft.com/fwlink/?linkid=121312) по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Этот поставщик данных поддерживает не все режимы доставки отчетов. Доставка отчетов с помощью управляемых данными подписок для этого модуля обработки данных не предусмотрена. Дополнительные сведения см. в разделе [Использование внешнего источника данных для данных подписчика (управляемая данными подписка)](../../reporting-services/subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md). 
   
  Дополнительные сведения см. в разделе [Использование служб SQL Server 2005 Reporting Services совместно с Hyperion Essbase Intelligence](https://go.microsoft.com/fwlink/?LinkId=81970).  
   
@@ -134,8 +136,7 @@ Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample
  [Коллекция полей набора данных (построитель отчетов и службы SSRS)](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
  Предоставляет сведения о коллекции полей, создаваемой запросом набора данных.  
   
- [Источники данных, поддерживаемые службами Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md), см. в документации [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в [электронной документации](https://go.microsoft.com/fwlink/?linkid=121312) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
- Предоставляет подробные сведения о поддержке платформ и версий для каждого модуля обработки данных.  
+ [Источники данных, поддерживаемые службами &#40;Reporting Services&#41; SSRS](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md) Подробные сведения о поддержке платформ и версий для каждого модуля обработки данных.  
   
  [Использование служб SQL Server 2005 Reporting Services совместно с Hyperion Essbase Intelligence](https://go.microsoft.com/fwlink/?LinkId=81970)  
  Предоставляет подробные сведения о работе с этим модулем обработки данных.  

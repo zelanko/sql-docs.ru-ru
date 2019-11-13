@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 82a51a99-66f0-4b0c-b05b-07d22387adb0
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5c1c2bb116f08dca2df111b6cccd9d6f0bf28160
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0628f715be90586e851fee55301e8c82032739c3
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65503293"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593920"
 ---
 # <a name="verify-a-reporting-services-installation"></a>Verify a Reporting Services Installation
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] можно установить в один из двух режимов — в собственном режиме или в режиме интеграции с SharePoint. Шаги, которые необходимо выполнить для проверки установки, зависят от выбранного режима сервера отчетов.  
@@ -100,11 +100,11 @@ ms.locfileid: "65503293"
   
 2.  Используйте [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] для создания новой папки или передачи файла с целью проверки, возвращаются ли определения обратно в базу данных сервера отчетов. Если эти операции успешно завершаются, то соединение функционирует.  
   
-     Дополнительные сведения см. в статье [Веб-портал (службы SSRS в собственном режиме)](https://msdn.microsoft.com/7349e626-6ed5-4d21-b05f-cf042ad9ad70).  
+     Дополнительные сведения см. в статье [Веб-портал (службы SSRS в собственном режиме)](../../reporting-services/web-portal-ssrs-native-mode.md).  
   
 ### <a name="to-verify-that-report-designer-is-installed-and-running"></a>Проверка успешной установки и запуска конструктора отчетов  
   
-1.  Откройте среду [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]и создайте новый проект, основанный на типе проекта сервера отчетов. Дополнительные сведения об использовании мастера проектов сервера отчетов см. в статье [Службы Reporting Services в SQL Server Data Tools (SSDT)](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md) в электронной документации по SQL Server.  
+1.  Откройте среду [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]и создайте новый проект, основанный на типе проекта сервера отчетов. Дополнительные сведения об использовании мастера проектов сервера отчетов см. в статье [Службы Reporting Services в SQL Server Data Tools &#40;SSDT&#41;](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md).  
   
 2.  Если установлены образцы отчетов, откройте файлы образцов проектов отчетов и опубликуйте отчеты на сервере отчетов.  
   

@@ -1466,7 +1466,7 @@
     - name: Диспетчер подключений Oracle
       href: ../integration-services/data-flow/oracle-connection-manager.md
     - name: Источник Oracle
-      ref: ../integration-services/data-flow/oracle-source.md
+      href: ../integration-services/data-flow/oracle-source.md
     - name: Назначение Oracle
       href: ../integration-services/data-flow/oracle-destination.md
     - name: Поддержка типов данных

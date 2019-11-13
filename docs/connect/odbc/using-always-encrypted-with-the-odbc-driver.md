@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
 author: MightyPen
-ms.openlocfilehash: cc6deae9a2ddcb11675586ffd8777644aff00672
-ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
+ms.openlocfilehash: bf15831517ebaa8646c1d6f3c080033c3a41405d
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68702706"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73594376"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>Использование функции Always Encrypted с драйвером ODBC для SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -59,7 +59,7 @@ Always Encrypted также можно включить в конфигурац�
 
 ### <a name="enabling-always-encrypted-with-secure-enclaves"></a>Включение Always Encrypted с безопасными анклавами
 
-Начиная с версии 17,4 драйвер поддерживает Always Encrypted с Secure Енклавес. Чтобы включить использование анклава при подключении к SQL Server 2019 или более поздней версии, задайте `ColumnEncryption` для имени источника данных, строки подключения или атрибута соединения имя типа анклава и протокол аттестации, а также связанные данные аттестации, разделенные запятыми. В версии 17,4 поддерживается только тип анклава с [защитой на основе виртуализации](https://www.microsoft.com/security/blog/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/) и протокол аттестации [службы защиты узла](https://docs.microsoft.com/windows-server/security/set-up-hgs-for-always-encrypted-in-sql-server) `VBS-HGS`, обозначенный как. чтобы использовать его, укажите URL-адрес сервера аттестации, например:
+Начиная с версии 17.4 драйвер поддерживает Always Encrypted с безопасными анклавами. Чтобы включить использование анклава при подключении к SQL Server 2019 или более поздней версии, задайте `ColumnEncryption` имя DSN, строку подключения или атрибут соединения с именем типа анклава и протоколом аттестации, а также связанные данные аттестации, разделенные запятыми. В версии 17,4 поддерживается только анклава типа [безопасности на основе виртуализации](https://www.microsoft.com/security/blog/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/) и протокол аттестации [службы защиты узла](https://docs.microsoft.com/windows-server/security/set-up-hgs-for-always-encrypted-in-sql-server) , обозначенный `VBS-HGS`. чтобы использовать его, укажите URL-адрес сервера аттестации, например:
 
 ```
 Driver=ODBC Driver 17 for SQL Server;Server=yourserver.yourdomain;Trusted_Connection=Yes;ColumnEncryption=VBS-HGS,http://attestationserver.yourdomain/Attestation
@@ -592,7 +592,7 @@ SQLRETURN SQLGetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 
 |Имя|Описание|  
 |----------|-----------------|  
-|`ColumnEncryption`|Допустимые значения: `Enabled`/`Disabled`.<br>`Enabled` — включает функцию Always Encrypted для подключения.<br>`Disabled` — отключает для подключения функцию Always Encrypted.<br>*тип* *данных* (версия 17,4 и более поздние) включает Always encrypted с безопасным *типом*протокола анклава и аттестации и связанными *данными* аттестации. <br><br>Значение по умолчанию — `Disabled`.|
+|`ColumnEncryption`|Допустимые значения: `Enabled`/`Disabled`.<br>`Enabled` — включает функцию Always Encrypted для подключения.<br>`Disabled` — отключает для подключения функцию Always Encrypted.<br>*тип* *данных* (версия 17,4 и более поздние) включает Always encrypted с безопасным *типом*протокола анклава и аттестации и связанными *данными аттестации.* <br><br>Значение по умолчанию — `Disabled`.|
 |`KeyStoreAuthentication` | Допустимые значения: `KeyVaultPassword`, `KeyVaultClientSecret` |
 |`KeyStorePrincipalId` | Если `KeyStoreAuthentication` = `KeyVaultPassword`, укажите здесь допустимое имя участника-пользователя (UPN) Azure Active Directory. <br>Если `KeyStoreAuthetication` = `KeyVaultClientSecret`, укажите здесь допустимый идентификатор клиента приложения Azure Active Directory. |
 |`KeyStoreSecret` | Если `KeyStoreAuthentication` = `KeyVaultPassword`, укажите здесь пароль для соответствующего имени пользователя. <br>Если `KeyStoreAuthentication` = `KeyVaultClientSecret`, укажите здесь секрет приложения, связанный с допустимым идентификатором клиента приложения Azure Active Directory. |
@@ -631,4 +631,3 @@ SQLRETURN SQLGetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 - [Always Encrypted (ядро СУБД)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [Always Encrypted с безопасными анклавами](../../relational-databases/security/encryption/always-encrypted-enclaves.md)
 - [Блог о постоянном шифровании](https://blogs.msdn.com/b/sqlsecurity/archive/tags/always-encrypted/)
-

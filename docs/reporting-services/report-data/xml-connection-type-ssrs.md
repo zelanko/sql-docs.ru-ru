@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 5b55fff2-1b15-4156-83ef-15ad9cf9f509
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 77fb9b25594f2367ec52d75e0232371866b63a71
-ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
+ms.openlocfilehash: 599059c2820bd55132ed98525a60fa9ba6baeec7
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66500095"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73594025"
 ---
 # <a name="xml-connection-type-ssrs"></a>Тип соединения XML (службы SSRS)
   Чтобы включить данные из источника XML-данных в отчет, необходим набор данных, основанный на источнике данных отчета типа XML. Этот встроенный тип источника данных основан на модуле обработки данных XML. Используйте этот тип источника данных для подключения и получения данных из внедренных в запрос XML-документов, веб-служб и данных XML.  
@@ -44,11 +44,11 @@ ms.locfileid: "66500095"
   
 -   Текущий пользователь Windows (встроенная безопасность).  
   
--   Учетные данные не требуются. Если учетные данные не заданы, будет применяться анонимный доступ. Убедитесь, что для соединения сервера отчетов с внешним источником данных определена учетная запись автоматического выполнения. Модуль обработки XML-данных не передает учетные данные целевому URL-адресу или веб-службе. Если не определена учетная запись автоматического выполнения, соединение закончится ошибкой. Дополнительные сведения см. в разделе [Настройка учетной записи автоматического выполнения (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md) в [электронной документации](https://go.microsoft.com/fwlink/?linkid=121312) по службам [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на сайте msdn.microsoft.com.  
+-   Учетные данные не требуются. Если учетные данные не заданы, будет применяться анонимный доступ. Убедитесь, что для соединения сервера отчетов с внешним источником данных определена учетная запись автоматического выполнения. Модуль обработки XML-данных не передает учетные данные целевому URL-адресу или веб-службе. Если не определена учетная запись автоматического выполнения, соединение закончится ошибкой. Дополнительные сведения см. в разделе [Настройка учетной записи автоматического выполнения &#40;диспетчер конфигурации служб SSRS&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
   
  Сохраненные и запрашиваемые учетные данные не поддерживаются. Помните, что если отключить встроенную безопасность Windows, получить данные будет невозможно. Если заданы хранимые учетные данные, или их предлагается ввести, во время выполнения возникнет ошибка.  
   
- Дополнительные сведения см. в разделе [подключения к данным, источники данных и строки подключения &#40;построитель отчетов и службы SSRS&#41; ](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) или [задание учетных данных и сведений о соединении для источников данных отчета](specify-credential-and-connection-information-for-report-data-sources.md).  
+ Дополнительные сведения см. в разделе [подключения к данным, источники данных и строки &#40;подключения построитель отчетов и&#41; службы SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) , а также [Указание учетных данных и сведений о соединении для источников данных отчета](specify-credential-and-connection-information-for-report-data-sources.md).  
   
 ##  <a name="Query"></a> Запросы  
  Запрос указывает, какие данные для набора данных отчета необходимо получить. Столбцы результирующего набора запроса заполняют коллекцию полей набора данных. Отчет обрабатывает только первый результирующий набор, полученный по запросу.  
@@ -113,7 +113,7 @@ ms.locfileid: "66500095"
   
          `<ElementPath IgnoreNamespaces="true">`  *путь к элементу*  `</ElementPath>`  
   
- Дополнительные сведения о синтаксисе запроса см. в разделе [Синтаксис запроса XML для XML-данных отчета (службы SSRS)](../../reporting-services/report-data/xml-query-syntax-for-xml-report-data-ssrs.md) документации к службам [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в [электронной документации](https://go.microsoft.com/fwlink/?linkid=121312) по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на сайте msdn.microsoft.com.  
+ Дополнительные сведения о синтаксисе запросов см. в разделе [синтаксис XML-запросов для &#40;XML&#41;-данных отчетов SSRS](../../reporting-services/report-data/xml-query-syntax-for-xml-report-data-ssrs.md).  
   
  Примеры см. в техническом документе [Reporting Services: Using XML and Web Service Data Sources](https://go.microsoft.com/fwlink/?LinkId=81654)(Службы Reporting Services: использование источников XML-данных и источников данных веб-служб).  
   
@@ -129,7 +129,7 @@ ms.locfileid: "66500095"
   
  Путь к элементу можно указать с помощью синтаксиса XML, схожего с XQuery.  
   
- Дополнительные сведения см. в разделе [Синтаксис пути к элементу для XML-данных отчета (службы SSRS)](../../reporting-services/report-data/element-path-syntax-for-xml-report-data-ssrs.md) документации к службам [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в [электронной документации](https://go.microsoft.com/fwlink/?linkid=121312) по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на сайте msdn.microsoft.com.  
+ Дополнительные сведения см. в статье [Синтаксис пути к элементу для XML-данных отчета &#40;SSRS&#41;](../../reporting-services/report-data/element-path-syntax-for-xml-report-data-ssrs.md).  
   
 ##  <a name="Parameters"></a> Параметры  
  Запрос не анализируется для определения параметров.  
@@ -165,7 +165,7 @@ ms.locfileid: "66500095"
  [Коллекция полей набора данных (построитель отчетов и службы SSRS)](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
  Предоставляет сведения о коллекции полей набора данных, создаваемой запросом.  
   
- [Источники данных, поддерживаемые службами Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md), см. в документации [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в [электронной документации](https://go.microsoft.com/fwlink/?linkid=121312) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ [Источники данных, поддерживаемые службами Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
  Предоставляет подробные сведения о поддержке платформ и версий для каждого модуля обработки данных.  
   
 ## <a name="see-also"></a>См. также:  

@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9d11d055-a3be-45aa-99a7-46447a94ed42
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 26a9703bea3e2c5647f2a96bac5e3673a55e09b7
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.openlocfilehash: 2a0777bc6d51ca99da3e52fc533306b49390d173
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71951786"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593942"
 ---
 # <a name="data-sources-supported-by-reporting-services-ssrs"></a>Источники данных, поддерживаемые службами Reporting Services (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] получают через модульный и расширяемый уровень данных, где работают модули обработки данных. Для получения данных отчета из источника данных необходимо выбрать модуль обработки данных, поддерживающий как тип источника данных, так и версию программного обеспечения источника данных и его платформу (32-разрядная или 64-разрядная [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]).  
@@ -60,7 +60,7 @@ ms.locfileid: "71951786"
   
  Например, модуль обработки данных [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] представляет собой OLEDB-MD.  
   
- Многие стандартные поставщики данных [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] сторонних производителей можно скачать в [Центре загрузки Майкрософт](https://go.microsoft.com/fwlink/?linkid=51456) и на сайтах сторонних производителей. Сведения о поставщиках данных сторонних производителей можно найти также в общедоступном форуме по службам [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
+ Многие стандартные поставщики данных [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] сторонних производителей можно скачать в [Центре загрузки Майкрософт](https://www.microsoft.com/download/default.aspx) и на сайтах сторонних производителей. Сведения о поставщиках данных сторонних производителей можно найти также в общедоступном форуме по службам [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
 > [!NOTE]  
 >  Стандартные поставщики данных [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] необязательно поддерживают все функции, предоставляемые модулями обработки данных служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Кроме того, некоторые поставщики данных OLE DB и драйверы ODBC могут быть использованы для создания и предварительного просмотра отчетов, но не поддерживают отчеты, опубликованные на сервере отчетов. Например, поставщик [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB для Jet не поддерживается на сервере отчетов. Дополнительные сведения см. в разделе [Модули обработки данных и поставщики данных .NET Framework (службы SSRS)](../../reporting-services/report-data/data-processing-extensions-and-net-framework-data-providers-ssrs.md).  
@@ -114,7 +114,7 @@ ms.locfileid: "71951786"
 |[!INCLUDE[extEssbase](../../includes/extessbase-md.md)]|[Hyperion Essbase](#Hyperion)|Встроенный модуль обработки данных служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|См. документацию Hyperion по поддержке платформ.|Да|Недоступно|[!INCLUDE[extEssbase](../../includes/extessbase-md.md)] 9.3.1|Да|Недоступно|  
 |Реляционная база данных Oracle|[Oracle;](#OracleClient)|Встроенный модуль обработки данных служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|Необходимы клиентские компоненты Oracle 12c или более поздней версии.|Да|Недоступно|Oracle 11g, 11g R2, 12c|Да|Да|  
 |Teradata |[Teradata](#Teradata)|Встроенный модуль обработки данных служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|Расширяет поставщика данных .NET для Teradata от Teradata.<br /><br /> Требует поставщика данных .NET для Teradata от Teradata.<br /><br /> См. документацию Teradata по поддержке платформ.|Да|Недоступно|Teradata v15<br /><br />Teradata v14<br /><br /> Teradata v13|Да|Нет|  
-|Реляционная база данных DB2|Имя специализированного зарегистрированного модуля обработки данных||2004 Host Integration (HI) Server<br /><br /> См. [документацию по Host Integration Server](https://msdn.microsoft.com/library/gg241192\(v=bts.10\).aspx).|Да|Недоступно|Недоступно|Да|Нет|  
+|Реляционная база данных DB2|Имя специализированного зарегистрированного модуля обработки данных||2004 Host Integration (HI) Server<br /><br /> |Да|Недоступно|Недоступно|Да|Нет|  
 |Обычный источник данных OLE DB|OLEDB|Встроенный модуль обработки данных служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|Любой источник данных, поддерживающий OLE DB.<br /><br /> См. документацию источника данных по поддержке платформ.|Да|Недоступно|Любой источник данных, поддерживающий OLE DB. См. [примечание](#OLEDBStandard).|Да|Недоступно|  
 |Обычный источник данных ODBC|[интерфейс ODBC](#ODBCGeneric)|Встроенный модуль обработки данных служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|Любой источник данных, поддерживающий ODBC.<br /><br /> См. документацию источника данных по поддержке платформ.|Да|Недоступно|Любой источник данных, поддерживающий ODBC. См. [примечание](#ODBCGeneric).|Да|Да|  
   
@@ -132,7 +132,7 @@ ms.locfileid: "71951786"
 > [!NOTE]
 >  Модуль обработки данных служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] не поддерживается в настоящее время.  
   
- Дополнительные сведения о модулях обработки данных, поддерживаемых построителем отчетов, см. в разделе [Подключения к данным, источники данных и строки подключения в построителе отчетов](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) [документации по построителю отчетов](https://go.microsoft.com/fwlink/?LinkId=154494) на сайте msdn.microsoft.com.  
+ Дополнительные сведения о модулях обработки данных, поддерживаемых построитель отчетов, см. [в разделе подключения к данным, источники данных и строки подключения в построитель отчетов](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).
   
 ###  <a name="MicrosoftSQLServer"></a> Модуль обработки данных Microsoft SQL Server  
  Тип источника данных **Microsoft SQL Server** включает и расширяет возможности поставщика данных [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Этот модуль обработки данных скомпилирован в собственном коде для платформ на базе x86 и [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)].  
@@ -235,7 +235,7 @@ ms.locfileid: "71951786"
   
  Этот модуль поддерживает именованные параметры. Oracle версии 11g или более поздней поддерживает параметры с несколькими значениями. Для работы с безымянными параметрами, зависящими от позиции, используйте модуль обработки данных OLE DB с поставщиком данных [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB для Oracle. Дополнительные сведения о настройке Oracle в качестве источника данных см. в разделе [Как использовать службы Reporting Services для настройки источника данных Oracle и доступа к нему](https://support.microsoft.com/kb/834305). Сведения о дополнительной настройке разрешений см. в статье [Как добавить разрешения для субъекта безопасности NETWORK SERVICE](https://support.microsoft.com/kb/870668) базы знаний [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
- Можно получить данные из хранимых процедур с несколькими входными параметрами, но эти процедуры должны возвращать только один выходной курсор. Дополнительные сведения см. в разделе об Oracle статьи [Получение данных с помощью модуля DataReader](https://go.microsoft.com/fwlink/?LinkId=81758).  
+ Можно получить данные из хранимых процедур с несколькими входными параметрами, но эти процедуры должны возвращать только один выходной курсор. Дополнительные сведения см. в разделе Получение [результатов с помощью Oracle REF CURSOR](https://docs.microsoft.com/dotnet/framework/data/adonet/retrieving-data-using-a-datareader#returning-results-with-oracle-ref-cursors) в "извлечение данных с использованием DataReader".
   
  Дополнительные сведения см. в разделе [Тип соединения Oracle (службы SSRS)](../../reporting-services/report-data/oracle-connection-type-ssrs.md). Дополнительные сведения о соответствующем конструкторе запросов см. в разделах [Пользовательский интерфейс графического конструктора запросов](../../reporting-services/report-data/graphical-query-designer-user-interface.md).  
   
@@ -290,7 +290,7 @@ ms.locfileid: "71951786"
  Указываемые учетные данные зависят от реализации, которую использует клиентское приложение. Дополнительные сведения см. в разделе [Тип подключения к списку SharePoint](../../reporting-services/report-data/sharepoint-list-connection-type-ssrs.md).  
   
 ###  <a name="XML"></a> Модуль обработки XML-данных  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] включают модуль обработки данных XML, что позволяет использовать их в отчете. Данные могут быть получены из XML-документа, веб-службы или из веб-приложения, доступ к которым осуществляется с помощью URL-адреса. Дополнительные сведения см. в разделе [Тип соединения XML (службы SSRS)](../../reporting-services/report-data/xml-connection-type-ssrs.md). Дополнительные сведения о соответствующем конструкторе запросов см. в разделе о текстовом конструкторе запросов статьи [Пользовательский интерфейс графического конструктора запросов](../../reporting-services/report-data/graphical-query-designer-user-interface.md). Примеры см. в техническом документе [Reporting Services: Using XML and Web Service Data Sources](https://go.microsoft.com/fwlink/?LinkId=81654)(Службы Reporting Services: использование источников XML-данных и источников данных веб-служб).  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] включают модуль обработки данных XML, что позволяет использовать их в отчете. Данные могут быть получены из XML-документа, веб-службы или из веб-приложения, доступ к которым осуществляется с помощью URL-адреса. Дополнительные сведения см. в разделе [Тип соединения XML (службы SSRS)](../../reporting-services/report-data/xml-connection-type-ssrs.md). Дополнительные сведения о соответствующем конструкторе запросов см. в разделе о текстовом конструкторе запросов статьи [Пользовательский интерфейс графического конструктора запросов](../../reporting-services/report-data/graphical-query-designer-user-interface.md).
   
  [Назад к таблице источников данных](#DataSourcesTable)  
   
@@ -304,13 +304,13 @@ ms.locfileid: "71951786"
   
  Дополнительные сведения см. в разделе [Тип соединения Hyperion Essbase (службы SSRS)](../../reporting-services/report-data/hyperion-essbase-connection-type-ssrs.md). Дополнительные сведения о соответствующем конструкторе запросов см. в разделе [Hyperion Essbase Query Designer User Interface](../../reporting-services/report-data/hyperion-essbase-query-designer-user-interface.md).  
   
- Дополнительные сведения об [!INCLUDE[extEssbase](../../includes/extessbase-md.md)]см. в разделе [Использование служб SQL Server 2005 Reporting Services совместно с Hyperion Essbase](https://go.microsoft.com/fwlink/?LinkId=81970).  
+ Дополнительные сведения о [!INCLUDE[extEssbase](../../includes/extessbase-md.md)]: [Использование служб SQL Server Reporting Services совместно с Hyperion Essbase](../../reporting-services/report-data/hyperion-essbase-query-designer-user-interface.md). 
   
  [Назад к таблице источников данных](#DataSourcesTable)  
   
 ## <a name="see-also"></a>См. также:  
  [Подключения к данным, источники данных и строки подключения (построитель отчетов и службы SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [Наборы данных отчетов (службы SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)  
- Остались вопросы? [Посетите форум служб Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)
+Остались вопросы? [Посетите форум служб Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)
   
   

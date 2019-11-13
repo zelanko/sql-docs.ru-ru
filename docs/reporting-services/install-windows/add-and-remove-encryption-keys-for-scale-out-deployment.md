@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2da86fb3-4b4d-407f-9825-74dcc42486f5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f1f021382556c13a20b0a8988b8b5199c21c9de7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 13c3415a59205e02c70773f73b2696f4e079f119
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63225668"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593852"
 ---
 # <a name="add-and-remove-encryption-keys-for-scale-out-deployment"></a>Добавление и удаление ключей шифрования для масштабного развертывания
   Службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] могут работать в модели масштабного развертывания, где несколько серверов отчетов настроены на использование общей базы данных. Членство в масштабном развертывании основано на том, хранит ли сервер отчетов ключ шифрования в базе данных сервера отчетов. Этим членством можно управлять за счет добавления и удаления ключей шифрования для конкретных экземпляров серверов отчетов. При удалении узлов из конфигурации развертывания их можно удалять в любом порядке. Если добавляются узлы к конфигурации, необходимо подключать все новые экземпляры с сервера отчетов, который уже входит в конфигурацию.  
@@ -58,7 +58,7 @@ ms.locfileid: "63225668"
     ```  
 4. Перезапустите службу Windows Reporting Services.
   
- Данные шаги удаляют сервер отчетов из масштабного развертывания, однако удаления экземпляра служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] на сервере отчетов не производится. После того как сервер отчетов будет удален из масштабного развертывания, службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] можно удалить с сервера (если службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] более не нужны). Сведения см. в разделе [Удаление существующего экземпляра SQL Server (программа установки)](../../sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md) электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Данные шаги удаляют сервер отчетов из масштабного развертывания, однако удаления экземпляра служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] на сервере отчетов не производится. После того как сервер отчетов будет удален из масштабного развертывания, службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] можно удалить с сервера (если службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] более не нужны). Сведения см. в статье [Удаление существующего экземпляра SQL Server &#40;программа установки&#41;](../../sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md).
   
 ## <a name="see-also"></a>См. также:  
  [Настройка ключей шифрования и управление ими (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   

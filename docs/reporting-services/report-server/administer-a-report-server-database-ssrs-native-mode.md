@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 97b2e1b5-3869-4766-97b9-9bf206b52262
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c24b7fa919b1a9abead4e6204b8d9eae001d0446
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7822cadea8dbe051c0e7dbc11417987dd5e5c543
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65575491"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593768"
 ---
 # <a name="administer-a-report-server-database-ssrs-native-mode"></a>Администрирование базы данных сервера отчетов (службы Reporting Services в собственном режиме)
   В развертывании служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в качестве внутреннего хранилища используются две реляционные базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . По умолчанию эти базы данных имеют имена ReportServer и ReportServerTempdb. База данных ReportServerTempdb создается вместе с основной базой данных сервера отчетов и используется для хранения временных данных, сведений о сеансе и кэшированных отчетов.  
@@ -29,7 +29,7 @@ ms.locfileid: "65575491"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет различные средства для администрирования баз данных сервера отчетов.  
   
--   Чтобы создать резервную копию или восстановить базу данных сервера отчетов, переместить базу данных сервера отчетов или восстановить базу данных сервера отчетов, можно использовать среду [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], команды [!INCLUDE[tsql](../../includes/tsql-md.md)] или программы базы данных с командной строкой. Инструкции см. в статье [Перемещение баз данных сервера отчетов на другой компьютер (собственный режим служб SSRS)](../../reporting-services/report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md) в электронной документации по SQL Server.  
+-   Чтобы создать резервную копию или восстановить базу данных сервера отчетов, переместить базу данных сервера отчетов или восстановить базу данных сервера отчетов, можно использовать среду [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], команды [!INCLUDE[tsql](../../includes/tsql-md.md)] или программы базы данных с командной строкой. Инструкции см. в статье [Перемещение баз данных сервера отчетов на другой компьютер &#40;собственный режим служб SSRS&#41;](../../reporting-services/report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md).  
   
 -   Чтобы скопировать содержимое существующей базы данных в другую базу данных сервера отчетов, можно присоединить копию базы данных сервера отчетов и использовать ее с другим экземпляром сервера отчетов. Либо можно создать и выполнить скрипт, использующий вызовы SOAP для повторного создания содержимого сервера отчетов в новой базе данных. Для выполнения скрипта можно использовать служебную программу **rs** .  
   

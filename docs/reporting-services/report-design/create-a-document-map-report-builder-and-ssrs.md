@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: c200a97b-67f2-499f-8374-3ed1ebe3f33c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 65d4566a7337d25a16f23eb8411e4338dabf7af0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cbfbc1b1d26f53e5ee8d3e04fc506048d76b3d28
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65581564"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593676"
 ---
 # <a name="create-a-document-map-report-builder-and-ssrs"></a>Создание схемы документа (построитель отчетов и службы SSRS)
 
@@ -108,9 +108,9 @@ ms.locfileid: "65581564"
 4.  Вставьте URL-адрес на веб-портале и нажмите клавишу ВВОД. Отчет будет запущен со скрытой схемой документа.  
   
 > [!NOTE]  
->  Дополнительные сведения о скачивании образцов отчетов см. в статье [(Примеры отчетов построителя отчетов и конструктора отчетов)](https://go.microsoft.com/fwlink/?LinkId=198283).  
+>  Дополнительные сведения о скачивании образцов отчетов см. в статье [(Примеры отчетов построителя отчетов и конструктора отчетов)](https://social.technet.microsoft.com/wiki/contents/articles/1093.reporting-services-samples-on-codeplex-sql-server-reporting-services-ssrs.aspx).  
 >   
->  Дополнительные сведения см. в разделе «Доступ по URL-адресу» [документации по службам Reporting Services](https://go.microsoft.com/fwlink/?linkid=121312) , входящей в состав электронной документации по SQL Server.  
+  >  Дополнительные сведения см. в разделе [Доступ по URL-адресу](../url-access-ssrs.md). 
 
 
 Остались вопросы? [Посетите форум служб Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).
