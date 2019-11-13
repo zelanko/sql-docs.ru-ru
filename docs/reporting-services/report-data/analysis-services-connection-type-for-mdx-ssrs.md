@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: bd2e7148-3124-4e07-9734-22333127c3be
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c108b2eaaf8aa0182b8192ab2d7868db84d531a6
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: b219388718f19aedecb9174647eef9e23e4395c3
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68892487"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593980"
 ---
 # <a name="analysis-services-connection-type-for-mdx-ssrs"></a>Тип соединения служб Analysis Services для многомерных выражений (службы SSRS)
   Чтобы включить в отчет данные из куба [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , необходимо иметь набор данных, основанный на источнике данных [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Этот встроенный тип источника данных основан на модуле обработки данных служб [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Из куба служб [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] можно получить метаданные измерений, иерархий, уровней, ключевых показателей эффективности, мер и атрибутов и использовать их в качестве данных отчета.  
@@ -45,7 +45,7 @@ data source=<server name>;initial catalog=<database name>
   
 -   Выдавать приглашение пользователю на ввод учетных данных. Этот параметр поддерживает только схему встроенной безопасности Windows.  
   
--   Учетные данные не требуются. Чтобы использовать этот параметр, необходима учетная запись автоматического выполнения, настроенная на сервере отчетов. Дополнительные сведения см. в разделе [Настройка учетной записи автоматического выполнения (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md) в [документации по службам Reporting Services](https://go.microsoft.com/fwlink/?linkid=121312) на сайте msdn.microsoft.com.  
+-   Учетные данные не требуются. Чтобы использовать этот параметр, необходима учетная запись автоматического выполнения, настроенная на сервере отчетов. Дополнительные сведения см. в статье [Настройка учетной записи автоматического выполнения &#40;диспетчер конфигурации служб SSRS&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).
   
  Дополнительные сведения см. в разделе [подключения к данным, источники данных и строки &#40;подключения построитель отчетов и&#41; службы SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) , а также [Указание учетных данных и сведений о соединении для источников данных отчета](specify-credential-and-connection-information-for-report-data-sources.md).  
   
@@ -61,7 +61,7 @@ data source=<server name>;initial catalog=<database name>
   
     -   **Представление запроса.** Перетащите измерения, элементы, свойства элементов, меры и ключевые показатели эффективности из браузера метаданных на панель «Запрос» для создания запроса многомерных выражений. Текст многомерного выражения можно изменять непосредственно на панели запроса. Перетащите вычисляемые элементы из панели "Вычисляемые элементы" в панель "Запрос" для определения дополнительных полей наборов данных.  
   
-     Дополнительные сведения см. в статье [Пользовательский интерфейс конструктора запросов многомерных выражений служб Analysis Services (построитель отчетов)](https://msdn.microsoft.com/library/7e288eee-2d37-485e-a6a0-dbba5e041e26).  
+     Дополнительные сведения см. в статье [Пользовательский интерфейс конструктора запросов многомерных выражений служб Analysis Services (построитель отчетов)](../../reporting-services/report-data/analysis-services-mdx-query-designer-user-interface.md).  
   
 -   Импорт существующего запроса многомерных выражений из отчета. Воспользуйтесь кнопкой **Импорт** , чтобы указать RDL-файл и импортировать запрос. Можно импортировать запрос из отчета, содержащего внедренный набор данных, основанный на источнике данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Импорт запроса многомерных выражений непосредственно из MDX-файла не поддерживается.  
   
@@ -81,7 +81,7 @@ data source=<server name>;initial catalog=<database name>
   
  Данные из куба служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] можно также получать с помощью источника данных OLE DB. Дополнительные сведения см. в разделе [Тип соединения OLE DB (службы SSRS)](../../reporting-services/report-data/ole-db-connection-type-ssrs.md).  
   
- Дополнительные сведения о поддержке версий см. в разделе [Источники данных, поддерживаемые службами Reporting Services ( службы SSRS)](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md) документации по [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в [электронной документации](https://go.microsoft.com/fwlink/?linkid=121312) по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Дополнительные сведения о поддержке версий см. в статье [Источники данных, поддерживаемые службами Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
   
   
 ##  <a name="Related"></a> См. также  
@@ -102,7 +102,7 @@ data source=<server name>;initial catalog=<database name>
  [Расширенные свойства поля для базы данных служб Analysis Services (службы SSRS)](../../reporting-services/report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md)  
  Предоставляет сведения о расширенных полях, доступных через поставщик данных XMLA.  
   
- [Источники данных, поддерживаемые службами Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md), см. в документации [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в [электронной документации](https://go.microsoft.com/fwlink/?linkid=121312) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ [Источники данных, поддерживаемые службами Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
  Предоставляет подробные сведения о поддержке платформ и версий для каждого модуля обработки данных.  
   
   
