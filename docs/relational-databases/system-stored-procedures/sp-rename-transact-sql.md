@@ -21,17 +21,17 @@ ms.assetid: bc3548f0-143f-404e-a2e9-0a15960fc8ed
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 070c2a362a69fb6863cc263da3975efc66c7c9f2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 92ef8c4583db152b2f81a574010a12030680704f
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006942"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73983071"
 ---
-# <a name="sprename-transact-sql"></a>sp_rename (Transact-SQL)
+# <a name="sp_rename-transact-sql"></a>sp_rename (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Изменяет имя пользовательского объекта в текущей базе данных. Этот объект может быть таблицей, индексом, столбцом, псевдонимом типа данных или [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] определяемого пользователем типа среды выполнения (CLR).  
+  Изменяет имя пользовательского объекта в текущей базе данных. Этот объект может быть таблицей, индексом, столбцом, псевдонимом типа данных или [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] определяемого пользователем типа среды CLR.  
   
 > [!CAUTION]  
 >  Изменение любой части имени объекта может разрушить скрипты и хранимые процедуры. Не рекомендуется использовать эту инструкцию для переименования хранимых процедур, триггеров, определяемых пользователем функций или представлений; следует удалить объект и создать его повторно с новым именем.  
@@ -47,40 +47,40 @@ sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ @objname =] '*object_name*"  
- Текущее полное или неполное имя пользовательского объекта или типа данных. Если переименовать объект представляет собой столбец в таблице, *object_name* должно быть в форме *таблица.столбец* или *столбце schema.table.column*. Если объект, который требуется переименовать, индекса, *object_name* должно быть в форме *table.index* или *schema.table.index*. Если объект, который требуется переименовать, ограничения, *object_name* должно быть в форме *schema.constraint*.  
+ [@objname =] "*object_name*"  
+ Текущее полное или неполное имя пользовательского объекта или типа данных. Если переименованный объект является столбцом в таблице, *object_name* должен быть в формате *Table. Column* или *Schema. Table. Column*. Если объект для переименования является индексом, *object_name* должен быть указан в форме *Table. index* или *Schema. Table. index*. Если переименованный объект является ограничением, *object_name* должен иметь форму *Schema. Constraint*.  
   
- Кавычки необходимы, только если указан объект с полным именем. Если предоставлено полное имя таблицы, включая имя базы данных, в качестве последнего должно использоваться имя текущей базы данных. *object_name* — **nvarchar(776)** , не имеет значения по умолчанию.  
+ Кавычки необходимы, только если указан объект с полным именем. Если предоставлено полное имя таблицы, включая имя базы данных, в качестве последнего должно использоваться имя текущей базы данных. *object_name* имеет тип **nvarchar (776)** и не имеет значения по умолчанию.  
   
- [ @newname =] '*новое_имя*"  
- Новое имя для указанного объекта. *новое_имя* должно быть однокомпонентным и должно соответствовать правилам для идентификаторов. *newname* — **sysname**, не имеет значения по умолчанию.  
+ [@newname =] "*new_name*"  
+ Новое имя для указанного объекта. *new_name* должно быть именем из одной части и должно соответствовать правилам для идентификаторов. Аргумент *newname* имеет тип **sysname**и не имеет значения по умолчанию.  
   
 > [!NOTE]  
 >  Имена триггеров не могут начинаться с символов # или ##.  
   
- [ @objtype =] '*object_type*"  
- Тип переименовываемого объекта. *object_type* — **varchar(13)** , значение по умолчанию NULL, и может принимать одно из следующих значений.  
+ [@objtype =] "*object_type*"  
+ Тип переименовываемого объекта. *object_type* имеет тип **varchar (13)** , значение по умолчанию NULL и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
 |COLUMN|Столбец, который будет переименован.|  
 |DATABASE|Пользовательская база данных. Этот тип объекта необходим при переименовании базы данных.|  
 |INDEX|Пользовательский индекс. При переименовании индекса со статистикой также автоматически переименовывается эта статистика.|  
-|OBJECT|Элемент типа отслеживаются в [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md). Например, значение OBJECT может быть использовано для переименования объектов с ограничениями (CHECK, FOREIGN KEY, PRIMARY/UNIQUE KEY) пользовательских таблиц и правил.|  
-|STATISTICS|**Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Статистика создается явно пользователем или неявно с индексом. При переименовании статистики для индекса также автоматически переименовывается этот индекс.|  
-|USERDATATYPE|Объект [CLR пользовательские типы](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md) добавленные выполнением инструкции [CREATE TYPE](../../t-sql/statements/create-type-transact-sql.md) или [sp_addtype](../../relational-databases/system-stored-procedures/sp-addtype-transact-sql.md).|  
+|OBJECT|Элемент типа, записанный в [sys. Objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md). Например, значение OBJECT может быть использовано для переименования объектов с ограничениями (CHECK, FOREIGN KEY, PRIMARY/UNIQUE KEY) пользовательских таблиц и правил.|  
+|STATISTICS|**Применимо к**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздних версий и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Статистика создается явно пользователем или неявно с индексом. При переименовании статистики для индекса также автоматически переименовывается этот индекс.|  
+|USERDATATYPE|[Определяемые пользователем типы данных CLR](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md) , добавленные с помощью команды [CREATE TYPE](../../t-sql/statements/create-type-transact-sql.md) или [sp_addtype](../../relational-databases/system-stored-procedures/sp-addtype-transact-sql.md).|  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или ненулевое значение (неуспешное завершение)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Изменить имя объекта или типа данных можно только в текущей базе данных. Имена большинства системных типов данных и системных объектов изменить нельзя.  
   
  Процедура sp_rename автоматически переименовывает ассоциированный индекс каждый раз при переименовании ограничения PRIMARY KEY или UNIQUE. Если переименованный индекс привязан к ограничению PRIMARY KEY, то ограничение PRIMARY KEY также автоматически переименовывается хранимой процедурой sp_rename.  
   
  Процедура sp_rename может использоваться для переименования первичных и вторичных XML-индексов.  
   
- Переименование хранимой процедуры, функции, представления или триггера не изменит имени соответствующего объекта в определении столбца [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) представления каталога или получить с помощью [OBJECT_ ОПРЕДЕЛЕНИЕ](../../t-sql/functions/object-definition-transact-sql.md) встроенной функции. Поэтому не рекомендуется использовать процедуру sp_rename для переименования объектов этих типов. Лучше удалить и создать объект повторно с новым именем.  
+ Переименование хранимой процедуры, функции, представления или триггера не приведет к изменению имени соответствующего объекта либо в столбце определения представления каталога [sys. sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) либо при получении с помощью встроенной функции [OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md) . Поэтому не рекомендуется использовать процедуру sp_rename для переименования объектов этих типов. Лучше удалить и создать объект повторно с новым именем.  
   
  Переименование такого объекта, как таблица или столбец не приводит к автоматическому переименованию ссылок на этот объект. Необходимо вручную изменить любые объекты, которые ссылаются на переименованный объект. Например, если переименован столбец таблицы и на этот столбец имеется ссылка в триггере, то необходимо изменить триггер, указав новое имя столбца. Используйте [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) , чтобы составить список зависимостей для объекта перед его переименованием.  
   
@@ -90,7 +90,7 @@ sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'
 ## <a name="examples"></a>Примеры  
   
 ### <a name="a-renaming-a-table"></a>A. Переименование таблицы  
- В следующем примере в схеме `Sales` таблица `SalesTerritory` переименовывается в `SalesTerr`.  
+ В следующем примере столбец `SalesTerritory` в таблице `SalesTerr` переименовывается в `Sales` .  
   
 ```  
 USE AdventureWorks2012;  
@@ -99,8 +99,8 @@ EXEC sp_rename 'Sales.SalesTerritory', 'SalesTerr';
 GO  
 ```  
   
-### <a name="b-renaming-a-column"></a>Б. Переименование столбца  
- В следующем примере показано переименование `TerritoryID` столбца в `SalesTerritory` таблицу `TerrID`.  
+### <a name="b-renaming-a-column"></a>б. Переименование столбца  
+ В следующем примере переименовывается столбец `TerritoryID` в таблице `SalesTerritory` для `TerrID`.  
   
 ```  
 USE AdventureWorks2012;  
@@ -192,7 +192,7 @@ CK_Employee_SickLeaveHours            HumanResources     CHECK_CONSTRAINT
 ```  
   
 ### <a name="f-renaming-statistics"></a>Е. Переименование статистики  
- В следующем примере создается объект статистики, с именем contactMail1 и затем переименовывается в для NewContact с помощью sp_rename. При переименовании объекта статистики его имя должно быть указано в формате schema.table.statistics_name.  
+ В следующем примере создается объект статистики с именем contactMail1, а затем этот статистический параметр переименовывается в Невконтакт с помощью sp_rename. При переименовании объекта статистики его имя должно быть указано в формате schema.table.statistics_name.  
   
 ```  
 CREATE STATISTICS ContactMail1  
@@ -203,10 +203,10 @@ sp_rename 'Person.Person.ContactMail1', 'NewContact','Statistics';
   
 ```  
   
-## <a name="see-also"></a>См. также  
- [sys.sql_expression_dependencies (Transact-SQL)](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)   
+## <a name="see-also"></a>См. также статью  
+ [Представление каталога sys.sql_expression_dependencies (Transact-SQL)](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)   
  [sys.sql_modules (Transact-SQL)](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Хранимым процедурам ядра СУБД &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
+ [Ядро СУБД хранимых &#40;процедур TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
   
   

@@ -21,17 +21,17 @@ ms.assetid: d6a78d14-bb1f-4987-b7b6-579ddd4167f5
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 358b08fe10f29d6a8aaec40f6a80e92c5950e7b7
-ms.sourcegitcommit: d65cef35cdf992297496095d3ad76e3c18c9794a
+ms.openlocfilehash: 25d4aa1e82097dcc4027809c7292587a20862d75
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72989506"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73981876"
 ---
 # <a name="sysfn_get_audit_file-transact-sql"></a>sys.fn_get_audit_file (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
-  Возвращает сведения из файла аудита, созданного аудитом сервера в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в статье [Подсистема аудита SQL Server (ядро СУБД)](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
+  Возвращает сведения из файла аудита, созданного аудитом сервера в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в статье [Подсистема аудита SQL Server (компонент Database Engine)](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,11 +51,11 @@ fn_get_audit_file ( file_pattern,
     
     Этот аргумент должен содержать как путь (букву диска или сетевой ресурс), так и имя файла, которое может включать символ-шаблон. Для получения нескольких файлов из набора файлов аудита можно использовать одну звездочку (*). Пример:  
   
-    -   **\<path > \\ \*** — получение всех файлов аудита в указанном расположении.  
+    -   **\<путь >\\\*** — получение всех файлов аудита в указанном расположении.  
   
-    -   **\<путь > \LoginsAudit_{GUID}** — получение всех файлов аудита с указанными именем и парой GUID.  
+    -   **\<путь > \ LoginsAudit_ {GUID}** — получение всех файлов аудита с указанными именем и парой GUID.  
   
-    -   **\<путь > \LoginsAudit_{GUID}_00_29384.sqlaudit** — получение конкретного файла аудита.  
+    -   **\<путь > \ LoginsAudit_ {GUID} _00_29384. sqlaudit** — получение конкретного файла аудита.  
   
  - **База данных SQL Azure или хранилище данных SQL Azure**:
  
@@ -63,7 +63,7 @@ fn_get_audit_file ( file_pattern,
  
       - **\<Storage_endpoint\>/\<Container\>/\<ServerName\>/\<DatabaseName\>/** — собирает все файлы аудита (BLOB-объекты) для конкретной базы данных.    
       
-      - **\<Storage_endpoint\>/\<Container\>/\<имя_сервера\>/\<DatabaseName\>/\<аудитнаме\>/\<CreationDate\>/\<FileName\>. XEL-** — собирает конкретный файл аудита (BLOB).
+      - **\<Storage_endpoint\>/\<Container\>/\<имя_сервера\>/\<DatabaseName\>/\<аудитнаме\>/\<CreationDate\>/\<FileName\>. XEL-** — собирает конкретный файл аудита (BLOB-объект).
   
 > [!NOTE]  
 >  При передаче пути без имени файла сформируется ошибка.  
@@ -83,7 +83,7 @@ fn_get_audit_file ( file_pattern,
 ## <a name="tables-returned"></a>Возвращаемые таблицы  
  В следующей таблице описано содержимое файла аудита, которое может возвращаться этой функцией.  
   
-| Имя столбца | В качестве описания введите | Description |  
+| Имя столбца | Тип | Описание |  
 |-------------|------|-------------|  
 | action_id | **varchar(4)** | Идентификатор действия. Не допускает значения NULL. |  
 | additional_information | **nvarchar(4000)** | Уникальные сведения, применимые только к одиночному событию, возвращаются в формате XML. Немногие действия, доступные для аудита, содержат сведения этого вида.<br /><br /> Для действий, имеющих связанный с ними стек TSQL, отображается один уровень стека TSQL в формате XML. Используется следующий формат XML:<br /><br /> `<tsql_stack><frame nest_level = '%u' database_name = '%.*s' schema_name = '%.*s' object_name = '%.*s' /></tsql_stack>`<br /><br /> Параметр «frame nest_level» указывает текущий уровень вложенности кадра. Имя модуля состоит из трех частей (имя базы данных database_name, имя схемы schema_name и имя объекта object_name).  Имя модуля будет проанализировано для экранирования недопустимых символов XML, таких как `'\<'`, `'>'`, `'/'`, `'_x'`. Они будут экранированы как `_xHHHH\_`. Здесь HHHH обозначает четырехразрядный шестнадцатеричный код символа в UCS-2.<br /><br /> Допускает значение NULL. Возвращает NULL, если событие не сообщает дополнительных сведений. |
@@ -123,14 +123,14 @@ fn_get_audit_file ( file_pattern,
 | target_server_principal_name | **sysname** | Целевое имя входа действия. Допускает значение NULL. Если неприменимо, возвращается значение NULL. |  
 | target_server_principal_sid | **varbinary** | Идентификатор безопасности целевого имени входа. Допускает значение NULL. Если неприменимо, возвращается значение NULL. |  
 | transaction_id | **bigint** | **Применимо к**: только SQL Server (начиная с 2016)<br /><br /> Уникальный идентификатор для идентификации нескольких событий аудита в одной транзакции |  
-| user_defined_event_id | **smallint** | Область **применения**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] с помощью [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], базы данных SQL Azure и управляемого экземпляра<br /><br /> Определяемый пользователем идентификатор события, передаваемый в качестве аргумента в **sp_audit_write**. **Null** для системных событий (по умолчанию) и ненулевое значение для определяемого пользователем события. Дополнительные сведения см. в [разделе &#40;SP_AUDIT_WRITE Transact-&#41;SQL](../../relational-databases/system-stored-procedures/sp-audit-write-transact-sql.md). |  
-| user_defined_information | **nvarchar(4000)** | Область **применения**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] с помощью [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], базы данных SQL Azure и управляемого экземпляра<br /><br /> Используется для записи дополнительных сведений, которые пользователь хочет записать в журнал аудита с помощью хранимой процедуры **sp_audit_write** . |  
+| user_defined_event_id | **smallint** | Область **применения**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздней версии, база данных SQL Azure и управляемый экземпляр<br /><br /> Определяемый пользователем идентификатор события, передаваемый в качестве аргумента для **sp_audit_write**. **Null** для системных событий (по умолчанию) и ненулевое значение для определяемого пользователем события. Дополнительные сведения см. в [разделе &#40;SP_AUDIT_WRITE Transact-&#41;SQL](../../relational-databases/system-stored-procedures/sp-audit-write-transact-sql.md). |  
+| user_defined_information | **nvarchar(4000)** | Область **применения**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздней версии, база данных SQL Azure и управляемый экземпляр<br /><br /> Используется для записи дополнительных сведений, которые пользователь хочет записать в журнал аудита с помощью хранимой процедуры **sp_audit_write** . |  
 
   
 ## <a name="remarks"></a>Remarks  
- Если аргумент *file_pattern* , переданный в **fn_get_audit_file** , ссылается на несуществующий путь или файл, или если файл не является файлом аудита, возвращается сообщение об ошибке **MSG_INVALID_AUDIT_FILE** .  
+ Если аргумент *file_pattern* , передаваемый в **fn_get_audit_file** , ссылается на несуществующий путь или файл, или если файл не является файлом аудита, возвращается сообщение об ошибке **MSG_INVALID_AUDIT_FILE** .  
   
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>Разрешения
 
 - **SQL Server**: требуется разрешение **Control Server** .  
 - База данных **SQL Azure**: требуется разрешение **Control Database** .     

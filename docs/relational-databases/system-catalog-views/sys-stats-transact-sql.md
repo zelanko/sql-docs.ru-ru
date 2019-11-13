@@ -1,5 +1,5 @@
 ---
-title: sys.STATS (Transact-SQL) | Документация Майкрософт
+title: sys. stats (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 12/18/2017
 ms.prod: sql
@@ -20,32 +20,32 @@ ms.assetid: 42605c80-126f-460a-befb-a0b7482fae6a
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1a50bf492641da227f355f1e844a3e9d7156d93e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8d81d0447558f964839b8849fe141f127fe1e37c
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68108965"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982143"
 ---
 # <a name="sysstats-transact-sql"></a>sys.stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Содержит по одной строке для каждого объекта статистики, существующего для таблиц, индексов и индексированных представлений в базе данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Каждый индекс будет иметь соответствующую строку статистики с тем же именем и Идентификатором (**index_id** = **stats_id**), но не каждая строка статистики имеет соответствующий индекс.  
+  Содержит по одной строке для каждого объекта статистики, существующего для таблиц, индексов и индексированных представлений в базе данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Каждый индекс будет иметь соответствующую строку статистики с тем же именем и ИДЕНТИФИКАТОРом (**index_id** = **stats_id**), но не каждая строка статистики имеет соответствующий индекс.  
   
- Представление каталога [sys.stats_columns](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md) содержит статистические данные для каждого столбца в базе данных. Дополнительные сведения о статистике см. в статье [Статистика](../../relational-databases/statistics/statistics.md).  
+ Представление каталога [sys. stats_columns](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md) предоставляет статистические данные для каждого столбца в базе данных. Дополнительные сведения о статистике см. в статье [Статистика](../../relational-databases/statistics/statistics.md).  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|Идентификатор объекта, которому принадлежит статистика.|  
 |**name**|**sysname**|Имя статистики. Уникален в пределах объекта.|  
-|**stats_id**|**int**|Идентификатор статистики. Уникален в пределах объекта.<br /><br />Если статистика соответствует индексу, *stats_id* значение совпадает со значением *index_id* значение в [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) представления каталога.|  
-|**флаг auto_created**|**bit**|Указывает, была ли статистика создана автоматически [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> 0 = статистика не была автоматически создана [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> 1 = статистика была автоматически создана [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**user_created**|**bit**|Указывает, была ли статистика создана пользователем.<br /><br /> 0 = статистика не была создана пользователем.<br /><br /> 1 = статистика была создана пользователем.|  
-|**no_recompute**|**bit**|Указывает, была ли статистика создана с помощью **NORECOMPUTE** параметр.<br /><br /> 0 = статистика не была создана с помощью **NORECOMPUTE** параметр.<br /><br /> 1 = Статистика была создана с **NORECOMPUTE** параметр.|  
-|**has_filter**|**bit**|0 = Статистика не имеет фильтр и рассчитывается для всех строк.<br /><br /> 1 = Статистика имеет фильтр и рассчитывается только для строк, которые удовлетворяют определению фильтра.|  
-|**filter_definition**|**nvarchar(max)**|Выражение для подмножества строк, включенного в отфильтрованную статистику.<br /><br /> NULL — неотфильтрованная статистика.|  
-|**is_temporary**|**bit**|**Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Указывает, является ли статистика временной. Временная статистика поддерживает базы данных-получатели [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], доступные только для чтения.<br /><br /> 0 = статистика не является временной.<br /><br /> 1 = статистика является временной.|  
-|**is_incremental**|**bit**|**Применимо к**: с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Указывает, создается ли статистика в добавочном виде.<br /><br /> 0 = статистика добавочная.<br /><br /> 1 = статистика недобавочная.|  
+|**stats_id**|**int**|Идентификатор статистики. Уникален в пределах объекта.<br /><br />Если статистика соответствует индексу, то *stats_id* значение совпадает со значением *index_id* в представлении каталога [sys. indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) .|  
+|**auto_created**|**бит**|Указывает, была ли статистика создана автоматически [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> 0 = статистика не была автоматически создана [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> 1 = статистика была автоматически создана [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**user_created**|**бит**|Указывает, была ли статистика создана пользователем.<br /><br /> 0 = статистика не была создана пользователем.<br /><br /> 1 = статистика была создана пользователем.|  
+|**no_recompute**|**бит**|Указывает, была ли создана статистика с параметром **NORECOMPUTE** .<br /><br /> 0 = статистика не была создана с параметром **NORECOMPUTE** .<br /><br /> 1 = статистика была создана с помощью параметра **NORECOMPUTE** .|  
+|**has_filter**|**бит**|0 = Статистика не имеет фильтр и рассчитывается для всех строк.<br /><br /> 1 = Статистика имеет фильтр и рассчитывается только для строк, которые удовлетворяют определению фильтра.|  
+|**filter_definition**|**nvarchar(max)** ;|Выражение для подмножества строк, включенного в отфильтрованную статистику.<br /><br /> NULL — неотфильтрованная статистика.|  
+|**is_temporary**|**бит**|**Область применения**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздних версий.<br /><br /> Указывает, является ли статистика временной. Временная статистика поддерживает базы данных-получатели [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], доступные только для чтения.<br /><br /> 0 = статистика не является временной.<br /><br /> 1 = статистика является временной.|  
+|**is_incremental**|**бит**|**Область применения**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и более поздних версий.<br /><br /> Указывает, создается ли статистика в добавочном виде.<br /><br /> 0 = статистика добавочная.<br /><br /> 1 = статистика недобавочная.|  
   
 ## <a name="permissions"></a>Разрешения  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
@@ -67,13 +67,13 @@ INNER JOIN sys.columns AS c
 WHERE s.object_id = OBJECT_ID('HumanResources.Employee');  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также статью  
  [Представления каталога объектов (Transact-SQL)](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [Представления каталога (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Запросив системный каталог SQL Server часто задаваемые вопросы](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
+ [Запросы к системному каталогу SQL Server вопросы и ответы](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
  [Статистика](../../relational-databases/statistics/statistics.md)    
  [sys.dm_db_stats_properties &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)   
- [sys.dm_db_stats_histogram &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md)   
+ [sys. dm_db_stats_histogram &#40;  Transact-&#41; SQL](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md)  
  [sys.stats_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md)
  
 

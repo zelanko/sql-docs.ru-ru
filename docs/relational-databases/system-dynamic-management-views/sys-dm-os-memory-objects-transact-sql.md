@@ -1,5 +1,5 @@
 ---
-title: sys.dm_os_memory_objects (Transact-SQL) | Документация Майкрософт
+title: sys. dm_os_memory_objects (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/13/2017
 ms.prod: sql
@@ -20,50 +20,50 @@ ms.assetid: 5688bcf8-5da9-4ff9-960b-742b671d7096
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ca3a6a8891e74bd795f15e9a374194650e70b197
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: a3d0691a82607a207a64f4a6c7ed8c937f052abc
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265754"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73983080"
 ---
-# <a name="sysdmosmemoryobjects-transact-sql"></a>sys.dm_os_memory_objects (Transact-SQL)
+# <a name="sysdm_os_memory_objects-transact-sql"></a>sys.dm_os_memory_objects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Возвращает объекты памяти, которые выделяются в настоящее время [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Можно использовать **sys.dm_os_memory_objects** для анализа использования памяти и для выявления возможных памяти утечек.  
+  Возвращает объекты памяти, которые выделяются в настоящее время [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. **Sys. dm_os_memory_objects** можно использовать для анализа использования памяти и выявления возможных утечек памяти.  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**memory_object_address**|**varbinary(8)**|Адрес объекта памяти. Не допускает значение NULL.|  
-|**parent_address**|**varbinary(8)**|Адрес родительского объекта памяти. Допускает значение NULL.|  
-|**pages_allocated_count**|**int**|**Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)].<br /><br /> Число страниц, выделенных данным объектом. Не допускает значение NULL.|  
-|**pages_in_bytes**|**bigint**|**Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Объем памяти в байтах, выделяемый этим экземпляром объекта памяти. Не допускает значение NULL.|  
+|**memory_object_address**|**varbinary (8)**|Адрес объекта памяти. Не допускает значение NULL.|  
+|**parent_address**|**varbinary (8)**|Адрес родительского объекта памяти. Допускает значение NULL.|  
+|**pages_allocated_count**|**int**|**Область применения**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)].<br /><br /> Число страниц, выделенных данным объектом. Не допускает значение NULL.|  
+|**pages_in_bytes**|**bigint**|**Область применения**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздних версий.<br /><br /> Объем памяти в байтах, выделяемый этим экземпляром объекта памяти. Не допускает значение NULL.|  
 |**creation_options**|**int**|Только для внутреннего применения. Допускает значение NULL.|  
 |**bytes_used**|**bigint**|Только для внутреннего применения. Допускает значение NULL.|  
 |**type**|**nvarchar(60)**|Тип объекта памяти.<br /><br /> Указывает компонент, которому принадлежит данный объект памяти, либо функцию объекта памяти. Допускает значение NULL.|  
 |**name**|**varchar(128)**|Только для внутреннего применения. Допускает значение NULL.|  
 |**memory_node_id**|**smallint**|Идентификатор узла памяти, используемого данным объектом памяти. Не допускает значение NULL.|  
 |**creation_time**|**datetime**|Только для внутреннего применения. Допускает значение NULL.|  
-|**max_pages_allocated_count**|**int**|**Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)].<br /><br /> Максимальное число страниц, выделенных данным объектом. Не допускает значение NULL.|  
-|**page_size_in_bytes**|**int**|**Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Размер страниц в байтах, выделенных данным объектом. Не допускает значение NULL.|  
+|**max_pages_allocated_count**|**int**|**Область применения**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)].<br /><br /> Максимальное число страниц, выделенных данным объектом. Не допускает значение NULL.|  
+|**page_size_in_bytes**|**int**|**Область применения**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздних версий.<br /><br /> Размер страниц в байтах, выделенных данным объектом. Не допускает значение NULL.|  
 |**max_pages_in_bytes**|**bigint**|Максимальный объем памяти, который когда-либо использовался данным объектом памяти. Не допускает значение NULL.|  
-|**page_allocator_address**|**varbinary(8)**|Адрес средства выделения страниц в памяти. Не допускает значение NULL. Дополнительные сведения см. в разделе [sys.dm_os_memory_clerks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md).|  
-|**creation_stack_address**|**varbinary(8)**|Только для внутреннего применения. Допускает значение NULL.|  
+|**page_allocator_address**|**varbinary (8)**|Адрес средства выделения страниц в памяти. Не допускает значение NULL. Дополнительные сведения см. в разделе [sys. &#40;DM_OS_MEMORY_CLERKS Transact-&#41;SQL](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md).|  
+|**creation_stack_address**|**varbinary (8)**|Только для внутреннего применения. Допускает значение NULL.|  
 |**sequence_num**|**int**|Только для внутреннего применения. Допускает значение NULL.|  
-|**partition_type**|**int**|Тип раздела:<br /><br /> 0 — неделимых объекта памяти<br /><br /> 1 - секционировать памяти объекта, в настоящее время не секционирована<br /><br /> 2 - объект секционировать памяти, секционированных по узлам NUMA. В среде с одним узлом NUMA это эквивалентно 1.<br /><br /> 3 - объект секционировать память, секционированные по ЦП.|  
-|**contention_factor**|**real**|Значение, указывающее о конфликтах для данного объекта памяти, 0 означает, что конкуренции нет. Значения обновляются каждый раз, когда указанное число операций выделения памяти были внесены отражающие состязания за соответствующий период. Применяется только к объектам памяти поточно ориентированными.|  
-|**waiting_tasks_count**|**bigint**|Число ожиданий данного объекта памяти. Значение этого счетчика увеличивается всякий раз, когда память выделяется из данного объекта памяти. Увеличение — число задач, которые в настоящее время ожидания для доступа к этому объекту памяти. Применяется только к объектам памяти поточно ориентированными. Это оптимальное значение усилий не гарантирует правильность.|  
-|**exclusive_access_count**|**bigint**|Указывает, как часто исключительно осуществлялся данный объект памяти. Применяется только к объектам памяти поточно ориентированными.  Это оптимальное значение усилий не гарантирует правильность.|  
-|**pdw_node_id**|**int**|**Применяется к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Идентификатор для узла, это распределение является на.|  
+|**partition_type**|**int**|Тип раздела:<br /><br /> 0 — объект памяти, не являющийся секционированным<br /><br /> 1 — объект секционированной памяти, который в настоящее время не секционирован<br /><br /> 2-секционный объект памяти, секционированный по узлу NUMA. В среде с одним узлом NUMA это эквивалентно 1.<br /><br /> 3-секционный объект памяти, секционированный по ЦП.|  
+|**contention_factor**|**real**|Значение, указывающее состязание за этот объект памяти, при этом 0 означает отсутствие конкуренции. Значение обновляется каждый раз, когда заданное число выделений памяти отражает состязание за этот период. Применяется только к потокобезопасным объектам памяти.|  
+|**waiting_tasks_count**|**bigint**|Число ожиданий этого объекта памяти. Этот счетчик увеличивается при выделении памяти из этого объекта памяти. Шаг приращения — это число задач, ожидающих доступа к этому объекту памяти. Применяется только к потокобезопасным объектам памяти. Это наиболее актуальное значение без гарантии правильности.|  
+|**exclusive_access_count**|**bigint**|Указывает, как часто данный объект памяти был доступен исключительно. Применяется только к потокобезопасным объектам памяти.  Это наиболее актуальное значение без гарантии правильности.|  
+|**pdw_node_id**|**int**|**Применимо к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Идентификатор узла, на котором находится данное распределение.|  
   
- **partition_type**, **contention_factor**, **waiting_tasks_count**, и **exclusive_access_count** еще не реализованы в [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+ **partition_type**, **contention_factor**, **waiting_tasks_count**и **exclusive_access_count** еще не реализованы в [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
 ## <a name="permissions"></a>Разрешения
 
-На [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], требуется `VIEW SERVER STATE` разрешение.   
-На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровней Premium необходимо `VIEW DATABASE STATE` разрешение в базе данных. На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровней Standard и Basic, требует **администратора сервера** или **администратор Azure Active Directory** учетной записи.   
+На [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]требуется `VIEW SERVER STATE` разрешение.   
+На уровнях [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium требуется разрешение `VIEW DATABASE STATE` в базе данных. На уровнях [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard и Basic требуется **Администратор сервера** или учетная запись **администратора Azure Active Directory** .   
 
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Объекты памяти представляют собой кучи. Они обеспечивают выделение памяти с большей точностью, чем клерки памяти. Компоненты [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] используют вместо клерков памяти объекты памяти. Объекты памяти для выделения страниц используют интерфейс средства выделения памяти от клерка памяти. Виртуальные или общие интерфейсы памяти объектами памяти не используются. В зависимости от шаблонов выделения памяти компоненты могут создавать различные типы объектов для выделения областей памяти произвольного размера.  
   
  Стандартный размер страницы для объекта памяти равен 8 КБ. Однако для добавочных объектов памяти размеры страниц могут варьироваться от 512 байт до 8 килобайт.  
@@ -82,9 +82,9 @@ ORDER BY 'Bytes Used' DESC;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
-  [Динамические административные представления, относящиеся к операционной системе SQL Server &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
- [sys.dm_os_memory_clerks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)  
+## <a name="see-also"></a>См. также статью  
+  [SQL Server динамическое представление &#40;управления, связанное с операционной&#41; системой,  Transact-SQL](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
+ [sys. dm_os_memory_clerks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)  
   
   
 

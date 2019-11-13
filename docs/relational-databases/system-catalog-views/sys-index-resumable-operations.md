@@ -1,7 +1,7 @@
 ---
 title: sys. index_resumable_operations (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
-ms.date: 01/14/2019
+ms.date: 11/12/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -19,25 +19,25 @@ ms.assetid: ''
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d4f79da2af2630fa54a06dc26b32cf22287f7c1d
-ms.sourcegitcommit: 853c2c2768caaa368dce72b4a5e6c465cc6346cf
+ms.openlocfilehash: d33b78710605841e4559f9c402a18210e25b2daa
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71227198"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73980304"
 ---
 # <a name="sysindex_resumable_operations-transact-sql"></a>sys. index_resumable_operations (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
-**sys. index_resumable_operations** — это системное представление, которое отслеживает и проверяет текущее состояние выполнения для возобновляемой перестроения индекса.  
-**Область применения**: SQL Server 2017 и база данных SQL Azure
+**sys. index_resumable_operations** — это системное представление, которое отслеживает и проверяет текущее состояние выполнения возобновляемого перестроения индекса или создания.  
+Область **применения**: SQL Server (2017 и более поздние версии) и база данных SQL Azure.
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|Идентификатор объекта, которому принадлежит этот индекс (не допускает значения NULL).|  
-|**index_id**|**int**|Идентификатор индекса (не допускает значения NULL). Аргумент **index_id** уникален только в пределах объекта.|
+|**index_id**|**int**|Идентификатор индекса (не допускает значения NULL). **index_id** уникален только в пределах объекта.|
 |**name**|**sysname**|Имя индекса. **имя** уникально только в пределах объекта.|  
-|**sql_text**|**nvarchar(max)**|Текст инструкции DDL T-SQL|
+|**sql_text**|**nvarchar(max)** ;|Текст инструкции DDL T-SQL|
 |**last_max_dop**|**smallint**|Использован последний MAX_DOP (по умолчанию = 0)|
 |**partition_number**|**int**|Номер секции в индексе или куче-владельце. Для несекционированных таблиц и индексов, если выполняется перестроение всех секций, значение этого столбца равно NULL.|
 |**state**|**tinyint**|Операционное состояние для возобновляемого индекса:<br /><br />0 = работает<br /><br />1 = приостановка|
@@ -54,13 +54,13 @@ ms.locfileid: "71227198"
 
 ## <a name="example"></a>Пример
 
- Вывод списка всех возобновляемых операций перестроения индекса, которые находятся в состоянии приостановки.
+ Перечисление всех операций создания или перестроения индекса, которые находятся в состоянии приостановки.
 
 ```sql
 SELECT * FROM  sys.index_resumable_operations WHERE STATE = 1;  
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также статью
 
 - [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md)
 - [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md)

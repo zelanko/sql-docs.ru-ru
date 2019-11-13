@@ -1,5 +1,5 @@
 ---
-title: sys.dm_exec_text_query_plan (Transact-SQL) | Документация Майкрософт
+title: sys. dm_exec_text_query_plan (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 10/20/2017
 ms.prod: sql
@@ -20,23 +20,23 @@ ms.assetid: 9d5e5f59-6973-4df9-9eb2-9372f354ca57
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5016f6f556967fa45364460280080ca829e521b8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6d23813078c2a90b18af0a1df48079b571e77a13
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67936885"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73983142"
 ---
-# <a name="sysdmexectextqueryplan-transact-sql"></a>sys.dm_exec_text_query_plan (Transact-SQL)
+# <a name="sysdm_exec_text_query_plan-transact-sql"></a>sys.dm_exec_text_query_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Возвращает инструкцию Showplan в текстовом формате для пакета [!INCLUDE[tsql](../../includes/tsql-md.md)] или для определенной инструкции в пакете. План запроса, указанный в дескрипторе плана может быть кэширован или текущей выполняемой. Эта функция с табличным аналогичен [sys.dm_exec_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md), но имеет следующие отличия:  
+Возвращает инструкцию Showplan в текстовом формате для пакета [!INCLUDE[tsql](../../includes/tsql-md.md)] или для определенной инструкции в пакете. План запроса, указанный в обработчике плана, может быть кэширован или выполняться в данный момент. Эта функция с табличным значением аналогична функции [sys. &#40;dm_exec_query_plan Transact-&#41;SQL](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md), но имеет следующие отличия.  
   
 -   Вывод плана запроса возвращается в текстовом формате.  
 -   Размер вывода плана запроса не ограничен.  
 -   Можно указать отдельные инструкции в пакете.  
   
-**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версий), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -53,22 +53,22 @@ sys.dm_exec_text_query_plan
   
 ## <a name="arguments"></a>Аргументы  
 *plan_handle*  
-— Это маркер, который уникально идентифицирует план выполнения запроса для запущенного пакета, и ее план находится в кэше планов, или в данный момент. *plan_handle* — **varbinary(64)** .   
+Токен, однозначно определяющий план выполнения запроса для пакета, который был выполнен, а его план находится в кэше планов или в данный момент выполняется. *plan_handle* имеет тип **varbinary (64)** .   
 
 *Plan_handle* можно получить из следующих объектов DMO: 
   
--   [sys.dm_exec_cached_plans &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)  
+-   [sys. dm_exec_cached_plans &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)  
   
 -   [sys.dm_exec_query_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)  
   
 -   [sys.dm_exec_requests (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
 
--   [sys.dm_exec_procedure_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)  
+-   [sys. dm_exec_procedure_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)  
 
--   [sys.dm_exec_trigger_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-trigger-stats-transact-sql.md)  
+-   [sys. dm_exec_trigger_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-trigger-stats-transact-sql.md)  
   
-*statement_start_offset* | 0 | ПО УМОЛЧАНИЮ  
-Начальная позиция запроса, который описывает строка, в соответствующем тексте пакета или сохраняемом объекте, в байтах. *statement_start_offset* — **int**. Значение 0 обозначает начало пакета. Значение по умолчанию — 0.  
+*statement_start_offset* | 0 | ПАРАМЕТРЫ  
+Начальная позиция запроса, который описывает строка, в соответствующем тексте пакета или сохраняемом объекте, в байтах. *statement_start_offset* имеет **тип int**. Значение 0 указывает на начало пакета. Значение по умолчанию — 0.  
   
 Начальное смещение инструкции можно получить из следующих объектов DMO:  
   
@@ -76,36 +76,36 @@ sys.dm_exec_text_query_plan
   
 -  [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
   
-*statement_end_offset* | -1 | ПО УМОЛЧАНИЮ  
+*statement_end_offset* | -1 | ПАРАМЕТРЫ  
 Конечная позиция запроса, который описывает строка, в соответствующем тексте пакета или сохраняемом объекте, в байтах.  
   
-*statement_start_offset* — **int**.  
+*statement_start_offset* имеет **тип int**.  
   
-Значение -1 обозначает конец пакета. Значение по умолчанию равно -1.  
+Значение -1 обозначает конец пакета. Значение по умолчанию —-1.  
   
 ## <a name="table-returned"></a>Возвращаемая таблица  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**dbid**|**smallint**|Идентификатор базы данных, в контексте которой выполнялась компиляция инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)], соответствующей данному плану. Для нерегламентированных и подготовленных инструкций SQL это идентификатор базы данных, в которой происходила компиляция инструкции.<br /><br /> Столбец может содержать значение NULL.|  
-|**objectid**|**int**|Идентификатор объекта (например хранимой процедуры или определяемой пользователем функции) для этого плана запроса. Для нерегламентированных и подготовленных пакетов этот столбец содержит **null**.<br /><br /> Столбец может содержать значение NULL.|  
-|**number**|**smallint**|Целое число нумерованных хранимых процедур. Например, группа процедур для **заказы** приложения может называться **orderproc; 1**, **orderproc; 2**, и т. д. Для нерегламентированных и подготовленных пакетов этот столбец содержит **null**.<br /><br /> Столбец может содержать значение NULL.|  
-|**Шифрование**|**bit**|Указывает, зашифрована ли соответствующая хранимая процедура.<br /><br /> 0 = не зашифрована<br /><br /> 1 = зашифрована<br /><br /> Столбец не может содержать значение NULL.|  
-|**query_plan**|**nvarchar(max)**|Содержит представление инструкции Showplan компиляции плана выполнения запроса, которое указано с *plan_handle*. Инструкция Showplan имеет текстовый формат. Для каждого пакета, содержащего, например нерегламентированные инструкции языка [!INCLUDE[tsql](../../includes/tsql-md.md)], вызовы хранимых процедур и вызовы определяемых пользователем функций, формируется один план.<br /><br /> Столбец может содержать значение NULL.|  
+|**objectid**|**int**|Идентификатор объекта (например хранимой процедуры или определяемой пользователем функции) для этого плана запроса. Для нерегламентированных и подготовленных пакетов этот столбец имеет **значение NULL**.<br /><br /> Столбец может содержать значение NULL.|  
+|**number**|**smallint**|Целое число нумерованных хранимых процедур. Например, группа процедур для приложения **Orders** может называться **orderproc; 1**, **orderproc; 2**и т. д. Для нерегламентированных и подготовленных пакетов этот столбец имеет **значение NULL**.<br /><br /> Столбец может содержать значение NULL.|  
+|**Шифрование**|**бит**|Указывает, зашифрована ли соответствующая хранимая процедура.<br /><br /> 0 = не зашифрована<br /><br /> 1 = зашифрована<br /><br /> Столбец не может содержать значение NULL.|  
+|**query_plan**|**nvarchar(max)** ;|Содержит представление Showplan времени компиляции для плана выполнения запроса, указанного в *plan_handle*. Инструкция Showplan имеет текстовый формат. Для каждого пакета, содержащего, например нерегламентированные инструкции языка [!INCLUDE[tsql](../../includes/tsql-md.md)], вызовы хранимых процедур и вызовы определяемых пользователем функций, формируется один план.<br /><br /> Столбец может содержать значение NULL.|  
   
-## <a name="remarks"></a>Примечания  
- При следующих условиях вывод инструкции Showplan не возвращается в **план** столбец возвращаемой таблицы для **sys.dm_exec_text_query_plan**:  
+## <a name="remarks"></a>Remarks  
+ В следующих случаях выходные данные Showplan не возвращаются в столбце **Plan** возвращаемой таблицы для **sys. dm_exec_text_query_plan**:  
   
--   Если план запроса, который задается с помощью *plan_handle* исключен из кэша планов, **query_plan** столбец возвращаемой таблицы имеет значение null. Например, такое условие может возникнуть при наличии задержки между принятием дескриптора плана и когда он использовался с **sys.dm_exec_text_query_plan**.  
+-   Если план запроса, указанный с помощью *plan_handle* , был исключен из кэша планов, то **query_plan** столбец возвращаемой таблицы имеет значение null. Например, это условие может возникать, если задержка между моментом записи обработчика плана и ее использованием с представлением **sys. dm_exec_text_query_plan**.  
   
--   Некоторые инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] не кэшируются, к ним относятся инструкции массовых операций, а также инструкции, содержащие строковые литералы размером более 8 КБ. Представление Showplan в формате для таких инструкций нельзя получить с помощью **sys.dm_exec_text_query_plan** так, как они не существуют в кэше.  
+-   Некоторые инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] не кэшируются, к ним относятся инструкции массовых операций, а также инструкции, содержащие строковые литералы размером более 8 КБ. Невозможно получить инструкции Showplan для таких инструкций с помощью **sys. dm_exec_text_query_plan** , так как они не существуют в кэше.  
   
--   Если [!INCLUDE[tsql](../../includes/tsql-md.md)] пакета или хранимой процедуры содержат вызов определяемой пользователем функции или динамической инструкции SQL, например при помощи EXEC (*строка*), скомпилированная инструкция Showplan XML для определяемой пользователем функции не включается в таблице возвращенный **sys.dm_exec_text_query_plan** для пакета или хранимой процедуры. Вместо этого необходимо отдельно вызвать **sys.dm_exec_text_query_plan** для *plan_handle* , соответствующий определяемой пользователем функции.  
+-   Если [!INCLUDE[tsql](../../includes/tsql-md.md)] пакет или хранимая процедура содержит вызов пользовательской функции или вызов динамического SQL, например с помощью EXEC (*String*), скомпилированная инструкция Showplan XML для определяемой пользователем функции не включается в таблицу, возвращенную **sys. dm_exec_text_query_plan** для пакета или хранимой процедуры. Вместо этого необходимо выполнить отдельный вызов **sys. dm_exec_text_query_plan** для *plan_handle* , соответствующего определяемой пользователем функции.  
   
-Если нерегламентированный запрос использует [простой](../../relational-databases/query-processing-architecture-guide.md#SimpleParam) или [принудительной параметризации](../../relational-databases/query-processing-architecture-guide.md#ForcedParam), **query_plan** столбец будет содержать только текст инструкции, а не фактический план запроса. Чтобы вернуть план запроса, вызовите **sys.dm_exec_text_query_plan** для дескриптора плана подготовленного параметризированного запроса. Можно определить, был ли параметризован запрос, ссылаясь на **sql** столбец [sys.syscacheobjects](../../relational-databases/system-compatibility-views/sys-syscacheobjects-transact-sql.md) представление или текстовый столбец [sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)динамическое административное представление.  
+Если нерегламентированный запрос использует [простую](../../relational-databases/query-processing-architecture-guide.md#SimpleParam) или [принудительную параметризацию](../../relational-databases/query-processing-architecture-guide.md#ForcedParam), столбец **query_plan** будет содержать только текст инструкции, а не реальный план запроса. Чтобы вернуть план запроса, вызовите **sys. dm_exec_text_query_plan** для маркера плана подготовленного параметризованного запроса. Определить, был ли запрос параметризован, можно, обратившись к столбцу **SQL** представления [sys. syscacheobjects](../../relational-databases/system-compatibility-views/sys-syscacheobjects-transact-sql.md) или к текстовому столбцу в динамическом административном представлении [sys. dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md) .  
   
 ## <a name="permissions"></a>Разрешения  
- Для выполнения **sys.dm_exec_text_query_plan**, пользователь должен быть членом **sysadmin** предопределенной роли сервера или иметь разрешение VIEW SERVER STATE на сервере.  
+ Для выполнения **sys. dm_exec_text_query_plan**пользователь должен быть членом предопределенной роли сервера **sysadmin** или иметь разрешение VIEW SERVER STATE на сервере.  
   
 ## <a name="examples"></a>Примеры  
   
@@ -113,7 +113,7 @@ sys.dm_exec_text_query_plan
  Если запрос или пакет [!INCLUDE[tsql](../../includes/tsql-md.md)] выполняется длительное время при определенном соединении с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], то для определения причины задержки необходимо получить план выполнения для этого запроса или пакета. В следующем примере показано, как получить инструкцию Showplan для медленно выполняемого запроса или пакета.  
   
 > [!NOTE]  
-> Чтобы выполнить этот пример, замените значения для *session_id* и *plan_handle* значениями, относящимися к серверу.  
+> Чтобы выполнить этот пример, замените значения *session_id* и *plan_handle* значениями, характерными для сервера.  
   
  Сначала получите идентификатор серверного процесса (SPID) для процесса, выполняющего запрос или пакет, при помощи хранимой процедуры `sp_who`:  
   
@@ -134,7 +134,7 @@ WHERE session_id = 54;
 GO  
 ```  
   
- Таблицы, которая возвращается методом **sys.dm_exec_requests** указывает, что дескриптор плана для медленно выполняемого запроса или пакета `0x06000100A27E7C1FA821B10600`. Следующий пример возвращает план запроса для указанного дескриптора плана и использует значения по умолчанию 0 и -1 для возвращения всех инструкций в запросе или пакете.  
+ Таблица, возвращаемая **sys. dm_exec_requests** указывает, что обработчик плана для замедляют выполнение запроса или пакета `0x06000100A27E7C1FA821B10600`. Следующий пример возвращает план запроса для указанного дескриптора плана и использует значения по умолчанию 0 и -1 для возвращения всех инструкций в запросе или пакете.  
   
 ```sql  
 USE master;  
@@ -144,8 +144,8 @@ FROM sys.dm_exec_text_query_plan (0x06000100A27E7C1FA821B10600,0,-1);
 GO  
 ```  
   
-### <a name="b-retrieving-every-query-plan-from-the-plan-cache"></a>Б. Получение плана каждого запроса из кэша планов  
- Чтобы получить моментальный снимок всех планов запроса, хранимых в кэше планов, необходимо получить дескрипторы планов для всех запросов, хранящихся в кэше, запросив динамическое административное представление `sys.dm_exec_cached_plans`. Дескрипторы планов хранятся в столбце `plan_handle` представления `sys.dm_exec_cached_plans`. Затем воспользуйтесь оператором CROSS APPLY для передачи дескрипторов плана в функцию `sys.dm_exec_text_query_plan`, как показано ниже. Вывод инструкции Showplan для каждого плана, находящегося в кэше планов находится в `query_plan` столбец таблицы, который возвращается.  
+### <a name="b-retrieving-every-query-plan-from-the-plan-cache"></a>б. Получение плана каждого запроса из кэша планов  
+ Чтобы получить моментальный снимок всех планов запроса, хранимых в кэше планов, необходимо получить дескрипторы планов для всех запросов, хранящихся в кэше, запросив динамическое административное представление `sys.dm_exec_cached_plans`. Дескрипторы планов хранятся в столбце `plan_handle` представления `sys.dm_exec_cached_plans`. Затем воспользуйтесь оператором CROSS APPLY для передачи дескрипторов плана в функцию `sys.dm_exec_text_query_plan`, как показано ниже. Выходные данные инструкции Showplan для каждого плана, находящегося в кэше планов, находятся в столбце `query_plan` возвращаемой таблицы.  
   
 ```sql  
 USE master;  
@@ -168,7 +168,7 @@ GO
 ```  
   
 ### <a name="d-retrieving-information-about-the-top-five-queries-by-average-cpu-time"></a>Г. Получение сведений о первых пяти запросах по среднему времени ЦП  
- Следующий пример возвращает планы запросов и среднее время ЦП для пяти первых запросов. **Sys.dm_exec_text_query_plan** функция указывает значения по умолчанию 0 и -1 для возвращения всех инструкций в пакете в плане запроса.  
+ Следующий пример возвращает планы запросов и среднее время ЦП для пяти первых запросов. Функция **sys. dm_exec_text_query_plan** указывает значения по умолчанию 0 и-1 для возврата всех инструкций в пакете в плане запроса.  
   
 ```sql  
 SELECT TOP 5 total_worker_time/execution_count AS [Avg CPU Time],  
@@ -179,5 +179,5 @@ ORDER BY total_worker_time/execution_count DESC;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
- [sys.dm_exec_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)  
+## <a name="see-also"></a>См. также статью  
+ [sys. dm_exec_query_plan &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)  

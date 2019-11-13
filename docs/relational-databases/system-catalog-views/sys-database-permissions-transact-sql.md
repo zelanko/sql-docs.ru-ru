@@ -1,5 +1,5 @@
 ---
-title: sys.database_permissions (Transact-SQL) | Документация Майкрософт
+title: sys. database_permissions (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/11/2017
 ms.prod: sql
@@ -20,30 +20,30 @@ ms.assetid: c1e261f8-6cb0-4759-b5f1-5ec233602655
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c274d20590601ea2b089f53a9edf10b6a5ac0163
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a87be6fe0a68172a99ade4704ae4111cabbe95f1
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68022689"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982725"
 ---
-# <a name="sysdatabasepermissions-transact-sql"></a>sys.database_permissions (Transact-SQL)
+# <a name="sysdatabase_permissions-transact-sql"></a>sys.database_permissions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Возвращает по одной строке для каждого разрешения или разрешения-исключения уровня столбца в базе данных. Для столбцов в представлении каталога содержится по одной строке на каждое разрешение, которое отличается от соответствующего разрешения уровня объекта. Если разрешения столбца, которое совпадает со значением соответствующего разрешения объекта, нет строк для него, и разрешение применения — имя объекта.  
+  Возвращает по одной строке для каждого разрешения или разрешения-исключения уровня столбца в базе данных. Для столбцов в представлении каталога содержится по одной строке на каждое разрешение, которое отличается от соответствующего разрешения уровня объекта. Если разрешение столбца совпадает с разрешением соответствующего объекта, то для него не существует строки и к примененному разрешению применяется объект.  
   
 > [!IMPORTANT]  
 >  Разрешения уровня столбца переопределяют разрешения уровня объекта на ту же сущность.  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**class**|**tinyint**|Указывает класс, на который существует разрешение.<br /><br /> 0 = база данных;<br />1 = объект или столбец<br />3 = схема<br />4 = Участник базы данных<br />5 = сборка — **применяется к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] через [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br />6 = Тип<br />10 = коллекция схем XML - <br />                      **Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br />15 = Тип сообщения - **применяется к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] через [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br />16 = контракт службы - **применяется к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] через [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br />17 = Service - **применяется к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] через [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br />18 = Привязка удаленной службы - **применяется к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] через [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br />19 = route - **применяется к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] через [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br />23 = полнотекстовый каталог - **применяется к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] через [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br />24 = симметричный ключ — **применяется к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] через [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br />25 = certificate - **применяется к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] через [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br />26 = асимметричный ключ - **применяется к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] через [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+|**class**|**tinyint**|Указывает класс, на который существует разрешение.<br /><br /> 0 = база данных;<br />1 = объект или столбец<br />3 = схема<br />4 = Участник базы данных<br />5 = сборка — **применяется к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версий.<br />6 = Тип<br />10 = коллекция схем XML — <br />                      **Область применения**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версий.<br />15 = тип сообщений — **применяется к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версий.<br />16 = контракт службы — **применяется к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версий.<br />17 = служба — **применяется к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версий.<br />18 = привязка удаленной службы — **применяется к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версий.<br />19 = маршрут — **применяется к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версий.<br />23 = полнотекстовый каталог — **применяется к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версий.<br />24 = симметричный ключ — **применяется к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версий.<br />25 = сертификат **применяется к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версий.<br />26 = асимметричный ключ — **применяется к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версий.|  
 |**class_desc**|**nvarchar(60)**|Описание класса, на который существует разрешение.<br /><br /> DATABASE<br /><br /> OBJECT_OR_COLUMN<br /><br /> SCHEMA<br /><br /> DATABASE_PRINCIPAL<br /><br /> ASSEMBLY<br /><br /> TYPE<br /><br /> XML_SCHEMA_COLLECTION<br /><br /> MESSAGE_TYPE<br /><br /> SERVICE_CONTRACT<br /><br /> SERVICE<br /><br /> REMOTE_SERVICE_BINDING<br /><br /> ROUTE<br /><br /> FULLTEXT_CATALOG<br /><br /> SYMMETRIC_KEYS<br /><br /> CERTIFICATE<br /><br /> ASYMMETRIC_KEY|  
-|**major_id**|**int**|Идентификатор предмета, на который существует разрешение, интерпретируется в соответствии с классом. Как правило **major_id** — это просто вид идентификатора, к которому применяется этот класс представляет. <br /><br /> 0 = самой базы данных <br /><br /> > 0 = идентификаторы объектов для пользовательских объектов <br /><br /> \<0 = идентификаторы объектов для системных объектов |  
-|**minor_id**|**int**|Вторичный идентификатор предмета, на который существует разрешение, интерпретируется согласно классу. Часто **minor_id** равно нулю, так как имеется не подкатегории для класса объекта. В противном случае — это идентификатор столбца таблицы.|  
+|**major_id**|**int**|Идентификатор предмета, на который существует разрешение, интерпретируется в соответствии с классом. Обычно **major_id** — это просто тип идентификатора, который применяется к представлению класса. <br /><br /> 0 = сама база данных; <br /><br /> > 0 = Object-ID для пользовательских объектов <br /><br /> \<0 = Object-ID для системных объектов |  
+|**minor_id**|**int**|Вторичный идентификатор предмета, на который существует разрешение, интерпретируется согласно классу. Часто **minor_id** равен нулю, так как для класса объекта нет доступной подкатегории. В противном случае это идентификатор столбца таблицы.|  
 |**grantee_principal_id**|**int**|Идентификатор участника базы данных, которому предоставлено разрешение.|  
 |**grantor_principal_id**|**int**|Идентификатор участника базы данных, который предоставил данное разрешение.|  
-|**type**|**char(4)**|Тип разрешения в базе данных. Список типов разрешений см. в следующей таблице.|  
+|**type**|**char (4)**|Тип разрешения в базе данных. Список типов разрешений см. в следующей таблице.|  
 |**permission_name**|**nvarchar(128)**|Имя разрешения.|  
 |**state**|**char(1)**|Состояние разрешения:<br /><br /> D = запретить<br /><br /> R = отменить<br /><br /> G = предоставить<br /><br /> W = параметр Grant With Grant|  
 |**state_desc**|**nvarchar(60)**|Описание состояния разрешения:<br /><br /> DENY<br /><br /> REVOKE<br /><br /> GRANT<br /><br /> GRANT_WITH_GRANT_OPTION|  
@@ -102,12 +102,12 @@ ms.locfileid: "68022689"
 |CRSK|CREATE SYMMETRIC KEY|DATABASE|  
 |CRSM|CREATE SCHEMA|DATABASE|  
 |CRSN|CREATE SYNONYM|DATABASE|  
-|CRSO|**Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> CREATE SEQUENCE|DATABASE|  
+|CRSO|**Область применения**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздних версий.<br /><br /> CREATE SEQUENCE|DATABASE|  
 |CRSV|CREATE SERVICE|DATABASE|  
 |CRTB|CREATE TABLE|DATABASE|  
 |CRTY|CREATE TYPE|DATABASE|  
 |CRVW|CREATE VIEW|DATABASE|  
-|CRXS|**Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> CREATE XML SCHEMA COLLECTION|DATABASE|  
+|CRXS|**Область применения**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версий.<br /><br /> CREATE XML SCHEMA COLLECTION|DATABASE|  
 |DABO |ADMINISTER DATABASE BULK OPERATIONS | DATABASE |
 |DL|DELETE|DATABASE, OBJECT, SCHEMA|  
 |EAES |EXECUTE ANY EXTERNAL SCRIPT |DATABASE |
@@ -124,7 +124,7 @@ ms.locfileid: "68022689"
 |UP|UPDATE|DATABASE, OBJECT, SCHEMA|  
 |VW|VIEW DEFINITION|APPLICATION ROLE, ASSEMBLY, ASYMMETRIC KEY, CERTIFICATE, CONTRACT, DATABASE, FULLTEXT CATALOG, MESSAGE TYPE, OBJECT, REMOTE SERVICE BINDING, ROLE, ROUTE, SCHEMA, SERVICE, SYMMETRIC KEY, TYPE, USER, XML SCHEMA COLLECTION|  
 |VWCK |VIEW ANY COLUMN ENCRYPTION KEY DEFINITION|DATABASE |  
-|VWCM |VIEW ANY COLUMN MASTER KEY DEFINITION|DATABASE |  
+|ввкм |VIEW ANY COLUMN MASTER KEY DEFINITION|DATABASE |  
 |VWCT|VIEW CHANGE TRACKING|TABLE, SCHEMA|  
 |VWDS|VIEW DATABASE STATE|DATABASE|  
   
@@ -135,7 +135,7 @@ ms.locfileid: "68022689"
   
 ## <a name="examples"></a>Примеры  
   
-### <a name="a-listing-all-the-permissions-of-database-principals"></a>A. Список всех разрешений участников базы данных  
+### <a name="a-listing-all-the-permissions-of-database-principals"></a>Ответ. Перечисление всех разрешений участников базы данных  
  Следующий запрос перечисляет разрешения, явно предоставленные или отклоненные для участников базы данных.  
   
 > [!IMPORTANT]  
@@ -149,7 +149,7 @@ JOIN sys.database_permissions AS pe
     ON pe.grantee_principal_id = pr.principal_id;  
 ```  
   
-### <a name="b-listing-permissions-on-schema-objects-within-a-database"></a>Б. Список разрешений для объектов схемы в базу данных  
+### <a name="b-listing-permissions-on-schema-objects-within-a-database"></a>Б. Вывод списка разрешений на объекты схемы в базе данных  
  Следующий запрос объединяет sys.database_principals и sys.database_permissions с sys.objects и sys.schemas, чтобы перечислить разрешения, предоставленные или отклоненные для определенных объектов схемы.  
   
 ```  
@@ -166,9 +166,9 @@ JOIN sys.schemas AS s
 ```  
     
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также статью  
  [Securables](../../relational-databases/security/securables.md)   
- [Иерархия разрешений (ядро СУБД)](../../relational-databases/security/permissions-hierarchy-database-engine.md)   
+ [Иерархия разрешений (компонент Database Engine)](../../relational-databases/security/permissions-hierarchy-database-engine.md)   
  [Представления каталога безопасности (Transact-SQL)](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [Представления каталога (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   
