@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: 242cea3e-e6ac-4f84-a072-b003b920eb33
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: db259133a2ddd7ebe18b6d198c0f91e8ffc7b8bf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0fdd70480a63e334aa3e178d19287b30937e2f53
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68048195"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056788"
 ---
-# <a name="sphelpxactsetjob-transact-sql"></a>sp_helpxactsetjob (Transact-SQL)
+# <a name="sp_helpxactsetjob-transact-sql"></a>sp_helpxactsetjob (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Отображает сведения о задании набора транзакций для издателя Oracle. Эта хранимая процедура выполняется на распространителе в любой базе данных.  
@@ -37,40 +37,39 @@ sp_helpxactsetjob [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ **@publisher** =] **"***издателя***"**  
- Имя отличного [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателя, к которой принадлежит задание. *издатель* — **sysname**, не имеет значения по умолчанию.  
+`[ @publisher = ] 'publisher'` — имя издателя, отличного от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], которому принадлежит задание. параметр *Publisher* имеет тип **sysname**и не имеет значения по умолчанию.  
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Data type|Описание|  
 |-----------------|---------------|-----------------|  
-|**jobnumber**|**int**|Номер задания Oracle.|  
-|**lastdate**|**varchar(22)**|Последняя дата выполнения задания.|  
-|**thisdate**|**varchar(22)**|Время изменения.|  
-|**nextdate**|**varchar(22)**|Следующая дата, когда задание будет запущено.|  
-|**разбить**|**varchar(1)**|Флаг, означающий неудачное выполнение задания.|  
-|**интервал**|**varchar(200)**|Интервал для задания.|  
-|**сбои**|**int**|Количество неудачных выполнений для задания.|  
-|**xactsetjobwhat**|**varchar(200)**|Имя процедуры, выполняемой заданием.|  
-|**xactsetjob**|**varchar(1)**|Показывает состояние задания, может быть одним из следующих:<br /><br /> **1** -задание включено.<br /><br /> **0** -задание отключено.|  
-|**xactsetlonginterval**|**int**|Длительный интервал для задания.|  
-|**xactsetlongthreshold**|**int**|Высокий порог для задания.|  
-|**xactsetshortinterval**|**int**|Короткий интервал для задания.|  
-|**xactsetshortthreshold**|**int**|Низкий порог для задания.|  
+|**жобнумбер**|**int**|Номер задания Oracle.|  
+|**LASTDATE**|**varchar (22)**|Последняя дата выполнения задания.|  
+|**сисдате**|**varchar (22)**|Время изменения.|  
+|**некстдате**|**varchar (22)**|Следующая дата, когда задание будет запущено.|  
+|**рабочие**|**varchar (1)**|Флаг, означающий неудачное выполнение задания.|  
+|**пределах**|**varchar (200)**|Интервал для задания.|  
+|**сбоев**|**int**|Количество неудачных выполнений для задания.|  
+|**ксактсетжобвхат**|**varchar (200)**|Имя процедуры, выполняемой заданием.|  
+|**параметре xactsetjob**|**varchar (1)**|Показывает состояние задания, может быть одним из следующих:<br /><br /> **1** — задание включено.<br /><br /> **0** — задание отключено.|  
+|**ксактсетлонгинтервал**|**int**|Длительный интервал для задания.|  
+|**ксактсетлонгсрешолд**|**int**|Высокий порог для задания.|  
+|**ксактсетшортинтервал**|**int**|Короткий интервал для задания.|  
+|**ксактсетшортсрешолд**|**int**|Низкий порог для задания.|  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- **0** (успешное завершение) или **1** (неуспешное завершение)  
+ **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  **sp_helpxactsetjob** используется в репликации моментальных снимков и репликации транзакций для издателей Oracle.  
   
- **sp_helpxactsetjob** всегда возвращает текущие параметры для задания Xactset (HREPL_XactSetJob) на издателе. Если задание Xactset в данные момент находится в очереди заданий, то оно дополнительно возвращает атрибуты задания из представления словаря данных USER_JOB, созданного под учетной записью администратора на издателе Oracle.  
+ **sp_helpxactsetjob** всегда возвращает текущие параметры для задания набора транзакций (HREPL_XactSetJob) на издателе. Если задание Xactset в данные момент находится в очереди заданий, то оно дополнительно возвращает атрибуты задания из представления словаря данных USER_JOB, созданного под учетной записью администратора на издателе Oracle.  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены **sysadmin** предопределенной роли сервера могут выполнять процедуру **sp_helpxactsetjob**.  
+ Только член предопределенной роли сервера **sysadmin** может выполнять **sp_helpxactsetjob**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также статью  
  [Configure the Transaction Set Job for an Oracle Publisher](../../relational-databases/replication/administration/configure-the-transaction-set-job-for-an-oracle-publisher.md)  (Настройка задания для набора транзакции в издателе Oracle)  
- [sp_publisherproperty &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-publisherproperty-transact-sql.md)  
+ [sp_publisherproperty &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-publisherproperty-transact-sql.md)  
   
   

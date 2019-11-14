@@ -1,5 +1,5 @@
 ---
-title: Обработка больших объектов в среде CLR | Документация Майкрософт
+title: Обработка больших объектов с помощью среды CLR | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,22 +10,22 @@ ms.assetid: 4140d6b1-51cb-4d23-a4b6-8155360034fe
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6c7230150807b5bdd0849ea7ad5af00dbedb4ff3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7253264398316f2fb8bc0c1f1b4587c0e597beee
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62781539"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74054831"
 ---
 # <a name="handling-large-objects-using-clr"></a>Обработка больших объектов в среде CLR
   Образец `HandlingLOBUsingCLR` для SQL Server демонстрирует передачу больших объектов между [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и файловой системой, доступной серверу, с использованием хранимых процедур CLR. Образец демонстрирует доступ к файлам в кодировке сервера и возможность вызова из хранимых процедур CLR динамических запросов и хранимых процедур. Также образец демонстрирует регистрацию и отмену регистрации методов среды CLR и сборок при помощи языка [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
-## <a name="prerequisites"></a>предварительные требования  
+## <a name="prerequisites"></a>необходимые компоненты  
  Для создания и запуска этого проекта должно быть установлено следующее программное обеспечение:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express можно получить бесплатно на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] веб-сайте [с документацией и примерами по](https://go.microsoft.com/fwlink/?LinkId=31046)Express.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express можно получить бесплатно на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] веб-сайте [с документацией и примерами по](https://www.microsoft.com/download/details.aspx?id=42299)Express.  
   
--   База данных AdventureWorks, доступная на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] веб-сайте [разработки](https://go.microsoft.com/fwlink/?linkid=62796).  
+-   База данных AdventureWorks, доступная на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] веб-сайте [разработки](https://archive.codeplex.com/?p=SqlServerSamples).  
   
 -   Пакет SDK 2.0 для платформы .NET Framework или более поздняя версия либо среда Microsoft Visual Studio 2005 или более поздняя версия. Пакет SDK для платформы .NET Framework можно получить бесплатно.  
   
@@ -573,7 +573,7 @@ END  -- END of sp_InsertDocument
 GO  
 ```  
   
- Следующие [!INCLUDE[tsql](../../includes/tsql-md.md)] (`test.sql`) тестирует пример путем выполнения хранимых процедур.  
+ Следующий [!INCLUDE[tsql](../../includes/tsql-md.md)] (`test.sql`) проверяет пример, используя хранимые процедуры.  
   
 ```  
 USE AdventureWorks  
@@ -628,7 +628,7 @@ USE AdventureWorks
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также статью  
  [Сценарии использования и примеры интеграции со средой CLR](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
   
   

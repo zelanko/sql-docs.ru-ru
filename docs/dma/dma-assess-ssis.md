@@ -1,7 +1,6 @@
 ---
-title: Выполнение оценки миграции службы интеграции SQL Server (Помощник по миграции данных) | Документация Майкрософт
-description: Узнайте, как использовать Помощник по миграции данных для оценки локальной службы интеграции SQL Server перед миграцией в базу данных SQL Azure или управляемый экземпляр базы данных SQL Azure.
-ms.custom: ''
+title: Создание оценки миграции служб SSIS с помощью Помощник по миграции данных
+description: Узнайте, как использовать Помощник по миграции данных для оценки локальной службы интеграции SQL Server (SSIS) перед миграцией в базу данных SQL Azure или управляемый экземпляр базы данных SQL Azure.
 ms.date: 08/23/2019
 ms.prod: sql
 ms.prod_service: dma
@@ -14,12 +13,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 84b498cbaf7a2f3d1118894157c17b8270259afa
-ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
+ms.custom: seo-lt-2019
+ms.openlocfilehash: fa97cc647a194257441997032f2248a3ce9e5110
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73632867"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056643"
 ---
 # <a name="perform-a-sql-server-integration-service-migration-assessment-with-data-migration-assistant"></a>Выполнение оценки миграции службы интеграции SQL Server с Помощник по миграции данных
 

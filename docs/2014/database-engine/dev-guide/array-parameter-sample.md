@@ -1,5 +1,5 @@
 ---
-title: Образец параметра массива | Документация Майкрософт
+title: Пример параметра массива | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: 5d7034ca-ce88-4a7e-8dd9-82f867479e7f
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 24babe845d204f2938d86fc8fa70d747bbc92f36
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 822dc7f3d66afc44c187d199674a22f20977f535
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62753736"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74055905"
 ---
 # <a name="array-parameter-sample"></a>Образец параметра массива
   Иногда бывает необходимо создавать, обновлять или удалять набор строк в базе данных. Существует несколько подходов, которые можно использовать для достижения этой цели. Один из них — передавать массив данных от клиента в хранимую процедуру среды CLR на сервере через определяемый пользователем тип данных интеграции со средой CLR. Природа таких пользовательских типов данных ограничивает данные, передаваемые серверу, размером 8 000 байт. По этой причине такое решение не подходит для больших или сложных данных. Если обрабатываемые данные имеют простую структуру и небольшой объем, этот подход может оказаться более эффективным, чем вызов хранимой процедуры для каждой строки. При передаче массива порядок данных сохраняется для тех приложений, в которых этот порядок является важным. Этот образец содержит следующее.  
@@ -26,12 +26,12 @@ ms.locfileid: "62753736"
   
 3.  Приложение командной строки `TestArrayParameter` . Создает экземпляр определяемого пользователем типа данных `ContactTypeNames` на основе параметров, передаваемых в командной строке, а затем вызывает хранимую процедуру `usp_EnsureContactTypeNames` , передавая ей созданный экземпляр в качестве параметра.  
   
-## <a name="prerequisites"></a>предварительные требования  
+## <a name="prerequisites"></a>необходимые компоненты  
  Для создания и запуска этого проекта должно быть установлено следующее программное обеспечение:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express можно получить бесплатно на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] веб-сайте [с документацией и примерами по](https://go.microsoft.com/fwlink/?LinkId=31046)Express.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express можно получить бесплатно на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] веб-сайте [с документацией и примерами по](https://www.microsoft.com/download/details.aspx?id=42299)Express.  
   
--   База данных AdventureWorks, доступная на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] веб-сайте [разработки](https://go.microsoft.com/fwlink/?linkid=62796).  
+-   База данных AdventureWorks, доступная на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] веб-сайте [разработки](https://archive.codeplex.com/?p=SqlServerSamples).  
   
 -   Пакет SDK 2.0 для платформы .NET Framework или более поздняя версия либо среда Microsoft Visual Studio 2005 или более поздняя версия. Пакет SDK для платформы .NET Framework можно получить бесплатно.  
   
@@ -714,7 +714,7 @@ DROP ASSEMBLY ContactTypeNames;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также статью  
  [Сценарии использования и примеры интеграции со средой CLR](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
   
   

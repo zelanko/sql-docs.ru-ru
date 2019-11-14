@@ -2,19 +2,19 @@
 title: Новые возможности SSMA для Access (Акцесстоскл) | Документация Майкрософт
 ms.prod: sql
 ms.custom: ''
-ms.date: 09/06/2019
+ms.date: 11/13/2019
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: a24d3fc0-6911-4bfa-828a-197abf222e02
 author: HJToland3
 ms.author: Shamikg
-ms.openlocfilehash: 608f7c8b2de7ae43bdd44e72da25f864f985efeb
-ms.sourcegitcommit: a97d551b252b76a33606348082068ebd6f2c4c8c
+ms.openlocfilehash: 6e49c85bec2494d6a524a17f96ae735b0ed053f8
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70745440"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056175"
 ---
 # <a name="whats-new-in-ssma-for-access-accesstosql"></a>Новые возможности SSMA для Access (Акцесстоскл)
 
@@ -56,7 +56,7 @@ ms.locfileid: "70745440"
 
   ![Проект SQL DB MI](../media/ssma-newproject-sqldbmi.png)
 
-* **Советник по исправлению**после преобразования. Дополнительные сведения см. [здесь](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/%20accelerate-your-oracle-migrations-with-new-machine-learning-capabilities-in-ssma/).
+* **Советник по исправлению**после преобразования. Дополнительные сведения см. [здесь](https://techcommunity.microsoft.com/t5/Microsoft-Data-Migration/Accelerate-your-Oracle-migrations-with-new-machine-learning/ba-p/368733).
 
 * Предварительный выбор базы данных или схемы.
 
@@ -123,8 +123,7 @@ ms.locfileid: "70745440"
         ![Команда "Сохранить как проект SSDT"](../media/export-schema-scripts_red.png)
   * Библиотеки, которые могут использоваться SSMA для выполнения пользовательских преобразований.
     * Теперь можно создать код, который может обрабатывать пользовательские преобразования синтаксических конструкций и преобразования, которые ранее не обрабатывались SSMA.
-      * Инструкции по созданию пользовательского преобразователя доступны в этой записи блога, [расширяя возможности преобразования помощник по миграции SQL Server](https://blogs.msdn.microsoft.com/datamigration/2017/02/21/2185/).
-      * Скачайте пример проекта для преобразования из этой [записи блога](https://blogs.msdn.microsoft.com/datamigration/ssmafororacleconversionsample/).
+      * Инструкции по созданию пользовательского преобразователя, а также пример проекта для преобразования, доступны в записи блога [расширение возможностей преобразования помощник по миграции SQL Server](https://techcommunity.microsoft.com/t5/Microsoft-Data-Migration/Extending-SQL-Server-Migration-Assistant-s-conversion/ba-p/1004181).
 
 ## <a name="ssma-v72"></a>SSMA v7.2
 
@@ -141,7 +140,7 @@ ms.locfileid: "70745440"
 * SSMA теперь поддерживает автоматическое обновление, чтобы загрузить последнюю версию SSMA, как только она станет доступна.
 * Доступные для установки двоичные файлы SSMA теперь доставляются через файлы пакета установщика Windows (. msi).
 
-## <a name="may-2016"></a>Май 2016 г.
+## <a name="may-2016"></a>Май 2016
 
 Выпуск 2016 мая для Access содержит следующие изменения:  
   
@@ -151,9 +150,9 @@ ms.locfileid: "70745440"
 * Исправлена команда "секурепассворд" для консоли SSMA.
 * Исправлена Инвентаризация объектов для начальной загрузки.
 * Исправлена таблица загрузки данных для вкладок пользовательского интерфейса для доступа.
-* Исправлена ошибка в глобальных параметрах. 
+* Исправлена ошибка в глобальных параметрах.
 
-## <a name="march-2016"></a>Март 2016 г.
+## <a name="march-2016"></a>Март 2016
 
 В предварительной версии SSMA для Access в марте 2016 добавлена поддержка миграции на SQL Server 2016.  
 
@@ -209,7 +208,8 @@ ms.locfileid: "70745440"
 * Добавлены SSMA для поддержки версии консоли доступа для обратной совместимости. Вы можете открыть проекты, созданные ранее, в SSMA версии 5.0.
 * Добавлена возможность установки продукта SSMA v 5.0 параллельно (SxS) с более старыми версиями продукта SSMA.  
   
-## <a name="july-2010"></a>2010 июля  
+## <a name="july-2010"></a>2010 июля
+
 Выпуск SSMA за Июль 2010 для Access содержит следующие изменения:  
   
 * Добавлена поддержка миграции на SQL Server 2008 R2 и Azure SQL.
@@ -236,9 +236,9 @@ ms.locfileid: "70745440"
 Выпуск SSMA за Ноябрь 2006 для Access содержит следующие изменения:  
   
 * Добавлен новый мастер миграции баз данных, который помогает выполнить миграцию одной базы данных из Access в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
-* Добавлена новая команда преобразования, загрузки и миграции, которая преобразует базы данных Access, загружает преобразованные объекты [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]в и переносит [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] их на все за один шаг.  
+* Добавлена новая команда преобразования, загрузки и миграции, которая преобразует базы данных Access, загружает преобразованные объекты в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]и переносит данные в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] все за один шаг.  
 * Улучшена миграция запросов. Теперь запрос на миграцию преобразует больше запросов SELECT в представления. Дополнительные сведения см. в разделе [Преобразование объектов базы данных Access](converting-access-database-objects-accesstosql.md).  
-* Добавлена возможность изменять свойства таблицы и индекса на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] вкладке **Таблица** .  
+* Добавлена возможность изменять свойства таблицы и индекса на вкладке [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Таблица** .  
 * Добавлены новые глобальные параметры:
   * Вы можете выбрать отображение номеров строк в окнах редактора.  
   * Можно настроить SSMA, чтобы запрашивать замену повторяющихся объектов или всегда или никогда не заменять дубликаты объектов во время преобразования схемы.  

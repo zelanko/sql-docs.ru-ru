@@ -1,5 +1,5 @@
 ---
-title: Строка, пример функций программы | Документация Майкрософт
+title: Пример функций служебной программы String | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,24 +10,24 @@ ms.assetid: 9623013f-15f1-4614-8dac-1155e57c880c
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b704f24379a0d56f738b28f9553cf03d214b9e3c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ef98316982090d247c09ec887e0d00a5c895950b
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62780589"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74054848"
 ---
 # <a name="string-utility-functions-sample"></a>Пример функций программы работы со строками
   Образец String Utilities содержит потоковую возвращающую функцию с табличным значением, написанную на языках Visual C# и Visual Basic, которая разбивает разделенную запятыми строку на таблицу с одним столбцом. Он также содержит агрегатную функцию, преобразующую строковый столбец в разделенную запятыми строку.  Также реализованы скалярная функция и функции с табличными значениями, предоставляющие возможность поиска и замены с помощью регулярных выражений.  
   
  Для реализации потоковой функции с табличным значением создайте метод, возвращающий объект, который реализует интерфейс `IEnumerable`. Этот метод интерфейса `IEnumerable` должен быть связан атрибутом с другим методом, который заполняет строки функции с табличным значением.  
   
-## <a name="prerequisites"></a>предварительные требования  
+## <a name="prerequisites"></a>необходимые компоненты  
  Для создания и запуска этого проекта должно быть установлено следующее программное обеспечение:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express можно получить бесплатно на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] веб-сайте [с документацией и примерами по](https://go.microsoft.com/fwlink/?LinkId=31046)Express.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express можно получить бесплатно на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] веб-сайте [с документацией и примерами по](https://www.microsoft.com/download/details.aspx?id=42299)Express.  
   
--   База данных AdventureWorks, доступная на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] веб-сайте [разработки](https://go.microsoft.com/fwlink/?linkid=62796).  
+-   База данных AdventureWorks, доступная на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] веб-сайте [разработки](https://archive.codeplex.com/?p=SqlServerSamples).  
   
 -   Пакет SDK 2.0 для платформы .NET Framework или более поздняя версия либо среда Microsoft Visual Studio 2005 или более поздняя версия. Пакет SDK для платформы .NET Framework можно получить бесплатно.  
   
@@ -944,7 +944,7 @@ DROP ASSEMBLY StringUtils;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также статью  
  [Сценарии использования и примеры интеграции со средой CLR](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
   
   

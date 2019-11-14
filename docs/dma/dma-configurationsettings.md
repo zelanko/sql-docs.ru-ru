@@ -1,7 +1,7 @@
 ---
-title: Настройка параметров для Помощник по миграции данных (SQL Server) | Документация Майкрософт
+title: Настройка параметров для Помощник по миграции данных
 description: Узнайте, как настроить параметры Помощник по миграции данных путем обновления значений в файле конфигурации.
-ms.custom: ''
+ms.custom: seo-lt-2019
 ms.date: 03/12/2019
 ms.prod: sql
 ms.prod_service: dma
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
-ms.openlocfilehash: e94760c23a0c8621ba1c50f34162466f21f833c0
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: fc280fa541e2a6b5ea984086d694ffdd3f7c39a8
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345235"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056543"
 ---
 # <a name="configure-settings-for-data-migration-assistant"></a>Настройка параметров для Помощник по миграции данных
 
@@ -29,11 +29,11 @@ ms.locfileid: "68345235"
 
 - Классическое приложение
 
-  % ProgramFiles%\\помощник по миграции данных (Майкрософт)\\DMA. exe. config
+  % ProgramFiles%\\Помощник по миграции данных (Майкрософт)\\DMA. exe. config
 
 - Служебная программа командной строки
 
-  % ProgramFiles%\\помощник по миграции данных (Майкрософт)\\дмакмд. exe. config 
+  % ProgramFiles%\\Помощник по миграции данных (Майкрософт)\\дмакмд. exe. config 
 
 Обязательно сохраните копию исходного файла конфигурации перед внесением каких-либо изменений. После внесения изменений перезапустите Помощник по миграции данных, чтобы новые значения конфигурации вступили в силу.
 
@@ -82,7 +82,7 @@ ms.locfileid: "68345235"
 Во время оценки Помощник по миграции данных извлекает приложение уровня данных (DACPAC) для понимания схемы базы данных. Эта операция может завершиться ошибкой с превышением времени ожидания для очень больших баз данных или в случае, если сервер находится под нагрузкой. Начиная с переноса данных версии 1.0, можно изменить следующие значения конфигурации, чтобы избежать ошибок. 
 
 > [!NOTE]
-> По умолчанию&gt; комментарием является вся &lt;запись DACFx. Удалите комментарии и при необходимости измените значение.
+> Вся запись &lt;DACFx&gt; заменяется комментарием по умолчанию. Удалите комментарии и при необходимости измените значение.
 
 - commandTimeout
 
@@ -90,7 +90,7 @@ ms.locfileid: "68345235"
 
 - датабаселокктимеаут
 
-   Этот параметр эквивалентен [\_\_периоду времени ожидания установки блокировки](../t-sql/statements/set-lock-timeout-transact-sql.md) в *миллисекундах*. (По умолчанию = 5000)
+   Этот параметр эквивалентен времени ожидания [Set LOCK\_ожидания\_период](../t-sql/statements/set-lock-timeout-transact-sql.md) в *миллисекундах*. (По умолчанию = 5000)
 
 - максдатареадердегриофпараллелисм
 
@@ -109,7 +109,7 @@ maxDataReaderDegreeOfParallelism="8"/>
 </advisorGroup>
 ```
 
-## <a name="stretch-database-recommendation-threshold"></a>Stretch Database: Порог рекомендации
+## <a name="stretch-database-recommendation-threshold"></a>Stretch Database: порог рекомендации
 
 С помощью [SQL Server Stretch Database](https://docs.microsoft.com/sql/sql-server/stretch-database/stretch-database)можно динамически растянуть горячий и холодный транзакционные данные из Microsoft SQL Server 2016 в Azure. Stretch Database предназначен для транзакционных баз данных с большими объемами холодного объема данных. В рекомендации по Stretch Database в разделе рекомендации по функциям хранилища сначала определяются таблицы, которые он считает полезными, а затем выводятся изменения, которые необходимо внести, чтобы включить таблицу для этой функции.
 
@@ -152,6 +152,6 @@ maxDataReaderDegreeOfParallelism="8"/>
 </workflowSettings>
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Загрузка Помощник по миграции данных](https://www.microsoft.com/download/details.aspx?id=53595)
