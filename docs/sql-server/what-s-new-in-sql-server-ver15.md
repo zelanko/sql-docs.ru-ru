@@ -8,12 +8,12 @@ ms.topic: article
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8a24d5e25bfbeb7aed32257b22dd3dac5d1c53f7
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: 3aa251e7d31f21cf51f4f528b1f0ccd35c0afb2c
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73593885"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73844555"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>Новые возможности [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]
 
@@ -153,6 +153,7 @@ ms.locfileid: "73593885"
 |:---|:---|
 |Always Encrypted с безопасными анклавами.|К Always Encrypted добавляется функция шифрования на месте и полнофункциональные вычисления, что позволяет выполнять вычисления с данными в виде обычного текста внутри безопасного анклава на стороне сервера. Шифрование на месте повышает производительность и надежность криптографических операций (шифрования столбцов, смены ключей шифрования столбцов и т. д.), поскольку не требуется перемещать данные за пределы базы данных.<br><br> Поддержка многофункциональных вычислений (сопоставления шаблонов и операций сравнения) дает возможность использовать Always Encrypted в более широком спектре сценариев и приложений, которые требуют защиты конфиденциальных данных, а также более широкой функциональности в запросах Transact-SQL. См. подробнее об [использовании Always Encrypted с безопасными анклавами](../relational-databases/security/encryption/always-encrypted-enclaves.md).|
 |Управление сертификатами в диспетчере конфигурации SQL Server.|См. статью [Управление сертификатами (диспетчер конфигурации SQL Server)](../database-engine/configure-windows/manage-certificates.md).|
+|Обнаружение и классификация данных|Функции обнаружения и классификации данных предоставляют встроенные в SQL Server расширенные возможности для классификации, добавления меток и защиты конфиденциальных данных в базах данных. Классификация наиболее важных данных (деловых, финансовых, персональных и т. д.) может играть ключевую роль в защите информации в вашей организации. На основе этих процессов может формироваться инфраструктура для решения следующих задач:<ul><li>Соблюдение стандартов в сфере конфиденциальности данных и нормативных требований.</li><li>Поддержка сценариев безопасности, таких как мониторинг (аудит) и оповещение о необычном доступе к конфиденциальным данным.</li><li>Упрощение определения мест размещения конфиденциальных данных в организации, благодаря чему администраторы могут предпринимать необходимые меры для защиты базы данных.</li></ul>[Возможности аудита](../relational-databases/security/auditing/sql-server-audit-database-engine.md) также были расширены. Теперь в журнал аудита добавлено новое поле под названием `data_sensitivity_information`, в котором указывается классификация конфиденциальности (метки) фактических данных, возвращенных запросом. Дополнительные сведения и примеры см. в статье об инструкции [ADD SENSITIVITY CLASSIFICATION](../t-sql/statements/add-sensitivity-classification-transact-sql.md).|
 | &nbsp; | &nbsp; |
 
 ## <a name="high-availability"></a>Высокий уровень доступности
@@ -226,14 +227,6 @@ ms.locfileid: "73593885"
 |Отказоустойчивый кластер Windows Server| Вы можете настроить высокий уровень доступности для служб машинного обучения в отказоустойчивом кластере Windows Server.|
 | &nbsp; | &nbsp; |
 
-## [!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)]
-
-| Новые функции или обновления | Сведения |
-|:---|:---|
-|Поддержка базы данных управляемого экземпляра базы данных SQL Azure| Размещение [!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)] на управляемом экземпляре. См. раздел [Установка и настройка [!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)]](../master-data-services/master-data-services-installation-and-configuration.md#SetUpWeb).|
-|Новые элементы управления HTML| Элементы управления HTML заменяют все бывшие компоненты Silverlight. Зависимость от Silverlight устранена.|
-| &nbsp; | &nbsp; |
-
 ## <a name="sql-server-analysis-services"></a>службы SQL Server Analysis Services
 
 В этом выпуске появились новые функции и улучшения производительности, управления ресурсами и поддержки клиентов.
@@ -246,6 +239,23 @@ ms.locfileid: "73593885"
 |Настройка свойств для регуляции ресурсов| Этот выпуск включает новые параметры для управления памятью: Memory\QueryMemoryLimit, DbpropMsmdRequestMemoryLimit и OLAP\Query\RowsetSerializationLimit для управления ресурсами. Дополнительные сведения см. в разделе [Настройки памяти](/analysis-services/server-properties/memory-properties).|
 |Параметр управления для обновлений кэша Power BI | В этом выпуске представлено свойство ClientCacheRefreshPolicy, которое переопределяет кэширование данных для плитки панели мониторинга и данных отчета для начальной загрузки отчетов Live Connect с помощью службы Power BI. Дополнительные сведения см. в разделе [Общие свойства](/analysis-services/server-properties/general-properties). |
 | Интерактивное подключение  | Такое подключение можно использовать для синхронизации реплик только для чтения в локальных средах масштабирования запросов. Дополнительные сведения см. в разделе [Интерактивное подключение](/analysis-services/what-s-new-in-sql-server-analysis-services#online-attach). |
+| &nbsp; | &nbsp; |
+
+## <a name="sql-server-integration-services"></a>Службы SQL Server Integration Services
+
+В этом выпуске появились новые функции для улучшения файловых операций.
+
+| Новые функции или обновления | Сведения |
+|:---|:---|
+|Задача "Гибкая работа с файлами" |Выполнение файловых операций в локальной файловой системе, хранилище BLOB-объектов Azure и Azure Data Lake Storage 2-го поколения. См. статью [Задача "Гибкая работа с файлами"](../integration-services/control-flow/flexible-file-task.md).|
+|Источник и назначение "Гибкая работа с файлами" |Чтение и запись данных для хранилища BLOB-объектов Azure и Azure Data Lake Storage 2-го поколения. См. статьи [Источник "Гибкая работа с файлами"](../integration-services/data-flow/flexible-file-source.md) и [Назначение "Гибкая работа с файлами"](../integration-services/data-flow/flexible-file-destination.md). |
+
+## <a name="sql-server-includemaster-data-servicesincludesssmdsshort-mdmd"></a>SQL Server [!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)]
+
+| Новые функции или обновления | Сведения |
+|:---|:---|
+|Поддержка базы данных управляемого экземпляра базы данных SQL Azure| Размещение [!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)] на управляемом экземпляре. См. раздел [Установка и настройка [!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)]](../master-data-services/master-data-services-installation-and-configuration.md#SetUpWeb).|
+|Новые элементы управления HTML| Элементы управления HTML заменяют все бывшие компоненты Silverlight. Зависимость от Silverlight устранена.|
 | &nbsp; | &nbsp; |
 
 ## <a name="sql-server-reporting-services"></a>службы SQL Server Reporting Services

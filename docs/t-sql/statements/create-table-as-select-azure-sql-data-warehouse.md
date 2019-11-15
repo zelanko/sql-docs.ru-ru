@@ -11,12 +11,12 @@ ms.assetid: d1e08f88-64ef-4001-8a66-372249df2533
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 7b9e469cd522ecf28684a6e34ded51a41356fec5
-ms.sourcegitcommit: 5d9ce5c98c23301c5914f142671516b2195f9018
+ms.openlocfilehash: 22f296db7717e81068ac52d6c3df547a0ba0d085
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71961797"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73660785"
 ---
 # <a name="create-table-as-select-azure-sql-data-warehouse"></a>CREATE TABLE AS SELECT (хранилище данных SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -137,6 +137,8 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
 
 ## <a name="limitations-and-restrictions"></a>Ограничения  
 Хранилище данных SQL Azure еще не поддерживает автоматическое создание или автоматическое обновление статистики.  Чтобы добиться наилучшей производительности запросов, важно создавать статистику для всех столбцов во всех таблицах после запуска инструкции CTAS и после любых значительных изменений данных. Дополнительные сведения см. в разделе [CREATE STATISTICS (Transact-SQL)](../../t-sql/statements/create-statistics-transact-sql.md).
+
+Упорядоченный кластеризованный индекс columnstore можно создавать для столбцов любых типов данных, поддерживаемых в хранилище данных SQL Azure, за исключением строковых столбцов.  
 
 [SET ROWCOUNT (Transact-SQL)](../../t-sql/statements/set-rowcount-transact-sql.md) не влияет на инструкцию CTAS. Чтобы обеспечить аналогичное поведение, воспользуйтесь инструкцией [TOP (Transact-SQL)](../../t-sql/queries/top-transact-sql.md).  
  

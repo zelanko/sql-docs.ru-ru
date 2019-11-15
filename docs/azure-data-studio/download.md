@@ -10,19 +10,19 @@ ms.author: maghan
 ms.custom: seodec18
 ms.date: 11/04/2019
 ms.reviewer: alayu; sstein
-ms.openlocfilehash: 49d6b08401d8974994daec507b5222387a0dfff1
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 297d28166b8c9fa7432bf6978e887280d1f18879
+ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532563"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73706612"
 ---
 # <a name="download-and-install-azure-data-studio"></a>Скачивание и установка Azure Data Studio
 
 [!INCLUDE[name-sos](../includes/name-sos.md)] выполняется в Windows, macOS и Linux.
 
 
-Скачайте и установите последний, *октябрьский выпуск*:
+Скачайте и установите последний выпуск:
 
 > [!NOTE]
 > При обновлении с SQL Operations Studio и необходимости сохранения параметров, сочетаний клавиш или фрагментов кода см. раздел [Перемещение параметров пользователя](#move-user-settings).

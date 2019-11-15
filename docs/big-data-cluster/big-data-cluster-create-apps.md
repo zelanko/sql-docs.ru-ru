@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 863b569014bf35ef4e6aab01ba966edb34812bd1
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 1253863bcd2e1da804480a3e1d0e628024b0798b
+ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532521"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73706700"
 ---
 # <a name="how-to-deploy-an-app-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Развертывание приложения в [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
@@ -26,7 +26,7 @@ ms.locfileid: "73532521"
 
 - Единая служебная программа командной строки для управления кластером и приложением.
 - Упрощенное развертывание приложений, обеспечивающее детальный контроль с помощью файлов спецификаций.
-- Поддержка размещения дополнительных типов приложений — SSIS и MLeap (новая возможность в CTP 2.3).
+- Поддержка размещения дополнительных типов приложений — SSIS и MLeap.
 - [Расширение Visual Studio Code](app-deployment-extension.md) для управления развертыванием приложений.
 
 Для развертывания приложений и управления ими используется служебная программа командной строки `azdata`. В этой статье приведены примеры развертывания приложений из командной строки. Сведения об использовании этой функции в Visual Studio Code см. в разделе [Расширение Visual Studio Code](app-deployment-extension.md).
@@ -43,7 +43,7 @@ ms.locfileid: "73532521"
 
 ## <a name="capabilities"></a>Возможности
 
-В SQL Server 2019 (предварительная версия) можно создать, удалить, описать, инициализировать, перечислить, запустить и обновить приложение. В следующей таблице описаны команды развертывания приложения, которые можно использовать с **azdata**.
+В SQL Server 2019 можно создать, удалить, описать, инициализировать, перечислить, запустить и обновить приложение. В следующей таблице описаны команды развертывания приложения, которые можно использовать с **azdata**.
 
 |Command |Описание |
 |:---|:---|

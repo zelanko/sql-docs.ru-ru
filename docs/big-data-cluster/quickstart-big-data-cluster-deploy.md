@@ -1,7 +1,7 @@
 ---
 title: Развертывание с помощью скрипта Python
-titleSuffix: SQL Server big data clusters
-description: Узнайте, как развертывать [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (предварительная версия) в службе Azure Kubernetes (AKS) с помощью скрипта развертывания.
+titleSuffix: SQL Server Big Data Clusters
+description: Узнайте, как развертывать кластеры больших данных SQL Server (предварительная версия) в Службе Azure Kubernetes (AKS) с помощью скрипта развертывания.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 3233ec8a266ea77fe0eb62f5cfcadde8f2949ff9
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 1b2a838f8ad386b8a236304401308d5be0f63ff1
+ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531933"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73706350"
 ---
 # <a name="use-a-python-script-to-deploy-a-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>Развертывание кластера больших данных SQL Server в Службе Azure Kubernetes (AKS) с помощью скрипта Python
 
@@ -80,8 +80,6 @@ curl -o deploy-sql-big-data-aks.py "https://raw.githubusercontent.com/Microsoft/
    | **Имя кластера** | Имя кластера AKS и кластера больших данных. Имя кластера больших данных должно содержать только строчные буквы и цифры без пробелов. (Имя по умолчанию — **sqlbigdata**.) |
    | **Пароль** | Пароль для контроллера, шлюза HDFS/Spark и главного экземпляра (по умолчанию **MySQLBigData2019**). |
    | **Имя пользователя** | Имя пользователя контроллера (по умолчанию **admin**). |
-
-Для участников программы раннего внедрения кластера больших данных SQL Server 2019 требовались следующие параметры: **имя пользователя Docker** и **пароль Docker**. Начиная с версии CTP 3.2 они больше не требуются.
 
    > [!IMPORTANT]
    > Размер машины **Standard_L8s** по умолчанию может быть доступен не во всех регионах Azure. Если вы выбираете другой размер машины, имейте в виду, что общее количество дисков, которые можно подключить во всех узлах кластера, должно быть не меньше 24. Для каждого утверждения постоянного тома в кластере требуется подключенный диск. В настоящее время для кластера больших данных требуется 24 утверждения постоянных томов. Например, размер машины [Standard_L8s](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-storage#lsv2-series) поддерживает 32 подключенных диска, поэтому вы можете оценивать кластеры больших данных с одним узлом этого размера.

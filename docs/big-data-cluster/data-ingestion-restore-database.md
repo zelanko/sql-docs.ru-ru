@@ -1,7 +1,7 @@
 ---
 title: Восстановление базы данных
 titleSuffix: SQL Server big data clusters
-description: В этой статье показано, как восстановить базу данных в экземпляре главного экземпляра [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
+description: В этой статье показано, как восстановить базу данных на главном экземпляре [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -11,7 +11,7 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: bad1a62752dd75e181d30c28485e1c9b707aa888
 ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 08/20/2019
 ms.locfileid: "69652238"
@@ -20,7 +20,7 @@ ms.locfileid: "69652238"
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-В этой статье описывается, как восстановить существующую базу данных в главном экземпляре [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. Рекомендуется использовать метод резервного копирования, копирования и восстановления.
+В этой статье описывается, как восстановить существующую базу данных на главном экземпляре [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. Рекомендуется использовать метод резервного копирования, копирования и восстановления.
 
 ## <a name="backup-your-existing-database"></a>Создайте резервную копию существующей базы данных.
 
@@ -110,8 +110,8 @@ GO
 > [!NOTE]
 > Эти скрипты установки требуется выполнять только для баз данных, восстановленных из более старых версий SQL Server. Если вы создаете новую базу данных в главном экземпляре SQL Server, то для вас уже настроены хранимые процедуры пула данных и пула носителей.
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
-Дополнительные [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]сведения см. в следующих обзорах:
+Дополнительные сведения о [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] см. в следующем обзоре:
 
-- [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]Что?](big-data-cluster-overview.md)
+- [Что такое [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md)

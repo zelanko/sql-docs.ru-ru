@@ -1,5 +1,5 @@
 ---
-title: Мониторинг переноса данных и устранение неполадок при этой операции (Stretch Database) | Документация Майкрософт
+title: Мониторинг переноса данных и устранение неполадок
 ms.date: 06/14/2016
 ms.service: sql-server-stretch-database
 ms.reviewer: ''
@@ -10,12 +10,13 @@ helpviewer_keywords:
 ms.assetid: 06950858-8c02-4ec6-9c59-42b787316a2d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6130bd88e93a33c5bcb295e73b752ae1b749ff77
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: d204c7acfbd8598a7cbb66a41dcf89915fc711ef
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68136077"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73843781"
 ---
 # <a name="monitor-and-troubleshoot-data-migration-stretch-database"></a>Мониторинг переноса данных и устранение неполадок при этой операции (Stretch Database)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "68136077"
   
 -   В нижней области монитора отображается состояние переноса данных для каждой таблицы с поддержкой Stretch в базе данных.  
   
- ![Монитор Stretch Database](../../sql-server/stretch-database/media/stretch-monitor.PNG "Монитор Stretch Database")  
+ ![Мониторинг базы данных Stretch Database](../../sql-server/stretch-database/media/stretch-monitor.PNG "Мониторинг базы данных Stretch Database")  
   
 ##  <a name="Migration"></a> Проверка состояния переноса данных в динамическое административное представление  
  Откройте динамическое представление управления **sys.dm_db_rda_migration_status** , чтобы увидеть, сколько разделов и строк данных было перенесено. Дополнительные сведения см. в разделе [sys.dm_db_rda_migration_status (Transact-SQL)](../../relational-databases/system-dynamic-management-views/stretch-database-sys-dm-db-rda-migration-status.md).  

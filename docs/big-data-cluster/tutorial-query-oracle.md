@@ -1,7 +1,7 @@
 ---
 title: Запрос внешних данных в Oracle
 titleSuffix: SQL Server big data clusters
-description: В этом руководстве показано, как запрашивать данные Oracle из [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. Для этого создается внешняя таблица на основе данных в Oracle, после чего выполняется запрос.
+description: В этом руководстве описывается, каким образом выполняется запрос данных Oracle из [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. Для этого создается внешняя таблица на основе данных в Oracle, после чего выполняется запрос.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: b880e3758481e5b061221bd2753b5a26f01ed856
 ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 10/01/2019
 ms.locfileid: "71708366"
 ---
-# <a name="tutorial-query-oracle-from-a-sql-server-big-data-cluster"></a>Учебник. Запрос данных Oracle из кластера больших данных SQL Server
+# <a name="tutorial-query-oracle-from-a-sql-server-big-data-cluster"></a>Руководство. Запрос данных Oracle из кластера больших данных SQL Server
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -132,7 +132,7 @@ DROP EXTERNAL DATA SOURCE [OracleSalesSrvr] ;
 DROP DATABASE SCOPED CREDENTIAL [OracleCredential];
 ```
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 Сведения о приеме данных в пул данных:
 > [!div class="nextstepaction"]

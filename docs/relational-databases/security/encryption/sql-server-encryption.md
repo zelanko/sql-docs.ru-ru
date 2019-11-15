@@ -15,12 +15,12 @@ ms.assetid: ead0150e-4943-4ad5-84c8-36f85c7278f4
 author: aliceku
 ms.author: aliceku
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bed5524bbc7326357200841fd0d6a4045566a902
-ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
+ms.openlocfilehash: a445da2fe9474fe5215edf5aa50d56dc252a812d
+ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71713265"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73632725"
 ---
 # <a name="sql-server-encryption"></a>Шифрование SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "71713265"
 >  Несмотря на то, что шифрование является полезным средством обеспечения безопасности, его не следует применять ко всем данным или соединениям. При решении о внедрении шифрования необходимо проанализировать, как пользователи получают доступ к данным. Если пользователи получают доступ к данным через открытую сеть, то шифрование может потребоваться для повышения безопасности. Однако если весь доступ осуществляется по безопасной внутренней сети, то шифрование не требуется. Использование шифрования включает политику управления паролями, ключами и сертификатами.  
   
 > [!NOTE]  
->  Последние сведения о безопасности уровня транспорта (TSL1.2) см. по адресу [Поддержка TLS 1.2 для Microsoft SQL Server](https://support.microsoft.com/kb/3135244).  
+>  Последние сведения о безопасности уровня транспорта (TLS1.2) см. в статье [Поддержка TLS 1.2 для Microsoft SQL Server](https://support.microsoft.com/kb/3135244).  
 
 В [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] можно шифровать соединения, данные и хранимые процедуры. В следующих разделах содержатся дополнительные сведения о шифровании в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
 

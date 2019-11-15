@@ -1,20 +1,20 @@
 ---
-title: Учебник по созданию, обучению и оценке моделей на основе секций в R
+title: Создание моделей на основе секций в R
 description: Узнайте о моделировании, обучении и использовании секционированных данных, создаваемых динамически, с помощью возможностей моделирования на основе секций машинного обучения SQL Server.
-ms.custom: sqlseattle
+ms.custom: seo-lt-2019
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 11/04/2019
+ms.date: 11/06/2019
 ms.topic: tutorial
 ms.author: davidph
 author: dphansen
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 1f73f45d2ac9830fed810746a5895554cded0691
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: ee5d6cbf9b1d5430e431cf04fb3b86ae7fb5743b
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532578"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73726228"
 ---
 # <a name="tutorial-create-partition-based-models-in-r-on-sql-server"></a>Руководство. Создание моделей на основе секций в R в SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "73532578"
 
 + Файл [NYCTaxi_Sample.bak](https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak), который можно [скачать и восстановить](demo-data-nyctaxi-in-sql.md) в локальном экземпляре ядра СУБД. Размер файла составляет приблизительно 90 МБ.
 
-+ Экземпляр ядра СУБД SQL Server 2019 (предварительная версия) со службами машинного обучения и интеграцией R.
++ Экземпляр ядра СУБД SQL Server 2019 со службами машинного обучения и интеграцией R.
 
 Проверьте версию, выполнив **`SELECT @@Version`** как запрос T-SQL в средстве выполнения запросов.
 
@@ -332,7 +332,7 @@ SELECT *
 FROM prediction_results;
 ```
 
-## <a name="next-steps"></a>Дальнейшие действия
+## <a name="next-steps"></a>Следующие шаги
 
 В этом руководстве вы использовали скрипт [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) для выполнения цикла операций по секционированным данным. Более подробно вызов внешних скриптов в хранимых процедурах и использование функций RevoScaleR рассматривается в следующем учебнике.
 

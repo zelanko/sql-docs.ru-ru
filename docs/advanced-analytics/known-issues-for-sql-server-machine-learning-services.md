@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: b0374e6e6fe620c4f43e26aa9bd4494746da36e4
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 1f5627a5e35039420725795f53a7fc63d5582ab9
+ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532604"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73706846"
 ---
 # <a name="known-issues-in-sql-server-machine-learning-services"></a>Известные проблемы служб машинного обучения SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ R_SERVER использует библиотеку Intel Math Kernel Library (MK
 3. Перезапустите R_SERVER. На SQL Server можно перезапустить службу панели запуска SQL Server.
 
 > [!NOTE]
-> Если вы используете предварительную версию SQL Server 2019 в Linux, измените или создайте *.bash_profile* в домашнем каталоге пользователя, добавив строку `export MKL_CBWR="AUTO"`. Выполните этот файл, введя команду `source .bash_profile` в командной строке bash. Перезапустите R_SERVER, введя `Sys.getenv()` в командной строке R.
+> Если вы используете SQL Server 2019 в Linux, измените или создайте *.bash_profile* в домашнем каталоге пользователя, добавив строку `export MKL_CBWR="AUTO"`. Выполните этот файл, введя команду `source .bash_profile` в командной строке bash. Перезапустите R_SERVER, введя `Sys.getenv()` в командной строке R.
 
 ### <a name="2-r-script-runtime-error-sql-server-2017-cu5-cu7-regression"></a>2. Ошибка времени выполнения скрипта R (SQL Server 2017 с накопительными пакетами обновлений 5–7 (регрессия))
 

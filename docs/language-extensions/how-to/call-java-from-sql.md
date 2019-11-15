@@ -1,22 +1,22 @@
 ---
-title: Вызов Java из SQL Server
+title: Вызов среды выполнения Java
 titleSuffix: SQL Server Language Extensions
-description: Узнайте, как вызывать классы Java из хранимых процедур SQL Server с помощью расширения языка программирования Java в SQL Server 2019.
+description: Узнайте, как вызывать классы Java из хранимых процедур SQL Server с помощью расширений языка SQL Server.
 author: dphansen
 ms.author: davidph
-ms.date: 08/21/2019
+ms.date: 11/05/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 34d8162961a9e6bbc850e8a80a96910e5aa41d7b
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: bdff924b63b11eda850378987498e8601367d3fe
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "73588808"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73658897"
 ---
-# <a name="how-to-call-java-from-sql-server"></a>Как вызывать Java из SQL Server
+# <a name="how-to-call-the-java-runtime-in-sql-server-language-extensions"></a>Вызов среды выполнения Java в расширениях языка SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 [Расширения языка SQL Server](../language-extensions-overview.md) используют системную хранимую процедуру [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) в качестве интерфейса для вызова среды выполнения Java. 
@@ -115,6 +115,6 @@ with result sets ((column1 int))
 
 Дополнительные сведения см. в разделе [CREATE EXTERNAL LANGUAGE](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql).
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 + [Учебник. Поиск строки с использованием регулярных выражений в Java](../tutorials/search-for-string-using-regular-expressions-in-java.md)

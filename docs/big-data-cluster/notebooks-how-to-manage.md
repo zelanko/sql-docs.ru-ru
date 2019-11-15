@@ -9,22 +9,22 @@ ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 5417166ea69abe726f47b6bf2adede4b937d5b00
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: fb081c84de1fc9548ef1ea1f19bb2e286d0be636
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67958283"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73844266"
 ---
 # <a name="how-to-manage-notebooks-in-azure-data-studio"></a>Управление записными книжками в Azure Data Studio
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Эта статья описывает, как открывать и сохранять файлы записных книжек в Azure Data Studio с использованием предварительной версии SQL Server 2019. В ней также показано, как изменить подключение к кластеру больших данных SQL Server.
+Эта статья описывает, как открывать и сохранять файлы записных книжек в Azure Data Studio с использованием SQL Server. В ней также показано, как изменить подключение к кластеру больших данных SQL Server.
 
 ## <a name="prerequisites"></a>предварительные требования
 
-В этой статье предполагается, что у вас уже есть записная книжка, которую нужно использовать в Azure Data Studio. Если вы хотите создать записную книжку, см. статью [Использование записных книжек в предварительной версии SQL Server 2019](notebooks-guidance.md). Чтобы использовать записные книжки в Azure Data Studio, нужно выполнить следующие предварительные требования.
+В этой статье предполагается, что у вас уже есть записная книжка, которую нужно использовать в Azure Data Studio. Если вы хотите создать записную книжку, см. статью [Использование записных книжек в SQL Server](notebooks-guidance.md). Чтобы использовать записные книжки в Azure Data Studio, нужно выполнить следующие предварительные требования.
 
 - [Развертывание кластера больших данных](quickstart-big-data-cluster-deploy.md).
 - [Средства для работы с большими данными SQL Server 2019](deploy-big-data-tools.md)
@@ -78,6 +78,6 @@ ms.locfileid: "67958283"
 
    ![Выберите сервер в меню "Присоединить к"](./media/notebooks-how-to-manage/select-attach-to-2.png)
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
-Дополнительные сведения о записных книжках в Azure Data Studio см. в статье [Использование записных книжек в предварительной версии SQL Server 2019](notebooks-guidance.md).
+Дополнительные сведения о записных книжках в Azure Data Studio см. в статье [Использование записных книжек в SQL Server 2019](notebooks-guidance.md).

@@ -1,7 +1,7 @@
 ---
 title: Мониторинг и устранение неполадок
 titleSuffix: SQL Server big data clusters
-description: Эта статья содержит полезные команды для мониторинга и устранения неполадок [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
+description: Эта статья содержит полезные команды для мониторинга и устранения неполадок в [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
@@ -11,19 +11,19 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: e70689d1e4891fefde8fd1feb76b081bc14bfe81
 ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 08/29/2019
 ms.locfileid: "70153634"
 ---
-# <a name="monitoring-and-troubleshoot-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Мониторинг и устранение неполадок[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
+# <a name="monitoring-and-troubleshoot-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Мониторинг и устранение неполадок [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-В этой статье описываются несколько полезных команд Kubernetes, которые можно использовать для мониторинга и устранения [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]неполадок. Здесь показано, как просмотреть подробные сведения о Pod или других артефактах Kubernetes, расположенных в кластере больших данных. В этой статье также рассматриваются распространенные задачи, такие как копирование файлов в контейнере, где выполняется одна из служб кластеров больших данных SQL Server.
+В этой статье описывается несколько полезных команд Kubernetes, которые можно использовать для отслеживания и устранения неполадок в [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. Здесь показано, как просмотреть подробные сведения о Pod или других артефактах Kubernetes, расположенных в кластере больших данных. В этой статье также рассматриваются распространенные задачи, такие как копирование файлов в контейнере, где выполняется одна из служб кластеров больших данных SQL Server.
 
 > [!TIP]
-> Для мониторинга состояния компонентов кластеров больших данных можно использовать команды [**состояния аздата BDC**](deployment-guidance.md#status) или встроенные записные книжки для [устранения неполадок](manage-notebooks.md) в составе Azure Data Studio.
+> Для мониторинга состояния компонентов кластеров больших данных можно использовать команды [**azdata bdc status**](deployment-guidance.md#status) или встроенные [записные книжки для устранения неполадок](manage-notebooks.md) в составе Azure Data Studio.
 
 > [!TIP]
 > Выполните следующие команды **kubectl** на клиентском компьютере Windows (cmd или PS) или Linux (bash). Они нуждаются в предварительной проверке подлинности в кластере и контексте кластера для выполнения. Например, для ранее созданного кластера AKS можно запустить `az aks get-credentials --name <aks_cluster_name> --resource-group <azure_resource_group_name>`, чтобы скачать файл конфигурации кластера Kubernetes и задать контекст кластера.
@@ -225,6 +225,6 @@ kubectl create clusterrolebinding kubernetes-dashboard -n kube-system --clusterr
 kubectl proxy
 ```
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
-Дополнительные сведения о кластерах больших данных см. в разделе [что такое [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] ](big-data-cluster-overview.md).
+Дополнительные сведения о кластерах больших данных см. в статье [Что такое [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](big-data-cluster-overview.md).

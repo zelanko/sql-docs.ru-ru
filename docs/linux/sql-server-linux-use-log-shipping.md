@@ -7,12 +7,12 @@ ms.date: 04/19/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 5f5b795d35899025f1651b0f7db758d60103c511
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 8bc7fa51eeb5d02400b15556a3bec06ce721c1de
+ms.sourcegitcommit: 27c267bf2a3cfaf2abcb5f3777534803bf4cffe5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68032200"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73240710"
 ---
 # <a name="get-started-with-log-shipping-on-linux"></a>Начало работы с доставкой журналов в Linux
 
@@ -305,6 +305,13 @@ ms.locfileid: "68032200"
     GO  
     EXEC dbo.sp_start_job N'LSRestore_SampleDB' ;  
     GO  
+    ```
+ - Убедитесь, что отработка отказа доставки журналов работает, выполнив следующую команду.
+ 
+    > [!WARNING]
+    > Эта команда переводит базу данных-получатель в оперативный режим и нарушает конфигурацию доставки журналов. После выполнения этой команды необходимо будет перенастроить доставку журналов.
+ 
+    ```sql
     RESTORE DATABASE SampleDB WITH RECOVERY;
     ```
 

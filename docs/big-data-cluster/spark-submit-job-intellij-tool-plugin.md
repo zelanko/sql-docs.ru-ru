@@ -11,18 +11,18 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 59946731dc1e76716b6202dd6f8aa93d777986b3
 ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 08/20/2019
 ms.locfileid: "69653719"
 ---
-# <a name="submit-spark-jobs-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-in-intellij"></a>Отправка заданий [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] Spark в IntelliJ
+# <a name="submit-spark-jobs-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-in-intellij"></a>Отправка заданий Spark в [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] в IntelliJ
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Одним из ключевых сценариев для [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] является возможность отправки заданий Spark. Функция отправки заданий Spark позволяет отправлять локальные файлы JAR или корректировки со ссылками на [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]. Она также позволяет выполнять файлы JAR или PY, которые уже находятся в файловой системе HDFS. 
+Одним из основных сценариев для [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] является возможность отправки заданий Spark. Функция отправки заданий Spark позволяет отправлять локальные файлы JAR или PY со ссылками на [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]. Она также позволяет выполнять файлы JAR или PY, которые уже находятся в файловой системе HDFS. 
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>предварительные требования
 
 - Кластер больших данных SQL Server.
 - Пакет SDK для Java Oracle. Его можно установить с [веб-сайта Oracle](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html).
@@ -51,16 +51,16 @@ ms.locfileid: "69653719"
 
 1. Запустите IntelliJ IDEA и создайте проект. В диалоговом окне **New Project** (Новый проект) выполните указанные ниже действия. 
 
-   1\. Выберите **Azure Spark/HDInsight** > **Spark Project with Samples (Scala)** (Проект Spark с образцами (Scala)).
+   A. Выберите **Azure Spark/HDInsight** > **Spark Project with Samples (Scala)** (Проект Spark с образцами (Scala)).
 
-   2\. В списке **Build tool** (Средство сборки) выберите одно из следующих средств:
+   Б. В списке **Build tool** (Средство сборки) выберите одно из следующих средств:
 
       * **Maven** для поддержки мастера создания проектов Scala;
       * **SBT** для управления зависимостями и сборки проекта Scala.
 
     ![Диалоговое окно New Project (Новый проект)](./media/spark-submit-job-intellij-tool-plugin/create-hdi-scala-app.png)
 
-2. Щелкните **Далее**.
+2. Выберите **Далее**.
 
 3. Мастер создания проектов Scala автоматически определяет, установлен ли подключаемый модуль Scala. Выберите пункт **Установить**.
 
@@ -74,19 +74,19 @@ ms.locfileid: "69653719"
 
     ![Выбор пакета SDK для Spark](./media/spark-submit-job-intellij-tool-plugin/hdi-new-project.png)
 
-   1\. Введите имя и расположение проекта.
+   A. Введите имя и расположение проекта.
 
-   2\. В раскрывающемся списке **Project SDK** (Пакет SDK проекта) выберите **Java 1.8** для кластера Spark 2.x или **Java 1.7** для кластера Spark 1.x.
+   Б. В раскрывающемся списке **Project SDK** (Пакет SDK проекта) выберите **Java 1.8** для кластера Spark 2.x или **Java 1.7** для кластера Spark 1.x.
 
-   В. В раскрывающемся списке **Spark version** (Версия Spark) мастер создания проектов Scala включает подходящую версию пакетов SDK для Spark и Scala. Если используется версия кластера Spark более ранняя, чем 2.0, выберите **Spark 1.x**. В противном случае выберите **Spark 2.x**. В этом примере используется **Spark 2.0.2 (Scala 2.11.8)** .
+   в. В раскрывающемся списке **Spark version** (Версия Spark) мастер создания проектов Scala включает подходящую версию пакетов SDK для Spark и Scala. Если используется версия кластера Spark более ранняя, чем 2.0, выберите **Spark 1.x**. В противном случае выберите **Spark 2.x**. В этом примере используется **Spark 2.0.2 (Scala 2.11.8)** .
 
-6. Выберите **Готово**.
+6. Нажмите кнопку **Готово**.
 
 7. Проект Spark автоматически создает артефакт. Чтобы просмотреть артефакт, выполните указанные ниже действия.
 
-   1\. В меню **File** (Файл) выберите пункт **Project Structure** (Структура проекта).
+   A. В меню **File** (Файл) выберите пункт **Project Structure** (Структура проекта).
 
-   2\. В диалоговом окне **Project Structure** (Структура проекта) выберите **Artifacts** (Артефакты), чтобы просмотреть созданный артефакт по умолчанию. Можно также создать собственный артефакт, нажав на знак "плюс" ( **+** ).
+   Б. В диалоговом окне **Project Structure** (Структура проекта) выберите **Artifacts** (Артефакты), чтобы просмотреть созданный артефакт по умолчанию. Можно также создать собственный артефакт, нажав на знак "плюс" ( **+** ).
 
       ![Сведения об артефакте в диалоговом окне](./media/spark-submit-job-intellij-tool-plugin/default-artifact.png)
       
@@ -194,5 +194,5 @@ ms.locfileid: "69653719"
 
    ![Отправка выбранного фрагмента в консоль Spark](./media/spark-submit-job-intellij-tool-plugin/send-selection-to-console.png)
 
-## <a name="next-steps"></a>Следующие шаги
-Дополнительные сведения о SQL Server кластере больших данных и связанных сценариях см. в разделе [что [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] ](big-data-cluster-overview.md)?
+## <a name="next-steps"></a>Дальнейшие действия
+Дополнительные сведения о кластере больших данных SQL Server и связанных сценариях см. в статье [Что такое [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](big-data-cluster-overview.md).

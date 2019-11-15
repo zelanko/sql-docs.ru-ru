@@ -1,57 +1,58 @@
 ---
-title: Преобразование данных с помощью RevoScaleR rxDataStep
-description: Пошаговое руководство по преобразованию данных с помощью языка R на SQL Server.
+title: Преобразование данных с помощью RevoScaleR
+description: Пошаговое руководство по преобразованию данных с помощью языка R в SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: c76bdf56febd06ecba6f2d9d11f1710eefdc23e6
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
-ms.translationtype: MT
+ms.openlocfilehash: 773607c7800ed1d507aa721ca7cf86a03857ab8b
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715517"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727171"
 ---
-# <a name="transform-data-using-r-sql-server-and-revoscaler-tutorial"></a>Преобразование данных с помощью R (учебник по SQL Server и RevoScaleR)
+# <a name="transform-data-using-r-sql-server-and-revoscaler-tutorial"></a>Преобразование данных с помощью языка R (учебник по SQL Server и RevoScaleR)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Это занятие является частью [учебника RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) по использованию [функций RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) с SQL Server.
+Этот занятие входит в состав [учебника по RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md), в котором описывается использование функций [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) в SQL Server.
 
-На этом занятии вы узнаете о функциях **RevoScaleR** для преобразования данных на различных стадиях анализа.
+Этот урок содержит сведения о функциях **RevoScaleR** для преобразования данных на разных этапах анализа.
 
 > [!div class="checklist"]
 > * Использование **rxDataStep** для создания и преобразования подмножества данных
-> * Использование **rxImport** для преобразования транзитных данных в файл Xdf-или в кадр данных в памяти во время импорта
+> * Использование **rxImport** для преобразования транзитных данных в XDF-файле или в кадре данных в памяти во время импорта
 
 Функции **rxSummary**, **rxCube**, **rxLinMod**и **rxLogit** поддерживают преобразования данных, хотя и не предназначены специально для перемещения данных.
 
-## <a name="use-rxdatastep-to-transform-variables"></a>Использование rxDataStep для преобразования переменных
+## <a name="use-rxdatastep-to-transform-variables"></a>Использование функции rxDataStep для преобразования переменных
 
 Функция [rxDataStep](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdatastep) обрабатывает данные по одному блоку за раз, считывая их из одного источника данных и записывая в другой. Вы можете указать столбцы, которые нужно преобразовать, загружаемые преобразования и т. д.
 
-Чтобы сделать этот пример интересным, мы используем функцию из другого пакета R для преобразования данных. Пакет **boot** является одним из "рекомендованных" пакетов, то есть **boot** входит в состав каждого дистрибутива R, но не загружается автоматически при запуске. Поэтому пакет уже должен быть доступен в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] экземпляре, настроенном для интеграции R.
+Чтобы сделать этот пример интереснее, используем функцию из другого пакета R для преобразования данных. Пакет **boot** является одним из "рекомендованных" пакетов, то есть **boot** входит в состав каждого дистрибутива R, но не загружается автоматически при запуске. Поэтому этот пакет уже должен быть доступен в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], где настроена интеграция с R.
 
-Из пакета **загрузки** используйте функцию **Inv. логит-преобразование**, которая вычислит обратный логит-преобразование. То есть функция **inv.logit** преобразует логит обратно в значение вероятности по шкале [0,1].
+Пакет **boot** содержит нужную вам функцию **inv.logit**, которая выполняет обратное логит-преобразование. То есть функция **inv.logit** преобразует логит обратно в значение вероятности по шкале [0,1].
 
 > [!TIP] 
 > Кроме того, чтобы получать прогнозы по этой шкале, можно задать для параметра *type* значение **response** в исходном вызове функции **rxPredict**.
 
-1. Начните с создания источника данных для хранения данных, предназначенных для таблицы, `ccScoreOutput`.
+1. Сначала создайте источник данных, в котором будут храниться данные, предназначенные для таблицы `ccScoreOutput`.
   
     ```R
     sqlOutScoreDS <- RxSqlServerData( table =  "ccScoreOutput",  connectionString = sqlConnString, rowsPerRead = sqlRowsPerRead )
     ```
   
-2. Добавьте еще один источник данных для хранения данных таблицы `ccScoreOutput2`.
+2. Добавьте еще один источник данных, в котором будут храниться данные для таблицы `ccScoreOutput2`.
   
     ```R
     sqlOutScoreDS2 <- RxSqlServerData( table =  "ccScoreOutput2",  connectionString = sqlConnString, rowsPerRead = sqlRowsPerRead )
     ```
   
-    В новой таблице сохраните все переменные из предыдущей `ccScoreOutput` таблицы и вновь созданную переменную.
+    В новой таблице сохраните все переменные из предыдущей таблицы `ccScoreOutput`, а также новые переменные.
   
 3. В качестве контекста вычисления задайте экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .
   
@@ -59,7 +60,7 @@ ms.locfileid: "68715517"
     rxSetComputeContext(sqlCompute)
     ```
   
-4. Используйте функцию **rxSqlServerTableExists** , чтобы проверить, существует ли уже `ccScoreOutput2` выходная таблица, и если да, используйте функцию **rxSqlServerDropTable** для удаления таблицы.
+4. Используйте функцию **rxSqlServerTableExists**, чтобы проверить наличие таблицы выходных данных `ccScoreOutput2`. Если таблица существует, удалите ее с помощью функции **rxSqlServerDropTable**.
   
     ```R
     if (rxSqlServerTableExists("ccScoreOutput2"))     rxSqlServerDropTable("ccScoreOutput2")
@@ -75,7 +76,7 @@ ms.locfileid: "68715517"
         overwrite = TRUE)
     ```
 
-    При определении преобразований, применяемых к каждому столбцу, можно указать дополнительные пакеты R, необходимые для выполнения преобразований.  Дополнительные сведения о типах преобразований, которые можно выполнить, см. [в разделе Преобразование и подмножество данных с помощью RevoScaleR](https://docs.microsoft.com/machine-learning-server/r/how-to-revoscaler-data-transform).
+    При определении преобразований, применяемых к каждому столбцу, можно указать дополнительные пакеты R, необходимые для выполнения преобразований.  Дополнительные сведения о возможных типах преобразования см. в разделе [Преобразование и выделение подмножеств данных с помощью RevoScaleR](https://docs.microsoft.com/machine-learning-server/r/how-to-revoscaler-data-transform).
   
 6. Вызовите функцию **rxGetVarInfo** для просмотра сводки переменных в новом наборе данных.
   
@@ -99,9 +100,9 @@ Var 9: ccFraudProb, Type: numeric
 
 Исходные оценки логита сохраняются, однако был добавлен новый столбец *ccFraudProb*, в котором оценки логита представлены значениями от 0 до 1.
 
-Обратите внимание, что переменные фактора записываются `ccScoreOutput2` в таблицу в виде символьных данных. Чтобы использовать их как коэффициенты в последующих операциях анализа, задайте уровни с помощью параметра *colInfo* .
+Обратите внимание на то, что факторные переменные были записаны в таблицу `ccScoreOutput2` как символьные данные. Чтобы использовать их как коэффициенты в последующих операциях анализа, задайте уровни с помощью параметра *colInfo* .
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 > [!div class="nextstepaction"]
 > [Загрузка данных в память с помощью функции rxImport](../../advanced-analytics/tutorials/deepdive-load-data-into-memory-using-rximport.md)

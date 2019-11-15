@@ -30,12 +30,12 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: c9f7578623c7ba86003e8e8d7c611fb4e82a9502
-ms.sourcegitcommit: bb56808dd81890df4f45636b600aaf3269c374f2
+ms.openlocfilehash: 03586e6ee255019a65528c98655b3cc7782624be
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72890467"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729908"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>Параметры ALTER DATABASE SET (Transact-SQL)
 
@@ -3049,16 +3049,20 @@ WHERE name = <'Your_Database_Name'>
 
 ```sql
 
-SELECT request_id, command, result_cache_hit FROM sys.pdw_exec_requests 
+SELECT request_id, command, result_cache_hit FROM sys.dm_pdw_exec_requests 
 WHERE request_id = <'Your_Query_Request_ID'>
 
 ```
+> [!IMPORTANT]
+> Операции по созданию кэша результирующего набора и извлечению данных из кэша выполняются в управляющем узле экземпляра хранилища данных. Если кэширование результирующего набора включено, выполнение запросов, возвращающих большие (например, более одного миллиона строк) наборы, может привести к высокой загрузке ЦП на управляющем узле и снизить общую скорость реакции экземпляра. Как правило, такие запросы используются в ходе исследования данных, а также при выполнении операций извлечения, преобразования и загрузки. Чтобы избежать чрезмерной загрузки управляющего узла и снижения производительности, перед выполнение запросов такого типа пользователям следует отключить кэширование результирующего набора для базы данных.  
+
+Дополнительные сведения о настройке производительности при кэшировании результирующего набора см. в статье [Руководство по настройке производительности](/azure/sql-data-warehouse/performance-tuning-result-set-caching).
+
 ### <a name="permissions"></a>Разрешения
 Для задания параметра RESULT_SET_CACHING пользователю требуется имя входа участника на уровне сервера (созданное процессом подготовки) или членство в роли базы данных `dbmanager`.  
 
-
 **<snapshot_option> ::=**         
-**Область применения**: Хранилище данных SQL Azure (предварительная версия)
+**Область применения**: Хранилище данных SQL Azure 
 
 Задает уровень изоляции транзакции в базе данных.
 
@@ -3115,7 +3119,6 @@ SET READ_COMMITTED_SNAPSHOT ON
 
 ## <a name="see-also"></a>См. также раздел
 
-- [Настройка производительности — кэширование результирующего набора](https://docs.microsoft.com/en-us/azure/sql-data-warehouse/performance-tuning-result-set-caching)
 - [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)
 - [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md)
 - [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)

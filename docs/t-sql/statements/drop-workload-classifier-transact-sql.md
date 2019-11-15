@@ -1,7 +1,7 @@
 ---
 title: Классификатор DROP WORKLOAD (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
-ms.date: 05/01/2019
+ms.date: 11/04/2019
 ms.prod: sql
 ms.prod_service: sql-data-warehouse
 ms.reviewer: jrasnick
@@ -16,24 +16,23 @@ dev_langs:
 - TSQL
 helpviewer_keywords:
 - DROP WORKLOAD CLASSIFIER statement
-ms.assetid: ''
 author: ronortloff
 ms.author: rortloff
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: 92e853a1d54c91b43d166555162f77030e07b9e9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5db3c50e4b0a21e2e1acf9512995870b62375dd8
+ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68072034"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73632832"
 ---
 # <a name="drop-workload-classifier-transact-sql"></a>Классификатор DROP WORKLOAD (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
-Удаляет существующий определяемый пользователем классификатор рабочей нагрузки управления.  
+Удаляет существующий определяемый пользователем классификатор рабочей нагрузки управления.  Если запросы выполняются или находятся в очереди запросов в приостановленном состоянии, они сохраняют свою классификацию и классификатор может быть удален немедленно. Удаление и повторное создание классификатора с другим уровнем важности не затрагивает уже классифицированные запросы.
   
-![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
 ## <a name="syntax"></a>Синтаксис  
 
@@ -44,14 +43,8 @@ DROP WORKLOAD CLASSIFIER classifier_name;
 ## <a name="arguments"></a>Аргументы
 
 *classifier_name*  
-Указывает имя, по которому идентифицируется классификатор рабочей нагрузки.  Значение classifier_name — это sysname.  Оно может иметь длину до 128 символов и должно быть уникальным в пределах экземпляра.
+Указывает имя, по которому идентифицируется классификатор рабочей нагрузки.
   
-## <a name="remarks"></a>Remarks
-
-Инструкция DROP WORKLOAD CLASSIFIER не допускается для системных классификаторов рабочей нагрузки.
-
-Если запросы выполняются или находятся в очереди запросов в приостановленном состоянии, они сохраняют свою классификацию и классификатор может быть удален немедленно.  Удаление и повторное создание классификатора с другим уровнем важности не затрагивает уже классифицированные запросы.
-
 ## <a name="permissions"></a>Разрешения
 
 Необходимо разрешение CONTROL DATABASE.  

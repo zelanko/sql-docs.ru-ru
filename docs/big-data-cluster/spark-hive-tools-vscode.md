@@ -11,7 +11,7 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: b09a5febe9bc67f04d70c4d5b7850ef26ebac750
 ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 08/20/2019
 ms.locfileid: "69653731"
@@ -23,7 +23,7 @@ ms.locfileid: "69653731"
 Spark & Hive Tools можно установить на платформах, поддерживаемых Visual Studio Code, включая Windows, Linux и macOS. Ниже указаны необходимые условия для различных платформ.
 
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>предварительные требования
 
 Для выполнения действий, описанных в этой статье, необходимо следующее:
 
@@ -31,7 +31,7 @@ Spark & Hive Tools можно установить на платформах, п
 - [Visual Studio Code](https://code.visualstudio.com/).
 - [Mono](https://www.mono-project.com/docs/getting-started/install/). Mono требуется только для Linux и macOS.
 - [Настройка интерактивной среды PySpark для Visual Studio Code](https://docs.microsoft.com/azure/hdinsight/set-up-pyspark-interactive-environment).
-- Локальный каталог с именем **склбдцексампле**.  В этой статье используется **к:\склбдк\склбдцексампле**.
+- Локальный каталог **SQLBDCexample**.  В этой статье используется **C:\SQLBDC\SQLBDCexample**.
 
 ## <a name="install-spark--hive-tools"></a>Установка Spark & Hive Tools
 
@@ -53,9 +53,9 @@ Spark & Hive Tools можно установить на платформах, п
 
 Выполните следующие действия, чтобы открыть рабочую папку и создать файл в Visual Studio Code:
 
-1. В строке меню выберите **файл** > **Открыть папку...** К:\склбдк\склбдцексампле, а затем нажмите кнопку **выбрать папку** .  >  Папка отображается в представлении **проводника** слева.
+1. В строке меню выберите **Файл** > **Открыть папку...**  > **C:\SQLBDC\SQLBDCexample**, а затем нажмите кнопку **Выбрать папку**. Папка отображается в представлении **проводника** слева.
 
-2. В представлении **проводника** выберите папку **склбдцексампле**, а затем значок **новый файл** рядом с рабочей папкой.
+2. В представлении **проводника** выберите эту папку, элемент **SQLBDCexample** и значок **Новый файл** рядом с рабочей папкой.
 
    ![Создание файла](./media/spark-hive-tools-vscode/new-file.png)
 
@@ -116,7 +116,7 @@ Spark & Hive Tools можно установить на платформах, п
 
 ## <a name="set-default-cluster"></a>Задание кластера по умолчанию
 
-1. Повторно откройте папку **склбдцексампле** , созданную [ранее](#open-work-folder) , если она была закрыта.  
+1. Снова откройте созданную [ранее](#open-work-folder) папку **SQLBDCexample**, если она была закрыта.  
 
 2. Выберите созданный [ранее](#open-work-folder) файл **HelloWorld.py**, чтобы открыть его в редакторе скриптов.
 
@@ -132,7 +132,7 @@ Spark & Hive Tools можно установить на платформах, п
 
 Вы можете отправлять интерактивные запросы PySpark, выполнив следующие действия:
 
-1. Повторно откройте папку **склбдцексампле** , созданную [ранее](#open-work-folder) , если она была закрыта.  
+1. Снова откройте созданную [ранее](#open-work-folder) папку **SQLBDCexample**, если она была закрыта.  
 
 2. Выберите созданный [ранее](#open-work-folder) файл **HelloWorld.py**, чтобы открыть его в редакторе скриптов.
 
@@ -159,7 +159,7 @@ Spark & Hive Tools можно установить на платформах, п
 
 ## <a name="submit-pyspark-batch-job"></a>Отправка пакетного задания PySpark
 
-1. Повторно откройте папку **склбдцексампле** , созданную [ранее](#open-work-folder) , если она была закрыта.  
+1. Снова откройте созданную [ранее](#open-work-folder) папку **SQLBDCexample**, если она была закрыта.  
 
 2. Выберите созданный [ранее](#open-work-folder) файл **HelloWorld.py**, чтобы открыть его в редакторе скриптов.
 
@@ -210,12 +210,12 @@ Spark & Hive Tools можно установить на платформах, п
 | pyFiles | Файлы Python для использования в этом сеансе | список строк |
 | files | Файлы для использования в этом сеансе | список строк |
 | driverMemory | Объем памяти, используемый для процесса драйвера | строка |
-| driverCores | Число ядер, используемых для процесса драйвера | ssNoversion |
+| driverCores | Число ядер, используемых для процесса драйвера | INT |
 | executorMemory | Объем памяти, используемый для каждого процесса исполнителя | строка |
-| executorCores | Число ядер, используемых для каждого исполнителя | ssNoversion |
-| numExecutors | Число исполнителей, которые должны быть запущены для этого сеанса | ssNoversion |
+| executorCores | Число ядер, используемых для каждого исполнителя | INT |
+| numExecutors | Число исполнителей, которые должны быть запущены для этого сеанса | INT |
 | archives | Архивы для использования в этом сеансе | список строк |
-| queue | Имя очереди YARN, куда выполнена отправка | строка |
+| очередь | Имя очереди YARN, куда выполнена отправка | строка |
 | name | Имя сеанса | строка |
 | conf | Свойства конфигурации Spark | Сопоставление key=val |
 
@@ -225,7 +225,7 @@ Spark & Hive Tools можно установить на платформах, п
 
 | name | description | type |
 | :- | :- | :- |
-| id | Идентификатор сеанса | ssNoversion |
+| идентификатор | Идентификатор сеанса | INT |
 | appId | Идентификатор приложения для этого сеанса | String |
 | appInfo | Подробные сведения о приложении | Сопоставление key=val |
 | log | Строки журнала | список строк |
@@ -254,5 +254,5 @@ Spark & Hive Tools можно установить на платформах, п
 
 3. Просмотрите представление **OUTPUT** для проверки.  
 
-## <a name="next-steps"></a>Следующие шаги
-Дополнительные сведения о SQL Server кластере больших данных и связанных сценариях см [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](https://docs.microsoft.com/sql/big-data-cluster/big-data-cluster-overview?view=sqlallproducts-allversions). в разделе.
+## <a name="next-steps"></a>Дальнейшие действия
+Дополнительные сведения о кластере больших данных SQL Server и связанных сценариях см. в статье [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](https://docs.microsoft.com/sql/big-data-cluster/big-data-cluster-overview?view=sqlallproducts-allversions).

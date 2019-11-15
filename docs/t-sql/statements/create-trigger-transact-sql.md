@@ -1,7 +1,7 @@
 ---
 title: CREATE TRIGGER (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 08/10/2017
+ms.date: 10/30/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: mathoma
@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: edeced03-decd-44c3-8c74-2c02f801d3e7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 245342ac9495e1e4331453f8869e2e6df46a1c1e
-ms.sourcegitcommit: 00350f6ffb73c2c0d99beeded61c5b9baa63d171
+ms.openlocfilehash: 48335017cd45e713001a22941875f30c51148b62
+ms.sourcegitcommit: af6f66cc3603b785a7d2d73d7338961a5c76c793
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70190368"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73168760"
 ---
 # <a name="create-trigger-transact-sql"></a>CREATE TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -206,9 +206,7 @@ SCHEMABINDING
 Этот параметр является обязательным для триггеров в таблицах, оптимизированных для памяти, и не поддерживается для триггеров в обычных таблицах.  
   
 FOR | AFTER  
-Значение AFTER указывает, что триггер DML срабатывает только после успешного запуска всех операций в инструкции SQL, по которой срабатывает триггер. Кроме того, до запуска триггера должны успешно завершиться все каскадные действия и проверки ограничений, на которые есть ссылки.  
-  
-Если единственным заданным ключевым словом является FOR, аргумент AFTER используется по умолчанию.  
+Значение FOR или AFTER указывает, что триггер DML срабатывает только после успешного запуска всех операций в инструкции SQL, по которой срабатывает триггер. Кроме того, до запуска триггера должны успешно завершиться все каскадные действия и проверки ограничений, на которые есть ссылки.  
   
 Нельзя определить триггеры AFTER для представлений.  
   

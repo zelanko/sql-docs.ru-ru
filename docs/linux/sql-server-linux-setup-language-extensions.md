@@ -1,23 +1,24 @@
 ---
-title: Установка расширений языка (Java) для SQL Server на Linux
-description: Узнайте, как установить расширения языка (Java) для SQL Server в Red Hat, Ubuntu и SUSE.
+title: Установка расширений языка для SQL Server в Linux
+titleSuffix: ''
+description: Узнайте, как установить расширения языка для SQL Server в Red Hat, Ubuntu и SUSE.
 author: dphansen
 ms.author: davidph
 ms.reviewer: vanto
 manager: cgronlun
-ms.date: 11/04/2019
+ms.date: 11/05/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3e86da652231a06cd28318096ada3ae3aed7526e
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 2b5a8c83f827f574698d2e9b37a19cdb29e1ba80
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531232"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73660781"
 ---
-# <a name="install-sql-server-2019-language-extensions-java-on-linux"></a>Установка расширений языка (Java) для SQL Server 2019 на Linux
+# <a name="install-sql-server-language-extensions-on-linux"></a>Установка расширений языка для SQL Server в Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
@@ -305,7 +306,7 @@ mssql-server-extensibility-java-15.0.1000
 |total_cpu_user_ms | Совокупное время использования ЦП, в миллисекундах, с момента сброса статистики Resource Governor.| В Linux эта статистика извлекается из подсистемы cpuacct CGroups, где для строки system используется значение cpuacct.stat. | 
 |active_processes_count | Количество внешних процессов, выполняемых в момент запроса.| В Linux эта статистика извлекается из подсистемы pids CGroups, где используется значение pids.current. | 
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 Разработчики на языке Java могут ознакомиться с простыми примерами, а также узнать, как код Java работает с SQL Server. Дополнительные сведения см. в следующих статьях:
 

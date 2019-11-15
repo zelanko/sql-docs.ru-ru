@@ -1,7 +1,7 @@
 ---
 title: Что такое развертывание приложения
 titleSuffix: Big Data Clusters for SQL Server 2019
-description: В этой статье описывается развертывание приложений в кластерах больших данных для SQL Server 2019.
+description: В этой статье описывается развертывание приложения в кластере больших данных для SQL Server 2019.
 author: jeroenterheerdt
 ms.author: jterh
 ms.reviewer: mikeray
@@ -11,7 +11,7 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: da497f8d7c435a807ba530ae619ff91a6f2dff71
 ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 08/20/2019
 ms.locfileid: "69653008"
@@ -59,14 +59,14 @@ output: #output parameter the app expects and the type
 
 Приложение может также выполняться с помощью веб-службы RESTful. Дополнительные сведения см. в статье [Использование приложений в кластерах больших данных](big-data-cluster-consume-apps.md).
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
-Дополнительные сведения о создании и запуске приложений в [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]см. в следующих статьях:
+Дополнительные сведения о создании и выполнении приложений в [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] см. в следующих статьях:
 
 - [Развертывание приложений с помощью azdata](big-data-cluster-create-apps.md)
 - [Развертывание приложений с помощью расширения "Развертывание приложения"](app-deployment-extension.md)
 - [Использование приложений в кластерах больших данных](big-data-cluster-consume-apps.md)
 
-Дополнительные [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]сведения см. в следующих обзорах:
+Дополнительные сведения о [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] см. в следующем обзоре:
 
-- [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]Что?](big-data-cluster-overview.md)
+- [Что такое [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md)

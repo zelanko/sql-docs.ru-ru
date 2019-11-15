@@ -1,5 +1,5 @@
 ---
-title: Настройка клиента обработки и анализа данных для разработки на Python
+title: Настройка клиента Python для обработки и анализа данных
 description: Настройте локальную среду Python (Jupyter Notebook или PyCharm) для удаленных подключений к службам машинного обучения SQL Server с помощью Python.
 ms.prod: sql
 ms.technology: machine-learning
@@ -7,13 +7,14 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4fb5881134b2498c8a362e1626a3744d843194a4
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: ef03354afd3aa2318317ca4c946463a5b7355c12
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532585"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727527"
 ---
 # <a name="set-up-a-data-science-client-for-python-development-on-sql-server-machine-learning-services"></a>Настройка клиента обработки и анализа данных для разработки на Python в службах машинного обучения SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -300,7 +301,7 @@ display.Image(data=image)
 
 Теперь можно импортировать модули **revoscalepy**, **microsoftml** или **azureml**. Также можно открыть интерактивное окно, выбрав **Инструменты** > **Консоль Python**.
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 Теперь, когда у вас есть инструменты и рабочее подключение к SQL Server, вы можете расширить свои навыки, выполнив краткие пошаговые руководства Python в [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 

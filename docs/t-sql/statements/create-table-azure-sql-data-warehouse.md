@@ -11,12 +11,12 @@ ms.assetid: ea21c73c-40e8-4c54-83d4-46ca36b2cf73
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 5b9c22a366ad6757821783ba2cf077d251193d55
-ms.sourcegitcommit: 5d9ce5c98c23301c5914f142671516b2195f9018
+ms.openlocfilehash: e32c215050b8ee7ec74bee51f7330dbb793814cd
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71961792"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729863"
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>CREATE TABLE (хранилище данных SQL Azure)
 
@@ -162,11 +162,15 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
 
  См. раздел [Создание секционированной таблицы](#PartitionedTable) в разделе "Примеры".
 
-### <a name="ordered-clustered-columnstore-index-option-preview-for-azure-sql-data-warehouse"></a>Вариант упорядоченного кластеризованного индекса columnstore (предварительная версия для Хранилища данных SQL Azure)
+### <a name="ordered-clustered-columnstore-index-option"></a>Вариант упорядоченного кластеризованного индекса columnstore 
 
-Кластеризованный индекс columnstore включен по умолчанию для создания таблиц в Хранилище данных SQL Azure.  Перед сжатием данных в сегментах columnstore данные в индексе не сортируются.  При создании индекса с ORDER данные сортируются до добавления в сегменты индекса, и производительность запросов можно улучшить. Дополнительные сведения см. в разделе [Настройка производительности с упорядоченным кластеризованным индексом columnstore](https://docs.microsoft.com/en-us/azure/sql-data-warehouse/performance-tuning-ordered-cci).  
+Кластеризованный индекс columnstore включен по умолчанию для создания таблиц в Хранилище данных SQL Azure.  Перед сжатием данных в сегментах columnstore данные в индексе не сортируются.  При создании индекса с ORDER данные сортируются до добавления в сегменты индекса, и производительность запросов можно улучшить. Дополнительные сведения см. в разделе [Настройка производительности с упорядоченным кластеризованным индексом columnstore](/azure/sql-data-warehouse/performance-tuning-ordered-cci?view=azure-sqldw-latest).  
 
-Пользователи могут запрашивать столбец column_store_order_ordinal в sys.index_columns для получения списка столбцов, по которым упорядочена таблица, и последовательности упорядочения.  
+Упорядоченный кластеризованный индекс columnstore можно создавать для столбцов любых типов данных, поддерживаемых в хранилище данных SQL Azure, за исключением строковых столбцов.  
+
+Пользователи могут запрашивать столбец **column_store_order_ordinal** в **sys.index_columns** для получения списка столбцов, по которым упорядочена таблица, и последовательности упорядочения.  
+
+Дополнительные сведения см. в разделе [Настройка производительности с упорядоченным кластеризованным индексом columnstore](https://docs.microsoft.com/azure/sql-data-warehouse/performance-tuning-ordered-cci).   
 
 ### <a name="DataTypes"></a> Тип данных
 

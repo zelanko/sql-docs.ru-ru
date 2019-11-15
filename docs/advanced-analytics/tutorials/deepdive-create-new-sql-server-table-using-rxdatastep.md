@@ -1,49 +1,50 @@
 ---
-title: Создание новой SQL Server таблицы с помощью RevoScaleR rxDataStep
-description: Пошаговое руководство по созданию SQL Server таблицы с помощью языка R на SQL Server.
+title: Создание таблицы с использованием rxDataStep
+description: Пошаговое руководство по созданию таблицы SQL Server с помощью языка R на SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: b18f2bd42070746551d21ff7508e7fce58b49037
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
-ms.translationtype: MT
+ms.openlocfilehash: f4ac51fc1affb4128abab017eb00cba4b56960fa
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68714915"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727245"
 ---
-# <a name="create-new-sql-server-table-using-rxdatastep-sql-server-and-revoscaler-tutorial"></a>Создание новой SQL Server таблицы с помощью rxDataStep (учебник по SQL Server и RevoScaleR)
+# <a name="create-new-sql-server-table-using-rxdatastep-sql-server-and-revoscaler-tutorial"></a>Создание новой таблицы SQL Server с помощью rxDataStep (учебник по SQL Server и RevoScaleR)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Это занятие является частью [учебника RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) по использованию [функций RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) с SQL Server.
+Этот занятие входит в состав [учебника по RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md), в котором описывается использование функций [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) в SQL Server.
 
-На этом занятии вы узнаете, как перемещать данные между кадрами данных в памяти, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] контекстом и локальными файлами.
+На этом занятии вы узнаете, как перемещать данные между кадрами данных в памяти, контекстом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и локальными файлами.
 
 > [!NOTE]
-> В этом занятии используется другой набор данных. Набор данных о задержке авиакомпании — это общедоступный набор данных, широко используемый для экспериментов машинного обучения. Файлы данных, используемые в этом примере, доступны в том же каталоге, что и другие образцы продуктов.
+> В этом занятии используется другой набор данных. Набор данных о задержках авиарейсов является общедоступным набором данных, который широко используется в экспериментах машинного обучения. Используемые в этом примере файлы данных доступны в том же каталоге, что и другие образцы продуктов.
 
-## <a name="load-data-from-a-local-xdf-file"></a>Загрузка данных из локального файла Xdf-
+## <a name="load-data-from-a-local-xdf-file"></a>Загрузка данных из локального XDF-файла
 
-В первой половине этого руководства вы использовали функцию **функцию rxtextdata** для импорта данных в R из текстового файла, а затем использовали функцию **RxDataStep** для перемещения данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+В первой половине этого учебника вы использовали функцию **RxTextData** для импорта данных в среду R из текстового файла, а затем с помощью функции **RxDataStep** передавали данные в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
-Это занятие принимает другой подход и использует данные из файла, сохраненного в [формате Xdf-](https://en.wikipedia.org/wiki/Extensible_Data_Format). После выполнения некоторых простых преобразований данных с помощью файла Xdf-вы сохраняете преобразованные данные в новой [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] таблице.
+На этом занятии применяется другой подход и используются данные из файла в [формате XDF](https://en.wikipedia.org/wiki/Extensible_Data_Format). После ряда простых преобразований данных с помощью файла XDF вы сохраните их в новой таблице [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
-**Что такое Xdf-?**
+**Что такое XDF?**
 
-Формат Xdf-— это стандарт XML, разработанный для больших объемов данных, а также собственный формат файлов, используемый [Machine Learning Server](https://docs.microsoft.com/machine-learning-server/r/concept-what-is-xdf). Это двоичный формат файла с интерфейсом R, который оптимизирует процессы обработки и анализа строк и столбцов.  Его можно использовать для хранения подмножеств данных в целях анализа.
+Формат XDF — это стандарт XML, разработанный для многомерных данных, а также собственный формат файлов, используемый в [Machine Learning Server](https://docs.microsoft.com/machine-learning-server/r/concept-what-is-xdf). Это двоичный формат файла с интерфейсом R, который оптимизирует процессы обработки и анализа строк и столбцов.  Его можно использовать для хранения подмножеств данных в целях анализа.
 
-1. Задайте в качестве контекста вычисления локальную рабочую станцию. **Для этого шага требуются разрешения DDL.**
+1. Задайте в качестве контекста вычисления локальную рабочую станцию. **Для этого шага необходимы разрешения DDL.**
 
     ```R
     rxSetComputeContext("local")
     ```
   
-2. Определите новый объект источника данных с помощью функции **RxXdfData** . Чтобы определить источник данных Xdf-, укажите путь к файлу данных.  
+2. Определите новый объект источника данных с помощью функции **RxXdfData** . Чтобы задать источник данных XDF, укажите путь к файлу данных.  
 
-    Путь к файлу можно указать с помощью текстовой переменной. Однако в этом случае есть удобное сочетание клавиш, которое заключается в использовании функции **rxGetOption** и получении файла (AirlineDemoSmall. Xdf-) из каталога образцов данных.
+    Путь к файлу можно указать с помощью текстовой переменной. Однако в этом случае есть маленькая хитрость, которая заключается в использовании функции **rxGetOption** и получении файла (AirlineDemoSmall.xdf) из каталога образцов данных.
   
     ```R
     xdfAirDemo <- RxXdfData(file.path(rxGetOption("sampleDataDir"),  "AirlineDemoSmall.xdf"))
@@ -65,25 +66,25 @@ Var 3: DayOfWeek 7 factor levels: Monday Tuesday Wednesday Thursday Friday Satur
 
 > [!NOTE]
 > 
-> Вы заметили, что вам не пришлось вызывать другие функции для загрузки данных в файл XDF и вы смогли сразу же вызвать функцию **rxGetVarInfo** ? Это обусловлено тем, что Xdf-является методом промежуточного хранения по умолчанию для **RevoScaleR**. В дополнение к файлам Xdf-, функция **функцию rxgetvarinfo** теперь поддерживает несколько типов источников.
+> Вы заметили, что вам не пришлось вызывать другие функции для загрузки данных в файл XDF и вы смогли сразу же вызвать функцию **rxGetVarInfo** ? Это связано с тем, что XDF является промежуточным методом хранения по умолчанию для **RevoScaleR**. Помимо файлов XDF, функция **rxGetVarInfo** теперь поддерживает несколько типов источников.
 
-## <a name="move-contents-to-sql-server"></a>Переместить содержимое в SQL Server
+## <a name="move-contents-to-sql-server"></a>Перенос содержимого в SQL Server
 
-С помощью источника данных Xdf-, созданного в локальном сеансе R, теперь можно переместить эти данные в таблицу базы данных, сохранив *DayOfWeek* в виде целого числа со значениями от 1 до 7.
+С помощью источника данных XDF, созданного в локальном сеансе R, теперь можно переместить эти данные в таблицу базы данных, сохранив *DayOfWeek* в виде целого числа со значениями от 1 до 7.
 
-1. Определите SQL Server объект источника данных, указав таблицу, содержащую данные, и соединение с удаленным сервером.
+1. Определите объект источника данных SQL Server, указав таблицу, содержащую данные, и соединение с удаленным сервером.
   
     ```R
     sqlServerAirDemo <- RxSqlServerData(table = "AirDemoSmallTest", connectionString = sqlConnString)
     ```
   
-2. В качестве меры предосторожности включите шаг, который проверяет, существует ли уже таблица с тем же именем, и удаляет таблицу, если она существует. Существующая таблица с теми же именами не допустить создания новой таблицы.
+2. В качестве меры предосторожности проверьте наличие таблицы с таким именем и удалите ее, если она существует. Существующая таблица с таким же именем не позволит создать новую таблицу.
   
     ```R
     if (rxSqlServerTableExists("AirDemoSmallTest",  connectionString = sqlConnString))  rxSqlServerDropTable("AirDemoSmallTest",  connectionString = sqlConnString)
     ```
   
-3. Загрузка данных в таблицу с помощью **rxDataStep**. Эта функция перемещает данные между двумя уже определенными источниками данных и при необходимости может преобразовать маршрут короткого анализа данных.
+3. Загрузите данные в таблицу с помощью **rxDataStep**. Эта функция перемещает данные между двумя уже определенными источниками данных и при необходимости может преобразовать данные в пути.
   
     ```R
     rxDataStep(inData = xdfAirDemo, outFile = sqlServerAirDemo,
@@ -92,13 +93,13 @@ Var 3: DayOfWeek 7 factor levels: Monday Tuesday Wednesday Thursday Friday Satur
         overwrite = TRUE )
     ```
   
-    Это достаточно большая таблица, поэтому дождитесь, пока не увидите окончательное сообщение о состоянии, подобное этому: *Считано строк: 200000, всего обработано строк: 600000*.
+    Это достаточно большая таблица, поэтому дождитесь, пока не увидите окончательное сообщение о состоянии, подобное следующему: *Прочитано строк: 200000, Всего обработано строк: 600000*.
      
 ## <a name="load-data-from-a-sql-table"></a>Загрузка данных из таблицы SQL
 
-После того как данные существуют в таблице, их можно загрузить с помощью простого SQL-запроса. 
+После того как данные записаны в таблицу, их можно загрузить с помощью простого SQL-запроса. 
 
-1. Создайте новый источник данных SQL Server. Входные данные — это запрос к новой таблице, которую вы только что создали и загрузили с данными. Это определение добавляет уровни коэффициента для столбца *DayOfWeek* , используя аргумент *colInfo* для **RxSqlServerData**.
+1. Создайте новый источник данных SQL Server. Входные данные — запрос к новой таблице, которую вы только что создали и заполнили данными. Это определение добавляет уровни признаков для столбца *DayOfWeek*, используя аргумент *colInfo* для **RxSqlServerData**.
   
     ```R
     sqlServerAirDemo2 <- RxSqlServerData(
@@ -108,7 +109,7 @@ Var 3: DayOfWeek 7 factor levels: Monday Tuesday Wednesday Thursday Friday Satur
         colInfo = list(DayOfWeek = list(type = "factor",  levels = as.character(1:7))))
     ```
   
-2. Вызовите **rxSummary** еще раз, чтобы посмотреть сводку данных в запросе.
+2. Вызовите функцию **rxSummary** еще раз для просмотра сводки по данным в запросе.
   
     ```R
     rxSummary(~., data = sqlServerAirDemo2)

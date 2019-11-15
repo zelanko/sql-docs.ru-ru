@@ -11,7 +11,7 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 4be1c381da092dcf51823ed43b7cf42dc6d2479e
 ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 08/20/2019
 ms.locfileid: "69653492"
@@ -453,4 +453,4 @@ ms.locfileid: "69653492"
 
 ## <a name="next-steps"></a>Следующие шаги
 
-Дополнительные сведения об использовании и настройке файлов конфигурации развертывания см. в разделе [ [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] развертывание в Kubernetes](deployment-guidance.md#configfile).
+Дополнительные сведения об использовании и настройке файлов конфигурации развертывания см. в статье [Развертывание [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] в Kubernetes](deployment-guidance.md#configfile).

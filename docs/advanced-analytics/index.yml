@@ -1,9 +1,9 @@
 ### YamlMime:Landing
-title: Документация по SQL Server Службы машинного обучения (Python и R)
-summary: Узнайте, как использовать SQL Server Службы машинного обучения для выполнения скриптов Python и R в реляционных данных. В руководствах, примерах кода, руководствах по установке и другой документации показано, как это делать.
+title: Документация по Службам машинного обучения SQL Server (Python и R)
+summary: Узнайте, как Службы машинного обучения SQL Server позволяют выполнять скрипты Python и R с реляционными данными. Об этом вы узнаете в учебниках, примерах кода, руководствах по установке и другой документации.
 metadata:
-  title: Документация по SQL Server Службы машинного обучения (Python, R) — руководства, краткие руководства и руководство по установке
-  description: Узнайте, как использовать SQL Server Службы машинного обучения для выполнения скриптов Python и R в реляционных данных. В руководствах, примерах кода, руководствах по установке и другой документации показано, как это делать.
+  title: Документация по Службам машинного обучения SQL Server (Python, R) — учебники, краткие руководства и руководства по установке
+  description: Узнайте, как Службы машинного обучения SQL Server позволяют выполнять скрипты Python и R с реляционными данными. Об этом вы узнаете в учебниках, примерах кода, руководствах по установке и другой документации.
   ms.prod: sql
   ms.technology: machine-learning
   ms.topic: landing-page
@@ -12,24 +12,24 @@ metadata:
   ms.date: 09/12/2019
   ms.openlocfilehash: d46abc3b6e02f81db733df584ea95fbdc73777c0
   ms.sourcegitcommit: 9221a693d4ab7ae0a7e2ddeb03bd0cf740628fd0
-  ms.translationtype: MT
+  ms.translationtype: HT
   ms.contentlocale: ru-RU
   ms.lasthandoff: 09/23/2019
   ms.locfileid: "71199398"
 landingContent:
-- title: О Службы машинного обучения
+- title: О Службах машинного обучения
   linkLists:
   - linkListType: overview
     links:
-    - text: Что такое Службы машинного обучения SQL Server (Python и R)?
+    - text: Что такое службы машинного обучения SQL Server (Python и R)?
       url: what-is-sql-server-machine-learning.md
   - linkListType: whats-new
     links:
-    - text: Новые возможности Службы машинного обучения
+    - text: Новые возможности Служб машинного обучения
       url: what-s-new-in-sql-server-machine-learning-services.md
   - linkListType: video
     links:
-    - text: Как выполнить R/Python в SQL Server с Службы машинного обучения
+    - text: Как выполнить R/Python в SQL Server со Службами машинного обучения
       url: https://www.youtube.com/watch?v=ACejZ9optCQ
 - title: Начало работы с Python
   linkLists:
@@ -45,9 +45,9 @@ landingContent:
       url: tutorials/quickstart-python-train-score-model.md
   - linkListType: tutorial
     links:
-    - text: Прогнозирование Ski аренд с линейной регрессией
+    - text: Прогнозирование проката лыж с помощью линейной регрессии
       url: tutorials/python-ski-rental-linear-regression.md
-    - text: Классификация клиентов с помощью кластеризации с использованием k-средних
+    - text: Категоризация клиентов с помощью кластеризации методом k-средних
       url: tutorials/python-clustering-model.md
 - title: Начало работы с R
   linkLists:
@@ -65,15 +65,15 @@ landingContent:
     links:
     - text: Использование R в T-SQL
       url: tutorials/sqldev-in-database-r-for-sql-developers.md
-    - text: Использование Службы машинного обучения в инструментах R
+    - text: Использование Служб машинного обучения в средствах R
       url: tutorials/walkthrough-data-science-end-to-end-walkthrough.md
-- title: Установка Службы машинного обучения
+- title: Установка Служб машинного обучения
   linkLists:
   - linkListType: get-started
     links:
-    - text: Установка Службы машинного обучения в Windows
+    - text: Установка Служб машинного обучения в Windows
       url: install/sql-machine-learning-services-windows-install.md
-    - text: Установка Службы машинного обучения в Linux
+    - text: Установка Служб машинного обучения в Linux
       url: ../linux/sql-server-linux-setup-machine-learning.md?toc=/sql/advanced-analytics/toc.json
   - linkListType: how-to-guide
     links:
@@ -101,9 +101,9 @@ landingContent:
     links:
     - text: Получение сведений о пакете Python
       url: package-management/python-package-information.md
-    - text: Установка пакетов Python с помощью склмлутилс
+    - text: Установка пакетов Python с помощью sqlmlutils
       url: package-management/install-additional-python-packages-on-sql-server.md
     - text: Получение сведений о пакете R
       url: package-management/r-package-information.md
-    - text: Установка новых пакетов R с помощью склмлутилс
+    - text: Установка новых пакетов R с помощью sqlmlutils
       url: package-management/install-additional-r-packages-on-sql-server.md

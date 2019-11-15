@@ -1,7 +1,7 @@
 ---
 title: Что представляют собой кластеры больших данных?
 titleSuffix: SQL Server Big Data Clusters
-description: Узнайте о [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (предварительная версия), которые выполняются в Kubernetes и обеспечивают возможности горизонтального масштабирования для реляционных данных и данных HDFS.
+description: Сведения о кластерах больших данных SQL Server, которые выполняются в Kubernetes и обеспечивают возможности горизонтального масштабирования для реляционных данных и данных HDFS.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 296a39a59521441a8f3cd5b95bd8e61710fa568a
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 6bbb185936b2a388014a16ae0a6ecc6c52c5d29a
+ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532510"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73706659"
 ---
 # <a name="what-are-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Что такое [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]?
 
@@ -56,7 +56,7 @@ ms.locfileid: "73532510"
 
 Возможности управления и мониторинга реализуются на основе сочетания средств командной строки, API, порталов и динамических административных представлений.
 
-Вы можете использовать Azure Data Studio для выполнения самых разных задач в кластере больших данных. Эту возможность обеспечивает новое **расширение SQL Server 2019 (предварительная версия)** . Это расширение предоставляет следующие возможности:
+Вы можете использовать Azure Data Studio для выполнения самых разных задач в кластере больших данных. Эту возможность обеспечивает новое **расширение SQL Server 2019**. Это расширение предоставляет следующие возможности:
 
 - Встроенные фрагменты кода для общих задач управления.
 - Просмотр HDFS, загрузка и предварительный просмотр файлов, а также создание каталогов.
@@ -105,6 +105,6 @@ Kubernetes — это оркестратор контейнеров с откр
 > [!TIP]
 > Подробный обзор архитектуры кластера больших данных и установки см. в статье [Семинар. Архитектура [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] Майкрософт](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters).
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 Дополнительные сведения о развертывании кластеров больших данных SQL Server см. в статье [Начало работы с кластерами больших данных SQL Server](deploy-get-started.md).

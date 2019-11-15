@@ -23,12 +23,12 @@ author: dnethi
 ms.author: dinethi
 ms.custom: ''
 ms.date: 11/04/2019
-ms.openlocfilehash: 7597b0ef624958010981844969889b1c589c4883
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: 5188b9a90a910ba94d73db48f5e0c1c527145e48
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73594328"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73843740"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>Скачивание SQL Server Management Studio (SSMS)
 
@@ -44,7 +44,7 @@ SSMS распространяется бесплатно!
 
 SSMS 18.4 является последней общедоступной версией SSMS. Если у вас установлена предыдущая общедоступная версия SSMS 18, при установке SSMS 18.4 она обновится до версии 18.4. Если у вас установлена предыдущая *предварительная версия* SSMS 18.x, перед установкой SSMS 18.4 ее необходимо удалить.
 
-**Сведения о версии**
+### <a name="version-information"></a>Сведения о версии
 
 - Номер выпуска: 18.4  
 - Номер сборки: 15.0.18206.0  
@@ -57,7 +57,7 @@ SSMS 18.4 является последней общедоступной вер
 Если на компьютере есть несколько параллельных установок SSMS, следует всегда проверять, правильную ли версию вы запускаете. Последняя версия называется **Microsoft SQL Server Management Studio 18**.
 
 > [!Note]
-> Если вы открываете локализованную версию этой страницы и хотите просмотреть актуальные материалы, посетите эту страницу на [версии сайта на языке US-English](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms). С версии сайта US-English вы можете скачать другие [языки из числа доступных](#available-languages).
+> Если вы открываете локализованную версию этой страницы и хотите просмотреть актуальные материалы, посетите эту страницу на [версии сайта на языке US-English](https://aka.ms/downloadssmsusenglish). С версии сайта US-English вы можете скачать другие [языки из числа доступных](#available-languages).
 
 ## <a name="available-languages"></a>Доступные языки
 
@@ -114,7 +114,7 @@ SQL Server Management Studio 18.4:
 
 ## <a name="release-notes-ssms-184"></a>Заметки о выпуске (SSMS 18.4)
 
-В этом выпуске есть несколько [известных проблем](release-notes-ssms.md#known-issues-1831).
+В этом выпуске есть несколько [известных проблем](release-notes-ssms.md#known-issues-184).
 
 Дополнительные сведения об этом выпуске см. в [заметках о выпуске SSMS](release-notes-ssms.md).
 

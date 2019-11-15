@@ -1,91 +1,92 @@
 ---
-title: Установка предварительно обученных моделей машинного обучения
-description: Добавьте предварительно обученные модели для анализа тональности и Image Добавление признаков в SQL Server Службы машинного обучения (R или Python) или SQL Server R Services.
+title: Установка предварительно обученных моделей
+description: Добавление предварительно обученных моделей для анализа тональности и определения характеристик изображений в Службы машинного обучения SQL Server (R или Python) или SQL Server R Services.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 07/30/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 87f75b8ef8f9f151eb548787da4c9791eb1437b9
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
-ms.translationtype: MT
+ms.openlocfilehash: 97da2ed795d002fa47900eb21ead90b48b525387
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715163"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727559"
 ---
-# <a name="install-pre-trained-machine-learning-models-on-sql-server"></a>Установка предварительно обученных моделей машинного обучения на SQL Server
+# <a name="install-pre-trained-machine-learning-models-on-sql-server"></a>Установка предварительно обученных моделей машинного обучения в SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-В этой статье объясняется, как использовать PowerShell для добавления бесплатных предварительно подготовленных моделей машинного обучения для *анализа тональности* и *Image добавление признаков* на экземпляр SQL Server с интеграцией R или Python. Предварительно обученные модели созданы корпорацией Майкрософт и готовы к использованию, добавлены в экземпляр в качестве задачи, выполняемой после установки. Дополнительные сведения об этих моделях см. в разделе " [ресурсы](#bkmk_resources) " этой статьи.
+В этой статье объясняется, как использовать PowerShell для добавления бесплатных предварительно обученных моделей машинного обучения для *анализа тональности* и *определения характеристик изображений* в экземпляр SQL Server с интегрированными R или Python. Предварительно обученные модели созданы корпорацией Майкрософт и готовы к использованию. Они добавлены в экземпляр в качестве задачи, выполняемой после установки. Дополнительные сведения об этих моделях см. в разделе [Ресурсы](#bkmk_resources) этой статьи.
 
-После установки предварительно обученные модели рассматриваются как сведения о реализации функций, связанных с питанием, в библиотеках MicrosoftML (R) и MicrosoftML (Python). Не следует (и не может) просматривать, настраивать или переучить модели, а также обрабатывать их как независимый ресурс в пользовательском коде или в парных других функциях. 
+После установки предварительно обученные модели рассматриваются как компонент реализации, на основе которого работают специальные функции в библиотеках MicrosoftML (R) и microsoftml (Python). Вы не можете просматривать, настраивать и повторно обучать модели, а также обрабатывать их как независимый ресурс в пользовательском коде или в других функциях. 
 
-Чтобы использовать предварительно обученные модели, вызовите функции, перечисленные в следующей таблице.
+Чтобы использовать предварительно обученные модели, вызовите функции, указанные в следующей таблице.
 
 | Функция R (MicrosoftML) | Функция Python (microsoftml) | Использование |
 |--------------------------|-------------------------------|-------|
-| [жетсентимент](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/getsentiment) | [get_sentiment](https://docs.microsoft.com//machine-learning-server/python-reference/microsoftml/get-sentiment) | Создает положительную отрицательную оценку тональности для входных данных текста. |
-| [феатуризеимаже](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/featurizeimage) | [featurize_image](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/featurize-image) | Извлекает текстовые данные из входных данных файла изображения. |
+| [getSentiment](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/getsentiment) | [get_sentiment](https://docs.microsoft.com//machine-learning-server/python-reference/microsoftml/get-sentiment) | Создает положительную или отрицательную оценку тональности для текстовых входных данных. |
+| [featurizeImage](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/featurizeimage) | [featurize_image](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/featurize-image) | Извлекает текстовые данные из входного файла изображения. |
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>предварительные требования
 
-Алгоритмы машинного обучения — это ресурсоемкие вычисления. Рекомендуется 16 ГБ ОЗУ для рабочих нагрузок с низкой или средней интенсивностью, включая выполнение пошаговых руководств, использующих все примеры данных.
+Алгоритмы машинного обучения обладают высокими требованиями к вычислительным ресурсам. Мы рекомендуем использовать 16 ГБ ОЗУ для рабочих нагрузок с низкой или средней интенсивностью, включая пошаговые руководства со всеми примерами данных.
 
-Для добавления предварительно обученных моделей необходимо иметь права администратора на компьютере и SQL Server.
+Для добавления предварительно обученных моделей необходимо иметь права администратора на компьютере и на SQL Server.
 
-Внешние скрипты должны быть включены, а SQL Server должна быть запущена служба панели запуска. Инструкции по установке содержат инструкции по включению и проверке этих возможностей. 
+Необходимо включить внешние сценарии, а на SQL Server должна быть запущена служба панели запуска. Инструкции по установке содержат инструкции по включению и проверке этих компонентов. 
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
-[Пакет MicrosoftML R](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package) или [пакет MicrosoftML Python](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) содержат предварительно обученные модели.
+[Пакет R MicrosoftML](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package) и [пакет Python microsoftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) содержат предварительно обученные модели.
 
-[SQL Server службы машинного обучения](sql-machine-learning-services-windows-install.md) включает в себя языковые версии библиотеки машинного обучения, поэтому это условие выполняется без каких-либо дополнительных действий с вашей стороны. Так как библиотеки существуют, можно использовать скрипт PowerShell, описанный в этой статье, чтобы добавить предварительно обученные модели в эти библиотеки.
+[Службы машинного обучения SQL Server](sql-machine-learning-services-windows-install.md) включают версии библиотеки машинного обучения для обоих языков, поэтому это условие выполняется без каких-либо дополнительных действий с вашей стороны. Так как библиотеки существуют, можно использовать сценарий PowerShell, описанный в этой статье, чтобы добавить предварительно обученные модели в эти библиотеки.
 ::: moniker-end
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 [Пакет MicrosoftML R](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package) содержит предварительно обученные модели.
 
-[SQL Server R Services](sql-r-services-windows-install.md), т. е. только R, не включает [пакет MicrosoftML из упаковки](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package) . Чтобы добавить MicrosoftML, необходимо выполнить [обновление компонента](../install/upgrade-r-and-python.md). Одним из преимуществ обновления компонентов является возможность одновременного добавления предварительно обученных моделей, что делает ненужным выполнение сценария PowerShell. Однако если вы уже обновляли, но не добавили предварительно обученные модели в первый раз, можно запустить сценарий PowerShell, как описано в этой статье. Он работает для обеих версий SQL Server. Прежде чем делать это, убедитесь, что библиотека MicrosoftML существует `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\library`по адресу.
+Службы [SQL Server R Services](sql-r-services-windows-install.md), предназначенные только для языка R, не содержат [пакет MicrosoftML](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package). Чтобы добавить пакет MicrosoftML, необходимо выполнить [обновление компонентов](../install/upgrade-r-and-python.md). Одним из преимуществ обновления компонентов является возможность одновременного добавления предварительно обученных моделей, что делает ненужным выполнение сценария PowerShell. Однако если вы уже выполнили обновление, но не добавили предварительно обученные модели в первый раз, можно выполнить сценарий PowerShell, как описано в этой статье. Он работает для обеих версий SQL Server. Перед выполнением сценария убедитесь, что библиотека MicrosoftML в `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\library` существует.
 ::: moniker-end
 
 <a name="file-location"></a>
 
-## <a name="check-whether-pre-trained-models-are-installed"></a>Проверить, установлены ли предварительно обученные модели
+## <a name="check-whether-pre-trained-models-are-installed"></a>Проверка установки предварительно обученных моделей
 
-Пути установки для моделей R и Python приведены ниже.
+Пути установки для моделей R и Python приведены ниже:
 
-+ Для R:`C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library\MicrosoftML\mxLibs\x64`
++ Для R: `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library\MicrosoftML\mxLibs\x64`
 
-+ Для Python:`C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\Lib\site-packages\microsoftml\mxLibs`
++ Для Python: `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\Lib\site-packages\microsoftml\mxLibs`
 
-Ниже перечислены имена файлов модели.
+Ниже перечислены имена файлов модели:
 
-+ AlexNet\_обновлен. Model
-+ ImageNet1K\_, среднее значение. XML
-+ предварительно обученный. Model
-+ ResNet\_101\_обновлена. Model
-+ ResNet\_18\_Обновлено. модель
-+ ResNet\_50\_обновлена. Model
++ AlexNet\_Updated.model
++ ImageNet1K\_mean.xml
++ pretrained.model
++ ResNet\_101\_Updated.model
++ ResNet\_18\_Updated.model
++ ResNet\_50\_Updated.model
 
-Если модели уже установлены, перейдите к [шагу проверки](#verify) , чтобы подтвердить доступность.
+Если модели уже установлены, перейдите к [шагу проверки](#verify), чтобы подтвердить доступность.
 
-## <a name="download-the-installation-script"></a>Скачивание скрипта установки
+## <a name="download-the-installation-script"></a>Скачивание сценария установки
 
-Щелкните [https://aka.ms/mlm4sql](https://aka.ms/mlm4sql) , чтобы скачать файл **Инсталл-млмоделс. ps1**.
+Щелкните [https://aka.ms/mlm4sql](https://aka.ms/mlm4sql), чтобы скачать файл **Install-MLModels.ps1**.
 
 ## <a name="execute-with-elevated-privileges"></a>Выполнение с повышенными привилегиями
 
-1. Запустите PowerShell. На панели задач щелкните правой кнопкой мыши значок программы PowerShell и выберите команду **Запуск от имени администратора**.
-2. Введите полный путь к файлу сценария установки и укажите имя экземпляра. При наличии папки Downloads и экземпляра по умолчанию команда может выглядеть следующим образом:
+1. Запустите PowerShell. На панели задач щелкните правой кнопкой мыши значок программы PowerShell и выберите **Запуск от имени администратора**.
+2. Введите полный путь к файлу сценария установки, указав имя экземпляра. Если сценарий находится в папке Downloads и используется экземпляр по умолчанию, команда может выглядеть следующим образом:
 
    ```powershell
    PS C:\WINDOWS\system32> C:\Users\<user-name>\Downloads\Install-MLModels.ps1 MSSQLSERVER
    ```
 
-**Проверки**
+**Выходные данные**
 
-В SQL Server, подключенном к Интернету, Службы машинного обучения экземпляре по умолчанию с R и Python, вы должны увидеть сообщения, аналогичные приведенным ниже.
+На экземпляре по умолчанию Служб машинного обучения SQL Server с R и Python, подключенном к Интернету, вы должны увидеть сообщения, аналогичные приведенным ниже.
 
    ```powershell
    MSSQL14.MSSQLSERVER
@@ -101,13 +102,13 @@ ms.locfileid: "68715163"
 
 ## <a name="verify-installation"></a>Проверка установки
 
-Сначала проверьте наличие новых файлов в [папке мкслибс](#file-location) Затем запустите демонстрационный код, чтобы убедиться, что модели установлены и работают. 
+Сначала проверьте наличие новых файлов в папке [mxlibs](#file-location). Затем запустите демонстрационный код, чтобы убедиться, что модели установлены и работают. 
 
-### <a name="r-verification-steps"></a>Шаги проверки R
+### <a name="r-verification-steps"></a>Действия по выполнению проверки для R
 
-1. Start **RGUI.EXE** at C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64.
+1. Запустите файл **RGUI.EXE** в папке C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64.
 
-2. Вставьте в командную строку следующий скрипт R.
+2. Вставьте в командную строку следующий сценарий R.
 
     ```R
     # Create the data
@@ -129,7 +130,7 @@ ms.locfileid: "68715163"
     sentimentScores
     ```
 
-3. Нажмите клавишу ВВОД, чтобы просмотреть показатели тональности. Выходные данные должны выглядеть следующим образом:
+3. Нажмите клавишу ВВОД, чтобы просмотреть оценки тональности. Выходные данные должны выглядеть следующим образом:
 
     ```R
     > sentimentScores
@@ -143,11 +144,11 @@ ms.locfileid: "68715163"
     3            BLAH
     ```
 
-### <a name="python-verification-steps"></a>Шаги проверки Python
+### <a name="python-verification-steps"></a>Действия по выполнению проверки для Python
 
-1. Запустите **Python. exe** в папке C:\PROGRAM Files\Microsoft SQL Server\MSSQL14. MSSQLSERVER\PYTHON_SERVICES.
+1. Запустите файл **Python.exe** в папке C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES.
 
-2. Вставьте в командную строку следующий скрипт Python.
+2. Вставьте в командную строку следующий сценарий Python.
 
     ```python
     import numpy
@@ -171,7 +172,7 @@ ms.locfileid: "68715163"
     print(sentiment_scores)
     ```
 
-3. Нажмите клавишу ВВОД, чтобы напечатать баллы. Выходные данные должны выглядеть следующим образом:
+3. Нажмите клавишу ВВОД, чтобы распечатать оценки. Выходные данные должны выглядеть следующим образом:
 
     ```python
     >>> print(sentiment_scores)
@@ -183,19 +184,19 @@ ms.locfileid: "68715163"
     ```
 
 > [!NOTE]
-> Если Демонстрационные сценарии завершаются ошибкой, сначала проверьте расположение файла. В системах с несколькими экземплярами SQL Server или для экземпляров, работающих параллельно с автономными версиями, сценарий установки может некорректно считывать среду и размещать файлы в неправильном месте. Как правило, копирование файлов вручную в соответствующую папку мкслиб устраняет проблему.
+> Если демонстрационные сценарии завершаются с ошибкой, проверьте расположение файла. В системах с несколькими экземплярами SQL Server или для экземпляров, работающих параллельно с автономными версиями, сценарий установки может некорректно считывать параметры среды и размещать файлы в неправильном месте. Как правило, для устранения этой проблемы достаточно вручную скопировать файлы в правильную папку mxlib.
 
 ## <a name="examples-using-pre-trained-models"></a>Примеры использования предварительно обученных моделей
 
-Приведенная ниже ссылка включает пример кода, который вызывает предварительно обученные модели.
+По приведенной ссылке можно найти пример кода, в котором вызываются предварительно обученные модели.
 
-+ [Пример кода: анализ тональности с помощью Характеризатора текста](https://github.com/Microsoft/microsoft-r/tree/master/microsoft-ml/Samples/101/BinaryClassification/SimpleSentimentAnalysis)
++ [Пример кода: анализ тональности с помощью определения характеристик текста](https://github.com/Microsoft/microsoft-r/tree/master/microsoft-ml/Samples/101/BinaryClassification/SimpleSentimentAnalysis)
 
 <a name="bkmk_resources"></a> 
 
-## <a name="research-and-resources"></a>Исследование и ресурсы
+## <a name="research-and-resources"></a>Исследования и ресурсы
 
-В настоящее время доступные модели — это модели глубокой нейронной сети (DNN) для анализа тональности и классификации образов. Все предварительно обученные модели были обучены с помощью [набора средств](https://cntk.ai/Features/Index.html)Microsoft для вычислительной сети или **CNTK**.
+Сейчас доступны модели глубокой нейронной сети для анализа тональности и классификации изображений. Все предварительно обученные модели были обучены с помощью [Computation Network Toolkit](https://cntk.ai/Features/Index.html) от корпорации Майкрософт (**CNTK**).
 
 Конфигурация каждой сети была основана на следующих эталонных реализациях:
 
@@ -204,15 +205,15 @@ ms.locfileid: "68715163"
 + ResNet-101
 + AlexNet
 
-Дополнительные сведения о алгоритмах, используемых в этих моделях для глубокого обучения, а также о том, как они реализуются и обучены с помощью CNTK, см. в следующих статьях:
+Дополнительные сведения об алгоритмах, используемых в этих моделях глубокого обучения, и о том, как они реализуются и обучаются с помощью CNTK, см. в следующих статьях:
 
-+ [Контрольный ImageNet по запросам для исследователей Майкрософт](https://www.microsoft.com/research/blog/microsoft-researchers-algorithm-sets-imagenet-challenge-milestone/)
++ [Наборы алгоритмов от исследователей Майкрософт устанавливают веху в решении задачи ImageNet](https://www.microsoft.com/research/blog/microsoft-researchers-algorithm-sets-imagenet-challenge-milestone/)
 
-+ [Набор средств вычислительной сети (Майкрософт) предлагает наиболее эффективную распределенную вычислительную производительность для глубокого обучения](https://www.microsoft.com/research/blog/microsoft-computational-network-toolkit-offers-most-efficient-distributed-deep-learning-computational-performance/)
++ [Microsoft Computational Network Toolkit предлагает наиболее эффективную распределенную вычислительную производительность для глубокого обучения](https://www.microsoft.com/research/blog/microsoft-computational-network-toolkit-offers-most-efficient-distributed-deep-learning-computational-performance/)
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 + [Изучение служб машины SQL Server](sql-machine-learning-services-windows-install.md)
 + [Обновление компонентов R и Python в экземплярах SQL Server](../install/upgrade-r-and-python.md)
 + [Пакет MicrosoftML для R](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)
-+ [пакет microsoftml для Python](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package)
++ [Пакет microsoftml для Python](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package)

@@ -1,6 +1,7 @@
 ---
-title: Новые возможности
-description: Объявления о новых возможностях для каждого выпуска SQL Server 2016 R Services, R Server, служб машинного обучения SQL Server.
+title: Новые возможности служб машинного обучения SQL Server
+titleSuffix: ''
+description: Объявления о новых возможностях для каждого выпуска служб машинного обучения SQL Server и SQL Server 2016 R.
 ms.date: 11/04/2019
 ms.topic: conceptual
 author: dphansen
@@ -9,12 +10,12 @@ ms.custom: sqlseattle
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 16c70e23df018a3bf403280fd6deb48b880c31ce
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 3e21dfe719f40165e0e68e7bf6242c526c298eb4
+ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532573"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73707441"
 ---
 # <a name="whats-new-in-sql-server-machine-learning-services"></a>Новые возможности служб машинного обучения SQL Server
 
@@ -28,7 +29,7 @@ ms.locfileid: "73532573"
 В этом выпуске добавляются наиболее востребованные возможности для операций машинного обучения Python и R в SQL Server. Дополнительные сведения обо всех возможностях этого выпуска см. в статьях [Новые возможности SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md) и [Заметки о выпуске SQL Server 2019](../sql-server/sql-server-ver15-release-notes.md).
 
 > [!NOTE]
-> Дополнительные сведения о новой документации по Java в SQL Server 2019 см. в статье [Новые возможности языковых расширений SQL Server](https://docs.microsoft.com/sql/language-extensions/language-extensions-whats-new).
+> Документацию с описанием новых возможностей Java в SQL Server 2019 см. в статье [Новые возможности расширений языка SQL Server](https://docs.microsoft.com/sql/language-extensions/language-extensions-whats-new).
 
 Ниже описываются новые возможности служб машинного обучения SQL Server:
 

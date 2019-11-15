@@ -1,5 +1,5 @@
 ---
-title: Создание функций данных с помощью функций T-SQL и Python
+title: Python и T-SQL. Характеристики данных
 description: Руководство, в котором показано, как добавлять вычисления в хранимые процедуры для использования в моделях машинного обучения Python.
 ms.prod: sql
 ms.technology: machine-learning
@@ -7,20 +7,21 @@ ms.date: 11/01/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3eafa7bf06739ba5802ea20caea61fbaaa2474ec
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
-ms.translationtype: MT
+ms.openlocfilehash: 94d3160fe372fafb666ed451d207301b86d119d9
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715496"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73725193"
 ---
-# <a name="create-data-features-using-t-sql"></a>Создание функций данных с помощью T-SQL
+# <a name="create-data-features-using-t-sql"></a>Создание характеристик данных с помощью T-SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-После исследования данных вы собрали некоторые аналитические данные из данных и готовы перейти к *проектированию функций*. Этот процесс создания функций из необработанных данных может быть важным шагом в расширенном моделировании аналитики.
+После исследования данных вы собрали определенный объем аналитической информации и готовы переходить к *формированию характеристик*. Процесс создания характеристик на основе необработанных данных — важнейший этап расширенного аналитического моделирования.
 
-Эта статья является частью руководства, [в базе данных Python Analytics для разработчиков SQL](sqldev-in-database-python-for-sql-developers.md). 
+Эта статья является частью руководства [Анализ с помощью Python в базе данных для разработчиков SQL](sqldev-in-database-python-for-sql-developers.md). 
 
 На этом этапе вы научитесь создавать характеристики на основе необработанных данных с помощью функции [!INCLUDE[tsql](../../includes/tsql-md.md)] . Затем вы вызовите эту функцию из хранимой процедуры, чтобы создать таблицу, содержащую значения характеристик.
 
@@ -30,9 +31,9 @@ ms.locfileid: "68715496"
 
 Вы используете пользовательскую функцию T-SQL _fnCalculateDistance_для вычисления расстояния по формуле гаверсинуса, а затем другую пользовательскую функцию T-SQL _fnEngineerFeatures_для создания таблицы, содержащей все характеристики.
 
-### <a name="calculate-trip-distance-using-fncalculatedistance"></a>Вычисление расстояния поездок с помощью fnCalculateDistance
+### <a name="calculate-trip-distance-using-fncalculatedistance"></a>Вычисление расстояния поездки с помощью функции fnCalculateDistance
 
-1.  Функция _fnCalculateDistance_ должна была быть загружена и зарегистрирована в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в рамках подготовки к работе с этим пошаговым руководством. Потратьте пару минут, чтобы ознакомиться с кодом.
+1.  Функция _fnCalculateDistance_ должна была быть загружена и зарегистрирована в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в рамках подготовки к работе с этим пошаговым руководством. Вкратце изучите код.
   
     В среде [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]последовательно разверните узлы **Программируемость**, **Функции** и **Скалярные функции**.
     Щелкните правой кнопкой мыши функцию _fnCalculateDistance_, а затем выберите команду **Изменить** , чтобы открыть скрипт [!INCLUDE[tsql](../../includes/tsql-md.md)] в новом окне запроса.
@@ -67,7 +68,7 @@ ms.locfileid: "68715496"
 
 Для добавления вычисленного значения в таблицу, которую можно использовать для обучения модели, применяется другая функция: _fnEngineerFeatures_.
 
-### <a name="save-the-features-using-fnengineerfeatures"></a>Сохранение функций с помощью _fnEngineerFeatures_
+### <a name="save-the-features-using-_fnengineerfeatures_"></a>Сохранение характеристик с помощью функции _fnEngineerFeatures_
 
 1.  Изучите код пользовательской функции T-SQL _fnEngineerFeatures_, которая должна была быть создана для вас в рамках подготовки к работе с этим пошаговым руководством.
   
@@ -107,9 +108,9 @@ ms.locfileid: "68715496"
         ORDER BY trip_time_in_secs DESC
     ```
   
-    Как видите, расстояние по счетчику не всегда соответствует географическому расстоянию. Именно поэтому важно проектирование функций.
+    Как видите, расстояние по счетчику не всегда соответствует географическому расстоянию. Вот почему формирование характеристик имеет такое большое значение.
 
-На следующем шаге вы узнаете, как использовать эти функции данных для создания и обучения модели машинного обучения с помощью Python.
+На следующем шаге вы научитесь использовать характеристики данных для создания и обучения модели машинного обучения с помощью языка Python.
 
 ## <a name="next-step"></a>Следующий шаг
 
@@ -117,6 +118,6 @@ ms.locfileid: "68715496"
 
 ## <a name="previous-step"></a>Предыдущий шаг
 
-[Просмотр и визуализация данных](sqldev-py3-explore-and-visualize-the-data.md)
+[Анализ и визуализация данных](sqldev-py3-explore-and-visualize-the-data.md)
 
 

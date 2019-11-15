@@ -11,21 +11,21 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 405df2c66917dc5e5b350aaaa0769bede6ccf6c9
 ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 08/20/2019
 ms.locfileid: "69653284"
 ---
-# <a name="tutorial-load-sample-data-into-a-sql-server-big-data-cluster"></a>Учебник. Загрузка примера данных в кластер больших данных SQL Server
+# <a name="tutorial-load-sample-data-into-a-sql-server-big-data-cluster"></a>Руководство. Загрузка примера данных в кластер больших данных SQL Server
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-В этом учебнике объясняется, как использовать скрипт для загрузки демонстрационных [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]данных в. Этот пример данных используется во многих других руководствах в этой документации.
+Это руководство описывает, как использовать скрипт для загрузки примера данных в [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. Этот пример данных используется во многих других руководствах в этой документации.
 
 > [!TIP]
-> Дополнительные примеры [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] можно найти в репозитории GitHub [SQL-Server-Samples](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster) . Путь к ним: **sql-server-samples/samples/features/sql-big-data-cluster/** .
+> Дополнительные примеры для [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] можно найти в репозитории [sql-server-samples](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster) GitHub. Путь к ним: **sql-server-samples/samples/features/sql-big-data-cluster/** .
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>предварительные требования
 
 - [Развернутый кластер больших данных](deployment-guidance.md)
 - [Средства работы с большими данными](deploy-big-data-tools.md)
@@ -114,7 +114,7 @@ ms.locfileid: "69653284"
    sudo env "PATH=$PATH" ./bootstrap-sample-db.sh <CLUSTER_NAMESPACE> <SQL_MASTER_IP> <SQL_MASTER_SA_PASSWORD> <KNOX_IP> <KNOX_PASSWORD>
    ```
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 После выполнения скрипта начальной загрузки кластер больших данных будет иметь примеры баз данных и данные HDFS. В следующих руководствах этот пример данных используется для демонстрации возможностей кластера больших данных.
 

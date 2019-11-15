@@ -21,12 +21,12 @@ ms.assetid: 6a6fd8fe-73f5-4639-9908-2279031abdec
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0ca20922eb99354aa5f2a6bc97f238daf93724ff
-ms.sourcegitcommit: 853c2c2768caaa368dce72b4a5e6c465cc6346cf
+ms.openlocfilehash: 715541f066678807b5ef46b6697f32c5e1e233d2
+ms.sourcegitcommit: 619917a0f91c8f1d9112ae6ad9cdd7a46a74f717
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71227152"
+ms.lasthandoff: 11/09/2019
+ms.locfileid: "73882384"
 ---
 # <a name="create-external-table-transact-sql"></a>CREATE EXTERNAL TABLE (Transact-SQL)
 
@@ -580,9 +580,7 @@ WITH
 
 ## <a name="overview-azure-sql-database"></a>Общие сведения. База данных SQL Azure
 
-В базе данных SQL Azure создает внешнюю таблицу [эластичных запросов](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-overview/) для использования с базой данных SQL Azure.
-
-Используйте внешнюю таблицу для эластичных запросов.
+В Базе данных SQL Azure создает внешнюю таблицу для [эластичных запросов (предварительная версия)](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-overview/).
 
 См. также [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md).
 
@@ -661,7 +659,7 @@ DISTRIBUTION. Необязательный параметр. Он необход
 
 ## <a name="limitations-and-restrictions"></a>Ограничения
 
-Поскольку данные для внешней таблицы хранятся в другой базе данных SQL, их можно изменить или удалить в любое время. По этой причине результаты запроса к внешней таблице необязательно будут детерминированными. Один и то же запрос может возвращать разные результаты при каждом обращении к внешней таблице. Аналогичным образом, запрос может завершиться ошибкой, если внешние данные удалены или перемещены.
+При доступе к данным через внешнюю таблицу семантика изоляции в SQL Server не соблюдается. Это означает, что при запросах к внешней таблице блокировка или изоляция моментальных снимков не применяется, поэтому возвращаемые данные могут меняться при изменении данных во внешнем источнике данных.  Один и то же запрос может возвращать разные результаты при каждом обращении к внешней таблице. Аналогичным образом, запрос может завершиться ошибкой, если внешние данные удалены или перемещены.
 
 Вы можете создать несколько внешних таблиц, которые ссылаются на разные внешние источники данных.
 
@@ -674,6 +672,24 @@ DISTRIBUTION. Необязательный параметр. Он необход
 
 - Ограничение DEFAULT для столбцов внешней таблицы
 - Операции DML обновления, вставки и удаления
+
+Во внешний источник данных могут быть переданы только литеральные предикаты, определенные в запросе. В отличие от этого при доступе к связанным серверам могут использоваться предикаты, определенные во время выполнения запроса, то есть используемые в сочетании с вложенным циклом в плане запроса. Это часто приводит к тому, что создается локальная копия всей внешней таблицы, после чего к ней производится присоединение.    
+
+```sql
+  \\ Assuming External.Orders is an external table and Customer is a local table. 
+  \\ This query  will copy the whole of the external locally as the predicate needed
+  \\ to filter isn't known at compile time. Its only known during execution of the query
+  
+  SELECT Orders.OrderId, Orders.OrderTotal 
+    FROM External.Orders
+   WHERE CustomerId in (SELECT TOP 1 CustomerId 
+                          FROM Customer 
+                         WHERE CustomerName = 'MyCompany')
+```
+
+Использование внешних таблиц не позволяет реализовывать параллелизм в плане запроса.
+
+Внешние таблицы реализуются как удаленный запрос, поэтому предполагаемое количество возвращаемых строк обычно равно 1000. Существуют и другие правила на основе типа предиката, используемые для фильтрации внешней таблицы. Они представляют собой оценки на основе правил, а не на основе фактических данных во внешней таблице. Оптимизатор не обращается к удаленному источнику данных для получения более точной оценки.
 
 ## <a name="locking"></a>Блокировка
 

@@ -1,7 +1,7 @@
 ---
 title: DROP WORKLOAD GROUP (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 03/06/2017
+ms.date: 11/04/2019
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -14,22 +14,36 @@ dev_langs:
 - TSQL
 helpviewer_keywords:
 - DROP WORKLOAD GROUP statement
-ms.assetid: 1cd68450-5b58-4106-a2bc-54197ced8616
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 37a714956b6d4e21fbbc5daaddf083656bdedcef
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current'
+ms.openlocfilehash: 90622710b19ef3c2692cdcff62089cb7539fcf97
+ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68072022"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73632809"
 ---
 # <a name="drop-workload-group-transact-sql"></a>DROP WORKLOAD GROUP (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+
+## <a name="click-a-product"></a>Выберите продукт!
+
+В следующей строке щелкните имя продукта, который вас интересует. На этой веб-странице отобразится другой контент, относящийся к выбранному продукту.
+
+::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=sqlallproducts-allversions"
+
+> |||||
+> |---|---|---|---|
+> |**\* _SQL Server \*_** &nbsp;|[Управляемый экземпляр Базы данных SQL<br />](drop-workload-group-transact-sql.md?view=azuresqldb-mi-current)|[Хранилище данных<br />SQL](drop-workload-group-transact-sql.md?view=azure-sqldw-latest)|
+
+&nbsp;
+
+## <a name="sql-server-and-sql-database-managed-instance"></a>SQL Server и управляемый экземпляр Базы данных SQL Azure
+
 
   Удаляет существующую, определяемую пользователем группу рабочей нагрузки регулятора ресурсов.  
   
- ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -58,10 +72,12 @@ DROP WORKLOAD GROUP group_name
   
 -   Если при выполнении сценария с инструкцией DROP WORKLOAD GROUP решено не останавливать сеанс явно для применения изменений, то можно создать заново группу, используя то же имя для нее, которое она имела до объявления оператора DROP, и потом переместить группу в исходный пул ресурсов. Чтобы применить изменения, выполните инструкцию ALTER RESOURCE GOVERNOR RECONFIGURE.  
   
-## <a name="permissions"></a>Разрешения  
+## <a name="permissions"></a>Разрешения
+
  Необходимо разрешение CONTROL SERVER.  
   
-## <a name="examples"></a>Примеры  
+## <a name="examples"></a>Примеры
+
  В следующем примере удаляется группа рабочей нагрузки с именем `adhoc`.  
   
 ```  
@@ -80,4 +96,54 @@ GO
  [DROP RESOURCE POOL (Transact-SQL)](../../t-sql/statements/drop-resource-pool-transact-sql.md)   
  [ALTER RESOURCE GOVERNOR (Transact-SQL)](../../t-sql/statements/alter-resource-governor-transact-sql.md)  
   
-  
+::: moniker-end
+::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
+
+> ||||
+> |---|---|---|
+> |[SQL Server](drop-workload-group-transact-sql.md?view=sql-server-2017)||[Управляемый экземпляр Базы данных SQL<br />](drop-workload-group-transact-sql.md?view=azuresqldb-mi-current)||**_\* Хранилище данных<br />SQL \*_** &nbsp;||||
+
+&nbsp;
+
+## <a name="sql-data-warehouse-preview"></a>Хранилище данных SQL (предварительная версия)
+
+Удаляет группу рабочей нагрузки.  После выполнения инструкции вступают в действие параметры.
+
+ ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
+
+## <a name="syntax"></a>Синтаксис
+
+```
+DROP WORKLOAD GROUP group_name  
+```
+
+## <a name="arguments"></a>Аргументы
+
+ *group_name*  
+ Имя существующей, определяемой пользователем группы рабочей нагрузки.
+
+## <a name="remarks"></a>Remarks
+
+Группа рабочей нагрузки не может быть удалена, если для нее существуют классификаторы.  Удалите классификаторы перед удалением группы рабочей нагрузки.  При наличии активных запросов, использующих ресурсы из группы рабочей нагрузки, инструкция DROP для рабочей нагрузки блокируется.
+
+## <a name="examples"></a>Примеры
+
+Используйте следующий пример кода, чтобы определить, какие классификаторы необходимо удалить, прежде чем можно будет удалить группу рабочей нагрузки.
+
+```sql
+SELECT c.name as classifier_name
+      ,'DROP WORKLOAD CLASSIFIER '+c.name as drop_command
+  FROM sys.workload_management_workload_classifiers c
+  JOIN sys.workload_management_workload_groups g
+    ON c.group_name = g.name
+  WHERE g.name = 'wgXYZ' --change the filter to the workload being dropped
+```
+
+## <a name="permissions"></a>Разрешения
+
+Требуется разрешение CONTROL DATABASE
+
+## <a name="see-also"></a>См. также раздел
+ [CREATE WORKLOAD GROUP (Transact-SQL)](../../t-sql/statements/create-workload-group-transact-sql.md)   
+ 
+::: moniker-end

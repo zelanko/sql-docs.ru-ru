@@ -14,17 +14,26 @@ ms.assetid: 0300e777-d56b-4d10-9c33-c9ebd2489ee5
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: d790ef532a66bf7f8e34f69b9f982bef3416d0a1
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: b4f60e7041801d67f93dab467b574e5d0da54e7d
+ms.sourcegitcommit: 27c267bf2a3cfaf2abcb5f3777534803bf4cffe5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893983"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73240747"
 ---
 # <a name="install-sql-server"></a>Установка SQL Server
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
- 
- Начиная с [!INCLUDE[sssql15](../../includes/sssql15-md.md)], [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] доступен только в виде 64-разрядного приложения. Ниже приведены важные подробности о том, как получить и установить SQL Server.
+
+В этой статье приводятся рекомендации по установке SQL Server в Windows.
+
+Дополнительные сведения о других сценариях развертывания см. в следующих источниках:
+
+- [Linux](../../linux/sql-server-linux-setup.md)
+- [Контейнеры Docker](../../linux/sql-server-linux-configure-docker.md)
+- [Kubernetes — кластеры больших данных](../../big-data-cluster/deploy-get-started.md)
+
+Начиная с [!INCLUDE[sssql15](../../includes/sssql15-md.md)], [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] доступен только в виде 64-разрядного приложения. Ниже приведены важные подробности о том, как получить и установить SQL Server.
 
 ## <a name="installation-details"></a>Подробности об установке
   

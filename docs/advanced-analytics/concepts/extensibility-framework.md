@@ -1,5 +1,5 @@
 ---
-title: Архитектура расширяемости для внешних сценариев
+title: Архитектура расширяемости
 description: В этой статье описывается архитектура платформы расширяемости для запуска в SQL Server внешнего сценария, как, например, R или Python.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,13 +8,14 @@ ms.topic: conceptual
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3f2f61208f9c43ce827cb65a4f7107ced62b9219
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: fcdb92f92ffb8239a6cf20b0f39dfb8f546b521a
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532725"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727687"
 ---
 # <a name="extensibility-architecture-in-sql-server-machine-learning-services"></a>Архитектура расширяемости в службах машинного обучения SQL Server. 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

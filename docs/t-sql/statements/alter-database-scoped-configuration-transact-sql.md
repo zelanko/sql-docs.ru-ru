@@ -1,7 +1,7 @@
 ---
 title: ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 09/23/2019
+ms.date: 10/31/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6ef351fc564f4d097cf4ae28c4ba890cb082eac0
-ms.sourcegitcommit: 49fd567e28bfd6e94efafbab422eaed4ce913eb3
+ms.openlocfilehash: a503851bf6e5bac2556560fc9bfd3f120e808aa3
+ms.sourcegitcommit: 27c267bf2a3cfaf2abcb5f3777534803bf4cffe5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72589997"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73240693"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -50,6 +50,7 @@ ms.locfileid: "72589997"
 - Включение или отключение [упрощенной инфраструктуры профилирования запросов](../../relational-databases/performance/query-profiling-infrastructure.md).
 - включить или отключить новое сообщение об ошибке `String or binary data would be truncated`.
 - Включает или отключает запись последнего действительного плана выполнения в [sys.dm_exec_query_plan_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md).
+- Укажите время в минутах, в течение которого операция возобновляемого индекса остается приостановленной, прежде чем она будет автоматически прервана подсистемой SQL Server.
 
 ![Значок ссылки](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
@@ -58,9 +59,9 @@ ms.locfileid: "72589997"
 ```
 ALTER DATABASE SCOPED CONFIGURATION
 {
-     {  [ FOR SECONDARY] SET <set_options>}
+    { [ FOR SECONDARY] SET <set_options>}
 }
-| CLEAR PROCEDURE_CACHE  [plan_handle]
+| CLEAR PROCEDURE_CACHE [plan_handle]
 | SET < set_options >
 [;]
 
@@ -88,6 +89,7 @@ ALTER DATABASE SCOPED CONFIGURATION
     | LIGHTWEIGHT_QUERY_PROFILING = { ON | OFF }
     | VERBOSE_TRUNCATION_WARNINGS = { ON | OFF }
     | LAST_QUERY_PLAN_STATS = { ON | OFF }
+    | PAUSED_RESUMABLE_INDEX_ABORT_DURATION_MINUTES = <time>
 }
 ```
 
@@ -105,12 +107,11 @@ FOR SECONDARY
 
 CLEAR PROCEDURE_CACHE [plan_handle]
 
-Очистка кэша процедур (планов) для базы данных. Может выполняться для баз данных-источников и баз данных-получателей.  
+Очистка кэша процедур (планов) для базы данных. Может выполняться для баз данных-источников и баз данных-получателей.
 
 Укажите дескриптор плана запроса, чтобы удалить отдельный план запроса из кэша планов.
 
-> [!NOTE]
-> Указать дескриптор плана запроса можно в Базе данных SQL Azure и SQL Server 2019 или более поздней версии.
+**Область применения**: Указать дескриптор плана запроса можно в Базе данных SQL Azure и SQL Server 2019 или более поздней версии.
 
 MAXDOP **=** {\<value> | PRIMARY } **\<value>**
 
@@ -171,7 +172,7 @@ PRIMARY
 
 Это значение допустимо только для баз данных-получателей, пока база данных находится на сервере-источнике; оно указывает, что значение этого параметра для всех баз данных-получателей будет равно значению, заданному для сервера-источника. Если конфигурация для сервера-источника изменится, значение в базах данных-получателях изменится соответственно, задавать значение базы данных-получателя явным образом не требуется. PRIMARY — это параметр по умолчанию для баз данных-получателей.
 
-IDENTITY_CACHE **=** { **ON** | OFF }      
+IDENTITY_CACHE **=** { **ON** | OFF }
 
 **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
@@ -180,7 +181,7 @@ IDENTITY_CACHE **=** { **ON** | OFF }
 > [!NOTE]
 > Этот параметр можно задать только для сервера-источника. Дополнительные сведения см. в статье [Столбцы идентификаторов](create-table-transact-sql-identity-property.md).
 
-INTERLEAVED_EXECUTION_TVF **=** { **ON** | OFF }   
+INTERLEAVED_EXECUTION_TVF **=** { **ON** | OFF }
 
 **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
@@ -191,7 +192,7 @@ INTERLEAVED_EXECUTION_TVF **=** { **ON** | OFF }
 >
 > Только в SQL Server 2017 (14.x) параметр INTERLEAVED_EXECUTION_TVF имеет старое имя **DISABLE**_INTERLEAVED_EXECUTION_TVF.
 
-BATCH_MODE_MEMORY_GRANT_FEEDBACK **=** { **ON** | OFF}    
+BATCH_MODE_MEMORY_GRANT_FEEDBACK **=** { **ON** | OFF}
 
 **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
@@ -200,7 +201,7 @@ BATCH_MODE_MEMORY_GRANT_FEEDBACK **=** { **ON** | OFF}
 > [!NOTE]
 > Для уровня совместимости базы данных 130 или более низкого эта конфигурация области баз данных не оказывает влияния.
 
-BATCH_MODE_ADAPTIVE_JOINS **=** { **ON** | OFF}   
+BATCH_MODE_ADAPTIVE_JOINS **=** { **ON** | OFF}
 
 **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
@@ -220,7 +221,7 @@ TSQL_SCALAR_UDF_INLINING **=** { **ON** | OFF }
 
 ELEVATE_ONLINE = { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
 
-**Применимо к**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] (компонент в общедоступной предварительной версии)
+**ПРИМЕНИМО К**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] (компонент в общедоступной предварительной версии)
 
 Позволяет выбирать параметры, предписывающие ядру автоматически переводить поддерживаемые операции в режим "в сети". Значение по умолчанию — OFF. Оно означает, что операции не будут переводиться в режим "в сети", если это явно не указано в инструкции. В представлении [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) указывается текущее значение ELEVATE_ONLINE. Эти параметры применяются только к операциям, которые поддерживают режим "в сети".
 
@@ -254,13 +255,13 @@ WHEN_SUPPORTED
 
 OPTIMIZE_FOR_AD_HOC_WORKLOADS **=** { ON | **OFF** }
 
-**Область применения**: [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]
+**ПРИМЕНИМО К**: [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]
 
 Включает или отключает заглушку скомпилированного плана для сохранения в кэше при первой компиляции пакета. Значение по умолчанию — OFF. После включения конфигурации уровня базы данных OPTIMIZE_FOR_AD_HOC_WORKLOADS для базы данных заглушка скомпилированного плана будет сохранена в кэше при первой компиляции пакета. Заглушки плана расходуют меньше памяти по сравнению с полным скомпилированным планом. Если пакет компилируется или выполняется повторно, заглушка скомпилированного плана будет удалена и заменена полным скомпилированным планом.
 
 XTP_PROCEDURE_EXECUTION_STATISTICS **=** { ON | **OFF** }
 
-**Область применения**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]
+**ПРИМЕНИМО К**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]
 
 Включает или отключает сбор статистики выполнения на уровне модуля для скомпилированных в собственном коде модулей T-SQL в текущей базе данных. Значение по умолчанию — OFF. Статистика выполнения отражается в [sys.dm_exec_procedure_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md).
 
@@ -268,7 +269,7 @@ XTP_PROCEDURE_EXECUTION_STATISTICS **=** { ON | **OFF** }
 
 XTP_QUERY_EXECUTION_STATISTICS **=** { ON | **OFF** }
 
-**Область применения**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]
+**ПРИМЕНИМО К**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]
 
 Включает или отключает сбор статистики выполнения на уровне инструкций для скомпилированных в собственном коде модулей T-SQL в текущей базе данных. Значение по умолчанию — OFF. Статистика выполнения отражается в [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md) и в [хранилище запросов](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md).
 
@@ -314,7 +315,7 @@ ACCELERATED_PLAN_FORCING **=** { **ON** | OFF }
 
 GLOBAL_TEMPORARY_TABLE_AUTODROP **=** { **ON** | OFF }
 
-**Применимо к**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] (компонент в общедоступной предварительной версии)
+**ПРИМЕНИМО К**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] (компонент в общедоступной предварительной версии)
 
 Настройка функции автоматического удаления [глобальных временных таблиц](../../t-sql/statements/create-table-transact-sql.md#temporary-tables). По умолчанию имеет значение ON, то есть глобальные временные таблицы автоматически удаляются, когда не используются ни одним сеансом. Если задано значение OFF, глобальные временные таблицы следует удалять явным образом с помощью инструкции DROP TABLE, или они будут автоматически удалены при перезапуске сервера.
 
@@ -333,9 +334,9 @@ LIGHTWEIGHT_QUERY_PROFILING **=** { **ON** | OFF}
 
 VERBOSE_TRUNCATION_WARNINGS **=** { **ON** | OFF}
 
-**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
-Позволяет включить или отключить новое сообщение об ошибке `String or binary data would be truncated`. В [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] добавлено новое, более конкретное сообщение об ошибке (2628) для подобного сценария:  
+Позволяет включить или отключить новое сообщение об ошибке `String or binary data would be truncated`. В [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] добавлено новое, более конкретное сообщение об ошибке (2628) для подобного сценария:
 
 `String or binary data would be truncated in table '%.*ls', column '%.*ls'. Truncated value: '%.*ls'.`
 
@@ -351,11 +352,25 @@ LAST_QUERY_PLAN_STATS **=** { ON | **OFF**}
 
 Позволяет включать и отключать сбор статистики последнего плана запроса (эквивалент фактического плана выполнения) в [sys.dm_exec_query_plan_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md).
 
+PAUSED_RESUMABLE_INDEX_ABORT_DURATION_MINUTES
+
+**Область применения**: Только База данных SQL Azure
+
+Параметр `PAUSED_RESUMABLE_INDEX_ABORT_DURATION_MINUTES` определяет время (в минутах), в течение которого возобновляемый индекс приостанавливается перед автоматическим прерыванием обработчиком.
+
+- Значение по умолчанию — 1 день (1440 минут)
+- Минимальная длительность — 1 минута
+- Максимальная длительность — 71 582 минуты
+- Если задано значение 0, приостановленная операция никогда не будет автоматически прерываться
+
+Текущее значение этого параметра отображается в [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md).
+
 ## <a name="Permissions"></a> Permissions
 
 Необходимо разрешение `ALTER ANY DATABASE SCOPE CONFIGURATION` для базы данных. Это разрешение может быть предоставлено пользователем, имеющим разрешение CONTROL для базы данных.
 
 ## <a name="general-remarks"></a>Общие замечания
+
 Можно настроить базы данных-получатели с отличающимися по уровню от сервера-источника параметрами конфигурации, все базы данных-получатели используют одну и ту же конфигурацию. Невозможно настроить разные параметры для разных баз данных-получателей.
 
 При выполнении этой инструкции очищается кэш процедур в текущей базе данных; это означает, что нужно перекомпилировать все запросы.
@@ -374,6 +389,7 @@ LAST_QUERY_PLAN_STATS **=** { ON | **OFF**}
 ## <a name="limitations-and-restrictions"></a>Ограничения
 
 ### <a name="maxdop"></a>MAXDOP
+
 Детализированные параметры могут переопределять глобальные, а регулятор ресурсов может ограничивать все остальные параметры MAXDOP. Логика параметра MAXDOP выглядит следующим образом:
 
 - Указание запроса переопределяет процедуру `sp_configure` и параметр уровня базы данных. Если для группы рабочей нагрузки задана группа ресурсов MAXDOP:
@@ -411,9 +427,11 @@ LAST_QUERY_PLAN_STATS **=** { ON | **OFF**}
 Системное представление [sys.database_scoped_configurations (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) предоставляет информацию о конфигурациях ограниченной области применения в базах данных. Параметры конфигурации уровня БД отображаются только в sys.database_scoped_configurations, поскольку являются переопределениями параметров по умолчанию для всего сервера. В системном представлении [sys.configurations (Transact-SQL)](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md) отображаются только параметры для всего сервера.
 
 ## <a name="examples"></a>Примеры
+
 Эти примеры демонстрируют использование инструкции ALTER DATABASE SCOPED CONFIGURATION
 
 ### <a name="a-grant-permission"></a>A. Предоставление разрешений
+
 В этом примере пользователю Joe предоставляется разрешение, необходимое для выполнения инструкции ALTER DATABASE SCOPED CONFIGURATION.
 
 ```sql
@@ -421,6 +439,7 @@ GRANT ALTER ANY DATABASE SCOPED CONFIGURATION to [Joe] ;
 ```
 
 ### <a name="b-set-maxdop"></a>Б. Задание параметра MAXDOP
+
 В этом примере задается MAXDOP = 1 для базы данных-источника и MAXDOP = 4 для базы данных-получателя в сценарии георепликации.
 
 ```sql
@@ -435,6 +454,7 @@ ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET MAXDOP = PRIMARY ;
 ```
 
 ### <a name="c-set-legacy_cardinality_estimation"></a>В. Задание параметра LEGACY_CARDINALITY_ESTIMATION
+
 В этом примере для параметра LEGACY_CARDINALITY_ESTIMATION задается значение ON для базы данных-получателя в сценарии георепликации.
 
 ```sql
@@ -448,6 +468,7 @@ ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET LEGACY_CARDINALITY_ESTIMAT
 ```
 
 ### <a name="d-set-parameter_sniffing"></a>Г. Задание параметра PARAMETER_SNIFFING
+
 В этом примере параметру PARAMETER_SNIFFING присваивается значение OFF для базы данных-источника в сценарии георепликации.
 
 ```sql
@@ -467,6 +488,7 @@ ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET PARAMETER_SNIFFING = PRIMA
 ```
 
 ### <a name="e-set-query_optimizer_hotfixes"></a>Д. Задание параметра QUERY_OPTIMIZER_HOTFIXES
+
 Задайте для параметра QUERY_OPTIMIZER_HOTFIXES значение ON для базы данных-источника в сценарии георепликации.
 
 ```sql
@@ -474,6 +496,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET QUERY_OPTIMIZER_HOTFIXES = ON ;
 ```
 
 ### <a name="f-clear-procedure-cache"></a>Е. Очистка кэша процедур
+
 В этом примере очищается кэш процедур (возможно только для базы данных-источника).
 
 ```sql
@@ -481,6 +504,7 @@ ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE;
 ```
 
 ### <a name="g-set-identity_cache"></a>Ж. Задание параметра IDENTITY_CACHE
+
 **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (функция на этапе общедоступной предварительной версии)
 
 В этом примере отключается кэш идентификаторов.
@@ -490,7 +514,8 @@ ALTER DATABASE SCOPED CONFIGURATION SET IDENTITY_CACHE = OFF ;
 ```
 
 ### <a name="h-set-optimize_for_ad_hoc_workloads"></a>З. Задание параметра OPTIMIZE_FOR_AD_HOC_WORKLOADS
-**Область применения**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
+
+**ПРИМЕНИМО К**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 В этом примере включается заглушка скомпилированного плана для сохранения в кэше при первой компиляции пакета.
 
@@ -499,7 +524,8 @@ ALTER DATABASE SCOPED CONFIGURATION SET OPTIMIZE_FOR_AD_HOC_WORKLOADS = ON;
 ```
 
 ### <a name="i-set-elevate_online"></a>И. Задание ELEVATE_ONLINE
-**Применимо к**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] (компонент в общедоступной предварительной версии)
+
+**ПРИМЕНИМО К**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] (компонент в общедоступной предварительной версии)
 
 В этом примере параметру ELEVATE_ONLINE присваивается значение FAIL_UNSUPPORTED.
 
@@ -508,7 +534,8 @@ ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_ONLINE = FAIL_UNSUPPORTED ;
 ```
 
 ### <a name="j-set-elevate_resumable"></a>К. Задание ELEVATE_RESUMABLE
-**Применимо к**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] и [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] (компонент в общедоступной предварительной версии)
+
+**ПРИМЕНИМО К**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] и [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] (компонент в общедоступной предварительной версии)
 
 В этом примере параметру ELEVEATE_RESUMABLE присваивается значение WHEN_SUPPORTED.
 
@@ -517,12 +544,24 @@ ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_RESUMABLE = WHEN_SUPPORTED ;
 ```
 
 ### <a name="k-clear-a-query-plan-from-the-plan-cache"></a>Л. Очистка плана запроса из кэша планов
+
 **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
-В этом примере конкретный план удаляется из кэша процедур 
+В этом примере конкретный план удаляется из кэша процедур
 
 ```sql
 ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE 0x06000500F443610F003B7CD12C02000001000000000000000000000000000000000000000000000000000000;
+```
+
+### <a name="l-set-paused-duration"></a>М. Задать длительность паузы
+
+**Область применения**: Только База данных SQL Azure
+
+В этом примере задается длительность паузы возобновляемого индекса 60 минут.
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION
+SET PAUSED_RESUMABLE_INDEX_ABORT_DURATION_MINUTES = 60
 ```
 
 ## <a name="additional-resources"></a>Дополнительные ресурсы
