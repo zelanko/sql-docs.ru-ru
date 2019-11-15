@@ -1,7 +1,7 @@
 ---
 title: Отладка и диагностика приложений Spark
 titleSuffix: SQL Server big data clusters
-description: Используйте сервер журнала Spark для отладки и диагностики приложений Spark, работающих [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]на.
+description: Используйте сервер журнала Spark для отладки и диагностики приложений Spark, работающих в [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
 author: jejiang
 ms.author: jejiang
 ms.reviewer: mikeray
@@ -9,25 +9,25 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: f5c237910c087131a10660c4793954c850b7791b
-ms.sourcegitcommit: dacf6c57f6a2e3cf2005f3268116f3c609639905
-ms.translationtype: MT
+ms.openlocfilehash: dd35de4111c5e18d8c8237e2935df5de458f19b1
+ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70878702"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73706116"
 ---
-# <a name="debug-and-diagnose-spark-applications-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-in-spark-history-server"></a>Отладка и диагностика приложений Spark [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] на сервере журнала Spark
+# <a name="debug-and-diagnose-spark-applications-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-in-spark-history-server"></a>Отладка и диагностика приложений Spark в [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] на сервере журнала Spark
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-В этой статье содержатся указания по использованию расширенного сервера журнала Spark для отладки и диагностики приложений Spark в кластере больших данных SQL Server 2019 (предварительная версия). Эти возможности отладки и диагностики встроены в сервер журнала Spark и обеспечиваются технологиями корпорации Майкрософт. Расширение содержит вкладки данных, графа и диагностики. На вкладке данных пользователи могут проверять входные и выходные данные задания Spark. На вкладке графа пользователи могут проверять поток данных и воспроизводить граф задания. На вкладке диагностики пользователь может просматривать результаты анализа неравномерного распределения данных, неравномерного распределения времени и использования исполнителя.
+В этой статье содержатся указания по использованию расширенного сервера журнала Spark для отладки и диагностики приложений Spark в кластере больших данных SQL Server. Эти возможности отладки и диагностики встроены в сервер журнала Spark и обеспечиваются технологиями корпорации Майкрософт. Расширение содержит вкладки данных, графа и диагностики. На вкладке данных пользователи могут проверять входные и выходные данные задания Spark. На вкладке графа пользователи могут проверять поток данных и воспроизводить граф задания. На вкладке диагностики пользователь может просматривать результаты анализа неравномерного распределения данных, неравномерного распределения времени и использования исполнителя.
 
 ## <a name="get-access-to-spark-history-server"></a>Получение доступа к серверу журнала Spark
 
 Интерфейс сервера журнала Spark в рамках проекта с открытым кодом дополняется такой информацией, как данные по заданиям и интерактивная визуализация графа заданий и потоков данных для кластера больших данных. 
 
 ### <a name="open-the-spark-history-server-web-ui-by-url"></a>Открытие пользовательского веб-интерфейса сервера журнала Spark по URL-адресу
-Чтобы открыть сервер журнала Spark, перейдите по приведенному ниже URL-адресу, заменив `<Ipaddress>` и `<Port>` на значения для кластера больших данных. Обратите внимание, что при установке кластера больших данных с обычной проверкой подлинности (имя пользователя и пароль) необходимо указать **корневой** пользователь, когда будет предложено войти в конечные точки шлюза (Knox). Дополнительные сведения см. в статье [Развертывание кластера больших данных SQL Server](quickstart-big-data-cluster-deploy.md).
+Чтобы открыть сервер журнала Spark, перейдите по приведенному ниже URL-адресу, заменив `<Ipaddress>` и `<Port>` на значения для кластера больших данных. Обратите внимание, что в конфигурации кластера больших данных с обычной проверкой подлинности (имя пользователя и пароль) для входа в конечные точки шлюза (Knox) необходимо предоставить учетные данные **привилегированного** пользователя. Дополнительные сведения см. в статье [Развертывание кластера больших данных SQL Server](quickstart-big-data-cluster-deploy.md).
 
 ```
 https://<Ipaddress>:<Port>/gateway/default/sparkhistory
@@ -91,7 +91,7 @@ https://<Ipaddress>:<Port>/gateway/default/sparkhistory
 
     ![идентификатор задания графа](./media/apache-azure-spark-history-server/sparkui-graph-jobid.png)
 
-+ Значение по умолчанию — **Ход выполнения**. Пользователь может проверить поток данных, выбрав пункт **Чтение** или **запись** в раскрывающемся списке **экрана**.
++ Значение по умолчанию — **Ход выполнения**. Пользователь может проверить поток данных, выбрав в раскрывающемся списке **Отображение** пункт **Чтение** или **Запись**.
 
     ![отображение графа](./media/apache-azure-spark-history-server/sparkui-graph-display.png)
 
@@ -201,7 +201,8 @@ https://<Ipaddress>:<Port>/gateway/default/sparkhistory
 
 + Входные и выходные данные RDD не отображаются на вкладке данных.
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
-* [Начало работы с[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](https://docs.microsoft.com/en-us/sql/big-data-cluster/deploy-get-started?view=sqlallproducts-allversions)
-* [Настройка параметров Spark](https://docs.microsoft.com/azure/hdinsight/spark/apache-spark-settings)
+* [Начало работы с кластерами больших данных SQL Server](../big-data-cluster/deploy-get-started.md)
+* Настройка параметров Spark
+* [Настройка параметров Spark](/azure/hdinsight/spark/apache-spark-settings/)

@@ -1,21 +1,23 @@
 ---
 layout: HubPage
 hide_bc: true
-title: Документация Microsoft Azure
-description: Сведения о создании и администрировании полнофункциональных приложений с использованием облачных служб Microsoft Azure. Получение документации, примеров кода, руководств и многого другого.
+experimental: true
+experiment_id: 81ba5f65-59fb-4d
+title: 'SQL Server: центр обучения'
+description: 'Сводка ресурсов, которые можно использовать для изучения SQL Server и Базы данных SQL Azure: от кратких руководств и учебников до модулей Microsoft Learn и LinkedIn Learning.'
 ms.topic: hub-page
 ms.prod: sql
 author: MashaMSFT
 ms.author: mathoma
-ms.date: 12/15/2018
+ms.date: 11/05/2019
 featureFlags:
 - clicktale
-ms.openlocfilehash: 4430d76ac8e848127e9936bb6ecf8aa8b08e9982
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.openlocfilehash: b05ebcd71bed887d711705b3dffa99bf6ecf05fc
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70176272"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73637924"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -67,7 +69,7 @@ ms.locfileid: "70176272"
                                     </div>
                                 </div>
                                 <div class="cardText">
-                                    <span class="likeAnH3">Загрузить SQL Server Management Studio</span>
+                                    <span class="likeAnH3">Скачивание SQL Server Management Studio</span>
                                 </div>
                             </div>
                         </div>

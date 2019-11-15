@@ -1,22 +1,22 @@
 ---
-title: Новые возможности расширений языка
-titleSuffix: SQL Server Language Extensions
-description: Узнайте о новых возможностях расширений языка SQL Server 2019.
+title: Новые возможности расширений языка SQL Server
+titleSuffix: ''
+description: Узнайте о новых возможностях расширений языка SQL Server.
 author: dphansen
 ms.author: davidph
-ms.date: 11/04/2019
+ms.date: 11/05/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 13a6a0181297fcb05274ba4be726c4e10a445064
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 3bcf60c390b06695c4913bd1347045b807c1ae9d
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73589018"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73658803"
 ---
-# <a name="what-new-in-sql-server-language-extensions"></a>Новые возможности расширений языка SQL Server
+# <a name="whats-new-in-sql-server-language-extensions"></a>Новые возможности расширений языка SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Возможности [расширений языка](language-extensions-overview.md) добавляются в SQL Server в каждом выпуске, так как мы продолжаем расширять и углублять интеграцию между внешними языками и платформой данных. 
@@ -32,6 +32,6 @@ ms.locfileid: "73589018"
 - В Windows и Linux доступ к коду Java можно получить во внешней библиотеке с помощью инструкции [CREATE EXTERNAL LIBRARY (Transact-SQL)](../t-sql/statements/create-external-library-transact-sql.md). Дополнительные сведения: [Вызов кода Java из SQL Server](how-to/call-java-from-sql.md).
 - [Расширение языка Java](language-extensions-overview.md) в Windows и Linux. Можно сделать скомпилированный код Java доступным в SQL Server путем назначения разрешений и установки пути. Клиентские приложения с доступом SQL Server могут использовать данные и выполнять код, вызывая [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) — ту же самую процедуру, которая используется для интеграции языков R и Python в службы машинного обучения SQL Server.
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 + Установка [Расширений языка для SQL Server в Windows](install/install-sql-server-language-extensions-on-windows.md) или [в Linux](../linux/sql-server-linux-setup-language-extensions.md)

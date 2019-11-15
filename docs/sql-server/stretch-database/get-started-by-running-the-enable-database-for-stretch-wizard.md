@@ -1,5 +1,5 @@
 ---
-title: Начало работы. Запуск мастера настройки базы данных Stretch | Документация Майкрософт
+title: Запуск мастера включения растяжения для базы данных
 ms.date: 08/05/2016
 ms.service: sql-server-stretch-database
 ms.reviewer: ''
@@ -20,12 +20,13 @@ helpviewer_keywords:
 ms.assetid: 855dd9fc-f80c-4dbc-bf46-55a9736bfe15
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3b4239a8f6aefc9160171c1a700aa37733a66de0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 5d730c8e71044154b9844174ac8d21837c9ea05f
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68136133"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73843802"
 ---
 # <a name="get-started-by-running-the-enable-database-for-stretch-wizard"></a>Запуск мастера включения растяжения для базы данных
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -52,14 +53,14 @@ ms.locfileid: "68136133"
  -   Требуется подписка на Microsoft Azure.
  -   SQL Server должен иметь возможность подключения к удаленному серверу Azure.
   
- ![Вводная страница мастера настройки базы данных Stretch](../../sql-server/stretch-database/media/stretch-wizard-1.png "Вводная страница мастера настройки базы данных Stretch")  
+ ![Вводная страница мастера Stretch Database](../../sql-server/stretch-database/media/stretch-wizard-1.png "Вводная страница мастера Stretch Database")  
   
 ##  <a name="Tables"></a> Выбор таблиц  
  Выберите таблицы, для которых следует применить растяжение.  
  
 Таблицы с большим количеством строк отображаются в начале отсортированного списка. Прежде чем вывести список таблиц, мастер анализирует их на предмет типов данных, не поддерживаемых базой данных Stretch. 
   
- ![Страница выбора таблиц в мастере настройки базы данных Stretch](../../sql-server/stretch-database/media/stretch-wizard-2.png "Страница выбора таблиц в мастере настройки базы данных Stretch")  
+ ![Страница выбора таблиц в мастере Stretch Database](../../sql-server/stretch-database/media/stretch-wizard-2.png "Страница выбора таблиц в мастере Stretch Database")  
   
 |Столбец|Описание|  
 |------------|-----------------|  
@@ -95,7 +96,7 @@ ms.locfileid: "68136133"
 
 ![Страница выбора таблицы после определения предиката фильтра](../../sql-server/stretch-database/media/stretch-wizard-2b.png "Страница выбора таблицы после определения предиката фильтра")
 
-Если требуется использовать другой тип функции фильтров, чтобы выбрать строки для переноса, выполните одно из следующих действий.  
+Если вы хотите использовать другой тип функции фильтров, чтобы выбрать строки для переноса, выполните одно из следующих действий.  
   
 -   Закройте мастер и выполните инструкцию ALTER TABLE, чтобы включить растяжение для таблицы и указать функцию фильтров. Дополнительные сведения см. в статье [Настройка базы данных Stretch для таблицы](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md).  
   
@@ -105,9 +106,9 @@ ms.locfileid: "68136133"
   
 1.  Войдите в Microsoft Azure с учетной записью Майкрософт.  
   
-     ![Вход в Azure — мастер настройки базы данных Stretch](../../sql-server/stretch-database/media/stretch-wizard-3.png "Вход в Azure — мастер настройки базы данных Stretch")  
+     ![Вход в Azure — мастер Stretch Database](../../sql-server/stretch-database/media/stretch-wizard-3.png "Вход в Azure — мастер Stretch Database")  
   
-2.  Выберите существующую подписку Azure, которую будете использовать для базы данных Stretch. 
+2.  Выберите существующую подписку Azure, которую будете использовать для Stretch Database. 
 
 > [!NOTE] 
 > Чтобы включить растяжение в базе данных, требуются права администратора используемой подписки. Мастер базы данных Stretch отобразит только подписки, в которых пользователь имеет права администратора.
@@ -128,7 +129,7 @@ ms.locfileid: "68136133"
   
         2.  Вы также можете использовать федеративную учетную запись службы для взаимодействия SQL Server с удаленным сервером Azure.  
   
-         ![Создание нового сервера Azure — мастер настройки базы данных Stretch](../../relational-databases/tables/media/stretch-wizard-4.png "Создание нового сервера Azure — мастер настройки базы данных Stretch")  
+         ![Создание нового сервера Azure — мастер Stretch Database](../../relational-databases/tables/media/stretch-wizard-4.png "Создание нового сервера Azure — мастер Stretch Database")  
   
     -   **Существующий сервер**  
   
@@ -140,18 +141,18 @@ ms.locfileid: "68136133"
   
             -   Выберите метод **Встроенная проверка подлинности Active Directory** , чтобы использовать федеративную учетную запись службы для взаимодействия SQL Server с удаленным сервером Azure. Если выбранный сервер не интегрирован с Azure Active Directory, этот параметр не отображается.
   
-         ![Выбор существующего сервера Azure — мастер настройки базы данных Stretch](../../sql-server/stretch-database/media/stretch-wizard-5.png "Выбор существующего сервера Azure — мастер настройки базы данных Stretch")  
+         ![Выбор существующего сервера Azure — мастер Stretch Database](../../sql-server/stretch-database/media/stretch-wizard-5.png "Выбор существующего сервера Azure — мастер Stretch Database")  
   
 ##  <a name="Credentials"></a> Защищенные учетные данные  
  Главный ключ базы данных является обязательным элементом для защиты учетных данных, которые база данных Stretch использует для подключения к удаленной базе данных.  
   
  Если главный ключ базы данных уже существует, введите соответствующий пароль.  
   
- ![Страница защиты учетных данных в мастере настройки базы данных Stretch](../../sql-server/stretch-database/media/stretch-wizard-6b.PNG "Страница защиты учетных данных в мастере настройки базы данных Stretch")  
+ ![Страница "Учетные данные безопасности" мастера Stretch Database](../../sql-server/stretch-database/media/stretch-wizard-6b.PNG "Страница "Учетные данные безопасности" мастера Stretch Database")  
   
  Если главного ключа для базы данных нет, введите надежный пароль, чтобы создать такой ключ.  
   
- ![Страница защиты учетных данных в мастере настройки базы данных Stretch](../../relational-databases/tables/media/stretch-wizard-6.png "Страница защиты учетных данных в мастере настройки базы данных Stretch")  
+ ![Страница "Учетные данные безопасности" мастера Stretch Database](../../relational-databases/tables/media/stretch-wizard-6.png "Страница "Учетные данные безопасности" мастера Stretch Database")  
   
  Дополнительные сведения о главном ключе базы данных см. в разделах [CREATE MASTER KEY (Transact-SQL)](../../t-sql/statements/create-master-key-transact-sql.md) и [Создание главного ключа базы данных](../../relational-databases/security/encryption/create-a-database-master-key.md). Дополнительные сведения о создаваемых мастером учетных данных см. в разделе [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)](../../t-sql/statements/create-database-scoped-credential-transact-sql.md).  
   
@@ -160,19 +161,19 @@ ms.locfileid: "68136133"
   
  Сервер Azure будет использовать IP-адрес или адреса, которые вы укажете на этой странице, для разрешения пропуска через брандмауэр Azure входящих данных, запросов и операций управления, инициированных SQL Server. Мастер не вносит изменения в параметры брандмауэра на сервере SQL Server.  
   
- ![Страница выбора IP-адреса в мастере настройки базы данных Stretch](../../relational-databases/tables/media/stretch-wizard-7.png "Страница выбора IP-адреса в мастере настройки базы данных Stretch")  
+ ![Страница "Выбор IP-адреса" мастера Stretch Database](../../relational-databases/tables/media/stretch-wizard-7.png "Страница "Выбор IP-адреса" мастера Stretch Database")  
   
 ##  <a name="Summary"></a> Сводка  
  Просмотрите значения, которые вы ввели или выбрали в мастере, а также оценку предполагаемых затрат на использование Azure. Нажмите кнопку **Готово** , чтобы включить растягивание.  
   
- ![Страница сводных данных в мастере настройки базы данных Stretch](../../sql-server/stretch-database/media/stretch-wizard-8.png "Страница сводных данных в мастере настройки базы данных Stretch")  
+ ![Страница сводки в мастере Stretch Database](../../sql-server/stretch-database/media/stretch-wizard-8.png "Страница сводки в мастере Stretch Database")  
   
 ##  <a name="Results"></a> Результаты  
  Просмотрите результаты операции.  
   
- Инструкции по отслеживанию состояния переноса данных см. в статье [Мониторинг переноса данных и устранение неполадок при этой операции (база данных Stretch)](../../sql-server/stretch-database/monitor-and-troubleshoot-data-migration-stretch-database.md).  
+ Инструкции по отслеживанию состояния переноса данных см. в статье [Мониторинг переноса данных и устранение неполадок при этой операции (Stretch Database)](../../sql-server/stretch-database/monitor-and-troubleshoot-data-migration-stretch-database.md).  
   
- ![Страница результатов в мастере настройки базы данных Stretch](../../sql-server/stretch-database/media/stretch-wizard-9.PNG "Страница результатов в мастере настройки базы данных Stretch")  
+ ![Страница результатов в мастере Stretch Database](../../sql-server/stretch-database/media/stretch-wizard-9.PNG "Страница результатов в мастере Stretch Database")  
   
 ##  <a name="KnownIssues"></a> Устранение неполадок в работе мастера  
  **Сбой в работе мастера подготовки базы данных Stretch.**  

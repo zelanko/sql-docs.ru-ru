@@ -1,38 +1,39 @@
 ---
-title: Запрос и изменение данных SQL Server с помощью RevoScaleR
-description: Пошаговое руководство по запросу и изменению данных с помощью языка R на SQL Server.
+title: Изменение данных SQL с помощью RevoScaleR
+description: Пошаговое руководство по запросу и изменению данных с помощью языка R в SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9bcf782e509263b087cfc599758ae9492b888aed
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
-ms.translationtype: MT
+ms.openlocfilehash: 65db15d8c6778723ff04f82cde985c4827813339
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715526"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727186"
 ---
-# <a name="query-and-modify-the-sql-server-data-sql-server-and-revoscaler-tutorial"></a>Запрос и изменение данных SQL Server (учебник по SQL Server и RevoScaleR)
+# <a name="query-and-modify-the-sql-server-data-sql-server-and-revoscaler-tutorial"></a>Запрос и изменение данных SQL Server (учебник по SQL Server и RevoScaleR)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Это занятие является частью [учебника RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) по использованию [функций RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) с SQL Server.
+Этот занятие входит в состав [учебника по RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md), в котором описывается использование функций [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) в SQL Server.
 
-На предыдущем занятии вы загрузили данные в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. На этом шаге вы можете просматривать и изменять данные с помощью **RevoScaleR**:
+На предыдущем занятии вы загрузили данные в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Теперь вы сможете изучить и изменить данные с помощью **RevoScaleR**:
 
 > [!div class="checklist"]
-> * Возвращает основные сведения о переменных
-> * Создание данных о категориях на основе необработанных данных
+> * Получение основных сведений о переменных
+> * Создание категориальных данных из необработанных данных
 
-Данные по категориямили значения коэффициентов полезны для визуализации произвольных данных. Их можно использовать в качестве входных данных для гистограмм, чтобы понять, как выглядят переменные данные.
+Категориальные данные или *факторные переменные* помогают визуализировать произвольные данные. Их можно использовать как входных данных для гистограмм, чтобы получить представление о переменных данных.
 
 ## <a name="query-for-columns-and-types"></a>Запрос столбцов и типов
 
-Используйте R IDE или RGui. exe для выполнения скрипта R. 
+Для выполнения скрипта R используйте IDE R или RGui.exe. 
 
-Сначала получите список столбцов и их типов данных. Можно использовать функцию [функцию rxgetvarinfo](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxgetvarinfoxdf) и указать источник данных, который нужно проанализировать. В зависимости от версии **RevoScaleR**можно также использовать [рксжетварнамес](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxgetvarnames). 
+Сначала получите список столбцов и их типов данных. Можно использовать функцию [rxGetVarInfo](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxgetvarinfoxdf) и указать источник данных, которые нужно проанализировать. В зависимости от версии **RevoScaleR** можно также использовать [rxGetVarNames](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxgetvarnames). 
   
 ```R
 rxGetVarInfo(data = sqlFraudDS)
@@ -52,15 +53,15 @@ Var 8: creditLine, Type: integer
 Var 9: fraudRisk, Type: integer
 ```
 
-## <a name="create-categorical-data"></a>Создание данных по категориям
+## <a name="create-categorical-data"></a>Создание категориальных данных
 
-Все переменные хранятся в виде целых чисел, но некоторые переменные представляют данные по категориям, называемые переменными коэффициента в R. Например, *состояние* столбца содержит числа, используемые в качестве идентификаторов для состояний 50 плюс округ Колумбия. Чтобы упростить понимание данных, замените числа списком сокращений, обозначающих штаты.
+Все переменные хранятся как целочисленные, но некоторые из них представляют категориальные данные — в языке R они называются *факторными переменными*. Например, столбец *state* содержит числа, представляющие идентификаторы 50 штатов, а также округа Колумбия. Чтобы упростить понимание данных, замените числа списком сокращений, обозначающих штаты.
 
-На этом шаге вы создадите строковый вектор, содержащий аббревиатуры, а затем сопоставьте эти значения категорий с исходными целочисленными идентификаторами. Затем используйте новую переменную в аргументе *colInfo* , чтобы указать, что этот столбец должен обрабатываться как фактор. При анализе данных или их перемещении используются аббревиатуры, а столбец обрабатывается как фактор.
+На этом этапе вы создадите вектор строк, содержащий эти сокращения, а затем сопоставите эти категориальные значения с исходными целочисленными идентификаторами. Затем вы добавите новую переменную в аргумент *colInfo*, чтобы указать, что этот столбец будет обрабатываться как коэффициент. При анализе данных или перемещении данных используются аббревиатуры, а столбец обрабатывается как коэффициент.
 
-Сопоставление столбца сокращениям перед использованием столбца в качестве коэффициента также способствует повышению производительности. Дополнительные сведения см. в разделе [R and Data Optimization](../r/r-and-data-optimization-r-services.md).
+Сопоставление столбца сокращениям перед использованием столбца в качестве коэффициента также способствует повышению производительности. Дополнительные сведения см. в разделе [Язык R и оптимизация данных](../r/r-and-data-optimization-r-services.md).
 
-1. Начните с создания переменной R *stateAbb*и определения вектора строк для добавления в нее, как показано ниже.
+1. Сначала создайте переменную R с именем *stateAbb* и определите вектор строк, который следует в нее добавить, следующим образом:
   
     ```R
     stateAbb <- c("AK", "AL", "AR", "AZ", "CA", "CO", "CT", "DC",
@@ -95,7 +96,7 @@ Var 9: fraudRisk, Type: integer
     )
     ```
   
-3. Чтобы создать [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] источник данных, использующий обновленные данные, вызовите функцию **RxSqlServerData** , как и раньше, но добавьте аргумент *colInfo* .
+3. Для создания источника данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], использующего обновленные данные, вызовите функцию **RxSqlServerData** как раньше, но добавьте в нее аргумент *colInfo*.
   
     ```R
     sqlFraudDS <- RxSqlServerData(connectionString = sqlConnString,
@@ -128,7 +129,7 @@ Var 9: fraudRisk, Type: integer
 
 Теперь три указанные вами переменные (*gender*, *state*и *cardholder*) обрабатываются как факторы.
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 > [!div class="nextstepaction"]
 > [Определение и использование контекстов вычисления](../../advanced-analytics/tutorials/deepdive-define-and-use-compute-contexts.md)

@@ -1,25 +1,25 @@
 ---
-title: Пакет SDK Майкрософт для расширения возможностей Java в SQL Server
-description: Реализация программы Java для SQL Server с помощью пакета SDK Майкрософт для расширения возможностей Java.
+title: Пакет Microsoft Extensibility SDK для Java
+description: Узнайте, как реализовать программу Java для SQL Server с помощью пакета Microsoft Extensibility SDK для Java. Пакет SDK — это интерфейс для расширения языка Java, который используется для обмена данными с SQL Server и выполнения кода Java из SQL Server.
 ms.prod: sql
 ms.technology: language-extensions
-ms.date: 08/21/2019
+ms.date: 11/05/2019
 ms.topic: conceptual
 author: nelgson
 ms.author: negust
 ms.reviewer: dphansen
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f2c1e7eb5b5410ad0c12b8dec6f451b7572f0e36
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 66719e8a30b9e7f4e42eaba376c73af9eb9868b2
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "73588798"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73658855"
 ---
 # <a name="microsoft-extensibility-sdk-for-java-for-sql-server"></a>Пакет SDK Майкрософт для расширения возможностей Java в SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-В этой статье рассматривается реализация программы Java для SQL Server с помощью пакета SDK Майкрософт для расширения возможностей Java. Пакет SDK — это интерфейс для расширения языка Java, который используется для обмена данными с SQL Server и выполнения кода Java из SQL Server.
+Узнайте, как реализовать программу Java для SQL Server с помощью пакета Microsoft Extensibility SDK для Java. Пакет SDK — это интерфейс для расширения языка Java, который используется для обмена данными с SQL Server и выполнения кода Java из SQL Server.
 
 Пакет SDK устанавливается как часть SQL Server 2019 релиза-кандидата 1 как в Windows, так и в Linux:
 

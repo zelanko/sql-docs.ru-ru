@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 19edd6bf2e28a0dd0ec2007493dc02ff55108554
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 7720db661d90c3ff2ebec593b22a5aa638038132
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531613"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73844220"
 ---
 # <a name="how-to-read-and-write-to-sql-server-from-spark-using-the-mssql-spark-connector"></a>Чтение и запись в SQL Server из Spark с помощью соединителя MSSQL Spark
 
@@ -76,7 +76,7 @@ SQL Server 2019 предоставляет **соединитель MSSQL Spark*
 
 ## <a name="run-the-sample-notebook"></a>Запуск примера записной книжки
 
-Чтобы продемонстрировать использование соединителя MSSQL Spark с этими данными, можно скачать пример записной книжки, открыть его в Azure Data Studio и выполнить каждый блок кода. Дополнительные сведения о работе с записными книжками см. в статье [Использование записных книжек в предварительной версии SQL Server 2019](notebooks-guidance.md).
+Чтобы продемонстрировать использование соединителя MSSQL Spark с этими данными, можно скачать пример записной книжки, открыть его в Azure Data Studio и выполнить каждый блок кода. Дополнительные сведения о работе с записными книжками см. в статье [Использование записных книжек в SQL Server](notebooks-guidance.md).
 
 1. В командной строке PowerShell или bash выполните следующую команду, чтобы скачать пример записной книжки **mssql_spark_connector.ipynb**.
 
@@ -88,6 +88,6 @@ SQL Server 2019 предоставляет **соединитель MSSQL Spark*
 
 1. Выполните каждую ячейку кода в примере, чтобы просмотреть использование соединителя MSSQL Spark.
 
-## <a name="next-steps"></a>Дальнейшие действия
+## <a name="next-steps"></a>Следующие шаги
 
 Дополнительные сведения о кластерах больших данных см. в статье [Развертывание [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] в Kubernetes](deployment-guidance.md).

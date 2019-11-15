@@ -1,26 +1,26 @@
 ---
 title: Установка расширений языка для SQL Server в Windows
-titleSuffix: SQL Server Language Extensions
-description: Порядок установки расширений языка для SQL Server 2019 в Windows.
+titleSuffix: ''
+description: Сведения об установке расширений языка для SQL Server в Windows.
 author: dphansen
 ms.author: davidph
-ms.date: 11/04/2019
+ms.date: 11/06/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: bc9baf6f5360c82ec27a3c243b840b2d38ed1d56
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 3e4f3a84e5001d7485ab590a66ee497522042824
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73589068"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73658848"
 ---
 # <a name="install-sql-server-language-extensions-on-windows"></a>Установка расширений языка для SQL Server в Windows
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Начиная с SQL Server 2019 предоставляются расширения языка и поддержка Java. В этой статье объясняется, как установить компонент расширений языка, запустив мастер установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+Сведения о том, как установить компонент расширений языка в SQL Server, запустив мастер установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
 > [!NOTE]
 > Эта статья предназначена для установки расширений языка SQL Server в Windows. Инструкции по установке в Linux см. в статье [Установка расширений языка (Java) для SQL Server 2019 на Linux](https://docs.microsoft.com/sql//linux/sql-server-linux-setup-language-extensions).
@@ -61,11 +61,8 @@ ms.locfileid: "73589068"
     
 ## <a name="get-the-installation-media"></a>Получение установочного носителя
 
-Предварительная версия SQL Server 2019 доступна на [веб-сайте установки SQL Server 2019](https://www.microsoft.com/sql-server/sql-server-2019#Install).
-
-<!-- We can use this include statement, once SQL Server 2019 is in GA
 [!INCLUDE[GetInstallationMedia](../../includes/getssmedia.md)]
--->
+
 ## <a name="run-setup"></a>Запуск программы установки
 
 Для локальных установок необходимо запускать программу установки с правами администратора. При установке [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] из удаленной общей папки необходимо использовать учетную запись домена с разрешениями на чтение и выполнение для удаленной общей папки.

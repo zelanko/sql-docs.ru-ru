@@ -1,22 +1,22 @@
 ---
-title: Что такое расширения языка?
-titleSuffix: SQL Server Language Extensions
-description: Сведения о расширениях языка для SQL Server 2019 (предварительная версия), которые запускают внешние сценарии в SQL Server.
+title: Что такое расширения языка для SQL Server?
+titleSuffix: ''
+description: Расширения языка — это функция SQL Server, используемая для выполнения внешнего кода. В SQL Server 2019 поддерживается язык Java. Реляционные данные могут использоваться во внешнем коде с помощью платформы расширяемости.
 author: dphansen
 ms.author: davidph
-ms.date: 11/04/2019
+ms.date: 11/05/2019
 ms.topic: overview
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 15ff0339a487ecebdca23057bfce9053b5efca2e
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 57755782f2907eff25db942600cebc63f09598e0
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73589028"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73658820"
 ---
-# <a name="what-is-sql-server-language-extensions-preview"></a>Что такое расширения языка для SQL Server (предварительная версия)?
+# <a name="what-is-sql-server-language-extensions"></a>Что такое расширения языка для SQL Server?
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Расширения языка — это функция SQL Server, используемая для выполнения внешнего кода. Реляционные данные могут использоваться во внешнем коде с помощью [платформы расширяемости](concepts/extensibility-framework.md).

@@ -1,67 +1,68 @@
 ---
-title: Демонстрационный набор данных рейса авиакомпании для SQL Server учебных материалов по Python и R
-Description: Создайте базу данных с набором данных авиакомпании из R и Python. Этот набор данных используется в упражнениях, демонстрирующих создание оболочки языка R или кода Python в SQL Server хранимой процедуре.
+title: Демонстрационные данные по авиарейсам для учебников
+Description: Создание базы данных, содержащей набор данных по авиарейсам из R и Python. Этот набор данных используется в упражнениях, демонстрирующих упаковку кода на языке R или Python в хранимую процедуру SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/22/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: b7f28dd4b3e7e6990e037dbd9afe164d8d0e4bec
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
-ms.translationtype: MT
+ms.openlocfilehash: 520a94f5f92c8b7e7d8bf7ba4efc851ce0c3e723
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68714815"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727146"
 ---
-#  <a name="airline-flight-arrival-demo-data-for-sql-server-python-and-r-tutorials"></a>Демонстрационные данные о прибытии авиабилетов для SQL Server Python и R
+#  <a name="airline-flight-arrival-demo-data-for-sql-server-python-and-r-tutorials"></a>Демонстрационные данные по прибытию авиарейсов для учебников по SQL Server Python и R
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-В этом упражнении вы создадите базу данных SQL Server для хранения импортированных данных из встроенных демонстрационных наборов данных авиакомпании на языке R или Python. Дистрибутивы R и Python предоставляют эквивалентные данные, которые можно импортировать в SQL Server базу данных с помощью Management Studio.
+В этом упражнении мы создадим базу данных SQL Server для хранения данных, импортированных из встроенных демонстрационных наборов данных по авиарейсам R или Python. В дистрибутивах для R и Python представлены одинаковые данные, которые можно импортировать в базу данных SQL Server с помощью Management Studio.
 
-Для выполнения этого упражнения необходимо иметь [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-2017) или другое средство, которое может выполнять запросы T-SQL.
+Для выполнения этого упражнения вам потребуется [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-2017) или другое средство, поддерживающее выполнение запросов T-SQL.
 
-Ниже приведены руководства и краткие руководства, в которых используется этот набор данных.
+Этот набор данных используется в следующих учебниках и кратких руководствах:
 
 +  [Создание модели Python с помощью revoscalepy](use-python-revoscalepy-to-create-model.md)
 
 ## <a name="create-the-database"></a>Создайте базу данных
 
-1. Запустите SQL Server Management Studio, подключитесь к экземпляру ядра СУБД с интеграцией R или Python.  
+1. Запустите SQL Server Management Studio и установите подключение к экземпляру ядра СУБД, обеспечивающего интеграцию с R или Python.  
 
-2. В обозревателе объектов щелкните правой кнопкой мыши **базы данных** и создайте новую базу данных с именем **флигхтдата**.
+2. В обозревателе объектов щелкните правой кнопкой мыши элемент **Базы данных** и создайте новую базу данных с названием **flightdata**.
 
-3. Щелкните правой кнопкой мыши **флигхтдата**, выберите **задачи**, а затем импорт неструктурированного **файла**.
+3. Щелкните правой кнопкой мыши объект **flightdata**, а затем выберите **Задачи** и **Импортировать неструктурированный файл**.
 
-4. Откройте файл Аирлинедемодата. csv, указанный в дистрибутиве R или Python, в зависимости от установленного языка.
+4. Откройте файл AirlineDemoData.csv, входящий в состав дистрибутива R или Python, в зависимости от используемого языка.
 
-   Для R найдите файл **AirlineDemoSmall. csv** в папке C:\PROGRAM Files\Microsoft SQL Server\MSSQL14. MSSQLSERVER\R_SERVICES\library\RevoScaleR\SampleData
+   Для R вам потребуется файл **AirlineDemoSmall.csv** из каталога C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library\RevoScaleR\SampleData
    
-   Для Python найдите файл **AirlineDemoSmall. csv** в папке C:\PROGRAM Files\Microsoft SQL Server\MSSQL14. MSSQLSERVER\PYTHON_SERVICES\Lib\site-packages\revoscalepy\data\sample_data
+   Для Python найдите файл **AirlineDemoSmall.csv** в каталоге C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\Lib\site-packages\revoscalepy\data\sample_data
   
-При выборе файла значения по умолчанию заполняются для имени таблицы и схемы.
+При выборе файла автоматически заполняются значениями по умолчанию поля, определяющие имя таблицы и схему.
 
-  ![Мастер импорта неструктурированных файлов, демонстрирующий демо по умолчанию для авиакомпании](media/import-airlinedemosmall.png)
+  ![Мастер импорта неструктурированных файлов со значениями по умолчанию для демонстрационных данных по авиарейсам](media/import-airlinedemosmall.png)
 
-Щелкните остальные страницы, принимая значения по умолчанию, чтобы импортировать данные.
+Перейдите по всем оставшимся страницам, принимая заданные по умолчанию значения, чтобы импортировать данные.
 
 
 ## <a name="query-the-data"></a>Запрос данных
 
-В качестве шага проверки выполните запрос для подтверждения передачи данных.
+Для проверки выполните запрос и убедитесь, что данные были отправлены.
 
-1. В обозревателе объектов в разделе базы данных щелкните правой кнопкой мыши базу данных **флигхтдата** и запустите новый запрос.
+1. В разделе "Базы данных" обозревателя объектов щелкните правой кнопкой мыши базу **flightdata** и запустите новый запрос.
 
-2. Выполните некоторые простые запросы:
+2. Выполните несколько простых запросов:
 
     ```sql
     SELECT TOP(10) * FROM AirlineDemoSmall;
     SELECT COUNT(*) FROM AirlineDemoSmall;
     ```
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
-На следующем занятии будет создана модель линейной регрессии на основе этих данных.
+В рамках следующего занятия вы создадите модель линейной регрессии на основе этих данных.
 
 + [Создание модели Python с помощью revoscalepy](use-python-revoscalepy-to-create-model.md)

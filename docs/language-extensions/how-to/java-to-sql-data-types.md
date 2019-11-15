@@ -1,20 +1,20 @@
 ---
-title: Типы данных Java, поддерживаемые в SQL Server 2019
+title: Типы данных Java
 titleSuffix: SQL Server Language Extensions
 description: Сопоставление типов данных из Java с SQL Server для входных и выходных структур данных, а также для входных параметров sp_execute_external_script.
 author: dphansen
 ms.author: davidph
-ms.date: 09/05/2019
+ms.date: 11/05/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9daca9c607befe077fcccec20385a36c82b04c6f
-ms.sourcegitcommit: a97d551b252b76a33606348082068ebd6f2c4c8c
+ms.openlocfilehash: d1df57079acd79fc5370d0f2f198dc2d624d6983
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "73588838"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73658838"
 ---
 # <a name="java-and-sql-server-supported-data-types"></a>Типы данных, поддерживаемые Java и SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,6 +52,6 @@ ms.locfileid: "73588838"
 | datetime2 | java.sql.timestamp  | | |
 
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 + [Как вызвать код Java в SQL Server](../how-to/call-java-from-sql.md)

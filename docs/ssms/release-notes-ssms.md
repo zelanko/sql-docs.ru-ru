@@ -10,12 +10,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: ''
 ms.date: 11/04/2019
-ms.openlocfilehash: 9d6e0484e5c3bdda9b46b381d574f84dd216c4f2
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: cdcc955050ebab5702d22fef60628876bd367757
+ms.sourcegitcommit: db715cad313055c8b42d547be686de8755342d65
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73593699"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73801144"
 ---
 # <a name="release-notes-for-sql-server-management-studio-ssms"></a>Заметки о выпуске SQL Server Management Studio (SSMS)
 
@@ -346,7 +346,7 @@ SSMS 18.3.1 является последним общедоступным вы
 |Управляемый экземпляр SQL Azure|Добавлены новые "имена входа AAD" как новый тип входа в SMO и SSMS при подключении к управляемым экземплярам SQL Azure.|
 |AlwaysOn|Повторное хэширование RTO (предполагаемое время восстановления) и RPO (предполагаемая потеря данных) на панели мониторинга SSMS Always On. См. обновленную документацию в [https://docs.microsoft.com/sql/database-engine/availability-groups/windows/monitor-performance-for-always-on-availability-groups](../database-engine/availability-groups/windows/monitor-performance-for-always-on-availability-groups.md).|
 |Always Encrypted| Теперь флажок "Включить Always Encrypted" на новой вкладке "Always Encrypted" в диалоговом окне "Соединение с сервером" позволяет легко включить или отключить шифрование Always Encrypted для подключения к базе данных.|
-|Always Encrypted с безопасными анклавами.| Добавлено несколько улучшений поддержки Always Encrypted с безопасными анклавами в предварительной версии SQL Server 2019.  Текстовое поле для указания URL-адреса аттестации анклава в диалоговом окне подключения к серверу (новая вкладка Always Encrypted).  Новый флажок в диалоговом окне "Новый главный ключ столбца" для указания, будет ли новый главный ключ столбца разрешать вычисления анклава.  Другие диалоговые окна управления ключами Always Encrypted теперь предоставляют сведения, в каких главных ключах столбца разрешены вычисления анклава.|
+|Always Encrypted с безопасными анклавами.| Добавлено несколько улучшений поддержки Always Encrypted с безопасными анклавами в SQL Server 2019.  Текстовое поле для указания URL-адреса аттестации анклава в диалоговом окне подключения к серверу (новая вкладка Always Encrypted).  Новый флажок в диалоговом окне "Новый главный ключ столбца" для указания, будет ли новый главный ключ столбца разрешать вычисления анклава.  Другие диалоговые окна управления ключами Always Encrypted теперь предоставляют сведения, в каких главных ключах столбца разрешены вычисления анклава.|
 |Файлы аудита|Изменен метод проверки подлинности с ключа учетной записи хранения на проверку подлинности на основе Azure AD.|
 |Классификация данных| Переупорядочено меню задач классификации данных: добавлено подменю в меню задач базы данных, а также добавлена возможность открыть отчет из меню без предварительного открытия окна классификации данных.|
 |Классификация данных|Добавлен новый компонент "Классификация данных" в SMO. Объект столбца теперь предоставляет новые свойства: SensitivityLabelName, SensitivityLabelId, SensitivityInformationTypeName, SensitivityInformationTypeId и IsClassified (только для чтения). См. подробности в разделе [ADD SENSITIVITY CLASSIFICATION (Transact-SQL)](https://docs.microsoft.com/sql/t-sql/statements/add-sensitivity-classification-transact-sql)|

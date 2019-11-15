@@ -1,29 +1,28 @@
 ---
-title: Руководство. Поиск строки с использованием регулярных выражений (regex) в Java
-titleSuffix: SQL Server Language Extensions
-description: В этом руководстве показано, как использовать расширения языка SQL Server и выполнять код Java, который осуществляет поиск строки с использованием регулярных выражений.
+title: Руководство. Поиск строк с использованием регулярных выражений в Java
+description: В этом руководстве показано, как использовать расширения языка SQL Server и выполнять код Java, который осуществляет поиск строки с использованием регулярных выражений (regex).
 author: dphansen
 ms.author: davidph
-ms.date: 11/04/2019
+ms.date: 11/05/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 746706c1ef1ee8f9ed393ac57497ffb570bef50c
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 9740e8c93fbac0d7727ba9922342df96d9190e10
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73589008"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73658790"
 ---
 # <a name="tutorial-search-for-a-string-using-regular-expressions-regex-in-java"></a>Руководство. Поиск строки с использованием регулярных выражений (regex) в Java
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-В этом руководстве показано, как использовать [расширения языка SQL Server](../language-extensions-overview.md) и создать класс Java, принимающий два столбца (идентификатор и текст) из SQL Server и регулярное выражение в качестве входного параметра. Класс возвращает в SQL Server два столбца (идентификатор и текст).
+В этом руководстве показано, как использовать [расширения языка SQL Server](../language-extensions-overview.md) и создать класс Java, принимающий два столбца (идентификатор и текст) из SQL Server и регулярное выражение (regex) в качестве входного параметра. Класс возвращает в SQL Server два столбца (идентификатор и текст).
 
 Для заданного текста в текстовом столбце, отправленном в класс Java, код проверяет, выполнено ли данное регулярное выражение, и возвращает этот текст вместе с исходным идентификатором.
 
-В данном примере используется регулярное выражение, которое проверяет, содержит ли текст слово "Java" или "java".
+В данном примере кода используется регулярное выражение, которое проверяет, содержит ли текст слово "Java" или "java".
 
 ## <a name="prerequisites"></a>предварительные требования
 

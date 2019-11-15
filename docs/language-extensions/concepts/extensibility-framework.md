@@ -1,26 +1,26 @@
 ---
 title: Архитектура расширяемости в расширениях языка SQL Server
-titleSuffix: SQL Server Language Extensions
-description: Поддержка внешнего кода для ядра СУБД SQL Server с двойной архитектурой для запуска внешнего языка на базе реляционных данных.
+titleSuffix: ''
+description: Сведения об архитектуре расширяемости, используемой для расширений языка SQL Server и позволяющей выполнять внешний код в SQL Server. В SQL Server 2019 поддерживается язык Java. Код выполняется в языковой среде как расширение основного ядра СУБД.
 author: dphansen
 ms.author: davidph
-ms.date: 11/04/2019
+ms.date: 11/05/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6cefa617dc6068f07b2cc2b684ce0442d7a438e8
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 069736c17191e3583e5a6868c90e640acb6585b2
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73589088"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73658874"
 ---
 # <a name="extensibility-architecture-in-sql-server-language-extensions"></a>Архитектура расширяемости в расширениях языка SQL Server
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Расширения языка SQL Server имеют платформу расширяемости для выполнения внешнего кода, такого как Java, на сервере. Код выполняется в языковой среде как расширение основного ядра СУБД.
+Сведения об архитектуре расширяемости, используемой для расширений языка SQL Server и позволяющей выполнять внешний код в SQL Server. В SQL Server 2019 поддерживается язык Java. Код выполняется в языковой среде как расширение основного ядра СУБД.
 
 ## <a name="background"></a>Историческая справка
 

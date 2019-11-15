@@ -1,35 +1,36 @@
 ---
-title: Выполнение анализа фрагментирования с помощью RevoScaleR rxDataStep
-description: Пошаговое руководство по блокам данных для распределенного анализа с помощью языка R на SQL Server.
+title: Фрагментирующий анализ в RevoScaleR
+description: Пошаговое руководство по фрагментированию данных для распределенного анализа с помощью языка R на SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ed22020b162bfac9f35eb8328ea6409903191a4c
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
-ms.translationtype: MT
+ms.openlocfilehash: 8c7aa853f44a04e55802012e81e59a15d2b5282b
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68714896"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727233"
 ---
-# <a name="perform-chunking-analysis-using-rxdatastep-sql-server-and-revoscaler-tutorial"></a>Выполнение анализа фрагментирования с помощью rxDataStep (учебник по SQL Server и RevoScaleR)
+# <a name="perform-chunking-analysis-using-rxdatastep-sql-server-and-revoscaler-tutorial"></a>Выполнение фрагментирующего анализа с помощью rxDataStep (учебник по SQL Server и RevoScaleR)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Это занятие является частью [учебника RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) по использованию [функций RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) с SQL Server.
+Этот занятие входит в состав [учебника по RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md), в котором описывается использование функций [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) в SQL Server.
 
-На этом занятии вы используете функцию **rxDataStep** для обработки данных в блоках, не требуя, чтобы весь набор данных загружался в память и обрабатывался в один момент времени, как в традиционном языке R. Функции **rxDataStep** считывают данные в блоке, применяют функции R к каждому блоку данных в свою очередь, а затем сохраняют сводные результаты для каждого фрагмента в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] общем источнике данных. При считывании всех данных результаты объединяются.
+В этом занятии вы используете функцию **rxDataStep** для обработки данных блоками, вместо того чтобы загружать в память и сразу обрабатывать весь набор данных, как в традиционных системах R. Функции **rxDataStep** считывают данные блоками, а функции R используются для последовательной обработки каждого блока данных. Затем сводные результаты для каждого блока сохраняются в единый источник данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. После считывания всех данных результаты объединяются.
 
 > [!TIP]
-> На этом занятии вы Вычислите таблицу с непредвиденными обстоятельствами с помощью **табличной** функции в R. Этот пример предназначен только для инструкций. 
+> На этом занятии вы вычислите таблицу сопряженности с непредвиденными обстоятельствами с помощью функции **table** в R. Этот пример предназначен только для обучения. 
 > 
-> Если необходимо табличировать реальные наборы данных, мы рекомендуем использовать функции **ркскросстабс** или **rxCube** в **RevoScaleR**, которые оптимизированы для этой операции.
+> Если требуется внести в таблицу наборы реальных неструктурированных данных, рекомендуется использовать функции **rxCrossTabs** или **rxCube** в **RevoScaleR** — они оптимизированы для решения подобных задач.
 
 ## <a name="partition-data-by-values"></a>Секционирование данных по значениям
 
-1. Создайте пользовательскую функцию R, которая вызывает функцию **таблицы** r для каждого фрагмента данных, и назовите новую функцию **ProcessChunk**.
+1. Создайте пользовательскую функцию R, которая вызывает функцию **table** для каждого блока данных, и назовите ее **ProcessChunk**.
   
     ```R
     ProcessChunk <- function( dataList) {
@@ -54,7 +55,7 @@ ms.locfileid: "68714896"
     rxSetComputeContext(sqlCompute)
     ```
   
-3. Определите SQL Server источник данных для хранения обрабатываемых данных. Для начала назначьте переменной SQL-запрос. Затем используйте эту переменную в аргументе *sqlQuery* нового источника данных SQL Server.
+3. Определите источник данных SQL Server для хранения обрабатываемых данных. Для начала назначьте переменной SQL-запрос. Используйте эту переменную в аргументе *sqlQuery* нового источника данных SQL Server.
   
     ```R
     dayQuery <-  "SELECT DayOfWeek FROM AirDemoSmallTest"
@@ -65,9 +66,9 @@ ms.locfileid: "68714896"
             levels = as.character(1:7))))
     ```
 
-4. При необходимости можно запустить **функцию rxgetvarinfo** для этого источника данных. На этом этапе он содержит один столбец: *Var 1: DayOfWeek, Type: Factor, недоступность уровней коэффициента*
+4. При необходимости можно запустить **rxGetVarInfo** для этого источника данных. На этом этапе он содержит один столбец. *Var 1: DayOfWeek, Type: factor, no factor levels available* (Переменная 1: день недели, тип: признак, уровни признаков недоступны)
      
-5. Прежде чем применять эту переменную-признак к исходным данным, создайте отдельную таблицу для хранения промежуточных результатов. Опять же, вы просто используете функцию **RxSqlServerData** , чтобы определить данные, и обязательно удалите все существующие таблицы с одним и тем же именем.
+5. Прежде чем применять эту переменную-признак к исходным данным, создайте отдельную таблицу для хранения промежуточных результатов. Используйте функцию **RxSqlServerData** для определения данных и обязательно удалите все имеющиеся таблицы с тем же именем.
   
     ```R
     iroDataSource = RxSqlServerData(table = "iroResults",   connectionString = sqlConnString)
@@ -75,13 +76,13 @@ ms.locfileid: "68714896"
     if (rxSqlServerTableExists(table = "iroResults",  connectionString = sqlConnString))  { rxSqlServerDropTable( table = "iroResults", connectionString = sqlConnString) }
     ```
   
-7.  Вызовите пользовательскую функцию **ProcessChunk** для преобразования данных по мере их считывания, используя ее в качестве аргумента *transformFunc* функции **rxDataStep** .
+7.  Вызовите пользовательскую функцию **ProcessChunk**, чтобы преобразовывать данные во время чтения. Эта функция будет использоваться в качестве аргумента *transformFunc* для функции **rxDataStep**.
   
     ```R
     rxDataStep( inData = inDataSource, outFile = iroDataSource, transformFunc = ProcessChunk, overwrite = TRUE)
     ```
   
-8.  Чтобы просмотреть промежуточные результаты **ProcessChunk**, назначьте результаты **rxImport** переменной, а затем выводите результаты на консоль.
+8.  Чтобы просмотреть промежуточные результаты функции **ProcessChunk**, назначьте результаты **rxImport** переменной, а затем выведите результаты на консоль.
   
     ```R
     iroResults <- rxImport(iroDataSource)
@@ -108,7 +109,7 @@ ms.locfileid: "68714896"
     ---  |   ---  |   ---  |   ---  |   ---  |   ---  |   ---
     97975 | 77725 | 78875 | 81304 | 82987 | 86159 | 94975 
 
-10. Чтобы удалить таблицу промежуточных результатов, выполните вызов **rxSqlServerDropTable**.
+10. Чтобы удалить таблицу с промежуточными результатами, вызовите функцию **rxSqlServerDropTable**.
   
     ```R
     rxSqlServerDropTable( table = "iroResults", connectionString = sqlConnString)

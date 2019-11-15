@@ -1,7 +1,7 @@
 ---
 title: Развертывание HDFS или Spark с высоким уровнем доступности
-titleSuffix: Deploy HDFS or Spark with high availability
-description: Узнайте, как развернуть [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (предварительная версия) с высоким уровнем доступности.
+titleSuffix: SQL Server Big Data Clusters
+description: Сведения о развертывании кластеров больших данных SQL Server с высоким уровнем доступности.
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: afd8aa5d124e7dc6c7d37bb44c9b64129f8fa564
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: fc93fbeb3cf02b205cadba92b6d528701ec53cbe
+ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532005"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73706335"
 ---
 # <a name="deploy-hdfs-name-node-and-shared-spark-services-in-a-highly-available-configuration"></a>Развертывание узла имен HDFS и общих служб Spark в конфигурации с высоким уровнем доступности
 
@@ -100,7 +100,7 @@ ms.locfileid: "73532005"
 
 - Все конфигурации должны быть заданы во время развертывания кластера больших данных. В выпуске SQL Server 2019 CU1 нельзя включить конфигурацию с высоким уровнем доступности после развертывания.
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 - Дополнительные сведения об использовании файлов конфигурации в развертываниях кластеров больших данных см. в статье [Развертывание [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] в Kubernetes](deployment-guidance.md#configfile).
 - Дополнительные сведения о вариантах главного экземпляра SQL Server с высоким уровнем доступности в кластерах больших данных см. в разделе [Развертывание главного экземпляра SQL Server с высоким уровнем доступности](deployment-high-availability.md).

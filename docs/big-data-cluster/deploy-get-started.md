@@ -1,7 +1,7 @@
 ---
 title: Начало работы
-titleSuffix: SQL Server big data clusters
-description: Ознакомьтесь с пошаговыми инструкциями и ресурсами по развертыванию [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (предварительная версия).
+titleSuffix: SQL Server Big Data Clusters
+description: Ознакомьтесь с инструкциями и ресурсами по развертыванию Кластеров больших данных SQL Server.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: de20b8bea27f3b8003ab11941f044d4246155eeb
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 2bbb4c05a6760709fcb873cd8c39f301c37aeb2b
+ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532205"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73706360"
 ---
 # <a name="get-started-with-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Начало работы с [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
@@ -80,6 +80,6 @@ ms.locfileid: "73532205"
 
 - [Развертывание кластера больших данных с помощью записных книжек Azure Data Studio](deploy-notebooks.md).
 
-## <a name="next-steps"></a>Дальнейшие действия
+## <a name="next-steps"></a>Следующие шаги
 
 После успешного развертывания кластера больших данных [подключитесь к кластеру](connect-to-big-data-cluster.md) и рассмотрите возможность [загрузки демонстрационных данных](tutorial-load-sample-data.md) для использования с несколькими пошаговыми руководствами.
