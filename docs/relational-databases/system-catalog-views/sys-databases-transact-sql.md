@@ -1,7 +1,7 @@
 ---
 title: sys. databases (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
-ms.date: 03/09/2017
+ms.date: 11/14/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -20,12 +20,12 @@ ms.assetid: 46c288c1-3410-4d68-a027-3bbf33239289
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 444be64a8e512011bb20ee103ad0ea459fc413ed
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: c33f30366ef2d63f888684c9afedb2a949ecd589
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73981857"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095866"
 ---
 # <a name="sysdatabases-transact-sql"></a>sys.databases (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "73981857"
   
 Если база данных не `ONLINE`или `AUTO_CLOSE` имеет значение `ON` и база данных закрыта, то значения некоторых столбцов могут быть `NULL`. Если база данных `OFFLINE`, соответствующая строка не видна пользователям с низким уровнем привилегий. Чтобы просмотреть соответствующую строку, если база данных `OFFLINE`, пользователь должен иметь по крайней мере `ALTER ANY DATABASE` разрешение уровня сервера или разрешение `CREATE DATABASE` в базе данных `master`.  
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Data type|Описание|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Имя базы данных, уникальное внутри экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или на сервере [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
 |**database_id**|**int**|Идентификатор базы данных, уникальный внутри экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или на сервере [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
@@ -76,7 +76,7 @@ ms.locfileid: "73981857"
 |**is_cursor_close_on_commit_on**|**бит**|1 = CURSOR_CLOSE_ON_COMMIT в состоянии ON<br /> 0 = CURSOR_CLOSE_ON_COMMIT в состоянии OFF|  
 |**is_local_cursor_default**|**бит**|1 = CURSOR_DEFAULT соответствует локальному курсору<br /> 0 = CURSOR_DEFAULT соответствует глобальному курсору|  
 |**is_fulltext_enabled**|**бит**|1 = полнотекстовый режим включен для данной базы данных<br /> 0 = полнотекстовый режим отключен для данной базы данных|  
-|**is_trustworthy_on**|**бит**|1 = база данных помечена как надежная<br /> 0 = база данных не помечена как надежная|  
+|**is_trustworthy_on**|**бит**|1 = база данных помечена как надежная<br /> 0 = база данных не помечена как надежная<br /> По умолчанию в восстановленных или прикрепленных базах данных брокер отключен. Исключением является зеркальное отображение базы данных, при котором брокер включается после отработки отказа.|  
 |**is_db_chaining_on**|**бит**|1 = межбазовые цепочки владения в состоянии ON<br /> 0 = межбазовые цепочки владения в состоянии OFF|  
 |**is_parameterization_forced**|**бит**|1 = параметризация в состоянии FORCED<br /> 0 = параметризация в состоянии SIMPLE|  
 |**is_master_key_encrypted_by_server**|**бит**|1 = база данных имеет главный ключ шифрования<br /> 0 = база данных не имеет главного ключа шифрования|  
@@ -93,7 +93,7 @@ ms.locfileid: "73981857"
 |**is_date_correlation_on**|**бит**|1 = DATE_CORRELATION_OPTIMIZATION в состоянии ON<br /> 0 = DATE_CORRELATION_OPTIMIZATION в состоянии OFF|  
 |**is_cdc_enabled**|**бит**|1 = в базе данных включена система отслеживания измененных данных. Дополнительные сведения см. в разделе [sys. &#40;SP_CDC_ENABLE_DB Transact-&#41;SQL](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql.md).|  
 |**is_encrypted**|**бит**|Указывает, зашифрована ли база данных (отражает состояние Last, заданное с помощью предложения `ALTER DATABASE SET ENCRYPTION`). Может использоваться одно из следующих значений:<br /> 1 = зашифрована<br /> 0 = не зашифрована.<br /> Дополнительные сведения о шифровании баз данных см. в статье [Прозрачное шифрование данных (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md).<br /> Если база данных находится в процессе расшифровки, `is_encrypted` отображает значение 0. Состояние процесса шифрования можно просмотреть с помощью динамического административного представления [sys. dm_database_encryption_keys](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md) .|  
-|**is_honor_broker_priority_on**|**бит**|Указывает, учитывает ли база данных приоритеты диалога (отражает Последнее состояние, заданное с помощью предложения `ALTER DATABASE SET HONOR_BROKER_PRIORITY`). Может использоваться одно из следующих значений:<br /> 1 = HONOR_BROKER_PRIORITY имеет значение ON;<br /> 0 = HONOR_BROKER_PRIORITY имеет значение OFF.|  
+|**is_honor_broker_priority_on**|**бит**|Указывает, учитывает ли база данных приоритеты диалога (отражает Последнее состояние, заданное с помощью предложения `ALTER DATABASE SET HONOR_BROKER_PRIORITY`). Может использоваться одно из следующих значений:<br /> 1 = HONOR_BROKER_PRIORITY имеет значение ON;<br /> 0 = HONOR_BROKER_PRIORITY имеет значение OFF.<br /> По умолчанию в восстановленных или прикрепленных базах данных брокер отключен. Исключением является зеркальное отображение базы данных, при котором брокер включается после отработки отказа.|  
 |**replica_id**|**uniqueidentifier**|Уникальный идентификатор локальной реплики доступности [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] группы доступности, если таковая имеется, частью которой является база данных.<br /> NULL = база данных не является частью реплики доступности в группе доступности.<br /> **Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздних версий) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
 |**group_database_id**|**uniqueidentifier**|Уникальный идентификатор базы данных в Always On группе доступности (при наличии), в которой участвует база данных. **group_database_id** одинаковы для этой базы данных в первичной реплике и на каждой вторичной реплике, в которой база данных была присоединена к группе доступности.<br /> NULL = база данных не является частью реплики доступности в любой группе доступности.<br /> **Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздних версий) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
 |**resource_pool_id**|**int**|Идентификатор пула ресурсов, сопоставленного с этой базой данных. Этот пул ресурсов управляет общим объемом памяти, доступным оптимизированным для памяти таблицам из этой базы данных.<br /> **Область применения**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и более поздних версий|  

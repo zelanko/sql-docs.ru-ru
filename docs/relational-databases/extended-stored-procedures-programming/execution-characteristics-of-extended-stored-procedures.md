@@ -1,6 +1,5 @@
 ---
-title: Характеристики выполнения расширенных хранимых процедур | Документация Майкрософт
-ms.custom: ''
+title: Характеристики выполнения расширенных хранимых процедур
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,12 +12,13 @@ helpviewer_keywords:
 ms.assetid: 6fe1f7e8-cc02-49df-8a2a-d47a96ec3567
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 26a5653610f0c950c2d73af603bd95ccfeda4b76
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 74ecd20f28e58e133b5710d3cbd9d18b27ca7756
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68064348"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095988"
 ---
 # <a name="execution-characteristics-of-extended-stored-procedures"></a>Характеристики выполнения расширенных хранимых процедур
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "68064348"
   
  Выполнение расширенных хранимых процедур имеет следующие характеристики:  
   
--   Расширенная хранимая процедура выполняется в контексте безопасности [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+-   Функция расширенной хранимой процедуры выполняется в контексте безопасности [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 -   расширенная хранимая процедура выполняется в пространстве процесса [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)];  
   
@@ -39,7 +39,7 @@ ms.locfileid: "68064348"
   
 -  
   
- После расширенной хранимой процедуры, при загрузке библиотеки DLL, библиотеки DLL остается загруженной в адресном пространстве сервера, пока [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] остановлена или администратор явно выгружает библиотеку DLL с помощью инструкции DBCC *DLL_name* (FREE).  
+ После загрузки библиотеки DLL расширенной хранимой процедуры библиотека DLL остается загруженной в адресное пространство сервера до тех пор, пока [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не будет остановлена или администратор явно выгрузит библиотеку DLL с помощью DBCC *DLL_name* (Free).  
   
  Расширенная хранимая процедура может выполняться в [!INCLUDE[tsql](../../includes/tsql-md.md)] как хранимая процедура с помощью инструкции EXECUTE:  
   
@@ -51,7 +51,7 @@ EXECUTE @retval = xp_extendedProcName @param1, @param2 OUTPUT
  \@ *retval*  
  Возвращаемое значение.  
   
- \@ *содержит param1*  
+ \@ *param1*  
  Входной параметр.  
   
  \@ *Param2*  
@@ -60,7 +60,7 @@ EXECUTE @retval = xp_extendedProcName @param1, @param2 OUTPUT
 > [!CAUTION]  
 >  Расширенные хранимые процедуры увеличивают производительность и расширяют возможности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Однако из-за того, что DLL-библиотека расширенной хранимой процедуры и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] совместно используют одно и то же адресное пространство, проблемная процедура может отрицательно повлиять на работу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Хотя исключения, вызываемые DLL-библиотеками расширенных хранимых процедур, обрабатываются [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], тем не менее можно повредить области данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. В целях безопасности добавлять расширенные хранимые процедуры к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] могут только системные администраторы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Перед установкой эти процедуры следует тщательно протестировать.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также статью  
  [Программирование расширенных хранимых процедур](../../relational-databases/extended-stored-procedures-programming/database-engine-extended-stored-procedures-programming.md)   
  [Запрос расширенных хранимых процедур, установленных в SQL Server](../../relational-databases/extended-stored-procedures-programming/querying-extended-stored-procedures-installed-in-sql-server.md)  
   

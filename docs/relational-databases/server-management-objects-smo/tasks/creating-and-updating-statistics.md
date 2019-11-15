@@ -1,6 +1,6 @@
 ---
-title: Создание и обновление статистики | Документация Майкрософт
-ms.custom: ''
+title: Создание и обновление статистики
+ms.custom: seo-dt-2019
 ms.date: 08/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,12 +13,12 @@ ms.assetid: 47a0a172-a969-4deb-bca9-dd04401a0fe1
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7a1a48bd559ee3af794129d7a6559efba65b30c8
-ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
+ms.openlocfilehash: 9a63d9760142ec3d3f964d80334b2244a4cac4be
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "70911158"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095172"
 ---
 # <a name="creating-and-updating-statistics"></a>Создание и обновление статистики
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "70911158"
  Собирать статистические данные можно по любому столбцу с помощью объектов <xref:Microsoft.SqlServer.Management.Smo.Statistic> и <xref:Microsoft.SqlServer.Management.Smo.StatisticColumn>. С помощью метода <xref:Microsoft.SqlServer.Management.Smo.Statistic.Update%2A> можно обновить статистику в объекте <xref:Microsoft.SqlServer.Management.Smo.Statistic>. Результаты можно просмотреть в оптимизаторе запросов.  
   
 ## <a name="example"></a>Пример  
- Чтобы использовать какой-либо из представленных примеров кода, нужно выбрать среду, шаблон и язык программирования, с помощью которых будет создаваться приложение. Дополнительные сведения см. [в разделе Создание проекта Visual&#35; C SMO в Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Чтобы использовать какой-либо из представленных примеров кода, необходимо выбрать среду, шаблон и язык программирования, с помощью которых будет создаваться приложение. Дополнительные сведения см. [в разделе Создание проекта Visual&#35; C SMO в Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="creating-and-update-statistics-in-visual-basic"></a>Создание и обновление статистики на языке Visual Basic  
  В этом примере кода в существующей базе данных создается новая таблица, для которой создаются объекты <xref:Microsoft.SqlServer.Management.Smo.Statistic> и <xref:Microsoft.SqlServer.Management.Smo.StatisticColumn>.  

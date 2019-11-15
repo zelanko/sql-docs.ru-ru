@@ -1,6 +1,6 @@
 ---
-title: Управление службами и сетевыми параметрами с помощью поставщика WMI | Документация Майкрософт
-ms.custom: ''
+title: Управление службами и сетевыми настройками с помощью поставщика WMI
+ms.custom: seo-dt-2019
 ms.date: 08/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -16,12 +16,12 @@ ms.assetid: ef8c3986-1098-4f21-b03a-f1f6bdb51c26
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fb8cb65fdfac26226888682342eed31fd5e9c3c8
-ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
+ms.openlocfilehash: 0807a034f05d723ae19c86e8b00d08309176551c
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "70148421"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095156"
 ---
 # <a name="managing-services-and-network-settings-by-using-wmi-provider"></a>Управление службами и сетевыми настройками с помощью поставщика WMI
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -31,10 +31,10 @@ ms.locfileid: "70148421"
  Объект <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer> действует независимо от соединения, установленного объектом <xref:Microsoft.SqlServer.Management.Smo.Server> с экземпляром [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], и использует учетные данные Windows для соединения со службой WMI.  
   
 ## <a name="example"></a>Пример  
-Чтобы использовать какой-либо из представленных примеров кода, нужно выбрать среду, шаблон и язык программирования, с помощью которых будет создаваться приложение. Дополнительные сведения см. [в разделе Создание проекта Visual&#35; C SMO в Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+Чтобы использовать какой-либо из представленных примеров кода, необходимо выбрать среду, шаблон и язык программирования, с помощью которых будет создаваться приложение. Дополнительные сведения см. [в разделе Создание проекта Visual&#35; C SMO в Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
 
   
- Для программ, использующих [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поставщик WMI, необходимо включить оператор **Imports** , чтобы уточнить пространство имен WMI. Вставьте инструкцию после других инструкций **Imports** и перед любыми декларациями в приложении.  
+ Для программ, использующих поставщик WMI [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], необходимо включить инструкцию **Imports** , чтобы уточнить пространство имен WMI. Вставьте инструкцию после других инструкций **Imports** и перед любыми декларациями в приложении.  
   
  `Imports Microsoft.SqlServer.Management.Smo`  
   
@@ -212,7 +212,7 @@ $svc.ServiceState
   
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также статью  
  [Основные понятия о поставщике WMI для управления конфигурацией](../../../relational-databases/wmi-provider-configuration/wmi-provider-for-configuration-management.md)  
   
   

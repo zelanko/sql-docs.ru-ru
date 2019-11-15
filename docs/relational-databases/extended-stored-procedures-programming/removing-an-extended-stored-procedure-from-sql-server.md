@@ -1,6 +1,5 @@
 ---
-title: Удаление расширенной хранимой процедуры из SQL Server | Документация Майкрософт
-ms.custom: ''
+title: Удаление расширенной хранимой процедуры
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -15,12 +14,13 @@ helpviewer_keywords:
 ms.assetid: 7827e574-3f59-4279-9a9b-532582e041cb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f69de90386263df8b2be4638e257dcf58cf5dad7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: ec61cf630d606977689d3fb3763cce8bd8b705c8
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68064298"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095437"
 ---
 # <a name="removing-an-extended-stored-procedure-from-sql-server"></a>Удаление расширенной хранимой процедуры из SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,15 +28,15 @@ ms.locfileid: "68064298"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Пользуйтесь вместо этого интеграцией со средой CLR.  
   
- Для удаления каждого расширенная хранимая процедура в пользовательской расширенной хранимой процедуры библиотеки DLL, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] системный администратор должен выполнить **sp_dropextendedproc** системную хранимую процедуру, указав имя функции и имя библиотеки DLL, в которой размещается функция. Например, эта команда удаляет функцию **xp_hello**, расположенного в библиотеку DLL с именем xp_hello.dll, из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
+ Чтобы удалить каждую функцию расширенной хранимой процедуры в пользовательской библиотеке DLL расширенной хранимой процедуры, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] системный администратор должен запустить **sp_dropextendedproc** системную хранимую процедуру, указав имя функции и имя библиотеки DLL, в которой находится эта функция. Например, эта команда удаляет функцию **xp_hello**, расположенную в библиотеке DLL с именем xp_hello. dll, из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
 ```  
 sp_dropextendedproc 'xp_hello'  
 ```  
   
- Начиная с версии [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], **sp_dropextendedproc** не удаляет Системные расширенные хранимые процедуры. Вместо этого системный администратор должен запретить разрешение EXECUTE на расширенную хранимую процедуру для **открытый** роли.  
+ Начиная с [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]**sp_dropextendedproc** не удаляет Системные расширенные хранимые процедуры. Вместо этого системный администратор должен отклонить разрешение EXECUTE на расширенную хранимую процедуру для роли **Public** .  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также статью  
  [sp_dropextendedproc (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-dropextendedproc-transact-sql.md)  
   
   

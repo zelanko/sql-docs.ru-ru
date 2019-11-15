@@ -1,6 +1,5 @@
 ---
-title: Запрос расширенных хранимых процедур, установленных в SQL Server | Документация Майкрософт
-ms.custom: ''
+title: Запрос расширенных хранимых процедур
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,12 +11,13 @@ helpviewer_keywords:
 ms.assetid: e02348e6-dba6-438a-98b6-684244bb034d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 33c2e4d945f4db077df843bd5622d883c719fd85
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 875d4f252058d442c91915eb69784507c39b2e94
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68064324"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095947"
 ---
 # <a name="querying-extended-stored-procedures-installed-in-sql-server"></a>Запрос расширенных хранимых процедур, установленных в SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -25,20 +25,20 @@ ms.locfileid: "68064324"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Используйте вместо этого интеграцию со средой CLR.  
   
- Объект [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] прошедшего проверку подлинности пользователь может отобразить в настоящее время определены расширенные хранимые процедуры и имя библиотеки DLL, которым принадлежит, выполнив **sp_helpextendedproc** системной процедуры. Например, в следующем примере возвращается библиотеки DLL, к которому **xp_hello** принадлежит:  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] прошедшем проверку подлинности пользователь может отобразить определенные в данный момент расширенные хранимые процедуры и имя библиотеки DLL, к которой принадлежит каждая из них, выполнив процедуру **sp_helpextendedproc** системы. Например, в следующем примере возвращается библиотека DLL, к которой принадлежит **xp_hello** :  
   
 ```  
 sp_helpextendedproc 'xp_hello'  
 ```  
   
- Если **sp_helpextendedproc** выполняется без указания расширенной хранимой процедуры, расширенные хранимые процедуры и их DLL-библиотеки.  
+ Если **sp_helpextendedproc** выполняется без указания расширенной хранимой процедуры, отображаются все расширенные хранимые процедуры и их библиотеки DLL.  
   
 > [!IMPORTANT]  
->  Сведения будут возвращены только для тех расширенных хранимых процедур, владельцем которых является вошедший в систему пользователь или на которые он имеет разрешение. Только члены **sysadmin** предопределенной роли сервера и **db_owner**, **db_securityadmin**и **db_ddladmin** базы данных роли можно просмотреть сведения для всех расширенных хранимых процедур.  
+>  Сведения будут возвращены только для тех расширенных хранимых процедур, владельцем которых является вошедший в систему пользователь или на которые он имеет разрешение. Только члены предопределенной роли сервера **sysadmin** и **db_owner**, **db_securityadmin**и предопределенных ролей базы данных **db_ddladmin** могут просматривать сведения обо всех расширенных хранимых процедурах.  
   
-## <a name="see-also"></a>См. также  
- [sp_helpextendedproc &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpextendedproc-transact-sql.md)   
- [sp_addextendedproc &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addextendedproc-transact-sql.md)   
+## <a name="see-also"></a>См. также статью  
+ [sp_helpextendedproc &#40;  Transact-&#41; SQL](../../relational-databases/system-stored-procedures/sp-helpextendedproc-transact-sql.md)  
+ [sp_addextendedproc &#40;  Transact-&#41; SQL](../../relational-databases/system-stored-procedures/sp-addextendedproc-transact-sql.md)  
  [sp_dropextendedproc (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-dropextendedproc-transact-sql.md)  
   
   

@@ -1,6 +1,6 @@
 ---
-title: Задачи, связанные с программированием | Документация Майкрософт
-ms.custom: ''
+title: Задачи, связанные с программированием
+ms.custom: seo-dt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -19,12 +19,12 @@ ms.assetid: a15949ef-88d9-4205-892e-0b66588b4fcc
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f23b7844bcff234594db87875e89a89f0f073be9
-ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
+ms.openlocfilehash: 0ba3ec14f7d94b493b5cc93e3b6b46f0565e38ab
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "70148398"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095202"
 ---
 # <a name="programming-specific-tasks"></a>Задачи, связанные с программированием
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]

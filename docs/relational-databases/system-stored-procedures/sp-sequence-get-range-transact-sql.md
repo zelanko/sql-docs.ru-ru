@@ -19,12 +19,12 @@ ms.assetid: 8ca6b0c6-8d9c-4eee-b02f-51ddffab4492
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2fd136eddc1aba4dc5a927d6ca027c17dfb38485
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.openlocfilehash: 49311ac52d9dba7c31e48f68b4363ead5a2c0b2a
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/14/2019
-ms.locfileid: "72304762"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095339"
 ---
 # <a name="sp_sequence_get_range-transact-sql"></a>sp_sequence_get_range (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
@@ -53,25 +53,25 @@ sp_sequence_get_range [ @sequence_name = ] N'<sequence>'
 ## <a name="arguments"></a>Аргументы  
 `[ @sequence_name = ] N'sequence'` имя объекта последовательности. Схема является необязательной. *sequence_name* имеет тип **nvarchar (776)** .  
   
-`[ @range_size = ] range_size` количество значений для выборки из последовательности. **\@range_size** имеет тип **bigint**.  
+`[ @range_size = ] range_size` число значений для выборки из последовательности. **\@range_size** имеет тип **bigint**.  
   
-параметр вывода `[ @range_first_value = ] range_first_value` возвращает первое (минимальное или максимальное) значение объекта последовательности, используемого для вычисления запрошенного диапазона. **\@range_first_value** имеет тип **sql_variant** с тем же базовым типом, что и объект последовательности, используемый в запросе.  
+`[ @range_first_value = ] range_first_value` выходной параметр возвращает первое (минимальное или максимальное) значение объекта последовательности, используемого для вычисления запрошенного диапазона. **\@range_first_value** **sql_variant** с тем же базовым типом, что и у объекта последовательности, используемого в запросе.  
   
-`[ @range_last_value = ] range_last_value` Необязательный выходной параметр возвращает последнее значение запрошенного диапазона. **\@range_last_value** имеет тип **sql_variant** с тем же базовым типом, что и объект последовательности, используемый в запросе.  
+`[ @range_last_value = ] range_last_value` Необязательный выходной параметр возвращает последнее значение запрошенного диапазона. **\@range_last_value** **sql_variant** с тем же базовым типом, что и у объекта последовательности, используемого в запросе.  
   
 `[ @range_cycle_count = ] range_cycle_count` Необязательный выходной параметр возвращает количество раз, когда объект последовательности был циклическим для возврата запрошенного диапазона. **\@range_cycle_count** имеет **тип int**.  
   
-`[ @sequence_increment = ] sequence_increment` Необязательный выходной параметр возвращает приращение объекта последовательности, используемого для вычисления запрошенного диапазона. **\@sequence_increment** имеет тип **sql_variant** с тем же базовым типом, что и объект последовательности, используемый в запросе.  
+`[ @sequence_increment = ] sequence_increment` Необязательный выходной параметр возвращает приращение объекта последовательности, используемого для вычисления запрошенного диапазона. **\@sequence_increment** **sql_variant** с тем же базовым типом, что и у объекта последовательности, используемого в запросе.  
   
-`[ @sequence_min_value = ] sequence_min_value` Необязательный выходной параметр возвращает минимальное значение объекта последовательности. **\@sequence_min_value** имеет тип **sql_variant** с тем же базовым типом, что и объект последовательности, используемый в запросе.  
+`[ @sequence_min_value = ] sequence_min_value` Необязательный выходной параметр возвращает минимальное значение объекта последовательности. **\@sequence_min_value** **sql_variant** с тем же базовым типом, что и у объекта последовательности, используемого в запросе.  
   
-`[ @sequence_max_value = ] sequence_max_value` Необязательный выходной параметр возвращает максимальное значение объекта последовательности. **\@sequence_max_value** имеет тип **sql_variant** с тем же базовым типом, что и объект последовательности, используемый в запросе.  
+`[ @sequence_max_value = ] sequence_max_value` Необязательный выходной параметр возвращает максимальное значение объекта последовательности. **\@sequence_max_value** **sql_variant** с тем же базовым типом, что и у объекта последовательности, используемого в запросе.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
-## <a name="remarks"></a>Примечания  
- sp_sequence_get_rangeis в представлении sys. Схема и может быть указана как sys. sp_sequence_get_range.  
+## <a name="remarks"></a>Remarks  
+ sp_sequence_get_rangeis в представлении sys. на схему и можно ссылаться как на sys. sp_sequence_get_range.  
   
 ### <a name="cycling-sequences"></a>Циклические последовательности  
  При необходимости объект последовательности может выполняться циклически требуемое число раз для обработки запрошенного диапазона. Количество циклов возвращается вызывающему методу через параметр `@range_cycle_count`.  
@@ -109,8 +109,7 @@ CREATE SEQUENCE Test.RangeSeq
  Следующая инструкция получает четыре порядковых номера из объекта последовательности Test. Ранжесек и возвращает первый из чисел пользователю.  
   
 ```  
-DECLARE @range_first_value sql_variant ,   
-        @range_first_value_output sql_variant ;  
+DECLARE @range_first_value_output sql_variant ;  
   
 EXEC sp_sequence_get_range  
 @sequence_name = N'Test.RangeSeq'  
@@ -121,7 +120,7 @@ SELECT @range_first_value_output AS FirstNumber ;
   
 ```  
   
-### <a name="b-returning-all-output-parameters"></a>Б. Возврат всех выходных параметров  
+### <a name="b-returning-all-output-parameters"></a>б. Возврат всех выходных параметров  
  В следующем примере возвращаются все выходные значения процедуры sp_sequence_get_range.  
   
 ```  
@@ -180,7 +179,7 @@ Console.WriteLine(firstValueInRange.Value);
   
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также статью  
  [CREATE SEQUENCE (Transact-SQL)](../../t-sql/statements/create-sequence-transact-sql.md)   
  [ALTER SEQUENCE (Transact-SQL)](../../t-sql/statements/alter-sequence-transact-sql.md)   
  [DROP SEQUENCE (Transact-SQL)](../../t-sql/statements/drop-sequence-transact-sql.md)   

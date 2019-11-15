@@ -18,20 +18,20 @@ helpviewer_keywords:
 ms.assetid: 3f0defd0-478d-4e7f-96be-8795c9de4e3f
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 592f39e997574313e9e61e626a90aa3ac5fa310f
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: a480ba134a4f3049f7501cb68a0331ac8fdd386b
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73982334"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095372"
 ---
 # <a name="sysdm_server_services-transact-sql"></a>sys.dm_server_services (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Возвращает сведения о службах SQL Server, полнотекстового поиска и агента SQL Server в текущем экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Это динамическое административное представление позволяет получить сведения о состоянии данных служб.  
+  Возвращает сведения о SQL Server, полнотекстовом панель запуска SQL Server службе (SQL Server 2017 +) и службах агент SQL Server в текущем экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Это динамическое административное представление позволяет получить сведения о состоянии данных служб.  
   
  
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Data type|Описание|  
 |-----------------|---------------|-----------------|  
 |servicename|**nvarchar(256)**|Имя [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], полнотекстового или агент SQL Server службы. Не может иметь значение null.|  
 |startup_type|**int**|Показывает режим запуска службы. Ниже приведены возможные значения и соответствующие им описания.<br /><br /> 0: другое<br />1: другое<br />2: автоматически<br />3: вручную<br />4: отключено<br /><br /> Допускает значение NULL.|  

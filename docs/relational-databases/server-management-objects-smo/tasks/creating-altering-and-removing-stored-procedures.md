@@ -1,6 +1,6 @@
 ---
-title: Создание, изменение и удаление хранимых процедур | Документация Майкрософт
-ms.custom: ''
+title: Создание, изменение и удаление хранимых процедур
+ms.custom: seo-dt-2019
 ms.date: 08/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,22 +13,22 @@ ms.assetid: 2a072f9c-8f11-4364-ab71-3990735a8d66
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 902f2a4b2dd60b96f26ed8d93eff28471baeb63c
-ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
+ms.openlocfilehash: ff489b218f783201d5ea3bd0a0165951f51ff4e9
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "70148500"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095496"
 ---
 # <a name="creating-altering-and-removing-stored-procedures"></a>Создание, изменение и удаление хранимых процедур
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   В управляющих объектах [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] SMO хранимые процедуры представлены объектом <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure>.  
   
- Создание объекта <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> в SMO требует, чтобы свойство <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure.TextBody%2A> указывало скрипт [!INCLUDE[tsql](../../../includes/tsql-md.md)], определяющий хранимую процедуру. Параметры нуждаются в \@ префиксе и должны создаваться по отдельности с <xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter> помощью <xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter> объектов и добавления <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> в коллекцию объекта.  
+ Создание объекта <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> в SMO требует, чтобы свойство <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure.TextBody%2A> указывало скрипт [!INCLUDE[tsql](../../../includes/tsql-md.md)], определяющий хранимую процедуру. Для параметров требуется префикс \@ и его необходимо создать отдельно с помощью <xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter> объектов и добавления в коллекцию <xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter> объекта <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure>.  
   
 ## <a name="example"></a>Пример  
- Чтобы использовать какой-либо из представленных примеров кода, нужно выбрать среду, шаблон и язык программирования, с помощью которых будет создаваться приложение. Дополнительные сведения см. [в разделе Создание проекта Visual&#35; C SMO в Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Чтобы использовать какой-либо из представленных примеров кода, необходимо выбрать среду, шаблон и язык программирования, с помощью которых будет создаваться приложение. Дополнительные сведения см. [в разделе Создание проекта Visual&#35; C SMO в Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="creating-altering-and-removing-a-stored-procedure-in-visual-basic"></a>Создание, изменение и удаление хранимой процедуры на языке Visual Basic  
  Данный пример кода показывает, как создавать хранимую процедуру для базы данных [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] . По идентификатору сотрудника пример возвращает фамилию этого сотрудника. Хранимая процедура требует один входной параметр для указания идентификатора сотрудника и один выходной параметр для возвращения последнего имени сотрудника.  
@@ -151,7 +151,7 @@ $sp.Alter()
 $sp.Drop()  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также статью  
  <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure>  
   
   

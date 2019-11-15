@@ -1,6 +1,6 @@
 ---
-title: Планирование автоматических задач администрирования в агент SQL Server | Документация Майкрософт
-ms.custom: ''
+title: Планирование автоматических административных задач в агенте SQL Server
+ms.custom: seo-dt-2019
 ms.date: 08/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -15,12 +15,12 @@ ms.assetid: 900242ad-d6a2-48e9-8a1b-f0eea4413c16
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b388074f569b5797eeac700bdd647477f56faeb2
-ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
+ms.openlocfilehash: e2c852cd3f64e603f6eeab2f48a688dc733b4719
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "70148330"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74094387"
 ---
 # <a name="scheduling-automatic-administrative-tasks-in-sql-server-agent"></a>Планирование автоматических административных задач в агенте SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -38,9 +38,9 @@ ms.locfileid: "70148330"
  Объекты агента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] находятся в пространстве имен <xref:Microsoft.SqlServer.Management.Smo.Agent>.  
   
 ## <a name="examples"></a>Примеры  
- Чтобы использовать какой-либо из представленных примеров кода, нужно выбрать среду, шаблон и язык программирования, с помощью которых будет создаваться приложение. Дополнительные сведения см. [в разделе Создание проекта Visual&#35; C SMO в Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Чтобы использовать какой-либо из представленных примеров кода, необходимо выбрать среду, шаблон и язык программирования, с помощью которых будет создаваться приложение. Дополнительные сведения см. [в разделе Создание проекта Visual&#35; C SMO в Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
-Для программ, использующих [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] агент, необходимо включить инструкцию **using** для уточнения пространства имен агента. Вставьте оператор после других операторов using, прежде чем **использовать** объявления в приложении, например:
+Для программ, использующих [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent, необходимо включить инструкцию **using** для уточнения пространства имен агента. Вставьте оператор после других операторов using, прежде чем **использовать** объявления в приложении, например:
   
  ```
 using Microsoft.SqlServer.Management.Smo;
@@ -168,7 +168,7 @@ $jbsch.Create();
   
  **ObjectName | CounterName | Экземпляр | Компарисионоп | компвалуе**  
   
- Для предупреждающих уведомлений требуется оператор. Для <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> типа требуется квадратные скобки , так как [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] оператор является ключевым.  
+ Для предупреждающих уведомлений требуется оператор. Для типа <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> требуется квадратные скобки, так как **оператор** является [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] ключевым словом.  
   
 ```csharp  
 {  
@@ -201,7 +201,7 @@ $jbsch.Create();
   
  **ObjectName | CounterName | Экземпляр | Компарисионоп | компвалуе**  
   
- Для предупреждающих уведомлений требуется оператор. Для <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> типа требуется квадратные скобки , так как [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] оператор является ключевым.  
+ Для предупреждающих уведомлений требуется оператор. Для типа <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> требуется квадратные скобки, так как **оператор** является [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] ключевым словом.  
   
 ```powershell  
 #Get a server object which corresponds to the default instance  
@@ -266,8 +266,8 @@ pa.AddSubSystem(AgentSubSystem.CmdExec);
 //Now users logged on as vLogin can run CmdExec job steps with the specified credentials.   
 ```  
   
-## <a name="see-also"></a>См. также  
- [агент SQL Server](../../../ssms/agent/sql-server-agent.md)   
+## <a name="see-also"></a>См. также статью  
+ [Агент SQL Server](../../../ssms/agent/sql-server-agent.md)   
  [Реализация заданий](../../../ssms/agent/implement-jobs.md)  
   
   

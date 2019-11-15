@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 817cd98a-4dff-4ed8-a546-f336c144d1e0
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 14746f5d18db9fbdac3dc6f80d885a8e07e8216a
-ms.sourcegitcommit: df1f71231f8edbdfe76e8851acf653c25449075e
+ms.openlocfilehash: f410024e1458d20e436df72cc2978ce41b5d60df
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/09/2019
-ms.locfileid: "70810399"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095502"
 ---
 # <a name="sp_add_operator-transact-sql"></a>sp_add_operator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -52,34 +52,34 @@ sp_add_operator [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @name = ] 'name'`Имя оператора (получателя уведомления). Это имя должно быть уникальным и не может содержать символ процента **%** (). Аргумент *Name* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @name = ] 'name'` имя оператора (получателя уведомления). Это имя должно быть уникальным и не может содержать знак процента ( **%** ). Аргумент *Name* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @enabled = ] enabled`Указывает текущее состояние оператора. *Enabled* имеет тип **tinyint**и значение по умолчанию **1** (включено). Если значение **равно 0**, то оператор не включен и не получает уведомления.  
+`[ @enabled = ] enabled` указывает текущее состояние оператора. *Enabled* имеет тип **tinyint**и значение по умолчанию **1** (включено). Если значение **равно 0**, то оператор не включен и не получает уведомления.  
   
-`[ @email_address = ] 'email_address'`Адрес электронной почты оператора. Эта строка передается напрямую в систему электронной почты. *email_address* имеет тип **nvarchar (100)** и значение по умолчанию NULL.  
+`[ @email_address = ] 'email_address'` адрес электронной почты оператора. Эта строка передается напрямую в систему электронной почты. *email_address* имеет тип **nvarchar (100)** и значение по умолчанию NULL.  
   
  Можно указать либо физический адрес электронной почты, либо псевдоним для *email_address*. Пример:  
   
- "**jdoe**" или " **jdoe@xyz.com** "  
+ "**jdoe**" или "**jdoe\@XYZ.com**"  
   
 > [!NOTE]  
 >  В компоненте Database Mail надо использовать адрес электронной почты.  
   
-`[ @pager_address = ] 'pager_address'`Адрес пейджера оператора. Эта строка передается напрямую в систему электронной почты. *pager_address* имеет тип **nvarchar (100)** и значение по умолчанию NULL.  
+`[ @pager_address = ] 'pager_address'` адрес пейджера оператора. Эта строка передается напрямую в систему электронной почты. *pager_address* имеет тип **nvarchar (100)** и значение по умолчанию NULL.  
   
-`[ @weekday_pager_start_time = ] weekday_pager_start_time`Время, по истечении которого [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] агент отправляет уведомление по пейджеру указанному оператору в будним периоде с понедельника по пятницу. *weekday_pager_start_time*имеет **тип int**и значение по умолчанию **090000**, которое указывает на 9:00 утра. в 24-часовом формате и должно вводиться в формате ЧЧММСС.  
+`[ @weekday_pager_start_time = ] weekday_pager_start_time` время, по истечении которого агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] отправляет уведомление по пейджеру указанному оператору в будним периоде с понедельника по пятницу. *weekday_pager_start_time*имеет **тип int**и значение по умолчанию **090000**, которое указывает на 9:00 утра. в 24-часовом формате и должно вводиться в формате ЧЧММСС.  
   
-`[ @weekday_pager_end_time = ] weekday_pager_end_time`Время, по истечении которого служба **SQLServerAgent** больше не отправляет уведомление по пейджеру указанному оператору в будним периоде с понедельника по пятницу. *weekday_pager_end_time*имеет **тип int**и значение по умолчанию 180000, которое указывает на 6:00 вечера. в 24-часовом формате и должно вводиться в формате ЧЧММСС.  
+`[ @weekday_pager_end_time = ] weekday_pager_end_time` время, по истечении которого служба **SQLServerAgent** больше не отправляет уведомление по пейджеру указанному оператору в будним периоде с понедельника по пятницу. *weekday_pager_end_time*имеет **тип int**и значение по умолчанию 180000, которое указывает на 6:00 вечера. в 24-часовом формате и должно вводиться в формате ЧЧММСС.  
   
-`[ @saturday_pager_start_time = ] saturday_pager_start_time`Время, по истечении которого служба **SQLServerAgent** отправляет уведомление по пейджеру указанному оператору по субботам. *saturday_pager_start_time* имеет **тип int**и значение по умолчанию 090000, которое указывает на 9:00 утра. в 24-часовом формате и должно вводиться в формате ЧЧММСС.  
+`[ @saturday_pager_start_time = ] saturday_pager_start_time` время, по истечении которого служба **SQLServerAgent** отправляет уведомление по пейджеру указанному оператору по субботам. *saturday_pager_start_time* имеет **тип int**и значение по умолчанию 090000, которое указывает на 9:00 утра. в 24-часовом формате и должно вводиться в формате ЧЧММСС.  
   
-`[ @saturday_pager_end_time = ] saturday_pager_end_time`Время, после которого служба **SQLServerAgent** больше не отправляет уведомление по пейджеру указанному оператору в субботу. *saturday_pager_end_time*имеет **тип int**и значение по умолчанию **180000**, которое указывает на 6:00 вечера. в 24-часовом формате и должно вводиться в формате ЧЧММСС.  
+`[ @saturday_pager_end_time = ] saturday_pager_end_time` время, после которого служба **SQLServerAgent** больше не отправляет уведомление по пейджеру указанному оператору по субботам. *saturday_pager_end_time*имеет **тип int**и значение по умолчанию **180000**, которое указывает на 6:00 вечера. в 24-часовом формате и должно вводиться в формате ЧЧММСС.  
   
-`[ @sunday_pager_start_time = ] sunday_pager_start_time`Время, по истечении которого служба **SQLServerAgent** отправляет уведомление по пейджеру указанному оператору по воскресеньям. *sunday_pager_start_time*имеет **тип int**и значение по умолчанию **090000**, которое указывает на 9:00 утра. в 24-часовом формате и должно вводиться в формате ЧЧММСС.  
+`[ @sunday_pager_start_time = ] sunday_pager_start_time` время, по истечении которого служба **SQLServerAgent** отправляет уведомление по пейджеру указанному оператору по воскресеньям. *sunday_pager_start_time*имеет **тип int**и значение по умолчанию **090000**, которое указывает на 9:00 утра. в 24-часовом формате и должно вводиться в формате ЧЧММСС.  
   
-`[ @sunday_pager_end_time = ] sunday_pager_end_time`Время, после которого служба **SQLServerAgent** больше не отправляет уведомление по пейджеру указанному оператору по воскресеньям. *sunday_pager_end_time*имеет **тип int**и значение по умолчанию **180000**, которое указывает на 6:00 вечера. в 24-часовом формате и должно вводиться в формате ЧЧММСС.  
+`[ @sunday_pager_end_time = ] sunday_pager_end_time` время, после которого служба **SQLServerAgent** больше не отправляет уведомление по пейджеру указанному оператору по воскресеньям. *sunday_pager_end_time*имеет **тип int**и значение по умолчанию **180000**, которое указывает на 6:00 вечера. в 24-часовом формате и должно вводиться в формате ЧЧММСС.  
   
-`[ @pager_days = ] pager_days`Число, указывающее дни, когда оператор доступен для страниц (с учетом указанного времени начала или окончания). *pager_days*имеет тип **tinyint**и значение по умолчанию **0** , указывающее, что оператор никогда не может получить страницу. Допустимые значения: от **0** до **127**. *pager_days*вычисляется путем добавления отдельных значений для требуемых дней. Например, с понедельника по пятницу будет **2**+**4**+**8**+**16**+3262 = . В следующей таблице перечислены значения для каждого дня недели.  
+`[ @pager_days = ] pager_days` — это число, указывающее дни, когда оператор доступен для страниц (с учетом указанного времени начала или окончания). *pager_days*имеет тип **tinyint**и значение по умолчанию **0** , указывающее, что оператор никогда не может получить страницу. Допустимые значения: от **0** до **127**. *pager_days*вычисляется путем добавления отдельных значений для требуемых дней. Например, с понедельника по пятницу будет **2**+**4**+**8**+**16**+**32** = **62**. В следующей таблице перечислены значения для каждого дня недели.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -91,18 +91,18 @@ sp_add_operator [ @name = ] 'name'
 |**32**|Пятница|  
 |**64**|Суббота|  
   
-`[ @netsend_address = ] 'netsend_address'`Сетевой адрес оператора, которому отправляется сетевое сообщение. *netsend_address*имеет тип **nvarchar (100)** и значение по умолчанию NULL.  
+`[ @netsend_address = ] 'netsend_address'` сетевой адрес оператора, которому отправляется сетевое сообщение. *netsend_address*имеет тип **nvarchar (100)** и значение по умолчанию NULL.  
   
-`[ @category_name = ] 'category'`Имя категории для этого оператора. *Category* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @category_name = ] 'category'` имя категории для этого оператора. *Category* имеет тип **sysname**и значение по умолчанию NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
- None  
+ Нет  
   
-## <a name="remarks"></a>Примечания  
- **sp_add_operator** необходимо запускать из базы данных **msdb** .  
+## <a name="remarks"></a>Remarks  
+ **sp_add_operator** должны запускаться из базы данных **msdb** .  
   
  Отправка сообщений на пейджер поддерживается системой электронной почты, в которой должна быть функция отправки пейджинговых сообщений через электронную почту.  
   
@@ -129,10 +129,10 @@ EXEC dbo.sp_add_operator
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
- [sp_delete_operator &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-operator-transact-sql.md)   
- [sp_help_operator &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-operator-transact-sql.md)   
- [sp_update_operator &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-operator-transact-sql.md)   
+## <a name="see-also"></a>См. также статью  
+ [sp_delete_operator &#40;  Transact-&#41; SQL](../../relational-databases/system-stored-procedures/sp-delete-operator-transact-sql.md)  
+ [sp_help_operator &#40;  Transact-&#41; SQL](../../relational-databases/system-stored-procedures/sp-help-operator-transact-sql.md)  
+ [sp_update_operator &#40;  Transact-&#41; SQL](../../relational-databases/system-stored-procedures/sp-update-operator-transact-sql.md)  
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   
