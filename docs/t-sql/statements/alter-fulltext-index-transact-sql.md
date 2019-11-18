@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: b6fbe9e6-3033-4d1b-b6bf-1437baeefec3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 23e08c74d0b41e24eb9677c59b52026e33c527f0
-ms.sourcegitcommit: 4fb6bc7c81a692a2df706df063d36afad42816af
+ms.openlocfilehash: f9799b747883f876b413bf540516f5c2a1cbed11
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73049963"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73981816"
 ---
 # <a name="alter-fulltext-index-transact-sql"></a>ALTER FULLTEXT INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -123,7 +123,7 @@ ALTER FULLTEXT INDEX ON table_name
  Для столбцов, имеющих типы, отличные от BLOB и XML, которые содержат текстовые данные на нескольких языках, или в случаях, когда язык текста в столбце неизвестен, используйте нейтральный (0x0) языковой ресурс. Для документов, хранящихся в столбцах типов XML или BLOB, во время индексирования будет использоваться внутренняя языковая кодировка документа. Например: в XML-столбцах атрибут xml:lang в XML-документе будет идентифицировать язык. Во время запроса значение, ранее указанное для аргумента *language_term*, становится используемым по умолчанию языком в полнотекстовых индексах, если аргумент *language_term* не указан как часть полнотекстового запроса.  
   
  STATISTICAL_SEMANTICS  
- **Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Область применения**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздних версий.  
   
  Создает дополнительные индексы ключевых фраз и подобия документов, которые являются частью статистического семантического индексирования. Дополнительные сведения см. в разделе [Семантический поиск (SQL Server)](../../relational-databases/search/semantic-search-sql-server.md).  
   
@@ -141,7 +141,7 @@ ALTER FULLTEXT INDEX ON table_name
 >  Дополнительные сведения см. в разделе [Взаимодействие между отслеживанием изменений и параметром NO POPULATION](#change-tracking-no-population).
   
  {ADD | DROP } STATISTICAL_SEMANTICS  
- **Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Область применения**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздних версий.  
   
  Включает или отключает статистическое семантическое индексирование для указанных столбцов. Дополнительные сведения см. в разделе [Семантический поиск (SQL Server)](../../relational-databases/search/semantic-search-sql-server.md).  
   
@@ -179,7 +179,7 @@ ALTER FULLTEXT INDEX ON table_name
  Дополнительные сведения см. в разделе [Настройка стоп-слов и списков стоп-слов для полнотекстового поиска и управление ими](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md).  
   
  SET SEARCH PROPERTY LIST { OFF | *property_list_name* } [ WITH NO POPULATION ]  
- **Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Область применения**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздних версий.  
   
  Изменяет список свойств поиска, связанный с индексом, если он есть.  
   
@@ -307,7 +307,7 @@ GO
   
 ### <a name="b-associating-a-property-list-with-a-full-text-index"></a>Б. Связывание списка свойств с полнотекстовым индексом  
   
-**Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Область применения**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздних версий.  
   
  В следующем примере производится связывание списка свойств `DocumentPropertyList` с полнотекстовым индексом таблицы `Production.Document`. Эта инструкция ALTER FULLTEXT INDEX начинает полное заполнение — поведением по умолчанию для предложения SET SEARCH PROPERTY LIST.  
   
@@ -324,7 +324,7 @@ GO
   
 ### <a name="c-removing-a-search-property-list"></a>В. Удаление списка свойств поиска  
   
-**Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Область применения**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздних версий.  
   
  В следующем примере производится удаление списка свойств `DocumentPropertyList` из полнотекстового индекса для таблицы `Production.Document`. В этом примере не требуется срочно удалять свойства из индекса, поэтому указан параметр WITH NO POPULATION. Однако поиск с использованием свойств выполняется дольше, чем поиск с полнотекстовым индексом.  
   

@@ -19,14 +19,14 @@ helpviewer_keywords:
 ms.assetid: 3241a44a-6958-415b-b8b7-2a1207c36ab3
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 68a3a2b030ef5b731fa437b8c9f4b57f3eedaa4e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 478641bed0931fc78db3c7df166b860374034f90
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68132806"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73983264"
 ---
-# <a name="issrvrolemember-transact-sql"></a>Функция IS_SRVROLEMEMBER (Transact-SQL)
+# <a name="is_srvrolemember-transact-sql"></a>Функция IS_SRVROLEMEMBER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Указывает, является ли данное имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] членом указанной роли сервера.  
@@ -51,7 +51,7 @@ IS_SRVROLEMEMBER ( 'role' [ , 'login' ] )
 |sysadmin|serveradmin|  
 |dbcreator|setupadmin|  
 |bulkadmin|securityadmin|  
-|diskadmin|**Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> public|  
+|diskadmin|**Область применения**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздних версий.<br /><br /> public|  
 |processadmin||  
   
  **'** *login* **'**  

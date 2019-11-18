@@ -23,12 +23,12 @@ ms.assetid: 4b88e98c-49c4-4388-ab0e-476cc956977c
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 627d4c925129e0826fcbc9fd2a09121091d68501
-ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
+ms.openlocfilehash: 4ff8da4a1076d8ade4d54e5d44c51d3263480c1c
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68742973"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73983032"
 ---
 # <a name="restore-statements---headeronly-transact-sql"></a>Инструкции RESTORE — HEADERONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -145,7 +145,7 @@ FROM <backup_device>
 |**BackupTypeDescription**|**nvarchar(60)**|Тип резервной копии, один из:<br /><br /> DATABASE<br /><br /> TRANSACTION LOG (журнал транзакций)<br /><br /> FILE OR FILEGROUP (файл или файловая группа)<br /><br /> DATABASE DIFFERENTIAL (разностная для базы данных)<br /><br /> FILE DIFFERENTIAL PARTIAL (частичная разностная для файла)<br /><br /> PARTIAL DIFFERENTIAL (частичная разностная)|  
 |**BackupSetGUID**|**uniqueidentifier** NULL|Уникальный идентификационный номер резервного набора данных, по которому этот набор определяется в носителе.|  
 |**CompressedBackupSize**|**bigint**|Число байтов в резервном наборе данных. Для нераспакованных резервных копий это значение совпадает со значением **BackupSize**.<br /><br /> Для вычисления коэффициента сжатия используйте значения **CompressedBackupSize** и **BackupSize**.<br /><br /> Во время обновления базы данных **msdb** это значение устанавливается равным значению столбца **BackupSize**.|  
-|**containment**|**tinyint** not NULL|**Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Указывает состояние включения базы данных.<br /><br /> 0 = включение базы данных отключено<br /><br /> 1 = база данных находится в состоянии частичного включения|  
+|**containment**|**tinyint** not NULL|**Область применения**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздних версий.<br /><br /> Указывает состояние включения базы данных.<br /><br /> 0 = включение базы данных отключено<br /><br /> 1 = база данных находится в состоянии частичного включения|  
 |**KeyAlgorithm**|**nvarchar(32)**|**Применимо к**: с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (накопительное обновление 1) до текущей версии.<br /><br /> Алгоритм шифрования резервной копии. NO_Encryption указывает на то, что резервная копия не зашифрована. Если не удается определить правильное значение, оно должно быть равно NULL.|  
 |**EncryptorThumbprint**|**varbinary(20)**|**Применимо к**: с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (накопительное обновление 1) до текущей версии.<br /><br /> Отпечаток шифратора, который будет использоваться для поиска сертификата или асимметричного ключа в базе данных. Если резервная копия не зашифрована, это значение равно NULL.|  
 |**EncryptorType**|**nvarchar(32)**|**Применимо к**: с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (накопительное обновление 1) до текущей версии.<br /><br /> Тип используемого шифратора: сертификат или асимметричный ключ. Если резервная копия не зашифрована, это значение равно NULL.|  

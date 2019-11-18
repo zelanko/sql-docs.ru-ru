@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7a291015-df15-44fe-8d53-c6d90a157118
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 3019dc90789ccf8cf43b07a15d5ff0ccc7fb50a2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2681d021099e8b10150efd255e27cf436c665a90
+ms.sourcegitcommit: b7618a2a7c14478e4785b83c4fb2509a3e23ee68
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68095126"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926023"
 ---
 # <a name="sql-server-audit-records"></a>Записи подсистемы аудита SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "68095126"
 |**session_id**|Идентификатор сеанса, в котором произошло событие.|**int**|Да|  
 |**server_principal_id**|Идентификатор контекста имени входа, в котором выполнено действие.|**int**|Да|  
 |**database_principal_id**|Идентификатор контекста пользователя базы данных, в котором выполнено действие.|**int**|нет|  
-|**object_ id**|Основной идентификатор сущности, над которой произведен аудит. Этот идентификатор может принадлежать следующим объектам:<br /><br /> объекты серверов;<br /><br /> базы данных<br /><br /> объекты базы данных<br /><br /> объекты схемы;|**int**|нет|  
+|**object_id**|Основной идентификатор сущности, над которой произведен аудит. Этот идентификатор может принадлежать следующим объектам:<br /><br /> объекты серверов;<br /><br /> базы данных<br /><br /> объекты базы данных<br /><br /> объекты схемы;|**int**|нет|  
 |**target_server_principal_id**|Участник на уровне сервера, к которому применимо действие, доступное для аудита.|**int**|Да|  
 |**target_database_principal_id**|Участник базы данных, к которому применимо действие, доступное для аудита.|**int**|нет|  
 |**class_type**|Тип доступной для аудита сущности, для которой проводится аудит.|**varchar(2)**|Да|  

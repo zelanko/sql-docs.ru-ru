@@ -1,30 +1,36 @@
 ---
-title: Окно "Потоки" | Документация Майкрософт
-ms.custom: ''
-ms.date: 03/14/2017
+title: Окно потоков
+titleSuffix: T-SQL Debugger
 ms.prod: sql
 ms.technology: scripting
-ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Threads Window [Transact-SQL]
 ms.assetid: e153f619-0049-4162-9076-c24a454f3278
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ''
+ms.custom: ''
+ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: baf2cf64ab638174d3967c33bfa802ed92b2ce31
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: ba4f72bc5848f14e2bfd9821c43f024a129092e1
+ms.sourcegitcommit: add39e028e919df7d801e8b6bb4f8ac877e60e17
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68253495"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74119241"
 ---
 # <a name="transact-sql-debugger---threads-window"></a>Отладчик Transact-SQL, окно потоков
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  В окне **Потоки** отображаются сведения о потоке компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] , который используется в отлаживаемом сеансе редактора запросов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Чтобы иметь возможность просматривать сведения о потоке, необходимо находиться в режиме отладки.  
-  
-## <a name="task-list"></a>Список задач  
- **Доступ к окну «Потоки»**  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+В окне **Потоки** отображаются сведения о потоке компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] , который используется в отлаживаемом сеансе редактора запросов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Чтобы иметь возможность просматривать сведения о потоке, необходимо находиться в режиме отладки.  
+
+[!INCLUDE[ssms-old-versions](../../includes/ssms-old-versions.md)]
+
+## <a name="task-list"></a>Список задач
+
+**Доступ к окну «Потоки»**
   
 -   В меню **Отладка** укажите **Окна**и выберите пункт **Потоки**.  
   

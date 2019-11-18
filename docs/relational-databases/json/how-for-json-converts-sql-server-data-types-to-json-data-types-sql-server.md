@@ -1,6 +1,5 @@
 ---
-title: Как SQL Server преобразует типы данных в формат JSON с помощью предложения FOR JSON (SQL Server) | Документация Майкрософт
-ms.custom: ''
+title: Преобразование типов данных SQL Server в формат JSON с помощью предложения FOR JSON
 ms.date: 07/07/2016
 ms.prod: sql
 ms.reviewer: genemi
@@ -11,13 +10,14 @@ helpviewer_keywords:
 ms.assetid: da356f06-efd0-4ea3-8157-77395bf790d7
 author: jovanpop-msft
 ms.author: jovanpop
+ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f45621bc4bf5bd2af93c52257c9ca3128da6a77d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 537ad4d796792c7d4fce56eda25adcca8b1fea01
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67909393"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095797"
 ---
 # <a name="how-for-json-converts-sql-server-data-types-to-json-data-types-sql-server"></a>Преобразование типов данных SQL Server в формат JSON с помощью предложения FOR JSON (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

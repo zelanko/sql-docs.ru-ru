@@ -25,12 +25,12 @@ ms.assetid: ddcef3a6-0341-43e0-ae73-630484b7b398
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4ac5c9ff7d2fbb5d32b559e6225dba4e7bbb7a48
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6e8c8f90dbd07af646700a738dcf265785b79475
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67948327"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73981706"
 ---
 # <a name="select---over-clause-transact-sql"></a>SELECT — предложение OVER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -127,7 +127,7 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
  Указывает порядок сортировки значений в указанном столбце — по возрастанию или по убыванию. Порядок сортировки по умолчанию — ASC. Значения NULL рассматриваются как минимально возможные значения.  
   
  ROWS | RANGE  
-**Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
+**Область применения**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздних версий. 
   
  Еще больше ограничивает строки в пределах секции, указывая начальную и конечную точки. Это достигается путем указания диапазона строк в отношении текущей строки с помощью логических или физических взаимосвязей. Физическая взаимосвязь достигается с помощью предложения ROWS.  
   
@@ -137,7 +137,7 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
 >  Предложения ROWS и RANGE требуют, чтобы было указано предложение ORDER BY. Если предложение ORDER BY содержит несколько выражений порядка, то CURRENT ROW FOR RANGE при определении текущей строки учитывает все столбцы в списке ORDER BY.  
   
  UNBOUNDED PRECEDING  
-**Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Область применения**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздних версий.  
   
  Указывает, что окно начинается с первой строки секции. UNBOUNDED PRECEDING может быть указано только как начальная точка окна.  
   
@@ -145,17 +145,17 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
  Указывается со \<спецификацией неподписанного значения> для обозначения числа строк или значений перед текущей строкой. Эта спецификация не допускается в предложении RANGE.  
   
  CURRENT ROW  
-**Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
+**Область применения**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздних версий. 
   
  Указывает, что окно начинается или заканчивается на текущей строке при использовании совместно с предложением ROWS или что окно заканчивается на текущем значении при использовании с предложением RANGE. CURRENT ROW может быть задана и как начальная, и как конечная точка.  
   
  BETWEEN \<граница рамки окна > AND \<граница рамки окна >  
-**Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
+**Область применения**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздних версий. 
   
  Используется совместно с предложением ROWS или RANGE для указания нижней (начальной) или верхней (конечной) граничной точки окна. \<граница рамки окна> определяет граничную начальную точку, а \<граница рамки окна> определяет граничную конечную точку. Верхняя граница не может быть меньше нижней границы.  
   
  UNBOUNDED FOLLOWING  
-**Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
+**Область применения**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздних версий. 
   
  Указывает, что окно заканчивается на последней строке секции. UNBOUNDED FOLLOWING может быть указано только как конечная точка окна. Например, RANGE BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING определяет, что окно начинается на текущей строке и заканчивается на последней строке секции.  
   
@@ -163,7 +163,7 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
  Указывается со \<спецификацией неподписанного значения> для обозначения числа строк или значений после текущей строки. При указании \<спецификации неподписанного значения> FOLLOWING как начальной точки окна конечная точка должна быть \<спецификацией неподписанного значения>FOLLOWING. Например, ROWS BETWEEN 2 FOLLOWING AND 10 FOLLOWING определяет, что окно начинается на второй строке после текущей и заканчивается на десятой строке после текущей строки. Эта спецификация не допускается в предложении RANGE.  
   
  неподписанный целочисленный литерал  
-**Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Область применения**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздних версий.  
   
  Положительный целочисленный литерал (включая 0), который указывает число строк или значений перед или после текущей строки или значения. Эта спецификация является допустимой только в предложении ROWS.  
   
@@ -188,7 +188,7 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
   
 ## <a name="examples"></a>Примеры  
   
-### <a name="a-using-the-over-clause-with-the-rownumber-function"></a>A. Использование предложения OVER с функцией ROW_NUMBER  
+### <a name="a-using-the-over-clause-with-the-row_number-function"></a>A. Использование предложения OVER с функцией ROW_NUMBER  
  Следующий пример демонстрирует использование предложения OVER с функцией ROW_NUMBER для отображения номера каждой строки в секции. Предложение ORDER BY, указанное в предложении OVER упорядочивает строки каждой секции по столбцу `SalesYTD`. Предложение ORDER BY в инструкции SELECT определяет порядок, в котором возвращается весь результирующий набор запроса.  
   
 ```sql  
@@ -390,7 +390,7 @@ BusinessEntityID TerritoryID SalesYear   SalesYTD             MovingAvg         
   
 ### <a name="d-specifying-the-rows-clause"></a>Г. Указание предложения ROWS  
   
-**Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Область применения**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздних версий.  
   
  В следующем примере с помощью предложения ROWS определяется окно, в рамках которого вычисляется текущая строка, а также *N* последующих строк (1 строка в данном примере).  
   
@@ -455,7 +455,7 @@ BusinessEntityID TerritoryID SalesYTD             SalesYear   CumulativeTotal
   
 ## <a name="examples-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="e-using-the-over-clause-with-the-rownumber-function"></a>Д. Использование предложения OVER с функцией ROW_NUMBER  
+### <a name="e-using-the-over-clause-with-the-row_number-function"></a>Д. Использование предложения OVER с функцией ROW_NUMBER  
  В следующем примере возвращается ROW_NUMBER для торговых представителей в зависимости от установленной для них квоты продаж.  
   
 ```sql  

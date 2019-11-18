@@ -44,12 +44,12 @@ helpviewer_keywords:
 ms.assetid: 09bcf20b-0a40-4131-907f-b61479d5e4d8
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 79818fa5cb41b27a15d531f22a21b86c10cb018a
-ms.sourcegitcommit: 84e6922a57845a629391067ca4803e8d03e0ab90
+ms.openlocfilehash: 553c01ea02c83a57370e596d67ad077b43328d9b
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72008468"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056806"
 ---
 # <a name="hardware-and-software-requirements-for-installing-sql-server"></a>Требования к оборудованию и программному обеспечению для установки SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -144,9 +144,7 @@ ms.locfileid: "72008468"
 | Windows Server 2016 Standard | Windows Server 2016 Datacenter |
 | Windows Server 2012 R2 Standard | Windows Server 2012 R2 Datacenter|
 | Windows Server 2012 Standard | Windows Server 2012 Datacenter |
-| Windows Server 2008 R2 Standard с пакетом обновления 1 (SP1) | Windows Server 2008 R2 Datacenter с пакетом обновления 1 (SP1) |
-| Windows Server 2008 R2 Enterprise с пакетом обновления 1 (SP1) | Windows Server 2008 R2 Web с пакетом обновления 1 (SP1)|
-   | &nbsp; | &nbsp; |
+| &nbsp; | &nbsp; |
 ::: moniker-end
 
 Дополнительные сведения об установке SQL Server на Server Core см. в разделе [Установка SQL Server на Server Core](../../database-engine/install-windows/install-sql-server-on-server-core.md).  

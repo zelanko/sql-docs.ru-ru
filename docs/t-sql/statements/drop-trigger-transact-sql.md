@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 092d0d71-9f1e-4e38-a1c4-2487adfa5b4e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6785c481c9cb1049b50c39f7b1cff7ffad8c38f3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 810367b817aec0688a2bc5168be10c7ff073affc
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68042039"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73980998"
 ---
 # <a name="drop-trigger-transact-sql"></a>DROP TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -74,7 +74,7 @@ ON ALL SERVER
  Обозначает область действия триггера DDL в текущей базе данных. Если при создании или изменении триггера был указан аргумент DATABASE, то он должен указываться и далее.  
   
  ALL SERVER  
- **Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Область применения**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версий.  
   
  Обозначает область действия триггера DDL на текущем сервере. Если при создании или изменении триггера был указан аргумент ALL SERVER, то он должен указываться и далее. Параметр ALL SERVER также применяется к триггерам входа.  
   

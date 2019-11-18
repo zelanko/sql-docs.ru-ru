@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5a641a46-7cfb-4d7b-a90d-6e4625719d74
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 1a50b7834f8efb7165b8ae53d11add9504d0fc26
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 66d7ac0e15ebfee2c79a90f8c5041ba899dbff93
+ms.sourcegitcommit: b7618a2a7c14478e4785b83c4fb2509a3e23ee68
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68026040"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926040"
 ---
 # <a name="sql-server-express-localdb"></a>SQL Server Express LocalDB
 
@@ -33,7 +33,7 @@ LocalDB в Microsoft SQL Server Express — это компонент [SQL Serv
 
 ## <a name="try-it-out"></a>Попробуйте! 
 
-- Чтобы скачать и установить SQL Server Express LocalDB, перейдите на страницу **[скачивания SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads)** . LocalDB — это компонент, выбираемый и доступный только при скачивании мультимедиа. Если вы скачиваете мультимедиа, выберите **Express Advanced** или пакет LocalDB. В **Visual Studio Installer** можно установить SQL Server Express LocalDB как часть рабочей нагрузки **Разработка классических приложений .NET** или в качестве отдельного компонента.
+- Чтобы скачать и установить SQL Server Express LocalDB, перейдите на страницу **[скачивания SQL Server](https://www.microsoft.com/sql-server/sql-server-editions-express)** . LocalDB — это компонент, выбираемый и доступный только при скачивании мультимедиа. Если вы скачиваете мультимедиа, выберите **Express Advanced** или пакет LocalDB. В **Visual Studio Installer** можно установить SQL Server Express LocalDB как часть рабочей нагрузки **Разработка классических приложений .NET** или в качестве отдельного компонента.
 
  >[!TIP]
  > LocalDB можно также установить как часть Visual Studio. Во время установки Visual Studio выберите рабочую нагрузку **Разработка классических приложений .NET**, которая включает SQL Server Express LocalDB.

@@ -14,12 +14,12 @@ ms.assetid: 6ad23de1-2bab-4933-9122-c09f5565028d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 16d90e031f6892a132a2a64ad52aedfc34d39a08
-ms.sourcegitcommit: 1661c3e1bb38ed12f8485c3860fc2d2b97dd2c9d
+ms.openlocfilehash: 32f7c238a08a7da31d455421ca9fc00d0f8d6bdb
+ms.sourcegitcommit: eae9efe2a2d3758685e85039ffb8fa698aa47f9b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71149975"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73962374"
 ---
 # <a name="install-sql-server-from-the-installation-wizard-setup"></a>Установка SQL Server с помощью мастера установки (программа установки)
 
@@ -317,12 +317,6 @@ ms.locfileid: "71149975"
      Дополнительные сведения см. в разделе [Настройка ядра СУБД — каталоги данных](../../sql-server/install/instance-configuration.md#datadir).
 
      Задать размер файла, количество файлов, каталоги установки, не используемые по умолчанию, и параметры увеличения файлов для **tempdb** можно на странице **Настройка ядра СУБД — TempDB**. Дополнительные сведения см. в разделе [Конфигурация ядра СУБД — страница TempDB](../../sql-server/install/instance-configuration.md#tempdb).
-<<<<<<< HEAD
-  
-     Для указания максимальной степени параллелизма используйте страницу **[!INCLUDE[ssDE](../../includes/ssde-md.md)]конфигурации MaxDOP**. Этот параметр определяет, сколько процессоров может использовать одна инструкция во время выполнения. Рекомендуемое значение вычисляется автоматически во время установки. Эта страница доступна только в программе установки начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]. Дополнительные сведения см. в разделе [Конфигурация ядра СУБД — страница MaxDOP](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#maxdop). 
-
-     Используйте страницу **Конфигурация ядра СУБД — ресурсы памяти**, чтобы указать значения параметров **Min Server Memory** и **Max Server Memory**, которые будет использовать экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] после запуска. Вы можете сохранить здесь значения по умолчанию, выбрать вычисляемые рекомендуемые значения или вручную изменить их после выбора варианта **Рекомендуется**. Эта страница доступна только в программе установки начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]. Дополнительные сведения см. в разделе о странице [ресурсов памяти при конфигурации ядра СУБД](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#memory). 
-=======
 
      Для указания максимальной степени параллелизма используйте страницу **[!INCLUDE[ssDE](../../includes/ssde-md.md)]конфигурации MaxDOP**. Этот параметр определяет, сколько процессоров может использовать одна инструкция во время выполнения. Рекомендуемое значение вычисляется автоматически во время установки. 
      
@@ -337,9 +331,8 @@ ms.locfileid: "71149975"
     > Эта страница доступна только в программе установки начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]. 
     
     Дополнительные сведения см. в разделе о странице [ресурсов памяти при конфигурации ядра СУБД](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#memory). 
->>>>>>> 1d82c7efe18f86136247fb366df5030843199c19
 
-     Use the **Database Engine Configuration - FILESTREAM** page to enable FILESTREAM for your instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [Database Engine Configuration - FILESTREAM page](../../sql-server/install/instance-configuration.md#database-engine-configuration---filestream-page).  
+     Чтобы включить FILESTREAM в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], используйте страницу **Конфигурация ядра СУБД — FILESTREAM**. Дополнительные сведения см. в разделе [Настройка компонента Database Engine — страница FILESTREAM](../../sql-server/install/instance-configuration.md#database-engine-configuration---filestream-page).  
   
 1. На странице **Настройка служб — подготовка учетных записей** задайте режим сервера и пользователей или учетные записи, которые будут обладать разрешениями администратора для [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Режим сервера определяет, какие подсистемы памяти и хранения используются на сервере. Решения разных типов работают в разных режимах сервера. Если планируется размещать на сервере базы данных многомерных кубов, выберите режим сервера **Многомерные данные и интеллектуальный анализ данных**, который предлагается по умолчанию.
 
@@ -403,7 +396,7 @@ ms.locfileid: "71149975"
 
 ::: moniker-end
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 [Настройте новую установку [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]](https://docs.microsoft.com/sql/database-engine/configure-windows/database-engine-instances-sql-server?view=sql-server-2017).  
   

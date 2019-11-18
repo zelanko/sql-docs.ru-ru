@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: d54aa325-8761-4cd4-8da7-acf33df12296
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5da8dd93022240d0d12543b0ee6cf756d70cae40
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.openlocfilehash: 253828eba55e919d7363bb56896560de1de38b25
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73791330"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982057"
 ---
 # <a name="alter-queue-transact-sql"></a>ALTER QUEUE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -104,12 +104,12 @@ WITH
  Указывает, активирует ли очередь хранимую процедуру. Если параметр STATUS = ON, то очередь запускает хранимую процедуру, указанную параметром PROCEDURE_NAME, если количество выполняемых в настоящий момент хранимых процедур меньше, чем значение MAX_QUEUE_READERS, и если сообщения прибывают в очередь быстрее, чем хранимые процедуры получают сообщения. Если параметр STATUS = OFF, очередь не активирует хранимую процедуру.  
   
  REBUILD [ WITH \<queue_rebuild_options> ]  
- **Применимо к**: с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Область применения**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и более поздних версий.  
   
  Перестраивает все индексы внутренней таблицы очереди. Используйте эту возможность в случае проблем с фрагментацией из-за высокой нагрузки. MAXDOP — это единственный поддерживаемый параметр перестройки очереди. Операция REBUILD всегда выполняется в автономном режиме.  
   
  REORGANIZE [ WITH ( LOB_COMPACTION = { ON | OFF } ) ]  
- **Применимо к**: с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Область применения**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и более поздних версий.  
   
  Реорганизует все индексы внутренней таблицы очереди.   
 В отличие от операции REORGANIZE в пользовательских таблицах, операция REORGANIZE в очереди всегда выполняется в автономном режиме, потому что в очередях явно отключена блокировка на уровне страницы.  
@@ -118,7 +118,7 @@ WITH
 >  Как правило, если фрагментация составляет от 5 до 30 %, необходима реорганизация индекса. Если фрагментация больше 30 %, необходима перестройка индекса. Однако эти числа приводятся только в виде общих рекомендаций в качестве отправной точки для вашей среды. Чтобы определить степень фрагментации индекса, используйте [sys.dm_db_index_physical_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md) — см. пример Ж в этой статье.  
   
  MOVE TO { *file_group* | "default" }  
- **Применимо к**: с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Область применения**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и более поздних версий.  
   
  Перемещает внутреннюю таблицу очереди (с индексами) в указанную пользователем файловую группу.  Новая файловая группа не должна быть доступна только для чтения.  
   
@@ -223,7 +223,7 @@ ALTER QUEUE ExpenseQueue WITH ACTIVATION (DROP) ;
   
 ### <a name="g-rebuilding-queue-indexes"></a>Ж. Перестроение индексов очереди  
   
-**Применимо к**: с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Область применения**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и более поздних версий.  
   
  В следующем примере производится перестроение индексов очереди  
   
@@ -233,7 +233,7 @@ ALTER QUEUE ExpenseQueue REBUILD WITH (MAXDOP = 2)
   
 ### <a name="h-reorganizing-queue-indexes"></a>З. Реорганизация индексов очереди  
   
-**Применимо к**: с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Область применения**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и более поздних версий.  
   
  В следующем примере производится реорганизация индексов очереди  
   
@@ -243,7 +243,7 @@ ALTER QUEUE ExpenseQueue REORGANIZE
   
 ### <a name="i-moving-queue-internal-table-to-another-filegroup"></a>И. Перемещение внутренней таблицы очереди в другую файловую группу  
   
-**Применимо к**: с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Область применения**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и более поздних версий.  
   
 ```  
 ALTER QUEUE ExpenseQueue MOVE TO [NewFilegroup]   

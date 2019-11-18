@@ -19,19 +19,19 @@ helpviewer_keywords:
 ms.assetid: 82712505-c6f9-4a65-a469-f029b5a2d6cd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 42e114c1d3f884c40ce47edca84261c2582d8576
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2830c7ae4166ee0b71b1ddfb9de953c57be2452d
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68117330"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982690"
 ---
 # <a name="create-resource-pool-transact-sql"></a>CREATE RESOURCE POOL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
 Создает пул ресурсов регулятора ресурсов в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Пул ресурсов представляет подмножество физических ресурсов (память, процессоры и ввод-вывод) экземпляра компонента Database Engine. Регулятор ресурсов позволяет администратору базы данных распределять ресурсы сервера по пулам ресурсов, используя до 64 пулов. Регулятор ресурсов доступен не во всех выпусках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Сведения о функциях, поддерживаемых различными выпусками [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в статье [Возможности, поддерживаемые выпусками SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
-![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
 ## <a name="syntax"></a>Синтаксис  
 ```  
@@ -72,12 +72,12 @@ MAX_CPU_PERCENT =*value*
 Указывает максимальную среднюю пропускную способность ЦП для всех запросов в пуле ресурсов при возникновении состязания использования ЦП. *value* имеет тип integer и значение по умолчанию 100. Диапазон допустимых значений для *value* — от 1 до 100.  
   
 CAP_CPU_PERCENT = *значение*   
-**Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Область применения**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздних версий.  
   
 Задает жесткое ограничение пропускной способности ЦП, которая предоставляется всем запросам в пуле ресурсов. Ограничивает максимальный уровень пропускной способности ЦП заданным значением. *value* имеет тип integer и значение по умолчанию 100. Диапазон допустимых значений для *value* — от 1 до 100.  
   
 AFFINITY {SCHEDULER = AUTO | ( \<указатель_диапазона_планировщика> ) | NUMANODE = (\<указатель_диапазона_узла_NUMA>)}      
-**Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Область применения**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздних версий.  
   
 Подключает пул ресурсов к заданным планировщикам. Значение по умолчанию — AUTO.  
   
@@ -100,12 +100,12 @@ MAX_MEMORY_PERCENT = *значение*
 Указывает общий объем памяти сервера, который может использоваться для запросов в данном пуле ресурсов. *value* имеет тип integer и значение по умолчанию 100. Диапазон допустимых значений для *value* — от 1 до 100.  
   
 MIN_IOPS_PER_VOLUME = *значение*    
-**Применимо к**: с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Область применения**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и более поздних версий.  
   
 Указывает минимальный объем операций ввода-вывода в секунду (IOPS) на дисковый том, который следует резервировать для пула ресурсов. Диапазон допустимых значений для *value* — от 0 до 2^31-1 (2 147 483 647). Укажите значение 0, чтобы не указывать минимальный порог для пула. Значение по умолчанию равно 0.  
   
 MAX_IOPS_PER_VOLUME = *значение*    
-**Применимо к**: с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Область применения**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и более поздних версий.  
   
 Указывает максимальный объем операций ввода-вывода в секунду (IOPS) на дисковый том, при котором поддерживается пул ресурсов. Диапазон допустимых значений для *value* — от 0 до 2^31-1 (2 147 483 647). Укажите значение 0, чтобы задать неограниченный порог для пула. Значение по умолчанию равно 0.  
   
@@ -135,11 +135,11 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO  
 ```  
   
-### <a name="2-set-the-capcpupercent-to-a-hard-cap-and-set-affinity-scheduler"></a>2. Установка жесткого ограничения для параметра CAP_CPU_PERCENT и установка значений для параметра AFFINITY SCHEDULER
+### <a name="2-set-the-cap_cpu_percent-to-a-hard-cap-and-set-affinity-scheduler"></a>2. Установка жесткого ограничения для параметра CAP_CPU_PERCENT и установка значений для параметра AFFINITY SCHEDULER
 
 Задайте для параметра CAP_CPU_PERCENT жесткое ограничение 30 %, а для параметра AFFINITY SCHEDULER — диапазон 0–63, 128–191. 
   
-**Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Область применения**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздних версий.  
   
 ```sql  
 CREATE RESOURCE POOL PoolAdmin  
@@ -153,11 +153,11 @@ WITH (
       );  
 ```  
   
-### <a name="3-set-miniopspervolume-and-maxiopspervolume"></a>3. Установка значений параметров Set MIN_IOPS_PER_VOLUME и MAX_IOPS_PER_VOLUME   
+### <a name="3-set-min_iops_per_volume-and-max_iops_per_volume"></a>3. Установка значений параметров Set MIN_IOPS_PER_VOLUME и MAX_IOPS_PER_VOLUME   
 
 Задайте для параметра MIN_IOPS_PER_VOLUME значение 20, а для параметра MAX_IOPS_PER_VOLUME — 100. Эти значения управляют физическими операциями чтения и записи при вводе-выводе, доступными для пула ресурсов.  
   
-**Применимо к**: с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Область применения**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и более поздних версий.  
   
 ```sql  
 CREATE RESOURCE POOL PoolAdmin  

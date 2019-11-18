@@ -20,12 +20,12 @@ ms.assetid: 998d5788-4871-44a8-8125-0d9390868b84
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4a2731f569ecf602c4aaa21e233ec671596e16ff
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3bfdfb5c3579b43ada97c9ef72b72dbaf3d29308
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68024282"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982939"
 ---
 # <a name="indexproperty-transact-sql"></a>INDEXPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -61,14 +61,14 @@ INDEXPROPERTY ( object_ID , index_or_statistics_name , property )
 |**IsAutoStatistics**|Статистики были сформированы параметром AUTO_CREATE_STATISTICS инструкции ALTER DATABASE.|1 = True<br /><br /> 0 = False или XML-индекс.|  
 |**IsClustered**|Кластеризованный индекс.|1 = True<br /><br /> 0 = False или XML-индекс.|  
 |**IsDisabled**|Индекс отключен.|1 = True<br /><br /> 0 = False.<br /><br /> NULL = Введенные значения недопустимы.|  
-|**IsFulltextKey**|Индекс является ключом для полнотекстового и семантического индексирования таблицы.|**Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = True<br /><br /> 0 = False или XML-индекс.<br /><br /> NULL = Введенные значения недопустимы.|  
+|**IsFulltextKey**|Индекс является ключом для полнотекстового и семантического индексирования таблицы.|**Область применения**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версий.<br /><br /> 1 = True<br /><br /> 0 = False или XML-индекс.<br /><br /> NULL = Введенные значения недопустимы.|  
 |**IsHypothetical**|Индекс является гипотетическим и не может использоваться напрямую в качестве пути доступа к данным. Гипотетические индексы содержат статистики уровня столбца и управляются и используются помощником по настройке ядра СУБД.|1 = True<br /><br /> 0 = False или XML-индекс.<br /><br /> NULL = Введенные значения недопустимы.|  
-|**IsPadIndex**|Индекс задает пространство, которое должно оставаться открытым на каждом внутреннем узле.|**Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = True<br /><br /> 0 = False или XML-индекс.|  
-|**IsPageLockDisallowed**|Значение блокировки страницы, установленное параметром ALLOW_PAGE_LOCKS инструкции ALTER INDEX.|**Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = Блокировка страниц запрещена;<br /><br /> 0 = Блокировка страниц разрешена.<br /><br /> NULL = Введенные значения недопустимы.|  
-|**IsRowLockDisallowed**|Значение блокировки строк, установленное параметром ALLOW_ROW_LOCKS инструкции ALTER INDEX.|**Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = Блокировка строк запрещена;<br /><br /> 0 = Блокировка строк разрешена.<br /><br /> NULL = Введенные значения недопустимы.|  
+|**IsPadIndex**|Индекс задает пространство, которое должно оставаться открытым на каждом внутреннем узле.|**Область применения**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версий.<br /><br /> 1 = True<br /><br /> 0 = False или XML-индекс.|  
+|**IsPageLockDisallowed**|Значение блокировки страницы, установленное параметром ALLOW_PAGE_LOCKS инструкции ALTER INDEX.|**Область применения**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версий.<br /><br /> 1 = Блокировка страниц запрещена;<br /><br /> 0 = Блокировка страниц разрешена.<br /><br /> NULL = Введенные значения недопустимы.|  
+|**IsRowLockDisallowed**|Значение блокировки строк, установленное параметром ALLOW_ROW_LOCKS инструкции ALTER INDEX.|**Область применения**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версий.<br /><br /> 1 = Блокировка строк запрещена;<br /><br /> 0 = Блокировка строк разрешена.<br /><br /> NULL = Введенные значения недопустимы.|  
 |**IsStatistics**|Аргумент *index_or_statistics_name* является статистикой, созданной инструкцией CREATE STATISTICS или параметром AUTO_CREATE_STATISTICS инструкции ALTER DATABASE.|1 = True<br /><br /> 0 = False или XML-индекс.|  
 |**IsUnique**|Индекс является уникальным.|1 = True<br /><br /> 0 = False или XML-индекс.|  
-|**IsColumnstore**|Оптимизированный для памяти xVelocity индекс columnstore.|**Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = True<br /><br /> 0 = False.| 
+|**IsColumnstore**|Оптимизированный для памяти xVelocity индекс columnstore.|**Область применения**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздних версий.<br /><br /> 1 = True<br /><br /> 0 = False.| 
 |**IsOptimizedForSequentialKey**|Индекс оптимизирован для включения операций вставки на последнюю страницу.|**Область применения**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] и более поздних версий. <br><br>1 = True<br><br>0 = False.| 
   
 ## <a name="return-types"></a>Типы возвращаемых данных  

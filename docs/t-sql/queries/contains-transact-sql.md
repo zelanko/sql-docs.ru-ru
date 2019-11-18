@@ -34,12 +34,12 @@ helpviewer_keywords:
 ms.assetid: 996c72fc-b1ab-4c96-bd12-946be9c18f84
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 0f088f9340c0441b15eea7382ff49b1b87181479
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 613dc7c05707d9a432ec6f8f7eab7b8b3bce2cce
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67902119"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982825"
 ---
 # <a name="contains-transact-sql"></a>CONTAINS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -151,7 +151,7 @@ CONTAINS (
  Указывает, что запрос выполняет поиск по заданному условию во всех столбцах таблицы, указанной в предложении FROM, для которых существуют полнотекстовые индексы. Столбцы в предложении CONTAINS должны принадлежать одной таблице, для которой существует полнотекстовый индекс. Если не определен аргумент *language_term*, язык для всех столбцов таблицы должен быть одинаковым.  
   
  PROPERTY ( *column_name* , '*property_name*')  
-**Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
+**Область применения**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздних версий. 
   
  Указывает свойство документа, по которому нужно выполнить поиск по заданному условию.  
   
@@ -246,7 +246,7 @@ WHERE CONTAINS(Description, @SearchWord);
  Дополнительные сведения о похожих словах см. в разделе [Поиск слов, близких к другим, с использованием оператора NEAR](../../relational-databases/search/search-for-words-close-to-another-word-with-near.md).  
   
  \<custom_proximity_term>  
-**Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+**Область применения**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздних версий.
   
  Указывает совпадение слов или фраз и (необязательно) максимально допустимое расстояние между поисковыми выражениями. Можно также указать, что поисковые слова должны находиться точно в том порядке, в котором они заданы (\<match_order>).  
   
@@ -371,7 +371,7 @@ WHERE CONTAINS((Name, Color), 'Red');
   
 ## <a name="examples"></a>Примеры  
   
-### <a name="a-using-contains-with-simpleterm"></a>A. Использование CONTAINS с \<simple_term>  
+### <a name="a-using-contains-with-simple_term"></a>A. Использование CONTAINS с \<simple_term>  
  В следующем примере выполняется поиск всех продуктов с ценой `$80.99` , которые содержат слово `Mountain`.  
   
 ```sql  
@@ -384,7 +384,7 @@ WHERE ListPrice = 80.99
 GO  
 ```  
   
-### <a name="b-using-contains-and-phrase-with-simpleterm"></a>Б. Использование CONTAINS и фразы с \<simple_term>  
+### <a name="b-using-contains-and-phrase-with-simple_term"></a>Б. Использование CONTAINS и фразы с \<simple_term>  
  В следующем примере возвращаются все товары, которые содержат фразу `Mountain` или `Road`.  
   
 ```sql  
@@ -396,7 +396,7 @@ WHERE CONTAINS(Name, ' Mountain OR Road ')
 GO  
 ```  
   
-### <a name="c-using-contains-with-prefixterm"></a>В. Использование CONTAINS с \<prefix_term>  
+### <a name="c-using-contains-with-prefix_term"></a>В. Использование CONTAINS с \<prefix_term>  
  Следующий пример возвращает все имена товаров, содержащие по крайней мере одно слово, начинающееся с префикса «chain» в столбце `Name`.  
   
 ```sql  
@@ -408,7 +408,7 @@ WHERE CONTAINS(Name, ' "Chain*" ');
 GO  
 ```  
   
-### <a name="d-using-contains-and-or-with-prefixterm"></a>Г. Использование CONTAINS и OR с \<prefix_term>  
+### <a name="d-using-contains-and-or-with-prefix_term"></a>Г. Использование CONTAINS и OR с \<prefix_term>  
  В следующем примере возвращаются все описания категорий, которые содержат строки с префиксами `chain` или `full`.  
   
 ```sql  
@@ -420,9 +420,9 @@ WHERE CONTAINS(Name, '"chain*" OR "full*"');
 GO  
 ```  
   
-### <a name="e-using-contains-with-proximityterm"></a>Д. Использование CONTAINS с \<proximity_term>  
+### <a name="e-using-contains-with-proximity_term"></a>Д. Использование CONTAINS с \<proximity_term>  
   
-**Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
+**Область применения**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздних версий. 
   
  В следующем примере производится поиск в таблице `Production.ProductReview` всех комментариев, содержащих слово `bike`, на расстоянии до 10 выражений от слова `control` и в заданном порядке (то есть слово "`bike`" должно предшествовать слову "`control`").  
   
@@ -435,7 +435,7 @@ WHERE CONTAINS(Comments , 'NEAR((bike,control), 10, TRUE)');
 GO  
 ```  
   
-### <a name="f-using-contains-with-generationterm"></a>Е. Использование CONTAINS с \<generation_term>  
+### <a name="f-using-contains-with-generation_term"></a>Е. Использование CONTAINS с \<generation_term>  
  В следующем примере выполняется поиск всех товаров с формами слова `ride`: riding, ridden и т. д.  
   
 ```sql  
@@ -447,7 +447,7 @@ WHERE CONTAINS(Description, ' FORMSOF (INFLECTIONAL, ride) ');
 GO  
 ```  
   
-### <a name="g-using-contains-with-weightedterm"></a>Ж. Использование CONTAINS с \<weighted_term>  
+### <a name="g-using-contains-with-weighted_term"></a>Ж. Использование CONTAINS с \<weighted_term>  
  В следующем примере выполняется поиск всех названий продуктов, содержащих слова `performance`, `comfortable` или `smooth`, при этом для каждого слова задается определенный вес.  
   
 ```sql  
@@ -519,7 +519,7 @@ GO
   
 ### <a name="k-querying-on-a-document-property"></a>Л. Запрос по свойству документа  
   
-**Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
+**Область применения**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздних версий. 
   
  Следующий запрос выполняет поиск по индексированному свойству `Title` в столбце `Document` таблицы `Production.Document`. Запрос возвращает только те документы, у которых свойство `Title` содержит строку `Maintenance` или `Repair`.  
   

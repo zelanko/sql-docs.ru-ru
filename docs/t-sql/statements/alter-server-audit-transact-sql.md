@@ -20,12 +20,12 @@ ms.assetid: 63426d31-7a5c-4378-aa9e-afcf4f64ceb3
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: d2ff1981757af05b97bdc90ff3e79fdc3bebf823
-ms.sourcegitcommit: 4fb6bc7c81a692a2df706df063d36afad42816af
+ms.openlocfilehash: c4649a591f7261943d2d5393678f63888930c01f
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73049970"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982038"
 ---
 # <a name="alter-server-audit--transact-sql"></a>ALTER SERVER AUDIT (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -92,7 +92,7 @@ ALTER SERVER AUDIT audit_name
   
  MAX_FILES =*integer*  
  Задает максимальное число файлов аудита, которые могут быть созданы. При достижении предела переключение на первый файл не производится. При достижении предела MAX_FILES любое действие, которое вызывает создание дополнительных событий аудита, завершается ошибкой.  
-**Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Область применения**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздних версий.  
   
  RESERVE_DISK_SPACE **=** { ON | OFF }  
  Этот параметр заранее размещает на диске файл в соответствии со значением MAXSIZE. Применяется, только если значение MAXSIZE не равно UNLIMITED. Значение по умолчанию — OFF.  
@@ -111,7 +111,7 @@ SHUTDOWN
   
  FAIL_OPERATION  
  Действия с базой данных завершаются ошибкой, если они вызывают события аудита. Действия, которые не вызывают события аудита, можно продолжить, но события аудита возникать не будут. Аудит продолжает попытки регистрации событий и возобновляется после устранения причины сбоя. Используйте этот параметр, если обеспечение полного аудита более важно, чем полный доступ к компоненту [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
- **Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].   
+ **Область применения**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздних версий.   
   
  STATE **=** { ON | OFF }  
  Включает или отключает аудит из сбора записей. При изменении состояния работающего аудита (из ON в OFF) создается запись аудита об остановке аудита, об остановившем аудит участнике и времени остановки аудита.  
@@ -121,19 +121,19 @@ SHUTDOWN
   
  predicate_expression  
  Задает выражение предиката, используемое для определения необходимости обработки события. Выражения предиката ограничены 3000 символами, что является пределом для строковых аргументов.  
- **Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Область применения**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздних версий.  
   
  event_field_name  
  Имя поля события, которое идентифицирует источник предиката. Поля аудита описаны в разделе [sys.fn_get_audit_file (Transact-SQL)](../../relational-databases/system-functions/sys-fn-get-audit-file-transact-sql.md). Аудиту могут быть подвержены все поля, за исключением `file_name` и `audit_file_offset`.  
- **Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Область применения**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздних версий.  
   
  number  
  Любой числовой тип, включая **decimal**. Ограничения: недостаток доступной физической памяти или слишком большое число, которое невозможно представить 64-разрядным целым.  
- **Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Область применения**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздних версий.  
   
  ' string '  
  Для предикатного сравнения требуется строка в Юникоде или ANSI. Для функций предикатного сравнения не выполняется неявное преобразование строкового типа. Передача неверного типа приводит к ошибке.  
- **Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Область применения**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздних версий.  
   
 ## <a name="remarks"></a>Remarks  
  В вызове ALTER AUDIT надо указывать хотя бы одно предложение из TO, WITH и MODIFY NAME.  

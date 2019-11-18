@@ -1,6 +1,5 @@
 ---
-title: Создание связанных серверов (компонент SQL Server Database Engine) | Документация Майкрософт
-ms.custom: ''
+title: Создание связанных серверов
 ms.date: 11/20/2015
 ms.prod: sql
 ms.technology: ''
@@ -17,12 +16,13 @@ helpviewer_keywords:
 ms.assetid: 3228065d-de8f-4ece-a9b1-e06d3dca9310
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: fdbf53aae89ee6beb8e06fef9c51e1b72e34ab0e
-ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 15d7b07b409d8a281b0ea47222ce608a712cfa3f
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/02/2019
-ms.locfileid: "70211335"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095884"
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>Создание связанных серверов (компонент SQL Server Database Engine)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

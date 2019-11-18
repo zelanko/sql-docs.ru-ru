@@ -23,12 +23,12 @@ ms.assetid: da4dc25e-72e0-4036-87ce-22de83160836
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2711a9b2bb1530b979a8294b2d3f9a08f764ec6c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 97cc55e271344ef571969fee9b20db647da027c1
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68065966"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982871"
 ---
 # <a name="alter-certificate-transact-sql"></a>ALTER CERTIFICATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
@@ -87,7 +87,7 @@ ALTER CERTIFICATE certificate_name
  Если указано только имя файла, файл сохраняется в папке данных пользователя по умолчанию для экземпляра. Это может быть, а может и не быть папка данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. В SQL Server Express LocalDB папкой данных пользователя по умолчанию для экземпляра является путь, указанный в переменной среды `%USERPROFILE%` учетной записи, создавшей этот экземпляр.  
   
  BINARY ='*биты закрытого ключа*'  
- **Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Область применения**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздних версий.  
   
  Биты закрытого ключа, указанного в качестве двоичной константы. Биты могут находиться в зашифрованном виде. Если они зашифрованы, пользователь должен предоставить пароль для расшифровки. Проверка политики паролей для данного пароля не выполняется. Биты закрытого ключа должны быть в формате файла PVK.  
   

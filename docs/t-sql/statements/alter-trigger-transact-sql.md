@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 2a99c7c1-ac2f-4637-aa7c-3d1bf514e500
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 144a0391926bc695d3693bf6d04294e5a8eb101d
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 5e8523831fd181c17bd8fcff1698d85f46c824e2
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155670"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73983320"
 ---
 # <a name="alter-trigger-transact-sql"></a>ALTER TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -149,12 +149,12 @@ AS { sql_statement
  Применяет область действия триггера DDL к текущей базе данных. Если этот аргумент определен, триггер срабатывает всякий раз при возникновении в базе данных события типа *event_type* или *event_group*.  
   
  ALL SERVER  
- **Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Область применения**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версий.  
   
  Применяет область действия триггера DDL или триггера входа к текущему серверу. Если этот аргумент определен, триггер срабатывает всякий раз при возникновении на текущем сервере события типа *event_type* или *event_group*.  
   
  WITH ENCRYPTION  
- **Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Область применения**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версий.  
   
  Шифрует записи sys.syscomments sys.sql_modules, содержащие текст инструкции ALTER TRIGGER. Использование параметра WITH ENCRYPTION не позволяет публиковать триггер как часть репликации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Параметр WITH ENCRYPTION не может быть указан для триггеров CLR.  
   
@@ -202,7 +202,7 @@ AS { sql_statement
  Имя стандартной группы событий языка [!INCLUDE[tsql](../../includes/tsql-md.md)]. Триггер DDL срабатывает после возникновения любого события языка [!INCLUDE[tsql](../../includes/tsql-md.md)], принадлежащего к группе *event_group*. Список групп событий, которые могут быть использованы в триггерах DDL, приведен в разделе [Группы DDL-событий](../../relational-databases/triggers/ddl-event-groups.md). После завершения инструкции ALTER TRIGGER *event_group* также функционирует в качестве макроса, добавляя события соответствующих типов в представление каталога sys.trigger_events.  
   
  NOT FOR REPLICATION  
- **Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Область применения**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версий.  
   
  Указывает, что триггер не должен запускаться, когда агент репликации изменяет таблицу, связанную с триггером.  
   
@@ -212,7 +212,7 @@ AS { sql_statement
  Для триггеров в таблицах, оптимизированных для памяти, единственной инструкцией *sql_statement*, разрешенной на верхнем уровне, является блок ATOMIC. В блоке ATOMIC допускается только T-SQL, разрешенный в процедурах, компилируемых в собственном коде.  
   
  EXTERNAL NAME \<method_specifier>  
- **Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Область применения**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версий.  
   
  Указывает метод сборки для привязки к триггеру. Этот метод не должен принимать аргументы и возвращать значения void. Аргумент *class_name* должен быть допустимым идентификатором [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и существовать как класс в сборке с видимостью сборки. Класс не может быть вложенным.  
   

@@ -20,12 +20,12 @@ ms.assetid: ''
 author: ronortloff
 ms.author: rortloff
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: 5ee3b24f1c2b85d2c4966b632257ac941c9776ee
-ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
+ms.openlocfilehash: adf8b1e04e7dcd75bcad0c4b184ae60f2b59d248
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73632897"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056492"
 ---
 # <a name="create-workload-classifier-transact-sql"></a>Классификатор CREATE WORKLOAD (Transact-SQL)
 
@@ -62,7 +62,7 @@ WITH
  *WORKLOAD_GROUP* =  *'name'*    
  При выполнении условий правилами классификатора имя name сопоставляет запрос с группой рабочей нагрузки.  Значение name — это sysname.  Оно может иметь длину до 128 символов и должно быть допустимым именем группы рабочей нагрузки во время создания классификатора.
 
- Доступные группы рабочей нагрузки можно найти в представлении каталога [sys.workload_management_workload_groups](/sql/relational-databases/system-catalog-views/sys-workload-management-workload-groups-transact-sql.md?view=azure-sqldw-latest).
+ Доступные группы рабочей нагрузки можно найти в представлении каталога [sys.workload_management_workload_groups](../../relational-databases/system-catalog-views/sys-workload-management-workload-groups-transact-sql.md).
 
  *MEMBERNAME* ='security_account'*    
  Это учетная запись безопасности, добавляемая к роли.  Значение security_account — это sysname, которое не имеет значения по умолчанию. Значением security_account может быть пользователь базы данных, роль базы данных, учетная запись Azure Active Directory или группа Azure Active Directory.

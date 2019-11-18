@@ -1,6 +1,5 @@
 ---
-title: Устранение распространенных проблем с JSON в SQL Server | Документация Майкрософт
-ms.custom: ''
+title: Устранение распространенных проблем с JSON в SQL Server
 ms.date: 07/07/2016
 ms.prod: sql
 ms.reviewer: genemi
@@ -11,13 +10,14 @@ helpviewer_keywords:
 ms.assetid: feae120b-55cc-4601-a811-278ef1c551f9
 author: jovanpop-msft
 ms.author: jovanpop
+ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 268ec12e297d6c8a3e5dd869d0d143877a81e505
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bbf9f4614bd8e9212742072ceb8da5ddeaf8716f
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68131462"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74096101"
 ---
 # <a name="solve-common-issues-with-json-in-sql-server"></a>Устранение распространенных проблем с JSON в SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -74,7 +74,7 @@ FOR JSON PATH
   
  JSON_QUERY без второго необязательного параметра возвращает в качестве результата только первый аргумент. Так как JSON_QUERY всегда возвращает правильный объект JSON, FOR JSON определяет, что экранировать этот результат не нужно.
 
-### <a name="json-generated-with-the-withoutarraywrapper-clause-is-escaped-in-for-json-output"></a>JSON, созданная с помощью предложения WITHOUT_ARRAY_WRAPPER, экранируется в выходных данных FOR JSON  
+### <a name="json-generated-with-the-without_array_wrapper-clause-is-escaped-in-for-json-output"></a>JSON, созданная с помощью предложения WITHOUT_ARRAY_WRAPPER, экранируется в выходных данных FOR JSON  
  **Вопрос.** Я пытаюсь отформатировать выражение столбца с помощью FOR JSON и параметра WITHOUT_ARRAY_WRAPPER.  
   
 ```sql  
@@ -110,7 +110,7 @@ FROM OPENJSON(@json)
         arr1 NVARCHAR(MAX) AS JSON)  
 ```  
 
-### <a name="return-long-text-value-with-openjson-instead-of-jsonvalue"></a>Вместо JSON_VALUE возвращается длинное текстовое значение с параметром OPENJSON.
+### <a name="return-long-text-value-with-openjson-instead-of-json_value"></a>Вместо JSON_VALUE возвращается длинное текстовое значение с параметром OPENJSON.
  **Вопрос.** В тексте JSON имеется ключ описания, содержащий длинный текст. `JSON_VALUE(@json, '$.description')` возвращает NULL, а не значение.  
   
  **Ответ.** JSON_VALUE предназначена для возврата небольших скалярных значений. Обычно эта функция возвращает значение NULL вместо ошибки переполнения. Если требуется возвратить более длинные значения, используйте OPENJSON, поддерживающую значения NVARCHAR(MAX), как показано в следующем примере.  
@@ -119,7 +119,7 @@ FROM OPENJSON(@json)
 SELECT myText FROM OPENJSON(@json) WITH (myText NVARCHAR(MAX) '$.description')  
 ```  
 
-### <a name="handle-duplicate-keys-with-openjson-instead-of-jsonvalue"></a>Для обработки повторяющихся ключей вместо JSON_VALUE используйте параметр OPENJSON.
+### <a name="handle-duplicate-keys-with-openjson-instead-of-json_value"></a>Для обработки повторяющихся ключей вместо JSON_VALUE используйте параметр OPENJSON.
  **Вопрос.** В тексте JSON есть повторяющиеся ключи. JSON_VALUE возвращает только первый ключ, найденный в пути. Как возвратить все ключи с одинаковыми именами?  
   
  **Ответ.** Встроенные скалярные функции JSON возвращают только первое вхождение объекта, на который указывает ссылка. Если требуется получить несколько ключей, используйте функцию с табличным значением OPENJSON, как показано в следующем примере.  

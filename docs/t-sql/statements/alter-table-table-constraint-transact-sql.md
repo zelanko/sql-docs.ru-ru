@@ -16,14 +16,14 @@ helpviewer_keywords:
 ms.assetid: ac2a11e0-cc77-4e27-b107-4fe5bc6f5195
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 51fd9271fc84f23c331c671aca3b88ee981b19af
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 92e12a2991d03c125e3247d1dd681b0a5754e2f9
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68070215"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73981992"
 ---
-# <a name="alter-table-tableconstraint-transact-sql"></a>ALTER TABLE table_constraint (Transact-SQL)
+# <a name="alter-table-table_constraint-transact-sql"></a>ALTER TABLE table_constraint (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Задает свойства ограничений PRIMARY KEY, UNIQUE, FOREIGN KEY или CHECK, а также определений DEFAULT, добавленных в таблицу с помощью инструкции [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).  
@@ -92,7 +92,7 @@ ms.locfileid: "68070215"
 >  Описание выражения WITH FILLFACTOR = *fillfactor* как единственного параметра индекса, применимого к ограничениям PRIMARY KEY или UNIQUE, сохранено для обеспечения обратной совместимости, но в будущих выпусках это выражение документировано не будет. Другие параметры индекса можно указать в предложении [index_option](../../t-sql/statements/alter-table-index-option-transact-sql.md) инструкции ALTER TABLE.  
   
  ON { _partition\_scheme\_name_ **(** _partition\_column\_name_ **)**  | _filegroup_|  **"** default **"** }  
- **Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Область применения**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версий.  
   
  Указывает место хранения индекса, созданного для ограничения. Если определен аргумент *partition_scheme_name*, индекс разделяется на секции, которые сопоставляются с файловыми группами, определенными аргументом *partition_scheme_name*. Если указан аргумент *filegroup*, индекс создается в файловой группе с таким именем. Если указан аргумент **"** default **"** или предложение ON не определено вообще, индекс создается в той же файловой группе, что и таблица. Если при добавлении кластеризованного индекса для ограничений PRIMARY KEY или UNIQUE указано предложение ON, то вся таблица перемещается в указанную файловую группу в момент создания этого индекса.  
   
@@ -158,7 +158,7 @@ ms.locfileid: "68070215"
  Если же указано NO ACTION, компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] инициирует ошибку и откатывает операцию обновления строки таблицы **Vendor**, если на нее ссылается хотя бы одна строка из таблицы **ProductVendor**.  
   
  NOT FOR REPLICATION  
- **Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Область применения**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версий.  
   
  Может быть определено для ограничений FOREIGN KEY и CHECK. Если ограничение сопровождается этим предложением, оно не выполняется, когда агенты репликации выполняют операции вставки, обновления или удаления.  
 

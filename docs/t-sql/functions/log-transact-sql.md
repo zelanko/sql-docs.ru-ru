@@ -20,12 +20,12 @@ ms.assetid: f7c39511-cd84-4362-93ba-0d93655217ee
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2baf7dd62a949dadbaaa5ff1f867c84fb097ed75
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1d3cbf58a3a85d84daf5b0f83006a7cdcb24b589
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68059891"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982249"
 ---
 # <a name="log-transact-sql"></a>LOG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -55,7 +55,7 @@ LOG ( float_expression )
  *base*  
  Необязательный целочисленный аргумент, который определяет основу для логарифма.  
   
-**Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Область применения**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздних версий
   
 ## <a name="return-types"></a>Типы возвращаемых данных  
  **float**  

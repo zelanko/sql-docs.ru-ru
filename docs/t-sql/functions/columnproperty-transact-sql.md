@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 2408c264-6eca-4120-bb71-df043c7c2792
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 6551eb61d22f69307f6fe671ba22cd4de06cdb67
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ff96377eac69c1596e0d2e2661714f82dd2cae9a
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68064668"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73983016"
 ---
 # <a name="columnproperty-transact-sql"></a>COLUMNPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -54,13 +54,13 @@ COLUMNPROPERTY ( id , column , property )
 |**AllowsNull**|Разрешение использовать NULL.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: недопустимые входные данные.|  
 |**ColumnId**|Значение идентификатора столбца, соответствующего **sys.columns.column_id**.|Идентификатор столбца<br /><br /> **Примечание.** При запросе множества столбцов могут появиться пропуски в последовательности значений идентификаторов столбца.|  
 |**FullTextTypeColumn**|TYPE COLUMN в таблице, которая содержит информацию о типе документа столбца *column*.|Идентификатор полнотекстового TYPE COLUMN для выражений имен столбцов, переданных вторым параметром этой функции.|  
-|**GeneratedAlwaysType**|Значение столбца создано системой. Соответствует **sys.columns.generated_always_type**|**Применимо к**: с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 0: создается не всегда<br /><br /> 1: создается всегда как начало строки<br /><br /> 2: создается всегда как конец строки|  
+|**GeneratedAlwaysType**|Значение столбца создано системой. Соответствует **sys.columns.generated_always_type**|**Область применения**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и более поздних версий.<br /><br /> 0: создается не всегда<br /><br /> 1: создается всегда как начало строки<br /><br /> 2: создается всегда как конец строки|  
 |**IsColumnSet**|Столбец представляет собой набор столбцов. Дополнительные сведения см. в статье [Использование наборов столбцов](../../relational-databases/tables/use-column-sets.md).|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: недопустимые входные данные.|  
 |**IsComputed**|Столбец является вычисляемым столбцом.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: недопустимые входные данные.|  
 |**IsCursorType**|Параметр процедуры имеет тип CURSOR.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: недопустимые входные данные.|  
 |**IsDeterministic**|Столбцы являются детерминированными (предсказуемыми). Это свойство применимо только к вычисляемым столбцам и столбцам представлений.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: недопустимые входные данные. Невычисляемый столбец или не столбец представлений.|  
 |**IsFulltextIndexed**|Столбцы зарегистрированы для полнотекстовой индексации.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: недопустимые входные данные.|  
-|**IsHidden**|Значение столбца создано системой. Соответствует **sys.columns.is_hidden**|**Применимо к**: с [!INCLUDE[ssCurrentLong](../../includes/sscurrent-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 0: не скрытый<br /><br /> 1: Скрытый|  
+|**IsHidden**|Значение столбца создано системой. Соответствует **sys.columns.is_hidden**|**Область применения**: [!INCLUDE[ssCurrentLong](../../includes/sscurrent-md.md)] и более поздних версий.<br /><br /> 0: не скрытый<br /><br /> 1: Скрытый|  
 |**IsIdentity**|Столбец использует свойство IDENTITY.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: недопустимые входные данные.|  
 |**IsIdNotForRepl**|Столбец проверяет настройку IDENTITY_INSERT.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: недопустимые входные данные.|  
 |**IsIndexable**|Столбцы не могут быть индексированы.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: недопустимые входные данные.|  

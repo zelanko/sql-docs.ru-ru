@@ -22,12 +22,12 @@ ms.assetid: 1c321680-562e-41f1-8eb1-e7fa5ae45cc5
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: aea91d8ed791809296a924d10aab176f16ebe82f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cc6f7c3ad9dc10e46a7abd1b044bcf70ff86f92d
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68117136"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73983002"
 ---
 # <a name="create-server-audit-transact-sql"></a>CREATE SERVER AUDIT (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -89,7 +89,7 @@ CREATE SERVER AUDIT audit_name
  Указывает максимальное количество файлов, хранимых в файловой системе помимо текущего. Значением *MAX_ROLLOVER_FILES* должно быть целое число или UNLIMITED. Значение по умолчанию — UNLIMITED. Этот параметр проверяется при каждом перезапуске аудита (это может происходить во время перезапуска экземпляра компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] или после выключения и повторного включения аудита) или когда становится необходим новый файл, поскольку достигается предел MAXSIZE. Если при вычислении параметра *MAX_ROLLOVER_FILES* количество файлов превышает значение *MAX_ROLLOVER_FILES*, удаляется самый старый файл. Поэтому если параметр *MAX_ROLLOVER_FILES* имеет значение 0, то каждый раз, когда проверяется значение *MAX_ROLLOVER_FILES*, создается новый файл. При проверке значения *MAX_ROLLOVER_FILES* автоматически удаляется только один файл, поэтому если значение параметра *MAX_ROLLOVER_FILES* уменьшается, то количество файлов не будет сокращаться, если старые файлы не удалить вручную. Максимальное число файлов, которое можно указать, составляет 2 147 483 647.  
   
  MAX_FILES =*integer*  
- **Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Область применения**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздних версий.  
   
  Задает максимальное число файлов аудита, которые могут быть созданы. При достижении предела переключение на первый файл не производится. При достижении предела MAX_FILES любое действие, которое вызывает создание дополнительных событий аудита, завершается ошибкой.  
   
@@ -110,18 +110,18 @@ SHUTDOWN
   
  FAIL_OPERATION  
  Действия с базой данных завершаются ошибкой, если они вызывают события аудита. Действия, которые не вызывают события аудита, можно продолжить, но события аудита возникать не будут. Аудит продолжает попытки регистрации событий и возобновляется после устранения причины сбоя. Используйте этот параметр, если обеспечение полного аудита более важно, чем полный доступ к компоненту [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
-**Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+**Область применения**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздних версий.
 
  AUDIT_GUID =*uniqueidentifier*  
  Чтобы поддерживать такие сценарии, как зеркальное отображение базы данных, аудиту необходим конкретный идентификатор GUID, который совпадает с идентификатором GUID, найденным в зеркальной базе данных. Этот идентификатор GUID не может быть изменен после создания аудита.  
   
  predicate_expression  
- **Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Область применения**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздних версий.  
   
  Задает выражение предиката, используемое для определения необходимости обработки события. Выражения предиката ограничены 3000 символами, что является пределом для строковых аргументов.  
   
  event_field_name  
- **Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Область применения**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздних версий.  
   
  Имя поля события, которое идентифицирует источник предиката. Поля аудита описаны в разделе [sys.fn_get_audit_file (Transact-SQL)](../../relational-databases/system-functions/sys-fn-get-audit-file-transact-sql.md). Фильтровать можно все поля, за исключением `file_name`, `audit_file_offset` и `event_time`.  
 
@@ -136,12 +136,12 @@ SHUTDOWN
 
 
  number  
- **Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Область применения**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздних версий.  
   
  Любой числовой тип, включая **decimal**. Ограничения: недостаток доступной физической памяти или слишком большое число, которое невозможно представить 64-разрядным целым.  
   
  ' string '  
- **Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Область применения**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздних версий.  
   
  Для предикатного сравнения требуется строка в Юникоде или ANSI. Для функций предикатного сравнения не выполняется неявное преобразование строкового типа. Передача неверного типа приводит к ошибке.  
   

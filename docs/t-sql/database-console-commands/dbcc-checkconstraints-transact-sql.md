@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: da6c9cee-6687-46e8-b504-738551f9068b
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 8653b197e0fa16b4e939ab94865395d68bf1f852
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4fb6bc14742d4aa25c47af59bc1be72ebfffa5a4
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68102126"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982400"
 ---
 # <a name="dbcc-checkconstraints-transact-sql"></a>DBCC CHECKCONSTRAINTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -88,7 +88,7 @@ WHERE <table_being_checked.fkey1> IS NOT NULL
 Данные запроса хранятся во временной таблице. После того, как все указанные таблицы или ограничения были проверены, возвращается результирующий набор.
 DBCC CHECKCONSTRAINTS проверяет целостность ограничений FOREIGN KEY и CHECK, но не проверяет целостность дисковых структур данных таблицы. Проверки этих структур данных могут быть произведены с помощью команд [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) и [DBCC CHECKTABLE](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md).
   
-**Применимо к**: с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Область применения**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и более поздних версий
   
 Если указан аргумент *table_name* или *table_id* и для соответствующей таблицы включено системное управление версиями, DBCC CHECKCONSTRAINTS также проводит для нее проверки согласованности темпоральных данных. Если параметр *NO_INFOMSGS* не указан, эта команда возвращает сведения о всех нарушениях согласованности в отдельной строке выходных данных. Выходные данные имеют следующий формат: ([pkcol1], [pkcol2]..) = (\<pkcol1_value>, \<pkcol2_value>…) AND \<проблема с записью темпоральной таблицы>.
   

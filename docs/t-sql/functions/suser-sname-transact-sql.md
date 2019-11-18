@@ -26,14 +26,14 @@ ms.assetid: 11ec7d86-d429-4004-a436-da25df9f8761
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 74ecfa682fb8b3942b1931c07273cdfa93831c6f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 293976660f66f60803e64c492ef868fd38e7c9dd
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68117611"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73981788"
 ---
-# <a name="susersname-transact-sql"></a>SUSER_SNAME (Transact-SQL)
+# <a name="suser_sname-transact-sql"></a>SUSER_SNAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Возвращает имя входа, связанное с идентификатором безопасности (SID).  
@@ -48,7 +48,7 @@ SUSER_SNAME ( [ server_user_sid ] )
   
 ## <a name="arguments"></a>Аргументы  
  *server_user_sid*  
-**Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Область применения**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версий
   
  Необязательный номер идентификатора безопасности имени входа. Аргумент *server_user_sid* имеет тип **varbinary(85)** . Аргумент *server_user_sid* может быть идентификационным номером безопасности любого имени входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] либо пользователя или группы [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. Если аргумент *server_user_sid* не указан, будут возвращены сведения о текущем пользователе. Если параметр содержит слово NULL, то возвращается NULL.  
   
@@ -67,7 +67,7 @@ SUSER_SNAME ( [ server_user_sid ] )
   
 ## <a name="examples"></a>Примеры  
   
-### <a name="a-using-susersname"></a>A. Использование параметра SUSER_SNAME  
+### <a name="a-using-suser_sname"></a>A. Использование параметра SUSER_SNAME  
  В следующем примере возвращается имя входа для текущего контекста безопасности.  
   
 ```  
@@ -75,17 +75,17 @@ SELECT SUSER_SNAME();
 GO  
 ```  
   
-### <a name="b-using-susersname-with-a-windows-user-security-id"></a>Б. Использование параметра SUSER_SNAME с идентификатором безопасности пользователя Windows  
+### <a name="b-using-suser_sname-with-a-windows-user-security-id"></a>Б. Использование параметра SUSER_SNAME с идентификатором безопасности пользователя Windows  
  Следующий пример возвращает имя входа, связанное с номером идентификатора безопасности Windows.  
   
-**Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Область применения**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версий
   
 ```  
 SELECT SUSER_SNAME(0x010500000000000515000000a065cf7e784b9b5fe77c87705a2e0000);  
 GO  
 ```  
   
-### <a name="c-using-susersname-as-a-default-constraint"></a>В. Использование параметра SUSER_SNAME в качестве ограничения DEFAULT  
+### <a name="c-using-suser_sname-as-a-default-constraint"></a>В. Использование параметра SUSER_SNAME в качестве ограничения DEFAULT  
  В следующем примере функция `SUSER_SNAME` используется в качестве ограничения `DEFAULT` в инструкции `CREATE TABLE`.  
   
 ```  
@@ -102,10 +102,10 @@ INSERT sname_example DEFAULT VALUES;
 GO  
 ```  
   
-### <a name="d-calling-susersname-in-combination-with-execute-as"></a>Г. Вызов функции SUSER_SNAME в сочетании с EXECUTE AS  
+### <a name="d-calling-suser_sname-in-combination-with-execute-as"></a>Г. Вызов функции SUSER_SNAME в сочетании с EXECUTE AS  
  Этот пример показывает поведение функции SUSER_SNAME при вызове из олицетворенного контекста.  
   
-**Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Область применения**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версий
   
 ```  
 SELECT SUSER_SNAME();  
@@ -129,7 +129,7 @@ sa
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="e-using-susersname"></a>Д. Использование параметра SUSER_SNAME  
+### <a name="e-using-suser_sname"></a>Д. Использование параметра SUSER_SNAME  
  Следующий пример возвращает имя входа для номера идентификатора безопасности со значением `0x01`.  
   
 ```  

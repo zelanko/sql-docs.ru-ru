@@ -27,12 +27,12 @@ ms.assetid: a4274b2b-4cb0-446a-a956-1c8e6587515d
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 81beacc9a78800c288964fcfc4a186b921a27608
-ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
+ms.openlocfilehash: 7864be7bbf270e235fd1948a1f70f34417a8dec4
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73064601"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982779"
 ---
 # <a name="create-certificate-transact-sql"></a>Инструкция CREATE CERTIFICATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
@@ -127,7 +127,7 @@ CREATE CERTIFICATE certificate_name
   
  BINARY =*сертификат в asn*  
  Биты закодированного в ASN сертификата, указанного в качестве двоичной константы.  
- **Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Область применения**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздних версий.  
   
  WITH PRIVATE KEY  
  Указывает, что закрытый ключ сертификата загружен в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Это предложение действительно лишь в случае, когда сертификат создается из сборки. Для загрузки закрытого ключа сертификата, созданного из сборки, следует использовать команду [ALTER CERTIFICATE](../../t-sql/statements/alter-certificate-transact-sql.md).  
@@ -139,7 +139,7 @@ CREATE CERTIFICATE certificate_name
 >  Этот параметр недоступен в автономной базе данных или в Базе данных SQL Azure.  
   
  BINARY =*private_key_bits*  
- **Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Область применения**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздних версий.  
   
  Биты закрытого ключа, указанного в качестве двоичной константы. Биты могут находиться в зашифрованном виде. Если они зашифрованы, пользователь должен предоставить пароль для расшифровки. Проверка политики паролей для данного пароля не выполняется. Биты закрытого ключа должны быть в формате файла PVK.  
   

@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: 746eabda-3b4f-4940-b0b5-1c379f5cf7a5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b0009ec924ebe935b60194f950da5d30593adfd5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7eaa4c35079d8eec49d7197778a01b7bac6cf9c1
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68232247"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982045"
 ---
-# <a name="alter-table-computedcolumndefinition-transact-sql"></a>ALTER TABLE computed_column_definition (Transact-SQL)
+# <a name="alter-table-computed_column_definition-transact-sql"></a>ALTER TABLE computed_column_definition (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Указывает свойства вычисляемого столбца, который добавляется в таблицу с помощью инструкции [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).  
@@ -127,7 +127,7 @@ ON UPDATE { **NO ACTION** }
  Указывает, какая операция совершается над строками в таблице, когда эти строки имеют ссылочную связь, а строка родительской таблицы, на которую указывает ссылка, обновляется. Если указано NO ACTION, то компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] вызывает ошибку и откатывает операцию обновления строки таблицы Vendor, если на нее ссылается хотя бы одна строка таблицы ProductVendor.  
   
 NOT FOR REPLICATION  
- **Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Область применения**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версий.  
   
  Может быть определено для ограничений FOREIGN KEY и CHECK. Если ограничение сопровождается этим предложением, оно не выполняется, когда агенты репликации выполняют операции вставки, обновления или удаления.  
   
@@ -138,7 +138,7 @@ CHECK
  Логическое выражение, возвращающее значения TRUE или FALSE. Выражение не может содержать ссылку на псевдоним типа данных.  
   
 ON { *partition_scheme_name*(*partition_column_name*) | *filegroup*| "default"}  
- **Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Область применения**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версий.  
   
  Указывает место хранения индекса, созданного для ограничения. Если определен аргумент *partition_scheme_name*, индекс разделяется на секции, которые сопоставляются с файловыми группами, определенными аргументом *partition_scheme_name*. Если указан аргумент *filegroup*, индекс создается в файловой группе с таким именем. Если указан аргумент "default" или предложение ON не определено вообще, индекс создается в той же файловой группе, что и таблица. Если при добавлении кластеризованного индекса для ограничений PRIMARY KEY или UNIQUE указано предложение ON, то вся таблица перемещается в указанную файловую группу в момент создания этого индекса.  
   

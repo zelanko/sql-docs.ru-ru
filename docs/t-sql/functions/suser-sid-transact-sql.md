@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 57b42a74-94e1-4326-85f1-701b9de53c7d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 97043c1232dd3003ff5c7101403c53425d75bca5
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.openlocfilehash: a31be66b07c6d5c463f5220e6359942cd507849b
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "73843590"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73981744"
 ---
 # <a name="suser_sid-transact-sql"></a>SUSER_SID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -47,12 +47,12 @@ SUSER_SID ( [ 'login' ] [ , Param2 ] )
   
 ## <a name="arguments"></a>Аргументы  
  **'** *login* **'**  
-**Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Область применения**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версий
   
  Имя входа пользователя. Аргумент *login* имеет тип **sysname**. Аргумент *login* необязателен и может представлять собой имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] либо имя пользователя или группы в [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. Если аргумент *login* не задан, возвращаются сведения о текущем контексте безопасности. Если параметр содержит слово NULL, то возвращается NULL.  
   
  *Param2*  
-**Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Область применения**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздних версий
   
  Указывает, проверено ли имя входа. Аргумент *Param2* имеет тип **int** и является необязательным. Если параметр *Param2* равен 0, то имя для входа не проверяется. Если параметр*Param2* не равен 0, то имя для входа Windows проверяется на обязательное соответствие имени для входа, сохраненному в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -80,7 +80,7 @@ SELECT SUSER_SID();
 ### <a name="b-using-suser_sid-with-a-specific-login"></a>Б. Использование SUSER_SID с определенным именем входа  
  В приведенном ниже примере возвращается идентификатор безопасности для имени для входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `sa`.  
   
-**Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Область применения**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздних версий
   
 ```  
 SELECT SUSER_SID('sa');  
@@ -90,7 +90,7 @@ GO
 ### <a name="c-using-suser_sid-with-a-windows-user-name"></a>В. Использование SUSER_SID с именем пользователя Windows  
  В следующем примере возвращается идентификационный номер безопасности для пользователя Windows `London\Workstation1`.  
   
-**Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Область применения**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздних версий
   
 ```  
 SELECT SUSER_SID('London\Workstation1');  
@@ -118,7 +118,7 @@ GO
 ### <a name="e-comparing-the-windows-login-name-to-the-login-name-stored-in-sql-server"></a>Д. Сравнение имени входа Windows с именем входа, сохраненным в SQL Server  
  В приведенном ниже примере показано, как с помощью параметра *Param2* получить SID из Windows и передать его в функцию `SUSER_SNAME`. В этом примере имя входа указывается в формате, в котором оно хранится в Windows (`TestComputer\User`), а возвращается в формате, в котором оно хранится в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (`TESTCOMPUTER\User`).  
   
-**Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Область применения**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздних версий
   
 ```  
 SELECT SUSER_SNAME(SUSER_SID('TestComputer\User', 0));  
