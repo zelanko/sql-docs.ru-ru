@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: a0b210ce-9b58-4709-80cb-9363b68a1f5a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9df5dab8f3ce74efeb9ba4c1d849e9f633c85004
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 23cd3f3b29db6d6c791b97b40401781fa3a3bbfc
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68809711"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73981807"
 ---
 # <a name="dta-utility"></a>dta
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -181,7 +181,7 @@ dta -d AdventureWorks2012 ...
 [Рекомендации по индексам сolumnstore в помощнике по настройке ядра СУБД (DTA)](../../relational-databases/performance/columnstore-index-recommendations-in-database-engine-tuning-advisor-dta.md).
  ||  
 |-|  
-|**Применимо к**: с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+|**Область применения**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и более поздних версий.|  
 
   
  **-fk** _keep_existing_option_  
@@ -219,7 +219,7 @@ dta -d AdventureWorks2012 ...
  Указывает, что хранилище запросов должно использоваться в качестве рабочей нагрузки. Анализируются первые 1 000 событий из хранилища запросов для явно выбранных баз данных. Это значение можно изменить с помощью параметра **–n**.  Дополнительные сведения см. в статье [Хранилище запросов](../../relational-databases/performance/how-query-store-collects-data.md) [Настройка базы данных с помощью рабочей нагрузки из хранилища запросов](../../relational-databases/performance/tuning-database-using-workload-from-query-store.md).
  ||  
 |-|  
-|**Применимо к**: с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+|**Область применения**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и более поздних версий.|  
      
   
  **-if** _workload_file_  
@@ -265,7 +265,7 @@ dta -n number_of_events -A 0
   
  В этом случае важно указать неограниченное время настройки (`-A 0`). В противном случае помощник по настройке ядра СУБД примет для времени настройки значение по умолчанию, равное 8 часам.
  
- **-I** _time_window_in_hours_    
+ **-I** _time_window_in_hours_   
    Указывает временной интервал (в часах), в течение которого запрос должен быть выполнен, чтобы он рассматривался программой DTA для настройки при использовании параметра **-IQ** (Рабочая нагрузка из хранилища запросов). 
 ```  
 dta -iq -I 48  
@@ -273,7 +273,7 @@ dta -iq -I 48
 В этом случае DTA будет использовать хранилище запросов в качестве источника рабочей нагрузки и расдумать только о запросах, выполненных за последние 48 часов.  
   ||  
 |-|  
-|**Применимо к**: с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+|**Область применения**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и более поздних версий.|  
 
 
   
