@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e2916cd7-a3ed-41e6-97b4-2ee060754cbe
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b3db7139105b331c1e9fac831330a04cd2a0939a
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.openlocfilehash: 08b18a3a5805b37a371d6fa17850584d6f4953fd
+ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73660508"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74164907"
 ---
 # <a name="wmi-provider-for-server-events-classes-and-properties"></a>Поставщик инструментария WMI для классов событий и свойств сервера
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "73660508"
  Например, при обращении к событию ALTER_DATABASE вы узнаете, что его родительское событие DDL_SERVER_LEVEL_EVENTS, а его свойства — **тсклкомманд** и **DatabaseName**. Это событие также наследует свойства **SQLInstance**, **time**, **ComputerName**, **SPID**и **LoginName**. Это событие не имеет дочерних событий.  
   
 > [!NOTE]  
->  Системные хранимые процедуры, выполняющие DDL-подобные операции, также могут запускать уведомления о событиях. Протестируйте свои уведомления о событиях, чтобы определить их реакцию на системные хранимые процедуры. Например, инструкция CREATE TYPE и хранимая процедура **sp_addtype** будут вызывать уведомление о событии, созданное для события CREATE_TYPE. Дополнительные сведения см. в разделе[DDL Events](../../relational-databases/triggers/ddl-events.md).  
+>  Системные хранимые процедуры, выполняющие DDL-подобные операции, также могут запускать уведомления о событиях. Протестируйте свои уведомления о событиях, чтобы определить их реакцию на системные хранимые процедуры. Например, инструкция CREATE TYPE и хранимая процедура **sp_addtype** будут вызывать уведомление о событии, созданное для события CREATE_TYPE. Дополнительные сведения см. в разделе [DDL Events](../../relational-databases/triggers/ddl-events.md).  
   
  **События языка определения данных и группы событий**  
   
@@ -42,7 +42,7 @@ ms.locfileid: "73660508"
   
  ![События трассировки и группы событий](../../relational-databases/wmi-provider-server-events/media/sql-wmi-trc-all-events.gif "События трассировки и группы событий")  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также статью  
  [Основные понятия о поставщике WMI для событий сервера](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)   
  [Использование WQL с поставщиком WMI для событий сервера](../../relational-databases/wmi-provider-server-events/using-wql-with-the-wmi-provider-for-server-events.md)  
   

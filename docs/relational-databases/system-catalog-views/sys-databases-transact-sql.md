@@ -1,7 +1,7 @@
 ---
 title: sys. databases (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/14/2019
+ms.date: 11/18/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -20,14 +20,15 @@ ms.assetid: 46c288c1-3410-4d68-a027-3bbf33239289
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c33f30366ef2d63f888684c9afedb2a949ecd589
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.openlocfilehash: a307cf2fb9747e822cc48ca4b0723aed437d4af7
+ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74095866"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74165947"
 ---
 # <a name="sysdatabases-transact-sql"></a>sys.databases (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Содержит одну строку для каждой базы данных в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -76,7 +77,7 @@ ms.locfileid: "74095866"
 |**is_cursor_close_on_commit_on**|**бит**|1 = CURSOR_CLOSE_ON_COMMIT в состоянии ON<br /> 0 = CURSOR_CLOSE_ON_COMMIT в состоянии OFF|  
 |**is_local_cursor_default**|**бит**|1 = CURSOR_DEFAULT соответствует локальному курсору<br /> 0 = CURSOR_DEFAULT соответствует глобальному курсору|  
 |**is_fulltext_enabled**|**бит**|1 = полнотекстовый режим включен для данной базы данных<br /> 0 = полнотекстовый режим отключен для данной базы данных|  
-|**is_trustworthy_on**|**бит**|1 = база данных помечена как надежная<br /> 0 = база данных не помечена как надежная<br /> По умолчанию в восстановленных или прикрепленных базах данных брокер отключен. Исключением является зеркальное отображение базы данных, при котором брокер включается после отработки отказа.|  
+|**is_trustworthy_on**|**бит**|1 = база данных помечена как надежная<br /> 0 = база данных не помечена как надежная<br /> По умолчанию для восстановленных или присоединенных баз данных не включена надежность.|  
 |**is_db_chaining_on**|**бит**|1 = межбазовые цепочки владения в состоянии ON<br /> 0 = межбазовые цепочки владения в состоянии OFF|  
 |**is_parameterization_forced**|**бит**|1 = параметризация в состоянии FORCED<br /> 0 = параметризация в состоянии SIMPLE|  
 |**is_master_key_encrypted_by_server**|**бит**|1 = база данных имеет главный ключ шифрования<br /> 0 = база данных не имеет главного ключа шифрования|  
@@ -93,7 +94,7 @@ ms.locfileid: "74095866"
 |**is_date_correlation_on**|**бит**|1 = DATE_CORRELATION_OPTIMIZATION в состоянии ON<br /> 0 = DATE_CORRELATION_OPTIMIZATION в состоянии OFF|  
 |**is_cdc_enabled**|**бит**|1 = в базе данных включена система отслеживания измененных данных. Дополнительные сведения см. в разделе [sys. &#40;SP_CDC_ENABLE_DB Transact-&#41;SQL](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql.md).|  
 |**is_encrypted**|**бит**|Указывает, зашифрована ли база данных (отражает состояние Last, заданное с помощью предложения `ALTER DATABASE SET ENCRYPTION`). Может использоваться одно из следующих значений:<br /> 1 = зашифрована<br /> 0 = не зашифрована.<br /> Дополнительные сведения о шифровании баз данных см. в статье [Прозрачное шифрование данных (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md).<br /> Если база данных находится в процессе расшифровки, `is_encrypted` отображает значение 0. Состояние процесса шифрования можно просмотреть с помощью динамического административного представления [sys. dm_database_encryption_keys](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md) .|  
-|**is_honor_broker_priority_on**|**бит**|Указывает, учитывает ли база данных приоритеты диалога (отражает Последнее состояние, заданное с помощью предложения `ALTER DATABASE SET HONOR_BROKER_PRIORITY`). Может использоваться одно из следующих значений:<br /> 1 = HONOR_BROKER_PRIORITY имеет значение ON;<br /> 0 = HONOR_BROKER_PRIORITY имеет значение OFF.<br /> По умолчанию в восстановленных или прикрепленных базах данных брокер отключен. Исключением является зеркальное отображение базы данных, при котором брокер включается после отработки отказа.|  
+|**is_honor_broker_priority_on**|**бит**|Указывает, учитывает ли база данных приоритеты диалога (отражает Последнее состояние, заданное с помощью предложения `ALTER DATABASE SET HONOR_BROKER_PRIORITY`). Может использоваться одно из следующих значений:<br /> 1 = HONOR_BROKER_PRIORITY имеет значение ON;<br /> 0 = HONOR_BROKER_PRIORITY имеет значение OFF.<br /> По умолчанию восстановленные или присоединенные базы данных имеют приоритет компонента Service Broker.|  
 |**replica_id**|**uniqueidentifier**|Уникальный идентификатор локальной реплики доступности [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] группы доступности, если таковая имеется, частью которой является база данных.<br /> NULL = база данных не является частью реплики доступности в группе доступности.<br /> **Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздних версий) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
 |**group_database_id**|**uniqueidentifier**|Уникальный идентификатор базы данных в Always On группе доступности (при наличии), в которой участвует база данных. **group_database_id** одинаковы для этой базы данных в первичной реплике и на каждой вторичной реплике, в которой база данных была присоединена к группе доступности.<br /> NULL = база данных не является частью реплики доступности в любой группе доступности.<br /> **Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздних версий) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
 |**resource_pool_id**|**int**|Идентификатор пула ресурсов, сопоставленного с этой базой данных. Этот пул ресурсов управляет общим объемом памяти, доступным оптимизированным для памяти таблицам из этой базы данных.<br /> **Область применения**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и более поздних версий|  
@@ -118,41 +119,47 @@ ms.locfileid: "74095866"
 |**catalog_collation_type_desc**|**nvarchar(60)**|Параметр сортировки каталога:<br />DATABASE_DEFAULT<br />SQL_Latin_1_General_CP1_CI_AS<br /> **Область применения**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
 |**is_result_set_caching_on**|**int**|1 = is_result_set_caching_on включен</br>0 = is_result_set_caching_on отключена</br>Область **применения**: Gen2 хранилища данных SQL Azure. Хотя эти функции развертываются во всех регионах, проверьте версию, развернутую в экземпляре, и последние [заметки о выпуске хранилища данных SQL Azure](/azure/sql-data-warehouse/release-notes-10-0-10106-0) для доступности функций.|
   
-## <a name="permissions"></a>Разрешения  
+## <a name="permissions"></a>Разрешения
+
  Если вызывающий объект `sys.databases` не является владельцем базы данных, а база данных не `master` или `tempdb`, то минимальными разрешениями, необходимыми для просмотра соответствующей строки, являются `ALTER ANY DATABASE` или `VIEW ANY DATABASE` разрешение на уровне сервера или разрешение `CREATE DATABASE` в базе данных `master`. База данных, к которой подключен вызывающий объект, всегда может быть просмотрена в `sys.databases`.  
   
 > [!IMPORTANT]  
 > По умолчанию роль public имеет разрешение `VIEW ANY DATABASE`, что позволяет всем именам входа просматривать сведения о базе данных. Чтобы заблокировать вход от возможности обнаружения базы данных, `REVOKE` `VIEW ANY DATABASE` разрешения `public`или `DENY` разрешение `VIEW ANY DATABASE` для отдельных имен входа.  
   
-## <a name="azure-sql-database-remarks"></a>Примечания к базе данных SQL Azure  
+## <a name="azure-sql-database-remarks"></a>Примечания к базе данных SQL Azure
+
 В [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] это представление доступно в базе данных `master` и в пользовательских базах данных. В `master` базе данных это представление возвращает сведения о `master`ной базе данных и всех пользовательских базах данных на сервере. В пользовательской базе данных это представление возвращает сведения только по текущей базе данных и базе данных master.  
   
  Воспользуйтесь представлением `sys.databases` в базе данных `master` на сервере [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], где создается новая база данных. После начала копирования базы данных можно запросить `sys.databases` и представления `sys.dm_database_copies` из `master` базы данных целевого сервера, чтобы получить дополнительные сведения о ходе копирования.  
   
 ## <a name="examples"></a>Примеры  
   
-### <a name="a-query-the-sysdatabases-view"></a>A. Запрос к представлению sys.databases  
- В следующем примере возвращается несколько столбцов, доступных в представлении `sys.databases`.  
+### <a name="a-query-the-sysdatabases-view"></a>A. Запрос к представлению sys.databases
+
+В следующем примере возвращается несколько столбцов, доступных в представлении `sys.databases`.  
   
 ```sql  
 SELECT name, user_access_desc, is_read_only, state_desc, recovery_model_desc  
 FROM sys.databases;  
 ```  
   
-### <a name="b-check-the-copying-status-in-includesssdsincludessssds-mdmd"></a>б. Проверка состояния копирования в продукте [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
- В следующем примере запрашиваются представления `sys.databases` и `sys.dm_database_copies`, чтобы получить сведения об операции копирования базы данных.  
+### <a name="b-check-the-copying-status-in-includesssdsincludessssds-mdmd"></a>б. Проверка состояния копирования в продукте [!INCLUDE[ssSDS](../../includes/sssds-md.md)]
+
+В следующем примере запрашиваются представления `sys.databases` и `sys.dm_database_copies`, чтобы получить сведения об операции копирования базы данных.  
   
 **Область применения**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
-```sql  
+```sql
 -- Execute from the master database.  
 SELECT a.name, a.state_desc, b.start_date, b.modify_date, b.percentage_complete  
 FROM sys.databases AS a  
 INNER JOIN sys.dm_database_copies AS b ON a.database_id = b.database_id  
 WHERE a.state = 7;  
-```  
-### <a name="c-check-the-temporal-retention-policy-status-in-includesssdsincludessssds-mdmd"></a>В. Проверьте состояние политики временного хранения в [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
- В следующем примере запрашиваются `sys.databases`, чтобы получить сведения о том, включена ли задача очистки временного хранения. Имейте в виду, что после временного хранения операция восстановления по умолчанию отключена. Используйте `ALTER DATABASE`, чтобы включить его явным образом.
+```
+
+### <a name="c-check-the-temporal-retention-policy-status-in-includesssdsincludessssds-mdmd"></a>В. Проверьте состояние политики временного хранения в [!INCLUDE[ssSDS](../../includes/sssds-md.md)]
+
+В следующем примере запрашиваются `sys.databases`, чтобы получить сведения о том, включена ли задача очистки временного хранения. Имейте в виду, что после временного хранения операция восстановления по умолчанию отключена. Используйте `ALTER DATABASE`, чтобы включить его явным образом.
   
 **Область применения**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
@@ -162,11 +169,10 @@ SELECT a.name, a.is_temporal_history_retention_enabled
 FROM sys.databases AS a;
 ```  
   
-## <a name="see-also"></a>См. также статью  
- [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)   
- [sys.database_mirroring_witnesses (Transact-SQL)](../../relational-databases/system-catalog-views/database-mirroring-witness-catalog-views-sys-database-mirroring-witnesses.md)   
- [sys. database_recovery_status &#40;  Transact-&#41; SQL](../../relational-databases/system-catalog-views/sys-database-recovery-status-transact-sql.md)  
- [Представления каталогов баз данных и файлов (Transact-SQL)](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)   
- [sys.dm_database_copies &#40;база данных SQL Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database.md)  
-  
-  
+## <a name="next-steps"></a>Следующие шаги
+
+- [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)
+- [sys.database_mirroring_witnesses (Transact-SQL)](../../relational-databases/system-catalog-views/database-mirroring-witness-catalog-views-sys-database-mirroring-witnesses.md)
+- [sys. database_recovery_status &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-recovery-status-transact-sql.md)
+- [Представления &#40;каталога баз данных и файлов TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)
+- [sys.dm_database_copies &#40;база данных SQL Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database.md)  

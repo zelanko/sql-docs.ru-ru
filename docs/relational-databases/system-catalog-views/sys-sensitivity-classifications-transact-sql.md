@@ -23,24 +23,24 @@ helpviewer_keywords:
 - information types
 - rank
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: b95dec6d4d867e54c3ccf0d1108a7f6b1cfa8f3c
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.openlocfilehash: 5a49d68b486a6bb812ea91d518145e1f639ef991
+ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73757474"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74164930"
 ---
 # <a name="syssensitivity_classifications-transact-sql"></a>sys. sensitivity_classifications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
 
 Возвращает строку для каждого классифицированного элемента в базе данных.
 
-|Имя столбца|Тип данных|Описание|
+|Имя столбца|Data type|Описание|
 |-----------------|---------------|-----------------|  
-|**class**|**int**|Определяет класс элемента, для которого существует классификация|  
-|**class_desc**|**varchar (16)**|Описание класса элемента, для которого существует классификация|  
-|**major_id**|**int**|Идентификатор элемента, для которого существует классификация.<br><br>Если столбец class равен 0, то столбец major_id всегда равен 0.<br>Если столбец class равен 1, 2 или 7, то столбец major_id равен столбцу object_id.|  
-|**minor_id**|**int**|Вторичный идентификатор элемента, для которого существует классификация, интерпретируемый в соответствии с ее классом.<br><br>Если класс = 1, minor_id является column_id (если столбец), в противном случае — 0 (если объект).<br>Если столбец class = 2, то столбец minor_id равен столбцу parameter_id.<br>Если класс = 7, minor_id является index_id. |  
+|**class**|**int**|Определяет класс элемента, для которого существует классификация. Всегда будет иметь значение 1 (представляет столбец)|  
+|**class_desc**|**varchar (16)**|Описание класса элемента, для которого существует классификация. всегда будет иметь значение *OBJECT_OR_COLUMN*|  
+|**major_id**|**int**|Представляет идентификатор таблицы, содержащей классифицированный столбец, соответствующий sys. all_objects. object_id|  
+|**minor_id**|**int**|Представляет идентификатор столбца, на котором существует классификация, соответствующая sys. all_columns. column_id|   
 |**label**|**sysname**|Метка (удобное для чтения), назначенная для классификации чувствительности|  
 |**label_id**|**sysname**|Идентификатор, связанный с меткой, который может использоваться системой защиты информации, например Azure Information Protection (точка административного установки).|  
 |**information_type**|**sysname**|Тип сведений (для человека), назначенный для классификации чувствительности|  
@@ -49,15 +49,11 @@ ms.locfileid: "73757474"
 |**rank_desc**|**sysname**|Текстовое представление ранга:  <br><br>НЕТ, НИЗКИЙ, СРЕДНИЙ, ВЫСОКИЙ, КРИТИЧЕСКИЙ|  
 | &nbsp; | &nbsp; | &nbsp; |
 
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
 
 - Это представление позволяет видеть состояние классификации базы данных. Его можно использовать для управления классификациями баз данных, а также для создания отчетов.
-- В настоящее время поддерживается только классификация столбцов базы данных. Результате
-    - **класс** — всегда будет иметь значение 1 (представляет столбец)
-    - **class_desc** — всегда будет иметь значение *OBJECT_OR_COLUMN*
-    - **major_id** — представляет идентификатор таблицы, содержащей классифицированный столбец, соответствующий sys. all_objects. object_id
-    - **minor_id** — представляет идентификатор столбца, на котором существует классификация, соответствующая sys. all_columns. column_id
-
+- В настоящее время поддерживается только классификация столбцов базы данных.
+ 
 ## <a name="examples"></a>Примеры
 
 ### <a name="a-listing-all-classified-columns-and-their-corresponding-classification"></a>A. Составление списка всех классифицированных столбцов и соответствующих им классификаций
@@ -82,7 +78,7 @@ left join sys.all_columns on sys.sensitivity_classifications.major_id = sys.all_
 ## <a name="permissions"></a>Разрешения  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
 
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также статью  
 
 [ADD SENSITIVITY CLASSIFICATION (Transact-SQL)](../../t-sql/statements/add-sensitivity-classification-transact-sql.md)
 
