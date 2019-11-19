@@ -14,12 +14,12 @@ helpviewer_keywords:
 - SPNs [SQL Server]
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 37b9332410d0f75e743776cf3b2c3b4e62a6354d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e7b61536b335d6cbbcdc78e77e0ebbeb18618a22
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67988942"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056671"
 ---
 # <a name="service-principal-name-spn-support-in-client-connections"></a>Поддержка имени участника-службы в клиентских соединениях
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -69,7 +69,7 @@ ms.locfileid: "67988942"
  Поведение нового соединения реализуется клиентом, поэтому оно не зависит от версии [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="linked-servers-and-delegation"></a>Связанные серверы и делегирование  
- При создании связанных серверов параметр **@provstr** хранимой процедуры [sp_addlinkedserver](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) можно использовать для указания имени субъекта-службы сервера и партнера по обеспечению отработки отказа. Такой подход имеет те же преимущества, что и при указании имен субъектов-служб в клиентских строках подключения, — установить подключения на основе аутентификации Kerberos проще и надежнее.  
+ При создании связанных серверов параметр **\@provstr** хранимой процедуры [sp_addlinkedserver](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) может быть использован для указания имени субъекта-службы сервера и партнера по обеспечению отработки отказа. Такой подход имеет те же преимущества, что и при указании имен субъектов-служб в клиентских строках подключения, — установить подключения на основе аутентификации Kerberos проще и надежнее.  
   
  Делегирование со связанными серверами требует проверки подлинности Kerberos.  
   
