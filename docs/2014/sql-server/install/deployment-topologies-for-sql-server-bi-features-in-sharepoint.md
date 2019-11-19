@@ -72,7 +72,7 @@ ms.locfileid: "71952641"
 |**(6)**|Сервер [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] в режиме интеграции с SharePoint. Для использования этого сервера настройте **параметры модели данных** приложения служб Excel.|  
 |**(7)**|Базы данных содержимого SharePoint, конфигурации и приложений службы.|  
   
- ![Параметры SharePoint](https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "Параметры SharePoint") [отправляют отзывы и контактные данные через Microsoft SQL Server Connect](https://connect.microsoft.com/SQLServer/Feedback) (https://connect.microsoft.com/SQLServer/Feedback) ).  
+ ![Параметры SharePoint](https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "Параметры SharePoint") [отправляют отзывы и контактные данные через Microsoft SQL Server Connect](https://connect.microsoft.com/SQLServer/Feedback) (https://connect.microsoft.com/SQLServer/Feedback).  
   
 ###  <a name="bkmk_powerpivot_sharepoint2013_1server"></a>Развертывание с одним сервером PowerPivot для SharePoint 2013  
  Развертывание одиночного сервера полезно для тестирования, но не рекомендуется для производственных целей.  
@@ -91,9 +91,9 @@ ms.locfileid: "71952641"
 ###  <a name="bkmk_powerpivot_sharepoint2013_2server"></a>Развертывание сервера PowerPivot для SharePoint 2013 2  
  В следующем развертывании двух серверов компонент SQL Server Database Engine и службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] в режиме интеграции с SharePoint выполняются на сервере, где нет SharePoint. Для SharePoint 2013 пакет установщика [!INCLUDE[ssGeminiLongvnext](../../includes/ssgeminilongvnext-md.md)] (**spPowerPivot.msi**) устанавливается на сервере SharePoint.  
   
- [!INCLUDE[ssGeminiShortvnext](../../includes/ssgeminishortvnext-md.md)] расширяет SharePoint Server 2013 для добавления обработки обновления данных на стороне сервера, поставщиков данных, коллекции [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] и поддержки управления для книг с [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] и книг Excel с расширенными моделями данных.  
+ [!INCLUDE[ssGeminiShortvnext](../../includes/ssgeminishortvnext-md.md)] расширяет SharePoint Server 2013 для добавления обработки обновления данных на стороне сервера, поставщиков данных, коллекции [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] и поддержки управления для книг [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] и книг Excel с расширенными моделями данных.  
   
- Пакет установщика доступен в составе пакета дополнительных компонентов [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] . Пакет дополнительных компонентов можно скачать в центре загрузки [!INCLUDE[msCoName](../../includes/msconame-md.md)] на сайте [microsoft® SQL Server® 2014 PowerPivot® для microsoft® SharePoint®](https://go.microsoft.com/fwlink/?LinkID=296473) (HYPERLINK "<https://go.microsoft.com/fwlink/?LinkID=296473>" \t "_blank" <https://go.microsoft.com/fwlink/?LinkID=296473>).  
+ Пакет установщика доступен в составе пакета дополнительных компонентов [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] . Пакет дополнительных компонентов можно скачать в центре загрузки [!INCLUDE[msCoName](../../includes/msconame-md.md)] на сайте [microsoft® SQL Server® 2014 PowerPivot® для Microsoft® SharePoint®](https://go.microsoft.com/fwlink/?LinkID=296473) (HYPERLINK "<https://go.microsoft.com/fwlink/?LinkID=296473>" \t "_blank" <https://go.microsoft.com/fwlink/?LinkID=296473>).  
   
  ![Развертывание сервера SSAS PowerPivot в режиме 2](https://docs.microsoft.com/analysis-services/analysis-services/media/as-powerpivot-mode-2server-deployment.gif "Развертывание сервера SSAS PowerPivot в режиме 2")  
   
@@ -173,8 +173,8 @@ ms.locfileid: "71952641"
  ![5 — Серверная топологии](../../../2014/sql-server/install/media/sql11bisetup-5server.gif "5 — Серверная топологии")  
   
 ## <a name="see-also"></a>См. также статью  
- [Reporting Services &#40;установки SharePoint в режиме интеграции SharePoint 2010 и&#41;SharePoint 2013](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)   
- [PowerPivot для SharePoint 2013 установка](https://docs.microsoft.com/analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode)   
+ [Reporting Services установки &#40;SharePoint 2010 и SharePoint&#41; 2013](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)   
+   [установки PowerPivot для SharePoint 2013](https://docs.microsoft.com/analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode)  
  [Установка PowerPivot для SharePoint 2010](../../../2014/sql-server/install/powerpivot-for-sharepoint-2010-installation.md)  
   
   
