@@ -1,7 +1,7 @@
 ---
 title: Рекомендации по операциям с индексами | Документация Майкрософт
 ms.custom: ''
-ms.date: 01/14/2019
+ms.date: 11/12/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: table-view-index
@@ -18,12 +18,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.prod_service: table-view-index, sql-database
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6a2266a83d8fb041f4d18c5938e87bf31433b70e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 32f1363901d06e8e3551c8f161c38d48fc190921
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67909793"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73981789"
 ---
 # <a name="guidelines-for-online-index-operations"></a>Рекомендации по операциям с индексами в режиме "в сети"
 
@@ -93,7 +93,7 @@ ms.locfileid: "67909793"
 ## <a name="resumable-index-considerations"></a>Рекомендации по возобновляемому индексу
 
 > [!NOTE]
-> Возобновляемый индекс применяется к SQL Server, начиная с версии 2017 (только для перестроения индекса), и службе "База данных SQL" (для создания и перестроения индекса). Ознакомьтесь со сведениями об инструкциях [Create Index](../../t-sql/statements/create-index-transact-sql.md) (сейчас предоставляется в общедоступной предварительной версии для [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)]) и [Alter Index](../../t-sql/statements/alter-index-transact-sql.md).
+> Параметр возобновляемого индекса для создания и перестроения индекса применяется к SQL Server (перестроение индекса поддерживается с SQL Server 2017; создание индекса также поддерживается в SQL Server 2019) и базе данных SQL. Ознакомьтесь со сведениями об инструкциях [Create Index](../../t-sql/statements/create-index-transact-sql.md) и [Alter Index](../../t-sql/statements/alter-index-transact-sql.md).
 
 При создании или перестроении возобновляемого индекса в режиме "в сети" следует учитывать следующие рекомендации:
 

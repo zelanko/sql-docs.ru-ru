@@ -22,14 +22,14 @@ helpviewer_keywords:
 ms.assetid: eaf8cc82-1047-4144-9e77-0e1095df6143
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 5b7657c1840bf204bb2f22de59a33548a6abc400
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1420c5f8a1a16dc7430af0b445a8464c16d1b763
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68019736"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982953"
 ---
-# <a name="haspermsbyname-transact-sql"></a>HAS_PERMS_BY_NAME (Transact-SQL)
+# <a name="has_perms_by_name-transact-sql"></a>HAS_PERMS_BY_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Оценивает действующие разрешения текущего пользователя для защищаемого объекта. Связанная функция — [fn_my_permissions](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md).  
@@ -60,7 +60,7 @@ HAS_PERMS_BY_NAME ( securable , securable_class , permission
  Необязательное скалярное выражение типа **sysname**, представляющее имя защищаемой вложенной сущности, у которой проверяется разрешение. Значение по умолчанию — NULL.  
   
 > [!NOTE]  
->  В версиях от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] во вложенных защищаемых объектах не могут использоваться скобки в форме **'[** _вложенное имя_ **]'** . Используйте вместо этого форму **'** _вложенное имя_ **'** .  
+>  В версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и выше во вложенных защищаемых объектах не могут использоваться скобки в форме **"[** _вложенное имя_ **]"** . Используйте вместо этого форму **'** _вложенное имя_ **'** .  
   
  *sub-securable_class*  
  Необязательное скалярное выражение типа **nvarchar(60)** , представляющее класс защищаемой вложенной сущности, для которой проверяется разрешение. Значение по умолчанию — NULL.  
@@ -105,7 +105,7 @@ SELECT class_desc FROM sys.fn_builtin_permissions(default);
   
 ### <a name="a-do-i-have-the-server-level-view-server-state-permission"></a>A. Наличие разрешения VIEW SERVER STATE на уровне сервера  
   
-**Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Область применения**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версий
   
 ```  
 SELECT HAS_PERMS_BY_NAME(null, null, 'VIEW SERVER STATE');  
@@ -113,7 +113,7 @@ SELECT HAS_PERMS_BY_NAME(null, null, 'VIEW SERVER STATE');
   
 ### <a name="b-am-i-able-to-impersonate-server-principal-ps"></a>Б. Наличие разрешения IMPERSONATE для олицетворения участника на уровне сервера Ps  
   
-**Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Область применения**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версий
   
 ```  
 SELECT HAS_PERMS_BY_NAME('Ps', 'LOGIN', 'IMPERSONATE');  

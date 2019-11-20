@@ -1,19 +1,19 @@
 ---
-title: Высокий уровень доступности и аварийное восстановление SQL Server | Документация Майкрософт
+title: Партнеры в области высокой доступности и аварийного восстановления SQL Server
 description: Списки сторонних партнеров, предлагающих решения для мониторинга сервера.
 services: sql-server
 ms.topic: conceptual
-ms.custom: ''
+ms.custom: seo-dt-2019
 ms.date: 09/17/2017
 ms.prod: sql
 ms.author: mikeray
 author: MikeRayMSFT
-ms.openlocfilehash: 10b44f803da7b02ba95f8d6739a5bab9b85eba50
-ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
+ms.openlocfilehash: e13efcf874b9f0d59cdc103626c1604b58757af8
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68132833"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095557"
 ---
 # <a name="sql-server-high-availability-and-disaster-recovery-partners"></a>Партнеры в области высокой доступности и аварийного восстановления SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "68132833"
 |![SIOS][8] |**SIOS**<br>SIOS Technology предлагает экономичные решения для обеспечения высокой доступности и аварийного восстановления SQL Server в ОС Windows и Linux. Работающие без сети SAN кластеры SIOS не требуют наличия общедоступного хранилища в сети SAN, тем самым предоставляя максимальную гибкость в защите наиболее важных приложений в физических, виртуальных, облачных и гибридно-облачных конфигурациях в средах с одной и несколькими сетями.<br><br>Добавив SIOS DataKeeper в среду отказоустойчивой кластеризации Windows Server, вы создадите ресурс тома без сети SAN, который заменяет традиционное общедоступное хранилище и позволяет легко развернуть отказоустойчивый кластер Windows Server в Azure.<br><br>Комплект защиты SIOS — это максимально гибкое решение для кластеризации, которое защищает критически важные приложения Linux, в частности SQL Server, SAP, HANA, Oracle и многие другие.|[Веб-сайт][sios_website]<br>[Таблица данных][sios_datasheet]<br>[Twitter][sios_twitter]<br>[Marketplace][sios_marketplace]<br>[Видео][sios_youtube]|
 |![Veeam][1] |**Veeam**<br>Veeam Backup & Replication — это производительное, недорогое и удобное решение для резервного копирования и обеспечения доступности. Оно предлагает быстрое, гибкое и надежное восстановление виртуализованных приложений и данных, объединяя функции резервного копирования и репликации виртуальных машин. Решение обладает отмеченной наградами поддержкой виртуальных сред VMware vSphere и Microsoft Hyper-V.<br><br>SQL Server 2005 с пакетом обновления 4 (SP4) — SQL Server 2016 на Windows |[Веб-сайт][veeam_website]<br>[Таблица данных][veeam_datasheet]<br>[Twitter][veeam_twitter]<br>[Видео][veeam_youtube]|
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 Дополнительные сведения о других партнерах см. в статьях, посвященных [мониторингу][mon_partners], [партнерам по управлению][management_partners] и [партнерам по разработке][dev_partners].
 
 <!--Image references-->

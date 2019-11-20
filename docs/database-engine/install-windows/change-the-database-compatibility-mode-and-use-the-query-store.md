@@ -14,18 +14,18 @@ ms.assetid: 7e02a137-6867-4f6a-a45a-2b02674f7e65
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 5e84d60b0d5390712639314d93ecfbe42852f5fc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 817665672668a8dcdafc84beaa7a93d10617eeec
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68034516"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982138"
 ---
 # <a name="change-the-database-compatibility-level-and-use-the-query-store"></a>Изменение уровня совместимости базы данных и использование хранилища запросов
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-В [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] через [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] некоторые изменения становятся доступны только после того, как изменится [уровень совместимости базы данных](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md). Это сделано по нескольким причинам:  
+В [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и выше некоторые изменения становятся доступны только после того, как изменится [уровень совместимости базы данных](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md). Это сделано по нескольким причинам:  
   
 - Так как обновление является однократной операцией (версию формата файла понизить нельзя), выделение операции включения новых возможностей в отдельное действие является осмысленным. Впоследствии можно вернуть значение параметра на предыдущий уровень совместимости базы данных.  Новая модель сокращает количество операций, которые должны быть выполнены во время отказа системы.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "68034516"
   
 Рекомендуемый рабочий процесс для установки последней версии кода в обработчике запросов представлен в разделе [Обеспечение стабильной производительности во время обновления до более новой версии раздела SQL Server "Сценарии использования хранилища запросов"](../../relational-databases/performance/query-store-usage-scenarios.md#CEUpgrade) ниже.  
   
-![query-store-usage-5](../../relational-databases/performance/media/query-store-usage-5.png "query-store-usage-5") 
+![хранилище запросов-использование-5](../../relational-databases/performance/media/query-store-usage-5.png "хранилище запросов-использование-5") 
 
 Начиная с [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v18, помощник по настройке запросов может помочь пользователям в следовании рекомендуемому рабочему процессу. Дополнительные сведения: [Обновление баз данных с помощью помощника по настройке запросов](../../relational-databases/performance/upgrade-dbcompat-using-qta.md).
  

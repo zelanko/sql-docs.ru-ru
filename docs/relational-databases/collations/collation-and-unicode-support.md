@@ -32,12 +32,12 @@ ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
 author: pmasl
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 900a5b469fec529c351e290c76fd380dbb917710
-ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
+ms.openlocfilehash: b5713ab6b86675b5fbdcd450f1617445ea7bfd2f
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71680785"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982823"
 ---
 # <a name="collation-and-unicode-support"></a>Поддержка параметров сортировки и Юникода
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -458,7 +458,7 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
 Выбрать кодовую страницу для символьных типов данных, поддерживающую все символы, которые требуются клиентам в различных точках земного шара, непросто. Самый простой способ управлять символьными данными в международных базах данных — всегда использовать тип данных, поддерживающий Юникод. 
 
 ### <a name="unicode-data-types"></a>Типы данных в Юникоде
-Для хранения символьных данных на нескольких языках в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) используйте типы данных в Юникоде (**nchar**, **nvarchar** и **ntext**). Не используйте другие типы данных (**char**, **varchar** и **text**). 
+Для хранения символьных данных на нескольких языках в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] и выше) используйте типы данных в Юникоде (**nchar**, **nvarchar** и **ntext**). Не используйте другие типы данных (**char**, **varchar** и **text**). 
 
 > [!NOTE]
 > Для типов данных в Юникоде [!INCLUDE[ssde_md](../../includes/ssde_md.md)] может представить до 65 535 символов с помощью UCS-2 или полный диапазон Юникода (1 114 111 символов), если используются дополнительные символы. Дополнительные сведения о включении дополнительных символов см. в разделе [Дополнительные символы](#Supplementary_Characters).
@@ -473,7 +473,7 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
 > [!TIP]
 > Можно также попробовать использовать другие параметры сортировки для данных на сервере. Выберите параметры сортировки, соответствующие кодовой странице в клиенте.    
 >
-> Чтобы воспользоваться доступными в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) параметрами сортировки UTF-16 для оптимизации поиска и сортировки некоторых символов Юникода (только параметры сортировки Windows), можно выбрать один из наборов параметров сортировки с поддержкой дополнительных символов (\_SC) или один из наборов параметров сортировки версии 140.    
+> Чтобы воспользоваться доступными в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и выше) параметрами сортировки UTF-16 для оптимизации поиска и сортировки некоторых символов Юникода (только параметры сортировки Windows), можно выбрать один из наборов параметров сортировки с поддержкой дополнительных символов (\_SC) или один из наборов параметров сортировки версии 140.    
  
 Чтобы воспользоваться доступными в [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] параметрами сортировки UTF-8 для оптимизации поиска и сортировки некоторых символов Юникода (только параметры сортировки Windows), необходимо выбрать параметры сортировки с поддержкой кодировки UTF-8 (\_UTF8).
  

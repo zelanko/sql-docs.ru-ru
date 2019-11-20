@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 8bb15b97-9827-46bc-aca6-068534ab18c4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: aff15237e3763818123e0f74febf8523cb6174d3
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 4b07af028cd0f2385c447c99192ccc50b65c4925
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71298538"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74096121"
 ---
 # <a name="hadoop-connection-manager"></a>Диспетчер подключений Hadoop
 
@@ -40,9 +40,9 @@ ms.locfileid: "71298538"
   
     3.  Выберите метод **аутентификации** доступа к службе WebHCat. Доступные значения: **Обычная** и **Kerberos**.  
   
-         ![Снимок экрана редактора диспетчера подключений Hadoop с обычной проверкой подлинности](../../integration-services/connection-manager/media/hadoop-cm-basic.png "Hadoop connection manager editor with basic authentication")  
+         ![Снимок экрана редактора диспетчера подключений Hadoop с обычной проверкой подлинности](../../integration-services/connection-manager/media/hadoop-cm-basic.png "Редактор диспетчера подключений Hadoop с обычной проверкой подлинности")  
   
-         ![Снимок экрана редактора диспетчера подключений Hadoop с проверкой подлинности Kerberos](../../integration-services/connection-manager/media/hadoop-cm-kerberos.png "Hadoop connection manager editor with Kerberos authentication")  
+         ![Снимок экрана редактора диспетчера подключений Hadoop с проверкой подлинности Kerberos](../../integration-services/connection-manager/media/hadoop-cm-kerberos.png "Редактор диспетчера подключений Hadoop с проверкой подлинности Kerberos")  
   
     4.  Для параметра **WebHCat User**(Пользователь WebHCat) укажите **пользователя** с правом доступа к WebHCat.  
   
@@ -152,7 +152,7 @@ ms.locfileid: "71298538"
 
     Перезагрузите службу KDC после настройки.
 
-2.  Подготовьте субъект с именем **krbtgt/REALM.COM@AD.COM** на сервере KDC. Используйте следующую команду:
+2.  Подготовьте субъект с именем **krbtgt/REALM.COM\@AD.COM** на сервере KDC. Используйте следующую команду:
 
     `Kadmin> addprinc krbtgt/REALM.COM@AD.COM`
 
@@ -167,7 +167,7 @@ ms.locfileid: "71298538"
     C:> ksetup /addhosttorealmmap HDFS-service-FQDN REALM.COM
     ```
 
-2.  Установите доверие между доменом Windows и областью Kerberos. В следующем примере `[password]` представляет собой пароль для субъекта **krbtgt/REALM.COM@AD.COM** .
+2.  Установите доверие между доменом Windows и областью Kerberos. В следующем примере `[password]` представляет собой пароль для субъекта **krbtgt/REALM.COM\@AD.COM**.
 
     `C:> netdom trust REALM.COM /Domain: AD.COM /add /realm /password:[password]`
 

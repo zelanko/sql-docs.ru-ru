@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1ad468f5-4f75-480b-aac6-0b01b048bd67
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: c36c745e6b54feb27da2ae4f36834a40c79cbfe5
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 87257431940b527fda01bc1704a519b37b6d4e05
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909082"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982449"
 ---
 # <a name="database-file-initialization"></a>Инициализация файлов базы данных
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ ms.locfileid: "72909082"
 > Начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], это разрешение можно предоставлять учетной записи службы во время установки. При использовании [установки из командной строки](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md) добавьте аргумент /SQLSVCINSTANTFILEINIT либо установите флажок *Предоставить право на выполнение задач обслуживания тома службе ядра СУБД SQL Server* в [мастере установки](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md).
 
 > [!NOTE]
-> Начиная с версий [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] с пакетом обновления 4 (SP4) и [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] с пакетом обновления 1 (SP1), вплоть до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], вы можете использовать столбец *instant_file_initialization_enabled* в динамическом административном представлении [sys.dm_server_services](../../relational-databases/system-dynamic-management-views/sys-dm-server-services-transact-sql.md) для определения, включена ли мгновенная инициализация файлов.
+> Начиная с версий [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] с пакетом обновления 4 (SP4) и [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] с пакетом обновления 1 (SP1) и выше, вы можете использовать столбец *instant_file_initialization_enabled* в динамическом административном представлении [sys.dm_server_services](../../relational-databases/system-dynamic-management-views/sys-dm-server-services-transact-sql.md) для определения, включена ли мгновенная инициализация файлов.
 
 ## <a name="remarks"></a>Remarks
 Если учетной записи запуска службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставлено разрешение *SE_MANAGE_VOLUME_NAME*, во время запуска в журнале ошибок [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] регистрируется подобное информационное сообщение. 
@@ -78,7 +78,7 @@ ms.locfileid: "72909082"
 
 `Database Instant File Initialization: disabled. For security and performance considerations see the topic 'Database Instant File Initialization' in SQL Server Books Online. This is an informational message only. No user action is required.`
 
-**Применимо к:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с версии [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] с пакетом обновления 4 (SP4), [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] с пакетом обновления 2 (SP2) и версий с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
+**Применимо к:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с версии [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] с пакетом обновления 4 (SP4), [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] с пакетом обновления 2 (SP2) и версий [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и выше)
 
 ## <a name="security-considerations"></a>Соображения безопасности  
 При использовании мгновенной инициализации файлов (IFI), так как удаленное содержимое диска перезаписывается только по мере записи в файлы новых данных, пока в помеченную удаленной область файла данных не будут записаны другие данные, неавторизованный субъект может получить доступ к удаленному содержимому. По мере подключения файла базы данных к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] риск раскрытия информации уменьшается благодаря списку управления доступом на уровне пользователей (DACL) в файле. DACL разрешает доступ к файлу только учетной записи службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и локальному администратору. Но при отсоединении файла доступ к нему может получить пользователь или служба, которым не предоставлено разрешение *SE_MANAGE_VOLUME_NAME*. Аналогичная проблема существует при резервном копировании базы данных. Если файл резервной копии не защищен с помощью соответствующего DACL, удаленное содержимое может стать доступным неавторизованному пользователю или службе.  

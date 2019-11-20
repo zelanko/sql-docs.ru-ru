@@ -1,7 +1,7 @@
 ---
 title: Прием данных с помощью заданий Spark
 titleSuffix: SQL Server big data clusters
-description: В этом руководстве показано, как принимать данные в пул данных [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] с помощью заданий Spark в Azure Data Studio.
+description: В этом руководстве описано, каким образом выполняется прием данных в пул данных [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] с помощью заданий Spark в Azure Data Studio.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: shivsood
@@ -9,18 +9,18 @@ ms.date: 08/21/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 6ebcc95d48f894ff8cef9771946130fc67216a45
-ms.sourcegitcommit: c8b8101c62a6af3e4a7244683e3f34f7189c150f
+ms.openlocfilehash: c6f66b42fe280ef6612a5e9974ddcf4f1f7ccfcb
+ms.sourcegitcommit: add39e028e919df7d801e8b6bb4f8ac877e60e17
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73182633"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74119196"
 ---
-# <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-spark-jobs"></a>Учебник. прием данных в пул данных SQL Server с помощью заданий Spark
+# <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-spark-jobs"></a>Руководство. Прием данных в пул данных SQL Server с помощью заданий Spark
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-В этом руководстве показано, как использовать задания Spark для загрузки данных в [пул данных](concept-data-pool.md) [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. 
+В этом учебнике описывается, как использовать задания Spark для загрузки данных в [пул данных](concept-data-pool.md) [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. 
 
 В этом руководстве описано следующее.
 
@@ -32,19 +32,19 @@ ms.locfileid: "73182633"
 > [!TIP]
 > При необходимости вы можете скачать и выполнить скрипт, содержащий команды из этого руководства. См. инструкции в разделе [Примеры пулов данных](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/data-pool) на сайте GitHub.
 
-## <a id="prereqs"></a> предварительные требования
+## <a id="prereqs"></a> Предварительные требования
 
 - [Средства работы с большими данными](deploy-big-data-tools.md)
    - **kubectl**
    - **Azure Data Studio**
-   - **Расширение SQL Server 2019**
+   - **Расширение SQL Server 2019**
 - [Загрузка примера данных в кластер больших данных](tutorial-load-sample-data.md)
 
 ## <a name="create-an-external-table-in-the-data-pool"></a>Создание внешней таблицы в пуле данных
 
 Выполните следующие действия, чтобы создать внешнюю таблицу с именем **web_clickstreams_spark_results** в пуле данных. В дальнейшем эта таблица может использоваться для приема данных в кластер больших данных.
 
-1. В Azure Data Studio установите подключение к главному экземпляру SQL Server в кластере больших данных. Дополнительные сведения см. в разделе [Подключение к главному экземпляру SQL Server](connect-to-big-data-cluster.md#master).
+1. В Azure Data Studio установите подключение к главному экземпляру SQL Server в кластере больших данных. Дополнительные сведения см. в разделе [Подключение к главному экземпляру SQL Server](connect-to-big-data-cluster.md#master).
 
 1. Дважды щелкните подключение в окне **Серверы**, чтобы открыть панель мониторинга сервера для главного экземпляра SQL Server. Выберите **Создать запрос**.
 
@@ -79,11 +79,11 @@ ms.locfileid: "73182633"
 
 ## <a name="start-a-spark-streaming-job"></a>Запуск задания потоковой передачи Spark
 
-Следующим шагом является создание задания потоковой передачи Spark, которое загружает сведения о посещениях из пула носителей (HDFS) во внешнюю таблицу, созданную в пуле данных. Эти данные были добавлены в/clickstream_data в процессе [загрузки демонстрационных данных в кластер больших данных](tutorial-load-sample-data.md).
+Следующим шагом является создание задания потоковой передачи Spark, которое загружает сведения о посещениях из пула носителей (HDFS) во внешнюю таблицу, созданную в пуле данных. Эти данные были добавлены в /clickstream_data в разделе [Загрузка примера данных в кластер больших данных](tutorial-load-sample-data.md).
 
 1. В Azure Data Studio установите подключение к главному экземпляру в кластере больших данных. Дополнительные сведения см. в разделе [Подключение к кластеру больших данных](connect-to-big-data-cluster.md).
 
-2. Создание новой записной книжки и выбор Spark | Scala в качестве ядра.
+2. Создайте новую записную книжку и выберите Spark | Scala в качестве ядра.
 
 3. Запуск задания приема Spark
    1. Настройка параметров соединителя Spark-SQL
@@ -99,8 +99,9 @@ ms.locfileid: "73182633"
       val datapool_table = "web_clickstreams_spark_results"
       val datasource_name = "SqlDataPool"
       val schema = StructType(Seq(
-      StructField("wcs_click_date_sk",IntegerType,true), StructField("wcs_click_time_sk",IntegerType,true), StructField("wcs_sales_sk",IntegerType,true), StructField("wcs_item_sk",IntegerType,true), 
-      StructField("wcs_web_page_sk",IntegerType,true), StructField("wcs_user_sk",IntegerType,true)
+      StructField("wcs_click_date_sk",LongType,true), StructField("wcs_click_time_sk",LongType,true), 
+      StructField("wcs_sales_sk",LongType,true), StructField("wcs_item_sk",LongType,true),
+      StructField("wcs_web_page_sk",LongType,true), StructField("wcs_user_sk",LongType,true)
       ))
 
       val hostname = "master-0.master-svc"
@@ -108,7 +109,7 @@ ms.locfileid: "73182633"
       val url = s"jdbc:sqlserver://${hostname}:${port};database=${database};user=${user};password=${password};"
       ```
    2. Определение и запуск задания Spark
-      * Каждое задание состоит из двух частей: Реадстреам и Вритестреам. Ниже мы создадим кадр данных, используя определенную выше схему, а затем выполним запись во внешнюю таблицу в пуле данных.
+      * Каждое задание состоит из двух частей: readStream и writeStream. Ниже мы создадим кадр данных, используя определенную выше схему, а затем запишем его во внешнюю таблицу в пуле данных.
       ```
       import org.apache.spark.sql.{SparkSession, SaveMode, Row, DataFrame}
       
@@ -131,7 +132,7 @@ ms.locfileid: "73182633"
 
 Следующие шаги показывают, что задание потоковой передачи Spark загрузило данные из HDFS в пул данных.
 
-1. Перед запросом полученных данных просмотрите состояние выполнения Spark, включая идентификатор приложения Yarn, Пользовательский интерфейс Spark и журналы драйверов.
+1. Перед запросом полученных данных просмотрите состояние выполнения Spark, включая идентификатор приложения Yarn, пользовательский интерфейс Spark и журналы драйверов.
 
    ![Сведения о выполнении Spark](./media/tutorial-data-pool-ingest-spark/Spark-Joblog-sparkui-yarn.png)
 
@@ -171,7 +172,7 @@ ms.locfileid: "73182633"
 DROP EXTERNAL TABLE [dbo].[web_clickstreams_spark_results];
 ```
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 См. сведения о запуске примера записной книжки в Azure Data Studio:
 > [!div class="nextstepaction"]

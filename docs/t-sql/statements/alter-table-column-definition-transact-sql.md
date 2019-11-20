@@ -21,14 +21,14 @@ ms.assetid: a1742649-ca29-4d9b-9975-661cdbf18f78
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: eb3802578b7eb500d6b5fd64725a1a03f86fb9c6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f3c261b2cc8a29af74adba6e32c646a11e940070
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68232155"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982069"
 ---
-# <a name="alter-table-columndefinition-transact-sql"></a>ALTER TABLE column_definition (Transact-SQL)
+# <a name="alter-table-column_definition-transact-sql"></a>ALTER TABLE column_definition (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Определяет свойства столбца, которые добавляются в таблицу с помощью инструкции [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).  
@@ -119,7 +119,7 @@ DOCUMENT
  Определяет, что каждый экземпляр типа данных **xml** в *column_name* может включать в себя только один элемент верхнего уровня. Аргумент DOCUMENT применим только к данным типа **xml** и может быть указан только в том случае, если одновременно указан аргумент *xml_schema_collection*.  
   
  *xml_schema_collection*  
- **Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Область применения**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версий.  
   
  Применим только к типу данных **xml** для коллекции схем XML, связанной с этим типом. Перед помещением столбца **xml** в схему она должна быть создана в базе данных при помощи инструкции [CREATE XML SCHEMA COLLECTION](../../t-sql/statements/create-xml-schema-collection-transact-sql.md).  
   
@@ -178,12 +178,12 @@ IDENTITY
  Значение приращения, добавляемое к значению столбца предыдущей строки для получения значения столбца новой строки.  
   
 NOT FOR REPLICATION  
- **Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Область применения**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версий.  
   
  Может быть задано для свойства IDENTITY. Если это предложение задано для свойства IDENTITY, то значения в столбцах идентификаторов не увеличиваются при выполнении агентами репликации операций по вставке строк.  
   
 ROWGUIDCOL  
- **Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Область применения**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версий.  
   
  Показывает, что столбец является столбцом глобального уникального идентификатора строки. ROWGUIDCOL может быть назначен только для столбца **uniqueidentifier**, и только один столбец **uniqueidentifier** в таблице может быть объявлен как столбец ROWGUIDCOL. ROWGUIDCOL не может быть назначен столбцам с типами, определенными пользователем.  
   
@@ -213,14 +213,14 @@ ENCRYPTION_TYPE = { DETERMINISTIC | RANDOMIZED }
  Столбцы должны иметь подходящий тип данных.  
   
 ALGORITHM  
-**Применимо к**: с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+**Применимо к**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и выше, [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
 Должно быть **'AEAD_AES_256_CBC_HMAC_SHA_256'** .  
   
  Дополнительные сведения, в том числе об ограничениях функции, см. в разделе [Постоянное шифрование (компонент Database Engine)](../../relational-databases/security/encryption/always-encrypted-database-engine.md).  
   
    
 ADD MASKED WITH ( FUNCTION = ' *mask_function* ')  
- **Применимо к**: с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+ **Применимо к**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и выше, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  Указывает маску для динамического маскирования данных. *mask_function* — это имя функции маскирования с соответствующими параметрами. Доступны следующие функции:  
   

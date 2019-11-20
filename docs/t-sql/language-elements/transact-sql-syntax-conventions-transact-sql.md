@@ -28,12 +28,12 @@ ms.assetid: 35fbcf7f-8b55-46cd-a957-9b8c7b311241
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bdc1e80e6363be923d65c07b5550772c8d16f2af
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b7b42f9f9db95954509c6e47c28b317eab0626c4
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68121603"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73981902"
 ---
 # <a name="transact-sql-syntax-conventions-transact-sql"></a>Синтаксические обозначения в Transact-SQL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -110,9 +110,9 @@ _object\_name_
 Многие примеры кода добавляют к строковым константам в Юникоде префикс в виде буквы **N**. Без префикса **N** строка преобразуется в кодовую страницу базы данных по умолчанию. Кодовая страница по умолчанию может не распознавать определенные символы.  
   
 ## <a name="applies-to-references"></a>Ссылки «Относится к»  
-Ссылка [!INCLUDE[tsql](../../includes/tsql-md.md)] включает статьи, относящиеся к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] и [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)].   
+Ссылка [!INCLUDE[tsql](../../includes/tsql-md.md)] включает разделы, относящиеся к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и выше), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] и [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)].   
 
-В верхней части каждой статьи есть раздел, где указано, к каким продуктам относится тема статьи. Если продукт не указан, то компонент, описанный в статье, для данного продукта недоступен. Например, группы доступности были введены в [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. В статье о **CREATE AVAILABILITY GROUP** указано, что эта функция применима к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), так как она неприменима к [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] или [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+В верхней части каждой статьи есть раздел, где указано, к каким продуктам относится тема статьи. Если продукт не указан, то компонент, описанный в статье, для данного продукта недоступен. Например, группы доступности были введены в [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. В статье о **CREATE AVAILABILITY GROUP** указано, что эта функция применима к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и выше), так как она неприменима к [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] или [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
 К продукту относится общая тема статьи, но в некоторых случаях не все аргументы поддерживаются. Например, пользователи автономной базы данных впервые появились в [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. Инструкцию **CREATE USER** можно применять в любом продукте [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], однако синтаксис **WITH PASSWORD** не может использоваться с более ранними версиями. Дополнительные разделы **Область применения** вставляются в описания соответствующих аргументов в статье.  
   

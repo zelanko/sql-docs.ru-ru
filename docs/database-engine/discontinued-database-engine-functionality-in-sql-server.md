@@ -1,7 +1,7 @@
 ---
-title: Неподдерживаемые функции ядра СУБД в SQL Server | Документация Майкрософт
+title: Нерекомендуемые функции ядра СУБД в SQL Server | Документация Майкрософт
 ms.custom: ''
-ms.date: 02/02/2017
+ms.date: 11/13/2019
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -35,12 +35,12 @@ ms.assetid: d686cdf0-d11d-4dba-9ec8-de1a5f189f25
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= sql-server-linux-2017  || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: a708aad1d483eaf28d559ff04424e515ec9f6aa7
-ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
+ms.openlocfilehash: 0cafdaecf454d3726538f3f297d05566f6cb5b4a
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71816660"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095212"
 ---
 # <a name="discontinued-database-engine-functionality-in-sql-server"></a>Нерекомендуемые функции ядра СУБД в SQL Server
 [!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -76,7 +76,12 @@ ms.locfileid: "71816660"
 
 - [Неподдерживаемые функции ядра СУБД в SQL Server 2014](https://docs.microsoft.com/sql/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014)
 
-## <a name="see-also"></a>См. также:
+### <a name="see-also"></a>См. также раздел
 
-- [Нерекомендуемые функции ядра СУБД в SQL Server 2016](../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)
+- [Нерекомендуемые функции ядра СУБД в SQL Server 2019](deprecated-database-engine-features-in-sql-server-version-15.md)
+- [Нерекомендуемые функции ядра СУБД в SQL Server 2017](deprecated-database-engine-features-in-sql-server-2017.md)
+- [Нерекомендуемые функции ядра СУБД в SQL Server 2016](../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)
+- [Критические изменения в функциях ядра СУБД в SQL Server 2019](breaking-changes-to-database-engine-features-in-sql-server-version-15.md)
+- [Критические изменения в функциях ядра СУБД в SQL Server 2017](breaking-changes-to-database-engine-features-in-sql-server-2017.md)
+- [Критические изменения в функциях ядра СУБД в SQL Server 2016](breaking-changes-to-database-engine-features-in-sql-server-2016.md)
 - [Устаревшие функции репликации в SQL Server](../relational-databases/replication/deprecated-features-in-sql-server-replication.md)

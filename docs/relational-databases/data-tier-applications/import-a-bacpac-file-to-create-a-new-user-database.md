@@ -1,6 +1,6 @@
 ---
-title: Импорт файла BACPAC для создания новой пользовательской базы данных | Документация Майкрософт
-ms.custom: ''
+title: Импорт файла BACPAC для создания новой пользовательской базы данных
+ms.custom: seo-dt-2019
 ms.date: 01/31/2017
 ms.prod: sql
 ms.technology: ''
@@ -25,12 +25,12 @@ ms.assetid: 736d8d9a-39f1-4bf8-b81f-2e56c134d12e
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 88f53ba0372b56fce72a23fe33790c822729d8d1
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 12226869eb78e53c072826ad0dc8e280104108e3
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908490"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74094565"
 ---
 # <a name="import-a-bacpac-file-to-create-a-new-user-database"></a>Импорт файла BACPAC для создания новой пользовательской базы данных
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -66,7 +66,7 @@ ms.locfileid: "72908490"
 ## <a name="using-the-import-data-tier-application-wizard"></a>Использование мастера импорта приложения уровня данных  
  **Для запуска мастера выполните следующие действия.**  
   
-1.  Подключитесь к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]на предприятии или в службах [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+1.  Подключитесь к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на предприятии или в службах [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
 2.  В **обозревателе объектов**щелкните правой кнопкой мыши узел **Базы данных**, а затем выберите пункт меню **Импорт приложения уровня данных** для запуска мастера.  
   

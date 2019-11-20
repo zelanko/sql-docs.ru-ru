@@ -1,24 +1,24 @@
 ---
-title: События и ошибки ядра СУБД | Документация Майкрософт
+title: События и ошибки ядра СУБД
 ms.custom: ''
 ms.date: 01/11/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: supportability
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 04ba51b6-cdc7-409c-8d7e-26ead13e614d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9a12e327f9537ea25d84ec0db3e1d76381eb5f03
-ms.sourcegitcommit: 183d622fff36a22b882309378892010be3bdcd52
+ms.openlocfilehash: 78fff1f1a5f1e68989338a9d5b0274899267fd42
+ms.sourcegitcommit: add39e028e919df7d801e8b6bb4f8ac877e60e17
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71127361"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74119431"
 ---
 # <a name="database-engine-errors"></a>Ошибки ядра СУБД
 
-Таблицы содержат номер сообщения об ошибке и описание, представлено текстом сообщения об ошибке из представления каталога sys.messages.
+Таблицы содержат номер сообщения об ошибке и описание, представлено текстом сообщения об ошибке из представления каталога sys.messages. Если это применимо, номер ошибки представляет собой ссылку на дополнительные сведения.
 
 ## <a name="errors--2-to-999"></a>Ошибки от –2 до 999
 

@@ -39,12 +39,12 @@ ms.assetid: bb394abe-cae6-4905-b5c6-8daaded77742
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 11aac623d6648fb08e65cff12cdfcf3beaaa2499
-ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
+ms.openlocfilehash: 7ccced8b93b5f657d8fd0afe96f95d7b9f8a98a6
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68419642"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73981712"
 ---
 # <a name="select---order-by-clause-transact-sql"></a>SELECT — предложение ORDER BY (Transact-SQL)
 
@@ -116,7 +116,7 @@ ORDER BY SchemaName + ''; -- wrong
  OFFSET { *integer_constant* | *offset_row_count_expression* } { ROW | ROWS }  
  Указывает число сток, которые необходимо пропустить, прежде чем будет начат возврат строк из выражения запроса. Это значение может быть целочисленной константой или выражением, значение которого больше нуля или равно нулю.  
   
-**Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+**Применимо к**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и выше, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  *offset_row_count_expression* может быть переменной, параметром или вложенным запросом, возвращающим скалярную константу. При использовании вложенного запроса он не должен ссылаться на какие-либо столбцы, определенные в области внешнего запроса. Иными словами, он не может коррелировать с внешним запросом.  
   
@@ -127,7 +127,7 @@ ORDER BY SchemaName + ''; -- wrong
  FETCH { FIRST | NEXT } { *integer_constant* | *fetch_row_count_expression* } { ROW | ROWS } ONLY  
  Указывает число строк, возвращаемых после обработки предложения OFFSET. Это значение может быть целочисленной константой или выражением, значение которого больше единицы или равно единице.  
   
-**Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+**Применимо к**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и выше, а также [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  *fetch_row_count_expression* может быть переменной, параметром или вложенным запросом, возвращающим скалярную константу. При использовании вложенного запроса он не должен ссылаться на какие-либо столбцы, определенные в области внешнего запроса. Иными словами, он не может коррелировать с внешним запросом.  
   
@@ -364,7 +364,7 @@ WHERE TerritoryID IS NOT NULL AND SalesYTD <> 0;
 ###  <a name="Offset"></a> Ограничение числа возвращаемых строк  
  В следующих примерах предложения OFFSET и FETCH ограничивают число строк, возвращаемых запросом.  
   
-**Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+**Применимо к**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и выше, а также [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
 #### <a name="a-specifying-integer-constants-for-offset-and-fetch-values"></a>A. Указание целочисленных констант в качестве значений OFFSET и FETCH  
  В следующем примере в качестве значений предложений OFFSET и FETCH указана целочисленная константа. Первый запрос возвращает все строки, отсортированные по столбцу `DepartmentID`. Сравните результаты, возвращенные этим запросом, с результатами двух следующих запросов. В следующем запросе предложение `OFFSET 5 ROWS` используется для пропуска первых 5 строк и возврата оставшихся. Конечный запрос содержит предложение `OFFSET 0 ROWS`, чтобы начать с первой строки, а затем предложение `FETCH NEXT 10 ROWS ONLY`, ограничивающее число возвращаемых строк до 10 из сортированного результирующего набора.  

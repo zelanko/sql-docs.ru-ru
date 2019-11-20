@@ -1,5 +1,5 @@
 ---
-title: Поиск похожих и связанных документов с помощью семантического поиска | Документация Майкрософт
+title: Поиск похожих и связанных документов с помощью семантического поиска
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: search, sql-database
@@ -11,12 +11,13 @@ ms.assetid: 9f527883-031b-442f-8e95-24bc0151ecbf
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: ed2ab9fadcb9a546d26fd150abaad5d7cc785f86
-ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 3ee3baa843aee101e5cbea425582a96e32bcd92b
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72278307"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056511"
 ---
 # <a name="find-similar-and-related-documents-with-semantic-search"></a>Поиск похожих и связанных документов с использованием семантического поиска
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

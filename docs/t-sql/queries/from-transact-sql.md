@@ -34,12 +34,12 @@ ms.assetid: 36b19e68-94f6-4539-aeb1-79f5312e4263
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 67aa3078746108b0a337d5bb4ef4eb28f40f8dc2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bcf4dc79c1b241d4a9f48a3d211c13871e32b711
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67902026"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73981974"
 ---
 # <a name="from-clause-plus-join-apply-pivot-transact-sql"></a>Предложение FROM и JOIN, APPLY, PIVOT (Transact-SQL)
 
@@ -199,7 +199,7 @@ FROM { <table_source> [ ,...n ] }
   
  *rowset_function*  
 
-**Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] и [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**Применимо к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и выше, а также [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
 
   
  Указывает одну из функций набора строк, например OPENROWSET, возвращающую объект, который можно использовать вместо ссылки на таблицу. Дополнительные сведения о списке функций набора строк см. в разделе [Функции набора строк (Transact-SQL)](../../t-sql/functions/rowset-functions-transact-sql.md).  
@@ -208,7 +208,7 @@ FROM { <table_source> [ ,...n ] }
   
  *bulk_column_alias*  
 
-**Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] и [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**Применимо к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и выше, а также [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
 
   
  Дополнительный псевдоним для замены имени столбца в результирующем наборе. Псевдонимы столбца разрешены только в инструкциях SELECT, использующих функцию OPENROWSET с параметром BULK. При использовании аргумента *bulk_column_alias* необходимо указать псевдоним для каждого столбца таблицы в том же порядке, что и в файле.  
@@ -221,7 +221,7 @@ FROM { <table_source> [ ,...n ] }
   
  OPENXML \<openxml_clause>  
 
-**Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] и [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**Применимо к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и выше, а также [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
 
   
  Обеспечивает представление XML-документа в виде набора строк. Дополнительные сведения см в разделе [OPENXML (Transact-SQL)](../../t-sql/functions/openxml-transact-sql.md).  
@@ -236,7 +236,7 @@ FROM { <table_source> [ ,...n ] }
   
  *table_or_view_name* FOR SYSTEM_TIME \<system_time>  
 
-**Применимо к**: с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] и [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**Применимо к**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и выше, а также [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
 
   
  Указывает, что конкретная версия данных возвращается из указанной темпоральной таблицы и связывается с таблицей журнала с системным управлением версиями.  
@@ -381,27 +381,27 @@ ON (p.ProductID = v.ProductID);
   
  AS OF \<date_time>  
 
-**Применимо к**: с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] и [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**Применимо к**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и выше, а также [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
 
   
  Возвращает таблицу с одной записью для каждой строки, содержащей значения, которые были фактическими (текущими) в указанный момент времени в прошлом. На внутреннем уровне объединение выполняется между темпоральной таблицей и соответствующей таблицей журнала, и результаты отфильтровываются так, чтобы возвращались значения в строке, которая была действительной на момент времени, определяемый параметром *\<date_time>* . Значение для строки считается действительным, если значение *system_start_time_column_name* меньше или равно значению параметра *\<date_time>* , а значение *system_end_time_column_name* больше значения параметра *\<date_time>* .   
   
  FROM \<start_date_time> TO \<end_date_time>
 
-**Применимо к**: с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] и [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
+**Применимо к**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и выше, а также [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
 
   
  Возвращает таблицу, содержащую значения для всех версий строк, которые были активны в течение указанного интервала времени независимо от того, стали ли они активными до значения параметра *\<start_date_time>* аргумента FROM или перестали быть активными после значения параметра *\<end_date_time>* аргумента TO. На внутреннем уровне объединение выполняется между темпоральной таблицей и соответствующей таблицей журнала и результаты отфильтровываются так, чтобы возвращать значения для всех версий строк, которые были активными в течение указанного временного диапазона. В эти строки включаются те, которые стали активными точно в нижнюю границу периода времени, определяемую конечной точкой FROM, и не включаются те, которые стали активными точно в верхнюю границу периода времени, определяемую конечной точкой TO.  
   
  BETWEEN \<start_date_time> AND \<end_date_time>  
 
-**Применимо к**: с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] и [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**Применимо к**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и выше, а также [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  Аналогично приведенному выше описанию для **FROM \<start_date_time> TO \<end_date_time>** за исключением того, что таблица возвращаемых строк включает строки, которые стали активными точно в верхнюю границу периода времени, определяемую конечной точкой \<end_date_time>.  
   
  CONTAINED IN (\<start_date_time> , \<end_date_time>)  
 
-**Применимо к**: с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] и [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**Применимо к**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и выше, а также [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
 
   
  Возвращает таблицу, содержащую значения для всех версий записей, которые были открыты и закрыты в течение указанного интервала времени, определяемого двумя значениями даты и времени в аргументе CONTAINED IN. В эти строки включаются те, которые стали активными точно в нижнюю границу периода времени, и те, которые перестали быть активными точно в верхнюю границу периода времени.  
@@ -630,9 +630,9 @@ CROSS APPLY sys.dm_exec_query_plan(cp.plan_handle);
 GO  
 ```  
   
-### <a name="m-using-for-systemtime"></a>Н. Использование FOR SYSTEM_TIME  
+### <a name="m-using-for-system_time"></a>Н. Использование FOR SYSTEM_TIME  
   
-**Применимо к**: с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] и [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**Применимо к**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и выше, а также [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  В следующем примере используется аргумент SYSTEM_TIME AS OF date_time_literal_or_variable для возврата строк таблицы, которые были актуальны по состоянию на 1 января 2014 г.  
   

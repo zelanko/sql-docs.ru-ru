@@ -37,12 +37,12 @@ ms.assetid: 29ddac46-7a0f-4151-bd94-75c1908c89f8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 6a668b876e97f70ff0324f53689f0d5dfae8f225
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: b1e761aded3b34942f5a49aa2b4c085fe1bd4225
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73536266"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73983217"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -172,7 +172,7 @@ CREATE DATABASE database_snapshot_name
 
 CONTAINMENT = { NONE | PARTIAL }
 
-**Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Область применения**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздних версий
 
 Указывает состояние включения базы данных. NONE = неавтономная база данных. PARTIAL = частично автономная база данных.
 
@@ -202,7 +202,7 @@ COLLATE *collation_name*
 WITH \<option>      
 **\<filestream_options>**
 
-NON_TRANSACTED_ACCESS = { **OFF** | READ_ONLY | FULL } **Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+NON_TRANSACTED_ACCESS = { **OFF** | READ_ONLY | FULL } **Применимо к**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и выше.
 
 Указывает уровень нетранзакционного доступа FILESTREAM к базе данных.
 
@@ -213,7 +213,7 @@ NON_TRANSACTED_ACCESS = { **OFF** | READ_ONLY | FULL } **Применимо к**
 |FULL|Полный нетранзакционный доступ к FILESTREAM FileTable включен.|
 
 DIRECTORY_NAME = \<directory_name>     
-**Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Область применения**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздних версий
 
 Имя каталога, совместимое с Windows. Это имя должно быть уникально среди всех имен Database_Directory в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Проверка уникальности выполняется с учетом регистра, независимо от параметров сортировки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Этот параметр необходимо назначить до создания FileTable в этой базе данных.
 
@@ -221,25 +221,25 @@ DIRECTORY_NAME = \<directory_name>
 
 - **DEFAULT_FULLTEXT_LANGUAGE = \<lcid> | \<language name> | \<language alias>**
 
-  **Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+  **Область применения**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздних версий
 
   Полное описание этого параметра см. в статье [Настройка параметра конфигурации сервера full-text language по умолчанию](../../database-engine/configure-windows/configure-the-default-full-text-language-server-configuration-option.md).
 
 - **DEFAULT_LANGUAGE = \<lcid> | \<language name> | \<language alias>**
 
-  **Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+  **Область применения**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздних версий
 
   Полное описание этого параметра см. в статье [Настройка параметра конфигурации сервера language по умолчанию](../../database-engine/configure-windows/configure-the-default-language-server-configuration-option.md).
 
 - **NESTED_TRIGGERS = { OFF | ON}**
 
-  **Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+  **Область применения**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздних версий
 
   Полное описание этого параметра см. в статье [Настройка параметра конфигурации сервера nested triggers](../../database-engine/configure-windows/configure-the-nested-triggers-server-configuration-option.md).
 
 - **TRANSFORM_NOISE_WORDS = { OFF | ON}**
 
-  **Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+  **Область применения**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздних версий
 
   Полное описание этого параметра см. в статье [Настройка параметра конфигурации сервера transform noise words](../../database-engine/configure-windows/transform-noise-words-server-configuration-option.md).
 
@@ -428,7 +428,7 @@ CONTAINS FILESTREAM
 
 CONTAINS MEMORY_OPTIMIZED_DATA     
 
-**Применимо к**: с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Область применения**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и более поздних версий
 
 Указывает, что файловая группа хранит данные memory_optimized в файловой системе. Дополнительные сведения см. в статье [In-Memory OLTP (оптимизация в памяти)](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md). В каждой базе данных может присутствовать только одна файловая группа MEMORY_OPTIMIZED_DATA. Примеры кода по созданию файловых групп для хранения оптимизированных для памяти данных см. в разделе [Создание таблиц, оптимизированных для памяти, и хранимых процедур, скомпилированных в собственном коде](../../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md).
 

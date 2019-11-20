@@ -31,12 +31,12 @@ ms.assetid: bc806b71-cc55-470a-913e-c5f761d5c4b7
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 80723d2288ce628d4c39d174eefc3bf868314886
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4c305cf11073c6903c75a9ce8b987cc041aa9fa7
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68122315"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73981958"
 ---
 # <a name="execute-transact-sql"></a>EXECUTE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -208,7 +208,7 @@ Execute a character string
  Допускается выполнение модуля, созданного в другой базе данных, если пользователь, выполняющий этот модуль, является его владельцем или имеет соответствующие разрешения на его выполнение в этой базе данных. Модуль может быть выполнен на другом сервере [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], если пользователь, запускающий модуль на выполнение, имеет соответствующие разрешения на этом сервере (удаленный доступ) и на выполнение модуля в этой базе данных. Если указано имя сервера, а имя базы данных не указано, компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ищет модуль в базе данных пользователя по умолчанию.  
   
  *number*  
-**Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Область применения**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версий
   
  Необязательный целочисленный аргумент, используемый для группирования одноименных процедур. Этот аргумент не предназначен для расширенных хранимых процедур.  
   
@@ -267,7 +267,7 @@ Execute a character string
  Определяет контекст, в котором выполняется инструкция.  
   
  Имя_для_входа  
-**Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Область применения**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версий
   
  Указывает, что воплощаемым контекстом является имя входа, область олицетворения — сервер.  
   
@@ -291,7 +291,7 @@ Execute a character string
  Обозначает параметры, для которых задаются значения в списке \<arg-list> передаваемых команд, используемых в инструкции EXEC('…', \<arg-list>) AT \<linkedsrv>.  
   
  AT *linked_server_name*  
-**Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Область применения**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версий
   
  Указывает, что *command_string* выполняется для *linked_server_name*, а результаты, при их наличии, возвращаются клиенту. Значение *linked_server_name* должно указывать на существующее определение связанного сервера на локальном сервере. Определение связанного сервера производится при помощи хранимой процедуры [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md).  
   
@@ -301,11 +301,11 @@ Execute a character string
 |Термин|Определение|  
 |----------|----------------|  
 |RECOMPILE|Инициирует перекомпиляцию нового плана, его использование и удаление после выполнения модуля. Если для модуля имеется существующий план запроса, то он остается в кэше.<br /><br /> Следует указывать этот параметр в тех случаях, когда передаются нетипичные аргументы или если данные существенно изменились. Он не предназначен для расширенных хранимых процедур. Рекомендуется реже пользоваться этим параметром, поскольку он очень ресурсоемок.<br /><br /> **Примечание.** Использовать параметр WITH RECOMPILE при вызове хранимой процедуры, для которой применяется синтаксис OPENDATASOURCE, невозможно. Параметр WITH RECOMPILE не учитывается при указании четырехкомпонентного имени объекта.<br /><br /> **Примечание.** Скомпилированные в собственном коде скалярные определяемые пользователем функции не поддерживают RECOMPILE. Если потребуется выполнить повторную компиляцию, используйте процедуру [sp_recompile (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-recompile-transact-sql.md).|  
-|**RESULT SETS UNDEFINED**|**Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Этот параметр не дает гарантии, какие результаты, если они есть, будут возвращены. Определение также не предоставляется. Инструкция выполняется без ошибок, независимо от того, возвращаются ли какие-либо результаты. RESULT SETS UNDEFINED — действие по умолчанию, если не указан result_sets_option.<br /><br /> Для интерпретируемых скалярных определяемых пользователем функций и скомпилированных в собственном коде скалярных определяемых пользователем функций этот параметр не работает, так как функции никогда не возвращают результирующий набор.|  
-|RESULT SETS NONE|**Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Гарантирует, что выполняемая инструкция не вернет никаких результатов. Если возвращены какие-либо результаты, то пакет отменяется.<br /><br /> Для интерпретируемых скалярных определяемых пользователем функций и скомпилированных в собственном коде скалярных определяемых пользователем функций этот параметр не работает, так как функции никогда не возвращают результирующий набор.|  
-|*\<result_sets_definition>*|**Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Обеспечивает гарантию, что результат будет возвращен в виде, определенном в result_sets_definition. Для выражений, которые возвращают множество результирующих наборов, обеспечьте множество разделов *result_sets_definition*. Заключите каждый раздел *result_sets_definition* в скобки, разделяя их запятыми. Дополнительные сведения см. далее в подразделе \<result_sets_definition>.<br /><br /> Этот параметр всегда приводит к ошибке для скомпилированных в собственном коде скалярных определяемых пользователем функций, поскольку функции никогда не возвращают результирующий набор.|
+|**RESULT SETS UNDEFINED**|**Применимо к**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и выше, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Этот параметр не дает гарантии, какие результаты, если они есть, будут возвращены. Определение также не предоставляется. Инструкция выполняется без ошибок, независимо от того, возвращаются ли какие-либо результаты. RESULT SETS UNDEFINED — действие по умолчанию, если не указан result_sets_option.<br /><br /> Для интерпретируемых скалярных определяемых пользователем функций и скомпилированных в собственном коде скалярных определяемых пользователем функций этот параметр не работает, так как функции никогда не возвращают результирующий набор.|  
+|RESULT SETS NONE|**Применимо к**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и выше, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Гарантирует, что выполняемая инструкция не вернет никаких результатов. Если возвращены какие-либо результаты, то пакет отменяется.<br /><br /> Для интерпретируемых скалярных определяемых пользователем функций и скомпилированных в собственном коде скалярных определяемых пользователем функций этот параметр не работает, так как функции никогда не возвращают результирующий набор.|  
+|*\<result_sets_definition>*|**Применимо к**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и выше, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Обеспечивает гарантию, что результат будет возвращен в виде, определенном в result_sets_definition. Для выражений, которые возвращают множество результирующих наборов, обеспечьте множество разделов *result_sets_definition*. Заключите каждый раздел *result_sets_definition* в скобки, разделяя их запятыми. Дополнительные сведения см. далее в подразделе \<result_sets_definition>.<br /><br /> Этот параметр всегда приводит к ошибке для скомпилированных в собственном коде скалярных определяемых пользователем функций, поскольку функции никогда не возвращают результирующий набор.|
   
-\<result_sets_definition> **Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+\<result_sets_definition> **Применимо к**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и выше, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
   
  Описывает результирующие наборы, возвращенные выполненными инструкциями. Предложения result_sets_definition имеют следующий смысл  
   
@@ -455,7 +455,7 @@ GO
 ### <a name="d-using-execute-with-a-remote-stored-procedure"></a>Г. Использование EXECUTE с удаленной хранимой процедурой  
  В следующем примере производится выполнение хранимой процедуры `uspGetEmployeeManagers` на удаленном сервере `SQLSERVER1` и сохранение возвращенного состояния выполнения в переменной `@retstat`.  
   
-**Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Область применения**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версий
   
 ```  
 DECLARE @retstat int;  
@@ -514,7 +514,7 @@ EXECUTE dbo.ProcTestDefaults DEFAULT, 'I', @p3 = DEFAULT;
 ### <a name="g-using-execute-with-at-linked_server_name"></a>Ж. Указание AT имя_связанного_сервера в инструкции EXECUTE  
  В следующем примере командная строка передается удаленному серверу. Создается связанный сервер `SeattleSales`, который указывает на другой экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], а затем на нем выполняется инструкция DDL (`CREATE TABLE`).  
   
-**Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Область применения**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версий
   
 ```  
 EXEC sp_addlinkedserver 'SeattleSales', 'SQL Server'  
@@ -546,7 +546,7 @@ GO
 ### <a name="j-using-execute-to-query-an-oracle-database-on-a-linked-server"></a>К. Применение инструкции EXECUTE для запроса к базе данных Oracle на связанном сервере  
  Следующий пример демонстрирует выполнение нескольких инструкций `SELECT` на удаленном сервере Oracle. Пример начинается с добавления сервера Oracle в качестве связанного и создания имени входа на этом сервере.  
   
-**Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Область применения**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версий
   
 ```  
 -- Setup the linked server.  
@@ -589,7 +589,7 @@ GO
 ### <a name="l-using-a-parameter-with-execute-and-at-linked_server_name"></a>М. Использование параметра с командами AT имя_связанного_сервера и EXECUTE  
  В следующем примере командная строка передается удаленному серверу со знаком вопроса (`?`) в качестве заполнителя для параметра. Пример создает связанный сервер `SeattleSales`, который указывает на другой экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], а затем выполняется инструкция `SELECT` по отношению к этому связанному серверу. Инструкция `SELECT` использует знак вопроса в качестве заполнителя для параметра `ProductID` (`952`), предоставляемого после инструкции.  
   
-**Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Область применения**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версий
   
 ```  
 -- Setup the linked server.  
@@ -605,7 +605,7 @@ GO
 ### <a name="m-using-execute-to-redefine-a-single-result-set"></a>Н. Использование инструкции EXECUTE для переопределения одного результирующего набора  
  В некоторых из предыдущих примеров выполнялась инструкция `EXEC dbo.uspGetEmployeeManagers 6;`, которая возвращала 7 столбцов. Следующий пример показывает использование синтаксиса `WITH RESULT SET` для изменения имени и типов данных возвращаемого результирующего набора.  
   
-**Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Применимо к**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и выше, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
   
 ```  
 EXEC uspGetEmployeeManagers 16  
@@ -625,7 +625,7 @@ WITH RESULT SETS
 ### <a name="n-using-execute-to-redefine-a-two-result-sets"></a>О. Использование инструкции EXECUTE для переопределения двух результирующих наборов  
  При выполнении инструкции, возвращающей более одного результирующего набора, необходимо определить каждый из ожидаемых результирующих наборов. В следующем примере в [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] создается процедура, которая возвращает два результирующих набора. Затем процедура выполняется с предложением **WITH RESULT SETS** и указывается два определения результирующих наборов.  
   
-**Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Применимо к**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и выше, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
   
 ```  
 --Create the procedure  

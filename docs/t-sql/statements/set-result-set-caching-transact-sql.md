@@ -14,12 +14,12 @@ helpviewer_keywords: ''
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: d2368cfe612831685da141f99069676ebf33cbb3
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: aea7470bd5b4d046dd5346e633fb5302ea8e7b9c
+ms.sourcegitcommit: eae9efe2a2d3758685e85039ffb8fa698aa47f9b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73729834"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73962365"
 ---
 # <a name="set-result-set-caching-transact-sql"></a>SET RESULT SET CACHING (Transact-SQL) 
 
@@ -27,7 +27,7 @@ ms.locfileid: "73729834"
 
 Определяет поведение кэширования результирующего набора для текущего сеанса клиента.  
 
-Область применения этой статьи: хранилище данных SQL Azure (предварительная версия)
+Применимо к: хранилищу данных SQL Azure  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

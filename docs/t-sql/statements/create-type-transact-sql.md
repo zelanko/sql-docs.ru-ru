@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 2202236b-e09f-40a1-bbc7-b8cff7488905
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c061360d6308e9fb6927e26f887d084ec6058134
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: b851fcc4a06567ce013b8bc0d062ccf15587d806
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68809819"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982720"
 ---
 # <a name="create-type-transact-sql"></a>CREATE TYPE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -197,7 +197,7 @@ column_name <data_type>
  Указывает, может ли данный тип иметь значение NULL. Если не указано иное, по умолчанию принимается значение NULL.  
   
  *assembly_name*  
- **Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Область применения**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версий.  
   
  Указывает на сборку [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], которая ссылается на реализацию определяемого пользователем типа в среде CLR. Аргумент *assembly_name* должен соответствовать существующей сборке в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в текущей базе данных.  
   
@@ -205,7 +205,7 @@ column_name <data_type>
 >  Параметр EXTERNAL_NAME недоступен в автономной базе данных.  
   
  **[.** *class_name*  **]**  
- **Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Область применения**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версий.  
   
  Задает класс сборки, реализующей определяемый пользователем тип. Аргумент *class_name* должен быть допустимым идентификатором и существовать как класс в сборке с видимостью сборки. Аргумент *class_name* учитывает регистр символов независимо от параметров сортировки, установленных в библиотеке. Его значение должно точно соответствовать имени класса в соответствующей сборке. Именем класса может быть заключенное в квадратные скобки ( **[]** ) имя с указанием пространства имен, если в языке программирования, на котором записан класс, используется концепция пространств имен, как, например, в языке C#. Если аргумент *class_name* не задан, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]считает, что его значение равно значению аргумента *type_name*.  
   
@@ -229,7 +229,7 @@ column_name <data_type>
  
   `INDEX *index_name* [ CLUSTERED | NONCLUSTERED ] (*column_name* [ ASC | DESC ] [ ,... *n* ] )`  
      
-**Применимо к**: с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Применимо к**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и выше, а также [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Задает создание индекса для таблицы. Это может быть кластеризованный или некластеризованный индекс. Индекс будет содержать указанные столбцы и сортировать данные по возрастанию или убыванию.
   
@@ -237,17 +237,17 @@ column_name <data_type>
  Индексы столбцов и таблиц необходимо указывать в составе инструкции CREATE TABLE. DROP INDEX и CREATE INDEX не поддерживаются для таблиц, оптимизированных для памяти.  
   
  MEMORY_OPTIMIZED  
- **Применимо к**: с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **Применимо к**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и выше, а также [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Указывает, является ли тип таблицы оптимизированным для памяти. Этот параметр по умолчанию выключен. Таблица (тип) не является таблицей (типом), оптимизированной для памяти. Оптимизированные для памяти типы таблицы — это оптимизированные для памяти пользовательские таблицы, схемы которых, как и схемы других пользовательских таблиц, сохраняются на диске.  
   
  BUCKET_COUNT  
- **Применимо к**: с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **Применимо к**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и выше, а также [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Отображает число контейнеров, которые необходимо создать в хэш-индексе. Максимальное значение для параметра BUCKET_COUNT в хэш-индексах составляет 1 073 741 824. Дополнительные сведения о числах контейнеров см. в разделе [Индексы для таблиц, оптимизированных для памяти](../../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md). *bucket_count* — это обязательный аргумент.  
   
  HASH  
- **Применимо к**: с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **Применимо к**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и выше, а также [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Указывает, что был создан индекс HASH. Хэш-индексы поддерживаются только в таблицах, оптимизированных для памяти.  
   
@@ -297,7 +297,7 @@ FROM varchar(11) NOT NULL ;
 ### <a name="b-creating-a-user-defined-type"></a>Б. Создание определяемого пользователем типа  
  В следующем примере создается тип `Utf8String`, который ссылается на класс `utf8string` в сборке `utf8string`. Перед тем как приступить к созданию этого типа, сборка `utf8string` регистрируется в локальной базе данных. Замените двоичную часть инструкции CREATE ASSEMBLY на допустимое описание.  
   
-**Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Область применения**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версий.  
   
 ```  
 CREATE ASSEMBLY utf8string  

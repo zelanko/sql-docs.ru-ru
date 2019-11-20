@@ -30,12 +30,12 @@ helpviewer_keywords:
 ms.assetid: 9b9caa3d-e7d0-42e1-b60b-a5572142186c
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 5af6e4703e4e7a776eca47ea43bb41f96105b341
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 17ae607e02838e4598dce82f6f022208238aefaa
+ms.sourcegitcommit: add39e028e919df7d801e8b6bb4f8ac877e60e17
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68017608"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74119213"
 ---
 # <a name="select-examples-transact-sql"></a>Примеры использования инструкции SELECT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -78,12 +78,14 @@ ms.locfileid: "68017608"
   
  [!code-sql[Select#SelectExamples8](../../t-sql/queries/codesnippet/tsql/select-examples-transact_8.sql)]  
   
-## <a name="e-using-correlated-subqueries"></a>Д. Использование связанных вложенных запросов  
+## <a name="e-using-correlated-subqueries"></a>Д. Использование связанных вложенных запросов
+Коррелированный запрос — это запрос, зависящий от результатов выполнения другого запроса. Он может повторно выполняться для каждой строки, выбранной с помощью другого запроса.
+
  В следующем примере представлены семантически эквивалентные запросы, а также показаны различия в использовании ключевых слов `EXISTS` и `IN`. В обоих примерах приведены допустимые вложенные запросы, извлекающие по одному экземпляру продукции каждого наименования, для которых модель продукта — «long sleeve logo jersey» (кофта с длинными рукавами, с эмблемой), а значения столбцов `ProductModelID` таблиц `Product` и `ProductModel` совпадают.  
   
  [!code-sql[Select#SelectExamples9](../../t-sql/queries/codesnippet/tsql/select-examples-transact_9.sql)]  
   
- В следующем примере в коррелированном или повторяющемся вложенном запросе используется кодовое слово `IN`. Это запрос, зависящий от результатов выполнения другого запроса. Запрос повторно выполняется для каждой строки, выбранной с помощью другого запроса. Данный запрос получает имена и фамилии сотрудников, для которых значение премии в таблице `SalesPerson` составляет `5000.00`, а соответствующие им идентификационные номера в таблицах `Employee` и `SalesPerson` совпадают.  
+ Следующий пример использует `IN` и получает имена и фамилии сотрудников, для которых значение премии в таблице `SalesPerson` составляет `5000.00`, а соответствующие им идентификационные номера в таблицах `Employee` и `SalesPerson` совпадают.  
   
  [!code-sql[Select#SelectExamples10](../../t-sql/queries/codesnippet/tsql/select-examples-transact_10.sql)]  
   

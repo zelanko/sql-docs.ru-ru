@@ -1,5 +1,5 @@
 ---
-title: Поиск идентификаторов GUID для наборов свойств и целочисленных идентификаторов свойств для свойств поиска | Документация Майкрософт
+title: Поиск идентификаторов GUID для наборов свойств и целочисленных идентификаторов свойств для свойств поиска
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: search, sql-database
@@ -13,14 +13,15 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 94a7ad079b94d9bc34e5b0e7f7ad55393d8f5de5
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 3b950557c3c5c22968cffa4be0b4565ddedb293c
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73638058"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056522"
 ---
-# <a name="find-property-set-guids-and-property-integer-ids-for-search-properties"></a>Поиск идентификаторов GUID наборов свойств и целочисленных идентификаторов свойств для свойств поиска
+# <a name="find-property-set-guids-and-property-integer-ids-for-search-properties"></a>Поиск идентификаторов GUID для наборов свойств и целочисленных идентификаторов свойств для свойств поиска
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   В этом разделе описывается получение значений, которые необходимы для добавления свойства в список свойств поиска и включения свойства для полнотекстового поиска. К таким значениям относится идентификатор GUID набора свойств и целочисленный идентификатор свойства документа.  
   

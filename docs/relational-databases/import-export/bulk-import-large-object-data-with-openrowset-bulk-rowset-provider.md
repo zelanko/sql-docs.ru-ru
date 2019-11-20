@@ -1,6 +1,5 @@
 ---
-title: Массовый импорт данных больших объектов с помощью поставщика больших наборов строк OPENROWSET | Документация Майкрософт
-ms.custom: ''
+title: Массовый импорт данных больших объектов с помощью поставщика больших наборов строк OPENROWSET
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -19,14 +18,15 @@ helpviewer_keywords:
 ms.assetid: 171cdd5c-1e47-4bd7-b99a-4f0fd4e10526
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c567cfbe90cad610655deae600f986a73c50d80d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 845b552762574aa6a75a7ad00a1ce93aabff35c3
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68035835"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056037"
 ---
-# <a name="bulk-import-large-object-data-with-openrowset-bulk-rowset-provider"></a>Массовый импорт данных больших объектов с помощью поставщика больших наборов строк OPENROWSET
+# <a name="bulk-import-large-object-data-with-openrowset-bulk-rowset-provider-sql-server"></a>Массовый импорт данных больших объектов с помощью поставщика больших наборов строк OPENROWSET (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Поставщик больших наборов строк OPENROWSET в среде [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] позволяет выполнять массовый импорт файла данных как большого объекта данных.  

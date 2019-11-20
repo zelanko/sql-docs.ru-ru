@@ -1,5 +1,6 @@
 ---
-title: Об отслеживании изменений (SQL Server) | Документация Майкрософт
+title: Об отслеживании изменений
+ms.custom: seo-dt-2019
 ms.date: 08/08/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -16,12 +17,12 @@ ms.assetid: 5e0ef05a-8317-4c98-be20-b19d4cd78f12
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a9d361d6746a9900c0db3e3f955774b1d79fad20
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 954701f03910556c2fe2c4e151ce4a4e3aac2af4
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68058078"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095306"
 ---
 # <a name="about-change-tracking-sql-server"></a>Об отслеживании изменений (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,12 +50,12 @@ ms.locfileid: "68058078"
 ### <a name="one-way-synchronization-applications"></a>Приложения односторонней синхронизации  
  Приложения односторонней синхронизации, такие как клиентское или приложение кэширования промежуточного уровня, можно построить с использованием отслеживания изменений. Как показано на следующей иллюстрации, приложение кэширования требует, чтобы данные хранились в компоненте [!INCLUDE[ssDE](../../includes/ssde-md.md)] и кэшировались в других хранилищах. Приложение должно иметь возможность своевременно помещать в кэш любые изменения, внесенные в таблицы базы данных. Изменения в компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)]не передаются.  
   
- ![Отображение приложений односторонней синхронизации](../../relational-databases/track-changes/media/one-waysync.gif "Отображение приложений односторонней синхронизации")  
+ ![Показывает применение односторонней синхронизации](../../relational-databases/track-changes/media/one-waysync.gif "Показывает применение односторонней синхронизации")  
   
 ### <a name="two-way-synchronization-applications"></a>Приложения двусторонней синхронизации  
  С помощью отслеживания изменений можно также построить и приложения двусторонней синхронизации. В этом случае данные в экземпляре компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] синхронизируется с одним или несколькими хранилищами данных. Данные в этих хранилищах могут быть обновлены, а изменения должны быть синхронизированы с компонентом [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
- ![Отображение приложений двусторонней синхронизации](../../relational-databases/track-changes/media/two-waysync.gif "Отображение приложений двусторонней синхронизации")  
+ ![Показывает применение двусторонней синхронизации](../../relational-databases/track-changes/media/two-waysync.gif "Показывает применение двусторонней синхронизации")  
   
  Хороший пример приложения двусторонней синхронизации — периодически подключаемое приложение. В приложении такого типа клиентское приложение направляет запрос и обновляет локальное хранилище. Если существует соединение между клиентом и сервером, приложение выполняет синхронизацию с сервером, а измененные данные передаются в обоих направлениях.  
   

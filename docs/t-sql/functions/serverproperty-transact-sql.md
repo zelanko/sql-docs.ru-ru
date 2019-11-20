@@ -23,29 +23,34 @@ ms.assetid: 11e166fa-3dd2-42d8-ac4b-04f18c612c4a
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 195e9d549ab85a8abe1a38cfb8fd0f4d8473b559
-ms.sourcegitcommit: 1661c3e1bb38ed12f8485c3860fc2d2b97dd2c9d
+ms.openlocfilehash: 18aad5811c34eadfda4a2a7fabfdd7a9997311b5
+ms.sourcegitcommit: 02b7fa5fa5029068004c0f7cb1abe311855c2254
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71149872"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74127385"
 ---
 # <a name="serverproperty-transact-sql"></a>SERVERPROPERTY (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Возвращает сведения о свойстве экземпляра сервера.  
+Возвращает сведения о свойстве экземпляра сервера.  
 
- ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
 SERVERPROPERTY ( 'propertyname' )  
 ```  
-  
+
+> [!IMPORTANT]
+> Номера версий ядра СУБД для SQL Server и базы данных SQL Azure не сравнимы друг с другом; они являются внутренними номерами сборок этих отдельных продуктов. Ядро СУБД базы данных SQL Azure основано на той же базе кода, что и ядро СУБД SQL Server. Что важнее всего, ядро СУБД в базе данных SQL Azure всегда имеет самые новые части ядра СУБД SQL. Версия 12 базы данных SQL Azure более новая, чем версия 15 SQL Server.
+
 ## <a name="arguments"></a>Аргументы  
- *propertyname*  
- Выражение, содержащее сведения о свойстве, которые необходимо вернуть для сервера. *propertyname* может иметь одно из указанных ниже значений.  
+
+*propertyname*  
+Выражение, содержащее сведения о свойстве, которые необходимо вернуть для сервера. *propertyname* может иметь одно из указанных ниже значений.  
   
 |Свойство|Возвращаемые значения|  
 |--------------|---------------------|  
@@ -57,19 +62,19 @@ SERVERPROPERTY ( 'propertyname' )
 |Выпуск|Установленный выпуск экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Используйте значение этого свойства для определения функций и ограничений, таких как [ограничения вычислительной емкости для разных выпусков SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md). В 64-разрядных версиях компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] к обозначению версии добавляется «(64-разрядная версия)».<br /><br /> Возвращает:<br /><br /> выпуск «Enterprise Edition»;<br /><br /> выпуск "Enterprise Edition: лицензирование по числу ядер";<br /><br /> выпуск «Enterprise Evaluation Edition»;<br /><br /> выпуск Business Intelligence Edition;<br /><br /> выпуск «Developer Edition»;<br /><br /> выпуск «Express Edition»;<br /><br /> экспресс-выпуск с дополнительными службами;<br /><br /> выпуск «Standard Edition»;<br /><br /> «Web Edition».<br /><br /> "SQL Azure" означает [!INCLUDE[ssSDS](../../includes/sssds-md.md)] или [!INCLUDE[ssDW](../../includes/ssdw-md.md)].<br /><br /> Базовый тип данных: **nvarchar(128)**|  
 |EditionID|EditionID представляет установленный выпуск продукта для экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Используйте значение этого свойства для определения функций и ограничений, таких как [ограничения вычислительной емкости для разных выпусков SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).<br /><br /> 1804890536 = Enterprise<br /><br /> 1872460670 = Enterprise Edition: лицензирование на ядро<br /><br /> 610778273 = Enterprise Evaluation<br /><br /> 284895786 = Business Intelligence<br /><br /> -2117995310 = Developer<br /><br /> -1592396055 = Express<br /><br /> -133711905= Express with Advanced Services<br /><br /> –1534726760 = Standard<br /><br /> 1293598313 = Web<br /><br /> 1674378470 = база данных SQL или хранилище данных SQL<br /><br /> Базовый тип данных: **bigint**|  
 |EngineEdition|Выпуск компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] для экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], установленного на сервере.<br /><br /> 1 = Personal или Desktop Engine (недоступен для [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] и более поздних версий).<br /><br /> 2 = Standard (возвращается для выпусков Standard, Web и Business Intelligence).<br /><br /> 3 = Enterprise (это значение возвращается для выпусков Evaluation, Developer и Enterprise).<br /><br /> 4 = Express (возвращается для выпусков Express, Express with Tools и Express with Advanced Services).<br /><br /> 5 = [!INCLUDE[ssSDS](../../includes/sssds-md.md)]<br /><br /> 6 = [!INCLUDE[ssDW](../../includes/ssdw-md.md)]<br /><br /> 8 = управляемый экземпляр<br /><br /> Базовый тип данных: **int**|  
-|HadrManagerStatus|**Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Показывает, запущен ли диспетчер [!INCLUDE[ssHADR](../../includes/sshadr-md.md)].<br /><br /> 0 = не запущен, ожидает связи.<br /><br /> 1 = запущен и выполняется.<br /><br /> 2 = не запущен и завершился неудачно.<br /><br /> NULL = недопустимый ввод, ошибка или неприменимо.|  
+|HadrManagerStatus|**Область применения**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздних версий.<br /><br /> Показывает, запущен ли диспетчер [!INCLUDE[ssHADR](../../includes/sshadr-md.md)].<br /><br /> 0 = не запущен, ожидает связи.<br /><br /> 1 = запущен и выполняется.<br /><br /> 2 = не запущен и завершился неудачно.<br /><br /> NULL = недопустимый ввод, ошибка или неприменимо.|  
 |InstanceDefaultDataPath|**Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до текущей версии в обновлениях, выпущенных начиная с конца 2015 г.<br /><br /> Имя пути по умолчанию к файлам данных экземпляра.|  
 |InstanceDefaultLogPath|**Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до текущей версии в обновлениях, выпущенных начиная с конца 2015 г.<br /><br /> Имя пути по умолчанию к файлам журналов экземпляра.|  
 |InstanceName|Имя экземпляра, к которому подключен пользователь.<br /><br /> Возвращает значение NULL в случае, если имя экземпляра установлено по умолчанию, при возникновении ошибки и в случае, если входные данные оказываются недопустимы.<br /><br /> NULL = недопустимый ввод, ошибка или неприменимо.<br /><br /> Базовый тип данных: **nvarchar(128)**|  
 |IsAdvancedAnalyticsInstalled|Возвращает значение 1, если компонент расширенной аналитики был установлен во время установки системы, или значение 0, если компонент расширенной аналитики не был установлен.|  
 |IsClustered|Экземпляр сервера настроен для работы в отказоустойчивом кластере.<br /><br /> 1 = в кластере.<br /><br /> 0 = не в кластере.<br /><br /> NULL = недопустимый ввод, ошибка или неприменимо.<br /><br /> Базовый тип данных: **int**|  
 |IsFullTextInstalled|На текущем экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] установлены компоненты полнотекстового и семантического индексирования.<br /><br /> 1 = компоненты полнотекстового и семантического индексирования установлены.<br /><br /> 0 = компоненты полнотекстового и семантического индексирования не установлены.<br /><br /> NULL = недопустимый ввод, ошибка или неприменимо.<br /><br /> Базовый тип данных: **int**|  
-|IsHadrEnabled|**Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Служба [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] включена на этом экземпляре сервера.<br /><br /> 0 = компонент [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] отключен.<br /><br /> 1 = компонент [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] включен.<br /><br /> NULL = недопустимый ввод, ошибка или неприменимо.<br /><br /> Базовый тип данных: **int**<br /><br /> Для реплик доступности, создаваемых и запускаемых на экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], на экземпляре сервера должна быть включена служба [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]. Дополнительные сведения см. в статье [Включение и отключение групп доступности AlwaysOn (SQL Server)](../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md).<br /><br /> **Примечание.** Свойство IsHadrEnabled относится только к [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]. Другие возможности высокого уровня доступности или аварийного восстановления, такие как зеркальное отображение базы данных или доставка журналов, не затрагиваются этим свойством сервера.|  
+|IsHadrEnabled|**Область применения**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздних версий.<br /><br /> Служба [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] включена на этом экземпляре сервера.<br /><br /> 0 = компонент [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] отключен.<br /><br /> 1 = компонент [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] включен.<br /><br /> NULL = недопустимый ввод, ошибка или неприменимо.<br /><br /> Базовый тип данных: **int**<br /><br /> Для реплик доступности, создаваемых и запускаемых на экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], на экземпляре сервера должна быть включена служба [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]. Дополнительные сведения см. в статье [Включение и отключение групп доступности AlwaysOn (SQL Server)](../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md).<br /><br /> **Примечание.** Свойство IsHadrEnabled относится только к [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]. Другие возможности высокого уровня доступности или аварийного восстановления, такие как зеркальное отображение базы данных или доставка журналов, не затрагиваются этим свойством сервера.|  
 |IsIntegratedSecurityOnly|Сервер запущен во встроенном режиме безопасности.<br /><br /> 1 = встроенная безопасность (проверка подлинности Windows)<br /><br /> 0 = без встроенного режима безопасности. (Как проверка подлинности Windows, так и проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].)<br /><br /> NULL = недопустимый ввод, ошибка или неприменимо.<br /><br /> Базовый тип данных: **int**|  
-|IsLocalDB|**Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Сервер является экземпляром [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] LocalDB.<br /><br /> NULL = недопустимый ввод, ошибка или неприменимо.|  
+|IsLocalDB|**Область применения**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздних версий.<br /><br /> Сервер является экземпляром [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] LocalDB.<br /><br /> NULL = недопустимый ввод, ошибка или неприменимо.|  
 |IsPolybaseInstalled|**Применимо к**: [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Возвращает значение, показывающее, установлен ли компонент PolyBase в экземпляре сервера.<br /><br /> 0 = компонент PolyBase не установлен.<br /><br /> 1 = компонент PolyBase установлен.<br /><br /> Базовый тип данных: **int**|  
 |IsSingleUser|Server запущен в однопользовательском режиме.<br /><br /> 1 = однопользовательский режим.<br /><br /> 0 = не однопользовательский режим.<br /><br /> NULL = недопустимый ввод, ошибка или неприменимо.<br /><br /> Базовый тип данных: **int**|  
-|IsXTPSupported|**Область применения**: SQL Server (с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[ssSDS](../../includes/sssds-md.md)].<br /><br /> Сервер поддерживает компонент In-Memory OLTP.<br /><br /> 1 = сервер поддерживает компонент In-Memory OLTP.<br /><br /> 0= сервер не поддерживает компонент In-Memory OLTP.<br /><br /> NULL = недопустимый ввод, ошибка или неприменимо.<br /><br /> Базовый тип данных: **int**|  
+|IsXTPSupported|**Область применения**: SQL Server ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и выше), [!INCLUDE[ssSDS](../../includes/sssds-md.md)].<br /><br /> Сервер поддерживает компонент In-Memory OLTP.<br /><br /> 1 = сервер поддерживает компонент In-Memory OLTP.<br /><br /> 0= сервер не поддерживает компонент In-Memory OLTP.<br /><br /> NULL = недопустимый ввод, ошибка или неприменимо.<br /><br /> Базовый тип данных: **int**|  
 |LCID|Код локали Windows для параметров сортировки.<br /><br /> Базовый тип данных: **int**|  
 |LicenseType|Не используется. В продукте [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не сохраняются сведения о лицензии. Всегда возвращает DISABLED.<br /><br /> Базовый тип данных: **nvarchar(128)**|  
 |MachineName|Имя компьютера Windows, на котором запущен экземпляр сервера.<br /><br /> Для кластеризованного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], работающего на виртуальном сервере службы кластеров (Майкрософт), возвращается имя виртуального сервера.<br /><br /> NULL = недопустимый ввод, ошибка или неприменимо.<br /><br /> Базовый тип данных: **nvarchar(128)**|  
@@ -95,34 +100,39 @@ SERVERPROPERTY ( 'propertyname' )
 |FilestreamEffectiveLevel|Действующий уровень доступа FILESTREAM. Это значение может отличаться от значения FilestreamConfiguredLevel, если уровень был изменен и ожидается перезапуск экземпляра или перезагрузка компьютера. Дополнительные сведения см. в разделе [Уровень доступа к файловому потоку](../../database-engine/configure-windows/filestream-access-level-server-configuration-option.md).|  
   
 ## <a name="return-types"></a>Типы возвращаемых данных  
- **sql_variant**  
+
+**sql_variant**
   
 ## <a name="remarks"></a>Remarks  
   
-### <a name="servername-property"></a>Свойство ServerName  
- Свойство `ServerName` функции `SERVERPROPERTY` и функция [@@SERVERNAME](../../t-sql/functions/servername-transact-sql.md) возвращают аналогичные сведения. В свойстве `ServerName` задаются имена экземпляра и сервера Windows, которые вместе образуют уникальный экземпляр сервера. Функция [@@SERVERNAME](../../t-sql/functions/servername-transact-sql.md) возвращает текущее имя локального сервера.  
+### <a name="servername-property"></a>Свойство ServerName
+
+Свойство `ServerName` функции `SERVERPROPERTY` и функция [@@SERVERNAME](../../t-sql/functions/servername-transact-sql.md) возвращают аналогичные сведения. В свойстве `ServerName` задаются имена экземпляра и сервера Windows, которые вместе образуют уникальный экземпляр сервера. Функция [@@SERVERNAME](../../t-sql/functions/servername-transact-sql.md) возвращает текущее имя локального сервера.  
   
- Свойство `ServerName` и функция [@@SERVERNAME](../../t-sql/functions/servername-transact-sql.md) возвращают одинаковые сведения, если установленное по умолчанию имя сервера не было изменено во время установки. Имя локального сервера можно настроить, выполнив следующие команды:  
+Свойство `ServerName` и функция [@@SERVERNAME](../../t-sql/functions/servername-transact-sql.md) возвращают одинаковые сведения, если установленное по умолчанию имя сервера не было изменено во время установки. Имя локального сервера можно настроить, выполнив следующие команды:  
   
-```  
+```sql
 EXEC sp_dropserver 'current_server_name';  
 GO  
 EXEC sp_addserver 'new_server_name', 'local';  
 GO  
 ```  
   
- Если имя локального сервера было изменено во время установки и отличается от заданного по умолчанию имени, то функция [@@SERVERNAME](../../t-sql/functions/servername-transact-sql.md) возвращает новое имя.  
+Если имя локального сервера было изменено во время установки и отличается от заданного по умолчанию имени, то функция [@@SERVERNAME](../../t-sql/functions/servername-transact-sql.md) возвращает новое имя.  
   
-### <a name="version-properties"></a>Свойства версии  
- Функция `SERVERPROPERTY` возвращает отдельные свойства, которые относятся к информации о версии, а функция [@@VERSION](../../t-sql/functions/version-transact-sql-configuration-functions.md) объединяет выходные данные в одну строку. Если для конкретного приложения требуются отдельные строки свойств, можно использовать функцию `SERVERPROPERTY`, которая возвращает эти строки, а не заниматься синтаксическим анализом результатов функции [@@VERSION](../../t-sql/functions/version-transact-sql-configuration-functions.md).  
+### <a name="version-properties"></a>Свойства версии
+
+Функция `SERVERPROPERTY` возвращает отдельные свойства, которые относятся к информации о версии, а функция [@@VERSION](../../t-sql/functions/version-transact-sql-configuration-functions.md) объединяет выходные данные в одну строку. Если для конкретного приложения требуются отдельные строки свойств, можно использовать функцию `SERVERPROPERTY`, которая возвращает эти строки, а не заниматься синтаксическим анализом результатов функции [@@VERSION](../../t-sql/functions/version-transact-sql-configuration-functions.md).  
 
 ## <a name="permissions"></a>Разрешения
-Все пользователи могут запрашивать свойства сервера. 
+
+Все пользователи могут запрашивать свойства сервера.
   
-## <a name="examples"></a>Примеры  
- В приведенном ниже примере используется функция `SERVERPROPERTY` в инструкции `SELECT` для получения сведений о текущем экземпляре [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)].   
+## <a name="examples"></a>Примеры
+
+В приведенном ниже примере используется функция `SERVERPROPERTY` в инструкции `SELECT` для получения сведений о текущем экземпляре [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)].
   
-```  
+```sql
 SELECT  
   SERVERPROPERTY('MachineName') AS ComputerName,
   SERVERPROPERTY('ServerName') AS InstanceName,  
@@ -132,7 +142,6 @@ SELECT
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Выпуски и компоненты SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md)  
-  
-  
+## <a name="see-also"></a>См. также:
+
+[Выпуски и компоненты SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md)  

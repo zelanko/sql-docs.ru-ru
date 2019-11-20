@@ -23,12 +23,12 @@ ms.assetid: b86a88ba-4f7c-4e19-9fbd-2f8bcd3be14a
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 410025552d46c22ddf168fb3521e1f92641e13b9
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 5245df31c2e3b31d95095fbb6770a786d4be6c03
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907081"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982809"
 ---
 # <a name="statistics"></a>Статистика
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -114,7 +114,7 @@ ORDER BY s.name;
 * Начиная с версии [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и при [уровне совместимости базы данных](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) 130 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] используется пороговое значение для динамического обновления статистических данных по убыванию. Значение изменяется в зависимости от числа строк в таблице. Оно вычисляется как квадратный корень из произведения текущего значения кратности в таблице и 1000. Например, если таблица содержит 2 миллиона строк, значение вычисляется как квадратный корень из (1000 * 2000000) = 44721,359. Благодаря этому изменению статистика для больших таблиц будет обновляться чаще. Но если уровень совместимости для базы данных ниже 130, применяется пороговое значение [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. ?
 
 > [!IMPORTANT]
-> Начиная с версии [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] и до [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] или с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] при [уровне совместимости базы данных](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) ниже 130 применяется [флаг трассировки 2371](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] используется пороговое значение для динамического обновления статистических данных по убыванию. Значение изменяется в зависимости от числа строк в таблице.
+> Начиная с версии [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] и до [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] или с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и выше при [уровне совместимости базы данных](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) ниже 130 применяется [флаг трассировки 2371](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md), а [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использует пороговое значение для динамического обновления статистических данных по убыванию. Значение изменяется в зависимости от числа строк в таблице.
   
 Оптимизатор запросов проверяет наличие устаревшей статистики перед компиляцией запроса и до выполнения кэшированного плана запроса. Перед компиляцией запроса оптимизатор запросов с помощью столбцов, таблиц и индексированных представлений в предикате запроса определяет статистические данные, которые могли устареть. Перед выполнением кэшированного плана запроса компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] проверяет, ссылается ли план запроса на актуальную статистику.  
   
@@ -153,7 +153,7 @@ ORDER BY s.name;
 * Статистики, созданные по внутренним таблицам.  
 * Статистики, созданные с пространственными индексами или XML-индексами.  
   
-**Применимо к**: с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
+**Область применения**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и более поздних версий. 
   
 ## <a name="CreateStatistics"></a> Условия создания статистики  
  Оптимизатор запросов самостоятельно создает статистику следующим образом:  

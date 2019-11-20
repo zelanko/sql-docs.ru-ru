@@ -1,7 +1,7 @@
 ---
 title: Уровень совместимости инструкции ALTER DATABASE (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 08/27/2019
+ms.date: 11/15/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -24,18 +24,18 @@ ms.assetid: ca5fd220-d5ea-4182-8950-55d4101a86f6
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4a0c105891577807920404267aa4a9b7c2613b18
-ms.sourcegitcommit: 27c267bf2a3cfaf2abcb5f3777534803bf4cffe5
+ms.openlocfilehash: 0d65bcb7db0bc0628d1c7b40d21e9b2089ad285c
+ms.sourcegitcommit: 02b7fa5fa5029068004c0f7cb1abe311855c2254
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73240673"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74127699"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>Уровень совместимости инструкции ALTER DATABASE (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Определяет поведение обработки запросов и [!INCLUDE[tsql](../../includes/tsql-md.md)] для обеспечения совместимости с указанной версией [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. См. дополнительные сведения о [других параметрах ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md).  
+Определяет поведение обработки запросов и [!INCLUDE[tsql](../../includes/tsql-md.md)] для обеспечения совместимости с указанной версией ядра SQL. См. дополнительные сведения о [других параметрах ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md).  
 
 Дополнительные сведения о соглашениях о синтаксисе см. в статье [Соглашения о синтаксисе в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
 
@@ -48,11 +48,9 @@ SET COMPATIBILITY_LEVEL = { 150 | 140 | 130 | 120 | 110 | 100 | 90 }
 
 ## <a name="arguments"></a>Аргументы
 
-*database_name*      
-Имя изменяемой базы данных.
+*database_name* — имя изменяемой базы данных.
 
-COMPATIBILITY_LEVEL { 150 | 140 | 130 | 120 | 110 | 100 | 90 | 80 }       
-Версия [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], с которой необходимо обеспечить совместимость базы данных. Можно настроить следующие значения уровня совместимости (не все версии поддерживают все перечисленные в списке выше уровни совместимости):
+COMPATIBILITY_LEVEL {150 | 140 | 130 | 120 | 110 | 100 | 90 | 80} — версия [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для которой необходимо обеспечить совместимость с базой данных. Можно настроить следующие значения уровня совместимости (не все версии поддерживают все перечисленные в списке выше уровни совместимости):
 
 <a name="supported-dbcompats"></a>
 
@@ -60,8 +58,8 @@ COMPATIBILITY_LEVEL { 150 | 140 | 130 | 120 | 110 | 100 | 90 | 80 }
 |-------------|-----------------------------|-------------------------------------|------------------------------------------|
 |[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]|15|150|150, 140, 130, 120, 110, 100|
 |[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|14|140|140, 130, 120, 110, 100|
-|[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] отдельная база данных/эластичный пул|12|140|150, 140, 130, 120, 110, 100|
-|[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] управляемый экземпляр|12|140|150, 140, 130, 120, 110, 100|
+|[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] отдельная база данных/эластичный пул|12|150|150, 140, 130, 120, 110, 100|
+|[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] управляемый экземпляр|12|150|150, 140, 130, 120, 110, 100|
 |[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|13|130|130, 120, 110, 100|
 |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|12|120|120, 110, 100|
 |[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|11|110|110, 100, 90|
@@ -70,7 +68,11 @@ COMPATIBILITY_LEVEL { 150 | 140 | 130 | 120 | 110 | 100 | 90 | 80 }
 |[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|9|90|90, 80|
 |[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]|8|80|80|
 
+> [!IMPORTANT]
+> Номера версий ядра СУБД для SQL Server и базы данных SQL Azure не сравнимы друг с другом; они являются внутренними номерами сборок этих отдельных продуктов. Ядро СУБД базы данных SQL Azure основано на той же базе кода, что и ядро СУБД SQL Server. Что важнее всего, ядро СУБД в базе данных SQL Azure всегда имеет самые новые части ядра СУБД SQL. Версия 12 базы данных SQL Azure более новая, чем версия 15 SQL Server.
+
 ## <a name="remarks"></a>Remarks
+
 Для всех установок [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] уровень совместимости по умолчанию установлен в зависимости от версии [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Для новых баз данных он устанавливается в это же значение, если для базы данных **model** не установлен более низкий уровень совместимости. Для базы данных, присоединяемой или обновляемой с любой более ранней версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], сохраняется существующий уровень совместимости, если он не ниже минимального значения, допустимого в этом экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. При перемещении базы данных с уровнем совместимости ниже допустимого в [!INCLUDE[ssde_md](../../includes/ssde_md.md)] автоматически устанавливается минимальный допустимый уровень совместимости. Это относится и к системным, и к пользовательским базам данных.
 
 При подключении или восстановлении базы данных, а также после обновления на месте в [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] ожидается описанное ниже поведение.
@@ -81,18 +83,18 @@ COMPATIBILITY_LEVEL { 150 | 140 | 130 | 120 | 110 | 100 | 90 | 80 }
 - Системная база данных master сохраняет уровень совместимости, который она имела до обновления.
 
 Измените уровень совместимости базы данных с помощью инструкции `ALTER DATABASE`. Новый параметр уровня совместимости для базы данных вступит в силу после выдачи `USE <database>` или обработки нового имени входа в этой базе данных в качестве контекста базы данных по умолчанию.
-Чтобы просмотреть текущий уровень совместимости базы данных, запросите столбец **compatibility_level** представления каталога [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).
+Чтобы просмотреть текущий уровень совместимости базы данных, запросите столбец `compatibility_level` представления каталога [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).
 
 > [!NOTE]
 > [База данных распространителя](../../relational-databases/replication/distribution-database.md), созданная в более ранней версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и обновленная до версии [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] RTM или версии с пакетом обновления 1, получает уровень совместимости 90, который не поддерживается для других баз данных. Это не влияет на функциональные возможности репликации. В результате обновления до последних пакетов обновления и версий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] уровень совместимости базы данных распространителя будет увеличен до уровня, соответствующего базе данных **master**.
 
 > [!NOTE]
-> По состоянию на **январь 2018 г.** в [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] для создаваемых баз данных по умолчанию применяется уровень совместимости 140. [!INCLUDE[msCoName](../../includes/msconame-md.md)] не обновляет уровень совместимости для существующих баз данных. Это осуществляют заказчики по собственному усмотрению.        
+> По состоянию на **ноябрь 2019 г.** в [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] для создаваемых баз данных по умолчанию применяется уровень совместимости 150. [!INCLUDE[msCoName](../../includes/msconame-md.md)] не обновляет уровень совместимости для существующих баз данных. Это осуществляют заказчики по собственному усмотрению.        
 > [!INCLUDE[msCoName](../../includes/msconame-md.md)] настоятельно рекомендует клиентам запланировать обновление до последнего уровня совместимости, чтобы они могли использовать самые новые улучшения, связанные с оптимизацией запросов.        
 
 Если в целом вам требуется уровень 120 или выше, но по определенной причине вы предпочитаете модель [**оценки кратности**](../../relational-databases/performance/cardinality-estimation-sql-server.md) [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], соответствующую уровню совместимости 110, см. подробнее об [ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) и ключевом слове `LEGACY_CARDINALITY_ESTIMATION = ON`.
 
-Подробные сведения о том, как оценить разницу в производительности наиболее важных запросов на двух разных уровнях совместимости в [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], см. в статье [Улучшенная производительность запросов для уровня совместимости 130 базы данных SQL Azure](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/05/06/improved-query-performance-with-compatibility-level-130-in-azure-sql-database/). Обратите внимание, что в этой статье описывается уровень совместимости 130 и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], но при обновлении до уровня 140 в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] применяется та же методология.
+Подробные сведения о том, как оценить разницу в производительности наиболее важных запросов на двух разных уровнях совместимости в [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], см. в статье [Улучшенная производительность запросов для уровня совместимости 130 базы данных SQL Azure](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/05/06/improved-query-performance-with-compatibility-level-130-in-azure-sql-database/). Обратите внимание, что в этой статье описывается уровень совместимости 130 и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], но при обновлении до уровня 140 или выше в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] применяется та же методология.
 
 Чтобы определить версию [!INCLUDE[ssDE](../../includes/ssde-md.md)], к которой вы подключены, выполните указанный ниже запрос.
 
@@ -201,8 +203,6 @@ SELECT name, compatibility_level FROM sys.databases;
 
 ## <a name="differences-between-compatibility-level-140-and-level-150"></a>Различия между уровнями совместимости 140 и 150
 В этом разделе описываются новые возможности, обусловленные появлением уровня совместимости 150.
-
-Уровень совместимости базы данных 150 сейчас предоставляется для [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] и [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] в режиме общедоступной предварительной версии. Этот уровень совместимости базы данных будет связан с новым поколением улучшений обработки запросов наряду с улучшениями, реализованными на уровне совместимости 140.
 
 |Уровень совместимости 140 и ниже|Уровень совместимости 150|
 |--------------------------------------------------|-----------------------------------------|

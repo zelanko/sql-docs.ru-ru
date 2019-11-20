@@ -23,12 +23,12 @@ author: dnethi
 ms.author: dinethi
 ms.custom: ''
 ms.date: 11/04/2019
-ms.openlocfilehash: 5188b9a90a910ba94d73db48f5e0c1c527145e48
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.openlocfilehash: 38c594e235bf68c18ec493fd8ec43f585ea0378c
+ms.sourcegitcommit: 0c40843c13f67ba7d975f4fedb9d20d70747f66d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "73843740"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74097861"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>Скачивание SQL Server Management Studio (SSMS)
 
@@ -40,7 +40,9 @@ SQL Server Management Studio (SSMS) — это интегрированная с
 
 SSMS распространяется бесплатно!
 
-## <a name="download-ssmshttpsakamsssmsfullsetup"></a>[Скачивание SSMS](https://aka.ms/ssmsfullsetup)
+## <a name="download-ssms"></a>Скачать SSMS
+
+**[![Скачать](media/download-icon.png) Скачайте SQL Server Management Studio (SSMS)](https://aka.ms/ssmsfullsetup)**
 
 SSMS 18.4 является последней общедоступной версией SSMS. Если у вас установлена предыдущая общедоступная версия SSMS 18, при установке SSMS 18.4 она обновится до версии 18.4. Если у вас установлена предыдущая *предварительная версия* SSMS 18.x, перед установкой SSMS 18.4 ее необходимо удалить.
 

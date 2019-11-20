@@ -1,29 +1,31 @@
 ---
-title: Отладчик Transact-SQL | Документация Майкрософт
+title: Отладчик Transact-SQL
 ms.prod: sql
 ms.technology: scripting
 ms.topic: conceptual
+helpviewer_keywords:
+- Transact-SQL debugger, introduction
+ms.assetid: 6e914699-0d85-46c2-aa2d-3e339ac2c4ce
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 11/04/2019
-helpviewer_keywords:
-- Transact-SQL debugger, introduction
-ms.assetid: 6e914699-0d85-46c2-aa2d-3e339ac2c4ce
 monikerRange: '>= sql-server-2014 || = sqlallproducts-allversions'
-ms.openlocfilehash: e56f44c53591472279f23b8c3d9d68f67ec30fb6
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.openlocfilehash: 6677e6ddebdbf613f3b4ee5c3c2eb02de2cba98a
+ms.sourcegitcommit: 0c40843c13f67ba7d975f4fedb9d20d70747f66d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73637997"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74097924"
 ---
 # <a name="transact-sql-debugger"></a>Отладчик Transact-SQL
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Отладчик [!INCLUDE[tsql](../../includes/tsql-md.md)] позволяет находить ошибки в коде [!INCLUDE[tsql](../../includes/tsql-md.md)] путем проверки поведения кода во время его выполнения. После перевода окна редактора запросов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] в режим отладки можно приостанавливать выполнение на определенных строках кода и просматривать сведения и данные, которые используются или возвращаются соответствующими инструкциями [!INCLUDE[tsql](../../includes/tsql-md.md)] .
+
+[!INCLUDE[ssms-old-versions](../../includes/ssms-old-versions.md)]
 
 ## <a name="stepping-through-transact-sql-code"></a>Пошаговая отладка кода Transact-SQL
 
@@ -70,6 +72,6 @@ ms.locfileid: "73637997"
 |Описание использования отладчика [!INCLUDE[tsql](../../includes/tsql-md.md)] для пошагового выполнения кода.|[Пошаговая отладка кода Transact-SQL](../../relational-databases/scripting/step-through-transact-sql-code.md)|  
 |Описание использования отладчика для просмотра таких данных [!INCLUDE[tsql](../../includes/tsql-md.md)] , как параметры и переменные, а также системные сведения.|[Сведения отладчика Transact-SQL](../../relational-databases/scripting/transact-sql-debugger-information.md)|  
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 [Редакторы запросов и текста (SQL Server Management Studio)](../../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)

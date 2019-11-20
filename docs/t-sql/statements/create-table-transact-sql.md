@@ -46,12 +46,12 @@ helpviewer_keywords:
 ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 22a2009b4728cfd0e1fdf9eb1623a3fb43b74904
-ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
+ms.openlocfilehash: a4730cf8487b244502e339b5ea820e7ad9d160b6
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71680908"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982737"
 ---
 # <a name="create-table-transact-sql"></a>Инструкция CREATE TABLE (Transact-SQL)
 
@@ -351,7 +351,7 @@ column_name <data_type>
 
 *table_name* — имя новой таблицы. Имена таблиц должны соответствовать правилам для [идентификаторов](../../relational-databases/databases/database-identifiers.md). Аргумент *table_name* может состоять не более чем из 128 символов, за исключением имен локальных временных таблиц (имена с префиксом из одного символа решетки #), длина которых не должна превышать 116 символов.
 
-AS FileTable **Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).
+AS FileTable **Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и выше).
 
 Создает новую таблицу FileTable. Нет необходимости указывать столбцы, так как таблица FileTable имеет фиксированное схему. Дополнительные сведения см. в статье [Таблицы FileTable](../../relational-databases/blob/filetables-sql-server.md).
 
@@ -395,7 +395,7 @@ TEXTIMAGE_ON { *filegroup*|  **"default"** } Указывает, что стол
 > В этом контексте default не является ключевым словом. Это идентификатор файловой группы по умолчанию, который должен иметь разделители, как в выражении `TEXTIMAGE_ON "default"` или `TEXTIMAGE_ON [default]`. Если указано значение **"default"** , параметр `QUOTED_IDENTIFIER` должен иметь значение ON для текущего сеанса. Это параметр по умолчанию. Дополнительные сведения см. в описании [SET QUOTED_IDENTIFIER](../../t-sql/statements/set-quoted-identifier-transact-sql.md).
 
 FILESTREAM_ON { *имя_схемы_секции* | filegroup | **"** default **"** }     
-**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с[!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]). [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] не поддерживает `FILESTREAM`.
+**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] и выше). [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] не поддерживает `FILESTREAM`.
 
 Задает файловую группу для данных FILESTREAM.
 
@@ -469,24 +469,24 @@ NOT FOR REPLICATION
 В инструкции `CREATE TABLE` предложение `NOT FOR REPLICATION` может указываться для свойства IDENTITY, а также ограничений FOREIGN KEY и CHECK. Если это предложение указано для свойства `IDENTITY`, значения в столбцах идентификаторов не приращиваются, если вставку выполняют агенты репликации. Если ограничение сопровождается этим предложением, оно не выполняется, когда агенты репликации выполняют операции вставки, обновления или удаления.
 
 GENERATED ALWAYS AS ROW { START | END } [ HIDDEN ] [ NOT NULL ]    
-**Поддержка**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и выше) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Определяет, что указанный столбец типа `datetime2` будет использоваться системой для записи времени начала или окончания действия записи. Столбец должен быть определен как `NOT NULL`. Если вы попытаетесь указать `NULL`, система выдаст ошибку. Если вы явно не укажете NOT NULL для столбца периода, система определит столбец как `NOT NULL` по умолчанию. Используйте этот аргумент в сочетании с аргументами `PERIOD FOR SYSTEM_TIME` и `WITH SYSTEM_VERSIONING = ON`, чтобы выключить системное управление версиями в таблице. Дополнительные сведения см. в разделе [Temporal Tables](../../relational-databases/tables/temporal-tables.md).
 
 Вы можете пометить один или оба столбца периода флагом **HIDDEN**, чтобы эти столбцы были скрыты и инструкция **SELECT \* FROM** _`<table>`_ не возвращала значения этих столбцов. По умолчанию столбцы периода не скрыты. Чтобы использовать скрытые столбцы, их необходимо явно указывать во всех запросах, обращающихся к темпоральной таблице. Чтобы изменить атрибут **HIDDEN** для существующего столбца периода, необходимо отбросить атрибут **PERIOD** и заново создать его с другим флагом HIDDEN.
 
 INDEX *index_name* [ CLUSTERED | NONCLUSTERED ] (*column_name* [ ASC | DESC ] [ ,... *n* ] )     
-**Поддержка**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и выше) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Задает создание индекса для таблицы. Это может быть кластеризованный или некластеризованный индекс. Индекс будет содержать указанные столбцы и сортировать данные по возрастанию или убыванию.
 
 INDEX *index_name* CLUSTERED COLUMNSTORE     
-**Поддержка**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и выше) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Задает сохранение всей таблицы в виде столбцов с кластеризованным индексом columnstore. Сюда всегда входят все столбцы в таблице. Данные не сортируются в алфавитном или числовом порядке, поскольку организация строк позволяет использовать преимущества сжатия columnstore.
 
 INDEX *index_name* [ NONCLUSTERED ] COLUMNSTORE (*column_name* [ ,... *n* ] )     
-**Поддержка**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и выше) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Задает создание некластеризованного индекса columnstore в таблице. Базовая таблица может быть кучей rowstore или кластеризованным индексом или кластеризованным индексом columnstore. В любом случае при создании некластеризованного индекса columnstore в таблице сохраняется вторая копия данных для столбцов в индексе.
 
@@ -514,7 +514,7 @@ ON **"default"**
 Слово "default" в этом контексте не является ключевым. Это идентификатор файловой группы по умолчанию, который должен иметь разделители, как в выражениях ON **"default"** или ON **[default]** . Если указано значение "default", параметр `QUOTED_IDENTIFIER` должен иметь значение ON для текущего сеанса. Это параметр по умолчанию. Дополнительные сведения см. в описании [SET QUOTED_IDENTIFIER](../../t-sql/statements/set-quoted-identifier-transact-sql.md).
 
 [ FILESTREAM_ON { *filestream_filegroup_name* | *partition_scheme_name* | "NULL" } ]     
-**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с[!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).
+**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] и выше).
 
 Указывает размещение данных FILESTREAM для таблицы при создании кластеризованного индекса. Предложение FILESTREAM_ON позволяет перемещать данные FILESTREAM в другую файловую группу FILESTREAM или схему секционирования.
 
@@ -551,7 +551,7 @@ ENCRYPTION_TYPE = { DETERMINISTIC | RANDOMIZED }
 Столбцы должны иметь подходящий тип данных.
 
 ALGORITHM    
-**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).
+**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и выше).
 
 Должно быть **'AEAD_AES_256_CBC_HMAC_SHA_256'** .
 
@@ -561,7 +561,7 @@ SPARSE
 Указывает, что столбец является разреженным столбцом. Хранилище разреженных столбцов оптимизируется для значений NULL. Для разреженных столбцов нельзя указать параметр NOT NULL. Дополнительные ограничения и сведения о разреженных столбцах см. в разделе [Разреженные столбцы](../../relational-databases/tables/use-sparse-columns.md).
 
 MASKED WITH ( FUNCTION = ' *mask_function* ')     
-**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).
+**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и выше).
 
 Указывает маску для динамического маскирования данных. *mask_function* — это имя функции маскирования с соответствующими параметрами. Доступны четыре функции:
 
@@ -573,7 +573,7 @@ MASKED WITH ( FUNCTION = ' *mask_function* ')
 Параметры функции см. в разделе [Динамическое маскирование данных](../../relational-databases/security/dynamic-data-masking.md).
 
 FILESTREAM     
-**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
+**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] и выше)
 
 Допустимо только для столбцов типа **varbinary(max)** . Указывает хранилище FILESTREAM для данных больших двоичных объектов типа **varbinary(max)** .
 
@@ -699,12 +699,12 @@ WITH FILLFACTOR **=** _fillfactor_
 Имя набора столбцов. Набор столбцов представляет собой нетипизированное XML-представление, в котором все разреженные столбцы таблицы объединены в структурированные выходные данные. Дополнительные сведения о наборах столбцов см. в разделе [Использование наборов столбцов](../../relational-databases/tables/use-column-sets.md).
 
 PERIOD FOR SYSTEM_TIME (*system_start_time_column_name* , *system_end_time_column_name* )        
-**Поддержка**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и выше) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Указывает имена столбцов, которые система будет использовать для обозначения периода действия записи. Используйте этот аргумент в сочетании с аргументами GENERATED ALWAYS AS ROW { START | END } и WITH SYSTEM_VERSIONING = ON, чтобы выключить системное управление версиями в таблице. Дополнительные сведения см. в разделе [Temporal Tables](../../relational-databases/tables/temporal-tables.md).
 
 COMPRESSION_DELAY     
-**Поддержка**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и выше) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Если используется оптимизация для памяти, указывается минимальное количество минут задержки, в течение которых строка должна оставаться в таблице без изменений до сжатия в индекс columnstore. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выбирает определенные строки для сжатия в зависимости от времени их последнего обновления. Например, если строки часто меняются в течение двухчасового периода, установите `COMPRESSION_DELAY = 120 Minutes`, чтобы обновления были завершены до того, как SQL Server сожмет строку.
 
@@ -731,12 +731,12 @@ PAGE
 
 COLUMNSTORE    
 
-**Применимо к**: с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Применимо к**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и выше, а также [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Применяется только к индексам columnstore, включая некластеризованные и кластеризованные индексы columnstore. COLUMNSTORE задает сжатие с использованием самого эффективного сжатия columnstore. Это обычный вариант.
 
 COLUMNSTORE_ARCHIVE     
-**Поддержка**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и выше) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Применяется только к индексам columnstore, включая некластеризованные и кластеризованные индексы columnstore. Параметр COLUMNSTORE_ARCHIVE обеспечивает дальнейшее сжатие таблицы или секции до еще меньшего размера. Это может использоваться для архивации или в других ситуациях, где требуется уменьшение объема пространства и допускается увеличение затрат времени на сохранение и выборку
 
@@ -802,13 +802,13 @@ OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | **OFF** } **Применимо к**: [!INCL
 
 FILETABLE_DIRECTORY = *directory_name*      
 
-**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).
+**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и выше).
 
 Указывает имя каталога таблицы FileTable, совместимое с Windows. Это имя должно быть уникальным среди всех имен каталогов FileTable в базе данных. Проверка уникальности выполняется без учета регистра, независимо от параметров сортировки. Если это значение не задано, то используется имя таблицы FileTable.
 
 FILETABLE_COLLATE_FILENAME = { *collation_name* | database_default }
 
-**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]). [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] не поддерживает `FILETABLE`.
+**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и выше). [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] не поддерживает `FILETABLE`.
 
 Указывает имя параметров сортировки, применяемых к столбцу **Name** в таблице FileTable. Для соответствия семантике именования файлов Windows параметры сортировки не должны учитывать регистр. Если это значение не задано, то используются параметры сортировки по умолчанию базы данных. Если в параметрах сортировки по умолчанию базы данных учитывается регистр, то выдается ошибка и операция CREATE TABLE оканчивается неуспешно.
 
@@ -819,27 +819,27 @@ database_default
 Указывает, что для базы данных следует использовать параметры сортировки по умолчанию. Эти параметры сортировки не должны учитывать регистр символов.
 
 FILETABLE_PRIMARY_KEY_CONSTRAINT_NAME = *constraint_name*          
-**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).
+**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и выше).
 
 Указывает имя, которое должно использоваться для ограничения первичного ключа, автоматически создаваемого в FileTable. Если это значение не задано, то имя для ограничения формируется системой.
 
 FILETABLE_STREAMID_UNIQUE_CONSTRAINT_NAME = *constraint_name*        
-**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).
+**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и выше).
 
 Указывает имя, которое должно использоваться для ограничения уникальности, автоматически создаваемого в столбце **stream_id** в FileTable. Если это значение не задано, то имя для ограничения формируется системой.
 
 FILETABLE_FULLPATH_UNIQUE_CONSTRAINT_NAME = *constraint_name*       
-**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).
+**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и выше).
 
 Указывает имя, которое должно использоваться для ограничения уникальности, автоматически создаваемого в столбцах **parent_path_locator** и **name** в FileTable. Если это значение не задано, то имя для ограничения формируется системой.
 
 SYSTEM_VERSIONING **=** ON [ ( HISTORY_TABLE **=** *schema_name* .*history_table_name* [, DATA_CONSISTENCY_CHECK **=** { **ON** | OFF } ] ) ]         
-**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]).
+**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и выше, а также [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]).
 
 Допускает системное управление версиями таблицы, если выполнены требования по типу данных, ограничении допустимости значений NULL и ограничении первичного ключа. Если аргумент `HISTORY_TABLE` не используется, система создает новую таблицу журнала, соответствующую схеме текущей таблицы, в той же файловой группе, что и текущая таблица. Между двумя таблицами создается связь, и система записывает журнал каждой записи текущей таблицы в таблице журнала. Таблица журнала будет называться `MSSQL_TemporalHistoryFor<primary_table_object_id>`. По умолчанию таблица журнала сжимается с использованием метода **PAGE** . Если аргумент `HISTORY_TABLE` используется для создания ссылки и применения существующей таблицы журнала, ссылка создается между текущей таблицей и указанной таблицей. Если текущая таблица секционирована, таблица журнала создается в файловой группе по умолчанию, так как конфигурация секционирования не реплицируется автоматически из текущей таблицы в таблицу журнала. Если при создании таблицы журнала указывается ее имя, следует также указать имя схемы и таблицы. При создании ссылки на существующую таблицу журнала вы можете указать необходимость проверки согласованности данных. Проверка согласованности данных гарантирует, что существующие записи не будут перекрываться. Проверка согласованности данных является проверкой по умолчанию. Используйте этот аргумент в сочетании с аргументами `PERIOD FOR SYSTEM_TIME` и `GENERATED ALWAYS AS ROW { START | END }`, чтобы выключить системное управление версиями в таблице. Дополнительные сведения см. в разделе [Temporal Tables](../../relational-databases/tables/temporal-tables.md).
 
 REMOTE_DATA_ARCHIVE = { ON [ ( *table_stretch_options* [,...n] ) ] | OFF ( MIGRATION_STATE = PAUSED ) }          
-**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).
+**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и выше).
 
 Создание новой таблицы, для которой включена или отключена Stretch Database. Дополнительные сведения см. в разделе [Stretch Database](../../sql-server/stretch-database/stretch-database.md).
 
@@ -852,7 +852,7 @@ REMOTE_DATA_ARCHIVE = { ON [ ( *table_stretch_options* [,...n] ) ] | OFF ( MIGRA
 **Разрешения**. Чтобы включить Stretch для таблицы или базы данных, требуются права db_owner. Чтобы включить Stretch для таблицы, нужно иметь разрешения ALTER для таблицы.
 
 [ FILTER_PREDICATE = { null | *predicate* } ]       
-**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).
+**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и выше).
 
 Дополнительно указывает предикат фильтра для выбора строк для миграции из таблицы, которая содержит данные журнала и текущие данные. Этот предикат должен вызывать детерминированную встроенную функцию с табличным значением. Более подробную информацию см. в разделе [Включение Stretch Database для таблицы](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md) и [Выбор строк для миграции с помощью функции фильтра](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md).
 
@@ -864,7 +864,7 @@ REMOTE_DATA_ARCHIVE = { ON [ ( *table_stretch_options* [,...n] ) ] | OFF ( MIGRA
 Если вы указываете предикат фильтра, необходимо также указать *MIGRATION_STATE*.
 
 MIGRATION_STATE = { OUTBOUND | INBOUND | PAUSED }         
-**Поддержка**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и выше) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 -  Укажите `OUTBOUND` для миграции данных с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 -  Укажите `INBOUND` для копирования удаленных данных для таблицы из [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] обратно в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с отключением Stretch для таблицы. Дополнительные сведения см. в разделе [Отключение Stretch Database и возврат удаленных данных](../../sql-server/stretch-database/disable-stretch-database-and-bring-back-remote-data.md).
@@ -874,14 +874,14 @@ MIGRATION_STATE = { OUTBOUND | INBOUND | PAUSED }
 -  Укажите `PAUSED` для приостановки миграции данных. Дополнительные сведения см. в разделе [Приостановка и возобновление переноса данных (Stretch Database)](../../sql-server/stretch-database/pause-and-resume-data-migration-stretch-database.md).
 
 MEMORY_OPTIMIZED       
-**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]). Управляемый экземпляр [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] не поддерживает оптимизированные для памяти таблицы.
+**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и выше, а также [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]). Управляемый экземпляр [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] не поддерживает оптимизированные для памяти таблицы.
 
 Значение ON указывает, что таблица оптимизирована для памяти. Таблицы, оптимизированные для памяти, входят в функцию выполняющейся в памяти OLTP, которая используется для оптимизации производительности обработки транзакций. Чтобы приступить к работе с OLTP в памяти, см. раздел [Краткое руководство 1. Технологии выполнения OLTP в памяти для повышения производительности службы Transact-SQL](../../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md). Дополнительные сведения об оптимизированных для памяти таблицах см. в разделе [Таблицы, оптимизированные для памяти](../../relational-databases/in-memory-oltp/memory-optimized-tables.md).
 
 Значение по умолчанию OFF указывает, что таблица основана на диске.
 
 DURABILITY        
-**Поддержка**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и выше) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Значение `SCHEMA_AND_DATA` указывает на устойчивость таблицы. Это означает, что изменения сохраняются на диске даже после перезагрузки или отработки отказа. SCHEMA_AND_DATA является значением по умолчанию.
 
@@ -891,18 +891,18 @@ DURABILITY
 > Если таблица создается с аргументом **DURABILITY = SCHEMA_ONLY**, а затем **READ_COMMITTED_SNAPSHOT** меняется с помощью **ALTER DATABASE**, данные в таблице будут утеряны.
 
 BUCKET_COUNT       
-**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и выше), а также [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Отображает число контейнеров, которые необходимо создать в хэш-индексе. Максимальное значение для параметра BUCKET_COUNT в хэш-индексах составляет 1 073 741 824. Дополнительные сведения о числах контейнеров см. в разделе [Индексы для таблиц, оптимизированных для памяти](../../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md).
 
 Bucket_count — это обязательный аргумент.
 
-INDEX **Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+INDEX **Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и выше, а также [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]).
 
 Индексы столбцов и таблиц необходимо указывать в составе инструкции CREATE TABLE. Дополнительные сведения о добавлении и удалении индексов в таблицах, оптимизированных для памяти, см. в следующей статье: [Изменение таблиц с оптимизацией для памяти](../../relational-databases/in-memory-oltp/altering-memory-optimized-tables.md)
 
 HASH      
-**Поддержка**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и выше) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Указывает, что был создан индекс HASH.
 
@@ -1368,7 +1368,7 @@ CREATE TABLE T1
 ```
 
 ### <a name="p-creating-a-system-versioned-disk-based-temporal-table"></a>Т. Создание темпоральной таблицы на основе диска с системным управлением версиями
-**Применимо к**: с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Применимо к**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и выше, а также [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 В следующих примерах показано, как создать темпоральную таблицу, привязанную к новой таблице журнала, и как создать темпоральную таблицу, привязанную к существующей таблице журнала. Для темпоральной таблицы должен быть определен первичный ключ, чтобы включить системное управление версиями. Примеры добавления или удаления системного управления версиями в существующей таблице см. в главе [Примеры](../../t-sql/statements/alter-table-transact-sql.md#Example_Top) в разделе "Системное управление версиями". Варианты использования описаны в разделе [Темпоральные таблицы](../../relational-databases/tables/temporal-tables.md).
 
@@ -1417,7 +1417,7 @@ WITH (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.Department_History, DATA_CONSI
 ```
 
 ### <a name="q-creating-a-system-versioned-memory-optimized-temporal-table"></a>У. Создание оптимизированной для памяти темпоральной таблицы с системным управлением версиями
-**Применимо к**: с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Применимо к**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и выше, а также [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 В следующем примере показано, как создать оптимизированную для памяти темпоральную таблицу с системным управлением версиями, привязанную к новой таблице журнала на диске.
 

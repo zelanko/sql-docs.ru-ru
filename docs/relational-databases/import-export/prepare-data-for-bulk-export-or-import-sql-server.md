@@ -1,6 +1,5 @@
 ---
-title: Подготовка данных к массовому экспорту или импорту (SQL Server) | Документация Майкрософт
-ms.custom: ''
+title: Подготовка данных к массовому экспорту или импорту
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -17,14 +16,15 @@ ms.assetid: 783fd581-2e5f-496b-b79c-d4de1e09ea30
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 29b85b0832e0ef1ec150e63a2cdafba65e5ad238
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-lt-2019
+ms.openlocfilehash: b5aecdf222ea325f67a23b728ed29ee40e768387
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68063173"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056414"
 ---
-# <a name="prepare-data-for-bulk-export-or-import-sql-server"></a>Подготовка данных к массовому экспорту или импорту (SQL Server)
+# <a name="prepare-data-for-bulk-export-or-import"></a>Подготовка данных к массовому экспорту или импорту
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   В этом разделе рассматриваются факторы, которые следует учитывать при планировании операций массового экспорта, и требования для операций массового импорта.  

@@ -1,6 +1,5 @@
 ---
-title: Сохранение значений NULL или использование значений по умолчанию при массовом импорте данных (SQL Server) | Документация Майкрософт
-ms.custom: ''
+title: Сохранение значений NULL или значений по умолчанию при массовом импорте данных
 ms.date: 09/20/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -21,14 +20,15 @@ ms.assetid: 6b91d762-337b-4345-a159-88abb3e64a81
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c32b4ce4d706986829fa63f1bff96a3e78356672
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 7120efd623905f05e1f02c6c02856b793ad15cea
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67896671"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74055957"
 ---
-# <a name="keep-nulls-or-use-default-values-during-bulk-import-sql-server"></a>Сохранение значений NULL или использование значений по умолчанию при массовом импорте данных (SQL Server)
+# <a name="keep-nulls-or-default-values-during-bulk-import-sql-server"></a>Сохранение значений NULL или значений по умолчанию при массовом импорте данных (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 При импорте данных в таблицу команда [bcp](../../tools/bcp-utility.md) и инструкция [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) используют значения по умолчанию, которые определены для столбцов таблицы.  Например, если поле в файле данных имеет значение NULL, вместо него загружается значение по умолчанию соответствующего столбца.  И команда [bcp](../../tools/bcp-utility.md) , и инструкция [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) позволяют пользователю указать, следует ли оставлять значения NULL.

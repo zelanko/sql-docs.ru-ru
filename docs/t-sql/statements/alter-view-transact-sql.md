@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 03eba220-13e2-49e3-bd9d-ea9df84dc28c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d5bda485ba8cec4d3302a4998f60048aa9a43ef0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 47335a2b31b87ca1e74b2605fb62df006eeace07
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68100974"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73981943"
 ---
 # <a name="alter-view-transact-sql"></a>ALTER VIEW (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -67,7 +67,7 @@ AS select_statement
 >  В столбцах представления разрешения для имени столбца применяются с инструкцией CREATE VIEW или ALTER VIEW вне зависимости от источника базовых данных. Например, если в инструкции CREATE VIEW были предоставлены разрешения для столбца **SalesOrderID**, инструкция ALTER VIEW может переименовать этот столбец, например в **OrderRef**, и все же иметь разрешения, связанные с представлением, в котором используется столбец **SalesOrderID**.  
   
  ENCRYPTION  
- **Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **Применимо к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и выше, а также [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Если этот аргумент указан, выполняется шифрование элементов представления [sys.syscomments](../../relational-databases/system-compatibility-views/sys-syscomments-transact-sql.md), содержащего текст инструкции ALTER VIEW. Предложение WITH ENCRYPTION предотвращает публикацию представления при репликации SQL Server.  
   

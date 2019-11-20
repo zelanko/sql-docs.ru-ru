@@ -5,16 +5,16 @@ description: Узнайте, как обновлять кластеры боль
 author: NelGson
 ms.author: negust
 ms.reviewer: mikeray
-ms.date: 11/04/2019
+ms.date: 11/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: eab7fa5a123f6370686cae5feaf36d458748ea7a
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.openlocfilehash: 40b1101d9ee6c57db865282d1556f96aa4311a1f
+ms.sourcegitcommit: 02b7fa5fa5029068004c0f7cb1abe311855c2254
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "73844314"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74127449"
 ---
 # <a name="deploy-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-in-active-directory-mode"></a>Развертывание [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] в режиме Active Directory
 
@@ -107,7 +107,7 @@ New-ADOrganizationalUnit -Name "<name>" -Path "<Distinguished name of the direct
        - **Создание объектов "Группа"**
        - **Удаление объектов "Группа"**
        - **Создание объектов "Пользователь"**
-       - **Создание объектов "Пользователь"**
+       - **Удаление пользовательских объектов**
 
     - Нажмите кнопку **ОК**.
 
@@ -197,8 +197,8 @@ azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.ouD
 azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.dnsIpAddresses=[\"10.100.10.100\"]"
 azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.domainControllerFullyQualifiedDns=[\"HOSTNAME.CONTOSO.LOCAL\"]"
 azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.domainDnsName=contoso.local"
-azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.clusterAdmins=[\"bdcadmins\"]"
-azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.clusterUsers=[\"bdcusers1\,bdcusers2\"]"
+azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.clusterAdmins=[\"bdcadminsgroup\"]"
+azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.clusterUsers=[\"bdcusersgroup\"]"
 ```
 
 Помимо указанных выше сведений необходимо также указать DNS-имена для разных конечных точек кластера. Записи DNS, использующие указанные DNS-имена, будут автоматически созданы на DNS-сервере при развертывании. Эти имена будут использоваться при подключении к разным конечным точкам кластера. Например, если DNS-имя для основного экземпляра SQL Server — `mastersql`, для подключения к главному экземпляру с помощью средств будет использоваться значение `mastersql.contoso.local,31433`.

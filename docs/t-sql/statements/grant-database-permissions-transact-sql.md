@@ -20,12 +20,12 @@ ms.assetid: 499e5ed6-945c-4791-ab45-68dec0b9c289
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4be7c1494f6f63a87591038265c6b0e63edc83b7
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 7a73c0554c878aea4fa89ffb7170547d55271f15
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68344819"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982217"
 ---
 # <a name="grant-database-permissions-transact-sql"></a>GRANT, предоставление разрешений на базу данных (Transact-SQL)
 
@@ -74,27 +74,27 @@ AS \<database_principal> указывает участника, от котор�
 *Database_role* — указывает роль базы данных.
 
 *Application_role* — 
-**применимо к** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]–[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
+**применимо к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и выше, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
 
 Указывает роль приложения.
 
 *Database_user_mapped_to_Windows_User* — 
-**применимо к** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]–[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+**применимо к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и выше
 
 Указывает пользователя базы данных, сопоставленного с пользователем Windows.
 
 *Database_user_mapped_to_Windows_Group* — 
-**применимо к** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]–[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+**применимо к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и выше
 
 Указывает пользователя базы данных, сопоставленного с группой Windows.
 
-*Database_user_mapped_to_Windows_User* — 
-**применимо к** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]–[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+*Database_user_mapped_to_certificate* — 
+**применимо к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и выше
 
 Указывает пользователя базы данных, сопоставленного с сертификатом.
 
 *Database_user_mapped_to_asymmetric_key* — 
-**применимо к** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]–[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+**применимо к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и выше
 
 Указывает пользователя базы данных, сопоставленного с асимметричным ключом.
 
@@ -122,7 +122,7 @@ AS \<database_principal> указывает участника, от котор�
 |ALTER ANY DATABASE DDL TRIGGER|ALTER|CONTROL SERVER|
 |ALTER ANY DATABASE EVENT NOTIFICATION|ALTER|ALTER ANY EVENT NOTIFICATION|
 |ALTER ANY DATABASE EVENT SESSION<br />**Применимо к**: [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].|ALTER|ALTER ANY EVENT SESSION|
-|ALTER ANY DATABASE SCOPED CONFIGURATION<br /> **Применимо к**: с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|CONTROL|CONTROL SERVER|
+|ALTER ANY DATABASE SCOPED CONFIGURATION<br /> **Применимо к**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и выше, [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|CONTROL|CONTROL SERVER|
 |ALTER ANY DATASPACE|ALTER|CONTROL SERVER|
 |ALTER ANY EXTERNAL DATA SOURCE|ALTER|CONTROL SERVER|
 |ALTER ANY EXTERNAL FILE FORMAT|ALTER|CONTROL SERVER|
@@ -226,7 +226,7 @@ GO
 
  В следующем примере роли приложения `SHOWPLAN` предоставляется разрешение `AdventureWorks2012` в базе данных `AuditMonitor`.
 
-**Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
+**Применимо к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и выше, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
 
 ```sql
 USE AdventureWorks2012;

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4bfe5734-3003-4165-afd4-b1131ea26e2b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 2b1dae2be81524bba3cf1e28d5e64736d4e9078b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a39f9cf72f08e80face176412851778f1afec174
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68141239"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982464"
 ---
 # <a name="restore-statements---arguments-transact-sql"></a>Аргументы инструкций RESTORE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -218,7 +218,7 @@ LOADHISTORY
   
  Указывает, что операция восстановления загружает данные в таблицы журнала **msdb**. Параметр LOADHISTORY загружает сведения о [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]резервных копиях, которые хранятся на наборе носителей, в таблицы журналов резервного копирования и восстановления в базе данных **msdb** для единственного проверяемого резервного набора данных. Дополнительные сведения о таблицах журналов см. в разделе [Системные таблицы (Transact-SQL)](../../relational-databases/system-tables/system-tables-transact-sql.md).  
   
-#### <a name="generalwithoptions--n-"></a>\<общие_параметры_WITH> [ ,...n ]  
+#### <a name="general_with_options--n-"></a>\<общие_параметры_WITH> [ ,...n ]  
  Общие параметры WITH поддерживаются в инструкциях RESTORE DATABASE и RESTORE LOG. Некоторые из этих параметров также поддерживаются одной или более вспомогательными инструкциями, как отмечено ниже.  
   
 ##### <a name="restore-operation-options"></a>Параметры операции восстановления  
@@ -247,7 +247,7 @@ MOVE **'** _logical\_file\_name\_in\_backup_ **'** TO **'** _operating\_system\_
 CREDENTIAL  
  **Поддерживается:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md) и [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
   
-**Область применения**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] с пакетом обновления 1 (SP1) и накопительным обновлением 2 (CU2) по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Область применения**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 и выше
   
  Используется только при восстановлении резервной копии с помощью службы хранилища BLOB-объектов Azure.  
   
@@ -394,7 +394,7 @@ FILE **=** { *backup_set_file_number* |  **@** _backup\_set\_file\_number_ }
  FILESTREAM ( DIRECTORY_NAME =*имя_каталога* )  
  **Поддерживается:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) и [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)  
   
-**Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Область применения**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздних версий
   
  Имя каталога, совместимое с Windows. Это имя должно быть уникальным среди всех имен каталогов уровня базы данных FILESTREAM в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Проверка уникальности выполняется с учетом регистра, независимо от параметров сортировки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -445,7 +445,7 @@ FILE **=** { *backup_set_file_number* |  **@** _backup\_set\_file\_number_ }
  NOUNLOAD  
  Указывает, что после операции RESTORE лента останется загруженной в ленточный накопитель.  
   
-#### <a name="replicationwithoption"></a><параметр_WITH_для_репликации>  
+#### <a name="replication_with_option"></a><параметр_WITH_для_репликации>  
  Этот параметр имеет значение, только если во время создания резервной копии проводилась репликация базы данных.  
   
  KEEP_REPLICATION  
@@ -457,7 +457,7 @@ FILE **=** { *backup_set_file_number* |  **@** _backup\_set\_file\_number_ }
   
 -   Сервер «горячего» резервирования должен быть переименован, и ему должно быть присвоено такое же имя, как у сервера-источника.  
   
-#### <a name="changedatacapturewithoption"></a><параметр_WITH_для_изменения_отслеживания_данных>  
+#### <a name="change_data_capture_with_option"></a><параметр_WITH_для_изменения_отслеживания_данных>  
  Этот параметр имеет значение, только если при создании резервной копии в базе данных была включена система отслеживания измененных данных.  
   
  KEEP_CDC  
@@ -469,7 +469,7 @@ FILE **=** { *backup_set_file_number* |  **@** _backup\_set\_file\_number_ }
   
  Дополнительные сведения об использовании системы отслеживания измененных данных с зеркальным отображением базы данных см. в разделе [Система отслеживания измененных данных и другие функции SQL Server](../../relational-databases/track-changes/change-data-capture-and-other-sql-server-features.md).  
   
-#### <a name="servicebrokerwithoptions"></a>\<параметры_WITH_для_брокера>  
+#### <a name="service_broker_with_options"></a>\<параметры_WITH_для_брокера>  
  Включает или выключает доставку сообщений компонентом [!INCLUDE[ssSB](../../includes/sssb-md.md)] либо задает новый идентификатор компонента [!INCLUDE[ssSB](../../includes/sssb-md.md)]. Этот параметр имеет значение, только если при создании резервной копии в базе данных был включен компонент [!INCLUDE[ssSB](../../includes/sssb-md.md)].  
   
  { ENABLE_BROKER  | ERROR_BROKER_CONVERSATIONS  | NEW_BROKER }  
@@ -484,7 +484,7 @@ FILE **=** { *backup_set_file_number* |  **@** _backup\_set\_file\_number_ }
  NEW_BROKER  
  Указывает, что базе данных назначен новый идентификатор компонента Service Broker. Поскольку база данных предполагает наличие нового компонента Service Broker, все существующие сеансы связи в базе данных будут немедленно удалены, не выдавая диалоговых сообщений о завершении. Все маршруты, ссылающиеся на прежний идентификатор компонента Service Broker, должны быть повторно созданы с использованием нового идентификатора.  
   
-#### <a name="pointintimewithoptions"></a>\<point_in_time_WITH_options>  
+#### <a name="point_in_time_with_options"></a>\<point_in_time_WITH_options>  
  **Поддерживается:**  [RESTORE {DATABASE|LOG}](../../t-sql/statements/restore-statements-transact-sql.md) только для модели полного восстановления и модели восстановления с неполным протоколированием.  
   
  Можно восстановить базу данных на определенный момент времени или к определенной транзакции, указав целевую точку восстановления в предложении STOPAT, STOPATMARK или STOPBEFOREMARK. Восстановление на определенный момент времени или к определенной транзакции всегда выполняется из резервной копии журнала. В каждой инструкции RESTORE LOG из последовательности восстановления необходимо указывать целевое время или целевую транзакцию в одинаковых предложениях STOPAT, STOPATMARK или STOPBEFOREMARK.  
@@ -632,7 +632,7 @@ FILE **=** { *backup_set_file_number* |  **@** _backup\_set\_file\_number_ }
  [RESTORE REWINDONLY (Transact-SQL)](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md)   
  [RESTORE VERIFYONLY (Transact-SQL)](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)   
  [Резервное копирование и восстановление баз данных SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
- [FILESTREAM &#40;SQL Server&#41;](../../relational-databases/blob/filestream-sql-server.md)  
+ [FILESTREAM (SQL Server)](../../relational-databases/blob/filestream-sql-server.md)  
   
   
 

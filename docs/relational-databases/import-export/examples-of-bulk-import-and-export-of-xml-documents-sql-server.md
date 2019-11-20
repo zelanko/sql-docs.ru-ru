@@ -1,6 +1,6 @@
 ---
-title: Примеры массового импорта и экспорта XML-документов (SQL Server) | Документация Майкрософт
-ms.custom: ''
+title: Массовый импорт и экспорт XML-документов
+ms.description: Examples of bulk importing and exporting of XML documents with SQL Server
 ms.date: 10/24/2016
 ms.prod: sql
 ms.prod_service: database-engine
@@ -18,12 +18,13 @@ helpviewer_keywords:
 ms.assetid: dff99404-a002-48ee-910e-f37f013d946d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9f05aed7606429bac984fa02782a921df0287291
-ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 6babf3d10d6f391d3002e7094d7b8fe6b32b261b
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70148828"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056029"
 ---
 # <a name="examples-of-bulk-import-and-export-of-xml-documents-sql-server"></a>Примеры массового импорта и экспорта XML-документов (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

@@ -25,12 +25,12 @@ ms.assetid: 477396a9-92dc-43c9-9b97-42c8728ede8e
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1fcda20d3efa458808ad9313965feb279a0010c5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 43a0382495c04a3fa34e00cb4e85d0b7ab04336e
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67898096"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982193"
 ---
 # <a name="drop-database-transact-sql"></a>DROP DATABASE (Transact-SQL)
 
@@ -62,7 +62,7 @@ DROP DATABASE database_name [;]
 *database_name* — задает имя удаляемой базы данных. Для просмотра списка баз данных используйте представление каталога [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).
 
 *database_snapshot_name* — 
-**применимо к** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]–[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+**применимо к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и выше.
 
 Задает имя удаляемого моментального снимка базы данных.
 
@@ -146,7 +146,7 @@ DROP DATABASE Sales;
 
 ### <a name="b-dropping-multiple-databases"></a>Б. Удаление нескольких баз данных
 
-**Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+**Область применения**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версий.
 
 В следующем примере удаляется каждая из перечисленных баз данных.
 
@@ -156,7 +156,7 @@ DROP DATABASE Sales, NewSales;
 
 ### <a name="c-dropping-a-database-snapshot"></a>В. Удаление моментального снимка базы данных
 
-**Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+**Область применения**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версий.
 
 В следующем примере из базы данных удаляется моментальный снимок с именем `sales_snapshot0600` без влияния на базу данных-источник.
 

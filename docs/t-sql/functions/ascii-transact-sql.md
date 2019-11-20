@@ -1,7 +1,7 @@
 ---
 title: ASCII (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 07/24/2017
+ms.date: 11/14/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -21,12 +21,12 @@ ms.assetid: 45c2044a-0593-4805-8bae-0fad4bde2e6b
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a629e38a978d435cb1c3fa4b023e3b489c33a497
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9b982d357668703a54b06124a8bb3edf0c963463
+ms.sourcegitcommit: add39e028e919df7d801e8b6bb4f8ac877e60e17
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68019765"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74119187"
 ---
 # <a name="ascii-transact-sql"></a>ASCII (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -51,8 +51,11 @@ ASCII ( character_expression )
 ## <a name="remarks"></a>Remarks
 ASCII — это аббревиатура от **A**merican **S**tandard **C**ode for **I**nformation **I**nterchange (американский стандартный код для обмена информацией). Это стандарт кодировки символов для современных компьютеров. Список символов ASCII см. в разделе **Печатаемые символы** спецификации [ASCII](https://www.wikipedia.org/wiki/ASCII).
 
-## <a name="examples"></a>Примеры  
-В этом примере принимается кодировка ASCII и возвращается значение `ASCII` для 6 символов.
+ASCII — это 7-разрядная кодировка. Расширенный ASCII или старший код ASCII — это 8-разрядная кодировка, которая не обрабатывается функцией `ASCII`. 
+
+## <a name="examples"></a>Примеры 
+
+### <a name="a-this-example-assumes-an-ascii-character-set-and-returns-the-ascii-value-for-6-characters"></a>A. В этом примере принимается кодировка ASCII и возвращается значение `ASCII` для 6 символов.
   
 ```sql
 SELECT ASCII('A') AS A, ASCII('B') AS B,   
@@ -62,18 +65,57 @@ ASCII(1) AS [1], ASCII(2) AS [2];
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
+```
 A           B           a           b           1           2  
 ----------- ----------- ----------- ----------- ----------- -----------  
 65          66          97          98          49          50  
 ```  
   
+### <a name="b-this-examples-shows-how-a-7-bit-ascii-value-is-returned-correctly-but-an-8-bit-extended-ascii-value-is-not-handled"></a>Б. В этом примере показано, как правильно возвращается 7-разрядное значение ASCII, но 8-разрядное расширенное значение ASCII не обрабатывается.
+
+```sql
+SELECT ASCII('P') AS [ASCII], ASCII('æ') AS [Extended_ASCII];
+```
+
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
+
+```
+ASCII       Extended_ASCII
+----------- --------------
+80          195
+```
+
+Чтобы убедиться, что приведенные выше результаты сопоставляются с правильной символьной кодовой точкой, используйте выходные значения с функцией `CHAR` или `NCHAR`.
+
+```sql
+SELECT NCHAR(80) AS [CHARACTER], NCHAR(195) AS [CHARACTER];
+```
+
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
+
+```
+CHARACTER CHARACTER
+--------- ---------
+P         Ã
+```
+
+В предыдущем результате обратите внимание, что символ кодовой точки 195 — **Ã**, а не **æ**. Это обусловлено тем, что функция `ASCII` способна считать первый 7-разрядный поток, но не дополнительный бит. Правильную кодовую точку для символа `æ` можно найти с помощью функции `UNICODE`, которая способна вернуть правильную символьную кодовую точку.
+
+```sql
+SELECT UNICODE('æ') AS [Extended_ASCII], NCHAR(230) AS [CHARACTER];
+```
+
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
+
+```
+Extended_ASCII CHARACTER
+-------------- ---------
+230            æ
+```
+
 ## <a name="see-also"></a>См. также раздел
  [CHAR (Transact-SQL)](../../t-sql/functions/char-transact-sql.md)  
  [NCHAR (Transact-SQL)](../../t-sql/functions/nchar-transact-sql.md)  
  [UNICODE (Transact-SQL)](../../t-sql/functions/unicode-transact-sql.md)  
  [Строковые функции (Transact-SQL)](../../t-sql/functions/string-functions-transact-sql.md)
   
-  
-
-

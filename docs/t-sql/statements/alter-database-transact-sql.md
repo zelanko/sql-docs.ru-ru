@@ -26,12 +26,12 @@ ms.assetid: 15f8affd-8f39-4021-b092-0379fc6983da
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ff0c616342af9f00be56fbed3ecfb3d09dedb9ef
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 3627e62bafefaa33eee4b238e1e33cd1ea127137
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532839"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982149"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
 
@@ -127,7 +127,7 @@ ALTER DATABASE { database_name | CURRENT }
 > [!NOTE]
 > Этот параметр недоступен в автономной базе данных.
 
-CURRENT — **применимо к**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и последующим версиям вплоть до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+CURRENT **Применимо к**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и выше.
 
 Определяет, что должна быть изменена текущая используемая база данных.
 
@@ -143,7 +143,7 @@ COLLATE *collation_name* — задает параметры сортировк
 Список имен параметров сортировки Windows и SQL см. в статье [Параметры сортировки](~/t-sql/statements/collations.md).
 
 **\<delayed_durability_option> ::=** 
- **— применимо к**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и последующим версиям вплоть до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+ **— применимо к**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и выше.
 
 Дополнительные сведения см. в статьях [Параметры ALTER DATABASE SET (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md) и [Управление устойчивостью транзакций](../../relational-databases/logs/control-transaction-durability.md).
 
@@ -235,7 +235,7 @@ GO
 
 В следующем примере создается база данных `testdb`, параметры сортировки которой имеют значение `SQL_Latin1_General_CP1_CI_A`. Затем имя базы данных `testdb` изменяется на `COLLATE French_CI_AI`.
 
-**Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+**Область применения**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версий.
 
 ```sql
 USE master;

@@ -1,17 +1,18 @@
 ---
-title: Использование идентификаторов безопасности для предоставления разрешений службам в SQL Server | Документация Майкрософт
+title: Использование идентификаторов безопасности для предоставления разрешений службам
+ms.custom: seo-dt-2019
 author: randomnote1
 ms.author: dareist
 ms.date: 05/02/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.openlocfilehash: fa2051e7f21dccf749f4f8938ecfc98c13bc313d
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 18ac490c514703d890f2a1075602494fff81749a
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888582"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095591"
 ---
 # <a name="using-service-sids-to-grant-permissions-to-services-in-sql-server"></a>Использование идентификаторов безопасности для предоставления разрешений службам в SQL Server
 
@@ -100,7 +101,7 @@ GRANT VIEW SERVER STATE TO 'NT SERVICE\ClusSvc'
 GO
 ```
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 Дополнительные сведения о структуре идентификаторов безопасности см. в разделе [Структура SERVICE_SID_INFO](/windows/win32/api/winsvc/ns-winsvc-service_sid_info).
 

@@ -10,25 +10,25 @@ ms.assetid: 5e57a427-2e88-4ef6-b142-4ccad97bcecc
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ae6962d52c40053256117f2e20227f39ed1fd4f8
-ms.sourcegitcommit: 1661c3e1bb38ed12f8485c3860fc2d2b97dd2c9d
+ms.openlocfilehash: 56a055c0528bea03419c1a56dd89efb5fbfa1753
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71149990"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056753"
 ---
 # <a name="choose-a-database-engine-upgrade-method"></a>Выбор метода обновления компонента Database Engine
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Существует несколько подходов, которые следует учитывать при планировании обновления предыдущего выпуска SQL Server до версии [!INCLUDE[ssDE](../../includes/ssde-md.md)], чтобы свести к минимуму время простоя и риски. Можно выполнить обновление на месте, миграцию в новую установку или последовательное обновление. Следующая схема поможет вам выбрать один из этих подходов. Каждый из подходов, указанных в схеме, кроме того, обсуждается ниже. Чтобы получить дополнительные сведения о точках принятия решений в этой схеме, ознакомьтесь с разделом [Составление и тестирование плана обновления ядра СУБД](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md).  
   
- ![Дерево выбора метода для обновления компонента Database Engine](../../database-engine/install-windows/media/database-engine-upgrade-method-decision-tree.png "Дерево выбора метода для обновления компонента Database Engine")  
+ ![Дерево выбора метода обновления ядра СУБД](../../database-engine/install-windows/media/database-engine-upgrade-method-decision-tree.png "Дерево выбора метода обновления ядра СУБД")  
   
  **Загрузить**  
   
 -   Чтобы скачать [!INCLUDE[SSnoversion](../../includes/ssnoversion-md.md)], перейдите на сайт  **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server)** .  
   
--   Есть учетная запись Azure?  Перейдите **[сюда](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2019-ws2016?tab=Overview)** , чтобы запустить виртуальную машину с уже установленной версией [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Developer Edition.  
+-   Есть учетная запись Azure?  Перейдите **[сюда](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2017-ws2019?tab=overview)** , чтобы запустить виртуальную машину с уже установленной версией [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Developer Edition.  
   
 > [!NOTE]  
 >  При составлении плана обновления, кроме того, можно рассмотреть возможность обновления базы данных SQL Azure или виртуализации среды SQL Server. Эти статьи выходят за рамки данной статьи. Дополнительные сведения см. по следующим ссылкам:
@@ -57,7 +57,7 @@ ms.locfileid: "71149990"
   
  Следующая схема содержит обобщенный обзор действий, необходимых для обновления [!INCLUDE[ssDE](../../includes/ssde-md.md)]на месте.  
   
- ![Обновление компонента Database Engine на месте без обеспечения высокой надежности](../../database-engine/install-windows/media/database-engine-upgrade-non-ha-in-place-upgrade.png "Обновление компонента Database Engine на месте без обеспечения высокой надежности")  
+ ![Обновление на месте для ядра СУБД без высокой доступности](../../database-engine/install-windows/media/database-engine-upgrade-non-ha-in-place-upgrade.png "Обновление на месте для ядра СУБД без высокой доступности")  
   
  Дополнительные сведения см. в статье [Обновление SQL Server с помощью мастера установки (программа установки)](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md).  
   
@@ -95,11 +95,11 @@ ms.locfileid: "71149990"
   
 -   **Среда с подключенным хранилищем**. При наличии среды [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], использующей подключенное хранилище, ознакомьтесь со следующей схемой и ссылками на ней, которые описывают действия, необходимые для обновления путем новой установки [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
-     ![Новый метод обновления установки путем резервного копирования и восстановления прикрепленного хранилища](../../database-engine/install-windows/media/new-installation-upgrade-method-using-backup-and-restore-for-attached-storage.png "Новый метод обновления установки путем резервного копирования и восстановления прикрепленного хранилища")  
+     ![Новый метод обновления установки с использованием резервного копирования и восстановления для подключенного хранилища](../../database-engine/install-windows/media/new-installation-upgrade-method-using-backup-and-restore-for-attached-storage.png "Новый метод обновления установки с использованием резервного копирования и восстановления для подключенного хранилища")  
   
 -   **Среда с хранилищем SAN**.  При наличии среды [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], использующей хранилище SAN, ознакомьтесь со следующей схемой и ссылками на ней, которые описывают действия, необходимые для обновления путем новой установки [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
-     ![Новый метод обновления установки путем отсоединения и прикрепления хранилища SAN](../../database-engine/install-windows/media/new-installation-upgrade-method-using-detach-and-attach-for-san-storage.png "Новый метод обновления установки путем отсоединения и прикрепления хранилища SAN")  
+     ![Новый метод обновления установки с использованием отсоединения и подсоединения для хранилища SAN](../../database-engine/install-windows/media/new-installation-upgrade-method-using-detach-and-attach-for-san-storage.png "Новый метод обновления установки с использованием отсоединения и подсоединения для хранилища SAN")  
   
 ## <a name="rolling-upgrade"></a>Последовательное обновление  
  Последовательное обновление требуется в средах SQL Server с несколькими экземплярами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , которые должны быть обновлены в определенном порядке для сокращения времени простоя и рисков и сохранения функциональности среды. Последовательное обновление является, по сути, обновлением нескольких экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в определенном порядке путем обновления на месте каждого имеющегося экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или путем новой установки (что упрощает обновление оборудования или операционной системы в рамках проекта обновления среды). Существует ряд сценариев, в которых необходимо использовать метод последовательного обновления. Все они описаны в следующих статьях:  
@@ -111,6 +111,6 @@ ms.locfileid: "71149990"
 -   Среда репликации. Подробные инструкции по последовательному обновлению в этой среде см. в разделе [Обновление реплицированных баз данных](../../database-engine/install-windows/upgrade-replicated-databases.md).  
 -   Масштабируемая среда SQL Server Reporting Services. Подробные инструкции по последовательному обновлению в этой среде см. в разделе [Обновление и перенос служб Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md).  
   
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
  [Составление и тестирование плана обновления ядра СУБД](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md)   
  [Завершение обновления ядра СУБД](../../database-engine/install-windows/complete-the-database-engine-upgrade.md)  

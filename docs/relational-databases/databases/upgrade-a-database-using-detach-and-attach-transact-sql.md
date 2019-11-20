@@ -1,6 +1,6 @@
 ---
-title: Обновление базы данных с помощью функций отсоединения и присоединения (Transact-SQL) | Документация Майкрософт
-ms.custom: ''
+title: Обновление базы данных при помощи отсоединения и присоединения (Transact-SQL)
+ms.custom: seo-dt-2019
 ms.date: 11/26/2018
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,14 +17,14 @@ helpviewer_keywords:
 ms.assetid: 99f66ed9-3a75-4e38-ad7d-6c27cc3529a9
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: a0df5b572fe7c26f250c2172e5fa87b9fd01da85
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8e26f678ae13fac11c39569d15e26c0e79e46deb
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68127133"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095535"
 ---
-# <a name="upgrade-a-database-using-detach-and-attach-transact-sql"></a>обновить базу данных при помощи отсоединения и присоединения (Transact-SQL)
+# <a name="upgrade-a-database-using-detach-and-attach-transact-sql"></a>Обновление базы данных при помощи отсоединения и присоединения (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 В этой теме описывается использование операции отсоединения и присоединения для обновления базы данных в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. После присоединения к [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]база данных сразу становится доступной, после чего автоматически обновляется. Это исключает возможность использования базы данных с более старой версией [!INCLUDE[ssde_md](../../includes/ssde_md.md)]. Тем не менее обновление метаданных не влияет на [режим совместимости базы данных](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md). Дополнительные сведения см. в разделе [уровень базы данных совместимости после обновления](#dbcompat) далее в этой статье.  
   

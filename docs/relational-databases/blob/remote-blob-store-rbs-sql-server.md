@@ -13,19 +13,28 @@ helpviewer_keywords:
 ms.assetid: 31c947cf-53e9-4ff4-939b-4c1d034ea5b1
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 2cb41bdf37c1f748178f98a56b7f8df857a377e0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9d357aa88aecaac21a7dd8ab5548de1410bff5f7
+ms.sourcegitcommit: add39e028e919df7d801e8b6bb4f8ac877e60e17
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68092982"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74119442"
 ---
 # <a name="remote-blob-store-rbs-sql-server"></a>Удаленное хранилище больших двоичных объектов (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Удаленное хранилище больших двоичных объектов (RBS) для[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] — это дополнительный компонент, позволяющий администраторам баз данных хранить большие двоичные объекты в отдельных хранилищах вместо хранения непосредственно на основном сервере базы данных.  
   
- Хранилище RBS включено в установочный носитель [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , но не устанавливается программой установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ Хранилище RBS включено в установочный носитель [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , но не устанавливается программой установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Ищите RBS.msi на установочном носителе, чтобы найти файл установки.
+
+ Если у вас нет установочного носителя [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], можно скачать RBS в одном из следующих расположений:
+
+| [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] version | Расположение скачивания RBS |
+|:---|:---|
+| [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] | [Пакет дополнительных компонентов [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]](https://www.microsoft.com/download/details.aspx?id=52676) |
+| [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] | [Пакет дополнительных компонентов [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]](https://www.microsoft.com/download/details.aspx?id=55992) |
+| [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] | [Страница скачивания RBS [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]](https://go.microsoft.com/fwlink/?linkid=2109005) |
+| &nbsp; | &nbsp; |
   
  
   

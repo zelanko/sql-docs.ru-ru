@@ -18,12 +18,12 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: fc26cc0862c7dfb02276738d9424b860d98644e7
-ms.sourcegitcommit: 619917a0f91c8f1d9112ae6ad9cdd7a46a74f717
+ms.openlocfilehash: 24cfced04b8d2d0366d2058c81bcedfd9b00d2f9
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2019
-ms.locfileid: "73882417"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74055134"
 ---
 # <a name="copy-transact-sql-preview"></a>COPY (Transact-SQL) (предварительная версия)
 
@@ -131,7 +131,7 @@ WITH
 При проверке подлинности в AAD или общедоступной учетной записи хранения указывать CREDENTIAL не требуется. 
 
 - Проверка подлинности на основе подписанных URL-адресов (SAS) *IDENTITY: константа со значением подписанного URL-адреса*
-  *SECRET: * [*подписанный URL-адрес*](/azure/storage/common/storage-sas-overview#what-is-a-shared-access-signature) *предоставляет делегированный доступ к ресурсам в вашей учетной записи хранения.*
+  *SECRET: * [*подписанный URL-адрес*](/azure/storage/common/storage-sas-overview) *предоставляет делегированный доступ к ресурсам в вашей учетной записи хранения.*
   Минимальные требуемые разрешения: READ и LIST
 
 - Проверка подлинности с помощью [*субъектов-служб*](/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store#create-a-credential)
@@ -164,7 +164,7 @@ WITH
   
 - Проверка подлинности на основе подписанных URL-адресов (SAS)
   - *IDENTITY: константа со значением подписанного URL-адреса*
-  - *SECRET:*  [*подписанный URL-адрес*](/azure/storage/common/storage-dotnet-shared-access-signature-part-1#what-is-a-shared-access-signature) *предоставляет делегированный доступ к ресурсам в вашей учетной записи хранения.*
+  - *SECRET:*  [*подписанный URL-адрес*](/azure/storage/common/storage-sas-overview) *предоставляет делегированный доступ к ресурсам в вашей учетной записи хранения.*
   - Минимальные требуемые разрешения: READ, LIST, WRITE, CREATE, DELETE
   
 - Проверка подлинности с помощью [*субъектов-служб*](/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store#create-a-credential)
@@ -277,7 +277,7 @@ COPY INTO dbo.[lineitem] FROM 'https://unsecureaccount.blob.core.windows.net/cus
 - ROWTERMINATOR = "\n"
 
 > [!IMPORTANT]
-> COPY внутренне обрабатывает "\n" как "\r\n". Дополнительные сведения см. в разделе [ROWTERMINATOR]().
+> COPY внутренне обрабатывает "\n" как "\r\n". Дополнительные сведения см. в разделе ROWTERMINATOR.
 
 - FIRSTROW = 1
 
@@ -360,4 +360,4 @@ WITH (
 
 ## <a name="see-also"></a>См. также раздел  
 
- [Общие сведения о загрузке в хранилище данных SQL](/azure/sql-data-warehouse/design-elt-data-loading>) 
+ [Общие сведения о загрузке в хранилище данных SQL](/azure/sql-data-warehouse/design-elt-data-loading)

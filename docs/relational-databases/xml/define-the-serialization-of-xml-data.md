@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 42b0b5a4-bdd6-4a60-b451-c87f14758d4b
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: b77c2d78818656c3cbb59619ce99bed8cb0bcd2f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f4fd38ab48946269363e674dfcca6e4d05b9af49
+ms.sourcegitcommit: 02b7fa5fa5029068004c0f7cb1abe311855c2254
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67984785"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74127359"
 ---
 # <a name="define-the-serialization-of-xml-data"></a>Определение сериализации XML-данных
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ select CAST(CAST(N'<Δ/>' as XML) as NVARCHAR(MAX))
 <Δ/>  
 ```  
   
- Если целевой тип данных — VARCHAR или NCHAR, результат сериализуется в кодировке, соответствующей кодовой странице параметров сортировки базы данных без отметки порядка байтов и XML-декларации. Если целевой тип слишком мал или значение не может быть отображено на целевую кодовую страницу параметров сортировки, возникнет ошибка.  
+ Если целевой тип данных — VARCHAR или CHAR, результат сериализуется в кодировке, соответствующей кодовой странице параметров сортировки базы данных без отметки порядка байтов и XML-декларации. Если целевой тип слишком мал или значение не может быть отображено на целевую кодовую страницу параметров сортировки, возникнет ошибка.  
   
  Пример:  
   
