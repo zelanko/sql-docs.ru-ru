@@ -5808,7 +5808,7 @@
     - name: Database Experimentation Assistant (DEA)
       href: dea/database-experimentation-assistant-overview.md
       items:
-        - name: Начало работы
+        - name: Общие сведения о сравнении рабочей нагрузки
           href: dea/database-experimentation-assistant-get-started.md
         - name: Сбор трассировки
           href: dea/database-experimentation-assistant-capture-trace.md
