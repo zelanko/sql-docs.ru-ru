@@ -53,8 +53,8 @@ ms.locfileid: "70175413"
  [Подключение к базе данных SQL Azure с помощью SQL Server Native Client](connecting-to-a-windows-azure-sql-database-using-sql-server-native-client.md)  
  Содержит сведения о соединении с базой данных [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] через [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.  
   
-## <a name="see-also"></a>См. также  
- [SQL Server Native Client программирование](../sql-server-native-client-programming.md)   
+## <a name="see-also"></a>См. также статью  
+ [SQL Server Native Client  программирования](../sql-server-native-client-programming.md)  
  [Разделы руководства по ODBC](../../native-client-odbc-how-to/odbc-how-to-topics.md)   
  [Инструкции по OLE DB](../../native-client-ole-db-how-to/ole-db-how-to-topics.md)  
   

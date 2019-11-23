@@ -36,15 +36,15 @@ object.ProtocolOrder [= value]
 ```  
   
 ## <a name="parts"></a>Компоненты  
- *object*  
+ *объект*  
  A [класса ClientNetworkProtocol](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/clientnetworkprotocol-class.md) , который представляет сетевой протокол, используемый клиентом [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 ## <a name="property-valuereturn-value"></a>Значение свойства/возвращаемое значение  
  Значение **uint32** , определяющее порядковый номер текущего указанного сетевого протокола клиента, заданного методом **OrderValue** . Если сетевой протокол клиента отключен, это значение будет равно нулю.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также статью  
  [Настройка клиентских протоколов](https://technet.microsoft.com/library/ms181035.aspx)   
  [Настройка клиентских сетевых протоколов и сетевых библиотек](https://technet.microsoft.com/library/ms181035.aspx)  
   

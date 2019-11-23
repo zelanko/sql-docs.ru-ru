@@ -24,7 +24,7 @@ ms.locfileid: "73785742"
 # <a name="sqlputdata"></a>SQLPutData
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Следующие ограничения применяются при использовании SQLPutData для отправки более чем 65 535 байт данных (для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] версии 4.21 а) или 400 КБ данных (для SQL Server версии 6,0 и более поздних версий) для SQL_LONGVARCHAR (**Text**), SQL_WLONGVARCHAR (**ntext**) или SQL_ LONGVARBINARY (**Image**), столбец:  
+  При использовании SQLPutData для отправки более чем 65 535 байт данных (для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] версии 4.21 a) или 400 КБ данных (для SQL Server версии 6,0 и более поздних версий) для столбца SQL_LONGVARCHAR (**Text**), SQL_WLONGVARCHAR (**ntext**) или SQL_LONGVARBINARY (**Image**) применяются следующие ограничения:  
   
 -   Параметр, на который указывает ссылка, может быть *insert_value* в инструкции INSERT.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "73785742"
 ## <a name="diagnostics"></a>Диагностика  
  Для SQLPutData существует один [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственный код SQLSTATE для конкретного клиента:  
   
-|SQLSTATE|Ошибка|Описание|  
+|SQLSTATE|Error|Описание|  
 |--------------|-----------|-----------------|  
 |22026|Строковые данные, несовпадение длины|Если длина данных в байтах для отправки была задана приложением, например с SQL_LEN_DATA_AT_EXEC (*n*), где *n* больше 0, общее число байтов, заданное приложением через SQLPutData, должно соответствовать указанной длине.|  
   
@@ -65,7 +65,7 @@ ms.locfileid: "73785742"
 ## <a name="sqlputdata-support-for-large-clr-udts"></a>Поддержка функции SQLPutData для больших определяемых пользователем типов данных CLR  
  **SQLPutData** поддерживает большие определяемые пользователем типы данных CLR (UDT). Дополнительные сведения см. в разделе [типы больших определяемых пользователем &#40;типов&#41;данных CLR ODBC](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также статью  
    [функции SQLPutData](https://go.microsoft.com/fwlink/?LinkId=59365)  
  [Подробные сведения о реализации API-интерфейсов ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   

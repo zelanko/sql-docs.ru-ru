@@ -27,7 +27,7 @@ ms.locfileid: "73729555"
 
   В среде [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]флаг версии создается, чтобы назначить версию. Флаг может указывать на то, какую версию следует использовать пользователям или системам-подписчикам.  
   
-## <a name="prerequisites"></a>Предварительные требования  
+## <a name="prerequisites"></a>необходимые компоненты  
  Чтобы выполнить эту процедуру:  
   
 -   необходимо иметь разрешение на доступ к функциональной области **Управление версиями** ;  
@@ -54,11 +54,11 @@ ms.locfileid: "73729555"
   
 8.  Нажмите кнопку **Сохранить**.  
   
-## <a name="next-steps"></a>Следующие шаги  
+## <a name="next-steps"></a>Next Steps  
   
 -   [Назначение флага версии (службы Master Data Services)](../master-data-services/assign-a-flag-to-a-version-master-data-services.md)  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также статью  
  [Версии (службы Master Data Services)](../master-data-services/versions-master-data-services.md)   
  [Изменение имени флага версии (службы Master Data Services)](../master-data-services/change-a-version-flag-name-master-data-services.md)  
   

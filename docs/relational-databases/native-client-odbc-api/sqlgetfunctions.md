@@ -26,7 +26,7 @@ ms.locfileid: "73786311"
 
   Интерфейс ODBC-драйвера собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] соответствует трем определенным уровням соответствия ODBC (ISO, Open Group и ODBC уровня 2). Функция**SQLGetFunctions** сообщает, что все функции ODBC поддерживаются для ODBC-драйвера собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также статью  
    [функции SQLGetFunctions](https://go.microsoft.com/fwlink/?LinkId=59353)  
  [Подробные сведения о реализации API-интерфейсов ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   

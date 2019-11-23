@@ -29,7 +29,7 @@ ms.locfileid: "73728514"
 > [!NOTE]  
 >  Атрибут называется DateTime, но значения времени не поддерживаются.  
   
-## <a name="prerequisites"></a>Предварительные требования  
+## <a name="prerequisites"></a>необходимые компоненты  
  Чтобы выполнить эту процедуру:  
   
 -   необходимо иметь разрешение на доступ к функциональной области **Администрирование системы** ;  
@@ -89,7 +89,7 @@ ms.locfileid: "73728514"
   
  Маска ввода — это настраиваемая строка форматирования даты и времени .NET. Дополнительную информацию см. в разделе [Настраиваемые строки формата даты и времени](https://msdn.microsoft.com/library/8kb3ddd4\(v=vs.110\).aspx)  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также статью  
  [Атрибуты (службы Master Data Services)](../master-data-services/attributes-master-data-services.md)   
  [Изменение имени атрибута и типа данных (службы Master Data Services)](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md)   
  [Создание атрибута на основе домена (службы Master Data Services)](../master-data-services/create-a-domain-based-attribute-master-data-services.md)   

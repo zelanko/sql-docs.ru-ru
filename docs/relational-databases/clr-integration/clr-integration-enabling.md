@@ -29,19 +29,19 @@ RECONFIGURE;
 GO  
 ```  
   
- Вы можете отключить интеграцию со средой CLR, задав для параметра **clr enabled** значение 0. При отключении интеграции со средой CLR [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] останавливает выполнение всех определяемых пользователем подпрограмм CLR и выгружает все домены приложений. Этот параметр не влияет на функции, зависящие от среды CLR, например тип данных **hierarchyid** , функцию `FORMAT`, репликацию и управление на основе политик, и будет продолжать функционировать.
+ Вы можете отключить интеграцию со средой CLR, задав для параметра **clr enabled** значение 0. При отключении интеграции со средой CLR [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] прекращает выполнение всех пользовательских подпрограмм CLR и выгружает все домены приложений. На функции, зависящие от среды CLR, такие как тип данных **hierarchyid** , функция `FORMAT`, репликация и управление на основе политик, не затрагиваются этим параметром и будут продолжать функционировать.
   
 > [!NOTE]  
 >  Чтобы включить интеграцию со средой CLR, необходимо иметь разрешение ALTER SETTINGS на уровне сервера, которое неявно удерживается членами предопределенных ролей сервера **sysadmin** и **serveradmin** .  
   
 > [!NOTE]  
->  Компьютеры, сконфигурированные для работы с большим объемом памяти и большим числом процессоров, при запуске сервера могут отказаться загружать функцию интеграции со средой CLR SQL Server. Чтобы устранить эту неполадку, запустите сервер с помощью параметра запуска службы **gmemory_to_reserve**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и укажите достаточно большое значение памяти. Дополнительные сведения см. в разделе [Параметры запуска службы Database Engine](../../database-engine/configure-windows/database-engine-service-startup-options.md).  
+>  Компьютеры, сконфигурированные для работы с большим объемом памяти и большим числом процессоров, при запуске сервера могут отказаться загружать функцию интеграции со средой CLR SQL Server. Чтобы устранить эту неполадку, запустите сервер с помощью параметра запуска службы[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **-gmemory_to_reserve** и укажите достаточно большое значение памяти. Дополнительные сведения см. в разделе [Параметры запуска службы Database Engine](../../database-engine/configure-windows/database-engine-service-startup-options.md).  
   
 > [!NOTE]  
->  Выполнение в среде CLR не поддерживается при использовании упрощенных пулов. Перед включением интеграции со средой CLR необходимо отключить функцию использования упрощенных пулов. Дополнительные сведения см. в разделе [Параметр конфигурации сервера «использование упрощенных пулов»](../../database-engine/configure-windows/lightweight-pooling-server-configuration-option.md).  
+>  Выполнение в среде CLR не поддерживается при использовании упрощенных пулов. Перед включением интеграции со средой CLR необходимо отключить функцию использования упрощенных пулов. Дополнительные сведения см. в разделе [lightweight pooling Server Configuration Option](../../database-engine/configure-windows/lightweight-pooling-server-configuration-option.md).  
   
-## <a name="see-also"></a>См. также  
- [sp_configure (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
+## <a name="see-also"></a>См. также статью  
+ [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
  [Параметр конфигурации сервера «clr enabled»](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)   
  [RECONFIGURE (Transact-SQL)](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [GRANT (Transact-SQL)](../../t-sql/statements/grant-transact-sql.md)   

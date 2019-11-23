@@ -29,7 +29,7 @@ ms.locfileid: "73729585"
 > [!NOTE]  
 >  На числовые атрибуты налагаются определенные ограничения. Дополнительные сведения см. в разделе [Атрибуты (службы Master Data Services)](../master-data-services/attributes-master-data-services.md).  
   
-## <a name="prerequisites"></a>Предварительные требования  
+## <a name="prerequisites"></a>необходимые компоненты  
  Чтобы выполнить эту процедуру:  
   
 -   необходимо иметь разрешение на доступ к функциональной области **Администрирование системы** ;  
@@ -44,7 +44,7 @@ ms.locfileid: "73729585"
 |Столбец|Описание|  
 |------------|-----------------|  
 |Состояние|Состояние атрибута.<br /><br /> При нажатии кнопки сохранить отображается ![значок для обновления состояния](../master-data-services/media/mds-statusicon-updating.png "ICon для обновления состояния ") , указывающий на то, что атрибут обновляется.<br /><br /> Если при создании или изменении атрибута возникли ошибки, отображается ![значок изображение состояния ошибки](../master-data-services/media/mds-statusicon-error.png "ICon для состояния ошибки») .<br /><br /> В противном случае отображается состояние ОК, а ![для значка состояния ОК](../master-data-services/media/mds-statusicon-ok.png "ICon для состояния "ОК") — изображение.|  
-|Имя|Имя атрибута.|  
+|Name|Имя атрибута.|  
 |Отображаемое имя|Отображаемое имя атрибута.|  
 |Описание|Описание атрибута.|  
 |Ширина отображаемой области (в пикселях)|Ширина атрибута.|  
@@ -97,7 +97,7 @@ ms.locfileid: "73729585"
   
 14. Нажмите кнопку **Сохранить**.  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также статью  
  [Атрибуты (службы Master Data Services)](../master-data-services/attributes-master-data-services.md)   
  [Изменение имени атрибута и типа данных (службы Master Data Services)](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md)   
  [Создание атрибута на основе домена (службы Master Data Services)](../master-data-services/create-a-domain-based-attribute-master-data-services.md)   

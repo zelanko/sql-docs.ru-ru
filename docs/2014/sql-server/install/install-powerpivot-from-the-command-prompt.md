@@ -20,7 +20,7 @@ ms.locfileid: "72798327"
 # <a name="install-powerpivot-from-the-command-prompt"></a>Установка PowerPivot из командной строки
   Программу установки SQL Server PowerPivot для SharePoint можно запустить из командной строки. В команду необходимо включить параметр `/ROLE` и исключить из нее параметр `/FEATURES`.  
   
-## <a name="prerequisites"></a>предварительные требования  
+## <a name="prerequisites"></a>необходимые компоненты  
  Необходимо установить выпуск SharePoint Server 2010 Enterprise Edition с пакетом обновления 1 (SP1).  
   
  Для подготовки к работе служб Analysis Services необходимо использовать учетные записи пользователей домена.  

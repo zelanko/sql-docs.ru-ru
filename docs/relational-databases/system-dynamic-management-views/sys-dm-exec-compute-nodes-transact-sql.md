@@ -1,5 +1,5 @@
 ---
-title: sys. DM _exec_compute_nodes (Transact-SQL) | Документация Майкрософт
+title: sys. dm_exec_compute_nodes (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -29,22 +29,22 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 09/27/2019
 ms.locfileid: "71326147"
 ---
-# <a name="sysdm_exec_compute_nodes-transact-sql"></a>sys. DM _exec_compute_nodes (Transact-SQL)
+# <a name="sysdm_exec_compute_nodes-transact-sql"></a>sys. dm_exec_compute_nodes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
   Содержит сведения об узлах, используемых в управлении данными Polybase. В нем отображается одна строка для каждого узла.  
   
  Используйте это динамическое административное представление, чтобы просмотреть список всех узлов в масштабном кластере с их ролью, именем и IP-адресом.  
   
-|Имя столбца|Тип данных|Описание|Диапазон|  
+|Column Name|Тип данных|Описание|Диапазон|  
 |-----------------|---------------|-----------------|-----------|  
 |compute_node_id|**int**|Уникальный числовой идентификатор, связанный с узлом. Ключ для этого представления.|Уникален в масштабном кластере независимо от типа.|  
-|type|**nvarchar(32)**|Тип узла.|"COMPUTE", "HEAD"|  
+|Тип|**nvarchar(32)**|Тип узла.|"COMPUTE", "HEAD"|  
 |name|**nvarchar(32)**|Логическое имя узла.|Любая строка соответствующей длины.|  
 |address|**nvarchar(32)**|IP-адрес этого узла.|Диапазон IP-адресов|  
   
-## <a name="see-also"></a>См. также  
- [Устранение неполадок в Polybase с помощью динамических административных представлений](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
+## <a name="see-also"></a>См. также статью  
+ [Устранение неполадок в polybase с помощью динамических административных представлений](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
  [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Динамические административные представления &#40;, связанные с базами данных TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
   

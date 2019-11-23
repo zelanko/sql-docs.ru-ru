@@ -59,7 +59,7 @@ ms.locfileid: "73729551"
 |**Подтверждение пароля**|Еще раз введите пароль для подтверждения.|  
 |**Анонимная проверка подлинности**|Укажите, что SMTP-серверу не требуется проверка подлинности. Компонент Database Mail не будет использовать никаких учетных данных для проверки подлинности на SMTP-сервере.|  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также статью  
  [Страница "Конфигурация базы данных" (диспетчер конфигурации служб Master Data Services)](../master-data-services/database-configuration-page-master-data-services-configuration-manager.md)   
 [Установка и настройка служб Master Data Services](../master-data-services/master-data-services-installation-and-configuration.md)
   

@@ -38,7 +38,7 @@ ms.locfileid: "73759457"
   
  Сведения о различиях между [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client и MDAC см. в разделе [Обновление приложения для SQL Server Native Client из MDAC](../../relational-databases/native-client/applications/updating-an-application-to-sql-server-native-client-from-mdac.md).  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также статью  
  [SQL Server Native Client  программирования](../../relational-databases/native-client/sql-server-native-client-programming.md)  
  [Разделы руководства по ODBC](../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)   
  [Инструкции по OLE DB](../../relational-databases/native-client-ole-db-how-to/ole-db-how-to-topics.md)  

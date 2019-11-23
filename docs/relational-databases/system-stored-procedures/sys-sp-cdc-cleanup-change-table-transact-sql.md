@@ -46,14 +46,14 @@ sys.sp_cdc_cleanup_change_table
   
 ## <a name="arguments"></a>Аргументы  
  [@capture_instance =] "*capture_instance*"  
- Имя экземпляра системы отслеживания, связанного с таблицей изменений. *capture_instance* имеет тип **sysname**, не имеет значения по умолчанию и не может иметь значение null.  
+ Имя экземпляра системы отслеживания, связанного с таблицей изменений. Аргумент *capture_instance* имеет тип **sysname**, не имеет значения по умолчанию и не может иметь значение null.  
   
  *capture_instance* должен присвоить имя экземпляру отслеживания, который существует в текущей базе данных.  
   
  [@low_water_mark =] *low_water_mark*  
  Регистрационный номер транзакции в журнале (LSN), который будет использоваться в качестве нового нижнего предела для *экземпляра отслеживания*. *low_water_mark* является **двоичным (10)** и не имеет значения по умолчанию.  
   
- Если значение не равно null, оно должно выглядеть как значение start_lsn текущей записи в таблице [CDC. LSN _time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md) . Если в таблице cdc.lsn_time_mapping есть несколько записей, соответствующих одному моменту времени, на который ссылается указатель новой нижней конечной точки, то данному указателю присваивается наименьшее значение номера LSN данной группы записей.  
+ Если значение не равно null, оно должно быть start_lsn значением текущей записи в таблице [CDC. lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md) . Если в таблице cdc.lsn_time_mapping есть несколько записей, соответствующих одному моменту времени, на который ссылается указатель новой нижней конечной точки, то данному указателю присваивается наименьшее значение номера LSN данной группы записей.  
   
  Если значение явно задано как NULL, то текущая *Нижняя* граница для *экземпляра отслеживания* используется для определения верхней границы операции очистки.  
   
@@ -69,7 +69,7 @@ sys.sp_cdc_cleanup_change_table
 ## <a name="remarks"></a>Remarks  
  Процедура sys.sp_cdc_cleanup_change_table производит следующие операции.  
   
-1.  Если параметр @low_water_mark не равен NULL, он устанавливает для *экземпляра системы отслеживания* значение start_lsn, равное новому *нижнему пределу*.  
+1.  Если параметр @low_water_mark не равен NULL, он устанавливает значение start_lsn для *экземпляра системы отслеживания* в качестве нового *нижнего предела*.  
   
     > [!NOTE]  
     >  Новая нижняя конечная точка может не являться точкой, указанной в вызове хранимой процедуры. Если в таблице cdc.lsn_time_mapping есть несколько записей, соответствующих одному моменту времени, то в качестве нижней конечной точки выбирается наименьшее значение start_lsn в группе записей. Если параметр @low_water_mark имеет значение NULL или текущий нижний предел больше, чем новый ловватермарк, значение start_lsn для экземпляра отслеживания остается неизменным.  
@@ -86,12 +86,12 @@ sys.sp_cdc_cleanup_change_table
   
      Поскольку эта хранимая процедура выполняет очистку для одного экземпляра системы отслеживания, то она может быть использована для построения пользовательской стратегии очистки, которая применяет правила очистки к индивидуальному экземпляру системы отслеживания.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Необходимо членство в предопределенной роли базы данных db_owner.  
   
 ## <a name="see-also"></a>См. также статью  
-  [CDC.&#60;fn_cdc_get_all_changes_&#62;&#40;capture_instance Transact-&#41; SQL  ](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)  
- [sys. fn_cdc_get_min_lsn &#40;Transact-SQL&#41; ](../../relational-databases/system-functions/sys-fn-cdc-get-min-lsn-transact-sql.md)   
+ [CDC. fn_cdc_get_all_changes_&#60;capture_instance&#62;&#40;  Transact-&#41; SQL  ](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)  
+ [sys. fn_cdc_get_min_lsn &#40;  Transact-&#41; SQL](../../relational-databases/system-functions/sys-fn-cdc-get-min-lsn-transact-sql.md)  
  [sys. fn_cdc_increment_lsn &#40;TRANSACT-SQL&#41;](../../relational-databases/system-functions/sys-fn-cdc-increment-lsn-transact-sql.md)  
   
   

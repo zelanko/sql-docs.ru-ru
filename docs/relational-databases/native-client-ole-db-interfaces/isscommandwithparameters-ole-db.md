@@ -36,7 +36,7 @@ ms.locfileid: "73761958"
 |[ISSCommandWithParameters:: GetParameterProperties &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-getparameterproperties-ole-db.md)|Возвращает одну структуру набора свойств **SSPARAMPROPS** в массиве для каждого определяемого пользователем типа данных или XML-параметра, переданного команде, однако для других типов параметров не возвращается ничего.|  
 |[ISSCommandWithParameters:: SetParameterProperties &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-setparameterproperties-ole-db.md)|Задает свойства параметров для каждого параметра в отдельности по порядковому номеру либо задает свойства всех параметров сразу путем указания массива структур **SSPARAMPROPS** .|  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также статью  
  [Интерфейсы &#40;OLE DB&#41; ](https://msdn.microsoft.com/library/34c33364-8538-45db-ae41-5654481cda93)   
  [Использование типов данных XML](../../relational-databases/native-client/features/using-xml-data-types.md)   
  [Использование определяемых пользователем типов](../../relational-databases/native-client/features/using-user-defined-types.md)  

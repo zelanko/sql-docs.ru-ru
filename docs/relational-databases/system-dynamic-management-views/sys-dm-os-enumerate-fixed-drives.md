@@ -1,5 +1,5 @@
 ---
-title: sys. DM _os_enumerate_fixed_drives (Transact-SQL) | Документация Майкрософт
+title: sys. dm_os_enumerate_fixed_drives (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 09/18/2019
 ms.prod: sql
@@ -23,7 +23,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 09/27/2019
 ms.locfileid: "71342519"
 ---
-# <a name="sysdm_os_enumerate_fixed_drives-transact-sql"></a>sys. DM _os_enumerate_fixed_drives (Transact-SQL)
+# <a name="sysdm_os_enumerate_fixed_drives-transact-sql"></a>sys. dm_os_enumerate_fixed_drives (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
@@ -34,15 +34,15 @@ ms.locfileid: "71342519"
 |Имя столбца|Тип данных|Описание|
 |-----------------|---------------|-----------------|  
 |`fixed_drive_path`|`nvarchar(512)`|Путь к тому, например `C:\`.|  
-|`drive_type`|`int`|Код для типа диска. См. раздел [функция `GetDriveTypeW`](/windows/win32/api/fileapi/nf-fileapi-getdrivetypew).|
-|`drive_type_desc`|`nvarchar(512)`|Описание типа диска. См. раздел [функция `GetDriveTypeW`](/windows/win32/api/fileapi/nf-fileapi-getdrivetypew).|
+|`drive_type`|`int`|Код для типа диска. См. раздел [функция`GetDriveTypeW`](/windows/win32/api/fileapi/nf-fileapi-getdrivetypew).|
+|`drive_type_desc`|`nvarchar(512)`|Описание типа диска. См. раздел [функция`GetDriveTypeW`](/windows/win32/api/fileapi/nf-fileapi-getdrivetypew).|
 |`free_space_in_bytes`|`bigint`|Свободное место на диске (в байтах).|
 
 ## <a name="permissions"></a>Разрешения
 
 Пользователь должен иметь разрешение `VIEW SERVER STATE` на сервере.
 
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также статью  
 
  [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Динамические административные представления и функции &#40;, связанные с вводом-выводом. TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/i-o-related-dynamic-management-views-and-functions-transact-sql.md)  

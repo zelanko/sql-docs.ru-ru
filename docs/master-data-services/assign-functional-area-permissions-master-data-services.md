@@ -26,7 +26,7 @@ ms.locfileid: "73728760"
 
   Разрешения для функциональной области назначаются, чтобы предоставить пользователям или группам доступ к функциональным областям [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)].  
   
-## <a name="prerequisites"></a>Предварительные требования  
+## <a name="prerequisites"></a>необходимые компоненты  
  Чтобы выполнить эту процедуру:  
   
 -   необходимо иметь разрешение на доступ к функциональной области **Разрешения пользователей и групп** ;  
@@ -47,11 +47,11 @@ ms.locfileid: "73728760"
   
 7.  По завершении нажмите кнопку **Сохранить**.  
   
-## <a name="next-steps"></a>Следующие шаги  
+## <a name="next-steps"></a>Next Steps  
   
 -   [Назначение разрешения для объекта модели (службы Master Data Services)](../master-data-services/assign-model-object-permissions-master-data-services.md)  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также статью  
  [Создание администратора модели (службы Master Data Services)](../master-data-services/create-a-model-administrator-master-data-services.md)   
  [Безопасность (службы Master Data Services)](../master-data-services/security-master-data-services.md)  
   

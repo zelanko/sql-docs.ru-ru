@@ -48,7 +48,7 @@ ms.locfileid: "73761763"
   
 7.  Вызов метода для установки свойств и передачи счетчика и массива структур DBPROPSET.  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также статью  
  [Создание приложения поставщика SQL Server Native Client OLE DB](../../relational-databases/native-client-ole-db-provider/creating-a-sql-server-native-client-ole-db-provider-application.md)   
  [Свойства (OLE DB)](https://go.microsoft.com/fwlink/?LinkId=112207)  
   

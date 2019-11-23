@@ -71,7 +71,7 @@ ms.locfileid: "73729732"
 |-----------------|-----------------|  
 |**запуск рабочего процесса**|Инициирует внешний рабочий процесс. Данные, вызвавшие это действие, передаются рабочему процессу. Дополнительные сведения см. в статье [Интеграция рабочих процессов SharePoint со службами Master Data Services](https://msdn.microsoft.com/library/gg690195.aspx).<br /><br /> Это действие допустимо для текстовых, числовых значений, дат и ссылок.|  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также статью  
  [Условия бизнес-правил (службы Master Data Services)](../master-data-services/business-rule-conditions-master-data-services.md)   
  [Бизнес-правила (службы Master Data Services)](../master-data-services/business-rules-master-data-services.md)   
  [Создание и публикация бизнес-правила (службы Master Data Services)](../master-data-services/create-and-publish-a-business-rule-master-data-services.md)  

@@ -37,14 +37,14 @@ ms.locfileid: "72782998"
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Prerequisites"></a> предварительные требования  
+###  <a name="Prerequisites"></a> Предварительные требования  
  Необходимо подключиться к экземпляру сервера, на котором размещена первичная реплика.  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="Security"></a> Безопасность  
   
 ####  <a name="Permissions"></a> Разрешения  
   
-|Задача|Permissions|  
+|Задача|Разрешения|  
 |----------|-----------------|  
 |Настройка резервного копирования во вторичных репликах при создании группы доступности|Требуется членство в фиксированной роли сервера **sysadmin** и одно из разрешений: CREATE AVAILABILITY GROUP, ALTER ANY AVAILABILITY GROUP или CONTROL SERVER.|  
 |Изменение группы доступности или реплики доступности|Необходимо разрешение ALTER AVAILABILITY GROUP для группы доступности, разрешение CONTROL AVAILABILITY GROUP, разрешение ALTER ANY AVAILABILITY GROUP или разрешение CONTROL SERVER.|  
@@ -156,7 +156,7 @@ ms.locfileid: "72782998"
     ```  
   
 > [!NOTE]  
->  Чтобы просмотреть синтаксис командлета, воспользуйтесь командлетом `Get-Help` в среде [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Дополнительные сведения см. в разделе [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
+>  Чтобы просмотреть синтаксис командлета, воспользуйтесь командлетом `Get-Help` в среде [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Дополнительные сведения см. в статье [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
   
 Чтобы настроить и использовать поставщик SQL Server PowerShell, см. статью [SQL Server PowerShell Provider](../../../powershell/sql-server-powershell-provider.md) и [Получение справки SQL Server PowerShell](../../../powershell/sql-server-powershell.md).
   
@@ -181,10 +181,10 @@ BACKUP DATABASE @DBNAME TO DISK=<disk>
 ##  <a name="ForInfoAboutBuPref"></a> Получение сведений о параметрах настройки резервного копирования  
  Ниже приводятся способы получения информации, имеющей отношение к резервному копированию во вторичных репликах.  
   
-|Представление|Сведения|Соответствующие столбцы|  
+|Просмотр|Сведения|Соответствующие столбцы|  
 |----------|-----------------|----------------------|  
 |[sys.fn_hadr_backup_is_preferred_replica](/sql/relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql)|Является ли текущая реплика предпочитаемой репликой резервного копирования?|Неприменимо.|  
-|[sys.availability_groups](/sql/relational-databases/system-catalog-views/sys-availability-groups-transact-sql)|параметр автоматического резервного копирования|**automated_backup_preference**<br /><br /> **automated_backup_preference_desc**|  
+|[sys.availability_groups](/sql/relational-databases/system-catalog-views/sys-availability-groups-transact-sql)|Параметр автоматизированного резервного копирования|**automated_backup_preference**<br /><br /> **automated_backup_preference_desc**|  
 |[sys.availability_replicas](/sql/relational-databases/system-catalog-views/sys-availability-replicas-transact-sql)|Приоритет резервного копирования данной реплики доступности|**backup_priority**|  
 |[sys.dm_hadr_availability_replica_states](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-states-transact-sql)|Является реплика локальной по отношению к экземпляру сервера?<br /><br /> Текущая роль.<br /><br /> Состояние работы<br /><br /> Состояние подключения<br /><br /> Исправность синхронизации реплики доступности|**is_local**<br /><br /> **role**, **role_desc**<br /><br /> **operational_state**, **operational_state_desc**<br /><br /> **connected_state**, **connected_state_desc**<br /><br /> **synchronization_health**, **synchronization_health_desc**|  
   
@@ -195,5 +195,5 @@ BACKUP DATABASE @DBNAME TO DISK=<disk>
 -   [Блог группы SQL Server AlwaysOn: Официальный блог группы SQL Server AlwaysOn](https://blogs.msdn.com/b/sqlalwayson/)  
   
 ## <a name="see-also"></a>См. также статью  
- [Общие сведения о &#40;группы доступности AlwaysOn&#41; SQL Server](overview-of-always-on-availability-groups-sql-server.md)    
+ [Общие сведения о &#40;группы доступности AlwaysOn&#41; SQL Server](overview-of-always-on-availability-groups-sql-server.md)   
  [Активные вторичные реплики: резервное копирование во вторичных копиях (группы доступности AlwaysOn)](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md) 

@@ -35,7 +35,7 @@ ms.locfileid: "73983176"
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**file_id**|**int**|Идентификатор файла в базе данных.|  
-|**file_guid**|**uniqueidentifier**|Идентификатор GUID файла.<br /><br /> NULL = база данных была обновлена с более ранней версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (действует для SQL Server 2005 и более ранних версий).|  
+|**file_guid**|**uniqueidentifier**|Идентификатор GUID файла.<br /><br /> NULL = база данных была обновлена с более ранней версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (допустима для SQL Server 2005 и более ранних версий).|  
 |**type**|**tinyint**|Тип файла:<br/><br /> 0 = строки<br /><br/> 1 = журнал.<br/><br /> 2 = FILESTREAM.<br /><br /> 3 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 4 = полнотекстовый|  
 |**type_desc**|**nvarchar(60)**|Описание типа файла:<br /><br /> ROWS <br /><br /> LOG<br /><br /> FILESTREAM<br /><br /> FULLTEXT|  
 |**data_space_id**|**int**|Значение может быть больше или равно 0. Значение, равное 0, представляет файл журнала базы данных, а значение больше 0 представляет идентификатор файловой группы, в которой хранится этот файл данных.|  

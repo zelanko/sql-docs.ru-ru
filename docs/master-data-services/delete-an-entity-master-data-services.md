@@ -29,7 +29,7 @@ ms.locfileid: "73729481"
 > [!NOTE]  
 >  Элементы сущности из всех версий будут окончательно удалены.  
   
-## <a name="prerequisites"></a>Предварительные требования  
+## <a name="prerequisites"></a>необходимые компоненты  
  Чтобы выполнить эту процедуру:  
   
 -   необходимо иметь разрешение на доступ к функциональной области **Администрирование системы** ;  
@@ -50,7 +50,7 @@ ms.locfileid: "73729481"
   
 6.  В диалоговом окне подтверждения нажмите кнопку **ОК**.  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также статью  
  [Сущности (службы Master Data Services)](../master-data-services/entities-master-data-services.md)   
  [Создание сущности (службы Master Data Services)](../master-data-services/create-an-entity-master-data-services.md)  
   

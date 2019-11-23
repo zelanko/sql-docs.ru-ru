@@ -22,7 +22,7 @@ ms.locfileid: "72782733"
   
 1.  [Перед началом](#BeforeYouBegin)  
   
-2.  **To work on a path node:**  [Listing Methods and Properties](#ListPropMeth), [Using Methods and Properties](#UsePropMeth)  
+2.  **Для работы с узлом пути:**  [список методов и свойств](#ListPropMeth), [использование методов и свойств](#UsePropMeth)  
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
  После того как выбран узел в пути поставщика компонента [!INCLUDE[ssDE](../includes/ssde-md.md)] , можно выполнять действия двух типов.  

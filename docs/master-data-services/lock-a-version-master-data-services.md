@@ -29,7 +29,7 @@ ms.locfileid: "73728057"
 > [!NOTE]  
 >  Если версия заблокирована, суперпользователи и администраторы модели по-прежнему могут добавлять, изменять и удалять элементы. Другие пользователи с разрешениями для модели могут только просматривать элементы.  
   
-## <a name="prerequisites"></a>Предварительные требования  
+## <a name="prerequisites"></a>необходимые компоненты  
  Чтобы выполнить эту процедуру:  
   
 -   необходимо быть администратором модели. Дополнительные сведения см. в статье [Администраторы (службы Master Data Services)](../master-data-services/administrators-master-data-services.md).  
@@ -48,13 +48,13 @@ ms.locfileid: "73728057"
   
 4.  В диалоговом окне подтверждения нажмите кнопку **ОК**.  
   
-## <a name="next-steps"></a>Следующие шаги  
+## <a name="next-steps"></a>Next Steps  
   
 -   [Подтверждение исправления проблемы, обнаруженной при проверке на соответствие бизнес-правилам (службы Master Data Services)](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
   
 -   [Фиксация версии (службы Master Data Services)](../master-data-services/commit-a-version-master-data-services.md)  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также статью  
  [Версии (службы Master Data Services)](../master-data-services/versions-master-data-services.md)   
  [Разблокировка версии (службы Master Data Services)](../master-data-services/unlock-a-version-master-data-services.md)  
   

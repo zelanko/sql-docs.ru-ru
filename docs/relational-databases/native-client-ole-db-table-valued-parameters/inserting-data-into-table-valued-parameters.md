@@ -56,7 +56,7 @@ ms.locfileid: "73788691"
   
 -   IRowset:: Аддрефровс  
   
--   IRowset:: GetData  
+-   IRowset::GetData  
   
 -   IRowset:: ReleaseRows  
   
@@ -72,7 +72,7 @@ ms.locfileid: "73788691"
   
  Во время выполнения поставщик OLE DB для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняет обратный вызов объекта набора строк для выборки строк и считывания данных столбца.  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также статью  
  [Возвращающие табличные значения параметры &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)   
  [Использование возвращающих табличные значения параметров &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md)  
   

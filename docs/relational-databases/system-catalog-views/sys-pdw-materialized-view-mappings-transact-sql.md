@@ -27,7 +27,7 @@ ms.locfileid: "73729828"
 
 Столбцы physical_name и object_id формируют ключ для этого представления каталога.
   
-|Имя столбца|Тип данных|Описание|  
+|Column Name|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |physical_name |**nvarchar (36)**|Физическое имя материализованных представлений.|  
 |object_id  |**int**|Идентификатор объекта для материализованных представлений. См. раздел [sys. Objects (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-objects-transact-sql?view=azure-sqldw-latest).| 
@@ -38,7 +38,7 @@ ms.locfileid: "73729828"
   
 ## <a name="see-also"></a>См. также:
 
-[Настройка производительности с материализованным представлением](/azure/sql-data-warehouse/performance-tuning-materialized-views)   
+[Настройка производительности с помощью материализованного представления](/azure/sql-data-warehouse/performance-tuning-materialized-views)   
 [CREATE MATERIALIZED VIEW AS SELECT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-materialized-view-as-select-transact-sql?view=azure-sqldw-latest)   
 [ALTER MATERIALIZED VIEW &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-materialized-view-transact-sql?view=azure-sqldw-latest)   
 [EXPLAIN &#40;Transact-SQL&#41;](/sql/t-sql/queries/explain-transact-sql?view=azure-sqldw-latest)   

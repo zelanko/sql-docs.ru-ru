@@ -25,7 +25,7 @@ ms.locfileid: "73729693"
 
   В среде [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]имя версии можно изменить для ее настройки для нужд организации.  
   
-## <a name="prerequisites"></a>Предварительные требования  
+## <a name="prerequisites"></a>необходимые компоненты  
  Чтобы выполнить эту процедуру:  
   
 -   необходимо иметь разрешение на доступ к функциональной области **Управление версиями** ;  
@@ -44,7 +44,7 @@ ms.locfileid: "73729693"
   
 4.  Нажмите клавишу ВВОД.  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также статью  
  [Подтверждение исправления проблемы, обнаруженной при проверке на соответствие бизнес-правилам (службы Master Data Services)](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)   
  [Блокировка версии (службы Master Data Services)](../master-data-services/lock-a-version-master-data-services.md)   
  [Фиксация версии (службы Master Data Services)](../master-data-services/commit-a-version-master-data-services.md)   

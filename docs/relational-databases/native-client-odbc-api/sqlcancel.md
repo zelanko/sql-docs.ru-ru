@@ -25,7 +25,7 @@ ms.locfileid: "73787657"
 
   В разделе [SQLCancel](https://go.microsoft.com/fwlink/?LinkId=203516) говорится, что в ODBC 2. x, если приложение вызывает **SQLCancel** , когда в инструкции не выполняется обработка, **SQLCancel** действует так же, как **SQLFreeStmt** с параметром **SQL_CLOSE** . Это поведение определено только для полноты, и приложения должны вызывать **SQLFreeStmt** или **SQLCloseCursor** для закрытия курсоров. Но даже если приложение [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client устанавливает версию API ODBC 3.5. x или более поздней версии, функция **SQLCancel** будет использовать поведение ODBC 2. x.  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также статью  
  [SQLCancel](https://go.microsoft.com/fwlink/?LinkId=203516)   
  [Подробные сведения о реализации API-интерфейсов ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   

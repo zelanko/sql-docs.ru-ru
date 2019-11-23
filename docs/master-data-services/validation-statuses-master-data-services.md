@@ -31,7 +31,7 @@ ms.locfileid: "73728856"
 |Проверка завершена с ошибкой|Элементы, не прошедшие проверку на соответствие бизнес-правилам.|  
 |Ожидание повторной проверки зависимого элемента|Обновленные консолидированные элементы, ожидающие проверки вместе с дочерними элементами.|  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также статью  
  [Подтверждение исправления проблемы, обнаруженной при проверке на соответствие бизнес-правилам (службы Master Data Services)](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)   
  [Версии (службы Master Data Services)](../master-data-services/versions-master-data-services.md)  
   

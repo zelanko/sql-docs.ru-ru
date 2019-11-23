@@ -1,5 +1,5 @@
 ---
-title: sys. DM _exec_dms_workers (Transact-SQL) | Документация Майкрософт
+title: sys. dm_exec_dms_workers (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2019
 ms.prod: sql
@@ -29,27 +29,27 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/04/2019
 ms.locfileid: "73532941"
 ---
-# <a name="sysdm_exec_dms_workers-transact-sql"></a>sys. DM _exec_dms_workers (Transact-SQL)
+# <a name="sysdm_exec_dms_workers-transact-sql"></a>sys. dm_exec_dms_workers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
   Содержит сведения обо всех рабочих ролях, завершающих шаги DMS.  
   
  В этом представлении отображаются данные за последние 1000 запросов и активных запросов. Активные запросы всегда имеют данные, представленные в этом представлении.  
   
-|Имя столбца|Тип данных|Описание|Диапазон|  
+|Column Name|Тип данных|Описание|Диапазон|  
 |-----------------|---------------|-----------------|-----------|  
-|execution_id|`nvarchar(32)`|Запрос на то, что эта Рабочая роль DMS является частью. request_id, step_index и dms_step_index формируют ключ для этого представления.||  
-|step_index|`int`|Шаг запроса, частью которого является Рабочая роль DMS.|См. раздел индекс шага в [представлении sys &#40;. DM _EXEC_DISTRIBUTED_REQUEST_STEPS&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-exec-distributed-request-steps-transact-sql.md).|  
-|dms_step_index|`int`|Шаг в плане DMS, в котором выполняется этот рабочий процесс.|См [. sys. DM _exec_dms_workers (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-workers-transact-sql.md)|  
-|compute_node_id|`int`|Узел, на котором запущена Рабочая роль.|См. раздел [sys. &#40;DM _EXEC_COMPUTE_NODES Transact&#41;-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md).|  
+|execution_id|`nvarchar(32)`|Запрос, частью которого является эта Рабочая роль DMS. request_id, step_index и dms_step_index формируют ключ для этого представления.||  
+|step_index|`int`|Шаг запроса, частью которого является Рабочая роль DMS.|См. раздел индекс шага в [sys &#40;. DM_EXEC_DISTRIBUTED_REQUEST_STEPS Transact&#41;-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-exec-distributed-request-steps-transact-sql.md).|  
+|dms_step_index|`int`|Шаг в плане DMS, в котором выполняется этот рабочий процесс.|См [. раздел sys. dm_exec_dms_workers (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-workers-transact-sql.md)|  
+|compute_node_id|`int`|Узел, на котором запущена Рабочая роль.|См. раздел [sys &#40;. DM_EXEC_COMPUTE_NODES Transact&#41;-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md).|  
 |distribution_id|`int`|||  
-|type|`nvarcha(32)`|||  
+|Тип|`nvarcha(32)`|||  
 |status|`nvarchar(32)`|Состояние этого шага|"Pending", "работает", "Complete", "Failed", "Ундофаилед", "Пендингканцел", "recommit", "Undone", "Abortd"|  
 |bytes_per_sec|`bigint`|||  
 |bytes_processed|`bigint`|||  
 |rows_processed|`bigint`|||  
 |start_time|`datetime`|Время начала выполнения этапа|Меньше или равно текущему времени и больше или равно end_compile_time запроса, к которому относится этот шаг.|  
-|end_time|`datetime`|Время, когда выполнение этого шага было завершено, было отменено или завершилось сбоем.|Меньшее или равное текущему времени и больше или равно значению start_time. для шагов, выполняемых в данный момент или в очереди, устанавливается значение NULL.|  
+|end_time|`datetime`|Время, когда выполнение этого шага было завершено, было отменено или завершилось сбоем.|Меньшее или равное текущему времени и больше или равно start_time, установите значение NULL для шагов, выполняемых в данный момент или в очереди.|  
 |total_elapsed_time|`int`|Общее количество времени выполнения шага запроса (в миллисекундах)|Между 0 и разностью между end_time и start_time. 0 для шагов в очереди.|  
 |cpu_time|`bigint`|||  
 |query_time|`int`|||  
@@ -62,7 +62,7 @@ ms.locfileid: "73532941"
 |command|`nvarchar(4000)`|||
 |compute_pool_id|`int`|Уникальный идентификатор пула.|
 
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также статью  
  [Устранение неполадок в polybase с помощью динамических административных представлений](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
  [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Динамические административные представления &#40;, связанные с базами данных TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  

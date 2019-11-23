@@ -22,7 +22,7 @@ ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e274375177859d456592a6e1879d7f528d1cb724
 ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 11/13/2019
 ms.locfileid: "73983086"
@@ -944,7 +944,7 @@ GO
 |WAIT_XTP_CKPT_CLOSE |Имеет место при ожидании завершения контрольной точки. <br /> **Область применения**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и более поздних версий.| 
 |WAIT_XTP_CKPT_ENABLED |Происходит при отключении контрольных точек и ожидании включения контрольных точек. <br /> **Область применения**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и более поздних версий.| 
 |WAIT_XTP_CKPT_STATE_LOCK |Происходит при синхронизации проверки состояния контрольной точки. <br /> **Область применения**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и более поздних версий.| 
-|WAIT_XTP_COMPILE_WAIT |Только для внутреннего применения. <br /> **Применимо к**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] и более поздних версий.| 
+|WAIT_XTP_COMPILE_WAIT |Только для внутреннего применения. <br /> **Применимо к**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] и выше.| 
 |WAIT_XTP_GUEST |Происходит, когда механизму выделения памяти базы данных необходимо отключить получение уведомлений о нехватке памяти. <br /> **Область применения**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] и более поздних версий.| 
 |WAIT_XTP_HOST_WAIT |Происходит, когда ядро СУБД инициирует ожидания и реализуется узлом. <br /> **Область применения**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и более поздних версий.| 
 |WAIT_XTP_OFFLINE_CKPT_BEFORE_REDO |Только для внутреннего применения. <br /> **Область применения**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и более поздних версий.| 

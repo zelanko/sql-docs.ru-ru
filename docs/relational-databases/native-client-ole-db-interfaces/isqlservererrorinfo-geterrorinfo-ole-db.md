@@ -57,7 +57,7 @@ HRESULT GetErrorInfo(
  E_OUTOFMEMORY  
  Поставщику [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB не удалось выделить достаточно памяти для выполнения запроса.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Поставщик [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственного клиента OLE DB выделяет память для строк SSERRORINFO и ОЛЕЧАР, возвращаемых с помощью указателей, переданных потребителем. Пользователь должен освободить эту память с помощью метода **IMalloc::Free**, когда последнему уже не будет требоваться доступ к данным ошибки.  
   
  Структура SSERRORINFO определена следующим образом.  
@@ -76,7 +76,7 @@ typedef struct tagSSErrorInfo
 SSERRORINFO;  
 ```  
   
-|Член|Описание|  
+|Member|Описание|  
 |------------|-----------------|  
 |*pwszMessage*|Сообщение об ошибке [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Это сообщение возвращается с помощью метода **IErrorInfo::GetDescription**.|  
 |*pwszServer*|Имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], где произошла ошибка.|  
@@ -88,7 +88,7 @@ SSERRORINFO;
   
  Указатели в адресах ссылок на структуры в строке, возвращенной в аргументе *ppErrorStrings*.  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также статью  
  [ISQLServerErrorInfo &#40;OLE DB&#41; ](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1)   
  [RAISERROR (Transact-SQL)](../../t-sql/language-elements/raiserror-transact-sql.md)  
   

@@ -58,7 +58,7 @@ sp_help_category [ [ @class = ] 'class' ]
 |**НЕСКОЛЬКО СЕРВЕРОВ**|Категория многосерверных заданий.|  
 |**NONE**|Категория для класса, отличного от **Job**.|  
   
-`[ @name = ] 'name'` — имя категории, для которой запрашиваются сведения. Аргумент *Name* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @name = ] 'name'` имя категории, для которой запрашиваются сведения. Аргумент *Name* имеет тип **sysname**и значение по умолчанию NULL.  
   
 `[ @suffix = ] suffix` указывает, является ли столбец **category_type** в результирующем НАБОРе идентификатором или именем. *суффикс* имеет **битовую**длину и значение по умолчанию **0**. **1** показывает **category_type** как имя, а **0** — как идентификатор.  
   
@@ -66,7 +66,7 @@ sp_help_category [ [ @class = ] 'class' ]
  **0** (успешное завершение) или **1** (сбой)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
- Если параметр **\@suffix** имеет значение **0**, **sp_help_category** возвращает следующий результирующий набор:  
+ Если **\@суффикс** равен **0**, **sp_help_category** возвращает следующий результирующий набор:  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
@@ -74,7 +74,7 @@ sp_help_category [ [ @class = ] 'class' ]
 |**category_type**|**tinyint**|Тип категории:<br /><br /> **1** = локальный<br /><br /> **2** = многосерверная<br /><br /> **3** = нет|  
 |**name**|**sysname**|Имя категории|  
   
- Если **\@suffix** равен **1**, **sp_help_category** возвращает следующий результирующий набор:  
+ Если **\@суффикс** равен **1**, **sp_help_category** возвращает следующий результирующий набор:  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
@@ -82,8 +82,8 @@ sp_help_category [ [ @class = ] 'class' ]
 |**category_type**|**sysname**|Тип категории. Один из нескольких **локальных**, **многосерверных**или **нет**|  
 |**name**|**sysname**|Имя категории|  
   
-## <a name="remarks"></a>Примечания  
- **sp_help_category** необходимо запускать из базы данных **msdb** .  
+## <a name="remarks"></a>Remarks  
+ **sp_help_category** должны запускаться из базы данных **msdb** .  
   
  Если никакие аргументы не указаны, результирующий набор содержит сведения обо всех категориях заданий.  
   
@@ -112,7 +112,7 @@ EXEC dbo.sp_help_category
 GO  
 ```  
   
-### <a name="b-returning-alert-information"></a>Б. Возвращение сведений о предупреждениях  
+### <a name="b-returning-alert-information"></a>б. Возвращение сведений о предупреждениях  
  В следующем примере возвращаются сведения о категории предупреждений Replication.  
   
 ```  
@@ -125,10 +125,10 @@ EXEC dbo.sp_help_category
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
- [sp_add_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md)   
- [sp_delete_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-category-transact-sql.md)   
- [sp_update_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-category-transact-sql.md)   
+## <a name="see-also"></a>См. также статью  
+ [sp_add_category &#40;  Transact-&#41; SQL](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md)  
+ [sp_delete_category &#40;  Transact-&#41; SQL](../../relational-databases/system-stored-procedures/sp-delete-category-transact-sql.md)  
+ [sp_update_category &#40;  Transact-&#41; SQL](../../relational-databases/system-stored-procedures/sp-update-category-transact-sql.md)  
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

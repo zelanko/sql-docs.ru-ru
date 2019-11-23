@@ -30,9 +30,9 @@ ms.locfileid: "73784064"
   
 |Тип файлового хранилища|Тип данных файла|Ответ на запрос: "введите тип файлового хранилища поля < field_name > [\<умолчанию >]:"|  
 |-----------------------|-------------------------|-----------------------------------------------------------------------------------------------------|  
-|DateTime|SQLDATETIME|d|  
+|DATETIME|SQLDATETIME|d|  
 |Smalldatetime|SQLDATETIM4|D|  
-|Дата|SQLDATE|de|  
+|Date|SQLDATE|de|  
 |Time|SQLTIME|te|  
 |Datetime2|SQLDATETIME2|d2|  
 |Datetimeoffset|SQLDATETIMEOFFSET|do|  
@@ -71,9 +71,9 @@ ms.locfileid: "73784064"
   
 |Тип файлового хранилища|Объем памяти в байтах|  
 |-----------------------|---------------------------|  
-|datetime|8|  
+|DATETIME|8|  
 |smalldatetime|4|  
-|date|3|  
+|DATE|3|  
 |time|6|  
 |datetime2|9|  
 |datetimeoffset|11|  
@@ -94,9 +94,9 @@ ms.locfileid: "73784064"
   
 |Тип файлового хранилища|Тип данных файла|Введите в sqlncli. h для использования с IBCPSession:: BCPColFmt|Значение|  
 |-----------------------|-------------------------|-----------------------------------------------------------|-----------|  
-|DateTime|SQLDATETIME|BCP_TYPE_SQLDATETIME|0x3d|  
+|DATETIME|SQLDATETIME|BCP_TYPE_SQLDATETIME|0x3d|  
 |Smalldatetime|SQLDATETIM4|BCP_TYPE_SQLDATETIME4|0x3a|  
-|Дата|SQLDATE|BCP_TYPE_SQLDATE|0x28|  
+|Date|SQLDATE|BCP_TYPE_SQLDATE|0x28|  
 |Time|SQLTIME|BCP_TYPE_SQLTIME|0x29|  
 |Datetime2|SQLDATETIME2|BCP_TYPE_SQLDATETIME2|0x2a|  
 |Datetimeoffset|SQLDATETIMEOFFSET|BCP_TYPE_SQLDATETIMEOFFSET|0x2b|  
@@ -106,12 +106,12 @@ ms.locfileid: "73784064"
   
  **Примечание для OLE DB**. Следующие преобразования выполняются через интерфейс IBCPSession. IRowsetFastLoad использует преобразования OLE DB, как определено в [преобразованиях, выполненных от клиента к серверу](../../relational-databases/native-client-ole-db-date-time/conversions-performed-from-client-to-server.md). Следует заметить, что значения даты-времени округляются до 1/300 секунды, а в значениях типа smalldatetime после выполнения клиентских преобразований, описанных ниже, значение секунд становится равным нулю. Округление даты-времени распространяется на часы и минуты, но не на дату.  
   
-|Кому --><br /><br /> От|date|time|smalldatetime|datetime|datetime2|datetimeoffset|char|wchar|  
+|Кому --><br /><br /> От|DATE|time|smalldatetime|DATETIME|datetime2|datetimeoffset|char|wchar|  
 |------------------------|----------|----------|-------------------|--------------|---------------|--------------------|----------|-----------|  
-|Дата|1|-|1,6|1,6|1,6|1,5,6|1,3|1,3|  
+|Date|1|-|1,6|1,6|1,6|1,5,6|1,3|1,3|  
 |Time|Недоступно|1,10|1,7,10|1,7,10|1,7,10|1,5,7,10|1,3|1,3|  
 |Smalldatetime|1,2|1,4,10|1|1|1,10|1,5,10|1,11|1,11|  
-|DateTime|1,2|1,4,10|1,12|1|1,10|1,5,10|1,11|1,11|  
+|DATETIME|1,2|1,4,10|1,12|1|1,10|1,5,10|1,11|1,11|  
 |Datetime2|1,2|1,4,10|1,10 (ODBC)1,12 (OLE DB)|1,10|1,10|1,5,10|1,3|1,3|  
 |Datetimeoffset|1,2,8|1,4,8,10|1,8,10|1,8,10|1,8,10|1,10|1,3|1,3|  
 |Char/wchar (date)|9|-|9,6 (ODBC)9,6,12 (OLE DB)|9,6 (ODBC)9,6,12 (OLE DB)|9,6|9,5,6|Недоступно|Недоступно|  
@@ -138,7 +138,7 @@ ms.locfileid: "73784064"
 |12|Для секунд устанавливается значение 0, а доли секунды отбрасываются. Ошибка усечения невозможна.|  
 |Недоступно|Существующий способ работы [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] и более ранних версий сохранен.|  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также статью  
  [Улучшения &#40;даты и времени ODBC&#41; ](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)   
  [Улучшения функций даты и времени &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  
   

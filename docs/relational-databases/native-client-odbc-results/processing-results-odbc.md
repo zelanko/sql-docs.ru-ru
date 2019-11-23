@@ -65,7 +65,7 @@ ms.locfileid: "73778970"
   
  Процесс получения строк из источника данных и передачи их в приложение называется выборкой.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
   
 -   [Определение характеристик результирующего набора &#40;ODBC&#41;](../../relational-databases/native-client-odbc-results/determining-the-characteristics-of-a-result-set-odbc.md)  
   
@@ -79,7 +79,7 @@ ms.locfileid: "73778970"
   
 -   [Автоматическое преобразование символьных данных](../../relational-databases/native-client-odbc-results/autotranslation-of-character-data.md)  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также статью  
  [SQL Server Native Client &#40; &#41; ODBC](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)  
  [Разделы &#40;руководства по обработке результатов в ODBC&#41;](https://msdn.microsoft.com/library/772d9064-c91d-4cac-8b60-fcc16bf76e10)  
   

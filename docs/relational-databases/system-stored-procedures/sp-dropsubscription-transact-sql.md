@@ -42,13 +42,13 @@ sp_dropsubscription [ [ @publication= ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publication = ] 'publication'`Имя связанной публикации. Аргумент *publication* имеет тип **sysname**и значение по умолчанию NULL. Если задано значение **ALL**, то все подписки для всех публикаций указанного подписчика отменяются. параметр *publication* является обязательным.  
+`[ @publication = ] 'publication'` — имя связанной публикации. Аргумент *publication* имеет тип **sysname**и значение по умолчанию NULL. Если задано значение **ALL**, то все подписки для всех публикаций указанного подписчика отменяются. параметр *publication* является обязательным.  
   
-`[ @article = ] 'article'`Имя статьи. Аргумент *article* имеет тип **sysname**и значение по умолчанию NULL. Если **все**, то подписки на все статьи для каждой указанной публикации и подписчика удаляются. Используйте **все** для публикаций, которые допускают немедленное обновление.  
+`[ @article = ] 'article'` — имя статьи. Аргумент *article* имеет тип **sysname**и значение по умолчанию NULL. Если **все**, то подписки на все статьи для каждой указанной публикации и подписчика удаляются. Используйте **все** для публикаций, которые допускают немедленное обновление.  
   
-`[ @subscriber = ] 'subscriber'`Имя подписчика, для которого будут удалены подписки. Аргумент *Subscriber* имеет тип **sysname**и не имеет значения по умолчанию. Если **все**, то все подписки для всех подписчиков удаляются.  
+`[ @subscriber = ] 'subscriber'` — имя подписчика, для которого будут удалены подписки. Аргумент *Subscriber* имеет тип **sysname**и не имеет значения по умолчанию. Если **все**, то все подписки для всех подписчиков удаляются.  
   
-`[ @destination_db = ] 'destination_db'`Имя целевой базы данных. *destination_db* имеет тип **sysname**и значение по умолчанию NULL. Если имеет значение NULL, то все подписки от этого подписчика удаляются.  
+`[ @destination_db = ] 'destination_db'` — имя целевой базы данных. Аргумент *destination_db* имеет тип **sysname**и значение по умолчанию NULL. Если имеет значение NULL, то все подписки от этого подписчика удаляются.  
   
 `[ @ignore_distributor = ] ignore_distributor`  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
@@ -59,7 +59,7 @@ sp_dropsubscription [ [ @publication= ] 'publication' ]
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  **sp_dropsubscription** используется в моментальных снимках и репликации транзакций.  
   
  Если удаляется подписка на статью в публикации с немедленной синхронизацией, то нельзя добавить ее обратно до тех пор, пока не будут удалены подписки на все статьи в публикации и, затем, не добавлены все одновременно обратно.  
@@ -68,12 +68,12 @@ sp_dropsubscription [ [ @publication= ] 'publication' ]
  [!code-sql[HowTo#sp_droptransubscription](../../relational-databases/replication/codesnippet/tsql/sp-dropsubscription-tran_1.sql)]  
   
 ## <a name="permissions"></a>Разрешения  
- Только члены предопределенной роли сервера **sysadmin** , предопределенной роли базы данных **db_owner** или пользователь, создавший подписку, могут выполнять **sp_dropsubscription**.  
+ Только члены предопределенной роли сервера **sysadmin** , предопределенной роли базы данных **db_owner** или пользователя, создавшего подписку, могут выполнять **sp_dropsubscription**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также статью  
  [Удаление принудительной подписки](../../relational-databases/replication/delete-a-push-subscription.md)   
- [sp_addsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   
- [sp_changesubstatus &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changesubstatus-transact-sql.md)   
+ [sp_addsubscription &#40;  Transact-&#41; SQL](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)  
+ [sp_changesubstatus &#40;  Transact-&#41; SQL](../../relational-databases/system-stored-procedures/sp-changesubstatus-transact-sql.md)  
  [sp_helpsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)  
   
   

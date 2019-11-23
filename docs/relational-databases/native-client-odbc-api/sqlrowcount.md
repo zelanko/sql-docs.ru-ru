@@ -32,7 +32,7 @@ ms.locfileid: "73785690"
   
  При выполнении инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] INSERT, UPDATE, DELETE или MERGE с предложением OUTPUT SQLRowCount не будет возвращать количество строк, затронутых до тех пор, пока не будут потреблены все строки результирующего набора, сформированного предложением OUTPUT. Чтобы сконсуме эти строки, вызовите SQLFetch или SQLFetchScroll. Склресултколс возвращает значение-1, пока не будут использованы все строки результатов. После того как SQLFetch или SQLFetchScroll возвращает SQL_NO_DATA, приложение должно вызвать SQLRowCount, чтобы определить число затронутых строк перед вызовом SQLMoreResults для перехода к следующему результату.  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также статью  
    [функции SQLRowCount](https://go.microsoft.com/fwlink/?LinkId=59367)  
  [Подробные сведения о реализации API-интерфейсов ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   

@@ -60,7 +60,7 @@ ms.locfileid: "70212340"
   
 7.  После завершения обработки удалите обработчик из списка обработчиков событий ADO/WFC. Используйте метод с именем, например **removeOn**_EventName_(*handler*).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также статью  
  [Сводка по обработчику событий ADO](../../../ado/guide/data/ado-event-handler-summary.md)   
  [ADO — индекс синтаксиса WFC](../../../ado/reference/ado-api/ado-wfc-syntax-index.md)   
  [Параметры события](../../../ado/guide/data/event-parameters.md)   

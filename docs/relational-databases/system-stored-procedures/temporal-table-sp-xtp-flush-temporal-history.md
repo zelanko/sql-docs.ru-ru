@@ -41,7 +41,7 @@ sys.sp_xtp_flush_temporal_history @schema_name, @object_name
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *@no__t 1schema_name*  
+ *\@schema_name*  
  Имя схемы для текущей или темпоральной таблицы  
   
  *\@object_name*  
@@ -51,9 +51,9 @@ sys.sp_xtp_flush_temporal_history @schema_name, @object_name
  0 (успешное завершение) или > 0 (сбой)  
   
 ## <a name="permissions"></a>Разрешения  
- Требуются разрешения db_owner.  
+ Требуются db_owner разрешения.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также статью  
  [Вопросы производительности оптимизированных для памяти темпоральных таблиц с системным управлением версиями](../../relational-databases/tables/memory-optimized-system-versioned-temporal-tables-performance.md)  
   
   

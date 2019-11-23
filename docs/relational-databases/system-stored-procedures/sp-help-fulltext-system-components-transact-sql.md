@@ -84,7 +84,7 @@ sp_help_fulltext_system_components
 ## <a name="permissions"></a>Разрешения  
  Требуется членство в роли **Public** ; Тем не менее пользователи могут видеть только сведения о полнотекстовых каталогах, для которых у них есть разрешение VIEW DEFINITION. Значения столбца **fullpath** могут просматривать только члены предопределенной роли сервера **serveradmin** .  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Этот метод очень важен при подготовке к обновлению. Запустите хранимую процедуру в определенной базе данных и используйте результаты, чтобы определить, будет ли определенный каталог затронут обновлением.  
   
 ## <a name="examples"></a>Примеры  
@@ -97,7 +97,7 @@ EXEC sp_help_fulltext_system_components 'all';
 GO  
 ```  
   
-### <a name="b-listing-word-breakers"></a>Б. Перечисление средств разбиения по словам  
+### <a name="b-listing-word-breakers"></a>б. Перечисление средств разбиения по словам  
  В следующем примере перечислены все средства разбиения по словам, зарегистрированные в экземпляре сервера.  
   
 ```  
@@ -135,7 +135,7 @@ GO
   
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также статью  
  [Просмотр или изменение зарегистрированных фильтров и разделителей слов](../../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md)   
  [Настройка и управление средством разбиения на слова и парадигматические модули для поиска](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
  [Настройка и управление фильтрами для поиска](../../relational-databases/search/configure-and-manage-filters-for-search.md)   

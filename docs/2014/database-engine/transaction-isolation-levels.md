@@ -80,7 +80,7 @@ ms.locfileid: "73637789"
   
  Ошибка 41325. Текущей транзакции не удалось выполнить фиксацию из-за ошибки сериализуемой проверки.  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также статью  
  [Основные сведения о транзакциях в таблицах, оптимизированных для памяти](../../2014/database-engine/understanding-transactions-on-memory-optimized-tables.md)   
  [Рекомендации по уровню изоляции транзакций с оптимизированными для памяти таблицами](../relational-databases/in-memory-oltp/memory-optimized-tables.md)   
  [Рекомендации для логики повторного выполнения транзакций для таблиц, оптимизированных для памяти](../../2014/database-engine/guidelines-for-retry-logic-for-transactions-on-memory-optimized-tables.md)  

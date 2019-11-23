@@ -29,10 +29,10 @@ ms.locfileid: "73728347"
 > [!WARNING]  
 >  После удаления единственной версии модели она станет непригодной к использованию.  
   
-## <a name="prerequisites"></a>Предварительные требования  
+## <a name="prerequisites"></a>необходимые компоненты  
  Чтобы выполнить эту процедуру:  
   
--   пользователь должен иметь разрешения на просмотр представления mdm.viw_SYSTEM_SCHEMA_VERSION и на выполнение хранимой процедуры mds.udpVersionDelete в базе данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Дополнительные сведения см. в разделе [Защита объектов базы данных (службы Master Data Services)](../master-data-services/database-object-security-master-data-services.md).  
+-   пользователь должен иметь разрешения на просмотр представления mdm.viw_SYSTEM_SCHEMA_VERSION и на выполнение хранимой процедуры mds.udpVersionDelete в базе данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. Дополнительные сведения см. в разделе [Защита объектов базы данных (службы Master Data Services)](../master-data-services/database-object-security-master-data-services.md).  
   
 ### <a name="to-delete-a-version"></a>Удаление версии  
   
@@ -55,7 +55,7 @@ ms.locfileid: "73728347"
     > [!NOTE]  
     >  Возможно, придется подождать несколько минут, чтобы изменение отобразилось в веб-приложении.  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также статью  
  [Версии (службы Master Data Services)](../master-data-services/versions-master-data-services.md)   
  [Копирование версии (службы Master Data Services)](../master-data-services/copy-a-version-master-data-services.md)  
   

@@ -44,20 +44,20 @@ sp_altermessage [ @message_id = ] message_number   ,[ @parameter = ]'write_to_lo
  [ **@message_id =** ] *message_number*  
  Номер ошибки сообщения, которое необходимо изменить из **sys. messages**. *message_number* имеет **тип int** и не имеет значения по умолчанию.  
   
-`[ @parameter = ] 'write\_to\_log_'` используется с **\@parameter_value** , чтобы указать, что сообщение должно быть записано в журнал приложений Windows @no__t 3. *write_to_log* имеет тип **sysname** и не имеет значения по умолчанию. *write_to_log* должно иметь значение WITH_LOG или null. Если для *write_to_log* задано значение WITH_LOG или null, а для **\@parameter_value** — **true**, сообщение записывается в журнал приложений Windows. Если для *write_to_log* задано значение WITH_LOG или null, а для **\@parameter_value** — **false**, сообщение не всегда записывается в журнал приложений Windows, но может быть записано в зависимости от того, как возникла ошибка. Если указан *write_to_log* , необходимо также указать значение для **\@parameter_value** .  
+`[ @parameter = ] 'write\_to\_log_'` используется с **\@parameter_value** , чтобы указать, что сообщение должно быть записано в журнал приложений [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. *write_to_log* имеет тип **sysname** и не имеет значения по умолчанию. для *write_to_log* должно быть задано значение WITH_LOG или null. Если параметру *write_to_log* присвоено значение WITH_LOG или значение null, а для параметра **\@parameter_value** равно **true**, то сообщение записывается в журнал приложений Windows. Если параметру *write_to_log* присвоено значение WITH_LOG или null, а для **\@parameter_value** равно **false**, сообщение не всегда записывается в журнал приложений Windows, но может быть записано в зависимости от того, как была вызвана ошибка. Если указано *write_to_log* , необходимо также указать значение для **\@parameter_value** .  
   
 > [!NOTE]  
 >  Если сообщение заносится в журнал приложений Windows, оно также заносится и в журнал ошибок компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
-`[ @parameter_value = ]'value_'` используется с **\@parameter** , чтобы указать, что эта ошибка должна быть записана в журнал приложений Windows @no__t 3. *значение* имеет тип **varchar (5)** и не имеет значения по умолчанию. Если **значение — true**, ошибка всегда записывается в журнал приложений Windows. Если **значение равно false**, то ошибка не всегда записывается в журнал приложений Windows, но может быть записана в зависимости от того, как возникла ошибка. Если указано *значение* , необходимо также указать *write_to_log* для **\@parameter** .  
+`[ @parameter_value = ]'value_'` используется с **параметром\@** , чтобы указать, что ошибка должна быть записана в [!INCLUDE[msCoName](../../includes/msconame-md.md)] журнал приложений Windows. *значение* имеет тип **varchar (5)** и не имеет значения по умолчанию. Если **значение — true**, ошибка всегда записывается в журнал приложений Windows. Если **значение равно false**, то ошибка не всегда записывается в журнал приложений Windows, но может быть записана в зависимости от того, как возникла ошибка. Если указано *значение* , необходимо также указать *write_to_log* для **параметра\@** .  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
- None  
+ Нет  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Результат **sp_altermessage** с параметром WITH_LOG аналогичен параметру RAISERROR with log, за исключением того, что **sp_altermessage** изменяет поведение ведения журнала существующего сообщения. Если сообщение изменено с параметром WITH_LOG, это сообщение всегда записывается в журнал приложений Windows, независимо от того, как была вызвана ошибка. Даже если инструкция RAISERROR выполняется без параметра WITH_LOG, ошибка записывается в журнал приложений Windows.  
   
  Системные сообщения можно изменять с помощью **sp_altermessage**.  
@@ -73,7 +73,7 @@ EXECUTE sp_altermessage 55001, 'WITH_LOG', 'true';
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также статью  
  [RAISERROR (Transact-SQL)](../../t-sql/language-elements/raiserror-transact-sql.md)   
  [sp_addmessage (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md)   
  [sp_dropmessage (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-dropmessage-transact-sql.md)   

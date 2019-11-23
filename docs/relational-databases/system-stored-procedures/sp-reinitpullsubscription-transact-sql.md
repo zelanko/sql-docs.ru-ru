@@ -39,25 +39,25 @@ sp_reinitpullsubscription [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publisher = ] 'publisher'` — это имя издателя. параметр *Publisher* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @publisher = ] 'publisher'` — имя издателя. параметр *Publisher* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @publisher_db = ] 'publisher_db'` — это имя базы данных издателя. *publisher_db* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @publisher_db = ] 'publisher_db'` — имя базы данных издателя. Аргумент *publisher_db* имеет тип **sysname**и не имеет значения по умолчанию.  
   
 `[ @publication = ] 'publication'` — имя публикации. Аргумент *publication* имеет тип **sysname**и значение по умолчанию All, что помечает все подписки для повторной инициализации.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  **sp_reinitpullsubscription** используется в репликации транзакций.  
   
  **sp_reinitpullsubscription** не поддерживается для одноранговой репликации транзакций.  
   
- **sp_reinitpullsubscription** можно вызвать с подписчика для повторной инициализации подписки во время следующего выполнения агент распространения.  
+ **sp_reinitpullsubscription** можно вызвать с подписчика для повторной инициализации подписки во время следующего запуска агент распространения.  
   
  Подписки на публикации, созданные со значением **false** для **\@immediate_sync** , не могут быть повторно инициализированы с подписчика.  
   
- Можно повторно инициализировать подписку по запросу, либо выполнив **sp_reinitpullsubscription** на подписчике, либо **sp_reinitsubscription** на издателе.  
+ Можно повторно инициализировать подписку по запросу, выполнив **sp_reinitpullsubscription** на подписчике или **sp_reinitsubscription** на издателе.  
   
 ## <a name="example"></a>Пример  
  [!code-sql[HowTo#sp_reinitpullsub](../../relational-databases/replication/codesnippet/tsql/sp-reinitpullsubscriptio_1.sql)]  
@@ -65,7 +65,7 @@ sp_reinitpullsubscription [ @publisher = ] 'publisher'
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** или предопределенной роли базы данных **db_owner** могут выполнять **sp_reinitpullsubscription**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также статью  
  [Повторная инициализация подписки](../../relational-databases/replication/reinitialize-a-subscription.md)   
  [Повторная инициализация подписок](../../relational-databases/replication/reinitialize-subscriptions.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

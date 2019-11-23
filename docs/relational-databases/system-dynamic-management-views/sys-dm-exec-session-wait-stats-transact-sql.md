@@ -28,7 +28,7 @@ ms.locfileid: "73982610"
 
   Возвращает сведения обо всех ожиданиях, обнаруженных потоками, которые выполнялись для каждого сеанса. Это представление можно использовать для диагностики проблем с производительностью [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сеансе, а также с конкретными запросами и пакетами.  Это представление возвращает сеанс с теми же сведениями, которые объединены для [sys &#40;. dm_os_wait_stats Transact&#41; -SQL](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md) , но также предоставляет номер **session_id** .  
   
-**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и более поздних версий).  
+**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и выше).  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  

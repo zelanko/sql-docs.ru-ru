@@ -25,7 +25,7 @@ ms.locfileid: "72907327"
 # <a name="sp_mergecleanupmetadata-transact-sql"></a>sp_mergecleanupmetadata (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Следует использовать только в топологиях репликации, включающих серверы под управлением версий [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] до [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] пакета обновления 1 (SP1). **sp_mergecleanupmetadata** позволяет администраторам очищать метаданные в системных таблицах **MSmerge_genhistory**, **MSmerge_contents** и **MSmerge_tombstone** . Эта хранимая процедура выполняется на издателе в базе данных публикации.  
+  Следует использовать только в топологиях репликации, включающих серверы под управлением версий [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] до [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] пакета обновления 1 (SP1). **sp_mergecleanupmetadata** позволяет администраторам очищать метаданные в **MSmerge_genhistory**, **MSmerge_contents** и **MSmerge_tombstone** системных таблицах. Эта хранимая процедура выполняется на издателе в базе данных публикации.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -46,17 +46,17 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
  **0** (успешное завершение) или **1** (сбой)  
   
 ## <a name="remarks"></a>Remarks  
- **sp_mergecleanupmetadata** следует использовать только в топологиях репликации, включающих серверы под управлением версий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] до [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] с пакетом обновления 1 (SP1). Топологии, включающие только [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] с пакетом обновления 1 (SP1) или более поздние версии, должны использовать очистку метаданных, основанную на сроке хранения. При выполнении этой хранимой процедуры следует помнить о необходимом и, возможно, значительном увеличении файла журнала на компьютере, на котором выполняется хранимая процедура.  
+ **sp_mergecleanupmetadata** следует использовать только в топологиях репликации, включающих серверы под управлением версий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] до [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] пакета обновления 1 (SP1). Топологии, включающие только [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] с пакетом обновления 1 (SP1) или более поздние версии, должны использовать очистку метаданных, основанную на сроке хранения. При выполнении этой хранимой процедуры следует помнить о необходимом и, возможно, значительном увеличении файла журнала на компьютере, на котором выполняется хранимая процедура.  
   
 > [!CAUTION]
->  После выполнения **sp_mergecleanupmetadata** по умолчанию все подписки на подписчиках публикаций с метаданными, хранящимися в **MSmerge_genhistory**, **MSmerge_contents** и **MSmerge_tombstone** , помечаются для Повторная инициализация, все ожидающие изменения на подписчике теряются, а текущий моментальный снимок отмечается как устаревший.  
+>  После выполнения **sp_mergecleanupmetadata** по умолчанию все подписки на подписчиках публикаций с метаданными, хранящимися в **MSmerge_genhistory**, **MSmerge_contents** и **MSmerge_tombstone** , помечаются для повторной инициализации, все ожидающие изменения на подписчике теряются, а текущий моментальный снимок отмечается как устаревший.  
 > 
 > [!NOTE]
->  Если в базе данных имеется несколько публикаций и в любой из этих публикаций используется бесконечный срок хранения публикации ( **\@retention**=**0**), выполнение **sp_mergecleanupmetadata** не приводит к очистке слияния. метаданные отслеживания изменений репликации для базы данных. По этой причине, при использовании неограниченного срока хранения публикации необходимо помнить об осторожности.  
+>  Если в базе данных имеется несколько публикаций, а в любой из этих публикаций используется бесконечный срок хранения публикации ( **\@retention**=**0**), выполнение **sp_mergecleanupmetadata** не очищает метаданные отслеживания изменений репликации слиянием для базы данных. По этой причине, при использовании неограниченного срока хранения публикации необходимо помнить об осторожности.  
   
- При выполнении этой хранимой процедуры можно выбрать, следует ли повторно инициализировать подписчики, присвоив параметру **\@Reinitialize_subscriber** **значение true** (по умолчанию) или **false**. Если **sp_mergecleanupmetadata** выполняется с параметром **reinitialize_subscriber\@** , для которого установлено значение **true**, моментальный снимок повторно применяется на подписчике, даже если подписка была создана без исходного моментального снимка (например, если данные моментального снимка и схема были вручную применены или уже существовали на подписчике). При задании значения **false** для параметра следует использовать с осторожностью, поскольку если публикация не инициализирована повторно, необходимо убедиться, что данные на издателе и подписчике синхронизированы.  
+ При выполнении этой хранимой процедуры можно выбрать, следует ли повторно инициализировать подписчики, присвоив параметру **\@Reinitialize_subscriber** **значение true** (по умолчанию) или **false**. Если **sp_mergecleanupmetadata** выполняется с параметром **\@reinitialize_subscriber** , для которого задано **значение true**, моментальный снимок повторно применяется на подписчике, даже если подписка была создана без исходного моментального снимка (например, если данные моментального снимка и схема были вручную применены или уже существовали на подписчике). При задании значения **false** для параметра следует использовать с осторожностью, поскольку если публикация не инициализирована повторно, необходимо убедиться, что данные на издателе и подписчике синхронизированы.  
   
- Независимо от значения **\@reinitialize_subscriber**, **sp_mergecleanupmetadata** завершается ошибкой, если существуют выполняющиеся процессы слияния, пытающиеся передать изменения издателю или переопубликовать подписчику во время сохранения вызывается процедура.  
+ Независимо от значения **\@reinitialize_subscriber** **sp_mergecleanupmetadata** завершается ошибкой, если существуют выполняющиеся процессы слияния, которые пытаются передать изменения издателю или повторной публикации подписчика во время вызова хранимой процедуры.  
   
  **Выполняется sp_mergecleanupmetadata с \@reinitialize_subscriber = TRUE:**  
   
@@ -66,7 +66,7 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
   
 3.  После завершения всех слияний выполните **sp_mergecleanupmetadata**.  
   
-4.  Выполните **sp_reinitmergepullsubscription** на всех подписчиках, использующих именованную или анонимную подписку по запросу для обеспечения конвергенции данных.  
+4.  Выполните **sp_reinitmergepullsubscription** для всех подписчиков, использующих именованную или анонимную подписку по запросу для обеспечения конвергенции данных.  
   
 5.  Если выполняется слияние в непрерывном режиме, см. раздел *специальные рекомендации по объединению непрерывного режима* далее в этом разделе.  
   
@@ -94,7 +94,7 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
   
 -   Завершите агент слияния, а затем выполните еще одно слияние без указанного параметра **-Continuous** .  
   
--   Отключите публикацию с помощью **процедуры sp_changemergepublication** , чтобы гарантировать, что все объединенные в непрерывный режим слияния, выполняющие опрос состояния публикации, завершатся ошибкой.  
+-   Отключите публикацию с помощью **sp_changemergepublication** , чтобы гарантировать, что все объединенные в непрерывный режим слияния, выполняющие опрос состояния публикации, завершатся ошибкой.  
   
     ```  
     EXEC central..sp_changemergepublication @publication = 'dynpart_pubn', @property = 'status', @value = 'inactive'  
@@ -104,20 +104,20 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
   
 -   Добавьте параметр **-Continuous** обратно для агент слияния.  
   
--   Повторно активируйте публикацию с помощью **процедуры sp_changemergepublication.**  
+-   Повторно активируйте публикацию с **sp_changemergepublication.**  
   
     ```  
     EXEC central..sp_changemergepublication @publication = 'dynpart_pubn', @property = 'status', @value = 'active'  
     ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** или предопределенной роли базы данных **db_owner** могут выполнять **sp_mergecleanupmetadata**.  
   
  Для использования данной хранимой процедуры на издателе должен использоваться [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]. Подписчики должны работать под управлением [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] или [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7,0 с пакетом обновления 2 (SP2).  
   
 ## <a name="see-also"></a>См. также статью  
- [MSmerge_genhistory &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/msmerge-genhistory-transact-sql.md)   
- [ &#40;MSmerge_contents Transact-&#41; SQL](../../relational-databases/system-tables/msmerge-contents-transact-sql.md)  
+ [MSmerge_genhistory &#40;  Transact-&#41; SQL](../../relational-databases/system-tables/msmerge-genhistory-transact-sql.md)  
+ [MSmerge_contents &#40;  Transact-&#41; SQL](../../relational-databases/system-tables/msmerge-contents-transact-sql.md)  
  [MSmerge_tombstone &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md)  
   
   

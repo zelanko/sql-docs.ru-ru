@@ -28,7 +28,7 @@ ms.locfileid: "73729571"
 > [!TIP]  
 >  Чтобы упростить администрирование, создайте локальную группу или группу Windows и настройте ее в качестве администратора модели. Впоследствии добавлять пользователей в группу и удалять их из нее можно без обращения к [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)].  
   
-## <a name="prerequisites"></a>Предварительные требования  
+## <a name="prerequisites"></a>необходимые компоненты  
  Чтобы выполнить эту процедуру:  
   
 -   необходимо разрешение на доступ к функциональной области **Разрешения пользователей и групп** ;  
@@ -57,7 +57,7 @@ ms.locfileid: "73729571"
   
 10. Нажмите кнопку **Сохранить**.  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также статью  
  [Администраторы (службы Master Data Services)](../master-data-services/administrators-master-data-services.md)   
  [Назначение разрешения для объекта модели (службы Master Data Services)](../master-data-services/assign-model-object-permissions-master-data-services.md)   
  [Назначение разрешений для элемента иерархии (службы Master Data Services)](../master-data-services/assign-hierarchy-member-permissions-master-data-services.md)   

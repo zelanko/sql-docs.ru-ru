@@ -1,5 +1,5 @@
 ---
-title: sys. DM _os_waiting_tasks (Transact-SQL) | Документация Майкрософт
+title: sys. dm_os_waiting_tasks (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/13/2017
 ms.prod: sql
@@ -33,14 +33,14 @@ ms.locfileid: "72260377"
   Возвращает сведения об очереди задач, ожидающих освобождения определенного ресурса. Дополнительные сведения о задачах см. в разделе [руководств по архитектуре потоков и задач](../../relational-databases/thread-and-task-architecture-guide.md).
    
 > [!NOTE]  
->  Чтобы вызвать его из [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] или [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], используйте имя **sys. DM _pdw_nodes_os_waiting_tasks**.  
+>  Чтобы вызвать это из [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] или [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], используйте имя **sys. dm_pdw_nodes_os_waiting_tasks**.  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**waiting_task_address**|**varbinary (8)**|Адрес ожидающей задачи.|  
 |**session_id**|**smallint**|Идентификатор сеанса, связанного с этой задачей.|  
 |**exec_context_id**|**int**|Идентификатор контекста выполнения, связанного с этой задачей.|  
-|**wait_duration_ms**|**bigint**|Общее время ожидания для этого типа ожиданий в миллисекундах. Это время является инклюзивным для **signal_wait_time**.|  
+|**wait_duration_ms**|**bigint**|Общее время ожидания для этого типа ожиданий в миллисекундах. Это время является инклюзивным **signal_wait_time**.|  
 |**wait_type**|**nvarchar(60)**|Имя типа ожидания.|  
 |**resource_address**|**varbinary (8)**|Адрес ресурса, освобождения которого ожидает задача.|  
 |**blocking_task_address**|**varbinary (8)**|Задача, которая в настоящий момент блокирует этот ресурс.|  
@@ -58,7 +58,7 @@ ms.locfileid: "72260377"
   
  **Владелец ресурса параллельных запросов:**  
   
--   Ексчанжеевент ID = {порт | Pipe} \<hex-адрес > столбцы waittype = \<exchange-Wait-Type > nodeId = \<exchange-node-ID >  
+-   Ексчанжеевент ID = {порт | Pipe}\<шестнадцатеричный адрес > столбцы waittype =\<Exchange-Wait-Type > nodeId =\<сервер Exchange-node-ID >  
   
  **Тип ожидания Exchange:**  
   
@@ -78,43 +78,43 @@ ms.locfileid: "72260377"
   
  **Владелец ресурса блокировки:**  
   
--   \<type-Специальный-Description > идентификатор = Lock @ no__t-1lock-Hex-address > Mode = \<mode > АссоЦиатедобжектид = \<associated-obj-ID >  
+-   \<тип-описание > ID = блокировка\<Lock-Hex-address > Mode =\<Mode > АссоЦиатедобжектид =\<связанный-obj-ID >  
   
-     **\<type-Description > может иметь следующие особенности:**  
+     **\<> описания типа могут иметь следующие особенности:**  
   
-    -   Для базы данных: databaselock подресурс = \<databaselock-Resource > DBID = \<dB-ID >  
+    -   Для базы данных: databaselock подресурс =\<databaselock-Resource > DBID =\<DB-ID >  
   
-    -   Для файла: FileLock ИД = \<file-ID > подресурсе = \<filelock-reresource > DBID = \<dB-ID >  
+    -   Для файла: FileLock ИД =\<файл-ID > подресурсе =\<FileLock-Resource > DBID =\<DB-ID >  
   
-    -   Для объекта: objectlock Локкпартитион = \<lock-Partition-ID > ObjId = \<obj-ID > подресурсе = \<objectlock-Resource > DBID = \<dB-ID >  
+    -   Для объекта: objectlock Локкпартитион =\<Lock-Partition-ID > ObjId =\<obj-ID > подресурсе =\<objectlock-Resource > DBID =\<DB-ID >  
   
-    -   Для страницы: пажелокк ИД = \<file-ID > идентификатор страницы = \<Page-ID > DBID = \<dB-ID > подресурсе = \<pagelock-Resource >  
+    -   Для страницы: пажелокк ИД файла =\<файл-ID > идентификатор страницы =\<Page-ID > DBID =\<DB-ID > подресурсе =\<пажелокк-Resource >  
   
-    -   Для ключа: кэйлокк хобтид = \<hobt-ID > DBID = \<dB-ID >  
+    -   Для ключа: кэйлокк хобтид =\<HoBT-ID > DBID =\<DB-ID >  
   
-    -   Для ЭКСТЕНТа: екстентлокк ИД = \<file-ID > идентификатор страницы = \<Page-ID > DBID = \<dB-ID >  
+    -   Для ЭКСТЕНТа: екстентлокк ИД =\<файл с идентификатором > идентификатор страницы =\<Page-ID > DBID =\<DB-ID >  
   
-    -   Для RID: ридлокк ИД = \<file-ID > идентификатор страницы = \<Page-ID > DBID = \<dB-ID >  
+    -   Для RID: ридлокк ИД файла =\<файл-ID > идентификатор страницы =\<Page-ID > DBID =\<DB-ID >  
   
-    -   Для приложения: аппликатионлокк hash = \<hash > ДатабасепринЦипалид = \<role-ID > DBID = \<dB-ID >  
+    -   Для приложения: аппликатионлокк hash =\<хэш > ДатабасепринЦипалид =\<Role-ID > DBID =\<DB-ID >  
   
-    -   Для МЕТАДАННЫХ: metadatalock подресурс = \<metadata-подресурс > ClassID = \<metadatalock-Description > DBID = \<dB-ID >  
+    -   Для МЕТАДАННЫХ: metadatalock подресурс =\<метаданные — подресурс > ClassID =\<metadatalock-Description > DBID =\<DB-ID >  
   
-    -   Для HOBT: хобтлокк хобтид = \<hobt-ID > подресурсе = \<hobt-Resource > DBID = \<dB-ID >  
+    -   Для HOBT: хобтлокк хобтид =\<HoBT-ID > подресурсе =\<HoBT-Resource > DBID =\<DB-ID >  
   
-    -   Для ALLOCATION_UNIT: аллокунитлокк хобтид = \<hobt-ID > подресурсе = \<alloc-Unit-reresource > DBID = \<dB-ID >  
+    -   Для ALLOCATION_UNIT: аллокунитлокк хобтид =\<HoBT-ID > подресурс =\<Alloc-Unit-a > DBID =\<DB-ID >  
   
-     **\<mode > могут быть:**  
+     **\<режим > может быть следующим:**  
   
      Sch-S, Sch-M, S, U, X, IS, IU, IX, SIU, SIX, UIX, BU, RangeS-S, RangeS-U, RangeI-N, RangeI-S, RangeI-U, RangeI-X, RangeX-, RangeX-U, RangeX-X  
   
  **Владелец внешнего ресурса:**  
   
--   External Екстерналресаурце = \<wait-Type >  
+-   External Екстерналресаурце =\<тип ожидания >  
   
  **Универсальный владелец ресурса:**  
   
--   Трансактионмутекс Трансактионинфо Workspace = \<workspace-ID >  
+-   Трансактионмутекс Трансактионинфо Workspace =\<Рабочая область — идентификатор >  
   
 -   Mutex  
   
@@ -128,16 +128,16 @@ ms.locfileid: "72260377"
   
  **Владелец ресурса кратковременной блокировки:**  
   
--   \<dB-ID >: \<file-ID >: \<page-in-File >  
+-   \<DB-ID >:\<файл идентификатор >:\<страница в файле >  
   
--   @NO__T 0GUID >  
+-   \<GUID >  
   
--   \<latch-класс > (\<latch-address >)  
+-   \<> класса кратковременных блокировок (\<кратковременной блокировки адреса >)  
   
 ## <a name="permissions"></a>Разрешения
 
-Для [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] требуется разрешение `VIEW SERVER STATE`.   
-На уровнях [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровня "Премиум" требуется разрешение `VIEW DATABASE STATE` в базе данных. На уровнях [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровня "Стандартный" и "базовый" требуется **Администратор сервера** или учетная запись **администратора Azure Active Directory** .   
+На [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]требуется `VIEW SERVER STATE` разрешение.   
+На уровнях [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium требуется разрешение `VIEW DATABASE STATE` в базе данных. На уровнях [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard и Basic требуется **Администратор сервера** или учетная запись **администратора Azure Active Directory** .   
  
 ## <a name="example"></a>Пример
 В этом примере будут определены заблокированные сеансы. Выполните запрос [!INCLUDE[tsql](../../includes/tsql-md.md)] в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].
@@ -147,8 +147,8 @@ SELECT * FROM sys.dm_os_waiting_tasks
 WHERE blocking_session_id IS NOT NULL; 
 ``` 
   
-## <a name="see-also"></a>См. также  
-[SQL Server динамические административные представления &#40;, связанные с операционной системой,&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)      
+## <a name="see-also"></a>См. также статью  
+[SQL Server динамическое представление &#40;управления, связанное с операционной&#41; системой,     Transact-SQL](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
 [Руководство по архитектуре потоков и задач](../../relational-databases/thread-and-task-architecture-guide.md)     
    
  

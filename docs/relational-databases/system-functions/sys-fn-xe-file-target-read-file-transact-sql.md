@@ -75,7 +75,7 @@ sys.fn_xe_file_target_read_file ( path, mdpath, initial_file_name, initial_offse
 |event_data|**nvarchar(max)** ;|Содержимое события в формате XML. Не допускает значение NULL.|  
 |file_name|**nvarchar(260)**|Имя файла, содержащего событие. Не допускает значение NULL.|  
 |file_offset|**bigint**|Смещение блока в файле, содержащем событие. Не допускает значение NULL.|  
-|timestamp_utc|**datetime2**|**Применимо к**: [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)] и более поздних версий и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br />Дата и время (часовой пояс UTC) события. Не допускает значение NULL.|  
+|timestamp_utc|**datetime2**|**Применимо к**: [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)] и выше, а также [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br />Дата и время (часовой пояс UTC) события. Не допускает значение NULL.|  
 
   
 ## <a name="remarks"></a>Remarks  

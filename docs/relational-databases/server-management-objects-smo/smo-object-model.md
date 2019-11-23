@@ -25,16 +25,16 @@ ms.locfileid: "70148592"
 # <a name="smo-object-model"></a>Объектная модель SMO
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  Модель объектов SMO представляет собой иерархию объектов. Объект является объектом верхнего уровня, а все объекты класса экземпляра находятся <xref:Microsoft.SqlServer.Management.Smo.Server> в объекте. <xref:Microsoft.SqlServer.Management.Smo.Server>  
+  Модель объектов SMO представляет собой иерархию объектов. Объект <xref:Microsoft.SqlServer.Management.Smo.Server> является объектом верхнего уровня, а все объекты класса экземпляра находятся в объекте <xref:Microsoft.SqlServer.Management.Smo.Server>.  
   
- Класс <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer> является классом верхнего уровня со своей собственной иерархией объектов. <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer> Объект представляет[!INCLUDE[msCoName](../../includes/msconame-md.md)]службыи сетевые параметры, доступные через поставщик WMI. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+ Класс <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer> является классом верхнего уровня со своей собственной иерархией объектов. Объект <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer> представляет [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] служб и сетевые параметры, доступные через поставщик WMI.  
   
  Помимо объектов <xref:Microsoft.SqlServer.Management.Smo.Server> и <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer>, существует несколько служебных классов, представляющих задачи или операции, например <xref:Microsoft.SqlServer.Management.Smo.Transfer>, <xref:Microsoft.SqlServer.Management.Smo.Backup> и <xref:Microsoft.SqlServer.Management.Smo.Restore>.  
   
  Модель объектов SMO состоит из нескольких пространств имен. Дополнительные сведения см. в разделе [Пространства имен объектов SMO](../../relational-databases/server-management-objects-smo/smo-object-model-namespaces.md).  
   
-## <a name="see-also"></a>См. также  
- [Схема модели объектов SMO](../../relational-databases/server-management-objects-smo/smo-object-model-diagram.md)   
+## <a name="see-also"></a>См. также статью  
+ [Диаграмма модели объектов SMO](../../relational-databases/server-management-objects-smo/smo-object-model-diagram.md)   
  [Пространства имен SMO](../../relational-databases/server-management-objects-smo/smo-object-model-namespaces.md)   
  [Основные понятия о поставщике WMI для управления конфигурацией](../../relational-databases/wmi-provider-configuration/wmi-provider-for-configuration-management.md)  
   

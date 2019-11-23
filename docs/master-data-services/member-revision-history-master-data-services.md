@@ -70,7 +70,7 @@ ms.locfileid: "73729111"
 |----------------------|-----------|  
 |Откат журнала изменений элемента|[Откат журнала изменений элемента (Master Data Services)](../master-data-services/rollback-member-revision-history-master-data-services.md)|  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также статью  
  [Создание модели (службы Master Data Services)](../master-data-services/create-a-model-master-data-services.md)   
  [Системные параметры (службы Master Data Services)](../master-data-services/system-settings-master-data-services.md)  
   

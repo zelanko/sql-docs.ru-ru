@@ -37,7 +37,7 @@ ms.locfileid: "73882249"
   
  **В этом разделе**  
   
--   **Перед началом работы выполните следующие действия.**  
+-   **Перед началом работы**  
   
      [Ограничения](#Restrictions)  
   
@@ -91,7 +91,7 @@ ms.locfileid: "73882249"
   
 3.  Используемых Повторно включите репликацию изменений схемы, выполнив [sp_changemergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql), указав значение **replicate_ddl** для **Свойства\@** и значение **1** для **\@ного значения**.  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также статью  
  [Внесение изменений в схемы баз данных публикации](make-schema-changes-on-publication-databases.md)   
  [Внесение изменений в схемы баз данных публикации](make-schema-changes-on-publication-databases.md)  
   

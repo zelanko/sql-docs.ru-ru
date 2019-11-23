@@ -30,7 +30,7 @@ ms.locfileid: "73786762"
 ## <a name="sqlfetch-support-for-large-clr-udts"></a>Поддержка функцией SQLFetch определяемых пользователем типов больших данных CLR  
  Функция**SQLFetch** поддерживает определяемые пользователем типы больших данных CLR. Дополнительные сведения см. в разделе [типы больших определяемых пользователем &#40;типов&#41;данных CLR ODBC](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также статью  
  [SQLFetch](https://go.microsoft.com/fwlink/?LinkId=80703)   
  [Подробные сведения о реализации API-интерфейсов ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   

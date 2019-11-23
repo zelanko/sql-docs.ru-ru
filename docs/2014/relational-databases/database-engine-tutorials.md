@@ -20,16 +20,16 @@ ms.locfileid: "70154614"
 # <a name="database-engine-tutorials"></a>Учебники по компоненту ядра СУБД
   В этом разделе приведены учебники по [!INCLUDE[ssDECurrent](../includes/ssdecurrent-md.md)].  
   
- [Учебник. Начало работы с ядром СУБД](tutorial-getting-started-with-the-database-engine.md)  
+ [Учебник. Приступая к работе с компонентом Database Engine](tutorial-getting-started-with-the-database-engine.md)  
  В этом учебнике описывается установление подключения к экземпляру [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
- [Учебник. SQL Server Management Studio](../ssms/tutorials/tutorial-sql-server-management-studio.md)  
+ [Руководство: SQL Server Management Studio](../ssms/tutorials/tutorial-sql-server-management-studio.md)  
  В этом учебнике описывается интегрированная среда для управления инфраструктурой [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] представляет собой графический интерфейс для настройки экземпляров [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], наблюдения за ними и управления ими. Такая среда также позволяет развертывать, наблюдать и обновлять компоненты уровня данных, используемых приложениями, например базами и хранилищами данных. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] также предоставляет редакторы [!INCLUDE[tsql](../includes/tsql-md.md)], языка многомерных выражений, расширений интеллектуального анализа данных и XML для изменения и отладки скриптов.  
   
  [Учебник. Составление инструкций Transact-SQL](../t-sql/tutorial-writing-transact-sql-statements.md)  
  В этом учебнике описываются основополагающие навыки по написанию инструкций [!INCLUDE[tsql](../includes/tsql-md.md)] для создания объектов в базе данных [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и управления этими объектами.  
   
- [Учебник. Помощник по настройке ядра СУБД](../tools/dta/tutorial-database-engine-tuning-advisor.md)  
+ [Учебник. помощник по настройке ядра СУБД](../tools/dta/tutorial-database-engine-tuning-advisor.md)  
  В этом учебнике описывается использование помощника для проверки обработки запросов и рекомендаций по повышению их производительности.  
   
  [Учебник. Использование типа данных hierarchyid](tables/tutorial-using-the-hierarchyid-data-type.md)  
@@ -38,22 +38,22 @@ ms.locfileid: "70154614"
  [Учебник. Подписывание хранимых процедур с помощью сертификата](tutorial-signing-stored-procedures-with-a-certificate.md)  
  В этом учебнике демонстрируется подписание хранимых процедур с помощью сертификата, созданного [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
- [Учебник. Цепочки владения и переключение контекста](tutorial-ownership-chains-and-context-switching.md)  
+ [Tutorial: Ownership Chains and Context Switching](tutorial-ownership-chains-and-context-switching.md)  
  В этом учебнике приведен пример, в котором рассматриваются основные понятия безопасности [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , включая цепочки владения и переключение контекста.  
   
  [Учебник. Администрирование серверов с помощью управления на основе политик](policy-based-management/tutorial-administering-servers-by-using-policy-based-management.md)  
  Этот учебник учит создавать политики, которые обеспечивают принудительное выполнение стандартов по администрированию сайта.  
   
- [Учебник. Оценка рекомендаций с помощью управления на основе политик](../tutorials/tutorial-evaluating-best-practices-by-using-policy-based-management.md)  
+ [Учебник. Выполнение политик рекомендаций с помощью управления на основе политик](../tutorials/tutorial-evaluating-best-practices-by-using-policy-based-management.md)  
  В этом учебнике показано, как создавать политики, которые могут использоваться для анализа экземпляров компонента [!INCLUDE[ssDE](../includes/ssde-md.md)] в поисках известных проблем.  
   
- [Учебник. SQL Server резервного копирования и восстановления в службе хранилища BLOB-объектов Azure](tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
- В этом учебнике показано, как SQL Server резервное копирование и восстановление в службе хранилища BLOB-объектов Azure.  
+ [Учебник. SQL Server резервное копирование и восстановление в службе хранилища BLOB-объектов Azure](tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+ В этом руководстве показано, как выполнять резервное копирование и восстановление SQL Server в службу хранилища BLOB-объектов Azure.  
   
- [Учебник. SQL Server файлы данных в службе хранилища Azure](tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
- Этот учебник поможет вам понять, как хранить файлы данных SQL Server в службе хранилища BLOB-объектов Azure напрямую.  
+ [Учебник. SQL Server файлов данных в службе хранилища Azure](tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
+ С помощью этого руководства вы научитесь напрямую сохранять файлы данных SQL Server в службе хранилища BLOB-объектов Azure.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также статью  
  [Руководства для SQL Server 2014](../tutorials/tutorials-for-sql-server-2014.md)   
  [TechNet WIKI: образцы SQL Server 2012](https://go.microsoft.com/fwlink/?linkID=220734)  
   

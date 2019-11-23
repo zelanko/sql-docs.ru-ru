@@ -29,7 +29,7 @@ ms.locfileid: "72782852"
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="Security"></a> Безопасность  
   
 ####  <a name="Permissions"></a> Разрешения  
  Требуются разрешения CONNECT, VIEW SERVER STATE и VIEW ANY DEFINITION.  
@@ -88,7 +88,7 @@ ms.locfileid: "72782852"
   
      Эти командлеты принимают следующие параметры.  
   
-    |Параметр|Description|  
+    |Параметр|Описание|  
     |------------|-----------------|  
     |`AllowUserPolicies`|Выполняет пользовательские политики из категорий политик AlwaysOn.|  
     |`InputObject`|Коллекция объектов, представляющих состояния групп доступности, реплик доступности или базы данных доступности (в зависимости от того, какой используется командлет). Этот командлет вычисляет исправность указанных объектов.|  
@@ -103,13 +103,13 @@ ms.locfileid: "72782852"
     ```  
   
     > [!NOTE]  
-    >  Чтобы просмотреть синтаксис командлета, воспользуйтесь командлетом `Get-Help` в среде [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Дополнительные сведения см. в разделе [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
+    >  Чтобы просмотреть синтаксис командлета, воспользуйтесь командлетом `Get-Help` в среде [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Дополнительные сведения см. в статье [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
   
  **Настройка и использование поставщика SQL Server PowerShell**  
   
--   [Поставщик SQL Server PowerShell](../../../powershell/sql-server-powershell-provider.md)  
+-   [SQL Server PowerShell, поставщик](../../../powershell/sql-server-powershell-provider.md)  
   
--   [Получение справок по SQL Server PowerShell](../../../powershell/sql-server-powershell.md)  
+-   [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)  
   
 ##  <a name="RelatedContent"></a> См. также  
  **Блоги группы SQL Server AlwaysOn. Мониторинг работоспособности AlwaysOn с помощью PowerShell:**  
@@ -123,7 +123,7 @@ ms.locfileid: "72782852"
 -   [Часть 4. Интеграция с агентом SQL Server](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/15/the-always-on-health-model-part-4.aspx)  
   
 ## <a name="see-also"></a>См. также статью  
- [Общие сведения о &#40;группы доступности AlwaysOn&#41; SQL Server](overview-of-always-on-availability-groups-sql-server.md)    
+ [Общие сведения о &#40;группы доступности AlwaysOn&#41; SQL Server](overview-of-always-on-availability-groups-sql-server.md)   
  [Администрирование группы доступности (SQL Server)](administration-of-an-availability-group-sql-server.md)   
  [Мониторинг групп доступности (SQL Server)](monitoring-of-availability-groups-sql-server.md)   
  [Политики AlwaysOn для проблем в работе с группы доступности AlwaysOn (SQL Server)](always-on-policies-for-operational-issues-always-on-availability.md) 

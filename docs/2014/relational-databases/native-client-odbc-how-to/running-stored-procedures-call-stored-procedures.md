@@ -39,8 +39,8 @@ ms.locfileid: "72688667"
 > [!NOTE]  
 >  Если приложение отправляет процедуру при помощи синтаксиса Transact-SQL EXECUTE (в отличие от escape-последовательности ODBC CALL), драйвер SQL Server ODBC передает этот вызов процедуры SQL Server в виде инструкции SQL, а не RPC. Кроме того, при использовании инструкции Transact-SQL EXECUTE выходные параметры не возвращаются.  
   
-## <a name="see-also"></a>См. также  
- [Разделы &#40;руководства по запуску хранимых процедур&#41; ODBC](../../database-engine/dev-guide/running-stored-procedures-how-to-topics-odbc.md)  
+## <a name="see-also"></a>См. также статью  
+ [Разделы &#40;руководства по запуску хранимых процедур&#41;  ODBC](../../database-engine/dev-guide/running-stored-procedures-how-to-topics-odbc.md)  
  [Пакетная обработка вызовов хранимых процедур](../native-client-odbc-stored-procedures/batching-stored-procedure-calls.md)   
  [Выполнение хранимых процедур](../native-client-odbc-stored-procedures/running-stored-procedures.md)   
  [Вызов хранимой процедуры](../native-client-odbc-stored-procedures/calling-a-stored-procedure.md)   

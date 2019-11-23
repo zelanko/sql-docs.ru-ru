@@ -209,7 +209,7 @@ ms.locfileid: "73786324"
 |SQL_UNION|SQL_U_UNION SQL_U_UNION_ALL|  
 |SQL_USER_NAME|Текущее имя пользователя.|  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также статью  
    [функции SQLGetInfo](https://go.microsoft.com/fwlink/?LinkId=59354)  
  [Подробные сведения о реализации API-интерфейсов ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   

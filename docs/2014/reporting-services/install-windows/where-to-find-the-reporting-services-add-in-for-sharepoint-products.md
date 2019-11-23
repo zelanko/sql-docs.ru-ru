@@ -64,7 +64,7 @@ ms.locfileid: "73637878"
   
  Последняя версия этого файла доступна в центре загрузки Майкрософт [!INCLUDE[msCoName](../../includes/msconame-md.md)] на странице [Надстройка служб Microsoft SQL Server 2008 Reporting Services для технологий Microsoft SharePoint](https://www.microsoft.com/download/details.aspx?id=622).  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также статью  
  [Установка или удаление надстройки Reporting Services для SharePoint &#40;SharePoint 2010 и SharePoint 2013&#41; ](install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)   
  [Добавление типов содержимого сервера отчетов в библиотеку &#40;Reporting Services в режиме&#41; интеграции с SharePoint](../add-reporting-services-content-types-to-a-sharepoint-library.md)   
  [После удаления надстройки служб Reporting Services в зоне, отличной от зоны по умолчанию, страницы SharePoint будут недоступны для просмотра](https://support.microsoft.com/kb/2009212)  

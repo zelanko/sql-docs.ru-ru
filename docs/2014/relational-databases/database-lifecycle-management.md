@@ -44,11 +44,11 @@ ms.locfileid: "70154554"
   
  Полностью этот раздел можно прочитать по адресу: [Управление жизненным циклом баз данных](https://go.microsoft.com/fwlink/?LinkId=276949).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также статью  
  [Домашняя страница Azure](http://www.windowsazure.com/)   
  [Центр разработчиков Azure](http://www.windowsazure.com/develop/overview/)   
  [Центр управления Azure](http://www.windowsazure.com/manage/overview/)   
- [Блог группы разработчиков Azure](http://www.windowsazure.com/community/blog/)   
+ [Блог группы разработки Azure](http://www.windowsazure.com/community/blog/)   
  [Варианты поддержки Azure](http://www.windowsazure.com/support/contact/)  
   
   

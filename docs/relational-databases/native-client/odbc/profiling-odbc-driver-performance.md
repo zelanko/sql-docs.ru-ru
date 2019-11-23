@@ -84,7 +84,7 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
 |SQLiduRows|Количество инструкций INSERT, DELETE и UPDATE после SQL_PERF_START.|  
 |SQLSelects|Количество инструкций SELECT, обработанных после SQL_PERF_START.|  
 |SQLSelectRows|Количество строк, выбранных после SQL_PERF_START.|  
-|Transactions|Количество пользовательских транзакций после SQL_PERF_START, включая откаты. Если приложение ODBC запущено с параметром SQL_AUTOCOMMIT_ON, каждая команда считается транзакцией.|  
+|Транзакции|Количество пользовательских транзакций после SQL_PERF_START, включая откаты. Если приложение ODBC запущено с параметром SQL_AUTOCOMMIT_ON, каждая команда считается транзакцией.|  
 |SQLPrepares|Число вызовов [функций SQLPrepare](https://go.microsoft.com/fwlink/?LinkId=59360) после SQL_PERF_START.|  
 |ExecDirects|Число вызовов **SQLExecDirect** после SQL_PERF_START.|  
 |SQLExecutes|Число вызовов **SQLExecute** после SQL_PERF_START.|  
@@ -120,7 +120,7 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
 |msExecutionTime|Общее количество времени, затраченного драйвером на обработку после SQL_PERF_START, включая время на ожидание ответов от сервера.|  
 |msNetworkServerTime|Общее количество времени, затраченного драйвером на ожидание ответов от сервера.|  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также статью  
  [SQL Server Native Client &#40; &#41; ODBC](../../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)  
  [Разделы &#40;руководства по профилированию драйверов ODBC в ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)  
   

@@ -33,7 +33,7 @@ ms.locfileid: "73727826"
 > [!NOTE]  
 >  Чтобы версию можно было зафиксировать, все элементы должны успешно пройти проверку.  
   
-## <a name="prerequisites"></a>Предварительные требования  
+## <a name="prerequisites"></a>необходимые компоненты  
  Чтобы выполнить эту процедуру:  
   
 -   необходимо иметь разрешение на доступ к функциональной области **Управление версиями** ;  
@@ -59,11 +59,11 @@ ms.locfileid: "73727826"
     > [!NOTE]  
     >  Когда исчезнет индикатор выполнения, проверка версии будет закончена.  
   
-## <a name="next-steps"></a>Следующие шаги  
+## <a name="next-steps"></a>Next Steps  
   
 -   [Блокировка версии (службы Master Data Services)](../master-data-services/lock-a-version-master-data-services.md)  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также статью  
  [Состояния проверки (службы Master Data Services)](../master-data-services/validation-statuses-master-data-services.md)   
  [Проверка хранимых процедур (службы Master Data Services)](../master-data-services/validation-stored-procedure-master-data-services.md)   
  [Версии (службы Master Data Services)](../master-data-services/versions-master-data-services.md)   

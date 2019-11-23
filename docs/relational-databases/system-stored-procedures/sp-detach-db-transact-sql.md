@@ -45,7 +45,7 @@ sp_detach_db [ @dbname= ] 'database_name'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @dbname = ] 'database_name'` — имя базы данных, подсоединяемой. *database_name* имеет значение **sysname** и значение по умолчанию NULL.  
+`[ @dbname = ] 'database_name'` — имя базы данных, подсоединяемой. *database_name* имеет значение типа **sysname** и значение по умолчанию NULL.  
   
 `[ @skipchecks = ] 'skipchecks'` указывает, следует ли пропустить или выполнить обновление статистики. *параметром skipchecks установленным* — это значение типа **nvarchar (10)** со ЗНАЧЕНИЕМ по умолчанию NULL. Чтобы пропустить СТАТИСТИКУ обновления, укажите **значение true**. Чтобы явно выполнить обновление статистики, укажите **значение false**.  
   
@@ -54,15 +54,15 @@ sp_detach_db [ @dbname= ] 'database_name'
 `[ @keepfulltextindexfile = ] 'KeepFulltextIndexFile'` указывает, что файл полнотекстового индекса, связанный с отсоединяемой базой данных, не будет удален во время операции отсоединения базы данных. *KeepFulltextIndexFile* — это значение типа **nvarchar (10)** со значением по умолчанию **true**. Если *KeepFulltextIndexFile* имеет **значение false**, все файлы полнотекстовых индексов, связанные с базой данных, и метаданные полнотекстового индекса удаляются, если только база данных не доступна только для чтения. Если задано значение NULL или **true**, метаданные, связанные с полнотекстовым текстом, сохраняются.  
   
 > [!IMPORTANT]
->  Параметр **\@keepfulltextindexfile** будет удален в следующей версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Не используйте его при работе над новыми приложениями и как можно быстрее измените приложения, в которых он в настоящее время используется.  
+>  Параметр **\@KeepFulltextIndexFile** будет удален в следующей версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Не используйте его при работе над новыми приложениями и как можно быстрее измените приложения, в которых он в настоящее время используется.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
- None  
+ Нет  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  При отсоединении базы данных все метаданные удаляются. Если база данных была базой данных по умолчанию для любых учетных записей входа, база данных **master** станет базой по умолчанию.  
   
 > [!NOTE]  
@@ -82,7 +82,7 @@ sp_detach_db [ @dbname= ] 'database_name'
   
 -   Имеется моментальный снимок базы данных.  
   
-     Перед отсоединением базы данных необходимо удалить все моментальные снимки. Дополнительные сведения см. в разделе [Удаление моментального снимка базы данных (Transact-SQL)](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md).  
+     Перед отсоединением базы данных необходимо удалить все моментальные снимки. Дополнительные сведения см. в разделе [Drop a Database Snapshot &#40;Transact-SQL&#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md).  
   
     > [!NOTE]  
     >  Невозможно отсоединить или присоединить моментальный снимок базы данных.  
@@ -112,7 +112,7 @@ GO
 ```  
   
 > [!NOTE]  
->  Для принудительной установки текущих пользователей из базы данных немедленно или в течение заданного количества секунд также используйте параметр ROLLBACK: ALTER DATABASE *имя_базы_данных* Set SINGLE_USER with ROLLBACK *rollback_option*. Дополнительные сведения см. в разделе [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md).  
+>  Для принудительной установки текущих пользователей из базы данных немедленно или в течение заданного количества секунд также используйте параметр ROLLBACK: ALTER DATABASE *database_name* Set SINGLE_USER WITH ROLLBACK *rollback_option*. Дополнительные сведения см. в разделе [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md).  
   
 ## <a name="reattaching-a-database"></a>Повторное присоединение базы данных  
  Отсоединенные файлы останутся на диске и могут быть повторно подсоединены с помощью вызова CREATE DATABASE (с параметрами FOR ATTACH или FOR ATTACH_REBUILD_LOG). Файлы можно также переместить на другой сервер и подсоединить там.  
@@ -134,7 +134,7 @@ exec sp_detach_db @dbname='AdventureWorks2012'
     , @keepfulltextindexfile='true';  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также статью  
  [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)   
  [Присоединение и отсоединение базы данных (SQL Server)](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
  [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md)   

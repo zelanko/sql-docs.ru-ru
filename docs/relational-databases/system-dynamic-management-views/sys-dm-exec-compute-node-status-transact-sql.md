@@ -1,5 +1,5 @@
 ---
-title: sys. DM _exec_compute_node_status (Transact-SQL) | Документация Майкрософт
+title: sys. dm_exec_compute_node_status (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2019
 ms.prod: sql
@@ -28,12 +28,12 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/04/2019
 ms.locfileid: "73532746"
 ---
-# <a name="sysdm_exec_compute_node_status-transact-sql"></a>sys. DM _exec_compute_node_status (Transact-SQL)
+# <a name="sysdm_exec_compute_node_status-transact-sql"></a>sys. dm_exec_compute_node_status (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
   Содержит дополнительные сведения о производительности и состоянии всех узлов Polybase. Содержит по одной строке на каждый узел.  
   
-|Имя столбца|Тип данных|Описание|Диапазон|  
+|Column Name|Тип данных|Описание|Диапазон|  
 |-----------------|---------------|-----------------|-----------|  
 |compute_node_id|`int`|Уникальный числовой идентификатор, связанный с узлом.|Уникален в масштабном кластере независимо от типа.|  
 |process_id|`int`|||  
@@ -51,7 +51,7 @@ ms.locfileid: "73532746"
 |error_id|`nvarchar(36)`|Уникальный идентификатор последней ошибки, произошедшей на этом узле.||
 |compute_pool_id|`int`|Уникальный идентификатор пула.|
 
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также статью  
  [Устранение неполадок в polybase с помощью динамических административных представлений](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
  [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Динамические административные представления &#40;, связанные с базами данных TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  

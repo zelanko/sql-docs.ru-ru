@@ -54,7 +54,7 @@ ms.locfileid: "73787671"
   
  Следующие атрибуты, которые устанавливаются путем вызова [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md), определяют результирующий набор, возвращаемый **SQLBrowseConnect**.  
   
-|Attribute|Описание|  
+|attribute|Описание|  
 |---------------|-----------------|  
 |SQL_COPT_SS_BROWSE_CONNECT|Если задано значение SQL_MORE_INFO_YES, **SQLBrowseConnect** возвращает расширенную строку свойств сервера.<br /><br /> Ниже приведен пример расширенной строки, возвращаемой функцией **SQLBrowseConnect**:<br /><br /> <br /><br /> `ServerName\InstanceName;Clustered:No;Version:8.00.131`<br /><br /> <br /><br /> В этой строке различные порции данных о сервере разделяются точками с запятой. Для разделения различных экземпляров сервера используйте запятые.|  
 |SQL_COPT_SS_BROWSE_SERVER|Если указано имя сервера, **SQLBrowseConnect** возвратит сведения для указанного сервера. Если SQL_COPT_SS_BROWSE_SERVER имеет значение NULL, **SQLBrowseConnect** возвращает сведения обо всех серверах в домене.<br /><br /> <br /><br /> Обратите внимание, что из-за проблем с сетью **SQLBrowseConnect** может не получить своевременный ответ от всех серверов. Поэтому возвращаемый список серверов может отличаться от запроса к запросу.|  
@@ -74,7 +74,7 @@ ms.locfileid: "73787671"
 |---------------------|  
 |Добавлена документация по SQL_COPT_SS_BROWSE_CACHE_DATA.|  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также статью  
    [функции SQLBrowseConnect](https://go.microsoft.com/fwlink/?LinkId=59329)  
  [Подробные сведения о реализации API-интерфейсов ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   

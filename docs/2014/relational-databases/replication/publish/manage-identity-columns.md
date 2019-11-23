@@ -29,7 +29,7 @@ ms.locfileid: "73882295"
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Recommendations"></a> Рекомендации  
+###  <a name="Recommendations"></a> рекомендации  
   
 -   При публикации таблицы в нескольких публикациях необходимо указать одинаковые параметры управления диапазонами идентификаторов для всех публикаций. Дополнительные сведения см. в разделе "Публикация таблиц в нескольких публикациях" статьи [Публикация данных и объектов базы данных](publish-data-and-database-objects.md).  
   
@@ -77,7 +77,7 @@ ms.locfileid: "73882295"
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-5.  Щелкните **ОК**, чтобы вернуться в диалоговое окно **Свойства публикации — \<публикация>** .  
+5.  Щелкните **ОК**, чтобы вернуться в диалоговое окно **Свойства публикации — \<публикация>** .  
   
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
  Чтобы указать параметры управления диапазонами идентификаторов, при создании статьи можно использовать хранимые процедуры репликации.  
@@ -136,8 +136,8 @@ ms.locfileid: "73882295"
   
     -   Чтобы отключить автоматическое управление диапазонами идентификаторов, выполните на издателе в базе данных публикации хранимую процедуру [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) . Укажите значение **identityrangemanagementoption** в параметре **\@property** и значение **manual** или **none** в параметре **\@value**.  
   
-## <a name="see-also"></a>См. также раздел  
- [Одноранговая репликация транзакций](../transactional/peer-to-peer-transactional-replication.md)   
+## <a name="see-also"></a>См. также статью  
+ [Peer-to-Peer Transactional Replication](../transactional/peer-to-peer-transactional-replication.md)   
  [Replication System Stored Procedures Concepts](../concepts/replication-system-stored-procedures-concepts.md)   
  [Replicate Identity Columns](replicate-identity-columns.md) (Репликация столбцов идентификаторов)  
   

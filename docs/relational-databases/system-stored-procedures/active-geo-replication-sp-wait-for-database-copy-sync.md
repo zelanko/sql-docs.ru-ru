@@ -31,7 +31,7 @@ ms.locfileid: "73844397"
   
 ||  
 |-|  
-|**Применимо к**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
+|**Applies to**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -61,7 +61,7 @@ sp_wait_for_database_copy_sync [ @target_server = ] 'server_name'
 ## <a name="permissions"></a>Разрешения  
  Эту системную хранимую процедуру может вызывать любой пользователь в базе данных-источнике. Имя входа должно быть пользователем и в базе данных-источнике, и в активной базе данных-получателе.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Все транзакции, зафиксированные до вызова **sp_wait_for_database_copy_sync** , отправляются в активную базу данных-получатель.  
   
 ## <a name="examples"></a>Примеры  
@@ -74,7 +74,7 @@ EXEC sys.sp_wait_for_database_copy_sync @target_server = N'ubfyu5ssyt1', @target
 GO  
 ```  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также статью  
  [sys. dm_continuous_copy_status &#40;базы&#41; данных SQL Azure](../../relational-databases/system-dynamic-management-views/sys-dm-continuous-copy-status-azure-sql-database.md)   
  [Динамические административные представления и функции &#40;Георепликации база данных SQL Azure&#41;](../../relational-databases/system-dynamic-management-views/geo-replication-dynamic-management-views-and-functions-azure-sql-database.md)  
   

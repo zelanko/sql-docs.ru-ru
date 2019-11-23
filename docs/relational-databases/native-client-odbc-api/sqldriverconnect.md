@@ -42,7 +42,7 @@ ms.locfileid: "73787094"
   
  Если значение параметра *DriverCompletion* равно SQL_DRIVER_NOPROMPT или SQL_DRIVER_COMPLETE_REQUIRED, а язык или база данных поступают из строки подключения и либо являются недопустимыми, **SQLDriverConnect** возвращает SQL_ERROR.  
   
- Если значение параметра *DriverCompletion* равно SQL_DRIVER_NOPROMPT или SQL_DRIVER_COMPLETE_REQUIRED, а язык или база данных поступают из определений источника данных ODBC и либо являются недопустимыми, **SQLDriverConnect** использует язык по умолчанию или база данных для указанного идентификатора пользователя и возвращает SQL_SUCCESS_WITH_INFO.  
+ Если значение параметра *DriverCompletion* равно SQL_DRIVER_NOPROMPT или SQL_DRIVER_COMPLETE_REQUIRED, а язык или база данных поступают из определений источника данных ODBC и либо являются недопустимыми, **SQLDriverConnect** использует язык или базу данных по умолчанию для указанного идентификатора пользователя и возвращает SQL_SUCCESS_WITH_INFO.  
   
  Если значение параметра *DriverCompletion* равно SQL_DRIVER_COMPLETE или SQL_DRIVER_PROMPT и если язык или база данных являются недопустимыми, **SQLDriverConnect** повторно отображает диалоговое окно.  
   
@@ -79,7 +79,7 @@ SQLDriverConnect(hdbc, hwnd,
 "DRIVER={SQL Server Native Client 10};SERVER=(local);Trusted_Connection=yes"  
 ```  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также статью  
    [функции SQLDriverConnect](https://go.microsoft.com/fwlink/?LinkId=59340)  
  [Сведения о реализации API ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)   
  [SET ANSI_NULLS (Transact-SQL)](../../t-sql/statements/set-ansi-nulls-transact-sql.md)   

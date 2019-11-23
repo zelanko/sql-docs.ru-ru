@@ -35,7 +35,7 @@ ms.locfileid: "72782213"
  Объекты агента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] находятся в пространстве имен <xref:Microsoft.SqlServer.Management.Smo.Agent>.  
   
 ## <a name="examples"></a>Примеры  
- Чтобы использовать какой-либо из представленных примеров кода, нужно выбрать среду, шаблон и язык программирования, с помощью которых будет создаваться приложение. Дополнительные сведения см. в статьях [Создание проекта Visual Basic SMO в Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) или [Создание проекта Visual&#35; C SMO в Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Чтобы использовать какой-либо из представленных примеров кода, необходимо выбрать среду, шаблон и язык программирования, с помощью которых будет создаваться приложение. Дополнительные сведения см. в статьях [Создание проекта Visual Basic SMO в Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) или [Создание проекта Visual&#35; C SMO в Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 1.  В программах, в которых используется агент [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], необходимо включать инструкцию `Imports` для определения пространства имен Agent. Вставьте инструкцию после других инструкций `Imports` и перед любыми декларациями в приложении.  
   
@@ -281,5 +281,5 @@ pa.AddSubSystem(AgentSubSystem.CmdExec);
 ```  
   
 ## <a name="see-also"></a>См. также статью  
- [Агент SQL Server](../../../ssms/agent/sql-server-agent.md)    
+ [Агент SQL Server](../../../ssms/agent/sql-server-agent.md)   
  [Реализация заданий](../../../ssms/agent/implement-jobs.md)  

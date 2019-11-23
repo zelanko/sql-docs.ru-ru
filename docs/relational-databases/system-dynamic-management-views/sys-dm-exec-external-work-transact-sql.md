@@ -1,5 +1,5 @@
 ---
-title: sys. DM _exec_external_work (Transact-SQL) | Документация Майкрософт
+title: sys. dm_exec_external_work (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2019
 ms.prod: sql
@@ -29,20 +29,20 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/04/2019
 ms.locfileid: "73532951"
 ---
-# <a name="sysdm_exec_external_work-transact-sql"></a>sys. DM _exec_external_work (Transact-SQL)
+# <a name="sysdm_exec_external_work-transact-sql"></a>sys. dm_exec_external_work (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
   Возвращает сведения о рабочей нагрузке для каждого рабочего узла на каждом из вычислений.  
   
- Запросите представление sys. DM _exec_external_work, чтобы обозначить работу для взаимодействия с внешним источником данных (например, Hadoop или External SQL Server).  
+ Запросите представление sys. dm_exec_external_work, чтобы обозначить работу для взаимодействия с внешним источником данных (например, Hadoop или External SQL Server).  
   
-|Имя столбца|Тип данных|Описание|Диапазон|  
+|Column Name|Тип данных|Описание|Диапазон|  
 |-----------------|---------------|-----------------|-----------|  
-|execution_id|`nvarchar(32)`|Уникальный идентификатор связанного запроса Polybase.|См. раздел *request_ID* в [sys. &#40;DM _exec_requests Transact&#41;-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md).|  
-|step_index|`int`|Запрос, выполняемый этим исполнителем.|См. раздел *step_index* в [sys. &#40;DM _exec_requests Transact&#41;-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md).|  
-|dms_step_index|`int`|Шаг в плане DMS, который выполняется этим исполнителем.|См. раздел [sys. &#40;DM _EXEC_DMS_WORKERS Transact&#41;-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-workers-transact-sql.md).|  
-|compute_node_id|`int`|Узел, на котором запущена Рабочая роль.|См. раздел [sys. &#40;DM _EXEC_COMPUTE_NODES Transact&#41;-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md).|  
-|type|`nvarchar(60)`|Тип внешней работы.|"Разделение файлов"|  
+|execution_id|`nvarchar(32)`|Уникальный идентификатор связанного запроса Polybase.|См. *request_ID* в разделе [sys &#40;. dm_exec_requests Transact&#41;-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md).|  
+|step_index|`int`|Запрос, выполняемый этим исполнителем.|См. *step_index* в разделе [sys &#40;. dm_exec_requests Transact&#41;-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md).|  
+|dms_step_index|`int`|Шаг в плане DMS, который выполняется этим исполнителем.|См. раздел [sys &#40;. DM_EXEC_DMS_WORKERS Transact&#41;-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-workers-transact-sql.md).|  
+|compute_node_id|`int`|Узел, на котором запущена Рабочая роль.|См. раздел [sys &#40;. DM_EXEC_COMPUTE_NODES Transact&#41;-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md).|  
+|Тип|`nvarchar(60)`|Тип внешней работы.|"Разделение файлов"|  
 |work_id|`int`|Идентификатор фактического разбиения.|Больше или равно 0.|  
 |input_name|`nvarchar(4000)`|Имя входных данных для чтения|Имя файла при использовании Hadoop.|  
 |read_location|`bigint`|Смещение или расположение чтения.|Смещение файла для чтения.|  
@@ -54,7 +54,7 @@ ms.locfileid: "73532951"
 |total_elapsed_time|`int`|Общее время в миллисекундах||
 |compute_pool_id|`int`|Уникальный идентификатор пула.|
 
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также статью  
  [Устранение неполадок в polybase с помощью динамических административных представлений](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
  [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Динамические административные представления &#40;, связанные с базами данных TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  

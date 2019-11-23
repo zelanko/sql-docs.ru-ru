@@ -112,7 +112,7 @@ ms.locfileid: "73785524"
   
  `service=<service-name>[;(local database=<database>|broker instance=<broker instance>)]`  
   
- Например:  
+ Пример:  
   
  `service=mySSBService;local database=mydb`  
   
@@ -147,7 +147,7 @@ ms.locfileid: "73785524"
   
  Если функция каталога, отличная от then SQLTables, SQLColumns или SQLPrimaryKeys, вызывается, когда SQL_SOPT_SS_NAME_SCOPE имеет значение, отличное от SQL_SS_NAME_SCOPE_TABLE, возвращается SQL_ERROR. Создается диагностическая запись с параметром SQLSTATE HY010 и сообщением «Ошибочная последовательность функций (значение атрибута SQL_SOPT_SS_NAME_SCOPE не равно SQL_SS_NAME_SCOPE_TABLE)».  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также статью  
    [функции SQLGetStmtAttr](https://go.microsoft.com/fwlink/?LinkId=59355)  
  [Подробные сведения о реализации API-интерфейсов ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   

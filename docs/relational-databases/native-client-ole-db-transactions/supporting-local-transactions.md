@@ -128,7 +128,7 @@ if (FAILED(hr))
 // Release any references and continue.  
 ```  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также статью  
  [Транзакции](../../relational-databases/native-client-ole-db-transactions/transactions.md)   
  [Работа с изоляцией моментального снимка](../../relational-databases/native-client/features/working-with-snapshot-isolation.md)  
   

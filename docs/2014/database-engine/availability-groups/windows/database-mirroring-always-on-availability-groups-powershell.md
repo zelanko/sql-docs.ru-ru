@@ -26,19 +26,19 @@ ms.locfileid: "72782992"
   
  **В этом разделе**  
   
--   **Before you begin:**  [Security](#Security)  
+-   **Перед началом работы:**  [безопасность](#Security)  
   
 -   **Создание конечной точки зеркального отображения базы данных с помощью следующих средств:**  [PowerShell](#PowerShellProcedure)  
   
 ## <a name="before-you-begin"></a>Перед началом  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="Security"></a> Безопасность  
   
 > [!IMPORTANT]  
 >  Алгоритм RC4 устарел. [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)] Вместо этого рекомендуется использовать алгоритм AES.  
   
 ####  <a name="Permissions"></a> Разрешения  
- Требуется разрешение CREATE ENDPOINT или членство в предопределенной роли сервера sysadmin. Дополнительные сведения см. в разделе [GRANT, предоставление разрешений на конечную точку (Transact-SQL)](/sql/t-sql/statements/grant-endpoint-permissions-transact-sql).  
+ Требуется разрешение CREATE ENDPOINT или членство в предопределенной роли сервера sysadmin. Дополнительные сведения см. в разделе [GRANT, предоставление разрешений конечной точке (Transact-SQL)](/sql/t-sql/statements/grant-endpoint-permissions-transact-sql).  
   
 ##  <a name="PowerShellProcedure"></a> Использование PowerShell  
  **Создание конечной точки зеркального отображения базы данных**  
@@ -74,7 +74,7 @@ Set-SqlHadrEndpoint -InputObject $endpoint -State "Started"
   
 -   [Указание сетевого адреса сервера (зеркальное отображение базы данных)](../../database-mirroring/specify-a-server-network-address-database-mirroring.md)  
   
--   [Укажите URL-адрес конечной точки при добавлении или изменении реплики доступности (SQL Server)](specify-endpoint-url-adding-or-modifying-availability-replica.md)  
+-   [Указание URL-адреса конечной точки при добавлении или изменении реплики доступности (SQL Server)](specify-endpoint-url-adding-or-modifying-availability-replica.md)  
   
  **Просмотр сведений о конечной точке зеркального отображения базы данных**  
   

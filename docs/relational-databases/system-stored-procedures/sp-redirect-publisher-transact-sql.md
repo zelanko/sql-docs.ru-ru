@@ -40,30 +40,30 @@ sp_redirect_publisher
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @original_publisher = ] 'original_publisher'` имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], который первоначально опубликовал базу данных. *original_publisher* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @original_publisher = ] 'original_publisher'` имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], который первоначально опубликовал базу данных. Аргумент *original_publisher* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @publisher_db = ] 'publisher_db'` имя публикуемой базы данных. *publisher_db* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @publisher_db = ] 'publisher_db'` имя публикуемой базы данных. Аргумент *publisher_db* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @redirected_publisher = ] 'redirected_publisher'` — имя прослушивателя группы доступности, связанного с группой доступности, который будет новым издателем. *redirected_publisher* имеет тип **sysname**и не имеет значения по умолчанию. Когда прослушивателю группы доступности задан порт, отличный от порта по умолчанию, указывайте номер порта вместе с именем прослушивателя, например `'Listenername,51433'`  
+`[ @redirected_publisher = ] 'redirected_publisher'` имя прослушивателя группы доступности, связанного с группой доступности, который будет новым издателем. Аргумент *redirected_publisher* имеет тип **sysname**и не имеет значения по умолчанию. Когда прослушивателю группы доступности задан порт, отличный от порта по умолчанию, указывайте номер порта вместе с именем прослушивателя, например `'Listenername,51433'`  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
- None  
+ Нет  
   
-## <a name="remarks"></a>Примечания  
- **sp_redirect_publisher** используется, чтобы разрешить перенаправление издателя репликации в текущий первичный объект группы доступности Always on, связав пару издателя и базы данных с прослушивателем группы доступности. Выполните **sp_redirect_publisher** после настройки прослушивателя AG для группы доступности, содержащей опубликованную базу данных.  
+## <a name="remarks"></a>Remarks  
+ **sp_redirect_publisher** используется, чтобы разрешить перенаправление издателя репликации на текущий первичный ресурс группы доступности Always on, связав пару издателя и базы данных с прослушивателем группы доступности. Выполните **sp_redirect_publisher** после настройки прослушивателя AG для группы доступности, содержащей опубликованную базу данных.  
   
- Если база данных публикации на исходном издателе удаляется из группы доступности на первичной реплике, выполните **sp_redirect_publisher** без указания значения для параметра *\@redirected_publisher* , чтобы удалить перенаправление для пары "издатель — база данных". Дополнительные сведения о перенаправлении издателя в см. в разделе [обслуживание базы данных &#40;&#41;публикации AlwaysOn SQL Server](../../database-engine/availability-groups/windows/maintaining-an-always-on-publication-database-sql-server.md).  
+ Если база данных публикации на исходном издателе удаляется из группы доступности на первичной реплике, выполните **sp_redirect_publisher** без указания значения параметра *\@redirected_publisher* , чтобы удалить перенаправление для пары "издатель — база данных". Дополнительные сведения о перенаправлении издателя в см. в разделе [обслуживание базы данных &#40;&#41;публикации AlwaysOn SQL Server](../../database-engine/availability-groups/windows/maintaining-an-always-on-publication-database-sql-server.md).  
   
 ## <a name="permissions"></a>Разрешения  
- Участник должен быть членом предопределенной роли сервера **sysadmin** , предопределенной роли базы данных **db_owner** для базы данных распространителя или членом списка доступа к публикации для определенной публикации, связанной с базой данных издателя.  
+ Участник должен быть членом предопределенной роли сервера **sysadmin** , **db_owner** предопределенной роли базы данных для базы данных распространителя или членом списка доступа к публикации для определенной публикации, связанной с базой данных издателя.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также статью  
  [Хранимые процедуры репликации (Transact-SQL)](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
- [sp_validate_redirected_publisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validate-redirected-publisher-transact-sql.md)   
- [sp_get_redirected_publisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-get-redirected-publisher-transact-sql.md)   
+ [sp_validate_redirected_publisher &#40;  Transact-&#41; SQL](../../relational-databases/system-stored-procedures/sp-validate-redirected-publisher-transact-sql.md)  
+ [sp_get_redirected_publisher &#40;  Transact-&#41; SQL](../../relational-databases/system-stored-procedures/sp-get-redirected-publisher-transact-sql.md)  
  [sp_validate_replica_hosts_as_publishers &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validate-replica-hosts-as-publishers-transact-sql.md)  
   
   

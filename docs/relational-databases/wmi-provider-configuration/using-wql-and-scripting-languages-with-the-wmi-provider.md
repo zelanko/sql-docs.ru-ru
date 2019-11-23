@@ -37,7 +37,7 @@ ms.locfileid: "73660599"
   
  Доступ к поставщику WMI для управления конфигурацией можно получить с помощью [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager и консоли управления [!INCLUDE[msCoName](../../includes/msconame-md.md)]. Дополнительные сведения о доступе к поставщику WMI из пользовательского интерфейса см. [в разделах руководства &#40;по управлению службами&#41;Диспетчер конфигурации SQL Server](https://msdn.microsoft.com/library/78dee169-df0c-4c95-9af7-bf033bc9fdc6).  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также статью  
  [Доступ к поставщику WMI для управления конфигурацией с помощью WQL](../../relational-databases/wmi-provider-configuration/access-wmi-provider-for-configuration-management-using-wql.md)   
  [Доступ к поставщику WMI с помощью VBScript](../../relational-databases/wmi-provider-configuration/access-wmi-provider-for-configuration-management-using-vbscript.md)  
   

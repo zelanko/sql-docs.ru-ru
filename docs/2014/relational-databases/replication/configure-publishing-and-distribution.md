@@ -51,7 +51,7 @@ ms.locfileid: "73882251"
   
     -   При необходимости укажите, что другие издатели могут использовать распространитель. Если другим издателям разрешено использовать распространитель, необходимо ввести пароль на странице **Пароль распространителя** , который используется для подключения этих издателей к распространителю.  
   
-    -   При необходимости создайте скрипт настроек конфигурации. Дополнительные сведения см. в разделе [Scripting Replication](scripting-replication.md).  
+    -   При необходимости создайте скрипт настроек конфигурации. Дополнительные сведения см. в статье [Scripting Replication](scripting-replication.md).  
   
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
  Публикацию и распространение репликации можно настроить программно с помощью хранимых процедур репликации.  
@@ -82,7 +82,7 @@ ms.locfileid: "73882251"
   
 4.  На издателе выполните процедуру [sp_replicationdboption (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql). Укажите базу данных, публикуемую для **\@dbname**, тип репликации для **\@optname**, а также значение true для **параметра\@** .  
   
-###  <a name="TsqlExample"></a> Пример (Transact-SQL)  
+###  <a name="TsqlExample"></a> Примеры (Transact-SQL)  
  В следующих разделах описывается программная настройка публикации и распространения. В этом примере имя сервера, настраиваемого в качестве издателя и локального распространителя, указывается с помощью переменных скрипта. Публикацию и распространение репликации можно настроить программно с помощью хранимых процедур репликации.  
   
  [!code-sql[HowTo#AddDistPub](../../snippets/tsql/SQL15/replication/howto/tsql/adddistpub.sql#adddistpub)]  
@@ -164,11 +164,11 @@ ms.locfileid: "73882251"
   
  [!code-vb[HowTo#rmo_vb_AddDistPub](../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_adddistpub)]  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также статью  
  [Просмотр и изменение свойств издателя и распространителя](view-and-modify-distributor-and-publisher-properties.md)   
  [Replication System Stored Procedures Concepts](concepts/replication-system-stored-procedures-concepts.md)   
  [Настройка распространения](configure-distribution.md)   
- [Основные понятия объектов RMO](concepts/replication-management-objects-concepts.md)   
+ [Replication Management Objects Concepts](concepts/replication-management-objects-concepts.md)   
  [Настройка репликации для группы доступности AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md) 
   
   

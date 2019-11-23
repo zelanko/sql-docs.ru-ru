@@ -26,7 +26,7 @@ ms.locfileid: "73729450"
 
   В среде [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]бизнес-правило создается для гарантии точности основных данных. Чтобы применить к данным созданное правило, его необходимо опубликовать.  
   
-## <a name="prerequisites"></a>Предварительные требования  
+## <a name="prerequisites"></a>необходимые компоненты  
  Чтобы выполнить эту процедуру:  
   
 -   необходимо иметь разрешение на доступ к функциональной области **Администрирование системы** ;  
@@ -69,7 +69,7 @@ ms.locfileid: "73729450"
     > [!TIP]  
     >  Чтобы удалить элементы из бизнес-правила, щелкните каждый элемент правой кнопкой мыши и выберите пункт **Удалить**.  
   
-15. В правило также можно добавлять по несколько условий. Дополнительные сведения см. в статье [Add Multiple Conditions to a Business Rule &#40;Master Data Services&#41;](../master-data-services/add-multiple-conditions-to-a-business-rule-master-data-services.md).  
+15. В правило также можно добавлять по несколько условий. Дополнительные сведения см. в статье [Добавление нескольких условий к бизнес-правилу (службы Master Data Services)](../master-data-services/add-multiple-conditions-to-a-business-rule-master-data-services.md).  
   
 16. В разделе **Then** нажмите кнопку **Добавить** . Отобразится панель.  
   
@@ -102,16 +102,16 @@ ms.locfileid: "73729450"
 ## <a name="grid-columns"></a>Столбцы сетки  
  Для каждого созданного бизнес-правила в сетке создается строка с шестью столбцами. Ниже приведены эти столбцы.  
   
-|Имя|Описание|  
+|Name|Описание|  
 |----------|-----------------|  
 |Состояние|После нажатия кнопки **Сохранить** появится следующее изображение, которое указывает на то, что бизнес-правило обновляется.<br /><br /> ![mds_BR_refresh](../master-data-services/media/mds-br-refresh.png "mds_BR_refresh ")<br /><br /> При наличии ошибок во время создания или изменения бизнес-правила появляется следующее изображение.<br /><br /> ![mds_br_error](../master-data-services/media/mds-br-error.png "mds_br_error ")<br /><br /> Если его состояние нормальное, появится следующее изображение.<br /><br /> ![mds_BR_success](../master-data-services/media/mds-br-success.png "mds_BR_success ")|  
-|Имя|Имя бизнес-правила.|  
+|Name|Имя бизнес-правила.|  
 |Описание|Описание бизнес-правила.|  
 |Состояние бизнес-правила|Одно из следующих состояний бизнес-правила: правило не определено, активно, исключено, ожидающие изменения, ожидающие исключения и ожидается удаление.|  
 |Исключена.|Указывает, исключено ли бизнес-правило.|  
 |Уведомление|Указывает выбранного пользователя или группу, которым необходимо отправлять уведомление.|  
   
-## <a name="next-steps"></a>Следующие шаги  
+## <a name="next-steps"></a>Next Steps  
   
 -   Примените бизнес-правила к данным с помощью одной из следующих процедур:  
   
@@ -119,7 +119,7 @@ ms.locfileid: "73729450"
   
     -   [Подтверждение исправления проблемы, обнаруженной при проверке на соответствие бизнес-правилам (службы Master Data Services)](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также статью  
  [Настройка в бизнес-правилах отправки уведомлений (службы Master Data Services)](../master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)   
  [Изменение имени бизнес-правила (службы Master Data Services)](../master-data-services/change-a-business-rule-name-master-data-services.md)   
  [Добавление нескольких условий к бизнес-правилу (службы Master Data Services)](../master-data-services/add-multiple-conditions-to-a-business-rule-master-data-services.md)  

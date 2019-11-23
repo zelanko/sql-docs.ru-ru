@@ -74,7 +74,7 @@ ms.locfileid: "73785755"
 |SQL_COPT_SS_USER_DATA|Допустим любой вариант|  
 |SQL_COPT_SS_WARN_ON_CP_ERROR|Перед|  
   
- Использование атрибута предварительного соединения и эквивалентной команды [!INCLUDE[tsql](../../includes/tsql-md.md)] для одного и того же сеанса, базы данных или состояния [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может повлечь непредвиденное поведение. Например, выражение  
+ Использование атрибута предварительного соединения и эквивалентной команды [!INCLUDE[tsql](../../includes/tsql-md.md)] для одного и того же сеанса, базы данных или состояния [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может повлечь непредвиденное поведение. Например:  
   
 ```  
 SQLSetConnectAttr(SQL_COPT_SS_QUOTED_IDENT, SQL_QI_ON) // turn ON via attribute  
@@ -96,7 +96,7 @@ SQLSetConnectAttr(SQL_ATTR_CURRENT_CATALOG, ...) // restores to pre-connect attr
 
 <a name="sqlcoptssapplicationintent"></a>
 ## <a name="sql_copt_ss_application_intent"></a>SQL_COPT_SS_APPLICATION_INTENT  
- Объявляет тип рабочей нагрузки приложения при соединении с сервером. Возможные значения: **ReadOnly** и **ReadWrite**. Например:  
+ Объявляет тип рабочей нагрузки приложения при соединении с сервером. Возможные значения: **ReadOnly** и **ReadWrite**. Пример:  
   
 ```  
 SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NTS)  
@@ -205,7 +205,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NT
 
 <a name="sqlcoptssmultisubnetfailover"></a>
 ## <a name="sql_copt_ss_multisubnet_failover"></a>SQL_COPT_SS_MULTISUBNET_FAILOVER  
- Если приложение соединяется с группой высокого уровня доступности [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] в разных подсетях, это свойство соединения конфигурирует собственный клиент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для поддержки более быстрого поиска активного (в настоящее время) сервера и соединения с ним. Например:  
+ Если приложение соединяется с группой высокого уровня доступности [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] в разных подсетях, это свойство соединения конфигурирует собственный клиент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для поддержки более быстрого поиска активного (в настоящее время) сервера и соединения с ним. Пример:  
   
 ```  
 SQLSetConnectAttr(hdbc, SQL_COPT_SS_MULTISUBNET_FAILOVER, SQL_IS_ON, SQL_IS_INTEGER)  
@@ -390,7 +390,7 @@ SQLSetConnectAttr(hDbc, SQL_COPT_SS_PERF_DATA,
 // Continue on...  
 ```  
   
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также статью
 
    [функции SQLSetConnectAttr](https://go.microsoft.com/fwlink/?LinkId=59368)  
  [Сведения о реализации API ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)   

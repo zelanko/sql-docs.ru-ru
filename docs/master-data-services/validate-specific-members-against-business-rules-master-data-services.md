@@ -29,7 +29,7 @@ ms.locfileid: "73728848"
 > [!NOTE]  
 >  Инструкции о том, как применить бизнес-правила ко всем элементам в версии модели, см. в разделе [Validate a Version against Business Rules &#40;Master Data Services&#41;](../master-data-services/validate-a-version-against-business-rules-master-data-services.md).  
   
-## <a name="prerequisites"></a>Предварительные требования  
+## <a name="prerequisites"></a>необходимые компоненты  
  Чтобы выполнить эту процедуру:  
   
 -   Необходимо иметь разрешение на доступ к функциональной области **Обозреватель** .  
@@ -48,7 +48,7 @@ ms.locfileid: "73728848"
   
 5.  Нажмите кнопку **Применить правила**. Бизнес-правила применяются только к элементам, отображенным в сетке.  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также статью  
  [Подтверждение исправления проблемы, обнаруженной при проверке на соответствие бизнес-правилам (службы Master Data Services)](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)   
  [Бизнес-правила (службы Master Data Services)](../master-data-services/business-rules-master-data-services.md)  
   

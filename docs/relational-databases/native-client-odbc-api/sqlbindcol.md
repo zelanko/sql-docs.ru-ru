@@ -35,14 +35,14 @@ ms.locfileid: "73787791"
  Для типов данных больших значений, если буфер, указанный пользователем, недостаточно велик для хранения всего значения столбца, возвращается **SQL_SUCCESS_WITH_INFO** и строковые данные. предупреждение о правильном усечении. Аргумент **StrLen_or_IndPtr** будет содержать число символов/байт, хранящихся в буфере.  
   
 ## <a name="sqlbindcol-support-for-enhanced-date-and-time-features"></a>Поддержка функцией SQLBindCol улучшенных возможностей работы с данными в формате даты-времени  
- Значения результирующих столбцов типов даты-времени преобразуются, как описано в статье [преобразования из SQL в C](../../relational-databases/native-client-odbc-date-time/datetime-data-type-conversions-from-sql-to-c.md). Обратите внимание, что для извлечения столбцов Time и DateTimeOffset в виде соответствующих структур (**SQL_SS_TIME2_STRUCT** и **SQL_SS_TIMESTAMPOFFSET_STRUCT**) необходимо указать *TargetType* как **SQL_C_DEFAULT** или **SQL_C_BINARY** .  
+ Значения результирующих столбцов типов даты-времени преобразуются, как описано в статье [преобразования из SQL в C](../../relational-databases/native-client-odbc-date-time/datetime-data-type-conversions-from-sql-to-c.md). Обратите внимание, что для извлечения столбцов Time и DateTimeOffset в виде соответствующих структур (**SQL_SS_TIME2_STRUCT** и **SQL_SS_TIMESTAMPOFFSET_STRUCT**) необходимо указать *TargetType* как **SQL_C_DEFAULT** или **SQL_C_BINARY**.  
   
  Дополнительные сведения см. в разделе [улучшения &#40;даты и времени&#41;ODBC](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
 ## <a name="sqlbindcol-support-for-large-clr-udts"></a>Поддержка функцией SQLBindCol определяемых пользователем типов больших данных CLR  
  **SQLBindCol** поддерживает большие определяемые пользователем типы данных CLR (UDT). Дополнительные сведения см. в разделе [типы больших определяемых пользователем &#40;типов&#41;данных CLR ODBC](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также статью  
    [функции SQLBindCol](https://go.microsoft.com/fwlink/?LinkId=59327)  
  [Подробные сведения о реализации API-интерфейсов ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   

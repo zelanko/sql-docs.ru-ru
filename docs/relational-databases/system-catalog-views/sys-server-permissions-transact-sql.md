@@ -70,7 +70,7 @@ ms.locfileid: "71163934"
 |CL|CONTROL SERVER|SERVER|  
 |CO|CONNECT|ENDPOINT|  
 |COSQ|CONNECT SQL|SERVER|
-|CRAC|Создание группы доступности|SERVER|  
+|CRAC|CREATE AVAILABILITY GROUP|SERVER|  
 |CRDB|CREATE ANY DATABASE|SERVER|  
 |CRDE|CREATE DDL EVENT NOTIFICATION|SERVER|  
 |CRHE|CREATE ENDPOINT|SERVER|
@@ -107,9 +107,9 @@ JOIN sys.server_permissions AS pe
     ON pe.grantee_principal_id = pr.principal_id;  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также статью  
  [Представления каталога безопасности (Transact-SQL)](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [Securables](../../relational-databases/security/securables.md)   
  [Представления каталога (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Разрешения (ядро СУБД)](../../relational-databases/security/permissions-database-engine.md)   
+ [Разрешения (компонент Database Engine)](../../relational-databases/security/permissions-database-engine.md)   
  [Иерархия разрешений (компонент Database Engine)](../../relational-databases/security/permissions-hierarchy-database-engine.md)  

@@ -81,8 +81,8 @@ ms.locfileid: "73727934"
   
  Результат: действующее разрешение пользователя для элементов — **Обновить** .  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также статью  
  [Способ определения разрешений (службы Master Data Services)](../master-data-services/how-permissions-are-determined-master-data-services.md)   
- [Перекрытие разрешений моделей и элементов (службы основных данных)](../master-data-services/overlapping-model-and-member-permissions-master-data-services.md)  
+ [Перекрытие разрешений моделей и элементов (службы Master Data Services)](../master-data-services/overlapping-model-and-member-permissions-master-data-services.md)  
   
   

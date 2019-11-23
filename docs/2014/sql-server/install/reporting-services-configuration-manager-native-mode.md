@@ -56,7 +56,7 @@ ms.locfileid: "71952494"
  [Настройка ключей шифрования и управление ими (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
  Объясняет, как пользоваться и управлять ключами шифрования, используемыми при сохранении конфиденциальных данных.  
   
- [Управление сервером отчетов Reporting Services в собственном режиме](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)  
+ [Управление сервером отчетов служб Reporting Services в собственном режиме](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)  
  Предоставляет пошаговую инструкцию по выполнению типичных задач.  
   
  [Диспетчер конфигурации служб Reporting Services разделы &#40;справки F1 службы SSRS в собственном режиме&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)  
@@ -128,7 +128,7 @@ ms.locfileid: "71952494"
   
 6.  Нажмите кнопку **Соединить**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также статью  
  [Диспетчер отчетов (службы Reporting Services в основном режиме)](../../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Инструментальные средства служб Reporting Services](../../reporting-services/tools/reporting-services-tools.md)   
  [Настройка подключения к базе данных сервера отчетов (диспетчер конфигураций служб Reporting Services)](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   

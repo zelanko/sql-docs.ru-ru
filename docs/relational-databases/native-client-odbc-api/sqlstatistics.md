@@ -26,7 +26,7 @@ ms.locfileid: "73785368"
 
   Функция**SQLStatistics** может быть выполнена для статического курсора. Попытка выполнения функции **SQLStatistics** для обновляемого (управляемого набором ключей или динамического) курсора возвращает SQL_SUCCESS_WITH_INFO, определяющий изменение типа курсора.  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также статью  
    [функции SQLStatistics](https://go.microsoft.com/fwlink/?LinkId=59372)  
  [Подробные сведения о реализации API-интерфейсов ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   

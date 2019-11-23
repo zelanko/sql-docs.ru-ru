@@ -49,7 +49,7 @@ sp_delete_log_shipping_primary_database
  Отсутствуют.  
   
 ## <a name="remarks"></a>Remarks  
- **sp_delete_log_shipping_primary_database** должен быть запущен из базы данных **master** на сервере источника. Эта хранимая процедура выполняет следующее:  
+ **sp_delete_log_shipping_primary_database** должны быть запущены из базы данных **master** на сервере источника. Эта хранимая процедура выполняет следующее:  
   
 1.  удаляет задание создания резервных копий для указанной базы данных-источника;  
   
@@ -65,11 +65,11 @@ sp_delete_log_shipping_primary_database
   
 7.  Вызывает **sp_delete_log_shipping_alert_job** на сервере мониторинга.  
 
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Эту процедуру могут выполнять только члены предопределенной роли сервера **sysadmin** .  
   
 ## <a name="examples"></a>Примеры  
- В этом примере показано использование **sp_delete_log_shipping_primary_database** для удаления базы данных источника **AdventureWorks2012**.  
+ В этом примере показано использование **sp_delete_log_shipping_primary_database** для удаления **AdventureWorks2012**базы данных источника.  
   
 ```  
 EXEC master.dbo.sp_delete_log_shipping_primary_database @database = N'AdventureWorks2012';  

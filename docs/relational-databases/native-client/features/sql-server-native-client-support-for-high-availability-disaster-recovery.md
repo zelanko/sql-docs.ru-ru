@@ -95,7 +95,7 @@ ms.locfileid: "73788033"
 |Функция|Описание|  
 |--------------|-----------------|  
 |[SQLBrowseConnect](../../../relational-databases/native-client-odbc-api/sqlbrowseconnect.md)|Список серверов, возвращаемый **SQLBrowseConnect**, не содержит имен виртуальных сетей. Будет отображен только список серверов без указания того, является ли сервер отдельным, сервером-источником или сервером-получателем в отказоустойчивом кластере, в котором содержатся два экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], включенные для [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], или более. При возникновении ошибки подключения к серверу причина может заключаться в несоответствии параметра **ApplicationIntent** конфигурации сервера.<br /><br /> Поскольку **SQLBrowseConnect** не распознает серверы в отказоустойчивых кластерах, содержащих два или более экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], которые были включены для [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], **SQLBrowseConnect** не учитывает ключевое слово строки подключения **MultiSubnetFailover**.|  
-|[SQLConnect](../../../relational-databases/native-client-odbc-api/sqlconnect.md)|**SQLConnect** поддерживает как **ApplicationIntent** , так и **MultiSubnetFailover** через имя источника данных (DSN) или свойства соединения.|  
+|[SQLConnect](../../../relational-databases/native-client-odbc-api/sqlconnect.md)|**SQLConnect** поддерживает как **ApplicationIntent**, так и **MultiSubnetFailover** через имя источника данных (DSN) или свойства соединения.|  
 |[SQLDriverConnect](../../../relational-databases/native-client-odbc-api/sqldriverconnect.md)|**SQLDriverConnect** поддерживает **ApplicationIntent** и **MultiSubnetFailover** через ключевые слова строки подключения, свойства соединения или имя DSN.|  
   
 ## <a name="ole-db"></a>OLE DB  
@@ -123,7 +123,7 @@ ms.locfileid: "73788033"
  **IDataInitialize::GetDataSource**  
  **IDataInitialize::GetDataSource** принимает строку подключения, которая может содержать ключевое слово **Application Intent**.  
   
- **Свойства интерфейс IDBProperties:: Properties**  
+ **IDBProperties::GetProperties**  
  **IDBProperties::GetProperties** получает значение свойства, которое в настоящее время задано для источника данных.  Значение **Application Intent** можно получить с помощью свойств DBPROP_INIT_PROVIDERSTRING и SSPROP_INIT_APPLICATIONINTENT.  
   
  **IDBProperties::SetProperties**  
@@ -133,7 +133,7 @@ ms.locfileid: "73788033"
   
  После установки неявных соединений эти подключения будут использовать настройку назначения приложения для родительского подключения. Аналогичным образом несколько сеансов, созданных с использованием одного источника данных, будут наследовать настройки назначения приложения от источника данных.  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также статью  
  [Компоненты собственного клиента SQL Server](../../../relational-databases/native-client/features/sql-server-native-client-features.md)   
  [Использование ключевых слов строки подключения с собственным клиентом SQL Server](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)  
   

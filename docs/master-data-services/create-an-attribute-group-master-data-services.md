@@ -26,7 +26,7 @@ ms.locfileid: "73728439"
 
   В среде [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]группы атрибутов создаются, когда нужно отобразить атрибуты на отдельных вкладках сетки **обозревателя** .  
   
-## <a name="prerequisites"></a>Предварительные требования  
+## <a name="prerequisites"></a>необходимые компоненты  
  Чтобы выполнить эту процедуру:  
   
 -   необходимо иметь разрешение на доступ к функциональной области **Администрирование системы** ;  
@@ -67,11 +67,11 @@ ms.locfileid: "73728439"
   
 12. Нажмите кнопку **Сохранить**.  
   
-## <a name="next-steps"></a>Следующие шаги  
+## <a name="next-steps"></a>Next Steps  
   
 -   [Превращение группы атрибутов в видимую для пользователей (службы Master Data Services)](../master-data-services/make-an-attribute-group-visible-to-users-master-data-services.md)  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также статью  
  [Группы атрибутов (службы Master Data Services)](../master-data-services/attribute-groups-master-data-services.md)   
  [Атрибуты (службы Master Data Services)](../master-data-services/attributes-master-data-services.md)   
  [Изменение имени группы атрибутов (службы Master Data Services)](../master-data-services/change-an-attribute-group-name-master-data-services.md)   

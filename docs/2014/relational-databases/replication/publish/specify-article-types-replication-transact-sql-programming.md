@@ -36,7 +36,7 @@ ms.locfileid: "73882120"
   
     -   **logbased** — журнальная статья таблицы (значение по умолчанию для репликации транзакций и моментальных снимков). Репликация автоматически создает хранимую процедуру, применяемую для горизонтальной фильтрации, и представление, определяющее статью с вертикальной фильтрацией.  
   
-    -   **logbased manualfilter** — статья на основе журнала с горизонтальной фильтрацией, где хранимая процедура, используемая для горизонтальной фильтрации, создается и определяется пользователем вручную и задается для **фильтра\@** . Дополнительные сведения см. в статье [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md).  
+    -   **logbased manualfilter** — статья на основе журнала с горизонтальной фильтрацией, где хранимая процедура, используемая для горизонтальной фильтрации, создается и определяется пользователем вручную и задается для **фильтра\@** . Дополнительные сведения см. в разделе [Определение и изменение статического строкового фильтра](define-and-modify-a-static-row-filter.md).  
   
     -   **logbased manualview** — статья на основе журнала с вертикальной фильтрацией, в которой представление, определяющее вертикально фильтруемую статью, создается и определяется пользователем и задается для **\@sync_object**. Дополнительные сведения см. в разделах [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md) и [Define and Modify a Column Filter](define-and-modify-a-column-filter.md).  
   
@@ -44,9 +44,9 @@ ms.locfileid: "73882120"
   
      Таким образом определяется новая статья для публикации. Дополнительные сведения см. в статье [Define an Article](define-an-article.md).  
   
-2.  Выполните процедуру **sp_articlefilter** для статей **logbased manualboth** и [logbased manualfilter](/sql/relational-databases/system-stored-procedures/sp-articlefilter-transact-sql) , чтобы создать хранимую процедуру фильтрации для статьи с горизонтальной фильтрацией. Дополнительные сведения см. в статье [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md).  
+2.  Выполните процедуру **sp_articlefilter** для статей **logbased manualboth** и [logbased manualfilter](/sql/relational-databases/system-stored-procedures/sp-articlefilter-transact-sql) , чтобы создать хранимую процедуру фильтрации для статьи с горизонтальной фильтрацией. Дополнительные сведения см. в разделе [Определение и изменение статического строкового фильтра](define-and-modify-a-static-row-filter.md).  
   
-3.  Выполните процедуру **sp_articleview**для статей **logbased manualboth**, **logbased manualview** и [logbased manualfilter](/sql/relational-databases/system-stored-procedures/sp-articleview-transact-sql) , чтобы создать представление, определяющее статью с вертикальной фильтрацией. Дополнительные сведения см. в разделе [Определение или изменение фильтра столбцов](define-and-modify-a-column-filter.md).  
+3.  Выполните процедуру **sp_articleview**для статей **logbased manualboth**, **logbased manualview** и [logbased manualfilter](/sql/relational-databases/system-stored-procedures/sp-articleview-transact-sql) , чтобы создать представление, определяющее статью с вертикальной фильтрацией. Дополнительные сведения см. в статье [Define and Modify a Column Filter](define-and-modify-a-column-filter.md).  
   
 ### <a name="to-publish-a-view-or-indexed-view-article-in-a-transactional-or-snapshot-publication"></a>Публикация статьи представления или индексированного представления в публикации моментальных снимков или транзакций  
   
@@ -58,7 +58,7 @@ ms.locfileid: "73882120"
   
     -   **indexed view schema only** — статья со схемой, соответствующая индексированному представлению. Также необходимо выполнить репликацию базовой таблицы.  
   
-    -   **индексированное представление logbased manualfilter** — статья индексированного представления по горизонтали с горизонтальной фильтрацией, где хранимая процедура, используемая для горизонтальной фильтрации, создается и определяется пользователем вручную и задается для **фильтра\@** . Дополнительные сведения см. в статье [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md).  
+    -   **индексированное представление logbased manualfilter** — статья индексированного представления по горизонтали с горизонтальной фильтрацией, где хранимая процедура, используемая для горизонтальной фильтрации, создается и определяется пользователем вручную и задается для **фильтра\@** . Дополнительные сведения см. в разделе [Определение и изменение статического строкового фильтра](define-and-modify-a-static-row-filter.md).  
   
     -   **индексированное представление logbased manualview** — статья с отфильтрованным индексированным представлением на основе журнала, в которой представление, определяющее вертикально фильтруемую статью, создается и определяется пользователем и задается для **\@sync_object**. Дополнительные сведения см. в разделах [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md) и [Define and Modify a Column Filter](define-and-modify-a-column-filter.md).  
   
@@ -66,9 +66,9 @@ ms.locfileid: "73882120"
   
      Таким образом определяется новая статья для публикации. Дополнительные сведения см. в статье [Define an Article](define-an-article.md).  
   
-2.  Выполните процедуру **sp_articlefilter** для статей **logbased manualboth** и [logbased manualfilter](/sql/relational-databases/system-stored-procedures/sp-articlefilter-transact-sql) , чтобы создать хранимую процедуру фильтрации для статьи с горизонтальной фильтрацией. Дополнительные сведения см. в статье [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md).  
+2.  Выполните процедуру **sp_articlefilter** для статей **logbased manualboth** и [logbased manualfilter](/sql/relational-databases/system-stored-procedures/sp-articlefilter-transact-sql) , чтобы создать хранимую процедуру фильтрации для статьи с горизонтальной фильтрацией. Дополнительные сведения см. в разделе [Определение и изменение статического строкового фильтра](define-and-modify-a-static-row-filter.md).  
   
-3.  Выполните процедуру **sp_articleview**для статей **logbased manualboth**, **logbased manualview** и [logbased manualfilter](/sql/relational-databases/system-stored-procedures/sp-articleview-transact-sql) , чтобы создать представление, определяющее статью с вертикальной фильтрацией. Дополнительные сведения см. в разделе [Определение или изменение фильтра столбцов](define-and-modify-a-column-filter.md).  
+3.  Выполните процедуру **sp_articleview**для статей **logbased manualboth**, **logbased manualview** и [logbased manualfilter](/sql/relational-databases/system-stored-procedures/sp-articleview-transact-sql) , чтобы создать представление, определяющее статью с вертикальной фильтрацией. Дополнительные сведения см. в статье [Define and Modify a Column Filter](define-and-modify-a-column-filter.md).  
   
 ### <a name="to-publish-a-stored-procedure-stored-procedure-execution-or-user-defined-function-article-in-a-transactional-or-snapshot-publication"></a>Публикация статьи хранимой процедуры, выполнение хранимой процедуры или определяемой пользователем функции в публикации моментальных снимков или транзакций  
   
@@ -106,7 +106,7 @@ ms.locfileid: "73882120"
   
      Таким образом определяется новая статья для публикации. Дополнительные сведения см. в статье [Define an Article](define-an-article.md).  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также статью  
  [Replication System Stored Procedures Concepts](../concepts/replication-system-stored-procedures-concepts.md)   
  [Публикация данных и объектов базы данных](publish-data-and-database-objects.md)  
   

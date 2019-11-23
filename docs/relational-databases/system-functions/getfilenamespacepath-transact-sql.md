@@ -38,7 +38,7 @@ ms.locfileid: "72278332"
   
 ## <a name="arguments"></a>Аргументы  
  *имя столбца*  
- Имя столбца **FILE_STREAM** varbinary (max) в таблице FileTable.  
+ Имя столбца столбца VARBINARY (MAX) **file_stream** в таблице FileTable.  
   
  Значение *имени столбца* должно быть допустимым именем столбца. Это не может быть выражение или значение, преобразованное или приведенное из столбца другого типа данных.  
   
@@ -50,8 +50,8 @@ ms.locfileid: "72278332"
 |**0**|Возвращает относительный путь внутри каталога уровня базы данных.<br /><br /> Это значение по умолчанию.|  
 |**1**|Возвращает полный путь UNC, начиная с `\\computer_name`.|  
   
- *@no__t 1option*  
- Целочисленное выражение, определяющее способ форматирования серверных компонентов пути. *\@option* может иметь одно из следующих значений:  
+ *\@, параметр*  
+ Целочисленное выражение, определяющее способ форматирования серверных компонентов пути. *\@параметр* может иметь одно из следующих значений:  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -60,7 +60,7 @@ ms.locfileid: "72278332"
 |**2**|Возвращает полный путь сервера, например:<br /><br /> `\\ServerName.MyDomain.com\MSSQLSERVER\MyDocumentDatabase`|  
   
 ## <a name="return-type"></a>Тип возвращаемых данных  
- **nvarchar(max)**  
+ **nvarchar(max)** ;  
   
  Если экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] является кластеризованным экземпляром в отказоустойчивом кластере, то имя компьютера, возвращаемое в качестве части этого пути, совпадает с именем виртуального узла для кластеризованного экземпляра.  
   
@@ -86,7 +86,7 @@ SELECT @fullPath = @root + file_stream.GetFileNamespacePath() FROM DocumentStore
 WHERE Name = N'document.docx';  
 ```  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="examples"></a>Примеры  
  В следующих примерах показано, как вызвать функцию **GetFileNamespacePath** , чтобы получить UNC-путь для файла или каталога в таблице FileTable.  
@@ -101,7 +101,7 @@ SELECT file_stream.GetFileNamespacePath(1, Null) AS FilePath FROM DocumentStore
 WHERE Name = N'document.docx';  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также статью  
  [Работа с каталогами и путями в таблицах FileTable](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)  
   
   

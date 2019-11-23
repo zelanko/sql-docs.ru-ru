@@ -49,7 +49,7 @@ ms.locfileid: "73882339"
   
 3.  После создания моментального снимка синхронизируйте подписку, чтобы скопировать схему и данные для новой статьи.  
   
-    -   Сведения о синхронизации принудительной подписки см. в разделе [синхронизации принудительной подписки](../synchronize-a-push-subscription.md).  
+    -   Сведения о синхронизации принудительной подписки см. в разделе [Synchronize a Push Subscription](../synchronize-a-push-subscription.md).  
   
     -   Сведения о синхронизации подписки по запросу см. в разделе [Synchronize a Pull Subscription](../synchronize-a-pull-subscription.md).  
   
@@ -80,7 +80,7 @@ ms.locfileid: "73882339"
   
  Как указано выше, в некоторых случаях удаление статьи требует, чтобы подписки были удалены, заново созданы и синхронизированы. Дополнительные сведения см. в статьях [Подписка на публикации](../subscribe-to-publications.md) и [Синхронизация данных](../synchronize-data.md).  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также статью  
  [Публикация данных и объектов базы данных](publish-data-and-database-objects.md)   
  [Повторная инициализация подписок](../reinitialize-subscriptions.md)   
  [Внесение изменений в схемы баз данных публикации](make-schema-changes-on-publication-databases.md)  

@@ -36,9 +36,9 @@ ms.locfileid: "72251313"
   
 1.  Вызовите [catalog.deploy_project (база данных SSISDB)](/sql/integration-services/system-stored-procedures/catalog-deploy-project-ssisdb-database), чтобы развернуть проект [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], который содержит пакет, на сервере [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
   
-     Чтобы получить двоичное содержимое файла развертывания проекта [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], для параметра *\@project_stream* используйте инструкцию SELECT с функцией OPENROWSET и поставщиком больших наборов строк. Поставщик больших наборов строк позволяет считывать данные из файла. Аргумент SINGLE_BLOB для поставщика больших наборов строк возвращает содержимое файла данных в виде набора строк с одной строкой и одним столбцом типа varbinary(max). Дополнительные сведения см. в разделе [OPENROWSET (Transact-SQL)](/sql/t-sql/functions/openrowset-transact-sql).  
+     Чтобы получить двоичное содержимое файла развертывания проекта [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], для параметра *\@project_stream* используйте инструкцию SELECT с функцией OPENROWSET и поставщиком наборов строк. Поставщик больших наборов строк позволяет считывать данные из файла. Аргумент SINGLE_BLOB для поставщика больших наборов строк возвращает содержимое файла данных в виде набора строк с одной строкой и одним столбцом типа varbinary(max). Дополнительные сведения см. в разделе [OPENROWSET (Transact-SQL)](/sql/t-sql/functions/openrowset-transact-sql).  
   
-     В следующем примере проект SSISPackages_ProjectDeployment будет развернут в папке SSIS Packages на сервере [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Двоичные данные считываются из файла проекта (SSISPackage_ProjectDeployment. ISPAC) и хранятся в параметре *\@ProjectBinary* типа varbinary (max). Значение параметра *\@ProjectBinary* присваивается параметру *\@project_stream* .  
+     В следующем примере проект SSISPackages_ProjectDeployment будет развернут в папке SSIS Packages на сервере [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Двоичные данные считываются из файла проекта (SSISPackage_ProjectDeployment. ISPAC) и хранятся в\@параметре *прожектбинари* типа varbinary (max). Значение параметра *\@ProjectBinary* присваивается параметру *\@project_stream*.  
   
     ```  
     DECLARE @ProjectBinary as varbinary(max)  
@@ -122,7 +122,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
   
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также статью  
  [Развертывание проектов на сервере служб Integration Services](../../2014/integration-services/deploy-projects-to-integration-services-server.md)   
  [Запуск пакета с помощью SQL Server Data Tools](../../2014/integration-services/run-a-package-in-sql-server-data-tools.md)   
  [Выполнение пакета на сервере служб SSIS с использованием среды SQL Server Management Studio](run-a-package-on-the-ssis-server-using-sql-server-management-studio.md)  

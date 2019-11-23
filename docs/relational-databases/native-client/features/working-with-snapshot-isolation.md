@@ -70,7 +70,7 @@ ms.locfileid: "73761274"
   
  Сведения о поддержке изоляции моментальных снимков в транзакциях см. в разделе [уровень изоляции транзакций курсора](../../../relational-databases/native-client-odbc-cursors/properties/cursor-transaction-isolation-level.md).  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также статью  
  [Компоненты собственного клиента SQL Server](../../../relational-databases/native-client/features/sql-server-native-client-features.md)   
  [Свойства и поведение наборов строк](../../../relational-databases/native-client-ole-db-rowsets/rowset-properties-and-behaviors.md)  
   

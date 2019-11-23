@@ -74,7 +74,7 @@ ms.locfileid: "73728979"
   
  ![mds_conc_overlap_model_example_2](../master-data-services/media/mds-conc-overlap-model-example-2.gif "mds_conc_overlap_model_example_2")  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также статью  
  [Способ определения разрешений (службы Master Data Services)](../master-data-services/how-permissions-are-determined-master-data-services.md)   
  [Перекрытие разрешений пользователей и групп (службы Master Data Services)](../master-data-services/overlapping-user-and-group-permissions-master-data-services.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: sys. PDW _nodes_column_store_dictionaries (Transact-SQL) | Документация Майкрософт
+title: sys. pdw_nodes_column_store_dictionaries (Transact-SQL) | Документация Майкрософт
 ms.date: 03/03/2017
 ms.prod: sql
 ms.technology: data-warehouse
@@ -14,12 +14,12 @@ ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 618a92cfd0f1602753b9fcfd61ac232eff5cecd4
 ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 10/14/2019
 ms.locfileid: "72305182"
 ---
-# <a name="syspdw_nodes_column_store_dictionaries-transact-sql"></a>sys. PDW _nodes_column_store_dictionaries (Transact-SQL)
+# <a name="syspdw_nodes_column_store_dictionaries-transact-sql"></a>sys. pdw_nodes_column_store_dictionaries (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   Содержит по одной строке для каждого словаря, используемого в индексах columnstore. Словари используются для кодирования некоторых, но не всех типов данных, поэтому не все столбцы в индексе columnstore имеют словари. Словарь может существовать в качестве основного словаря (для всех сегментов) и, возможно, для других вспомогательных словарей, используемых для подмножества сегментов столбца.  
@@ -40,10 +40,10 @@ ms.locfileid: "72305182"
 ## <a name="permissions"></a>Разрешения  
  Требуется разрешение `VIEW SERVER STATE`.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также статью  
  [SQL Data Warehouse and Parallel Data Warehouse Catalog Views](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  (Представления каталога в службе "Хранилище данных SQL" и Parallel Data Warehouse)  
- [Создание индекса &#40;COLUMNSTORE Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)   
- [sys. PDW _nodes_column_store_segments &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-segments-transact-sql.md)   
- [sys. PDW _nodes_column_store_row_groups &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-row-groups-transact-sql.md)  
+ [Создание  Transact &#40;-&#41; SQL для индекса COLUMNSTORE](../../t-sql/statements/create-columnstore-index-transact-sql.md)  
+ [sys. pdw_nodes_column_store_segments &#40;  Transact-&#41; SQL](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-segments-transact-sql.md)  
+ [sys. pdw_nodes_column_store_row_groups &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-row-groups-transact-sql.md)  
   
   

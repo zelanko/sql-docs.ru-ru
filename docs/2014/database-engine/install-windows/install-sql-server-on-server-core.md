@@ -22,7 +22,7 @@ ms.locfileid: "73637672"
   
  Вариант установки Server Core для операционной системы [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] или [!INCLUDE[win8srv](../../includes/win8srv-md.md)] предусматривает наличие среды, минимально необходимой для запуска конкретных ролей сервера. Это дает возможность снизить требования к обслуживанию и управлению и уменьшить уязвимость для атак со стороны этих ролей сервера. Дополнительные сведения о Server Core, реализованном на [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)], см. в разделе [Server Core для Windows server 2008 R2](https://go.microsoft.com/fwlink/?LinkId=202439) (https://go.microsoft.com/fwlink/?LinkId=202439). Дополнительные сведения о реализации Server Core в операционной системе [!INCLUDE[win8srv](../../includes/win8srv-md.md)] см. в разделе [Server Core для Windows Server 2012](https://msdn.microsoft.com/library/hh846323\(VS.85\).aspx) (https://msdn.microsoft.com/library/hh846323(VS.85).aspx).  
   
-## <a name="prerequisites"></a>Предварительные требования  
+## <a name="prerequisites"></a>необходимые компоненты  
   
 |Требование|Как установить|  
 |-----------------|--------------------|  
@@ -38,7 +38,7 @@ ms.locfileid: "73637672"
 |Компонент|Поддерживается|  
 |-------------|---------------|  
 |Службы[!INCLUDE[ssDE](../../includes/ssde-md.md)]|Да|  
-|Репликация[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Да|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Репликация|Да|  
 |Полнотекстовый поиск|Да|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|Да|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|Нет|  
@@ -59,7 +59,7 @@ ms.locfileid: "73637672"
   
  <sup>[1]</sup> Дополнительные сведения о новом сервере Integration Services и его возможностях в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]см. [в &#40;разделе&#41; Integration Services сервера SSIS](../../integration-services/catalog/integration-services-ssis-server-and-catalog.md).  
   
- <sup>[2]</sup> Установка этих компонентов на Server Core не поддерживается. Эти компоненты могут быть установлены на другом сервере, отличном от [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] Server Core с пакетом обновления 1 (SP1) или [!INCLUDE[win8srv](../../includes/win8srv-md.md)] Server Core, и подключены к службам [!INCLUDE[ssDE](../../includes/ssde-md.md)] , установленным в Server Core.  
+ <sup>[2]</sup> Установка этих компонентов на Server Core не поддерживается. Эти компоненты могут быть установлены на другом сервере, отличном от [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] Server Core с пакетом обновления 1 (SP1) или [!INCLUDE[win8srv](../../includes/win8srv-md.md)] Server Core, и подключены к службам [!INCLUDE[ssDE](../../includes/ssde-md.md)], установленным в Server Core.  
   
  <sup>[3]</sup> Microsoft Sync Framework не входит в пакет установки [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Вы можете скачать соответствующую версию Sync Framework из [центра загрузки Майкрософт](https://go.microsoft.com/fwlink/?LinkId=221788) (https://go.microsoft.com/fwlink/?LinkId=221788) страницу и установить ее на компьютере, на котором выполняется установка Server Core [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] с пакетом обновления 1 (SP1) или [!INCLUDE[win8srv](../../includes/win8srv-md.md)].  
   
@@ -71,7 +71,7 @@ ms.locfileid: "73637672"
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , выпуски|Все [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 64-разрядные выпуски<sup>[1]</sup>|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , язык|Все языки|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , язык в языке ОС-локали (сочетание)|ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для JPN (японский) Windows<br /><br /> ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для GER (немецкий) Windows<br /><br /> ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для CHS (китайский — Китай) Windows<br /><br /> ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для ARA (арабский (SA)) Windows<br /><br /> ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для THA (тайский) Windows<br /><br /> ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для TRK (турецкий) Windows<br /><br /> ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для pt-PT (португальский, Португалия) Windows<br /><br /> ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для ENG (английский) Windows|  
-|Выпуск Windows|64-разрядная версия [!INCLUDE[win8srv](../../includes/win8srv-md.md)] x64 Datacenter<br /><br /> 64-разрядная версия [!INCLUDE[win8srv](../../includes/win8srv-md.md)] x64 Standard<br /><br /> 64-разрядная версия[!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] x64 Data Center Server Core Edition с пакетом обновления 1 (SP1)<br /><br /> 64-разрядная версия[!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] x64 Enterprise Server Core с пакетом обновления 1 (SP1)<br /><br /> [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] Windows Server Standard Server Core с пакетом обновления 1 (SP1) для 64-разрядных систем с архитектурой x64<br /><br /> 64-разрядная версия [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] x64 Web Server Core с пакетом обновления 1 (SP1)|  
+|Выпуск Windows|64-разрядная версия [!INCLUDE[win8srv](../../includes/win8srv-md.md)] x64 Datacenter<br /><br /> 64-разрядная версия [!INCLUDE[win8srv](../../includes/win8srv-md.md)] x64 Standard<br /><br /> 64-разрядная версия [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] x64 Data Center Server Core Edition с пакетом обновления 1 (SP1)<br /><br /> 64-разрядная версия [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] x64 Enterprise Server Core с пакетом обновления 1 (SP1)<br /><br /> [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)]Windows Server Standard Server Core с пакетом обновления 1 (SP1) для 64-разрядных систем с архитектурой x64<br /><br /> 64-разрядная версия [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] x64 Web Server Core с пакетом обновления 1 (SP1)|  
   
  <sup>[1]</sup> Установка 32-разрядных версий [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] не поддерживается в Server Core.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "73637672"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] нельзя установить параллельно с более ранними версиями [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на компьютере с [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] Server Core с пакетом обновления 1 (SP1) или [!INCLUDE[win8srv](../../includes/win8srv-md.md)] Server Core.  
   
- Независимо от метода установки, необходимо подтвердить свое согласие с условиями лицензии на использование пакета программ как физического лица или от имени организации, если на используемое программное обеспечение не распространяется отдельное соглашение [!INCLUDE[msCoName](../../includes/msconame-md.md)], такое как соглашение о корпоративном лицензировании Майкрософт или отдельное соглашение с независимым поставщиком программного обеспечения или изготовителем оборудования (OEM).  
+ Независимо от метода установки, необходимо подтвердить свое согласие с условиями лицензии на использование пакета программ как физического лица или от имени организации, если на используемое программное обеспечение не распространяется отдельное соглашение [!INCLUDE[msCoName](../../includes/msconame-md.md)] , такое как соглашение о корпоративном лицензировании Майкрософт или отдельное соглашение с независимым поставщиком программного обеспечения или изготовителем оборудования (OEM).  
   
  Условия лицензионного соглашения отображаются для ознакомления и принятия в пользовательском интерфейсе программы установки. Автоматические установки (с использованием параметров /Q или /QS) должны включать параметр /IACCEPTSQLSERVERLICENSETERMS. Ознакомиться с условиями лицензии можно на странице [Условия лицензионного соглашения о программном обеспечении Майкрософт](https://go.microsoft.com/fwlink/?LinkId=148209).  
   
@@ -111,7 +111,7 @@ ms.locfileid: "73637672"
 |/FEATURES=SQLEngine|Устанавливает только компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)].|  
 |/FEATURES=SQLEngine, FullText|Устанавливает компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] с компонентом Full-Text Search.|  
 |/FEATURES=SQLEngine, Conn|Устанавливает компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] и компоненты подключения к данным.|  
-|/FEATURES=SQLEngine, AS, IS, Conn|Устанавливает компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)], службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]и компоненты подключения к данным.|  
+|/FEATURES=SQLEngine, AS, IS, Conn|Устанавливает компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)], службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] и компоненты подключения к данным.|  
   
 ### <a name="installation-options"></a>Варианты установки  
  Программа установки поддерживает следующие варианты установки [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] в операционной системе Server Core.  
@@ -258,12 +258,12 @@ ms.locfileid: "73637672"
   
     -   DefaultSetup.ini  
   
-         Если файл DefaultSetup.ini находится в папках \x86 и \x64 в корневой папке исходного носителя [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , откройте этот файл и добавьте в него параметр *Features* .  
+         Если файл DefaultSetup.ini находится в папках \x86 и \x64 в корневой папке исходного носителя [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], откройте этот файл и добавьте в него параметр *Features*.  
   
-         Если файл DefaultSetup.ini не существует, создайте его и скопируйте в папки \x86 и \x64 корневой папки исходного носителя [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+         Если файл DefaultSetup.ini не существует, создайте его и скопируйте в папки \x86 и \x64 корневой папки исходного носителя [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="configuring-remote-access-of-includessnoversionincludesssnoversion-mdmd-running-on-server-core"></a>Настройка удаленного доступа для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] при работе на Server Core  
- Чтобы настроить удаленный доступ к экземпляру [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], который запускается в установке Server Core ОС [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] с пакетом обновления 1 (SP1) или [!INCLUDE[win8srv](../../includes/win8srv-md.md)], выполните действия, описанные ниже.  
+ Чтобы настроить удаленный доступ к экземпляру [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , который запускается в установке Server Core ОС [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] с пакетом обновления 1 (SP1) или [!INCLUDE[win8srv](../../includes/win8srv-md.md)], выполните действия, описанные ниже.  
   
 ### <a name="enable-remote-connections-on-the-instance-of-includessnoversionincludesssnoversion-mdmd"></a>Включение удаленных подключений на экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  Чтобы разрешить удаленные соединения, выполните следующие инструкции для экземпляра Server Core в локальной программе SQLCMD.exe.  
@@ -286,7 +286,7 @@ ms.locfileid: "73637672"
  `net start SQLBROWSER`  
   
 ### <a name="create-exceptions-in-windows-firewall"></a>Создание исключений в брандмауэре Windows  
- Чтобы создать исключения в брандмауэре Windows для доступа к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , выполните действия, описанные в разделе [Настройка брандмауэра Windows для разрешения доступа к SQL Server](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
+ Чтобы создать исключения в брандмауэре Windows для доступа к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], выполните действия, описанные в разделе [Настройка брандмауэра Windows для разрешения доступа к SQL Server](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
   
 ### <a name="enable-tcpip-on-the-instance-of-includessnoversionincludesssnoversion-mdmd"></a>Включите поддержку TCP/IP на экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  Протокол TCP/IP для экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в Server Core можно включить через Windows PowerShell. Выполните следующие действия.  
@@ -295,7 +295,7 @@ ms.locfileid: "73637672"
   
 2.  На вкладке **Приложения** нажмите **Создать задачу**.  
   
-3.  В диалоговом окне **Создание новой задачи** введите **sqlps.exe** в поле **Открыть** и нажмите кнопку **ОК**. Откроется окно **[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Powershell**.  
+3.  В диалоговом окне **Создание новой задачи** введите **sqlps.exe** в поле **Открыть** и нажмите кнопку **ОК**. Откроется окно **[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Powershell** .  
   
 4.  В окне **Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Powershell** выполните следующий скрипт, чтобы включить протокол TCP/IP:  
   
@@ -311,7 +311,7 @@ $Tcp
 ```  
   
 ## <a name="uninstallation"></a>Удаление  
- После входа на компьютер, где работает [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] Server Core с пакетом обновления 1 (SP1) или [!INCLUDE[win8srv](../../includes/win8srv-md.md)] , вы получите доступ к ограниченной среде с командной строкой администратора. В этой командной строке можно запустить процесс удаления экземпляра [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Чтобы удалить экземпляр [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], запустите удаление из командной строки — либо в полностью тихом режиме (параметр /Q), либо в простом тихом режиме (параметр /QS). Если указан параметр /QS, то ход выполнения будет отображаться в пользовательском интерфейсе, но не потребует ввода. Параметр /Q запускает тихий режим без пользовательского интерфейса.  
+ После входа на компьютер, где работает [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] Server Core с пакетом обновления 1 (SP1) или [!INCLUDE[win8srv](../../includes/win8srv-md.md)], вы получите доступ к ограниченной среде с командной строкой администратора. В этой командной строке можно запустить процесс удаления экземпляра [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Чтобы удалить экземпляр [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], запустите удаление из командной строки — либо в полностью тихом режиме (параметр /Q), либо в простом тихом режиме (параметр /QS). Если указан параметр /QS, то ход выполнения будет отображаться в пользовательском интерфейсе, но не потребует ввода. Параметр /Q запускает тихий режим без пользовательского интерфейса.  
   
  Удаление существующего экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -328,7 +328,7 @@ setup.exe /Q /Action=Uninstall /FEATURES=SQLEngine,AS,IS /INSTANCENAME=MSSQLSERV
 > 2.  На вкладке **Приложения** нажмите **Создать задачу**.  
 > 3.  В диалоговом окне **Создание новой задачи** введите **cmd** в поле **Открыть**, а затем[!INCLUDE[clickOK](../../includes/clickok-md.md)].  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также статью  
  [Установка SQL Server 2014 с помощью файла конфигурации](install-sql-server-using-a-configuration-file.md)   
  [Установите SQL Server 2014 из командной строки](install-sql-server-from-the-command-prompt.md)   
  [Функции, поддерживаемые различными Выпусками SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   

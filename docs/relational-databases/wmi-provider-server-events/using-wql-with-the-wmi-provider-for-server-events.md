@@ -83,7 +83,7 @@ WHERE where_condition
   
  Только операнд `=` можно использовать вместе с **DatabaseName**, **SchemaName**и **objectname**. Другие выражения нельзя использовать с этими свойствами событий.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  *Where_condition* синтаксиса поставщика WMI для событий сервера определяет следующее:  
   
 -   Область, с помощью которой поставщик пытается получить указанный *event_type*: уровень сервера, уровень базы данных или уровень объекта (в настоящее время поддерживается только текущий объект). В конечном счете эта область определяет тип уведомления о событии, создаваемого в базе данных-получателе. Этот процесс называется регистрацией уведомления о событии.  
@@ -123,7 +123,7 @@ WHERE DatabaseName = 'AdventureWorks' AND SchemaName = 'Sales'
 SELECT * FROM SERVER_MEMORY_CHANGE  
 ```  
   
-### <a name="b-querying-for-events-at-the-database-scope"></a>Б. Запросы событий на уровне базы данных  
+### <a name="b-querying-for-events-at-the-database-scope"></a>б. Запросы событий на уровне базы данных  
  Следующий WQL-запрос получает конкретные свойства событий для любых событий, возникающих в базе данных `AdventureWorks` и существующих в группе событий `DDL_DATABASE_LEVEL_EVENTS`.  
   
 ```  
@@ -140,7 +140,7 @@ WHERE DatabaseName = 'AdventureWorks' AND SchemaName = 'Sales'
     AND ObjectType='Table' AND ObjectName = 'SalesOrderDetail'  
 ```  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также статью  
  [Основные понятия о поставщике WMI для событий сервера](https://technet.microsoft.com/library/ms180560.aspx)   
  [Уведомления о событиях (ядро СУБД)](https://technet.microsoft.com/library/ms182602.aspx)  
   

@@ -90,7 +90,7 @@ ms.locfileid: "73787413"
   
  Дополнительные сведения о разреженных столбцах в ODBC см. в разделе [разреженные столбцы &#40;поддержка ODBC&#41;](../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md).  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также статью  
    [функции SQLColumns](https://go.microsoft.com/fwlink/?LinkId=59336)  
  [Подробные сведения о реализации API-интерфейсов ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   

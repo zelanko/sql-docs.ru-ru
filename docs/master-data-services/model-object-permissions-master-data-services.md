@@ -42,7 +42,7 @@ ms.locfileid: "73727981"
 ## <a name="external-resources"></a>Внешние ресурсы  
  Запись блога [Security Improvements](https://go.microsoft.com/fwlink/p/?LinkId=615376)(Улучшения безопасности) на портале msdn.com.  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также статью  
  [Назначение разрешения для объекта модели (службы Master Data Services)](../master-data-services/assign-model-object-permissions-master-data-services.md)   
  [Разрешения модели (службы Master Data Services)](../master-data-services/model-permissions-master-data-services.md)   
  [Разрешения функциональной области (службы Master Data Services)](../master-data-services/functional-area-permissions-master-data-services.md)   

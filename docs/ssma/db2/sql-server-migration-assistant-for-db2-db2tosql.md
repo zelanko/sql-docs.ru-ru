@@ -18,13 +18,13 @@ ms.lasthandoff: 10/10/2019
 ms.locfileid: "72252165"
 ---
 # <a name="sql-server-migration-assistant-for-db2-db2tosql"></a>Помощник по миграции SQL Server для DB2 (DB2ToSQL)
-[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Помощник по миграции (SSMA) для DB2 — это инструмент для переноса баз данных DB2 на [!INCLUDE[msCoName](../../includes/msconame_md.md)] @ no__t-3 2012, [!INCLUDE[msCoName](../../includes/msconame_md.md)] @ no__t-5 2014, @no__t – 6 @ no__t-7 2016, [!INCLUDE[msCoName](../../includes/msconame_md.md)] @ no__t-9 2017 в Windows и Linux, 0 @ no__t-11 2019 в Windows и Linux. База данных SQL Azure. SSMA для DB2 преобразует объекты базы данных DB2 в объекты базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], создает эти объекты в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], а затем переносит данные из DB2 в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или базу данных SQL Azure.  
+[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Помощник по миграции (SSMA) для DB2 — это средство для переноса баз данных DB2 в [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012, [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014, [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016, [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2017 в Windows и Linux, [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2019 в Windows, Linux или базе данных SQL Azure. SSMA для DB2 преобразует объекты базы данных DB2 в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] объекты базы данных, создает эти объекты в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], а затем переносит данные из DB2 в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или базу данных SQL Azure.  
   
 В этой документации описывается SSMA для DB2 и приводятся пошаговые инструкции по переносу баз данных DB2 в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. В следующей таблице приведены статьи, которые помогут вам получить дополнительные сведения:  
   
 ## <a name="contents"></a>Содержание  
   
-|`Section`|Описание|  
+|Раздел|Описание|  
 |-----------|---------------|
 |[Новые возможности в SSMA для DB2](https://msdn.microsoft.com/1cc38f85-3caa-42d0-8c76-a380c1d15c67)|Новые возможности в этой версии SSMA для DB2|  
 |[Установка SSMA для клиента &#40;DB2 DB2ToSQL&#41;](../../ssma/db2/installing-ssma-for-db2-client-db2tosql.md)|Содержит статьи, содержащие необходимые условия и инструкции по установке клиента SSMA для DB2 и необходимых компонентов на компьютере, на котором выполняется [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  

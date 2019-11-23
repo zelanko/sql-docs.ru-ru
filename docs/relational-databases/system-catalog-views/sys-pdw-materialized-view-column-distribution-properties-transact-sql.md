@@ -14,7 +14,7 @@ ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
 ms.openlocfilehash: 508d34ec59252407b79bb9863d82a46c6ce8627f
 ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 11/07/2019
 ms.locfileid: "73729854"
@@ -25,7 +25,7 @@ ms.locfileid: "73729854"
 
 Отображает сведения о распределении для столбцов в материализованных представлениях.  
   
-|Имя столбца|Тип данных|Описание|  
+|Column Name|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |object_id|**int**|Идентификатор объекта, которому принадлежит столбец. |  
 |column_id|**int**|Идентификатор столбца.|  
@@ -37,7 +37,7 @@ ms.locfileid: "73729854"
 
 ## <a name="see-also"></a>См. также:
 
-[Настройка производительности с материализованным представлением](/azure/sql-data-warehouse/performance-tuning-materialized-views)   
+[Настройка производительности с помощью материализованного представления](/azure/sql-data-warehouse/performance-tuning-materialized-views)   
 [CREATE MATERIALIZED VIEW AS SELECT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-materialized-view-as-select-transact-sql?view=azure-sqldw-latest)   
 [ALTER MATERIALIZED VIEW &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-materialized-view-transact-sql?view=azure-sqldw-latest)   
 [EXPLAIN &#40;Transact-SQL&#41;](/sql/t-sql/queries/explain-transact-sql?view=azure-sqldw-latest)   

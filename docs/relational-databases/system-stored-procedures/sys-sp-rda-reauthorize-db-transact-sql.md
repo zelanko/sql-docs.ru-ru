@@ -38,11 +38,11 @@ sp_rda_reauthorize_db @credential = @credential, @with_copy = @with_copy [ , @az
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- @credential = *\@credential*  
+ @credential = *учетные данные\@*  
  Учетные данные области базы данных, связанные с локальной базой данных с поддержкой Stretch.  
   
  @with_copy = *\@with_copy*  
- Указывает, следует ли создавать копию удаленных данных и подключаться к копии (рекомендуется). *\@with_copy* имеет бит.  
+ Указывает, следует ли создавать копию удаленных данных и подключаться к копии (рекомендуется). *\@with_copy* является битом.  
   
  @azure_servername = *\@azure_servername*  
  Указывает имя сервера Azure, который содержит удаленные данные. *\@azure_servername* имеет тип sysname.  
@@ -54,9 +54,9 @@ sp_rda_reauthorize_db @credential = @credential, @with_copy = @with_copy [ , @az
  0 (успешное завершение) или > 0 (сбой)  
   
 ## <a name="permissions"></a>Разрешения  
- Требуются разрешения db_owner.  
+ Требуются db_owner разрешения.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  При выполнении [sys. sp_rda_reauthorize_db (Transact-SQL)](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md) для повторного подключения к удаленной базе данных Azure эта операция автоматически сбрасывает режим запроса на LOCAL_AND_REMOTE, что является поведением по умолчанию для Stretch Database. То есть запросы возвращают результаты как из локальных, так и удаленных данных.  
   
 ## <a name="example"></a>Пример  
@@ -69,8 +69,8 @@ EXEC sp_rda_reauthorize_db @credential = @credentialName, @with_copy = 1;
   
 ```  
   
-## <a name="see-also"></a>См. также  
- [sys. sp_rda_deauthorize_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-rda-deauthorize-db-transact-sql.md)   
- [База данных Stretch](../../sql-server/stretch-database/stretch-database.md)  
+## <a name="see-also"></a>См. также статью  
+ [sys. sp_rda_deauthorize_db &#40;  Transact-&#41; SQL](../../relational-databases/system-stored-procedures/sys-sp-rda-deauthorize-db-transact-sql.md)  
+ [база данных Stretch;](../../sql-server/stretch-database/stretch-database.md)  
   
   

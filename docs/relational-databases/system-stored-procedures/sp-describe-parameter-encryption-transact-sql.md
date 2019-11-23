@@ -83,7 +83,7 @@ sp_describe_parameter_encryption
 |**column_encryption_key_ordinal**|**int**|Код строки в первом результирующем наборе. Строка, на которую указывает ссылка, описывает ключ шифрования столбца, настроенный для столбца, параметр соответствует.|  
 |**column_encryption_normalization_rule_version**|**tinyint**|Номер версии алгоритма нормализации типа.|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Драйвер клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], поддерживающий Always Encrypted, автоматически вызывает **sp_describe_parameter_encryption** , чтобы получить метаданные шифрования для параметризованных запросов, выданных приложением. Впоследствии драйвер использует метаданные шифрования для шифрования значений параметров, которые соответствуют столбцам базы данных, защищенным с помощью Always Encrypted, и заменяет значения параметров в виде открытого текста, переданные приложением, с зашифрованным значения параметров перед отправкой запроса ядру СУБД.  
   
 ## <a name="permissions"></a>Разрешения  
@@ -163,7 +163,7 @@ EXEC sp_describe_parameter_encryption N'INSERT INTO t1 VALUES(@c1)',  N'@c1 INT'
 |--------------------------------------|------------------------------------------------------|  
 |1|1|  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также статью  
  [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
  [Разработка приложения с помощью Always Encrypted](../../relational-databases/security/encryption/always-encrypted-client-development.md)  
   

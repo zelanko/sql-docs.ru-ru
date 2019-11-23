@@ -28,7 +28,7 @@ ms.locfileid: "73728788"
 > [!NOTE]  
 >  Заметки нельзя удалить.  
   
-## <a name="prerequisites"></a>Предварительные требования  
+## <a name="prerequisites"></a>необходимые компоненты  
   
 -   Для добавления заметок к созданным транзакциям необходимы права на доступ к функциональной области **Браузер** и как минимум разрешение **Обновление** на объект модели, к которому добавляется заметка.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "73728788"
   
 ### <a name="to-annotate-a-transaction-in-version-management-administrators-only"></a>Добавление заметки к транзакции в управлении версиями (только администраторы)  
   
-1.  На домашней странице [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] нажмите **Управление версиями**.  
+1.  На домашней странице [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] щелкните **Управление версиями**.  
   
 2.  В строке меню выберите пункт **Транзакции**.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "73728788"
   
 5.  Нажмите кнопку **ОК**.  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также статью  
  [Заметки (службы Master Data Services)](../master-data-services/annotations-master-data-services.md)   
  [Транзакции (службы Master Data Services)](../master-data-services/transactions-master-data-services.md)  
   

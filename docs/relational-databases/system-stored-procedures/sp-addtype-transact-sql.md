@@ -30,7 +30,7 @@ ms.locfileid: "72305137"
   Создает псевдоним типа данных.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] используйте вместо этого [CREATE TYPE](../../t-sql/statements/create-type-transact-sql.md) .  
+>  Вместо этого [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] использовать [CREATE TYPE](../../t-sql/statements/create-type-transact-sql.md) .  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -44,13 +44,13 @@ sp_addtype [ @typename = ] type,
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @typename = ] type` — имя псевдонима типа данных. Имена типов данных псевдонима должны соответствовать правилам для [идентификаторов](../../relational-databases/databases/database-identifiers.md) и должны быть уникальными в каждой базе данных. Аргумент *Type имеет тип* **sysname**и не имеет значения по умолчанию.  
+`[ @typename = ] type` — имя типа данных псевдонима. Имена типов данных псевдонима должны соответствовать правилам для [идентификаторов](../../relational-databases/databases/database-identifiers.md) и должны быть уникальными в каждой базе данных. Аргумент *Type имеет тип* **sysname**и не имеет значения по умолчанию.  
   
-`[ @phystype = ] system_data_type` — это физический или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] тип данных, на котором основан псевдоним типа данных. *system_data_type* имеет тип **sysname**, не имеет значения по умолчанию и может принимать одно из следующих значений:  
+`[ @phystype = ] system_data_type` — это физический или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] переданный тип данных, на котором основан тип данных псевдонима. Аргумент *system_data_type* имеет тип **sysname**, не имеет значения по умолчанию и может принимать одно из следующих значений:  
   
 ||||  
 |-|-|-|  
-|**bigint**|**binary(n)**|**bit**|  
+|**bigint**|**binary(n)**|**бит**|  
 |**char(n)**|**datetime**|**decimal**|  
 |**float**|**image**|**int**|  
 |**money**|**nchar(n)**|**ntext**|  
@@ -70,7 +70,7 @@ sp_addtype [ @typename = ] type,
  *s*  
  Неотрицательное целое число, показывающее максимальное количество десятичных разрядов числа (справа от десятичного разделителя), которое не должно превышать точность. Дополнительные сведения см. в разделе [decimal и numeric (Transact-SQL)](../../t-sql/data-types/decimal-and-numeric-transact-sql.md).  
   
-`[ @nulltype = ] 'null_type'` указывает, как псевдоним типа данных обрабатывает значения NULL. *null_type* имеет тип **varchar (** 8 **)** , значение по умолчанию NULL и должен быть заключен в одинарные кавычки ("null", "NOT NULL" или "null"). Если *null_type* не определен явным образом с помощью процедуры **sp_addtype**, ему присваивается текущая допустимость значений NULL по умолчанию. Для определения текущего значения параметра возможности по умолчанию иметь значения NULL используйте системную функцию NULLGETANSINULL. Его можно настраивать с помощью инструкции SET или ALTER DATABASE. Возможность иметь значения NULL необходимо задавать в явной форме. Если параметр **\@phystype** имеет значение **bit**, а **\@nulltype** не задан, по умолчанию используется значение NOT NULL.  
+`[ @nulltype = ] 'null_type'` указывает, как псевдоним типа данных обрабатывает значения NULL. *null_type* имеет тип **varchar (** 8 **)** , значение по умолчанию NULL и должен заключаться в одинарные кавычки ("null", "NOT NULL" или "null"). Если *null_type* явно не определен с помощью **sp_addtype**, ему присваивается текущая допустимость значений NULL по умолчанию. Для определения текущего значения параметра возможности по умолчанию иметь значения NULL используйте системную функцию NULLGETANSINULL. Его можно настраивать с помощью инструкции SET или ALTER DATABASE. Возможность иметь значения NULL необходимо задавать в явной форме. Если **\@фистипе** имеет **бит**, а **\@nulltype** не задан, значение по умолчанию — NOT NULL.  
   
 > [!NOTE]  
 >  Параметр *null_type* определяет допустимость значений NULL по умолчанию для этого типа данных. Если возможность иметь значения NULL явно указывается для типа данных псевдонима при создании таблицы, эта настройка имеет приоритет над возможностью по умолчанию иметь значения NULL. Дополнительные сведения см. в разделе [ALTER &#40;TABLE Transact-&#41; SQL](../../t-sql/statements/alter-table-transact-sql.md) и [Create Table &#40;Transact-&#41;SQL](../../t-sql/statements/create-table-transact-sql.md).  
@@ -79,19 +79,19 @@ sp_addtype [ @typename = ] type,
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
- None  
+ Нет  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Имя типа данных псевдонима должно быть уникальным в базе данных, но типы данных псевдонима с различными именами могут иметь одно определение.  
   
- При запуске процедуры **sp_addtype** создается псевдоним типа данных, который отображается в представлении каталога **sys. types** для конкретной базы данных. Если псевдоним типа данных должен быть доступен во всех новых пользовательских базах данных, добавьте его в **модель**. После создания типа данных псевдонима его можно использовать в инструкциях CREATE TABLE и ALTER TABLE, а также привязывать значения по умолчанию и правила к нему. Все типы данных скалярного псевдонима, созданные с помощью процедуры **sp_addtype** , содержатся в схеме **dbo** .  
+ При исполнении **sp_addtype** создается псевдоним типа данных, который отображается в представлении каталога **sys. types** для конкретной базы данных. Если псевдоним типа данных должен быть доступен во всех новых пользовательских базах данных, добавьте его в **модель**. После создания типа данных псевдонима его можно использовать в инструкциях CREATE TABLE и ALTER TABLE, а также привязывать значения по умолчанию и правила к нему. Все типы данных скалярного псевдонима, созданные с помощью **sp_addtype** , содержатся в схеме **dbo** .  
   
  Типы данных псевдонима наследуют параметры сортировки базы данных по умолчанию. Параметры сортировки столбцов и переменных типов псевдонимов определяются в инструкциях [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE TABLE, ALTER TABLE и DECLARE @*local_variable* . Изменение параметров сортировки по умолчанию базы данных применяется только к новым столбцам и переменным типа и не изменяет параметры сортировки существующих столбцов и переменных.  
   
 > [!IMPORTANT]  
->  В целях обратной совместимости роли **общей** базы данных автоматически предоставляется разрешение REFERENCES на псевдонимы типов данных, создаваемые с помощью процедуры **sp_addtype**. Примечание. при создании псевдонимов типов данных с помощью инструкции CREATE TYPE вместо процедуры **sp_addtype**автоматическое предоставление не выполняется.  
+>  В целях обратной совместимости роли **общей** базы данных автоматически предоставляется разрешение REFERENCES на типы данных псевдонимов, созданные с помощью **sp_addtype**. Примечание. когда псевдонимы типов данных создаются с помощью инструкции CREATE TYPE, а не **sp_addtype**, автоматическое предоставление не выполняется.  
   
- Типы данных псевдонима не могут быть определены с помощью типов данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **timestamp**, **Table**, **XML**, **varchar (max)** , **nvarchar (max)** или **varbinary (max)** .  
+ Псевдонимы типов данных не могут быть определены с помощью типов данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **timestamp**, **Table**, **XML**, **varchar (max)** , **nvarchar (max)** или **varbinary (max)** .  
   
 ## <a name="permissions"></a>Разрешения  
  Требуется членство в предопределенной роли базы данных **db_owner** или **db_ddladmin** .  
@@ -99,7 +99,7 @@ sp_addtype [ @typename = ] type,
 ## <a name="examples"></a>Примеры  
   
 ### <a name="a-creating-an-alias-data-type-that-does-not-allow-for-null-values"></a>A. Создание псевдонима типа данных, не поддерживающего значения NULL  
- В следующем примере создается псевдоним типа данных с именем `ssn` (номер социального страхования), основанный на @no__t типе данных **varchar** , переданном -1. Тип данных `ssn` используется для столбцов, хранящих номера карточек социального страхования, состоящих из 11 разрядов (999-99-9999). Эти столбцы не могут иметь значение NULL.  
+ В следующем примере создается псевдоним типа данных с именем `ssn` (номер социального страхования), основанный на типе данных **varchar** , предоставляемом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Тип данных `ssn` используется для столбцов, хранящих номера карточек социального страхования, состоящих из 11 разрядов (999-99-9999). Эти столбцы не могут иметь значение NULL.  
   
  Обратите внимание на то, что тип `varchar(11)` заключен в одинарные кавычки, поскольку содержит знак пунктуации (скобки).  
   
@@ -110,7 +110,7 @@ EXEC sp_addtype ssn, 'varchar(11)', 'NOT NULL';
 GO  
 ```  
   
-### <a name="b-creating-an-alias-data-type-that-allows-for-null-values"></a>Б. Создание псевдонима типа данных, поддерживающего значения NULL  
+### <a name="b-creating-an-alias-data-type-that-allows-for-null-values"></a>б. Создание псевдонима типа данных, поддерживающего значения NULL  
  В следующем примере создается тип данных псевдонима (на основе `datetime`) с именем `birthday`, который поддерживает значения NULL.  
   
 ```  
@@ -131,16 +131,16 @@ EXEC sp_addtype fax, 'varchar(24)', 'NULL';
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Ядро СУБД хранимых &#40;процедур Transact-&#41;SQL](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>См. также статью  
+   [Transact- &#40;SQL&#41; ядро СУБД хранимых процедур](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
  [CREATE TYPE (Transact-SQL)](../../t-sql/statements/create-type-transact-sql.md)   
  [CREATE DEFAULT (Transact-SQL)](../../t-sql/statements/create-default-transact-sql.md)   
  [CREATE RULE (Transact-SQL)](../../t-sql/statements/create-rule-transact-sql.md)   
  [sp_bindefault (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-bindefault-transact-sql.md)   
  [sp_bindrule (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-bindrule-transact-sql.md)   
- [sp_droptype &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droptype-transact-sql.md)   
+ [sp_droptype &#40;  Transact-&#41; SQL](../../relational-databases/system-stored-procedures/sp-droptype-transact-sql.md)  
  [sp_rename (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md)   
- [sp_unbindefault &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-unbindefault-transact-sql.md)   
+ [sp_unbindefault &#40;  Transact-&#41; SQL](../../relational-databases/system-stored-procedures/sp-unbindefault-transact-sql.md)  
  [sp_unbindrule (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-unbindrule-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

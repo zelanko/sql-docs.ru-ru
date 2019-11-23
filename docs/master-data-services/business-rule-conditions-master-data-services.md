@@ -54,7 +54,7 @@ ms.locfileid: "73728717"
 > [!NOTE]  
 >  Если бизнес-правило содержит условие, выполняющее сравнение двух значений, и применяется к элементу, в котором оба значения содержат значение NULL, этот элемент не проходит проверку.  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также статью  
  [Действия бизнес-правил (службы Master Data Services)](../master-data-services/business-rule-actions-master-data-services.md)   
  [Бизнес-правила (службы Master Data Services)](../master-data-services/business-rules-master-data-services.md)   
  [Создание и публикация бизнес-правила (службы Master Data Services)](../master-data-services/create-and-publish-a-business-rule-master-data-services.md)  

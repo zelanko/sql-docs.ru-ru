@@ -22,7 +22,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/09/2019
 ms.locfileid: "73882165"
 ---
-# <a name="specify-schema-options"></a>Указание параметров схемы
+# <a name="specify-schema-options"></a>Specify Schema Options
   В этом разделе описывается указание параметров схемы в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../../includes/tsql-md.md)]. При публикации таблицы или представления можно управлять параметрами создания объектов, применяемых к опубликованному объекту. Эти параметры можно задать при создании статьи, а также изменить их позднее. Если эти параметры не заданы в явном виде, то применяется набор параметров по умолчанию.  
   
 > [!NOTE]  
@@ -30,7 +30,7 @@ ms.locfileid: "73882165"
   
  **В этом разделе**  
   
--   **Перед началом работы выполните следующие действия.**  
+-   **Перед началом работы**  
   
      [Ограничения](#Restrictions)  
   
@@ -48,12 +48,12 @@ ms.locfileid: "73882165"
   
 -   Если изменить параметры схемы после создания публикации, то необходимо создать новый моментальный снимок.  
   
-###  <a name="Recommendations"></a> Рекомендации  
+###  <a name="Recommendations"></a> рекомендации  
   
 -   Полный список параметров схемы см. в описании параметра **\@schema_option** [sp_addarticle &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) и [sp_addmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql).  
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
- На вкладке **Свойства** диалогового окна **Свойства статьи - \<статья>** задайте параметры схемы, например укажите, необходимо ли копировать ограничения и триггеры для подписчиков. Эта вкладка доступна в мастере создания публикаций, а также в диалоговом окне **Свойства публикации - \<публикация>** . Дополнительные сведения об использовании мастера создания публикаций и доступе к этому диалоговому окну см. в статьях о [создании публикаций](create-a-publication.md) и [просмотре и изменении свойств публикации](view-and-modify-publication-properties.md).  
+ На вкладке **Свойства** диалогового окна **Свойства статьи - \<статья>** задайте параметры схемы, например укажите, необходимо ли копировать ограничения и триггеры для подписчиков. Эта вкладка доступна в мастере создания публикаций, а также в диалоговом окне **Свойства публикации - \<публикация>** . Дополнительные сведения об использовании мастера и доступе к этому диалоговому окну см. в статьях [Создание публикации](create-a-publication.md) и [Просмотр и изменение свойств публикации](view-and-modify-publication-properties.md).  
   
 #### <a name="to-specify-schema-options"></a>Указание параметров схемы  
   
@@ -72,7 +72,7 @@ ms.locfileid: "73882165"
   
 4.  Измените свойства, если необходимо, и нажмите кнопку **ОК**.  
   
-5.  Если вы находитесь в диалоговом окне **Свойства публикации — \<Публикация>** , нажмите кнопку **ОК**, чтобы сохранить изменения и закрыть диалоговое окно.  
+5.  Если вы находитесь в диалоговом окне **Свойства публикации — \<публикация>** , нажмите кнопку **ОК**, чтобы сохранить изменения и закрыть диалоговое окно.  
   
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
  Параметры схемы указываются в виде шестнадцатеричных значений, которые являются результатом выполнения операции [| (побитовое ИЛИ)](/sql/t-sql/language-elements/bitwise-or-transact-sql) к одному или нескольким параметрам. Дополнительные сведения см. в разделах [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) и [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql).  
@@ -102,7 +102,7 @@ ms.locfileid: "73882165"
   
 4.  Выполните процедуру [sp_changearticle](/sql/relational-databases/system-stored-procedures/sp-changearticle-transact-sql)на издателе в базе данных публикации. Укажите имя публикации, которой принадлежит статья, для **\@публикации**, имя статьи для **\@статьи**, значение **schema_option** для **Свойства\@** и шестнадцатеричный результат шага 3 для **\@значения**.  
   
-5.  Запустите агент моментальных снимков, чтобы создать новый моментальный снимок. Дополнительные сведения см. в разделе [Create and Apply the Initial Snapshot](../create-and-apply-the-initial-snapshot.md).  
+5.  Запустите агент моментальных снимков, чтобы создать новый моментальный снимок. Дополнительные сведения см. в статье [Create and Apply the Initial Snapshot](../create-and-apply-the-initial-snapshot.md).  
   
 #### <a name="to-change-schema-options-for-an-existing-article-in-a-merge-publication"></a>Изменение параметров схемы для существующей статьи в публикации слиянием  
   
@@ -118,9 +118,9 @@ ms.locfileid: "73882165"
   
 4.  В базе данных публикации на издателе выполните процедуру [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql). Укажите имя публикации, которой принадлежит статья, для **\@публикации**, имя статьи для **\@статьи**, значение **schema_option** для **Свойства\@** и шестнадцатеричный результат шага 3 для **\@значения**.  
   
-5.  Запустите агент моментальных снимков, чтобы создать новый моментальный снимок. Дополнительные сведения см. в разделе [Create and Apply the Initial Snapshot](../create-and-apply-the-initial-snapshot.md).  
+5.  Запустите агент моментальных снимков, чтобы создать новый моментальный снимок. Дополнительные сведения см. в статье [Create and Apply the Initial Snapshot](../create-and-apply-the-initial-snapshot.md).  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также статью  
  [Публикация данных и объектов базы данных](publish-data-and-database-objects.md)   
  [Параметры статьи для репликации транзакций](../transactional/article-options-for-transactional-replication.md)  
   

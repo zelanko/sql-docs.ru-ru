@@ -44,17 +44,17 @@ ms.locfileid: "72304756"
 |**partition_id**|**bigint**|Указывает идентификатор секции. Уникален в базе данных.|  
   
 ## <a name="permissions"></a>Разрешения  
-Необходимо разрешение `VIEW DEFINITION` для таблицы. Следующие столбцы возвращают значение null, если у пользователя нет разрешения `SELECT`: last_id, ENTRY_COUNT, data_ptr.  
+Необходимо разрешение `VIEW DEFINITION` для таблицы. Следующие столбцы возвращают значение null, если только пользователь не имеет разрешения `SELECT`: last_id, entry_count, data_ptr.  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также статью  
  [Представления каталога объектов (Transact-SQL)](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [Представления каталога (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Запросы к системному каталогу SQL Server часто](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
+ [Запросы к системному каталогу SQL Server вопросы и ответы](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
  [sys.columns (Transact-SQL)](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
- [sys. ALL _columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-all-columns-transact-sql.md)   
- [sys. computed_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-computed-columns-transact-sql.md)   
+ [sys. all_columns &#40;  Transact-&#41; SQL](../../relational-databases/system-catalog-views/sys-all-columns-transact-sql.md)  
+ [sys. computed_columns &#40;  Transact-&#41; SQL](../../relational-databases/system-catalog-views/sys-computed-columns-transact-sql.md)  
  [Руководство по индексам columnstore](~/relational-databases/indexes/columnstore-indexes-overview.md)   
  [Руководство по индексам columnstore](~/relational-databases/indexes/columnstore-indexes-overview.md)   
  [sys.column_store_segments (Transact-SQL)](../../relational-databases/system-catalog-views/sys-column-store-segments-transact-sql.md)  

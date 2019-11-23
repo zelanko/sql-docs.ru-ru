@@ -41,7 +41,7 @@ ms.locfileid: "73844356"
 > [!NOTE]  
 >  Некоторые дополнительные системные хранимые процедуры используются только в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или через клиентские API и не предназначены для общего использования клиентами. Эти процедуры перечислены в [системных хранимых процедурах (Transact-SQL)](https://msdn.microsoft.com/library/ms187961.aspx). Эти процедуры могут быть изменены, а совместимость не гарантируется. Все процедуры в списке недоступны в [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также статью  
  [Системные хранимые &#40;функции Transact-&#41; SQL](~/relational-databases/system-functions/system-functions-category-transact-sql.md)   
  [Типы данных (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)  
   

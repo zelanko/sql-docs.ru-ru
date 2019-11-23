@@ -106,7 +106,7 @@ ms.locfileid: "72798218"
 ## <a name="activex-scripting-job-steps"></a>Шаги задания скрипта ActiveX  
   
 > [!IMPORTANT]  
->  Шаг задания скрипта ActiveX будет удален из агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в следующей версии [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Избегайте использовать этот компонент в новых разработках и запланируйте изменение существующих приложений, в которых он применяется.  
+>  Шаг задания скрипта ActiveX будет удален из агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в следующей версии [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется.  
   
  При создании шага задания скрипта ActiveX необходимо:  
   
@@ -202,14 +202,14 @@ Set oServer = nothing
 |Описывает создание шага задания с помощью исполняемой программы.|[Создание шага задания «CmdExec»](create-a-cmdexec-job-step.md)|  
 |Описывает, как сбросить разрешения агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|[Настройка пользователя для создания заданий агента SQL Server и управления заданиями](configure-a-user-to-create-and-manage-sql-server-agent-jobs.md)|  
 |Описывает создание шага задания [!INCLUDE[tsql](../../includes/tsql-md.md)] .|[Create a Transact-SQL Job Step](create-a-transact-sql-job-step.md)|  
-|Описывает определение параметров для шагов заданий Transact-SQL агента Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|[Определение параметров шага задания Transact-SQL](define-transact-sql-job-step-options.md)|  
+|Описывает определение параметров для шагов заданий Transact-SQL агента Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|[Define Transact-SQL Job Step Options](define-transact-sql-job-step-options.md)|  
 |Описывает создание шага задания скрипта ActiveX.|[Create an ActiveX Script Job Step](create-an-activex-script-job-step.md)|  
-|Описывает процесс создания и определения шагов заданий агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , выполняющих команды и запросы служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Analysis Services.|[Создание шага задания служб Analysis Services](create-an-analysis-services-job-step.md)|  
+|Описывает процесс создания и определения шагов заданий агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , выполняющих команды и запросы служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Analysis Services.|[Create an Analysis Services Job Step](create-an-analysis-services-job-step.md)|  
 |Описывает, какое действие будет выполнять [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , если при выполнении задания происходит ошибка.|[Настройка потока действий системы при успешном или неуспешном выполнении шага задания](set-job-step-success-or-failure-flow.md)|  
 |Описывает, как просмотреть сведения о шаге задания в окне «Свойства шага задания».|[Просмотр сведений о шаге задания](view-job-step-information.md)|  
-|Описывает, как удалить журнал шага задания агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|[Удаление журнала шага задания](delete-a-job-step-log.md)|  
+|Описывает, как удалить журнал шага задания агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|[Delete a Job Step Log](delete-a-job-step-log.md)|  
   
 ## <a name="see-also"></a>См. также статью  
-  [Transact- &#40;SQL&#41; в dbo. таблицу sysjobstepslogs](/sql/relational-databases/system-tables/dbo-sysjobstepslogs-transact-sql)  
+   [Transact- &#40;SQL&#41; в dbo. таблицу sysjobstepslogs](/sql/relational-databases/system-tables/dbo-sysjobstepslogs-transact-sql)  
  [Создание заданий](create-jobs.md)   
  [sp_add_job (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-add-job-transact-sql)  

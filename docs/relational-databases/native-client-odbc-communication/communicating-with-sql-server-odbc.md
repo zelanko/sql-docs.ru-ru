@@ -31,7 +31,7 @@ ms.locfileid: "73785000"
   
  Вы можете скачать примеры ODBC для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на странице [загрузки SQL Server](https://go.microsoft.com/fwlink/?LinkId=62796) на сайте MSDN.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
   
 -   [Выделение дескриптора среды](../../relational-databases/native-client-odbc-communication/allocating-an-environment-handle.md)  
   
@@ -43,7 +43,7 @@ ms.locfileid: "73785000"
   
 -   [Отключение от источника данных](../../relational-databases/native-client-odbc-communication/disconnecting-from-a-data-source.md)  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также статью  
  [SQL Server Native Client &#40; &#41; ODBC](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)  
  [SQLSetEnvAttr](../../relational-databases/native-client-odbc-api/sqlsetenvattr.md)  
   

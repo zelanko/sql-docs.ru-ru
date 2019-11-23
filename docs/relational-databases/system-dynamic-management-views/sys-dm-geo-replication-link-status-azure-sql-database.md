@@ -43,7 +43,7 @@ ms.locfileid: "73843889"
 |роль|**tinyint**|Роль георепликации, одна из следующих:<br /><br /> 0 = основной. Database_id ссылается на базу данных-источник в партнерстве георепликации.<br /><br /> 1 = вторичный.  Database_id ссылается на базу данных-источник в партнерстве георепликации.|  
 |role_desc|**nvarchar(256)**|PRIMARY<br /><br /> SECONDARY|  
 |secondary_allow_connections|**tinyint**|Вторичный тип, один из следующих:<br /><br /> 0 = прямые подключения не разрешены для базы данных-получателя, и база данных недоступна для чтения.<br /><br /> 2 = все соединения разрешены для базы данных в реплике-получателе REPL; икатион для доступа только для чтения.|  
-|secondary_allow_connections_desc|**nvarchar(256)**|Нет<br /><br /> все|  
+|secondary_allow_connections_desc|**nvarchar(256)**|Нет<br /><br /> Все|  
 |last_commit|**datetimeoffset**|Время последней фиксации транзакции в базе данных. При получении в базе данных источника указывает время последней фиксации в базе данных источника. При получении в базе данных-получателе указывает время последней фиксации в базе данных-получателе. При получении в базе данных-получателе, когда первичная реплика канала репликации находится в недоступном виде, она указывает до того, как будет перехвачена дополнительная точка.|
   
 > [!NOTE]  
@@ -64,7 +64,7 @@ SELECT
 FROM sys.dm_geo_replication_link_status;  
 ```  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также статью  
    [базы &#40;данных&#41; SQL Azure ALTER DATABASE](../../t-sql/statements/alter-database-azure-sql-database.md)  
  [sys. geo_replication_links &#40;базы&#41; данных SQL Azure](../../relational-databases/system-dynamic-management-views/sys-geo-replication-links-azure-sql-database.md)   
  [sys. dm_operation_status &#40;базы данных SQL Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md)  

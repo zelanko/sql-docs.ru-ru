@@ -57,7 +57,7 @@ ms.locfileid: "73729425"
 ## <a name="progress-and-finish"></a>Ход выполнения и завершение  
  Отображает состояние процесса создания. После создания базы данных нажмите кнопку **Готово** , чтобы закрыть мастер базы данных и вернуться на страницу **Базы данных** . Новая база данных выбрана по умолчанию, и пользователь может просматривать и изменять ее системные настройки.  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также статью  
  [Страница "Конфигурация базы данных" (диспетчер конфигурации служб Master Data Services)](../master-data-services/database-configuration-page-master-data-services-configuration-manager.md)   
 [Установка и настройка служб Master Data Services](../master-data-services/master-data-services-installation-and-configuration.md) [Требования к базе данных (службы Master Data Services)](../master-data-services/install-windows/database-requirements-master-data-services.md)  
   

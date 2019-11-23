@@ -21,15 +21,15 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/09/2019
 ms.locfileid: "73882364"
 ---
-# <a name="create-a-snapshot-for-a-merge-publication-with-parameterized-filters"></a>Создание моментального снимка для публикации слиянием с параметризованными фильтрами
+# <a name="create-a-snapshot-for-a-merge-publication-with-parameterized-filters"></a>Create a Snapshot for a Merge Publication with Parameterized Filters
   В данном разделе описывается процесс создания моментального снимка для публикации слиянием с параметризованными фильтрами в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]или объектов RMO.  
   
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Recommendations"></a> Рекомендации  
+###  <a name="Recommendations"></a> рекомендации  
   
--   При создании моментальных снимков для публикации слиянием с помощью параметризованных фильтров необходимо сначала создать стандартный моментальный снимок (схему), который будет содержать все опубликованные данные и метаданные подписчика для подписки. Дополнительные сведения см. в разделе [Create and Apply the Initial Snapshot](create-and-apply-the-initial-snapshot.md). После создания моментального снимка схемы можно создать моментальный снимок, содержащий секцию опубликованных данных для конкретного подписчика.  
+-   При создании моментальных снимков для публикации слиянием с помощью параметризованных фильтров необходимо сначала создать стандартный моментальный снимок (схему), который будет содержать все опубликованные данные и метаданные подписчика для подписки. Дополнительные сведения см. в статье [Create and Apply the Initial Snapshot](create-and-apply-the-initial-snapshot.md). После создания моментального снимка схемы можно создать моментальный снимок, содержащий секцию опубликованных данных для конкретного подписчика.  
   
 -   Если при фильтрации одной или нескольких статей публикации получаются неперекрывающиеся секции, которые являются уникальными для каждой подписки, метаданные очищаются при каждом запуске агента слияния. Это означает, что срок действия секционированного снимка истекает быстрее. При выборе этого параметра необходимо рассмотреть возможность разрешения подписчикам инициировать создание и доставку моментальных снимков. Дополнительные сведения о параметрах фильтрации см. в разделе об установке параметров секции статьи [Snapshots for Merge Publications with Parameterized Filters](snapshots-for-merge-publications-with-parameterized-filters.md) (Моментальные снимки для публикаций слиянием с параметризованными фильтрами).  
   
@@ -50,7 +50,7 @@ ms.locfileid: "73882364"
   
 3.  Щелкните правой кнопкой мыши публикацию, для которой нужно создать моментальный снимок, а затем выберите **Просмотреть состояние агента моментальных снимков**.  
   
-4.  В диалоговом окне **Просмотр состояния агента моментальных снимков — \<публикация>** щелкните **Запуск**.  
+4.  В диалоговом окне **Просмотр состояния агента моментальных снимков — \<Публикация>** щелкните **Запуск**.  
   
      Когда агент моментальных снимков закончит создание моментального снимка, на экране появится сообщение: «[100%] Сформирован моментальный снимок 17 статей».  
   
@@ -107,7 +107,7 @@ ms.locfileid: "73882364"
   
 3.  Выполните хранимую процедуру [sp_addmergearticle (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql), чтобы добавить статьи в публикацию. Эту хранимую процедуру необходимо выполнить один раз для каждой статьи в публикации. При использовании параметризованных фильтров необходимо указать параметризованный фильтр строк для одной или нескольких статей в параметре **\@subset_filterclause**. Дополнительные сведения см. в разделе [Define and Modify a Parameterized Row Filter for a Merge Article](publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md).  
   
-4.  Если другие статьи будут фильтроваться на основании параметризованного фильтра строк, выполните хранимую процедуру [sp_addmergefilter (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql), чтобы определить между статьями соединение или связь логических записей. Эту хранимую процедуру необходимо выполнить один раз для каждой определяемой связи. Дополнительные сведения см. в статье [Define and Modify a Join Filter Between Merge Articles](publish/define-and-modify-a-join-filter-between-merge-articles.md).  
+4.  Если другие статьи будут фильтроваться на основании параметризованного фильтра строк, выполните хранимую процедуру [sp_addmergefilter (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql), чтобы определить между статьями соединение или связь логических записей. Эту хранимую процедуру необходимо выполнить один раз для каждой определяемой связи. Дополнительные сведения см. в разделе [Define and Modify a Join Filter Between Merge Articles](publish/define-and-modify-a-join-filter-between-merge-articles.md).  
   
 5.  Если агент слияния запрашивает инициализацию подписчика моментальным снимком, то автоматически создается моментальный снимок для секции запрашивающей подписки.  
   
@@ -122,7 +122,7 @@ ms.locfileid: "73882364"
   
 3.  Выполните хранимую процедуру [sp_addmergearticle (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql), чтобы добавить статьи в публикацию. Эту хранимую процедуру необходимо выполнить один раз для каждой статьи в публикации. При использовании параметризованных фильтров необходимо указать параметризованный фильтр строк для одной статьи в параметре **\@subset_filterclause**. Дополнительные сведения см. в разделе [Define and Modify a Parameterized Row Filter for a Merge Article](publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md).  
   
-4.  Если другие статьи будут фильтроваться на основании параметризованного фильтра строк, выполните хранимую процедуру [sp_addmergefilter (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql), чтобы определить между статьями соединение или связь логических записей. Эту хранимую процедуру необходимо выполнить один раз для каждой определяемой связи. Дополнительные сведения см. в статье [Define and Modify a Join Filter Between Merge Articles](publish/define-and-modify-a-join-filter-between-merge-articles.md).  
+4.  Если другие статьи будут фильтроваться на основании параметризованного фильтра строк, выполните хранимую процедуру [sp_addmergefilter (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql), чтобы определить между статьями соединение или связь логических записей. Эту хранимую процедуру необходимо выполнить один раз для каждой определяемой связи. Дополнительные сведения см. в разделе [Define and Modify a Join Filter Between Merge Articles](publish/define-and-modify-a-join-filter-between-merge-articles.md).  
   
 5.  В издателе в базе данных публикации выполните хранимую процедуру [sp_helpmergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql), указав в параметре **\@publication** значение из шага 1. Запомните значение параметра **snapshot_jobid** в результирующем наборе.  
   
@@ -154,9 +154,9 @@ ms.locfileid: "73882364"
   
 3.  Выполните хранимую процедуру [sp_addmergearticle (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql), чтобы добавить статьи в публикацию. Эту хранимую процедуру необходимо выполнить один раз для каждой статьи в публикации. При использовании параметризованных фильтров необходимо указать параметризованный фильтр строк хотя бы для одной статьи в параметре **\@subset_filterclause**. Дополнительные сведения см. в разделе [Define and Modify a Parameterized Row Filter for a Merge Article](publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md).  
   
-4.  Если другие статьи будут фильтроваться на основании параметризованного фильтра строк, выполните хранимую процедуру [sp_addmergefilter (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql), чтобы определить между статьями соединение или связь логических записей. Эту хранимую процедуру необходимо выполнить один раз для каждой определяемой связи. Дополнительные сведения см. в статье [Define and Modify a Join Filter Between Merge Articles](publish/define-and-modify-a-join-filter-between-merge-articles.md).  
+4.  Если другие статьи будут фильтроваться на основании параметризованного фильтра строк, выполните хранимую процедуру [sp_addmergefilter (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql), чтобы определить между статьями соединение или связь логических записей. Эту хранимую процедуру необходимо выполнить один раз для каждой определяемой связи. Дополнительные сведения см. в разделе [Define and Modify a Join Filter Between Merge Articles](publish/define-and-modify-a-join-filter-between-merge-articles.md).  
   
-5.  Чтобы создать стандартную схему моментального снимка и другие файлы, запустите задание моментального снимка или агент моментальных снимков репликации из командной строки. Дополнительные сведения см. в разделе [Create and Apply the Initial Snapshot](create-and-apply-the-initial-snapshot.md).  
+5.  Чтобы создать стандартную схему моментального снимка и другие файлы, запустите задание моментального снимка или агент моментальных снимков репликации из командной строки. Дополнительные сведения см. в статье [Create and Apply the Initial Snapshot](create-and-apply-the-initial-snapshot.md).  
   
 6.  Запустите агент моментальных снимков репликации из командной строки еще раз, чтобы создать файлы массового копирования (BCP-файл); при этом укажите расположение секционированного снимка в качестве значения параметра **-DynamicSnapshotLocation** , а также одно или оба приведенные ниже свойства, определяющие секцию:  
   
@@ -306,7 +306,7 @@ PAUSE
   
 3.  Если значение <xref:Microsoft.SqlServer.Replication.Publication.SnapshotAgentExists%2A> равно `false`, то для создания задания агента моментальных снимков для этой публикации вызовите метод <xref:Microsoft.SqlServer.Replication.Publication.CreateSnapshotAgent%2A>.  
   
-4.  Вызовите метод <xref:Microsoft.SqlServer.Replication.Publication.StartSnapshotGenerationAgentJob%2A> объекта <xref:Microsoft.SqlServer.Replication.MergePublication> , созданного в шаге 1. Этот метод запускает задание агента по созданию исходного моментального снимка. Дополнительные сведения о создании исходного моментального снимка и определении пользовательского расписания для агента моментальных снимков см. в разделе [Создание и применение исходного моментального снимка](create-and-apply-the-initial-snapshot.md).  
+4.  Вызовите метод <xref:Microsoft.SqlServer.Replication.Publication.StartSnapshotGenerationAgentJob%2A> объекта <xref:Microsoft.SqlServer.Replication.MergePublication> , созданного в шаге 1. Этот метод запускает задание агента по созданию исходного моментального снимка. Дополнительные сведения о создании исходного моментального снимка и определении пользовательского расписания для агента моментальных снимков см. в разделе [Create and Apply the Initial Snapshot](create-and-apply-the-initial-snapshot.md).  
   
 5.  Проверьте, указано ли значение `true` для свойства <xref:Microsoft.SqlServer.Replication.MergePublication.SnapshotAvailable%2A>, чтобы определить, когда исходный моментальный снимок будет готов к использованию.  
   
@@ -344,7 +344,7 @@ PAUSE
   
 2.  Чтобы добавить статьи в публикацию, используйте свойство <xref:Microsoft.SqlServer.Replication.MergeArticle> . Укажите свойство <xref:Microsoft.SqlServer.Replication.MergeArticle.FilterClause%2A> хотя бы для одной статьи, определяющей параметризованный фильтр, и создайте любые объекты <xref:Microsoft.SqlServer.Replication.MergeJoinFilter> , определяющие фильтры соединения между статьями. Дополнительные сведения см. в статье [Define an Article](publish/define-an-article.md).  
   
-3.  Создайте исходный моментальный снимок. Дополнительные сведения см. в разделе [Create and Apply the Initial Snapshot](create-and-apply-the-initial-snapshot.md).  
+3.  Создайте исходный моментальный снимок. Дополнительные сведения см. в статье [Create and Apply the Initial Snapshot](create-and-apply-the-initial-snapshot.md).  
   
 4.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent> и укажите следующие необходимые свойства.  
   
@@ -391,10 +391,10 @@ PAUSE
   
  [!code-vb[HowTo#rmo_vb_GenerateFilteredSnapshot](../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_generatefilteredsnapshot)]  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также статью  
  [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md)   
  [Replication System Stored Procedures Concepts](concepts/replication-system-stored-procedures-concepts.md)   
  [Snapshots for Merge Publications with Parameterized Filters](snapshots-for-merge-publications-with-parameterized-filters.md)  (Моментальные снимки для публикаций слиянием с параметризованными фильтрами)  
- [Рекомендации по защите репликации](security/replication-security-best-practices.md)  
+ [Replication Security Best Practices](security/replication-security-best-practices.md)  
   
   

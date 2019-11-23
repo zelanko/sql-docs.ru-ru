@@ -45,7 +45,7 @@ sp_update_agent_profile [@agent_type=] agent_type, [ @agent_id= ] agent_id, [ @p
 |**2**|Агент чтения журнала.|  
 |**3**|Агент распространителя.|  
 |**4**|Агент слияния.|  
-|**8**|Агент чтения очереди.|  
+|**9**|Агент чтения очереди.|  
   
 `[ @agent_id = ] 'agent_id'` — идентификатор агента. *agent_id* имеет **тип int**и не имеет значения по умолчанию.  
   
@@ -54,13 +54,13 @@ sp_update_agent_profile [@agent_type=] agent_type, [ @agent_id= ] agent_id, [ @p
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  **sp_update_agent_profile** используется во всех типах репликации.  
   
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** могут выполнять **sp_update_agent_profile**.  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также статью  
  [Профили агента репликации](../../relational-databases/replication/agents/replication-agent-profiles.md)   
  [sp_add_agent_profile &#40;  Transact-&#41; SQL](../../relational-databases/system-stored-procedures/sp-add-agent-profile-transact-sql.md)  
  [sp_change_agent_profile &#40;  Transact-&#41; SQL](../../relational-databases/system-stored-procedures/sp-change-agent-profile-transact-sql.md)  

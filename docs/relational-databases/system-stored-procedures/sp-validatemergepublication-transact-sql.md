@@ -41,24 +41,24 @@ sp_validatemergepublication [@publication=] 'publication'
  [ **\@publication =** ] **"***Публикация***"**  
  Имя публикации. Аргумент *publication* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @level = ] level` — это тип выполняемой проверки. *Level* имеет тип **tinyint**и не имеет значения по умолчанию. Уровень может быть одним из значений.  
+`[ @level = ] level` — тип выполняемой проверки. *Level* имеет тип **tinyint**и не имеет значения по умолчанию. Уровень может быть одним из значений.  
   
 |Значение уровня|Описание|  
 |-----------------|-----------------|  
 |**1**|Проверка достоверности только количества строк.|  
-|**2**|Проверка по количеству строк и контрольной сумме. Для [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]Subscribers автоматически устанавливается значение **3**.|  
+|**2**|Проверка по количеству строк и контрольной сумме. Для подписчиков [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]автоматически устанавливается значение **3**.|  
 |**3**|Это рекомендованное значение.|  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  **sp_validatemergepublication** используется в репликации слиянием.  
   
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** могут выполнять **sp_validatemergepublication**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также статью  
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Проверка реплицированных данных](../../relational-databases/replication/validate-data-at-the-subscriber.md)   
  [sp_validatemergesubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validatemergesubscription-transact-sql.md)  

@@ -27,7 +27,7 @@ ms.locfileid: "73787459"
 ## <a name="sqlconnect-support-for-high-availability-disaster-recovery"></a>Поддержка высокого уровня доступности и аварийного восстановления SQLConnect  
  Дополнительные сведения об использовании **SQLConnect** для подключения к кластеру [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] см. в статье [Поддержка высокого уровня доступности и аварийного восстановления в SQL Server Native Client](../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md).  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также статью  
    [функции SQLConnect](https://go.microsoft.com/fwlink/?LinkId=101541)  
  [Подробные сведения о реализации API-интерфейсов ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   

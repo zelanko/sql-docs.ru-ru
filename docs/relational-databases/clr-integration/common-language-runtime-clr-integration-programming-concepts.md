@@ -66,8 +66,8 @@ ms.locfileid: "70212391"
  [Сценарии использования и примеры интеграции со средой CLR](https://msdn.microsoft.com/library/33aac25f-abb4-4f29-af88-4a0dacd80ae7)  
  Описывает сценарии использования и образцы кода, использующие объекты CLR.  
   
-## <a name="see-also"></a>См. также  
- [Сборки &#40;ядро СУБД&#41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   
+## <a name="see-also"></a>См. также статью  
+ [Сборки &#40;ядро СУБД&#41; ](../../relational-databases/clr-integration/assemblies-database-engine.md)   
  [Установка пакета SDK для .NET Framework](https://technet.microsoft.com/library/bb686823\(v=SQL.105\).aspx)  
   
   

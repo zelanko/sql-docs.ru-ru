@@ -1,5 +1,5 @@
 ---
-title: 'Примеры: Использование инструкции OPENXML | Документация Майкрософт'
+title: 'Примеры: использование инструкции OPENXML | Документация Майкрософт'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -33,7 +33,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 09/10/2019
 ms.locfileid: "70874689"
 ---
-# <a name="examples-using-openxml"></a>Примеры: Использование OPENXML
+# <a name="examples-using-openxml"></a>Примеры. Использование OPENXML
   Примеры в этом подразделе иллюстрируют использование инструкции OPENXML для создания представления наборов строк XML-документа. Дополнительные сведения о синтаксисе инструкции OPENXML см. в разделе [OPENXML (Transact-SQL)](/sql/t-sql/functions/openxml-transact-sql). Примеры показывают все аспекты инструкции OPENXML, но не определяют метасвойства в ней. Дополнительные сведения о том, как использовать метасвойства в OPENXML, см. в статье [Определение метасвойств в инструкции OPENXML](specify-metaproperties-in-openxml.md).  
   
 ## <a name="examples"></a>Примеры  
@@ -84,7 +84,7 @@ FROM OPENXML (@DocHandle, '/ROOT/Customer',1)
 EXEC sp_xml_removedocument @DocHandle  
 ```  
   
- Это результат:  
+ Результат:  
   
 ```  
 CustomerID ContactName            
@@ -129,7 +129,7 @@ FROM      OPENXML (@XmlDocumentHandle, '/ROOT/Customer',2)
 EXEC sp_xml_removedocument @XmlDocumentHandle  
 ```  
   
- Это результат:  
+ Результат:  
   
 ```  
 CustomerID ContactName            
@@ -140,10 +140,10 @@ LILAS      Carlos Gonzlez
   
  Обратите внимание, что дескриптор документа, возвращенного хранимой процедурой **sp_xml_preparedocument** , действителен в течение выполнения пакета, но не в течение сеанса.  
   
-### <a name="b-specifying-colpattern-for-mapping-between-rowset-columns-and-the-xml-attributes-and-elements"></a>Б. Задание параметра ColPattern для сопоставления столбцов набора строк с XML-атрибутами и элементами  
+### <a name="b-specifying-colpattern-for-mapping-between-rowset-columns-and-the-xml-attributes-and-elements"></a>б. Задание параметра ColPattern для сопоставления столбцов набора строк с XML-атрибутами и элементами  
  Данный пример показывает, как задается шаблон XPath в необязательном параметре *ColPattern* для сопоставления столбцов набора строк с XML-атрибутами и элементами.  
   
- XML-документ в этом примере состоит из элементов <`Customer`>, <`Order`> и <`OrderDetail`>. Инструкция OPENXML получает из XML-документа сведения о заказчике и заказе в виде набора строк (**CustomerID**, **OrderDate**, **ProdID** и **Qty**).  
+ XML-документ в этом примере состоит из элементов <`Customer`>, <`Order`> и <`OrderDetail`>. Инструкция OPENXML получает из XML-документа сведения о заказчике и заказе в виде набора строк (**CustomerID**, **OrderDate**, **ProdID**и **Qty**).  
   
  Сначала вызывается хранимая процедура **sp_xml_preparedocument** , чтобы получить дескриптор документа. Дескриптор документа передается инструкции OPENXML.  
   
@@ -151,7 +151,7 @@ LILAS      Carlos Gonzlez
   
 -   шаблон *rowpattern* (/ROOT/Customer/Order) определяет, что следует обрабатывать узлы элемента <`OrderDetail`>.  
   
- В примере параметр *flags* имеет значение **2**, которое указывает на сопоставление с использованием элементов. Однако сопоставление, указанное в параметре *ColPattern* , перекрывает данное сопоставление. То есть шаблон XPath, заданный в параметре *ColPattern* , сопоставляет столбцы набора строк с атрибутами. Результатом является атрибутивное сопоставление.  
+ В примере параметр *flags* имеет значение **2** , которое указывает на сопоставление с использованием элементов. Однако сопоставление, указанное в параметре *ColPattern* , перекрывает данное сопоставление. То есть шаблон XPath, заданный в параметре *ColPattern* , сопоставляет столбцы набора строк с атрибутами. Результатом является атрибутивное сопоставление.  
   
  В элементе *SchemaDeclaration*предложения WITH параметр *ColPattern* также задается параметрами *ColName* и *ColType* . Необязательный параметр *ColPattern* является заданным шаблоном XPath и указывает следующее:  
   
@@ -192,7 +192,7 @@ WITH (OrderID     int         '../@OrderID',
 EXEC sp_xml_removedocument @XmlDocumentHandle  
 ```  
   
- Это результат:  
+ Результат:  
   
 ```  
 OrderID CustomerID        OrderDate          ProdID    Qty  
@@ -292,7 +292,7 @@ LILAS      Carlos Gonzlez
   
 -   шаблон *rowpattern* (/ROOT/Customer/Order) определяет, что следует обрабатывать узлы <`Order`>;  
   
--   параметр *flags* имеет значение **1**, которое указывает на сопоставление с использованием атрибутивной модели; В результате XML-атрибуты сопоставляются со столбцами в наборе строк, определенном в элементе *SchemaDeclaration*;  
+-   параметр *flags* имеет значение **1** , которое указывает на сопоставление с использованием атрибутивной модели; В результате XML-атрибуты сопоставляются со столбцами в наборе строк, определенном в элементе *SchemaDeclaration*;  
   
 -   в элементе *SchemaDeclaration* предложения WITH имена столбцов **oid** и **amount** в наборе строк совпадают с соответствующими именами XML-атрибутов. Поэтому параметр *ColPattern* не указывается. Для столбца **comment** в наборе строк функция XPath **text()** задается в виде параметра *ColPattern*. Это перезаписывает сопоставление с использованием атрибутивной модели, заданное в параметре *flags*, и столбец содержит строку конечных значений содержимого элемента.  
   
@@ -329,7 +329,7 @@ FROM OPENXML (@docHandle, '/root/Customer/Order', 1)
 EXEC sp_xml_removedocument @docHandle  
 ```  
   
- Это результат:  
+ Результат:  
   
 ```  
 oid   amount        comment  
@@ -343,7 +343,7 @@ O4    10000.0       NULL
 ### <a name="e-specifying-tablename-in-the-with-clause"></a>Д. Задание элемента TableName в предложении WITH  
  Этот пример задает элемент *TableName* в предложении WITH вместо элемента *SchemaDeclaration*. Это полезно, если таблица имеет нужную структуру и не требуются шаблоны столбцов (параметр *ColPattern* ).  
   
- XML-документ в этом примере состоит из элементов <`Customer`> и <`Order`>. Инструкция OPENXML возвращает сведения о заказе в наборе строк из трех столбцов (**oid**, **date** и **amount**), полученные из XML-документа.  
+ XML-документ в этом примере состоит из элементов <`Customer`> и <`Order`>. Инструкция OPENXML возвращает сведения о заказе в наборе строк из трех столбцов (**oid**, **date**и **amount**), полученные из XML-документа.  
   
  Сначала вызывается хранимая процедура **sp_xml_preparedocument** , чтобы получить дескриптор документа. Дескриптор документа передается инструкции OPENXML.  
   
@@ -389,7 +389,7 @@ FROM OPENXML (@docHandle, '/root/Customer/Order', 1)
 EXEC sp_xml_removedocument @docHandle  
 ```  
   
- Это результат:  
+ Результат:  
   
 ```  
 oid   date                        amount  
@@ -405,7 +405,7 @@ O4    1996-01-20 00:00:00.000     10000.0
   
  Образец XML-документа в этом примере состоит из элементов <`Customer`>, <`Order`> и <`OrderDetail`>.  
   
- Сначала вызывается хранимая процедура **sp_xml_preparedocument**, чтобы получить дескриптор документа. Дескриптор документа передается инструкции OPENXML.  
+ Сначала вызывается хранимая процедура **sp_xml_preparedocument** , чтобы получить дескриптор документа. Дескриптор документа передается инструкции OPENXML.  
   
  Инструкция OPENXML иллюстрирует следующее:  
   
@@ -462,7 +462,7 @@ EXEC sp_xml_removedocument @docHandle
     ```  
   
 ### <a name="g-specifying-rowpattern-ending-with-an-attribute"></a>Ж. Задание шаблона rowpattern, заканчивающегося атрибутом  
- XML-документ в этом примере состоит из элементов <`Customer`>, <`Order`> и <`OrderDetail`>. Инструкция OPENXML возвращает сведения о заказе в наборе строк из трех столбцов (**ProductID**, **Quantity** и **OrderID**) из XML-документа.  
+ XML-документ в этом примере состоит из элементов <`Customer`>, <`Order`> и <`OrderDetail`>. Инструкция OPENXML возвращает сведения о заказе в наборе строк из трех столбцов (**ProductID**, **Quantity**и **OrderID**) из XML-документа.  
   
  Сначала вызывается хранимая процедура **sp_xml_preparedocument** , чтобы получить дескриптор документа. Дескриптор документа передается инструкции OPENXML.  
   
@@ -474,7 +474,7 @@ EXEC sp_xml_removedocument @docHandle
   
  В элементе *SchemaDeclaration* предложения WITH параметр *ColPattern* также задан с параметрами *ColName* и *ColType* . Необязательный параметр *ColPattern* является заданным шаблоном XPath и указывает следующее:  
   
--   шаблон XPath ( **.** ), указанный в виде параметра *ColPattern* для столбца **ProdID** в наборе строк, определяет контекстный узел — текущий узел. Согласно заданному шаблону *rowpattern*, он является атрибутом **ProductID** элемента <`OrderDetail`>;  
+-   шаблон XPath ( **.** ), указанный в виде параметра *ColPattern* для столбца **ProdID** в наборе строк, определяет контекстный узел — текущий узел. Согласно заданному шаблону *rowpattern*, он является атрибутом **ProductID** элемента <`OrderDetail`>;  
   
 -   шаблон *ColPattern*, **../\@Quantity**, заданный для столбца **Qty** в наборе строк, определяет атрибут **Quantity** родительского элемента, <`OrderDetail`>, узла контекстного узла \<ProductID>.  
   
@@ -512,7 +512,7 @@ FROM OPENXML (@docHandle, '/ROOT/Customer/Order/OrderDetail/@ProductID')
 EXEC sp_xml_removedocument @docHandle  
 ```  
   
- Это результат:  
+ Результат:  
   
 ```  
 ProdID      Qty         OID  
@@ -576,9 +576,9 @@ FROM   OPENXML (@h, '/Root/row', 10)
 EXEC sp_xml_removedocument @h  
 ```  
   
- А именно, переменная (\@x) типа **xml** передается функции **sp_xml_preparedocument()** .  
+ А именно, переменная (**x) типа** xml\@ передается функции **sp_xml_preparedocument()** .  
   
- Это результат:  
+ Результат:  
   
 ```  
 id  lname   xmlname                   OverFlow  
@@ -800,7 +800,7 @@ Col1        BinaryCol
 1           0x1234567890  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также статью  
  [sp_xml_preparedocument (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-xml-preparedocument-transact-sql)   
  [sp_xml_removedocument (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-xml-removedocument-transact-sql)   
  [OPENXML (Transact-SQL)](/sql/t-sql/functions/openxml-transact-sql)   

@@ -29,14 +29,14 @@ ms.locfileid: "73729789"
 > [!NOTE]  
 >  Флаг можно назначить только одной версии в каждый момент времени. Если назначить флаг, уже назначенный другой версии, то он переместится к выбранной версии.  
   
-## <a name="prerequisites"></a>Предварительные требования  
+## <a name="prerequisites"></a>необходимые компоненты  
  Чтобы выполнить эту процедуру:  
   
 -   необходимо иметь разрешение на доступ к функциональной области **Управление версиями** ;  
   
 -   необходимо быть администратором модели. Дополнительные сведения см. в статье [Администраторы (службы Master Data Services)](../master-data-services/administrators-master-data-services.md).  
   
--   Нужно создать флаг версии для назначения. Дополнительные сведения см. в статье [Create a Version Flag &#40;Master Data Services&#41;](../master-data-services/create-a-version-flag-master-data-services.md).  
+-   Нужно создать флаг версии для назначения. Дополнительные сведения см. в статье [Создание флага версии (службы Master Data Services)](../master-data-services/create-a-version-flag-master-data-services.md).  
   
 -   Необходимо иметь разрешение на доступ к функциональной области "Управление версиями". Дополнительные сведения см. в разделе [Разрешения функциональной области (службы Master Data Services)](../master-data-services/functional-area-permissions-master-data-services.md).  
   
@@ -53,7 +53,7 @@ ms.locfileid: "73729789"
   
 4.  Нажмите клавишу ВВОД, чтобы сохранить изменение.  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также статью  
  [Создание флага версии (службы Master Data Services)](../master-data-services/create-a-version-flag-master-data-services.md)   
  [Версии (службы Master Data Services)](../master-data-services/versions-master-data-services.md)  
   

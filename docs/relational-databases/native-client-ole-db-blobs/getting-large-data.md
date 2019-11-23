@@ -36,7 +36,7 @@ ms.locfileid: "73775510"
   
 -   ICommand::Execute  
   
- Если свойству DBPROP_ACCESSORDER (в группе свойств набора строк) присвоено одно из значений, DBPROPVAL_AO_SEQUENTIAL или DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS, потребитель должен получить только одну строку данных в вызове метода **GetNextRows** так как данные больших двоичных объектов не буферизуются. Если свойство DBPROP_ACCESSORDER имеет значение DBPROPVAL_AO_RANDOM, потребитель может получать несколько строк данных в одном вызове метода **GetNextRows**.  
+ Если свойству DBPROP_ACCESSORDER (в группе свойств набора строк) присвоено одно из значений, DBPROPVAL_AO_SEQUENTIAL или DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS, потребитель должен получить только одну строку данных в вызове метода **GetNextRows** , так как данные большого двоичного объекта не буферизованы. Если свойство DBPROP_ACCESSORDER имеет значение DBPROPVAL_AO_RANDOM, потребитель может получать несколько строк данных в одном вызове метода **GetNextRows**.  
   
  Поставщик [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB не получает больших данных от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] до тех пор, пока он не запрашивается потребителем. Потребитель должен связывать все короткие типы данных в методе доступа, а затем, если потребуется, использовать один или несколько временных методов доступа для получения значений больших типов данных.  
   
@@ -148,7 +148,7 @@ HRESULT GetUnboundData
     }  
 ```  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также статью  
  [Большие двоичные объекты и объекты OLE](../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md)   
  [Использование типов больших значений](../../relational-databases/native-client/features/using-large-value-types.md)  
   

@@ -22,7 +22,7 @@ ms.locfileid: "73637705"
 # <a name="upgrade-to-sql-server-2014"></a>Обновление до SQL Server 2014
   Экземпляры [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]или [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] можно обновить до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Перед запуском программы установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для обновления до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]просмотрите [техническое руководство по обновлению SQL Server 2014](https://download.microsoft.com/download/7/1/5/715BDFA7-51B6-4D7B-AF17-61E78C7E538F/SQL_Server_2014_Upgrade_technical_guide.pdf) (загружается в формате PDF), ознакомьтесь со статьями о процессе обновления в этом разделе и прочитайте [заметки о выпуске SQL Server 2014](https://go.microsoft.com/fwlink/?LinkID=296445).  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  В этом разделе рассматриваются следующие вопросы.  
   
 -   [Поддерживаемые обновления версий и выпусков](supported-version-and-edition-upgrades.md)  
@@ -51,7 +51,7 @@ ms.locfileid: "73637705"
   
 -   [Инструкции по обновлению](../../../2014/sql-server/install/upgrade-how-to-topics.md)  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также статью  
  [Обновление [компонент ядра СУБД]](upgrade-database-engine.md)   
  [Обновление служб Analysis Services](upgrade-analysis-services.md)   
  [Обновление и перенос служб Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   

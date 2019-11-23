@@ -35,7 +35,7 @@ ms.locfileid: "73789612"
 HRESULT BCPDone(void);  
 ```  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Никакая другая операция не может быть вызвана применительно к интерфейсу [IBCPSession](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md) после вызова метода **BCPDone** . Единственной возможностью является вызов метода [IBCPSession::BCPInit](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) для инициализации операции массового копирования. Это аналогично вызову метода [IRowsetFastLoad::Commit](../../relational-databases/native-client-ole-db-interfaces/irowsetfastload-commit-ole-db.md) .  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
@@ -463,7 +463,7 @@ void wmain() {
 }  
 ```  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также статью  
  [IBCPSession &#40;OLE DB&#41; ](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md)   
  [Выполнение операций массового копирования](../../relational-databases/native-client/features/performing-bulk-copy-operations.md)  
   

@@ -68,16 +68,16 @@ ms.locfileid: "73637798"
 |---------------|--------------------------------------------------|-------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|  
 |CLR UDT (\<= 8 КБ)|определяемый пользователем тип|Udt|Varbinary|  
 |varbinary(max)|varbinary|varbinary|Изображение|  
-|varchar(max)|varchar|varchar|Текст|  
-|nvarchar(max)|nvarchar|nvarchar|Ntext|  
-|xml|xml|xml|Ntext|  
+|varchar(max)|varchar|varchar|Text|  
+|nvarchar(max)|NVARCHAR|NVARCHAR|Ntext|  
+|XML|XML|XML|Ntext|  
 |Определяемый пользователем тип CLR (> 8 КБ)|определяемый пользователем тип|varbinary|Изображение|  
-|date|date|varchar|Varchar|  
+|DATE|DATE|varchar|Varchar|  
 |datetime2|datetime2|varchar|Varchar|  
 |datetimeoffset|datetimeoffset|varchar|Varchar|  
 |time|time|varchar|Varchar|  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также статью  
  [SQL Server Native Client  программирования](sql-server-native-client-programming.md)  
  [Установка SQL Server Native Client](applications/installing-sql-server-native-client.md)  
   

@@ -36,7 +36,7 @@ ms.locfileid: "73729800"
   
  Каждая модель может иметь несколько администраторов. Каждый пользователь может быть администратором одной, нескольких или всех моделей в развертывании [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
   
- Сделать пользователя администратором модели можно в [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] либо с помощью программных средств. Дополнительные сведения см. в разделе [Создание администратора модели (службы Master Data Services)](../master-data-services/create-a-model-administrator-master-data-services.md).  
+ Сделать пользователя администратором модели можно в [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] либо с помощью программных средств. Дополнительные сведения см. в разделе [Create a Model Administrator &#40;Master Data Services&#41;](../master-data-services/create-a-model-administrator-master-data-services.md).  
   
 ## <a name="entity-administrators"></a>Администраторы сущностей  
  В [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]администратор сущностей — это пользователь, обладающий разрешениями администратора, назначенными объекту сущности на вкладке объекты модели. Когда пользователь имеет разрешения администратора для сущности, любые другие разрешения на дочерние объекты сущности (разрешения на объекты модели и элементы) заменяются разрешениями администратора и игнорируются.  
@@ -73,7 +73,7 @@ ms.locfileid: "73729800"
 ## <a name="external-resources"></a>Внешние ресурсы  
  Запись блога [Security Improvements](https://go.microsoft.com/fwlink/p/?LinkId=615376)(Улучшения безопасности) на портале msdn.com.  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также статью  
  [Создание администратора модели (службы Master Data Services)](../master-data-services/create-a-model-administrator-master-data-services.md)   
  [Создание базы данных служб Master Data Services](../master-data-services/install-windows/create-a-master-data-services-database.md)   
  [Уведомления (службы Master Data Services)](../master-data-services/notifications-master-data-services.md)  

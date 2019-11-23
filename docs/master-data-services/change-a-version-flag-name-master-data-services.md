@@ -25,7 +25,7 @@ ms.locfileid: "73729721"
 
   В службах [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]можно изменить имя флага версии.  
   
-## <a name="prerequisites"></a>Предварительные требования  
+## <a name="prerequisites"></a>необходимые компоненты  
  Чтобы выполнить эту процедуру:  
   
 -   необходимо иметь разрешение на доступ к функциональной области **Управление версиями** ;  
@@ -48,7 +48,7 @@ ms.locfileid: "73729721"
   
 6.  Нажмите клавишу ВВОД.  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также статью  
  [Версии (службы Master Data Services)](../master-data-services/versions-master-data-services.md)   
  [Назначение флага версии (службы Master Data Services)](../master-data-services/assign-a-flag-to-a-version-master-data-services.md)  
   

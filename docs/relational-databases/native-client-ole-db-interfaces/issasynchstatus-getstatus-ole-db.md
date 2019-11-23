@@ -108,8 +108,8 @@ HRESULT GetStatus(
  E_FAIL  
  Произошла ошибка, зависящая от поставщика.  
   
-## <a name="remarks"></a>Замечания  
- Метод **ISSAsynchStatus::GetStatus** ведет себя точно так, как ожидает метод **IDBAsynchStatus::GetStatus**: если инициализация объекта источника данных прервана, возвращается E_UNEXPECTED, а не DB_E_CANCELED (хотя метод [ISSAsynchStatus::WaitForAsynchCompletion](../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-waitforasynchcompletion-ole-db.md) возвратит DB_E_CANCELED). Происходит это потому, что после прерывания объект источника данных не остается в обычном состоянии зомби. Делается этого для того, чтобы можно было попытаться выполнить последующие операции инициализации.  
+## <a name="remarks"></a>Remarks  
+ Метод **ISSAsynchStatus::GetStatus** ведет себя точно так, как ожидает метод **IDBAsynchStatus::GetStatus** : если инициализация объекта источника данных прервана, возвращается E_UNEXPECTED, а не DB_E_CANCELED (хотя метод [ISSAsynchStatus::WaitForAsynchCompletion](../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-waitforasynchcompletion-ole-db.md) возвратит DB_E_CANCELED). Происходит это потому, что после прерывания объект источника данных не остается в обычном состоянии зомби. Делается этого для того, чтобы можно было попытаться выполнить последующие операции инициализации.  
   
  Если набор строк инициализируется или заполняется асинхронно, он должен поддерживать этот метод.  
   
@@ -123,7 +123,7 @@ HRESULT GetStatus(
   
  В случае вызова метода **ISSAsynchStatus::GetStatus** для инициализированного объекта источника данных или заполненного набора строк, либо передачи значения для параметра *eOperation* , отличного от DBASYNCHOP_OPEN, возвращается S_OK с параметрами *pulProgress* и *pulProgressMax* , которым установлено такое же значение. Если метод **ISSAsynchStatus::GetStatus** вызывается для объекта, созданного в результате выполнения команды, которая обновляет, удаляет или уставляет строки, оба параметра *pulProgress* и *pulProgressMax* указывают общее число строк, затронутых при выполнении этой команды.  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также статью  
  [Выполнение асинхронных операций](../../relational-databases/native-client/features/performing-asynchronous-operations.md)   
  [Метод ISSAsynchStatus &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-ole-db.md)  
   

@@ -38,10 +38,10 @@ FileTableRootPath ( [ '[schema_name.]FileTable_name' ], @option )
   
 ## <a name="arguments"></a>Аргументы  
  *FileTable_name*  
- Имя таблицы FileTable. *FileTable_name* имеет тип **nvarchar**. Этот параметр является необязательным. Значением по умолчанию является текущая база данных. Указание *schema_name* также является необязательным. Можно передать значение NULL для *FileTable_name* , чтобы использовать значение параметра по умолчанию.  
+ Имя таблицы FileTable. *FileTable_name* имеет тип **nvarchar**. Этот параметр является необязательным. Значением по умолчанию является текущая база данных. Указывать *schema_name* также необязательно. Для *FileTable_name* можно передать значение null, чтобы использовать значение параметра по умолчанию.  
   
- *@no__t 1option*  
- Целочисленное выражение, определяющее способ форматирования серверных компонентов пути. *\@option* может иметь одно из следующих значений:  
+ *\@, параметр*  
+ Целочисленное выражение, определяющее способ форматирования серверных компонентов пути. *\@параметр* может иметь одно из следующих значений:  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -61,7 +61,7 @@ FileTableRootPath ( [ '[schema_name.]FileTable_name' ], @option )
   
 -   Вызывающая сторона не имеет достаточных разрешений для ссылки на указанную таблицу или текущую базу данных.  
   
--   Параметр FILESTREAM параметра *database_directory* не задан для текущей базы данных.  
+-   Параметр FILESTREAM *database_directory* не задан для текущей базы данных.  
   
  Дополнительные сведения см. в статье [Work with Directories and Paths in FileTables](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md).  
   
@@ -80,14 +80,14 @@ FROM DocumentStore
 WHERE Name = N'document.docx';  
 ```  
   
-## <a name="security"></a>безопасность  
+## <a name="security"></a>Безопасность  
   
 ### <a name="permissions"></a>Разрешения  
  Функция **FileTableRootPath** требует:  
   
 -   разрешение SELECT на FileTable, чтобы получить корневой путь конкретной таблицы FileTable;  
   
--   разрешение **db_datareader** или более высокого уровня для получения корневого пути для текущей базы данных.  
+-   **db_datareader** или более высокого разрешения на получение корневого пути для текущей базы данных.  
   
 ## <a name="examples"></a>Примеры  
  В следующих примерах показано, как вызвать функцию **FileTableRootPath** .  
@@ -104,7 +104,7 @@ SELECT FileTableRootPath(N'dbo.MyFileTable');
 SELECT FileTableRootPath(N'MyFileTable');  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также статью  
  [Работа с каталогами и путями в таблицах FileTable](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)  
   
   

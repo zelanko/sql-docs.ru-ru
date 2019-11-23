@@ -48,7 +48,7 @@ ms.locfileid: "73758319"
   
 2.  Установите свойства в группе свойств DBPROPSET_ROWSET, чтобы включить возможность обновления для набора строк.  
   
-3.  Создайте набор привязок (по одной для каждого столбца) с помощью массива структур DBBINDING. Установите для элемента *wType* структуры DBBINDING значение DBTYPE_IUNKNOWN, а для элемента *pObject* — значение указателя на созданную структуру DBOBJECT.  
+3.  Создайте набор привязок (по одной для каждого столбца) с помощью массива структур DBBINDING. Установите для элемента *wType* структуры DBBINDING значение DBTYPE_IUNKNOWN, а для элемента *pObject* значение указателя на созданную структуру DBOBJECT.  
   
 4.  Создайте метод доступа на основе сведений о привязках в массиве структур DBBINDINGS.  
   
@@ -720,7 +720,7 @@ Exit:
 } //end function  
 ```  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также статью  
  [Большие двоичные объекты и объекты OLE](../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md)   
  [Использование типов больших значений](../../relational-databases/native-client/features/using-large-value-types.md)  
   

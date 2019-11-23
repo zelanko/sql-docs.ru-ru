@@ -32,7 +32,7 @@ ms.locfileid: "73729375"
 > [!NOTE]  
 >  Невозможно удалить элемент, если он используется в качестве значения атрибута на основе домена для другого элемента.  
   
-## <a name="prerequisites"></a>Предварительные требования  
+## <a name="prerequisites"></a>необходимые компоненты  
  Чтобы выполнить эту процедуру:  
   
 -   Необходимо иметь разрешение на доступ к функциональной области **Обозреватель** .  
@@ -65,7 +65,7 @@ ms.locfileid: "73729375"
   
 8.  В диалоговом окне подтверждения нажмите кнопку **ОК**.  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также статью  
  [Повторная активация элемента или коллекции (службы Master Data Services)](../master-data-services/reactivate-a-member-or-collection-master-data-services.md)   
  [Элементы (службы Master Data Services)](../master-data-services/members-master-data-services.md)   
  [Коллекции (службы Master Data Services)](../master-data-services/collections-master-data-services.md)  

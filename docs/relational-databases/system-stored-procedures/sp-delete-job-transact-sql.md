@@ -44,29 +44,29 @@ sp_delete_job { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
 ## <a name="arguments"></a>Аргументы  
 `[ @job_id = ] job_id` — идентификационный номер удаляемого задания. *job_id* имеет тип **uniqueidentifier**и значение по умолчанию NULL.  
   
-`[ @job_name = ] 'job_name'` — имя удаляемого задания. Аргумент *имя_задания* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @job_name = ] 'job_name'` — имя удаляемого задания. Аргумент *job_name* имеет тип **sysname**и значение по умолчанию NULL.  
   
 > [!NOTE]  
->  Необходимо указать *job_id* или *имя_задания*. нельзя указывать оба значения.  
+>  Необходимо указать либо *job_id* , либо *job_name*. нельзя указывать оба значения.  
   
 `[ @originating_server = ] 'server'` для внутреннего использования.  
   
-`[ @delete_history = ] delete_history` указывает, следует ли удалить журнал задания. *delete_history* имеет **бит**и значение по умолчанию **1**. Если *delete_history* имеет значение **1**, журнал заданий для задания удаляется. Если *delete_history* имеет значение **0**, журнал заданий не удаляется.  
+`[ @delete_history = ] delete_history` указывает, следует ли удалить журнал задания. *delete_history* имеет **бит**и значение по умолчанию **1**. Если *delete_history* равен **1**, журнал заданий для задания удаляется. Если значение *delete_history* равно **0**, журнал заданий не удаляется.  
   
- Обратите внимание, что при удалении задания, если журнал не удаляется, исторические данные для задания не отображаются в журнале заданий графического пользовательского интерфейса агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], но информация по-прежнему будет находиться в таблице **sysjobhistory** в **базе данных msdb.** база данных.  
+ Обратите внимание, что при удалении задания и удалении журнала данные журнала заданий не отображаются в журнале заданий графического пользовательского интерфейса агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], но эти сведения по-прежнему будут находиться в таблице **sysjobhistory** базы данных **msdb** .  
   
-`[ @delete_unused_schedule = ] delete_unused_schedule` указывает, следует ли удалять расписания, присоединенные к этому заданию, если они не присоединены к другим заданиям. *delete_unused_schedule* имеет **бит**и значение по умолчанию **1**. Если *delete_unused_schedule* имеет значение **1**, то расписания, прикрепленные к этому заданию, удаляются, если другие задания не ссылаются на расписание. Если *delete_unused_schedule* имеет значение **0**, расписания не удаляются.  
+`[ @delete_unused_schedule = ] delete_unused_schedule` указывает, следует ли удалять расписания, связанные с этим заданием, если они не присоединены к другим заданиям. *delete_unused_schedule* имеет **бит**и значение по умолчанию **1**. Если *delete_unused_schedule* равен **1**, то расписания, прикрепленные к этому заданию, удаляются, если другие задания не ссылаются на расписание. Если *delete_unused_schedule* равен **0**, расписания не удаляются.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
- None  
+ Нет  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Аргумент **\@originating_server** зарезервирован для внутреннего использования.  
   
- Аргумент **\@delete_unused_schedule** обеспечивает обратную совместимость с предыдущими версиями SQL Server путем автоматического удаления расписаний, не присоединенных к какому-либо заданию. Обратите внимание, что поведение этого параметра по умолчанию обеспечивает обратную совместимость. Чтобы хранить расписания, которые не присоединены к заданию, необходимо указать значение **0** в качестве аргумента **\@delete_unused_schedule** .  
+ Аргумент **\@delete_unused_schedule** обеспечивает обратную совместимость с предыдущими версиями SQL Server путем автоматического удаления расписаний, не присоединенных к какому бы то ни было заданию. Обратите внимание, что поведение этого параметра по умолчанию обеспечивает обратную совместимость. Чтобы хранить расписания, которые не присоединены к заданию, необходимо указать значение **0** в качестве аргумента **\@delete_unused_schedule** .  
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] обеспечивает доступный графический способ управления заданиями и рекомендуется для создания и управления инфраструктурой заданий.  
   
@@ -97,10 +97,10 @@ EXEC sp_delete_job
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также статью  
  [sp_add_job (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-add-job-transact-sql.md)   
- [sp_help_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
- [sp_update_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
+ [sp_help_job &#40;  Transact-&#41; SQL](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)  
+ [sp_update_job &#40;  Transact-&#41; SQL](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)  
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

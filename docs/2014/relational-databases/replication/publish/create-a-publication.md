@@ -22,12 +22,12 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/09/2019
 ms.locfileid: "73882323"
 ---
-# <a name="create-a-publication"></a>Create a Publication
+# <a name="create-a-publication"></a>Создание публикации
   В данном разделе описывается процесс создания публикации в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]или объектов RMO.  
   
  **В этом разделе**  
   
--   **Перед началом работы выполните следующие действия.**  
+-   **Перед началом работы**  
   
      [Ограничения](#Restrictions)  
   
@@ -69,7 +69,7 @@ ms.locfileid: "73882323"
   
          Если задано, что в качестве распространителя будет функционировать другой сервер, необходимо ввести пароль на странице **Административный пароль** для соединений, устанавливаемых между издателем и распространителем. Пароль должен совпадать с паролем, указанным при включении издателя на удаленном распространителе.  
   
-         Дополнительные сведения см. в разделе [Configure Distribution](../configure-distribution.md).  
+         Дополнительные сведения см. в статье [Настройка распространения](../configure-distribution.md).  
   
     -   Выберите базу данных публикации.  
   
@@ -91,7 +91,7 @@ ms.locfileid: "73882323"
   
          Дополнительные сведения см. в разделах [Replication Agent Security Model](../security/replication-agent-security-model.md) и [Replication Security Best Practices](../security/replication-security-best-practices.md).  
   
-    -   При необходимости создайте скрипт для публикации. Дополнительные сведения см. в разделе [Scripting Replication](../scripting-replication.md).  
+    -   При необходимости создайте скрипт для публикации. Дополнительные сведения см. в статье [Scripting Replication](../scripting-replication.md).  
   
     -   Задайте имя для публикации.  
   
@@ -106,9 +106,9 @@ ms.locfileid: "73882323"
   
     -   Если задание агента чтения журнала для указанной базы данных публикации уже существует, перейдите к шагу 3.  
   
-    -   Если неизвестно, существует ли задание агента чтения журнала для публикуемой базы данных, выполните процедуру [sp_helplogreader_agent (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-helplogreader-agent-transact-sql) на издателе в базе данных издателя.  
+    -   Если вы не уверены, существует ли задание агента чтения журнала для публикуемой базы данных, выполните процедуру [sp_helplogreader_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helplogreader-agent-transact-sql) в издателе в базе данных публикации.  
   
-    -   Если результирующий набор пуст, необходимо создать задание агента чтения журнала. На издателе выполните процедуру [sp_addlogreader_agent (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql). Укажите в параметрах [!INCLUDE[msCoName](../../../includes/msconame-md.md)]**job_name\@ и** **password\@ учетные данные**  Windows, с которыми работает агент. Если агент будет использовать проверку подлинности SQL Server для подключения к издателю, также необходимо указать значение **0** в параметре **\@publisher_security_mode** и данные входа [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в параметрах **\@publisher_login** и **\@publisher_password**. Перейдите к шагу 3.  
+    -   Если результирующий набор пуст, необходимо создать задание агента чтения журнала. На издателе выполните процедуру [sp_addlogreader_agent (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql). Укажите в параметрах [!INCLUDE[msCoName](../../../includes/msconame-md.md)]**job_name\@ и** **password\@ учетные данные**  Windows, с которыми работает агент. Если агент будет использовать проверку подлинности SQL Server для подключения к издателю, также необходимо указать значение **0** в параметре **\@publisher_security_mode** и данные входа [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в параметрах **\@publisher_login** и **\@publisher_password**. Перейдите к шагу 3.  
   
 3.  На издателе выполните процедуру [sp_addpublication (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql). Укажите имя публикации для **\@публикации**, а для параметра **\@repl_freq** укажите значение `snapshot` для публикации моментальных снимков или значение `continuous` для публикации транзакций. Укажите все остальные параметры публикации. Таким образом будет определена публикация.  
   
@@ -124,7 +124,7 @@ ms.locfileid: "73882323"
   
 5.  Добавьте статьи к публикации. Дополнительные сведения см. в статье [Define an Article](define-an-article.md).  
   
-6.  Запустите задание агента моментальных снимков, чтобы создать исходный моментальный снимок для этой публикации. Дополнительные сведения см. в разделе [Create and Apply the Initial Snapshot](../create-and-apply-the-initial-snapshot.md).  
+6.  Запустите задание агента моментальных снимков, чтобы создать исходный моментальный снимок для этой публикации. Дополнительные сведения см. в статье [Create and Apply the Initial Snapshot](../create-and-apply-the-initial-snapshot.md).  
   
 #### <a name="to-create-a-merge-publication"></a>Создание публикации слиянием  
   
@@ -144,9 +144,9 @@ ms.locfileid: "73882323"
   
 4.  Добавьте статьи к публикации. Дополнительные сведения см. в статье [Define an Article](define-an-article.md).  
   
-5.  Запустите задание агента моментальных снимков, чтобы создать исходный моментальный снимок для этой публикации. Дополнительные сведения см. в разделе [Create and Apply the Initial Snapshot](../create-and-apply-the-initial-snapshot.md).  
+5.  Запустите задание агента моментальных снимков, чтобы создать исходный моментальный снимок для этой публикации. Дополнительные сведения см. в статье [Create and Apply the Initial Snapshot](../create-and-apply-the-initial-snapshot.md).  
   
-###  <a name="TsqlExample"></a> Пример (Transact-SQL)  
+###  <a name="TsqlExample"></a> Примеры (Transact-SQL)  
  В следующем примере производится создание публикации транзакций. Учетные данные Windows, необходимые для создания задания агента моментальных снимков и агента чтения журнала, передаются через переменные скрипта.  
   
  [!code-sql[HowTo#sp_AddTranPub](../../../snippets/tsql/SQL15/replication/howto/tsql/createtranpub.sql#sp_addtranpub)]  
@@ -175,7 +175,7 @@ ms.locfileid: "73882323"
   
     -   (необязательно) при соединении с издателем с проверкой подлинности SQL Server укажите значения свойств <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> и <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> или <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SecureSqlStandardPassword%2A> объекта <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.LogReaderAgentPublisherSecurity%2A> .  
   
-    -   Вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.CreateLogReaderAgent%2A>, чтобы создать задание агента чтения журнала для базы данных.  
+    -   С помощью метода <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.CreateLogReaderAgent%2A> создайте задание агента чтения журнала для базы данных.  
   
 5.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.TransPublication> и укажите для него следующие свойства:  
   
@@ -248,11 +248,11 @@ ms.locfileid: "73882323"
   
  [!code-vb[HowTo#rmo_vb_CreateMergePub](../../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_createmergepub)]  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также статью  
  [Использование программы sqlcmd с переменными скрипта](../../scripting/sqlcmd-use-with-scripting-variables.md)   
  [Публикация данных и объектов базы данных](publish-data-and-database-objects.md)   
- [Основные понятия объектов RMO](../concepts/replication-management-objects-concepts.md)   
- [Определение статьи](define-an-article.md)   
+ [Replication Management Objects Concepts](../concepts/replication-management-objects-concepts.md)   
+ [Define an Article](define-an-article.md)   
  [Просмотр и изменение свойств публикации](view-and-modify-publication-properties.md)   
  [Настройка распространения](../configure-distribution.md)   
  [Организация безопасности распространителя](../security/secure-the-distributor.md)   

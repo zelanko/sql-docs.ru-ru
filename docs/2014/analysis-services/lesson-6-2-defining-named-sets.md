@@ -135,7 +135,7 @@ ms.locfileid: "69493895"
  [Занятие 7. Определение ключевых показателей эффективности](lesson-7-defining-key-performance-indicators-kpis.md)  
   
 ## <a name="see-also"></a>См. также статью  
- [Вычисления](multidimensional-models-olap-logical-cube-objects/calculations.md)    
+ [Вычисления](multidimensional-models-olap-logical-cube-objects/calculations.md)   
  [Создание именованных наборов](multidimensional-models/create-named-sets.md)  
   
   

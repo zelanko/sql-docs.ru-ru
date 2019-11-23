@@ -74,7 +74,7 @@ xp_msver [ optname ]
 ## <a name="permissions"></a>Разрешения  
  Необходимо быть членом роли **public** .  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также статью  
  [Системные функции (Transact-SQL)](../../relational-databases/system-functions/system-functions-category-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Общие расширенные хранимые &#40;процедуры Transact-&#41; SQL](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)   

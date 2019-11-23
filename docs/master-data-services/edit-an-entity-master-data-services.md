@@ -25,7 +25,7 @@ ms.locfileid: "73729297"
 
   В [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]можно изменить сущность.  
   
-## <a name="prerequisites"></a>Предварительные требования  
+## <a name="prerequisites"></a>необходимые компоненты  
  Чтобы выполнить эту процедуру:  
   
 -   необходимо иметь разрешение на доступ к функциональной области **Администрирование системы** ;  
@@ -71,7 +71,7 @@ ms.locfileid: "73729297"
   
  ![Значок состояния "ОК"](../master-data-services/media/mds-statusicon-ok.png "Значок состояния "ОК"")  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также статью  
  [Явные иерархии (службы Master Data Services)](../master-data-services/explicit-hierarchies-master-data-services.md)   
  [Удаление сущности (службы Master Data Services)](../master-data-services/delete-an-entity-master-data-services.md)   
  [Сущности (службы Master Data Services)](../master-data-services/entities-master-data-services.md)  

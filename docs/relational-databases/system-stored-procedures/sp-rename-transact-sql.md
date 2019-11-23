@@ -67,7 +67,7 @@ sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'
 |DATABASE|Пользовательская база данных. Этот тип объекта необходим при переименовании базы данных.|  
 |INDEX|Пользовательский индекс. При переименовании индекса со статистикой также автоматически переименовывается эта статистика.|  
 |OBJECT|Элемент типа, записанный в [sys. Objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md). Например, значение OBJECT может быть использовано для переименования объектов с ограничениями (CHECK, FOREIGN KEY, PRIMARY/UNIQUE KEY) пользовательских таблиц и правил.|  
-|STATISTICS|**Применимо к**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздних версий и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Статистика создается явно пользователем или неявно с индексом. При переименовании статистики для индекса также автоматически переименовывается этот индекс.|  
+|STATISTICS|**Применимо к**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и выше, а также [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Статистика создается явно пользователем или неявно с индексом. При переименовании статистики для индекса также автоматически переименовывается этот индекс.|  
 |USERDATATYPE|[Определяемые пользователем типы данных CLR](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md) , добавленные с помощью команды [CREATE TYPE](../../t-sql/statements/create-type-transact-sql.md) или [sp_addtype](../../relational-databases/system-stored-procedures/sp-addtype-transact-sql.md).|  
   
 ## <a name="return-code-values"></a>Значения кода возврата  

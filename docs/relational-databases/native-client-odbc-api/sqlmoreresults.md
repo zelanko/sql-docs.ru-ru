@@ -162,7 +162,7 @@ EXIT:
     }  
 ```  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также статью  
    [функции SQLMoreResults](https://go.microsoft.com/fwlink/?LinkId=59357)  
  [Подробные сведения о реализации API-интерфейсов ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   

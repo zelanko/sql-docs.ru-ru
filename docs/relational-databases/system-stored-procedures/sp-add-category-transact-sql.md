@@ -45,7 +45,7 @@ sp_add_category
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @class = ] 'class'`Класс добавляемой категории. *класс* имеет тип **varchar (8)** со ЗНАЧЕНИЕМ по умолчанию Job и может принимать одно из следующих значений.  
+`[ @class = ] 'class'` класс добавляемой категории. *класс* имеет тип **varchar (8)** со ЗНАЧЕНИЕМ по умолчанию Job и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -53,7 +53,7 @@ sp_add_category
 |ALERT|Добавление категории предупреждений.|  
 |OPERATOR|Добавление категории операторов.|  
   
-`[ @type = ] 'type'`Тип добавляемой категории. *тип* — **varchar (12)** , со значением по умолчанию **Local**и может принимать одно из следующих значений.  
+`[ @type = ] 'type'` тип добавляемой категории. *тип* — **varchar (12)** , со значением по умолчанию **Local**и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -61,16 +61,16 @@ sp_add_category
 |НЕСКОЛЬКО СЕРВЕРОВ|Многосерверная категория заданий.|  
 |None|Категория для класса, отличного от JOB **.**|  
   
-`[ @name = ] 'name'`Имя добавляемой категории. Имя должно быть уникальным в указанном классе. Аргумент *Name* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @name = ] 'name'` имя добавляемой категории. Имя должно быть уникальным в указанном классе. Аргумент *Name* имеет тип **sysname**и не имеет значения по умолчанию.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
- None  
+ Нет  
   
-## <a name="remarks"></a>Примечания  
- **sp_add_category** необходимо запускать из базы данных **msdb** .  
+## <a name="remarks"></a>Remarks  
+ **sp_add_category** должны запускаться из базы данных **msdb** .  
   
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** могут выполнять **sp_add_category**.  
@@ -89,12 +89,12 @@ EXEC dbo.sp_add_category
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
- [sp_delete_category &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-category-transact-sql.md)   
- [sp_help_category &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-category-transact-sql.md)   
- [sp_update_category &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-category-transact-sql.md)   
- [dbo. sysjobs &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/dbo-sysjobs-transact-sql.md)   
- [dbo. сисжобсерверс &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/dbo-sysjobservers-transact-sql.md)   
+## <a name="see-also"></a>См. также статью  
+ [sp_delete_category &#40;  Transact-&#41; SQL](../../relational-databases/system-stored-procedures/sp-delete-category-transact-sql.md)  
+ [sp_help_category &#40;  Transact-&#41; SQL](../../relational-databases/system-stored-procedures/sp-help-category-transact-sql.md)  
+ [sp_update_category &#40;  Transact-&#41; SQL](../../relational-databases/system-stored-procedures/sp-update-category-transact-sql.md)  
+   [Transact- &#40;SQL&#41; в dbo. sysjobs](../../relational-databases/system-tables/dbo-sysjobs-transact-sql.md)  
+   [Transact- &#40;SQL&#41; в dbo. сисжобсерверс](../../relational-databases/system-tables/dbo-sysjobservers-transact-sql.md)  
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   
