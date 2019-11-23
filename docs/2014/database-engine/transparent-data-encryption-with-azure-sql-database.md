@@ -54,7 +54,7 @@ ms.locfileid: "72798071"
   
 2.  В области слева нажмите кнопку **ПРОСМОТРЕТЬ ВСЕ**и выберите **Базы данных SQL**.  
   
-3.  С **баз данных SQL** выбранной в левой области щелкните базу данных пользователя.  
+3.  После этого выберите пользовательскую базу данных.  
   
 4.  В колонке базы данных щелкните **Все параметры**.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "72798071"
   
      ![SQLDB_TDE_TermsNewUI](../../2014/database-engine/media/sqldb-tde-termsnewui.png "SQLDB_TDE_TermsNewUI")  
   
-     Кроме того, отслеживать ход шифрования можно, подключившись к [!INCLUDE[ssSDS](../includes/sssds-md.md)] с помощью инструмента запросов, например [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] , в качестве пользователя базы данных с разрешением **VIEW DATABASE STATE** . Запросите столбец `encryption_state` представления [sys. DM _database_encryption_keys](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql) .  
+     Кроме того, отслеживать ход шифрования можно, подключившись к [!INCLUDE[ssSDS](../includes/sssds-md.md)] с помощью инструмента запросов, например [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] , в качестве пользователя базы данных с разрешением **VIEW DATABASE STATE** . Запросите столбец `encryption_state` представления [sys. dm_database_encryption_keys](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql) .  
   
 ##  <a name="Encrypt"></a> Включение TDE в [!INCLUDE[ssSDS](../includes/sssds-md.md)] с помощью Transact-SQL  
  Далее предполагается, что вы уже подписались на предварительную версию.  
@@ -90,7 +90,7 @@ ms.locfileid: "72798071"
     GO  
     ```  
   
-3.  Чтобы отслеживать ход выполнения шифрования на [!INCLUDE[ssSDS](../includes/sssds-md.md)], пользователи базы данных с разрешением **Просмотр состояния базы данных** могут запрашивать `encryption_state` столбец представления [sys. DM _database_encryption_keys](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql) .  
+3.  Чтобы отслеживать ход выполнения шифрования на [!INCLUDE[ssSDS](../includes/sssds-md.md)], пользователи базы данных с разрешением **Просмотр состояния базы данных** могут запрашивать столбец `encryption_state` представления [sys. dm_database_encryption_keys](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql) .  
   
 ## <a name="enabling-tde-on-sql-database-by-using-powershell"></a>Включение TDE в Базе данных SQL с помощью PowerShell  
  Включить и отключить TDE можно с помощью следующих команд Azure PowerShell. Перед выполнением команды подключите свою учетную запись к окну PS. Далее предполагается, что вы уже подписались на предварительную версию. Дополнительные сведения о PowerShell см. в разделе [Установка и настройка Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/).  
@@ -120,7 +120,7 @@ ms.locfileid: "72798071"
   
 2.  В области слева нажмите кнопку **ПРОСМОТРЕТЬ ВСЕ**и выберите **Базы данных SQL**.  
   
-3.  С **баз данных SQL** выбранной в левой области щелкните базу данных пользователя.  
+3.  После этого выберите пользовательскую базу данных.  
   
 4.  В колонке базы данных щелкните **Все параметры**.  
   
@@ -128,7 +128,7 @@ ms.locfileid: "72798071"
   
 6.  В колонке **Прозрачное шифрование данных ПРЕДВАРИТЕЛЬНАЯ ВЕРСИЯ** переместите кнопку **Шифрование данных** в положение **ВЫКЛ**и нажмите кнопку **Сохранить** вверху страницы. В разделе **Состояние шифрования** будет отображаться приблизительный ход прозрачной расшифровки данных.  
   
-     Кроме того, отслеживать ход расшифровки можно, подключившись к [!INCLUDE[ssSDS](../includes/sssds-md.md)] с помощью инструмента запросов, например [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] , в качестве пользователя базы данных с разрешением **VIEW DATABASE STATE** . Запросите столбец `encryption_state` представления [sys. DM _database_encryption_keys](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql).  
+     Кроме того, отслеживать ход расшифровки можно, подключившись к [!INCLUDE[ssSDS](../includes/sssds-md.md)] с помощью инструмента запросов, например [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] , в качестве пользователя базы данных с разрешением **VIEW DATABASE STATE** . Запросите столбец `encryption_state` представления [sys. dm_database_encryption_keys](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql).  
   
 #### <a name="to-disable-tde-by-using-transact-sql"></a>Отключение TDE с помощью Transact-SQL  
   
@@ -142,7 +142,7 @@ ms.locfileid: "72798071"
     GO  
     ```  
   
-3.  Чтобы отслеживать ход выполнения шифрования на [!INCLUDE[ssSDS](../includes/sssds-md.md)], пользователи базы данных с разрешением **Просмотр состояния базы данных** могут запрашивать `encryption_state` столбец представления [sys. DM _database_encryption_keys](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql) .  
+3.  Чтобы отслеживать ход выполнения шифрования на [!INCLUDE[ssSDS](../includes/sssds-md.md)], пользователи базы данных с разрешением **Просмотр состояния базы данных** могут запрашивать столбец `encryption_state` представления [sys. dm_database_encryption_keys](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql) .  
   
 ##  <a name="Working"></a>Работа с TDE защищенными базами данных на [!INCLUDE[ssSDS](../includes/sssds-md.md)]  
  Расшифровывать базы данных для работы в Azure не нужно. Параметры TDE базы данных-источника прозрачно наследуются целевым объектом. Сюда входят операции, связанные с:  
@@ -166,7 +166,7 @@ ms.locfileid: "72798071"
 ## <a name="see-also"></a>См. также статью  
  [Прозрачное шифрование данных (TDE)](../relational-databases/security/encryption/transparent-data-encryption.md)   
  [CREATE CREDENTIAL &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-credential-transact-sql)   
- [CREATE ASYMMETRIC KEY (Transact-SQL)](/sql/t-sql/statements/create-asymmetric-key-transact-sql)   
+ [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-asymmetric-key-transact-sql)   
  [CREATE DATABASE ENCRYPTION KEY (Transact-SQL)](/sql/t-sql/statements/create-database-encryption-key-transact-sql)   
  [ALTER DATABASE (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql)   
- [Параметры ALTER DATABASE SET &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)  
+ [Параметры ALTER DATABASE SET (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql-set-options)  

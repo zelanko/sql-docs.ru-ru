@@ -22,7 +22,7 @@ ms.lasthandoff: 10/23/2019
 ms.locfileid: "72798008"
 ---
 # <a name="copy-only-backups-sql-server"></a>Резервные копии только для копирования (SQL Server)
-  *Резервная копия только для копирования* — это резервная копия [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], которая не зависит от обычной последовательности создания традиционных резервных копий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Обычно создание резервного копирования приводит к изменению базы данных и влияет на то, как будут восстанавливаться последующие резервные копии. Однако иногда приходится выполнять резервное копирование базы данных для особых нужд, когда это не сказывается на общем процессе резервного копирования и восстановления. Этой цели служат резервные копии только для копирования.  
+  *Резервная копия только для копирования* — это резервная копия [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , которая не зависит от обычной последовательности создания традиционных резервных копий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Обычно создание резервного копирования приводит к изменению базы данных и влияет на то, как будут восстанавливаться последующие резервные копии. Однако иногда приходится выполнять резервное копирование базы данных для особых нужд, когда это не сказывается на общем процессе резервного копирования и восстановления. Этой цели служат резервные копии только для копирования.  
   
  Резервные копии только для копирования имеют следующие типы.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "72798008"
  Резервные копии только для копирования записываются в столбец **is_copy_only** таблицы [backupset](/sql/relational-databases/system-tables/backupset-transact-sql) .  
   
 ## <a name="to-create-a-copy-only-backup"></a>Создание резервной копии только для копирования  
- Резервную копию только для копирования можно создать с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]или PowerShell.  
+ Резервную копию только для копирования можно создать с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)] или PowerShell.  
   
 ###  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
@@ -52,14 +52,14 @@ ms.locfileid: "72798008"
   
 -   Для полных резервных копий только для копирования:  
   
-     BACKUP DATABASE *имя_базы_данных* to \<backup_device *>* ... WITH COPY_ONLY...  
+     Резервное копирование *database_name* базы данных в \<backup_device *>* ... С COPY_ONLY...  
   
     > [!NOTE]  
     >  Если параметр COPY_ONLY указан одновременно с параметром DIFFERENTIAL, он не имеет эффекта.  
   
 -   Для резервных копий журнала только для копирования:  
   
-     BACKUP LOG *имя_базы_данных* to *\<* backup_device *>* ... WITH COPY_ONLY...  
+     *DATABASE_NAME* журнала резервного копирования для *\<* backup_device *>* ... С COPY_ONLY...  
   
 ###  <a name="PowerShellProcedure"></a> Использование PowerShell  
   
@@ -71,7 +71,7 @@ ms.locfileid: "72798008"
   
 -   [Создание полной резервной копии базы данных (SQL Server)](create-a-full-database-backup-sql-server.md)  
   
--   [Создание резервной копии журнала транзакций &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)  
+-   [Создание резервной копии журнала транзакций (SQL Server)](back-up-a-transaction-log-sql-server.md)  
   
 ### <a name="to-view-copy-only-backups"></a>Просмотр резервных копий только для копирования
   
@@ -79,10 +79,10 @@ ms.locfileid: "72798008"
   
 ### <a name="to-set-up-and-use-the-sql-server-powershell-provider"></a>Настройка и использование поставщика SQL Server PowerShell
   
--   [Поставщик SQL Server PowerShell](../../powershell/sql-server-powershell-provider.md)  
+-   [SQL Server PowerShell, поставщик](../../powershell/sql-server-powershell-provider.md)  
 
 ## <a name="see-also"></a>См. также статью  
  [Общие сведения о резервном копировании (SQL Server)](backup-overview-sql-server.md)   
  [Модели восстановления (SQL Server)](recovery-models-sql-server.md)   
- [Copy Databases with Backup and Restore](../databases/copy-databases-with-backup-and-restore.md)  (Копирование баз данных путем создания и восстановления резервных копий)  
+ [Копирование баз данных путем создания и восстановления резервных копий](../databases/copy-databases-with-backup-and-restore.md)   
  [Обзор процессов восстановления (SQL Server)](restore-and-recovery-overview-sql-server.md)  

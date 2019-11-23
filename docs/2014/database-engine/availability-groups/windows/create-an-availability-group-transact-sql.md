@@ -19,7 +19,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 10/23/2019
 ms.locfileid: "72797676"
 ---
-# <a name="create-an-availability-group-transact-sql"></a>Создание группы доступности (Transact-SQL)
+# <a name="create-an-availability-group-transact-sql"></a>Create an Availability Group (Transact-SQL)
   В данном разделе описывается использование [!INCLUDE[tsql](../../../includes/tsql-md.md)] для создания и настройки группы доступности на основе экземпляров [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] , на которых включена функция [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] . *Группа доступности* определяет набор пользовательских баз данных, которые будут действовать при сбое как единое целое, и набор партнеров по обеспечению отработки отказа, называемых *репликами доступности*и поддерживающих отработку отказа.  
   
 > [!NOTE]  
@@ -33,9 +33,9 @@ ms.locfileid: "72797676"
   
 ###  <a name="PrerequisitesRestrictions"></a> Предварительные условия, ограничения и рекомендации  
   
--   Перед созданием группы доступности необходимо, чтобы экземпляры [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , на которых находятся реплики доступности, были расположены на различных узлах одной отказоустойчивой кластеризации Windows Server (WSFC). Кроме того, убедитесь, что каждый из экземпляров сервера соответствует всем другим обязательным условиям [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Для получения дополнительных сведений настоятельно рекомендуется изучить раздел [Предварительные требования, ограничения и рекомендации для групп доступности AlwaysOn (SQL Server)](prereqs-restrictions-recommendations-always-on-availability.md).  
+-   Перед созданием группы доступности необходимо, чтобы экземпляры [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , на которых находятся реплики доступности, были расположены на различных узлах одной отказоустойчивой кластеризации Windows Server (WSFC). Кроме того, убедитесь, что каждый из экземпляров сервера соответствует всем другим обязательным условиям [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] . Для получения дополнительных сведений настоятельно рекомендуется изучить раздел [Предварительные требования, ограничения и рекомендации для групп доступности AlwaysOn (SQL Server)](prereqs-restrictions-recommendations-always-on-availability.md).  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="Security"></a> Безопасность  
   
 ####  <a name="Permissions"></a> Разрешения  
  Требуется членство в фиксированной роли сервера **sysadmin** и одно из разрешений: CREATE AVAILABILITY GROUP, ALTER ANY AVAILABILITY GROUP или CONTROL SERVER.  
@@ -62,11 +62,11 @@ ms.locfileid: "72797676"
   
 2.  Создайте группу доступности с помощью инструкции [CREATE AVAILABILITY GROUP](/sql/t-sql/statements/create-availability-group-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)] .  
   
-3.  Присоедините новую вторичную реплику к группе доступности. Дополнительные сведения см. в разделе [Присоединение вторичной реплики к группе доступности (SQL Server)](join-a-secondary-replica-to-an-availability-group-sql-server.md).  
+3.  Присоедините новую вторичную реплику к группе доступности. Дополнительные сведения см. в статье [Присоединение вторичной реплики к группе доступности (SQL Server)](join-a-secondary-replica-to-an-availability-group-sql-server.md).  
   
 4.  Для каждой базы данных в группе доступности создайте базу данных-получатель путем восстановления последней резервной копии базы данных-источника с помощью инструкции RESTORE WITH NORECOVERY. Дополнительные сведения см. в разделе [Пример. Настройка группы доступности с использованием проверки подлинности Windows (Transact-SQL)](create-an-availability-group-transact-sql.md), начиная с шага восстановления резервной копии базы данных.  
   
-5.  Присоедините каждую новую базу данных-получатель к группе доступности. Дополнительные сведения см. в разделе [Присоединение вторичной реплики к группе доступности (SQL Server)](join-a-secondary-replica-to-an-availability-group-sql-server.md).  
+5.  Присоедините каждую новую базу данных-получатель к группе доступности. Дополнительные сведения см. в статье [Присоединение вторичной реплики к группе доступности (SQL Server)](join-a-secondary-replica-to-an-availability-group-sql-server.md).  
   
 ##  <a name="ExampleConfigAGWinAuth"></a> Пример. Настройка группы доступности, использующей проверку подлинности Windows  
  В этом примере создается образец процедуры настройки [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] , где [!INCLUDE[tsql](../../../includes/tsql-md.md)] используется для настройки конечных точек зеркального отображения базы данных, использующих проверку подлинности Windows для создания и настройки группы доступности и ее баз данных-получателей.  
@@ -121,9 +121,9 @@ ms.locfileid: "72797676"
   
  В следующей таблице приведена сводка по значениям, использованным в этом образце конфигурации.  
   
-|Первоначальная роль|Система|Узловой экземпляр [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|  
+|Первоначальная роль|System|Узловой экземпляр [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|  
 |------------------|------------|---------------------------------------------|  
-|primary|`COMPUTER01`|`AgHostInstance`|  
+|Первичная|`COMPUTER01`|`AgHostInstance`|  
 |Вторичная|`COMPUTER02`|Экземпляр по умолчанию.|  
   
 1.  Создайте конечную точку зеркального отображения базы данных с именем *dbm_endpoint* в экземпляре сервера, где планируется создать группу доступности (это экземпляр с именем `AgHostInstance` на компьютере `COMPUTER01`). Эта конечная точка использует порт 7022. Обратите внимание, что на экземпляре сервера, где создается группа доступности, будет размещаться первичная реплика.  
@@ -285,7 +285,7 @@ ms.locfileid: "72797676"
 ###  <a name="CompleteCodeExample"></a> Выполните пример кода для процедуры настройки образца  
  Следующий пример кода объединяет в себе примеры кода из всех шагов с образцом процедуры настройки. В следующей таблице приведена сводка значений заполнителей, использованных в этом примере кода. Дополнительные сведения о шагах в этом примере кода см. в подразделах [Предварительные требования для использования процедуры настройки образца](#PrerequisitesForExample) и [Образец процедуры настройки](#SampleProcedure)выше в этом разделе.  
   
-|Заполнитель|Description|  
+|Заполнитель|Описание|  
 |-----------------|-----------------|  
 |\\\\*FILESERVER*\\*SQLbackups*|Вымышленная общая папка резервных копий.|  
 |\\\\*FILESERVER*\\*SQLbackups\MyDb1.bak*|Файл резервной копии для базы данных MyDb1.|  
@@ -448,7 +448,7 @@ GO
   
 -   [Настройка гибкой политики отработки отказа для управления условиями автоматического перехода на другой ресурс (группы доступности AlwaysOn)](configure-flexible-automatic-failover-policy.md)  
   
--   [Укажите URL-адрес конечной точки при добавлении или изменении реплики доступности (SQL Server)](specify-endpoint-url-adding-or-modifying-availability-replica.md)  
+-   [Указание URL-адреса конечной точки при добавлении или изменении реплики доступности (SQL Server)](specify-endpoint-url-adding-or-modifying-availability-replica.md)  
   
 -   [Настройка резервного копирования в репликах доступности (SQL Server)](configure-backup-on-availability-replicas-sql-server.md)  
   
@@ -488,7 +488,7 @@ GO
   
 -   [Использование сертификатов для конечной точки зеркального отображения базы данных (Transact-SQL)](../../database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)  
   
--   [Укажите URL-адрес конечной точки при добавлении или изменении реплики доступности (SQL Server)](specify-endpoint-url-adding-or-modifying-availability-replica.md)  
+-   [Указание URL-адреса конечной точки при добавлении или изменении реплики доступности (SQL Server)](specify-endpoint-url-adding-or-modifying-availability-replica.md)  
   
  **Устранение неполадок с конфигурацией группы доступности AlwaysOn**  
   
@@ -522,6 +522,6 @@ GO
   
 ## <a name="see-also"></a>См. также статью  
  [Конечная точка зеркального отображения базы данных (SQL Server)](../../database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
- [Общие сведения о &#40;группы доступности AlwaysOn&#41; SQL Server](overview-of-always-on-availability-groups-sql-server.md)    
+ [Общие сведения о &#40;группы доступности AlwaysOn&#41; SQL Server](overview-of-always-on-availability-groups-sql-server.md)   
  [Прослушиватели групп доступности, возможность подключения клиентов и отработка отказа приложений (SQL Server)](../../listeners-client-connectivity-application-failover.md)   
  [Предварительные требования, ограничения и рекомендации для &#40;группы доступности AlwaysOn SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)  

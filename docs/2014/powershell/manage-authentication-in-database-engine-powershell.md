@@ -20,9 +20,9 @@ ms.locfileid: "72797796"
 # <a name="manage-authentication-in-database-engine-powershell"></a>Управление проверкой подлинности в компонент Database Engine PowerShell
   По умолчанию компоненты [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell используют при установлении соединения с компонентом [!INCLUDE[ssDE](../includes/ssde-md.md)]проверку подлинности Windows. Для использования проверки подлинности SQL Server необходимо либо определить виртуальный диск PowerShell, либо указать параметры `-Username` и `-Password` для `Invoke-Sqlcmd`.  
   
-1.  **Перед началом работы выполните следующие действия.**  [Разрешения](#Permissions)  
+1.  **Перед началом работы:**  [разрешения](#Permissions)  
   
-2.  **To set authentication, using:**  [A Virtual Drive](#SQLAuthVirtDrv), [Invoke-Sqlcmd](#SQLAuthInvSqlCmd)  
+2.  **Настройка проверки подлинности с помощью следующих средств**  [виртуальный диск](#SQLAuthVirtDrv), [Invoke-Sqlcmd](#SQLAuthInvSqlCmd)  
   
 ##  <a name="Permissions"></a> Разрешения  
  Все действия, которые могут быть выполнены на экземпляре компонента [!INCLUDE[ssDE](../includes/ssde-md.md)] , определяются разрешениями, предоставляемыми учетным данным, которые использовались при подключении к экземпляру. По умолчанию для подключения к компоненту [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] с проверкой подлинности Windows поставщик [!INCLUDE[ssDE](../includes/ssde-md.md)]и командлеты используют учетную запись Windows, под которой они работают.  
@@ -85,4 +85,4 @@ Invoke-Sqlcmd -Query "SELECT GETDATE() AS TimeOfQuery;" -ServerInstance "MyCompu
 ## <a name="see-also"></a>См. также статью  
  [SQL Server PowerShell](sql-server-powershell.md)   
  [SQL Server PowerShell, поставщик](sql-server-powershell-provider.md)   
- [Командлет Invoke-Sqlcmd](../database-engine/invoke-sqlcmd-cmdlet.md)  
+ [Invoke-Sqlcmd, командлет](../database-engine/invoke-sqlcmd-cmdlet.md)  

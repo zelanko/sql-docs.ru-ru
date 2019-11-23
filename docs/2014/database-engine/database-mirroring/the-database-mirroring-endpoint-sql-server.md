@@ -84,7 +84,7 @@ ms.locfileid: "72797903"
   
 -   [Указание сетевого адреса сервера (зеркальное отображение базы данных)](specify-a-server-network-address-database-mirroring.md)  
   
--   [Укажите URL-адрес конечной точки при добавлении или изменении реплики доступности (SQL Server)](../availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)  
+-   [Указание URL-адреса конечной точки при добавлении или изменении реплики доступности (SQL Server)](../availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)  
   
 -   [Использование мастера групп доступности (среда SQL Server Management Studio)](../../ssms/sql-server-management-studio-ssms.md)  
   
@@ -96,5 +96,5 @@ ms.locfileid: "72797903"
 ## <a name="see-also"></a>См. также статью  
  [Безопасность транспорта для зеркального отображения базы данных &#40;и&#41; группы доступности AlwaysOn SQL Server](transport-security-database-mirroring-always-on-availability.md)   
  [Диагностика конфигурации зеркального отображения базы данных (SQL Server)](troubleshoot-database-mirroring-configuration-sql-server.md)   
- [sys. DM _hadr_availability_replica_states &#40;, Transact&#41; -SQL](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-states-transact-sql)  
- [sys. DM _db_mirroring_connections &#40;, TRANSACT-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/database-mirroring-sys-dm-db-mirroring-connections)  
+ [sys. dm_hadr_availability_replica_states &#40;  Transact-&#41; SQL](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-states-transact-sql)  
+ [sys. dm_db_mirroring_connections &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/database-mirroring-sys-dm-db-mirroring-connections)  

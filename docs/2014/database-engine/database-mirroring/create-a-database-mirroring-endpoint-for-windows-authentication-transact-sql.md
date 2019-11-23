@@ -23,7 +23,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 10/23/2019
 ms.locfileid: "72797928"
 ---
-# <a name="create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql"></a>Создание конечной точки зеркального отображения базы данных с проверкой подлинности Windows (Transact-SQL)
+# <a name="create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql"></a>Create a Database Mirroring Endpoint for Windows Authentication (Transact-SQL)
   В этом разделе описывается создание конечной точки зеркального отображения базы данных, использующей проверку подлинности Windows, в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] при помощи среды [!INCLUDE[tsql](../../includes/tsql-md.md)]. Для поддержки зеркального отображения баз данных или [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] , каждому экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] требуется конечная точка зеркального отображения базы данных. На экземпляре сервера может быть только одна конечная точка зеркального отображения базы данных, которой назначен только один порт. Конечная точка зеркального отображения базы данных может использовать любой доступный порт на локальной системе, на которой эта точка создана. Все сеансы зеркального отображения базы данных на экземпляре сервера прослушивают этот порт, и все входящие соединения для зеркального отображения базы данных используют этот порт.  
   
 > [!IMPORTANT]  
@@ -31,20 +31,20 @@ ms.locfileid: "72797928"
   
  **В этом разделе**  
   
--   **Before you begin:**  [Security](#Security)  
+-   **Перед началом работы:**  [безопасность](#Security)  
   
 -   **Создание конечной точки зеркального отображения базы данных с помощью следующих средств:**  [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="Security"></a> Безопасность  
  Методы проверки подлинности и шифрования для каждого экземпляра сервера устанавливаются администратором системы.  
   
 > [!IMPORTANT]  
 >  Алгоритм RC4 устарел. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Вместо этого рекомендуется использовать алгоритм AES.  
   
 ####  <a name="Permissions"></a> Разрешения  
- Требуется разрешение CREATE ENDPOINT или членство в предопределенной роли сервера sysadmin. Дополнительные сведения см. в разделе [GRANT, предоставление разрешений на конечную точку (Transact-SQL)](/sql/t-sql/statements/grant-endpoint-permissions-transact-sql).  
+ Требуется разрешение CREATE ENDPOINT или членство в предопределенной роли сервера sysadmin. Дополнительные сведения см. в разделе [GRANT, предоставление разрешений конечной точке (Transact-SQL)](/sql/t-sql/statements/grant-endpoint-permissions-transact-sql).  
   
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
   
@@ -52,7 +52,7 @@ ms.locfileid: "72797928"
   
 1.  Подключитесь к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , для которого требуется создать конечную точку зеркального отображения базы данных.  
   
-2.  На панели "Стандартная" нажмите **Создать запрос**.  
+2.  На панели «Стандартная» нажмите **Создать запрос**.  
   
 3.  Определите, не существует ли уже конечная точка зеркального отображения, с помощью следующей инструкции:  
   
@@ -110,7 +110,7 @@ ms.locfileid: "72797928"
   
     -   По умолчанию параметр ENCRYPTION имеет значение REQUIRED. Это означает, что все соединения с этой конечной точкой должны использовать шифрование. Однако можно отключить шифрование или сделать его необязательным. Существуют следующие варианты.  
   
-        |Value|Определение|  
+        |Значение|Определение|  
         |-----------|----------------|  
         |DISABLED|Указывает на то, что данные, передаваемые через соединение, не будут зашифрованы.|  
         |SUPPORTED|Указывает на то, что данные будут зашифрованы только в случае, если у противоположной конечной точки этот аргумент принял значение SUPPORTED или REQUIRED.|  
@@ -191,7 +191,7 @@ GO
   
 -   [Указание сетевого адреса сервера (зеркальное отображение базы данных)](specify-a-server-network-address-database-mirroring.md)  
   
--   [Укажите URL-адрес конечной точки при добавлении или изменении реплики доступности (SQL Server)](../availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)  
+-   [Указание URL-адреса конечной точки при добавлении или изменении реплики доступности (SQL Server)](../availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)  
   
  **Просмотр сведений о конечной точке зеркального отображения базы данных**  
   

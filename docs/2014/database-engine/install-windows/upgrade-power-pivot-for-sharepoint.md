@@ -38,8 +38,8 @@ ms.locfileid: "72783168"
   
 
   
-##  <a name="bkmk_prereq"></a> предварительные требования  
- **Permissions**  
+##  <a name="bkmk_prereq"></a> Предварительные требования  
+ **Разрешения**  
   
 -   Чтобы обновить PowerPivot для SharePoint, пользователь должен быть администратором фермы. Для запуска программы установки SQL Server необходимо быть локальным администратором.  
   
@@ -82,9 +82,9 @@ ms.locfileid: "72783168"
   
          ![два средства PowerPivot два](https://docs.microsoft.com/analysis-services/analysis-services/media/as-powerpivot-configtools-bothicons.gif "два средства PowerPivot два")  
   
-         либо  
+         и  
   
-         В меню **Пуск** последовательно выберите пункты **Все программы**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], **Средства настройки**, **Средство настройки PowerPivot для SharePoint 2013**. Обратите внимание, что это средство присутствует в списке вариантов, только если на локальном сервере установлен компонент [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)].  
+         В меню **Пуск** последовательно выберите пункты **Все программы**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], **Средства настройки**, **Средство настройки PowerPivot для SharePoint 2013**. Обратите внимание, что это средство присутствует в списке вариантов, только если на локальном сервере установлен компонент [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] .  
   
     2.  Во время запуска средство настройки проверяет состояние обновления решения фермы и решений веб-приложений PowerPivot. Если обнаружены более старые версии этих решений, вы увидите сообщение "**обнаружены более новые версии файлов решения PowerPivot. Выберите вариант обновления для обновления фермы**". Нажмите кнопку **ОК** , чтобы закрыть сообщение проверки системы.  
   
@@ -154,7 +154,7 @@ ms.locfileid: "72783168"
   
 7.  **Запустите средство настройки PowerPivot** на первом сервере приложений SharePoint, на котором запущена служба SQL Server Analysis Services (PowerPivot), чтобы обновить решения и веб-службы в SharePoint. На этом шаге нельзя использовать центр администрирования.  
   
-    1.  В меню **Пуск** последовательно укажите пункты **Все программы**, щелкните [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], щелкните **Средства настройки**и выберите пункт **Средство настройки PowerPivot**. Обратите внимание, что это средство присутствует в списке вариантов, только если на локальном сервере установлен компонент [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)].  
+    1.  В меню **Пуск** последовательно укажите пункты **Все программы**, щелкните [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], щелкните **Средства настройки**и выберите пункт **Средство настройки PowerPivot**. Обратите внимание, что это средство присутствует в списке вариантов, только если на локальном сервере установлен компонент [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] .  
   
     2.  Во время запуска средство настройки проверяет состояние обновления решения фермы и решений веб-приложений PowerPivot. Если обнаружены более старые версии этих решений, вы увидите сообщение "обнаружены более новые версии файлов решения PowerPivot. Выберите параметр обновления для обновления фермы". Нажмите кнопку **OК** , чтобы закрыть окно сообщения.  
   
@@ -264,7 +264,7 @@ Get-PowerPivotSystemService
   
 3.  Найдите информационное событие следующего вида:  
   
-     Служба   запущена. Microsoft SQL Server Analysis Services 64 Bit Evaluation (x64) RTM **12.0.2000.8**.  
+     запущена. Microsoft SQL Server Analysis Services 64 Bit Evaluation (x64) RTM **12.0.2000.8**.  
   
  **Использование PowerShell для проверки версии файла.**  
   
@@ -289,7 +289,7 @@ Get-PowerPivotSystemService
   
 3.  Щелкните **Надежные поставщики данных**. Должна отобразиться MSOLAP.5 (поставщик Microsoft OLE DB для служб OLAP 11.0). Если вы обновили установку [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] , также будет показано MSOLAP.4 из предыдущей версии.  
   
-4.  Дополнительные сведения см. в разделе [Добавление MSOLAP.5 в качестве надежного поставщика данных в службах Excel Services](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/add-msolap-5-as-a-trusted-data-provider-in-excel-services).  
+4.  Дополнительные сведения см. в разделе [Add MSOLAP.5 as a Trusted Data Provider in Excel Services](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/add-msolap-5-as-a-trusted-data-provider-in-excel-services).  
   
  MSOLAP.4 описывается как поставщик OLE DB (Майкрософт) для служб OLAP 10.0. Эта версия может являться версией по умолчанию для [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] , которая устанавливается со службами Excel, или это может быть версия [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] . Версия по умолчанию, устанавливаемая SharePoint, не поддерживает доступ к данным PowerPivot. Чтобы подключиться к книгам PowerPivot на сервере SharePoint, требуется версия [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] или более поздняя. Чтобы убедиться в наличии версии [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] , используйте инструкции в предыдущем разделе, в котором описывается проверка версий путем просмотра свойств файлов.  
   

@@ -37,15 +37,15 @@ ms.locfileid: "72797751"
   
 -   Если в группе доступности превышен порог сбоя WSFC, то кластер WSFC не выполняет автоматический переход на другой ресурс для этой группы доступности. Более того, группа ресурсов WSFC для группы доступности остается в состоянии сбоя, пока администратор кластера вручную не переведет сбойную группу ресурсов в режим «в сети» или пока администратор базы данных вручную не выполнит переход группы доступности на другой ресурс. *Порог сбоя WSFC* определяется как максимальное число сбоев, которые могут произойти в группе доступности за заданный период времени. По умолчанию используется период в шесть часов, а максимальное число сбоев за этот период по умолчанию равно *n*-1, где *n* — число узлов WSFC. Чтобы изменить пороговые значения сбоя для заданной группы доступности, используйте консоль диспетчера отработки отказа WSFC.  
   
-###  <a name="Prerequisites"></a> предварительные требования  
+###  <a name="Prerequisites"></a> Предварительные требования  
   
 -   Необходимо подключиться к экземпляру сервера, на котором размещена первичная реплика.  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="Security"></a> Безопасность  
   
 ####  <a name="Permissions"></a> Разрешения  
   
-|Задача|Permissions|  
+|Задача|Разрешения|  
 |----------|-----------------|  
 |Настройка гибкой политики отработки отказа для новой группы доступности|Требуется членство в фиксированной роли сервера **sysadmin** и одно из разрешений: CREATE AVAILABILITY GROUP, ALTER ANY AVAILABILITY GROUP или CONTROL SERVER.|  
 |Изменение политики существующей группы доступности|Необходимо разрешение ALTER AVAILABILITY GROUP для группы доступности, разрешение CONTROL AVAILABILITY GROUP, разрешение ALTER ANY AVAILABILITY GROUP или разрешение CONTROL SERVER.|  
@@ -77,7 +77,7 @@ ms.locfileid: "72797751"
   
          Дополнительные сведения об уровнях условий перехода на другой ресурс см. в статье [Гибкая политика отработки отказа для автоматического перехода на другой ресурс группы доступности (SQL Server)](flexible-automatic-failover-policy-availability-group.md).  
   
-    -   Чтобы настроить пороговое значение ожидания проверки работоспособности, используйте параметр HEALTH_CHECK_TIMEOUT = *n*, где *n* является целым числом от 15000 миллисекунд (15 секунд) до 4294967295 миллисекунд. Значение по умолчанию — 30 000 миллисекунд (30 секунд)  
+    -   Чтобы настроить пороговое значение ожидания проверки работоспособности, используйте параметр HEALTH_CHECK_TIMEOUT = *n* , где *n* является целым числом от 15000 миллисекунд (15 секунд) до 4294967295 миллисекунд. Значение по умолчанию — 30 000 миллисекунд (30 секунд)  
   
          Например, следующая инструкция [!INCLUDE[tsql](../../../includes/tsql-md.md)] изменяет пороговое значение времени ожидания проверки работоспособности существующей группы доступности `AG1`на значение 60 000 миллисекунд (одна минута).  
   
@@ -95,7 +95,7 @@ ms.locfileid: "72797751"
   
     -   Чтобы задать уровень условия отработки отказа, используйте параметр *уровня* `FailureConditionLevel`, где, *Level* имеет одно из следующих значений:  
   
-        |Value|level|Автоматическая отработка отказа запускается при...|  
+        |Значение|level|Автоматическая отработка отказа запускается при...|  
         |-----------|-----------|-------------------------------------------|  
         |`OnServerDown`|Один|При остановке работы сервера. Служба SQL Server останавливается из-за отработки отказа или перезапуска.|  
         |`OnServerUnresponsive`|Два|При отсутствии ответа от сервера. Удовлетворяется любое условие более низкого значения, служба SQL Server подключена к кластеру, а пороговое значение ожидания проверки работоспособности превышено, либо текущая первичная реплика находится в неисправном состоянии.|  
@@ -124,18 +124,18 @@ ms.locfileid: "72797751"
         ```  
   
 > [!NOTE]  
->  Чтобы просмотреть синтаксис командлета, воспользуйтесь командлетом `Get-Help` в среде [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Дополнительные сведения см. в разделе [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
+>  Чтобы просмотреть синтаксис командлета, воспользуйтесь командлетом `Get-Help` в среде [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Дополнительные сведения см. в статье [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
   
  **Настройка и использование поставщика SQL Server PowerShell**  
   
--   [Поставщик SQL Server PowerShell](../../../powershell/sql-server-powershell-provider.md)  
+-   [SQL Server PowerShell, поставщик](../../../powershell/sql-server-powershell-provider.md)  
   
--   [Получение справок по SQL Server PowerShell](../../../powershell/sql-server-powershell.md)  
+-   [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)  
   
 ## <a name="see-also"></a>См. также статью  
- [Общие сведения о &#40;группы доступности AlwaysOn&#41; SQL Server](overview-of-always-on-availability-groups-sql-server.md)    
- [Режимы доступности (группы доступности AlwaysOn)](availability-modes-always-on-availability-groups.md)    
- [Отказоустойчивость и режимы &#40;отработки отказа группы доступности AlwaysOn&#41; ](failover-and-failover-modes-always-on-availability-groups.md)    
+ [Общие сведения о &#40;группы доступности AlwaysOn&#41; SQL Server](overview-of-always-on-availability-groups-sql-server.md)   
+ [Режимы доступности (группы доступности AlwaysOn)](availability-modes-always-on-availability-groups.md)   
+ [Отказоустойчивость и режимы &#40;отработки отказа группы доступности AlwaysOn&#41; ](failover-and-failover-modes-always-on-availability-groups.md)   
  [Отказоустойчивая кластеризация Windows Server (WSFC) с SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)   
  [Политика отработки отказа для экземпляров откзоустойчивого кластера](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)   
  [sp_server_diagnostics (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql)  

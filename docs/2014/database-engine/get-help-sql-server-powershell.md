@@ -124,4 +124,4 @@ $MyVar | Get-Member -Type Properties
   
 ## <a name="see-also"></a>См. также статью  
  [SQL Server PowerShell, поставщик](../powershell/sql-server-powershell-provider.md)   
- [Использование командлетов ядра СУБД](../../2014/database-engine/use-the-database-engine-cmdlets.md)  
+ [Использование командлетов компонента Database Engine](../../2014/database-engine/use-the-database-engine-cmdlets.md)  

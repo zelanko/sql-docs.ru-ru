@@ -42,7 +42,7 @@ Get-SPHealthAnalysisRule | Select name, enabled, summary | Where {$_.summary -li
   
  [Настройка правил определения исправности, используемых для вычисления стабильности приложения (приложение службы PowerPivot)](#bkmk_evaluate_application_stability)  
   
-## <a name="prerequisites"></a>предварительные требования  
+## <a name="prerequisites"></a>необходимые компоненты  
  Для изменения свойств конфигурации экземпляра служб Analysis Services и приложения службы PowerPivot необходимы права администратора приложений службы.  
   
 ##  <a name="bkmk_view"></a>Просмотр правил определения исправности PowerPivot  

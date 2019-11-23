@@ -39,7 +39,7 @@ ms.locfileid: "72688683"
 ### <a name="accepted-instances"></a>Правильные экземпляры  
  Экземпляр `CompoundCurve` является правильным, если он пустой или удовлетворяет следующим требованиям.  
   
-1.  Все экземпляры, содержащиеся в `CompoundCurve`, — это правильные экземпляры сегментов окружности. Дополнительные сведения о допустимых экземплярах сегментов окружности см. в разделах [LineString](linestring.md) и [CircularString](circularstring.md).  
+1.  Все экземпляры, содержащиеся в `CompoundCurve`, — это правильные экземпляры сегментов окружности. Дополнительные сведения о правильных экземплярах сегментов окружности см. в разделах [LineString](linestring.md) и [CircularString](circularstring.md).  
   
 2.  Все сегменты окружности в экземпляре `CompoundCurve` соединены. Первая точка каждого последующего сегмента совпадает с последней точкой предыдущего сегмента.  
   
@@ -102,7 +102,7 @@ DECLARE @g geometry;
 SET @g = geometry::Parse('COMPOUNDCURVE EMPTY');  
 ```  
   
-### <a name="b-declaring-and-instantiating-a-geometry-instance-using-a-compoundcurve-in-the-same-statement"></a>Б. Объявление и создание экземпляра geometry с экземпляром CompoundCurve в одной инструкции  
+### <a name="b-declaring-and-instantiating-a-geometry-instance-using-a-compoundcurve-in-the-same-statement"></a>б. Объявление и создание экземпляра geometry с экземпляром CompoundCurve в одной инструкции  
  В следующем примере показано, как объявить и инициализировать экземпляр `geometry` с `CompoundCurve`в одной инструкции:  
   
 ```sql  
@@ -137,7 +137,7 @@ SET @g = geometry::Parse('COMPOUNDCURVE(CIRCULARSTRING(0 2, 2 0, 4 2), CIRCULARS
 SELECT @g.STLength();  
 ```  
   
- Получается следующий вывод. 12,566370... эквивалентно 4&#x03c0; (4 * PI). Экземпляр `CompoundCurve` в этом примере хранит окружность с радиусом 2. В двух предыдущих примерах кода использование экземпляра `CompoundCurve`не требовалось. В первом примере было бы проще использовать экземпляр `LineString` , а во втором было бы проще использовать экземпляр `CircularString` . В следующем примере показано, когда следует использовать экземпляр `CompoundCurve` .  
+ В результате получается следующий результат: 12,566370... эквивалентно 4&#x03c0; (4 * PI). Экземпляр `CompoundCurve` в этом примере хранит окружность с радиусом 2. В двух предыдущих примерах кода использование экземпляра `CompoundCurve`не требовалось. В первом примере было бы проще использовать экземпляр `LineString` , а во втором было бы проще использовать экземпляр `CircularString` . В следующем примере показано, когда следует использовать экземпляр `CompoundCurve` .  
   
 ### <a name="f-using-a-compoundcurve-to-store-a-semicircle"></a>Е. Использование экземпляра CompoundCurve для хранения полуокружности  
  В следующем примере экземпляр `CompoundCurve` используется для хранения полукруга.  
@@ -185,7 +185,7 @@ Circle Two12.566370...
   
  Периметр окружности 2 равен примерно 4&#x03c0; (4 * PI), то есть действительному значению для периметра. Напротив, значение периметра окружности 1 очень неточное. Экземпляр `CompoundCurve` окружности 1 хранит один сегмент окружности (ABC) и два линейных сегмента (CD, DA). Экземпляр `CompoundCurve` должен хранить два сегмента окружности (ABC, CDA), чтобы определять окружности. Экземпляр `LineString` определяет второй набор точек (4 2, 2 4, 0 2) в экземпляре `CompoundCurve` окружности 1. Необходимо явно объявить экземпляр `CircularString` в экземпляре `CompoundCurve`.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также статью  
  [STIsValid (тип данных geometry)](/sql/t-sql/spatial-geometry/stisvalid-geometry-data-type)   
  [STLength (тип данных geometry)](/sql/t-sql/spatial-geometry/stlength-geometry-data-type)   
  [STStartPoint (тип данных geometry)](/sql/t-sql/spatial-geometry/ststartpoint-geometry-data-type)   
@@ -193,6 +193,6 @@ Circle Two12.566370...
  [LineString](linestring.md)   
  [CircularString](circularstring.md)   
  [Основные сведения о типах пространственных данных](spatial-data-types-overview.md)   
- [Point](point.md)  
+ [Точка](point.md)  
   
   

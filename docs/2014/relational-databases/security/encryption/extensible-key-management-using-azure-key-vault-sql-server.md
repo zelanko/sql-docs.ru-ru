@@ -45,7 +45,7 @@ ms.locfileid: "72798063"
 ##  <a name="Uses"></a>Использование расширенного управления ключами  
  Организация может использовать шифрование [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] для защиты конфиденциальных данных. Шифрование [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] включает [прозрачное шифрование данных &#40;TDE&#41;](transparent-data-encryption.md), [Шифрование на уровне столбцов](/sql/t-sql/functions/cryptographic-functions-transact-sql) (CLE) и [Шифрование резервных копий](../../backup-restore/backup-encryption.md). Во всех этих случаях данные шифруются с помощью симметричного ключа шифрования. Симметричный ключ шифрования затем шифруется иерархией ключей, хранящихся в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Или же архитектура поставщика EKM использует [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] для защиты ключей шифрования данных с помощью асимметричного ключа, который хранится вне [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] во внешнем поставщике служб шифрования. Архитектура поставщика EKM добавляет дополнительный уровень безопасности и позволяет организациям разделить управление ключами и данными.  
   
- Соединитель [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] для хранилища ключей Azure позволяет [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] использовать масштабируемую, высокопроизводительную и высокодоступную службу хранилища ключей в качестве поставщика расширенного управления ключами для защиты ключа шифрования. Службу хранилища ключей можно использовать с установками [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] на виртуальных машинах [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Azure и для локальных серверов. Служба хранилища ключей также предоставляет возможность использовать жестко контролируемые и отслеживаемые аппаратные модули безопасности (HSM) для обеспечения более высокого уровня защиты асимметричных ключей шифрования. Дополнительные сведения о хранилище ключей см. в статье [Хранилище ключей Azure](https://go.microsoft.com/fwlink/?LinkId=521401).  
+ Соединитель [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] для хранилища ключей Azure позволяет [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] использовать масштабируемую, высокопроизводительную и высокодоступную службу хранилища ключей в качестве поставщика расширенного управления ключами для защиты ключа шифрования. Службу хранилища ключей можно использовать с установками [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] на виртуальных машинах [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Azure и для локальных серверов. Служба хранилища ключей также предоставляет возможность использовать жестко контролируемые и отслеживаемые аппаратные модули безопасности (HSM) для обеспечения более высокого уровня защиты асимметричных ключей шифрования. Дополнительные сведения о хранилище ключей см. в разделе [Хранилище ключей Azure](https://go.microsoft.com/fwlink/?LinkId=521401).  
   
  На следующем изображении представлен поток процесса расширенного управления ключами с использованием хранилища ключей. Номера шагов процесса на изображении не обязательно соответствуют номерам шагов установки, указанным после изображения.  
   
@@ -196,11 +196,11 @@ ms.locfileid: "72798063"
     ```  
   
 > [!TIP]  
->  Пользователям, получившим сообщение об ошибке **Не удалось экспортировать открытый ключ от поставщика. Код ошибки поставщика: 2053.** следует проверить в хранилище ключей свои разрешения **get**, **list**, **wrapKey**и **unwrapKey** в хранилище ключей.  
+>  Пользователям, получившим сообщение об ошибке **Не удалось экспортировать открытый ключ от поставщика. Код ошибки поставщика: 2053.** Следует проверить в хранилище ключей свои разрешения **get**, **list**, **wrapKey**и **unwrapKey** в хранилище ключей.  
   
  Дополнительные сведения см. в следующих разделах:  
   
--   [sp_configure (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)  
+-   [sp_configure &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)  
   
 -   [CREATE CRYPTOGRAPHIC PROVIDER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-cryptographic-provider-transact-sql)  
   
@@ -275,7 +275,7 @@ ms.locfileid: "72798063"
   
      Дополнительные сведения см. в следующих разделах:  
   
-    -   [CREATE DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-database-encryption-key-transact-sql)  
+    -   [CREATE DATABASE ENCRYPTION KEY (Transact-SQL)](/sql/t-sql/statements/create-database-encryption-key-transact-sql)  
   
     -   [ALTER DATABASE (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql)  
   
@@ -342,11 +342,11 @@ CLOSE SYMMETRIC KEY DATA_ENCRYPTION_KEY;
 ```  
   
 ## <a name="see-also"></a>См. также статью  
- [CREATE CRYPTOGRAPHIC PROVIDER (Transact-SQL)](/sql/t-sql/statements/create-cryptographic-provider-transact-sql)   
+ [CREATE CRYPTOGRAPHIC PROVIDER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-cryptographic-provider-transact-sql)   
  [CREATE CREDENTIAL &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-credential-transact-sql)   
- [CREATE ASYMMETRIC KEY (Transact-SQL)](/sql/t-sql/statements/create-asymmetric-key-transact-sql)   
- [CREATE SYMMETRIC KEY (Transact-SQL)](/sql/t-sql/statements/create-symmetric-key-transact-sql)   
- [Расширенное управление ключами (EKM)](extensible-key-management-ekm.md)   
+ [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-asymmetric-key-transact-sql)   
+ [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-symmetric-key-transact-sql)   
+ [Расширенное управление ключами &#40;EKM&#41;](extensible-key-management-ekm.md)   
  [Включение TDE с помощью расширенного управления  ключами](enable-tde-on-sql-server-using-ekm.md)  
    [шифрования резервной копии](../../backup-restore/backup-encryption.md)  
  [Создание зашифрованной резервной копии](../../backup-restore/create-an-encrypted-backup.md)  

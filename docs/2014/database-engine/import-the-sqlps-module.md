@@ -12,7 +12,7 @@ ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 34859c0c516c61a73e31dbf752ab274188c6343a
 ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 10/23/2019
 ms.locfileid: "72797869"
@@ -40,7 +40,7 @@ ms.locfileid: "72797869"
 > [!NOTE]  
 >  Команды, используемые в именах двух командлетов SQL Server (`Encode-Sqlname` и `Decode-Sqlname`), не соответствуют утвержденным командам для Windows PowerShell 2.0. Это не влияет на их работу, однако среда Windows PowerShell выдает предупреждение при импорте модуля `sqlps` в сеанс.  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="Security"></a> Безопасность  
  По умолчанию в Windows PowerShell политика выполнения скриптов работает в **ограниченном**режиме, блокируя все скрипты Windows PowerShell. Для загрузки модуля `sqlps` можно использовать командлет `Set-ExecutionPolicy`, чтобы включить запуск как подписанных, так и любых других скриптов. Следует выполнять только скрипты, полученные из доверенных источников, а также защищать все входные и выходные файлы, установив необходимые разрешения NTFS. Дополнительные сведения о включении скриптов Windows PowerShell см. в разделе [Выполнение скриптов Windows PowerShell](https://docs.microsoft.com/powershell/scripting/setup/starting-windows-powershell?view=powershell-6#how-to-enable-windows-powershell-ise-on-earlier-releases-of-windows).  
   
 ##  <a name="LoadSqlps"></a> Загрузка модуля sqlps  
@@ -63,4 +63,4 @@ Import-Module "sqlps" -DisableNameChecking
 ## <a name="see-also"></a>См. также статью  
  [SQL Server PowerShell](../powershell/sql-server-powershell.md)   
  [SQL Server PowerShell, поставщик](../powershell/sql-server-powershell-provider.md)   
- [Использование командлетов ядра СУБД](../../2014/database-engine/use-the-database-engine-cmdlets.md)  
+ [Использование командлетов компонента Database Engine](../../2014/database-engine/use-the-database-engine-cmdlets.md)  

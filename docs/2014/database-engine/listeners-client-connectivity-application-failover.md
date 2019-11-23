@@ -188,7 +188,7 @@ SAN = ServerFQDN,AG1_listener.Adventure-Works.com, AG2_listener.Adventure-Works.
 setspn -A MSSQLSvc/AG1listener.Adventure-Works.com:1433 corp/svclogin2  
 ```  
   
- Дополнительные сведения о ручной регистрации SPN для SQL Server см. в разделе [Регистрация имени участника-службы для соединений Kerberos](configure-windows/register-a-service-principal-name-for-kerberos-connections.md).  
+ Дополнительные сведения о ручной регистрации SPN для SQL Server см. в разделе [Register a Service Principal Name for Kerberos Connections](configure-windows/register-a-service-principal-name-for-kerberos-connections.md).  
   
 ##  <a name="RelatedTasks"></a> Связанные задачи  
   
@@ -213,7 +213,7 @@ setspn -A MSSQLSvc/AG1listener.Adventure-Works.com:1433 corp/svclogin2
 -   [Блог группы SQL Server AlwaysOn: Официальный блог группы SQL Server AlwaysOn](https://blogs.msdn.com/b/sqlalwayson/)  
   
 ## <a name="see-also"></a>См. также статью  
- [Общие сведения о &#40;группы доступности AlwaysOn&#41; SQL Server](availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)    
+ [Общие сведения о &#40;группы доступности AlwaysOn&#41; SQL Server](availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [SQL Server подключения &#40;клиента AlwaysOn&#41;](availability-groups/windows/always-on-client-connectivity-sql-server.md)  
  [Сведения о доступе клиентского подключения к репликам доступности (SQL Server)](availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)   
  [Активные вторичные реплики: &#40;группы доступности AlwaysOn&#41; , доступные для чтения](availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md) ,   

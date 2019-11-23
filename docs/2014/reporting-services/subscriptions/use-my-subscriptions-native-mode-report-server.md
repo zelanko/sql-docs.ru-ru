@@ -53,6 +53,6 @@ $subscriptions | select Path, report, Description, Owner, SubscriptionID, lastex
 ```  
   
 ## <a name="see-also"></a>См. также статью  
- [Подписки, управляемые данными](data-driven-subscriptions.md)   
+ [Data-Driven Subscriptions](data-driven-subscriptions.md)   
  [Подписки и доставка (службы Reporting Services)](subscriptions-and-delivery-reporting-services.md)   
- [Создание и администрирование подписок для серверов отчетов в собственном режиме](../create-manage-subscriptions-native-mode-report-servers.md)  
+ [Создание подписок для работающих в основном режиме серверов отчетов и управление этими подписками](../create-manage-subscriptions-native-mode-report-servers.md)  

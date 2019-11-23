@@ -95,7 +95,7 @@ DECLARE @g geometry;
 SET @g = geometry::Parse('CIRCULARSTRING EMPTY');  
 ```  
   
-### <a name="b-instantiating-a-geometry-instance-using-a-circularstring-with-one-circular-arc-segment"></a>Б. Создание экземпляра Geometry с экземпляром CircularString, содержащим один сегмент дуги  
+### <a name="b-instantiating-a-geometry-instance-using-a-circularstring-with-one-circular-arc-segment"></a>б. Создание экземпляра Geometry с экземпляром CircularString, содержащим один сегмент дуги  
  В следующем примере показывается создание экземпляра `CircularString` с одним сегментом дуги (полукруга):  
   
 ```sql  
@@ -157,7 +157,7 @@ DECLARE @g geometry;
 SET @g = geometry::STGeomFromText('CIRCULARSTRING(0 0, 1 2, 2 4)', 0);  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также статью  
  [Основные сведения о типах пространственных данных](spatial-data-types-overview.md)   
  [CompoundCurve](compoundcurve.md)   
  [MakeValid (тип данных geography)](/sql/t-sql/spatial-geography/makevalid-geography-data-type)   

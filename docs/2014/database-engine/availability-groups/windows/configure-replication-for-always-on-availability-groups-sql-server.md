@@ -207,7 +207,7 @@ EXEC sys.sp_validate_replica_hosts_as_publishers
   
 -   [Создание группы доступности (SQL Server PowerShell)](../../../powershell/sql-server-powershell.md)  
   
--   [Укажите URL-адрес конечной точки при добавлении или изменении реплики доступности (SQL Server)](specify-endpoint-url-adding-or-modifying-availability-replica.md)  
+-   [Указание URL-адреса конечной точки при добавлении или изменении реплики доступности (SQL Server)](specify-endpoint-url-adding-or-modifying-availability-replica.md)  
   
 -   [Создание конечной точки зеркального отображения базы данных &#40;для группы доступности AlwaysOn SQL Server PowerShell&#41;](database-mirroring-always-on-availability-groups-powershell.md)  
   
@@ -221,6 +221,6 @@ EXEC sys.sp_validate_replica_hosts_as_publishers
   
 ## <a name="see-also"></a>См. также статью  
  [Предварительные требования, ограничения и рекомендации для &#40;группы доступности AlwaysOn&#41; SQL Server](prereqs-restrictions-recommendations-always-on-availability.md)   
- [Общие сведения о &#40;группы доступности AlwaysOn&#41; SQL Server](overview-of-always-on-availability-groups-sql-server.md)    
+ [Общие сведения о &#40;группы доступности AlwaysOn&#41; SQL Server](overview-of-always-on-availability-groups-sql-server.md)   
  [Группы доступности AlwaysOn: взаимодействие (SQL Server)](always-on-availability-groups-interoperability-sql-server.md)   
  [Репликация SQL Server](../../../relational-databases/replication/sql-server-replication.md)  
