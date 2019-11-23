@@ -26,9 +26,9 @@ ms.locfileid: "73787103"
 
   Чтобы описать параметры любой инструкции SQL, драйвер ODBC для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] создает и выполняет инструкцию [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT при вызове SQLDescribeParam для подготовленного обработчика инструкции ODBC. Метаданные результирующего набора определяют характеристики параметров в подготовленной инструкции. SQLDescribeParam может возвращать любой код ошибки, который может возвращать SQLExecute или SQLExecDirect.  
   
- Улучшения в ядре СУБД, начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] позволяют SQLDescribeParam получать более точные описания ожидаемых результатов. Эти более точные результаты могут отличаться от значений, возвращаемых функцией SQLDescribeParam в предыдущих версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в разделе [Обнаружение метаданных](../../relational-databases/native-client/features/metadata-discovery.md).  
+ Улучшения в ядре СУБД, начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] позволяют SQLDescribeParam получать более точные описания ожидаемых результатов. Эти более точные результаты могут отличаться от значений, возвращаемых функцией SQLDescribeParam в предыдущих версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в разделе [Metadata Discovery](../../relational-databases/native-client/features/metadata-discovery.md).  
   
- Кроме того, в [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]*параметерсизептр* теперь возвращает значение, которое соответствует определению размера (в символах) столбца или выражения соответствующего маркера параметра, как определено в [спецификации ODBC](https://go.microsoft.com/fwlink/?LinkId=207044). В предыдущих версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client *параметерсизептр* может быть соответствующим значением **SQL_DESC_OCTET_LENGTH** для типа или неопределенного значения размера столбца, переданного в SQLBindParameter для типа, значение которого следует игнорировать (например,**SQL_INTEGER**).  
+ Кроме того, в [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]*параметерсизептр* теперь возвращает значение, которое соответствует определению размера (в символах) столбца или выражения соответствующего маркера параметра, как определено в [спецификации ODBC](https://go.microsoft.com/fwlink/?LinkId=207044). В предыдущих версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client *параметерсизептр* может быть соответствующим значением **SQL_DESC_OCTET_LENGTH** для типа или неопределенного значения размера столбца, переданного SQLBindParameter для типа, значение, которое следует игнорировать (например,**SQL_INTEGER**).  
   
  Драйвер не поддерживает вызов SQLDescribeParam в следующих ситуациях:  
   
@@ -75,11 +75,11 @@ SQLPrepare(hstmt, "{call master..sp_who(?)}", SQL_NTS);
 ## <a name="sqldescribeparam-support-for-enhanced-date-and-time-features"></a>Поддержка в функции SQLDescribeParam улучшенных возможностей даты-времени  
  Для типов даты-времени возвращаются следующие значения.  
   
-||*дататипептр*|*параметерсизептр*|*деЦималдигитсптр*|  
+||*дататипептр*|*параметерсизептр*|*DecimalDigitsPtr*|  
 |-|-------------------|------------------------|------------------------|  
-|datetime|SQL_TYPE_TIMESTAMP|23|3|  
+|DATETIME|SQL_TYPE_TIMESTAMP|23|3|  
 |smalldatetime|SQL_TYPE_TIMESTAMP|16|0|  
-|date|SQL_TYPE_DATE|10|0|  
+|DATE|SQL_TYPE_DATE|10|0|  
 |time|SQL_SS_TIME2|8, 10..16|0..7|  
 |datetime2|SQL_TYPE_TIMESTAMP|19, 21..27|0..7|  
 |datetimeoffset|SQL_SS_TIMESTAMPOFFSET|26, 28..34|0..7|  
@@ -89,7 +89,7 @@ SQLPrepare(hstmt, "{call master..sp_who(?)}", SQL_NTS);
 ## <a name="sqldescribeparam-support-for-large-clr-udts"></a>Поддержка в функции SQLDescribeParam определяемых пользователем типов больших данных CLR  
  **SQLDescribeParam** поддерживает большие определяемые пользователем типы данных CLR (UDT). Дополнительные сведения см. в разделе [типы больших определяемых пользователем &#40;типов&#41;данных CLR ODBC](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также статью  
    [функции SQLDescribeParam](https://go.microsoft.com/fwlink/?LinkId=59339)  
  [Подробные сведения о реализации API-интерфейсов ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   

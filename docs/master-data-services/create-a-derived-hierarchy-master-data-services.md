@@ -29,7 +29,7 @@ ms.locfileid: "73729573"
 > [!NOTE]  
 >  Если значение атрибута на основе домена отсутствует для какого-либо элемента, он не включается в производную иерархию. Сведения о том, как сделать значение атрибута на основе домена обязательным для всех элементов, см. в разделе [Запрос значений атрибута (службы Master Data Services)](../master-data-services/require-attribute-values-master-data-services.md).  
   
-## <a name="prerequisites"></a>Предварительные требования  
+## <a name="prerequisites"></a>необходимые компоненты  
  Чтобы выполнить эту процедуру:  
   
 -   необходимо иметь разрешение на доступ к функциональной области **Администрирование системы** ;  
@@ -59,7 +59,7 @@ ms.locfileid: "73729573"
   
 9. Нажмите кнопку **Назад**.  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также статью  
  [Производные иерархии (службы Master Data Services)](../master-data-services/derived-hierarchies-master-data-services.md)   
  [Производные иерархии с явными ограничениями (службы Master Data Services)](../master-data-services/derived-hierarchies-with-explicit-caps-master-data-services.md)   
  [Атрибуты на основе домена (службы Master Data Services)](../master-data-services/domain-based-attributes-master-data-services.md)  

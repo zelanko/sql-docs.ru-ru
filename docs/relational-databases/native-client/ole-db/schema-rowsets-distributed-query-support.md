@@ -48,7 +48,7 @@ ms.locfileid: "73759712"
   
  Поставщик [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB определяет набор строк схемы LINKEDSERVERS, возвращая список OLE DB источников данных, зарегистрированных в качестве связанных серверов.  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также статью  
  [Поддержка набора строк схемы &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/schema-rowset-support-ole-db.md)   
  [OLE DB набора &#40;строк LINKEDSERVERS&#41;](../../../relational-databases/native-client/ole-db/schema-rowsets-linkedservers-rowset.md)  
   

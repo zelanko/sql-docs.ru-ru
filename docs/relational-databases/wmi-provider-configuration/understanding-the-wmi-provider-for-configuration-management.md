@@ -46,7 +46,7 @@ ms.locfileid: "73658916"
   
  Дополнительные сведения о приложениях для управления программированием с помощью поставщика WMI см. в документации по инструментарию WMI в [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework SDK.  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также статью  
  [Работа с поставщиком WMI для управления конфигурацией](../../relational-databases/wmi-provider-configuration/working-with-the-wmi-provider-for-configuration-management.md)   
  [Использование WQL и языков сценариев с поставщиком WMI для управления конфигурациями](../../relational-databases/wmi-provider-configuration/using-wql-and-scripting-languages-with-the-wmi-provider.md)  
   

@@ -27,7 +27,7 @@ ms.locfileid: "73728322"
 
   В среде [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]удалите разрешения на объект модели для отмены любых существующих назначений.  
   
-## <a name="prerequisites"></a>Предварительные требования  
+## <a name="prerequisites"></a>необходимые компоненты  
  Чтобы выполнить эту процедуру:  
   
 -   необходимо иметь разрешение на доступ к функциональной области **Разрешения пользователей и групп** ;  
@@ -56,7 +56,7 @@ ms.locfileid: "73728322"
   
 9. Нажмите кнопку **Сохранить**.  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также статью  
  [Разрешения объекта модели (службы Master Data Services)](../master-data-services/model-object-permissions-master-data-services.md)   
  [Назначение разрешения для объекта модели (службы Master Data Services)](../master-data-services/assign-model-object-permissions-master-data-services.md)  
   
