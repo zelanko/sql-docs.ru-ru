@@ -64,7 +64,7 @@ ms.locfileid: "70154589"
   
 -   OLE DB  
   
--   Oracle  
+-   Oracle;  
   
 -   SAP NetWeaver BI  
   
@@ -76,7 +76,7 @@ ms.locfileid: "70154589"
   
 -   интерфейс ODBC  
   
--   Семантическая модель бизнес-аналитики Майкрософт для Power View: На сайте SharePoint, настроенном для галереи PowerPivot и [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)], этот тип источника данных доступен. Этот тип источника данных используется только для презентаций [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] . Дополнительную информацию смотрите в [Построение отличных семантических табличных моделей бизнес-аналитики для Power View](https://technet.microsoft.com/video/building-the-perfect-bi-semantic-tabular-models-for-power-view.aspx).  
+-   Семантическая модель бизнес-аналитики Microsoft для Power View: этот тип источников данных доступен на сайте SharePoint, настроенном для работы с коллекцией PowerPivot и [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)]. Этот тип источника данных используется только для презентаций [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] . Дополнительную информацию смотрите в [Построение отличных семантических табличных моделей бизнес-аналитики для Power View](https://technet.microsoft.com/video/building-the-perfect-bi-semantic-tabular-models-for-power-view.aspx).  
   
  Полный список источников данных и версий, поддерживаемых [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], см. в разделе [Источники данных, поддерживаемые службами Reporting Services (SSRS)](create-deploy-and-manage-mobile-and-paginated-reports.md).  
   
@@ -111,7 +111,7 @@ ms.locfileid: "70154589"
   
  Чтобы изменить источники данных, используемые в отчете, можно изменить свойства отчета в собственном режиме диспетчер отчетов или из библиотек документов в режиме интеграции с SharePoint. Дополнительные сведения см. в следующих разделах:  
   
--   [Хранение учетных данных в Reporting Services источнике данных](report-data/store-credentials-in-a-reporting-services-data-source.md) [Хранение учетных данных в Reporting Services источнике данных](report-data/store-credentials-in-a-reporting-services-data-source.md)  
+-   [Хранение учетных данных в Reporting Services](report-data/store-credentials-in-a-reporting-services-data-source.md) [учетных данных хранилища источника данных в Reporting Services источнике данных](report-data/store-credentials-in-a-reporting-services-data-source.md)  
   
 -   [Задание учетных данных и сведениях о соединении для источников данных отчета](report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
   
@@ -124,16 +124,16 @@ ms.locfileid: "70154589"
 ##  <a name="bkmk_connection_examples"></a> Примеры общих строк подключения  
  Строки подключения являются текстовым представлением свойств соединения для поставщика данных. Следующая таблица содержит примеры строк соединения для различных типов подключения к данным.  
   
-|**Источник данных**|**Пример**|**Описание**|  
+|**Data source**|**Пример**|**Description**|  
 |---------------------|-----------------|---------------------|  
 |База данных SQL Server на локальном сервере|`data source="(local)";initial catalog=AdventureWorks`|Задайте тип источника данных `Microsoft SQL Server`. Дополнительные сведения см. в разделе [Тип соединения SQL Server (службы SSRS)](report-data/sql-server-connection-type-ssrs.md).|  
 |База данных SQL Server на локальном сервере|`data source="(local)";initial catalog=AdventureWorks`|Задайте тип источника данных `Microsoft SQL Server`.|  
 |Экземпляр SQL Server<br /><br /> database|`Data Source=localhost\MSSQL10_50.InstanceName; Initial Catalog=AdventureWorks`|Задайте тип источника данных `Microsoft SQL Server`.|  
 |База данных SQL Server Express|`Data Source=localhost\MSSQL10_50.SQLEXPRESS; Initial Catalog=AdventureWorks`|Задайте тип источника данных `Microsoft SQL Server`.|  
-|[!INCLUDE[ssSDS](../includes/sssds-md.md)]в облаке|`Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True`|Задайте тип источника данных `Azure SQL Database`. Дополнительные сведения см. в разделе [Тип соединения SQL Azure (службы SSRS)](report-data/sql-azure-connection-type-ssrs.md).|  
+|[!INCLUDE[ssSDS](../includes/sssds-md.md)] в облаке|`Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True`|Задайте тип источника данных `Azure SQL Database`. Дополнительные сведения см. в разделе [Тип соединения SQL Azure (службы SSRS)](report-data/sql-azure-connection-type-ssrs.md).|  
 |Параллельное хранилище данных SQL Server|`HOST=<IP address>;database= AdventureWorks; port=<port>`|Задайте тип источника данных `Microsoft SQL Server Parallel Data Warehouse`. Дополнительные сведения см. в разделе [Тип соединения с параллельным хранилищем данных SQL Server (службы SSRS)](report-data/sql-server-parallel-data-warehouse-connection-type-ssrs.md).|  
 |База данных служб Analysis Services на локальном сервере|`data source=localhost;initial catalog=Adventure Works DW`|Задайте тип источника данных `Microsoft SQL Server Analysis Services`. Дополнительные сведения см. в разделе [Тип соединения служб Analysis Services для многомерных выражений (службы SSRS)](report-data/analysis-services-connection-type-for-mdx-ssrs.md) или [Тип соединения служб Analysis Services для расширений интеллектуального анализа данных (службы SSRS)](report-data/analysis-services-connection-type-for-dmx-ssrs.md).|  
-|Табличный шаблон базы данных служб Analysis Services с торговым представителем|`Data source=<servername>;initial catalog= Adventure Works DW;cube='Sales'`|Задайте тип источника данных `Microsoft SQL Server Analysis Services`. Укажите имя перспективы в параметре cube=. Дополнительные сведения см. в разделе [Перспективы (табличные службы SSAS)](https://docs.microsoft.com/analysis-services/tabular-models/perspectives-ssas-tabular).|  
+|Табличный шаблон базы данных служб Analysis Services с торговым представителем|`Data source=<servername>;initial catalog= Adventure Works DW;cube='Sales'`|Задайте тип источника данных `Microsoft SQL Server Analysis Services`. Укажите имя перспективы в параметре cube=. Дополнительные сведения см. в разделе [Perspectives &#40;SSAS Tabular&#41;](https://docs.microsoft.com/analysis-services/tabular-models/perspectives-ssas-tabular).|  
 |Источник данных — модель отчета на сервере отчетов, сконфигурированном в собственном режиме|`Server=http://myreportservername/reportserver; datasource=/models/Adventure Works`|Укажите URL-адрес сервера отчетов или библиотеки документов, а также путь к опубликованной модели в пространстве имен папки сервера отчетов или папки библиотеки документов.
 |Источник данных — модель отчета на сервере отчетов, сконфигурированном в режиме интеграции с SharePoint|`Server=http://server; datasource=http://server/site/documents/models/Adventure Works.smdl`|Укажите URL-адрес сервера отчетов или библиотеки документов, а также путь к опубликованной модели в пространстве имен папки сервера отчетов или папки библиотеки документов.|  
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Сервер служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 2000|`provider=MSOLAP.2;data source=<remote server name>;initial catalog=FoodMart 2000`|Установите тип источника данных `OLE DB Provider for OLAP Services 8.0`.<br /><br /> Задав для свойства [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] значение [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], можно добиться более быстрого соединения с источниками данных служб `ConnectTo` 2000 `8.0`. Чтобы установить это свойство, воспользуйтесь диалоговым окном **Свойства соединения** на вкладке **Дополнительные свойства** .|  
@@ -143,7 +143,7 @@ ms.locfileid: "70154589"
 |Источник данных типа Teradata|`data source=`\<NNN>.\<NNN>.\<NNN>.\<NNN>`;`|Установите тип источника данных `Teradata`. Строка подключения представляет собой IP-адрес в виде четырех полей, каждое из которых содержит от одного до трех числовых разрядов. Дополнительные сведения см. в разделе [Тип соединения Teradata (службы SSRS)](report-data/teradata-connection-type-ssrs.md).|  
 |Источник XML-данных, веб-служба|`data source=http://adventure-works.com/results.aspx`|Установите тип источника данных `XML`. Строка подключения является URL-адресом веб-службы, поддерживающей язык определения веб-служб (язык WSDL). Дополнительные сведения см. в разделе [Тип соединения XML (службы SSRS)](report-data/xml-connection-type-ssrs.md).|  
 |Источник XML-данных, XML-документ|`http://localhost/XML/Customers.xml`|Установите тип источника данных `XML`. Строкой соединения является URL-адрес XML-документа.|  
-|Источник XML-данных, внедренный XML-документ|*Пустой*|Установите тип источника данных `XML`. XML-данные внедрены в определение отчета.|  
+|Источник XML-данных, внедренный XML-документ|*Пусто*|Установите тип источника данных `XML`. XML-данные внедрены в определение отчета.|  
   
 Если не удается подключиться к серверу отчетов с помощью `localhost`, убедитесь, что сетевой протокол для TCP/IP включен. Дополнительные сведения см. в статье [Configure Client Protocols](../database-engine/configure-windows/configure-client-protocols.md).  
   
@@ -173,12 +173,12 @@ ms.locfileid: "70154589"
   
 -   Перед публикацией отчета замените статическую строку соединения выражением. Перед тем как заменять статическую строку соединения выражением, завершите конструирование отчета. Если в запросе используется выражение, этот отчет невозможно выполнить в конструкторе отчетов. Более того, список полей в области данных отчета и список параметров не будут обновляться автоматически.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также статью  
  [Внедренные и общие подключения к данным или источники данных (построитель отчетов и службы SSRS)](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
  [Управление источниками данных отчета](report-data/manage-report-data-sources.md)   
- [Диалоговое окно "Свойства источника данных" — "учетные данные"](../../2014/reporting-services/data-source-properties-dialog-box-credentials.md)   
- [Диалоговое окно "свойства общего источника данных" — "учетные данные"](../../2014/reporting-services/shared-data-source-properties-dialog-box-credentials.md)   
+ [Диалоговое окно «Свойства источника данных»  «учетные данные»](../../2014/reporting-services/data-source-properties-dialog-box-credentials.md)  
+ [Диалоговое окно "свойства общего источника данных", учетные данные](../../2014/reporting-services/shared-data-source-properties-dialog-box-credentials.md)   
  [Создание, изменение и удаление общих источников данных (службы SSRS)](report-data/create-modify-and-delete-shared-data-sources-ssrs.md)   
  [Задание свойства развертывания (службы Reporting Services)](tools/set-deployment-properties-reporting-services.md)   
- [Задание учетных данных и сведениях о соединении для источников данных отчета](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
+ [Задание учетных данных и сведений о соединении для источников данных отчета](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [Добавление и проверка подключения к данным или построитель отчетов источника &#40;данных и служб SSRS&#41;](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)  

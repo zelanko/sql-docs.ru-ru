@@ -38,7 +38,7 @@ ms.locfileid: "73882377"
   
  **В этом разделе**  
   
--   **Перед началом работы выполните следующие действия.**  
+-   **Перед началом работы**  
   
      [Предварительные требования](#Prerequisites)  
   
@@ -131,8 +131,8 @@ ms.locfileid: "73882377"
   
  [!code-vb[HowTo#rmo_vb_DropDistPubForce](../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_dropdistpubforce)]  
   
-## <a name="see-also"></a>См. также раздел  
- [Основные понятия объектов RMO](concepts/replication-management-objects-concepts.md)   
- [Replication System Stored Procedures Concepts](concepts/replication-system-stored-procedures-concepts.md)  
+## <a name="see-also"></a>См. также статью  
+ [Replication Management Objects Concepts](concepts/replication-management-objects-concepts.md)   
+ [Основные понятия системных хранимых процедур репликации](concepts/replication-system-stored-procedures-concepts.md)  
   
   

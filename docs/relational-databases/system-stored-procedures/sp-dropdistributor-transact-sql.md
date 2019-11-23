@@ -53,10 +53,10 @@ sp_dropdistributor [ [ @no_checks= ] no_checks ]
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  **sp_dropdistributor** используется во всех типах репликации.  
   
- Если на сервере существуют другие объекты издателя или распространения, **sp_dropdistributor** завершается ошибкой, если для параметра **\@no_checks** задано значение **1**.  
+ Если на сервере существуют другие объекты издателя или распространения, **sp_dropdistributor** завершается ошибкой, если только **\@no_checks** не имеет значение **1**.  
   
  Эта хранимая процедура должна быть выполнена после удаления базы данных распространителя путем выполнения **sp_dropdistributiondb**.  
   
@@ -66,10 +66,10 @@ sp_dropdistributor [ [ @no_checks= ] no_checks ]
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** могут выполнять **sp_dropdistributor**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также статью  
  [Disable Publishing and Distribution](../../relational-databases/replication/disable-publishing-and-distribution.md)  (Отключение публикации и распространения)  
- [sp_adddistributor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md)   
- [sp_changedistributor_property &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedistributor-property-transact-sql.md)   
+ [sp_adddistributor &#40;  Transact-&#41; SQL](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md)  
+ [sp_changedistributor_property &#40;  Transact-&#41; SQL](../../relational-databases/system-stored-procedures/sp-changedistributor-property-transact-sql.md)  
  [sp_helpdistributor (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpdistributor-transact-sql.md)   
  [Хранимые процедуры репликации (Transact-SQL)](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   

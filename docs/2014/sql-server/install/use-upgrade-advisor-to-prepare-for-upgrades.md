@@ -78,7 +78,7 @@ ms.locfileid: "73632739"
   
  Дополнительные сведения см. в документации помощника по обновлению, включенной в пакет загрузки, и в заметках о выпуске [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также статью  
  [Работа с несколькими версиями и экземплярами SQL Server](../../../2014/sql-server/install/work-with-multiple-versions-and-instances-of-sql-server.md)   
  [Поддерживаемые обновления версий и выпусков](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)   
  [Обратная совместимость](../../../2014/getting-started/backward-compatibility.md)  

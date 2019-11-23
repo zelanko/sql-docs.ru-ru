@@ -24,7 +24,7 @@ ms.locfileid: "72782859"
 # <a name="remove-an-availability-group-listener-sql-server"></a>Удаление прослушивателя группы доступности (SQL Server)
   В этом разделе описывается удаление прослушивателя группы доступности из группы доступности AlwaysOn с помощью среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]или PowerShell в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
--   **Перед началом:**  
+-   **Перед началом работы**  
   
      [Предварительные требования](#Prerequisites)  
   
@@ -34,7 +34,7 @@ ms.locfileid: "72782859"
   
 -   **Удаление прослушивателя с помощью**  
   
-     [Среда Среда SQL Server Management Studio](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -42,14 +42,14 @@ ms.locfileid: "72782859"
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Prerequisites"></a> предварительные требования  
+###  <a name="Prerequisites"></a> Предварительные требования  
   
 -   Необходимо подключиться к экземпляру сервера, на котором размещена первичная реплика.  
   
 ###  <a name="Recommendations"></a> рекомендации  
  Перед удалением прослушивателя группы доступности рекомендуется убедиться, что он не используется никакими приложениями.  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="Security"></a> Безопасность  
   
 ####  <a name="Permissions"></a> Разрешения  
  Необходимо разрешение ALTER AVAILABILITY GROUP для группы доступности, разрешение CONTROL AVAILABILITY GROUP, разрешение ALTER ANY AVAILABILITY GROUP или разрешение CONTROL SERVER.  
@@ -68,7 +68,7 @@ ms.locfileid: "72782859"
 5.  Откроется диалоговое окно **Удаление прослушивателя из группы доступности** . Дополнительные сведения см. в подразделе [Удаление прослушивателя из группы доступности](#AgListenerPropertiesDialog)далее в этом разделе.  
   
 ###  <a name="AgListenerPropertiesDialog"></a> Удаление прослушивателя из группы доступности (диалоговое окно)  
- **Название**  
+ **Имя**  
  Имя удаляемого прослушивателя.  
   
  **Результат**  
@@ -81,7 +81,7 @@ ms.locfileid: "72782859"
   
 2.  Инструкция [ALTER AVAILABILITY GROUP](/sql/t-sql/statements/alter-availability-group-transact-sql) используется следующим образом:  
   
-     ALTER AVAILABILITY GROUP *group_name* Remove LISTENER **" *`dns_name`* "**  
+     ALTER AVAILABILITY GROUP *group_name* удалить прослушиватель **" *`dns_name`* "**  
   
      где *group_name* — имя группы доступности, а *dns_name* — DNS-имя прослушивателя группы доступности.  
   
@@ -103,7 +103,7 @@ ms.locfileid: "72782859"
     ```  
   
     > [!NOTE]  
-    >  Чтобы просмотреть синтаксис командлета, воспользуйтесь командлетом `Get-Help` в среде [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Дополнительные сведения см. в разделе [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
+    >  Чтобы просмотреть синтаксис командлета, воспользуйтесь командлетом `Get-Help` в среде [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Дополнительные сведения см. в статье [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
   
 ##  <a name="RelatedTasks"></a> Связанные задачи  
   
@@ -112,5 +112,5 @@ ms.locfileid: "72782859"
 -   [Просмотр свойств прослушивателя группы доступности (SQL Server)](view-availability-group-listener-properties-sql-server.md)  
   
 ## <a name="see-also"></a>См. также статью  
- [Общие сведения о &#40;группы доступности AlwaysOn&#41; SQL Server](overview-of-always-on-availability-groups-sql-server.md)    
+ [Общие сведения о &#40;группы доступности AlwaysOn&#41; SQL Server](overview-of-always-on-availability-groups-sql-server.md)   
  [Прослушиватели групп доступности, возможность подключения клиентов и отработка отказа приложений (SQL Server)](../../listeners-client-connectivity-application-failover.md)  

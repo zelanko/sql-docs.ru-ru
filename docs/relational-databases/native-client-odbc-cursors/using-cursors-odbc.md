@@ -41,7 +41,7 @@ ms.locfileid: "73784076"
   
  Далее приведено сравнение работы с курсорами в скриптах [!INCLUDE[tsql](../../includes/tsql-md.md)] и приложениях ODBC.  
   
-|Действие|[!INCLUDE[tsql](../../includes/tsql-md.md)]|интерфейс ODBC|  
+|Action|[!INCLUDE[tsql](../../includes/tsql-md.md)]|интерфейс ODBC|  
 |------------|------------------------|----------|  
 |Определение режима работы курсоров|Указание через параметры DECLARE CURSOR|Установка атрибутов курсора с помощью [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)|  
 |Открытие курсора|ОБЪЯВЛЕНИЕ открытого КУРСОРа *cursor_name*|**SQLExecDirect** или **SQLExecute**|  
@@ -51,7 +51,7 @@ ms.locfileid: "73784076"
   
  Серверные курсоры, реализованные в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], поддерживают функции модели курсора ODBC. Драйвер для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использует серверные курсоры для поддержки функций работы с курсорами API ODBC.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
   
 -   [Способы реализации курсоров](../../relational-databases/native-client-odbc-cursors/implementation/how-cursors-are-implemented.md)  
   
@@ -67,7 +67,7 @@ ms.locfileid: "73784076"
   
 -   [ODBC с позиционированными обновлениями &#40;&#41;](../../relational-databases/native-client-odbc-cursors/positioned-updates-odbc.md)  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также статью  
  [SQL Server Native Client &#40; &#41; ODBC](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)  
  [CLOSE (Transact-SQL)](../../t-sql/language-elements/close-transact-sql.md)   
  [Курсоры](../../relational-databases/cursors.md)   

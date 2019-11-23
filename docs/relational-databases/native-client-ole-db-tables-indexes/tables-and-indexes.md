@@ -42,7 +42,7 @@ ms.locfileid: "73761606"
 |-----------------|-----------------|  
 |SSPROP_COL_COLLATIONNAME|Тип: VT_BSTR<br /><br /> Чтение и запись.<br /><br /> По умолчанию: NULL<br /><br /> Описание: это свойство используется только в интерфейсе **ITableDefinition**. Строка, указанная в этом свойстве, используется при создании инструкции [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md).<br /><br /> .|  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
   
 -   [Создание таблиц SQL Server](../../relational-databases/native-client-ole-db-tables-indexes/creating-sql-server-tables.md)  
   
@@ -56,7 +56,7 @@ ms.locfileid: "73761606"
   
 -   [Удаление индекса SQL Server](../../relational-databases/native-client-ole-db-tables-indexes/dropping-a-sql-server-index.md)  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также статью  
  [SQL Server Native Client &#40;OLE DB&#41; ](../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)   
  [DROP TABLE (Transact-SQL)](../../t-sql/statements/drop-table-transact-sql.md)   
  [CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md)   

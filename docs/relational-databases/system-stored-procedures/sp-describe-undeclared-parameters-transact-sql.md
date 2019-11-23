@@ -44,26 +44,26 @@ sp_describe_undeclared_parameters
 ## <a name="arguments"></a>Аргументы  
 `[ \@tsql = ] 'Transact-SQL\_batch'` одну или несколько инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)]. *Transact-SQL_batch* может иметь тип **nvarchar (** _n_ **)** или **nvarchar (max)** .  
   
-`[ \@params = ] N'parameters'` \@params предоставляет строку объявления для параметров пакета [!INCLUDE[tsql](../../includes/tsql-md.md)], аналогично тому, как работает процедура sp_executesql. *Параметры* могут быть **nvarchar (** _n_ **)** или **nvarchar (max)** .  
+`[ \@params = ] N'parameters'` \@params предоставляет строку объявления для параметров пакета [!INCLUDE[tsql](../../includes/tsql-md.md)], аналогично тому, как sp_executesql работает. *Параметры* могут быть **nvarchar (** _n_ **)** или **nvarchar (max)** .  
   
- Одна строка, содержащая определения всех параметров, внедренных в *Transact-SQL_batch*. Строка должна представлять собой константу в Юникоде либо переменную в этом же формате. Определение каждого параметра состоит из имени параметра и типа данных. n — заполнитель, указывающий дополнительные определения параметра. Если инструкция или пакет инструкций Transact-SQL в инструкции не содержит параметров, \@params не требуется. Этот аргумент по умолчанию принимает значение NULL.  
+ — Одна строка, содержащая определения всех параметров, внедренных в *Transact-SQL_batch*. Строка должна представлять собой константу в Юникоде либо переменную в этом же формате. Определение каждого параметра состоит из имени параметра и типа данных. n — заполнитель, указывающий дополнительные определения параметра. Если инструкция или пакет инструкций Transact-SQL в инструкции не содержит параметров, \@params не требуется. Этот аргумент по умолчанию принимает значение NULL.  
   
  Datatype  
  Тип данных параметра.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- **sp_describe_undeclared_parameters** всегда возвращает нулевое состояние при успешном выполнении. Если процедура вызывает ошибку, а процедура вызвана как RPC, то состояние возврата заполняется типом ошибки, как описано в столбце error_type представления sys. DM _exec_describe_first_result_set. Если процедура вызывается из [!INCLUDE[tsql](../../includes/tsql-md.md)], возвращаемое значение всегда равно нулю, даже при наличии ошибок.  
+ **sp_describe_undeclared_parameters** всегда возвращает нулевое состояние при успешном выполнении. Если процедура вызывает ошибку, а процедура вызвана как RPC, то состояние возврата заполняется типом ошибки, как описано в столбце error_type sys. dm_exec_describe_first_result_set. Если процедура вызывается из [!INCLUDE[tsql](../../includes/tsql-md.md)], возвращаемое значение всегда равно нулю, даже при наличии ошибок.  
   
 ## <a name="result-sets"></a>Результирующие наборы  
  **sp_describe_undeclared_parameters** возвращает следующий результирующий набор.  
   
-|Имя столбца|Data type|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**parameter_ordinal**|**int, не NULL**|Содержит порядковый номер параметра в результирующем наборе. Позиция первого параметра будет указана как 1.|  
 |**name**|**sysname не равен NULL**|Содержит имя параметра.|  
-|**suggested_system_type_id**|**int, не NULL**|Содержит **system_type_id** типа данных параметра, как указано в таблице sys. types.<br /><br /> Для типов CLR, несмотря на то, что столбец **system_type_name** вернет значение null, этот столбец возвратит 240.|  
+|**suggested_system_type_id**|**int, не NULL**|Содержит **system_type_id** типа данных параметра, как указано в таблице sys. types.<br /><br /> Для типов CLR, несмотря на то, что **system_type_name** столбец будет возвращать значение null, этот столбец вернет 240.|  
 |**suggested_system_type_name**|**nvarchar (256) NULL**|Содержит имя типа данных. Включает аргументы (длина, точность, масштаб), заданные для типа данных параметра. Если тип данных является пользовательским псевдонимом, то здесь указывается базовый системный тип данных. Если это определяемый пользователем тип данных CLR, то в этом столбце возвращается значение NULL. Если не удается определить тип параметра, возвращается значение NULL.|  
-|**suggested_max_length**|**smallint, не РАВНый NULL**|См. статью sys. Columns. для описания столбца **max_length** .|  
+|**suggested_max_length**|**smallint, не РАВНый NULL**|См. статью sys. Columns. для **max_length** описание столбца.|  
 |**suggested_precision**|**TINYINT NOT NULL**|См. статью sys. Columns. содержащий описание столбца precision.|  
 |**suggested_scale**|**TINYINT NOT NULL**|См. статью sys. Columns. содержащий описание столбца scale.|  
 |**suggested_user_type_id**|**int NULL**|Для типов CLR и псевдонимов содержит user_type_id для типа данных столбца, как указано в sys.types. В противном случае значение равно NULL.|  
@@ -158,7 +158,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
  В качестве примера рассмотрим запрос `SELECT * FROM t WHERE @p1 = dbo.tbl(@p2 + c1)`. Затем E (\@P1) = \@P1, E (\@P2) = \@P2 + C1, TT (\@P1) — это объявленный тип возвращаемых данных dbo. tbl, а TT (\@P2) — это объявленный тип данных параметра для dbo. tbl.  
   
- Если \@p не содержится в выражении, указанном в начале шага 2, алгоритм выведения типа определяет, что E (\@p) является самым большим скалярным выражением, содержащим \@p, а алгоритм выведения типа не вычисляет целевые данные. Введите TT (\@p) для E (\@p). Например, если запрос выбран `@p + 2` затем E (\@p) = \@p + 2 и отсутствует TT (\@p).  
+ Если \@p не содержится ни в одном выражении, перечисленном в начале шага 2, алгоритм выведения типа определяет, что E (\@p) является самым большим скалярным выражением, содержащим \@p, а алгоритм выведения типа не вычисляет целевой тип данных TT (\@p) для E (\@p). Например, если запрос выбран `@p + 2` затем E (\@p) = \@p + 2 и отсутствует TT (\@p).  
   
  **Шаг 3**  
   
@@ -166,7 +166,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
 -   Простое определение  
   
-     Если параметр E (\@p) = \@p и TT (\@p) существует, т. е. Если \@p является прямым аргументом одного из выражений, перечисленных в начале шага 2, алгоритм выведения типа выводит тип данных \@p в TT (\@p). Пример:  
+     Если параметр E (\@p) = \@p и TT (\@p) существует, т. е. Если \@p является прямым аргументом для одного из выражений, перечисленных в начале шага 2, алгоритм выведения типа выводит тип данных \@p в значение TT (\@p). Пример:  
   
     ```sql
     SELECT * FROM t WHERE c1 = @p1 AND @p2 = dbo.tbl(@p3)  
@@ -220,7 +220,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
     SELECT * FROM t WHERE Col_Int = Col_Int + @p  
     ```  
   
-     В этом случае E (\@p) — это Col_Int + \@p, а TT (\@p) — **int**. для \@p выбрано **int** , так как не создает неявных преобразований. Любой другой выбор типа данных требует не меньше одного неявного преобразования.  
+     В этом случае E (\@p) Col_Int + \@p и TT (\@p) имеют **тип int**. для \@p выбрано **int** , так как не создает неявных преобразований. Любой другой выбор типа данных требует не меньше одного неявного преобразования.  
   
 2.  Если несколько типов данных имеют минимальное число преобразований, то используется тип данных с максимальным приоритетом. Например.  
   
@@ -248,7 +248,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
  В качестве последнего примера с учетом `SELECT NULL + @p`запроса для \@p выбирается **int** , так как результатом является преобразование типа (c).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Требуется разрешение для выполнения аргумента tsql \@.  
   
 ## <a name="examples"></a>Примеры  
@@ -274,6 +274,6 @@ WHERE object_id = @id OR NAME = @name',
 ```  
   
 ## <a name="see-also"></a>См. также статью  
- [sp_describe_first_result_set &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)   
- [sys. DM _exec_describe_first_result_set &#40;, Transact&#41; -SQL](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)  
- [sys. DM _exec_describe_first_result_set_for_object &#40;, TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)
+ [sp_describe_first_result_set &#40;  Transact-&#41; SQL](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)  
+ [sys. dm_exec_describe_first_result_set &#40;  Transact-&#41; SQL](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)  
+ [sys. dm_exec_describe_first_result_set_for_object &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)

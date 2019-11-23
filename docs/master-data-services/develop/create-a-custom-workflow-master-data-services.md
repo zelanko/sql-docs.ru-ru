@@ -82,7 +82,7 @@ ms.locfileid: "73729329"
     </setting>  
     ```  
   
-3.  Под параметром ConnectionString добавьте параметр WorkflowTypeExtenders, чтобы связать имя тега с используемой сборкой обработчика рабочих процессов. Например:  
+3.  Под параметром ConnectionString добавьте параметр WorkflowTypeExtenders, чтобы связать имя тега с используемой сборкой обработчика рабочих процессов. Пример:  
   
     ```xml  
     <setting name="WorkflowTypeExtenders" serializeAs="String">  
@@ -151,7 +151,7 @@ ms.locfileid: "73729329"
 ### <a name="view-the-service-broker-queue"></a>Просмотр очереди компонента Service Broker  
  Очередь компонента Service Broker, в которой содержатся основные данные, переданные в рамках рабочего процесса, находится по адресу mdm.microsoft/mdm/queue/externalaction. В **обозревателе объектов** среды SQL Management Studio очереди находятся в узле компонента Service Broker базы данных [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]. Имейте в виду, что если служба должным образом очистила очередь, она будет пуста.  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также статью  
  [Пример настраиваемого рабочего процесса (службы Master Data Services)](../../master-data-services/develop/create-a-custom-workflow-example.md)   
  [Описание XML настраиваемого рабочего процесса (службы Master Data Services)](../../master-data-services/develop/create-a-custom-workflow-xml-description.md)  
   

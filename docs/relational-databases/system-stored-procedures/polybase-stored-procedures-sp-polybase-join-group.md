@@ -44,7 +44,7 @@ sp_polybase_join_group (@head_node_address = N'head_node_address',
  Имя компьютера, на котором размещен головной узел SQL Server масштабируемой группы Polybase. *\@head_node_address* имеет тип nvarchar (255).  
   
  *\@dms_control_channel_port* = dms_control_channel_port  
- Порт, на котором работает канал управления для Перемещение данных PolyBase службы головного узла. *\@dms_control_channel_port* — это неподписанный __int16. Значение по умолчанию — **16450**.  
+ Порт, на котором работает канал управления для Перемещение данных PolyBase службы головного узла. *\@dms_control_channel_port* является неподписанным __int16. Значение по умолчанию — **16450**.  
   
  *\@head_node_sql_server_instance_name* = head_node_sql_server_instance_name  
  Имя SQL Serverного экземпляра головного узла в масштабируемой группе Polybase. *\@head_node_sql_server_instance_name* имеет тип nvarchar (16).  
@@ -55,8 +55,8 @@ sp_polybase_join_group (@head_node_address = N'head_node_address',
 ## <a name="permissions"></a>Разрешения  
  Необходимо разрешение CONTROL SERVER.  
   
-## <a name="remarks"></a>Примечания  
- После выполнения хранимой процедуры завершите работу ядра Polybase и перезапустите службу Перемещение данных PolyBase на компьютере. Чтобы проверить, выполняется ли следующее динамическое административное представление на головном узле: **sys. DM _exec_compute_nodes**.  
+## <a name="remarks"></a>Remarks  
+ После выполнения хранимой процедуры завершите работу ядра Polybase и перезапустите службу Перемещение данных PolyBase на компьютере. Чтобы проверить, выполняется ли следующее динамическое административное представление на головном узле: **sys. dm_exec_compute_nodes**.  
   
 ## <a name="example"></a>Пример  
  В примере текущий компьютер присоединяется в качестве расчетного узла к группе Polybase.  Имя головного узла — **HST01** , а имя экземпляра SQL Server на головном узле — **MSSQLServer**.  
@@ -65,7 +65,7 @@ sp_polybase_join_group (@head_node_address = N'head_node_address',
 EXEC sp_polybase_join_group N'HST01', 16450, N'MSSQLSERVER'   
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также статью  
  [Приступая к работе с PolyBase](../../relational-databases/polybase/get-started-with-polybase.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

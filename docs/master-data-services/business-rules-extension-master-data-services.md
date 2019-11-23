@@ -1,5 +1,5 @@
 ---
-title: Расширение бизнес-правил
+title: Business Rules Extension
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -70,7 +70,7 @@ CREATE PROCEDURE [usr].[YourAction]
 |stg|SELECT, UPDATE, DELETE, EXECUTE, INSERT|  
 |usr|ПОЛНОЕ|  
   
-## <a name="prerequisites"></a>Предварительные требования  
+## <a name="prerequisites"></a>необходимые компоненты  
  Чтобы выполнить эту процедуру:  
   
 -   Иметь разрешение на доступ к функциональной области "Администрирование системы".  
@@ -113,7 +113,7 @@ CREATE PROCEDURE [usr].[YourAction]
   
     3.  Нажмите кнопку **Сохранить**.  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также статью  
  [Бизнес-правила (службы Master Data Services)](../master-data-services/business-rules-master-data-services.md)   
  [Условия бизнес-правил (службы Master Data Services)](../master-data-services/business-rule-conditions-master-data-services.md)   
  [Действия бизнес-правил (службы Master Data Services)](../master-data-services/business-rule-actions-master-data-services.md)  

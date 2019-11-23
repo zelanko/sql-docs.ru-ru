@@ -48,15 +48,15 @@ sp_syscollector_run_collection_set [[ @collection_set_id = ] collection_set_id ]
 ## <a name="arguments"></a>Аргументы  
 `[ @collection_set_id = ] collection_set_id` является уникальным локальным идентификатором набора сбора. *collection_set_id* имеет **тип int** и должен иметь значение, если *Name* имеет значение null.  
   
-`[ @name = ] 'name'` — это имя набора элементов сбора. Аргумент *Name* имеет тип **sysname** и должен иметь значение, если *collection_set_id* имеет значение null.  
+`[ @name = ] 'name'` — имя набора сбора. Аргумент *Name* имеет тип **sysname** и должен иметь значение, если *collection_set_id* имеет значение null.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
- Либо *collection_set_id* , либо *Name* должны иметь значение null.  
+## <a name="remarks"></a>Remarks  
+ Либо *collection_set_id* , либо *имя* должны иметь значение, которое не может быть null.  
   
- Эта процедура запускает сбор и передачу заданий для указанного набора сбора и немедленно запускает задание агента сбора, если для набора сбора **\@collection_mode** установлен некэшированный (1). Дополнительные сведения см. в [разделе &#40;SP_SYSCOLLECTOR_CREATE_COLLECTION_SET Transact-&#41;SQL](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md).  
+ Эта процедура запускает сбор и передачу заданий для указанного набора сбора и немедленно запускает задание агента сбора данных, если для набора сбора **\@collection_mode** установлен некэшированный (1). Дополнительные сведения см. в [разделе &#40;SP_SYSCOLLECTOR_CREATE_COLLECTION_SET Transact-&#41;SQL](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md).  
   
  Процедура sp_sycollector_run_collection_set также может быть использована для запуска набора сбора, не имеющего расписания.  
   
@@ -72,7 +72,7 @@ GO
 EXEC sp_syscollector_run_collection_set @collection_set_id = 1;  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также статью  
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Сбор данных](../../relational-databases/data-collection/data-collection.md)  
   

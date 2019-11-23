@@ -83,7 +83,7 @@ ms.locfileid: "73786722"
   
  Дополнительные сведения о SPN см. [в &#40;разделе имена субъектов&#41; -служб SPN &#40;в&#41;клиентских соединениях ODBC](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md).  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также статью  
    [функции SQLGetConnectAttr](https://go.microsoft.com/fwlink/?LinkId=59347)  
  [Сведения о реализации API ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)   
  [SET QUOTED_IDENTIFIER (Transact-SQL)](../../t-sql/statements/set-quoted-identifier-transact-sql.md)   

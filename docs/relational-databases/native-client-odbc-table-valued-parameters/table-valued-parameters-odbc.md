@@ -40,7 +40,7 @@ ms.locfileid: "73790466"
   
  При создании этой табличной переменной можно формировать ограничения и первичные ключи. Ограничения дают хорошую гарантию того, что данные таблицы соответствуют определенным требованиям.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  [Сценарии использования возвращающих табличное значение параметров ODBC](../../relational-databases/native-client-odbc-table-valued-parameters/uses-of-odbc-table-valued-parameters.md)  
  Описывает основные пользовательские сценарии для возвращающих табличное значение параметров и ODBC.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "73790466"
  [Примеры программирования с использованием возвращающих табличное значение параметров ODBC](https://msdn.microsoft.com/library/3f52b7a7-f2bd-4455-b79e-d015fb397726)  
  Описывает, как следует выполнять типичные задачи.  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также статью  
  [SQL Server Native Client &#40; &#41; ODBC](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)  
  [Возвращающие табличное значение параметры &#40;SQL Server Native Client&#41;](../../relational-databases/native-client/features/table-valued-parameters-sql-server-native-client.md)  
   

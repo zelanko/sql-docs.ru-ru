@@ -142,12 +142,12 @@ Get-SPWebApplication http://<top-level site name> | Format-List UseClaimsAuthent
   
  Решение веб-приложения сначала развертывается для центра администрирования, а затем для любых дополнительных веб-приложений, поддерживающих запросы к данным PowerPivot. Чтобы развернуть решение веб-приложения для центра администрирования, необходимо использовать средство настройки PowerPivot или командлет PowerShell. Решение веб-приложения для других веб-приложений можно развернуть вручную с помощью центра администрирования или PowerShell.  
   
-|Решение|Description|  
+|Решение|Описание|  
 |--------------|-----------------|  
 |Powerpivotfarm.wsp|Добавляет файл Microsoft.AnalysisServices.SharePoint.Integration.dll к глобальной сборке.<br /><br /> Добавляет файл Microsoft.AnalysisServices.ChannelTransport.dll к глобальной сборке.<br /><br /> Устанавливает функции и файлы ресурсов, а также регистрирует типы содержимого.<br /><br /> Добавляет шаблоны библиотек PowerPivot Gallery и Data Feed.<br /><br /> Добавляет страницы приложений для настройки приложений службы, панели управления PowerPivot, обновления данных и галереи PowerPivot.|  
 |powerpivotwebapp.wsp|Добавляет файлы ресурсов Microsoft.AnalysisServices.SharePoint.Integration.dll в папку расширений веб-сервера на сервере клиентского веб-интерфейса.<br /><br /> Добавляет веб-службу PowerPivot к серверу клиентского веб-интерфейса.<br /><br /> Добавляет возможность формирования эскизов для галереи PowerPivot.|  
   
 ## <a name="see-also"></a>См. также статью  
- [Обновление PowerPivot для SharePoint](../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md)    
- [Администрирование и настройка сервера PowerPivot в   центра администрирования](power-pivot-server-administration-and-configuration-in-central-administration.md)  
+ [Обновление PowerPivot для SharePoint](../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md)   
+ [Администрирование и настройка сервера PowerPivot в  центра администрирования](power-pivot-server-administration-and-configuration-in-central-administration.md)  
  [Настройка PowerPivot с помощью Windows PowerShell](power-pivot-configuration-using-windows-powershell.md)  

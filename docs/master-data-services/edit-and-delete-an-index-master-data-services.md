@@ -23,7 +23,7 @@ ms.locfileid: "73728213"
 
   Индекс, созданный для атрибутов, можно изменить или удалить.  
   
-## <a name="prerequisites"></a>Предварительные требования  
+## <a name="prerequisites"></a>необходимые компоненты  
  Чтобы выполнить эту процедуру:  
   
 -   Иметь разрешение на доступ к функциональной области "Администрирование системы". Дополнительные сведения см. в разделе [Разрешения функциональной области (службы Master Data Services)](../master-data-services/functional-area-permissions-master-data-services.md).  
@@ -62,7 +62,7 @@ ms.locfileid: "73728213"
   
 5.  В окнах подтверждения нажимайте кнопку **ОК**.  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также статью  
  [Создание индекса (Master Data Services)](../master-data-services/create-an-index-master-data-services.md)   
  [Пользовательский индекс (Master Data Services)](../master-data-services/custom-index-master-data-services.md)  
   

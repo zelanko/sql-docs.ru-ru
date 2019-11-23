@@ -24,17 +24,17 @@ ms.lasthandoff: 10/22/2019
 ms.locfileid: "72783220"
 ---
 # <a name="defect-a-target-server-from-a-master-server"></a>Отключение целевого сервера от главного сервера
-  В этом разделе описывается исключение целевого сервера из главного в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] или управляющих объектов SQL Server (SMO). Запустите эту процедуру на целевом сервере.  
+  В этом разделе описывается исключение целевого сервера из главного в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]или управляющих объектов SQL Server (SMO). Запустите эту процедуру на целевом сервере.  
   
  **В этом разделе**  
   
--   **Перед началом:**  
+-   **Перед началом работы**  
   
      [безопасность](#Security)  
   
 -   **Для исключения целевого сервера используется:**  
   
-     [Среда Среда SQL Server Management Studio](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -42,7 +42,7 @@ ms.locfileid: "72783220"
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="Security"></a> Безопасность  
   
 ####  <a name="Permissions"></a> Разрешения  
  Для выполнения этой хранимой процедуры пользователь должен быть членом предопределенной роли сервера `sysadmin`.  
@@ -63,7 +63,7 @@ ms.locfileid: "72783220"
   
 1.  Установите соединение с компонентом [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
-2.  На панели "Стандартная" нажмите **Создать запрос**.  
+2.  На панели «Стандартная» нажмите **Создать запрос**.  
   
 3.  Скопируйте следующий пример в окно запроса и нажмите кнопку **Выполнить**.  
   

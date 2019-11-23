@@ -33,7 +33,7 @@ ms.locfileid: "73983171"
 
   Возвращает параметры хранилища запросов для этой базы данных.  
   
-**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и более поздних версий), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
+**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и выше), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  

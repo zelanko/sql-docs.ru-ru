@@ -26,7 +26,7 @@ ms.locfileid: "72782945"
 # <a name="remove-a-secondary-database-from-an-availability-group-sql-server"></a>Удаление базы данных-получателя из группы доступности (SQL Server)
   В этом разделе описывается удаление базы данных-получателя из группы доступности AlwaysOn с помощью среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]или PowerShell в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
--   **Перед началом:**  
+-   **Перед началом работы**  
   
      [Предварительные требования](#Prerequisites)  
   
@@ -34,7 +34,7 @@ ms.locfileid: "72782945"
   
 -   **Удаление базы данных-получателя с помощью**  
   
-     [Среда Среда SQL Server Management Studio](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -49,7 +49,7 @@ ms.locfileid: "72782945"
   
 -   Эта задача поддерживается только на вторичных репликах. Необходимо подключиться к экземпляру сервера, размещающему вторичную реплику, из которой удаляется база данных.  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="Security"></a> Безопасность  
   
 ####  <a name="Permissions"></a> Разрешения  
  Необходимо разрешение ALTER на базу данных.  
@@ -65,7 +65,7 @@ ms.locfileid: "72782945"
   
 4.  Этот шаг зависит от того, удаляется несколько баз данных или только одна база данных.  
   
-    -   Чтобы удалить несколько баз данных, используйте панель **Подробности обозревателя объектов** , чтобы просмотреть и выбрать базы данных, которые требуется удалить. Дополнительные сведения см. в статье [Использование раздела "Подробности обозревателя объектов" для мониторинга групп доступности (среда SQL Server Management Studio)](use-object-explorer-details-to-monitor-availability-groups.md).  
+    -   Чтобы удалить несколько баз данных, используйте панель **Подробности обозревателя объектов** , чтобы просмотреть и выбрать базы данных, которые требуется удалить. Дополнительные сведения см. в разделе [Использование раздела "Подробности обозревателя объектов" для мониторинга групп доступности (среда SQL Server Management Studio)](use-object-explorer-details-to-monitor-availability-groups.md).  
   
     -   Чтобы удалить одну базу данных, выберите ее в **обозревателе объектов** или на панели **Подробности обозревателя объектов** .  
   
@@ -105,11 +105,11 @@ ms.locfileid: "72782945"
     ```  
   
     > [!NOTE]  
-    >  Чтобы просмотреть синтаксис командлета, воспользуйтесь командлетом `Get-Help` в среде [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Дополнительные сведения см. в разделе [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
+    >  Чтобы просмотреть синтаксис командлета, воспользуйтесь командлетом `Get-Help` в среде [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Дополнительные сведения см. в статье [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
   
  **Настройка и использование поставщика SQL Server PowerShell**  
   
--   [Поставщик SQL Server PowerShell](../../../powershell/sql-server-powershell-provider.md)  
+-   [SQL Server PowerShell, поставщик](../../../powershell/sql-server-powershell-provider.md)  
   
 ##  <a name="FollowUp"></a> Дальнейшие действия. После удаления базы данных-получателя из группы доступности  
  После удаления базы данных-получателя она перестает входить в группу доступности, кроме того, из группы доступности удаляются все сведения об этой базе данных-получателе. Удаленная база данных-получатель переводится в состояние RESTORING.  
@@ -128,5 +128,5 @@ ms.locfileid: "72782945"
      Дополнительные сведения см. в разделе [Восстановление базы данных без восстановления данных (Transact-SQL)](../../../relational-databases/backup-restore/recover-a-database-without-restoring-data-transact-sql.md).  
   
 ## <a name="see-also"></a>См. также статью  
- [Общие сведения о &#40;группы доступности AlwaysOn&#41; SQL Server](overview-of-always-on-availability-groups-sql-server.md)    
+ [Общие сведения о &#40;группы доступности AlwaysOn&#41; SQL Server](overview-of-always-on-availability-groups-sql-server.md)   
  [Удаление базы данных-источника из группы доступности (SQL Server)](remove-a-primary-database-from-an-availability-group-sql-server.md)  

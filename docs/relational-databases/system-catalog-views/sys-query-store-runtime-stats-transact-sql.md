@@ -36,8 +36,8 @@ ms.locfileid: "70148285"
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**runtime_stats_id**|**bigint**|Идентификатор строки, представляющей статистику выполнения среды выполнения для **plan_id**, **execution_type** и **runtime_stats_interval_id**. Он уникален только за прошлые интервалы статистики времени выполнения. Для текущего активного интервала может существовать несколько строк, представляющих статистику времени выполнения для плана, на который ссылается **plan_id**, с типом выполнения, представленным **execution_type**. Как правило, одна строка представляет статистику времени выполнения, которая записывается на диск, а другие (s) представляют состояние в памяти. Таким образом, чтобы получить фактическое состояние для каждого интервала, необходимо выполнить статистическую обработку метрик, группирование по **plan_id**, **execution_type** и **runtime_stats_interval_id**.<br/>**Примечание.** Хранилище данных SQL Azure всегда будет возвращать ноль (0).|
-|**plan_id**|**bigint**|Внешний ключ. Присоединяется к [sys. &#40;QUERY_STORE_PLAN Transact-&#41;SQL](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md).|  
-|**runtime_stats_interval_id**|**bigint**|Внешний ключ. Присоединяется к [sys. &#40;QUERY_STORE_RUNTIME_STATS_INTERVAL Transact-&#41;SQL](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md).|  
+|**plan_id**|**bigint**|Внешний ключ. Присоединяет к [sys. query_store_plan &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md).|  
+|**runtime_stats_interval_id**|**bigint**|Внешний ключ. Присоединяет к [sys. query_store_runtime_stats_interval &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md).|  
 |**execution_type**|**tinyint**|Определяет тип выполнения запроса:<br /><br /> 0 — регулярное выполнение (успешно завершено)<br /><br /> 3\. инициированное клиентом прерывание выполнения<br /><br /> 4 — выполнение прерванного исключения|  
 |**execution_type_desc**|**nvarchar(128)**|Текстовое описание поля "тип выполнения":<br /><br /> 0 — обычный<br /><br /> 3 — прервано<br /><br /> 4 — исключение|  
 |**first_execution_time**|**datetimeoffset**|Время первого выполнения для плана запроса в пределах интервала агрегирования. Это относится к времени окончания выполнения запроса.|  
@@ -107,16 +107,16 @@ ms.locfileid: "70148285"
 ## <a name="permissions"></a>Разрешения  
 Требуется разрешение `VIEW DATABASE STATE`.  
   
-## <a name="see-also"></a>См. также  
- [sys. database_query_store_options &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
- [sys. query_context_settings &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)   
- [sys. query_store_plan &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)   
- [sys. query_store_query &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)   
- [sys. query_store_query_text &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)   
+## <a name="see-also"></a>См. также статью  
+ [sys. database_query_store_options &#40;  Transact-&#41; SQL](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)  
+ [sys. query_context_settings &#40;  Transact-&#41; SQL](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)  
+ [sys. query_store_plan &#40;  Transact-&#41; SQL](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)  
+ [sys. query_store_query &#40;  Transact-&#41; SQL](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)  
+ [sys. query_store_query_text &#40;  Transact-&#41; SQL](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)  
  [sys.query_store_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)  
- [sys. query_store_runtime_stats_interval &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)   
+ [sys. query_store_runtime_stats_interval &#40;  Transact-&#41; SQL](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)  
  [Мониторинг производительности с использованием хранилища запросов](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [Представления каталога (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Query Store Stored Procedures (Transact-SQL)](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   (Хранимые процедуры хранилища запросов (Transact-SQL))  
+ [Хранимые процедуры в хранилище запросов (Transact-SQL)](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)    
  [Рекомендации по хранилищу запросов](../../relational-databases/performance/best-practice-with-the-query-store.md)   
   

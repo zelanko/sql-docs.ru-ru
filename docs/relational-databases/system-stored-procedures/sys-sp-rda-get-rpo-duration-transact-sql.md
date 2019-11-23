@@ -41,18 +41,18 @@ sp_rda_get_rpo_duration @durationinhours output
 ```    
     
 ## <a name="output-parameter"></a>Выходной параметр    
- *\@durationinhours*    
+ *\@дуратионинхаурс*    
   Число часов (целое значение, отличное от NULL) переносимых данных, которые SQL Server сохранены для текущей базы данных с поддержкой растяжения.    
     
 ## <a name="permissions"></a>Разрешения    
- Требуются разрешения db_owner.    
+ Требуются db_owner разрешения.    
     
-## <a name="remarks"></a>Примечания    
+## <a name="remarks"></a>Remarks    
  Измените значение, выполнив [sys. sp_rda_set_rpo_duration &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-rda-set-rpo-duration-transact-sql.md).    
     
-## <a name="see-also"></a>См. также    
- [sys. sp_rda_set_rpo_duration &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-rda-set-rpo-duration-transact-sql.md)     
+## <a name="see-also"></a>См. также статью    
+ [sys. sp_rda_set_rpo_duration &#40;    Transact-&#41; SQL](../../relational-databases/system-stored-procedures/sys-sp-rda-set-rpo-duration-transact-sql.md)  
  [Восстановление баз данных с поддержкой Stretch (Stretch Database)](../../sql-server/stretch-database/restore-stretch-enabled-databases-stretch-database.md)    
- [База данных Stretch](../../sql-server/stretch-database/stretch-database.md)    
+ [база данных Stretch;](../../sql-server/stretch-database/stretch-database.md)    
     
   

@@ -49,7 +49,7 @@ ms.locfileid: "73843874"
 |**elastic_pool_storage_limit_mb**|**bigint**|Текущее значение максимального размера хранилища эластичного пула для этого пула эластичных БД в мегабайтах за этот интервал.|
 |**avg_allocated_storage_percent**|**Decimal (5, 2)**|Процент пространства данных, выделенного всеми базами данных в эластичном пуле.  Это отношение пространства данных, выделенного для максимального размера данных для эластичного пула.  Дополнительные сведения см. [в разделе Управление файловым пространством в базе данных SQL](https://docs.microsoft.com/azure/sql-database/sql-database-file-space-management) .|  
   
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Remarks
 
  Это представление существует в базе данных master сервера базы данных SQL. Чтобы запросить представление **sys. elastic_pool_resource_stats**, необходимо подключиться к базе данных master.  
   
@@ -77,7 +77,7 @@ WHERE elastic_pool_name = '<your pool name>'
 ORDER BY end_time DESC;  
 ```
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также статью
 
  [Рост окончании образом взрывной с помощью эластичных баз данных](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool/)   
  [Создание пула эластичных баз данных SQL и управление им (Предварительная версия)](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool-portal/)   

@@ -25,7 +25,7 @@ ms.locfileid: "70745386"
 # <a name="sp_helpdistributor-transact-sql"></a>sp_helpdistributor (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  Выводит сведения о распространителе, базе данных распространителя, рабочем каталоге и [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] учетной записи агента пользователя. Эта хранимая процедура выполняется на издателе для базы данных публикации или любой базы данных.  
+  Выводит сведения о распространителе, базе данных распространителя, рабочем каталоге и [!INCLUDE[msCoName](../../includes/msconame-md.md)] учетной записи пользователя агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Эта хранимая процедура выполняется на издателе для базы данных публикации или любой базы данных.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,31 +49,31 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @distributor = ] 'distributor' OUTPUT`Имя распространителя. Аргумент распространитель имеет тип **sysname**и значение **%** по умолчанию, которое является единственным значением, возвращающим результирующий набор.  
+`[ @distributor = ] 'distributor' OUTPUT` — имя распространителя. Аргумент распространитель имеет тип **sysname**и значение по умолчанию **%** , которое является единственным значением, возвращающим результирующий набор.  
   
-`[ @distribdb = ] 'distribdb' OUTPUT`Имя базы данных распространителя. *дистрибдб* имеет **тип sysname**и значение по умолчанию **,котороеявляетсяединственнымзначением,возвращающимрезультирующийнабор.%**  
+`[ @distribdb = ] 'distribdb' OUTPUT` — имя базы данных распространителя. *дистрибдб* имеет тип **sysname**и значение по умолчанию **%** , которое является единственным значением, возвращающим результирующий набор.  
   
-`[ @directory = ] 'directory' OUTPUT`Рабочий каталог. *Каталог* имеет **тип nvarchar (255)** и значение по умолчанию **,котороеявляетсяединственнымзначением,возвращающимрезультирующийнабор.%**  
+`[ @directory = ] 'directory' OUTPUT` является рабочим каталогом. *Каталог* имеет тип **nvarchar (255)** и значение по умолчанию **%** , которое является единственным значением, возвращающим результирующий набор.  
   
-`[ @account = ] 'account' OUTPUT`— Это учетная запись пользователя Windows.[!INCLUDE[msCoName](../../includes/msconame-md.md)] *учетная запись*имеет **%** тип **nvarchar (255)** и значение по умолчанию, которое является единственным значением, возвращающим результирующий набор.  
+`[ @account = ] 'account' OUTPUT` — это [!INCLUDE[msCoName](../../includes/msconame-md.md)] учетная запись пользователя Windows. *Account*имеет тип **nvarchar (255)** и значение по умолчанию **%** , которое является единственным значением, возвращающим результирующий набор.  
   
-`[ @min_distretention = ] _min_distretentionOUTPUT`Минимальный срок хранения распространения в часах. *min_distretention* имеет **тип int**и значение по умолчанию **-1**.  
+`[ @min_distretention = ] _min_distretentionOUTPUT` — это минимальный срок хранения распространения в часах. *min_distretention* имеет **тип int**и значение по умолчанию **-1**.  
   
-`[ @max_distretention = ] _max_distretentionOUTPUT`Максимальный срок хранения распространения в часах. *max_distretention* имеет **тип int**и значение по умолчанию **-1**.  
+`[ @max_distretention = ] _max_distretentionOUTPUT` — это максимальный срок хранения распространения в часах. *max_distretention* имеет **тип int**и значение по умолчанию **-1**.  
   
-`[ @history_retention = ] _history_retentionOUTPUT`Срок хранения журнала в часах. *history_retention* имеет **тип int**и значение по умолчанию **-1**.  
+`[ @history_retention = ] _history_retentionOUTPUT` — срок хранения журнала в часах. *history_retention* имеет **тип int**и значение по умолчанию **-1**.  
   
-`[ @history_cleanupagent = ] 'history_cleanupagent' OUTPUT`Имя агента очистки журнала. *history_cleanupagent* имеет **тип nvarchar (100)** и значение по умолчанию **,котороеявляетсяединственнымзначением,возвращающимрезультирующийнабор.%**  
+`[ @history_cleanupagent = ] 'history_cleanupagent' OUTPUT` — имя агента очистки журнала. *history_cleanupagent* имеет тип **nvarchar (100)** и значение по умолчанию **%** , которое является единственным значением, возвращающим результирующий набор.  
   
-`[ @distrib_cleanupagent = ] 'distrib_cleanupagent' OUTPUT`Имя агента очистки распространителя. *distrib_cleanupagent* имеет **тип nvarchar (100)** и значение по умолчанию **,котороеявляетсяединственнымзначением,возвращающимрезультирующийнабор.%**  
+`[ @distrib_cleanupagent = ] 'distrib_cleanupagent' OUTPUT` — имя агента очистки распространителя. *distrib_cleanupagent* имеет тип **nvarchar (100)** и значение по умолчанию **%** , которое является единственным значением, возвращающим результирующий набор.  
   
-`[ @publisher = ] 'publisher'`Имя издателя. Аргумент *Publisher* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @publisher = ] 'publisher'` — имя издателя. Аргумент *Publisher* имеет тип **sysname**и значение по умолчанию NULL.  
   
-`[ @local = ] 'local'`Указывает, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должны ли быть получены значения локального сервера. *Local* имеет тип **nvarchar (5)** и значение по умолчанию NULL.  
+`[ @local = ] 'local'` указывает, должны ли [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] получать значения локального сервера. *Local* имеет тип **nvarchar (5)** и значение по умолчанию NULL.  
   
-`[ @rpcsrvname = ] 'rpcsrvname' OUTPUT`Имя сервера, который выдает удаленные вызовы процедур. *рпксрвнаме* имеет **тип sysname**и значение по умолчанию **,котороеявляетсяединственнымзначением,возвращающимрезультирующийнабор.%**  
+`[ @rpcsrvname = ] 'rpcsrvname' OUTPUT` — имя сервера, который выдает удаленные вызовы процедур. *рпксрвнаме* имеет тип **sysname**и значение по умолчанию **%** , которое является единственным значением, возвращающим результирующий набор.  
   
-`[ @publisher_type = ] 'publisher_type' OUTPUT`Тип издателя издателя. *publisher_type* имеет **тип sysname**и значение по умолчанию **,котороеявляетсяединственнымзначением,возвращающимрезультирующийнабор.%**  
+`[ @publisher_type = ] 'publisher_type' OUTPUT` — это тип издателя издателя. Аргумент *publisher_type* имеет тип **sysname**и значение по умолчанию **%** , которое является единственным значением, возвращающим результирующий набор.  
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
@@ -95,17 +95,17 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  **sp_helpdistributor** используется во всех типах репликации.  
   
- Если при выполнении **sp_helpdistributor**указаны один или несколько выходных параметров, то всем выходным параметрам, для которых ЗАДАНО значение null, присваиваются значения при выходе, а результирующий набор не возвращается. Если выходных параметров нет, результирующий набор возвращается.  
+ Если при выполнении **sp_helpdistributor**указаны один или несколько выходных параметров, то всем выходным параметрам, установленным в значение null, присваиваются значения при выходе, а результирующий набор не возвращается. Если выходных параметров нет, результирующий набор возвращается.  
   
 ## <a name="permissions"></a>Разрешения  
  Следующие столбцы результирующего набора или выходные параметры возвращаются членам предопределенной роли сервера **sysadmin** на издателе и предопределенной роли базы данных **db_owner** в базе данных публикации:  
   
 |Столбец результирующего набора|Выходной параметр|  
 |-----------------------|----------------------|  
-|account|**\@учетной записи**|  
+|account|**Учетная запись \@**|  
 |min distrib retention|**\@min_distretention**|  
 |max distrib retention|**\@max_distretention**|  
 |history retention|**\@history_retention**|  
@@ -121,14 +121,14 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
   
 |Столбец результирующего набора|Выходной параметр|  
 |-----------------------|----------------------|  
-|distributor|**\@распространение**|  
+|distributor|**распространитель \@**|  
 |база данных распространителя|**\@дистрибдб**|  
 |rpc server name|**\@рпксрвнаме**|  
 |publisher type|**\@publisher_type**|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также статью  
  [Просмотр и изменение свойств издателя и распространителя](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
- [sp_adddistpublisher &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
+ [sp_adddistpublisher &#40;  Transact-&#41; SQL](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)  
  [sp_dropdistpublisher &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md)  
   
   

@@ -50,10 +50,10 @@ sp_help_spatial_geography_index [ @tabname =] 'tabname'
 ## <a name="permissions"></a>Разрешения  
  Пользователю должна быть назначена роль PUBLIC для получения доступа к процедуре. Необходимо разрешение READ ACCESS на сервере и объекте.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="example"></a>Пример  
- В следующем примере `sp_help_spatial_geography_index` используется для изучения **SIndx_SpatialTable_geography_col2** пространственного индекса **географии** , определенного в таблице **geography_col** для данного примера запроса в **\@qs**. Этот пример возвращает только основные свойства указанного индекса.  
+ В следующем примере `sp_help_spatial_geography_index` используется для исследования пространственного индекса **geography** **SIndx_SpatialTable_geography_col2** , определенного в **geography_col** таблиц, для данного примера запроса в **\@QS**. Этот пример возвращает только основные свойства указанного индекса.  
   
 ```  
 declare @qs geography  
@@ -65,7 +65,7 @@ exec sp_help_spatial_geography_index 'geography_col', 'SIndx_SpatialTable_geogra
   
 ## <a name="requirements"></a>Требования  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также статью  
  [Хранимые процедуры пространственного индекса](https://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)   
  [sp_help_spatial_geography_index](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-transact-sql.md)   
  [Общие сведения о пространственных индексах](../../relational-databases/spatial/spatial-indexes-overview.md)   

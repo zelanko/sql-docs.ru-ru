@@ -25,12 +25,12 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/09/2019
 ms.locfileid: "73882319"
 ---
-# <a name="define-an-article"></a>Определение статьи
+# <a name="define-an-article"></a>Define an Article
   В данном разделе описывается определение статьи в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]или объектов RMO.  
   
  **В этом разделе**  
   
--   **Перед началом работы выполните следующие действия.**  
+-   **Перед началом работы**  
   
      [Ограничения](#Restrictions)  
   
@@ -72,7 +72,7 @@ ms.locfileid: "73882319"
   
          Если задано, что в качестве распространителя будет функционировать другой сервер, необходимо ввести пароль на странице **Административный пароль** для соединений, устанавливаемых между издателем и распространителем. Пароль должен совпадать с паролем, указанным при включении издателя на удаленном распространителе.  
   
-         Дополнительные сведения см. в разделе [Configure Distribution](../configure-distribution.md).  
+         Дополнительные сведения см. в статье [Настройка распространения](../configure-distribution.md).  
   
     -   Выберите базу данных публикации.  
   
@@ -94,7 +94,7 @@ ms.locfileid: "73882319"
   
          Дополнительные сведения см. в разделах [Replication Agent Security Model](../security/replication-agent-security-model.md) и [Replication Security Best Practices](../security/replication-security-best-practices.md).  
   
-    -   При необходимости создайте скрипт для публикации. Дополнительные сведения см. в разделе [Scripting Replication](../scripting-replication.md).  
+    -   При необходимости создайте скрипт для публикации. Дополнительные сведения см. в статье [Scripting Replication](../scripting-replication.md).  
   
     -   Задайте имя для публикации.  
   
@@ -105,9 +105,9 @@ ms.locfileid: "73882319"
   
 1.  Выполните процедуру [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)на издателе в базе данных публикации. Укажите имя публикации, которой принадлежит статья, для **\@публикации**, имя статьи для **\@статьи**, публикуемый объект базы данных для **\@source_object**и любые другие необязательные параметры. Используйте **\@source_owner** , чтобы указать принадлежность схемы объекта, если это не **dbo**. Если статья не является статьей таблицы на основе журнала, укажите тип статьи для **типа\@** . Дополнительные сведения см. в разделе [Указание типов &#40;статей Программирование при программировании&#41;на языке Transact-SQL](specify-article-types-replication-transact-sql-programming.md).  
   
-2.  Для горизонтальной фильтрации строк в таблице или для просмотра статьи используйте хранимую процедуру [sp_articlefilter](/sql/relational-databases/system-stored-procedures/sp-articlefilter-transact-sql) , определяющую предложение фильтра. Дополнительные сведения см. в статье [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md).  
+2.  Для горизонтальной фильтрации строк в таблице или для просмотра статьи используйте хранимую процедуру [sp_articlefilter](/sql/relational-databases/system-stored-procedures/sp-articlefilter-transact-sql) , определяющую предложение фильтра. Дополнительные сведения см. в разделе [Определение и изменение статического строкового фильтра](define-and-modify-a-static-row-filter.md).  
   
-3.  Для вертикальной фильтрации столбцов в таблице или просмотра статьи используйте хранимую процедуру [sp_articlecolumn](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql). Дополнительные сведения см. в разделе [Определение или изменение фильтра столбцов](define-and-modify-a-column-filter.md).  
+3.  Для вертикальной фильтрации столбцов в таблице или просмотра статьи используйте хранимую процедуру [sp_articlecolumn](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql). Дополнительные сведения см. в статье [Define and Modify a Column Filter](define-and-modify-a-column-filter.md).  
   
 4.  Если статья является фильтруемой, выполните хранимую процедуру [sp_articleview](/sql/relational-databases/system-stored-procedures/sp-articleview-transact-sql) .  
   
@@ -120,11 +120,11 @@ ms.locfileid: "73882319"
   
 #### <a name="to-define-an-article-for-a-merge-publication"></a>Определение статьи для публикации слиянием  
   
-1.  В базе данных публикации на издателе выполните процедуру [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql). Укажите имя публикации для **\@публикации**, имя статьи для **\@статьи**и публикуемый объект для **\@source_object**. Чтобы горизонтально фильтровать строки таблицы, укажите значение для **\@subset_filterclause**. Дополнительные сведения см. в разделах [Определение и изменение параметризованного фильтра строк для статьи публикации слиянием](define-and-modify-a-parameterized-row-filter-for-a-merge-article.md) и [Определение и изменение статического строкового фильтра](define-and-modify-a-static-row-filter.md). Если статья не является статьей таблицы, укажите тип статьи для **типа\@** . Дополнительные сведения см. в статье [Определение типов статей (программирование репликации на языке Transact-SQL)](specify-article-types-replication-transact-sql-programming.md).  
+1.  В базе данных публикации на издателе выполните процедуру [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql). Укажите имя публикации для **\@публикации**, имя статьи для **\@статьи**и публикуемый объект для **\@source_object**. Чтобы горизонтально фильтровать строки таблицы, укажите значение для **\@subset_filterclause**. Дополнительные сведения см. в разделах [Define and Modify a Parameterized Row Filter for a Merge Article](define-and-modify-a-parameterized-row-filter-for-a-merge-article.md) и [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md). Если статья не является статьей таблицы, укажите тип статьи для **типа\@** . Дополнительные сведения см. в статье [Определение типов статей (программирование репликации на языке Transact-SQL)](specify-article-types-replication-transact-sql-programming.md).  
   
-2.  Чтобы определить фильтр соединения между двумя статьями, на издателе в базе данных публикации выполните процедуру [sp_addmergefilter](/sql/relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql) (необязательно). Дополнительные сведения см. в статье [Define and Modify a Join Filter Between Merge Articles](define-and-modify-a-join-filter-between-merge-articles.md).  
+2.  Чтобы определить фильтр соединения между двумя статьями, на издателе в базе данных публикации выполните процедуру [sp_addmergefilter](/sql/relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql) (необязательно). Дополнительные сведения см. в разделе [Define and Modify a Join Filter Between Merge Articles](define-and-modify-a-join-filter-between-merge-articles.md).  
   
-3.  На издателе в базе данных публикации выполните хранимую процедуру [sp_mergearticlecolumn](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql) для фильтрации столбцов таблицы (необязательно). Дополнительные сведения см. в разделе [Определение или изменение фильтра столбцов](define-and-modify-a-column-filter.md).  
+3.  На издателе в базе данных публикации выполните хранимую процедуру [sp_mergearticlecolumn](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql) для фильтрации столбцов таблицы (необязательно). Дополнительные сведения см. в статье [Define and Modify a Column Filter](define-and-modify-a-column-filter.md).  
   
 ###  <a name="TsqlExample"></a> Примеры (Transact-SQL)  
  В этом примере определяется статья на основе таблицы `Product` для публикации транзакций, причем статья фильтруется как по горизонтали, так и по вертикали.  
@@ -151,12 +151,12 @@ ms.locfileid: "73882319"
   
  [!code-vb[HowTo#rmo_vb_CreateMergeArticles](../../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_createmergearticles)]  
   
-## <a name="see-also"></a>См. также раздел  
- [Создание публикации](create-a-publication.md)   
+## <a name="see-also"></a>См. также статью  
+ [Create a Publication](create-a-publication.md)   
  [Replication System Stored Procedures Concepts](../concepts/replication-system-stored-procedures-concepts.md)   
  [Добавление и удаление статей в существующих публикациях](add-articles-to-and-drop-articles-from-existing-publications.md)   
  [Фильтрация опубликованных данных](filter-published-data.md)   
  [Публикация данных и объектов базы данных](publish-data-and-database-objects.md)   
- [Replication System Stored Procedures Concepts](../concepts/replication-system-stored-procedures-concepts.md)  
+ [Основные понятия системных хранимых процедур репликации](../concepts/replication-system-stored-procedures-concepts.md)  
   
   

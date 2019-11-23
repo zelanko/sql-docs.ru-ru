@@ -25,7 +25,7 @@ ms.locfileid: "73728166"
 
   В [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]исключите бизнес-правило, если его не следует удалять без возможности восстановления и отсутствует необходимость проверки данных на соответствие этому бизнес-правилу.  
   
-## <a name="prerequisites"></a>Предварительные требования  
+## <a name="prerequisites"></a>необходимые компоненты  
  Чтобы выполнить эту процедуру:  
   
 -   необходимо иметь разрешение на доступ к функциональной области **Администрирование системы** ;  
@@ -54,7 +54,7 @@ ms.locfileid: "73728166"
   
 10. В диалоговом окне подтверждения нажмите кнопку **ОК**. В столбце **Business Rule Status** (Состояние бизнес-правила) указано значение **Исключено** , а в столбце **Исключено** — значение **Да**.  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также статью  
  [Удаление бизнес-правила (службы Master Data Services)](../master-data-services/delete-a-business-rule-master-data-services.md)   
  [Создание и публикация бизнес-правила (службы Master Data Services)](../master-data-services/create-and-publish-a-business-rule-master-data-services.md)   
  [Бизнес-правила (службы Master Data Services)](../master-data-services/business-rules-master-data-services.md)  

@@ -55,7 +55,7 @@ sp_add_log_shipping_secondary_primary
 ## <a name="arguments"></a>Аргументы  
 `[ @primary_server = ] 'primary_server'` имя основного экземпляра [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] в конфигурации доставки журналов. *primary_server* имеет тип **sysname** и не может иметь значение null.  
   
-`[ @primary_database = ] 'primary_database'` — это имя базы данных на сервере-источнике. *primary_database* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @primary_database = ] 'primary_database'` — это имя базы данных на сервере-источнике. Аргумент *primary_database* имеет тип **sysname**и не имеет значения по умолчанию.  
   
 `[ @backup_source_directory = ] 'backup_source_directory'` каталог, в котором хранятся файлы резервных копий журналов транзакций с сервера источника. *backup_source_directory* имеет тип **nvarchar (500)** и не может иметь значение null.  
   
@@ -67,7 +67,7 @@ sp_add_log_shipping_secondary_primary
   
 `[ @file_retention_period = ] 'file_retention_period'` время в минутах, в течение которого файл резервной копии сохраняется на сервере-получателе в пути, указанном параметром @backup_destination_directory, перед удалением. *history_retention_period* имеет **тип int**и значение по умолчанию NULL. Если ничего не указано, подразумевается значение 14420.  
   
-`[ @monitor_server = ] 'monitor_server'` — имя сервера мониторинга. *Monitor_server* имеет тип **sysname**, не имеет значения по умолчанию и не может иметь значение null.  
+`[ @monitor_server = ] 'monitor_server'` — имя сервера мониторинга. Аргумент *Monitor_server* имеет тип **sysname**, не имеет значения по умолчанию и не может иметь значение null.  
   
 `[ @monitor_server_security_mode = ] 'monitor_server_security_mode'` режим безопасности, используемый для подключения к серверу мониторинга.  
   
@@ -94,13 +94,13 @@ sp_add_log_shipping_secondary_primary
  Нет  
   
 ## <a name="remarks"></a>Remarks  
- **sp_add_log_shipping_secondary_primary** должен быть запущен из базы данных **master** на сервере-получателе. Эта хранимая процедура выполняет следующее:  
+ **sp_add_log_shipping_secondary_primary** должны запускаться из базы данных **master** на сервере-получателе. Эта хранимая процедура выполняет следующее:  
   
 1.  Формирует идентификатор получателя для указанного сервера-источника и базы данных-источника.  
   
 2.  Выполняет следующее:  
 
-    1.  Добавляет запись для вторичного идентификатора в **log_shipping_secondary** , используя указанные аргументы.  
+    1.  Добавляет запись для вторичного идентификатора в **log_shipping_secondary** используя указанные аргументы.  
   
     2.  создает отключенное задание копирования для идентификатора получателя;  
   
@@ -110,7 +110,7 @@ sp_add_log_shipping_secondary_primary
   
     5.  Задайте идентификатор задания восстановления в записи **log_shipping_secondary** в качестве идентификатора задания восстановления.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Эту процедуру могут выполнять только члены предопределенной роли сервера **sysadmin** .  
   
 ## <a name="examples"></a>Примеры  

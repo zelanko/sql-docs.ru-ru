@@ -96,7 +96,7 @@ while (SQLFetch(hStmt) == SQL_SUCCESS)
     }  
 ```  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также статью  
    [функции SQLGetData](https://go.microsoft.com/fwlink/?LinkId=59350)  
  [Подробные сведения о реализации API-интерфейсов ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   

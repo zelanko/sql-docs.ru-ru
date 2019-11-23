@@ -27,7 +27,7 @@ ms.locfileid: "72251968"
 # <a name="sp_audit_write-transact-sql"></a>sp_audit_write (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Добавляет определенное пользователем событие аудита в **USER_DEFINED_AUDIT_GROUP**. Если **USER_DEFINED_AUDIT_GROUP** не включен, **sp_audit_write** игнорируется.  
+  Добавляет определенное пользователем событие аудита в **USER_DEFINED_AUDIT_GROUP**. Если **USER_DEFINED_AUDIT_GROUP** не включено, **sp_audit_write** игнорируется.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,10 +42,10 @@ sp_audit_write [ @user_defined_event_id = ] user_defined_event_id
   
 ## <a name="arguments"></a>Аргументы  
  `[ @user_defined_event_id = ] user_defined_event_id`  
- Параметр, определенный пользователем, записывается в столбец **user_defined_event_id** журнала аудита. *\@user_defined_event_id* имеет тип **smallint**.  
+ Параметр, определяемый пользователем и записываемый в столбец **user_defined_event_id** журнала аудита. *\@user_defined_event_id* имеет тип **smallint**.  
   
  `[ @succeeded = ] succeeded`  
- Параметр, переданный пользователем с целью указания, было ли событие успешным или нет. Содержится в столбце успеха журнала аудита. бит `@succeeded` является **битом**.  
+ Параметр, переданный пользователем с целью указания, было ли событие успешным или нет. Содержится в столбце успеха журнала аудита. `@succeeded` имеет **бит**.  
   
  `[ @user_defined_information = ] 'user_defined_information'`  
  Определяемый пользователем текст, который заносится в новый столбец user_defined_event_id журнала аудита. `@user_defined_information` имеет тип **nvarchar (4000)** .  
@@ -55,7 +55,7 @@ sp_audit_write [ @user_defined_event_id = ] user_defined_event_id
   
  Ошибки вызваны неверными входными параметрами или ошибкой записи в целевой журнал аудита.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Когда **USER_DEFINED_AUDIT_GROUP** добавляется в спецификацию аудита сервера или в спецификацию аудита базы данных, событие, запускаемое **sp_audit_write** , будет включено в журнал аудита.  
   
 ## <a name="permissions"></a>Разрешения  
@@ -72,7 +72,7 @@ EXEC sp_audit_write @user_defined_event_id =  27 ,
             , @user_defined_information = N'Access to a monitored object.' ;  
 ```  
   
-### <a name="b--creating-a-user-defined-audit-event-without-informational-text"></a>Б.  Создание пользовательского события аудита без информативного текста  
+### <a name="b--creating-a-user-defined-audit-event-without-informational-text"></a>б.  Создание пользовательского события аудита без информативного текста  
  В следующем примере создается событие аудита с идентификатором 27, успешным значением 0, не содержащее дополнительный информативный текст.  
   
 ```  
@@ -80,7 +80,7 @@ EXEC sp_audit_write 27, 0;
   
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также статью  
  [Хранимые процедуры безопасности (Transact-SQL)](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sys.server_principals (Transact-SQL)](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   
  [sp_addrole (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addrole-transact-sql.md)   

@@ -36,7 +36,7 @@ ms.locfileid: "73729039"
   
 -   Предоставляет представления для систем-подписчиков, которым надо извлекать данные из базы данных.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
   
 -   [Конечный элемент таблицы элементов (службы Master Data Services)](../master-data-services/leaf-member-staging-table-master-data-services.md)  
   
@@ -46,7 +46,7 @@ ms.locfileid: "73729039"
   
 -   [Ошибки промежуточного процесса (службы Master Data Services)](../master-data-services/staging-process-errors-master-data-services.md)  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также статью  
  [Создание базы данных служб Master Data Services](../master-data-services/install-windows/create-a-master-data-services-database.md)   
  [Защита объектов базы данных (службы Master Data Services)](../master-data-services/database-object-security-master-data-services.md)   
  [Имена входа, пользователи и роли базы данных (службы Master Data Services)](../master-data-services/database-logins-users-and-roles-master-data-services.md)  

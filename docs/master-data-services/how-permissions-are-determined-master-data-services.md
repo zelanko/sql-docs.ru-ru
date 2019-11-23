@@ -23,7 +23,7 @@ ms.locfileid: "73729186"
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  Простейшим способом настройки безопасности служб [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] является назначение разрешений на объекты модели для группы, членом которой является пользователь.  
+  Простейшим способом настройки безопасности служб [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]является назначение разрешений на объекты модели для группы, членом которой является пользователь.  
   
  Настройка безопасности становится более сложной в следующих случаях.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "73729186"
   
 -   Всем объектам на более высоком уровне предоставляется неявное разрешение на чтение. Дополнительные сведения о неявном разрешении на чтение см. в разделе [Навигационный доступ (службы Master Data Services)](../master-data-services/navigational-access-master-data-services.md).  
   
- В этом примере сущности назначается разрешение **Чтение** . Это же разрешение наследуется и атрибутом сущности, находящимся на более низком уровне структуры модели. Модель предоставляет неявное разрешение на чтение этой сущности и ее атрибуту. Другая сущность модели не имеет явно назначенного разрешения и не наследует никаких разрешений, поэтому доступ для нее неявно закрыт.  
+ В этом примере сущности назначается разрешение **Чтение**. Это же разрешение наследуется и атрибутом сущности, находящимся на более низком уровне структуры модели. Модель предоставляет неявное разрешение на чтение этой сущности и ее атрибуту. Другая сущность модели не имеет явно назначенного разрешения и не наследует никаких разрешений, поэтому доступ для нее неявно закрыт.  
   
  ![mds_conc_inheritance_model](../master-data-services/media/mds-conc-inheritance-model.gif "mds_conc_inheritance_model")  
   
@@ -76,10 +76,10 @@ ms.locfileid: "73729186"
   
  ![mds_conc_security_group_overlap](../master-data-services/media/mds-conc-security-group-overlap.gif "mds_conc_security_group_overlap")  
   
- В этом случае пересечения разрешений пользователя и группы должны определяться, прежде чем можно будет сравнивать разрешения для объектов модели и элементов иерархии. Дополнительные сведения см. в разделе [Перекрытие разрешений пользователей и групп (службы основных данных)](../master-data-services/overlapping-user-and-group-permissions-master-data-services.md).  
+ В этом случае пересечения разрешений пользователя и группы должны определяться, прежде чем можно будет сравнивать разрешения для объектов модели и элементов иерархии. Дополнительные сведения см. в разделе [Overlapping User and Group Permissions &#40;Master Data Services&#41;](../master-data-services/overlapping-user-and-group-permissions-master-data-services.md).  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также статью  
  [Перекрытие разрешений пользователей и групп (службы основных данных)](../master-data-services/overlapping-user-and-group-permissions-master-data-services.md)   
- [Перекрытие разрешений моделей и элементов (службы основных данных)](../master-data-services/overlapping-model-and-member-permissions-master-data-services.md)  
+ [Перекрытие разрешений моделей и элементов (службы Master Data Services)](../master-data-services/overlapping-model-and-member-permissions-master-data-services.md)  
   
   

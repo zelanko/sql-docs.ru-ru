@@ -308,7 +308,7 @@ ms.locfileid: "72906099"
   
 ## <a name="see-also"></a>См. также статью  
  [Типы данных float и real (Transact-SQL)](../../t-sql/data-types/float-and-real-transact-sql.md)   
-  [языка Transact &#40;-SQL&#41; для nchar и nvarchar](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)  
+   [языка Transact &#40;-SQL&#41; для nchar и nvarchar](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)  
  [Установка SQL Server Native Client](../../relational-databases/native-client/applications/installing-sql-server-native-client.md)   
  [Использование схем XSD с заметками в &#40;запросах SQLXML 4,0&#41;](../../relational-databases/sqlxml/annotated-xsd-schemas/using-annotated-xsd-schemas-in-queries-sqlxml-4-0.md)  
   

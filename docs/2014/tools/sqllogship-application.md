@@ -55,12 +55,12 @@ instance_name { -backupprimary_id | -copysecondary_id | -restoresecondary_id } [
  **–verboselevel** _level_  
  Определяет уровень сообщений, добавляемых в журнал доставки журналов. *level* может быть одним из следующих целочисленных значений:  
   
-|level|Description|  
+|level|Описание|  
 |-----------|-----------------|  
 |0|Не выводить сообщения трассировки и отладки.|  
 |1|Выводить сообщения обработки ошибок.|  
 |2|Выводить предупреждения и сообщения обработки ошибок.|  
-|**3**|Выводить информационные сообщения, предупреждения и сообщения обработки ошибок. Это значение установлено по умолчанию.|  
+|**3**|Выводить информационные сообщения, предупреждения и сообщения обработки ошибок. Это значение по умолчанию.|  
 |4|Выводить все сообщения отладки и трассировки.|  
   
  **–logintimeout** _timeout_value_  
@@ -76,10 +76,10 @@ instance_name { -backupprimary_id | -copysecondary_id | -restoresecondary_id } [
   
  Приложение **sqllogship** , sqllogship. exe, устанавливается в каталог X:\PROGRAM Files\Microsoft SQL Server\120\Tools\Binn.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  **sqllogship** использует проверку подлинности Windows. Учетной записи Windows, от которой выполняется команда, необходимы доступ к каталогу Windows и разрешения [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Это требование зависит от того, какой параметр задается командой **sqllogship** : **-backup**, **-copy**или **-restore** .  
   
-|Параметр|Доступ к каталогу|Permissions|  
+|Параметр|Доступ к каталогу|Разрешения|  
 |------------|----------------------|-----------------|  
 |**-backup**|Требует доступа по чтению и записи в каталог резервной копии.|Необходимы те же разрешения, что и для инструкции BACKUP. Дополнительные сведения см. в разделе [BACKUP (Transact-SQL)](/sql/t-sql/statements/backup-transact-sql).|  
 |**-copy**|Требует доступа на чтение к каталогу резервной копии и доступа на запись в каталог копии.|Требует таких же разрешений, что и хранимая процедура [sp_help_log_shipping_secondary_database](/sql/relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-database-transact-sql) .|  

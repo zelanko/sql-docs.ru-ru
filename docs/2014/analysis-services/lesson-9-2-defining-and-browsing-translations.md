@@ -94,7 +94,7 @@ ms.locfileid: "69493781"
   
 2.  После успешного окончания развертывания перейдите на вкладку **Браузер** и нажмите кнопку **Повторное соединение**.  
   
-3.  Удалите все иерархии и меры на панели **Данные[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] и выберите "Учебник по** " в списке **Перспективы**.  
+3.  Удалите все иерархии и меры на панели **Данные** и выберите "Учебник по [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]" в списке **Перспективы**.  
   
 4.  На панели метаданных разверните узел **Меры** , а затем **Продажи через Интернет**.  
   
@@ -126,8 +126,8 @@ ms.locfileid: "69493781"
  [Занятие 10. Определение ролей администрирования](lesson-10-defining-administrative-roles.md)  
   
 ## <a name="see-also"></a>См. также статью  
- [Переводы измерений](multidimensional-models-olap-logical-dimension-objects/dimension-translations.md)    
- [Переводы куба](multidimensional-models-olap-logical-cube-objects/cube-translations.md)    
+ [Переводы измерений](multidimensional-models-olap-logical-dimension-objects/dimension-translations.md)   
+ [Переводы куба](multidimensional-models-olap-logical-cube-objects/cube-translations.md)   
  [Переводы &#40;Analysis Services&#41;](translations-analysis-services.md)  
   
   

@@ -32,7 +32,7 @@ ms.locfileid: "73787868"
   
  Драйвер ODBC для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] соответствует требованиям спецификации ODBC 3.51. Для получения исчерпывающего справочника по ODBC 3,51 Скачайте пакет SDK Microsoft Data Access Components из [центра разработчиков доступа к данным и хранилища](https://go.microsoft.com/fwlink?linkid=4173)или просмотрите [Справочник программиста по ODBC](https://go.microsoft.com/fwlink/?LinkId=45250) в Интернете.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
   
 -   [SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md)  
   
@@ -134,7 +134,7 @@ ms.locfileid: "73787868"
   
 -   [SQLTables](../../relational-databases/native-client-odbc-api/sqltables.md)  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также статью  
  [Справочник &#40;по&#41; SQL Server Native Client ODBC](https://msdn.microsoft.com/library/06b7edee-8636-49d9-9b5c-2c710bf4fa2d)   
  [Построение приложений с использованием собственного клиента SQL Server](../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)  
   

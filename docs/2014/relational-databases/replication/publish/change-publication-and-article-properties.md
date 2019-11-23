@@ -92,7 +92,7 @@ ms.locfileid: "73882350"
 |Включение или выключение подписок, доступных только для загрузки (изменение других параметров отгрузки не требует каких-либо особых действий).|**sp_changemergearticle**|Изменение значения **subscriber_upload_options** на или с **2**|Повторная инициализация подписок.|  
 |Изменение владельца целевой таблицы.|**sp_changemergearticle**|**destination_owner**|Создание моментального снимка.<br /><br /> Повторная инициализация подписок.|  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также статью  
  [Вопросы и ответы об администрировании репликации](../administration/frequently-asked-questions-for-replication-administrators.md)   
  [Создание и применение моментального снимка](../create-and-apply-the-snapshot.md)   
  [Повторная инициализация подписок](../reinitialize-subscriptions.md)   

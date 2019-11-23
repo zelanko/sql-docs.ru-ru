@@ -39,7 +39,7 @@ ms.locfileid: "72782651"
 
 Дополнительные сведения о синтаксисе и примерах см. в [справочнике по Analysis Services PowerShell](/sql/analysis-services/powershell/analysis-services-powershell-reference).
 
-##  <a name="bkmk_prereq"></a> предварительные требования  
+##  <a name="bkmk_prereq"></a> Предварительные требования  
  Должна быть установлена оболочка Windows PowerShell 2.0. В последних версиях операционных систем Windows она устанавливается по умолчанию. Дополнительные сведения см. в [статье Install Windows PowerShell 2,0](https://msdn.microsoft.com/library/ff637750.aspx)
 
 <!-- ff637750.aspx above is linked to by:  (https://go.microsoft.com/fwlink/?LinkId=227613). -->

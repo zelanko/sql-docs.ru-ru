@@ -23,7 +23,7 @@ ms.locfileid: "73728911"
 
   Используйте **Мастер обновления баз данных** для обновления базы данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
   
-## <a name="action"></a>Действие  
+## <a name="action"></a>Action  
  Это вводная страница мастера. Нажмите кнопку **Далее** для запуска процесса обновления базы данных.  
   
 ## <a name="upgrade-review"></a>Просмотр данных по обновлению  
@@ -37,7 +37,7 @@ ms.locfileid: "73728911"
 ## <a name="progress-and-finish"></a>Ход выполнения и завершение  
  Отображает ход процесса обновления. После обновления базы данных щелкните ссылку на файл журнала, чтобы просмотреть подробные сведения об обновлении, или нажмите кнопку **Завершить** , чтобы закрыть мастер баз данных и вернуться к странице **Базы данных** . Будет выбрана обновленная база данных, которую можно просмотреть и изменить ее системные настройки.  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также статью  
  [Страница "Конфигурация базы данных" (диспетчер конфигурации служб Master Data Services)](../master-data-services/database-configuration-page-master-data-services-configuration-manager.md)   
 [Установка и настройка служб Master Data Services](../master-data-services/master-data-services-installation-and-configuration.md)  
  [Обновление служб Master Data Services](../database-engine/install-windows/upgrade-master-data-services.md)  

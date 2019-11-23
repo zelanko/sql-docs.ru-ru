@@ -23,7 +23,7 @@ ms.locfileid: "73728235"
 
   Синхронизация сущностей — это односторонняя повторяемая синхронизация между версиями сущности. Она позволяет разным моделям совместно использовать данные сущностей. Созданное отношение синхронизации можно изменить или удалить.  
   
-## <a name="prerequisites"></a>Предварительные требования  
+## <a name="prerequisites"></a>необходимые компоненты  
  Для изменения отношения синхронизации сущностей требуется следующее.  
   
 -   Иметь разрешение на доступ к функциональной области "Администрирование системы". Дополнительные сведения см. в разделе [Разрешения функциональной области (службы Master Data Services)](../master-data-services/functional-area-permissions-master-data-services.md).  
@@ -84,7 +84,7 @@ ms.locfileid: "73728235"
   
 5.  В диалоговом окне подтверждения нажмите кнопку **ОК**.  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также статью  
  [Создание и выполнение отношений синхронизации сущностей (Master Data Services)](../master-data-services/create-and-execute-an-entity-sync-relationship-master-data-services.md)   
  [Отношение синхронизации сущностей (Master Data Services)](../master-data-services/entity-sync-relationship-master-data-services.md)  
   

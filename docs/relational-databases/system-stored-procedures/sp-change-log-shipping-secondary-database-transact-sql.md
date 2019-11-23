@@ -86,13 +86,13 @@ sp_change_log_shipping_secondary_database
  Нет  
   
 ## <a name="remarks"></a>Remarks  
- **sp_change_log_shipping_secondary_database** должен быть запущен из базы данных **master** на сервере-получателе. Эта хранимая процедура выполняет следующее:  
+ **sp_change_log_shipping_secondary_database** должны запускаться из базы данных **master** на сервере-получателе. Эта хранимая процедура выполняет следующее:  
   
 1.  При необходимости изменяет параметры в записях **log_shipping_secondary_database** .  
   
 2.  При необходимости изменяет запись локального монитора в **log_shipping_monitor_secondary** на сервере-получателе, используя указанные аргументы.  
 
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Эту процедуру могут выполнять только члены предопределенной роли сервера **sysadmin** .  
   
 ## <a name="examples"></a>Примеры  

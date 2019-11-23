@@ -26,9 +26,9 @@ ms.locfileid: "72782974"
   Включение [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] является предварительным условием для того, чтобы экземпляр сервера мог использовать группы доступности. Перед тем как создавать и настраивать любую группу доступности, следует включить компонент [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] на каждом экземпляре [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , где будет размещаться реплика доступности для одной или нескольких групп доступности.  
   
 > [!IMPORTANT]  
->  При удалении и повторном создании кластера WSFC необходимо отключить и повторно включить функцию [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] в каждом экземпляре [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], который обеспечил размещение реплики доступности в исходном кластере WSFC.  
+>  При удалении и повторном создании кластера WSFC необходимо отключить и повторно включить функцию [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] в каждом экземпляре [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , который обеспечил размещение реплики доступности в исходном кластере WSFC.  
   
--   **Перед началом:**  
+-   **Перед началом работы**  
   
      [Предварительные требования](#Prerequisites)  
   
@@ -54,7 +54,7 @@ ms.locfileid: "72782974"
   
  Дополнительные сведения о дополнительных предварительных требованиях для создания и настройки групп доступности см. в разделе [Предварительные требования &#40;,&#41;ограничения и рекомендации для группы доступности AlwaysOn SQL Server](prereqs-restrictions-recommendations-always-on-availability.md).  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="Security"></a> Безопасность  
  Когда группы доступности AlwaysOn включены на экземпляре [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], экземпляр сервера получает полный контроль над кластером WSFC.  
   
 ####  <a name="Permissions"></a> Разрешения  
@@ -64,7 +64,7 @@ ms.locfileid: "72782974"
   
 ##  <a name="IsEnabled"></a>Определение того, включена ли группы доступности AlwaysOn  
   
--   [Среда Среда SQL Server Management Studio](#SSMS1Procedure)  
+-   [SQL Server Management Studio](#SSMS1Procedure)  
   
 -   [Transact-SQL](#Tsql1Procedure)  
   
@@ -102,7 +102,7 @@ ms.locfileid: "72782974"
 ###  <a name="PowerShell1Procedure"></a> Использование PowerShell  
  **Определение того, включена ли группы доступности AlwaysOn**  
   
-1.  Задайте значение по умолчанию (`cd`) для экземпляра сервера (например,  `\SQL\NODE1\DEFAULT`), на котором необходимо определить, включено ли [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)].  
+1.  Задайте значение по умолчанию (`cd`) для экземпляра сервера (например, `\SQL\NODE1\DEFAULT`), на котором необходимо определить, включено ли [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)].  
   
 2.  Введите следующую команду PowerShell `Get-Item`:  
   
@@ -111,11 +111,11 @@ ms.locfileid: "72782974"
     ```  
   
     > [!NOTE]  
-    >  Чтобы просмотреть синтаксис командлета, воспользуйтесь командлетом `Get-Help` в среде [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Дополнительные сведения см. в разделе [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
+    >  Чтобы просмотреть синтаксис командлета, воспользуйтесь командлетом `Get-Help` в среде [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Дополнительные сведения см. в статье [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
   
  **Настройка и использование поставщика SQL Server PowerShell**  
   
--   [Поставщик SQL Server PowerShell](../../../powershell/sql-server-powershell-provider.md)  
+-   [SQL Server PowerShell, поставщик](../../../powershell/sql-server-powershell-provider.md)  
   
 ##  <a name="EnableAOAG"></a> Включение групп доступности AlwaysOn  
  **Для включения AlwaysOn используется:**  
@@ -131,7 +131,7 @@ ms.locfileid: "72782974"
   
 2.  В меню **Пуск** последовательно выберите пункты **Все программы**, [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)], **Средства настройки**и **Диспетчер конфигурации SQL Server**.  
   
-3.  В **Диспетчер конфигурации SQL Server**щелкните **SQL Server службы**, щелкните правой кнопкой мыши SQL Server ( **< *`instance name`* >)** , где **< *`instance name`***  0 — это имя локального экземпляра сервера, для которого вы необходимо включить группы доступности AlwaysOn и нажмите кнопку **Свойства.**  
+3.  В **Диспетчер конфигурации SQL Server**щелкните **SQL Server службы**, щелкните правой кнопкой мыши SQL Server ( **< *`instance name`* >)** , где **< *`instance name`*** >— это имя локального экземпляра сервера, для которого требуется включить группы доступности AlwaysOn, и нажмите кнопку **Свойства.**  
   
 4.  Перейдите на вкладку **Высокий уровень доступности AlwaysOn** .  
   
@@ -148,14 +148,14 @@ ms.locfileid: "72782974"
   
 2.  С помощью командлета `Enable-SqlAlwaysOn` включите группы доступности AlwaysOn.  
   
-     Чтобы просмотреть синтаксис командлета, воспользуйтесь командлетом `Get-Help` в среде [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Дополнительные сведения см. в разделе [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
+     Чтобы просмотреть синтаксис командлета, воспользуйтесь командлетом `Get-Help` в среде [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Дополнительные сведения см. в статье [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
   
     > [!NOTE]  
     >  Сведения о том, как определить, перезапускает ли командлет `Enable-SqlAlwaysOn` службу [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], см. в разделе [Когда командлет перезапускает службу SQL Server?](#WhenCmdletRestartsSQL)далее в этой статье.  
   
  **Настройка и использование поставщика SQL Server PowerShell**  
   
--   [Поставщик SQL Server PowerShell](../../../powershell/sql-server-powershell-provider.md)  
+-   [SQL Server PowerShell, поставщик](../../../powershell/sql-server-powershell-provider.md)  
   
 ####  <a name="ExmplEnable-SqlHadrServic"></a> Пример: Enable-SqlAlwaysOn  
  Следующая команда PowerShell включает [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] на экземпляре SQL Server (*Computer*\\*Instance*).  
@@ -195,7 +195,7 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Computer\Instance
   
 2.  В меню **Пуск** последовательно укажите пункты **Все программы**, [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)], **Средства настройки**и выберите пункт **Диспетчер конфигурации SQL Server**.  
   
-3.  В **Диспетчер конфигурации SQL Server**щелкните **SQL Server службы**, щелкните правой кнопкой мыши SQL Server ( **< *`instance name`* >)** , где **< *`instance name`***  0 — это имя локального экземпляра сервера, для которого вы необходимо отключить группы доступности AlwaysOn и нажать кнопку **Свойства**.  
+3.  В **Диспетчер конфигурации SQL Server**щелкните **SQL Server службы**, щелкните правой кнопкой мыши SQL Server ( **< *`instance name`* >)** , где **< *`instance name`*** >— это имя локального экземпляра сервера, для которого требуется отключить группы доступности AlwaysOn, и нажмите кнопку **Свойства**.  
   
 4.  На вкладке**Высокий уровень доступности AlwaysOn**снимите флажок **Включить группы доступности AlwaysOn** и нажмите кнопку **ОК**.  
   
@@ -210,7 +210,7 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Computer\Instance
   
 2.  С помощью командлета `Disable-SqlAlwaysOn` включите группы доступности AlwaysOn.  
   
-     Например, следующая команда отключает группы доступности AlwaysOn на экземпляре SQL Server (*экземпляр*\\*компьютера* ).  Эта команда требует перезапуска экземпляра, который будет предложено подтвердить.  
+     Например, следующая команда отключает группы доступности AlwaysOn на экземпляре SQL Server ( *экземпляр*\\*компьютера* ).  Эта команда требует перезапуска экземпляра, который будет предложено подтвердить.  
   
     ```powershell
     Disable-SqlAlwaysOn -Path SQLSERVER:\SQL\Computer\Instance  
@@ -219,11 +219,11 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Computer\Instance
     > [!IMPORTANT]  
     >  Сведения о том, как определить, перезапускает ли командлет `Disable-SqlAlwaysOn` службу [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], см. в разделе [Когда командлет перезапускает службу SQL Server?](#WhenCmdletRestartsSQL)далее в этой статье.  
   
-     Чтобы просмотреть синтаксис командлета, воспользуйтесь командлетом `Get-Help` в среде [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Дополнительные сведения см. в разделе [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
+     Чтобы просмотреть синтаксис командлета, воспользуйтесь командлетом `Get-Help` в среде [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Дополнительные сведения см. в статье [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
   
  **Настройка и использование поставщика SQL Server PowerShell**  
   
--   [Поставщик SQL Server PowerShell](../../../powershell/sql-server-powershell-provider.md)  
+-   [SQL Server PowerShell, поставщик](../../../powershell/sql-server-powershell-provider.md)  
   
 ###  <a name="FollowUp"></a>Дальнейшие действия. После отключения AlwaysOn  
  После отключения групп доступности AlwaysOn экземпляр [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] необходимо перезапустить. Диспетчер конфигурации SQL Server автоматически перезапускает экземпляр сервера. Но если использовался командлет `Disable-SqlAlwaysOn`, то потребуется перезапустить экземпляр сервера вручную. Дополнительные сведения см. в статье [sqlservr Application](../../../tools/sqlservr-application.md).  
@@ -251,11 +251,11 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Computer\Instance
   
 |указан параметр -NoServiceRestart;|указан параметр -Force.|Перезапущена ли служба [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ?|  
 |--------------------------------------------|---------------------------------|---------------------------------------------------------|  
-|нет|нет|По умолчанию. Однако командлет выводит следующее сообщение:<br /><br /> **Для выполнения этого действия необходимо перезапустить службу SQL Server для экземпляра сервера "< имя_экземпляра >". Вы хотите продолжить?**<br /><br /> **[Y] Yes  [N] No  [S] Suspend  [?] Help (значение по умолчанию — "Y"):**<br /><br /> Если указать **N** или **S**, служба не будет перезапущена.|  
-|нет|да|Служба перезапускается.|  
-|да|нет|Служба не перезапускается.|  
-|да|да|Служба не перезапускается.|  
+|Нет|Нет|По умолчанию. Однако командлет выводит следующее сообщение:<br /><br /> **Чтобы выполнить это действие, необходимо перезапустить службу SQL Server для экземпляра сервера "< instance_name >". Вы хотите продолжить?**<br /><br /> **[Y] Yes  [N] No  [S] Suspend  [?] Help (значение по умолчанию — "Y"):**<br /><br /> Если указать **N** или **S**, служба не будет перезапущена.|  
+|Нет|Да|Служба перезапускается.|  
+|Да|Нет|Служба не перезапускается.|  
+|Да|Да|Служба не перезапускается.|  
   
 ## <a name="see-also"></a>См. также статью  
- [Общие сведения о &#40;группы доступности AlwaysOn&#41; SQL Server](overview-of-always-on-availability-groups-sql-server.md)    
+ [Общие сведения о &#40;группы доступности AlwaysOn&#41; SQL Server](overview-of-always-on-availability-groups-sql-server.md)   
  [SERVERPROPERTY (Transact-SQL)](/sql/t-sql/functions/serverproperty-transact-sql)  

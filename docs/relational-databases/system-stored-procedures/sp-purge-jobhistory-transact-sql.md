@@ -43,22 +43,22 @@ sp_purge_jobhistory
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @job_name = ] 'job_name'` — имя задания, для которого удаляются записи журнала. Аргумент *имя_задания*имеет тип **sysname**и значение по умолчанию NULL. Необходимо указать *job_id* или *имя_задания* , но не указывать оба значения.  
+`[ @job_name = ] 'job_name'` имя задания, для которого удаляются записи журнала. Аргумент *job_name*имеет тип **sysname**и значение по умолчанию NULL. Необходимо указать либо *job_id* , либо *job_name* , но нельзя указать оба значения.  
   
 > [!NOTE]  
->  Члены предопределенной роли сервера **sysadmin** или члены предопределенной роли базы данных **SQLAgentOperatorRole** могут выполнять **sp_purge_jobhistory** без указания аргумента *имя_задания* или *job_id*. Когда пользователи **sysadmin** не указывают эти аргументы, журнал заданий для всех локальных и многосерверных заданий удаляется в течение времени, заданного параметром *oldest_date*. Если пользователи **SQLAgentOperatorRole** не указывают эти аргументы, журнал заданий для всех локальных заданий удаляется в течение времени, заданного параметром *oldest_date*.  
+>  Члены предопределенной роли сервера **sysadmin** или члены предопределенной роли базы данных **SQLAgentOperatorRole** могут выполнять **sp_purge_jobhistory** без указания *job_name* или *job_id*. Если пользователи **sysadmin** не указали эти аргументы, журнал заданий для всех локальных и многосерверных заданий удаляется в течение времени, указанного в *oldest_date*. Если пользователи **SQLAgentOperatorRole** не указывают эти аргументы, журнал заданий для всех локальных заданий удаляется в течение времени, заданного *oldest_date*.  
   
-`[ @job_id = ] job_id` — идентификационный номер задания для удаления записей. *job_id* имеет тип **uniqueidentifier**и значение по умолчанию NULL. Необходимо указать *job_id* или *имя_задания* , но не указывать оба значения. Сведения о том, как пользователи **sysadmin** и **SQLAgentOperatorRole** могут использовать этот аргумент, см. в примечании в описании **\@job_name** .  
+`[ @job_id = ] job_id` идентификационный номер задания для удаления записей. *job_id* имеет тип **uniqueidentifier**и значение по умолчанию NULL. Необходимо указать либо *job_id* , либо *job_name* , но нельзя указать оба значения. Сведения о том, как пользователи **sysadmin** и **SQLAgentOperatorRole** могут использовать этот аргумент, см. в примечании в описании **\@job_name** .  
   
-`[ @oldest_date = ] oldest_date` самая старая запись, сохраняемая в журнале. *oldest_date* имеет тип **DateTime**и значение по умолчанию NULL. Если указан параметр *oldest_date* , **sp_purge_jobhistory** удаляет только записи, которые старше указанного значения.  
+`[ @oldest_date = ] oldest_date` самую раннюю запись, которая будет храниться в журнале. *oldest_date* имеет тип **DateTime**и значение по умолчанию NULL. Если указано *oldest_date* , **sp_purge_jobhistory** удаляет только записи, которые старше указанного значения.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
- None  
+ Нет  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  После успешного завершения **sp_purge_jobhistory** возвращается сообщение.  
   
 ## <a name="permissions"></a>Разрешения  
@@ -82,7 +82,7 @@ EXEC dbo.sp_purge_jobhistory
 GO  
 ```  
   
-### <a name="b-remove-history-for-all-jobs"></a>Б. Удаление записи журналов для всех заданий  
+### <a name="b-remove-history-for-all-jobs"></a>б. Удаление записи журналов для всех заданий  
   
 > [!NOTE]  
 >  Только члены предопределенной роли сервера **sysadmin** и члены **SQLAgentOperatorRole** могут удалять журналы для всех заданий. Когда пользователь **sysadmin** выполняет эту хранимую процедуру без параметров, журнал заданий для всех локальных и многосерверных заданий очищается. Когда **SQLAgentOperatorRole** пользователи выполняют эту хранимую процедуру без параметров, очищаются только журнал заданий для всех локальных заданий.  
@@ -97,9 +97,9 @@ EXEC dbo.sp_purge_jobhistory ;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
- [sp_help_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
- [sp_help_jobhistory &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-jobhistory-transact-sql.md)   
+## <a name="see-also"></a>См. также статью  
+ [sp_help_job &#40;  Transact-&#41; SQL](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)  
+ [sp_help_jobhistory &#40;  Transact-&#41; SQL](../../relational-databases/system-stored-procedures/sp-help-jobhistory-transact-sql.md)  
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [GRANT, предоставление разрешений на объект (Transact-SQL)](../../t-sql/statements/grant-object-permissions-transact-sql.md)  
   

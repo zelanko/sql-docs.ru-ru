@@ -47,7 +47,7 @@ if(FAILED(hr=pIErrorRecords->GetCustomErrorObject(
   
  Элементы структуры SSERRORINFO обрабатываются потребителем следующим образом.  
   
-|Член|Описание|  
+|Member|Описание|  
 |------------|-----------------|  
 |*pwszMessage*|Сообщение об ошибке [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Идентично строке, возвращаемой методом **IErrorInfo::GetDescription**.|  
 |*pwszServer*|Имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для сеанса.|  
@@ -57,7 +57,7 @@ if(FAILED(hr=pIErrorRecords->GetCustomErrorObject(
 |*bClass*|Серьезность сообщения об ошибке [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |*wLineNumber*|Если применимо, номер строки хранимой процедуры, в которой возникла ошибка.|  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также статью  
  [Ошибки](../../relational-databases/native-client-ole-db-errors/errors.md)   
  [RAISERROR (Transact-SQL)](../../t-sql/language-elements/raiserror-transact-sql.md)  
   

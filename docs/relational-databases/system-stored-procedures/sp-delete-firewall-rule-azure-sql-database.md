@@ -45,7 +45,7 @@ sp_delete_firewall_rule [@name =] 'name'
  [@name =] "*имя*"  
  Имя параметра брандмауэра уровня сервера, который будет удален. *Name* имеет тип **nvarchar (128)** и не имеет значения по умолчанию.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  В [!INCLUDE[ssSDS](../../includes/sssds-md.md)] данные имени входа необходимы для проверки подлинности подключения, и правила брандмауэра на уровне сервера временно кэшируются в каждой базе данных. Этот кэш периодически обновляется. Чтобы принудительно обновить кэш проверки подлинности и убедиться в том, что база данных имеет последнюю версию таблицы имен входа, выполните инструкцию [DBCC FLUSHAUTHCACHE (Transact-SQL)](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md).  
   
 ## <a name="permissions"></a>Разрешения  
@@ -58,7 +58,7 @@ sp_delete_firewall_rule [@name =] 'name'
 EXEC sp_delete_firewall_rule N'Example setting 1';   
 ```  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также статью  
    [брандмауэра базы данных SQL Azure](https://azure.microsoft.com/documentation/articles/sql-database-firewall-configure/)  
  [Как настроить параметры брандмауэра (база данных SQL Azure)](https://azure.microsoft.com/documentation/articles/sql-database-configure-firewall-settings/)   
  [sp_set_firewall_rule &#40;базы данных&#41; SQL Azure](../../relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database.md)   

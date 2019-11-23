@@ -26,7 +26,7 @@ ms.locfileid: "73786969"
 
   Диспетчер драйверов ODBC возвращает все спецификации атрибутов **SQLDrivers** . Дополнительные сведения о строках атрибутов и определении значений см. в [Data Access and Storage Developer Center (центре разработчиков средств доступа к данным и их хранения)](https://go.microsoft.com/fwlink/?LinkId=4173)или [справочник по программированию ODBC](https://go.microsoft.com/fwlink/?LinkId=45250) в сети.  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также статью  
  [SQLDrivers](https://go.microsoft.com/fwlink/?LinkId=59341)   
  [Подробные сведения о реализации API-интерфейсов ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   

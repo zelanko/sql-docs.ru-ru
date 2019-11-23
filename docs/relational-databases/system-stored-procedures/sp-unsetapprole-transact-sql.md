@@ -39,8 +39,8 @@ sp_unsetapprole @cookie
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- **@no__t 1cookie**  
- Указывает куки-файл, который был создан при активации роли приложения. Файл cookie создается с помощью [процедуры &#40;SP_SETAPPROLE Transact-&#41;SQL](../../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md). **varbinary (8000)** .  
+ **\@файл cookie**  
+ Указывает куки-файл, который был создан при активации роли приложения. Файл cookie создается с помощью [sp_setapprole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md). **varbinary (8000)** .  
   
 > [!NOTE]  
 >  Параметр **OUTPUT** куки-файла для инструкции **sp_setapprole** в настоящее время описан в документации как **varbinary(8000)** , что верно определяет его максимальную длину. Однако текущая реализация возвращает параметр **varbinary(50)** . Приложения должны продолжать зарезервировать **varbinary (8000)** , чтобы приложение продолжало работать правильно, если размер возвращаемого файла cookie увеличивается в будущем выпуске.  
@@ -48,8 +48,8 @@ sp_unsetapprole @cookie
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) и 1 (неуспешное завершение)  
   
-## <a name="remarks"></a>Примечания  
- После активации роли приложения с помощью процедуры **sp_setapprole**роль остается активной до тех пор, пока пользователь не отключится от сервера или не выполнит **sp_unsetapprole**.  
+## <a name="remarks"></a>Remarks  
+ После активации роли приложения с помощью **sp_setapprole**роль остается активной до тех пор, пока пользователь не отключится от сервера или не выполнит **sp_unsetapprole**.  
   
  Общие сведения о ролях приложений см. в разделе [роли приложений](../../relational-databases/security/authentication-access/application-roles.md).  
   
@@ -77,7 +77,7 @@ SELECT USER_NAME();
 GO   
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также статью  
  [sp_setapprole (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Хранимые процедуры безопасности (Transact-SQL)](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
