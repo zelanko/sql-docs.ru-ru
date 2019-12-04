@@ -1378,7 +1378,7 @@ GO
 DROP TABLE Person.ContactBackup ;
 ```
 
-![Значок стрелки, используемый со ссылкой "В начало"](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Значок стрелки, используемый со ссылкой "В начало"") [Примеры](#Example_Top)
+![Значок стрелки, используемый со ссылкой В начало](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Значок стрелки, используемый со ссылкой В начало") [Примеры](#Example_Top)
 
 ### <a name="alter_column"></a> Изменение определения столбца
 
