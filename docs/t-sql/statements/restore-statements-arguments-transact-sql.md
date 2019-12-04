@@ -585,17 +585,17 @@ FILE **=** { *backup_set_file_number* |  **@** _backup\_set\_file\_number_ }
   
 |Параметр инструкции WITH|RESTORE|RESTORE FILELISTONLY|инструкция RESTORE HEADERONLY|RESTORE LABELONLY|RESTORE REWINDONLY|RESTORE VERIFYONLY|  
 |-----------------|-------------|--------------------------|------------------------|-----------------------|------------------------|------------------------|  
-|{ CHECKSUM<br /><br /> | NO_CHECKSUM }|√|√|√|√|-|√|  
-|{ CONTINUE_AFTER_ERROR<br /><br /> | STOP_ON_ERROR }|√|√|√|√|-|√|  
+|{ CHECKSUM<br /><br /> &#124; NO_CHECKSUM }|√|√|√|√|-|√|  
+|{ CONTINUE_AFTER_ERROR<br /><br /> &#124; STOP_ON_ERROR }|√|√|√|√|-|√|  
 |FILE<sup>1</sup>|√|√|√|-|-|√|  
 |LOADHISTORY|-|-|-|-|-|√|  
 |MEDIANAME|√|√|√|√|-|√|  
 |MEDIAPASSWORD|√|√|√|√|-|√|  
 |MOVE|√|-|-|-|-|√|  
 |PASSWORD|√|√|√|-|-|√|  
-|{ REWIND | NOREWIND }|√|Только REWIND|Только REWIND|Только REWIND|-|√|  
+|{ REWIND &#124; NOREWIND }|√|Только REWIND|Только REWIND|Только REWIND|-|√|  
 |STATS|√|-|-|-|-|√|  
-|{ UNLOAD | NOUNLOAD }|√|√|√|√|√|√|  
+|{ UNLOAD &#124; NOUNLOAD }|√|√|√|√|√|√|  
   
  <sup>1</sup> FILE **=** _backup\_set\_file\_number_, который отличается от {FILE | FILEGROUP}.  
   
