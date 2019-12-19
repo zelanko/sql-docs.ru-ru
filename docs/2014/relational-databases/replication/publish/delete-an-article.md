@@ -26,7 +26,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/09/2019
 ms.locfileid: "73882274"
 ---
-# <a name="delete-an-article"></a>Удаление статьи
+# <a name="delete-an-article"></a>Delete an Article
   В данном разделе описывается удаление статьи в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] с помощью [!INCLUDE[tsql](../../../includes/tsql-md.md)] или объектов RMO. Сведения об условиях, при которых статьи могут быть удалены, и о том, требуется ли при удалении статьи создание нового моментального снимка или повторная инициализация подписок, см. в [этой статье](add-articles-to-and-drop-articles-from-existing-publications.md).  
   
   
@@ -46,11 +46,11 @@ ms.locfileid: "73882274"
 2.  (Необязательно) Чтобы полностью удалить опубликованный объект из базы данных, выполните команду `DROP <objectname>` на издателе для базы данных публикации.  
   
 ###  <a name="TsqlExample"></a> Примеры (Transact-SQL)  
- В следующем примере удаляется статья из публикации транзакций. Так как это изменение приведет к недействительности существующего моментального снимка, в параметре **\@force_invalidate_snapshot** указывается значение **1**.  
+ В следующем примере удаляется статья из публикации транзакций. Так как это изменение приведет к недействительности существующего моментального снимка, в параметреforce_invalidate_snapshot **указывается значение \@1**.  
   
  [!code-sql[HowTo#sp_droparticle](../../../snippets/tsql/SQL15/replication/howto/tsql/droptranpub.sql#sp_droparticle)]  
   
- В следующем примере две статьи удаляются из публикации слиянием. Так как эти изменения приведут к недействительности существующего моментального снимка, в параметре **\@force_invalidate_snapshot** указывается значение **1**.  
+ В следующем примере две статьи удаляются из публикации слиянием. Так как эти изменения приведут к недействительности существующего моментального снимка, в параметреforce_invalidate_snapshot **указывается значение \@1**.  
   
  [!code-sql[HowTo#sp_dropmergearticle](../../../snippets/tsql/SQL15/replication/howto/tsql/dropmergepub.sql#sp_dropmergearticle)]
  [!code-sql[HowTo#sp_dropmergearticle](../../../snippets/tsql/SQL15/replication/howto/tsql/dropmergearticles.sql#sp_dropmergearticle)]  
@@ -90,8 +90,8 @@ ms.locfileid: "73882274"
   
 7.  Закройте все соединения.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также статью  
  [Добавление и удаление статей в существующих публикациях](add-articles-to-and-drop-articles-from-existing-publications.md)   
- [Replication System Stored Procedures Concepts](../concepts/replication-system-stored-procedures-concepts.md)  
+ [Основные понятия системных хранимых процедур репликации](../concepts/replication-system-stored-procedures-concepts.md)  
   
   
