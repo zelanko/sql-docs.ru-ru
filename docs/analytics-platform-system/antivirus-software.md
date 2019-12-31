@@ -1,5 +1,5 @@
 ---
-title: Антивирусное по — система аналитики (ТД) | Документация Майкрософт
+title: Антивирусное программное обеспечение
 description: Если для вашего центра обработки данных требуется антивирусная программа, используйте эти рекомендации для установки антивирусного по в системе аналитики (ТД). Не рекомендуется устанавливать антивирусные программы, если это требование не является обязательным для вашего центра обработки данных.
 author: mzaman1
 ms.prod: sql
@@ -8,12 +8,13 @@ ms.topic: conceptual
 ms.date: 04/24/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 92a34405e75c37cd0347b15aa445b98d84ebcc2a
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.custom: seo-dt-2019
+ms.openlocfilehash: c3687b839e52e64350591402c3aa19e9c2c54ac7
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70176053"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401474"
 ---
 # <a name="antivirus-software-for-analytics-platform-system-aps"></a>Антивирусная программа для системы аналитики (ТД)
 Если для вашего центра обработки данных требуется антивирусная программа, используйте эти рекомендации для установки антивирусного по в системе аналитики. Не рекомендуется устанавливать антивирусные программы, если это требование не является обязательным для вашего центра обработки данных.  
@@ -45,13 +46,13 @@ ms.locfileid: "70176053"
 ## <a name="exclusion-list-for-virtual-machines-vms"></a>Список исключений для виртуальных машин  
 Чтобы установить антивирусную программу на виртуальных машинах, исключите следующий список каталогов и файлов. Они не должны проверяться антивирусной программой.  
   
-**_PDW_region_— CTL01**  
+**_PDW_region_CTL01**  
   
 -   к:\виндовс\клустер\  
   
 -   G:\  
   
-**_appliance_domain_-AD01** и  **_appliance_domain_-AD02**  
+**_appliance_domain_-AD01** и ** _appliance_domain_-AD02**  
   
 -   Без ограничений  
   
@@ -65,14 +66,14 @@ ms.locfileid: "70176053"
   
 -   Без ограничений  
   
-**_appliance_domain_— WDS**  
+**_appliance_domain_-WDS**  
   
 -   Без ограничений  
   
-**_appliance_domain_— ISCSI01**  
+**_appliance_domain_ISCSI01**  
   
 -   к:\искситаржет  
   
 ## <a name="see-also"></a>См. также  
-[Задачи &#40;управления устройством аналитика платформа система&#41;](appliance-management-tasks.md)  
+[Задачи управления устройством &#40;&#41;платформы аналитики](appliance-management-tasks.md)  
   

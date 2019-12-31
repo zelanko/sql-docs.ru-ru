@@ -10,21 +10,21 @@ ms.assetid: a972c56e-b2af-4fe6-abbd-817406e2c93a
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 34859c0c516c61a73e31dbf752ab274188c6343a
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
-ms.translationtype: HT
+ms.openlocfilehash: 1916be8c443799fa41680341e72889bd10551b4a
+ms.sourcegitcommit: 381595e990f2294dbf324ef31071e2dd2318b8dd
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72797869"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74200430"
 ---
 # <a name="import-the-sqlps-module"></a>Импорт модуля SQLPS
   Для управления [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] из PowerShell рекомендуется импортировать модуль `sqlps` в среду Windows PowerShell 2.0. Модуль загружает и регистрирует оснастки [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и сборки управляемости.  
   
-1.  **Перед началом работы:**  [Безопасность](#Security)  
+1.  **Перед началом:**  [Безопасность](#Security)  
   
-2.  **Чтобы загрузить модуль:**  [Загрузка модуля sqlps](#LoadSqlps)  
+2.  **Чтобы загрузить модуль**,[Загрузите модуль sqlps](#LoadSqlps) .    
   
-## <a name="before-you-begin"></a>Перед началом  
+## <a name="before-you-begin"></a>Перед началом работы  
  После импорта модуля `sqlps` в среду Windows PowerShell можно:  
   
 -   Вводить команды Windows PowerShell в интерактивном режиме.  
@@ -40,10 +40,10 @@ ms.locfileid: "72797869"
 > [!NOTE]  
 >  Команды, используемые в именах двух командлетов SQL Server (`Encode-Sqlname` и `Decode-Sqlname`), не соответствуют утвержденным командам для Windows PowerShell 2.0. Это не влияет на их работу, однако среда Windows PowerShell выдает предупреждение при импорте модуля `sqlps` в сеанс.  
   
-###  <a name="Security"></a> Безопасность  
- По умолчанию в Windows PowerShell политика выполнения скриптов работает в **ограниченном**режиме, блокируя все скрипты Windows PowerShell. Для загрузки модуля `sqlps` можно использовать командлет `Set-ExecutionPolicy`, чтобы включить запуск как подписанных, так и любых других скриптов. Следует выполнять только скрипты, полученные из доверенных источников, а также защищать все входные и выходные файлы, установив необходимые разрешения NTFS. Дополнительные сведения о включении скриптов Windows PowerShell см. в разделе [Выполнение скриптов Windows PowerShell](https://docs.microsoft.com/powershell/scripting/setup/starting-windows-powershell?view=powershell-6#how-to-enable-windows-powershell-ise-on-earlier-releases-of-windows).  
+###  <a name="Security"></a>Бюллетеня  
+ По умолчанию в Windows PowerShell политика выполнения скриптов работает в **ограниченном**режиме, блокируя все скрипты Windows PowerShell. Для загрузки модуля `sqlps` можно использовать командлет `Set-ExecutionPolicy`, чтобы включить запуск как подписанных, так и любых других скриптов. Следует выполнять только скрипты, полученные из доверенных источников, а также защищать все входные и выходные файлы, установив необходимые разрешения NTFS. Дополнительные сведения о включении скриптов Windows PowerShell см. в разделе [Выполнение скриптов Windows PowerShell](https://docs.microsoft.com/powershell/scripting/getting-started/starting-windows-powershell?view=powershell-6#how-to-enable-windows-powershell-ise-on-earlier-releases-of-windows).  
   
-##  <a name="LoadSqlps"></a> Загрузка модуля sqlps  
+##  <a name="LoadSqlps"></a>Загрузка модуля sqlps  
 
 ### <a name="to-load-the-sqlps-module-in-windows-powershell"></a>Загрузка модуля sqlps в среду Windows PowerShell
   
@@ -60,7 +60,7 @@ ms.locfileid: "72797869"
 Import-Module "sqlps" -DisableNameChecking  
 ```  
 
-## <a name="see-also"></a>См. также статью  
+## <a name="see-also"></a>См. также  
  [SQL Server PowerShell](../powershell/sql-server-powershell.md)   
- [SQL Server PowerShell, поставщик](../powershell/sql-server-powershell-provider.md)   
- [Использование командлетов компонента Database Engine](../../2014/database-engine/use-the-database-engine-cmdlets.md)  
+ [Поставщик SQL Server PowerShell](../powershell/sql-server-powershell-provider.md)   
+ [Использование командлетов ядро СУБД](../../2014/database-engine/use-the-database-engine-cmdlets.md)  

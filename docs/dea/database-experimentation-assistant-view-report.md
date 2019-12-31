@@ -2,7 +2,7 @@
 title: Просмотр аналитических отчетов для SQL Server обновлений
 description: Просмотр аналитических отчетов в Database Experimentation Assistant
 ms.custom: seo-lt-2019
-ms.date: 10/22/2018
+ms.date: 11/22/2019
 ms.prod: sql
 ms.prod_service: dea
 ms.suite: sql
@@ -10,28 +10,28 @@ ms.technology: dea
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 author: HJToland3
-ms.author: ajaykar
+ms.author: jtoland
 ms.reviewer: mathoma
-ms.openlocfilehash: fddc71bf7cdf7686154b4f9b5612cf671ca64fce
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.openlocfilehash: b72d49e691311104481637ff49d6c1e09ae0c230
+ms.sourcegitcommit: 9e026cfd9f2300f106af929d88a9b43301f5edc2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74056663"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74317744"
 ---
 # <a name="view-analysis-reports-in-database-experimentation-assistant"></a>Просмотр аналитических отчетов в Database Experimentation Assistant
 
-После [создания отчета по анализу](database-experimentation-assistant-create-report.md) в Database EXPERIMENTATION ASSISTANT (ДЕА) выполните действия, описанные в этой статье, чтобы просмотреть отчет и получить ценные сведения о производительности, предоставляемые тестом A/B.
+После использования Database Experimentation Assistant (ДЕА) для [создания аналитического отчета](database-experimentation-assistant-create-report.md)выполните приведенные ниже действия, чтобы ознакомиться с отчетом по анализу производительности на основе теста A/B.
 
 ## <a name="select-a-server"></a>Выберите сервер
 
 В ДЕА выберите значок меню. В развернутом меню выберите **отчеты об анализе** рядом со значком контрольного списка, чтобы открыть окно Анализ отчетов.
 
-В разделе **аналитические отчеты**введите имя компьютера, на котором работает SQL Server с базой данных анализа. Выберите **Подключиться**. 
+В разделе **аналитические отчеты**введите имя компьютера, на котором работает SQL Server с базой данных анализа, а затем нажмите кнопку **подключить**.
 
 ![Подключение к существующему отчету](./media/database-experimentation-assistant-view-report/dea-view-report-connect.png)
 
-Если у вас нет зависимостей, на странице **Предварительные требования** будут предложены ссылки для их установки. Установите необходимые компоненты и нажмите кнопку **повторить попытку**.
+Если у вас нет зависимостей, на странице **Предварительные требования** будут предложены ссылки для их установки. При необходимости установите необходимые компоненты и нажмите кнопку **повторить попытку**.
 
 ![Страница необходимых компонентов](./media/database-experimentation-assistant-view-report/dea-view-report-prereq.png)
 
@@ -78,16 +78,13 @@ ms.locfileid: "74056663"
 Сводный отчет о сравнении содержит развернутые разделы **сведений об ошибках** и **плане запросов** . В разделах показаны ошибки и сведения о плане для обоих экземпляров.
 
 Выберите появление ошибки (красный), чтобы отобразить ошибки следующих типов:
+
 - **Существующие ошибки**: ошибки, которые были в.
 - **Новые ошибки**: ошибки в B.
 - **Разрешенные ошибки**: ошибки, которые были в, но не в B.
 
 ![Диаграммы ошибок](./media/database-experimentation-assistant-view-report/dea-view-report-error-charts.png)
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="see-also"></a>См. также:
 
 - Чтобы узнать, как создать аналитический отчет в командной строке, см. раздел [Запуск в командной строке](database-experimentation-assistant-run-command-prompt.md).
-
-- Чтобы получить 19-минутное введение в ДЕА и демонстрацию, просмотрите следующее видео:
-
-  > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-Database-Experimentation-Assistant/player]

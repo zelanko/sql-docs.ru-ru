@@ -1,6 +1,6 @@
 ---
-title: Восстановление базы данных, защищаемую прозрачным Шифрованием - Parallel Data Warehouse | Документация Майкрософт
-description: Следуйте инструкциям ниже для восстановления базы данных, который зашифрован с применением прозрачного шифрования данных в Analytics платформы системы Parallel Data Warehouse.
+title: Восстановление базы данных, защищенной с помощью прозрачного шифрования
+description: Выполните следующие действия, чтобы восстановить базу данных, зашифрованную с помощью прозрачного шифрования данных в хранилище Parallel Data System.
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,17 +8,18 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 7c2f676f75c5a8c79bfc2f2417ff30c9806e3c80
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 53707c62e018b9923f2bb923a4df46f6917d2902
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67960168"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74400438"
 ---
-# <a name="restore-a-database-protected-by-tde-in-parallel-data-warehouse"></a>Восстановление базы данных, защищаемую прозрачным Шифрованием в Parallel Data Warehouse
-Следуйте инструкциям ниже для восстановления базы данных, который зашифрован с применением прозрачного шифрования данных.  
+# <a name="restore-a-database-protected-by-tde-in-parallel-data-warehouse"></a>Восстановление базы данных, защищенной с помощью TDE, в Parallel Data Warehouse
+Выполните следующие действия, чтобы восстановить базу данных, зашифрованную с помощью прозрачного шифрования данных.  
   
-[С помощью прозрачного шифрования данных](transparent-data-encryption.md#using-tde) примере имеется код, чтобы включить прозрачное шифрование данных на `AdventureWorksPDW2012` базы данных. Следующий код продолжает этого примера, создание резервной копии базы данных на исходном устройстве Analytics Platform System (APS) и последующее восстановление сертификата и базу данных на разные устройства.  
+Пример [использования прозрачное шифрование данных](transparent-data-encryption.md#using-tde) содержит код для включения TDE в `AdventureWorksPDW2012` базе данных. Следующий код продолжит этот пример, создав резервную копию базы данных на исходном устройстве аналитики (ТД), а затем восстановив сертификат и базу данных на другом устройстве.  
   
 Первым шагом является создание резервной копии базы данных-источника.  
   
@@ -27,7 +28,7 @@ BACKUP DATABASE AdventureWorksPDW2012
 TO DISK = '\\SECURE_SERVER\Backups\AdventureWorksPDW2012';  
 ```  
   
-Подготовка SQL Server PDW для прозрачного шифрования данных, Создание главного ключа, Включение шифрования и создании учетных данных в сети.  
+Подготовьте новую SQL Server PDW для TDE, создав главный ключ, включив шифрование и создав сетевые учетные данные.  
   
 ```sql  
 USE master;  
@@ -44,7 +45,7 @@ GO
 EXEC sp_pdw_add_network_credentials 'SECURE_SERVER', '<domain>\<Windows_user>', '<password>';  
 ```  
   
-Последние два шага, повторно создайте сертификат с помощью резервных копий из исходного SQL Server PDW. Используйте пароль, который использовался при создании резервной копии сертификата.  
+Последние два шага повторно создают сертификат с помощью резервных копий из исходной SQL Server PDW. Используйте пароль, который использовался при создании резервной копии сертификата.  
   
 ```sql  
 -- Create certificate in master  
@@ -58,10 +59,10 @@ RESTORE DATABASE AdventureWorksPDW2012
 ```  
   
 ## <a name="see-also"></a>См. также  
-[РЕЗЕРВНОЕ КОПИРОВАНИЕ БАЗЫ ДАННЫХ](../t-sql/statements/backup-database-parallel-data-warehouse.md)  
-[CREATE MASTER KEY](../t-sql/statements/create-master-key-transact-sql.md) 
-[sp_pdw_add_network_credentials](../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md)  
+[BACKUP DATABASE](../t-sql/statements/backup-database-parallel-data-warehouse.md)  
+[Создание sp_pdw_add_network_credentials главного ключа](../t-sql/statements/create-master-key-transact-sql.md) 
+[](../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md)  
 [sp_pdw_database_encryption](../relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse.md)  
-[СОЗДАНИЕ СЕРТИФИКАТА](../t-sql/statements/create-certificate-transact-sql.md)  
+[СОЗДАТЬ СЕРТИФИКАТ](../t-sql/statements/create-certificate-transact-sql.md)  
 [RESTORE DATABASE](../t-sql/statements/restore-database-parallel-data-warehouse.md)
   

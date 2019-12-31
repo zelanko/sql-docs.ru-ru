@@ -1,6 +1,6 @@
 ---
-title: Отслеживание оповещений устройства - Analytics Platform System | Документация Майкрософт
-description: Отслеживание оповещений устройства в Analytics Platform System.
+title: Отслеживание оповещений устройства
+description: Мониторинг оповещений устройства в системе платформы аналитики.
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,38 +8,39 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 62f116b8e45512d5a6fc5ce50c0fbc76344103be
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 03568666367bf6273f197994f572bbbbd62bb42e
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67960027"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74399943"
 ---
-# <a name="track-appliance-alerts-in-analytics-platform-system"></a>Отслеживание оповещений устройства в Analytics Platform System
-В этом разделе описывается использование консоли администрирования и системных представлений для отслеживания оповещений в устройстве SQL Server PDW.  
+# <a name="track-appliance-alerts-in-analytics-platform-system"></a>Мониторинг оповещений устройства в системе платформы аналитики
+В этом разделе объясняется, как использовать консоль администрирования и системные представления для мониторинга предупреждений в SQL Server PDW устройстве.  
   
-## <a name="to-track-appliance-alerts"></a>Отслеживание оповещений устройства  
-SQL Server PDW создает оповещения для оборудования и программного обеспечения проблем, требующих вмешательства. Каждое оповещение содержит заголовок и описание проблемы.  
+## <a name="to-track-appliance-alerts"></a>Для трассировки оповещений устройства  
+SQL Server PDW создает предупреждения о проблемах с оборудованием и программным обеспечением, требующих внимания. Каждое оповещение содержит заголовок и описание проблемы.  
   
-SQL Server PDW журналы и оповещения [sys.dm_pdw_component_health_alerts](../relational-databases/system-dynamic-management-views/sys-dm-pdw-component-health-alerts-transact-sql.md) динамического административного Представления. Система сохраняет ограничение в 10 000 оповещений и сначала удаляет старые оповещения при превышении ограничений.  
+SQL Server PDW журналы оповещений в динамическом административном [представлении sys. dm_pdw_component_health_alerts](../relational-databases/system-dynamic-management-views/sys-dm-pdw-component-health-alerts-transact-sql.md) . Система оставляет ограничение в 10 000 оповещений и удаляет самое старое предупреждение, когда превышено ограничение.  
   
-### <a name="view-alerts-by-using-the-admin-console"></a>Просмотр оповещений с помощью консоли администрирования  
-Существует **оповещения** "Вкладка" для региона PDW и для области fabric устройства. После отработки отказа, отработка отказа событие включается в список оповещений число оповещений на странице. Имеется страница для региона PDW и для области fabric устройства. Каждая страница работоспособности имеет вкладку. Дополнительные сведения о предупреждении, щелкните **работоспособности** странице **оповещения** , а затем щелкните оповещение.  
+### <a name="view-alerts-by-using-the-admin-console"></a>Просмотр предупреждений с помощью консоли администрирования  
+Имеется вкладка **предупреждения** для региона PDW и для области структуры устройства. После отработки отказа событие отработки отказа включается в число оповещений на странице. Существует страница для региона PDW и для региона структуры устройства. Каждая страница работоспособности имеет вкладку. Чтобы получить дополнительные сведения о предупреждении, щелкните страницу **работоспособность** , вкладку **оповещения** и щелкните оповещение.  
   
-![PDW Admin Console Alerts](./media/track-appliance-alerts/SQL_Server_PDW_AdminConsole_AlertsV2.png "SQL_Server_PDW_AdminConsole_AlertsV2")  
+![Предупреждения консоли администрирования PDW](./media/track-appliance-alerts/SQL_Server_PDW_AdminConsole_AlertsV2.png "SQL_Server_PDW_AdminConsole_AlertsV2")  
   
-На **оповещения** страницы:  
+На странице **оповещения** выполните следующие действия.  
   
--   Чтобы просмотреть журнал предупреждения, щелкните **истории предупреждений проверки** ссылку.  
+-   Чтобы просмотреть журнал предупреждений, щелкните ссылку **Просмотр журнала предупреждений** .  
   
--   Чтобы просмотреть оповещения компонента и его текущие значения свойств, щелкните строку оповещения.  
+-   Чтобы просмотреть компонент оповещения и его текущие значения свойств, щелкните строку предупреждения.  
   
--   Чтобы просмотреть подробные сведения об узле, вызвавшая оповещение, щелкните имя узла.  
+-   Чтобы просмотреть сведения об узле, вызвавшем оповещение, щелкните имя узла.  
   
-### <a name="view-alerts-by-using-the-system-views"></a>Просмотр оповещений с помощью системных представлений  
-Чтобы просмотреть оповещения с помощью системных представлений, запросите [sys.dm_pdw_component_health_active_alerts](../relational-databases/system-dynamic-management-views/sys-dm-pdw-component-health-active-alerts-transact-sql.md). Это динамическое административное Представление отображаются оповещения, которые не были исправлены. Для получения справки с помощью рассмотрение предупреждений и ошибок, используйте [sys.dm_pdw_errors](../relational-databases/system-dynamic-management-views/sys-dm-pdw-errors-transact-sql.md) динамического административного Представления.  
+### <a name="view-alerts-by-using-the-system-views"></a>Просмотр предупреждений с помощью системных представлений  
+Чтобы просмотреть предупреждения с помощью системных представлений, запросите представление [sys. dm_pdw_component_health_active_alerts](../relational-databases/system-dynamic-management-views/sys-dm-pdw-component-health-active-alerts-transact-sql.md). В этом динамическом административном отображении отображаются предупреждения, которые не были исправлены. Чтобы получить справку по классифицированию предупреждений и ошибок, используйте динамическое административное представление [sys. dm_pdw_errors](../relational-databases/system-dynamic-management-views/sys-dm-pdw-errors-transact-sql.md) .  
   
-Ниже приведен один из распространенных запросов для просмотра текущих предупреждений.  
+Ниже приведен пример общего запроса для просмотра текущих предупреждений.  
   
 ```sql  
 SELECT   
@@ -71,5 +72,5 @@ ORDER BY
   
 ## <a name="see-also"></a>См. также  
 <!-- MISSING LINKS [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->
-[Мониторинг устройства &#40;Analytics Platform System&#41;](appliance-monitoring.md)  
+[Мониторинг устройств &#40;системная платформа аналитики&#41;](appliance-monitoring.md)  
   

@@ -1,6 +1,6 @@
 ---
-title: sys.pdw_nodes_column_store_segments (Transact-SQL) | Документация Майкрософт
-ms.custom: ''
+title: sys. pdw_nodes_column_store_segments (Transact-SQL)
+ms.custom: seo-dt-2019
 ms.date: 03/28/2018
 ms.prod: sql
 ms.technology: data-warehouse
@@ -13,14 +13,14 @@ author: julieMSFT
 ms.author: jrasnick
 manager: jrj
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 399f08e0ebf09ea90c358ae5667b5031ef0cb099
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bea8e0d51b2918d7280f4afdb8b9d02f6b757827
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66822518"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401668"
 ---
-# <a name="syspdwnodescolumnstoresegments-transact-sql"></a>sys.pdw_nodes_column_store_segments (Transact-SQL)
+# <a name="syspdw_nodes_column_store_segments-transact-sql"></a>sys. pdw_nodes_column_store_segments (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
@@ -31,15 +31,15 @@ ms.locfileid: "66822518"
 | **partition_id**            | **bigint** | Указывает идентификатор секции. Уникален в базе данных.     |
 | **hobt_id**                 | **bigint** | Идентификатор кучи или индекс сбалансированного дерева (hobt) для таблицы, в которой содержится индекс columnstore. |
 | **column_id**               | **int**    | Идентификатор столбца columnstore.                                |
-| **segment_id**              | **int**    | Идентификатор сегмента столбца. Для обеспечения обратной совместимости имя столбца по-прежнему вызываться segment_id, несмотря на то, что это идентификатор группы строк Можно однозначно определить сегмент с помощью < hobt_id partition_id, column_id >, < segment_id >. |
-| **version**                 | **int**    | Версия формата сегмента столбца.                        |
-| **encoding_type**           | **int**    | Тип кодировки, используемой для этого сегмента:<br /><br /> 1 = VALUE_BASED - строка/недвоичных с словарь (аналогично 4 с некоторые варианты внутренний)<br /><br /> 2 = VALUE_HASH_BASED - строка/недвоичный столбец с общими значениями в словаре<br /><br /> 3 = STRING_HASH_BASED - двоичные данные строки или столбца с общими значениями в словаре<br /><br /> 4 = STORE_BY_VALUE_BASED - строка/недвоичных с словарь<br /><br /> 5 = STRING_STORE_BY_VALUE_BASED - строки или двоичного файла с помощью нет словаря<br /><br /> Все кодировки использовать преимущества упаковки бит и длин кодирования, когда это возможно. |
+| **segment_id**              | **int**    | Идентификатор сегмента столбца. Для обеспечения обратной совместимости имя столбца будет по-segment_id, несмотря на то, что это идентификатор группы строк. Можно однозначно идентифицировать сегмент с помощью <hobt_id, partition_id column_id>, <SEGMENT_ID>. |
+| **Версия**                 | **int**    | Версия формата сегмента столбца.                        |
+| **encoding_type**           | **int**    | Тип кодировки, используемой для этого сегмента:<br /><br /> 1 = VALUE_BASED-нестроковый/двоичный без словаря (аналогично 4 с некоторыми внутренними вариациями)<br /><br /> 2 = VALUE_HASH_BASED — нестроковый или двоичный столбец с общими значениями в словаре<br /><br /> 3 = STRING_HASH_BASED-строка/двоичный столбец с общими значениями в словаре<br /><br /> 4 = STORE_BY_VALUE_BASED-не строковый/двоичный без словаря<br /><br /> 5 = STRING_STORE_BY_VALUE_BASED-String/binary без словаря<br /><br /> Все кодировки по возможности используют преимущества битовой упаковки и длины выполнения. |
 | **row_count**               | **int**    | Число строк в группе строк.                             |
 | **has_nulls**               | **int**    | Значение 1, если сегмент столбца содержит значения NULL.                     |
-| **base_id**                 | **bigint** | Идентификатор базового значения, если используется тип кодирования 1.  Если тип кодирования 1 не используется, значение base_id устанавливается значение 1. |
-| **абсолютное значение**               | **float**  | Значение величины, если используется тип кодирования 1.  Если тип кодирования 1 не используется, абсолютное значение равным 1. |
-| **primary__dictionary_id**  | **int**    | Идентификатор основного словаря. Ненулевое значение указывает на локальный словарь для данного столбца в текущем сегменте (т. е. группу строк). Значение -1 указывает, что отсутствует локальный словарь для этого сегмента. |
-| **secondary_dictionary_id** | **int**    | Идентификатор дополнительного словаря. Ненулевое значение указывает на локальный словарь для данного столбца в текущем сегменте (т. е. группу строк). Значение -1 указывает, что отсутствует локальный словарь для этого сегмента. |
+| **base_id**                 | **bigint** | Идентификатор базового значения, если используется тип кодировки 1.  Если тип кодировки 1 не используется, base_id устанавливается в значение 1. |
+| **magnitude**               | **сделать**  | Величина, если используется тип кодировки 1.  Если тип кодировки 1 не используется, то величина устанавливается равным 1. |
+| **primary__dictionary_id**  | **int**    | Идентификатор основного словаря. Ненулевое значение указывает на локальный словарь для этого столбца в текущем сегменте (т. е. группы строк). Значение-1 указывает на отсутствие локального словаря для этого сегмента. |
+| **secondary_dictionary_id** | **int**    | Идентификатор дополнительного словаря. Ненулевое значение указывает на локальный словарь для этого столбца в текущем сегменте (т. е. группы строк). Значение-1 указывает на отсутствие локального словаря для этого сегмента. |
 | **min_data_id**             | **bigint** | Минимальный идентификатор данных в сегменте столбца.                       |
 | **max_data_id**             | **bigint** | Максимальный идентификатор данных в сегменте столбца.                       |
 | **null_value**              | **bigint** | Значение, используемое для представления значений NULL.                               |
@@ -49,7 +49,7 @@ ms.locfileid: "66822518"
 
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
-Присоединяйтесь к sys.pdw_nodes_column_store_segments с другими системными таблицами для определения количества сегментов columnstore на логическую таблицу.
+Чтобы определить количество сегментов columnstore на логическую таблицу, присоединитесь к sys. pdw_nodes_column_store_segments с другими системными таблицами.
 
 ```sql
 SELECT  sm.name           as schema_nm
@@ -82,11 +82,11 @@ ORDER BY    table_nm
 
 ## <a name="permissions"></a>Разрешения
 
-Необходимо разрешение **VIEW SERVER STATE**.
+Требуется разрешение **View Server State** .
 
 ## <a name="see-also"></a>См. также
 
-[Хранилище данных SQL и представления каталога хранилища параллельных данных](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
-[CREATE COLUMNSTORE INDEX (Transact-SQL)](../../t-sql/statements/create-columnstore-index-transact-sql.md)  
-[sys.pdw_nodes_column_store_row_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-row-groups-transact-sql.md)  
-[sys.pdw_nodes_column_store_dictionaries &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-dictionaries-transact-sql.md)
+[Хранилища данных SQL и представления каталога параллельных хранилищ данных](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
+[Создание индекса COLUMNSTORE &#40;&#41;Transact-SQL](../../t-sql/statements/create-columnstore-index-transact-sql.md)  
+[sys. pdw_nodes_column_store_row_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-row-groups-transact-sql.md)  
+[sys. pdw_nodes_column_store_dictionaries &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-dictionaries-transact-sql.md)

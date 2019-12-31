@@ -1,6 +1,6 @@
 ---
-title: Мониторинг активных запросов — Parallel Data Warehouse | Документация Майкрософт
-description: Используйте консоль администрирования и Parallel Data Warehouse системных представлений для мониторинга активных запросов в Analytics Platform System.
+title: Мониторинг активных запросов
+description: Используйте консоль администрирования и системные представления параллельного хранилища данных для мониторинга активных запросов в системе платформы аналитики.
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,36 +8,37 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 65d656b02ef0d726292a7d37aef565bf508d7662
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 9157db745b999711966f0019747ba1d61823569e
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67960496"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74400915"
 ---
-# <a name="monitoring-active-queries---parallel-data-warehouse"></a>Мониторинг активных запросов — Parallel Data Warehouse
-В этой статье показано, как использовать консоль администрирования и системных представлений SQL Server PDW для мониторинга активных запросов. См. в разделе [мониторинг устройства с помощью консоли администрирования](monitor-the-appliance-by-using-the-admin-console.md) и [системные представления](tsql-system-views.md) сведения об этих средствах.  
+# <a name="monitoring-active-queries---parallel-data-warehouse"></a>Мониторинг активных запросов — Параллельное хранилище данных
+В этой статье показано, как использовать консоль администрирования и системные представления SQL Server PDW для наблюдения за активными запросами. Сведения об этих средствах см. в разделе [мониторинг устройства с помощью консоли администрирования](monitor-the-appliance-by-using-the-admin-console.md) и [системных представлений](tsql-system-views.md) .  
   
-## <a name="prerequisites"></a>предварительные требования  
-Независимо от того, метод, используемый для мониторинга активных запросов, имя входа должно иметь разрешения, описанные в «Используйте все из консоли администрирования» в [GRANT, предоставление разрешений для использования консоли администрирования](grant-permissions.md#grant-permissions-to-use-the-admin-console).  
+## <a name="prerequisites"></a>Необходимые компоненты  
+Независимо от метода, используемого для наблюдения за активными запросами, имя входа должно иметь разрешения, описанные в разделе "использование всей консоли администрирования" раздела [предоставление разрешений на использование консоли администрирования](grant-permissions.md#grant-permissions-to-use-the-admin-console).  
   
 ## <a name="PermsAdminConsole"></a>Мониторинг активных запросов  
-Мониторинг активных запросов можно использовать консоль администрирования и системных представлений SQL Server PDW. Выполните приведенные ниже инструкции.  
+Для наблюдения за активными запросами можно использовать как консоль администрирования, так и системные представления SQL Server PDW. Выполните приведенные далее инструкции.  
   
-### <a name="to-monitor-active-queries-by-using-the-admin-console"></a>Мониторинг активных запросов с помощью консоли администрирования  
+### <a name="to-monitor-active-queries-by-using-the-admin-console"></a>Наблюдение за активными запросами с помощью консоли администрирования  
   
-1.  Войдите в консоль администрирования. См. в разделе [мониторинг устройства с помощью консоли администрирования](monitor-the-appliance-by-using-the-admin-console.md) инструкции.  
+1.  Войдите в консоль администрирования. Инструкции см. в разделе [мониторинг устройства с помощью консоли администрирования](monitor-the-appliance-by-using-the-admin-console.md) .  
   
-2.  В верхнем меню щелкните **запросы**. Вы увидите таблицу, содержащую основные сведения о последних запросов на устройстве, включая имя входа, который отправил запрос, время начала и окончания для запроса и текущее состояние запроса.  
+2.  В верхнем меню щелкните **запросы**. Вы увидите таблицу с основными сведениями о последних запросах к устройству, включая имя входа, отправившего запрос, время начала и окончания запроса, а также текущее состояние запроса.  
   
 3.  Чтобы увидеть команду запроса, наведите указатель мыши на идентификатор запроса в левом столбце для этой строки.  
   
-    Чтобы просмотреть более подробные сведения для конкретного запроса, щелкните идентификатора запроса. Вы увидите сведения, включая полный запрос и план запроса, сведения о состоянии для каждого этапа выполнения запроса. Если возвращены все ошибки, можно также просмотреть подробную информацию об ошибках. <!-- MISSING LINKS See [Understanding Query Plans &#40;SQL Server PDW&#41;](../sqlpdw/understanding-query-plans-sql-server-pdw.md) for information on how to interpret the query plan information available in the Admin Console.  -->
+    Чтобы просмотреть более подробные сведения о конкретном запросе, щелкните идентификатор запроса. Вы увидите сведения, включая полный запрос и план запроса, со сведениями о состоянии для каждого шага выполнения запроса. Если были возвращены какие бы то ни было ошибки, можно также просмотреть подробные сведения об этих ошибках. <!-- MISSING LINKS See [Understanding Query Plans &#40;SQL Server PDW&#41;](../sqlpdw/understanding-query-plans-sql-server-pdw.md) for information on how to interpret the query plan information available in the Admin Console.  -->
   
-### <a name="to-monitor-active-queries-by-using-the-system-views"></a>Мониторинг активных запросов с помощью системных представлений  
-Это представление основной системы используется для отслеживания запросов является [sys.dm_pdw_exec_requests](../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md). Используйте это представление системы, чтобы найти `request_id` для активных или последних запросов, на основе текста запроса.  
+### <a name="to-monitor-active-queries-by-using-the-system-views"></a>Наблюдение за активными запросами с помощью системных представлений  
+Основное системное представление, используемое для отслеживания запросов, — [sys. dm_pdw_exec_requests](../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md). Используйте это системное представление для поиска `request_id` активного или последнего запроса на основе текста запроса.  
   
-Например, следующий запрос находит `request_id` и текущий `status` для любого запроса, который выбирает все столбцы из `memberAddresses` таблицы.  
+Например, следующий запрос находит `request_id` и текущий `status` запрос для любого запроса, выбирающего все столбцы из `memberAddresses` таблицы.  
   
 ```sql  
 SELECT request_id, command, status   
@@ -46,7 +47,7 @@ WHERE command
 LIKE '%SELECT * FROM db1..memberAddresses%';  
 ```  
   
-После `request_id` был определения для запроса, используйте другие сведения в `dm_pdw_exec_requests` таблицы, чтобы узнать об обработке запроса либо использовать [sys.dm_pdw_request_steps](../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md) для просмотра состояния отдельных запроса действия для выполнения запроса.  
+`request_id` После определения запроса используйте другие сведения в `dm_pdw_exec_requests` таблице, чтобы узнать об обработке запроса, или используйте [sys. dm_pdw_request_steps](../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md) , чтобы просмотреть состояние отдельных шагов запроса для выполнения запроса.  
   
 <!-- MISSING LINKS 
 ## See Also  

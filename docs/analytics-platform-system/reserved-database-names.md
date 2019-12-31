@@ -1,6 +1,6 @@
 ---
-title: Зарезервированные имена баз данных - Parallel Data Warehouse | Документация Майкрософт
-description: Зарезервированные имена баз данных в Analytics платформы системы Parallel Data Warehouse.
+title: Зарезервированные имена баз данных
+description: Зарезервированные имена баз данных в хранилище Parallel Data System системы аналитики.
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,27 +8,28 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: aa4628a5f4685eb805948de0b67f9387a189054a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 77625b2a8b1169af90ab0573fa57a4246f81ceab
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67960199"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74400474"
 ---
-# <a name="reserved-database-names-in-parallel-data-warehouse"></a>Зарезервированные имена баз данных в Parallel Data Warehouse
-Зарезервированное имя базы данных — это имя, которое не может присваиваться пользовательской базы данных в SQL Server PDW.  
+# <a name="reserved-database-names-in-parallel-data-warehouse"></a>Зарезервированные имена баз данных в параллельном хранилище данных
+Имя зарезервированной базы данных — это имя, которое нельзя назначить пользовательской базе данных в SQL Server PDW.  
   
-Список зарезервированные имена баз данных:  
+Список зарезервированных имен баз данных:  
   
 -   master  
   
--   model  
+-   Модель  
   
 -   msdb  
   
 -   tempdb  
   
--   pdwtempdb  
+-   пдвтемпдб  
   
 -   pdwtempdb1  
   

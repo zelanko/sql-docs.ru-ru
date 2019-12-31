@@ -1,6 +1,6 @@
 ---
-title: Монитор с SCOM — Analytics Platform System | Документация Майкрософт
-description: Используйте System Center Operations Manager (SCOM) для мониторинга Analytics Platform System (APS) устройство.
+title: Мониторинг с помощью SCOM
+description: Используйте System Center Operations Manager (SCOM) для мониторинга устройства аналитики платформы (ТД).
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,59 +8,60 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 0da122b7ff4f17621a896e3a9f5076f8564d32c8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 0b244d85e601e46fe778298e723c0a7d01e669bb
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67960542"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74400972"
 ---
-# <a name="monitor-with-system-center-operations-manager---analytics-platform-system"></a>Мониторинг с помощью System Center Operations Manager — система Analytics Platform System
-Используйте System Center Operations Manager (SCOM) для мониторинга Analytics Platform System (APS) устройство.
+# <a name="monitor-with-system-center-operations-manager---analytics-platform-system"></a>Мониторинг с помощью системы платформы System Center Operations Manager-Analytics
+Используйте System Center Operations Manager (SCOM) для мониторинга устройства аналитики платформы (ТД).
   
-## <a name="before-you-begin"></a>Перед началом  
+## <a name="before-you-begin"></a>Перед началом работы  
   
-### <a name="prerequisites"></a>Предварительные требования  
+### <a name="prerequisites"></a>Необходимые компоненты  
   
-1.  System Center Operations Manager 2007 R2, 2012 или 2012 с пакетом обновления 1 должны быть установлены и запущены.  
+1.  Необходимо установить и запустить System Center Operations Manager 2007 R2, 2012 или 2012 SP1.  
   
 2.  Необходимо установить собственный клиент SQL Server 2008 R2 или SQL Server 2012 Native Client.  
   
-3.  Пакеты управления для наблюдения за SQL Server PDW должен быть установлен, импортировать и настроен. Используйте инструкции в следующих статьях для выполнения этих задач.  
+3.  Пакеты управления для мониторинга SQL Server PDW должны быть установлены, импортированы и настроены. Используйте следующие статьи, чтобы получить инструкции по выполнению этих задач.  
   
-    -   [Установить пакеты управления SCOM &#40;Analytics Platform System&#41;](install-the-scom-management-packs.md)  
+    -   [Установка пакетов управления SCOM &#40;Analytics Platform System&#41;](install-the-scom-management-packs.md)  
   
-    -   [Импорт пакета управления SCOM для PDW &#40;Analytics Platform System&#41;](import-the-scom-management-pack-for-pdw.md) 
+    -   [Импортируйте пакет управления SCOM для PDW &#40;Analytics Platform System&#41;](import-the-scom-management-pack-for-pdw.md) 
     
-    -   [Настройка SCOM для мониторинга Analytics Platform System &#40;Analytics Platform System&#41;](configure-scom-to-monitor-analytics-platform-system.md)
+    -   [Настройка SCOM для мониторинга системы аналитики система &#40;аналитики платформа&#41;](configure-scom-to-monitor-analytics-platform-system.md)
   
 <!-- MISSING LINKS    -   [Import the SCOM Management Pack for HDInsight &#40;Analytics Platform System&#41;](import-the-scom-management-pack-for-hdinsight.md)  -->  
    
   
-## <a name="to-monitor-sql-server-pdw-with-scom"></a>Для мониторинга SQL Server PDW с SCOM  
-После настройки пакетов управления SCOM, щелкните на панели мониторинга из SCOM и детализировать **SQL Server Appliance** и затем **Microsoft SQL Server Parallel Data Warehouse**. Под Microsoft SQL Server Parallel Data Warehouse имеется четыре варианта: Оповещения, устройства, устройство схемы и узлов.  
+## <a name="to-monitor-sql-server-pdw-with-scom"></a>Мониторинг SQL Server PDW с помощью SCOM  
+После настройки пакетов управления SCOM щелкните панель "Мониторинг" SCOM и выполните детализацию до **SQL Server устройства** , а затем **Microsoft SQL Server Parallel Data Warehouse**. Ниже Microsoft SQL Server Parallel Data Warehouse есть четыре варианта: оповещения, устройства, диаграмма устройств и узлы.  
   
-### <a name="alerts"></a>Предупреждения  
-Оповещения создаются, где можно найти текущие оповещения для управления.  
+### <a name="alerts"></a>Оповещения  
+Оповещения — это место, где можно найти текущие оповещения для управления.  
   
-![Alerts](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM.png "SCOM_SCOM")  
+![Оповещения](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM.png "SCOM_SCOM")  
   
 ### <a name="appliances"></a>Устройства  
-Модули являются, которой в настоящее время обнаруженных и отслеживаемых SQL Server PDW устройств можно найти в вашей среде. Если устройства не появилась здесь и создании подключения ODBC для него, то может быть проблема с вашей учетной записью PDWWatcher. Если они отображаются как «Наблюдение не ведется», может существовать проблема с вашей учетной записью PDWMonitor. Сохраняйте Терпение, поскольку SCOM не вносит изменения в режиме реального времени, но периодически проверяет наличие новых устройств для мониторинга и периодически отправляет запросы к устройствам для мониторинга.  
+Устройства — это место обнаружения и отслеживания SQL Server PDW устройств в вашей среде. Если устройство не отображается здесь и вы создали для него подключение ODBC, то может возникнуть проблема с учетной записью Пдвватчер. Если они отображаются как "не отслеживается", возможно, у вашей учетной записи Пдвмонитор есть какая-то ошибка. Подождите, так как SCOM не вносит изменения в реальном времени, но периодически проверяет наличие новых устройств для отслеживания и периодически отправляет запросы на устройства для мониторинга.  
   
-![Appliances](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM2.png "SCOM_SCOM2")  
+![Устройствами](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM2.png "SCOM_SCOM2")  
   
-### <a name="appliances-diagram"></a>Диаграмма устройств  
-Страница устройств схема является, где можно получить краткий обзор работоспособности вашего устройства с представление в виде дерева:  
+### <a name="appliances-diagram"></a>Схема Appliances  
+На странице схема Appliances (устройства) можно просмотреть сведения о работоспособности устройства в виде дерева.  
   
 ![Диаграмма устройств](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM3.png "SCOM_SCOM3")  
   
-### <a name="nodes"></a>Узлы  
-Наконец представление узлов дает возможность видеть работоспособность вашего устройства через каждый узел:  
+### <a name="nodes"></a>Nodes  
+Наконец, представление узлы позволяет просматривать работоспособность устройства с помощью каждого узла:  
   
 ![Nodes](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM4.png "SCOM_SCOM4")  
   
 ## <a name="see-also"></a>См. также  
 <!-- MISSING LINKS [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  
-[Предупреждения консоли администрирования основные сведения о &#40;Analytics Platform System&#41;](understanding-admin-console-alerts.md)  
+[Общие сведения о предупреждениях консоли администрирования &#40;Analytics Platform System&#41;](understanding-admin-console-alerts.md)  
   

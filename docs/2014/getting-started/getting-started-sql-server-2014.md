@@ -1,7 +1,7 @@
 ---
-title: Приступая к работе (SQL Server 2014) | Документация Майкрософт
+title: Начало работы (SQL Server 2014) | Документация Майкрософт
 ms.custom: ''
-ms.date: 05/25/2017
+ms.date: 11/25/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: database-engine
@@ -10,12 +10,12 @@ ms.assetid: 5148c993-6cd4-42f0-9109-1ec08d8e798c
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: b571739fc268547e944dfe26672735a2520ff943
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: eb81724c8feb5ca34736b16aeb8f8d65b1018300
+ms.sourcegitcommit: 7183735e38dd94aa3b9bab2b73ccab54c916ff86
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62772380"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74683491"
 ---
 # <a name="getting-started-sql-server-2014"></a>Приступая к работе (SQL Server 2014)
   Источники сведений по [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] , системным требованиям, инструкции по установке и многое другое.  
@@ -24,17 +24,17 @@ ms.locfileid: "62772380"
   
  [Новые возможности SQL Server 2014](../sql-server/what-s-new-in-sql-server-2016.md)  
   
- [Общие сведения о гибридном облаке SQL Server 2014](introduction-to-sql-server-2014-hybrid-cloud.md)  
+ [Введение в гибридное облако SQL Server 2014](introduction-to-sql-server-2014-hybrid-cloud.md)  
   
- [Быстрая установка SQL Server 2014](quick-start-installation-of-sql-server-2014.md)  
+ [Быстрый запуск установки SQL Server 2014](quick-start-installation-of-sql-server-2014.md)  
   
- [Начало работы с документацией по SQL Server](../2014-toc/books-online-for-sql-server-2014.md)  
+ [Начало работы с помощью документации по продукту SQL Server](../2014-toc/index.yml)  
   
  [Получение помощи &#40;SQL Server 2014&#41;](getting-assistance-sql-server-2014.md)  
   
  [Обратная совместимость](backward-compatibility.md)  
   
- [Об условиях лицензионного соглашения SQL Server](about-the-sql-server-license-terms.md)  
+ [Условия лицензионного соглашения SQL Server](about-the-sql-server-license-terms.md)  
   
  [Заявление о конфиденциальности Microsoft SQL Server](microsoft-sql-server-privacy-statement.md)  
   

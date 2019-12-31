@@ -1,5 +1,5 @@
 ---
-title: База данных tempdb — Параллельное хранилище данных | Документация Майкрософт
+title: База данных tempdb
 description: База данных tempdb в параллельном хранилище данных.
 author: mzaman1
 ms.prod: sql
@@ -8,12 +8,13 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 6bdba302778224ab2615018d6c5dec0740328d93
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 3772e2b4cabac84c00854eba85f7a0c2a33d48bc
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68810939"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74400141"
 ---
 # <a name="tempdb-database-in-parallel-data-warehouse"></a>база данных tempdb в параллельном хранилище данных
 база данных **tempdb** — это SQL Server PDW системная БД, в которой хранятся локальные временные таблицы для пользовательских баз данных. Временные таблицы часто используются для повышения производительности запросов. Например, можно использовать временную таблицу для разделения сценария и повторного использования вычисленных данных.  
@@ -59,7 +60,7 @@ SQL Server PDW выполняет те же операции с временны
   
 -   Измените разрешения на **базу данных tempdb** с помощью инструкций **Grant**, **Deny**или **REVOKE** .  
   
--   Выполните **инструкцию DBCC SHRINKLOG** для tempdb tempdb.  
+-   Выполните **инструкцию DBCC SHRINKLOG** **для tempdb tempdb.**  
   
 -   Выполнение DDL операций в **базе данных tempdb**. Существует несколько исключений. Дополнительные сведения см. в следующем списке ограничений и ограничений для локальных временных таблиц.  
   
@@ -83,7 +84,7 @@ SQL Server PDW выполняет те же операции с временны
   
 ## <a name="RelatedTasks"></a>Связанные задачи  
   
-|Задания|Описание|  
+|Задачи|Описание|  
 |---------|---------------|  
 |Создайте таблицу в **базе данных tempdb**.|Можно создать временную таблицу пользователя с помощью CREATE TABLE и CREATE TABLE в качестве инструкций SELECT. Дополнительные сведения см. в разделе [CREATE TABLE](../t-sql/statements/create-table-azure-sql-data-warehouse.md) и [CREATE TABLE в качестве SELECT](../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md).|  
 |Просмотр списка существующих таблиц в **базе данных tempdb**.|`SELECT * FROM tempdb.sys.tables;`|  

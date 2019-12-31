@@ -1,6 +1,6 @@
 ---
-title: sys.pdw_nodes_pdw_physical_databases (Transact-SQL) | Документация Майкрософт
-ms.custom: ''
+title: sys. pdw_nodes_pdw_physical_databases (Transact-SQL)
+ms.custom: seo-dt-2019
 ms.date: 03/09/2017
 ms.prod: sql
 ms.technology: data-warehouse
@@ -12,28 +12,28 @@ ms.assetid: 70e0939d-4d97-4ae0-ba16-934e0a80e718
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3dd4551d2dac629912eb4fe799d6a9e58ec1792b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 48f2a2d485f99b91b0f30a6a707a900ccbbeea96
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68001132"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74399908"
 ---
-# <a name="syspdwnodespdwphysicaldatabases-transact-sql"></a>sys.pdw_nodes_pdw_physical_databases (Transact-SQL)
+# <a name="syspdw_nodes_pdw_physical_databases-transact-sql"></a>sys. pdw_nodes_pdw_physical_databases (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
-  Содержит по строке для каждой физической базы данных на вычислительном узле. Статистические сведения о физической базы данных, чтобы получить подробные сведения о базах данных. Для объединения данных, присоединить `sys.pdw_nodes_pdw_physical_databases` для `sys.pdw_database_mappings` и `sys.databases` таблицы.  
+  Содержит по одной строке для каждой физической базы данных на кластерном узле. Статистическая обработка физической информации базы данных для получения подробных сведений о базах данных. Чтобы объединить сведения, присоедините `sys.pdw_nodes_pdw_physical_databases` к `sys.pdw_database_mappings` таблицам `sys.databases` и.  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|database_id|**int**|Идентификатор объекта для базы данных. Обратите внимание, что это значение не то же, что database_id в [sys.databases &#40;Transact-SQL&#41; ](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) представления.|  
-|physical_name|**sysname**|Физическое имя базы данных на оболочки/вычислительных узлов. Это значение совпадает с значение в столбце physical_name [sys.pdw_database_mappings &#40;Transact-SQL&#41; ](../../relational-databases/system-catalog-views/sys-pdw-database-mappings-transact-sql.md) представления.|  
+|database_id|**int**|Идентификатор объекта для базы данных. Обратите внимание, что это значение не совпадает с database_id в представлении [sys. databases &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) .|  
+|physical_name|**имеет sysname**|Физическое имя базы данных на узлах оболочки или вычислений. Это значение совпадает со значением в столбце physical_name представления [sys. pdw_database_mappings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-database-mappings-transact-sql.md) View.|  
 |pdw_node_id|**int**|Уникальный числовой идентификатор, связанный с узлом.|  
   
 ## <a name="examples-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="a-returning"></a>A. Возврат  
- Следующий запрос возвращает имя и идентификатор каждой базы данных в master и имя соответствующей базы данных на каждом вычислительном узле.  
+### <a name="a-returning"></a>а. Возвращаются  
+ Следующий запрос возвращает имя и идентификатор каждой базы данных в Master, а также соответствующее имя базы данных на каждом кластерном узле.  
   
 ```  
 SELECT D.database_id AS DBID_in_master, D.name AS UserDatabaseName,   
@@ -46,8 +46,8 @@ JOIN sys.pdw_nodes_pdw_physical_databases AS PD
 ORDER BY D.database_id, PD.pdw_node_ID;  
 ```  
   
-### <a name="b-using-syspdwnodespdwphysicaldatabases-to-gather-detailed-object-information"></a>Б. С помощью sys.pdw_nodes_pdw_physical_databases для сбора информации подробные объекта  
- Следующий запрос отображает сведения об индексах и включает полезные сведения о базе данных, что объекты принадлежат объекты в базе данных.  
+### <a name="b-using-syspdw_nodes_pdw_physical_databases-to-gather-detailed-object-information"></a>B. Использование Sys. pdw_nodes_pdw_physical_databases для сбора подробных сведений об объекте  
+ Следующий запрос показывает сведения о индексах и содержит полезные сведения о базе данных, которые объекты принадлежат к объектам в базе данных.  
   
 ```  
 SELECT D.name AS UserDatabaseName, D.database_id AS DBIDinMaster,  
@@ -63,8 +63,8 @@ JOIN sys.dm_pdw_nodes_db_index_usage_stats AS IU
 ORDER BY D.database_id, IU.object_id, IU.index_id, PD.pdw_node_ID;  
 ```  
   
-### <a name="c-using-syspdwnodespdwphysicaldatabases-to-determine-the-encryption-state"></a>В. С помощью sys.pdw_nodes_pdw_physical_databases определение состояния шифрования  
- Следующий запрос предоставляет состояние шифрования базы данных AdventureWorksPDW2012.  
+### <a name="c-using-syspdw_nodes_pdw_physical_databases-to-determine-the-encryption-state"></a>C. Использование Sys. pdw_nodes_pdw_physical_databases для определения состояния шифрования  
+ Следующий запрос обеспечивает состояние шифрования базы данных AdventureWorksPDW2012.  
   
 ```  
 WITH dek_encryption_state AS   
@@ -86,9 +86,9 @@ SELECT TOP 1 encryption_state
 ```  
   
 ## <a name="see-also"></a>См. также  
- [SQL Data Warehouse and Parallel Data Warehouse Catalog Views](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  (Представления каталога в службе "Хранилище данных SQL" и Parallel Data Warehouse)  
- [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
- [sys.pdw_database_mappings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-database-mappings-transact-sql.md)  
+ [Хранилища данных SQL и представления каталога параллельных хранилищ данных](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
+ [sys. databases &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
+ [sys. pdw_database_mappings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-database-mappings-transact-sql.md)  
   
   
 

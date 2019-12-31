@@ -1,6 +1,6 @@
 ---
-title: Контролировать загрузку для Parallel Data Warehouse | Документация Майкрософт
-description: Отслеживание активные и Недавние загрузок с помощью консоли администрирования (APS) системы платформы аналитики или параллельных данных (PDW) системные представления.»
+title: Отслеживание загрузок
+description: Наблюдение за активностью и последней загрузкой с помощью консоли администрирования системы аналитики (ТД) или системных представлений параллельного хранилища данных (PDW).
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,64 +8,65 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 1eadf20e036c6c76cd3bece7c404fde2af4a7d70
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: b284fdcef506924c26e452196db6e9518faa1351
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67960608"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74400965"
 ---
-# <a name="monitor-loads-into-parallel-data-warehouse"></a>Монитор загружает в Parallel Data Warehouse
-Монитор, активные и Недавние [dwloader](dwloader.md) загружает с помощью консоли администрирования Analytics Platform System (APS) или Parallel Data Warehouse (PDW) [системных представлений](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-reference-tsql-system-views/). 
+# <a name="monitor-loads-into-parallel-data-warehouse"></a>Мониторинг загрузки в хранилище Parallel Data
+Мониторинг активных и недавних загрузок [dwloader](dwloader.md) с помощью консоли администрирования системы АНАЛИТИКИ (ТД) или [системных представлений](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-reference-tsql-system-views/)параллельного хранилища данных (PDW). 
   
 > [!TIP]  
-> Некоторые загружает инициируется с помощью инструкций INSERT или средства бизнес-аналитики, с помощью инструкций SQL для выполнения загрузки. 
+> Некоторые нагрузки инициируются с помощью инструкций INSERT или средств бизнес-аналитики, которые используют инструкции SQL для выполнения загрузки. 
 
 <!-- MISSING LINKS
 To monitor this type of load, see [Monitoring Active Queries](monitor-active-queries.md).  
 -->
   
-## <a name="prerequisites"></a>предварительные требования  
-Независимо от того, метод, используемый для наблюдения за нагрузкой имя входа должно иметь разрешение на доступ к базовым источникам данных. 
+## <a name="prerequisites"></a>Необходимые компоненты  
+Независимо от метода, используемого для отслеживания нагрузки, имя входа должно иметь разрешение на доступ к базовым источникам данных. 
 
 <!-- MISSING LINKS
 For the permissions to grant, see "Use All of the Admin Console" in [Grant Permissions to Use the Admin Console](grant-permissions-admin-console.md). 
 
 --> 
   
-## <a name="monitoring-loads"></a>Мониторинг загрузки  
-Как контролировать загрузку в следующих разделах.  
+## <a name="monitoring-loads"></a>Мониторинг загрузок  
+В следующих разделах описывается наблюдение за загрузкой.  
   
-### <a name="to-monitor-loads-by-using-the-admin-console"></a>Чтобы контролировать загрузку с помощью консоли администрирования  
+### <a name="to-monitor-loads-by-using-the-admin-console"></a>Мониторинг нагрузок с помощью консоли администрирования  
   
 1.  Войдите в консоль администрирования. <!-- MISSING LINKS See [Monitor the Appliance by Using the Admin Console;](monitor-admin-console.md) for instructions. --> 
   
-2.  В верхнем меню щелкните **загружает**. Вы увидите сортируемого таблица, показывающая всех последних и активных нагрузок, а также дополнительные сведения, например нагрузки завершена ли по-прежнему активна. Щелкните заголовки столбцов для сортировки строк.  
+2.  В верхнем меню выберите пункт **загрузки**. Вы увидите таблицу с возможностью сортировки, в которой отображаются все последние и активные нагрузки, а также дополнительные сведения, например, завершена ли загрузка или она еще активна. Щелкните заголовки столбцов, чтобы отсортировать строки.  
   
-3.  Чтобы просмотреть дополнительные сведения для определенной нагрузки, нажмите кнопку загрузки **идентификатор** в левом столбце. В подробном представлении вы увидите ход выполнения каждого шага нагрузки.  
+3.  Чтобы просмотреть дополнительные сведения о конкретной нагрузке, щелкните **идентификатор** загрузки в левом столбце. В подробном представлении можно увидеть ход выполнения на каждом шаге загрузки.  
   
-См. приведенные далее системные представления сведения метаданных о нагрузке, которое отображается в консоли администрирования:  
+Сведения о метаданных нагрузки, отображаемых в консоли администрирования, см. в этих системных представлениях.  
   
 -   [sys.dm_pdw_exec_requests](../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md)  
   
 -   [sys.pdw_loader_run_stages](https://msdn.microsoft.com/library/mt203879.aspx)  
   
--   [sys.pdw_loader_backup_runs](../relational-databases/system-catalog-views/sys-pdw-loader-backup-runs-transact-sql.md)  
+-   [sys. pdw_loader_backup_runs](../relational-databases/system-catalog-views/sys-pdw-loader-backup-runs-transact-sql.md)  
   
--   [sys.pdw_loader_backup_run_details](../relational-databases/system-catalog-views/sys-pdw-loader-backup-run-details-transact-sql.md)  
+-   [sys. pdw_loader_backup_run_details](../relational-databases/system-catalog-views/sys-pdw-loader-backup-run-details-transact-sql.md)  
   
-### <a name="to-monitor-loads-by-using-system-views"></a>Чтобы контролировать загрузку с помощью системных представлений  
-Чтобы отслеживать активные и Недавние загрузки с помощью представлений SQL Server PDW, выполните следующие действия. Каждый используется системное представление см. в документации для этого представления сведения в столбцах и потенциальных значений, возвращенных представлением.  
+### <a name="to-monitor-loads-by-using-system-views"></a>Мониторинг загрузок с помощью системных представлений  
+Чтобы отслеживать активные и последние загрузки с помощью SQL Server PDW представлений, выполните следующие действия. Сведения о столбцах и возможных значениях, возвращаемых представлением, для каждого используемого системного представления см. в документации по этому представлению.  
   
-1.  Найти `request_id` для загрузки в [sys.dm_pdw_exec_requests](../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md) представления путем поиска загрузчика командной строки в `command` столбец для этого представления.  
+1.  Найдите `request_id` для загрузки в представлении [sys. dm_pdw_exec_requests](../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md) , найдя командную строку загрузчика в `command` столбце для этого представления.  
   
-    Например, следующая команда возвращает текущее состояние и текст команды, а также `request_id`.  
+    Например, следующая команда возвращает текст команды и текущее состояние, а также `request_id`.  
   
     ```sql  
     SELECT request_id, status, command FROM sys.dm_pdw_exec_requests;  
     ```  
   
-2.  Используйте `request_id` для получения дополнительных сведений для загрузки с помощью [sys.pdw_loader_run_stages](../relational-databases/system-catalog-views/sys-pdw-loader-run-stages-transact-sql.md) , и [sys.pdw_loader_backup_run_details](../relational-databases/system-catalog-views/sys-pdw-loader-backup-run-details-transact-sql.md) представления. Например, следующий запрос возвращает `run_id` и сведения о начала, окончания и длительность времени загрузки, а также все ошибки и на количество обработанных строк:  
+2.  Используйте `request_id` для получения дополнительных сведений о нагрузке с помощью представлений [sys. pdw_loader_run_stages](../relational-databases/system-catalog-views/sys-pdw-loader-run-stages-transact-sql.md) и [sys. pdw_loader_backup_run_details](../relational-databases/system-catalog-views/sys-pdw-loader-backup-run-details-transact-sql.md) . Например, следующий запрос возвращает `run_id` сведения о времени начала, окончания и продолжительности загрузки, а также все ошибки и сведения о количестве обработанных строк:  
   
     ```sql  
     SELECT lbr.run_id,   

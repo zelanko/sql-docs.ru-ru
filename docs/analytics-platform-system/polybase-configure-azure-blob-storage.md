@@ -1,6 +1,6 @@
 ---
-title: Настраивать PolyBase для доступа к внешним данным в хранилище BLOB-объектов Azure | Документация Майкрософт
-description: В этой статье описывается настройка PolyBase в Parallel Data Warehouse для подключения к внешней Hadoop.
+title: Использование Polybase для доступа к внешним данным в хранилище BLOB-объектов Azure
+description: Объясняется, как настроить Polybase в Parallel Data Warehouse для подключения к внешним Hadoop.
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,30 +8,31 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 82c57ef57a01cabf2786c71fc53aed3660289451
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 4ea61ea7e6983f9601783957eee6776f36eccfb4
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67960280"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74400724"
 ---
-# <a name="configure-polybase-to-access-external-data-in-azure-blob-storage"></a>Настраивать PolyBase для доступа к внешним данным в хранилище BLOB-объектов Azure
+# <a name="configure-polybase-to-access-external-data-in-azure-blob-storage"></a>Настройка Polybase для доступа к внешним данным в хранилище BLOB-объектов Azure
 
-Объясняется, как использовать PolyBase на экземпляре SQL Server для запроса внешних данных в хранилище BLOB-объектов Azure.
+В этой статье объясняется, как использовать Polybase на экземпляре SQL Server для запроса внешних данных в хранилище BLOB-объектов Azure.
 
 > [!NOTE]
-> APS сейчас поддерживает только локально избыточное хранилище BLOB-объектов Azure (LRS) стандартный общего назначения версии 1.
+> В настоящее время APS поддерживает только стандартное локально избыточное хранилище BLOB-объектов (LRS) общего назначения версии 1.
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Необходимые компоненты
 
- - Хранилище BLOB-объектов в вашей подписке.
- - Контейнер, созданное в хранилище BLOB-объектов Azure.
+ - Хранилище BLOB-объектов Azure в вашей подписке.
+ - Контейнер, созданный в хранилище BLOB-объектов Azure.
 
-### <a name="configure-azure-blob-storage-connectivity"></a>Настроить подключение к хранилищу BLOB-объектов Azure
+### <a name="configure-azure-blob-storage-connectivity"></a>Настройка подключения к хранилищу BLOB-объектов Azure
 
-Во-первых настройте APS использование хранилища BLOB-объектов Azure.
+Во-первых, настройте ТД для использования хранилища BLOB-объектов Azure.
 
-1. Запустите [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) с 'hadoop connectivity' присвоено с поставщиком хранилища больших двоичных объектов Azure. Значение для поставщика см. в статье [Конфигурация подключения к PolyBase (Transact-SQL)](../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md).
+1. Запустите [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) с параметром "подключение Hadoop", установленным в поставщик хранилища BLOB-объектов Azure. Значение для поставщика см. в статье [Конфигурация подключения к PolyBase (Transact-SQL)](../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md).
 
    ```sql  
    -- Values map to various external data sources.  
@@ -44,13 +45,13 @@ ms.locfileid: "67960280"
    GO
    ```  
 
-2. Перезапустите APS области, расположенные на странице состояния службы [устройства Configuration Manager](launch-the-configuration-manager.md).
+2. Перезапустите регион APS с помощью страницы состояния службы [Configuration Manager устройства](launch-the-configuration-manager.md).
   
 ## <a name="configure-an-external-table"></a>Настройка внешней таблицы
 
-Чтобы запросить данные в хранилище больших двоичных объектов Azure, необходимо определить внешнюю таблицу для использования в запросах Transact-SQL. Далее указаны шаги по настройке внешней таблицы.
+Чтобы запросить данные в хранилище BLOB-объектов Azure, необходимо определить внешнюю таблицу, которая будет использоваться в запросах Transact — SQL. Далее указаны шаги по настройке внешней таблицы.
 
-1. Создайте главный ключ в базе данных. Он необходим для шифрования секрета учетных данных.
+1. Создайте главный ключ в базе данных. Необходимо зашифровать секрет учетных данных.
 
    ```sql
    CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'S0me!nfo';  
@@ -65,7 +66,7 @@ ms.locfileid: "67960280"
    WITH IDENTITY = 'user', Secret = '<azure_storage_account_key>';
    ```
 
-1. Создайте внешний источник данных с помощью инструкции [CREATE EXTERNAL DATA SOURCE](../t-sql/statements/create-external-data-source-transact-sql.md).
+1. Создайте внешний источник данных с параметром [создать внешний источник данных](../t-sql/statements/create-external-data-source-transact-sql.md).
 
    ```sql
    -- LOCATION:  Azure account storage account name and blob container name.  
@@ -123,7 +124,7 @@ ms.locfileid: "67960280"
 
 ### <a name="ad-hoc-queries"></a>Нерегламентированные запросы  
 
-Следующий нерегламентированный запрос объединяет реляционные данные в хранилище BLOB-объектов Azure. Он выбирает клиентов, занимающихся разработкой быстрее, чем 35 миль/ч, присоединяемый структурированных клиента данные, хранящиеся в SQL Server, данные датчиков автомобиля, хранящиеся в хранилище BLOB-объектов Azure.  
+Следующий нерегламентированный запрос объединяет реляционные данные с данными в хранилище BLOB-объектов Azure. Он выбирает клиентов, которые работают быстрее, чем 35 миль/ч, объединяя структурированные данные клиентов, хранящиеся в SQL Server, с данными датчика автомобиля, хранящимися в хранилище BLOB-объектов Azure.  
 
 ```sql  
 SELECT DISTINCT Insured_Customers.FirstName,Insured_Customers.LastName,
@@ -133,9 +134,9 @@ WHERE Insured_Customers.CustomerKey = CarSensor_Data.CustomerKey and CarSensor_D
 ORDER BY CarSensor_Data.Speed DESC  
 ```  
 
-### <a name="importing-data"></a>импорт данных  
+### <a name="importing-data"></a>Импорт данных  
 
-Следующий запрос выполняется Импорт внешних данных в APS. В этом примере импортирует данные для быстрого драйверов в точках доступа, чтобы выполнить более глубокий анализ. Для повышения производительности, при этом используется технология Columnstore в APS.  
+Следующий запрос импортирует внешние данные в ТД. В этом примере данные для быстрых драйверов импортируются в ТД для более глубокого анализа. Для повышения производительности она использует технологию columnstore в ТД.  
 
 ```sql
 CREATE TABLE Fast_Customers
@@ -154,7 +155,7 @@ ON Insured_Customers.CustomerKey = SensorD.CustomerKey
 
 ### <a name="exporting-data"></a>Экспорт данных  
 
-Следующий запрос экспортирует данные из точек доступа в хранилище BLOB-объектов Azure. Он может использоваться для архивирования реляционных данных в BLOB-объектов Azure хранилища, оставаясь иметь возможность запросить его.
+Следующий запрос экспортирует данные из ТД в хранилище BLOB-объектов Azure. Его можно использовать для архивации реляционных данных в хранилище BLOB-объектов Azure, в то же время сохраняя их возможность запрашивать.
 
 ```sql
 -- Export data: Move old data to Azure Blob storage while keeping it query-able via an external table.  
@@ -170,13 +171,13 @@ ON (T1.CustomerKey = T2.CustomerKey)
 WHERE T2.YearMeasured = 2009 and T2.Speed > 40;  
 ```  
 
-## <a name="view-polybase-objects-in-ssdt"></a>Просмотреть объекты PolyBase в SSDT  
+## <a name="view-polybase-objects-in-ssdt"></a>Просмотр объектов Polybase в SSDT  
 
-В SQL Server Data Tools, внешние таблицы отображаются в отдельной папке **внешние таблицы**. Внешние источники данных и форматы внешних файлов находятся в папках, вложенных в папку **Внешние ресурсы**.  
+В SQL Server Data Tools внешние таблицы отображаются в отдельных папках **внешние таблицы**. Внешние источники данных и форматы внешних файлов находятся в папках, вложенных в папку **Внешние ресурсы**.  
   
-![Объекты PolyBase в SSDT](media/polybase/external-tables-datasource.png)  
+![Объекты Polybase в SSDT](media/polybase/external-tables-datasource.png)  
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 Дополнительные сведения о PolyBase см. в [этом руководстве](../relational-databases/polybase/polybase-guide.md). 
 

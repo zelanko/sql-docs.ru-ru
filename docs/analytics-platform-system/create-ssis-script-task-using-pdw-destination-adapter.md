@@ -1,5 +1,5 @@
 ---
-title: Создание задачи «скрипт» с помощью адаптер загрузки данных PDW служб SSIS | Документация Майкрософт
+title: Создание задачи "Скрипт" с помощью адаптера загрузки SSIS PDW
 desciption: This Integration Services (SSIS) package script code is a code example for using the SSIS PDW destination adaptor. The Integration Services Script Task allows you to perform virtually any operation that can be accomplished in a .Net application within the context of an SSIS control flow.
 author: mzaman1
 ms.prod: sql
@@ -8,27 +8,28 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: c8781a84bd3a96364930618db83f6900009540be
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 4bc719d44d9a19da5706d20f16fa519352a04a6b
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67961067"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401221"
 ---
-# <a name="create-a-script-task-that-uses-ssis-parallel-data-warehouse-destination-adapter"></a>Создание задачи «скрипт», который использует адаптер загрузки данных служб SSIS Parallel Data Warehouse
-Этот код сценария пакета служб SSIS — это образец кода для использования адаптер загрузки данных PDW служб SSIS.  Задача «скрипт служб интеграции» позволяет выполнять практически любая операция, которая может быть выполнено в приложении .net в контексте потока управления служб SSIS. 
+# <a name="create-a-script-task-that-uses-ssis-parallel-data-warehouse-destination-adapter"></a>Создание задачи «Скрипт» с использованием адаптера назначения «Параллельное хранилище данных SSIS»
+Этот код скрипта пакета служб SSIS представляет собой пример кода для использования адаптера назначения служб SSIS PDW.  Задача «Скрипт Integration Services» позволяет выполнять практически любую операцию, которую можно выполнить в приложении .NET в контексте потока управления служб SSIS. 
   
-## <a name="sample-code"></a>Образец кода  
+## <a name="sample-code"></a>Пример кода  
   
-1.  Создание пустого задачи «скрипт» в службах SSIS.  
+1.  Создание задачи «пустой скрипт» в службах SSIS.  
   
-2.  Откройте задачу в **редактор задачи "скрипт"** и нажмите кнопку **изменить скрипт**.  
+2.  Откройте задачу в **редакторе задачи «Скрипт**» и нажмите кнопку **изменить скрипт**.  
   
-3.  Измените скрипт, чтобы использовать этот код, приведенный ниже. Настроить его в вашей среде, если внести следующие изменения:  
+3.  Измените скрипт, чтобы использовать приведенный ниже код. Настроили сценарий в своей среде, внеся в нее следующие изменения:  
   
-    -   Необходимо сохранить пространство имен сценарий, созданный задачей «скрипт». Обратите внимание на имя пространства имен `namespace ST_<GUID>` и измените приведенный ниже скрипт, изменив *ST_<GUID>*  исходному *GUID* задачи «скрипт».  
+    -   Необходимо хранить пространство имен скрипта, созданного задачей «Скрипт». Запишите имя пространства имен `namespace ST_<GUID>` и измените приведенный ниже сценарий, изменив *ST_<GUID> * на исходный *идентификатор GUID* задачи «Скрипт».  
   
-    -   Замените значение заполнителя на четыре вхождения *XXXXXXXX* со значениями, подходящими для вашей среды и предназначенный действие.  
+    -   Замените четыре вхождения значения заполнителя *XXXXXXXX* значениями, соответствующими вашей среде, и предполагаемое действие.  
   
     ```c#  
     #region Help:  Introduction to the script task  
@@ -264,7 +265,7 @@ ms.locfileid: "67961067"
     ```  
   
 ## <a name="see-also"></a>См. также  
-[Загрузка данных с помощью служб Integration Services](load-with-ssis.md)  
+[Загрузка данных с помощью Integration Services](load-with-ssis.md)  
 
 <!-- MISSING LINK
 [Install Integration Services Destination Adapters](install-integration-services-destination-adapters-sql-server-pdw.md)

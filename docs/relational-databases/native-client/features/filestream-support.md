@@ -13,29 +13,29 @@ helpviewer_keywords:
 ms.assetid: 1ad3400d-7fcd-40c9-87ae-f5afc61e0374
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 4a60cb23aa48b071aa4f1db492cbd1629f38ab22
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.openlocfilehash: 75c5d2f0f04cf0692f4a6c6ca3145210fee014b3
+ms.sourcegitcommit: aaa42f26c68abc2de10eb58444fe6b490c174eab
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73761470"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74308060"
 ---
 # <a name="filestream-support"></a>Поддержка FILESTREAM
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  Компонент FILESTREAM предоставляет способ хранения и доступа к большим двоичным значениям либо с помощью [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], либо путем непосредственного доступа к файловой системе Windows. Большим двоичным значением считается значение с размером больше 2 гигабайт (ГБ). Дополнительные сведения о расширенной поддержке FILESTREAM см. [в &#40;разделе&#41;FILESTREAM SQL Server](../../../relational-databases/blob/filestream-sql-server.md).  
+  Компонент FILESTREAM предоставляет способ хранения и доступа к большим двоичным значениям либо с помощью [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], либо путем непосредственного доступа к файловой системе Windows. Большим двоичным значением считается значение с размером больше 2 гигабайт (ГБ). Дополнительные сведения о расширенной поддержке FILESTREAM см. в разделе [FILESTREAM &#40;SQL Server&#41;](../../../relational-databases/blob/filestream-sql-server.md).  
   
- После открытия подключения к базе данных параметр **@@TEXTSIZE** устанавливается в значение –1 ("неограниченный") по умолчанию.  
+ При открытии ** \@ \@** подключения к базе данных значение TEXTSIZE по умолчанию равно-1 ("неограниченно").  
   
  Предусмотрена также возможность получения доступа и обновления столбцов FILESTREAM с помощью API файловой системы Windows.  
   
  Дополнительные сведения см. в следующих разделах:  
   
--   [OLE DB поддержки &#40;FILESTREAM&#41;](../../../relational-databases/native-client/ole-db/filestream-support-ole-db.md)  
+-   [Поддержка FILESTREAM &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/filestream-support-ole-db.md)  
   
--   [Поддержка &#40;FILESTREAM в ODBC&#41;](../../../relational-databases/native-client/odbc/filestream-support-odbc.md)  
+-   [Поддержка FILESTREAM &#40;ODBC&#41;](../../../relational-databases/native-client/odbc/filestream-support-odbc.md)  
   
--   [Доступ к данным FILESTREAM с OpenSqlFilestream](../../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md)  
+-   [Доступ к данным FILESTREAM с помощью OpenSqlFilestream](../../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md)  
   
 ## <a name="querying-for-filestream-columns"></a>Запрос столбцов FILESTREAM  
  Наборы строк схемы в OLE DB не сообщают, является ли столбец столбцом FILESTREAM. Для создания столбца FILESTREAM невозможно использовать интерфейс ITableDefinition в OLE DB.  
@@ -44,7 +44,7 @@ ms.locfileid: "73761470"
   
  Чтобы создать столбцы FILESTREAM или определить, какие существующие столбцы являются столбцами FILESTREAM, можно использовать столбец **is_filestream** представления каталога [sys.columns](../../../relational-databases/system-catalog-views/sys-columns-transact-sql.md).  
   
- Ниже представлен пример такого кода:  
+ Ниже приведен пример.  
   
 ```  
 -- Create a table with a FILESTREAM column.  
@@ -58,13 +58,13 @@ SELECT is_filestream FROM sys.columns WHERE name = 'varbinaryCol3' AND object_id
 ```  
   
 ## <a name="down-level-compatibility"></a>Совместимость на низком уровне  
- Если клиент был скомпилирован с использованием версии [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, которая была включена в [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], и приложение подключается к [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], то поведение **varbinary (max)** будет совместимо с [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. Это означает, что максимальный размер возвращаемых данных будет ограничен 2 ГБ. Для результирующих значений больше 2 ГБ произойдет усечение, и будет возвращено сообщение "Усечение строковых данных справа".  
+ Если клиент был скомпилирован с использованием [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] версии собственного клиента, которая была включена в [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], а приложение подключается к [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], то поведение **varbinary (max)** будет совместимо с [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. Это означает, что максимальный размер возвращаемых данных будет ограничен 2 ГБ. Для результирующих значений больше 2 ГБ произойдет усечение, и будет возвращено сообщение "Усечение строковых данных справа".  
   
  Если уровень совместимости типов данных установлен равным «80», то поведение клиента будет согласовано с поведением клиента низкого уровня.  
   
- Для клиентов, использующих SQLOLEDB или других поставщиков, выпущенных до [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] версии [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, **varbinary (max)** будет сопоставляться с изображением.  
+ Для клиентов, использующих SQLOLEDB или других поставщиков, освобожденных [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] до версии [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] собственного клиента, тип **varbinary (max)** будет сопоставлен с изображением.  
   
-## <a name="see-also"></a>См. также раздел  
- [Компоненты SQL Server Native Client](../../../relational-databases/native-client/features/sql-server-native-client-features.md)  
+## <a name="see-also"></a>См. также  
+ [SQL Server Native Client функции](../../../relational-databases/native-client/features/sql-server-native-client-features.md)  
   
   

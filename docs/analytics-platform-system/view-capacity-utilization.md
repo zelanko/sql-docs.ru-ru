@@ -1,6 +1,6 @@
 ---
-title: Просмотреть сведения об использовании емкости в Analytics Platform System | Документация Майкрософт
-description: Просмотр использования емкости в Analytics Platform System.
+title: Просмотр использования емкости
+description: Просмотр использования емкости в системе аналитики платформы.
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,29 +8,30 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 0ac9347c9f5ec31c5f4f41228b1ef14119257751
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: c2dafa2df09bb8141fca8c30a80c6471ffe1e060
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67959789"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74399455"
 ---
-# <a name="view-capacity-utilization-in-analytics-platform-system"></a>Просмотр использования емкости в Analytics Platform System
-В этом разделе объясняется, как просмотреть сведения об использовании емкости в SQL Server PDW appliance.  
+# <a name="view-capacity-utilization-in-analytics-platform-system"></a>Просмотр использования емкости в системе аналитики платформы
+В этом разделе объясняется, как просмотреть сведения об использовании емкости в устройстве SQL Server PDW.  
   
-## <a name="to-view-capacity-utilization-by-using-admin-console"></a>Чтобы просмотреть использование ресурсов с помощью консоли администрирования  
-Чтобы просмотреть пространство, используемое, откройте консоль администратора и нажмите кнопку **хранения** вкладки. Существует **хранения** вкладку для региона PDW.  
+## <a name="to-view-capacity-utilization-by-using-admin-console"></a>Просмотр использования емкости с помощью консоли администрирования  
+Чтобы просмотреть используемое пространство, откройте консоль администрирования и перейдите на вкладку **хранилище** . Для региона PDW существует вкладка **хранилище** .  
   
 ![Хранилище консоли администрирования PDW](./media/view-capacity-utilization/SQL_Server_PDW_AdminConsol_StorageV2.png "SQL_Server_PDW_AdminConsol_StorageV2")  
   
-## <a name="to-view-capacity-utilization-by-using-queries"></a>Чтобы просмотреть использование ресурсов с помощью запросов  
-Чтобы понять, если узел хватает места, система мониторинга работоспособности SQL Server PDW уже отслеживает свободное место для всех томов в каждом узле.  
+## <a name="to-view-capacity-utilization-by-using-queries"></a>Просмотр использования емкости с помощью запросов  
+Чтобы понять, не хватает ли места на узле, система мониторинга работоспособности SQL Server PDW уже отслеживает свободное пространство для всех томов в каждом узле.  
   
-Если свободного места в томе не превышает 30%, SQL Server PDW создает **предупреждение** предупреждения в [sys.dm_pdw_component_health_active_alerts](../relational-databases/system-dynamic-management-views/sys-dm-pdw-component-health-active-alerts-transact-sql.md).  Предупреждения, пока свободного пространства становится доступным.  
+Если свободное пространство в томе падает ниже 30%, SQL Server PDW создает **предупреждение** в [sys. dm_pdw_component_health_active_alerts](../relational-databases/system-dynamic-management-views/sys-dm-pdw-component-health-active-alerts-transact-sql.md).  Предупреждение остается недоступным, пока не освободится свободное пространство.  
   
-Если свободного места в томе не опустится ниже 10%, SQL Server PDW создает **критических** оповещение. Это считается критическое, так как запросы может завершиться ошибкой, если они вызывают увеличение базы данных.  
+Если свободное пространство в томе падает с 10%, SQL Server PDW создает **критическое** оповещение. Это считается критически важным, так как запросы могут завершиться ошибкой, если они повлечет за собой расширение базы данных.  
   
-Чтобы получить использование тома, см. ниже.  
+Чтобы получить сведения об использовании тома, см. Следующий пример.  
   
 ```sql  
 SELECT   
@@ -67,7 +68,7 @@ GROUP BY space.[pdw_node_id] , space.[node_name] , space.[component_instance_id]
 ORDER BY space.[pdw_node_id], MAX(space.[volume_name]);  
 ```  
   
-Чтобы получить место, занятое баз данных по различным узлам устройства, см. ниже.  
+Чтобы получить пространство, используемое базами данных между узлами устройств, см. Следующий пример.  
   
 ```sql  
 SELECT   
@@ -104,5 +105,5 @@ ORDER BY [db_name], [pdw_node_id];
   
 ## <a name="see-also"></a>См. также  
 <!-- MISSING LINKS [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->
-[Мониторинг устройства &#40;Analytics Platform System&#41;](appliance-monitoring.md)  
+[Мониторинг устройств &#40;системная платформа аналитики&#41;](appliance-monitoring.md)  
   

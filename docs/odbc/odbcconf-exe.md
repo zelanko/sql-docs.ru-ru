@@ -1,5 +1,5 @@
 ---
-title: ODBCCONF. EXE-ФАЙЛА | Документация Майкрософт
+title: ОДБККОНФ. EXE | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,18 +12,18 @@ helpviewer_keywords:
 ms.assetid: 3bf2be83-61f9-4183-836b-85204ac7116a
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: d7934226ec489af0ac0b1f655c7d27660cb6a928
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b70622ea038b61883ce7a5307a558a5667139fb1
+ms.sourcegitcommit: a26cb217adfbbfb3636dff43fb19a46462e2e994
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67996268"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74491966"
 ---
-# <a name="odbcconfexe"></a>ODBCCONF.EXE
-ODBCCONF.exe является средством командной строки, которое позволяет настроить ODBC драйверы и имена источников данных.  
+# <a name="odbcconfexe"></a>ОДБККОНФ. ПРОГРАММЫ
+ОДБККОНФ. exe — это программа командной строки, которая позволяет настраивать драйверы ODBC и имена источников данных.  
   
 > [!NOTE]  
->  ODBCCONF.exe будет поддерживаться в будущих версиях Windows Data Access Components. Избегайте использования этой функции и запланируйте изменение приложений, которые сейчас ее используют. Вы можете управлять драйверами и источниками данных с использованием команд PowerShell. Дополнительные сведения об этих командах PowerShell см. в разделе [командлеты компонентов доступа к данным Windows](https://technet.microsoft.com/library/hh771019.aspx).  
+>  ОДБККОНФ. exe будет удален в следующей версии компонентов доступа к данным Windows. Избегайте использования этой функции и запланируйте изменение приложений, которые в настоящее время используют эту функцию. Для управления драйверами и источниками данных можно использовать команды PowerShell. Дополнительные сведения об этих командах PowerShell см. в разделе [командлеты Windows Data Access Components](/powershell/module/wdac).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -32,38 +32,38 @@ ODBCCONF [switches] action
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *Коммутаторы*  
- Ноль или более параметров. Список доступных параметров см. в разделе "Примечания" Далее в этом разделе.  
+ *аргументы*  
+ Ноль или более параметров переключения. Список доступных параметров см. в подразделе "Примечания" Далее в этом разделе.  
   
- *action*  
+ *поддержки*  
  Одно действие для выполнения. Список доступных параметров см. в разделе "Примечания".  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  Доступны следующие параметры:  
   
-|Параметр|Описание|  
+|Переключатель|Описание|  
 |------------|-----------------|  
-|/A {*действие*}|Укажите действие.<br /><br /> /A является необязательным, если только одно действие.|  
-|/?|Отображает использование для ODBCCONF. EXE-ФАЙЛА.|  
-|/C|Обработка продолжается, если действие завершилось ошибкой.|  
-|/E|Стереть файл ответа, заданный параметром /F, после завершения обработки.|  
-|/F|Использовать файл ответов, таких как `odbcconf /F my.rsp`.<br /><br /> My.rsp может выглядеть следующим образом: `REGSVR c:\my.dll`<br /><br /> /A не используется в файле ответов.|  
-|/H|Отобразить использование (Справка). Этот параметр является таким же, как /?.|  
-|/ L [*режим*] *имя файла*|Отправить выходные данные программы в файл в одном из трех режимов: обычный (n), verbose (v) и отладки (d). Отладка записей режима библиотеки DLL, загружаемых с odbcconf.exe.<br /><br /> При указании/l без режима файла журнала будет пустым.<br /><br /> Например **log.txt регистрируются**.|  
-|/R|Действие выполняется после перезагрузки.|  
-|/S|Режим без вывода сообщений. Не отображать сообщения об ошибках.|  
+|/A {*Action*}|Укажите действие.<br /><br /> Параметр/a является необязательным, если указано только одно действие.|  
+|/?|Отображение сведений об использовании для ОДБККОНФ. Программы.|  
+|Ключей|Обработка продолжится при сбое действия.|  
+|/E|Очистка файла ответов, указанного параметром/F, после завершения обработки.|  
+|/F|Используйте файл ответов, например `odbcconf /F my.rsp`.<br /><br /> мой. rsp может выглядеть следующим образом:`REGSVR c:\my.dll`<br /><br /> /A не используется в файле ответов.|  
+|/H|Отображение сведений об использовании (Справка). Этот параметр совпадает с/?.|  
+|/L [*mode*] *имя_файла*|Отправка выходных данных программы в файл в одном из трех режимов: обычная (n), Verbose (v) и Debug (d). В режиме отладки записываются библиотеки DLL, загруженные программой одбкконф. exe.<br /><br /> Если указать/L без режима, файл журнала будет пустым.<br /><br /> Например, **/лв log. txt**.|  
+|/R|Действие будет выполнено после перезагрузки.|  
+|/S|Автоматический режим Не отображать сообщения об ошибках.|  
   
- Доступны следующие действия:  
+ Доступны следующие действия.  
   
-|Action|Описание|  
+|Действие|Описание|  
 |------------|-----------------|  
-|CONFIGDRIVER *имя_драйвера ** params конфигурации драйвера*|Загружает DLL-файлов установки соответствующего драйвера и вызовы **ConfigDriver** функции.<br /><br /> Эквивалентно [функция SQLConfigDriver](../odbc/reference/syntax/sqlconfigdriver-function.md).<br /><br /> Пример:<br /><br /> /A {CONFIGDRIVER «Имя драйвера» «CPTimeout = 60»}<br /><br /> /A {CONFIGDRIVER «Имя драйвера» «DriverODBCVer = 03.80»}|  
-|CONFIGDSN *имя_драйвера* DSN =*имя* &#124; *атрибуты*|Добавляет или изменяет системный источник данных.<br /><br /> Эквивалентно [функция SQLConfigDataSource](../odbc/reference/syntax/sqlconfigdatasource-function.md).<br /><br /> Пример:<br /><br /> /A {CONFIGDSN "SQL Server" "DSN=name &#124; Server=srv"}|  
-|CONFIGSYSDSN *имя_драйвера* DSN =*имя* &#124; *атрибуты*|Добавляет или изменяет системный источник данных.<br /><br /> Эквивалентно [функция SQLConfigDataSource](../odbc/reference/syntax/sqlconfigdatasource-function.md).<br /><br /> Пример:<br /><br /> /A {CONFIGSYSDSN "SQL Server" "DSN=name &#124; Server=srv"}|  
-|INSTALLDRIVER|Эквивалентно [функция SQLInstallDriverEx](../odbc/reference/syntax/sqlinstalldriverex-function.md).<br /><br /> Сведения о синтаксисе пары ключевое_слово значение, передаваемое INSTALLDRIVER см. в разделе [подразделы спецификаций драйверов](../odbc/reference/install/driver-specification-subkeys.md).<br /><br /> Пример:<br /><br /> /A {INSTALLDRIVER  "Your Driver &#124; Driver=c:\your.dll &#124; Setup=c:\your.dll &#124; APILevel=2 &#124; ConnectFunctions=YYY &#124; DriverODBCVer=03.50 &#124; FileUsage=0 &#124; SQLLevel=1"}|  
-|INSTALLTRANSLATOR *translator конфигурации ** пути драйвера*|Добавляет сведения о translator, чтобы **HKEY_LOCAL_MACHINE\SOFTWARE\ODBC\ODBCINST. Переводчики INI\ODBC** раздел реестра.<br /><br /> Эквивалентно [функция SQLInstallTranslatorEx](../odbc/reference/syntax/sqlinstalltranslatorex-function.md).<br /><br /> Сведения о синтаксисе пары ключевое_слово значение, передаваемое INSTALLDRIVER см. в разделе [подразделы спецификаций преобразователей](../odbc/reference/install/translator-specification-subkeys.md).<br /><br /> Пример:<br /><br /> /A {INSTALLTRANSLATOR  "My Translator &#124; Translator=c:\my.dll &#124; Setup=c:\my.dll"}|  
-|REGSVR *dll*|Регистрирует библиотеки DLL.<br /><br /> Эквивалент regsvr32.exe.<br /><br /> Пример:<br /><br /> /A {REGSVR c:\my.dll}|  
-|SETFILEDSNDIR|Когда HKEY_LOCAL_MACHINE\SOFTWARE\ODBC\ODBC. DSN\DefaultDSNDir INI\ODBC файл не существует, действие SETFILEDSNDIR создаст его и присвойте ей значение в HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\CommonFilesDir, дополненный \ODBC\Data источников.<br /><br /> Значение по HKEY_LOCAL_MACHINE\SOFTWARE\ODBC\ODBC. Файл DSN\DefaultDSNDir INI\ODBC указывает расположение по умолчанию, администратор источников данных ODBC при создании источника данных на основе файла.<br /><br /> Пример:<br /><br /> /A {SETFILEDSNDIR}|  
+|КОНФИГДРИВЕР *driver_name * * параметры конфигурации, относящиеся к драйверу*|Загружает соответствующую библиотеку DLL установки драйвера и вызывает функцию **конфигдривер** .<br /><br /> Эквивалент [функции склконфигдривер](../odbc/reference/syntax/sqlconfigdriver-function.md).<br /><br /> Например:<br /><br /> /A {КОНФИГДРИВЕР "имя драйвера" "Кптимеаут = 60"}<br /><br /> /A {КОНФИГДРИВЕР "имя драйвера" "Дриверодбквер = 03.80"}|  
+|CONFIGDSN *driver_name* DSN =*имя* &#124; *атрибуты*|Добавляет или изменяет системный источник данных.<br /><br /> Эквивалент [функции SQLConfigDataSource](../odbc/reference/syntax/sqlconfigdatasource-function.md).<br /><br /> Например:<br /><br /> /A {CONFIGDSN "SQL Server" "DSN = Name &#124; Server = SRV"}|  
+|КОНФИГСИСДСН *driver_name* DSN =*имя* &#124; *атрибуты*|Добавляет или изменяет системный источник данных.<br /><br /> Эквивалент [функции SQLConfigDataSource](../odbc/reference/syntax/sqlconfigdatasource-function.md).<br /><br /> Например:<br /><br /> /A {КОНФИГСИСДСН "SQL Server" "DSN = Name &#124; Server = SRV"}|  
+|инсталлдривер|Эквивалентно [функции склинсталлдриверекс](../odbc/reference/syntax/sqlinstalldriverex-function.md).<br /><br /> Дополнительные сведения о синтаксисе пар «ключевое слово-значение», переданном в ИНСТАЛЛДРИВЕР, см. в разделе [подразделы спецификации драйвера](../odbc/reference/install/driver-specification-subkeys.md).<br /><br /> Например:<br /><br /> /A {ИНСТАЛЛДРИВЕР "драйвер &#124; драйвер = к:\йоур.длл &#124; Setup = к:\йоур.длл &#124; Апилевел = 2 &#124; Коннектфунктионс = YYY &#124; Дриверодбквер = 03.50 &#124; FileUsage = 0 &#124; SQLLevel = 1"}|  
+|*Путь к драйверу конфигурации инсталлтранслатор Translator * **|Добавляет сведения о трансляторе в **HKEY_LOCAL_MACHINE \софтваре\одбк\одбЦинст. Раздел реестра ИНИ\ОДБК Translators** .<br /><br /> Эквивалентно [функции склинсталлтранслаторекс](../odbc/reference/syntax/sqlinstalltranslatorex-function.md).<br /><br /> Сведения о синтаксисе пар «ключевое слово-значение», переданном в ИНСТАЛЛДРИВЕР, см. в статье [подразделы спецификации переводчика](../odbc/reference/install/translator-specification-subkeys.md).<br /><br /> Например:<br /><br /> /A {ИНСТАЛЛТРАНСЛАТОР "мой транслятор &#124; переводчик = к:\ми.длл &#124; Setup = к:\ми.длл"}|  
+|*Библиотека DLL* регсвр|Регистрирует библиотеку DLL.<br /><br /> Эквивалентно regsvr32. exe.<br /><br /> Например:<br /><br /> /A {РЕГСВР к:\ми.длл}|  
+|сетфиледсндир|При HKEY_LOCAL_MACHINE \СОФТВАРЕ\ОДБК\ОДБК. Файл ИНИ\ОДБК Дсн\дефаултдсндир не существует, действие СЕТФИЛЕДСНДИР создаст его и присвоит ему значение в HKEY_LOCAL_MACHINE \Софтваре\микрософт\виндовс\куррентверсион\коммонфилесдир, к которому добавляется \ODBC\Data источники.<br /><br /> Значение в HKEY_LOCAL_MACHINE \СОФТВАРЕ\ОДБК\ОДБК. ИНИ\ОДБК File Дсн\дефаултдсндир указывает расположение по умолчанию, используемое администратором источников данных ODBC при создании файлового источника данных.<br /><br /> Например:<br /><br /> /A {СЕТФИЛЕДСНДИР}|  
   
 ## <a name="see-also"></a>См. также  
  [Microsoft Open Database Connectivity (ODBC)](../odbc/microsoft-open-database-connectivity-odbc.md)

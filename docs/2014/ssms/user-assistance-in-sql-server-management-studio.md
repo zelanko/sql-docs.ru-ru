@@ -1,7 +1,7 @@
 ---
 title: Справка и поддержка пользователей в среде SQL Server Management Studio | Документация Майкрософт
 ms.custom: ''
-ms.date: 03/07/2017
+ms.date: 11/25/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: ssms
@@ -13,24 +13,24 @@ ms.assetid: 3c33a474-e507-4712-86fe-ae40e8370319
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9b972a1d2bb1f65a8b8e26005a3af8c10b2dc02f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3d58ac84e394d7b8dfe342430991f2ddefa678be
+ms.sourcegitcommit: 7183735e38dd94aa3b9bab2b73ccab54c916ff86
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63016185"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74684459"
 ---
 # <a name="user-assistance-in-sql-server-management-studio"></a>Справка и поддержка пользователей в среде SQL Server Management Studio
-  Справка и поддержка пользователей в среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] доступна через меню «Справка» и в электронной документации [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. В меню «Справка» в [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] предлагается несколько вариантов доступа к сведениям об [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Оно также предоставляет доступ к сообществу [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и ресурсам интерактивной библиотеки MSDN, ранее недоступным из справочной среды. Справочная среда теперь также может быть настроена как на запуск из среды [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] , так и в собственном внешнем окне.  
+  Справка и поддержка пользователей в среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] доступна через меню «Справка» и в электронной документации [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . В меню «Справка» в [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] предлагается несколько вариантов доступа к сведениям об [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Оно также предоставляет доступ к сообществу [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и ресурсам интерактивной библиотеки MSDN, ранее недоступным из справочной среды. Справочная среда теперь также может быть настроена как на запуск из среды [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] , так и в собственном внешнем окне.  
   
 ## <a name="the-help-interface"></a>Интерфейс справки  
  Вкладки **Содержимое** и **Индекс** предоставляют функции и интерфейс, уже знакомые пользователям [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Доступны следующие параметры.  
   
--   **Инструкции**  
+-   **Как…**  
   
      Предоставляет иерархический набор связанных страниц с полезными статьями, описывающими типичные задачи при работе с [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Содержимое упорядочено по компонентам и задачам, например раздел «Репликации» и т. д.  
   
--   **Поиск**  
+-   **Осуществлять**  
   
      Выполняется поиск по разделам с предопределенными фильтрами или без них. Поиск в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] — это отдельная страница с вкладками. Пользователи могут уточнять поиск, устанавливая фильтры по определенному типу раздела, языку или технологии. По умолчанию при поиске не используется никаких настроенных фильтров, при этом поиск выполняется только по установленным коллекциям.  
   
@@ -44,10 +44,10 @@ ms.locfileid: "63016185"
   
      Сохраняются пользовательские закладки для облегчения повторного доступа.  
   
- Использование справки (справка проводника документов[!INCLUDE[msCoName](../includes/msconame-md.md)] ) предоставляет пользователям сведения о средстве просмотра справки, но эти разделы находятся в наборе разделов, отдельном от электронной документации по [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Дополнительные сведения о средстве просмотра справки см. в пункте **Использование справки** меню "Справка" электронной документации по [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Сведения о добавлении коллекции разделов справки к коллекции электронной документации, см. в разделе [Добавление или удаление документации по продукту SQL Server](../2014-toc/books-online-for-sql-server-2014.md).  
+ Использование справки (справка проводника документов[!INCLUDE[msCoName](../includes/msconame-md.md)] ) предоставляет пользователям сведения о средстве просмотра справки, но эти разделы находятся в наборе разделов, отдельном от электронной документации по [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Дополнительные сведения о средстве просмотра справки см. в пункте **Использование справки** меню "Справка" электронной документации по [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Сведения о добавлении набора разделов «Справка по справке» в коллекцию электронной документации см. в разделе [Добавление или удаление документации по продукту для SQL Server](../2014-toc/index.yml).  
   
 ## <a name="msdn-online-and-sql-server-communities"></a>Интерактивная библиотека MSDN Online и сообщества SQL Server  
- Справка в [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] также предоставляет пользователям возможности подключения к MSDN Online и тематическим сообществам по [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]в Интернете для получения сведений. Возможные действия:  
+ Справка в [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] также предоставляет пользователям возможности подключения к MSDN Online и тематическим сообществам по [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]в Интернете для получения сведений. Можно сделать следующее.  
   
 -   получить доступ к сообществам [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] со страницы «Инструкции»;  
   

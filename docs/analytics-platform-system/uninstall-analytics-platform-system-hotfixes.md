@@ -1,6 +1,6 @@
 ---
-title: Удаление исправлений Analytics Platform System | Документация Майкрософт
-description: Удаление исправлений Analytics Platform System.
+title: Удаление исправлений
+description: Удалите исправления системы аналитики для платформы.
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,34 +8,35 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: d7135972201fe8cce8a43cbd3c8fe547ce40248e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: ef6929aeb06c9472eb3ff210de016117a9636ded
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67959904"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74399764"
 ---
-# <a name="uninstall-analytics-platform-system-hotfixes"></a>Удаление исправлений Analytics Platform System 
-Следующие шаги содержат описание удаления ранее установленных исправлений Analytics Platform System.  
+# <a name="uninstall-analytics-platform-system-hotfixes"></a>Удаление исправлений для системы аналитики платформы 
+Ниже описаны действия по удалению ранее установленного исправления платформы аналитики.  
   
-## <a name="before-you-begin"></a>Перед началом  
+## <a name="before-you-begin"></a>Перед началом работы  
   
-### <a name="prerequisites"></a>предварительные требования  
-Чтобы выполнить эти действия, вам потребуется:  
+### <a name="prerequisites"></a>Необходимые компоненты  
+Для выполнения этих действий потребуется:  
   
--   Система Analytics Platform System имя входа с разрешениями для доступа к консоли администрирования для мониторинга устройства.  
+-   Вход в систему платформы аналитики с разрешениями на доступ к консоли администрирования для мониторинга устройства.  
   
--   Учетной записи администратора домена выполнить вход в <em>< appliance_domain ></em> **-HST01** узла.  
+-   Учетная запись администратора домена для входа на узел <em><appliance_domain></em> **-HST01** .  
   
--   Номер статьи базы знаний, исправления для удаления.  
+-   Номер статьи базы знаний для удаляемого исправления.  
   
-## <a name="HowToUninstallPDW"></a>Чтобы удалить исправление SQL Server PDW  
+## <a name="HowToUninstallPDW"></a>Удаление исправления SQL Server PDW  
   
-1.  Выполните вход на <em>< appliance_domain ></em> **-HST01** узел администратора домена Fabric.  
+1.  Войдите в <em><appliance_domain узел></em> **-HST01** в качестве администратора домена структуры.  
   
-2.  Открыть командную строку с помощью запуска от имени администратора.  
+2.  Чтобы открыть командную строку, используйте команду Запуск от имени администратора.  
   
-3.  Перейдите в каталог `C:\PDWINST\Patches\<kbarticle>\media` где *<kbarticle>* — номер статьи базы знаний для исправления для удаления.  
+3.  Перейдите в `C:\PDWINST\Patches\<kbarticle>\media` каталог, *<kbarticle>* где — номер статьи базы знаний для удаляемого исправления.  
   
     ```  
     cd /d c:\PDWINST\Patches\<kbarticle>\media  
@@ -48,8 +49,8 @@ ms.locfileid: "67959904"
     ```  
   
 ## <a name="see-also"></a>См. также  
-[Скачивание и применение обновлений Майкрософт &#40;Analytics Platform System&#41;](download-and-apply-microsoft-updates.md)  
-[Удаление обновлений &#40;Analytics Platform System&#41;](uninstall-microsoft-updates.md)  
-[Примените обновления системы платформы аналитики &#40;Analytics Platform System&#41;](apply-analytics-platform-system-hotfixes.md)  
-[Обслуживание программного обеспечения &#40;Analytics Platform System&#41;](software-servicing.md)  
+[Загрузите и примените обновления Майкрософт &#40;&#41;платформы аналитики](download-and-apply-microsoft-updates.md)  
+[Удаление центра обновления Майкрософт &#40;система аналитики&#41;](uninstall-microsoft-updates.md)  
+[Применить исправления системы аналитики к системе &#40;Analytics Platform&#41;](apply-analytics-platform-system-hotfixes.md)  
+[Система обслуживания программного обеспечения &#40;Analytics Platform&#41;](software-servicing.md)  
   

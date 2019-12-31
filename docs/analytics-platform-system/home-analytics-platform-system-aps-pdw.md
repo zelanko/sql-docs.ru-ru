@@ -1,5 +1,5 @@
 ---
-title: Документация по Analytics Platform System | Документы Майкрософт
+title: Документация
 description: Microsoft Analytics Platform System (APS) представляет собой платформу обработки данных, предназначенную для хранения данных и анализа больших объемов данных. Она предлагает возможности глубокой интеграции данных, высокоскоростной обработки запросов, высокомасштабируемого хранения и простого обслуживания комплексных решений в области бизнес-аналитики.
 author: mzaman1
 ms.prod: sql
@@ -8,18 +8,19 @@ ms.topic: conceptual
 ms.date: 04/18/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 08f70ff74c5743f202867ae2a57adc1c6b9d677d
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 4285cbe15659bde63655fc61141d4df7abdbba09
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70153361"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401097"
 ---
 # <a name="microsoft-analytics-platform-system"></a>Microsoft Analytics Platform System
 
 Microsoft Analytics Platform System (APS) представляет собой платформу обработки данных, предназначенную для хранения данных и анализа больших объемов данных. Она предлагает возможности глубокой интеграции данных, высокоскоростной обработки запросов, высокомасштабируемого хранения и простого обслуживания комплексных решений в области бизнес-аналитики.
 
-![Архитектура системы](media/architecture-high-level.png "архитектура системы")
+![Архитектура устройства](media/architecture-high-level.png "Архитектура устройства")
 
 Analytics Platform System поддерживает размещение SQL Server Parallel Data Warehouse (PDW), программного обеспечения для хранилища данных с массивной параллельной обработкой (MPP).
 
@@ -48,6 +49,6 @@ Analytics Platform System поддерживает размещение SQL Serv
 
 - использование средств бизнес-аналитики для создания комплексных решений от начала до конца.
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 Дополнительные сведения о преимуществах PDW см. в документе [A Breakthrough Platform for Next-Generation Data Warehousing and Big Data Solutions](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/dn520808%28v=msdn.10%29) (Передовая платформа для новейших решений для хранения данных и работы с большими данными) на сайте MSDN.

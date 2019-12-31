@@ -1,7 +1,7 @@
 ---
 title: SQL Server 2014 Analysis Services | Документация Майкрософт
 ms.custom: ''
-ms.date: 06/07/2019
+ms.date: 11/25/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: analysis-services
@@ -18,12 +18,12 @@ ms.assetid: 49d186f4-4b4d-4a5a-bb1a-e2699c64a731
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 93a8f9ddab1fe1f78c5af94cae30c8ce7cbf2c37
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.openlocfilehash: bceabba9b490be6bc2c51b4fdcce9b6b131eb0ce
+ms.sourcegitcommit: 7183735e38dd94aa3b9bab2b73ccab54c916ff86
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69025447"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74683480"
 ---
 # <a name="sql-server-2014-analysis-services"></a>SQL Server 2014 Analysis Services
 
@@ -34,7 +34,7 @@ ms.locfileid: "69025447"
 Документация разделена по версии. В настоящее время вы используете SQL Server 2014 Analysis Services документацию.
 
 - Дополнительные сведения о SQL Server 2012 и более ранних версиях см. в [документации по SQL Server предыдущих версий](https://docs.microsoft.com/previous-versions/sql/).
-- Дополнительные сведения о SQL Server 2014 см. в [электронной документации по SQL Server 2014](../2014-toc/books-online-for-sql-server-2014.md)
+- Дополнительные сведения о SQL Server 2014 см. в [электронной документации по SQL Server 2014](../2014-toc/index.yml)
 - Дополнительные сведения о SQL Server 2016 и более поздних версиях см. в [документации по Microsoft SQL](https://docs.microsoft.com/sql/).
 - Дополнительные сведения о Azure Analysis Services см. в [документации по Azure Analysis Services](https://docs.microsoft.com/azure/analysis-services/).
 
@@ -60,26 +60,26 @@ ms.locfileid: "69025447"
   
  Основная документация по службам Analysis Services организована по разделам, которые соответствуют типу создаваемого объекта. Дополнительные сведения о каждом режиме или функциональной области см. в разделах по следующим ссылкам.  
   
- **Просмотр содержимого по области**  
- ![Маленький значок папки с файлами](../../2014/integration-services/media/filefolder-small.gif "Маленький значок папки с файлами") [Сравнение табличных и многомерных решений &#40;SSAS&#41; ](comparing-tabular-and-multidimensional-solutions-ssas.md)  
+ **Просмотр содержимого по областям**  
+ ![Маленький значок папки с файлами](../../2014/integration-services/media/filefolder-small.gif "Маленький значок папки") [Сравнение табличных и многомерных решений &#40;SSAS&#41;](comparing-tabular-and-multidimensional-solutions-ssas.md)  
   
- ![Маленький значок папки с файлами](../../2014/integration-services/media/filefolder-small.gif "Маленький значок папки с файлами") [Управление экземплярами Analysis Services](instances/analysis-services-instance-management.md)  
+ ![Маленький значок папки с файлами](../../2014/integration-services/media/filefolder-small.gif "Маленький значок папки") [Analysis Services управление экземплярами](instances/analysis-services-instance-management.md)  
   
- ![Маленький значок папки с файлами](../../2014/integration-services/media/filefolder-small.gif "Маленький значок папки с файлами") [Табличное &#40;&#41; моделирование служб SSAS](tabular-models/tabular-models-ssas.md)  
+ ![Маленький значок папки с файлами](../../2014/integration-services/media/filefolder-small.gif "Маленький значок папки") [табличное моделирование &#40;ТАБЛИЧные&#41;SSAS](tabular-models/tabular-models-ssas.md)  
   
- ![Маленький значок папки с файлами](../../2014/integration-services/media/filefolder-small.gif "Маленький значок папки с файлами") [Многомерное моделирование &#40;SSAS&#41; ](multidimensional-models/multidimensional-models-ssas.md)  
+ ![Маленький значок папки с файлами](../../2014/integration-services/media/filefolder-small.gif "Маленький значок папки") [многомерное моделирование &#40;SSAS&#41;](multidimensional-models/multidimensional-models-ssas.md)  
   
- ![Маленький значок папки с файлами](../../2014/integration-services/media/filefolder-small.gif "Маленький значок папки с файлами") [Интеллектуальный &#40;анализ&#41; данных SSAS](data-mining/data-mining-ssas.md)  
+ ![Маленький значок папки](../../2014/integration-services/media/filefolder-small.gif "Маленький значок папки") [интеллектуальный анализ данных &#40;SSAS&#41;](data-mining/data-mining-ssas.md)  
   
- ![Маленький значок папки с файлами](../../2014/integration-services/media/filefolder-small.gif "Маленький значок папки с файлами") [PowerPivot для SharePoint &#40;SSAS&#41; ](power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md)  
+ ![Маленький значок папки](../../2014/integration-services/media/filefolder-small.gif "Маленький значок папки") [PowerPivot для SharePoint &#40;SSAS&#41;](power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md)  
   
 > [!NOTE]  
->  Функции [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] различаются в зависимости от выпуска. Многомерные модели и модели интеллектуального анализа данных поддерживаются в стандартном выпуске, но с меньшим количеством функций по сравнению с выпусками более высокого уровня. Табличные модели и PowerPivot для SharePoint являются функциями высокого уровня, которые отсутствуют в стандартном выпуске. Дополнительные сведения см. в разделе [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
+>  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]функции зависят от выпуска. Многомерные модели и модели интеллектуального анализа данных поддерживаются в стандартном выпуске, но с меньшим количеством функций по сравнению с выпусками более высокого уровня. Табличные модели и PowerPivot для SharePoint являются функциями высокого уровня, которые отсутствуют в стандартном выпуске. Дополнительные сведения см. [в разделе функции, поддерживаемые различными Выпусками SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
 ## <a name="see-also"></a>См. также  
- [Учебники &#40;по Analysis Services SSAS&#41;](analysis-services-tutorials-ssas.md)   
+ [Учебники по Analysis Services &#40;SSAS&#41;](analysis-services-tutorials-ssas.md)   
  [Установка для SQL Server 2014](../database-engine/install-windows/installation-for-sql-server.md)   
- [Analysis Services руководством &#40;разработчика&#41;](analysis-services-developer-documentation.md)   
+ [&#40;Analysis Services с руководством разработчика&#41;](analysis-services-developer-documentation.md)   
  [Центр ресурсов SQL Server](https://go.microsoft.com/fwlink/?linkID=219676)   
  [SQLCat.com](https://go.microsoft.com/fwlink/?linkID=220963)  
   
