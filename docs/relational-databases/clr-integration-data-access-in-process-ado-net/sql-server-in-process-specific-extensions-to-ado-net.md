@@ -1,6 +1,7 @@
 ---
-title: Специальные расширения SQL Server в процессе для ADO.NET | Документация Майкрософт
-ms.custom: ''
+title: SQL Server ADO.NET расширения в процессе
+description: Ссылки на статьи о четырех основных функциональных расширениях для ADO.NET, специально предназначенных для внутрипроцессного использования.
+ms.custom: seo-lt-2019
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 781b812e-eb14-472a-85fa-aa4cdb929bee
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b1ed0cf58c34506ce12dd04bf529a80d44a03d2d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f3c1729d216a1456551da3699c286385694e558a
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67951681"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258172"
 ---
 # <a name="sql-server-in-process-specific-extensions-to-adonet"></a>Внутрипроцессные расширения SQL Server для ADO.NET
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "67951681"
  [Объект SqlPipe](../../relational-databases/clr-integration-data-access-in-process-ado-net/sqlpipe-object.md)  
  Этот класс содержит процедуры для отправки табличных результатов и сообщений клиенту.  
   
- [Объект SqlTriggerContext](../../relational-databases/clr-integration-data-access-in-process-ado-net/sqltriggercontext-object.md)  
+ [SqlTriggerContext, объект](../../relational-databases/clr-integration-data-access-in-process-ado-net/sqltriggercontext-object.md)  
  Этот класс предоставляет сведения о контексте, в котором выполняется триггер.  
   
  [Объект SqlDataRecord](../../relational-databases/clr-integration-data-access-in-process-ado-net/sqldatarecord-object.md)  

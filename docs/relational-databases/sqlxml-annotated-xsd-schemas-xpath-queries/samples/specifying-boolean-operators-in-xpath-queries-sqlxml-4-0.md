@@ -1,6 +1,5 @@
 ---
-title: Указание логических операторов в запросах XPath (SQLXML 4.0) | Документация Майкрософт
-ms.custom: ''
+title: Использование логических операторов в запросах XPath (SQLXML)
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -16,38 +15,39 @@ helpviewer_keywords:
 ms.assetid: 9928cff5-62ac-42aa-96bf-2e09a1df0bc3
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c57742e1fe2c11c7e81518384f72b2acbab7a925
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 00a53f9d1b04d0f96e854a9e85c1588aa33e60fc
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68027086"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252582"
 ---
 # <a name="specifying-boolean-operators-in-xpath-queries-sqlxml-40"></a>Указание логических операторов в запросах XPath (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  В следующем примере показано, каким образом логические операторы задаются в запросах XPath. В этом примере задается запрос XPath к схеме сопоставления, содержащейся в файле SampleSchema1.xml. Сведения об этом образце схемы см. в разделе [образец аннотированные схемы XSD для примеров XPath &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
+  В следующем примере показано, каким образом логические операторы задаются в запросах XPath. В этом примере задается запрос XPath к схеме сопоставления, содержащейся в файле SampleSchema1.xml. Дополнительные сведения об этом образце схемы см. в разделе [Пример схемы XSD с заметками для XPath-примеров &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
   
 ## <a name="examples"></a>Примеры  
   
-### <a name="a-specify-the-or-boolean-operator"></a>A. Указание логического оператора OR  
- Этот запрос XPath возвращает  **\<клиента >** дочерние элементы узла контекста с **CustomerID** значение 13 или 31 атрибута:  
+### <a name="a-specify-the-or-boolean-operator"></a>а. Указание логического оператора OR  
+ Этот запрос XPath возвращает дочерний элемент ** \<Customer>** элемента контекстного узла с атрибутом **CustomerID** со значением 13 или 31:  
   
 ```  
 /child::Customer[attribute::CustomerID="13" or attribute::CustomerID="31"]  
 ```  
   
- Ярлык для **атрибут** оси (@) можно указать и поскольку **дочерних** оси используется по умолчанию, ее можно опустить:  
+ Можно указать ярлык оси **атрибута** (@), а так как **дочерняя** ось является значением по умолчанию, ее можно опустить:  
   
 ```  
 /Customer[@CustomerID="13" or @CustomerID="31"]  
 ```  
   
- В этом предикате `attribute` является осью и `CustomerID` является проверкой узла (значение TRUE, если **CustomerID** —  **\<атрибут >** узла, так как  **\<атрибут >** узел является основным узлом для **атрибут** оси). Фильтры предикатов  **\<клиента >** элементов и возвращает только те, которые удовлетворяют условию, заданному в предикате.  
+ В `attribute` предикате является осью и `CustomerID` является тестом узла (значение true, если **CustomerID** является ** \<атрибутом>** узле, так как ** \<атрибут>** node является основным узлом для оси **атрибута** ). Предикат фильтрует элементы ** \<>клиента** и возвращает только те, которые соответствуют условию, указанному в предикате.  
   
 ##### <a name="to-test-the-xpath-queries-against-the-mapping-schema"></a>Проверка запросов XPath к схеме сопоставления  
   
-1.  Копировать [образец кода схемы](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) и вставьте его в текстовый файл. Сохраните файл с именем SampleSchema1.xml.  
+1.  Скопируйте [пример кода схемы](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) и вставьте его в текстовый файл. Сохраните файл с именем SampleSchema1.xml.  
   
 2.  Создайте следующий шаблон (BooleanOperatorsA.xml) и сохраните его в каталоге, в котором сохранен файл SampleSchema1.xml.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "68027086"
   
 3.  Создайте и запустите тестовый скрипт SQLXML 4.0 (Sqlxml4test.vbs), чтобы выполнить шаблон.  
   
-     Дополнительные сведения см. в разделе [использование объектов ADO для выполнения запросов SQLXML 4.0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Дополнительные сведения см. [в разделе Использование ADO для выполнения запросов SQLXML 4,0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Далее приведен результирующий набор, полученный в результате выполнения этого шаблона.  
   

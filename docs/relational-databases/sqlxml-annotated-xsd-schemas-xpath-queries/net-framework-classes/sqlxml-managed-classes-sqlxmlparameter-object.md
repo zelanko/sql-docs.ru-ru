@@ -1,6 +1,5 @@
 ---
-title: Объект SqlXmlParameter (управляемые классы SQLXML) | Документация Майкрософт
-ms.custom: ''
+title: Объект SqlXmlParameter (SQLXML)
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -16,27 +15,28 @@ helpviewer_keywords:
 ms.assetid: 40b938bf-7b09-48b3-9771-4421a673e17b
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 338d0161a18c31510f6be0b637f888fafbd99255
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6d86e6d3a6e910dbd18f2038f127ba99bfd65369
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68088780"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252621"
 ---
 # <a name="sqlxml-managed-classes---sqlxmlparameter-object"></a>Управляемые классы SQLXML — объект SqlXmlParameter
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Объект SqlXmlParameter поддерживает следующие свойства:  
   
  Name  
- Имя параметра. Командам могут быть переданы параметры. Вызывая метод CreateParameter объект SqlXmlCommand создает объект параметра.  
+ Имя параметра. Командам могут быть переданы параметры. При вызове метода CreateParameter объекта SqlXmlCommand создается объект параметра.  
   
  Значение  
- Значение параметра. Работающий пример см. в разделе [выполнение запросов SQL &#40;управляемых классов SQLXML&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-sql-queries-sqlxml-managed-classes.md).  
+ Значение параметра. Рабочий пример см. в разделе [Выполнение SQL-запросов &#40;управляемых классов SQLXML&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-sql-queries-sqlxml-managed-classes.md).  
   
 ## <a name="see-also"></a>См. также  
  [Объект SqlXmlCommand &#40;управляемые классы SQLXML&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-managed-classes-sqlxmlcommand-object.md)   
- [Объект SqlXmlAdapter &#40;управляемые классы SQLXML&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-managed-classes-sqlxmladapter-object.md)   
+ [Объект Склксмладаптер &#40;управляемые классы SQLXML&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-managed-classes-sqlxmladapter-object.md)   
  [Доступ к функциональным возможностям SQLXML в среде .NET](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/accessing-sqlxml-functionality-in-the-net-environment.md)  
   
   

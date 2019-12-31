@@ -1,6 +1,5 @@
 ---
-title: Настройка служб DQS для использования эталонных данных | Microsoft Docs
-ms.custom: ''
+title: Настройка служб DQS для использования справочных данных
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -12,14 +11,14 @@ f1_keywords:
 - sql13.dqs.administration.configuration.createDirectRDS.f1
 - sql13.dqs.admin.config.rds.f1
 ms.assetid: fae745e7-57a7-4cbc-8979-56ea8e392e4e
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: c7ac06c040e7ea852d9925a70ff2c38016ca383a
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: 8dfc5a65659efe71fd3389a770af06f360f980bd
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70152617"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75255654"
 ---
 # <a name="configure-dqs-to-use-reference-data"></a>Настройка служб DQS для использования справочных данных
 
@@ -30,19 +29,19 @@ ms.locfileid: "70152617"
 > [!IMPORTANT]
 > В этой статье упоминаются сторонние службы ссылочных данных, которые ранее были доступны из Azure DataMarket. DataMarket и службы Data Services — включая данные об адресах Melissa — не поддерживаются после 31 декабря 2016 г. Таким образом, вы больше не можете запускать примеры в этой статье с помощью указанных служб из DataMarket. По-прежнему можно использовать службы эталонных данных, доступные через Интернет напрямую от сторонних поставщиков.
 
-## <a name="before-you-begin"></a>Перед началом  
+## <a name="before-you-begin"></a>Перед началом работы  
   
-###  <a name="Prerequisites"></a> Предварительные требования  
- Чтобы использовать ссылочные данные из Marketplace, необходим действительный ключ учетной записи Marketplace. Дополнительные сведения о создании ключа учетной записи Marketplace см. в статье [Создание учетной записи](https://go.microsoft.com/fwlink/?LinkId=212936) (https://go.microsoft.com/fwlink/?LinkId=212936) ). Ключ учетной записи Marketplace также можно создать с помощью [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , выбрав команду **Настройка** в разделе **Администрирование** главной страницы [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , а затем нажав кнопку **Создать идентификатор учетной записи DataMarket** на вкладке **Ссылочные данные** .  
+###  <a name="Prerequisites"></a>Требований  
+ Чтобы использовать ссылочные данные из Marketplace, необходим действительный ключ учетной записи Marketplace. Подробные сведения о создании ключа учетной записи Marketplace см. в разделе [Создание учетной записи](https://go.microsoft.com/fwlink/?LinkId=212936) (https://go.microsoft.com/fwlink/?LinkId=212936). Ключ учетной записи Marketplace также можно создать с помощью [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , выбрав команду **Настройка** в разделе **Администрирование** главной страницы [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , а затем нажав кнопку **Создать идентификатор учетной записи DataMarket** на вкладке **Ссылочные данные** .  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="Security"></a>Бюллетеня  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a>Чтение  
  Для настройки параметров службы ссылочных данных в DQS необходимо иметь роль dqs_administrator в базе данных DQS_MAIN.  
   
-##  <a name="Marketplace"></a> Настройка служб DQS на использование ссылочных данных из Marketplace  
+##  <a name="Marketplace"></a>Настройка служб DQS для использования эталонных данных из Marketplace  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Запуск клиентского приложения Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Запустите приложение Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
   
 2.  На главном экране [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] в разделе **Администрирование**выберите команду **Настройка**.  
   
@@ -52,9 +51,9 @@ ms.locfileid: "70152617"
   
  Теперь можно использовать в DQS службы ссылочных данных из Marketplace, на которые подписан указанный ключ учетной записи Marketplace.  
   
-##  <a name="ThirdParty"></a> Настройка служб DQS на использование ссылочных данных от сторонних поставщиков ссылочных данных в сети  
+##  <a name="ThirdParty"></a>Настройка служб DQS на использование ссылочных данных от сторонних поставщиков ссылочных данных с прямым подключением  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Запуск клиентского приложения Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Запустите приложение Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
   
 2.  На главном экране [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] в разделе **Администрирование**выберите команду **Настройка**.  
   
@@ -70,7 +69,7 @@ ms.locfileid: "70152617"
   
     3.  В поле **Категория** введите категорию данных, предоставляемых новым поставщиком служб ссылочных данных с прямой ссылкой для подключения.  
   
-    4.  В поле «Схема» укажите схему, определяющую строку полей (имен столбцов), которые будут получаться от поставщика служб ссылочных данных с прямой ссылкой для подключения. Имя поля не должно содержать пробелов, а поля должны разделяться запятыми. Например: `FirstName, LastName, City, State`.  
+    4.  В поле «Схема» укажите схему, определяющую строку полей (имен столбцов), которые будут получаться от поставщика служб ссылочных данных с прямой ссылкой для подключения. Имя поля не должно содержать пробелов, а поля должны разделяться запятыми. Например, `FirstName, LastName, City, State`.  
   
     5.  В поле **URI** введите URI нового поставщика служб ссылочных данных с прямой ссылкой для подключения. В службах DQS разрешены только безопасные идентификаторы URI (адрес начинается с "https://").  
   
@@ -82,7 +81,7 @@ ms.locfileid: "70152617"
   
  Теперь службы ссылочных данных из настроенного стороннего поставщика служб ссылочных данных с непосредственным подключением по сети можно использовать в DQS.  
   
-##  <a name="FollowUp"></a> Дальнейшие действия. После настройки служб DQS для использования ссылочных данных  
+##  <a name="FollowUp"></a>Дальнейшие действия. После настройки служб DQS для использования ссылочных данных  
  Теперь необходимо сопоставить требуемые домены базы знаний со ссылочными данными, доступными в только что настроенных поставщиках данных. Для этого см. раздел [Подсоединение обычного или составного домена к эталонным данным](../data-quality-services/attach-domain-or-composite-domain-to-reference-data.md).  
   
   

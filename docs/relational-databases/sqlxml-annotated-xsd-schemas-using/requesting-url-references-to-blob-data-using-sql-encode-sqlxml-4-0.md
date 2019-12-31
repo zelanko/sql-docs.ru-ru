@@ -1,6 +1,5 @@
 ---
-title: 'Получение URL-адрес ссылок на данные BLOB с использованием sql: encode (SQLXML 4.0) | Документация Майкрософт'
-ms.custom: ''
+title: 'Получение URL-ссылок на данные большого двоичного объекта с помощью SQL: Encoded (SQLXML)'
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -19,25 +18,26 @@ ms.assetid: 2f8cd93b-c636-462b-8291-167197233ee0
 author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 148eb98bb160557d4188941d293d96c0e5ac5ee1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e1cd65cce635c89cb7ece1b88851d5f4a9b7cb09
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68067024"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257420"
 ---
 # <a name="requesting-url-references-to-blob-data-using-sqlencode-sqlxml-40"></a>Получение URL-ссылок на данные BLOB с использованием sql:encode (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   В схеме XSD с заметками, когда атрибут (или элемент) сопоставляется со столбцом BLOB в Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], данные внутри XML возвращаются в формате Base 64.  
   
- Если требуется ссылка на данные (URI) должны быть возвращены, можно использовать позже для получения данных BLOB в двоичном формате, укажите **sql: кодирование** заметки. Можно указать **sql: кодирование** на атрибут или элемент простого типа.  
+ Если требуется вернуть ссылку на данные (URI), которые можно использовать позже для получения данных большого двоичного объекта в двоичном формате, укажите аннотацию **SQL: Encoded** . Можно указать **SQL: Encoded** для атрибута или элемента простого типа.  
   
- Укажите **sql: кодирование** заметки, чтобы указать, что URL-адрес в поле должны быть возвращены вместо значения поля. **SQL: кодирование** зависит от первичного ключа для создания одноэлементного выбора в URL-адрес. Первичный ключ можно указать при помощи **SQL: Key-поля** заметки.  
+ Укажите заметку **SQL: Encoded** , чтобы указать, что вместо значения поля должно возвращаться URL-адрес поля. **SQL: Encoded** зависит от первичного ключа для создания одноэлементного выбора в URL-адресе. Первичный ключ можно указать с помощью заметки **SQL: Key-Fields** .  
   
- **Sql: кодирование** заметки можно назначить «url» или «default» значение. Значение «default» возвращает данные в формате Base 64.  
+ Заметке **SQL: Encoded** можно присвоить значение "URL" или "default". Значение «default» возвращает данные в формате Base 64.  
   
- **Sql: кодирование** заметки не может использоваться с **SQL: USE-cdata** или для ID, IDREF, IDREFS, NMTOKEN или NMTOKENS атрибутов типов. Он также не может использоваться с XSD **фиксированной** атрибута.  
+ Аннотацию **SQL: Encoded** нельзя использовать с **SQL: use-CDATA** или для типов атрибутов ID, IDREF, IDREFS, NMTOKEN или NMTOKENS. Его также можно использовать с атрибутом **fixed** XSD.  
   
 > [!NOTE]  
 >  Столбцы типа BLOB невозможно использовать, как часть ключа или внешнего ключа.  
@@ -45,8 +45,8 @@ ms.locfileid: "68067024"
 ## <a name="examples"></a>Примеры  
  Чтобы создать рабочие образцы на основе следующих примеров, необходимо выполнить определенные требования. Дополнительные сведения см. в разделе [требования для запуска примеров SQLXML](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
-### <a name="a-specifying-sqlencode-to-obtain-a-url-reference-to-blob-data"></a>A. Указание заметки sql:encode для получения URL-ссылки на данные BLOB  
- В этом примере схема сопоставления задает **sql: кодирование** на **LargePhoto** атрибут, чтобы получить URI-ссылку на фотографию определенного продукта (вместо извлечения двоичных данных в Base 64 - закодированном формате).  
+### <a name="a-specifying-sqlencode-to-obtain-a-url-reference-to-blob-data"></a>а. Указание заметки sql:encode для получения URL-ссылки на данные BLOB  
+ В этом примере схема сопоставления задает **SQL: Encoded** для атрибута **LargePhoto** , чтобы получить ссылку URI на определенную фотографию продукта (вместо извлечения двоичных данных в формате Base 64).  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -84,9 +84,9 @@ ms.locfileid: "68067024"
   
 3.  Создайте и запустите тестовый скрипт SQLXML 4.0 (Sqlxml4test.vbs), чтобы выполнить шаблон.  
   
-     Дополнительные сведения см. в разделе [использование объектов ADO для выполнения запросов SQLXML 4.0](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Дополнительные сведения см. [в разделе Использование ADO для выполнения запросов SQLXML 4,0](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
- Это результат:  
+ Результат:  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  

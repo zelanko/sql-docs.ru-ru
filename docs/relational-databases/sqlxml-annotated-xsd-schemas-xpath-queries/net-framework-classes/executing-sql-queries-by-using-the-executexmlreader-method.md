@@ -1,6 +1,5 @@
 ---
-title: Выполнение запросов SQL с использованием метода ExecuteXMLReader | Документация Майкрософт
-ms.custom: ''
+title: Выполнение SQL запросов с помощью метода ExecuteXMLReader
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -16,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: f106a4c5-8d6e-40c0-bf1f-11e121afcb01
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 99f3ae8c26af7d3aa3dd876cbf0f81d4fa269ff0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 23b28209db43753b7185a87311ec6d338bcaccbd
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67934299"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251528"
 ---
 # <a name="executing-sql-queries-by-using-the-executexmlreader-method"></a>Выполнение SQL-запросов с использованием метода ExecuteXMLReader
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Вместо использования метода ExecuteToStream, метод ExecuteXmlReader объект SqlXmlCommand можно использовать для выполнения команд. Этот метод возвращает объект XmlReader, который может использоваться для дальнейшей обработки результата (который в этом примере Печать имен элементов или атрибутов и значения).  
+  Вместо использования метода Ексекутетостреам можно использовать метод ExecuteXmlReader объекта SqlXmlCommand для выполнения команд. Этот метод возвращает объект XmlReader, который можно использовать для дальнейшей обработки результата (в этом примере выполняется печать имен элемента или атрибута и значений).  
   
 > [!NOTE]  
 >  В коде необходимо задать имя экземпляра Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в строке соединения.  

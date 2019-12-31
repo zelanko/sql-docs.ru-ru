@@ -1,6 +1,5 @@
 ---
-title: Указание предикатов с логическими значениями в запросах XPath (SQLXML 4,0) | Документация Майкрософт
-ms.custom: ''
+title: Указание логических предикатов в запросах XPath (SQLXML)
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -18,21 +17,22 @@ helpviewer_keywords:
 ms.assetid: 5f6e7219-6911-4bca-a54b-56b95e0b43dd
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fe35725e8dbd6903157866d0512966885c4c2c0b
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: acf43b7fd863690259719a81ec60b136f9f4996d
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907732"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252567"
 ---
 # <a name="specifying-boolean-valued-predicates-in-xpath-queries-sqlxml-40"></a>Определение предикатов с логическим значением в запросах XPath (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  В следующем примере показано, как предикаты с логическим значением указываются в запросах XPath. В данных примерах запросы XPath определены в соответствии со схемой сопоставления, которая содержится в файле SampleSchema1.xml. Сведения об этом образце схемы см. в статье [Пример схемы XSD с заметками &#40;для&#41;XPath примеры SQLXML 4,0](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
+  В следующем примере показано, как предикаты с логическим значением указываются в запросах XPath. В данных примерах запросы XPath определены в соответствии со схемой сопоставления, которая содержится в файле SampleSchema1.xml. Дополнительные сведения об этом образце схемы см. в разделе [Пример схемы XSD с заметками для XPath-примеров &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
   
 ## <a name="examples"></a>Примеры  
   
-### <a name="a-specify-multiple-predicates"></a>A. Указание нескольких предикатов  
+### <a name="a-specify-multiple-predicates"></a>а. Указание нескольких предикатов  
  Следующий запрос XPath использует несколько предикатов для поиска сведений о заказе для данного идентификатора заказа и идентификатора клиента:  
   
 ```  
@@ -69,7 +69,7 @@ ms.locfileid: "72907732"
 
      Дополнительные сведения см. [в разделе Использование ADO для выполнения запросов SQLXML 4,0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
-     Результат:  
+     Вот что мы получим:  
   
     ```  
     <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -90,14 +90,14 @@ ms.locfileid: "72907732"
     </ROOT>  
     ```  
   
-### <a name="b-specify-successive-and-nested-predicates"></a>б. Указание последовательных и вложенных предикатов  
- В следующем запросе показано использование последовательных предикатов. Запрос возвращает все **\<клиент >** дочерние элементы контекстного узла, оба которых имеют атрибут **SalesPersonID** со значением 277 и атрибутом **территорид** со значением 3:  
+### <a name="b-specify-successive-and-nested-predicates"></a>B. Указание последовательных и вложенных предикатов  
+ В следующем запросе показано использование последовательных предикатов. Запрос возвращает все ** \<клиентские>** дочерние элементы контекстного узла, которые имеют атрибут **SalesPersonID** со значением 277 и атрибутом **территорид** со значением 3:  
   
 ```  
 /child::Customer[attribute::SalesPersonID="277"][attribute::TerritoryID="3"]  
 ```  
   
- Запрос возвращает элементы **\<Customer >** , которые соответствуют условиям, заданным в предикатах.  
+ Запрос возвращает ** \<клиентские>** элементы, которые соответствуют условиям, заданным в предикатах.  
   
  Можно указать ярлык оси **атрибута** (@), а так как **дочерняя** ось является значением по умолчанию, ее можно опустить в запросе:  
   
@@ -105,7 +105,7 @@ ms.locfileid: "72907732"
 /Customer[@SalesPersonID="277"][@TerritoryID="3"]  
 ```  
   
- В следующем запросе XPath показано использование вложенных предикатов. Запрос возвращает все **\<клиент >** дочерние элементы контекстного узла, которые включают **\<порядок >** дочерним элементам по крайней мере с одним элементом\<**порядка** , имеющим значение атрибута **SalesPersonID** открыт.  
+ В следующем запросе XPath показано использование вложенных предикатов. Запрос возвращает все ** \<клиентские>** дочерние элементы контекстного узла, которые включают в себя ** \<порядок>** дочерних элементов по крайней мере с одним ** \<элементом>** , имеющим значение атрибута **SalesPersonID** , равное 2.  
   
 ```  
 /Customer[Order[@SalesPersonID=2]]  
@@ -167,8 +167,8 @@ ms.locfileid: "72907732"
 </ROOT>  
 ```  
   
-### <a name="c-specify-a-top-level-predicate"></a>В. Указание предиката верхнего уровня  
- Следующий запрос возвращает **\<клиент >** дочерние узлы элементов контекстного узла, которые имеют **\<порядок >** дочерних элементов. В этом запросе проверяется, является ли путь доступа предикатом верхнего уровня:  
+### <a name="c-specify-a-top-level-predicate"></a>C. Указание предиката верхнего уровня  
+ Следующий запрос возвращает ** \<клиентские>** узлы дочерних элементов контекстного узла, которые имеют ** \<** дочерние элементы Order>. В этом запросе проверяется, является ли путь доступа предикатом верхнего уровня:  
   
 ```  
 /child::Customer[child::Order]  

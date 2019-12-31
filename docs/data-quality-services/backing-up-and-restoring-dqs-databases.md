@@ -1,6 +1,5 @@
 ---
-title: Резервное копирование и восстановление баз данных DQS | Microsoft Docs
-ms.custom: ''
+title: Резервное копирование и восстановление баз данных DQS
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -8,14 +7,14 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: f3091f62-2234-4a80-a615-cf14c2a1da85
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: afee6a476407744d237ebf2c0069d37f7e9c3137
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: 94b2529323e5a075b6fd423fd8c69ece7a0535c0
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67992431"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258848"
 ---
 # <a name="backing-up-and-restoring-dqs-databases"></a>Резервное копирование и восстановление баз данных DQS
 
@@ -23,9 +22,9 @@ ms.locfileid: "67992431"
 
   В этом разделе описывается, как проводить резервное копирование и восстановление баз данных DQS.  
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="BeforeYouBegin"></a>Перед началом  
   
-###  <a name="Prerequisites"></a> Предварительные требования  
+###  <a name="Prerequisites"></a>Требований  
   
 -   Необходимо знать пароль для главного ключа базы данных, который вы указывали при установке сервера DQS.  
   
@@ -33,15 +32,15 @@ ms.locfileid: "67992431"
   
 -   Убедитесь, что на сервере DQS нет подключенных пользователей.  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="Security"></a>Бюллетеня  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a>Чтение  
   
 -   Для выполнения операций резервного копирования и восстановления учетная запись Windows должна быть членом предопределенной роли сервера sysadmin на этом экземпляре SQL Server.  
   
 -   Для завершения любых выполняемых операций или остановки каких-либо процессов в службах DQS необходимо быть членом роли dqs_administrator в базе данных DQS_MAIN.  
   
-##  <a name="BackupRestore"></a> Резервное копирование и восстановление баз данных DQS  
+##  <a name="BackupRestore"></a>Резервное копирование и восстановление баз данных DQS  
   
 1.  Запустите среду Microsoft SQL Server Management Studio и подключитесь к соответствующему экземпляру SQL Server.  
   
@@ -63,7 +62,7 @@ ms.locfileid: "67992431"
   
 10. В обозревателе объектов щелкните сервер правой кнопкой мыши и выберите команду **Создать запрос**.  
   
-11. Скопируйте в окно редактора запросов следующие инструкции SQL, заменив *\<PASSWORD>* на пароль, использованный вами при установке DQS для главного ключа базы данных.  
+11. В окне редактора запросов скопируйте следующие инструкции SQL и замените * \<Password>* паролем, указанным при установке DQS для главного ключа базы данных.  
   
     ```  
     USE [DQS_MAIN]  
@@ -73,9 +72,9 @@ ms.locfileid: "67992431"
   
     ```  
   
-12. Нажмите клавишу F5, чтобы выполнить инструкции. Откройте область **Результаты** , чтобы удостовериться в успешном выполнении инструкций.  
+12. Нажмите клавишу F5, чтобы выполнить инструкции. Проверьте панель **результатов** , чтобы убедиться, что инструкции выполнены успешно.  
   
 ## <a name="see-also"></a>См. также  
- [Управление базами данных DQS](../data-quality-services/manage-dqs-databases.md)  
+ [Manage DQS Databases](../data-quality-services/manage-dqs-databases.md)  
   
   

@@ -1,6 +1,5 @@
 ---
-title: Выполнение шаблонов, содержащих запросы XPath (поставщик SQLXMLOLEDB) | Документация Майкрософт
-ms.custom: ''
+title: Выполнение шаблонов, содержащих запросы XPath (SQLXMLOLEDB)
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -18,34 +17,35 @@ helpviewer_keywords:
 ms.assetid: 7368c188-607e-459e-8254-8f23352dfa01
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 035d9c4cb94a52d964d26c2b6b94180eb7eefaff
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a2da1b575b2df79321c87cbd88542c1210c9310b
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68109602"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257292"
 ---
 # <a name="executing-templates-that-contain-xpath-queries-sqlxmloledb-provider"></a>Выполнение шаблонов, содержащих запросы XPath (поставщик SQLXMLOLEDB)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   В этом примере показано, как использовать следующие свойства, определяемые поставщиком SQLXMLOLEDB.  
   
--   ClientSideXML  
+-   клиентсидексмл  
   
 -   Базовый путь  
   
 -   Схема сопоставления  
   
- В этом образце приложения ADO, XML-шаблон, состоящий из запроса XPath (корневой) задается для схемы сопоставления XSD (MySchema.xml), описанного в [выполнение запросов XPath &#40;поставщик SQLXMLOLEDB&#41; ](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-xpath-queries-sqlxmloledb-provider.md).  
+ В этом образце приложения ADO XML-шаблон, состоящий из запроса XPath (корневой), указан для схемы сопоставления XSD (MySchema. XML), описанной в разделе [выполнение запросов xpath &#40;&#41;поставщика SQLXMLOLEDB ](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-xpath-queries-sqlxmloledb-provider.md).  
   
- Свойство схемы сопоставления предоставляет схему сопоставления XSD, по которой выполняется запрос XPath. Свойство базового пути содержит путь к схеме сопоставления.  
+ Свойство схемы сопоставления предоставляет схему сопоставления XSD, в которой выполняется запрос XPath. Свойство базового пути содержит путь к схеме сопоставления.  
   
- ClientSideXML, свойство имеет значение True. Поэтому XML-документ формируется на клиенте.  
+ Свойство Клиентсидексмл имеет значение true. Поэтому XML-документ формируется на клиенте.  
   
  Запрос XPath задается непосредственно в приложении. Следовательно, должен быть включен диалект {5d531cb2-e6ed-11d2-b252-00c04f681b71}.  
   
 > [!NOTE]  
->  В коде необходимо задать имя экземпляра Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в строке соединения. Кроме того, в этом примере в качестве поставщика данных определено использование собственного клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (SQLNCLI11), для которого необходимо установить дополнительное клиентское сетевое ПО. Дополнительные сведения см. в разделе [требования к системе для собственного клиента SQL Server](../../../relational-databases/native-client/system-requirements-for-sql-server-native-client.md).  
+>  В коде необходимо задать имя экземпляра Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в строке соединения. Кроме того, в этом примере в качестве поставщика данных определено использование собственного клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (SQLNCLI11), для которого необходимо установить дополнительное клиентское сетевое ПО. Дополнительные сведения см. в разделе [требования к системе для SQL Server Native Client](../../../relational-databases/native-client/system-requirements-for-sql-server-native-client.md).  
   
 ```  
 Option Explicit  

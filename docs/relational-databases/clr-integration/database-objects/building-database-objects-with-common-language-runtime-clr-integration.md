@@ -1,6 +1,7 @@
 ---
-title: Построение объектов базы данных, интеграции среды выполнения (CLR) со средой | Документация Майкрософт
-ms.custom: ''
+title: Объекты базы данных сборки среды CLR
+description: Создавайте объекты базы данных с помощью интеграции SQL Server со средой CLR .NET Framework.
+ms.custom: seo-lt-2019
 ms.date: 03/17/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -16,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: ce34132c-bfa3-447b-9131-b6e17c672efe
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7037105391425632dba0af3646635305e510f207
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 902685dcf1f8c743453285820faa67bb70830614
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68138669"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258353"
 ---
 # <a name="building-database-objects-with-common-language-runtime-clr-integration"></a>Создание объектов базы данных с интеграцией со средой CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Объекты базы данных можно создавать с помощью интеграции [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] со средой CLR платформы .NET Framework. Управляемый код, выполняющийся в [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] называется «подпрограммы среды CLR». Эти подпрограммы включают:  
+  Объекты базы данных можно создавать с помощью интеграции [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] со средой CLR платформы .NET Framework. Управляемый код, выполняемый [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] внутри, называется подпрограммой среды CLR. Эти подпрограммы включают:  
   
 -   определяемые пользователем функции, возвращающие скалярное значение (скалярные определяемые пользователем функции);  
   
@@ -62,7 +63,7 @@ ms.locfileid: "68138669"
  [Определяемые пользователем функции среды CLR](../../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md)  
  Описывает реализацию и использование различных типов функций CLR: возвращающих табличное значение, скалярных и определяемых пользователем агрегатных функций.  
   
- [Определяемые пользователем типы в CLR](../../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)  
+ [Определяемые пользователем типы данных CLR](../../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)  
  Показывает, как реализовать и использовать определяемые пользователем типы данных CLR.  
   
  [Хранимые процедуры CLR](https://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)  
@@ -72,6 +73,6 @@ ms.locfileid: "68138669"
  Показывает, как реализовать и использовать триггеры CLR.  
   
 ## <a name="see-also"></a>См. также  
- [Среда CLR &#40;CLR&#41; Общие сведения об интеграции](../../../relational-databases/clr-integration/common-language-runtime-integration-overview.md)  
+ [Общие сведения об интеграции&#41; среды CLR &#40;](../../../relational-databases/clr-integration/common-language-runtime-integration-overview.md)  
   
   

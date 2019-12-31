@@ -1,7 +1,7 @@
 ---
-title: Использование ADO для выполнения SQLXML 4.0 запросов | Документация Майкрософт
+title: Использование ADO для выполнения запросов SQLXML 4.0
 ms.custom: ''
-ms.date: 03/06/2017
+ms.date: 12/18/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: xml
@@ -16,12 +16,12 @@ ms.assetid: 3d54e3bb-7c5f-427e-82f8-1403a54c4f53
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f2a8f5cdb74385852a0feef0f9de0d760eb57f13
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 02dfe2bfe1a5893a2ef121f279648c5962d6cce9
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66012149"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251418"
 ---
 # <a name="using-ado-to-execute-sqlxml-40-queries"></a>Использование ADO для выполнения запросов SQLXML 4.0
   В предыдущих версиях SQLXML выполнение запросов по HTTP поддерживалось с помощью виртуальных каталогов SQLXML в IIS и ISAPI-фильтра SQLXML. В SQLXML 4.0 эти компоненты были удалены, так как похожая и перекрывающаяся функциональность предоставляется собственными веб-службами с поддержкой XML, начиная с версии [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
@@ -35,9 +35,9 @@ ms.locfileid: "66012149"
   
 #### <a name="to-create-the-sqlxml-40-query-tester-using-ado-vbscript"></a>Создание испытателя запросов SQLXML 4.0 с использованием ADO (VBScript)  
   
-1.  Скопируйте следующий код и вставьте его в текстовый файл. Сохраните файл с именем Sqlxml4test.xml.  
+1.  Скопируйте приведенный ниже код VBScript и вставьте его в текстовый файл. Сохраните файл с именем Sqlxml4test.xml.  
   
-    ```  
+    ```vb
     WScript.Echo "Query process may take a few seconds to complete. Please be patient."  
   
     ' Note that for SQL Server Native Client to be used as the data provider,  
@@ -112,18 +112,18 @@ ms.locfileid: "66012149"
   
 1.  Проверьте, что установлен собственный клиент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-    1.  Из **запустить** последовательно выберите пункты **параметры**, а затем нажмите кнопку **панели управления**.  
+    1.  В меню " **Пуск** " выберите пункт " **Параметры**", а затем " **Панель управления**".  
   
-    2.  В панели управления откройте **Установка и удаление программ**  
+    2.  В панели управления откройте окно **Установка и удаление программ** .  
   
-    3.  В списке установленных программ, убедитесь, что **Microsoft SQL Server Native Client** появится в списке.  
+    3.  В списке установленных программ убедитесь, что в списке присутствует **Microsoft SQL Server Native Client** .  
   
         > [!NOTE]  
-        >  Если вам нужно установить [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, см. в разделе [Установка SQL Server Native Client](../native-client/applications/installing-sql-server-native-client.md).  
+        >  Если необходимо установить [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственный клиент, см. статью [Установка SQL Server Native Client](../native-client/applications/installing-sql-server-native-client.md).  
   
-2.  Проверьте, что на клиентском компьютере установлена версия MDAC 2.6 или более поздняя. Если нужно проверить сведения о версии MDAC, можно использовать средство проверки компонентов MDAC, которое можно бесплатно загрузить с веб-сайта Майкрософт (www.microsoft.com). Чтобы получить дополнительные сведения, выполните поиск с ключевыми словами «MDAC Component Checker» на веб-сайте корпорации Майкрософт.  
+2.  Проверьте, что на клиентском компьютере установлена версия MDAC 2.6 или более поздняя. Если необходимо проверить сведения о версии MDAC, можно использовать средство проверки компонентов MDAC, которое предоставляется бесплатно для загрузки с веб-сайта [https://www.microsoft.com/](https://www.microsoft.com/)корпорации Майкрософт. Для получения дополнительных сведений выполните поиск по фразе "средство проверки компонентов MDAC" на веб-сайте Майкрософт.  
   
-3.  Выполните скрипт.  
+3.  Выполните скрипт,  
   
      Файл VBScript можно выполнить из командной строки с использованием Cscript.exe или дважды щелкнув файл Sqlxml4test.vbs, чтобы вызвать сервер скриптов Windows (WScript.exe).  
   

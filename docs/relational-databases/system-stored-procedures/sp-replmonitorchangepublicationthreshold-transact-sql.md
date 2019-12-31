@@ -1,6 +1,7 @@
 ---
-title: sp_replmonitorchangepublicationthreshold (Transact-SQL) | Документация Майкрософт
-ms.custom: ''
+title: sp_replmonitorchangepublicationthreshold (T-SQL)
+description: Описывает sp_replmonitorchangepublicationthreshold хранимую процедуру, которая изменяет пороговую метрику мониторинга для публикации.
+ms.custom: seo-lt-2019
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -15,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: 2c3615d8-4a1a-4162-b096-97aefe6ddc16
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 7fd8dd31b1468cb718af286f6c00e26cfa2e1ba0
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: fdcf5a9dcd462562886c7815b500c43145b749a3
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68771220"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75322241"
 ---
-# <a name="spreplmonitorchangepublicationthreshold-transact-sql"></a>sp_replmonitorchangepublicationthreshold (Transact-SQL)
+# <a name="sp_replmonitorchangepublicationthreshold-transact-sql"></a>sp_replmonitorchangepublicationthreshold (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Изменяет пороговые метрики наблюдения за публикацией. Эта хранимая процедура, используемая для наблюдения за репликацией, выполняется на распространителе в базе данных распространителя.  
   
- ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [соглашения о синтаксисе Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -47,7 +48,7 @@ sp_replmonitorchangepublicationthreshold [ @publisher = ] 'publisher'
 ## <a name="arguments"></a>Аргументы  
 `[ @publisher = ] 'publisher'`Имя издателя. параметр *Publisher* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @publisher_db = ] 'publisher_db'`Имя опубликованной базы данных. *publisher_db* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @publisher_db = ] 'publisher_db'`Имя опубликованной базы данных. Аргумент *publisher_db* имеет тип **sysname**и не имеет значения по умолчанию.  
   
 `[ @publication = ] 'publication'`Имя публикации, для которой изменяются пороговые атрибуты мониторинга. Аргумент *publication* имеет тип **sysname**и не имеет значения по умолчанию.  
   
@@ -56,7 +57,7 @@ sp_replmonitorchangepublicationthreshold [ @publisher = ] 'publisher'
 |Значение|Описание|  
 |-----------|-----------------|  
 |**0**|Публикация транзакций.|  
-|**1**|Публикация моментальных снимков.|  
+|**одного**|Публикация моментальных снимков.|  
 |**2**|Публикация слиянием.|  
 |NULL (по умолчанию)|Репликация пытается определить тип публикации.|  
   
@@ -64,17 +65,17 @@ sp_replmonitorchangepublicationthreshold [ @publisher = ] 'publisher'
   
 |Значение|Имя метрики|  
 |-----------|-----------------|  
-|**1**|**expiration** следит за приближающимся истечением срока подписки на публикации транзакций.|  
-|**2**|**latency** следит за производительностью подписки на публикации транзакций.|  
-|**4**|**mergeexpiration** следит за приближающимся истечением срока подписки на публикации слиянием.|  
-|**5**|**mergeslowrunduration** — отслеживает продолжительность синхронизации слиянием через подключения с низкой пропускной способностью (коммутируемое подключение).|  
+|**одного**|**истечение срока действия** — отслеживает приближающийся срок действия подписок на публикации транзакций.|  
+|**2**|**Задержка** — отслеживает производительность подписок на публикации транзакций.|  
+|**четырех**|**mergeexpiration** — следит за приближающимся истечением срока подписки на публикации слиянием.|  
+|**5.0**|**mergeslowrunduration** — отслеживает продолжительность синхронизации слиянием через подключения с низкой пропускной способностью (коммутируемое подключение).|  
 |**6**|**mergefastrunduration** — отслеживает продолжительность синхронизации слиянием через подключения локальной сети с высокой пропускной способностью.|  
-|**7**|**mergefastrunspeed** — следит за частотой синхронизаций слиянием через соединения с высокой пропускной способностью (локальная сеть).|  
+|**7**|**mergefastrunspeed** — следит за частотой синхронизации слиянием через подключения с высокой пропускной СПОСОБНОСТЬЮ (локальная сеть).|  
 |**8**|**mergefastrunspeed** — следит за частотой синхронизации слиянием через подключения с низкой пропускной способностью (коммутируемое подключение).|  
   
  Необходимо указать либо *METRIC_ID* , либо *срешолдметрикнаме*. Если указан *срешолдметрикнаме* , то *METRIC_ID* должен иметь значение null.  
   
-`[ @thresholdmetricname = ] 'thresholdmetricname'`Имя изменяемой пороговой метрики публикации. *срешолдметрикнаме* имеет тип **sysname**и значение по умолчанию NULL. Необходимо указать либо *срешолдметрикнаме* , либо *METRIC_ID*. Если указан *METRIC_ID* , то *срешолдметрикнаме* должен иметь значение null.  
+`[ @thresholdmetricname = ] 'thresholdmetricname'`Имя изменяемой пороговой метрики публикации. *срешолдметрикнаме* имеет тип **sysname**и значение по умолчанию NULL. Необходимо указать либо *срешолдметрикнаме* , либо *METRIC_ID*. Если указан *METRIC_ID* , *срешолдметрикнаме* должен иметь значение null.  
   
 `[ @value = ] value`Новое значение пороговой метрики публикации. *значение* равно **int**и значение по умолчанию NULL. При значении **null**значение метрики не обновляется.  
   
@@ -85,13 +86,13 @@ sp_replmonitorchangepublicationthreshold [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  **sp_replmonitorchangepublicationthreshold** используется со всеми типами репликации.  
   
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли базы данных **db_owner** или **replmonitor** в базе данных распространителя могут выполнять **sp_replmonitorchangepublicationthreshold**.  
   
 ## <a name="see-also"></a>См. также  
- [Наблюдение за репликацией программным образом](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  
+ [Программный мониторинг репликации](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  
   
   

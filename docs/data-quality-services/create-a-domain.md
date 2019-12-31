@@ -1,6 +1,5 @@
 ---
-title: Создание домена | Microsoft Docs
-ms.custom: ''
+title: Создание домена
 ms.date: 11/08/2011
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -10,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.kb.createdomain.f1
 ms.assetid: 5c4828f5-bd51-4c29-b3de-87b7d2f2d3e5
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: 83de355138f694c6c0414362f41676012817d497
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: d39f86d2efa18c385f2aafd8b3e4cb7de9975b06
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67992307"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252262"
 ---
 # <a name="create-a-domain"></a>Создание домена
 
@@ -27,19 +26,19 @@ ms.locfileid: "67992307"
   
  Существуют следующие два способа создания нового домена. Первый — на этапе сопоставления действий по обнаружению знаний, в процессе анализа образца данных для добавления набора знаний в новую или существующую базу знаний. Второй — в ходе действий по управлению доменами, когда вместо изменения существующего домена вы создаете новый.  
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="BeforeYouBegin"></a>Перед началом  
   
-###  <a name="Prerequisites"></a> Предварительные требования  
+###  <a name="Prerequisites"></a>Требований  
  Чтобы создать домен, необходимо создать и открыть базу знаний.  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="Security"></a>Бюллетеня  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a>Чтение  
  Для создания домена необходимо иметь в базе данных DQS_MAIN роль dqs_administrator или dqs_kb_editor.  
   
-##  <a name="Discovery"></a> Создание домена в ходе операции обнаружения знаний  
+##  <a name="Discovery"></a>Создание домена в действии обнаружения знаний  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Запуск клиентского приложения Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Запустите приложение Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
   
 2.  На главной странице [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] нажмите кнопку **Открыть базу знаний** и выберите базу знаний или нажмите кнопку **Создать базу знаний** и введите свойства новой базы знаний.  
   
@@ -49,7 +48,7 @@ ms.locfileid: "67992307"
   
 5.  В таблице **Сопоставления** выберите исходный столбец из раскрывающегося списка для столбца **Исходный столбец** пустой строки. Если соответствующий домен не существует, щелкните значок **Создать домен** .  
   
-##  <a name="DomainManagement"></a> Создание домена в ходе операции по управлению доменами  
+##  <a name="DomainManagement"></a>Создание домена в действии "Управление доменами"  
   
 1.  На главной странице [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] нажмите кнопку **Открыть базу знаний** и выберите базу знаний или нажмите кнопку **Создать базу знаний** и введите свойства новой базы знаний.  
   
@@ -57,7 +56,7 @@ ms.locfileid: "67992307"
   
 3.  На странице **Управление доменами** щелкните значок **Создать домен** над списком доменов.  
   
-##  <a name="Properties"></a> Установка свойств домена  
+##  <a name="Properties"></a>Задание свойств домена  
   
 1.  В диалоговом окне **Создание домена** введите имя, уникальное в базе знаний, и описание длиной не более 256 символов.  
   
@@ -90,9 +89,9 @@ ms.locfileid: "67992307"
   
 9. Нажмите кнопку **ОК**.  
   
-10. Нажмите кнопку **Готово** , чтобы завершить операцию управления доменами, как описано в разделе [Завершение операции по управлению доменами](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0).  
+10. Нажмите кнопку **Готово** , чтобы завершить операцию управления доменами, как описано в разделе [End the Domain Management Activity](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0).  
   
-##  <a name="FollowUp"></a> Дальнейшие действия. После создания домена  
+##  <a name="FollowUp"></a>Дальнейшие действия. После создания домена  
  Создав домен, вы можете выполнить другие задачи управления доменами для этого домена, провести обнаружение знаний для добавления знаний в домен или добавить в домен политику сопоставления. Дополнительные сведения см. в разделах [Обнаружение набора знаний](../data-quality-services/perform-knowledge-discovery.md), [Управление доменом](../data-quality-services/managing-a-domain.md) и [Создание политики сопоставления](../data-quality-services/create-a-matching-policy.md).  
   
   

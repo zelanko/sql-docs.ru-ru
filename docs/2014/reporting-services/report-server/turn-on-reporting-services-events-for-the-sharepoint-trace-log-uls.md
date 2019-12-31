@@ -10,48 +10,49 @@ ms.assetid: 81110ef6-4289-405c-a931-e7e9f49e69ba
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 0e28c32f0d73d5ff06927e7629cd76f56eaa65d8
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.openlocfilehash: 8b9cbd080a138b939224d6bb88218b46e52a23f4
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72796406"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75255452"
 ---
 # <a name="turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls"></a>Включение событий служб Reporting Services для журнала трассировки SharePoint (ULS)
-  Начиная с версии [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]серверы служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] в режиме интеграции с SharePoint могут записывать события служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] в журнал трассировки единой службы ведения журнала SharePoint. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] доступны на странице «Наблюдение» центра администрирования SharePoint.  
+  Начиная с версии [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]серверы служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] в режиме интеграции с SharePoint могут записывать события служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] в журнал трассировки единой службы ведения журнала SharePoint. 
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] доступны на странице «Наблюдение» центра администрирования SharePoint.  
   
  В этом разделе.  
   
--   [Общие рекомендации в отношении журнала ULS](#bkmk_general)  
+-   [Общие рекомендации по журналам ULS](#bkmk_general)  
   
--   [Включение и отключение событий служб Reporting Services в категории служб Reporting Services](#bkmk_turnon)  
+-   [Включение и отключение Reporting Services событий в категории Reporting Services](#bkmk_turnon)  
   
 -   [Рекомендуемая конфигурация](#bkmk_recommended)  
   
--   [Чтение записей журнала](#bkmk_readentries)  
+-   [Чтение записей журналов](#bkmk_readentries)  
   
--   [Список событий служб SQL Server Reporting Services](#bkmk_list)  
+-   [Список событий SQL Server Reporting Services](#bkmk_list)  
   
 -   [Просмотр файла журнала с помощью PowerShell](#bkmk_powershell)  
   
 -   [Расположение журнала трассировки](#bkmk_trace)  
   
-##  <a name="bkmk_general"></a> Общие рекомендации в отношении журнала ULS  
+##  <a name="bkmk_general"></a>Общие рекомендации по журналам ULS  
  В следующей таблице перечислены категории и уровни событий, которые рекомендуется использовать при наблюдении за средой служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] . При регистрации события каждая запись включает время регистрации, имя процесса и идентификатор потока.  
   
-|Категория|level|Description|  
+|Категория|Уровень|Описание|  
 |--------------|-----------|-----------------|  
-|база данных|Подробно|Регистрирует события, требующие доступа к базе данных.|  
-|Общие сведения|Подробно|Регистрирует события, требующие доступа к следующим элементам.<br /><br /> [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] .<br /><br /> Обработчик HTTP-данных средства просмотра отчетов.<br /><br /> Доступ к отчету (RDL-файлы).<br /><br /> Источники данных (RSDS-файлы).<br /><br /> URL-адреса на сайте SharePoint (SMDL-файлы).|  
+|База данных|Verbose|Регистрирует события, требующие доступа к базе данных.|  
+|Общие|Verbose|Регистрирует события, требующие доступа к следующим элементам.<br /><br /> [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]Веб-страницы<br /><br /> Обработчик HTTP-данных средства просмотра отчетов.<br /><br /> Доступ к отчету (RDL-файлы).<br /><br /> Источники данных (RSDS-файлы).<br /><br /> URL-адреса на сайте SharePoint (SMDL-файлы).|  
 |Office Server General|Exception|Регистрирует ошибки входа.|  
-|Топология|Подробно|Регистрирует текущую информацию пользователя.|  
-|веб-части|Подробно|Регистрирует события, для которых требуется доступ к веб-части средства просмотра отчетов.|  
+|Топология|Verbose|Регистрирует текущую информацию пользователя.|  
+|веб-части|Verbose|Регистрирует события, для которых требуется доступ к веб-части средства просмотра отчетов.|  
   
-##  <a name="bkmk_turnon"></a> Включение и отключение событий служб Reporting Services в категории служб Reporting Services  
+##  <a name="bkmk_turnon"></a>Включение и отключение Reporting Services событий в категории Reporting Services  
   
 1.  В центре администрирования SharePoint выполните следующие действия.  
   
-2.  Выберите **Наблюдение**.  
+2.  Щелкните **Мониторинг**.  
   
 3.  Выберите **Настройка журнала диагностики** в группе **Отчеты** .  
   
@@ -66,10 +67,10 @@ ms.locfileid: "72796406"
 > [!NOTE]  
 >  Параметр **Событие наименьшей важности для занесения в журнал событий** не поддерживается в службах [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Параметр не обрабатывается.  
   
-##  <a name="bkmk_recommended"></a> Рекомендуемая конфигурация  
+##  <a name="bkmk_recommended"></a>Рекомендуемая конфигурация  
  Приведенные ниже параметры ведения журнала рекомендуются в качестве стандартной конфигурации.  
   
--   **HTTP-перенаправитель**  
+-   **Перенаправитель HTTP**  
   
 -   **Прокси-сервер клиента SOAP**  
   
@@ -81,16 +82,16 @@ ms.locfileid: "72796406"
 Get-SPDiagnosticConfig  
 ```  
   
-##  <a name="bkmk_readentries"></a> Чтение записей журнала  
+##  <a name="bkmk_readentries"></a>Чтение записей журналов  
  Записи служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] в журнале отформатированы следующим образом.  
   
-1.  **Продукт: службы SQL Server Reporting Services**  
+1.  **Продукт: SQL Server Reporting Services**  
   
-2.  **Категория:** события, связанные с сервером, будут иметь символы Report Server в начале имени. Например, Report Server Alerting Runtime. Эти события также регистрируются в файлах журнала сервера отчета.  
+2.  **Категория:** События, связанные с сервером, будут содержать символы «сервер отчетов» в начале имени. Например, Report Server Alerting Runtime. Эти события также регистрируются в файлах журнала сервера отчета.  
   
-3.  **Категория:** события, связанные клиентской веб-частью или полученные от нее, не содержащие символы Report Server. Например, Service Application Proxy (в отличие от Report Server Alerting Runtime). Записи WFE содержат идентификатор CorrelationID; записи сервера его не содержат.  
+3.  **Категория:** События, связанные с интерфейсным веб-компонентом или взаимодействующими с ним, не содержат "сервер отчетов". Например, Service Application Proxy (в отличие от Report Server Alerting Runtime). Записи WFE содержат идентификатор CorrelationID; записи сервера его не содержат.  
   
-##  <a name="bkmk_list"></a> Список событий служб SQL Server Reporting Services  
+##  <a name="bkmk_list"></a>Список событий SQL Server Reporting Services  
  В следующей таблице приведен список событий в категории служб SQL Server Reporting Services.  
   
 |Имя области|Описание или образцы записей|  
@@ -101,7 +102,7 @@ Get-SPDiagnosticConfig
 |Подготовка локального режима||  
 |Прокси-сервер клиента SOAP||  
 |Страницы пользовательского интерфейса||  
-|Power View|Записи журналов, занесенные в **LogClientTraceEvents** API. Источником этих записей являются клиентские приложения, в том числе [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], компонент надстройки служб [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] для выпуска [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Enterprise Edition.<br /><br /> Все записи журнала от API-интерфейса LogClientTraceEvents заносятся в **категорию** SQL Server Reporting Services и в **область** Power View.<br /><br /> Содержание записей, занесенных в область Power View, определяется клиентским приложением.|  
+|Power View|Записи журналов, занесенные в **LogClientTraceEvents** API. Источником этих записей являются клиентские приложения, в том [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]числе, компонент [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] надстройки для [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] выпуска Enterprise.<br /><br /> Все записи журнала от API-интерфейса LogClientTraceEvents заносятся в **категорию** SQL Server Reporting Services и в **область** Power View.<br /><br /> Содержание записей, занесенных в область Power View, определяется клиентским приложением.|  
 |Среда выполнения системы предупреждений сервера отчетов||  
 |Диспетчер домена приложений сервера отчетов||  
 |Буферизованный ответ сервера отчетов||  
@@ -138,18 +139,17 @@ Get-SPDiagnosticConfig
 |Прокси-сервер приложения службы||  
 |Общая служба|Образцы записей:<br /><br /> MediumUpdating ReportingWebServiceApplication<br /><br /> Доступ MediumGranting к базам данных содержимого.<br /><br /> Экземпляры MediumProvisioning для ReportingWebServiceApplication<br /><br /> Изменение учетной записи службы MediumProcessing для ReportingWebServiceApplication<br /><br /> Разрешения базы данных MediumSetting.|  
   
-##  <a name="bkmk_powershell"></a> Просмотр файла журнала с помощью PowerShell  
+##  <a name="bkmk_powershell"></a>Просмотр файла журнала с помощью PowerShell  
  ![Содержимое, связанное с PowerShell](../media/rs-powershellicon.jpg "Содержимое, связанное с PowerShell") С помощью PowerShell можно получить список [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] связанных событий из файла журнала ULS. Введите следующую команду в консоли управления SharePoint 2010, чтобы получить из файла журнала ULS UESQL11SPOINT-20110606-1530.log отфильтрованный список строк, содержащих подстроку **sql server reporting services**:  
   
 ```powershell
 Get-Content -Path "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\LOGS\UESQL11SPOINT-20110606-1530.log" | Select-String "sql server reporting services"  
 ```  
   
- Также существует множество инструментов, доступных для загрузки, которые позволяют читать журналы ULS. Например, [SharePoint LogViewer](http://sharepointlogviewer.codeplex.com/) или [SharePoint ULS Log Viewer](http://ulsviewer.codeplex.com/workitem/list/basic). Оба доступны в CodePlex.  
+ Также существует множество инструментов, доступных для загрузки, которые позволяют читать журналы ULS. Например, [SharePoint LogViewer](https://sharepointlogviewer.codeplex.com/) или [SharePoint ULS Log Viewer](http://ulsviewer.codeplex.com/workitem/list/basic). Оба доступны в CodePlex.  
   
  Дополнительные сведения о том, как использовать PowerShell для просмотра данных журнала, см. в разделе [Просмотр диагностического журнала (SharePoint Server 2010)](https://technet.microsoft.com/library/ff463595.aspx).  
   
-##  <a name="bkmk_trace"></a> Расположение журнала трассировки  
+##  <a name="bkmk_trace"></a>Расположение журнала трассировки  
  Файлы журнала трассировки обычно находятся в папке **c:\Program Files\Common files\Microsoft Shared\Web Server Extensions\14\logs** , но этот путь можно проверить или изменить на странице **Журнал диагностики** в центре администрирования SharePoint.  
   
- Дополнительные сведения и шаги настройки диагностической регистрации на сервере SharePoint в центре администрирования SharePoint 2010 см. в разделе [Настройка диагностической регистрации (службы Windows SharePoint Services)](https://go.microsoft.com/fwlink/?LinkID=114423).  

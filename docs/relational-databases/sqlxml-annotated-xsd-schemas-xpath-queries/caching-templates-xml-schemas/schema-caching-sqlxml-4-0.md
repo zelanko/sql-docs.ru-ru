@@ -1,6 +1,5 @@
 ---
-title: Кэширование схем (SQLXML 4.0) | Документация Майкрософт
-ms.custom: ''
+title: Кэширование схемы (SQLXML)
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -14,17 +13,18 @@ helpviewer_keywords:
 ms.assetid: 7e5fda21-b435-41fd-b637-8b616560a93f
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d4ac7ee9c119daa4f1aa41c1485aae57ee280c5f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 32a825f4cfc0a90ce9cba879b6b64856effabe6d
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68093288"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257316"
 ---
 # <a name="schema-caching-sqlxml-40"></a>Кэширование схем (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  При установке side-by-side XML для Microsoft SQL Server 2000 Web Release 1, Microsoft SQLXML 2.0 и SQLXML 3.0 можно явно управлять схемы, кэширование во всех версиях ОС, используя следующие разделы реестра:  
+  При параллельной установке XML для Microsoft SQL Server 2000 Web Release 1, Microsoft SQLXML 2.0 и SQLXML 3.0 можно в явном виде контролировать кэширование схем всех версий с помощью следующих разделов реестра.  
   
  Web Release 1.  
   
@@ -32,7 +32,7 @@ ms.locfileid: "68093288"
 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSSQLServer\Client\SQLXMLX\SchemaCacheSize  
 ```  
   
- SQLXML 2.0:  
+ SQLXML 2,0:  
   
 ```  
 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSSQLServer\Client\SQLXML2\SchemaCacheSize  
@@ -47,21 +47,21 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSSQLServer\Client\SQLXML3\SchemaCacheSize
 > [!CAUTION]  
 >  [!INCLUDE[ssNoteRegistry](../../../includes/ssnoteregistry-md.md)]  
   
- Дополнительные сведения об установке side-by-side см. в разделе [новые возможности в SQLXML 4.0 с пакетом обновления 1](../../../relational-databases/sqlxml/what-s-new-in-sqlxml-4-0-sp1.md).  
+ Дополнительные сведения о параллельной установке см. [в статье новые возможности SQLXML 4,0 с пакетом обновления 1 (SP1)](../../../relational-databases/sqlxml/what-s-new-in-sqlxml-4-0-sp1.md).  
   
  Кэширование схем значительно повышает производительность запроса XPath. При выполнении запроса XPath к схеме сопоставления эта схема хранится в памяти, и необходимые структуры данных строятся в памяти. Если задано кэширование схем, то схема остается в памяти, тем самым повышая производительность последующих запросов XPath.  
   
  Размер кэша для схем можно задать, добавив в реестр указанный выше раздел.  
   
- Размер схемы устанавливается в зависимости от доступной памяти и количества используемых схем. Значение по умолчанию **SchemaCacheSize** равно 31. Если задать **SchemaCacheSize** более поздней версии, используется больше памяти. Поэтому можно увеличить размер кэша, если доступ к схеме происходит медленно, и уменьшить его при нехватке памяти.  
+ Размер схемы устанавливается в зависимости от доступной памяти и количества используемых схем. Размер **счемакачесизе** по умолчанию — 31. Если задать **счемакачесизе** выше, будет использоваться больше памяти. Поэтому можно увеличить размер кэша, если доступ к схеме происходит медленно, и уменьшить его при нехватке памяти.  
   
- Из соображений производительности рекомендуется установить **SchemaCacheSize** выше, чем количество обычно используемых схем сопоставления. Как увеличить количество схем, если **SchemaCacheSize** меньше, чем количество схем, у вас есть, то производительность снижается.  
+ По соображениям производительности рекомендуется задавать **счемакачесизе** выше числа используемых схем сопоставления. При увеличении числа схем, если **счемакачесизе** меньше числа схем, производительность снижается.  
   
 > [!NOTE]  
 >  Не рекомендуется кэшировать схемы во время разработки программ, поскольку изменения, вносимые в схемы, отражаются в кэше примерно через две минуты.  
   
 ## <a name="see-also"></a>См. также  
- [Кэширование шаблонов &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/caching-templates-xml-schemas/template-caching-sqlxml-4-0.md)   
- [Кэширование XSL &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/caching-templates-xml-schemas/xsl-caching-sqlxml-4-0.md)  
+ [Кэширование шаблонов &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/caching-templates-xml-schemas/template-caching-sqlxml-4-0.md)   
+ [Кэширование XSL &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/caching-templates-xml-schemas/xsl-caching-sqlxml-4-0.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Рекомендации и действующие ограничения SQLXML 4.0 | Документация Майкрософт
+title: Рекомендации по использованию SQLXML 4.0 и действующие ограничения
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ ms.assetid: fe433d30-90a1-421e-85c6-af13294dc18d
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 411495986ed700a069a7c8124a7d0829102138fe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3ba2e7438a9084d7ad2d4f8edee9564236ecbadd
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68073373"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257240"
 ---
 # <a name="guidelines-and-limitations-of-sqlxml-40"></a>Рекомендации по использованию SQLXML 4.0 и действующие ограничения
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -30,6 +30,6 @@ ms.locfileid: "68073373"
   
      Выполняется приложение, использующее SQLXML 4.0 и независимые от версии идентификаторы PROGID, и требуется установить несколько других программ. Эта программа может установить предыдущую версию SQLXML. Приложение может завершиться с ошибкой, так как независимые от версии идентификаторы PROGID в приложении теперь указывают на предыдущую версию SQLXML, в которой может и не быть функции SQLXML, которую использует приложение.  
   
--   Если для какой-либо причине вы не хотите использовать поставщик SQLXMLOLEDB и вместо этого требуется использовать SQLOLEDB поставщику для функций SQLXML, установить **SQLXML Version** свойства «SQLXML.4.0».  
+-   Если по какой либо причине вы не хотите использовать поставщик SQLXMLOLEDB, а хотите использовать поставщик SQLOLEDB для функций SQLXML, задайте для свойства **версия SQLXML** значение "SQLXML. 4.0".  
   
   

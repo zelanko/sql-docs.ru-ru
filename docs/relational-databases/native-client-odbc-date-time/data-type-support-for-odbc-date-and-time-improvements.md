@@ -1,7 +1,7 @@
 ---
-title: Поддержка типов данных для улучшений даты и времени ODBC | Документация Майкрософт
+title: Поддержка типов, Дата и время ODBC
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 12/18/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -14,12 +14,12 @@ ms.assetid: 8e0d9ba2-3ec1-4680-86e3-b2590ba8e2e9
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ed58bf3db95d9989bedf2826cdd722206bfb4d51
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.openlocfilehash: 2b8af68f94a9da2e771074a8a4366417b91f5c7b
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73784006"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75254840"
 ---
 # <a name="data-type-support-for-odbc-date-and-time-improvements"></a>Поддержка типов данных для улучшений функций даты и времени ODBC
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,15 +35,16 @@ ms.locfileid: "73784006"
   
  В следующей таблице показано полное сопоставление серверных типов данных. Обратите внимание, что некоторые ячейки таблицы содержат по две записи. В таких случаях первая запись — это значение ODBC 3.0, а вторая — значение ODBC 2.0.  
   
-|Тип данных SQL Server|Тип данных SQL|Значение|  
+|Типы данных SQL Server|Тип данных SQL|Значение|  
 |--------------------------|-------------------|-----------|  
-|DateTime|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|93 (sql.h)<br /><br /> 11 (sqlext.h)|  
+|Datetime|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|93 (sql.h)<br /><br /> 11 (sqlext.h)|  
 |Smalldatetime|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|93 (sql.h)<br /><br /> 11 (sqlext.h)|  
 |Дата|SQL_TYPE_DATE<br /><br /> SQL_DATE|91 (SQL. h)<br /><br /> 9 (sqlext. h)|  
-|Time|SQL_SS_TIME2|-154 (SQLNCLI. h)|  
+|Время|SQL_SS_TIME2|-154 (SQLNCLI. h)|  
 |DatetimeOFFSET|SQL_SS_TIMESTAMPOFFSET|-155 (SQLNCLI.h)|  
 |Datetime2|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|93 (sql.h)<br /><br /> 11 (sqlext.h)|  
-  
+||||
+
  В следующей таблице приведены соответствующие структуры и типы ODBC C. Поскольку ODBC не поддерживает типы C, определяемые драйвером, для представления данных time и datetimeoffset в виде двоичных структур используется тип SQL_C_BINARY.  
   
 |Тип данных SQL|Организация памяти|Тип данных C по умолчанию|Значение (sqlext.h)|  
@@ -52,21 +53,24 @@ ms.locfileid: "73784006"
 |SQL_TYPE_DATE<br /><br /> SQL_DATE|SQL_DATE_STRUCT<br /><br /> DATE_STRUCT;|SQL_C_TYPE_DATE<br /><br /> SQL_C_DATE|SQL_TYPE_DATE<br /><br /> SQL_DATE|  
 |SQL_SS_TIME2|SQL_SS_TIME2_STRUCT|SQL_C_SS_TIME2<br /><br /> SQL_C_BINARY (ODBC 3.5 и ранее)|0x4000 (sqlncli.h)<br /><br /> SQL_BINARY (-2)|  
 |SQL_SS_TIMESTAMPOFFSET|SQL_SS_TIMESTAMPOFFSET_STRUCT|SQL_C_SS_TIMESTAMPOFFSET<br /><br /> SQL_C_BINARY (ODBC 3.5 и ранее)|0x4001 (sqlncli.h)<br /><br /> SQL_BINARY (-2)|  
-  
+|||||
+
  Если определена привязка SQL_C_BINARY, будет выполнена проверка выравнивания, и в случае неверного выравнивания будет выдана ошибка. Код SQLSTATE для этой ошибки равен IM016 с сообщением «Неверное выравнивание структуры».  
   
 ## <a name="data-formats-strings-and-literals"></a>Форматы данных: строки и литералы  
  В следующей таблице показано сопоставление типов данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и ODBC и строковых литералов ODBC.  
   
-|Тип данных SQL Server|Тип данных ODBC|Формат строки для клиентских преобразований|  
+|Типы данных SQL Server|Тип данных ODBC|Формат строки для клиентских преобразований|  
 |--------------------------|--------------------|------------------------------------------|  
-|DateTime|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|'гггг-мм-дд чч:мм:сс:[.999]'<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для типа Datetime поддерживает значения долей секунды, состоящие из не более чем трех цифр.|  
+|Datetime|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|'гггг-мм-дд чч:мм:сс:[.999]'<br /><br /> 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для типа Datetime поддерживает значения долей секунды, состоящие из не более чем трех цифр.|  
 |Smalldatetime|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|'yyyy-mm-dd hh:hh:ss'<br /><br /> Точность этого типа данных составляет одну минуту. При выводе данных секунды будут равны нулю, а при вводе данных они округляются сервером.|  
 |Дата|SQL_TYPE_DATE<br /><br /> SQL_DATE|'гггг-мм-дд'|  
-|Time|SQL_SS_TIME2|'чч:мм:сс[.9999999]'<br /><br /> Дополнительно можно указывать доли секунд до семи цифр.|  
+|Время|SQL_SS_TIME2|'чч:мм:сс[.9999999]'<br /><br /> Дополнительно можно указывать доли секунд до семи цифр.|  
 |Datetime2|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|"гггг-мм-дд чч: мм: СС [. 9999999]"<br /><br /> Дополнительно можно указывать доли секунд до семи цифр.|  
 |DatetimeOFFSET|SQL_SS_TIMESTAMPOFFSET|'yyyy-mm-dd hh:mm:ss[.9999999] +/- hh:mm'<br /><br /> Дополнительно можно указывать доли секунд до семи цифр.|  
-  
+||||
+
  В escape-последовательностях ODBC для литералов даты и времени изменений нет.  
   
  Для обозначения долей секунды в результатах всегда используется точка (.), а не двоеточие (:).  
@@ -111,7 +115,7 @@ ms.locfileid: "73784006"
 ### <a name="sql_ss_time2_struct"></a>SQL_SS_TIME2_STRUCT  
  Эта структура дополняется до 12 байт как в 32-разрядных, так и в 64-разрядных операционных системах.  
   
-```  
+```cpp
 typedef struct tagSS_TIME2_STRUCT {  
    SQLUSMALLINT hour;  
    SQLUSMALLINT minute;  
@@ -122,7 +126,7 @@ typedef struct tagSS_TIME2_STRUCT {
   
 ### <a name="sql_ss_timestampoffset_struct"></a>SQL_SS_TIMESTAMPOFFSET_STRUCT  
   
-```  
+```cpp
 typedef struct tagSS_TIMESTAMPOFFSET_STRUCT {  
    SQLSMALLINT year;  
    SQLUSMALLINT month;  
@@ -138,7 +142,5 @@ typedef struct tagSS_TIMESTAMPOFFSET_STRUCT {
   
  Если **timezone_hour** является отрицательным, **timezone_minute** должны быть отрицательными или равными нулю. Если **timezone_hour** положительное, **timezone_minute** должен быть положительным или равным нулю. Если **timezone_hour** равен нулю, **timezone_minute** может иметь любое значение в диапазоне от-59 до + 59.  
   
-## <a name="see-also"></a>См. также раздел  
- [Улучшения &#40;даты и времени ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
-  
-  
+## <a name="see-also"></a>См. также  
+ [Улучшения даты и времени &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  

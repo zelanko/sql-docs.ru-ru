@@ -1,6 +1,5 @@
 ---
-title: Указание предикатов выбора в пути доступа (SQLXML 4.0) | Документация Майкрософт
-ms.custom: ''
+title: Задать предикаты выбора в пути расположения (SQLXML)
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -17,13 +16,14 @@ helpviewer_keywords:
 ms.assetid: dbef4cf4-a89b-4d7e-b72b-4062f7b29a80
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8f1a42cd31bce6e650fa83cec90d3552b266f0fa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 84a3eade8a706e95b3ddba72d96e37d8fabf1fd3
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68073273"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75256000"
 ---
 # <a name="specifying-selection-predicates-in-the-location-path-sqlxml-40"></a>Указание предикатов выбора в пути доступа (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -32,16 +32,17 @@ ms.locfileid: "68073273"
  XPath также позволяет выполнять фильтрацию в зависимости от позиции. Выражение предиката, результатом оценки которого является число, выбирает этот исходный узел. Например, путь доступа `Customer[3]` возвращает третьего клиента. Такие числовые предикаты не поддерживаются. Поддерживаются только предикаты, которые возвращают логический результат.  
   
 > [!NOTE]  
->  Сведения об ограничениях этой реализации XPath и отличиях от спецификации W3C, см. в разделе [введение в использование запросов XPath &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/introduction-to-using-xpath-queries-sqlxml-4-0.md).  
+>  Дополнительные сведения об ограничениях этой реализации XPath и различиях между ней и спецификацией W3C см. [в статье Введение в использование XPath запросов &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/introduction-to-using-xpath-queries-sqlxml-4-0.md).  
   
-## <a name="selection-predicate-example-1"></a>Предикат выбора. Пример 1  
- Следующее выражение XPath (путь доступа) выбирает из текущего контекстного узла все  **\<клиента >** дочерние элементы, имеющие **CustomerID** атрибута значение «ALFKI»:  
+## <a name="selection-predicate-example-1"></a>Предикат выбора: Пример 1  
+ Следующее выражение XPath (путь расположения) выбирает из текущего контекстного узла все дочерние элементы ** \<Customer>** , имеющие атрибут **CustomerID** со значением ALFKI:  
   
 ```  
 /child::Customer[attribute::CustomerID="ALFKI"]  
 ```  
   
- В этом запросе XPath `child` и `attribute` являются именами осей. `Customer` является проверкой узла (значение TRUE, если `Customer` —  **\<узла элемента >** , так как  **\<элемент >** является основным типом узла для `child` оси). `attribute::CustomerID="ALFKI"` является предикатом. В этом предикате `attribute` является осью и `CustomerID` является проверкой узла (значение TRUE, если **CustomerID** — это атрибут узла контекста, так как  **\<атрибут >** является участником Тип узла **атрибут** оси).  
+ В этом запросе XPath `child` и `attribute` являются именами осей. `Customer`— Это проверка узла (значение true `Customer` , если является ** \<узлом элемента>**, поскольку ** \<элемент>** является типом основного узла для `child` оси). 
+  `attribute::CustomerID="ALFKI"` является предикатом. `attribute` В предикате является осью и `CustomerID` является тестом узла (значение true, если **CustomerID** является атрибутом контекстного узла, так как ** \<атрибут>** является типом основного узла оси **атрибутов** ).  
   
  Запрос XPath также можно задать с использованием сокращенного синтаксиса:  
   
@@ -49,14 +50,16 @@ ms.locfileid: "68073273"
 /Customer[@CustomerID="ALFKI"]  
 ```  
   
-## <a name="selection-predicate-example-2"></a>Предикат выбора. Пример 2  
- Следующее выражение XPath (путь доступа) выбирает из текущего контекстного узла все  **\<порядок >** внучатые элементы, имеющие **SalesOrderID** атрибут со значением 1:  
+## <a name="selection-predicate-example-2"></a>Предикат выбора: пример 2  
+ Следующее выражение XPath (путь расположения) выбирает из текущего контекстного узла все ** \<>** внуками, имеющие атрибут **SalesOrderID** со значением 1:  
   
 ```  
 /child::Customer/child::Order[attribute::SalesOrderID="1"]  
 ```  
   
- В этом выражении XPath `child` и `attribute` являются именами осей. `Customer`, `Order` и `SalesOrderID` являются проверками узла. `attribute::OrderID="1"` является предикатом.  
+ В этом выражении XPath `child` и `attribute` являются именами осей. 
+  `Customer`, `Order` и `SalesOrderID` являются проверками узла. 
+  `attribute::OrderID="1"` является предикатом.  
   
  Запрос XPath также можно задать с использованием сокращенного синтаксиса:  
   
@@ -64,18 +67,19 @@ ms.locfileid: "68073273"
 /Customer/Order[@SalesOrderID="1"]  
 ```  
   
-## <a name="selection-predicate-example-3"></a>Предикат выбора. Пример 3  
- Следующее выражение XPath (путь доступа) выбирает из текущего контекстного узла все  **\<клиента >** дочерние элементы, имеющие один или несколько  **\<ContactName >** дочерние элементы:  
+## <a name="selection-predicate-example-3"></a>Предикат выбора: пример 3  
+ Следующее выражение XPath (путь к расположению) выбирает из текущего контекстного узла все ** \<** дочерние узлы>, имеющие один или несколько ** \<объектов ContactName>** потомков:  
   
 ```  
 child::Customer[child::ContactName]  
 ```  
   
- В этом примере предполагается, что  **\<ContactName >** является дочерним элементом элемента  **\<клиента >** элемент XML-документа, который называется  *элементное сопоставление* в аннотированной схеме XSD.  
+ В этом примере предполагается, что ** \<ContactName>** является дочерним элементом элемента ** \<>Customer** в XML-документе, который называется *сопоставлением с использованием элементов* в схеме XSD с заметками.  
   
- В этом выражении XPath `child` является именем оси. `Customer` является проверкой узла (значение TRUE, если `Customer` —  **\<элемент >** узла, так как  **\<элемент >** является основным типом узла для `child` оси). `child::ContactName` является предикатом. В этом предикате `child` является осью и `ContactName` является проверкой узла (значение TRUE, если `ContactName` —  **\<элемент >** узла).  
+ В этом выражении XPath `child` является именем оси. `Customer`является тестом узла (значение true `Customer` , если является ** \<элементом>** узлом, поскольку ** \<элемент>** является типом основного узла для `child` оси). 
+  `child::ContactName` является предикатом. В предикате `child` является осью и `ContactName` является тестом узла (значение true, если `ContactName` является ** \<элементом>** узле).  
   
- Это выражение возвращает только  **\<клиента >** дочерний элемент контекстного узла, имеющего  **\<ContactName >** дочерние элементы.  
+ Это выражение возвращает только дочерние элементы ** \<Customer>** элемента контекстного узла, которые имеют ** \<ContactName>** дочерние элементы.  
   
  Запрос XPath также можно задать с использованием сокращенного синтаксиса:  
   
@@ -83,16 +87,17 @@ child::Customer[child::ContactName]
 Customer[ContactName]  
 ```  
   
-## <a name="selection-predicate-example-4"></a>Предикат выбора. Пример 4  
- Следующее выражение XPath выбирает  **\<клиента >** дочерние элементы узла контекста, у которых нет  **\<ContactName >** дочерние элементы:  
+## <a name="selection-predicate-example-4"></a>Предикат выбора: пример 4  
+ Следующее выражение XPath выбирает ** \<** дочерние элементы Customer>элемента контекстного узла, не имеющих ** \<ContactName>** элементов.  
   
 ```  
 child::Customer[not(child::ContactName)]  
 ```  
   
- В этом примере предполагается, что  **\<ContactName >** является дочерним элементом элемента  **\<клиента >** элемент в XML-документе и поле ContactName не является обязательным в База данных.  
+ В этом примере предполагается, что ** \<ContactName>** является дочерним элементом элемента ** \<>Customer** в XML-документе, а поле ContactName не является обязательным в базе данных.  
   
- В этом примере `child` является осью. `Customer` является проверкой узла (значение TRUE, если `Customer` является \<элемент > узла). `not(child::ContactName)` является предикатом. В этом предикате `child` является осью и `ContactName` является проверкой узла (значение TRUE, если `ContactName` является \<элемент > узла).  
+ В этом примере `child` является осью. `Customer`является тестом узла (значение TRUE `Customer` , если \<является элементом> узле). 
+  `not(child::ContactName)` является предикатом. В предикате `child` является осью и `ContactName` является ТЕСТОМ узла (значение true, если `ContactName` является \<элементом> узле).  
   
  Запрос XPath также можно задать с использованием сокращенного синтаксиса:  
   
@@ -100,14 +105,15 @@ child::Customer[not(child::ContactName)]
 Customer[not(ContactName)]  
 ```  
   
-## <a name="selection-predicate-example-5"></a>Предикат выбора. Пример 5  
- Следующее выражение XPath выбирает из текущего контекстного узла все  **\<клиента >** дочерние элементы, имеющие **CustomerID** атрибут:  
+## <a name="selection-predicate-example-5"></a>Предикат выбора: пример 5  
+ Следующее выражение XPath выбирает из текущего контекстного узла все ** \<клиентские>** дочерние элементы, имеющие атрибут **CustomerID** :  
   
 ```  
 child::Customer[attribute::CustomerID]  
 ```  
   
- В этом примере `child` является осью и `Customer` — проверкой узла (значение TRUE, если `Customer` является \<элемент > узла). `attribute::CustomerID` является предикатом. В этом предикате `attribute` является осью и `CustomerID` является предикатом (значение TRUE, если `CustomerID` —  **\<атрибут >** узла).  
+ В этом примере — `child` это ось и `Customer` проверка узла (значение true, если `Customer` является \<элементом> узле). 
+  `attribute::CustomerID` является предикатом. В предикате `attribute` является осью и `CustomerID` является предикатом (значение true, если `CustomerID` является ** \<атрибутом>** узле).  
   
  Запрос XPath также можно задать с использованием сокращенного синтаксиса:  
   
@@ -115,17 +121,18 @@ child::Customer[attribute::CustomerID]
 Customer[@CustomerID]  
 ```  
   
-## <a name="selection-predicate-example-6"></a>Предикат выбора. Пример 6  
- [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0 включает поддержку запросов XPath, которые содержат в предикате перекрестное произведение, как показано в следующем примере:  
+## <a name="selection-predicate-example-6"></a>Предикат выбора: пример 6  
+ 
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0 включает поддержку запросов XPath, которые содержат в предикате перекрестное произведение, как показано в следующем примере:  
   
 ```  
 Customer[Order/@OrderDate=Order/@ShipDate]  
 ```  
   
- Этот запрос выбирает всех клиентов с элементом `Order`, для которого `OrderDate` равен `ShipDate` `Order`.  
+ Этот запрос выбирает всех клиентов с элементом `Order`, для которого `OrderDate` равен `ShipDate``Order`.  
   
 ## <a name="see-also"></a>См. также  
- [Введение в схемы XSD с заметками &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md)   
- [Форматирование XML на стороне клиента &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/formatting/client-side-xml-formatting-sqlxml-4-0.md)  
+ [Общие сведения о схемах XSD с заметками &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md)   
+ [Форматирование XML на стороне клиента &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml/formatting/client-side-xml-formatting-sqlxml-4-0.md)  
   
   

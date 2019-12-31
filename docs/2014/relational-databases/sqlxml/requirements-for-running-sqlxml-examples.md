@@ -15,24 +15,23 @@ ms.assetid: acfee2eb-cf35-4377-9fde-82ad1d938011
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 89cfc0e941bd1819ae6ae95ece8fe004702fcc36
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 712b1a78f3b2892bdb889f1262fd545c2fc6b5e5
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66012180"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251290"
 ---
 # <a name="requirements-for-running-sqlxml-examples"></a>Требования к запуску примеров SQLXML
-  [Программирование для SQLXML 4.0](sqlxml-4-0-programming-concepts.md) раздел содержит многочисленные примеры. Далее перечисляются требования для создания работающих образцов из этих примеров.  
+  В разделе [программирование SQLXML 4,0](sqlxml-4-0-programming-concepts.md) содержатся многочисленные примеры. Далее перечисляются требования для создания работающих образцов из этих примеров.  
   
  Чтобы создать рабочие образцы на основе примеров SQLXML 4.0, должны быть установлены следующие компоненты:  
   
--   Образец базы данных AdventureWorks. Дополнительные сведения см. в разделе [образцы баз данных AdventureWorks](http://msftdbprodsamples.codeplex.com/).  
+-   Образец базы данных AdventureWorks. Дополнительные сведения см. в разделе [образцы баз данных AdventureWorks](https://msftdbprodsamples.codeplex.com/).  
   
 -   Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. Дополнительные сведения см. в статье [Установка SQL Server Native Client](../native-client/applications/installing-sql-server-native-client.md).  
   
 -   Компоненты MDAC 2.6 или более поздние версии  
   
- Во многих примерах для задания запросов XPath к сопоставленной схеме XSD используются шаблоны. Дополнительные сведения см. в разделе [с помощью аннотированные схемы XSD в запросах &#40;SQLXML 4.0&#41;](annotated-xsd-schemas/using-annotated-xsd-schemas-in-queries-sqlxml-4-0.md).  
-  
+ Во многих примерах для задания запросов XPath к сопоставленной схеме XSD используются шаблоны. Дополнительные сведения см. [в разделе Использование схем XSD с заметками в запросах &#40;SQLXML 4,0&#41;](annotated-xsd-schemas/using-annotated-xsd-schemas-in-queries-sqlxml-4-0.md).  
   

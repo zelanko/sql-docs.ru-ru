@@ -1,6 +1,5 @@
 ---
-title: Начальный экран клиента Data Quality Client | Microsoft Docs
-ms.custom: ''
+title: Главный экран клиента DQS
 ms.date: 02/29/2012
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -10,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.clienthome.f1
 ms.assetid: 7c6ec469-bc7d-4d19-8e21-11dcf8ade108
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: 660c48540bb7d7763eb149c0882f5b37f2cc0d1e
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: 8aaf6c9cb9f4c7ed0f006492e6e11ce82ef333f2
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70152579"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251728"
 ---
 # <a name="data-quality-client-home-screen"></a>Главный экран клиента DQS
 
@@ -25,7 +24,7 @@ ms.locfileid: "70152579"
 
   Этот экран обеспечивает доступ к пользовательским интерфейсам каждой из трех основных групп задач служб [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS): управление базами знаний, проекты служб DQS и администрирование.  
   
-## <a name="options"></a>Options  
+## <a name="options"></a>Параметры  
   
 ### <a name="knowledge-base-management"></a>Управление базами знаний  
  База знаний DQS представляет собой репозиторий метаданных, которые используются DQS для повышения качества данных. Эти метаданные создаются как платформой служб DQS в процессе автоматизированного обнаружения набора знаний, так и администратором данных в процессе интерактивного управления доменами.  
@@ -41,7 +40,7 @@ ms.locfileid: "70152579"
   
  Открывать заблокированную базу знаний и изменять ее может только пользователь, который заблокировал базу. В этом случае база знаний открывается в состоянии, которое она имела на момент закрытия и которое показано в скобках. Если база знаний заблокирована, но ее заблокировал другой пользователь, то вы можете открыть ее только в режиме для чтения.  
   
-### <a name="data-quality-projects"></a>Data Quality Projects  
+### <a name="data-quality-projects"></a>Проекты служб Data Quality Services  
  Проект качества данных — это процесс, в котором службы DQS выполняют очистку данных или сопоставление данных как с помощью автоматизированного процесса исправления данных, так и с помощью интерактивного процесса очистки данных.  
   
  **Создать проект служб DQS**  
@@ -59,12 +58,12 @@ ms.locfileid: "70152579"
  **Мониторинг активности**  
  Отображает состояние всех действий (как текущих, так и прошлых), которые связаны с подключенным [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]. Типы отслеживаемых действий включают управление базами знаний, проекты качества данных и исправление данных на основе служб SSIS.  
   
- **Configuration**  
+ **Настройка**  
  Отображение свойств конфигурации для учетных записей службы эталонных данных (как в Azure Marketplace, так и непосредственно в службах эталонных данных), общие параметры (интерактивная очистка, сопоставление и профилирование) и параметры серьезности записи в журнал.  
   
-## <a name="see-also"></a>См. также статью  
+## <a name="see-also"></a>См. также  
  [Базы знаний и домены DQS](../data-quality-services/dqs-knowledge-bases-and-domains.md)   
- [Проекты служб Data Quality Services &#40;DQS&#41;](../data-quality-services/data-quality-projects-dqs.md)   
- [Администрирование DQS](../data-quality-services/dqs-administration.md)  
+ [Проекты служб Data Quality &#40;DQS&#41;](../data-quality-services/data-quality-projects-dqs.md)   
+ [администрирование DQS](../data-quality-services/dqs-administration.md)  
   
   

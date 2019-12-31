@@ -1,6 +1,5 @@
 ---
-title: Массовое вопросы безопасности загрузки (SQLXML 4.0) | Документация Майкрософт
-ms.custom: ''
+title: Вопросы безопасности при выполнении групповой загрузки (SQLXML)
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -15,19 +14,20 @@ helpviewer_keywords:
 ms.assetid: 192fc6d4-ecbc-4a4d-a5cb-55e1f64af318
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0087a8846935905574a8666186de5e025a16494e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 817c8c4d0ff2a140033e99879c0720a63f81e5f4
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68026999"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252525"
 ---
 # <a name="bulk-load-security-considerations-sqlxml-40"></a>Вопросы безопасности массовой загрузки (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Ниже приведены рекомендации по обеспечению безопасности при использовании массовой загрузки XML.  
   
--   При указании Массовая загрузка выполняться как транзакция, используемая **TempFilePath** свойство, чтобы указать папку, в которой для создания временных файлов.  
+-   При указании того, что операция групповой загрузки должна выполняться как транзакция, используйте свойство **TempFilePath** , чтобы указать папку для создания временных файлов.  
   
      Процесс массовой загрузки создает эти временные файлы со следующими разрешениями.  
   
@@ -56,6 +56,6 @@ ms.locfileid: "68026999"
 -   Если пользователь задает для SQLXML файл журнала ошибок для записи ошибок, то каждый раз при выполнении массовой загрузки этот файл будет перезаписываться данными последнего процесса массовой загрузки.  
   
 ## <a name="see-also"></a>См. также  
- [Выполнение массовой загрузки XML-данных &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
+ [Выполнение групповой загрузки данных XML &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
   
   

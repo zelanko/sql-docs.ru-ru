@@ -1,6 +1,5 @@
 ---
-title: Указание логических функций в запросах XPath (SQLXML 4,0) | Документация Майкрософт
-ms.custom: ''
+title: Использование логических функций в запросах XPath (SQLXML)
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -16,22 +15,23 @@ helpviewer_keywords:
 ms.assetid: c72cd333-9294-4d41-84f2-1748bf20e3eb
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4d00bf01660c212b19c529f6012ec29eda60295c
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 18d1f66cde1a40e68d95fa4ef98c4df7c1a608b0
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907757"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252590"
 ---
 # <a name="specifying-boolean-functions-in-xpath-queries-sqlxml-40"></a>Указание логических функций в запросах XPath (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  В следующих примерах показано, как задаются логические функции в запросах XPath. В данных примерах запросы XPath определены в соответствии со схемой сопоставления, которая содержится в файле SampleSchema1.xml. Сведения об этом образце схемы см. в статье [Пример схемы XSD с заметками &#40;для&#41;XPath примеры SQLXML 4,0](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
+  В следующих примерах показано, как задаются логические функции в запросах XPath. В данных примерах запросы XPath определены в соответствии со схемой сопоставления, которая содержится в файле SampleSchema1.xml. Дополнительные сведения об этом образце схемы см. в разделе [Пример схемы XSD с заметками для XPath-примеров &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
   
 ## <a name="examples"></a>Примеры  
   
-## <a name="a-specify-the-not-boolean-function"></a>A. Задание логической функции not()  
- Этот запрос возвращает все **\<клиент >** дочерние элементы контекстного узла, не имеющие **\<порядок >** дочерних элементов:  
+## <a name="a-specify-the-not-boolean-function"></a>а. Задание логической функции not()  
+ Этот запрос возвращает все ** \<клиентские>** дочерние элементы контекстного узла, не имеющие ** \<порядка>** дочерних элементов:  
   
 ```  
 /child::Customer[not(child::Order)]  
@@ -78,8 +78,8 @@ ms.locfileid: "72907757"
 </ROOT>  
 ```  
   
-## <a name="b-specify-the-true-and-false-boolean-functions"></a>б. Задание логических функций true() и false()  
- Этот запрос возвращает все **\<элементы >** элемента "клиент" для узла контекста, не имеющие **\<порядок >** дочерних элементов. В реляционных терминах этот запрос возвращает всех заказчиков, не разместивших ни одного заказа.  
+## <a name="b-specify-the-true-and-false-boolean-functions"></a>B. Задание логических функций true() и false()  
+ Этот запрос возвращает все ** \<** дочерние элементы>элементов для узла контекста, не имеющие ** \<порядка>** дочерних элементов. В реляционных терминах этот запрос возвращает всех заказчиков, не разместивших ни одного заказа.  
   
 ```  
 /child::Customer[child::Order=false()]  

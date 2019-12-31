@@ -1,6 +1,5 @@
 ---
-title: Импорт и экспорт знаний | Microsoft Docs
-ms.custom: ''
+title: Импорт и экспорт набора знаний
 ms.date: 07/31/2012
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -8,14 +7,14 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 12537c9d-31e4-40b0-a411-cb343abbe96a
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: 8f7c0f8997973cf73df5afd1dbe43b5971060799
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: 06f4b140ef90eb3d1ed942e5374643e80fb1b24e
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67935253"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75254811"
 ---
 # <a name="importing-and-exporting-knowledge"></a>Импорт и экспорт набора знаний
 
@@ -31,9 +30,9 @@ ms.locfileid: "67935253"
   
 |||  
 |-|-|  
-|Экспорт домена из базы знаний в файл данных .dqs.|[Экспорт домена в файл DQS](../data-quality-services/export-a-domain-to-a-dqs-file.md)|  
-|Импорт домена из файла данных .dqs в существующую базу знаний.|[Импорт домена из файла DQS](../data-quality-services/import-a-domain-from-a-dqs-file.md)|  
-|Экспорт всей базы знаний в файл данных .dqs.|[Экспорт базы знаний в файл DQS](../data-quality-services/export-a-knowledge-base-to-a-dqs-file.md)|  
+|Экспорт домена из базы знаний в файл данных .dqs.|[Экспорт домена в файл .dqs](../data-quality-services/export-a-domain-to-a-dqs-file.md)|  
+|Импорт домена из файла данных .dqs в существующую базу знаний.|[Импорт домена из файла .dqs](../data-quality-services/import-a-domain-from-a-dqs-file.md)|  
+|Экспорт всей базы знаний в файл данных .dqs.|[Экспорт базы знаний в файл .dqs](../data-quality-services/export-a-knowledge-base-to-a-dqs-file.md)|  
 |Импорт всей базы знаний в файл данных .dqs.|[Импорт базы знаний из файла .dqs](../data-quality-services/import-a-knowledge-base-from-a-dqs-file.md)|  
 |Импорт значений в домен из файла Excel|[Импорт значений в домен из файла Excel](../data-quality-services/import-values-from-an-excel-file-into-a-domain.md)|  
 |Импорт доменов из файла Excel в базу знаний|[Импорт доменов из файла Excel при обнаружении набора знаний](../data-quality-services/import-domains-from-an-excel-file-in-knowledge-discovery.md)|  

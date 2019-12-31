@@ -1,6 +1,5 @@
 ---
-title: Указание арифметических операторов в запросах XPath (SQLXML 4,0) | Документация Майкрософт
-ms.custom: ''
+title: Использование арифметических операторов в запросах XPath (SQLXML)
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -15,28 +14,29 @@ helpviewer_keywords:
 ms.assetid: fdfbc87d-759f-4abc-acf5-a21de01f78d3
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2fa1bf6dd7d5652e33eb5fa7c75a86268f31129a
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 44b03e86ae2667b669d85533b04a2d973cef1833
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907765"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252624"
 ---
 # <a name="specifying-arithmetic-operators-in-xpath-queries-sqlxml-40"></a>Задание арифметических операторов в запросах XPath (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  В следующем примере показано, как в запросах XPath указывать арифметические операторы. В этом примере задается запрос XPath к схеме сопоставления, содержащейся в файле SampleSchema1.xml. Сведения об этом образце схемы см. в статье [Пример схемы XSD с заметками &#40;для&#41;XPath примеры SQLXML 4,0](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
+  В следующем примере показано, как в запросах XPath указывать арифметические операторы. В этом примере задается запрос XPath к схеме сопоставления, содержащейся в файле SampleSchema1.xml. Дополнительные сведения об этом образце схемы см. в разделе [Пример схемы XSD с заметками для XPath-примеров &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
   
 ## <a name="examples"></a>Примеры  
   
-### <a name="a-specify-the--arithmetic-operator"></a>A. Указание арифметического оператора *  
- Этот запрос XPath возвращает **\<OrderDetail >** элементов, которые соответствуют заданному предикату:  
+### <a name="a-specify-the--arithmetic-operator"></a>а. Указание арифметического оператора *  
+ Этот запрос XPath возвращает ** \<OrderDetail>** элементов, которые соответствуют заданному предикату:  
   
 ```  
 /child::OrderDetail[@UnitPrice * @Quantity = 12.350]  
 ```  
   
- В запросе `child` — это ось, а `OrderDetail` — это проверка узла (TRUE, если **OrderDetail** является **\<ным узлом элемента >** , поскольку\<**элемент** > является основным узлом для **дочерней** оси). Для всех узлов элементов **\<OrderDetail >** применяется тест в предикате и возвращаются только те узлы, которые соответствуют условию.  
+ В `child` запросе — это ось, а `OrderDetail` — проверка узла (true, если **OrderDetail** является ** \<узлом элемента>**, поскольку ** \<элемент>ным** узлом является основным узлом для **дочерней** оси). Для всех узлов элементов ** \<OrderDetail>** применяется тест в предикате и возвращаются только те узлы, которые соответствуют условию.  
   
 > [!NOTE]  
 >  Числа в языке XPath являются числами с плавающей запятой двойной точности, и сравнение чисел с плавающей запятой, как указано в примере, приводит к округлению.  

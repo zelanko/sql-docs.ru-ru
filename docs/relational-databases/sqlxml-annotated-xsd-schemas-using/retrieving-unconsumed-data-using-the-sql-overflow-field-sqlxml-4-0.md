@@ -1,6 +1,5 @@
 ---
-title: 'Извлечение невостребованных данных с помощью SQL: overflow-field (SQLXML 4,0) | Документация Майкрософт'
-ms.custom: ''
+title: 'Получение невостребованных данных с помощью SQL: overflow-field (SQLXML)'
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -17,17 +16,18 @@ ms.assetid: 8526998d-b47d-4a32-8dc2-7f50a8d11097
 author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6714940fe14e2f7a1182a24c37f0d7c58b4d3e72
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 35abd64e0c7e492f114164447ec3e258242d3765
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907170"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257397"
 ---
 # <a name="retrieving-unconsumed-data-using-the-sqloverflow-field-sqlxml-40"></a>Получение невостребованных данных с помощью sql:overflow-field (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Когда в базу данных с помощью функции OPENXML [!INCLUDE[tsql](../../includes/tsql-md.md)] вставляются записи из XML-документа, все невостребованные данные из исходного XML-документа могут быть сохранены в столбце. При извлечении данных из базы данных с помощью схем с заметками можно указать атрибут **SQL: overflow-field** , чтобы определить столбец в таблице, в которой хранятся данные о переполнении. Атрибут **SQL: overflow-field** можно указать в **\<элемента**.  
+  Когда в базу данных с помощью функции OPENXML [!INCLUDE[tsql](../../includes/tsql-md.md)] вставляются записи из XML-документа, все невостребованные данные из исходного XML-документа могут быть сохранены в столбце. При извлечении данных из базы данных с помощью схем с заметками можно указать атрибут **SQL: overflow-field** , чтобы определить столбец в таблице, в которой хранятся данные о переполнении. Атрибут **SQL: overflow-field** можно указать в ** \<>элемента **.  
   
  Затем эти данные можно получить одним из трех способов.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "72907170"
 ## <a name="examples"></a>Примеры  
  Чтобы создать рабочие образцы на основе следующих примеров, необходимо выполнить определенные требования. Дополнительные сведения см. в разделе [требования для запуска примеров SQLXML](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
-### <a name="a-specifying-sqloverflow-field-for-an-element"></a>A. Указание sql:overflow-field для элемента  
+### <a name="a-specifying-sqloverflow-field-for-an-element"></a>а. Указание sql:overflow-field для элемента  
  В данном примере предполагается, что был выполнен следующий скрипт, а значит, в базе данных tempdb имеется таблица Customers2:  
   
 ```  

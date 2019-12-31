@@ -1,6 +1,5 @@
 ---
-title: Объект SqlXmlAdapter (управляемые классы SQLXML) | Документация Майкрософт
-ms.custom: ''
+title: Объект Склксмладаптер (SQLXML)
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -16,27 +15,28 @@ helpviewer_keywords:
 ms.assetid: 0a16eddf-fc26-4d92-82d4-359b5fb905d5
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 761a3be11c75844d7e7e014339cfa03bc2196ad3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5f1361babe25e8546b120bed352e31c7fa87d133
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68119634"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251396"
 ---
 # <a name="sqlxml-managed-classes---sqlxmladapter-object"></a>Управляемые классы SQLXML — объект SqlXmlAdapter
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  В этом объекте реализованы методы, облегчающие взаимодействие с набором данных в [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework. Работающий пример см. в разделе [доступ к функциональным возможностям SQLXML в среде .NET](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/accessing-sqlxml-functionality-in-the-net-environment.md).  
+  В этом объекте реализованы методы, облегчающие взаимодействие с набором данных в [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework. Рабочий пример см. в разделе [доступ к функциям SQLXML в среде .NET](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/accessing-sqlxml-functionality-in-the-net-environment.md).  
   
- Объект SqlXmlAdapter поддерживает следующие методы:  
+ Объект Склксмладаптер поддерживает следующие методы:  
   
- void Fill (DataSet ds)  
+ void Fill (набор данных DS)  
  Заполняет набор данных в .NET Framework XML-данными, полученными от [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- void Update (DataSet ds)  
+ пустое обновление (набор данных DS)  
  Применяет обновления к записям в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] из данных, содержащихся в наборе данных.  
   
- Объект SqlXmlAdapter поддерживает следующие конструкторы:  
+ Объект Склксмладаптер поддерживает следующие конструкторы:  
   
 ```  
 public SqlXmlAdapter(SqlXmlCommand  cmd)   

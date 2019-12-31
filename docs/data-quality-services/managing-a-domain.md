@@ -1,6 +1,5 @@
 ---
-title: Управление доменом | Microsoft Docs
-ms.custom: ''
+title: Управление доменом
 ms.date: 07/31/2012
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -8,14 +7,14 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: c5ab71a3-0dac-45b1-be8e-93bf7e0e03ce
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: 4fff10431e020ad7092a82ff18ae55e3c85ab2df
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: 40482e599244f0e5102195cd0e34c3718a06d149
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67991922"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258440"
 ---
 # <a name="managing-a-domain"></a>Управление доменом
 
@@ -53,7 +52,7 @@ ms.locfileid: "67991922"
 |Изменять или дополнять значения в базе знаний.|[Изменение значений домена](../data-quality-services/change-domain-values.md)|  
 |Использовать правила проверки и стандартизации.|[Создание правила домена](../data-quality-services/create-a-domain-rule.md)|  
 |Использовать отношения для исправления терминов, которые являются частью значений в домене.|[Создание связей на основе термина](../data-quality-services/create-term-based-relations.md)|  
-|Завершать, закрывать или отменять операцию управления доменами.|[Завершение операции по управлению доменами](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)|  
+|Завершать, закрывать или отменять операцию управления доменами.|[Завершение действия по управлению доменами](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)|  
   
 ## <a name="related-tasks"></a>Связанные задачи  
   

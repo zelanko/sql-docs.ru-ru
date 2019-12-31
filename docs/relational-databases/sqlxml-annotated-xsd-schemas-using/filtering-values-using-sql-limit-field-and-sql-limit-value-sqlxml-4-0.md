@@ -1,6 +1,5 @@
 ---
-title: 'Фильтрация значений с помощью SQL: limit-field и SQL: limit-value (SQLXML 4,0) | Документация Майкрософт'
-ms.custom: ''
+title: 'Фильтрация с помощью SQL: limit-field и SQL: limit-value (SQLXML)'
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -18,13 +17,14 @@ ms.assetid: c0f7ae92-eeec-430e-a66a-f22c3ae64a5e
 author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 65c26209ed058e5d93663bae9587f8cf5d59abdf
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 0304b2113e6112f5c2777478ae03436d9f24cfb1
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72906099"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257411"
 ---
 # <a name="filtering-values-using-sqllimit-field-and-sqllimit-value-sqlxml-40"></a>Фильтрация значений при помощи sql:limit-field и sql:limit-value (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "72906099"
   
  В этих примерах для задания запросов XPath к схеме сопоставления XSD используются шаблоны.  
   
-### <a name="a-limiting-the-customer-addresses-returned-to-a-specific-address-type"></a>A. Ограничение адресов заказчиков определенным типом адреса  
+### <a name="a-limiting-the-customer-addresses-returned-to-a-specific-address-type"></a>а. Ограничение адресов заказчиков определенным типом адреса  
  В этом примере база данных содержит две таблицы  
   
 -   Customer (CustomerID, CompanyName)  
@@ -165,7 +165,7 @@ ms.locfileid: "72906099"
 </ROOT>  
 ```  
   
-### <a name="b-limiting-results-based-on-a-discount-value-of-type-real-data"></a>б. Ограничение результатов на основе значения скидки, имеющего тип данных real  
+### <a name="b-limiting-results-based-on-a-discount-value-of-type-real-data"></a>B. Ограничение результатов на основе значения скидки, имеющего тип данных real  
  В этом примере база данных содержит две таблицы  
   
 -   Orders (OrderID)  
@@ -306,10 +306,10 @@ ms.locfileid: "72906099"
     </root>  
     ```  
   
-## <a name="see-also"></a>См. также статью  
- [Типы данных float и real (Transact-SQL)](../../t-sql/data-types/float-and-real-transact-sql.md)   
-   [языка Transact &#40;-SQL&#41; для nchar и nvarchar](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)  
+## <a name="see-also"></a>См. также  
+ [&#41;с плавающей запятой и реальным &#40;Transact-SQL](../../t-sql/data-types/float-and-real-transact-sql.md)   
+ [nchar и nvarchar &#40;Transact-SQL&#41;](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)   
  [Установка SQL Server Native Client](../../relational-databases/native-client/applications/installing-sql-server-native-client.md)   
- [Использование схем XSD с заметками в &#40;запросах SQLXML 4,0&#41;](../../relational-databases/sqlxml/annotated-xsd-schemas/using-annotated-xsd-schemas-in-queries-sqlxml-4-0.md)  
+ [Использование схем XSD с заметками в запросах &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml/annotated-xsd-schemas/using-annotated-xsd-schemas-in-queries-sqlxml-4-0.md)  
   
   

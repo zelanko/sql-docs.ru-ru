@@ -1,5 +1,5 @@
 ---
-title: Выполнение дельты с использованием SQLXML управляемых классов | Документация Майкрософт
+title: Выполнение дельты с использованием управляемых классов SQLXML
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -16,16 +16,16 @@ ms.assetid: 81c687ca-8c9f-4f58-801f-8dabcc508a06
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 429538b93bc4b25b68dc8867c90462e9c43a164e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c92072290b8f0115470bccae46ab0e5fe111a0b3
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68073464"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257272"
 ---
 # <a name="executing-a-diffgram-by-using-sqlxml-managed-classes"></a>Выполнение дельты с использованием управляемых классов SQLXML
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  В этом примере показано, как выполнять файл дельты в [!INCLUDE[msCoName](../../../includes/msconame-md.md)] среды .NET Framework для применения данных обновляет до [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] таблицы с помощью управляемых классов SQLXML (Microsoft.Data.SqlXml).  
+  В этом примере показано, как выполнить файл DiffGram в среде [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework, чтобы применить обновления данных к [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] таблицам с помощью управляемых классов SQLXML (Microsoft. Data. SQLXML).  
   
  В этом примере дельта обновляет CompanyName и ContactName для клиента ALFKI.  
   
@@ -54,9 +54,9 @@ ms.locfileid: "68073464"
 </ROOT>  
 ```  
   
- **\<Перед >** блок содержит  **\<клиента >** элемент (**diffgr: ID = «Customer1»** ). **\<DataInstance >** блок содержит соответствующий **\<клиента >** элемент с таким же **идентификатор**. **\<Клиента >** элемент в **\<NewDataSet >** также указывает **diffgr: HasChanges = «modified»** . Это указывает на операцию по обновлению, и запись о заказчике в таблице Cust соответствующим образом обновляется. Обратите внимание, что если **diffgr: HasChanges** атрибут не указан, то логика обработки дельты пропустит этот элемент и обновления не выполняются.  
+ Блок ** \<Before>** включает элемент ** \<>Customer** (**diffgr: ID = "Customer1"**). Блок>instance содержит соответствующий ** \<элемент>Customer** с тем же **идентификатором**. ** \<** Элемент ** \<Customer>** в ** \<невдатасет>** также указывает **diffgr: hasChanges = "Modified"**. Это указывает на операцию по обновлению, и запись о заказчике в таблице Cust соответствующим образом обновляется. Обратите внимание, что если атрибут **diffgr: hasChanges** не указан, логика обработки DiffGram игнорирует этот элемент и обновления не выполняются.  
   
- Ниже приведен код для приложения C# tutorial, показывающий, как использовать управляемые классы SQLXML для выполнить выше дельту и обновления двух таблиц (Cust, Ord), также создается в **tempdb** базы данных.  
+ Ниже приведен код для учебного приложения C#, в котором показано, как использовать управляемые классы SQLXML для выполнения приведенного выше DiffGram и обновления двух таблиц (Cust, пособий), которые также будут созданы в базе данных **tempdb** .  
   
 ```  
 using System;  
@@ -130,7 +130,7 @@ class Test
     </xsd:schema>  
     ```  
   
-3.  Создайте следующие таблицы в **tempdb** базы данных.  
+3.  Создайте эти таблицы в базе данных **tempdb** .  
   
     ```  
     CREATE TABLE Cust(  
@@ -180,6 +180,6 @@ class Test
 8.  Из командной строки выполните файл DiffgramSample.exe.  
   
 ## <a name="see-also"></a>См. также  
- [Примеры дельт &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/diffgram-examples-sqlxml-4-0.md)  
+ [Примеры DiffGram &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/diffgram-examples-sqlxml-4-0.md)  
   
   

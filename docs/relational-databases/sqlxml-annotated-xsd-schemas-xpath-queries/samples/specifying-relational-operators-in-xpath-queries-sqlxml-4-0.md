@@ -1,6 +1,5 @@
 ---
-title: Указание реляционных операторов в запросах XPath (SQLXML 4,0) | Документация Майкрософт
-ms.custom: ''
+title: Использование реляционных операторов в запросах XPath (SQLXML)
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -15,28 +14,29 @@ helpviewer_keywords:
 ms.assetid: 177a0eb2-11ef-4459-a317-485a433ee769
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 180962ac5afae577625415d94cb9beda65f9537a
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 1961cc90c303e789c4bfbb847cea5e0eb80049ff
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909442"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252552"
 ---
 # <a name="specifying-relational-operators-in-xpath-queries-sqlxml-40"></a>Применение реляционных операторов в запросах XPath (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  В следующих примерах показано, как задаются реляционные операторы в запросах XPath. В данных примерах запросы XPath определены в соответствии со схемой сопоставления, которая содержится в файле SampleSchema1.xml. Сведения об этом образце схемы см. в статье [Пример схемы XSD с заметками &#40;для&#41;XPath примеры SQLXML 4,0](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
+  В следующих примерах показано, как задаются реляционные операторы в запросах XPath. В данных примерах запросы XPath определены в соответствии со схемой сопоставления, которая содержится в файле SampleSchema1.xml. Дополнительные сведения об этом образце схемы см. в разделе [Пример схемы XSD с заметками для XPath-примеров &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
   
 ## <a name="examples"></a>Примеры  
   
-### <a name="a-specify-relational-operator"></a>A. Укажите реляционный оператор  
- Этот запрос XPath возвращает дочерние элементы элемента **\<Customer >** , в котором атрибут **CustomerID** имеет значение 1 и где любой дочерний **\<порядок элементов >** содержит элемент **\<OrderDetail >** с атрибутом **OrderQty** со значением больше 3:  
+### <a name="a-specify-relational-operator"></a>а. Укажите реляционный оператор  
+ Этот запрос XPath возвращает дочерние элементы элемента ** \<>Customer** , где значение атрибута **CustomerID** равно 1, и где любой дочерний ** \<порядок элементов>** содержит дочерний элемент ** \<OrderDetail>** с атрибутом **OrderQty** со значением больше 3:  
   
 ```  
 /child::Customer[@CustomerID="1"]/Order/OrderDetail[@OrderQty > 3]  
 ```  
   
- Предикат, указанный в квадратных скобках, фильтрует элементы **\<Customer >** . Возвращаются только элементы **\<Customer >** , которые имеют по крайней мере один **\<OrderDetail >** внучатый с атрибутом OrderQty, превышающим 3.  
+ Предикат, указанный в квадратных скобках, ** \<фильтрует элементы>клиента** . Возвращаются только элементы ** \<Customer>** , у которых есть хотя бы один ** \<элемент OrderDetail>** внучатый с атрибутом OrderQty со значением больше 3.  
   
  По умолчанию используется **дочерняя** ось. Поэтому запрос можно определить следующим образом.  
   
@@ -80,8 +80,8 @@ ms.locfileid: "72909442"
 </ROOT>  
 ```  
   
-### <a name="b-specify-relational-operator-in-the-xpath-query-and-use-boolean-function-to-compare-the-result"></a>б. Укажите реляционный оператор в запросе XPath и используйте логическую функцию для сравнения результатов  
- Этот запрос возвращает все **\<порядок >** дочерних элементов узла контекста, у которых значение атрибута **SalesPersonID** меньше 270:  
+### <a name="b-specify-relational-operator-in-the-xpath-query-and-use-boolean-function-to-compare-the-result"></a>B. Укажите реляционный оператор в запросе XPath и используйте логическую функцию для сравнения результатов  
+ Этот запрос возвращает все элементы ** \<Order>** элементов контекстного узла, у которых значение атрибута **SalesPersonID** меньше 270:  
   
 ```  
 /child::Customer/child::Order[(attribute::SalesPersonID < 270)=true()]  
@@ -94,7 +94,7 @@ ms.locfileid: "72909442"
 ```  
   
 > [!NOTE]  
->  Если этот запрос указан в шаблоне, < символ должен быть закодирован в кодировке Entity, так как < символ имеет специальное значение в XML-документе. В шаблоне используйте `<`, чтобы указать < символ.  
+>  Если этот запрос указан в шаблоне, < символ должен быть закодирован в кодировке Entity, так как < символ имеет специальное значение в XML-документе. В шаблоне используйте `<` для указания < символа.  
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>Проверка запроса XPath к схеме сопоставления  
   

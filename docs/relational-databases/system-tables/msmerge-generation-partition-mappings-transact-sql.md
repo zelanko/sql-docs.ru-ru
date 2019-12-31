@@ -1,6 +1,7 @@
 ---
-title: MSmerge_generation_partition_mappings (Transact-SQL) | Документация Майкрософт
-ms.custom: ''
+title: MSmerge_generation_partition_mappings (T-SQL)
+description: Описывает MSmerge_generation_partition_mappings хранимую процедуру, используемую для трассировки изменений в секциях в публикации слиянием.
+ms.custom: seo-lt-2019
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,27 +18,27 @@ helpviewer_keywords:
 ms.assetid: 443a4024-ce48-4772-9ee5-95bd6fb6476b
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: c5998348b599ceaad73790f581cde56763ab0ab7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a43f4b3fac5f237904d0160ccfbde4b88f9a3616
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68101374"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75322116"
 ---
-# <a name="msmergegenerationpartitionmappings-transact-sql"></a>MSmerge_generation_partition_mappings (Transact-SQL)
+# <a name="msmerge_generation_partition_mappings-transact-sql"></a>MSmerge_generation_partition_mappings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **MSmerge_generation_partition_mappings** таблица используется для отслеживания изменений секционирования в публикации слиянием. Эта таблица хранится в базах данных публикации и подписки.  
+  Таблица **MSmerge_generation_partition_mappings** используется для трассировки изменений в секциях в публикации слиянием. Эта таблица хранится в базах данных публикации и подписки.  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**publication_number**|**smallint**|Идентифицирует публикацию слиянием|  
-|**Создание**|**bigint**|Номер поколения.|  
+|**поколения**|**bigint**|Номер поколения.|  
 |**partition_id**|**int**|Идентифицирует секцию.|  
 |**changecount**|**int**|Число модификаций секции.|  
   
 ## <a name="see-also"></a>См. также  
- [Таблицы репликации &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [Представления репликации (Transact-SQL)](../../relational-databases/system-views/replication-views-transact-sql.md)  
+ [Таблицы репликации &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Представления репликации &#40;&#41;Transact-SQL](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

@@ -1,6 +1,5 @@
 ---
-title: 'Определение ключевых столбцов с помощью SQL: Key-Fields (SQLXML 4,0) | Документация Майкрософт'
-ms.custom: ''
+title: 'Указание ключевых столбцов с помощью SQL: Key-Fields (SQLXML)'
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -21,13 +20,14 @@ ms.assetid: 1a5ad868-8602-45c4-913d-6fbb837eebb0
 author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0d17e47f86060871ea7dd3f2b0b1e9ed2e06c241
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 71d42f9f3f819dc12964ea0f13de92dfc8db5663
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72905899"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257389"
 ---
 # <a name="identifying-key-columns-using-sqlkey-fields-sqlxml-40"></a>Идентификация ключевых столбцов с использованием sql:key-fields (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -38,19 +38,19 @@ ms.locfileid: "72905899"
   
  Значение **SQL: Key-Fields** определяет столбцы, однозначно идентифицирующие строки в связи. Если для уникальной идентификации строки требуется более одного столбца, то значения столбцов разделяются пробелами.  
   
- Необходимо использовать заметку **SQL: Key-Fields** , если элемент содержит **\<sql: relationship >** , определенный между элементом и дочерним элементом, но не предоставляющий первичный ключ таблицы, указанной в родительском элементе. .  
+ Необходимо использовать заметку **SQL: Key-Fields** , если элемент содержит ** \<>SQL: relationship** , определенный между элементом и дочерним элементом, но не предоставляющий первичный ключ таблицы, указанной в родительском элементе.  
   
 ## <a name="examples"></a>Примеры  
  Чтобы создать рабочие образцы на основе следующих примеров, необходимо выполнить определенные требования. Дополнительные сведения см. в разделе [требования для запуска примеров SQLXML](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
-### <a name="a-producing-the-appropriate-nesting-when-sqlrelationship-does-not-provide-sufficient-information"></a>A. Создание подходящего вложения при \<SQL: > связей не предоставляет достаточно сведений  
+### <a name="a-producing-the-appropriate-nesting-when-sqlrelationship-does-not-provide-sufficient-information"></a>а. Создание подходящего вложения, когда \<sql:> связей не предоставляет достаточно сведений  
  В этом примере показано, где должны быть указаны **поля SQL: Key-Fields** .  
   
- Рассмотрим следующую схему. Схема задает иерархию между **\<** и **\<Customer >** , в которых элемент\<**Порядок >** является родительским, а **\<Customer >** является дочерним элементом.  
+ Рассмотрим следующую схему. Схема указывает иерархию между элементами ** \<Order>** и ** \<Customer>** , в которых элемент ** \<Order>** является родительским, а элемент ** \<>Customer** является дочерним.  
   
- Тег **\<SQL: relationship >** используется для указания связи «родители-потомки». Он идентифицирует столбец CustomerID в таблице Sales.SalesOrderHeader как родительский ключ, который ссылается на дочерний ключ CustomerID таблицы Sales.Customer. Сведения, предоставленные в **\<SQL: relationship >** , недостаточно для уникальной идентификации строк в родительской таблице (Sales. SalesOrderHeader). Таким образом, без аннотации **SQL: Key-Fields** создаваемая иерархия является неточной.  
+ Тег ** \<SQL: relationship>** используется для указания связи «родители-потомки». Он идентифицирует столбец CustomerID в таблице Sales.SalesOrderHeader как родительский ключ, который ссылается на дочерний ключ CustomerID таблицы Sales.Customer. Сведения, предоставленные в ** \<SQL: relationship>** , недостаточно для уникальной идентификации строк в родительской таблице (Sales. SalesOrderHeader). Таким образом, без аннотации **SQL: Key-Fields** создаваемая иерархия является неточной.  
   
- При использовании **SQL: Key-Fields** , указанных в **\<порядке >** , аннотация однозначно определяет строки в родительской таблице (Sales. SalesOrderHeader), а ее дочерние элементы отображаются под родительским элементом.  
+ При использовании **SQL: Key-Fields** , указанных в ** \<>Order **, аннотация однозначно определяет строки в родительской таблице (Sales. SalesOrderHeader), а ее дочерние элементы отображаются под родительским элементом.  
   
  Схема:  
   
@@ -89,7 +89,7 @@ ms.locfileid: "72905899"
   
 1.  Скопируйте приведенный выше код схемы и вставьте его в текстовый файл. Сохраните файл под именем KeyFields1.xml.  
   
-2.  Скопируйте следующий шаблон и вставьте его в текстовый файл. Сохраните файл под именем KeyFields1T.xml в том же каталоге, в котором был сохранен файл KeyFields1.xml. Запрос XPath в шаблоне возвращает все **\<порядок >** элементов с идентификатором CustomerID меньше 3.  
+2.  Скопируйте следующий шаблон и вставьте его в текстовый файл. Сохраните файл под именем KeyFields1T.xml в том же каталоге, в котором был сохранен файл KeyFields1.xml. Запрос XPath в шаблоне возвращает все элементы ** \<Order>** с идентификатором CustomerID меньше 3.  
   
     ```  
     <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -126,8 +126,8 @@ ms.locfileid: "72905899"
 </ROOT>  
 ```  
   
-### <a name="b-specifying-sqlkey-fields-to-produce-proper-nesting-in-the-result"></a>б. Указание sql:key-fields для получения правильной вложенности в результате  
- В следующей схеме отсутствует иерархия, указанная с помощью **\<SQL: relationship >** . Схема по-прежнему требует указания заметки **SQL: Key-Fields** для уникальной идентификации сотрудников в таблице HumanResources. Employee.  
+### <a name="b-specifying-sqlkey-fields-to-produce-proper-nesting-in-the-result"></a>B. Указание sql:key-fields для получения правильной вложенности в результате  
+ В следующей схеме иерархия не указана с помощью ** \<SQL: relationship>**. Схема по-прежнему требует указания заметки **SQL: Key-Fields** для уникальной идентификации сотрудников в таблице HumanResources. Employee.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -154,7 +154,7 @@ ms.locfileid: "72905899"
   
 1.  Скопируйте приведенный выше код схемы и вставьте его в текстовый файл. Сохраните файл под именем KeyFields2.xml.  
   
-2.  Скопируйте следующий шаблон и вставьте его в текстовый файл. Сохраните файл под именем KeyFields2T.xml в том же каталоге, в котором был сохранен файл KeyFields2.xml. Запрос XPath в шаблоне возвращает все элементы **\<HumanResources. Employee** :  
+2.  Скопируйте следующий шаблон и вставьте его в текстовый файл. Сохраните файл под именем KeyFields2T.xml в том же каталоге, в котором был сохранен файл KeyFields2.xml. Запрос XPath в шаблоне возвращает все элементы ** \<>HumanResources. Employee** :  
   
     ```  
     <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
