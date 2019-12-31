@@ -1,5 +1,5 @@
 ---
-title: sys. DM _cluster_endpoints (Transact-SQL) | Документация Майкрософт
+title: sys. dm_cluster_endpoints (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2019
 ms.prod: sql
@@ -19,27 +19,27 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 05076a6b694ff5861c5a7862b1f8f913ddb67fd6
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: b6ec5de74d2da2a94c25ef121abc0157348554d5
+ms.sourcegitcommit: ef830f565ee07dc7d4388925cc3c86c5d2cfb4c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73536173"
+ms.lasthandoff: 12/09/2019
+ms.locfileid: "74947079"
 ---
-# <a name="sysdm_cluster_endpoints-transact-sql"></a>sys. DM _cluster_endpoints (Transact-SQL)
+# <a name="sysdm_cluster_endpoints-transact-sql"></a>sys. dm_cluster_endpoints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|имя|`sysname`|Имя службы, предоставляемой извне в кластере больших данных SQL. Уникальный идентификатор для конечной точки. Ключ для этого представления. Не допускает значение NULL. |  
+|название|`sysname`|Имя службы, предоставляемой извне в кластере больших данных SQL. Уникальный идентификатор для конечной точки. Ключ для этого представления. Не допускает значение NULL. |  
 |description|`nvarchar(4000)`|Описание службы. Не допускает значение NULL. |
-|конечная точка|`sysname`|URL-адрес конечной точки или атрибут соединения. Не допускает значение NULL. |
+|endpoint|`sysname`|URL-адрес конечной точки или атрибут соединения. Не допускает значение NULL. |
 |protocol_desc|`sysname`|Описание протокола конечной точки |
 
 ## <a name="permissions"></a>Разрешения
 
-Для [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] требуется разрешение `VIEW SERVER STATE`.
+В [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]необходимо `VIEW SERVER STATE` разрешение.
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
-Что такое [!INCLUDE[big-data-clusters-2019](../../includes/ssbigdataclusters-ss-nover.md)](.. /.. /Биг-Дата-клустер/Биг-Дата-клустер-овервиев.МД)?
+[Что [!INCLUDE[big-data-clusters-2019](../../includes/ssbigdataclusters-ss-nover.md)] ](../../big-data-cluster/big-data-cluster-overview.md)?

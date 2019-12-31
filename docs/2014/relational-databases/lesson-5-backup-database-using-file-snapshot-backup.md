@@ -1,5 +1,5 @@
 ---
-title: 'Занятие 6: Перенос базы данных с исходного компьютера на конечный компьютер в Azure | Документация Майкрософт'
+title: Занятие 6. Миграция базы данных с исходного компьютера на конечный компьютер в Azure | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -10,15 +10,15 @@ ms.assetid: d9134ade-7b03-4c5c-8ed3-3bc369a61691
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3c91512bcc254a1ff778606726d54a9cdff7f67f
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.openlocfilehash: 689c3a734a5b4eb424511da52032dc348b5757ea
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70175564"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75231798"
 ---
-# <a name="lesson-6-migrate-a-database-from-a-source-machine-on-premises-to-a-destination-machine-in-azure"></a>Занятие 6: Перенос базы данных с исходного компьютера на конечный компьютер в Azure
-  В этом занятии предполагается, что у вас уже есть другой SQL Server, который может находиться на другом локальном компьютере или на виртуальной машине в Azure. Сведения о том, как создать виртуальную машину SQL Server в Azure, см. в статье [Подготовка виртуальной машины SQL Server в Azure](http://www.windowsazure.com/manage/windows/common-tasks/install-sql-server/). После подготовки SQL Server виртуальной машины в Azure убедитесь, что вы можете подключиться к экземпляру SQL Server на этой виртуальной машине с помощью SQL Server Management Studio на другом компьютере.  
+# <a name="lesson-6-migrate-a-database-from-a-source-machine-on-premises-to-a-destination-machine-in-azure"></a>Занятие 6. Миграция базы данных с исходного компьютера на конечный компьютер в Azure
+  В этом занятии предполагается, что у вас уже есть другой SQL Server, который может находиться на другом локальном компьютере или на виртуальной машине в Azure. Сведения о том, как создать виртуальную машину SQL Server в Azure, см. в статье [Подготовка виртуальной машины SQL Server в Azure](https://www.windowsazure.com/manage/windows/common-tasks/install-sql-server/). После подготовки SQL Server виртуальной машины в Azure убедитесь, что вы можете подключиться к экземпляру SQL Server на этой виртуальной машине с помощью SQL Server Management Studio на другом компьютере.  
   
  Для этого занятия также предполагается, что вы уже выполнили следующие шаги.  
   
@@ -132,7 +132,7 @@ ms.locfileid: "70175564"
   
 3.  Подключитесь к целевому компьютеру, на котором установлен SQL Server 2014 CTP2 или более поздняя версия. Чтобы подготовить целевой компьютер, на нем необходимо создать учетные данные SQL Server, которые указывают на тот же контейнер, размещенный в TestDB1. Если вы собираетесь повторно присоединить базу данных на том же компьютере, то нет необходимости создавать другие учетные данные.  
   
-4.  В **обозревателе объектов**щелкните правой кнопкой мыши **базы данных** ивыберите команду Присоединить.  
+4.  В **обозревателе объектов**щелкните правой кнопкой мыши **базы данных** и выберите команду **присоединить**.  
   
 5.  Чтобы указать присоединяемую базу данных, в диалоговом окне **Присоединение баз данных** нажмите кнопку **Добавить**. В диалоговом окне « **Размещение файлов базы данных** » выполните следующие действия.  
   
@@ -142,10 +142,9 @@ ms.locfileid: "70175564"
   
 6.  Нажмите кнопку **ОК**.  
   
-     ![SQL 14](../tutorials/media/ss-was-tutlesson-6-7.gif " , ВЕРСИЯ CTP2 SQL 14") , ВЕРСИЯ CTP2  
+     ![SQL 14 CTP2](../tutorials/media/ss-was-tutlesson-6-7.gif "SQL 14 CTP2")  
   
  **Следующее занятие:**  
   
  [Занятие 7. Перемещение файлов данных в службу хранилища Azure](../relational-databases/lesson-6-generate-activity-and-backup-log-using-file-snapshot-backup.md)  
-  
   

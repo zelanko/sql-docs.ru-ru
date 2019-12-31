@@ -10,12 +10,12 @@ ms.assetid: fdc0c778-cc8d-42ab-8833-4deb4329f37a
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5d28d829280e205028a99afd9fec2e019bf567ab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 44fbab98aa017be66cd4dc369a713f44e8d248d5
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66089481"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75228219"
 ---
 # <a name="deprecated-sql-server-features-in-sql-server-2014"></a>Функции SQL Server, устаревшие в SQL Server 2014
   В этом разделе описаны устаревшие функции, которые все еще доступны в [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Эти функции будут удалены в следующем выпуске [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Не следует использовать устаревшие функции в новых приложениях.  
@@ -23,16 +23,21 @@ ms.locfileid: "66089481"
 ## <a name="features-not-supported-in-the-next-version-of-includessnoversionincludesssnoversion-mdmd"></a>Функции, неподдерживаемые в следующей версии [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
  Следующие функции компонента [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] не будут поддерживаться в следующей версии [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Не используйте их при работе над новыми приложениями и как можно скорее измените приложения, в которых они в настоящее время используются. Название компонента отображается в событиях трассировки в столбце ObjectName, а в счетчиках производительности и в динамическом административном представлении sys.dm_os_performance_counters в столбце instance_name. Идентификатор компонента отображается в событиях трассировки в столбце ObjectId.  
   
-|Category|Устаревшая функция|Замена|Имя функции|Идентификатор функции|  
+|Категория|Устаревшая функция|Замена|Имя функции|Идентификатор функции|  
 |--------------|------------------------|-----------------|------------------|----------------|  
-|Программирование данных|[методы sys.soap_endpoints &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-soap-endpoints-transact-sql)|Технология Windows Communications Foundation (WCF) или ASP.NET|Собственные веб-службы с поддержкой XML|22|  
-|Программирование данных|[sys.endpoint_webmethods &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-endpoint-webmethods-transact-sql)|Технология Windows Communications Foundation (WCF) или ASP.NET|Собственные веб-службы с поддержкой XML|23|  
+|Программирование данных|[sys. soap_endpoints &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-soap-endpoints-transact-sql)|Технология Windows Communications Foundation (WCF) или ASP.NET|Собственные веб-службы с поддержкой XML|22|  
+|Программирование данных|[sys. endpoint_webmethods &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-endpoint-webmethods-transact-sql)|Технология Windows Communications Foundation (WCF) или ASP.NET|Собственные веб-службы с поддержкой XML|23|  
   
 ### <a name="slipstream-functionality"></a>Функции интегрированной установки  
- Функция обновления продукта является заменой функции интегрированной установки, которая была доступна в [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] PCU1. Поэтому параметры командной строки /*PCUSource* и /*CUSource*, связанные с функцией интегрированной установки, больше не должны использоваться. Эти параметры будут оставаться применимыми, но могут быть удалены в будущих версиях программы установки [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Параметр /*UpdateSource* объединяет функциональность параметров Slipstream, /*PCUSource* и /*CUSource*.  
+ [Функция обновления продукта](/previous-versions/sql/sql-server-2012/hh231670(v=sql.110)?redirectedfrom=MSDN) появилась в SQL Server 2012 в качестве расширения для функций интегрированной интеграции, которые были доступны в [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] PCU1. В SQL Server 2014 для интеграции SQL Server рекомендуется использовать функцию обновления продукта. Поэтому параметры командной строки,/*PCUSource* и/*CUSource*, связанные с исходными функциями интегрированного использования, больше не должны использоваться. Эти параметры будут продолжать работать, но могут быть удалены в будущих выпусках [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] программы установки. Рекомендуемый параметр для использования —/*UpdateSource* , который сочетает в себе функциональные возможности исходных параметров, а также*PCUSource* и/*CUSource*.  
   
- Дополнительные сведения о функции интегрированной установки, который был доступен в [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] PCU1, см. в разделе [интегрированная установка обновлений SQL Server](https://go.microsoft.com/fwlink/?LinkId=219945) (https://go.microsoft.com/fwlink/?LinkId=219945).  
-  
+ Дополнительные сведения об интегрированных функциях, доступных в [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] PCU1, см. в разделе об объединении [SQL Server Update](https://go.microsoft.com/fwlink/?LinkId=219945) (https://go.microsoft.com/fwlink/?LinkId=219945).  
+ Сведения о том, как использовать или*UpdateSource* для интеграции сборок SQL Server, см. в следующих источниках:
+ 
+ - [Как установить исправление SQL Server 2012 с обновленным пакетом установки (с помощью UpdateSource для получения интеллектуальной установки)](https://blogs.msdn.microsoft.com/jason_howell/2012/08/28/how-to-patch-sql-server-2012-setup-with-an-updated-setup-package-using-updatesource-to-get-a-smart-setup/)
+ 
+ - [SQL Server 2012 программа установки стала более интеллектуальной...](https://techcommunity.microsoft.com/t5/SQL-Server-Support/SQL-Server-2012-Setup-just-got-smarter-8230/ba-p/317440)
+ 
 ## <a name="see-also"></a>См. также  
  [Обратная совместимость](../../2014/getting-started/backward-compatibility.md)  
   

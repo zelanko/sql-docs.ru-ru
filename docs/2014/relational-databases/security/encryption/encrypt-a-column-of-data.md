@@ -10,15 +10,15 @@ helpviewer_keywords:
 - encryption [SQL Server], columns
 - cryptography [SQL Server], columns
 ms.assetid: 38e9bf58-10c6-46ed-83cb-e2d76cda0adc
-author: aliceku
-ms.author: aliceku
+author: jaszymas
+ms.author: jaszymas
 manager: craigg
-ms.openlocfilehash: c6615baf7d9a5bf228b75a0e8cf520f86bf2109c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bd0b5824abfc36923909ce37866b221c0bc830d5
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63011656"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957213"
 ---
 # <a name="encrypt-a-column-of-data"></a>Шифрование столбца данных
   В этом разделе описывается шифрование столбца данных с помощью симметричного шифрования в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] с помощью [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
@@ -27,15 +27,15 @@ ms.locfileid: "63011656"
   
 -   **Перед началом работы**  
   
-     [безопасность](#Security)  
+     [Бюллетеня](#Security)  
   
 -   [Шифрование столбца данных с помощью Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="BeforeYouBegin"></a>Перед началом  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="Security"></a>Бюллетеня  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a>Чтение  
  Для выполнения приведенных ниже шагов необходимы следующие разрешения.  
   
 -   Разрешение CONTROL на базу данных.  
@@ -46,7 +46,7 @@ ms.locfileid: "63011656"
   
 -   Некоторые разрешения на ключ, также не должно быть запрета на разрешение VIEW DEFINITION.  
   
-##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
+##  <a name="TsqlProcedure"></a>Использование Transact-SQL  
   
 #### <a name="to-encrypt-a-column-of-data-using-a-simple-symmetric-encryption"></a>Шифрование столбца данных с помощью простого симметричного шифрования  
   
@@ -174,14 +174,14 @@ ms.locfileid: "63011656"
     GO  
     ```  
   
- Дополнительные сведения см. в следующих разделах:  
+ Дополнительную информацию см. в следующих разделах.  
   
--   [CREATE CERTIFICATE (Transact-SQL)](/sql/t-sql/statements/create-certificate-transact-sql)  
+-   [Создание сертификата &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-certificate-transact-sql)  
   
--   [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-symmetric-key-transact-sql)  
+-   [Создание &#40;ов на основе СИММЕТРИЧНого ключа&#41;Transact-SQL](/sql/t-sql/statements/create-symmetric-key-transact-sql)  
   
--   [ALTER TABLE (Transact-SQL)](/sql/t-sql/statements/alter-table-transact-sql)  
+-   [Инструкция ALTER TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql)  
   
--   [OPEN SYMMETRIC KEY (Transact-SQL)](/sql/t-sql/statements/open-symmetric-key-transact-sql)  
+-   [Открытый СИММЕТРИЧНЫй ключ &#40;&#41;Transact-SQL](/sql/t-sql/statements/open-symmetric-key-transact-sql)  
   
   

@@ -12,20 +12,21 @@ helpviewer_keywords:
 - security [SQL Server], encryption
 - algorithms [SQL Server encryption]
 ms.assetid: 8227028c-a9c9-489d-bd27-fbf8242634ae
-author: aliceku
-ms.author: aliceku
+author: jaszymas
+ms.author: jaszymas
 manager: craigg
-ms.openlocfilehash: 853e85ea84b84f1ed0af040be5d8614feab193b0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d133a9ed99cc270c9a2f7826f231086e3eb141c3
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63011385"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957258"
 ---
 # <a name="choose-an-encryption-algorithm"></a>Выбор алгоритма шифрования
   Шифрование — одно из нескольких эффективных средств защиты, позволяющих администраторам обеспечивать безопасность экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- Алгоритмы шифрования определяют преобразования данных, исключающие возможность легкого восстановления исходного текста неавторизированными пользователями. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] позволяет администраторам и разработчикам выбирать из нескольких алгоритмов, в том числе DES, Triple DES, TRIPLE_DES_3KEY, RC2, RC4, RC4 со 128-разрядным ключом, DESX, AES со 128-разрядным ключом, AES со 192-разрядным ключом и AES с 256-разрядным ключом.  
+ Алгоритмы шифрования определяют преобразования данных, которые не могут с легкостью отменить неавторизованные пользователи. 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] позволяет администраторам и разработчикам выбирать из нескольких алгоритмов, в том числе DES, Triple DES, TRIPLE_DES_3KEY, RC2, RC4, RC4 со 128-разрядным ключом, DESX, AES со 128-разрядным ключом, AES со 192-разрядным ключом и AES с 256-разрядным ключом.  
   
  Не существует одного алгоритма, идеально подходящего для всех случаев. Информация по качеству каждого из них лежит за пределами электронной документации по [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Однако можно руководствоваться следующими общими принципами:  
   
@@ -50,7 +51,7 @@ ms.locfileid: "63011385"
   
  Дополнительные сведения об алгоритмах шифрования и о технологии шифрования см. в разделе [Основные понятия безопасности](https://go.microsoft.com/fwlink/?LinkId=62082) руководства разработчика для платформы .NET Framework в сети MSDN.  
   
- **Пояснение к алгоритмам DES:**  
+ **Уточнение, касающееся алгоритмов DES:**  
   
 -   DESX был именован неправильно. Симметричные ключи, созданные с параметром ALGORITHM = DESX, в действительности используют шифр TRIPLE DES с 192-битным ключом. Алгоритм DESX не предоставляется. [!INCLUDE[ssNoteDepFutureAvoid](../../../includes/ssnotedepfutureavoid-md.md)]  
   
@@ -62,14 +63,14 @@ ms.locfileid: "63011385"
   
 |||  
 |-|-|  
-|Шифрование с помощью симметричного ключа.|[CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-symmetric-key-transact-sql)|  
-|Шифрование с помощью асимметричного ключа.|[CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-asymmetric-key-transact-sql)|  
-|Кодирование с использованием сертификата.|[CREATE CERTIFICATE (Transact-SQL)](/sql/t-sql/statements/create-certificate-transact-sql)|  
-|Шифрование файлов базы данных с помощью прозрачного шифрования данных.|[Прозрачное шифрование данных (TDE)](transparent-data-encryption.md)|  
+|Шифрование с помощью симметричного ключа.|[Создание &#40;ов на основе СИММЕТРИЧНого ключа&#41;Transact-SQL](/sql/t-sql/statements/create-symmetric-key-transact-sql)|  
+|Шифрование с помощью асимметричного ключа.|[Создание АСИММЕТРИЧного ключа &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-asymmetric-key-transact-sql)|  
+|Кодирование с использованием сертификата.|[Создание сертификата &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-certificate-transact-sql)|  
+|Шифрование файлов базы данных с помощью прозрачного шифрования данных.|[Прозрачное шифрование данных &#40;TDE&#41;](transparent-data-encryption.md)|  
 |Как зашифровать столбец таблицы.|[Шифрование столбца данных](encrypt-a-column-of-data.md)|  
   
 ## <a name="see-also"></a>См. также  
  [Шифрование SQL Server](sql-server-encryption.md)   
- [Иерархия средств шифрования](encryption-hierarchy.md)  
+ [Иерархия шифрования](encryption-hierarchy.md)  
   
   

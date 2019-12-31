@@ -10,15 +10,15 @@ helpviewer_keywords:
 - service master key [SQL Server], importing
 - service master key [SQL Server], restoring
 ms.assetid: 14bdbbbe-d384-4692-b670-4243d2466fe1
-author: aliceku
-ms.author: aliceku
+author: jaszymas
+ms.author: jaszymas
 manager: craigg
-ms.openlocfilehash: 17a404ef96b4800aa072b8f35c2d22c349361ca3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 21abdf4e5781f179c8168ff02aa611bd7dffd39f
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63011548"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957179"
 ---
 # <a name="restore-the-service-master-key"></a>Восстановление главного ключа службы
   В этом разделе описывается, как восстановить главный ключ службы [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] при помощи [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
@@ -32,13 +32,13 @@ ms.locfileid: "63011548"
   
      [Ограничения](#Restrictions)  
   
-     [безопасность](#Security)  
+     [Бюллетеня](#Security)  
   
 -   [Восстановление главного ключа службы с помощью Transact-SQL](#SSMSProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="BeforeYouBegin"></a>Перед началом  
   
-###  <a name="Restrictions"></a> Ограничения  
+###  <a name="Restrictions"></a>Ограничения  
   
 -   При восстановлении главного ключа службы [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] расшифровывает все ключи и секретные коды, зашифрованные вместе с текущим главным ключом службы, а затем зашифровывает их вместе с восстановленным ключом из файла резервной копии.  
   
@@ -49,12 +49,12 @@ ms.locfileid: "63011548"
 > [!CAUTION]  
 >  Главный ключ службы является корнем иерархии шифрования [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Этот ключ явно или неявно защищает все остальные ключи в дереве. Если зависящий от него ключ не может быть расшифрован, но восстановление продолжено, то данные, защищенные этим ключом, будут утеряны.  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="Security"></a>Бюллетеня  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a>Чтение  
  Необходимо разрешение CONTROL SERVER на сервер.  
   
-##  <a name="SSMSProcedure"></a> Использование Transact-SQL  
+##  <a name="SSMSProcedure"></a>Использование Transact-SQL  
   
 #### <a name="to-restore-the-service-master-key"></a>Восстановление главного ключа службы  
   

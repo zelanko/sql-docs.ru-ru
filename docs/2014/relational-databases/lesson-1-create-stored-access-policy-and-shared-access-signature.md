@@ -10,12 +10,12 @@ ms.assetid: 41674d9d-8132-4bff-be4d-85a861419f3d
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c9efb23d15b4f72375077f4bbf1450d8c47fddf4
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 80bd9c253adfcf1d1a677953fef183d9109534ef
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70153838"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75231815"
 ---
 # <a name="lesson-2-create-a-policy-on-container-and-generate-a-shared-access-signature-sas-key"></a>Занятие 2. Создание политики в контейнере ключа и ключа подписанного URL-адреса
   На этом занятии вы узнаете, как создать политику в контейнере больших двоичных объектов, а также сформировать ключ SAS.  
@@ -24,7 +24,7 @@ ms.locfileid: "70153838"
   
  Вы можете создать политику и подписанный URL-адрес с помощью одного из следующих методов:  
   
--   Операции REST API Azure: [Создание контейнера](https://msdn.microsoft.com/library/azure/dd179468.aspx), [Настройка ACL контейнера](https://msdn.microsoft.com/library/azure/dd179391.aspx)и [Получение списка ACL контейнера](https://msdn.microsoft.com/library/azure/dd179469.aspx).  
+-   Azure REST API Operations: [Создание контейнера](https://msdn.microsoft.com/library/azure/dd179468.aspx), [Настройка ACL контейнера](https://msdn.microsoft.com/library/azure/dd179391.aspx)и [Получение списка ACL контейнера](https://msdn.microsoft.com/library/azure/dd179469.aspx).  
   
 -   [Метод CloudBlobContainer. GetSharedAccessSignature](https://docs.microsoft.com/dotnet/api/microsoft.azure.storage.blob.cloudblobcontainer.getsharedaccesssignature) в пакете SDK для Azure.  
   
@@ -40,10 +40,9 @@ ms.locfileid: "70153838"
   
     ```  
   
--   Сторонний инструмент Azure Explorer, например [Обозреватель службы хранилища Azure](http://azurestorageexplorer.codeplex.com/).  
+-   Сторонний инструмент Azure Explorer, например [Обозреватель службы хранилища Azure](https://azurestorageexplorer.codeplex.com/).  
   
  **Следующее занятие:**  
   
- [Занятие 3. Создание учетных данных SQL Server](../relational-databases/lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md)  
-  
+ [Занятие 3. Создание учетных данных SQL Server](../relational-databases/lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md)  
   

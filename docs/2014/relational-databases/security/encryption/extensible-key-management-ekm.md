@@ -11,18 +11,18 @@ helpviewer_keywords:
 - Extensible Key Management
 - EKM, described
 ms.assetid: 9bfaf500-2d1e-4c02-b041-b8761a9e695b
-author: aliceku
-ms.author: aliceku
+author: jaszymas
+ms.author: jaszymas
 manager: craigg
-ms.openlocfilehash: 42ec76542ffdf382c10c48cd107765d312ed1781
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7d4fb415f9fbb556240d626aa48453d6d69d8072
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63011662"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957188"
 ---
 # <a name="extensible-key-management-ekm"></a>Расширенное управление ключами (Extensible Key Management)
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] наряду с *расширенным управлением ключами* (EKM) предусматривает возможность шифрования данных с применением поставщика *Microsoft Cryptographic API* (MSCAPI) для шифрования и создания ключа. Ключи шифрования для шифрования данных и ключей создаются в контейнерах временных ключей и перед сохранением в базе данных должны быть экспортированы из поставщика. Благодаря этому подходу управление ключами, содержащее иерархию ключей шифрования и резервирование ключей, может быть обработано [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]предоставляет возможности шифрования данных вместе с *расширенным управлением ключами* , используя поставщик *Microsoft Cryptographic API* (MSCAPI) для шифрования и создания ключей. Ключи шифрования для шифрования данных и ключей создаются в контейнерах временных ключей и перед сохранением в базе данных должны быть экспортированы из поставщика. Благодаря этому подходу управление ключами, содержащее иерархию ключей шифрования и резервирование ключей, может быть обработано [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
  При растущих требованиях к соответствию нормативным документам и соблюдению конфиденциальности данных компании используют шифрование в качестве решения, обеспечивающего «глубинную защиту». Использование средств по управлению шифрованием, предусмотренных только в базах данных, часто оказывается нецелесообразным. Поставщики оборудования поставляют продукты, в которых управление ключами компании осуществляется при помощи *аппаратных модулей безопасности* (HSM). В устройствах, оборудованных аппаратными модулями безопасности, ключи шифрования встроены в оборудование или в программные модули. Это решение является более безопасным, поскольку ключи шифрования хранятся отдельно от зашифрованных данных.  
   
@@ -56,7 +56,8 @@ GO
  Чтобы отключить эту функцию, задайте значение **0**. Дополнительные сведения о настройке параметров сервера см. в разделе [sp_configure (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql).  
   
 ## <a name="how-to-use-ekm"></a>Использование расширенного управления ключами  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Расширенное управление ключами включает ключи шифрования, защищающие файлы базы данных, хранимые на внешних устройствах, таких как смарт-карты, USB-устройства, модули расширенного управления ключами и аппаратные модули безопасности. Предусмотрена также защита данных от администраторов базы данных (за исключением членов группы sysadmin). Данные могут быть зашифрованы при помощи ключей шифрования, доступ к которым имеет только пользователь базы данных на внешнем модуле расширенного управления ключами или аппаратного модуля безопасности.  
+ 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Расширенное управление ключами включает ключи шифрования, защищающие файлы базы данных, хранимые на внешних устройствах, таких как смарт-карты, USB-устройства, модули расширенного управления ключами и аппаратные модули безопасности. Это также обеспечивает защиту данных от администраторов базы данных (за исключением участников группы системных администраторов). Данные могут быть зашифрованы с помощью ключей шифрования, к которым имеет доступ только пользователь базы данных, на внешнем модуле расширенного управления ключами и аппаратном модуле безопасности.  
   
  Расширенное управление ключами дает следующие преимущества.  
   
@@ -101,17 +102,18 @@ GO
 ### <a name="encryption-and-decryption-by-an-ekm-device"></a>Шифрование и расшифровка при помощи устройства расширенного управления ключами  
  Следующие функции и возможности позволяют зашифровать и расшифровать данные при помощи симметричных и асимметричных ключей.  
   
-|Функция или характеристика|Справочник|  
+|Функция или характеристика|Ссылка|  
 |-------------------------|---------------|  
-|Шифрование симметричным ключом|[CREATE SYMMETRIC KEY (Transact-SQL)](/sql/t-sql/statements/create-symmetric-key-transact-sql)|  
-|Шифрование асимметричным ключом|[CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-asymmetric-key-transact-sql)|  
-|EncryptByKey(key_guid, 'cleartext', ...)|[ENCRYPTBYKEY (Transact-SQL)](/sql/t-sql/functions/encryptbykey-transact-sql)|  
-|DecryptByKey(ciphertext, ...)|[DECRYPTBYKEY (Transact-SQL)](/sql/t-sql/functions/decryptbykey-transact-sql)|  
-|EncryptByAsmKey(key_guid, 'cleartext')|[ENCRYPTBYASYMKEY (Transact-SQL)](/sql/t-sql/functions/encryptbyasymkey-transact-sql)|  
-|DecryptByAsmKey(ciphertext)|[DECRYPTBYASYMKEY (Transact-SQL)](/sql/t-sql/functions/decryptbyasymkey-transact-sql)|  
+|Шифрование симметричным ключом|[Создание &#40;ов на основе СИММЕТРИЧНого ключа&#41;Transact-SQL](/sql/t-sql/statements/create-symmetric-key-transact-sql)|  
+|Шифрование асимметричным ключом|[Создание АСИММЕТРИЧного ключа &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-asymmetric-key-transact-sql)|  
+|EncryptByKey(key_guid, 'cleartext', ...)|[ENCRYPTBYKEY &#40;Transact-SQL&#41;](/sql/t-sql/functions/encryptbykey-transact-sql)|  
+|DecryptByKey(ciphertext, ...)|[DECRYPTBYKEY &#40;Transact-SQL&#41;](/sql/t-sql/functions/decryptbykey-transact-sql)|  
+|EncryptByAsmKey(key_guid, 'cleartext')|[ENCRYPTBYASYMKEY &#40;Transact-SQL&#41;](/sql/t-sql/functions/encryptbyasymkey-transact-sql)|  
+|DecryptByAsmKey(ciphertext)|[DECRYPTBYASYMKEY &#40;Transact-SQL&#41;](/sql/t-sql/functions/decryptbyasymkey-transact-sql)|  
   
 #### <a name="database-keys-encryption-by-ekm-keys"></a>Шифрование ключей базы данных при помощи ключей расширенного управления ключами  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] при помощи ключей расширенного управления ключами можно шифровать другие ключи базы данных. В устройстве расширенного управления ключами можно создать и использовать как симметричные, так и асимметричные ключи. Асимметричные ключи расширенного управления ключами позволяют зашифровать собственные (отличные от расширенного управления ключами) симметричные ключи.  
+ 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] при помощи ключей расширенного управления ключами можно шифровать другие ключи базы данных. В устройстве расширенного управления ключами можно создать и использовать как симметричные, так и асимметричные ключи. Асимметричные ключи расширенного управления ключами позволяют зашифровать собственные (отличные от расширенного управления ключами) симметричные ключи.  
   
  В следующем примере показано создание симметричного ключа базы данных и его шифрование при помощи ключа из модуля расширенного управления ключами.  
   
@@ -130,41 +132,42 @@ DECRYPTION BY EKM_AKey1
 > [!NOTE]  
 >  Зашифровать один ключ расширенного управления ключами при помощи другого ключа расширенного управления ключами невозможно.  
 >   
->  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] не поддерживает модули подписания и асимметричные ключи, сформированные из поставщика расширенного управления ключами.  
+>  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] не поддерживает модули подписания и асимметричные ключи, сформированные из поставщика расширенного управления ключами.  
   
 ## <a name="related-tasks"></a>Связанные задачи  
- [Включенный параметр конфигурации сервера поставщика расширенного управления ключами](../../../database-engine/configure-windows/ekm-provider-enabled-server-configuration-option.md)  
+ [Параметр конфигурации сервера с включенным поставщиком расширенного управления ключами](../../../database-engine/configure-windows/ekm-provider-enabled-server-configuration-option.md)  
   
- [Включение прозрачного шифрования данных с использованием расширенного управления ключами](enable-tde-on-sql-server-using-ekm.md)  
+ [Включение TDE с помощью расширенного управления ключами](enable-tde-on-sql-server-using-ekm.md)  
   
- [Расширенное управление ключами с помощью хранилища ключей Azure (SQL Server)](extensible-key-management-using-azure-key-vault-sql-server.md)  
+ [Расширенное управление ключами с помощью Azure Key Vault &#40;SQL Server&#41;](extensible-key-management-using-azure-key-vault-sql-server.md)  
   
-## <a name="see-also"></a>См. также:  
- [CREATE CRYPTOGRAPHIC PROVIDER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-cryptographic-provider-transact-sql)   
- [DROP CRYPTOGRAPHIC PROVIDER (Transact-SQL)](/sql/t-sql/statements/drop-cryptographic-provider-transact-sql)   
- [ALTER CRYPTOGRAPHIC PROVIDER (Transact-SQL)](/sql/t-sql/statements/alter-cryptographic-provider-transact-sql)   
- [sys.cryptographic_providers (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-cryptographic-providers-transact-sql)   
- [sys.dm_cryptographic_provider_sessions (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-cryptographic-provider-sessions-transact-sql)   
- [sys.dm_cryptographic_provider_properties (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-cryptographic-provider-properties-transact-sql)   
- [sys.dm_cryptographic_provider_algorithms (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-cryptographic-provider-algorithms-transact-sql)   
- [sys.dm_cryptographic_provider_keys (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-cryptographic-provider-keys-transact-sql)   
- [sys.credentials (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-credentials-transact-sql)   
- [CREATE CREDENTIAL (Transact-SQL)](/sql/t-sql/statements/create-credential-transact-sql)   
+## <a name="see-also"></a>См. также  
+ [Создание поставщика служб шифрования &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-cryptographic-provider-transact-sql)   
+ [УДАЛИТЬ поставщик служб шифрования &#40;&#41;Transact-SQL](/sql/t-sql/statements/drop-cryptographic-provider-transact-sql)   
+ [ALTER CRYPTOGRAPHIC PROVIDER &#40;&#41;Transact-SQL](/sql/t-sql/statements/alter-cryptographic-provider-transact-sql)   
+ [sys. cryptographic_providers &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-cryptographic-providers-transact-sql)   
+ [sys. dm_cryptographic_provider_sessions &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-cryptographic-provider-sessions-transact-sql)   
+ [sys. dm_cryptographic_provider_properties &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-cryptographic-provider-properties-transact-sql)   
+ [sys. dm_cryptographic_provider_algorithms &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-cryptographic-provider-algorithms-transact-sql)   
+ [sys. dm_cryptographic_provider_keys &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-cryptographic-provider-keys-transact-sql)   
+ [sys. Credentials &#40;&#41;Transact-SQL](/sql/relational-databases/system-catalog-views/sys-credentials-transact-sql)   
+ [Создание УЧЕТных данных &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-credential-transact-sql)   
  [ALTER LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-login-transact-sql)   
- [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-asymmetric-key-transact-sql)   
- [ALTER ASYMMETRIC KEY (Transact-SQL)](/sql/t-sql/statements/alter-asymmetric-key-transact-sql)   
- [DROP ASYMMETRIC KEY (Transact-SQL)](/sql/t-sql/statements/drop-asymmetric-key-transact-sql)   
- [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-symmetric-key-transact-sql)   
- [ALTER SYMMETRIC KEY (Transact-SQL)](/sql/t-sql/statements/alter-symmetric-key-transact-sql)   
- [DROP SYMMETRIC KEY (Transact-SQL)](/sql/t-sql/statements/drop-symmetric-key-transact-sql)   
- [OPEN SYMMETRIC KEY (Transact-SQL)](/sql/t-sql/statements/open-symmetric-key-transact-sql)   
- [Резервное копирование и восстановление ключей шифрования служб Reporting Services](../../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)   
- [Удаление и повторное создание ключей шифрования (диспетчер конфигурации служб SSRS)](../../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)   
- [Добавление и удаление ключей шифрования для масштабного развертывания (диспетчер конфигурации служб SSRS)](../../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)   
- [Создание резервной копии главного ключа службы](service-master-key.md)   
+ [Создание АСИММЕТРИЧного ключа &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-asymmetric-key-transact-sql)   
+ [ALTER АСИММЕТРИЧный ключ &#40;&#41;Transact-SQL](/sql/t-sql/statements/alter-asymmetric-key-transact-sql)   
+ [Удаление АСИММЕТРИЧного ключа &#40;&#41;Transact-SQL](/sql/t-sql/statements/drop-asymmetric-key-transact-sql)   
+ [Создание &#40;ов на основе СИММЕТРИЧНого ключа&#41;Transact-SQL](/sql/t-sql/statements/create-symmetric-key-transact-sql)   
+ [ALTER СИММЕТРИЧНого ключа &#40;&#41;Transact-SQL](/sql/t-sql/statements/alter-symmetric-key-transact-sql)   
+ [УДАЛИТЬ СИММЕТРИЧНЫй ключ &#40;&#41;Transact-SQL](/sql/t-sql/statements/drop-symmetric-key-transact-sql)   
+ [Открытый СИММЕТРИЧНЫй ключ &#40;&#41;Transact-SQL](/sql/t-sql/statements/open-symmetric-key-transact-sql)   
+ [Резервное копирование и восстановление ключей шифрования Reporting Services](../../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)   
+ [Удаление и повторное создание ключей шифрования &#40;служб SSRS Configuration Manager&#41;](../../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)   
+ [Добавление и удаление ключей шифрования для масштабного развертывания &#40;службы SSRS Configuration Manager&#41;](../../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)   
+ [Резервное копирование главного ключа службы](service-master-key.md)   
  [Восстановление главного ключа службы](restore-the-service-master-key.md)   
  [Создание главного ключа базы данных](create-a-database-master-key.md)   
- [Создание резервной копии главного ключа базы данных](back-up-a-database-master-key.md)   
+ [Резервное копирование главного ключа базы данных](back-up-a-database-master-key.md)   
  [Восстановление главного ключа базы данных](restore-a-database-master-key.md)   
  [Создание идентичных симметричных ключей на двух серверах](create-identical-symmetric-keys-on-two-servers.md)  
   

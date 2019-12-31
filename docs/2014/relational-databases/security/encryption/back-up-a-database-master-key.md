@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - database master key [SQL Server], exporting
 ms.assetid: 7ad9a0a0-6e4f-4f7b-8801-8c1b9d49c4d8
-author: aliceku
-ms.author: aliceku
+author: jaszymas
+ms.author: jaszymas
 manager: craigg
-ms.openlocfilehash: 5f1eeab5d0c3dfae008bbcecc3fe8d89d2c7e2c5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5435b9056d98a5b2dc0835bfcd0e60865c1686b4
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63011975"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957268"
 ---
 # <a name="back-up-a-database-master-key"></a>Создание резервной копии главного ключа базы данных
   В этом разделе описано, как выполнить резервное копирование главного ключа [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] с помощью [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Главный ключ базы данных используется для шифрования других ключей и сертификатов внутри базы данных. Если он удален или поврежден, то есть вероятность, что [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] не сможет расшифровать эти ключи, в результате чего зашифрованные с их помощью данные будут безвозвратно утеряны. По этой причине необходимо создать резервную копию главного ключа базы данных и хранить ее в надежном месте.  
@@ -28,24 +28,24 @@ ms.locfileid: "63011975"
   
      [Ограничения](#Restrictions)  
   
-     [безопасность](#Security)  
+     [Бюллетеня](#Security)  
   
--   [Создание резервной копии главного ключа с помощью Transact-SQL](#Procedure)  
+-   [Создание резервной копии главного ключа базы данных с помощью Transact-SQL](#Procedure)  
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="BeforeYouBegin"></a>Перед началом  
   
-###  <a name="Restrictions"></a> Ограничения  
+###  <a name="Restrictions"></a>Ограничения  
   
 -   Главный ключ должен быть открыт и, таким образом, расшифрован, прежде чем производится его резервное копирование. Если он зашифрован главным ключом службы, то его не нужно открывать явным образом. Но если главный ключ зашифрован только паролем, его явное открытие обязательно.  
   
 -   Рекомендуется создать резервную копию главного ключа сразу же после его создания и затем сохранить в надежном месте.  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="Security"></a>Бюллетеня  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a>Чтение  
  Требует разрешения CONTROL для базы данных.  
   
-##  <a name="Procedure"></a> В среде SQL Server Management Studio с помощью Transact-SQL  
+##  <a name="Procedure"></a>Использование SQL Server Management Studio с Transact-SQL  
   
 #### <a name="to-back-up-the-database-master-key"></a>Создание резервной копии главного ключа базы данных  
   

@@ -15,12 +15,12 @@ ms.assetid: 0feb8b08-4062-467b-8433-e88e4e302738
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1b52eb9ecab5dd75e7f483bead1ef523b6b02360
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 06418c7fd1a9b465a78d01a8739912565b1459f5
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62919613"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75232219"
 ---
 # <a name="creating-a-user-defined-type"></a>Создание определяемого пользователем типа
   Чтобы создать определяемый пользователем тип, пригодный для установки в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], необходимо сначала создать класс в одном из поддерживаемых языков программирования среды .NET Framework, таком как Visual C# или Visual Basic, соответствующем требованиям спецификаций по созданию определяемых пользователем типов. Затем класс можно скомпилировать в виде DLL-библиотеки, которая может загружаться в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Создавать и развертывать определяемые пользователем типы также можно с помощью Visual Studio.  
@@ -40,9 +40,9 @@ Reconfigure
  Демонстрирует требования к приемам кодирования, используемым при создании определяемых пользователем типов.  
   
 ## <a name="example"></a>Пример  
- Следующий пример кода определяет определяемый пользователем тип Point, который описан подробно [программирование определяемых пользователем типов](creating-user-defined-types-coding.md).  
+ В следующем листинге кода определяется ОПРЕДЕЛЯЕМый пользователем тип Point, который подробно описан в разделе [Создание пользовательских типов](creating-user-defined-types-coding.md).  
   
- Полные листинги кода для других примеров, описываемых в этом разделе, можно получить, установив образцы из среды CLR. Инструкции по установке этих образцов см. в разделе [образцы SQL Server Database Engine](http://msftengprodsamples.codeplex.com/).  
+ Полные листинги кода для других примеров, описываемых в этом разделе, можно получить, установив образцы из среды CLR. Инструкции по установке этих образцов см. в разделе [SQL Server ядро СУБД Samples](https://msftengprodsamples.codeplex.com/).  
   
  C#  
   
@@ -331,6 +331,5 @@ End Structure
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Определяемые пользователем типы в CLR](clr-user-defined-types.md)  
-  
+ [Определяемые пользователем типы данных CLR](clr-user-defined-types.md)  
   

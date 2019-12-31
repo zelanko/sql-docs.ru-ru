@@ -1,5 +1,5 @@
 ---
-title: Сопоставление данных параметров CLR | Документация Майкрософт
+title: Сопоставление данных параметров среды CLR | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -26,57 +26,59 @@ ms.assetid: 89b43ee9-b9ad-4281-a4bf-c7c8d116daa2
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b297d329f11e05ed1b1995004150644e4b76ec9b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 17eeefbe125722c666f9f56394028da8c66a66b3
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62874840"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75232281"
 ---
 # <a name="mapping-clr-parameter-data"></a>Сопоставление данных о параметрах CLR
-  В следующей таблице перечислены [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] типы данных, их эквиваленты в системе common language runtime (CLR) для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в `System.Data.SqlTypes` пространства имен и их собственные эквиваленты CLR в [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework.  
+  В следующей таблице перечислены [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] типы данных, их эквиваленты в среде CLR для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в `System.Data.SqlTypes` пространстве имен и их собственные эквиваленты в среде CLR в [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework.  
   
 ||||  
 |-|-|-|  
-|**Тип данных SQL Server**|Тип (в System.Data.SqlTypes or Microsoft.SqlServer.Types)|**Тип данных CLR (.NET Framework)**|  
-|`bigint`|`SqlInt64`|**Int64, допускающее значение NULL\<Int64 >**|  
+|**Типы данных SQL Server**|Тип (в System.Data.SqlTypes or Microsoft.SqlServer.Types)|**Тип данных среды CLR (.NET Framework)**|  
+|`bigint`|`SqlInt64`|**Int64, Nullable\<Int64>**|  
 |`binary`|`SqlBytes, SqlBinary`|`Byte[]`|  
-|`bit`|`SqlBoolean`|**Логический, допускающие значения NULL\<логическое >**|  
-|`char`|None|None|  
-|`cursor`|None|None|  
-|`date`|`SqlDateTime`|**DateTime, допускающий значение NULL\<DateTime >**|  
-|`datetime`|`SqlDateTime`|**DateTime, допускающий значение NULL\<DateTime >**|  
-|`datetime2`|None|**DateTime, допускающий значение NULL\<DateTime >**|  
-|`DATETIMEOFFSET`|`None`|**DateTimeOffset, допускающие значения NULL\<DateTimeOffset >**|  
-|`decimal`|`SqlDecimal`|**Decimal, допускающий значение NULL\<десятичное >**|  
-|`float`|`SqlDouble`|**Double, допускающее значение NULL\<Double >**|  
-|`geography`|`SqlGeography`<br /><br /> `SqlGeography` определяется в библиотеке Microsoft.SqlServer.Types.dll, которая устанавливается вместе с SQL Server и могут быть загружены из в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [пакет дополнительных компонентов](https://www.microsoft.com/en-us/download/details.aspx?id=53164).|None|  
-|`geometry`|`SqlGeometry`<br /><br /> `SqlGeometry` определяется в библиотеке Microsoft.SqlServer.Types.dll, которая устанавливается вместе с SQL Server и могут быть загружены из в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [пакет дополнительных компонентов](https://www.microsoft.com/en-us/download/details.aspx?id=53164).|None|  
-|`hierarchyid`|`SqlHierarchyId`<br /><br /> `SqlHierarchyId` определяется в библиотеке Microsoft.SqlServer.Types.dll, которая устанавливается вместе с SQL Server и могут быть загружены из в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [пакет дополнительных компонентов](https://www.microsoft.com/en-us/download/details.aspx?id=53164).|None|  
-|`image`|None|None|  
-|`int`|`SqlInt32`|**Int32, допускающий значение NULL\<Int32 >**|  
-|`money`|`SqlMoney`|**Decimal, допускающий значение NULL\<десятичное >**|  
+|`bit`|`SqlBoolean`|**Логическое значение,\<допускающее значение NULL>**|  
+|`char`|Нет|Нет|  
+|`cursor`|Нет|Нет|  
+|`date`|`SqlDateTime`|**DateTime, Nullable\<DateTime>**|  
+|`datetime`|`SqlDateTime`|**DateTime, Nullable\<DateTime>**|  
+|`datetime2`|Нет|**DateTime, Nullable\<DateTime>**|  
+|`DATETIMEOFFSET`|`None`|**DateTimeOffset, Nullable\<>DateTimeOffset**|  
+|`decimal`|`SqlDecimal`|**Десятичный,\<допускающий значения NULL>**|  
+|`float`|`SqlDouble`|**Double, допускающий значение NULL\<Double>**|  
+|`geography`|`SqlGeography`<br /><br /> `SqlGeography`определяется в Microsoft. SqlServer. types. dll, который устанавливается вместе с SQL Server и может быть скачан из [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [пакета дополнительных компонентов](https://www.microsoft.com/download/details.aspx?id=53164).|Нет|  
+|`geometry`|`SqlGeometry`<br /><br /> `SqlGeometry`определяется в Microsoft. SqlServer. types. dll, который устанавливается вместе с SQL Server и может быть скачан из [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [пакета дополнительных компонентов](https://www.microsoft.com/download/details.aspx?id=53164).|Нет|  
+|`hierarchyid`|`SqlHierarchyId`<br /><br /> `SqlHierarchyId`определяется в Microsoft. SqlServer. types. dll, который устанавливается вместе с SQL Server и может быть скачан из [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [пакета дополнительных компонентов](https://www.microsoft.com/download/details.aspx?id=53164).|Нет|  
+|`image`|Нет|Нет|  
+|`int`|`SqlInt32`|**Int32,>\<Nullable Int32**|  
+|`money`|`SqlMoney`|**Десятичный,\<допускающий значения NULL>**|  
 |`nchar`|`SqlChars, SqlString`|`String, Char[]`|  
-|`ntext`|None|None|  
-|`numeric`|`SqlDecimal`|**Decimal, допускающий значение NULL\<десятичное >**|  
-|`nvarchar`|`SqlChars, SqlString`<br /><br /> `SQLChars` лучше подходит для передачи данных и доступа, тогда как `SQLString` более подходит для выполнения строковых операций.|`String, Char[]`|  
-|`nvarchar(1), nchar(1)`|`SqlChars, SqlString`|**Char, строка, Char [], Nullable\<char >**|  
-|`real`|`SqlSingle` (но `SqlSingle` поддерживает больший диапазон значений, чем `real`)|**Единый, допускающие значения NULL\<единый >**|  
-|`rowversion`|None|`Byte[]`|  
-|`smallint`|`SqlInt16`|**Int16, допускающее значение NULL\<Int16 >**|  
-|`smallmoney`|`SqlMoney`|**Decimal, допускающий значение NULL\<десятичное >**|  
-|`sql_variant`|None|`Object`|  
-|`table`|None|None|  
-|`text`|None|None|  
-|`time`|None|**Интервал времени, допускающие значения NULL\<TimeSpan >**|  
-|`timestamp`|None|None|  
-|`tinyint`|`SqlByte`|**Байт, допускающий значение NULL\<байтов >**|  
-|`uniqueidentifier`|`SqlGuid`|**Идентификатор GUID, допускающий значение NULL\<Guid >**|  
-|`User-defined type(UDT)`|None|Тот же класс связывается с определяемым пользователем типом данных в той же сборке или в зависимой сборке.|  
+|`ntext`|Нет|Нет|  
+|`numeric`|`SqlDecimal`|**Десятичный,\<допускающий значения NULL>**|  
+|`nvarchar`|`SqlChars, SqlString`<br /><br /> 
+  `SQLChars` лучше подходит для передачи данных и доступа, тогда как `SQLString` более подходит для выполнения строковых операций.|`String, Char[]`|  
+|`nvarchar(1), nchar(1)`|`SqlChars, SqlString`|**Char, String, char [], Nullable\<char>**|  
+|`real`|
+  `SqlSingle` (но `SqlSingle` поддерживает больший диапазон значений, чем `real`)|**Single, только\<одиночный>, допускающий значение null**|  
+|`rowversion`|Нет|`Byte[]`|  
+|`smallint`|`SqlInt16`|**Int16, Nullable\<>обнуляемого типа**|  
+|`smallmoney`|`SqlMoney`|**Десятичный,\<допускающий значения NULL>**|  
+|`sql_variant`|Нет|`Object`|  
+|`table`|Нет|Нет|  
+|`text`|Нет|Нет|  
+|`time`|Нет|**TimeSpan, Nullable\<TimeSpan>**|  
+|`timestamp`|Нет|Нет|  
+|`tinyint`|`SqlByte`|**Byte, допускающий значение NULL\<байт>**|  
+|`uniqueidentifier`|`SqlGuid`|**GUID, GUID\<, допускающий значение NULL>**|  
+|`User-defined type(UDT)`|Нет|Тот же класс связывается с определяемым пользователем типом данных в той же сборке или в зависимой сборке.|  
 |**varbinary**|`SqlBytes, SqlBinary`|`Byte[]`|  
-|`varbinary(1), binary(1)`|`SqlBytes, SqlBinary`|**байт, Byte [], Nullable\<байтов >**|  
-|`varchar`|None|None|  
-|`xml`|`SqlXml`|None|  
+|`varbinary(1), binary(1)`|`SqlBytes, SqlBinary`|**Byte, Byte [], допускающий значение NULL\<байт>**|  
+|`varchar`|Нет|Нет|  
+|`xml`|`SqlXml`|Нет|  
   
 ## <a name="automatic-data-type-conversion-with-out-parameters"></a>Автоматическое преобразование типов данных для выходных параметров  
  Метод CLR может возвращать данные вызывающему коду или программе, сопровождая входной параметр модификатором `out` (Microsoft Visual C#) или `<Out()> ByRef` (Microsoft Visual Basic). Если входной параметр принадлежит типу данных CLR в пространстве имен `System.Data.SqlTypes`, и вызывающая программа указывает свой соответствующий тип данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] как входной параметр, преобразование типов осуществляется автоматически, когда метод CLR возвращает тип данных.  
@@ -96,7 +98,7 @@ Public Shared Sub PriceSum( <Out()> ByRef value As SqlInt32)
 End Sub  
 ```  
   
- После формирования сборки в базе данных хранимая процедура создается в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] со следующим кодом Transact-SQL, который указывает тип данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `int` для параметра OUTPUT:  
+ После формирования сборки в базе данных хранимая процедура создается в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] со следующим кодом Transact-SQL, который указывает тип данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`int` для параметра OUTPUT:  
   
 ```  
 CREATE PROCEDURE PriceSum (@sum int OUTPUT)  
@@ -109,7 +111,7 @@ AS EXTERNAL NAME TestStoredProc.StoredProcedures.PriceSum
   
 |||  
 |-|-|  
-|**Тип данных CLR (SQL Server)**|**Тип данных SQL Server**|  
+|**Тип данных CLR (SQL Server)**|**Типы данных SQL Server**|  
 |`Decimal`|smallmoney|  
 |`SqlMoney`|smallmoney|  
 |`Decimal`|money|  

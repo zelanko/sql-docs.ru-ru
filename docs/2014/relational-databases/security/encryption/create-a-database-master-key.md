@@ -9,43 +9,43 @@ ms.topic: conceptual
 helpviewer_keywords:
 - database master key [SQL Server], creating
 ms.assetid: 8cb24263-e97d-4e4d-9429-6cf494a4d5eb
-author: aliceku
-ms.author: aliceku
+author: jaszymas
+ms.author: jaszymas
 manager: craigg
-ms.openlocfilehash: 757b6c62d63da2b8f1fa33e5d704d7a2c4fabd38
-ms.sourcegitcommit: 5a61854ddcd2c61bb6da30ccad68f0ad90da0c96
+ms.openlocfilehash: 86f74710e99079d0acd28db09bcf1e4ba7c57865
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70978370"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957248"
 ---
 # <a name="create-a-database-master-key"></a>Создание главного ключа базы данных
 
-В этом разделе описывается создание главного ключа `master` базы данных в базе данных в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] с помощью [!INCLUDE[tsql](../../../includes/tsql-md.md)].
+В этом разделе описывается создание главного ключа базы данных в `master` базе данных в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] с помощью. [!INCLUDE[tsql](../../../includes/tsql-md.md)]
 
 **В этом разделе**
 
 - **Перед началом работы**
 
-  [безопасность](#Security)
+  [Бюллетеня](#Security)
 
 - [Создание главного ключа базы данных с помощью Transact-SQL](#TsqlProcedure)
 
-## <a name="BeforeYouBegin"></a> Перед началом
+## <a name="BeforeYouBegin"></a>Перед началом
 
-### <a name="Security"></a> безопасность
+### <a name="Security"></a>Бюллетеня
 
-#### <a name="Permissions"></a> Permissions
+#### <a name="Permissions"></a>Чтение
 
 Требует разрешения CONTROL для базы данных.
 
-## <a name="TsqlProcedure"></a> Использование Transact-SQL
+## <a name="TsqlProcedure"></a>Использование Transact-SQL
 
 ### <a name="to-create-a-database-master-key"></a>Создание главного ключа базы данных
 
 1. Выберите пароль для шифрования копии главного ключа базы данных, которая будет храниться в базе данных.
 2. В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../../includes/ssde-md.md)].
-3. Разверните узел **системные базы данных**, щелкните `master` правой кнопкой мыши и выберите пункт **создать запрос**.
+3. Разверните узел **Системные базы данных**, щелкните правой кнопкой мыши базу данных `master` и выберите пункт **Создать запрос**.
 4. Скопируйте следующий пример в окно запроса и нажмите кнопку **Выполнить**.
 
   ```sql
