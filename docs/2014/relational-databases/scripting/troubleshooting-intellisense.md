@@ -1,6 +1,6 @@
 ---
-title: Устранение неполадок в работе IntelliSense (среда SQL Server Management Studio) | Документация Майкрософт
-ms.custom: ''
+title: Устранение неполадок в работе IntelliSense
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -15,12 +15,12 @@ ms.assetid: 4b72ffc6-aea2-4e11-ab36-fa2de4d7bcc5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a642fbe7dbd866baa01fe9db7163292bfda6db30
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7088bee1d78efdc6051bf58d174b7ea503362831
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66063258"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75242983"
 ---
 # <a name="troubleshooting-intellisense-sql-server-management-studio"></a>Устранение сбоев в работе IntelliSense (среда SQL Server Management Studio)
   В некоторых случаях параметры технологии IntelliSense могут работать не так, как ожидается.  

@@ -1,6 +1,6 @@
 ---
-title: Выполнение файлов скрипта Transact-SQL с использованием программы sqlcmd | Документация Майкрософт
-ms.custom: ''
+title: Выполнение файлов скрипта Transact-SQL с использованием программы sqlcmd
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -12,15 +12,15 @@ ms.assetid: 90067eb8-ca3e-44e8-bb1a-bf7d1a359423
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e0a55800ff1d707ce191d373a7348bf744ce5886
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6d9fb152507979232d27308d107278d4b6d3bccb
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66063669"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243199"
 ---
 # <a name="run-transact-sql-script-files-using-sqlcmd"></a>Выполнение файлов скрипта Transact-SQL с использованием программы sqlcmd
-  Для запуска файла скрипта [!INCLUDE[tsql](../../includes/tsql-md.md)] можно использовать программу командной строки `sqlcmd`. Файл скрипта [!INCLUDE[tsql](../../includes/tsql-md.md)] является текстовым файлом, содержащим сочетание инструкций языка [!INCLUDE[tsql](../../includes/tsql-md.md)], команд `sqlcmd` и переменных скрипта.  
+  Для запуска файла скрипта `sqlcmd` можно использовать программу командной строки [!INCLUDE[tsql](../../includes/tsql-md.md)]. Файл скрипта [!INCLUDE[tsql](../../includes/tsql-md.md)] является текстовым файлом, содержащим сочетание инструкций языка [!INCLUDE[tsql](../../includes/tsql-md.md)], команд `sqlcmd` и переменных скрипта.  
   
  Чтобы создать простой файл скрипта [!INCLUDE[tsql](../../includes/tsql-md.md)] , используя приложение «Блокнот», следуйте перечисленным ниже шагам.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "66063669"
  Результат не будет выведен в окне командной строки. Он будет записан в файл EmpAdds.txt. Можно проверить полученные результаты, открыв файл EmpAdds.txt.  
   
 ## <a name="see-also"></a>См. также  
- [Запуск программу sqlcmd](sqlcmd-start-the-utility.md)   
+ [Запуск программы sqlcmd](sqlcmd-start-the-utility.md)   
  [Программа sqlcmd](../../tools/sqlcmd-utility.md)  
   
   

@@ -1,6 +1,6 @@
 ---
-title: Настройка IntelliSense (SQL Server Management Studio) | Документация Майкрософт
-ms.custom: ''
+title: Настройка технологии IntelliSense
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -14,12 +14,12 @@ ms.assetid: 3ffc9f31-4efa-4c1a-a033-ed1dc48b065f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1dc17f3f7e1b58c871a6a1efead6338f4f0c3243
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6060d6deba748ee800dfae41ab7e8da0e558f91f
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090511"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75245164"
 ---
 # <a name="configure-intellisense-sql-server-management-studio"></a>Настройка IntelliSense (среда SQL Server Management Studio)
   Большинство параметров технологии [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense по умолчанию включено. Отдельные параметры IntelliSense можно отключить и вместо этого выполнять соответствующие действия посредством команды меню или сочетания клавиш.  

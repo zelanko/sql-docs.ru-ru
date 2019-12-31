@@ -15,29 +15,29 @@ ms.assetid: 4d380509-deed-4b4b-a9c1-a9134cc40641
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 81bc6c12720d4b841e21191db5811d583d4c5edc
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.openlocfilehash: 0ec82b7cca2062e1ed918e300eeb76dad16cbb20
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71952273"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75245624"
 ---
 # <a name="claims-to-windows-token-service-c2wts-and-reporting-services"></a>Служба Claims to Windows Token Service (C2WTS) и службы Reporting Services
-  Служба SharePoint Claims to Windows Token Service (c2WTS) необходима в режиме [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint, если требуется использовать проверку подлинности Windows для источников данных, находящихся за пределами фермы SharePoint. Это верно, даже если пользователь получает доступ к источникам данных с использованием проверки подлинности Windows, поскольку для связи между клиентским веб-интерфейсом и общей службой [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] всегда используется проверка подлинности Claims.  
+  Служба SharePoint Claims to Windows Token Service (c2WTS) необходима в [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] режиме интеграции с SharePoint, если требуется использовать проверку подлинности Windows для источников данных, находящихся за пределами фермы SharePoint. Это верно, даже если пользователь получает доступ к источникам данных с использованием проверки подлинности Windows, поскольку для связи между клиентским веб-интерфейсом и общей службой [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] всегда используется проверка подлинности Claims.  
   
  Служба c2WTS необходима, даже если источники данных находятся на одном компьютере с общей службой. Однако в этом случае ограниченное делегирование не требуется.  
   
  Токены, созданные службой c2WTS, работают только при наличии ограниченного делегирования (ограничение набором определенных служб) и заданном параметре "Использовать любой протокол проверки подлинности". Как уже отмечалось, если источники данных находятся на одном компьютере с общей службой, ограниченное делегирование не требуется.  
   
- Если в среде используется делегирование, ограниченное Kerberos, то внешние источники данных и служба SharePoint Server должны находиться в одном домене Windows. Любая служба, использующая службу токенов Claims to Windows Service (c2WTS), должна применять делегирование, **ограниченное** Kerberos, чтобы разрешить c2WTS использовать передачу протокола Kerberos для перевода утверждений в учетные данные Windows. Эти требования являются достоверными для всех общих служб SharePoint. Дополнительные сведения см. в [статье Обзор проверки подлинности Kerberos для продуктов Microsoft SharePoint 2010 (https://technet.microsoft.com/library/gg502594.aspx)](https://technet.microsoft.com/library/gg502594.aspx).  
+ Если в среде используется делегирование, ограниченное Kerberos, то внешние источники данных и служба SharePoint Server должны находиться в одном домене Windows. Любая служба, использующая службу токенов Claims to Windows Service (c2WTS), должна применять делегирование, **ограниченное** Kerberos, чтобы разрешить c2WTS использовать передачу протокола Kerberos для перевода утверждений в учетные данные Windows. Эти требования являются достоверными для всех общих служб SharePoint. Дополнительные сведения см. в [статье Обзор проверки подлинности Kerberos для продуктов Microsofthttps://technet.microsoft.com/library/gg502594.aspx)SharePoint 2010 (](https://technet.microsoft.com/library/gg502594.aspx).  
   
  Эта процедура описана в данном разделе.  
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]** SharePoint 2013 #124; SharePoint 2010|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]** SharePoint 2013 &#124; SharePoint 2010|  
   
-## <a name="prerequisites"></a>необходимые компоненты  
+## <a name="prerequisites"></a>Необходимые компоненты  
   
 > [!NOTE]  
 >  Примечание. Некоторые шаги настройки могут отличаться или могут не работать в определенных топологиях фермы. Например, установка одиночного сервера не поддерживает службы c2WTS Windows Identity Foundation, поэтому в этой конфигурации фермы требования сценариев делегирования токенов Windows невозможны.  
@@ -57,7 +57,7 @@ ms.locfileid: "71952273"
     1.  Щелкните правой кнопкой мыши каждую учетную запись службы и откройте диалоговое окно свойств. В диалоговом окне перейдите на вкладку **Делегирование** .  
   
         > [!NOTE]  
-        >  Примечание. Вкладка делегирования отображается, только если объекту назначено имя участника-службы. Службе c2WTS не требуется имя участника-службы для учетной записи службы c2WTS, однако без имени участника службы вкладка **Делегирование** отображаться не будет. Другой способ настройки ограниченного делегирования заключается в использовании специальной программы, например **ADSIEdit**.  
+        >  Примечание. Вкладка делегирования отображается, только если объекту назначено имя участника-службы. c2WTS не требует наличия имени субъекта-службы в учетной записи c2WTS, но без имени субъекта-службы, вкладка **делегирования** не будет отображаться. Другой способ настройки ограниченного делегирования заключается в использовании специальной программы, например **ADSIEdit**.  
   
     2.  Основными параметрами, приведенными на вкладке делегирования, являются следующие:  
   
@@ -65,7 +65,7 @@ ms.locfileid: "71952273"
   
         -   Выберите "использовать любой протокол проверки подлинности".  
   
-         Дополнительные сведения см. в разделе "Настройка ограниченного делегирования Kerberos для компьютеров и учетных записей служб" в следующем техническом документе [Настройка проверки подлинности Kerberos для продуктов SharePoint 2010 и SQL Server 2008 R2](http://blogs.technet.com/b/tothesharepoint/archive/2010/07/22/whitepaper-configuring-kerberos-authentication-for-sharepoint-2010-and-sql-server-2008-r2-products.aspx)  
+         Дополнительные сведения см. в разделе "Настройка ограниченного делегирования Kerberos для компьютеров и учетных записей служб" в следующем техническом документе [Настройка проверки подлинности Kerberos для продуктов SharePoint 2010 и SQL Server 2008 R2](https://blogs.technet.com/b/tothesharepoint/archive/2010/07/22/whitepaper-configuring-kerberos-authentication-for-sharepoint-2010-and-sql-server-2008-r2-products.aspx)  
   
 2.  Настройка c2WTS "AllowedCallers"  
   
@@ -98,8 +98,7 @@ ms.locfileid: "71952273"
   
 4.  Запустите SharePoint "Claims to Windows Token Service": запустите службу Claims to Windows Token Service через центр администрирования SharePoint на странице **Управление службами на сервере** . Служба должна быть запущена на сервере, который будет выполнять действие. Например, при наличии сервера, который является интерфейсным веб-сервером, и другого сервера, который служит сервером приложений, где работает общая служба служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , службу c2WTS необходимо запустить только на сервере приложений. Служба c2WTS не требуется на интерфейсном веб-сервере.  
   
-## <a name="see-also"></a>См. также статью  
- [Общие сведения о службе Claims to Windows Token Service (C2WTS) (https://msdn.microsoft.com/library/ee517278.aspx)](https://msdn.microsoft.com/library/ee517278.aspx)   
- [Обзор проверки подлинности Kerberos для продуктов Microsoft SharePoint 2010 (https://technet.microsoft.com/library/gg502594.aspx)](https://technet.microsoft.com/library/gg502594.aspx)  
-  
+## <a name="see-also"></a>См. также  
+ [Обзор службы Claims to Windows Token Service (c2WTS) (https://msdn.microsoft.com/library/ee517278.aspx)](https://msdn.microsoft.com/library/ee517278.aspx)   
+ [Общие сведения о проверке подлинности Kerberos для продуктов Microsoft SharePoint 2010 (https://technet.microsoft.com/library/gg502594.aspx)](https://technet.microsoft.com/library/gg502594.aspx)  
   

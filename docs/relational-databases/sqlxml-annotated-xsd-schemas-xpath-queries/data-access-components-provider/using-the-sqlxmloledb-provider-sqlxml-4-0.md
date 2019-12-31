@@ -1,6 +1,5 @@
 ---
-title: Использование поставщика SQLXMLOLEDB (SQLXML 4,0) | Документация Майкрософт
-ms.custom: ''
+title: Использование поставщика SQLXMLOLEDB (SQLXML)
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -14,13 +13,14 @@ helpviewer_keywords:
 ms.assetid: fbcefac5-29c9-478b-b0e0-d510b593f446
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9bc5e79f52f3aabbe157065db86e8d0968537ef7
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 2a2a24cd7ced3430f3ba59da6489e557f32bf7c4
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909358"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75246641"
 ---
 # <a name="using-the-sqlxmloledb-provider-sqlxml-40"></a>Использование поставщика SQLXMLOLEDB (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -42,25 +42,25 @@ ms.locfileid: "72909358"
      Дополнительные сведения см. в статье [Основные понятия программирования SQLXML 4,0](../../../relational-databases/sqlxml/sqlxml-4-0-programming-concepts.md) и [Установка SQL Server Native Client](../../../relational-databases/native-client/applications/installing-sql-server-native-client.md).  
   
 ## <a name="in-this-section"></a>в этом разделе  
- [Запуск поставщика SQLXMLOLEDB &#40;запросов SQL&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-sql-queries-sqlxmloledb-provider.md)  
+ [Запуск запросов SQL &#40;поставщика SQLXMLOLEDB&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-sql-queries-sqlxmloledb-provider.md)  
  Демонстрирует использование свойств Клиентсидексмл и корня XML для выполнения SQL-запросов.  
   
- [Запуск шаблонов, содержащих поставщик SQLXMLOLEDB &#40;запросов SQL&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-templates-that-contain-sql-queries-sqlxmloledb-provider.md)  
+ [Запуск шаблонов, содержащих запросы SQL &#40;поставщика SQLXMLOLEDB&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-templates-that-contain-sql-queries-sqlxmloledb-provider.md)  
  Иллюстрирует использование свойства Клиентсидексмл.  
   
- [Запуск поставщика SQLXMLOLEDB &#40;запросов XPath&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-xpath-queries-sqlxmloledb-provider.md)  
+ [Выполняются запросы XPath &#40;поставщика SQLXMLOLEDB&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-xpath-queries-sqlxmloledb-provider.md)  
  Демонстрирует использование свойств Клиентсидексмл, базового пути и схемы сопоставления.  
   
- [Запуск запросов XPath с &#40;SQLXMLOLEDB поставщика пространства имен&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-xpath-queries-with-namespaces-sqlxmloledb-provider.md)  
+ [Выполнять запросы XPath с пространствами имен &#40;поставщик SQLXMLOLEDB&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-xpath-queries-with-namespaces-sqlxmloledb-provider.md)  
  Иллюстрирует выполнение запроса к схемам пространства имен.  
   
- [Исполнение шаблонов, содержащих поставщик SQLXMLOLEDB &#40;запросов XPath&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-templates-that-contain-xpath-queries-sqlxmloledb-provider.md)  
+ [Запуск шаблонов, содержащих запросы XPath &#40;поставщика SQLXMLOLEDB&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-templates-that-contain-xpath-queries-sqlxmloledb-provider.md)  
  Показывает, как выполнять шаблоны с запросами SQL с помощью Клиентсидексмл, базового пути и свойств схемы сопоставления.  
   
- [Применение поставщика SQLXMLOLEDB преобразования &#40;XSL&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/applying-an-xsl-transformation-sqlxmloledb-provider.md)  
+ [Применение преобразования XSL &#40;поставщика SQLXMLOLEDB&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/applying-an-xsl-transformation-sqlxmloledb-provider.md)  
  Демонстрирует использование свойств Клиентсидексмл и XSL в применении преобразования XSL.  
   
-## <a name="see-also"></a>См. также статью  
- [Системные требования для SQL Server Native Client](../../../relational-databases/native-client/system-requirements-for-sql-server-native-client.md)  
+## <a name="see-also"></a>См. также  
+ [Системные требования для собственного клиента SQL Server](../../../relational-databases/native-client/system-requirements-for-sql-server-native-client.md)  
   
   

@@ -1,7 +1,7 @@
 ---
-title: Улучшенное поведение типов даты и времени с предыдущими версиями SQL Server (ODBC) | Документация Майкрософт
+title: Дата и время в версиях SQL (ODBC)
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 12/18/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -13,12 +13,12 @@ ms.assetid: cd4e137f-dc5e-4df7-bc95-51fe18c587e0
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 500771f384d65f1181dc5a34efccafb677ba2183
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.openlocfilehash: 7c25269ccf82749bd3b9260ff1fea6eec48361a9
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73783732"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243823"
 ---
 # <a name="enhanced-date-and-time-type-behavior-with-previous-sql-server-versions-odbc"></a>Улучшенная работа типа даты-времени с предыдущими версиями SQL Server (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,31 +32,33 @@ ms.locfileid: "73783732"
   
  Метаданные инструкции, возвращаемые SQLDescribeCol, SQLDescribeParam, Скжетдескфиелд и SQLColAttribute, будут возвращать метаданные, которые согласуются с типом нижнего уровня во всех отношениях, включая имя типа. Примером такого типа нижнего уровня является **nvarchar**.  
   
- Если клиентское приложение нижнего уровня выполняется на [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (или более позднем) сервере, на котором были внесены изменения схемы типов даты и времени, ожидаемое поведение выглядит следующим образом:  
+ Если клиентское приложение нижнего уровня выполняется на сервере [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (или более поздней версии), на котором изменения схемы производятся в типах даты и времени, то ожидаемое поведение выглядит следующим образом:  
   
-|Тип SQL Server 2005|Тип [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (или более поздней)|Клиентский тип ODBC|Преобразование результата (из SQL в C)|Преобразование параметров (из C в SQL)|  
+|Тип SQL Server 2005|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]Тип  (или более поздних версий)|Клиентский тип ODBC|Преобразование результата (из SQL в C)|Преобразование параметров (из C в SQL)|  
 |--------------------------|----------------------------------------------|----------------------|------------------------------------|---------------------------------------|  
-|DateTime|Дата|SQL_C_TYPE_DATE|OK|ОК (1)|  
+|Datetime|Дата|SQL_C_TYPE_DATE|ОК|ОК (1)|  
 |||SQL_C_TYPE_TIMESTAMP|Поля времени устанавливаются в нули.|OK (2)<br /><br /> Завершается ошибкой, если значение поля времени не равно нулю. Работает с [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].|  
-||Time(0)|SQL_C_TYPE_TIME|OK|ОК (1)|  
+||Time(0)|SQL_C_TYPE_TIME|ОК|ОК (1)|  
 |||SQL_C_TYPE_TIMESTAMP|Поля даты устанавливаются в текущую дату.|OK (2)<br /><br /> Дата пропускается. Ошибка, если доли секунды не равны нулю. Работает с [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].|  
 ||Time(7)|SQL_C_TIME|Сбой-недопустимый литерал времени.|ОК (1)|  
 |||SQL_C_TYPE_TIMESTAMP|Сбой-недопустимый литерал времени.|ОК (1)|  
-||Datetime2 (3)|SQL_C_TYPE_TIMESTAMP|OK|ОК (1)|  
-||Datetime2 (7)|SQL_C_TYPE_TIMESTAMP|OK|Значение округляется до 1/300 секунды при преобразовании на клиенте.|  
-|Smalldatetime|Дата|SQL_C_TYPE_DATE|OK|OK|  
+||Datetime2 (3)|SQL_C_TYPE_TIMESTAMP|ОК|ОК (1)|  
+||Datetime2 (7)|SQL_C_TYPE_TIMESTAMP|ОК|Значение округляется до 1/300 секунды при преобразовании на клиенте.|  
+|Smalldatetime|Дата|SQL_C_TYPE_DATE|ОК|ОК|  
 |||SQL_C_TYPE_TIMESTAMP|Поля времени устанавливаются в нули.|OK (2)<br /><br /> Завершается ошибкой, если значение поля времени не равно нулю. Работает с [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].|  
-||Time(0)|SQL_C_TYPE_TIME|OK|OK|  
+||Time(0)|SQL_C_TYPE_TIME|ОК|ОК|  
 |||SQL_C_TYPE_TIMESTAMP|Поля даты устанавливаются в текущую дату.|OK (2)<br /><br /> Дата пропускается. Ошибка, если доли секунды не равны нулю.<br /><br /> Работает с [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].|  
-||Datetime2(0)|SQL_C_TYPE_TIMESTAMP|OK|OK|  
-  
+||Datetime2(0)|SQL_C_TYPE_TIMESTAMP|ОК|ОК|  
+|||||
+
 ## <a name="key-to-symbols"></a>Расшифровка символов  
   
-|Символ|Значение|  
+|Знак|Значение|  
 |------------|-------------|  
 |1|Если код работал в [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], то он должен работать и с последующими версиями [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |2|У приложения, работавшего с [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], могут возникать ошибки с более поздними версиями [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-  
+|||
+
  Обратите внимание, что рассматриваются только типичные изменения схемы. Ниже приводятся типичные изменения.  
   
 -   Использование нового типа, когда логически приложению необходимо только значение даты или времени. Однако приложение было вынуждено использовать типы datetime или smalldatetime из-за отсутствия отдельных типов для даты и времени.  
@@ -68,10 +70,10 @@ ms.locfileid: "73783732"
 ### <a name="column-metadata-returned-by-sqlcolumns-sqlprocedurecolumns-and-sqlspecialcolumns"></a>Метаданные столбцов, возвращаемые SQLColumns, SQLProcedureColumns и SQLSpecialColumns  
  Для типов даты-времени возвращаются значения следующих столбцов.  
   
-|Тип столбца|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
+|Тип столбца|date|Twitter в режиме реального|smalldatetime|Datetime|datetime2|datetimeoffset;|  
 |-----------------|----------|----------|-------------------|--------------|---------------|--------------------|  
 |DATA_TYPE|SQL_WVARCHAR|SQL_WVARCHAR|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_WVARCHAR|SQL_WVARCHAR|  
-|TYPE_NAME|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
+|TYPE_NAME|date|Twitter в режиме реального|smalldatetime|Datetime|datetime2|datetimeoffset;|  
 |COLUMN_SIZE|10|8, 10.16|16|23|19, 21..27|26, 28..34|  
 |BUFFER_LENGTH|20|16, 20.. 32|16|16|38, 42.. 54|52, 56.. 68|  
 |DECIMAL_DIGITS|NULL|NULL|0|3|NULL|NULL|  
@@ -79,15 +81,16 @@ ms.locfileid: "73783732"
 |SQL_DATETIME_SUB|NULL|NULL|SQL_CODE_TIMESTAMP|SQL_CODE_TIMESTAMP|NULL|NULL|  
 |CHAR_OCTET_LENGTH|NULL|NULL|NULL|NULL|NULL|NULL|  
 |SS_DATA_TYPE|0|0|111|111|0|0|  
-  
+||||||||
+
  SQLSpecialColumns не возвращает SQL_DATA_TYPE, SQL_DATETIME_SUB, CHAR_OCTET_LENGTH или SS_DATA_TYPE.  
   
 ### <a name="data-type-metadata-returned-by-sqlgettypeinfo"></a>Метаданные типа данных, возвращенные SQLGetTypeInfo  
  Для типов даты-времени возвращаются значения следующих столбцов.  
   
-|Тип столбца|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
+|Тип столбца|date|Twitter в режиме реального|smalldatetime|Datetime|datetime2|datetimeoffset;|  
 |-----------------|----------|----------|-------------------|--------------|---------------|--------------------|  
-|TYPE_NAME|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
+|TYPE_NAME|date|Twitter в режиме реального|smalldatetime|Datetime|datetime2|datetimeoffset;|  
 |DATA_TYPE|SQL_WVARCHAR|SQL_WVARCHAR|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_WVARCHAR|SQL_WVARCHAR|  
 |COLUMN_SIZE|10|16|16|23|27|34|  
 |LITERAL_PREFIX|'|'|'|'|'|'|  
@@ -99,7 +102,7 @@ ms.locfileid: "73783732"
 |UNSIGNED_ATTRIBUTE|NULL|NULL|NULL|NULL|NULL|NULL|  
 |FXED_PREC_SCALE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|  
 |AUTO_UNIQUE_VALUE|NULL|NULL|NULL|NULL|NULL|NULL|  
-|LOCAL_TYPE_NAME|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
+|LOCAL_TYPE_NAME|date|Twitter в режиме реального|smalldatetime|Datetime|datetime2|datetimeoffset;|  
 |MINIMUM_SCALE|NULL|NULL|0|3|NULL|NULL|  
 |MAXIMUM_SCALE|NULL|NULL|0|3|NULL|NULL|  
 |SQL_DATA_TYPE|SQL_WVARCHAR|SQL_WVARCHAR|SQL_DATETIME|SQL_DATETIME|SQL_WVARCHAR|SQL_WVARCHAR|  
@@ -107,11 +110,10 @@ ms.locfileid: "73783732"
 |NUM_PREC_RADIX|NULL|NULL|NULL|NULL|NULL|NULL|  
 |INTERVAL_PRECISION|NULL|NULL|NULL|NULL|NULL|NULL|  
 |USERTYPE|0|0|12|22|0|0|  
-  
+||||||||
+
 ## <a name="down-level-server-behavior"></a>Работа сервера низкого уровня  
  При соединении с экземпляром сервера версии более ранней, чем [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], любые попытки использовать новые серверные типы или связанные с ними коды метаданных и поля дескрипторов приводят к возврату ошибки SQL_ERROR. Будет сформирована диагностическая запись с ошибкой SQLSTATE HY004 и сообщением «Недопустимый тип данных SQL для версии сервера при соединении» или с ошибкой 07006 и сообщением «Нарушение атрибута ограниченного типа данных».  
   
-## <a name="see-also"></a>См. также раздел  
- [Улучшения &#40;даты и времени ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
-  
-  
+## <a name="see-also"></a>См. также  
+ [Улучшения даты и времени &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  

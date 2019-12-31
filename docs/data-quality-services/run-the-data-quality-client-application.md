@@ -1,6 +1,5 @@
 ---
-title: Запуск клиентского приложения Data Quality Client | Microsoft Docs
-ms.custom: ''
+title: Запуск клиентского приложения DQS
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -11,14 +10,14 @@ f1_keywords:
 - sql13.dqs.browseforservers.f1
 - sql13.dqs.connecttoserver.f1
 ms.assetid: 0b2aa202-7ab2-4c9d-b0f1-802588053a1e
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: 3e63edc53ff8fe59f74b408bdb86a172b9835bac
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: da099b6a3aca31dd0acdc82f7e2bdbdf13c7c24e
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67935016"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244130"
 ---
 # <a name="run-the-data-quality-client-application"></a>Запуск клиентского приложения DQS
 
@@ -26,24 +25,24 @@ ms.locfileid: "67935016"
 
   Запустите [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]и выполните вход на [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)].  
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="BeforeYouBegin"></a>Перед началом  
   
-###  <a name="Prerequisites"></a> Предварительные требования  
+###  <a name="Prerequisites"></a>Требований  
  Необходимо, чтобы установка сервера [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] , запускаемая с помощью файла DQSInstaller.exe, была завершена. Дополнительные сведения см. в разделе [Запуск файла DQSInstaller.exe для завершения установки сервера служб DQS](../data-quality-services/install-windows/run-dqsinstaller-exe-to-complete-data-quality-server-installation.md).  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="Security"></a>Бюллетеня  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a>Чтение  
  Для входа на сервер [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]необходимо иметь одну из трех ролей DQS (dqs_adminstrator, dqs_kb_editor или dqs_kb_operator) в базе данных DQS_MAIN.  
   
-##  <a name="Run"></a> Запуск клиента DQS  
+##  <a name="Run"></a>Запустить Data Quality Client  
  Чтобы запустить [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] на компьютере, где он установлен, выполните следующие действия:  
   
-1.  Нажмите кнопку **Пуск**, выберите **Все программы**, затем **[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]** , затем **Службы Data Quality Services**, затем **Data Quality Client**.  
+1.  Нажмите кнопку **Пуск**, выберите **Все программы**, затем **[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]**, затем **Службы Data Quality Services**, затем **Data Quality Client**.  
   
 2.  В диалоговом окне **Соединение с сервером** выполните следующие действия:  
   
-    1.  Укажите сервер, к которому требуется подключить приложение [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] . Выберите **(LOCAL)** для подключения к [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] на локальном компьютере. Вы также можете щелкнуть стрелку и выбрать элемент **\<Поиск дополнительных серверов в сети>** , чтобы подключиться к другому серверу (или подключиться к локальному серверу по имени). Открывается диалоговое окно **Обзор серверов** . Вы можете выбрать сервер на вкладках **Локальные серверы** или **Сетевые серверы** .  
+    1.  Укажите сервер, к которому требуется подключить приложение [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] . Выберите **(LOCAL)** для подключения к [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] на локальном компьютере. Можно также нажать кнопку со стрелкой вниз и выбрать пункт ** \<обзор сети для дополнительных серверов>** для подключения к другому серверу (или для подключения к локальному серверу по имени). Открывается диалоговое окно **Обзор серверов** . Вы можете выбрать сервер на вкладках **Локальные серверы** или **Сетевые серверы** .  
   
     2.  Чтобы зашифровать передачу данных между сервером [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] и клиентом [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)], щелкните **Параметры**, а затем установите флажок **Шифровать соединение** .  
   

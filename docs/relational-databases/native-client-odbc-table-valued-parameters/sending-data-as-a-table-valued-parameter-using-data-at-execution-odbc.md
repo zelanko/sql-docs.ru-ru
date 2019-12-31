@@ -1,5 +1,5 @@
 ---
-title: Отправка данных в виде возвращающего табличное значение параметра с помощью данных во время выполнения (ODBC) | Документация Майкрософт
+title: Возвращающий табличное значение параметр, данные во время выполнения (ODBC)
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ ms.assetid: 361e6442-34de-4cac-bdbd-e05f04a21ce4
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9fa7998cf156adc94f13f22887a595408144fad8
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.openlocfilehash: cea7295b67cd53844b29e876e8a0635de9cad46a
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73775906"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75246365"
 ---
 # <a name="sending-data-as-a-table-valued-parameter-using-data-at-execution-odbc"></a>Отправка данных в виде возвращающего табличное значение параметра с использованием данных времени выполнения (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "73775906"
 ## <a name="prerequisite"></a>Предварительные требования  
  Эта процедура предполагает, что на сервере выполнен следующий код [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
-```  
+```sql
 create type TVParam as table(ProdCode integer, Qty integer)  
 create procedure TVPOrderEntry(@CustCode varchar(5), @Items TVPParam,   
             @OrdNo integer output, @OrdDate datetime output)  
@@ -53,7 +53,7 @@ from @Items
   
 1.  Объявление переменных для параметров SQL. Буферы возвращающих табличное значение параметров позволят не использовать массивы в данном примере, пример передает одну строку за раз.  
   
-    ```  
+    ```cpp
     SQLRETURN r;  
   
     // Variables for SQL parameters:  
@@ -72,7 +72,7 @@ from @Items
   
 2.  Выполните привязку параметров. *ColumnSize* имеет значение 1, означающее, что в каждый момент времени передается не более одной строки.  
   
-    ```  
+    ```sql
     // Bind parameters for call to TVPOrderEntryByRow.  
     r = SQLBindParameter(hstmt, 1, SQL_C_CHAR, SQL_PARAM_INPUT,SQL_VARCHAR, 5, 0, CustCode, sizeof(CustCode), &cbCustCode);  
   
@@ -99,7 +99,7 @@ from @Items
   
 3.  Привязка столбцов для возвращающих табличное значение параметров.  
   
-    ```  
+    ```cpp
     // Bind the table-valued parameter columns.  
     // First set focus on param 2  
     r = SQLSetStmtAttr(hstmt, SQL_SOPT_SS_PARAM_FOCUS, (SQLPOINTER) 2, SQL_IS_INTEGER);  
@@ -117,7 +117,7 @@ from @Items
   
 4.  Инициализация параметров. В этом примере устанавливается размер возвращающего табличное значение параметра в значение SQL_DATA_AT_EXEC, а не в значение количества строк.  
   
-    ```  
+    ```cpp
     // Initialze the TVP for row streaming.  
     cbTVP = SQL_DATA_AT_EXEC;  
   
@@ -127,14 +127,14 @@ from @Items
   
 5.  Вызов процедуры. SQLExecDirect будет возвращать SQL_NEED_DATA, так как возвращающий табличное значение параметр является параметром данных на этапе выполнения.  
   
-    ```  
+    ```cpp
     // Call the procedure  
     r = SQLExecDirect(hstmt, (SQLCHAR *) "{call TVPOrderEntry(?, ?, ?, ?)}",SQL_NTS);  
     ```  
   
 6.  Ввод данных времени выполнения для параметров. Когда метод SQLParamData возвращает *параметервалуептр* для возвращающего табличное значение параметра, приложение должно подготовить столбцы для следующей строки или строк табличного значения. Затем приложение вызывает SQLPutData с параметром *датаптр* , указав количество доступных строк (в данном примере — 1), а *StrLen_or_IndPtr* — значение 0.  
   
-    ```  
+    ```cpp
     // Check if parameter data is required, and get the first parameter ID token  
     if (r == SQL_NEED_DATA) {  
         r = SQLParamData(hstmt, &ParamId);  
@@ -193,7 +193,7 @@ from @Items
   
  В этом образце используется база данных по умолчанию. Перед запуском образца выполните в базе данных, которая будет использоваться, следующие команды:  
   
-```  
+```sql
 create table MCLOG (  
    biSeqNo bigint,   
    iSeries int,   
@@ -214,9 +214,9 @@ create procedure MCLOGInsert (@TableVariable MCLOGType READONLY)
 go  
 ```  
   
-### <a name="code"></a>код  
+### <a name="code"></a>Код  
   
-```  
+```cpp
 #define UNICODE  
 #define _UNICODE  
 #define _SQLNCLI_ODBC_  
@@ -381,7 +381,7 @@ EXIT:
   
  В этом образце используется база данных по умолчанию. Перед запуском образца выполните в базе данных, которая будет использоваться, следующие команды:  
   
-```  
+```sql
 create table MCLOG (  
    biSeqNo bigint,   
    iSeries int,   
@@ -402,9 +402,9 @@ create procedure MCLOGInsert (@TableVariable MCLOGType READONLY)
 go  
 ```  
   
-### <a name="code"></a>код  
+### <a name="code"></a>Код  
   
-```  
+```cpp
 #define UNICODE  
 #define _UNICODE  
 #define _SQLNCLI_ODBC_  
@@ -580,7 +580,7 @@ EXIT:
 }  
 ```  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также  
  [Примеры программирования с использованием возвращающих табличное значение параметров ODBC](https://msdn.microsoft.com/library/3f52b7a7-f2bd-4455-b79e-d015fb397726)  
   
   

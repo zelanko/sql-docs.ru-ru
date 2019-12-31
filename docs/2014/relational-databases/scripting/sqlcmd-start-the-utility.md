@@ -1,6 +1,6 @@
 ---
-title: Запуск программы sqlcmd | Документация Майкрософт
-ms.custom: ''
+title: Запуск программу sqlcmd
+ms.custom: seo-lt-2019
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.assetid: 00d57437-7a29-4da1-b639-ee990db055fb
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ec1ec91705dfb9194f42c079cb7b3d5100c9d396
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 80f8f63b4ddb3e8641ef503a615d57c63be35164
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090110"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243272"
 ---
 # <a name="start-the-sqlcmd-utility"></a>Запуск программу sqlcmd
   Чтобы начать использовать программу `sqlcmd`, требуется запустить ее и подключиться к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Можно соединиться или с экземпляром, установленным по умолчанию, или с именованным экземпляром. Первый шаг — запуск программы `sqlcmd`.  
@@ -30,25 +30,25 @@ ms.locfileid: "66090110"
   
 ### <a name="to-start-the-sqlcmd-utility-and-connect-to-a-default-instance-of-sql-server"></a>Запуск программы «sqlcmd» и подключение к экземпляру SQL Server по умолчанию  
   
-1.  В меню **Пуск** выберите команду **Выполнить**. В поле **Открыть** введите **cmd**, а затем нажмите кнопку **ОК** , чтобы открыть окно командной строки.  
+1.  В меню **Пуск** выберите команду **выполнить**. В поле **Открыть** введите **cmd**, а затем нажмите кнопку **ОК** , чтобы открыть окно командной строки.  
   
-2.  В командной строке введите `sqlcmd`.  
+2.  В командной строке выполните следующую команду: `sqlcmd`.  
   
 3.  Нажмите клавишу ВВОД.  
   
      Теперь установлено доверительное соединение с экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по умолчанию, запущенным на этом компьютере.  
   
-     **1 >** является `sqlcmd` приглашение, которое указывает номер строки. При каждом нажатии клавиши ВВОД номер увеличивается на единицу.  
+     **1>** — это `sqlcmd` запрос, указывающий номер строки. При каждом нажатии клавиши ВВОД номер увеличивается на единицу.  
   
-4.  Для завершения `sqlcmd` сеанса, тип `EXIT` в `sqlcmd` строки.  
+4.  Чтобы завершить `sqlcmd` сеанс, введите `EXIT` в `sqlcmd` командной строке.  
   
 ### <a name="to-start-the-sqlcmd-utility-and-connect-to-a-named-instance-of-sql-server"></a>Запуск программы sqlcmd и соединение с именованным экземпляром SQL Server  
   
-1.  Откройте командную строку окно и введите `sqlcmd -S` *Мойсервер\имяэкземпляра*. Замените *мойСервер\имяЭкземпляра* именем компьютера и экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , с которым нужно соединиться.  
+1.  Откройте окно командной строки и введите `sqlcmd -S` *myServer\instanceName*. Замените *мойСервер\имяЭкземпляра* именем компьютера и экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , с которым нужно соединиться.  
   
 2.  Нажмите клавишу ВВОД.  
   
-     `sqlcmd` Строки (1 >) указывает, что вы подключены к указанному экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+     `sqlcmd` Приглашение (1>) указывает, что вы подключены к указанному экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
     > [!NOTE]  
     >  Введенные инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] хранятся в буфере. Они выполняются как пакет при обнаружении команды GO.  

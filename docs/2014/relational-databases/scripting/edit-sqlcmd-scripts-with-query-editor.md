@@ -1,6 +1,6 @@
 ---
-title: Изменение скриптов SQLCMD при помощи редактора запросов | Документация Майкрософт
-ms.custom: ''
+title: Изменение скриптов SQLCMD при помощи редактора запросов
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -16,12 +16,12 @@ ms.assetid: f77b866d-c330-47c9-9e74-0b8d8dff4b31
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b0d7d34da4f26211075de05e19e223bafd0e9429
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 224fcd5f6b4c15a492be6aa6d893a4a4e5625b08
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66064113"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75245183"
 ---
 # <a name="edit-sqlcmd-scripts-with-query-editor"></a>Изменение скриптов SQLCMD при помощи редактора запросов
   Используя редактор запросов [!INCLUDE[ssDE](../../includes/ssde-md.md)] в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] можно записывать и редактировать запросы в виде скриптов SQLMD. Скрипты SQLCMD применяются в тех случаях, когда необходимо обработать системные команды Windows и инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] в одном и том же скрипте.  
@@ -38,7 +38,7 @@ ms.locfileid: "66064113"
   
 -   выполнение скриптов;  
   
--   система управления версиями;  
+-   Система управления версиями  
   
 -   синтаксический анализ скриптов;  
   
@@ -76,7 +76,8 @@ ms.locfileid: "66064113"
   
     -   (Обработано строк: 6)  
   
-    -   \<Сведения о каталоге>  
+    -   
+  \<Сведения о каталоге>  
   
     -   (Обработано строк: 4)  
   
@@ -110,7 +111,8 @@ ms.locfileid: "66064113"
 -   Редактор запросов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] поддерживает переменные среды и переменные, определенные в скрипте SQLCMD, однако не поддерживает встроенные переменные SQLCMD и **osql** . Обрабатываемый код SQLCMD среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] чувствителен к регистру переменных. Например, PRINT '$(COMPUTERNAME)' выдаст правильный результат, а PRINT '$(ComputerName)' приведет к ошибке.  
   
 > [!CAUTION]  
->  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] использует [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]SqlClient для выполнения в обычном режиме и в режиме SQLCMD. При вызове из командной строки SQLCMD использует поставщика OLE DB. Так как могут применяться различные параметры по умолчанию, выполнение одного и того же запроса в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] в режиме SQLCMD и в программе SQLCMD может проходить по-разному.  
+>  
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] использует [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]SqlClient для выполнения в обычном режиме и в режиме SQLCMD. При вызове из командной строки SQLCMD использует поставщика OLE DB. Так как могут применяться различные параметры по умолчанию, выполнение одного и того же запроса в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] в режиме SQLCMD и в программе SQLCMD может проходить по-разному.  
   
 ## <a name="supported-sqlcmd-syntax"></a>Поддерживаемый синтаксис SQLCMD  
  Редактор запросов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] поддерживает следующие ключевые слова сценариев SQLCMD:  
@@ -138,7 +140,7 @@ ms.locfileid: "66064113"
 > [!NOTE]  
 >  Для `:error` и `:out`, `stderr` и `stdout` вывод направляется на вкладку сообщений.  
   
- Команды SQLCMD, не перечисленные выше, редактором запросов не поддерживаются. Если выполняется скрипт, содержащий неподдерживаемые ключевые слова SQLCMD, для каждого неподдерживаемого ключевого слова редактор запросов отправляет в целевой объект сообщение "Команда *\<пропущенная_команда>* не учитывается". Скрипт будет выполнен успешно, но неподдерживаемые команды не будут учитываться.  
+ Команды SQLCMD, не перечисленные выше, редактором запросов не поддерживаются. При выполнении скрипта, содержащего неподдерживаемые ключевые слова SQLCMD, редактор запросов отправит сообщение "команда * \<игнорируется*>" в назначение для каждого неподдерживаемого ключевого слова. Скрипт будет выполнен успешно, но неподдерживаемые команды не будут учитываться.  
   
 > [!CAUTION]  
 >  Так как команды SQLCMD запускаются не из командной строки, при запуске редактора запросов в режиме SQLCMD действуют некоторые ограничения. Нельзя передавать параметры командной строки, например переменные. Кроме того, поскольку редактор запросов не поддерживает возможности реагировать на приглашения операционной системы, не следует выполнять интерактивные инструкции.  
@@ -159,6 +161,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Служебная программа sqlcmd](../../tools/sqlcmd-utility.md)  
+ [Программа sqlcmd](../../tools/sqlcmd-utility.md)  
   
   

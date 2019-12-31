@@ -1,6 +1,6 @@
 ---
-title: Просмотр пространственных данных в обозревателе объектов | Документация Майкрософт
-ms.custom: ''
+title: Просмотр пространственных данных в обозревателе объектов
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.assetid: 59cca562-e3f5-4257-b868-adcbcc0142cc
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c791c0c00681fcc28cfb025c8108443bbb9e12a2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b5ac09bdbc05f406d8d7925af1c9a45346913151
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66063208"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75242946"
 ---
 # <a name="view-spatial-data-in-object-explorer"></a>Просмотр пространственных данных в обозревателе объектов
   Окно **Пространственные результаты** в редакторе запросов содержит визуальные средства сопоставления для просмотра результатов запроса к пространственным данным в дополнение к данным, отображаемых в формате сетки в окне **Результаты** . Чтобы пространственные данные отображались в окне **Пространственные результаты** , результаты запроса должны содержать по крайней мере один столбец пространственных данных с данными геометрического или географического типа.  
@@ -34,13 +34,13 @@ ms.locfileid: "66063208"
 4.  В списке **Выберите проекцию** выберите проекцию для географических данных. По умолчанию используется проекция Equirectangular. Также доступны проекции Mercator, Robinson и Bonne.  
   
     > [!NOTE]  
-    >  Список**Выберите проекцию** недоступен, если пространственный столбец содержит геометрические данные.  
+    >  **Выбор проекции** недоступен, если пространственный столбец содержит геометрические данные.  
   
 5.  Чтобы увеличить отображаемый размер сопоставленных элементов, передвиньте ползунок **Масштаб** . Для фигур-многоугольников метка будет видима только в случае, если фигура достаточно велика, чтобы вместить текст метки.  
   
 ## <a name="see-also"></a>См. также  
- [Окно «Пространственные результаты»](spatial-results-window.md)   
- [Редактор запросов компонента Database Engine (среда SQL Server Management Studio)](database-engine-query-editor-sql-server-management-studio.md)   
- [Редакторы запросов и текста (SQL Server Management Studio)](query-and-text-editors-sql-server-management-studio.md)  
+ [Окно "Пространственные результаты"](spatial-results-window.md)   
+ [Редактор запросов ядро СУБД &#40;SQL Server Management Studio&#41;](database-engine-query-editor-sql-server-management-studio.md)   
+ [Редакторы запросов и текста &#40;SQL Server Management Studio&#41;](query-and-text-editors-sql-server-management-studio.md)  
   
   

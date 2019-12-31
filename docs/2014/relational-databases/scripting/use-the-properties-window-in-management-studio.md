@@ -1,6 +1,6 @@
 ---
-title: Использование окна "Свойства" в среде Management Studio | Документация Майкрософт
-ms.custom: ''
+title: Использование окна «Свойства» в среде Management Studio
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -14,12 +14,12 @@ ms.assetid: 903d4aca-f57c-43d9-a893-702eceaa7004
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d9095bb81099c2e84d087cb92991c0a1757376ea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ddcb099e81ef99ff3a2f0d0cf7bbf23adc0bc16b
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66063250"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75242970"
 ---
 # <a name="use-the-properties-window-in-management-studio"></a>Использование окна «Свойства» в среде Management Studio
   Окно свойств описывает состояние элемента в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], например соединение или оператор Showplan, и сведения об объектах базы данных, таких как таблицы, представления и конструкторы.  
@@ -51,6 +51,6 @@ ms.locfileid: "66063250"
 4.  На вкладке **План выполнения** редактора SQL-запросов нажмите значки инструкций для просмотра сведений об инструкциях в окне свойств.  
   
 ## <a name="see-also"></a>См. также  
- [Окно "Свойства" (среда Management Studio)](../../ssms/properties-window-management-studio.md)  
+ [Окно "Свойства" &#40;Management Studio&#41;](../../ssms/properties-window-management-studio.md)  
   
   

@@ -1,6 +1,6 @@
 ---
-title: Выполнение добавочного поиска в активном документе | Документация Майкрософт
-ms.custom: ''
+title: Выполнение добавочного поиска в активном документе
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -14,12 +14,12 @@ ms.assetid: 490bb36c-dd43-4219-9e2a-ff27046b9395
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1ce3f1265f33da943b7db2b3f951fd9aa6504f81
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9334e4d44663f5d0637d6933eb7a72eae74d4a84
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66063832"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243650"
 ---
 # <a name="search-an-active-document-incrementally"></a>Выполнение добавочного поиска в активном документе
   В отдельном документе или окне можно осуществлять добавочный поиск с уточнением критериев путем ввода текста. При операции поиска первый набор символов, соответствующий введенным в ходе добавочного поиска в документе или окне, выделяется цветом. При добавочном поиске производится автоматический поиск во всем тексте документа или окна, кроме скрытого текста.  
@@ -49,9 +49,9 @@ ms.locfileid: "66063832"
   
 ## <a name="see-also"></a>См. также  
  [Поиск и замена](search-and-replace.md)   
- [осуществлять поиск в документах в интерактивном режиме](search-documents-interactively.md)   
+ [Поиск документов в интерактивном режиме](search-documents-interactively.md)   
  [Поиск документов с помощью списков результатов](search-documents-using-results-lists.md)   
- [Поиск текста с символами-шаблонами](search-text-with-wildcards.md)   
+ [Поиск текста с подстановочными знаками](search-text-with-wildcards.md)   
  [Поиск текста с помощью регулярных выражений](search-text-with-regular-expressions.md)  
   
   

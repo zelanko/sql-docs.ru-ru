@@ -1,6 +1,6 @@
 ---
-title: Управление режимами редактирования и просмотра | Документация Майкрософт
-ms.custom: ''
+title: Управление режимами редактирования и просмотра
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -20,24 +20,24 @@ ms.assetid: 25c58a14-9f94-4296-9770-7d84c6bc3969
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3333b41a4ff1c341f0ae0290f838cd2c76c6254e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 67ca649678fcc099a2abf1b50866263d6494bec7
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66063945"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75242035"
 ---
 # <a name="manage-the-editor-and-view-mode"></a>Управление режимами редактирования и просмотра
   Редактор позволяет управлять способами просмотра кода.  
   
 ## <a name="changing-the-view-mode"></a>Изменение режима просмотра  
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] имеется режим просмотра **Документы с вкладками**, позволяющий открыть одновременно несколько редакторов и документов и переключаться между ними с помощью вкладок в верхней части окна редактора. Также можно открыть среду [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] в режиме интерфейса MDI (Multiple Document Interface), объединяющем окна без вкладок и позволяющем сворачивать окна, располагать их рядом и т. д.  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]применяет режим представления « **документы с вкладками**», позволяющий одновременно открывать несколько редакторов и документов, а также обращаться к ним через вкладки в верхней части редактора. Также можно открыть среду [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] в режиме интерфейса MDI (Multiple Document Interface), объединяющем окна без вкладок и позволяющем сворачивать окна, располагать их рядом и т. д.  
   
 #### <a name="to-switch-between-view-modes"></a>Переключение между режимами просмотра  
   
 1.  В меню **Сервис** выберите пункт **Параметры** .  
   
-2.  Перейдите на вкладку **Среда**, Выберите **Общие**.  
+2.  Перейдите на вкладку **Среда**, Нажмите **Общие**.  
   
 3.  Выберите **Документы с вкладками** или **Среда MDI**.  
   
@@ -99,7 +99,7 @@ ms.locfileid: "66063945"
   
 3.  Щелкните **Все языки**.  
   
-4.  Выберите **Общие**.  
+4.  Нажмите **Общие**.  
   
 5.  Выберите **Номера строк**.  
   

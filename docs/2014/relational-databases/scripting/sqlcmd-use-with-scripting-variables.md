@@ -1,6 +1,6 @@
 ---
-title: Использование программы sqlcmd с переменными скрипта | Документация Майкрософт
-ms.custom: ''
+title: Использование программы sqlcmd с переменными скрипта
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -18,12 +18,12 @@ ms.assetid: 793495ca-cfc9-498d-8276-c44a5d09a92c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b394e91c01e4607c74f73d90630095af2e912941
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6893d00a1fa7fb0986be2eb6241c596160085e2f
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090062"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243169"
 ---
 # <a name="use-sqlcmd-with-scripting-variables"></a>Использование программы sqlcmd с переменными скрипта
   Переменные, которые используются в скриптах, называются переменными скрипта. Переменные скрипта позволяют использовать один скрипт в различных обстоятельствах. Например, если нужно выполнить один скрипт на нескольких серверах, вместо изменения скрипта для каждого сервера можно указать для имени сервера соответствующую переменную скрипта. Изменяя имя сервера, указываемое в переменной скрипта, можно выполнять один и тот же скрипт на разных серверах.  
@@ -44,9 +44,9 @@ ms.locfileid: "66090062"
   
 3.  Командная оболочка (**SET X=Y**), заданная в командной строке перед запуском **sqlcmd**  
   
-4.  **sqlcmd-v** X=Y  
+4.  **sqlcmd-v** X = Y  
   
-5.  **:Setvar** X Y  
+5.  **: Setvar** X Y  
   
 > [!NOTE]  
 >  Чтобы просмотреть переменные среды, на **панели управления**откройте компонент **Система**и перейдите на вкладку **Дополнительно** .  
@@ -64,7 +64,8 @@ ms.locfileid: "66090062"
   
  `FROM Person.Person x`  
   
- `WHERE c.`BusinessEntityID`< 5;`  
+ 
+  `WHERE c.`BusinessEntityID`< 5;`  
   
  Кроме того, с помощью параметра `-v` можно указать имя возвращаемого столбца:  
   
@@ -79,7 +80,7 @@ ms.locfileid: "66090062"
   
 -   Имена переменных не должны содержать символов пробела и кавычек.  
   
--   Имена переменных не должны иметь такую же форму, как у выражений переменных *$(var)* .  
+-   Имена переменных не должны иметь такую же форму, как у выражений переменных *$(var)*.  
   
 -   В переменных скрипта регистр не учитывается.  
   
@@ -93,7 +94,7 @@ ms.locfileid: "66090062"
 -   Если кавычки — часть значения переменной, то их необходимо экранировать. Например,`setvar MyVar "spac""e"`.  
   
 ## <a name="guidelines-for-cmdexe-set-variable-values-and-names"></a>Правила присваивания значений и имен переменным с помощью команды Cmd.exe SET  
- Переменные, заданные с помощью инструкции SET, являются частью среды Cmd.exe, и на них может ссылаться программа **sqlcmd**. Необходимо учитывать следующие правила.  
+ Переменные, заданные с помощью инструкции SET, являются частью среды Cmd.exe, и на них может ссылаться программа **sqlcmd**. Ознакомьтесь со следующими рекомендациями:  
   
 -   Имена переменных не должны содержать символов пробела и кавычек.  
   
@@ -104,24 +105,24 @@ ms.locfileid: "66090062"
   
 |Переменная|Связанный параметр|Чтение-запись|Значение по умолчанию|  
 |--------------|--------------------|----------|-------------|  
-|SQLCMDUSER*|-U|Чтение|""|  
+|SQLCMDUSER*|-U|R|""|  
 |SQLCMDPASSWORD*|-P|--|""|  
-|SQLCMDSERVER*|-S|Чтение|"DefaultLocalInstance"|  
-|SQLCMDWORKSTATION|-H|Чтение|"ComputerName"|  
-|SQLCMDDBNAME|-d|Чтение|""|  
+|SQLCMDSERVER*|-S|R|"DefaultLocalInstance"|  
+|SQLCMDWORKSTATION|-H|R|"ComputerName"|  
+|SQLCMDDBNAME|-d|R|""|  
 |SQLCMDLOGINTIMEOUT|-l|Чтение-запись|"8" (секунд)|  
-|SQLCMDSTATTIMEOUT|-T|Чтение-запись|"0" = неограниченное время ожидания|  
-|SQLCMDHEADERS|-H|Чтение-запись|"0"|  
-|SQLCMDCOLSEP|-S|Чтение-запись|" "|  
-|SQLCMDCOLWIDTH|-w|Чтение-запись|"0"|  
-|SQLCMDPACKETSIZE|-A|Чтение|"4096"|  
-|SQLCMDERRORLEVEL|-M|Чтение-запись|"0"|  
+|SQLCMDSTATTIMEOUT|-t|Чтение-запись|"0" = неограниченное время ожидания|  
+|SQLCMDHEADERS|-h|Чтение-запись|0|  
+|SQLCMDCOLSEP|-s|Чтение-запись|" "|  
+|SQLCMDCOLWIDTH|-w|Чтение-запись|0|  
+|SQLCMDPACKETSIZE|-a|R|"4096"|  
+|SQLCMDERRORLEVEL|-m|Чтение-запись|0|  
 |SQLCMDMAXVARTYPEWIDTH|-y|Чтение-запись|«256»|  
 |SQLCMDMAXFIXEDTYPEWIDTH|-y|Чтение-запись|"0" = неограниченное время ожидания|  
 |SQLCMDEDITOR||Чтение-запись|"edit.com"|  
-|SQLCMDINI||Чтение|""|  
+|SQLCMDINI||R|""|  
   
- \* Значения переменных SQLCMDUSER, SQLCMDPASSWORD и SQLCMDSERVER задаются при использовании команды **:Connect** .  
+ \*SQLCMDUSER, SQLCMDPASSWORD и SQLCMDSERVER устанавливаются, когда используется **: Connect** .  
   
  Пометка «Чтение» означает, что значение может быть задано только один раз в процессе инициализации программы.  
   
@@ -129,7 +130,7 @@ ms.locfileid: "66090062"
   
 ## <a name="examples"></a>Примеры  
   
-### <a name="a-using-the-setvar-command-in-a-script"></a>A. Использование команды setvar в скрипте  
+### <a name="a-using-the-setvar-command-in-a-script"></a>а. Использование команды setvar в скрипте  
  Команда **setvar** позволяет управлять многими параметрами программы **sqlcmd** в сценарии. В следующем примере создается скрипт `test.sql` , в котором переменной `SQLCMDLOGINTIMEOUT` присваивается значение `60` , а другой переменной скрипта, `server`, присваивается значение `testserver`. Следующий код входит в скрипт `test.sql`.  
   
  `:setvar SQLCMDLOGINTIMEOUT 60`  
@@ -148,7 +149,7 @@ ms.locfileid: "66090062"
   
  `sqlcmd -i c:\test.sql`  
   
-### <a name="b-using-the-setvar-command-interactively"></a>Б. Интерактивное использование команды setvar  
+### <a name="b-using-the-setvar-command-interactively"></a>B. Интерактивное использование команды setvar  
  В следующем примере показана интерактивная установка переменной сценария с помощью команды `setvar` .  
   
  `sqlcmd`  
@@ -165,7 +166,7 @@ ms.locfileid: "66090062"
   
  `1>`  
   
-### <a name="c-using-command-prompt-environment-variables-within-sqlcmd"></a>В. Использование переменных среды командной строки в программе sqlcmd  
+### <a name="c-using-command-prompt-environment-variables-within-sqlcmd"></a>C. Использование переменных среды командной строки в программе sqlcmd  
  В следующем примере устанавливаются четыре переменные среды `are` , которые затем вызываются из `sqlcmd`.  
   
  `C:\>SET tablename=Person.Person`  
@@ -186,7 +187,7 @@ ms.locfileid: "66090062"
   
  `4> GO`  
   
-### <a name="d-using-user-level-environment-variables-within-sqlcmd"></a>Г. Использование переменных среды уровня пользователя в программе sqlcmd  
+### <a name="d-using-user-level-environment-variables-within-sqlcmd"></a>D. Использование переменных среды уровня пользователя в программе sqlcmd  
  В следующем примере пользовательская переменная среды `%Temp%` устанавливается в командной строке и передается входному файлу `sqlcmd` . Чтобы просмотреть пользовательские переменные среды, на **панели управления**дважды щелкните компонент **Система**. Перейдите на вкладку **Дополнительно** и щелкните **Переменные среды**.  
   
  Следующий программный код является частью входного файла `c:\testscript.txt`:  
@@ -225,7 +226,7 @@ ms.locfileid: "66090062"
   
  `(4 rows affected)`  
   
-### <a name="e-using-a-startup-script"></a>Д. Использование скрипта запуска  
+### <a name="e-using-a-startup-script"></a>E. Использование скрипта запуска  
  Сценарий запуска **sqlcmd** выполняется при запуске программы **sqlcmd** . В следующем примере задается переменная среды `SQLCMDINI`. Ниже приведено содержимое сценария `init.sql.`  
   
  `SET NOCOUNT ON`  
@@ -269,7 +270,7 @@ ms.locfileid: "66090062"
 > [!NOTE]  
 >  Параметр **-X** отключает функцию сценария запуска.  
   
-### <a name="f-variable-expansion"></a>Е. Расширение переменной  
+### <a name="f-variable-expansion"></a>F. Расширение переменной  
  В следующем примере показана работа с данными в форме переменной **sqlcmd** .  
   
  `USE AdventureWorks2012;`  
@@ -342,7 +343,7 @@ ms.locfileid: "66090062"
   
 ## <a name="see-also"></a>См. также  
  [Использование программы sqlcmd](sqlcmd-use-the-utility.md)   
- [Служебная программа sqlcmd](../../tools/sqlcmd-utility.md)   
- [Справочник по программе командной строки ( компонент Database Engine)](../../tools/command-prompt-utility-reference-database-engine.md)  
+ [Программа sqlcmd](../../tools/sqlcmd-utility.md)   
+ [Справочник по программе командной строки &#40;ядро СУБД&#41;](../../tools/command-prompt-utility-reference-database-engine.md)  
   
   

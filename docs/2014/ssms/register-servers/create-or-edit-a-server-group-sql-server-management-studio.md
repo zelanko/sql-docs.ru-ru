@@ -1,6 +1,6 @@
 ---
-title: Создание и изменение группы серверов (SQL Server Management Studio) | Документы Майкрософт
-ms.custom: ''
+title: Создание или изменение группы серверов
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -14,15 +14,15 @@ helpviewer_keywords:
 - server groups [SQL Server]
 - groups [SQL Server], server
 ms.assetid: d4a942bd-2dd1-42db-ad0e-e9a9ae5b856d
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 32c91f7b3186543a5a5a053c1aa410648caf0fb1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: ae7d1e66d4cbd9b74ad8e58d3ac59c7ddda920a7
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63297603"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244610"
 ---
 # <a name="create-or-edit-a-server-group-sql-server-management-studio"></a>Создание или изменение группы серверов (среда SQL Server Management Studio)
   В этом разделе описывается организация серверов в компоненте «Зарегистрированные серверы» в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] путем создания групп серверов и помещения серверов в эти группы. Группы серверов в зарегистрированных серверах можно создавать в любое время, либо делать это при их регистрации.  

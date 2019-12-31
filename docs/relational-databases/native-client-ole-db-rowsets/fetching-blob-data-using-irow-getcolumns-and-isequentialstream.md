@@ -1,5 +1,5 @@
 ---
-title: Выборка данных BLOB-объектов с помощью метода IRow::GetColumns и интерфейса ISequentialStream | Документы Майкрософт
+title: 'BLOB-объекты, IRow:: DataColumn, ISequentialStream'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -16,19 +16,19 @@ ms.assetid: b57decda-b0c1-4ef6-8c81-491956de2890
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a4a2713082a01744ab2594909a82f6db353afc7c
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.openlocfilehash: 0f46586238786bf9b3e515ab7ad2777b72690ba3
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73788969"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75247273"
 ---
 # <a name="fetching-blob-data-using-irowgetcolumns-and-isequentialstream"></a>Выборка данных BLOB при помощи метода IRow::GetColumns и интерфейса ISequentialStream
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   Следующая функция использует методы **IRow::GetColumns** и **ISequentialStream** для выборки больших данных:  
   
-```  
+```cpp
 void InitializeAndExecuteCommand()  
 {  
     ULONG iidx;  
@@ -87,7 +87,7 @@ HRESULT GetSequentialColumn(IRow* pUnkRow, ULONG iCol)
 }  
 ```  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также  
  [Выборка данных большого двоичного объекта при помощи интерфейса IRow](https://msdn.microsoft.com/library/badbd6ac-20aa-4891-a14f-48d38e7f30de)  
   
   

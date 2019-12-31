@@ -1,6 +1,6 @@
 ---
-title: Измерение положения точки останова | Документация Майкрософт
-ms.custom: ''
+title: Изменение положения точки останова
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -12,12 +12,12 @@ ms.assetid: 5c28e411-0377-4210-a7ce-2a5c13dcdf74
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ade5926b8a63c3e5b5bf54dcb02c95260942264b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f2b5bb55452333014aa3ccf5a797d19667dca753
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090470"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244885"
 ---
 # <a name="edit-a-breakpoint-location"></a>Изменение положения точки останова
   Положение точки останова задает строку и символ, где находится точка останова в файле скрипта [!INCLUDE[tsql](../../includes/tsql-md.md)] . Положение точки останова можно изменить и перенести точку останова в другое место в скрипте или в другой скрипт.  
@@ -38,7 +38,7 @@ ms.locfileid: "66090470"
      При отладке **параметр** Разрешить наличие отличий в исходном коде от первоначальной версии [!INCLUDE[tsql](../../includes/tsql-md.md)]не учитывается.  
   
 ## <a name="see-also"></a>См. также  
- [Настройка счетчика числа попаданий](specify-a-hit-count.md)   
- [Задание действия в точке останова](specify-a-breakpoint-action.md)   
- [Задание условия точки останова](specify-a-breakpoint-condition.md)   
+ [Укажите число попаданий](specify-a-hit-count.md)   
+ [Указание действия точки останова](specify-a-breakpoint-action.md)   
+ [Указание условия для точки останова](specify-a-breakpoint-condition.md)   
  [Задание фильтра точек останова](specify-a-breakpoint-filter.md)  

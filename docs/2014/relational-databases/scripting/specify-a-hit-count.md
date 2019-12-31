@@ -1,6 +1,6 @@
 ---
-title: Настройка количества попаданий | Документация Майкрософт
-ms.custom: ''
+title: Настройка счетчика числа попаданий
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -14,12 +14,12 @@ ms.assetid: 24836939-94ed-4e57-aa85-5d6938d859e4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e053de9abdb9806a3294a2904827cf9f29753686
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a049491513b826b2b050081b40cb5319ca74160f
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66063710"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243205"
 ---
 # <a name="specify-a-hit-count"></a>Настройка счетчика числа попаданий
   Счетчик числа попаданий точки останова увеличивается отладчиком [!INCLUDE[tsql](../../includes/tsql-md.md)] каждый раз при достижении точки останова. Если достигнуто указанное число попаданий или удовлетворяется любое из указанных условий для точки останова, то отладчик выполняет действие, заданное для точки останова.  

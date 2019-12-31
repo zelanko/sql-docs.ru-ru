@@ -1,5 +1,5 @@
 ---
-title: Выборка данных BLOB с помощью метода IRow::Open и интерфейса ISequentialStream | Документы Майкрософт
+title: 'BLOB-объект, IRow:: Open, ISequentialStream'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -16,21 +16,21 @@ ms.assetid: 439b3976-84e7-4d11-8dba-f668adbc9159
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c5c76342349a0bb1831903c7abe5ab43d52a0580
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.openlocfilehash: f9c887f74e9516702cdd04085483c5b583f10e18
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73761722"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75242638"
 ---
 # <a name="fetching-blob-data-using-irowopen-and-isequentialstream"></a>Выборка данных BLOB при помощи метода IRow::Open и интерфейса ISequentialStream
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Метод **IRow::Open** поддерживает открытие только объектов типа DBGUID_STREAM или DBGUID_NULL.  
+  **IRow:: Open** поддерживает только DBGUID_STREAM и DBGUID_NULL тип объектов для открытия.  
   
  Следующая функция использует метод **IRow::Open** и интерфейс **ISequentialStream** для выборки больших данных.  
   
-```  
+```cpp
 void InitializeAndExecuteCommand()  
 {  
     ULONG iidx;  
@@ -81,7 +81,7 @@ HRESULT GetSequentialColumn(IRow* pUnkRow, ULONG iCol)
   
  Большие данные могут быть привязаны или получены с помощью интерфейса **ISequentialStream**. Для привязанных столбцов флаг состояния указывает, усекаются ли данные при установке флага DBSTATUS_S_TRUNCATED.  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также  
  [Выборка данных большого двоичного объекта при помощи интерфейса IRow](https://msdn.microsoft.com/library/badbd6ac-20aa-4891-a14f-48d38e7f30de)  
   
   

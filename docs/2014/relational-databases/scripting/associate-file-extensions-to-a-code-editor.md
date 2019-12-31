@@ -1,6 +1,6 @@
 ---
-title: Связывание расширения файла с редактором кода | Документация Майкрософт
-ms.custom: ''
+title: Связывание расширения файла с редактором кода
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -14,12 +14,12 @@ ms.assetid: 193630f4-93de-4950-8f36-68702531f925
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e67ef0d154ca1a364629545ec95416fc2d0bff19
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6554cbcc79fdfc22c552821d518571873b2d826a
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66064242"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244805"
 ---
 # <a name="associate-file-extensions-to-a-code-editor"></a>Связывание расширения файла с редактором кода
   Связь расширений файлов с конкретным редактором кода позволяет открывать файл соответствующим редактором кода среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] двойным щелчком файла в проводнике Windows. Расширения, обычно используемые средой [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], такие как SQL и MDX, задаются во время установки. Новые расширения файлов должны быть связаны со средой [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] в файловой системе. Эту возможность можно использовать для открытия файлов, созданных в других редакторах, или для открытия переименованных файлов, таких как резервные копии SQL-файлов, переименованных в файлы с расширением BAK.  
@@ -52,7 +52,7 @@ ms.locfileid: "66064242"
   
 4.  В поле **Редактор** выберите редактор кода, который хотите использовать для открытия данного типа файлов, нажмите кнопку **Добавить**, а затем кнопку **ОК**.  
   
-## <a name="see-also"></a>См. также:  
- [Программа SSMS](../../ssms/ssms-utility.md)  
+## <a name="see-also"></a>См. также  
+ [Служебная программа SSMS](../../ssms/ssms-utility.md)  
   
   

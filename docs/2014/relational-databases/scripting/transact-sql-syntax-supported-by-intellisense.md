@@ -1,6 +1,6 @@
 ---
-title: Синтаксис языка Transact-SQL с поддержкой технологии IntelliSense | Документация Майкрософт
-ms.custom: ''
+title: Синтаксис языка Transact-SQL, поддерживаемый технологией IntelliSense
+ms.custom: seo-lt-2019
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -15,12 +15,12 @@ ms.assetid: 194e8f4f-fd7e-4f32-a169-f23531128004
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6db4de99458ced7471414540bc46704cfab928fb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2db2ac49f1caa455c8c05529437a385d360ecaf6
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66063331"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243004"
 ---
 # <a name="transact-sql-syntax-supported-by-intellisense"></a>Синтаксис языка Transact-SQL, поддерживаемый технологией IntelliSense
   В этом разделе описываются инструкции и элементы синтаксиса [!INCLUDE[tsql](../../includes/tsql-md.md)] , которые поддерживаются технологией IntelliSense в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -47,17 +47,17 @@ ms.locfileid: "66063331"
   
 |Инструкция Transact-SQL|Поддерживаемый синтаксис|  
 |-----------------------------|----------------------|  
-|[INSERT](/sql/t-sql/statements/insert-transact-sql)|Все синтаксические конструкции, кроме предложения *execute_statement* .|  
-|[UPDATE](/sql/t-sql/queries/update-transact-sql)|Все синтаксические конструкции.|  
-|[DELETE](/sql/t-sql/statements/delete-transact-sql)|Все синтаксические конструкции.|  
-|[DECLARE @local_variable](/sql/t-sql/language-elements/declare-local-variable-transact-sql)|Все синтаксические конструкции.|  
-|[SET @local_variable](/sql/t-sql/language-elements/set-local-variable-transact-sql)|Все синтаксические конструкции.|  
-|[EXECUTE](/sql/t-sql/language-elements/execute-transact-sql)|Выполнение определяемых пользователем хранимых процедур, системных хранимых процедур, определяемых пользователем функций и системных функций.|  
+|[ВСТАВЛЯЕТ](/sql/t-sql/statements/insert-transact-sql)|Все синтаксические конструкции, кроме предложения *execute_statement* .|  
+|[ОБНОВЛЯЮТ](/sql/t-sql/queries/update-transact-sql)|Все синтаксические конструкции.|  
+|[УДАЛЕН](/sql/t-sql/statements/delete-transact-sql)|Все синтаксические конструкции.|  
+|[ДЕКЛАРИРОВАТЬ@local_variable](/sql/t-sql/language-elements/declare-local-variable-transact-sql)|Все синтаксические конструкции.|  
+|[ПАРАМЕТР@local_variable](/sql/t-sql/language-elements/set-local-variable-transact-sql)|Все синтаксические конструкции.|  
+|[РАБОТАТЬ](/sql/t-sql/language-elements/execute-transact-sql)|Выполнение определяемых пользователем хранимых процедур, системных хранимых процедур, определяемых пользователем функций и системных функций.|  
 |[CREATE TABLE](/sql/t-sql/statements/create-table-transact-sql)|Все синтаксические конструкции.|  
-|[CREATE VIEW](/sql/t-sql/statements/create-view-transact-sql)|Все синтаксические конструкции.|  
-|[CREATE PROCEDURE](/sql/t-sql/statements/create-procedure-transact-sql)|Все синтаксические конструкции, кроме следующих.<br /><br /> Для предложения EXTERNAL NAME технология IntelliSense не поддерживается.<br /><br /> В предложении AS технология IntelliSense поддерживается только для тех инструкций и синтаксических конструкций, которые перечислены в этом разделе.|  
-|[ALTER PROCEDURE](/sql/t-sql/statements/alter-procedure-transact-sql)|Все синтаксические конструкции, кроме следующих.<br /><br /> Для предложения EXTERNAL NAME технология IntelliSense не поддерживается.<br /><br /> В предложении AS технология IntelliSense поддерживается только для тех инструкций и синтаксических конструкций, которые перечислены в этом разделе.|  
-|[USE](/sql/t-sql/language-elements/use-transact-sql)|Все синтаксические конструкции.|  
+|[СОЗДАТЬ ПРЕДСТАВЛЕНИЕ](/sql/t-sql/statements/create-view-transact-sql)|Все синтаксические конструкции.|  
+|[СОЗДАТЬ ПРОЦЕДУРУ](/sql/t-sql/statements/create-procedure-transact-sql)|Все синтаксические конструкции, кроме следующих.<br /><br /> Для предложения EXTERNAL NAME технология IntelliSense не поддерживается.<br /><br /> В предложении AS технология IntelliSense поддерживается только для тех инструкций и синтаксических конструкций, которые перечислены в этом разделе.|  
+|[ИЗМЕНЕНИЕ ПРОЦЕДУРЫ](/sql/t-sql/statements/alter-procedure-transact-sql)|Все синтаксические конструкции, кроме следующих.<br /><br /> Для предложения EXTERNAL NAME технология IntelliSense не поддерживается.<br /><br /> В предложении AS технология IntelliSense поддерживается только для тех инструкций и синтаксических конструкций, которые перечислены в этом разделе.|  
+|[ИСПОЛЬЗУЕТ](/sql/t-sql/language-elements/use-transact-sql)|Все синтаксические конструкции.|  
   
 ## <a name="intellisense-in-supported-statements"></a>Технология IntelliSense в поддерживаемых инструкциях  
  В редакторе запросов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] технология IntelliSense поддерживается для следующих синтаксических элементов при их использовании в одной из поддерживаемых инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)] :  

@@ -1,6 +1,6 @@
 ---
-title: Окно "Результаты поиска" | Документация Майкрософт
-ms.custom: ''
+title: Окна «Результаты поиска»
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -14,12 +14,12 @@ ms.assetid: 3b68dbb7-26d6-4bc9-bd2c-c27e5dc385c3
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d2b5561ce30a638ed526d2a807820222a156c6e3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 88fb0cda002694d87cad94dd8032811f6451f1cd
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090495"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75245126"
 ---
 # <a name="find-results-windows"></a>Окна «Результаты поиска»
   В двух окнах «Результаты поиска» отображаются совпадения, найденные с использованием вкладок **Поиск в файлах** или **Замена в файлах** диалогового окна **Найти и заменить** . Команда **Параметры результата** для **Поиск в файлах** и **Замена в файлах** позволяет выбрать окно «Результаты поиска», содержащее список найденных совпадений.  

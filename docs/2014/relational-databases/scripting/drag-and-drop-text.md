@@ -1,6 +1,6 @@
 ---
-title: Перетаскивание текста | Документация Майкрософт
-ms.custom: ''
+title: Перетаскивание текста
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -13,12 +13,12 @@ ms.assetid: 623354b8-fa56-4167-862a-98c468dd8a22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4c103672bbc8dcb6028190a624c1f9ecdb3caf3d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 287dc09bf6f534036938fc31b0a959726b56d9ef
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66064143"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244899"
 ---
 # <a name="drag-and-drop-text"></a>Перетаскивание текста
   Выделенный текст можно перетащить в другое место. Текст можно перетаскивать:  

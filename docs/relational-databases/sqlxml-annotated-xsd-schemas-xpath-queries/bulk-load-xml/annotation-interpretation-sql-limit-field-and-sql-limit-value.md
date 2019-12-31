@@ -1,6 +1,5 @@
 ---
-title: 'SQL: Limit-поля и SQL: Limit-value (SQLXML 4.0) | Документация Майкрософт'
-ms.custom: ''
+title: 'SQL: limit-field и SQL: limit-value (SQLXML)'
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -17,17 +16,18 @@ helpviewer_keywords:
 ms.assetid: 402c21cf-9566-463f-a928-f94270c11db3
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a64ac0799aa218f0399539a00f943c99c5d6649d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f3c33d097df97bb4cace9500b7aae79b5fd375ea
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68055422"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75246786"
 ---
 # <a name="annotation-interpretation---sqllimit-field-and-sqllimit-value"></a>Интерпретация заметки — sql:limit-field и sql:limit-value
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Массовая загрузка XML обрабатывает **SQL: Limit-поле** и **SQL: Limit-значение** заметки в соответствии с их определением. Дополнительные сведения см. в разделе [фильтрация значений при помощи SQL: Limit-поля и SQL: Limit-значение &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-using/filtering-values-using-sql-limit-field-and-sql-limit-value-sqlxml-4-0.md).  
+  При выполнении групповой загрузки XML обрабатываются заметки **SQL: limit-field** и **SQL: limit-value** в соответствии с их определением. Дополнительные сведения см. в разделе [Фильтрация значений с помощью SQL: limit-field и SQL: limit-value &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-using/filtering-values-using-sql-limit-field-and-sql-limit-value-sqlxml-4-0.md).  
   
  Например, пусть база данных содержит следующие таблицы.  
   

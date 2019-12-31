@@ -1,6 +1,6 @@
 ---
-title: Поиск в документах в интерактивном режиме | Документация Майкрософт
-ms.custom: ''
+title: осуществлять поиск в документах в интерактивном режиме
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -14,12 +14,12 @@ ms.assetid: dae65ac5-67af-45c6-a6e0-952fea26d680
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 858724b4447c6602db14980a27225b3b8fe69eef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ac2a15bae8fde50315ab6c7c41f2e3e57973061f
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66063784"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243292"
 ---
 # <a name="search-documents-interactively"></a>осуществлять поиск в документах в интерактивном режиме
   С помощью диалогового окна **Найти и заменить** можно производить поиск в одном или нескольких открытых файлах или окнах и последовательно перемещаться по найденным совпадениям. Этот метод позволяет просматривать каждое отдельное найденное совпадение в контексте окружающего текста. Кроме того, с помощью диалогового окна **Найти и заменить** можно выполнять операции группового поиска и просматривать найденные совпадения в виде отчета.  
@@ -62,10 +62,10 @@ ms.locfileid: "66063784"
  Команда **Заменить все** заменяет все найденные совпадения, включая и те, которые были пропущены нажатием кнопки **Найти далее** . Чтобы отменить команду **Заменить все**, перед тем как закрыть какой-либо файл в меню **Правка** выберите пункт **Отменить** .  
   
 ## <a name="see-also"></a>См. также  
- [Выполнение добавочного поиска в активном документе](search-an-active-document-incrementally.md)   
+ [Добавочный поиск в активном документе](search-an-active-document-incrementally.md)   
  [Поиск и замена](search-and-replace.md)   
  [Поиск документов с помощью списков результатов](search-documents-using-results-lists.md)   
- [Поиск текста с символами-шаблонами](search-text-with-wildcards.md)   
+ [Поиск текста с подстановочными знаками](search-text-with-wildcards.md)   
  [Поиск текста с помощью регулярных выражений](search-text-with-regular-expressions.md)  
   
   

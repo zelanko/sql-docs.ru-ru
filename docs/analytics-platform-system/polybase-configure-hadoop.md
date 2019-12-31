@@ -1,25 +1,26 @@
 ---
-title: Настройка PolyBase для доступа к внешним данным в Hadoop | Документация Майкрософт
+title: 'Доступ к внешним данным: Hadoop-Polybase'
 description: Объясняется, как настроить Polybase в Parallel Data Warehouse для подключения к внешним Hadoop.
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
-ms.date: 04/17/2018
+ms.date: 12/13/2019
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: ceaa1cbe04148443dd7a60b8d2b7936dc0a2cf55
-ms.sourcegitcommit: 853c2c2768caaa368dce72b4a5e6c465cc6346cf
+ms.custom: seo-dt-2019, seo-lt-2019
+ms.openlocfilehash: dc796ff58c5320e60011dc46dd45468177a98ed8
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71227126"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75245394"
 ---
 # <a name="configure-polybase-to-access-external-data-in-hadoop"></a>Настройка PolyBase для доступа к внешним данным в Hadoop
 
 В этой статье объясняется, как использовать Polybase на устройстве APS для запроса внешних данных в Hadoop.
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>Необходимые компоненты
 
 PolyBase поддерживает два поставщика Hadoop — Hortonworks Data Platform (HDP) и Cloudera Distributed Hadoop (CDH). В новых выпусках Hadoop соблюдается шаблон "Основной номер версии.дополнительный номер версии.версия". Также поддерживаются все версии в рамках поддерживаемых основного и дополнительного выпусков. Поддерживаются следующие поставщики Hadoop:
  - Hortonworks HDP 1.3 в ОС Linux или Windows Server;  
@@ -48,7 +49,7 @@ PolyBase поддерживает два поставщика Hadoop — Horton
 
 2. Перезапустите регион APS с помощью страницы состояния службы [Configuration Manager устройства](launch-the-configuration-manager.md).
   
-## <a id="pushdown"></a> Активация вычислений pushdown  
+## <a id="pushdown"></a>Включить вычисления включение  
 
 Чтобы улучшить производительность при выполнении запроса, активируйте вычисление pushdown для кластера Hadoop.  
   
@@ -296,7 +297,7 @@ ORDER BY CarSensor_Data.Speed DESC
 OPTION (FORCE EXTERNALPUSHDOWN);   -- or OPTION (DISABLE EXTERNALPUSHDOWN)  
 ```  
 
-### <a name="importing-data"></a>импорт данных  
+### <a name="importing-data"></a>Импорт данных  
 
 Следующий запрос импортирует внешние данные в ТД. В этом примере данные для быстрых драйверов импортируются в ТД для более глубокого анализа. Для повышения производительности она использует технологию columnstore в ТД.  
 
@@ -339,7 +340,7 @@ WHERE T2.YearMeasured = 2009 and T2.Speed > 40;
   
 ![Объекты Polybase в SSDT](media/polybase/external-tables-datasource.png)  
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 Параметры безопасности Hadoop см. в статье [Настройка безопасности Hadoop](polybase-configure-hadoop-security.md).<br>
 Дополнительные сведения о PolyBase см. в [этом руководстве](../relational-databases/polybase/polybase-guide.md). 

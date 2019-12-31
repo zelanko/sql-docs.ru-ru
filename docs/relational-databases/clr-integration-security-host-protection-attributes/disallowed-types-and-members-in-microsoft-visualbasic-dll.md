@@ -1,6 +1,7 @@
 ---
-title: Запрещенные типы и элементы в Microsoft.VisualBasic.dll | Документация Майкрософт
-ms.custom: ''
+title: Типы и члены в Microsoft. VisualBasic. dll
+description: Содержит список членов и типов сборки Microsoft. VisualBasic. dll, значения атрибута защиты узла которых (HPA) которых запрещены.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -12,21 +13,21 @@ helpviewer_keywords:
 ms.assetid: 45f55646-4bf1-4493-9f72-d1363c9a9ac6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f91e4ee829c502eb00c79cea216f74e8d20fc4a0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b717c350bae35606dcf0aae09610c085ccff1767
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68028158"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75240160"
 ---
 # <a name="disallowed-types-and-members-in-microsoftvisualbasicdll"></a>Запрещенные типы и элементы в Microsoft.VisualBasic.dll
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] общего программирования интеграции (со средой CLR) языка не допускает использования типа или члена, имеющего **HostProtectionAttribute** , указывающий **System.Security.Permissions.HostProtectionResource** Перечисление со значением **ExternalProcessMgmt**, **ExternalThreading**, **MayLeakOnAbort**, **SecurityInfrastructure**, **SelfAffectingProcessMgmnt**, **SelfAffectingThreading**, **SharedState**, **синхронизации**, или **Пользовательского интерфейса**. В следующей таблице перечислены элементы и типы **Microsoft.VisualBasic.dll** сборки, в которых значения атрибутов защиты узла (HPA).  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Программирование в среде CLR запрещает использование типа или члена с **HostProtectionAttribute** , который указывает перечисление **System. Security. Permissions. Хостпротектионресаурце** со значением **екстерналпроцессмгмт**, **екстерналсреадинг**, **майлеаконаборт**, **секуритинфраструктуре**, **SelfAffectingProcessMgmnt**, **SelfAffectingThreading**, **SharedState**, **Synchronization**или **UI**. В следующей таблице перечислены элементы и типы сборки **Microsoft. VisualBasic. dll** , значения атрибута защиты узла которых (hPa) которых запрещены.  
   
 > [!NOTE]  
->  Этот список был создан из поддерживаемых сборок. Дополнительные сведения см. в разделе [поддерживаемые библиотеки платформы .NET Framework](../../relational-databases/clr-integration/database-objects/supported-net-framework-libraries.md).  
+>  Этот список был создан из поддерживаемых сборок. Дополнительные сведения см. в разделе [supported .NET Framework librarys](../../relational-databases/clr-integration/database-objects/supported-net-framework-libraries.md).  
   
-|**Тип или член**|**Значения атрибутов защиты узла**|  
+|**Тип или элемент**|**Значения атрибутов защиты узла**|  
 |------------------------|------------------------|  
 |Microsoft.VisualBasic.ApplicationServices.ApplicationBase|ExternalProcessMgmt|  
 |Microsoft.VisualBasic.ApplicationServices.ApplicationBase.ChangeCulture()|ExternalProcessMgmt|  
@@ -60,8 +61,8 @@ ms.locfileid: "68028158"
 |Microsoft.VisualBasic.Interaction.CreateObject()|ExternalProcessMgmt|  
 |Microsoft.VisualBasic.Interaction.DeleteSetting()|ExternalProcessMgmt|  
 |Microsoft.VisualBasic.Interaction.GetObject()|ExternalProcessMgmt|  
-|Microsoft.VisualBasic.Interaction.InputBox()|UI|  
-|Microsoft.VisualBasic.Interaction.MsgBox()|UI|  
+|Microsoft.VisualBasic.Interaction.InputBox()|Пользовательский интерфейс|  
+|Microsoft.VisualBasic.Interaction.MsgBox()|Пользовательский интерфейс|  
 |Microsoft.VisualBasic.Logging.AspLog|ExternalProcessMgmt|  
 |Microsoft.VisualBasic.Logging.FileLogTraceListener..ctor()|ExternalProcessMgmt|  
 |Microsoft.VisualBasic.Logging.FileLogTraceListener.Close()|Синхронизация|  
@@ -80,9 +81,9 @@ ms.locfileid: "68028158"
   
 ## <a name="see-also"></a>См. также  
  [Атрибуты защиты узла и программирование интеграции со средой CLR](../../relational-databases/clr-integration-security-host-protection-attributes/host-protection-attributes-and-clr-integration-programming.md)   
- [Запрещенные типы и элементы в библиотеке mscorlib.dll](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-mscorlib-dll.md)   
- [Запрещенные типы и элементы в System.dll](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-system-dll.md)   
- [Запрещенные типы и элементы в библиотеке System.Data.dll](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-system-data-dll.md)   
+ [Недопустимые типы и элементы в mscorlib. dll](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-mscorlib-dll.md)   
+ [Недопустимые типы и члены в System. dll](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-system-dll.md)   
+ [Недопустимые типы и члены в System. Data. dll](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-system-data-dll.md)   
  [Недопустимые типы и элементы в библиотеке System.Core.dll](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-system-core-dll.md)  
   
   

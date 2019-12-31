@@ -1,6 +1,5 @@
 ---
-title: Другие заметки (SQLXML 4.0) | Документация Майкрософт
-ms.custom: ''
+title: Другие заметки (SQLXML)
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -21,13 +20,14 @@ helpviewer_keywords:
 ms.assetid: f7b4d37b-d6d3-4ac3-b2fd-a0b534a924e4
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a9a965ee5772ea3c2855a08d838c1d89da343e9d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7eb01a084ec968adbd9fe8ff86623bcca5f9eb26
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68066865"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75246833"
 ---
 # <a name="annotation-interpretation---other-annotations"></a>Интерпретация заметки — прочие заметки
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -36,10 +36,10 @@ ms.locfileid: "68066865"
  **sql:id-prefix**  
  Если схема указывает префиксы к XML-данным, то перед передачей данных в Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]массовая загрузка XML удаляет эти префиксы.  
   
- **SQL: USE-cdata**  
+ **sql:use-cdata**  
  Массовая загрузка XML считывает текст, хранящийся в разделах CDATA, и отправляет его в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- **заметки SQL: URL-кодирование**  
+ **sql:url-encode**  
  Массовая загрузка XML не поддерживает эту заметку. Например, в выходных XML-данных нельзя указать URL-адрес и ожидать, что массовая загрузка XML считает данные из местоположения и сохранит их в базе данных.  
   
  **sql:is-mapping-schema**  
@@ -48,10 +48,10 @@ ms.locfileid: "68066865"
 > [!NOTE]  
 >  Массовая загрузка XML не поддерживает встроенные схемы сопоставления.  
   
- **SQL: Key-поля**  
+ **sql:key-fields**  
  Массовая загрузка XML никогда не обрабатывает эту заметку.  
   
 ## <a name="see-also"></a>См. также  
- [Интерпретация заметки &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/annotation-interpretation-sqlxml-4-0.md)  
+ [Интерпретация аннотации &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/annotation-interpretation-sqlxml-4-0.md)  
   
   

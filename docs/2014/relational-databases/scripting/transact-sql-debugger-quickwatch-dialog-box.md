@@ -1,6 +1,6 @@
 ---
-title: Диалоговое окно "Быстрая проверка" | Документация Майкрософт
-ms.custom: ''
+title: Диалоговое окно «Быстрая проверка»
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -14,12 +14,12 @@ ms.assetid: d6bbb373-1452-41f2-bdc5-86ae689c3dc0
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9fcb20846ba21876044d50c80856600214eed354
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1d41aab8066b4ce1ee4e45fa9c363e60479868a5
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66063388"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243043"
 ---
 # <a name="quickwatch-dialog-box"></a>Диалоговое окно «Быстрая проверка»
   Используйте диалоговое окно **Быстрая проверка** , чтобы быстро просмотреть тип данных и значение одного из выражений [!INCLUDE[tsql](../../includes/tsql-md.md)] , такого как переменная или параметр, при отладке кода [!INCLUDE[tsql](../../includes/tsql-md.md)] . Чтобы просмотреть несколько выражений, можно также добавить выражение в окне **Контрольные значения** .  
@@ -29,7 +29,7 @@ ms.locfileid: "66063388"
   
 -   В меню **Отладка** выберите пункт **Быстрая проверка**.  
   
- **Просмотр информации о выражении**  
+ **Просмотр сведений о выражении**  
   
 1.  В списке **Выражение** введите или выберите необходимое выражение. Поддерживаются следующие выражения [!INCLUDE[tsql](../../includes/tsql-md.md)] :  
   
@@ -41,11 +41,11 @@ ms.locfileid: "66063388"
   
     -   Выражения, построенные путем применения операторов к одной или нескольким переменным, параметрам или системным функциям, например @IntegerCounter+1 или FirstName+LastName.  
   
-    -   Инструкции Transact-SQL, возвращающие только одно значение, например SELECT CharacterCol FROM MyTable WHERE PrimaryKey = 1.  
+    -   Инструкции Transact-SQL, возвращающие единственное значение, например SELECT CharacterCol FROM MyTable WHERE PrimaryKey = 1.  
   
 2.  Нажмите кнопку **Пересчет**.  
   
- **Добавление выражения быстрого просмотра в окно «Просмотр значений»**  
+ **Добавление выражения "Быстрая проверка" в окно контрольных значений**  
   
 -   Нажмите кнопку **Добавить контрольное значение**.  
   
@@ -60,10 +60,10 @@ ms.locfileid: "66063388"
  **Сетка значений**  
  Отображаются свойства выражения, которое просматривается в настоящее время.  
   
- **Name**  
+ **Безымян**  
  Является просматриваемым выражением [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
- **Значение**  
+ **Значений**  
  Отображается значение, которое в настоящее время присвоено выражению. Если в настоящее время выражение не имеет значения, отображается пустое поле.  
   
  Если длина выражения больше ширины столбца **Значение** , полное значение отображается в подсказке при перемещении указателя на ячейку **Значение** для этого выражения.  
@@ -76,9 +76,9 @@ ms.locfileid: "66063388"
 ## <a name="see-also"></a>См. также  
  [Отладчик Transact-SQL](transact-sql-debugger.md)   
  [Сведения отладчика Transact-SQL](transact-sql-debugger-information.md)   
- [окно просмотра значений](transact-sql-debugger-watch-window.md)   
- [окно локальных переменных](transact-sql-debugger-locals-window.md)   
+ [Окно контрольных значений](transact-sql-debugger-watch-window.md)   
+ [Окно локальных переменных](transact-sql-debugger-locals-window.md)   
  [Окно стека вызовов](transact-sql-debugger-call-stack-window.md)   
- [Выражения (Transact-SQL)](/sql/t-sql/language-elements/expressions-transact-sql)  
+ [Выражения &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/expressions-transact-sql)  
   
   

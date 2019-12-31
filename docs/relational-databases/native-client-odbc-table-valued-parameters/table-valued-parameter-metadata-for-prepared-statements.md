@@ -1,5 +1,5 @@
 ---
-title: Метаданные возвращающего табличное значение параметра для подготовленных инструкций | Документация Майкрософт
+title: Метаданные TVP для подготовленных инструкций
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ ms.assetid: fd2fc705-2e98-4011-9822-c7e6cca4a535
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 17b96f9a18e2b076bda76550b8796301f815c9f5
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.openlocfilehash: 27ae8ffe9fc719e751511b9930889e1fc265d876
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73790732"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75241850"
 ---
 # <a name="table-valued-parameter-metadata-for-prepared-statements"></a>Метаданные возвращающего табличное значение параметра для подготовленных инструкций
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "73790732"
   
  Для подготовленных инструкций, не являющихся вызовами хранимых процедур, нельзя получить метаданные возвращающего табличные значения параметра. При попытке выполнения данного действия приложение возвращает ошибку SQL_ERROR с кодом SQLSTATE 42000 и сообщение «Синтаксическая ошибка или нарушение доступа».  
   
-## <a name="see-also"></a>См. также раздел  
- [Возвращающие табличные значения параметры &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
+## <a name="see-also"></a>См. также  
+ [Возвращающие табличное значение параметры &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
   
   

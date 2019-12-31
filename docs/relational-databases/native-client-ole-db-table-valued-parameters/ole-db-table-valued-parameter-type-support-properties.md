@@ -1,5 +1,5 @@
 ---
-title: Поддержка типов параметров OLE DB, возвращающих табличные значения (свойства) | Документы Майкрософт
+title: OLE DB типа возвращающего табличное значение параметра (свойства)
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ ms.assetid: b9c4e6ed-fe4f-4ef8-9bc8-784d80d44039
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9cd11bb70a559c4052e04653eff87c9929c5fdc3
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.openlocfilehash: 7fbb516647b76a720adfd855af3f6205d3814e0b
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73788631"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75242771"
 ---
 # <a name="ole-db-table-valued-parameter-type-support-properties"></a>Поддержка типов параметров OLE DB, возвращающих табличные значения (свойства)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -72,7 +72,8 @@ ms.locfileid: "73788631"
 |DBPROP_TRANSACTEDOBJECT|VARIANT_FALSE|  
 |DBPROP_UNIQUEROWS|VARIANT_FALSE|  
 |DBPROP_UPDATABILITY|DBPROPVAL_UP_CHANGE &#124; DBPROPVAL_UP_DELETE &#124; DBPROPVAL_UP_INSERT|  
-  
+|||
+
 ## <a name="property-sets"></a>Наборы свойств  
  Эти наборы свойств поддерживают параметры с табличным значением.  
   
@@ -82,7 +83,8 @@ ms.locfileid: "73788631"
 |Идентификатор свойства|Значение свойства|  
 |-----------------|--------------------|  
 |SSPROP_COL_COMPUTED|Чтение и запись в R/W<br /><br /> Значение по умолчанию: VARIANT_FALSE<br /><br /> Тип: VT_BOOL<br /><br /> Описание: значение VARIANT_TRUE означает, что столбец является вычисляемым. VARIANT_FALSE означает, что столбец не является вычисляемым.|  
-  
+|||
+
 ### <a name="dbpropset_sqlserverparameter"></a>DBPROPSET_SQLSERVERPARAMETER  
  Эти свойства считываются потребителем при обнаружении сведений о типе возвращающего табличное значение параметра в вызовах ISSCommandWithParameters:: GetParameterProperties и устанавливаются потребителем при задании конкретных свойств возвращающего табличное значение параметра. через ISSCommandWithParameters:: SetParameterProperties.  
   
@@ -95,9 +97,10 @@ ms.locfileid: "73788631"
 |SSPROP_PARAM_TYPE_CATALOGNAME|R/W: только для чтения<br /><br /> Значение по умолчанию: VT_EMPTY<br /><br /> Тип: VT_BSTR<br /><br /> Описание: потребители используют это свойство для получения имени каталога возвращающего табличное значение параметра.<br /><br /> Это свойство также может использоваться с определяемыми пользователем типами данных CLR. Задание этого свойства является ошибкой; все табличные типы, определяемые пользователем, должны находиться в той же базе данных, что и использующие их возвращающие табличное значение параметры.|  
 |SSPROP_PARAM_TABLE_DEFAULT_COLUMNS|Чтение и запись в R/W<br /><br /> Значение по умолчанию: VT_EMPTY<br /><br /> Type: VT_UI2 &#124; VT_ARRAY<br /><br /> Описание: потребители используют это свойство, чтобы указать, какие именно столбцы в наборе строк должны обрабатываться как значения по умолчанию. Значения для этих столбцов не передаются. При получении данных из потребительского объекта набора строк поставщик не требует привязки для этих столбцов.<br /><br /> Каждый элемент массива должен быть порядковым номером столбца в объекте набора строк. Если переданы недопустимые порядковые номера, это приведет к ошибке времени выполнения.|  
 |SSPROP_PARAM_TABLE_COLUMN_ORDER|Чтение и запись в R/W<br /><br /> Значение по умолчанию: VT_EMPTY<br /><br /> Type: VT_UI2 &#124; VT_ARRAY<br /><br /> Описание: это свойство используется потребителем, чтобы указать серверу, каким образом упорядочиваются данные столбцов при сортировке. Поставщик не проводит никакой проверки и предполагает, что потребитель выполняет существующую спецификацию. Сервер использует это свойство для проведения оптимизации.<br /><br /> Информация об упорядочивании каждого столбца представлена парой элементов массива. Первый элемент пары — номер столбца. Второй элемент пары равен 1, если сортировка проводится по возрастанию, и 2, если по убыванию.|  
-  
-## <a name="see-also"></a>См. также статью  
- [Поддержка типов параметров OLE DB, возвращающих табличные значения](../../relational-databases/native-client-ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support.md)   
- [Использование возвращающих табличные значения параметров &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md)  
+|||
+
+## <a name="see-also"></a>См. также  
+ [Поддержка типа возвращающего табличное значение параметра OLE DB](../../relational-databases/native-client-ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support.md)   
+ [Использование возвращающих табличные значения параметров &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md)  
   
   

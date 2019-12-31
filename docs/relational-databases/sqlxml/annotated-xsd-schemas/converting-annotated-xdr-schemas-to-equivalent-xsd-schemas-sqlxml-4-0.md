@@ -1,6 +1,5 @@
 ---
-title: Преобразование схем XDR в эквивалентные схемы XSD (SQLXML 4.0) с заметками | Документация Майкрософт
-ms.custom: ''
+title: Преобразование схем XDR с заметками в XSD (SQLXML)
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -18,13 +17,14 @@ helpviewer_keywords:
 ms.assetid: 151c94a8-66d3-4c46-a5ff-a22df456940a
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 85483de3a30699829a22be4f0fc57d2806e127ee
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 10c85b4c4f2e08518703a67256bd169afb2d0455
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68041104"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75247065"
 ---
 # <a name="converting-annotated-xdr-schemas-to-equivalent-xsd-schemas-sqlxml-40"></a>Преобразование схем XDR с заметками в эквивалентные схемы XSD (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -43,10 +43,10 @@ ms.locfileid: "68041104"
 cvtschema XDRFileName, [-y], [-w] [-?]  
 ```  
   
- Где:  
+ Описание  
   
  XDRFileName  
- Имя XDR-файла, который необходимо преобразовать в XSD. Это средство читает входной XDR-файл и создает выходной XSD-файл в текущем рабочем каталоге. Если текущий файл имеет расширение XDR или XML, выходной XSD-файл создается с тем же именем, но с расширением XSD. Если расширение имени входного файла кроме .xml или XDR (или если расширение не указано), выходной файл создается с тем же именем, и расширение XSD добавляется к имени входного файла. Например, если именем входного XDR-файла является SampleFile.abc, то полученный XSD-файл сохраняется как SampleFile.abc.xsd.  
+ Имя XDR-файла, который необходимо преобразовать в XSD. Это средство читает входной XDR-файл и создает выходной XSD-файл в текущем рабочем каталоге. Если текущий файл имеет расширение XDR или XML, выходной XSD-файл создается с тем же именем, но с расширением XSD. Если расширение имени входного файла отличается от. XML или. XDR (или если расширение отсутствует), выходной файл создается с тем же именем, а расширение XSD добавляется к имени входного файла. Например, если именем входного XDR-файла является SampleFile.abc, то полученный XSD-файл сохраняется как SampleFile.abc.xsd.  
   
  -y  
  Перезаписывает существующий XSD-файл XSD-файлом, созданным средством преобразования (необязательно). Если этот флаг не указан, в этом средстве происходит вывод приглашения для пользователя, которое позволяет указать, следует ли переписать существующий XSD-файл и изменить имя выходного файла.  
@@ -55,10 +55,10 @@ cvtschema XDRFileName, [-y], [-w] [-?]
  Возвращает некритичные предупреждения, сформированные этим средством в процессе преобразования (необязательно). По умолчанию это средство отображает только сообщения, относящиеся к неустранимым ошибкам.  
   
  -?  
- Возвращает список параметров, которые можно задать с помощью **cvtschema**, вместе с пояснением.  
+ Возвращает список параметров, которые можно указать с помощью **cvtschema**, а также объяснение.  
   
 ## <a name="see-also"></a>См. также  
- [Сопоставление типов данных XSD с типами данных XPath &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-using/mapping-xsd-data-types-to-xpath-data-types-sqlxml-4-0.md)   
- [Заметки XSD &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-using/xsd-annotations-sqlxml-4-0.md)  
+ [Сопоставление типов данных XSD с типами данных XPath &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-using/mapping-xsd-data-types-to-xpath-data-types-sqlxml-4-0.md)   
+ [Аннотации XSD &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-using/xsd-annotations-sqlxml-4-0.md)  
   
   

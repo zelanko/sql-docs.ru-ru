@@ -1,6 +1,6 @@
 ---
-title: Создание сервера централизованного управления и группы серверов (среда SQL Server Management Studio) | Документация Майкрософт
-ms.custom: ''
+title: Создание сервера централизованного управления и группы
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - configuration server
 ms.assetid: da265482-3953-440a-ac23-0ab7e42a55eb
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 783654f312590d64c57c1c47481886c865d203c6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: 17c1e63789e9c2069d8fdecd8bd62b64bf8a886d
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68188167"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244659"
 ---
 # <a name="create-a-central-management-server-and-server-group-sql-server-management-studio"></a>Создание центрального сервера управления и группы сервера (среда SQL Server Management Studio)
   В этом разделе описывается, как назначить экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в качестве сервера централизованного управления в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. На серверах централизованного управления хранится список экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , организованных в одну или несколько групп серверов централизованного управления. Действия, производимые с помощью группы серверов централизованного управления, влияют на все серверы в группе. Это включает соединение с сервером при помощи обозревателя объектов, а также выполнение инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)] и применение политик управления на основе политик одновременно на нескольких серверах.  
@@ -29,22 +29,22 @@ ms.locfileid: "68188167"
   
 -   **Перед началом работы**  
   
-     [безопасность](#Security)  
+     [Бюллетеня](#Security)  
   
--   **Для создания сервера централизованного управления и группы серверов используется:**  
+-   **Для создания центрального сервера управления и группы серверов используется:**  
   
-     [Среда SQL Server Management Studio](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="BeforeYouBegin"></a>Перед началом  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="Security"></a>Бюллетеня  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a>Чтение  
  В базе данных msdb доступ к серверам централизованного управления предоставляют две роли базы данных. Сервером централизованного управления могут управлять только члены роли ServerGroupAdministratorRole. Для подключения к серверу централизованного управления требуется членство в роли ServerGroupReaderRole.  
   
  Поскольку соединения, поддерживаемые сервером централизованного управления, выполняются в контексте пользователя с применением проверки подлинности Windows, действующие разрешения на зарегистрированные серверы могут быть различными. Например, пользователь может входить в предопределенную роль сервера sysadmin на экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] А, но иметь ограниченные разрешения на экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Б.  
   
-##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a>Использование SQL Server Management Studio  
  Ниже описывается, как выполнить следующие шаги.  
   
 1.  Создание сервера централизованного управления.  
@@ -82,6 +82,6 @@ ms.locfileid: "68188167"
 -   После создания сервера централизованного управления, одной или нескольких групп серверов и одного или нескольких зарегистрированных серверов можно выполнять запросы одновременно ко всей группе. Дополнительные сведения о выполнении инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)] сразу на нескольких серверах в группе серверов см. в статье [Выполнение инструкции на нескольких серверах одновременно (среда SQL Server Management Studio)](execute-statements-against-multiple-servers-simultaneously.md).  
   
 ## <a name="see-also"></a>См. также  
- [Администрирование нескольких серверов с использованием центральных серверов управления](../../relational-databases/administer-multiple-servers-using-central-management-servers.md)  
+ [Администрирование нескольких серверов с помощью центральных серверов управления](../../relational-databases/administer-multiple-servers-using-central-management-servers.md)  
   
   

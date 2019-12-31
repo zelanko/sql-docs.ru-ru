@@ -1,5 +1,5 @@
 ---
-title: 'ISSCommandWithParameters:: SetParameterProperties (OLE DB) | Документация Майкрософт'
+title: ISSCommandWithParameters::SetParameterProperties (OLE DB)
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,12 +16,12 @@ ms.assetid: 4cd0281a-a2a0-43df-8e46-eb478b64cb4b
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 82422e9d2816f08f3a4df3f42f1eeddb1c13c3f5
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.openlocfilehash: 9730f16ada4cce883790f79365d2657fd91c087b
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73761764"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75247140"
 ---
 # <a name="isscommandwithparameterssetparameterproperties-ole-db"></a>ISSCommandWithParameters::SetParameterProperties (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,18 +30,17 @@ ms.locfileid: "73761764"
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
-  
+```cpp
 HRESULT SetParameterProperties(  
       DB_UPARAMS cParams,   
       SSPARAMPROPS rgParamProperties[]);  
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *cParams*[in]  
+ *кпарамс*[in]  
  Количество структур SSPARAMPROPS в массиве *rgParamProperties*. Если это число равно 0, то метод **ISSCommandWithParameters::SetParameterProperties** удалит все свойства, которые могли быть указаны для всех параметров команды.  
   
- *rgParamProperties*[in]  
+ *ргпарампропертиес*[in]  
  Массив задаваемых структур SSPARAMPROPS.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
@@ -52,7 +51,7 @@ HRESULT SetParameterProperties(
   
  Метод **SetParameterInfo** необходимо вызывать до вызова метода **ISSCommandWithParameters::SetParameterProperties**. Вызов метода `SetParameterProperties(0, NULL)` очищает все указанные свойства параметра, тогда как вызов метода `SetParameterInfo(0,NULL,NULL)` очищает все сведения о параметре, в том числе все свойства, которые могут быть связаны с параметром.  
   
- Вызов **ISSCommandWithParameters:: SetParameterProperties** для указания свойств параметра, который не относится к типу DBTYPE_XML или DBTYPE_UDT возвращает DB_E_ERRORSOCCURRED или DB_S_ERRORSOCCURRED и помечает поле *dwstatus устанавливается* ALL Дбпропс содержится в SSPARAMPROPS для этого параметра с DBPROPSTATUS_NOTSET. Чтобы обнаружить, к какому параметру относится DB_E_ERRORSOCCURRED или DB_S_ERRORSOCCURRED, необходимо пройти по массиву DBPROP каждого набора DBPROPSET, содержащегося в структуре SSPARAMPROPS.  
+ Вызов **ISSCommandWithParameters:: SetParameterProperties** для указания свойств параметра, который не относится к типу DBTYPE_XML или DBTYPE_UDT возвращает DB_E_ERRORSOCCURRED или DB_S_ERRORSOCCURRED и помечает поле *dwstatus устанавливается* всех дбпропс, содержащихся в SSPARAMPROPS, для этого параметра DBPROPSTATUS_NOTSET. Чтобы обнаружить, к какому параметру относится DB_E_ERRORSOCCURRED или DB_S_ERRORSOCCURRED, необходимо пройти по массиву DBPROP каждого набора DBPROPSET, содержащегося в структуре SSPARAMPROPS.  
   
  Если метод **ISSCommandWithParameters::SetParameterProperties** вызывается, чтобы задать свойства параметров, сведения о которых еще не были заданы с помощью метода **SetParameterInfo**, то поставщик возвратит E_UNEXPECTED со следующим сообщением об ошибке:  
   
@@ -61,26 +60,25 @@ HRESULT SetParameterProperties(
  Если вызов метода **ISSCommandWithParameters::SetParameterProperties** содержит некоторые параметры с заданными сведениями и некоторые параметры с незаданными сведениями, то свойства dwStatus в структуре DBPROPSET набора свойств SSPARAMPROPS будут возвращены со значением DBSTATUS_NOTSET.  
   
  Структура SSPARAMPROPS определена следующим образом.  
+
+```cpp
+struct SSPARAMPROPS {
+    DBORDINAL iOrdinal;
+    ULONG cPropertySets;
+    DBPROPSET *rgPropertySets;
+};
+```
+
+ Улучшения в ядре СУБД, начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Allow ISSCommandWithParameters:: SetParameterProperties, позволяют получить более точные описания ожидаемых результатов. Эти более точные результаты могут отличаться от значений, возвращаемых функцией ISSCommandWithParameters:: SetParameterProperties в предыдущих версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в разделе [Обнаружение метаданных](../../relational-databases/native-client/features/metadata-discovery.md).  
   
- `struct SSPARAMPROPS {`  
-  
- `DBORDINAL iOrdinal;`  
-  
- `ULONG cPropertySets;`  
-  
- `DBPROPSET *rgPropertySets;`  
-  
- `};`  
-  
- Улучшения в ядре СУБД, начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] позволяют ISSCommandWithParameters:: SetParameterProperties получить более точные описания ожидаемых результатов. Эти более точные результаты могут отличаться от значений, возвращаемых функцией ISSCommandWithParameters:: SetParameterProperties в предыдущих версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в разделе [Обнаружение метаданных](../../relational-databases/native-client/features/metadata-discovery.md).  
-  
-|Член|Описание|  
+|Участник|Описание|  
 |------------|-----------------|  
-|*iOrdinal*|Порядковый номер переданного параметра.|  
-|*cPropertySets*|Количество структур DBPROPSET в *rgPropertySets*.|  
+|*иординал*|Порядковый номер переданного параметра.|  
+|*кпропертисетс*|Количество структур DBPROPSET в *rgPropertySets*.|  
 |*rgPropertySets*|Указатель на буфер, в который будет возвращен массив структур DBPROPSET.|  
-  
-## <a name="see-also"></a>См. также раздел  
+|||
+
+## <a name="see-also"></a>См. также  
  [ISSCommandWithParameters &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md)  
   
   

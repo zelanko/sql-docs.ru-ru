@@ -1,6 +1,6 @@
 ---
-title: Добавление фрагментов кода Transact-SQL | Документация Майкрософт
-ms.custom: ''
+title: Добавление фрагментов кода Transact-SQL
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.assetid: 901c7995-8eb5-4d12-8bb0-de0a922b48f8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3d79989e37483342e5cc1624a0529f9df98ae980
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 27070cc125ca0443ae833854e721c6f72c7ce832
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66064291"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244823"
 ---
 # <a name="add-transact-sql-snippets"></a>Добавление фрагментов кода Transact-SQL
   В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]можно добавить собственные фрагменты кода Transact-SQL в набор предварительно определенных фрагментов.  
@@ -36,7 +36,7 @@ ms.locfileid: "66064291"
   
 2.  Выберите меню **Сервис** и нажмите кнопку **Диспетчер фрагментов кода**.  
   
-3.  Нажмите кнопку **Добавить** .  
+3.  Нажмите кнопку **Добавить**.  
   
 4.  Перейдите к папке, содержащей собственные фрагменты кода, и нажмите кнопку **Выбор папки** .  
   
@@ -46,7 +46,7 @@ ms.locfileid: "66064291"
   
 2.  Выберите меню **Сервис** и нажмите кнопку **Диспетчер фрагментов кода**.  
   
-3.  Нажмите кнопку **Импорт** .  
+3.  Нажмите кнопку **Импортировать**.  
   
 4.  Перейдите к папке, содержащей собственный фрагмент кода, выберите файл с расширением SNIPPET и нажмите кнопку **Открыть** .  
   
@@ -102,15 +102,15 @@ ms.locfileid: "66064291"
     </CodeSnippets>  
     ```  
   
-2.  Откройте среду [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+2.  Откройте [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 3.  Выберите меню **Сервис** и нажмите кнопку **Диспетчер фрагментов кода**.  
   
-4.  Нажмите кнопку **Импорт** .  
+4.  Нажмите кнопку **Импортировать**.  
   
 5.  Перейдите к папке, содержащей файл TryCatch.snippet, щелкните файл TryCatch.snippet и нажмите кнопку **Открыть** . В папке **Мои фрагменты кода** не должно быть фрагмента TryCatch.  
   
 ## <a name="see-also"></a>См. также  
- [Вставка фрагментов кода окружения Transact-SQL](insert-surround-with-transact-sql-snippets.md)  
+ [Вставка фрагментов кода на языке Transact-SQL](insert-surround-with-transact-sql-snippets.md)  
   
   

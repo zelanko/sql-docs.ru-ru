@@ -1,5 +1,5 @@
 ---
-title: SQLXML не устанавливается в SQL Server | Документация Майкрософт
+title: SQLXML не установлен в SQL Server
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,33 +11,33 @@ ms.assetid: 3dbb4f65-41de-48b8-ad62-47c9d7932de3
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2adac1703facccda712db1e3f5826f784c0be141
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c666d02449190ca6a88ac43c96ab7aee9676be4d
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68135316"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75242648"
 ---
 # <a name="sqlxml-is-not-installed-in-sql-server"></a>SQLXML не установлен в SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  До версии [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] компонент SQLXML 4.0 распространялся с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и входил в состав установки по умолчанию всех версий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], кроме [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]. Начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], последняя версия SQLXML (SQLXML 4.0 с пакетом обновления 1 (SP1)) больше не включается в состав [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Чтобы установить SQLXML 4.0 с пакетом обновления 1, загрузите ее из [места установки для SQLXML 4.0 с пакетом обновления 1](https://www.microsoft.com/download/details.aspx?id=30403).  
+  До версии [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] компонент SQLXML 4.0 распространялся с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и входил в состав установки по умолчанию всех версий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], кроме [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]. Начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], последняя версия SQLXML (SQLXML 4.0 с пакетом обновления 1 (SP1)) больше не включается в состав [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Чтобы установить SQLXML 4,0 с пакетом обновления 1 (SP1), скачайте его из [расположения установки для sqlxml 4,0 SP1](https://www.microsoft.com/download/details.aspx?id=30403).  
   
- Если приложение выполняется в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и требует SQLXML 4.0, необходимо загрузить и установить SQLXML 4.0 с пакетом обновления 1.  
+ Если приложение выполняется в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и требует SQLXML 4,0, необходимо загрузить и установить SQLXML 4,0 SP1.  
   
 ## <a name="sqlxml-40-sp1-behavior-with-new-data-types-using-sqloledb-and-sql-server-native-client-ole-db-provider"></a>Поведение SQLXML 4.0 при работе с новыми типами данных с помощью SQLOLEDB и поставщика OLE DB для собственного клиента SQL Server  
- [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] введены следующие типы данных, которые разработчики, применяющие SQLXML может потребоваться использовать:  
+ [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]добавлены следующие типы данных, которые могут потребоваться разработчикам, использующим SQLXML.  
   
 -   **Дата**  
   
--   **Time**  
+-   **Время**  
   
 -   **DateTime2**  
   
 -   **DateTimeOffset**  
   
- При использовании SQLXML 4.0 с пакетом обновления 1 с SQLOLEDB или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB для собственного клиента из [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], эти типы отображаются как строки для разработчика. SQLXML 4.0 SP1 позволяет использовать эти четыре новых типа данных в качестве встроенных скалярных типов при использовании с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поставщик для собственного клиента OLE DB 11.0 или более поздней версии. Без загрузки SQLXML 4.0 с пакетом обновления 1 (SP1) при сопоставлении этих типов с нестроковыми типами может происходить усечение и потеря части данных. Например, при сопоставлении **DateTime2** для **xsd: Date** полученные данные будут усечены до [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] **DateTime** точностью 3,33 миллисекунды.  
+ При использовании SQLXML 4,0 с пакетом обновления 1 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SP1) с [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]поддержкой SQLOLEDB или Native Client OLE DB из эти типы отображаются как строки для разработчика. SQLXML 4,0 с пакетом обновления 1 (SP1) включит эти четыре новых типа данных в качестве встроенных скалярных типов при использовании [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственного клиента OLE DB поставщика 11,0 или более поздней версии. Без загрузки SQLXML 4.0 с пакетом обновления 1 (SP1) при сопоставлении этих типов с нестроковыми типами может происходить усечение и потеря части данных. Например, сопоставление **datetime2** с **xsd: Date** приведет к усечению данных до значения [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] точности **DateTime** , равного 3,33 миллисекундам.  
   
 ## <a name="see-also"></a>См. также  
- [Основные понятия о программировании для SQLXML 4.0](../../relational-databases/sqlxml/sqlxml-4-0-programming-concepts.md)  
+ [Основные понятия программирования SQLXML 4,0](../../relational-databases/sqlxml/sqlxml-4-0-programming-concepts.md)  
   
   

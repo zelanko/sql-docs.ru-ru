@@ -1,5 +1,5 @@
 ---
-title: Отправка данных в виде возвращающего табличное значение параметра со всеми значениями в памяти (ODBC) | Документация Майкрософт
+title: Возвращающий табличное значение параметр, значения в памяти (ODBC)
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ ms.assetid: 8b96282f-00d5-4e28-8111-0a87ae6d7781
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ca993b0074f13c6a3c5cfd167f533a408cd21530
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.openlocfilehash: f6530c3b558f26e3f75f5cff63f33f2e58c119c6
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73790797"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75246388"
 ---
 # <a name="sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc"></a>Отправка данных в виде возвращающего табличное значение параметра со всеми значениями в памяти (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "73790797"
 ## <a name="prerequisite"></a>Предварительные требования  
  Эта процедура предполагает, что на сервере выполнен следующий код [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
-```  
+```sql
 create type TVParam as table(ProdCode integer, Qty integer)  
 create procedure TVPOrderEntry(@CustCode varchar(5), @Items TVPParam,   
             @OrdNo integer output, @OrdDate datetime output)  
@@ -46,7 +46,7 @@ from @Items
   
 1.  Объявление переменных для параметров SQL. В данном случае табличное значение полностью содержится в памяти, поэтому значения для столбцов этого табличного значения объявляются как массивы.  
   
-    ```  
+    ```cpp
     SQLRETURN r;  
     // Variables for SQL parameters.  
     #define ITEM_ARRAY_SIZE 20  
@@ -63,7 +63,7 @@ from @Items
   
 2.  Выполните привязку параметров. При использовании возвращающих табличное значение параметров процесс привязки параметров состоит из двух этапов. На первом этапе параметры шагов для хранимой процедуры привязываются обычным путем, как показано ниже.  
   
-    ```  
+    ```cpp
     // Bind parameters for call to TVPOrderEntryDirect.  
     // 1 - Custcode input  
     r = SQLBindParameter(hstmt, 1, SQL_PARAM_INPUT,SQL_VARCHAR, SQL_C_CHAR, 5, 0, CustCode, sizeof(CustCode), &cbCustCode);  
@@ -91,7 +91,7 @@ from @Items
   
 3.  Второй этап процесса привязки параметра состоит в связывании столбцов для возвращающего табличное значение параметра. Первоначально фокус устанавливается на порядковом номере возвращающего табличное значение параметра. Столбцы значения таблицы привязываются с помощью SQLBindParameter так же, как если бы они были параметрами хранимой процедуры, но с порядковыми номерами столбцов для Параметернумбер. Если бы имелось большее число возвращающих табличное значение параметров, мы бы по очереди передавали фокус каждому из них и связывали их столбцы. В заключение фокус параметра сбрасывается в 0.  
   
-    ```  
+    ```cpp
     // Bind columns for the table-valued parameter (param 2).  
     // First set focus on param 2.  
     r = SQLSetStmtAttr(hstmt, SQL_SOPT_SS_PARAM_FOCUS, (SQLPOINTER) 2, SQL_IS_INTEGER);  
@@ -107,7 +107,7 @@ from @Items
   
 4.  Заполните буферы параметров. В качестве значения `cbTVP` указывается число строк, которые должны быть переданы на сервер.  
   
-    ```  
+    ```cpp
     // Populate parameters.  
     cbTVP = 0; // Number of rows available for input.  
     strcpy_s((char *) CustCode, sizeof(CustCode), "CUST1"); cbCustCode = SQL_NTS;  
@@ -123,12 +123,12 @@ from @Items
   
 5.  Вызовите процедуру:  
 
-    ```  
+    ```cpp
     // Call the procedure.  
     r = SQLExecDirect(hstmt, (SQLCHAR *) "{call TVPOrderEntry(?, ?, ?, ?)}",SQL_NTS);  
     ```  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также  
  [Примеры программирования с использованием возвращающих табличное значение параметров ODBC](https://msdn.microsoft.com/library/3f52b7a7-f2bd-4455-b79e-d015fb397726)  
   
   

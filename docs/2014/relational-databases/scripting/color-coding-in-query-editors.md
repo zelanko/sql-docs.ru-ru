@@ -1,6 +1,6 @@
 ---
-title: Выделение цветом в редакторах запросов | Документация Майкрософт
-ms.custom: ''
+title: Выделение цветом в редакторах запросов
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -13,19 +13,19 @@ ms.assetid: 802882dc-c997-4e3f-8a01-994bb43169ae
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e939270edd53189f9d8ba77411b8916e94a5ba8f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e615a8e316cb5c8e15056eeaa111b5daf1ef5513
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66064172"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244947"
 ---
 # <a name="color-coding-in-query-editors"></a>Выделение цветом в редакторах запросов
   Тексту, который вводится в редакторах кода, присваивается категория. Каждая категория идентифицируется по цвету. Цвета помогают быстро находить текст в коде. Например, комментарии выделены темно-зеленым. В следующей таблице приведены наиболее часто применяемые цвета. Чтобы просмотреть полный список цветов и их категорий, а также настроить пользовательскую цветовую схему, в меню **Сервис**выберите пункт **Параметры** . Дополнительные сведения об изменении цветов по умолчанию см. в разделе [Change Font Color, Size, and Style](change-font-color-size-and-style.md).  
   
 ## <a name="default-code-colors"></a>Цвета по умолчанию  
   
-|Color|Category|  
+|Color|Категория|  
 |-----------|--------------|  
 |Красный|Строка SQL|  
 |Темно-зеленый|Комментарий|  
@@ -34,7 +34,7 @@ ms.locfileid: "66064172"
 |Зеленый|Системная таблица, представление или функция с табличным значением. А также системные схемы sys и INFORMATION_SCHEMA.|  
 |Синий|Ключевое слово|  
 |Бирюзовый|Номера строк или параметр шаблона|  
-|Каштановый|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] хранимая процедура|  
+|Каштановый|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]хранимая процедура|  
 |Темно-серый|Операторы|  
   
 ## <a name="status-bar"></a>Строка состояния  

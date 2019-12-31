@@ -1,6 +1,5 @@
 ---
-title: Открытие, разблокировка, переименование и удаление проекта служб DQS | Microsoft Docs
-ms.custom: ''
+title: Открытие, разблокировка, переименование и удаление проекта качества данных
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -15,14 +14,14 @@ helpviewer_keywords:
 - data quality project,unlock
 - data quality project,open
 ms.assetid: de8a2b04-4673-4beb-b4cf-96a28cdf3a93
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: 5054e2a14260bf16aafb4042fac39d191b8f5afa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: d849ca48b5e4a1cc8d01eebc1649075251da3fd0
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67935078"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75245973"
 ---
 # <a name="open-unlock-rename-and-delete-a-data-quality-project"></a>Открытие, разблокировка, переименование и удаление проекта качества данных
 
@@ -30,9 +29,9 @@ ms.locfileid: "67935078"
 
   В этом разделе описывается управление проектом служб DQS с помощью [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] : такие действия, как открытие, разблокирование, переименование и удаление проекта.  
   
-##  <a name="BeforeYouBegin"></a> Перед началом  
+##  <a name="BeforeYouBegin"></a>Перед началом  
   
-###  <a name="LimitationsRestrictions"></a> Ограничения  
+###  <a name="LimitationsRestrictions"></a>Ограничения  
   
 -   Нельзя открыть заблокированный проект, созданный другим пользователем.  
   
@@ -42,17 +41,17 @@ ms.locfileid: "67935078"
   
 -   Вы можете разблокировать только тот проект служб DQS, который сами создали.  
   
-###  <a name="Prerequisites"></a> Предварительные требования  
+###  <a name="Prerequisites"></a>Требований  
  Для управления должен быть в наличии хотя бы один проект служб DQS.  
   
-###  <a name="Security"></a> безопасность  
+###  <a name="Security"></a>Бюллетеня  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a>Чтение  
  Для управления проектом служб DQS необходимо иметь роль dqs_kb_editor или dqs_kb_operator в базе данных DQS_MAIN.  
   
-##  <a name="Open"></a> Открытие проекта служб DQS  
+##  <a name="Open"></a>Открытие проекта качества данных  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Запуск клиентского приложения Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Запустите приложение Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
   
 2.  На главном экране [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] нажмите кнопку **Открыть проект служб DQS**. Появится экран **Открытие проекта** .  
   
@@ -62,22 +61,22 @@ ms.locfileid: "67935078"
   
 4.  Проект служб DQS откроется в том же состоянии, в каком он был закрыт в последний раз. Проект служб DQS имеет следующие состояния:  
   
-    -   Для действия **Очистка** проект служб DQS может иметь следующие состояния: **Очистка — сопоставить**, **Очистка — очистить**, **Очистка — управление и просмотр результатов**, **Очистка — экспорт**.  
+    -   Для действия **Очистка** проект качества данных может иметь следующие состояния: **Очистка — сопоставить**, **Очистка — очистить**, **Очистка — управление и просмотр результатов** и **Очистка — экспорт**.  
   
-    -   Для действия **Сопоставление** проект служб DQS может иметь следующие состояния: **Сопоставление — сопоставить**, **Сопоставление — сопоставление**, **Сопоставление — сохранение** и **Сопоставление — экспорт**.  
+    -   Для действия **Сопоставление** проект качества данных может иметь следующие состояния: **Сопоставление — сопоставить**, **Сопоставление — сопоставление**, **Сопоставление — сохранение** и **Сопоставление — экспорт**.  
   
-##  <a name="Unlock"></a> Разблокирование проекта служб DQS  
+##  <a name="Unlock"></a>Разблокирование проекта качества данных  
  При создании проекта служб DQS он находится в заблокированном состоянии для предотвращения использования или изменения другими пользователями. Необходимо разблокировать проект служб DQS после завершения работы, если требуется, чтобы с этим проектом могли работать другие пользователи. Для заблокированных проектов отображается символ блокировки.  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Запуск клиентского приложения Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Запустите приложение Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
   
 2.  На главном экране [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] нажмите кнопку **Открыть проект служб DQS**. Появится экран **Открытие проекта** .  
   
 3.  На экране **Открытие проекта** щелкните правой кнопкой мыши созданный вами заблокированный проект служб DQS, затем выберите **Разблокировать** в контекстном меню. Рядом с именем проекта отобразится зеленый флажок, означающий, что проект разблокирован.  
   
-##  <a name="Rename"></a> Переименование проекта служб DQS  
+##  <a name="Rename"></a>Переименование проекта качества данных  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Запуск клиентского приложения Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Запустите приложение Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
   
 2.  На главном экране [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] нажмите кнопку **Открыть проект служб DQS**. Появится экран **Открытие проекта** .  
   
@@ -85,14 +84,14 @@ ms.locfileid: "67935078"
   
 4.  Имя проекта служб DQS станет доступным для редактирования в столбце **Имя** . Введите новое имя и нажмите клавишу «Ввод».  
   
-##  <a name="Delete"></a> Удаление проекта служб DQS  
+##  <a name="Delete"></a>Удаление проекта качества данных  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Запуск клиентского приложения Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Запустите приложение Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
   
 2.  На главном экране [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] нажмите кнопку **Открыть проект служб DQS**. Появится экран **Открытие проекта** .  
   
 3.  На экране **Открытие проекта** щелкните правой кнопкой мыши созданный вами разблокированный проект служб DQS, затем выберите **Удалить** в контекстном меню.  
   
-4.  Появится окно подтверждения. Нажмите кнопку **Да**.  
+4.  Появится сообщение с подтверждением. Нажмите кнопку **Да**.  
   
   

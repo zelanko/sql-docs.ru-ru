@@ -1,6 +1,5 @@
 ---
-title: Выполнение запросов XPath (поставщик SQLXMLOLEDB) | Документация Майкрософт
-ms.custom: ''
+title: Выполнение запросов XPath (поставщик SQLXMLOLEDB)
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -17,24 +16,24 @@ ms.assetid: 19063222-dc9c-48ae-a55f-778103674a9e
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c086c70541cf7a5a8140dfb38795b404e247c466
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cbed0ee01fbe2f2a632f81265e0722eb1ad32727
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67895133"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75246634"
 ---
 # <a name="executing-xpath-queries-sqlxmloledb-provider"></a>Выполнение запросов XPath (поставщик SQLXMLOLEDB)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Этот пример показывает использование следующих свойств SQLXMLOLEDB, определяемых поставщиком.  
   
--   **ClientSideXML**  
+-   **клиентсидексмл**  
   
 -   **Базовый путь**  
   
 -   **Схема сопоставления**  
   
- В этом образце клиентского приложения ADO запрос XPath (корневой) задается для схемы сопоставления XSD (MySchema.xml). В схеме присутствует  **\<контакты >** элемент с **ContactID**, **FirstName**, и **LastName** атрибуты. В схеме выполняется сопоставление по умолчанию: имя элемента сопоставляется с таблицей с тем же именем, а атрибуты простого типа сопоставляются со столбцами с теми же именами.  
+ В этом образце клиентского приложения ADO запрос XPath (корневой) задается для схемы сопоставления XSD (MySchema.xml). Схема имеет элемент ** \<Contacts>** с атрибутами **ContactID**, **FirstName**и **LastName** . В схеме выполняется сопоставление по умолчанию: имя элемента сопоставляется с таблицей с тем же именем, а атрибуты простого типа сопоставляются со столбцами с теми же именами.  
   
 ```  
 <xsd:schema xmlns:xsd='http://www.w3.org/2001/XMLSchema'  
@@ -56,14 +55,14 @@ ms.locfileid: "67895133"
 </xsd:schema>  
 ```  
   
- Свойство схемы сопоставления предоставляет схему сопоставления, по которой выполняется запрос XPath. Схема сопоставления может являться схемой XSD или XDR. Свойство базового пути содержит путь к схеме сопоставления.  
+ Свойство схемы сопоставления предоставляет схему сопоставления, в которой выполняется запрос XPath. Схема сопоставления может являться схемой XSD или XDR. Свойство базового пути содержит путь к схеме сопоставления.  
   
- ClientSideXML, свойство имеет значение True. Поэтому XML-документ формируется на клиенте.  
+ Свойство Клиентсидексмл имеет значение true. Поэтому XML-документ формируется на клиенте.  
   
  Запрос XPath задается непосредственно в приложении. Следовательно, должен быть включен диалект XPath {ec2a4293-e898-11d2-b1b7-00c04f680c56}.  
   
 > [!NOTE]  
->  В коде необходимо задать имя экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в строке соединения. Кроме того, в этом примере в качестве поставщика данных определено использование собственного клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (SQLNCLI11), для которого необходимо установить дополнительное клиентское сетевое ПО. Дополнительные сведения см. в разделе [требования к системе для собственного клиента SQL Server](../../../relational-databases/native-client/system-requirements-for-sql-server-native-client.md).  
+>  В коде необходимо задать имя экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в строке соединения. Кроме того, в этом примере в качестве поставщика данных определено использование собственного клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (SQLNCLI11), для которого необходимо установить дополнительное клиентское сетевое ПО. Дополнительные сведения см. в разделе [требования к системе для SQL Server Native Client](../../../relational-databases/native-client/system-requirements-for-sql-server-native-client.md).  
   
 ```  
 Option Explicit  

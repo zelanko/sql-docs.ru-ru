@@ -1,6 +1,6 @@
 ---
-title: Структурирование кода | Документация Майкрософт
-ms.custom: ''
+title: Структурирование кода
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -13,12 +13,12 @@ ms.assetid: 556c7dfe-7bc8-4cab-a36f-2b753a05d3f1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bf35412efc66e971332b97ac2a0d77725a1d0cd3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0ec36d2d6f38a1213a91d3c7f7aa1753d519ac5d
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090633"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244971"
 ---
 # <a name="code-outlining"></a>Структурирование кода
   Функция структурирования в редакторах запросов среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] позволяет при редактировании запросов выборочно скрывать участки кода. Это делает просмотр кода при редактировании более удобным, особенно когда файл запроса имеет большой размер.  
@@ -46,11 +46,11 @@ ms.locfileid: "66090633"
   
  Если щелкнуть значок "минус" в строке \<MiddleTag>, то будут свернуты и MiddleTag, и InnerTag, как показано на следующей иллюстрации.  
   
- ![XML-код со скрытыми внутренним и средним тегами](../../database-engine/media/editoutlinexmlmiddlecol.gif "XML-код со скрытыми внутренним и средним тегами")  
+ ![XML-код со скрытыми внутренними и средними тегами](../../database-engine/media/editoutlinexmlmiddlecol.gif "XML-код со скрытыми внутренними и средними тегами")  
   
  Если щелкнуть значок "минус" в строке \<OuterTag>, то будут свернуты все три строки, как показано на следующей иллюстрации.  
   
- ![XML-код с тремя скрытыми тегами](../../database-engine/media/editoutlinexmloutercol.gif "XML-код с тремя скрытыми тегами")  
+ ![XML-код, где скрыты все три тега](../../database-engine/media/editoutlinexmloutercol.gif "XML-код, где скрыты все три тега")  
   
 ### <a name="database-engine-query-editor-regions"></a>Области редактора запросов к ядру СУБД  
  Редактор запросов компонента [!INCLUDE[ssDE](../../../includes/ssde-md.md)] формирует структурные области для каждого элемента в следующей иерархии.  

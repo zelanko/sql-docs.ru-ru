@@ -12,12 +12,12 @@ ms.assetid: 8519aa2f-f09c-4c1c-96b5-abc24811e60c
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: af78f507b56ec83c2768bbf3d30f5d8d7313d7c8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ddb7e84f69f501a7857b0d55b1b8a14d11a85694
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63025802"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244513"
 ---
 # <a name="sql-server-certificates-and-asymmetric-keys"></a>Сертификаты SQL Server и асимметричные ключи
   Криптография с открытым ключом представляет собой форму обеспечения конфиденциальности сообщений, подразумевающую создание *открытого* и *закрытого* ключей. Закрытый ключ хранится в секрете, а открытый ключ передается другим лицам. Хотя ключи математически связаны, закрытый ключ нельзя легко вычислить с помощью открытого ключа. Открытый ключ используется при шифровании данных, а закрытый ключ используется при расшифровке данных. Сообщение, зашифрованное с помощью открытого ключа, можно расшифровать только с помощью правильного закрытого ключа. Поскольку применяются два различных ключа, эти ключи *асимметричные*.  
@@ -29,13 +29,16 @@ ms.locfileid: "63025802"
  В отличие от сертификата, открытый ключ не имеет определенного формата, и его нельзя экспортировать в файл.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имеет функции, которые позволяют создавать сертификаты и ключи для использования с сервером и базой данных, а также управлять этими сертификатами и ключами. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] нельзя использовать для создания сертификатов и ключей (и управления сертификатами и ключами) с другими приложениями или в операционной системе.  
+>  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имеет функции, которые позволяют создавать сертификаты и ключи для использования с сервером и базой данных, а также управлять этими сертификатами и ключами. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] нельзя использовать для создания сертификатов и ключей (и управления сертификатами и ключами) с другими приложениями или в операционной системе.  
   
 ## <a name="certificates"></a>Сертификаты  
  Сертификат представляет собой объект безопасности с цифровой подписью, который содержит открытый (и необязательно закрытый) ключ для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Можно использовать сертификаты, сформированные внешними средствами, или сертификаты, созданные [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Сертификаты соответствуют стандарту сертификатов IETF X.509v3.  
+>  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Сертификаты соответствуют стандарту сертификатов IETF X.509v3.  
   
  Сертификаты полезны благодаря возможности выполнить как экспорт ключей в файлы сертификатов X.509, так и импорт из них. Синтаксис, применяемый при создании сертификатов, позволяет вводить параметры создания для сертификатов, например дату окончания действия.  
   
@@ -44,9 +47,9 @@ ms.locfileid: "63025802"
   
 |Раздел|Описание|  
 |-----------|-----------------|  
-|[CREATE CERTIFICATE (Transact-SQL)](/sql/t-sql/statements/create-certificate-transact-sql)|Содержит описание команды создания сертификатов.|  
-|[Определение источника пакетов с помощью цифровых подписей](../../integration-services/security/identify-the-source-of-packages-with-digital-signatures.md)|Содержит сведения об использовании сертификатов для подписывания программных пакетов.|  
-|[Использование сертификатов для конечной точки зеркального отображения базы данных (Transact-SQL)](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)|Содержит сведения об использовании сертификатов с зеркальным отображением базы данных.|  
+|[Создание сертификата &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-certificate-transact-sql)|Содержит описание команды создания сертификатов.|  
+|[Указание источника пакетов с помощью цифровых подписей](../../integration-services/security/identify-the-source-of-packages-with-digital-signatures.md)|Содержит сведения об использовании сертификатов для подписывания программных пакетов.|  
+|[Использование сертификатов для конечной точки зеркального отображения базы данных &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)|Содержит сведения об использовании сертификатов с зеркальным отображением базы данных.|  
   
 ## <a name="asymmetric-keys"></a>Асимметричные ключи  
  Асимметричные ключи используются для защиты симметричных ключей. Их можно также использовать для ограниченного шифрования данных и цифрового подписывания объектов базы данных. Асимметричный ключ состоит из закрытого ключа и соответствующего открытого ключа. Дополнительные сведения об асимметричных ключах см. в разделе [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-asymmetric-key-transact-sql).  
@@ -58,27 +61,27 @@ ms.locfileid: "63025802"
   
 |Раздел|Описание|  
 |-----------|-----------------|  
-|[CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-asymmetric-key-transact-sql)|Содержит описание команды создания асимметричных ключей.|  
-|[SIGNBYASYMKEY (Transact-SQL)](/sql/t-sql/functions/signbyasymkey-transact-sql)|Отображает параметры для подписывания объектов.|  
+|[Создание АСИММЕТРИЧного ключа &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-asymmetric-key-transact-sql)|Содержит описание команды создания асимметричных ключей.|  
+|[SIGNBYASYMKEY &#40;Transact-SQL&#41;](/sql/t-sql/functions/signbyasymkey-transact-sql)|Отображает параметры для подписывания объектов.|  
   
-## <a name="tools"></a>Инструменты  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] предоставляет средства и программы, которые создают сертификаты и файлы ключа для строгого имени. Эти средства обеспечивают более гибкий процесс создания ключа, чем синтаксис [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . С помощью этих средств можно создать ключи RSA большей длины, а затем импортировать их в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. В следующей таблице показано, где найти эти средства.  
+## <a name="tools"></a>Средства  
+ 
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] предоставляет средства и программы, которые создают сертификаты и файлы ключа для строгого имени. Эти средства обеспечивают более гибкий процесс создания ключа, чем синтаксис [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . С помощью этих средств можно создать ключи RSA большей длины, а затем импортировать их в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. В следующей таблице показано, где найти эти средства.  
   
 |||  
 |-|-|  
-|Инструмент|Цель|  
-|[makecert](http://msdn2.microsoft.com/library/bfsktky3\(VS.80\).aspx)|Создает сертификаты.|  
-|[sn](http://msdn2.microsoft.com/library/k5b5tt23\(VS.80\).aspx)|Создает строгие имена для симметричных ключей.|  
+|Средство|Назначение|  
+|[программой](https://msdn2.microsoft.com/library/bfsktky3\(VS.80\).aspx)|Создает сертификаты.|  
+|[sn](https://msdn2.microsoft.com/library/k5b5tt23\(VS.80\).aspx)|Создает строгие имена для симметричных ключей.|  
   
 ## <a name="related-tasks"></a>Связанные задачи  
  [Выбор алгоритма шифрования](encryption/choose-an-encryption-algorithm.md)  
   
- [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-symmetric-key-transact-sql)  
+ [Создание &#40;ов на основе СИММЕТРИЧНого ключа&#41;Transact-SQL](/sql/t-sql/statements/create-symmetric-key-transact-sql)  
   
- [CREATE CERTIFICATE (Transact-SQL)](/sql/t-sql/statements/create-certificate-transact-sql)  
+ [Создание сертификата &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-certificate-transact-sql)  
   
 ## <a name="see-also"></a>См. также  
- [sys.certificates (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-certificates-transact-sql)   
- [Прозрачное шифрование данных (TDE)](encryption/transparent-data-encryption.md)  
-  
+ [sys. Certificates &#40;&#41;Transact-SQL](/sql/relational-databases/system-catalog-views/sys-certificates-transact-sql)   
+ [Прозрачное шифрование данных &#40;TDE&#41;](encryption/transparent-data-encryption.md)  
   

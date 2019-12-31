@@ -1,5 +1,5 @@
 ---
-title: Добавочная отправка и получение данных с помощью FILESTREAM (ODBC) | Документация Майкрософт
+title: Добавочные данные, FILESTREAM (ODBC)
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,30 +11,30 @@ ms.assetid: b82ecf4c-f151-4a99-8717-a73ee5ec994f
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dc86dcc180d7ee3009e906d08531174606341140
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.openlocfilehash: 3f8bbffc2bf3a5e14447dc7b62f301f4b657203e
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73780620"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244692"
 ---
 # <a name="send-and-receive-data-incrementally-with-filestream-odbc"></a>Выполнение добавочной отправки и получение данных с помощью FILESTREAM (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   В этом образце показывается, как использовать функцию FILESTREAM для добавочной передачи и получения данных с помощью функций SQLPutData и SQLGetData.  
   
- Дополнительные сведения о функции FILESTREAM см. в разделе [ &#40;Поддержка FILESTREAM в&#41;ODBC](../../relational-databases/native-client/odbc/filestream-support-odbc.md).  
+ Дополнительные сведения о компоненте FILESTREAM см. в разделе [Поддержка filestream &#40;&#41;ODBC ](../../relational-databases/native-client/odbc/filestream-support-odbc.md).  
   
 ## <a name="example"></a>Пример  
  Перед компиляцией и запуском этого образца включите поддержку FILESTREAM ([включить и настроить FILESTREAM](../../relational-databases/blob/enable-and-configure-filestream.md)).  
   
- Первый листинг кода ([!INCLUDE[tsql](../../includes/tsql-md.md)]) создает базу данных, используемую этим образцом. Для выполнения этого скрипта экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должен иметь доступ с возможностью (например, войдите в систему с учетной записью Local System).  
+ Первый листинг кода [!INCLUDE[tsql](../../includes/tsql-md.md)]() создает базу данных, используемую этим образцом. Для выполнения этого скрипта экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должен иметь доступ с возможностью (например, войдите в систему с учетной записью Local System).  
   
  Вторым листингом кода является код на C++. Необходимо указать сервер, для этого в листинге кода C++ измените значение «MyServer» на допустимое имя сервера. Убедитесь, что переменная среды INCLUDE включает каталог, содержащий файл sqlncli.h. Скомпилируйте листинг кода на C++ с параметрами odbc32.lib, user32.lib, /D "_UNICODE", /D "UNICODE", odbc32.lib и /EHsc.  
   
- Третий листинг кода ([!INCLUDE[tsql](../../includes/tsql-md.md)]) удаляет базу данных, используемую этим образцом.  
+ Третий листинг кода [!INCLUDE[tsql](../../includes/tsql-md.md)]() удаляет базу данных, используемую этим образцом.  
   
-```  
+```sql
 USE master  
 GO  
   
@@ -75,7 +75,7 @@ CREATE TABLE [myfilestreamdb]..[mydocs]
 GO  
 ```  
   
-```  
+```cpp
 // compile with: /D "_UNICODE" /D "UNICODE" odbc32.lib /EHsc  
 #pragma once  
 #define WIN32_LEAN_AND_MEAN  
@@ -176,7 +176,7 @@ int _tmain(int argc, _TCHAR* argv[]) {
 }  
 ```  
   
-```  
+```sql
 USE master  
 GO  
 -- Drop the filestream demo database  

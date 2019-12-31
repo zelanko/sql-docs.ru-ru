@@ -1,6 +1,6 @@
 ---
-title: Точки останова Transact-SQL | Документация Майкрософт
-ms.custom: ''
+title: Точки останова Transact-SQL
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -12,12 +12,12 @@ ms.assetid: c234430f-bd94-4d0d-9e74-2bf11681fa50
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e170a2177ceefb0329e85f8fbf252cc62de76469
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 024f079d28c5ce144282bf09fff675fd308a8173
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66063559"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243142"
 ---
 # <a name="transact-sql-breakpoints"></a>Точки останова Transact-SQL
   Точка останова указывает, что отладчик [!INCLUDE[tsql](../../includes/tsql-md.md)] приостанавливает выполнение на конкретной инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] , после чего можно просмотреть состояние элементов кода на данном этапе.  

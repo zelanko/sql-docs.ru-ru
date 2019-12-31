@@ -19,18 +19,18 @@ helpviewer_keywords:
 ms.assetid: 6160f15d-1b68-411e-ab6d-491ec288f264
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cfd81188f0e751fb57c2d4a29ce61d574cfe3486
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: HT
+ms.openlocfilehash: fedb0808c6071ec6a6ba9bb7bd985a43890cce3d
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68119621"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75245072"
 ---
-# <a name="srvsetutype-extended-stored-procedure-api"></a>srv_setutype (API-интерфейс расширенных хранимых процедур)
+# <a name="srv_setutype-extended-stored-procedure-api"></a>srv_setutype (API-интерфейс расширенных хранимых процедур)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Используйте вместо этого интеграцию со средой CLR.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]Вместо этого используйте интеграцию со средой CLR.  
   
  Устанавливает определяемый пользователем тип данных для столбца строки.  
   
@@ -54,7 +54,7 @@ user_type
  *srvproc*  
  Указатель на структуру SRV_PROC, который представляет собой дескриптор соединения с клиентом. Эта структура содержит сведения, которые используются библиотекой API-интерфейса расширенных хранимых процедур для управления связью и передачи данных между приложением и клиентом.  
   
- *column*  
+ *рубрик*  
  Указывает, какой столбец устанавливать. Нумерация столбцов начинается с 1.  
   
  *user_type*  
@@ -63,15 +63,15 @@ user_type
 ## <a name="returns"></a>Возвращает  
  SUCCEED или FAIL. Если столбец не существует, возвращает значение FAIL.  
   
-## <a name="remarks"></a>Remarks  
- Столбец имеет два типа данных: фактический и определяемый пользователем. Определяемый пользователем тип данных используется [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для хранения действительного определяемого пользователем типа данных столбца, и сведения об описании столбца, например допустимость значения NULL и возможность обновления (если таковые существуют).  
+## <a name="remarks"></a>Замечания  
+ Столбец имеет два типа данных: фактический и определяемый пользователем. Определяемый пользователем тип данных используется [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для хранения фактического определяемого пользователем типа данных столбца, если таковые имеются, и сведения о описании столбца, такие как допустимость значений NULL и возможность обновления для столбца.  
   
  Функцию **srv_setutype** можно вызвать в любое время после определения *column* с помощью функции **srv_describe** и до передачи последней строки.  
   
 > [!IMPORTANT]  
->  Необходимо тщательно просмотреть исходный код расширенных хранимых процедур и проверить скомпилированные библиотеки DLL перед их установкой на рабочий сервер. Сведения о проверке безопасности см. на следующем [веб-сайте Майкрософт](https://www.microsoft.com/en-us/msrc?rtc=1).  
+>  Необходимо тщательно просмотреть исходный код расширенных хранимых процедур и проверить скомпилированные библиотеки DLL перед их установкой на рабочий сервер. Сведения о проверке безопасности см. на следующем [веб-сайте Майкрософт](https://www.microsoft.com/msrc?rtc=1).  
   
-## <a name="see-also"></a>См. также:  
- [srv_describe (интерфейс API расширенных хранимых процедур)](../../relational-databases/extended-stored-procedures-reference/srv-describe-extended-stored-procedure-api.md)  
+## <a name="see-also"></a>См. также  
+ [API srv_describe &#40;расширенных хранимых процедур&#41;](../../relational-databases/extended-stored-procedures-reference/srv-describe-extended-stored-procedure-api.md)  
   
   

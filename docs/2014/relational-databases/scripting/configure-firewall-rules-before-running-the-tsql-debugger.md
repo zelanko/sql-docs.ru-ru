@@ -1,6 +1,6 @@
 ---
-title: Настройка отладчика Transact-SQL | Документация Майкрософт
-ms.custom: ''
+title: Настройка отладчика Transact-SQL
+ms.custom: seo-lt-2019
 ms.date: 10/20/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -21,12 +21,12 @@ ms.assetid: f50e0b0d-eaf0-4f4a-be83-96f5be63e7ea
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2ec17b61d0ea5d3f44967b517ea3e60c6b6785c6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 60d5af2752a426faca3069541deeae3a6aa4f495
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66064192"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75245192"
 ---
 # <a name="configure-the-transact-sql-debugger"></a>Настройка отладчика Transact-SQL
   Необходимо настроить правила брандмауэра Windows, включив отладку [!INCLUDE[tsql](../../includes/tsql-md.md)] при подключении к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] , который работает на компьютере, отличном от того, на котором работает редактор запросов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
@@ -56,7 +56,7 @@ ms.locfileid: "66064192"
   
     2.  В диалоговом окне **Тип правила** выберите **Программа**и нажмите кнопку **Далее**.  
   
-    3.  В диалоговом окне **Программа** выберите элемент **Путь к этой программе** и введите полный путь к файлу sqlservr.exe для данного экземпляра. По умолчанию sqlservr.exe устанавливается в C:\Program Files\Microsoft SQL Server\MSSQL12. *InstanceName*\MSSQL\Binn, где *InstanceName* — это MSSQLSERVER для экземпляра по умолчанию или имя любого именованного экземпляра.  
+    3.  В диалоговом окне **Программа** выберите элемент **Путь к этой программе** и введите полный путь к файлу sqlservr.exe для данного экземпляра. По умолчанию sqlservr. exe устанавливается в папку C:\Program Files\Microsoft SQL Server\MSSQL12. *InstanceName*\MSSQL\Binn, где *instanceName* — MSSQLSERVER для экземпляра по умолчанию, и имя экземпляра для любого именованного экземпляра.  
   
     4.  В диалоговом окне **Действие** выберите **Разрешить соединение**и нажмите кнопку **Далее**.  
   
@@ -150,19 +150,20 @@ ms.locfileid: "66064192"
 ## <a name="requirements-for-starting-the-debugger"></a>Требования к запуску отладчика  
  Все попытки запустить отладчик [!INCLUDE[tsql](../../includes/tsql-md.md)] должны также отвечать следующим требованиям.  
   
-* [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] должна быть запущена под учетной записью, которая является членом предопределенной роли сервера sysadmin.  
+* 
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] должна быть запущена под учетной записью, которая является членом предопределенной роли сервера sysadmin.  
   
 * Окно редактора запросов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] должно быть подключено с помощью имени входа для проверки подлинности Windows или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , которое является членом предопределенной роли сервера sysadmin.  
   
 * Окно редактора запросов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] должно быть подключено к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] из [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] с пакетом обновления 2 (SP2) или более поздней версии. Когда окно редактора запросов подключено к экземпляру, работающему в однопользовательском режиме, отладчик запустить невозможно.
 
-* Сервер должен обмениваться данными с клиентом через RPC. Учетная запись, под которой запущена служба SQL Server должен иметь разрешения для клиента на проверку подлинности.  
+* Сервер должен обмениваться данными с клиентом через RPC. Учетная запись, под которой выполняется служба SQL Server, должна иметь разрешения на проверку подлинности для клиента.  
   
 ## <a name="see-also"></a>См. также  
  [Отладчик Transact-SQL](transact-sql-debugger.md)   
  [Запуск отладчика Transact-SQL](run-the-transact-sql-debugger.md)   
- [Пошаговая отладка кода Transact-SQL](step-through-transact-sql-code.md)   
+ [Шаг с заходом в код Transact-SQL](step-through-transact-sql-code.md)   
  [Сведения отладчика Transact-SQL](transact-sql-debugger-information.md)   
- [Редактор запросов компонента Database Engine (среда SQL Server Management Studio)](database-engine-query-editor-sql-server-management-studio.md)  
+ [Редактор запросов ядро СУБД &#40;SQL Server Management Studio&#41;](database-engine-query-editor-sql-server-management-studio.md)  
   
   

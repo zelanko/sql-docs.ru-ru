@@ -1,6 +1,6 @@
 ---
-title: Импорт сведений о зарегистрированном сервере (среда SQL Server Management Studio) | Документация Майкрософт
-ms.custom: ''
+title: Импорт сведений о зарегистрированном сервере
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -13,15 +13,15 @@ helpviewer_keywords:
 - Registered Servers [SQL Server], importing
 - importing registered server information
 ms.assetid: cc497a14-1360-4887-b70c-002f042823b6
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0106bc32724bbe4e2e2faed4ead5750440508d7d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: 32ef669c238c52ec5e5e20804c896b4364c8bc85
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63191907"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75241353"
 ---
 # <a name="import-registered-server-information-sql-server-management-studio"></a>Импорт сведений о зарегистрированном сервере (среда SQL Server Management Studio)
   В этом разделе описывается, как импортировать сохраненные сведения о зарегистрированных серверах в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Экспорт и импорт файлов зарегистрированных серверов позволяет легко настроить для нескольких компьютеров одинаковые зарегистрированные серверы. Это удобно при управлении большим количеством серверов с компьютеров, расположенных в различных местах, или если требуется сконфигурировать базовые настройки соединения для менее опытных пользователей.  
@@ -39,7 +39,7 @@ ms.locfileid: "63191907"
   
 3.  В диалоговом окне **Импорт данных о зарегистрированных серверах** выберите зарегистрированные серверы, которые нужно импортировать, и нажмите кнопку **ОК**.  
   
-     **Файл импорта**  
+     **Импорт файла**  
      Введите в текстовое поле имя файла импорта или нажмите кнопку обзора (**...**), чтобы найти файл импорта на клиентском компьютере. Если выбрать существующий файл, то сведения о зарегистрированном сервере добавятся в этот файл. Файлом импорта может быть только ранее экспортированный файл зарегистрированных серверов. Файлы зарегистрированных серверов имеют расширение REGSVR.  
   
      **Выберите группу серверов для импорта**  
@@ -52,7 +52,7 @@ ms.locfileid: "63191907"
  Регистрации серверов, использующие метод проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , хранят пароли отдельно для каждого пользователя. После импорта регистраций серверов пользователи должны ввести пароль при первом подключении к каждому серверу, сохраняя пароли в списке зарегистрированных серверов. Если серверы зарегистрированы с помощью проверки подлинности Windows, нет необходимости использовать эту операцию.  
   
 ## <a name="see-also"></a>См. также  
- [Изменение регистрационных данных сервера &#40;SQL Server Management Studio&#41; ](change-a-server-s-registration-sql-server-management-studio.md) [Экспорт сведений о зарегистрированных серверах &#40;SQL Server Management Studio&#41;](export-registered-server-information-sql-server-management-studio.md)   
- [Создание нового зарегистрированного сервера (среда SQL Server Management Studio)](create-a-new-registered-server-sql-server-management-studio.md)  
+ [Изменение &#40;регистрации сервера SQL Server Management Studio&#41;](change-a-server-s-registration-sql-server-management-studio.md) [Экспорт сведений о зарегистрированных серверах &#40;SQL Server Management Studio&#41;](export-registered-server-information-sql-server-management-studio.md)   
+ [Создать &#40;SQL Server Management Studio зарегистрированного сервера&#41;](create-a-new-registered-server-sql-server-management-studio.md)  
   
   

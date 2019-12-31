@@ -1,6 +1,6 @@
 ---
-title: Окно "Локальные переменные" | Документация Майкрософт
-ms.custom: ''
+title: окно локальных переменных
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -12,12 +12,12 @@ ms.assetid: 59bea640-7823-4b4d-832c-f384d83cca2f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 503a92349f7b7cfecdd4bd72de507da0a5835f7d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 44aedf7d53b2a9ad91b37f5023c13d8e20097da1
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66063382"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243053"
 ---
 # <a name="locals-window"></a>окно локальных переменных
   В окне **Локальные переменные** отображаются сведения о локальных выражениях в текущей области отладчика [!INCLUDE[tsql](../../includes/tsql-md.md)] . Областью является текущий кадр стека вызова, выбранный в окне **Стек вызовов** . Чтобы иметь возможность просматривать локальные выражения, необходимо находиться в режиме отладки.  
@@ -29,13 +29,13 @@ ms.locfileid: "66063382"
   
  **Изменение значения выражения**  
   
--   Щелкните правой кнопкой мыши выражение и выберите **Изменить значение**.  
+-   Щелкните правой кнопкой мыши выражение и выберите команду **Изменить значение**.  
   
 ## <a name="columns"></a>Столбцы  
- **Name**  
+ **Безымян**  
  Имя локального выражения. В отладчике [!INCLUDE[tsql](../../includes/tsql-md.md)] перечисляются переменные, параметры и системные функции, имена которых начинаются с @@.  
   
- **Value**  
+ **Значений**  
  Отображается значение, которое в настоящее время присвоено локальному выражению. Этот столбец остается пустым, если выражению не присвоено значение.  
   
  Если длина выражения больше ширины столбца **Значение** , полное значение отображается в подсказке при перемещении указателя на ячейку **Значение** для этого выражения.  
@@ -48,7 +48,7 @@ ms.locfileid: "66063382"
 ## <a name="see-also"></a>См. также  
  [Отладчик Transact-SQL](transact-sql-debugger.md)   
  [Сведения отладчика Transact-SQL](transact-sql-debugger-information.md)   
- [окно просмотра значений](transact-sql-debugger-watch-window.md)   
+ [Окно контрольных значений](transact-sql-debugger-watch-window.md)   
  [Окно стека вызовов](transact-sql-debugger-call-stack-window.md)   
- [Диалоговое окно «Быстрая проверка»](transact-sql-debugger-quickwatch-dialog-box.md)   
- [Выражения (Transact-SQL)](/sql/t-sql/language-elements/expressions-transact-sql)  
+ [Диалоговое окно "Быстрая проверка"](transact-sql-debugger-quickwatch-dialog-box.md)   
+ [Выражения &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/expressions-transact-sql)  

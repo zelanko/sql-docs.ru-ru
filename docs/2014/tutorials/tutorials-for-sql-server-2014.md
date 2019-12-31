@@ -10,15 +10,15 @@ ms.assetid: a93667ad-e856-405a-9328-065331b7ab7b
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 21c94cbc7b5adc1e65cb21aa14d4ab2cec9122ce
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: be20c79c4c44d65b4d6b1177d06cea5ef66c164b
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68892932"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75242057"
 ---
 # <a name="tutorials-for-sql-server-2014"></a>Учебные материалы по SQL Server 2014
-  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] добавлено много новых технологий и возможностей.  
+  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]предоставляет множество новых технологий и функций.  
   
  В будущем планируется добавить другие учебники. Тем временем можно продолжить обучение с помощью учебников [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] . В некоторых случаях можно выявить незначительные отличия между пользовательским интерфейсом в [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] и [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] , также возможны небольшие отличия в предварительных требованиях для учебников. Если учебник использует одну из баз данных [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] , необходимо загрузить и использовать версию [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] .  
   
@@ -29,11 +29,11 @@ ms.locfileid: "68892932"
 -   Чтобы скачать книгу [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] и отчеты [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] для использования с учебниками [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] , перейдите на страницу [Файлы изображений для образца модели HelloWorldPicnic в PowerPivot и Power View](https://www.microsoft.com/download/details.aspx?id=26719).  
   
     > [!NOTE]  
-    >  [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)]— [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] это функция [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] надстройки для [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[SPS2010](../includes/sps2010-md.md)] выпуска Enterprise Edition.  
+    >  [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)]— [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] это функция надстройки для [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[SPS2010](../includes/sps2010-md.md)] выпуска Enterprise Edition.  
   
--   Чтобы скачать базы данных [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] версии [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] , перейдите на страницу [образцов баз данных Adventure Works 2014](http://msftdbprodsamples.codeplex.com/releases/view/125550) на сайте CodePlex.  
+-   Чтобы скачать базы данных [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] версии [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] , перейдите на страницу [образцов баз данных Adventure Works 2014](https://msftdbprodsamples.codeplex.com/releases/view/125550) на сайте CodePlex.  
   
--   Чтобы скачать базы данных [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] версии [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] , перейдите на страницу [Adventure Works для SQL Server 2012](http://msftdbprodsamples.codeplex.com/releases/view/55330) на сайте CodePlex.  
+-   Чтобы скачать базы данных [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] версии [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] , перейдите на страницу [Adventure Works для SQL Server 2012](https://msftdbprodsamples.codeplex.com/releases/view/55330) на сайте CodePlex.  
   
 -   Чтобы просмотреть список учебников по [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] , перейдите по ссылке [Учебники](https://msdn.microsoft.com/library/ms167593.aspx) в библиотеке MSDN.  
   
@@ -42,11 +42,10 @@ ms.locfileid: "68892932"
   
 |Технология|Описание|  
 |----------------|-----------------|  
-|[Учебники по службам Analysis Services (SSAS)](https://docs.microsoft.com/analysis-services/analysis-services-tutorials-ssas)|Сведения о разработке и развертывании табличных и многомерных моделей служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Также рассказывается об использовании таких средств, как PowerPivot для анализа данных в моделях.|  
-|[Учебники по службам Reporting Services (SSRS)](../reporting-services/reporting-services-tutorials-ssrs.md)|Научитесь создавать основные отчеты и подписки.|  
-|[Учебники по службам Integration Services](../integration-services/integration-services-tutorials.md)|Узнайте, как создавать и развертывать пакеты [!INCLUDE[ssIS](../includes/ssis-md.md)] .|  
-|[Учебники по компоненту ядра СУБД](../relational-databases/database-engine-tutorials.md)|Узнайте, как подключаться к экземпляру ядра СУБД, а затем создавать и выполнять инструкции Transact-SQL.|  
+|[Учебники по Analysis Services &#40;SSAS&#41;](https://docs.microsoft.com/analysis-services/analysis-services-tutorials-ssas)|Сведения о разработке и развертывании табличных и многомерных моделей служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Также рассказывается об использовании таких средств, как PowerPivot для анализа данных в моделях.|  
+|[Reporting Services учебники &#40;службы SSRS&#41;](../reporting-services/reporting-services-tutorials-ssrs.md)|Научитесь создавать основные отчеты и подписки.|  
+|[Учебники по Integration Services](../integration-services/integration-services-tutorials.md)|Узнайте, как создавать и развертывать пакеты [!INCLUDE[ssIS](../includes/ssis-md.md)] .|  
+|[Учебники по ядро СУБД](../relational-databases/database-engine-tutorials.md)|Узнайте, как подключаться к экземпляру ядра СУБД, а затем создавать и выполнять инструкции Transact-SQL.|  
 |[Учебники по репликации](../relational-databases/replication/replication-tutorials.md)|Сведения об установке и запуске топологий репликации с помощью [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].|  
-|[Учебники по информационному менеджменту предприятия](../../2014/tutorials/enterprise-information-management-tutorials.md)|Сведения о том, как осуществляется управление данными на предприятии с использованием технологии Microsoft EIM.|  
-  
+|[Учебники по управлению информацией на предприятии](../../2014/tutorials/enterprise-information-management-tutorials.md)|Сведения о том, как осуществляется управление данными на предприятии с использованием технологии Microsoft EIM.|  
   

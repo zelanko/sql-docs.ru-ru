@@ -1,6 +1,5 @@
 ---
-title: С помощью диаграммы обновления в образце приложения ASP (SQLXML 4.0) | Документация Майкрософт
-ms.custom: ''
+title: Использование диаграмма обновления в примере приложения ASP (SQLXML)
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -14,13 +13,14 @@ helpviewer_keywords:
 ms.assetid: 10eff799-4c39-4b52-8b38-7ea6f68454a8
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 57d28079992cceefb913b1418c1092a5d96f3c7c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7b6c69fe48cf64010d530af8a2cda621814cf4ba
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68046534"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75246086"
 ---
 # <a name="using-an-updategram-in-a-sample-asp-application-sqlxml-40"></a>Использование диаграммы обновления в образце приложения ASP (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "68046534"
   
  Затем пользователь может обновить контактную информацию, но не идентификатор контактного лица (так как ContactID является первичным ключом). После того как пользователь вводит данные, выполняется диаграмма обновления, которой передаются все параметры из формы.  
   
- Следующий шаблон является первым шаблоном (GetContact.xml). Сохраните этот шаблон в каталоге, который связан с виртуальное имя **шаблона** типа.  
+ Следующий шаблон является первым шаблоном (GetContact.xml). Сохраните этот шаблон в каталоге, связанном с виртуальным именем типа **шаблона** .  
   
 ```  
 <root xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -50,7 +50,7 @@ ms.locfileid: "68046534"
 </root>  
 ```  
   
- Следующий шаблон является вторым шаблоном (UpdateContact.xml). Сохраните этот шаблон в каталоге, который связан с виртуальное имя **шаблона** типа.  
+ Следующий шаблон является вторым шаблоном (UpdateContact.xml). Сохраните этот шаблон в каталоге, связанном с виртуальным именем типа **шаблона** .  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -161,6 +161,6 @@ You may update customer information below.<br><br>
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Вопросы безопасности диаграмм обновления &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
+ [Вопросы безопасности диаграмма обновления &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
   
   
