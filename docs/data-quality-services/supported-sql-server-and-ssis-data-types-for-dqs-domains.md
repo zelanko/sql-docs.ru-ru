@@ -1,5 +1,7 @@
 ---
-title: Типы данных SQL Server и службы SSIS, поддерживаемые для доменов DQS
+title: Поддерживаемые типы данных SQL Server и SSIS для доменов DQS
+description: Описывает четыре типа данных для доменов служб Data Quality Services (DQS) (данные, десятичные, целочисленные и строковые) в SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 11/08/2011
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -9,14 +11,14 @@ ms.topic: conceptual
 ms.assetid: 4931143a-b84d-478b-9b45-174128d36ed3
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 57950290bdf2b7f83463fa6b950db90a4bdbb9f0
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: cff5cf3a2a6095b79537571d63ee428c500789c6
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75257773"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558174"
 ---
-# <a name="supported-sql-server-and-ssis-data-types-for-dqs-domains"></a>Типы данных SQL Server и службы SSIS, поддерживаемые для доменов DQS
+# <a name="supported-sql-server-and-ssis-data-types-for-dqs-domains"></a>Поддерживаемые типы данных SQL Server и SSIS для доменов DQS
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
@@ -25,7 +27,7 @@ ms.locfileid: "75257773"
 > [!NOTE]  
 >  В XLSX-файлах и XLS-файлах тип данных исходного столбца определяется по преобладающему типу данных в первых восьми строках. Если данные в ячейке не соответствуют данному типу, ячейке присваивается значение NULL. Аналогичным образом, в CSV-файлах тип данных исходного столбца определяется по преобладающему типу данных в первых восьми строках.  
   
-##  <a name="SQLServer"></a>Поддерживаемые типы данных SQL Server  
+##  <a name="SQLServer"></a>Поддерживаемые типы данных SQL Server 
  В следующей таблице приведены сведения о типах данных SQL Server, поддерживаемых для каждого из типов данных домена DQS.  
   
 |Тип данных доменов DQS|Поддерживаемый тип данных SQL Server|  
