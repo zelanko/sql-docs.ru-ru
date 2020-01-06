@@ -1,6 +1,5 @@
 ---
-title: Цель "Средство трассировки событий для Windows" | Документация Майкрософт
-ms.custom: ''
+title: Цель «Средство трассировки событий для Windows»
 ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -15,12 +14,12 @@ ms.assetid: ca2bb295-b7f6-49c3-91ed-0ad4c39f89d5
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ac1191d870d7fe745cdbed0e17892c5c2cf34435
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8923769d3edb35b328c9b0351fd9700ff9168c6c
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68021860"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75234656"
 ---
 # <a name="event-tracing-for-windows-target"></a>Цель «Средство трассировки событий для Windows»
 
@@ -52,7 +51,7 @@ ms.locfileid: "68021860"
   
  В следующей таблице описаны доступные параметры для настройки назначения ETW.  
   
-|Параметр|Допустимые значения|Описание|  
+|Параметр|Допустимые значения|Description|  
 |------------|--------------------|-----------------|  
 |default_xe_session_name|Любая строка длиной до 256 символов. Это значение является необязательным.|Имя сеанса расширенных событий. По умолчанию это XE_DEFAULT_ETW_SESSION.|  
 |default_etw_session_logfile_path|Любая строка длиной до 256 символов. Это значение является необязательным.|Путь к файлу журнала сеанса расширенных событий. По умолчанию %TEMP%\ XEEtw.etl.|  

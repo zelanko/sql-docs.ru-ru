@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - service master key [SQL Server], exporting
 ms.assetid: f60b917c-6408-48be-b911-f93b05796904
-author: aliceku
-ms.author: aliceku
-ms.openlocfilehash: 3ce0d7685c042e22e45cd85e05a8e7f779045ee6
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+author: jaszymas
+ms.author: jaszymas
+ms.openlocfilehash: 1fa730e1143516df2fe5f14c04afcbb9292ac67f
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72903004"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957488"
 ---
 # <a name="back-up-the-service-master-key"></a>Создание резервной копии главного ключа службы
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "72903004"
   
 1. В среде [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]установите соединение с экземпляром [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , содержащим главный ключ службы, для которого необходимо создать резервную копию.  
   
-2. Задайте пароль, который будет использоваться для шифрования главного ключа службы на носителе данных резервных копий. Пароль проходит проверку сложности. Дополнительные сведения см. в разделе [Password Policy](../../../relational-databases/security/password-policy.md).  
+2. Задайте пароль, который будет использоваться для шифрования главного ключа службы на носителе данных резервных копий. Пароль проходит проверку сложности. Дополнительные сведения см. в разделе [Политика паролей](../../../relational-databases/security/password-policy.md).  
   
 3. Получите съемный носитель данных резервной копии для хранения главного ключа.  
   

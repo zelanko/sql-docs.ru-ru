@@ -10,12 +10,12 @@ ms.topic: tutorial
 ms.assetid: 84d0b877-603f-4f8e-bb6b-671558ade5c2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f7dbb0c4b512741f97dbce2794c83d3667142324
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: ff31579a425f9e86fed11811c9d0a42c3113ee15
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71296069"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257074"
 ---
 # <a name="lesson-1-create-a-project-and-basic-package-with-ssis"></a>Урок 1. Создание проекта и простого пакета с помощью служб SSIS
 
@@ -35,7 +35,7 @@ ms.locfileid: "71296069"
   
 * Чтобы скачать все пакеты занятий этого учебника, выполните указанные ниже действия.
 
-    1.  Перейдите к [учебным файлам для служб Integration Services](https://www.microsoft.com/en-us/download/details.aspx?id=56827).
+    1.  Перейдите к [учебным файлам для служб Integration Services](https://www.microsoft.com/download/details.aspx?id=56827).
 
     2.  Нажмите кнопку **Скачать**.
 
@@ -66,7 +66,7 @@ ms.locfileid: "71296069"
 ## <a name="look-at-the-destination-data"></a>Обзор данных назначения
 Назначением исходных данных является копия таблицы фактов **FactCurrencyRate** в базе данных **AdventureWorksDW**. Таблица фактов **FactCurrencyRate** имеет четыре столбца и связи с двумя таблицами измерений, как показано в следующей таблице.  
   
-|Имя столбца|Тип данных|Таблица уточняющих запросов|Уточняющий столбец|  
+|Имя столбца|Тип данных|Таблица уточняющих запросов|столбцом подстановки|  
 |---------------|-------------|----------------|-----------------|  
 |AverageRate|FLOAT|None|None|  
 |CurrencyKey|int (FK)|DimCurrency|CurrencyKey (PK)|  
@@ -78,7 +78,7 @@ ms.locfileid: "71296069"
   
 |Столбец неструктурированных файлов|Имя таблицы|Имя столбца|Тип данных|  
 |--------------------|--------------|---------------|-------------|  
-|0|FactCurrencyRate|AverageRate|float|  
+|0|FactCurrencyRate|AverageRate|FLOAT|  
 |1|DimCurrency|CurrencyAlternateKey|nchar (3)|  
 |2|DimDate|FullDateAlternateKey|Дата|  
 |3|FactCurrencyRate|EndOfDayRate|FLOAT|  
@@ -86,17 +86,17 @@ ms.locfileid: "71296069"
 ## <a name="lesson-tasks"></a>Задачи занятия  
 Это занятие содержит следующие задачи.  
   
--   [Шаг 1. Создание проекта служб Integration Services](../integration-services/lesson-1-1-creating-a-new-integration-services-project.md)  
+-   [Шаг 1. Создание проекта служб Integration Services](../integration-services/lesson-1-1-creating-a-new-integration-services-project.md)  
   
--   [Шаг 2. Добавление и настройка диспетчера подключений к неструктурированным файлам](../integration-services/lesson-1-2-adding-and-configuring-a-flat-file-connection-manager.md)  
+-   [Шаг 2. Добавление и настройка диспетчера соединений с неструктурированными файлами](../integration-services/lesson-1-2-adding-and-configuring-a-flat-file-connection-manager.md)  
   
--   [Шаг 3. Добавление и настройка диспетчера подключений OLE DB](../integration-services/lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md)  
+-   [Шаг 3. Добавление и настройка диспетчера подключений OLE DB](../integration-services/lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md)  
   
--   [Шаг 4. Добавление задачи потока данных к пакету](../integration-services/lesson-1-4-adding-a-data-flow-task-to-the-package.md)  
+-   [Шаг 4. Добавление задачи потока данных к пакету](../integration-services/lesson-1-4-adding-a-data-flow-task-to-the-package.md)  
   
--   [Шаг 5. Добавление и настройка источника "Неструктурированный файл"](../integration-services/lesson-1-5-adding-and-configuring-the-flat-file-source.md)  
+-   [Шаг 5. Добавление и настройка источника "Неструктурированный файл"](../integration-services/lesson-1-5-adding-and-configuring-the-flat-file-source.md)  
   
--   [Шаг 6. Добавление и настройка преобразований "Уточняющий запрос"](../integration-services/lesson-1-6-adding-and-configuring-the-lookup-transformations.md)  
+-   [Шаг 6. Добавление и настройка преобразований "Уточняющий запрос"](../integration-services/lesson-1-6-adding-and-configuring-the-lookup-transformations.md)  
   
 -   [Шаг 7. Добавление и настройка назначения OLE DB](../integration-services/lesson-1-7-adding-and-configuring-the-ole-db-destination.md)  
   
@@ -105,5 +105,5 @@ ms.locfileid: "71296069"
 -   [Шаг 9. Тестирование пакета занятия 1](../integration-services/lesson-1-9-testing-the-lesson-1-tutorial-package.md)  
   
 ## <a name="start-the-lesson"></a>Начало занятия  
-[Шаг 1. Создание проекта служб Integration Services](../integration-services/lesson-1-1-creating-a-new-integration-services-project.md)  
+[Шаг 1. Создание проекта служб Integration Services](../integration-services/lesson-1-1-creating-a-new-integration-services-project.md)  
   

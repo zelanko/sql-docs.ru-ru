@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: bc9ec10cd88bdaa5536674df78c9b73700575516
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e2116c0a587b82f289f5dba17968f3eb42e47c05
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68020810"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75228250"
 ---
 # <a name="connect-to-an-always-on-availability-group-listener"></a>Подключение к прослушивателю группы доступности Always On 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +77,7 @@ ms.locfileid: "68020810"
  Чтобы установить соединение с первичной репликой с доступом для чтения и записи с помощью прослушивателя группы доступности, необходимо указать в строке подключения DNS-имя прослушивателя группы доступности.  Если роль первичной реплики группы доступности переходит к другой реплике, существующие подключения, в которых используется сетевое имя прослушивателя группы доступности, разрываются.  Новые подключения к прослушивателю группы доступности будут перенаправляться к новой первичной реплике. Пример простейшей строки соединения для поставщика данных ADO.NET (System.Data.SqlClient) выглядит следующим образом:  
   
 ```  
-Server=tcp: AGListener,1433;Database=MyDB;IntegratedSecurity=SSPI  
+Server=tcp: AGListener,1433;Database=MyDB;Integrated Security=SSPI  
 ```  
   
  При всем этом вместо использования имени сервера прослушивателя группы доступности можно применять прямое обращение к имени экземпляра SQL Server первичной или вторичной реплики, однако в этом случае нельзя будет обеспечить автоматическое перенаправление новых подключений на текущую первичную реплику.  Также нельзя будет маршрутизировать подключения с доступом только для чтения.  
@@ -116,7 +116,7 @@ Server=tcp: AGListener,1433;Database=MyDB;IntegratedSecurity=SSPI
  Пример строки соединения для поставщика данных ADO.NET (Systen.Data.SqlClient) ADO.NET), обозначающий намерение приложение получить доступ только для чтения:  
   
 ```  
-Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;ApplicationIntent=ReadOnly  
+Server=tcp:AGListener,1433;Database=AdventureWorks;Integrated Security=SSPI;ApplicationIntent=ReadOnly  
 ```  
   
  В этом примере строки подключения клиент пытается подключиться к базе данных AdventureWorks посредством прослушивателя группы доступности `AGListener` через порт 1433 (номер порта также можно не указывать, если прослушиватель группы доступности отслеживает порт 1433).  В строке подключения свойству **ApplicationIntent** присвоено значение **ReadOnly**, что делает эту строку *строкой подключения с намерением чтения*.  Без этого параметра сервер не стал бы пытаться выполнить для этого подключения маршрутизацию только для чтения.  
@@ -163,7 +163,7 @@ Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;Appli
  Вот пример подобной строки подключения (позволяющей выполнять отработку отказа в нескольких подсетях) для поставщика данных ADO.NET (System.Data.SqlClient):  
   
 ```  
-Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI; MultiSubnetFailover=True  
+Server=tcp:AGListener,1433;Database=AdventureWorks;Integrated Security=SSPI; MultiSubnetFailover=True  
 ```  
   
  Параметру подключения **MultiSubnetFailover** следует задать значение **True** , даже если группа доступности размещена только в одной подсети.  Это позволяет настроить новых клиентов для обеспечения поддержки расширения в будущем без необходимости вносить какие-либо изменения в строки подключения клиентов, а также оптимизирует производительность отработки отказа при работе в одной подсети.  Хотя параметр подключения **MultiSubnetFailover** не является обязательным, он обеспечивает повышение скорости отработки отказа в подсети.  Обусловлено это тем, что драйвер клиента пытается открыть TCP-сокет для каждого IP-адреса, параллельно связанного с группой доступности.  Драйвер клиента ждет ответа от первого IP-адреса с сообщением об успехе, а после его получения использует этот IP-адрес для подключения.  

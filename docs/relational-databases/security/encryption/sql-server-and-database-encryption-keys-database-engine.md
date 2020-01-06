@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - keys [SQL Server], database encryption
 ms.assetid: 15c0a5e8-9177-484c-ae75-8c552dc0dac0
-author: aliceku
-ms.author: aliceku
-ms.openlocfilehash: fa61ee1fc916b4ff00a149ea41068e4b0231acd6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: jaszymas
+ms.author: jaszymas
+ms.openlocfilehash: b035af17631253ea01e6ca79ba7702a378df1df9
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68111573"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957354"
 ---
 # <a name="sql-server-and-database-encryption-keys-database-engine"></a>Ключи шифрования базы данных и SQL Server (компонент Database Engine)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "68111573"
 
 Главный ключ службы может быть открыт только учетной записью службы Windows, под которой он был создан, либо участником, имеющим доступ к имени и паролю учетной записи службы.
 
- [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] использует для защиты главного ключа службы и главного ключа базы данных алгоритм шифрования AES. AES — это новый алгоритм шифрования, отличный от алгоритма 3DES, используемого в более ранних версиях. После обновления экземпляра компонента [!INCLUDE[ssDE](../../../includes/ssde-md.md)] до [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] необходимо заново сформировать главный ключ службы и главный ключ базы данных, чтобы обновить главные ключи до алгоритма AES. Дополнительные сведения о повторном создании главного ключа базы данных см. в статьях [ALTER SERVICE MASTER KEY (Transact-SQL)](../../../t-sql/statements/alter-service-master-key-transact-sql.md) и [ALTER MASTER KEY (Transact-SQL)](../../../t-sql/statements/alter-master-key-transact-sql.md).
+ [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] использует для защиты главного ключа службы и главного ключа базы данных алгоритм шифрования AES. AES - это новый алгоритм шифрования, отличный от алгоритма 3DES, используемого в более ранних версиях. После обновления экземпляра компонента [!INCLUDE[ssDE](../../../includes/ssde-md.md)] до [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] необходимо заново сформировать главный ключ службы и главный ключ базы данных, чтобы обновить главные ключи до алгоритма AES. Дополнительные сведения о повторном создании главного ключа базы данных см. в статьях [ALTER SERVICE MASTER KEY (Transact-SQL)](../../../t-sql/statements/alter-service-master-key-transact-sql.md) и [ALTER MASTER KEY (Transact-SQL)](../../../t-sql/statements/alter-master-key-transact-sql.md).
 
 ### <a name="database-master-key"></a>Главный ключ базы данных
   
@@ -57,7 +57,7 @@ ms.locfileid: "68111573"
 -   Добавление или удаление экземпляра сервера из масштабного развертывания, когда несколько серверов используют одну базу данных и ключ, допускающий обратимое шифрование для этой базы данных.  
   
 ## <a name="important-security-information"></a>Важная информация по безопасности  
- Для доступа к объектам, защищенным главным ключом службы, необходима учетная запись службы [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , которая использовалась для создания ключа, или учетная запись компьютера. То есть, компьютер привязан к системе, в которой был создан ключ. Можно изменить учетную запись службы [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] *или* учетную запись компьютера, не теряя доступа к ключу. Однако если изменить обе учетные записи, доступ к главному ключу службы будет потерян. Если доступ к главному ключу службы будет потерян без одного из этих элементов, то не удастся расшифровать данные и объекты, зашифрованные с помощью первоначального ключа.  
+ Для доступа к объектам, защищенным главным ключом службы, необходима учетная запись службы [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , которая использовалась для создания ключа, или учетная запись компьютера. То есть, компьютер привязан к системе, в которой был создан ключ. Можно изменить учетную запись службы [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]*или* учетную запись компьютера, не теряя доступа к ключу. Однако если изменить обе учетные записи, доступ к главному ключу службы будет потерян. Если доступ к главному ключу службы будет потерян без одного из этих элементов, то не удастся расшифровать данные и объекты, зашифрованные с помощью первоначального ключа.  
   
  Соединения, защищенные с помощью главного ключа службы, не могут быть восстановлены без него.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "68111573"
 >  Если любой доступ к описанным выше ключам потерян, будет потерян доступ к объектам, соединениям и данным, защищенным этими ключами. Можно восстановить главный ключ службы, как описано в приведенных ссылках, или вернуться к первоначальной системе шифрования, чтобы восстановить доступ. Не существует аварийного способа восстановления доступа.  
   
 ## <a name="in-this-section"></a>в этом разделе  
- [Service Master Key](../../../relational-databases/security/encryption/service-master-key.md)  
+ [Главный ключ службы](../../../relational-databases/security/encryption/service-master-key.md)  
  Дано краткое объяснение главного ключа службы и рекомендации.  
   
  [Расширенное управление ключами &#40;EKM&#41;](../../../relational-databases/security/encryption/extensible-key-management-ekm.md)  

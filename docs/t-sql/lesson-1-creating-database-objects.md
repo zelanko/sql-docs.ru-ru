@@ -10,12 +10,12 @@ ms.assetid: 9fb8656b-0e4e-4ada-b404-4db4d3eea995
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b7f3f8ee0d5766214ed7dc111728c37d0d41f071
-ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
+ms.openlocfilehash: c6e19142ab4d447678aedf6c841a74ed435eccea
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73632907"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257019"
 ---
 # <a name="lesson-1-create-and-query-database-objects"></a>Урок 1. Создание объектов базы данных и отправка запросов к ним
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "73632907"
 ## <a name="prerequisites"></a>предварительные требования
 Для работы с этим руководством необходима среда SQL Server Management Studio и доступ к экземпляру SQL Server. 
 
-- Установите [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+- Установите [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 
 Если у вас нет доступа к экземпляру SQL Server, выберите свою платформу в следующих ссылках. При выборе проверки подлинности SQL используйте учетные данные SQL Server.
 - **Windows**: [Скачать выпуск SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads)
@@ -84,14 +84,14 @@ ms.locfileid: "73632907"
   ```  
   
 ### <a name="create-the-table"></a>Создание таблицы
-В окне редактора запросов введите и выполните следующий код, чтобы создать простую таблицу `Products`. Столбцы таблицы имеют имена `ProductID`, `ProductName`, `Price`и `ProductDescription`. Столбец `ProductID` является первичным ключом таблицы. `int`, `varchar(25)`, `money`и `text` . Только столбцы `Price` и `ProductionDescription` могут быть пустыми при вставке или изменении строки. Данная инструкция содержит необязательный элемент (`dbo.`), называемый схемой. Схема — это объект базы данных, к которому принадлежит таблица. Если вы являетесь администратором, схемой по умолчанию будет схема `dbo` . `dbo` означает владельца базы данных.  
+В окне редактора запросов введите и выполните следующий код, чтобы создать простую таблицу `Products`. Столбцы таблицы имеют имена `ProductID`, `ProductName`, `Price`и `ProductDescription`. Столбец `ProductID` является первичным ключом таблицы. `int`, `varchar(25)`, `money`и `varchar(max)` . Только столбцы `Price` и `ProductionDescription` могут быть пустыми при вставке или изменении строки. Данная инструкция содержит необязательный элемент (`dbo.`), называемый схемой. Схема — это объект базы данных, к которому принадлежит таблица. Если вы являетесь администратором, схемой по умолчанию будет схема `dbo` . `dbo` означает владельца базы данных.  
   
   ```sql  
   CREATE TABLE dbo.Products  
      (ProductID int PRIMARY KEY NOT NULL,  
      ProductName varchar(25) NOT NULL,  
      Price money NULL,  
-     ProductDescription text NULL)  
+     ProductDescription varchar(max) NULL)  
   GO  
  ```  
 
@@ -273,7 +273,7 @@ ms.locfileid: "73632907"
 
 Дополнительные сведения см. в следующей статье:
 > [!div class="nextstepaction"]
-> [Следующие шаги](../t-sql/lesson-2-configuring-permissions-on-database-objects.md)
+> [Дальнейшие действия](../t-sql/lesson-2-configuring-permissions-on-database-objects.md)
   
   
   

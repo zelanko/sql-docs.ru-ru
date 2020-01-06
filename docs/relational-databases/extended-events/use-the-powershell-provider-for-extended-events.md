@@ -1,6 +1,5 @@
 ---
-title: Использование поставщика PowerShell для расширенных событий | Документация Майкрософт
-ms.custom: ''
+title: Использование поставщика PowerShell для расширенных событий
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -15,12 +14,12 @@ ms.assetid: 0b10016f-a479-4444-a484-46cb4677cf64
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 01ce9869db83cd620ebade613f2582ff2adb9b19
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c7fba3c0ad9ab6f004d001b1a8e04d86e27d1818
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68009324"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75242889"
 ---
 # <a name="use-the-powershell-provider-for-extended-events"></a>Использование поставщика PowerShell для расширенных событий
 
@@ -48,7 +47,7 @@ ms.locfileid: "68009324"
   
 -   Скрипты должны запускаться из расположения PS SQLSERVER:\\> (для перехода в него введите в командной строке **sqlps**).  
   
--   Скрипты используют экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по умолчанию.  
+-   Скрипты используют экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]по умолчанию.  
   
 -   Скрипты должны сохраняться с расширением PS1.  
   

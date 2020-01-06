@@ -15,12 +15,12 @@ ms.assetid: b67b95c5-61ef-4bd8-9a3e-1640eb7583ac
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a7ca99bef5d0f5bf4f94eb02d76adff3109de059
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 822b98221139c9d67dde57cb78f3d969072f96bb
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68139613"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251213"
 ---
 # <a name="modify-columns-database-engine"></a>Изменение столбцов (компонент Database Engine)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "68139613"
   
 -   **Перед началом работы**  
   
-     [безопасность](#Security)  
+     [Безопасность](#Security)  
   
 -   **Изменение типа данных столбца с помощью следующих средств:**  
   
@@ -77,7 +77,7 @@ ms.locfileid: "68139613"
   
 3.  Скопируйте следующий пример в окно запроса и нажмите кнопку **Выполнить**.  
   
-    ```  
+    ```sql  
     CREATE TABLE dbo.doc_exy (column_a INT ) ;  
     GO  
     INSERT INTO dbo.doc_exy (column_a) VALUES (10) ;  

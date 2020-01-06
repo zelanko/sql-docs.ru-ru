@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: b456448d-1757-48c8-8bbb-2d1c2d6d61e9
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f404b0993978f48a940d301453ba276ccdc28abb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: dcff763612b51918eb13336379c01f1c1ac9e108
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014782"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822081"
 ---
-# <a name="always-on-client-connectivity-sql-server"></a>Подключение клиента AlwaysOn (SQL Server)
+# <a name="driver-and-client-connectivity-support-for-availability-groups"></a>Поддержка возможности подключения драйвера и клиента для групп доступности
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   В этом разделе обсуждаются особенности обеспечения подключений клиентов к группам доступности AlwaysOn, в том числе предварительные условия, ограничения и рекомендации по конфигурации и настройке клиентов.  

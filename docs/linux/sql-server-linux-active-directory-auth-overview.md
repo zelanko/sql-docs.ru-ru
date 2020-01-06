@@ -11,12 +11,12 @@ ms.prod: sql
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: 14cb6a377e6aeb0fbd24f9808a794d68633f4ce6
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 9f2e5632b073f96faf530db56d052d71f4a143f4
+ms.sourcegitcommit: f9286d02025ee1e15d0f1c124e951e8891fe3cc2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67834426"
+ms.lasthandoff: 12/23/2019
+ms.locfileid: "75329966"
 ---
 # <a name="active-directory-authentication-for-sql-server-on-linux"></a>Проверка подлинности Azure Active Directory для SQL Server на Linux
 
@@ -35,7 +35,7 @@ ms.locfileid: "67834426"
 - Каждый пользователь имеет единое удостоверение на уровне организации, благодаря чему вам не нужно отслеживать, каким людям соответствуют различные имена входа [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].   
 - AD позволяет применять централизованную политику управления паролями на уровне организации.   
 
-## <a name="configuration-steps"></a>Шаги настройки
+## <a name="configuration-steps"></a>Этапы настройки
 
 Чтобы использовать проверку подлинности Active Directory, в вашей сети должен присутствовать контроллер домена AD (Windows).
 
@@ -44,8 +44,8 @@ ms.locfileid: "67834426"
 1. [Присоединение узла SQL Server к домену Active Directory](sql-server-linux-active-directory-join-domain.md).
 1. [Создание пользователя AD для SQL Server и настройка свойства ServicePrincipalName](sql-server-linux-active-directory-authentication.md#createuser).
 1. [Настройка KEYTAB-файла службы SQL Server](sql-server-linux-active-directory-authentication.md#configurekeytab).
-1. [Защита KEYTAB-файла](sql-server-linux-active-directory-authentication.md#securekeytab).
-1. [Настройка SQL Server для использования KEYTAB-файла для проверки подлинности Kerberos](sql-server-linux-active-directory-authentication.md#keytabkerberos).
+1. [Защита KEYTAB-файла](sql-server-linux-active-directory-authentication.md#configurekeytab).
+1. [Настройка SQL Server для использования KEYTAB-файла для проверки подлинности Kerberos](sql-server-linux-active-directory-authentication.md#configurekeytab).
 1. [Создание имен входа SQL Server на основе AD в Transact-SQL](sql-server-linux-active-directory-authentication.md#createsqllogins).
 1. [Подключение к SQL Server с помощью проверки подлинности AD](sql-server-linux-active-directory-authentication.md#connect).
 

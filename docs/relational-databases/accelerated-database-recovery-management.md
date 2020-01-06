@@ -1,10 +1,8 @@
 ---
 title: Ускоренное восстановление баз данных | Документация Майкрософт
-ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: backup-restore
-ms.reviewer: kfarlee
 ms.technology: backup-restore
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,13 +10,14 @@ helpviewer_keywords:
 - database recovery [SQL Server]
 author: mashamsft
 ms.author: mathoma
+ms.reviewer: kfarlee
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: d825c7db4789ec1421cf43acd5897e932c7fa29a
-ms.sourcegitcommit: 183d622fff36a22b882309378892010be3bdcd52
+ms.openlocfilehash: 8fea43ea41bc3e65fa0a6b36c7557322431e95fd
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71130543"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75245261"
 ---
 # <a name="manage-accelerated-database-recovery"></a>Управление ускоренным восстановлением баз данных
 
@@ -84,10 +83,10 @@ PVS может потребоваться переместить в другую
    Чтобы можно было включить ADR с новым расположением постоянного хранилища версий, сначала необходимо убедиться в том, что все сведения о версиях были удалены из предыдущего расположения PVS. Чтобы произвести очистку принудительно, выполните следующую команду:
 
    ```sql
-   EXEC sys.sp_persistent_version_store_cleanup [database name]
+   EXEC sys.sp_persistent_version_cleanup [database name]
    ```
 
-   Хранимая процедура `sys.sp_persistent_version_store_cleanup` является синхронной, то есть она не будет завершена до тех пор, пока все сведения о версиях не будут удалены из текущего хранилища PVS.  После завершения ее выполнения можно проверить, действительно ли сведения о версиях были удалены, запросив динамическое административное представление `sys.dm_persistent_version_store_stats` и проверив значение `persistent_version_store_size_kb`.
+   Хранимая процедура `sys.sp_persistent_version_cleanup` является синхронной, то есть она не будет завершена до тех пор, пока все сведения о версиях не будут удалены из текущего хранилища PVS.  После завершения ее выполнения можно проверить, действительно ли сведения о версиях были удалены, запросив динамическое административное представление `sys.dm_persistent_version_store_stats` и проверив значение `persistent_version_store_size_kb`.
 
    ```sql
    SELECT DB_Name(database_id), persistent_version_store_size_kb 

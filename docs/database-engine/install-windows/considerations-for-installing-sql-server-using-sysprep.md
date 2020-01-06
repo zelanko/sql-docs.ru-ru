@@ -1,7 +1,7 @@
 ---
-title: Вопросы по установке SQL Server с помощью SysPrep | Документы Майкрософт
-ms.custom: ''
-ms.date: 09/05/2017
+title: Установка SQL Server с помощью SysPrep
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -10,12 +10,12 @@ ms.assetid: e1792eeb-2874-4653-b20e-3063f4eb4e5d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 0d2b063af4e9cc0c78a5bfe10c9aa6b2c1367743
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 448906ca9a9dcb1a29b4cfab323e610909546171
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68054200"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251581"
 ---
 # <a name="considerations-for-installing-sql-server-using-sysprep"></a>Вопросы по установке SQL Server с помощью SysPrep
 
@@ -72,7 +72,7 @@ ms.locfileid: "68054200"
   
 Во время настройки подготовленного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]можно выполнить обновление выпусков. Этот параметр не поддерживается для выпусков [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express.  
   
-Начиная с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep поддерживает установки кластера отработки отказа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] из командной строки.  
+Начиная с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep поддерживает установки кластера отработки отказа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] из командной строки.  
   
 ## <a name="includessnoversionincludesssnoversion-mdmd-sysprep-limitations"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep  
 Восстановление подготавливаемого экземпляра не поддерживается. При возникновении ошибки в работе программы установки во время подготовки образа или завершения его создания необходимо запустить мастер удаления.  

@@ -1,21 +1,21 @@
 ---
-title: Краткое руководство. Подключение и отправка запроса к базе данных SQL Azure
+title: Подключение и отправка запроса к базе данных SQL Azure
 titleSuffix: Azure Data Studio
 description: В этом кратком руководстве показано, как использовать Azure Data Studio для подключения к базе данных SQL и выполнения запроса.
-ms.custom: seodec18, sqlfreshmay19
-ms.date: 05/14/2019
 ms.prod: sql
 ms.technology: azure-data-studio
-ms.reviewer: alayu; sstein
+ms.reviewer: alayu; maghan; sstein
 ms.topic: quickstart
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: bdb1a9c8efb8ebdf5d2e35c1da00c12578ade7d6
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.custom: seodec18; sqlfreshmay19; seo-lt-2019
+ms.date: 05/14/2019
+ms.openlocfilehash: 2ed7841c3e6205ad0a6df4f232f021aeb24983cd
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67959438"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957078"
 ---
 # <a name="quickstart-use-includename-sosincludesname-sos-shortmd-to-connect-and-query-azure-sql-database"></a>Краткое руководство. Использование [!INCLUDE[name-sos](../includes/name-sos-short.md)] для подключения и отправки запроса к базе данных SQL Azure
 
@@ -44,10 +44,10 @@ ms.locfileid: "67959438"
 
 2. В этой статье используется вход SQL, но также поддерживается проверка подлинности Windows. Заполните следующие поля, указав имя сервера, имя пользователя и пароль для вашего сервера SQL Azure.
 
-   | Настройка       | Предлагаемое значение | Описание |
+   | Параметр       | Рекомендуемое значение | Description |
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **Имя сервера** | Полное имя сервера | Что-то вроде: **имя_сервера.база_данных.windows.net**. |
-   | **Проверка подлинности** | Имя входа SQL| В этом руководстве используется проверка подлинности SQL. |
+   | **Аутентификация** | Имя входа SQL| В этом руководстве используется проверка подлинности SQL. |
    | **User name** | Имя пользователя для учетной записи администратора сервера | Имя пользователя из учетной записи, использованной для создания сервера. |
    | **Пароль (имя входа SQL)** | Пароль для учетной записи администратора сервера | Пароль из учетной записи, использованной для создания сервера. |
    | **Сохранить пароль?** | "Да" или "Нет". | Чтобы не вводить пароль каждый раз, выберите **Да**. |
@@ -153,6 +153,6 @@ ms.locfileid: "67959438"
 
 Последующие статьи краткого руководства основываются на созданных здесь ресурсах. Если вы планируете работать с этими статьями, не удаляйте эти ресурсы. В противном случае удалите ненужные ресурсы на портале Azure. Подробные сведения см. в разделе [Очистка ресурсов](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-portal#clean-up-resources).
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 После успешного подключения к базе данных SQL Azure и выполнения запроса можно перейти к [руководству по редактору кода](tutorial-sql-editor.md).

@@ -8,12 +8,12 @@ ms.date: 01/09/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 68f3497e9f3f47d7e43c2bda0083bc25632d8221
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 0ee4c32568a52f5eb7664fa8f22250370f46f033
+ms.sourcegitcommit: a92fa97e7d3132ea201e4d86c76ac39cd564cd3c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68032437"
+ms.lasthandoff: 12/21/2019
+ms.locfileid: "75325481"
 ---
 # <a name="install-sql-server-integration-services-ssis-on-linux"></a>Установка служб SQL Server Integration Services (SSIS) в Linux
 
@@ -36,11 +36,18 @@ ms.locfileid: "68032437"
    ```
 
 2. Зарегистрируйте репозиторий Ubuntu для Microsoft SQL Server.
-
+<!--SQL Server 2017 on Linux-->
+::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
    ```bash
    sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017.list)"
    ```
-
+::: moniker-end
+<!--SQL Server 2019 on Linux-->
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+   ```bash
+   sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2019.list)"
+   ```
+::: moniker-end
 3. Выполните следующие команды для установки SQL Server Integration Services.
 
    ```bash
@@ -78,10 +85,18 @@ sudo apt-get remove mssql-server-is
 
 1. Скачайте файл конфигурации репозитория Microsoft SQL Server Red Hat.
 
+<!--SQL Server 2017 on Linux-->
+::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
    ```bash
    sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017.repo
    ```
-
+::: moniker-end
+<!--SQL Server 2019 on Linux-->
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+   ```bash
+   sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2019.repo
+   ```
+::: moniker-end
 1. Выполните следующие команды для установки SQL Server Integration Services.
 
    ```bash
@@ -131,13 +146,13 @@ sudo SSIS_PID=Developer ACCEPT_EULA=Y /opt/ssis/bin/ssis-conf -n setup
 
 ### <a name="environment-variables-for-unattended-installation"></a>Переменные среды для автоматической установки
 
-| Переменная среды | Описание |
+| Переменная среды | Description |
 |---|---|
 | **ACCEPT_EULA** | Принимает условия лицензионного соглашения SQL Server при задании любого значения (например, `Y`).|
-| **SSIS_PID** | Указывает выпуск SQL Server или ключ продукта. Возможные значения<br/>Ознакомительная версия<br/>Разработчик<br/>Express <br/>Web Edition <br/>Standard<br/>Enterprise <br/>Ключ продукта<br/><br/>Если указывается ключ продукта, он должен иметь форму `#####-#####-#####-#####-#####`, где `#` — буква или цифра.  |
+| **SSIS_PID** | Указывает выпуск SQL Server или ключ продукта. Возможные значения<br/>Ознакомительная версия<br/>Разработчик<br/>Express <br/>Интернет <br/>Standard<br/>Enterprise <br/>Ключ продукта<br/><br/>Если указывается ключ продукта, он должен иметь форму `#####-#####-#####-#####-#####`, где `#` — буква или цифра.  |
 | | |
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 Чтобы запустить пакеты SSIS в Linux, см. статью [Извлечение, преобразование и загрузка данных для SQL Server в Linux с помощью служб SSIS](sql-server-linux-migrate-ssis.md).
 
@@ -147,4 +162,4 @@ sudo SSIS_PID=Developer ACCEPT_EULA=Y /opt/ssis/bin/ssis-conf -n setup
 -   [Извлечение, преобразование и загрузка данных в Linux с помощью служб SSIS](sql-server-linux-migrate-ssis.md)
 -   [Настройка SQL Server Integration Services в Linux с помощью ssis-conf](sql-server-linux-configure-ssis.md)
 -   [Ограничения и известные проблемы для служб SSIS в Linux](sql-server-linux-ssis-known-issues.md)
--   [Планирование выполнения пакетов SQL Server Integration Services в Linux с помощью cron](sql-server-linux-schedule-ssis-packages.md)
+-   [Планирование выполнения пакетов SQL Server Integration Services в Linux с помощью cron](sql-server-linux-schedule-ssis-packages.md)
