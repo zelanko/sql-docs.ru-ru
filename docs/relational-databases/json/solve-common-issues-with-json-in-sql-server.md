@@ -12,12 +12,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bbf9f4614bd8e9212742072ceb8da5ddeaf8716f
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.openlocfilehash: 8dd50c08035690fd932dc717ae08d179b89b4ed2
+ms.sourcegitcommit: a92fa97e7d3132ea201e4d86c76ac39cd564cd3c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74096101"
+ms.lasthandoff: 12/21/2019
+ms.locfileid: "75325426"
 ---
 # <a name="solve-common-issues-with-json-in-sql-server"></a>Устранение распространенных проблем с JSON в SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ SELECT col1, col2, col3,
      (SELECT col11, col12, col13 FROM t11 WHERE t11.FK = t1.PK FOR JSON PATH) as t11,  
      (SELECT col21, col22, col23 FROM t21 WHERE t21.FK = t1.PK FOR JSON PATH) as t21,  
      (SELECT col31, col32, col33 FROM t31 WHERE t31.FK = t1.PK FOR JSON PATH) as t31,  
-     JSON_QUERY('{"'+col4'":"'+col5+'"}' as t41  
+     JSON_QUERY('{"'+col4'":"'+col5+'"}') as t41  
 FROM t1  
 FOR JSON PATH  
 ```  

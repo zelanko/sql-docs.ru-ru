@@ -1,5 +1,5 @@
 ---
-title: Настройка энергонезависимой памяти (PMEM) для SQL Server на Linux
+title: Настройка энергонезависимой памяти (PMEM) для SQL Server на Linux
 description: В этой статье представлено пошаговое руководство по настройке PMEM в Linux.
 author: briancarrig
 ms.author: brcarrig
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>= sql-server-linux-ver15  || >= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6e1a935dcaa605caf9483fadd5707bafbfb6b83b
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 9e6ef9592f980cab3e379fc27083ed34b8e94798
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531303"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243596"
 ---
 # <a name="how-to-configure-persistent-memory-pmem-for-sql-server-on-linux"></a>Настройка энергонезависимой памяти (PMEM) для SQL Server на Linux
 
@@ -79,7 +79,7 @@ ndctl list
 
   После настройки устройства с помощью ndctl, его форматирования и подключения можно поместить в него файлы базы данных. Кроме того, можно создать новую базу данных. 
 
-1. Так как устройства PMEM поддерживают O_DIRECT, включите флаг трассировки 3979, чтобы отключить механизм принудительной записи на диск. Этот флаг трассировки устанавливается при запуске, поэтому его необходимо включить с помощью служебной программы mssql-conf. Обратите внимание, что это изменение конфигурации применяется на уровне сервера и данный флаг трассировки не следует использовать, если имеются несовместимые с O_DIRECT устройства, которым требуется механизм принудительной записи на диск для обеспечения целостности данных. Дополнительные сведения см. в разделе https://support.microsoft.com/en-us/help/4131496/enable-forced-flush-mechanism-in-sql-server-2017-on-linux.
+1. Так как устройства PMEM поддерживают O_DIRECT, включите флаг трассировки 3979, чтобы отключить механизм принудительной записи на диск. Этот флаг трассировки устанавливается при запуске, поэтому его необходимо включить с помощью служебной программы mssql-conf. Обратите внимание, что это изменение конфигурации применяется на уровне сервера и данный флаг трассировки не следует использовать, если имеются несовместимые с O_DIRECT устройства, которым требуется механизм принудительной записи на диск для обеспечения целостности данных. Дополнительные сведения см. в разделе https://support.microsoft.com/help/4131496/enable-forced-flush-mechanism-in-sql-server-2017-on-linux.
 
 1. Перезапуск SQL Server.
 

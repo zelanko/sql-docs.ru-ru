@@ -10,27 +10,27 @@ ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 10ebcf94c673df4e8016ae2d0c84d7a5bd89824f
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 8a4ebe26cbbf768222c7b97b95fa7df238faded3
+ms.sourcegitcommit: 56fb0b7750ad5967f5d8e43d87922dfa67b2deac
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67959629"
+ms.lasthandoff: 12/11/2019
+ms.locfileid: "75001899"
 ---
 # <a name="azure-data-studio-extensibility-apis"></a>Интерфейсы API расширяемости Azure Data Studio
 
-[!INCLUDE[name-sos](../includes/name-sos.md)] предоставляет интерфейсы API, с помощью которых расширения могут взаимодействовать с другими компонентами Azure Data Studio, такими как обозреватель объектов. Эти интерфейсы API доступны в файле [`src/sql/sqlops.d.ts`](https://github.com/Microsoft/azuredatastudio/blob/master/src/sql/sqlops.d.ts) и описываются ниже.
+[!INCLUDE[name-sos](../includes/name-sos.md)] предоставляет интерфейсы API, с помощью которых расширения могут взаимодействовать с другими компонентами Azure Data Studio, такими как обозреватель объектов. Эти интерфейсы API доступны в файле [`src/sql/azdata.d.ts`](https://github.com/Microsoft/azuredatastudio/blob/master/src/sql/azdata.d.ts) и описываются ниже.
 
 ## <a name="connection-management"></a>Управление подключениями
-`sqlops.connection`
+`azdata.connection`
 
 ### <a name="top-level-functions"></a>Общие функции
 
-- `getCurrentConnection(): Thenable<sqlops.connection.Connection>` — возвращает текущее подключение в соответствии с активным выбором в редакторе или обозревателе объектов.
+- `getCurrentConnection(): Thenable<azdata.connection.Connection>` — возвращает текущее подключение в соответствии с активным выбором в редакторе или обозревателе объектов.
 
-- `getActiveConnections(): Thenable<sqlops.connection.Connection[]>` — возвращает список всех активных подключений пользователя. Если таких подключений нет, возвращается пустой список.
+- `getActiveConnections(): Thenable<azdata.connection.Connection[]>` — возвращает список всех активных подключений пользователя. Если таких подключений нет, возвращается пустой список.
 
-- `getCredentials(connectionId: string): Thenable<{ [name: string]: string }>` — возвращает словарь, который содержит учетные данные, связанные с подключением. Они также возвращаются в словаре параметров в объекте `sqlops.connection.Connection`, но при использовании данной функции они удаляются из этого объекта. 
+- `getCredentials(connectionId: string): Thenable<{ [name: string]: string }>` — возвращает словарь, который содержит учетные данные, связанные с подключением. Они также возвращаются в словаре параметров в объекте `azdata.connection.Connection`, но при использовании данной функции они удаляются из этого объекта. 
 
 ### `Connection`
 - `options: { [name: string]: string }` — словарь параметров подключения.
@@ -39,7 +39,7 @@ ms.locfileid: "67959629"
 
 ### <a name="example-code"></a>Пример кода
 ```
-> let connection = sqlops.connection.getCurrentConnection();
+> let connection = azdata.connection.getCurrentConnection();
 connection: {
     providerName: 'MSSQL',
     connectionId: 'd97bb63a-466e-4ef0-ab6f-00cd44721dcc',
@@ -51,7 +51,7 @@ connection: {
     },
     ...
 }
-> let credentials = sqlops.connection.getCredentials(connection.connectionId);
+> let credentials = azdata.connection.getCredentials(connection.connectionId);
 credentials: {
     password: 'abc123'
 }
@@ -60,15 +60,15 @@ credentials: {
 
 ## <a name="object-explorer"></a>обозревателе объектов
 
-`sqlops.objectexplorer`
+`azdata.objectexplorer`
 
 
 ### <a name="top-level-functions"></a>Общие функции
-- `getNode(connectionId: string, nodePath?: string): Thenable<sqlops.objectexplorer.ObjectExplorerNode>` — возвращает узел обозревателя объектов, соответствующий данному подключению и пути. Если путь не указан, возвращается узел верхнего уровня для данного подключения. Если по указанному пути нет узла, возвращается значение `undefined`. Примечание. Значение `nodePath` для объекта создается сервером службы средств SQL; составить его вручную сложно. В будущем с помощью API можно будет получать узлы на основе предоставленных метаданных, таких как имя, тип и схема узла.
+- `getNode(connectionId: string, nodePath?: string): Thenable<azdata.objectexplorer.ObjectExplorerNode>` — возвращает узел обозревателя объектов, соответствующий данному подключению и пути. Если путь не указан, возвращается узел верхнего уровня для данного подключения. Если по указанному пути нет узла, возвращается значение `undefined`. Примечание. Значение `nodePath` для объекта создается сервером службы средств SQL; составить его вручную сложно. В будущем с помощью API можно будет получать узлы на основе предоставленных метаданных, таких как имя, тип и схема узла.
 
-- `getActiveConnectionNodes(): Thenable<sqlops.objectexplorer.ObjectExplorerNode>` — возвращает все активные узлы подключений в обозревателе объектов.
+- `getActiveConnectionNodes(): Thenable<azdata.objectexplorer.ObjectExplorerNode>` — возвращает все активные узлы подключений в обозревателе объектов.
 
-- `findNodes(connectionId: string, type: string, schema: string, name: string, database: string, parentObjectNames: string[]): Thenable<sqlops.objectexplorer.ObjectExplorerNode[]>` — поиск всех узлов обозревателя объектов, соответствующих указанным метаданным. Аргументы `schema`, `database` и `parentObjectNames` должны иметь значение `undefined`, если они не применимы. `parentObjectNames` — это список родительских объектов, отличных от баз данных, для нужного объекта от самого высокого до самого низкого уровня в обозревателе объектов. Например, для поиска столбца "column1", относящегося к таблице "schema1.table1" и базе данных "database1" с идентификатором подключения `connectionId`, выполните вызов `findNodes(connectionId, 'Column', undefined, 'column1', 'database1', ['schema1.table1'])`. Кроме того, см. [список типов, поддерживаемых по умолчанию в Azure Data Studio](https://github.com/Microsoft/azuredatastudio/wiki/Object-Explorer-types-supported-by-FindNodes-API) для этого вызова API.
+- `findNodes(connectionId: string, type: string, schema: string, name: string, database: string, parentObjectNames: string[]): Thenable<azdata.objectexplorer.ObjectExplorerNode[]>` — поиск всех узлов обозревателя объектов, соответствующих указанным метаданным. Аргументы `schema`, `database` и `parentObjectNames` должны иметь значение `undefined`, если они не применимы. `parentObjectNames` — это список родительских объектов, отличных от баз данных, для нужного объекта от самого высокого до самого низкого уровня в обозревателе объектов. Например, для поиска столбца "column1", относящегося к таблице "schema1.table1" и базе данных "database1" с идентификатором подключения `connectionId`, выполните вызов `findNodes(connectionId, 'Column', undefined, 'column1', 'database1', ['schema1.table1'])`. Кроме того, см. [список типов, поддерживаемых по умолчанию в Azure Data Studio](https://github.com/Microsoft/azuredatastudio/wiki/Object-Explorer-types-supported-by-FindNodes-API) для этого вызова API.
 
 ### <a name="objectexplorernode"></a>ObjectExplorerNode
 - `connectionId: string` — идентификатор подключения, к которому относится узел.
@@ -85,7 +85,7 @@ credentials: {
 
 - `isLeaf: boolean` — является ли узел листовым, то есть не имеет дочерних узлов.
 
-- `metadata: sqlops.ObjectMetadata` — метаданные, которые описывают объект, представленный этим узлом.
+- `metadata: azdata.ObjectMetadata` — метаданные, которые описывают объект, представленный этим узлом.
 
 - `errorMessage: string` — сообщение, которое выводится, если узел находится в состоянии ошибки.
 
@@ -95,14 +95,14 @@ credentials: {
 
 - `setSelected(selected: boolean, clearOtherSelections?: boolean): Thenable<void>` — задает состояние выбора узла. Если `clearOtherSelections` имеет значение true, при новом выборе текущий выбор отменяется. Если задано значение false, текущий выбор сохраняется. `clearOtherSelections` по умолчанию имеет значение true, если `selected` имеет значение true, и false, если `selected` имеет значение false.
 
-- `getChildren(): Thenable<sqlops.objectexplorer.ObjectExplorerNode[]>` — возвращает все дочерние узлы этого узла. Если дочерних узлов нет, возвращается пустой список.
+- `getChildren(): Thenable<azdata.objectexplorer.ObjectExplorerNode[]>` — возвращает все дочерние узлы этого узла. Если дочерних узлов нет, возвращается пустой список.
 
-- `getParent(): Thenable<sqlops.objectexplorer.ObjectExplorerNode>` — возвращает родительский узел этого узла. При отсутствии родительского узла возвращается значение undefined.
+- `getParent(): Thenable<azdata.objectexplorer.ObjectExplorerNode>` — возвращает родительский узел этого узла. При отсутствии родительского узла возвращается значение undefined.
 
 ### <a name="example-code"></a>Пример кода
 
 ```cs
-private async interactWithOENode(selectedNode: sqlops.objectexplorer.ObjectExplorerNode): Promise<void> {
+private async interactWithOENode(selectedNode: azdata.objectexplorer.ObjectExplorerNode): Promise<void> {
     let choices = ['Expand', 'Collapse', 'Select', 'Select (multi)', 'Deselect', 'Deselect (multi)'];
     if (selectedNode.isLeaf) {
         choices[0] += ' (is leaf)';
@@ -122,7 +122,7 @@ private async interactWithOENode(selectedNode: sqlops.objectexplorer.ObjectExplo
     let children = await selectedNode.getChildren();
     children.forEach(child => choices.push(child.label));
     let choice = await vscode.window.showQuickPick(choices);
-    let nextNode: sqlops.objectexplorer.ObjectExplorerNode = undefined;
+    let nextNode: azdata.objectexplorer.ObjectExplorerNode = undefined;
     if (choice === choices[0]) {
         selectedNode.setExpandedState(vscode.TreeItemCollapsibleState.Expanded);
     } else if (choice === choices[1]) {
@@ -142,13 +142,13 @@ private async interactWithOENode(selectedNode: sqlops.objectexplorer.ObjectExplo
         nextNode = childNode;
     }
     if (nextNode) {
-        let updatedNode = await sqlops.objectexplorer.getNode(nextNode.connectionId, nextNode.nodePath);
+        let updatedNode = await azdata.objectexplorer.getNode(nextNode.connectionId, nextNode.nodePath);
         this.interactWithOENode(updatedNode);
     }
 }
 
 vscode.commands.registerCommand('mssql.objectexplorer.interact', () => {
-    sqlops.objectexplorer.getActiveConnectionNodes().then(activeConnections => {
+    azdata.objectexplorer.getActiveConnectionNodes().then(activeConnections => {
         vscode.window.showQuickPick(activeConnections.map(connection => connection.label + ' ' + connection.connectionId)).then(selection => {
             let selectedNode = activeConnections.find(connection => connection.label + ' ' + connection.connectionId === selection);
             this.interactWithOENode(selectedNode);
@@ -159,6 +159,6 @@ vscode.commands.registerCommand('mssql.objectexplorer.interact', () => {
 
 ## <a name="proposed-apis"></a>Предлагаемые интерфейсы API
 
-Мы добавили предлагаемые интерфейсы API, которые, помимо прочего, позволяют расширениям отображать настраиваемый пользовательский интерфейс в диалоговых окнах, мастерах и на вкладках документов. Дополнительные сведения см. в [файле с типами предлагаемых интерфейсов API](https://github.com/Microsoft/azuredatastudio/blob/master/src/sql/sqlops.proposed.d.ts), однако имейте в виду, что эти API могут быть изменены в любое время. Примеры использования некоторых из этих API можно найти в [примере расширения sqlservices](https://github.com/Microsoft/azuredatastudio/tree/master/samples/sqlservices).
+Мы добавили предлагаемые интерфейсы API, которые, помимо прочего, позволяют расширениям отображать настраиваемый пользовательский интерфейс в диалоговых окнах, мастерах и на вкладках документов. Дополнительные сведения см. в [файле с типами предлагаемых интерфейсов API](https://github.com/Microsoft/azuredatastudio/blob/master/src/sql/azdata.proposed.d.ts), однако имейте в виду, что эти API могут быть изменены в любое время. Примеры использования некоторых из этих API можно найти в [примере расширения sqlservices](https://github.com/Microsoft/azuredatastudio/tree/master/samples/sqlservices).
 
 

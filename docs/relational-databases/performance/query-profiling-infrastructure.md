@@ -17,12 +17,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 47382961ebb72d3d0b51ae9a72161fb107021f75
-ms.sourcegitcommit: 869d4de6c807a37873b66e5479d2c5ceff9efb85
+ms.openlocfilehash: 40c2c30ff3d44b41d4ddcac4cc9fe0954a06d72e
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67559470"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257675"
 ---
 # <a name="query-profiling-infrastructure"></a>Инфраструктура профилирования запросов
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -175,19 +175,19 @@ WITH (MAX_MEMORY=4096 KB, EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,
 ## <a name="query-profiling-infrastruture-usage-guidance"></a>Руководство по использованию инфраструктуры профилирования запросов
 В приведенной ниже таблице перечислены действия по включению стандартного или упрощенного профилирования глобально (на уровне сервера) или в одном сеансе. В ней также приведены сведения о минимальных версиях, поддерживающих это действие. 
 
-|Область действия|Стандартное профилирование|Упрощенное профилирование|
+|Область|Стандартное профилирование|Упрощенное профилирование|
 |---------------|---------------|---------------|
 |Global|Сеанс xEvent с расширенным событием `query_post_execution_showplan`. Минимальная версия: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|Флаг трассировки 7412. Минимальная версия: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] с пакетом обновления 1 (SP1)|
 |Global|Система "Трассировка SQL" и SQL Server Profiler с событием трассировки `Showplan XML`. Минимальная версия: SQL Server 2000|Сеанс xEvent с расширенным событием `query_thread_profile`. Минимальная версия: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] с пакетом обновления 2 (SP2)|
 |Global|-|Сеанс xEvent с расширенным событием `query_post_execution_plan_profile`. Минимальная версия: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]|
-|Session|Используйте `SET STATISTICS XML ON`. Минимальная версия: SQL Server 2000|Используйте указание запроса `QUERY_PLAN_PROFILE`, а также сеанс xEvent с расширенным событием `query_plan_profile`. Минимальная версия: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] с пакетом обновления 2 (SP2) и накопительным пакетом обновления 3 (CU3) и [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] с накопительным пакетом обновления 11 (CU11)|
-|Session|Используйте `SET STATISTICS PROFILE ON`. Минимальная версия: SQL Server 2000|-|
-|Session|Нажмите кнопку [Статистика активных запросов](../../relational-databases/performance/live-query-statistics.md) в SSMS. Минимальная версия: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] с пакетом обновления 2 (SP2)|-|
+|Сеанс|Используйте `SET STATISTICS XML ON`. Минимальная версия: SQL Server 2000|Используйте указание запроса `QUERY_PLAN_PROFILE`, а также сеанс xEvent с расширенным событием `query_plan_profile`. Минимальная версия: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] с пакетом обновления 2 (SP2) и накопительным пакетом обновления 3 (CU3) и [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] с накопительным пакетом обновления 11 (CU11)|
+|Сеанс|Используйте `SET STATISTICS PROFILE ON`. Минимальная версия: SQL Server 2000|-|
+|Сеанс|Нажмите кнопку [Статистика активных запросов](../../relational-databases/performance/live-query-statistics.md) в SSMS. Минимальная версия: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] с пакетом обновления 2 (SP2)|-|
 
 ## <a name="remarks"></a>Remarks
 
 > [!IMPORTANT]
-> Из-за возможных случайных нарушений прав доступа во время выполнения мониторинга хранимой процедуры, которая ссылается на [sys.dm_exec_query_statistics_xml](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql.md), необходимо установить исправление [4078596 КБ](http://support.microsoft.com/help/4078596) на [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)].
+> Из-за возможных случайных нарушений прав доступа во время выполнения мониторинга хранимой процедуры, которая ссылается на [sys.dm_exec_query_statistics_xml](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql.md), необходимо установить исправление [4078596 КБ](https://support.microsoft.com/help/4078596) на [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)].
 
 Начиная с упрощенного профилирования версии 2, благодаря его низкому потреблению ресурсов, любой сервер, у которого нет перегрузки ЦП, может выполнять упрощенное профилирование **непрерывно**. Это позволяет специалистам по работе с базами данных в любое время подключаться к любому запущенному выполнению, например с помощью монитора активности или прямого запроса `sys.dm_exec_query_profiles`, и получать план запроса со статистикой времени выполнения.
 
@@ -197,7 +197,7 @@ WITH (MAX_MEMORY=4096 KB, EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,
 > Расширенные события на основе упрощенного профилирования используют данные стандартного профилирования, если инфраструктура стандартного профилирования уже включена. Допустим, имеется запущенный сеанс расширенных событий `query_post_execution_showplan`, и запускается еще один сеанс для событий `query_post_execution_plan_profile`. Во втором сеансе будут использоваться данные стандартного профилирования.
 
 ## <a name="see-also"></a>См. также:  
- [Monitor and Tune for Performance](../../relational-databases/performance/monitor-and-tune-for-performance.md)     
+ [Наблюдение и настройка производительности](../../relational-databases/performance/monitor-and-tune-for-performance.md)     
  [Средства контроля и настройки производительности](../../relational-databases/performance/performance-monitoring-and-tuning-tools.md)     
  [Открытие монитора активности (среда SQL Server Management Studio)](../../relational-databases/performance-monitor/open-activity-monitor-sql-server-management-studio.md)     
  [Монитор активности](../../relational-databases/performance-monitor/activity-monitor.md)     
@@ -209,4 +209,3 @@ WITH (MAX_MEMORY=4096 KB, EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,
  [Справочник по логическим и физическим операторам Showplan](../../relational-databases/showplan-logical-and-physical-operators-reference.md)    
  [Действительный план выполнения](../../relational-databases/performance/display-an-actual-execution-plan.md)    
  [Динамическая статистика запросов](../../relational-databases/performance/live-query-statistics.md)      
- [Developers Choice: Query progress - anytime, anywhere](https://techcommunity.microsoft.com/t5/SQL-Server/Developers-Choice-Query-progress-anytime-anywhere/ba-p/385004) (Выбор разработчика: ход выполнения запроса — всегда и везде).

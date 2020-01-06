@@ -9,12 +9,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a0ad547d26c86c43b0009cdf20acae33ed7e8ab7
-ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
+ms.openlocfilehash: ee00232a1c1e64d31b7b6360666bdeebba756db9
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69553242"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75246954"
 ---
 # <a name="microsoft-connector-for-oracle"></a>Соединитель с Oracle (Microsoft)
 
@@ -43,7 +43,7 @@ Oracle Database поддерживается всеми операционным
 
 ## <a name="installation"></a>Установка
 
-Если необходимо запустить пакет в SQL Server, [здесь](https://www.microsoft.com/en-us/download/details.aspx?id=58228) можно скачать соединитель с Oracle Database (Microsoft). Затем выполните указания мастера установки.
+Если необходимо запустить пакет в SQL Server, [здесь](https://www.microsoft.com/download/details.aspx?id=58228) можно скачать соединитель с Oracle Database (Microsoft). Затем выполните указания мастера установки.
 
 После установки соединителя необходимо перезапустить службу интеграции SQL Server, чтобы убедиться, что источник и назначение Oracle работают правильно.
 
@@ -61,12 +61,12 @@ Oracle Database поддерживается всеми операционным
 
 **Ссылки для скачивания:**
 
-- [SQL Server 2017: соединитель с Oracle (Microsoft) от Attunity версии 5.0](https://www.microsoft.com/en-us/download/details.aspx?id=55179)
-- [SQL Server 2016: соединитель с Oracle (Microsoft) от Attunity версии 4.0](https://www.microsoft.com/en-us/download/details.aspx?id=52950)
-- [SQL Server 2014: соединитель с Oracle (Microsoft) от Attunity версии 3.0](https://www.microsoft.com/en-us/download/details.aspx?id=44582)
-- [SQL Server 2012: соединитель с Oracle (Microsoft) от Attunity версии 2.0](https://www.microsoft.com/en-us/download/details.aspx?id=29283)
+- [SQL Server 2017: соединитель с Oracle (Microsoft) от Attunity версии 5.0](https://www.microsoft.com/download/details.aspx?id=55179)
+- [SQL Server 2016: соединитель с Oracle (Microsoft) от Attunity версии 4.0](https://www.microsoft.com/download/details.aspx?id=52950)
+- [SQL Server 2014: соединитель с Oracle (Microsoft) от Attunity версии 3.0](https://www.microsoft.com/download/details.aspx?id=44582)
+- [SQL Server 2012: соединитель с Oracle (Microsoft) от Attunity версии 2.0](https://www.microsoft.com/download/details.aspx?id=29283)
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 - Настройка [диспетчера подключений Oracle](oracle-connection-manager.md).
 - Настройка [источника Oracle](oracle-source.md).

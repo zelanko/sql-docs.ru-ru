@@ -1,5 +1,5 @@
 ---
-title: Руководство. Включение примера мини-приложения "Пять самых медленных запросов"
+title: Включение примера мини-приложения "Пять самых медленных запросов"
 titleSuffix: Azure Data Studio
 description: В этом руководстве показано, как включить пример мини-приложения "Пять самых медленных запросов" на панели мониторинга базы данных.
 ms.prod: sql
@@ -8,14 +8,14 @@ ms.topic: tutorial
 author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu; sstein
-ms.custom: seodec18
+ms.custom: seodec18; seo-lt-2019
 ms.date: 08/02/2019
-ms.openlocfilehash: 576e175e8135808a4221e96085e39e9c0850190b
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 3f940f0f18df676eae2ca101a2eccaa2be7169e2
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68810867"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957048"
 ---
 # <a name="tutorial-add-the-five-slowest-queries-sample-widget-to-the-database-dashboard"></a>Руководство. Добавление примера мини-приложения *Пять самых медленных запросов* на панель мониторинга базы данных
 
@@ -127,7 +127,7 @@ ms.locfileid: "68810867"
 
 2. Чтобы просмотреть дополнительные сведения в аналитическом *мини-приложении медленных запросов*, щелкните многоточие ( **...** ) в правом верхнем углу и выберите пункт **Выполнить запрос**.
 
-    ![Выполнить запрос](media/tutorial-qds-sql-server/run-query.png)
+    ![Выполнение запроса](media/tutorial-qds-sql-server/run-query.png)
 
 3. Появится новое окно запроса с результатами.
 
@@ -141,7 +141,7 @@ ms.locfileid: "68810867"
 
    ![showplan](./media/tutorial-qds-sql-server/showplan.png)
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 В этом руководстве вы узнали, как выполнять следующие задачи:
 > [!div class="checklist"]

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e38d5ce4-e538-4ab9-be67-7046e0d9504e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: f41567d5c27bfb1d77010d7e0d3fe187adf9a36c
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 0248af282581019ebedc28656852ec5c78fd00b5
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68892432"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257511"
 ---
 # <a name="register-a-service-principal-name-for-kerberos-connections"></a>Регистрация имени участника-службы для соединений Kerberos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,9 +61,7 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
  При запуске службы компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] она пытается зарегистрировать имя участника-службы (SPN). Если у учетной записи, с которой запускается SQL Server, нет права регистрировать имя участника-службы в службах домена Active Directory, вызов завершится ошибкой и в журнал событий приложений, а также в журнал ошибок SQL Server будет добавлено предупреждение. Для регистрации имени участника-службы компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] должен выполняться от имени встроенной учетной записи, например Local System (не рекомендуется) или NETWORK SERVICE, либо от имени учетной записи, обладающей разрешением на регистрацию имен участников-служб, например учетной записи администратора домена. Если [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняется в ОС  [!INCLUDE[win7](../../includes/win7-md.md)] или  [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] , можно выполнить [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью виртуальной учетной записи или управляемой учетной записи службы. Виртуальные счета и управляемые учетные записи службы могут зарегистрировать имя участника-службы. Если [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняется под другой учетной записью, то имя участника-службы не регистрируется при запуске, и администратору домена необходимо произвести его регистрацию вручную.  
   
 > [!NOTE]  
->  Если домен Windows настроен для выполнения в режиме работы ниже [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] Windows Server 2008 R2, то управляемая учетная запись службы не будет иметь необходимых разрешений для регистрации имен участника-службы для службы [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] . Если требуется проверка подлинности по протоколу Kerberos, администратор домена должен вручную зарегистрировать [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имена участников-службы в управляемой учетной записи службы.  
-  
- В статье базы знаний [Использование проверки подлинности протокола Kerberos в SQL Server](https://support.microsoft.com/kb/319723)содержатся сведения о том, как предоставить разрешения на чтение или запись имен участника-службы учетным записям, не являющимся администраторами домена.  
+>  Если домен Windows настроен для выполнения в режиме работы ниже [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] Windows Server 2008 R2, то управляемая учетная запись службы не будет иметь необходимых разрешений для регистрации имен участника-службы для службы [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] . Если требуется проверка подлинности по протоколу Kerberos, администратор домена должен вручную зарегистрировать [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имена участников-службы в управляемой учетной записи службы.
   
  Дополнительные сведения см. в разделе [Реализация ограниченного делегирования Kerberos в SQL Server 2008](https://technet.microsoft.com/library/ee191523.aspx)  
   

@@ -1,7 +1,7 @@
 ---
 title: Установка и изменение параметров сортировки для сервера| Документация Майкрософт
 ms.custom: ''
-ms.date: 01/22/2019
+ms.date: 12/05/2019
 ms.prod: sql
 ms.reviewer: carlrab
 ms.technology: ''
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3242deef-6f5f-4051-a121-36b3b4da851d
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 81a776a0bece59f98042fec6cbf7b191ec82be1b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 019c62424398b05dfaa6efe2f91ab4c08b333cd2
+ms.sourcegitcommit: 0d34b654f0b3031041959e87f5b4d4f0a1af6a29
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140839"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74901918"
 ---
 # <a name="set-or-change-the-server-collation"></a>Задание или изменение параметров сортировки сервера
 
@@ -43,13 +43,13 @@ ms.locfileid: "68140839"
   
 - Перестройте базу данных master, указав новые параметры сортировки в свойстве SQLCOLLATION команды **setup** . Пример:  
   
-    ```sql  
+    ```  
     Setup /QUIET /ACTION=REBUILDDATABASE /INSTANCENAME=InstanceName
     /SQLSYSADMINACCOUNTS=accounts /[ SAPWD= StrongPassword ]
     /SQLCOLLATION=CollationName  
     ```  
   
-     Дополнительные сведения см. в статье [Перестроение системных баз данных](../../relational-databases/databases/rebuild-system-databases.md).  
+     Дополнительные сведения см. в разделе [Перестроение системных баз данных](../../relational-databases/databases/rebuild-system-databases.md).  
   
 - Создайте все базы данных и все их объекты.  
   
@@ -59,13 +59,12 @@ ms.locfileid: "68140839"
 > Вместо изменения параметров сортировки по умолчанию для всего экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]можно указывать параметры сортировки по умолчанию для каждой новой базы данных.  
   
 ## <a name="setting-the-server-collation-in-managed-instance"></a>Задание параметров сортировки сервера в управляемом экземпляре
-
 Параметры сортировки на уровне сервера в Управляемом экземпляре SQL Azure можно указать при создании экземпляра и нельзя изменить позднее. Параметры сортировки на уровне сервера можно настроить на [портале Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-get-started#create-a-managed-instance) или с помощью [PowerShell и шаблона Resource Manager](https://docs.microsoft.com/azure/sql-database/scripts/sql-managed-instance-create-powershell-azure-resource-manager-template) во время создания экземпляра. Параметры сортировки по умолчанию — **SQL_Latin1_General_CP1_CI_AS**. Параметры сортировки только для Юникода и новые параметры сортировки UTF-8 не могут быть заданы как параметры сортировки уровня сервера.
 При миграции баз данных SQL Server на управляемый экземпляр проверьте параметры сортировки сервера в исходном SQL Server с помощью функции `SERVERPROPERTY(N'Collation')` и создайте управляемый экземпляр, который соответствует параметрам сортировки SQL Server. Миграция базы данных из SQL Server в управляемый экземпляр с несоответствующими параметрами сортировки на уровне сервера может приводить к нескольким непредвиденным ошибкам в запросах. Изменить параметры сортировки уровня сервера у существующего управляемого экземпляра невозможно.
 
 ## <a name="see-also"></a>См. также:
 
- [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)   
+ [Поддержка параметров сортировки и Юникода](../../relational-databases/collations/collation-and-unicode-support.md)   
  [Установка и изменение параметров сортировки базы данных](../../relational-databases/collations/set-or-change-the-database-collation.md)   
  [Задание или изменение параметров сортировки столбца](../../relational-databases/collations/set-or-change-the-column-collation.md)   
  [Перестроение системных баз данных](../../relational-databases/databases/rebuild-system-databases.md)  

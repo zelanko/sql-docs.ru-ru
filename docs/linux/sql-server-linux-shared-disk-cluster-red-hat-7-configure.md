@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
-ms.openlocfilehash: b76797d6b6bc9b9d2c9f666039595446f975a3aa
-ms.sourcegitcommit: df1f71231f8edbdfe76e8851acf653c25449075e
+ms.openlocfilehash: 052bb7455c952600390a0960e9d7618ab0a315fc
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/09/2019
-ms.locfileid: "70809787"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252242"
 ---
 # <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>Настройка общего кластера дисков Red Hat Enterprise Linux для SQL Server
 
@@ -84,7 +84,7 @@ ms.locfileid: "70809787"
 
 1. В каждом узле кластера настройте файл hosts. Файл hosts должен содержать IP-адрес и имя каждого узла кластера. 
 
-    Проверьте IP-адрес для каждого узла. Для отображения IP-адреса текущего узла выполните приведенный ниже сценарий. 
+    Проверьте IP-адрес для каждого узла. Для отображения IP-адреса текущего узла выполните следующий сценарий. 
 
    ```bash
    sudo ip addr show
@@ -108,7 +108,7 @@ ms.locfileid: "70809787"
 
 ## <a name="configure-shared-storage-and-move-database-files"></a>Настройка общего хранилища и перемещение файлов базы данных 
 
-Существует множество решений для предоставления общего хранилища. В этом пошаговом руководстве демонстрируется настройка общего хранилища с NFS. Мы рекомендуем следовать рекомендациям и использовать Kerberos для защиты NFS (пример можно найти здесь: https://www.certdepot.net/rhel7-use-kerberos-control-access-nfs-network-shares/)). 
+Существует множество решений для предоставления общего хранилища. В этом пошаговом руководстве демонстрируется настройка общего хранилища с NFS. Мы рекомендуем следовать рекомендациям и использовать Kerberos для защиты NFS (пример можно найти здесь: https://www.certdepot.net/rhel7-use-kerberos-control-access-nfs-network-shares/) ). 
 
 >[!Warning]
 >Если не защитить NFS, любой пользователь, который может получить доступ к вашей сети и подменить IP-адрес узла SQL, сможет получить и доступ к файлам данных. Как всегда, проведите моделирование угроз для вашей системы, прежде чем использовать ее в рабочей среде. Другой вариант хранения — использовать общую папку SMB.
@@ -120,7 +120,7 @@ ms.locfileid: "70809787"
 
 На сервере NFS выполните указанные ниже действия.
 
-1. Установите `nfs-utils`.
+1. установить `nfs-utils`;
 
    ```bash
    sudo yum -y install nfs-utils
@@ -175,7 +175,7 @@ ms.locfileid: "70809787"
 
 Выполните указанные ниже действия во всех узлах кластера.
 
-1.  Установите `nfs-utils`.
+1.  установить `nfs-utils`;
 
    ```bash
    sudo yum -y install nfs-utils
@@ -202,7 +202,7 @@ ms.locfileid: "70809787"
 
 * [Серверы и брандмауэры NFS | Stack Exchange](https://unix.stackexchange.com/questions/243756/nfs-servers-and-firewalld)
 * [Подключение тома NFS | Руководство для сетевых администраторов Linux](https://www.tldp.org/LDP/nag2/x-087-2-nfs.mountd.html)
-* [Конфигурация сервера NFS | Портал для клиентов Red Hat](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/storage_administration_guide/nfs-serverconfig)
+* [Конфигурация сервера NFS | Портал для клиентов Red Hat](https://access.redhat.com/documentation/red_hat_enterprise_linux/7/html/storage_administration_guide/nfs-serverconfig)
 
 ### <a name="mount-database-files-directory-to-point-to-the-shared-storage"></a>Подключение каталога файлов базы данных для указания общего хранилища
 
@@ -385,6 +385,6 @@ ms.locfileid: "70809787"
 
 * Руководство [Кластер с нуля](https://clusterlabs.org/doc/Cluster_from_Scratch.pdf) от Pacemaker
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 [Использование SQL Server в кластере общих дисков Red Hat Enterprise Linux](sql-server-linux-shared-disk-cluster-red-hat-7-operate.md)

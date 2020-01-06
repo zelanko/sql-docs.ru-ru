@@ -1,6 +1,6 @@
 ---
 title: Управление реплицированной базой данных издателя в рамках группы доступности
-description: 'Описывается управление базой данных, выступающей в роли издателя при репликации SQL и входящей в группу доступности Always On, а также ее обслуживание. '
+description: Описывается управление базой данных, выступающей в роли издателя при репликации SQL и входящей в группу доступности Always On, а также ее обслуживание.
 ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 55b345fe-2eb9-4b04-a900-63d858eec360
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: bdb26625e1b461e9f82342824f07f73a02f863bf
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.openlocfilehash: 7371acd7c96dbf4baa6edf31ca88d1994141663f
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70846771"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75228191"
 ---
 # <a name="manage-a-replicated-publisher-database-as-part-of-an-always-on-availability-group"></a>Управление реплицированной базой данных издателя в рамках группы доступности Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -114,6 +114,6 @@ ms.locfileid: "70846771"
  [Предварительные требования, ограничения и рекомендации для групп доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)   
  [Обзор групп доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Группы доступности AlwaysOn: взаимодействие (SQL Server)](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)   
- [Репликация SQL Server](../../../relational-databases/replication/sql-server-replication.md)  
+ [Репликация SQL Server](../../../relational-databases/replication/sql-server-replication.md)  
   
   
