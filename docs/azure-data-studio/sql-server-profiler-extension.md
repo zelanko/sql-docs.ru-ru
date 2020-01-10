@@ -10,16 +10,16 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: 26a448dc27ae2512256ffb1a2929dd8cacc3e31c
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 4fcb16d2ec3c267dc2927f22a029709a434416c9
+ms.sourcegitcommit: 76fb3ecb79850a8ef2095310aaa61a89d6d93afd
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67959116"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75776515"
 ---
 # <a name="sql-server-profiler-extension-preview"></a>Расширение SQL Server Profiler (предварительная версия)
 
-Расширение SQL Server Profiler (предварительная версия) предоставляет простое решение для отслеживания SQL Server, аналогичное профилировщику SQL Server Management Studio (SSMS), но созданное на основе XEvents. SQL Server Profiler очень прост в использовании и имеет хорошие значения по умолчанию для наиболее распространенных конфигураций трассировки. Интерфейс оптимизирован для просмотра событий и просмотра соответствующего текста Transact-SQL (T-SQL). В SQL Server Profiler для Azure Data Studio также предполагается наличие правильных значений по умолчанию для сбора действий по выполнению T-SQL с простым пользовательским интерфейсом. Сейчас это расширение находится в режиме предварительной версии.
+Расширение SQL Server Profiler (предварительная версия) предоставляет простое решение трассировки для SQL Server, аналогичное профилировщику SQL Server Management Studio (SSMS), но созданное на основе Расширенных событий. SQL Server Profiler очень прост в использовании и имеет хорошие значения по умолчанию для наиболее распространенных конфигураций трассировки. Интерфейс оптимизирован для просмотра событий и просмотра соответствующего текста Transact-SQL (T-SQL). В SQL Server Profiler для Azure Data Studio также предполагается наличие правильных значений по умолчанию для сбора действий по выполнению T-SQL с простым пользовательским интерфейсом. Сейчас это расширение находится в режиме предварительной версии.
 
 **Распространенные сценарии использования профилировщика SQL:**
 
@@ -48,7 +48,7 @@ ms.locfileid: "67959116"
     ![Диспетчер расширений Profiler](media/extensions/sql-server-profiler-extension/view-profiler.png)    
 1. Чтобы остановить Profiler, нажмите **ALT+S**. Это сочетание клавиш является переключателем.
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 Дополнительные сведения о Profiler и расширенных событиях см. в разделе [Расширенные события](https://docs.microsoft.com/sql/relational-databases/extended-events/extended-events).
 

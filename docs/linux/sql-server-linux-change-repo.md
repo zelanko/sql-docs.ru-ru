@@ -3,17 +3,17 @@ title: Настройка репозиториев Linux для SQL Server 201
 description: Проверьте и настройте репозитории исходного кода для SQL Server 2019 и SQL Server 2017 в Linux. Репозиторий исходного кода влияет на версию SQL Server, используемую во время установки и обновления.
 author: VanMSFT
 ms.author: vanto
-ms.date: 11/04/2019
+ms.date: 01/07/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 zone_pivot_groups: ld2-linux-distribution
-ms.openlocfilehash: b71078e0d1d6af9bd35f248e8bbc324ac5c0e570
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: c1def0c2cfbdc4b3feed191e9eb2673b8e788f82
+ms.sourcegitcommit: 76fb3ecb79850a8ef2095310aaa61a89d6d93afd
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531333"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75776384"
 ---
 # <a name="configure-repositories-for-installing-and-upgrading-sql-server-on-linux"></a>Настройка репозиториев для установки и обновления SQL Server на Linux
 
@@ -38,7 +38,7 @@ ms.locfileid: "73531333"
 
 При установке SQL Server на Linux необходимо настроить репозиторий Майкрософт. Он используется для получения пакета ядра СУБД (**mssql-server**) и связанных с ним пакетов SQL Server. В настоящее время существует пять основных репозиториев:
 
-| Хранилище | Имя | Описание |
+| Хранилище | Имя | Description |
 |---|---|---|
 | **2019** | **mssql-server-2019** | Репозиторий для SQL Server 2019 с накопительным пакетом обновления. |
 | **2019 GDR** | **mssql-server-2019-gdr** | Репозиторий выпуска SQL Server 2019 для общего распространения, предназначенный только для критических обновлений. |
@@ -173,10 +173,15 @@ sudo rm -rf /etc/yum.repos.d/mssql-server.repo
 ::: zone pivot="ld2-rhel"
 Настройте новый репозиторий, который будет использоваться для установки и обновления SQL Server. Чтобы настроить выбранный репозиторий, используйте одну из приведенных ниже команд.
 
-| Хранилище | Версия | Command |
+> [!NOTE]
+> Следующие команды для SQL Server 2019 ссылаются на репозиторий RHEL 8. RHEL 8 не входит в состав установки python2, которая требуется для SQL Server. Дополнительные сведения см. в статье по установке компонента python2 и настройке его как интерпретатора по умолчанию в следующем блоге: https://www.redhat.com/en/blog/installing-microsoft-sql-server-red-hat-enterprise-linux-8-beta.
+>
+> Если вы используете RHEL 7, в приведенном ниже пути измените `/rhel/8` на `/rhel/7`.
+
+| Хранилище | Версия | Get-Help |
 |---|---|---|
-| **2019 CU** | 2019 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2019.repo` |
-| **2019 GDR** | 2019 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2019-gdr.repo` |
+| **2019 CU** | 2019 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/8/mssql-server-2019.repo` |
+| **2019 GDR** | 2019 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/8/mssql-server-2019-gdr.repo` |
 | **2017 CU** | 2017 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017.repo` |
 | **2017 GDR** | 2017 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017-gdr.repo` |
 
@@ -186,7 +191,7 @@ sudo rm -rf /etc/yum.repos.d/mssql-server.repo
 ::: zone pivot="ld2-sles"
 Настройте новый репозиторий, который будет использоваться для установки и обновления SQL Server. Чтобы настроить выбранный репозиторий, используйте одну из приведенных ниже команд.
 
-| Хранилище | Версия | Command |
+| Хранилище | Версия | Get-Help |
 |---|---|---|
 | **2019 CU** | 2019 | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2019.repo` |
 | **2019 GDR** | 2019 | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2019-gdr.repo` |
@@ -207,7 +212,7 @@ sudo rm -rf /etc/yum.repos.d/mssql-server.repo
 
 2. Чтобы настроить выбранный репозиторий, используйте одну из приведенных ниже команд.
 
-   | Хранилище | Версия | Command |
+   | Хранилище | Версия | Get-Help |
    |---|---|---|
    | **2019 CU** | 2019 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2019.list)"` |
    | **2019 GDR** | 2019 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2019-gdr.list)"` |
