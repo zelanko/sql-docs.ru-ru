@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: abeadfa4-a14d-469a-bacf-75812e48fac1
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: ea6d737dcb45a1b300b53c0b232b2b6565e6e750
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5d27c61576c3af432acfa6c791d25b1bbe9a51de
+ms.sourcegitcommit: 76fb3ecb79850a8ef2095310aaa61a89d6d93afd
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68012532"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75776426"
 ---
 # <a name="configure-the-max-worker-threads-server-configuration-option"></a>Настройка параметра конфигурации сервера max worker threads
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "68012532"
   
      [Рекомендации](#Recommendations)  
   
-     [безопасность](#Security)  
+     [Безопасность](#Security)  
   
 -   **Настройка параметра max worker threads с помощью различных средств.**  
   
@@ -72,7 +72,7 @@ ms.locfileid: "68012532"
     |Число процессоров|32-разрядный компьютер|64-разрядный компьютер|  
     |------------|------------|------------| 
     |\< — 4 процессора|256|512|
-    |\> — 4 процессора и \< — 64 процессора|256 + ((число логических ЦП – 4) * 8)|512 + ((число логических ЦП – 4) * 16)|
+    |От 5 до 64 процессоров|256 + ((число логических ЦП – 4) * 8)|512 + ((число логических ЦП – 4) * 16)|
     |\> — 64 процессора|256 + ((число логических ЦП – 4) * 32)|512 + ((число логических ЦП – 4) * 32)|
   
     > [!NOTE]  
