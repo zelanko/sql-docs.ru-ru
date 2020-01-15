@@ -11,18 +11,18 @@ ms.prod: sql
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: 9f2e5632b073f96faf530db56d052d71f4a143f4
-ms.sourcegitcommit: f9286d02025ee1e15d0f1c124e951e8891fe3cc2
+ms.openlocfilehash: 32ff23fe1ea7f0a892a19cc6be0eef8439ee907f
+ms.sourcegitcommit: 365a919e3f0b0c14440522e950b57a109c00a249
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2019
-ms.locfileid: "75329966"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75831826"
 ---
 # <a name="active-directory-authentication-for-sql-server-on-linux"></a>Проверка подлинности Azure Active Directory для SQL Server на Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-В этой статье приводятся общие сведения о проверке подлинности Active Directory (AD) для [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] на Linux. Проверка подлинности AD в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] также называется встроенной проверкой подлинности. 
+В этой статье приводятся общие сведения о проверке подлинности Active Directory (AD) для [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] на Linux. Проверка подлинности AD в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] также называется встроенной проверкой подлинности.
 
 ## <a name="ad-authentication-overview"></a>Общие сведения о проверке подлинности AD
 
@@ -30,10 +30,10 @@ ms.locfileid: "75329966"
 
 Проверка подлинности AD имеет следующие преимущества в сравнении с проверкой подлинности [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:
 
-- Пользователи проходят проверку подлинности с помощью функции единого входа, не вводя пароль.   
+- Пользователи проходят проверку подлинности с помощью функции единого входа, не вводя пароль.
 - Создавая имена входа для групп AD, вы можете управлять доступом и разрешениями в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] на основе членства в группе AD.  
 - Каждый пользователь имеет единое удостоверение на уровне организации, благодаря чему вам не нужно отслеживать, каким людям соответствуют различные имена входа [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].   
-- AD позволяет применять централизованную политику управления паролями на уровне организации.   
+- AD позволяет применять централизованную политику управления паролями на уровне организации.
 
 ## <a name="configuration-steps"></a>Этапы настройки
 

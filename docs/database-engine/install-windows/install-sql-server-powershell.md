@@ -10,12 +10,12 @@ ms.assetid: 854c0b2f-02d2-46a4-a8cc-6b7a5d191cf8
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ad6dc50d1144b0efa13bf4b429a1ca2103fefcd2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f445d1b28c7f76274a2a64e813805f820d005aa6
+ms.sourcegitcommit: 381595e990f2294dbf324ef31071e2dd2318b8dd
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67991058"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74200477"
 ---
 # <a name="install-sql-server-powershell"></a>Установка компонентов SQL Server PowerShell
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "67991058"
  
 - [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] поддерживает запуск сеансов Windows PowerShell из дерева обозревателя объектов. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает шаги заданий Windows PowerShell.  
   
-В Windows Server 2012 и более поздних версий, а также в Windows 8 и более поздних версий среда PowerShell устанавливается и настраивается автоматически. Сведения об установке Windows PowerShell см. на странице [Установка Windows PowerShell](https://docs.microsoft.com/powershell/scripting/setup/installing-windows-powershell).  
+В Windows Server 2012 и более поздних версий, а также в Windows 8 и более поздних версий среда PowerShell устанавливается и настраивается автоматически. Сведения об установке Windows PowerShell см. на странице [Установка Windows PowerShell](https://docs.microsoft.com/powershell/scripting/install/installing-windows-powershell).  
 
 Дополнительные сведения см. в разделе:   
 

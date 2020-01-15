@@ -1,6 +1,5 @@
 ---
-title: Целевые объекты для расширенных событий в SQL Server | Документация Майкрософт
-ms.custom: ''
+title: Целевые объекты для расширенных событий в SQL Server
 ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -11,12 +10,12 @@ ms.assetid: 47c64144-4432-4778-93b5-00496749665b
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: c50fb79383890a2e09cb465c89b459b3bea9a3ca
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 942f69fc92fa06b5131cee2dba9145f4faaae0cc
+ms.sourcegitcommit: 12f529b811d308b169735740b78c6d5439ffefc7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908000"
+ms.lasthandoff: 12/27/2019
+ms.locfileid: "75501988"
 ---
 # <a name="targets-for-extended-events-in-sql-server"></a>Целевые объекты для расширенных событий в SQL Server
 
@@ -78,8 +77,8 @@ ms.locfileid: "72908000"
 
 Расширенные события SQL Server могут взаимодействовать с трассировкой событий Windows (ETW) для отслеживания активности системы. Дополнительные сведения см. в разделе:
 
-- [Цель «Средство трассировки событий для Windows»](../../relational-databases/extended-events/event-tracing-for-windows-target.md)
-- [отслеживать активность системы с помощью расширенных событий](../../relational-databases/extended-events/monitor-system-activity-using-extended-events.md)
+- [Цель "Средство трассировки событий для Windows"](../../relational-databases/extended-events/event-tracing-for-windows-target.md)
+- [Мониторинг активности системы с помощью расширенных событий](../../relational-databases/extended-events/monitor-system-activity-using-extended-events.md)
 
 
 Этот целевой объект трассировки событий Windows обрабатывает получаемые данные *синхронно* , тогда как большинство целевых объектов делают это *асинхронно*.
@@ -676,7 +675,7 @@ CREATE EVENT SESSION [ring_buffer_lock_acquired_4]
 
 ```sql
 SELECT
-        CAST(LocksAcquired.TargetXml AS XML)  AS RBufXml,
+        CAST(LocksAcquired.TargetXml AS XML)  AS RBufXml
     INTO
         #XmlAsTable
     FROM
