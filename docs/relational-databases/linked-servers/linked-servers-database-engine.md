@@ -1,6 +1,6 @@
 ---
-title: Связанные серверы
-ms.date: 05/29/2019
+title: Связанные серверы (ядро СУБД) | Документация Майкрософт
+ms.date: 10/14/2019
 ms.prod: sql
 ms.technology: ''
 ms.prod_service: database-engine
@@ -19,12 +19,12 @@ ms.assetid: 6ef578bf-8da7-46e0-88b5-e310fc908bb0
 author: stevestein
 ms.author: sstein
 ms.custom: seo-dt-2019
-ms.openlocfilehash: ed882119c2589dbec4209523e5bc66b896316ec8
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.openlocfilehash: f63e94b8a9ca93d6a1403e17d4a8fa7205938066
+ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74094779"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74165343"
 ---
 # <a name="linked-servers-database-engine"></a>Связанные серверы (компонент Database Engine)
 
@@ -56,7 +56,7 @@ ms.locfileid: "74094779"
   
 *Поставщиком OLE DB* является динамическая библиотека, осуществляющая управление и взаимодействие с определенными источниками данных. *Источник данных OLE DB* определяет конкретную базу данных, доступ к которой выполняется через интерфейс OLE DB. Хотя источники данных, запросы к которым выполняются с помощью определений связанных серверов, являются обычными базами данных, существуют поставщики OLE DB для разнообразных файлов и форматов файлов. Сюда входят текстовые файлы, данные электронных таблиц и результаты поиска полнотекстового содержимого.  
   
-Поставщик OLE DB для собственного клиента [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (PROGID: SQLNCLI11) является официальным поставщиком OLE DB для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+Поставщик OLE DB для собственного клиента [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (PROGID: SQLNCLI11) является официальным поставщиком OLE DB для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!NOTE]  
 > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предназначены для работы с поставщиком OLE DB, реализующим необходимые интерфейсы OLE DB. Однако работа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверялась только с поставщиком Native Client OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и некоторыми другими поставщиками.  
@@ -64,16 +64,19 @@ ms.locfileid: "74094779"
 ## <a name="linked-server-details"></a>Подробности настройки связанных серверов  
  На следующей иллюстрации показаны основы настройки связанных серверов.  
   
- ![Уровень клиента, уровень сервера и уровень сервера баз данных](../../relational-databases/linked-servers/media/lsvr.gif "Уровень клиента, уровень сервера и уровень сервера баз данных")  
+ ![Уровень клиента, уровень сервера и уровень сервера баз данных](../../relational-databases/linked-servers/media/lsvr.gif "|::ref1::|")  
   
 Обычно связанные серверы используются для обработки распределенных запросов. Если клиентское приложение выполняет распределенный запрос через связанный сервер, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проводит синтаксический анализ команды и передает запросы поставщику OLE DB. Запрос на набор строк может быть в форме выполнения запроса к поставщику или в форме открытия базовой таблицы из поставщика.  
-  
+
 > [!NOTE]
 > Чтобы источник данных мог вернуть данные при помощи связанного сервера, поставщик OLE DB (динамическая библиотека) для этого источника данных должен присутствовать на том же сервере, что и экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
-  
-> [!IMPORTANT] 
-> При использовании поставщика OLE DB учетная запись, под которой выполняется служба сервера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], должна иметь разрешения на чтение и выполнение для каталога и всех его подкаталогов, в котором установлен поставщик. Сюда входят поставщики, выпущенные корпорацией Майкрософт, и любые сторонние поставщики. 
-  
+ 
+> [!IMPORTANT]
+> При использовании поставщика OLE DB учетная запись, под которой выполняется служба сервера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], должна иметь разрешения на чтение и выполнение для каталога и всех его подкаталогов, в котором установлен поставщик. Сюда входят поставщики, выпущенные корпорацией Майкрософт, и любые сторонние поставщики.
+
+> [!NOTE]
+> Связанные серверы поддерживают сквозную проверку подлинности Active Directory при использовании полного делегирования. Начиная с SQL Server 2017 CU17, также поддерживается сквозная проверка подлинности с ограниченным делегированием. Однако [ограниченное делегирование на основе ресурсов](https://docs.microsoft.com/windows-server/security/kerberos/kerberos-constrained-delegation-overview) не поддерживается.
+
 ## <a name="managing-providers"></a>Управление поставщиками  
 Имеется набор параметров, определяющих, как [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] загружает и использует поставщики OLE DB, заданные в реестре.  
   
