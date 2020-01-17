@@ -13,12 +13,12 @@ f1_keywords:
 - sql13.dts.designer.odataconnectionmanager.f1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a643d35b6f9c31060e2c0404a6042be8b1c87abb
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 39499e36568d64f92d3608f610d64193c93389e6
+ms.sourcegitcommit: 02449abde606892c060ec9e9e9a85a3f49c47c6c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71298459"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74542186"
 ---
 # <a name="odata-connection-manager"></a>Диспетчер соединений OData
 
@@ -39,7 +39,7 @@ ms.locfileid: "71298459"
 ## <a name="connection-manager-authentication"></a>Проверка подлинности диспетчера соединений  
  Диспетчер подключений OData поддерживает пять режимов проверки подлинности.  
   
--   Проверка подлинности Windows.  
+-   Проверка подлинности Windows  
   
 -   Обычная проверка подлинности (с использованием имени пользователя и пароля)  
 
@@ -51,7 +51,7 @@ ms.locfileid: "71298459"
   
 Для анонимного доступа выберите режим проверки подлинности Windows.  
 
-Для подключения к Microsoft Dynamics AX Online или Microsoft Dynamics CRM Online запрещено использовать способ проверки подлинности **Microsoft Online Services**. Кроме того, запрещено использовать любой способ, рассчитанный на многофакторную проверку подлинности.
+Для подключения к Microsoft Dynamics AX Online или Microsoft Dynamics CRM Online запрещено использовать способ проверки подлинности **Microsoft Online Services**. Кроме того, запрещено использовать любой способ, рассчитанный на многофакторную проверку подлинности. Современная проверка подлинности в настоящее время не поддерживается. 
   
 ### <a name="specifying-and-securing-credentials"></a>Указание и защита учетных данных  
  Если служба OData использует обычную проверку подлинности, то можно указать имя пользователя и пароль в окне [Редактор диспетчера соединений OData](../../integration-services/connection-manager/odata-connection-manager-editor.md). Значения, указываемые в редакторе, сохраняются в пакете. Значение пароля шифруется в соответствии с уровнем защиты пакета.  
@@ -63,7 +63,7 @@ ms.locfileid: "71298459"
   
 |||  
 |-|-|  
-|Свойство|Описание|  
+|Свойство|Description|  
 |Url|URL-адрес сервисного документа.|  
 |UserName|Имя пользователя для проверки подлинности, если это необходимо.|  
 |Пароль|Пароль для проверки подлинности, если это необходимо.|  
@@ -77,12 +77,12 @@ ms.locfileid: "71298459"
  Имя диспетчера соединений.  
   
  **Расположение сервисного документа**  
- URL-адрес службы OData. Например, https://services.odata.org/V3/Northwind/Northwind.svc/.  
+ URL-адрес службы OData. Например: https://services.odata.org/V3/Northwind/Northwind.svc/.  
   
- **Проверка подлинности**  
+ **Аутентификация**  
 Выберите один из следующих вариантов.
 -   **Проверка подлинности Windows**. Выберите этот режим для анонимного доступа.
--   **Обычная проверка подлинности** 
+-   **Обычная аутентификация** 
 -   **Microsoft Dynamics AX Online** для Dynamics AX Online
 -   **Microsoft Dynamics CRM Online** для Dynamics CRM Online
 -   **Microsoft Online Services** для Microsoft Online Services

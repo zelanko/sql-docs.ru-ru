@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 77572a417836683e10ba3c7736fe4cdd0db4e129
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 68a5542d36731e260ab4aeb5a0734bea2a983108
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71708144"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75245273"
 ---
 # <a name="import-data-from-excel-to-sql-server-or-azure-sql-database"></a>Импорт данных из Excel в SQL Server или базу данных Azure
 
@@ -49,7 +49,7 @@ ms.locfileid: "71708144"
 
 Импортируйте данные напрямую из файлов Excel, выполнив инструкции на страницах мастера импорта и экспорта SQL Server. При необходимости сохраните параметры в виде пакета служб SQL Server Integration Services (SSIS), доступного для настройки и многократного применения в будущем.
 
-1. В [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]подключитесь к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)].
+1. В [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] подключитесь к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)].
 
 2. Разверните узел **Базы данных**.
 3. Щелкните базу данных правой кнопкой мыши.
@@ -252,7 +252,7 @@ bcp.exe ImportFromExcel..Data_bcp in "C:\Temp\data.csv" -T -c -t ,
 Дополнительные сведения о мастере копирования см. в указанных ниже разделах.
 
 - [Мастер копирования фабрики данных](https://docs.microsoft.com/azure/data-factory/data-factory-azure-copy-wizard)
-- [Учебник. Создание конвейера с действием копирования с помощью мастера копирования фабрики данных](https://docs.microsoft.com/azure/data-factory/data-factory-copy-data-wizard-tutorial).
+- [Руководство. Создание конвейера с действием копирования с помощью мастера копирования фабрики данных](https://docs.microsoft.com/azure/data-factory/data-factory-copy-data-wizard-tutorial).
 
 ## <a name="adf"></a> Фабрика данных Azure
 
@@ -269,13 +269,13 @@ bcp.exe ImportFromExcel..Data_bcp in "C:\Temp\data.csv" -T -c -t ,
 Чтобы научиться копировать данные с помощью фабрики данных Azure, см. указанные ниже разделы.
 
 - [Перемещение данных с помощью действия копирования](https://docs.microsoft.com/azure/data-factory/data-factory-data-movement-activities)
-- [Учебник. Создание конвейера с действием копирования с помощью портала Azure](https://docs.microsoft.com/azure/data-factory/data-factory-copy-data-from-azure-blob-storage-to-sql-database)
+- [Руководство. Создание конвейера с действием копирования с помощью портала Azure](https://docs.microsoft.com/azure/data-factory/data-factory-copy-data-from-azure-blob-storage-to-sql-database)
 
 ## <a name="common-errors"></a>Распространенные ошибки
 
 ### <a name="microsoftaceoledb120-has-not-been-registered"></a>"Microsoft.ACE.OLEDB.12.0" не зарегистрирован
 
-Эта ошибка возникает, так как не установлен поставщик OLE DB. Установите его через [Распространяемый пакет ядра СУБД Microsoft Access 2010](https://www.microsoft.com/en-us/download/details.aspx?id=13255). Не забудьте установить 64-разрядную версию, если Windows и SQL Server — 64-разрядные.
+Эта ошибка возникает, так как не установлен поставщик OLE DB. Установите его через [Распространяемый пакет ядра СУБД Microsoft Access 2010](https://www.microsoft.com/download/details.aspx?id=13255). Не забудьте установить 64-разрядную версию, если Windows и SQL Server — 64-разрядные.
 
 Полный текст ошибки.
 
@@ -284,7 +284,7 @@ Msg 7403, Level 16, State 1, Line 3
 The OLE DB provider "Microsoft.ACE.OLEDB.12.0" has not been registered.
 ```
 
-## <a name="cannot-create-an-instance-of-ole-db-provider-microsoftaceoledb120-for-linked-server-null"></a>Не удалось создать экземпляр поставщика OLE DB "Microsoft.ACE.OLEDB.12.0" для связанного сервера "(null)".
+### <a name="cannot-create-an-instance-of-ole-db-provider-microsoftaceoledb120-for-linked-server-null"></a>Не удалось создать экземпляр поставщика OLE DB "Microsoft.ACE.OLEDB.12.0" для связанного сервера "(null)".
 
 Это означает, что Microsoft OLEDB не был настроен должным образом. Чтобы устранить проблему, выполните приведенный ниже код Transact-SQL.
 

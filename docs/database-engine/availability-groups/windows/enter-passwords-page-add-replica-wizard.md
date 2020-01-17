@@ -1,7 +1,7 @@
 ---
-title: Страница ввода паролей (мастер добавления реплики) для групп доступности
+title: Мастер добавления реплики. Страница ввода паролей для групп доступности
 description: Описание свойств на странице ввода паролей в мастере добавления реплики SQL Server Management Studio.
-ms.custom: seodec18
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: e69207a0-c5c4-44e4-ae9a-4afbb67251d1
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e6198ca1183caf731a78026dfd1f2f7644979580
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6277498bd66e2659e0a692d2e62d66501ca1fac8
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68008439"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822215"
 ---
 # <a name="enter-passwords-page-add-replica-wizard-for-always-on-availability-groups"></a>Страница ввода паролей (мастер добавления реплики) для групп доступности Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

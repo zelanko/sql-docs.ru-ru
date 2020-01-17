@@ -1,6 +1,7 @@
 ---
-title: Поиск и устранение неисправностей конфигурации групп доступности AlwaysOn (SQL Server) | Документы Майкрософт
-ms.custom: ''
+title: Распространенные проблемы и решения для групп доступности
+description: Узнайте, как определить и устранить распространенные проблемы с группами доступности Always On на SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8c222f98-7392-4faf-b7ad-5fb60ffa237e
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d3ef92d88ca0579910e7d02f9dbe73ec381510cd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 57625308d1d8e9fcca375e33c72f4bdbf9ace222
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68013757"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75235328"
 ---
 # <a name="troubleshoot-always-on-availability-groups-configuration-sql-server"></a>Поиск и устранение неисправностей конфигурации групп доступности AlwaysOn (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "68013757"
   
  **В этом разделе:**  
   
-|Раздел|Описание|  
+|Section|Description|  
 |-------------|-----------------|  
 |[Функция групп доступности AlwaysOn не включена](#IsHadrEnabled)|Если экземпляр [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] не включен для [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], то экземпляр не поддерживает создание групп доступности и на нем не могут размещаться реплики доступности.|  
 |[Измерение счетов](#Accounts)|Обсуждаются требования к правильной настройке учетных записей, под которыми работает [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|  
@@ -162,7 +163,7 @@ ms.locfileid: "68013757"
   
 -   [Командлет Get-ClusterLog отказоустойчивого кластера](https://technet.microsoft.com/library/ee461045.aspx)  
   
--   [Блоги команды разработчиков SQL Server Always On: официальный блог по SQL Server Always On](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+-   [Блог команды разработчиков SQL Server Always On: официальный блог по SQL Server Always On](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
 ## <a name="see-also"></a>См. также:  
  [Безопасность транспорта для зеркального отображения баз данных и групп доступности AlwaysOn (SQL Server)](../../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)   

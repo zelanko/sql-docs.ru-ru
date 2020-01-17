@@ -1,6 +1,5 @@
 ---
-title: Использование сеанса system_health | Документация Майкрософт
-ms.custom: ''
+title: Использование сеанса system_health
 ms.date: 11/27/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -16,21 +15,21 @@ ms.assetid: 1e1fad43-d747-4775-ac0d-c50648e56d78
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 262860781ba99abf8c4f6de783cd477db0e15d81
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ab31461888588ee54f1715f5e98ddb0f3b9aa23b
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68009348"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75246141"
 ---
-# <a name="use-the-systemhealth-session"></a>Использование сеанса system_health
+# <a name="use-the-system_health-session"></a>Использование сеанса system_health
 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 Сеанс system_health является сеансом расширенных событий, который по умолчанию включен в состав [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Этот сеанс запускается автоматически при запуске [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] и выполняется без заметного воздействия на производительность. В этом сеансе собираются системные данные, которые можно использовать для устранения неполадок, связанных с производительностью компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)]. 
 
 > [!IMPORTANT]
-> Поэтому этот сеанс не рекомендуется останавливать или удалять.  
+> Поэтому этот сеанс не рекомендуется останавливать или удалять. Любые изменения, внесенные в параметры сеанса system_health, могут быть перезаписаны будущим обновлением продукта.
   
 Сеанс собирает следующие данные.  
   
@@ -82,7 +81,7 @@ WHERE xe.name = 'system_health'
   
 Для просмотра данных сеанса из файла событий пользуйтесь доступным пользовательским интерфейсом расширенных событий в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Дополнительные сведения см. в разделе [Advanced Viewing of Target Data from Extended Events in SQL Server](../../relational-databases/extended-events/advanced-viewing-of-target-data-from-extended-events-in-sql-server.md)(Расширенный просмотр целевых данных из расширенных событий в SQL Server).
   
-## <a name="restoring-the-systemhealth-session"></a>Восстановление сеанса system_health  
+## <a name="restoring-the-system_health-session"></a>Восстановление сеанса system_health  
 Если сеанс system_healt был удален, то вы можете его восстановить, выполнив файл **u_tables.sql** в редакторе запросов. Этот файл находится в следующей папке, где **C:** означает диск, на котором установлены программные файлы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], а **MSSQL1x** — основной номер версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
  `C:\Program Files\Microsoft SQL Server\MSSQL1x.\<*instanceid*>\MSSQL\Install`  

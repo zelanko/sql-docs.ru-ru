@@ -1,6 +1,7 @@
 ---
-title: Сведения о публикации, предупреждения (публикации моментального снимка, SQL Server 2005 и более поздние версии) | Документация Майкрософт
-ms.custom: ''
+title: Предупреждения (моментальные снимки — монитор репликации)
+decription: Describes the 'Warnings' tab for a Snapshot Publication in the Replication Monitor found in SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,12 +14,12 @@ ms.assetid: 7aa2eb52-b6b7-4dd3-8483-8ef00d9f0435
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: a9657fd76e48848035cac74acac1b0f723e07d31
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 058ad1dea883b2b5b9d5066bd1eedac0114f3d02
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769973"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321327"
 ---
 # <a name="publication-information-warnings-snapshot-publication-sql-server-2005-and-later"></a>Сведения о публикации, предупреждения (публикация моментального снимка, SQL Server 2005 и более поздние версии)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -36,13 +37,13 @@ ms.locfileid: "68769973"
  Достижение порогового значения помимо отображения предупреждения в мониторе репликации может также вызывать системное предупреждение. Предупреждения определяются нажатием кнопки **Настройка предупреждений** и указанием сведений в диалоговом окне **Настройка предупреждений репликации** .  
   
 ## <a name="options"></a>Параметры  
- **Включено**  
+ **Enabled**  
  Выберите, чтобы включить предупреждение и указать пороговое значение.  
   
  **Предупреждение**  
  Описание предупреждения, связанного с пороговым значением.  
   
- **Порог**  
+ **Пороговое значение**.  
  Укажите пороговое значение.  
   
  **Настройка предупреждений**  

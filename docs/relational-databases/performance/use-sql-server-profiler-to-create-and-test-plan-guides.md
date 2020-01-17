@@ -1,6 +1,8 @@
 ---
-title: Использование приложения SQL Server Profiler для создания и проверки структур плана | Документация Майкрософт
-ms.custom: ''
+title: Создание и проверка структур плана
+titleSuffix: SQL Server Profiler
+description: Создание и проверка структур плана в SQL Server Profiler.
+ms.custom: seo-dt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -21,18 +23,18 @@ helpviewer_keywords:
 ms.assetid: 7018dbf0-1a1a-411a-88af-327bedf9cfbd
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 271e84ccefd43f2ce379a64435a9eb105553f606
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.openlocfilehash: 2879807d7eb64446a26ea5857f33c52fe7b78970
+ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/14/2019
-ms.locfileid: "72305087"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74165926"
 ---
-# <a name="use-sql-server-profiler-to-create-and-test-plan-guides"></a>Использование приложения SQL Server Profiler для создания и проверки руководств планов
+# <a name="use-sql-server-profiler-to-create-and-test-plan-guides"></a>Использование SQL Server Profiler для создания и проверки структур плана
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   При создании структуры плана приложение [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] может применяться для извлечения точного текста запроса, который может использоваться в аргументе *statement_text* хранимой процедуры **sp_create_plan_guide** . Тем самым гарантируется, что во время компиляции структура плана будет соответствовать запросу. После создания структуры плана приложение [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] может также использоваться для проверки того, что структура плана действительно соответствует запросу. Обычно проверка структуры плана приложением [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] нужна, чтобы убедиться в том, что запрос соответствует структуре плана.  
   
-## <a name="capturing-query-text-by-using-sql-server-profiler"></a>Извлечение текста запроса при помощи приложения SQL Server Profiler  
+## <a name="capturing-query-text-by-using-sql-server-profiler"></a>Извлечение текста запроса при помощи SQL Server Profiler  
  Если выполняется запрос и при помощи приложения [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] извлекается текст точно в том виде, в котором он был представлен [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], можно создать структуру плана типа SQL или TEMPLATE, которое будет точно соответствовать тексту запроса. Благодаря этому структура плана может использоваться оптимизатором запросов.  
   
  Рассмотрим следующий запрос, представленный приложением в виде изолированного пакета:  
@@ -80,7 +82,7 @@ EXEC sp_create_plan_guide
     @hints = N'OPTION (MERGE JOIN)';  
 ```  
   
-## <a name="testing-plan-guides-by-using-sql-server-profiler"></a>Проверка структур планов при помощи приложения SQL Server Profiler  
+## <a name="testing-plan-guides-by-using-sql-server-profiler"></a>Проверка структур планов при помощи SQL Server Profiler  
  Чтобы убедиться в том, что структура плана соответствует запросу, выполните следующие шаги.  
   
 1.  Запустите трассировку в приложении [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] , выбрав тип события **Showplan XML** (находится в узле **Производительность** ).  

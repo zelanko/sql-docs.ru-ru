@@ -1,6 +1,7 @@
 ---
-title: Просмотр и изменение параметров командной строки агента репликации | Документация Майкрософт
-ms.custom: ''
+title: Просмотр и изменение параметров командной строки агента
+description: Узнайте, как просматривать и изменять параметры командной строки, используемые различными агентами репликации в SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 45f2e781-c21d-4b44-8992-89f60fb3d022
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 38d86590da144386077b170433c52dcd1cc18d7c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6c72c58b0a23f8215d303addfbb2ec9fb65c4489
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085909"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321641"
 ---
 # <a name="view-and-modify-replication-agent-command-prompt-parameters"></a>Просмотр и изменение параметров командной строки агента репликации
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Агенты репликации — это исполняемые файлы, принимающие параметры командной строки. По умолчанию агенты выполняются в рамках шагов заданий агента [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], поэтому эти параметры можно просматривать и изменять с помощью диалогового окна **Свойства задания — \<задание>** . Доступ к этому диалоговому окну можно получить из папки **Задания** в среде [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] и на вкладке **Агенты** монитора репликации. Сведения о запуске монитора репликации см. в [этой статье](../../../relational-databases/replication/monitor/start-the-replication-monitor.md).  
+  Агенты репликации — это исполняемые файлы, принимающие параметры командной строки. По умолчанию агенты выполняются в рамках шагов заданий агента [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], поэтому эти параметры можно просматривать и изменять с помощью диалогового окна **Свойства задания — \<задание>** . Доступ к этому диалоговому окну можно получить из папки **Задания** в среде [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] и на вкладке **Агенты** монитора репликации. Сведения о запуске монитора репликации см. в [этой статье](../../../relational-databases/replication/monitor/start-the-replication-monitor.md).  
   
 > [!NOTE]  
 >  Изменения параметров агента вступают в действие при следующем запуске агента. Если агент выполняется в непрерывном режиме, следует остановить и перезапустить агент.  
@@ -36,7 +37,7 @@ ms.locfileid: "68085909"
 |Агент моментальных снимков для секции публикации слиянием|**Dyn_\<Издатель>-\<база данных публикации>-\<публикация>-\<идентификатор GUID>**|[Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md)|  
 |Агент чтения журнала.|**\<Издатель>-\<база данных публикации>-\<целое число>**|[Агент чтения журнала репликации](../../../relational-databases/replication/agents/replication-log-reader-agent.md)|  
 |Агент слияния для подписок по запросу|**\<Издатель>-\<база данных публикации>-\<публикация>-\<подписчик>-\<база данных подписки>-\<целое число>**|[Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md)|  
-|Агент слияния для принудительных подписок|**\<Издатель>-\<база данных публикации>-\<публикация>-\<подписчик>-\<целое число>**|[Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md)|  
+|Агент слияния для принудительных подписок|**\<Издатель>-\<база_данных_публикации>-\<публикация>-\<подписчик>-\<целое_число>**|[Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md)|  
 |Агент распространителя для принудительных подписок|**\<Издатель>-\<база_данных_публикации>-\<публикация>-\<подписчик>-\<целое_число>**|[Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md)|  
 |Агент распространителя для подписок по запросу|**\<Издатель>-\<база_данных_публикации>-\<публикация>-\<подписчик>-\<база_данных_подписки>-\<идентификатор_GUID>**|[Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md)|  
 |Агент распространителя для принудительных подписок подписчиков серверов, отличных от подписчиков SQL Server|**\<Издатель>-\<база_данных_публикации>-\<публикация>-\<подписчик>-\<целое_число>**|[Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md)|  
@@ -72,7 +73,7 @@ ms.locfileid: "68085909"
   
 3.  Щелкните правой кнопкой мыши подписку, а затем выберите **Просмотреть сведения**.  
   
-4.  В окне **Подписка <имя_подписки>** нажмите кнопку **Действие**, а затем щелкните **Свойства задания \<имя_агента>** .  
+4.  В окне **Подписка <имя_подписки>** нажмите кнопку **Действие**, а затем щелкните **\<Свойства задания <имя_агента**.  
   
 5.  На странице **Шаги** диалогового окна **Свойства задания — \<задание>** выберите действие **Запустить агент**, а затем нажмите кнопку **Изменить**.  
   

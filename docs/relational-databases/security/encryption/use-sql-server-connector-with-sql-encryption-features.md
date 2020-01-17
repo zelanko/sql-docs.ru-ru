@@ -1,6 +1,7 @@
 ---
-title: Использование Соединителя SQL Server с компонентами шифрования SQL | Документация Майкрософт
-ms.custom: ''
+title: Использование шифрования соединителя SQL Server с Azure Key Vault
+description: Узнайте, как использовать соединитель SQL Server с общими функциями шифрования, такими как TDE, шифрование резервных копий и шифрование на уровне столбцов, с помощью Azure Key Vault.
+ms.custom: seo-lt-2019
 ms.date: 09/12/2019
 ms.prod: sql
 ms.reviewer: vanto
@@ -10,14 +11,14 @@ helpviewer_keywords:
 - SQL Server Connector, using
 - EKM, with SQL Server Connector
 ms.assetid: 58fc869e-00f1-4d7c-a49b-c0136c9add89
-author: aliceku
-ms.author: aliceku
-ms.openlocfilehash: 76b3d714f1522cfecd5c61eb028b59f3bbeaa09d
-ms.sourcegitcommit: 77293fb1f303ccfd236db9c9041d2fb2f64bce42
+author: jaszymas
+ms.author: jaszymas
+ms.openlocfilehash: 0fc954228aff75940e66f976f19d1414118e1a8e
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929748"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558519"
 ---
 # <a name="use-sql-server-connector-with-sql-encryption-features"></a>Использование Соединителя SQL Server с компонентами шифрования SQL
 [!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +33,7 @@ ms.locfileid: "70929748"
  Перед выполнением описанных здесь инструкций выполните части с I по IV в статье [Этапы настройки расширенного управления ключами с использованием хранилища ключей Azure](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md).  
  
 > [!NOTE]  
->  Версии 1.0.0.440 и старше были заменены и больше не поддерживаются в рабочих средах. Выполните обновление до версии 1.0.1.0 или более поздней, посетив [Центр загрузки Майкрософт](https://www.microsoft.com/download/details.aspx?id=45344) и используя инструкции на странице [Соединитель SQL Server, приложение](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md) в разделе "Обновление соединителя SQL Server".  
+>  Версии 1.0.0.440 и старше были заменены и больше не поддерживаются в рабочих средах. Выполните обновление до версии 1.0.1.0 или более поздней, посетив [Центр загрузки Майкрософт](https://www.microsoft.com/download/details.aspx?id=45344) и используя инструкции на странице [Обслуживание соединителя SQL Server и устранение неполадок](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md) в разделе "Обновление соединителя SQL Server".  
   
 ## <a name="transparent-data-encryption-by-using-an-asymmetric-key-from-azure-key-vault"></a>Прозрачное шифрование данных с помощью асимметричного ключа из хранилища ключей Azure
 
@@ -40,7 +41,7 @@ ms.locfileid: "70929748"
  
 Вам потребуется создать учетные данные и имя входа, а также ключ шифрования базы данных, который шифрует данные и журналы в базе данных. Чтобы зашифровать базу данных, для нее требуется разрешение **CONTROL** . На приведенном ниже рисунке показана иерархия ключа шифрования при использовании хранилища ключей Azure.  
   
- ![ekm-key-hierarchy-with-akv](../../../relational-databases/security/encryption/media/ekm-key-hierarchy-with-akv.png "ekm-key-hierarchy-with-akv")  
+ ![ekm&#45;key&#45;hierarchy&#45;with&#45;akv](../../../relational-databases/security/encryption/media/ekm-key-hierarchy-with-akv.png "ekm-key-hierarchy-with-akv")  
   
 1.  **Создание учетных данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] для ядра СУБД, которые будут использоваться при прозрачном шифровании данных**  
   
@@ -57,7 +58,7 @@ ms.locfileid: "70929748"
         > [!IMPORTANT]  
         >  Необходимо удалить дефисы из **идентификатора клиента**.  
   
-    -   Дополните вторую часть аргумента `SECRET` **секретом клиента** из части I. В этом примере **секрет клиента** из части I имеет значение `Replace-With-AAD-Client-Secret`. Окончательная строка аргумента `SECRET` будет представлять собой длинную последовательность букв и цифр *без дефисов*.  
+    -   Дополните вторую часть аргумента `SECRET`**секретом клиента** из части I. В этом примере **секрет клиента** из части I имеет значение `Replace-With-AAD-Client-Secret`. Окончательная строка аргумента `SECRET` будет представлять собой длинную последовательность букв и цифр *без дефисов*.  
   
     ```sql  
     USE master;  
@@ -115,11 +116,11 @@ ms.locfileid: "70929748"
   
      С помощью [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]убедитесь, что прозрачное шифрование данных включено, подключившись к базе данных с использованием обозревателя объектов. Щелкните правой кнопкой мыши базу данных, наведите указатель на пункт **Задачи**, а затем щелкните **Управление шифрованием в базе данных**.  
   
-     ![ekm-tde-object-explorer](../../../relational-databases/security/encryption/media/ekm-tde-object-explorer.png "ekm-tde-object-explorer")  
+     ![ekm&#45;tde&#45;object&#45;explorer](../../../relational-databases/security/encryption/media/ekm-tde-object-explorer.png "ekm-tde-object-explorer")  
   
      В диалоговом окне **Управление шифрованием в базе данных** проверьте, что TDE включено, и определите, какой асимметричный ключ используется для шифрования ключа DEK.  
   
-     ![ekm-tde-dialog-box](../../../relational-databases/security/encryption/media/ekm-tde-dialog-box.png "ekm-tde-dialog-box")  
+     ![ekm&#45;tde&#45;dialog&#45;box](../../../relational-databases/security/encryption/media/ekm-tde-dialog-box.png "ekm-tde-dialog-box")  
   
      Можно также выполнить приведенный ниже скрипт [!INCLUDE[tsql](../../../includes/tsql-md.md)] . Состояние шифрования 3 указывает на зашифрованную базу данных.  
   
@@ -154,7 +155,7 @@ ms.locfileid: "70929748"
         > [!IMPORTANT]  
         >  Необходимо удалить дефисы из **идентификатора клиента**.  
   
-    -   Дополните вторую часть аргумента `SECRET` **секретом клиента** из части I. В этом примере **секрет клиента** из части I имеет значение `Replace-With-AAD-Client-Secret`. Окончательная строка аргумента `SECRET` будет представлять собой длинную последовательность букв и цифр *без дефисов*.   
+    -   Дополните вторую часть аргумента `SECRET`**секретом клиента** из части I. В этом примере **секрет клиента** из части I имеет значение `Replace-With-AAD-Client-Secret`. Окончательная строка аргумента `SECRET` будет представлять собой длинную последовательность букв и цифр *без дефисов*.   
   
         ```sql  
         USE master;  

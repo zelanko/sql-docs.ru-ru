@@ -1,7 +1,7 @@
 ---
-title: Восстановление разностной резервной копии базы данных (SQL Server) | Документация Майкрософт
-ms.custom: ''
-ms.date: 03/14/2017
+title: 'Восстановление базы данных: разностное'
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0dd971a4-ee38-4dd3-9f30-ef77fc58dd11
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 14e12715c3722fe3278bf535b50bc749539d57ab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d9114879622ea6d856e890a4f248ea1bc9a5d522
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67937507"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75253490"
 ---
 # <a name="restore-a-differential-database-backup-sql-server"></a>Восстановление разностной резервной копии базы данных (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "67937507"
   
      [Предварительные требования](#Prerequisites)  
   
-     [безопасность](#Security)  
+     [Безопасность](#Security)  
   
 -   **Восстановление разностной резервной копии базы данных с помощью:**  
   
@@ -71,7 +71,7 @@ ms.locfileid: "67937507"
   
 #### <a name="to-restore-a-differential-database-backup"></a>Восстановление разностной резервной копии базы данных  
   
-1.  После подключения к соответствующему экземпляру компонента [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] в обозревателе объектов разверните дерево сервера, щелкнув имя сервера.  
+1.  После подключения к соответствующему экземпляру компонента [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] в обозревателе объектов разверните дерево сервера, щелкнув имя сервера.  
   
 2.  Разверните узел **Базы данных**. В зависимости от типа восстанавливаемой базы данных выберите пользовательскую базу данных или раскройте узел **Системные базы данных**и выберите системную базу данных.  
   
@@ -103,7 +103,7 @@ ms.locfileid: "67937507"
   
 6.  В сетке **Резервные наборы данных для восстановления** выберите резервные копии, которые необходимо восстановить с помощью разностного восстановления.  
   
-     Сведения о столбцах в сетке **Восстанавливаемые резервные наборы данных** см. в статье [Восстановление базы данных (страница "Общие")](../../relational-databases/backup-restore/restore-database-general-page.md).  
+     Дополнительные сведения о столбцах сетки **Резервные наборы данных для восстановления** см. в статье [Восстановление базы данных (страница "Общие")](../../relational-databases/backup-restore/restore-database-general-page.md).  
   
 7.  На странице **Параметры** используйте панель **Параметры восстановления** для выбора любого из следующих вариантов, если он подходит к данной ситуации.  
   

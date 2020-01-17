@@ -1,7 +1,7 @@
 ---
-title: Обзор командлетов PowerShell для групп доступности
+title: Командлеты PowerShell для групп доступности
 description: 'Справочник по различным командлетам PowerShell, доступным для управления группами доступности Always On. '
-ms.custom: seodec18
+ms.custom: seo-lt-2019
 ms.date: 08/30/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b3fef0d5-b6d7-4386-a0f0-d06c165ad4de
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: bb6542b5fa2028cf63712e17281b0a120f76f1d1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8aac669c8e7b2f43666a43c26a8040c3658c560c
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014630"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75236086"
 ---
 # <a name="overview-of-powershell-cmdlets-for-always-on-availability-groups"></a>Обзор командлетов PowerShell для групп доступности AlwaysOn
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "68014630"
   
 ##  <a name="ConfiguringServerInstance"></a> Настройка экземпляра сервера для групп доступности AlwaysOn  
   
-|Командлеты|Описание|Поддерживается на|  
+|Командлеты|Description|Поддерживается на|  
 |-------------|-----------------|------------------|
 |[**Disable-SqlAlwaysOn**](/powershell/module/sqlserver/disable-sqlalwayson)|Отключает компонент [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] для экземпляра сервера.|Экземпляр сервера, указанный параметром **Path**, **InputObject**или параметром **Name** . (Необходим выпуск [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] с поддержкой [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)].)|  
 |[**Enable-SqlAlwaysOn**](/powershell/module/sqlserver/enable-sqlalwayson)|Включает [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] в экземпляре [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] , который поддерживает компонент [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] . Дополнительные сведения о поддержке [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] см. в разделе [Предварительные требования, ограничения и рекомендации для групп доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).|Любой выпуск [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] с поддержкой [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)].|  
@@ -44,7 +44,7 @@ ms.locfileid: "68014630"
   
 ##  <a name="BnRcmdlets"></a> Резервное копирование и восстановление баз данных и журналов транзакций  
   
-|Командлеты|Описание|Поддерживается на|  
+|Командлеты|Description|Поддерживается на|  
 |-------------|-----------------|------------------|  
 |[**Backup-SqlDatabase**](/powershell/module/sqlserver/backup-sqldatabase)|Создает резервную копию данных или журнала.|Любая база данных, находящаяся в режиме «в сети» (для [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]база данных на том экземпляре сервера, на котором размещена первичная реплика)|  
 |[**Restore-SqlDatabase**](/powershell/module/sqlserver/restore-sqldatabase)|Восстанавливает резервную копию.|Любой экземпляр [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (для [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]экземпляр сервера, на котором размещена вторичная реплика)<br /><br />
@@ -56,7 +56,7 @@ ms.locfileid: "68014630"
   
 ##  <a name="DeployManageAGs"></a> Creating and Managing an Availability Group  
   
-|Командлеты|Описание|Поддерживается на|  
+|Командлеты|Description|Поддерживается на|  
 |-------------|-----------------|------------------|  
 |[**New-SqlAvailabilityGroup**](/powershell/module/sqlserver/new-sqlavailabilitygroup)|Создает новую группу доступности.|Экземпляр сервера, в котором будет размещена первичная реплика|  
 |[**Remove-SqlAvailabilityGroup**](/powershell/module/sqlserver/remove-sqlavailabilitygroup)|Удаляет группу доступности.|Экземпляр сервера с включенным компонентом HADR|  
@@ -65,7 +65,7 @@ ms.locfileid: "68014630"
   
 ##  <a name="AGlisteners"></a> Creating and Managing an Availability Group Listener  
   
-|Командлет|Описание|Поддерживается на|  
+|Командлет|Description|Поддерживается на|  
 |------------|-----------------|------------------|  
 |[**New-SqlAvailabilityGroupListener**](/powershell/module/sqlserver/new-sqlavailabilitygrouplistener)|Создает прослушиватель группы доступности и привязывает его к существующей группе доступности.|Экземпляр сервера, в котором размещена первичная реплика|  
 |[**Set-SqlAvailabilityGroupListener**](/powershell/module/sqlserver/set-sqlavailabilitygrouplistener)|Изменяет порт существующего прослушивателя группы доступности.|Экземпляр сервера, в котором размещена первичная реплика|  
@@ -73,7 +73,7 @@ ms.locfileid: "68014630"
   
 ##  <a name="DeployManageARs"></a> Creating and Managing an Availability Replica  
   
-|Командлеты|Описание|Поддерживается на|  
+|Командлеты|Description|Поддерживается на|  
 |-------------|-----------------|------------------|  
 |[**New-SqlAvailabilityReplica**](/powershell/module/sqlserver/new-sqlavailabilityreplica)|Создает новую реплику доступности. Вы можете использовать параметр **-AsTemplate** для создания в памяти объекта реплики доступности для каждой новой реплики доступности.|Экземпляр сервера, в котором размещена первичная реплика|  
 |[**Join-SqlAvailabilityGroup**](/powershell/module/sqlserver/join-sqlavailabilitygroup)|Присоединяет вторичную реплику к группе доступности.|Экземпляр сервера, в котором размещена вторичная реплика|  
@@ -82,7 +82,7 @@ ms.locfileid: "68014630"
   
 ##  <a name="DeployManageDbs"></a> Adding and Managing an Availability Database  
   
-|Командлеты|Описание|Поддерживается на|  
+|Командлеты|Description|Поддерживается на|  
 |-------------|-----------------|------------------|  
 |[**Add-SqlAvailabilityDatabase**](/powershell/module/sqlserver/add-sqlavailabilitydatabase)|Добавляет базу данных в группу доступности на первичной реплике.<br /><br /> Присоединяет вторичную базу данных к группе доступности на вторичной реплике.|Любой экземпляр сервера, на котором размещается реплика доступности (поведение отличается для первичных и вторичных реплик)|  
 |[**Remove-SqlAvailabilityDatabase**](/powershell/module/sqlserver/remove-sqlavailabilitydatabase)|Удаляет базу данных из группы доступности на первичной реплике.<br /><br /> Удаляет локальную базу данных-получатель из локальной вторичной реплики на вторичной реплике.|Любой экземпляр сервера, на котором размещается реплика доступности (поведение отличается для первичных и вторичных реплик)|  
@@ -95,7 +95,7 @@ ms.locfileid: "68014630"
 > [!IMPORTANT]  
 >  Для выполнения этих командлетов необходимо иметь разрешения CONNECT, VIEW SERVER STATE и VIEW ANY DEFINITION.  
   
-|Командлет|Описание|Поддерживается на|  
+|Командлет|Description|Поддерживается на|  
 |------------|-----------------|------------------|  
 |[**Test-SqlAvailabilityGroup**](/powershell/module/sqlserver/test-sqlavailabilitygroup)|Оценивает работоспособность группы доступности при помощи оценки состояния политик управления SQL Server.|Любой экземпляр сервера, на котором размещена реплика доступности.*|  
 |[**Test-SqlAvailabilityReplica**](/powershell/module/sqlserver/test-sqlavailabilityreplica)|Оценивает работоспособность реплик доступности при помощи оценки состояния политик управления SQL Server.|Любой экземпляр сервера, на котором размещена реплика доступности.*|  

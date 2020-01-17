@@ -1,6 +1,7 @@
 ---
-title: 'Репликация SQL Server: диалоговое окно "Свойства подписки" | Документация Майкрософт'
-ms.custom: ''
+title: диалоговое окно «Свойства подписки»
+description: Описание диалогового окна "Свойства подписки" в SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: 11/20/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -14,12 +15,12 @@ ms.assetid: db2be511-c76e-4f21-8be4-6a8c60a50d30
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 7793c64a6c7d5dc404c24f502a45067d2e95fcca
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: fab938acf112a047ed6aeb089093f815a4861a0c
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769463"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321531"
 ---
 # <a name="sql-server-replication-subscription-properties-dialog-box"></a>Репликация SQL Server: диалоговое окно "Свойства подписки" 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -50,7 +51,7 @@ ms.locfileid: "68769463"
 > - Управляемый экземпляр базы данных SQL Microsoft Azure может быть издателем, распространителем и подписчиком для репликации моментальных снимков и транзакций. Одна база данных SQL Microsoft Azure и базы данных в составе пула могут быть только принудительными подписчиками для репликации моментальных снимков и транзакций. Дополнительные сведения см. в разделе [Transactional replication with Azure SQL Database](/azure/sql-database/sql-database-managed-instance-transactional-replication). 
   
 ## <a name="publisher-options-for-all-subscriptions"></a>Параметры издателя для всех подписок  
- **безопасность**  
+ **Безопасность**  
  Чтобы изменить учетную запись, под которой агент распространителя или агент слияния выполняются на распространителе, щелкните строку **Учетная запись процесса агента** , затем нажмите кнопку свойств ( **...** ). Чтобы изменить учетную запись, под которой агент распространителя или агент слияния устанавливает соединения с подписчиком, щелкните **Соединение с подписчиком**, а затем нажмите кнопку свойств ( **…** ).  
   
  Дополнительные сведения о разрешениях, необходимых для каждого агента, см. в разделе [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md).  
@@ -96,7 +97,7 @@ ms.locfileid: "68769463"
  **Использовать диспетчер синхронизации Windows**  
  Определяет, может ли подписка быть синхронизирована с помощью диспетчера синхронизации [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
   
- **безопасность**  
+ **Безопасность**  
  Выберите строку **Учетная запись процесса агента** и нажмите кнопку свойств ( **...** ) для изменения учетной записи, под которой на подписчике будет запускаться агент распространителя или агент слияния. Параметры безопасности, относящиеся к соединениям, зависят от типа подписки:  
   
 -   Для подписок на публикации транзакций измените учетную запись, под которой агент распространителя устанавливает соединения с распространителем, выберите **Соединение с распространителем**и нажмите кнопку свойств ( **...** ).  
@@ -121,7 +122,7 @@ ms.locfileid: "68769463"
  При выборе серверного типа подписки в мастере создания подписок подписчику назначается приоритет, используемый при устранении конфликтов.  
   
  **Интерактивное разрешение конфликтов**  
- Указывается, использовать ли пользовательский интерфейс интерактивного сопоставителя при синхронизации слиянием. Для этого необходимо установить значение **Включено** для параметра **Использовать диспетчер синхронизации Windows**. Дополнительные сведения см. в статье [Interactive Conflict Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-interactive-resolution.md).  
+ Указывается, использовать ли пользовательский интерфейс интерактивного сопоставителя при синхронизации слиянием. Для этого необходимо установить значение **Включено** для параметра **Использовать диспетчер синхронизации Windows**. Дополнительные сведения см. в разделе [Interactive Conflict Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-interactive-resolution.md).  
   
  **Веб-синхронизация**  
  **Использование веб-синхронизации** определяет, требуется ли подключение к службе [!INCLUDE[msCoName](../../includes/msconame-md.md)] IIS для синхронизации подписки. Этот параметр доступен только в том случае, если публикация разрешена для веб-синхронизации. Дополнительные сведения см. в статье [Web Synchronization for Merge Replication](../../relational-databases/replication/web-synchronization-for-merge-replication.md).  

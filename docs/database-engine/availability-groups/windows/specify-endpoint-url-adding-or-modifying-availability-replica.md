@@ -1,6 +1,7 @@
 ---
-title: Выбор URL-адреса конечной точки при добавлении или изменении реплики доступности | Документы Майкрософт
-ms.custom: ''
+title: Указание URL-адреса конечной точки для реплики доступности
+description: Узнайте, как указать URL-адрес конечной точки при добавлении или изменении реплики в группе доступности Always On на SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d7520c13-a8ee-4ddc-9e9a-54cd3d27ef1c
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 724309ed2b66ee75eb8f223ebd300a2ae941cd2f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 28954a81cac3a5adacd037dbccb2e7584e060e79
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014010"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251283"
 ---
 # <a name="specify-endpoint-url---adding-or-modifying-availability-replica"></a>Выбор URL-адреса конечной точки при добавлении или изменении реплики доступности
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

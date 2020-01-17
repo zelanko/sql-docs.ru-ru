@@ -1,7 +1,7 @@
 ---
-title: Начало работы с контейнерами Linux SQL Server в Docker
-titleSuffix: SQL Server
+title: Docker. Установка контейнеров для SQL Server на Linux
 description: Это краткое руководство описывает, как использовать Docker для запуска образов контейнеров SQL Server 2017 и 2019. Затем мы создадим базу данных и выполним запрос с помощью sqlcmd.
+ms.custom: seo-lt-2019
 author: vin-yu
 ms.author: vinsonyu
 ms.reviewer: vanto
@@ -9,17 +9,16 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.custom: sqlfreshmay19
 ms.prod_service: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
 zone_pivot_groups: cs1-command-shell
-ms.openlocfilehash: 29a7905f70446f79d27e9766488e536ccd1c0c91
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 40c1573fb16bbf6d7cdbb98a168dcda064b59087
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531376"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558684"
 ---
 # <a name="quickstart-run-sql-server-container-images-with-docker"></a>Краткое руководство. Запуск образов контейнеров SQL Server в Docker
 
@@ -124,7 +123,7 @@ any changes to one section should be duplicated in the other-->
 
    Следующая таблица содержит описание параметров запуска команды `docker run` из предыдущего примера.
 
-   | Параметр | Описание |
+   | Параметр | Description |
    |-----|-----|
    | **-e "ACCEPT_EULA=Y"** |  Присвойте переменной **ACCEPT_EULA** любое значение, чтобы подтвердить свое согласие с [лицензионным соглашением](https://go.microsoft.com/fwlink/?LinkId=746388). Обязательный параметр для образа SQL Server. |
    | **-e "SA_PASSWORD=\<YourStrong@Passw0rd\>"** | Укажите свой надежный пароль длиной не меньше восьми символов, соответствующий [требованиям к паролям в SQL Server](../relational-databases/security/password-policy.md). Обязательный параметр для образа SQL Server. |
@@ -243,7 +242,7 @@ SELECT @@SERVERNAME,
 
    Следующая таблица содержит описание параметров запуска команды `docker run` из предыдущего примера.
 
-   | Параметр | Описание |
+   | Параметр | Description |
    |-----|-----|
    | **-e "ACCEPT_EULA=Y"** |  Присвойте переменной **ACCEPT_EULA** любое значение, чтобы подтвердить свое согласие с [лицензионным соглашением](https://go.microsoft.com/fwlink/?LinkId=746388). Обязательный параметр для образа SQL Server. |
    | **-e "SA_PASSWORD=\<YourStrong@Passw0rd\>"** | Укажите свой надежный пароль длиной не меньше восьми символов, соответствующий [требованиям к паролям в SQL Server](../relational-databases/security/password-policy.md). Обязательный параметр для образа SQL Server. |
@@ -386,7 +385,7 @@ SELECT @@SERVERNAME,
    GO
    ```
 
-### <a name="insert-data"></a>Вставка данных
+### <a name="insert-data"></a>Добавление данных
 
 Теперь создайте таблицу `Inventory` и вставьте две новых строки.
 
@@ -474,7 +473,7 @@ SELECT @@SERVERNAME,
 
 Другие распространенные средства для подключения к SQL Server:
 
-- [Visual Studio Code](sql-server-linux-develop-use-vscode.md);
+- [Visual Studio Code](sql-server-linux-develop-use-vscode.md)
 - [SQL Server Management Studio (SSMS) в Windows](sql-server-linux-manage-ssms.md);
 - [Azure Data Studio](../azure-data-studio/what-is.md)
 - [mssql-cli (предварительная версия)](https://github.com/dbcli/mssql-cli/blob/master/doc/usage_guide.md).
@@ -514,7 +513,7 @@ docker rm sql1
 
 > [!VIDEO https://channel9.msdn.com/Events/Connect/2017/T152/player]
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 Сведения о восстановлении файлов резервной копии базы данных в контейнере см. в руководстве [Восстановление базы данных SQL Server в контейнере Docker в Linux](tutorial-restore-backup-in-sql-server-container.md). Сведения о других сценариях, таких как запуск нескольких контейнеров, сохраняемость данных и устранение неполадок, см. в руководстве [Настройка образов контейнеров SQL Server в Docker](sql-server-linux-configure-docker.md).
 

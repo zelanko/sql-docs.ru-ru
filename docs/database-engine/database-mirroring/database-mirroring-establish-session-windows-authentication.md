@@ -1,6 +1,7 @@
 ---
-title: Установка сеанса зеркального отображения базы данных с использованием проверки подлинности Windows | Документы Майкрософт
-ms.custom: ''
+title: Настройка зеркального отображения базы данных
+description: Действия по настройке связи зеркального отображения базы данных между основным и зеркальным экземплярами с использованием проверки подлинности Windows.
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.prod_service: high-availability
@@ -13,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: 143c68a5-589f-4e7f-be59-02707e1a430a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: db81b9dc854a5b753db2b59da35ffcec6d719dd0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cbdf7d05c25aad00e084c15929cce857cb6614d3
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006441"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822290"
 ---
-# <a name="database-mirroring---establish-session---windows-authentication"></a>Установка сеанса зеркального отображения базы данных с использованием проверки подлинности Windows
+# <a name="configure-database-mirroring"></a>Настройка зеркального отображения базы данных
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!NOTE]  
@@ -36,7 +37,7 @@ ms.locfileid: "68006441"
   
 ### <a name="to-establish-a-database-mirroring-session"></a>Установка сеанса зеркального отображения базы данных  
   
-1.  Создайте зеркальную базу данных. Дополнительные сведения см. в статье [Подготовка зеркальной базы данных к зеркальному отображению (SQL Server)](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md).  
+1.  Создайте зеркальную базу данных. Дополнительные сведения см. в статье [Prepare a Mirror Database for Mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md).  
   
 2.  Настройка безопасности на каждом из экземпляров сервера.  
   
@@ -60,7 +61,7 @@ ms.locfileid: "68006441"
   
      Если каждый участник нуждается в конечной точке, см. раздел [Создание конечной точки зеркального отображения базы данных с проверкой подлинности Windows (Transact-SQL)](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md).  
   
-3.  Если экземпляры участников запущены под другими учетными записями пользователей домена, для каждой требуется имя входа в базе данных **master** . Если имя входа отсутствует, его необходимо создать. Дополнительные сведения см. в статье [Разрешение сетевого доступа к конечной точке зеркального отображения базы данных с использованием проверки подлинности Windows (SQL Server)](../../database-engine/database-mirroring/database-mirroring-allow-network-access-windows-authentication.md).  
+3.  Если экземпляры участников запущены под другими учетными записями пользователей домена, для каждой требуется имя входа в базе данных **master** . Если имя входа отсутствует, его необходимо создать. Дополнительные сведения см. в разделе [Allow Network Access to a Database Mirroring Endpoint Using Windows Authentication &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-allow-network-access-windows-authentication.md).  
   
 4.  Для установка основного сервера в качестве участника на зеркальной базе данных, подключитесь к зеркальному серверу и выполните следующую инструкцию:  
   
@@ -208,7 +209,7 @@ ms.locfileid: "68006441"
 9. Если необходимо использовать режим высокого уровня безопасности с автоматической отработкой отказа, дополнительно установите экземпляр следящего сервера. Дополнительные сведения см. в разделе [Добавление следящего сервера для зеркального отображения базы данных с использованием проверки подлинности Windows (Transact-SQL)](../../database-engine/database-mirroring/add-a-database-mirroring-witness-using-windows-authentication-transact-sql.md).  
   
 > [!NOTE]  
->  Подробный пример настройки зеркального отображения базы данных, в котором показана настройка защиты, подготовка зеркальной базы данных, настройка участников и добавление следящего сервера, см. в разделе [Настройка зеркального отображения базы данных (SQL Server)](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md).  
+>  Подробный пример настройки зеркального отображения базы данных, в котором показана настройка защиты, подготовка зеркальной базы данных, настройка партнеров и добавление следящего сервера, см. в разделе [Настройка зеркального отображения базы данных (SQL Server)](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md).  
   
 ## <a name="see-also"></a>См. также:  
  [Настройка зеркального отображения базы данных (SQL Server)](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md)   
@@ -221,7 +222,7 @@ ms.locfileid: "68006441"
  [Зеркальное отображение и репликация баз данных (SQL Server)](../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md)   
  [Настройка зеркального отображения базы данных (SQL Server)](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md)   
  [Указание сетевого адреса сервера (зеркальное отображение базы данных)](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)   
- [Database Mirroring Operating Modes](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)  
+ [Режимы работы зеркального отображения базы данных](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)  
   
   
 

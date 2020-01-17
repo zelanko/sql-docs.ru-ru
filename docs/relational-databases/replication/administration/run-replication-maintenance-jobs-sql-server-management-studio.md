@@ -1,6 +1,7 @@
 ---
-title: Запуск заданий по обслуживанию репликации (SQL Server Management Studio) | Документация Майкрософт
-ms.custom: ''
+title: Запуск заданий обслуживания репликации (SSMS)
+description: Узнайте, как запускать и прекращать задания по обслуживанию репликации в среде SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,12 +14,12 @@ ms.assetid: 0dc485a0-5a50-41eb-a29d-f2b2fb920174
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: e7d5764e3cfdaf88ebfa23cedd61884f3c4f347e
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: a84af3482d7c0b30010b474be8d9f93e4c468e00
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768772"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75322012"
 ---
 # <a name="run-replication-maintenance-jobs-sql-server-management-studio"></a>запустить задания по обслуживанию репликаций (среда SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

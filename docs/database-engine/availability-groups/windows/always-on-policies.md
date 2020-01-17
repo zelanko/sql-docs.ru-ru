@@ -1,7 +1,7 @@
 ---
-title: Определение работоспособности группы доступности с помощью групповых политик
+title: Использование политик групп для определения работоспособности группы доступности
 description: Сведения о просмотре системных политик групп, используемых панелью мониторинга Always On для предоставления сведений о работоспособности групп доступности.
-ms.custom: ag-guide, seodec18
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 26bf8f71-c2b8-45ef-b3a3-372b96c9e6e3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0fadf5ccccf60114bc6068cfe4a79dc70bca3ecc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6a48450322a8552720a119ea325ed720669fe5a8
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67935007"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75245652"
 ---
 # <a name="evaluate-health-of-the-always-on-availability-group-using-group-policies"></a>Определение работоспособности группы доступности Always On с помощью групповых политик
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "67935007"
   
 3.  Чтобы просмотреть все системные политики групп доступности, в области **Выбор страницы** щелкните элемент **Выбор политики**.  
   
-## <a name="next-steps"></a>Следующие шаги  
+## <a name="next-steps"></a>Дальнейшие действия  
  [Модель работоспособности Always On, часть 2. Расширение модели работоспособности](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx).   
   
   

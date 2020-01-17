@@ -9,12 +9,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ee00232a1c1e64d31b7b6360666bdeebba756db9
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: 92aaf7c04d7a5e176fce4448b9d4f6172b541647
+ms.sourcegitcommit: a02727aab143541794e9cfe923770d019f323116
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75246954"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75755838"
 ---
 # <a name="microsoft-connector-for-oracle"></a>Соединитель с Oracle (Microsoft)
 
@@ -27,7 +27,7 @@ ms.locfileid: "75246954"
 Соединитель с Oracle (Microsoft) поддерживает следующие продукты Microsoft SQL Server:
 
 - все версии SQL Server, начиная с SQL Server 2019;
-- SQL Server Data Tools (SSDT)
+- SQL Server Data Tools (SSDT), начиная с версии 15.9.3.
 
 Поддерживаются следующие версии Oracle Database и источника данных Oracle:
 
@@ -43,28 +43,20 @@ Oracle Database поддерживается всеми операционным
 
 ## <a name="installation"></a>Установка
 
-Если необходимо запустить пакет в SQL Server, [здесь](https://www.microsoft.com/download/details.aspx?id=58228) можно скачать соединитель с Oracle Database (Microsoft). Затем выполните указания мастера установки.
+Чтобы установить соединитель для базы данных Oracle, скачайте и запустите установщик со [страницы последней версии соединителя Майкрософт для Oracle](https://www.microsoft.com/download/details.aspx?id=58228). Затем выполните указания мастера установки.
 
-После установки соединителя необходимо перезапустить службу интеграции SQL Server, чтобы убедиться, что источник и назначение Oracle работают правильно.
+После установки соединителя необходимо перезапустить службу интеграции SQL Server, чтобы убедиться в том, что источник и назначение Oracle работают правильно.
 
-Если вам нужно разработать пакет с помощью соединителя, скачивать соединитель не нужно. Он входит в состав в SQL Server Data Tools (SSDT) начиная с версии 15.9.0.
-
-## <a name="uninstallation"></a>Удаление
-
-Удалить соединитель с Oracle Database (Microsoft) из SQL Server можно с помощью мастера удаления.
-
-## <a name="design-ssis-package-with-previous-version"></a>Разработка пакета служб SSIS для прежних версий
-
-Соединитель с Oracle Database (Microsoft) входит в состав SQL Server Data Tools начиная с версии 15.9.0, поэтому при проектировании пакетов SSIS, предназначенных для SQL Server 2019, его установка не требуется.
-
-При проектировании пакета служб SSIS, предназначенного для SQL Server 2017 и более ранних версий, необходимо установить соединитель с Oracle от Attunity для требуемой версии.
-
-**Ссылки для скачивания:**
+Для выполнения пакета SSIS, предназначенного для SQL Server 2017 и более ранних версий, помимо **соединителя Майкрософт для Oracle**, необходимо установить **клиент Oracle** и **соединитель Майкрософт для Oracle от Attunity** соответствующих версий по следующим ссылкам:
 
 - [SQL Server 2017: соединитель с Oracle (Microsoft) от Attunity версии 5.0](https://www.microsoft.com/download/details.aspx?id=55179)
 - [SQL Server 2016: соединитель с Oracle (Microsoft) от Attunity версии 4.0](https://www.microsoft.com/download/details.aspx?id=52950)
 - [SQL Server 2014: соединитель с Oracle (Microsoft) от Attunity версии 3.0](https://www.microsoft.com/download/details.aspx?id=44582)
 - [SQL Server 2012: соединитель с Oracle (Microsoft) от Attunity версии 2.0](https://www.microsoft.com/download/details.aspx?id=29283)
+
+## <a name="uninstallation"></a>Удаление
+
+Удалить соединитель Майкрософт для базы данных Oracle из SQL Server можно с помощью мастера удаления.
 
 ## <a name="next-steps"></a>Дальнейшие действия
 

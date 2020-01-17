@@ -1,7 +1,8 @@
 ---
-title: Руководство. Создание и использование индексов в столбцах с поддержкой анклава с помощью случайного шифрования | Документация Майкрософт
-ms.custom: ''
-ms.date: 10/15/2019
+title: Индексы в столбцах с поддержкой анклава с использованием случайного шифрования (руководство)
+description: Из этого руководства вы узнаете, как создавать и использовать индексы в столбцах с поддержкой анклава с помощью случайного шифрования, поддерживаемого в функции Always Encrypted с безопасными анклавами для SQL Server.
+ms.custom: seo-lt-2019
+ms.date: 12/12/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: vanto
@@ -12,12 +13,12 @@ ms.topic: tutorial
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6ae44a28c5a4c426ffe225d8d80a545f6722c4c1
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: 636b304d99ee244ef7a367fb8a474ebe8df312a0
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73592327"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75557777"
 ---
 # <a name="tutorial-create-and-use-indexes-on-enclave-enabled-columns-using-randomized-encryption"></a>Руководство. Создание и использование индексов в столбцах с поддержкой анклава с помощью случайного шифрования
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
@@ -33,7 +34,7 @@ ms.locfileid: "73592327"
 
 ## <a name="step-1-enable-accelerated-database-recovery-adr-in-your-database"></a>Шаг 1. Ускорение восстановления базы данных (ADR)
 
-Мы настоятельно рекомендуем вам включить ADR для базы данных, прежде чем создавать первый индекс в столбце с поддержкой анклава с помощью случайного шифрования. Подробные сведения см. в разделе [Восстановление базы данных](./encryption/always-encrypted-enclaves.md##database-recovery) статьи [Always Encrypted с безопасными анклавами](./encryption/always-encrypted-enclaves.md).
+Мы настоятельно рекомендуем вам включить ADR для базы данных, прежде чем создавать первый индекс в столбце с поддержкой анклава с помощью случайного шифрования. Подробные сведения см. в разделе [Восстановление базы данных](./encryption/always-encrypted-enclaves.md#database-recovery) статьи [Always Encrypted с безопасными анклавами](./encryption/always-encrypted-enclaves.md).
 
 1. Закройте все экземпляры SSMS, которые вы использовали при работе с предыдущим руководством. Это приведет к закрытию подключений базы данных, что обязательно для включения ADR.
 1. От имени системного администратора откройте новый экземпляр SSMS и подключитесь к своему экземпляру SQL Server **без** включенной функции Always Encrypted для подключения к базе данных.
@@ -104,7 +105,7 @@ ms.locfileid: "73592327"
 
    1. На вкладке **Статистика динамических запросов** (в нижней части окна запроса) убедитесь, что запрос использует индекс.
 
-## <a name="step-3-create-an-index-with-role-separation"></a>Шаг 3. Создание индекса с разделением ролей
+## <a name="step-3-create-an-index-with-role-separation"></a>Шаг 3. Создание индекса с разделением ролей
 
 На этом шаге вы создадите индекс в зашифрованном столбце от имени двух разных пользователей. Один пользователь — это администратор баз данных, который требуется для создания индекса, но который не имеет доступа к ключам. Другой пользователь — это владелец данных с доступом к ключам.
 
@@ -172,7 +173,7 @@ ms.locfileid: "73592327"
    1. На вкладке **Статистика динамических запросов** (в нижней части окна запроса) убедитесь, что запрос использует индекс.
 
 ## <a name="next-steps"></a>Дальнейшие действия
-- [Учебник. Разработка приложения .NET Framework с помощью Always Encrypted с безопасными анклавами](tutorial-always-encrypted-enclaves-develop-net-framework-apps.md)
+- [Руководство. Разработка приложения .NET Framework с помощью Always Encrypted с безопасными анклавами](tutorial-always-encrypted-enclaves-develop-net-framework-apps.md)
 
 ## <a name="see-also"></a>См. также раздел
 - [Создание и использование индексов в столбцах с помощью Always Encrypted с безопасными анклавами](encryption/always-encrypted-enclaves-create-use-indexes.md)

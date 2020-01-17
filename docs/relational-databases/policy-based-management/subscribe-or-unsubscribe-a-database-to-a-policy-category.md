@@ -1,6 +1,7 @@
 ---
-title: Подписка базы данных на категорию политики или отмена подписки | Документация Майкрософт
-ms.custom: ''
+title: Подписка базы данных на категорию политики или отмена подписки
+description: Сведения о том, как подписать или отменить подписку базы данных на категорию политики для управления на основе политик с помощью SQL Server Management Studio и Transact-SQL (T-SQL).
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: d2c31769-7098-428e-ad9c-ef56541b7c52
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: d653db8d1fcc6b2344763ed6f3988a33a297fd69
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6425834958f88e86726f1ec2137bc6917a889671
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68021551"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558239"
 ---
 # <a name="subscribe-or-unsubscribe-a-database--to-a-policy-category"></a>Подписка базы данных на категорию политики или отмена подписки
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,7 +28,7 @@ ms.locfileid: "68021551"
   
 -   **Перед началом работы**  
   
-     [безопасность](#Security)  
+     [Безопасность](#Security)  
   
 -   **Для подписки базы данных на категорию политики или отмены подписки используется:**  
   
@@ -63,7 +64,7 @@ ms.locfileid: "68021551"
      **Есть подписка**  
      Указывает, имеет ли цель подписку на категорию политики. Если этот флажок не установлен, то категория политики задается для варианта **Обязательные подписки базы данных**. Это означает, что категория политики может применяться ко всем базам данных на сервере.  
   
-     **политика**  
+     **Политика**  
      Если группы политик развернуты, отображаются политики в категории политики.  
   
      **Enabled**  

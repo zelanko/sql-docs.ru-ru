@@ -1,7 +1,7 @@
 ---
-title: Восстановление резервной копии базы данных в простой модели восстановления (Transact-SQL) | Документация Майкрософт
-ms.custom: ''
-ms.date: 03/14/2017
+title: 'Восстановление базы данных: простая модель восстановления (Transact-SQL)'
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -16,14 +16,15 @@ helpviewer_keywords:
 ms.assetid: a928fa36-e285-476f-9a7b-6840a8bb7283
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: e130868d8df6537bef9c969cfa860b95242f185b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 835f5c6a4571359f750862d3487817a7e11f6503
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67937655"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244227"
 ---
 # <a name="restore-a-database-backup-under-the-simple-recovery-model-transact-sql"></a>Восстановление резервной копии базы данных в простой модели восстановления (Transact-SQL)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Этот раздел содержит сведения о восстановлении полной резервной копии базы данных.  
@@ -31,7 +32,7 @@ ms.locfileid: "67937655"
 > [!IMPORTANT]  
 >  При восстановлении базы данных из полной резервной копии системный администратор должен быть единственным пользователем, работающим с базой данных.  
   
-## <a name="prerequisites-and-recommendations"></a>Предварительные условия и рекомендации  
+## <a name="prerequisites-and-recommendations"></a>Предварительные требования и рекомендации  
   
 -   Чтобы восстановить зашифрованную базу данных, необходимо иметь доступ к сертификату или асимметричному ключу, который использовался для шифрования базы данных. Без сертификата или асимметричного ключа восстановить базу данных нельзя. Поэтому сертификат, используемый для шифрования ключа шифрования базы данных, должен храниться в течение всего времени, пока есть необходимость в резервной копии. Дополнительные сведения см. в статье [SQL Server Certificates and Asymmetric Keys](../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md).  
   
@@ -69,7 +70,7 @@ ms.locfileid: "67937655"
   
 ## <a name="example"></a>Пример  
   
-### <a name="description"></a>Описание  
+### <a name="description"></a>Description  
  В следующем примере восстанавливается полная резервная копия базы [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] с магнитной ленты.  
   
 ### <a name="example"></a>Пример  

@@ -1,6 +1,7 @@
 ---
-title: Сведения о публикации, вкладка "Трассировочные токены" (SQL Server 2005 и более поздние версии) | Документация Майкрософт
-ms.custom: ''
+title: Трассировочные токены (сведения о публикации)
+description: Описание вкладки "Трассировочные токены" страницы "Сведения о публикации" в мониторе репликации в SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,12 +14,12 @@ ms.assetid: a115ba95-17ae-45df-91bd-5a1a35f3745f
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: e4ec223179bf7fdb2e2fae250f95ab241ed1acf7
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 52f23a051de18881ee368bf34e6912abe67c6d2d
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770011"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321294"
 ---
 # <a name="publication-information-tracer-tokens-sql-server-2005-and-later"></a>Сведения о публикации, вкладка "Трассировочные токены" (SQL Server 2005 и более поздние версии)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -41,7 +42,7 @@ ms.locfileid: "68770011"
   
 -   **Выберите столбцы для отображения**: выбор столбцов для отображения и порядка их отображения в диалоговом окне **Выбор столбцов**.  
   
--   **Фильтр**: фильтрация строк в сетке на основании значений столбцов в диалоговом окне **Параметры фильтра**.  
+-   **Фильтр**. фильтрация строк в сетке на основании значений столбцов в диалоговом окне **Параметры фильтра**.  
   
 -   **Очистить фильтр**: удалить все настройки фильтра для сетки.  
   
@@ -56,7 +57,7 @@ ms.locfileid: "68770011"
 > [!NOTE]  
 >  Данные трассировочных токенов хранятся в течение того же периода времени, что и другие данные предыстории; этот период определяется сроком хранения журнала в базе данных распространителя. Дополнительные сведения о доступе к этим диалоговым окнам см. в статье [Просмотр и изменение свойств издателя и распространителя](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md).  
   
- **Подписка**  
+ **подписка**  
  Имя каждой подписки на публикацию.  
   
  **От издателя к распространителю**  

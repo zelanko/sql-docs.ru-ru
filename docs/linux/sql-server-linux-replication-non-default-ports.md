@@ -1,22 +1,24 @@
 ---
-title: Настройка репликации общих папок моментальных снимков в SQL Server на Linux
-description: В этой статье описывается настройка репликации общих папок моментальных снимков в SQL Server на Linux.
+title: Настройка папки моментальных снимков репликации (порты не по умолчанию)
+titleSuffix: SQL Server on Linux
+description: Узнайте, как настроить общие папки моментальных снимков с портами, отличными от портов по умолчанию, для репликации SQL Server на Linux.
+ms.custom: seo-lt-2019
 author: MikeRayMSFT
-ms.author: mikeray
+ms.author: mikerayW
 ms.reviewer: vanto
 ms.date: 09/24/2018
 ms.topic: article
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6959b2073871f70fb33823b50419c208a23df2dd
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: cb715e2a0a056c18352361b58ce8ffd67e3da78e
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68093186"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558599"
 ---
-# <a name="configure-replication-with-non-default-ports"></a>Настройка репликации с использованием портов, отличных от портов по умолчанию
+# <a name="configure-replication-with-non-default-ports-sql-server-linux"></a>Настройка репликации с использованием портов, отличных от портов по умолчанию (SQL Server на Linux)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
@@ -53,7 +55,7 @@ Server3 ожидает передачи данных через порт 6549 �
 exec sp_addsubscription @subscriber = 'Server3/MSSQL2017,6549',  ,  
 ```
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 [Основные понятия. Репликация SQL Server в Linux](sql-server-linux-replication.md)
 

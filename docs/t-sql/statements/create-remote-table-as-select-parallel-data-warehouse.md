@@ -1,6 +1,6 @@
 ---
-title: CREATE REMOTE TABLE AS SELECT (Parallel Data Warehouse) | Документы Майкрософт
-ms.custom: ''
+title: CREATE REMOTE TABLE AS SELECT (Parallel Data Warehouse)
+ms.custom: seo-dt-2019
 ms.date: 08/10/2017
 ms.prod: sql
 ms.technology: data-warehouse
@@ -10,12 +10,12 @@ ms.assetid: 16ef8191-7587-45a3-9ee9-7d99b7088de3
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: fbebdf4b35b10e584c023e0d34eb8a652d15c1cd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1b6b024507d06149efc0bc2693b5bde2f67d482b
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68117318"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401706"
 ---
 # <a name="create-remote-table-as-select-parallel-data-warehouse"></a>CREATE REMOTE TABLE AS SELECT (Parallel Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "68117318"
   
  Сведения о настройке удаленного сервера см. в разделе "Копирование удаленной таблицы" в статье [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].  
   
- ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL (Transact-SQL)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "|::ref1::|") [Синтаксические обозначения в Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -73,10 +73,10 @@ CREATE REMOTE TABLE { database_name.schema_name.table_name | schema_name.table_n
 >  Рекомендуем подключаться к удаленному серверу через IP-адрес. В зависимости от конфигурации сети подключение по имени компьютера может потребовать дополнительных шагов, чтобы использовать не являющийся устройством DNS-сервер для разрешения имени для правильного сервера. Этот шаг необязателен при соединении через IP-адрес. Дополнительные сведения см. в разделе "Использование DNS-сервера пересылки для разрешения имен DNS, не являющегося устройством (Analytics Platform System)" в статье [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].  
   
  *user_name*  
- Действительное имя входа для проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Максимальное количество символов равно 128.  
+ Действительное имя входа для проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Максимальное количество знаков — 128.  
   
  *password*  
- Пароль имени входа. Максимальное количество символов равно 128.  
+ Пароль имени входа. Максимальное количество знаков — 128.  
   
  *batch_size*  
  Максимальное количество строк на пакет. [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] отправляет строки в виде пакетов на сервер назначения. *Batch_size* является целым положительным числом >= 0. Значение по умолчанию — 0.  
@@ -143,7 +143,7 @@ AT ( 'Data Source = SQLA, 1433; User ID = David; Password = e4n8@3;' )
 AS SELECT <select_criteria>;  
 ```  
   
-### <a name="b-querying-the-sysdmpdwdmsworkers-dmv-for-remote-table-copy-status"></a>Б. Запрос в динамическое административное представление sys.dm_pdw_dms_workers о состоянии копирования удаленной таблицы  
+### <a name="b-querying-the-sysdm_pdw_dms_workers-dmv-for-remote-table-copy-status"></a>Б. Запрос в динамическое административное представление sys.dm_pdw_dms_workers о состоянии копирования удаленной таблицы  
  Этот запрос показывает, как просмотреть состояние копирования при копировании удаленной таблицы.  
   
 ```  

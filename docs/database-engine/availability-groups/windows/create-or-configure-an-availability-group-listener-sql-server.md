@@ -1,7 +1,7 @@
 ---
-title: Настройка прослушивателя для группы доступности
+title: Настройка прослушивателя группы доступности
 description: 'Приводятся инструкции по настройке прослушивателя для группы доступности Always On с помощью PowerShell или SQL Server Management Studio. '
-ms.custom: seodec18
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -16,12 +16,12 @@ ms.assetid: 2bc294f6-2312-4b6b-9478-2fb8a656e645
 author: MashaMSFT
 ms.author: mathoma
 manager: erikre
-ms.openlocfilehash: f97f9814192077dfbe8d361c34b3cf7424f19920
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 918619afd0b07c6d7b8e5d3ccef526da5f4d8fad
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264692"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822120"
 ---
 # <a name="configure-a-listener-for-an-always-on-availability-group"></a>Настройка прослушивателя для группы доступности Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -129,7 +129,7 @@ ms.locfileid: "68264692"
  **IP-адрес**  
  Отображает IP-адрес данной подсети.  Для данной подсети статический IP-адрес может быть указан как IPv4 или IPv6.  
   
- **Добавить**  
+ **Добавление**  
  Нажмите, чтобы добавить статический IP-адрес в выбранную подсеть или другую подсеть для этого прослушивателя. Откроется диалоговое окно **Добавление IP-адреса** . Дополнительные сведения см. в разделе справки [Диалоговое окно "Добавление IP-адреса" (SQL Server Management Studio)](../../../database-engine/availability-groups/windows/add-ip-address-dialog-box-sql-server-management-studio.md).  
   
  **Удалить**  
@@ -200,7 +200,7 @@ ms.locfileid: "68264692"
   
  **Настройка и использование поставщика SQL Server PowerShell**  
   
--   [SQL Server PowerShell, поставщик](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
+-   [Поставщик SQL Server PowerShell](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
 ## <a name="troubleshooting"></a>Устранение неполадок  
   
@@ -228,7 +228,7 @@ ms.locfileid: "68264692"
   
  **MultiSubnetFailover=True не поддерживается платформой NET Framework 3.5 или OLEDB**  
   
- **Проблема:** Если у группы доступности или экземпляра отказоустойчивого кластера есть имя прослушивателя (в диспетчере кластеров WSFC оно называется сетевым именем или точкой доступа клиента) с зависимостью от нескольких IP-адресов из разных подсетей и при этом используется ADO.NET с платформой .NET Framework 3.5 с пакетом обновления 1 (SP1) или SQL Native Client 11.0 OLEDB, то потенциально 50 % запросов на подключение клиентов к прослушивателю группы доступности исчерпают время ожидания подключения.  
+ **Проблема**. Если у группы доступности или экземпляра отказоустойчивого кластера есть имя прослушивателя (в диспетчере кластеров WSFC оно называется сетевым именем или точкой доступа клиента) с зависимостью от нескольких IP-адресов из разных подсетей и при этом используется ADO.NET с платформой .NET Framework 3.5 с пакетом обновления 1 (SP1) или SQL Native Client 11.0 OLEDB, то потенциально 50 % запросов на подключение клиентов к прослушивателю группы доступности исчерпают время ожидания подключения.  
   
  **Решения.** Рекомендуется выполнить одну из следующих задач.  
   

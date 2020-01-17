@@ -13,12 +13,12 @@ ms.assetid: f372ae86-a003-40af-92de-fa52e3eea13f
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0904966eb334b182646818b98449472122741f6c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1d452d0e342d9b8241ee79882970e65c74a26d77
+ms.sourcegitcommit: a92fa97e7d3132ea201e4d86c76ac39cd564cd3c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68086132"
+ms.lasthandoff: 12/21/2019
+ms.locfileid: "75325486"
 ---
 # <a name="variables-transact-sql"></a>Переменные (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -30,7 +30,10 @@ ms.locfileid: "68086132"
 * для хранения значения, возвращенного функцией или хранимой процедурой.
 
 > [!NOTE]
-> Имена некоторых системных функций Transact-SQL начинаются с двух символов *@* (\@\@). Хотя в предыдущих версиях сервера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] \@\@функции называются глобальными переменными, они не являются переменными и используются иначе. \@\@функции являются системными, и использование их синтаксиса соответствует правилам вызова функций.
+> Имена некоторых системных функций Transact-SQL начинаются с двух символов *@* (\@\@). Хотя в предыдущих версиях сервера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\@\@функции называются глобальными переменными, они не являются переменными и используются иначе. \@\@функции являются системными, и использование их синтаксиса соответствует правилам вызова функций.
+
+> [!NOTE]
+> Переменные нельзя использовать в представлениях.
 
 Следующий скрипт создает небольшую тестовую таблицу из 26 строк. Переменная используется в скрипте в качестве: 
 

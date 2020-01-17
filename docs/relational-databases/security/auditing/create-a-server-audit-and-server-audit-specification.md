@@ -1,6 +1,7 @@
 ---
-title: Создание аудита сервера и спецификации аудита сервера | Документация Майкрософт
-ms.custom: ''
+title: Создание аудита сервера и спецификации аудита сервера
+description: Узнайте, как создать аудит SQL Server и спецификацию аудита сервера с помощью SQL Server Management Studio (SSMS) или Transact-SQL (T-SQL).
+ms.custom: seo-lt-2019
 ms.date: 10/16/2019
 ms.prod: sql
 ms.prod_service: security
@@ -17,16 +18,16 @@ helpviewer_keywords:
 ms.assetid: 6624b1ab-7ec8-44ce-8292-397edf644394
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: b237b2d5511ef1547687289e00b4a695375e3754
-ms.sourcegitcommit: 4c5fb002719627f1a1594f4e43754741dc299346
+ms.openlocfilehash: 655adfa8cd08c0594b43d736bd2bf492d29278fc
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72517984"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75557859"
 ---
 # <a name="create-a-server-audit-and-server-audit-specification"></a>Создание аудита сервера и спецификации аудита сервера
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  В данном разделе описывается процесс создания аудита сервера и спецификации аудита сервера в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../../includes/tsql-md.md)]. *Аудит* экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] или базы данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] включает в себя отслеживание и протоколирование событий, происходящих в системе. Объект *Подсистема аудита SQL Server* объединяет отдельные экземпляры действий или групп действий уровня сервера или базы данных, за которыми нужно проводить наблюдение. Аудит работает на уровне экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . На одном экземпляре [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] может существовать несколько аудитов. Объект *Спецификация аудита сервера* принадлежит аудиту. Для каждого аудита вы можете создать один объект спецификации аудита сервера, поскольку они оба создаются в области экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в статье [Подсистема аудита SQL Server (ядро СУБД)](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
+  В данном разделе описывается процесс создания аудита сервера и спецификации аудита сервера в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../../includes/tsql-md.md)]. *Аудит* экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] или базы данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] включает в себя отслеживание и протоколирование событий, происходящих в системе. Объект *Подсистема аудита SQL Server* объединяет отдельные экземпляры действий или групп действий уровня сервера или базы данных, за которыми нужно проводить наблюдение. Аудит работает на уровне экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . На одном экземпляре [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] может существовать несколько аудитов. Объект *Спецификация аудита сервера* принадлежит аудиту. Для каждого аудита вы можете создать один объект спецификации аудита сервера, поскольку они оба создаются в области экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Дополнительные сведения см. в статье [Подсистема аудита SQL Server (ядро СУБД)](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
  **В этом разделе**  
   
@@ -34,7 +35,7 @@ ms.locfileid: "72517984"
   
      [Ограничения](#Restrictions)  
   
-     [безопасность](#Security)  
+     [Безопасность](#Security)  
   
 -   **Создание аудита сервера и спецификации аудита сервера с помощью:**  
   

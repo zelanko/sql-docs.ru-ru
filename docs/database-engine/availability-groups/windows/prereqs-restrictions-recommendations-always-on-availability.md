@@ -1,7 +1,7 @@
 ---
-title: Предварительные требования, ограничения и рекомендации для групп доступности
-description: Описание предварительных требований, ограничений и рекомендаций для развертывания группы доступности Always On.
-ms.custom: seodec18
+title: Группа доступности. Предварительные условия, ограничения и рекомендации
+description: Описание предварительных требований, ограничений и рекомендаций для развертывания группы доступности Always On в SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 03/22/2019
 ms.prod: sql
 ms.reviewer: ''
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: edbab896-42bb-4d17-8d75-e92ca11f7abb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 54b58cefb736fd4429c54c773f2fd6c0a9e86f59
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: f918fea905451aed787416aff0e2c22cae9e2bf5
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71708486"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258084"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-always-on-availability-groups"></a>Предварительные требования, ограничения и рекомендации для групп доступности Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -144,7 +144,7 @@ ms.locfileid: "71708486"
 ###  <a name="ThreadUsage"></a> Использование потока группами доступности  
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] предъявляет к рабочим потокам следующие требования.  
   
--   На простаивающем экземпляре [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] используется 0 потоков.  
+-   На простаивающем экземпляре [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] используется 0 потоков.  
   
 -   Максимальное число потоков, используемых для групп доступности, — это заданный настройками параметр максимального числа потоков сервера ("**max worker threads**") минус 40.  
   
@@ -279,7 +279,7 @@ ms.locfileid: "71708486"
 ###  <a name="RequirementsAG"></a> Предварительные условия (группы доступности)  
  При создании или повторной настройке конфигурации групп доступности обязательно следуйте описанным ниже требованиям.  
   
-||Предварительные требования|Описание|  
+||Предварительные требования|Description|  
 |-|------------------|-----------------|  
 |![Флажок](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Флажок")|Если вы планируете использовать экземпляр отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] для размещения реплики доступности, убедитесь, что понимаете ограничения, связанные с использованием отказоустойчивых кластеров, и что требования для создания такого кластера удовлетворены.|[Предварительные условия и ограничения, связанные с использованием экземпляра отказоустойчивого кластера SQL Server для размещения реплики доступности](#FciArLimitations) (ранее в этой статье)|  
   

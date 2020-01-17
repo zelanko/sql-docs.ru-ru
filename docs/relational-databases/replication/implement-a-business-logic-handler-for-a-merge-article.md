@@ -1,6 +1,7 @@
 ---
-title: Реализация обработчика бизнес-логики для статьи публикации слиянием | Документация Майкрософт
-ms.custom: ''
+title: Настройка обработчика бизнес-логики для статьи публикации слиянием
+description: Используйте программирование репликации или объекты Replication Management Objects, чтобы настроить обработчик бизнес-логики для синхронизации репликации слиянием.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: ed477595-6d46-4fa2-b0d3-a5358903ec05
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 17a7c0e27dbb6cb80cb0069a2ea76036654280e3
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.openlocfilehash: 8ba12a2dc53b845d52d2a3dcac574bed08865c12
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70846681"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75322151"
 ---
 # <a name="implement-a-business-logic-handler-for-a-merge-article"></a>Реализация обработчика бизнес-логики для статьи публикации слиянием
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +60,7 @@ ms.locfileid: "70846681"
   
 2.  Добавьте в проект ссылки на следующие пространства имен.  
   
-    |Ссылка на сборку|Местоположение|  
+    |Ссылка на сборку|Location|  
     |------------------------|--------------|  
     |<xref:Microsoft.SqlServer.Replication.BusinessLogicSupport>|[!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]COM (место установки по умолчанию)|  
     |<xref:System.Data>|Глобальный кэш сборок (компонент платформы .NET Framework)|  
@@ -132,7 +133,7 @@ ms.locfileid: "70846681"
   
 2.  Добавьте в проект ссылки на следующие пространства имен.  
   
-    |Ссылка на сборку|Местоположение|  
+    |Ссылка на сборку|Location|  
     |------------------------|--------------|  
     |<xref:Microsoft.SqlServer.Replication.BusinessLogicSupport>|[!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]COM (место установки по умолчанию)|  
     |<xref:System.Data>|Глобальный кэш сборок (компонент платформы .NET Framework)|  
@@ -171,11 +172,11 @@ ms.locfileid: "70846681"
   
 1.  Создайте соединение с распространителем с помощью класса <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.ReplicationServer> . Передайте объект <xref:Microsoft.SqlServer.Management.Common.ServerConnection> , созданный на шаге 1.  
+2.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.ReplicationServer>. Передайте объект <xref:Microsoft.SqlServer.Management.Common.ServerConnection> , созданный на шаге 1.  
   
 3.  Чтобы убедиться, что сборка не была ранее зарегистрирована в качестве обработчика бизнес-логики, вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationServer.EnumBusinessLogicHandlers%2A> и просмотрите возвращенный объект <xref:System.Collections.ArrayList> .  
   
-4.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler> . Задайте следующие свойства.  
+4.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler>. Задайте следующие свойства.  
   
     -   <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.DotNetAssemblyName%2A> — имя сборки .NET. Если сборка не найдена ни в том же каталоге, что и исполняемый файл агента слияния, ни в папке приложения, производящего синхронный запуск агента слияния, ни в глобальном кэше сборок (GAC), то ее имя должно включать полный путь. При использовании обработчика бизнес-логики во время сеанса веб-синхронизации необходимо перед именем сборки указывать ее полный путь.  
   
@@ -193,7 +194,7 @@ ms.locfileid: "70846681"
   
 1.  Создайте соединение с издателем с помощью класса <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.MergeArticle> . Задайте следующие свойства.  
+2.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.MergeArticle>. Задайте следующие свойства.  
   
     -   Имя статьи для <xref:Microsoft.SqlServer.Replication.Article.Name%2A>.  
   
@@ -209,7 +210,7 @@ ms.locfileid: "70846681"
   
 1.  Создайте соединение с издателем с помощью класса <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.MergeArticle> .  
+2.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.MergeArticle>.  
   
 3.  Установите свойства <xref:Microsoft.SqlServer.Replication.Article.Name%2A>, <xref:Microsoft.SqlServer.Replication.Article.PublicationName%2A>и <xref:Microsoft.SqlServer.Replication.Article.DatabaseName%2A> .  
   

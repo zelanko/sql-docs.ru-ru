@@ -1,18 +1,19 @@
 ---
-title: Использование распределенных транзакций с SQL Server в Docker
-description: В этой статье описывается, как использовать координатор распределенных транзакций Майкрософт (MSDTC) для распределенных транзакций в контейнере SQL Server в Docker.
+title: Распределенные транзакции (MSDTC) с SQL Server в Docker
+description: Узнайте, как использовать координатор распределенных транзакций Майкрософт (MSDTC) для распределенных транзакций в контейнере SQL Server в Docker.
+ms.custom: seo-lt-2019
 author: VanMSFT
 ms.author: vanto
 ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 1e30b6d2426cfca4e776ca738e2dc7000fe936ab
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 99c17e04e4352df91ad3c6028b3ec88fc5022c50
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531305"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558413"
 ---
 # <a name="how-to-use-distributed-transactions-with-sql-server-on-docker"></a>Использование распределенных транзакций с SQL Server в Docker
 

@@ -1,8 +1,8 @@
 ---
-title: Использование аналитических мини-приложений в Azure Data Studio для мониторинга серверов и баз данных
+title: Использование аналитических мини-приложений для мониторинга серверов и баз данных
 titleSuffix: Azure Data Studio
 description: Сведения об аналитических мини-приложениях в Azure Data Studio
-ms.custom: seodec18, sqlfreshmay19
+ms.custom: seodec18, sqlfreshmay19, seo-lt-2019
 ms.date: 05/14/2019
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,12 +10,12 @@ ms.reviewer: alayu; sstein
 ms.topic: conceptual
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: c1ab90efa97878676b1adc2a62579527407d6ba6
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 4edf4003d40da35dcd54b3938e0f318ef8b9440a
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67959522"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957058"
 ---
 # <a name="manage-servers-and-databases-with-insight-widgets-in-includename-sosincludesname-sos-shortmd"></a>Управление серверами и базами данных с помощью аналитического мини-приложения в [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
@@ -27,14 +27,12 @@ ms.locfileid: "67959522"
 
 ![панель мониторинга базы данных](media/insight-widgets/database-dashboard.png)
 
-
 Чтобы приступить к созданию различных типов аналитических мини-приложений, ознакомьтесь со следующими руководствами:
 
 - [Создание настраиваемого аналитического мини-приложения](tutorial-build-custom-insight-sql-server.md)
 - *Запуск встроенных аналитических мини-приложений*
   - [Запуск аналитического мини-приложения для мониторинга производительности](tutorial-qds-sql-server.md)
   - [Запуск аналитического мини-приложения для отслеживания использования табличного пространства](tutorial-table-space-sql-server.md)
-
 
 ## <a name="sql-queries"></a>Запросы SQL
 

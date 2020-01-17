@@ -1,6 +1,7 @@
 ---
-title: Группирование изменений в связанных строках с помощью логических записей | Документация Майкрософт
-ms.custom: ''
+title: Группирование изменений в связанных строках с помощью логических записей
+description: Узнайте, как вносить изменения в связанные строки как единое целое с помощью репликации слиянием в SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: ad76799c-4486-4b98-9705-005433041321
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9be51c4a919549ac356813f3b6ae185b7c5b5c58
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a7752007e36d7dd1a2da8522a531b4f46f3b5571
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68033255"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321508"
 ---
-# <a name="group-changes-to-related-rows-with-logical-records"></a>Группирование изменений в связанных строках с помощью логических записей
+# <a name="group-changes-to-related-rows-with-logical-records"></a>Изменения группирования связанных строк с логическими записями
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!NOTE]  
@@ -128,7 +129,7 @@ ms.locfileid: "68033255"
   
      Например, база данных, отслеживающая классы и студентов, могла бы иметь структуру, похожую на следующую:  
   
-     ![Дочерняя таблица с несколькими родительскими таблицами](../../../relational-databases/replication/merge/media/logical-records-03.gif "Дочерняя таблица с несколькими родительскими таблицами")  
+     ![Дочерняя таблица с несколькими родительскими](../../../relational-databases/replication/merge/media/logical-records-03.gif "Дочерняя таблица с несколькими родительскими")  
   
      Нельзя использовать логическую запись для представления трех таблиц в этом отношении, потому что строки в **ClassMembers** не связаны с одиночной строкой первичного ключа. Таблицы **Classes** и **ClassMembers** могут по-прежнему образовывать логическую запись, так же как таблицы **ClassMembers** и **Students**, но не все три таблицы.  
   

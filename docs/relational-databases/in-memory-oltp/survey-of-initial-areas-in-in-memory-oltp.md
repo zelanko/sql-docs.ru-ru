@@ -1,6 +1,6 @@
 ---
-title: Быстрый опрос 1. Технологии выполнения OLTP в памяти для повышения производительности Transact-SQL | Документация Майкрософт
-ms.custom: ''
+title: Выполняющаяся в памяти OLTP для повышения производительности службы Transact-SQL
+ms.custom: seo-dt-2019
 ms.date: 09/27/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -11,12 +11,12 @@ ms.assetid: 1c25a164-547d-43c4-8484-6b5ee3cbaf3a
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ebbf3c4bd5bbe4672734733fd8bd082954877e4b
-ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
+ms.openlocfilehash: ca32d98270a6eea4bd918c12c6b45279a05628e5
+ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71712938"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74412500"
 ---
 # <a name="survey-of-initial-areas-in-in-memory-oltp"></a>Обзор начальных областей в выполняющейся в памяти OLTP
 
@@ -77,7 +77,7 @@ SQL Server позволяет использовать функции выпол
   
 В этой статье основное внимание уделяется OLTP, а не аналитике. Сведения о том, как индексы columnstore обеспечивают аналитику в SQL, см. в разделе:  
   
-- [Начало работы с columnstore для получения операционной аналитики в реальном времени](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)  
+- [Начало работы с Columnstore для получения операционной аналитики в реальном времени](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)  
 - [Руководство по индексам columnstore](../../relational-databases/indexes/columnstore-indexes-overview.md)  
   
   
@@ -253,7 +253,7 @@ CREATE TABLE dbo.SalesOrder
   
   
 - [Индексы для оптимизированных для памяти таблиц](../../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md)  
-- [Конструкции языка Transact-SQL, неподдерживаемые в In-Memory OLTP](../../relational-databases/in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md)  
+- [Конструкции языка Transact-SQL, не поддерживаемые в выполняющейся в памяти OLTP](../../relational-databases/in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md)  
   
   
   
@@ -470,12 +470,12 @@ PRINT @mesg;
 Обратитесь к следующим статьям, посвященным некоторым соображениям, касающимся оптимизированных для памяти таблиц:  
   
 - [Миграция в In-Memory OLTP](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
-  - [Определение, должна ли таблица или хранимая процедура быть перенесена в выполняющуюся в памяти OLTP](../../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)  
+  - [Определение, должна ли таблица или хранимая процедура быть перенесена в In-Memory OLTP](../../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)  
   - Отчет об анализе производительности транзакции в SQL Server Management Studio позволяет оценить, улучшится ли производительность приложения в базе данных с помощью выполняемой в памяти OLTP.  
   - Инструкции по перемещению таблицы из дисковой базы данных в выполняемую в памяти OLTP см. в [Помощнике по оптимизации памяти](../../relational-databases/in-memory-oltp/memory-optimization-advisor.md) .   
 - [Резервное копирование и восстановление оптимизированных для памяти таблиц](https://msdn.microsoft.com/library/3f083347-0fbb-4b19-a6fb-1818d545e281)  
   - Объем хранилища, используемый оптимизированными для памяти таблицами, может быть значительно больше, чем размер таблиц в памяти. Это оказывает влияние на размер резервной копии базы данных.  
-- [Транзакции с таблицами, оптимизированными для памяти](../../relational-databases/in-memory-oltp/transactions-with-memory-optimized-tables.md)  
+- [Transactions with Memory-Optimized Tables](../../relational-databases/in-memory-oltp/transactions-with-memory-optimized-tables.md)  
   - Содержит сведения о логике повторных попыток в T-SQL для транзакций в таблицах, оптимизированных для памяти.  
 - [Поддержка Transact-SQL для выполняющейся в памяти OLTP](../../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md)  
   - Поддерживаемые и неподдерживаемые инструкции T-SQL и типы данных для оптимизированной для памяти таблицы и скомпилированных в собственном коде хранимых процедур.  

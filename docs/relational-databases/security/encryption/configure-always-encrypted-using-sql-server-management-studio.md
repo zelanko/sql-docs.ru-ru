@@ -1,6 +1,7 @@
 ---
-title: Настройка функции постоянного шифрования с помощью SQL Server Management Studio | Документация Майкрософт
-ms.custom: ''
+title: Настройка постоянного шифрования с помощью SSMS
+description: Сведения о задачах по настройке баз данных Always Encrypted и управлению ими с помощью SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: 10/31/2019
 ms.prod: sql
 ms.reviewer: vanto
@@ -12,12 +13,12 @@ ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6ff7ef354fdf3118f68c22bf2ad927070bf8e4b6
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: 7c033cf8200103fe6198661f7ed0e3e2a6c3966a
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73594425"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75557873"
 ---
 # <a name="configure-always-encrypted-using-sql-server-management-studio"></a>Configure Always Encrypted using SQL Server Management Studio (Настройка постоянного шифрования с помощью среды SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -42,7 +43,7 @@ ms.locfileid: "73594425"
 - [Перенос данных в столбцы или из них с помощью Always Encrypted с использованием мастера импорта и экспорта SQL Server](always-encrypted-migrate-using-import-export-wizard.md)
 
 ## <a name="see-also"></a>См. также:
-- [Постоянное шифрование](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
-- [Общие сведения об управлении ключами для Always Encrypted](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)
+- [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+- [Общие сведения об управлении ключами для Always Encrypted](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)
 - [Настройка постоянного шифрования с помощью PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)
 - [Разработка приложений с помощью Always Encrypted](always-encrypted-client-development.md)

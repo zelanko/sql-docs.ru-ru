@@ -1,6 +1,7 @@
 ---
-title: Использование политик AlwaysOn для определения работоспособности группы доступности | Документы Майкрософт
-ms.custom: ''
+title: Политики для просмотра работоспособности группы доступности
+description: Использование политик Always On или PowerShell для определения работоспособности группы доступности Always On.
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6f1bcbc3-1220-4071-8e53-4b957f5d3089
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a25f06a464fe8ba44347b4f1f117cbde64ceab76
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 13f43e5f66ca7700e9dd4732e9cf45ee1921548d
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68013645"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244735"
 ---
 # <a name="use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server"></a>Использование политик AlwaysOn для определения работоспособности группы доступности (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -85,7 +86,7 @@ ms.locfileid: "68013645"
   
      Эти командлеты принимают следующие параметры.  
   
-    |Параметр|Описание|  
+    |Параметр|Description|  
     |------------|-----------------|  
     |**AllowUserPolicies**|Выполняет пользовательские политики из категорий политик AlwaysOn.|  
     |**InputObject**|Коллекция объектов, представляющих состояния групп доступности, реплик доступности или базы данных доступности (в зависимости от того, какой используется командлет). Этот командлет вычисляет исправность указанных объектов.|  

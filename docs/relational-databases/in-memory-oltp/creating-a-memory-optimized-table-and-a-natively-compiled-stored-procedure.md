@@ -1,6 +1,6 @@
 ---
-title: Создание таблиц, оптимизированных для памяти, и хранимых процедур, скомпилированных в собственном коде | Документация Майкрософт
-ms.custom: ''
+title: Таблица, оптимизированная для памяти, и хранимая процедура, скомпилированная в собственном коде
+ms.custom: seo-dt-2019
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 48a9a0a3-930f-477b-bd0f-e82e77999ecc
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4a1e096d09865693661659a91875728baefdf92d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6e8793d5fc14401cbe800604accc6642a424fbbe
+ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67915312"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74412739"
 ---
 # <a name="creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure"></a>Создание таблиц, оптимизированных для памяти, и хранимых процедур, скомпилированных в собственном коде
 
@@ -31,7 +31,7 @@ ms.locfileid: "67915312"
   
 -   Загрузите данные в оптимизированную для памяти таблицу и обновите статистику после загрузки данных и перед созданием компилируемых хранимых процедур. Дополнительные сведения см. в статье [Статистика для таблиц, оптимизированных для памяти](../../relational-databases/in-memory-oltp/statistics-for-memory-optimized-tables.md).  
   
--   Создайте хранимые процедуры, скомпилированные в собственном коде, для доступа к данным в таблицах, оптимизированных для памяти. Дополнительные сведения см. в статье [CREATE PROCEDURE (Transact-SQL)](../../t-sql/statements/create-procedure-transact-sql.md). Также можно использовать традиционный интерпретируемый язык [!INCLUDE[tsql](../../includes/tsql-md.md)], чтобы получить доступ к данным в оптимизированных для памяти таблицах.  
+-   Создайте хранимые процедуры, скомпилированные в собственном коде, для доступа к данным в таблицах, оптимизированных для памяти. Дополнительные сведения см. в статье [CREATE PROCEDURE (Transact-SQL)](../../t-sql/statements/create-procedure-transact-sql.md). Также можно использовать традиционный интерпретируемый язык [!INCLUDE[tsql](../../includes/tsql-md.md)] , чтобы получить доступ к данным в оптимизированных для памяти таблицах.  
   
 -   При необходимости перенесите данные из существующих таблиц в оптимизированные для памяти таблицы.  
 

@@ -7,12 +7,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 8edcbf91c827ea2afafa0830aad5a26423102f17
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: b16c753b5640baacadc9a13b75ebb7a9d48a74fe
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73594541"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822148"
 ---
 # <a name="release-notes-for-sql-server-2019-on-linux"></a>Заметки о выпуске для SQL Server 2019 в Linux
 
@@ -43,7 +43,7 @@ ms.locfileid: "73594541"
 
 В следующей таблице указана история выпусков версий SQL Server 2019.
 
-| Выпуск                   | Версия       | Дата выпуска |
+| Release                   | Версия       | Дата выпуска |
 |---------------------------|---------------|--------------|
 | [GA](#ga)                 | 15.0.2000.5  | 2019-11-04    |
 | [Релиз-кандидат](#rc)  | 15.0.1900.25  | 2019-08-21   |
@@ -93,7 +93,7 @@ ms.locfileid: "73594541"
 
 В следующих разделах описаны известные проблемы с общедоступным (GA) выпуском SQL Server 2019 (15.x) в Linux.
 
-#### <a name="general"></a>Общие
+### <a name="general"></a>Общие сведения
 
 - Длина имени узла, где устанавливается [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], не должна превышать 15 символов. 
 
@@ -113,7 +113,11 @@ ms.locfileid: "73594541"
 
     - **Решение**. Измените язык для имени входа **sa** с помощью инструкции **ALTER LOGIN**.
 
-#### <a name="databases"></a>Базы данных
+- Поставщик OLEDB записывает в журнал следующее предупреждение: `Failed to verify the Authenticode signature of 'C:\binn\msoledbsql.dll'. Signature verification of SQL Server DLLs will be skipped. Genuine copies of SQL Server are signed. Failure to verify the Authenticode signature might indicate that this is not an authentic release of SQL Server. Install a genuine copy of SQL Server or contact customer support.`
+
+   - **Решение**. Никаких действий не требуется. Поставщик OLEDB подписан с использованием SHA256. Ядро СУБД SQL Server неправильно проверяет подписанный DLL-файл.
+
+### <a name="databases"></a>Базы данных
 
 - Невозможно переместить базу данных master с помощью служебной программы mssql-conf. Другие базы данных с помощью mssql-conf переместить можно.
 
@@ -143,7 +147,7 @@ ms.locfileid: "73594541"
 
 - Сейчас разрешение пользователя **ADMINISTER BULK OPERATIONS** в Linux не поддерживается.
 
-#### <a name="networking"></a>Работа с сетью
+### <a name="networking"></a>Сеть
 
 Функции, затрагивающие исходящие подключения TCP из процесса sqlservr, такие как связанные серверы или группы доступности, могут не работать, если выполняются оба следующих условия.
 
@@ -170,7 +174,7 @@ ms.locfileid: "73594541"
 - При подключении NFS следует указать только каталоги **/var/opt/mssql**. Другие файлы, например системные двоичные файлы [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], не поддерживаются.
 - При подключении удаленной общей папки клиенты NFS должны использовать параметр nolock.
 
-#### <a name="localization"></a>Локализация
+### <a name="localization"></a>Локализация
 
 - Если ваш языковой стандарт отличается от английского (en_us) во время установки, в сеансе или терминале bash нужно использовать кодировку UTF-8. Если использовать кодировку ASCII, появится примерно следующее сообщение об ошибке.
 
@@ -190,7 +194,7 @@ ms.locfileid: "73594541"
 
 - В этом выпуске доступны не все фильтры, включая фильтры для документов Office. Список поддерживаемых фильтров см. в статье [Установка полнотекстового поиска SQL Server в Linux](sql-server-linux-setup-full-text-search.md#filters).
 
-#### <a id="ssis"></a> Службы SQL Server Integration Services
+### <a id="ssis"></a> Службы SQL Server Integration Services
 
 - В этом выпуске пакет **mssql-server-is** не поддерживается в SUSE. Сейчас он поддерживается в Ubuntu и Red Hat Enterprise Linux (RHEL).
 
@@ -199,7 +203,7 @@ ms.locfileid: "73594541"
 - Следующие функции не поддерживаются в этом выпуске при запуске пакетов SSIS в Linux.
   - База данных каталогов [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]
   - Выполнение пакета агентом SQL по расписанию
-  - Проверка подлинности Windows.
+  - Проверка подлинности Windows
   - Сторонние компоненты
   - Система отслеживания измененных данных (CDC)
   - [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Scale Out
@@ -214,7 +218,7 @@ ms.locfileid: "73594541"
 -   [Установка служб SQL Server Integration Services (SSIS) в Linux](sql-server-linux-setup-ssis.md)
 -   [Извлечение, преобразование и загрузка данных в Linux с помощью служб SSIS](sql-server-linux-migrate-ssis.md)
 
-#### <a id="ssms"></a> SQL Server Management Studio (SSMS)
+### <a id="ssms"></a> SQL Server Management Studio (SSMS)
 
 На [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] в Windows, подключенный к [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] в Linux, распространяются следующие ограничения.
 
@@ -237,4 +241,4 @@ ms.locfileid: "73594541"
 - [Подготовка виртуальной машины SQL в Azure](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=/sql/toc/toc.json)
 - [Запуск и подключение — облако](quickstart-install-connect-clouds.md)
 
-Ответы на часто задаваемые вопросы об SQL Server на Linux см. в [этой статье](sql-server-linux-faq.md).
+Ответы на часто задаваемые вопросы об SQL Server на Linux см. в [этой статье](sql-server-linux-faq.md).

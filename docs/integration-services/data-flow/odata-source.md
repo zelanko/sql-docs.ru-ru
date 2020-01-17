@@ -15,12 +15,12 @@ f1_keywords:
 ms.assetid: cc9003c9-638e-432b-867e-e949d50cec90
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3972714722b800cdd4400739f40d8eb8c6c3eff7
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 2177b4d1c4454aca803f11980340407362236c8c
+ms.sourcegitcommit: 94f6a4b506dfda242fc3efb2403847e22a36d340
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71298230"
+ms.lasthandoff: 12/30/2019
+ms.locfileid: "75546534"
 ---
 # <a name="odata-source"></a>Источник OData
 
@@ -41,13 +41,15 @@ ms.locfileid: "71298230"
 
 Источник OData поддерживает следующие источники данных:
 -   Microsoft Dynamics AX Online и Microsoft Dynamics CRM Online.
--   Списки SharePoint. Просмотреть все списки на сервере SharePoint можно по следующему URL-адресу: https://\<сервер>/_vti_bin/ListData.svc. Дополнительные сведения о соглашениях об URL-адресах SharePoint см. в разделе [Интерфейс REST SharePoint Foundation](https://msdn.microsoft.com/library/ff521587.aspx).
+-   Списки SharePoint. Увидеть все списки на сервере SharePoint можно по следующему URL-адресу: `https://<server>/_vti_bin/ListData.svc`. Дополнительные сведения о соглашениях об URL-адресах SharePoint см. в разделе [Интерфейс REST SharePoint Foundation](https://msdn.microsoft.com/library/ff521587.aspx).
 
 ## <a name="supported-data-types"></a>Поддерживаемые типы данных
 
 Источник OData поддерживает следующие простые типы данных: int, byte[], bool, byte, DateTime, DateTimeOffset, decimal, double, Guid, Int16, Int32, Int64, sbyte, float, string и TimeSpan.
 
 Чтобы просмотреть типы данных столбцов в источнике данных, проверьте страницу `https://<OData feed endpoint>/$metadata`.
+
+Для типа данных **Decimal** точность и масштаб определяются исходными метаданными. Если в исходных метаданных не заданы свойства **Точность** и **Масштаб**, данные могут быть усечены.
 
 > [!IMPORTANT]
 > Компонент источника OData не поддерживает сложные типы в списках SharePoint, такие как элементы множественного выбора.
@@ -62,7 +64,7 @@ ms.locfileid: "71298230"
   
 ## <a name="related-topics-in-this-section"></a>Связанные подразделы в этом разделе  
   
--   [Учебник. Использование источника OData](../../integration-services/data-flow/tutorial-using-the-odata-source.md)  
+-   [Руководство. Использование источника OData](../../integration-services/data-flow/tutorial-using-the-odata-source.md)  
   
 -   [Изменение запроса источника OData во время выполнения](../../integration-services/data-flow/modify-odata-source-query-at-runtime.md)  
   
@@ -83,7 +85,7 @@ ms.locfileid: "71298230"
  **Использование пути к коллекции или ресурсу**  
  Укажите метод выбора данных из источника.  
   
-|Параметр|Описание|  
+|Параметр|Description|  
 |------------|-----------------|  
 |Коллекция|Извлечение данных из источника OData с помощью имени коллекции.|  
 |Путь к ресурсу|Извлечение данных из источника OData с помощью пути к ресурсу.|  

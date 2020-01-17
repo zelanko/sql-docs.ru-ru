@@ -1,7 +1,7 @@
 ---
-title: Восстановление базы данных до помеченной транзакции (среда SQL Server Management Studio) | Документация Майкрософт
-ms.custom: ''
-ms.date: 03/14/2017
+title: Восстановление базы данных до помеченной транзакции (SSMS)
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8f0ea144-1819-4832-905f-e5d0f49b066b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 066ca4d751e6d5d33f69bf284f5a35fb3aaa27e0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1e71815c79e626a1cebb60c7d5d50fda1cce132d
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67937589"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75245078"
 ---
 # <a name="restore-a-database-to-a-marked-transaction-sql-server-management-studio"></a>Восстановление базы данных до помеченной транзакции (среда SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "67937589"
   
 ### <a name="to-restore-a-marked-transaction"></a>Восстановление помеченной транзакции  
   
-1.  После соединения с соответствующим экземпляром компонента [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]в обозревателе объектов разверните дерево сервера, щелкнув его имя.  
+1.  После подключения к соответствующему экземпляру [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] в обозревателе объектов разверните дерево сервера, щелкнув его имя.  
   
 2.  Раскройте узел **Базы данных**и в зависимости от типа восстанавливаемой базы данных выберите пользовательскую базу данных или раскройте узел **Системные базы данных** и выберите системную базу данных.  
   

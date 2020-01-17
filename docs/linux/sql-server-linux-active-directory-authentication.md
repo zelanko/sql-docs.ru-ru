@@ -1,23 +1,23 @@
 ---
 title: Руководство. Использование проверки подлинности Active Directory для SQL Server на Linux
 titleSuffix: SQL Server
-description: В этом руководстве приводятся инструкции по настройке проверки подлинности Active Directory для SQL Server на Linux.
+description: В этом руководстве приводятся инструкции по настройке проверки подлинности Active Directory (AD) для SQL Server на Linux.
 author: Dylan-MSFT
 ms.author: dygray
 ms.reviewer: vanto
-ms.date: 04/01/2019
+ms.date: 12/18/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.custom: seodec18
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: 69bbeb31f8da4023bd0630ae0d944165407e2dec
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 72a1a554203349e9e6bd8cee43d2a6fe9d093ad8
+ms.sourcegitcommit: a02727aab143541794e9cfe923770d019f323116
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68027332"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75755863"
 ---
 # <a name="tutorial-use-active-directory-authentication-with-sql-server-on-linux"></a>Руководство. Использование проверки подлинности Active Directory с SQL Server на Linux
 
@@ -41,14 +41,14 @@ ms.locfileid: "68027332"
 Прежде чем настраивать проверку подлинности Active Directory, необходимо сделать следующее:
 
 * настроить контроллер домена Active Directory (Windows) в сети;  
-* установить [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:
+* установить [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)];
   * [Red Hat Enterprise Linux (RHEL)](quickstart-install-connect-red-hat.md)
   * [SUSE Linux Enterprise Server (SLES)](quickstart-install-connect-suse.md)
   * [Ubuntu](quickstart-install-connect-ubuntu.md)
 
 ## <a id="join"></a> Присоединение узла [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] к домену Active Directory
 
-Узел SQL Server на Linux необходимо присоединить к контроллеру домена Active Directory. Сведения о присоединении к домену Active Directory см. в статье [Присоединение узла SQL Server на Linux к домену Active Directory](sql-server-linux-active-directory-join-domain.md).
+Присоедините узел SQL Server на Linux к контроллеру домена Active Directory. Сведения о присоединении к домену Active Directory см. в статье [Присоединение узла SQL Server на Linux к домену Active Directory](sql-server-linux-active-directory-join-domain.md).
 
 ## <a id="createuser"></a> Создание пользователя Active Directory (или управляемой учетной записи службы) для [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и задание имени субъекта-службы
 
@@ -74,7 +74,7 @@ ms.locfileid: "68027332"
    ```
 
    > [!NOTE]
-   > Если возникнет ошибка `Insufficient access rights`, узнайте у администратора вашего домена, достаточно ли у вас разрешений для задания имени субъекта-службы для этой учетной записи.
+   > Если возникнет ошибка `Insufficient access rights`, узнайте у администратора вашего домена, достаточно ли у вас разрешений для задания имени субъекта-службы для этой учетной записи. Учетная запись, используемая для регистрации имени субъекта-службы, потребует разрешений **Запись servicePrincipalName**. Дополнительные сведения см. в разделе [Регистрация имени участника-службы для соединений Kerberos](../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md).
    >
    > Если в будущем вы измените TCP-порт, необходимо будет еще раз выполнить команду **setspn** с новым номером порта. Кроме того, необходимо будет добавить новое имя субъекта-службы в файл KEYTAB службы SQL Server, выполнив инструкции в следующем разделе.
 
@@ -82,172 +82,84 @@ ms.locfileid: "68027332"
 
 ## <a id="configurekeytab"></a> Настройка KEYTAB-файла службы [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
 
-Настраивать KEYTAB-файлы службы SQL Server можно двумя способами. Первый способ предполагает использование учетной записи компьютера (имени участника-пользователя), а второй — управляемой учетной записи службы (MSA) в конфигурации KEYTAB. Оба механизма в равной степени функциональны, поэтому вы можете выбрать тот из них, который лучше подходит для вашей среды.
-
-В обоих случаях требуется имя субъекта-службы, созданное ранее, и его необходимо зарегистрировать в файле KEYTAB.
-
-Чтобы настроить KEYTAB-файла службы SQL Server, выполните указанные ниже действия.
-
-1. Настройте [записи имени субъекта-службы в файле KEYTAB](#spn), как описано в следующем разделе.
-
-1. Затем добавьте в KEYTAB-файл [имя участника-пользователя](#upn) (вариант 1) или [управляемую учетную запись службы](#msa) (вариант 2), выполнив инструкции в соответствующих разделах.
+Для настройки проверки подлинности AD для SQL Server на Linux требуется учетная запись AD (учетная запись пользователя MSA или AD) и имя субъекта-службы, созданное в предыдущем разделе.
 
 > [!IMPORTANT]
-> При изменении пароля для имени участника-пользователя, управляемой учетной записи службы или учетной записи, которой назначены имена субъектов-служб, необходимо обновить файл KEYTAB, указав новый пароль и номер версии ключа (KVNO). В некоторых службах смена паролей может происходить автоматически. Проверьте политики смены паролей для нужных учетных записей и приведите их в соответствие с запланированными действиями по обслуживанию, чтобы избежать непредвиденных простоев.
+> При изменении пароля для учетной записи AD или учетной записи, которой назначены имена субъектов-служб, необходимо обновить файл KEYTAB, указав новый пароль и номер версии ключа (KVNO). В некоторых службах смена паролей может происходить автоматически. Проверьте политики смены паролей для нужных учетных записей и приведите их в соответствие с запланированными действиями по обслуживанию, чтобы избежать непредвиденных простоев.
 
 ### <a id="spn"></a> Записи имени субъекта-службы в файле KEYTAB
 
 1. Определите номер версии ключа (KVNO) для учетной записи Active Directory, созданной в предыдущем шаге. Обычно он имеет значение 2, но может быть другим целым числом, если пароль учетной записи менялся несколько раз. На хост-компьютере SQL Server выполните следующие команды:
 
+    - В приведенных ниже примерах предполагается, что `user` находится в домене `@CONTOSO.COM`. Измените имя пользователя и домена на свои значения.
+
    ```bash
    kinit user@CONTOSO.COM
+   kvno user@CONTOSO.COM
    kvno MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>**@CONTOSO.COM
    ```
 
    > [!NOTE]
-   > Распространение имен субъектов-служб в домене может занять несколько минут, особенно если домен большой. Если возникнет ошибка `kvno: Server not found in Kerberos database while getting credentials for MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>**@CONTOSO.COM`, подождите несколько минут и повторите попытку.  
+   > Распространение имен субъектов-служб в домене может занять несколько минут, особенно если домен большой. Если возникнет ошибка `kvno: Server not found in Kerberos database while getting credentials for MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>**@CONTOSO.COM`, подождите несколько минут и повторите попытку.</br></br> Приведенные выше команды будут работать только в том случае, если сервер присоединен к домену AD, который был рассмотрен в предыдущем разделе.
 
-1. Запустите **ktutil**:
+1. С помощью [**ktpass**](/windows-server/administration/windows-commands/ktpass)добавьте записи KEYTAB для каждого имени субъекта-службы с помощью следующих команд в командной строке компьютера Windows:
 
-   ```bash
-   sudo ktutil
-   ```
-
-1. Добавьте в KEYTAB записи для каждого имени субъекта-службы с помощью следующих команд:
-
-   ```bash
-   addent -password -p MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>**@CONTOSO.COM -k **<kvno from above>** -e aes256-cts-hmac-sha1-96
-   addent -password -p MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>**@CONTOSO.COM -k **<kvno from above>** -e rc4-hmac
-   addent -password -p MSSQLSvc/**<netbios name of the host machine>**:**<tcp port>**@CONTOSO.COM -k **<kvno from above>** -e aes256-cts-hmac-sha1-96
-   addent -password -p MSSQLSvc/**<netbios name of the host machine>**:**<tcp port>**@CONTOSO.COM -k **<kvno from above>** -e rc4-hmac
-   ```
-
-1. Запишите содержимое KEYTAB в файл и выйдите из программы ktutil:
+    - `<DomainName>\<UserName>` — может быть учетной записью пользователя MSA или AD
+    - `@CONTOSO.COM` — используйте свое имя домена
+    - `/kvno <#>` — замените `<#>` номером KVNO, полученным на предыдущем шаге
+    - `<StrongPassword>` — используйте надежный пароль
 
    ```bash
-   wkt /var/opt/mssql/secrets/mssql.keytab
-   quit
-   ```
+   ktpass /princ MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>**@CONTOSO.COM /ptype KRB5_NT_PRINCIPAL /crypto aes256-sha1 /mapuser <DomainName>\<UserName> /out mssql.keytab -setpass -setupn /kvno <#> /pass <StrongPassword>
 
-   > [!NOTE]
-   > Программа **ktutil** не проверяет пароль, поэтому при появлении запроса его нужно ввести правильно.
+   ktpass /princ MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>**@CONTOSO.COM /ptype KRB5_NT_PRINCIPAL /crypto rc4-hmac-nt /mapuser <DomainName>\<UserName> /in mssql.keytab /out mssql.keytab -setpass -setupn /kvno <#> /pass <StrongPassword>
 
-### <a id="upn"></a> Вариант 1. Настройка KEYTAB с использованием имени участника-пользователя
+   ktpass /princ MSSQLSvc/**<netbios name of the host machine>**:**<tcp port>**@CONTOSO.COM /ptype KRB5_NT_PRINCIPAL /crypto aes256-sha1 /mapuser <DomainName>\<UserName> /out mssql.keytab -setpass -setupn /kvno <#> /pass <StrongPassword>
 
-Добавьте в KEYTAB учетную запись компьютера с помощью **ktutil**. Учетная запись компьютера (также называемая именем участника-пользователя) содержится в файле **/etc/krb5.keytab** в формате `<hostname>$@<realm.com>` (например, `sqlhost$@CONTOSO.COM`). Скопируйте эти записи из файла **/etc/krb5.keytab** в файл **mssql.keytab**.
+   ktpass /princ MSSQLSvc/**<netbios name of the host machine>**:**<tcp port>**@CONTOSO.COM /ptype KRB5_NT_PRINCIPAL /crypto rc4-hmac-nt /mapuser <DomainName>\<UserName> /in mssql.keytab /out mssql.keytab -setpass -setupn /kvno <#> /pass <StrongPassword>
 
-1. Запустите **ktuil** с помощью следующей команды:
+   ktpass /princ <UserName>@<DomainName.com> /ptype KRB5_NT_PRINCIPAL /crypto aes256-sha1 /mapuser <DomainName>\<UserName> /in mssql.keytab /out mssql.keytab -setpass -setupn /kvno <#> /pass <StrongPassword>
 
-   ```bash
-   sudo ktutil
-   ```
-
-1. Используйте команду **rkt** для считывания всех записей из файла **/etc/krb5.keytab**.
-
-   ```bash
-   rkt /etc/krb5.keytab
-   ```
-
-1. Затем выведите список записей.
-
-   ```bash
-   list
-   ```
-
-1. Удалите записи, не являющиеся именами участников-пользователей, по номеру слота. Удаляйте записи по одной за раз, выполняя следующую команду:
-
-   ```bash
-   delent <slot num>
-   ```
-
-   > [!IMPORTANT]
-   > При удалении записи, например слота 1, оставшиеся значения смещаются вверх на одну позицию. Это означает, что при удалении записи в слоте 1 запись из слота 2 перемещается в слот 1.
-
-1. Еще раз выведите список записей, пока не останутся только записи имен участников-пользователей.
-
-   ```bash
-   list
-   ```
-
-1. Когда останутся только записи имен участников-пользователей, добавьте эти значения в файл **mssql.keytab**:
-
-   ```bash
-   wkt /var/opt/mssql/secrets/mssql.keytab
-   ```
-
-1. Выйдите из **ktutil**.
-
-   ```bash
-   quit
-   ```
-
-### <a id="msa"></a> Вариант 2.  Настройка KEYTAB с использованием управляемой учетной записи службы
-
-Для использования управляемой учетной записи службы необходимо создать KEYTAB-файл Kerberos SQL Server. Он должен содержать все [имена субъектов-служб, зарегистрированные в первом шаге](#spn), и учетные данные управляемой учетной записи службы, в которой зарегистрированы имена субъектов-служб. 
-
-1. После создания записей имен субъектов-служб в KEYTAB выполните следующие команды на компьютере Linux, присоединенном к домену:
-
-   ```bash
-   kinit <AD user>
-   kvno <any SPN registered in step 1>
-      <spn>@CONTOSO.COM: kvno = <KVNO>
-   ```
-
-   Будет выведен номер KVNO для учетной записи пользователя, назначенной владельцем имени субъекта-службы. Для выполнения этого шага имя субъекта-службы должно было быть назначено управляемой учетной записи службы во время ее создания. Если имя субъекта-службы не было назначено управляемой учетной записи службы, отображаемый номер KVNO будет относиться к текущему владельцу имени субъекта-службы и будет неправильным для данной конфигурации.  
-
-1. Запустите **ktutil**:
-
-   ```bash
-   sudo ktutil
-   ```
-
-1. Добавьте управляемую учетную запись службы с помощью следующих двух команд:
-
-   ```bash
-   addent -password -p <MSA> -k <kvno from command above> -e aes256-cts-hmac-sha1-96
-   addent -password -p <MSA> -k <kvno from command above> -e rc4-hmac
-   ```
-
-1. Запишите содержимое KEYTAB в файл и выйдите из программы ktutil:
-
-   ```bash
-   wkt /var/opt/mssql/secrets/mssql.keytab
-   quit
-   ```
-
-1. При использовании управляемой учетной записи службы для доступа к KEYTAB-файлу необходимо задать соответствующий параметр конфигурации с помощью средства **mssql-conf**. Приведенные ниже значения должны содержаться в файле **/var/opt/mssql/mssql.conf**.
-
-   ```bash
-   sudo mssql-conf set network.privilegedadaccount <MSA_Name>
+   ktpass /princ <UserName>@<DomainName.com> /ptype KRB5_NT_PRINCIPAL /crypto rc4-hmac-nt /mapuser <DomainName>\<UserName> /in mssql.keytab /out mssql.keytab -setpass -setupn /kvno <#> /pass <StrongPassword>
    ```
 
    > [!NOTE]
-   > Включите только имя управляемой учетной записи службы, но не имя домена и учетной записи.
+   > Приведенные выше команды позволяют использовать методы шифрования AES и RC4 для проверки подлинности AD. RC4 — это старый метод шифрования, и если требуется более высокая степень безопасности, то можно создать записи KEYTAB только с методом шифрования AES.
 
-## <a id="securekeytab"></a> Защита KEYTAB-файла
+1. После выполнения приведенной выше команды у вас должен быть файл KEYTAB с именем mssql.keytab. Скопируйте файл на компьютер с SQL Server в папке `/var/opt/mssql/secrets`.
 
-Любой пользователь, имеющий доступ к KEYTAB-файлу, может олицетворять SQL Server в домене, поэтому необходимо ограничить доступ к файлу так, чтобы только учетная запись mssql имела доступ для чтения:
+1. Защитите KEYTAB-файл.
 
-```bash
-sudo chown mssql:mssql /var/opt/mssql/secrets/mssql.keytab
-sudo chmod 400 /var/opt/mssql/secrets/mssql.keytab
-```
+    Любой пользователь, имеющий доступ к KEYTAB-файлу, может олицетворять SQL Server в домене, поэтому необходимо ограничить доступ к файлу так, чтобы только учетная запись mssql имела доступ для чтения:
 
-## <a id="keytabkerberos"></a> Настройка SQL Server для использования KEYTAB-файла для проверки подлинности Kerberos
+    ```bash
+    sudo chown mssql:mssql /var/opt/mssql/secrets/mssql.keytab
+    sudo chmod 400 /var/opt/mssql/secrets/mssql.keytab
+    ```
 
-Чтобы настроить использование KEYTAB-файла для проверки подлинности Kerberos при запуске SQL Server, выполните указанные ниже действия.
+1. Для указания учетной записи для доступа к KEYTAB-файлу необходимо задать соответствующий параметр конфигурации с помощью средства **mssql-conf**.
 
-```bash
-sudo mssql-conf set network.kerberoskeytabfile /var/opt/mssql/secrets/mssql.keytab
-sudo systemctl restart mssql-server
-```
+   ```bash
+   sudo mssql-conf set network.privilegedadaccount <username>
+   ```
 
-Чтобы повысить производительность, можно отключить подключения UDP к контроллеру домена. При подключении к контроллеру домена UDP-подключения часто завершаются сбоем, поэтому в файле **/etc/krb5.conf** можно задать параметры конфигурации для пропуска вызовов UDP. Измените файл **/etc/krb5.conf**, задав следующие параметры:
+   > [!NOTE]
+   > Включайте только имя пользователя, а не имя_домена\имя_пользователя или username@domain. SQL Server сам добавляет имя домена вместе с этим именем пользователя при использовании.
 
-```/etc/krb5.conf
-[libdefaults]
-udp_preference_limit=0
-```
+1. Чтобы настроить использование KEYTAB-файла для проверки подлинности Kerberos при запуске SQL Server, выполните указанные ниже действия.
+
+    ```bash
+    sudo mssql-conf set network.kerberoskeytabfile /var/opt/mssql/secrets/mssql.keytab
+    sudo systemctl restart mssql-server
+    ```
+
+    > [!TIP]
+    > Чтобы повысить производительность, можно отключить подключения UDP к контроллеру домена. При подключении к контроллеру домена UDP-подключения часто завершаются сбоем, поэтому в файле **/etc/krb5.conf** можно задать параметры конфигурации для пропуска вызовов UDP. Измените файл **/etc/krb5.conf**, задав следующие параметры:
+    > ```bash
+    > /etc/krb5.conf
+    > [libdefaults]
+    > udp_preference_limit=0
+    > ```
 
 Теперь все готово для использования имен входа на основе Active Directory в SQL Server.
 
@@ -284,6 +196,7 @@ ssh -l user@contoso.com client.contoso.com
 ```bash
 sqlcmd -S mssql-host.contoso.com
 ```
+В отличие от SQL Windows проверка подлинности Kerberos работает для локального подключения в SQL Linux. Однако вам по-прежнему необходимо предоставить полное доменное имя узла SQL Linux, а проверка подлинности AD не будет работать при попытке подключения к ".", "localhost", "127.0.0.1" и т. д.
 
 ### <a name="ssms-on-a-domain-joined-windows-client"></a>SSMS в клиенте Windows, присоединенном к домену
 
@@ -296,7 +209,7 @@ sqlcmd -S mssql-host.contoso.com
 | Клиентский драйвер | Рекомендация |
 |---|---|
 | **JDBC** | Используйте встроенную проверку подлинности Kerberos для подключения к SQL Server. |
-| **интерфейс ODBC** | Используйте встроенную проверку подлинности. |
+| **ODBC** | Используйте встроенную проверку подлинности. |
 | **ADO.NET** | Синтаксис строки подключения. |
 
 ## <a id="additionalconfig"></a> Дополнительные параметры конфигурации
@@ -326,7 +239,7 @@ systemctl restart mssql-server
 
 Это может быть полезно в ситуациях, когда нужно вручную настроить контроллеры домена, с которыми пытается связаться SQL Server. Механизм библиотеки openldap используется посредством списка KDC в **krb5.conf**.
 
-Сначала установите параметры **disablessd** и **enablekdcfromkrb5conf** в значение true, а затем перезапустите SQL Server:
+Сначала установите параметры **disablesssd** и **enablekdcfromkrb5conf** в значение true, а затем перезапустите SQL Server:
 
 ```bash
 sudo mssql-conf set network.disablesssd true
@@ -347,7 +260,7 @@ CONTOSO.COM = {
 > [!NOTE]
 > Хотя делать это не рекомендуется, вы можете использовать служебные программы, такие как **realmd**, для настройки SSSD при присоединении узла Linux к домену и присвоить параметру **disablesssd** значение true, чтобы SQL Server использовал вызовы openldap вместо SSSD для вызовов, связанных с Active Directory.
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 В этом руководстве были представлены пошаговые инструкции по настройке проверки подлинности Active Directory для SQL Server на Linux. Вы ознакомились с выполнением следующих задач:
 > [!div class="checklist"]

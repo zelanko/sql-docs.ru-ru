@@ -1,6 +1,6 @@
 ---
-title: Доступ к таблицам, оптимизированным для памяти, с помощью интерпретируемых инструкций Transact-SQL | Документация Майкрософт
-ms.custom: ''
+title: Таблицы, оптимизированные для памяти, с интерпретируемыми инструкциями T-SQL
+ms.custom: seo-dt-2019
 ms.date: 05/31/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.assetid: 92a44d4d-0e53-4fb0-b890-de264c65c95a
 author: MightyPen
 ms.author: genemi
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dd722c59384b1a7878ac2b940da9534ba5d1f7a2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 402b945c68e68f73ba482c20b158f14aba2c818f
+ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67951321"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74412809"
 ---
 # <a name="accessing-memory-optimized-tables-using-interpreted-transact-sql"></a>Доступ к таблицам, оптимизированным для памяти, с помощью интерпретируемых инструкций Transact-SQL
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -70,7 +70,7 @@ ms.locfileid: "67951321"
   
 ## <a name="see-also"></a>См. также:
 
-[Поддержка Transact-SQL для In-Memory OLTP](../../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md)   
+[Поддержка Transact-SQL для выполняющейся в памяти OLTP](../../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md)   
 
 [Миграция в In-Memory OLTP](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
 

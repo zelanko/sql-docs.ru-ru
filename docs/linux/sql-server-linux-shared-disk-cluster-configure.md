@@ -1,6 +1,7 @@
 ---
-title: Настройка экземпляра отказоустойчивого кластера — SQL Server на Linux (RHEL)
-description: ''
+title: Настройка экземпляра отказоустойчивого кластера— SQL Server на Linux (RHEL)
+description: Узнайте, как настроить экземпляр отказоустойчивого кластера на Red Hat Enterprise Linux (RHEL) для SQL Server.
+ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
-ms.openlocfilehash: 83c25db6f0915aae9cf210d2b749df970da40590
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 61fe5d7ffb5dfc6ec98f6d5350eff396deaa0312
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68032300"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558329"
 ---
 # <a name="configure-failover-cluster-instance---sql-server-on-linux-rhel"></a>Настройка экземпляра отказоустойчивого кластера — SQL Server на Linux (RHEL)
 
@@ -27,7 +28,7 @@ ms.locfileid: "68032300"
 > * Установка и настройка SQL Server
 > * Настройка файла hosts
 > * Настройка общего хранилища и перемещение файлов базы данных
-> * Установка и настройка Pacemaker на каждом узле кластера
+> * Установка и настройка Pacemaker в каждом узле кластера
 > * Настройка экземпляра отказоустойчивого кластера
 
 В этой статье объясняется, как создать экземпляр отказоустойчивого кластера (FCI) SQL Server с двумя узлами и общим диском. Здесь содержатся инструкции и примеры сценариев для Red Hat Enterprise Linux (RHEL). Дистрибутивы Ubuntu аналогичны RHEL, поэтому примеры сценариев также будут работать в Ubuntu. 
@@ -40,31 +41,31 @@ ms.locfileid: "68032300"
 
 ## <a name="set-up-and-configure-linux"></a>Установка и настройка Linux
 
-Сначала необходимо настроить операционную систему на узлах кластера. На каждом узле в кластере настройте дистрибутив Linux. На обоих узлах следует использовать один и тот же дистрибутив и одну и ту же версию. Воспользуйтесь одним из указанных далее дистрибутивов:
+Сначала необходимо настроить операционную систему в узлах кластера. На каждом узле в кластере настройте дистрибутив Linux. На обоих узлах следует использовать один и тот же дистрибутив и одну и ту же версию. Воспользуйтесь одним из указанных далее дистрибутивов:
     
 * RHEL с допустимой подпиской для надстройки высокой доступности
 
 ## <a name="install-and-configure-sql-server"></a>Установка и настройка SQL Server
 
 1. Установите и настройте SQL Server на обоих узлах.  Подробные инструкции см. в статье [Установка SQL Server в Linux](sql-server-linux-setup.md).
-1. В целях настройки назначьте один узел первичным, а другой — вторичным. Используйте приведенные ниже условия для работы с этим руководством.  
-1. Остановите и отключите SQL Server на вторичном узле.
-    В следующем примере показаны остановка и отключение SQL Server: 
+1. В целях настройки назначьте один узел первичным, а другой — вторичным. Используйте приведенные ниже условия для работы с этим руководством.  
+1. Остановите и отключите SQL Server во вторичном узле.
+    В следующем примере показаны остановка и отключение SQL Server: 
     ```bash
     sudo systemctl stop mssql-server
     sudo systemctl disable mssql-server
     ```
 
     > [!NOTE] 
-    > Во время установки создается главный ключ сервера для экземпляра SQL Server и помещается в папку `var/opt/mssql/secrets/machine-key`. На Linux SQL Server всегда выполняется как локальная учетная запись с именем mssql. Так как это локальная учетная запись, ее удостоверение не является общим на всех узлах. Поэтому необходимо скопировать ключ шифрования с первичного узла на каждый вторичный узел, чтобы каждая локальная учетная запись mssql могла получить к нему доступ для расшифровки главного ключа сервера. 
+    > Во время установки создается главный ключ сервера для экземпляра SQL Server и помещается в папку `var/opt/mssql/secrets/machine-key`. На Linux SQL Server всегда выполняется как локальная учетная запись с именем mssql. Так как это локальная учетная запись, ее удостоверение не является общим во всех узлах. Поэтому необходимо скопировать ключ шифрования из первичного узла в каждый вторичный узел, чтобы каждая локальная учетная запись mssql могла получить к нему доступ для расшифровки главного ключа сервера. 
 
-1.  На первичном узле создайте имя входа SQL Server для Pacemaker и предоставьте разрешение на выполнение `sp_server_diagnostics`. Pacemaker использует эту учетную запись, чтобы проверить, на каком узле запущен SQL Server. 
+1.  В первичном узле создайте имя входа SQL Server для Pacemaker и предоставьте разрешение на выполнение `sp_server_diagnostics`. Pacemaker использует эту учетную запись, чтобы проверить, в каком узле запущен SQL Server. 
 
     ```bash
     sudo systemctl start mssql-server
     ```
    
-   Подключитесь к базе данных `master` SQL Server с помощью учетной записи SA и выполните следующую команду:
+   Подключитесь к базе данных `master` SQL Server с помощью учетной записи SA и выполните следующую команду:
 
    ```sql
    USE [master]
@@ -75,7 +76,7 @@ ms.locfileid: "68032300"
 
    Вы также можете задать разрешения на более детальном уровне. Имени входа Pacemaker требуется разрешение `VIEW SERVER STATE` для запроса состояния работоспособности с помощью sp_server_diagnostics, а также `setupadmin` и `ALTER ANY LINKED SERVER` для изменения имени экземпляра FCI на имя ресурса с помощью sp_dropserver и sp_addserver. 
 
-1. Остановите и отключите SQL Server на первичном узле. 
+1. Остановите и отключите SQL Server в первичном узле. 
 
 ## <a name="configure-the-hosts-file"></a>Настройка файла hosts
 
@@ -87,12 +88,12 @@ ms.locfileid: "68032300"
     sudo ip addr show
     ```
 
-1. Задайте имя компьютера на каждом узле. Присвойте каждому узлу уникальное имя длиной не более 15 символов. Задайте имя компьютера, добавив его к `/etc/hosts`. Следующий сценарий позволяет изменить `/etc/hosts` с помощью `vi`. 
+1. Задайте имя компьютера в каждом узле. Присвойте каждому узлу уникальное имя длиной не более 15 символов. Задайте имя компьютера, добавив его к `/etc/hosts`. Следующий сценарий позволяет изменить `/etc/hosts` с помощью `vi`. 
 
    ```bash
    sudo vi /etc/hosts
    ```
-   В следующем примере показан `/etc/hosts` с дополнениями для двух узлов `sqlfcivm1` и `sqlfcivm2`.
+   В следующем примере показан файл `/etc/hosts` с дополнениями для двух узлов `sqlfcivm1` и `sqlfcivm2`.
 
    ```bash
    127.0.0.1   localhost localhost4 localhost4.localdomain4
@@ -105,11 +106,11 @@ ms.locfileid: "68032300"
 
 Необходимо предоставить хранилище, доступное для обоих узлов. Можно использовать iSCSI, NFS или SMB. Настройте хранилище, представьте его узлам кластера, а затем переместите в него файлы базы данных. Действия, выполняемые для каждого типа хранилища, описаны в следующих статьях:
 
-- [Настройка экземпляра отказоустойчивого кластера (iSCSI) — SQL Server на Linux](sql-server-linux-shared-disk-cluster-configure-iscsi.md)
-- [Настройка экземпляра отказоустойчивого кластера (NFS) — SQL Server на Linux](sql-server-linux-shared-disk-cluster-configure-nfs.md)
-- [Настройка экземпляра отказоустойчивого кластера (SMB) — SQL Server на Linux](sql-server-linux-shared-disk-cluster-configure-smb.md)
+- [Настройка экземпляра отказоустойчивого кластера (iSCSI) — SQL Server на Linux](sql-server-linux-shared-disk-cluster-configure-iscsi.md)
+- [Настройка экземпляра отказоустойчивого кластера (NFS) — SQL Server на Linux](sql-server-linux-shared-disk-cluster-configure-nfs.md)
+- [Настройка экземпляра отказоустойчивого кластера (SMB) — SQL Server на Linux](sql-server-linux-shared-disk-cluster-configure-smb.md)
 
-## <a name="install-and-configure-pacemaker-on-each-cluster-node"></a>Установка и настройка Pacemaker на каждом узле кластера
+## <a name="install-and-configure-pacemaker-on-each-cluster-node"></a>Установка и настройка Pacemaker в каждом узле кластера
 
 1. На обоих узлах кластера создайте файлы для хранения имени пользователя и пароля SQL Server для входа с помощью Pacemaker. 
 
@@ -196,9 +197,9 @@ ms.locfileid: "68032300"
 
     \<NFSDIskResourceName> — имя ресурса, связанного с общей папкой NFS.
 
-    \<IPAddressOfNFSServer> — IP-адрес NFS-сервера, который будет использоваться.
+    \<IPAddressOfNFSServer> — это IP-адрес NFS-сервера, который будет использоваться.
 
-    \<FolderOnNFSServer> — имя общей папки NFS.
+    \<FolderOnNFSServer> — это имя общей папки NFS.
 
     \<FolderToMountNFSShare> — папка для подключения диска (для системных баз данных и расположения по умолчанию используется /var/opt/mssql/data).
 
@@ -214,21 +215,21 @@ ms.locfileid: "68032300"
     sudo pcs resource create SMBDiskResourceName Filesystem device="//<ServerName>/<ShareName>" directory="<FolderName>" fstype=cifs options="vers=3.0,username=<UserName>,password=<Password>,domain=<ADDomain>,uid=<mssqlUID>,gid=<mssqlGID>,file_mode=0777,dir_mode=0777" --group <RGName>
     ```
 
-    \<ServerName> — имя сервера с общей папкой SMB.
+    \<ServerName> — это имя сервера с общим ресурсом SMB.
 
-    \<ShareName> — имя общей папки.
+    \<ShareName> — это имя общей папки.
 
     \<FolderName> — имя папки, созданной на последнем шаге.
     
-    \<UserName> — имя пользователя для доступа к общей папке.
+    \<UserName> — это имя пользователя для доступа к общей папке.
 
-    \<Password> — пароль пользователя.
+    \<Password> — это пароль пользователя.
 
     \<ADDomain> — домен AD DS (если это применимо при использовании общей папки SMB на основе Windows Server).
 
-    \<mssqlUID> — идентификатор UID пользователя MSSQL.
+    \<mssqlUID> — это идентификатор UID пользователя mssql.
 
-    \<mssqlGID> — идентификатор GID пользователя MSSQL.
+    \<mssqlGID> — это идентификатор GID пользователя mssql.
 
     \<RGName> — имя группы ресурсов.
  
@@ -287,10 +288,10 @@ ms.locfileid: "68032300"
 > * Установка и настройка SQL Server
 > * Настройка файла hosts
 > * Настройка общего хранилища и перемещение файлов базы данных
-> * Установка и настройка Pacemaker на каждом узле кластера
+> * Установка и настройка Pacemaker в каждом узле кластера
 > * Настройка экземпляра отказоустойчивого кластера
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 - [Работа экземпляра отказоустойчивого кластера — SQL Server на Linux](sql-server-linux-shared-disk-cluster-operate.md)
 

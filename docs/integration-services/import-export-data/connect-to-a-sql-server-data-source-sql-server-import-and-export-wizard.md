@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 386cedbb-fae5-45ce-9363-c4a417f80a2f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 903ff234d0e29f6f9c8f6d1acb5c5ce658c59338
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 938a6d8ba779d1cef37b5fab767e609d00b4f022
+ms.sourcegitcommit: aaa42f26c68abc2de10eb58444fe6b490c174eab
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71285707"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74308004"
 ---
 # <a name="connect-to-a-sql-server-data-source-sql-server-import-and-export-wizard"></a>Подключение к источнику данных SQL Server (мастер импорта и экспорта SQL Server)
 
@@ -34,6 +34,7 @@ ms.locfileid: "71285707"
 
 |Необходимые сведения|Свойство "Поставщик данных .NET Framework для SQL Server"|
 |---|---|
+|Аутентификация|По умолчанию выберите для **NotSpecified** "Встроенная система безопасности" или выберите другой режим проверки подлинности. "Интерактивная проверка подлинности Active Directory" не поддерживается. |
 |Имя сервера|**Источник данных**|
 |Сведения для проверки подлинности (имя входа)|**Встроенная система безопасности** или **Идентификатор пользователя** и **Пароль**<br/>Чтобы открыть раскрывающийся список баз данных на сервере, сначала нужно указать действительные данные для входа.|
 |Имя базы данных|**Исходный каталог**|

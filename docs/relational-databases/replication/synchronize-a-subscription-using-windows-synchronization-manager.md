@@ -1,6 +1,7 @@
 ---
-title: Синхронизация подписки с помощью диспетчера синхронизации Windows | Документация Майкрософт
-ms.custom: ''
+title: Синхронизация подписки (диспетчер синхронизации Windows)
+description: Узнайте, как синхронизировать подписки с помощью диспетчера синхронизации Windows.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,12 +15,12 @@ ms.assetid: 80f15dd6-e84d-4f96-9866-5b34ea531f1e
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 81899227c470ece81f01338e4e873e2f40cd015c
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: bcdf5cee07666509722a591410431b00f82dc27b
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768304"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321468"
 ---
 # <a name="synchronize-a-subscription-using-windows-synchronization-manager"></a>Синхронизация подписки с помощью диспетчера синхронизации Windows
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -119,6 +120,6 @@ ms.locfileid: "68768304"
 >  Правки применяются, только если они являются частью строки, которая выбрана для разрешения конфликта. Например, если правки вносятся от имени **Издателя**и затем выбирается **Принять вариант подписчика**, правки отклоняются.  
   
 ## <a name="see-also"></a>См. также:  
- [Интерактивное разрешение конфликтов](../../relational-databases/replication/merge/advanced-merge-replication-conflict-interactive-resolution.md)  
+ [Interactive Conflict Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-interactive-resolution.md)  
   
   

@@ -1,7 +1,7 @@
 ---
-title: Страница "Указание параметров группы доступности" (мастер группы доступности) — SQL Server | Документация Майкрософт
+title: Мастер группы доступности. Указание параметров группы доступности
 ms.description: Describes the options found on the 'Specify Availability Group Name' page of the Availability Group Wizard within SQL Server Management Studio.
-ms.custom: seodec18
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: dcb6374d-becb-4c6c-b88c-5a8273f8aa38
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: da34edca55f4f21c3323e621eecf2aa6983cbf79
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 63995b32f91419ef59184251299b5238d553905a
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014025"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822573"
 ---
 # <a name="specify-availability-group-options-page-for-an-always-on-availability-group"></a>Страница "Указание параметров группы доступности" группы доступности Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "68014025"
 
  **Тип кластера**. Затем укажите тип кластера. Возможные типы кластера зависят от версии [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и ОС. Выберите один из следующего списка:
 
-   * **Кластер WSFC**
+   * **Отказоустойчивая кластеризация Windows Server**
    
       Используйте, если группа доступности размещается на экземплярах [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], принадлежащих отказоустойчивому кластеру Windows Server, для обеспечения высокой доступности и аварийного восстановления. Применяется ко всем поддерживаемым версиям [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. 
 

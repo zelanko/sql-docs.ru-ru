@@ -19,12 +19,12 @@ helpviewer_keywords:
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 91711ce160dcb653d9e05e8b0a445214a247d337
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: ec1bd01ae5f92efbbbe08ebee3da3484ce387e29
+ms.sourcegitcommit: 3511da65d7ebc788e04500bbef3a3b4a4aeeb027
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73981885"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75681785"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 
@@ -42,7 +42,7 @@ ms.locfileid: "73981885"
 
 |                               |                                                              |                                                              |                                                              |      |
 | ----------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ---- |
-| **\*_SQL Server\*_** &nbsp; | [База данных SQL](create-external-data-source-transact-sql.md?view=azuresqldb-current) | [Хранилище данных<br />SQL](create-external-data-source-transact-sql.md?view=azure-sqldw-latest) | [Analytics Platform<br />System (PDW)](create-external-data-source-transact-sql.md?view=aps-pdw-2016-au7) |      |
+| **_\* SQL Server \*_** &nbsp; | [База данных SQL](create-external-data-source-transact-sql.md?view=azuresqldb-current) | [Хранилище данных<br />SQL](create-external-data-source-transact-sql.md?view=azure-sqldw-latest) | [Analytics Platform<br />System (PDW)](create-external-data-source-transact-sql.md?view=aps-pdw-2016-au7) |      |
 |                               |                                                              |                                                              |                                                              |      |
 
 &nbsp;
@@ -89,7 +89,7 @@ WITH
 | Oracle;                  | `oracle`        | `<server_name>[:port]`                                | SQL Server (2019+)                       |
 | Teradata                | `teradata`      | `<server_name>[:port]`                                | SQL Server (2019+)                       |
 | MongoDB или CosmosDB     | `mongodb`       | `<server_name>[:port]`                                | SQL Server (2019+)                       |
-| интерфейс ODBC                    | `odbc`          | `<server_name>[:port]`                                | SQL Server (2019 +): только для Windows        |
+| ODBC                    | `odbc`          | `<server_name>[:port]`                                | SQL Server (2019 +): только для Windows        |
 | массовые операции         | `https`         | `<storage_account>.blob.core.windows.net/<container>` | SQL Server (2017+)                       |
 
 Путь к расположению:
@@ -138,7 +138,7 @@ WITH
   - Задайте по меньшей мере разрешение на чтение для файла, который требуется загрузить (например, `srt=o&sp=r`)
   - Используйте допустимый срок действия (все даты указываются в формате UTC).
 
-Пример использования `CREDENTIAL` с `SHARED ACCESS SIGNATURE` и `TYPE` = `BLOB_STORAGE` см. в разделе [Создание внешнего источника данных для выполнения массовых операций и извлечения данных из хранилища BLOB-объектов Azure в базу данных SQL](#f-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage).
+Пример использования `CREDENTIAL` с `SHARED ACCESS SIGNATURE` и `TYPE` = `BLOB_STORAGE` см. в разделе [Создание внешнего источника данных для выполнения массовых операций и извлечения данных из хранилища BLOB-объектов Azure в базу данных SQL](#g-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage)
 
 Сведения о создании учетных данных уровня базы данных см. в разделе [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)][create_dsc].
 
@@ -311,14 +311,38 @@ WITH
 ;
 ```
 
+### <a name="f-create-external-data-source-to-reference-a-sql-server-named-instance-via-polybase-connectivity-sql-2019"></a>Е. Создание внешнего источника данных для ссылки на именованный экземпляр SQL Server через соединение Polybase (SQL 2019)
+
+Чтобы создать внешний источник данных, ссылающийся на именованный экземпляр SQL Server, можно использовать CONNECTION_OPTIONS для указания имени экземпляра. В приведенном ниже примере WINSQL2019 — это имя узла, а SQL2019 — имя экземпляра.
+
+```sql
+CREATE EXTERNAL DATA SOURCE SQLServerInstance2
+WITH ( 
+  LOCATION = 'sqlserver://WINSQL2019',
+  CONNECTION_OPTIONS = 'Server=%s\SQL2019',
+  CREDENTIAL = SQLServerCredentials
+);
+
+```
+Кроме того, можно использовать порт для подключения к экземпляру SQL Server.
+
+```sql
+CREATE EXTERNAL DATA SOURCE SQLServerInstance2
+WITH ( 
+  LOCATION = 'sqlserver://WINSQL2019:58137',
+  CREDENTIAL = SQLServerCredentials
+);
+
+```
+
 ## <a name="examples-bulk-operations"></a>Примеры: массовые операции
 
 > [!NOTE]
 > Не следует помещать **/** , имя файла или параметры подписи общего доступа в конце URL-адреса `LOCATION` при настройке внешнего источника данных для массовых операций.
 
-### <a name="f-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage"></a>Е. Создание внешнего источника данных для массовых операций, извлекающих данные из хранилища BLOB-объектов Azure
+### <a name="g-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage"></a>Ж. Создание внешнего источника данных для массовых операций, извлекающих данные из хранилища BLOB-объектов Azure
 
-**Применимо к:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].
+**Область применения**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].
 Используйте следующий источник данных для массовых операций, выполняемых с использованием инструкций [BULK INSERT][bulk_insert] или [OPENROWSET][openrowset]. Используемые учетные данные должны задавать `SHARED ACCESS SIGNATURE` в качестве идентификатора, не должны иметь `?` в начале маркера SAS, должны иметь по крайней мере разрешение на чтение загружаемого файла (например, `srt=o&sp=r`), и иметь допустимый срок действия (все даты должны быть указаны в формате UTC). Дополнительные сведения о подписанных URL-адресах см. в статье [Использование подписанных URL-адресов][sas_token].
 
 ```sql
@@ -444,7 +468,7 @@ WITH
   - Задайте по меньшей мере разрешение на чтение для файла, который требуется загрузить (например, `srt=o&sp=r`)
   - Используйте допустимый срок действия (все даты указываются в формате UTC).
 
-Пример использования `CREDENTIAL` с `SHARED ACCESS SIGNATURE` и `TYPE` = `BLOB_STORAGE` см. в разделе [Создание внешнего источника данных для выполнения массовых операций и извлечения данных из хранилища BLOB-объектов Azure в базу данных SQL](#c-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage).
+Пример использования `CREDENTIAL` с `SHARED ACCESS SIGNATURE` и `TYPE` = `BLOB_STORAGE` см. в разделе [Создание внешнего источника данных для выполнения массовых операций и извлечения данных из хранилища BLOB-объектов Azure в базу данных SQL](#c-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage)
 
 Сведения о создании учетных данных уровня базы данных см. в разделе [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)][create_dsc].
 
@@ -465,16 +489,16 @@ WITH
 
 | TYPE              | Значение DATABASE_NAME                                       |
 | ----------------- | ------------------------------------------------------------ |
-| СУРБД             | Имя удаленной базы данных на сервере, заданном с помощью `LOCATION` |
+| Реляционная СУБД             | Имя удаленной базы данных на сервере, заданном с помощью `LOCATION` |
 | SHARD_MAP_MANAGER | Имя базы данных, работающей в качестве диспетчера карты сегментов      |
 
-Пример, демонстрирующий создание внешнего источника данных с `TYPE` = `RDBMS`, см. в разделе [Создание внешнего источника данных в реляционной СУБД](#b-create-an-rdbms-external-data-source).
+Пример, демонстрирующий создание внешнего источника данных с `TYPE` = `RDBMS`, см. в разделе [Создание внешнего источника данных в реляционной СУБД](#b-create-an-rdbms-external-data-source)
 
 ### <a name="shard_map_name--shard_map_name"></a>SHARD_MAP_NAME = *имя карты сегментов*
 
 Используется, только когда аргумент `TYPE` имеет значение `SHARD_MAP_MANAGER`, для того, чтобы задать имя карты сегментов.
 
-Пример, демонстрирующий создание внешнего источника данных с `TYPE` = `SHARD_MAP_MANAGER`, см. в разделе [Создание диспетчера карты сегментов в реляционной СУБД](#a-create-a-shard-map-manager-external-data-source).
+Пример, демонстрирующий создание внешнего источника данных с `TYPE` = `SHARD_MAP_MANAGER`, см. в разделе [Создание диспетчера карты сегментов в реляционной СУБД](#a-create-a-shard-map-manager-external-data-source)
 
 ## <a name="permissions"></a>Разрешения
 
@@ -606,12 +630,12 @@ WITH
 
 |                                                              |                                                              |                                            |                                                              |      |
 | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------ | ------------------------------------------------------------ | ---- |
-| [SQL Server](create-external-data-source-transact-sql.md?view=sql-server-2017) | [База данных SQL](create-external-data-source-transact-sql.md?view=azuresqldb-current) | **_\* Хранилище данных<br />SQL \*_** &nbsp; | [Analytics Platform<br />System (PDW)](create-external-data-source-transact-sql.md?view=aps-pdw-2016-au7) |      |
+| [SQL Server](create-external-data-source-transact-sql.md?view=sql-server-2017) | [База данных SQL](create-external-data-source-transact-sql.md?view=azuresqldb-current) | **_\* Хранилище данных<br /> SQL \*_** &nbsp; | [Analytics Platform<br />System (PDW)](create-external-data-source-transact-sql.md?view=aps-pdw-2016-au7) |      |
 |                                                              |                                                              |                                            |                                                              |      |
 
 &nbsp;
 
-## <a name="overview-azure-sql-data-warehouse"></a>Общие сведения. Хранилище данных SQL Azure
+## <a name="overview-azure-sql-data-warehouse"></a>Общие сведения. Хранилище данных SQL Azure
 
 Создает внешний источник данных для PolyBase. Внешние источники данных используются для обеспечения взаимодействия и поддерживают следующие основные варианты использования. Виртуализация и загрузка данных с помощью [PolyBase][intro_pb]
 
@@ -653,7 +677,7 @@ WITH
 
 Дополнительные примечания и инструкции при задании расположения:
 
-- По умолчанию при подготовке Azure Data Lake Storage 2-го поколения используются защищенные SSL-подключения. Если выбрано защищенное SSL-подключение, необходимо использовать `abfss`. Имейте в виду, что `abfss` также подходит для незащищенных SSL-подключений. 
+- По умолчанию при подготовке Azure Data Lake Storage 2-го поколения используется `enable secure SSL connections`. Если выбрано защищенное SSL-подключение, необходимо использовать `abfss`. Имейте в виду, что `abfss` также подходит для незащищенных SSL-подключений. 
 - Ядро хранилища данных SQL не проверяет существование внешнего источника данных, когда создает объект. Для проверки при создании внешней таблицы используйте внешний источник данных.
 - Используйте один и тот же внешний источник данных для всех таблиц при запросе Hadoop, чтобы обеспечить согласованность семантики запросов.
 - `wasb` — протокол по умолчанию для хранилища больших двоичных объектов Azure. `wasbs` является необязательным, но рекомендуется, так как тогда данные будут передаваться по защищенному каналу SSL.

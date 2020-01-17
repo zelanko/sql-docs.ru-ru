@@ -1,6 +1,7 @@
 ---
-title: Урок 1. Создание и применение политики, отключенной по умолчанию | Документация Майкрософт
-ms.custom: ''
+title: Урок 1. Создание и применение политики, отключенной по умолчанию
+description: Учебник, в котором описывается создание и применение политики, отключенной по умолчанию, для управления на основе политик в SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.technology: security
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: d31367db-b7db-44c4-8df2-f1240474cf78
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: d79c212b1bc960f46e816ad6d99ee4ee24722eac
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.openlocfilehash: 1bff30a7270be7b47e5bf718d07d5386951042f1
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72251289"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558009"
 ---
 # <a name="lesson-1-create-and-apply-an-off-by-default-policy"></a>Урок 1. Создание и применение политики, отключенной по умолчанию
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -24,7 +25,7 @@ ms.locfileid: "72251289"
 ## <a name="prerequisites"></a>предварительные требования
 Для работы с этим учебником требуется среда SQL Server Management Studio и доступ к серверу SQL Server. 
 
-- Установите [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+- Установите [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 - Установите выпуск [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
   
 ## <a name="create-the-mail-off-condition"></a>Создание условия отключения почты

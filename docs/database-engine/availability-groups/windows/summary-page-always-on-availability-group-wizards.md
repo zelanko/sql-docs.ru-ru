@@ -1,6 +1,7 @@
 ---
-title: Страница "Сводка" (мастера групп доступности AlwaysOn) | Документы Майкрософт
-ms.custom: ''
+title: Мастер группы доступности. Страница «Сводка»
+description: Описание параметров на странице "Сводка" мастера группы доступности Always On в SQL Server Management Studio.
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -14,12 +15,12 @@ f1_keywords:
 ms.assetid: b98e2511-297f-49fd-b0e8-74652a91bc0c
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a8f18c72deffc33878de95ebc07a80c07cd49d67
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 3d90d3339c34cd79111f498a4d854e19f9776209
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68892267"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822555"
 ---
 # <a name="summary-page-always-on-availability-group-wizards"></a>Страница "Сводка" (мастера групп доступности AlwaysOn)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +42,7 @@ ms.locfileid: "68892267"
  **Отмена**  
  Щелкните эту кнопку, чтобы отменить запуск мастера. Отмена работы мастера на странице **Сводка** приводит к его закрытию без выполнения каких-либо действий.  
   
- ![Значок стрелки, используемый для ссылки возврата в начало](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Значок стрелки, используемый для ссылки возврата в начало")[&#91;В начало&#93;](#Top)  
+ ![Значок стрелки, используемый со ссылкой "В начало"](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Значок стрелки, используемый со ссылкой В начало") [[Начало]](#Top)  
   
 ##  <a name="RelatedTasks"></a> Связанные задачи  
   
@@ -53,7 +54,7 @@ ms.locfileid: "68892267"
   
 -   [Использование мастера отработки отказа группы доступности (среда SQL Server Management Studio)](../../../database-engine/availability-groups/windows/use-the-fail-over-availability-group-wizard-sql-server-management-studio.md)  
   
- ![Значок стрелки, используемый для ссылки возврата в начало](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Значок стрелки, используемый для ссылки возврата в начало")[&#91;В начало&#93;](#Top)  
+ ![Значок стрелки, используемый со ссылкой "В начало"](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Значок стрелки, используемый со ссылкой В начало") [[Начало]](#Top)  
   
 ## <a name="see-also"></a>См. также:  
  [Обзор групп доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  

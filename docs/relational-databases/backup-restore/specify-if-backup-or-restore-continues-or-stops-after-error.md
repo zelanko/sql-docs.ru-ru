@@ -1,7 +1,7 @@
 ---
-title: Выбор режима остановки или продолжения операций резервного копирования и восстановления после возникновения ошибки | Документация Майкрософт
-ms.custom: ''
-ms.date: 03/17/2017
+title: Настройка резервного копирования или восстановления после ошибки
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: 042be17a-b9b0-4629-b6bb-b87a8bc6c316
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: e40636bc4f76e6963c0c766c36392515f7c200da
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 61e3395939b7faf059a5376674d4f85e3d5c6677
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68216174"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251162"
 ---
-# <a name="specify-if-backup-or-restore-continues-or-stops-after-error"></a>Выбор режима остановки или продолжения операций резервного копирования и восстановления после возникновения ошибки
+# <a name="specify-backup-or-restore-to-continue-or-stop-after-error"></a>Настройка резервного копирования или восстановления для продолжения или остановки после ошибки
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   В этом разделе описывается, как определить, будут ли операции резервного копирования и восстановления продолжать работу или останавливаться при ошибке в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -31,7 +31,7 @@ ms.locfileid: "68216174"
   
 -   **Перед началом работы**  
   
-     [безопасность](#Security)  
+     [Безопасность](#Security)  
   
 -   **Определение, продолжает ли операция резервного копирования или восстановления работу после возникновения ошибки, с помощью следующих средств.**  
   
@@ -101,7 +101,7 @@ GO
  [RESTORE VERIFYONLY (Transact-SQL)](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)   
  [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)   
  [backupset (Transact-SQL)](../../relational-databases/system-tables/backupset-transact-sql.md)   
- [Аргументы RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-arguments-transact-sql.md)   
+ [Аргументы инструкции RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-arguments-transact-sql.md)   
  [Возможные ошибки носителей во время резервного копирования и восстановления (SQL Server)](../../relational-databases/backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md)   
  [Включение или отключение вычисления контрольных сумм резервных копий во время резервного копирования или восстановления (SQL Server)](../../relational-databases/backup-restore/enable-or-disable-backup-checksums-during-backup-or-restore-sql-server.md)  
   

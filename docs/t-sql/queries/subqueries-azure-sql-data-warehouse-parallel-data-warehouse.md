@@ -1,6 +1,8 @@
 ---
-title: Вложенные запросы (хранилище данных SQL Azure или Parallel Data Warehouse) | Документы Майкрософт
-ms.custom: ''
+title: Вложенные запросы
+description: Вложенные запросы в хранилище данных SQL Azure и Parallel Data Warehouse
+ms.custom: seo-lt-2019
+titleSuffix: Azure SQL Data Warehouse
 ms.date: 03/03/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -10,12 +12,12 @@ ms.assetid: 0e8ebd60-1936-48c9-b2b9-e099c8269fcf
 author: shkale-msft
 ms.author: shkale
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 675dcd165ec164c9149486d2abae8d4b910df17b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c8f60ee25f00c4b9ba4b7959a6447e11a0f549b1
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67948261"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244833"
 ---
 # <a name="subqueries-azure-sql-data-warehouse-parallel-data-warehouse"></a>Вложенные запросы (хранилище данных SQL Azure или Parallel Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -24,7 +26,7 @@ ms.locfileid: "67948261"
   
  Сведения об инструкции SELECT см. в статье [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md).  
   
-## <a name="contents"></a>Содержание  
+## <a name="contents"></a>Содержимое  
   
 -   [Основы](#Basics)  
   

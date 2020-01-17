@@ -1,20 +1,20 @@
 ---
-title: Развертывание контейнера SQL Server в Kubernetes с помощью служб Azure Kubernetes (AKS)
+title: Развертывание контейнера SQL Server с помощью служб Azure Kubernetes (AKS)
 description: В этом руководстве показано, как развернуть решение высокой доступности SQL Server с помощью Kubernetes в службе Azure Kubernetes.
+ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
 ms.date: 01/10/2018
 ms.topic: tutorial
 ms.prod: sql
-ms.custom: mvc
 ms.technology: linux
-ms.openlocfilehash: fbf13520696d75ec851949e4b4b0e56272881779
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 91607fd8a7bc7b3b104de6d0ba3e6ce97cab8137
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653709"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558356"
 ---
 # <a name="deploy-a-sql-server-container-in-kubernetes-with-azure-kubernetes-services-aks"></a>Развертывание контейнера SQL Server в Kubernetes с помощью служб Azure Kubernetes (AKS)
 
@@ -326,7 +326,7 @@ Kubernetes автоматически повторно создает Pod для
 > * Подключение в SQL Server Management Studio (SSMS)
 > * Проверка сбоя и восстановление
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 > [!div class="nextstepaction"]
 >[Введение в Kubernetes](https://docs.microsoft.com/azure/aks/intro-kubernetes)

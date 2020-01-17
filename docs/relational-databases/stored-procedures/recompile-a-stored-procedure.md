@@ -1,7 +1,7 @@
 ---
 title: Перекомпиляция хранимой процедуры | Документация Майкрософт
 ms.custom: ''
-ms.date: 03/16/2017
+ms.date: 10/28/2019
 ms.prod: sql
 ms.technology: stored-procedures
 ms.reviewer: ''
@@ -15,12 +15,12 @@ ms.assetid: b90deb27-0099-4fe7-ba60-726af78f7c18
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 115516dec13c971d774d0848cf39f847f6db0d6c
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 2a701e31e53b1d540c3fd586f10f34543895dfde
+ms.sourcegitcommit: 03884a046aded85c7de67ca82a5b5edbf710be92
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909006"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74564793"
 ---
 # <a name="recompile-a-stored-procedure"></a>Перекомпиляция хранимой процедуры
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "72909006"
   
      [Рекомендации](#Recommendations)  
   
-     [безопасность](#Security)  
+     [Безопасность](#Security)  
   
 -   **Для перекомпиляции хранимой процедуры используется:**  
   
@@ -67,69 +67,52 @@ ms.locfileid: "72909006"
  Необходимо разрешение ALTER на указанную процедуру.  
   
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
-  
-#### <a name="to-recompile-a-stored-procedure-by-using-the-with-recompile-option"></a>Перекомпиляция хранимой процедуры с использованием параметра WITH RECOMPILE  
-  
-1.  Установите соединение с компонентом [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
-  
-2.  На панели «Стандартная» нажмите **Создать запрос**.  
-  
-3.  Скопируйте следующий пример в окно запроса и нажмите кнопку **Выполнить**. В этом примере создается определение процедуры.  
 
-```  
-USE AdventureWorks2012;  
-GO  
-IF OBJECT_ID ( 'dbo.uspProductByVendor', 'P' ) IS NOT NULL   
-    DROP PROCEDURE dbo.uspProductByVendor;  
-GO  
-CREATE PROCEDURE dbo.uspProductByVendor @Name varchar(30) = '%'  
-WITH RECOMPILE  
-AS  
-    SET NOCOUNT ON;  
-    SELECT v.Name AS 'Vendor name', p.Name AS 'Product name'  
-    FROM Purchasing.Vendor AS v   
-    JOIN Purchasing.ProductVendor AS pv   
-      ON v.BusinessEntityID = pv.BusinessEntityID   
-    JOIN Production.Product AS p   
-      ON pv.ProductID = p.ProductID  
-    WHERE v.Name LIKE @Name;  
+1. Установите соединение с компонентом [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
-```  
+1. На панели «Стандартная» нажмите **Создать запрос**.  
   
-#### <a name="to-recompile-a-stored-procedure-by-using-the-with-recompile-option"></a>Перекомпиляция хранимой процедуры с использованием параметра WITH RECOMPILE  
+1. Скопируйте следующий пример в окно запроса и нажмите кнопку **Выполнить**. В этом примере создается определение процедуры.  
+
+   ```sql
+   USE AdventureWorks2012;  
+   GO  
+   IF OBJECT_ID ( 'dbo.uspProductByVendor', 'P' ) IS NOT NULL   
+       DROP PROCEDURE dbo.uspProductByVendor;  
+   GO  
+   CREATE PROCEDURE dbo.uspProductByVendor @Name varchar(30) = '%'  
+   WITH RECOMPILE  
+   AS  
+       SET NOCOUNT ON;  
+       SELECT v.Name AS 'Vendor name', p.Name AS 'Product name'  
+       FROM Purchasing.Vendor AS v   
+       JOIN Purchasing.ProductVendor AS pv   
+         ON v.BusinessEntityID = pv.BusinessEntityID   
+       JOIN Production.Product AS p   
+         ON pv.ProductID = p.ProductID  
+       WHERE v.Name LIKE @Name;  
+   ```  
   
-1.  Установите соединение с компонентом [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+### <a name="to-recompile-a-stored-procedure-by-using-the-with-recompile-option"></a>Перекомпиляция хранимой процедуры с использованием параметра WITH RECOMPILE   
   
-2.  На панели «Стандартная» нажмите **Создать запрос**.  
-  
-3.  Скопируйте следующий пример в окно запроса и нажмите кнопку **Выполнить**. В этом примере создается простая процедура, возвращающая из представления всех сотрудников (с указанием имени и фамилии), их должности и названия отделов.  
-  
-     Затем скопируйте второй пример кода в окно запроса и нажмите кнопку **Выполнить**. Процедура будет выполнена с повторной компиляцией плана запроса.  
-  
-```sql  
-USE AdventureWorks2012;  
-GO  
-EXECUTE HumanResources.uspGetAllEmployees WITH RECOMPILE;  
-GO  
-  
-```  
-  
-#### <a name="to-recompile-a-stored-procedure-by-using-sp_recompile"></a>Перекомпиляция хранимой процедуры с использованием процедуры sp_recompile  
-  
-1.  Установите соединение с компонентом [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
-  
-2.  На панели «Стандартная» нажмите **Создать запрос**.  
-  
-3.  Скопируйте следующий пример в окно запроса и нажмите кнопку **Выполнить**. В этом примере создается простая процедура, возвращающая из представления всех сотрудников (с указанием имени и фамилии), их должности и названия отделов.  
-  
-     Затем скопируйте следующий пример в окно запроса и нажмите кнопку **Выполнить**. Процедура не будет выполнена, но будет помечена для повторной компиляции, и при следующем выполнении процедуры ее план запроса будет обновлен.  
+Выберите **Создать запрос**, скопируйте следующий пример в окно запроса и нажмите кнопку **Выполнить**. Процедура будет выполнена с повторной компиляцией плана запроса.  
   
 ```sql  
 USE AdventureWorks2012;  
 GO  
-EXEC sp_recompile N'HumanResources.uspGetAllEmployees';  
-GO  
+EXECUTE HumanResources.uspProductByVendor WITH RECOMPILE;  
+GO
+```  
   
+### <a name="to-recompile-a-stored-procedure-by-using-sp_recompile"></a>Перекомпиляция хранимой процедуры с использованием процедуры sp_recompile  
+
+Выберите **Создать запрос**, скопируйте следующий пример в окно запроса и нажмите кнопку **Выполнить**. Процедура не будет выполнена, но будет помечена для повторной компиляции, и при следующем выполнении процедуры ее план запроса будет обновлен.  
+
+```sql  
+USE AdventureWorks2012;  
+GO  
+EXEC sp_recompile N'dbo.uspProductByVendor';   
+GO
 ```  
   
 ## <a name="see-also"></a>См. также:  

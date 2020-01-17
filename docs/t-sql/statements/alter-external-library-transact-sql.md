@@ -17,12 +17,12 @@ author: dphansen
 ms.author: davidph
 manager: cgronlund
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 13c306c1fbd83b2fde5783daeba4201cf5d862d9
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 9da237047e7b42b83cc8aa039d6bd04aaca9549a
+ms.sourcegitcommit: ba44730f5cc33295ae2ed1f281186dd266bad4ef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532849"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74191077"
 ---
 # <a name="alter-external-library-transact-sql"></a>ALTER EXTERNAL LIBRARY (Transact-SQL)  
 
@@ -169,14 +169,14 @@ WITH ( LANGUAGE = 'R' )
 Вместо этого можно передать содержимое пакета в качестве переменной в двоичном формате.
 
 ::: moniker range=">=sql-server-2017 <=sql-server-2017||=sqlallproducts-allversions"
-**PLATFORM = WINDOWS**
+**platform = WINDOWS**
 
 Указывает платформу для содержимого библиотеки. Это значение является обязательным при изменении существующей библиотеки для добавления другой платформы.
 В SQL Server 2017 поддерживается только платформа Windows.
 ::: moniker-end
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-**PLATFORM**
+**platform**
 
 Указывает платформу для содержимого библиотеки. Это значение является обязательным при изменении существующей библиотеки для добавления другой платформы. 
 В SQL Server 2019 поддерживаются платформы Windows и Linux.

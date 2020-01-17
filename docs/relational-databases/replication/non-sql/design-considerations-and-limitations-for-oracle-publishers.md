@@ -1,6 +1,7 @@
 ---
-title: Рассмотрение структуры и ограничений издателей Oracle | Документация Майкрософт
-ms.custom: ''
+title: Рекомендации и ограничения (издатели Oracle)
+description: Описывает рекомендации и ограничения по проектированию при настройке подписчика SQL Server с издателем Oracle.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 8d9dcc59-3de8-4d36-a61f-bc3ca96516b6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a2bf159b42298a2b1fc031383dffe7218f55aabd
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 9b45f787bf590eb3d4b29aa3d02f9ba8a2fd2934
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710938"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321914"
 ---
 # <a name="design-considerations-and-limitations-for-oracle-publishers"></a>Рассмотрение структуры и ограничений издателей Oracle
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Публикация из баз данных Oracle спроектирована таким образом, чтобы работать идентично публикации из базы данных [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Однако необходимо знать о следующих ограничениях и проблемах:  
+  Публикация из баз данных Oracle спроектирована таким образом, чтобы работать практически идентично публикации из базы данных [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Однако необходимо знать о следующих ограничениях и проблемах:  
   
 -   Параметр Oracle Gateway обеспечивает большую производительность по сравнению с параметром Oracle Complete. Тем не менее этот параметр нельзя использовать для публикации одной и той же таблицы в нескольких публикациях транзакций. Таблица может присутствовать только в одной публикации транзакций и в любом количестве публикаций моментальных снимков. Если необходимо опубликовать одну таблицу в нескольких публикациях транзакций, выберите параметр Oracle Complete.  
   
@@ -64,7 +65,7 @@ ms.locfileid: "71710938"
   
 -   Пакеты, тела пакетов, процедуры и триггеры;  
   
--   Очереди;  
+-   Очереди  
   
 -   Последовательности;  
   

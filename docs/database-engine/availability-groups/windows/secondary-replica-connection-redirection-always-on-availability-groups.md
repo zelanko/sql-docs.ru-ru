@@ -1,6 +1,7 @@
 ---
-title: Перенаправление подключения с правами на чтение и запись с вторичной реплики SQL Server на первичную (группы доступности AlwaysOn) | Документация Майкрософт
-ms.custom: ''
+title: Перенаправление подключений с правами на чтение и запись в первичную реплику
+description: Узнайте, как обеспечить постоянное перенаправление подключений с правами на чтение и запись в первичную реплику группы доступности Always On независимо от целевого сервера, указанного в строке подключения.
+ms.custom: seo-lt-2019
 ms.date: 01/09/2019
 ms.prod: sql
 ms.reviewer: ''
@@ -17,12 +18,12 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 181dd36096daacc5a1c3787cdd21cb9619d87491
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8bf76e0929dea69758b1f9152af0df8f3170227d
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014198"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75235197"
 ---
 # <a name="secondary-to-primary-replica-readwrite-connection-redirection-always-on-availability-groups"></a>Перенаправление подключения с правами на чтение и запись с вторичной на первичную реплику (группы доступности AlwaysOn)
 
@@ -32,7 +33,7 @@ ms.locfileid: "68014198"
 
 Например, строка подключения может направлять к вторичной реплике. В зависимости от настройки реплики группы доступности и параметров в строке подключения, подключение может автоматически перенаправляться к первичной реплике. 
 
-## <a name="use-cases"></a>Способы применения
+## <a name="use-cases"></a>Варианты использования
 
 В версиях до [!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)] прослушиватель группы доступности и соответствующий кластерный ресурс перенаправляют трафик пользователя к первичной реплике, чтобы обеспечить повторное подключение после отработки отказа. [!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)] по-прежнему поддерживает функциональные возможности прослушивателя группы доступности и добавляет перенаправление подключения реплики для сценариев, которые не содержат прослушиватель. Пример:
 
@@ -47,7 +48,7 @@ ms.locfileid: "68014198"
 * Спецификация реплики `PRIMARY_ROLE` должна включать `READ_WRITE_ROUTING_URL`.
 * Строка подключения должна определять `ApplicationIntent` как `ReadWrite`, что является значением по умолчанию.
 
-## <a name="set-readwriteroutingurl-option"></a>Установка параметра READ_WRITE_ROUTING_URL
+## <a name="set-read_write_routing_url-option"></a>Установка параметра READ_WRITE_ROUTING_URL
 
 Чтобы настроить перенаправление подключения с правами на чтение и запись, задайте `READ_WRITE_ROUTING_URL` для первичной реплики при создании группы доступности. 
 
@@ -57,7 +58,7 @@ ms.locfileid: "68014198"
 * [ALTER AVAILABILITY GROUP](../../../t-sql/statements/alter-availability-group-transact-sql.md)
 
 
-### <a name="primaryrolereadwriteroutingurl-not-set-default"></a>PRIMARY_ROLE(READ_WRITE_ROUTING_URL) не задан (по умолчанию) 
+### <a name="primary_roleread_write_routing_url-not-set-default"></a>PRIMARY_ROLE(READ_WRITE_ROUTING_URL) не задан (по умолчанию) 
 
 По умолчанию перенаправление подключения с правами на чтение и запись не задано для реплики. Метод обработки запросов на подключение во вторичной реплике зависит от того, разрешает ли вторичная реплика подключения и задан ли в строке подключения параметр `ApplicationIntent`. В следующей таблице показано, как вторичная реплика обрабатывает подключения на основе `SECONDARY_ROLE (ALLOW CONNECTIONS = )` и `ApplicationIntent`.
 
@@ -68,7 +69,7 @@ ms.locfileid: "68014198"
 
 В приведенной выше таблице показана реакция на событие по умолчанию, которая совпадает с версиями SQL Server до [!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)]. 
 
-### <a name="primaryrolereadwriteroutingurl-set"></a>PRIMARY_ROLE(READ_WRITE_ROUTING_URL) задан 
+### <a name="primary_roleread_write_routing_url-set"></a>PRIMARY_ROLE(READ_WRITE_ROUTING_URL) задан 
 
 После установки перенаправления подключения с правами на чтение и запись реплика обрабатывает запросы на подключение по-другому. Реакция на событие подключения по-прежнему зависит от параметров `SECONDARY_ROLE (ALLOW CONNECTIONS = )` и `ApplicationIntent`. В следующей таблице показано, как вторичная реплика с заданным параметром `READ_WRITE_ROUTING` обрабатывает подключения на основе `SECONDARY_ROLE (ALLOW CONNECTIONS = )` и `ApplicationIntent`.
 
@@ -84,7 +85,7 @@ ms.locfileid: "68014198"
 В этом примере группа доступности содержит три реплики:
 * Первичная реплика на компьютере COMPUTER01.
 * Синхронная вторичная реплика на компьютере COMPUTER02.
-* Синхронная вторичная реплика на компьютере COMPUTER03.
+* Асинхронная вторичная реплика на компьютере COMPUTER03.
 
 На следующем рисунке представлена группа доступности.
 
@@ -124,7 +125,7 @@ CREATE AVAILABILITY GROUP MyAg
       'COMPUTER03' WITH   
          (  
          ENDPOINT_URL = 'TCP://COMPUTER03.<domain>.<tld>:5022',  
-         AVAILABILITY_MODE = SYNCHRONOUS_COMMIT,  
+         AVAILABILITY_MODE = ASYNCHRONOUS_COMMIT,  
          FAILOVER_MODE = MANUAL,  
          SECONDARY_ROLE (ALLOW_CONNECTIONS = ALL,   
             READ_ONLY_ROUTING_URL = 'TCP://COMPUTER03.<domain>.<tld>:1433' ),  

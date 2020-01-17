@@ -1,6 +1,7 @@
 ---
-title: Просмотр выходных данных помощника по настройке ядра СУБД и работа с ними | Документация Майкрософт
-ms.custom: ''
+title: Выходные данные от DTA
+description: Просмотр и работа с выходными данными помощника по настройке ядра СУБД (DTA).
+ms.custom: seo-dt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -25,17 +26,18 @@ helpviewer_keywords:
 ms.assetid: 47f9d9a7-80b0-416d-9d9a-9e265bc190dc
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: a160fe7fbf98a428c9cfacecd00305ce83ba0a5a
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 26ed3efa0738579d9abfde909f161105d95f91a8
+ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907041"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74165484"
 ---
-# <a name="view-and-work-with-the-output-from-the-database-engine-tuning-advisor"></a>Просмотр и работа с выходными данными помощника по настройке ядра СУБД
+# <a name="view-and-work-with-the-output-from-the-database-engine-tuning-advisor-dta"></a>Просмотр и работа с выходными данными помощника по настройке ядра СУБД (DTA)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  Когда помощник по настройке ядра СУБД настраивает базы данных, он создает сводки, рекомендации, отчеты и журналы настройки. Выходные данные журналов настройки можно использовать, чтобы устранять неполадки в сеансах помощника по настройке ядра СУБД. Сводки, рекомендации и отчеты помогут решить, следует ли реализовать рекомендации по настройке либо продолжать ее до тех пор, пока не будет достигнуто повышение производительности выполнения запросов, необходимое для установки [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Информация об использовании помощника по настройке базы создания рабочих нагрузок и настройки базы данных см. в разделе [Запуск и использование помощника по настройке ядра СУБД](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md).  
+  Когда помощник по настройке ядра СУБД настраивает базы данных, он создает сводки, рекомендации, отчеты и журналы настройки. Выходные данные журналов настройки можно использовать, чтобы устранять неполадки в сеансах помощника по настройке ядра СУБД. Сводки, рекомендации и отчеты помогут решить, следует ли реализовать рекомендации по настройке либо продолжать ее до тех пор, пока не будет достигнуто повышение производительности выполнения запросов, необходимое для установки [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Информация об использовании помощника по настройке базы создания рабочих нагрузок и настройки базы данных см. в разделе [Запуск и использование помощника по настройке ядра СУБД](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md).  
   
 ##  <a name="View"></a> Просмотр выходных данных по настройке  
  В следующих инструкциях представлены способы просмотра рекомендаций по настройке, сводок, отчетов и журналов настройки с помощью графического интерфейса пользователя помощника по настройке ядра СУБД. Дополнительные сведения о параметрах пользовательского интерфейса см. далее в подразделе [Описание пользовательского интерфейса](#UI) .  
@@ -168,7 +170,7 @@ ms.locfileid: "72907041"
   
 4.  Сохраните входной файл с расширением **XML** .  
   
-5.  Проверьте входной XML-файл, сохраненный на этапе 4, на соответствие XML-схеме помощника по настройке ядра СУБД. При установке [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]эта схема была размещена в следующем месте:  
+5.  Проверьте входной XML-файл, сохраненный на этапе 4, на соответствие XML-схеме помощника по настройке ядра СУБД. При установке [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] эта схема была размещена в следующем месте:  
   
     ```  
     C:\Program Files\Microsoft SQL Server\100\Tools\Binn\schemas\sqlserver\2004\07\dta\dtaschema.xsd  
@@ -270,7 +272,7 @@ ms.locfileid: "72907041"
  Определение пункта **Цель рекомендации**. Щелкните столбец, чтобы открыть диалоговое окно «Предварительный просмотр скрипта SQL» со скриптом для рекомендованного действия.  
   
 ##### <a name="index-recommendations"></a>Рекомендации по индексам  
- **Database Name**  
+ **Имя базы данных**  
  База данных, содержащая объекты, которые рекомендуется изменить.  
   
  **Имени объекта**  
@@ -389,6 +391,6 @@ ms.locfileid: "72907041"
   
 ## <a name="see-also"></a>См. также:  
  [Запуск и использование помощника по настройке ядра СУБД](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)   
- [dta, программа](../../tools/dta/dta-utility.md)  
+ [dta Utility](../../tools/dta/dta-utility.md)  
   
   

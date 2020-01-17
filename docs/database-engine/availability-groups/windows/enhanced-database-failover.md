@@ -1,5 +1,5 @@
 ---
-title: Включение улучшенной отработки отказа базы данных для группы доступности
+title: Улучшенная отработка отказа для группы доступности
 description: Инструкции по включению улучшенной отработки отказа базы данных, которая инициируется, если база данных в группе доступности Always On больше не может записывать транзакции.
 ms.custom: seodec18
 ms.date: 09/25/2017
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 91246775b917cf7c56218482b5c7b0c86264d612
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9acd444e1ded8ab0530f605280e7aaa5c5dec907
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67947963"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822244"
 ---
 # <a name="enable-enhanced-database-failover-to-a-database-in-an-always-on-availability-group"></a>Включение улучшенной отработки отказа для базы данных в группе доступности Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ SQL Server 2016 представляет новую функцию под наз
 
 Группа доступности настраивается между экземпляром А и экземпляром В, содержащим две базы данных: DB1 и DB2. В качестве режима доступности устанавливается синхронная фиксация с автоматическим переходом в режим отработки отказа и активируется улучшенная отработка отказа базы данных. Доступ к диску, содержащему данные DB2 и файлы журнала транзакций, будет утерян. При обнаружении проблемы группа доступности будет автоматически переведена на экземпляр B.
 
-## <a name="configure-and-view-the-enhanced-database-failover-option"></a>Настройка и просмотр улучшенной отработки отказа базы данных
+## <a name="configure-enhanced-failover"></a>Настройка расширенной отработки отказа
 
 Улучшенную отработку отказа базы данных можно настроить с помощью SQL Server Management Studio или Transact-SQL. Командлеты PowerShell пока не дают такой возможности. По умолчанию улучшенная отработка отказа базы данных отключена.
 
@@ -75,11 +75,11 @@ ALTER AVAILABILITY GROUP [AGNAME] SET (DB_FAILOVER = OFF)
 ### <a name="dynamic-management-view"></a>Динамическое административное представление
 Чтобы узнать, включена ли в группе доступности улучшенная отработка отказа базы данных, запросите динамическое административное представление `sys.availability_groups`. Если данная функция отключена, в столбце `db_failover` будет указано значение 0, а если включена — значение 1. 
 
-## <a name="next-steps"></a>Следующие шаги 
+## <a name="next-steps"></a>Дальнейшие действия 
 
 - [Настройка определения исправности базы данных](sql-server-always-on-database-health-detection-failover-option.md)
 
-- [Использование мастера групп доступности (SQL Server Management Studio)](use-the-availability-group-wizard-sql-server-management-studio.md)
+- [Использование мастера добавления базы данных в группу доступности (среда SQL Server Management Studio)](use-the-availability-group-wizard-sql-server-management-studio.md)
 
 - [Использование диалогового окна "Создание группы доступности" (SQL Server Management Studio)](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)
  

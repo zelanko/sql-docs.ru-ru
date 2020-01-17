@@ -19,12 +19,12 @@ ms.assetid: dff99404-a002-48ee-910e-f37f013d946d
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 6babf3d10d6f391d3002e7094d7b8fe6b32b261b
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.openlocfilehash: 9a665f51aa6fd6bc9b87ac354a26856049004d7e
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74056029"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401579"
 ---
 # <a name="examples-of-bulk-import-and-export-of-xml-documents-sql-server"></a>Примеры массового импорта и экспорта XML-документов (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -125,7 +125,7 @@ SELECT * FROM OPENROWSET(
 </Root>  
 ```  
   
-#### <a name="example-b"></a>Пример B-адреса  
+#### <a name="example-b"></a>Пример Б  
   
 ```sql  
 -- Query before update shows initial state of XmlCol values.  
@@ -253,7 +253,7 @@ GO
  [&#91;В начало&#93;](#top)  
   
 ## <a name="bulk_export_xml_data"></a> Массовый экспорт XML-данных  
- В следующем примере для выполнения массового экспорта XML-данных из таблицы, созданной в предыдущем примере при помощи того же XML-файла форматирования, используется программа `bcp` . В следующей команде `bcp` `<server_name>` и `<instance_name>` являются заполнителями, которые должны быть заменены соответствующими значениями:  
+ В следующем примере для выполнения массового экспорта XML-данных из таблицы, созданной в предыдущем примере при помощи того же XML-файла форматирования, используется программа [bcp](../../tools/bcp-utility.md). В следующей команде `bcp``<server_name>` и `<instance_name>` являются заполнителями, которые должны быть заменены соответствующими значениями:  
   
 ```cmd
 bcp bulktest..xTable out a-wn.out -N -T -S<server_name>\<instance_name>  
@@ -266,7 +266,7 @@ bcp bulktest..xTable out a-wn.out -N -T -S<server_name>\<instance_name>
 ## <a name="see-also"></a>См. также:  
  [INSERT (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md)   
  [Предложение SELECT (Transact-SQL)](../../t-sql/queries/select-clause-transact-sql.md)   
- [Программа bcp](../../tools/bcp-utility.md)   
+ [bcp Utility](../../tools/bcp-utility.md)   
  [Массовый импорт и экспорт данных (SQL Server)](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)   
  [BULK INSERT (Transact-SQL)](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [OPENROWSET (Transact-SQL)](../../t-sql/functions/openrowset-transact-sql.md)  

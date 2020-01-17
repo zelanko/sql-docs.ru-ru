@@ -18,12 +18,12 @@ ms.assetid: b2aa1fc8-e7af-45d2-9f80-737543c8aa95
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 37da86b825ee68be83d0aa653005a1ea12db5ed7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 56e1f566b5ac6addfab3811c8430ce9c19e61636
+ms.sourcegitcommit: ede04340adbf085e668a2536d4f7114abba14a0c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68050808"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74762659"
 ---
 # <a name="grant-schema-permissions-transact-sql"></a>GRANT, предоставления разрешения на схему (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -106,9 +106,7 @@ AS *granting_principal*
   
  У пользователя U1 есть разрешения CREATE SYNONYM на базу данных и SELECT на схему S1. Поэтому пользователь U1 может создать в схеме S1 синоним для запрещенного объекта T1, а затем получить доступ к этому объекту с помощью синонима.  
   
- У пользователя U1 есть разрешения CREATE VIEW на базу данных и SELECT на схему S1. Поэтому пользователь U1 может создать в схеме S1 представления для запроса данных из запрещенного объекта T1, а затем получить доступ к этому объекту с помощью представления.  
-  
- Дополнительные сведения см. в статье базы знаний Майкрософт номер 914847.  
+ У пользователя U1 есть разрешения CREATE VIEW на базу данных и SELECT на схему S1. Поэтому пользователь U1 может создать в схеме S1 представления для запроса данных из запрещенного объекта T1, а затем получить доступ к этому объекту с помощью представления.
   
 ## <a name="permissions"></a>Разрешения  
  Объект, предоставляющий разрешение (или участник, указанный параметром AS), должен иметь либо само разрешение, выданное с помощью параметра GRANT OPTION, либо разрешение более высокого уровня, которое неявно включает предоставляемое.  
@@ -151,7 +149,7 @@ GRANT SELECT ON SCHEMA :: Person TO WilJo WITH GRANT OPTION;
  [Разрешения (ядро СУБД)](../../relational-databases/security/permissions-database-engine.md)   
  [Участники (ядро СУБД)](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [CREATE CERTIFICATE (Transact-SQL)](../../t-sql/statements/create-certificate-transact-sql.md)   
- [CREATE ASYMMETRIC KEY (Transact-SQL)](../../t-sql/statements/create-asymmetric-key-transact-sql.md)   
+ [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)   
  [CREATE APPLICATION ROLE (Transact-SQL)](../../t-sql/statements/create-application-role-transact-sql.md)   
  [Иерархия средств шифрования](../../relational-databases/security/encryption/encryption-hierarchy.md)   
  [sys.fn_builtin_permissions (Transact-SQL)](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)   

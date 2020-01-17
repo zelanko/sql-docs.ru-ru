@@ -1,7 +1,7 @@
 ---
-title: Изменение периода ожидания сеанса для реплики в группе доступности
+title: Изменение времени ожидания сеанса для реплики группы доступности
 description: Описывается, как настроить период ожидания сеанса для реплики в группе доступности Always On.
-ms.custom: seodec18
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: e23c6e06-1cd1-4d4a-9bc2-e3e06ab2933d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d0c75e9264187ed6a351c162276253ff58be45a0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0dd31433b94cb32cb68c9ff9d1eaa7e2f08ab324
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67991306"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822437"
 ---
-# <a name="change-the-session-timeout-period-for-a-replica-within-an-always-on-availability-group"></a>Изменение периода ожидания сеанса для реплики в группе доступности Always On
+# <a name="modify-the-session-timeout-period-for-an-availability-group-replica"></a>Изменение периода ожидания сеанса для реплики группы доступности
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   В этом разделе описывается настройка времени ожидания сеанса реплики доступности AlwaysOn с помощью среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]или PowerShell в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Время ожидания сеанса — это свойство реплики, которое определяет, сколько секунд будет эта реплика доступности ждать отклика на команду ping, отправленную с подключенной реплики перед тем, как признать попытку подключения неудачной. По умолчанию реплика ожидает ответа на команду ping 10 секунд. Это свойство реплики применимо только к подключению данной вторичной реплики к первичной реплике группы доступности. Дополнительные сведения о периоде времени ожидания сеанса см. в разделе [Обзор групп доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).  
    

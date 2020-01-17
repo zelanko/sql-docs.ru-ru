@@ -1,7 +1,7 @@
 ---
-title: Реплике доступности не назначена допустимая роль для группы доступности
+title: Реплике не назначена допустимая роль для группы доступности
 description: Определение возможных причин, по которым реплике доступности может быть не назначена допустимая роль для группы доступности Always On.
-ms.custom: seodec18
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ebb2c9f4-2097-4688-b4fb-8f0571047317
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9454b48f17af904db87e0000b07651c1bc454362
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 91b73682ffd7d626592193c5b729896ec3d593a2
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67991376"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75241765"
 ---
 # <a name="availability-replica-does-not-have-a-healthy-role-for-an-always-on-availability-group"></a>Реплике доступности не назначена допустимая роль для группы доступности Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "67991376"
 |**Категория**|**Критическая**|  
 |**Аспект**|Реплика доступности|  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Description  
  Эта политика проверяет состояние роли реплики доступности. Политика находится в состоянии неисправности, если роль реплики доступности не является первичной или вторичной. В остальном политика находится в рабочем состоянии.  
   
 > [!NOTE]  
@@ -42,7 +42,7 @@ ms.locfileid: "67991376"
 ## <a name="possible-causes"></a>Возможные причины  
  Роль этой реплики доступности неисправна. Реплике не назначена роль первичной или вторичной.  
   
-## <a name="possible-solution-informationstilltocome"></a>Возможное решение: информация готовится  
+## <a name="possible-solution-information_still_to_come"></a>Возможное решение: информация готовится  
   
 ## <a name="see-also"></a>См. также:  
  [Обзор групп доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   

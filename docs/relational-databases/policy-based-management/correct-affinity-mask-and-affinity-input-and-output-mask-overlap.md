@@ -1,6 +1,7 @@
 ---
-title: Правильное перекрытие параметров affinity mask и affinity input-output mask | Документация Майкрософт
-ms.custom: ''
+title: Политика правильного перекрытия параметров affinity mask и affinity input-output mask
+description: Узнайте, как включить политику, которая проверяет, имеет ли экземпляр SQL Server один или несколько процессоров, назначенных для использования с параметрами affinity mask и affinity I/O mask для управления на основе политик в SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1a0da6df-57ff-4f3f-aae9-2fbc4897508c
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 4864bd6c5f1f34843c9e44c3cf3c2e72777f13b2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b225710aaadf3ea605e3cffd91a5a4fea2a51e62
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68109764"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75557806"
 ---
 # <a name="correct-affinity-mask-and-affinity-input-and-output-mask-overlap"></a>Правильное перекрытие параметров affinity mask и affinity input-output mask
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

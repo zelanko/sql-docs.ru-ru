@@ -1,6 +1,7 @@
 ---
-title: Приостановка или возобновление сеанса зеркального отображения базы данных (SQL Server) | Документы Майкрософт
-ms.custom: ''
+title: Приостановка и возобновление сеанса зеркального отображения базы данных
+description: Узнайте, как приостановить и возобновить сеанс зеркального отображения базы данных SQL Server с помощью SQL Server Management Studio или Transact-SQL (T-SQL).
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 05ede3b4-6abe-4442-abb7-9f5aee1d6bc0
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 9829ffeb1eaf609ae538fc92054517aa8c9bbf3d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c9d36b4818aa54a6f63b0b38a353cf69840519b9
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67996476"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244160"
 ---
 # <a name="pause-or-resume-a-database-mirroring-session-sql-server"></a>Приостановка или возобновление сеанса зеркального отображения базы данных (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "67996476"
   
 -   **Перед началом работы**  
   
-     [безопасность](#Security)  
+     [Безопасность](#Security)  
   
 -   **Выполнение ReplaceThisText с помощью:**  
   

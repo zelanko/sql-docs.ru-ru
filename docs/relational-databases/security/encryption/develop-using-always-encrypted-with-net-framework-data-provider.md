@@ -1,6 +1,7 @@
 ---
-title: Использование Always Encrypted с поставщиком данных .NET Framework для SQL Server | Документация Майкрософт
-ms.custom: ''
+title: Always Encrypted с поставщиком данных .NET Framework
+description: Узнайте, как разрабатывать приложения .NET с помощью функции Always Encrypted для SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 10/31/2019
 ms.prod: sql
 ms.prod_service: security, sql-database
@@ -11,12 +12,12 @@ ms.assetid: 827e509e-3c4f-4820-aa37-cebf0f7bbf80
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 07351f5fe839f8304e56b5a94818c93255149fa5
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: 3c442568ad7764ba0f9031a02a8080499555d26f
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73594452"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558085"
 ---
 # <a name="using-always-encrypted-with-the-net-framework-data-provider-for-sql-server"></a>Using Always Encrypted with the .NET Framework Data Provider for SQL Server (Использование Always Encrypted с поставщиком данных .NET Framework для SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -294,7 +295,7 @@ cmd.ExecuteNonQuery();
 В состав поставщика данных .NET Framework для SQL Server входят следующие встроенные поставщики хранилища главных ключей столбцов, которые предварительно зарегистрированы с конкретными именами поставщиков (используемыми для поиска поставщика).
 
 
-| Class | Описание | Имя поставщика |
+| Class | Description | Имя поставщика |
 |:---|:---|:---|
 |Класс SqlColumnEncryptionCertificateStoreProvider| Поставщик для хранилища сертификатов Windows. | MSSQL_CERTIFICATE_STORE |
 |[Класс SqlColumnEncryptionCngProvider](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncngprovider.aspx) <br><br>**Примечание.** Этот поставщик доступен в .NET Framework 4.6.1 или более поздней версии. |Поставщик хранилища ключей, поддерживающий [Microsoft Cryptography API: Next Generation (CNG) API](https://msdn.microsoft.com/library/windows/desktop/aa376210.aspx). Как правило, такое хранилище представляет собой аппаратный модуль безопасности — физическое устройство, которое защищает цифровые ключи и управляет ими, а также обеспечивает обработку шифрования.  | MSSQL_CNG_STORE|
@@ -564,7 +565,7 @@ static public void CopyTablesUsingBulk(string sourceTable, string targetTable)
 
 
 
-|Имя|Описание|Версия .NET
+|Имя|Description|Версия .NET
 |:---|:---|:---
 |[Класс SqlColumnEncryptionCertificateStoreProvider](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncertificatestoreprovider.aspx)|Поставщик хранилища ключей для хранилища сертификатов Windows.|  4.6
 |[Класс SqlColumnEncryptionCngProvider](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncngprovider.aspx)|Поставщик хранилища ключей для интерфейса Microsoft Cryptography API: Next Generation (CNG).|  4.6.1
@@ -584,7 +585,7 @@ static public void CopyTablesUsingBulk(string sourceTable, string targetTable)
 
 ## <a name="see-also"></a>См. также:
 
-- [Постоянное шифрование](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+- [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [Блог о постоянном шифровании](https://blogs.msdn.com/b/sqlsecurity/archive/tags/always-encrypted/)
 - [Учебник по базе данных SQL: защита конфиденциальных данных с помощью Always Encrypted](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/)
 

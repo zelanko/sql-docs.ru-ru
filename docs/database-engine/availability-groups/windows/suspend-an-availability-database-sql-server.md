@@ -1,6 +1,7 @@
 ---
-title: Приостановка базы данных доступности (SQL Server) | Документы Майкрософт
-ms.custom: ''
+title: Приостановка базы данных доступности
+description: Сведения о приостановке перемещения данных для базы данных в группе доступности Always On с помощью SQL Server Management Studio (SSMS), Transact-SQL (T-SQL) или PowerShell.
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 86858982-6af1-4e80-9a93-87451f0d7ee9
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c3be8b96e35dda7d5a1037543d750b2ccd020e64
-ms.sourcegitcommit: 4c5fb002719627f1a1594f4e43754741dc299346
+ms.openlocfilehash: 92f83bb31569a055bf9158a0388d9cb0630e9a1d
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72517959"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251277"
 ---
 # <a name="suspend-an-availability-database-sql-server"></a>Приостановка базы данных доступности (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +46,7 @@ ms.locfileid: "72517959"
   
      [Рекомендации](#Recommendations)  
   
-     [безопасность](#Security)  
+     [Безопасность](#Security)  
   
 -   **Для приостановки базы данных используется:**  
   

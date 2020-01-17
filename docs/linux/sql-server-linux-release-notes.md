@@ -3,17 +3,17 @@ title: Заметки о выпуске для SQL Server 2017 на Linux
 description: Эта статья содержит заметки о выпуске и поддерживаемые функции для SQL Server 2017 на Linux. Приведены заметки о выпуске для последнего и нескольких предыдущих выпусков.
 author: VanMSFT
 ms.author: vanto
-ms.date: 10/10/2019
+ms.date: 12/09/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
-ms.openlocfilehash: 839d789e633e8f8794ec6fde70980e6c1a43ce91
-ms.sourcegitcommit: 39630fddc69141531eddca2a3c156ccf8536f49c
+ms.openlocfilehash: 35a9e15162119c043e1d9ce31c9b5020241dc079
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72930490"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258401"
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Заметки о выпуске для SQL Server 2017 на Linux
 
@@ -44,8 +44,9 @@ ms.locfileid: "72930490"
 
 В следующей таблице указана история выпусков для [!INCLUDE[ssSQL17](../includes/sssql17-md.md)].
 
-| Выпуск               | Версия       | Дата выпуска |
+| Release               | Версия       | Дата выпуска |
 |-----------------------|---------------|--------------|
+| [CU18](#CU18)         | 14.0.3257.3   | 2019-12-09   |
 | [CU17](#CU17)         | 14.0.3238.1   | 2019-10-08   |
 | [CU16](#CU16)         | 14.0.3223.3   | 01.08.2019   |
 | [CU15](#CU15)         | 14.0.3162.1   | 2019-05-23   |
@@ -79,9 +80,49 @@ ms.locfileid: "72930490"
 - [Установка служб SQL Server Integration Services](sql-server-linux-setup-ssis.md)
 - [Включение агента SQL Server](sql-server-linux-setup-sql-agent.md)
 
+## <a id="CU18"></a> CU18 (декабрь 2019 г.)
+
+Это выпуск накопительного пакета обновления 18 (CU18) для [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. Версия [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] для этого выпуска — 14.0.3257.3. Сведения об исправлениях и улучшениях в этом выпуске см. по адресу [https://support.microsoft.com/help/4527377](https://support.microsoft.com/help/4527377).
+
+### <a name="package-details"></a>Сведения о пакете
+
+Для ручной или автономной установки пакета можно скачать пакеты RPM и Debian, используя сведения из следующей таблицы.
+
+| Пакет | Версия пакета | Файлы для загрузки |
+|-----|-----|-----|
+| Пакет Red Hat RPM | 14.0.3257.3-13 | [Пакет RPM подсистемы](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-14.0.3257.3-13.x86_64.rpm)</br>[Пакет RPM высокой доступности](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-ha-14.0.3257.3-13.x86_64.rpm)</br>[Пакет RPM полнотекстового поиска](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-fts-14.0.3257.3-13.x86_64.rpm)</br>[Пакет SSIS](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-is-14.0.1000.169-1.x86_64.rpm) | 
+| Пакет SLES RPM | 14.0.3257.3-13 | [Пакет RPM подсистемы mssql-server](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3257.3-13.x86_64.rpm)</br>[Пакет RPM высокой доступности](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3257.3-13.x86_64.rpm)</br>[Пакет RPM полнотекстового поиска](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3257.3-13.x86_64.rpm) | 
+| Пакет Ubuntu 16.04 Debian | 14.0.3257.3-13 | [Пакет подсистемы Debian](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3257.3-13_amd64.deb)</br>[Пакет Debian высокой доступности](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3257.3-13_amd64.deb)</br>[Пакет Debian полнотекстового поиска](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3257.3-13_amd64.deb)<br/>[Пакет SSIS](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
+
+### <a name="remarks"></a>Remarks
+
+Контейнеры SQL Server 2017 теперь имеют новый шаблон тегов, как описано ниже с примерами.
+
+- `mcr.microsoft.com/mssql/server:<SQL Server Version>-<update>-<Linux Distribution>-<Linux Distribution Version>`
+
+  Извлекает образ контейнера с помощью сочетания, описанного в теге.
+
+- `mcr.microsoft.com/mssql/server:<SQL Server Version>-latest`
+
+    Извлекает последнюю версию SQL Server в последней поддерживаемой версии Ubuntu.
+
+**Примеры:**
+
+`mcr.microsoft.com/mssql/server:2017-CU18-ubuntu-16.04`
+
+Извлекает SQL Server 2017 CU18 на основе контейнера Ubuntu 16.04.
+
+`mcr.microsoft.com/mssql/server:2017-latest`
+
+Извлекает последнюю версию SQL Server 2017 (CU18 на момент написания статьи) на основе контейнера Ubuntu 16.04.
+
+> [!NOTE]
+> Мы больше не будем публиковать контейнеры с другими шаблонами тегов для контейнеров SQL Server 2017 в будущем.
+
+
 ## <a id="CU17"></a> CU17 (октябрь 2019 г.)
 
-Это выпуск накопительного пакета обновления 17 (CU17) для [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. Версия [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] для этого выпуска — 14.0.3238.1. Сведения об исправлениях и улучшениях в этом выпуске см. по адресу [https://support.microsoft.com/en-us/help/4498951](https://support.microsoft.com/en-us/help/4515579).
+Это выпуск накопительного пакета обновления 17 (CU17) для [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. Версия [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] для этого выпуска — 14.0.3238.1. Сведения об исправлениях и улучшениях в этом выпуске см. по адресу [https://support.microsoft.com/help/4515579](https://support.microsoft.com/help/4515579).
 
 ### <a name="package-details"></a>Сведения о пакете
 
@@ -95,7 +136,7 @@ ms.locfileid: "72930490"
 
 ## <a id="CU16"></a> CU16 (август 2019 г.)
 
-Это выпуск накопительного пакета обновления 16 (CU16) для [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. Версия [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] для этого выпуска — 14.0.3223.3. Сведения об исправлениях и улучшениях в этом выпуске см. по адресу [https://support.microsoft.com/en-us/help/4508218](https://support.microsoft.com/en-us/help/4508218).
+Это выпуск накопительного пакета обновления 16 (CU16) для [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. Версия [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] для этого выпуска — 14.0.3223.3. Сведения об исправлениях и улучшениях в этом выпуске см. по адресу [https://support.microsoft.com/help/4508218](https://support.microsoft.com/help/4508218).
 
 ### <a name="whats-new"></a>What's New
 
@@ -115,7 +156,7 @@ ms.locfileid: "72930490"
 
 ## <a id="CU15"></a> CU15 (май 2019 г.)
 
-Это выпуск накопительного пакета обновления 15 (CU15) для [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. Версия [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] для этого выпуска — 14.0.3162.1. Сведения об исправлениях и улучшениях в этом выпуске см. по адресу [https://support.microsoft.com/en-us/help/4498951](https://support.microsoft.com/en-us/help/4498951).
+Это выпуск накопительного пакета обновления 15 (CU15) для [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. Версия [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] для этого выпуска — 14.0.3162.1. Сведения об исправлениях и улучшениях в этом выпуске см. по адресу [https://support.microsoft.com/help/4498951](https://support.microsoft.com/help/4498951).
 
 ### <a name="package-details"></a>Сведения о пакете
 
@@ -409,7 +450,7 @@ sudo systemctl start mssql-server
 
 В следующих разделах описаны известные проблемы с общедоступным (GA) выпуском [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] в Linux.
 
-#### <a name="general"></a>Общие
+#### <a name="general"></a>Общие сведения
 
 - Длина имени узла, где устанавливается [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], не должна превышать 15 символов. 
 
@@ -459,7 +500,7 @@ sudo systemctl start mssql-server
 
 - Сейчас разрешение пользователя **ADMINISTER BULK OPERATIONS** в Linux не поддерживается.
 
-#### <a name="networking"></a>Работа с сетью
+#### <a name="networking"></a>Сеть
 
 Функции, затрагивающие исходящие подключения TCP из процесса sqlservr, такие как связанные серверы или группы доступности, могут не работать, если выполняются оба следующих условия.
 
@@ -515,7 +556,7 @@ sudo systemctl start mssql-server
 - Следующие функции не поддерживаются в этом выпуске при запуске пакетов служб SSIS в Linux:
   - База данных каталогов [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]
   - Выполнение пакета агентом SQL по расписанию
-  - Проверка подлинности Windows.
+  - Проверка подлинности Windows
   - Сторонние компоненты
   - Система отслеживания измененных данных (CDC)
   - [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Scale Out
@@ -553,4 +594,4 @@ sudo systemctl start mssql-server
 - [Подготовка виртуальной машины SQL в Azure](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=/sql/toc/toc.json)
 - [Запуск и подключение — облако](quickstart-install-connect-clouds.md)
 
-Ответы на часто задаваемые вопросы об SQL Server на Linux см. в [этой статье](sql-server-linux-faq.md).
+Ответы на часто задаваемые вопросы об SQL Server на Linux см. в [этой статье](sql-server-linux-faq.md).

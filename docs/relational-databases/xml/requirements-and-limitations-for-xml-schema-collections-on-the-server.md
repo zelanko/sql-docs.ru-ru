@@ -1,6 +1,5 @@
 ---
-title: Требования и ограничения для коллекций схем XML на сервере | Документация Майкрософт
-ms.custom: ''
+title: Требования и ограничения (коллекции XML-схем) | Документация Майкрософт
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -24,12 +23,13 @@ helpviewer_keywords:
 ms.assetid: c2314fd5-4c6d-40cb-a128-07e532b40946
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 6514ea6acdb2fee96604656ae8f9179570eab35a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-lt-2019
+ms.openlocfilehash: fe65ba7995dc21b4bb5f5889c8667e9c8dfb6c10
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68093188"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257621"
 ---
 # <a name="requirements-and-limitations-for-xml-schema-collections-on-the-server"></a>Требования и ограничения для коллекций XML-схем на сервере
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,16 +63,16 @@ ms.locfileid: "68093188"
   
 ## <a name="in-this-section"></a>в этом разделе  
   
-|Раздел|Описание|  
+|Раздел|Description|  
 |-----------|-----------------|  
-|[Canonical Forms and Pattern Restrictions](../../relational-databases/xml/canonical-forms-and-pattern-restrictions.md)|Объясняет канонические формы и ограничения шаблона.|  
+|[Канонические формы и ограничения шаблона](../../relational-databases/xml/canonical-forms-and-pattern-restrictions.md)|Объясняет канонические формы и ограничения шаблона.|  
 |[Компоненты-шаблоны и проверка достоверности содержимого](../../relational-databases/xml/wildcard-components-and-content-validation.md)|Описывает ограничения использования символов-шаблонов, нестрогой проверки и элементов anyType с коллекциями XML-схем.|  
 |[Элемент &#60;xsd:redefine&#62;](../../relational-databases/xml/the-xsd-redefine-element.md)|Объясняет ограничения использования элемента \<xsd:redefine> и описывает обходное решение для этой проблемы.|  
 |[Тип xs:QName](../../relational-databases/xml/the-xs-qname-type.md)|Описывает ограничение, связанное с типом xs:QName.|  
 |[Значения для объявлений &#60;xsd:simpleType&#62;](../../relational-databases/xml/values-for-xsd-simpletype-declarations.md)|Описывает ограничения, применяемые к объявлениям \<xsd:simpleType>.|  
-|[Enumeration Facets](../../relational-databases/xml/enumeration-facets.md)|Описывает ограничение, связанное с аспектами перечислений.|  
-|[Mixed Type and Simple Content](../../relational-databases/xml/mixed-type-and-simple-content.md)|Описывает ограничение сужения смешанного типа до простого содержимого.|  
-|[Большие коллекции XML-схем и условия нехватки памяти](../../relational-databases/xml/large-xml-schema-collections-and-out-of-memory-conditions.md)|Содержит решения проблемы с нехваткой памяти, которая может возникнуть при работе с большими коллекциями схем.|  
+|[Аспекты перечисления](../../relational-databases/xml/enumeration-facets.md)|Описывает ограничение, связанное с аспектами перечислений.|  
+|[Смешанный тип и простое содержимое](../../relational-databases/xml/mixed-type-and-simple-content.md)|Описывает ограничение сужения смешанного типа до простого содержимого.|  
+|[Большие коллекции схем XML и условия нехватки памяти](../../relational-databases/xml/large-xml-schema-collections-and-out-of-memory-conditions.md)|Содержит решения проблемы с нехваткой памяти, которая может возникнуть при работе с большими коллекциями схем.|  
 |[Недетерминированные модели содержимого](../../relational-databases/xml/non-deterministic-content-models.md)|Описывает ограничения, связанные с недетерминированными моделями содержимого.|  
   
 ## <a name="see-also"></a>См. также:  

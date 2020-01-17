@@ -1,6 +1,7 @@
 ---
-title: Создание обновляемых подписок для публикаций транзакций | Документация Майкрософт
-ms.custom: ''
+title: Создание обновляемых подписок (транзакции)
+description: Узнайте, как создать обновляемую подписку для публикации транзакций для SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 11/20/2018
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f9ef89ed-36f6-431b-8843-25d445ec137f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 99e605f1ed2a924f504f118dd6d0865fda3229e0
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 5d1a8b0c8f674dd39ece67cb79db0110cfd55994
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908590"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321256"
 ---
 # <a name="create-an-updatable-subscription-to-a-transactional-publication"></a>Создание обновляемых подписок для публикаций транзакций
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

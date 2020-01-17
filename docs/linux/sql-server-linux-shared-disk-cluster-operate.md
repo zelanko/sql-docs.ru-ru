@@ -1,20 +1,21 @@
 ---
-title: Работа экземпляра отказоустойчивого кластера — SQL Server на Linux
-description: В этой статье описывается работа экземпляра отказоустойчивого кластера (FCI) SQL Server на Linux.
+title: Ручная отработка отказа экземпляра отказоустойчивого кластера — SQL Server на Linux
+description: Узнайте, как вручную отработать отказ экземпляра отказоустойчивого кластера на SQL Server на Linux.
+ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-ms.date: 08/28/2017
+ms.date: 12/06/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 1df7f6a53bb8d634b5d347f7a043605f7610ed78
-ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
+ms.openlocfilehash: d63ef5b6535c34e9b5d2087d96dbe615c7f1d8b3
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71682112"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558551"
 ---
 # <a name="operate-failover-cluster-instance---sql-server-on-linux"></a>Работа экземпляра отказоустойчивого кластера — SQL Server на Linux
 
@@ -63,7 +64,7 @@ ms.locfileid: "71682112"
 crm resource migrate <FCIResourceName> <NewHostNode>
 ```
 
-\<FCIResourceName> — имя ресурса для экземпляра отказоустойчивого кластера. 
+\<FCIResourceName> — имя ресурса для экземпляра отказоустойчивого кластера. 
 
 \<NewHostNode> — имя нового узла назначения. 
 
@@ -79,6 +80,6 @@ crm resource migrate <FCIResourceName> <NewHostNode>
 
 ## <a name="next-steps"></a>Next Steps
 
-- [Настройка экземпляра отказоустойчивого кластера — SQL Server на Linux](sql-server-linux-shared-disk-cluster-configure.md)
+- [Настройка экземпляра отказоустойчивого кластера — SQL Server на Linux](sql-server-linux-shared-disk-cluster-configure.md)
 
 <!--Image references-->

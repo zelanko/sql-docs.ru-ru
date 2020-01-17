@@ -1,6 +1,8 @@
 ---
-title: KILL QUERY NOTIFICATION SUBSCRIPTION (Transact-SQL) | Документы Майкрософт
-ms.custom: ''
+title: KILL QUERY NOTIFICATION SUBSCRIPTION
+description: Удаляет подписки на уведомления о запросах из экземпляра. С помощью этой инструкции можно удалить определенную подписку или все подписки.
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: seo-lt-2019
 ms.date: 07/27/2017
 ms.prod: sql
 ms.prod_service: sql-database
@@ -20,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 8aeadf51-286c-4748-bef2-d25858b250bf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0f70759864eaf2c91a0b5bf2bf59461bec09937b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3d44551ead01d3a51cd52501460fbc390b18a438
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68122301"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251062"
 ---
 # <a name="kill-query-notification-subscription-transact-sql"></a>KILL QUERY NOTIFICATION SUBSCRIPTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

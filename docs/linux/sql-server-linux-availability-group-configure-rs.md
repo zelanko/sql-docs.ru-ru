@@ -1,7 +1,7 @@
 ---
-title: Настройка группы доступности SQL Server для чтения и масштабирования в Linux
-titleSuffix: SQL Server
+title: Настройка группы доступности для чтения и масштабирования (SQL Server на Linux)
 description: Сведения о настройке группы доступности Always On SQL Server для рабочих нагрузок для чтения и масштабирования в Linux.
+ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -9,12 +9,12 @@ ms.date: 01/09/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: fcfa4510c9f33ee3aa6fc33cafb43cb627b0f53c
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 1ce63521989edfccc1fc9fc085b0a9c476cde2ee
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68027259"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558415"
 ---
 # <a name="configure-a-sql-server-availability-group-for-read-scale-on-linux"></a>Настройка группы доступности SQL Server для чтения и масштабирования в Linux
 
@@ -80,7 +80,7 @@ ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE;
 
 [!INCLUDE[Force failover](../includes/ss-force-failover-read-scale-out.md)]
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 * [Настройка распределенной группы доступности](../database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups.md)
 * [Дополнительные сведения о группах доступности](../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)

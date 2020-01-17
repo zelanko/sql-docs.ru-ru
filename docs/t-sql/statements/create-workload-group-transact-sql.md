@@ -1,7 +1,7 @@
 ---
 title: CREATE WORKLOAD GROUP (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 11/04/2019
+ms.date: 11/18/2019
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -20,12 +20,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current'
-ms.openlocfilehash: 50c5edee93747c98060d664f1edd2d42036aa9b2
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: bed396bf39b4b621c5b333a7b13218998264675a
+ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73982657"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74165897"
 ---
 # <a name="create-workload-group-transact-sql"></a>CREATE WORKLOAD GROUP (Transact-SQL)
 
@@ -37,7 +37,7 @@ ms.locfileid: "73982657"
 
 > |||||
 > |---|---|---|---|
-> |**\* _SQL Server \*_** &nbsp;|[Управляемый экземпляр Базы данных SQL<br />](create-workload-group-transact-sql.md?view=azuresqldb-mi-current)|[Хранилище данных<br />SQL](create-workload-group-transact-sql.md?view=azure-sqldw-latest)|
+> |**_\* SQL Server \*_** &nbsp;|[Управляемый экземпляр Базы данных SQL<br />](create-workload-group-transact-sql.md?view=azuresqldb-mi-current)|[Хранилище данных<br />SQL](create-workload-group-transact-sql.md?view=azure-sqldw-latest)|
 
 &nbsp;
 
@@ -129,7 +129,7 @@ MAX_DOP = *value*
 > [!TIP]
 > Для выполнения этого на уровне запросов используйте [указание запроса](../../t-sql/queries/hints-transact-sql-query.md) **MAXDOP**. Указание максимальной степени параллелизма в качестве указания запроса эффективно до тех пор, пока его значение не превышает значения MAX_DOP группы рабочей нагрузки. Если значение указания запроса MAXDOP превышает значение, которое настроено с помощью Resource Governor, компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] использует значение `MAX_DOP` Resource Governor. [Указание запроса](../../t-sql/queries/hints-transact-sql-query.md) MAXDOP всегда переопределяет [конфигурацию сервера для максимальной степени параллелизма](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).      
 >   
-> На уровне базы данных используйте [конфигурацию области баз данных](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) **MAXDOP**.      
+> На уровне базы данных используйте [конфигурацию области баз данных ](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)**MAXDOP**.      
 >   
 > На уровне сервера используйте [параметр конфигурации сервера](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) **максимальной степени параллелизма (MAXDOP)** .     
 
@@ -190,13 +190,13 @@ GO
 
 > ||||
 > |---|---|---|
-> |[SQL Server](create-workload-group-transact-sql.md?view=sql-server-2017)||[Управляемый экземпляр Базы данных SQL<br />](create-workload-group-transact-sql.md?view=azuresqldb-mi-current)||**_\* Хранилище данных<br />SQL \*_** &nbsp;||||
+> |[SQL Server](create-workload-group-transact-sql.md?view=sql-server-2017)||[Управляемый экземпляр Базы данных SQL<br />](create-workload-group-transact-sql.md?view=azuresqldb-mi-current)||**_\* Хранилище данных<br /> SQL \*_** &nbsp;||||
 
 &nbsp;
 
-## <a name="sql-data-warehouse"></a>Хранилище данных SQL 
+## <a name="sql-data-warehouse-preview"></a>Хранилище данных SQL (предварительная версия)
 
-CREATE WORKLOAD GROUP (Transact-SQL) (предварительная версия) создает группу рабочей нагрузки.  Группы рабочей нагрузки являются контейнерами для набора запросов и служат основой для настройки управления рабочими нагрузками в системе.  Группы рабочей нагрузки позволяют резервировать ресурсы для изоляции рабочей нагрузки, сохранять ресурсы, определять ресурсы для каждого запроса и соблюдать правила выполнения.  После выполнения инструкции вступают в действие параметры.
+Создает группу рабочей нагрузки.  Группы рабочей нагрузки являются контейнерами для набора запросов и служат основой для настройки управления рабочими нагрузками в системе.  Группы рабочей нагрузки позволяют резервировать ресурсы для изоляции рабочей нагрузки, сохранять ресурсы, определять ресурсы для каждого запроса и соблюдать правила выполнения.  После выполнения инструкции вступают в действие параметры.
 
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md). 
 
@@ -216,13 +216,13 @@ CREATE WORKLOAD GROUP group_name
 Указывает имя, по которому идентифицируется группа рабочей нагрузки.  group_name имеет тип sysname.  Оно может иметь длину до 128 символов и должно быть уникальным в пределах экземпляра.
 
 *MIN_PERCENTAGE_RESOURCE* = value</br>
-Указывает гарантированное минимальное выделение ресурсов для этой группы рабочей нагрузки, не используемое совместно с другими группами рабочей нагрузки.  value является целым числом в диапазоне от 0 до 100.  Сумма значений min_percentage_resource во всех группах рабочей нагрузки не может превышать 100.  Значение min_percentage_resource не может превышать значение cap_percentage_resource.  Для каждого уровня обслуживания предусмотрены минимальные действующие значения.  Дополнительные сведения см. в разделе о действующих значениях<link>.
+Указывает гарантированное минимальное выделение ресурсов для этой группы рабочей нагрузки, не используемое совместно с другими группами рабочей нагрузки.  value является целым числом в диапазоне от 0 до 100.  Сумма значений min_percentage_resource во всех группах рабочей нагрузки не может превышать 100.  Значение min_percentage_resource не может превышать значение cap_percentage_resource.  Для каждого уровня обслуживания предусмотрены минимальные действующие значения.  Дополнительные сведения см. в разделе о [действующих значениях](#effective-values).
 
 *CAP_PERCENTAGE_RESOURCE* = value</br>
-Указывает максимальное использование ресурсов для всех запросов в группе рабочей нагрузки.  Диапазон допустимых значений для value — от 1 до 100.  Значение cap_percentage_resource не может превышать значение min_percentage_resource.  Действующее значение для cap_percentage_resource можно уменьшить, если min_percentage_resource настраивается со значением больше нуля в других группах рабочей нагрузки.
+Указывает максимальное использование ресурсов для всех запросов в группе рабочей нагрузки.  Диапазон допустимых целых значений для value — от 1 до 100.  Значение cap_percentage_resource не может превышать значение min_percentage_resource.  Действующее значение для cap_percentage_resource можно уменьшить, если min_percentage_resource настраивается со значением больше нуля в других группах рабочей нагрузки.
 
 *REQUEST_MIN_RESOURCE_GRANT_PERCENT* = value</br>
-Задает минимальный объем ресурсов, выделяемых для каждого запроса.  value является обязательным параметром с диапазоном десятичных значений от 0,75 до 100,00.  Значение request_min_resource_grant_percent должно делиться на 0,25, быть кратно min_percentage_resource и быть меньше cap_percentage_resource.  Для каждого уровня обслуживания предусмотрены минимальные действующие значения.  Дополнительные сведения см. в разделе о действующих значениях<link>.
+Задает минимальный объем ресурсов, выделяемых для каждого запроса.  value является обязательным параметром с диапазоном десятичных значений от 0,75 до 100,00.  Значение request_min_resource_grant_percent должно делиться на 0,25, быть кратно min_percentage_resource и быть меньше cap_percentage_resource.  Для каждого уровня обслуживания предусмотрены минимальные действующие значения.  Дополнительные сведения см. в разделе о [действующих значениях](#effective-values).
 
 Пример:
 
@@ -244,7 +244,7 @@ CREATE WORKLOAD GROUP wgSample WITH
 |||
 
 *REQUEST_MAX_RESOURCE_GRANT_PERCENT* = value</br>
-Задает максимальный объем ресурсов, выделяемых для каждого запроса.  value — это необязательный параметр со значением по умолчанию, равным значению request_min_resource_grant_percent.  Значение value должно быть больше или равно значению request_min_resource_grant_percent.  Если значение request_max_resource_grant_percent больше значения request_min_resource_grant_percent и доступны системные ресурсы, для запроса выделяются дополнительные ресурсы.
+Задает максимальный объем ресурсов, выделяемых для каждого запроса.  value — это необязательный десятичный параметр со значением по умолчанию, равным значению request_min_resource_grant_percent.  Значение value должно быть больше или равно значению request_min_resource_grant_percent.  Если значение request_max_resource_grant_percent больше значения request_min_resource_grant_percent и доступны системные ресурсы, для запроса выделяются дополнительные ресурсы.
 
 *IMPORTANCE* = { LOW |  BELOW_NORMAL | NORMAL | ABOVE_NORMAL | HIGH }</br>
 Указывает важность запроса по умолчанию в группе рабочей нагрузки.  Важность представлена одним из следующих значений, причем значением по умолчанию является NORMAL.
@@ -257,48 +257,54 @@ CREATE WORKLOAD GROUP wgSample WITH
 Важность, заданная в группе рабочей нагрузки, является важностью по умолчанию для всех запросов в группе рабочей нагрузки.  Пользователь также может задать важность на уровне классификатора, который может переопределить параметр важности группы рабочей нагрузки.  Это позволяет различать уровень важности запросов в группе рабочей нагрузки для быстрого получения доступа к незарезервированным ресурсам.  Если сумма min_percentage_resource в группах рабочей нагрузки меньше 100, значит имеются незарезервированные ресурсы, назначаемые на основе уровня важности.
 
 *QUERY_EXECUTION_TIMEOUT_SEC* = value</br>
-Указывает максимальное время в секундах, в течение которого может выполняться запрос до его отмены.  value должно быть 0 или положительным целым числом.  Значение value по умолчанию равно 0, что означает неограниченное время.  Время, затраченное на ожидание в очереди запросов, не учитывается при выполнении запроса.
+Указывает максимальное время в секундах, в течение которого может выполняться запрос до его отмены.  value должно быть 0 или положительным целым числом.  Значение value по умолчанию равно 0, что означает неограниченное время запроса.  QUERY_EXECUTION_TIMEOUT_SEC начинает отсчет, когда запрос переходит в состояние выполнения, а не ставится в очередь.
 
 ## <a name="remarks"></a>Remarks
 Группы рабочей нагрузки, соответствующие классам ресурсов, создаются автоматически для обеспечения обратной совместимости.  Эти группы рабочей нагрузки, определенные системой, нельзя удалить.  Можно создать восемь дополнительных групп рабочей нагрузки, определяемых пользователем.
+
+Если группа рабочей нагрузки создается со значением min_percentage_resource больше нуля, инструкция `CREATE WORKLOAD GROUP` будет находиться в очереди до тех пор, пока не появится достаточно ресурсов для создания группы рабочей нагрузки.
 
 ## <a name="effective-values"></a>Действующие значения
 
 Параметры min_percentage_resource, cap_percentage_resource, request_min_resource_grant_percent и request_max_resource_grant_percent имеют действующие значения, которые корректируются в контексте текущего уровня обслуживания и конфигурации других групп рабочей нагрузки.
 
-Поддерживаемый уровень параллелизма для каждого уровня обслуживания остается таким же, что и при использовании классов ресурсов для определения выделений ресурсов для каждого запроса, поэтому поддерживаемые значения для request_min_resource_grant_percent зависят от уровня обслуживания, заданного для экземпляра.  На самом низком уровне обслуживания DW100c поддерживается параллелизм 4.  Действующее значение request_min_resource_grant_percent для настроенной группы рабочей нагрузки может составлять 25 % или выше.  Дополнительные сведения см. в таблице ниже.
+Поддерживаемый уровень параллелизма для каждого уровня обслуживания остается таким же, что и при использовании классов ресурсов для определения выделений ресурсов для каждого запроса, поэтому поддерживаемые значения для request_min_resource_grant_percent зависят от уровня обслуживания, заданного для экземпляра.  На самом низком уровне обслуживания DW100c требуется минимум 25 % ресурсов на запрос.  На уровне DW100c действительное значение request_min_resource_grant_percent для настроенной группы рабочей нагрузки может составлять 25 % или выше.  Дополнительные сведения о том, как извлекаются действующие значения, см. в таблице ниже.
 
-|Уровень обслуживания|Максимальное число одновременных запросов|Минимальное процентное значение, поддерживаемое для REQUEST_MIN_RESOURCE_GRANT_PERCENT и MIN_PERCENTAGE_RESOURCE|
+|Уровень обслуживания|Наименьшее действительное значение для REQUEST_MIN_RESOURCE_GRANT_PERCENT|Максимальное число одновременных запросов|
 |---|---|---|
-|DW100c|4|25 %|
-|DW200c|8|12,5 %|
-|DW300c|12|8 %|
-|DW400c|16|6,25 %|
-|DW500c|20|5 %|
-|DW1000c|32|3 %|
-|DW1500c|32|3 %|
-|DW2000c|48|2 %|
-|DW2500c|48|2 %|
-|DW3000c|64|1,5 %|
-|DW5000c|64|1,5 %|
-|DW6000c|128|0,75 %|
-|DW7500c|128|0,75 %|
-|DW10000c|128|0,75 %|
-|DW15000c|128|0,75 %|
-|DW30000c|128|0,75 %|
+|DW100c|25 %|4|
+|DW200c|12,5 %|8|
+|DW300c|8 %|12|
+|DW400c|6,25 %|16|
+|DW500c|5 %|20|
+|DW1000c|3 %|32|
+|DW1500c|3 %|32|
+|DW2000c|2 %|48|
+|DW2500c|2 %|48|
+|DW3000c|1,5 %|64|
+|DW5000c|1,5 %|64|
+|DW6000c|0,75 %|128|
+|DW7500c|0,75 %|128|
+|DW10000c|0,75 %|128|
+|DW15000c|0,75 %|128|
+|DW30000c|0,75 %|128|
 ||||
 
 Аналогичным образом, значение request_min_resource_grant_percent min_percentage_resource должно быть больше или равно действующему значению request_min_resource_grant_percent.  Группа рабочей нагрузки с настроенным значением min_percentage_resource, которое меньше действующего значения min_percentage_resource, имеет значение, измененное во время выполнения до нуля.  В этом случае ресурсы, настроенные для min_percentage_resource, будут общими для всех групп рабочей нагрузки.  Например, группа рабочей нагрузки wgAdHoc со значением min_percentage_resource, равным 10 %, выполняющаяся на уровне обслуживания DW1000c, будет иметь действующее значение min_percentage_resource, равное 10 % (3,25 % — это минимальное поддерживаемое значение на уровне DW1000c).  wgAdhoc на уровне обслуживания DW100c получит действующее значение min_percentage_resource, равное 0 %.  Значение 10 %, настроенное для wgAdhoc, будет общим для всех групп рабочей нагрузки.
 
 Cap_percentage_resource также имеет действующее значение.  Если группа рабочей нагрузки wgAdhoc настроена со значением cap_percentage_resource, равным 100 %, а другая группа рабочей нагрузки wgDashboards создается со значением min_percentage_resource, равным 25 %, а действующим значением cap_percentage_resource для wgAdhoc становится 75 %.
 
-Проще всего понять значения времени выполнения для групп рабочей нагрузки можно с помощью запроса системного представления [sys.dm_workload_management_workload_groups_stats] (../../relational-databases/system-dynamic-management-views/sys-dm-workload-management-workload-group-stats-transact-sql.md?view=azure-sqldw-latest).
+Самый простой способ понять значения времени выполнения для групп рабочей нагрузки — выполнить запрос к системному представлению [sys.dm_workload_management_workload_groups_stats](../../relational-databases/system-dynamic-management-views/sys-dm-workload-management-workload-group-stats-transact-sql.md).
+
 
 ## <a name="permissions"></a>Разрешения
 
 Требуется разрешение CONTROL DATABASE
 
 ## <a name="see-also"></a>См. также раздел
-[DROP WORKLOAD GROUP (Transact-SQL)](drop-workload-group-transact-sql.md)
+[DROP WORKLOAD GROUP (Transact-SQL)](drop-workload-group-transact-sql.md) <br>
+[sys.workload_management_workload_groups](../../relational-databases/system-catalog-views/sys-workload-management-workload-groups-transact-sql.md) <br>
+[sys.dm_workload_management_workload_groups_stats](../../relational-databases/system-dynamic-management-views/sys-dm-workload-management-workload-group-stats-transact-sql.md) <br>
+Краткое руководство по созданию и использованию [группы рабочей нагрузки](https://docs.microsoft.com/azure/sql-data-warehouse/quickstart-configure-workload-isolation-tsql)
 
 ::: moniker-end

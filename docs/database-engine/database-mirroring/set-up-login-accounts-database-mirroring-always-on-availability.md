@@ -1,6 +1,7 @@
 ---
-title: Настройка учетных записей входа для зеркального отображения баз данных или групп доступности AlwaysOn | Документы Майкрософт
-ms.custom: ''
+title: Настройка учетных записей входа (зеркальное отображение и группы доступности)
+description: Настройте учетные записи входа для доступа к конечной точке зеркального отображения базы данных или группе доступности Always On.
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.prod_service: high-availability
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e9f5287b-1325-4cda-88a6-19eaaa52a652
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: d3612f2ef5a736ed2d676b5336ecdd48bdd10de6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 851b2aa7dfb7a3c492182840d7d57045a5a72e8a
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68025224"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252780"
 ---
 # <a name="set-up-login-accounts---database-mirroring-always-on-availability"></a>Настройка учетных записей входа для зеркального отображения баз данных или групп доступности AlwaysOn
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +39,7 @@ ms.locfileid: "68025224"
  Если два экземпляра сервера запущены под разными учетными записями, системный администратор должен использовать инструкцию CREATE LOGIN [!INCLUDE[tsql](../../includes/tsql-md.md)] для создания имени входа для учетной записи службы запуска удаленного экземпляра для каждого экземпляра сервера. Дополнительные сведения см. в разделе [CREATE LOGIN (Transact-SQL)](../../t-sql/statements/create-login-transact-sql.md).  
   
 > [!IMPORTANT]  
->  Если [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] запущен под учетной записью, не относящейся к домену, следует использовать сертификаты. Дополнительные сведения см. в подразделах [Использование сертификатов для конечной точки зеркального отображения базы данных (Transact-SQL)](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md).  
+>  Если [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] запущен под учетной записью, не относящейся к домену, следует использовать сертификаты. Дополнительные сведения см. в разделе [Использование сертификатов для конечной точки зеркального отображения базы данных (Transact-SQL)](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md).  
   
  Например, для подключения экземпляра сервера sqlA, запущенного под именем loginA к экземпляру сервера sqlB, запущенному под именем loginB, необходимо, чтобы имя loginA существовало на сервере sqlB, а имя loginB — на сервере sqlA. Кроме того, если в сеансе зеркального отображения базы данных участвует экземпляр следящего сервера (sqlC) и если все три экземпляра сервера запущены под разными учетными записями домена, то необходимо создать следующие учетные записи для зеркального отображения:  
   
@@ -56,7 +57,7 @@ ms.locfileid: "68025224"
   
 ##  <a name="RelatedTasks"></a> Связанные задачи  
   
--   [Создание имени для входа](../../relational-databases/security/authentication-access/create-a-login.md)  
+-   [Создание имени входа](../../relational-databases/security/authentication-access/create-a-login.md)  
   
 -   [Разрешение сетевого доступа к конечной точке зеркального отображения базы данных с использованием проверки подлинности Windows (SQL Server)](../../database-engine/database-mirroring/database-mirroring-allow-network-access-windows-authentication.md)  
   

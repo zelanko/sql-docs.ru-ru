@@ -1,6 +1,7 @@
 ---
-title: Подписка, вкладка "Журнал операций от распространителя к подписчику" (подписка на моментальные снимки) | Документация Майкрософт
-ms.custom: ''
+title: Журнал операций от распространителя к подписчику (моментальный снимок)
+description: Описание вкладки "Журнал операций от распространителя к подписчику" монитора репликации для публикации моментальных снимков в SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -13,12 +14,12 @@ ms.assetid: d3575964-f287-4bcf-8d2e-f81a33141b25
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 3fdf09887875407cc98127c3afdaa96d97402fcb
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 460ab1ee21fd09c423316e7f4893dd6875d43130
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768334"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321688"
 ---
 # <a name="subscription-distributor-to-subscriber-history-snapshot-subscription"></a>Подписка, журнал распространителя для подписчика (подписка на моментальные снимки)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -27,7 +28,7 @@ ms.locfileid: "68768334"
 ## <a name="options"></a>Параметры  
  В меню **Вид** выберите сеансы, какого агента распространителя необходимо просмотреть, а затем в сетке **Сеансы агента распространителя**выберите определенный сеанс. Подробные сведения об этом сеансе отображаются в сетке, помеченной как **Действия в выбранном сеансе**. Если выбранный сеанс закончен с ошибкой, также выводится на экран текстовое поле, помеченное как **Описание ошибки или сообщение выбранного сеанса** .  
   
- **Вид**  
+ **View** (Вид)  
  Выберите агента распространителя, сеансы которого необходимо просмотреть.  
   
  **Состояние**  
@@ -35,7 +36,7 @@ ms.locfileid: "68768334"
   
 -   Ошибка  
   
--   Завершен  
+-   Завершено  
   
 -   Повтор  
   

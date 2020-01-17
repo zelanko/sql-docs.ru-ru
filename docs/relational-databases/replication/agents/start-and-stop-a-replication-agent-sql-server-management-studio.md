@@ -1,6 +1,7 @@
 ---
-title: Запуск и остановка агента репликации (среда SQL Server Management Studio) | Документация Майкрософт
-ms.custom: ''
+title: Запуск или остановка агента репликации (SSMS)
+description: Узнайте, как запустить и остановить агент репликации в SQL Server Management Studio и мониторе репликации.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,16 +15,16 @@ ms.assetid: 97977c4a-8c7c-4a22-9480-69aa812bd1e5
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 339da4b5d9112aa10aa52e12c8a39f6a2adaa30b
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 70f876d9152e836e12ad0c28e640362b23197190
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770704"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321638"
 ---
 # <a name="start-and-stop-a-replication-agent-sql-server-management-studio"></a>Запуск и остановка агента репликации (среда SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
-  Запуск и остановка агентов выполняется из папки **Задания** и папки **Репликация** в [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] and from Репликация Monitor. Могут запускаться и останавливаться следующие агенты и задания:  
+  Запуск и остановка агентов выполняется из папки **Задания** и папки **Репликация** в [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] и из монитора репликации. Могут запускаться и останавливаться следующие агенты и задания:  
   
 -   Агент моментальных снимков, используемый всеми публикациями.  
   
@@ -53,7 +54,7 @@ ms.locfileid: "68770704"
   
 ### <a name="to-start-and-stop-a-queue-reader-agent-from-management-studio"></a>Запуск и остановка агента чтения очереди из среды Management Studio  
   
-1.  Подключитесь к распространителю в [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]и раскройте узел сервера.  
+1.  Подключитесь к распространителю в [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]и разверните узел сервера.  
   
 2.  Раскройте папку **Агент SQL Server** , а затем — папку **Задания** .  
   

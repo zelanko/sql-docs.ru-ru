@@ -1,6 +1,7 @@
 ---
-title: Отладка обработчика бизнес-логики (программирование репликации) | Документация Майкрософт
-ms.custom: ''
+title: Отладка обработчика бизнес-логики (программирование репликации)
+description: Узнайте, как использовать обработчик бизнес-логики для вызова пользовательской бизнес-логики во время синхронизации подписки на публикацию слиянием.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: edd0d17a-0e9c-4c28-8395-a7d47e8ce3d6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 01a1e4be7476b2f683345e8bfd23f4fcf0e90642
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b001e9e53c30ba57b2a56b0bd57571668ae2770c
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68063086"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321782"
 ---
 # <a name="debug-a-business-logic-handler-replication-programming"></a>выполнить отладку обработчика бизнес-логики (программирование репликации)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +37,7 @@ ms.locfileid: "68063086"
   
 2.  Создайте и зарегистрируйте обработчик бизнес-логики. Дополнительные сведения см. в статье [Реализация обработчика бизнес-логики для статьи публикации слиянием](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md).  
   
-3.  В среде [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio создайте проект объектов RMO, который программным путем производит синхронный запуск агента слияния. Дополнительные сведения см. в статье [Синхронизация подписки по запросу](../../relational-databases/replication/synchronize-a-pull-subscription.md).  
+3.  В среде [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio создайте проект объектов RMO, который программным путем производит синхронный запуск агента слияния. Дополнительные сведения см. в статье [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md).  
   
 4.  Установите точку останова в коде обработчика бизнес-логики — в методе, проходящем отладку, или в конструкторе класса. Дополнительные сведения о методах, которые можно реализовать в обработчике бизнес-логики, см. в разделе о методах <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> .  
   
@@ -83,6 +84,6 @@ ms.locfileid: "68063086"
 11. Если не заданы другие точки останова и репликацию проходят нужные команды, выполнение будет остановлено по достижении точки останова в обработчике бизнес-логики.  
   
 ## <a name="see-also"></a>См. также:  
- [Реализация обработчика бизнес-логики для статьи слияния](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)  
+ [Реализация обработчика бизнес-логики для статьи публикации слиянием](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)  
   
   

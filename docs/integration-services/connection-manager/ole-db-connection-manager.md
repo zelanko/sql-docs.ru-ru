@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 91e3622e-4b1a-439a-80c7-a00b90d66979
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ffc7da76c7291bbf8e0d4dd6003c572cd9610e92
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: aa5d978126807e1fb83c08a1d1b8d9d7b74d8368
+ms.sourcegitcommit: 7183735e38dd94aa3b9bab2b73ccab54c916ff86
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71294376"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74687164"
 ---
 # <a name="ole-db-connection-manager"></a>Диспетчер соединений OLE DB
 
@@ -38,7 +38,7 @@ ms.locfileid: "71294376"
 > [!NOTE]
 >  Если источником данных является [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Excel 2007 или [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access 2007, то для него понадобится источник данных, отличный от поставщиков для более ранних версий Excel или Access. Дополнительные сведения см. в разделе [Подключение к книге Excel](../../integration-services/connection-manager/connect-to-an-excel-workbook.md) и [Подключение к базе данных Access](../../integration-services/connection-manager/connect-to-an-access-database.md).    
     
-Некоторые задачи служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] и компоненты потока данных применяют диспетчер соединений OLE DB. Например, источник OLE DB и назначение OLE DB используют этот диспетчер подключений для извлечения и загрузки данных. Задача "Выполнение SQL" может использовать этот диспетчер подключений, чтобы подключиться к базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для выполнения запросов.    
+Некоторые задачи служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] и компоненты потока данных применяют диспетчер соединений OLE DB. Например, источник OLE DB и назначение OLE DB используют этот диспетчер подключений для извлечения и загрузки данных. Задача "Выполнение SQL" может использовать этот диспетчер подключений, чтобы подключиться к базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для выполнения запросов.    
     
 Кроме того, вы можете использовать диспетчер подключений OLE DB для получения доступа к источникам данных OLE DB в пользовательских задачах, написанных с использованием неуправляемого кода на языке, подобном C++.    
     
@@ -94,54 +94,40 @@ ms.locfileid: "71294376"
 
 Чтобы использовать проверку подлинности управляемого удостоверения для базы данных SQL Azure, выполните следующие действия для настройки базы данных:
 
-1. Создайте группу в Azure AD. Сделайте управляемое удостоверение членом группы.
-    
-   1. [Найдите управляемое удостоверение фабрики данных на портале Microsoft Azure](https://docs.microsoft.com/azure/data-factory/data-factory-service-identity). Перейдите к разделу **Свойства** своей фабрики данных. Скопируйте **идентификатор объекта управляемого удостоверения**.
-    
-   1. Установите модуль [Azure AD PowerShell](https://docs.microsoft.com/powershell/azure/active-directory/install-adv2). Войдите с помощью команды `Connect-AzureAD`. Выполните указанные ниже команды, чтобы создать группу и добавить управляемое удостоверение в качестве члена.
-      ```powershell
-      $Group = New-AzureADGroup -DisplayName "<your group name>" -MailEnabled $false -SecurityEnabled $true -MailNickName "NotSet"
-      Add-AzureAdGroupMember -ObjectId $Group.ObjectId -RefObjectId "<your data factory managed identity object ID>"
-      ```
-    
-1. [Подготовьте администратора Azure Active Directory](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure#provision-an-azure-active-directory-administrator-for-your-azure-sql-database-server) для своего сервера SQL Azure на портале Azure, если вы еще этого не сделали. Администратор Azure AD может быть пользователем Azure AD или группой Azure AD. Если вы предоставляете группе с управляемым удостоверением роль администратора, пропустите шаги 3 и 4. Администратор будет иметь полный доступ к базе данных.
+1. [Подготовьте администратора Azure Active Directory](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure#provision-an-azure-active-directory-administrator-for-your-azure-sql-database-server) для своего сервера SQL Azure на портале Azure, если вы еще этого не сделали. Администратор Azure AD может быть пользователем Azure AD или группой Azure AD. Если вы предоставляете группе с управляемым удостоверением роль администратора, пропустите шаги 2 и 3. Администратор будет иметь полный доступ к базе данных.
 
-1. [Создайте пользователей автономной базы данных](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure#create-contained-database-users-in-your-database-mapped-to-azure-ad-identities) для группы Azure AD. Подключитесь к базе данных, откуда или куда вы хотите скопировать данные с помощью таких средств, как SSMS, с используя удостоверение Azure AD, которое имеет по меньшей мере разрешение ALTER ANY USER. Выполните следующий код T-SQL: 
+1. [Создайте пользователей автономной базы данных](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure#create-contained-database-users-in-your-database-mapped-to-azure-ad-identities) для управляемого удостоверения фабрики данных. Подключитесь к базе данных, откуда или куда вы хотите скопировать данные с помощью таких средств, как SSMS, с используя удостоверение Azure AD, которое имеет по меньшей мере разрешение ALTER ANY USER. Выполните следующий код T-SQL: 
     
     ```sql
-    CREATE USER [your AAD group name] FROM EXTERNAL PROVIDER;
+    CREATE USER [your data factory name] FROM EXTERNAL PROVIDER;
     ```
 
-1. Предоставьте группе Azure AD необходимые разрешения, как обычно делаете это для пользователей SQL и других лиц. Сведения о соответствующих ролях см. в статье [Роли уровня базы данных](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles). Например, выполните следующий код:
+1. Предоставьте управляемому удостоверению фабрики данных необходимые разрешения, как обычно делаете это для пользователей SQL и других лиц. Сведения о соответствующих ролях см. в статье [Роли уровня базы данных](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles). Выполните следующий код. Дополнительные параметры см. в [этом документе](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-addrolemember-transact-sql).
 
     ```sql
-    ALTER ROLE [role name] ADD MEMBER [your AAD group name];
+    EXEC sp_addrolemember [role name], [your data factory name];
     ```
 
 Чтобы использовать проверку подлинности с помощью управляемого удостоверения для управляемого экземпляра Базы данных SQL Azure, выполните следующие действия по настройке базы данных:
     
-1. [Подготовьте администратора Azure Active Directory](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure#provision-an-azure-active-directory-administrator-for-your-managed-instance) для своего управляемого экземпляра на портале Azure, если вы еще этого не сделали. Администратор Azure AD может быть пользователем Azure AD или группой Azure AD. Если вы предоставляете группе с управляемым удостоверением роль администратора, пропустите шаги 2–5. Администратор будет иметь полный доступ к базе данных.
+1. [Подготовьте администратора Azure Active Directory](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure#provision-an-azure-active-directory-administrator-for-your-managed-instance) для своего управляемого экземпляра на портале Azure, если вы еще этого не сделали. Администратор Azure AD может быть пользователем Azure AD или группой Azure AD. Если вы предоставляете группе с управляемым удостоверением роль администратора, пропустите шаги 2–4. Администратор будет иметь полный доступ к базе данных.
 
-1. [Найдите управляемое удостоверение фабрики данных на портале Microsoft Azure](https://docs.microsoft.com/azure/data-factory/data-factory-service-identity). Перейдите к разделу **Свойства** своей фабрики данных. Скопируйте **идентификатор приложения управляемого удостоверения** (не **идентификатор объекта управляемого удостоверения**).
+1. [Создайте имена входа](https://docs.microsoft.com/sql/t-sql/statements/create-login-transact-sql?view=azuresqldb-mi-current) для управляемого удостоверения фабрики данных. В SQL Server Management Studio (SSMS) подключитесь к управляемому экземпляру с помощью учетной записи SQL Server с ролью **sysadmin**. Запустите следующий код T-SQL для базы данных **master**:
 
-1. Преобразуйте управляемое удостоверение фабрики данных в двоичный тип. Подключитесь к базе данных **master** в своем управляемом экземпляре с помощью таких средств, как SSMS, используя свою учетную запись администратора SQL или Active Directory. Выполните следующий код T-SQL для базы данных **master**, чтобы получить идентификатор приложения управляемого удостоверения в двоичном формате:
-    
     ```sql
-    DECLARE @applicationId uniqueidentifier = '{your managed identity application ID}'
-    select CAST(@applicationId AS varbinary)
+    CREATE LOGIN [your data factory name] FROM EXTERNAL PROVIDER;
     ```
 
-1. Добавьте управляемое удостоверение фабрики данных в качестве пользователя в управляемый экземпляр Базы данных SQL Azure. Запустите следующий код T-SQL для базы данных **master**:
-    
+1. [Создайте пользователей автономной базы данных](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure#create-contained-database-users-in-your-database-mapped-to-azure-ad-identities) для управляемого удостоверения фабрики данных. Подключитесь к базе данных, откуда или куда вы хотите скопировать данные, запустите следующий код T-SQL: 
+  
     ```sql
-    CREATE LOGIN [{a name for the managed identity}] FROM EXTERNAL PROVIDER with SID = {your managed identity application ID as binary}, TYPE = E
+    CREATE USER [your data factory name] FROM EXTERNAL PROVIDER;
     ```
 
-1. Предоставьте управляемому удостоверению фабрики данных необходимые разрешения. Сведения о соответствующих ролях см. в статье [Роли уровня базы данных](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles). Запустите следующий код T-SQL для базы данных, откуда или куда вы хотите скопировать данные:
+1. Предоставьте управляемому удостоверению фабрики данных необходимые разрешения, как обычно делаете это для пользователей SQL и других лиц. Выполните следующий код. Дополнительные параметры см. в [этом документе](https://docs.microsoft.com/sql/t-sql/statements/alter-role-transact-sql?view=azuresqldb-mi-current).
 
     ```sql
-    CREATE USER [{the managed identity name}] FOR LOGIN [{the managed identity name}] WITH DEFAULT_SCHEMA = dbo
-    ALTER ROLE [role name] ADD MEMBER [{the managed identity name}]
+    ALTER ROLE [role name e.g., db_owner] ADD MEMBER [your data factory name];
     ```
 
 Затем настройте поставщик OLE DB для диспетчера подключений OLE DB. Это можно сделать такими способами:
@@ -170,8 +156,8 @@ ms.locfileid: "71294376"
 
 ## <a name="see-also"></a>См. также раздел    
  [Источник OLE DB](../../integration-services/data-flow/ole-db-source.md)     
- [Назначение «OLE DB»](../../integration-services/data-flow/ole-db-destination.md)     
- [Задача «Выполнение SQL»](../../integration-services/control-flow/execute-sql-task.md)     
+ [Назначение OLE DB](../../integration-services/data-flow/ole-db-destination.md)     
+ [Задача "Выполнение SQL"](../../integration-services/control-flow/execute-sql-task.md)     
  [Соединения в службах Integration Services (SSIS)](../../integration-services/connection-manager/integration-services-ssis-connections.md)    
     
   

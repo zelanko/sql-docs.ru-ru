@@ -1,6 +1,7 @@
 ---
-title: Управление секциями для публикации слиянием с параметризованными фильтрами | Документация Майкрософт
-ms.custom: ''
+title: Управление секцией с параметризованными фильтрами (слияние)
+description: Управление секциями с параметризованными фильтрами, используемыми для репликации слиянием на SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: fb5566fe-58c5-48f7-8464-814ea78e6221
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 595bbbdc789cdb8b19705a5510f9d352064cabb2
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 9f375d81d77fb943f6cfe1b911ab8bcc9f385533
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908388"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321252"
 ---
 # <a name="manage-partitions-for-a-merge-publication-with-parameterized-filters"></a>Управление секциями для публикации слиянием с параметризованными фильтрами
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,9 +44,9 @@ ms.locfileid: "72908388"
   
 ###  <a name="Recommendations"></a> Рекомендации  
   
--   Если в соответствии с рекомендациями создается скрипт топологии репликации, скрипты публикации содержат вызовы хранимых процедур для создания секций данных. Скрипт содержит справочную информацию для созданных секций и способ воссоздания одной или нескольких секций в случае необходимости. Дополнительные сведения см. в статье [Scripting Replication](../../../relational-databases/replication/scripting-replication.md).  
+-   Если в соответствии с рекомендациями создается скрипт топологии репликации, скрипты публикации содержат вызовы хранимых процедур для создания секций данных. Скрипт содержит справочную информацию для созданных секций и способ воссоздания одной или нескольких секций в случае необходимости. Дополнительные сведения см. в разделе [Scripting Replication](../../../relational-databases/replication/scripting-replication.md).  
   
--   Если публикация имеет параметризованные фильтры, позволяющие получать подписки с неперекрывающимися секциями, то при необходимости повторного создания подписки в случае ее утраты необходимо удалить секцию, которая была на нее подписана, создать заново подписку, а затем повторно создать секцию. Дополнительные сведения см. в разделе [Параметризованные фильтры строк](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md). При формировании скрипта публикации репликация формирует скрипты создания для существующих секций подписчика. Дополнительные сведения см. в статье [Scripting Replication](../../../relational-databases/replication/scripting-replication.md).  
+-   Если публикация имеет параметризованные фильтры, позволяющие получать подписки с неперекрывающимися секциями, то при необходимости повторного создания подписки в случае ее утраты необходимо удалить секцию, которая была на нее подписана, создать заново подписку, а затем повторно создать секцию. Дополнительные сведения см. в разделе [Параметризованные фильтры строк](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md). При формировании скрипта публикации репликация формирует скрипты создания для существующих секций подписчика. Дополнительные сведения см. в разделе [Scripting Replication](../../../relational-databases/replication/scripting-replication.md).  
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
  Управление секциями осуществляется на странице **Секции данных** диалогового окна **Свойства публикации — \<публикация>** . Дополнительные сведения о доступе к этому диалоговому окну см. в разделе [Просмотр и изменение свойств публикации](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md). На этой странице доступны следующие возможности: создание и удаление секций, разрешение подписчикам выполнять создание и доставку моментального снимка, создание моментальных снимков для одной или нескольких секций, очистка моментальных снимков.  
@@ -136,7 +137,7 @@ ms.locfileid: "72908388"
   
 1.  Создайте соединение с издателем с помощью класса <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.MergePublication> . Задайте для публикации свойства <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> и <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> , а также установите созданное на шаге 1 соединение <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> в качестве значения для свойства <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
+2.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.MergePublication>. Задайте для публикации свойства <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> и <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> , а также установите созданное на шаге 1 соединение <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> в качестве значения для свойства <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
 3.  Чтобы получить свойства объекта, вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> . Если этот метод возвращает **false**, то либо на шаге 2 были неверно определены свойства публикации, либо публикация не существует.  
   
@@ -148,7 +149,7 @@ ms.locfileid: "72908388"
   
 1.  Создайте соединение с издателем с помощью класса <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.MergePublication> . Задайте для публикации свойства <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> и <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> , а также установите созданное на шаге 1 соединение <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> в качестве значения для свойства <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
+2.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.MergePublication>. Задайте для публикации свойства <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> и <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> , а также установите созданное на шаге 1 соединение <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> в качестве значения для свойства <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
 3.  Чтобы получить свойства объекта, вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> . Если этот метод возвращает **false**, то либо на шаге 2 были неверно определены свойства публикации, либо публикация не существует.  
   

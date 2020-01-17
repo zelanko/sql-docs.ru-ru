@@ -1,6 +1,7 @@
 ---
-title: 'Пользователи автономной базы данных: создание переносимой базы данных | Документация Майкрософт'
-ms.custom: ''
+title: Автономный доступ пользователей к автономным базам данных
+description: Сведения о настройке автономного доступа пользователей для автономных баз данных и отличиях от традиционной модели "имя для входа/пользователь".
+ms.custom: seo-lt-2019
 ms.date: 01/28/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -14,12 +15,12 @@ ms.assetid: e57519bb-e7f4-459b-ba2f-fd42865ca91d
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f568d57f84397f0ebc4b636c4911cc51b197ebf8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 028ab6917a8d41a2231e94253ff353910e65b865
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68116742"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75557899"
 ---
 # <a name="contained-database-users---making-your-database-portable"></a>Пользователи автономной базы данных — создание переносимой базы данных
 
@@ -40,7 +41,7 @@ ms.locfileid: "68116742"
 
  В модели пользователей автономной базы данных отсутствует имя входа в базе данных master. Вместо этого процесс проверки подлинности происходит в пользовательской базе данных, а у пользователя нет связанного имени для входа в базе данных master. Модель пользователей автономной базы данных поддерживает проверку подлинности Windows и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и может использоваться как в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , так и в [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Чтобы подключиться как пользователь автономной базы данных, строка подключения должна всегда содержать параметр для пользовательской базы данных, чтобы [!INCLUDE[ssDE](../../includes/ssde-md.md)] было известно, какая база данных отвечает за управление проверкой подлинности. Область действий пользователя автономной базы данных ограничена базой данных проверки подлинности, поэтому при подключении пользователя автономной базы данных учетная запись пользователя необходимо создавать отдельно в каждой базе данных, которая потребуется пользователю. Для смены базы данных пользователю [!INCLUDE[ssSDS](../../includes/sssds-md.md)] необходимо создать новое соединение. Пользователи автономной базы данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] могут менять базы данных, если идентичный пользователь имеется в другой базе данных.  
   
-**Azure:** [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] и [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] поддерживают удостоверения Azure Active Directory в качестве пользователей автономной базы данных. [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] поддерживает пользователей автономной базы данных, использующих проверку подлинности [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , а [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] — нет. Дополнительные сведения см. в статье [Подключение к базе данных SQL с использованием проверки подлинности Azure Active Directory](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/). При использовании проверки подлинности Azure Active Directory подключения из SSMS могут выполняться с помощью универсальной проверки подлинности Active Directory.  Администраторы могут настроить универсальную проверку подлинности для обязательного использования Многофакторной Идентификации, которая проверяет удостоверение с помощью телефонного звонка, текстового сообщения, смарт-карты с ПИН-кодом или уведомления мобильного приложения. Дополнительные сведения см. в разделе [Поддержка SSMS для Azure AD MFA с использованием Базы данных SQL и хранилища данных SQL](https://azure.microsoft.com/documentation/articles/sql-database-ssms-mfa-authentication/).  
+**Azure:** [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] и [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] поддерживают удостоверения Azure Active Directory в качестве пользователей автономной базы данных. [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] поддерживает пользователей автономной базы данных, использующих проверку подлинности [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , а [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] — нет. См. дополнительные сведения об [использовании аутентификации Azure Active Directory для аутентификации с помощью SQL](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/). При использовании проверки подлинности Azure Active Directory подключения из SSMS могут выполняться с помощью универсальной проверки подлинности Active Directory.  Администраторы могут настроить универсальную проверку подлинности для обязательного использования Многофакторной Идентификации, которая проверяет удостоверение с помощью телефонного звонка, текстового сообщения, смарт-карты с ПИН-кодом или уведомления мобильного приложения. Дополнительные сведения см. в разделе [Поддержка SSMS для Azure AD MFA с использованием Базы данных SQL и хранилища данных SQL](https://azure.microsoft.com/documentation/articles/sql-database-ssms-mfa-authentication/).  
   
  Поскольку строка подключения должна всегда содержать имя базы данных, в [!INCLUDE[ssSDS](../../includes/sssds-md.md)] и [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]при переходе с традиционной модели на модель пользователей автономной базы данных менять строку подключения не требуется. Для подключений [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имя базы данных необходимо добавить в строку подключения, если оно там отсутствует.  
   
@@ -59,8 +60,8 @@ ms.locfileid: "68116742"
   
  Дополнительные сведения о правилах брандмауэра [!INCLUDE[ssSDS](../../includes/sssds-md.md)] см. в следующих статьях:  
   
-- [Параметры брандмауэра базы данных Azure SQL](https://msdn.microsoft.com/library/azure/ee621782.aspx)  
-- [Руководство. Настройка параметров брандмауэра (база данных Azure SQL)](https://msdn.microsoft.com/library/azure/jj553530.aspx)  
+- [Брандмауэр Базы данных SQL Azure](https://msdn.microsoft.com/library/azure/ee621782.aspx)  
+- [Руководство. Настройка параметров брандмауэра (база данных SQL Microsoft Azure)](https://msdn.microsoft.com/library/azure/jj553530.aspx)  
 - [sp_set_firewall_rule (база данных Azure SQL)](../../relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database.md)  
 - [sp_set_database_firewall_rule (база данных Azure SQL)](../../relational-databases/system-stored-procedures/sp-set-database-firewall-rule-azure-sql-database.md)  
   
@@ -76,7 +77,7 @@ ms.locfileid: "68116742"
   
 ## <a name="remarks"></a>Remarks  
   
-- В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]пользователи автономной базы данных должны быть включены для экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в статье [Параметр конфигурации сервера "проверка подлинности автономной базы данных"](../../database-engine/configure-windows/contained-database-authentication-server-configuration-option.md).  
+- В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]пользователи автономной базы данных должны быть включены для экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в статье [Параметр конфигурации сервера contained database authentication](../../database-engine/configure-windows/contained-database-authentication-server-configuration-option.md).  
 - Пользователи автономной базы данных и имена для входа с неперекрывающимися именами могут сосуществовать в приложениях.  
 - Если имеется имя для входа в базе данных master с именем **name1** и создается пользователь автономной базы данных с именем **name1**, то при указании имени базы данных в строке подключения будет избираться контекст пользователя базы данных, а не контекст имени для входа при подключении к базе данных. То есть, пользователи автономной базы данных имеют приоритет над именами для входа с тем же именем  
 - В [!INCLUDE[ssSDS](../../includes/sssds-md.md)] имя пользователя автономной базы данных не может быть таким же, как имя учетной записи администратора сервера.  
@@ -89,5 +90,5 @@ ms.locfileid: "68116742"
  [Автономные базы данных](../../relational-databases/databases/contained-databases.md)   
  [Рекомендации по обеспечению безопасности автономных баз данных](../../relational-databases/databases/security-best-practices-with-contained-databases.md)   
  [CREATE USER (Transact-SQL)](../../t-sql/statements/create-user-transact-sql.md)   
- [Подключение к базе данных SQL с использованием проверки подлинности Azure Active Directory](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)  
+ [Подключение к базе данных SQL с использованием аутентификации Azure Active Directory](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)  
   

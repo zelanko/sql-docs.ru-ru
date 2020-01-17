@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: b805e976-f025-4be1-bcb0-3a57b0c57717
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 1276b80c4a668173f5a0b7055e789ab3f521dd9e
-ms.sourcegitcommit: c7a202af70fd16467a498688d59637d7d0b3d1f3
+ms.openlocfilehash: 5c2f1a1b1060ff2ce659ed87db9fabb5c6c5346a
+ms.sourcegitcommit: 02449abde606892c060ec9e9e9a85a3f49c47c6c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72313734"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74542272"
 ---
 # <a name="openquery-transact-sql"></a>OPENQUERY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ OPENQUERY ( linked_server ,'query' )
  *linked_server*  
  Идентификатор, представляющий имя связанного сервера.  
   
- **'** *query* **'**  
+ **'** *запрос* **'**  
  Строка запроса, выполненного в связанном сервере. Максимальная длина строки 8 КБ.  
   
 ## <a name="remarks"></a>Remarks  
@@ -101,7 +101,6 @@ SELECT * FROM OPENQUERY (OracleSvr, 'SELECT name FROM joe.titles WHERE name = ''
  [INSERT (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md)   
  [OPENDATASOURCE (Transact-SQL)](../../t-sql/functions/opendatasource-transact-sql.md)   
  [OPENROWSET (Transact-SQL)](../../t-sql/functions/openrowset-transact-sql.md)   
- [Функции наборов строк (Transact-SQL)](../../t-sql/functions/rowset-functions-transact-sql.md)   
  [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)   
  [sp_addlinkedserver (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
  [sp_serveroption (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)   

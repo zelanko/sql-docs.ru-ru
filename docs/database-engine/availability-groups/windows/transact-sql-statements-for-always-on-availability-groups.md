@@ -1,6 +1,7 @@
 ---
-title: Инструкции Transact-SQL для групп доступности AlwaysOn | Документы Майкрософт
-ms.custom: ''
+title: Инструкции Transact-SQL для групп доступности
+description: Содержит общие сведения об инструкциях Transact-SQL (T-SQL), поддерживающих развертывание, создание групп доступности Always On и управление ими.
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -12,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: 184d0a81-2259-4db9-9d0d-01aac0b502c8
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b96b5d6921875aab92236475f4f6b66281a31599
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5ef8cd17f7a6db5058fd10d26de9f8674846ed03
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68013830"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822202"
 ---
-# <a name="transact-sql-statements-for-always-on-availability-groups"></a>Инструкции Transact-SQL для групп доступности AlwaysOn
+# <a name="transact-sql-statements-for-always-on-availability-groups"></a>Инструкции Transact-SQL для групп доступности Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   В этом разделе приведены общие сведения об инструкциях [!INCLUDE[tsql](../../../includes/tsql-md.md)] , которые поддерживают развертывание [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] , а также создание и управление данной группой доступности, репликой доступности и базой данных доступности.  

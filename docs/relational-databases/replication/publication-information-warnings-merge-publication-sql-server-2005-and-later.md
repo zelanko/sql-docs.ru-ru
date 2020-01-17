@@ -1,6 +1,7 @@
 ---
-title: Сведения о публикации, предупреждения (публикации слиянием, SQL Server 2005 и более поздние версии) | Документация Майкрософт
-ms.custom: ''
+title: Предупреждения (сведения о публикации слиянием)
+description: Описывает вкладку "Предупреждения" страницы сведений о публикации репликации слиянием в SQL Server Management Studio в SQL Server 2005 и более поздних версиях.
+ms.custom: seo-lt-2019
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 9bef3565-5f13-42ac-8723-ebe55b0c11e6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: fd25636ed1451f51430e889051bef18c8ce1570b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 41e709bcbc533c3cf7ff294dd2b07a6c638a0c52
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68120290"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321354"
 ---
 # <a name="publication-information-warnings-merge-publication-sql-server-2005-and-later"></a>Сведения о публикации, предупреждения (публикации слиянием, SQL Server 2005 и более поздние версии)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +54,7 @@ ms.locfileid: "68120290"
  Достижение порогового значения помимо отображения предупреждения в мониторе репликации может также вызывать системное предупреждение. Предупреждения определяются нажатием кнопки **Настройка предупреждений** и указанием сведений в диалоговом окне **Настройка предупреждений репликации** .  
   
 ## <a name="options"></a>Параметры  
- **Включено**  
+ **Enabled**  
  Выберите, чтобы включить предупреждение и указать пороговое значение.  
   
  **Предупреждение**  
@@ -62,7 +63,7 @@ ms.locfileid: "68120290"
  **Предупреждение**  
  Описание предупреждения, связанного с пороговым значением.  
   
- **Порог**  
+ **Пороговое значение**.  
  Укажите пороговое значение.  
   
  **Настройка предупреждений**  

@@ -1,6 +1,7 @@
 ---
-title: Сведения об издателе, список просмотра подписок (моментальный снимок) | Документация Майкрософт
-ms.custom: ''
+title: Список наблюдения за подписками (монитор репликации — моментальный снимок)
+description: Описание вкладки "Список наблюдения за подписками" монитора репликации для публикации моментального снимка в SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,12 +14,12 @@ ms.assetid: 2ebeee62-7f54-4c77-9d37-15708bc5cc23
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: bc62259db10a92350aeb24f51b38072339b34921
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 45fec0f9c4d2c5ab7520c2ddfb2a921b771acfcb
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769719"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75320516"
 ---
 # <a name="publisher-information-subscription-watch-list-snapshot"></a>Сведения об издателе, список просмотра подписок (моментальный снимок)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "68769719"
   
 -   **Выберите столбцы для отображения**: выбор столбцов для отображения и порядка их отображения в диалоговом окне **Выбор столбцов**.  
   
--   **Фильтр**: фильтрация строк в сетке на основании значений столбцов в диалоговом окне **Параметры фильтра**.  
+-   **Фильтр**. фильтрация строк в сетке на основании значений столбцов в диалоговом окне **Параметры фильтра**.  
   
 -   **Очистить фильтр**: удалить все настройки фильтра для сетки.  
   
@@ -66,7 +67,7 @@ ms.locfileid: "68769719"
   
  Значение состояния **Срок действия скоро истекает или истек** отображается только при установленном пороге. Дополнительные сведения об установке пороговых значений см. в статье [Настройка пороговых значений и предупреждений в мониторе репликации](../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md).  
   
- **Подписка**  
+ **подписка**  
  Имя каждой подписки в формате: *ИмяПодписчика: ИмяБазыДанныхПодписки*.  
   
  **Публикация**  

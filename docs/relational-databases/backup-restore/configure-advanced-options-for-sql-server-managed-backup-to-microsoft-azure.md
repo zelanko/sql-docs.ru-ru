@@ -1,7 +1,8 @@
 ---
-title: Настройка дополнительных параметров управляемого резервного копирования SQL Server в Microsoft Azure | Документация Майкрософт
-ms.custom: ''
-ms.date: 03/05/2017
+title: Управляемое резервное копирование — настройка дополнительных параметров
+titleSuffix: to Microsoft Azure
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ffd28159-8de8-4d40-87da-1586bfef3315
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 7487f89c6868555c6e3e27a217bce12123b16642
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 4bd21bac561a34e6dab779f1db0656dcc8e3175e
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908980"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75242573"
 ---
 # <a name="configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure"></a>Настройка дополнительных параметров управляемого резервного копирования SQL Server в Microsoft Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -23,7 +24,7 @@ ms.locfileid: "72908980"
   
  В каждом сценарии резервное копирование настраивается с использованием параметра `database_name` . Если параметр `database_name` имеет значение NULL или *, изменения затронут параметры по умолчанию на уровне экземпляра. Параметры на уровне экземпляра будут применены и к новым базам данных, созданным после такого изменения.  
   
- После настройки этих параметров вы сможете включить управляемое резервное копирование для базы данных или экземпляра с помощью системной хранимой процедуры [managed_backup.sp_backup_config_basic (Transact-SQL)](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-basic-transact-sql.md). Дополнительные сведения см. в статье [Enable SQL Server Managed Backup to Microsoft Azure](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md).  
+ После настройки этих параметров вы сможете включить управляемое резервное копирование для базы данных или экземпляра с помощью системной хранимой процедуры [managed_backup.sp_backup_config_basic (Transact-SQL)](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-basic-transact-sql.md). Дополнительные сведения см. в статье [Включение управляемого резервного копирования SQL Server для Microsoft Azure](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md).  
   
 > [!WARNING]  
 >  Прежде чем включать [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)], нужно обязательно настроить дополнительные параметры и пользовательские параметры планирования, используя процедуру [managed_backup.sp_backup_config_basic (Transact-SQL)](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-basic-transact-sql.md). В противном случае могут быть запущены нежелательные операции резервного копирования в период между активацией [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] и настройкой параметров.  

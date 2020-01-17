@@ -1,6 +1,7 @@
 ---
-title: Использование мастера групп доступности (среда SQL Server Management Studio) | Документы Майкрософт
-ms.custom: ''
+title: Настройка группы доступности в SSMS
+description: Создание и настройка группы доступности Always On с помощью мастера создания группы доступности в SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: e1f1dccc-9e65-471d-8fd1-b45085c9484a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 5e71556a54cb45db17c77eb5da2534b4bf8f4451
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0b5cbbd49d331f838bd0047f259f8b5addf8de84
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68013546"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74821962"
 ---
 # <a name="use-the-availability-group-wizard-sql-server-management-studio"></a>Использование мастера групп доступности (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +38,7 @@ ms.locfileid: "68013546"
 
 В большинстве случаев можно использовать мастер создания групп доступности для выполнения всех задач по созданию и настройке группы доступности. Однако некоторые задачи может потребоваться выполнить вручную.  
   
-- Если вы используете тип кластера WSFC для размещения группы доступности, необходимо, чтобы экземпляры [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], на которых находятся реплики доступности, были расположены на различных серверах кластера (или узлах) одного кластера WSFC. Кроме того, убедитесь, что каждый экземпляр сервера соответствует всем другим обязательным условиям [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Для получения дополнительных сведений настоятельно рекомендуется раздел [Предварительные требования, ограничения и рекомендации для групп доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
+- Если вы используете тип кластера WSFC для размещения группы доступности, необходимо, чтобы экземпляры [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], на которых находятся реплики доступности, были расположены на различных серверах кластера (или узлах) одного кластера WSFC. Кроме того, убедитесь, что каждый экземпляр сервера соответствует всем другим обязательным условиям [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Для получения дополнительных сведений настоятельно рекомендуется изучить раздел [Предварительные требования, ограничения и рекомендации для групп доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
 -   Если экземпляр сервера, который выбран для размещения реплики доступности, запускается из-под учетной записи службы домена и не содержит конечной точки зеркального отображения базы данных, то мастер может создать конечную точку и предоставить учетной записи службы экземпляра сервера разрешение CONNECT. Но если служба [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] запущена от имени встроенной учетной записи, такой как «Локальная система», «Локальная служба» или «Сетевая служба», или от имени учетной записи, не входящей в домен, то для проверки подлинности конечных точек необходимо пользоваться сертификатами, а мастер не сможет создать точку зеркального отображения базы данных на этом экземпляре сервера. В этом случае рекомендуется создать конечные точки зеркального отображения базы данных вручную до запуска мастера создания групп доступности.  
   
@@ -60,12 +61,12 @@ ms.locfileid: "68013546"
         > [!IMPORTANT]  
         >  Резервные копии журналов будут входить в цепочку резервных копий журналов. Храните файлы резервных копий журналов надлежащим образом.  
   
-     Если нет возможности воспользоваться мастером для выполнения полной первоначальной синхронизации данных, то базы данных-получатели нужно подготовить вручную. Это можно сделать до или после запуска мастера. Дополнительные сведения см. в разделе [Подготовка базы данных-получателя для присоединения к группе доступности вручную (SQL Server)](../../../database-engine/availability-groups/windows/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md).  
+     Если нет возможности воспользоваться мастером для выполнения полной первоначальной синхронизации данных, то базы данных-получатели нужно подготовить вручную. Это можно сделать до или после запуска мастера. Дополнительные сведения см. в статье [Ручная подготовка базы данных-получателя для присоединения к группе доступности (SQL Server)](../../../database-engine/availability-groups/windows/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md).  
   
 ###  <a name="Security"></a> безопасность  
   
 ####  <a name="Permissions"></a> Permissions  
- Требуется членство в предопределенной роли сервера **sysadmin** и разрешение сервера CREATE AVAILABILITY GROUP, ALTER ANY AVAILABILITY GROUP или CONTROL SERVER.  
+ Требуется членство в фиксированной роли сервера **sysadmin** и одно из разрешений: CREATE AVAILABILITY GROUP, ALTER ANY AVAILABILITY GROUP или CONTROL SERVER.  
   
  Кроме того, требуется разрешение CONTROL ON ENDPOINT, если мастер группы доступности должен иметь возможность управлять конечной точкой зеркального отображения базы данных.  
   
@@ -120,7 +121,7 @@ ms.locfileid: "68013546"
   
     -   **Пропустить начальную синхронизацию данных**  
   
-         Выберите этот параметр, если вы хотите использовать собственные резервные копии баз данных-источников и их журналов. Дополнительные сведения см. в разделе [Запуск перемещения данных для базы данных-получателя AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md).  
+         Выберите этот параметр, если вы хотите использовать собственные резервные копии баз данных-источников и их журналов. Дополнительные сведения см. в статье [Запуск перемещения данных для базы данных-получателя AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md).  
   
 9. На странице **Проверка** выполняется проверка соответствия значений, заданных в этом мастере, требованиям мастера создания группы доступности. Чтобы внести изменения, нажмите кнопку **Назад** , вернитесь к предыдущей странице мастера и измените одно или несколько значений. Нажмите кнопку **Далее** , чтобы вернуться на страницу **Проверка** , а затем кнопку **Повторить проверку**.  
   
@@ -168,7 +169,7 @@ ms.locfileid: "68013546"
   
 -   [Использование сертификатов для конечной точки зеркального отображения базы данных (Transact-SQL)](../../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)  
   
--   [Указание URL-адреса конечной точки при добавлении или изменении реплики доступности (SQL Server)](../../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)  
+-   [Укажите URL-адрес конечной точки при добавлении или изменении реплики доступности (SQL Server)](../../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)  
   
  **Устранение неполадок с конфигурацией групп доступности AlwaysOn**  
   

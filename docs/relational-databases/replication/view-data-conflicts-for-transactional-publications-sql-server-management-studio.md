@@ -1,6 +1,7 @@
 ---
-title: Просмотр конфликтов данных для публикаций транзакций (среда SQL Server Management Studio) | Документация Майкрософт
-ms.custom: ''
+title: Просмотр конфликтов данных (транзакции) — SSMS
+description: Просмотр конфликтов данных для репликации транзакций с помощью SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9977dd75-b0de-4376-9c13-86d80567d8aa
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c00bfe0043aa4732f2352a604e872c01f0898f80
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9b385de9eee9fd1073c2161d0db57fd0287f959c
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68115079"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321871"
 ---
 # <a name="view-data-conflicts-for-transactional-publications-sql-server-management-studio"></a>просмотреть конфликты данных для публикаций транзакций (среда SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -1,7 +1,7 @@
 ---
-title: Инструкции DDL, функции, хранимые процедуры и представления для | Документация Майкрософт | Документация Майкрософт
-ms.custom: ''
-ms.date: 03/14/2017
+title: Функции FileTable, хранимые процедуры и представления | Документация Майкрософт
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -12,14 +12,15 @@ helpviewer_keywords:
 ms.assetid: 7e2e0f7f-94a8-4178-8bc7-d2e14ac8528c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 504fc911348320fc61646e7ea307739770ceae17
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6f429d40b3bc93a4897cf23c5f9985fbf71c9016
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68125193"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252719"
 ---
 # <a name="filetable-ddl-functions-stored-procedures-and-views"></a>Инструкции FileTable языка DDL, функции, хранимые процедуры и представления
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Приводятся инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] и объекты базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , которые добавлены или изменены для поддержки компонента FileTable в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -31,8 +32,8 @@ ms.locfileid: "68125193"
   
 |Объект|Состояние|Дополнительные сведения|  
 |------------|------------|----------------------|  
-|[ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)<br /><br /> [Параметры ALTER DATABASE SET (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md)|Изменено|[Включение необходимых компонентов для таблицы FileTable](../../relational-databases/blob/enable-the-prerequisites-for-filetable.md)<br /><br /> [Управление таблицами FileTable](../../relational-databases/blob/manage-filetables.md)|  
-|[ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)|Изменено|[Создание, изменение и удаление таблиц FileTables](../../relational-databases/blob/create-alter-and-drop-filetables.md)<br /><br /> [Управление таблицами FileTable](../../relational-databases/blob/manage-filetables.md)|  
+|[ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)<br /><br /> [Параметры ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)|Изменено|[Включение необходимых компонентов для таблицы FileTable](../../relational-databases/blob/enable-the-prerequisites-for-filetable.md)<br /><br /> [Управление таблицами FileTable](../../relational-databases/blob/manage-filetables.md)|  
+|[ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)|Изменено|[Создание, изменение и удаление таблиц FileTable](../../relational-databases/blob/create-alter-and-drop-filetables.md)<br /><br /> [Управление таблицами FileTable](../../relational-databases/blob/manage-filetables.md)|  
 |[CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md)|Изменено|[Включение необходимых компонентов для таблицы FileTable](../../relational-databases/blob/enable-the-prerequisites-for-filetable.md)|  
 |[CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)|Изменено|[Создание, изменение и удаление таблиц FileTable](../../relational-databases/blob/create-alter-and-drop-filetables.md)|  
 |[RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)<br /><br /> [Аргументы инструкции RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-arguments-transact-sql.md)|Изменено||  
@@ -56,7 +57,7 @@ ms.locfileid: "68125193"
 |Объект|Состояние|Дополнительные сведения|  
 |------------|------------|----------------------|  
 |[sys.database_filestream_options (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-filestream-options-transact-sql.md)|**Добавлено**|[Включение необходимых компонентов для таблицы FileTable](../../relational-databases/blob/enable-the-prerequisites-for-filetable.md)|  
-|[sys.filetable_system_defined_objects (Transact-SQL)](../../relational-databases/system-catalog-views/sys-filetable-system-defined-objects-transact-sql.md)|**Добавлено**|[Создание, изменение и удаление таблиц FileTables](../../relational-databases/blob/create-alter-and-drop-filetables.md)<br /><br /> [Управление таблицами FileTable](../../relational-databases/blob/manage-filetables.md)|  
+|[sys.filetable_system_defined_objects (Transact-SQL)](../../relational-databases/system-catalog-views/sys-filetable-system-defined-objects-transact-sql.md)|**Добавлено**|[Создание, изменение и удаление таблиц FileTable](../../relational-databases/blob/create-alter-and-drop-filetables.md)<br /><br /> [Управление таблицами FileTable](../../relational-databases/blob/manage-filetables.md)|  
 |[sys.filetables (Transact-SQL)](../../relational-databases/system-catalog-views/sys-filetables-transact-sql.md)|**Добавлено**|[Управление таблицами FileTable](../../relational-databases/blob/manage-filetables.md)|  
 |[sys.tables (Transact-SQL)](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md)|Изменено|[Управление таблицами FileTable](../../relational-databases/blob/manage-filetables.md)|  
   

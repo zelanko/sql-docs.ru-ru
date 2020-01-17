@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: fd4ddeb8-0cb6-441b-9704-03575c07020f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 5d1bffd38e1c604d5002f00cae0bcda9e4becf21
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 8389d11868108725a676e9196861c7302241a407
+ms.sourcegitcommit: 94f6a4b506dfda242fc3efb2403847e22a36d340
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909703"
+ms.lasthandoff: 12/30/2019
+ms.locfileid: "75546552"
 ---
 # <a name="lesson-2-connecting-from-another-computer"></a>Урок 2. Подключение с другого компьютера
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "72909703"
   
 #### <a name="how-to-enable-tcpip-connections-from-another-computer"></a>Разрешение соединений по протоколу TCP/IP с других компьютеров  
   
-1.  В меню **Пуск** последовательно укажите пункты **Все программы**, [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)], **Средства настройки**и выберите пункт **Диспетчер конфигурации SQL Server**.  
+1.  В меню **Пуск** последовательно выберите пункты **Все программы**, [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)], **Средства настройки**и щелкните **Диспетчер конфигурации SQL Server**.  
   
     > [!NOTE]  
     > Могут быть доступны и 32-разрядные и 64-разрядные версии.  
@@ -49,13 +49,13 @@ ms.locfileid: "72909703"
     > Поскольку диспетчер конфигурации [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] является оснасткой консоли управления ( [!INCLUDE[msCoName](../includes/msconame-md.md)] ), а не изолированной программой, при работе в более новых версиях Windows диспетчер конфигурации [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] не отображается как приложение. Имя файла содержит число, представляющее номер версии [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Чтобы открыть диспетчер конфигурации с помощью команды "Выполнить", воспользуйтесь одним из приведенных ниже путей для последних четырех версий (предполагается, что система Windows установлена на диске C).  
   
     |||  
-    |-|-|  
-    |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2016|C:\Windows\SysWOW64\SQLServerManager13.msc|  
+    |-|-|
+    |[!INCLUDE[ssSQL17](../includes/sssql17-md.md)]|C:\Windows\SysWOW64\SQLServerManager14.msc|
+    |[!INCLUDE[ssSQL16](../includes/sssql16-md.md)]|C:\Windows\SysWOW64\SQLServerManager13.msc|  
     |[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]|C:\Windows\SysWOW64\SQLServerManager12.msc|  
-    |[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]|C:\Windows\SysWOW64\SQLServerManager11.msc|  
-    |[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]|C:\Windows\SysWOW64\SQLServerManager10.msc|  
+    |[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]|C:\Windows\SysWOW64\SQLServerManager11.msc|
   
-2.  В **диспетчер конфигурации SQL Server**разверните раздел **Сетевая конфигурация SQL Server**и щелкните элемент **Протоколы для** _<InstanceName>_ .  
+2.  В **диспетчере конфигурации SQL Server** разверните раздел **Сетевая конфигурация SQL Server** и щелкните элемент **Протоколы для** _<InstanceName>_ .  
   
     Экземпляр по умолчанию (неименованный экземпляр) указан в списке под именем **MSSQLSERVER**. Если был установлен именованный экземпляр, то в списке будет приведено заданное ему имя. [!INCLUDE[ssExpressEd11](../includes/ssexpressed11-md.md)] устанавливается как **SQLEXPRESS**, если это имя не было изменено при установке.  
   
@@ -102,13 +102,13 @@ ms.locfileid: "72909703"
   
 3.  В диалоговом окне **Тип правила** выберите **Порт**и нажмите кнопку **Далее**.  
   
-4.  В диалоговом окне **Протокол и порты** выберите протокол **TCP**. Выберите **Определенные локальные порты**и введите номер порта экземпляра компонента [!INCLUDE[ssDE](../includes/ssde-md.md)]. Для экземпляра по умолчанию введите 1433. Если в предыдущей задаче был настроен фиксированный порт, а сейчас настраивается именованный экземпляр, введите **49172** . Нажмите кнопку **Далее**.  
+4.  В диалоговом окне **Протокол и порты** выберите протокол **TCP**. Выберите **Определенные локальные порты**и введите номер порта экземпляра компонента [!INCLUDE[ssDE](../includes/ssde-md.md)]. Для экземпляра по умолчанию введите 1433. Если в предыдущей задаче был настроен фиксированный порт, а сейчас настраивается именованный экземпляр, введите **49172** . Щелкните **Далее**.  
   
 5.  В диалоговом окне **Действие** выберите **Разрешить соединение**и нажмите кнопку **Далее**.  
   
 6.  В диалоговом окне **Профиль** выберите профили, описывающие среду соединения компьютеров, который нужно подключить к компоненту [!INCLUDE[ssDE](../includes/ssde-md.md)], и нажмите кнопку **Далее**.  
   
-7.  В диалоговом окне **Имя** введите имя и описание для этого правила, а затем нажмите кнопку **Готово**.  
+7.  В диалоговом окне **Имя** введите имя и описание правила и нажмите кнопку **Готово**.  
   
 Дополнительные сведения о настройке брандмауэра, включая инструкции для [!INCLUDE[wiprlhlong](../includes/wiprlhlong-md.md)], см. в разделе [Настройка брандмауэра Windows для доступа к компоненту Database Engine](../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md). Дополнительные сведения о настройках брандмауэра Windows по умолчанию и описание портов TCP, влияющих на компонент Database Engine, службы Analysis Services, службы Reporting Services и службы Integration Services, см. в разделе [Настройка брандмауэра Windows для разрешения доступа к SQL Server](../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
   
@@ -126,7 +126,7 @@ ms.locfileid: "72909703"
 3.  В поле **Имя сервера** введите **tcp:** , чтобы указать протокол, за которым должны следовать имя компьютера, запятая и номер порта. При подключении к экземпляру по умолчанию подразумевается номер порта 1433. Этот номер можно опустить, поэтому введите **tcp:** _<имя_компьютера>_ . В этом примере для именованного экземпляра введите **tcp:** _<имя_компьютера>_ **,49172**.  
   
     > [!NOTE]  
-    > Если не указать **tcp:** в поле **Имя сервера**, то клиент попытается использовать все включенные протоколы в порядке, указанном в конфигурации клиента.  
+    > Если не указать **tcp:** в поле **Имя сервера** , то клиент попытается использовать все включенные протоколы в порядке, указанном в конфигурации клиента.  
   
 4.  В поле **Проверка подлинности** подтвердите значение **Проверка подлинности Window**, а затем нажмите **Подключиться**.  
   
@@ -138,6 +138,6 @@ ms.locfileid: "72909703"
 На этом краткий учебник по базовым возможностям подключения связи заканчивается.  
   
 ## <a name="return-to-tutorials-portal"></a>Возвращение к порталу учебников  
-[Учебник. Начало работы с ядром СУБД](../relational-databases/tutorial-getting-started-with-the-database-engine.md)  
+[Руководство. Начало работы с ядром СУБД](../relational-databases/tutorial-getting-started-with-the-database-engine.md)  
   
 

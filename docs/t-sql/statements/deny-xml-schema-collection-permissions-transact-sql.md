@@ -1,6 +1,8 @@
 ---
-title: DENY, запрет разрешений на коллекцию XML-схем (Transact-SQL) | Документы Майкрософт
-ms.custom: ''
+title: DENY (разрешения на коллекцию XML-схем)
+description: Запрет разрешения на коллекцию схем XML.
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: seo-lt-2019
 ms.date: 06/09/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -17,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 159969a7-8313-41bc-bb19-c55af76597e6
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 811c9532486b8f9c9a910254185de69096be9c8f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3996a89355ba9a3346c9751f011db24ae6757fb9
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67984339"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244540"
 ---
 # <a name="deny-xml-schema-collection-permissions-transact-sql"></a>DENY, запрет разрешения на коллекцию XML-схем (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

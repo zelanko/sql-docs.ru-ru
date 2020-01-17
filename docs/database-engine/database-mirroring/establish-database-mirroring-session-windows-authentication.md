@@ -1,6 +1,7 @@
 ---
-title: Установка сеанса зеркального отображения базы данных с использованием проверки подлинности Windows | Документы Майкрософт
-ms.custom: ''
+title: Настройка зеркального отображения базы данных (проверка подлинности Windows)
+description: Узнайте, как настроить сеанс зеркального отображения базы данных с использованием проверки подлинности Windows с помощью SQL Server Management Studio.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7cb418d6-dce1-4a0d-830e-9c5ccfe3bd72
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 6e778d9c02e9cc0a877ef0804b1e95772e5f51cc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f59dc7745f63b208b1a2a55361913a6eb290e08e
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67997896"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75253585"
 ---
 # <a name="establish-database-mirroring-session---windows-authentication"></a>Установка сеанса зеркального отображения базы данных с использованием проверки подлинности Windows
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +37,7 @@ ms.locfileid: "67997896"
   
      Создание зеркальной базы данных требует восстановления последней резервной копии основной базы данных (с ключевым словом WITH NORECOVERY) на экземпляре зеркального сервера. Необходимо также после полного резервного копирования выполнить резервное копирование одного или нескольких журналов и последовательно восстановить их в зеркальной базе данных (с ключевым словом WITH NORECOVERY). Дополнительные сведения см. в статье [Prepare a Mirror Database for Mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md).  
   
--   Если экземпляры сервера выполняются под разными учетными записями пользователей домена, каждому из них необходимо имя входа в базу данных **master** . Если оно отсутствует, необходимо создать его перед настройкой зеркального отображения. Дополнительные сведения см. в разделе [Разрешение сетевого доступа к конечной точке зеркального отображения базы данных с использованием проверки подлинности Windows (SQL Server)](../../database-engine/database-mirroring/database-mirroring-allow-network-access-windows-authentication.md).  
+-   Если экземпляры сервера выполняются под разными учетными записями пользователей домена, каждому из них необходимо имя входа в базу данных **master** . Если оно отсутствует, необходимо создать его перед настройкой зеркального отображения. Дополнительные сведения см. в разделе [Allow Network Access to a Database Mirroring Endpoint Using Windows Authentication &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-allow-network-access-windows-authentication.md).  
   
 ### <a name="to-configure-database-mirroring"></a>Настройка зеркального отображения базы данных  
   

@@ -1,6 +1,7 @@
 ---
-title: Экземпляр основного сервера (мастер настройки безопасности зеркального отображения баз данных) | Документы Майкрософт
-ms.custom: ''
+title: Экземпляр основного сервера (мастер настройки безопасности зеркального отображения баз данных)
+description: Описание страницы "Экземпляр основного сервера" мастера настройки безопасности зеркального отображения баз данных в SQL Server Management Studio.
+ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 58af27d7-c5dd-4669-be6b-b472bc2c8ef4
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: c06c2b5a747855a7b0e5db70a9628c4a443ed121
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8d48c59b06202f898fdf61746aee9f62ca155da6
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68025418"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75255963"
 ---
 # <a name="principal-server-instance-configure-database-mirroring-security-wizard"></a>Экземпляр основного сервера (мастер настройки безопасности зеркального отображения баз данных)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +34,7 @@ ms.locfileid: "68025418"
  **Экземпляр основного сервера**  
  Поскольку зеркальное отображение базы данных в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] всегда настраивается с основного сервера, то текущим экземпляром сервера всегда будет экземпляр основного сервера.  
   
- **Прослушивающий порт**  
+ **Listener Port** (Порт прослушивателя)  
  Поведение этого параметра зависит от того, существует ли конечная точка зеркального отображения для этого экземпляра сервера.  
   
 -   Если прослушиваемый порт не существует для данного экземпляра сервера, то в текстовом поле **Порт** отображается номер порта 5022. Можно использовать любой допустимый номер порта, например 7022.  

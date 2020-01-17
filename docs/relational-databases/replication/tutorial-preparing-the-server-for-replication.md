@@ -1,6 +1,7 @@
 ---
-title: Руководство. Подготовка SQL Server к репликации (издатель, распространитель, подписчик) | Документация Майкрософт
-ms.custom: ''
+title: Руководство. Подготовка к репликации
+description: В этом руководстве содержатся сведения о подготовке издателя, распространителя и подписчика для репликации путем создания учетных записей Windows, подготовки папки моментальных снимков и настройки распространения.
+ms.custom: seo-lt-2019
 ms.date: 04/02/2018
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ce30a095-2975-4387-9377-94a461ac78ee
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: beb0c68b86521ce9a5b3463e8c959970297519fe
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 09d68b763d967b6bcea4853f40bfc2ee2694421b
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653824"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75320451"
 ---
 # <a name="tutorial-prepare-sql-server-for-replication-publisher-distributor-subscriber"></a>Руководство. Подготовка SQL Server к репликации (издатель, распространитель, подписчик)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +39,7 @@ ms.locfileid: "69653824"
 ## <a name="prerequisites"></a>предварительные требования
 Это руководство предназначено для пользователей, знакомых с основными операциями с базами данных, но имеющих ограниченный опыт работы с репликацией. 
 
-Для работы с этим руководством требуется SQL Server, среда SQL Server Management Studio (SSMS) и база данных AdventureWorks.  
+Для работы с этим учебником требуется SQL Server, среда SQL Server Management Studio (SSMS) и база данных AdventureWorks.  
   
 - На сервере-издателе (источник) установите следующее:  
   
@@ -47,7 +48,7 @@ ms.locfileid: "69653824"
   
 - На сервере-подписчике (целевом) установите любой выпуск [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], кроме [!INCLUDE[ssEW](../../includes/ssew-md.md)]. [!INCLUDE[ssEW](../../includes/ssew-md.md)] не может быть подписчиком при репликации транзакций.  
   
-- Установите [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+- Установите [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 - Установите выпуск [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
 - Скачайте [пример базы данных AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases). См. дополнительные сведения о [восстановлении базы данных в среде SSMS](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms). 
     
@@ -61,7 +62,7 @@ ms.locfileid: "69653824"
 ## <a name="create-windows-accounts-for-replication"></a>Создание учетных записей Windows для репликации
 В рамках этого раздела создаются учетные записи Windows для запуска агентов репликации. На локальном сервере создаются отдельные учетные записи Windows для следующих агентов:  
   
-|Агент|Местоположение|Имя учетной записи|  
+|Агент|Location|Имя учетной записи|  
 |---------|------------|----------------|  
 |агент моментальных снимков|Издатель|<*имя_компьютера*>\repl_snapshot|  
 |Агент чтения журнала.|Издатель|<*имя_компьютера*>\repl_logreader|  
@@ -116,13 +117,13 @@ ms.locfileid: "69653824"
   
 3. Щелкните правой кнопкой мыши папку и выберите команду **Свойства**.  
   
-   A. В диалоговом окне **Свойства repldata** на вкладке **Общий доступ** щелкните **Открыть общий доступ**.  
+   а. В диалоговом окне **Свойства repldata** на вкладке **Общий доступ** щелкните **Открыть общий доступ**.  
   
-   Б. В диалоговом окне **Расширенная настройка общего доступа** выберите **Share this Folder** (Открыть общий доступ к этой папке) и щелкните **Разрешения**.  
+   b. В диалоговом окне **Расширенная настройка общего доступа** выберите **Share this Folder** (Открыть общий доступ к этой папке) и щелкните **Разрешения**.  
 
    ![Выбранные элементы для предоставления общего доступа к папке repldata](media/tutorial-preparing-the-server-for-replication/repldata.png)
 
-6. В диалоговом окне **Разрешения для ресурса repldata** выберите **Добавить**. В поле **выбора пользователя, компьютеров, учетной записи службы или групп** введите имя учетной записи агента моментальных снимков, созданной ранее, в формате <*имя_компьютера_издателя>* > **\repl_snapshot**. Выберите **Проверить имена** и нажмите кнопку **ОК**.  
+6. В диалоговом окне **Разрешения для ресурса repldata** выберите **Добавить**. В поле **выбора пользователя, компьютеров, учетной записи службы или групп** введите имя учетной записи агента моментальных снимков, созданной ранее, в формате <*имя_компьютера_издателя>* > **\repl_snapshot**. Выберите команду **Проверить имена** и нажмите кнопку **ОК**.  
 
    ![Выбранные элементы для добавления разрешений на общий доступ](media/tutorial-preparing-the-server-for-replication/addshareperms.png)
 
@@ -141,7 +142,7 @@ ms.locfileid: "69653824"
 
     ![Кнопка "Изменить" на вкладке "Безопасность"](media/tutorial-preparing-the-server-for-replication/editsecurity.png)   
 
-11. В диалоговом окне **Разрешения для ресурса repldata** выберите **Добавить**. В поле **выбора пользователя, компьютеров, учетных записей служб или групп** введите имя учетной записи агента моментальных снимков, созданной ранее, в формате <*имя_компьютера_издателя>* > **\repl_snapshot**. Выберите **Проверить имена** и нажмите кнопку **ОК**.  
+11. В диалоговом окне **Разрешения для ресурса repldata** выберите **Добавить**. В поле **выбора пользователя, компьютеров, учетных записей служб или групп** введите имя учетной записи агента моментальных снимков, созданной ранее, в формате <*имя_компьютера_издателя>* > **\repl_snapshot**. Выберите команду **Проверить имена** и нажмите кнопку **ОК**.  
 
     ![Выбранные элементы для добавления разрешений безопасности](media/tutorial-preparing-the-server-for-replication/addsecuritypermissions.png)
 
@@ -188,7 +189,7 @@ ms.locfileid: "69653824"
 
    ![Параметр, который позволяет серверу выступать в качестве собственного распространителя](media/tutorial-preparing-the-server-for-replication/serverdistributor.png)
   
-4. Если агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не запущен, на странице **запуска агента** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выберите параметр **настройки автоматического запуска службы агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** . Выберите **Далее**.  
+4. Если агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не запущен, на странице **запуска агента** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выберите параметр **Да, настроить автоматический запуск службы агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** . Выберите **Далее**.  
 
      
 5. Введите путь \\\\<*имя_компьютера_издателя>* > **\repldata** в текстовое поле **Папка моментальных снимков** и нажмите кнопку **Далее**. Этот путь должен соответствовать значению параметра **Сетевой путь** для папки свойств repldata, которое вы записали ранее после настройки свойств общей папки. 
@@ -239,11 +240,11 @@ ms.locfileid: "69653824"
 - [Настройка распространителя](../../relational-databases/replication/configure-distribution.md) 
 - [Модель безопасности агента репликации](../../relational-databases/replication/security/replication-agent-security-model.md)  
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 Вы успешно подготовили сервер для репликации. В следующей статье вы ознакомитесь с настройкой репликации транзакций: 
 
 > [!div class="nextstepaction"]
-> [Учебник. Настройка репликации между двумя полностью подключенными серверами (репликация транзакций)](tutorial-replicating-data-between-continuously-connected-servers.md)
+> [Руководство. Настройка репликации между двумя полностью подключенными серверами (репликация транзакций)](tutorial-replicating-data-between-continuously-connected-servers.md)
 
   
   

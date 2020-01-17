@@ -1,6 +1,7 @@
 ---
-title: Использование мастера добавления реплики Azure (SQL Server) | Документы Майкрософт
-ms.custom: ''
+title: Настройка виртуальной машины Azure в качестве вторичной реплики в группе доступности
+description: Мастер добавления реплики Azure упрощает создание виртуальной машины Azure в гибридной среде и ее настройку в качестве вторичной реплики для новой или существующей группы доступности AlwaysOn.
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -11,14 +12,14 @@ f1_keywords:
 ms.assetid: b89cc41b-07b4-49f3-82cc-bc42b2e793ae
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ed09ad0f6325ab2ed8ee1d89d7c36f19584a3475
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.openlocfilehash: 2eb45257f2641b1e4e9f94865784f8910ebf27fd
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70176202"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822660"
 ---
-# <a name="use-the-add-azure-replica-wizard-sql-server"></a>Использование мастера добавления реплики Azure (SQL Server)
+# <a name="configure-azure-vm-as-a-secondary-replica-in-an-availability-group"></a>Настройка виртуальной машины Azure в качестве вторичной реплики в группе доступности
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Мастер добавления реплики Azure упрощает создание виртуальной машины Azure в гибридной среде и ее настройку в качестве вторичной реплики для новой или существующей группы доступности AlwaysOn.  
   
@@ -62,7 +63,7 @@ ms.locfileid: "70176202"
   
 4.  Укажите параметры для виртуальной машины Azure, на которой будет размещаться новая вторичная реплика.  
   
-     image  
+     Образ —  
      Имя образа SQL Server, которое будет использоваться для виртуальной машины Azure  
   
      Размер виртуальной машины  

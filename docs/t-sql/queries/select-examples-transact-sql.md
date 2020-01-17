@@ -30,12 +30,12 @@ helpviewer_keywords:
 ms.assetid: 9b9caa3d-e7d0-42e1-b60b-a5572142186c
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 17ae607e02838e4598dce82f6f022208238aefaa
-ms.sourcegitcommit: add39e028e919df7d801e8b6bb4f8ac877e60e17
+ms.openlocfilehash: e3d7c9b661a69f4a575a18aae03f9eb5e601b69b
+ms.sourcegitcommit: ba44730f5cc33295ae2ed1f281186dd266bad4ef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74119213"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74191089"
 ---
 # <a name="select-examples-transact-sql"></a>Примеры использования инструкции SELECT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -81,7 +81,7 @@ ms.locfileid: "74119213"
 ## <a name="e-using-correlated-subqueries"></a>Д. Использование связанных вложенных запросов
 Коррелированный запрос — это запрос, зависящий от результатов выполнения другого запроса. Он может повторно выполняться для каждой строки, выбранной с помощью другого запроса.
 
- В следующем примере представлены семантически эквивалентные запросы, а также показаны различия в использовании ключевых слов `EXISTS` и `IN`. В обоих примерах приведены допустимые вложенные запросы, извлекающие по одному экземпляру продукции каждого наименования, для которых модель продукта — «long sleeve logo jersey» (кофта с длинными рукавами, с эмблемой), а значения столбцов `ProductModelID` таблиц `Product` и `ProductModel` совпадают.  
+В первом примере представлены семантически эквивалентные запросы для демонстрации различий в использовании ключевых слов `EXISTS` и `IN`. В обоих примерах приведены допустимые вложенные запросы, извлекающие по одному экземпляру продукции каждого наименования, для которых модель продукта — «long sleeve logo jersey» (кофта с длинными рукавами, с эмблемой), а значения столбцов `ProductModelID` таблиц `Product` и `ProductModel` совпадают.  
   
  [!code-sql[Select#SelectExamples9](../../t-sql/queries/codesnippet/tsql/select-examples-transact_9.sql)]  
   
@@ -158,7 +158,7 @@ GO
   
  [!code-sql[Select#SelectExamples23](../../t-sql/queries/codesnippet/tsql/select-examples-transact_21.sql)]  
   
- Если необходимо убедиться в том, что в вычислениях для каждого продукта используется не менее 1500 элементов, используется инструкция `HAVING COUNT(*) > 1500`, которая удаляет строки для продуктов с объемами продаж менее `1500`. Запрос выглядит следующим образом:  
+ Если необходимо убедиться в том, что в вычислениях для каждого продукта используется не менее 1500 элементов, используется инструкция `HAVING COUNT(*) > 1500`, которая удаляет строки для продуктов с объемами продаж менее `1500`. Этот запрос выглядит следующим образом.  
   
  [!code-sql[Select#SelectExamples24](../../t-sql/queries/codesnippet/tsql/select-examples-transact_22.sql)]  
   

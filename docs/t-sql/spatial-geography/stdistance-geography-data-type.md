@@ -1,7 +1,7 @@
 ---
 title: STDistance (тип данных geography) | Документы Майкрософт
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 11/19/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 063d8722-e019-4d3d-8fcf-dbf5325823e7
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: d739e9a6320781725f3cc498c9bc68e8ade8d684
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 45f0b6f9524c4877c669bfec8c5ab7bcfec198bb
+ms.sourcegitcommit: 381595e990f2294dbf324ef31071e2dd2318b8dd
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68042296"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74200510"
 ---
 # <a name="stdistance-geography-data-type"></a>STDistance (географический тип данных)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -49,10 +49,11 @@ ms.locfileid: "68042296"
  Тип возвращаемого значения CLR: **SqlDouble**  
   
 ## <a name="remarks"></a>Remarks  
- STDistance() всегда возвращает значение NULL, если у экземпляров **geography** не совпадают идентификаторы пространственных ссылок (SRID).  
+ Результат выражается в единице измерения, определенной [идентификатором пространственной ссылки (SRID)](../../relational-databases/spatial/spatial-reference-identifiers-srids.md) пространственных данных.
+STDistance() всегда возвращает значение *NULL*, если у экземпляров **geography** не совпадают идентификаторы пространственных ссылок (SRID).  
   
 > [!NOTE]  
->  Методы, вызываемые для типа данных **geography** и вычисляющие площадь или расстояние, могут возвращать различные результаты в зависимости от идентификатора SRID экземпляра.   Дополнительные сведения об идентификаторах SRID см. в разделе [Идентификаторы пространственных ссылок (SRID)](../../relational-databases/spatial/spatial-reference-identifiers-srids.md).  
+>  Методы, вызываемые для типа данных **geography** и вычисляющие площадь или расстояние, могут возвращать различные результаты в зависимости от идентификатора SRID экземпляра. Дополнительные сведения об идентификаторах SRID см. в разделе [Идентификаторы пространственных ссылок (SRID)](../../relational-databases/spatial/spatial-reference-identifiers-srids.md).  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере вычисляется расстояние между двумя экземплярами **geography**.  

@@ -1,6 +1,8 @@
 ---
-title: REVOKE, отмена разрешений на субъекта базы данных (Transact-SQL) | Документы Майкрософт
-ms.custom: ''
+title: REVOKE (разрешения на субъект базы данных)
+description: Отзывает разрешения для пользователя базы данных, роли базы данных или роли приложения.
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: seo-lt-2019
 ms.date: 08/10/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -18,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: c45e1086-c25b-48bb-a764-4a893e983db2
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: fe8146758dd8d8571ee86c67c757bb61897f419d
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: 0353ff7b9e0778a7ef59107f5ba2876e72bbdd69
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73982909"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243343"
 ---
 # <a name="revoke-database-principal-permissions-transact-sql"></a>REVOKE, отмена разрешений на участника базы данных (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

@@ -1,6 +1,7 @@
 ---
-title: Добавление следящего сервера для зеркального отображения базы данных с использованием проверки подлинности Windows (язык Transact-SQL) | Документы Майкрософт
-ms.custom: ''
+title: Настройка следящего сервера
+description: 'Описывает, как настроить следящий сервер для зеркального отображения базы данных с проверкой подлинности Windows с помощью Transact-SQL. '
+ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bf5e87df-91a4-49f9-ae88-2a6dcf644510
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: df8fe05e66c50b6bdee8e6bdfd792a2b481d1e02
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4616e2c10657e1af8db9c706c518fdf690618303
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67945653"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822306"
 ---
 # <a name="add-a-database-mirroring-witness-using-windows-authentication-transact-sql"></a>Добавление следящего сервера для зеркального отображения базы данных с использованием проверки подлинности Windows (язык Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +33,7 @@ ms.locfileid: "67945653"
 > [!IMPORTANT]  
 >  Настройку зеркального отображения базы данных рекомендуется выполнять в часы с наименьшей загрузкой, поскольку этот процесс может оказать влияние на производительность.  
   
-### <a name="to-establish-a-witness"></a>Настройка следящего сервера  
+## <a name="establish-a-witness"></a>Настройка следящего сервера  
   
 1.  Убедитесь, что на экземпляре следящего сервера существует конечная точка зеркального отображения. Независимо от числа сеансов зеркального отображения, которые будут поддерживаться, на экземпляре сервера должна быть только одна конечная точка зеркального отображения. Если этот сервер будет использоваться исключительно в роли следящего в сеансах зеркального отображения, назначьте конечной точке соответствующую роль (ROLE **=** WITNESS). Если экземпляр данного сервера может выступать как участник одного или несколько сеансов зеркального отображения, назначьте конечной точке роль ALL.  
   

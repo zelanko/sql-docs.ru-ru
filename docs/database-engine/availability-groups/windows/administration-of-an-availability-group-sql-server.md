@@ -1,7 +1,7 @@
 ---
-title: Справочник. Администрирование группы доступности
-description: 'Справочные страницы по основам администрирования группы доступности Always On: изменение свойств, добавление или удаление реплик, добавление или удаление баз данных, отработка отказа, настройка прослушивателя и т. д.'
-ms.custom: seodec18
+title: Администрирование группы доступности (индекс содержимого)
+description: 'Справочный индекс статей по основам администрирования группы доступности Always On: изменение свойств, добавление или удаление реплик, добавление или удаление баз данных, отработка отказа, настройка прослушивателя и т. д.'
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 0b7542fa-235e-413d-81bf-3eff9ee07480
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b25b7ae6396c32e3b3698c57010b9d043adb97c5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 515ca03f795901327b59871b1f6d78ef81a17d92
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014850"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75241983"
 ---
 # <a name="administration-of-an-availability-group"></a>Администрирование группы доступности
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -128,7 +128,7 @@ ms.locfileid: "68014850"
  [Прослушиватели групп доступности, возможность подключения клиентов и отработка отказа приложений (SQL Server)](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)   
  [Политики AlwaysOn на случай проблем в работе с группами доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/always-on-policies-for-operational-issues-always-on-availability.md)   
  [Отслеживание групп доступности (SQL Server)](../../../database-engine/availability-groups/windows/monitoring-of-availability-groups-sql-server.md)   
- [Группы доступности Always On: взаимодействие (SQL Server)](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)   
+ [Группы доступности AlwaysOn: взаимодействие (SQL Server)](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)   
  [Общие сведения об инструкциях Transact-SQL для групп доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/transact-sql-statements-for-always-on-availability-groups.md)   
  [Обзор командлетов PowerShell для групп доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md)  
   

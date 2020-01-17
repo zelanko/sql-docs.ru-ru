@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: 28c2bbd60b5a1565e2920968e40bb1dc4e75db22
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 2b34fb6b368f042e39776a25628472c336e21392
+ms.sourcegitcommit: 0d5b0aeee2a2b34fd448aec2e72c0fa8be473ebe
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531204"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75721829"
 ---
 # <a name="restore-a-sql-server-database-in-a-linux-docker-container"></a>Восстановление базы данных SQL Server в контейнере Docker на базе Linux
 
@@ -84,8 +84,8 @@ ms.locfileid: "73531204"
 
    Эта команда создает контейнер SQL Server 2017 с выпуском Developer (по умолчанию). Порт SQL Server **1433** доступен на узле как порт **1401**. Необязательный параметр `-v sql1data:/var/opt/mssql` создает контейнер томов данных с именем **sql1ddata**. Он используется для сохранения данных, созданных SQL Server.
 
-   > [!NOTE]
-   > Процесс запуска контейнера с рабочими выпусками SQL Server немного отличается. Дополнительные сведения см. в разделе [Запуск образов контейнеров с производственными выпусками](sql-server-linux-configure-docker.md#production). Если вы используете те же имена и порты контейнеров, действия в оставшейся части этого руководства будут актуальны и для рабочих контейнеров.
+   > [!IMPORTANT]
+   > В этом примере используется контейнер томов данных в DOCKER. Если вместо этого вы решили сопоставлять каталог узлов, обратите внимание на то, что в Docker для Mac и Windows существуют ограничения для этого подхода. Дополнительные сведения см. в статье [Настройка образов контейнеров SQL Server в Docker](sql-server-linux-configure-docker.md#persist).
 
 1. Для просмотра ваших контейнеров Docker используйте команду `docker ps`.
 
@@ -225,7 +225,7 @@ ms.locfileid: "73531204"
       -Q "RESTORE FILELISTONLY FROM DISK = '/var/opt/mssql/backup/wwi.bak'"
    ```
 
-   Выходные данные должны иметь следующий вид:
+   Выходные данные должны иметь следующий вид.
 
    ```
    LogicalName   PhysicalName
@@ -250,7 +250,7 @@ ms.locfileid: "73531204"
       -Q "RESTORE DATABASE WideWorldImporters FROM DISK = '/var/opt/mssql/backup/wwi.bak' WITH MOVE 'WWI_Primary' TO '/var/opt/mssql/data/WideWorldImporters.mdf', MOVE 'WWI_UserData' TO '/var/opt/mssql/data/WideWorldImporters_userdata.ndf', MOVE 'WWI_Log' TO '/var/opt/mssql/data/WideWorldImporters.ldf', MOVE 'WWI_InMemory_Data_1' TO '/var/opt/mssql/data/WideWorldImporters_InMemory_Data_1'"
    ```
 
-   Выходные данные должны иметь следующий вид:
+   Выходные данные должны иметь следующий вид.
 
    ```
    Processed 1464 pages for database 'WideWorldImporters', file 'WWI_Primary' on file 1.
@@ -372,7 +372,7 @@ docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd `
       -Q "BACKUP DATABASE [WideWorldImporters] TO DISK = N'/var/opt/mssql/backup/wwi_2.bak' WITH NOFORMAT, NOINIT, NAME = 'WideWorldImporters-full', SKIP, NOREWIND, NOUNLOAD, STATS = 10"
    ```
 
-   Выходные данные должны иметь следующий вид:
+   Выходные данные должны иметь следующий вид.
 
    ```
    10 percent processed.

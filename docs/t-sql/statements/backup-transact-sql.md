@@ -46,12 +46,12 @@ ms.assetid: 89a4658a-62f1-4289-8982-f072229720a1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 1c6385fc578bfa1f9d688e9819690e72a3090ce4
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: c1065c56e3f07f1381e5056d1b2eca3a20ed0cd2
+ms.sourcegitcommit: c98c6e33d04d4a1888db7dbe89cb0b1bb3a66418
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73982851"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74249731"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 
@@ -69,7 +69,7 @@ ms.locfileid: "73982851"
 
 ||||
 |---|---|---|
-|**\* _SQL Server \*_** &nbsp;|[Управляемый экземпляр Базы данных SQL<br />](backup-transact-sql.md?view=azuresqldb-mi-current)|[Analytics Platform<br />System (PDW)](backup-transact-sql.md?view=aps-pdw-2016)|
+|**_\* SQL Server \*_** &nbsp;|[Управляемый экземпляр Базы данных SQL<br />](backup-transact-sql.md?view=azuresqldb-mi-current)|[Analytics Platform<br />System (PDW)](backup-transact-sql.md?view=aps-pdw-2016)|
 ||||
 
 &nbsp;
@@ -690,7 +690,7 @@ GO
 
 Межплатформенные операции резервного копирования даже между различными типами процессоров могут выполняться до тех пор, пока параметры сортировки базы данных поддерживаются операционной системой.
 
-При использовании сжатия резервных копий в базах данных с включенным [прозрачным шифрованием данных (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) с одним файлом данных рекомендуется использовать параметр `MAXTRANSFERSIZE` **больше 65 536 (64 КБ)** .
+При использовании сжатия резервных копий в базах данных с включенным [прозрачным шифрованием данных (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) с одним файлом данных рекомендуется использовать параметр `MAXTRANSFERSIZE`**больше 65 536 (64 КБ)** .
 Начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], это включает оптимизированный алгоритм сжатия для баз данных с шифрованием TDE, который сначала расшифровывает страницу, сжимает ее, а затем зашифровывает снова. При использовании `MAXTRANSFERSIZE = 65536` (64 КБ) сжатие резервных копий в базах данных с включенным шифрованием TDE напрямую сжимает зашифрованные страницы и может не обеспечивать хорошее сжатие. Дополнительные сведения см. в разделе [Сжатие резервных копий для баз данных с включенным шифрованием TDE](https://blogs.msdn.microsoft.com/sqlcat/2016/06/20/sqlsweet16-episode-1-backup-compression-for-tde-enabled-databases/).
 
 > [!NOTE]
@@ -932,7 +932,7 @@ WHERE r.command LIKE 'BACKUP%'
 
 > ||||
 > |---|---|---|
-> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|**_\* Управляемый экземпляр Базы данных SQL<br /> \*_** &nbsp;|[Analytics Platform<br />System (PDW)](backup-transact-sql.md?view=aps-pdw-2016)|
+> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|**_\* Управляемый экземпляр Базы данных SQL<br />\*_** &nbsp;|[Analytics Platform<br />System (PDW)](backup-transact-sql.md?view=aps-pdw-2016)|
 
 &nbsp;
 
@@ -1260,7 +1260,7 @@ DIFFERENTIAL — указывает, что необходимо создать
 
 **Управление сетевыми учетными данными**
 
-Сетевой доступ к каталогу резервного копирования осуществляется по стандартным принципам безопасности при обмене файлами в Windows. Прежде чем выполнять резервное копирование, необходимо создать или указать учетную запись Windows, которая будет использоваться для проверки подлинности [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] в каталоге резервного копирования. Эта учетная запись Windows должна иметь разрешения на доступ к каталогу резервного копирования, создание такого каталога и запись в него.
+Сетевой доступ к каталогу резервного копирования осуществляется по стандартным принципам безопасности при обмене файлами в операционной системе. Прежде чем выполнять резервное копирование, необходимо создать или указать учетную запись Windows, которая будет использоваться для проверки подлинности [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] в каталоге резервного копирования. Эта учетная запись Windows должна иметь разрешения на доступ к каталогу резервного копирования, создание такого каталога и запись в него.
 
 > [!IMPORTANT]
 > Чтобы снизить риски безопасности в работе с данными, рекомендуется назначить одну учетную запись Windows исключительно для выполнения резервного копирования и восстановления. Предоставьте этой учетной записи разрешения исключительно для расположения резервного копирования.

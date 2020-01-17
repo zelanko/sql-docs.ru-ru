@@ -1,6 +1,8 @@
 ---
-title: GRANT, предоставление разрешений на субъекта базы данных (Transact-SQL) | Документы Майкрософт
-ms.custom: ''
+title: GRANT (разрешения на субъект базы данных)
+description: Предоставляет разрешения для пользователя базы данных, роли базы данных или роли приложения.
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: seo-lt-2019
 ms.date: 03/12/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -25,12 +27,12 @@ ms.assetid: 012588a2-cbe1-48f0-a731-b4a2b83203d5
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 34e027d2b4ff16412031c6b00c0aca5a8078c1ba
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: f67acd0d94ed59a45c8e8d2cbeff0b8cfd9bd68d
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73982246"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75246162"
 ---
 # <a name="grant-database-principal-permissions-transact-sql"></a>GRANT, предоставление разрешений на участника базы данных (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -185,7 +187,7 @@ GO
 ```  
   
 ### <a name="c-granting-impersonate-permission-on-a-user-to-an-application-role"></a>В. Предоставление роли приложения разрешения IMPERSONATE на пользователя  
- В следующем примере показано предоставление разрешения `IMPERSONATE` пользователю `HamithaL` на роль приложения `AdventureWorks2012` `AccountsPayable17`.  
+ В следующем примере показано предоставление разрешения `IMPERSONATE` пользователю `HamithaL` на роль приложения `AdventureWorks2012``AccountsPayable17`.  
   
 **Применимо к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и выше, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   

@@ -14,18 +14,18 @@ ms.assetid: 64514aed-b846-407b-992e-cf813f9a1a91
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 89b3ded4415983548402fa5ab955265b40a94f72
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: f9cf01e13bc1fe278af9d68897a71c99003b37fc
+ms.sourcegitcommit: 381595e990f2294dbf324ef31071e2dd2318b8dd
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909875"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74200499"
 ---
 # <a name="specify-default-values-for-columns"></a>Указание значений по умолчанию для столбца
 
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
-Можно использовать [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], чтобы указать значение по умолчанию, которое будет включено в столбец таблицы. Можно использовать обозреватель объектов в пользовательском интерфейсе или основные элементы управления для отправки [!INCLUDE[tsql](../../includes/tsql-md.md)].
+Можно использовать [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], чтобы указать значение по умолчанию, которое будет включено в столбец таблицы. Значение по умолчанию можно задать с помощью обозревателя объектов пользовательского интерфейса или путем отправки [!INCLUDE[tsql](../../includes/tsql-md.md)].
 
 Если значение по умолчанию не задано столбцу и пользователь оставляет столбец пустым, происходит следующее:
 
@@ -64,7 +64,7 @@ ms.locfileid: "72909875"
    > [!NOTE]
    > Чтобы задать численное значение по умолчанию, введите число. В случае объекта или функции нужно ввести его или ее имя. Чтобы задать алфавитно-цифровое значение по умолчанию, введите его, заключив в одинарные кавычки.
 
-4. В меню **Файл** выберите пункт **Сохранить** _имя_таблицы_.
+4. В меню **Файл** выберите команду **Сохранить** _имя_таблицы_.
 
 ## <a name="TsqlProcedure"></a> Использование Transact-SQL для определения значения по умолчанию
 

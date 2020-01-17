@@ -1,6 +1,7 @@
 ---
-title: Урок 2. Создание и применение политики стандартов именования | Документация Майкрософт
-ms.custom: ''
+title: Урок 2. Создание и применение политики стандартов именования
+description: В этом учебнике описывается создание и применение политики стандартов именования для управления на основе политик в SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.technology: security
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 87e51f4e-156c-4def-8572-76a15075d75e
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 4bd3b1b4d07b68ae693cd741e471dd5f53efae6e
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: ac5510320783c35c83f84118e9679da4fd351415
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907058"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558699"
 ---
 # <a name="lesson-2-create-and-apply-a-naming-standards-policy"></a>Урок 2. Создание и применение политики стандартов именования
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -25,7 +26,7 @@ ms.locfileid: "72907058"
 ## <a name="prerequisites"></a>предварительные требования
 Для работы с этим руководством требуется среда SQL Server Management Studio и доступ к серверу SQL Server.
 
-- Установите [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+- Установите [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 - Установите выпуск [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
   
 ## <a name="create-the-finance-database"></a>Создание базы данных Finance  

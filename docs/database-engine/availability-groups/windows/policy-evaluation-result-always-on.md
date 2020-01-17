@@ -1,6 +1,6 @@
 ---
-title: Страница "Результат вычисления политики" (панель мониторинга Always On) | Документация Майкрософт
-description: Описание страницы "Результат вычисления политики" на панели мониторинга Always On в среде SQL Server Management Studio.
+title: Страница "Результат вычисления политики" (панель мониторинга Always On)
+description: Описание страницы "Результат вычисления политики" на панели мониторинга Always On в среде SQL Server Management Studio (SSMS).
 ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 703e947f-d345-4506-be21-34bfbfa7bca6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 6f13781e0d0820aaccf3a7fdc9e72145c08c6b4c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ff428ab60ad51cfdf2cd19454c34e90644f30b5d
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014546"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75235439"
 ---
 # <a name="policy-evaluation-result-page-always-on-dashboard"></a>Страница "Результат вычисления политики" (панель мониторинга Always On)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,8 +31,8 @@ ms.locfileid: "68014546"
   
 |Значок|Severity|  
 |----------|--------------|  
-|![Значок интерфейса пользователя: ошибка](../../../database-engine/availability-groups/windows/media/repl-icon-error.gif "Значок интерфейса пользователя: ошибка")|Критическая|  
-|![Значок интерфейса пользователя: предупреждение](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "Значок интерфейса пользователя: предупреждение")|Предупреждение|  
+|![Значок пользовательского интерфейса: ошибка](../../../database-engine/availability-groups/windows/media/repl-icon-error.gif "Значок пользовательского интерфейса: ошибка")|Critical|  
+|![Значок пользовательского интерфейса: предупреждение](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "Значок пользовательского интерфейса: предупреждение")|Предупреждение|  
   
  **Описание**  
  В этой сетке отображается краткое описание выбранной неполадки.  

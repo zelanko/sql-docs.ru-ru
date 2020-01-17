@@ -1,6 +1,7 @@
 ---
-title: Администрирование одноранговой топологии (программирование репликации на языке Transact-SQL) | Документация Майкрософт
-ms.custom: ''
+title: Администрирование одноранговой топологии (хранимая процедура репликации)
+description: Узнайте, как использовать хранимые процедуры репликации для администрирования одноранговой топологии, например добавления статьи или внесения изменения в схему.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,19 +15,19 @@ helpviewer_keywords:
 ms.assetid: 4d0fa941-f9ea-4a14-aed9-34df593fc6f2
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 633e1a3cc6db676065d588c570d75c6b5a376f6d
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 712a0514bf4fb9e4c66e0d6f7b0475ec5a957dde
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908070"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75322201"
 ---
 # <a name="administer-a-peer-to-peer-topology-replication-transact-sql-programming"></a>Администрирование одноранговой топологии (программирование репликации на языке Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Администрирование одноранговой топологии напоминает администрирование обычное топологии репликации транзакций, оно имеет некоторые специфические особенности. Главное отличие состоит в том, что при администрировании одноранговой топологии некоторые изменения требуют *замораживания*системы. Замораживание системы предполагает прекращение операций с опубликованными таблицами на всех узлах и проверку того, что каждый узел получил все изменения со всех других узлов. Дополнительные сведения см. в разделе [Замораживание топологии репликации (программирование репликации на языке Transact-SQL)](../../../relational-databases/replication/administration/quiesce-a-replication-topology-replication-transact-sql-programming.md).  
   
 > [!NOTE]  
->  В одноранговой топологии распространитель не может использовать более раннюю версию [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], чем подписчик по запросу.  
+>  В одноранговой топологии распространитель не может использовать более раннюю версию [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , чем подписчик по запросу.  
   
 ### <a name="to-add-an-article-to-an-existing-configuration"></a>Добавление статьи к существующей конфигурации  
   
@@ -38,7 +39,7 @@ ms.locfileid: "72908070"
   
 4.  Вручную выполните массовое копирование данных во всех узлах при помощи [программы bcp](../../../tools/bcp-utility.md).  
   
-5.  С помощью хранимой процедуры [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) создайте новую статью в каждом узле топологии. Дополнительные сведения см. в статье [определить статью](../../../relational-databases/replication/publish/define-an-article.md).  
+5.  При помощи хранимой процедуры [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) создайте новую статью в каждом узле топологии. Дополнительные сведения см. в статье [определить статью](../../../relational-databases/replication/publish/define-an-article.md).  
   
     > [!NOTE]  
     >  После завершения хранимой процедуры [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) репликация автоматически добавит статью в подписки топологии.  
@@ -65,6 +66,6 @@ ms.locfileid: "72908070"
 ## <a name="see-also"></a>См. также:  
  [Вопросы и ответы об администрировании репликации](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)   
  [Резервное копирование и восстановление баз данных SQL Server](../../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
- [Одноранговая репликация транзакций](../../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)  
+ [Peer-to-Peer Transactional Replication](../../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)  
   
   

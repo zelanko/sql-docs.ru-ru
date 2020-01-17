@@ -1,6 +1,7 @@
 ---
-title: Диалоговое окно "Создание нового условия" или "Открытие условия", страница "Общие" | Документация Майкрософт
-ms.custom: ''
+title: Страница "Общие" диалогового окна "Создание нового условия" или "Открытие условия"
+description: Описывает страницу "Общие" диалогового окна "Создание нового условия" или "Открытие условия" для управления на основе политик в SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 106954bf-e4ba-412b-9c1a-907d06153dcd
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 793d49d46e3a26164437fd6db542a7db0704e1cb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c16d813af595e3698379026e219440ba0007db12
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68137913"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558145"
 ---
 # <a name="create-new-condition-or-open-condition-dialog-box-general-page"></a>Диалоговое окно «Создание нового условия» или «Открытие условия», страница «Общие»
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +40,7 @@ ms.locfileid: "68137913"
  **Оператор**  
  Выберите оператор сравнения для этого выражения. Доступны следующие операторы: =, !=, >, >=, <, <=, [NOT]LIKE, [NOT]IN. Для некоторых свойств доступны не все операторы.  
   
- **Значение**  
+ **Value**  
  Установленное значение для данного выражения. Доступные значения зависят от аспекта. Значения могут быть истинными или ложными, строковыми или числовыми. Строковые значения необходимо брать в одинарные кавычки, например: **'AdventureWorks'** . Для некоторых свойств доступны не все операторы.  
   
 ## <a name="group-clauses"></a>Предложения группы  

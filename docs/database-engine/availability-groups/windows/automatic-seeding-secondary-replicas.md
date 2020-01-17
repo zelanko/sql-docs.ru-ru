@@ -1,8 +1,7 @@
 ---
-title: Инициализация вторичной реплики группы доступности с помощью автоматического заполнения
-description: Используйте автоматическое заполнение для инициализации вторичных реплик в составе группы доступности Always On в SQL 2016 и далее.
-services: data-lake-analytics
-ms.custom: seodec18
+title: Автоматическое заполнение для вторичных реплик
+description: Узнайте, как использовать автоматическое заполнение для инициализации вторичных реплик в составе группы доступности Always On в SQL 2016 и более поздних версий.
+ms.custom: seo-lt-2019
 ms.date: 11/27/2018
 ms.prod: sql
 ms.reviewer: ''
@@ -13,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 53e1651766e653c2444a9e454756017d552ce323
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d76d91b2a083f06ea02951957bdd7e43b9092dea
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67934928"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75254103"
 ---
 # <a name="use-automatic-seeding-to-initialize-a-secondary-replica-for-an-always-on-availability-group"></a>Инициализация вторичной реплики группы доступности Always On с помощью автоматического заполнения
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -231,7 +230,7 @@ GO
 
 В таблице ниже перечислены расширенные события, связанные с автоматическим заполнением.
 
-|Имя|Описание|
+|Имя|Description|
 |----|-----------|
 |hadr_db_manager_seeding_request_msg|Заполнение сообщения запроса.|
 |hadr_physical_seeding_backup_state_change|Изменение состояния на стороне резервного копирования при физическом заполнении.|

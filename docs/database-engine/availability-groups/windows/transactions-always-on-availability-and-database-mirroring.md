@@ -1,6 +1,7 @@
 ---
-title: Транзакции — группы доступности AlwaysOn и зеркальное отображение баз данных | Документы Майкрософт
-ms.custom: ''
+title: Транзакции — группы доступности Always On и зеркальное отображение баз данных
+descripton: Learn about cross-database and distributed transaction support for SQL Server Always On availability groups and database mirroring.
+ms.custom: seo-lt-2019
 ms.date: 12/11/2018
 ms.prod: sql
 ms.reviewer: ''
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9f7ed895-ad65-43e3-ba08-00d7bff1456d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9664605fc2008549fdd8da9a66172e4d1ebc61f3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 407e477be98f386adc27fc965b1d099d1dec4dfa
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68013822"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251234"
 ---
 # <a name="transactions---availability-groups-and-database-mirroring"></a>Транзакции — группы доступности AlwaysOn и зеркальное отображение баз данных
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -89,7 +90,7 @@ SQL Server 2017 поддерживает распределенные транз
 > [!NOTE]  
 >  Использование зеркального отображения базы данных или групп доступности с координатором распределенных транзакций возможно только с применением способов, описанных в этой статье.  Это не означает, что компоненты продукта, не связанные с координатором распределенных транзакций, также не поддерживаются. Однако проблемы, связанные с ненадлежащим использованием распределенных транзакций, не будут устранены.  
   
-## <a name="next-steps"></a>Следующие шаги  
- [Группы доступности Always On: взаимодействие &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)  
+## <a name="next-steps"></a>Дальнейшие действия  
+ [Группы доступности Always On: взаимодействие (SQL Server)](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)  
   
   

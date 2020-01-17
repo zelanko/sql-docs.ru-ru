@@ -25,12 +25,12 @@ ms.assetid: 11855b56-c554-495d-aad4-ba446990153b
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 24d03b268abe381e8a1ad3308f630626f5a3d455
-ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
+ms.openlocfilehash: 6052e7eb0e759b7821ac8d7ad6b213fef188be06
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72278346"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75255821"
 ---
 # <a name="datename-transact-sql"></a>DATENAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -83,7 +83,7 @@ DATENAME ( datepart , date )
 + **smalldatetime**
 + **time**
 
-Для *date* `DATENAME` будет принимать столбец выражения, выражение, строковый литерал или определяемую пользователем переменную. Во избежание неоднозначности используйте четырехзначную запись года. Сведения о двузначном обозначении года см. в статье [Настройка параметра конфигурации сервера two digit year cutoff](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md).
+Для *date*`DATENAME` будет принимать столбец выражения, выражение, строковый литерал или определяемую пользователем переменную. Во избежание неоднозначности используйте четырехзначную запись года. Сведения о двузначном обозначении года см. в статье [Настройка параметра конфигурации сервера two digit year cutoff](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md).
   
 ## <a name="return-type"></a>Тип возвращаемых данных  
 **nvarchar**
@@ -156,7 +156,7 @@ SELECT DATENAME(year, @t);
 |**millisecond, ms**|123|  
 |**microsecond, mcs**|123456|  
 |**nanosecond, ns**|123456700|  
-|**TZoffset, tz**|310|  
+|**TZoffset, tz**|+05:10|  
 |**ISO_WEEK, ISOWK, ISOWW**|44|  
   
 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
@@ -184,7 +184,7 @@ SELECT DATENAME(datepart,'2007-10-30 12:15:32.1234567 +05:10');
 |**millisecond, ms**|123|  
 |**microsecond, mcs**|123456|  
 |**nanosecond, ns**|123456700|  
-|**TZoffset, tz**|310|  
+|**TZoffset, tz**|+05:10|  
 |**ISO_WEEK, ISOWK, ISOWW**|44|  
   
 ## <a name="see-also"></a>См. также раздел

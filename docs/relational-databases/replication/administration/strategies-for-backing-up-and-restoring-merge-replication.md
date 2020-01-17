@@ -1,6 +1,7 @@
 ---
-title: Стратегии резервного копирования и восстановления для репликации слиянием | Документация Майкрософт
-ms.custom: ''
+title: Стратегии резервного копирования и восстановления (слияние)
+description: Стратегия резервного копирования и восстановления данных, используемых в репликации слиянием.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b8ae31c6-d76f-4dd7-8f46-17d023ca3eca
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a965da708880fc3411dbdd33e372e197afc9dff8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 448688a54a245cadffa4c0c916d146e7c3e7e115
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67948748"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321991"
 ---
 # <a name="strategies-for-backing-up-and-restoring-merge-replication"></a>Стратегия резервного копирования и восстановления из копии для репликации слиянием
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "67948748"
   
 -   Системные базы данных **master** и **msdb** на издателе, распространителе и на всех подписчиках. Резервные копии этих баз данных и копия соответствующей базы данных репликации должны быть сделаны одновременно. Например, создавайте резервную копию баз данных **master** и **msdb** на издателе одновременно с резервной копией базы данных публикаций. Если база данных публикаций восстановлена, убедитесь, что базы данных **master** и **msdb** согласованы с базой данных публикаций по настройке и конфигурации репликации.  
   
- Если резервное копирование журналов выполняется регулярно, любые изменения, касающиеся репликации, будут заноситься в резервные копии журнала. Если резервные копии журналов не создаются, резервное копирование следует выполнять при каждом изменении параметров репликации. Дополнительные сведения см. в статье [Общие действия, для которых необходима обновленная резервная копия](../../../relational-databases/replication/administration/common-actions-requiring-an-updated-backup.md).  
+ Если резервное копирование журналов выполняется регулярно, любые изменения, касающиеся репликации, будут заноситься в резервные копии журнала. Если резервные копии журналов не создаются, резервное копирование следует выполнять при каждом изменении параметров репликации. Дополнительные сведения см. в статье [Common Actions Requiring an Updated Backup](../../../relational-databases/replication/administration/common-actions-requiring-an-updated-backup.md).  
   
  Выберите один из описываемых далее подходов к резервному копированию и восстановлению базы данных публикаций, затем следуйте рекомендациям, приведенным для базы данных распространителя и базы данных подписок.  
   
@@ -60,7 +61,7 @@ ms.locfileid: "67948748"
 > [!IMPORTANT]  
 >  Результатом синхронизации базы данных публикаций с базой данных подписок может быть восстановление опубликованных таблиц до более современного состояния, чем состояние других неопубликованных таблиц, восстановленных из резервной копии.  
   
- Если выполняется синхронизация с подписчиком, на котором запущена версия [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] меньше [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], подписка не может быть анонимной. Это должна быть клиентская или серверная подписка (в предыдущих версиях такие подписки называются локальными и глобальными).  
+ При синхронизации с подписчиком, на котором запущена версия [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], предшествующая [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], подписка не может быть анонимной. Это должна быть клиентская или серверная подписка (в предыдущих версиях такие подписки называются локальными или глобальными).  
   
  Чтобы синхронизировать подписку, см. разделы [Synchronize a Push Subscription](../../../relational-databases/replication/synchronize-a-push-subscription.md) и [Synchronize a Pull Subscription](../../../relational-databases/replication/synchronize-a-pull-subscription.md).  
   
@@ -71,7 +72,7 @@ ms.locfileid: "67948748"
   
  Чтобы повторно инициализировать подписку, см. раздел [Reinitialize a Subscription](../../../relational-databases/replication/reinitialize-a-subscription.md).  
   
- Чтобы создать и применить моментальный снимок, см. разделы [Create и Apply the Initial Snapshot](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md) и [Создание моментального снимка для публикации слиянием с параметризованными фильтрами](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
+ Чтобы создать и применить моментальный снимок, см. разделы [Create и Apply the Initial Snapshot](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md) и [Create a Snapshot for a Merge Publication with Parameterized Filters](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
   
 ## <a name="backing-up-and-restoring-the-distribution-database"></a>Резервное копирование и восстановление базы данных распространителя  
  При репликации слиянием база данных распространителя должна регулярно подвергаться резервному копированию, и она может быть восстановлена без дополнительных условий до тех пор, пока время, истекшее с момента создания используемой резервной копии, не превышает кратчайший срок хранения всех публикаций, использующих распространитель. Например, если есть три публикации со сроками хранения 10, 20 и 30 дней соответственно, то используемая резервная копия не должна быть старше 10 дней. База данных распространителя играет ограниченную роль в репликации слиянием: она не хранит данных, используемых для отслеживания изменений, и не служит временным хранилищем изменений репликации слиянием, которые должны пересылаться в базы данных подписок (как это делается при репликации транзакций).  
@@ -87,7 +88,7 @@ ms.locfileid: "67948748"
   
  Чтобы установить срок хранения публикации, выполните действия из статьи [Установка срока действия подписок](../../../relational-databases/replication/publish/set-the-expiration-period-for-subscriptions.md).  
   
- Чтобы синхронизировать подписку, см. разделы [Синхронизация принудительной подписки](../../../relational-databases/replication/synchronize-a-push-subscription.md) и [Синхронизация подписки по запросу](../../../relational-databases/replication/synchronize-a-pull-subscription.md).  
+ Чтобы синхронизировать подписку, см. разделы [Synchronize a Push Subscription](../../../relational-databases/replication/synchronize-a-push-subscription.md) и [Synchronize a Pull Subscription](../../../relational-databases/replication/synchronize-a-pull-subscription.md).  
   
 ## <a name="backing-up-and-restoring-a-republishing-database"></a>Резервное копирование и восстановление переиздаваемой базы данных  
  Когда база данных подписывается на данные издателя и в свою очередь публикует те же самые данные для других баз данных подписок, ее называют переиздающей базой данных. При восстановлении переиздающей базы данных следуйте инструкциям, описанным в подразделах «Резервное копирование и восстановление базы данных публикаций» и «Резервное копирование и восстановление базы данных подписок» этого раздела.  

@@ -1,6 +1,8 @@
 ---
-title: DENY, отказ в разрешениях на уровне субъекта базы данных (Transact-SQL) | Документы Майкрософт
-ms.custom: ''
+title: DENY (разрешения на субъект базы данных)
+description: Отклоняет разрешения для пользователя базы данных, роли базы данных или роли приложения.
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: seo-lt-2019
 ms.date: 05/15/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -26,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: e2429a5d-e9be-4c05-be20-414d1038a63a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: fddca390aa40d36b126cf113c6b8f56bd42f1131
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: a3e9cb1d12dd65b813ae7cc6139a1d48925ab05f
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73982516"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244583"
 ---
 # <a name="deny-database-principal-permissions-transact-sql"></a>DENY, запрет разрешений на участника базы данных (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -170,7 +172,7 @@ GO
 ```  
   
 ### <a name="c-denying-impersonate-permission-on-a-user-to-an-application-role"></a>В. Запрет разрешения IMPERSONATE на пользователя роли приложения  
- В следующем примере показано, как отменить разрешение `IMPERSONATE` пользователю `HamithaL` на роль приложения [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] `AccountsPayable17`.  
+ В следующем примере показано, как отменить разрешение `IMPERSONATE` пользователю `HamithaL` на роль приложения [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]`AccountsPayable17`.  
   
 **Применимо к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и выше, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   

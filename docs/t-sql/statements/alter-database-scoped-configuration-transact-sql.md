@@ -1,6 +1,8 @@
 ---
-title: ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL) | Документы Майкрософт
-ms.custom: ''
+title: ALTER DATABASE SCOPED CONFIGURATION
+description: Включает несколько параметров конфигурации базы данных на уровне отдельной базы данных.
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: seo-lt-2019
 ms.date: 10/31/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -21,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a503851bf6e5bac2556560fc9bfd3f120e808aa3
-ms.sourcegitcommit: 27c267bf2a3cfaf2abcb5f3777534803bf4cffe5
+ms.openlocfilehash: 9547eaae31787dc01946b8dfd2d2d43781b5a8af
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73240693"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258134"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -120,7 +122,7 @@ MAXDOP **=** {\<value> | PRIMARY } **\<value>**
 Параметр MAXDOP можно использовать для ограничения числа процессоров, применяемых при параллельном выполнении планов. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] учитывает планы параллельного выполнения для запросов, операций с индексами на языке описания данных (DDL), параллельной вставки, изменения столбцов в оперативном режиме, параллельного сбора статистики и для заполнения курсоров (статических и управляемых набором ключей).
 
 > [!NOTE]
-> Ограничение параметра **max degree of parallelism (MAXDOP)** задается для каждой [задачи](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md). Оно не задается для каждого [запроса](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md). Это означает, что во время параллельного выполнения один запрос может порождать множество задач, назначаемых [планировщику](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md). Дополнительные сведения см. в [Руководстве по архитектуре потоков и задач](../../relational-databases/thread-and-task-architecture-guide.md). 
+> Ограничение параметра **max degree of parallelism (MAXDOP)** задается для каждой [задачи](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md). Оно не задается для каждого [запроса](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md). Это означает, что во время параллельного выполнения один запрос может порождать множество задач, назначаемых [планировщику](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md). Дополнительные сведения см. в статье [Руководство по архитектуре потоков и задач](../../relational-databases/thread-and-task-architecture-guide.md). 
 
 Сведения о настройке этого параметра на уровне экземпляра см. в разделе [Настройка параметра конфигурации сервера max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).
 
@@ -128,9 +130,9 @@ MAXDOP **=** {\<value> | PRIMARY } **\<value>**
 > [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] использует конфигурацию, где параметру **max degree of parallelism** на уровне сервера всегда задается значение 0. MAXDOP можно настроить для каждой базы данных, как описано в текущей статье. Рекомендации по оптимальной настройке MAXDOP см. в разделе [Дополнительные ресурсы](#additional-resources).
 
 > [!TIP]
-> На уровне запросов используйте [указание запроса](../../t-sql/queries/hints-transact-sql-query.md) **MAXDOP**.    
-> На уровне сервера используйте [параметр конфигурации сервера](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) **max degree of parallelism (MAXDOP)** .     
-> На уровне рабочих нагрузок используйте [параметр конфигурации группы рабочей нагрузки Resource Governor](../../t-sql/statements/create-workload-group-transact-sql.md) **MAX_DOP**.    
+> Для выполнения этого на уровне запросов используйте [указание запроса](../../t-sql/queries/hints-transact-sql-query.md) **MAXDOP**.    
+> На уровне сервера используйте [параметр конфигурации сервера](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) **максимальной степени параллелизма (MAXDOP)** .     
+> На уровне рабочих нагрузок используйте [параметр конфигурации группы рабочей нагрузки Resource Governor](../../t-sql/statements/create-workload-group-transact-sql.md) **MAX_DOP**.    
 
 PRIMARY
 
@@ -142,7 +144,7 @@ LEGACY_CARDINALITY_ESTIMATION **=** { ON | **OFF** | PRIMARY }
 
 > [!TIP]
 > Для выполнения этого на уровне запросов добавьте [указание запроса](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) **QUERYTRACEON**.
-> Начиная с версии [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] с пакетом обновления 1 (SP1) для выполнения этой задачи на уровне запроса добавьте [указание запроса](../../t-sql/queries/hints-transact-sql-query.md#use_hint) **USE HINT**, вместо того чтобы использовать флаг трассировки.
+> Начиная с версии [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] с пакетом обновления 1 (SP1), для выполнения этой задачи на уровне запроса добавьте [указание запроса](../../t-sql/queries/hints-transact-sql-query.md#use_hint) **USE HINT**, вместо того чтобы использовать флаг трассировки.
 
 PRIMARY
 
@@ -154,7 +156,7 @@ PARAMETER_SNIFFING **=** { **ON** | OFF | PRIMARY}
 
 > [!TIP]
 > Для выполнения этой задачи на уровне запроса добавьте **указание запроса** [OPTIMIZE FOR UNKNOWN](../../t-sql/queries/hints-transact-sql-query.md).
-> Начиная с версии [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] с пакетом обновления 1 (SP1) для выполнения этой задачи на уровне запроса также доступно [указание запроса](../../t-sql/queries/hints-transact-sql-query.md#use_hint) **USE HINT**.
+> Начиная с версии [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] с пакетом обновления 1 (SP1), для выполнения этой задачи на уровне запроса также доступно [указание запроса](../../t-sql/queries/hints-transact-sql-query.md#use_hint) **USE HINT**.
 
 PRIMARY
 
@@ -596,7 +598,7 @@ SET PAUSED_RESUMABLE_INDEX_ABORT_DURATION_MINUTES = 60
 
 ## <a name="more-information"></a>Дополнительные сведения   
  [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md)      
- [Рекомендации и правила для параметра конфигурации "max degree of parallelism" в SQL Server](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines)      
+ [Рекомендации и инструкции по использованию параметра конфигурации "Максимальная степень параллелизма" в SQL Server](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines)      
  [sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)    
  [Представления каталога баз данных и файлов](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)    
  [Параметры конфигурации сервера](../../database-engine/configure-windows/server-configuration-options-sql-server.md)    

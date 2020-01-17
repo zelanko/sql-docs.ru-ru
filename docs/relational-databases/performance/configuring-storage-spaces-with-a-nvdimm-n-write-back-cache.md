@@ -1,6 +1,6 @@
 ---
-title: Настройка дисковых пространств с помощью кэша обратной записи NVDIMM-N | Документация Майкрософт
-ms.custom: ''
+title: Настройка хранилища — кэш обратной записи NVDIMM-N
+ms.custom: seo-dt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 861862fa-9900-4ec0-9494-9874ef52ce65
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 050182836ecaa013ffe45ff9d5f78d2cdd60a1a7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e19b164b0efe6d92a9bae0e6f7362ac5fd56f202
+ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68137992"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74165993"
 ---
 # <a name="configuring-storage-spaces-with-a-nvdimm-n-write-back-cache"></a>Настройка дисковых пространств с помощью кэша обратной записи NVDIMM-N
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ $pd =  Get-PhysicalDisk | Select FriendlyName, MediaType, BusType | WHere-Object
 $pd | Select FriendlyName, MediaType, BusType  
 ```  
   
- ![Выберите удобное имя](../../relational-databases/performance/media/select-friendlyname.png "Выберите удобное имя")  
+ ![Select FriendlyName](../../relational-databases/performance/media/select-friendlyname.png "Select FriendlyName")  
   
 ## <a name="creating-the-storage-pool"></a>Создание пула носителей  
  Используя переменную $pd, содержащую физические диски, можно легко создать пул носителей с помощью командлета PowerShell New-StoragePool.  
@@ -72,7 +72,7 @@ New-Volume -StoragePool (Get-StoragePool -FriendlyName NVDIMM_Pool) -FriendlyNam
   
  Теперь этот новый том можно увидеть на сервере. Этот диск можно использовать для хранения журнала транзакций SQL Server.  
   
- ![Диск для хранения журнала](../../relational-databases/performance/media/log-space-drive.png "Диск для хранения журнала")  
+ ![Log_Space Drive](../../relational-databases/performance/media/log-space-drive.png "Log_Space Drive")  
   
 ## <a name="see-also"></a>См. также:  
  [Дисковые пространства Windows в Windows 10](https://windows.microsoft.com/windows-10/storage-spaces-windows-10)   

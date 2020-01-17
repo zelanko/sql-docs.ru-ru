@@ -1,6 +1,6 @@
 ---
-title: Модель приложения для секционирования таблиц, оптимизированных для памяти | Документация Майкрософт
-ms.custom: ''
+title: Модель приложения — секционирование таблиц, оптимизированных для памяти
+ms.custom: seo-dt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -11,12 +11,12 @@ ms.assetid: 3f867763-a8e6-413a-b015-20e9672cc4d1
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e8f23f65299365b0716cd2a94f48e3a050fb18b1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0c871da0fcd20cffc2c6510d7084f79faefa2d50
+ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67951232"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74412797"
 ---
 # <a name="application-pattern-for-partitioning-memory-optimized-tables"></a>Модель приложения для секционирования таблиц, оптимизированных для памяти
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "67951232"
   
 -   Добавление активной секции.  
   
- ![Переключение секций.](../../relational-databases/in-memory-oltp/media/hekaton-partitioned-tables.gif "Переключение секций.")  
+ ![Переключение секций.](../../relational-databases/in-memory-oltp/media/hekaton-partitioned-tables.gif "|::ref1::|")  
 Обслуживание активных данных  
   
  Действия, начиная с операции Deleting Active Orders, необходимо выполнять в течение окна обслуживания, чтобы не создавать запросы к отсутствующим данным в период между удалением данных и подключением с заменой промежуточной таблицы.  

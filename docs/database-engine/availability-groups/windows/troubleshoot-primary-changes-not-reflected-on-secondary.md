@@ -1,7 +1,7 @@
 ---
-title: Определение причин, по которым изменения не отображаются во вторичной реплике группы доступности, — SQL Server
+title: Изменения не видны во вторичной реплике группы доступности
 ms.description: Troubleshoot to determine why changes occurring on a primary replica are not reflected on the secondary replica for an Always On availability group.
-ms.custom: ag-guide,seodec18
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: c602fd39-db93-4717-8f3a-5a98b940f9cc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bed83c98489d1622e97dd84c9f5c1994715b60fc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 55dc6787960fbb4979bbe0d21f27f0fa43437662
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68013680"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243013"
 ---
 # <a name="determine-why-changes-from-primary-replica-are-not-reflected-on-secondary-replica-for-an-always-on-availability-group"></a>Определение причин, по которым изменения в первичной реплике не отражаются во вторичной реплике группы доступности Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -126,7 +126,7 @@ from sys.dm_hadr_database_replica_states
   
  Если поток повтора на самом деле запаздывает, нужно исследовать первопричину снижения производительности на вторичной реплике. Если присутствует состязание ввода-вывода с рабочей нагрузкой отчетов, можно использовать [Resource Governor](~/relational-databases/resource-governor/resource-governor.md) для управления циклами ЦП, которые рабочая нагрузка отчетов использует для косвенного управления использованными циклами ввода-вывода. Например, если рабочая нагрузка отчетов использует 10 процентов ресурсов ЦП, но она привязана к вводу-выводу, можно с помощью Resource Governor ограничить использование ресурсов ЦП на 5 процентов для регулирования рабочей нагрузки чтения, что минимизирует влияние на операции ввода-вывода.  
   
-## <a name="next-steps"></a>Следующие шаги  
+## <a name="next-steps"></a>Дальнейшие действия  
  [Устранение связанных с производительностью неполадок в SQL Server 2008](https://msdn.microsoft.com/library/dd672789(v=sql.100).aspx) 
   
   

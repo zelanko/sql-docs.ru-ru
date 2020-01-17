@@ -1,6 +1,7 @@
 ---
-title: Просмотр свойств прослушивателя группы доступности (SQL Server) | Документы Майкрософт
-ms.custom: ''
+title: Просмотр свойств прослушивателя группы доступности
+description: 'Инструкции по просмотру свойств прослушивателя группы доступности Always On с помощью SQL Server Management Studio (SSMS), Transact-SQL (T-SQL) или SQL PowerShell. '
+ms.custom: seo-lt-2019
 ms.date: 07/11/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: aca0d016-3228-40b8-bdc3-285ed6d9b280
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 55603d6dba2a5f688ce07d1f071019f101d9e955
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 74f8a0823f281a9260ba2d8ba322ac97c0e7056b
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68013381"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74821769"
 ---
 # <a name="view-availability-group-listener-properties-sql-server"></a>Просмотр свойств прослушивателя группы доступности (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -76,7 +77,7 @@ ms.locfileid: "68013381"
  [sys.dm_tcp_listener_states](../../../relational-databases/system-dynamic-management-views/sys-dm-tcp-listener-states-transact-sql.md)  
  Возвращает строку, содержащую сведения о динамическом состоянии для каждого прослушивателя TCP.  
   
- **Имена столбцов:** listener_id, ip_address, is_ipv4, порт, тип, type_desc, state, state_desc, start_time  
+ **Имена столбцов:** listener_id, ip_address, is_ipv4, port, type, type_desc, state, state_desc, start_time  
   
 > [!NOTE]  
 >  Дополнительные сведения об использовании [!INCLUDE[tsql](../../../includes/tsql-md.md)] для отслеживания среды [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] см. в разделе [Отслеживание групп доступности (Transact-SQL)](../../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md).  

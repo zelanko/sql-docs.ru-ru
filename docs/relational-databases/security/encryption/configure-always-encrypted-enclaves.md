@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: bda4d41d4f2a9c92dca2d41b959ad4c4b32a1c79
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: 568944db62ca94048c45450500d3060daa957680
+ms.sourcegitcommit: 9e026cfd9f2300f106af929d88a9b43301f5edc2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73594478"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74317934"
 ---
 # <a name="configure-and-use-always-encrypted-with-secure-enclaves"></a>Настройка и использование Always Encrypted с безопасными анклавами 
 
@@ -27,7 +27,9 @@ ms.locfileid: "73594478"
 
 ## <a name="set-up-your-environment-to-support-enclaves-and-attestation"></a>Настройка среды для поддержки анклавов и аттестации
 Подробности см. в следующих статьях:
-- [Настройка службы защиты узла для Always Encrypted в SQL Server](https://docs.microsoft.com/windows-server/security/set-up-hgs-for-always-encrypted-in-sql-server).
+- [Планирование аттестации службы защиты узла](./always-encrypted-enclaves-host-guardian-service-plan.md)
+- [Развертывание службы защиты узла для [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]](./always-encrypted-enclaves-host-guardian-service-deploy.md)
+- [Регистрация компьютера в службе защиты узла](./always-encrypted-enclaves-host-guardian-service-register.md)
 
 ## <a name="manage-keys-for-always-encrypted-with-secure-enclaves"></a>Управление ключами для Always Encrypted с безопасными анклавами
 Подробные сведения см. в следующих разделах:

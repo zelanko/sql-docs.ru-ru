@@ -1,6 +1,7 @@
 ---
-title: Использование динамических административных представлений для определения статистики использования и производительности представлений
+title: Динамические административные представления — статистика использования и производительность представлений
 description: Использование динамических административных представлений для определения статистики использования и производительности представлений
+ms.custom: seo-dt-2019
 author: julieMSFT
 ms.author: jrasnick
 ms.date: 09/27/2018
@@ -8,17 +9,17 @@ ms.prod: sql
 ms.reviewer: ''
 ms.technology: performance
 ms.topic: conceptual
-ms.openlocfilehash: 944ba06bc1ccf590e8d02a4fd6e44e6c57ec9001
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e80ba0a8252881b7447dda721f02fc9c3e545917
+ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67986672"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74165888"
 ---
 # <a name="use-dmvs-to-determine-usage-statistics-and-performance-of-views"></a>Использование динамических административных представлений для определения статистики использования и производительности представлений
 В этой статье рассматриваются методы и скрипты, используемые для получения информации о **производительности запросов, которые используют представления**. Цель этих скриптов — предоставить показатели использования и производительности различных представлений, найденных в базе данных. 
 
-## <a name="sysdmexecqueryoptimizerinfo"></a>sys.dm_exec_query_optimizer_info
+## <a name="sysdm_exec_query_optimizer_info"></a>sys.dm_exec_query_optimizer_info
 Динамическое административное представление [sys.dm_exec_query_optimizer_info](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-optimizer-info-transact-sql.md) предоставляет статистику об оптимизации, выполняемой оптимизатором запросов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Эти значения являются накопительными. Их запись начинается при запуске [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения об оптимизации запросов: [Руководство по архитектуре обработки запросов](../../relational-databases/query-processing-architecture-guide.md).   
 
 Приведенное ниже обобщенное табличное выражение (CTE) common_table_expression использует это динамическое административное представление, чтобы предоставить сведения о рабочей нагрузке, например долю запросов, которые ссылаются на представление. Результаты, возвращенные этим запросом, сами по себе не указывают на проблему производительности, но помогают выявлять исходные проблемы в сочетании с жалобами пользователей на запросы с низкой производительностью. 
@@ -164,7 +165,7 @@ CROSS APPLY
 GO
 ```
 
-## <a name="sysdmvexeccachedplans"></a>sys.dmv_exec_cached_plans
+## <a name="sysdmv_exec_cached_plans"></a>sys.dmv_exec_cached_plans
 Окончательный запрос предоставляет сведения о неиспользуемых представлениях при помощи динамического административного представления [sys.dmv_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md). Однако кэшированный план выполнения динамический и результаты могут различаться. Таким образом, необходимо использовать этот запрос через какое-то время, чтобы определить, используется ли представление. 
 
 ```sql

@@ -1,8 +1,8 @@
 ---
-title: 'Свойства группы доступности: Создание группы доступности (страница "Общие")'
+title: Страница "Общие" (Диалоговое окно "Создание группы доступности" и "Свойства")
 titleSuffix: SQL Server
-description: Описание различных свойств на странице "Общие", доступной со страницы "Создание группы доступности" в SQL Server Management Studio.
-ms.custom: seodec18
+description: Описание различных свойств на странице "Общие" в диалоговых окнах "Создание группы доступности" и "Свойства группы доступности" в SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 9af5379f-91b8-4729-9f75-4a80242a30e9
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a0f5e7c7ad7fe916b2203b2d1815e50602d30e2d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f379d55d2728d19a3321e99b342d8597622a6fc0
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67934871"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75254082"
 ---
 # <a name="availability-group-properties-new-availability-group-general-page"></a>Свойства группы доступности: Создание группы доступности (страница "Общие")
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "67934871"
  **Имя базы данных**  
  Имя базы данных, добавленной к группе доступности.  
   
- **Добавить**  
+ **Добавление**  
  Нажмите, чтобы добавить новую базу данных в группу доступности.  
   
  **Удалить**  
@@ -49,10 +49,10 @@ ms.locfileid: "67934871"
  Имя сервера экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , на котором размещена данная реплика, а также имя экземпляра, если экземпляр не является используемым по умолчанию.  
   
  **Роль**  
- **Первичная**  
+ **Источник**  
  В настоящее время — первичная реплика.  
   
- **Вторичная**  
+ **Получатель**  
  В настоящее время — вторичная реплика.  
   
  **Разрешение**  
@@ -105,7 +105,7 @@ ms.locfileid: "67934871"
  **URL-адрес конечной точки**  
  URL-адрес конечной точки. Сведения о формате этих URL-адресов см. в разделе [Указание URL-адреса конечной точки при добавлении или изменении реплики доступности (SQL Server)](../../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md).  
   
- **Добавить**  
+ **Добавление**  
  Выберите, чтобы добавить новую вторичную реплику в группу доступности.  
   
  **Удалить**  

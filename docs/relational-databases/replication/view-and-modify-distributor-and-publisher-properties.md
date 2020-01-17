@@ -1,6 +1,7 @@
 ---
-title: Просмотр и изменение свойств издателя и распространителя | Документация Майкрософт
-ms.custom: ''
+title: Просмотр и изменение свойств издателя и распространителя
+description: Узнайте, как изменить свойства распространителя и издателя с помощью SQL Server Management Studio (SSMS), Transact-SQL (T-SQL) или Replication Management Objects (RMO).
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -16,12 +17,12 @@ ms.assetid: 5dae1d59-c377-4c6e-adc9-b68c5b328f79
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: a2d9e5b04164b3e8aab8c8d0a2fa50d154b10345
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 5fcc1f21654fedc935a604fac37c7a3ca591b3d5
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769261"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321569"
 ---
 # <a name="view-and-modify-distributor-and-publisher-properties"></a>Просмотр и изменение свойств издателя и распространителя
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -33,7 +34,7 @@ ms.locfileid: "68769261"
   
      [Рекомендации](#Recommendations)  
   
-     [безопасность](#Security)  
+     [Безопасность](#Security)  
   
 -   **Для просмотра и изменения свойств распространителя и издателя используется:**  
   
@@ -47,7 +48,7 @@ ms.locfileid: "68769261"
   
 ###  <a name="Recommendations"></a> Рекомендации  
   
--   Для издателей, которые используют версии, предшествующие [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], пользователь, являющийся членом предопределенной роли сервера **sysadmin** , может зарегистрировать подписчиков на странице **Подписчики** . Начиная с [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]больше нет необходимости в явной регистрации подписчиков для репликации.  
+-   Для издателей, которые используют версии, предшествующие [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], пользователь, являющийся членом предопределенной роли сервера **sysadmin**, может зарегистрировать подписчиков на странице **Подписчики**. Начиная с [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]больше нет необходимости в явной регистрации подписчиков для репликации.  
   
 ###  <a name="Security"></a> безопасность  
  По возможности предлагайте пользователям вводить учетные данные системы безопасности во время выполнения приложения.  
@@ -66,7 +67,7 @@ ms.locfileid: "68769261"
   
     -   Для просмотра и изменения свойств издателя, связанного с распространителем, нажмите кнопку с многоточием ( **...** ) издателя на вкладке **Издатели** диалогового окна.  
   
-    -   Для доступа к профилям агентов репликации нажмите кнопку **Значения по умолчанию для профилей** на странице **Общие** диалогового окна. Дополнительные сведения см. в разделе [Replication Agent Profiles](../../relational-databases/replication/agents/replication-agent-profiles.md).  
+    -   Для доступа к профилям агентов репликации нажмите кнопку **Значения по умолчанию для профилей** на странице **Общие** диалогового окна. Дополнительные сведения см. в статье [Replication Agent Profiles](../../relational-databases/replication/agents/replication-agent-profiles.md).  
   
     -   Для изменения пароля учетной записи, используемой при выполнении административных хранимых процедур на издателе и обновлении данных на распространителе, введите новый пароль в поля **Пароль** и **Подтверждение пароля** на странице **Издатели** диалогового окна. Дополнительные сведения см. в разделе [Организация безопасности распространителя](../../relational-databases/replication/security/secure-the-distributor.md).  
   
@@ -130,7 +131,7 @@ ms.locfileid: "68769261"
   
 1.  Создайте соединение с распространителем с помощью класса <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.ReplicationServer> . Передайте объект <xref:Microsoft.SqlServer.Management.Common.ServerConnection> , созданный на шаге 1.  
+2.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.ReplicationServer>. Передайте объект <xref:Microsoft.SqlServer.Management.Common.ServerConnection> , созданный на шаге 1.  
   
 3.  (Необязательно) Проверьте свойство <xref:Microsoft.SqlServer.Replication.ReplicationServer.IsDistributor%2A> , чтобы убедиться, что подключенный в настоящее время сервер является распространителем.  
   
@@ -144,7 +145,7 @@ ms.locfileid: "68769261"
   
 1.  Создайте соединение с распространителем с помощью класса <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.DistributionDatabase> . Укажите свойство Name и передайте объект <xref:Microsoft.SqlServer.Management.Common.ServerConnection> из шага 1.  
+2.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.DistributionDatabase>. Укажите свойство Name и передайте объект <xref:Microsoft.SqlServer.Management.Common.ServerConnection> из шага 1.  
   
 3.  Чтобы получить свойства с сервера, необходимо вызвать метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> . Если этот метод вернет значение **false**, значит, на сервере не существует базы данных с указанным именем.  
   
@@ -156,7 +157,7 @@ ms.locfileid: "68769261"
   
 1.  Создайте соединение с издателем с помощью класса <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.DistributionPublisher> . Укажите свойство <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Name%2A> и передайте объект <xref:Microsoft.SqlServer.Management.Common.ServerConnection> из шага 1.  
+2.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.DistributionPublisher>. Укажите свойство <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Name%2A> и передайте объект <xref:Microsoft.SqlServer.Management.Common.ServerConnection> из шага 1.  
   
 3.  Чтобы изменить свойства, установите новое значение для одного из свойств <xref:Microsoft.SqlServer.Replication.DistributionPublisher> , которое можно установить (необязательно).  
   
@@ -166,7 +167,7 @@ ms.locfileid: "68769261"
   
 1.  Создайте соединение с распространителем с помощью класса <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.ReplicationServer> .  
+2.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.ReplicationServer>.  
   
 3.  В свойстве <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> укажите созданное на шаге 1 соединение.  
   
@@ -181,7 +182,7 @@ ms.locfileid: "68769261"
   
     1.  Создайте соединение с издателем с помощью класса <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-    2.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.ReplicationServer> .  
+    2.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.ReplicationServer>.  
   
     3.  Укажите в качестве свойства <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> соединение, созданное в шаге 6a.  
   

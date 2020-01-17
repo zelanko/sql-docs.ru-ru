@@ -1,7 +1,7 @@
 ---
 title: Инициализация группы доступности с помощью автоматического заполнения
-description: Автоматическое создание вторичных реплик для каждой базы данных в группе доступности Always On с помощью автоматического заполнения.
-ms.custom: seodec18
+description: Используйте автоматическое заполнение, чтобы автоматически создавать вторичные реплики для каждой базы данных в группе доступности Always On без резервного копирования и восстановления вручную.
+ms.custom: seo-lt-2019
 ms.date: 03/26/2018
 ms.prod: sql
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 67c6a601-677a-402b-b3d1-8c65494e9e96
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: fde90e8f64194265a74f866e27e4b2ef4a406d14
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 38bbab7ea9ae6aa7ddd70ede2161988c01431573
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67991580"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75254089"
 ---
 # <a name="use-automatic-seeding-to-initialize-an-always-on-availability-group"></a>Инициализация группы доступности Always On с помощью автоматического заполнения
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -216,7 +216,7 @@ GO
 
 В таблице ниже перечислены расширенные события, связанные с автоматическим заполнением. 
 
-| Имя | Описание|
+| Имя | Description|
 |------------ |---------------| 
 |hadr_db_manager_seeding_request_msg |  Заполнение сообщения запроса.
 |hadr_physical_seeding_backup_state_change |    Изменение состояния на стороне резервного копирования при физическом заполнении.

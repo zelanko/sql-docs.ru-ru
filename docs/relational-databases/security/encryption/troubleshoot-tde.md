@@ -1,29 +1,30 @@
 ---
-title: Распространенные ошибки с прозрачным шифрованием данных (TDE) с использованием управляемых клиентом ключей в Azure Key Vault | Документация Майкрософт
-description: Устранение неполадок с прозрачным шифрованием данных (TDE) с использованием конфигурации Azure Key Vault.
+title: Распространенные ошибки при использовании управляемых клиентом ключей в Azure Key Vault
+description: Устранение распространенных ошибок с прозрачным шифрованием данных (TDE) и управляемыми клиентом ключами в Azure Key Vault.
+ms.custom: seo-lt-2019
 helpviewer_keywords:
 - troublshooting, tde akv
 - tde akv configuration, troubleshooting
 - tde troubleshooting
-author: aliceku
+author: jaszymas
 ms.prod: sql
 ms.technology: security
 ms.reviewer: vanto
 ms.topic: conceptual
 ms.date: 11/06/2019
-ms.author: aliceku
+ms.author: jaszymas
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 308cc4189361c795115c061b871238aaba430279
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 40584dda23d36af385b9cae5457377838694be6e
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727764"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558472"
 ---
 # <a name="common-errors-for-transparent-data-encryption-with-customer-managed-keys-in-azure-key-vault"></a>Распространенные ошибки с прозрачным шифрованием данных (TDE) с использованием управляемых клиентом ключей в Azure Key Vault
 
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md.md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
-В этой статье описывается, как выявить и устранить проблемы с доступом к ключу в Azure Key Vault, из-за которых база данных, настроенная на [использование прозрачного шифрования данных (TDE) с управляемыми клиентом ключами в Azure Key Vault](https://docs.microsoft.com/en-us/azure/sql-database/transparent-data-encryption-byok-azure-sql), стала недоступной.
+В этой статье описывается, как выявить и устранить проблемы с доступом к ключу в Azure Key Vault, из-за которых база данных, настроенная на [использование прозрачного шифрования данных (TDE) с управляемыми клиентом ключами в Azure Key Vault](/azure/sql-database/transparent-data-encryption-byok-azure-sql), стала недоступной.
 
 ## <a name="introduction"></a>Введение
 Если для TDE настроено использование управляемого клиентом ключа в Azure Key Vault, нужно обеспечить постоянный доступ к этому предохранителю TDE, чтобы база данных сохраняла подключение к сети.  Если логический сервер SQL Server потеряет доступ к управляемому клиентом предохранителю TDE в Azure Key Vault, база данных начнет блокировать все подключения с выводом соответствующего сообщения об ошибке, а ее состояние изменится на *Недоступна* на портале Azure.
@@ -83,7 +84,7 @@ _401 AzureKeyVaultNoServerIdentity. Удостоверение сервера н
  1. Нажмите кнопку **Добавить**, чтобы добавить AppId для сервера, созданного на предыдущем шаге. 
  1. Назначьте следующие разрешения ключей: Get, Wrap и Unwrap 
 
-Дополнительные сведения см. в руководстве по [назначению серверу удостоверения Azure Active Directory](https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql-configure?view=sql-server-2017&viewFallbackFrom=azuresqldb-current#step-1-assign-an-azure-ad-identity-to-your-server).
+Дополнительные сведения см. в руководстве по [назначению серверу удостоверения Azure Active Directory](/azure/sql-database/transparent-data-encryption-byok-azure-sql-configure#assign-an-azure-ad-identity-to-your-server).
 
 > [!IMPORTANT]
 > Если экземпляр логического сервера SQL Server был перемещен в другой клиент после начальной настройки TDE с Key Vault, шаг настройки удостоверения Azure AD следует повторить, чтобы создать новый идентификатор AppId. Затем добавьте AppId в хранилище ключей и назначьте правильные разрешения для ключа. 

@@ -1,20 +1,21 @@
 ---
-title: Начало работы с SQL Server в Red Hat Enterprise Linux
+title: RHEL. Установка SQL Server в Linux
 titleSuffix: SQL Server
-description: В этом кратком руководстве описано, как установить SQL Server 2017 или SQL Server 2019 в Red Hat Enterprise Linux, а затем создать базу данных и выполнить к ней запрос с помощью средства sqlcmd.
+description: В этом кратком руководстве описано, как установить SQL Server 2017 или SQL Server 2019 в Red Hat Enterprise Linux (RHEL), а затем создать базу данных и выполнить к ней запрос с помощью средства sqlcmd.
 author: VanMSFT
+ms.custom: seo-lt-2019
 ms.author: vanto
 ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 92503f59-96dc-4f6a-b1b0-d135c43e935e
-ms.openlocfilehash: b94ea0ef8956e7807f075da548ae817dc6a205df
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: b93ea834e890981d3fd45fd999a05ae5b2b68042
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531366"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558443"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-red-hat"></a>Краткое руководство. Установка SQL Server и создание базы данных в Red Hat
 
@@ -44,7 +45,7 @@ ms.locfileid: "73531366"
 
 Если вы ранее установили выпуск CTP или RC сервера SQL Server, необходимо удалить старый репозиторий, прежде чем выполнять эти действия. Дополнительные сведения см. в статье [Настройка репозиториев Linux для SQL Server 2017 и 2019](sql-server-linux-change-repo.md).
 
-Другие требования к системе см. в разделе [Требования к системе для SQL Server на Linux](sql-server-linux-setup.md#system).
+Сведения о других требованиях к системе см. в статье [Требования к системе для SQL Server на Linux](sql-server-linux-setup.md#system).
 
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"

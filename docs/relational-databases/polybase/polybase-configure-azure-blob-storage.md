@@ -1,6 +1,6 @@
 ---
-title: Настройка PolyBase для доступа к внешним данным в хранилище BLOB-объектов Azure
-ms.date: 04/23/2019
+title: 'Доступ к внешним данным: хранилище BLOB-объектов Azure — PolyBase'
+ms.date: 12/13/2019
 ms.prod: sql
 ms.technology: polybase
 ms.topic: conceptual
@@ -8,13 +8,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.custom: seo-dt-2019
-ms.openlocfilehash: 332187876562920ba1dfea4e57cc855f7d4a2876
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.custom: seo-dt-2019, seo-lt-2019
+ms.openlocfilehash: 680a8e28e807505f4824524a686f244621cb3dd0
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73659573"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258695"
 ---
 # <a name="configure-polybase-to-access-external-data-in-azure-blob-storage"></a>Настройка PolyBase для доступа к внешним данным в хранилище BLOB-объектов Azure
 
@@ -48,7 +48,7 @@ ms.locfileid: "73659573"
    - Служба перемещения данных SQL Server PolyBase  
    - Компонент SQL Server PolyBase Engine  
   
-   ![остановка и запуск служб PolyBase в services.msc](../../relational-databases/polybase/media/polybase-stop-start.png "остановка и запуск служб PolyBase в services.msc")  
+   ![остановка и запуск служб PolyBase в services.msc](../../relational-databases/polybase/media/polybase-stop-start.png "|::ref1::|")  
   
 ## <a name="configure-an-external-table"></a>Настройка внешней таблицы
 
@@ -192,7 +192,7 @@ WHERE T2.YearMeasured = 2009 and T2.Speed > 40;
   
 ![Объекты PolyBase в SSMS](media/polybase-management.png)  
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 В следующих статьях приведены дополнительные сведения о способах использования и мониторинга PolyBase.
 

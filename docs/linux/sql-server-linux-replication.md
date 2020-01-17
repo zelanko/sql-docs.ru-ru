@@ -4,24 +4,24 @@ description: В этой статье описана репликация SQL Se
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-ms.date: 10/17/2018
+ms.date: 12/09/2019
 ms.topic: article
 ms.prod: sql
 ms.prod_service: database-engine
 ms.technology: linux
-monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: b049866d9752485cb1b9eb609404a3bd86f28a41
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+monikerRange: '>=sql-server-2017||>=sql-server-linux-2017||=sqlallproducts-allversions'
+ms.openlocfilehash: f0e1acd5af76f5b0b075879fc1c5122713caed55
+ms.sourcegitcommit: 56fb0b7750ad5967f5d8e43d87922dfa67b2deac
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68065196"
+ms.lasthandoff: 12/11/2019
+ms.locfileid: "75002045"
 ---
 # <a name="sql-server-replication-on-linux"></a>Репликация SQL Server в Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-В версии [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] реализована возможность репликации SQL Server для экземпляров SQL Server на Linux.
+В версии [!INCLUDE[SQL Server 2017](../includes/sssqlv14-md.md)] ([накопительный пакет обновления 18](https://support.microsoft.com/help/4527377)) и более поздних реализована возможность репликации SQL Server для экземпляров SQL Server на Linux.
 
 Для настройки репликации в Linux используйте [хранимые процедуры репликации](../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md) QL Server Management Studio (SSMS).
 
@@ -35,20 +35,17 @@ ms.locfileid: "68065196"
 
 Экземпляры SQL Server на Linux могут участвовать в репликации любого типа.
 
-* Транзакционная
-* Объединить
+* Транзакционную
 * Моментальный снимок
 
 Дополнительные сведения о репликации см. в разделе [Документация по репликации SQL Server](../relational-databases/replication/sql-server-replication.md).
 
 ## <a name="supported-features"></a>Поддерживаемые функции
 
-Для [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] поддерживаются следующие функции репликации.
+Поддерживаются следующие функции репликации:
 
 * репликация моментальных снимков;
 * Репликация транзакций
-* Репликация слиянием
-* Одноранговая репликация
 * Репликация с использованием портов, отличных от портов по умолчанию <!--Add link to explanation-->
 * Репликация с проверкой подлинности AD
 * Конфигурации репликации на базе Windows и Linux
@@ -56,12 +53,13 @@ ms.locfileid: "68065196"
 
 ## <a name="limitations"></a>Ограничения
 
-[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] не поддерживает следующие функции.
+Следующие возможности не поддерживаются:
 
-* Немедленное обновление для подписчиков
+* Репликация слиянием
+* Одноранговая репликация
 * публикация Oracle
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 [Настройка репликации SQL Server в Linux](sql-server-linux-replication-tutorial-tsql.md)
 

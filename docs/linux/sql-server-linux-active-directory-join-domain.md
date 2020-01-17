@@ -9,12 +9,12 @@ ms.date: 04/01/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 90a2bcdac4fd1870adc4eeaa888b906857ef9854
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.openlocfilehash: 9bc52bc1708d4ca6e06e5cc78399e12615860d27
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/14/2019
-ms.locfileid: "72305277"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75224506"
 ---
 # <a name="join-sql-server-on-a-linux-host-to-an-active-directory-domain"></a>Присоединение SQL Server на узле Linux к домену Active Directory
 
@@ -178,7 +178,7 @@ ping contoso.com
 
    SQL Server использует SSSD и NSS для сопоставления учетных записей пользователей и групп с идентификаторами безопасности (SID). Для успешного создания имен входа в Active Directory нужно настроить и запустить SSSD для SQL Server. **realmd** обычно выполняет это автоматически при присоединении к домену, но в некоторых случаях это нужно делать отдельно.
 
-   Дополнительные сведения см. в статьях о [настройке SSSD вручную](https://access.redhat.com/articles/3023951) и [настройке NSS для работы с SSSD](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/system-level_authentication_guide/configuring_services#Configuration_Options-NSS_Configuration_Options).
+   Дополнительные сведения см. в статьях о [настройке SSSD вручную](https://access.redhat.com/articles/3023951) и [настройке NSS для работы с SSSD](https://access.redhat.com/documentation/red_hat_enterprise_linux/7/html/system-level_authentication_guide/configuring_services#Configuration_Options-NSS_Configuration_Options).
 
 1. Убедитесь, что теперь вы можете собирать сведения о пользователе из домена и получить билет Kerberos от имени этого пользователя. В следующем примере для этого используются команды **id**, [kinit](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html) и [klist](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/klist.html).
 
@@ -237,6 +237,6 @@ host **<IP address of SQL Server host>**
 
 Выходные данные этой команды должны быть похожи на `**<reversed IP address>**.in-addr.arpa domain name pointer SqlHost.contoso.com`. Если эта команда не возвращает полное доменное имя узла или это имя неправильное, добавьте запись обратной записи DNS для узла SQL Server на базе Linux на DNS-сервер.
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 Эта статья описывает необходимые условия для настройки SQL Server на хост-компьютере Linux с проверкой подлинности Active Directory. Чтобы завершить настройку SQL Server на Linux для поддержки учетных записей Active Directory, следуйте инструкциям в статье [Использование проверки подлинности Active Directory с SQL Server на Linux](sql-server-linux-active-directory-authentication.md).

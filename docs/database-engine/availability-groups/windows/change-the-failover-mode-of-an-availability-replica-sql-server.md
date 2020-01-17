@@ -1,7 +1,7 @@
 ---
 title: Изменение режима отработки отказа для реплики в группе доступности
 description: Описывается, как изменить режим отработки отказа для реплики в группе доступности Always On с помощью Transact-SQL (T-SQL), PowerShell или SQL Server Management Studio.
-ms.custom: seodec18
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 619a826f-8e65-48eb-8c34-39497d238279
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 41c41beca0068c56f21d24d081b8e7f297968317
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4dd7de6af88d6fe5955c03f611a593869e19cfc0
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67991349"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75241822"
 ---
 # <a name="change-the-failover-mode-for-a-replica-within-an-always-on-availability-group"></a>Изменение режима отработки отказа для реплики в группе доступности Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

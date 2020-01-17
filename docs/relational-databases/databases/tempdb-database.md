@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 ms.reviewer: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a7a1f692abdb5f9ce1b9fd69c494f719b9027c22
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 46807e551052ca6da38fde744d9a1e9dd7c794b0
+ms.sourcegitcommit: ba44730f5cc33295ae2ed1f281186dd266bad4ef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909552"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74190152"
 ---
 # <a name="tempdb-database"></a>База данных tempdb
 
@@ -54,7 +54,7 @@ ms.locfileid: "72909552"
   
 |Файл|Логическое имя|Физическое имя|Начальный размер|Увеличение размера файлов|  
 |----------|------------------|-------------------|------------------|-----------------|  
-|Первичные данные|tempdev|tempdb.mdf|8 МБ|Автоматическое увеличение на 64 МБ до заполнения диска.|  
+|Первичные данные|tempdev|tempdb.mdf|8 МБ|Автоматическое увеличение на 64 МБ до заполнения диска.|  
 |Вторичные файлы данных*.|temp#|tempdb_mssql_ # .ndf|8 МБ|Автоматическое увеличение на 64 МБ до заполнения диска.|  
 |Журнал|templog|templog.ldf|8 МБ|Автоматическое увеличение на 64 МБ до максимального размера в 2 ТБ.|  
   
@@ -95,10 +95,10 @@ ms.locfileid: "72909552"
 |MIXED_PAGE_ALLOCATION|OFF|нет|  
 |NUMERIC_ROUNDABORT|OFF|Да|  
 |PAGE_VERIFY|Значение CHECKSUM для новых установок [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> Значение NONE для обновлений [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|Да|  
-|PARAMETERIZATION|SIMPLE|Да|  
+|PARAMETERIZATION|ПРОСТОЙ|Да|  
 |QUOTED_IDENTIFIER|OFF|Да|  
 |READ_COMMITTED_SNAPSHOT|OFF|нет|  
-|RECOVERY|SIMPLE|нет|  
+|RECOVERY|ПРОСТОЙ|нет|  
 |RECURSIVE_TRIGGERS|OFF|Да|  
 |Параметры компонента Service Broker|ENABLE_BROKER|Да|  
 |TRUSTWORTHY|OFF|нет|  
@@ -214,7 +214,14 @@ GO
 [TEMPDB — Files and Trace Flags and Updates, Oh My!](https://blogs.msdn.microsoft.com/sql_server_team/tempdb-files-and-trace-flags-and-updates-oh-my/) (TEMPDB — файлы, флаги трассировки и обновления)
 
 ## <a name="memory-optimized-tempdb-metadata"></a>Оптимизированные для памяти метаданные TempDB
-Состязание метаданных TempDB всегда было узким местом для масштабируемости многих рабочих нагрузок, выполняющихся в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. В [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] появилась новая функция из семейства функций для [выполняющейся в памяти базы данных](../in-memory-database.md): оптимизированные для памяти метаданные TempDB. В сущности это позволяет устранить узкие места и обеспечить новый уровень масштабируемости для рабочих нагрузок, активно использующих TempDB. В [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] системные таблицы, связанные с управлением метаданными временных таблиц, можно переместить в неустойчивые таблицы без кратковременной блокировки, оптимизированные для памяти. Чтобы согласиться на эту новую функцию, используйте следующий скрипт:
+Состязание метаданных TempDB всегда было узким местом для масштабируемости многих рабочих нагрузок, выполняющихся в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. В [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] появилась новая функция из семейства функций для [выполняющейся в памяти базы данных](../in-memory-database.md): оптимизированные для памяти метаданные TempDB. В сущности это позволяет устранить узкие места и обеспечить новый уровень масштабируемости для рабочих нагрузок, активно использующих TempDB. В [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] системные таблицы, связанные с управлением метаданными временных таблиц, можно переместить в неустойчивые таблицы без кратковременной блокировки, оптимизированные для памяти.
+
+Просмотрите это 7-минутное видео, чтобы получить общие сведения о том, как и когда следует использовать метаданные TempDB, оптимизированные для операций в памяти:
+
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/How-and-When-To-Memory-Optimized-TempDB-Metadata/player?WT.mc_id=dataexposed-c9-niner]
+
+
+Чтобы согласиться на эту новую функцию, используйте следующий скрипт:
 
 ```sql
 ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED TEMPDB_METADATA = ON 

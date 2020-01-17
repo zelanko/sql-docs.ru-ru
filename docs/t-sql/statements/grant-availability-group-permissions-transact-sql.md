@@ -1,6 +1,8 @@
 ---
-title: GRANT, предоставление разрешений на группу доступности (Transact-SQL) | Документы Майкрософт
-ms.custom: ''
+title: GRANT (разрешения на группу доступности)
+description: Предоставляет разрешения на группу доступности Always On.
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: seo-lt-2019
 ms.date: 06/12/2017
 ms.prod: sql
 ms.prod_service: sql-database
@@ -17,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 060eb839-666a-4046-9e1d-5edc9ea75a11
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 15f7c220cbf167c91e052c18d61b2c0c579ea63e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0a9954e823ae66017c3a6105f0f0ec27964b7043
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68065550"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75246165"
 ---
 # <a name="grant-availability-group-permissions-transact-sql"></a>GRANT (предоставление) разрешений группы доступности (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -117,7 +119,7 @@ GO
 ```  
   
 ### <a name="c-granting-control-permission-on-an-availability-group"></a>В. Предоставление разрешения CONTROL для группы доступности  
- Следующий код предоставляет разрешение  `CONTROL` в группе доступности `MyAg` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] пользователю `PKomosinski`. Разрешение CONTROL дает пользователю полный контроль над группой доступности, даже если он не является владельцем группы доступности. Инструкции по изменению владельца базы данных см. в статье [ALTER AUTHORIZATION (Transact-SQL)](../../t-sql/statements/alter-authorization-transact-sql.md).  
+ Следующий код предоставляет разрешение  `CONTROL` в группе доступности `MyAg`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] пользователю `PKomosinski`. Разрешение CONTROL дает пользователю полный контроль над группой доступности, даже если он не является владельцем группы доступности. Инструкции по изменению владельца базы данных см. в статье [ALTER AUTHORIZATION (Transact-SQL)](../../t-sql/statements/alter-authorization-transact-sql.md).  
   
 ```  
 USE master;  
@@ -130,7 +132,7 @@ GO
  [DENY, запрет разрешений на группу доступности (Transact-SQL)](../../t-sql/statements/deny-availability-group-permissions-transact-sql.md)   
  [CREATE AVAILABILITY GROUP (Transact-SQL)](../../t-sql/statements/create-availability-group-transact-sql.md)   
  [sys.availability_groups (Transact-SQL)](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md)   
- [Представления каталога групп доступности AlwaysOn (Transact-SQL) ](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md) [Разрешения (ядро СУБД)](../../relational-databases/security/permissions-database-engine.md)   
+ [Представления каталога групп доступности AlwaysOn &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md) [Разрешения &#40;ядро СУБД&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [Участники (компонент Database Engine)](../../relational-databases/security/authentication-access/principals-database-engine.md)  
   
   

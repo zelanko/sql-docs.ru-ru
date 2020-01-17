@@ -1,6 +1,7 @@
 ---
-title: Настройка групп доступности Always On и экземпляров отказоустойчивого кластера для конфигураций с несколькими подсетями в Linux
-description: ''
+title: Настройка групп доступности и экземпляров отказоустойчивого кластера с несколькими подсетями (Linux)
+description: Узнайте, как настроить группы доступности Always On и экземпляры отказоустойчивого кластера в конфигурации с несколькими подсетями для SQL Server на Linux.
+ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -8,12 +9,12 @@ ms.date: 12/01/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 2fc848c30af32e5ff2a81ebadf4378b75ff5a521
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: f35f1916107e8ede0e7bf7cc3df483a0c33f3355
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68077591"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558616"
 ---
 # <a name="configure-multiple-subnet-always-on-availability-groups-and-failover-cluster-instances"></a>Настройка групп доступности Always On и экземпляров отказоустойчивого кластера для конфигураций с несколькими подсетями
 

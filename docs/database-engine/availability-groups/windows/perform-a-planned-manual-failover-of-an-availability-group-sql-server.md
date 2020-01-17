@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 419f655d-3f9a-4e7d-90b9-f0bab47b3178
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: daa68b80718903051fdb2cfd9dd8b15b64b68b23
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2346c770c5fec742d7c5805f028bd87bebaf71b1
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014595"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822492"
 ---
 # <a name="perform-a-planned-manual-failover-of-an-always-on-availability-group-sql-server"></a>Выполнение планового перехода на другой ресурс вручную для группы доступности Always On (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "68014595"
 -   Целевая вторичная реплика сейчас должна быть синхронизирована с первичной репликой. Все базы данных — получатели в этой вторичной реплике должны быть подключены к группе доступности. Они также должны быть синхронизированы с соответствующими базами данных — источниками (то есть локальные базы данных — получатели должны быть в состоянии SYNCHRONIZED). 
   
     > [!TIP] 
-    >  Чтобы определить готовность вторичной реплики к отработке отказа, запросите столбец **is_failover_ready** в динамическом административном представлении [sys.dm_hadr_database_cluster_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-cluster-states-transact-sql.md). Либо проверьте значение столбца **Готовность к отработке отказа** в [панели мониторинга группы AlwaysOn](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md). 
+    >  Чтобы определить готовность вторичной реплики к отработке отказа, запросите столбец **is_failover_ready** в динамическом административном представлении [sys.dm_hadr_database_replica_cluster_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-cluster-states-transact-sql.md). Либо проверьте значение столбца **Готовность к отработке отказа** в [панели мониторинга группы AlwaysOn](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md). 
 -   Эта задача поддерживается только в целевой вторичной реплике. Необходимо подключиться к экземпляру сервера, на котором размещается целевая вторичная реплика. 
   
 ###  <a name="Security"></a> безопасность 

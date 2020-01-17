@@ -1,6 +1,7 @@
 ---
-title: Средство просмотра конфликтов репликации (Майкрософт) (репликация транзакций) | Документация Майкрософт
-ms.custom: ''
+title: Средство просмотра конфликтов репликации (одноранговой)
+description: Узнайте о средстве просмотра конфликтов репликации и о том, как его использовать для просмотра конфликтов одноранговой репликации транзакций и репликации транзакций с подписками, обновляемыми посредством очередей.
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -13,14 +14,14 @@ ms.assetid: eec59d8e-cadb-4623-a31f-9f42ec09c97f
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 61d78e20a51d3a2c28af9cb19a845248d73b5a28
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 39be2638f1d85e610e5898f9a4c33c7129764424
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770583"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321529"
 ---
-# <a name="microsoft-replication-conflict-viewer-transactional-replication"></a>Средство просмотра конфликтов репликации Майкрософт (репликация транзакций)
+# <a name="replication-conflict-viewer-transactional-replication"></a>Средство просмотра конфликтов репликации (репликация транзакций)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Средство просмотра конфликтов репликации позволяет просматривать конфликты, возникшие во время синхронизации для одноранговой репликации транзакций и репликации транзакций с подписками, обновляемыми посредством очередей. Дополнительные сведения см. в статье [Просмотр конфликтов данных для публикаций транзакций (среда SQL Server Management Studio)](../../relational-databases/replication/view-data-conflicts-for-transactional-publications-sql-server-management-studio.md).  
   

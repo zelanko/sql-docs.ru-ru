@@ -1,6 +1,7 @@
 ---
-title: Экземпляры зеркального отображения баз данных и отказоустойчивых кластеров (SQL Server) | Документы Майкрософт
-ms.custom: ''
+title: Зеркальное отображение баз данных и экземпляры отказоустойчивых кластеров
+description: Узнайте о сочетании зеркального отображения баз данных и экземпляров отказоустойчивых кластеров SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.prod_service: high-availability
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f1dd6a79-698b-4e31-b923-6bfc3ea0b617
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 760994c4b8b9ed137e9e0d221e2f473c5fdbdb70
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 04d0864d07eeb741690df26fb9aee02c3f0bc547
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006444"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75254174"
 ---
 # <a name="database-mirroring-and-sql-server-failover-cluster-instances"></a>Экземпляры зеркального отображения баз данных и отказоустойчивых кластеров (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

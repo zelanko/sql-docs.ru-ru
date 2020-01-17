@@ -1,7 +1,7 @@
 ---
-title: Определение логического устройства резервного копирования для дискового файла (SQL Server) | Документация Майкрософт
-ms.custom: ''
-ms.date: 03/14/2017
+title: Определение логического устройства резервного копирования — диск
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 86331d43-c738-4523-ae3d-7d6700348ed1
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: c82c06e2d519b5ae51a08312ae69e97b873ed532
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6f628da66345668768aae1fe2de29596082ae6fa
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68075971"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75255937"
 ---
 # <a name="define-a-logical-backup-device-for-a-disk-file-sql-server"></a>Определение логического устройства резервного копирования для дискового файла (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "68075971"
   
      [Рекомендации](#Recommendations)  
   
-     [безопасность](#Security)  
+     [Безопасность](#Security)  
   
 -   **Определение логического устройства резервного копирования для дискового файла с помощью:**  
   
@@ -64,7 +64,7 @@ ms.locfileid: "68075971"
   
 #### <a name="to-define-a-logical-backup-device-for-a-disk-file"></a>Определение логического устройства резервного копирования для дискового файла  
   
-1.  После соединения с соответствующим экземпляром компонента [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]в обозревателе объектов разверните дерево сервера, щелкнув его имя.  
+1.  После подключения к соответствующему экземпляру [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] в обозревателе объектов разверните дерево сервера, щелкнув его имя.  
   
 2.  Разверните **Объекты сервера**и щелкните правой кнопкой мыши **Устройства резервного копирования**.  
   

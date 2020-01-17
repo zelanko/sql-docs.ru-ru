@@ -1,6 +1,7 @@
 ---
-title: Использование диалогового окна "Создание группы доступности" (SQL Server Management Studio) | Документы Майкрософт
-ms.custom: ''
+title: Диалоговое окно "Создание группы доступности" в SSMS
+description: Этот раздел содержит сведения об использовании диалогового окна "Создание группы доступности" в среде SQL Server Management Studio для настройки группы доступности Always On.
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1b0a6421-fbd4-4bb4-87ca-657f4782c433
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 556a0442a64caa5bcbcab98933650da93b4e410b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2c53998ea56c02e43a62573b31767c1beea78a8d
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68013472"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74821951"
 ---
 # <a name="use-the-new-availability-group-dialog-box-sql-server-management-studio"></a>Используйте диалоговое окно «Создание группы доступности» (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,9 +32,9 @@ ms.locfileid: "68013472"
   
 ##  <a name="PrerequisitesRestrictions"></a> Предварительные требования  
   
--   Перед созданием группы доступности необходимо, чтобы экземпляры [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , на которых находятся реплики доступности, были расположены на различных узлах одной отказоустойчивой кластеризации Windows Server (WSFC). Кроме того, убедитесь, что каждый из экземпляров сервера включен для [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] и соответствует всем другим обязательным условиям [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] . Для получения дополнительных сведений настоятельно рекомендуется раздел [Prerequisites, Restrictions, and Recommendations for Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
+-   Перед созданием группы доступности необходимо, чтобы экземпляры [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , на которых находятся реплики доступности, были расположены на различных узлах одной отказоустойчивой кластеризации Windows Server (WSFC). Кроме того, убедитесь, что каждый из экземпляров сервера включен для [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] и соответствует всем другим обязательным условиям [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] . Для получения дополнительных сведений настоятельно рекомендуется изучить раздел [Предварительные требования, ограничения и рекомендации для групп доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
--   До создания группы доступности убедитесь, что на каждом экземпляре сервера, на котором будет размещаться реплика доступности, имеется полностью работоспособная конечная точка зеркального отображения базы данных. Дополнительные сведения см. в статье [Конечная точка зеркального отображения базы данных (SQL Server)](../../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md).  
+-   До создания группы доступности убедитесь, что на каждом экземпляре сервера, на котором будет размещаться реплика доступности, имеется полностью работоспособная конечная точка зеркального отображения базы данных. Дополнительные сведения см. в разделе [Конечная точка зеркального отображения базы данных (SQL Server)](../../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md).  
   
 -   Для использования диалогового окна **Создание группы доступности** необходимы сведения об именах экземпляров сервера, в которых будут размещаться реплики доступности. Также необходимы сведения об именах всех баз данных, которые необходимо добавить к новой группе доступности, а также нужно убедиться, что эти базы данных соответствуют необходимым условиям и ограничениям баз данных доступности, описанным в статье [Предварительные требования, ограничения и рекомендации для групп доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md). Если ввести недопустимые значения, новая группа доступности не будет работать.  
   
@@ -79,13 +80,13 @@ ms.locfileid: "68013472"
   
 -   Потребуется поочередное подключение ко всем экземплярам сервера, на которых размещается вторичная реплика для группы доступности, и выполнение следующих действий:  
   
-    1.  Присоединение новой вторичной реплики к группе доступности. Дополнительные сведения см. в статье [Присоединение вторичной реплики к группе доступности (SQL Server)](../../../database-engine/availability-groups/windows/join-a-secondary-replica-to-an-availability-group-sql-server.md).  
+    1.  Присоединение новой вторичной реплики к группе доступности. Дополнительные сведения см. в разделе [Присоединение вторичной реплики к группе доступности (SQL Server)](../../../database-engine/availability-groups/windows/join-a-secondary-replica-to-an-availability-group-sql-server.md).  
   
-    2.  Восстановление текущих резервных копий всех баз данных-источников и их журналов транзакций (с помощью инструкции RESTORE WITH NORECOVERY). Дополнительные сведения см. в статье [Подготовка базы данных-получателя для присоединения к группе доступности вручную (SQL Server)](../../../database-engine/availability-groups/windows/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md).  
+    2.  Восстановление текущих резервных копий всех баз данных-источников и их журналов транзакций (с помощью инструкции RESTORE WITH NORECOVERY). Дополнительные сведения см. в статье [Ручная подготовка базы данных-получателя для присоединения к группе доступности (SQL Server)](../../../database-engine/availability-groups/windows/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md).  
   
     3.  Все новые подготовленные базы данных-получатели немедленно присоединяются к группе доступности. Дополнительные сведения см. в статье [Присоединение базы данных-получателя к группе доступности (SQL Server)](../../../database-engine/availability-groups/windows/join-a-secondary-database-to-an-availability-group-sql-server.md).  
   
--   Для новой группы доступности рекомендуется создать прослушиватель группы доступности. Для этого необходимо подключиться к экземпляру сервера, на котором размещена текущая первичная реплика. Дополнительные сведения см. в статье [Создание или настройка прослушивателя группы доступности (SQL Server)](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md).  
+-   Для новой группы доступности рекомендуется создать прослушиватель группы доступности. Для этого необходимо подключиться к экземпляру сервера, на котором размещена текущая первичная реплика. Дополнительные сведения см. в разделе [Создание или настройка прослушивателя группы доступности (SQL Server)](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md).  
   
 ##  <a name="RelatedTasks"></a> Связанные задачи  
  **Настройка свойств группы доступности и реплики**  
@@ -138,7 +139,7 @@ ms.locfileid: "68013472"
   
 -   [Использование сертификатов для конечной точки зеркального отображения базы данных (Transact-SQL)](../../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)  
   
--   [Указание URL-адреса конечной точки при добавлении или изменении реплики доступности (SQL Server)](../../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)  
+-   [Укажите URL-адрес конечной точки при добавлении или изменении реплики доступности (SQL Server)](../../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)  
   
  **Устранение неполадок с конфигурацией групп доступности AlwaysOn**  
   

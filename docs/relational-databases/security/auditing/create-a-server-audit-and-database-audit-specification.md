@@ -1,6 +1,7 @@
 ---
-title: Создание аудита сервера и спецификаций для аудита базы данных | Документация Майкрософт
-ms.custom: ''
+title: Создание спецификации аудита для сервера и базы данных
+description: Узнайте, как создать спецификацию аудита SQL Server и базы данных с помощью SQL Server Management Studio или Transact-SQL (T-SQL)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: security
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 26ee85de-6e97-4318-b526-900924d96e62
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 06ccedc97905180f75369d89fc7bc1ca49175c59
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: d9ab1fa97653513d18c43b916ca5bfbc2105e8e7
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72903867"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75557879"
 ---
 # <a name="create-a-server-audit-and-database-audit-specification"></a>Создание спецификация аудита для сервера и базы данных
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "72903867"
   
      [Ограничения](#Restrictions)  
   
-     [безопасность](#Security)  
+     [Безопасность](#Security)  
   
 -   **Создание аудита сервера и спецификация аудита базы данных**  
   

@@ -1,6 +1,8 @@
 ---
-title: Параметры инструкции ALTER DATABASE для файлов и файловых групп (Transact-SQL) | Документы Майкрософт
-ms.custom: ''
+title: 'ALTER DATABASE: файлы и файловые группы'
+description: Обновление файлов и файловых групп базы данных с помощью Transact-SQL.
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: seo-lt-2019
 ms.date: 02/21/2019
 ms.prod: sql
 ms.prod_service: sql-database
@@ -42,12 +44,12 @@ ms.assetid: 1f635762-f7aa-4241-9b7a-b51b22292b07
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 9c8c9e59e0234dc81fb9de9ded733d369dbdda4d
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: 0eae7e7f1a0a673138b58440ee9c5c8d0b6f20bc
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73982839"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244429"
 ---
 # <a name="alter-database-transact-sql-file-and-filegroup-options"></a>Параметры инструкции ALTER DATABASE для файлов и файловых групп (Transact-SQL)
 
@@ -63,7 +65,7 @@ ms.locfileid: "73982839"
 
 |||
 |-|-|-|
-|**\* _SQL Server \*_** &nbsp;|[Управляемый экземпляр Базы данных SQL<br />](alter-database-transact-sql-file-and-filegroup-options.md?view=azuresqldb-mi-current)|
+|**_\* SQL Server \*_** &nbsp;|[Управляемый экземпляр Базы данных SQL<br />](alter-database-transact-sql-file-and-filegroup-options.md?view=azuresqldb-mi-current)|
 |||
 
 &nbsp;
@@ -284,7 +286,7 @@ DEFAULT — изменяет стандартную файловую групп
 
 NAME = *new_filegroup_name* — изменяет имя файловой группы на *new_filegroup_name*.
 
-AUTOGROW_SINGLE_FILE — **применимо к** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и выше)
+AUTOGROW_SINGLE_FILE — **применимо к**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и выше)
 
 Если файл в файловой группе удовлетворяет требованиям порога автоматического увеличения, увеличивается только этот файл. Это значение по умолчанию.
 
@@ -310,7 +312,7 @@ READ_ONLY | READONLY — определяет, что файловая груп
 - в базах данных, находящихся в состоянии только для чтения, невозможны блокировки. Это может привести к более быстрому выполнению запросов.
 
 > [!NOTE]
-> Ключевое слово `READONLY` будет удалено в будущей версии [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Избегайте применять `READONLY` в новых разработках и запланируйте внесение изменений в приложения, использующие `READONLY` в настоящее время. Вместо этого используйте `READ_ONLY` .
+> Ключевое слово `READONLY` будет удалено в будущей версии [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Избегайте применять `READONLY` в новых разработках и запланируйте внесение изменений в приложения, использующие `READONLY` в настоящее время. Используйте вместо этого `READ_ONLY`.
 
 READ_WRITE | READWRITE — определяет, что файловая группа доступна для чтения и записи. Разрешено изменять объекты в файловой группе. Чтобы изменить это состояние, необходимо обладать монопольным доступом к базе данных. Дополнительные сведения см. в описании предложения SINGLE_USER.
 
@@ -336,7 +338,7 @@ READ_WRITE | READWRITE — определяет, что файловая гру
 
 Параметры SIZE и FILEGROWTH невозможно задать для файловых групп, оптимизированных для памяти.
 
-Ключевое слово `READONLY` будет удалено в будущей версии [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Избегайте использовать `READONLY` в новых разработках и запланируйте изменение приложений, которые используют READONLY в настоящее время. Вместо этого используйте `READ_ONLY` .
+Ключевое слово `READONLY` будет удалено в будущей версии [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Избегайте использовать `READONLY` в новых разработках и запланируйте изменение приложений, которые используют READONLY в настоящее время. Используйте вместо этого `READ_ONLY`.
 
 Ключевое слово `READWRITE` будет удалено в будущей версии [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Избегайте применять `READWRITE` в новых разработках и запланируйте изменить приложения, использующие в настоящее время `READWRITE`, на использование `READ_WRITE`.
 
@@ -354,7 +356,7 @@ READ_WRITE | READWRITE — определяет, что файловая гру
 
 По умолчанию файлы данных и журналов инициализируются, заполняясь нулями, при выполнении одной из следующих операций:
 
-- Создание базы данных.
+- создавать базу данных;
 - добавление файлов к существующей базе данных;
 - увеличение размера существующего файла;
 - Восстановление базы данных или файловой группы.
@@ -681,7 +683,7 @@ GO
 
 > |||
 > |-|-|-|
-> |[SQL Server](alter-database-transact-sql-file-and-filegroup-options.md?view=sql-server-2017)|**_\* Управляемый экземпляр Базы данных SQL<br /> \*_**<br />&nbsp;|
+> |[SQL Server](alter-database-transact-sql-file-and-filegroup-options.md?view=sql-server-2017)|**_\* Управляемый экземпляр Базы данных SQL<br />\*_**<br />&nbsp;|
 
 &nbsp;
 

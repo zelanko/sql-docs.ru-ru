@@ -1,6 +1,7 @@
 ---
-title: Страница проверки (мастера групп доступности AlwaysOn) | Документы Майкрософт
-ms.custom: ''
+title: Мастер группы доступности. Страница «Проверка»
+description: В этом разделе описываются параметры, доступные на странице "Проверка" мастера групп доступности Always On.
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c8971556-240c-491a-bc86-9cc72f71a3dd
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 243109e2c9d93db71c59a852a594a411c40c47dd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f22ac0e249e693b7bcd102f6d9242c601e14331f
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68013456"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74821848"
 ---
 # <a name="validation-page-always-on-availability-group-wizards"></a>Страница проверки (мастера групп доступности AlwaysOn)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +38,7 @@ ms.locfileid: "68013456"
  **Результат**  
  Отображает один из следующих текстов гиперссылки. Дополнительные сведения данного шага проверки можно просмотреть, щелкнув гиперссылку.  
   
-|Результат|Описание|  
+|Результат|Description|  
 |------------|-----------------|  
 |**Ошибка**|Указывает, что шаг проверки выполнен неудачно. Щелкните ссылку, чтобы просмотреть сообщение об ошибке.|  
 |**Пропущено**|Указывает, что шаг проверки был пропущен, поскольку он не был отмечен в параметрах как необходимый. Щелкните ссылку для просмотра причины, по которой шаг был пропущен.|  

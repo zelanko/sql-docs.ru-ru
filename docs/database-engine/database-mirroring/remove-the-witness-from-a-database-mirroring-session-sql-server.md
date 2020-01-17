@@ -1,6 +1,7 @@
 ---
-title: Удаление следящего сервера из сеанса зеркального отображения базы данных (SQL Server) | Документы Майкрософт
-ms.custom: ''
+title: Удаление следящего сервера зеркального отображения базы данных
+description: Описывает, как удалить следящий сервер из сеанса зеркального отображения базы данных с помощью SQL Server Management Studio (SSMS) или Transact-SQL (T-SQL).
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f3ce7afc-8936-4d35-80ce-d0f8fbc318d3
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 75a0363d376a16a19fa0c4a07dd0ed2ad0e71fd2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8d4ecd428d8d9d76ff4e9a543321d461b3983708
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68025269"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822520"
 ---
 # <a name="remove-the-witness-from-a-database-mirroring-session-sql-server"></a>Удаление следящего сервера из сеанса зеркального отображения базы данных (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +30,7 @@ ms.locfileid: "68025269"
   
 -   **Перед началом работы**  
   
-     [безопасность](#Security)  
+     [Безопасность](#Security)  
   
 -   **Удаление следящего сервера с помощью:**  
   
@@ -54,7 +55,7 @@ ms.locfileid: "68025269"
   
 2.  Раскройте **Базы данных**и выберите базу данных, для которой нужно удалить следящий сервер.  
   
-3.  Щелкните базу данных правой кнопкой мыши, выберите пункт **Задачи**, а затем пункт **Зеркальное отображение**. Откроется страница **Зеркальное отображение** диалогового окна **Свойства базы данных** .  
+3.  Щелкните базу данных правой кнопкой мыши, выберите **Задачи**, а затем **Зеркальное отображение**. Откроется страница **Зеркальное отображение** диалогового окна **Свойства базы данных** .  
   
 4.  Чтобы удалить следящий сервер, удалите его сетевой адрес из поля **Следящий** .  
   
@@ -89,7 +90,7 @@ ms.locfileid: "68025269"
 -   Когда безопасность транзакций отключена, сеанс работает асинхронно (в режиме высокой производительности), не требуя кворума. При отключенной безопасности транзакций настоятельно рекомендуется также отключить следящий сервер.  
   
 > [!TIP]  
->  Параметры безопасности транзакций для каждого участника в экземпляре сервера доступны через представление каталога [sys.database_mirroring](../../relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md) в столбцах **mirroring_safety_level** и **mirroring_safety_level_desc** .  
+>  Параметры безопасности транзакций для каждого участника на экземпляре сервера доступны через представление каталога [sys.database_mirroring](../../relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md), в столбцах **mirroring_safety_level** и **mirroring_safety_level_desc**.  
   
 ##  <a name="RelatedTasks"></a> Связанные задачи  
   

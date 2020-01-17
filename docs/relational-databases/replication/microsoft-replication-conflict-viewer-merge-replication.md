@@ -1,6 +1,7 @@
 ---
-title: Средство просмотра конфликтов репликации (Майкрософт) (репликация слиянием) | Документация Майкрософт
-ms.custom: ''
+title: Средство просмотра конфликтов репликации (слияние)
+description: Описание средства просмотра конфликтов репликации, используемого для репликации слиянием в SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: bfef5e21-ac04-4bc5-a55e-595421e34923
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: dc4df167c1bc8cf68edf062b294022247041f0b0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0707cfc193d4d3e1e11ecb724d2012aee2d315c4
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68025810"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321961"
 ---
 # <a name="microsoft-replication-conflict-viewer-merge-replication"></a>Средство просмотра конфликтов репликации Microsoft (репликация слиянием)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

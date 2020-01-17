@@ -1,6 +1,7 @@
 ---
-title: Некоторые синхронные реплики не синхронизированы | Документы Майкрософт
-ms.custom: ''
+title: Некоторые синхронные реплики не синхронизированы
+description: Описание некоторых возможных причин и решений в случае, когда синхронная реплика не синхронизируется для группы доступности Always On
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e58ed56e-4c30-42e6-a9fc-a8c401620e02
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d091cb3151daf161818124d6b4473637355a3674
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 494d772f7eff9ccf8ba9783885d5c62e49fddbbe
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014029"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822596"
 ---
 # <a name="some-synchronous-replicas-are-not-synchronized"></a>Некоторые синхронные реплики не синхронизированы
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +33,7 @@ ms.locfileid: "68014029"
 |**Категория**|**Предупреждение**|  
 |**Аспект**|группа доступности|  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Description  
  Эта политика сворачивает состояние синхронизации данных всех реплик доступности и проверяет наличие реплик доступности, состояние синхронизации которых отличается от ожидаемого. Политика находится в неисправном состоянии, если любая асинхронная реплика не находится в состоянии SYNCHRONIZING, а любая синхронная реплика не находится в состоянии SYNCHRONIZED. Состояние политики исправно при других условиях.  
   
 > [!NOTE]  

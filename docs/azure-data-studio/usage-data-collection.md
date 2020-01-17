@@ -8,14 +8,14 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu; sstein
-ms.custom: seodec18
+ms.custom: seodec18; seo-lt-2019
 ms.date: 09/24/2018
-ms.openlocfilehash: 71ed86e9ad076a41099eaf4e56fe67a25b5f2c21
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 416c22aa04e289e7959e41924344666e4329ecf1
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67958948"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957008"
 ---
 # <a name="enable-or-disable-usage-data-collection-for-includename-sosincludesname-sos-shortmd"></a>Включение или отключение сбора данных об использовании для [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
@@ -25,7 +25,7 @@ ms.locfileid: "67958948"
 
 Если вы не хотите отправлять данные об использовании в Майкрософт, можно задать для параметра *telemetry.enableTelemetry* значение *false*.
 
-Чтобы отключить все события телеметрии из [!INCLUDE[name-sos](../includes/name-sos-short.md)], добавьте следующий параметр в разделе **Файл**  >  **Настройки**  >  **Параметры**.
+Чтобы отключить все события телеметрии из [!INCLUDE[name-sos](../includes/name-sos-short.md)], добавьте следующий параметр в разделе **Файл** > **Настройки** > **Параметры**.
 
 ```json
     "telemetry.enableTelemetry": false
@@ -35,7 +35,7 @@ ms.locfileid: "67958948"
 
 ## <a name="how-to-disable-crash-reporting"></a>Отключение отчетов о сбоях
 
-Чтобы отключить отчеты о сбоях, добавьте следующий параметр в разделе **Файл**  >  **Настройки**  >  **Параметры**.
+Чтобы отключить отчеты о сбоях, добавьте следующий параметр в разделе **Файл** > **Настройки** > **Параметры**.
 
 ```json
     "telemetry.enableCrashReporter": false

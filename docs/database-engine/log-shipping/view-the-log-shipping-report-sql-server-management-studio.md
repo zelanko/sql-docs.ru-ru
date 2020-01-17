@@ -1,6 +1,7 @@
 ---
-title: Просмотр отчета доставки журналов (среда SQL Server Management Studio) | Документы Майкрософт
-ms.custom: ''
+title: Просмотр отчета о доставке журналов (SSMS)
+description: Узнайте, как просмотреть отчет о доставке журналов с помощью графического интерфейса SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: 03/04/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3b549f2f-3683-45e5-b8e8-8095276c41ab
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 97a0255f25c1aba95247a0df797d2460e98eb9e6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: de5a925e9d583d1263fb8b99ebca2f8edac51165
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68020783"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258565"
 ---
 # <a name="view-the-log-shipping-report-sql-server-management-studio"></a>просмотреть отчет доставки журналов (среда SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

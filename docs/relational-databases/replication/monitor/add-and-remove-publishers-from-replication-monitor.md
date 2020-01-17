@@ -1,6 +1,7 @@
 ---
-title: Добавление и удаление издателей в мониторе репликации | Документация Майкрософт
-ms.custom: ''
+title: Добавление и удаление издателей в мониторе репликации (SSMS)
+description: Узнайте, как добавлять и удалять издателей из монитора репликации в SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,12 +14,12 @@ ms.assetid: fa36c4b4-bfa5-494e-92e3-07a02d7332c3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 28d0a979e6cf4d76dd338f139f5c48887aed988e
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: d46f710bfae73527f414017108954bf4e9129f8f
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770690"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75320774"
 ---
 # <a name="add-and-remove-publishers-from-replication-monitor"></a>Добавление и удаление издателей в мониторе репликации
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -48,7 +49,7 @@ ms.locfileid: "68770690"
   
 2.  В диалоговом окне **Добавление издателя** щелкните **Добавить**, а затем — **Добавить издатель Oracle**.  
   
-3.  В диалоге **Соединение с сервером** введите имя распространителя [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , связанного с издателем Oracle, а затем выберите тип проверки подлинности. Если выбран параметр **Проверка подлинности SQL Server**, введите имя и пароль. Указанные учетные данные сохраняются монитором репликации для последующего использования при соединении с этим сервером. Учетная запись Windows или указанное имя входа в SQL Server должны быть членами предопределенной роли сервера **sysadmin** или предопределенной роли **replmonitor** базы данных в базе данных распространителя.  
+3.  В диалоге **Соединение с сервером** введите имя распространителя [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], связанного с издателем Oracle, а затем выберите тип проверки подлинности. Если выбран параметр **Проверка подлинности SQL Server**, введите имя и пароль. Указанные учетные данные сохраняются монитором репликации для последующего использования при соединении с этим сервером. Учетная запись Windows или указанное имя входа в SQL Server должны быть членами предопределенной роли сервера **sysadmin** или предопределенной роли **replmonitor** базы данных в базе данных распространителя.  
   
 4.  Нажмите кнопку **Соединить**.  
   

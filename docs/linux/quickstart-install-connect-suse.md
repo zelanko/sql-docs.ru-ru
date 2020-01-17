@@ -1,6 +1,5 @@
 ---
-title: Начало работы с SQL Server в SUSE Linux Enterprise Server
-titleSuffix: SQL Server
+title: SUSE. Установка SQL Server в Linux
 description: В этом кратком руководстве рассказывается, как установить SQL Server 2017 или SQL Server 2019 в SUSE Linux Enterprise Server, а затем создать и запросить базу данных с помощью средства sqlcmd.
 author: VanMSFT
 ms.author: vanto
@@ -9,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 31ddfb80-f75c-4f51-8540-de6213cb68b8
-ms.openlocfilehash: 143ec74ea2941c25c23a41396dc9cdc40d445715
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: 811438987106a5eb73a914e5d7bbceb139cd5c37
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73594537"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558640"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-suse-linux-enterprise-server"></a>Краткое руководство. Установка SQL Server и создание базы данных в SUSE Linux Enterprise Server
 
@@ -108,7 +107,7 @@ ms.locfileid: "73594537"
    > [!NOTE]
    > Для учетной записи системного администратора необходимо установить надежный пароль (минимальная длина — 8 символов; должен содержать строчные и прописные буквы, десятичные цифры и (или) символы, отличные от букв и цифр).
 
-5. По завершении настройки убедитесь в том, что служба работает:
+5. По завершении настройки убедитесь в том, что служба работает.
 
    ```bash
    systemctl status mssql-server
@@ -157,7 +156,7 @@ ms.locfileid: "73594537"
    > [!NOTE]
    > Для учетной записи системного администратора необходимо установить надежный пароль (минимальная длина — 8 символов; должен содержать строчные и прописные буквы, десятичные цифры и (или) символы, отличные от букв и цифр).
 
-5. По завершении настройки убедитесь в том, что служба работает:
+5. По завершении настройки убедитесь в том, что служба работает.
 
    ```bash
    systemctl status mssql-server

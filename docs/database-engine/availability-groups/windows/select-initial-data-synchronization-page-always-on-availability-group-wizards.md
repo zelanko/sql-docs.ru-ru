@@ -1,6 +1,7 @@
 ---
-title: Страница "Выбор начальной синхронизации данных" (мастер группы доступности AlwaysOn) | Документы Майкрософт
-ms.custom: ''
+title: Выбор начальной синхронизации данных (мастер группы доступности)
+description: Описание параметров на странице "Выбор начальной синхронизации данных" мастера группы доступности Always On в SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -13,12 +14,12 @@ f1_keywords:
 ms.assetid: 457b1140-4819-4def-8f7c-54a406e6db12
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a9521577c4fd6fac3f683ca69fabd6226944a6bd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e8a6a14a6efc6a9d5f96144364f1532c14b0c1c0
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014186"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75235339"
 ---
 # <a name="select-initial-data-synchronization-page-always-on-availability-group-wizards"></a>Выбор страницы начальной синхронизации данных (мастера группы доступности AlwaysOn)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -83,7 +84,7 @@ ms.locfileid: "68014186"
  Выберите этот параметр, если хотите самостоятельно выполнить резервное копирование базы данных и журнала каждой базы данных-источника и восстановить их на каждый экземпляр сервера, на котором размещена вторичная реплика. После завершения работы мастера необходимо будет присоединить каждую базу данных-получатель на каждой вторичной реплике.  
   
 > [!NOTE]  
->  Дополнительные сведения см. далее в этом разделе [Запуск перемещения данных для базы данных-получателя AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md).  
+>  Дополнительные сведения см. в статье [Запуск перемещения данных для базы данных-получателя AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md).  
   
 ##  <a name="PrepareSecondaryDbs"></a> Подготовка базы данных-получателя (вручную)  
  Для подготовки баз данных-получателей без помощи мастера [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] можно использовать любой из следующих подходов.  

@@ -1,6 +1,7 @@
 ---
-title: Просмотр или изменение свойств политики управления на основе политик | Документация Майкрософт
-ms.custom: ''
+title: Просмотр или изменение свойств политики управления на основе политик
+description: Узнайте, как просмотреть или изменить свойства политики управления на основе политик SQL Server с помощью SQL Server Management Studio (SSMS) или Transact-SQL (T-SQL).
+ms.custom: seo-lt-2019
 ms.date: 10/06/2016
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ba805504-5db5-4731-a8da-a0e89cb20c37
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: cadd1acbe5092aee4460a9ffe1d36bfa50a3a9f5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a51ca391fe8cc27ad9447e6b4d18b88787532e34
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67908156"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558019"
 ---
 # <a name="view-or-modify-the-properties-of-a-policy-based-management-policy"></a>Просмотр или изменение свойств политики управления на основе политик
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

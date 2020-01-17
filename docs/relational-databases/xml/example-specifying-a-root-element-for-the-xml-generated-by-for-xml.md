@@ -1,6 +1,5 @@
 ---
-title: Пример Задание корневого элемента для XML-документа, сформированного предложением FOR XML | Документация Майкрософт
-ms.custom: ''
+title: Определение корневого элемента для использования с FOR XML | Документация Майкрософт
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,12 +12,13 @@ helpviewer_keywords:
 ms.assetid: bcc54b11-0713-4e43-8dbe-d6f3ad1993b5
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: e10bddac8a320f7fcbc76c0b58fda4023d347246
-ms.sourcegitcommit: 853c2c2768caaa368dce72b4a5e6c465cc6346cf
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 6ce63dc5a35b9359e24bc410be2a0d53f80cfc99
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71227212"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75246902"
 ---
 # <a name="example-specifying-a-root-element-for-the-xml-generated-by-for-xml"></a>Пример Определение корневого элемента для XML-документа, созданного предложением FOR XML
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,6 +47,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [Использование с RAW Mode для FOR XML](../../relational-databases/xml/use-raw-mode-with-for-xml.md)  
+ [Использование RAW Mode с FOR XML](../../relational-databases/xml/use-raw-mode-with-for-xml.md)  
   
   

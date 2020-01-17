@@ -1,7 +1,7 @@
 ---
 title: Панель мониторинга производительности | Документация Майкрософт
 ms.custom: ''
-ms.date: 01/10/2019
+ms.date: 12/14/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: performance
@@ -14,17 +14,17 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: pelopes
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 1d3a404aecf987be2fa0c2638fa3abb8c6f3ea0c
-ms.sourcegitcommit: 512acc178ec33b1f0403b5b3fd90e44dbf234327
+ms.openlocfilehash: b2c743d23ae9c9ee730c3c1daa8d41709e44fd6f
+ms.sourcegitcommit: 68751257feec99109edf88a5b89c0ec2ee72276f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/08/2019
-ms.locfileid: "72041167"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75728565"
 ---
 # <a name="performance-dashboard"></a>Панель мониторинга производительности
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-В [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] версии 17.2 и более поздних есть панель мониторинга производительности. Она позволяет быстро получать наглядное представление о состоянии производительности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с версии [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) и [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)]. 
+В [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] версии 17.2 и более поздних есть панель мониторинга производительности. Она позволяет быстро получать наглядное представление о состоянии производительности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с версии [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) и Управляемого экземпляра [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)]. 
 
 Панель мониторинга производительности помогает быстро выявлять наличие узких мест производительности в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)]. Если узкое место существует, вы можете легко собрать дополнительные диагностические сведения, необходимые для устранения проблемы. Вот некоторые распространенные проблемы производительности, которые можно выявлять с помощью панели мониторинга производительности:
 -  Узкие места ЦП (и какие запросы занимают больше всего ресурсов процессора)
@@ -43,7 +43,7 @@ ms.locfileid: "72041167"
    -  Сеансы пользователей
    -  Коэффициент попадания в кэш
 -  Исторические сведения
-   -  Случаи ожидания
+   -  Ожидания
    -  Кратковременные блокировки
    -  Статистика ввода-вывода
    -  Ресурсоемкие запросы
@@ -60,7 +60,7 @@ ms.locfileid: "72041167"
   
 Чтобы открыть панель мониторинга производительности, щелкните правой кнопкой мыши имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в обозревателе объектов и последовательно выберите пункты **Отчеты**, **Стандартные отчеты** и **Панель мониторинга производительности**.  
   
-![Пункт "Панель мониторинга производительности" в меню](../../relational-databases/performance/media/perf_dashboard_ssms.png "Пункт \"Панель мониторинга производительности\" в меню")  
+![Панель мониторинга производительности в меню](../../relational-databases/performance/media/perf_dashboard_ssms.png "Панель мониторинга производительности в меню")  
   
 Панель мониторинга производительности откроется на новой вкладке. Ниже представлен пример очевидного узкого места ЦП.  
   
@@ -73,18 +73,18 @@ ms.locfileid: "72041167"
 > Всегда следует учитывать, сравним ли новый индекс с существующим в той же таблице и можно ли достичь тех же практических результатов путем изменения существующего индекса, а не создания нового. Например, если предлагается новый индекс для столбцов C1, C2 и C3, сначала оцените, существует ли индекс в столбцах C1 и C2. Если да, может быть предпочтительнее просто добавить столбец C3 в существующий индекс (сохраняя порядок существующих столбцов), чтобы не создавать новый.
 > Дополнительные сведения см. в [руководстве по архитектуре и разработке индексов](../../relational-databases/sql-server-index-design-guide.md).
 
-В отчете **Ожидание** приводятся ожидания в режиме простоя или спящем режиме. Дополнительные сведения об ожидании см. в статье [sys.dm_os_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md) и документе [Настройка производительности SQL Server 2005 с помощью ожиданий и очередей](http://download.microsoft.com/download/4/7/a/47a548b9-249e-484c-abd7-29f31282b04d/performance_tuning_waits_queues.doc).
+В отчете **Ожидание** приводятся ожидания в режиме простоя или спящем режиме. Дополнительные сведения об ожидании см. в статье [sys.dm_os_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md) и документе [Настройка производительности SQL Server 2005 с помощью ожиданий и очередей](https://download.microsoft.com/download/4/7/a/47a548b9-249e-484c-abd7-29f31282b04d/performance_tuning_waits_queues.doc).
 
 Отчеты **Ресурсоемкие запросы** сбрасываются при перезапуске [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], так как данные в базовых динамических административных представлениях очищаются. Начиная с версии [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] подробные сведения о ресурсоемких запросах можно найти в хранилище запросов. 
 
 > [!NOTE]
-> Панель мониторинга производительности была впервые выпущена в качестве отдельного скачиваемого компонента для [SQL Server 2005](https://techcommunity.microsoft.com/t5/SQL-Server-Support/SQL-Server-2005-Performance-Dashboard-Reports/ba-p/315415), а позже была обновлена для [SQL Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=29063).
+> Панель мониторинга производительности была впервые выпущена в качестве отдельного скачиваемого компонента для [SQL Server 2005](https://techcommunity.microsoft.com/t5/SQL-Server-Support/SQL-Server-2005-Performance-Dashboard-Reports/ba-p/315415), а позже была обновлена для [SQL Server 2012](https://www.microsoft.com/download/details.aspx?id=29063).
 
 ## <a name="permissions"></a>Разрешения  
 В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] требуются разрешения `VIEW SERVER STATE` и `ALTER TRACE`. В [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] необходимо разрешение `VIEW DATABASE STATE` для базы данных.
 
 ## <a name="see-also"></a>См. также:  
- [Monitor and Tune for Performance](../../relational-databases/performance/monitor-and-tune-for-performance.md)     
+ [Наблюдение и настройка производительности](../../relational-databases/performance/monitor-and-tune-for-performance.md)     
  [Средства контроля и настройки производительности](../../relational-databases/performance/performance-monitoring-and-tuning-tools.md)     
  [Открытие монитора активности (среда SQL Server Management Studio)](../../relational-databases/performance-monitor/open-activity-monitor-sql-server-management-studio.md)     
  [Монитор активности](../../relational-databases/performance-monitor/activity-monitor.md)     

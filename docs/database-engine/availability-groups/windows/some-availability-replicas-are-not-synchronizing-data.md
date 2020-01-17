@@ -1,6 +1,7 @@
 ---
-title: Некоторые реплики доступности не выполняют синхронизацию данных | Документы Майкрософт
-ms.custom: ''
+title: Реплики доступности, не выполняющие синхронизацию данных
+description: Возможные причины и способы устранения, когда одна или несколько реплик доступности в группе доступности Always On не синхронизируют данные с первичной репликой.
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3db6a569-e942-4321-a0dd-c4ab002087c8
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f026decc6463e477f95fe86bdda234c1d5d09c2f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 66ebb11535fe2eecc6495b8c5e194d286ecc88ed
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014102"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822580"
 ---
 # <a name="some-availability-replicas-are-not-synchronizing-data"></a>Некоторые реплики доступности не выполняют синхронизацию данных
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +33,7 @@ ms.locfileid: "68014102"
 |**Категория**|**Предупреждение**|  
 |**Аспект**|группа доступности|  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Description  
  Эта политика сворачивает состояние синхронизации данных всех реплик доступности в группе доступности и проверяет рабочее состояние синхронизации у всех реплик доступности. Политика находится в нерабочем состоянии, если у какой-либо реплики доступности при синхронизации данных имеется состояние NOT SYNCRONIZING.  
   
  Политика находится в рабочем состоянии, если ни у одной из реплик доступности при синхронизации данных не имеется состояние NOT SYNCRONIZING.  

@@ -1,6 +1,7 @@
 ---
-title: Руководство. Администрирование серверов с помощью управления на основе политик | Документация Майкрософт
-ms.custom: ''
+title: Руководство. Управление серверами с помощью управления на основе политик
+description: В этом учебнике описывается, как создать и применить политику, отключенную по умолчанию, и политику именования.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: 7de96e7b-9fb8-4cc8-8d85-61345d68a1e8
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: d98e1f1332d75514887858a11087e94bca4caf32
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ed0fc25f704624e740b1c3d1c1a8d2671c692f03
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68021489"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558237"
 ---
-# <a name="tutorial-administering-servers-by-using-policy-based-management"></a>Руководство. Администрирование серверов с помощью управления на основе политик
+# <a name="tutorial-managing-servers-using-policy-based-management"></a>Руководство. Управление серверами с помощью управления на основе политик
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 Добро пожаловать в учебник по администрированию серверов с помощью политик управления на основе политик. Этот учебник предназначен для пользователей, знакомых с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , но новичков в управлении на основе политик.  
   

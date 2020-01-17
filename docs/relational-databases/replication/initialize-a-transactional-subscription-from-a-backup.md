@@ -1,6 +1,7 @@
 ---
-title: Инициализация подписки на публикацию транзакций из резервной копии | Документация Майкрософт
-ms.custom: ''
+title: Инициализация подписки из резервной копии (транзакции)
+description: Узнайте, как использовать хранимые процедуры репликации для инициализации публикации транзакций из резервной копии в SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -18,16 +19,16 @@ helpviewer_keywords:
 ms.assetid: d0637fc4-27cc-4046-98ea-dc86b7a3bd75
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 7a0282d1b9f2aa63e89d5246d37210a2b088ad35
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 7d2da79cc46ac546099e492af3b6d5f4f726a2a2
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710302"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75320481"
 ---
 # <a name="initialize-a-transactional-subscription-from-a-backup"></a>Инициализация подписки на публикацию транзакций из резервной копии
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Хотя инициализация подписки на публикацию транзакций осуществляется через моментальный снимок, она также может быть выполнена с помощью хранимых процедур репликации. Дополнительные сведения см. в статье [Initialize a Transactional Subscription Without a Snapshot](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md).  
+  Хотя инициализация подписки на публикацию транзакций осуществляется через моментальный снимок, она также может быть выполнена с помощью хранимых процедур репликации. Дополнительные сведения см. в статье [Инициализация подписки на публикацию транзакций без моментального снимка](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md).  
   
 ### <a name="to-initialize-a-transactional-subscriber-from-a-backup"></a>Инициализация подписчика на публикацию транзакций из резервной копии  
   
@@ -71,7 +72,7 @@ ms.locfileid: "71710302"
 7.  (Необязательно) Запустите агент распространителя. Дополнительные сведения см. в разделе [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md) или [Synchronize a Push Subscription](../../relational-databases/replication/synchronize-a-push-subscription.md).  
   
 ## <a name="see-also"></a>См. также:  
- [Copy Databases with Backup and Restore](../../relational-databases/databases/copy-databases-with-backup-and-restore.md)  (Копирование баз данных путем создания и восстановления резервных копий)  
+ [Копирование баз данных путем создания и восстановления резервных копий](../../relational-databases/databases/copy-databases-with-backup-and-restore.md)   
  [Резервное копирование и восстановление баз данных SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)  
   
   

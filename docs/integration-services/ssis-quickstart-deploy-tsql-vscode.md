@@ -8,12 +8,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: bc11ccdee25331ad4d3758e4ebdff2da9e420900
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: befa64e6c79a1f1e4fe0604014dbb7c583bf830e
+ms.sourcegitcommit: ef830f565ee07dc7d4388925cc3c86c5d2cfb4c7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71281550"
+ms.lasthandoff: 12/09/2019
+ms.locfileid: "74947176"
 ---
 # <a name="deploy-an-ssis-project-from-visual-studio-code-with-transact-sql"></a>Развертывание проекта служб SSIS из Visual Studio Code с помощью Transact-SQL
 
@@ -50,6 +50,10 @@ Visual Studio Code — это редактор кода для Windows, macOS и
  
 3. В открывшемся меню **Выберите языковой режим** выберите или введите **SQL**, а затем нажмите клавишу **ВВОД**, чтобы установить языковой режим SQL. 
 
+## <a name="supported-authentication-method"></a>Поддерживаемые методы проверки подлинности
+
+См. [методы проверки подлинности для развертывания](ssis-quickstart-deploy-ssms.md#authentication-methods-for-deployment).
+
 ## <a name="connect-to-the-ssis-catalog-database"></a>Подключение к базе данных каталога SSIS
 
 С помощью Visual Studio Code установите соединение с каталогом служб SSIS.
@@ -62,11 +66,11 @@ Visual Studio Code — это редактор кода для Windows, macOS и
 
 4. Следуя указаниям, настройте свойства подключения для нового профиля подключения. После указания каждого значения нажимайте клавишу **ВВОД**, чтобы продолжить. 
 
-   | Настройка       | Предлагаемое значение | Дополнительные сведения |
+   | Параметр       | Рекомендуемое значение | Дополнительные сведения |
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **Имя сервера** | Полное имя сервера |  |
    | **Имя базы данных** | **SSISDB** | Имя базы данных, с которой необходимо установить соединение. |
-   | **Проверка подлинности** | Имя входа SQL | |
+   | **Аутентификация** | Имя входа SQL | |
    | **User name** | Учетная запись администратора сервера | Это учетная запись, которая была указана при создании сервера. |
    | **Пароль (имя входа SQL)** | Пароль для учетной записи администратора сервера | Это пароль, который был указан при создании сервера. |
    | **Сохранить пароль?** | "Да" или "Нет". | Чтобы каждый раз вводить пароль, выберите "Да". |

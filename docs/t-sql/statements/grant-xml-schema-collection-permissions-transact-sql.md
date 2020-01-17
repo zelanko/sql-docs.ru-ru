@@ -1,6 +1,8 @@
 ---
-title: GRANT, предоставление разрешений на коллекцию XML-схем (Transact-SQL) | Документы Майкрософт
-ms.custom: ''
+title: GRANT (разрешения на коллекцию XML-схем)
+description: Предоставляет разрешения на коллекции схем XML.
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: seo-lt-2019
 ms.date: 08/10/2017
 ms.prod: sql
 ms.prod_service: sql-database
@@ -17,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 57e24465-cd43-45cf-bb52-eea0b49867f9
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 5dbd2c35b360d3b3e1e9f6dabe7d011c20795bc0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a5d79f02237a380a9431e8269875d93a79bd9d04
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68071193"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243350"
 ---
 # <a name="grant-xml-schema-collection-permissions-transact-sql"></a>GRANT, предоставление разрешения на коллекцию XML-схем (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

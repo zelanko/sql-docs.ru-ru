@@ -1,6 +1,7 @@
 ---
-title: Добавление базы данных-получателя в конфигурацию доставки журналов (SQL Server) | Документы Майкрософт
-ms.custom: ''
+title: Добавление получателя доставки журналов
+description: Как добавить базу данных-получатель в имеющуюся конфигурацию доставки журналов.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -14,30 +15,17 @@ helpviewer_keywords:
 ms.assetid: b02eba13-f8e6-4684-b7e4-75ea038ea473
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f1a2f3c2149a089b4fe62564fae1278690ba4420
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 66a194a26529834a3d77229a21b7556b03da635e
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68057903"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822153"
 ---
 # <a name="add-a-secondary-database-to-a-log-shipping-configuration-sql-server"></a>Добавление базы данных-получателя в конфигурацию доставки журналов (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   В этом разделе объясняется, как добавить базу данных-получатель в имеющуюся конфигурацию доставки журналов [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или языка [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
- **В этом разделе**  
-  
--   **Перед началом работы**  
-  
-     [безопасность](#Security)  
-  
--   **Добавление базы данных-получателя доставки журналов с помощью:**  
-  
-     [Среда SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
--   [Связанные задачи](#RelatedTasks)  
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
   
@@ -84,7 +72,7 @@ ms.locfileid: "68057903"
   
 #### <a name="to-add-a-log-shipping-secondary-database"></a>Добавление базы данных-получателя доставки журналов  
   
-1.  На сервере-получателе выполните процедуру [sp_add_log_shipping_secondary_primary](../../relational-databases/system-stored-procedures/sp-add-log-shipping-secondary-primary-transact-sql.md) , предоставив подробные сведения о сервере-источнике и базе данных. Данная хранимая процедура возвращает идентификатор получателя, а также идентификаторы заданий копирования и восстановления.  
+1.  На сервере-получателе выполните процедуру [sp_add_log_shipping_secondary_primary](../../relational-databases/system-stored-procedures/sp-add-log-shipping-secondary-primary-transact-sql.md) для обеспечения подробных характеристик сервера-источника и базы данных. Данная хранимая процедура возвращает идентификатор получателя, а также идентификаторы заданий копирования и восстановления.  
   
 2.  На сервере-получателе выполните процедуру [sp_add_jobschedule](../../relational-databases/system-stored-procedures/sp-add-jobschedule-transact-sql.md) для настройки расписания заданий копирования и восстановления.  
   

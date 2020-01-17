@@ -1,6 +1,5 @@
 ---
-title: Пакеты обработки расширенных событий SQL Server | Документация Майкрософт
-ms.custom: ''
+title: Пакеты обработки расширенных событий SQL Server
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -14,12 +13,12 @@ ms.assetid: 6bcb04fc-ca04-48f4-b96a-20b604973447
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 19797e4f886a28662c9dce5df34fc9c2978b3098
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 37c4b2c9972dbd8e236f8a8e64f312a15a3353ac
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68009396"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75242932"
 ---
 # <a name="sql-server-extended-events-packages"></a>Пакеты обработки расширенных событий SQL Server
 
@@ -50,7 +49,7 @@ ms.locfileid: "68009396"
   
 -   Предикаты  
   
--   Карты  
+-   Maps  
   
  В сеансе событий могут содержаться объекты из разных пакетов. Дополнительные сведения см. в разделе [SQL Server Extended Events Sessions](../../relational-databases/extended-events/sql-server-extended-events-sessions.md).  
   
@@ -143,9 +142,9 @@ where name = 'keyword_map'
   
 -   event  
   
--   действие  
+-   action  
   
--   target;  
+-   target  
   
 -   pred_source;  
   
@@ -155,7 +154,7 @@ where name = 'keyword_map'
   
  Дополнительные сведения см. в разделе [sys.dm_xe_objects (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-xe-objects-transact-sql.md).  
   
-### <a name="maps"></a>Карты  
+### <a name="maps"></a>Maps  
  Таблица соответствий устанавливает соответствие внутреннего значения строке, что дает пользователю возможность узнать, что именно представляет это значение. В результате пользователь может получить значимое описание внутреннего значения, а не числовое значение. В следующем запросе показан способ установки соответствий.  
   
 ```  
@@ -220,6 +219,6 @@ where name = 'lock_mode'
 ## <a name="see-also"></a>См. также:  
  [SQL Server Extended Events Sessions](../../relational-databases/extended-events/sql-server-extended-events-sessions.md)   
  [Подсистема расширенных событий SQL Server](../../relational-databases/extended-events/sql-server-extended-events-engine.md)   
- [SQL Server Extended Events Targets](https://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)  
+ [Цели расширенных событий SQL Server](https://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)  
   
   

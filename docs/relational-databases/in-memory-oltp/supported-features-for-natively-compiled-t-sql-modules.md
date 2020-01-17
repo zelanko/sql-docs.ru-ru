@@ -1,6 +1,6 @@
 ---
-title: Поддерживаемые функции для модулей, скомпилированных в собственном коде T-SQL | Документация Майкрософт
-ms.custom: ''
+title: Функции для модулей, скомпилированных в собственном коде T-SQL
+ms.custom: seo-dt-2019
 ms.date: 10/23/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -11,12 +11,12 @@ ms.assetid: 05515013-28b5-4ccf-9a54-ae861448945b
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a1cf5b6242f5c76abf8dca638a2596eb2cae9641
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 472a654a0bee8b386c6573c8ab1ed8fdb0b4cf8d
+ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68025082"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74412522"
 ---
 # <a name="supported-features-for-natively-compiled-t-sql-modules"></a>Поддерживаемые функции для модулей, скомпилированных в собственном коде T-SQL
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "68025082"
 Здесь приведены поддерживаемые конструкции запросов.  
 
 CASE, выражение: Выражение CASE может использоваться в любой инструкции или предложении, которые допускают допустимые выражения.
-   - **Применимо к:** [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)].  
+   - **Область применения**: [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)].  
     Начиная с версии [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)], для модулей, скомпилированных в собственном коде T-SQL, поддерживаются выражения CASE.
 
 Предложение SELECT:  
@@ -57,19 +57,19 @@ CASE, выражение: Выражение CASE может использов�
 -   псевдонимы имен и столбцов (с помощью синтаксиса AS или =);  
 
 -   скалярные вложенные запросы;
-    - **Применимо к:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
+    - **Область применения**: [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
       Начиная с версии [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], для модулей, скомпилированных в собственном коде T-SQL, поддерживаются скалярные подзапросы.
 
 -   предложение TOP*;  
 
 -   SELECT DISTINCT  
-    - **Применимо к:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
+    - **Область применения**: [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
       Начиная с версии [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], в модулях, скомпилированных в собственном коде, поддерживается оператор DISTINCT.
 
               DISTINCT aggregates are not supported.  
 
 -   UNION и UNION ALL
-    - **Применимо к:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
+    - **Область применения**: [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
       Начиная с версии [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], в модулях, скомпилированных в собственном коде, поддерживаются операторы UNION и UNION ALL.
 
 -   присвоение значений переменных.  
@@ -81,11 +81,11 @@ CASE, выражение: Выражение CASE может использов�
 -   FROM \<скомпилированные_в_собственном_коде_встроенные_функции_с_табличными_значениями>  
 
 -   LEFT OUTER JOIN, RIGHT OUTER JOIN, CROSS JOIN и INNER JOIN;
-    - **Применимо к:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
+    - **Область применения**: [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
       Начиная с версии [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], в модулях, скомпилированных в собственном коде, поддерживается оператор JOINS.
 
 -   вложенные запросы `[AS] table_alias`. Дополнительные сведения см. в разделе [FROM (Transact-SQL)](../../t-sql/queries/from-transact-sql.md). 
-    - **Применимо к:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
+    - **Область применения**: [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
       Начиная с версии [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], в модулях, скомпилированных в собственном коде, поддерживаются подзапросы.
 
 Предложение WHERE:  
@@ -94,7 +94,7 @@ CASE, выражение: Выражение CASE может использов�
 
 -   AND, BETWEEN  
 -   OR, NOT, IN, EXISTS
-    - **Применимо к:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
+    - **Область применения**: [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
       Начиная с версии [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], в модулях, скомпилированных в собственном коде, поддерживаются операторы OR/NOT/IN/EXISTS.
 
 
@@ -167,7 +167,7 @@ SELECT TOP (@v) ... FROM ... ORDER BY ...
 
 -   [SET @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/set-local-variable-transact-sql.md)  
 
--   [TRY...CATCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/try-catch-transact-sql.md)  
+-   [TRY...CATCH (Transact-SQL)](../../t-sql/language-elements/try-catch-transact-sql.md)  
 
                To achieve optimal performance, use a single TRY/CATCH block for an entire natively compiled T-SQL module.  
 
@@ -191,7 +191,7 @@ SELECT TOP (@v) ... FROM ... ORDER BY ...
 -   Битовые операторы ~, &, |, и ^  
 
 -   APPLY, оператор
-    - **Применимо к:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].  
+    - **Область применения:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].  
       Начиная с версии [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)], оператор APPLY поддерживается в модулях, скомпилированных в машинном коде.
 
 ##  <a name="bfncsp"></a> Встроенные функции в модулях, скомпилированных в собственном коде  
@@ -202,7 +202,7 @@ SELECT TOP (@v) ... FROM ... ORDER BY ...
 -   Функции для работы с датами: CURRENT_TIMESTAMP, DATEADD, DATEDIFF, DATEFROMPARTS, DATEPART, DATETIME2FROMPARTS, DATETIMEFROMPARTS, DAY, EOMONTH, GETDATE, GETUTCDATE, MONTH, SMALLDATETIMEFROMPARTS, SYSDATETIME, SYSUTCDATETIME и YEAR.  
 
 -   Строковые функции: LEN, LTRIM, RTRIM и SUBSTRING.  
-    - **Применимо к:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].  
+    - **Область применения:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].  
       Начиная с версии [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] также поддерживаются следующие встроенные функции: TRIM, TRANSLATE и CONCAT_WS.  
 
 -   Функции идентификации: SCOPE_IDENTITY  
@@ -212,7 +212,7 @@ SELECT TOP (@v) ... FROM ... ORDER BY ...
 -   Функции уникальных идентификаторов: NEWID и NEWSEQUENTIALID  
 
 -   Функции JSON  
-    - **Применимо к:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].  
+    - **Область применения:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].  
       Начиная с версии [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)], функции JSON поддерживаются в модулях, скомпилированных в машинном коде.
 
 -   Функции ошибок: ERROR_LINE, ERROR_MESSAGE, ERROR_NUMBER, ERROR_PROCEDURE, ERROR_SEVERITY и ERROR_STATE  
@@ -242,7 +242,7 @@ SELECT TOP (@v) ... FROM ... ORDER BY ...
  Дополнительные сведения см. в разделе [Указания запросов (Transact-SQL)](../../t-sql/queries/hints-transact-sql-query.md).  
 
 ##  <a name="los"></a> Ограничения на сортировку  
- В запросе с использованием [TOP (Transact-SQL)](../../t-sql/queries/top-transact-sql.md) и [предложения ORDER BY (Transact-SQL)](../../t-sql/queries/select-order-by-clause-transact-sql.md) можно сортировать более 8 000 строк. Без [предложения ORDER BY (Transact-SQL)](../../t-sql/queries/select-order-by-clause-transact-sql.md) [TOP (Transact-SQL)](../../t-sql/queries/top-transact-sql.md) позволяет сортировать не более 8 000 строк (меньше, если есть соединения).  
+ В запросе с использованием [TOP (Transact-SQL)](../../t-sql/queries/top-transact-sql.md) и [предложения ORDER BY (Transact-SQL)](../../t-sql/queries/select-order-by-clause-transact-sql.md) можно сортировать более 8 000 строк. Без [предложения ORDER BY (Transact-SQL)](../../t-sql/queries/select-order-by-clause-transact-sql.md)[TOP (Transact-SQL)](../../t-sql/queries/top-transact-sql.md) позволяет сортировать не более 8 000 строк (меньше, если есть соединения).  
 
  Если в запросе используется как оператор [TOP (Transact-SQL)](../../t-sql/queries/top-transact-sql.md), так и [предложение ORDER BY (Transact-SQL)](../../t-sql/queries/select-order-by-clause-transact-sql.md), для оператора TOP можно указать не более 8192 строк. Если указано больше 8192 строк, возникает следующее сообщение об ошибке: **Сообщение 41398, уровень 16, состояние 1, процедура *\<имя_процедуры>* , строка *\<номер_строки>* . Оператор TOP может возвратить не более 8192 строк; запрошенное число: *\<число>* .**  
 

@@ -19,12 +19,12 @@ ms.assetid: 338548f4-c4d8-47ca-b597-5c9c0f2fa205
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 46acc1cb21cf27eb2cce60ca6c5a091bdd72d458
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6737a954881a56961b77dcf7d8f0373b0e30e848
+ms.sourcegitcommit: 03884a046aded85c7de67ca82a5b5edbf710be92
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68126842"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74564754"
 ---
 # <a name="strong-passwords"></a>Надежные пароли
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -48,13 +48,13 @@ ms.locfileid: "68126842"
   
 -   в значительной степени отличается от предыдущих паролей.  
   
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] могут содержать до 128 символов, включая буквы, знаки и цифры. Поскольку имена входа, имена пользователей, роли и пароли часто используются в инструкциях [!INCLUDE[tsql](../../includes/tsql-md.md)] , определенные символы должны заключаться в двойные кавычки (") или квадратные скобки ([ ]). Используйте разделители в инструкциях [!INCLUDE[tsql](../../includes/tsql-md.md)] , если имя входа, пользователь, роль или пароль [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имеют следующие характеристики:  
+ Пароли [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] могут содержать до 128 символов, включая буквы, знаки и цифры. Поскольку имена входа, имена пользователей, роли и пароли часто используются в инструкциях [!INCLUDE[tsql](../../includes/tsql-md.md)] , определенные символы должны заключаться в двойные кавычки (") или квадратные скобки ([ ]). Используйте разделители в инструкциях [!INCLUDE[tsql](../../includes/tsql-md.md)] , если имя входа, пользователь, роль или пароль [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имеют следующие характеристики:  
   
 -   содержат пробел или начинаются с пробела;  
   
 -   начинаются с символа $ или \@.  
   
- При использовании в строке подключения OLE DB или ODBC имя входа или пароль не должны содержать следующие символы: [] {} () , ; ? * ! \@. Эти символы используются для инициализации соединения или для указания его отдельных значений.  
+ При использовании в строке подключения OLE DB или ODBC имя входа или пароль не должны содержать следующие символы: [] {} () , ; ? * ! \@ =. Эти символы используются для инициализации соединения или для указания его отдельных значений.  
   
 ## <a name="related-content"></a>См. также  
  [Политика паролей](../../relational-databases/security/password-policy.md)  

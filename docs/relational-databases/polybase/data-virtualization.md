@@ -1,24 +1,30 @@
 ---
-title: Виртуализация внешних данных в SQL Server 2019 | Документация Майкрософт
+title: Виртуализация внешних данных
 description: Эта страница описывает шаги по использованию мастера создания внешней таблицы для реляционных источников данных
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
-ms.date: 07/24/2019
+ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: polybase
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 719584bda1a289694c6e5ff7483e320073323be4
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.metadata: seo-lt-2019
+ms.openlocfilehash: f4bd7eec24be747fe6c0933d31467410bfecf2a9
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710596"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75227506"
 ---
 # <a name="use-the-external-table-wizard-with-relational-data-sources"></a>Используйте мастер создания внешней таблицы с реляционными источниками данных
 
 Один из основных сценариев для SQL Server 2019 — это возможность выполнять виртуализацию данных. Такой процесс позволяет сохранить данные в исходном расположении. Вы можете *виртуализировать* данные в экземпляре SQL Server и запрашивать их так же, как любую другую таблицу в SQL Server. Это уменьшает необходимость в процессах извлечения, преобразования и загрузки. Реализовать это можно с помощью соединителей PolyBase. Дополнительные сведения о виртуализации данных: [Начало работы с PolyBase](polybase-guide.md).
+
+В этом видео дается начальное описание виртуализации данных:
+
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introducing-Data-Virtualization/player?WT.mc_id=dataexposed-c9-niner]
+
 
 ## <a name="start-the-external-table-wizard"></a>Запуск мастера внешних таблиц
 
@@ -83,6 +89,6 @@ ms.locfileid: "71710596"
 > [!NOTE]
 > Кнопка **Создать скрипт** должна отображаться только на последней странице мастера. Сейчас она отображается на всех страницах.
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 Дополнительные сведения о кластерах больших данных SQL Server и связанных сценариях: [Что такое кластеры больших данных SQL Server?](../../big-data-cluster/big-data-cluster-overview.md)

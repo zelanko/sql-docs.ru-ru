@@ -1,7 +1,8 @@
 ---
-title: Включение управляемого резервного копирования SQL Server в Azure | Документация Майкрософт
-ms.custom: ''
-ms.date: 10/03/2016
+title: Использование управляемого резервного копирования в Azure
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
+ms.description: Enable SQL Server managed backup to Azure
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -10,21 +11,22 @@ ms.topic: conceptual
 ms.assetid: 68ebb53e-d5ad-4622-af68-1e150b94516e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 0b778c458852adc2c26d62eb9d7ef8066b9fbb89
-ms.sourcegitcommit: ecb19d0be87c38a283014dbc330adc2f1819a697
+ms.openlocfilehash: 07bb9cf8f0fc697e1d31a80e22a72cd5a0ea484a
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70238735"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257956"
 ---
 # <a name="enable-sql-server-managed-backup-to-azure"></a>Включение управляемого резервного копирования SQL Server в Azure
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   В этом разделе описано, как включить [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] с параметрами по умолчанию на уровне базы данных и экземпляра. Здесь также объясняется, как включить уведомления по электронной почте и как отслеживать резервное копирование.  
   
  В этом руководстве используется Azure PowerShell. Перед началом работы с руководством [скачайте и установите Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/).  
   
 > [!IMPORTANT]  
->  Если также требуется включить дополнительные параметры или использовать настраиваемое расписание, выполните эти настройки, прежде чем включать [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Дополнительные сведения см. в статье [Настройка дополнительных параметров управляемого резервного копирования SQL Server в Azure](../../relational-databases/backup-restore/configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure.md).  
+>  Если также требуется включить дополнительные параметры или использовать настраиваемое расписание, выполните эти настройки, прежде чем включать [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Дополнительные сведения см. в статье [Настройка дополнительных параметров управляемого резервного копирования SQL Server в Microsoft Azure](../../relational-databases/backup-restore/configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure.md).  
   
 ## <a name="create-the-azure-blob-container"></a>Создание контейнера BLOB-объектов Azure
 
@@ -104,7 +106,7 @@ ms.locfileid: "70238735"
 |**Маркер SAS**|sv=2014-02-14&sr=c&sig=xM2LXVo1Erqp7LxQ%9BxqK9QC6%5Qabcd%9LKjHGnnmQWEsDf%5Q%se=2015-05-14T14%3B93%4V20X&sp=rwdl|  
 |||
   
-Запишите URL-адрес контейнера и SAS для использования при создании учетных данных (CREDENTIAL) SQL. Дополнительные сведения о SAS см. в статье [Подписанные URL-адреса. Часть 1. Общие сведения о модели SAS](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/).  
+Запишите URL-адрес контейнера и SAS для использования при создании учетных данных (CREDENTIAL) SQL. Дополнительные сведения о SAS см. в статье [Использование подписанных URL-адресов (SAS)](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/).  
   
 ## <a name="enable-managed-backup-to-azure"></a>Включение управляемого резервного копирования в Azure
   
@@ -146,7 +148,7 @@ ms.locfileid: "70238735"
   
      Обратите внимание, что события каналов Admin, Operational и Analytical включены по умолчанию и их нельзя отключить. Этого должно быть достаточно для наблюдения за событиями, требующими ручного вмешательства.  Можно включить события отладки, но каналы отладки содержат информационные и отладочные события, которые [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] использует для обнаружения и устранения проблем.  
   
-6.  **Включите и настройте уведомление о состоянии работоспособности.** [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] входит хранимая процедура, создающая задание агента для отправки по электронной почте уведомлений об ошибках или предупреждений, которые могут требовать внимания пользователя. Приведенные ниже шаги описывают процесс включения и настройки уведомлений по электронной почте.  
+6.  **Включите и настройте уведомление о состоянии работоспособности.** [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] имеет хранимую процедуру, создающую задание агента для отправки по электронной почте уведомлений об ошибках или предупреждений, которые могут требовать внимания пользователя. Приведенные ниже шаги описывают процесс включения и настройки уведомлений по электронной почте.  
   
     1.  Настройте компонент Database Mail, если он еще не включен на экземпляре. Дополнительные сведения см. в разделе [Configure Database Mail](../../relational-databases/database-mail/configure-database-mail.md).  
   

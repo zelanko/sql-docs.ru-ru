@@ -1,5 +1,5 @@
 ---
-title: Краткое руководство. Резервное копирование и восстановление SQL в службе хранилища BLOB-объектов Azure
+title: Краткое руководство. Резервное копирование и восстановление в службе хранилища BLOB-объектов Azure
 ms.custom: seo-dt-2019
 ms.date: 04/09/2018
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: quickstart
 ms.assetid: 9e1d94ce-2c93-45d1-ae2a-2a7d1fa094c4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 709aecfba4f73f0ef1d2c805e84d8a2113998e82
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.openlocfilehash: 24847d7b14341e9a1d5a4d874eb0046f53261fea
+ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74095489"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74165521"
 ---
 # <a name="quickstart-sql-backup-and-restore-to-azure-blob-storage-service"></a>Краткое руководство. Резервное копирование и восстановление SQL с помощью службы хранилища BLOB-объектов Azure
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md](../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -26,12 +26,12 @@ ms.locfileid: "74095489"
 
 - Получите бесплатную [учетную запись Azure](https://azure.microsoft.com/offers/ms-azr-0044p/).
 - Создайте [учетную запись хранения Azure](https://docs.microsoft.com/azure/storage/common/storage-quickstart-create-account?tabs=portal).
-- Установите [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+- Установите [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 - Установите выпуск [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads) или разверните [управляемый экземпляр](/azure/sql-database/sql-database-managed-instance-get-started) с подключением, установленным через [виртуальную машину SQL Azure](/azure/sql-database/sql-database-managed-instance-configure-vm) или с помощью соединения [точка — сеть](/azure/sql-database/sql-database-managed-instance-configure-p2s).
 - Назначьте учетной записи пользователя роль [db_backupoperator](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles) и предоставьте разрешения на [изменение любых учетных данных](https://docs.microsoft.com/sql/t-sql/statements/alter-credential-transact-sql). 
 
 ## <a name="create-azure-blob-container"></a>Создание контейнера больших двоичных объектов Azure
-Контейнер группирует набор больших двоичных объектов. Все большие двоичные объекты должны находиться в контейнере. Учетная запись хранения может содержать неограниченное количество контейнеров, но не менее одного. В контейнере может храниться неограниченное количество больших двоичных объектов. 
+Контейнер обеспечивает группирование набора больших двоичных объектов. Все BLOB-объекты должны содержаться в контейнере. Учетная запись хранения может содержать неограниченное количество контейнеров, но не менее одного. Контейнер может хранить неограниченное количество больших двоичных объектов. 
 
 Чтобы создать контейнер, выполните следующие действия.
 
@@ -233,5 +233,5 @@ URL = N'https://msftutorialstorage.blob.core.windows.net/sql-backup/sqltestdb_ba
 Чтобы разобраться в концепциях и рекомендациях использования службы хранилища BLOB-объектов Azure для резервного копирования [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], рекомендуется изучить перечисленные ниже материалы.  
   
 -   [Резервное копирование и восстановление SQL Server с помощью службы хранилища BLOB-объектов Microsoft Azure](../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)   
--   [Резервное копирование SQL Server на URL-адрес — рекомендации и устранение неполадок](../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)  
+-   [Резервное копирование SQL Server на URL-адрес — рекомендации и устранение неполадок](../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md).  
   

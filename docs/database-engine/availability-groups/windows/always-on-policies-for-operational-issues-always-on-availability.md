@@ -1,7 +1,7 @@
 ---
-title: Управление проблемами в работе на основе политик с использованием групп доступности
+title: Управление на основе политик. Группы доступности
 description: Модель работоспособности групп доступности Always On вычисляет набор стандартных (PBM) политик управления на основе политик. Их можно использовать для просмотра исправности группы доступности, а также реплик и баз данных в SQL Server.
-ms.custom: seodec18
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: afa5289c-641a-4c03-8749-44862384ec5f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: edb59eacc43d0563c8cd00372d27155f4100703f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ac339e638377778065f158b4cbd20280d5d4bb65
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67991553"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244063"
 ---
 # <a name="policy-based-management-for-operational-issues-with-always-on-availability-groups"></a>Управление проблемами в работе на основе политик с использованием групп доступности Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,15 +50,15 @@ ms.locfileid: "67991553"
   
 |Имя политики|Проблема|Категория **&#42;**|Аспект|  
 |-----------------|-----------|--------------------|-----------|  
-|Состояние кластера WSFC|[WSFC служба кластеров работает в режиме вне сети](../../../database-engine/availability-groups/windows/wsfc-cluster-service-is-offline.md).|Критическая|Экземпляр SQL Server|  
-|Режим «в сети» группы доступности|[Группа доступности в режиме вне сети](../../../database-engine/availability-groups/windows/availability-group-is-offline.md).|Критическая|группа доступности|  
-|Готовность группы доступности к автоматическому переходу на другой ресурс при сбое|[Группа доступности не готова к автоматическому переходу на другой ресурс](../../../database-engine/availability-groups/windows/availability-group-is-not-ready-for-automatic-failover.md).|Критическая|группа доступности|  
+|Состояние кластера WSFC|[WSFC служба кластеров работает в режиме вне сети](../../../database-engine/availability-groups/windows/wsfc-cluster-service-is-offline.md).|Critical|Экземпляр SQL Server|  
+|Режим «в сети» группы доступности|[Группа доступности в режиме вне сети](../../../database-engine/availability-groups/windows/availability-group-is-offline.md).|Critical|группа доступности|  
+|Готовность группы доступности к автоматическому переходу на другой ресурс при сбое|[Группа доступности не готова к автоматическому переходу на другой ресурс](../../../database-engine/availability-groups/windows/availability-group-is-not-ready-for-automatic-failover.md).|Critical|группа доступности|  
 |Состояние синхронизации данных реплик доступности|[Некоторые реплики доступности не выполняют синхронизацию данных](../../../database-engine/availability-groups/windows/some-availability-replicas-are-not-synchronizing-data.md).|Предупреждение|группа доступности|  
 |Состояние синхронизации данных синхронных реплик|[Некоторые синхронные реплики не синхронизированы](../../../database-engine/availability-groups/windows/some-synchronous-replicas-are-not-synchronized.md).|Предупреждение|группа доступности|  
 |Состояние роли реплик доступности|[Некоторые реплики доступности не имеют исправной роли](../../../database-engine/availability-groups/windows/some-availability-replicas-do-not-have-a-healthy-role.md).|Предупреждение|группа доступности|  
 |Состояние соединения с репликами доступности|[Некоторые реплики доступности отключены](../../../database-engine/availability-groups/windows/some-availability-replicas-are-disconnected.md).|Предупреждение|группа доступности|  
-|Состояние роли реплики доступности|[Доступность репликации не имеет исправной роли](../../../database-engine/availability-groups/windows/availability-replica-does-not-have-a-healthy-role.md).|Критическая|реплика доступности|  
-|Состояние соединения с репликами доступности|[Реплика доступности отключена](../../../database-engine/availability-groups/windows/availability-replica-is-disconnected.md).|Критическая|Реплика доступности|  
+|Состояние роли реплики доступности|[Доступность репликации не имеет исправной роли](../../../database-engine/availability-groups/windows/availability-replica-does-not-have-a-healthy-role.md).|Critical|Реплика доступности|  
+|Состояние соединения с репликами доступности|[Реплика доступности отключена](../../../database-engine/availability-groups/windows/availability-replica-is-disconnected.md).|Critical|Реплика доступности|  
 |Состояние присоединения реплики доступности|[Реплика доступности не присоединена](../../../database-engine/availability-groups/windows/availability-replica-is-not-joined.md).|Предупреждение|Реплика доступности|  
 |Состояние синхронизации данных реплики доступности|[Состояние синхронизации данных некоторых баз данных доступности не является исправным](../../../database-engine/availability-groups/windows/data-synchronization-state-of-some-availability-database-is-not-healthy.md).|Предупреждение|Реплика доступности|  
 |Состояние приостановки базы данных доступности|[База данных доступности приостановлена](../../../database-engine/availability-groups/windows/availability-database-is-suspended.md).|Предупреждение|База данных доступности|  

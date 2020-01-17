@@ -1,6 +1,7 @@
 ---
-title: Открытие монитора активности (среда SQL Server Management Studio) | Документация Майкрософт
-ms.custom: ''
+title: Открытие монитора активности (SSMS)
+description: Как открыть монитор активности в среде SQL Server Management Studio (SSMS).
+ms.custom: seo-dt-2019
 ms.date: 08/05/2016
 ms.prod: sql
 ms.prod_service: database-engine
@@ -15,14 +16,14 @@ helpviewer_keywords:
 ms.assetid: 0a6eeb16-f02b-479d-9a60-543e40ebf46b
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 9d7bccf89e8f2043413838e9f55fd8bd4e74dc5f
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 0af1ae6d145836a313df8ba6e77f965aa17e0e9a
+ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907231"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74165535"
 ---
-# <a name="open-activity-monitor-sql-server-management-studio"></a>Открытие монитора активности (среда SQL Server Management Studio)
+# <a name="open-activity-monitor-in-sql-server-management-studio-ssms"></a>Открытие монитора активности в среде SQL Server Management Studio (SSMS)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
    
  Монитор активности выполняет запросы в отслеживаемом экземпляре, чтобы получать данные для панелей отображения монитора активности. Если установлен интервал обновления менее 10 секунд, то время, затрачиваемое на выполнение этих запросов, может повлиять на производительность сервера.  
@@ -36,7 +37,7 @@ ms.locfileid: "72907231"
   
 ## <a name="open-activity-monitor"></a>Открытие монитора активности  
 
-### <a name="keyboard-shortcut"></a>Сочетание клавиш  
+### <a name="keyboard-shortcut"></a>Сочетания клавиш  
  - Нажмите клавиши **CTRL+ALT+A** , чтобы открыть монитор активности в любое время.
 
  >**Подсказка.** Наведите указатель мыши на значок в SSMS, чтобы узнать, что это за функция и какое сочетание клавиш активирует ее.

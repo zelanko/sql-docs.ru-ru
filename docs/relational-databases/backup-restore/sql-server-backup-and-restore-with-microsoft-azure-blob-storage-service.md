@@ -1,7 +1,7 @@
 ---
-title: Резервное копирование и восстановление SQL Server с помощью службы хранилища Blob-объектов Microsoft Azure | Документация Майкрософт
-ms.custom: ''
-ms.date: 03/25/2019
+title: Резервное копирование и восстановление с помощью хранилища BLOB-объектов Azure
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -10,17 +10,17 @@ ms.topic: conceptual
 ms.assetid: 6a0c9b6a-cf71-4311-82f2-12c445f63935
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 169e437c141d379401b7a3294f0ae852d756374f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ba2574b4468742414d60c1f4e7db4a93380fba0e
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68041368"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251136"
 ---
 # <a name="sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service"></a>Резервное копирование и восстановление SQL Server с помощью службы хранилища Blob-объектов Microsoft Azure
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  ![Изображение резервного копирования в большой двоичный объект Azure](../../relational-databases/backup-restore/media/backup-to-azure-blob-graphic.png "Изображение резервного копирования в большой двоичный объект Azure")  
+  ![Резервное копирование в графику BLOB-объектов Azure](../../relational-databases/backup-restore/media/backup-to-azure-blob-graphic.png "Резервное копирование в графику BLOB-объектов Azure")  
   
  В этом разделе описывается резервное копирование [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и восстановление из [службы хранилища BLOB-объектов Microsoft Azure](https://www.windowsazure.com/develop/net/how-to-guides/blob-storage/). В разделе также описаны основные преимущества использования службы BLOB-объектов Microsoft Azure для хранения резервных копий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -57,17 +57,17 @@ ms.locfileid: "68041368"
   
  [Ценовой калькулятор Microsoft Azure](https://go.microsoft.com/fwlink/?LinkId=277060) может помочь оценить затраты.  
   
- **Хранение данных.** Стоимость основывается на используемом пространстве и высчитывается по градуированной шкале и уровню избыточности. Дополнительные сведения и обновленную информацию см. в разделе **Управление данными** статьи [Расчет цен](https://go.microsoft.com/fwlink/?LinkId=277059) .  
+ **Хранилище.** Стоимость основывается на используемом пространстве и высчитывается по градуированной шкале и уровню избыточности. Дополнительные сведения и обновленную информацию см. в разделе **Управление данными** статьи [Расчет цен](https://go.microsoft.com/fwlink/?LinkId=277059) .  
   
  **Передача данных**. За входящий трафик в Microsoft Azure оплата не начисляется. Исходящие передачи оцениваются по пропускной способности, а их стоимость высчитывается по градуированной шкале, привязанной к региону. Дополнительные сведения см. в разделе [Передача данных](https://go.microsoft.com/fwlink/?LinkId=277061) в статье «Расчет цен».  
   
 ## <a name="see-also"></a>См. также:  
 
-[Резервное копирование SQL Server на URL-адрес — рекомендации и устранение неполадок](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)   
+[Резервное копирование SQL Server на URL-адрес — рекомендации и устранение неполадок](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md).   
 
 [Резервное копирование и восстановление системных баз данных (SQL Server)](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)   
 
-[Учебник. Использование службы хранилища больших двоичных объектов Microsoft Azure с базами данных SQL Server 2016](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)
+[Руководство. Использование службы хранилища больших двоичных объектов Microsoft Azure с базами данных SQL Server 2016](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)
 
 [Резервное копирование в SQL Server по URL-адресу](../../relational-databases/backup-restore/sql-server-backup-to-url.md)  
   

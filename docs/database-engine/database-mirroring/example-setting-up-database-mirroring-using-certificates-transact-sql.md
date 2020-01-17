@@ -1,6 +1,7 @@
 ---
-title: Пример Настройка зеркального отображения с помощью сертификатов (Transact-SQL) | Документация Майкрософт
-ms.custom: ''
+title: Пример Зеркальное отображение базы данных с сертификатами (T-SQL)
+description: Пример настройки зеркального отображения базы данных SQL Server с сертификатами с помощью Transact-SQL.
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.prod_service: high-availability
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: df489ecd-deee-465c-a26a-6d1bef6d7b66
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a3aa589de707e6f2edaac83db40ba908bf7177ae
-ms.sourcegitcommit: 734529a6f108e6ee6bfce939d8be562d405e1832
+ms.openlocfilehash: 5e7c3a2fd690b7a19f7d94de7e8d4fbbd9cac355
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/02/2019
-ms.locfileid: "70212346"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75253594"
 ---
 # <a name="example-setting-up-database-mirroring-using-certificates-transact-sql"></a>Пример Настройка зеркального отображения с помощью сертификатов (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -262,7 +263,7 @@ ms.locfileid: "70212346"
     ```  
   
     > [!NOTE]  
-    >  При необходимости запуска в режиме высокого уровня защиты с автоматической отработкой отказа оставьте безопасность транзакций в положении FULL (установка по умолчанию) и добавьте следящий сервер как можно быстрее после выполнения второй инструкции SET PARTNER **'**_сервер_партнер_**'** . Обратите внимание, что следящий сервер вначале нужно настроить для исходящих и входящих соединений.  
+    >  При необходимости запуска в режиме высокого уровня защиты с автоматической отработкой отказа оставьте безопасность транзакций в положении FULL (установка по умолчанию) и добавьте следящий сервер как можно быстрее после выполнения второй инструкции SET PARTNER **'** _сервер_партнер_ **'** . Обратите внимание, что следящий сервер вначале нужно настроить для исходящих и входящих соединений.  
   
  [&#91;В начало примера&#93;](#ExampleH2)  
   
@@ -286,6 +287,6 @@ ms.locfileid: "70212346"
  [Конечная точка зеркального отображения базы данных (SQL Server)](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
  [Использование сертификатов для конечной точки зеркального отображения базы данных (Transact-SQL)](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)   
  [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)   
- [Центр обеспечения безопасности для базы данных Azure SQL и SQL Server Database Engine](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
+ [Центр безопасности для ядра СУБД SQL Server и Базы данных Azure SQL](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
   

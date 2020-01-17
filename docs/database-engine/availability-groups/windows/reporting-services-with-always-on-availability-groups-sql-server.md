@@ -1,6 +1,7 @@
 ---
-title: Службы Reporting Services с группами доступности AlwaysOn (SQL Server) | Документы Майкрософт
-ms.custom: ''
+title: Службы Reporting Services с группами доступности
+description: Узнайте о настройке служб SQL Server Reporting Services (SSRS) с группами доступности Always On.
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -13,12 +14,12 @@ ms.assetid: edeb5c75-fb13-467e-873a-ab3aad88ab72
 author: MashaMSFT
 ms.author: mathoma
 manager: erikre
-ms.openlocfilehash: f0820f42d95f0320dbdf843ab1715b49994cb613
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 09a19680d9fff6a8d907dd17f3399ff632cba19b
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68252125"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243623"
 ---
 # <a name="reporting-services-with-always-on-availability-groups-sql-server"></a>Службы Reporting Services с группами доступности AlwaysOn (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "68252125"
  Общие сведения о [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] см. в разделе [Вопросы и ответы по группам доступности AlwaysOn для SQL Server 2012 (https://msdn.microsoft.com/sqlserver/gg508768)](https://msdn.microsoft.com/sqlserver/gg508768).  
 
 ##  <a name="bkmk_requirements"></a> Требования, которые необходимо выполнить для использования служб Reporting Services и групп доступности AlwaysOn  
- [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] и Сервер отчетов Microsoft Power BI использует .NET Framework 4.0 и поддерживает свойства строки соединения для [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] при работе с источниками данных.  
+ [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] и Сервер отчетов Microsoft Power BI использует .NET Framework 4.0 и поддерживает свойства строки соединения [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] при работе с источниками данных.  
   
  Чтобы использовать [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] в связке с  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 2014 или более ранней версии, следует загрузить и установить исправление для .Net 3.5 SP1. Это исправление добавляет в клиент SQL Server поддержку компонентов групп доступности, а также поддержку свойств строки подключения **ApplicationIntent** и **MultiSubnetFailover**. Если не установить это исправление на все компьютеры, на которых размещен сервер отчетов, то пользователи, пытающиеся просмотреть отчеты, будут видеть сообщение об ошибке примерно следующего содержания, которое также будет записываться в журнал трассировки сервера отчетов.  
   
@@ -70,7 +71,7 @@ ms.locfileid: "68252125"
   
 -   **Режим интеграции с SharePoint.** Для отчетов, которые уже опубликованы на сервере SharePoint, пользуйтесь страницами конфигурации SharePoint в библиотеках документов.  
   
--   **Конструирование отчетов:** [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)] или [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] . Дополнительные сведения приведены в разделе "Конструирование отчетов" этой главы.  
+-   **Конструирование отчетов:** [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)] или [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] при создании новых отчетов. Дополнительные сведения приведены в разделе "Конструирование отчетов" этой главы.  
   
  **Дополнительные ресурсы**  
   
@@ -93,7 +94,7 @@ ms.locfileid: "68252125"
 ##  <a name="bkmk_reportdesign"></a> Конструирование отчетов и группы доступности  
  При конструировании отчетов в [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)] или проекта отчета в среде [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]пользователь может настроить строку подключения к источнику данных отчета с помощью новых свойств соединения, предусмотренных в [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Поддержка новых свойств соединения зависит от того, где пользователь просматривает отчеты.  
   
--   **Локальный предварительный просмотр:** [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)] и [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] используют .Net Framework 4.0 и поддерживают свойства строки подключения [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] .  
+-   **Локальный предварительный просмотр:** [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)] и [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] используют .Net Framework 4.0 и поддерживают свойства строки подключения [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)].  
   
 -   **Удаленный или серверный режим просмотра**. Если после публикации отчета на сервере отчетов или использования просмотра в [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)] на экране появляется сообщение об ошибке примерно следующего содержания, то это указывает на то, что просматривается отчет на сервере отчетов, где не установлено исправление .Net Framework 3.5 с пакетом обновления 1 (SP1) для [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)].  
   

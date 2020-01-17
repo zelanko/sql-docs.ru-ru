@@ -1,6 +1,7 @@
 ---
-title: Репликация, отслеживание изменений, изменение данных в группах доступности AlwaysOn | Документы Майкрософт
-ms.custom: ''
+title: Репликация, отслеживание изменений, изменение данных и группы доступности
+description: Сведения о взаимодействии репликации, отслеживания изменений и изменения данных при использовании с группами доступности SQL Server Always On.
+ms.custom: seo-lt-2019
 ms.date: 08/21/2018
 ms.prod: sql
 ms.reviewer: ''
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e17a9ca9-dd96-4f84-a85d-60f590da96ad
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2faa46529ea44ce348c382877d39d780cb22572b
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.openlocfilehash: 2e2a794a7e5bdafe4e07b5e7deb9a1007e4a7e73
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72251964"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75235394"
 ---
 # <a name="replication-change-tracking--change-data-capture---always-on-availability-groups"></a>Репликация, отслеживание изменений, изменение данных в группах доступности AlwaysOn
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -177,7 +178,7 @@ ms.locfileid: "72251964"
     - Или удалите базу данных со всех экземпляров вторичной реплики группы доступности и добавьте ее в экземпляры реплики группы доступности с помощью автоматического или ручного заполнения.
   
 ###  <a name="CT"></a> Отслеживание изменений  
- Базы данных с включенной функцией отслеживания изменений могут быть частью группы доступности AlwaysOn. Требуется дополнительная настройка. Клиентские приложения по отслеживанию изменений, использующие функции с табличными значениями (возвращающие табличное значение функции) или связанные серверы, для доступа к данным таблицы изменений также требуют возможность обнаружения первичной реплики после отработки отказа. Если клиентское приложение подключается посредством имени прослушивателя группы доступности, запросы на соединение всегда направляются на текущую первичную реплику.  
+ Базы данных с включенной функцией отслеживания изменений могут быть частью группы доступности AlwaysOn. Никаких дополнительных настроек не требуется. Клиентские приложения по отслеживанию изменений, использующие функции с табличными значениями (возвращающие табличное значение функции) или связанные серверы, для доступа к данным таблицы изменений также требуют возможность обнаружения первичной реплики после отработки отказа. Если клиентское приложение подключается посредством имени прослушивателя группы доступности, запросы на соединение всегда направляются на текущую первичную реплику.  
   
 > [!NOTE]  
 >  Данные отслеживания изменений должны получаться из первичной реплики. Попытка доступа к информации об изменениях из вторичной реплики приведет к следующей ошибке.  
@@ -214,7 +215,7 @@ ms.locfileid: "72251964"
   
  ** База данных распространителя не поддерживается для использования с зеркальным отображением базы данных.  
   
-### <a name="considerations"></a>Замечания  
+### <a name="considerations"></a>Рекомендации  
   
 -   База данных распространителя не поддерживается в сочетании с [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] или с зеркальным отображением базы данных. Конфигурация репликации работает совместно с экземпляром SQL Server, на котором настроен распространитель. Именно по этой причине база данных распространителя не может участвовать в репликации или зеркальном отображении. Чтобы обеспечить высокий уровень доступности для распространителя, используйте отказоустойчивый кластер SQL Server. Дополнительные сведения см. в разделе [Экземпляры отказоустойчивого кластера (режим AlwaysOn) (SQL Server)](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md).  
   
@@ -231,7 +232,7 @@ ms.locfileid: "72251964"
   
 -   [Вопросы и ответы об администрировании репликации](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)  
   
- **Change data capture**  
+ **Запись измененных данных**  
   
 -   [Включение и отключение отслеживания измененных данных (SQL Server)](../../../relational-databases/track-changes/enable-and-disable-change-data-capture-sql-server.md)  
   
@@ -253,7 +254,7 @@ ms.locfileid: "72251964"
  [Обзор групп доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Группы доступности AlwaysOn: взаимодействие (SQL Server)](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)   
  [Экземпляры отказоустойчивого кластера (режим AlwaysOn) (SQL Server)](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)   
- [Об отслеживании измененных данных (SQL Server)](../../../relational-databases/track-changes/about-change-data-capture-sql-server.md)   
+ [О фиксации измененных данных (SQL Server)](../../../relational-databases/track-changes/about-change-data-capture-sql-server.md)   
  [Об отслеживании изменений (SQL Server)](../../../relational-databases/track-changes/about-change-tracking-sql-server.md)   
  [Репликация SQL Server](../../../relational-databases/replication/sql-server-replication.md)   
  [Отслеживание измененных данных (SQL Server)](../../../relational-databases/track-changes/track-data-changes-sql-server.md)   

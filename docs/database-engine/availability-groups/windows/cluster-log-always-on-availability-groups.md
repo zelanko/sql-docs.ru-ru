@@ -1,7 +1,7 @@
 ---
-title: Создание и анализ журнала CLUSTER.LOG для группы доступности
+title: Создание и анализ журнала CLUSTER.LOG для групп доступности
 description: 'Описывается создание и анализ журнала кластера для группы доступности Always On. '
-ms.custom: ag-guide, seodec18
+ms.custom: seo-lt-2019
 ms.date: 06/14/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 01a9e3c1-2a5f-4b98-a424-0ffc15d312cf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a2e2f782673f1f11ad42e7de09f137291e1bfdf3
-ms.sourcegitcommit: 27c267bf2a3cfaf2abcb5f3777534803bf4cffe5
+ms.openlocfilehash: 045444c2141027854e54480483f09ab8eb9a04b6
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73240753"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244375"
 ---
 # <a name="generate-and-analyze-the-clusterlog-for-an-always-on-availability-group"></a>Создание и анализ журнала CLUSTER.LOG для группы доступности Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ Get-ClusterLog -TimeSpan 15 -Destination .
   
 3.  В области сведений щелкните правой кнопкой мыши ресурс группы доступности и выберите пункт **Свойства**.  
   
-4.  Перейдите на вкладку **Свойства** .  
+4.  Щелкните вкладку **Свойства**.  
   
 5.  Измените свойство **VerboseLogging**. По умолчанию **VerboseLogging** равно `0`, то есть выводятся информационные сообщения, предупреждения и ошибки. **VerboseLogging** может принимать значения от `0` до `2`.  
   
@@ -57,7 +57,7 @@ Get-ClusterLog -TimeSpan 15 -Destination .
 ## <a name="availability-group-resource-events"></a>События для ресурса группы доступности  
  В приведенной ниже таблице перечислены различные виды событий в CLUSTER.LOG, относящиеся к ресурсу группы доступности. Дополнительные сведения о подсистеме размещения ресурсов (RHS) и мониторе управления ресурсами (RCM) в кластере WSFC см. в разделе [Подсистема размещения ресурсов (RHS) в отказоустойчивых кластерах Windows Server 2008](https://blogs.technet.com/b/askcore/archive/2009/11/23/resource-hosting-subsystem-rhs-in-windows-server-2008-failover-clusters.aspx).  
   
-|Идентификатор|Source|Пример из CLUSTER.LOG|  
+|Идентификатор|Источник|Пример из CLUSTER.LOG|  
 |----------------|------------|------------------------------|  
 |Сообщения с префиксом `[RES]` и `[hadrag]`|hadrres.dll (библиотека ресурсов AlwaysOn)|00002cc4.00001264::2011/08/05-13:47:42.543 INFO  [RES] SQL Server Availability Group \<ag>: `[hadrag]` Offline request.<br /><br /> 00002cc4.00003384::2011/08/05-13:47:42.558 ERR   [RES] SQL Server Availability Group \<ag>: `[hadrag]` Lease Thread terminated<br /><br /> 00002cc4.00003384::2011/08/05-13:47:42.605 INFO  [RES] SQL Server Availability Group \<ag>: `[hadrag]` Free SQL statement<br /><br /> 00002cc4.00003384::2011/08/05-13:47:42.902 INFO  [RES] SQL Server Availability Group \<ag>: `[hadrag]` Disconnect from SQL Server|  
 |Сообщения с префиксом `[RHS]`|RHS.EXE (подсистема размещения ресурсов, хост-процесс библиотеки hadrres.dll)|00000c40.00000a34::2011/08/10-18:42:29.498 INFO  [RHS] Resource ag has come offline. RHS is about to report resource status to RCM.|  

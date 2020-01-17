@@ -1,6 +1,7 @@
 ---
-title: Настройка параметров SQL Server с помощью переменных среды
+title: Настройка переменных среды для SQL Server на Linux
 description: В этой статье описывается использование переменных среды для настройки параметров SQL Server 2017 в Linux.
+ms.custom: seo-lt-2019
 author: VanMSFT
 ms.author: vanto
 ms.date: 11/04/2019
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 11f8926ede3c4bcd1f0350be79add16c5ae52249
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: f768a79512059025ebd6dfe6a6f339175b6149f3
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531322"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558377"
 ---
 # <a name="configure-sql-server-settings-with-environment-variables-on-linux"></a>Настройка параметров SQL Server с помощью переменных среды в Linux
 
@@ -43,11 +44,11 @@ ms.locfileid: "73531322"
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-| Переменная среды | Описание |
+| Переменная среды | Description |
 |-----|-----|
 | **ACCEPT_EULA** | Присвойте переменной **ACCEPT_EULA** любое значение, чтобы подтвердить свое согласие с [лицензионным соглашением](https://go.microsoft.com/fwlink/?LinkId=746388). Обязательный параметр для образа SQL Server. |
 | **MSSQL_SA_PASSWORD** | Настройте пароль пользователя SA. |
-| **MSSQL_PID** | Укажите выпуск SQL Server или ключ продукта. Возможные значения. </br></br>**Ознакомительная версия**</br>**Разработчик**</br>**Express**</br>**Web**</br>**Standard Edition**</br>**Enterprise**</br>**Ключ продукта**</br></br>Если указывается ключ продукта, он должен соответствовать формату #####-#####-#####-#####-#####, где каждый знак "#" представляет собой букву или цифру.|
+| **MSSQL_PID** | Укажите выпуск SQL Server или ключ продукта. Ниже перечислены возможные значения. </br></br>**Ознакомительная версия**</br>**Разработчик**</br>**Express**</br>**Web**</br>**Standard Edition**</br>**Enterprise**</br>**Ключ продукта**</br></br>Если указывается ключ продукта, он должен соответствовать формату #####-#####-#####-#####-#####, где каждый знак "#" представляет собой букву или цифру.|
 | **MSSQL_LCID** | Задайте идентификатор языка для SQL Server. Например, значение 1036 соответствует французскому языку. |
 | **MSSQL_COLLATION** | Задает параметры сортировки по умолчанию для SQL Server. Переопределяет заданное по умолчанию сопоставление идентификатора языка (LCID) и параметров сортировки. |
 | **MSSQL_MEMORY_LIMIT_MB** | Задает максимальный объем памяти (в МБ), который может использовать SQL Server. По умолчанию используется 80 % от общего объема физической памяти. |
@@ -67,11 +68,11 @@ ms.locfileid: "73531322"
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-| Переменная среды | Описание |
+| Переменная среды | Description |
 |-----|-----|
 | **ACCEPT_EULA** | Присвойте переменной **ACCEPT_EULA** любое значение, чтобы подтвердить свое согласие с [лицензионным соглашением](https://go.microsoft.com/fwlink/?LinkId=746388). Обязательный параметр для образа SQL Server. |
 | **MSSQL_SA_PASSWORD** | Настройте пароль пользователя SA. |
-| **MSSQL_PID** | Укажите выпуск SQL Server или ключ продукта. Возможные значения. </br></br>**Ознакомительная версия**</br>**Разработчик**</br>**Express**</br>**Web**</br>**Standard Edition**</br>**Enterprise**</br>**Ключ продукта**</br></br>Если указывается ключ продукта, он должен соответствовать формату #####-#####-#####-#####-#####, где каждый знак "#" представляет собой букву или цифру.|
+| **MSSQL_PID** | Укажите выпуск SQL Server или ключ продукта. Ниже перечислены возможные значения. </br></br>**Ознакомительная версия**</br>**Разработчик**</br>**Express**</br>**Web**</br>**Standard Edition**</br>**Enterprise**</br>**Ключ продукта**</br></br>Если указывается ключ продукта, он должен соответствовать формату #####-#####-#####-#####-#####, где каждый знак "#" представляет собой букву или цифру.|
 | **MSSQL_LCID** | Задайте идентификатор языка для SQL Server. Например, значение 1036 соответствует французскому языку. |
 | **MSSQL_COLLATION** | Задает параметры сортировки по умолчанию для SQL Server. Переопределяет заданное по умолчанию сопоставление идентификатора языка (LCID) и параметров сортировки. |
 | **MSSQL_MEMORY_LIMIT_MB** | Задает максимальный объем памяти (в МБ), который может использовать SQL Server. По умолчанию используется 80 % от общего объема физической памяти. |
@@ -147,7 +148,7 @@ docker run -e ACCEPT_EULA=Y -e MSSQL_PID="Developer" -e MSSQL_SA_PASSWORD="<Your
 
 ::: moniker-end
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 Другие параметры SQL Server, не представленные здесь, описываются в статье [Настройка SQL Server на Linux с помощью средства mssql-conf](sql-server-linux-configure-mssql-conf.md).
 

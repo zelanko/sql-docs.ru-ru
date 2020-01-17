@@ -1,6 +1,7 @@
 ---
-title: Определение и изменение фильтра соединения между статьями публикации слиянием | Документация Майкрософт
-ms.custom: ''
+title: Определение и изменение фильтра соединения между статьями публикации слиянием
+description: Узнайте, как определить и изменить фильтр соединений, используемый между статьями публикации слиянием, с помощью SQL Server Management Studio (SSMS) или Transact-SQL (T-SQL).
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f7f23415-43ff-40f5-b3e0-0be1d148ee5b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1c37ddcac8c12b6885c696bea77ef66e5eedd5d5
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 03911ae4b3addb7a3626b6c9bd0a2c195b719cef
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908580"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321571"
 ---
 # <a name="define-and-modify-a-join-filter-between-merge-articles"></a>Определение и изменение фильтра соединения между статьями публикации слиянием
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -84,7 +85,7 @@ ms.locfileid: "72908580"
         > [!CAUTION]  
         >  Выбор этого параметра указывает, что связь между дочерней и родительской таблицей в фильтре соединения — «одна к одной» или «одна к нескольким». Устанавливайте этот параметр, лишь если на объединяющий столбец в дочерней таблице наложено ограничение, гарантирующее уникальность. Если параметр задан неправильно, может возникнуть потеря конвергенции данных.  
   
-    -   По умолчанию во время синхронизации процесс репликации слиянием обрабатывает изменения построчно. Чтобы в строках и фильтруемой, и присоединенной таблицы присутствовали связанные изменения и присоединенная таблица функционировала бы как целое, выберите **Логическая запись** (только [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] и более поздние версии). Этот параметр доступен, только если удовлетворяются требования статьи и публикации на использование логических записей. Дополнительные сведения см. в подразделе "Вопросы использования логических записей" раздела [Группирование изменений в связанных строках с помощью логических записей](../../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md).  
+    -   По умолчанию во время синхронизации процесс репликации слиянием обрабатывает изменения построчно. Чтобы в строках и фильтруемой и присоединенной таблицы присутствовали связанные изменения и присоединенная таблица функционировала как целое, выберите **Логическая запись** (только [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] и более поздние версии). Этот параметр доступен, только если удовлетворяются требования статьи и публикации на использование логических записей. Дополнительные сведения см. в подразделе "Вопросы использования логических записей" раздела [Группирование изменений в связанных строках с помощью логических записей](../../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md).  
   
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -136,8 +137,8 @@ ms.locfileid: "72908580"
  [!code-sql[HowTo#sp_MergeDynamicPub1](../../../relational-databases/replication/codesnippet/tsql/define-and-modify-a-join_2.sql)]  
   
 ## <a name="see-also"></a>См. также:  
- [Фильтры соединения](../../../relational-databases/replication/merge/join-filters.md)   
- [Параметризованные фильтры строк](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)   
+ [Join Filters](../../../relational-databases/replication/merge/join-filters.md)   
+ [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)   
  [Изменение свойств публикации и статьи](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
  [Фильтрация опубликованных данных для репликации слиянием](../../../relational-databases/replication/merge/filter-published-data-for-merge-replication.md)   
  [Руководство. Как определить и изменить фильтр соединения между статьями публикации слиянием (среда SQL Server Management Studio)](../../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)   

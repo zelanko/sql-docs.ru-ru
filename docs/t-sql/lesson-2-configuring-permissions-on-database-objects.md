@@ -1,6 +1,6 @@
 ---
-title: Учебник по T-SQL. Настройка разрешений для объектов базы данных | Документация Майкрософт
-ms.custom: ''
+title: Руководство. Настройка разрешений для объектов базы данных
+ms.custom: seo-lt-2019
 ms.date: 07/31/2018
 ms.prod: sql
 ms.technology: t-sql
@@ -12,12 +12,12 @@ ms.assetid: f964b66a-ec32-44c2-a185-6a0f173bfa22
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 791517685f4204f87f9c0cb96f48fe48d6828c53
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 991bdef702b1ed298bb492172ef65c6d25d5d0ab
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68122872"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244749"
 ---
 # <a name="lesson-2-configure-permissions-on-database-objects"></a>Урок 2. Настройка разрешений для объектов базы данных
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "68122872"
 ## <a name="prerequisites"></a>предварительные требования
 Для работы с этим руководством необходима среда SQL Server Management Studio и доступ к экземпляру SQL Server. 
 
-- Установите [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+- Установите [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 
 Если у вас нет доступа к экземпляру SQL Server, выберите свою платформу в следующих ссылках. При выборе проверки подлинности SQL используйте учетные данные SQL Server.
 - **Windows**: [Скачать выпуск SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads)
@@ -104,10 +104,10 @@ ms.locfileid: "68122872"
 ### <a name="about-grant"></a>Об инструкции GRANT  
 Нужно иметь разрешение на EXECUTE, чтобы выполнить хранимую процедуру. Нужно иметь разрешения на SELECT, INSERT, UPDATE и DELETE, чтобы получить доступ к данным и изменять их. Инструкция GRANT также используется для других разрешений, например для разрешений на создание таблиц.  
   
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 В следующей статье вы узнаете, как удалить объекты базы данных, созданные в других уроках. 
 
 Дополнительные сведения см. в следующей статье:
 > [!div class="nextstepaction"]
->[Следующие шаги](lesson-3-deleting-database-objects.md)
+>[Дальнейшие действия](lesson-3-deleting-database-objects.md)
   

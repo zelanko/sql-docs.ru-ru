@@ -1,6 +1,7 @@
 ---
-title: Обновление скриптов репликации (программирование репликации на языке Transact-SQL) | Документация Майкрософт
-ms.custom: ''
+title: Обновление скриптов репликации (хранимая процедура репликации)
+description: Узнайте, как использовать хранимые процедуры репликации для обновления скриптов, используемых для программной настройки топологии репликации.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -20,12 +21,12 @@ ms.assetid: 0b8720bd-f339-4842-bc8f-b35a46f6d3ee
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 7a7104b2ecf2b74b9ad6a2521d7fff9fe09b500f
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 0d582af912f94fe0e0755340eb4d5ace892e72da
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710374"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75320051"
 ---
 # <a name="upgrade-replication-scripts-replication-transact-sql-programming"></a>обновить скрипты репликации (программирование репликации на языке Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -93,7 +94,7 @@ ms.locfileid: "71710374"
   
     -   Для подписки по запросу обновите вызов процедуры [sp_addpullsubscription_agent (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md), указав в параметрах `@job_name` и `@job_password` учетные данные Windows, с использованием которых агент распространителя будет запускаться на подписчике. Это необходимо сделать после вызова хранимой процедуры [sp_addpullsubscription](../../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md). Дополнительные сведения см. в статье [Создание подписки по запросу](../../../relational-databases/replication/create-a-pull-subscription.md).  
   
-    -   Для принудительной подписки выполните процедуру [sp_addpushsubscription_agent (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md) на издателе. Укажите параметры `@subscriber`, `@subscriber_db`, `@publication`, учетные данные Windows, от которых агент распространителя будет запускаться на распространителе, в параметрах `@job_name` и `@job_password`, а также расписание для этого задания. Дополнительные сведения см. в статье [Specify Synchronization Schedules](../../../relational-databases/replication/specify-synchronization-schedules.md). Это необходимо сделать после вызова процедуры [sp_addsubscription](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Дополнительные сведения см. в статье [Create a Push Subscription](../../../relational-databases/replication/create-a-push-subscription.md).  
+    -   Для принудительной подписки выполните процедуру [sp_addpushsubscription_agent (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md) на издателе. Укажите параметры `@subscriber`, `@subscriber_db`, `@publication`, учетные данные Windows, от которых агент распространителя будет запускаться на распространителе, в параметрах `@job_name` и `@job_password`, а также расписание для этого задания. Дополнительные сведения см. в статье [Specify Synchronization Schedules](../../../relational-databases/replication/specify-synchronization-schedules.md). Это необходимо сделать после вызова процедуры [sp_addsubscription](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Дополнительные сведения см. в статье [Создание принудительной подписки](../../../relational-databases/replication/create-a-push-subscription.md).  
   
 ### <a name="to-upgrade-scripts-that-configure-a-merge-publication"></a>Обновление скриптов настройки публикации слиянием  
   

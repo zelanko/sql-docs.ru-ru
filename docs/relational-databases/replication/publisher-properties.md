@@ -1,6 +1,7 @@
 ---
-title: 'Репликация SQL Server: диалоговое окно "Свойства издателя" | Документация Майкрософт'
-ms.custom: ''
+title: Диалоговое окно "Свойства издателя" (SSMS)
+description: Описание диалогового окна "Свойства издателя" для конкретной публикации в SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: 11/20/2018
 ms.prod: sql
 ms.prod_service: database-engine
@@ -16,19 +17,19 @@ ms.assetid: 98df1aea-0406-40bf-a917-4bd80464125c
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: f157f541cae6fed5613f95df8d883044f8e09ff5
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 12c7a8482561e6ab608501158a05a275763ab74a
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908307"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75320741"
 ---
 # <a name="sql-server-replication-publisher-properties-dialog-box"></a>Репликация SQL Server: диалоговое окно "Свойства издателя"
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 В этой статье описываются параметры, доступные в диалоговом окне "Свойства издателя". 
 
-## <a name="general"></a>Общие
+## <a name="general"></a>Общие сведения
   Страница **Общие** диалогового окна **Свойства издателя** отображает доступные только для чтения сведения о распространителе и базе данных распространителя, используемой издателем. Чтобы изменить распространителя или базу данных распространителя для издателя:  
   
 1.  Отключите публикацию на сервере издателя. Дополнительные сведения см. в статье [Отключение публикации и распространения](../../relational-databases/replication/disable-publishing-and-distribution.md).    
@@ -66,18 +67,18 @@ ms.locfileid: "72908307"
   
 
 ## <a name="subcribers"></a>Подписчики
-  Страница **Подписчики** диалогового окна **Свойства издателя** используется для издателей, использующих версии [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] более ранние, чем [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Эта страница дает возможность включить получение данных подписчиками из публикаций на данном издателе. Включение получения данных подписчиком от данного издателя не создает подписки на публикации на данном издателе. Для создания подписки нужно использовать мастер создания подписки.  
+  Страница **Подписчики** диалогового окна **Свойства издателя** используется для издателей, использующих версии [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], более ранние, чем [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Эта страница дает возможность включить получение данных подписчиками из публикаций на данном издателе. Включение получения данных подписчиком от данного издателя не создает подписки на публикации на данном издателе. Для создания подписки нужно использовать мастер создания подписки.  
   
 ### <a name="options"></a>Параметры  
  **Подписчики**  
  Сетка свойств **Подписчики** отображает подписчиков, для которых включено получение данных из публикаций на данном издателе. Нажмите кнопку свойств **(...)** рядом с подписчиком для просмотра и установки дополнительных свойств.  
   
- **Добавить**  
+ **Добавление**  
  Нажмите кнопку **Добавить** для добавления подписчика, а затем выберите пункт **Добавить подписчик SQL Server** или **Добавить подписчик, отличный от подписчика SQL Server**.  
   
 ## <a name="see-also"></a>См. также:  
  [Просмотр и изменение свойств издателя и распространителя](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
- [Создание публикации](../../relational-databases/replication/publish/create-a-publication.md)   
+ [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
 
 
   

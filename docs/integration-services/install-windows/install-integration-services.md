@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: bd20fd3a-414b-4581-959d-ebba4ddf5a55
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f265d2af5ad6fc30708d57f162c8d6395858673f
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 0478e345f388b3f4246bf33fdaba29a47a6ec0f6
+ms.sourcegitcommit: a26cb217adfbbfb3636dff43fb19a46462e2e994
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71284832"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74491954"
 ---
 # <a name="install-integration-services-ssis"></a>Установка служб Integration Services (SSIS)
 
@@ -38,7 +38,7 @@ ms.locfileid: "71284832"
 
 ## <a name="get-ready-to-install-integration-services"></a>Подготовка к установке Integration Services
 
-Прежде чем приступить к установке служб [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], ознакомьтесь со следующими сведениями:
+Прежде чем приступить к установке служб [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], ознакомьтесь со следующими сведениями.
 
 - [Требования к оборудованию и программному обеспечению для установки SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)
 
@@ -117,7 +117,7 @@ ms.locfileid: "71284832"
 
 - **Пакет дополнительных компонентов служб Integration Services для Azure**. Чтобы скачать и установить пакет дополнительных компонентов, перейдите на страницу [пакета дополнительных компонентов служб Microsoft SQL Server 2017 Integration Services для Azure](https://docs.microsoft.com/sql/integration-services/azure-feature-pack-for-integration-services-ssis?view=sql-server-2017). Установка пакета дополнительных компонентов позволяет пакетам подключаться к службам хранения и анализа данных в облаке Azure, включая следующие службы:
 
-  - хранилище BLOB-объектов Azure;
+  - хранилище BLOB-объектов Azure.
 
   - Azure HDInsight;
 
@@ -133,7 +133,7 @@ ms.locfileid: "71284832"
 
   - Соединитель для Oracle (Microsoft) версии 5.0 от компании Attunity и соединитель для Teradata (Microsoft) версии 5.0 от компании Attunity. Чтобы получить эти компоненты, перейдите на страницу [соединителей для Oracle и Teradata (Microsoft) версии 5.0](https://www.microsoft.com/download/details.aspx?id=55179).
 
-## <a name="nest-steps"></a>Дальнейшие действия
+## <a name="next-steps"></a>Дальнейшие действия
 
 - [Установка нескольких версий служб Integration Services в одной среде](installing-integration-services-versions-side-by-side.md)
 

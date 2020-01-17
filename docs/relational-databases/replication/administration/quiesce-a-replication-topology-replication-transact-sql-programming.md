@@ -1,6 +1,7 @@
 ---
-title: Заморозка топологии репликации (программирование репликации на языке Transact-SQL) | Документация Майкрософт
-ms.custom: ''
+title: Замораживание топологии репликации (хранимая процедура репликации)
+description: Узнайте, как использовать хранимые процедуры репликации для замораживания топологии репликации для SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,12 +18,12 @@ ms.assetid: 7626d575-9994-47be-b772-5b6f1b7ef7ca
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 8a8154986de367869c4d85d97b2dfa9119adacc6
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 0ad5d9595419c5d991dd1e33d15e1e7a4d1a8721
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909851"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75322017"
 ---
 # <a name="quiesce-a-replication-topology-replication-transact-sql-programming"></a>заморозить топологию репликации (программирование репликации на языке Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

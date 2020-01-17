@@ -1,7 +1,7 @@
 ---
-title: Резервное копирование в SQL Server по URL-адресу — рекомендации и устранение неполадок | Документация Майкрософт
-ms.custom: ''
-ms.date: 03/25/2019
+title: Резервное копирование с использованием URL-адреса — рекомендации и устранение неполадок
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -10,14 +10,15 @@ ms.topic: conceptual
 ms.assetid: de676bea-cec7-479d-891a-39ac8b85664f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a31d11a469411e13f357f87d1112d608c94f5aa4
-ms.sourcegitcommit: d0e5543e8ebf8627eebdfd1e281adb47d6cc2084
+ms.openlocfilehash: 149c351796af7741c4bd3ef512fe27ebcbdcf35a
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72717238"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75245444"
 ---
-# <a name="sql-server-backup-to-url-best-practices-and-troubleshooting"></a>Резервное копирование SQL Server на URL-адрес — рекомендации и устранение неполадок
+# <a name="sql-server-backup-to-url-best-practices-and-troubleshooting"></a>Резервное копирование SQL Server на URL-адрес — рекомендации и устранение неполадок
+
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   В этом разделе рассматриваются рекомендации и советы по устранению неполадок с SQL Server при создании резервных копий и восстановлении с помощью службы BLOB-объектов Azure.  
@@ -26,9 +27,9 @@ ms.locfileid: "72717238"
   
 -   [Резервное копирование и восстановление SQL Server с помощью службы хранилища BLOB-объектов Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)  
   
--   [Учебник. Резервное копирование и восстановление SQL Server с помощью службы хранилища BLOB-объектов Azure](../../relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+-   [Руководство. Резервное копирование и восстановление SQL Server с помощью службы хранилища BLOB-объектов Azure](../../relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
-## <a name="managing-backups"></a>Управление резервными копиями  
+## <a name="managing-backups-mb1"></a> Управление резервными копиями  
  В следующем списке перечислены общие рекомендации по управлению резервным копированием.  
   
 -   Рекомендуется присваивать каждому файлу уникальное имя, чтобы предотвратить случайное перезаписывание больших двоичных объектов.  
@@ -47,7 +48,7 @@ ms.locfileid: "72717238"
   
 -   Операция резервного копирования [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняется в несколько потоков, чтобы оптимизировать передачу данных к службам хранилищ BLOB-объектов Azure.  Однако производительность зависит от различных факторов, в том числе от пропускной способности ISV и размера базы данных. Если планируется создавать резервные копии больших баз данных или файловых групп в локальной базе данных SQL Server, вначале рекомендуется проверить пропускную способность. В [соглашении об уровне обслуживания для службы хранилища Azure](https://azure.microsoft.com/support/legal/sla/storage/v1_0/) определены максимальные значения времени обработки для больших двоичных объектов, которыми можно руководствоваться.  
   
--   При создании резервных копий больших файлов очень важно использовать параметр `WITH COMPRESSION` в соответствии с рекомендациями, приведенными в разделе [Управление резервным копированием](##managing-backups).  
+-   При создании резервных копий больших файлов очень важно использовать параметр `WITH COMPRESSION` в соответствии с рекомендациями, приведенными в разделе [Управление резервным копированием](#managing-backups-mb1).  
   
 ## <a name="troubleshooting-backup-to-or-restore-from-url"></a>Устранение неполадок при резервном копирование или восстановлении по URL-адресу  
  Ниже приведено несколько простых способов устранения неполадок при создании резервной копии или восстановлении из службы хранилища BLOB-объектов Azure.  
@@ -92,7 +93,7 @@ ms.locfileid: "72717238"
 
     -   При резервном копировании больших баз данных используйте функции COMPRESSION, MAXTRANSFERSIZE, BLOCKSIZE и несколько аргументов URL-адресов.  Дополнительные сведения см. в записи блога [Backing up a VLDB to Azure Blob Storage](https://blogs.msdn.microsoft.com/sqlcat/2017/03/10/backing-up-a-vldb-to-azure-blob-storage/) (Копирование сверхбольшой базы данных в хранилище BLOB-объектов Azure).
   
-        ```
+        ```console
         Msg 3202, Level 16, State 1, Line 1
         Write on "https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak" failed: 1117(The request could not be performed because of an I/O device error.)
         Msg 3013, Level 16, State 1, Line 1
@@ -133,11 +134,11 @@ ms.locfileid: "72717238"
   
  Прокси-серверы могут иметь параметры, ограничивающие количество соединений в минуту. Процесс резервного копирования на URL-адрес является многопоточным, в связи с чем заданное ограничение может быть превышено. В этом случае прокси-сервер разрывает соединение. Чтобы устранить эту проблему, измените параметры прокси-сервера таким образом, чтобы SQL Server его не использовал. Далее приведено несколько примеров типов или сообщений об ошибках, которые можно встретить в журнале ошибок.  
   
-```
+```console
 Write on "https://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak" failed: Backup to URL received an exception from the remote endpoint. Exception Message: Unable to read data from the transport connection: The connection was closed.
 ```  
   
-```
+```console
 A nonrecoverable I/O error occurred on file "https://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak:" Error could not be gathered from Remote Endpoint.  
   
 Msg 3013, Level 16, State 1, Line 2  
@@ -145,7 +146,7 @@ Msg 3013, Level 16, State 1, Line 2
 BACKUP DATABASE is terminating abnormally.  
 ```
 
-```
+```console
 BackupIoRequest::ReportIoError: write failure on backup device https://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak'. Operating system error Backup to URL received an exception from the remote endpoint. Exception Message: Unable to read data from the transport connection: The connection was closed.
 ```  
   

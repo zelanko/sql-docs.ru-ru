@@ -1,6 +1,7 @@
 ---
-title: Группы доступности Always On для SQL Server на Linux
-description: ''
+title: Группы доступности для SQL Server на Linux
+description: Сведения о характеристиках групп доступности Always On для SQL Server на Linux.
+ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: e37742d4-541c-4d43-9ec7-a5f9b2c0e5d1
-ms.openlocfilehash: 4da9f5118b77fc389e08ddb3c2b351aaaa0fb3b2
-ms.sourcegitcommit: bcc3b2c7474297aba17b7a63b17c103febdd0af9
+ms.openlocfilehash: e4979fbb4e2dbbccf7ed11b744051373b0750d1f
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68794989"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558644"
 ---
 # <a name="always-on-availability-groups-on-linux"></a>Группы доступности Always On на Linux
 
@@ -155,7 +156,7 @@ sudo crm resource param ms-<AGResourceName> set required_synchronized_secondarie
 If using automatic seeding with a distributed availability group that crosses OSes, it can handle the differences in folder structure. How this works is described in [the documentation for automatic seeding].
 -->
  
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 [Настройка группы доступности для SQL Server на Linux](sql-server-linux-availability-group-configure-ha.md)
 
 [Настройка группы доступности для чтения и масштабирования в SQL Server на Linux](sql-server-linux-availability-group-configure-rs.md)

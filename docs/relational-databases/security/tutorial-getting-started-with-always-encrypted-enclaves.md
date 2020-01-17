@@ -1,6 +1,7 @@
 ---
-title: Руководство. Начало работы с Always Encrypted с безопасными анклавами с использованием SSMS | Документация Майкрософт
-ms.custom: ''
+title: Руководство. Always Encrypted с безопасными анклавами в SSMS
+description: В этом руководстве вы узнаете, как создать базовую среду Always Encrypted с безопасными анклавами, шифровать данные на месте и выдавать полнофункциональные запросы к зашифрованным столбцам с помощью SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: 10/15/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -12,14 +13,14 @@ ms.topic: tutorial
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: d5912e7cca2ceeba1fe0db95743b4d29e1154a86
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: a01b55cb67332617ea2e326756fb8ad6fc7bcf42
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73592344"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75557536"
 ---
-# <a name="tutorial-getting-started-with-always-encrypted-with-secure-enclaves-using-ssms"></a>Руководство. Начало работы с Always Encrypted с безопасными анклавами с использованием SSMS
+# <a name="tutorial-always-encrypted-with-secure-enclaves-using-ssms"></a>Руководство. Always Encrypted с безопасными анклавами в SSMS
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
 
 В этом руководстве показывается, как приступить к работе с [Always Encrypted с безопасными анклавами](encryption/always-encrypted-enclaves.md). Буду рассмотрены следующие темы.
@@ -157,7 +158,7 @@ ms.locfileid: "73592344"
 
 Если все эти действия не помогают, запустите командлет Remove-HgsClientHostKey и повторите шаги 4–7.
 
-## <a name="step-3-enable-always-encrypted-with-secure-enclaves-in-sql-server"></a>Шаг 3. Настройка Always Encrypted с безопасными анклавами в SQL Server
+## <a name="step-3-enable-always-encrypted-with-secure-enclaves-in-sql-server"></a>Шаг 3. Настройка Always Encrypted с безопасными анклавами в SQL Server
 
 На этом шаге выполняется включение функции Always Encrypted с использованием анклавов в экземпляре SQL Server.
 
@@ -199,7 +200,7 @@ ms.locfileid: "73592344"
     > [!NOTE]
     > Полнофункциональные вычисления в [!INCLUDE [sssqlv15-md](../../includes/sssqlv15-md.md)] по умолчанию отключены. Их необходимо включить с помощью вышеуказанной инструкции после каждой перезагрузки экземпляра SQL Server.
 
-## <a name="step-4-create-a-sample-database"></a>Шаг 4. Создание образца базы данных
+## <a name="step-4-create-a-sample-database"></a>Шаг 4. Создание образца базы данных
 На этом шаге создается база данных с демонстрационными данными, которые далее будут шифроваться.
 
 1. С помощью экземпляра SSMS из предыдущего шага выполните приведенную ниже инструкцию в окне запроса, чтобы создать новую базу данных с именем **ContosoHR**.
@@ -253,7 +254,7 @@ ms.locfileid: "73592344"
             , $55415);
     ```
 
-## <a name="step-5-provision-enclave-enabled-keys"></a>Шаг 5. Подготовка ключей с поддержкой анклава
+## <a name="step-5-provision-enclave-enabled-keys"></a>Шаг 5. Подготовка ключей с поддержкой анклава
 
 На этом шаге будут создаваться главный ключ столбца и ключ шифрования столбца, который разрешает вычисления анклава.
 
@@ -269,7 +270,7 @@ ms.locfileid: "73592344"
 
         ![Разрешение вычислений анклава](encryption/media/always-encrypted-enclaves/allow-enclave-computations.png)
 
-1. Создайте новый ключ шифрования столбцов с поддержкой анклава:
+1. Создайте ключ шифрования столбцов с поддержкой анклава:
 
     1. Щелкните правой кнопкой мыши **Ключи Always Encrypted** и выберите **Создать ключ шифрования столбца**.
     2. Введите имя для нового ключа шифрования столбцов: **CEK1**.
@@ -341,8 +342,8 @@ ms.locfileid: "73592344"
 
 ## <a name="next-steps"></a>Next Steps
 После завершения работы с этим учебником вы можете обратиться к одному из следующих учебников:
-- [Учебник. Разработка приложения .NET Framework с помощью Always Encrypted с безопасными анклавами](tutorial-always-encrypted-enclaves-develop-net-framework-apps.md)
-- [Учебник. Создание и использование индексов в столбцах с поддержкой анклава с помощью случайного шифрования](./tutorial-creating-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md)
+- [Руководство. Разработка приложения .NET Framework с помощью Always Encrypted с безопасными анклавами](tutorial-always-encrypted-enclaves-develop-net-framework-apps.md)
+- [Руководство. Создание и использование индексов в столбцах с поддержкой анклава с помощью случайного шифрования](./tutorial-creating-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md)
 
 ## <a name="see-also"></a>См. также:
 - [Настройка типа анклава для параметра конфигурации сервера Always Encrypted](../../database-engine/configure-windows/configure-column-encryption-enclave-type.md)

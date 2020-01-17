@@ -1,6 +1,7 @@
 ---
-title: Обновляемые подписки для репликации транзакций | Документация Майкрософт
-ms.custom: ''
+title: Обновляемые подписки (транзакции)
+description: Описание функции обновляемых подписок, доступной для репликации транзакций в SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 07/21/2016
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8eec95cb-3a11-436e-bcee-bdcd05aa5c5a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2dca69a0378f8e5cf1aa6006ec0ef7a905639507
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7baa131caa531038d8764c070ebd00ba44147c54
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68121221"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321446"
 ---
 # <a name="updatable-subscriptions---for-transactional-replication"></a>Обновляемые подписки для репликации транзакций
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

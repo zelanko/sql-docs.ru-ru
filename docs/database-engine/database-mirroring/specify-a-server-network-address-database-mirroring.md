@@ -1,6 +1,7 @@
 ---
-title: Указание сетевого адреса сервера (зеркальное отображение базы данных) | Документы Майкрософт
-ms.custom: ''
+title: Указание сетевого адреса сервера (зеркальное отображение базы данных)
+description: Указание сетевого адреса сервера для конечной точки зеркального отображения базы данных.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a64d4b6b-9016-4f1e-a310-b1df181dd0c6
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 1db02ef90af9e014e3481961daf08a1ce10a54c4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1fbb4df1ef746c885bb2bec9d4fe815bef8a693d
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68048080"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252754"
 ---
 # <a name="specify-a-server-network-address-database-mirroring"></a>Указание сетевого адреса сервера (зеркальное отображение базы данных)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -1,6 +1,7 @@
 ---
-title: Обновление доставки журналов до SQL Server 2016 (Transact-SQL) | Документы Майкрософт
-ms.custom: ''
+title: Обновление доставки журналов до SQL Server 2016 и более поздних версий
+description: Изучите соответствующий порядок, чтобы сохранить решение аварийного восстановления доставки журналов при обновлении до SQL Server 2016 и более поздних версий с предыдущей версии.
+ms.custom: seo-lt-2019
 ms.date: 02/01/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -11,19 +12,19 @@ helpviewer_keywords:
 ms.assetid: b1289cc3-f5be-40bb-8801-0e3eed40336e
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8608d91495ca255a0205247a557687ad32ac46df
-ms.sourcegitcommit: 853c2c2768caaa368dce72b4a5e6c465cc6346cf
+ms.openlocfilehash: c3ebe7da68b057e9f84d2b83572a337ede278401
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71227134"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258571"
 ---
 # <a name="upgrading-log-shipping-to-sql-server-2016-transact-sql"></a>Обновление доставки журналов до SQL Server 2016 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Если вы обновляете конфигурацию доставки журналов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] до новой версии [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] либо устанавливаете новый пакет обновления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или накопительный пакет обновления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], обновление серверов доставки журналов в правильном порядке позволит сохранить ваше решение для аварийного восстановления доставки журналов.  
   
 > [!NOTE]  
->  [Сжатие резервной копии](../../relational-databases/backup-restore/backup-compression-sql-server.md) было введено в выпуске [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)]. В обновленной конфигурации доставки журналов используется параметр **стандартного сжатия резервных копий** уровня сервера, который управляет применением сжатия резервной копии к файлам резервной копии журнала транзакций. Режим сжатия резервной копии журналов можно указать отдельно для каждой конфигурации доставки журналов. Дополнительные сведения см. в статьях [Настройка доставки журналов (SQL Server)](../../database-engine/log-shipping/configure-log-shipping-sql-server.md).  
+>  [Сжатие резервной копии](../../relational-databases/backup-restore/backup-compression-sql-server.md) было введено в выпуске [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)]. В обновленной конфигурации доставки журналов используется параметр **стандартного сжатия резервных копий** уровня сервера, который управляет применением сжатия резервной копии к файлам резервной копии журнала транзакций. Режим сжатия резервной копии журналов можно указать отдельно для каждой конфигурации доставки журналов. Дополнительные сведения см. в разделе [Настройка доставки журналов (SQL Server)](../../database-engine/log-shipping/configure-log-shipping-sql-server.md).  
   
  **В этом разделе:**  
   
@@ -65,7 +66,7 @@ ms.locfileid: "71227134"
 ##  <a name="UpgradeMonitor"></a> Обновление экземпляра сервера мониторинга (необязательное)  
  Существующий экземпляр сервера мониторинга можно обновить в любой момент. Тем не менее нет необходимости обновлять необязательный сервер мониторинга при обновлении сервера-источника и сервера-получателя.  
   
- При обновлении сервера мониторинга конфигурация доставки журналов продолжает работать, но ее состояние не записывается в таблицы мониторинга. В процессе обновления сервера мониторинга не будут срабатывать никакие настроенные предупреждения. После обновления можно обновить сведения в таблицах наблюдения. Для этого следует выполнить системную хранимую процедуру [sp_refresh_log_shipping_monitor](../../relational-databases/system-stored-procedures/sp-refresh-log-shipping-monitor-transact-sql.md).   Дополнительные сведения о сервере мониторинга см. в статье [Сведения о доставке журналов (SQL Server)](../../database-engine/log-shipping/about-log-shipping-sql-server.md).  
+ При обновлении сервера мониторинга конфигурация доставки журналов продолжает работать, но ее состояние не записывается в таблицы мониторинга. В процессе обновления сервера мониторинга не будут срабатывать никакие настроенные предупреждения. После обновления можно обновить сведения в таблицах наблюдения. Для этого следует выполнить системную хранимую процедуру [sp_refresh_log_shipping_monitor](../../relational-databases/system-stored-procedures/sp-refresh-log-shipping-monitor-transact-sql.md).   Дополнительные сведения о сервере мониторинга см. в статье [Сведения о доставке журналов(SQL Server)](../../database-engine/log-shipping/about-log-shipping-sql-server.md).  
   
 ##  <a name="UpgradeSecondaries"></a> Обновление экземпляра сервера-получателя  
  Перед обновлением экземпляра сервера-источника экземпляры сервера-получателя [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обновляются до версии [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Всегда обновляйте сначала экземпляры сервера-получателя [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Доставка журналов продолжается и во время обновления, поскольку экземпляры обновленных серверов-получателей продолжают восстанавливать журналы из резервных копий с экземпляра сервера-источника [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Если экземпляр сервера-источника обновить до обновления экземпляра сервера-получателя, то доставка журналов станет невозможна, так как более старую версию [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] нельзя восстановить из резервной копии, созданной в новой версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Обновлять экземпляры серверов-получателей можно одновременно или последовательно, но все экземпляры серверов-получателей должны быть обновлены до начала обновления экземпляра сервера-источника, иначе возможны сбои доставки журналов.  

@@ -1,6 +1,7 @@
 ---
-title: Безопасность агента чтения журнала (одноранговая репликация) | Документация Майкрософт
-ms.custom: ''
+title: Безопасность агента чтения журнала (SSMS)
+description: Описание страницы "Безопасность агента чтения журнала" для транзакции и одноранговой публикации в SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 6575e2a8-16bb-449c-bdca-4a4202d0972f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 23992cec9f05f2696d475e8c6e8e8ebdbd373962
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5caaa59fd28f3557a6ae7edf90c6a53497d24a1a
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68127910"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321605"
 ---
 # <a name="log-reader-agent-security-peer-to-peer-replication"></a>Безопасность агента чтения журнала (одноранговая репликация)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

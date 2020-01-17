@@ -1,7 +1,7 @@
 ---
-title: Использование регулятора ресурсов для ограничения загрузки ЦП при сжатии резервной копии (компонент Transact-SQL) | Документация Майкрософт
-ms.custom: ''
-ms.date: 03/16/2017
+title: Ограничение загрузки ЦП. Использование регулятора ресурсов для сжатия резервных копий
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 01796551-578d-4425-9b9e-d87210f7ba72
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: be8d6f23c880d96f46aecc433d46b0971995278d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 73fd6d47d3108fbfc46e1d1a6189ac21892a3eb9
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68041300"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75245414"
 ---
 # <a name="use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql"></a>Использование регулятора ресурсов для ограничения загрузки ЦП при сжатии резервной копии (компонент Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -74,7 +74,7 @@ ms.locfileid: "68041300"
   
      **Добавление пользователя к предопределенной роли базы данных**  
   
-    -   [Хранимая процедура sp_addrolemember (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)  
+    -   [sp_addrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)  
   
      Дополнительные сведения см. в разделе [GRANT, предоставление разрешений на участника базы данных (Transact-SQL)](../../t-sql/statements/grant-database-principal-permissions-transact-sql.md).  
   
@@ -281,6 +281,6 @@ GO
   
 ## <a name="see-also"></a>См. также:  
  [Создание и проверка определяемой пользователем функции-классификатора](../../relational-databases/resource-governor/create-and-test-a-classifier-user-defined-function.md)   
- [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)  
+ [Регулятор ресурсов](../../relational-databases/resource-governor/resource-governor.md)  
   
   

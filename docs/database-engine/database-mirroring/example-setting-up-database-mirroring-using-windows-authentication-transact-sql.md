@@ -1,6 +1,7 @@
 ---
-title: Пример Настройка зеркального отображения базы данных с проверкой подлинности Windows (T-SQL) | Документация Майкрософт
-ms.custom: ''
+title: Настройка зеркального отображения базы данных с проверкой подлинности Windows (T-SQL)
+description: В этом примере показаны все этапы создания сеанса зеркального отображения базы данных со следящим сервером, использующим проверку подлинности Windows с Transact-SQL (T-SQL)
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.prod_service: high-availability
@@ -15,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: 35800769-aede-4aac-b077-0e0e487e302f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: b30804974d472f06dc2ab5971d4d3f7674c61e16
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2a263cd161370a4d3f87c673209e82296ec2a28c
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67997892"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822263"
 ---
-# <a name="example-setting-up-database-mirroring-using-windows-authentication-transact-sql"></a>Пример Настройка зеркального отображения с использованием проверки подлинности Windows (Transact-SQL)
+# <a name="example-configure-database-mirroring-using-windows-authentication-transact-sql"></a>Пример Настройка зеркального отображения с использованием проверки подлинности Windows (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  В этом примере показаны все этапы создания сеанса зеркального отображения базы данных со следящим сервером, использующим проверку подлинности Windows. Примеры в этом подразделе используют язык [!INCLUDE[tsql](../../includes/tsql-md.md)]. Обратите внимание, что в качестве альтернативы использованию этапов [!INCLUDE[tsql](../../includes/tsql-md.md)] для установки зеркального отображения баз данных можно воспользоваться мастером конфигурации безопасности зеркального отображения баз данных. Дополнительные сведения см. в разделе [Создание сеанса зеркального отображения базы данных с использованием проверки подлинности Windows (среда SQL Server Management Studio)](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md).  
+  В этом примере показаны все этапы создания сеанса зеркального отображения базы данных со следящим сервером, использующим проверку подлинности Windows. Примеры в этом подразделе используют язык [!INCLUDE[tsql](../../includes/tsql-md.md)]. Обратите внимание, что в качестве альтернативы использованию этапов [!INCLUDE[tsql](../../includes/tsql-md.md)] для установки зеркального отображения баз данных можно воспользоваться мастером конфигурации безопасности зеркального отображения баз данных. Дополнительные сведения см. в подразделе [Создание сеанса зеркального отображения базы данных с использованием проверки подлинности Windows (среда SQL Server Management Studio)](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md).  
   
 ## <a name="prerequisite"></a>Предварительные требования  
  В примере используется образец базы данных **AdventureWorks** , которая по умолчанию использует простую модель восстановления. Для зеркального отображения этой базы данных нужно переключить ее на модель полного восстановления. Чтобы сделать это средствами языка [!INCLUDE[tsql](../../includes/tsql-md.md)], выполните следующую инструкцию ALTER DATABASE.  
@@ -47,7 +48,7 @@ GO
   
  В следующей таблице представлены все значения, использованные в этом примере.  
   
-|Начальная роль зеркального отображения|Система размещения|Доменная учетная запись пользователя|  
+|Начальная роль зеркального отображения|Система размещения|Учетная запись пользователя домена|  
 |----------------------------|-----------------|-------------------------|  
 |Основной|PARTNERHOST1|*\<мой_домен>\\<имя_пользователя_бд\>*|  
 |Зеркальное отображение|PARTNERHOST5|*\<мой_домен>\\<имя_пользователя_бд\>*|  
@@ -116,7 +117,7 @@ GO
     GO  
     ```  
   
-4.  Создайте зеркальную базу данных. Дополнительные сведения см. в разделе [Подготовка зеркальной базы данных к зеркальному отображению (SQL Server)](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md).  
+4.  Создайте зеркальную базу данных. Дополнительные сведения см. в статье [Prepare a Mirror Database for Mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md).  
   
 5.  На экземпляре зеркального сервера PARTNERHOST5 установите экземпляр сервера PARTNERHOST1 в качестве участника (для этого его нужно сделать начальным экземпляром основного сервера).  
   
@@ -163,6 +164,6 @@ GO
  [Конечная точка зеркального отображения базы данных (SQL Server)](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
  [Безопасность транспорта для зеркального отображения баз данных и групп доступности AlwaysOn (SQL Server)](../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)   
  [Управление метаданными при обеспечении доступности базы данных на другом экземпляре сервера (SQL Server)](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)   
- [Центр обеспечения безопасности для базы данных Azure SQL и SQL Server Database Engine](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
+ [Центр безопасности для ядра СУБД SQL Server и Базы данных Azure SQL](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
   

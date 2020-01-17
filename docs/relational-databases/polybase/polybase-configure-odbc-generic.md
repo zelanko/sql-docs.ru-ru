@@ -1,6 +1,7 @@
 ---
-title: Настройка доступа к внешним данным в PolyBase с помощью универсальных типов ODBC | Документация Майкрософт
-ms.date: 04/23/2019
+title: 'Доступ к внешним данным: универсальные типы ODBC — PolyBase'
+ms.date: 12/13/2019
+ms.custom: seo-lt-2019
 ms.prod: sql
 ms.technology: polybase
 ms.topic: conceptual
@@ -8,12 +9,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions'
-ms.openlocfilehash: 735d43f224fcfb8438f8fed9bdc6c3b254071195
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 5017dc54a1e7858786413b2fcc164e4949f77646
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907594"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75255425"
 ---
 # <a name="configure-polybase-to-access-external-data-in-sql-server"></a>Настройка PolyBase для доступа к внешним данным в SQL Server
 
@@ -88,6 +89,6 @@ PolyBase в SQL Server 2019 позволяет подключаться к со
 >[!IMPORTANT] 
 >После создания внешнего источника данных можно использовать команду [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md), чтобы создать таблицу с поддержкой запросов по этому источнику. 
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 Дополнительные сведения о PolyBase см. в статье [Руководство по PolyBase](polybase-guide.md).

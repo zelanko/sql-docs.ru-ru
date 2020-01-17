@@ -1,6 +1,8 @@
 ---
-title: REVOKE, отмена разрешений субъекта на уровне сервера (Transact-SQL) | Документы Майкрософт
-ms.custom: ''
+title: REVOKE (разрешения на субъект сервера)
+description: Отмена разрешений для имени входа SQL Server.
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: seo-lt-2019
 ms.date: 08/10/2017
 ms.prod: sql
 ms.prod_service: sql-database
@@ -19,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 75409024-f150-4326-af16-9d60e900df18
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 2ee75a4b200850e8762814ddd30dab8c1e60bdb0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 21cb290cb91ca74227db7a3cd16501ddd882ae48
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67914235"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75255787"
 ---
 # <a name="revoke-server-principal-permissions-transact-sql"></a>REVOKE, отмена разрешений участника на уровне сервера (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -113,7 +115,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] }
 ## <a name="examples"></a>Примеры  
   
 ### <a name="a-revoking-impersonate-permission-on-a-login"></a>A. Отмена разрешения IMPERSONATE на имя входа  
- Следующий пример отменяет разрешение `IMPERSONATE` на имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `WanidaBenshoof` для имени входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], созданного из пользователя Windows `AdvWorks\YoonM`.  
+ Следующий пример отменяет разрешение `IMPERSONATE` на имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`WanidaBenshoof` для имени входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], созданного из пользователя Windows `AdvWorks\YoonM`.  
   
 ```  
 USE master;  
@@ -122,7 +124,7 @@ GO
 ```  
   
 ### <a name="b-revoking-view-definition-permission-with-cascade"></a>Б. Отмена разрешения VIEW DEFINITION с параметром CASCADE  
- Следующий пример отменяет разрешение `VIEW DEFINITION` для имени входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `EricKurjan` от имени входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `RMeyyappan`. Параметр `CASCADE` показывает, что разрешение `VIEW DEFINITION` для `EricKurjan` будет также отменено для участников, которым `RMeyyappan` предоставил это разрешение.  
+ Следующий пример отменяет разрешение `VIEW DEFINITION` для имени входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`EricKurjan` от имени входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`RMeyyappan`. Параметр `CASCADE` показывает, что разрешение `VIEW DEFINITION` для `EricKurjan` будет также отменено для участников, которым `RMeyyappan` предоставил это разрешение.  
   
 ```  
 USE master;  

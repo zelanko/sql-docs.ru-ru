@@ -1,6 +1,7 @@
 ---
-title: Инструкции RESTORE для восстановления из копии, восстановления по журналу и управления резервными копиями (T-SQL) | Документы Майкрософт
-ms.custom: ''
+title: Восстановление резервных копий и управление ими
+description: Инструкции RESTORE Transact-SQL для восстановления из копии, восстановления по журналу и управления резервными копиями.
+ms.custom: seo-lt-2019
 ms.date: 03/30/2018
 ms.prod: sql
 ms.prod_service: sql-database
@@ -22,12 +23,12 @@ ms.assetid: fb29a151-f312-4f85-b857-5deeca0de8ce
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 62be9d06e64e3ce986da0d96c4d04238d5f9ca3f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a316cb512f3f5e23a7413ab5f5eaa4b15e3d39a7
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68082551"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258758"
 ---
 # <a name="restore-statements-for-restoring-recovering-and-managing-backups-transact-sql"></a>Инструкции RESTORE для восстановления из копии, восстановления по журналу и управления резервными копиями (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdbmi-xxxx-xxx-md.md )]
@@ -39,7 +40,7 @@ ms.locfileid: "68082551"
   
 ## <a name="in-this-section"></a>в этом разделе  
   
-|.|Описание|  
+|.|Description|  
 |---------------|-----------------|  
 |[RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)|Описывает инструкции RESTORE DATABASE и RESTORE LOG языка Transact-SQL, используемые для восстановления базы данных из копии и по журналу из резервных копий, полученных с помощью команды BACKUP. Инструкция RESTORE DATABASE используется для баз данных во всех моделях восстановления. Инструкция RESTORE LOG используется только в модели полного восстановления и в модели восстановления с неполным протоколированием. Инструкция RESTORE DATABASE может также быть использована для возвращения базы данных к ее моментальному снимку.|  
 |[Аргументы инструкции RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-arguments-transact-sql.md)|Документирует аргументы, описанные в разделе "Синтаксис" по инструкции RESTORE и по соответствующему набору дополнительных инструкций: RESTORE FILELISTONLY, RESTORE HEADERONLY, RESTORE LABELONLY, RESTORE REWINDONLY и RESTORE VERIFYONLY. Большинство аргументов поддерживается только вложенными наборами этих шести инструкций. Поддержка каждого аргумента указана в его описании.|  

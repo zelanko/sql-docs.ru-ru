@@ -1,6 +1,7 @@
 ---
-title: Подробнее о репликации слиянием — обнаружение и разрешение конфликтов | Документация Майкрософт
-ms.custom: ''
+title: Расширенное обнаружение и разрешение конфликтов (слияние)
+description: Сведения о расширенных методах обнаружения и разрешения конфликтов при репликации слиянием.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 063d3d9c-ccb5-4fab-9d0c-c675997428b4
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 08379ce20bfc58c0d6c17256ff8810421334cf1c
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.openlocfilehash: f90625c1aa123cf72b93ce815b02cccd7cedc78a
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70874859"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321611"
 ---
 # <a name="advanced-merge-replication---conflict-detection-and-resolution"></a>Подробнее о репликации слиянием — обнаружение и разрешение конфликтов
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -99,7 +100,7 @@ ms.locfileid: "70874859"
   
 -   Пользовательский сопоставитель на основе COM  
   
-     Репликация слиянием обеспечивает API-интерфейс, предназначенный для написания сопоставителей в виде COM-объектов на различных языках программирования — [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vcprvc](../../../includes/vcprvc-md.md)] , [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]и других. Дополнительные сведения см. в статье [COM-Based Custom Resolvers](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-custom-resolvers.md).  
+     Репликация слиянием обеспечивает API-интерфейс, предназначенный для написания сопоставителей в виде COM-объектов на различных языках программирования — [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vcprvc](../../../includes/vcprvc-md.md)], [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] и других. Дополнительные сведения см. в статье [COM-Based Custom Resolvers](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-custom-resolvers.md).  
   
 -   Основанный на технологии COM сопоставитель, поддерживаемый [!INCLUDE[msCoName](../../../includes/msconame-md.md)]  
   

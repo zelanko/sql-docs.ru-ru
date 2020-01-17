@@ -1,6 +1,7 @@
 ---
-title: Определение типов статей (программирование репликации на языке Transact-SQL) | Документация Майкрософт
-ms.custom: ''
+title: Указание типов статей (хранимая процедура репликации)
+description: Задать тип статьи программным путем при ее создании для репликации SQL Server можно при помощи хранимых процедур репликации.
+ms.custom: seo-lt-2019
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d7effbac-c45b-423f-97ae-fd426b1050ba
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: cfa3710648e381dbd142c57180bf5395d9eee18f
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 3adcfa7c18259df1b063ff95f86d4f7721b45091
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72904627"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321208"
 ---
 # <a name="specify-article-types-replication-transact-sql-programming"></a>задать типы статей (программирование репликации на языке Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +70,7 @@ ms.locfileid: "72904627"
   
 2.  Выполните процедуру **sp_articlefilter** для статей **logbased manualboth** и [logbased manualfilter](../../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md) , чтобы создать хранимую процедуру фильтрации для статьи с горизонтальной фильтрацией. Дополнительные сведения см. в разделе [Define and Modify a Static Row Filter](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md).  
   
-3.  Выполните процедуру **sp_articleview**для статей **logbased manualboth**, **logbased manualview** и [logbased manualfilter](../../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md) , чтобы создать представление, определяющее статью с вертикальной фильтрацией. Дополнительные сведения см. в статье [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md).  
+3.  Выполните процедуру **sp_articleview**для статей **logbased manualboth**, **logbased manualview** и [logbased manualfilter](../../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md) , чтобы создать представление, определяющее статью с вертикальной фильтрацией. Дополнительные сведения см. в разделе [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md).  
   
 ### <a name="to-publish-a-stored-procedure-stored-procedure-execution-or-user-defined-function-article-in-a-transactional-or-snapshot-publication"></a>Публикация статьи хранимой процедуры, выполнение хранимой процедуры или определяемой пользователем функции в публикации моментальных снимков или транзакций  
   

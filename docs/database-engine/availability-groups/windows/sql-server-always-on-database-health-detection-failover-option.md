@@ -1,6 +1,7 @@
 ---
-title: Параметр определения уровня работоспособности базы данных | Документы Майкрософт
-ms.custom: ''
+title: Определение уровня работоспособности баз данных
+description: Сведения о функции определения работоспособности уровня базы данных, доступной для группы доступности Always On SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 01/19/2019
 ms.prod: sql
 ms.reviewer: ''
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d74afd28-25c3-48a1-bc3f-e353bee615c2
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 357d99a61f226162433f7d5fb1bbdfd41990cc8f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6fa77fa3ac4733d9672b5bc72523d72abe640fc8
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68013959"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251266"
 ---
 # <a name="availability-group-database-level-health-detection-failover-option"></a>Параметр определения уровня работоспособности базы данных группы доступности
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -125,7 +126,7 @@ select name, db_failover from sys.availability_groups
 >
 >2016-04-25 12:20:21.21 spid75      Состояние локальной реплики доступности в группе доступности "ag" было изменено с "PRIMARY_NORMAL" на "RESOLVING_NORMAL".  Состояние изменено, так как группа доступности переходит в режим "вне сети".  Реплика переходит в автономный режим, поскольку связанная группа доступности была удалена или пользователь перевел связанную группу доступности в режим "вне сети" на консоли управления сервером отказоустойчивой кластеризации Windows (WSFC), или группа доступности переходит на другой экземпляр SQL Server.  Дополнительные сведения см. в журнале ошибок SQL Server, консоли управления отказоустойчивой кластеризации Windows Server (WSFC) или журнале WSFC.
 
-### <a name="extended-event-sqlserveravailabilityreplicadatabasefaultreporting"></a>Расширенное событие sqlserver.availability_replica_database_fault_reporting
+### <a name="extended-event-sqlserveravailability_replica_database_fault_reporting"></a>Расширенное событие sqlserver.availability_replica_database_fault_reporting
 
 В SQL Server 2016 определено новое расширенное событие, запускаемое определением уровня работоспособности базы данных.  Имя события — **sqlserver.availability_replica_database_fault_reporting**.
 
@@ -151,7 +152,7 @@ GO
 
 Описание полей:
 
-|Столбец данных | Описание|
+|Столбец данных | Description|
 |---------|---------|
 |availability_group_id |Идентификатор группы доступности.|
 |availability_group_name |Имя группы доступности.|

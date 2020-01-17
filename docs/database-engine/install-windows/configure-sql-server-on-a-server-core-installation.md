@@ -1,7 +1,7 @@
 ---
-title: Настройка SQL Server в установке Server Core | Документы Майкрософт
-ms.custom: ''
-ms.date: 09/05/2017
+title: Настройка установки Server Core
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -13,12 +13,12 @@ ms.assetid: ed6e5e94-4b8d-422a-a17e-61b05a4df903
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b7532ac16dedea90f9eac9de81b7a3c9753746ba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ce38e546aa77e375d65a9f95f708718d283a53b0
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68054209"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251594"
 ---
 # <a name="configure-sql-server-on-a-server-core-installation"></a>Настройка SQL Server на установке Server Core
 
@@ -68,7 +68,7 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine /INSTANCENAME=MSSQLSERVER /SQL
 ###  <a name="bkmk_alreadyInstall"></a> Установка обновлений для [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] после установки экземпляра.  
 В установленном экземпляре [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)]рекомендуется установить последние обновления безопасности и критические обновления, в том числе выпуски для общего распространения (GDR) и пакеты обновления (SP). Отдельные накопительные обновления и обновления безопасности следует устанавливать в каждом отдельном случае по мере необходимости. Оцените необходимость обновления и установите его, если это требуется.  
   
-Применение обновления из командной строки. Замените <package_name> именем конкретного пакета обновления.  
+Применение обновления из командной строки. Замените <имя_пакета> именем конкретного пакета обновления:  
   
 - Обновление одного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и всех общих компонентов. Можно указать экземпляр с помощью параметра InstanceName или параметра InstanceID.  
   
@@ -107,9 +107,9 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine /INSTANCENAME=MSSQLSERVER /SQL
   
 4. В дереве консоли в разделе **Управление компьютером** компьютера Server Core выберите **Службы и приложения**.  
   
-5. Дважды щелкните диспетчер конфигурации  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** .  
+5. Дважды щелкните диспетчер конфигурации **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** .  
   
-6. В диспетчере конфигурации  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** выберите элемент **Службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** , правой кнопкой мыши щелкните **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** (\<имя экземпляра), где \<имя экземпляра> — это имя локального экземпляра сервера, для которого нужно включить группы доступности AlwaysOn, а затем выберите пункт "Свойства".  
+6. В диспетчере конфигурации **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** выберите элемент **Службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** , правой кнопкой мыши щелкните **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** (\<имя экземпляра), где \<имя экземпляра> — это имя локального экземпляра сервера, для которого нужно включить группы доступности AlwaysOn, а затем выберите пункт "Свойства".  
   
 7. Перейдите на вкладку **Высокий уровень доступности AlwaysOn** .  
   
@@ -196,7 +196,7 @@ $Tcp.Alter()
 $Tcp  
 ```  
   
-##  <a name="BKMK_Profiler"></a> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Profiler  
+##  <a name="BKMK_Profiler"></a> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Профилировщик  
  На удаленном компьютере запустите приложение [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] и выберите в меню «Файл» пункт «Создать трассировку», приложение откроет диалоговое окно «Соединение с сервером», где можно указать экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , размещенный на компьютере Server Core, к которому необходимо подключиться. Дополнительные сведения см. в разделе [Start SQL Server Profiler](../../tools/sql-server-profiler/start-sql-server-profiler.md).  
   
  Сведения о разрешениях, необходимых для выполнения [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], см. в разделе [Разрешения, необходимые для запуска приложения SQL Server Profiler](../../tools/sql-server-profiler/permissions-required-to-run-sql-server-profiler.md).  
@@ -216,7 +216,7 @@ $Tcp
 |[Программа dtutil](../../integration-services/dtutil-utility.md)|Используется для управления пакетами служб SSIS.|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]DTS\Binn|  
 |[Программа osql](../../tools/osql-utility.md)|Позволяет вводить инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] , системные процедуры и файлы скрипта в командной строке.|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]Tools\Binn|  
 |[Приложение sqlagent90](../../tools/sqlagent90-application.md)|Используется для запуска агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] из командной строки.|\<диск>:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\<*имя_экземпляра*>\MSSQL\Binn|  
-|[Служебная программа sqlcmd](../../tools/sqlcmd-utility.md)|Позволяет вводить инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] , системные процедуры и файлы скрипта в командной строке.|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]Tools\Binn|  
+|[Программа sqlcmd](../../tools/sqlcmd-utility.md)|Позволяет вводить инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] , системные процедуры и файлы скрипта в командной строке.|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]Tools\Binn|  
 |[Программа SQLdiag](../../tools/sqldiag-utility.md)|Используется для сбора диагностических сведений для службы поддержки пользователей [!INCLUDE[msCoName](../../includes/msconame-md.md)] .|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]Tools\Binn|  
 |[Программа sqlmaint](../../tools/sqlmaint-utility.md)|Служит для выполнения планов обслуживания баз данных, созданных в предыдущих версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|\<диск>:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL14.MSSQLSERVER\MSSQL\Binn|  
 |[Программа sqlps](../../tools/sqlps-utility.md)|Используется для выполнения команд и скриптов PowerShell. Загружает и регистрирует командлеты и поставщика PowerShell [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]Tools\Binn|  

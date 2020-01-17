@@ -10,19 +10,19 @@ ms.topic: conceptual
 ms.assetid: afa01165-39e0-4efe-ac0e-664edb8599fd
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 8fb8654f89b11b848028e3b35dd971d80cfd4138
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 49016b1b4ff391c1b1f533a2bf716f39a40b4dbe
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68041362"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75245428"
 ---
 # <a name="sql-server-managed-backup-to-microsoft-azure"></a>Управляемое резервное копирование SQL Server в Microsoft Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] управляет резервным копированием SQL Server в хранилище BLOB-объектов Microsoft Azure и автоматизирует его. Серверу SQL Server можно разрешить определять расписание резервного копирования на основе рабочей нагрузки транзакций в базе данных. Кроме того, для настройки расписания можно воспользоваться дополнительными параметрами. Параметры хранения определяют продолжительность хранения резервных копий в хранилище BLOB-объектов Azure. [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] поддерживает восстановление на момент времени для указанного периода хранения.  
   
- Начиная с версии [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], процедуры и принцип действия [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] изменились. Дополнительные сведения см. в статье [Migrate SQL Server 2014 Managed Backup Settings to SQL Server 2016](../../relational-databases/backup-restore/migrate-sql-server-2014-managed-backup-settings-to-sql-server-2016.md).  
+ Начиная с версии [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], процедуры и принцип действия [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] изменились. Дополнительные сведения см. в статье [Перенос параметров управляемой архивации SQL Server 2014 в SQL Server 2016](../../relational-databases/backup-restore/migrate-sql-server-2014-managed-backup-settings-to-sql-server-2016.md).  
   
 > [!TIP]  
 >  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] рекомендуется использовать для экземпляров SQL Server, работающих на виртуальных машинах Microsoft Azure.  
@@ -35,15 +35,15 @@ ms.locfileid: "68041362"
  Кроме того, резервные копии можно зашифровать, чтобы обеспечить дополнительную безопасность. Вы можете также настроить пользовательское расписание, чтобы управлять резервным копированием. Дополнительные сведения о преимуществах использования хранилища BLOB-объектов Windows Azure для резервных копий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] см. в разделе [Резервное копирование и восстановление SQL Server с помощью службы хранилища BLOB-объектов Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
   
 ##  <a name="Prereqs"></a> Предварительные требования  
- [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] использует службу хранилища Microsoft Azure для хранения файлов резервных копий. Ниже приведены необходимые компоненты.  
+ [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] использует службу хранилища Microsoft Azure для хранения файлов резервных копий. Ниже перечислены необходимые компоненты.  
   
-|Предварительные требования|Описание|  
+|Предварительные требования|Description|  
 |------------------|-----------------|  
 |**Учетная запись Microsoft Azure**|Прежде чем просмотреть [варианты приобретения](https://azure.microsoft.com/pricing/free-trial/) , можно начать работу с Azure, используя [бесплатную пробную версию](https://azure.microsoft.com/pricing/purchase-options/).|  
 |**Учетная запись хранения Azure**|Резервные копии хранятся в хранилище BLOB-объектов Azure, связанном с учетной записью хранения Azure. Чтобы создать учетную запись хранения, воспользуйтесь подробной пошаговой инструкцией в статье [об учетных записях хранения Azure](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/).|  
 |**Контейнер больших двоичных объектов**|Для упорядочивания больших двоичных объектов используются контейнеры. Необходимо указать целевой контейнер для файлов резервных копий. Контейнер можно создать на [портале управления Azure](https://manage.windowsazure.com/)или с помощью команды **New-AzureStorageContainer**[Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/) .|  
-|**Подписанный URL-адрес**|Доступ к целевому контейнеру зависит от подписанного URL-адреса. Общие сведения о SAS см. в статье [Подписанные URL-адреса. Часть 1. Общие сведения о модели SAS](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/). Маркер SAS можно создать в коде или с помощью команды PowerShell **New-AzureStorageContainerSASToken** . Скрипт PowerShell, упрощающий этот процесс, см. в статье [Simplifying creation of SQL Credentials with Shared Access Signature (SAS) tokens on Azure Storage with Powershell](https://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx)(Упрощение создания учетных данных SQL с использованием маркера подписанного URL-адреса в службе хранилища Azure с помощью Powershell). Маркер SAS можно хранить в **SQL Credential** и использовать с [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|  
-|**SQL Server, агент**|Чтобы компонент [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] работал, должен быть запущен агент SQL Server. Рекомендуется установить автоматический запуск.|  
+|**Подписанный URL-адрес**|Доступ к целевому контейнеру зависит от подписанного URL-адреса. Общие сведения о SAS см. в статье [Подписанные URL-адреса. Часть 1. подписанных URL-адресов (SAS)](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/). Маркер SAS можно создать в коде или с помощью команды PowerShell **New-AzureStorageContainerSASToken** . Скрипт PowerShell, упрощающий этот процесс, см. в статье [Simplifying creation of SQL Credentials with Shared Access Signature (SAS) tokens on Azure Storage with Powershell](https://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx)(Упрощение создания учетных данных SQL с использованием маркера подписанного URL-адреса в службе хранилища Azure с помощью Powershell). Маркер SAS можно хранить в **SQL Credential** и использовать с [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|  
+|**Агент SQL Server**|Чтобы компонент [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] работал, должен быть запущен агент SQL Server. Рекомендуется установить автоматический запуск.|  
   
 ## <a name="components"></a>Components  
  Transact-SQL — это основной интерфейс для взаимодействия с [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Системные хранимые процедуры используются для активации, настройки и отслеживания [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Системные функции используются для получения существующих параметров конфигурации, значений параметров и данных файлов резервных копий. Расширенные события используются для отображения ошибок и предупреждений. Механизмы предупреждений включаются с помощью заданий агента SQL Server и управления на основе политик SQL Server. Далее представлен список объектов и описание их функций по отношению к [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].  
@@ -52,7 +52,7 @@ ms.locfileid: "68041362"
   
 |||  
 |-|-|  
-|Системный объект|Описание|  
+|Системный объект|Description|  
 |**MSDB**|Хранит метаданные, журнал резервного копирования для всех резервных копий, созданных [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|  
 |[managed_backup.sp_backup_config_basic (Transact-SQL)](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-basic-transact-sql.md)|Запускает компонент [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|  
 |[managed_backup.sp_backup_config_advanced (Transact-SQL)](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md)|Настраивает дополнительные параметры для [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)], например шифрование.|  

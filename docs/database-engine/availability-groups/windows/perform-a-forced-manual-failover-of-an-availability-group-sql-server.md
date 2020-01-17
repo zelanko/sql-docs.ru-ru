@@ -1,7 +1,7 @@
 ---
-title: Выполнение принудительного перехода на другой ресурс вручную для группы доступности
+title: Переход на другой ресурс группы доступности вручную
 description: В этом разделе описывается, как выполнить принудительный переход группы доступности Always On на другой ресурс (с возможной потерей данных) с помощью Transact-SQL (T-SQL), PowerShell или SQL Server Management Studio.
-ms.custom: seodec18
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 222288fe-ffc0-4567-b624-5d91485d70f0
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 167070809d552a40d57761b533fc7954fec76dc1
-ms.sourcegitcommit: d667fa9d6f1c8035f15fdb861882bd514be020d9
+ms.openlocfilehash: 8ff0280b7a3a071a87feb029e6e906eaeace8a2d
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68388361"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822536"
 ---
 # <a name="perform-a-forced-manual-failover-of-an-always-on-availability-group-sql-server"></a>Выполнение принудительного перехода на другой ресурс вручную для группы доступности Always On (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -197,7 +197,7 @@ ms.locfileid: "68388361"
   
          **Настройка голосов кворума**  
   
-        -   [Просмотр параметров NodeWeight для кворума кластера](../../../sql-server/failover-clusters/windows/view-cluster-quorum-nodeweight-settings.md)  
+        -   [Просмотр параметров NodeWeight кворума кластера](../../../sql-server/failover-clusters/windows/view-cluster-quorum-nodeweight-settings.md)  
   
         -   [Настройка параметров NodeWeight для кворума кластера](../../../sql-server/failover-clusters/windows/configure-cluster-quorum-nodeweight-settings.md)  
   
@@ -266,7 +266,7 @@ ms.locfileid: "68388361"
 ###  <a name="FailureResponse"></a> Responding to the Catastrophic Failure of the Main Data Center  
  На следующем рисунке показана последовательность действий, осуществляемых в удаленном центре обработки данных после разрушительного сбоя в основном центре обработки данных.  
   
- ![Действия по обработке сбоя в основном центре обработки данных](../../../database-engine/availability-groups/windows/media/aoag-failurerecovery-actions-part1.gif "Действия по обработке сбоя в основном центре обработки данных")  
+ ![Действия по обработке сбоя на основном центре обработки данных](../../../database-engine/availability-groups/windows/media/aoag-failurerecovery-actions-part1.gif "Действия по обработке сбоя на основном центре обработки данных")  
   
  На данном рисунке указаны следующие шаги:  
   
@@ -290,13 +290,13 @@ ms.locfileid: "68388361"
 |-|----------|-----------|  
 |**1.**|Узлы в основном центре обработки данных вновь запускаются и восстанавливают связь с кластером WSFC. Их реплики доступности переходят в режим «в сети» в качестве вторичных реплик с приостановленными базами данных; DBA предстоит вручную возобновить работу каждой из этих баз данных.|[Возобновление базы данных доступности (SQL Server)](../../../database-engine/availability-groups/windows/resume-an-availability-database-sql-server.md)<br /><br /> Совет. Во избежание потери данных в базах данных, ставших источниками после отработки отказа, следует попытаться создать моментальный снимок приостановленных баз данных в одной из баз данных-получателей с синхронной фиксацией. Следует помнить, что если хотя бы одна из баз данных-получателей приостановлена, усечение журнала транзакций в базе данных-источнике откладывается. Кроме того, во время приостановки любой локальной базы данных невозможен переход состояния вторичной реплики с синхронной фиксацией в HEALTHY.|  
 |**2.**|После возобновления работы баз данных DBA временно изменяет режим фиксации первичной реплики на синхронный. Данное действие состоит из следующих шагов:<br /><br /> 1) Изменение режима фиксации одной из реплик доступности в режиме "вне сети" на асинхронный.<br /><br /> 2) Изменение режима фиксации новой первичной реплики на синхронный. Примечание. Данное действие позволяет базам данных-получателям с синхронной фиксацией перейти в состояние SYNCHRONIZED.|[Смена режима доступности для реплики доступности (SQL Server)](../../../database-engine/availability-groups/windows/change-the-availability-mode-of-an-availability-replica-sql-server.md)|  
-|**3.**|После перехода вторичной реплики с синхронной фиксацией на **Node 03** (изначальная первичная реплика) в состояние HEALTHY, DBA вручную осуществляет запланированную отработку отказа с использованием этой реплики, чтобы вновь сделать ее первичной. Реплика на узле **Node 04** вновь становится вторичной.|[sys.dm_hadr_database_replica_states (Transact-SQL)](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)<br /><br /> [Использование политик AlwaysOn для определения работоспособности группы доступности (SQL Server)](../../../database-engine/availability-groups/windows/use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)<br /><br /> [Выполнение запланированного перехода на другой ресурс вручную для группы доступности (SQL Server)](../../../database-engine/availability-groups/windows/perform-a-planned-manual-failover-of-an-availability-group-sql-server.md)|  
+|**3.**|После перехода вторичной реплики с синхронной фиксацией на **Node 03** (изначальная первичная реплика) в состояние HEALTHY, DBA вручную осуществляет запланированную отработку отказа с использованием этой реплики, чтобы вновь сделать ее первичной. Реплика на узле **Node 04** вновь становится вторичной.|[sys.dm_hadr_database_replica_states (Transact-SQL)](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)<br /><br /> [Использование политик AlwaysOn для просмотра состояния группы доступности (SQL Server)](../../../database-engine/availability-groups/windows/use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)<br /><br /> [Выполнение запланированного перехода на другой ресурс вручную для группы доступности (SQL Server)](../../../database-engine/availability-groups/windows/perform-a-planned-manual-failover-of-an-availability-group-sql-server.md)|  
 |**4.**|DBA подключается к новой первичной реплике и делает следующее:<br /><br /> 1) Изменяет режим фиксации бывшей первичной реплики (в удаленном центре обработки данных) на асинхронный.<br /><br /> 2) Изменяет режим фиксации вторичной реплики в основном центре обработки данных обратно на синхронный.|[Смена режима доступности для реплики доступности (SQL Server)](../../../database-engine/availability-groups/windows/change-the-availability-mode-of-an-availability-replica-sql-server.md)|  
   
 ##  <a name="RelatedTasks"></a> Связанные задачи  
  **Настройка голосов кворума**  
   
--   [Просмотр параметров NodeWeight для кворума кластера](../../../sql-server/failover-clusters/windows/view-cluster-quorum-nodeweight-settings.md)  
+-   [Просмотр параметров NodeWeight кворума кластера](../../../sql-server/failover-clusters/windows/view-cluster-quorum-nodeweight-settings.md)  
   
 -   [Настройка параметров NodeWeight для кворума кластера](../../../sql-server/failover-clusters/windows/configure-cluster-quorum-nodeweight-settings.md)  
   

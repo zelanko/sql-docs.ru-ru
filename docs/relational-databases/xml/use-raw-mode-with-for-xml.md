@@ -1,6 +1,5 @@
 ---
 title: Использование режима RAW для FOR XML | Документация Майкрософт
-ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -18,12 +17,13 @@ helpviewer_keywords:
 ms.assetid: 02c1bc0b-760c-4589-9ab1-6927c6d9c734
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: ac5e5ccf60594d41ff89d9ef5bd2c4342944a6da
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 7e88a1c65d2c8cdf8ba6129c8af28492dc362aba
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68016149"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75245239"
 ---
 # <a name="use-raw-mode-with-for-xml"></a>Использование с RAW Mode для FOR XML
 
@@ -42,7 +42,7 @@ ms.locfileid: "68016149"
   
 -   [Пример. Указание XSINIL с директивой ELEMENTS](../../relational-databases/xml/example-specifying-xsinil-with-the-elements-directive.md)  
   
--   [Пример. Запросы к схемам как к результатам с помощью параметров XMLDATA и XMLSCHEMA](../../relational-databases/xml/example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options.md)  
+-   [Запросы к схемам как к результатам с помощью параметров XMLDATA и XMLSCHEMA](../../relational-databases/xml/example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options.md)  
   
 -   [Пример. Получение двоичных данных](../../relational-databases/xml/example-retrieving-binary-data.md)  
   

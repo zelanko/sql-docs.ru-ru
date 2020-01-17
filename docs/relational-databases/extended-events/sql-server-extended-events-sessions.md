@@ -1,6 +1,5 @@
 ---
-title: Сеансы расширенных событий SQL Server | Документация Майкрософт
-ms.custom: ''
+title: SQL Server Extended Events Sessions
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -15,12 +14,12 @@ ms.assetid: c3c92544-351a-4bce-a06a-1f2a47e494e9
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1ea63b8d8b417f829bda722297d0c69a0b5c5fef
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0352441798ddffc96b057876768f66f0c9d4a10a
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68009329"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75242912"
 ---
 # <a name="sql-server-extended-events-sessions"></a>SQL Server Extended Events Sessions
 
@@ -39,7 +38,7 @@ ms.locfileid: "68009329"
   
  Обратите внимание, что на предыдущем рисунке состояние сеанса меняется по мере того, как выполняются разные команды DDL. В следующей таблице описаны эти изменения состояния.  
   
-|Метка рисунка|Инструкция DDL|Описание|  
+|Метка рисунка|Инструкция DDL|Description|  
 |------------------------|-------------------|-----------------|  
 |Создание|CREATE EVENT SESSION|Процесс создает объект сеанса, содержащий метаданные, предоставленные инструкцией CREATE EVENT SESSION. Процесс проверяет определение сеанса, уровень разрешений пользователя и сохраняет метаданные в базе данных master. В этот момент сеанс неактивен.|  
 |Alter|ALTER EVENT SESSION, STATE=START|Процесс запускает сеанс. Процесс считывает сохраненные метаданные, проверяет определение сеанса, уровень разрешений пользователя и создает сеанс. Загружаются такие объекты сеанса, как события и цели, и сеанс становится активным.|  
@@ -54,7 +53,7 @@ ms.locfileid: "68009329"
   
  На следующем рисунке показано содержимое сеанса и связь между пакетами и сеансами.  
   
- ![Совместное существование и совместное использование объектов в сеансах.](../../relational-databases/extended-events/media/xesessions.gif "Совместное существование и совместное использование объектов в сеансах.")  
+ ![Совместная работа и использование объектов в сеансах.](../../relational-databases/extended-events/media/xesessions.gif "Совместная работа и использование объектов в сеансах.")  
   
  Обратите внимание, что на предыдущем рисунке:  
   

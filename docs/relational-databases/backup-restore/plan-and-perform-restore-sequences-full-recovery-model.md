@@ -1,7 +1,7 @@
 ---
-title: Планирование и выполнение последовательностей восстановления (модель полного восстановления) | Документация Майкрософт
-ms.custom: ''
-ms.date: 03/14/2017
+title: Последовательности восстановления (модель полного восстановления) | Документация Майкрософт
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9cbefaf8-d2b6-41c9-83fc-b3807a841fe2
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 0d402848978592ab98ae54445f60d46304addaa0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 81f8e91f2179fdc0b11747714ab810b801dc5389
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68033683"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258662"
 ---
 # <a name="plan-and-perform-restore-sequences-full-recovery-model"></a>Планирование и выполнение последовательностей восстановления (модель полного восстановления)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,11 +52,11 @@ ms.locfileid: "68033683"
   
 2.  При необходимости можно восстановить последние разностные резервные копии, основанные на этих полных резервных копиях.  
   
-     Для каждой полной резервной копии, которую планируется восстановить, определите, является ли она основой для каких-либо разностных резервных копий. Если да, то по возможности восстановите самую последнюю разностную копию. Дополнительные сведения см. в статье [Разностные резервные копии (SQL Server)](../../relational-databases/backup-restore/differential-backups-sql-server.md).  
+     Для каждой полной резервной копии, которую планируется восстановить, определите, является ли она основой для каких-либо разностных резервных копий. Если да, то по возможности восстановите самую последнюю разностную копию. Дополнительные сведения см. в разделе [Разностные резервные копии (SQL Server)](../../relational-databases/backup-restore/differential-backups-sql-server.md).  
   
 3.  Произведите накат базы данных, по порядку восстановив резервные копии журналов, заканчивая резервной копией, содержащей точку восстановления. Необходимость в применении всех резервных копий зависит от того, какая из них содержит целевую точку восстановления.  
   
-    -   Если точка восстановления совпадает с точкой сбоя, необходимо восстановить все резервные копии журнала, созданные с момента восстановления последней резервной копии данных (полной или разностной). Дополнительные сведения см. в статье [Применение резервных копий журналов транзакций (SQL Server)](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md).  
+    -   Если точка восстановления совпадает с точкой сбоя, необходимо восстановить все резервные копии журнала, созданные с момента восстановления последней резервной копии данных (полной или разностной). Дополнительные сведения см. в разделе [Применение резервных копий журналов транзакций (SQL Server)](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md).  
   
     -   Для восстановления на момент времени самые последние резервные копии журнала могут не потребоваться. Если используется [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], то помощник по восстановлению базы данных гарантирует, что будут выбраны только резервные копии, которые необходимо восстановить на указанный момент времени. Эти резервные копии составляют рекомендованный план восстановления для данного восстановления на момент времени. Дополнительные сведения см. в статье [Восстановление базы данных SQL Server до определенного момента времени (модель полного восстановления)](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md).  
   
@@ -68,7 +68,7 @@ ms.locfileid: "68033683"
  [Обзор процессов восстановления (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)   
  [Выполнение полного восстановления базы данных (модель полного восстановления)](../../relational-databases/backup-restore/complete-database-restores-full-recovery-model.md)   
  [Восстановление в сети (SQL Server)](../../relational-databases/backup-restore/online-restore-sql-server.md)   
- [Файлы из резервных копий (модель полного восстановления)](../../relational-databases/backup-restore/file-restores-full-recovery-model.md)   
+ [Восстановления файлов (модель полного восстановления)](../../relational-databases/backup-restore/file-restores-full-recovery-model.md)   
  [Восстановление страниц (SQL Server)](../../relational-databases/backup-restore/restore-pages-sql-server.md)   
  [Поэтапное восстановление (SQL Server)](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md)  
   

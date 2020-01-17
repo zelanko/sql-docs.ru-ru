@@ -1,6 +1,7 @@
 ---
-title: Просмотр свойств реплики доступности (SQL Server) | Документы Майкрософт
-ms.custom: ''
+title: Просмотр свойств реплики доступности
+description: Инструкции по просмотру свойств реплики группы доступности в SQL Server Management Studio (SSMS), Transact-SQL (T-SQL) или SQL PowerShell.
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 14fed3c4-8ecc-4e1c-931d-a7ec1e9f9e90
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f569074893a5894c0823f1a1af7864bacceb9eda
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9bcebebf2f426aec660b77699461bdce110f628c
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68013364"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74821768"
 ---
 # <a name="view-availability-replica-properties-sql-server"></a>Просмотр свойств реплики доступности (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -74,7 +75,7 @@ ms.locfileid: "68013364"
  Определяет, является ли текущая реплика предпочитаемой резервной репликой отработки. Возвращаемое значение равно 1, если база данных в текущем экземпляре сервера является предпочитаемой репликой. В противном случае возвращается значение 0.  
   
 > [!NOTE]  
->  Сведения о счетчиках производительности для реплик доступности (объект производительности **SQLServer:Availability Replica**  ) см. в статье [Счетчики производительности для реплик доступности](../../../relational-databases/performance-monitor/sql-server-availability-replica.md).  
+>  Сведения о счетчиках производительности для реплик доступности (объект производительности **SQLServer:Availability Replica**  ) см. в разделе [SQL Server, реплика доступности](../../../relational-databases/performance-monitor/sql-server-availability-replica.md).  
   
   
 ##  <a name="RelatedTasks"></a> Связанные задачи  

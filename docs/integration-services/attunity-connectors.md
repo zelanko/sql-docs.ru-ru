@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ''
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 031659b2a5578eea2bb786e42267c92862579db7
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 255c526a1de285dcf23c10fb97a6f6bb75a9ae2c
+ms.sourcegitcommit: 02449abde606892c060ec9e9e9a85a3f49c47c6c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71299107"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74542244"
 ---
 # <a name="microsoft-connectors-for-oracle-and-teradata-by-attunity-for-integration-services-ssis"></a>Соединители Microsoft для Oracle и Teradata компании Attunity для служб Integration Services (SSIS)
 
@@ -24,7 +24,9 @@ ms.locfileid: "71299107"
 > [!NOTE]
 > Соединители Atunity для Oracle и Teradata поддерживают SQL Server 2017 и более ранних версий.
 >
-> Последние соединители для Oracle и Teradata для SQL Server 2019 и последующих версий можно получить здесь: [Соединитель с Oracle (Microsoft)](data-flow/oracle-connector.md)
+> Последние соединители для Oracle и Teradata для SQL Server 2019 и последующих версий можно получить здесь:
+> - [Соединитель с Oracle (Microsoft)](data-flow/oracle-connector.md)
+> - [Соединитель с Teradata (Microsoft)](data-flow/teradata-connector.md)
 
 Вы можете скачать соединители для служб Integration Services от Attunity, позволяющие оптимизировать производительность при загрузке данных из Oracle или Teradata и в эти системы в пакете служб SSIS.
 

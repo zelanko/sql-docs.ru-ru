@@ -1,6 +1,7 @@
 ---
-title: Определение и изменение параметризованного фильтра строк для статьи публикации слиянием | Документация Майкрософт
-ms.custom: ''
+title: Определение и изменение параметризованного фильтра строк (слияние)
+description: Узнайте, как определить и изменить параметризованный фильтр строк для статьи публикации слиянием для SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: de0482a2-3cc8-4030-8a4a-14364549ac9f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d24b967821310876cfff00c257c1024dac512588
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.openlocfilehash: 5ce5f0625cf4a57e974fe7faf9eac677a2c629db
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70846760"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321224"
 ---
 # <a name="define-and-modify-a-parameterized-row-filter-for-a-merge-article"></a>Определение и изменение параметризованного фильтра строк для статьи публикации слиянием
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -131,7 +132,7 @@ ms.locfileid: "70846760"
   
     -   **3** — фильтрация для статьи дает неперекрывающиеся секции, уникальные для каждой из подписок.  
   
-###  <a name="TsqlExample"></a> Пример (Transact-SQL)  
+###  <a name="TsqlExample"></a> Примеры (Transact-SQL)  
  В этом примере определяется группа статей в публикации слиянием. К статьям применяется последовательность фильтров соединения для таблицы `Employee` , которая в свою очередь фильтруется по столбцу **LoginID** с помощью параметризованного фильтра строк. Во время синхронизации переопределяется значение, возвращаемое функцией [HOST_NAME](../../../t-sql/functions/host-name-transact-sql.md) . Дополнительные сведения см. в подразделе «Переопределение значения функции HOST_NAME()» раздела [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
  [!code-sql[HowTo#sp_MergeDynamicPub1](../../../relational-databases/replication/codesnippet/tsql/define-and-modify-a-para_1.sql)]  
@@ -140,6 +141,6 @@ ms.locfileid: "70846760"
  [Определение и изменение фильтра соединения между статьями публикации слиянием](../../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)   
  [Изменение свойств публикации и статьи](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
  [Join Filters](../../../relational-databases/replication/merge/join-filters.md)   
- [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)  
+ [Параметризованные фильтры строк](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)  
   
   

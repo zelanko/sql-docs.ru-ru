@@ -1,7 +1,7 @@
 ---
-title: Переименование компьютера, на который установлен изолированный экземпляр SQL Server | Документы Майкрософт
-ms.custom: ''
-ms.date: 09/08/2017
+title: Переименование компьютера, на котором размещен экземпляр
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -19,22 +19,22 @@ ms.assetid: bbaf1445-b8a2-4ebf-babe-17d8cf20b037
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 84e72edb7aade19cb0daa0b3d9c1282d3bfc84aa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 297452f0367bbd1a757c3ea29124d7ccf91c4409
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67990858"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258577"
 ---
 # <a name="rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server"></a>Переименование компьютера, на который установлен изолированный экземпляр SQL Server
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Если изменить имя компьютера, на котором работает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], новое имя будет распознано в момент следующего запуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Не нужно заново запускать программу установки, чтобы изменить имя компьютера. Вместо этого следует выполнить следующие шаги для обновления системных метаданных, хранимых в представлении каталога sys.servers и возвращаемых системной функцией @@SERVERNAME. Обновите системные метаданные таким образом, чтобы отразить в них изменения в именах компьютеров для удаленных соединений и приложений, в которых используется системная функция @@SERVERNAME или которые запрашивают имя сервера в представлении каталога sys.servers.  
+Если изменить имя компьютера, на котором работает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], новое имя будет распознано в момент следующего запуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Не нужно заново запускать программу установки, чтобы изменить имя компьютера. Вместо этого следует выполнить следующие шаги для обновления системных метаданных, хранимых в представлении каталога sys.servers и возвращаемых системной функцией @@SERVERNAME . Обновите системные метаданные таким образом, чтобы отразить в них изменения в именах компьютеров для удаленных соединений и приложений, в которых используется системная функция @@SERVERNAME или которые запрашивают имя сервера в представлении каталога sys.servers.  
   
 Следующие действия нельзя использовать для переименования экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ими можно воспользоваться только для изменения части имени экземпляра, соответствующей имени компьютера. Например, можно изменить имя компьютера MB1, на котором расположен экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с именем Instance1, на другое имя, например MB2. Однако часть имени, представляющая собой имя экземпляра (Instance1), останется неизменной. В данном примере \\\\*ИмяКомпьютера*\\*ИмяЭкземпляра* изменится с \\\MB1\Instance1 на \\\MB2\Instance1.  
   
- **Перед началом**  
+ **Before you begin**  
   
  Прежде чем приступить к процессу переименования, обратите внимание на следующее:  
   

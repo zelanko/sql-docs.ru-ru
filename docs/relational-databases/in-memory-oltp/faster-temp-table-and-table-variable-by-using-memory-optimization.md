@@ -1,6 +1,6 @@
 ---
-title: Улучшение производительности временной таблицы и табличной переменной с помощью оптимизации памяти | Документация Майкрософт
-ms.custom: ''
+title: Оптимизация памяти для улучшения производительности временной таблицы и табличных переменных
+ms.custom: seo-dt-2019
 ms.date: 06/01/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -11,12 +11,12 @@ ms.assetid: 38512a22-7e63-436f-9c13-dde7cf5c2202
 author: Jodebrui
 ms.author: jodebrui
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: eb1c7dc1571371b12f759e31cfb508f63f05a530
-ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
+ms.openlocfilehash: 833108cfc5e8a11f72e8b7cb7b628690b0050c58
+ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71713254"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74412676"
 ---
 # <a name="faster-temp-table-and-table-variable-by-using-memory-optimization"></a>Улучшение производительности временной таблицы и табличной переменной с помощью оптимизации памяти
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -124,7 +124,7 @@ CREATE TABLE #tempSessionC
   
   
   
-Сначала создайте приведенную ниже функцию, возвращающую табличное значение, для фильтрации по **@@spid** . Эту функцию смогут использовать все таблицы SCHEMA_ONLY, преобразованные из временных таблиц сеансов.  
+Сначала создайте приведенную ниже функцию, возвращающую табличное значение, для фильтрации по **\@\@spid**. Эту функцию смогут использовать все таблицы SCHEMA_ONLY, преобразованные из временных таблиц сеансов.  
   
   
   

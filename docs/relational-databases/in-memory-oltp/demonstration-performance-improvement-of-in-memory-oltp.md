@@ -1,6 +1,6 @@
 ---
-title: Демонстрация. Повышение производительности для выполняющейся в памяти OLTP | Документация Майкрософт
-ms.custom: ''
+title: Повышение производительности — выполняющаяся в памяти OLTP
+ms.custom: seo-dt-2019
 ms.date: 08/19/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -11,12 +11,12 @@ ms.assetid: c6def45d-d2d4-4d24-8068-fab4cd94d8cc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7cec13fc9bcfe30aa34f46afb23c7f8755f0c477
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 68cb4e95046ca2fb071ecf2ba7c713cf57646690
+ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68069646"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74412726"
 ---
 # <a name="demonstration-performance-improvement-of-in-memory-oltp"></a>Демонстрация. Повышение производительности In-Memory OLTP
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -117,7 +117,7 @@ END;
 go  
 ```  
   
-### <a name="step-3-run-the-code"></a>Шаг 3. Запуск кода  
+### <a name="step-3-run-the-code"></a>Шаг 3. Запуск кода  
  Затем можно выполнить запросы, которые продемонстрируют производительность оптимизированных для памяти таблиц. Выполните следующие действия.  
   
 1.  Запустите приведенный ниже код T-SQL в базе данных с помощью SSMS.exe.  

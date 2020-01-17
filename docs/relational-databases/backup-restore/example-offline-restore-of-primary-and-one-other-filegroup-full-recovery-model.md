@@ -1,5 +1,6 @@
 ---
-title: 'Пример автономного восстановления: основная и еще одна файловая группа (модель полного восстановления) | Документация Майкрософт'
+title: 'Автономное восстановление: основная и еще 1 файловая группа'
+ms.description: Full recovery model
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: 7d6c50eb-dc84-4d66-855a-0b5f1bd89737
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 390db80fc88e3d115bad292e5bf0bf1a4a921639
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8d98eefac2e015aa1648f1afaa56a5676805cf10
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68089799"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75245249"
 ---
-# <a name="example-offline-restore-of-primary-and-one-other-filegroup-full-recovery-model"></a>Пример Автономное восстановление основной и еще одной файловой группы (модель полного восстановления)
+# <a name="example-offline-restore-of-primary-and-1-other-filegroup-full-recovery-model"></a>Пример Автономное восстановление основной и еще одной файловой группы (модель полного восстановления)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Данный раздел относится только к базам данных с моделью полного восстановления, содержащим несколько файловых групп.  
@@ -62,7 +63,7 @@ RESTORE LOG adb FROM tailLogBackup WITH RECOVERY
 ## <a name="see-also"></a>См. также:  
  [Восстановление в сети (SQL Server)](../../relational-databases/backup-restore/online-restore-sql-server.md)   
  [Поэтапное восстановление (SQL Server)](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md)   
- [Восстановление файлов (модель полного восстановления)](../../relational-databases/backup-restore/file-restores-full-recovery-model.md)   
+ [Восстановления файлов (модель полного восстановления)](../../relational-databases/backup-restore/file-restores-full-recovery-model.md)   
  [Применение резервных копий журналов транзакций (SQL Server)](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   
  [RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)  
   

@@ -1,6 +1,7 @@
 ---
-title: Обслуживание соединителя SQL Server и устранение неполадок | Документация Майкрософт
-ms.custom: ''
+title: Обслуживание и устранение неполадок соединителя SQL Server
+description: Узнайте, как выполнять обслуживание и устранение общих неполадок соединителя SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 07/25/2019
 ms.prod: sql
 ms.reviewer: vanto
@@ -9,16 +10,16 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Connector, appendix
 ms.assetid: 7f5b73fc-e699-49ac-a22d-f4adcfae62b1
-author: aliceku
-ms.author: aliceku
-ms.openlocfilehash: d24f4e86f59e91537886480b26248c683665850a
-ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
+author: jaszymas
+ms.author: jaszymas
+ms.openlocfilehash: 050b6ba215d9dc4db433ad81dd8fa48bed212803
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70148786"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75557939"
 ---
-# <a name="sql-server-connector-maintenance-amp-troubleshooting"></a>Обслуживание соединителя SQL Server и устранение неполадок
+# <a name="sql-server-connector-maintenance--troubleshooting"></a>Соединитель SQL Server, приложение
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Эта статья содержит вспомогательные сведения о Соединителе [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Дополнительные сведения о Соединителе [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] см. в статьях [Расширенное управление ключами с помощью хранилища ключей Azure &#40;SQL Server&#41;](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md), [Этапы настройки расширенного управления ключами с использованием хранилища ключей Azure](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md) и [Использование Соединителя SQL Server с компонентами шифрования SQL](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md).  
@@ -168,8 +169,11 @@ ms.locfileid: "70148786"
 
 **К каким конечным точкам нужен доступ соединителю SQL Server?** Соединитель взаимодействует с двумя конечными точками, которые необходимо внести в список разрешений. Для исходящей связи с этими службами нужен только один порт: 443 (HTTPS).
 -  login.microsoftonline.com/*:443
--  *.vault.azure.net/*:443
-  
+-  *.vault.azure.net/* :443
+
+**Как подключиться к Azure Key Vault через прокси-сервер HTTP(S)?**
+Соединитель использует параметры конфигурации прокси-сервера Internet Explorer. Эти параметры можно изменять в разделе [Политика группы](https://blogs.msdn.microsoft.com/askie/2015/10/12/how-to-configure-proxy-settings-for-ie10-and-ie11-as-iem-is-not-available/) или через реестр, но важно отметить, что они не действуют на уровне системы и направлены на учетную запись службы, на которой выполняется экземпляр [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Если администратор базы данных просматривает или редактирует параметры в Internet Explorer, это повлияет только на учетную запись администратора базы данных, а не на подсистему [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Интерактивное ведение журнала с использованием учетной записи службы не рекомендуется и блокируется во многих безопасных средах. Чтобы изменения настроенных параметров прокси-сервера вступили в силу, может потребоваться перезапуск экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], когда соединитель впервые пытается подключиться к хранилищу ключей.
+
 **Какие минимальные уровни разрешений необходимы для каждого этапа конфигурации в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]?**  
  Хотя все действия по настройке можно выполнить от имени члена предопределенной роли сервера sysadmin, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] рекомендует минимизировать используемые разрешения. В приведенном ниже списке указаны минимальные уровни разрешений для каждого действия.  
   
@@ -202,7 +206,7 @@ ms.locfileid: "70148786"
 ##  <a name="AppendixC"></a> В. Описания кодов ошибок для Соединителя [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
  **Коды ошибок поставщика:**  
   
-Код ошибки  |Символ  |Описание    
+Код ошибки  |Символ  |Description    
 ---------|---------|---------  
 0 | scp_err_Success | Операция завершилась успешно.    
 1 | scp_err_Failure | Операция завершилась ошибкой.    
@@ -211,7 +215,9 @@ ms.locfileid: "70148786"
 4 | scp_err_NotFound | Поставщику расширенного управления ключами не удалось найти указанный ключ и алгоритм.    
 5 | scp_err_AuthFailure | Сбой проверки подлинности с поставщиком расширенного управления ключами.    
 6 | scp_err_InvalidArgument | Предоставлен недопустимый аргумент.    
-7 | scp_err_ProviderError | В поставщике расширенного управления ключами произошла неопределенная ошибка, перехваченная ядром SQL.    
+7 | scp_err_ProviderError | В поставщике расширенного управления ключами произошла неопределенная ошибка, перехваченная ядром SQL.   
+401 | acquireToken | Сервер вернул ответ 401 на запрос. Убедитесь, что идентификатор и секрет клиента верны, а строка учетных данных представляет собой объединение идентификатора и секрета клиента AAD без дефисов.
+404 | getKeyByName | Сервер вернут ответ 404, так как не удалось найти имя ключа. Убедитесь, что такое имя ключа присутствует в вашем хранилище.
 2049 | scp_err_KeyNameDoesNotFitThumbprint | Имя ключа слишком длинное и не умещается в отпечаток ядра SQL. Длина имени ключа не должна превышать 26 символов.    
 2050 | scp_err_PasswordTooShort | Секретная строка, являющаяся объединением идентификатора клиента и секрета AAD, короче 32 символов.    
 2051 | scp_err_OutOfMemory | В ядре SQL возникла нехватка памяти, и не удалось выделить память для поставщика расширенного управления ключами.    
@@ -249,6 +255,8 @@ ms.locfileid: "70148786"
 -   Возможно, вы удалили асимметричный ключ из хранилища ключей Azure или [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Восстановите ключ.  
   
 -   Если отображается сообщение об ошибке "Не удается загрузить библиотеку", убедитесь, что установлена подходящая с учетом используемой версии SQL Server версия распространяемого пакета Visual Studio C++. В следующей таблице указано, какую версию следует установить из центра загрузки Майкрософт.   
+
+Журнал событий Windows также регистрирует ошибки, связанные с соединителем SQL Server, что предоставляет дополнительный контекст для ошибки. Источником в журнале событий приложений Windows будет "Соединитель SQL Server для Microsoft Azure Key Vault".
   
 Версия SQL Server  |Ссылка для установки распространяемого пакета    
 ---------|--------- 
@@ -271,7 +279,7 @@ ms.locfileid: "70148786"
   
  Связанные команды [!INCLUDE[tsql](../../../includes/tsql-md.md)] :  
   
--   [sp_configure &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
+-   [sp_configure (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
   
 -   [CREATE CRYPTOGRAPHIC PROVIDER &#40;Transact-SQL&#41;](../../../t-sql/statements/create-cryptographic-provider-transact-sql.md)  
   

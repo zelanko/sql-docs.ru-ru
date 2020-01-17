@@ -1,5 +1,5 @@
 ---
-title: Согласованное восстановление связанных баз данных с помощью помеченных транзакций | Документация Майкрософт
+title: Восстановление базы данных до помеченной транзакции
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,14 +20,15 @@ helpviewer_keywords:
 ms.assetid: 50a73574-1a69-448e-83dd-9abcc7cb7e1a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: c884662acb111ab197ebf437d7eaacd5859ebde7
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: bc572ac7e1272274996b13dfb0886427cebc128e
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908791"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75247436"
 ---
 # <a name="use-marked-transactions-to-recover-related-databases-consistently"></a>Согласованное восстановление связанных баз данных с помощью помеченных транзакций
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Этот раздел относится только к тем базам данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , которые используют модель полного восстановления или модель восстановления с неполным протоколированием.  

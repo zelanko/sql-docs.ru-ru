@@ -1,6 +1,8 @@
 ---
-title: += (объединение строк и присваивание) (Transact-SQL) | Документы Майкрософт
-ms.custom: ''
+title: += объединение строк
+description: Объединяет две строки и присваивает строке результат этой операции.
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: seo-lt-2019
 ms.date: 12/07/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -17,12 +19,12 @@ ms.assetid: 4aaeaab7-9b2b-48e0-8487-04ed672ebcb1
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 631fcc8728975d12370d517fb785b7cb832e6758
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: dd21fb221076470d0c39194ea4c38d96af0f1056
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68121657"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257052"
 ---
 # <a name="-string-concatenation-assignment-transact-sql"></a>+= (присваивание объединения строк) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -45,7 +47,7 @@ expression += expression
 ## <a name="result-types"></a>Типы результата  
  Возвращает тип данных, определенный для переменной.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  SET @v1 += 'expression' эквивалентно SET @v1 = @v1 + 'expression'. Кроме того, SET @v1 = @v2 + @v3 + @v4 эквивалентно SET @v1 = (@v2 + @v3) + @v4.  
   
  Оператор += нельзя использовать без переменной. Например, следующий код вызывает ошибку:  
@@ -123,7 +125,7 @@ GO
  (1 row(s) affected)
   ```   
    
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Операторы (Transact-SQL)](../../t-sql/language-elements/operators-transact-sql.md)   
  [+= (присваивание сложения) (Transact-SQL)](../../t-sql/language-elements/add-equals-transact-sql.md)   
  [+ (объединение строк) (Transact-SQL)](../../t-sql/language-elements/string-concatenation-transact-sql.md)  

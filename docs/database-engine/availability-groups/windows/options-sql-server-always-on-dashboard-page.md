@@ -1,6 +1,6 @@
 ---
-title: Параметры (страница панели мониторинга SQL Server AlwaysOn) | Документы Майкрософт
-description: Описание страницы "Параметры" на панели мониторинга Always On в SQL Server.
+title: Панель мониторинга группы доступности в SSMS
+description: Описание страницы "Параметры" на панели мониторинга Always On в SQL Server Management Studio.
 ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 4369b588-e982-4b57-80a1-beb2e879ce0b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 887ed12836ca3581e40c6c6831906def6c0d0e5f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ae4c5aae76c41b642d445e92844efa2ddf36fdcc
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014644"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822541"
 ---
 # <a name="options-sql-server-always-on-dashboard-page"></a>Параметры (страница панели мониторинга SQL Server AlwaysOn)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

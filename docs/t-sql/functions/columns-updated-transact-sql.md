@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 765fde44-1f95-4015-80a4-45388f18a42c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 4af840298c0e17b61dd073c982e6dec440ec67d7
-ms.sourcegitcommit: 00350f6ffb73c2c0d99beeded61c5b9baa63d171
+ms.openlocfilehash: ae6e3b08b3a29afb9282d28f33ec9406ab418b2c
+ms.sourcegitcommit: 0d5b0aeee2a2b34fd448aec2e72c0fa8be473ebe
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/02/2019
-ms.locfileid: "68419601"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75721929"
 ---
 # <a name="columns_updated-transact-sql"></a>COLUMNS_UPDATED (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -116,7 +116,7 @@ AFTER UPDATE AS
 /* Check whether columns 2, 3 or 4 have been updated. If any or all  
 columns 2, 3 or 4 have been changed, create an audit record.
 The bitmask is: power(2, (2-1)) + power(2, (3-1)) + power(2, (4-1)) = 14.
-This bitmask translates into base_10 as: 1 + 4 + 9 = 14.
+This bitmask translates into base_10 as: 2 + 4 + 8 = 14.
 To test whether all columns 2, 3, and 4 are updated, use = 14 instead of > 0  
 (below). */
   

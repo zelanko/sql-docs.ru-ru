@@ -1,6 +1,7 @@
 ---
-title: Сведения о публикации, вкладка "Агенты" (публикация моментального снимка) | Документация Майкрософт
-ms.custom: ''
+title: Агенты (моментальный снимок — SSMS)
+description: Описание вкладки "Агенты" на странице агента моментальных снимков в SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,12 +14,12 @@ ms.assetid: 599ff80b-392c-43aa-9db2-dc4ed33d4f6e
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 47b334cf08e126308544ec2126c96f7da0bed932
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 9dd77881ddcc235966333c95e4a5a18180926f8c
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770016"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321881"
 ---
 # <a name="publication-information-agents-snapshot-publication"></a>Сведения о публикации, агенты (публикация моментального снимка)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "68770016"
   
 -   **Выберите столбцы для отображения**: выбор столбцов для отображения и порядка их отображения в диалоговом окне **Выбор столбцов**.  
   
--   **Фильтр**: фильтрация строк в сетке на основании значений столбцов в диалоговом окне **Параметры фильтра**.  
+-   **Фильтр**. фильтрация строк в сетке на основании значений столбцов в диалоговом окне **Параметры фильтра**.  
   
 -   **Очистить фильтр**: удалить все настройки фильтра для сетки.  
   
@@ -46,7 +47,7 @@ ms.locfileid: "68770016"
   
 -   Не выполняется  
   
--   Завершен  
+-   Завершено  
   
  **Агент**  
  Агент моментальных снимков. Это единственный агент, связанный с публикацией моментальных снимков. Агент распространителя связан с подписками на эту публикацию. Дополнительные сведения см. в статье [Просмотр сведений и выполнение задач с помощью монитора репликации](../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md).  

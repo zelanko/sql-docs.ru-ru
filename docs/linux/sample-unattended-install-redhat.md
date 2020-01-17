@@ -1,19 +1,20 @@
 ---
-title: Автоматическая установка SQL Server на Red Hat Enterprise Linux
+title: Автоматическая установка SQL Server в RHEL
 titleSuffix: SQL Server
-description: Пример скрипта SQL Server — автоматическая установка на Red Hat Enterprise Linux
+description: Пример скрипта SQL Server — автоматическая установка в Red Hat Enterprise Linux (RHEL)
+ms.custom: seo-lt-2019
 author: VanMSFT
 ms.author: vanto
 ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 696ba88a9f2d5f29de8dc3afb45af8c392f2de68
-ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
+ms.openlocfilehash: dc37a110b82113f2a96bd46be914c06a43c1a0ea
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "67910440"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558650"
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-red-hat-enterprise-linux"></a>Образец. Скрипт автоматической установки SQL Server для Red Hat Enterprise Linux
 
@@ -201,7 +202,7 @@ echo Done!
 
 1. Если одновременно заданы переменные ```SQL_INSTALL_USER``` и ```SQL_INSTALL_USER_PASSWORD```, создайте нового пользователя с правами администратора сервера.
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 Чтобы оптимизировать многократную автоматическую установку, создайте автономный скрипт Bash, который будет задавать нужные переменные среды.  Вы можете удалить любые переменные из этого примера скрипта и поместить их в отдельный скрипт Bash.
 

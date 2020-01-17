@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1af22188-e08b-4c80-a27e-4ae6ed9ff969
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d41432f47d39b887e054e17d7596e0c027bc31b3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 68232821ac186aa63d113319373b8326dae987a4
+ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68026063"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74165185"
 ---
 # <a name="soft-numa-sql-server"></a>Архитектура Soft-NUMA (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "68026063"
 > Архитектура Soft-NUMA не поддерживает процессоры с "горячей" заменой.  
   
 ## <a name="automatic-soft-numa"></a>Автоматическое создание архитектуры Soft-NUMA  
-По умолчанию в [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] автоматически создает узлы архитектуры Soft-NUMA, если во время запуска обнаруживает более восьми физических ядер на один сокет или узел NUMA. Процессорные ядра с технологией Hyper-Threading не различаются при подсчете физических ядер на узле.  Если обнаружено больше восьми физических ядер на один сокет, [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] создает узлы архитектуры Soft-NUMA. В идеале узлы содержат по восемь ядер, но поддерживают и другое количество: от пяти до девяти логических ядер на один узел. Размер аппаратного узла может быть ограничен маской сходства ЦП. Количество узлов NUMA не может превышать максимальное количество поддерживаемых узлов NUMA.  
+По умолчанию в [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)][!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] автоматически создает узлы архитектуры Soft-NUMA, если во время запуска обнаруживает более восьми физических ядер на один сокет или узел NUMA. Процессорные ядра с технологией Hyper-Threading не различаются при подсчете физических ядер на узле.  Если обнаружено больше восьми физических ядер на один сокет, [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] создает узлы архитектуры Soft-NUMA. В идеале узлы содержат по восемь ядер, но поддерживают и другое количество: от пяти до девяти логических ядер на один узел. Размер аппаратного узла может быть ограничен маской сходства ЦП. Количество узлов NUMA не может превышать максимальное количество поддерживаемых узлов NUMA.  
   
 Использование архитектуры Soft-NUMA можно отключать и включать с помощью инструкции [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md) с аргументом `SET SOFTNUMA`. Чтобы изменение этого параметра вступило в силу, потребуется перезапустить ядро базы данных.  
   
@@ -103,36 +103,36 @@ SET PROCESS AFFINITY CPU=4 TO 7;
 |Пример для сервера [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] с несколькими K-группами|Тип|Имя значения|Данные|  
 |-----------------------------------------------------------------------------------------------------------------|----------|----------------|----------------|  
 |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\NodeConfiguration\Node0|DWORD|CPUMask|0x3F|  
-|HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\NodeConfiguration\Node0|DWORD|Группирование|0|  
+|HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\NodeConfiguration\Node0|DWORD|Группа|0|  
 |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\NodeConfiguration\Node1|DWORD|CPUMask|0x0fc0|  
-|HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\NodeConfiguration\Node1|DWORD|Группирование|0|  
+|HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\NodeConfiguration\Node1|DWORD|Группа|0|  
 |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\NodeConfiguration\Node2|DWORD|CPUMask|0x3f000|  
-|HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\NodeConfiguration\Node2|DWORD|Группирование|0|  
+|HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\NodeConfiguration\Node2|DWORD|Группа|0|  
 |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\NodeConfiguration\Node3|DWORD|CPUMask|0x3F|  
-|HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\NodeConfiguration\Node3|DWORD|Группирование|1|  
+|HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\NodeConfiguration\Node3|DWORD|Группа|1|  
 |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\NodeConfiguration\Node4|DWORD|CPUMask|0x0fc0|  
-|HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\NodeConfiguration\Node4|DWORD|Группирование|1|  
+|HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\NodeConfiguration\Node4|DWORD|Группа|1|  
 |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\NodeConfiguration\Node5|DWORD|CPUMask|0x3f000|  
-|HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\NodeConfiguration\Node5|DWORD|Группирование|1|  
+|HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\NodeConfiguration\Node5|DWORD|Группа|1|  
 |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\NodeConfiguration\Node6|DWORD|CPUMask|0x3F|  
-|HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\NodeConfiguration\Node6|DWORD|Группирование|2|  
+|HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\NodeConfiguration\Node6|DWORD|Группа|2|  
 |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\NodeConfiguration\Node7|DWORD|CPUMask|0x0fc0|  
-|HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\NodeConfiguration\Node7|DWORD|Группирование|2|  
+|HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\NodeConfiguration\Node7|DWORD|Группа|2|  
 |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\NodeConfiguration\Node8|DWORD|CPUMask|0x3f000|  
-|HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\NodeConfiguration\Node8|DWORD|Группирование|2|  
+|HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\NodeConfiguration\Node8|DWORD|Группа|2|  
 |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\NodeConfiguration\Node9|DWORD|CPUMask|0x3F|  
-|HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\NodeConfiguration\Node9|DWORD|Группирование|3|  
+|HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\NodeConfiguration\Node9|DWORD|Группа|3|  
 |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\NodeConfiguration\Node10|DWORD|CPUMask|0x0fc0|  
-|HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\NodeConfiguration\Node10|DWORD|Группирование|3|  
+|HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\NodeConfiguration\Node10|DWORD|Группа|3|  
 |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\NodeConfiguration\Node11|DWORD|CPUMask|0x3f000|  
-|HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\NodeConfiguration\Node11|DWORD|Группирование|3|  
+|HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\NodeConfiguration\Node11|DWORD|Группа|3|  
   
 ## <a name="metadata"></a>Метаданные  
  Для просмотра текущего состояния и конфигурации архитектуры Soft-NUMA можно использовать указанные ниже динамические административные представления.  
   
 -   [sp_configure (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md): отображает текущее значение (0 или 1) параметра SOFTNUMA.  
   
--   [sys.dm_os_sys_info (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md): в столбцах *softnuma* и *softnuma_desc* показаны текущие значения конфигурации.  
+-   [sys.dm_os_sys_info (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md): в столбцах *softnuma_configuration* и *softnuma_configuration_desc* показаны текущие значения конфигурации.  
   
 > [!NOTE]
 > Можно просмотреть текущее значение для автоматического создания программной архитектуры NUMA с помощью инструкции [sp_configure (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md), но изменить это значение с помощью **sp_configure** невозможно. Необходимо использовать инструкцию [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md) с аргументом `SET SOFTNUMA`.  

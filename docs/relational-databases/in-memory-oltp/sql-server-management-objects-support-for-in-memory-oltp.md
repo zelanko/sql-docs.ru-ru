@@ -1,7 +1,7 @@
 ---
-title: Поддержка управляющих объектов SQL Server для выполняющейся в памяти OLTP | Документация Майкрософт
+title: Поддержка управляющих объектов SQL Server — выполняющаяся в памяти OLTP
 description: В этой статье описаны элементы управляющих объектов SQL Server, которые поддерживают выполняющуюся в памяти OLTP.
-ms.custom: ''
+ms.custom: seo-dt-2019
 ms.date: 08/18/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -12,12 +12,12 @@ ms.assetid: 2b67292d-6d8e-4016-9063-a97461ffe57a
 author: CarlRabeler
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6bbf25218547548bf48c6eaf7c57c0a000e84c85
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a49c0a75a67e524475a8a1db7c4905c6490c85fc
+ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68022480"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74412540"
 ---
 # <a name="sql-server-management-objects-support-for-in-memory-oltp"></a>Поддержка управляющих объектов SQL Server SMO для In-Memory OLTP
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "68022480"
 - Table. **<xref:Microsoft.SqlServer.Management.Smo.Table.IsMemoryOptimized%2A>** (свойство)
 - UserDefinedTableType. **<xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType.IsMemoryOptimized%2A>** (свойство)
 
-## <a name="c-code-example"></a>Пример кода на C#
+## <a name="c-code-example"></a>Пример кода C#
 
 #### <a name="assemblies-referenced-by-the-compiled-code-example"></a>Сборки, на которые указывают ссылки в примере скомпилированного кода
 

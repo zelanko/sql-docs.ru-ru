@@ -1,6 +1,7 @@
 ---
-title: Выполнение бизнес-логики при синхронизации слиянием | Документация Майкрософт
-ms.custom: ''
+title: Бизнес-логика при синхронизации слиянием
+description: Сведения о написании кода управляемой сборки для бизнес-логики, используемой при синхронизации репликации слиянием.
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9d4da2ef-c17f-4a31-a1f6-5c3b7ca85f71
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 713348f8b6370dfe9762cc1f3a7280b19dedee41
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a3f1e7f07b95c71eeddc65fed6db3f10cc31ee32
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68033309"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321504"
 ---
 # <a name="execute-business-logic-during-merge-synchronization"></a>Выполнение бизнес-логики при синхронизации слиянием
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

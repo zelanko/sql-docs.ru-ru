@@ -1,6 +1,8 @@
 ---
-title: REVOKE, отмена разрешений группы доступности (Transact-SQL) | Документы Майкрософт
-ms.custom: ''
+title: REVOKE (разрешения на группу доступности)
+description: Отменяет разрешения для группы доступности Always On.
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: seo-lt-2019
 ms.date: 08/10/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -17,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 02c77378-a36d-4286-9235-d8867a2b92ad
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: adbceb87d5191cd279130ca53209265cdc1c14d4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ceb07117a8842faa35d005dba008d15b3810040a
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68082354"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75242605"
 ---
 # <a name="revoke-availability-group-permissions-transact-sql"></a>REVOKE (отзыв) разрешений группы доступности (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

@@ -1,7 +1,7 @@
 ---
 title: Выполнение операций с индексами в сети | Документация Майкрософт
 ms.custom: ''
-ms.date: 02/17/2017
+ms.date: 11/15/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: table-view-index
@@ -15,12 +15,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.prod_service: table-view-index, sql-database
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 914d2a3bfd73c76fc89b1ca6ed0302f32e0a4d32
-ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
+ms.openlocfilehash: d765e8f603233b78b96cbcfe8189a89da1c8cd98
+ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71680788"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74165602"
 ---
 # <a name="perform-index-operations-online"></a>Выполнение операции с индексами в сети
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "71680788"
   В этом разделе описывается создание, перестроение и удаление индексов в режиме «в сети» в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] и [!INCLUDE[tsql](../../includes/tsql-md.md)]. Параметр ONLINE разрешает одновременный доступ пользователей к базовой таблице или данным кластеризованного индекса и всем связанным некластеризованным индексам во время выполнения этих операций с индексами. Например, пока пользователь перестраивает кластеризованный индекс, он и другие пользователи могут продолжать обновление базовых данных и осуществлять к ним запросы. Если операции языка описания данных DDL (DDL), такие как построение или перестроение кластеризованного индекса, выполняются в режиме «вне сети», то они удерживают монопольные блокировки на базовые данные и связанные индексы. Это предотвращает изменение базовых данных и осуществление запросов к ним до завершения операции с индексами.  
   
 > [!NOTE]  
->  Операции с индексами в сети доступны не во всех выпусках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Дополнительные сведения см. в статье "Возможности, поддерживаемые различными выпусками SQL Server 2016".  
+>  Операции с индексами в сети доступны не во всех выпусках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Дополнительные сведения см. в статье [Выпуски и поддерживаемые функции SQL Server](../../sql-server/editions-and-components-of-sql-server-version-15.md).  
   
  **В этом разделе**  
   
@@ -36,7 +36,7 @@ ms.locfileid: "71680788"
   
      [Ограничения](#Restrictions)  
   
-     [безопасность](#Security)  
+     [Безопасность](#Security)  
   
 -   **Для перестроения индекса в режиме «в сети» используется:**  
   
@@ -77,7 +77,7 @@ ms.locfileid: "71680788"
   
 3.  Щелкните знак «плюс», чтобы развернуть таблицу, в которой необходимо перестроить индекс в режиме «в сети».  
   
-4.  Разверните папку **Индексы** .  
+4.  Разверните папку **Индексы**.  
   
 5.  Щелкните правой кнопкой мыши индекс, который нужно перестроить в режиме "в сети", и выберите **Свойства**.  
   
@@ -106,5 +106,9 @@ ALTER INDEX AK_Employee_NationalIDNumber
 В следующем примере кластеризованный индекс удаляется в режиме в сети и результирующая таблица (куча) перемещается в файловую группу `NewGroup` с использованием предложения `MOVE TO` . Представления каталога `sys.indexes`, `sys.tables`и `sys.filegroups` запрашиваются для проверки размещения индекса и таблицы в файловых группах до и после перемещения.  
   
 [!code-sql[IndexDDL#DropIndex4](../../relational-databases/indexes/codesnippet/tsql/perform-index-operations_1.sql)]  
-  
-Дополнительные сведения см. в статье [ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md).  
+
+Дополнительные сведения см. в разделе [ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md).
+
+## <a name="next-steps"></a>Дальнейшие действия
+
+- [Рекомендации по возобновляемому индексу](guidelines-for-online-index-operations.md#resumable-index-considerations)

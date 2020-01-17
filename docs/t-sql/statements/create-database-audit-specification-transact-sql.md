@@ -1,7 +1,9 @@
 ---
-title: CREATE DATABASE AUDIT SPECIFICATION (Transact-SQL) | Документы Майкрософт
-ms.custom: ''
-ms.date: 04/04/2017
+title: CREATE DATABASE AUDIT SPECIFICATION
+description: Создает объект спецификации аудита базы данных с помощью компонента аудита SQL Server.
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: seo-lt-2019
+ms.date: 01/03/2020
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -22,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 0544da48-0ca3-4a01-ba4c-940e23dc315b
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: e1340fd34fe452babf96a3bcd7fcd205a0aa85b6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 98dce9206326c51f5ae721903b93ea287afa992a
+ms.sourcegitcommit: 34d28d49e8d0910cf06efda686e2d73059569bf8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68060999"
+ms.lasthandoff: 01/04/2020
+ms.locfileid: "75656651"
 ---
 # <a name="create-database-audit-specification-transact-sql"></a>CREATE DATABASE AUDIT SPECIFICATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -93,7 +95,7 @@ CREATE DATABASE AUDIT SPECIFICATION audit_specification_name
 ## <a name="examples"></a>Примеры
 
 ### <a name="a-audit-select-and-insert-on-a-table-for-any-database-principal"></a>A. Аудит SELECT и INSERT в таблице для любого субъекта базы данных 
- В следующем примере создается аудит сервера с именем `Payrole_Security_Audit`, а затем — спецификация аудита базы данных с именем `Payrole_Security_Audit`, которая анализирует инструкции `SELECT` и `INSERT`, выполняемые любым пользователем (`public`) в таблице `HumanResources.EmployeePayHistory` базы `AdventureWorks2012`.  
+ В следующем примере создается аудит сервера с именем `Payrole_Security_Audit`, а затем спецификация аудита базы данных с именем `Payrole_Security_Audit`, которая выполняет аудит инструкций `SELECT` и `INSERT`, выполняемых пользователем `dbo` для таблицы `HumanResources.EmployeePayHistory` в базе данных `AdventureWorks2012`.  
   
 ```  
 USE master ;  
@@ -119,7 +121,7 @@ WITH (STATE = ON) ;
 GO  
 ``` 
 
-### <a name="b-audit-any-dml-insert-update-or-delete-on-all-objects-in-the-sales-schema-for-a-specific-database-role"></a>Б. Аудит любой инструкции DML (INSERT, UPDATE или DELETE) для _всех_ объектов в схеме _sales_ для конкретной роли базы данных  
+### <a name="b-audit-any-dml-insert-update-or-delete-on-_all_-objects-in-the-_sales_-schema-for-a-specific-database-role"></a>Б. Аудит любой инструкции DML (INSERT, UPDATE или DELETE) для _всех_ объектов в схеме _sales_ для конкретной роли базы данных  
  В следующем примере создается аудит сервера с именем `DataModification_Security_Audit`, а затем — спецификация аудита базы данных с именем `Audit_Data_Modification_On_All_Sales_Tables`, которая анализирует инструкции `INSERT`, `UPDATE` и `DELETE`, выполняемые пользователями с новой ролью базы данных `SalesUK` для всех объектов схемы `Sales` в базе `AdventureWorks2012`.  
   
 ```  

@@ -1,6 +1,7 @@
 ---
-title: Диагностика конфигурации зеркального отображения базы данных (SQL Server) | Документы Майкрософт
-ms.custom: ''
+title: Распространенные проблемы при настройке зеркального отображения базы данных
+description: Сведения об устранении неполадок при установке сеанса зеркального отображения базы данных.
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.prod_service: high-availability
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 87d3801b-dc52-419e-9316-8b1f1490946c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: f469d5afc1dc2f900deaddced2a9931a7bcdf7e2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 17eccc8ce90743e49ced2db863bc85e9d297a1a5
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68049766"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822516"
 ---
 # <a name="troubleshoot-database-mirroring-configuration-sql-server"></a>Диагностика конфигурации зеркального отображения базы данных (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -90,7 +91,7 @@ ms.locfileid: "68049766"
     GO  
     ```  
   
-     Дополнительные сведения см. в разделе [sys.database_mirroring_endpoints (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql.md).  
+     Дополнительные сведения см. в статье [sys.database_mirroring_endpoints (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql.md).  
   
 6.  Применение имени входа для учетной записи службы от другого экземпляра сервера требует наличия разрешения CONNECT. Убедитесь, что имени входа на другом сервере предоставлено разрешение CONNECT. Чтобы узнать, кто имеет разрешение CONNECT для конечной точки, выполните следующую инструкцию [!INCLUDE[tsql](../../includes/tsql-md.md)] на каждом экземпляре сервера:  
   

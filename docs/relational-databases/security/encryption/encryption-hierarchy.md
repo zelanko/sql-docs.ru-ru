@@ -14,15 +14,15 @@ helpviewer_keywords:
 - security [SQL Server], encryption
 - hierarchies [SQL Server], encryption
 ms.assetid: 96c276d5-1bba-4e95-b678-10f059f1fbcf
-author: aliceku
-ms.author: aliceku
+author: jaszymas
+ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e4f8d3f61d3806e44a1e48774d2c216fdb3c83de
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 672631b7ef5e6453e49b269d035586949f03ece6
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68049936"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957429"
 ---
 # <a name="encryption-hierarchy"></a>Иерархия средств шифрования
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "68049936"
   
  На следующем рисунке показаны те же сведения другим образом.  
   
- ![Отображает некоторые сочетания методов шифрования в виде колеса. ](../../../relational-databases/security/encryption/media/encryption-hierarchy-wheel.gif "Отображает некоторые сочетания методов шифрования в виде колеса.")  
+ ![Отображает некоторые сочетания методов шифрования в виде колеса.](../../../relational-databases/security/encryption/media/encryption-hierarchy-wheel.gif "Отображает некоторые сочетания методов шифрования в виде колеса.")  
   
  Диаграмма иллюстрирует следующие дополнительные основные понятия.  
   
@@ -97,22 +97,22 @@ ms.locfileid: "68049936"
   
  Самостоятельно подписанные сертификаты, созданные [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , соответствуют стандарту X.509 и поддерживают поля X.509 v1.  
   
-### <a name="asymmetric-keys"></a>асимметричные ключи;  
+### <a name="asymmetric-keys"></a>Асимметричные ключи  
  Асимметричный ключ состоит из закрытого ключа и соответствующего открытого ключа. Каждый из этих ключей позволяет дешифровать данные, зашифрованные другим ключом. На выполнение асимметричных операций шифрования и дешифрования требуется сравнительно много ресурсов, но они обеспечивают более надежную защиту, чем симметричное шифрование. Асимметричный ключ можно использовать для шифрования симметричного ключа перед его сохранением в базе данных.  
   
 ### <a name="symmetric-keys"></a>симметричные ключи;  
  Симметричный ключ — это ключ, используемый и для шифрования, и для дешифрования данных. Данные при использовании симметричного ключа шифруются и дешифруются быстро, и он вполне подходит для повседневной защиты конфиденциальных данных, хранящихся в базе данных.  
   
 ### <a name="transparent-data-encryption"></a>прозрачное шифрование данных.  
- Прозрачное шифрование данных (TDE) является особым случаем шифрования с использованием симметричного ключа. TDE шифрует всю базу данных, используя симметричный ключ, который называется ключом шифрования базы данных. Ключ шифрования базы данных защищен другими ключами или сертификатами, которые, в свою очередь, защищаются главным ключом базы данных или асимметричным ключом, хранящимся в модуле расширенного управления ключами. Дополнительные сведения см. в разделе [Прозрачное шифрование данных (TDE)](../../../relational-databases/security/encryption/transparent-data-encryption.md).  
+ Прозрачное шифрование данных (TDE) является особым случаем шифрования с использованием симметричного ключа. TDE шифрует всю базу данных, используя симметричный ключ, который называется ключом шифрования базы данных. Ключ шифрования базы данных защищен другими ключами или сертификатами, которые, в свою очередь, защищаются главным ключом базы данных или асимметричным ключом, хранящимся в модуле расширенного управления ключами. Дополнительные сведения см. в статье [Прозрачное шифрование данных (TDE)](../../../relational-databases/security/encryption/transparent-data-encryption.md).  
   
 ## <a name="related-content"></a>См. также  
  [Обеспечение безопасности SQL Server](../../../relational-databases/security/securing-sql-server.md)  
   
- [Функции безопасности (Transact-SQL)](../../../t-sql/functions/security-functions-transact-sql.md)  
+ [Функции безопасности &#40;Transact-SQL&#41;](../../../t-sql/functions/security-functions-transact-sql.md)  
   
 ## <a name="see-also"></a>См. также:  
- [Иерархия разрешений (компонент Database Engine)](../../../relational-databases/security/permissions-hierarchy-database-engine.md)   
+ [Иерархия разрешений (ядро СУБД)](../../../relational-databases/security/permissions-hierarchy-database-engine.md)   
  [Защищаемые объекты](../../../relational-databases/security/securables.md)  
   
   

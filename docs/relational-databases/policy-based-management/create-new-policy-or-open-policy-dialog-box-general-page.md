@@ -1,6 +1,7 @@
 ---
-title: Диалоговое окно "Создание новой политики" или "Открытие политики", страница "Общие" | Документация Майкрософт
-ms.custom: ''
+title: Диалоговое окно "Создание новой политики" или "Открытие политики", страница "Общие"
+descripton: Describes the 'General Page' of the 'Create New Policy' and 'Open Policy' dialog boxes for Policy-Based Management in SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,12 +15,12 @@ f1_keywords:
 ms.assetid: c00bebd0-d04b-4c64-840e-8b7a2c603436
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: ae5b12473756d6ca5c5a20b188b3c282205d9bd9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 50334a6b64319a280d34df9fbd4907aa82e82111
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68137904"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558309"
 ---
 # <a name="create-new-policy-or-open-policy-dialog-box-general-page"></a>Диалоговое окно «Создание новой политики» или «Открытие политики», страница «Общие»
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +30,7 @@ ms.locfileid: "68137904"
  **Название**  
  Введите имя для новой политики. Если политика уже существует, отображается ее имя.  
   
- **Активировано**  
+ **Enabled**  
  Установите флажок **Включено** , чтобы включить политику. Снимите флажок в поле **Включено** , чтобы отключить политику. Флажок **Включено** применяется к автоматизации политики. Он создает или удаляет систему автоматизации для политики. Автоматизация применяет следующие механизмы.  
   
  **При изменении: запретить**  

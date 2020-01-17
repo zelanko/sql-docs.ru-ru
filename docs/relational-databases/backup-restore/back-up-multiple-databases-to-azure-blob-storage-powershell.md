@@ -1,7 +1,8 @@
 ---
-title: Резервное копирование нескольких баз данных в службу хранилища BLOB-объектов Azure с использованием PowerShell | Документация Майкрософт
-ms.custom: ''
-ms.date: 05/21/2016
+title: 'Резервное копирование нескольких баз данных: хранилище BLOB-объектов Azure'
+titleSuffix: PowerShell
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: f7008339-e69d-4e20-9265-d649da670460
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: dbfcee4bd7ceafb7d09f9719744e5d1e89776499
-ms.sourcegitcommit: 949e55b32eff6610087819a93160a35af0c5f1c9
+ms.openlocfilehash: a3e89a3dc9cff58b5ab610f0454217cc3b658dc4
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70383761"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75247458"
 ---
 # <a name="back-up-multiple-databases-to-azure-blob-storage---powershell"></a>Резервное копирование нескольких баз данных в службу хранилища BLOB-объектов Azure с использованием PowerShell
 
@@ -169,4 +170,4 @@ foreach ($database in $databases) {
 
 [Резервное копирование и восстановление SQL Server с помощью службы хранилища BLOB-объектов Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)
 
-[Резервное копирование SQL Server на URL-адрес — рекомендации и устранение неполадок](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)
+[Резервное копирование SQL Server на URL-адрес — рекомендации и устранение неполадок](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md).

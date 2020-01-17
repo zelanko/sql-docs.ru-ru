@@ -1,6 +1,7 @@
 ---
-title: Сведения о публикации, вкладка "Агенты" (публикация транзакций) | Документация Майкрософт
-ms.custom: ''
+title: Агенты (транзакции — SSMS)
+description: Описывает вкладку "Агенты" для выбранной публикации транзакций в SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,12 +14,12 @@ ms.assetid: 38ef2f54-53bb-4053-876d-86f8f06a4519
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 36c0233d5ba6f51f0cc7cd354bd810a08b2d3b72
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: ae95cc4fd67b7843d773a2dc175dd89f1784025b
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770033"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321381"
 ---
 # <a name="publication-information-agents-transactional-publication"></a>Сведения о публикации, агенты (публикация транзакций)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "68770033"
   
 -   **Выберите столбцы для отображения**: выбор столбцов для отображения и порядка их отображения в диалоговом окне **Выбор столбцов**.  
   
--   **Фильтр**: фильтрация строк в сетке на основании значений столбцов в диалоговом окне **Параметры фильтра**.  
+-   **Фильтр**. фильтрация строк в сетке на основании значений столбцов в диалоговом окне **Параметры фильтра**.  
   
 -   **Очистить фильтр**: удалить все настройки фильтра для сетки.  
   
@@ -48,7 +49,7 @@ ms.locfileid: "68770033"
   
 -   Запущен  
   
--   Завершен  
+-   Завершено  
   
  **Агент**  
  Имя каждого агента репликации, связанного с публикацией. Агент распространителя связан с подписками на эту публикацию. Дополнительные сведения см. в статье [Просмотр сведений и выполнение задач с помощью монитора репликации](../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md).  

@@ -8,12 +8,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2ba62b4908c73b018ae4cdda1a9b2bda3098f1ad
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 108331bfdff6734b7f5a8d64a4983f2c54490ec5
+ms.sourcegitcommit: ef830f565ee07dc7d4388925cc3c86c5d2cfb4c7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71281768"
+ms.lasthandoff: 12/09/2019
+ms.locfileid: "74947120"
 ---
 # <a name="deploy-an-ssis-project-with-powershell"></a>Развертывание проекта служб SSIS с помощью PowerShell
 
@@ -24,7 +24,7 @@ ms.locfileid: "71281768"
 
 ## <a name="prerequisites"></a>предварительные требования
 
-Сервер базы данных SQL Azure прослушивает порт 1433. Если вы пытаетесь подключиться к серверу базы данных SQL Azure изнутри корпоративного брандмауэра, для успешного подключения в этом брандмауэре должен быть открыт данный порт.
+Сервер Базы данных SQL Azure прослушивает порт 1433. Если вы пытаетесь подключиться к серверу базы данных SQL Azure изнутри корпоративного брандмауэра, для успешного подключения в этом брандмауэре должен быть открыт данный порт.
 
 ## <a name="supported-platforms"></a>Поддерживаемые платформы
 
@@ -32,7 +32,7 @@ ms.locfileid: "71281768"
 
 -   SQL Server в Windows.
 
--   База данных SQL Azure. Дополнительные сведения о развертывании и запуске пакетов в Azure см. в разделе [Перенос рабочих нагрузок SQL Server Integration Services в облако](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md).
+-   База данных SQL Azure. Дополнительные сведения о развертывании и запуске пакетов в Azure см. в разделе [Перенос рабочих нагрузок SQL Server Integration Services в облако](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md).
 
 Сведения, приведенные в этом кратком руководстве, не могут быть использованы для развертывания пакета SSIS на SQL Server в Linux. Дополнительные сведения о запуске пакетов на Linux см. в разделе [Извлечение, преобразование и загрузка данных в Linux с помощью служб SSIS](../linux/sql-server-linux-migrate-ssis.md).
 
@@ -43,9 +43,13 @@ ms.locfileid: "71281768"
 1. Войдите на [портал Azure](https://portal.azure.com/).
 2. Выберите **Базы данных SQL** в меню слева, а затем на странице **Базы данных SQL** — базу данных SSISDB. 
 3. На странице **Обзор** для базы данных просмотрите полное имя сервера. Чтобы увидеть параметр **Щелкните, чтобы скопировать**, наведите указатель мыши на имя сервера. 
-4. Если вы забыли учетные данные входа на сервер базы данных SQL Azure, перейдите на страницу этого сервера, чтобы узнать имя его администратора. При необходимости вы можете сбросить пароль.
+4. Если вы забыли данные для входа на сервер Базы данных SQL Azure, перейдите на соответствующую страницу, чтобы просмотреть имя администратора сервера. При необходимости вы можете сбросить пароль.
 5. Щелкните **Показать строки подключения к базам данных**.
 6. Просмотрите полную строку подключения **ADO.NET**.
+
+## <a name="supported-authentication-method"></a>Поддерживаемые методы проверки подлинности
+
+См. [методы проверки подлинности для развертывания](ssis-quickstart-deploy-ssms.md#authentication-methods-for-deployment).
 
 ## <a name="ssis-powershell-provider"></a>Поставщик SSIS PowerShell
 Предоставьте соответствующие значения для переменных в начале следующего скрипта, а затем выполните скрипт, чтобы развернуть проект служб SSIS.

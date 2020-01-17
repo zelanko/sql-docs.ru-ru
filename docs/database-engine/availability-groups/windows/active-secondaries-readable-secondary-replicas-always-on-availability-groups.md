@@ -1,7 +1,7 @@
 ---
-title: Перенос нагрузки только для чтения на вторичную реплику в группе доступности
+title: Перенос рабочей нагрузки на вторичную реплику группы доступности
 description: Дополнительные сведения о переносе запросов только для чтения и отчетов на вторичную реплику группы доступности Always On в SQL Server.
-ms.custom: seodec18
+ms.custom: seo-lt-2019
 ms.date: 06/06/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 78f3f81a-066a-4fff-b023-7725ff874fdf
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9608383d132dbb670d8a852101dd074d4f285a79
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a6226a080a7d831694e5d5978460c2e6d6016ead
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67991657"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822400"
 ---
 # <a name="offload-read-only-workload-to-secondary-replica-of-an-always-on-availability-group"></a>Перенос нагрузки только для чтения на вторичную реплику в группе доступности Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -77,9 +77,9 @@ ms.locfileid: "67991657"
     -   Каждая реплика доступности, поддерживающая маршрутизацию только для чтения и при этом являющаяся первичной репликой, требует наличия списка маршрутизации только для чтения. Определенный список маршрутизации только для чтения вступает в силу, только если локальная реплика выполняется под первичной ролью. Такой список должен указываться для тех конкретных реплик, для которых он требуется. Как правило, каждый список маршрутизации только для чтения будет содержать все URL-адреса маршрутизации только для чтения, причем URL-адрес локальной реплики будет идти в конце списка.  
   
         > [!NOTE]  
-        >  Для запросов на соединение с намерением чтения может выполняться балансировка нагрузки на нескольких репликах. Дополнительные сведения см. в статье [Настройка балансировки нагрузки между репликами только для чтения](../../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md#loadbalancing).  
+        >  Для запросов на соединение с намерением чтения может выполняться балансировка нагрузки на нескольких репликах. Дополнительные сведения см. в разделе [Настройка балансировки нагрузки между репликами только для чтения](../../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md#loadbalancing).  
   
-     Дополнительные сведения см. в разделе [Настройка маршрутизации только для чтения в группе доступности (SQL Server)](../../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md).  
+     Дополнительные сведения см. в статье [Настройка маршрутизации только для чтения в группе доступности (SQL Server)](../../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md).  
   
 > [!NOTE]  
 >  Сведения о прослушивателях групп доступности и дополнительные сведения о маршрутизации только для чтения см. в разделе [Прослушиватели групп доступности, возможность подключения клиентов и отработка отказа приложений (SQL Server)](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md).  
@@ -183,7 +183,7 @@ ms.locfileid: "67991657"
   
 -   Поскольку временная статистика хранится в базе данных **tempdb**, перезапуск службы [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] приведет к удалению всей временной статистики.  
   
--   Суффикс _readonly_database_statistic зарезервирован для статистики, создаваемой [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Этот суффикс нельзя использовать при создании статистики в базе данных-источнике. Дополнительные сведения см. в разделе [Statistics](../../../relational-databases/statistics/statistics.md).  
+-   Суффикс _readonly_database_statistic зарезервирован для статистики, создаваемой [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Этот суффикс нельзя использовать при создании статистики в базе данных-источнике. Дополнительные сведения см. в статье [Managing statistics on tables in SQL Data Warehouse](../../../relational-databases/statistics/statistics.md) (Управление статистикой таблиц в хранилище данных SQL).  
   
 ##  <a name="bkmk_AccessInMemTables"></a> Доступ к таблицам, оптимизированным для памяти, на вторичной реплике  
  С таблицами, оптимизированными для памяти, во вторичной реплике используются те же уровни изоляции транзакций, что и в первичной реплике. Рекомендуется выбрать изоляцию на уровне сеанса READ COMMITTED и установить параметр на уровне базы данных MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT на значение ON. Пример:  

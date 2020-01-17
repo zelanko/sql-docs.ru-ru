@@ -1,8 +1,8 @@
 ---
-title: Настройка группы доступности Always On SQL Server для обеспечения высокой доступности в Linux
-titleSuffix: SQL Server
-description: Сведения о настройке группы доступности (AG) Always On SQL Server для обеспечения высокой доступности в Linux.
+title: Настройка группы доступности для SQL Server на Linux
+description: Сведения о настройке группы доступности Always On SQL Server для обеспечения высокой доступности в Linux.
 author: MikeRayMSFT
+ms.custom: seo-lt-2019
 ms.author: mikeray
 ms.reviewer: vanto
 ms.date: 08/26/2019
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 364ed5298c83319ab0915ffc04a393c9a9097bf0
-ms.sourcegitcommit: 823d7bdfa01beee3cf984749a8c17888d4c04964
+ms.openlocfilehash: 2e234e0057db852b6b741a0103412bbacd108287
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/26/2019
-ms.locfileid: "70030307"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558404"
 ---
 # <a name="configure-sql-server-always-on-availability-group-for-high-availability-on-linux"></a>Настройка группы доступности Always On SQL Server для обеспечения высокой доступности в Linux
 
@@ -71,7 +71,7 @@ ms.locfileid: "70030307"
 
 В конфигурации высокой доступности, которая обеспечивает автоматический переход на другой ресурс, группа доступности должна иметь по крайней мере три реплики. Высокий уровень доступности поддерживается в любой из следующих конфигураций:
 
-- [три синхронные реплики](sql-server-linux-availability-group-ha.md#threeSynch);
+- [Три синхронные реплики](sql-server-linux-availability-group-ha.md#threeSynch)
 
 - [две синхронные реплики и реплика конфигурации](sql-server-linux-availability-group-ha.md#twoSynch).
 
@@ -218,13 +218,13 @@ ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE;
 ## <a name="notes"></a>Примечания
 
 >[!IMPORTANT]
->После настройки кластера и добавления группы доступности в качестве ресурса кластера вы не можете использовать Transact-SQL для отработки отказа ресурсов группы доступности. Ресурсы кластера SQL Server в Linux не так сильно зависят от операционной системы, как если бы они находились в отказоустойчивом кластере Windows Server (WSFC). Служба SQL Server не имеет сведений о наличии кластера. Вся оркестрация осуществляется с помощью средств управления кластерами. В RHEL или Ubuntu используйте `pcs`. В SLES используйте `crm`. 
+>После настройки кластера и добавления группы доступности в качестве ресурса кластера вы не можете использовать Transact-SQL для отработки отказа ресурсов группы доступности. Ресурсы кластера SQL Server в Linux не так сильно зависят от операционной системы, как если бы они находились в отказоустойчивом кластере Windows Server (WSFC). Служба SQL Server не имеет сведений о наличии кластера. Вся оркестрация осуществляется с помощью средств управления кластерами. В RHEL или Ubuntu используйте `pcs`. В SLES используйте `crm`. 
 
 >[!IMPORTANT]
 >Если группа доступности является ресурсом кластера, в текущем выпуске существует известная ошибка, когда принудительный переход (с потерей данных) на асинхронную реплику не работает. Эта проблема будет устранена в следующем выпуске. Переход на синхронную реплику вручную или автоматически выполняется успешно.
 
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 [Настройка кластера Red Hat Enterprise Linux для ресурсов кластера группы доступности SQL Server](sql-server-linux-availability-group-cluster-rhel.md)
 

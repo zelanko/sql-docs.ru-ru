@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: jovanpop-msft
 ms.author: jovanpop
 manager: alanyu
-ms.openlocfilehash: e5dc5cb87bcadda9600768d0840699f683492a54
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: 2269c594bd0fff036d4fe5d5d722aa5d78d4ca6d
+ms.sourcegitcommit: 21e6a0c1c6152e625712a5904fce29effb08a2f9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73594011"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75883995"
 ---
 # <a name="azure-sql-database-managed-instance-dashboard-for-azure-data-studio-preview"></a>Панель мониторинга управляемого экземпляра базы данных SQL Azure для Azure Data Studio (предварительная версия)
 
@@ -39,7 +39,7 @@ ms.locfileid: "73594011"
 
 Это расширение позволяет просматривать технические характеристики управляемого экземпляра и некоторые сведения об использовании ресурсов.
 
-[ ![Свойства управляемого экземпляра](media/azure-sql-mi-extension/ads-mi-tab1.png )](media/azure-sql-mi-extension/ads-mi-tab1.png#lightbox)
+[ ![Свойства Управляемого экземпляра](media/azure-sql-mi-extension/ads-mi-tab1.png )](media/azure-sql-mi-extension/ads-mi-tab1.png#lightbox)
 
 В верхней области отображаются следующие сведения.
 
@@ -52,7 +52,7 @@ ms.locfileid: "73594011"
 
 При выборе второй панели на вкладке **Управляемый экземпляр** вы увидите рекомендации и оповещения, помогающие оптимизировать управляемый экземпляр.
 
-[ ![Рекомендации по управляемому экземпляру](media/azure-sql-mi-extension/ads-mi-tab2.png )](media/azure-sql-mi-extension/ads-mi-tab2.png#lightbox)
+[ ![Рекомендации по Управляемому экземпляру](media/azure-sql-mi-extension/ads-mi-tab2.png )](media/azure-sql-mi-extension/ads-mi-tab2.png#lightbox)
 
 Вы можете увидеть некоторые из следующих рекомендаций.
 
@@ -77,7 +77,7 @@ ms.locfileid: "73594011"
 
 Четвертая панель вкладки **Управляемый экземпляр** отображает последние связанные записи журнала ошибок SQL.
 
-[ ![Записи журнала управляемого экземпляра](media/azure-sql-mi-extension/ads-mi-tab4.png )](media/azure-sql-mi-extension/ads-mi-tab4.png#lightbox)
+[ ![Записи журнала Управляемого экземпляра](media/azure-sql-mi-extension/ads-mi-tab4.png )](media/azure-sql-mi-extension/ads-mi-tab4.png#lightbox)
 
 Несмотря на то, что управляемый экземпляр порождает большое количество записей журнала, большинство из них являются внутренними данными или системными сведениями. Кроме того, в некоторых записях журнала отображаются физические имена баз данных (значения `GUID`) вместо фактических логических имен баз данных.
 
@@ -97,7 +97,6 @@ ms.locfileid: "73594011"
 
 Дополнительные сведения см. [проекте GitHub](https://github.com/JocaPC/AzureDataStudio-Managed-Instance/).
 
-[conduct-code]: http://opensource.microsoft.com/codeofconduct/
-[conduct-FAQ]: http://opensource.microsoft.com/codeofconduct/faq/
+[conduct-code]: https://opensource.microsoft.com/codeofconduct/
+[conduct-FAQ]: https://opensource.microsoft.com/codeofconduct/faq/
 [conduct-email]: mailto:opencode@microsoft.com
-[conduct-md]: https://github.com/PowerShell/vscode-powershell/blob/master/CODE_OF_CONDUCT.md

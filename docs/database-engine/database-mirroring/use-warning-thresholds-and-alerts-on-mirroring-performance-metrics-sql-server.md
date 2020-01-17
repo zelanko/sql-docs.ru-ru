@@ -1,6 +1,7 @@
 ---
-title: Использование пороговых значений предупреждений и оповещений в метриках производительности зеркального отображения | Документы Майкрософт
-ms.custom: ''
+title: Настройка оповещений для метрик производительности зеркального отображения базы данных
+description: 'Руководство по настройке пороговых значений предупреждений и оповещений для метрик производительности, используемых зеркальным отображением базы данных. '
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8cdd1515-0bd7-4f8c-a7fc-a33b575e20f6
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 5e1ff85e22911cf632ef2a2f6bea9fda85f9ece4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ad44ae43a33a132fc2b5170a8ff4d3e6b3572ded
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68050598"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74820906"
 ---
 # <a name="use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server"></a>Использование пороговых значений предупреждений и оповещений в метриках производительности зеркального отображения (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,15 +31,6 @@ ms.locfileid: "68050598"
   
  После того как установлено наблюдение в зеркальной базе данных, системный администратор может настроить пороговые значения предупреждений по нескольким метрикам производительности, а также предупреждения для этих и других событий зеркального отображения базы данных.  
   
- **В этом разделе:**  
-  
--   [Метрики производительности и пороговые значения предупреждений](#PerfMetricsAndWarningThresholds)  
-  
--   [Установка и управление пороговыми значениями предупреждений](#SetUpManageWarningThresholds)  
-  
--   [Использование предупреждений для зеркальной базы данных](#UseAlerts)  
-  
--   [Связанные задачи](#RelatedTasks)  
   
 ##  <a name="PerfMetricsAndWarningThresholds"></a> Метрики производительности и пороговые значения предупреждений  
  В следующей таблице перечислены метрики производительности, для которых можно настроить предупреждения, описаны пороговые значения и перечислены соответствующие им метки монитора зеркального отображения баз данных.  
@@ -67,7 +59,7 @@ ms.locfileid: "68050598"
   
      Следующий набор системных хранимых процедур позволяет администратору устанавливать пороговые значения предупреждений и управлять ими в зеркальной базе данных одного из участников.  
   
-    |Процедура|Описание|  
+    |Процедура|Description|  
     |---------------|-----------------|  
     |[sp_dbmmonitorchangealert (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangealert-transact-sql.md)|Добавляет или изменяет пороговое значение предупреждения для указанной метрики производительности зеркального отображения баз данных.|  
     |[sp_dbmmonitorhelpalert (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-dbmmonitorhelpalert-transact-sql.md)|Возвращает сведения о порогах предупреждения для одной или всех ключевых метрик производительности монитора зеркального отображения базы данных.|  

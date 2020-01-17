@@ -1,6 +1,7 @@
 ---
-title: Справочник по системным объектам группы доступности AlwaysOn | Документация Майкрософт
-ms.custom: ''
+title: Справочник по системным объектам группы доступности
+description: Справка по различным системным объектам, которые могут использоваться при работе с группами доступности Always On.
+ms.custom: seo-lt-2019
 ms.date: 04/03/2010
 ms.prod: sql
 ms.reviewer: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2014||=sqlallproducts-allversions'
-ms.openlocfilehash: b9bdf352a566917678294c6c63ac52bd0d27de8e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 140953484006d33e7814c19b9eb5bd6abcd29009
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67991391"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822464"
 ---
 # <a name="always-on-availability-group-system-object-reference"></a>Справочник по системным объектам группы доступности AlwaysOn
 
@@ -24,7 +25,7 @@ ms.locfileid: "67991391"
 
 ## <a name="system-catalog-views"></a>Представления системного каталога
 
-| Представление системного каталога | Описание|
+| Представление системного каталога | Description|
 | :------ | :----------------------------- |
 | [sys.availability_databases_cluster](../../../relational-databases/system-catalog-views/sys-availability-databases-cluster-transact-sql.md)   | Содержит по строке для каждой базы данных доступности в экземпляре SQL Server, в которой размещена реплика доступности для группы доступности AlwaysOn в кластере для отказоустойчивой кластеризации Windows Server (WSFC), независимо от того, присоединена ли локальная копия базы данных к группе доступности. |
 | [sys.availability_group_listener_ip_addresses](../../../relational-databases/system-catalog-views/sys-availability-group-listener-ip-addresses-transact-sql.md)  | Возвращает по строке для каждого IP-адреса, связанного с прослушивателем группы доступности AlwaysOn в кластере WSFC. |
@@ -38,7 +39,7 @@ ms.locfileid: "67991391"
 ## <a name="system-dynamic-management-views"></a>Системные динамические административные представления
 
 
-| Системное динамическое административное представление | Описание|
+| Системное динамическое административное представление | Description|
 | :------ | :----------------------------- |
 | [sys.dm_hadr_auto_page_repair](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-auto-page-repair-transact-sql.md)   | Возвращает строку для каждой попытки автоматического восстановления страниц во всех базах данных доступности в реплике доступности, размещенной в группе доступности на экземпляре сервера.  |
 | [sys.dm_hadr_availability_group_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-group-states-transact-sql.md)    | Возвращает по строке для каждой группы доступности AlwaysOn, включающий реплику доступности на локальном экземпляре SQL Server. Каждая строка отображает состояния работоспособности определенной группы доступности. |
@@ -58,7 +59,7 @@ ms.locfileid: "67991391"
 ## <a name="system-functions"></a>Системные функции
 
 
-| Системная функция | Описание|
+| Системная функция | Description|
 | :------ | :----------------------------- |
 | [sys.fn_hadr_is_primary_replica](../../../relational-databases/system-functions/sys-fn-hadr-is-primary-replica-transact-sql.md)  | Используется для определения, является ли текущая реплика первичной репликой. |
 | [sys.fn_hadr_backup_is_preferred_replica](../../../relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql.md)    | Используется для определения, является ли текущая реплика предпочитаемой резервной репликой. |

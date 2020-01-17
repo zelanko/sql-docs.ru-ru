@@ -1,6 +1,7 @@
 ---
-title: Использование общего кластера Red Hat Enterprise Linux для SQL Server
-description: Реализуйте высокий уровень доступности, настроив кластер общих дисков Red Hat Enterprise Linux для SQL Server.
+title: Использование RHEL FCI для SQL Server на Linux
+description: Узнайте, как использовать экземпляр отказоустойчивого кластера общего диска Red Hat Enterprise Linux (RHEL) для SQL Server, чтобы обеспечить высокую доступность, например вручную отработать отказ отказоустойчивого кластера, и добавить или удалить узлы в кластере.
+ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -9,14 +10,14 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 075ab7d8-8b68-43f3-9303-bbdf00b54db1
-ms.openlocfilehash: e7b81a97ab186ef79f27ee3456a5761157c02f3f
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 76c59c6c7b821bfcc9eb76ca3a694a1c69095ce1
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68032242"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558529"
 ---
-# <a name="operate-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>Использование кластера общих дисков Red Hat Enterprise Linux для SQL Server
+# <a name="operate-rhel-failover-cluster-instance-fci-for-sql-server"></a>Работа экземпляра отказоустойчивого кластера RHEL для SQL Server
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
@@ -209,7 +210,7 @@ sudo pcs    resource op monitor interval=2s mssqlha
 
 При устранении неполадок кластера может помочь понимание того, как все три управляющие программы работают вместе для управления ресурсами кластера. 
 
-| Управляющая программа | Описание 
+| Управляющая программа | Description 
 | ----- | -----
 | Corosync | Обеспечивает членство в кворуме и обмен сообщениями между узлами кластера.
 | Pacemaker | Работает поверх Corosync и предоставляет конечные автоматы для ресурсов. 
@@ -272,7 +273,7 @@ pacemaker: active/enabled
 
 * Руководство [Кластер с нуля](https://clusterlabs.org/doc/Cluster_from_Scratch.pdf) от Pacemaker
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 [Настройка общего кластера дисков Red Hat Enterprise Linux для SQL Server](sql-server-linux-shared-disk-cluster-red-hat-7-configure.md)
 

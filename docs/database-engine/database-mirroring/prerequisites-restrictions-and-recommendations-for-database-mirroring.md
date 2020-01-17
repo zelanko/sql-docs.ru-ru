@@ -1,6 +1,7 @@
 ---
-title: Предварительные условия, ограничения и рекомендации по зеркальному отображению базы данных | Документы Майкрософт
-ms.custom: ''
+title: Зеркальное отображение базы данных. Предварительные условия, ограничения и рекомендации
+description: Дополнительные сведения о предварительных требованиях, ограничениях и рекомендациях по настройке зеркального отображения базы данных с помощью SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.prod_service: high-availability
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: fdcf2251-9895-44c6-b81e-768fef32e732
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 135c0d98dd1be7e00ccaafdccba8115e1af8d54d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1f6a1c47cf5672cdf0f9a22be6a252cfc8cdbe87
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68025430"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244369"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-database-mirroring"></a>Предварительные условия, ограничения и рекомендации по зеркальному отображению базы данных
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -87,7 +88,7 @@ ms.locfileid: "68025430"
   
 -   В сеансе зеркального отображения все экземпляры сервера должны использовать одну и ту же основную кодовую страницу и параметры сортировки. Отличия могут вызвать проблемы при настройке зеркального отображения.  
   
--   Если требуется, можно оценить время на переключение базы данных, чтобы убедиться в том, что конфигурация системы позволяет достичь нужной производительности. Дополнительные сведения см. в разделе [Оценка прерывания обслуживания во время переключения ролей (зеркальное отображение базы данных)](../../database-engine/database-mirroring/estimate-the-interruption-of-service-during-role-switching-database-mirroring.md).  
+-   Если требуется, можно оценить время на переключение базы данных, чтобы убедиться в том, что конфигурация системы позволяет достичь нужной производительности. Дополнительные сведения см. в статье [Оценка прерывания обслуживания во время переключения ролей (зеркальное отображение базы данных)](../../database-engine/database-mirroring/estimate-the-interruption-of-service-during-role-switching-database-mirroring.md).  
   
 -   Для максимальной производительности используйте для зеркального отображения выделенный сетевой адаптер.  
   

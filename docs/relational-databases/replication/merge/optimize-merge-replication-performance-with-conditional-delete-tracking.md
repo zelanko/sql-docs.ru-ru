@@ -1,6 +1,7 @@
 ---
-title: Оптимизация производительности репликации слиянием с помощью отслеживания условного удаления | Документация Майкрософт
-ms.custom: ''
+title: Оптимизация производительности с помощью отслеживания условного удаления (слияние)
+description: Узнайте, как оптимизировать производительность репликации слиянием с помощью отслеживания условного удаления для SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 58f120a3-ea3a-4e97-93f0-0eb4e580ecf2
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 3466c0ec73f78ef6e67d86f4be48e8c7b8bfe943
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 972a1e200a2025261c6a9fb6e0ffd80f0dc4f219
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68018751"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321511"
 ---
 # <a name="optimize-merge-replication-performance-with-conditional-delete-tracking"></a>Оптимизация производительности репликации слиянием с помощью отслеживания условного удаления
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

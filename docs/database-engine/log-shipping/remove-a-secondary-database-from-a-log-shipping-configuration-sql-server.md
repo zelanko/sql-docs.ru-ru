@@ -1,6 +1,7 @@
 ---
-title: Удаление базы данных-получателя из конфигурации доставки журналов (SQL Server) | Документы Майкрософт
-ms.custom: ''
+title: Удаление получателя доставки журналов
+description: Узнайте, как удалить получателя доставки журналов.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ebe368a4-ca1c-45d0-9a71-3ddbd5b26a8e
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e788f18084afb2d5897538b1f760c75a3de18a1e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 03a22206129b3f6002006f1fdcb74d5aad73308f
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68030694"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258987"
 ---
 # <a name="remove-a-secondary-database-from-a-log-shipping-configuration-sql-server"></a>Удаление базы данных-получателя из конфигурации доставки журналов (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "68030694"
   
 -   **Перед началом работы**  
   
-     [безопасность](#Security)  
+     [Безопасность](#Security)  
   
 -   **Удаление базы данных-получателя доставки журналов с помощью:**  
   

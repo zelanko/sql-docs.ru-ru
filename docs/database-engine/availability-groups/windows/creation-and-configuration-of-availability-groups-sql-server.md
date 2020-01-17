@@ -1,7 +1,7 @@
 ---
-title: Ссылки на разделы, посвященные созданию и настройке групп доступности
-description: Ссылки на разделы, содержащие сведения о создании и настройке групп доступности Always On.
-ms.custom: seodec18
+title: Создание и настройка групп доступности (индекс содержимого)
+description: Индекс ссылок, содержащих сведения о создании и настройке групп доступности Always On для SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7f89fab8-6ee2-4273-9de0-e594bfb9407f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 82ea382e8e4703b5dae1bac850da96aa19c35d9b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ce6e506e46b7603a3e4c657c7500b482a1e1007f
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68009980"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75245985"
 ---
 # <a name="reference-for-the-creation-and-configuration-of-always-on-availability-groups"></a>Ссылки на разделы, посвященные созданию и настройке групп доступности Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -115,6 +115,6 @@ ms.locfileid: "68009980"
  [Администрирование группы доступности (SQL Server)](../../../database-engine/availability-groups/windows/administration-of-an-availability-group-sql-server.md)   
  [Политики AlwaysOn на случай проблем в работе с группами доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/always-on-policies-for-operational-issues-always-on-availability.md)   
  [Отслеживание групп доступности (SQL Server)](../../../database-engine/availability-groups/windows/monitoring-of-availability-groups-sql-server.md)   
- [Группы доступности Always On: взаимодействие (SQL Server)](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)  
+ [Группы доступности AlwaysOn: взаимодействие (SQL Server)](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)  
   
   

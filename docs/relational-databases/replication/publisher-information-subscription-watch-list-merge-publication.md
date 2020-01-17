@@ -1,6 +1,7 @@
 ---
-title: Сведения об издателе, список просмотра подписок (публикация слиянием) | Документация Майкрософт
-ms.custom: ''
+title: Список наблюдения за подписками (слияние — SSMS)
+description: Описание вкладки "Список наблюдения за подписками" монитора репликации в SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 4ec956bf-5cef-4377-a1d1-8c7f0107a6cb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 0f6caf3862d42d4245e4b2657448b2d5beb22667
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 39c036c354716118fc4df791084f9838c6af5fea
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710796"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75320643"
 ---
 # <a name="publisher-information-subscription-watch-list-merge-publication"></a>Сведения об издателе, список просмотра подписок (публикация слиянием)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "71710796"
   
 -   **Выберите столбцы для отображения**: выбор столбцов для отображения и порядка их отображения в диалоговом окне **Выбор столбцов**.  
   
--   **Фильтр**: фильтрация строк в сетке на основании значений столбцов в диалоговом окне **Параметры фильтра**.  
+-   **Фильтр**. фильтрация строк в сетке на основании значений столбцов в диалоговом окне **Параметры фильтра**.  
   
 -   **Очистить фильтр**: удалить все настройки фильтра для сетки.  
   
@@ -69,7 +70,7 @@ ms.locfileid: "71710796"
   
  Значения состояния **Срок действия скоро истекает или истек** и **Продолжительное слияние** могут отображаться только, если установлены пороги. Значение состояния **Критическое для производительности** может быть отображено только после произведения пяти синхронизаций подписок с одним типом соединения (коммутируемого или по локальной сети). Сведения по измерению производительности и установке пороговых значений см. в статьях [Наблюдение за производительностью с помощью монитора репликации](../../relational-databases/replication/monitor/monitor-performance-with-replication-monitor.md) и [Настройка пороговых значений и предупреждений в мониторе репликации](../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md).  
   
- **Подписка**  
+ **подписка**  
  Имя каждой подписки в виде: *ИмяПодписчика: ИмяБазыДанныхПодписки*.  
   
  **Понятное имя**  

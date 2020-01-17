@@ -1,6 +1,8 @@
 ---
-title: Типы данных и функции даты и времени (Transact-SQL) | Документы Майкрософт
-ms.custom: ''
+title: Функции и типы данных даты и времени
+description: Ссылки на статьи о типах данных и функциях даты и времени.
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: seo-lt-2019
 ms.date: 09/01/2017
 ms.prod: sql
 ms.prod_service: sql-database
@@ -21,12 +23,12 @@ ms.assetid: 83e378a2-6e89-4c80-bc4f-644958d9e0a9
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = azure-sqldw-latest||= azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: 5a478288ef82764c5dc6d044132fb66dc7e3f9bf
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: a7beec472b0f4b70662c364081641b6ea91be507
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73982957"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75256095"
 ---
 # <a name="date-and-time-data-types-and-functions-transact-sql"></a>Типы данных и функции даты и времени (Transact-SQL)
 
@@ -138,7 +140,7 @@ ms.locfileid: "73982957"
   
 ##  <a name="DateandTimeRelatedTopics"></a> Дата и время — см. также 
   
-|Раздел|Описание|  
+|Раздел|Description|  
 |-----------|-----------------|  
 |[Функции CAST и CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)|Предоставляет сведения о преобразовании значений даты и времени в строковые литералы и обратно, а также в другие форматы даты и времени.|  
 |[Написание инструкций Transact-SQL, адаптированных к международному использованию](../../relational-databases/collations/write-international-transact-sql-statements.md)|Предоставляет рекомендации относительно переносимости баз данных и приложений баз данных, использующих инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)], с одного языка на другой или в многоязычную среду.|  

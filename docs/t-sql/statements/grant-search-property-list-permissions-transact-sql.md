@@ -1,6 +1,8 @@
 ---
-title: GRANT, предоставление разрешений на список свойств поиска (Transact-SQL) | Документы Майкрософт
-ms.custom: ''
+title: GRANT (разрешения на список свойств поиска)
+description: Предоставляет разрешения для списка свойств поиска.
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: seo-lt-2019
 ms.date: 07/26/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -18,12 +20,12 @@ ms.assetid: bb2d2550-9c0e-4a88-b50c-12e481d4d3ae
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6bc646f9cbee6a8f7c646398fbcfa4302278f00c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 76d96e9342ca66f4133b8993b2409960e6091301
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68050799"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75246146"
 ---
 # <a name="grant-search-property-list-permissions-transact-sql"></a>Разрешение на список свойств поиска GRANT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]

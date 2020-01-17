@@ -1,6 +1,7 @@
 ---
-title: Добавление и удаление статей в существующих публикациях | Документация Майкрософт
-ms.custom: ''
+title: Добавление и удаление статей публикации (SSMS)
+description: Инструкции по добавлению и удалению статей в публикации с помощью SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,12 +18,12 @@ ms.assetid: d5a3e536-62d2-4473-a178-877ba52f7d7f
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 1b713b0615ae13fc898567307f945176db8908d7
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 682f0af6b7ac2c6dffc8d0e1988ef2973b2f7b51
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769910"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321318"
 ---
 # <a name="add-articles-to-and-drop-articles-from-a-publication"></a>Добавление и удаление статей в существующих публикациях
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -45,7 +46,7 @@ ms.locfileid: "68769910"
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>См. также:  
- [Определение статьи](../../../relational-databases/replication/publish/define-an-article.md)   
+ [Define an Article](../../../relational-databases/replication/publish/define-an-article.md)   
  [Публикация данных и объектов базы данных](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)  
   
   

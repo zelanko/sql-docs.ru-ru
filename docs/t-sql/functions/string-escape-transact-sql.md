@@ -18,18 +18,18 @@ ms.assetid: 2163bc7a-3816-4304-9c40-8954804f5465
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: d845257313466caa21976feaf69598e404a03962
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7e9b189d6b06aaf3b85815ed6d889756d466bff8
+ms.sourcegitcommit: a92fa97e7d3132ea201e4d86c76ac39cd564cd3c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67906860"
+ms.lasthandoff: 12/21/2019
+ms.locfileid: "75325506"
 ---
-# <a name="stringescape-transact-sql"></a>STRING_ESCAPE (Transact-SQL)
+# <a name="string_escape-transact-sql"></a>STRING_ESCAPE (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Экранирует специальные символы в тексте и возвращает текст с экранированными символами. **STRING_ESCAPE** — это детерминированная функция.  
+Экранирует специальные символы в тексте и возвращает текст с экранированными символами. **STRING_ESCAPE** — это детерминированная функция, впервые представленная в SQL Server 2016. 
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

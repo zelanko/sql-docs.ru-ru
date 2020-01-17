@@ -1,6 +1,7 @@
 ---
-title: Добавление и удаление статей в имеющихся публикациях | Документация Майкрософт
-ms.custom: ''
+title: Добавление и удаление статей (существующие публикации)
+description: Узнайте, как добавлять и удалять статьи из существующих публикаций для SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -20,12 +21,12 @@ ms.assetid: b148e907-e1f2-483b-bdb2-59ea596efceb
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 5432d4456bf20f73a799726edd53e31f8707a067
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: e996ccfd6f6930b4741f15b3da82c1f2856bd4db
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907801"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321338"
 ---
 # <a name="add-articles-to-and-drop-articles-from-existing-publications"></a>Добавление и удаление статей в существующих публикациях
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -51,9 +52,9 @@ ms.locfileid: "72907801"
   
 3.  После создания моментального снимка синхронизируйте подписку, чтобы скопировать схему и данные для новой статьи.  
 
-    -   Дополнительные сведения о синхронизации принудительной подписки см. в [этой](../../../relational-databases/replication/synchronize-a-push-subscription.md) статье.  
+    -   Сведения о синхронизации принудительной подписки см. в разделе [Synchronize a Push Subscription](../../../relational-databases/replication/synchronize-a-push-subscription.md).  
   
-    -   Дополнительные сведения о синхронизации подписки по запросу см. в [этой](../../../relational-databases/replication/synchronize-a-pull-subscription.md) статье.  
+    -   Сведения о синхронизации подписки по запросу см. в разделе [Synchronize a Pull Subscription](../../../relational-databases/replication/synchronize-a-pull-subscription.md).  
   
 ## <a name="dropping-articles"></a>удаление статей  
  Статьи могут быть удалены из публикации в любое время, но следует принять во внимание следующие аспекты:  

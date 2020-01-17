@@ -1,6 +1,7 @@
 ---
-title: Удаление группы доступности (SQL Server) | Документы Майкрософт
-ms.custom: ''
+title: Удаление группы доступности
+description: 'Инструкции по удалению группы доступности с помощью SQL Server Management Studio (SSMS), Transact-SQL (T-SQL) или SQL PowerShell. '
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -14,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 4b7f7f62-43a3-49db-a72e-22d4d7c2ddbb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c436f8a09829721bea53b13ea3af0d376c62fc87
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4d5d50306c8f9a072b9dfc28f7e3519b026cce71
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014308"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822620"
 ---
 # <a name="remove-an-availability-group-sql-server"></a>Удаление группы доступности (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  В этом разделе описывается удаление группы доступности AlwaysOn с помощью [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]или PowerShell в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Если экземпляр сервера, на котором размещена одна из реплик доступности, находится в режиме «вне сети» при удалении группы доступности, то после перехода в режим «в сети» локальная реплика доступности будет удалена с экземпляра сервера. При удалении группы доступности удаляются все связанные прослушиватели группы доступности.  
+  В этом разделе описывается удаление группы доступности Always On с помощью [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)] или PowerShell в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Если экземпляр сервера, на котором размещена одна из реплик доступности, находится в режиме «вне сети» при удалении группы доступности, то после перехода в режим «в сети» локальная реплика доступности будет удалена с экземпляра сервера. При удалении группы доступности удаляются все связанные прослушиватели группы доступности.  
   
  Обратите внимание, что при необходимости группу доступности вы можете удалить из любого узла отказоустойчивого кластера Windows Server (WSFC), обладающего учетными данными, соответствующими группе доступности. Благодаря этому обеспечивается возможность удаления группы доступности при отсутствии ее оставшихся реплик доступности.  
   
@@ -92,7 +93,7 @@ ms.locfileid: "68014308"
     ```  
   
     > [!NOTE]  
-    >  Чтобы просмотреть синтаксис командлета, воспользуйтесь командлетом **Get-Help** в среде [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Дополнительные сведения см. в разделе [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md).  
+    >  Чтобы просмотреть синтаксис командлета, воспользуйтесь командлетом **Get-Help** в среде PowerShell [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Дополнительные сведения см. в разделе [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md).  
   
  **Настройка и использование поставщика SQL Server PowerShell**  
   

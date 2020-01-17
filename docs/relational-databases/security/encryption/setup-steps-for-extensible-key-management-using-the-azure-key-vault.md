@@ -1,6 +1,7 @@
 ---
-title: Расширенное управление ключами SQL Server TDE с помощью Azure Key Vault (SQL Server) | Документы Майкрософт
-ms.custom: ''
+title: Настройка расширенного управления ключами TDE с помощью Azure Key Vault
+description: Действия по установке и настройке SQL Server Connect для Azure Key Vault.
+ms.custom: seo-lt-2019
 ms.date: 09/12/2019
 ms.prod: sql
 ms.reviewer: vanto
@@ -11,19 +12,19 @@ helpviewer_keywords:
 - SQL Server Connector, setup
 - SQL Server Connector
 ms.assetid: c1f29c27-5168-48cb-b649-7029e4816906
-author: aliceku
-ms.author: aliceku
-ms.openlocfilehash: 5d767f8257395368cf3ceeba45b9b9d7cadcfa80
-ms.sourcegitcommit: 77293fb1f303ccfd236db9c9041d2fb2f64bce42
+author: jaszymas
+ms.author: jaszymas
+ms.openlocfilehash: 1ccffc653225645de94355707ae2116982d2deb4
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929713"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75557571"
 ---
 # <a name="sql-server-tde-extensible-key-management-using-azure-key-vault---setup-steps"></a>Расширенное управление ключами SQL Server TDE с помощью Azure Key Vault (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  Ниже приведены пошаговые инструкции по установке и настройке Соединителя [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] для Azure Key Vault.  
+  Ниже приведены пошаговые инструкции по установке и настройке соединителя [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] для Azure Key Vault.  
   
 ## <a name="before-you-start"></a>Перед началом работы  
  Чтобы использовать хранилище ключей Azure с SQL Server, необходимо выполнить несколько предварительных условий.  
@@ -44,7 +45,7 @@ ms.locfileid: "70929713"
 2016 | [Распространяемый пакет Visual C++ для Visual Studio 2015](https://www.microsoft.com/download/details.aspx?id=48145)    
  
   
-## <a name="part-i-set-up-an-azure-active-directory-service-principal"></a>Часть I. Настройка субъекта-службы Azure Active Directory  
+## <a name="part-i-set-up-an-azure-active-directory-service-principal"></a>Часть 1. Настройка субъекта-службы Azure Active Directory  
  Чтобы предоставить SQL Server разрешения на доступ к вашему хранилищу ключей Azure, потребуется учетная запись субъекта-службы в Azure Active Directory (AAD).  
   
 1.  Перейдите на [портал Azure](https://ms.portal.azure.com/) и выполните вход.  
@@ -57,7 +58,7 @@ ms.locfileid: "70929713"
   
  ![ekm-key-id](../../../relational-databases/security/encryption/media/ekm-key-id.png "ekm-key-id")  
   
-## <a name="part-ii-create-a-key-vault-and-key"></a>Часть II. Создание Key Vault и ключа  
+## <a name="part-ii-create-a-key-vault-and-key"></a>Часть 2. Создание Key Vault и ключа  
  Компонент SQL Server Database Engine будет использовать создаваемое здесь хранилище ключей и ключ для защиты ключа шифрования.  
   
 > [!IMPORTANT]  
@@ -106,7 +107,7 @@ ms.locfileid: "70929713"
     > [!NOTE]  
     >  Для `-Location parameter`используйте команду `Get-AzureLocation` , чтобы определить, как можно указать альтернативное расположение в этом примере. Если требуются дополнительные сведения, введите: `Get-Help Get-AzureLocation`  
   
-3.  **Создание хранилища ключей**  
+3.  **Создание Key Vault**  
   
      Для командлета `New-AzKeyVault` необходимо указать имя группы ресурсов, имя хранилища ключей и географическое расположение. Например, для хранилища ключей с именем `ContosoDevKeyVault`введите:  
   
@@ -169,7 +170,7 @@ ms.locfileid: "70929713"
       > [!NOTE]
         >  SQL Server поддерживает только 2048-битные RSA-ключи.
         
-    ### <a name="best-practice"></a>Рекомендации
+    ### <a name="best-practice"></a>Рекомендация.
     
     Для обеспечения быстрого восстановления ключей и возможности доступа к данным за пределами Azure мы рекомендуем следующее.
  
@@ -256,9 +257,9 @@ ms.locfileid: "70929713"
   
  Чтобы просмотреть описания кодов ошибок, параметры конфигурации и задачи обслуживания для соединителя SQL Server, откройте приложения в конце этого раздела.  
   
--   [A. Инструкции по обслуживанию для соединителя SQL Server](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md#AppendixA)  
+-   [А. Инструкции по обслуживанию для соединителя SQL Server](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md#AppendixA)  
   
--   [C. Описания кодов ошибок для соединителя SQL Server](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md#AppendixC)  
+-   [В. Описания кодов ошибок для соединителя SQL Server](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md#AppendixC)  
   
   
 ## <a name="part-iv-configure-includessnoversionincludesssnoversion-mdmd"></a>Часть IV. Настройка [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
@@ -321,7 +322,7 @@ ms.locfileid: "70929713"
         > [!IMPORTANT]  
         >  Необходимо удалить дефисы из **идентификатора клиента**.  
   
-    -   Дополните вторую часть аргумента `SECRET` **секретом клиента** из части I. В этом примере **секрет клиента** из части I имеет значение `Replace-With-AAD-Client-Secret`. Окончательная строка аргумента `SECRET` будет представлять собой длинную последовательность букв и цифр *без дефисов*.  
+    -   Дополните вторую часть аргумента `SECRET`**секретом клиента** из части I. В этом примере **секрет клиента** из части I имеет значение `Replace-With-AAD-Client-Secret`. Окончательная строка аргумента `SECRET` будет представлять собой длинную последовательность букв и цифр *без дефисов*.  
   
     ```sql  
     USE master;  

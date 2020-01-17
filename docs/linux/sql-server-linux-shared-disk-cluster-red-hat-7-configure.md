@@ -1,6 +1,7 @@
 ---
-title: Настройка общего кластера Red Hat Enterprise Linux для SQL Server
-description: Реализуйте высокий уровень доступности, настроив кластер общих дисков Red Hat Enterprise Linux для SQL Server.
+title: Настройка экземпляра отказоустойчивого кластера RHEL для SQL Server на Linux
+description: Узнайте, как настроить экземпляр отказоустойчивого кластера общего диска Red Hat Enterprise Linux (RHEL) для SQL Server на Linux с высокой доступностью.
+ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -9,18 +10,18 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
-ms.openlocfilehash: 052bb7455c952600390a0960e9d7618ab0a315fc
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: 3ff0c862e93cd3b552b29c4eec8ab91931c809c7
+ms.sourcegitcommit: 34d28d49e8d0910cf06efda686e2d73059569bf8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75252242"
+ms.lasthandoff: 01/04/2020
+ms.locfileid: "75656631"
 ---
-# <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>Настройка общего кластера дисков Red Hat Enterprise Linux для SQL Server
+# <a name="configure-rhel-failover-cluster-instance-fci-cluster-for-sql-server"></a>Настройка экземпляра отказоустойчивого кластера RHEL для SQL Server
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Это руководство содержит инструкции по созданию кластера общих дисков с двумя узлами для SQL Server на основе Red Hat Enterprise Linux. Уровень кластеризации основан на [надстройке высокого уровня доступности](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf) Red Hat Enterprise Linux (RHEL), созданной на базе [Pacemaker](https://clusterlabs.org/). Экземпляр SQL Server активен либо в одном, либо в другом узле.
+Это руководство содержит инструкции по созданию отказоустойчивого кластера общих дисков с двумя узлами для SQL Server на основе Red Hat Enterprise Linux. Уровень кластеризации основан на [надстройке высокого уровня доступности](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf) Red Hat Enterprise Linux (RHEL), созданной на базе [Pacemaker](https://clusterlabs.org/). Экземпляр SQL Server активен либо в одном, либо в другом узле.
 
 > [!NOTE] 
 > Для доступа к надстройке высокого уровня доступности и документации по Red Hat требуется подписка. 
@@ -202,7 +203,7 @@ ms.locfileid: "75252242"
 
 * [Серверы и брандмауэры NFS | Stack Exchange](https://unix.stackexchange.com/questions/243756/nfs-servers-and-firewalld)
 * [Подключение тома NFS | Руководство для сетевых администраторов Linux](https://www.tldp.org/LDP/nag2/x-087-2-nfs.mountd.html)
-* [Конфигурация сервера NFS | Портал для клиентов Red Hat](https://access.redhat.com/documentation/red_hat_enterprise_linux/7/html/storage_administration_guide/nfs-serverconfig)
+* [Конфигурация сервера NFS | Портал для клиентов Red Hat](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/storage_administration_guide/nfs-serverconfig)
 
 ### <a name="mount-database-files-directory-to-point-to-the-shared-storage"></a>Подключение каталога файлов базы данных для указания общего хранилища
 

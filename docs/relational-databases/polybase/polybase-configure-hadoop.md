@@ -1,6 +1,6 @@
 ---
-title: Настройка PolyBase для доступа к внешним данным в Hadoop
-ms.date: 04/23/2019
+title: 'Доступ к внешним данным: Hadoop — PolyBase'
+ms.date: 12/13/2019
 ms.prod: sql
 ms.technology: polybase
 ms.topic: conceptual
@@ -9,12 +9,12 @@ ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 83fb16a5c55d1f2f169268be6463d9735ce4e55c
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.openlocfilehash: 1e5a45aa66d7d49f2c7499e0dcf975e5ebcb5b78
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73659563"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75255443"
 ---
 # <a name="configure-polybase-to-access-external-data-in-hadoop"></a>Настройка PolyBase для доступа к внешним данным в Hadoop
 
@@ -229,7 +229,7 @@ WHERE T2.YearMeasured = 2009 and T2.Speed > 40;
   
 ![Объекты PolyBase в SSMS](media/polybase-management.png)  
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 В следующих статьях приведены дополнительные сведения о способах использования и мониторинга PolyBase.
 

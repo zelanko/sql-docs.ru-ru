@@ -1,7 +1,7 @@
 ---
 title: CREATE TYPE (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 04/11/2017
+ms.date: 12/05/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 2202236b-e09f-40a1-bbc7-b8cff7488905
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b851fcc4a06567ce013b8bc0d062ccf15587d806
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: e7cf36879a08f50095a158311179b9ae303d4ebc
+ms.sourcegitcommit: 0d34b654f0b3031041959e87f5b4d4f0a1af6a29
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73982720"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74901877"
 ---
 # <a name="create-type-transact-sql"></a>CREATE TYPE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -289,7 +289,7 @@ column_name <data_type>
 ### <a name="a-creating-an-alias-type-based-on-the-varchar-data-type"></a>A. Создание псевдонима на базе типа данных varchar  
  В следующем примере создается псевдоним на базе определенного в системе типа данных `varchar`.  
   
-```  
+```sql  
 CREATE TYPE SSN  
 FROM varchar(11) NOT NULL ;  
 ```  
@@ -299,7 +299,7 @@ FROM varchar(11) NOT NULL ;
   
 **Область применения**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версий.  
   
-```  
+```sql  
 CREATE ASSEMBLY utf8string  
 AUTHORIZATION [dbi]   
 FROM 0x4D... ;  
@@ -312,7 +312,7 @@ GO
 ### <a name="c-creating-a-user-defined-table-type"></a>В. Создание определяемого пользователем табличного типа  
  В следующем примере создается определяемый пользователем табличный тип, который имеет два столбца. Дополнительные сведения о создании и использовании возвращающих табличное значение параметрах см. в разделе [Использование параметров, возвращающих табличные значения (ядро СУБД)](../../relational-databases/tables/use-table-valued-parameters-database-engine.md).  
   
-```  
+```sql  
 CREATE TYPE LocationTableType AS TABLE   
     ( LocationName VARCHAR(50)  
     , CostRate INT );  
@@ -341,6 +341,7 @@ GO
 ## <a name="see-also"></a>См. также:  
  [CREATE ASSEMBLY (Transact-SQL)](../../t-sql/statements/create-assembly-transact-sql.md)   
  [DROP TYPE (Transact-SQL)](../../t-sql/statements/drop-type-transact-sql.md)   
- [EVENTDATA (Transact-SQL)](../../t-sql/functions/eventdata-transact-sql.md)  
-  
+ [EVENTDATA (Transact-SQL)](../../t-sql/functions/eventdata-transact-sql.md)    
+ [Определяемые пользователем типы CLR](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)     
+ [Работа с определяемыми пользователем типами в SQL Server](../../relational-databases/clr-integration-database-objects-user-defined-types/working-with-user-defined-types-in-sql-server.md)     
   

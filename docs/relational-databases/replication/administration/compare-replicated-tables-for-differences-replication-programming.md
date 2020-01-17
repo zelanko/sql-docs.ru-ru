@@ -1,6 +1,7 @@
 ---
-title: Сравнение реплицируемых таблиц для поиска различий (программирование репликации) | Документация Майкрософт
-ms.custom: ''
+title: Сравнение различий между реплицированными таблицами (хранимая процедура репликации)
+description: Используйте хранимые процедуры репликации для сравнения различий между реплицированными таблицами на издателе и на подписчике.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -16,14 +17,14 @@ ms.assetid: cd253a17-0c85-42b4-912c-690169ebe799
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: a36c825a01d9c205732636bbd91e40dc322e546d
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 586b816282fff5586d3058cf9567a7d4c4466e29
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770809"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75322141"
 ---
-# <a name="compare-replicated-tables-for-differences-replication-programming"></a>сравнить реплицируемые таблицы на предмет различий (программирование репликации)
+# <a name="compare-differences-between-replicated-tables-replication-programming"></a>Сравнение различий между реплицированными таблицами (программирование репликации)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   Проверка статей используется для определения того, совпадают ли опубликованные данные в статьях таблицы на издателе с данными  на подписчике. В результате могут быть выявлены расхождения. Дополнительные сведения см. в статье [Проверка реплицированных данных](../../../relational-databases/replication/validate-data-at-the-subscriber.md). Однако проверка дает только сведения о том, есть расхождение или нет. Никаких подробностей о расхождении данных в исходной таблице и целевой таблице не сообщается. Программа командной строки **tablediff** возвращает подробные сведения о расхождениях в двух таблицах и даже может создать скрипт [!INCLUDE[tsql](../../../includes/tsql-md.md)] для приведения подписки в соответствие с данными на издателе.  
   

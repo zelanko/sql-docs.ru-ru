@@ -1,7 +1,8 @@
 ---
-title: Совместимость FILESTREAM с другими компонентами SQL Server | Документация Майкрософт
-ms.custom: ''
-ms.date: 03/14/2017
+title: Совместимость с FILESTREAM | Документация Майкрософт
+description: Совместимость FILESTREAM с другими компонентами SQL Server
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -13,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: d2c145dc-d49a-4f5b-91e6-89a2b0adb4f3
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: fd160a4149e69a28f27f72876121a9a0552abdd6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c4d32598cfab0cc08ece6721b0ff593c8577394d
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085363"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75245399"
 ---
 # <a name="filestream-compatibility-with-other-sql-server-features"></a>Совместимость FILESTREAM с другими компонентами SQL Server
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Поскольку данные FILESTREAM находятся в файловой системе, в данном разделе приводятся основные сведения, рекомендации и ограничения по использованию FILESTREAM со следующими компонентами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
@@ -66,7 +68,7 @@ ms.locfileid: "68085363"
   
  `Could not continue scan with NOLOCK due to data movement.`  
   
-##  <a name="Replication"></a> Репликация  
+##  <a name="Replication"></a> Replication  
  Столбец **varbinary(max)** , атрибут FILESTREAM которого включен на издателе, может быть реплицирован на подписчик с атрибутом FILESTREAM или без него. Чтобы указать способ репликации этого столбца, используйте диалоговое окно **Свойства статьи — \<статья>** либо параметр @schema_option процедуры [sp_addarticle](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) или [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md). Данные, реплицированные в столбец типа **varbinary(max)** без атрибута FILESTREAM, не должны превышать установленный в 2 ГБ предел для данного типа данных; в противном случае формируется ошибка выполнения. Рекомендуется выполнять репликацию атрибута FILESTREAM, если данные не реплицируются в [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Репликация таблиц со столбцами FILESTREAM на подписчики [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] не поддерживается, независимо установленного параметра схемы.  
   
 > [!NOTE]  

@@ -1,7 +1,7 @@
 ---
 title: Источник Power Query | Документация Майкрософт
 description: Узнайте, как настроить источник Power Query в потоке данных SQL Server Integration Services
-ms.date: 02/12/2019
+ms.date: 12/27/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.technology: integration-services
@@ -16,23 +16,21 @@ f1_keywords:
 author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
-ms.openlocfilehash: efefe16b7c5180ed0ae0dd853737c2182f335f61
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 38ccbeaf23e6d2daab46739064e30c4fc508d10f
+ms.sourcegitcommit: 12f529b811d308b169735740b78c6d5439ffefc7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68034404"
+ms.lasthandoff: 12/27/2019
+ms.locfileid: "75501925"
 ---
 # <a name="power-query-source-preview"></a>Источник Power Query (предварительная версия)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
-
-
 В этой статье описывается настройка свойств источника Power Query в потоке данных SQL Server Integration Services (SSIS). Power Query — это технология, которая позволяет подключаться к различным источникам данных и преобразовывать данные с помощью Excel или Power BI Desktop. Дополнительные сведения см. в статье [Power Query — обзор и обучение](https://support.office.com/article/power-query-overview-and-learning-ed614c81-4b00-4291-bd3a-55d80767f81d). Чтобы настроить скрипт, сформированный Power Query, его можно скопировать и вставить в источник Power Query в потоке данных SSIS.
   
 > [!NOTE]
-> В текущем предварительном выпуске для упрощения быстрого сбора отзывов и частых усовершенствований функций источник Power Query можно использовать только в SQL Server Data Tools (SSDT) и Azure-SSIS Integration Runtime (IR) в Фабрике данных Azure (ADF). Вы можете скачать последнюю версию SSDT, которая поддерживает источник Power Query, [здесь](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt?view=sql-server-2017). Чтобы подготовить Azure-SSIS IR, ознакомьтесь со статьей [Подготовка Integration Runtime Azure–SSIS в Фабрике данных Azure](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure).
+> В текущем предварительном выпуске источник Power Query можно использовать только в SQL Server 2017 и 2019 и Azure-SSIS Integration Runtime (IR) в Фабрике данных Azure (ADF). Скачать и установить последнюю версию источника Power Query для SQL Server 2017 и 2019 можно [здесь](https://www.microsoft.com/download/details.aspx?id=100619). Источник Power Query для Azure-SSIS IR установлен предварительно. Чтобы подготовить Azure-SSIS IR, ознакомьтесь со статьей [Подготовка Integration Runtime Azure–SSIS в Фабрике данных Azure](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure).
 
 ## <a name="configure-the-power-query-source"></a>Настройка источника Power Query
 
@@ -84,9 +82,9 @@ ms.locfileid: "68034404"
 
 ### <a name="current-limitations"></a>Текущие ограничения
 
--   Сейчас нельзя использовать источник данных **Oracle**, так как драйвер Oracle ADO.NET нельзя установить в Azure-SSIS IR. Вместо этого необходимо установить драйвер Oracle ODBC и использовать источник данных **ODBC** для подключения к Oracle (см. пример **ORACLE STANDARD ODBC** в статье [Пользовательская установка для среды выполнения интеграции Azure-SSIS](https://docs.microsoft.com/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup)).
+-   В настоящее время источник данных **Oracle** нельзя использовать в среде Azure-SSIS IR, так как драйвер Oracle ADO.NET нельзя установить в ней. Вместо этого необходимо установить драйвер Oracle ODBC и использовать источник данных **ODBC** для подключения к Oracle (см. пример **ORACLE STANDARD ODBC** в статье [Пользовательская установка для среды выполнения интеграции Azure-SSIS](https://docs.microsoft.com/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup)).
 
--   В Azure-SSIS IR сейчас нельзя использовать **веб**-источник данных с выборочной установкой. Используйте его без выборочной установки.
+-   В Azure-SSIS IR в настоящее время нельзя использовать **веб**-источник данных с выборочной установкой. Используйте его без выборочной установки.
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 Узнайте, как запускать пакеты SSIS в Azure-SSIS IR в качестве первоклассных действий в конвейерах ADF. Ознакомьтесь со статьей [Запуск пакета Integration Services с помощью действия "Выполнить пакет SSIS" в фабрике данных Azure](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-ssis-activity).

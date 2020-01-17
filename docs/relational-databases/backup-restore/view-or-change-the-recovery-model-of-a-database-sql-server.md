@@ -1,7 +1,7 @@
 ---
-title: Просмотр или изменение модели восстановления для базы данных (SQL Server) | Документация Майкрософт
-ms.custom: ''
-ms.date: 05/10/2019
+title: Настройка модели восстановления базы данных
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 94918d1d-7c10-4be7-bf9f-27e00b003a0f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: bbf6d7f547c0030512a00a46a335a32cfe95f994
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 4af4e8b1d0dacb5e08cdd117a14691b909050b09
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908811"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75254051"
 ---
 # <a name="view-or-change-the-recovery-model-of-a-database-sql-server"></a>Просмотр или изменение модели восстановления базы данных (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "72908811"
 ##  <a name="BeforeYouBegin"></a> Перед началом  
   
 
--   [Back up the transaction log](back-up-a-transaction-log-sql-server.md) **before** switching from the [full recovery or bulk-logged recovery model](recovery-models-sql-server.md).  
+-   [Создайте резервную копию журнала транзакций](back-up-a-transaction-log-sql-server.md) **перед** переключением с [модели полного восстановления или восстановления с неполным протоколированием](recovery-models-sql-server.md).  
   
 -   Восстановление на момент времени невозможно в модели с неполным протоколированием. Выполнение транзакций в модели восстановления с неполным протоколированием, которая может потребовать восстановления журнала транзакций, может привести к потере данных. Чтобы до максимума повысить восстанавливаемость данных в сценарии аварийного восстановления, следует переключаться в модель восстановления с неполным протоколированием только в следующих случаях.  
   
@@ -136,7 +136,7 @@ ALTER DATABASE [model] SET RECOVERY FULL ;
   
 -   [Создание задания](../../ssms/agent/create-a-job.md)  
   
--   [Отключение или включение задания](../../ssms/agent/disable-or-enable-a-job.md)  
+-   [Disable or Enable a Job](../../ssms/agent/disable-or-enable-a-job.md)  
   
 ##  <a name="RelatedContent"></a> См. также  
   

@@ -1,6 +1,7 @@
 ---
-title: Проверка на наличие проблем с задержками ввода-вывода в подсистеме дискового ввода-вывода | Документация Майкрософт
-ms.custom: ''
+title: Проверка подсистемы дискового ввода-вывода на наличие проблем задержки ввода-вывода
+description: Узнайте, как включить политику для проверки подсистемы дискового ввода-вывода на наличие проблем с задержкой операций ввода-вывода путем проверки в журнале событий сообщения об ошибке 833 для управления на основе политик с SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 23863340-d8e0-48d6-928b-462745885d37
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 269ab9f9028ad1ff4ec4b336e45e9ecbb87bc0f2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0cf1dc8196ef8e248da485b01efc4bf192d4248c
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68109887"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558179"
 ---
 # <a name="check-disk-input-and-output-subsystem-for-io-delay-problems"></a>Проверка на наличие проблем задержки ввода-вывода в подсистеме дискового ввода-вывода
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

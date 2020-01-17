@@ -1,7 +1,7 @@
 ---
 title: CREATE EXTERNAL TABLE (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 07/29/2019
+ms.date: 01/03/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -21,12 +21,12 @@ ms.assetid: 6a6fd8fe-73f5-4639-9908-2279031abdec
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c7db5211191f714b977c8d103328fdb48882df6a
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.openlocfilehash: 362111a7e0bf74c9732ea79582fdee34019f7536
+ms.sourcegitcommit: 34d28d49e8d0910cf06efda686e2d73059569bf8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74057654"
+ms.lasthandoff: 01/04/2020
+ms.locfileid: "75656641"
 ---
 # <a name="create-external-table-transact-sql"></a>CREATE EXTERNAL TABLE (Transact-SQL)
 
@@ -44,7 +44,7 @@ ms.locfileid: "74057654"
 
 ||||||
 |---|---|---|---|---|
-|**\*_SQL Server\*_** &nbsp;|[База данных SQL](create-external-table-transact-sql.md?view=azuresqldb-current)|[Хранилище данных<br />SQL](create-external-table-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-external-table-transact-sql.md?view=aps-pdw-2016-au7)|
+|**_\* SQL Server \*_** &nbsp;|[База данных SQL](create-external-table-transact-sql.md?view=azuresqldb-current)|[Хранилище данных<br />SQL](create-external-table-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-external-table-transact-sql.md?view=aps-pdw-2016-au7)|
 ||||||
 
 &nbsp;
@@ -53,7 +53,7 @@ ms.locfileid: "74057654"
 
 Эта команда создает внешнюю таблицу PolyBase для доступа к данным, хранящимся в кластере Hadoop или хранилище BLOB-объектов Azure. Внешняя таблица PolyBase ссылается на данные, хранящиеся в кластере Hadoop или хранилище BLOB-объектов Azure.
 
-**Область применения**: SQL Server 2016 или более поздней версии.
+**Область применения**: SQL Server 2016 или более поздней версии
 
 Используйте внешнюю таблицу с внешним источником данных для запросов PolyBase. Внешние источники данных используются для обеспечения взаимодействия и поддерживают следующие основные варианты использования.
 
@@ -109,7 +109,7 @@ LOCATION = '*путь к файлу или папке*'. Указывает пу
 
 Чтобы изменить значение по умолчанию и только для чтения в корневой папке, установите для атрибута \<polybase.recursive.traversal> значение 'false' в файле конфигурации core-site.xml. Этот файл находится в папке `<SqlBinRoot>\PolyBase\Hadoop\Conf with SqlBinRoot the bin root of SQl Server`. Например, `C:\\Program Files\\Microsoft SQL Server\\MSSQL13.XD14\\MSSQL\\Binn`.
 
-DATA_SOURCE = *имя внешнего источника данных*. Задает имя внешнего источника данных, содержащего расположение внешних данных. Это расположение находится не в хранилище больших двоичных объектов Azure или Hadoop. Для создания внешнего источника данных используйте инструкцию [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md).
+DATA_SOURCE = *имя внешнего источника данных*. Задает имя внешнего источника данных, содержащего расположение внешних данных. Этим расположением является файловая система Hadoop (HDFS), контейнер больших двоичных объектов службы хранилища Azure или Azure Data Lake Store. Для создания внешнего источника данных используйте инструкцию [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md).
 
 FILE_FORMAT = *имя формата внешнего файла*. Задает имя объекта формата внешнего файла, который хранит тип файла и метод сжатия внешних данных. Чтобы создать формат внешнего файла, используйте [CREATE EXTERNAL FILE FORMAT](../../t-sql/statements/create-external-file-format-transact-sql.md).
 
@@ -149,8 +149,6 @@ REJECT_SAMPLE_VALUE = *значение отклоняемого образца*
 - PolyBase пытается загрузить следующие 100 строк. На этот раз 25 строк извлечено успешно и 75 — отклонено.
 - Процент отклоненных строк пересчитывается и составляет 50 %. Процент отклоненных строк превысил значение отклонения 30 %.
 - Запрос PolyBase завершается ошибкой, поскольку после попытки извлечение первых 200 строк 50 % из них было отклонено. Обратите внимание, что до того, как запрос PolyBase выявил превышение порога отклонения, были возвращены соответствующие строки.
-
-DATA_SOURCE. Внешний источник данных, например файловая система Hadoop, хранилище больших двоичных объектов Azure или [диспетчер карты сегментов](https://azure.microsoft.com/documentation/articles/sql-database-elastic-scale-shard-map-management/).
 
 SCHEMA_NAME. Предложение SCHEMA_NAME позволяет сопоставить определение внешней таблицы с таблицей в другой схеме в удаленной базе данных. Это предложение используется для устранения неоднозначности между схемами, которые существуют одновременно в локальных и удаленных базах данных.
 
@@ -367,8 +365,8 @@ WITH
 (
   DATA_SOURCE = MyExtSrc,
   SCHEMA_NAME = 'sys',
-  OBJECT_NAME = 'dm_exec_requests',  
-  DISTRIBUTION=  
+  OBJECT_NAME = 'dm_exec_requests',
+  DISTRIBUTION=ROUND_ROBIN
 );
 ```
 
@@ -621,30 +619,21 @@ column_name <data_type>
 
 Параметры сегментированных внешних таблиц
 
-Указывает внешний источник данных (не источник данных SQL Server) и метод распределения для [запроса эластичной базы данных](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-overview/).
+Указывает внешний источник данных (не источник данных SQL Server) и метод распределения для [эластичного запроса](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-overview/).
 
-DATA_SOURCE. Внешний источник данных, например файловая система Hadoop, хранилище больших двоичных объектов Azure или [диспетчер карты сегментов](https://azure.microsoft.com/documentation/articles/sql-database-elastic-scale-shard-map-management/).
+DATA_SOURCE Предложение DATA_SOURCE определяет внешний источник данных (карту сегментов) для внешней таблицы. Пример см. в разделе [Создание внешних таблиц](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-query-horizontal-partitioning#13-create-external-tables).
 
-SCHEMA_NAME. Предложение SCHEMA_NAME позволяет сопоставить определение внешней таблицы с таблицей в другой схеме в удаленной базе данных. Это предложение используется для устранения неоднозначности между схемами, которые существуют одновременно в локальных и удаленных базах данных.
+SCHEMA_NAME и OBJECT_NAME Предложения SCHEMA_NAME и OBJECT_NAME сопоставляют определение внешней таблицы с таблицей в другой схеме. Если эти предложения отсутствуют, то предполагается, что удаленный объект является таблицей «dbo», имя которой совпадает с именем внешней таблицы. Это особенно необходимо, если имя удаленной таблицы уже занято в базе данных, где создается внешняя таблица. Например, вы хотите определить внешнюю таблицу для получения общего представления из представлений каталогов или динамических административных представлений, которые находятся на вашем развернутом уровне данных. Так как представления каталогов и динамические административные представления уже существуют локально, их имена нельзя использовать для определения внешней таблицы. Вместо этого вы можете задать другое имя и в предложениях SCHEMA_NAME и OBJECT_NAME использовать имя представления каталога или динамического административного представления. Пример см. в разделе [Создание внешних таблиц](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-query-horizontal-partitioning#13-create-external-tables).
 
-OBJECT_NAME. Предложение OBJECT_NAME позволяет сопоставить определение внешней таблицы с таблицей с другим именем в удаленной базе данных. Это предложение используется для устранения неоднозначности между именами объектов, которые существуют одновременно в локальных и удаленных базах данных.
+DISTRIBUTION Предложение DISTRIBUTION определяет распределение данных, используемое для этой таблицы. Обработчик запросов использует сведения, указанные в предложении DISTRIBUTION, для создания наиболее эффективных планов запросов.
 
-DISTRIBUTION. Необязательный параметр. Он необходим только для баз данных типа SHARD_MAP_MANAGER. Этот аргумент указывает, следует считать таблицу сегментированной или реплицированной. Если задан аргумент **SHARDED** (*имя столбца*), данные из разных таблиц не перекрываются. **REPLICATED** указывает, что таблицы содержат одинаковые данные в каждом сегменте. **ROUND_ROBIN** указывает, что для распределения данных используется метод конкретного приложения.
+- SHARDED означает, что данные секционируются по базе данных горизонтально. Ключ секционирования для распределения данных указывается в параметре <sharding_column_name>.
+- REPLICATED означает, что в каждой базе данных имеются идентичные копии таблицы. Вы должны самостоятельно позаботиться о соответствии реплик во всех базах данных.
+- ROUND_ROBIN означает, что таблица секционируется горизонтально с применением метода распределения в зависимости от приложений.
 
 ## <a name="permissions"></a>Разрешения
 
-Требуются следующие разрешения:
-
-- **CREATE TABLE**
-- **ALTER ANY SCHEMA**
-- **ALTER ANY EXTERNAL DATA SOURCE**
-- **ALTER ANY EXTERNAL FILE FORMAT**
-- **CONTROL DATABASE**
-
-Имя входа, которое создает внешний источник данных, должно иметь разрешение на чтение и запись во внешний источник данных, находящийся в хранилище больших двоичных объектов Azure или Hadoop.
-
-> [!IMPORTANT]
-> Разрешение ALTER ANY EXTERNAL DATA SOURCE предоставляет любому субъекту возможность создания и изменения объекта внешнего источника данных и, таким образом, также предоставляет возможность доступа ко всем учетным данным уровня базы данных в базе данных. Это разрешение следует рассматривать как высоко привилегированное, поэтому его следует предоставлять только доверенным субъектам в системе.
+Пользователи, имеющие доступ к внешней таблице, автоматически получают доступ к базовой удаленной таблице с учетными данными, указанными в определении внешнего источника данных. Старайтесь избегать нежелательного повышения прав с использованием учетных данных для внешнего источника данных. Методы GRANT или REVOKE применяются к внешней таблице так же, как и к обычной. Определив внешний источник данных и внешние таблицы, вы можете использовать все возможности T-SQL для создания запросов к внешним таблицам.
 
 ## <a name="error-handling"></a>Обработка ошибок
 
@@ -674,7 +663,7 @@ DISTRIBUTION. Необязательный параметр. Он необход
 - Ограничение DEFAULT для столбцов внешней таблицы
 - Операции DML обновления, вставки и удаления
 
-Во внешний источник данных могут быть переданы только литеральные предикаты, определенные в запросе. В отличие от этого при доступе к связанным серверам могут использоваться предикаты, определенные во время выполнения запроса, то есть используемые в сочетании с вложенным циклом в плане запроса. Это часто приводит к тому, что создается локальная копия всей внешней таблицы, после чего к ней производится присоединение.    
+Во внешний источник данных могут быть переданы только литеральные предикаты, определенные в запросе. В отличие от этого при доступе к связанным серверам могут использоваться предикаты, определенные во время выполнения запроса, то есть используемые в сочетании с вложенным циклом в плане запроса. Это часто приводит к тому, что создается локальная копия всей внешней таблицы, после чего к ней производится присоединение.
 
 ```sql
   \\ Assuming External.Orders is an external table and Customer is a local table. 
@@ -711,19 +700,21 @@ WITH
 
 ## <a name="see-also"></a>См. также:
 
-[CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md)
+- [Обзор эластичных запросов к базе данных SQL Azure](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-query-overview)
+- [Отчеты по масштабируемым облачным базам данных (предварительная версия)](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-query-horizontal-partitioning)
+- [Приступая к работе с межбазовыми запросами (вертикальное секционирование)](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-query-getting-started-vertical)
 
 ::: moniker-end
 ::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
 
 ||||||
 |---|---|---|---|---|
-|[SQL Server](create-external-table-transact-sql.md?view=sql-server-2017)|[База данных SQL](create-external-table-transact-sql.md?view=azuresqldb-current)|**_\* Хранилище данных<br />SQL \*_** &nbsp;|[Analytics Platform<br />System (PDW)](create-external-table-transact-sql.md?view=aps-pdw-2016-au7)|
+|[SQL Server](create-external-table-transact-sql.md?view=sql-server-2017)|[База данных SQL](create-external-table-transact-sql.md?view=azuresqldb-current)|**_\* Хранилище данных<br /> SQL \*_** &nbsp;|[Analytics Platform<br />System (PDW)](create-external-table-transact-sql.md?view=aps-pdw-2016-au7)|
 ||||||
 
 &nbsp;
 
-## <a name="overview-azure-sql-data-warehouse"></a>Общие сведения. Хранилище данных SQL Azure
+## <a name="overview-azure-sql-data-warehouse"></a>Общие сведения. Хранилище данных SQL Azure
 
 В хранилище данных SQL Azure используйте внешнюю таблицу для следующих целей.
 

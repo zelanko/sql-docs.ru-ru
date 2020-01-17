@@ -1,6 +1,7 @@
 ---
-title: Создание конечной точки зеркального отображения базы данных с проверкой подлинности Windows (Transact-SQL) | Документы Майкрософт
-ms.custom: ''
+title: Создание конечной точки зеркального отображения базы данных (Transact-SQL)
+description: Использование Transact-SQL для создания конечной точки зеркального отображения базы данных с помощью проверки подлинности Windows.
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.prod_service: high-availability
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: baf1a4b1-6790-4275-b261-490bca33bdb9
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 2fbe4c5188bc728b8b8b58872ca805e1460c3a04
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 11b3c1d06c74f8d5c19aa95ba8de20fbce67d3dd
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67951995"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75259044"
 ---
 # <a name="create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql"></a>Создание конечной точки зеркального отображения базы данных с проверкой подлинности Windows (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -191,7 +192,7 @@ GO
   
 -   [Указание сетевого адреса сервера (зеркальное отображение базы данных)](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)  
   
--   [Указание URL-адреса конечной точки при добавлении или изменении реплики доступности (SQL Server)](../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)  
+-   [Укажите URL-адрес конечной точки при добавлении или изменении реплики доступности (SQL Server)](../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)  
   
  **Просмотр сведений о конечной точке зеркального отображения базы данных**  
   

@@ -22,12 +22,12 @@ ms.assetid: e1e83caa-17cc-4871-b2db-2711339fb64f
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3d49f852c69af4335d3243fb84c921e11268669f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d2adf7404e80a0a04932c14b598011c1799b5611
+ms.sourcegitcommit: 94f6a4b506dfda242fc3efb2403847e22a36d340
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67927205"
+ms.lasthandoff: 12/30/2019
+ms.locfileid: "75546576"
 ---
 # <a name="alter-role-transact-sql"></a>ALTER ROLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -65,12 +65,12 @@ ALTER ROLE role_name
   
 ## <a name="arguments"></a>Аргументы  
  *role_name*  
- **ПРИМЕНИМО К:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с 2008), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
+ **ПРИМЕНИМО К**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с 2008), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
  Указывает роль базы данных, которую нужно изменить.  
   
- ADD MEMBER *database_principal*l  
- **ПРИМЕНИМО К:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с 2012), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
+ ADD MEMBER *database_principal*  
+ **ПРИМЕНИМО К**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с 2012), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
  Указывает на добавление участника базы данных к членству в роли базы данных.  
   
@@ -79,7 +79,7 @@ ALTER ROLE role_name
 -   *database_principal* не может быть предопределенной ролью базы данных или участником на уровне сервера.  
   
 DROP MEMBER *database_principal*  
- **ПРИМЕНИМО К:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с 2012), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
+ **ПРИМЕНИМО К**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с 2012), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
  Указывает на удаление участника базы из членства в роли базы данных.  
   
@@ -88,7 +88,7 @@ DROP MEMBER *database_principal*
 -   *database_principal* не может быть предопределенной ролью базы данных или участником на уровне сервера.  
   
 WITH NAME = *new_name*  
- **ПРИМЕНИМО К:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с 2008), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
+ **ПРИМЕНИМО К**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с 2008), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
  Указывает на изменение имени определяемой пользователем роли базы данных. Новое имя еще не должно существовать в базе данных.  
   
@@ -118,7 +118,7 @@ WITH NAME = *new_name*
 ## <a name="examples"></a>Примеры  
   
 ### <a name="a-change-the-name-of-a-database-role"></a>A. Изменение имени роли базы данных  
- **ПРИМЕНИМО К:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с 2008), [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
+ **ПРИМЕНИМО К**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с 2008), [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
   
  В следующем примере изменяется имя роли `buyers` на `purchasing`.   Для этого примера используется образец базы данных [AdventureWorks](https://msftdbprodsamples.codeplex.com/).
   
@@ -127,7 +127,7 @@ ALTER ROLE buyers WITH NAME = purchasing;
 ```  
   
 ### <a name="b-add-or-remove-role-members"></a>Б. Добавление или удаление членов роли  
- **ПРИМЕНИМО К:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с 2012), [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
+ **ПРИМЕНИМО К**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с 2012), [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
   
  В этом примере создается роль базы данных с именем `Sales`. В нем показано добавление пользователя базы данных Barry в членство и затем демонстрируется удаление Barry.   Для этого примера используется образец базы данных [AdventureWorks](https://msftdbprodsamples.codeplex.com/).
   

@@ -1,6 +1,7 @@
 ---
-title: Определение связи логических записей между статьями таблиц слияния | Документация Майкрософт
-ms.custom: ''
+title: Определение связи логических записей между статьями таблиц слияния
+description: Узнайте, как определить связь логических записей между связанными таблицами, используемыми для статей репликации слиянием.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ff847b3a-c6b0-4eaf-b225-2ffc899c5558
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 74d9d0bec559dbc618e5487fea647461bc967db3
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.openlocfilehash: 8df94f31b6a036677f5d62ae60ffb4cf53a082be
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70846615"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321238"
 ---
 # <a name="define-a-logical-record-relationship-between-merge-table-articles"></a>Определение связи логических записей между статьями таблиц слияния
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -105,7 +106,7 @@ ms.locfileid: "70846615"
   
     -   Для использования стандартного определения и разрешения конфликтов уровня строки и столбца присвойте значение **false** параметрам **\@logical_record_level_conflict_detection** и **\@logical_record_level_conflict_resolution** (они имеют это значение по умолчанию).  
   
-3.  Повторите шаг 2 для каждой статьи, которая содержит логическую запись. Необходимо использовать в каждой статье логической записи одинаковые параметры определения и разрешения конфликтов. Дополнительные сведения см. в статье [Detecting and Resolving Conflicts in Logical Records](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-resolving-in-logical-record.md).  
+3.  Повторите шаг 2 для каждой статьи, которая содержит логическую запись. Необходимо использовать в каждой статье логической записи одинаковые параметры определения и разрешения конфликтов. Дополнительные сведения см. в статье [Распознавание и разрешение конфликтов в логических записях](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-resolving-in-logical-record.md).  
   
 4.  На издателе в базе данных публикации выполните хранимую процедуру [sp_addmergefilter](../../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md). Укажите **\@publication**, имя одной статьи связи в качестве значения параметра **\@article**, имя второй статьи в качестве значения параметра **\@join_articlename**, имя связи в качестве значения параметра **\@filtername**, предложение, определяющее связь между двумя статьями, в качестве значения параметра **\@join_filterclause**, тип соединения в качестве значения параметра **\@join_unique_key**, а также одно из следующих значений для параметра **\@filter_type**:  
   

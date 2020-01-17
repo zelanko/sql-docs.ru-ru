@@ -1,7 +1,7 @@
 ---
 title: Создание группы доступности с помощью Transact-SQL (T-SQL)
 description: 'Шаги для создания группы доступности Always On с помощью Transact-SQL (T-SQL). '
-ms.custom: seodec18
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8b0a6301-8b79-4415-b608-b40876f30066
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 543ef7ec0cefa9a47f88fdc5811961315b33e2b6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1a9f888f651a7c5471014b151d60b0ad3844578b
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67988398"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252972"
 ---
 # <a name="create-an-always-on-availability-group-using-transact-sql-t-sql"></a>Создание группы доступности Always On с помощью Transact-SQL (T-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,11 +45,11 @@ ms.locfileid: "67988398"
   
 |Задача|Инструкции Transact-SQL|Место выполнения задачи **&#42;**|  
 |----------|----------------------------------|---------------------------------|  
-|Создание конечной точки зеркального отображения базы данных (одна точка на экземпляр [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] )|[CREATE ENDPOINT](../../../t-sql/statements/create-endpoint-transact-sql.md) *endpointName* ... ДЛЯ DATABASE_MIRRORING|Выполнить на каждом экземпляре сервера, у которого нет конечной точки зеркального отображения базы данных.|  
+|Создание конечной точки зеркального отображения базы данных (одна точка на экземпляр [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] )|[CREATE ENDPOINT](../../../t-sql/statements/create-endpoint-transact-sql.md) *имя_конечной_точки* ... ДЛЯ DATABASE_MIRRORING|Выполнить на каждом экземпляре сервера, у которого нет конечной точки зеркального отображения базы данных.|  
 |Создание группы доступности|[CREATE AVAILABILITY GROUP](../../../t-sql/statements/create-availability-group-transact-sql.md)|Выполнить на экземпляре сервера, где будет размещена исходная первичная реплика.|  
-|Присоединить вторичную реплику к группе доступности|[ALTER AVAILABILITY GROUP](../../../database-engine/availability-groups/windows/join-a-secondary-replica-to-an-availability-group-sql-server.md) *group_name* JOIN|Выполнить на каждом экземпляре сервера, размещающем вторичную реплику.|  
+|Присоединить вторичную реплику к группе доступности|[ALTER AVAILABILITY GROUP](../../../database-engine/availability-groups/windows/join-a-secondary-replica-to-an-availability-group-sql-server.md) *имя_группы* JOIN|Выполнить на каждом экземпляре сервера, размещающем вторичную реплику.|  
 |Подготовьте базу данных-получатель|[BACKUP](../../../t-sql/statements/backup-transact-sql.md) и [RESTORE](../../../t-sql/statements/restore-statements-transact-sql.md).|Создайте резервные копии на экземпляре сервера, размещающем первичную реплику.<br /><br /> Восстановить резервные копии на каждом экземпляре сервера, размещающем вторичную реплику, используя инструкцию RESTORE WITH NORECOVERY.|  
-|Запуск синхронизации данных с помощью присоединения каждой базы данных-получателя к группе доступности|[ALTER DATABASE](../../../t-sql/statements/alter-database-transact-sql-set-hadr.md) *database_name* SET HADR AVAILABILITY GROUP = *group_name*|Выполнить на каждом экземпляре сервера, размещающем вторичную реплику.|  
+|Запуск синхронизации данных с помощью присоединения каждой базы данных-получателя к группе доступности|[ALTER DATABASE](../../../t-sql/statements/alter-database-transact-sql-set-hadr.md) *имя_базы_данных* SET HADR AVAILABILITY GROUP = *имя_группы*|Выполнить на каждом экземпляре сервера, размещающем вторичную реплику.|  
   
  *Для выполнения данной задачи подключитесь к указанным экземплярам сервера.   
  
@@ -293,7 +293,7 @@ ms.locfileid: "67988398"
 ###  <a name="CompleteCodeExample"></a> Выполните пример кода для процедуры настройки образца  
  Следующий пример кода объединяет в себе примеры кода из всех шагов с образцом процедуры настройки. В следующей таблице приведена сводка значений заполнителей, использованных в этом примере кода. Дополнительные сведения о шагах в этом примере кода см. в подразделах [Предварительные требования для использования процедуры настройки образца](#PrerequisitesForExample) и [Образец процедуры настройки](#SampleProcedure)выше в этом разделе.  
   
-|Заполнитель|Описание|  
+|Заполнитель|Description|  
 |-----------------|-----------------|  
 |\\\\*FILESERVER*\\*SQLbackups*|Вымышленная общая папка резервных копий.|  
 |\\\\*FILESERVER*\\*SQLbackups\MyDb1.bak*|Файл резервной копии для базы данных MyDb1.|  
@@ -497,7 +497,7 @@ GO
   
 -   [Использование сертификатов для конечной точки зеркального отображения базы данных (Transact-SQL)](../../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)  
   
--   [Указание URL-адреса конечной точки при добавлении или изменении реплики доступности (SQL Server)](../../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)  
+-   [Укажите URL-адрес конечной точки при добавлении или изменении реплики доступности (SQL Server)](../../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)  
   
  **Устранение неполадок с конфигурацией групп доступности AlwaysOn**  
   

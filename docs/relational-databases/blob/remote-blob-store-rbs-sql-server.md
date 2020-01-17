@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 31c947cf-53e9-4ff4-939b-4c1d034ea5b1
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 9d357aa88aecaac21a7dd8ab5548de1410bff5f7
-ms.sourcegitcommit: add39e028e919df7d801e8b6bb4f8ac877e60e17
+ms.openlocfilehash: fc6bb3164b54f0799073e8b959f68b0dd625c47e
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74119442"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258182"
 ---
 # <a name="remote-blob-store-rbs-sql-server"></a>Удаленное хранилище больших двоичных объектов (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "74119442"
 
 | [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] version | Расположение скачивания RBS |
 |:---|:---|
-| [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] | [Пакет дополнительных компонентов [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]](https://www.microsoft.com/download/details.aspx?id=52676) |
+| [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] | [[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] Пакет дополнительных компонентов SP2](https://www.microsoft.com/download/details.aspx?id=56833) |
 | [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] | [Пакет дополнительных компонентов [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]](https://www.microsoft.com/download/details.aspx?id=55992) |
 | [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] | [Страница скачивания RBS [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]](https://go.microsoft.com/fwlink/?linkid=2109005) |
 | &nbsp; | &nbsp; |

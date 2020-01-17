@@ -37,12 +37,12 @@ ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: 709a0060d948b4c2979c858a0d51bd9740eb0e28
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: e8acc3ef73c51ccbbf195f9d18dc5f12d661931f
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73729851"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75226735"
 ---
 # <a name="create-materialized-view-as-select-transact-sql"></a>CREATE MATERIALIZED VIEW AS SELECT (Transact-SQL)  
 
@@ -88,7 +88,7 @@ CREATE MATERIALIZED VIEW [ schema_name. ] materialized_view_name
 *select_statement*   
 Список SELECT в определении материализованного представления должен соответствовать как минимум одному из следующих двух условий:
 - Список SELECT содержит агрегатную функцию.
-- В определении материализованного представления используется предложение GROUP BY, и все столбцы в предложении GROUP BY включены в список SELECT.  
+- В определении материализованного представления используется предложение GROUP BY, и все столбцы в предложении GROUP BY включены в список SELECT.  В предложении GROUP BY можно использовать до 32 столбцов.
 
 В списке SELECT определения материализованного представления должны использоваться агрегатные функции.  Поддерживаемые агрегаты: MAX, MIN, AVG, COUNT, COUNT_BIG, SUM, VAR, STDEV.
 

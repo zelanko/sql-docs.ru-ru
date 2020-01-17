@@ -22,12 +22,12 @@ ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 663e4bca1dc607cbdf4b19849701bea24461b600
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4cf6e85cef8d95e2b1bb167d482f36ec540196f6
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68081542"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75255935"
 ---
 # <a name="sql-server-index-architecture-and-design-guide"></a>Руководство по архитектуре и разработке индексов SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,8 +40,8 @@ ms.locfileid: "68081542"
 
 -   Кластеризованный
 -   Некластеризованный
--   Уникальный
--   Фильтруемый
+-   Уникальная идентификация
+-   Filtered
 -   columnstore
 -   Хэш
 -   Некластеризованный индекс, оптимизированный для памяти
@@ -53,7 +53,9 @@ ms.locfileid: "68081542"
 Сведения о полнотекстовых индексах см. в разделе [Заполнение полнотекстовых индексов](../relational-databases/search/populate-full-text-indexes.md).
   
 ##  <a name="Basics"></a> Основы проектирования индексов  
- Индекс является структурой на диске или в памяти, которая связана с таблицей или представлением и ускоряет получение строк из таблицы или представления. Индекс содержит ключи, построенные из одного или нескольких столбцов в таблице или представлении. Для индексов на диске эти ключи хранятся в виде структуры сбалансированного дерева, которая поддерживает быстрый поиск строк по значениям ключей в SQL Server.  
+ Представьте себе обычную книгу: в конце книги есть указатель, который помогает быстро находить информацию в книге. Указатель представляет собой отсортированный список ключевых слов, а рядом с ключевым словом — номера страниц, где можно найти каждое ключевое слово. Индекс SQL Server устроен так же. Это упорядоченный список значений, и для каждого значения есть указатели на [страницы](../relational-databases/pages-and-extents-architecture-guide.md) данных, где находятся эти значения. Сам индекс хранится на страницах индексов в SQL Server. В обычной книге, если указатель занимает несколько страниц и необходимо найти указатели на все страницы, содержащие слово "SQL", например, вам придется листать до тех пор, пока вы не найдете страницу указателя с ключевым словом "SQL". После этого можно следовать указателям на все страницы книги.  Этот процесс можно оптимизировать, если в самом начале индекса создать одну страницу, содержащую алфавитный список расположения каждой буквы. Пример: буквы от А до Г — стр. 121, буквы от Д до Ж — стр. 122 и т. д. Благодаря этой дополнительной странице не придется перелистывать указатель, чтобы найти нужное место. Такая страница не существует в обычных книгах, но существует в индексе SQL Server. Эта единственная страница называется корневой страницей индекса. Корневая страница — это начальная страница древовидной структуры, используемой индексом SQL Server. Следуя аналогии дерева, конечные страницы, содержащие указатели на реальные данные, называются "листьями" дерева. 
+
+ Индекс SQL Server является структурой на диске или в памяти, которая связана с таблицей или представлением и ускоряет получение строк из таблицы или представления. Индекс содержит ключи, построенные из одного или нескольких столбцов в таблице или представлении. Для индексов на диске эти ключи хранятся в виде структуры сбалансированного дерева, которая поддерживает быстрый поиск строк по значениям ключей в SQL Server.  
 
  Данные индекса логически упорядочиваются в виде таблицы по строкам и столбцам, а физически хранятся в строковом формате, который называется *rowstore* <sup>1</sup>, или в столбчатом формате, который называется *[columnstore](#columnstore_index)* .  
     
@@ -136,7 +138,7 @@ ms.locfileid: "68081542"
   
      Например, если индекс определен как `LastName`, `FirstName` , индекс будет полезным, если критерий поиска — `WHERE LastName = 'Smith'` или `WHERE LastName = Smith AND FirstName LIKE 'J%'`. Однако оптимизатор запросов не станет использовать этот индекс для запроса только по критерию `FirstName (WHERE FirstName = 'Jane')`.  
   
--   Следует рассмотреть возможность индексирования вычисляемых столбцов. Дополнительные сведения см. в разделе [Indexes on Computed Columns](../relational-databases/indexes/indexes-on-computed-columns.md).  
+-   Следует рассмотреть возможность индексирования вычисляемых столбцов. Дополнительные сведения см. в разделе [Индексы вычисляемых столбцов](../relational-databases/indexes/indexes-on-computed-columns.md).  
   
 ### <a name="index-characteristics"></a>Характеристики индекса  
  После того, как определено, что индекс соответствует запросу, можно выбрать наилучший тип индекса для конкретной ситуации. Ниже представлены характеристики индекса:  
@@ -219,8 +221,8 @@ ON Purchasing.PurchaseOrderDetail
 |[sys.partitions (Transact-SQL)](../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)|[sys.internal_partitions &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)|
 |[sys.dm_db_index_operational_stats &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)|[sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)|  
 |[sys.column_store_segments (Transact-SQL)](../relational-databases/system-catalog-views/sys-column-store-segments-transact-sql.md)|[sys.column_store_dictionaries &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-column-store-dictionaries-transact-sql.md)|  
-|[sys.column_store_row_groups (Transact-SQL)](../relational-databases/system-catalog-views/sys-column-store-row-groups-transact-sql.md)|[sys.dm_db_column_store_row_group_operational_stats (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-operational-stats-transact-sql.md)|
-|[sys.dm_db_column_store_row_group_physical_stats (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-physical-stats-transact-sql.md)|[sys.dm_column_store_object_pool (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-column-store-object-pool-transact-sql.md)|  
+|[sys.column_store_row_groups &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-column-store-row-groups-transact-sql.md)|[sys.dm_db_column_store_row_group_operational_stats &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-operational-stats-transact-sql.md)|
+|[sys.dm_db_column_store_row_group_physical_stats &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-physical-stats-transact-sql.md)|[sys.dm_column_store_object_pool &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-column-store-object-pool-transact-sql.md)|  
 |[sys.dm_db_column_store_row_group_operational_stats &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-operational-stats-transact-sql.md)|[sys.dm_db_xtp_hash_index_stats &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-hash-index-stats-transact-sql.md)| 
 |[sys.dm_db_xtp_index_stats &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-index-stats-transact-sql.md)|[sys.dm_db_xtp_object_stats &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-object-stats-transact-sql.md)|
 |[sys.dm_db_xtp_nonclustered_index_stats &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-nonclustered-index-stats-transact-sql.md)|[sys.dm_db_xtp_table_memory_stats &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-table-memory-stats-transact-sql.md)|
@@ -276,7 +278,7 @@ ON Purchasing.PurchaseOrderDetail
     Например, идентификатор сотрудника уникально идентифицирует служащих. Кластеризованный индекс или ограничение [PRIMARY KEY](../relational-databases/tables/create-primary-keys.md) на столбец `EmployeeID` улучшило бы производительность запросов, которые производят поиск сведений о сотруднике, основываясь на номере идентификатора сотрудника. В качестве альтернативы кластеризованный индекс мог бы быть создан по столбцам `LastName`, `FirstName`и `MiddleName` , потому что записи сотрудников часто группируются и запрашиваются именно таким образом, так что сочетание этих столбцов обеспечивало бы высокую степень различия. 
 
     > [!TIP]
-    > Если не указано иное, при создании ограничения [PRIMARY KEY](../relational-databases/tables/create-primary-keys.md) [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] создает [кластеризованный индекс](#Clustered) для поддержки этого ограничения.
+    > Если не указано иное, при создании ограничения [PRIMARY KEY](../relational-databases/tables/create-primary-keys.md)[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] создает [кластеризованный индекс](#Clustered) для поддержки этого ограничения.
     > Хотя для обеспечения уникальности в качестве PRIMARY KEY можно использовать *[uniqueidentifier](../t-sql/data-types/uniqueidentifier-transact-sql.md)* , он не является эффективным ключом кластеризации.
     > При применении *uniqueidentifier* в качестве PRIMARY KEY рекомендуется создавать его как некластеризованный индекс и использовать другой столбец, например `IDENTITY`, для создания кластеризованного индекса.   
   
@@ -407,7 +409,7 @@ INCLUDE (FileName);
   
 -   Допускаются данные всех типов, за исключением **text**, **ntext**и **image**.  
   
--   Вычисляемые столбцы, являющиеся детерминированными и точными или неточными, могут быть включенными столбцами. Дополнительные сведения см. в разделе [Indexes on Computed Columns](../relational-databases/indexes/indexes-on-computed-columns.md).  
+-   Вычисляемые столбцы, являющиеся детерминированными и точными или неточными, могут быть включенными столбцами. Дополнительные сведения см. в разделе [Индексы вычисляемых столбцов](../relational-databases/indexes/indexes-on-computed-columns.md).  
   
 -   Как и ключевые столбцы, вычисляемые столбцы, полученные на основе типов данных **image**, **ntext**и **text** , могут быть неключевыми (включенными) столбцами, если тип данных этого вычисляемого столбца допустим в качестве неключевого столбца индекса.  
   
@@ -484,7 +486,7 @@ INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);
   
  Создание ограничений PRIMARY KEY или UNIQUE автоматически создает уникальный индекс для заданных столбцов. Между созданием ограничения UNIQUE и созданием уникального индекса независимо от ограничения больших различий нет. Проверка данных происходит подобным же образом, и оптимизатор запросов не делает различия между уникальным индексом, который создан ограничением, и индексом, созданным вручную. Однако на столбцы, для которых важна целостность данных, следует накладывать ограничение UNIQUE или PRIMARY KEY. Тогда цель создания индекса будет ясна.  
   
-### <a name="considerations"></a>Замечания  
+### <a name="considerations"></a>Рекомендации  
   
 -   Уникальный индекс и ограничения UNIQUE и PRIMARY KEY не могут быть созданы, если дублирующиеся значения уже существуют.  
   
@@ -496,7 +498,7 @@ INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);
 ##  <a name="Filtered"></a> Рекомендации по проектированию отфильтрованных индексов  
  Отфильтрованный индекс — это оптимизированный некластеризованный индекс, особенно подходящий для запросов, осуществляющих выборку из хорошо определенного подмножества данных. Он использует предикат фильтра для индексирования части строк в таблице. Хорошо спроектированный отфильтрованный индекс позволяет повысить производительность запросов, снизить затраты на обслуживание и хранение индексов по сравнению с полнотабличными индексами.  
   
-**Область применения**: начиная с [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
+**Применимо к**: с [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
   
  Отфильтрованные индексы могут предоставить следующие преимущества по сравнению с индексами, построенными на всей таблице.  
   
@@ -646,9 +648,9 @@ WHERE b = CONVERT(Varbinary(4), 1);
 #### <a name="data-storage-uses-columnstore-and-rowstore-compression"></a>Данные хранятся в форматах columnstore и rowstore
 При обсуждении индексов columnstore для обозначения формата хранения данных используются термины *rowstore* и *columnstore*. Индексы columnstore используют оба типа хранилища.
 
- ![Clustered Columnstore Index](../relational-databases/indexes/media/sql-server-pdw-columnstore-physicalstorage.gif "Clustered Columnstore Index")
+ ![Кластеризованный индекс columnstore](../relational-databases/indexes/media/sql-server-pdw-columnstore-physicalstorage.gif "Кластеризованный индекс columnstore")
 
-- **columnstore** — это данные, логически организованные в виде таблицы, состоящей из строк и столбцов, и физически хранящиеся в формате данных в столбцах.
+- **columnstore** — это данные, логически организованные в виде таблицы, состоящей из строк и столбцов, и физически хранящиеся как столбцы
   
   Индекс columnstore физически сохраняет большинство данных в формате columnstore. В этом формате данные представлены столбцами, которые можно сжимать и распаковывать. Не нужно распаковывать в каждой строке значения, не соответствующие запросам. Благодаря этому можно быстро просматривать целые столбцы большой таблицы. 
 
@@ -673,7 +675,7 @@ deltastore состоит из одной или нескольких групп
 
 Каждый столбец содержит несколько собственных значений в каждой группе строк. Эти значения называются **сегментами столбцов**. Каждая rowgroup содержит один сегмент столбца для каждого столбца в таблице. Каждый столбец содержит один сегмент столбца в каждой группе строк.
 
-![Column segment](../relational-databases/indexes/media/sql-server-pdw-columnstore-columnsegment.gif "Column segment") 
+![Сегмент столбца](../relational-databases/indexes/media/sql-server-pdw-columnstore-columnsegment.gif "|::ref2::|") 
  
 Когда индекс columnstore сжимает группу строк, он отдельно сжимает каждый сегмент столбца. Чтобы распаковать целый столбец, индексу columnstore необходимо распаковать только один сегмент столбца из каждой группы строк.   
 
@@ -755,7 +757,7 @@ deltastore состоит из одной или нескольких групп
   
 Взаимозависимость хэш-индекса и контейнеров иллюстрируется на следующем рисунке.  
   
-![hekaton_tables_23d](../relational-databases/in-memory-oltp/media/hekaton-tables-23d.png "Ключи индекса для подачи на вход хэш-функции. Выходом является адрес сегмента хэша, который указывает на начало цепочки.")  
+![hekaton_tables_23d](../relational-databases/in-memory-oltp/media/hekaton-tables-23d.png "Ключи индекса для подачи на вход хэш-функции. Выходными данными является адрес сегмента хэша, который указывает на начало цепочки.")  
 
 ### <a name="configuring_bucket_count"></a> Настройка числа контейнеров хэш-индекса
 Число контейнеров хэш-индекса указывается в момент создания индекса и может быть изменено с помощью синтаксиса `ALTER TABLE...ALTER INDEX REBUILD`.  
@@ -853,7 +855,7 @@ HASH (Column2) WITH (BUCKET_COUNT = 64);
 
 Операция разделения производится в два отдельных этапа. На приведенном ниже рисунке предполагается, что конечная страница инициирует разделение, так как вставляется ключ со значением 5 и существует неконечная страница, указывающая на конец текущей страницы конечного уровня (значение ключа 4).
 
-![hekaton_tables_23f](../relational-databases/in-memory-oltp/media/HKNCI_Split.gif "Разделение страниц")
+![hekaton_tables_23f](../relational-databases/in-memory-oltp/media/HKNCI_Split.gif "Разбиение страниц")
 
 **Шаг 1**. Выделяются две новые страницы (P1 и P2), и строки со старой страницы P1, включая вставляемую строку, разделяются между этими новыми страницами. Для хранения физического адреса страницы P2 используется новый слот в таблице сопоставления страниц. Страницы P1 и P2 пока не доступны для параллельных операций. Кроме того, задается логический указатель со страницы P1 на P2. Затем в рамках одного этапа указатель со старой страницы P1 в таблице сопоставления страниц меняется на указатель с новой страницы P1. 
 
@@ -866,7 +868,7 @@ HASH (Column2) WITH (BUCKET_COUNT = 64);
 
 На приведенном ниже рисунке предполагается, что операция `DELETE` удаляет значение ключа 10. 
 
-![hekaton_tables_23g](../relational-databases/in-memory-oltp/media/HKNCI_Merge.gif "Слияние страниц")
+![hekaton_tables_23g](../relational-databases/in-memory-oltp/media/HKNCI_Merge.gif "Объединение страниц")
 
 **Шаг 1**. Создается разностная страница, представляющая значение ключа 10 (синий треугольник), а указатель этого значения на неконечной странице Pp1 устанавливается на новую разностную страницу. Кроме того, создается специальная разностная страница слияния (зеленый треугольник), которая связывается с разностной страницей. На этом этапе обе страницы (разностная страница и разностная страница слияния) недоступны для параллельных транзакций. В рамках этого же этапа указатель на страницу конечного уровня P1 в таблице сопоставления страниц обновляется так, чтобы теперь он указывал на разностную страницу слияния. После этого этапа запись значения ключа 10 на странице Pp1 будет указывать на разностную страницу слияния. 
 

@@ -1,20 +1,21 @@
 ---
 title: Настройка сбора данных об использовании и данных диагностики для SQL Server на Linux
 description: Сведения о том, как собираются и настраиваются данные об использовании и данные диагностики для SQL Server в Linux.
+ms.custom: seo-lt-2019
 author: VanMSFT
 ms.author: vanto
 ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: effc3ad0b693752eedc0f5dc478d17fbfdd5b35e
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: d7fc5a14a9da000b69db804a5439fb62985f59b8
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531290"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558572"
 ---
-# <a name="configure-usage-and-diagnostic-data-collection-for-sql-server-on-linux"></a>Настройка сбора данных об использовании и данных диагностики для SQL Server на Linux
+# <a name="configure-usage--diagnostic-data-collection-for-sql-server-on-linux"></a>Настройка сбора данных об использовании и данных диагностики для SQL Server на Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
@@ -205,6 +206,6 @@ Microsoft SQL Server 2017 включает в себя функции, кото
 
 ::: moniker-end
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 Дополнительные сведения об SQL Server на Linux см. в статье [Обзор SQL Server на Linux](sql-server-linux-overview.md).

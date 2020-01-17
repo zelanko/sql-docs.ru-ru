@@ -1,6 +1,7 @@
 ---
-title: Просмотр и разрешение конфликтов данных для публикации слиянием | Документация Майкрософт
-ms.custom: ''
+title: Просмотр и устранение конфликтов данных (слияние)
+description: Узнайте, как просматривать и разрешать конфликты данных для публикаций слиянием для SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 11/20/2018
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: aeee9546-4480-49f9-8b1e-c71da1f056c7
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: db445d9c80c6a6e2552160dcff721c06d5c107e6
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 79dc4b26ee543aa99b9fc90e29f7bb6c7d571555
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907791"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321891"
 ---
 # <a name="conflict-resolution-for-merge-replication"></a>Разрешение конфликтов при репликации слиянием
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -89,7 +90,7 @@ ms.locfileid: "72907791"
   
     |Значение @conflict_logging|centralized_conflicts|decentralized_conflicts|  
     |------------------------------|----------------------------|------------------------------|  
-    |**издатель**|1|0|  
+    |**publisher**|1|0|  
     |**подписчик**|0|1|  
     |**оба**|1|1|  
   

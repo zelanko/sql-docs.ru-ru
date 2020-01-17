@@ -11,24 +11,24 @@ ms.assetid: 62c964c5-eae4-4cf1-9024-d5a19adbd652
 author: jodebrui
 ms.author: jodebrui
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 47726a76f853b8728369a2b406de1fdc8456facd
-ms.sourcegitcommit: 5d9ce5c98c23301c5914f142671516b2195f9018
+ms.openlocfilehash: 5af707d0d07ce754b57eb18048c52db5921693ee
+ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71961937"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74165596"
 ---
 # <a name="overview-and-usage-scenarios"></a>Общие сведения и сценарии использования
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 Выполняющаяся в памяти OLTP — первоклассная технология, доступная в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и [!INCLUDE[ssSDS](../../includes/sssds-md.md)] и предназначенная для оптимизации производительности обработки транзакций, приема и загрузки данных, а также сценариев с временными данными. В этой статье содержатся общие сведения о выполняющейся в памяти OLTP и описываются сценарии использования этой технологии. Эти сведения помогут вам выяснить, подходит ли вашему приложению эта технология. В конце этой статьи приведен пример, демонстрирующий объекты выполняющейся в памяти OLTP, ссылка на демонстрацию производительности, а также ссылки на ресурсы, которые можно использовать в следующих шагах.
 
-В этой статье описывается технология выполняющейся в памяти OLTP, используемая для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. В следующей записи блога подробно рассматриваются вопросы производительности и преимущества использования ресурсов в [!INCLUDE[ssSDS](../../includes/sssds-md.md)]: 
-- [Выполняющаяся в памяти OLTP в базе данных Azure SQL](https://azure.microsoft.com/blog/in-memory-oltp-in-azure-sql-database/)
+В этой статье описывается технология выполняющейся в памяти OLTP, используемая для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. В следующей записи блога подробно рассматриваются вопросы производительности и преимущества использования ресурсов в [!INCLUDE[ssSDS](../../includes/sssds-md.md)]: [Выполняющаяся в памяти OLTP в базе данных Azure SQL](https://azure.microsoft.com/blog/in-memory-oltp-in-azure-sql-database/)
 
 ## <a name="in-memory-oltp-overview"></a>Общие сведения о выполняющейся в памяти OLTP
 
-Выполняющаяся в памяти OLTP может существенно повысить производительность соответствующих рабочих нагрузок. Одному клиенту, bwin, удалось [повысить производительность до 1,2 млн запросов в секунду](https://blogs.msdn.microsoft.com/sqlcat/2016/10/26/how-bwin-is-using-sql-server-2016-in-memory-oltp-to-achieve-unprecedented-performance-and-scale/), используя выполняющуюся в памяти OLTP в одной виртуальной машине с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. Другой клиент, Quorum, удвоил рабочую нагрузку и [сократил использование ресурсов на 70 %](https://customers.microsoft.com/story/quorum-doubles-key-databases-workload-while-lowering-dtu-with-sql-database), применяя выполняющуюся в памяти OLTP в [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. В некоторых случаях производительность у клиентов повышалась в 30 раз, но каков будет ваш прирост, зависит от типа и величины рабочей нагрузки.
+Выполняющаяся в памяти OLTP может существенно повысить производительность соответствующих рабочих нагрузок. Одному клиенту, BWIN, удалось [повысить производительность до 1,2 млн запросов в секунду](https://blogs.msdn.microsoft.com/sqlcat/2016/10/26/how-bwin-is-using-sql-server-2016-in-memory-oltp-to-achieve-unprecedented-performance-and-scale/), используя выполняющуюся в памяти OLTP в одной виртуальной машине с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. Другой клиент, Quorum, удвоил рабочую нагрузку и [сократил использование ресурсов на 70 %](https://customers.microsoft.com/story/quorum-doubles-key-databases-workload-while-lowering-dtu-with-sql-database), применяя выполняющуюся в памяти OLTP в [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. В некоторых случаях производительность у клиентов повышалась в 30 раз, но каков будет ваш прирост, зависит от типа и величины рабочей нагрузки.
 
 Что же влияет на прирост производительности? По сути, выполняющаяся в памяти OLTP позволяет повысить производительность обработки транзакций путем оптимизации доступа к данным и выполнения транзакций, а также за счет устранения конфликтов блокировок и кратковременных блокировок между параллельно выполняемыми транзакциями: производительность повышается не из-за того, что данные находятся в памяти, а из-за оптимизации этих данных. Алгоритмы хранения и обработки данных, а также доступа к ним были полностью изменены с учетом последних улучшений в вычислениях в памяти и вычислениях с высоким уровнем параллелизма.
 
@@ -60,7 +60,8 @@ ms.locfileid: "71961937"
 Используйте таблицы, оптимизированные для памяти, для основных таблиц транзакций, т. е. для таблиц с транзакциями, которые оказывают самое большое влияние на производительность. Используйте скомпилированные в собственном коде хранимые процедуры для оптимизации выполнения логики, связанной с бизнес-транзакциями. Чем больше логики можно отправить в хранимые процедуры в базе данных, тем больше преимуществ вы получите от выполняющейся в памяти OLTP.
 
 Чтобы приступить к работе в имеющемся приложении, сделайте следующее:
-1. Используйте [отчет анализа производительности транзакций](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md) , чтобы выявить объекты, которые требуется перенести. 
+
+1. Используйте [отчет анализа производительности транзакций](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md) , чтобы выявить объекты, которые требуется перенести.
 2. Используйте помощников по [оптимизации памяти](memory-optimization-advisor.md) и [компиляции в собственном коде](native-compilation-advisor.md) для миграции.
 
 #### <a name="customer-case-studies"></a>Клиентские сценарии
@@ -68,14 +69,14 @@ ms.locfileid: "71961937"
 - Компания CMC Markets использует выполняющуюся в памяти OLTP в [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], чтобы обеспечить постоянно низкую задержку: [Секунда — это слишком долго. Финансовая организация обновила программное обеспечение для торговли.](https://customers.microsoft.com/story/because-a-second-is-too-long-to-wait-this-financial-services-firm-is-updating-its-trading-software)
 - Компания Derivco использует выполняющуюся в памяти OLTP в [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] для поддержки возросшего показателя пропускной способности и обработки пиков рабочей нагрузки: [Компания по разработке сетевых игр сделала ставку на [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], чтобы не рисковать собственным будущим.](https://customers.microsoft.com/story/when-an-online-gaming-company-doesnt-want-to-risk-its-future-it-bets-on-sql-server-2016)
 
-
 ### <a name="data-ingestion-including-iot-internet-of-things"></a>Прием данных из разных источников, включая Интернет вещей
 
 Выполняющаяся в памяти OLTP удобна, если необходимо принимать большие объемы данных одновременно из разных источников. Зачастую лучше всего принимать данные в базу данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], так как [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], в отличие от других мест назначения, ускоряет выполнение запросов к данным и позволяет получить ценные сведения в режиме реального времени.
 
-Распространенные шаблоны применения: 
--  прием показаний и событий датчиков для вывода уведомлений и исторического анализа; 
--  управление пакетными обновлениями из нескольких источников и максимальное уменьшение влияния на рабочую нагрузку параллельного чтения.
+Распространенные шаблоны применения:
+
+- прием показаний и событий датчиков для вывода уведомлений и исторического анализа;
+- управление пакетными обновлениями из нескольких источников и максимальное уменьшение влияния на рабочую нагрузку параллельного чтения.
 
 #### <a name="implementation-considerations"></a>Рекомендации по реализации
 
@@ -84,11 +85,11 @@ ms.locfileid: "71961937"
 - Используйте задание для регулярной разгрузки пакетов данных в дисковую таблицу с [кластеризованным индексом columnstore](../indexes/columnstore-indexes-overview.md)с помощью задания, выполняющего операции `INSERT INTO <disk-based table> SELECT FROM <memory-optimized table>`.
 - Используйте [временную таблицу, оптимизированную для памяти](../tables/system-versioned-temporal-tables-with-memory-optimized-tables.md), для управления статистическими данными. В этом режиме статистические данные находятся на диске, а перемещением данных управляет система.
 
-Репозиторий примеров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] содержит приложение интеллектуальной сетки, которое использует временную таблицу, оптимизированную для памяти, табличный тип, оптимизированный для памяти, и скомпилированную в машинный код хранимую процедуру для повышения скорости приема данных, а также управляет объемом хранилища выполняющейся в памяти OLTP для данных датчиков: 
+Репозиторий примеров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] содержит приложение интеллектуальной сетки, которое использует временную таблицу, оптимизированную для памяти, табличный тип, оптимизированный для памяти, и скомпилированную в машинный код хранимую процедуру для повышения скорости приема данных, а также управляет объемом хранилища выполняющейся в памяти OLTP для данных датчиков:
 
- - [smart-grid-release](https://github.com/Microsoft/sql-server-samples/releases/tag/iot-smart-grid-v1.0) 
- - [smart-grid-source-code](https://github.com/Microsoft/sql-server-samples/tree/master/samples/applications/iot-smart-grid)
- 
+- [smart-grid-release](https://github.com/Microsoft/sql-server-samples/releases/tag/iot-smart-grid-v1.0)
+- [smart-grid-source-code](https://github.com/Microsoft/sql-server-samples/tree/master/samples/applications/iot-smart-grid)
+
 #### <a name="customer-case-studies"></a>Клиентские сценарии
 
 - [Quorum doubles key database’s workload while lowering utilization by 70% by leveraging In-Memory OLTP in Azure SQL Database](https://customers.microsoft.com/story/quorum-doubles-key-databases-workload-while-lowering-dtu-with-sql-database) (Благодаря использованию выполняющейся в памяти OLTP в базе данных SQL Azure компания Quorum удваивает количество основных рабочих нагрузок базы данных и сокращает использование DTU на 70 %)
@@ -105,11 +106,9 @@ ms.locfileid: "71961937"
 
 Неустойчивые таблицы, оптимизированные для памяти, можно использовать в качестве простого хранилища пар "ключ —значение", сохраняя большие двоичные объекты в столбцах varbinary(max). Кроме того, в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и [!INCLUDE[ssSDS](../../includes/sssds-md.md)] можно внедрить полуструктурированный кэш с [поддержкой JSON](https://azure.microsoft.com/blog/json-support-is-generally-available-in-azure-sql-database/). Наконец, можно создать полностью реляционный кэш в неустойчивых таблицах с полной реляционной схемой, включая различные типы и ограничения данных.
 
-Приступите к работе с оптимизированным для памяти состоянием сеанса ASP.NET, используя скрипты, опубликованные в GitHub, чтобы заменить объекты, которые создал встроенный поставщик состояний сеансов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:
+Приступите к работе с оптимизированным для памяти состоянием сеанса ASP.NET, используя скрипты, опубликованные в GitHub, чтобы заменить объекты, которые создал встроенный поставщик состояний сеансов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: [aspnet-session-state](https://github.com/Microsoft/sql-server-samples/tree/master/samples/applications/aspnet-session-state)
 
-- [aspnet-session-state](https://github.com/Microsoft/sql-server-samples/tree/master/samples/applications/aspnet-session-state)
-
-#### <a name="customer-case-studies"></a>Клиентские сценарии
+#### <a name="customer-case-studies"></a>Примеры реальных клиентов
 
 - Компании bwin удалось значительно увеличить пропускную способность и сократить площадь, занимаемую оборудованием, для состояния сеанса ASP.NET, используя выполняющуюся в памяти OLTP в [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]: [Игорный сайт смог повысить масштаб до 250 000 запросов в секунду и улучшить условия игры для игроков](https://customers.microsoft.com/story/gaming-site-can-scale-to-250000-requests-per-second-an)
 - Благодаря состоянию сеанса ASP.NET компании bwin удалось еще больше повысить пропускную способность и внедрить корпоративную систему кэширования среднего уровня, используя выполняющуюся в памяти OLTP в [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]: [Как компания bwin добилась небывалой производительности и масштаба, используя выполняющуюся в памяти OLTP в [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]](https://blogs.msdn.microsoft.com/sqlcat/2016/10/26/how-bwin-is-using-sql-server-2016-in-memory-oltp-to-achieve-unprecedented-performance-and-scale/)
@@ -218,17 +217,16 @@ EXECUTE dbo.usp_ingest_table1 @table1=@table1
 SELECT c1, c2 from dbo.table1
 SELECT c1, c2 from dbo.temp_table1
 GO
-```   
+```
 
-## <a name="resources-to-learn-more"></a>Ресурсы с дополнительными сведениями:
+## <a name="resources-to-learn-more"></a>Ресурсы с дополнительными сведениями
 
-[Технологии выполнения OLTP в памяти для повышения производительности службы Transact-SQL](https://msdn.microsoft.com/library/mt694156.aspx)   
-Демонстрацию производительности с использованием выполняющейся в памяти OLTP см. по адресу [in-memory-oltp-perf-demo-v1.0](https://github.com/Microsoft/sql-server-samples/releases/tag/in-memory-oltp-demo-v1.0)   
-[17-минутный видеоролик, в котором объясняется, что такое выполняющаяся в памяти OLTP, а также показывается демонстрация](in-memory-oltp-in-memory-optimization.md#anchorname-17minute-video)  
-[Скрипт, позволяющий включить выполняющуюся в памяти OLTP и задать рекомендуемые параметры](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/in-memory-database/in-memory-oltp/t-sql-scripts/enable-in-memory-oltp.sql)   
-[Основная документация по выполняющейся в памяти OLTP](in-memory-oltp-in-memory-optimization.md)   
-[Повышение производительности и использования ресурсов благодаря выполняющейся в памяти OLTP в базе данных SQL Azure](https://azure.microsoft.com/blog/in-memory-oltp-in-azure-sql-database/)  
-[Улучшение производительности временной таблицы и табличной переменной с помощью оптимизации памяти](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/21/improving-temp-table-and-table-variable-performance-using-memory-optimization/)   
-[Оптимизация производительности с помощью технологий обработки в оперативной памяти в базе данных SQL](https://docs.microsoft.com/azure/sql-database/sql-database-in-memory)  
-[Темпоральные таблицы с системным управлением версиями и таблицы, оптимизированные для памяти](../tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)  
-[In-Memory OLTP – Common Workload Patterns and Migration Considerations](https://msdn.microsoft.com/library/dn673538.aspx) (Выполняющаяся в памяти OLTP — рекомендации по общим шаблонам рабочих нагрузок и миграции) 
+- [Технологии выполнения OLTP в памяти для повышения производительности службы Transact-SQL](https://msdn.microsoft.com/library/mt694156.aspx)
+- Демонстрацию производительности с использованием выполняющейся в памяти OLTP см. по адресу [in-memory-oltp-perf-demo-v1.0](https://github.com/Microsoft/sql-server-samples/releases/tag/in-memory-oltp-demo-v1.0)
+- [17-минутный видеоролик, в котором объясняется, что такое выполняющаяся в памяти OLTP, а также показывается демонстрация](in-memory-oltp-in-memory-optimization.md#anchorname-17minute-video)
+- [Скрипт, позволяющий включить выполняющуюся в памяти OLTP и задать рекомендуемые параметры](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/in-memory-database/in-memory-oltp/t-sql-scripts/enable-in-memory-oltp.sql)
+- [Основная документация по выполняющейся в памяти OLTP](in-memory-oltp-in-memory-optimization.md)
+- [Повышение производительности и использования ресурсов благодаря выполняющейся в памяти OLTP в базе данных SQL Azure](https://azure.microsoft.com/blog/in-memory-oltp-in-azure-sql-database/)
+- [Улучшение производительности временной таблицы и табличной переменной с помощью оптимизации памяти](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/21/improving-temp-table-and-table-variable-performance-using-memory-optimization/)
+- [Оптимизация производительности с помощью технологий обработки в оперативной памяти в базе данных SQL](https://docs.microsoft.com/azure/sql-database/sql-database-in-memory)
+- [Темпоральные таблицы с системным управлением версиями и таблицы, оптимизированные для памяти](../tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)

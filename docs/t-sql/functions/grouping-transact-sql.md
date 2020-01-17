@@ -1,7 +1,7 @@
 ---
 title: GROUPING (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 03/03/2017
+ms.date: 12/03/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -22,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: 4efa3868-1fc4-4626-8fb1-e863cc03e422
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 3f5d3a1e3b6ac5b6e5d8ec46e03de9f757a4651b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a5ecfbcd49712ce22f5e48aa5643d90414f78fae
+ms.sourcegitcommit: 26868c8ac3217176b370d972a26d307598a10328
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68048177"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74833782"
 ---
 # <a name="grouping-transact-sql"></a>GROUPING (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
   Указывает, является ли указанное выражение столбца в списке GROUP BY статистическим или нет. В результирующем наборе функция GROUPING возвращает 1 (статистическое выражение) или ноль (нестатистическое выражение). Функция GROUPING может использоваться только в предложениях SELECT \<select>, HAVING и ORDER BY, если указано предложение GROUP BY.  
   

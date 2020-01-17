@@ -20,12 +20,12 @@ ms.assetid: c8b43477-b6c0-49bf-a608-394a0b6cc7a2
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c5260e1204f834b3ccb89703dba94be4dec760d4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8834e05acdbb3a38fb8688e96c75935da6778563
+ms.sourcegitcommit: ede04340adbf085e668a2536d4f7114abba14a0c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68094587"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74762881"
 ---
 # <a name="x40x40error-transact-sql"></a>&#x40;&#x40;ERROR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -63,8 +63,10 @@ GO
 UPDATE HumanResources.EmployeePayHistory  
     SET PayFrequency = 4  
     WHERE BusinessEntityID = 1;  
-IF @@ERROR = 547  
-    PRINT N'A check constraint violation occurred.';  
+IF @@ERROR = 547
+    BEGIN
+    PRINT N'A check constraint violation occurred.';
+    END
 GO  
 ```  
   

@@ -10,12 +10,12 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: 18401bda78dcf50e4060f053fed604d0dc1bf9be
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 74168c8cd846f48fdaa87568b85c124ff755489a
+ms.sourcegitcommit: 0d5b0aeee2a2b34fd448aec2e72c0fa8be473ebe
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531344"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75721579"
 ---
 # <a name="configure-sql-server-container-images-on-docker"></a>Настройка образов контейнеров с SQL Server в Docker
 
@@ -35,7 +35,12 @@ ms.locfileid: "73531344"
 > В этой статье особое внимание уделяется использованию образа mssql-server-linux. Образ с Windows не рассматривается, но сведения о нем вы можете найти на странице [mssql-server-windows](https://hub.docker.com/r/microsoft/mssql-server-windows-developer/) центра Docker Hub.
 
 > [!IMPORTANT]
-> Прежде чем запустить контейнер SQL Server для использования в рабочей среде, просмотрите нашу [политику поддержки для контейнеров SQL Server](https://support.microsoft.com/en-us/help/4047326/support-policy-for-microsoft-sql-server), чтобы убедиться, что вы используете поддерживаемую конфигурацию.
+> Прежде чем запустить контейнер SQL Server для использования в рабочей среде, просмотрите нашу [политику поддержки для контейнеров SQL Server](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server), чтобы убедиться, что вы используете поддерживаемую конфигурацию.
+
+Это 6-минутное видео содержит введение в запуск SQL Server в контейнерах:
+
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-2019-in-Containers/player?WT.mc_id=dataexposed-c9-niner]
+
 
 ## <a name="pull-and-run-the-container-image"></a>Извлечение и запуск образа контейнера
 
@@ -113,7 +118,7 @@ docker run --name sqlenterprise `
 Подключиться к экземпляру SQL Server на компьютере Docker можно с помощью любого внешнего инструмента в macOS, Windows или Linux, поддерживающего подключения SQL. Ниже перечислены некоторые распространенные средства:
 
 - [sqlcmd](sql-server-linux-setup-tools.md)
-- [Visual Studio Code](sql-server-linux-develop-use-vscode.md);
+- [Visual Studio Code](sql-server-linux-develop-use-vscode.md)
 - [SQL Server Management Studio (SSMS) в Windows](sql-server-linux-manage-ssms.md);
 
 В следующем примере используется **sqlcmd** для подключения к SQL Server в контейнере Docker. IP-адрес в строке подключения соответствует IP-адресу хост-компьютера, на котором выполняется контейнер.
@@ -257,7 +262,10 @@ docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 14
 Кроме того, этот способ позволяет предоставлять общий доступ к файлам на узле и просматривать их за пределами Docker.
 
 > [!IMPORTANT]
-> На данный момент не поддерживается сопоставление томов узла для Docker на Mac с образом SQL Server на Linux. Вместо этого следует использовать контейнеры томов данных. Это ограничение относится только к каталогу `/var/opt/mssql`. Операции чтения из подключенного каталога осуществляются в нормальном режиме. Например, вы можете подключить каталог узла с помощью команды -v на Mac и восстановить резервную копию из файла с расширением BAK, который находится на узле.
+> Сопоставление томов узла для **Docker в Windows** в настоящее время не поддерживает сопоставление полного каталога `/var/opt/mssql`. Однако можно сопоставить подкаталог, например `/var/opt/mssql/data`, с хост-компьютером.
+
+> [!IMPORTANT]
+> На данный момент не поддерживается сопоставление томов узла для **Docker на Mac** с образом SQL Server на Linux. Вместо этого следует использовать контейнеры томов данных. Это ограничение относится только к каталогу `/var/opt/mssql`. Операции чтения из подключенного каталога осуществляются в нормальном режиме. Например, вы можете подключить каталог узла с помощью команды -v на Mac и восстановить резервную копию из файла с расширением BAK, который находится на узле.
 
 ### <a name="use-data-volume-containers"></a>Использование контейнеров томов данных
 
@@ -336,7 +344,7 @@ docker exec -it <Container ID> /bin/bash
 docker cp <Container ID>:<Container path> <host path>
 ```
 
-**Пример.**
+**Пример**.
 
 ```bash
 docker cp d6b75213ef80:/var/opt/mssql/log/errorlog /tmp/errorlog
@@ -354,7 +362,7 @@ docker cp d6b75213ef80:/var/opt/mssql/log/errorlog C:\Temp\errorlog
 docker cp <Host path> <Container ID>:<Container path>
 ```
 
-**Пример.**
+**Пример**.
 
 ```bash
 docker cp /tmp/mydb.mdf d6b75213ef80:/var/opt/mssql/data
@@ -615,7 +623,7 @@ ls -ll <database file dir>
 Предоставьте привилегированной группе разрешения на доступ к указанным ниже каталогам, чтобы у непривилегированного контейнера SQL Server был доступ к файлам базы данных.
 
 ```bash
-chgroup -R 0 <database file dir>
+chgrp -R 0 <database file dir>
 chmod -R g=u <database file dir>
 ```
 

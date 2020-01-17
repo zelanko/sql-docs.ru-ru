@@ -1,6 +1,7 @@
 ---
-title: 'Устранение неполадок: превышение RPO (SQL Server) в группе доступности | Документация Майкрософт'
-ms.custom: ag-guide
+title: превышение RPO в группе доступности
+description: Стандартные проблемы, из-за которых группа доступности Always On может превышать целевую точку восстановления (RPO), и их решение
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 38de1841-9c99-435a-998d-df81c7ca0f1e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ef5ec5b9bd72fbda8c5a57547c1e1b74f9538a6a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 92c78d36559a8cb08a7f3368012a94ce3048c93c
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68013748"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822179"
 ---
 # <a name="troubleshoot-availability-group-exceeded-rpo"></a>Устранение неполадок: превышение RPO в группе доступности
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -115,7 +116,7 @@ ORDER BY r.io_pending , r.io_pending_ms_ticks DESC;
   
 -   **Физический диск: все счетчики**  
   
--   **Физический диск: Ср. время обращения к диску (с)**  
+-   **Физический диск: Среднее время обращения к диску (с)**  
   
 -   **SQL Server: Базы данных > Время ожидания сброса журнала**  
   
@@ -125,7 +126,7 @@ ORDER BY r.io_pending , r.io_pending_ms_ticks DESC;
   
  Если вы обнаруживаете узкое место ввода-вывода и поместили файл журнала и файл данных на одном жестком диске, прежде всего следует разнести эти файлы по разным дискам. Эта рекомендация предотвращает влияние рабочей нагрузки отчетов на путь передачи журнала из первичной реплики в буфер журнала, а также на возможность сохранения транзакции на вторичной реплике.  
   
-## <a name="next-steps"></a>Следующие шаги  
+## <a name="next-steps"></a>Дальнейшие действия  
  [Устранение проблем с производительностью в SQL Server (применяется к SQL Server 2012)](https://msdn.microsoft.com/library/dd672789(v=SQL.100).aspx)  
   
   

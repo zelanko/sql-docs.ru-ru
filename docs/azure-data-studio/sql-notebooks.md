@@ -1,21 +1,21 @@
 ---
-title: Использование Записных книжек SQL в Azure Data Studio
+title: Как использовать Записные книжки SQL
 titleSuffix: Azure Data Studio
 description: Узнайте, как использовать Записные книжки SQL в Azure Data Studio.
-ms.custom: seodec18
-ms.date: 06/28/2019
 ms.prod: sql
 ms.technology: azure-data-studio
-ms.reviewer: achatter; alayu; sstein
+ms.reviewer: achatter; alayu; maghan; sstein
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: 9af2e04a3973eddfcd714c7968c35e544302aba9
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.custom: seodec18
+ms.date: 06/28/2019
+ms.openlocfilehash: df1e49af0378b6af4a3d82b5a5ec2a4293be5e35
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67959266"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957088"
 ---
 # <a name="how-to-use-notebooks-in-azure-data-studio"></a>Использование записных книжек в Azure Data Studio
 
@@ -82,7 +82,7 @@ ms.locfileid: "67959266"
 
 ![image22](media/sql-notebooks/jupyter-backend.png)
 
-|Ядро|Описание
+|Ядро|Description
 |:-----|:-----
 | Ядро SQL | Написание кода SQL, предназначенного для реляционной базы данных.
 |Ядро PySpark3 и PySpark| Написание кода Python с использованием вычислительных ресурсов Spark из кластера.
@@ -178,6 +178,6 @@ import <package-name>
 
 Чтобы **удалить** любой из этих пакетов, щелкните его и выберите команду **Удалить выбранные пакеты**.
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 Сведения о работе с существующей записной книжкой см. в статье об [ управлении записными книжками в Azure Data Studio](https://docs.microsoft.com/sql/big-data-cluster/notebooks-how-to-manage?view=sqlallproducts-allversions).

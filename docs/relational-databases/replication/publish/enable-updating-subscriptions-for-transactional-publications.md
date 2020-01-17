@@ -1,6 +1,7 @@
 ---
-title: Включение обновляемых подписок для публикации транзакций | Документация Майкрософт
-ms.custom: ''
+title: Включение обновляемых подписок для публикаций транзакций
+description: Узнайте, как включить обновляемые подписки для публикации транзакций в SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 539d5bb0-b808-4d8c-baf4-cb6d32d2c595
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c3b599ac576a71438fb13505521eff24b6c7e3fc
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 8afde3ebd4082df0c1fc0065b2aa058095905ead
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907963"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321261"
 ---
 # <a name="enable-updating-subscriptions-for-transactional-publications"></a>Включение обновляемых подписок для публикаций транзакций
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +58,7 @@ ms.locfileid: "72907963"
   
     -   Если неизвестно, существует ли задание агента чтения журнала для публикуемой базы данных, выполните процедуру [sp_helplogreader_agent (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-helplogreader-agent-transact-sql.md) на издателе в базе данных издателя. Если результирующий набор пуст, то необходимо создать задание агента чтения журнала.  
   
-    -   На издателе выполните процедуру [sp_addlogreader_agent (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md). Укажите в параметрах **\@job_name** и **\@password** учетные данные [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows, с которыми работает агент. Если агент будет использовать проверку подлинности SQL Server для подключения к издателю, также необходимо указать значение **0** в параметре **\@publisher_security_mode** и данные входа [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в параметрах **\@publisher_login** и **\@publisher_password**.  
+    -   На издателе выполните процедуру [sp_addlogreader_agent (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md). Укажите в параметрах **\@job_name** и **\@password** учетные данные [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows, с которыми работает агент. Если агент будет использовать проверку подлинности SQL Server для подключения к издателю, также необходимо указать значение **0** в параметре **\@publisher_security_mode** и данные входа [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в параметрах **\@publisher_login** и **\@publisher_password**.  
   
 2.  Выполните [sp_addpublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md), указав значение **true** для параметра **\@allow_sync_tran**.  
   
@@ -73,7 +74,7 @@ ms.locfileid: "72907963"
   
     -   Если задание агента чтения журнала для базы данных публикации уже существует, переходите к шагу 2.  
   
-    -   Если вы не уверены, существует ли задание агента чтения журнала для публикуемой базы данных, выполните процедуру [sp_helplogreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helplogreader-agent-transact-sql.md) в издателе в базе данных публикации. Если результирующий набор пуст, необходимо создать задание агента чтения журнала.  
+    -   Если неизвестно, существует ли задание агента чтения журнала для публикуемой базы данных, выполните процедуру [sp_helplogreader_agent (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-helplogreader-agent-transact-sql.md) на издателе в базе данных издателя. Если результирующий набор пуст, необходимо создать задание агента чтения журнала.  
   
     -   На издателе выполните процедуру [sp_addlogreader_agent (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md). Укажите в параметрах **\@job_name** и **\@password** учетные данные Windows, с которыми работает агент. Если агент будет использовать проверку подлинности SQL Server для подключения к издателю, также необходимо указать значение **0** в параметре **\@publisher_security_mode** и данные входа [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в параметрах **\@publisher_login** и **\@publisher_password**.  
   

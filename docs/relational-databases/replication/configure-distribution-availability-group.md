@@ -1,6 +1,7 @@
 ---
-title: Настройка базы данных распространителя SQL Server в группе доступности | Документы Майкрософт
-ms.custom: ''
+title: Настройка базы данных распространителя в группе доступности
+description: Настройте базу данных распространителя для репликации SQL Server с помощью группы доступности Always On.
+ms.custom: seo-lt-2019
 ms.date: 01/16/2019
 ms.prod: sql
 ms.reviewer: ''
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 94d52169-384e-4885-84eb-2304e967d9f7
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 13a883d71262a044555fe3d0a59a945461de426e
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: d5f721d589354d5e7f4ec970bf0ea086895df129
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908479"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75320009"
 ---
 # <a name="set-up-replication-distribution-database-in-always-on-availability-group"></a>Настройка базы данных распространителя репликации в группе доступности AlwaysOn
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -405,7 +406,7 @@ EXEC master.dbo.sp_addlinkedsrvlogin @rmtsrvname=N'SQLNODE5',@useself=N'True',@l
  [Публикация данных и объектов базы данных](../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
  [Защита распространителя](../../relational-databases/replication/security/secure-the-distributor.md)  
   
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
  [Просмотр и изменение свойств издателя и распространителя](view-and-modify-distributor-and-publisher-properties.md)  
  [Отключение публикации и распространения](disable-publishing-and-distribution.md)  
  [Разрешение применения репликации для базы данных (среда SQL Server Management Studio)](enable-a-database-for-replication-sql-server-management-studio.md) 

@@ -31,12 +31,12 @@ ms.assetid: 581fb289-29f9-412b-869c-18d33a9e93d5
 author: juliemsft
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ad327f07e37778a7a3369f8fa3a7ecaa1504e6f2
-ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
+ms.openlocfilehash: 7ff1197307cebb563fbb8cc173b0edbf1ef6aa76
+ms.sourcegitcommit: af078c0cdb42ac385d24496249e9b3609428f013
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71816824"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74550219"
 ---
 # <a name="like-transact-sql"></a>LIKE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -66,7 +66,7 @@ match_expression [ NOT ] LIKE pattern
  *pattern*  
  Конкретная строка символов для поиска в *match_expression* может содержать следующие допустимые символы-шаблоны. Длина значения *pattern* не может превышать 8000 байт.  
   
-|Символ-шаблон|Описание|Пример|  
+|Символ-шаблон|Description|Пример|  
 |------------------------|-----------------|-------------|  
 |%|Любая строка, содержащая ноль или более символов.|Инструкция WHERE Название LIKE '%компьютер%' выполняет поиск и выдает все названия книг, содержащие слово «компьютер».|  
 |_ (подчеркивание)|Любой одиночный символ.|Инструкция WHERE фамилия_автора LIKE '_етров' выполняет поиск и выдает все имена, состоящие из шести букв и заканчивающиеся сочетанием «етров» (Петров, Ветров и т.п.).|  
@@ -128,10 +128,10 @@ David          Barber               Snohomish
 (2 row(s) affected)  
 ```
 
-## <a name="pattern-matching-by-using-like"></a>Сопоставление шаблонов с использованием оператора LIKE  
- Оператор LIKE поддерживает сопоставление шаблонов в ASCII и Юникоде. Если все аргументы (*match_expression*, *pattern* и *escape_character*, если он указан) имеют символьный тип ASCII, то применяется шаблон ASCII. Если какой-либо из аргументов имеет тип данных Юникода, выполняется преобразование всех аргументов в Юникод и применяется шаблон Юникода. Если вы используете оператор LIKE с типом данных Юникода (**nchar** или **nvarchar**), завершающие пробелы учитываются в отличие от других типов данных (не Юникода). Оператор LIKE, используемый с данными Юникод, поддерживает стандарт ISO. Оператор LIKE, используемый с данными ASCII, поддерживает более ранние версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+## <a name="pattern-matching-by-using-like"></a>Совпадение с шаблоном с использованием оператора LIKE  
+ Оператор LIKE поддерживает шаблоны в ASCII и Юникоде. Если все аргументы (*match_expression*, *pattern* и *escape_character*, если он указан) имеют символьный тип ASCII, то применяется шаблон ASCII. В случае, когда какой-либо из аргументов имеет тип данных Юникод, выполняется преобразование всех аргументов в Юникод и применяется шаблон Юникод. Если вы используете оператор LIKE с типом данных Юникода (**nchar** или **nvarchar**), завершающие пробелы учитываются в отличие от других типов данных (не Юникода). Работа оператора LIKE с данными в Юникоде совместима со стандартом ISO. Принцип работы оператора LIKE с данными ASCII совместим с более ранними версиями [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- В следующих примерах показаны различия в строках, возвращаемых при сопоставлении шаблонов Юникода и ASCII с использованием оператора LIKE.  
+ Приведенные ниже примеры поясняют различия между результатами сравнения данных с шаблонами оператора LIKE, представленными в Юникоде и ASCII.  
   
 ```sql  
 -- ASCII pattern matching with char column  
@@ -196,7 +196,7 @@ GO
   
  Если в шаблоне LIKE после escape-символа нет никакого символа, то шаблон является недопустимым и оператор LIKE возвращает значение FALSE. Если символ после escape-символа не является символом-шаблоном, то escape-символ игнорируется, а следующий символ рассматривается как обычный символ в шаблоне. К этим символам-шаблонам относятся: подчеркивание (_), процент (%) и левая квадратная скобка ([), в том случае, если они заключены в квадратные скобки. Escape-символы могут использоваться в квадратных скобках ([ ]), включая: знак вставки (^), дефис (-) и правую квадратную скобку (]).  
   
- Символ 0x0000 (**char(0)**) не определен в параметрах сортировки Windows, и его нельзя включать в LIKE.  
+ Символ 0x0000 (**char(0)** ) не определен в параметрах сортировки Windows, и его нельзя включать в LIKE.  
   
 ## <a name="examples"></a>Примеры  
   
@@ -216,8 +216,8 @@ GO
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
- 
- ```
+
+```
  FirstName             LastName             Phone
  -----------------     -------------------  ------------
  Ruben                 Alonso               415-555-124  
@@ -232,10 +232,10 @@ GO
  Gabrielle              Russell             415-555-0197  
  Dalton                 Simmons             415-555-0115  
  (11 row(s) affected)  
- ``` 
- 
-### B. Using NOT LIKE with the % wildcard character  
- The following example finds all telephone numbers in the `PersonPhone` table that have area codes other than `415`.  
+```
+
+### <a name="b-using-not-like-with-the--wildcard-character"></a>Б. Применение оператора NOT LIKE с символом-шаблоном %  
+ В следующем примере в таблице `PersonPhone` выполняется поиск всех телефонных номеров с региональным кодом, отличным от `415`.  
   
 ```sql  
 -- Uses AdventureWorks  
@@ -250,8 +250,8 @@ GO
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
- 
- ```
+
+```
 FirstName              LastName            Phone
 ---------------------- -------------------- -------------------
 Gail                  Alexander            1 (11) 500 555-0120  
@@ -263,10 +263,10 @@ Gail                  Moore                155-555-0169
 Gail                  Russell              334-555-0170  
 Gail                  Westover             305-555-0100  
 (8 row(s) affected)  
-```  
+```
 
-### C. Using the ESCAPE clause  
- The following example uses the `ESCAPE` clause and the escape character to find the exact character string `10-15%` in column `c1` of the `mytbl2` table.  
+### <a name="c-using-the-escape-clause"></a>В. Применение предложения ESCAPE  
+ В следующем примере предложение `ESCAPE` и escape-символ используются для поиска символьной строки `10-15%` в столбце `c1` таблицы `mytbl2`.  
   
 ```sql
 USE tempdb;  

@@ -1,6 +1,7 @@
 ---
-title: Always Encrypted с безопасными анклавами | Документация Майкрософт
-ms.custom: ''
+title: Always Encrypted с безопасными анклавами.
+description: Сведения о функции Always Encrypted с безопасными анклавами для SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 10/31/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 7d04dcc5aeeafcdc78dcc6dd401afc476fbf6555
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: 6e750070f51dc6cba1b035e9426d9814e4fd1b67
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73594044"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558053"
 ---
 # <a name="always-encrypted-with-secure-enclaves"></a>Always Encrypted с безопасными анклавами.
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
@@ -177,7 +178,7 @@ Always Encrypted с безопасным анклавами устраняет �
   - Для запуска криптографической операции на месте с помощью инструкции `ALTER TABLE`/`ALTER COLUMN` необходимо запустить инструкцию в окне запроса в среде SSMS или написать собственную программу, которая выполняет инструкцию. Командлет Set-SqlColumnEncryption в модуле SqlServer PowerShell и мастер Always Encrypted в SQL Server Management Studio еще не поддерживают шифрование на месте. Сейчас обе эти программы перемещают данные из базы данных для криптографических операций, даже если ключи шифрования столбцов, используемые для операций, поддерживают анклавы.
 
 ## <a name="next-steps"></a>Дальнейшие действия
-- [Учебник. Начало работы с Always Encrypted с безопасными анклавами с использованием SSMS](../tutorial-getting-started-with-always-encrypted-enclaves.md)
+- [Руководство. Начало работы с Always Encrypted с безопасными анклавами с использованием SSMS](../tutorial-getting-started-with-always-encrypted-enclaves.md)
 - [Настройка и использование Always Encrypted с безопасными анклавами](configure-always-encrypted-enclaves.md)
 
 ## <a name="see-also"></a>См. также раздел

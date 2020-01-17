@@ -1,6 +1,7 @@
 ---
-title: Массовая загрузка зашифрованных данных в столбцы с помощью Always Encrypted | Документация Майкрософт
-ms.custom: ''
+title: Массовая загрузка зашифрованных данных в столбцы с помощью Always Encrypted
+description: Узнайте, как выполнять массовую загрузку данных в столбцы с помощью Always Encrypted с использованием SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 11/04/2015
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -13,12 +14,12 @@ ms.assetid: b2ca08ed-a927-40fb-9059-09496752595e
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9faa58382c1916d6691c790e955e1dbc409bb119
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: 4c76c8896d19bed29bd8e71f6726b05cc0526e91
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73594164"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558209"
 ---
 # <a name="bulk-load-encrypted-data-to-columns-using-always-encrypted"></a>Массовая загрузка зашифрованных данных в столбцы с помощью Always Encrypted
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -76,7 +77,7 @@ ms.locfileid: "73594164"
 - [Разработка приложений с помощью Always Encrypted](always-encrypted-client-development.md)
 
 ## <a name="see-also"></a>См. также:  
-- [Постоянное шифрование](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+- [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [Перенос данных в столбцы или из них с помощью Always Encrypted с использованием мастера импорта и экспорта SQL Server](always-encrypted-migrate-using-import-export-wizard.md)
 - [CREATE USER (Transact-SQL)](../../../t-sql/statements/create-user-transact-sql.md)   
 - [ALTER USER (Transact-SQL)](../../../t-sql/statements/alter-user-transact-sql.md)   

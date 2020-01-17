@@ -1,6 +1,7 @@
 ---
-title: Учетные записи службы (мастер настройки безопасности зеркального отображения баз данных) | Документы Майкрософт
-ms.custom: ''
+title: Мастер настройки безопасности. Учетные записи службы
+description: Описание страницы "Учетные записи службы" мастера настройки безопасности зеркального отображения баз данных в SQL Server Management Studio.
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.prod_service: high-availability
@@ -12,14 +13,14 @@ f1_keywords:
 ms.assetid: d58d8f93-7888-4d66-af4d-969ef6a2dbee
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 9c0fb67d173ed0f4ade469c5233a7fdff59dd1a7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8c8a83b68febee5e00a80bd9977713a786b70f9a
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68025253"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822449"
 ---
-# <a name="service-accounts-configure-database-mirroring-security-wizard"></a>Учетные записи службы (мастер настройки безопасности зеркального отображения баз данных)
+# <a name="configure-database-mirroring-security-wizard-service-accounts"></a>Мастер настройки безопасности зеркального отображения базы данных. Учетные записи службы
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   При использовании проверки подлинности Windows, в случае если экземпляры сервера используют разные учетные записи, задайте учетные записи службы для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Эти учетные записи службы должны быть учетными записями домена (одного и того же или доверенных доменов).  
   
