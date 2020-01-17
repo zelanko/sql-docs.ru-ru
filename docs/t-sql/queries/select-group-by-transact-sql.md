@@ -32,12 +32,12 @@ ms.assetid: 40075914-6385-4692-b4a5-62fe44ae6cb6
 author: shkale-msft
 ms.author: shkale
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c2ca8bd62bc1f05e655875c528efa8ea32b20ff5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b846628a77f6e11f864679d51fd62fc783fb2c7b
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67948421"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258293"
 ---
 # <a name="select---group-by--transact-sql"></a>SELECT — GROUP BY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "67948421"
   
 ## <a name="syntax"></a>Синтаксис  
 
- ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL (Transact-SQL)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+ ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "|::ref1::|") [Синтаксические обозначения в Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ```  
 -- Syntax for SQL Server and Azure SQL Database   
@@ -85,7 +85,7 @@ GROUP BY
 ```  
   
 ```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Azure SQL Data Warehouse 
   
 GROUP BY {
       column-name [ WITH (DISTRIBUTED_AGG) ]  
@@ -93,8 +93,18 @@ GROUP BY {
     | ROLLUP ( <group_by_expression> [ ,...n ] ) 
 } [ ,...n ]
 
+```
+
 ```  
+-- Syntax for Parallel Data Warehouse  
   
+GROUP BY {
+      column-name [ WITH (DISTRIBUTED_AGG) ]  
+    | column-expression
+} [ ,...n ]
+
+```  
+    
 ## <a name="arguments"></a>Аргументы 
  
 ### <a name="column-expression"></a>*column-expression*  
@@ -144,7 +154,7 @@ INSERT INTO sales VALUES (N'United States', N'Montana', 100);
 ```
 В таблице Sales содержатся указанные далее строки.
 
-| Country | Region | Sales |
+| Country | Регион | Sales |
 |---------|--------|-------|
 | Canada | Alberta | 100 |
 | Canada | British Columbia | 200 |
@@ -160,7 +170,7 @@ GROUP BY Country, Region;
 ```
 Результат запроса содержит 3 строки, так как существует 3 сочетания значений для Country и Region. Значение TotalSales для Canada и British Columbia является суммой двух строк. 
 
-| Country | Region | TotalSales |
+| Country | Регион | TotalSales |
 |---------|--------|-------|
 | Canada | Alberta | 100 |
 | Canada | British Columbia | 500 |
@@ -190,7 +200,7 @@ GROUP BY ROLLUP (Country, Region);
 
 Результатом запроса являются те же статистические вычисления, что и в простом предложении GROUP BY без ROLLUP. Кроме того, здесь создаются промежуточные итоги для каждого значения в столбце Country. Наконец, выводится общий итог для всех строк. Результат имеет следующий вид:
 
-| Country | Region | TotalSales |
+| Country | Регион | TotalSales |
 | :------ | :----- | ---------: |
 | Canada | Alberta | 100 |
 | Canada | British Columbia | 500 |
@@ -213,7 +223,7 @@ GROUP BY CUBE (Country, Region);
 
 Результатом запроса являются группы для уникальных значений (Country, Region), (NULL, Region), (Country, NULL) и (NULL, NULL). Результат выглядит следующим образом:
 
-| Country | Region | TotalSales |
+| Country | Регион | TotalSales |
 |---------|--------|-------|
 | Canada | Alberta | 100 |
 | NULL | Alberta | 100 |
@@ -264,7 +274,7 @@ GROUP BY GROUPING SETS ( Country, () );
 
 ### <a name="group-by--all--column-expression--n-"></a>GROUP BY [ ALL ] column-expression [ ,...n ] 
 
-Применимо для следующих объектов: SQL Server и база данных SQL Azure
+Область применения: SQL Server и база данных SQL Azure
 
 Примечание. Этот синтаксис поддерживается только для обратной совместимости. В будущей версии он будет удален. Избегайте использования этого синтаксиса в новых разработках и учитывайте необходимость изменения в будущем приложений, использующих этот синтаксис сейчас.
 
@@ -274,8 +284,8 @@ GROUP BY ALL
 - Не поддерживается в запросах с доступом к удаленным таблицам, если в запросе присутствует также предложение WHERE.
 - Применение предложения к столбцам, имеющим атрибут FILESTREAM, приведет к ошибке.
   
-### <a name="with-distributedagg"></a>WITH (DISTRIBUTED_AGG)
-Применимо для следующих объектов: Хранилище данных SQL Azure и Parallel Data Warehouse
+### <a name="with-distributed_agg"></a>WITH (DISTRIBUTED_AGG)
+Область применения: Хранилище данных SQL Azure и Parallel Data Warehouse
 
 Указание запроса DISTRIBUTED_AGG заставляет систему MPP перераспределять таблицу по определенному столбцу до выполнения статистического вычисления. Только один столбец в предложении GROUP BY может иметь указание запроса DISTRIBUTED_AGG. После завершения запроса перераспределенная таблица удаляется. Исходная таблица не изменяется.  
 
@@ -302,7 +312,7 @@ GROUP BY ALL
   
 ## <a name="limitations-and-restrictions"></a>Ограничения
 
-Применимо для следующих объектов: SQL Server (начиная с версии 2008), хранилище данных SQL Azure
+Область применения: SQL Server (начиная с версии 2008), хранилище данных SQL Azure
 
 ### <a name="maximum-capacity"></a>Максимальная емкость
 
@@ -341,10 +351,10 @@ GROUP BY ALL
 ### <a name="comparison-of-supported-group-by-features"></a>Сравнение поддерживаемых функций предложения GROUP BY  
  В следующей таблице описаны поддерживаемые возможности предложения GROUP BY с учетом версии SQL и уровня совместимости базы данных.  
   
-|Компонент|Службы SQL Server Integration Services|Уровень совместимости SQL Server — 100 или более|Уровень совместимости SQL Server 2008 или более поздней версии — 90.|  
+|Компонент|SQL Server Integration Services|Уровень совместимости SQL Server — 100 или более|Уровень совместимости SQL Server 2008 или более поздней версии — 90.|  
 |-------------|-------------------------------------|--------------------------------------------------|-----------------------------------------------------------|  
 |Статистические функции DISTINCT|Не поддерживаются для конструкций WITH CUBE или WITH ROLLUP.|Поддерживаются для конструкций WITH CUBE, WITH ROLLUP, GROUPING SETS, CUBE или ROLLUP.|Аналогично уровню совместимости 100.|  
-|Определяемая пользователем функция с именем CUBE или ROLLUP в предложении GROUP BY|Определяемая пользователем функция **dbo.cube(** _arg1_ **,** _...argN_ **)** or **dbo.rollup(** _arg1_ **,** ..._argN_ **)** в предложении GROUP BY недопустима.<br /><br /> Например: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|Определяемая пользователем функция **dbo.cube (** _arg1_ **,** ...argN **)** or **dbo.rollup(** arg1 **,** _...argN_ **)** в предложении GROUP BY недопустима.<br /><br /> Например: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`<br /><br /> Выдается следующее сообщение об ошибке: "Применение неверного синтаксиса недалеко от ключевого слова 'cube'&#124;'rollup'".<br /><br /> Чтобы избежать этой проблемы, замените конструкцию `dbo.cube` на `[dbo].[cube]` или конструкцию `dbo.rollup` на `[dbo].[rollup]`.<br /><br /> Следующий пример является допустимым: `SELECT SUM (x) FROM T  GROUP BY [dbo].[cube](y);`.|Определяемая пользователем функция **dbo.cube (** _arg1_ **,** _...argN_) or **dbo.rollup(** _arg1_ **,** _...argN_ **)** в предложении GROUP BY недопустима.<br /><br /> Например: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|  
+|Определяемая пользователем функция с именем CUBE или ROLLUP в предложении GROUP BY|Определяемая пользователем функция **dbo.cube(**_arg1_**,**_...argN_**)** or **dbo.rollup(**_arg1_**,**..._argN_**)** в предложении GROUP BY недопустима.<br /><br /> Например: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|Определяемая пользователем функция **dbo.cube (**_arg1_**,**...argN **)** or **dbo.rollup(** arg1 **,**_...argN_**)** в предложении GROUP BY недопустима.<br /><br /> Например: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`<br /><br /> Выдается следующее сообщение об ошибке: "Применение неверного синтаксиса недалеко от ключевого слова 'cube'&#124;'rollup'".<br /><br /> Чтобы избежать этой проблемы, замените конструкцию `dbo.cube` на `[dbo].[cube]` или конструкцию `dbo.rollup` на `[dbo].[rollup]`.<br /><br /> Следующий пример является допустимым: `SELECT SUM (x) FROM T  GROUP BY [dbo].[cube](y);`.|Определяемая пользователем функция **dbo.cube (**_arg1_**,**_...argN_) or **dbo.rollup(**_arg1_**,**_...argN_**)** в предложении GROUP BY недопустима.<br /><br /> Например: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|  
 |GROUPING SETS|Не поддерживается|Поддерживается|Поддерживается|  
 |CUBE|Не поддерживается|Поддерживается|Не поддерживается|  
 |ROLLUP|Не поддерживается|Поддерживается|Не поддерживается|  
@@ -415,7 +425,7 @@ SELECT OrderDateKey, SUM(SalesAmount) AS TotalSales FROM FactInternetSales
 GROUP BY OrderDateKey ORDER BY OrderDateKey;  
 ```  
   
-### <a name="f-basic-use-of-the-distributedagg-hint"></a>Е. Базовое использование указания DISTRIBUTED_AGG  
+### <a name="f-basic-use-of-the-distributed_agg-hint"></a>Е. Базовое использование указания DISTRIBUTED_AGG  
  В этом примере показано указание запроса DISTRIBUTED_AGG для принудительного перемещения в таблице по столбцу `CustomerKey` перед выполнением статистического вычисления.  
   
 ```sql  
@@ -465,7 +475,7 @@ HAVING OrderDateKey > 20040000
 ORDER BY OrderDateKey;  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [GROUPING_ID (Transact-SQL)](~/t-sql/functions/grouping-id-transact-sql.md)   
  [GROUPING (Transact-SQL)](~/t-sql/functions/grouping-transact-sql.md)   
  [SELECT (Transact-SQL)](~/t-sql/queries/select-transact-sql.md)   
